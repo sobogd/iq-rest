@@ -1,16 +1,16 @@
 # 🚀 Быстрый деплой - Шпаргалка
 
-## ✅ Исправлено: Node.js 22
+## ✅ Исправлено: Node.js 18
 
-Все файлы обновлены для Node.js 22 (требование AWS App Runner).
+Все файлы обновлены для Node.js 18 (стабильная версия для AWS App Runner).
 
 ---
 
 ## Файлы готовы к деплою:
 
-- ✅ `apprunner.yaml` - Node.js 22
-- ✅ `Dockerfile` - Node.js 22 Alpine
-- ✅ `package.json` - engines: node >= 22
+- ✅ `apprunner.yaml` - Node.js 18
+- ✅ `Dockerfile` - Node.js 18 Alpine
+- ✅ `package.json` - engines: node >= 18
 - ✅ `next.config.ts` - standalone output
 - ✅ Build работает без ошибок
 
