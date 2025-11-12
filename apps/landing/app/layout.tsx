@@ -3,7 +3,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://sobogdqr.com'),
   title: {
     default: "SobogdQR - QR Menu for Restaurant & Cafe | Digital Menu Website",
     template: "%s | SobogdQR"
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['es_ES'],
-    url: 'https://yourdomain.com',
+    url: 'https://sobogdqr.com',
     title: 'SobogdQR - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates.',
     siteName: 'SobogdQR',
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     description: 'Create professional QR menu for restaurant and cafe in minutes.',
   },
   alternates: {
-    canonical: 'https://yourdomain.com',
+    canonical: 'https://sobogdqr.com',
     languages: {
-      'en': 'https://yourdomain.com/en',
-      'es': 'https://yourdomain.com/es',
+      'en': 'https://sobogdqr.com/en',
+      'es': 'https://sobogdqr.com/es',
     },
   },
 };
