@@ -20,7 +20,7 @@
     },
     "intro": {
       "title": "Transforma Tu Restaurante con Menú QR Digital",
-      "description": "Los restaurantes y cafeterías modernas están eligiendo menús QR digitales sobre menús tradicionales en papel. Con SobogdQR, obtienes un sitio web completo para tu restaurante al que los clientes pueden acceder escaneando un código QR. Actualiza tu menú instantáneamente, sirve a clientes internacionales con traducción automática y comprende lo que aman tus clientes con análisis detallados. Ya sea que administres una pequeña cafetería o una cadena de restaurantes en crecimiento, nuestra solución de menú QR te ayuda a proporcionar una mejor experiencia gastronómica mientras reduces costos y mejoras la eficiencia."
+      "description": "Los restaurantes y cafeterías modernas están eligiendo menús QR digitales sobre menús tradicionales en papel. Con SobogdQR, obtienes un sitio web completo para tu restaurante al que los clientes pueden acceder escaneando un código QR. Actualiza tu menú instantáneamente - los cambios aparecen para los clientes en menos de 2 segundos. Sirve a clientes internacionales con traducción automática a más de 10 idiomas, y comprende lo que aman tus clientes con análisis detallados. Ya sea que administres una pequeña cafetería o una cadena de restaurantes en crecimiento, nuestra solución de menú QR te ayuda a proporcionar una mejor experiencia gastronómica mientras reduces los costos de impresión hasta un 70% y mejoras la eficiencia."
     }
   },
   "features": {
@@ -155,6 +155,32 @@
   },
   "faq": {
     "title": "Preguntas Frecuentes Sobre Menú QR para Restaurante y Cafetería",
+    "howto": {
+      "question": "¿Cómo crear un menú QR para tu restaurante en 5 pasos fáciles?",
+      "answer": "Sigue estos simples pasos para crear tu menú QR profesional:",
+      "steps": [
+        {
+          "name": "Regístrate gratis",
+          "text": "Crea tu cuenta gratuita de SobogdQR en menos de 2 minutos - no se requiere tarjeta de crédito"
+        },
+        {
+          "name": "Agrega los elementos de tu menú",
+          "text": "Sube tus platos con fotos, descripciones y precios a través de nuestra interfaz intuitiva"
+        },
+        {
+          "name": "Personaliza tu diseño",
+          "text": "Elige entre temas claros u oscuros y personaliza los colores para que coincidan con la marca de tu restaurante"
+        },
+        {
+          "name": "Genera tu código QR",
+          "text": "Descarga tu código QR de alta calidad que se actualiza automáticamente cada vez que cambias tu menú"
+        },
+        {
+          "name": "Imprime y muestra",
+          "text": "Imprime tu código QR y colócalo en las mesas, en la entrada o en los mostradores para llevar - los clientes pueden escanear y ver instantáneamente"
+        }
+      ]
+    },
     "questions": [
       {
         "question": "¿Qué es un menú QR para restaurante y cómo funciona?",

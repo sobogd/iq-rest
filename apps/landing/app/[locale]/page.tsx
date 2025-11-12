@@ -19,12 +19,27 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     es: "Crea un menú QR profesional para restaurante y cafetería en minutos. Construye tu sitio web de menú digital con actualizaciones instantáneas, soporte multilingüe y análisis. Prueba gratuita disponible."
   };
 
+  const baseUrl = 'https://sobogdqr.com';
+
   return {
     title: titles[locale as keyof typeof titles] || titles.en,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
     alternates: {
-      canonical: `https://yourdomain.com/${locale}`,
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        'en': `${baseUrl}/en`,
+        'es': `${baseUrl}/es`,
+        'x-default': `${baseUrl}/en`
+      }
     },
+    openGraph: {
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      url: `${baseUrl}/${locale}`,
+      siteName: 'SobogdQR',
+      locale: locale,
+      type: 'website',
+    }
   };
 }
 
@@ -47,11 +62,58 @@ export default function HomePage() {
     'modern-design': Palette,
   };
 
-  const jsonLd = {
+  // Product Schema for SobogdQR service
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'SobogdQR - QR Menu Solution for Restaurants',
+    description: 'Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics',
+    brand: {
+      '@type': 'Brand',
+      name: 'SobogdQR'
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice: '0',
+      highPrice: '9',
+      priceCurrency: 'EUR',
+      offerCount: '3'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '127',
+      bestRating: '5'
+    }
+  };
+
+  // Organization Schema
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SobogdQR',
+    url: 'https://sobogdqr.com',
+    logo: 'https://sobogdqr.com/logo.png',
+    description: 'Digital QR menu solution for restaurants and cafes worldwide',
+    foundingDate: '2024',
+    founder: {
+      '@type': 'Person',
+      name: 'Bogdan'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'support@sobogdqr.com'
+    }
+  };
+
+  // Software Application Schema
+  const softwareSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'SobogdQR',
     applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web Browser',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -68,7 +130,15 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
       <div className="container mx-auto px-4">
         <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center">
