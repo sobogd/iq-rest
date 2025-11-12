@@ -30,6 +30,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Preconnect to external domains for faster loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYEKPMGE07"></script>
         <script
           dangerouslySetInnerHTML={{
