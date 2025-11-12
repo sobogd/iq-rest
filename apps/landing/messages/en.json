@@ -1,0 +1,206 @@
+{
+  "header": {
+    "logo": "SobogdQR",
+    "nav": {
+      "pricing": "Pricing",
+      "features": "Features",
+      "contacts": "Contacts"
+    },
+    "getStarted": "Get Started",
+    "selectLanguage": "Select Language"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Menu for Restaurant & Cafe | Digital Menu Website",
+      "subtitle": "Create professional QR menu for your restaurant or cafe in minutes. SobogdQR is the complete digital menu website solution with instant updates, multilingual support, and analytics. Perfect for restaurants and cafes.",
+      "cta": {
+        "create": "Get Started Free",
+        "view": "View Demo"
+      }
+    },
+    "intro": {
+      "title": "Transform Your Restaurant with Digital QR Menu",
+      "description": "Modern restaurants and cafes are choosing digital QR menus over traditional paper menus. With SobogdQR, you get a complete website for your restaurant that customers can access by scanning a QR code. Update your menu instantly, serve international customers with automatic translation, and understand what your customers love with detailed analytics. Whether you run a small cafe or a growing restaurant chain, our QR menu solution helps you provide a better dining experience while reducing costs and improving efficiency."
+    }
+  },
+  "features": {
+    "title": "Powerful Features for Your Restaurant QR Menu",
+    "subtitle": "Everything you need to create the perfect digital menu experience for your restaurant or cafe",
+    "list": [
+      {
+        "id": "ai-translation",
+        "title": "AI-Powered Automatic Menu Translation",
+        "shortDescription": "Translate your menu instantly into multiple languages with artificial intelligence",
+        "description": "Reach international customers with automatic menu translation powered by advanced AI. Your restaurant or cafe menu is instantly translated into multiple languages, helping you serve tourists and international guests effortlessly.",
+        "cta": "Learn More"
+      },
+      {
+        "id": "analytics",
+        "title": "Advanced Menu Analytics & Insights",
+        "shortDescription": "Track customer behavior and optimize your menu performance",
+        "description": "Understand what your customers love with detailed analytics for your QR menu. Track views, clicks, and cart additions for every dish to optimize your restaurant menu and increase sales.",
+        "cta": "Learn More"
+      },
+      {
+        "id": "shopping-cart",
+        "title": "Smart Shopping Cart for Restaurants",
+        "shortDescription": "Let customers build their order and see the total instantly",
+        "description": "Streamline your service with an intelligent shopping cart system. Customers can add items, see total prices instantly, and show their complete order to waiters. Perfect for restaurants and cafes looking to improve order accuracy.",
+        "cta": "Learn More"
+      },
+      {
+        "id": "modern-design",
+        "title": "Modern Design with Light & Dark Themes",
+        "shortDescription": "Beautiful, professional design that works in any lighting",
+        "description": "Impress your customers with a sleek, modern menu design. Your QR menu automatically adapts to light and dark themes, ensuring perfect readability whether customers dine during the day or evening.",
+        "cta": "Learn More"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Choose the plan that works best for your restaurant",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "€0",
+        "period": "forever",
+        "description": "Perfect for trying out SobogdQR",
+        "features": [
+          "Up to 15 items",
+          "1 language",
+          "500 scans per month",
+          "Website with contacts and map",
+          "Menu analytics"
+        ],
+        "cta": "Try Free"
+      },
+      "base": {
+        "name": "Base",
+        "price": "€4",
+        "period": "per month",
+        "description": "Great for small restaurants",
+        "features": [
+          "Up to 100 items",
+          "3 languages",
+          "2,000 scans per month",
+          "Website with contacts and map",
+          "Menu analytics"
+        ],
+        "cta": "Get Started"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€9",
+        "period": "per month",
+        "description": "For growing restaurant chains",
+        "features": [
+          "Unlimited items",
+          "Unlimited languages",
+          "Unlimited scans",
+          "Website with contacts and map",
+          "Menu analytics"
+        ],
+        "cta": "Get Started"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Questions? Let's chat",
+    "subtitle": "I'm Bogdan, creator of SobogdQR. Built it for my cafe, now helping restaurants worldwide. Message me with any questions - I respond to everyone personally.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Get in touch",
+      "email": "Your Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me what's on your mind...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent! Thank you for reaching out. I'll get back to you soon.",
+      "error": "Failed to send message. Please try again later."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "cookieConsent": {
+    "title": "We use cookies",
+    "description": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+    "acceptAll": "Accept All",
+    "rejectAll": "Reject All",
+    "customize": "Customize",
+    "learnMore": "Learn More"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigation",
+      "pricing": "Pricing",
+      "features": "Features",
+      "contacts": "Contacts"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Terms and Conditions",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookies Policy",
+      "sitemap": "Sitemap"
+    },
+    "copyright": "© 2025 SobogdQR. All rights reserved."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About QR Menu for Restaurant & Cafe",
+    "questions": [
+      {
+        "question": "What is a QR menu for restaurant and how does it work?",
+        "answer": "A QR menu for restaurant is a digital menu that customers can access by scanning a QR code with their smartphone. SobogdQR creates a professional digital menu website for your restaurant or cafe that updates instantly without reprinting. Customers simply scan the code and view your menu on their device."
+      },
+      {
+        "question": "How much does a QR menu cost for a restaurant or cafe?",
+        "answer": "SobogdQR offers flexible pricing starting from €0 forever with our free plan. This makes it affordable for any restaurant or cafe to create a professional QR menu. Paid plans start at just €4/month with additional features like unlimited items and advanced analytics."
+      },
+      {
+        "question": "Can I create a website for my restaurant without coding?",
+        "answer": "Yes! SobogdQR is designed for restaurant and cafe owners without any technical knowledge. You can create a complete digital menu website for your restaurant in minutes, no programming or coding skills required. Simply add your dishes, prices, and photos through our intuitive interface."
+      },
+      {
+        "question": "How often can I update my QR menu?",
+        "answer": "You can update your restaurant or cafe menu as often as you need. All changes are reflected in real-time, allowing you to instantly update prices, add new dishes, or change descriptions without reprinting physical menus. Perfect for daily specials and seasonal updates."
+      },
+      {
+        "question": "Does the QR menu work for both restaurants and cafes?",
+        "answer": "Absolutely! SobogdQR is perfect for restaurants, cafes, coffee shops, bars, food trucks, and any food service business. Our digital menu solution adapts to any type of establishment, from small cafes to large restaurant chains."
+      },
+      {
+        "question": "How does the automatic menu translation work?",
+        "answer": "Our QR menu system uses artificial intelligence to translate your restaurant or cafe menu into multiple languages automatically. This is perfect for tourist areas and international customers. You can offer your menu in English, Spanish, and other languages, helping you serve more customers."
+      },
+      {
+        "question": "Can I try the QR menu solution for free?",
+        "answer": "Yes! We offer a completely free plan for restaurants and cafes to try SobogdQR. You can create your digital menu website with up to 15 items at no cost, forever. No credit card required to start. Upgrade only when you need more features."
+      },
+      {
+        "question": "Is SobogdQR an app that customers need to download?",
+        "answer": "No! This is one of the best advantages. Customers don't need to download any app. They simply scan your QR code and the menu opens instantly in their web browser. This makes it much more convenient than restaurant apps that require downloads."
+      },
+      {
+        "question": "What are the benefits of a digital menu website for my restaurant?",
+        "answer": "A digital menu website offers many benefits: instant menu updates without reprinting costs, multilingual support for international customers, contactless ordering for safety, analytics to see popular dishes, and professional presentation. Plus, it's eco-friendly as you eliminate paper menu waste."
+      },
+      {
+        "question": "How do I create a QR code for my restaurant menu?",
+        "answer": "SobogdQR automatically generates a professional QR code when you create your digital menu. You can download and print this QR code for your restaurant tables, entrance, or takeout counter. The QR code is customizable and high-quality for clear scanning."
+      }
+    ],
+    "cta": {
+      "title": "Still have questions?",
+      "subtitle": "Ask us and get an answer in the shortest time possible",
+      "button": "Contact Us"
+    }
+  }
+}

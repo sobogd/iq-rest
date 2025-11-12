@@ -1,0 +1,206 @@
+{
+  "header": {
+    "logo": "SobogdQR",
+    "nav": {
+      "pricing": "Precios",
+      "features": "Características",
+      "contacts": "Contactos"
+    },
+    "getStarted": "Comenzar",
+    "selectLanguage": "Seleccionar Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Menú QR para Restaurante y Cafetería | Sitio Web de Menú Digital",
+      "subtitle": "Crea un menú QR profesional para tu restaurante o cafetería en minutos. SobogdQR es la solución completa de sitio web de menú digital con actualizaciones instantáneas, soporte multilingüe y análisis. Perfecto para restaurantes y cafeterías.",
+      "cta": {
+        "create": "Comenzar Gratis",
+        "view": "Ver Demo"
+      }
+    },
+    "intro": {
+      "title": "Transforma Tu Restaurante con Menú QR Digital",
+      "description": "Los restaurantes y cafeterías modernas están eligiendo menús QR digitales sobre menús tradicionales en papel. Con SobogdQR, obtienes un sitio web completo para tu restaurante al que los clientes pueden acceder escaneando un código QR. Actualiza tu menú instantáneamente, sirve a clientes internacionales con traducción automática y comprende lo que aman tus clientes con análisis detallados. Ya sea que administres una pequeña cafetería o una cadena de restaurantes en crecimiento, nuestra solución de menú QR te ayuda a proporcionar una mejor experiencia gastronómica mientras reduces costos y mejoras la eficiencia."
+    }
+  },
+  "features": {
+    "title": "Características Potentes para tu Menú QR de Restaurante",
+    "subtitle": "Todo lo que necesitas para crear la experiencia perfecta de menú digital para tu restaurante o cafetería",
+    "list": [
+      {
+        "id": "ai-translation",
+        "title": "Traducción Automática de Menú con IA",
+        "shortDescription": "Traduce tu menú instantáneamente a múltiples idiomas con inteligencia artificial",
+        "description": "Alcanza clientes internacionales con traducción automática de menú impulsada por IA avanzada. Tu menú de restaurante o cafetería se traduce instantáneamente a múltiples idiomas, ayudándote a servir a turistas e invitados internacionales sin esfuerzo.",
+        "cta": "Más Información"
+      },
+      {
+        "id": "analytics",
+        "title": "Análisis Avanzado e Información del Menú",
+        "shortDescription": "Rastrea el comportamiento del cliente y optimiza el rendimiento de tu menú",
+        "description": "Comprende lo que aman tus clientes con análisis detallados para tu menú QR. Rastrea vistas, clics y adiciones al carrito de cada plato para optimizar tu menú de restaurante y aumentar las ventas.",
+        "cta": "Más Información"
+      },
+      {
+        "id": "shopping-cart",
+        "title": "Carrito de Compras Inteligente para Restaurantes",
+        "shortDescription": "Permite a los clientes construir su pedido y ver el total instantáneamente",
+        "description": "Optimiza tu servicio con un sistema inteligente de carrito de compras. Los clientes pueden agregar artículos, ver precios totales instantáneamente y mostrar su pedido completo a los meseros. Perfecto para restaurantes y cafeterías que buscan mejorar la precisión de los pedidos.",
+        "cta": "Más Información"
+      },
+      {
+        "id": "modern-design",
+        "title": "Diseño Moderno con Temas Claro y Oscuro",
+        "shortDescription": "Diseño hermoso y profesional que funciona en cualquier iluminación",
+        "description": "Impresiona a tus clientes con un diseño de menú elegante y moderno. Tu menú QR se adapta automáticamente a temas claros y oscuros, asegurando una legibilidad perfecta ya sea que los clientes cenen durante el día o la noche.",
+        "cta": "Más Información"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Precios simples y transparentes",
+    "subtitle": "Elige el plan que mejor se adapte a tu restaurante",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "price": "€0",
+        "period": "para siempre",
+        "description": "Perfecto para probar SobogdQR",
+        "features": [
+          "Hasta 15 elementos",
+          "1 idioma",
+          "500 escaneos por mes",
+          "Sitio web con contactos y mapa",
+          "Análisis de menú"
+        ],
+        "cta": "Probar Gratis"
+      },
+      "base": {
+        "name": "Base",
+        "price": "€4",
+        "period": "por mes",
+        "description": "Ideal para pequeños restaurantes",
+        "features": [
+          "Hasta 100 elementos",
+          "3 idiomas",
+          "2,000 escaneos por mes",
+          "Sitio web con contactos y mapa",
+          "Análisis de menú"
+        ],
+        "cta": "Comenzar"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€9",
+        "period": "por mes",
+        "description": "Para cadenas de restaurantes",
+        "features": [
+          "Elementos ilimitados",
+          "Idiomas ilimitados",
+          "Escaneos ilimitados",
+          "Sitio web con contactos y mapa",
+          "Análisis de menú"
+        ],
+        "cta": "Comenzar"
+      }
+    }
+  },
+  "contacts": {
+    "title": "¿Preguntas? Hablemos",
+    "subtitle": "Soy Bogdan, creador de SobogdQR. Lo construí para mi café, ahora ayudo a restaurantes en todo el mundo. Escríbeme con cualquier pregunta - respondo a todos personalmente.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Ponte en contacto",
+      "email": "Tu Email",
+      "emailPlaceholder": "tu@email.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿De qué se trata?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame qué tienes en mente...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Tu mensaje ha sido enviado! Gracias por contactarme. Te responderé pronto.",
+      "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
+    }
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "cookieConsent": {
+    "title": "Usamos cookies",
+    "description": "Utilizamos cookies para mejorar tu experiencia de navegación, ofrecer contenido personalizado y analizar nuestro tráfico. Al hacer clic en \"Aceptar Todo\", aceptas nuestro uso de cookies.",
+    "acceptAll": "Aceptar Todo",
+    "rejectAll": "Rechazar Todo",
+    "customize": "Personalizar",
+    "learnMore": "Más Información"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navegación",
+      "pricing": "Precios",
+      "features": "Características",
+      "contacts": "Contactos"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Términos y Condiciones",
+      "privacy": "Política de Privacidad",
+      "cookies": "Política de Cookies",
+      "sitemap": "Mapa del Sitio"
+    },
+    "copyright": "© 2025 SobogdQR. Todos los derechos reservados."
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes Sobre Menú QR para Restaurante y Cafetería",
+    "questions": [
+      {
+        "question": "¿Qué es un menú QR para restaurante y cómo funciona?",
+        "answer": "Un menú QR para restaurante es un menú digital que los clientes pueden acceder escaneando un código QR con su smartphone. SobogdQR crea un sitio web profesional de menú digital para tu restaurante o cafetería que se actualiza instantáneamente sin necesidad de reimprimir. Los clientes simplemente escanean el código y ven tu menú en su dispositivo."
+      },
+      {
+        "question": "¿Cuánto cuesta un menú QR para un restaurante o cafetería?",
+        "answer": "SobogdQR ofrece precios flexibles desde €0 para siempre con nuestro plan gratuito. Esto hace que sea asequible para cualquier restaurante o cafetería crear un menú QR profesional. Los planes de pago comienzan en solo €4/mes con características adicionales como elementos ilimitados y análisis avanzados."
+      },
+      {
+        "question": "¿Puedo crear un sitio web para mi restaurante sin programar?",
+        "answer": "¡Sí! SobogdQR está diseñado para propietarios de restaurantes y cafeterías sin conocimientos técnicos. Puedes crear un sitio web completo de menú digital para tu restaurante en minutos, sin necesidad de habilidades de programación o código. Simplemente agrega tus platos, precios y fotos a través de nuestra interfaz intuitiva."
+      },
+      {
+        "question": "¿Con qué frecuencia puedo actualizar mi menú QR?",
+        "answer": "Puedes actualizar tu menú de restaurante o cafetería tan a menudo como necesites. Todos los cambios se reflejan en tiempo real, lo que te permite actualizar instantáneamente precios, agregar nuevos platos o cambiar descripciones sin reimprimir menús físicos. Perfecto para especiales del día y actualizaciones de temporada."
+      },
+      {
+        "question": "¿El menú QR funciona tanto para restaurantes como para cafeterías?",
+        "answer": "¡Absolutamente! SobogdQR es perfecto para restaurantes, cafeterías, cafés, bares, food trucks y cualquier negocio de servicio de alimentos. Nuestra solución de menú digital se adapta a cualquier tipo de establecimiento, desde pequeñas cafeterías hasta grandes cadenas de restaurantes."
+      },
+      {
+        "question": "¿Cómo funciona la traducción automática del menú?",
+        "answer": "Nuestro sistema de menú QR utiliza inteligencia artificial para traducir tu menú de restaurante o cafetería a múltiples idiomas automáticamente. Esto es perfecto para áreas turísticas y clientes internacionales. Puedes ofrecer tu menú en inglés, español y otros idiomas, ayudándote a servir a más clientes."
+      },
+      {
+        "question": "¿Puedo probar la solución de menú QR gratis?",
+        "answer": "¡Sí! Ofrecemos un plan completamente gratuito para restaurantes y cafeterías para probar SobogdQR. Puedes crear tu sitio web de menú digital con hasta 15 elementos sin costo, para siempre. No se requiere tarjeta de crédito para empezar. Actualiza solo cuando necesites más características."
+      },
+      {
+        "question": "¿SobogdQR es una aplicación que los clientes necesitan descargar?",
+        "answer": "¡No! Esta es una de las mejores ventajas. Los clientes no necesitan descargar ninguna aplicación. Simplemente escanean tu código QR y el menú se abre instantáneamente en su navegador web. Esto lo hace mucho más conveniente que las aplicaciones de restaurantes que requieren descargas."
+      },
+      {
+        "question": "¿Cuáles son los beneficios de un sitio web de menú digital para mi restaurante?",
+        "answer": "Un sitio web de menú digital ofrece muchos beneficios: actualizaciones instantáneas del menú sin costos de reimpresión, soporte multilingüe para clientes internacionales, pedidos sin contacto para seguridad, análisis para ver platos populares y presentación profesional. Además, es ecológico ya que eliminas el desperdicio de menús en papel."
+      },
+      {
+        "question": "¿Cómo creo un código QR para el menú de mi restaurante?",
+        "answer": "SobogdQR genera automáticamente un código QR profesional cuando creas tu menú digital. Puedes descargar e imprimir este código QR para las mesas de tu restaurante, entrada o mostrador para llevar. El código QR es personalizable y de alta calidad para un escaneo claro."
+      }
+    ],
+    "cta": {
+      "title": "¿Aún tienes preguntas?",
+      "subtitle": "Pregúntanos y obtén una respuesta en el menor tiempo posible",
+      "button": "Contáctanos"
+    }
+  }
+}

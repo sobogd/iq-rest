@@ -1,0 +1,167 @@
+import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "@/i18n/routing";
+import FAQ from "@/components/FAQ";
+import type { Metadata } from "next";
+import { Languages, BarChart3, ShoppingCart, Palette } from "lucide-react";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+
+  const titles = {
+    en: "QR Menu for Restaurant & Cafe | Create Digital Menu Website - SobogdQR",
+    es: "Menú QR para Restaurante y Cafetería | Crear Sitio Web de Menú Digital - SobogdQR"
+  };
+
+  const descriptions = {
+    en: "Create professional QR menu for restaurant and cafe in minutes. Build your digital menu website with instant updates, multilingual support, and analytics. Free trial available.",
+    es: "Crea un menú QR profesional para restaurante y cafetería en minutos. Construye tu sitio web de menú digital con actualizaciones instantáneas, soporte multilingüe y análisis. Prueba gratuita disponible."
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles] || titles.en,
+    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    alternates: {
+      canonical: `https://yourdomain.com/${locale}`,
+    },
+  };
+}
+
+export default function HomePage() {
+  const tHero = useTranslations("home.hero");
+  const tIntro = useTranslations("home.intro");
+  const tFeatures = useTranslations("features");
+
+  const features = tFeatures.raw("list") as Array<{
+    id: string;
+    title: string;
+    shortDescription: string;
+    cta: string;
+  }>;
+
+  const featureIcons = {
+    'ai-translation': Languages,
+    'analytics': BarChart3,
+    'shopping-cart': ShoppingCart,
+    'modern-design': Palette,
+  };
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'SobogdQR',
+    applicationCategory: 'BusinessApplication',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'EUR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '127',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container mx-auto px-4">
+        <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center">
+          <div className="max-w-4xl space-y-8">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              {tHero("title")}
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              {tHero("subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Link href="/get-started">{tHero("cta.create")}</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6"
+              >
+                <Link href="/demo">{tHero("cta.view")}</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Intro Section */}
+      <section className="py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              {tIntro("title")}
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              {tIntro("description")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                {tFeatures("title")}
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                {tFeatures("subtitle")}
+              </p>
+            </div>
+
+            <div className="space-y-16">
+              {features.map((feature, index) => {
+                const Icon = featureIcons[feature.id as keyof typeof featureIcons];
+                const isEven = index % 2 === 0;
+                return (
+                  <div
+                    key={feature.id}
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-8 items-center ${!isEven ? 'md:flex-row-reverse' : ''}`}
+                  >
+                    {/* Image Column */}
+                    <div className={`flex justify-center ${!isEven ? 'md:order-2' : ''}`}>
+                      <div className="w-full aspect-video rounded-lg border bg-muted flex items-center justify-center">
+                        <Icon className="w-16 h-16 text-muted-foreground/30" />
+                      </div>
+                    </div>
+
+                    {/* Content Column */}
+                    <div className={!isEven ? 'md:order-1' : ''}>
+                      <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                        {feature.title}
+                      </h3>
+                      <p className="text-base md:text-lg text-muted-foreground mb-6">
+                        {feature.shortDescription}
+                      </p>
+                      <Button asChild variant="outline">
+                        <Link href={`/features/${feature.id}`}>
+                          {feature.cta}
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQ noIndex={true} showCTA={true} />
+    </>
+  );
+}
