@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: metadata.title,
     description: metadata.description,
     alternates: {
-      canonical: `https://yourdomain.com/${locale}/features/${featureId}`,
+      canonical: `https://sobogdqr.com/${locale}/features/${featureId}`,
     },
   };
 }
