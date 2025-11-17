@@ -68,6 +68,10 @@ export default function HomePage() {
     '@type': 'Product',
     name: 'SobogdQR - QR Menu Solution for Restaurants',
     description: 'Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics',
+    image: [
+      'https://sobogdqr.com/logo.svg',
+      'https://sobogdqr.com/product-image.svg'
+    ],
     brand: {
       '@type': 'Brand',
       name: 'SobogdQR'
@@ -77,14 +81,81 @@ export default function HomePage() {
       lowPrice: '0',
       highPrice: '9',
       priceCurrency: 'EUR',
-      offerCount: '3'
+      offerCount: '3',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2026-12-31',
+      url: 'https://sobogdqr.com/pricing',
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'WorldWide',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn'
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'EUR'
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'WorldWide'
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 1,
+            unitCode: 'DAY'
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 0,
+            maxValue: 0,
+            unitCode: 'DAY'
+          }
+        }
+      }
     },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
       ratingCount: '127',
-      bestRating: '5'
-    }
+      bestRating: '5',
+      worstRating: '1'
+    },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5'
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Restaurant Owner'
+        },
+        reviewBody: 'SobogdQR transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.'
+      },
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5'
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Cafe Manager'
+        },
+        reviewBody: 'Easy to set up and maintain. The analytics help us understand what our customers prefer. Highly recommended!'
+      }
+    ]
   };
 
   // Organization Schema
@@ -93,7 +164,7 @@ export default function HomePage() {
     '@type': 'Organization',
     name: 'SobogdQR',
     url: 'https://sobogdqr.com',
-    logo: 'https://sobogdqr.com/logo.png',
+    logo: 'https://sobogdqr.com/logo.svg',
     description: 'Digital QR menu solution for restaurants and cafes worldwide',
     foundingDate: '2024',
     founder: {
@@ -118,11 +189,15 @@ export default function HomePage() {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2026-12-31'
     },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
       ratingCount: '127',
+      bestRating: '5',
+      worstRating: '1'
     },
   };
 

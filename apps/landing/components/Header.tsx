@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "./LanguageSelector";
 import { ThemeToggle } from "./ThemeToggle";
+import Image from "next/image";
 
 export default function Header() {
   const t = useTranslations("header");
@@ -14,8 +15,15 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold hover:opacity-80">
-            {t("logo")}
+          <Link href="/" className="flex items-center gap-1 hover:opacity-80">
+            <Image
+              src="/logo.svg"
+              alt="SobogdQR Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
+            <span className="text-2xl font-bold">{t("logo")}</span>
           </Link>
 
           {/* Center Navigation */}

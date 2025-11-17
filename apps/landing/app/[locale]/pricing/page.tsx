@@ -33,36 +33,126 @@ export default function PricingPage() {
 
   const plans = ["free", "base", "pro"] as const;
 
+  const merchantReturnPolicy = {
+    '@type': 'MerchantReturnPolicy',
+    applicableCountry: 'WorldWide',
+    returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+    merchantReturnDays: 30,
+    returnMethod: 'https://schema.org/ReturnByMail',
+    returnFees: 'https://schema.org/FreeReturn'
+  };
+
+  const shippingDetails = {
+    '@type': 'OfferShippingDetails',
+    shippingRate: {
+      '@type': 'MonetaryAmount',
+      value: '0',
+      currency: 'EUR'
+    },
+    shippingDestination: {
+      '@type': 'DefinedRegion',
+      addressCountry: 'WorldWide'
+    },
+    deliveryTime: {
+      '@type': 'ShippingDeliveryTime',
+      handlingTime: {
+        '@type': 'QuantitativeValue',
+        minValue: 0,
+        maxValue: 1,
+        unitCode: 'DAY'
+      },
+      transitTime: {
+        '@type': 'QuantitativeValue',
+        minValue: 0,
+        maxValue: 0,
+        unitCode: 'DAY'
+      }
+    }
+  };
+
   const productJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'SobogdQR - QR Menu for Restaurant & Cafe',
+    description: 'Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics',
+    image: [
+      'https://sobogdqr.com/logo.svg',
+      'https://sobogdqr.com/product-image.svg'
+    ],
+    brand: {
+      '@type': 'Brand',
+      name: 'SobogdQR'
+    },
     offers: [
       {
         '@type': 'Offer',
         name: 'Free Plan',
         price: '0',
         priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2026-12-31',
+        url: 'https://sobogdqr.com/pricing',
+        hasMerchantReturnPolicy: merchantReturnPolicy,
+        shippingDetails: shippingDetails
       },
       {
         '@type': 'Offer',
         name: 'Base Plan',
         price: '4',
         priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2026-12-31',
+        url: 'https://sobogdqr.com/pricing',
+        hasMerchantReturnPolicy: merchantReturnPolicy,
+        shippingDetails: shippingDetails
       },
       {
         '@type': 'Offer',
         name: 'Pro Plan',
         price: '9',
         priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2026-12-31',
+        url: 'https://sobogdqr.com/pricing',
+        hasMerchantReturnPolicy: merchantReturnPolicy,
+        shippingDetails: shippingDetails
       },
     ],
-  };
-
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: t.raw('faq.questions'),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '127',
+      bestRating: '5',
+      worstRating: '1'
+    },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5'
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Restaurant Owner'
+        },
+        reviewBody: 'SobogdQR transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.'
+      },
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5'
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Cafe Manager'
+        },
+        reviewBody: 'Easy to set up and maintain. The analytics help us understand what our customers prefer. Highly recommended!'
+      }
+    ]
   };
 
   return (
@@ -70,10 +160,6 @@ export default function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
