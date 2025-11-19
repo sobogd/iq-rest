@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Define all routes with individual settings
   const routes: RouteConfig[] = [
-    { path: '', lastModified: '2024-11-19', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/pricing', lastModified: '2024-11-15', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/features', lastModified: '2024-11-10', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/features/ai-translation', lastModified: '2024-11-10', changeFrequency: 'monthly', priority: 0.8 },
@@ -32,6 +31,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Generate sitemap entries for all locales
   const sitemapEntries: MetadataRoute.Sitemap = []
+
+  // Add root URL with x-default for language negotiation
+  sitemapEntries.push({
+    url: baseUrl,
+    lastModified: new Date('2025-11-19'),
+    changeFrequency: 'weekly',
+    priority: 1.0,
+    alternates: {
+      languages: {
+        en: `${baseUrl}/en`,
+        es: `${baseUrl}/es`,
+        'x-default': baseUrl,
+      }
+    }
+  })
+
+  // Add localized home pages
+  locales.forEach(locale => {
+    sitemapEntries.push({
+      url: `${baseUrl}/${locale}`,
+      lastModified: new Date('2025-11-19'),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en`,
+          es: `${baseUrl}/es`,
+        }
+      }
+    })
+  })
 
   locales.forEach(locale => {
     routes.forEach(route => {
