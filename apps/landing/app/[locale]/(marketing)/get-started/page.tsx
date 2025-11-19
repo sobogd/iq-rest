@@ -25,8 +25,8 @@ export default async function GetStartedPage({ params }: { params: Promise<{ loc
   }
 
   return (
-    <div className="flex items-center justify-center" style={{ minHeight: '60vh' }}>
-      <div className="w-full max-w-md mx-auto px-4">
+    <div className="flex items-center justify-center min-h-[calc(100vh-200px)] py-8">
+      <div className="w-full max-w-[1000px] mx-auto px-4">
         <GetStartedForm />
       </div>
     </div>

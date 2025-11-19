@@ -168,6 +168,36 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "landing-redesign": {
+        "title": "Redesigned Get Started Page for Higher Conversions",
+        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
+        "meta": {
+          "title": "Get Started Page Redesign - SobogdQR Changelog",
+          "description": "SobogdQR launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+        },
+        "content": {
+          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
+          "image1Alt": "New SobogdQR get started page with value propositions and social proof",
+          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
+          "section1Title": "Clear Value Propositions at a Glance",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what SobogdQR offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section2Title": "Social Proof That Builds Trust",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using SobogdQR. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust SobogdQR significantly reduces hesitation and encourages signups.",
+          "section3Title": "Streamlined Signup Flow",
+          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
+          "benefitsTitle": "Key Improvements in This Update",
+          "benefit1": "Value proposition cards with icons for instant comprehension",
+          "benefit2": "Live restaurant counter providing authentic social proof",
+          "benefit3": "Unified page design for both email and OTP verification steps",
+          "benefit4": "Visual 3-step process indicator for transparency",
+          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
+          "benefit6": "Real-time email validation with visual feedback",
+          "conclusionTitle": "Designed for Restaurant Success",
+          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
+          "ctaText": "Ready to create your restaurant's digital menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "auth": {
         "title": "New User Authentication Interface",
         "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
@@ -229,15 +259,16 @@
   },
   "getStarted": {
     "meta": {
-      "title": "Get Started - SobogdQR",
-      "description": "Create your free QR menu account and start building your digital menu in minutes"
+      "title": "Create Your Digital Menu in 5 Minutes - SobogdQR",
+      "description": "QR menu and website for your restaurant. Ready instantly. No technical skills required."
     },
-    "title": "Get Started",
-    "subtitle": "Create your restaurant website with QR menu in minutes. Just enter your email to save your progress.",
+    "title": "Create Your Digital Menu in 5 Minutes",
+    "subtitle": "QR menu and website for your restaurant. Ready instantly.",
     "emailLabel": "Email",
-    "emailPlaceholder": "your@email.com",
-    "continue": "Continue",
-    "sending": "Sending code...",
+    "emailPlaceholder": "Enter email to start creating",
+    "otpPlaceholder": "Enter 4-digit code",
+    "continue": "Create My Menu",
+    "sending": "Creating...",
     "verifyTitle": "Check your email",
     "verifySubtitle": "We sent a 4-digit code to {email}",
     "verify": "Verify",
@@ -250,6 +281,26 @@
     "errors": {
       "sendFailed": "Failed to send verification code. Please try again.",
       "verifyFailed": "Failed to verify code. Please try again."
+    },
+    "valueProps": {
+      "noSkills": "No technical skills required",
+      "instantUpdates": "Instant menu updates",
+      "qrIncluded": "QR code + website included",
+      "freeStart": "Free to start"
+    },
+    "formHelper": "No credit card required",
+    "setupTime": "Setup in 5 minutes",
+    "hasAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "restaurantCounter": "Join {count} restaurants already using SobogdQR",
+    "steps": {
+      "signUp": "Sign up",
+      "addMenu": "Add menu",
+      "getQr": "Get QR"
+    },
+    "motivational": {
+      "title": "Start accepting orders today",
+      "subtitle": "Your customers are waiting for a digital menu"
     }
   },
   "faq": {

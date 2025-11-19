@@ -37,6 +37,7 @@ export default async function AppLayout({
                 {userEmail?.value}
               </span>
               <form action="/api/auth/logout" method="POST">
+                <input type="hidden" name="locale" value={locale} />
                 <button
                   type="submit"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"

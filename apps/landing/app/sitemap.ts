@@ -24,9 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/terms', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/privacy', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/cookies', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
-    { path: '/changelog', lastModified: '2024-11-19', changeFrequency: 'weekly', priority: 0.7 },
+    { path: '/changelog', lastModified: '2025-11-19', changeFrequency: 'weekly', priority: 0.7 },
+    { path: '/changelog/get-started-page-redesign', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/user-authentication-interface', lastModified: '2024-11-19', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/get-started', lastModified: '2024-11-19', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/get-started', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   // Generate sitemap entries for all locales

@@ -23,6 +23,12 @@ export default function ChangelogPage() {
 
   const entries = [
     {
+      id: "get-started-page-redesign",
+      date: "2025-11-19",
+      titleKey: "entries.landing-redesign.title",
+      descriptionKey: "entries.landing-redesign.description",
+    },
+    {
       id: "user-authentication-interface",
       date: "2024-11-19",
       titleKey: "entries.auth.title",
@@ -30,7 +36,40 @@ export default function ChangelogPage() {
     },
   ];
 
+  // Blog/ItemList Schema for SEO
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "SobogdQR Changelog",
+    description: "Latest updates and new features for SobogdQR - digital QR menu solution for restaurants",
+    url: "https://sobogdqr.com/changelog",
+    publisher: {
+      "@type": "Organization",
+      name: "SobogdQR",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://sobogdqr.com/logo.svg"
+      }
+    },
+    blogPost: entries.map((entry) => ({
+      "@type": "BlogPosting",
+      headline: t(entry.titleKey),
+      description: t(entry.descriptionKey),
+      datePublished: entry.date,
+      url: `https://sobogdqr.com/changelog/${entry.id}`,
+      author: {
+        "@type": "Organization",
+        name: "SobogdQR"
+      }
+    }))
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
         {/* Page Header */}
@@ -40,9 +79,9 @@ export default function ChangelogPage() {
         </div>
 
         {/* Changelog Entries */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           {entries.map((entry) => (
-            <Link key={entry.id} href={`/changelog/${entry.id}`}>
+            <Link key={entry.id} href={`/changelog/${entry.id}`} className="block">
               <Card className="hover:shadow-lg transition-shadow cursor-pointer">
                 <CardHeader>
                   <div className="flex items-center justify-between">
@@ -76,5 +115,6 @@ export default function ChangelogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
