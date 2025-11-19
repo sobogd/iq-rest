@@ -41,6 +41,12 @@ export default function Header() {
               {t("nav.features")}
             </Link>
             <Link
+              href="/changelog"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              {t("nav.changelog")}
+            </Link>
+            <Link
               href="/contacts"
               className="text-foreground hover:text-primary transition-colors"
             >

@@ -4,6 +4,7 @@
     "nav": {
       "pricing": "Pricing",
       "features": "Features",
+      "changelog": "Changelog",
       "contacts": "Contacts"
     },
     "getStarted": "Get Started",
@@ -152,6 +153,104 @@
       "sitemap": "Sitemap"
     },
     "copyright": "© 2025 SobogdQR. All rights reserved."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Changelog - SobogdQR Updates & New Features",
+      "description": "Stay updated with the latest features and improvements to SobogdQR - your digital QR menu solution for restaurants and cafes"
+    },
+    "title": "Changelog",
+    "subtitle": "Latest updates and new features for your restaurant QR menu",
+    "readMore": "Read more",
+    "backToChangelog": "Back to Changelog",
+    "seo": {
+      "title": "About SobogdQR Updates",
+      "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
+    },
+    "entries": {
+      "auth": {
+        "title": "New User Authentication Interface",
+        "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
+        "meta": {
+          "title": "User Authentication Interface - SobogdQR Changelog",
+          "description": "SobogdQR introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+        },
+        "content": {
+          "intro": "We are excited to announce the launch of our new user authentication interface for SobogdQR. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of SobogdQR authentication",
+          "image1Caption": "Simple email-based authentication - no passwords to remember",
+          "section1Title": "Passwordless Authentication for Restaurant Owners",
+          "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
+          "section2Title": "Streamlined QR Menu Creation Process",
+          "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
+          "image2Alt": "OTP verification step of SobogdQR authentication",
+          "image2Caption": "Secure 4-digit code verification sent directly to your email",
+          "section3Title": "Built for Speed and Security",
+          "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
+          "benefitsTitle": "Key Benefits for Your Restaurant",
+          "benefit1": "Create your restaurant website with QR menu in minutes - no technical skills required",
+          "benefit2": "No passwords to remember - secure email-based verification keeps your account safe",
+          "benefit3": "Instant access to your digital menu builder from any device",
+          "benefit4": "Quick updates to your QR menu even during busy service hours",
+          "conclusionTitle": "Start Building Your Digital Menu Today",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, SobogdQR provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "ctaText": "Ready to create your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      }
+    }
+  },
+  "dashboard": {
+    "meta": {
+      "title": "Dashboard - SobogdQR",
+      "description": "Manage your QR menu and restaurant settings"
+    },
+    "title": "Dashboard",
+    "subtitle": "Welcome to your SobogdQR dashboard",
+    "comingSoon": "Coming soon",
+    "cards": {
+      "menu": {
+        "title": "Menu",
+        "description": "Manage your menu items and categories"
+      },
+      "qrCode": {
+        "title": "QR Code",
+        "description": "Download and customize your QR code"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "View your menu performance and insights"
+      },
+      "settings": {
+        "title": "Settings",
+        "description": "Configure your restaurant settings"
+      }
+    }
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Get Started - SobogdQR",
+      "description": "Create your free QR menu account and start building your digital menu in minutes"
+    },
+    "title": "Get Started",
+    "subtitle": "Create your restaurant website with QR menu in minutes. Just enter your email to save your progress.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "continue": "Continue",
+    "sending": "Sending code...",
+    "verifyTitle": "Check your email",
+    "verifySubtitle": "We sent a 4-digit code to {email}",
+    "verify": "Verify",
+    "verifying": "Verifying...",
+    "changeEmail": "Change email",
+    "resendCode": "Resend code",
+    "successTitle": "Welcome!",
+    "successSubtitle": "You have successfully signed in",
+    "redirecting": "Redirecting to dashboard...",
+    "errors": {
+      "sendFailed": "Failed to send verification code. Please try again.",
+      "verifyFailed": "Failed to verify code. Please try again."
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions About QR Menu for Restaurant & Cafe",

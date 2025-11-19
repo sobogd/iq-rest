@@ -4,6 +4,7 @@
     "nav": {
       "pricing": "Precios",
       "features": "Características",
+      "changelog": "Changelog",
       "contacts": "Contactos"
     },
     "getStarted": "Comenzar",
@@ -152,6 +153,104 @@
       "sitemap": "Mapa del Sitio"
     },
     "copyright": "© 2025 SobogdQR. Todos los derechos reservados."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Changelog - Actualizaciones y Nuevas Funciones de SobogdQR",
+      "description": "Mantente actualizado con las últimas funciones y mejoras de SobogdQR - tu solución de menú QR digital para restaurantes y cafeterías"
+    },
+    "title": "Changelog",
+    "subtitle": "Últimas actualizaciones y nuevas funciones para tu menú QR de restaurante",
+    "readMore": "Leer más",
+    "backToChangelog": "Volver al Changelog",
+    "seo": {
+      "title": "Sobre las Actualizaciones de SobogdQR",
+      "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
+    },
+    "entries": {
+      "auth": {
+        "title": "Nueva Interfaz de Autenticación de Usuarios",
+        "description": "Hemos lanzado un sistema de autenticación simple y seguro basado en email que te permite crear tu sitio web de restaurante y menú QR en minutos.",
+        "meta": {
+          "title": "Interfaz de Autenticación de Usuarios - Changelog de SobogdQR",
+          "description": "SobogdQR presenta un nuevo sistema de autenticación sin contraseña para crear tu sitio web de restaurante y menú QR digital de forma rápida y segura"
+        },
+        "content": {
+          "intro": "Estamos emocionados de anunciar el lanzamiento de nuestra nueva interfaz de autenticación de usuarios para SobogdQR. Esta actualización representa un paso significativo para facilitar más que nunca la creación de tu sitio web de restaurante con un menú QR profesional. Nuestro objetivo siempre ha sido ayudar a propietarios de restaurantes y cafeterías a construir su presencia digital en minutos, no horas, y este nuevo sistema de autenticación está diseñado con esa misión en mente.",
+          "image1Alt": "Paso de ingreso de email en la autenticación de SobogdQR",
+          "image1Caption": "Autenticación simple basada en email - sin contraseñas que recordar",
+          "section1Title": "Autenticación Sin Contraseña para Propietarios de Restaurantes",
+          "section1Text": "Entendiendo que los propietarios de restaurantes son personas ocupadas, hemos implementado un sistema de autenticación sin contraseña que solo requiere tu dirección de email. Cuando quieras crear tu sitio web de restaurante o actualizar tu menú QR digital, simplemente ingresa tu email y recibe un código de verificación seguro de 4 dígitos. Este enfoque elimina la frustración de las contraseñas olvidadas mientras mantiene los más altos estándares de seguridad para los datos de tu restaurante. Todo el proceso toma menos de 30 segundos, permitiéndote enfocarte en lo que más importa - administrar tu restaurante y servir a tus clientes.",
+          "section2Title": "Proceso Simplificado de Creación de Menú QR",
+          "section2Text": "Con nuestro nuevo sistema de autenticación, comenzar con tu menú QR digital nunca ha sido más fácil. Una vez autenticado, tendrás acceso inmediato a nuestro intuitivo constructor de menús donde puedes agregar tus platos, establecer precios, subir fotos y organizar categorías. El menú QR que crees será accesible para tus clientes instantáneamente - simplemente escanean el código y ven tu menú digital bellamente diseñado en su smartphone. No se requiere descarga de apps para tus clientes, ni conocimientos técnicos de tu parte. Esto es exactamente lo que los restaurantes y cafeterías modernas necesitan para competir en el mundo digital actual.",
+          "image2Alt": "Paso de verificación OTP en la autenticación de SobogdQR",
+          "image2Caption": "Verificación segura con código de 4 dígitos enviado directamente a tu email",
+          "section3Title": "Construido para Velocidad y Seguridad",
+          "section3Text": "La seguridad fue nuestra máxima prioridad al diseñar este sistema de autenticación. Cada código de verificación expira después de 10 minutos y solo puede usarse una vez, protegiendo tu sitio web de restaurante y datos del menú de accesos no autorizados. Al mismo tiempo, hemos optimizado cada paso del proceso para velocidad. Desde ingresar tu email hasta acceder a tu panel de control, todo el flujo de autenticación se completa en menos de un minuto. Esto significa que puedes hacer actualizaciones rápidas a tu menú QR durante el servicio, agregar especiales del día o ajustar precios - todo sin demoras.",
+          "benefitsTitle": "Beneficios Clave para Tu Restaurante",
+          "benefit1": "Crea tu sitio web de restaurante con menú QR en minutos - sin habilidades técnicas requeridas",
+          "benefit2": "Sin contraseñas que recordar - la verificación segura por email mantiene tu cuenta segura",
+          "benefit3": "Acceso instantáneo a tu constructor de menú digital desde cualquier dispositivo",
+          "benefit4": "Actualizaciones rápidas a tu menú QR incluso durante horas de servicio ocupadas",
+          "conclusionTitle": "Comienza a Construir Tu Menú Digital Hoy",
+          "conclusionText": "Esta nueva interfaz de autenticación es solo el comienzo de nuestro compromiso de hacer los menús QR digitales accesibles para cada restaurante y cafetería. Ya sea que tengas una pequeña cafetería o una cadena de restaurantes en crecimiento, SobogdQR proporciona las herramientas que necesitas para crear una presencia profesional en línea. Tus clientes esperan encontrar tu menú en línea, y con nuestra solución, puedes superar esas expectativas con un menú QR digital bellamente diseñado, siempre actualizado, que funciona perfectamente en cualquier smartphone.",
+          "ctaText": "¿Listo para crear tu sitio web de restaurante con menú QR?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      }
+    }
+  },
+  "dashboard": {
+    "meta": {
+      "title": "Panel de Control - SobogdQR",
+      "description": "Gestiona tu menú QR y la configuración de tu restaurante"
+    },
+    "title": "Panel de Control",
+    "subtitle": "Bienvenido a tu panel de control de SobogdQR",
+    "comingSoon": "Próximamente",
+    "cards": {
+      "menu": {
+        "title": "Menú",
+        "description": "Gestiona los elementos y categorías de tu menú"
+      },
+      "qrCode": {
+        "title": "Código QR",
+        "description": "Descarga y personaliza tu código QR"
+      },
+      "analytics": {
+        "title": "Análisis",
+        "description": "Ver el rendimiento y estadísticas de tu menú"
+      },
+      "settings": {
+        "title": "Configuración",
+        "description": "Configura los ajustes de tu restaurante"
+      }
+    }
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Comenzar - SobogdQR",
+      "description": "Crea tu cuenta gratuita de menú QR y comienza a construir tu menú digital en minutos"
+    },
+    "title": "Comenzar",
+    "subtitle": "Crea el sitio web de tu restaurante con menú QR en minutos. Solo ingresa tu email para guardar tu progreso.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "continue": "Continuar",
+    "sending": "Enviando código...",
+    "verifyTitle": "Revisa tu email",
+    "verifySubtitle": "Enviamos un código de 4 dígitos a {email}",
+    "verify": "Verificar",
+    "verifying": "Verificando...",
+    "changeEmail": "Cambiar email",
+    "resendCode": "Reenviar código",
+    "successTitle": "¡Bienvenido!",
+    "successSubtitle": "Has iniciado sesión correctamente",
+    "redirecting": "Redirigiendo al panel de control...",
+    "errors": {
+      "sendFailed": "Error al enviar el código de verificación. Por favor, inténtalo de nuevo.",
+      "verifyFailed": "Error al verificar el código. Por favor, inténtalo de nuevo."
+    }
   },
   "faq": {
     "title": "Preguntas Frecuentes Sobre Menú QR para Restaurante y Cafetería",
