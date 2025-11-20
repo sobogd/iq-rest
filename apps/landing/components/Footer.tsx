@@ -49,6 +49,22 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/faq"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t("navigation.faq")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/changelog"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t("navigation.changelog")}
+                </Link>
+              </li>
+              <li>
                 <a
                   href="/sitemap.xml"
                   target="_blank"

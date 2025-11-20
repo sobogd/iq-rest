@@ -1,16 +1,13 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
 
 interface HowToStepsProps {
   noIndex?: boolean;
 }
 
-export default function HowToSteps({ noIndex = false }: HowToStepsProps) {
-  const t = useTranslations("faq");
+export default async function HowToSteps({ noIndex = false }: HowToStepsProps) {
+  const t = await getTranslations("faq");
   const howto = t.raw("howto") as {
     question: string;
     answer: string;

@@ -144,7 +144,9 @@
       "title": "Navegación",
       "pricing": "Precios",
       "features": "Características",
-      "contacts": "Contactos"
+      "contacts": "Contactos",
+      "faq": "Preguntas Frecuentes",
+      "changelog": "Registro de Cambios"
     },
     "legal": {
       "title": "Legal",

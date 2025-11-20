@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -16,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function FAQPage() {
-  const t = useTranslations("faq");
+export default async function FAQPage() {
+  const t = await getTranslations("faq");
   const items = t.raw("questions") as Array<{ question: string; answer: string }>;
 
   // FAQPage Schema for SEO
