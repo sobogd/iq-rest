@@ -23,6 +23,12 @@ export default function ChangelogPage() {
 
   const entries = [
     {
+      id: "free-restaurant-website-improvements",
+      date: "2025-11-20",
+      titleKey: "entries.free-restaurant-website-improvements.title",
+      descriptionKey: "entries.free-restaurant-website-improvements.description",
+    },
+    {
       id: "get-started-page-redesign",
       date: "2025-11-19",
       titleKey: "entries.landing-redesign.title",

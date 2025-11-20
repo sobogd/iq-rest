@@ -2,6 +2,7 @@
   "header": {
     "logo": "SobogdQR",
     "nav": {
+      "menu": "Menú",
       "pricing": "Precios",
       "features": "Características",
       "changelog": "Changelog",
@@ -168,6 +169,38 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "free-restaurant-website-improvements": {
+        "title": "Creación de Sitio Web Gratis para Restaurante - Optimización Móvil y Mejoras UX",
+        "description": "Mejoras importantes en la creación de sitio web gratis para restaurante: navegación móvil optimizada con menú hamburguesa, página de registro mejorada y experiencia de usuario optimizada.",
+        "meta": {
+          "title": "Actualizaciones de Creación de Sitio Web Gratis para Restaurante - Changelog SobogdQR",
+          "description": "Descubre cómo SobogdQR mejoró el proceso de creación de sitio web gratis para restaurante con navegación optimizada para móvil, mejor flujo de registro y experiencia mejorada"
+        },
+        "content": {
+          "intro": "Crear un sitio web gratis para restaurante nunca ha sido tan fácil ni tan compatible con móviles. Hemos realizado mejoras significativas para ayudar a propietarios de restaurantes y cafeterías a construir su sitio web profesional con menú QR digital, especialmente en dispositivos móviles donde la mayoría busca 'creación de sitio web para restaurante gratis'. Estas actualizaciones se centran en la navegación móvil, refinamientos de la página de registro y experiencia de usuario general para asegurar que cualquiera pueda crear un sitio web de restaurante gratis sin conocimientos técnicos.",
+          "image1Alt": "Menú hamburguesa optimizado para móvil del sitio web de restaurante",
+          "image1Caption": "Nueva navegación móvil con menú hamburguesa para fácil acceso a todas las funciones",
+          "section1Title": "Navegación Móvil Primero para Sitios Web de Restaurantes",
+          "section1Text": "La mayoría de propietarios de restaurantes buscan y crean su sitio web gratis en dispositivos móviles. Por eso hemos rediseñado completamente nuestra navegación móvil con un menú hamburguesa profesional. En smartphones y tablets, la navegación ahora se abre como un diálogo modal limpio, mostrando todos los elementos del menú (Precios, Características, Changelog, Contactos) y el botón Comenzar en un diseño vertical fácil de leer. Este enfoque optimizado para móvil hace simple explorar las funciones de SobogdQR y comenzar a crear tu sitio web gratis para restaurante directamente desde tu teléfono.",
+          "section2Title": "Página Mejorada para Creación de Sitio Web Gratis para Restaurante",
+          "section2Text": "Hemos refinado la página de registro para hacer la creación de un sitio web gratis para restaurante aún más intuitiva. Las mejoras incluyen mejor espaciado en dispositivos móviles, tarjetas de propuesta de valor centradas que explican claramente los beneficios, y diseños de formulario optimizados que funcionan perfectamente en pantallas pequeñas. El contador de restaurantes mostrando cuántos negocios ya usan SobogdQR ahora se muestra a ancho completo en móvil, proporcionando fuerte prueba social que anima a nuevos propietarios a comenzar su sitio web gratis.",
+          "image2Alt": "Flujo de registro optimizado para creación de sitio web gratis para restaurante",
+          "image2Caption": "Proceso de registro optimizado para dispositivos móviles",
+          "section3Title": "Proceso de Tres Pasos Optimizado para Todos los Dispositivos",
+          "section3Text": "El indicador visual del proceso mostrando los tres simples pasos para crear tu sitio web gratis para restaurante (Regístrate con tu email, Añade tu menú, Obtén tu código QR y empieza) ahora se adapta hermosamente a diferentes tamaños de pantalla. En móviles y tablets, los pasos se muestran verticalmente con espaciado claro. En pantallas más grandes, se muestran horizontalmente con flechas. Este diseño adaptativo asegura que todos, independientemente de su dispositivo, puedan ver claramente lo rápido y fácil que es crear un sitio web profesional para restaurante gratis con SobogdQR.",
+          "benefitsTitle": "Mejoras Clave para Crear Sitios Web Gratis para Restaurantes",
+          "benefit1": "Navegación con menú hamburguesa optimizada para móvil",
+          "benefit2": "Página de registro mejorada con mejor espaciado móvil",
+          "benefit3": "Contador de restaurantes a ancho completo en móvil",
+          "benefit4": "Indicador de proceso adaptativo que funciona en todos los tamaños",
+          "benefit5": "Formularios de entrada optimizados para interacción táctil",
+          "benefit6": "Problema de redirección de cierre de sesión corregido",
+          "conclusionTitle": "Creación de Sitio Web Gratis para Restaurante Simplificada",
+          "conclusionText": "Estas mejoras refuerzan nuestro compromiso de hacer la creación de sitio web gratis para restaurante accesible para todos. Ya seas propietario de una pequeña cafetería revisando SobogdQR en tu teléfono durante un descanso, o gerente de restaurante planificando tu estrategia digital en una tablet, la experiencia ahora es fluida y profesional. Puedes crear un sitio web completo para restaurante con menú QR, absolutamente gratis, en solo unos minutos desde cualquier dispositivo.",
+          "ctaText": "¿Listo para crear tu sitio web gratis para restaurante?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "landing-redesign": {
         "title": "Página de Inicio Rediseñada para Mayor Conversión",
         "description": "Hemos rediseñado completamente nuestra página de registro con enfoque en optimización de conversión, incluyendo propuestas de valor, prueba social y experiencia de usuario optimizada.",
@@ -292,11 +325,11 @@
     "setupTime": "Configuración en 5 minutos",
     "hasAccount": "¿Ya tienes cuenta?",
     "signIn": "Iniciar sesión",
-    "restaurantCounter": "Únete a {count} restaurantes que ya usan SobogdQR",
+    "restaurantCounter": "Únete a {count} Restaurantes que ya usan SobogdQR",
     "steps": {
-      "signUp": "Registro",
-      "addMenu": "Añadir",
-      "getQr": "Obtener QR"
+      "signUp": "Regístrate con tu email",
+      "addMenu": "Añade tu menú",
+      "getQr": "Obtén tu código QR y empieza"
     },
     "motivational": {
       "title": "Comienza a recibir pedidos hoy",

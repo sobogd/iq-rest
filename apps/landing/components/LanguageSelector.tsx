@@ -38,7 +38,7 @@ export default function LanguageSelector() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" size="icon" aria-label="Select language">
+        <Button variant="outline" size="icon" aria-label="Select language" className="border-0 md:border">
           <Globe className="h-5 w-5" />
           <span className="sr-only">Select language</span>
         </Button>

@@ -13,7 +13,9 @@ export async function POST(request: NextRequest) {
   cookieStore.delete("user_email");
   cookieStore.delete("user_id");
 
+  // Get the origin from request headers
+  const origin = request.headers.get("origin") || request.nextUrl.origin;
+
   // Redirect to home page with locale
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  return NextResponse.redirect(new URL(`/${locale}`, baseUrl));
+  return NextResponse.redirect(new URL(`/${locale}`, origin));
 }

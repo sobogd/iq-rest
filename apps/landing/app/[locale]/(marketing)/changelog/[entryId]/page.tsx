@@ -10,6 +10,12 @@ const changelogEntries: Record<string, {
   image: string;
   image2?: string;
 }> = {
+  "free-restaurant-website-improvements": {
+    date: "2025-11-20",
+    translationKey: "free-restaurant-website-improvements",
+    image: "/changelog/free-restaurant-website-mobile-menu.webp",
+    image2: "/changelog/free-restaurant-website-signup.webp",
+  },
   "get-started-page-redesign": {
     date: "2025-11-19",
     translationKey: "landing-redesign",
@@ -62,7 +68,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const isLandingRedesign = key === "landing-redesign";
+  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements";
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -169,7 +175,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
             <li>{t(`entries.${key}.content.benefit2`)}</li>
             <li>{t(`entries.${key}.content.benefit3`)}</li>
             <li>{t(`entries.${key}.content.benefit4`)}</li>
-            {isLandingRedesign && (
+            {hasSixBenefits && (
               <>
                 <li>{t(`entries.${key}.content.benefit5`)}</li>
                 <li>{t(`entries.${key}.content.benefit6`)}</li>
