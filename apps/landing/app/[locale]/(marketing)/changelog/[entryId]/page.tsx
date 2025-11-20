@@ -10,6 +10,11 @@ const changelogEntries: Record<string, {
   image: string;
   image2?: string;
 }> = {
+  "faq-page-organization": {
+    date: "2025-11-20",
+    translationKey: "faq-page-organization",
+    image: "/changelog/faq-page-organization.webp",
+  },
   "free-restaurant-website-improvements": {
     date: "2025-11-20",
     translationKey: "free-restaurant-website-improvements",
@@ -68,7 +73,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements";
+  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization";
 
   return (
     <div className="container mx-auto px-4 py-16">

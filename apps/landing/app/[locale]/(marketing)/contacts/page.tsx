@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
-import FAQ from "@/components/FAQ";
+import HowToSteps from "@/components/HowToSteps";
 
 export default function ContactsPage() {
   const t = useTranslations("contacts");
@@ -37,7 +37,9 @@ export default function ContactsPage() {
           </div>
         </div>
       </div>
-      <FAQ noIndex={true} />
+
+      {/* HowTo Steps - noindex since not homepage */}
+      <HowToSteps noIndex />
     </>
   );
 }

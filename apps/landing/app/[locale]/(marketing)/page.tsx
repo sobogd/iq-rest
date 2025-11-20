@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import FAQ from "@/components/FAQ";
+import HowToSteps from "@/components/HowToSteps";
 import type { Metadata } from "next";
 import { Languages, BarChart3, ShoppingCart, Palette } from "lucide-react";
 
@@ -234,7 +234,7 @@ export default function HomePage() {
                 variant="outline"
                 className="text-lg px-8 py-6"
               >
-                <Link href="/demo">{tHero("cta.view")}</Link>
+                <Link href="/get-started">{tHero("cta.view")}</Link>
               </Button>
             </div>
           </div>
@@ -306,7 +306,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FAQ noIndex={true} showCTA={true} />
+      {/* HowTo Steps - with schema (homepage only) */}
+      <HowToSteps />
     </>
   );
 }

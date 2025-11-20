@@ -22,12 +22,6 @@ export default function FAQ({ noIndex = false, showCTA = false }: FAQProps) {
     answer: string;
   }>;
 
-  const howto = t.raw("howto") as {
-    question: string;
-    answer: string;
-    steps: Array<{ name: string; text: string }>;
-  };
-
   // FAQPage Schema for SEO
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -42,33 +36,13 @@ export default function FAQ({ noIndex = false, showCTA = false }: FAQProps) {
     }))
   };
 
-  // HowTo Schema for step-by-step guide
-  const howtoSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: howto.question,
-    description: howto.answer,
-    step: howto.steps.map((step, index) => ({
-      '@type': 'HowToStep',
-      position: index + 1,
-      name: step.name,
-      text: step.text
-    }))
-  };
-
   return (
     <>
       {!noIndex && (
-        <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-          />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema) }}
-          />
-        </>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       )}
       <div className="w-full py-16 bg-muted/50">
         <div className="container mx-auto px-4">
@@ -76,25 +50,6 @@ export default function FAQ({ noIndex = false, showCTA = false }: FAQProps) {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               {t("title")}
             </h2>
-
-            {/* HowTo Section */}
-            <div className="mb-8 p-6 border rounded-lg bg-card">
-              <h3 className="text-xl font-semibold mb-4">{howto.question}</h3>
-              <p className="text-muted-foreground mb-6">{howto.answer}</p>
-              <ol className="space-y-4">
-                {howto.steps.map((step, index) => (
-                  <li key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">{step.name}</h4>
-                      <p className="text-muted-foreground text-sm">{step.text}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
 
             <Accordion type="single" collapsible className="w-full">
               {questions.map((item, index) => (

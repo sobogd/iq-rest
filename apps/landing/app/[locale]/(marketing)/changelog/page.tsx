@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import HowToSteps from "@/components/HowToSteps";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -22,6 +23,12 @@ export default function ChangelogPage() {
   const t = useTranslations("changelog");
 
   const entries = [
+    {
+      id: "faq-page-organization",
+      date: "2025-11-20",
+      titleKey: "entries.faq-page-organization.title",
+      descriptionKey: "entries.faq-page-organization.description",
+    },
     {
       id: "free-restaurant-website-improvements",
       date: "2025-11-20",
@@ -121,6 +128,9 @@ export default function ChangelogPage() {
         </div>
       </div>
     </div>
+
+    {/* HowTo Steps - noindex since not homepage */}
+    <HowToSteps noIndex />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { Languages, BarChart3, ShoppingCart, Palette, ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import HowToSteps from "@/components/HowToSteps";
 
 const featureIcons = {
   'ai-translation': Languages,
@@ -247,6 +248,9 @@ export default async function FeaturePage({ params }: { params: Promise<{ locale
             </Card>
           </div>
         </div>
+
+        {/* HowTo Steps - noindex since not homepage */}
+        <HowToSteps noIndex />
       </div>
     </>
   );

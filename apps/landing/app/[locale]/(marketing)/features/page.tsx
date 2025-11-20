@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "@/i18n/routing";
 import { Languages, BarChart3, ShoppingCart, Palette } from "lucide-react";
 import type { Metadata } from "next";
+import HowToSteps from "@/components/HowToSteps";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -82,6 +83,9 @@ export default function FeaturesPage() {
           })}
         </div>
       </div>
+
+      {/* HowTo Steps - noindex since not homepage */}
+      <HowToSteps noIndex />
     </div>
   );
 }

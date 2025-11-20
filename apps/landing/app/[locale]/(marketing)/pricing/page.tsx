@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import FAQ from "@/components/FAQ";
+import HowToSteps from "@/components/HowToSteps";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -226,7 +226,9 @@ export default function PricingPage() {
           </div>
         </div>
       </div>
-      <FAQ showCTA={true} />
+
+      {/* HowTo Steps - noindex since not homepage */}
+      <HowToSteps noIndex />
     </>
   );
 }
