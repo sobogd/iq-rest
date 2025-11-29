@@ -47,39 +47,58 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate file type
-    const allowedTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"];
+    const imageTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"];
+    const videoTypes = ["video/mp4", "video/webm", "video/quicktime"];
+    const allowedTypes = [...imageTypes, ...videoTypes];
+
     if (!allowedTypes.includes(file.type)) {
       return NextResponse.json(
-        { error: "Invalid file type. Allowed: JPEG, PNG, WebP, GIF" },
+        { error: "Invalid file type. Allowed: JPEG, PNG, WebP, GIF, MP4, WebM, MOV" },
         { status: 400 }
       );
     }
+
+    const isVideo = videoTypes.includes(file.type);
 
     // Convert file to buffer
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Resize image to 500x500 with high quality
-    const resizedBuffer = await sharp(buffer)
-      .resize(500, 500, {
-        fit: "cover",
-        position: "center",
-      })
-      .webp({ quality: 90 })
-      .toBuffer();
-
     // Generate unique filename in temp folder
     const timestamp = Date.now();
     const randomStr = Math.random().toString(36).substring(2, 8);
-    const filename = `temp/${companyId}/${timestamp}-${randomStr}.webp`;
+
+    let finalBuffer: Buffer;
+    let contentType: string;
+    let extension: string;
+
+    if (isVideo) {
+      // For videos, upload as-is
+      finalBuffer = buffer;
+      contentType = file.type;
+      extension = file.type === "video/quicktime" ? "mov" : file.type.split("/")[1];
+    } else {
+      // For images, resize and convert to webp
+      finalBuffer = await sharp(buffer)
+        .resize(500, 500, {
+          fit: "cover",
+          position: "center",
+        })
+        .webp({ quality: 90 })
+        .toBuffer();
+      contentType = "image/webp";
+      extension = "webp";
+    }
+
+    const filename = `temp/${companyId}/${timestamp}-${randomStr}.${extension}`;
 
     // Upload to S3
     await s3Client.send(
       new PutObjectCommand({
         Bucket: process.env.S3_NAME!,
         Key: filename,
-        Body: resizedBuffer,
-        ContentType: "image/webp",
+        Body: finalBuffer,
+        ContentType: contentType,
         ACL: "public-read",
       })
     );

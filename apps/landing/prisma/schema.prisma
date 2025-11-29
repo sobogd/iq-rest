@@ -29,11 +29,36 @@ model Company {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  users      UserCompany[]
-  categories Category[]
-  items      Item[]
+  users       UserCompany[]
+  categories  Category[]
+  items       Item[]
+  restaurants Restaurant[]
 
   @@map("companies")
+}
+
+model Restaurant {
+  id              String   @id @default(cuid())
+  title           String
+  description     String?
+  slug            String?
+  source          String?
+  address         String?
+  x               String?
+  y               String?
+  phone           String?
+  instagram       String?
+  whatsapp        String?
+  languages       String[] @default(["en"])
+  defaultLanguage String   @default("en")
+  companyId       String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@map("restaurants")
 }
 
 model Category {
