@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+import { MenuFeed } from "@/components/menu-feed";
 
 interface MenuListPageProps {
   params: Promise<{
@@ -11,7 +12,7 @@ interface MenuListPageProps {
   }>;
 }
 
-async function getRestaurantWithCategories(slug: string) {
+async function getRestaurantWithMenu(slug: string) {
   const restaurant = await prisma.restaurant.findFirst({
     where: { slug },
     select: {
@@ -32,7 +33,17 @@ async function getRestaurantWithCategories(slug: string) {
     select: {
       id: true,
       name: true,
-      description: true,
+      items: {
+        where: { isActive: true },
+        orderBy: { sortOrder: "asc" },
+        select: {
+          id: true,
+          name: true,
+          description: true,
+          price: true,
+          imageUrl: true,
+        },
+      },
     },
   });
 
@@ -42,7 +53,7 @@ async function getRestaurantWithCategories(slug: string) {
 export default async function MenuListPage({ params }: MenuListPageProps) {
   const { slug } = await params;
   const [data, t] = await Promise.all([
-    getRestaurantWithCategories(slug),
+    getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),
   ]);
 
@@ -51,6 +62,15 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
   }
 
   const { categories } = data;
+
+  // Convert Decimal to number for client component
+  const categoriesWithItems = categories.map((cat) => ({
+    ...cat,
+    items: cat.items.map((item) => ({
+      ...item,
+      price: Number(item.price),
+    })),
+  }));
 
   return (
     <div className="h-screen flex flex-col" style={{ backgroundColor: "#fff" }}>
@@ -67,37 +87,17 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
         </h1>
       </div>
 
-      {/* Categories list */}
-      <div className="flex-1 overflow-auto">
-        {categories.length === 0 ? (
-          <div
-            className="flex items-center justify-center h-full"
-            style={{ color: "#9ca3af" }}
-          >
-            {t("noCategories")}
-          </div>
-        ) : (
-          <div className="py-2">
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                href={`/m/${slug}/menu/${category.id}`}
-                className="block px-4 py-4 border-b hover:bg-gray-50 transition-colors"
-                style={{ borderColor: "#f3f4f6" }}
-              >
-                <h2 className="font-semibold text-lg" style={{ color: "#000" }}>
-                  {category.name}
-                </h2>
-                {category.description && (
-                  <p className="text-sm mt-1" style={{ color: "#6b7280" }}>
-                    {category.description}
-                  </p>
-                )}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
+      {/* Menu feed */}
+      {categories.length === 0 ? (
+        <div
+          className="flex-1 flex items-center justify-center"
+          style={{ color: "#9ca3af" }}
+        >
+          {t("noCategories")}
+        </div>
+      ) : (
+        <MenuFeed categories={categoriesWithItems} />
+      )}
     </div>
   );
 }
