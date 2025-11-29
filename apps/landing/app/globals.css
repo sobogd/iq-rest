@@ -73,6 +73,12 @@
     @apply bg-background text-foreground;
     overflow: hidden;
     height: 100%;
+    height: 100dvh;
   }
+}
+
+/* Fix for mobile viewport height */
+.h-screen {
+  height: 100dvh !important;
 }
 
