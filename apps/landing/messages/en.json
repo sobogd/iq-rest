@@ -171,6 +171,38 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "qr-menu-restaurant-categories": {
+        "title": "How to Make QR Code Menu for Restaurant with Categories",
+        "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
+        "meta": {
+          "title": "How to Make QR Code Menu for Restaurant with Categories | SobogdQR",
+          "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
+        },
+        "content": {
+          "intro": "Want to know how to make QR code menu for restaurant with categories? SobogdQR now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "image1Alt": "How to make QR code menu for restaurant - categories list view",
+          "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
+          "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
+          "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
+          "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with SobogdQR. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "image2Alt": "Category form showing how to make QR code menu for restaurant",
+          "image2Caption": "Simple form interface for creating restaurant menu categories",
+          "section3Title": "Mobile-Optimized Category Management",
+          "section3Text": "We know restaurant owners are busy and often manage their menus on the go. That's why our category management is fully optimized for mobile devices. When you make QR code menu for restaurant using your phone, you'll find a compact interface with a three-dot menu for quick actions. Move categories up or down, edit details, or delete categories - all from your smartphone. This mobile-first approach ensures you can make QR code menu for restaurant with categories anytime, anywhere.",
+          "benefitsTitle": "Benefits of Making QR Code Menu with Categories",
+          "benefit1": "Organize menu items logically so customers can easily find what they want",
+          "benefit2": "Drag and drop reordering to arrange categories in your preferred display order",
+          "benefit3": "Active/inactive toggle to hide seasonal categories without deleting them",
+          "benefit4": "Mobile-optimized interface to manage categories from any device",
+          "benefit5": "Clean visual design with activity indicators for quick status overview",
+          "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
+          "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using SobogdQR. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, SobogdQR makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "ctaText": "Ready to make QR code menu for your restaurant with categories?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "easy-qr-menu-cafe-control-panel": {
         "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
         "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
@@ -368,6 +400,35 @@
         "description": "Configure your restaurant settings"
       }
     }
+  },
+  "categories": {
+    "title": "Categories",
+    "description": "Manage your menu categories",
+    "addCategory": "Add Category",
+    "newTitle": "New Category",
+    "editTitle": "Edit Category",
+    "name": "Name",
+    "namePlaceholder": "Enter category name",
+    "description_label": "Description",
+    "descriptionPlaceholder": "Enter category description (optional)",
+    "sortOrder": "Sort Order",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "isActive": "Active",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "moveUp": "Move Up",
+    "moveDown": "Move Down",
+    "noCategories": "No categories yet. Create your first category to get started.",
+    "deleteConfirm": "Are you sure you want to delete this category? This action cannot be undone.",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving...",
+    "back": "Back to Categories",
+    "loading": "Loading...",
+    "notFound": "Category not found"
   },
   "getStarted": {
     "meta": {

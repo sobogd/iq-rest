@@ -1,12 +1,18 @@
 import { getTranslations } from "next-intl/server";
+import { CategoriesList } from "./categories-list";
 
 export default async function CategoriesPage() {
-  const t = await getTranslations("sidebar.menu");
+  const t = await getTranslations("categories");
 
-  return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">{t("categories")}</h1>
-      <p className="text-muted-foreground mt-1">Coming soon</p>
-    </div>
-  );
+  const translations = {
+    delete: t("delete"),
+    noCategories: t("noCategories"),
+    deleteConfirm: t("deleteConfirm"),
+    cancel: t("cancel"),
+    moveUp: t("moveUp"),
+    moveDown: t("moveDown"),
+    edit: t("edit"),
+  };
+
+  return <CategoriesList translations={translations} />;
 }

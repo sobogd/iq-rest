@@ -2,9 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
-import { AppHeader } from "@/components/app-header";
+import { DashboardLayout } from "@/components/dashboard-layout";
 import { UserProvider } from "@/components/user-provider";
 import { getUser } from "@/lib/user";
 
@@ -35,12 +33,9 @@ export default async function AppLayout({
 
   // Get translations
   const t = await getTranslations("sidebar");
+  const tCategories = await getTranslations("categories");
 
-  // Prepare translations for client components
-  const sidebarTranslations = {
-    subtitle: t("subtitle"),
-    noCompany: t("noCompany"),
-    logout: t("logout"),
+  const translations = {
     menu: {
       dashboard: t("menu.dashboard"),
       categories: t("menu.categories"),
@@ -51,20 +46,38 @@ export default async function AppLayout({
       billing: t("menu.billing"),
       support: t("menu.support"),
     },
+    logout: t("logout"),
+  };
+
+  const headerTranslations = {
+    dashboard: t("menu.dashboard"),
+    categories: t("menu.categories"),
+    products: t("menu.products"),
+    qrCode: t("menu.qrCode"),
+    analytics: t("menu.analytics"),
+    settings: t("menu.settings"),
+    billing: t("menu.billing"),
+    support: t("menu.support"),
+    newCategory: tCategories("newTitle"),
+    editCategory: tCategories("editTitle"),
+    newProduct: "New Product",
+    editProduct: "Edit Product",
+  };
+
+  const actionTranslations = {
+    addCategory: tCategories("addCategory"),
+    addProduct: "Add Product",
   };
 
   return (
     <UserProvider user={user}>
-      <SidebarProvider>
-        <AppSidebar
-          companyName={user.companyName}
-          translations={sidebarTranslations}
-        />
-        <SidebarInset>
-          <AppHeader translations={sidebarTranslations.menu} />
-          <main className="flex-1 overflow-auto">{children}</main>
-        </SidebarInset>
-      </SidebarProvider>
+      <DashboardLayout
+        translations={translations}
+        headerTranslations={headerTranslations}
+        actionTranslations={actionTranslations}
+      >
+        {children}
+      </DashboardLayout>
     </UserProvider>
   );
 }

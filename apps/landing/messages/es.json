@@ -171,6 +171,38 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "qr-menu-restaurant-categories": {
+        "title": "Cómo Hacer Menú QR para Restaurante con Categorías",
+        "description": "Aprende cómo hacer menú QR para restaurante con categorías organizadas. El nuevo sistema de gestión de categorías hace que crear menús digitales estructurados sea simple y rápido.",
+        "meta": {
+          "title": "Cómo Hacer Menú QR para Restaurante con Categorías | SobogdQR",
+          "description": "Guía paso a paso sobre cómo hacer menú QR para restaurante con categorías. Organiza tu menú digital con gestión fácil de categorías. Crea menús QR profesionales para restaurante en minutos."
+        },
+        "content": {
+          "intro": "¿Quieres saber cómo hacer menú QR para restaurante con categorías? SobogdQR ahora ofrece un potente sistema de gestión de categorías que hace más fácil que nunca crear menús digitales organizados. Ya sea que tengas un restaurante, cafetería o bar, organizar tu menú con categorías ayuda a los clientes a encontrar exactamente lo que buscan. Esta actualización te muestra exactamente cómo hacer menú QR para restaurante con categorías bien estructuradas que mejoran la experiencia gastronómica.",
+          "image1Alt": "Cómo hacer menú QR para restaurante - vista de lista de categorías",
+          "image1Caption": "Interfaz de gestión de categorías que muestra cómo organizar el menú QR de tu restaurante",
+          "section1Title": "Por Qué las Categorías Importan al Hacer Menú QR para Restaurante",
+          "section1Text": "Cuando haces menú QR para restaurante, organizar los elementos en categorías es esencial. Los clientes esperan ver agrupaciones lógicas como Entrantes, Platos Principales, Postres y Bebidas. Nuestro nuevo sistema de gestión de categorías te permite crear categorías ilimitadas, establecer su orden de visualización y alternar su visibilidad. Así es exactamente cómo hacer menú QR para restaurante que los clientes aman - claro, organizado y fácil de navegar. Los estudios muestran que los restaurantes con menús digitales bien organizados ven un 35% más de satisfacción del cliente.",
+          "section2Title": "Paso a Paso: Cómo Hacer Menú QR para Restaurante con Categorías",
+          "section2Text": "Hacer un menú QR para restaurante con categorías es simple con SobogdQR. Primero, navega a la sección de Categorías en tu panel de control. Haz clic en el botón de acción flotante para añadir una nueva categoría. Ingresa el nombre de la categoría, descripción opcional, y establece si está activa. La nueva interfaz simplificada muestra todas tus categorías en una lista limpia con indicadores de actividad. Usa las flechas arriba y abajo para reordenar las categorías exactamente como quieres que aparezcan en tu menú QR. Este enfoque intuitivo para hacer menú QR para restaurante asegura que tu menú esté siempre perfectamente organizado.",
+          "image2Alt": "Formulario de categoría mostrando cómo hacer menú QR para restaurante",
+          "image2Caption": "Interfaz de formulario simple para crear categorías de menú de restaurante",
+          "section3Title": "Gestión de Categorías Optimizada para Móvil",
+          "section3Text": "Sabemos que los dueños de restaurantes están ocupados y a menudo gestionan sus menús en movimiento. Por eso nuestra gestión de categorías está totalmente optimizada para dispositivos móviles. Cuando haces menú QR para restaurante usando tu teléfono, encontrarás una interfaz compacta con un menú de tres puntos para acciones rápidas. Mueve categorías arriba o abajo, edita detalles o elimina categorías - todo desde tu smartphone. Este enfoque mobile-first asegura que puedas hacer menú QR para restaurante con categorías en cualquier momento y lugar.",
+          "benefitsTitle": "Beneficios de Hacer Menú QR con Categorías",
+          "benefit1": "Organiza elementos del menú lógicamente para que los clientes encuentren fácilmente lo que quieren",
+          "benefit2": "Reordenamiento con arrastrar y soltar para organizar categorías en tu orden preferido",
+          "benefit3": "Alternar activo/inactivo para ocultar categorías estacionales sin eliminarlas",
+          "benefit4": "Interfaz optimizada para móvil para gestionar categorías desde cualquier dispositivo",
+          "benefit5": "Diseño visual limpio con indicadores de actividad para vista rápida del estado",
+          "benefit6": "Categorías ilimitadas para representar completamente la estructura del menú de tu restaurante",
+          "conclusionTitle": "Comienza a Hacer Tu Menú QR con Categorías Hoy",
+          "conclusionText": "Ahora sabes exactamente cómo hacer menú QR para restaurante con categorías usando SobogdQR. Nuestro nuevo sistema de gestión de categorías proporciona todo lo que necesitas para crear un menú digital profesional y bien organizado. Las categorías ayudan a los clientes a navegar tu menú más rápido, encontrar sus platos favoritos y descubrir nuevos elementos. Ya sea que tengas un menú simple con pocas categorías o un menú extenso con docenas de secciones, SobogdQR hace fácil hacer menú QR para restaurante que impresione a tus clientes.",
+          "ctaText": "¿Listo para hacer menú QR para tu restaurante con categorías?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "easy-qr-menu-cafe-control-panel": {
         "title": "Creación Fácil de Menú QR para Tu Cafetería - Nuevo Panel de Control",
         "description": "Presentamos nuestro nuevo panel de control que hace increíblemente fácil crear menús QR para tu cafetería. Gestiona categorías, productos y configuraciones con una interfaz moderna de sidebar.",
@@ -368,6 +400,35 @@
         "description": "Configura los ajustes de tu restaurante"
       }
     }
+  },
+  "categories": {
+    "title": "Categorías",
+    "description": "Gestiona las categorías de tu menú",
+    "addCategory": "Añadir Categoría",
+    "newTitle": "Nueva Categoría",
+    "editTitle": "Editar Categoría",
+    "name": "Nombre",
+    "namePlaceholder": "Introduce el nombre de la categoría",
+    "description_label": "Descripción",
+    "descriptionPlaceholder": "Introduce la descripción de la categoría (opcional)",
+    "sortOrder": "Orden",
+    "status": "Estado",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "isActive": "Activo",
+    "actions": "Acciones",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "moveUp": "Subir",
+    "moveDown": "Bajar",
+    "noCategories": "Aún no hay categorías. Crea tu primera categoría para empezar.",
+    "deleteConfirm": "¿Estás seguro de que quieres eliminar esta categoría? Esta acción no se puede deshacer.",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "back": "Volver a Categorías",
+    "loading": "Cargando...",
+    "notFound": "Categoría no encontrada"
   },
   "getStarted": {
     "meta": {
