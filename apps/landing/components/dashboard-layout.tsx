@@ -34,7 +34,7 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   { title: "dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "categories", url: "/dashboard/categories", icon: FolderOpen },
-  { title: "products", url: "/dashboard/products", icon: Package },
+  { title: "items", url: "/dashboard/items", icon: Package },
   { title: "qrCode", url: "/dashboard/qr-code", icon: QrCode },
   { title: "analytics", url: "/dashboard/analytics", icon: BarChart3 },
   { title: "settings", url: "/dashboard/settings", icon: Settings },
@@ -46,8 +46,8 @@ const pageTitles: Record<string, string> = {
   "/dashboard": "dashboard",
   "/dashboard/categories": "categories",
   "/dashboard/categories/new": "newCategory",
-  "/dashboard/products": "products",
-  "/dashboard/products/new": "newProduct",
+  "/dashboard/items": "items",
+  "/dashboard/items/new": "newItem",
   "/dashboard/qr-code": "qrCode",
   "/dashboard/analytics": "analytics",
   "/dashboard/settings": "settings",
@@ -60,9 +60,9 @@ const pageActions: Record<string, { labelKey: string; href: string }> = {
     labelKey: "addCategory",
     href: "/dashboard/categories/new",
   },
-  "/dashboard/products": {
-    labelKey: "addProduct",
-    href: "/dashboard/products/new",
+  "/dashboard/items": {
+    labelKey: "addItem",
+    href: "/dashboard/items/new",
   },
 };
 
@@ -102,14 +102,14 @@ export function DashboardLayout({
   if (!titleKey) {
     if (path.match(/^\/dashboard\/categories\/[^/]+$/) && path !== "/dashboard/categories/new") {
       titleKey = "editCategory";
-    } else if (path.match(/^\/dashboard\/products\/[^/]+$/) && path !== "/dashboard/products/new") {
-      titleKey = "editProduct";
+    } else if (path.match(/^\/dashboard\/items\/[^/]+$/) && path !== "/dashboard/items/new") {
+      titleKey = "editItem";
     }
   }
   const title = titleKey ? headerTranslations[titleKey] : "";
 
   // Check if back button should show
-  const showBackButton = path.match(/^\/dashboard\/(categories|products)\/(new|[^/]+)$/);
+  const showBackButton = path.match(/^\/dashboard\/(categories|items)\/(new|[^/]+)$/);
 
   // Get action for current page
   const action = pageActions[path];

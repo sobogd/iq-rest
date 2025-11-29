@@ -31,6 +31,7 @@ model Company {
 
   users      UserCompany[]
   categories Category[]
+  items      Item[]
 
   @@map("companies")
 }
@@ -46,8 +47,28 @@ model Category {
   updatedAt   DateTime @updatedAt
 
   company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  items   Item[]
 
   @@map("categories")
+}
+
+model Item {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  price       Decimal  @db.Decimal(10, 2)
+  imageUrl    String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  categoryId  String
+  companyId   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  company  Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@map("items")
 }
 
 model UserCompany {

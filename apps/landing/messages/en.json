@@ -171,6 +171,38 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "add-items-restaurant-qr-menu-website": {
+        "title": "How to Add Items to Restaurant Website with QR Menu",
+        "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
+        "meta": {
+          "title": "How to Add Items to Restaurant Website with QR Menu | SobogdQR",
+          "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
+        },
+        "content": {
+          "intro": "Want to know how to add items to your restaurant website with QR menu? SobogdQR makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "image1Alt": "How to add items to restaurant website with QR menu - item list view",
+          "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
+          "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
+          "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
+          "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with SobogdQR. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "image2Alt": "Item form showing how to add items to restaurant QR menu website",
+          "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
+          "section3Title": "Image Upload and Optimization for Your Restaurant Items",
+          "section3Text": "High-quality images are essential when you add items to restaurant website with QR menu. Our system accepts JPEG, PNG, WebP, and GIF formats up to 5MB. Every image is automatically resized to 500x500 pixels and converted to WebP format for fast loading while maintaining excellent quality. This means your dishes always look their best on any device. Professional food photography significantly improves how customers perceive your restaurant when browsing your QR menu website.",
+          "benefitsTitle": "Benefits of Adding Items to Your Restaurant QR Menu Website",
+          "benefit1": "Add unlimited menu items with photos, descriptions, and prices",
+          "benefit2": "Automatic image optimization for fast loading and perfect display",
+          "benefit3": "Organize items into categories for easy customer navigation",
+          "benefit4": "Active/inactive toggle to hide sold-out items without deleting",
+          "benefit5": "Drag and drop reordering to arrange items in your preferred order",
+          "benefit6": "Mobile-friendly interface to add items from any device",
+          "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using SobogdQR. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, SobogdQR makes it easy to add items to restaurant website that attracts and converts customers.",
+          "ctaText": "Ready to add items to your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "qr-menu-restaurant-categories": {
         "title": "How to Make QR Code Menu for Restaurant with Categories",
         "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
@@ -363,7 +395,7 @@
     "menu": {
       "dashboard": "Dashboard",
       "categories": "Categories",
-      "products": "Products",
+      "items": "Items",
       "qrCode": "QR Code",
       "analytics": "Analytics",
       "settings": "Settings",
@@ -429,6 +461,41 @@
     "back": "Back to Categories",
     "loading": "Loading...",
     "notFound": "Category not found"
+  },
+  "items": {
+    "title": "Items",
+    "description": "Manage your menu items",
+    "addItem": "Add Item",
+    "newTitle": "New Item",
+    "editTitle": "Edit Item",
+    "name": "Name",
+    "namePlaceholder": "Enter item name",
+    "description_label": "Description",
+    "descriptionPlaceholder": "Enter item description (optional)",
+    "price": "Price",
+    "pricePlaceholder": "0.00",
+    "category": "Category",
+    "categoryPlaceholder": "Select a category",
+    "image": "Image",
+    "uploadImage": "Click to upload image",
+    "removeImage": "Remove image",
+    "isActive": "Active",
+    "edit": "Edit",
+    "delete": "Delete",
+    "moveUp": "Move Up",
+    "moveDown": "Move Down",
+    "noItems": "No items yet. Create your first item to get started.",
+    "deleteConfirm": "Are you sure you want to delete this item? This action cannot be undone.",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving...",
+    "back": "Back to Items",
+    "loading": "Loading...",
+    "notFound": "Item not found",
+    "allCategories": "All Categories",
+    "filterByCategory": "Filter by category",
+    "error": "Error",
+    "close": "Close"
   },
   "getStarted": {
     "meta": {

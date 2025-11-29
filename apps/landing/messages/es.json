@@ -171,6 +171,38 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR",
+        "description": "Guía completa sobre cómo añadir productos a tu sitio web de restaurante con menú QR. Aprende a agregar platos con fotos, precios y descripciones a tu menú digital en minutos.",
+        "meta": {
+          "title": "Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR | SobogdQR",
+          "description": "Guía paso a paso sobre cómo añadir productos al sitio web de restaurante con menú QR. Agrega platos, establece precios, sube fotos y organiza tu menú digital. Gestión fácil de productos para restaurantes."
+        },
+        "content": {
+          "intro": "¿Quieres saber cómo añadir productos a tu sitio web de restaurante con menú QR? SobogdQR hace increíblemente fácil agregar y gestionar elementos del menú en tu sitio web digital de restaurante. Ya sea que estés agregando tu primer plato o actualizando todo tu menú, nuestro intuitivo sistema de gestión de productos te ayuda a crear un menú QR profesional que muestra tu cocina perfectamente. Esta guía te muestra exactamente cómo añadir productos al sitio web de restaurante con menú QR, incluyendo fotos, precios, descripciones y categorías.",
+          "image1Alt": "Cómo añadir productos al sitio web de restaurante con menú QR - vista de lista de productos",
+          "image1Caption": "Interfaz de gestión de productos que muestra cómo añadir productos a tu sitio web de restaurante con menú QR",
+          "section1Title": "Por Qué es Importante Añadir Productos Correctamente a Tu Sitio Web de Restaurante con Menú QR",
+          "section1Text": "Cuando añades productos al sitio web de restaurante con menú QR, la presentación lo es todo. Los clientes deciden qué pedir basándose en cómo se ven tus platos y qué tan bien están descritos. Nuestro sistema de gestión de productos te permite agregar fotos hermosas, descripciones detalladas, precios precisos y organizar productos en categorías. Así es como añadir productos al sitio web de restaurante que convierte visitantes en clientes. Las investigaciones muestran que los menús con imágenes de alta calidad aumentan los pedidos hasta un 30%.",
+          "section2Title": "Paso a Paso: Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR",
+          "section2Text": "Añadir productos a tu sitio web de restaurante con menú QR es simple con SobogdQR. Navega a la sección de Productos en tu panel de control y haz clic en el botón de agregar. Ingresa el nombre del producto, escribe una descripción apetitosa, establece el precio y selecciona una categoría. Sube una foto de tu plato - nuestro sistema optimiza automáticamente las imágenes a 500x500 píxeles para una visualización perfecta. Activa o desactiva el estado para mostrar u ocultar productos al instante. Este proceso simplificado hace fácil añadir productos al sitio web de restaurante con menú QR en solo minutos.",
+          "image2Alt": "Formulario de producto mostrando cómo añadir productos al sitio web de restaurante con menú QR",
+          "image2Caption": "Interfaz simple de formulario para añadir productos a tu sitio web de restaurante con menú QR",
+          "section3Title": "Carga y Optimización de Imágenes para los Productos de Tu Restaurante",
+          "section3Text": "Las imágenes de alta calidad son esenciales cuando añades productos al sitio web de restaurante con menú QR. Nuestro sistema acepta formatos JPEG, PNG, WebP y GIF de hasta 5MB. Cada imagen se redimensiona automáticamente a 500x500 píxeles y se convierte a formato WebP para carga rápida manteniendo excelente calidad. Esto significa que tus platos siempre se ven lo mejor posible en cualquier dispositivo. La fotografía profesional de alimentos mejora significativamente cómo los clientes perciben tu restaurante cuando navegan por tu sitio web con menú QR.",
+          "benefitsTitle": "Beneficios de Añadir Productos a Tu Sitio Web de Restaurante con Menú QR",
+          "benefit1": "Añade productos ilimitados al menú con fotos, descripciones y precios",
+          "benefit2": "Optimización automática de imágenes para carga rápida y visualización perfecta",
+          "benefit3": "Organiza productos en categorías para fácil navegación del cliente",
+          "benefit4": "Interruptor activo/inactivo para ocultar productos agotados sin eliminarlos",
+          "benefit5": "Reordenamiento mediante arrastrar y soltar para organizar productos en tu orden preferido",
+          "benefit6": "Interfaz compatible con móviles para añadir productos desde cualquier dispositivo",
+          "conclusionTitle": "Comienza a Añadir Productos a Tu Sitio Web de Restaurante con Menú QR Hoy",
+          "conclusionText": "Ahora sabes exactamente cómo añadir productos al sitio web de restaurante con menú QR usando SobogdQR. Nuestro potente sistema de gestión de productos proporciona todo lo que necesitas para crear un menú digital irresistible. Agrega fotos hermosas, escribe descripciones atractivas, establece precios competitivos y organiza tus productos en categorías lógicas. Ya sea que tengas una pequeña cafetería o un restaurante grande, SobogdQR hace fácil añadir productos al sitio web de restaurante que atrae y convierte clientes.",
+          "ctaText": "¿Listo para añadir productos a tu sitio web de restaurante con menú QR?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "qr-menu-restaurant-categories": {
         "title": "Cómo Hacer Menú QR para Restaurante con Categorías",
         "description": "Aprende cómo hacer menú QR para restaurante con categorías organizadas. El nuevo sistema de gestión de categorías hace que crear menús digitales estructurados sea simple y rápido.",
@@ -363,7 +395,7 @@
     "menu": {
       "dashboard": "Panel",
       "categories": "Categorías",
-      "products": "Productos",
+      "items": "Elementos",
       "qrCode": "Código QR",
       "analytics": "Análisis",
       "settings": "Configuración",
@@ -429,6 +461,41 @@
     "back": "Volver a Categorías",
     "loading": "Cargando...",
     "notFound": "Categoría no encontrada"
+  },
+  "items": {
+    "title": "Elementos",
+    "description": "Gestiona los elementos de tu menú",
+    "addItem": "Añadir Elemento",
+    "newTitle": "Nuevo Elemento",
+    "editTitle": "Editar Elemento",
+    "name": "Nombre",
+    "namePlaceholder": "Introduce el nombre del elemento",
+    "description_label": "Descripción",
+    "descriptionPlaceholder": "Introduce la descripción del elemento (opcional)",
+    "price": "Precio",
+    "pricePlaceholder": "0.00",
+    "category": "Categoría",
+    "categoryPlaceholder": "Selecciona una categoría",
+    "image": "Imagen",
+    "uploadImage": "Haz clic para subir imagen",
+    "removeImage": "Eliminar imagen",
+    "isActive": "Activo",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "moveUp": "Subir",
+    "moveDown": "Bajar",
+    "noItems": "Aún no hay elementos. Crea tu primer elemento para empezar.",
+    "deleteConfirm": "¿Estás seguro de que quieres eliminar este elemento? Esta acción no se puede deshacer.",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "back": "Volver a Elementos",
+    "loading": "Cargando...",
+    "notFound": "Elemento no encontrado",
+    "allCategories": "Todas las Categorías",
+    "filterByCategory": "Filtrar por categoría",
+    "error": "Error",
+    "close": "Cerrar"
   },
   "getStarted": {
     "meta": {

@@ -13,6 +13,17 @@ const nextConfig: NextConfig = {
 
   // Enable static optimization
   reactStrictMode: true,
+
+  // Allow images from S3
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "iq-rest.s3.eu-central-1.amazonaws.com",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 export default withNextIntl(nextConfig);

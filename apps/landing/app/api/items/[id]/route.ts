@@ -1,0 +1,222 @@
+import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { S3Client, CopyObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
+import { prisma } from "@/lib/prisma";
+
+const s3Client = new S3Client({
+  region: process.env.S3_REGION!,
+  credentials: {
+    accessKeyId: process.env.S3_KEY!,
+    secretAccessKey: process.env.S3_TOKEN!,
+  },
+});
+
+async function moveFromTemp(tempUrl: string, companyId: string): Promise<string | null> {
+  const s3Host = process.env.S3_HOST!;
+
+  if (!tempUrl || !tempUrl.startsWith(s3Host)) {
+    return tempUrl;
+  }
+
+  const tempKey = tempUrl.replace(s3Host, "");
+
+  if (!tempKey.startsWith(`temp/${companyId}/`)) {
+    return tempUrl;
+  }
+
+  try {
+    const filename = tempKey.split("/").pop();
+    const permanentKey = `items/${companyId}/${filename}`;
+
+    await s3Client.send(
+      new CopyObjectCommand({
+        Bucket: process.env.S3_NAME!,
+        CopySource: `${process.env.S3_NAME}/${tempKey}`,
+        Key: permanentKey,
+        ACL: "public-read",
+      })
+    );
+
+    await s3Client.send(
+      new DeleteObjectCommand({
+        Bucket: process.env.S3_NAME!,
+        Key: tempKey,
+      })
+    );
+
+    return `${s3Host}${permanentKey}`;
+  } catch (error) {
+    console.error("Error moving file from temp:", error);
+    return tempUrl;
+  }
+}
+
+async function getUserCompanyId(): Promise<string | null> {
+  const cookieStore = await cookies();
+  const userEmail = cookieStore.get("user_email");
+
+  if (!userEmail?.value) return null;
+
+  const user = await prisma.user.findUnique({
+    where: { email: userEmail.value },
+    include: {
+      companies: {
+        include: { company: true },
+        take: 1,
+      },
+    },
+  });
+
+  return user?.companies[0]?.company.id ?? null;
+}
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const companyId = await getUserCompanyId();
+
+    if (!companyId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const item = await prisma.item.findFirst({
+      where: { id, companyId },
+      include: {
+        category: {
+          select: { id: true, name: true },
+        },
+      },
+    });
+
+    if (!item) {
+      return NextResponse.json({ error: "Item not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ ...item, price: Number(item.price) });
+  } catch (error) {
+    console.error("Error fetching item:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch item" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PUT(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const companyId = await getUserCompanyId();
+
+    if (!companyId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const existingItem = await prisma.item.findFirst({
+      where: { id, companyId },
+    });
+
+    if (!existingItem) {
+      return NextResponse.json({ error: "Item not found" }, { status: 404 });
+    }
+
+    const { name, description, price, imageUrl, categoryId, sortOrder, isActive } =
+      await request.json();
+
+    if (!name || typeof name !== "string" || name.trim().length === 0) {
+      return NextResponse.json(
+        { error: "Name is required" },
+        { status: 400 }
+      );
+    }
+
+    if (price === undefined || price === null || isNaN(Number(price))) {
+      return NextResponse.json(
+        { error: "Valid price is required" },
+        { status: 400 }
+      );
+    }
+
+    // If categoryId is being changed, verify the new category belongs to this company
+    if (categoryId && categoryId !== existingItem.categoryId) {
+      const category = await prisma.category.findFirst({
+        where: { id: categoryId, companyId },
+      });
+
+      if (!category) {
+        return NextResponse.json(
+          { error: "Category not found" },
+          { status: 404 }
+        );
+      }
+    }
+
+    // Move image from temp to permanent location if needed
+    const finalImageUrl = imageUrl ? await moveFromTemp(imageUrl, companyId) : null;
+
+    const item = await prisma.item.update({
+      where: { id },
+      data: {
+        name: name.trim(),
+        description: description?.trim() || null,
+        price: Number(price),
+        imageUrl: finalImageUrl,
+        categoryId: categoryId ?? existingItem.categoryId,
+        sortOrder: sortOrder ?? existingItem.sortOrder,
+        isActive: isActive ?? existingItem.isActive,
+      },
+      include: {
+        category: {
+          select: { id: true, name: true },
+        },
+      },
+    });
+
+    return NextResponse.json({ ...item, price: Number(item.price) });
+  } catch (error) {
+    console.error("Error updating item:", error);
+    return NextResponse.json(
+      { error: "Failed to update item" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const companyId = await getUserCompanyId();
+
+    if (!companyId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const existingItem = await prisma.item.findFirst({
+      where: { id, companyId },
+    });
+
+    if (!existingItem) {
+      return NextResponse.json({ error: "Item not found" }, { status: 404 });
+    }
+
+    await prisma.item.delete({
+      where: { id },
+    });
+
+    return NextResponse.json({ message: "Item deleted" });
+  } catch (error) {
+    console.error("Error deleting item:", error);
+    return NextResponse.json(
+      { error: "Failed to delete item" },
+      { status: 500 }
+    );
+  }
+}

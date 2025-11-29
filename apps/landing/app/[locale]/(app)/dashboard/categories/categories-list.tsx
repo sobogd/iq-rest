@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import {
   ArrowUp,
   ArrowDown,
-  Pencil,
   Trash2,
   MoreVertical,
 } from "lucide-react";
@@ -142,7 +141,10 @@ export function CategoriesList({ translations: t }: CategoriesListProps) {
             key={category.id}
             className="flex items-center justify-between px-6 py-2.5"
           >
-            <div className="flex items-center gap-2.5">
+            <div
+              className="flex items-center gap-2.5 flex-1 cursor-pointer"
+              onClick={() => handleEdit(category.id)}
+            >
               {reordering === category.id ? (
                 <div className="h-2 w-2 animate-spin rounded-full border border-primary border-t-transparent" />
               ) : (
@@ -176,13 +178,6 @@ export function CategoriesList({ translations: t }: CategoriesListProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => handleEdit(category.id)}
-              >
-                <Pencil className="!size-3.5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
                 onClick={() => setDeleteId(category.id)}
               >
                 <Trash2 className="!size-3.5" />
@@ -211,10 +206,6 @@ export function CategoriesList({ translations: t }: CategoriesListProps) {
                   >
                     <ArrowDown className="!size-[17px] mr-2" />
                     {t.moveDown}
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => handleEdit(category.id)}>
-                    <Pencil className="!size-3.5 mr-2" />
-                    {t.edit}
                   </DropdownMenuItem>
                   <DropdownMenuItem
                     onClick={() => setDeleteId(category.id)}

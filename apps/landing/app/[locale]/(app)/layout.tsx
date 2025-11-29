@@ -34,12 +34,13 @@ export default async function AppLayout({
   // Get translations
   const t = await getTranslations("sidebar");
   const tCategories = await getTranslations("categories");
+  const tItems = await getTranslations("items");
 
   const translations = {
     menu: {
       dashboard: t("menu.dashboard"),
       categories: t("menu.categories"),
-      products: t("menu.products"),
+      items: t("menu.items"),
       qrCode: t("menu.qrCode"),
       analytics: t("menu.analytics"),
       settings: t("menu.settings"),
@@ -52,7 +53,7 @@ export default async function AppLayout({
   const headerTranslations = {
     dashboard: t("menu.dashboard"),
     categories: t("menu.categories"),
-    products: t("menu.products"),
+    items: t("menu.items"),
     qrCode: t("menu.qrCode"),
     analytics: t("menu.analytics"),
     settings: t("menu.settings"),
@@ -60,13 +61,13 @@ export default async function AppLayout({
     support: t("menu.support"),
     newCategory: tCategories("newTitle"),
     editCategory: tCategories("editTitle"),
-    newProduct: "New Product",
-    editProduct: "Edit Product",
+    newItem: tItems("newTitle"),
+    editItem: tItems("editTitle"),
   };
 
   const actionTranslations = {
     addCategory: tCategories("addCategory"),
-    addProduct: "Add Product",
+    addItem: tItems("addItem"),
   };
 
   return (
