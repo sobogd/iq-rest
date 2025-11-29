@@ -1,8 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { CategoriesList } from "./categories-list";
+import { getCategories } from "@/lib/data";
 
 export default async function CategoriesPage() {
-  const t = await getTranslations("categories");
+  const [t, categories] = await Promise.all([
+    getTranslations("categories"),
+    getCategories(),
+  ]);
 
   const translations = {
     delete: t("delete"),
@@ -14,5 +18,5 @@ export default async function CategoriesPage() {
     edit: t("edit"),
   };
 
-  return <CategoriesList translations={translations} />;
+  return <CategoriesList translations={translations} initialData={categories} />;
 }

@@ -1,76 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
-import { S3Client, CopyObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
-
-const s3Client = new S3Client({
-  region: process.env.S3_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_KEY!,
-    secretAccessKey: process.env.S3_TOKEN!,
-  },
-});
-
-async function moveFromTemp(tempUrl: string, companyId: string): Promise<string | null> {
-  const s3Host = process.env.S3_HOST!;
-
-  // If not a temp URL, return as is
-  if (!tempUrl || !tempUrl.startsWith(s3Host)) {
-    return tempUrl;
-  }
-
-  const tempKey = tempUrl.replace(s3Host, "");
-
-  // If not from temp folder, return as is
-  if (!tempKey.startsWith(`temp/${companyId}/`)) {
-    return tempUrl;
-  }
-
-  try {
-    const filename = tempKey.split("/").pop();
-    const permanentKey = `items/${companyId}/${filename}`;
-
-    await s3Client.send(
-      new CopyObjectCommand({
-        Bucket: process.env.S3_NAME!,
-        CopySource: `${process.env.S3_NAME}/${tempKey}`,
-        Key: permanentKey,
-        ACL: "public-read",
-      })
-    );
-
-    await s3Client.send(
-      new DeleteObjectCommand({
-        Bucket: process.env.S3_NAME!,
-        Key: tempKey,
-      })
-    );
-
-    return `${s3Host}${permanentKey}`;
-  } catch (error) {
-    console.error("Error moving file from temp:", error);
-    return tempUrl;
-  }
-}
-
-async function getUserCompanyId(): Promise<string | null> {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email");
-
-  if (!userEmail?.value) return null;
-
-  const user = await prisma.user.findUnique({
-    where: { email: userEmail.value },
-    include: {
-      companies: {
-        include: { company: true },
-        take: 1,
-      },
-    },
-  });
-
-  return user?.companies[0]?.company.id ?? null;
-}
+import { getUserCompanyId } from "@/lib/auth";
+import { moveFromTemp } from "@/lib/s3";
 
 export async function GET(request: NextRequest) {
   try {
@@ -146,10 +77,17 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify category belongs to this company
-    const category = await prisma.category.findFirst({
-      where: { id: categoryId, companyId },
-    });
+    // Parallel queries: verify category + get last sortOrder + move image
+    const [category, lastItem, finalImageUrl] = await Promise.all([
+      prisma.category.findFirst({
+        where: { id: categoryId, companyId },
+      }),
+      prisma.item.findFirst({
+        where: { companyId, categoryId },
+        orderBy: { sortOrder: "desc" },
+      }),
+      imageUrl ? moveFromTemp(imageUrl, companyId) : Promise.resolve(null),
+    ]);
 
     if (!category) {
       return NextResponse.json(
@@ -158,15 +96,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Auto-calculate sortOrder as last existing + 1
-    const lastItem = await prisma.item.findFirst({
-      where: { companyId, categoryId },
-      orderBy: { sortOrder: "desc" },
-    });
     const sortOrder = (lastItem?.sortOrder ?? 0) + 1;
-
-    // Move image from temp to permanent location if needed
-    const finalImageUrl = imageUrl ? await moveFromTemp(imageUrl, companyId) : null;
 
     const item = await prisma.item.create({
       data: {

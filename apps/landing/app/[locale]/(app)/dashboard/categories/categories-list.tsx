@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import {
   ArrowUp,
@@ -23,16 +23,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-interface Category {
-  id: string;
-  name: string;
-  description: string | null;
-  sortOrder: number;
-  isActive: boolean;
-}
+import type { Category } from "@/types";
 
 interface CategoriesListProps {
+  initialData: Category[];
   translations: {
     delete: string;
     noCategories: string;
@@ -44,51 +38,47 @@ interface CategoriesListProps {
   };
 }
 
-export function CategoriesList({ translations: t }: CategoriesListProps) {
+export function CategoriesList({ initialData, translations: t }: CategoriesListProps) {
   const router = useRouter();
   const params = useParams();
   const locale = params.locale as string;
 
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState<Category[]>(initialData);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [deleting, setDeleting] = useState(false);
   const [reordering, setReordering] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  async function fetchCategories() {
-    try {
-      const res = await fetch("/api/categories");
-      if (res.ok) {
-        const data = await res.json();
-        setCategories(data);
-      }
-    } catch (error) {
-      console.error("Failed to fetch categories:", error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
   async function handleReorder(categoryId: string, direction: "up" | "down") {
+    const currentIndex = categories.findIndex((c) => c.id === categoryId);
+    const swapIndex = direction === "up" ? currentIndex - 1 : currentIndex + 1;
+
+    // Boundary check
+    if (swapIndex < 0 || swapIndex >= categories.length) return;
+
+    // Optimistic update - swap items immediately
+    const newCategories = [...categories];
+    [newCategories[currentIndex], newCategories[swapIndex]] = [
+      newCategories[swapIndex],
+      newCategories[currentIndex],
+    ];
+    setCategories(newCategories);
     setReordering(categoryId);
+
     try {
       const res = await fetch("/api/categories/reorder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ categoryId, direction }),
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data)) {
-          setCategories(data);
-        }
+
+      if (!res.ok) {
+        // Revert on error
+        setCategories(categories);
       }
     } catch (error) {
       console.error("Failed to reorder category:", error);
+      // Revert on error
+      setCategories(categories);
     } finally {
       setReordering(null);
     }
@@ -97,16 +87,23 @@ export function CategoriesList({ translations: t }: CategoriesListProps) {
   async function handleDelete() {
     if (!deleteId) return;
 
+    // Optimistic delete
+    const previousCategories = categories;
+    setCategories(categories.filter((c) => c.id !== deleteId));
     setDeleting(true);
+
     try {
       const res = await fetch(`/api/categories/${deleteId}`, {
         method: "DELETE",
       });
-      if (res.ok) {
-        setCategories(categories.filter((c) => c.id !== deleteId));
+      if (!res.ok) {
+        // Revert on error
+        setCategories(previousCategories);
       }
     } catch (error) {
       console.error("Failed to delete category:", error);
+      // Revert on error
+      setCategories(previousCategories);
     } finally {
       setDeleting(false);
       setDeleteId(null);
@@ -115,14 +112,6 @@ export function CategoriesList({ translations: t }: CategoriesListProps) {
 
   function handleEdit(categoryId: string) {
     router.push(`/${locale}/dashboard/categories/${categoryId}`);
-  }
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-[calc(100vh-3.5rem)]">
-        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
-      </div>
-    );
   }
 
   if (categories.length === 0) {
