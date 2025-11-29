@@ -16,8 +16,11 @@
     "@prisma/client": "^6.19.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tooltip": "^1.2.8",
     "@types/nodemailer": "^7.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -39,7 +42,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
     "postcss": "^8",
+    "prettier": "^3.7.2",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

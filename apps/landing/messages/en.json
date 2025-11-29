@@ -171,6 +171,36 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
+        "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
+        "meta": {
+          "title": "Easy QR Menu for Cafe - New Control Panel | SobogdQR",
+          "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
+        },
+        "content": {
+          "intro": "We're excited to introduce our brand new admin control panel designed to make creating QR menus for your cafe as easy as possible. Whether you're running a small coffee shop or a bustling cafe, our easy-to-use interface helps you manage your digital menu effortlessly. The new control panel features a modern sidebar design that puts all the tools you need to create your cafe's QR menu right at your fingertips.",
+          "image1Alt": "Easy QR menu control panel for cafe management",
+          "image1Caption": "New control panel with sidebar navigation for easy cafe QR menu creation",
+          "section1Title": "Modern Sidebar Interface for Easy Menu Management",
+          "section1Text": "The new control panel features a sleek sidebar that makes navigating your cafe's QR menu settings incredibly easy. With clearly organized sections for Dashboard, Categories, Products, QR Code, Analytics, Settings, Billing, and Support, you can easily find and manage every aspect of your cafe's digital menu. The sidebar collapses on mobile devices, ensuring easy access to all features regardless of what device you're using to manage your cafe's QR menu.",
+          "section2Title": "Easy Category and Product Management for Your Cafe",
+          "section2Text": "Creating and organizing your cafe's QR menu has never been easier. Our new category and product management pages are designed with simplicity in mind, allowing cafe owners to easily add, edit, and organize their menu items. Whether you're updating daily specials or adding seasonal drinks, the easy-to-use interface ensures your cafe's QR menu stays current and appealing to customers.",
+          "section3Title": "Server-Side Rendering for Fast Performance",
+          "section3Text": "The new control panel is built with server-side rendering (SSR) technology, ensuring your cafe's QR menu management dashboard loads quickly and efficiently. All data is fetched from the server, providing real-time updates and a smooth experience. This easy and fast approach means you spend less time waiting and more time perfecting your cafe's QR menu.",
+          "benefitsTitle": "Why This Makes QR Menu Creation Easy for Cafes",
+          "benefit1": "Easy navigation with modern sidebar interface for quick access to all cafe menu features",
+          "benefit2": "Easy category management to organize your cafe's QR menu logically",
+          "benefit3": "Easy product editing with instant updates to your cafe's digital menu",
+          "benefit4": "Easy QR code generation and customization for your cafe",
+          "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
+          "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
+          "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using SobogdQR to provide their customers with an easy, modern menu experience.",
+          "ctaText": "Ready to create an easy QR menu for your cafe?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "faq-page-organization": {
         "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
         "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
@@ -294,6 +324,23 @@
         }
       }
     }
+  },
+  "sidebar": {
+    "subtitle": "Control Panel",
+    "navigation": "Navigation",
+    "menu": {
+      "dashboard": "Dashboard",
+      "categories": "Categories",
+      "products": "Products",
+      "qrCode": "QR Code",
+      "analytics": "Analytics",
+      "settings": "Settings",
+      "billing": "Billing",
+      "support": "Support"
+    },
+    "user": "User",
+    "logout": "Log out",
+    "noCompany": "No company"
   },
   "dashboard": {
     "meta": {

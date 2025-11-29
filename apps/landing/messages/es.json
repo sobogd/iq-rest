@@ -171,6 +171,36 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Creación Fácil de Menú QR para Tu Cafetería - Nuevo Panel de Control",
+        "description": "Presentamos nuestro nuevo panel de control que hace increíblemente fácil crear menús QR para tu cafetería. Gestiona categorías, productos y configuraciones con una interfaz moderna de sidebar.",
+        "meta": {
+          "title": "Menú QR Fácil para Cafetería - Nuevo Panel de Control | SobogdQR",
+          "description": "Crea menú QR para tu cafetería fácilmente con nuestro nuevo panel de control. Interfaz moderna de sidebar para gestionar categorías, productos, códigos QR y analíticas. Creación fácil de menú para cafetería."
+        },
+        "content": {
+          "intro": "Estamos emocionados de presentar nuestro nuevo panel de control diseñado para hacer la creación de menús QR para tu cafetería lo más fácil posible. Ya sea que tengas una pequeña cafetería o un café concurrido, nuestra interfaz fácil de usar te ayuda a gestionar tu menú digital sin esfuerzo. El nuevo panel de control presenta un diseño moderno de sidebar que pone todas las herramientas que necesitas para crear el menú QR de tu cafetería al alcance de tu mano.",
+          "image1Alt": "Panel de control fácil para gestión de menú QR de cafetería",
+          "image1Caption": "Nuevo panel de control con navegación sidebar para creación fácil de menú QR de cafetería",
+          "section1Title": "Interfaz Sidebar Moderna para Gestión Fácil del Menú",
+          "section1Text": "El nuevo panel de control presenta un elegante sidebar que hace increíblemente fácil navegar por la configuración del menú QR de tu cafetería. Con secciones claramente organizadas para Panel, Categorías, Productos, Código QR, Analíticas, Configuración, Facturación y Soporte, puedes encontrar y gestionar fácilmente cada aspecto del menú digital de tu cafetería. El sidebar se colapsa en dispositivos móviles, asegurando fácil acceso a todas las funciones sin importar qué dispositivo uses para gestionar el menú QR de tu cafetería.",
+          "section2Title": "Gestión Fácil de Categorías y Productos para Tu Cafetería",
+          "section2Text": "Crear y organizar el menú QR de tu cafetería nunca ha sido más fácil. Nuestras nuevas páginas de gestión de categorías y productos están diseñadas pensando en la simplicidad, permitiendo a los dueños de cafeterías añadir, editar y organizar fácilmente sus elementos del menú. Ya sea que estés actualizando especiales del día o añadiendo bebidas de temporada, la interfaz fácil de usar asegura que el menú QR de tu cafetería se mantenga actualizado y atractivo para los clientes.",
+          "section3Title": "Renderizado del Servidor para Rendimiento Rápido",
+          "section3Text": "El nuevo panel de control está construido con tecnología de renderizado del lado del servidor (SSR), asegurando que el dashboard de gestión del menú QR de tu cafetería cargue rápida y eficientemente. Todos los datos se obtienen del servidor, proporcionando actualizaciones en tiempo real y una experiencia fluida. Este enfoque fácil y rápido significa que pasas menos tiempo esperando y más tiempo perfeccionando el menú QR de tu cafetería.",
+          "benefitsTitle": "Por Qué Esto Hace Fácil la Creación de Menú QR para Cafeterías",
+          "benefit1": "Navegación fácil con interfaz sidebar moderna para acceso rápido a todas las funciones del menú de cafetería",
+          "benefit2": "Gestión fácil de categorías para organizar el menú QR de tu cafetería lógicamente",
+          "benefit3": "Edición fácil de productos con actualizaciones instantáneas al menú digital de tu cafetería",
+          "benefit4": "Generación y personalización fácil de código QR para tu cafetería",
+          "benefit5": "Analíticas fáciles para entender cómo interactúan los clientes con el menú QR de tu cafetería",
+          "benefit6": "Acceso móvil fácil - gestiona el menú QR de tu cafetería desde cualquier dispositivo",
+          "conclusionTitle": "Crea el Menú QR de Tu Cafetería de Forma Fácil",
+          "conclusionText": "Nuestro nuevo panel de control representa un gran avance para hacer fácil la creación de menús QR para dueños de cafeterías en todas partes. Con su intuitiva interfaz sidebar, renderizado rápido del servidor y herramientas de gestión completas, crear y mantener el menú QR digital de tu cafetería nunca ha sido más fácil. Únete a miles de cafeterías que ya usan SobogdQR para proporcionar a sus clientes una experiencia de menú fácil y moderna.",
+          "ctaText": "¿Listo para crear un menú QR fácil para tu cafetería?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "faq-page-organization": {
         "title": "Obtener Menú QR para Restaurantes - Actualizaciones FAQ y Guía",
         "description": "Aprende cómo obtener menú QR para restaurantes con nuestra página FAQ mejorada y guía de 4 pasos. Descubre respuestas sobre cómo obtener menús QR para tu restaurante con mejor navegación y contenido SEO optimizado.",
@@ -294,6 +324,23 @@
         }
       }
     }
+  },
+  "sidebar": {
+    "subtitle": "Panel de Control",
+    "navigation": "Navegación",
+    "menu": {
+      "dashboard": "Panel",
+      "categories": "Categorías",
+      "products": "Productos",
+      "qrCode": "Código QR",
+      "analytics": "Análisis",
+      "settings": "Configuración",
+      "billing": "Facturación",
+      "support": "Soporte"
+    },
+    "user": "Usuario",
+    "logout": "Cerrar sesión",
+    "noCompany": "Sin empresa"
   },
   "dashboard": {
     "meta": {

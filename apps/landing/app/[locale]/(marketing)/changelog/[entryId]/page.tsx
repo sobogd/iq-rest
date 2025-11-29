@@ -10,6 +10,11 @@ const changelogEntries: Record<string, {
   image: string;
   image2?: string;
 }> = {
+  "easy-qr-menu-cafe-control-panel": {
+    date: "2025-11-29",
+    translationKey: "easy-qr-menu-cafe-control-panel",
+    image: "/changelog/easy-qr-menu-cafe-control-panel.webp",
+  },
   "faq-page-organization": {
     date: "2025-11-20",
     translationKey: "faq-page-organization",
@@ -73,7 +78,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization";
+  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel";
 
   return (
     <div className="container mx-auto px-4 py-16">

@@ -1,6 +1,12 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { AppHeader } from "@/components/app-header";
+import { UserProvider } from "@/components/user-provider";
+import { getUser } from "@/lib/user";
 
 export default async function AppLayout({
   children,
@@ -16,42 +22,49 @@ export default async function AppLayout({
   const session = cookieStore.get("session");
   const userEmail = cookieStore.get("user_email");
 
-  if (!session) {
+  if (!session || !userEmail?.value) {
     redirect(`/${locale}/get-started`);
   }
 
+  // Get user data with caching
+  const user = await getUser(userEmail.value);
+
+  if (!user) {
+    redirect(`/${locale}/get-started`);
+  }
+
+  // Get translations
+  const t = await getTranslations("sidebar");
+
+  // Prepare translations for client components
+  const sidebarTranslations = {
+    subtitle: t("subtitle"),
+    noCompany: t("noCompany"),
+    logout: t("logout"),
+    menu: {
+      dashboard: t("menu.dashboard"),
+      categories: t("menu.categories"),
+      products: t("menu.products"),
+      qrCode: t("menu.qrCode"),
+      analytics: t("menu.analytics"),
+      settings: t("menu.settings"),
+      billing: t("menu.billing"),
+      support: t("menu.support"),
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-muted/30">
-      {/* Dashboard Header */}
-      <header className="border-b bg-background">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href={`/${locale}/dashboard`} className="text-xl font-bold">
-              SobogdQR
-            </Link>
-
-            {/* User info */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-muted-foreground">
-                {userEmail?.value}
-              </span>
-              <form action="/api/auth/logout" method="POST">
-                <input type="hidden" name="locale" value={locale} />
-                <button
-                  type="submit"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Log out
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Dashboard Content */}
-      <main>{children}</main>
-    </div>
+    <UserProvider user={user}>
+      <SidebarProvider>
+        <AppSidebar
+          companyName={user.companyName}
+          translations={sidebarTranslations}
+        />
+        <SidebarInset>
+          <AppHeader translations={sidebarTranslations.menu} />
+          <main className="flex-1 overflow-auto">{children}</main>
+        </SidebarInset>
+      </SidebarProvider>
+    </UserProvider>
   );
 }
