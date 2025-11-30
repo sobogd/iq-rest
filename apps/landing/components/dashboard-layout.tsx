@@ -116,7 +116,7 @@ export function DashboardLayout({
 
   return (
     <TooltipProvider delayDuration={0}>
-      <div className="flex h-screen w-screen overflow-hidden">
+      <div className="dashboard-layout flex h-screen w-screen overflow-hidden">
         {/* Sidebar */}
         <aside className="flex h-full w-14 flex-col border-r bg-muted/40">
           {/* Logo */}

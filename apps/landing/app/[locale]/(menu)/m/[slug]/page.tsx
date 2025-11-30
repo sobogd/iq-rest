@@ -101,7 +101,7 @@ export default async function MenuPage({ params }: MenuPageProps) {
 
       {/* Online Menu block */}
       <Link href={`/m/${slug}/menu/`} className="bg-black flex justify-center px-[8%]">
-        <span className="max-w-[440px] w-full py-8 flex items-center justify-between text-white font-bold uppercase text-xl">
+        <span className="max-w-[440px] w-full pt-8 pb-12 flex items-center justify-between text-white font-bold uppercase text-xl">
           {t("onlineMenu")}
           <ArrowRight className="h-6 w-6" strokeWidth={3} />
         </span>

@@ -57,6 +57,11 @@ const changelogEntries: Record<string, {
     image: "/changelog/restaurant-qr-menu-email-authentication.webp",
     image2: "/changelog/restaurant-qr-menu-otp-verification.webp",
   },
+  "subscription-plans-qr-menu-restaurant-website": {
+    date: "2025-11-30",
+    translationKey: "subscription-plans-qr-menu-restaurant-website",
+    image: "/changelog/billing-subscription-plans.webp",
+  },
 };
 
 export async function generateStaticParams() {
@@ -98,7 +103,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website";
+  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website";
 
   return (
     <div className="container mx-auto px-4 py-16">

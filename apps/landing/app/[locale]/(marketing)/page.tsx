@@ -234,7 +234,7 @@ export default function HomePage() {
                 variant="outline"
                 className="text-lg px-8 py-6"
               >
-                <Link href="/get-started">{tHero("cta.view")}</Link>
+                <Link href="/m/love-eatery">{tHero("cta.view")}</Link>
               </Button>
             </div>
           </div>

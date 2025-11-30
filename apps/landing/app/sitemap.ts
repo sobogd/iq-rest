@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/changelog/free-restaurant-website-improvements', lastModified: '2025-11-20', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/get-started-page-redesign', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/user-authentication-interface', lastModified: '2024-11-19', changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/changelog/subscription-plans-qr-menu-restaurant-website', lastModified: '2025-11-30', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/get-started', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.7 },
   ]
 

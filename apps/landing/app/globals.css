@@ -88,3 +88,9 @@
   display: none;
 }
 
+/* Dashboard layout - prevent body scroll */
+.dashboard-layout {
+  position: fixed;
+  inset: 0;
+}
+

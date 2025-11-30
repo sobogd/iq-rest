@@ -421,6 +421,36 @@
           "ctaText": "¿Listo para crear tu sitio web de restaurante con menú QR?",
           "ctaButton": "Comenzar Gratis"
         }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Planes de Suscripción para Menú QR y Creación de Sitio Web de Restaurante",
+        "description": "Presentamos planes de suscripción flexibles para crear tu sitio web de restaurante y menú QR. Elige entre planes Gratis, Básico y Pro con opciones de facturación mensual o anual.",
+        "meta": {
+          "title": "Planes de Suscripción para Menú QR y Sitio Web de Restaurante | SobogdQR",
+          "description": "Elige el plan de suscripción perfecto para la creación de tu sitio web de restaurante y menú QR. Planes Gratis, Básico y Pro con facturación mensual y anual flexible. Comienza gratis hoy."
+        },
+        "content": {
+          "intro": "Nos complace anunciar el lanzamiento de nuestro nuevo sistema de suscripción para la creación de menú QR y sitio web de restaurante. SobogdQR ahora ofrece planes flexibles que crecen con tu negocio - desde un nivel completamente gratuito para pequeñas cafeterías hasta planes profesionales para restaurantes establecidos. Ya sea que estés comenzando o gestionando múltiples ubicaciones, nuestros planes de suscripción proporcionan las características que necesitas para crear y mantener un sitio web profesional de restaurante con capacidades de menú QR.",
+          "image1Alt": "Planes de suscripción para creación de menú QR y sitio web de restaurante",
+          "image1Caption": "Elige el plan perfecto para las necesidades de tu sitio web de restaurante y menú QR",
+          "section1Title": "Planes Flexibles para Cada Tamaño de Restaurante",
+          "section1Text": "Nuestro sistema de suscripción para la creación de menú QR y sitio web de restaurante ofrece tres niveles diseñados para adaptarse a tus necesidades. El plan Gratis te permite comenzar con hasta 15 elementos de menú - perfecto para pequeñas cafeterías o probar la plataforma. El plan Básico a €4/mes (o €3/mes facturado anualmente) expande tu capacidad a 100 elementos con 3 idiomas y 2,000 escaneos mensuales. Para restaurantes en crecimiento, nuestro plan Pro a €7/mes (o €6/mes anual) ofrece elementos, idiomas y escaneos ilimitados - todo lo que necesitas para la gestión profesional de sitio web de restaurante y menú QR.",
+          "section2Title": "Panel de Facturación Simple",
+          "section2Text": "Gestionar tu suscripción para servicios de menú QR y sitio web de restaurante es ahora más fácil que nunca. Nuestro nuevo panel de facturación muestra todos los planes disponibles en una interfaz limpia y simple. Puedes ver tu plan actual de un vistazo, comparar características y actualizar o degradar con un solo clic. El diseño simplificado muestra cada plan con su precio mensual, facilitando elegir la opción correcta para las necesidades de tu sitio web de restaurante y menú QR. Los pagos seguros se procesan a través de Stripe, el estándar de la industria para transacciones en línea.",
+          "section3Title": "Ahorra 25% con Facturación Anual",
+          "section3Text": "Los propietarios de restaurantes que se comprometen con la facturación anual para su suscripción de menú QR y sitio web ahorran un 25% en comparación con los pagos mensuales. El plan Básico baja de €4 a €3 por mes, mientras que el plan Pro pasa de €7 a €6 por mes cuando se factura anualmente. Este ahorro significativo ayuda a los restaurantes a invertir más en su negocio principal mientras mantienen una presencia digital profesional. Cambia entre facturación mensual y anual en cualquier momento a través de tu panel.",
+          "benefitsTitle": "Beneficios de Nuestros Planes de Suscripción",
+          "benefit1": "Plan gratuito disponible para siempre - no se requiere tarjeta de crédito para comenzar",
+          "benefit2": "Facturación mensual o anual flexible con 25% de ahorro en planes anuales",
+          "benefit3": "Actualizaciones de plan instantáneas - las nuevas características se activan inmediatamente",
+          "benefit4": "Procesamiento de pagos seguro con Stripe para todas las transacciones",
+          "benefit5": "Gestión fácil de planes a través del panel de facturación simple",
+          "benefit6": "Degrada en cualquier momento - no se requieren contratos a largo plazo",
+          "conclusionTitle": "Comienza a Crear Tu Sitio Web de Restaurante Hoy",
+          "conclusionText": "Con nuestros nuevos planes de suscripción, crear un menú QR profesional y sitio web de restaurante nunca ha sido más accesible. Comienza con nuestro plan Gratis para experimentar la plataforma, luego actualiza a medida que crece tu restaurante. Nuestras opciones de facturación flexibles, precios transparentes y activación instantánea significan que puedes tener tu menú digital funcionando en minutos. Únete a miles de restaurantes que ya usan SobogdQR para conectar con sus clientes a través de menús QR modernos y optimizados para móviles.",
+          "ctaText": "¿Listo para elegir tu plan para menú QR y sitio web de restaurante?",
+          "ctaButton": "Ver Planes de Precios"
+        }
       }
     }
   },
