@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { Upload, X, Loader2 } from "lucide-react";
+import { Upload, X, Loader2, Trash2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,6 +25,14 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface Category {
   id: string;
@@ -62,6 +70,8 @@ interface ItemFormProps {
     cancel: string;
     error: string;
     close: string;
+    delete?: string;
+    deleteConfirm?: string;
   };
 }
 
@@ -79,10 +89,36 @@ export function ItemForm({ item, translations: t }: ItemFormProps) {
   const [isActive, setIsActive] = useState(item?.isActive ?? true);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [error, setError] = useState("");
   const [categories, setCategories] = useState<Category[]>([]);
 
   const isEdit = !!item;
+
+  async function handleDelete() {
+    if (!item) return;
+
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/items/${item.id}`, {
+        method: "DELETE",
+      });
+
+      if (res.ok) {
+        router.push(`/${locale}/dashboard/items`);
+        router.refresh();
+      } else {
+        const data = await res.json();
+        setError(data.error || "Failed to delete item");
+      }
+    } catch {
+      setError("Failed to delete item");
+    } finally {
+      setDeleting(false);
+      setShowDeleteDialog(false);
+    }
+  }
 
   useEffect(() => {
     fetchCategories();
@@ -332,11 +368,44 @@ export function ItemForm({ item, translations: t }: ItemFormProps) {
         <Label htmlFor="isActive">{t.isActive}</Label>
       </div>
 
-      <div className="pt-2">
-        <Button type="submit" disabled={saving || uploading}>
+      <div className="pt-2 flex items-center gap-3">
+        {isEdit && t.delete && (
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            onClick={() => setShowDeleteDialog(true)}
+            disabled={saving || uploading || deleting}
+          >
+            <Trash2 className="h-4 w-4" />
+          </Button>
+        )}
+        <Button type="submit" disabled={saving || uploading || deleting}>
+          <Save className="h-4 w-4 mr-1.5" />
           {saving ? t.saving : t.save}
         </Button>
       </div>
+
+      <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t.delete}</DialogTitle>
+            <DialogDescription>{t.deleteConfirm}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="gap-3">
+            <Button variant="outline" onClick={() => setShowDeleteDialog(false)}>
+              {t.cancel}
+            </Button>
+            <Button
+              variant="destructive"
+              onClick={handleDelete}
+              disabled={deleting}
+            >
+              {t.delete}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </form>
   );
 }

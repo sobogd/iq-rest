@@ -171,6 +171,40 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "public-restaurant-qr-menu-website": {
+        "title": "Public Restaurant Website for QR Menu Scanning",
+        "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
+        "meta": {
+          "title": "Public Restaurant Website for QR Menu Scanning | SobogdQR",
+          "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
+        },
+        "content": {
+          "intro": "SobogdQR now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "image1Alt": "Public restaurant website showing QR menu categories",
+          "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
+          "section1Title": "How the Public Restaurant Website Works with QR Scanning",
+          "section1Text": "When customers scan your restaurant's QR code, they're instantly taken to your public website displaying the complete menu. No app download required, no waiting - just immediate access to your offerings. The public restaurant website for QR menu shows categories at the top for easy navigation, with items displayed in an elegant card layout featuring photos, descriptions, and prices. Customers can tap on categories to filter items or scroll through the entire menu.",
+          "section2Title": "Features of Your Public Restaurant QR Menu Website",
+          "section2Text": "Your public restaurant website includes everything customers need: category tabs for quick navigation, high-quality dish photos, detailed descriptions, prices in your currency, and active item indicators. The design is optimized for mobile devices since most QR scans happen on phones. Items load quickly thanks to optimized images, and the interface is intuitive for guests of all ages. Changes made in your admin panel appear instantly on the public website.",
+          "image2Alt": "Restaurant QR menu website showing food items with photos",
+          "image2Caption": "Public menu website displaying dishes with optimized photos and descriptions",
+          "section3Title": "Multilingual Support for International Guests",
+          "section3Text": "The public restaurant website includes a language selector so international guests can view your menu in their preferred language. Currently supporting English and Spanish, with more languages coming soon. This makes your public restaurant QR menu accessible to tourists and diverse customer bases. The language preference is remembered for return visits, providing a personalized experience.",
+          "image3Alt": "Language selection on public restaurant QR menu website",
+          "image3Caption": "Language selector allowing guests to view the public menu in their preferred language",
+          "benefitsTitle": "Benefits of Your Public Restaurant QR Menu Website",
+          "benefit1": "Instant menu access - customers scan and view immediately, no app needed",
+          "benefit2": "Mobile-optimized design for perfect display on any smartphone",
+          "benefit3": "Real-time updates - menu changes appear instantly to customers",
+          "benefit4": "Category navigation for easy browsing of your offerings",
+          "benefit5": "Multilingual support for international customers",
+          "benefit6": "Fast loading with optimized images and modern technology",
+          "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
+          "conclusionText": "With SobogdQR's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "ctaText": "Ready to launch your public restaurant QR menu website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "add-items-restaurant-qr-menu-website": {
         "title": "How to Add Items to Restaurant Website with QR Menu",
         "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",

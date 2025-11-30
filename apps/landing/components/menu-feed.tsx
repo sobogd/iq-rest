@@ -31,22 +31,41 @@ export function MenuFeed({ categories }: MenuFeedProps) {
   // Scroll to category when clicking tab
   const scrollToCategory = (categoryId: string) => {
     const element = categoryRefs.current[categoryId];
-    if (element && containerRef.current) {
+    const container = containerRef.current;
+    if (element && container) {
       isScrollingToCategory.current = true;
       setActiveCategory(categoryId);
 
-      const containerTop = containerRef.current.getBoundingClientRect().top;
+      const containerTop = container.getBoundingClientRect().top;
       const elementTop = element.getBoundingClientRect().top;
-      const offset = elementTop - containerTop + containerRef.current.scrollTop;
+      const offset = elementTop - containerTop + container.scrollTop;
 
-      containerRef.current.scrollTo({
+      container.scrollTo({
         top: offset,
         behavior: "smooth",
       });
 
+      // Check when scroll stops
+      let lastScrollTop = container.scrollTop;
+      let checkCount = 0;
+      const checkInterval = setInterval(() => {
+        if (container.scrollTop === lastScrollTop) {
+          checkCount++;
+          if (checkCount >= 2) {
+            isScrollingToCategory.current = false;
+            clearInterval(checkInterval);
+          }
+        } else {
+          checkCount = 0;
+          lastScrollTop = container.scrollTop;
+        }
+      }, 100);
+
+      // Fallback timeout
       setTimeout(() => {
         isScrollingToCategory.current = false;
-      }, 500);
+        clearInterval(checkInterval);
+      }, 5000);
     }
   };
 
@@ -90,79 +109,80 @@ export function MenuFeed({ categories }: MenuFeedProps) {
     <>
       {/* Category tabs - fixed */}
       <div
-        ref={tabsRef}
-        className="flex gap-2 px-4 py-3 overflow-x-auto shrink-0 border-b hide-scrollbar"
-        style={{
-          backgroundColor: "#fff",
-          borderColor: "#e5e7eb",
-        }}
+        className="shrink-0 flex justify-center relative"
+        style={{ backgroundColor: "#fff" }}
       >
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            data-category={category.id}
-            onClick={() => scrollToCategory(category.id)}
-            className="px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors shrink-0"
-            style={{
-              backgroundColor: activeCategory === category.id ? "#000" : "#f3f4f6",
-              color: activeCategory === category.id ? "#fff" : "#000",
-            }}
-          >
-            {category.name}
-          </button>
-        ))}
+        {/* Gray border line */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-px"
+          style={{ backgroundColor: "#e5e7eb" }}
+        />
+        <div
+          ref={tabsRef}
+          className="flex gap-2 px-5 overflow-x-auto hide-scrollbar max-w-[440px] w-full"
+        >
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              data-category={category.id}
+              onClick={() => scrollToCategory(category.id)}
+              className="relative px-4 py-3 text-sm font-semibold whitespace-nowrap transition-colors shrink-0"
+              style={{
+                backgroundColor: "transparent",
+                color: activeCategory === category.id ? "#000" : "#9ca3af",
+              }}
+            >
+              {category.name}
+              {activeCategory === category.id && (
+                <span
+                  className="absolute left-0 right-0 h-1"
+                  style={{ backgroundColor: "#000", bottom: "0" }}
+                />
+              )}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Items feed - scrollable */}
-      <div ref={containerRef} className="flex-1 overflow-auto min-h-0">
-        <div className="p-6 space-y-6">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              ref={(el) => { categoryRefs.current[category.id] = el; }}
-            >
-              {/* Category header */}
-              <h2 className="text-xl font-bold mb-4" style={{ color: "#000" }}>
-                {category.name}
-              </h2>
-
-              {/* Items */}
-              <div className="space-y-4">
+      <div ref={containerRef} className="flex-1 overflow-auto min-h-0" style={{ backgroundColor: "#fff" }}>
+        <div className="flex justify-center px-0 min-[440px]:px-5">
+          <div className="max-w-[440px] w-full pt-0 min-[440px]:pt-5 pb-[40vh] space-y-5">
+            {categories.map((category) => (
+              <div
+                key={category.id}
+                ref={(el) => { categoryRefs.current[category.id] = el; }}
+                className="space-y-5"
+              >
                 {category.items.map((item) => (
-                  <div
-                    key={item.id}
-                    className="rounded-xl overflow-hidden shadow-sm border"
-                    style={{ borderColor: "#e5e7eb" }}
-                  >
+                  <article key={item.id}>
                     {item.imageUrl && (
-                      <div className="relative aspect-square w-full">
+                      <div className="relative aspect-square w-full min-[440px]:rounded-lg overflow-hidden">
                         <Image
                           src={item.imageUrl}
                           alt={item.name}
                           fill
                           className="object-cover"
-                          sizes="100vw"
+                          sizes="(max-width: 440px) 100vw, 440px"
                         />
                       </div>
                     )}
-                    <div className="p-5" style={{ backgroundColor: "#fff" }}>
-                      <h3 className="font-semibold text-lg" style={{ color: "#000" }}>
-                        {item.name}
-                      </h3>
-                      <span className="font-bold text-lg mt-1 block" style={{ color: "#000" }}>
+                    <div className="p-5 flex justify-between gap-4">
+                      <div>
+                        <h3 className="font-semibold text-lg text-black">{item.name}</h3>
+                        {item.description && (
+                          <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                        )}
+                      </div>
+                      <span className="font-bold text-lg shrink-0 text-black">
                         €{Number(item.price).toFixed(2)}
                       </span>
-                      {item.description && (
-                        <p className="mt-2 text-sm" style={{ color: "#6b7280" }}>
-                          {item.description}
-                        </p>
-                      )}
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

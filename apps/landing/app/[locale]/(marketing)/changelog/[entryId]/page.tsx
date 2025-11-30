@@ -9,7 +9,15 @@ const changelogEntries: Record<string, {
   translationKey: string;
   image: string;
   image2?: string;
+  image3?: string;
 }> = {
+  "public-restaurant-qr-menu-website": {
+    date: "2025-11-30",
+    translationKey: "public-restaurant-qr-menu-website",
+    image: "/changelog/public-menu-qr-scan-1.webp",
+    image2: "/changelog/public-menu-qr-scan-2.webp",
+    image3: "/changelog/public-menu-qr-scan-3.webp",
+  },
   "add-items-restaurant-qr-menu-website": {
     date: "2025-11-29",
     translationKey: "add-items-restaurant-qr-menu-website",
@@ -90,7 +98,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website";
+  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website";
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -187,6 +195,26 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
           <p className="leading-relaxed">
             {t(`entries.${key}.content.section3Text`)}
           </p>
+
+          {/* Third Image */}
+          {entry.image3 && (
+            <figure className="my-8">
+              <div className="relative w-full aspect-video bg-muted rounded-lg overflow-hidden">
+                <Image
+                  src={entry.image3}
+                  alt={t(`entries.${key}.content.image3Alt`)}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 896px"
+                  loading="lazy"
+                  quality={80}
+                />
+              </div>
+              <figcaption className="text-center text-sm text-muted-foreground mt-2">
+                {t(`entries.${key}.content.image3Caption`)}
+              </figcaption>
+            </figure>
+          )}
 
           {/* Benefits List */}
           <h2 className="text-2xl font-bold mt-8 mb-4">

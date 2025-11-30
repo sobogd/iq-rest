@@ -14,6 +14,8 @@ export default async function EditCategoryPage() {
     saving: t("saving"),
     cancel: t("cancel"),
     notFound: t("notFound"),
+    delete: t("delete"),
+    deleteConfirm: t("deleteConfirm"),
   };
 
   return (

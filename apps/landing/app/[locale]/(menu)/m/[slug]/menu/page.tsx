@@ -74,18 +74,15 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
 
   return (
     <div className="h-screen flex flex-col" style={{ backgroundColor: "#fff" }}>
-      {/* Header - black */}
-      <div
-        className="h-14 flex items-center px-4 shrink-0"
-        style={{ backgroundColor: "#000" }}
-      >
-        <Link href={`/m/${slug}`} className="p-2 -ml-2" style={{ color: "#fff" }}>
-          <ArrowLeft className="h-6 w-6" />
-        </Link>
-        <h1 className="ml-2 text-lg font-semibold" style={{ color: "#fff" }}>
-          {t("onlineMenu")}
-        </h1>
-      </div>
+      {/* Header */}
+      <header className="h-14 shrink-0 flex justify-center px-5 bg-black">
+        <div className="max-w-[440px] w-full flex items-center relative">
+          <Link href={`/m/${slug}`} className="p-2 -ml-2 text-white z-10">
+            <ArrowLeft className="h-6 w-6" />
+          </Link>
+          <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">{t("onlineMenu")}</h1>
+        </div>
+      </header>
 
       {/* Menu feed */}
       {categories.length === 0 ? (

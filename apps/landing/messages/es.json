@@ -171,6 +171,40 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "public-restaurant-qr-menu-website": {
+        "title": "Sitio Web Público de Restaurante para Escaneo de Menú QR",
+        "description": "Lanza tu sitio web público de restaurante con menú QR. Los clientes escanean el código y ven instantáneamente tu menú digital con categorías, productos, fotos y precios.",
+        "meta": {
+          "title": "Sitio Web Público de Restaurante para Escaneo de Menú QR | SobogdQR",
+          "description": "Crea un sitio web público de restaurante para escaneo de menú QR. Los clientes escanean el código QR y ven tu menú digital con categorías, platos, fotos y precios al instante."
+        },
+        "content": {
+          "intro": "SobogdQR ahora ofrece un sitio web público de restaurante completamente funcional para escaneo de menú QR. Tus clientes simplemente escanean un código QR y acceden instantáneamente a tu menú digital completo. El sitio web público muestra todas tus categorías, productos del menú, fotos, descripciones y precios en una interfaz hermosa y optimizada para móviles. Este sitio web público de restaurante para escaneo QR transforma la forma en que los comensales interactúan con tu menú.",
+          "image1Alt": "Sitio web público de restaurante mostrando categorías del menú QR",
+          "image1Caption": "Sitio web público de restaurante optimizado para móviles mostrando categorías del menú para escaneo QR",
+          "section1Title": "Cómo Funciona el Sitio Web Público de Restaurante con Escaneo QR",
+          "section1Text": "Cuando los clientes escanean el código QR de tu restaurante, son llevados instantáneamente a tu sitio web público que muestra el menú completo. No se requiere descargar ninguna aplicación, sin esperas - solo acceso inmediato a tus ofertas. El sitio web público de restaurante para menú QR muestra categorías en la parte superior para una navegación fácil, con productos mostrados en un elegante diseño de tarjetas con fotos, descripciones y precios. Los clientes pueden tocar en las categorías para filtrar productos o desplazarse por todo el menú.",
+          "section2Title": "Características de Tu Sitio Web Público de Menú QR de Restaurante",
+          "section2Text": "Tu sitio web público de restaurante incluye todo lo que los clientes necesitan: pestañas de categorías para navegación rápida, fotos de platos de alta calidad, descripciones detalladas, precios en tu moneda e indicadores de productos activos. El diseño está optimizado para dispositivos móviles ya que la mayoría de los escaneos QR ocurren en teléfonos. Los productos cargan rápidamente gracias a las imágenes optimizadas, y la interfaz es intuitiva para comensales de todas las edades. Los cambios realizados en tu panel de administración aparecen instantáneamente en el sitio web público.",
+          "image2Alt": "Sitio web de menú QR de restaurante mostrando productos con fotos",
+          "image2Caption": "Sitio web de menú público mostrando platos con fotos optimizadas y descripciones",
+          "section3Title": "Soporte Multilingüe para Clientes Internacionales",
+          "section3Text": "El sitio web público de restaurante incluye un selector de idioma para que los clientes internacionales puedan ver tu menú en su idioma preferido. Actualmente soporta inglés y español, con más idiomas próximamente. Esto hace que tu menú QR público de restaurante sea accesible para turistas y bases de clientes diversas. La preferencia de idioma se recuerda para visitas futuras, proporcionando una experiencia personalizada.",
+          "image3Alt": "Selección de idioma en sitio web público de menú QR de restaurante",
+          "image3Caption": "Selector de idioma que permite a los comensales ver el menú público en su idioma preferido",
+          "benefitsTitle": "Beneficios de Tu Sitio Web Público de Menú QR de Restaurante",
+          "benefit1": "Acceso instantáneo al menú - los clientes escanean y ven inmediatamente, sin necesidad de app",
+          "benefit2": "Diseño optimizado para móviles para una visualización perfecta en cualquier smartphone",
+          "benefit3": "Actualizaciones en tiempo real - los cambios del menú aparecen instantáneamente para los clientes",
+          "benefit4": "Navegación por categorías para explorar fácilmente tus ofertas",
+          "benefit5": "Soporte multilingüe para clientes internacionales",
+          "benefit6": "Carga rápida con imágenes optimizadas y tecnología moderna",
+          "conclusionTitle": "Comienza a Usar Tu Sitio Web Público de Menú QR de Restaurante",
+          "conclusionText": "Con el sitio web público de restaurante de SobogdQR para escaneo de menú QR, proporcionas a los clientes acceso instantáneo a tu menú completo. Simplemente agrega tus categorías y productos a través del panel de administración, genera tu código QR y muéstralo en tus mesas. Los clientes escanean y navegan por tu hermoso menú digital en segundos. Sin más costos de impresión, sin más menús desactualizados - solo una experiencia gastronómica moderna.",
+          "ctaText": "¿Listo para lanzar tu sitio web público de menú QR de restaurante?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "add-items-restaurant-qr-menu-website": {
         "title": "Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR",
         "description": "Guía completa sobre cómo añadir productos a tu sitio web de restaurante con menú QR. Aprende a agregar platos con fotos, precios y descripciones a tu menú digital en minutos.",

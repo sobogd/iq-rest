@@ -208,11 +208,11 @@ export function DashboardLayout({
           {/* Floating Action Button */}
           {action && (
             <Button
-              className="fixed bottom-6 right-6 h-12 w-12 rounded-full shadow-lg md:h-10 md:w-auto md:rounded-md md:px-4"
+              className="fixed bottom-6 right-6 h-10 rounded-md px-4 shadow-lg"
               onClick={() => router.push(`/${locale}${action.href}`)}
             >
-              <Plus className="size-5 md:size-4" />
-              <span className="hidden md:inline md:ml-1">
+              <Plus className="size-4" />
+              <span className="ml-1">
                 {actionTranslations[action.labelKey]}
               </span>
             </Button>

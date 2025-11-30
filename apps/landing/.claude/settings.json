@@ -4,7 +4,7 @@
       "*"
     ],
     "deny": [],
-    "ask": [],
-    "disableBypassPermissionsMode": "disable"
+    "ask": [], 
+    "defaultMode": "bypassPermissions"
   }
 }

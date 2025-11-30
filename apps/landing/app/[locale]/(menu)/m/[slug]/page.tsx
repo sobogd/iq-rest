@@ -74,7 +74,7 @@ export default async function MenuPage({ params }: MenuPageProps) {
         <div className="absolute inset-0 bg-black/40" />
         {/* Restaurant name at 30% from top */}
         <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
-          <div className="max-w-[500px] w-full">
+          <div className="max-w-[440px] w-full">
             <h1 className="text-6xl font-black text-white break-words">{restaurant.title}</h1>
             {restaurant.description && (
               <p className="text-xl text-white/90 mt-3">{restaurant.description}</p>
@@ -83,29 +83,29 @@ export default async function MenuPage({ params }: MenuPageProps) {
         </div>
       </div>
 
-      {/* Contacts block - white */}
-      <div className="bg-white border-t border-gray-300/25 flex justify-center px-[8%]">
-        <Link href={`/m/${slug}/contacts`} className="max-w-[500px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
-          <Phone className="h-5 w-5" />
-          <span>{t("contacts")}</span>
+      {/* Navigation links */}
+      <nav className="bg-white">
+        <Link href={`/m/${slug}/contacts`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+          <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
+            <Phone className="h-5 w-5" />
+            {t("contacts")}
+          </span>
         </Link>
-      </div>
-
-      {/* Language block - white */}
-      <div className="bg-white border-t border-gray-300/25 flex justify-center px-[8%]">
-        <Link href={`/m/${slug}/language/`} className="max-w-[500px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
-          <Globe className="h-5 w-5" />
-          <span>{t("language")}</span>
+        <Link href={`/m/${slug}/language/`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+          <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
+            <Globe className="h-5 w-5" />
+            {t("language")}
+          </span>
         </Link>
-      </div>
+      </nav>
 
-      {/* Online Menu block - black */}
-      <div className="bg-black flex justify-center px-[8%]">
-        <Link href={`/m/${slug}/menu/`} className="max-w-[500px] w-full py-8 flex items-center justify-between text-white font-bold uppercase text-xl">
-          <span>{t("onlineMenu")}</span>
+      {/* Online Menu block */}
+      <Link href={`/m/${slug}/menu/`} className="bg-black flex justify-center px-[8%]">
+        <span className="max-w-[440px] w-full py-8 flex items-center justify-between text-white font-bold uppercase text-xl">
+          {t("onlineMenu")}
           <ArrowRight className="h-6 w-6" strokeWidth={3} />
-        </Link>
-      </div>
+        </span>
+      </Link>
     </div>
   );
 }

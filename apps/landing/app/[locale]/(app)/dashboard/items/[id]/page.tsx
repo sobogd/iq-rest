@@ -23,6 +23,8 @@ export default async function EditItemPage() {
     error: t("error"),
     close: t("close"),
     notFound: t("notFound"),
+    delete: t("delete"),
+    deleteConfirm: t("deleteConfirm"),
   };
 
   return (

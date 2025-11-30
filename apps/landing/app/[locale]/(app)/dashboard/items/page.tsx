@@ -9,10 +9,7 @@ export default async function ItemsPage() {
   ]);
 
   const translations = {
-    delete: t("delete"),
     noItems: t("noItems"),
-    deleteConfirm: t("deleteConfirm"),
-    cancel: t("cancel"),
     moveUp: t("moveUp"),
     moveDown: t("moveDown"),
     edit: t("edit"),

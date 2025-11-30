@@ -61,34 +61,32 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
 
   return (
     <div className="h-screen flex flex-col" style={{ backgroundColor: "#fff" }}>
-      {/* Header - black */}
-      <div
-        className="h-14 flex items-center px-4"
-        style={{ backgroundColor: "#000" }}
-      >
-        <Link href={`/m/${slug}`} className="p-2 -ml-2" style={{ color: "#fff" }}>
-          <ArrowLeft className="h-6 w-6" />
-        </Link>
-        <h1 className="ml-2 text-lg font-semibold" style={{ color: "#fff" }}>{t("language")}</h1>
-      </div>
+      {/* Header */}
+      <header className="h-14 shrink-0 flex justify-center px-5 bg-black">
+        <div className="max-w-[440px] w-full flex items-center relative">
+          <Link href={`/m/${slug}`} className="p-2 -ml-2 text-white z-10">
+            <ArrowLeft className="h-6 w-6" />
+          </Link>
+          <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">{t("language")}</h1>
+        </div>
+      </header>
 
       {/* Language list */}
-      <div className="flex-1" style={{ backgroundColor: "#fff" }}>
-        {languages.map((lang) => (
-          <Link
-            key={lang.code}
-            href={`/m/${slug}`}
-            locale={lang.code}
-            className="h-14 px-4 flex items-center justify-between border-b"
-            style={{ color: "#000", borderColor: "#f3f4f6" }}
-          >
-            <span className="font-medium">{lang.name}</span>
-            {locale === lang.code && (
-              <Check className="h-5 w-5" style={{ color: "#000" }} />
-            )}
-          </Link>
-        ))}
-      </div>
+      <nav className="flex-1 pt-5 bg-white flex justify-center">
+        <div className="max-w-[440px] w-full">
+          {languages.map((lang) => (
+            <Link
+              key={lang.code}
+              href={`/m/${slug}`}
+              locale={lang.code}
+              className="h-14 flex items-center justify-between border-b border-gray-100 text-black px-5"
+            >
+              <span className="font-medium">{lang.name}</span>
+              {locale === lang.code && <Check className="h-5 w-5" />}
+            </Link>
+          ))}
+        </div>
+      </nav>
     </div>
   );
 }

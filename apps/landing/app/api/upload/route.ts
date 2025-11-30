@@ -80,11 +80,11 @@ export async function POST(request: NextRequest) {
     } else {
       // For images, resize and convert to webp
       finalBuffer = await sharp(buffer)
-        .resize(500, 500, {
+        .resize(450, 450, {
           fit: "cover",
           position: "center",
         })
-        .webp({ quality: 90 })
+        .webp({ quality: 98 })
         .toBuffer();
       contentType = "image/webp";
       extension = "webp";

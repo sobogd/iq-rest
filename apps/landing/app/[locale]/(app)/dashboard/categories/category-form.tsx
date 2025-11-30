@@ -2,11 +2,20 @@
 
 import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { Trash2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface Category {
   id: string;
@@ -27,6 +36,8 @@ interface CategoryFormProps {
     save: string;
     saving: string;
     cancel: string;
+    delete?: string;
+    deleteConfirm?: string;
   };
 }
 
@@ -39,9 +50,35 @@ export function CategoryForm({ category, translations: t }: CategoryFormProps) {
   const [description, setDescription] = useState(category?.description || "");
   const [isActive, setIsActive] = useState(category?.isActive ?? true);
   const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [error, setError] = useState("");
 
   const isEdit = !!category;
+
+  async function handleDelete() {
+    if (!category) return;
+
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/categories/${category.id}`, {
+        method: "DELETE",
+      });
+
+      if (res.ok) {
+        router.push(`/${locale}/dashboard/categories`);
+        router.refresh();
+      } else {
+        const data = await res.json();
+        setError(data.error || "Failed to delete category");
+      }
+    } catch {
+      setError("Failed to delete category");
+    } finally {
+      setDeleting(false);
+      setShowDeleteDialog(false);
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -119,11 +156,44 @@ export function CategoryForm({ category, translations: t }: CategoryFormProps) {
         <Label htmlFor="isActive">{t.isActive}</Label>
       </div>
 
-      <div className="pt-2">
-        <Button type="submit" disabled={saving}>
+      <div className="pt-2 flex items-center gap-3">
+        {isEdit && t.delete && (
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            onClick={() => setShowDeleteDialog(true)}
+            disabled={saving || deleting}
+          >
+            <Trash2 className="h-4 w-4" />
+          </Button>
+        )}
+        <Button type="submit" disabled={saving || deleting}>
+          <Save className="h-4 w-4 mr-1.5" />
           {saving ? t.saving : t.save}
         </Button>
       </div>
+
+      <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t.delete}</DialogTitle>
+            <DialogDescription>{t.deleteConfirm}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="gap-3">
+            <Button variant="outline" onClick={() => setShowDeleteDialog(false)}>
+              {t.cancel}
+            </Button>
+            <Button
+              variant="destructive"
+              onClick={handleDelete}
+              disabled={deleting}
+            >
+              {t.delete}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </form>
   );
 }
