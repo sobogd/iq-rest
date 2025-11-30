@@ -62,11 +62,16 @@
   "pricing": {
     "title": "Simple, transparent pricing",
     "subtitle": "Choose the plan that works best for your restaurant",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "(Save 25%)",
+    "perMonth": "/mo",
+    "billedYearly": "Billed annually (€{total})",
+    "forever": "Free forever",
+    "popular": "Popular",
     "plans": {
       "free": {
         "name": "Free",
-        "price": "€0",
-        "period": "forever",
         "description": "Perfect for trying out SobogdQR",
         "features": [
           "Up to 15 items",
@@ -77,10 +82,8 @@
         ],
         "cta": "Try Free"
       },
-      "base": {
-        "name": "Base",
-        "price": "€4",
-        "period": "per month",
+      "basic": {
+        "name": "Basic",
         "description": "Great for small restaurants",
         "features": [
           "Up to 100 items",
@@ -93,8 +96,6 @@
       },
       "pro": {
         "name": "Pro",
-        "price": "€9",
-        "period": "per month",
         "description": "For growing restaurant chains",
         "features": [
           "Unlimited items",
@@ -704,6 +705,41 @@
     "meta": {
       "title": "Frequently Asked Questions - SobogdQR",
       "description": "Find answers to common questions about SobogdQR digital QR menu solution for restaurants and cafes"
+    }
+  },
+  "billing": {
+    "title": "Billing",
+    "description": "Manage your subscription and billing",
+    "unauthorized": "Please log in to manage your subscription",
+    "perMonth": "/mo",
+    "currentPlan": "Current Plan",
+    "upgrade": "Upgrade",
+    "manage": "Manage",
+    "subscriptionSuccess": "Your subscription has been activated successfully!",
+    "subscriptionCanceled": "Subscription process was canceled.",
+    "subscriptionProcessing": "Your payment is being processed. It may take a few moments to activate.",
+    "processingPayment": "Processing your payment...",
+    "processingPaymentDescription": "Please wait while we confirm your subscription. This usually takes a few seconds.",
+    "checkoutError": "Failed to start checkout. Please try again.",
+    "portalError": "Failed to open billing portal. Please try again.",
+    "detailsNote": "For more details, visit our",
+    "pricingPage": "Pricing page",
+    "plans": {
+      "FREE": {
+        "name": "Free"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Basic Monthly"
+      },
+      "BASIC_YEARLY": {
+        "name": "Basic Yearly"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Monthly"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Yearly"
+      }
     }
   }
 }

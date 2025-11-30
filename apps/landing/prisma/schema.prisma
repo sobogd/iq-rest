@@ -29,12 +29,42 @@ model Company {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  // Stripe
+  stripeCustomerId     String? @unique
+  stripeSubscriptionId String? @unique
+
+  // Subscription
+  plan               Plan               @default(FREE)
+  billingCycle       BillingCycle?
+  subscriptionStatus SubscriptionStatus @default(INACTIVE)
+  currentPeriodEnd   DateTime?
+  paymentProcessing  Boolean            @default(false)
+
   users       UserCompany[]
   categories  Category[]
   items       Item[]
   restaurants Restaurant[]
 
   @@map("companies")
+}
+
+enum Plan {
+  FREE
+  BASIC
+  PRO
+}
+
+enum BillingCycle {
+  MONTHLY
+  YEARLY
+}
+
+enum SubscriptionStatus {
+  INACTIVE
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  EXPIRED
 }
 
 model Restaurant {

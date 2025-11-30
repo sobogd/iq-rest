@@ -62,11 +62,16 @@
   "pricing": {
     "title": "Precios simples y transparentes",
     "subtitle": "Elige el plan que mejor se adapte a tu restaurante",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "(Ahorra 25%)",
+    "perMonth": "/mes",
+    "billedYearly": "Facturado anualmente (€{total})",
+    "forever": "Gratis para siempre",
+    "popular": "Popular",
     "plans": {
       "free": {
         "name": "Gratis",
-        "price": "€0",
-        "period": "para siempre",
         "description": "Perfecto para probar SobogdQR",
         "features": [
           "Hasta 15 elementos",
@@ -77,10 +82,8 @@
         ],
         "cta": "Probar Gratis"
       },
-      "base": {
-        "name": "Base",
-        "price": "€4",
-        "period": "por mes",
+      "basic": {
+        "name": "Básico",
         "description": "Ideal para pequeños restaurantes",
         "features": [
           "Hasta 100 elementos",
@@ -93,8 +96,6 @@
       },
       "pro": {
         "name": "Pro",
-        "price": "€9",
-        "period": "por mes",
         "description": "Para cadenas de restaurantes",
         "features": [
           "Elementos ilimitados",
@@ -704,6 +705,41 @@
     "meta": {
       "title": "Preguntas Frecuentes - SobogdQR",
       "description": "Encuentra respuestas a preguntas comunes sobre la solución de menú QR digital SobogdQR para restaurantes y cafeterías"
+    }
+  },
+  "billing": {
+    "title": "Facturación",
+    "description": "Gestiona tu suscripción y facturación",
+    "unauthorized": "Por favor inicia sesión para gestionar tu suscripción",
+    "perMonth": "/mes",
+    "currentPlan": "Plan Actual",
+    "upgrade": "Mejorar",
+    "manage": "Gestionar",
+    "subscriptionSuccess": "¡Tu suscripción ha sido activada exitosamente!",
+    "subscriptionCanceled": "El proceso de suscripción fue cancelado.",
+    "subscriptionProcessing": "Tu pago está siendo procesado. Puede tardar unos momentos en activarse.",
+    "processingPayment": "Procesando tu pago...",
+    "processingPaymentDescription": "Por favor espera mientras confirmamos tu suscripción. Esto suele tardar unos segundos.",
+    "checkoutError": "Error al iniciar el pago. Por favor intenta de nuevo.",
+    "portalError": "Error al abrir el portal de facturación. Por favor intenta de nuevo.",
+    "detailsNote": "Para más detalles, visita nuestra",
+    "pricingPage": "página de Precios",
+    "plans": {
+      "FREE": {
+        "name": "Gratis"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Básico Mensual"
+      },
+      "BASIC_YEARLY": {
+        "name": "Básico Anual"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Mensual"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Anual"
+      }
     }
   }
 }

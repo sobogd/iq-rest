@@ -216,7 +216,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
       <div className="container mx-auto px-4">
-        <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center">
+        <section className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center py-[6vh] md:py-0">
           <div className="max-w-4xl space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               {tHero("title")}

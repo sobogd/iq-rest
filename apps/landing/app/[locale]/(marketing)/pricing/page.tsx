@@ -1,8 +1,5 @@
-import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
-import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
+import { PricingCards } from "@/components/PricingCards";
 import HowToSteps from "@/components/HowToSteps";
 import type { Metadata } from "next";
 
@@ -28,10 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function PricingPage() {
-  const t = useTranslations("pricing");
-
-  const plans = ["free", "base", "pro"] as const;
+export default async function PricingPage() {
+  const t = await getTranslations("pricing");
 
   const merchantReturnPolicy = {
     '@type': 'MerchantReturnPolicy',
@@ -97,7 +92,7 @@ export default function PricingPage() {
       },
       {
         '@type': 'Offer',
-        name: 'Base Plan',
+        name: 'Basic Plan Monthly',
         price: '4',
         priceCurrency: 'EUR',
         availability: 'https://schema.org/InStock',
@@ -108,8 +103,30 @@ export default function PricingPage() {
       },
       {
         '@type': 'Offer',
-        name: 'Pro Plan',
-        price: '9',
+        name: 'Basic Plan Yearly',
+        price: '36',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2026-12-31',
+        url: 'https://sobogdqr.com/pricing',
+        hasMerchantReturnPolicy: merchantReturnPolicy,
+        shippingDetails: shippingDetails
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pro Plan Monthly',
+        price: '7',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: '2026-12-31',
+        url: 'https://sobogdqr.com/pricing',
+        hasMerchantReturnPolicy: merchantReturnPolicy,
+        shippingDetails: shippingDetails
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pro Plan Yearly',
+        price: '72',
         priceCurrency: 'EUR',
         availability: 'https://schema.org/InStock',
         priceValidUntil: '2026-12-31',
@@ -164,7 +181,7 @@ export default function PricingPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               {t("title")}
             </h1>
@@ -173,57 +190,8 @@ export default function PricingPage() {
             </p>
           </div>
 
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan) => (
-              <Card
-                key={plan}
-                className={
-                  plan === "base"
-                    ? "border-primary shadow-lg relative"
-                    : ""
-                }
-              >
-                {plan === "base" && (
-                  <div className="absolute -top-4 left-0 right-0 flex justify-center">
-                    <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                      Popular
-                    </span>
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-2xl">{t(`plans.${plan}.name`)}</CardTitle>
-                  <CardDescription>{t(`plans.${plan}.description`)}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-1">
-                    <div className="text-4xl font-bold">{t(`plans.${plan}.price`)}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {t(`plans.${plan}.period`)}
-                    </div>
-                  </div>
-                  <ul className="space-y-3">
-                    {(t.raw(`plans.${plan}.features`) as string[]).map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button
-                    asChild
-                    className="w-full"
-                    variant={plan === "base" ? "default" : "outline"}
-                    size="lg"
-                  >
-                    <Link href="/get-started">{t(`plans.${plan}.cta`)}</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+          {/* Pricing Cards with Toggle */}
+          <PricingCards />
         </div>
       </div>
 
