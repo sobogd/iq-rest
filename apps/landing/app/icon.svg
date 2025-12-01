@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#dc2626">
+    <!-- Corner markers -->
+    <rect x="200" y="200" width="200" height="200" rx="20"/>
+    <rect x="800" y="200" width="200" height="200" rx="20"/>
+    <rect x="200" y="800" width="200" height="200" rx="20"/>
+
+    <!-- QR pattern blocks -->
+    <rect x="500" y="200" width="80" height="80" rx="10"/>
+    <rect x="620" y="200" width="80" height="80" rx="10"/>
+    <rect x="500" y="320" width="80" height="80" rx="10"/>
+    <rect x="620" y="320" width="80" height="80" rx="10"/>
+
+    <rect x="200" y="500" width="80" height="80" rx="10"/>
+    <rect x="320" y="500" width="80" height="80" rx="10"/>
+    <rect x="200" y="620" width="80" height="80" rx="10"/>
+    <rect x="320" y="620" width="80" height="80" rx="10"/>
+
+    <rect x="800" y="500" width="80" height="80" rx="10"/>
+    <rect x="920" y="500" width="80" height="80" rx="10"/>
+    <rect x="800" y="620" width="80" height="80" rx="10"/>
+    <rect x="920" y="620" width="80" height="80" rx="10"/>
+
+    <rect x="500" y="800" width="80" height="80" rx="10"/>
+    <rect x="620" y="800" width="80" height="80" rx="10"/>
+    <rect x="500" y="920" width="80" height="80" rx="10"/>
+    <rect x="620" y="920" width="80" height="80" rx="10"/>
+
+    <!-- Center pattern -->
+    <circle cx="600" cy="600" r="120"/>
+    <circle cx="600" cy="600" r="40"/>
+  </g>
+</svg>

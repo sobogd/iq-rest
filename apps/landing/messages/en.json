@@ -172,6 +172,36 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu and Restaurant Website Generator",
+        "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
+        "meta": {
+          "title": "Instant QR Menu and Restaurant Website Generator | SobogdQR",
+          "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
+        },
+        "content": {
+          "intro": "SobogdQR now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
+          "image1Caption": "Generate custom QR codes for your restaurant website instantly",
+          "section1Title": "How the Instant QR Menu Generator Works",
+          "section1Text": "Our instant QR menu and restaurant website generator creates everything you need in minutes. Simply add your menu items, and the system instantly generates a unique QR code linked to your restaurant website. The generator supports multiple paper formats (A4, A5, A6, Letter), various QR layouts per page (1 to 16 codes), and customizable text beneath each QR code. Preview exactly what you'll print, then download or print directly - your instant QR menu is ready to display at your tables.",
+          "section2Title": "Customizable QR Codes for Any Restaurant or Cafe",
+          "section2Text": "The instant QR menu generator offers complete customization for your restaurant or cafe branding. Add your restaurant name above the QR code, include custom text like 'Scan for Menu' or 'QR Menu' below, and choose from three text sizes. The generator produces clean, simple QR codes optimized for fast scanning. Whether you need a single large QR code for a poster or 16 smaller codes for individual table cards, our instant generator adapts to your restaurant's needs.",
+          "section3Title": "Print-Ready QR Menus in Seconds",
+          "section3Text": "Unlike complicated design tools, our instant QR menu generator creates print-ready layouts automatically. Select your paper format, choose how many QR codes per page, and hit print - that's it. The generator handles margins, spacing, and sizing to ensure perfect prints every time. For cafes and restaurants that need professional QR menus quickly, this instant approach saves hours of design work and gets your digital menu in front of customers faster.",
+          "benefitsTitle": "Benefits of Instant QR Menu Generation",
+          "benefit1": "Generate complete QR menu and restaurant website in minutes, not hours",
+          "benefit2": "Multiple paper formats: A4, A5, A6, and Letter sizes supported",
+          "benefit3": "Flexible layouts: from single large QR to 16 codes per page",
+          "benefit4": "Custom text and sizing options for your restaurant branding",
+          "benefit5": "Print-ready output with automatic margins and spacing",
+          "benefit6": "Download as PNG or print directly from your browser",
+          "conclusionTitle": "Start Using the Instant QR Menu Generator",
+          "conclusionText": "With SobogdQR's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "ctaText": "Ready to generate your instant QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "public-restaurant-qr-menu-website": {
         "title": "Public Restaurant Website for QR Menu Scanning",
         "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
@@ -496,6 +526,43 @@
         "title": "Settings",
         "description": "Configure your restaurant settings"
       }
+    }
+  },
+  "qrCode": {
+    "title": "QR Code",
+    "description": "Download and print your QR code for customers to scan",
+    "preview": "Preview",
+    "paperFormat": "Paper Format",
+    "qrPerPage": "QR Codes per Page",
+    "customText": "Text Below QR Code",
+    "customTextPlaceholder": "Scan to view menu",
+    "print": "Print",
+    "download": "Download PNG",
+    "viewMenu": "View Menu",
+    "noSlug": "No Menu URL Set",
+    "noSlugDescription": "Please set up your restaurant URL in settings first to generate a QR code.",
+    "goToSettings": "Go to Settings",
+    "loading": "Loading...",
+    "menuUrl": "Your Website URL",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Letter (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Full page)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Text Size",
+    "textSizes": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
     }
   },
   "categories": {

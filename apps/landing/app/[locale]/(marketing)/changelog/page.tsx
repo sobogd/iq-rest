@@ -23,6 +23,12 @@ export default async function ChangelogPage() {
 
   const entries = [
     {
+      id: "instant-qr-menu-restaurant-website-generator",
+      date: "2025-12-01",
+      titleKey: "entries.instant-qr-menu-restaurant-website-generator.title",
+      descriptionKey: "entries.instant-qr-menu-restaurant-website-generator.description",
+    },
+    {
       id: "subscription-plans-qr-menu-restaurant-website",
       date: "2025-11-30",
       titleKey: "entries.subscription-plans-qr-menu-restaurant-website.title",

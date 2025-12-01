@@ -172,6 +172,36 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Generador Instantáneo de Menú QR y Sitio Web de Restaurante",
+        "description": "Crea tu menú QR y sitio web de restaurante o cafetería al instante. Genera códigos QR imprimibles con texto personalizado y múltiples diseños en minutos - sin conocimientos técnicos.",
+        "meta": {
+          "title": "Generador Instantáneo de Menú QR y Sitio Web de Restaurante | SobogdQR",
+          "description": "Genera menú QR y sitio web de restaurante instantáneamente. Crea códigos QR personalizados para tu cafetería o restaurante en minutos con diseños imprimibles para formatos A4, A5, A6. Generador instantáneo gratuito."
+        },
+        "content": {
+          "intro": "SobogdQR ahora ofrece un generador instantáneo de menú QR y sitio web de restaurante que crea menús digitales profesionales en minutos. Ya sea que dirijas una acogedora cafetería o un concurrido restaurante, nuestro generador instantáneo te permite crear, personalizar e imprimir códigos QR que enlazan directamente con tu sitio web de menú digital. Sin conocimientos técnicos requeridos, sin esperas - solo creación instantánea de menú QR para restaurantes y cafeterías de cualquier tamaño.",
+          "image1Alt": "Generador instantáneo de menú QR para sitios web de restaurantes y cafeterías",
+          "image1Caption": "Genera códigos QR personalizados para tu sitio web de restaurante al instante",
+          "section1Title": "Cómo Funciona el Generador Instantáneo de Menú QR",
+          "section1Text": "Nuestro generador instantáneo de menú QR y sitio web de restaurante crea todo lo que necesitas en minutos. Simplemente añade los productos de tu menú, y el sistema genera instantáneamente un código QR único vinculado a tu sitio web de restaurante. El generador soporta múltiples formatos de papel (A4, A5, A6, Carta), varios diseños de QR por página (de 1 a 16 códigos), y texto personalizable debajo de cada código QR. Previsualiza exactamente lo que imprimirás, luego descarga o imprime directamente - tu menú QR instantáneo está listo para mostrar en tus mesas.",
+          "section2Title": "Códigos QR Personalizables para Cualquier Restaurante o Cafetería",
+          "section2Text": "El generador instantáneo de menú QR ofrece personalización completa para la marca de tu restaurante o cafetería. Añade el nombre de tu restaurante sobre el código QR, incluye texto personalizado como 'Escanea el Menú' o 'Menú QR' debajo, y elige entre tres tamaños de texto. El generador produce códigos QR limpios y simples optimizados para escaneo rápido. Ya sea que necesites un único código QR grande para un póster o 16 códigos más pequeños para tarjetas de mesa individuales, nuestro generador instantáneo se adapta a las necesidades de tu restaurante.",
+          "section3Title": "Menús QR Listos para Imprimir en Segundos",
+          "section3Text": "A diferencia de herramientas de diseño complicadas, nuestro generador instantáneo de menú QR crea diseños listos para imprimir automáticamente. Selecciona tu formato de papel, elige cuántos códigos QR por página, y presiona imprimir - eso es todo. El generador maneja márgenes, espaciado y tamaño para asegurar impresiones perfectas cada vez. Para cafeterías y restaurantes que necesitan menús QR profesionales rápidamente, este enfoque instantáneo ahorra horas de trabajo de diseño y pone tu menú digital frente a los clientes más rápido.",
+          "benefitsTitle": "Beneficios de la Generación Instantánea de Menú QR",
+          "benefit1": "Genera menú QR completo y sitio web de restaurante en minutos, no horas",
+          "benefit2": "Múltiples formatos de papel: A4, A5, A6 y tamaño Carta soportados",
+          "benefit3": "Diseños flexibles: desde un único QR grande hasta 16 códigos por página",
+          "benefit4": "Opciones de texto y tamaño personalizados para la marca de tu restaurante",
+          "benefit5": "Salida lista para imprimir con márgenes y espaciado automáticos",
+          "benefit6": "Descarga como PNG o imprime directamente desde tu navegador",
+          "conclusionTitle": "Comienza a Usar el Generador Instantáneo de Menú QR",
+          "conclusionText": "Con el generador instantáneo de menú QR y sitio web de restaurante de SobogdQR, puedes tener un menú digital profesional funcionando en minutos. Sin habilidades de diseño necesarias, sin software costoso requerido - solo generación instantánea de hermosos códigos QR escaneables que conectan a los clientes con tu menú. Perfecto para nuevos restaurantes lanzando su primer menú QR o cafeterías establecidas actualizando su configuración existente. Genera tu menú QR instantáneo hoy y moderniza tu experiencia gastronómica.",
+          "ctaText": "¿Listo para generar tu menú QR instantáneo?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "public-restaurant-qr-menu-website": {
         "title": "Sitio Web Público de Restaurante para Escaneo de Menú QR",
         "description": "Lanza tu sitio web público de restaurante con menú QR. Los clientes escanean el código y ven instantáneamente tu menú digital con categorías, productos, fotos y precios.",
@@ -496,6 +526,43 @@
         "title": "Configuración",
         "description": "Configura los ajustes de tu restaurante"
       }
+    }
+  },
+  "qrCode": {
+    "title": "Código QR",
+    "description": "Descarga e imprime tu código QR para que los clientes lo escaneen",
+    "preview": "Vista previa",
+    "paperFormat": "Formato de papel",
+    "qrPerPage": "Códigos QR por página",
+    "customText": "Texto bajo el código QR",
+    "customTextPlaceholder": "Escanea para ver el menú",
+    "print": "Imprimir",
+    "download": "Descargar PNG",
+    "viewMenu": "Ver menú",
+    "noSlug": "URL del menú no configurada",
+    "noSlugDescription": "Por favor, configura la URL de tu restaurante en ajustes primero para generar un código QR.",
+    "goToSettings": "Ir a Configuración",
+    "loading": "Cargando...",
+    "menuUrl": "URL de su sitio web",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Carta (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Página completa)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Tamaño del texto",
+    "textSizes": {
+      "small": "Pequeño",
+      "medium": "Mediano",
+      "large": "Grande"
     }
   },
   "categories": {

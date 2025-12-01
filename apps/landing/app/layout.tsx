@@ -59,6 +59,21 @@ export const metadata: Metadata = {
       'x-default': 'https://sobogdqr.com/en',
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.webmanifest',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'SobogdQR',
+  },
 };
 
 export function generateStaticParams() {

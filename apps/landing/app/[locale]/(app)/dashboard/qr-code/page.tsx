@@ -1,12 +1,46 @@
 import { getTranslations } from "next-intl/server";
+import { QrCodeClient } from "./qr-code-client";
 
 export default async function QrCodePage() {
-  const t = await getTranslations("sidebar.menu");
+  const t = await getTranslations("qrCode");
+
+  const translations = {
+    preview: t("preview"),
+    paperFormat: t("paperFormat"),
+    qrPerPage: t("qrPerPage"),
+    customText: t("customText"),
+    customTextPlaceholder: t("customTextPlaceholder"),
+    textSize: t("textSize"),
+    print: t("print"),
+    download: t("download"),
+    noSlug: t("noSlug"),
+    noSlugDescription: t("noSlugDescription"),
+    goToSettings: t("goToSettings"),
+    menuUrl: t("menuUrl"),
+    formats: {
+      a4: t("formats.a4"),
+      a5: t("formats.a5"),
+      a6: t("formats.a6"),
+      letter: t("formats.letter"),
+    },
+    perPage: {
+      one: t("perPage.one"),
+      two: t("perPage.two"),
+      four: t("perPage.four"),
+      six: t("perPage.six"),
+      nine: t("perPage.nine"),
+      sixteen: t("perPage.sixteen"),
+    },
+    textSizes: {
+      small: t("textSizes.small"),
+      medium: t("textSizes.medium"),
+      large: t("textSizes.large"),
+    },
+  };
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold">{t("qrCode")}</h1>
-      <p className="text-muted-foreground mt-1">Coming soon</p>
+      <QrCodeClient t={translations} />
     </div>
   );
 }
