@@ -52,10 +52,11 @@ export const metadata: Metadata = {
     description: 'Create professional QR menu for restaurant and cafe in minutes.',
   },
   alternates: {
-    canonical: 'https://sobogdqr.com',
+    canonical: 'https://sobogdqr.com/en',
     languages: {
-      'en': 'https://sobogdqr.com/en',
-      'es': 'https://sobogdqr.com/es',
+      en: 'https://sobogdqr.com/en',
+      es: 'https://sobogdqr.com/es',
+      'x-default': 'https://sobogdqr.com/en',
     },
   },
 };

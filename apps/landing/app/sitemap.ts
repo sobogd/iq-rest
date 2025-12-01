@@ -40,22 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Generate sitemap entries for all locales
   const sitemapEntries: MetadataRoute.Sitemap = []
 
-  // Add root URL with x-default for language negotiation
-  sitemapEntries.push({
-    url: baseUrl,
-    lastModified: new Date('2025-11-19'),
-    changeFrequency: 'weekly',
-    priority: 1.0,
-    alternates: {
-      languages: {
-        en: `${baseUrl}/en`,
-        es: `${baseUrl}/es`,
-        'x-default': baseUrl,
-      }
-    }
-  })
-
-  // Add localized home pages
+  // Add localized home pages (x-default points to /en as the default)
   locales.forEach(locale => {
     sitemapEntries.push({
       url: `${baseUrl}/${locale}`,
@@ -66,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${baseUrl}/en`,
           es: `${baseUrl}/es`,
+          'x-default': `${baseUrl}/en`,
         }
       }
     })
@@ -82,6 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             en: `${baseUrl}/en${route.path}`,
             es: `${baseUrl}/es${route.path}`,
+            'x-default': `${baseUrl}/en${route.path}`,
           }
         }
       })
