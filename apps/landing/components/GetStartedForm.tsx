@@ -190,11 +190,8 @@ export default function GetStartedForm() {
       {/* Restaurant Counter */}
       <div className="mb-4 md:mb-6">
         <div className="flex items-center justify-center gap-2 px-4 md:px-6 py-3 md:py-2 rounded-lg bg-green-500/10 border border-green-500/20 w-full md:w-auto md:inline-flex">
-          <span className="text-sm md:text-base font-semibold text-green-500">
-            {restaurantCount.toLocaleString()}+
-          </span>
           <span className="text-sm md:text-base text-muted-foreground">
-            Restaurants already using SobogdQR
+            {t("restaurantCounter", { count: `${restaurantCount.toLocaleString()}+` })}
           </span>
         </div>
       </div>

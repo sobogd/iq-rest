@@ -2,118 +2,85 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="border-t bg-muted/50">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Logo and Description */}
-          <div>
-            <Link href="/" className="text-2xl font-bold hover:opacity-80">
-              SobogdQR
+    <footer className="border-t bg-muted/30">
+      <div className="container mx-auto px-4 py-6">
+        {/* Main Footer Row */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80">
+            <Image
+              src="/logo.svg"
+              alt="SobogdQR"
+              width={28}
+              height={28}
+              className="rounded"
+            />
+            <span className="text-xl font-bold">SobogdQR</span>
+          </Link>
+
+          {/* Links */}
+          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+            <Link
+              href="/pricing"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("navigation.pricing")}
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Create QR menus for your restaurant in minutes
-            </p>
-          </div>
-
-          {/* Navigation */}
-          <div>
-            <h3 className="font-semibold mb-4">{t("navigation.title")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/pricing"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("navigation.pricing")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/features"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("navigation.features")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contacts"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("navigation.contacts")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("navigation.faq")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/changelog"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("navigation.changelog")}
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/sitemap.xml"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("legal.sitemap")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold mb-4">{t("legal.title")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("legal.terms")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("legal.privacy")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cookies"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t("legal.cookies")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <Link
+              href="/features"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("navigation.features")}
+            </Link>
+            <Link
+              href="/faq"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("navigation.faq")}
+            </Link>
+            <Link
+              href="/contacts"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("navigation.contacts")}
+            </Link>
+            <Link
+              href="/changelog"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t("navigation.changelog")}
+            </Link>
+          </nav>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t pt-8">
-          <p className="text-sm text-muted-foreground text-center">
-            {t("copyright")}
-          </p>
+        {/* Bottom Row */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pt-4 border-t border-border/50 text-xs text-muted-foreground">
+          <p>{t("copyright")}</p>
+          <nav className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link href="/terms" className="hover:text-foreground transition-colors">
+              {t("legal.terms")}
+            </Link>
+            <Link href="/privacy" className="hover:text-foreground transition-colors">
+              {t("legal.privacy")}
+            </Link>
+            <Link href="/cookies" className="hover:text-foreground transition-colors">
+              {t("legal.cookies")}
+            </Link>
+            <a
+              href="/sitemap.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              {t("legal.sitemap")}
+            </a>
+          </nav>
         </div>
       </div>
     </footer>
