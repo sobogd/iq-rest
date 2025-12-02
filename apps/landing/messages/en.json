@@ -172,6 +172,36 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsive Support for Your Restaurant QR Menu",
+        "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
+        "meta": {
+          "title": "Responsive Support for Restaurant QR Menu | SobogdQR",
+          "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
+        },
+        "content": {
+          "intro": "SobogdQR now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "image1Alt": "Support chat interface for restaurant QR menu",
+          "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
+          "section1Title": "Direct Chat Support for Your Restaurant",
+          "section1Text": "Our responsive support system for your QR menu restaurant or cafe works directly within your dashboard. No need to search for contact emails or wait in phone queues. Simply open the support chat, type your question or describe the change you need, and our team responds quickly. Whether you need help updating menu items, fixing display issues, or understanding analytics - responsive support is just a message away.",
+          "section2Title": "Quick Assistance for Any QR Menu Changes",
+          "section2Text": "Need to update prices before a busy weekend? Want to add seasonal items to your restaurant QR menu? Our responsive support helps cafes and restaurants make changes quickly. We guide you through the process or can assist directly when needed. This responsive support ensures your digital menu always reflects your current offerings, keeping customers informed and happy.",
+          "section3Title": "Support That Understands Restaurant Needs",
+          "section3Text": "Our responsive support team understands the unique challenges of running a restaurant or cafe. We know that a broken QR menu can mean lost customers and frustrated staff. That's why our support for your QR menu restaurant or cafe prioritizes quick response times and practical solutions. From technical questions to feature requests, we're here to help your digital menu succeed.",
+          "benefitsTitle": "Benefits of Responsive QR Menu Support",
+          "benefit1": "Direct in-app chat - no external emails or phone calls needed",
+          "benefit2": "Quick response times to keep your restaurant running smoothly",
+          "benefit3": "Guidance on menu updates, changes, and new features",
+          "benefit4": "Technical assistance for any QR code or website issues",
+          "benefit5": "Feature requests and suggestions welcomed and considered",
+          "benefit6": "Support that understands restaurant and cafe operations",
+          "conclusionTitle": "Get Responsive Support Today",
+          "conclusionText": "With SobogdQR's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "ctaText": "Ready to experience responsive support for your QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "detailed-analytics-restaurant-qr-menu-website": {
         "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
         "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
@@ -676,6 +706,19 @@
     "viewsByLanguage": "Views by Language",
     "dailyViews": "Daily Views (Last 7 Days)",
     "noData": "No data available yet"
+  },
+  "support": {
+    "title": "Messages",
+    "subtitle": "Get help from our team",
+    "unauthorized": "Please log in to access support",
+    "lastUpdated": "Updated",
+    "emptyTitle": "No messages yet",
+    "emptyDescription": "Send a message to start the conversation",
+    "sendMessage": "Send Message",
+    "placeholder": "Type your message...",
+    "hint": "Press Enter to send, Shift+Enter for new line",
+    "send": "Send",
+    "supportTeam": "Support Team"
   },
   "getStarted": {
     "meta": {

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ItemForm } from "../item-form";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function NewItemPage() {
   const t = await getTranslations("items");
@@ -25,8 +26,8 @@ export default async function NewItemPage() {
   };
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <ItemForm translations={translations} />
-    </div>
+    </DashboardContainer>
   );
 }

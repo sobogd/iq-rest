@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/privacy', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/cookies', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/changelog', lastModified: '2025-12-02', changeFrequency: 'weekly', priority: 0.7 },
+    { path: '/changelog/support-qr-menu-restaurant-cafe', lastModified: '2025-12-02', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/detailed-analytics-restaurant-qr-menu-website', lastModified: '2025-12-02', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/instant-qr-menu-restaurant-website-generator', lastModified: '2025-12-01', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/public-restaurant-qr-menu-website', lastModified: '2025-11-30', changeFrequency: 'monthly', priority: 0.6 },

@@ -313,7 +313,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="space-y-6">
       {/* Left Column - Form */}
       <div className="space-y-5">
         {/* Menu URL */}
@@ -423,7 +423,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
           <Label>{t.preview}</Label>
           <iframe
             ref={iframeRef}
-            className="border rounded-lg bg-white shadow-sm w-full md:max-w-xs"
+            className="border rounded-lg bg-white shadow-sm w-full"
             style={{
               aspectRatio: `${paper.width}/${paper.height}`,
             }}

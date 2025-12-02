@@ -104,7 +104,7 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
   }
 
   return (
-    <div className="px-4 py-4 pb-24">
+    <div className="pb-24">
       {sortedGroupedItems.map(([categoryId, group], groupIndex) => (
         <div key={categoryId} className={groupIndex > 0 ? "mt-6" : ""}>
           <div className="px-1 py-2">

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ItemEditClient } from "./item-edit-client";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function EditItemPage() {
   const t = await getTranslations("items");
@@ -28,8 +29,8 @@ export default async function EditItemPage() {
   };
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <ItemEditClient translations={translations} />
-    </div>
+    </DashboardContainer>
   );
 }

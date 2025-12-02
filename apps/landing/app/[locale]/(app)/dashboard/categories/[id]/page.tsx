@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { CategoryEditClient } from "./category-edit-client";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function EditCategoryPage() {
   const t = await getTranslations("categories");
@@ -19,8 +20,8 @@ export default async function EditCategoryPage() {
   };
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <CategoryEditClient translations={translations} />
-    </div>
+    </DashboardContainer>
   );
 }

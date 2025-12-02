@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { RestaurantForm } from "./restaurant-form";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function SettingsPage() {
   const t = await getTranslations("settings");
@@ -34,8 +35,8 @@ export default async function SettingsPage() {
   };
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <RestaurantForm translations={translations} />
-    </div>
+    </DashboardContainer>
   );
 }

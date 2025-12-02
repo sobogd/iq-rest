@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { ItemsList } from "./items-list";
 import { getItems } from "@/lib/data";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function ItemsPage() {
   const [t, items] = await Promise.all([
@@ -15,5 +16,9 @@ export default async function ItemsPage() {
     edit: t("edit"),
   };
 
-  return <ItemsList translations={translations} initialData={items} />;
+  return (
+    <DashboardContainer>
+      <ItemsList translations={translations} initialData={items} />
+    </DashboardContainer>
+  );
 }

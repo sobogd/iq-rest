@@ -225,7 +225,7 @@ export function BillingClient({
   }
 
   return (
-    <div className="px-4 py-4 pb-24 space-y-4">
+    <div className="pb-24 space-y-4">
       {message && (
         <div
           className={cn(

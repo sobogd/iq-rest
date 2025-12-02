@@ -172,6 +172,36 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Soporte Operativo para Tu Menú QR de Restaurante",
+        "description": "Obtén soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Chat directo con nuestro equipo para asistencia rápida.",
+        "meta": {
+          "title": "Soporte Operativo para Menú QR de Restaurante | SobogdQR",
+          "description": "Soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Asistencia rápida para cafeterías y restaurantes con chat de soporte directo."
+        },
+        "content": {
+          "intro": "SobogdQR ahora ofrece soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Entendemos que administrar un restaurante o cafetería requiere soluciones rápidas cuando surgen problemas. Nuestro nuevo chat de soporte en la aplicación te da acceso directo a nuestro equipo, asegurando que tu menú QR se mantenga perfecto y tus clientes siempre tengan la mejor experiencia.",
+          "image1Alt": "Interfaz de chat de soporte para menú QR de restaurante",
+          "image1Caption": "Chat de soporte directo para asistencia operativa con tu menú QR de restaurante",
+          "section1Title": "Chat de Soporte Directo para Tu Restaurante",
+          "section1Text": "Nuestro sistema de soporte operativo para tu menú QR de restaurante o cafetería funciona directamente en tu panel de control. No necesitas buscar correos de contacto ni esperar en colas telefónicas. Simplemente abre el chat de soporte, escribe tu pregunta o describe el cambio que necesitas, y nuestro equipo responde rápidamente. Ya sea que necesites ayuda actualizando elementos del menú, solucionando problemas de visualización o entendiendo las analíticas - el soporte operativo está a solo un mensaje de distancia.",
+          "section2Title": "Asistencia Rápida para Cualquier Cambio en el Menú QR",
+          "section2Text": "¿Necesitas actualizar precios antes de un fin de semana ocupado? ¿Quieres agregar platos de temporada a tu menú QR de restaurante? Nuestro soporte operativo ayuda a cafeterías y restaurantes a hacer cambios rápidamente. Te guiamos en el proceso o podemos asistir directamente cuando sea necesario. Este soporte operativo asegura que tu menú digital siempre refleje tus ofertas actuales, manteniendo a los clientes informados y satisfechos.",
+          "section3Title": "Soporte que Entiende las Necesidades del Restaurante",
+          "section3Text": "Nuestro equipo de soporte operativo entiende los desafíos únicos de administrar un restaurante o cafetería. Sabemos que un menú QR que no funciona puede significar clientes perdidos y personal frustrado. Por eso nuestro soporte para tu menú QR de restaurante o cafetería prioriza tiempos de respuesta rápidos y soluciones prácticas. Desde preguntas técnicas hasta solicitudes de funciones, estamos aquí para ayudar a que tu menú digital tenga éxito.",
+          "benefitsTitle": "Beneficios del Soporte Operativo para Menú QR",
+          "benefit1": "Chat directo en la aplicación - sin necesidad de correos externos o llamadas telefónicas",
+          "benefit2": "Tiempos de respuesta rápidos para mantener tu restaurante funcionando sin problemas",
+          "benefit3": "Orientación sobre actualizaciones de menú, cambios y nuevas funciones",
+          "benefit4": "Asistencia técnica para cualquier problema con código QR o sitio web",
+          "benefit5": "Solicitudes de funciones y sugerencias bienvenidas y consideradas",
+          "benefit6": "Soporte que entiende las operaciones de restaurantes y cafeterías",
+          "conclusionTitle": "Obtén Soporte Operativo Hoy",
+          "conclusionText": "Con el soporte operativo de SobogdQR para tu menú QR de restaurante o cafetería, la ayuda siempre está al alcance. Nuestro equipo dedicado asegura que tu menú digital funcione perfectamente, dándote más tiempo para enfocarte en lo que importa - servir excelente comida. Accede al soporte directamente desde tu panel de control y experimenta la diferencia que hace la asistencia operativa para tu restaurante o cafetería.",
+          "ctaText": "¿Listo para experimentar soporte operativo para tu menú QR?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "detailed-analytics-restaurant-qr-menu-website": {
         "title": "Análisis Detallado para Tu Sitio Web de Restaurante y Menú QR",
         "description": "Obtén análisis detallado de tu sitio web de restaurante y menú QR. Rastrea vistas de página, visitantes únicos, uso por idioma y tendencias diarias para optimizar tu menú digital.",
@@ -676,6 +706,19 @@
     "viewsByLanguage": "Vistas por Idioma",
     "dailyViews": "Vistas Diarias (Últimos 7 Días)",
     "noData": "Aún no hay datos disponibles"
+  },
+  "support": {
+    "title": "Mensajes",
+    "subtitle": "Obtén ayuda de nuestro equipo",
+    "unauthorized": "Inicia sesión para acceder al soporte",
+    "lastUpdated": "Actualizado",
+    "emptyTitle": "Sin mensajes aún",
+    "emptyDescription": "Envía un mensaje para iniciar la conversación",
+    "sendMessage": "Enviar Mensaje",
+    "placeholder": "Escribe tu mensaje...",
+    "hint": "Presiona Enter para enviar, Shift+Enter para nueva línea",
+    "send": "Enviar",
+    "supportTeam": "Equipo de Soporte"
   },
   "getStarted": {
     "meta": {

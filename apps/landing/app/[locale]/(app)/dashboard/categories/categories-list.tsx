@@ -69,7 +69,7 @@ export function CategoriesList({ initialData, translations: t }: CategoriesListP
   }
 
   return (
-    <div className="px-4 py-4 pb-24 space-y-2">
+    <div className="pb-24 space-y-2">
       {categories.map((category, index) => (
         <div
           key={category.id}

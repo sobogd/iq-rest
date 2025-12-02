@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { AnalyticsClient } from "./analytics-client";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 const PLAN_LIMITS: Record<string, number> = {
   FREE: 500,
@@ -128,15 +129,15 @@ export default async function AnalyticsPage() {
 
   if (!data) {
     return (
-      <div className="p-6">
+      <DashboardContainer>
         <p className="text-muted-foreground">{t("unauthorized")}</p>
-      </div>
+      </DashboardContainer>
     );
   }
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <AnalyticsClient data={data} />
-    </div>
+    </DashboardContainer>
   );
 }

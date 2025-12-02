@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { BillingClient } from "./billing-client";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 async function getCompanySubscription() {
   const cookieStore = await cookies();
@@ -33,20 +34,22 @@ export default async function BillingPage({
 
   if (!company) {
     return (
-      <div>
+      <DashboardContainer>
         <p className="text-muted-foreground">{t("unauthorized")}</p>
-      </div>
+      </DashboardContainer>
     );
   }
 
   return (
-    <BillingClient
+    <DashboardContainer>
+      <BillingClient
       currentPlan={company.plan}
       billingCycle={company.billingCycle}
       subscriptionStatus={company.subscriptionStatus}
       showSuccess={params.success === "true"}
       showCanceled={params.canceled === "true"}
       paymentProcessing={company.paymentProcessing}
-    />
+      />
+    </DashboardContainer>
   );
 }

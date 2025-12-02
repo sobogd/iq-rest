@@ -221,7 +221,7 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-lg">
+    <form onSubmit={handleSubmit} className="space-y-6">
       {error && (
         <div className="bg-destructive/10 text-destructive px-4 py-2 rounded-md text-sm">
           {error}

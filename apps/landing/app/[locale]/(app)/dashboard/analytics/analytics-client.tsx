@@ -47,7 +47,7 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
   const maxDayViews = Math.max(...data.viewsByDay.map((v) => v.count), 1);
 
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="space-y-6">
       {/* Left Column */}
       <div className="space-y-5">
         {/* Monthly Usage */}

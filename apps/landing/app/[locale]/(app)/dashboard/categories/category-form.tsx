@@ -119,7 +119,7 @@ export function CategoryForm({ category, translations: t }: CategoryFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 max-w-lg">
+    <form onSubmit={handleSubmit} className="space-y-5">
       {error && (
         <div className="bg-destructive/10 text-destructive px-4 py-2 rounded-md text-sm">
           {error}

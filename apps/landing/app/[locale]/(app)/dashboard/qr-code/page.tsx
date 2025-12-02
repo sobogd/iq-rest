@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { QrCodeClient } from "./qr-code-client";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function QrCodePage() {
   const t = await getTranslations("qrCode");
@@ -39,8 +40,8 @@ export default async function QrCodePage() {
   };
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <QrCodeClient t={translations} />
-    </div>
+    </DashboardContainer>
   );
 }

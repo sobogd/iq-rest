@@ -41,3 +41,23 @@ export async function getUserCompany(): Promise<{ id: string; name: string } | n
 
   return { id: company.id, name: company.name };
 }
+
+export async function getUserWithCompany(): Promise<{ userId: string; companyId: string } | null> {
+  const cookieStore = await cookies();
+  const userEmail = cookieStore.get("user_email");
+
+  if (!userEmail?.value) return null;
+
+  const user = await prisma.user.findUnique({
+    where: { email: userEmail.value },
+    include: {
+      companies: {
+        take: 1,
+      },
+    },
+  });
+
+  if (!user || !user.companies[0]) return null;
+
+  return { userId: user.id, companyId: user.companies[0].companyId };
+}

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { CategoryForm } from "../category-form";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function NewCategoryPage() {
   const t = await getTranslations("categories");
@@ -16,8 +17,8 @@ export default async function NewCategoryPage() {
   };
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <CategoryForm translations={translations} />
-    </div>
+    </DashboardContainer>
   );
 }

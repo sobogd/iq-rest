@@ -239,7 +239,7 @@ export function ItemForm({ item, translations: t }: ItemFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 max-w-lg">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <AlertDialog open={!!error} onOpenChange={() => setError("")}>
         <AlertDialogContent>
           <AlertDialogHeader>

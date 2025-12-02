@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getUserCompany } from "@/lib/auth";
+import { DashboardContainer } from "@/components/dashboard-container";
 
 export default async function DashboardPage() {
   const [t, company] = await Promise.all([
@@ -8,7 +9,7 @@ export default async function DashboardPage() {
   ]);
 
   return (
-    <div className="p-6">
+    <DashboardContainer>
       <h1 className="text-2xl font-bold">{t("dashboard")}</h1>
       {company && (
         <div className="mt-4 p-4 bg-muted rounded-lg">
@@ -18,6 +19,6 @@ export default async function DashboardPage() {
           <p className="font-mono text-sm">{company.id}</p>
         </div>
       )}
-    </div>
+    </DashboardContainer>
   );
 }
