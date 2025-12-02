@@ -172,6 +172,36 @@
       "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
+        "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
+        "meta": {
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | SobogdQR",
+          "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
+        },
+        "content": {
+          "intro": "SobogdQR now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
+          "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
+          "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
+          "section1Text": "Our detailed analytics for your restaurant website and QR menu track every customer interaction. See total page views for today, this week, and this month at a glance. Track unique visitors to understand your real audience size. The analytics dashboard provides detailed insights into how customers navigate your QR menu - from the home page to your full menu, contacts, and language selection. This detailed analytics helps restaurants make data-driven decisions.",
+          "section2Title": "Page and Language Analytics",
+          "section2Text": "Understand which pages of your restaurant website and QR menu are most popular. Our detailed analytics break down views by page type: Home, Menu, Contacts, and Language selection. See which languages your customers prefer, helping you prioritize translations and serve international guests better. These detailed analytics for your restaurant QR menu reveal customer behavior patterns you never knew existed.",
+          "section3Title": "Daily Trends and Usage Monitoring",
+          "section3Text": "Track how your restaurant website and QR menu perform over time with daily view charts. See patterns in customer engagement throughout the week. Monitor your monthly usage against your plan limits with a clear progress bar. Our detailed analytics help restaurants identify peak times and optimize their digital presence. Whether you're a small cafe or a busy restaurant, these insights help you understand your customers better.",
+          "benefitsTitle": "Benefits of Detailed Analytics for Restaurants",
+          "benefit1": "Real-time view counts: today, weekly, and monthly statistics at a glance",
+          "benefit2": "Unique visitor tracking to understand your actual customer reach",
+          "benefit3": "Page-by-page breakdown showing what content customers view most",
+          "benefit4": "Language analytics to optimize multilingual menu offerings",
+          "benefit5": "Daily trend charts to identify patterns in customer behavior",
+          "benefit6": "Usage monitoring with clear limits and upgrade prompts",
+          "conclusionTitle": "Start Using Detailed Analytics Today",
+          "conclusionText": "With SobogdQR's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "ctaText": "Ready to explore detailed analytics for your restaurant?",
+          "ctaButton": "Get Started Free"
+        }
+      },
       "instant-qr-menu-restaurant-website-generator": {
         "title": "Instant QR Menu and Restaurant Website Generator",
         "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
@@ -628,6 +658,24 @@
     "filterByCategory": "Filter by category",
     "error": "Error",
     "close": "Close"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "subtitle": "Track your menu performance and visitor insights",
+    "unauthorized": "Please log in to view analytics",
+    "overview": "Overview",
+    "monthlyUsage": "Monthly Usage",
+    "scansThisMonth": "scans this month",
+    "limitReached": "You've reached your monthly scan limit. Upgrade your plan for unlimited scans.",
+    "todayViews": "Today",
+    "weeklyViews": "This Week",
+    "monthlyViews": "This Month",
+    "uniqueVisitors": "Unique Visitors",
+    "last7Days": "Last 7 days",
+    "viewsByPage": "Views by Page",
+    "viewsByLanguage": "Views by Language",
+    "dailyViews": "Daily Views (Last 7 Days)",
+    "noData": "No data available yet"
   },
   "getStarted": {
     "meta": {

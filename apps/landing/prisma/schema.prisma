@@ -44,6 +44,7 @@ model Company {
   categories  Category[]
   items       Item[]
   restaurants Restaurant[]
+  pageViews   PageView[]
 
   @@map("companies")
 }
@@ -144,4 +145,21 @@ model UserCompany {
 
   @@unique([userId, companyId])
   @@map("users_companies")
+}
+
+model PageView {
+  id        String   @id @default(cuid())
+  companyId String
+  sessionId String
+  page      String   // 'home' | 'contacts' | 'language' | 'menu'
+  language  String
+  referrer  String?
+  createdAt DateTime @default(now())
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, createdAt])
+  @@index([companyId, sessionId])
+  @@index([createdAt])
+  @@map("page_views")
 }

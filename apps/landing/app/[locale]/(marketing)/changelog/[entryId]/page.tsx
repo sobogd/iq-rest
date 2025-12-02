@@ -11,6 +11,11 @@ const changelogEntries: Record<string, {
   image2?: string;
   image3?: string;
 }> = {
+  "detailed-analytics-restaurant-qr-menu-website": {
+    date: "2025-12-02",
+    translationKey: "detailed-analytics-restaurant-qr-menu-website",
+    image: "/changelog/detailed-analytics-restaurant-qr-menu.webp",
+  },
   "instant-qr-menu-restaurant-website-generator": {
     date: "2025-12-01",
     translationKey: "instant-qr-menu-restaurant-website-generator",
@@ -108,7 +113,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator";
+  const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator" || key === "detailed-analytics-restaurant-qr-menu-website";
 
   return (
     <div className="container mx-auto px-4 py-16">

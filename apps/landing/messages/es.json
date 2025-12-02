@@ -172,6 +172,36 @@
       "description": "SobogdQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Análisis Detallado para Tu Sitio Web de Restaurante y Menú QR",
+        "description": "Obtén análisis detallado de tu sitio web de restaurante y menú QR. Rastrea vistas de página, visitantes únicos, uso por idioma y tendencias diarias para optimizar tu menú digital.",
+        "meta": {
+          "title": "Análisis Detallado para Tu Sitio Web de Restaurante y Menú QR | SobogdQR",
+          "description": "Análisis detallado para tu sitio web de restaurante y menú QR. Rastrea vistas de página, visitantes únicos, estadísticas de idioma y tendencias de visualización. Panel de análisis gratuito para restaurantes y cafeterías."
+        },
+        "content": {
+          "intro": "SobogdQR ahora ofrece análisis detallado para tu sitio web de restaurante y menú QR. Rastrea exactamente cómo los clientes interactúan con tu menú digital: cuántas veces se ve tu menú, qué páginas visitan, qué idiomas prefieren y las tendencias de visualización a lo largo del tiempo. Este análisis detallado te ayuda a entender a tu audiencia y optimizar tu sitio web de restaurante con menú QR para máximo impacto.",
+          "image1Alt": "Panel de análisis detallado para sitio web de restaurante y menú QR",
+          "image1Caption": "Panel de análisis mostrando vistas, visitantes y estadísticas de idioma para tu menú QR",
+          "section1Title": "Qué Rastrea el Análisis Detallado de Tu Menú QR",
+          "section1Text": "Nuestro análisis detallado para tu sitio web de restaurante y menú QR proporciona métricas clave: vistas de hoy, vistas esta semana, vistas este mes y visitantes únicos. Cada vez que un cliente escanea tu código QR y navega por tu menú, el sistema registra la visita. También puedes ver el desglose de vistas por página (inicio, contactos, idioma, menú) y vistas por idioma (español, inglés). Esta información te ayuda a entender cuándo y cómo los clientes usan tu menú digital.",
+          "section2Title": "Análisis de Idiomas para Tu Menú QR de Restaurante",
+          "section2Text": "El análisis detallado incluye estadísticas de uso de idioma para tu sitio web de restaurante con menú QR. Descubre qué porcentaje de tus clientes prefieren español versus inglés. Esta información es invaluable para restaurantes que sirven a bases de clientes diversas o áreas turísticas. Si ves alto uso de un idioma particular, puedes priorizar las traducciones del menú o contenido de marketing en ese idioma para servir mejor a tus clientes.",
+          "section3Title": "Tendencias de Visualización Diaria para Tu Menú Digital",
+          "section3Text": "El panel de análisis detallado muestra vistas diarias de los últimos 7 días en un gráfico visual. Identifica qué días son más ocupados para tu restaurante basándote en escaneos de menú QR. ¿Son los fines de semana más populares? ¿Ciertos días ven picos? Estos datos te ayudan a planificar dotación de personal, ofertas especiales e iniciativas de marketing. El análisis detallado de tu sitio web de restaurante y menú QR convierte los datos en información accionable.",
+          "benefitsTitle": "Beneficios del Análisis Detallado para Tu Sitio Web de Restaurante",
+          "benefit1": "Rastrea vistas de menú en tiempo real - ve métricas de hoy, esta semana y este mes",
+          "benefit2": "Identifica visitantes únicos para entender el alcance real de clientes",
+          "benefit3": "Desglose de vistas por página muestra qué secciones del menú son más populares",
+          "benefit4": "Estadísticas de idioma revelan las preferencias de tu base de clientes",
+          "benefit5": "Gráfico de tendencias diarias visualiza patrones durante la semana",
+          "benefit6": "Datos accionables para optimizar tu sitio web de restaurante con menú QR",
+          "conclusionTitle": "Comienza a Usar el Análisis Detallado para Tu Menú QR",
+          "conclusionText": "Con el análisis detallado de SobogdQR para tu sitio web de restaurante y menú QR, obtienes información valiosa sobre el comportamiento de tus clientes. Ya no adivinas cuántas personas ven tu menú o qué idiomas prefieren. Cada escaneo, cada vista, cada preferencia de idioma se rastrea y se presenta en un panel fácil de entender. Usa estos datos para tomar decisiones informadas sobre tu menú, marketing y operaciones del restaurante.",
+          "ctaText": "¿Listo para obtener análisis detallado de tu sitio web de restaurante?",
+          "ctaButton": "Comenzar Gratis"
+        }
+      },
       "instant-qr-menu-restaurant-website-generator": {
         "title": "Generador Instantáneo de Menú QR y Sitio Web de Restaurante",
         "description": "Crea tu menú QR y sitio web de restaurante o cafetería al instante. Genera códigos QR imprimibles con texto personalizado y múltiples diseños en minutos - sin conocimientos técnicos.",
@@ -628,6 +658,24 @@
     "filterByCategory": "Filtrar por categoría",
     "error": "Error",
     "close": "Cerrar"
+  },
+  "analytics": {
+    "title": "Analíticas",
+    "subtitle": "Rastrea el rendimiento de tu menú y las estadísticas de visitantes",
+    "unauthorized": "Inicia sesión para ver las analíticas",
+    "overview": "Resumen",
+    "monthlyUsage": "Uso Mensual",
+    "scansThisMonth": "escaneos este mes",
+    "limitReached": "Has alcanzado tu límite mensual de escaneos. Mejora tu plan para escaneos ilimitados.",
+    "todayViews": "Hoy",
+    "weeklyViews": "Esta Semana",
+    "monthlyViews": "Este Mes",
+    "uniqueVisitors": "Visitantes Únicos",
+    "last7Days": "Últimos 7 días",
+    "viewsByPage": "Vistas por Página",
+    "viewsByLanguage": "Vistas por Idioma",
+    "dailyViews": "Vistas Diarias (Últimos 7 Días)",
+    "noData": "Aún no hay datos disponibles"
   },
   "getStarted": {
     "meta": {
