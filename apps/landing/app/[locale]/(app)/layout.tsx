@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 
 import { DashboardLayout } from "@/components/dashboard-layout";
 import { UserProvider } from "@/components/user-provider";
+import { Toaster } from "@/components/ui/sonner";
 import { getUser } from "@/lib/user";
 
 export default async function AppLayout({
@@ -35,12 +36,16 @@ export default async function AppLayout({
   const t = await getTranslations("sidebar");
   const tCategories = await getTranslations("categories");
   const tItems = await getTranslations("items");
+  const tTranslations = await getTranslations("translations");
+  const tReservations = await getTranslations("reservations");
 
   const translations = {
     menu: {
       dashboard: t("menu.dashboard"),
       categories: t("menu.categories"),
       items: t("menu.items"),
+      languages: t("menu.languages"),
+      reservations: t("menu.reservations"),
       qrCode: t("menu.qrCode"),
       analytics: t("menu.analytics"),
       settings: t("menu.settings"),
@@ -54,6 +59,11 @@ export default async function AppLayout({
     dashboard: t("menu.dashboard"),
     categories: t("menu.categories"),
     items: t("menu.items"),
+    languages: t("menu.languages"),
+    reservations: tReservations("title"),
+    tables: tReservations("tables"),
+    newTable: tReservations("newTable"),
+    editTable: tReservations("editTable"),
     qrCode: t("menu.qrCode"),
     analytics: t("menu.analytics"),
     settings: t("menu.settings"),
@@ -68,6 +78,7 @@ export default async function AppLayout({
   const actionTranslations = {
     addCategory: tCategories("addCategory"),
     addItem: tItems("addItem"),
+    addTable: tReservations("addTable"),
   };
 
   return (
@@ -79,6 +90,7 @@ export default async function AppLayout({
       >
         {children}
       </DashboardLayout>
+      <Toaster position="top-right" />
     </UserProvider>
   );
 }

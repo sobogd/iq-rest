@@ -10,7 +10,7 @@ export function DashboardContainer({
   className,
 }: DashboardContainerProps) {
   return (
-    <div className={cn("p-6 max-w-lg md:mx-auto", className)}>
+    <div className={cn("p-6 max-w-lg mx-auto", className)}>
       {children}
     </div>
   );

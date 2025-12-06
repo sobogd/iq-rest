@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { name, description, isActive } = await request.json();
+    const { name, isActive, translations } = await request.json();
 
     if (!name || typeof name !== "string" || name.trim().length === 0) {
       return NextResponse.json(
@@ -52,9 +52,9 @@ export async function POST(request: NextRequest) {
     const category = await prisma.category.create({
       data: {
         name: name.trim(),
-        description: description?.trim() || null,
         sortOrder,
         isActive: isActive ?? true,
+        translations: translations || null,
         companyId,
       },
     });

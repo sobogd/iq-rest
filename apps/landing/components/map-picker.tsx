@@ -2,6 +2,7 @@
 
 import { useCallback, useState, useRef } from "react";
 import { GoogleMap, useJsApiLoader, Marker, Autocomplete } from "@react-google-maps/api";
+import { Loader2 } from "lucide-react";
 
 interface MapPickerProps {
   lat?: number;
@@ -72,8 +73,8 @@ export function MapPicker({ lat, lng, onLocationSelect }: MapPickerProps) {
 
   if (!isLoaded) {
     return (
-      <div className="w-full h-[300px] bg-gray-100 rounded-lg flex items-center justify-center">
-        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+      <div className="w-full h-[300px] bg-muted rounded-lg flex items-center justify-center">
+        <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
     );
   }

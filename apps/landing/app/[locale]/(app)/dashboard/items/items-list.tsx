@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { Link } from "@/i18n/routing";
 import { ArrowUp, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "sonner";
 import type { ItemWithCategory, Category } from "@/types";
 
 interface ItemsListProps {
@@ -17,10 +19,6 @@ interface ItemsListProps {
 }
 
 export function ItemsList({ initialData, translations: t }: ItemsListProps) {
-  const router = useRouter();
-  const params = useParams();
-  const locale = params.locale as string;
-
   const [items, setItems] = useState<ItemWithCategory[]>(initialData);
   const [reordering, setReordering] = useState<{ id: string; direction: "up" | "down" } | null>(null);
 
@@ -45,6 +43,41 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
       ([, a], [, b]) => a.category.sortOrder - b.category.sortOrder
     );
   }, [items]);
+
+  async function handleToggleActive(itemId: string, currentActive: boolean, itemName: string) {
+    const newActive = !currentActive;
+
+    // Optimistic update
+    setItems((prev) =>
+      prev.map((i) => (i.id === itemId ? { ...i, isActive: newActive } : i))
+    );
+
+    try {
+      const res = await fetch(`/api/items/${itemId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isActive: newActive }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || data.success === false) {
+        // Revert on failure
+        setItems((prev) =>
+          prev.map((i) => (i.id === itemId ? { ...i, isActive: currentActive } : i))
+        );
+        toast.error("Failed to update item");
+      } else {
+        toast.success(newActive ? `${itemName} enabled` : `${itemName} disabled`);
+      }
+    } catch {
+      // Revert on error
+      setItems((prev) =>
+        prev.map((i) => (i.id === itemId ? { ...i, isActive: currentActive } : i))
+      );
+      toast.error("Failed to update item");
+    }
+  }
 
   async function handleReorder(itemId: string, direction: "up" | "down") {
     const item = items.find((i) => i.id === itemId);
@@ -71,7 +104,6 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
       });
 
       if (res.ok) {
-        // Move item only after successful response
         const swapItem = categoryItems[swapIndex];
         const newItems = items.map((i) => {
           if (i.id === itemId) {
@@ -91,10 +123,6 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
     }
   }
 
-  function handleEdit(itemId: string) {
-    router.push(`/${locale}/dashboard/items/${itemId}`);
-  }
-
   if (items.length === 0) {
     return (
       <div className="flex items-center justify-center h-[calc(100vh-3.5rem)]">
@@ -107,57 +135,63 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
     <div className="pb-24">
       {sortedGroupedItems.map(([categoryId, group], groupIndex) => (
         <div key={categoryId} className={groupIndex > 0 ? "mt-6" : ""}>
-          <div className="px-1 py-2">
-            <span className="text-sm font-medium text-muted-foreground">
-              {group.category.name}
-            </span>
-          </div>
-          <div className="space-y-2">
+          <h3 className="text-lg font-semibold px-1 mb-3">{group.category.name}</h3>
+          <div className="space-y-1">
             {group.items
               .sort((a, b) => a.sortOrder - b.sortOrder)
               .map((item, index) => (
-              <div
+              <Link
                 key={item.id}
-                className="flex items-center justify-between px-4 py-3 bg-card rounded-lg border cursor-pointer"
-                onClick={() => handleEdit(item.id)}
+                href={`/dashboard/items/${item.id}`}
+                className="flex items-center justify-between px-3 py-2 bg-card rounded-lg border"
               >
-                <div className="flex items-center gap-2.5 flex-1 min-w-0">
-                  <span
-                    className={`h-2 w-2 min-h-2 min-w-2 shrink-0 rounded-full ${
-                      item.isActive ? "bg-green-500" : "bg-gray-300"
-                    }`}
-                  />
-                  <span className="text-sm">{item.name}</span>
+                <div className="flex items-center gap-2 flex-1 min-w-0">
+                  <div onClick={(e) => e.preventDefault()}>
+                    <Switch
+                      checked={item.isActive}
+                      onCheckedChange={() => handleToggleActive(item.id, item.isActive, item.name)}
+                      className="scale-75"
+                    />
+                  </div>
+                  <span className="text-sm truncate">{item.name}</span>
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+                <div className="flex items-center gap-1 ml-2" onClick={(e) => e.preventDefault()}>
                   <Button
                     variant="ghost"
                     size="icon"
-                    onClick={() => handleReorder(item.id, "up")}
+                    className="h-8 w-8"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleReorder(item.id, "up");
+                    }}
                     disabled={index === 0 || !!reordering}
                   >
                     {reordering?.id === item.id && reordering.direction === "up" ? (
-                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
+                      <div className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
                     ) : (
-                      <ArrowUp className="!size-[17px]" />
+                      <ArrowUp className="h-4 w-4" />
                     )}
                   </Button>
                   <Button
                     variant="ghost"
                     size="icon"
-                    onClick={() => handleReorder(item.id, "down")}
+                    className="h-8 w-8"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleReorder(item.id, "down");
+                    }}
                     disabled={index === group.items.length - 1 || !!reordering}
                   >
                     {reordering?.id === item.id && reordering.direction === "down" ? (
-                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
+                      <div className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
                     ) : (
-                      <ArrowDown className="!size-[17px]" />
+                      <ArrowDown className="h-4 w-4" />
                     )}
                   </Button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

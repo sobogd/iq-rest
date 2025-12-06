@@ -15,6 +15,8 @@ import {
   LogOut,
   Plus,
   ArrowLeft,
+  Languages,
+  CalendarDays,
 } from "lucide-react";
 import {
   Tooltip,
@@ -35,6 +37,8 @@ const menuItems: MenuItem[] = [
   { title: "dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "categories", url: "/dashboard/categories", icon: FolderOpen },
   { title: "items", url: "/dashboard/items", icon: Package },
+  { title: "languages", url: "/dashboard/translations", icon: Languages },
+  { title: "reservations", url: "/dashboard/reservations", icon: CalendarDays },
   { title: "qrCode", url: "/dashboard/qr-code", icon: QrCode },
   { title: "analytics", url: "/dashboard/analytics", icon: BarChart3 },
   { title: "settings", url: "/dashboard/settings", icon: Settings },
@@ -48,6 +52,10 @@ const pageTitles: Record<string, string> = {
   "/dashboard/categories/new": "newCategory",
   "/dashboard/items": "items",
   "/dashboard/items/new": "newItem",
+  "/dashboard/translations": "languages",
+  "/dashboard/reservations": "reservations",
+  "/dashboard/reservations/tables": "tables",
+  "/dashboard/reservations/tables/new": "newTable",
   "/dashboard/qr-code": "qrCode",
   "/dashboard/analytics": "analytics",
   "/dashboard/settings": "settings",
@@ -63,6 +71,10 @@ const pageActions: Record<string, { labelKey: string; href: string }> = {
   "/dashboard/items": {
     labelKey: "addItem",
     href: "/dashboard/items/new",
+  },
+  "/dashboard/reservations/tables": {
+    labelKey: "addTable",
+    href: "/dashboard/reservations/tables/new",
   },
 };
 
@@ -104,12 +116,15 @@ export function DashboardLayout({
       titleKey = "editCategory";
     } else if (path.match(/^\/dashboard\/items\/[^/]+$/) && path !== "/dashboard/items/new") {
       titleKey = "editItem";
+    } else if (path.match(/^\/dashboard\/reservations\/tables\/[^/]+$/) && path !== "/dashboard/reservations/tables/new") {
+      titleKey = "editTable";
     }
   }
   const title = titleKey ? headerTranslations[titleKey] : "";
 
   // Check if back button should show
-  const showBackButton = path.match(/^\/dashboard\/(categories|items)\/(new|[^/]+)$/);
+  const showBackButton = path.match(/^\/dashboard\/(categories|items)\/(new|[^/]+)$/) ||
+    path.match(/^\/dashboard\/reservations\/tables\/(new|[^/]+)$/);
 
   // Get action for current page
   const action = pageActions[path];
@@ -184,8 +199,8 @@ export function DashboardLayout({
         {/* Main */}
         <div className="flex flex-1 flex-col overflow-hidden">
           {/* Header */}
-          <header className="flex h-14 shrink-0 items-center border-b px-6">
-            <div className="flex items-center gap-2">
+          <header className="h-14 shrink-0 border-b">
+            <div className="h-full px-6 max-w-lg mx-auto flex items-center gap-2">
               {showBackButton && (
                 <Button
                   variant="ghost"

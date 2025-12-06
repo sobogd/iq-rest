@@ -88,21 +88,75 @@ model Restaurant {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
-  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  // Reservation settings
+  reservationsEnabled    Boolean @default(false)
+  reservationMode        String  @default("manual") // "auto" | "manual"
+  reservationSlotMinutes Int     @default(90)
+  workingHoursStart      String  @default("10:00")
+  workingHoursEnd        String  @default("22:00")
+
+  company      Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  tables       Table[]
+  reservations Reservation[]
 
   @@index([companyId])
   @@map("restaurants")
 }
 
+model Table {
+  id           String   @id @default(cuid())
+  restaurantId String
+  number       Int
+  capacity     Int
+  zone         String?
+  imageUrl     String?
+  isActive     Boolean  @default(true)
+  sortOrder    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  restaurant   Restaurant    @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  reservations Reservation[]
+
+  @@index([restaurantId])
+  @@index([restaurantId, isActive])
+  @@map("tables")
+}
+
+model Reservation {
+  id           String   @id @default(cuid())
+  restaurantId String
+  tableId      String
+  date         DateTime @db.Date
+  startTime    String   // "19:00"
+  duration     Int      // minutes
+  guestName    String
+  guestEmail   String
+  guestPhone   String?
+  guestsCount  Int
+  status       String   @default("pending") // pending, confirmed, cancelled, completed
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  table      Table      @relation(fields: [tableId], references: [id], onDelete: Cascade)
+
+  @@index([restaurantId, date])
+  @@index([restaurantId, status])
+  @@index([tableId, date])
+  @@map("reservations")
+}
+
 model Category {
-  id          String   @id @default(cuid())
-  name        String
-  description String?
-  sortOrder   Int      @default(0)
-  isActive    Boolean  @default(true)
-  companyId   String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id           String   @id @default(cuid())
+  name         String
+  translations Json?    // { "en": { "name": "..." }, "es": {...} }
+  sortOrder    Int      @default(0)
+  isActive     Boolean  @default(true)
+  companyId    String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
   items   Item[]
@@ -113,17 +167,18 @@ model Category {
 }
 
 model Item {
-  id          String   @id @default(cuid())
-  name        String
-  description String?
-  price       Decimal  @db.Decimal(10, 2)
-  imageUrl    String?
-  sortOrder   Int      @default(0)
-  isActive    Boolean  @default(true)
-  categoryId  String
-  companyId   String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id           String   @id @default(cuid())
+  name         String
+  description  String?
+  translations Json?    // { "en": { "name": "...", "description": "..." }, "es": {...} }
+  price        Decimal  @db.Decimal(10, 2)
+  imageUrl     String?
+  sortOrder    Int      @default(0)
+  isActive     Boolean  @default(true)
+  categoryId   String
+  companyId    String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   company  Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)

@@ -1,9 +1,26 @@
+import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { ItemEditClient } from "./item-edit-client";
+import { ItemForm } from "../item-form";
 import { DashboardContainer } from "@/components/dashboard-container";
+import { getItemWithTranslations, getCategories, getRestaurantLanguages } from "@/lib/data";
 
-export default async function EditItemPage() {
-  const t = await getTranslations("items");
+interface EditItemPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function EditItemPage({ params }: EditItemPageProps) {
+  const { id } = await params;
+
+  const [t, item, categories, restaurant] = await Promise.all([
+    getTranslations("items"),
+    getItemWithTranslations(id),
+    getCategories(),
+    getRestaurantLanguages(),
+  ]);
+
+  if (!item) {
+    notFound();
+  }
 
   const translations = {
     name: t("name"),
@@ -17,20 +34,21 @@ export default async function EditItemPage() {
     image: t("image"),
     uploadImage: t("uploadImage"),
     removeImage: t("removeImage"),
-    isActive: t("isActive"),
+    status: t("status"),
+    active: t("active"),
+    inactive: t("inactive"),
     save: t("save"),
     saving: t("saving"),
     cancel: t("cancel"),
     error: t("error"),
     close: t("close"),
-    notFound: t("notFound"),
     delete: t("delete"),
     deleteConfirm: t("deleteConfirm"),
   };
 
   return (
     <DashboardContainer>
-      <ItemEditClient translations={translations} />
+      <ItemForm item={item} categories={categories} restaurant={restaurant} translations={translations} />
     </DashboardContainer>
   );
 }

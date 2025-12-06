@@ -73,3 +73,8 @@ Required in `.env`:
 ## SEO
 
 Every page must export `generateMetadata()` for proper meta tags. Sitemap and robots.txt are generated dynamically via `app/sitemap.ts` and `app/robots.ts`.
+
+## Claude Code Rules
+
+- **Never run `npm run build`** to verify changes - the user will test manually
+- Don't run lint checks unless explicitly asked

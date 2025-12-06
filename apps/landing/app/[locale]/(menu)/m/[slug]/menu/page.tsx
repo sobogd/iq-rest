@@ -12,6 +12,13 @@ interface MenuListPageProps {
   }>;
 }
 
+type TranslationData = {
+  name?: string;
+  description?: string;
+};
+
+type Translations = Record<string, TranslationData>;
+
 async function getRestaurantWithMenu(slug: string) {
   const restaurant = await prisma.restaurant.findFirst({
     where: { slug },
@@ -19,6 +26,7 @@ async function getRestaurantWithMenu(slug: string) {
       id: true,
       title: true,
       companyId: true,
+      defaultLanguage: true,
     },
   });
 
@@ -33,6 +41,7 @@ async function getRestaurantWithMenu(slug: string) {
     select: {
       id: true,
       name: true,
+      translations: true,
       items: {
         where: { isActive: true },
         orderBy: { sortOrder: "asc" },
@@ -42,6 +51,7 @@ async function getRestaurantWithMenu(slug: string) {
           description: true,
           price: true,
           imageUrl: true,
+          translations: true,
         },
       },
     },
@@ -51,7 +61,7 @@ async function getRestaurantWithMenu(slug: string) {
 }
 
 export default async function MenuListPage({ params }: MenuListPageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const [data, t] = await Promise.all([
     getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),
@@ -61,14 +71,30 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
     notFound();
   }
 
-  const { categories } = data;
+  const { restaurant, categories } = data;
+  const defaultLanguage = restaurant.defaultLanguage || "en";
 
-  // Convert Decimal to number for client component
+  // Helper to get translated value
+  const getTranslatedValue = (
+    translations: Translations | null,
+    field: keyof TranslationData,
+    fallback: string | null
+  ): string | null => {
+    if (locale === defaultLanguage) return fallback;
+    const trans = translations as Translations | null;
+    return trans?.[locale]?.[field] || fallback;
+  };
+
+  // Convert Decimal to number and apply translations
   const categoriesWithItems = categories.map((cat) => ({
-    ...cat,
+    id: cat.id,
+    name: getTranslatedValue(cat.translations as Translations, "name", cat.name) || cat.name,
     items: cat.items.map((item) => ({
-      ...item,
+      id: item.id,
+      name: getTranslatedValue(item.translations as Translations, "name", item.name) || item.name,
+      description: getTranslatedValue(item.translations as Translations, "description", item.description),
       price: Number(item.price),
+      imageUrl: item.imageUrl,
     })),
   }));
 

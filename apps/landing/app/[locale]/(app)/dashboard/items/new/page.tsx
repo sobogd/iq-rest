@@ -1,9 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { ItemForm } from "../item-form";
 import { DashboardContainer } from "@/components/dashboard-container";
+import { getCategories, getRestaurantLanguages } from "@/lib/data";
 
 export default async function NewItemPage() {
-  const t = await getTranslations("items");
+  const [t, categories, restaurant] = await Promise.all([
+    getTranslations("items"),
+    getCategories(),
+    getRestaurantLanguages(),
+  ]);
 
   const translations = {
     name: t("name"),
@@ -17,7 +22,9 @@ export default async function NewItemPage() {
     image: t("image"),
     uploadImage: t("uploadImage"),
     removeImage: t("removeImage"),
-    isActive: t("isActive"),
+    status: t("status"),
+    active: t("active"),
+    inactive: t("inactive"),
     save: t("save"),
     saving: t("saving"),
     cancel: t("cancel"),
@@ -27,7 +34,7 @@ export default async function NewItemPage() {
 
   return (
     <DashboardContainer>
-      <ItemForm translations={translations} />
+      <ItemForm categories={categories} restaurant={restaurant} translations={translations} />
     </DashboardContainer>
   );
 }

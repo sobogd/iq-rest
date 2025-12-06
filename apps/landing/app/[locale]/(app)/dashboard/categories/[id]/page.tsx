@@ -1,27 +1,44 @@
+import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { CategoryEditClient } from "./category-edit-client";
+import { CategoryForm } from "../category-form";
 import { DashboardContainer } from "@/components/dashboard-container";
+import { getCategoryWithTranslations, getRestaurantLanguages } from "@/lib/data";
 
-export default async function EditCategoryPage() {
-  const t = await getTranslations("categories");
+interface EditCategoryPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function EditCategoryPage({ params }: EditCategoryPageProps) {
+  const { id } = await params;
+
+  const [t, category, restaurant] = await Promise.all([
+    getTranslations("categories"),
+    getCategoryWithTranslations(id),
+    getRestaurantLanguages(),
+  ]);
+
+  if (!category) {
+    notFound();
+  }
 
   const translations = {
     name: t("name"),
     namePlaceholder: t("namePlaceholder"),
-    description_label: t("description_label"),
-    descriptionPlaceholder: t("descriptionPlaceholder"),
-    isActive: t("isActive"),
+    status: t("status"),
+    active: t("active"),
+    inactive: t("inactive"),
     save: t("save"),
     saving: t("saving"),
     cancel: t("cancel"),
-    notFound: t("notFound"),
+    error: t("error"),
+    close: t("close"),
     delete: t("delete"),
     deleteConfirm: t("deleteConfirm"),
   };
 
   return (
     <DashboardContainer>
-      <CategoryEditClient translations={translations} />
+      <CategoryForm category={category} restaurant={restaurant} translations={translations} />
     </DashboardContainer>
   );
 }

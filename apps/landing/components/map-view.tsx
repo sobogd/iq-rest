@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { Loader2 } from "lucide-react";
 
 interface MapViewProps {
   lat: number;
@@ -29,8 +30,8 @@ export function MapView({ lat, lng }: MapViewProps) {
 
   if (!isLoaded) {
     return (
-      <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-gray-400"></div>
+      <div className="w-full h-full bg-muted flex items-center justify-center">
+        <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
     );
   }

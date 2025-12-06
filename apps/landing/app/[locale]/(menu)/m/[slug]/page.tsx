@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { ArrowRight, Phone, Globe } from "lucide-react";
+import { ArrowRight, Phone, Globe, CalendarDays } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
@@ -28,6 +28,14 @@ async function getRestaurant(slug: string) {
       phone: true,
       instagram: true,
       whatsapp: true,
+      reservationsEnabled: true,
+      _count: {
+        select: {
+          tables: {
+            where: { isActive: true },
+          },
+        },
+      },
     },
   });
 
@@ -85,6 +93,14 @@ export default async function MenuPage({ params }: MenuPageProps) {
 
       {/* Navigation links */}
       <nav className="bg-white">
+        {restaurant.reservationsEnabled && restaurant._count.tables > 0 && (
+          <Link href={`/m/${slug}/reserve`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+            <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
+              <CalendarDays className="h-5 w-5" />
+              {t("reserve")}
+            </span>
+          </Link>
+        )}
         <Link href={`/m/${slug}/contacts`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
           <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
             <Phone className="h-5 w-5" />

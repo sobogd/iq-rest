@@ -7,13 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { MapPicker } from "@/components/map-picker";
-import { Star } from "lucide-react";
-
-const AVAILABLE_LANGUAGES = [
-  { code: "en", name: "English" },
-  { code: "es", name: "Español" },
-];
 
 interface RestaurantFormProps {
   translations: {
@@ -26,8 +27,6 @@ interface RestaurantFormProps {
     source: string;
     uploadMedia: string;
     removeMedia: string;
-    address: string;
-    addressPlaceholder: string;
     coordinates: string;
     xPlaceholder: string;
     yPlaceholder: string;
@@ -40,9 +39,18 @@ interface RestaurantFormProps {
     save: string;
     saving: string;
     saved: string;
-    languages: string;
-    defaultLanguage: string;
-    selectLanguages: string;
+    basicInfo: string;
+    contacts: string;
+    reservations: string;
+    reservationsEnabled: string;
+    reservationMode: string;
+    reservationModeAuto: string;
+    reservationModeManual: string;
+    reservationSlotMinutes: string;
+    workingHours: string;
+    workingHoursStart: string;
+    workingHoursEnd: string;
+    minutes: string;
   };
 }
 
@@ -59,14 +67,18 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
   const [description, setDescription] = useState("");
   const [slug, setSlug] = useState("");
   const [source, setSource] = useState("");
-  const [address, setAddress] = useState("");
   const [lat, setLat] = useState<number | undefined>();
   const [lng, setLng] = useState<number | undefined>();
   const [phone, setPhone] = useState("");
   const [instagram, setInstagram] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
-  const [languages, setLanguages] = useState<string[]>(["en"]);
-  const [defaultLanguage, setDefaultLanguage] = useState("en");
+
+  // Reservation settings
+  const [reservationsEnabled, setReservationsEnabled] = useState(false);
+  const [reservationMode, setReservationMode] = useState("manual");
+  const [reservationSlotMinutes, setReservationSlotMinutes] = useState(90);
+  const [workingHoursStart, setWorkingHoursStart] = useState("10:00");
+  const [workingHoursEnd, setWorkingHoursEnd] = useState("22:00");
 
   useEffect(() => {
     fetchRestaurant();
@@ -82,14 +94,17 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
           setDescription(data.description || "");
           setSlug(data.slug || "");
           setSource(data.source || "");
-          setAddress(data.address || "");
           setLat(data.y ? parseFloat(data.y) : undefined);
           setLng(data.x ? parseFloat(data.x) : undefined);
           setPhone(data.phone || "");
           setInstagram(data.instagram || "");
           setWhatsapp(data.whatsapp || "");
-          setLanguages(data.languages?.length ? data.languages : ["en"]);
-          setDefaultLanguage(data.defaultLanguage || "en");
+          // Reservation settings
+          setReservationsEnabled(data.reservationsEnabled || false);
+          setReservationMode(data.reservationMode || "manual");
+          setReservationSlotMinutes(data.reservationSlotMinutes || 90);
+          setWorkingHoursStart(data.workingHoursStart || "10:00");
+          setWorkingHoursEnd(data.workingHoursEnd || "22:00");
         }
       }
     } catch (error) {
@@ -187,14 +202,16 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
           description: description.trim() || null,
           slug: slug.trim() || null,
           source: source || null,
-          address: address.trim() || null,
           x: lng?.toString() || null,
           y: lat?.toString() || null,
           phone: phone.trim() || null,
           instagram: instagram.trim() || null,
           whatsapp: whatsapp.trim() || null,
-          languages,
-          defaultLanguage,
+          reservationsEnabled,
+          reservationMode,
+          reservationSlotMinutes,
+          workingHoursStart,
+          workingHoursEnd,
         }),
       });
 
@@ -215,7 +232,7 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
       </div>
     );
   }
@@ -228,207 +245,235 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
         </div>
       )}
 
-      <div className="space-y-2">
-        <Label htmlFor="title">{t.title} *</Label>
-        <Input
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder={t.titlePlaceholder}
-        />
-      </div>
+      {/* Basic Info Card */}
+      <div className="bg-card rounded-lg border p-6 space-y-6">
+        <h2 className="text-lg font-semibold">{t.basicInfo}</h2>
+        <div className="space-y-2">
+          <Label htmlFor="title">{t.title} *</Label>
+          <Input
+            id="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder={t.titlePlaceholder}
+          />
+        </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="description">{t.description}</Label>
-        <Input
-          id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder={t.descriptionPlaceholder}
-        />
-      </div>
+        <div className="space-y-2">
+          <Label htmlFor="description">{t.description}</Label>
+          <Input
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder={t.descriptionPlaceholder}
+          />
+        </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="slug">{t.slug}</Label>
-        <Input
-          id="slug"
-          value={slug}
-          onChange={(e) => setSlug(e.target.value)}
-          placeholder={t.slugPlaceholder}
-        />
-      </div>
+        <div className="space-y-2">
+          <Label htmlFor="slug">{t.slug}</Label>
+          <Input
+            id="slug"
+            value={slug}
+            onChange={(e) => setSlug(e.target.value)}
+            placeholder={t.slugPlaceholder}
+          />
+        </div>
 
-      <div className="space-y-2">
-        <Label>{t.source}</Label>
-        {source ? (
-          <div className="relative">
-            <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
-              {isVideo(source) ? (
-                <video
-                  src={source}
-                  className="h-full w-full object-cover"
-                  muted
-                  loop
-                  playsInline
-                />
+        <div className="space-y-2">
+          <Label>{t.source}</Label>
+          {source ? (
+            <div className="relative">
+              <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
+                {isVideo(source) ? (
+                  <video
+                    src={source}
+                    className="h-full w-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                  />
+                ) : (
+                  <Image
+                    src={source}
+                    alt="Background media"
+                    fill
+                    className="object-cover"
+                    sizes="160px"
+                  />
+                )}
+              </div>
+              <Button
+                type="button"
+                variant="destructive"
+                size="icon"
+                className="absolute -top-2 left-36 h-6 w-6"
+                onClick={handleRemoveMedia}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+          ) : (
+            <div
+              className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors"
+              onClick={() => fileInputRef.current?.click()}
+            >
+              {uploading ? (
+                <div className="flex flex-col items-center gap-2">
+                  <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">Uploading...</span>
+                </div>
               ) : (
-                <Image
-                  src={source}
-                  alt="Background media"
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
+                <div className="flex flex-col items-center gap-2">
+                  <Upload className="h-8 w-8 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">{t.uploadMedia}</span>
+                </div>
               )}
             </div>
-            <Button
-              type="button"
-              variant="destructive"
-              size="icon"
-              className="absolute -top-2 left-36 h-6 w-6"
-              onClick={handleRemoveMedia}
-            >
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
-        ) : (
-          <div
-            className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors"
-            onClick={() => fileInputRef.current?.click()}
-          >
-            {uploading ? (
-              <div className="flex flex-col items-center gap-2">
-                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Uploading...</span>
-              </div>
-            ) : (
-              <div className="flex flex-col items-center gap-2">
-                <Upload className="h-8 w-8 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">{t.uploadMedia}</span>
-              </div>
-            )}
-          </div>
-        )}
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
-          className="hidden"
-          onChange={handleMediaUpload}
-          disabled={uploading}
-        />
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="address">{t.address}</Label>
-        <Input
-          id="address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          placeholder={t.addressPlaceholder}
-        />
-      </div>
-
-      <div className="space-y-2">
-        <Label>{t.coordinates}</Label>
-        <div className="rounded-lg overflow-hidden border">
-          <MapPicker
-            lat={lat}
-            lng={lng}
-            onLocationSelect={handleLocationSelect}
+          )}
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
+            className="hidden"
+            onChange={handleMediaUpload}
+            disabled={uploading}
           />
         </div>
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="phone">{t.phone}</Label>
-        <Input
-          id="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          placeholder={t.phonePlaceholder}
-        />
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="instagram">{t.instagram}</Label>
-        <Input
-          id="instagram"
-          value={instagram}
-          onChange={(e) => setInstagram(e.target.value)}
-          placeholder={t.instagramPlaceholder}
-        />
-      </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="whatsapp">{t.whatsapp}</Label>
-        <Input
-          id="whatsapp"
-          value={whatsapp}
-          onChange={(e) => setWhatsapp(e.target.value)}
-          placeholder={t.whatsappPlaceholder}
-        />
-      </div>
-
-      <div className="space-y-3">
-        <Label>{t.languages}</Label>
-        <p className="text-sm text-muted-foreground">{t.selectLanguages}</p>
+      {/* Contacts Card */}
+      <div className="bg-card rounded-lg border p-6 space-y-6">
+        <h2 className="text-lg font-semibold">{t.contacts}</h2>
         <div className="space-y-2">
-          {AVAILABLE_LANGUAGES.map((lang) => {
-            const isEnabled = languages.includes(lang.code);
-            const isDefault = defaultLanguage === lang.code;
-            return (
-              <div
-                key={lang.code}
-                className="flex items-center justify-between p-3 border rounded-lg hover:bg-muted/50 transition-colors"
-              >
-                <div className="flex items-center gap-3">
-                  <Switch
-                    checked={isEnabled}
-                    onCheckedChange={(checked) => {
-                      if (checked) {
-                        setLanguages([...languages, lang.code]);
-                      } else {
-                        const newLangs = languages.filter((l) => l !== lang.code);
-                        setLanguages(newLangs.length ? newLangs : ["en"]);
-                        if (defaultLanguage === lang.code) {
-                          setDefaultLanguage(newLangs[0] || "en");
-                        }
-                      }
-                    }}
-                  />
-                  <span className="text-sm font-medium">{lang.name}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => isEnabled && setDefaultLanguage(lang.code)}
-                  className={`p-1 rounded transition-all ${
-                    isEnabled ? "hover:bg-muted cursor-pointer" : "cursor-default"
-                  }`}
-                  title={isEnabled ? t.defaultLanguage : ""}
-                  disabled={!isEnabled}
-                >
-                  <Star
-                    className={`h-5 w-5 transition-all ${
-                      !isEnabled
-                        ? "opacity-0"
-                        : isDefault
-                          ? "fill-yellow-400 text-yellow-400"
-                          : "text-muted-foreground hover:text-yellow-400"
-                    }`}
-                  />
-                </button>
-              </div>
-            );
-          })}
+          <Label htmlFor="phone">{t.phone}</Label>
+          <Input
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder={t.phonePlaceholder}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="instagram">{t.instagram}</Label>
+          <Input
+            id="instagram"
+            value={instagram}
+            onChange={(e) => setInstagram(e.target.value)}
+            placeholder={t.instagramPlaceholder}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="whatsapp">{t.whatsapp}</Label>
+          <Input
+            id="whatsapp"
+            value={whatsapp}
+            onChange={(e) => setWhatsapp(e.target.value)}
+            placeholder={t.whatsappPlaceholder}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label>{t.coordinates}</Label>
+          <div className="rounded-lg overflow-hidden border">
+            <MapPicker
+              lat={lat}
+              lng={lng}
+              onLocationSelect={handleLocationSelect}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="pt-2">
-        <Button type="submit" disabled={saving || uploading}>
-          {saving ? t.saving : saved ? t.saved : t.save}
-        </Button>
+      {/* Reservations Card */}
+      <div id="reservations" className="bg-card rounded-lg border p-6 space-y-6">
+        <h2 className="text-lg font-semibold">{t.reservations}</h2>
+
+        <div className="flex items-center justify-between">
+          <Label htmlFor="reservationsEnabled">{t.reservationsEnabled}</Label>
+          <Switch
+            id="reservationsEnabled"
+            checked={reservationsEnabled}
+            onCheckedChange={setReservationsEnabled}
+          />
+        </div>
+
+        {reservationsEnabled && (
+          <>
+            <div className="space-y-2">
+              <Label>{t.reservationMode}</Label>
+              <Select value={reservationMode} onValueChange={setReservationMode}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="auto">{t.reservationModeAuto}</SelectItem>
+                  <SelectItem value="manual">{t.reservationModeManual}</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label>{t.reservationSlotMinutes}</Label>
+              <Select
+                value={reservationSlotMinutes.toString()}
+                onValueChange={(v) => setReservationSlotMinutes(parseInt(v))}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="60">60 {t.minutes}</SelectItem>
+                  <SelectItem value="90">90 {t.minutes}</SelectItem>
+                  <SelectItem value="120">120 {t.minutes}</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label>{t.workingHours}</Label>
+              <div className="flex items-center gap-2">
+                <Select value={workingHoursStart} onValueChange={setWorkingHoursStart}>
+                  <SelectTrigger className="w-28">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Array.from({ length: 24 }, (_, i) => {
+                      const hour = i.toString().padStart(2, "0");
+                      return (
+                        <SelectItem key={`${hour}:00`} value={`${hour}:00`}>
+                          {hour}:00
+                        </SelectItem>
+                      );
+                    })}
+                  </SelectContent>
+                </Select>
+                <span className="text-muted-foreground">—</span>
+                <Select value={workingHoursEnd} onValueChange={setWorkingHoursEnd}>
+                  <SelectTrigger className="w-28">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Array.from({ length: 24 }, (_, i) => {
+                      const hour = i.toString().padStart(2, "0");
+                      return (
+                        <SelectItem key={`${hour}:00`} value={`${hour}:00`}>
+                          {hour}:00
+                        </SelectItem>
+                      );
+                    })}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </>
+        )}
       </div>
+
+      {/* Save Button */}
+      <Button type="submit" disabled={saving || uploading}>
+        {saving ? t.saving : saved ? t.saved : t.save}
+      </Button>
     </form>
   );
 }

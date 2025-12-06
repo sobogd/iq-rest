@@ -125,7 +125,7 @@ export async function PUT(
       return NextResponse.json({ error: "Item not found" }, { status: 404 });
     }
 
-    const { name, description, price, imageUrl, categoryId, sortOrder, isActive } =
+    const { name, description, price, imageUrl, categoryId, sortOrder, isActive, translations } =
       await request.json();
 
     if (!name || typeof name !== "string" || name.trim().length === 0) {
@@ -169,6 +169,7 @@ export async function PUT(
         categoryId: categoryId ?? existingItem.categoryId,
         sortOrder: sortOrder ?? existingItem.sortOrder,
         isActive: isActive ?? existingItem.isActive,
+        translations: translations !== undefined ? translations : existingItem.translations,
       },
       include: {
         category: {
@@ -182,6 +183,62 @@ export async function PUT(
     console.error("Error updating item:", error);
     return NextResponse.json(
       { error: "Failed to update item" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const companyId = await getUserCompanyId();
+
+    if (!companyId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const existingItem = await prisma.item.findFirst({
+      where: { id, companyId },
+    });
+
+    if (!existingItem) {
+      return NextResponse.json({ error: "Item not found" }, { status: 404 });
+    }
+
+    const body = await request.json();
+    const updateData: { name?: string; description?: string | null; isActive?: boolean } = {};
+
+    if (body.name !== undefined) {
+      if (typeof body.name !== "string" || body.name.trim().length === 0) {
+        return NextResponse.json(
+          { error: "Name cannot be empty" },
+          { status: 400 }
+        );
+      }
+      updateData.name = body.name.trim();
+    }
+
+    if (body.description !== undefined) {
+      updateData.description = body.description?.trim() || null;
+    }
+
+    if (body.isActive !== undefined) {
+      updateData.isActive = Boolean(body.isActive);
+    }
+
+    const item = await prisma.item.update({
+      where: { id },
+      data: updateData,
+    });
+
+    return NextResponse.json({ success: true, ...item, price: Number(item.price) });
+  } catch (error) {
+    console.error("Error patching item:", error);
+    return NextResponse.json(
+      { error: "Failed to update item", success: false },
       { status: 500 }
     );
   }

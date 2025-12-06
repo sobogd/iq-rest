@@ -52,7 +52,7 @@ export async function PUT(
       return NextResponse.json({ error: "Category not found" }, { status: 404 });
     }
 
-    const { name, description, sortOrder, isActive } = await request.json();
+    const { name, sortOrder, isActive, translations } = await request.json();
 
     if (!name || typeof name !== "string" || name.trim().length === 0) {
       return NextResponse.json(
@@ -65,9 +65,9 @@ export async function PUT(
       where: { id },
       data: {
         name: name.trim(),
-        description: description?.trim() || null,
         sortOrder: sortOrder ?? existingCategory.sortOrder,
         isActive: isActive ?? existingCategory.isActive,
+        translations: translations !== undefined ? translations : existingCategory.translations,
       },
     });
 
@@ -76,6 +76,58 @@ export async function PUT(
     console.error("Error updating category:", error);
     return NextResponse.json(
       { error: "Failed to update category" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const companyId = await getUserCompanyId();
+
+    if (!companyId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const existingCategory = await prisma.category.findFirst({
+      where: { id, companyId },
+    });
+
+    if (!existingCategory) {
+      return NextResponse.json({ error: "Category not found" }, { status: 404 });
+    }
+
+    const body = await request.json();
+    const updateData: { name?: string; isActive?: boolean } = {};
+
+    if (body.name !== undefined) {
+      if (typeof body.name !== "string" || body.name.trim().length === 0) {
+        return NextResponse.json(
+          { error: "Name cannot be empty" },
+          { status: 400 }
+        );
+      }
+      updateData.name = body.name.trim();
+    }
+
+    if (body.isActive !== undefined) {
+      updateData.isActive = Boolean(body.isActive);
+    }
+
+    const category = await prisma.category.update({
+      where: { id },
+      data: updateData,
+    });
+
+    return NextResponse.json({ success: true, ...category });
+  } catch (error) {
+    console.error("Error patching category:", error);
+    return NextResponse.json(
+      { error: "Failed to update category", success: false },
       { status: 500 }
     );
   }
