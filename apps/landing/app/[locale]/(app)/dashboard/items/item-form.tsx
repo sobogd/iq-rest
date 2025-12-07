@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Upload, X, Loader2, Trash2, Save, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -106,7 +106,9 @@ interface ItemFormProps {
 export function ItemForm({ item, categories: initialCategories, restaurant: initialRestaurant, translations: t }: ItemFormProps) {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const locale = params.locale as string;
+  const fromOnboarding = searchParams.get("from") === "onboarding";
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [name, setName] = useState(item?.name || "");
@@ -319,7 +321,11 @@ export function ItemForm({ item, categories: initialCategories, restaurant: init
       });
 
       if (res.ok) {
-        router.push(`/${locale}/dashboard/items`);
+        if (fromOnboarding && !isEdit) {
+          router.push(`/${locale}/dashboard`);
+        } else {
+          router.push(`/${locale}/dashboard/items`);
+        }
         router.refresh();
       } else {
         const data = await res.json();

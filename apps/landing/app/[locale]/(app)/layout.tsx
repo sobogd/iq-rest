@@ -38,6 +38,7 @@ export default async function AppLayout({
   const tItems = await getTranslations("items");
   const tTranslations = await getTranslations("translations");
   const tReservations = await getTranslations("reservations");
+  const tOnboarding = await getTranslations("onboarding");
 
   const translations = {
     menu: {
@@ -57,7 +58,7 @@ export default async function AppLayout({
   };
 
   const headerTranslations = {
-    dashboard: t("menu.dashboard"),
+    dashboard: tOnboarding("title"),
     categories: t("menu.categories"),
     items: t("menu.items"),
     languages: t("menu.languages"),

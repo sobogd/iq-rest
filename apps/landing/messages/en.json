@@ -590,6 +590,61 @@
       }
     }
   },
+  "onboarding": {
+    "title": "Getting Started",
+    "completed": "Setup complete! Your restaurant is ready.",
+    "steps": {
+      "restaurant": {
+        "title": "Set up your restaurant",
+        "description": "Add your restaurant name, description, cover image, and URL. This information will be displayed on your public menu page.",
+        "button": "Go to Settings"
+      },
+      "category": {
+        "title": "Create a category",
+        "description": "Organize your menu with categories like Appetizers, Main Courses, Desserts, etc. Categories help customers navigate your menu easily.",
+        "button": "Add Category"
+      },
+      "item": {
+        "title": "Add your first item",
+        "description": "Add dishes to your menu with photos, descriptions, and prices. High-quality images increase customer orders by up to 30%.",
+        "button": "Add Item"
+      },
+      "translations": {
+        "title": "Set up translations",
+        "description": "Translate your menu to serve international customers. AI-powered translation helps you reach more guests effortlessly.",
+        "button": "Manage Languages"
+      },
+      "tables": {
+        "title": "Configure tables & reservations",
+        "description": "Add your tables and enable the reservation system. Customers will be able to book tables directly from your menu.",
+        "button": "Add Table"
+      },
+      "qrCode": {
+        "title": "Your menu is ready!",
+        "description": "Your restaurant website and digital menu are live. Print QR codes for your tables or share the link with customers.",
+        "button": "View Menu & QR Code"
+      }
+    },
+    "extraSteps": {
+      "translations": {
+        "title": "Add translations",
+        "description": "Translate your menu to reach international customers. Enable additional languages and use AI-powered translation.",
+        "button": "Manage Languages"
+      },
+      "reservations": {
+        "title": "Set up reservations",
+        "description": "Enable table reservations so customers can book directly from your menu. Add tables and configure reservation settings.",
+        "button": "Settings",
+        "button2": "Add Tables"
+      },
+      "analytics": {
+        "title": "Track & get support",
+        "description": "Monitor your menu views and customer engagement. Need help? Our support team is here for you.",
+        "button": "Analytics",
+        "button2": "Support"
+      }
+    }
+  },
   "qrCode": {
     "title": "QR Code",
     "description": "Download and print your QR code for customers to scan",

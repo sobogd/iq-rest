@@ -590,6 +590,61 @@
       }
     }
   },
+  "onboarding": {
+    "title": "Primeros Pasos",
+    "completed": "¡Configuración completa! Tu restaurante está listo.",
+    "steps": {
+      "restaurant": {
+        "title": "Configura tu restaurante",
+        "description": "Añade el nombre, descripción, imagen de portada y URL de tu restaurante. Esta información se mostrará en tu página de menú público.",
+        "button": "Ir a Configuración"
+      },
+      "category": {
+        "title": "Crea una categoría",
+        "description": "Organiza tu menú con categorías como Entrantes, Platos Principales, Postres, etc. Las categorías ayudan a los clientes a navegar fácilmente por tu menú.",
+        "button": "Añadir Categoría"
+      },
+      "item": {
+        "title": "Añade tu primer plato",
+        "description": "Añade platos a tu menú con fotos, descripciones y precios. Las imágenes de alta calidad aumentan los pedidos de los clientes hasta un 30%.",
+        "button": "Añadir Plato"
+      },
+      "translations": {
+        "title": "Configura traducciones",
+        "description": "Traduce tu menú para atender a clientes internacionales. La traducción con IA te ayuda a llegar a más clientes sin esfuerzo.",
+        "button": "Gestionar Idiomas"
+      },
+      "tables": {
+        "title": "Configura mesas y reservas",
+        "description": "Añade tus mesas y activa el sistema de reservas. Los clientes podrán reservar mesas directamente desde tu menú.",
+        "button": "Añadir Mesa"
+      },
+      "qrCode": {
+        "title": "¡Tu menú está listo!",
+        "description": "Tu sitio web de restaurante y menú digital están activos. Imprime códigos QR para tus mesas o comparte el enlace con los clientes.",
+        "button": "Ver Menú y Código QR"
+      }
+    },
+    "extraSteps": {
+      "translations": {
+        "title": "Añadir traducciones",
+        "description": "Traduce tu menú para llegar a clientes internacionales. Activa idiomas adicionales y usa traducción con IA.",
+        "button": "Gestionar Idiomas"
+      },
+      "reservations": {
+        "title": "Configurar reservas",
+        "description": "Activa las reservas de mesa para que los clientes puedan reservar directamente desde tu menú. Añade mesas y configura los ajustes.",
+        "button": "Configuración",
+        "button2": "Añadir Mesas"
+      },
+      "analytics": {
+        "title": "Seguimiento y soporte",
+        "description": "Monitorea las visitas a tu menú y el engagement de los clientes. ¿Necesitas ayuda? Nuestro equipo de soporte está aquí para ti.",
+        "button": "Análisis",
+        "button2": "Soporte"
+      }
+    }
+  },
   "qrCode": {
     "title": "Código QR",
     "description": "Descarga e imprime tu código QR para que los clientes lo escaneen",

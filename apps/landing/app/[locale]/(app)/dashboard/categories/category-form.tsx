@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { Trash2, Save, Loader2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -77,7 +77,9 @@ interface CategoryFormProps {
 export function CategoryForm({ category, restaurant: initialRestaurant, translations: t }: CategoryFormProps) {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const locale = params.locale as string;
+  const fromOnboarding = searchParams.get("from") === "onboarding";
 
   const [name, setName] = useState(category?.name || "");
   const [isActive, setIsActive] = useState(category?.isActive ?? true);
@@ -195,7 +197,11 @@ export function CategoryForm({ category, restaurant: initialRestaurant, translat
       });
 
       if (res.ok) {
-        router.push(`/${locale}/dashboard/categories`);
+        if (fromOnboarding && !isEdit) {
+          router.push(`/${locale}/dashboard`);
+        } else {
+          router.push(`/${locale}/dashboard/categories`);
+        }
         router.refresh();
       } else {
         const data = await res.json();

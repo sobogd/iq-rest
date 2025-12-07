@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Trash2, Save, Loader2, Upload, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -87,7 +87,9 @@ interface TableFormProps {
 export function TableForm({ table, restaurant, translations: t }: TableFormProps) {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const locale = params.locale as string;
+  const fromOnboarding = searchParams.get("from") === "onboarding";
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [number, setNumber] = useState(table?.number?.toString() || "1");
@@ -268,7 +270,11 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
       });
 
       if (res.ok) {
-        router.push(`/${locale}/dashboard/tables`);
+        if (fromOnboarding && !isEdit) {
+          router.push(`/${locale}/dashboard`);
+        } else {
+          router.push(`/${locale}/dashboard/tables`);
+        }
         router.refresh();
       } else {
         const data = await res.json();

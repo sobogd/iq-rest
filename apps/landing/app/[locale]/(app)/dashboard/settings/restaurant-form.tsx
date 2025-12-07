@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import Image from "next/image";
 import { Upload, X, Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -58,6 +60,9 @@ interface RestaurantFormProps {
 
 export function RestaurantForm({ translations: t }: RestaurantFormProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const fromOnboarding = searchParams.get("from") === "onboarding";
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -69,8 +74,9 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
   const [description, setDescription] = useState("");
   const [slug, setSlug] = useState("");
   const [source, setSource] = useState("");
-  const [lat, setLat] = useState<number | undefined>();
-  const [lng, setLng] = useState<number | undefined>();
+  // Default to Eiffel Tower coordinates
+  const [lat, setLat] = useState<number | undefined>(48.8584);
+  const [lng, setLng] = useState<number | undefined>(2.2945);
   const [phone, setPhone] = useState("");
   const [instagram, setInstagram] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
@@ -218,8 +224,12 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
       });
 
       if (res.ok) {
-        setSaved(true);
-        setTimeout(() => setSaved(false), 3000);
+        if (fromOnboarding) {
+          router.push("/dashboard");
+        } else {
+          setSaved(true);
+          setTimeout(() => setSaved(false), 3000);
+        }
       } else {
         const data = await res.json();
         setError(data.error || "Failed to save");
