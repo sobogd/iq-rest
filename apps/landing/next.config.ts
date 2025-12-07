@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
   // Enable static optimization
   reactStrictMode: true,
 
-  // Allow images from S3
+  // Allow images from S3 with light optimization
   images: {
     remotePatterns: [
       {
@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+    formats: ["image/webp"],
   },
 };
 

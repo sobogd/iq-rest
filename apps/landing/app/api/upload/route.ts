@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
-import sharp from "sharp";
 import { prisma } from "@/lib/prisma";
+import sharp from "sharp";
 
 const s3Client = new S3Client({
   region: process.env.S3_REGION!,
@@ -59,54 +59,51 @@ export async function POST(request: NextRequest) {
     }
 
     const isVideo = videoTypes.includes(file.type);
+    const isImage = imageTypes.includes(file.type);
+    const isGif = file.type === "image/gif";
 
     // Convert file to buffer
     const arrayBuffer = await file.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
+    let buffer: Buffer = Buffer.from(arrayBuffer);
 
-    // Generate unique filename in temp folder
+    // Generate unique filename
     const timestamp = Date.now();
     const randomStr = Math.random().toString(36).substring(2, 8);
 
-    let finalBuffer: Buffer;
-    let contentType: string;
     let extension: string;
+    let contentType: string;
 
-    if (isVideo) {
-      // For videos, upload as-is
-      finalBuffer = buffer;
-      contentType = file.type;
-      extension = file.type === "video/quicktime" ? "mov" : file.type.split("/")[1];
-    } else {
-      // For images, resize and convert to webp
-      finalBuffer = await sharp(buffer)
-        .resize(450, 450, {
-          fit: "cover",
-          position: "center",
-        })
-        .webp({ quality: 98 })
-        .toBuffer();
-      contentType = "image/webp";
+    // Convert images (except GIF) to WebP, resize to max 1000x1000, sharpen
+    if (isImage && !isGif) {
+      buffer = await sharp(buffer)
+        .resize(1000, 1000, { fit: "inside", withoutEnlargement: true })
+        .sharpen({ sigma: 1, m1: 1, m2: 0.5 })
+        .webp({ quality: 100, lossless: true })
+        .toBuffer() as Buffer;
       extension = "webp";
+      contentType = "image/webp";
+    } else if (isVideo) {
+      extension = file.type === "video/quicktime" ? "mov" : file.type.split("/")[1];
+      contentType = file.type;
+    } else {
+      extension = file.name.split(".").pop()?.toLowerCase() || file.type.split("/")[1];
+      contentType = file.type;
     }
 
     const filename = `temp/${companyId}/${timestamp}-${randomStr}.${extension}`;
 
-    // Upload to S3
     await s3Client.send(
       new PutObjectCommand({
         Bucket: process.env.S3_NAME!,
         Key: filename,
-        Body: finalBuffer,
+        Body: buffer,
         ContentType: contentType,
         ACL: "public-read",
       })
     );
 
-    // Construct the URL
-    const imageUrl = `${process.env.S3_HOST}${filename}`;
-
-    return NextResponse.json({ url: imageUrl }, { status: 200 });
+    const fileUrl = `${process.env.S3_HOST}${filename}`;
+    return NextResponse.json({ url: fileUrl }, { status: 200 });
   } catch (error) {
     console.error("Error uploading file:", error);
     return NextResponse.json(

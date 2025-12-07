@@ -163,7 +163,7 @@ export function MenuFeed({ categories }: MenuFeedProps) {
                           alt={item.name}
                           fill
                           className="object-cover"
-                          sizes="(max-width: 440px) 100vw, 440px"
+                          sizes="1000px"
                         />
                       </div>
                     )}

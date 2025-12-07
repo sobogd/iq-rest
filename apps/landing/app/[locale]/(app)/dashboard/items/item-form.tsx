@@ -521,7 +521,7 @@ export function ItemForm({ item, categories: initialCategories, restaurant: init
                 <div className="flex flex-col items-center gap-2">
                   <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
                   <span className="text-sm text-muted-foreground">
-                    Uploading...
+                    AI enhancing...
                   </span>
                 </div>
               ) : (

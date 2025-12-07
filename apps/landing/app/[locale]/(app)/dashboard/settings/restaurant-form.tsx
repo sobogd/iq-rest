@@ -328,7 +328,7 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
             {uploading ? (
               <div className="flex flex-col items-center gap-2">
                 <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Uploading...</span>
+                <span className="text-sm text-muted-foreground">AI enhancing...</span>
               </div>
             ) : (
               <div className="flex flex-col items-center gap-2">
