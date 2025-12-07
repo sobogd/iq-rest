@@ -92,6 +92,7 @@ export async function PUT(
         number: data.number,
         capacity: data.capacity,
         zone: data.zone || null,
+        translations: data.translations !== undefined ? data.translations : existingTable.translations,
         imageUrl: data.imageUrl || null,
         isActive: data.isActive ?? existingTable.isActive,
       },

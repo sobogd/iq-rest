@@ -13,6 +13,15 @@ interface TimeSlot {
   availableTables: number;
 }
 
+interface TableInfo {
+  id: string;
+  number: number;
+  capacity: number;
+  zone: string | null;
+  imageUrl: string | null;
+  available: boolean;
+}
+
 interface ReserveFormProps {
   restaurantId: string;
   slotMinutes: number;
@@ -59,6 +68,7 @@ export function ReserveForm({
   const [guestsCount, setGuestsCount] = useState(0);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState("");
+  const [selectedTableId, setSelectedTableId] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
@@ -68,8 +78,11 @@ export function ReserveForm({
 
   // Availability state
   const [loadingSlots, setLoadingSlots] = useState(false);
+  const [loadingTables, setLoadingTables] = useState(false);
   const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([]);
+  const [tables, setTables] = useState<TableInfo[]>([]);
   const [slotsLoaded, setSlotsLoaded] = useState(false);
+  const [tablesLoaded, setTablesLoaded] = useState(false);
 
   // Week navigation state
   const [currentWeekOffset, setCurrentWeekOffset] = useState(0);
@@ -77,6 +90,7 @@ export function ReserveForm({
   // Refs for scrolling
   const dateRef = useRef<HTMLDivElement>(null);
   const timeRef = useRef<HTMLDivElement>(null);
+  const tableRef = useRef<HTMLDivElement>(null);
   const detailsRef = useRef<HTMLDivElement>(null);
 
   // Calculate date range (2 months = ~8 weeks)
@@ -137,11 +151,49 @@ export function ReserveForm({
     }
   }, [guestsCount, slug]);
 
+  // Fetch available tables when time is selected
+  const fetchTables = useCallback(async (date: Date, time: string) => {
+    if (!date || !time || !guestsCount) {
+      setTables([]);
+      setTablesLoaded(false);
+      return;
+    }
+
+    setLoadingTables(true);
+    setTablesLoaded(false);
+
+    try {
+      const dateStr = format(date, "yyyy-MM-dd");
+      const res = await fetch(
+        `/api/public/reservations/availability?slug=${slug}&date=${dateStr}&time=${time}&guests=${guestsCount}`
+      );
+
+      if (res.ok) {
+        const data = await res.json();
+        setTables(data.tables || []);
+      } else {
+        setTables([]);
+      }
+    } catch {
+      setTables([]);
+    } finally {
+      setLoadingTables(false);
+      setTablesLoaded(true);
+
+      // Scroll after loading is complete
+      setTimeout(() => {
+        tableRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
+    }
+  }, [guestsCount, slug]);
+
   function handleGuestsSelect(count: number) {
     setGuestsCount(count);
     setSelectedDate(null);
     setSelectedTime("");
+    setSelectedTableId("");
     setSlotsLoaded(false);
+    setTablesLoaded(false);
 
     setTimeout(() => {
       dateRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -151,7 +203,9 @@ export function ReserveForm({
   function handleDateSelect(date: Date) {
     setSelectedDate(date);
     setSelectedTime("");
+    setSelectedTableId("");
     setSlotsLoaded(false);
+    setTablesLoaded(false);
 
     // Fetch slots with the date directly
     fetchTimeSlots(date);
@@ -159,6 +213,17 @@ export function ReserveForm({
 
   function handleTimeSelect(time: string) {
     setSelectedTime(time);
+    setSelectedTableId("");
+    setTablesLoaded(false);
+
+    // Fetch available tables for this time
+    if (selectedDate) {
+      fetchTables(selectedDate, time);
+    }
+  }
+
+  function handleTableSelect(tableId: string) {
+    setSelectedTableId(tableId);
 
     setTimeout(() => {
       detailsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -169,7 +234,7 @@ export function ReserveForm({
     e.preventDefault();
     setError("");
 
-    if (!selectedDate || !selectedTime || !name.trim() || !email.trim()) {
+    if (!selectedDate || !selectedTime || !selectedTableId || !name.trim() || !email.trim()) {
       setError("Please fill in all required fields");
       return;
     }
@@ -182,6 +247,7 @@ export function ReserveForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           restaurantId,
+          tableId: selectedTableId,
           date: format(selectedDate, "yyyy-MM-dd"),
           startTime: selectedTime,
           duration: slotMinutes,
@@ -218,6 +284,9 @@ export function ReserveForm({
       </div>
     );
   }
+
+  // Get available tables for display
+  const availableTables = tables.filter((table) => table.available);
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 pb-[100px]">
@@ -343,18 +412,22 @@ export function ReserveForm({
                 <button
                   key={slot.time}
                   type="button"
-                  disabled={!slot.available}
+                  disabled={!slot.available || loadingTables}
                   onClick={() => handleTimeSelect(slot.time)}
                   className={cn(
                     "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center",
                     selectedTime === slot.time
                       ? "border-black bg-black text-white"
-                      : slot.available
+                      : slot.available && !loadingTables
                       ? "border-gray-200 bg-white text-black hover:border-black hover:bg-black hover:text-white"
                       : "border-gray-100 bg-gray-50 text-gray-300 cursor-not-allowed"
                   )}
                 >
-                  {slot.time}
+                  {selectedTime === slot.time && loadingTables ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    slot.time
+                  )}
                 </button>
               ))}
             </div>
@@ -362,8 +435,40 @@ export function ReserveForm({
         </div>
       )}
 
-      {/* Step 4: Enter details */}
-      {selectedTime && (
+      {/* Step 4: Select table */}
+      {selectedTime && tablesLoaded && (
+        <div ref={tableRef} className="space-y-3">
+          <label className="text-base font-semibold text-black">{t.selectTable}:</label>
+          {availableTables.length === 0 ? (
+            <p className="text-center text-gray-500 py-4">{t.noAvailableTables}</p>
+          ) : (
+            <div className="flex flex-col gap-2">
+              {availableTables.map((table) => (
+                <button
+                  key={table.id}
+                  type="button"
+                  onClick={() => handleTableSelect(table.id)}
+                  className={cn(
+                    "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4",
+                    selectedTableId === table.id
+                      ? "border-black bg-black text-white"
+                      : "border-gray-200 bg-white text-black hover:border-black hover:bg-black hover:text-white"
+                  )}
+                >
+                  {table.zone ? (
+                    <span>{table.zone} • {t.table} {table.number} • {table.capacity} {t.guests}</span>
+                  ) : (
+                    <span>{t.table} {table.number} • {table.capacity} {t.guests}</span>
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Step 5: Enter details */}
+      {selectedTableId && (
         <div ref={detailsRef} className="space-y-4 pt-4 border-t border-gray-200">
           <div className="space-y-2">
             <label htmlFor="name" className="text-base font-semibold text-black">

@@ -109,6 +109,7 @@ model Table {
   number       Int
   capacity     Int
   zone         String?
+  translations Json?    // { "en": { "zone": "..." }, "es": {...} }
   imageUrl     String?
   isActive     Boolean  @default(true)
   sortOrder    Int      @default(0)

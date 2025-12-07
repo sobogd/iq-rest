@@ -12,7 +12,7 @@ export async function GET() {
     // Get restaurant languages
     const restaurant = await prisma.restaurant.findFirst({
       where: { companyId },
-      select: { languages: true, defaultLanguage: true },
+      select: { id: true, languages: true, defaultLanguage: true },
     });
 
     if (!restaurant) {
@@ -38,6 +38,12 @@ export async function GET() {
       where: { category: { companyId } },
       select: { id: true, name: true, description: true, translations: true },
     });
+
+    // Get all tables with translations (only those with zone)
+    const tables = restaurant ? await prisma.table.findMany({
+      where: { restaurantId: restaurant.id },
+      select: { id: true, zone: true, translations: true },
+    }) : [];
 
     // Calculate stats per language
     const stats: Record<string, { translated: number; total: number; percentage: number }> = {};
@@ -68,6 +74,17 @@ export async function GET() {
         }
         if (item.description && trans?.[lang]?.description?.trim()) {
           translated += 1;
+        }
+      }
+
+      // Count table zones (only if zone exists)
+      for (const table of tables) {
+        if (table.zone) {
+          total += 1; // table zone
+          const trans = table.translations as Record<string, { zone?: string }> | null;
+          if (trans?.[lang]?.zone?.trim()) {
+            translated += 1;
+          }
         }
       }
 

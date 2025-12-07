@@ -1,9 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { TableForm } from "../table-form";
 import { DashboardContainer } from "@/components/dashboard-container";
+import { getRestaurantLanguages } from "@/lib/data";
 
 export default async function NewTablePage() {
-  const t = await getTranslations("reservations");
+  const [t, restaurant] = await Promise.all([
+    getTranslations("reservations"),
+    getRestaurantLanguages(),
+  ]);
 
   const translations = {
     tableNumber: t("tableNumber"),
@@ -25,7 +29,7 @@ export default async function NewTablePage() {
 
   return (
     <DashboardContainer>
-      <TableForm translations={translations} />
+      <TableForm restaurant={restaurant} translations={translations} />
     </DashboardContainer>
   );
 }

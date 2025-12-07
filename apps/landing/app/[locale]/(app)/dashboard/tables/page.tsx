@@ -30,6 +30,7 @@ export default async function TablesPage() {
   const translations = {
     noTables: t("noTables"),
     guests: t("guests"),
+    table: t("table"),
   };
 
   return (

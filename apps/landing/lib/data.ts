@@ -186,6 +186,51 @@ export interface RestaurantLanguages {
   defaultLanguage: string;
 }
 
+export interface TableWithTranslations {
+  id: string;
+  number: number;
+  capacity: number;
+  zone: string | null;
+  imageUrl: string | null;
+  isActive: boolean;
+  translations: Record<string, { zone?: string }> | null;
+}
+
+export async function getTableWithTranslations(id: string): Promise<TableWithTranslations | null> {
+  const companyId = await getUserCompanyId();
+
+  if (!companyId) {
+    return null;
+  }
+
+  const restaurant = await prisma.restaurant.findFirst({
+    where: { companyId },
+    select: { id: true },
+  });
+
+  if (!restaurant) {
+    return null;
+  }
+
+  const table = await prisma.table.findFirst({
+    where: { id, restaurantId: restaurant.id },
+  });
+
+  if (!table) {
+    return null;
+  }
+
+  return {
+    id: table.id,
+    number: table.number,
+    capacity: table.capacity,
+    zone: table.zone,
+    imageUrl: table.imageUrl,
+    isActive: table.isActive,
+    translations: table.translations as Record<string, { zone?: string }> | null,
+  };
+}
+
 export async function getRestaurantLanguages(): Promise<RestaurantLanguages | null> {
   const companyId = await getUserCompanyId();
 
@@ -259,6 +304,12 @@ export async function getLanguagesPageData(): Promise<LanguagesPageData | null> 
       select: { id: true, name: true, description: true, translations: true },
     });
 
+    // Get tables with zones for translation stats
+    const tables = await prisma.table.findMany({
+      where: { restaurant: { companyId } },
+      select: { id: true, zone: true, translations: true },
+    });
+
     for (const lang of otherLanguages) {
       let translated = 0;
       let total = 0;
@@ -283,6 +334,17 @@ export async function getLanguagesPageData(): Promise<LanguagesPageData | null> 
         }
         if (item.description && trans?.[lang]?.description?.trim()) {
           translated += 1;
+        }
+      }
+
+      // Count table zones (only if zone exists)
+      for (const table of tables) {
+        if (table.zone) {
+          total += 1;
+          const trans = table.translations as Record<string, { zone?: string }> | null;
+          if (trans?.[lang]?.zone?.trim()) {
+            translated += 1;
+          }
         }
       }
 

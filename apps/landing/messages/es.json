@@ -840,6 +840,7 @@
     "cancel": "Cancelar",
     "delete": "Eliminar",
     "deleteConfirm": "¿Estás seguro de que quieres eliminar esta mesa?",
+    "table": "Mesa",
     "noTables": "Aún no hay mesas. Añade tu primera mesa para habilitar las reservas.",
     "error": "Error",
     "close": "Cerrar",

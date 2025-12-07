@@ -17,6 +17,7 @@ import {
   ArrowLeft,
   Languages,
   CalendarDays,
+  Armchair,
 } from "lucide-react";
 import {
   Tooltip,
@@ -38,6 +39,7 @@ const menuItems: MenuItem[] = [
   { title: "categories", url: "/dashboard/categories", icon: FolderOpen },
   { title: "items", url: "/dashboard/items", icon: Package },
   { title: "languages", url: "/dashboard/translations", icon: Languages },
+  { title: "tables", url: "/dashboard/tables", icon: Armchair },
   { title: "reservations", url: "/dashboard/reservations", icon: CalendarDays },
   { title: "qrCode", url: "/dashboard/qr-code", icon: QrCode },
   { title: "analytics", url: "/dashboard/analytics", icon: BarChart3 },
@@ -53,9 +55,9 @@ const pageTitles: Record<string, string> = {
   "/dashboard/items": "items",
   "/dashboard/items/new": "newItem",
   "/dashboard/translations": "languages",
+  "/dashboard/tables": "tables",
+  "/dashboard/tables/new": "newTable",
   "/dashboard/reservations": "reservations",
-  "/dashboard/reservations/tables": "tables",
-  "/dashboard/reservations/tables/new": "newTable",
   "/dashboard/qr-code": "qrCode",
   "/dashboard/analytics": "analytics",
   "/dashboard/settings": "settings",
@@ -72,9 +74,9 @@ const pageActions: Record<string, { labelKey: string; href: string }> = {
     labelKey: "addItem",
     href: "/dashboard/items/new",
   },
-  "/dashboard/reservations/tables": {
+  "/dashboard/tables": {
     labelKey: "addTable",
-    href: "/dashboard/reservations/tables/new",
+    href: "/dashboard/tables/new",
   },
 };
 
@@ -116,15 +118,14 @@ export function DashboardLayout({
       titleKey = "editCategory";
     } else if (path.match(/^\/dashboard\/items\/[^/]+$/) && path !== "/dashboard/items/new") {
       titleKey = "editItem";
-    } else if (path.match(/^\/dashboard\/reservations\/tables\/[^/]+$/) && path !== "/dashboard/reservations/tables/new") {
+    } else if (path.match(/^\/dashboard\/tables\/[^/]+$/) && path !== "/dashboard/tables/new") {
       titleKey = "editTable";
     }
   }
   const title = titleKey ? headerTranslations[titleKey] : "";
 
   // Check if back button should show
-  const showBackButton = path.match(/^\/dashboard\/(categories|items)\/(new|[^/]+)$/) ||
-    path.match(/^\/dashboard\/reservations\/tables\/(new|[^/]+)$/);
+  const showBackButton = path.match(/^\/dashboard\/(categories|items|tables)\/(new|[^/]+)$/);
 
   // Get action for current page
   const action = pageActions[path];

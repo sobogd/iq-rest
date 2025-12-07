@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { Trash2, Save, Loader2, Upload, X } from "lucide-react";
+import { Trash2, Save, Loader2, Upload, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -26,6 +26,15 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+interface TranslationData {
+  zone?: string;
+}
+
+interface RestaurantLanguages {
+  languages: string[];
+  defaultLanguage: string;
+}
+
 interface Table {
   id: string;
   number: number;
@@ -33,10 +42,25 @@ interface Table {
   zone: string | null;
   imageUrl: string | null;
   isActive: boolean;
+  translations?: Record<string, TranslationData> | null;
 }
+
+const LANGUAGE_NAMES: Record<string, string> = {
+  en: "English",
+  es: "Español",
+  ru: "Русский",
+  de: "Deutsch",
+  fr: "Français",
+  it: "Italiano",
+  pt: "Português",
+  zh: "中文",
+  ja: "日本語",
+  ko: "한국어",
+};
 
 interface TableFormProps {
   table?: Table;
+  restaurant?: RestaurantLanguages | null;
   translations: {
     tableNumber: string;
     tableNumberPlaceholder: string;
@@ -58,7 +82,7 @@ interface TableFormProps {
   };
 }
 
-export function TableForm({ table, translations: t }: TableFormProps) {
+export function TableForm({ table, restaurant, translations: t }: TableFormProps) {
   const router = useRouter();
   const params = useParams();
   const locale = params.locale as string;
@@ -74,8 +98,16 @@ export function TableForm({ table, translations: t }: TableFormProps) {
   const [uploading, setUploading] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [error, setError] = useState("");
+  const [tableTranslations, setTableTranslations] = useState<Record<string, TranslationData>>(
+    (table?.translations as Record<string, TranslationData>) || {}
+  );
+  const [translatingField, setTranslatingField] = useState<string | null>(null);
 
   const isEdit = !!table;
+
+  const otherLanguages = restaurant?.languages.filter(
+    (lang) => lang !== restaurant.defaultLanguage
+  ) || [];
 
   async function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -131,7 +163,7 @@ export function TableForm({ table, translations: t }: TableFormProps) {
       });
 
       if (res.ok) {
-        router.push(`/${locale}/dashboard/reservations/tables`);
+        router.push(`/${locale}/dashboard/tables`);
         router.refresh();
       } else {
         const data = await res.json();
@@ -142,6 +174,45 @@ export function TableForm({ table, translations: t }: TableFormProps) {
     } finally {
       setDeleting(false);
       setShowDeleteDialog(false);
+    }
+  }
+
+  function handleTranslationChange(lang: string, value: string) {
+    setTableTranslations((prev) => ({
+      ...prev,
+      [lang]: {
+        ...prev[lang],
+        zone: value,
+      },
+    }));
+  }
+
+  async function handleTranslate(lang: string) {
+    if (!zone.trim()) return;
+
+    setTranslatingField(`zone-${lang}`);
+
+    try {
+      const res = await fetch("/api/translate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: zone,
+          targetLanguage: lang,
+          sourceLanguage: restaurant?.defaultLanguage || "en",
+        }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        handleTranslationChange(lang, data.translatedText);
+      } else {
+        setError("Translation failed");
+      }
+    } catch {
+      setError("Translation failed");
+    } finally {
+      setTranslatingField(null);
     }
   }
 
@@ -164,6 +235,20 @@ export function TableForm({ table, translations: t }: TableFormProps) {
       const url = isEdit ? `/api/tables/${table.id}` : "/api/tables";
       const method = isEdit ? "PUT" : "POST";
 
+      // Build clean translations object
+      const cleanTranslations: Record<string, TranslationData> = {};
+      if (restaurant) {
+        for (const lang of restaurant.languages) {
+          if (lang === restaurant.defaultLanguage) continue;
+          const trans = tableTranslations[lang];
+          if (trans?.zone?.trim()) {
+            cleanTranslations[lang] = {
+              zone: trans.zone.trim(),
+            };
+          }
+        }
+      }
+
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
@@ -173,11 +258,12 @@ export function TableForm({ table, translations: t }: TableFormProps) {
           zone: zone.trim() || null,
           imageUrl: imageUrl || null,
           isActive,
+          translations: Object.keys(cleanTranslations).length > 0 ? cleanTranslations : null,
         }),
       });
 
       if (res.ok) {
-        router.push(`/${locale}/dashboard/reservations/tables`);
+        router.push(`/${locale}/dashboard/tables`);
         router.refresh();
       } else {
         const data = await res.json();
@@ -234,7 +320,7 @@ export function TableForm({ table, translations: t }: TableFormProps) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="zone">{t.zone}</Label>
+          <Label htmlFor="zone">{t.zone}{otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}</Label>
           <Input
             id="zone"
             value={zone}
@@ -242,6 +328,34 @@ export function TableForm({ table, translations: t }: TableFormProps) {
             placeholder={t.zonePlaceholder}
           />
         </div>
+
+        {/* Zone translations */}
+        {otherLanguages.map((lang) => (
+          <div key={`zone-${lang}`} className="space-y-2">
+            <Label>{t.zone} ({LANGUAGE_NAMES[lang] || lang})</Label>
+            <div className="flex gap-2">
+              <Input
+                value={tableTranslations[lang]?.zone || ""}
+                onChange={(e) => handleTranslationChange(lang, e.target.value)}
+                placeholder={t.zonePlaceholder}
+              />
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                onClick={() => handleTranslate(lang)}
+                disabled={translatingField === `zone-${lang}` || !zone.trim()}
+                className="shrink-0"
+              >
+                {translatingField === `zone-${lang}` ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <Sparkles className="h-4 w-4" />
+                )}
+              </Button>
+            </div>
+          </div>
+        ))}
 
         <div className="space-y-2">
           <Label>{t.image}</Label>

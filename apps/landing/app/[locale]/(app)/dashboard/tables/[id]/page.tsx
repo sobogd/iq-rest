@@ -2,26 +2,7 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { TableForm } from "../table-form";
 import { DashboardContainer } from "@/components/dashboard-container";
-import { prisma } from "@/lib/prisma";
-import { getUserCompanyId } from "@/lib/auth";
-
-async function getTable(id: string) {
-  const companyId = await getUserCompanyId();
-  if (!companyId) return null;
-
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { companyId },
-    select: { id: true },
-  });
-
-  if (!restaurant) return null;
-
-  const table = await prisma.table.findFirst({
-    where: { id, restaurantId: restaurant.id },
-  });
-
-  return table;
-}
+import { getTableWithTranslations, getRestaurantLanguages } from "@/lib/data";
 
 interface EditTablePageProps {
   params: Promise<{ id: string }>;
@@ -29,9 +10,11 @@ interface EditTablePageProps {
 
 export default async function EditTablePage({ params }: EditTablePageProps) {
   const { id } = await params;
-  const [t, table] = await Promise.all([
+
+  const [t, table, restaurant] = await Promise.all([
     getTranslations("reservations"),
-    getTable(id),
+    getTableWithTranslations(id),
+    getRestaurantLanguages(),
   ]);
 
   if (!table) {
@@ -60,7 +43,7 @@ export default async function EditTablePage({ params }: EditTablePageProps) {
 
   return (
     <DashboardContainer>
-      <TableForm table={table} translations={translations} />
+      <TableForm table={table} restaurant={restaurant} translations={translations} />
     </DashboardContainer>
   );
 }

@@ -79,6 +79,7 @@ export async function POST(request: NextRequest) {
         number: data.number,
         capacity: data.capacity,
         zone: data.zone || null,
+        translations: data.translations || null,
         imageUrl: data.imageUrl || null,
         isActive: data.isActive ?? true,
         sortOrder: (maxSort._max.sortOrder || 0) + 1,

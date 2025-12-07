@@ -45,6 +45,7 @@ export default async function AppLayout({
       categories: t("menu.categories"),
       items: t("menu.items"),
       languages: t("menu.languages"),
+      tables: tReservations("tables"),
       reservations: t("menu.reservations"),
       qrCode: t("menu.qrCode"),
       analytics: t("menu.analytics"),

@@ -38,6 +38,7 @@ export async function POST(request: NextRequest) {
 
     const {
       restaurantId,
+      tableId,
       date,
       startTime,
       duration,
@@ -118,12 +119,33 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    // Find the first available table
-    const availableTable = suitableTables.find((table) => {
-      return !isTableBooked(table.id, startTime, slotDuration, existingReservations);
-    });
+    // If tableId is provided, verify it's available; otherwise find the first available table
+    let selectedTable;
 
-    if (!availableTable) {
+    if (tableId) {
+      // Verify the requested table exists and is suitable
+      selectedTable = suitableTables.find((t) => t.id === tableId);
+      if (!selectedTable) {
+        return NextResponse.json(
+          { error: "Requested table not found or not suitable for this number of guests" },
+          { status: 400 }
+        );
+      }
+      // Check if the table is available at this time
+      if (isTableBooked(tableId, startTime, slotDuration, existingReservations)) {
+        return NextResponse.json(
+          { error: "Requested table is not available at this time" },
+          { status: 400 }
+        );
+      }
+    } else {
+      // Find the first available table
+      selectedTable = suitableTables.find((table) => {
+        return !isTableBooked(table.id, startTime, slotDuration, existingReservations);
+      });
+    }
+
+    if (!selectedTable) {
       return NextResponse.json(
         { error: "No tables available at this time" },
         { status: 400 }
@@ -136,7 +158,7 @@ export async function POST(request: NextRequest) {
     const reservation = await prisma.reservation.create({
       data: {
         restaurantId,
-        tableId: availableTable.id,
+        tableId: selectedTable.id,
         date: reservationDate,
         startTime,
         duration: slotDuration,
