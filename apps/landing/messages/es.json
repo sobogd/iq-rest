@@ -835,6 +835,8 @@
     "uploadImage": "Clic para subir foto",
     "removeImage": "Eliminar",
     "isActive": "Activa",
+    "active": "Activa",
+    "inactive": "Inactiva",
     "save": "Guardar",
     "saving": "Guardando...",
     "cancel": "Cancelar",
@@ -856,7 +858,11 @@
     "time": "Hora",
     "guest": "Cliente",
     "status": "Estado",
-    "notes": "Notas"
+    "notes": "Notas",
+    "awaitingResponse": "Esperando Respuesta",
+    "today": "Hoy",
+    "tomorrow": "Mañana",
+    "otherReservations": "Otras Reservas"
   },
   "publicReserve": {
     "title": "Reservar Mesa",

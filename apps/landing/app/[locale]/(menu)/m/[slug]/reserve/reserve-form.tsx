@@ -18,6 +18,7 @@ interface TableInfo {
   number: number;
   capacity: number;
   zone: string | null;
+  translations: Record<string, { zone?: string }> | null;
   imageUrl: string | null;
   available: boolean;
 }
@@ -27,6 +28,7 @@ interface ReserveFormProps {
   slotMinutes: number;
   mode: string;
   slug: string;
+  locale: string;
   translations: {
     title: string;
     selectDate: string;
@@ -58,11 +60,21 @@ interface ReserveFormProps {
   };
 }
 
+// Helper function to get translated zone
+function getTranslatedZone(
+  table: TableInfo,
+  locale: string
+): string | null {
+  const translated = table.translations?.[locale]?.zone;
+  return translated || table.zone;
+}
+
 export function ReserveForm({
   restaurantId,
   slotMinutes,
   mode,
   slug,
+  locale,
   translations: t,
 }: ReserveFormProps) {
   const [guestsCount, setGuestsCount] = useState(0);
@@ -442,25 +454,39 @@ export function ReserveForm({
           {availableTables.length === 0 ? (
             <p className="text-center text-gray-500 py-4">{t.noAvailableTables}</p>
           ) : (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               {availableTables.map((table) => (
-                <button
-                  key={table.id}
-                  type="button"
-                  onClick={() => handleTableSelect(table.id)}
-                  className={cn(
-                    "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4",
-                    selectedTableId === table.id
-                      ? "border-black bg-black text-white"
-                      : "border-gray-200 bg-white text-black hover:border-black hover:bg-black hover:text-white"
+                <div key={table.id} className="flex items-center gap-3">
+                  {table.imageUrl && (
+                    <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
+                      <img
+                        src={table.imageUrl}
+                        alt={`${t.table} ${table.number}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   )}
-                >
-                  {table.zone ? (
-                    <span>{table.zone} • {t.table} {table.number} • {table.capacity} {t.guests}</span>
-                  ) : (
-                    <span>{t.table} {table.number} • {table.capacity} {t.guests}</span>
-                  )}
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => handleTableSelect(table.id)}
+                    className={cn(
+                      "flex-1 h-16 rounded-lg border-2 transition-colors flex flex-col justify-center px-4 text-left",
+                      selectedTableId === table.id
+                        ? "border-black bg-black text-white"
+                        : "border-gray-200 bg-white text-black hover:border-black"
+                    )}
+                  >
+                    <span className="text-sm font-semibold">
+                      {getTranslatedZone(table, locale) || `${t.table} ${table.number}`}
+                    </span>
+                    <span className={cn(
+                      "text-xs",
+                      selectedTableId === table.id ? "text-gray-300" : "text-gray-500"
+                    )}>
+                      {table.capacity} {t.guests}
+                    </span>
+                  </button>
+                </div>
               ))}
             </div>
           )}
@@ -480,7 +506,7 @@ export function ReserveForm({
               onChange={(e) => setName(e.target.value)}
               placeholder={t.namePlaceholder}
               required
-              className="h-12 border-2 border-gray-200 focus:border-black text-base focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="h-12 border-2 border-gray-200 focus:border-black text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white"
             />
           </div>
 
@@ -495,7 +521,7 @@ export function ReserveForm({
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t.emailPlaceholder}
               required
-              className="h-12 border-2 border-gray-200 focus:border-black text-base focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="h-12 border-2 border-gray-200 focus:border-black text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white"
             />
           </div>
 
@@ -509,7 +535,7 @@ export function ReserveForm({
               onChange={(e) => setNotes(e.target.value)}
               placeholder={t.notesPlaceholder}
               rows={3}
-              className="border-2 border-gray-200 focus:border-black resize-none text-base focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="border-2 border-gray-200 focus:border-black resize-none text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white"
             />
           </div>
 

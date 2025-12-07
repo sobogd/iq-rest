@@ -835,6 +835,8 @@
     "uploadImage": "Click to upload photo",
     "removeImage": "Remove",
     "isActive": "Active",
+    "active": "Active",
+    "inactive": "Inactive",
     "save": "Save",
     "saving": "Saving...",
     "cancel": "Cancel",
@@ -856,7 +858,11 @@
     "time": "Time",
     "guest": "Guest",
     "status": "Status",
-    "notes": "Notes"
+    "notes": "Notes",
+    "awaitingResponse": "Awaiting Response",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "otherReservations": "Other Reservations"
   },
   "publicReserve": {
     "title": "Book a Table",

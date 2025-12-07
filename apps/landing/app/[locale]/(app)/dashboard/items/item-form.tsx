@@ -452,11 +452,17 @@ export function ItemForm({ item, categories: initialCategories, restaurant: init
         <Label htmlFor="price">{t.price}:</Label>
           <Input
             id="price"
-            type="number"
-            step="0.01"
-            min="0"
+            type="text"
+            inputMode="decimal"
             value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={(e) => {
+              // Replace comma with dot and allow only digits and one dot
+              const value = e.target.value
+                .replace(",", ".")
+                .replace(/[^0-9.]/g, "")
+                .replace(/(\..*)\./g, "$1"); // Allow only one dot
+              setPrice(value);
+            }}
             placeholder={t.pricePlaceholder}
           />
       </div>

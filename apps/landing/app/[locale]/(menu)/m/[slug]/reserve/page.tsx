@@ -106,6 +106,7 @@ export default async function ReservePage({ params }: ReservePageProps) {
             mode={restaurant.reservationMode}
             translations={translations}
             slug={slug}
+            locale={locale}
           />
         </div>
       </main>

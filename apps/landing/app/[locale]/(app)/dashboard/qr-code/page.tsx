@@ -1,9 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { QrCodeClient } from "./qr-code-client";
 import { DashboardContainer } from "@/components/dashboard-container";
+import { getQrCodeSlug } from "@/lib/data";
 
 export default async function QrCodePage() {
-  const t = await getTranslations("qrCode");
+  const [t, slug] = await Promise.all([
+    getTranslations("qrCode"),
+    getQrCodeSlug(),
+  ]);
 
   const translations = {
     preview: t("preview"),
@@ -41,7 +45,7 @@ export default async function QrCodePage() {
 
   return (
     <DashboardContainer>
-      <QrCodeClient t={translations} />
+      <QrCodeClient t={translations} slug={slug} />
     </DashboardContainer>
   );
 }

@@ -231,6 +231,23 @@ export async function getTableWithTranslations(id: string): Promise<TableWithTra
   };
 }
 
+export async function getQrCodeSlug(): Promise<string | null> {
+  const companyId = await getUserCompanyId();
+
+  if (!companyId) {
+    return null;
+  }
+
+  const restaurant = await prisma.restaurant.findFirst({
+    where: { companyId },
+    select: {
+      slug: true,
+    },
+  });
+
+  return restaurant?.slug || null;
+}
+
 export async function getRestaurantLanguages(): Promise<RestaurantLanguages | null> {
   const companyId = await getUserCompanyId();
 

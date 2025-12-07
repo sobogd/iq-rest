@@ -153,7 +153,12 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
                       className="scale-75"
                     />
                   </div>
-                  <span className="text-sm truncate">{item.name}</span>
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-sm truncate">{item.name}</span>
+                    <span className="text-xs text-muted-foreground">
+                      €{item.price.toFixed(2)}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Actions */}

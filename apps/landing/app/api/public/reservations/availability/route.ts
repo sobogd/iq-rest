@@ -12,6 +12,7 @@ interface TableAvailability {
   number: number;
   capacity: number;
   zone: string | null;
+  translations: Record<string, { zone?: string }> | null;
   imageUrl: string | null;
   available: boolean;
 }
@@ -65,6 +66,7 @@ export async function GET(request: NextRequest) {
         number: true,
         capacity: true,
         zone: true,
+        translations: true,
         imageUrl: true,
       },
       orderBy: { sortOrder: "asc" },
@@ -141,6 +143,7 @@ export async function GET(request: NextRequest) {
     if (time) {
       tablesAvailability = suitableTables.map((table) => ({
         ...table,
+        translations: table.translations as Record<string, { zone?: string }> | null,
         available: !isTableBooked(table.id, time, slotDuration, existingReservations),
       }));
     }

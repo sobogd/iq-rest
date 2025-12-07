@@ -71,7 +71,9 @@ interface TableFormProps {
     image: string;
     uploadImage: string;
     removeImage: string;
-    isActive: string;
+    status: string;
+    active: string;
+    inactive: string;
     save: string;
     saving: string;
     cancel: string;
@@ -88,8 +90,8 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
   const locale = params.locale as string;
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const [number, setNumber] = useState(table?.number || 1);
-  const [capacity, setCapacity] = useState(table?.capacity || 4);
+  const [number, setNumber] = useState(table?.number?.toString() || "1");
+  const [capacity, setCapacity] = useState(table?.capacity?.toString() || "4");
   const [zone, setZone] = useState(table?.zone || "");
   const [imageUrl, setImageUrl] = useState(table?.imageUrl || "");
   const [isActive, setIsActive] = useState(table?.isActive ?? true);
@@ -220,12 +222,15 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
     e.preventDefault();
     setError("");
 
-    if (number < 1) {
+    const numberValue = parseInt(number) || 0;
+    const capacityValue = parseInt(capacity) || 0;
+
+    if (numberValue < 1) {
       setError("Table number must be at least 1");
       return;
     }
 
-    if (capacity < 1) {
+    if (capacityValue < 1) {
       setError("Capacity must be at least 1");
       return;
     }
@@ -253,8 +258,8 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
         method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          number,
-          capacity,
+          number: numberValue,
+          capacity: capacityValue,
           zone: zone.trim() || null,
           imageUrl: imageUrl || null,
           isActive,
@@ -293,34 +298,54 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
       </AlertDialog>
 
       <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label htmlFor="number">{t.tableNumber}</Label>
-            <Input
-              id="number"
-              type="number"
-              min={1}
-              value={number}
-              onChange={(e) => setNumber(parseInt(e.target.value) || 1)}
-              placeholder={t.tableNumberPlaceholder}
+        <div className="space-y-2">
+          <Label htmlFor="isActive">{t.status}:</Label>
+          <label
+            htmlFor="isActive"
+            className="flex items-center justify-between h-10 px-3 rounded-md border border-input bg-background cursor-pointer"
+          >
+            <span className="text-sm">{isActive ? t.active : t.inactive}</span>
+            <Switch
+              id="isActive"
+              checked={isActive}
+              onCheckedChange={setIsActive}
+              className="scale-75"
             />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="capacity">{t.capacity}</Label>
-            <Input
-              id="capacity"
-              type="number"
-              min={1}
-              value={capacity}
-              onChange={(e) => setCapacity(parseInt(e.target.value) || 1)}
-              placeholder={t.capacityPlaceholder}
-            />
-          </div>
+          </label>
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="zone">{t.zone}{otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}</Label>
+          <Label htmlFor="number">{t.tableNumber}:</Label>
+          <Input
+            id="number"
+            type="text"
+            inputMode="numeric"
+            value={number}
+            onChange={(e) => {
+              const value = e.target.value.replace(/[^0-9]/g, "");
+              setNumber(value);
+            }}
+            placeholder={t.tableNumberPlaceholder}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="capacity">{t.capacity}:</Label>
+          <Input
+            id="capacity"
+            type="text"
+            inputMode="numeric"
+            value={capacity}
+            onChange={(e) => {
+              const value = e.target.value.replace(/[^0-9]/g, "");
+              setCapacity(value);
+            }}
+            placeholder={t.capacityPlaceholder}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="zone">{t.zone}{otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:</Label>
           <Input
             id="zone"
             value={zone}
@@ -332,7 +357,7 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
         {/* Zone translations */}
         {otherLanguages.map((lang) => (
           <div key={`zone-${lang}`} className="space-y-2">
-            <Label>{t.zone} ({LANGUAGE_NAMES[lang] || lang})</Label>
+            <Label>{t.zone} ({LANGUAGE_NAMES[lang] || lang}):</Label>
             <div className="flex gap-2">
               <Input
                 value={tableTranslations[lang]?.zone || ""}
@@ -358,7 +383,7 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
         ))}
 
         <div className="space-y-2">
-          <Label>{t.image}</Label>
+          <Label>{t.image}:</Label>
           {imageUrl ? (
             <div className="relative">
               <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
@@ -405,15 +430,6 @@ export function TableForm({ table, restaurant, translations: t }: TableFormProps
             onChange={handleImageUpload}
             disabled={uploading}
           />
-        </div>
-
-        <div className="flex items-center gap-3">
-          <Switch
-            id="isActive"
-            checked={isActive}
-            onCheckedChange={setIsActive}
-          />
-          <Label htmlFor="isActive">{t.isActive}</Label>
         </div>
       </div>
 

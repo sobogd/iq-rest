@@ -34,18 +34,14 @@ export default async function ReservationsPage() {
 
   const translations = {
     noReservations: t("noReservations"),
-    pending: t("pending"),
-    confirmed: t("confirmed"),
-    cancelled: t("cancelled"),
-    completed: t("completed"),
     confirm: t("confirm"),
     reject: t("reject"),
     guests: t("guests"),
-    date: t("date"),
-    time: t("time"),
-    guest: t("guest"),
-    status: t("status"),
-    notes: t("notes"),
+    awaitingResponse: t("awaitingResponse"),
+    today: t("today"),
+    tomorrow: t("tomorrow"),
+    otherReservations: t("otherReservations"),
+    table: t("table"),
   };
 
   return (

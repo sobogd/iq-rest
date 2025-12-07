@@ -4,11 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Printer, Download, ExternalLink, Loader2 } from "lucide-react";
+import { Printer, Download, ExternalLink } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
 interface Translations {
@@ -47,6 +46,7 @@ interface Translations {
 
 interface QrCodeClientProps {
   t: Translations;
+  slug: string | null;
 }
 
 const PAPER_FORMATS = {
@@ -65,10 +65,7 @@ const QR_PER_PAGE = {
   sixteen: { count: 16, cols: 4, rows: 4 },
 };
 
-export function QrCodeClient({ t }: QrCodeClientProps) {
-  const [slug, setSlug] = useState<string | null>(null);
-  const [restaurantName, setRestaurantName] = useState<string>("");
-  const [loading, setLoading] = useState(true);
+export function QrCodeClient({ t, slug }: QrCodeClientProps) {
   const [paperFormat, setPaperFormat] = useState<keyof typeof PAPER_FORMATS>("a4");
   const [qrPerPage, setQrPerPage] = useState<keyof typeof QR_PER_PAGE>("sixteen");
   const [customText, setCustomText] = useState<string>("QR Menu\nScan Me");
@@ -76,24 +73,6 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
   const [qrSvg, setQrSvg] = useState<string>("");
   const printRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  useEffect(() => {
-    async function fetchRestaurant() {
-      try {
-        const res = await fetch("/api/restaurant");
-        if (res.ok) {
-          const data = await res.json();
-          setSlug(data?.slug || null);
-          setRestaurantName(data?.name || "");
-        }
-      } catch (error) {
-        console.error("Failed to fetch restaurant:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchRestaurant();
-  }, []);
 
   const menuUrl = slug ? `sobogdqr.com/m/${slug}` : "";
   const fullMenuUrl = slug ? `https://sobogdqr.com/m/${slug}` : "";
@@ -138,7 +117,6 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
     const scanTextSize = getTextSizePx();
     const qrItems = Array(layout.count).fill(null).map(() => `
       <div class="qr-item">
-        ${restaurantName ? `<div class="restaurant-name">${restaurantName}</div>` : ""}
         <div class="qr-wrapper">${svgContent}</div>
         ${customText ? `<div class="scan-text">${formattedCustomText}</div>` : ""}
       </div>
@@ -207,15 +185,6 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
               width: ${qrSizeMm}mm !important;
               height: ${qrSizeMm}mm !important;
             }
-            .restaurant-name {
-              font-size: ${layout.count === 1 ? "24px" : layout.count <= 4 ? "16px" : "12px"};
-              font-weight: bold;
-              margin-bottom: ${layout.count === 1 ? "12px" : "6px"};
-              max-width: 100%;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-            }
             .scan-text {
               font-size: ${scanTextSize};
               font-weight: bold;
@@ -250,7 +219,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
       doc.write(generatePrintHtml(qrSvg, true));
       doc.close();
     }
-  }, [qrSvg, paperFormat, qrPerPage, customText, textSize, restaurantName, layout, paper, qrSizeMm]);
+  }, [qrSvg, paperFormat, qrPerPage, customText, textSize, layout, paper, qrSizeMm]);
 
   const handlePrint = () => {
     const printWindow = window.open("", "_blank");
@@ -288,14 +257,6 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
     img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
   };
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    );
-  }
-
   if (!slug) {
     return (
       <Card>
@@ -318,12 +279,12 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
       <div className="space-y-5">
         {/* Menu URL */}
         <div className="space-y-2">
-          <Label>{t.menuUrl}</Label>
+          <Label>{t.menuUrl}:</Label>
           <a
             href={fullMenuUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 p-3 border rounded-md hover:border-foreground/30 transition-colors cursor-pointer"
+            className="flex items-center gap-2 h-10 px-3 border rounded-md hover:border-foreground/30 transition-colors cursor-pointer"
           >
             <code className="text-sm flex-1 truncate">{menuUrl}</code>
             <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground" />
@@ -332,7 +293,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
 
         {/* Paper Format */}
         <div className="space-y-2">
-          <Label>{t.paperFormat}</Label>
+          <Label>{t.paperFormat}:</Label>
           <Select value={paperFormat} onValueChange={(v) => setPaperFormat(v as keyof typeof PAPER_FORMATS)}>
             <SelectTrigger>
               <SelectValue />
@@ -348,7 +309,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
 
         {/* QR Per Page */}
         <div className="space-y-2">
-          <Label>{t.qrPerPage}</Label>
+          <Label>{t.qrPerPage}:</Label>
           <Select value={qrPerPage} onValueChange={(v) => setQrPerPage(v as keyof typeof QR_PER_PAGE)}>
             <SelectTrigger>
               <SelectValue />
@@ -370,7 +331,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
 
         {/* Custom Text */}
         <div className="space-y-2">
-          <Label>{t.customText}</Label>
+          <Label>{t.customText}:</Label>
           <Textarea
             value={customText}
             onChange={(e) => setCustomText(e.target.value)}
@@ -381,7 +342,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
 
         {/* Text Size */}
         <div className="space-y-2">
-          <Label>{t.textSize}</Label>
+          <Label>{t.textSize}:</Label>
           <Select value={textSize} onValueChange={setTextSize}>
             <SelectTrigger>
               <SelectValue />
@@ -420,7 +381,7 @@ export function QrCodeClient({ t }: QrCodeClientProps) {
 
         {/* Preview iframe */}
         <div className="space-y-2">
-          <Label>{t.preview}</Label>
+          <Label>{t.preview}:</Label>
           <iframe
             ref={iframeRef}
             className="border rounded-lg bg-white shadow-sm w-full"
