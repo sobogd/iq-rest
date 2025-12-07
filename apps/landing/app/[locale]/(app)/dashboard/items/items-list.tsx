@@ -125,8 +125,10 @@ export function ItemsList({ initialData, translations: t }: ItemsListProps) {
 
   if (items.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-3.5rem)]">
-        <p className="text-sm text-muted-foreground">{t.noItems}</p>
+      <div className="flex items-center justify-center h-[calc(100vh-7rem)]">
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground max-w-[270px]">{t.noItems}</p>
+        </div>
       </div>
     );
   }

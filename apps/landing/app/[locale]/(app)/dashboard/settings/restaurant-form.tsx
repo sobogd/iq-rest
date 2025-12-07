@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
-import { Upload, X, Loader2 } from "lucide-react";
+import { Upload, X, Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -43,6 +43,8 @@ interface RestaurantFormProps {
     contacts: string;
     reservations: string;
     reservationsEnabled: string;
+    reservationsEnabledActive: string;
+    reservationsEnabledInactive: string;
     reservationMode: string;
     reservationModeAuto: string;
     reservationModeManual: string;
@@ -238,242 +240,245 @@ export function RestaurantForm({ translations: t }: RestaurantFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5 pb-20">
       {error && (
         <div className="bg-destructive/10 text-destructive px-4 py-2 rounded-md text-sm">
           {error}
         </div>
       )}
 
-      {/* Basic Info Card */}
-      <div className="bg-card rounded-lg border p-6 space-y-6">
-        <h2 className="text-lg font-semibold">{t.basicInfo}</h2>
-        <div className="space-y-2">
-          <Label htmlFor="title">{t.title} *</Label>
-          <Input
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder={t.titlePlaceholder}
-          />
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="title">{t.title}:</Label>
+        <Input
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder={t.titlePlaceholder}
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="description">{t.description}</Label>
-          <Input
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder={t.descriptionPlaceholder}
-          />
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="description">{t.description}:</Label>
+        <Input
+          id="description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder={t.descriptionPlaceholder}
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="slug">{t.slug}</Label>
-          <Input
-            id="slug"
-            value={slug}
-            onChange={(e) => setSlug(e.target.value)}
-            placeholder={t.slugPlaceholder}
-          />
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="slug">{t.slug}:</Label>
+        <Input
+          id="slug"
+          value={slug}
+          onChange={(e) => setSlug(e.target.value)}
+          placeholder={t.slugPlaceholder}
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Label>{t.source}</Label>
-          {source ? (
-            <div className="relative">
-              <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
-                {isVideo(source) ? (
-                  <video
-                    src={source}
-                    className="h-full w-full object-cover"
-                    muted
-                    loop
-                    playsInline
-                  />
-                ) : (
-                  <Image
-                    src={source}
-                    alt="Background media"
-                    fill
-                    className="object-cover"
-                    sizes="160px"
-                  />
-                )}
-              </div>
-              <Button
-                type="button"
-                variant="destructive"
-                size="icon"
-                className="absolute -top-2 left-36 h-6 w-6"
-                onClick={handleRemoveMedia}
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            </div>
-          ) : (
-            <div
-              className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors"
-              onClick={() => fileInputRef.current?.click()}
-            >
-              {uploading ? (
-                <div className="flex flex-col items-center gap-2">
-                  <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">Uploading...</span>
-                </div>
+      <div className="space-y-2">
+        <Label>{t.source}:</Label>
+        {source ? (
+          <div className="relative">
+            <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
+              {isVideo(source) ? (
+                <video
+                  src={source}
+                  className="h-full w-full object-cover"
+                  muted
+                  loop
+                  playsInline
+                />
               ) : (
-                <div className="flex flex-col items-center gap-2">
-                  <Upload className="h-8 w-8 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">{t.uploadMedia}</span>
-                </div>
+                <Image
+                  src={source}
+                  alt="Background media"
+                  fill
+                  className="object-cover"
+                  sizes="160px"
+                />
               )}
             </div>
-          )}
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
-            className="hidden"
-            onChange={handleMediaUpload}
-            disabled={uploading}
-          />
-        </div>
-      </div>
-
-      {/* Contacts Card */}
-      <div className="bg-card rounded-lg border p-6 space-y-6">
-        <h2 className="text-lg font-semibold">{t.contacts}</h2>
-        <div className="space-y-2">
-          <Label htmlFor="phone">{t.phone}</Label>
-          <Input
-            id="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder={t.phonePlaceholder}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="instagram">{t.instagram}</Label>
-          <Input
-            id="instagram"
-            value={instagram}
-            onChange={(e) => setInstagram(e.target.value)}
-            placeholder={t.instagramPlaceholder}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="whatsapp">{t.whatsapp}</Label>
-          <Input
-            id="whatsapp"
-            value={whatsapp}
-            onChange={(e) => setWhatsapp(e.target.value)}
-            placeholder={t.whatsappPlaceholder}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label>{t.coordinates}</Label>
-          <div className="rounded-lg overflow-hidden border">
-            <MapPicker
-              lat={lat}
-              lng={lng}
-              onLocationSelect={handleLocationSelect}
-            />
+            <Button
+              type="button"
+              variant="destructive"
+              size="icon"
+              className="absolute -top-2 left-36 h-6 w-6"
+              onClick={handleRemoveMedia}
+            >
+              <X className="h-4 w-4" />
+            </Button>
           </div>
+        ) : (
+          <div
+            className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors"
+            onClick={() => fileInputRef.current?.click()}
+          >
+            {uploading ? (
+              <div className="flex flex-col items-center gap-2">
+                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">Uploading...</span>
+              </div>
+            ) : (
+              <div className="flex flex-col items-center gap-2">
+                <Upload className="h-8 w-8 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">{t.uploadMedia}</span>
+              </div>
+            )}
+          </div>
+        )}
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
+          className="hidden"
+          onChange={handleMediaUpload}
+          disabled={uploading}
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="phone">{t.phone}:</Label>
+        <Input
+          id="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          placeholder={t.phonePlaceholder}
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="instagram">{t.instagram}:</Label>
+        <Input
+          id="instagram"
+          value={instagram}
+          onChange={(e) => setInstagram(e.target.value)}
+          placeholder={t.instagramPlaceholder}
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="whatsapp">{t.whatsapp}:</Label>
+        <Input
+          id="whatsapp"
+          value={whatsapp}
+          onChange={(e) => setWhatsapp(e.target.value)}
+          placeholder={t.whatsappPlaceholder}
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label>{t.coordinates}:</Label>
+        <div className="rounded-lg overflow-hidden border">
+          <MapPicker
+            lat={lat}
+            lng={lng}
+            onLocationSelect={handleLocationSelect}
+          />
         </div>
       </div>
 
-      {/* Reservations Card */}
-      <div id="reservations" className="bg-card rounded-lg border p-6 space-y-6">
-        <h2 className="text-lg font-semibold">{t.reservations}</h2>
-
-        <div className="flex items-center justify-between">
-          <Label htmlFor="reservationsEnabled">{t.reservationsEnabled}</Label>
+      <div className="space-y-2">
+        <Label htmlFor="reservationsEnabled">{t.reservations}:</Label>
+        <label
+          htmlFor="reservationsEnabled"
+          className="flex items-center justify-between h-10 px-3 rounded-md border border-input bg-background cursor-pointer"
+        >
+          <span className="text-sm">
+            {reservationsEnabled ? t.reservationsEnabledActive : t.reservationsEnabledInactive}
+          </span>
           <Switch
             id="reservationsEnabled"
             checked={reservationsEnabled}
             onCheckedChange={setReservationsEnabled}
+            className="scale-75"
           />
-        </div>
-
-        {reservationsEnabled && (
-          <>
-            <div className="space-y-2">
-              <Label>{t.reservationMode}</Label>
-              <Select value={reservationMode} onValueChange={setReservationMode}>
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="auto">{t.reservationModeAuto}</SelectItem>
-                  <SelectItem value="manual">{t.reservationModeManual}</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label>{t.reservationSlotMinutes}</Label>
-              <Select
-                value={reservationSlotMinutes.toString()}
-                onValueChange={(v) => setReservationSlotMinutes(parseInt(v))}
-              >
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="60">60 {t.minutes}</SelectItem>
-                  <SelectItem value="90">90 {t.minutes}</SelectItem>
-                  <SelectItem value="120">120 {t.minutes}</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label>{t.workingHours}</Label>
-              <div className="flex items-center gap-2">
-                <Select value={workingHoursStart} onValueChange={setWorkingHoursStart}>
-                  <SelectTrigger className="w-28">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {Array.from({ length: 24 }, (_, i) => {
-                      const hour = i.toString().padStart(2, "0");
-                      return (
-                        <SelectItem key={`${hour}:00`} value={`${hour}:00`}>
-                          {hour}:00
-                        </SelectItem>
-                      );
-                    })}
-                  </SelectContent>
-                </Select>
-                <span className="text-muted-foreground">—</span>
-                <Select value={workingHoursEnd} onValueChange={setWorkingHoursEnd}>
-                  <SelectTrigger className="w-28">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {Array.from({ length: 24 }, (_, i) => {
-                      const hour = i.toString().padStart(2, "0");
-                      return (
-                        <SelectItem key={`${hour}:00`} value={`${hour}:00`}>
-                          {hour}:00
-                        </SelectItem>
-                      );
-                    })}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-          </>
-        )}
+        </label>
       </div>
 
-      {/* Save Button */}
-      <Button type="submit" disabled={saving || uploading}>
-        {saving ? t.saving : saved ? t.saved : t.save}
-      </Button>
+      {reservationsEnabled && (
+        <>
+          <div className="space-y-2">
+            <Label>{t.reservationMode}:</Label>
+            <Select value={reservationMode} onValueChange={setReservationMode}>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="auto">{t.reservationModeAuto}</SelectItem>
+                <SelectItem value="manual">{t.reservationModeManual}</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label>{t.reservationSlotMinutes}:</Label>
+            <Select
+              value={reservationSlotMinutes.toString()}
+              onValueChange={(v) => setReservationSlotMinutes(parseInt(v))}
+            >
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="60">60 {t.minutes}</SelectItem>
+                <SelectItem value="90">90 {t.minutes}</SelectItem>
+                <SelectItem value="120">120 {t.minutes}</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label>{t.workingHours}:</Label>
+            <div className="flex items-center gap-2">
+              <Select value={workingHoursStart} onValueChange={setWorkingHoursStart}>
+                <SelectTrigger className="w-28">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 24 }, (_, i) => {
+                    const hour = i.toString().padStart(2, "0");
+                    return (
+                      <SelectItem key={`${hour}:00`} value={`${hour}:00`}>
+                        {hour}:00
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
+              <span className="text-muted-foreground">—</span>
+              <Select value={workingHoursEnd} onValueChange={setWorkingHoursEnd}>
+                <SelectTrigger className="w-28">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 24 }, (_, i) => {
+                    const hour = i.toString().padStart(2, "0");
+                    return (
+                      <SelectItem key={`${hour}:00`} value={`${hour}:00`}>
+                        {hour}:00
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Fixed Save Button */}
+      <div className="fixed bottom-6 right-6">
+        <Button type="submit" disabled={saving || uploading} className="shadow-lg">
+          {saving ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <Save className="h-4 w-4" />
+          )}
+          <span className="ml-1.5">{saving ? t.saving : saved ? t.saved : t.save}</span>
+        </Button>
+      </div>
     </form>
   );
 }

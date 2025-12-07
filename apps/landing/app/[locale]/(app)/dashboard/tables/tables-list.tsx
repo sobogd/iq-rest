@@ -103,8 +103,10 @@ export function TablesList({ initialData, translations: t }: TablesListProps) {
 
   if (tables.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-3.5rem)]">
-        <p className="text-sm text-muted-foreground">{t.noTables}</p>
+      <div className="flex items-center justify-center h-[calc(100vh-7rem)]">
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground max-w-[270px]">{t.noTables}</p>
+        </div>
       </div>
     );
   }
@@ -127,10 +129,10 @@ export function TablesList({ initialData, translations: t }: TablesListProps) {
                 className="scale-75"
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-0">
               {table.zone ? (
                 <>
-                  <span className="text-sm font-medium">{table.zone}</span>
+                  <span className="text-sm font-medium truncate">{table.zone}</span>
                   <span className="text-xs text-muted-foreground">
                     {t.table} {table.number} • {table.capacity} {t.guests}
                   </span>

@@ -25,6 +25,7 @@ const PAGE_LABELS: Record<string, string> = {
   menu: "Menu",
   contacts: "Contacts",
   language: "Language",
+  reserve: "Reserve",
 };
 
 const LANGUAGE_LABELS: Record<string, string> = {
@@ -46,6 +47,16 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
   const maxLangViews = Math.max(...data.viewsByLanguage.map((v) => v.count), 1);
   const maxDayViews = Math.max(...data.viewsByDay.map((v) => v.count), 1);
 
+  if (data.weeklyViews === 0) {
+    return (
+      <div className="flex items-center justify-center h-[calc(100vh-7rem)]">
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground max-w-[270px]">{t("noData")}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       {/* Left Column */}
@@ -53,7 +64,7 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
         {/* Monthly Usage */}
         {data.limit && (
           <div className="space-y-2">
-            <Label>{t("monthlyUsage")}</Label>
+            <Label>{t("monthlyUsage")}:</Label>
             <div className="p-3 border rounded-md space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="font-medium">{data.monthlyViews.toLocaleString()} / {data.limit.toLocaleString()}</span>
@@ -72,7 +83,7 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
 
         {/* Stats Grid */}
         <div className="space-y-2">
-          <Label>{t("overview")}</Label>
+          <Label>{t("overview")}:</Label>
           <div className="grid grid-cols-2 gap-3">
             <div className="p-3 border rounded-md">
               <div className="text-2xl font-bold">{data.todayViews.toLocaleString()}</div>
@@ -95,7 +106,7 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
 
         {/* Views by Page */}
         <div className="space-y-2">
-          <Label>{t("viewsByPage")}</Label>
+          <Label>{t("viewsByPage")}:</Label>
           <div className="p-3 border rounded-md space-y-3">
             {data.viewsByPage.length === 0 ? (
               <p className="text-sm text-muted-foreground">{t("noData")}</p>
@@ -125,7 +136,7 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
       <div className="space-y-5">
         {/* Views by Language */}
         <div className="space-y-2">
-          <Label>{t("viewsByLanguage")}</Label>
+          <Label>{t("viewsByLanguage")}:</Label>
           <div className="p-3 border rounded-md space-y-3">
             {data.viewsByLanguage.length === 0 ? (
               <p className="text-sm text-muted-foreground">{t("noData")}</p>
@@ -152,7 +163,7 @@ export function AnalyticsClient({ data }: AnalyticsClientProps) {
 
         {/* Daily Views Chart */}
         <div className="space-y-2">
-          <Label>{t("dailyViews")}</Label>
+          <Label>{t("dailyViews")}:</Label>
           <div className="p-3 border rounded-md">
             {data.viewsByDay.length === 0 ? (
               <p className="text-sm text-muted-foreground">{t("noData")}</p>

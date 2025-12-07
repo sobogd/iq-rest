@@ -143,8 +143,10 @@ export function ReservationsList({ initialData, translations: t }: ReservationsL
 
   if (reservations.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-10rem)]">
-        <p className="text-sm text-muted-foreground">{t.noReservations}</p>
+      <div className="flex items-center justify-center h-[calc(100vh-7rem)]">
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground max-w-[270px]">{t.noReservations}</p>
+        </div>
       </div>
     );
   }

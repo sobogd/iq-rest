@@ -807,6 +807,8 @@
     "contacts": "Contacts",
     "reservations": "Reservations",
     "reservationsEnabled": "Enable Reservations",
+    "reservationsEnabledActive": "Enabled",
+    "reservationsEnabledInactive": "Disabled",
     "reservationMode": "Confirmation Mode",
     "reservationModeAuto": "Automatic (instant confirmation)",
     "reservationModeManual": "Manual (requires approval)",

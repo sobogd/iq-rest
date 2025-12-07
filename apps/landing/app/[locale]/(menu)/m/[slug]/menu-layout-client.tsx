@@ -26,6 +26,7 @@ function getPageFromPath(pathname: string): string {
   if (pathname.includes("/menu")) return "menu";
   if (pathname.includes("/contacts")) return "contacts";
   if (pathname.includes("/language")) return "language";
+  if (pathname.includes("/reserve")) return "reserve";
   return "home";
 }
 

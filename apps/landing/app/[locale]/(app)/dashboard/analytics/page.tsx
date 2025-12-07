@@ -10,6 +10,25 @@ const PLAN_LIMITS: Record<string, number> = {
   PRO: Infinity,
 };
 
+function getLast7Days(viewsByDay: { date: Date; count: bigint }[]) {
+  const result: { date: string; count: number }[] = [];
+  const dataMap = new Map(
+    viewsByDay.map((v) => [v.date.toISOString().split("T")[0], Number(v.count)])
+  );
+
+  for (let i = 6; i >= 0; i--) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    const dateStr = date.toISOString().split("T")[0];
+    result.push({
+      date: dateStr,
+      count: dataMap.get(dateStr) || 0,
+    });
+  }
+
+  return result;
+}
+
 async function getAnalyticsData() {
   const cookieStore = await cookies();
   const userEmail = cookieStore.get("user_email");
@@ -116,10 +135,7 @@ async function getAnalyticsData() {
       language: v.language,
       count: v._count.language,
     })),
-    viewsByDay: viewsByDay.map((v) => ({
-      date: v.date.toISOString().split("T")[0],
-      count: Number(v.count),
-    })),
+    viewsByDay: getLast7Days(viewsByDay),
   };
 }
 

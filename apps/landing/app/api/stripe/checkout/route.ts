@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { priceLookupKey } = await request.json();
+    const { priceLookupKey, locale = "en" } = await request.json();
 
     // Validate price lookup key
     const validKeys = Object.values(PRICE_LOOKUP_KEYS);
@@ -95,8 +95,8 @@ export async function POST(request: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/en/dashboard/billing?success=true`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/en/dashboard/billing?canceled=true`,
+      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard/billing?success=true`,
+      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard/billing?canceled=true`,
       subscription_data: {
         metadata: {
           companyId: company.id,

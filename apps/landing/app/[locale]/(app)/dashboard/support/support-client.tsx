@@ -2,10 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, RefreshCw } from "lucide-react";
+import { Send } from "lucide-react";
 
 interface Message {
   id: string;
@@ -23,48 +22,31 @@ export function SupportClient({ initialMessages }: SupportClientProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [newMessage, setNewMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [canRefresh, setCanRefresh] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const refreshTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Auto-refresh messages every 60 seconds
   useEffect(() => {
-    // Show refresh button after 60 seconds on initial load
-    refreshTimerRef.current = setTimeout(() => {
-      setCanRefresh(true);
-    }, 60000);
-
-    return () => {
-      if (refreshTimerRef.current) {
-        clearTimeout(refreshTimerRef.current);
+    const fetchMessages = async () => {
+      try {
+        const response = await fetch("/api/support/messages");
+        if (response.ok) {
+          const data = await response.json();
+          setMessages(data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch messages:", error);
       }
     };
+
+    const interval = setInterval(fetchMessages, 60000);
+    return () => clearInterval(interval);
   }, []);
 
-  const fetchMessages = async () => {
-    if (!canRefresh || isRefreshing) return;
-
-    setIsRefreshing(true);
-    setCanRefresh(false);
-
-    try {
-      const response = await fetch("/api/support/messages");
-      if (response.ok) {
-        const data = await response.json();
-        setMessages(data);
-        setLastUpdated(new Date());
-      }
-    } catch (error) {
-      console.error("Failed to fetch messages:", error);
-    } finally {
-      setIsRefreshing(false);
-      // Start timer to show button again after 60 seconds
-      refreshTimerRef.current = setTimeout(() => {
-        setCanRefresh(true);
-      }, 60000);
-    }
-  };
+  // Scroll to bottom when messages change
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handleSend = async () => {
     if (!newMessage.trim() || isSending) return;
@@ -108,33 +90,15 @@ export function SupportClient({ initialMessages }: SupportClientProps) {
   };
 
   return (
-    <div className="space-y-5">
-      {/* Messages Section */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <Label>{t("title")}</Label>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-muted-foreground">
-              {t("lastUpdated")}: {lastUpdated.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-            </span>
-            {canRefresh && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-6 w-6"
-                onClick={fetchMessages}
-                disabled={isRefreshing}
-              >
-                <RefreshCw className={`h-3 w-3 ${isRefreshing ? "animate-spin" : ""}`} />
-              </Button>
-            )}
-          </div>
-        </div>
-        <div className="border-t pt-2" />
+    <div className="flex flex-col h-[calc(100vh-7rem)]">
+      {/* Messages - scrollable */}
+      <div className="flex-1 overflow-y-auto py-3 space-y-3 hide-scrollbar">
         {messages.length === 0 ? (
-          <div className="py-8 text-center text-muted-foreground">
-            <p className="font-medium">{t("emptyTitle")}</p>
-            <p className="text-sm">{t("emptyDescription")}</p>
+          <div className="flex items-center justify-center h-full">
+            <div className="text-center">
+              <p className="font-medium">{t("emptyTitle")}</p>
+              <p className="text-sm text-muted-foreground max-w-[270px] mt-2">{t("emptyDescription")}</p>
+            </div>
           </div>
         ) : (
           messages.map((msg) => (
@@ -143,18 +107,18 @@ export function SupportClient({ initialMessages }: SupportClientProps) {
               className={`flex ${msg.isAdmin ? "justify-start" : "justify-end"}`}
             >
               <div
-                className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                className={`max-w-[80%] rounded-lg px-3 py-2 ${
                   msg.isAdmin
                     ? "bg-muted text-foreground"
                     : "bg-primary text-primary-foreground"
                 }`}
               >
                 {msg.isAdmin && (
-                  <div className="text-xs font-medium mb-1 opacity-70">
+                  <div className="text-xs font-medium mb-0.5 opacity-70">
                     {t("supportTeam")}
                   </div>
                 )}
-                <p className="whitespace-pre-wrap break-words">{msg.message}</p>
+                <p className="text-sm whitespace-pre-wrap break-words">{msg.message}</p>
                 <div
                   className={`text-xs mt-1 ${
                     msg.isAdmin ? "text-muted-foreground" : "opacity-70"
@@ -166,19 +130,19 @@ export function SupportClient({ initialMessages }: SupportClientProps) {
             </div>
           ))
         )}
+        <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Section */}
-      <div className="space-y-3">
-        <Label>{t("sendMessage")}</Label>
+      {/* Input - fixed at bottom */}
+      <div className="pt-3 shrink-0 space-y-3">
         <Textarea
           ref={textareaRef}
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={t("placeholder")}
-          className="min-h-[100px] resize-none"
-          rows={4}
+          className="min-h-[80px] resize-none"
+          rows={3}
         />
         <div className="flex items-start justify-between">
           <p className="text-xs text-muted-foreground">

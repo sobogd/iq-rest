@@ -31,6 +31,8 @@ export default async function SettingsPage() {
     contacts: t("contacts"),
     reservations: t("reservations"),
     reservationsEnabled: t("reservationsEnabled"),
+    reservationsEnabledActive: t("reservationsEnabledActive"),
+    reservationsEnabledInactive: t("reservationsEnabledInactive"),
     reservationMode: t("reservationMode"),
     reservationModeAuto: t("reservationModeAuto"),
     reservationModeManual: t("reservationModeManual"),

@@ -26,7 +26,6 @@ interface SubscriptionStatusResponse {
   paymentProcessing: boolean;
 }
 
-// Define all subscription options
 const SUBSCRIPTION_OPTIONS = [
   { id: "FREE", plan: "FREE" as PlanType, cycle: null, price: 0, lookupKey: null },
   { id: "BASIC_MONTHLY", plan: "BASIC" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 4, lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
@@ -47,13 +46,12 @@ export function BillingClient({
   const router = useRouter();
   const params = useParams();
   const locale = params.locale as string;
+
   const [loading, setLoading] = useState<string | null>(null);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [isPolling, setIsPolling] = useState(false);
   const [paymentProcessing, setPaymentProcessing] = useState(initialPaymentProcessing);
-  const [isInitialLoading, setIsInitialLoading] = useState(true);
 
-  // Dynamic subscription state
   const [currentPlan, setCurrentPlan] = useState(initialPlan);
   const [billingCycle, setBillingCycle] = useState(initialBillingCycle);
   const [subscriptionStatus, setSubscriptionStatus] = useState(initialStatus);
@@ -67,7 +65,6 @@ export function BillingClient({
         setBillingCycle(data.billingCycle);
         setSubscriptionStatus(data.subscriptionStatus);
 
-        // Stop polling if subscription is active or paymentProcessing was reset in DB
         if ((data.subscriptionStatus === "ACTIVE" && data.plan !== "FREE") || !data.paymentProcessing) {
           setIsPolling(false);
           setPaymentProcessing(false);
@@ -80,25 +77,6 @@ export function BillingClient({
       return false;
     }
   }, [router, locale]);
-
-  // Fetch initial status
-  useEffect(() => {
-    const fetchInitialStatus = async () => {
-      try {
-        const response = await fetch("/api/subscription/status");
-        if (response.ok) {
-          const data: SubscriptionStatusResponse = await response.json();
-          setCurrentPlan(data.plan);
-          setBillingCycle(data.billingCycle);
-          setSubscriptionStatus(data.subscriptionStatus);
-          setPaymentProcessing(data.paymentProcessing);
-        }
-      } finally {
-        setIsInitialLoading(false);
-      }
-    };
-    fetchInitialStatus();
-  }, []);
 
   // Set processing flag in DB when returning from Stripe
   useEffect(() => {
@@ -138,7 +116,7 @@ export function BillingClient({
             }
           }
         }, 2000);
-      }, showSuccess ? 5000 : 0); // Start immediately if already processing
+      }, showSuccess ? 5000 : 0);
 
       return () => clearTimeout(initialDelay);
     } else if (showCanceled) {
@@ -155,7 +133,7 @@ export function BillingClient({
       const response = await fetch("/api/stripe/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ priceLookupKey: lookupKey }),
+        body: JSON.stringify({ priceLookupKey: lookupKey, locale }),
       });
 
       const data = await response.json();
@@ -179,6 +157,8 @@ export function BillingClient({
     try {
       const response = await fetch("/api/stripe/portal", {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ locale }),
       });
 
       const data = await response.json();
@@ -197,7 +177,6 @@ export function BillingClient({
 
   const isActive = subscriptionStatus === "ACTIVE";
 
-  // Check if option is current subscription
   const isCurrentOption = (option: typeof SUBSCRIPTION_OPTIONS[number]) => {
     if (option.plan === "FREE") {
       return currentPlan === "FREE" || !isActive;
@@ -205,20 +184,18 @@ export function BillingClient({
     return currentPlan === option.plan && billingCycle === option.cycle && isActive;
   };
 
-  // Show loading state while initial loading or polling
-  if (isInitialLoading || isPolling) {
+  // Show polling state when processing payment
+  if (isPolling) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-3.5rem)] px-4">
+      <div className="flex items-center justify-center py-12">
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
-          {isPolling && (
-            <div className="text-center">
-              <p className="font-medium">{t("processingPayment")}</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                {t("processingPaymentDescription")}
-              </p>
-            </div>
-          )}
+          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+          <div className="text-center">
+            <p className="font-medium">{t("processingPayment")}</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              {t("processingPaymentDescription")}
+            </p>
+          </div>
         </div>
       </div>
     );

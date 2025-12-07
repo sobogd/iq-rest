@@ -87,8 +87,10 @@ export function CategoriesList({ initialData, translations: t }: CategoriesListP
 
   if (categories.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-3.5rem)]">
-        <p className="text-sm text-muted-foreground">{t.noCategories}</p>
+      <div className="flex items-center justify-center h-[calc(100vh-7rem)]">
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground max-w-[270px]">{t.noCategories}</p>
+        </div>
       </div>
     );
   }

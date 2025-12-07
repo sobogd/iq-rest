@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -11,7 +10,6 @@ import { Printer, Download, ExternalLink } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
 interface Translations {
-  preview: string;
   paperFormat: string;
   qrPerPage: string;
   customText: string;
@@ -72,14 +70,12 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
   const [textSize, setTextSize] = useState<string>("medium");
   const [qrSvg, setQrSvg] = useState<string>("");
   const printRef = useRef<HTMLDivElement>(null);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const menuUrl = slug ? `sobogdqr.com/m/${slug}` : "";
   const fullMenuUrl = slug ? `https://sobogdqr.com/m/${slug}` : "";
   const paper = PAPER_FORMATS[paperFormat];
   const isSmallPaper = paperFormat === "a5" || paperFormat === "a6";
 
-  // Reset qrPerPage if switching to small paper with invalid selection
   useEffect(() => {
     if (isSmallPaper && (qrPerPage === "six" || qrPerPage === "nine" || qrPerPage === "sixteen")) {
       setQrPerPage("four");
@@ -112,7 +108,7 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
     return size.many;
   };
 
-  const generatePrintHtml = (svgContent: string, isPreview = false) => {
+  const generatePrintHtml = (svgContent: string) => {
     const formattedCustomText = customText.replace(/\n/g, "<br>");
     const scanTextSize = getTextSizePx();
     const qrItems = Array(layout.count).fill(null).map(() => `
@@ -121,12 +117,6 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
         ${customText ? `<div class="scan-text">${formattedCustomText}</div>` : ""}
       </div>
     `).join("");
-
-    const previewStyles = isPreview ? `
-      html {
-        zoom: 0.4;
-      }
-    ` : "";
 
     return `
       <!DOCTYPE html>
@@ -141,10 +131,6 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
               html, body {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
-                width: 100% !important;
-                height: 100% !important;
-                transform: none !important;
-                zoom: 1 !important;
               }
             }
             * {
@@ -160,7 +146,6 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
               font-family: system-ui, -apple-system, sans-serif;
               padding: 10mm;
             }
-            ${previewStyles}
             .grid {
               display: grid;
               grid-template-columns: repeat(${layout.cols}, 1fr);
@@ -168,6 +153,7 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
               gap: 8mm;
               width: 100%;
               height: 100%;
+              place-items: center;
             }
             .qr-item {
               display: flex;
@@ -200,7 +186,6 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
     `;
   };
 
-  // Update QR SVG when menuUrl changes
   useEffect(() => {
     const timer = setTimeout(() => {
       const svg = printRef.current?.querySelector("svg")?.outerHTML || "";
@@ -209,28 +194,26 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
     return () => clearTimeout(timer);
   }, [menuUrl]);
 
-  // Update iframe preview
-  useEffect(() => {
-    if (!qrSvg || !iframeRef.current) return;
-    const iframe = iframeRef.current;
-    const doc = iframe.contentDocument || iframe.contentWindow?.document;
-    if (doc) {
-      doc.open();
-      doc.write(generatePrintHtml(qrSvg, true));
-      doc.close();
-    }
-  }, [qrSvg, paperFormat, qrPerPage, customText, textSize, layout, paper, qrSizeMm]);
-
   const handlePrint = () => {
-    const printWindow = window.open("", "_blank");
-    if (!printWindow || !qrSvg) return;
+    if (!qrSvg) return;
+    const html = generatePrintHtml(qrSvg);
 
-    printWindow.document.write(generatePrintHtml(qrSvg));
-    printWindow.document.close();
-    printWindow.onload = () => {
-      printWindow.print();
-      printWindow.close();
-    };
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      const blob = new Blob([html], { type: "text/html" });
+      const url = URL.createObjectURL(blob);
+      window.open(url, "_blank");
+    } else {
+      const printWindow = window.open("", "_blank");
+      if (!printWindow) return;
+      printWindow.document.write(html);
+      printWindow.document.close();
+      printWindow.onload = () => {
+        printWindow.print();
+        printWindow.close();
+      };
+    }
   };
 
   const handleDownload = () => {
@@ -259,137 +242,117 @@ export function QrCodeClient({ t, slug }: QrCodeClientProps) {
 
   if (!slug) {
     return (
-      <Card>
-        <CardContent className="pt-6">
-          <div className="text-center space-y-4">
-            <h2 className="text-lg font-semibold">{t.noSlug}</h2>
-            <p className="text-muted-foreground">{t.noSlugDescription}</p>
-            <Link href="/dashboard/settings">
-              <Button>{t.goToSettings}</Button>
-            </Link>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="flex items-center justify-center h-[calc(100vh-7rem)]">
+        <div className="text-center">
+          <p className="font-medium">{t.noSlug}</p>
+          <p className="text-sm text-muted-foreground max-w-[270px] mt-2">{t.noSlugDescription}</p>
+          <Link href="/dashboard/settings" className="mt-5 inline-block">
+            <Button size="sm">{t.goToSettings}</Button>
+          </Link>
+        </div>
+      </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Left Column - Form */}
-      <div className="space-y-5">
-        {/* Menu URL */}
-        <div className="space-y-2">
-          <Label>{t.menuUrl}:</Label>
-          <a
-            href={fullMenuUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 h-10 px-3 border rounded-md hover:border-foreground/30 transition-colors cursor-pointer"
-          >
-            <code className="text-sm flex-1 truncate">{menuUrl}</code>
-            <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground" />
-          </a>
-        </div>
-
-        {/* Paper Format */}
-        <div className="space-y-2">
-          <Label>{t.paperFormat}:</Label>
-          <Select value={paperFormat} onValueChange={(v) => setPaperFormat(v as keyof typeof PAPER_FORMATS)}>
-            <SelectTrigger>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="a4">{t.formats.a4}</SelectItem>
-              <SelectItem value="a5">{t.formats.a5}</SelectItem>
-              <SelectItem value="a6">{t.formats.a6}</SelectItem>
-              <SelectItem value="letter">{t.formats.letter}</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* QR Per Page */}
-        <div className="space-y-2">
-          <Label>{t.qrPerPage}:</Label>
-          <Select value={qrPerPage} onValueChange={(v) => setQrPerPage(v as keyof typeof QR_PER_PAGE)}>
-            <SelectTrigger>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="one">{t.perPage.one}</SelectItem>
-              <SelectItem value="two">{t.perPage.two}</SelectItem>
-              <SelectItem value="four">{t.perPage.four}</SelectItem>
-              {!isSmallPaper && (
-                <>
-                  <SelectItem value="six">{t.perPage.six}</SelectItem>
-                  <SelectItem value="nine">{t.perPage.nine}</SelectItem>
-                  <SelectItem value="sixteen">{t.perPage.sixteen}</SelectItem>
-                </>
-              )}
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* Custom Text */}
-        <div className="space-y-2">
-          <Label>{t.customText}:</Label>
-          <Textarea
-            value={customText}
-            onChange={(e) => setCustomText(e.target.value)}
-            placeholder={t.customTextPlaceholder}
-            rows={2}
-          />
-        </div>
-
-        {/* Text Size */}
-        <div className="space-y-2">
-          <Label>{t.textSize}:</Label>
-          <Select value={textSize} onValueChange={setTextSize}>
-            <SelectTrigger>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="small">{t.textSizes.small}</SelectItem>
-              <SelectItem value="medium">{t.textSizes.medium}</SelectItem>
-              <SelectItem value="large">{t.textSizes.large}</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="space-y-3 pt-2">
-          <Button onClick={handlePrint} className="w-full">
-            <Printer className="mr-2 h-4 w-4" />
-            {t.print}
-          </Button>
-          <Button onClick={handleDownload} variant="outline" className="w-full">
-            <Download className="mr-2 h-4 w-4" />
-            {t.download}
-          </Button>
-        </div>
+    <div className="space-y-5">
+      {/* Hidden QR code for SVG generation */}
+      <div ref={printRef} className="hidden">
+        <QRCodeSVG
+          value={menuUrl}
+          size={200}
+          level="L"
+        />
       </div>
 
-      {/* Right Column - Preview */}
-      <div className="space-y-4">
-        {/* Hidden QR code for SVG generation */}
-        <div ref={printRef} className="hidden">
-          <QRCodeSVG
-            value={menuUrl}
-            size={200}
-            level="L"
-          />
-        </div>
+      {/* Menu URL */}
+      <div className="space-y-2">
+        <Label>{t.menuUrl}:</Label>
+        <a
+          href={fullMenuUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 h-10 px-3 border rounded-md hover:border-foreground/30 transition-colors cursor-pointer"
+        >
+          <code className="text-sm flex-1 truncate">{menuUrl}</code>
+          <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground" />
+        </a>
+      </div>
 
-        {/* Preview iframe */}
-        <div className="space-y-2">
-          <Label>{t.preview}:</Label>
-          <iframe
-            ref={iframeRef}
-            className="border rounded-lg bg-white shadow-sm w-full"
-            style={{
-              aspectRatio: `${paper.width}/${paper.height}`,
-            }}
-          />
-        </div>
+      {/* Paper Format */}
+      <div className="space-y-2">
+        <Label>{t.paperFormat}:</Label>
+        <Select value={paperFormat} onValueChange={(v) => setPaperFormat(v as keyof typeof PAPER_FORMATS)}>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="a4">{t.formats.a4}</SelectItem>
+            <SelectItem value="a5">{t.formats.a5}</SelectItem>
+            <SelectItem value="a6">{t.formats.a6}</SelectItem>
+            <SelectItem value="letter">{t.formats.letter}</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* QR Per Page */}
+      <div className="space-y-2">
+        <Label>{t.qrPerPage}:</Label>
+        <Select value={qrPerPage} onValueChange={(v) => setQrPerPage(v as keyof typeof QR_PER_PAGE)}>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="one">{t.perPage.one}</SelectItem>
+            <SelectItem value="two">{t.perPage.two}</SelectItem>
+            <SelectItem value="four">{t.perPage.four}</SelectItem>
+            {!isSmallPaper && (
+              <>
+                <SelectItem value="six">{t.perPage.six}</SelectItem>
+                <SelectItem value="nine">{t.perPage.nine}</SelectItem>
+                <SelectItem value="sixteen">{t.perPage.sixteen}</SelectItem>
+              </>
+            )}
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Custom Text */}
+      <div className="space-y-2">
+        <Label>{t.customText}:</Label>
+        <Textarea
+          value={customText}
+          onChange={(e) => setCustomText(e.target.value)}
+          placeholder={t.customTextPlaceholder}
+          rows={2}
+        />
+      </div>
+
+      {/* Text Size */}
+      <div className="space-y-2">
+        <Label>{t.textSize}:</Label>
+        <Select value={textSize} onValueChange={setTextSize}>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="small">{t.textSizes.small}</SelectItem>
+            <SelectItem value="medium">{t.textSizes.medium}</SelectItem>
+            <SelectItem value="large">{t.textSizes.large}</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {/* Action Buttons */}
+      <div className="space-y-3 pt-2">
+        <Button onClick={handlePrint} className="w-full">
+          <Printer className="mr-2 h-4 w-4" />
+          {t.print}
+        </Button>
+        <Button onClick={handleDownload} variant="outline" className="w-full">
+          <Download className="mr-2 h-4 w-4" />
+          {t.download}
+        </Button>
       </div>
     </div>
   );

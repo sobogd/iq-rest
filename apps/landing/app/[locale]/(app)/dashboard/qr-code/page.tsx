@@ -10,7 +10,6 @@ export default async function QrCodePage() {
   ]);
 
   const translations = {
-    preview: t("preview"),
     paperFormat: t("paperFormat"),
     qrPerPage: t("qrPerPage"),
     customText: t("customText"),
