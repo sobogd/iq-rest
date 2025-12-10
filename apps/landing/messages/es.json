@@ -544,107 +544,6 @@
       }
     }
   },
-  "sidebar": {
-    "subtitle": "Panel de Control",
-    "navigation": "Navegación",
-    "menu": {
-      "dashboard": "Panel",
-      "categories": "Categorías",
-      "items": "Elementos",
-      "languages": "Idiomas",
-      "reservations": "Reservas",
-      "qrCode": "Código QR",
-      "analytics": "Análisis",
-      "settings": "Configuración",
-      "billing": "Facturación",
-      "support": "Soporte"
-    },
-    "user": "Usuario",
-    "logout": "Cerrar sesión",
-    "noCompany": "Sin empresa"
-  },
-  "dashboard": {
-    "meta": {
-      "title": "Panel de Control - SobogdQR",
-      "description": "Gestiona tu menú QR y la configuración de tu restaurante"
-    },
-    "title": "Panel de Control",
-    "subtitle": "Bienvenido a tu panel de control de SobogdQR",
-    "comingSoon": "Próximamente",
-    "cards": {
-      "menu": {
-        "title": "Menú",
-        "description": "Gestiona los elementos y categorías de tu menú"
-      },
-      "qrCode": {
-        "title": "Código QR",
-        "description": "Descarga y personaliza tu código QR"
-      },
-      "analytics": {
-        "title": "Análisis",
-        "description": "Ver el rendimiento y estadísticas de tu menú"
-      },
-      "settings": {
-        "title": "Configuración",
-        "description": "Configura los ajustes de tu restaurante"
-      }
-    }
-  },
-  "onboarding": {
-    "title": "Primeros Pasos",
-    "completed": "¡Configuración completa! Tu restaurante está listo.",
-    "steps": {
-      "restaurant": {
-        "title": "Configura tu restaurante",
-        "description": "Añade el nombre, descripción, imagen de portada y URL de tu restaurante. Esta información se mostrará en tu página de menú público.",
-        "button": "Ir a Configuración"
-      },
-      "category": {
-        "title": "Crea una categoría",
-        "description": "Organiza tu menú con categorías como Entrantes, Platos Principales, Postres, etc. Las categorías ayudan a los clientes a navegar fácilmente por tu menú.",
-        "button": "Añadir Categoría"
-      },
-      "item": {
-        "title": "Añade tu primer plato",
-        "description": "Añade platos a tu menú con fotos, descripciones y precios. Las imágenes de alta calidad aumentan los pedidos de los clientes hasta un 30%.",
-        "button": "Añadir Plato"
-      },
-      "translations": {
-        "title": "Configura traducciones",
-        "description": "Traduce tu menú para atender a clientes internacionales. La traducción con IA te ayuda a llegar a más clientes sin esfuerzo.",
-        "button": "Gestionar Idiomas"
-      },
-      "tables": {
-        "title": "Configura mesas y reservas",
-        "description": "Añade tus mesas y activa el sistema de reservas. Los clientes podrán reservar mesas directamente desde tu menú.",
-        "button": "Añadir Mesa"
-      },
-      "qrCode": {
-        "title": "¡Tu menú está listo!",
-        "description": "Tu sitio web de restaurante y menú digital están activos. Imprime códigos QR para tus mesas o comparte el enlace con los clientes.",
-        "button": "Ver Menú y Código QR"
-      }
-    },
-    "extraSteps": {
-      "translations": {
-        "title": "Añadir traducciones",
-        "description": "Traduce tu menú para llegar a clientes internacionales. Activa idiomas adicionales y usa traducción con IA.",
-        "button": "Gestionar Idiomas"
-      },
-      "reservations": {
-        "title": "Configurar reservas",
-        "description": "Activa las reservas de mesa para que los clientes puedan reservar directamente desde tu menú. Añade mesas y configura los ajustes.",
-        "button": "Configuración",
-        "button2": "Añadir Mesas"
-      },
-      "analytics": {
-        "title": "Seguimiento y soporte",
-        "description": "Monitorea las visitas a tu menú y el engagement de los clientes. ¿Necesitas ayuda? Nuestro equipo de soporte está aquí para ti.",
-        "button": "Análisis",
-        "button2": "Soporte"
-      }
-    }
-  },
   "qrCode": {
     "title": "Código QR",
     "description": "Descarga e imprime tu código QR para que los clientes lo escaneen",
@@ -660,7 +559,10 @@
     "noSlugDescription": "Por favor, configura la URL de tu restaurante en ajustes primero para generar un código QR.",
     "goToSettings": "Ir a Configuración",
     "loading": "Cargando...",
-    "menuUrl": "URL de su sitio web",
+    "menuUrl": "Tu sitio web",
+    "websiteReady": "¡Tu sitio web está listo!",
+    "openWebsite": "Abrir sitio",
+    "printSection": "Imprimir y descargar código QR:",
     "formats": {
       "a4": "A4 (210 × 297 mm)",
       "a5": "A5 (148 × 210 mm)",
@@ -681,95 +583,6 @@
       "medium": "Mediano",
       "large": "Grande"
     }
-  },
-  "categories": {
-    "title": "Categorías",
-    "description": "Gestiona las categorías de tu menú",
-    "addCategory": "Añadir Categoría",
-    "newTitle": "Nueva Categoría",
-    "editTitle": "Editar Categoría",
-    "name": "Nombre",
-    "namePlaceholder": "Introduce el nombre de la categoría",
-    "description_label": "Descripción",
-    "descriptionPlaceholder": "Introduce la descripción de la categoría (opcional)",
-    "sortOrder": "Orden",
-    "status": "Estado",
-    "active": "Activo",
-    "inactive": "Inactivo",
-    "isActive": "Activo",
-    "actions": "Acciones",
-    "edit": "Editar",
-    "delete": "Eliminar",
-    "moveUp": "Subir",
-    "moveDown": "Bajar",
-    "noCategories": "Aún no hay categorías. Crea tu primera categoría para empezar.",
-    "deleteConfirm": "¿Estás seguro de que quieres eliminar esta categoría? Esta acción no se puede deshacer.",
-    "cancel": "Cancelar",
-    "save": "Guardar",
-    "saving": "Guardando...",
-    "back": "Volver a Categorías",
-    "loading": "Cargando...",
-    "notFound": "Categoría no encontrada",
-    "error": "Error",
-    "close": "Cerrar",
-    "nameTranslation": "Nombre en {language}"
-  },
-  "items": {
-    "title": "Elementos",
-    "description": "Gestiona los elementos de tu menú",
-    "addItem": "Añadir Elemento",
-    "newTitle": "Nuevo Elemento",
-    "editTitle": "Editar Elemento",
-    "name": "Nombre",
-    "namePlaceholder": "Introduce el nombre del elemento",
-    "description_label": "Descripción",
-    "descriptionPlaceholder": "Introduce la descripción del elemento (opcional)",
-    "price": "Precio",
-    "pricePlaceholder": "0.00",
-    "category": "Categoría",
-    "categoryPlaceholder": "Selecciona una categoría",
-    "image": "Imagen",
-    "uploadImage": "Haz clic para subir imagen",
-    "removeImage": "Eliminar imagen",
-    "status": "Estado",
-    "active": "Activo",
-    "inactive": "Inactivo",
-    "edit": "Editar",
-    "delete": "Eliminar",
-    "moveUp": "Subir",
-    "moveDown": "Bajar",
-    "noItems": "Aún no hay elementos. Crea tu primer elemento para empezar.",
-    "deleteConfirm": "¿Estás seguro de que quieres eliminar este elemento? Esta acción no se puede deshacer.",
-    "cancel": "Cancelar",
-    "save": "Guardar",
-    "saving": "Guardando...",
-    "back": "Volver a Elementos",
-    "loading": "Cargando...",
-    "notFound": "Elemento no encontrado",
-    "allCategories": "Todas las Categorías",
-    "filterByCategory": "Filtrar por categoría",
-    "error": "Error",
-    "close": "Cerrar",
-    "nameTranslation": "Nombre en {language}",
-    "descriptionTranslation": "Descripción en {language}"
-  },
-  "analytics": {
-    "title": "Analíticas",
-    "subtitle": "Rastrea el rendimiento de tu menú y las estadísticas de visitantes",
-    "unauthorized": "Inicia sesión para ver las analíticas",
-    "overview": "Resumen",
-    "monthlyUsage": "Uso Mensual",
-    "scansThisMonth": "escaneos este mes",
-    "limitReached": "Has alcanzado tu límite mensual de escaneos. Mejora tu plan para escaneos ilimitados.",
-    "todayViews": "Hoy",
-    "weeklyViews": "Esta Semana",
-    "monthlyViews": "Este Mes",
-    "uniqueVisitors": "Visitantes Únicos",
-    "last7Days": "Últimos 7 días",
-    "viewsByPage": "Vistas por Página",
-    "viewsByLanguage": "Vistas por Idioma",
-    "dailyViews": "Vistas Diarias (Últimos 7 Días)",
-    "noData": "Aún no hay datos disponibles"
   },
   "support": {
     "title": "Mensajes",
@@ -830,51 +643,6 @@
       "subtitle": "Tus clientes esperan un menú digital"
     }
   },
-  "settings": {
-    "subtitle": "Gestiona la información de tu restaurante",
-    "title": "Nombre del Restaurante",
-    "titlePlaceholder": "Introduce el nombre del restaurante",
-    "description": "Descripción",
-    "descriptionPlaceholder": "Breve descripción de tu restaurante",
-    "slug": "URL Slug",
-    "slugPlaceholder": "mi-restaurante",
-    "source": "Imagen/Video de Fondo",
-    "uploadMedia": "Haz clic para subir imagen o video",
-    "removeMedia": "Eliminar",
-    "address": "Dirección",
-    "addressPlaceholder": "Calle Principal 123, Ciudad",
-    "coordinates": "Coordenadas del Mapa",
-    "xPlaceholder": "Latitud",
-    "yPlaceholder": "Longitud",
-    "phone": "Teléfono",
-    "phonePlaceholder": "+34 123 456 789",
-    "instagram": "Instagram",
-    "instagramPlaceholder": "@turestaurante",
-    "whatsapp": "WhatsApp",
-    "whatsappPlaceholder": "+34 123 456 789",
-    "save": "Guardar",
-    "saving": "Guardando...",
-    "saved": "¡Guardado!",
-    "languages": "Idiomas Soportados",
-    "defaultLanguage": "Idioma Predeterminado",
-    "selectLanguages": "Selecciona idiomas para tu menú",
-    "basicInfo": "Información Básica",
-    "contacts": "Contactos",
-    "reservations": "Reservas",
-    "reservationsEnabled": "Activar Reservas",
-    "reservationsEnabledActive": "Activado",
-    "reservationsEnabledInactive": "Desactivado",
-    "reservationMode": "Modo de Confirmación",
-    "reservationModeAuto": "Automático (confirmación instantánea)",
-    "reservationModeManual": "Manual (requiere aprobación)",
-    "reservationSlotMinutes": "Duración de la Reserva",
-    "reservationAdvanceDays": "Reserva Anticipada",
-    "workingHours": "Horario de Trabajo",
-    "workingHoursStart": "Desde",
-    "workingHoursEnd": "Hasta",
-    "minutes": "min",
-    "days": "días"
-  },
   "reservations": {
     "title": "Reservas",
     "tables": "Mesas",
@@ -919,7 +687,8 @@
     "awaitingResponse": "Esperando Respuesta",
     "today": "Hoy",
     "tomorrow": "Mañana",
-    "otherReservations": "Otras Reservas"
+    "otherReservations": "Otras Reservas",
+    "sort": "Ordenar"
   },
   "publicReserve": {
     "title": "Reservar Mesa",
@@ -1086,38 +855,244 @@
       }
     }
   },
-  "translations": {
-    "title": "Idiomas",
-    "subtitle": "Gestiona los idiomas de tu menú",
-    "progress": "Progreso de Traducción",
-    "translated": "Traducido",
-    "filter": {
-      "all": "Todo",
+  "dashboard": {
+    "pages": {
+      "home": "Panel",
+      "onboarding": "Inicio",
+      "qrMenu": "Menú QR",
+      "analytics": "Analíticas",
       "categories": "Categorías",
       "items": "Artículos",
-      "untranslated": "Mostrar solo sin traducir"
+      "settings": "General",
+      "design": "Diseño",
+      "contacts": "Contactos",
+      "languages": "Idiomas",
+      "reservations": "Reservaciones",
+      "reservationSettings": "Config. Reservas",
+      "tables": "Mesas",
+      "billing": "Facturación",
+      "support": "Soporte"
     },
-    "table": {
-      "type": "Tipo",
-      "original": "Original",
-      "translation": "Traducción",
+    "sidebar": {
+      "qrMenu": "Menú QR",
+      "settings": "Configuración",
+      "reservations": "Reservaciones",
+      "account": "Cuenta",
+      "reservationSettings": "Configuración"
+    },
+    "logout": "Cerrar Sesión",
+    "auth": {
+      "title": "Crea Tu Menú QR",
+      "subtitle": "Ingresa tu email para comenzar en 2 minutos",
+      "benefits": "Sin contraseñas. Sin tarjeta de crédito.",
+      "emailPlaceholder": "tu@email.com",
+      "continue": "Comenzar Gratis",
+      "verifyTitle": "Revisa tu email",
+      "verifySubtitle": "Enviamos un código a {email}",
+      "verify": "Verificar",
+      "changeEmail": "Usar otro email",
+      "errors": {
+        "sendFailed": "Error al enviar el código. Intenta de nuevo.",
+        "verifyFailed": "Código inválido. Intenta de nuevo."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Uso Mensual",
+      "scansThisMonth": "escaneos este mes",
+      "limitReached": "Has alcanzado tu límite mensual de escaneos. Mejora tu plan para escaneos ilimitados.",
+      "todayViews": "Hoy",
+      "weeklyViews": "Esta Semana",
+      "monthlyViews": "Este Mes",
+      "uniqueVisitors": "Visitantes Únicos",
+      "viewsByPage": "Vistas por Página",
+      "viewsByLanguage": "Vistas por Idioma",
+      "dailyViews": "Vistas Diarias",
+      "noData": "No hay datos disponibles aún",
+      "pageNames": {
+        "home": "Inicio",
+        "menu": "Menú",
+        "contacts": "Contactos",
+        "language": "Idioma",
+        "reserve": "Reservar"
+      },
+      "languageNames": {
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "fr": "Français",
+        "ru": "Русский"
+      }
+    },
+    "categories": {
+      "noCategories": "No hay categorías aún. Crea tu primera categoría para comenzar.",
+      "addCategory": "Agregar",
+      "editCategory": "Editar Categoría",
+      "name": "Nombre",
+      "namePlaceholder": "Ingresa el nombre de la categoría",
+      "status": "Estado",
+      "active": "Activa",
+      "inactive": "Inactiva",
+      "save": "Guardar",
+      "saving": "Guardando...",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "deleteConfirm": "¿Estás seguro de que quieres eliminar esta categoría? Esta acción no se puede deshacer.",
+      "fetchError": "Error al cargar categorías",
+      "updateError": "Error al actualizar categoría",
+      "saveError": "Error al guardar categoría",
+      "deleteError": "Error al eliminar categoría",
+      "translateError": "Error en la traducción",
+      "nameRequired": "El nombre es requerido",
+      "enabled": "activada",
+      "disabled": "desactivada",
+      "created": "Categoría creada",
+      "updated": "Categoría actualizada",
+      "deleted": "Categoría eliminada",
+      "validationErrorTitle": "Por favor corrige los siguientes errores",
+      "sort": "Ordenar",
+      "saveSort": "Guardar",
+      "sortSaved": "Orden guardado",
+      "sortError": "Error al guardar el orden"
+    },
+    "items": {
+      "noItems": "No hay artículos aún. Crea tu primer artículo para comenzar.",
+      "addItem": "Agregar",
+      "editItem": "Editar Artículo",
+      "name": "Nombre",
+      "namePlaceholder": "Ingresa el nombre del artículo",
+      "description": "Descripción",
+      "descriptionPlaceholder": "Ingresa la descripción del artículo",
+      "price": "Precio",
+      "pricePlaceholder": "0.00",
       "category": "Categoría",
-      "item": "Artículo"
+      "categoryPlaceholder": "Selecciona categoría",
+      "image": "Imagen",
+      "uploadImage": "Subir imagen",
+      "removeImage": "Eliminar imagen",
+      "status": "Estado",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "save": "Guardar",
+      "saving": "Guardando...",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "deleteConfirm": "¿Estás seguro de que quieres eliminar este artículo? Esta acción no se puede deshacer.",
+      "fetchError": "Error al cargar artículos",
+      "updateError": "Error al actualizar artículo",
+      "saveError": "Error al guardar artículo",
+      "deleteError": "Error al eliminar artículo",
+      "translateError": "Error en la traducción",
+      "nameRequired": "El nombre es requerido",
+      "categoryRequired": "La categoría es requerida",
+      "priceRequired": "El precio válido es requerido",
+      "enabled": "activado",
+      "disabled": "desactivado",
+      "created": "Artículo creado",
+      "updated": "Artículo actualizado",
+      "deleted": "Artículo eliminado",
+      "validationErrorTitle": "Por favor corrige los siguientes errores",
+      "sort": "Ordenar",
+      "saveSort": "Guardar",
+      "sortSaved": "Orden guardado",
+      "sortError": "Error al guardar el orden"
     },
-    "noItems": "No hay artículos para traducir. Añade categorías y artículos primero.",
-    "allTranslated": "Todos los artículos están traducidos",
-    "noLanguages": "Solo un idioma configurado",
-    "noLanguagesDescription": "Añade más idiomas en la configuración de tu restaurante para habilitar las traducciones.",
-    "goToSettings": "Ir a Configuración",
+    "languages": {
+      "translationProgress": "Progreso de traducción",
+      "availableLanguages": "Idiomas disponibles",
+      "starToSetDefault": "Haz clic en la estrella para establecer como predeterminado",
+      "default": "predeterminado",
+      "hint": "Habilita idiomas para permitir que los clientes vean tu menú en múltiples idiomas. El idioma predeterminado se usa para el contenido principal.",
+      "fetchError": "Error al cargar idiomas",
+      "enableError": "Error al habilitar idioma",
+      "disableError": "Error al deshabilitar idioma",
+      "defaultError": "Error al establecer idioma predeterminado",
+      "languageEnabled": "{language} habilitado",
+      "languageDisabled": "{language} deshabilitado",
+      "defaultSet": "{language} establecido como predeterminado",
+      "cannotDisableDefault": "No se puede deshabilitar el idioma predeterminado",
+      "atLeastOneRequired": "Se requiere al menos un idioma",
+      "enableFirst": "Habilita el idioma primero",
+      "deleteConfirm": "Deshabilitar este idioma eliminará todas sus traducciones. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "confirm": "Deshabilitar"
+    },
+    "contacts": {
+      "phone": "Teléfono",
+      "phonePlaceholder": "+34 612 345 678",
+      "phoneHint": "Número de contacto para tus clientes",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "tu_restaurante",
+      "instagramHint": "Tu nombre de usuario de Instagram (sin @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+34 612 345 678",
+      "whatsappHint": "Número de WhatsApp para consultas de clientes",
+      "location": "Ubicación",
+      "locationHint": "Haz clic en el mapa o busca para establecer la ubicación de tu restaurante",
+      "save": "Guardar",
+      "fetchError": "Error al cargar información de contacto",
+      "saveError": "Error al guardar información de contacto",
+      "saved": "Información de contacto guardada"
+    },
+    "design": {
+      "background": "Fondo",
+      "backgroundHint": "Sube un video o imagen para el fondo de tu página principal",
+      "uploadMedia": "Subir video o imagen",
+      "removeMedia": "Eliminar",
+      "accentColor": "Color de acento",
+      "accentColorHint": "Color principal para botones y elementos destacados de tu sitio",
+      "presetColors": "Colores predefinidos",
+      "customColor": "Color personalizado",
+      "save": "Guardar",
+      "fetchError": "Error al cargar configuración de diseño",
+      "saveError": "Error al guardar configuración de diseño",
+      "saved": "Configuración de diseño guardada",
+      "uploadError": "Error al subir archivo",
+      "invalidFileType": "Tipo de archivo no válido. Permitidos: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Archivo demasiado grande. Máximo: 50MB para videos, 5MB para imágenes"
+    },
+    "general": {
+      "name": "Título",
+      "namePlaceholder": "Ingresa el nombre del restaurante",
+      "nameHint": "Se muestra en la página principal de tu sitio público",
+      "description": "Subtítulo",
+      "descriptionPlaceholder": "Descripción breve (opcional)",
+      "descriptionHint": "Se muestra debajo del título en la página principal",
+      "slug": "URL Slug",
+      "slugPlaceholder": "mi-restaurante",
+      "slugHint": "Tu sitio web estará disponible en: sobogdqr.com/{slug}",
+      "currency": "Moneda",
+      "currencyPlaceholder": "Seleccionar moneda",
+      "save": "Guardar",
+      "fetchError": "Error al cargar configuración",
+      "saveError": "Error al guardar configuración",
+      "saved": "Configuración guardada",
+      "nameRequired": "El nombre del restaurante es requerido",
+      "slugRequired": "El URL slug es requerido",
+      "validationErrorTitle": "Por favor corrige los siguientes errores",
+      "slugChangedTitle": "Dirección del sitio actualizada",
+      "slugChangedDescription": "Tu restaurante ahora está disponible en:",
+      "close": "Cerrar",
+      "view": "Ver"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Para que las reservaciones estén disponibles para los huéspedes de tu restaurante, debes suscribirte al servicio.",
+    "subscribe": "Suscribirse",
+    "reservationsEnabled": "Habilitar Reservaciones",
+    "enabled": "Reservaciones habilitadas",
+    "disabled": "Reservaciones deshabilitadas",
+    "reservationMode": "Modo de Confirmación",
+    "modeAuto": "Automático",
+    "modeManual": "Manual",
+    "modeAutoDescription": "Las reservaciones se confirmarán automáticamente según disponibilidad de mesas",
+    "modeManualDescription": "Deberás confirmar manualmente cada reservación",
+    "slotDuration": "Duración de Reservación",
+    "minutes": "minutos",
+    "workingHours": "Horario de Trabajo",
     "save": "Guardar",
     "saving": "Guardando...",
-    "name": "Nombre",
-    "description": "Descripción",
-    "selectLanguage": "Seleccionar idioma",
-    "supportedLanguages": "Idiomas Soportados",
-    "defaultLanguage": "Establecer como predeterminado",
-    "deleteTranslationsConfirm": "Desactivar este idioma eliminará todas las traducciones para él. Esta acción no se puede deshacer.",
-    "cancel": "Cancelar",
-    "confirm": "Desactivar"
+    "saved": "Configuración guardada",
+    "fetchError": "Error al cargar configuración",
+    "saveError": "Error al guardar configuración"
   }
 }

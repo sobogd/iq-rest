@@ -6,20 +6,12 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-
-    // Set theme based on system preference on first load if no theme is saved
-    if (!localStorage.getItem("theme")) {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-      setTheme(systemTheme);
-    }
-  }, [setTheme]);
+  }, []);
 
   if (!mounted) {
     return (
@@ -30,17 +22,15 @@ export function ThemeToggle() {
     );
   }
 
-  const currentTheme = theme || resolvedTheme;
-
   return (
     <Button
       variant="outline"
       size="icon"
-      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      aria-label={`Switch to ${currentTheme === "dark" ? "light" : "dark"} theme`}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} theme`}
       className="border-0 md:border"
     >
-      {currentTheme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <>
           <Sun className="h-5 w-5" />
           <span className="sr-only">Switch to light theme</span>

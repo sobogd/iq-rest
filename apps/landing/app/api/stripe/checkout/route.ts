@@ -95,8 +95,8 @@ export async function POST(request: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard/billing?success=true`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard/billing?canceled=true`,
+      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard?page=billing&success=true`,
+      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard?page=billing&canceled=true`,
       subscription_data: {
         metadata: {
           companyId: company.id,

@@ -19,7 +19,23 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
     }
 
-    const { tableId, direction } = await request.json();
+    const body = await request.json();
+
+    // Support new batch format: { items: [{ id, sortOrder }] }
+    if (body.items && Array.isArray(body.items)) {
+      const updates = body.items.map((item: { id: string; sortOrder: number }) =>
+        prisma.table.update({
+          where: { id: item.id, restaurantId: restaurant.id },
+          data: { sortOrder: item.sortOrder },
+        })
+      );
+
+      await prisma.$transaction(updates);
+      return NextResponse.json({ success: true });
+    }
+
+    // Legacy format: { tableId, direction }
+    const { tableId, direction } = body;
 
     if (!tableId || !direction) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });

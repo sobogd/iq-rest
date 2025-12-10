@@ -48,7 +48,7 @@ export function AdModal({ onComplete }: AdModalProps) {
             Create your own QR menu for free
           </p>
           <a
-            href="https://sobogdqr.com/get-started"
+            href="https://sobogdqr.com/dashboard"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition-colors"

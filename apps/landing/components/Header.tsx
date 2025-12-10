@@ -12,7 +12,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import LanguageSelector from "./LanguageSelector";
-import { ThemeToggle } from "./ThemeToggle";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 
@@ -66,10 +65,9 @@ export default function Header() {
 
           {/* Right Side */}
           <div className="flex items-center gap-0 md:gap-3">
-            <ThemeToggle />
             <LanguageSelector />
             <Button asChild className="hidden lg:inline-flex">
-              <Link href="/get-started">{t("getStarted")}</Link>
+              <Link href="/dashboard">{t("getStarted")}</Link>
             </Button>
 
             {/* Mobile Menu */}
@@ -115,7 +113,7 @@ export default function Header() {
                     </Link>
                   </div>
                   <Button asChild className="w-full mt-6">
-                    <Link href="/get-started" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                       {t("getStarted")}
                     </Link>
                   </Button>

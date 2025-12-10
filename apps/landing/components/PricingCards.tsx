@@ -119,7 +119,7 @@ export function PricingCards() {
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
                 >
-                  <Link href="/get-started">{t(`plans.${plan.id}.cta`)}</Link>
+                  <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
                 </Button>
               </CardFooter>
             </Card>

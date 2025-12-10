@@ -544,107 +544,6 @@
       }
     }
   },
-  "sidebar": {
-    "subtitle": "Control Panel",
-    "navigation": "Navigation",
-    "menu": {
-      "dashboard": "Dashboard",
-      "categories": "Categories",
-      "items": "Items",
-      "languages": "Languages",
-      "reservations": "Reservations",
-      "qrCode": "QR Code",
-      "analytics": "Analytics",
-      "settings": "Settings",
-      "billing": "Billing",
-      "support": "Support"
-    },
-    "user": "User",
-    "logout": "Log out",
-    "noCompany": "No company"
-  },
-  "dashboard": {
-    "meta": {
-      "title": "Dashboard - SobogdQR",
-      "description": "Manage your QR menu and restaurant settings"
-    },
-    "title": "Dashboard",
-    "subtitle": "Welcome to your SobogdQR dashboard",
-    "comingSoon": "Coming soon",
-    "cards": {
-      "menu": {
-        "title": "Menu",
-        "description": "Manage your menu items and categories"
-      },
-      "qrCode": {
-        "title": "QR Code",
-        "description": "Download and customize your QR code"
-      },
-      "analytics": {
-        "title": "Analytics",
-        "description": "View your menu performance and insights"
-      },
-      "settings": {
-        "title": "Settings",
-        "description": "Configure your restaurant settings"
-      }
-    }
-  },
-  "onboarding": {
-    "title": "Getting Started",
-    "completed": "Setup complete! Your restaurant is ready.",
-    "steps": {
-      "restaurant": {
-        "title": "Set up your restaurant",
-        "description": "Add your restaurant name, description, cover image, and URL. This information will be displayed on your public menu page.",
-        "button": "Go to Settings"
-      },
-      "category": {
-        "title": "Create a category",
-        "description": "Organize your menu with categories like Appetizers, Main Courses, Desserts, etc. Categories help customers navigate your menu easily.",
-        "button": "Add Category"
-      },
-      "item": {
-        "title": "Add your first item",
-        "description": "Add dishes to your menu with photos, descriptions, and prices. High-quality images increase customer orders by up to 30%.",
-        "button": "Add Item"
-      },
-      "translations": {
-        "title": "Set up translations",
-        "description": "Translate your menu to serve international customers. AI-powered translation helps you reach more guests effortlessly.",
-        "button": "Manage Languages"
-      },
-      "tables": {
-        "title": "Configure tables & reservations",
-        "description": "Add your tables and enable the reservation system. Customers will be able to book tables directly from your menu.",
-        "button": "Add Table"
-      },
-      "qrCode": {
-        "title": "Your menu is ready!",
-        "description": "Your restaurant website and digital menu are live. Print QR codes for your tables or share the link with customers.",
-        "button": "View Menu & QR Code"
-      }
-    },
-    "extraSteps": {
-      "translations": {
-        "title": "Add translations",
-        "description": "Translate your menu to reach international customers. Enable additional languages and use AI-powered translation.",
-        "button": "Manage Languages"
-      },
-      "reservations": {
-        "title": "Set up reservations",
-        "description": "Enable table reservations so customers can book directly from your menu. Add tables and configure reservation settings.",
-        "button": "Settings",
-        "button2": "Add Tables"
-      },
-      "analytics": {
-        "title": "Track & get support",
-        "description": "Monitor your menu views and customer engagement. Need help? Our support team is here for you.",
-        "button": "Analytics",
-        "button2": "Support"
-      }
-    }
-  },
   "qrCode": {
     "title": "QR Code",
     "description": "Download and print your QR code for customers to scan",
@@ -660,7 +559,10 @@
     "noSlugDescription": "Please set up your restaurant URL in settings first to generate a QR code.",
     "goToSettings": "Go to Settings",
     "loading": "Loading...",
-    "menuUrl": "Your Website URL",
+    "menuUrl": "Your Website",
+    "websiteReady": "Your website is ready!",
+    "openWebsite": "Open Website",
+    "printSection": "Print & Download QR Code:",
     "formats": {
       "a4": "A4 (210 × 297 mm)",
       "a5": "A5 (148 × 210 mm)",
@@ -681,95 +583,6 @@
       "medium": "Medium",
       "large": "Large"
     }
-  },
-  "categories": {
-    "title": "Categories",
-    "description": "Manage your menu categories",
-    "addCategory": "Add Category",
-    "newTitle": "New Category",
-    "editTitle": "Edit Category",
-    "name": "Name",
-    "namePlaceholder": "Enter category name",
-    "description_label": "Description",
-    "descriptionPlaceholder": "Enter category description (optional)",
-    "sortOrder": "Sort Order",
-    "status": "Status",
-    "active": "Active",
-    "inactive": "Inactive",
-    "isActive": "Active",
-    "actions": "Actions",
-    "edit": "Edit",
-    "delete": "Delete",
-    "moveUp": "Move Up",
-    "moveDown": "Move Down",
-    "noCategories": "No categories yet. Create your first category to get started.",
-    "deleteConfirm": "Are you sure you want to delete this category? This action cannot be undone.",
-    "cancel": "Cancel",
-    "save": "Save",
-    "saving": "Saving...",
-    "back": "Back to Categories",
-    "loading": "Loading...",
-    "notFound": "Category not found",
-    "error": "Error",
-    "close": "Close",
-    "nameTranslation": "Name in {language}"
-  },
-  "items": {
-    "title": "Items",
-    "description": "Manage your menu items",
-    "addItem": "Add Item",
-    "newTitle": "New Item",
-    "editTitle": "Edit Item",
-    "name": "Name",
-    "namePlaceholder": "Enter item name",
-    "description_label": "Description",
-    "descriptionPlaceholder": "Enter item description (optional)",
-    "price": "Price",
-    "pricePlaceholder": "0.00",
-    "category": "Category",
-    "categoryPlaceholder": "Select a category",
-    "image": "Image",
-    "uploadImage": "Click to upload image",
-    "removeImage": "Remove image",
-    "status": "Status",
-    "active": "Active",
-    "inactive": "Inactive",
-    "edit": "Edit",
-    "delete": "Delete",
-    "moveUp": "Move Up",
-    "moveDown": "Move Down",
-    "noItems": "No items yet. Create your first item to get started.",
-    "deleteConfirm": "Are you sure you want to delete this item? This action cannot be undone.",
-    "cancel": "Cancel",
-    "save": "Save",
-    "saving": "Saving...",
-    "back": "Back to Items",
-    "loading": "Loading...",
-    "notFound": "Item not found",
-    "allCategories": "All Categories",
-    "filterByCategory": "Filter by category",
-    "error": "Error",
-    "close": "Close",
-    "nameTranslation": "Name in {language}",
-    "descriptionTranslation": "Description in {language}"
-  },
-  "analytics": {
-    "title": "Analytics",
-    "subtitle": "Track your menu performance and visitor insights",
-    "unauthorized": "Please log in to view analytics",
-    "overview": "Overview",
-    "monthlyUsage": "Monthly Usage",
-    "scansThisMonth": "scans this month",
-    "limitReached": "You've reached your monthly scan limit. Upgrade your plan for unlimited scans.",
-    "todayViews": "Today",
-    "weeklyViews": "This Week",
-    "monthlyViews": "This Month",
-    "uniqueVisitors": "Unique Visitors",
-    "last7Days": "Last 7 days",
-    "viewsByPage": "Views by Page",
-    "viewsByLanguage": "Views by Language",
-    "dailyViews": "Daily Views (Last 7 Days)",
-    "noData": "No data available yet"
   },
   "support": {
     "title": "Messages",
@@ -830,51 +643,6 @@
       "subtitle": "Your customers are waiting for a digital menu"
     }
   },
-  "settings": {
-    "subtitle": "Manage your restaurant information",
-    "title": "Restaurant Name",
-    "titlePlaceholder": "Enter restaurant name",
-    "description": "Description",
-    "descriptionPlaceholder": "Brief description of your restaurant",
-    "slug": "URL Slug",
-    "slugPlaceholder": "my-restaurant",
-    "source": "Background Image/Video",
-    "uploadMedia": "Click to upload image or video",
-    "removeMedia": "Remove",
-    "address": "Address",
-    "addressPlaceholder": "123 Main Street, City",
-    "coordinates": "Map Coordinates",
-    "xPlaceholder": "Latitude",
-    "yPlaceholder": "Longitude",
-    "phone": "Phone",
-    "phonePlaceholder": "+1 234 567 8900",
-    "instagram": "Instagram",
-    "instagramPlaceholder": "@yourrestaurant",
-    "whatsapp": "WhatsApp",
-    "whatsappPlaceholder": "+1 234 567 8900",
-    "save": "Save",
-    "saving": "Saving...",
-    "saved": "Saved!",
-    "languages": "Supported Languages",
-    "defaultLanguage": "Default Language",
-    "selectLanguages": "Select languages for your menu",
-    "basicInfo": "Basic Information",
-    "contacts": "Contacts",
-    "reservations": "Reservations",
-    "reservationsEnabled": "Enable Reservations",
-    "reservationsEnabledActive": "Enabled",
-    "reservationsEnabledInactive": "Disabled",
-    "reservationMode": "Confirmation Mode",
-    "reservationModeAuto": "Automatic (instant confirmation)",
-    "reservationModeManual": "Manual (requires approval)",
-    "reservationSlotMinutes": "Reservation Duration",
-    "reservationAdvanceDays": "Advance Booking",
-    "workingHours": "Working Hours",
-    "workingHoursStart": "From",
-    "workingHoursEnd": "To",
-    "minutes": "min",
-    "days": "days"
-  },
   "reservations": {
     "title": "Reservations",
     "tables": "Tables",
@@ -919,7 +687,8 @@
     "awaitingResponse": "Awaiting Response",
     "today": "Today",
     "tomorrow": "Tomorrow",
-    "otherReservations": "Other Reservations"
+    "otherReservations": "Other Reservations",
+    "sort": "Sort"
   },
   "publicReserve": {
     "title": "Book a Table",
@@ -1086,38 +855,244 @@
       }
     }
   },
-  "translations": {
-    "title": "Languages",
-    "subtitle": "Manage languages for your menu",
-    "progress": "Translation Progress",
-    "translated": "Translated",
-    "filter": {
-      "all": "All",
+  "dashboard": {
+    "pages": {
+      "home": "Dashboard",
+      "onboarding": "Onboarding",
+      "qrMenu": "QR Menu",
+      "analytics": "Analytics",
       "categories": "Categories",
       "items": "Items",
-      "untranslated": "Show only untranslated"
+      "settings": "General",
+      "design": "Design",
+      "contacts": "Contacts",
+      "languages": "Languages",
+      "reservations": "Reservations",
+      "reservationSettings": "Reservation Settings",
+      "tables": "Tables",
+      "billing": "Billing",
+      "support": "Support"
     },
-    "table": {
-      "type": "Type",
-      "original": "Original",
-      "translation": "Translation",
+    "sidebar": {
+      "qrMenu": "QR Menu",
+      "settings": "Settings",
+      "reservations": "Reservations",
+      "account": "Account",
+      "reservationSettings": "Configuration"
+    },
+    "logout": "Logout",
+    "auth": {
+      "title": "Create Your QR Menu",
+      "subtitle": "Enter your email to get started in 2 minutes",
+      "benefits": "No passwords. No credit card.",
+      "emailPlaceholder": "your@email.com",
+      "continue": "Get Started Free",
+      "verifyTitle": "Check your email",
+      "verifySubtitle": "We sent a code to {email}",
+      "verify": "Verify",
+      "changeEmail": "Use different email",
+      "errors": {
+        "sendFailed": "Failed to send code. Please try again.",
+        "verifyFailed": "Invalid code. Please try again."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Monthly Usage",
+      "scansThisMonth": "scans this month",
+      "limitReached": "You've reached your monthly scan limit. Upgrade your plan for unlimited scans.",
+      "todayViews": "Today",
+      "weeklyViews": "This Week",
+      "monthlyViews": "This Month",
+      "uniqueVisitors": "Unique Visitors",
+      "viewsByPage": "Views by Page",
+      "viewsByLanguage": "Views by Language",
+      "dailyViews": "Daily Views",
+      "noData": "No data available yet",
+      "pageNames": {
+        "home": "Home",
+        "menu": "Menu",
+        "contacts": "Contacts",
+        "language": "Language",
+        "reserve": "Reserve"
+      },
+      "languageNames": {
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "fr": "Français",
+        "ru": "Русский"
+      }
+    },
+    "categories": {
+      "noCategories": "No categories yet. Create your first category to get started.",
+      "addCategory": "Add",
+      "editCategory": "Edit Category",
+      "name": "Name",
+      "namePlaceholder": "Enter category name",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete this category? This action cannot be undone.",
+      "fetchError": "Failed to load categories",
+      "updateError": "Failed to update category",
+      "saveError": "Failed to save category",
+      "deleteError": "Failed to delete category",
+      "translateError": "Translation failed",
+      "nameRequired": "Name is required",
+      "enabled": "enabled",
+      "disabled": "disabled",
+      "created": "Category created",
+      "updated": "Category updated",
+      "deleted": "Category deleted",
+      "validationErrorTitle": "Please fix the following errors",
+      "sort": "Sort",
+      "saveSort": "Save",
+      "sortSaved": "Sort order saved",
+      "sortError": "Failed to save sort order"
+    },
+    "items": {
+      "noItems": "No items yet. Create your first item to get started.",
+      "addItem": "Add",
+      "editItem": "Edit Item",
+      "name": "Name",
+      "namePlaceholder": "Enter item name",
+      "description": "Description",
+      "descriptionPlaceholder": "Enter item description",
+      "price": "Price",
+      "pricePlaceholder": "0.00",
       "category": "Category",
-      "item": "Item"
+      "categoryPlaceholder": "Select category",
+      "image": "Image",
+      "uploadImage": "Upload image",
+      "removeImage": "Remove image",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete this item? This action cannot be undone.",
+      "fetchError": "Failed to load items",
+      "updateError": "Failed to update item",
+      "saveError": "Failed to save item",
+      "deleteError": "Failed to delete item",
+      "translateError": "Translation failed",
+      "nameRequired": "Name is required",
+      "categoryRequired": "Category is required",
+      "priceRequired": "Valid price is required",
+      "enabled": "enabled",
+      "disabled": "disabled",
+      "created": "Item created",
+      "updated": "Item updated",
+      "deleted": "Item deleted",
+      "validationErrorTitle": "Please fix the following errors",
+      "sort": "Sort",
+      "saveSort": "Save",
+      "sortSaved": "Sort order saved",
+      "sortError": "Failed to save sort order"
     },
-    "noItems": "No items to translate. Add categories and items first.",
-    "allTranslated": "All items are translated",
-    "noLanguages": "Only one language configured",
-    "noLanguagesDescription": "Add more languages in your restaurant settings to enable translations.",
-    "goToSettings": "Go to Settings",
+    "languages": {
+      "translationProgress": "Translation Progress",
+      "availableLanguages": "Available Languages",
+      "starToSetDefault": "Click star to set as default",
+      "default": "default",
+      "hint": "Enable languages to allow customers to view your menu in multiple languages. The default language is used for the main content.",
+      "fetchError": "Failed to load languages",
+      "enableError": "Failed to enable language",
+      "disableError": "Failed to disable language",
+      "defaultError": "Failed to set default language",
+      "languageEnabled": "{language} enabled",
+      "languageDisabled": "{language} disabled",
+      "defaultSet": "{language} set as default",
+      "cannotDisableDefault": "Cannot disable default language",
+      "atLeastOneRequired": "At least one language is required",
+      "enableFirst": "Enable language first",
+      "deleteConfirm": "Disabling this language will delete all translations for it. This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Disable"
+    },
+    "contacts": {
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Contact phone number for your customers",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "your_restaurant",
+      "instagramHint": "Your Instagram username (without @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp number for customer inquiries",
+      "location": "Location",
+      "locationHint": "Click on the map or search to set your restaurant location",
+      "save": "Save",
+      "fetchError": "Failed to load contact information",
+      "saveError": "Failed to save contact information",
+      "saved": "Contact information saved"
+    },
+    "design": {
+      "background": "Background",
+      "backgroundHint": "Upload a video or image for your homepage background",
+      "uploadMedia": "Upload video or image",
+      "removeMedia": "Remove",
+      "accentColor": "Accent Color",
+      "accentColorHint": "Main color for buttons and highlights on your website",
+      "presetColors": "Preset colors",
+      "customColor": "Custom color",
+      "save": "Save",
+      "fetchError": "Failed to load design settings",
+      "saveError": "Failed to save design settings",
+      "saved": "Design settings saved",
+      "uploadError": "Failed to upload file",
+      "invalidFileType": "Invalid file type. Allowed: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "File is too large. Max size: 50MB for videos, 5MB for images"
+    },
+    "general": {
+      "name": "Title",
+      "namePlaceholder": "Enter restaurant name",
+      "nameHint": "Displayed on the homepage of your public website",
+      "description": "Subtitle",
+      "descriptionPlaceholder": "Brief description (optional)",
+      "descriptionHint": "Displayed below the title on the homepage",
+      "slug": "URL Slug",
+      "slugPlaceholder": "my-restaurant",
+      "slugHint": "Your website will be available at: sobogdqr.com/{slug}",
+      "currency": "Currency",
+      "currencyPlaceholder": "Select currency",
+      "save": "Save",
+      "fetchError": "Failed to load settings",
+      "saveError": "Failed to save settings",
+      "saved": "Settings saved",
+      "nameRequired": "Restaurant name is required",
+      "slugRequired": "URL slug is required",
+      "validationErrorTitle": "Please fix the following errors",
+      "slugChangedTitle": "Website address updated",
+      "slugChangedDescription": "Your restaurant is now available at:",
+      "close": "Close",
+      "view": "View"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "To make reservations available to your restaurant guests, you need to subscribe to the service.",
+    "subscribe": "Subscribe",
+    "reservationsEnabled": "Enable Reservations",
+    "enabled": "Reservations are enabled",
+    "disabled": "Reservations are disabled",
+    "reservationMode": "Confirmation Mode",
+    "modeAuto": "Automatic",
+    "modeManual": "Manual",
+    "modeAutoDescription": "Reservations will be automatically confirmed based on table availability",
+    "modeManualDescription": "You will need to manually confirm each reservation",
+    "slotDuration": "Reservation Duration",
+    "minutes": "minutes",
+    "workingHours": "Working Hours",
     "save": "Save",
     "saving": "Saving...",
-    "name": "Name",
-    "description": "Description",
-    "selectLanguage": "Select language",
-    "supportedLanguages": "Supported Languages",
-    "defaultLanguage": "Set as default",
-    "deleteTranslationsConfirm": "Disabling this language will delete all translations for it. This action cannot be undone.",
-    "cancel": "Cancel",
-    "confirm": "Disable"
+    "saved": "Settings saved",
+    "fetchError": "Failed to load settings",
+    "saveError": "Failed to save settings"
   }
 }

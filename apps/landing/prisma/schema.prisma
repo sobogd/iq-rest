@@ -75,7 +75,9 @@ model Restaurant {
   title           String
   description     String?
   slug            String?
+  currency        String   @default("EUR")
   source          String?
+  accentColor     String   @default("#E11D48")
   address         String?
   x               String?
   y               String?

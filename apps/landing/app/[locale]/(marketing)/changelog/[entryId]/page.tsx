@@ -265,7 +265,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
           <div className="mt-8 p-6 bg-muted rounded-lg text-center">
             <p className="font-medium mb-4">{t(`entries.${key}.content.ctaText`)}</p>
             <Link
-              href="/get-started"
+              href="/dashboard"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               {t(`entries.${key}.content.ctaButton`)}

@@ -6,7 +6,6 @@ const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const session = request.cookies.get("session");
 
   // Permanent redirect (308) for paths without locale prefix
   if (!pathname.startsWith("/en") && !pathname.startsWith("/es") && pathname !== "/") {
@@ -22,12 +21,6 @@ export default function middleware(request: NextRequest) {
   if (pathname.match(/^\/(en|es)\/demo$/)) {
     const locale = pathname.startsWith("/es") ? "es" : "en";
     return NextResponse.redirect(new URL(`/${locale}/m/love-eatery`, request.url), 301);
-  }
-
-  // Redirect logged-in users from get-started to dashboard
-  if (session && pathname.match(/^\/(en|es)\/get-started/)) {
-    const locale = pathname.startsWith("/es") ? "es" : "en";
-    return NextResponse.redirect(new URL(`/${locale}/dashboard`, request.url));
   }
 
   const response = intlMiddleware(request);

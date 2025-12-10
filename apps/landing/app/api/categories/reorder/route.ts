@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 
+interface SortItem {
+  id: string;
+  sortOrder: number;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const companyId = await getUserCompanyId();
@@ -10,53 +15,41 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { categoryId, direction } = await request.json();
+    const { items } = await request.json() as { items: SortItem[] };
 
-    if (!categoryId || !["up", "down"].includes(direction)) {
+    if (!items || !Array.isArray(items) || items.length === 0) {
       return NextResponse.json(
-        { error: "Invalid request" },
+        { error: "Invalid request: items array required" },
         { status: 400 }
       );
     }
 
-    // Get the category to move
-    const category = await prisma.category.findFirst({
-      where: { id: categoryId, companyId },
-    });
-
-    if (!category) {
-      return NextResponse.json({ error: "Category not found" }, { status: 404 });
-    }
-
-    // Find the adjacent category to swap with
-    const adjacentCategory = await prisma.category.findFirst({
+    // Verify all categories belong to this company
+    const categoryIds = items.map((item) => item.id);
+    const existingCategories = await prisma.category.findMany({
       where: {
+        id: { in: categoryIds },
         companyId,
-        sortOrder: direction === "up"
-          ? { lt: category.sortOrder }
-          : { gt: category.sortOrder },
       },
-      orderBy: {
-        sortOrder: direction === "up" ? "desc" : "asc",
-      },
+      select: { id: true },
     });
 
-    if (!adjacentCategory) {
-      // Already at the top or bottom
-      return NextResponse.json({ message: "No change needed" });
+    if (existingCategories.length !== items.length) {
+      return NextResponse.json(
+        { error: "Some categories not found or unauthorized" },
+        { status: 400 }
+      );
     }
 
-    // Swap sortOrder values
-    await prisma.$transaction([
-      prisma.category.update({
-        where: { id: category.id },
-        data: { sortOrder: adjacentCategory.sortOrder },
-      }),
-      prisma.category.update({
-        where: { id: adjacentCategory.id },
-        data: { sortOrder: category.sortOrder },
-      }),
-    ]);
+    // Batch update all sort orders
+    await prisma.$transaction(
+      items.map((item) =>
+        prisma.category.update({
+          where: { id: item.id },
+          data: { sortOrder: item.sortOrder },
+        })
+      )
+    );
 
     // Return updated categories list
     const categories = await prisma.category.findMany({
@@ -66,9 +59,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(categories);
   } catch (error) {
-    console.error("Error reordering category:", error);
+    console.error("Error reordering categories:", error);
     return NextResponse.json(
-      { error: "Failed to reorder category" },
+      { error: "Failed to reorder categories" },
       { status: 500 }
     );
   }

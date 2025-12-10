@@ -26,8 +26,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className="notranslate" translate="no">
       <head>
+        {/* Disable Google Translate popup */}
+        <meta name="google" content="notranslate" />
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -36,8 +38,8 @@ export default async function LocaleLayout({
         <GoogleAnalytics />
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
+          defaultTheme="system"
+          enableSystem={true}
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>

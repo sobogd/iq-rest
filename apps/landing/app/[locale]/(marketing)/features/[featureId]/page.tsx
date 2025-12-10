@@ -234,7 +234,7 @@ export default async function FeaturePage({ params }: { params: Promise<{ locale
               <CardContent>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg">
-                    <Link href="/get-started">
+                    <Link href="/dashboard">
                       {isEnglish ? "Get Started Free" : "Comenzar Gratis"}
                     </Link>
                   </Button>
