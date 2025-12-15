@@ -1,9 +1,8 @@
 import { notFound, redirect } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
-import { Link } from "@/i18n/routing";
 import { ReserveForm } from "./reserve-form";
+import { MenuHeader, MenuPageWrapper } from "../_components";
 
 interface ReservePageProps {
   params: Promise<{
@@ -21,6 +20,7 @@ async function getRestaurant(slug: string) {
       reservationsEnabled: true,
       reservationMode: true,
       reservationSlotMinutes: true,
+      accentColor: true,
       _count: {
         select: {
           tables: {
@@ -84,32 +84,24 @@ export default async function ReservePage({ params }: ReservePageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <MenuPageWrapper slug={slug}>
       {/* Header */}
-      <header className="sticky top-0 h-14 flex justify-center px-5 z-10 bg-black">
-        <div className="max-w-[440px] w-full flex items-center relative">
-          <Link href={`/m/${slug}`} className="p-2 -ml-2 text-white z-10">
-            <ArrowLeft className="h-6 w-6" />
-          </Link>
-          <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">
-            {translations.title}
-          </h1>
-        </div>
-      </header>
+      <MenuHeader slug={slug} title={translations.title} sticky accentColor={restaurant.accentColor} />
 
       {/* Content */}
-      <main className="flex justify-center px-5 py-6">
+      <main className="flex-1 flex justify-center px-5 py-6 bg-white overflow-auto">
         <div className="max-w-[440px] w-full">
           <ReserveForm
             restaurantId={restaurant.id}
             slotMinutes={restaurant.reservationSlotMinutes}
             mode={restaurant.reservationMode}
+            accentColor={restaurant.accentColor}
             translations={translations}
             slug={slug}
             locale={locale}
           />
         </div>
       </main>
-    </div>
+    </MenuPageWrapper>
   );
 }

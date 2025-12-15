@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { JsonLd } from "../../_lib";
 
 // Define changelog entries data
 const changelogEntries: Record<string, {
@@ -273,25 +274,21 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
           </div>
         </article>
 
-        {/* Schema.org structured data for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              headline: t(`entries.${key}.title`),
-              description: t(`entries.${key}.description`),
-              datePublished: entry.date,
-              author: {
-                "@type": "Organization",
-                name: "SobogdQR",
-              },
-              publisher: {
-                "@type": "Organization",
-                name: "SobogdQR",
-              },
-            }),
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: t(`entries.${key}.title`),
+            description: t(`entries.${key}.description`),
+            datePublished: entry.date,
+            author: {
+              "@type": "Organization",
+              name: "SobogdQR",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "SobogdQR",
+            },
           }}
         />
       </div>

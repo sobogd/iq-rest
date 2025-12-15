@@ -17,7 +17,11 @@ import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 
-const AVAILABLE_LANGUAGES = ["en", "es"].map((code) => ({
+const ALL_LANGUAGES = [
+  "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
+  "sv", "da", "no", "fi", "cs", "el", "tr", "ro", "hu", "bg",
+  "hr", "sk", "sl", "et", "lv", "lt",
+].map((code) => ({
   code,
   name: LANGUAGE_NAMES[code] || code,
 }));
@@ -145,7 +149,7 @@ export function LanguagesPage() {
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-auto p-6 space-y-6">
         <div className="space-y-2">
-          {AVAILABLE_LANGUAGES.map((lang) => {
+          {ALL_LANGUAGES.map((lang) => {
             const isEnabled = languages.includes(lang.code);
             const isDefault = defaultLanguage === lang.code;
             const isSaving = saving === lang.code;

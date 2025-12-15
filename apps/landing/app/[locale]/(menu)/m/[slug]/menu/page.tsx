@@ -1,9 +1,8 @@
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { MenuFeed } from "@/components/menu-feed";
+import { MenuHeader, MenuPageWrapper } from "../_components";
 
 interface MenuListPageProps {
   params: Promise<{
@@ -27,6 +26,7 @@ async function getRestaurantWithMenu(slug: string) {
       title: true,
       companyId: true,
       defaultLanguage: true,
+      accentColor: true,
     },
   });
 
@@ -99,16 +99,9 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
   }));
 
   return (
-    <div className="h-screen flex flex-col" style={{ backgroundColor: "#fff" }}>
+    <MenuPageWrapper slug={slug}>
       {/* Header */}
-      <header className="h-14 shrink-0 flex justify-center px-5 bg-black">
-        <div className="max-w-[440px] w-full flex items-center relative">
-          <Link href={`/m/${slug}`} className="p-2 -ml-2 text-white z-10">
-            <ArrowLeft className="h-6 w-6" />
-          </Link>
-          <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">{t("onlineMenu")}</h1>
-        </div>
-      </header>
+      <MenuHeader slug={slug} title={t("onlineMenu")} accentColor={restaurant.accentColor} />
 
       {/* Menu feed */}
       {categories.length === 0 ? (
@@ -119,8 +112,8 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
           {t("noCategories")}
         </div>
       ) : (
-        <MenuFeed categories={categoriesWithItems} />
+        <MenuFeed categories={categoriesWithItems} accentColor={restaurant.accentColor} />
       )}
-    </div>
+    </MenuPageWrapper>
   );
 }

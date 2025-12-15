@@ -11,8 +11,10 @@ async function handleLogout(request: NextRequest) {
   cookieStore.delete("dashboard-active-page");
   cookieStore.delete("sidebar_state");
 
-  // Get the origin from request headers
-  const origin = request.headers.get("origin") || request.nextUrl.origin;
+  // Get the origin from host header (works correctly behind reverse proxy)
+  const host = request.headers.get("host") || "localhost:3000";
+  const protocol = request.headers.get("x-forwarded-proto") || "https";
+  const origin = `${protocol}://${host}`;
 
   // Get locale from referer or default to en
   const referer = request.headers.get("referer") || "";

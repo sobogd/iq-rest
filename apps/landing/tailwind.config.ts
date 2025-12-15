@@ -75,11 +75,53 @@ const config: Config = {
   				to: {
   					height: '0'
   				}
+  			},
+  			'orbit-center': {
+  				'0%': { transform: 'translate(calc(-50% + 0px), calc(-50% + 10px))' },
+  				'25%': { transform: 'translate(calc(-50% + 10px), calc(-50% + 0px))' },
+  				'50%': { transform: 'translate(calc(-50% + 0px), calc(-50% - 10px))' },
+  				'75%': { transform: 'translate(calc(-50% - 10px), calc(-50% + 0px))' },
+  				'100%': { transform: 'translate(calc(-50% + 0px), calc(-50% + 10px))' }
+  			},
+  			'orbit-left': {
+  				'0%': { transform: 'translate(0px, calc(-50% + 15px)) rotate(-12deg)' },
+  				'25%': { transform: 'translate(-15px, calc(-50% + 0px)) rotate(-11deg)' },
+  				'50%': { transform: 'translate(0px, calc(-50% - 15px)) rotate(-12deg)' },
+  				'75%': { transform: 'translate(15px, calc(-50% + 0px)) rotate(-13deg)' },
+  				'100%': { transform: 'translate(0px, calc(-50% + 15px)) rotate(-12deg)' }
+  			},
+  			'orbit-right': {
+  				'0%': { transform: 'translate(0px, calc(-50% - 12px)) rotate(12deg)' },
+  				'25%': { transform: 'translate(12px, calc(-50% + 0px)) rotate(13deg)' },
+  				'50%': { transform: 'translate(0px, calc(-50% + 12px)) rotate(12deg)' },
+  				'75%': { transform: 'translate(-12px, calc(-50% + 0px)) rotate(11deg)' },
+  				'100%': { transform: 'translate(0px, calc(-50% - 12px)) rotate(12deg)' }
+  			},
+  			'float-center': {
+  				'0%': { transform: 'translate(-50%, calc(-50% + 8px))' },
+  				'50%': { transform: 'translate(-50%, calc(-50% - 8px))' },
+  				'100%': { transform: 'translate(-50%, calc(-50% + 8px))' }
+  			},
+  			'float-left': {
+  				'0%': { transform: 'translate(0px, calc(-50% + 12px))' },
+  				'50%': { transform: 'translate(0px, calc(-50% - 12px))' },
+  				'100%': { transform: 'translate(0px, calc(-50% + 12px))' }
+  			},
+  			'float-right': {
+  				'0%': { transform: 'translate(0px, calc(-50% - 10px))' },
+  				'50%': { transform: 'translate(0px, calc(-50% + 10px))' },
+  				'100%': { transform: 'translate(0px, calc(-50% - 10px))' }
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'orbit-center': 'orbit-center 45s ease-in-out infinite',
+  			'orbit-left': 'orbit-left 55s ease-in-out infinite',
+  			'orbit-right': 'orbit-right 40s ease-in-out infinite',
+  			'float-center': 'float-center 35s ease-in-out infinite',
+  			'float-left': 'float-left 40s ease-in-out infinite',
+  			'float-right': 'float-right 30s ease-in-out infinite'
   		}
   	}
   },

@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
   // Enable static optimization
   reactStrictMode: true,
 
+  // Hide dev indicator
+  devIndicators: false,
+
   // Allow images from S3 with light optimization
   images: {
     remotePatterns: [

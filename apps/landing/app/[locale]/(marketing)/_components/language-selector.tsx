@@ -14,12 +14,12 @@ import {
 } from "@/components/ui/dialog";
 import { Globe } from "lucide-react";
 
-const locales = [
+const LOCALES = [
   { code: "en", name: "English" },
   { code: "es", name: "Español" },
-];
+] as const;
 
-export default function LanguageSelector() {
+export function LanguageSelector() {
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const t = useTranslations("header");
@@ -38,7 +38,12 @@ export default function LanguageSelector() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" size="icon" aria-label="Select language" className="border-0 md:border">
+        <Button
+          variant="outline"
+          size="icon"
+          aria-label="Select language"
+          className="border-0 md:border"
+        >
           <Globe className="h-5 w-5" />
           <span className="sr-only">Select language</span>
         </Button>
@@ -51,7 +56,7 @@ export default function LanguageSelector() {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          {locales.map((loc) => (
+          {LOCALES.map((loc) => (
             <Button
               key={loc.code}
               variant={locale === loc.code ? "default" : "outline"}

@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import { ArrowLeft, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+import { MenuHeader, MenuPageWrapper, LanguageLink } from "../_components";
 
 interface LanguagePageProps {
   params: Promise<{
@@ -18,6 +18,7 @@ async function getRestaurant(slug: string) {
       id: true,
       languages: true,
       defaultLanguage: true,
+      accentColor: true,
     },
   });
   return restaurant;
@@ -60,22 +61,15 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
     });
 
   return (
-    <div className="h-screen flex flex-col" style={{ backgroundColor: "#fff" }}>
+    <MenuPageWrapper slug={slug}>
       {/* Header */}
-      <header className="h-14 shrink-0 flex justify-center px-5 bg-black">
-        <div className="max-w-[440px] w-full flex items-center relative">
-          <Link href={`/m/${slug}`} className="p-2 -ml-2 text-white z-10">
-            <ArrowLeft className="h-6 w-6" />
-          </Link>
-          <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">{t("language")}</h1>
-        </div>
-      </header>
+      <MenuHeader slug={slug} title={t("language")} accentColor={restaurant.accentColor} />
 
       {/* Language list */}
       <nav className="flex-1 pt-5 bg-white flex justify-center">
         <div className="max-w-[440px] w-full">
           {languages.map((lang) => (
-            <Link
+            <LanguageLink
               key={lang.code}
               href={`/m/${slug}`}
               locale={lang.code}
@@ -83,10 +77,10 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
             >
               <span className="font-medium">{lang.name}</span>
               {locale === lang.code && <Check className="h-5 w-5" />}
-            </Link>
+            </LanguageLink>
           ))}
         </div>
       </nav>
-    </div>
+    </MenuPageWrapper>
   );
 }

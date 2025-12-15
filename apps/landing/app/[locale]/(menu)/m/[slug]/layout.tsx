@@ -55,7 +55,7 @@ export default async function MenuLayout({ children, params }: MenuLayoutProps) 
   const showAd = await checkAdStatus(slug);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <MenuLayoutClient slug={slug} locale={locale} showAd={showAd}>
         {children}
       </MenuLayoutClient>

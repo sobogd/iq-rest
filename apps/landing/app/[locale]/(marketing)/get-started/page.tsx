@@ -1,9 +1,13 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import GetStartedForm from "@/components/GetStartedForm";
+import { GetStartedForm } from "../_components";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "getStarted" });
 
@@ -13,10 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function GetStartedPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function GetStartedPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-
-  // Check if user is already authenticated
   const cookieStore = await cookies();
   const session = cookieStore.get("session");
 

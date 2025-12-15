@@ -43,10 +43,8 @@ export function MapView({ lat, lng }: MapViewProps) {
       zoom={15}
       onLoad={onLoad}
       options={{
-        streetViewControl: false,
-        mapTypeControl: false,
-        fullscreenControl: false,
-        zoomControl: true,
+        disableDefaultUI: true,
+        gestureHandling: "greedy",
       }}
     >
       <Marker position={center} />

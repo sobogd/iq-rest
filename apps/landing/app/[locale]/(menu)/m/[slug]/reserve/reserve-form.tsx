@@ -29,6 +29,7 @@ interface ReserveFormProps {
   mode: string;
   slug: string;
   locale: string;
+  accentColor?: string;
   translations: {
     title: string;
     selectDate: string;
@@ -75,6 +76,7 @@ export function ReserveForm({
   mode,
   slug,
   locale,
+  accentColor = "#000000",
   translations: t,
 }: ReserveFormProps) {
   const [guestsCount, setGuestsCount] = useState(0);
@@ -286,7 +288,7 @@ export function ReserveForm({
   if (success) {
     return (
       <div className="text-center py-12 space-y-4">
-        <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto">
+        <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto" style={{ backgroundColor: accentColor }}>
           <Check className="h-10 w-10 text-white" />
         </div>
         <h3 className="text-2xl font-bold text-black">{t.success}</h3>
@@ -317,12 +319,12 @@ export function ReserveForm({
               key={n}
               type="button"
               onClick={() => handleGuestsSelect(n)}
-              className={cn(
-                "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center",
+              className="h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center"
+              style={
                 guestsCount === n
-                  ? "border-black bg-black text-white"
-                  : "border-gray-200 bg-white text-black hover:border-black hover:bg-black hover:text-white"
-              )}
+                  ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
+                  : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
+              }
             >
               {n}
             </button>
@@ -392,13 +394,16 @@ export function ReserveForm({
                   onClick={() => handleDateSelect(date)}
                   className={cn(
                     "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center px-4 capitalize",
-                    isSelected
-                      ? "border-black bg-black text-white"
-                      : isPast || isFuture
-                      ? "border-gray-100 bg-gray-50 text-gray-300 cursor-not-allowed"
-                      : "border-gray-200 bg-white text-black hover:border-black hover:bg-black hover:text-white",
+                    isPast || isFuture ? "cursor-not-allowed" : "",
                     loadingSlots && !isSelected && !isPast && !isFuture && "opacity-50 cursor-not-allowed"
                   )}
+                  style={
+                    isSelected
+                      ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
+                      : isPast || isFuture
+                      ? { borderColor: "#f3f4f6", backgroundColor: "#f9fafb", color: "#d1d5db" }
+                      : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
+                  }
                 >
                   {isLoading ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -428,12 +433,15 @@ export function ReserveForm({
                   onClick={() => handleTimeSelect(slot.time)}
                   className={cn(
                     "h-11 rounded-lg border-2 text-sm font-semibold transition-colors flex items-center justify-center",
-                    selectedTime === slot.time
-                      ? "border-black bg-black text-white"
-                      : slot.available && !loadingTables
-                      ? "border-gray-200 bg-white text-black hover:border-black hover:bg-black hover:text-white"
-                      : "border-gray-100 bg-gray-50 text-gray-300 cursor-not-allowed"
+                    !slot.available || loadingTables ? "cursor-not-allowed" : ""
                   )}
+                  style={
+                    selectedTime === slot.time
+                      ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
+                      : slot.available && !loadingTables
+                      ? { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
+                      : { borderColor: "#f3f4f6", backgroundColor: "#f9fafb", color: "#d1d5db" }
+                  }
                 >
                   {selectedTime === slot.time && loadingTables ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -469,20 +477,17 @@ export function ReserveForm({
                   <button
                     type="button"
                     onClick={() => handleTableSelect(table.id)}
-                    className={cn(
-                      "flex-1 h-16 rounded-lg border-2 transition-colors flex flex-col justify-center px-4 text-left",
+                    className="flex-1 h-16 rounded-lg border-2 transition-colors flex flex-col justify-center px-4 text-left"
+                    style={
                       selectedTableId === table.id
-                        ? "border-black bg-black text-white"
-                        : "border-gray-200 bg-white text-black hover:border-black"
-                    )}
+                        ? { borderColor: accentColor, backgroundColor: accentColor, color: "#fff" }
+                        : { borderColor: "#e5e7eb", backgroundColor: "#fff", color: "#000" }
+                    }
                   >
                     <span className="text-sm font-semibold">
                       {getTranslatedZone(table, locale) || `${t.table} ${table.number}`}
                     </span>
-                    <span className={cn(
-                      "text-xs",
-                      selectedTableId === table.id ? "text-gray-300" : "text-gray-500"
-                    )}>
+                    <span className="text-xs" style={{ color: selectedTableId === table.id ? "rgba(255,255,255,0.7)" : "#6b7280" }}>
                       {table.capacity} {t.guests}
                     </span>
                   </button>
@@ -506,7 +511,8 @@ export function ReserveForm({
               onChange={(e) => setName(e.target.value)}
               placeholder={t.namePlaceholder}
               required
-              className="h-12 border-2 border-gray-200 focus:border-black text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white"
+              className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
+              style={{ borderColor: name ? accentColor : undefined }}
             />
           </div>
 
@@ -521,7 +527,8 @@ export function ReserveForm({
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t.emailPlaceholder}
               required
-              className="h-12 border-2 border-gray-200 focus:border-black text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white"
+              className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
+              style={{ borderColor: email ? accentColor : undefined }}
             />
           </div>
 
@@ -535,7 +542,8 @@ export function ReserveForm({
               onChange={(e) => setNotes(e.target.value)}
               placeholder={t.notesPlaceholder}
               rows={3}
-              className="border-2 border-gray-200 focus:border-black resize-none text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white"
+              className="border-2 border-gray-200 resize-none text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
+              style={{ borderColor: notes ? accentColor : undefined }}
             />
           </div>
 
@@ -544,10 +552,13 @@ export function ReserveForm({
             disabled={submitting || !name.trim() || !email.trim()}
             className={cn(
               "w-full h-14 rounded-lg font-bold text-lg transition-colors",
-              !submitting && name.trim() && email.trim()
-                ? "bg-black text-white hover:bg-gray-800"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed"
+              submitting || !name.trim() || !email.trim() ? "cursor-not-allowed" : ""
             )}
+            style={
+              !submitting && name.trim() && email.trim()
+                ? { backgroundColor: accentColor, color: "#fff" }
+                : { backgroundColor: "#e5e7eb", color: "#9ca3af" }
+            }
           >
             {submitting ? t.submitting : t.submit}
           </button>

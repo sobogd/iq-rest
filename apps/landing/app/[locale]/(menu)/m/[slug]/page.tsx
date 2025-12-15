@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { ArrowRight, Phone, Globe, CalendarDays } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+import { MenuNavLink } from "./_components";
 
 function isVideo(url: string) {
   return /\.(mp4|webm|mov)$/i.test(url);
@@ -28,6 +28,7 @@ async function getRestaurant(slug: string) {
       phone: true,
       instagram: true,
       whatsapp: true,
+      accentColor: true,
       reservationsEnabled: true,
       _count: {
         select: {
@@ -54,7 +55,7 @@ export default async function MenuPage({ params }: MenuPageProps) {
   }
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-dvh flex flex-col">
       {/* Hero section with background - takes remaining space */}
       <div className="flex-1 bg-black relative overflow-hidden">
         {/* Background media */}
@@ -94,34 +95,38 @@ export default async function MenuPage({ params }: MenuPageProps) {
       {/* Navigation links */}
       <nav className="bg-white">
         {restaurant.reservationsEnabled && restaurant._count.tables > 0 && (
-          <Link href={`/m/${slug}/reserve`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+          <MenuNavLink href={`/m/${slug}/reserve`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
             <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
               <CalendarDays className="h-5 w-5" />
               {t("reserve")}
             </span>
-          </Link>
+          </MenuNavLink>
         )}
-        <Link href={`/m/${slug}/contacts`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+        <MenuNavLink href={`/m/${slug}/contacts`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
           <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
             <Phone className="h-5 w-5" />
             {t("contacts")}
           </span>
-        </Link>
-        <Link href={`/m/${slug}/language/`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+        </MenuNavLink>
+        <MenuNavLink href={`/m/${slug}/language/`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
           <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
             <Globe className="h-5 w-5" />
             {t("language")}
           </span>
-        </Link>
+        </MenuNavLink>
       </nav>
 
       {/* Online Menu block */}
-      <Link href={`/m/${slug}/menu/`} className="bg-black flex justify-center px-[8%]">
-        <span className="max-w-[440px] w-full pt-8 pb-12 flex items-center justify-between text-white font-bold uppercase text-xl">
+      <MenuNavLink
+        href={`/m/${slug}/menu/`}
+        className="flex justify-center px-[8%]"
+        style={{ backgroundColor: restaurant.accentColor }}
+      >
+        <span className="max-w-[440px] w-full py-8 flex items-center justify-between text-white font-bold uppercase text-xl">
           {t("onlineMenu")}
           <ArrowRight className="h-6 w-6" strokeWidth={3} />
         </span>
-      </Link>
+      </MenuNavLink>
     </div>
   );
 }

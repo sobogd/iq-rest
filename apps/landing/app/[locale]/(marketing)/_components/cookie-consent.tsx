@@ -7,28 +7,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
 import { X } from "lucide-react";
 
-export default function CookieConsent() {
+const COOKIE_CONSENT_KEY = "cookieConsent";
+const SHOW_DELAY_MS = 1000;
+
+export function CookieConsent() {
   const t = useTranslations("cookieConsent");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if user has already made a choice
-    const consent = localStorage.getItem("cookieConsent");
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
     if (!consent) {
-      // Show banner after a short delay
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 1000);
+      const timer = setTimeout(() => setIsVisible(true), SHOW_DELAY_MS);
+      return () => clearTimeout(timer);
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "accepted");
-    setIsVisible(false);
-  };
-
-  const handleReject = () => {
-    localStorage.setItem("cookieConsent", "rejected");
+  const handleConsent = (accepted: boolean) => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, accepted ? "accepted" : "rejected");
     setIsVisible(false);
   };
 
@@ -43,18 +38,19 @@ export default function CookieConsent() {
               <h3 className="text-lg font-semibold mb-2">{t("title")}</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 {t("description")}{" "}
-                <Link
-                  href="/cookies"
-                  className="text-primary hover:underline"
-                >
+                <Link href="/cookies" className="text-primary hover:underline">
                   {t("learnMore")}
                 </Link>
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={handleAccept} size="sm">
+                <Button onClick={() => handleConsent(true)} size="sm">
                   {t("acceptAll")}
                 </Button>
-                <Button onClick={handleReject} variant="outline" size="sm">
+                <Button
+                  onClick={() => handleConsent(false)}
+                  variant="outline"
+                  size="sm"
+                >
                   {t("rejectAll")}
                 </Button>
               </div>
@@ -63,7 +59,7 @@ export default function CookieConsent() {
               variant="ghost"
               size="icon"
               className="shrink-0"
-              onClick={handleReject}
+              onClick={() => handleConsent(false)}
             >
               <X className="h-4 w-4" />
             </Button>

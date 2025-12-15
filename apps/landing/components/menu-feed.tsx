@@ -19,9 +19,10 @@ interface Category {
 
 interface MenuFeedProps {
   categories: Category[];
+  accentColor?: string;
 }
 
-export function MenuFeed({ categories }: MenuFeedProps) {
+export function MenuFeed({ categories, accentColor }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const tabsRef = useRef<HTMLDivElement>(null);
@@ -136,7 +137,7 @@ export function MenuFeed({ categories }: MenuFeedProps) {
               {activeCategory === category.id && (
                 <span
                   className="absolute left-0 right-0 h-1"
-                  style={{ backgroundColor: "#000", bottom: "0" }}
+                  style={{ backgroundColor: accentColor || "#000", bottom: "0" }}
                 />
               )}
             </button>
@@ -145,7 +146,7 @@ export function MenuFeed({ categories }: MenuFeedProps) {
       </div>
 
       {/* Items feed - scrollable */}
-      <div ref={containerRef} className="flex-1 overflow-auto min-h-0" style={{ backgroundColor: "#fff" }}>
+      <div ref={containerRef} className="flex-1 overflow-auto min-h-0 hide-scrollbar" style={{ backgroundColor: "#fff" }}>
         <div className="flex justify-center px-0 min-[440px]:px-5">
           <div className="max-w-[440px] w-full pt-0 min-[440px]:pt-5 pb-[40vh] space-y-5">
             {categories.map((category) => (
