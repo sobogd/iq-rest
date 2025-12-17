@@ -1,20 +1,115 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { JsonLd, createWebPageSchema } from "../_lib";
+import type { Metadata } from "next";
 
-export default function TermsPage() {
-  const t = useTranslations("footer.legal");
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  const titles = {
+    en: "Terms and Conditions - GrandQR",
+    es: "Términos y Condiciones - GrandQR",
+  };
+
+  const descriptions = {
+    en: "Terms and Conditions for using GrandQR - QR menu solution for restaurants and cafes.",
+    es: "Términos y Condiciones de uso de GrandQR - solución de menú QR para restaurantes y cafeterías.",
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles] || titles.en,
+    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    robots: {
+      index: false,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://grandqr.com/${locale}/terms`,
+      languages: {
+        en: "https://grandqr.com/en/terms",
+        es: "https://grandqr.com/es/terms",
+        "x-default": "https://grandqr.com/en/terms",
+      },
+    },
+    openGraph: {
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      url: `https://grandqr.com/${locale}/terms`,
+      type: "website",
+      images: [
+        {
+          url: "https://grandqr.com/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "GrandQR - Terms and Conditions",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      images: ["https://grandqr.com/og-image.png"],
+    },
+  };
+}
+
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations("terms");
+
+  const sections = t.raw("sections") as Array<{
+    title: string;
+    content: string[];
+  }>;
+
+  const webPageSchema = createWebPageSchema(
+    t("title"),
+    "Terms and Conditions for using GrandQR - QR menu solution for restaurants and cafes",
+    `https://grandqr.com/${locale}/terms`
+  );
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <>
+      <JsonLd data={webPageSchema} />
+      <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-          {t("terms")}
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+          {t("title")}
         </h1>
-        <div className="prose prose-lg max-w-none">
-          <p className="text-muted-foreground text-center">
-            Coming soon...
+        <p className="text-muted-foreground text-center mb-12">
+          {t("lastUpdated")}
+        </p>
+
+        <div className="space-y-8">
+          {sections.map((section, index) => (
+            <section key={index} className="space-y-4">
+              <h2 className="text-2xl font-semibold">{section.title}</h2>
+              {section.content.map((paragraph, pIndex) => (
+                <p key={pIndex} className="text-muted-foreground leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </section>
+          ))}
+        </div>
+
+        <div className="mt-12 p-6 bg-muted/50 rounded-lg">
+          <h2 className="text-xl font-semibold mb-4">{t("contact.title")}</h2>
+          <p className="text-muted-foreground">{t("contact.description")}</p>
+          <p className="text-muted-foreground mt-2">
+            <strong>Email:</strong> support@grandqr.com
           </p>
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { PricingCards } from "../_components";
-import { JsonLd } from "../_lib";
+import { PricingCards, CtaSection } from "../_components";
+import { JsonLd, createBreadcrumbSchema } from "../_lib";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,8 +11,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles = {
-    en: "QR Menu & Website for Restaurant or Cafe | Pricing from €0 - SobogdQR",
-    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde €0 - SobogdQR",
+    en: "QR Menu & Website for Restaurant or Cafe | Pricing from €0 - GrandQR",
+    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde €0 - GrandQR",
   };
 
   const descriptions = {
@@ -30,11 +30,16 @@ export async function generateMetadata({
     description:
       descriptions[locale as keyof typeof descriptions] || descriptions.en,
     keywords: keywords[locale as keyof typeof keywords] || keywords.en,
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
-      canonical: `https://sobogdqr.com/${locale}/pricing`,
+      canonical: `https://grandqr.com/${locale}/pricing`,
       languages: {
-        en: "https://sobogdqr.com/en/pricing",
-        es: "https://sobogdqr.com/es/pricing",
+        en: "https://grandqr.com/en/pricing",
+        es: "https://grandqr.com/es/pricing",
+        "x-default": "https://grandqr.com/en/pricing",
       },
     },
     openGraph: {
@@ -42,7 +47,22 @@ export async function generateMetadata({
       description:
         descriptions[locale as keyof typeof descriptions] || descriptions.en,
       type: "website",
-      url: `https://sobogdqr.com/${locale}/pricing`,
+      url: `https://grandqr.com/${locale}/pricing`,
+      images: [
+        {
+          url: "https://grandqr.com/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "GrandQR - QR Menu for Restaurants",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titles[locale as keyof typeof titles] || titles.en,
+      description:
+        descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      images: ["https://grandqr.com/og-image.png"],
     },
   };
 }
@@ -92,7 +112,7 @@ const createOffer = (name: string, price: string) => ({
   priceCurrency: "EUR",
   availability: "https://schema.org/InStock",
   priceValidUntil: "2026-12-31",
-  url: "https://sobogdqr.com/pricing",
+  url: "https://grandqr.com/pricing",
   hasMerchantReturnPolicy: merchantReturnPolicy,
   shippingDetails,
 });
@@ -100,13 +120,13 @@ const createOffer = (name: string, price: string) => ({
 const pricingProductSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "QR Menu & Website for Restaurant and Cafe - SobogdQR",
+  name: "QR Menu & Website for Restaurant and Cafe - GrandQR",
   description:
     "Create a QR menu and website for your restaurant or cafe. Digital menu with QR code access, AI translations, analytics, and instant updates. Free plan available.",
-  image: ["https://sobogdqr.com/logo.svg", "https://sobogdqr.com/product-image.svg"],
+  image: ["https://grandqr.com/logo.svg", "https://grandqr.com/product-image.svg"],
   brand: {
     "@type": "Brand",
-    name: "SobogdQR",
+    name: "GrandQR",
   },
   category: "Restaurant Software",
   offers: [
@@ -129,7 +149,7 @@ const pricingProductSchema = {
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Restaurant Owner" },
       reviewBody:
-        "SobogdQR is the best QR menu solution for our restaurant. Customers scan the code and see our menu instantly. The multilingual support helps us serve tourists.",
+        "GrandQR is the best QR menu solution for our restaurant. Customers scan the code and see our menu instantly. The multilingual support helps us serve tourists.",
     },
     {
       "@type": "Review",
@@ -141,23 +161,36 @@ const pricingProductSchema = {
   ],
 };
 
-export default async function PricingPage() {
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("pricing");
+
+  const breadcrumbSchema = createBreadcrumbSchema(locale, [
+    { name: "Home", path: "" },
+    { name: t("title") },
+  ]);
 
   return (
     <>
       <JsonLd data={pricingProductSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <header className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("title")}</h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               {t("subtitle")}
             </p>
           </header>
           <PricingCards />
         </div>
       </div>
+
+      <CtaSection />
     </>
   );
 }

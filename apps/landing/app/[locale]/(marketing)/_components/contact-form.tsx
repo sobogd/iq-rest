@@ -75,7 +75,7 @@ export function ContactForm() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="email">{t("email")}</Label>
+                    <Label htmlFor="email" className="text-base">{t("email")}</Label>
                     <Input
                       id="email"
                       name="email"
@@ -85,11 +85,12 @@ export function ContactForm() {
                       value={formData.email}
                       onChange={handleChange}
                       disabled={isLoading}
+                      className="h-12 text-base"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">{t("subject")}</Label>
+                    <Label htmlFor="subject" className="text-base">{t("subject")}</Label>
                     <Input
                       id="subject"
                       name="subject"
@@ -99,13 +100,14 @@ export function ContactForm() {
                       value={formData.subject}
                       onChange={handleChange}
                       disabled={isLoading}
+                      className="h-12 text-base"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="message">{t("message")}</Label>
+                    <Label htmlFor="message" className="text-base">{t("message")}</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -114,12 +116,12 @@ export function ContactForm() {
                       value={formData.message}
                       onChange={handleChange}
                       disabled={isLoading}
-                      className="h-[80px] resize-none"
+                      className="h-[104px] resize-none text-base"
                     />
                   </div>
 
                   <div className="flex justify-end">
-                    <Button type="submit" disabled={isLoading} size="lg">
+                    <Button type="submit" disabled={isLoading} size="lg" className="text-base px-8">
                       {isLoading ? t("sending") : t("submit")}
                     </Button>
                   </div>

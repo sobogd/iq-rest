@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/", "/dashboard/", "/en/dashboard/", "/es/dashboard/", "/m/", "/en/m/", "/es/m/"],
     },
-    sitemap: "https://sobogdqr.com/sitemap.xml",
+    sitemap: "https://grandqr.com/sitemap.xml",
   };
 }

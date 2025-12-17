@@ -9,3 +9,4 @@ export { HowToSteps } from "./how-to-steps";
 export { MenuPreviewModal } from "./menu-preview-modal";
 export { HeroImages } from "./hero-images";
 export { ImageComposition } from "./image-composition";
+export { CtaSection } from "./cta-section";

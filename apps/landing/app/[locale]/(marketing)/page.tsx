@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { HowToSteps, MenuPreviewModal, HeroImages, ImageComposition } from "./_components";
+import { HowToSteps, MenuPreviewModal, HeroImages, ImageComposition, CtaSection } from "./_components";
 import {
   JsonLd,
   productSchema,
@@ -149,70 +149,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Intro Section */}
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <p className="text-base md:text-lg font-medium text-primary">{tIntro("socialProof")}</p>
-            <div className="space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold">{tIntro("title")}</h2>
-              <p className="text-base sm:text-lg md:text-lg text-muted-foreground leading-relaxed">
-                {tIntro("description")}
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link href="/dashboard">{tHero("cta.create")}</Link>
-              </Button>
-              <MenuPreviewModal
-                buttonText={tHero("cta.view")}
-                menuUrl="/m/love-eatery"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {tWhyUs("title")}
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                {tWhyUs("subtitle")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {whyUsItems.map((item, index) => (
-                <Card key={index} className="border bg-gradient-to-br from-primary/5 to-primary/10">
-                  <CardContent className="p-6">
-                    <div className="flex gap-4">
-                      <span className="text-4xl font-bold text-primary/70">{index + 1}</span>
-                      <div>
-                        <h3 className="font-semibold text-lg lg:text-base">
-                          {item.title}
-                        </h3>
-                        <p className="text-base lg:text-sm text-muted-foreground mt-1">{item.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* Features Preview Section */}
-      <section className="py-16 bg-muted/50">
+      <section id="features" className="py-16 bg-muted/50 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 {tFeaturesPreview("title")}
               </h2>
@@ -334,7 +275,7 @@ export default function HomePage() {
                         {feature.shortDescription}
                       </p>
                       <Button asChild variant="outline">
-                        <Link href={`/features/${feature.id}`}>
+                        <Link href={`/${feature.id}`}>
                           {feature.cta}
                         </Link>
                       </Button>
@@ -348,38 +289,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24">
+      {/* Intro Section */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-primary/50 bg-primary/5">
-              <CardContent className="p-8 md:p-12 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  {tFeatures("readyTitle")}
-                </h2>
-                <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                  {tFeatures("readyDescription")}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="text-lg px-8 py-6">
-                    <Link href="/dashboard">{tFeatures("getStarted")}</Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="text-lg px-8 py-6"
-                  >
-                    <Link href="/pricing">{tFeatures("viewPricing")}</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <p className="text-base md:text-lg font-medium text-primary">{tIntro("socialProof")}</p>
+            <div className="space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold">{tIntro("title")}</h2>
+              <p className="text-base sm:text-lg md:text-lg text-muted-foreground leading-relaxed">
+                {tIntro("description")}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Link href="/dashboard">{tHero("cta.create")}</Link>
+              </Button>
+              <MenuPreviewModal
+                buttonText={tHero("cta.view")}
+                menuUrl="/m/love-eatery"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <HowToSteps />
+      {/* Why Us Section */}
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                {tWhyUs("title")}
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                {tWhyUs("subtitle")}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {whyUsItems.map((item, index) => (
+                <Card key={index} className="border bg-gradient-to-br from-primary/5 to-primary/10">
+                  <CardContent className="p-6">
+                    <div className="flex gap-4">
+                      <span className="text-4xl font-bold text-primary/70">{index + 1}</span>
+                      <div>
+                        <h3 className="font-semibold text-lg lg:text-base">
+                          {item.title}
+                        </h3>
+                        <p className="text-base lg:text-sm text-muted-foreground mt-1">{item.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <CtaSection />
     </>
   );
 }

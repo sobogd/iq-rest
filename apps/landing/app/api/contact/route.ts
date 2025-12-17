@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: process.env.FROM_EMAIL,
       to: process.env.TO_EMAIL,
-      subject: `SobogdQR Contact Form: ${subject}`,
+      subject: `GrandQR Contact Form: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">
@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
           </div>
           <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
           <p style="color: #666; font-size: 12px;">
-            This email was sent from the SobogdQR contact form.
+            This email was sent from the GrandQR contact form.
           </p>
         </div>
       `,
@@ -71,7 +71,7 @@ Message:
 ${message}
 
 ---
-This email was sent from the SobogdQR contact form.
+This email was sent from the GrandQR contact form.
       `,
     };
 

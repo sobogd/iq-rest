@@ -8,29 +8,25 @@ type RouteConfig = {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sobogdqr.com'
+  const baseUrl = 'https://grandqr.com'
   const locales = ['en', 'es']
 
   // Define all routes with individual settings
   const routes: RouteConfig[] = [
-    { path: '/pricing', lastModified: '2024-11-15', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/features', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/features/instant-setup', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/mobile-management', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/ai-translation', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/multilingual', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/ai-images', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/easy-menu', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/analytics', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/reservations', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/custom-design', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/color-scheme', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/features/personal-support', lastModified: '2025-12-11', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/faq', lastModified: '2025-11-20', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/contacts', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.5 },
-    { path: '/terms', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
-    { path: '/privacy', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
-    { path: '/cookies', lastModified: '2024-11-15', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/pricing', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/instant-setup', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/mobile-management', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/ai-translation', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/multilingual', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/ai-images', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/easy-menu', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/analytics', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/reservations', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/custom-design', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/color-scheme', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/personal-support', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/faq', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/contacts', lastModified: '2025-12-16', changeFrequency: 'yearly', priority: 0.5 },
     { path: '/changelog', lastModified: '2025-12-02', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/changelog/support-qr-menu-restaurant-cafe', lastModified: '2025-12-02', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/detailed-analytics-restaurant-qr-menu-website', lastModified: '2025-12-02', changeFrequency: 'monthly', priority: 0.6 },
@@ -44,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/changelog/get-started-page-redesign', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/user-authentication-interface', lastModified: '2024-11-19', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/subscription-plans-qr-menu-restaurant-website', lastModified: '2025-11-30', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/get-started', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/get-started', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   // Generate sitemap entries for all locales
@@ -54,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   locales.forEach(locale => {
     sitemapEntries.push({
       url: `${baseUrl}/${locale}`,
-      lastModified: new Date('2025-11-19'),
+      lastModified: new Date('2025-12-16'),
       changeFrequency: 'weekly',
       priority: 1.0,
       alternates: {

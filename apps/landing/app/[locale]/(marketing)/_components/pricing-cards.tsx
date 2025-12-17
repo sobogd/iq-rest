@@ -259,15 +259,6 @@ export function PricingCards() {
         </div>
       </div>
 
-      {/* SEO Content */}
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          {t("seo.title")}
-        </h2>
-        <p className="text-muted-foreground leading-relaxed">
-          {t("seo.text")}
-        </p>
-      </div>
     </div>
   );
 }

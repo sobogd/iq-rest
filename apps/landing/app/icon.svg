@@ -1,33 +1,52 @@
-<svg width="32" height="32" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-  <g fill="#dc2626">
-    <!-- Corner markers -->
-    <rect x="200" y="200" width="200" height="200" rx="20"/>
-    <rect x="800" y="200" width="200" height="200" rx="20"/>
-    <rect x="200" y="800" width="200" height="200" rx="20"/>
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="qr-holes">
+      <rect width="1200" height="1200" fill="white"/>
+      <rect x="225" y="575" width="110" height="110" rx="8" fill="black"/>
+      <rect x="525" y="375" width="110" height="110" rx="8" fill="black"/>
+      <rect x="375" y="765" width="110" height="110" rx="8" fill="black"/>
+    </mask>
+    <mask id="mountain-mask">
+      <rect width="1200" height="1200" fill="white"/>
+      <!-- Cut out areas where stroke intersects with QR markers -->
+      <rect x="225" y="575" width="110" height="110" rx="8" fill="black"/>
+      <rect x="525" y="375" width="110" height="110" rx="8" fill="black"/>
+      <rect x="375" y="765" width="110" height="110" rx="8" fill="black"/>
+    </mask>
+  </defs>
 
-    <!-- QR pattern blocks -->
-    <rect x="500" y="200" width="80" height="80" rx="10"/>
-    <rect x="620" y="200" width="80" height="80" rx="10"/>
-    <rect x="500" y="320" width="80" height="80" rx="10"/>
-    <rect x="620" y="320" width="80" height="80" rx="10"/>
+  <!-- Outline mountain with two peaks (masked to not show through QR holes) -->
+  <path
+    d="M100 950 L400 350 L530 520 L720 200 L1100 950 Z"
+    fill="none"
+    stroke="hsl(0, 73%, 50%)"
+    stroke-width="70"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    mask="url(#mountain-mask)"
+  />
 
-    <rect x="200" y="500" width="80" height="80" rx="10"/>
-    <rect x="320" y="500" width="80" height="80" rx="10"/>
-    <rect x="200" y="620" width="80" height="80" rx="10"/>
-    <rect x="320" y="620" width="80" height="80" rx="10"/>
+  <!-- QR corner markers outer squares with holes -->
+  <g fill="hsl(0, 73%, 50%)" mask="url(#qr-holes)">
+    <rect x="200" y="550" width="160" height="160" rx="12"/>
+    <rect x="500" y="350" width="160" height="160" rx="12"/>
+    <rect x="350" y="740" width="160" height="160" rx="12"/>
+  </g>
 
-    <rect x="800" y="500" width="80" height="80" rx="10"/>
-    <rect x="920" y="500" width="80" height="80" rx="10"/>
-    <rect x="800" y="620" width="80" height="80" rx="10"/>
-    <rect x="920" y="620" width="80" height="80" rx="10"/>
+  <!-- QR corner markers inner dots (on top, no mask) -->
+  <g fill="hsl(0, 73%, 50%)">
+    <rect x="255" y="605" width="50" height="50" rx="6"/>
+    <rect x="555" y="405" width="50" height="50" rx="6"/>
+    <rect x="405" y="795" width="50" height="50" rx="6"/>
 
-    <rect x="500" y="800" width="80" height="80" rx="10"/>
-    <rect x="620" y="800" width="80" height="80" rx="10"/>
-    <rect x="500" y="920" width="80" height="80" rx="10"/>
-    <rect x="620" y="920" width="80" height="80" rx="10"/>
-
-    <!-- Center pattern -->
-    <circle cx="600" cy="600" r="120"/>
-    <circle cx="600" cy="600" r="40"/>
+    <!-- Data dots -->
+    <rect x="680" y="480" width="60" height="60" rx="8"/>
+    <rect x="760" y="560" width="60" height="60" rx="8"/>
+    <rect x="680" y="640" width="60" height="60" rx="8"/>
+    <rect x="840" y="650" width="60" height="60" rx="8"/>
+    <rect x="760" y="730" width="60" height="60" rx="8"/>
+    <rect x="900" y="750" width="60" height="60" rx="8"/>
+    <rect x="550" y="720" width="60" height="60" rx="8"/>
+    <rect x="620" y="820" width="60" height="60" rx="8"/>
   </g>
 </svg>

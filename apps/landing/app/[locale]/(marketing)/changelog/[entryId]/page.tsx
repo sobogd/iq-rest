@@ -100,11 +100,38 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t(`entries.${key}.meta.title`),
     description: t(`entries.${key}.meta.description`),
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://grandqr.com/${locale}/changelog/${entryId}`,
+      languages: {
+        en: `https://grandqr.com/en/changelog/${entryId}`,
+        es: `https://grandqr.com/es/changelog/${entryId}`,
+        "x-default": `https://grandqr.com/en/changelog/${entryId}`,
+      },
+    },
     openGraph: {
       title: t(`entries.${key}.meta.title`),
       description: t(`entries.${key}.meta.description`),
+      url: `https://grandqr.com/${locale}/changelog/${entryId}`,
       type: "article",
       publishedTime: entry.date,
+      images: [
+        {
+          url: "https://grandqr.com/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "GrandQR - QR Menu for Restaurants",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t(`entries.${key}.meta.title`),
+      description: t(`entries.${key}.meta.description`),
+      images: ["https://grandqr.com/og-image.png"],
     },
   };
 }
@@ -283,11 +310,11 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
             datePublished: entry.date,
             author: {
               "@type": "Organization",
-              name: "SobogdQR",
+              name: "GrandQR",
             },
             publisher: {
               "@type": "Organization",
-              name: "SobogdQR",
+              name: "GrandQR",
             },
           }}
         />

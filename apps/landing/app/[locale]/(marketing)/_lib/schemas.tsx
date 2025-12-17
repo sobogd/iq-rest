@@ -1,9 +1,16 @@
-const BASE_URL = "https://sobogdqr.com";
+const BASE_URL = "https://grandqr.com";
+
+// Dynamic price validity - always 1 year from now
+const getPriceValidUntil = () => {
+  const date = new Date();
+  date.setFullYear(date.getFullYear() + 1);
+  return date.toISOString().split("T")[0];
+};
 
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SobogdQR",
+  name: "GrandQR",
   url: BASE_URL,
   logo: `${BASE_URL}/logo.svg`,
   description: "Digital QR menu solution for restaurants and cafes worldwide",
@@ -15,14 +22,14 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    email: "support@sobogdqr.com",
+    email: "support@grandqr.com",
   },
 };
 
 export const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "SobogdQR",
+  name: "GrandQR",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web Browser",
   offers: {
@@ -30,27 +37,20 @@ export const softwareSchema = {
     price: "0",
     priceCurrency: "EUR",
     availability: "https://schema.org/InStock",
-    priceValidUntil: "2026-12-31",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "127",
-    bestRating: "5",
-    worstRating: "1",
+    priceValidUntil: getPriceValidUntil(),
   },
 };
 
 export const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "SobogdQR - QR Menu Solution for Restaurants",
+  name: "GrandQR - QR Menu Solution for Restaurants",
   description:
     "Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics",
-  image: [`${BASE_URL}/logo.svg`, `${BASE_URL}/product-image.svg`],
+  image: [`${BASE_URL}/logo.svg`, `${BASE_URL}/og-image.svg`],
   brand: {
     "@type": "Brand",
-    name: "SobogdQR",
+    name: "GrandQR",
   },
   offers: {
     "@type": "AggregateOffer",
@@ -59,7 +59,7 @@ export const productSchema = {
     priceCurrency: "EUR",
     offerCount: "3",
     availability: "https://schema.org/InStock",
-    priceValidUntil: "2026-12-31",
+    priceValidUntil: getPriceValidUntil(),
     url: `${BASE_URL}/pricing`,
     hasMerchantReturnPolicy: {
       "@type": "MerchantReturnPolicy",
@@ -98,13 +98,6 @@ export const productSchema = {
       },
     },
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "127",
-    bestRating: "5",
-    worstRating: "1",
-  },
   review: [
     {
       "@type": "Review",
@@ -118,7 +111,7 @@ export const productSchema = {
         name: "Restaurant Owner",
       },
       reviewBody:
-        "SobogdQR transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.",
+        "GrandQR transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.",
     },
     {
       "@type": "Review",
@@ -136,6 +129,67 @@ export const productSchema = {
     },
   ],
 };
+
+// Contact Page Schema
+export const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact GrandQR",
+  description: "Get in touch with the GrandQR team for support with your restaurant QR menu",
+  url: `${BASE_URL}/en/contacts`,
+  mainEntity: {
+    "@type": "Organization",
+    name: "GrandQR",
+    email: "support@grandqr.com",
+    url: BASE_URL,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "support@grandqr.com",
+      availableLanguage: ["English", "Spanish"],
+    },
+  },
+};
+
+// WebPage Schema for legal pages
+export const createWebPageSchema = (
+  name: string,
+  description: string,
+  url: string,
+  dateModified: string = "2025-12-17"
+) => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name,
+  description,
+  url,
+  dateModified,
+  publisher: {
+    "@type": "Organization",
+    name: "GrandQR",
+    url: BASE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/logo.svg`,
+    },
+  },
+  inLanguage: ["en", "es"],
+});
+
+// Breadcrumb Schema helper
+export const createBreadcrumbSchema = (
+  locale: string,
+  items: Array<{ name: string; path?: string }>
+) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.path ? `${BASE_URL}/${locale}${item.path}` : `${BASE_URL}/${locale}`,
+  })),
+});
 
 export function JsonLd({ data }: { data: object }) {
   return (

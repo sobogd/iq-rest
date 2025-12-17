@@ -38,7 +38,7 @@ export function AdModal({ onComplete }: AdModalProps) {
               <path d="M3 3h6v6H3V3zm2 2v2h2V5H5zm8-2h6v6h-6V3zm2 2v2h2V5h-2zM3 13h6v6H3v-6zm2 2v2h2v-2H5zm13-2h1v1h-1v-1zm-3 0h1v1h-1v-1zm1 1h1v1h-1v-1zm2 0h1v1h-1v-1zm-1 1h1v1h-1v-1zm1 1h1v1h-1v-1zm-2 0h1v1h-1v-1zm-1 1h1v1h-1v-1zm2 0h1v1h-1v-1zm1 1h1v1h-1v-1z" />
             </svg>
           </div>
-          <h2 className="text-xl font-bold text-gray-900">SobogdQR</h2>
+          <h2 className="text-xl font-bold text-gray-900">GrandQR</h2>
           <p className="text-sm text-gray-500 mt-1">Digital QR Menu Solution</p>
         </div>
 
@@ -48,7 +48,7 @@ export function AdModal({ onComplete }: AdModalProps) {
             Create your own QR menu for free
           </p>
           <a
-            href="https://sobogdqr.com/dashboard"
+            href="https://grandqr.com/dashboard"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition-colors"

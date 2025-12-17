@@ -8,7 +8,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { HowToSteps } from "../_components";
-import { JsonLd } from "../_lib";
+import { JsonLd, createBreadcrumbSchema } from "../_lib";
 
 export async function generateMetadata({
   params,
@@ -21,10 +21,37 @@ export async function generateMetadata({
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://grandqr.com/${locale}/changelog`,
+      languages: {
+        en: "https://grandqr.com/en/changelog",
+        es: "https://grandqr.com/es/changelog",
+        "x-default": "https://grandqr.com/en/changelog",
+      },
+    },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
+      url: `https://grandqr.com/${locale}/changelog`,
       type: "website",
+      images: [
+        {
+          url: "https://grandqr.com/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "GrandQR - QR Menu for Restaurants",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("meta.title"),
+      description: t("meta.description"),
+      images: ["https://grandqr.com/og-image.png"],
     },
   };
 }
@@ -107,22 +134,32 @@ const CHANGELOG_ENTRIES = [
   },
 ] as const;
 
-export default async function ChangelogPage() {
+export default async function ChangelogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("changelog");
+
+  const breadcrumbSchema = createBreadcrumbSchema(locale, [
+    { name: "Home", path: "" },
+    { name: t("title") },
+  ]);
 
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "SobogdQR Changelog",
+    name: "GrandQR Changelog",
     description:
-      "Latest updates and new features for SobogdQR - digital QR menu solution for restaurants",
-    url: "https://sobogdqr.com/changelog",
+      "Latest updates and new features for GrandQR - digital QR menu solution for restaurants",
+    url: "https://grandqr.com/changelog",
     publisher: {
       "@type": "Organization",
-      name: "SobogdQR",
+      name: "GrandQR",
       logo: {
         "@type": "ImageObject",
-        url: "https://sobogdqr.com/logo.svg",
+        url: "https://grandqr.com/logo.svg",
       },
     },
     blogPost: CHANGELOG_ENTRIES.map((entry) => ({
@@ -130,10 +167,10 @@ export default async function ChangelogPage() {
       headline: t(entry.titleKey),
       description: t(entry.descriptionKey),
       datePublished: entry.date,
-      url: `https://sobogdqr.com/changelog/${entry.id}`,
+      url: `https://grandqr.com/changelog/${entry.id}`,
       author: {
         "@type": "Organization",
-        name: "SobogdQR",
+        name: "GrandQR",
       },
     })),
   };
@@ -141,6 +178,7 @@ export default async function ChangelogPage() {
   return (
     <>
       <JsonLd data={blogSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

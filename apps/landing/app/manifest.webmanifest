@@ -1,10 +1,11 @@
 {
-  "name": "SobogdQR - QR Menu for Restaurant & Cafe",
-  "short_name": "SobogdQR",
+  "name": "GrandQR - QR Menu for Restaurant & Cafe",
+  "short_name": "GrandQR",
   "description": "Create professional QR menu for restaurant and cafe in minutes",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/icon-192.png",

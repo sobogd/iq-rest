@@ -1,43 +1,32 @@
-"use client";
-
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { LanguageSelector } from "./language-selector";
-import Image from "next/image";
-import { Menu } from "lucide-react";
+import { MobileMenu } from "./mobile-menu";
+import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
+  { href: "/#features", key: "nav.features" },
   { href: "/pricing", key: "nav.pricing" },
-  { href: "/changelog", key: "nav.changelog" },
+  { href: "/faq", key: "nav.faq" },
   { href: "/contacts", key: "nav.contacts" },
 ] as const;
 
-export function Header() {
-  const t = useTranslations("header");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export async function Header() {
+  const t = await getTranslations("header");
+
+  const mobileLinks = NAV_LINKS.map((link) => ({
+    href: link.href,
+    label: t(link.key),
+  }));
 
   return (
-    <header className="border-b">
+    <header className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-1 hover:opacity-80">
-            <Image
-              src="/logo.svg"
-              alt="SobogdQR Logo"
-              width={40}
-              height={40}
-              className="w-10 h-10"
-            />
-            <span className="text-2xl font-bold">{t("logo")}</span>
+            <Logo width={40} height={40} className="w-10 h-10" />
+            <span className="text-xl font-bold">{t("logo")}</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -58,49 +47,11 @@ export function Header() {
               <Link href="/dashboard">{t("getStarted")}</Link>
             </Button>
 
-            <Dialog open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <DialogTrigger asChild className="lg:hidden">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  aria-label="Toggle menu"
-                  className="border-0 md:border"
-                >
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="min-w-[250px] max-w-[40vw]">
-                <DialogHeader>
-                  <DialogTitle className="text-center">
-                    {t("nav.menu")}
-                  </DialogTitle>
-                </DialogHeader>
-                <nav className="flex flex-col gap-2 py-4 items-center text-center">
-                  <div className="flex flex-col divide-y divide-border/30 w-full">
-                    {NAV_LINKS.map((link, index) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className={`text-foreground hover:text-primary transition-colors py-2 text-lg w-full ${
-                          index > 0 ? "pt-4" : ""
-                        }`}
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {t(link.key)}
-                      </Link>
-                    ))}
-                  </div>
-                  <Button asChild className="w-full mt-6">
-                    <Link
-                      href="/dashboard"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {t("getStarted")}
-                    </Link>
-                  </Button>
-                </nav>
-              </DialogContent>
-            </Dialog>
+            <MobileMenu
+              links={mobileLinks}
+              menuTitle={t("nav.menu")}
+              getStartedLabel={t("getStarted")}
+            />
           </div>
         </div>
       </div>

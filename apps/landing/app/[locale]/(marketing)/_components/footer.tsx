@@ -1,12 +1,9 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import Image from "next/image";
+import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
   { href: "/pricing", key: "navigation.pricing" },
-  { href: "/features", key: "navigation.features" },
   { href: "/faq", key: "navigation.faq" },
   { href: "/contacts", key: "navigation.contacts" },
   { href: "/changelog", key: "navigation.changelog" },
@@ -18,22 +15,16 @@ const LEGAL_LINKS = [
   { href: "/cookies", key: "legal.cookies" },
 ] as const;
 
-export function Footer() {
-  const t = useTranslations("footer");
+export async function Footer() {
+  const t = await getTranslations("footer");
 
   return (
     <footer className="border-t bg-muted/30">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80">
-            <Image
-              src="/logo.svg"
-              alt="SobogdQR"
-              width={28}
-              height={28}
-              className="rounded"
-            />
-            <span className="text-xl font-bold">SobogdQR</span>
+            <Logo width={28} height={28} className="rounded" />
+            <span className="text-xl font-bold">GrandQR</span>
           </Link>
 
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">

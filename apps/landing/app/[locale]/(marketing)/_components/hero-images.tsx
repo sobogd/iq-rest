@@ -4,10 +4,11 @@ export function HeroImages() {
   return (
     <ImageComposition
       images={{
-        left: { src: "/samples/sample-main.webp", alt: "Menu preview" },
-        center: { src: "/samples/sample-main-page.webp", alt: "Main page preview" },
-        right: { src: "/samples/sample-contacts.webp", alt: "Contacts preview" },
+        left: { src: "/samples/sample-main.webp", alt: "QR menu preview showing restaurant dishes" },
+        center: { src: "/samples/sample-main-page.webp", alt: "Restaurant website homepage with QR menu" },
+        right: { src: "/samples/sample-contacts.webp", alt: "Restaurant contact page with map and info" },
       }}
+      priority
     />
   );
 }

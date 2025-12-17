@@ -41,19 +41,17 @@ export function LanguageSelector() {
         <Button
           variant="outline"
           size="icon"
-          aria-label="Select language"
+          aria-label={t("selectLanguage")}
           className="border-0 md:border"
         >
           <Globe className="h-5 w-5" />
-          <span className="sr-only">Select language</span>
+          <span className="sr-only">{t("selectLanguage")}</span>
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{t("selectLanguage")}</DialogTitle>
-          <DialogDescription>
-            Choose your preferred language for the website.
-          </DialogDescription>
+          <DialogDescription>{t("selectLanguageDescription")}</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           {LOCALES.map((loc) => (

@@ -1,15 +1,17 @@
 {
   "header": {
-    "logo": "SobogdQR",
+    "logo": "GrandQR",
     "nav": {
       "menu": "Menu",
       "pricing": "Pricing",
       "features": "Features",
+      "faq": "Questions",
       "changelog": "Changelog",
       "contacts": "Contacts"
     },
     "getStarted": "Sign In",
-    "selectLanguage": "Select Language"
+    "selectLanguage": "Select Language",
+    "selectLanguageDescription": "Choose your preferred language for the website."
   },
   "home": {
     "hero": {
@@ -84,13 +86,72 @@
     "viewPricing": "View Pricing",
     "readyTitle": "Ready to Get Started?",
     "readyDescription": "Create your professional QR menu and restaurant website in minutes. All features included.",
+    "keyBenefits": "Key Benefits",
+    "faqTitle": "Frequently Asked Questions",
+    "faq": {
+      "instant-setup": [
+        { "q": "What do I need to get started?", "a": "Just your email address. No credit card, no complex forms." },
+        { "q": "How long does setup take?", "a": "Your website is ready instantly. Add your menu items and you're live in 5 minutes." },
+        { "q": "Is there a free plan?", "a": "Yes, start free with all essential features included." }
+      ],
+      "mobile-management": [
+        { "q": "Do I need to install an app?", "a": "No app needed - everything works in your phone's browser." },
+        { "q": "Can I upload photos from my phone?", "a": "Yes, take photos with your camera and upload directly to your menu." },
+        { "q": "Does it work on tablets?", "a": "Yes, the dashboard is optimized for phones, tablets, and desktop computers." }
+      ],
+      "ai-translation": [
+        { "q": "How accurate is AI translation?", "a": "Our AI understands culinary context, preserving dish names and translating descriptions naturally." },
+        { "q": "How fast is the translation?", "a": "Entire menus are translated in seconds, not hours." },
+        { "q": "Can I edit AI translations?", "a": "Yes, all translations are editable - review and adjust as needed." }
+      ],
+      "multilingual": [
+        { "q": "How many languages are supported?", "a": "25+ languages including all major European languages, Chinese, Japanese, Korean, Arabic, and Hebrew." },
+        { "q": "How do customers switch languages?", "a": "A language selector appears on your menu - one tap to switch to any available language." },
+        { "q": "Is the translation automatic?", "a": "You can use AI translation or manually enter translations for each language." }
+      ],
+      "ai-images": [
+        { "q": "What image formats are supported?", "a": "Upload JPG, PNG, or WebP - images are automatically optimized." },
+        { "q": "Does optimization reduce quality?", "a": "No, our AI maintains visual quality while reducing file size for fast loading." },
+        { "q": "Is there a file size limit?", "a": "Upload images up to 10MB - they'll be optimized automatically." }
+      ],
+      "easy-menu": [
+        { "q": "How do I add a new dish?", "a": "Tap 'Add Item', enter name, description, price, and optionally upload a photo. That's it!" },
+        { "q": "Can I reorder menu items?", "a": "Yes, simply drag and drop items or categories to reorder them." },
+        { "q": "What if a dish is sold out?", "a": "Toggle the item off temporarily - it disappears from the menu but isn't deleted." }
+      ],
+      "analytics": [
+        { "q": "What metrics can I track?", "a": "Daily views, page performance, language preferences, and trends over time." },
+        { "q": "How often is data updated?", "a": "Analytics are updated in real-time - see today's visitors as they happen." },
+        { "q": "Can I export analytics data?", "a": "View detailed reports directly in your dashboard." }
+      ],
+      "reservations": [
+        { "q": "How do customers make reservations?", "a": "Customers can book directly from your restaurant website. They select date, time, and number of guests, then receive an email confirmation." },
+        { "q": "Can I approve reservations manually?", "a": "Yes, you can choose between automatic confirmation or manual approval for each booking." },
+        { "q": "Will I get notified of new bookings?", "a": "Yes, you receive email notifications for every new reservation." }
+      ],
+      "custom-design": [
+        { "q": "What video formats are supported?", "a": "MP4 and WebM formats are supported. Videos are optimized automatically for fast loading." },
+        { "q": "Can I use my own photos?", "a": "Yes, upload any photo and it will be automatically optimized for web display." },
+        { "q": "Does video slow down the menu?", "a": "No, videos are compressed and lazy-loaded to ensure fast page performance." }
+      ],
+      "color-scheme": [
+        { "q": "How many colors can I choose from?", "a": "Choose from 12 preset colors or enter your exact brand color using a hex code." },
+        { "q": "Does it support dark mode?", "a": "Yes, your color scheme automatically adapts to both light and dark themes." },
+        { "q": "Can I change colors anytime?", "a": "Yes, change your accent color instantly from the dashboard - updates appear immediately." }
+      ],
+      "personal-support": [
+        { "q": "How do I contact support?", "a": "Use the contact form or email us directly - real humans respond, not bots." },
+        { "q": "What's the response time?", "a": "We typically respond within a few hours during business days." },
+        { "q": "Is support available for free plans?", "a": "Yes, personal support is available for all plans including free." }
+      ]
+    },
     "list": [
       {
         "id": "instant-setup",
         "title": "Instant QR Menu & Website Setup",
         "shortDescription": "Create your restaurant website and QR menu with just an email - ready in 5 minutes",
         "description": "Get started in seconds with the simplest registration process. Just enter your email and you instantly get a complete restaurant website with QR menu, contact page with map, and modern design. No technical skills needed, no complicated forms - your restaurant goes online immediately.",
-        "fullDescription": "Traditional website builders require hours of setup, technical knowledge, and often a developer. SobogdQR changes everything. Enter your email, verify with a simple code, and your restaurant website is ready. Add your dishes, upload photos, and share your QR code with customers. The entire process takes less than 5 minutes.",
+        "fullDescription": "Traditional website builders require hours of setup, technical knowledge, and often a developer. GrandQR changes everything. Enter your email, verify with a simple code, and your restaurant website is ready. Add your dishes, upload photos, and share your QR code with customers. The entire process takes less than 5 minutes.",
         "benefits": [
           "Only email required to start - no complex registration",
           "Restaurant website ready instantly after registration",
@@ -107,7 +168,7 @@
         "title": "100% Mobile-Friendly Management",
         "shortDescription": "No computer? No problem. Run your entire restaurant website from your phone. Add dishes while standing in the kitchen, update prices during service, upload photos straight from your camera. Every feature works perfectly on mobile - because restaurant owners are never sitting at a desk.",
         "description": "Add categories, dishes, photos, and manage your entire restaurant website directly from your phone. Our dashboard is fully optimized for mobile devices, so you can update your menu during a coffee break or add daily specials on the go.",
-        "fullDescription": "Restaurant owners are busy people who aren't always at a computer. That's why we built SobogdQR to work perfectly on mobile devices. Every feature, from adding new dishes to updating prices, is designed for touch screens. Take a photo of a new dish and upload it instantly. Change today's special while standing in the kitchen.",
+        "fullDescription": "Restaurant owners are busy people who aren't always at a computer. That's why we built GrandQR to work perfectly on mobile devices. Every feature, from adding new dishes to updating prices, is designed for touch screens. Take a photo of a new dish and upload it instantly. Change today's special while standing in the kitchen.",
         "benefits": [
           "Full dashboard access on any smartphone or tablet",
           "Upload photos directly from your phone camera",
@@ -141,7 +202,7 @@
         "title": "Multilingual Restaurant Website",
         "shortDescription": "Welcome tourists and international guests in their native language. Support for 25+ languages means every customer feels at home. One tap to switch languages - menu, prices, descriptions all adapt instantly. Perfect for restaurants in tourist areas or international cities.",
         "description": "Your restaurant website automatically supports multiple languages. Customers can switch languages with one tap, and all content including menu, contact info, and navigation adapts instantly.",
-        "fullDescription": "In tourist areas and international cities, speaking your customer's language is essential. SobogdQR makes your restaurant accessible to everyone. Customers see a language selector and can browse your entire website - menu, contacts, reservations - in their preferred language. Combined with AI translation, you can serve the world.",
+        "fullDescription": "In tourist areas and international cities, speaking your customer's language is essential. GrandQR makes your restaurant accessible to everyone. Customers see a language selector and can browse your entire website - menu, contacts, reservations - in their preferred language. Combined with AI translation, you can serve the world.",
         "benefits": [
           "One-tap language switching for customers",
           "Menu, contacts, and all pages translated",
@@ -175,7 +236,7 @@
         "title": "Easy Menu Management",
         "shortDescription": "Update your menu in seconds, not hours. Add new dishes, edit prices, reorganize categories - all with simple drag-and-drop from any device. No technical skills needed. Changes go live instantly, so your customers always see the latest offerings.",
         "description": "Managing your menu has never been easier. Add categories, create dishes with photos and descriptions, set prices, and organize everything with simple drag-and-drop. Changes appear instantly on your live website.",
-        "fullDescription": "Forget complicated content management systems. SobogdQR's menu editor is designed for restaurant owners, not web developers. Create a new category in seconds, add dishes with a few taps, upload photos directly from your phone. Drag items to reorder, toggle visibility for sold-out items, and see changes live immediately.",
+        "fullDescription": "Forget complicated content management systems. GrandQR's menu editor is designed for restaurant owners, not web developers. Create a new category in seconds, add dishes with a few taps, upload photos directly from your phone. Drag items to reorder, toggle visibility for sold-out items, and see changes live immediately.",
         "benefits": [
           "Intuitive category and item creation",
           "Drag-and-drop reordering",
@@ -209,7 +270,7 @@
         "title": "Table Reservations System",
         "shortDescription": "Stop losing customers to missed calls. Accept table bookings 24/7 directly from your website — customers choose date, time, and table in seconds. Automatic confirmations, email notifications, and a simple dashboard to manage everything.",
         "description": "Built-in reservation system lets customers book tables directly from your website. Choose automatic confirmation based on availability, or review each booking manually. Manage all reservations from your dashboard.",
-        "fullDescription": "Phone reservations are time-consuming and easy to miss. SobogdQR's reservation system works 24/7. Customers select date, time, and party size, then book instantly. You can set up automatic confirmation based on table availability, or review each request manually. Reduce no-shows with email confirmations.",
+        "fullDescription": "Phone reservations are time-consuming and easy to miss. GrandQR's reservation system works 24/7. Customers select date, time, and party size, then book instantly. You can set up automatic confirmation based on table availability, or review each request manually. Reduce no-shows with email confirmations.",
         "benefits": [
           "24/7 online booking capability",
           "Automatic or manual confirmation modes",
@@ -243,7 +304,7 @@
         "title": "Custom Color Scheme",
         "shortDescription": "Make your menu truly yours with custom accent colors that match your restaurant's brand identity. Choose from 12 beautiful preset colors or pick your exact brand shade. Every button, highlight, and interactive element adapts to create a cohesive, professional look that customers remember.",
         "description": "Your restaurant website should match your brand. Choose from preset color schemes or pick your exact brand color. Combined with automatic light/dark theme support, your menu always looks professional.",
-        "fullDescription": "Brand consistency matters. SobogdQR lets you customize the accent color used throughout your website - buttons, highlights, and interactive elements all match your brand. Choose from carefully curated presets or enter your exact brand color. The system automatically ensures readability in both light and dark modes.",
+        "fullDescription": "Brand consistency matters. GrandQR lets you customize the accent color used throughout your website - buttons, highlights, and interactive elements all match your brand. Choose from carefully curated presets or enter your exact brand color. The system automatically ensures readability in both light and dark modes.",
         "benefits": [
           "Custom accent color selection",
           "Preset color schemes available",
@@ -276,10 +337,10 @@
   },
   "pricing": {
     "title": "QR Menu & Restaurant Website Pricing",
-    "subtitle": "Simple, transparent pricing for your restaurant or cafe. Start free, upgrade anytime.",
+    "subtitle": "No hidden fees, no surprises. Launch your restaurant website for free today — upgrade only when you're ready to grow.",
     "seo": {
-      "title": "Why Choose SobogdQR for Your Restaurant or Cafe?",
-      "text": "Create a professional QR menu and website for your restaurant or cafe in minutes. Your guests simply scan a QR code to view your digital menu on their phone — no app needed. Update prices, add new dishes, and change descriptions instantly. With AI-powered translations, serve international customers in their native language. Track which dishes get the most views with built-in analytics. Whether you run a small cafe or a growing restaurant chain, SobogdQR helps you modernize your menu experience while reducing printing costs."
+      "title": "Why Choose GrandQR for Your Restaurant or Cafe?",
+      "text": "Create a professional QR menu and website for your restaurant or cafe in minutes. Your guests simply scan a QR code to view your digital menu on their phone — no app needed. Update prices, add new dishes, and change descriptions instantly. With AI-powered translations, serve international customers in their native language. Track which dishes get the most views with built-in analytics. Whether you run a small cafe or a growing restaurant chain, GrandQR helps you modernize your menu experience while reducing printing costs."
     },
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -291,7 +352,7 @@
     "plans": {
       "free": {
         "name": "Free",
-        "description": "Perfect for trying out SobogdQR",
+        "description": "Perfect for trying out GrandQR",
         "cta": "Start Free",
         "highlights": [
           "Restaurant website",
@@ -361,8 +422,8 @@
     }
   },
   "contacts": {
-    "title": "Questions? Let's chat",
-    "subtitle": "I'm Bogdan, creator of SobogdQR. Built it for my cafe, now helping restaurants worldwide. Message me with any questions - I respond to everyone personally.",
+    "title": "Need help? Let's chat",
+    "subtitle": "Hi, I'm Bogdan — founder of GrandQR. I built this platform for my own cafe and now it helps hundreds of restaurants worldwide. Have a question or idea? Write to me directly. No bots, no waiting — just a real conversation.",
     "story": {
       "text": ""
     },
@@ -398,7 +459,7 @@
       "pricing": "Pricing",
       "features": "Features",
       "contacts": "Contacts",
-      "faq": "FAQ",
+      "faq": "Questions",
       "changelog": "Changelog"
     },
     "legal": {
@@ -408,31 +469,31 @@
       "cookies": "Cookies Policy",
       "sitemap": "Sitemap"
     },
-    "copyright": "© 2025 SobogdQR. All rights reserved."
+    "copyright": "© 2025 GrandQR. All rights reserved."
   },
   "changelog": {
     "meta": {
-      "title": "Changelog - SobogdQR Updates & New Features",
-      "description": "Stay updated with the latest features and improvements to SobogdQR - your digital QR menu solution for restaurants and cafes"
+      "title": "Changelog - GrandQR Updates & New Features",
+      "description": "Stay updated with the latest features and improvements to GrandQR - your digital QR menu solution for restaurants and cafes"
     },
     "title": "Changelog",
     "subtitle": "Latest updates and new features for your restaurant QR menu",
     "readMore": "Read more",
     "backToChangelog": "Back to Changelog",
     "seo": {
-      "title": "About SobogdQR Updates",
-      "description": "SobogdQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
+      "title": "About GrandQR Updates",
+      "description": "GrandQR is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
         "meta": {
-          "title": "Responsive Support for Restaurant QR Menu | SobogdQR",
+          "title": "Responsive Support for Restaurant QR Menu | GrandQR",
           "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
         },
         "content": {
-          "intro": "SobogdQR now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "intro": "GrandQR now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
           "image1Alt": "Support chat interface for restaurant QR menu",
           "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
           "section1Title": "Direct Chat Support for Your Restaurant",
@@ -449,7 +510,7 @@
           "benefit5": "Feature requests and suggestions welcomed and considered",
           "benefit6": "Support that understands restaurant and cafe operations",
           "conclusionTitle": "Get Responsive Support Today",
-          "conclusionText": "With SobogdQR's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "conclusionText": "With GrandQR's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
           "ctaText": "Ready to experience responsive support for your QR menu?",
           "ctaButton": "Get Started Free"
         }
@@ -458,11 +519,11 @@
         "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
         "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
         "meta": {
-          "title": "Detailed Analytics for Restaurant Website and QR Menu | SobogdQR",
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | GrandQR",
           "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
         },
         "content": {
-          "intro": "SobogdQR now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "intro": "GrandQR now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
           "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
           "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
           "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
@@ -479,7 +540,7 @@
           "benefit5": "Daily trend charts to identify patterns in customer behavior",
           "benefit6": "Usage monitoring with clear limits and upgrade prompts",
           "conclusionTitle": "Start Using Detailed Analytics Today",
-          "conclusionText": "With SobogdQR's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "conclusionText": "With GrandQR's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
           "ctaText": "Ready to explore detailed analytics for your restaurant?",
           "ctaButton": "Get Started Free"
         }
@@ -488,11 +549,11 @@
         "title": "Instant QR Menu and Restaurant Website Generator",
         "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
         "meta": {
-          "title": "Instant QR Menu and Restaurant Website Generator | SobogdQR",
+          "title": "Instant QR Menu and Restaurant Website Generator | GrandQR",
           "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
         },
         "content": {
-          "intro": "SobogdQR now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "intro": "GrandQR now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
           "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
           "image1Caption": "Generate custom QR codes for your restaurant website instantly",
           "section1Title": "How the Instant QR Menu Generator Works",
@@ -509,7 +570,7 @@
           "benefit5": "Print-ready output with automatic margins and spacing",
           "benefit6": "Download as PNG or print directly from your browser",
           "conclusionTitle": "Start Using the Instant QR Menu Generator",
-          "conclusionText": "With SobogdQR's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "conclusionText": "With GrandQR's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
           "ctaText": "Ready to generate your instant QR menu?",
           "ctaButton": "Get Started Free"
         }
@@ -518,11 +579,11 @@
         "title": "Public Restaurant Website for QR Menu Scanning",
         "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
         "meta": {
-          "title": "Public Restaurant Website for QR Menu Scanning | SobogdQR",
+          "title": "Public Restaurant Website for QR Menu Scanning | GrandQR",
           "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
         },
         "content": {
-          "intro": "SobogdQR now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "intro": "GrandQR now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
           "image1Alt": "Public restaurant website showing QR menu categories",
           "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
           "section1Title": "How the Public Restaurant Website Works with QR Scanning",
@@ -543,7 +604,7 @@
           "benefit5": "Multilingual support for international customers",
           "benefit6": "Fast loading with optimized images and modern technology",
           "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
-          "conclusionText": "With SobogdQR's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "conclusionText": "With GrandQR's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
           "ctaText": "Ready to launch your public restaurant QR menu website?",
           "ctaButton": "Get Started Free"
         }
@@ -552,17 +613,17 @@
         "title": "How to Add Items to Restaurant Website with QR Menu",
         "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
         "meta": {
-          "title": "How to Add Items to Restaurant Website with QR Menu | SobogdQR",
+          "title": "How to Add Items to Restaurant Website with QR Menu | GrandQR",
           "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
         },
         "content": {
-          "intro": "Want to know how to add items to your restaurant website with QR menu? SobogdQR makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "intro": "Want to know how to add items to your restaurant website with QR menu? GrandQR makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
           "image1Alt": "How to add items to restaurant website with QR menu - item list view",
           "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
           "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
           "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
           "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
-          "section2Text": "Adding items to your restaurant website with QR menu is simple with SobogdQR. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with GrandQR. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
           "image2Alt": "Item form showing how to add items to restaurant QR menu website",
           "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
           "section3Title": "Image Upload and Optimization for Your Restaurant Items",
@@ -575,7 +636,7 @@
           "benefit5": "Drag and drop reordering to arrange items in your preferred order",
           "benefit6": "Mobile-friendly interface to add items from any device",
           "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
-          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using SobogdQR. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, SobogdQR makes it easy to add items to restaurant website that attracts and converts customers.",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using GrandQR. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, GrandQR makes it easy to add items to restaurant website that attracts and converts customers.",
           "ctaText": "Ready to add items to your restaurant website with QR menu?",
           "ctaButton": "Get Started Free"
         }
@@ -584,17 +645,17 @@
         "title": "How to Make QR Code Menu for Restaurant with Categories",
         "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
         "meta": {
-          "title": "How to Make QR Code Menu for Restaurant with Categories | SobogdQR",
+          "title": "How to Make QR Code Menu for Restaurant with Categories | GrandQR",
           "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
         },
         "content": {
-          "intro": "Want to know how to make QR code menu for restaurant with categories? SobogdQR now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "intro": "Want to know how to make QR code menu for restaurant with categories? GrandQR now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
           "image1Alt": "How to make QR code menu for restaurant - categories list view",
           "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
           "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
           "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
           "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
-          "section2Text": "Making a QR code menu for restaurant with categories is simple with SobogdQR. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with GrandQR. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
           "image2Alt": "Category form showing how to make QR code menu for restaurant",
           "image2Caption": "Simple form interface for creating restaurant menu categories",
           "section3Title": "Mobile-Optimized Category Management",
@@ -607,7 +668,7 @@
           "benefit5": "Clean visual design with activity indicators for quick status overview",
           "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
           "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
-          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using SobogdQR. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, SobogdQR makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using GrandQR. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, GrandQR makes it easy to make QR code menu for restaurant that impresses your customers.",
           "ctaText": "Ready to make QR code menu for your restaurant with categories?",
           "ctaButton": "Get Started Free"
         }
@@ -616,7 +677,7 @@
         "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
         "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
         "meta": {
-          "title": "Easy QR Menu for Cafe - New Control Panel | SobogdQR",
+          "title": "Easy QR Menu for Cafe - New Control Panel | GrandQR",
           "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
         },
         "content": {
@@ -637,7 +698,7 @@
           "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
           "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
           "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
-          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using SobogdQR to provide their customers with an easy, modern menu experience.",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using GrandQR to provide their customers with an easy, modern menu experience.",
           "ctaText": "Ready to create an easy QR menu for your cafe?",
           "ctaButton": "Get Started Free"
         }
@@ -646,7 +707,7 @@
         "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
         "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
         "meta": {
-          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | SobogdQR",
+          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | GrandQR",
           "description": "Learn how to get QR menu for restaurants easily. New dedicated FAQ page answers all questions about getting QR menus for your restaurant. Streamlined 4-step guide to get started."
         },
         "content": {
@@ -676,21 +737,21 @@
         "title": "Free Restaurant Website Creation - Mobile Optimization & UX Improvements",
         "description": "Major improvements to creating a free restaurant website: optimized mobile navigation with hamburger menu, enhanced signup page for better conversions, and streamlined user experience.",
         "meta": {
-          "title": "Free Restaurant Website Creation Updates - SobogdQR Changelog",
-          "description": "Learn how SobogdQR improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
+          "title": "Free Restaurant Website Creation Updates - GrandQR Changelog",
+          "description": "Learn how GrandQR improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
         },
         "content": {
           "intro": "Creating a free restaurant website has never been easier or more mobile-friendly. We've made significant improvements to help restaurant and cafe owners build their professional website with a digital QR menu, especially on mobile devices where most people search for 'создание сайта для ресторана бесплатно' (free restaurant website creation). These updates focus on mobile navigation, signup page refinements, and overall user experience to ensure anyone can create a restaurant website for free without any technical knowledge.",
           "image1Alt": "Mobile-optimized hamburger menu for restaurant website",
           "image1Caption": "New mobile navigation with hamburger menu for easy access to all features",
           "section1Title": "Mobile-First Navigation for Restaurant Websites",
-          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore SobogdQR's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
+          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore GrandQR's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
           "section2Title": "Enhanced Get Started Page for Free Restaurant Website Creation",
-          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use SobogdQR now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
+          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use GrandQR now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
           "image2Alt": "Optimized signup flow for free restaurant website creation",
           "image2Caption": "Streamlined signup process optimized for mobile devices",
           "section3Title": "Three-Step Process Optimized for All Devices",
-          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with SobogdQR.",
+          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with GrandQR.",
           "benefitsTitle": "Key Improvements for Creating Free Restaurant Websites",
           "benefit1": "Mobile-optimized hamburger menu navigation for easy access on smartphones",
           "benefit2": "Enhanced signup page with better mobile spacing and centered layouts",
@@ -699,7 +760,7 @@
           "benefit5": "Streamlined input forms optimized for mobile touch interaction",
           "benefit6": "Fixed logout redirect issue ensuring proper navigation across all pages",
           "conclusionTitle": "Free Restaurant Website Creation Made Simple",
-          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out SobogdQR on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
+          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out GrandQR on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
           "ctaText": "Ready to create your free restaurant website?",
           "ctaButton": "Get Started Free"
         }
@@ -708,17 +769,17 @@
         "title": "Redesigned Get Started Page for Higher Conversions",
         "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
         "meta": {
-          "title": "Get Started Page Redesign - SobogdQR Changelog",
-          "description": "SobogdQR launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+          "title": "Get Started Page Redesign - GrandQR Changelog",
+          "description": "GrandQR launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
         },
         "content": {
           "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
-          "image1Alt": "New SobogdQR get started page with value propositions and social proof",
+          "image1Alt": "New GrandQR get started page with value propositions and social proof",
           "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
           "section1Title": "Clear Value Propositions at a Glance",
-          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what SobogdQR offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what GrandQR offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
           "section2Title": "Social Proof That Builds Trust",
-          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using SobogdQR. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust SobogdQR significantly reduces hesitation and encourages signups.",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using GrandQR. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust GrandQR significantly reduces hesitation and encourages signups.",
           "section3Title": "Streamlined Signup Flow",
           "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
           "benefitsTitle": "Key Improvements in This Update",
@@ -738,18 +799,18 @@
         "title": "New User Authentication Interface",
         "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
         "meta": {
-          "title": "User Authentication Interface - SobogdQR Changelog",
-          "description": "SobogdQR introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+          "title": "User Authentication Interface - GrandQR Changelog",
+          "description": "GrandQR introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
         },
         "content": {
-          "intro": "We are excited to announce the launch of our new user authentication interface for SobogdQR. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
-          "image1Alt": "Email input step of SobogdQR authentication",
+          "intro": "We are excited to announce the launch of our new user authentication interface for GrandQR. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of GrandQR authentication",
           "image1Caption": "Simple email-based authentication - no passwords to remember",
           "section1Title": "Passwordless Authentication for Restaurant Owners",
           "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
           "section2Title": "Streamlined QR Menu Creation Process",
           "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
-          "image2Alt": "OTP verification step of SobogdQR authentication",
+          "image2Alt": "OTP verification step of GrandQR authentication",
           "image2Caption": "Secure 4-digit code verification sent directly to your email",
           "section3Title": "Built for Speed and Security",
           "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
@@ -759,7 +820,7 @@
           "benefit3": "Instant access to your digital menu builder from any device",
           "benefit4": "Quick updates to your QR menu even during busy service hours",
           "conclusionTitle": "Start Building Your Digital Menu Today",
-          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, SobogdQR provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, GrandQR provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
           "ctaText": "Ready to create your restaurant website with QR menu?",
           "ctaButton": "Get Started Free"
         }
@@ -768,11 +829,11 @@
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
         "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
         "meta": {
-          "title": "Subscription Plans for QR Menu and Restaurant Website | SobogdQR",
+          "title": "Subscription Plans for QR Menu and Restaurant Website | GrandQR",
           "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
-          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. SobogdQR now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
+          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. GrandQR now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
@@ -789,7 +850,7 @@
           "benefit5": "Easy plan management through simple billing dashboard",
           "benefit6": "Downgrade anytime - no long-term contracts required",
           "conclusionTitle": "Start Creating Your Restaurant Website Today",
-          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using SobogdQR to connect with their customers through modern, mobile-friendly QR menus.",
+          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using GrandQR to connect with their customers through modern, mobile-friendly QR menus.",
           "ctaText": "Ready to choose your plan for QR menu and restaurant website?",
           "ctaButton": "View Pricing Plans"
         }
@@ -851,7 +912,7 @@
   },
   "getStarted": {
     "meta": {
-      "title": "Create Your Digital Menu in 5 Minutes - SobogdQR",
+      "title": "Create Your Digital Menu in 5 Minutes - GrandQR",
       "description": "QR menu and website for your restaurant. Ready instantly. No technical skills required."
     },
     "title": "Create Your Digital Menu in 5 Minutes",
@@ -884,7 +945,7 @@
     "setupTime": "Setup in 5 minutes",
     "hasAccount": "Already have an account?",
     "signIn": "Sign in",
-    "restaurantCounter": "Join {count} Restaurants already using SobogdQR",
+    "restaurantCounter": "Join {count} Restaurants already using GrandQR",
     "steps": {
       "signUp": "Sign up with your email",
       "addMenu": "Add your menu items",
@@ -1017,15 +1078,15 @@
     "questions": [
       {
         "question": "What is a QR menu for restaurant and how does it work?",
-        "answer": "A QR menu for restaurant is a digital menu that customers can access by scanning a QR code with their smartphone. SobogdQR creates a professional digital menu website for your restaurant or cafe that updates instantly without reprinting. Customers simply scan the code and view your menu on their device."
+        "answer": "A QR menu for restaurant is a digital menu that customers can access by scanning a QR code with their smartphone. GrandQR creates a professional digital menu website for your restaurant or cafe that updates instantly without reprinting. Customers simply scan the code and view your menu on their device."
       },
       {
         "question": "How much does a QR menu cost for a restaurant or cafe?",
-        "answer": "SobogdQR offers flexible pricing starting from €0 forever with our free plan. This makes it affordable for any restaurant or cafe to create a professional QR menu. Paid plans start at just €4/month with additional features like unlimited items and advanced analytics."
+        "answer": "GrandQR offers flexible pricing starting from €0 forever with our free plan. This makes it affordable for any restaurant or cafe to create a professional QR menu. Paid plans start at just €4/month with additional features like unlimited items and advanced analytics."
       },
       {
         "question": "Can I create a website for my restaurant without coding?",
-        "answer": "Yes! SobogdQR is designed for restaurant and cafe owners without any technical knowledge. You can create a complete digital menu website for your restaurant in minutes, no programming or coding skills required. Simply add your dishes, prices, and photos through our intuitive interface."
+        "answer": "Yes! GrandQR is designed for restaurant and cafe owners without any technical knowledge. You can create a complete digital menu website for your restaurant in minutes, no programming or coding skills required. Simply add your dishes, prices, and photos through our intuitive interface."
       },
       {
         "question": "How often can I update my QR menu?",
@@ -1033,7 +1094,7 @@
       },
       {
         "question": "Does the QR menu work for both restaurants and cafes?",
-        "answer": "Absolutely! SobogdQR is perfect for restaurants, cafes, coffee shops, bars, food trucks, and any food service business. Our digital menu solution adapts to any type of establishment, from small cafes to large restaurant chains."
+        "answer": "Absolutely! GrandQR is perfect for restaurants, cafes, coffee shops, bars, food trucks, and any food service business. Our digital menu solution adapts to any type of establishment, from small cafes to large restaurant chains."
       },
       {
         "question": "How does the automatic menu translation work?",
@@ -1041,10 +1102,10 @@
       },
       {
         "question": "Can I try the QR menu solution for free?",
-        "answer": "Yes! We offer a completely free plan for restaurants and cafes to try SobogdQR. You can create your digital menu website with up to 15 items at no cost, forever. No credit card required to start. Upgrade only when you need more features."
+        "answer": "Yes! We offer a completely free plan for restaurants and cafes to try GrandQR. You can create your digital menu website with up to 15 items at no cost, forever. No credit card required to start. Upgrade only when you need more features."
       },
       {
-        "question": "Is SobogdQR an app that customers need to download?",
+        "question": "Is GrandQR an app that customers need to download?",
         "answer": "No! This is one of the best advantages. Customers don't need to download any app. They simply scan your QR code and the menu opens instantly in their web browser. This makes it much more convenient than restaurant apps that require downloads."
       },
       {
@@ -1053,7 +1114,7 @@
       },
       {
         "question": "How do I create a QR code for my restaurant menu?",
-        "answer": "SobogdQR automatically generates a professional QR code when you create your digital menu. You can download and print this QR code for your restaurant tables, entrance, or takeout counter. The QR code is customizable and high-quality for clear scanning."
+        "answer": "GrandQR automatically generates a professional QR code when you create your digital menu. You can download and print this QR code for your restaurant tables, entrance, or takeout counter. The QR code is customizable and high-quality for clear scanning."
       }
     ],
     "cta": {
@@ -1062,10 +1123,10 @@
       "button": "Contact Us"
     },
     "linkTitle": "Have questions?",
-    "linkDescription": "Check out our frequently asked questions to learn more about SobogdQR",
+    "linkDescription": "Check out our frequently asked questions to learn more about GrandQR",
     "meta": {
-      "title": "Frequently Asked Questions - SobogdQR",
-      "description": "Find answers to common questions about SobogdQR digital QR menu solution for restaurants and cafes"
+      "title": "Frequently Asked Questions - GrandQR",
+      "description": "Find answers to common questions about GrandQR digital QR menu solution for restaurants and cafes"
     }
   },
   "billing": {
@@ -1308,7 +1369,7 @@
       "descriptionHint": "Displayed below the title on the homepage",
       "slug": "URL Slug",
       "slugPlaceholder": "my-restaurant",
-      "slugHint": "Your website will be available at: sobogdqr.com/{slug}",
+      "slugHint": "Your website will be available at: grandqr.com/{slug}",
       "currency": "Currency",
       "currencyPlaceholder": "Select currency",
       "save": "Save",
@@ -1343,5 +1404,344 @@
     "saved": "Settings saved",
     "fetchError": "Failed to load settings",
     "saveError": "Failed to save settings"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "lastUpdated": "Last updated: December 17, 2025",
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about these Terms and Conditions, please contact us."
+    },
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "content": [
+          "Welcome to GrandQR. These Terms and Conditions govern your use of our website and services operated by Bogdan Sokolov (Autónomo), NIE: Z1894474S, registered in Spain.",
+          "By accessing or using GrandQR, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access the service."
+        ]
+      },
+      {
+        "title": "2. Description of Service",
+        "content": [
+          "GrandQR provides a digital QR menu and website creation platform for restaurants, cafes, and food service establishments. Our service includes menu management, QR code generation, multilingual support with AI-powered translations, AI image optimization, table reservation systems, and analytics.",
+          "We reserve the right to modify, suspend, or discontinue any aspect of the service at any time without prior notice."
+        ]
+      },
+      {
+        "title": "3. Account Registration",
+        "content": [
+          "To use certain features of GrandQR, you must register an account using a valid email address. You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account.",
+          "You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate, current, and complete.",
+          "We use passwordless authentication via email verification codes. You are responsible for maintaining the security of your email account."
+        ]
+      },
+      {
+        "title": "4. Subscription Plans and Payments",
+        "content": [
+          "GrandQR offers Free, Basic, and Pro subscription plans. The Free plan is available at no cost with limited features. Paid plans (Basic and Pro) are billed monthly or yearly through our payment processor, Stripe.",
+          "Prices are displayed in Euros (EUR). By subscribing to a paid plan, you authorize us to charge your payment method on a recurring basis until you cancel.",
+          "You may upgrade, downgrade, or cancel your subscription at any time through your dashboard. Cancellations take effect at the end of the current billing period. No refunds are provided for partial billing periods.",
+          "We reserve the right to change our prices upon 30 days' notice. Price changes will apply to billing periods starting after the notice period."
+        ]
+      },
+      {
+        "title": "5. AI-Powered Features",
+        "content": [
+          "GrandQR uses artificial intelligence for menu translations and image optimization. While we strive for accuracy, AI-generated translations may contain errors. You are responsible for reviewing and verifying all AI-generated content before publishing.",
+          "AI image optimization automatically processes uploaded images to improve loading performance. Original images are not stored after processing.",
+          "We do not guarantee the accuracy, completeness, or reliability of AI-generated content. You acknowledge that AI features are provided 'as is' and use them at your own discretion."
+        ]
+      },
+      {
+        "title": "6. User Content",
+        "content": [
+          "You retain ownership of all content you upload to GrandQR, including menu items, descriptions, images, and business information.",
+          "By uploading content, you grant GrandQR a non-exclusive, worldwide, royalty-free license to use, display, and distribute your content solely for the purpose of providing the service.",
+          "You are solely responsible for the content you upload and must ensure it does not violate any laws or third-party rights. Prohibited content includes: illegal material, copyrighted content without authorization, misleading or fraudulent information, and content that violates health and safety regulations."
+        ]
+      },
+      {
+        "title": "7. Acceptable Use",
+        "content": [
+          "You agree not to use GrandQR for any unlawful purpose or in any way that could damage, disable, or impair the service.",
+          "Prohibited activities include: attempting to gain unauthorized access to other accounts or systems, using the service to distribute spam or malware, scraping or data mining, impersonating other individuals or businesses, and circumventing usage limits or security measures."
+        ]
+      },
+      {
+        "title": "8. Intellectual Property",
+        "content": [
+          "The GrandQR name, logo, website design, and all related intellectual property are owned by Bogdan Sokolov and are protected by applicable intellectual property laws.",
+          "You may not copy, modify, distribute, or create derivative works based on our intellectual property without express written permission."
+        ]
+      },
+      {
+        "title": "9. Privacy and Data Protection",
+        "content": [
+          "Your use of GrandQR is also governed by our Privacy Policy. We comply with the General Data Protection Regulation (GDPR) and Spanish data protection laws (LOPDGDD).",
+          "We collect and process personal data necessary to provide the service, including email addresses, business information, and usage analytics. You can request access to, correction of, or deletion of your personal data at any time."
+        ]
+      },
+      {
+        "title": "10. Limitation of Liability",
+        "content": [
+          "GrandQR is provided 'as is' and 'as available' without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose.",
+          "To the maximum extent permitted by law, Bogdan Sokolov shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities.",
+          "Our total liability for any claims arising from or related to the service shall not exceed the amount you paid us in the twelve (12) months preceding the claim."
+        ]
+      },
+      {
+        "title": "11. Indemnification",
+        "content": [
+          "You agree to indemnify, defend, and hold harmless Bogdan Sokolov from any claims, damages, losses, or expenses arising from your use of the service, your content, or your violation of these Terms."
+        ]
+      },
+      {
+        "title": "12. Service Availability",
+        "content": [
+          "We strive to maintain high availability of our service but do not guarantee uninterrupted access. The service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control.",
+          "We are not liable for any loss or damage resulting from service interruptions or downtime."
+        ]
+      },
+      {
+        "title": "13. Termination",
+        "content": [
+          "We may terminate or suspend your account immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.",
+          "Upon termination, your right to use the service ceases immediately. We may delete your data within 30 days of termination, unless legally required to retain it."
+        ]
+      },
+      {
+        "title": "14. Changes to Terms",
+        "content": [
+          "We reserve the right to modify these Terms at any time. We will notify you of significant changes via email or through the service.",
+          "Your continued use of GrandQR after changes become effective constitutes acceptance of the revised Terms."
+        ]
+      },
+      {
+        "title": "15. Governing Law and Jurisdiction",
+        "content": [
+          "These Terms are governed by the laws of Spain and the European Union. Any disputes arising from these Terms or your use of GrandQR shall be subject to the exclusive jurisdiction of the courts of Spain.",
+          "If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: December 17, 2025",
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about this Privacy Policy or wish to exercise your data protection rights, please contact us.",
+      "controller": "Data Controller"
+    },
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "content": [
+          "This Privacy Policy explains how GrandQR, operated by Bogdan Sokolov (Autónomo), NIE: Z1894474S, registered in Spain, collects, uses, stores, and protects your personal data when you use our QR menu platform.",
+          "We are committed to protecting your privacy and complying with the General Data Protection Regulation (GDPR), the Spanish Organic Law on Data Protection (LOPDGDD), and other applicable data protection laws."
+        ]
+      },
+      {
+        "title": "2. Data Controller",
+        "content": [
+          "The data controller responsible for your personal data is: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registered in Spain. For any data protection inquiries, please contact us at support@grandqr.com."
+        ]
+      },
+      {
+        "title": "3. Personal Data We Collect",
+        "content": [
+          "Account Information: When you register, we collect your email address for authentication and communication purposes. We use passwordless authentication, so we do not store passwords.",
+          "Business Information: Restaurant name, description, URL slug, contact details (phone, WhatsApp, Instagram), location data, and working hours that you provide for your public menu website.",
+          "Menu Content: Categories, menu items, descriptions, prices, and images you upload to create your digital menu.",
+          "Usage Data: Information about how you use our service, including page views, feature usage, and interaction patterns collected through analytics.",
+          "Payment Information: When you subscribe to paid plans, payment processing is handled by Stripe. We do not store your full credit card details; Stripe processes and secures this information.",
+          "Technical Data: IP addresses, browser type, device information, and cookies as described in our Cookies Policy."
+        ]
+      },
+      {
+        "title": "4. How We Use Your Data",
+        "content": [
+          "We use your personal data for the following purposes: To provide and maintain our QR menu service, including creating your restaurant website and generating QR codes. To authenticate your account using email verification codes. To process payments and manage your subscription through Stripe. To communicate with you about your account, service updates, and support requests. To provide AI-powered features such as menu translations and image optimization. To analyze service usage and improve our platform. To comply with legal obligations and protect our legitimate interests."
+        ]
+      },
+      {
+        "title": "5. Legal Basis for Processing",
+        "content": [
+          "Contract Performance: Processing necessary to provide our service to you (Article 6(1)(b) GDPR).",
+          "Legitimate Interests: Analytics and service improvement, fraud prevention (Article 6(1)(f) GDPR).",
+          "Consent: For optional features like marketing communications (Article 6(1)(a) GDPR).",
+          "Legal Obligation: When required by law or regulatory requirements (Article 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Data Storage and Security",
+        "content": [
+          "Your data is stored on secure servers provided by Amazon Web Services (AWS). Our database is hosted in the AWS Stockholm (eu-north-1) region within the European Union, ensuring compliance with EU data protection requirements.",
+          "Images and media files you upload are stored on AWS S3 servers located in the EU region. Data is encrypted in transit using TLS/SSL and at rest using AES-256 encryption.",
+          "We implement appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction. These include secure authentication, access controls, regular security audits, and employee training."
+        ]
+      },
+      {
+        "title": "7. Data Sharing and Third Parties",
+        "content": [
+          "We share your data with the following categories of third parties:",
+          "Stripe (Payment Processor): Processes subscription payments. Stripe is certified under EU-US Data Privacy Framework. Their privacy policy: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastructure): Hosts our servers and databases in EU regions. AWS complies with GDPR and is certified under EU-US Data Privacy Framework.",
+          "AI Service Providers: We use AI services for menu translations and image optimization. Data is processed in accordance with their privacy policies and data processing agreements.",
+          "Google Analytics: For anonymized website analytics (if enabled). You can opt out via cookie preferences.",
+          "We do not sell your personal data to third parties. We may disclose data if required by law or to protect our legal rights."
+        ]
+      },
+      {
+        "title": "8. International Data Transfers",
+        "content": [
+          "Your data is primarily stored and processed within the European Union (AWS Stockholm, eu-north-1 region). When data is transferred outside the EU (for example, to US-based service providers), we ensure appropriate safeguards are in place, including Standard Contractual Clauses (SCCs) and certification under recognized data protection frameworks."
+        ]
+      },
+      {
+        "title": "9. Data Retention",
+        "content": [
+          "Account Data: Retained while your account is active. Upon account deletion, personal data is removed within 30 days, except where retention is required by law.",
+          "Menu Content: Retained while your account is active. Deleted upon account termination.",
+          "Payment Records: Retained for 7 years as required by Spanish tax law.",
+          "Analytics Data: Aggregated and anonymized data may be retained indefinitely for service improvement.",
+          "Backup Data: May be retained in encrypted backups for up to 90 days after deletion for disaster recovery purposes."
+        ]
+      },
+      {
+        "title": "10. Your Rights Under GDPR",
+        "content": [
+          "Under the GDPR, you have the following rights regarding your personal data:",
+          "Right of Access: Request a copy of your personal data we hold.",
+          "Right to Rectification: Request correction of inaccurate or incomplete data.",
+          "Right to Erasure: Request deletion of your personal data ('right to be forgotten').",
+          "Right to Restriction: Request limitation of processing in certain circumstances.",
+          "Right to Data Portability: Receive your data in a structured, machine-readable format.",
+          "Right to Object: Object to processing based on legitimate interests or for direct marketing.",
+          "Right to Withdraw Consent: Where processing is based on consent, you may withdraw it at any time.",
+          "To exercise these rights, contact us at support@grandqr.com. We will respond within 30 days. If you are unsatisfied with our response, you have the right to lodge a complaint with the Spanish Data Protection Agency (AEPD) at www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Children's Privacy",
+        "content": [
+          "GrandQR is not intended for use by individuals under 16 years of age. We do not knowingly collect personal data from children. If we become aware that we have collected data from a child, we will delete it promptly."
+        ]
+      },
+      {
+        "title": "12. Changes to This Policy",
+        "content": [
+          "We may update this Privacy Policy from time to time. We will notify you of significant changes via email or through a notice on our website. The 'Last updated' date at the top indicates when the policy was last revised.",
+          "Your continued use of GrandQR after changes are posted constitutes acceptance of the revised policy."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookies Policy",
+    "lastUpdated": "Last updated: December 17, 2025",
+    "yes": "Yes",
+    "no": "No",
+    "cookieTableTitle": "Cookies We Use",
+    "tableHeaders": {
+      "name": "Cookie Name",
+      "purpose": "Purpose",
+      "duration": "Duration",
+      "required": "Required"
+    },
+    "contact": {
+      "title": "Questions About Cookies",
+      "description": "If you have any questions about our use of cookies, please contact us."
+    },
+    "sections": [
+      {
+        "title": "1. What Are Cookies",
+        "content": [
+          "Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites function properly, remember your preferences, and provide information to website owners.",
+          "This Cookies Policy explains how GrandQR, operated by Bogdan Sokolov (Autónomo), uses cookies and similar technologies on our website grandqr.com."
+        ]
+      },
+      {
+        "title": "2. How We Use Cookies",
+        "content": [
+          "We use cookies for several purposes: to ensure our website functions correctly, to remember your preferences and settings, to authenticate your account and keep you logged in, to analyze how visitors use our website so we can improve it, and to remember your cookie consent preferences."
+        ]
+      },
+      {
+        "title": "3. Types of Cookies We Use",
+        "content": [
+          "Essential Cookies: These cookies are necessary for the website to function and cannot be switched off. They are usually set in response to actions you take, such as logging in or setting your privacy preferences.",
+          "Functional Cookies: These cookies enable enhanced functionality and personalization, such as remembering your language preference and theme settings.",
+          "Analytics Cookies: These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use this data to improve our service.",
+          "Third-Party Cookies: Some cookies are placed by third-party services that appear on our pages, such as payment processors (Stripe) and analytics providers (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Your Cookie Choices",
+        "content": [
+          "When you first visit our website, you will see a cookie consent banner that allows you to accept or reject non-essential cookies. You can change your preferences at any time.",
+          "You can also control cookies through your browser settings. Most browsers allow you to refuse cookies, delete existing cookies, or be alerted when cookies are being sent. Please note that blocking essential cookies may affect the functionality of our website.",
+          "To opt out of Google Analytics tracking, you can install the Google Analytics Opt-out Browser Add-on."
+        ]
+      },
+      {
+        "title": "5. Cookie Duration",
+        "content": [
+          "Session Cookies: These cookies are temporary and are deleted when you close your browser.",
+          "Persistent Cookies: These cookies remain on your device for a set period or until you delete them. They help us recognize you when you return to our website."
+        ]
+      },
+      {
+        "title": "6. Third-Party Cookies",
+        "content": [
+          "Stripe: Used for secure payment processing. Stripe may set cookies to prevent fraud and process payments securely. Learn more at stripe.com/cookies-policy",
+          "Google Analytics: Used to collect anonymous statistics about website usage. You can opt out using the cookie banner or browser settings. Learn more at policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Updates to This Policy",
+        "content": [
+          "We may update this Cookies Policy from time to time to reflect changes in our practices or for operational, legal, or regulatory reasons. The 'Last updated' date at the top indicates when the policy was last revised."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Maintains your login session and authentication state",
+        "duration": "Session / 30 days",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Remembers your preferred language (English/Spanish)",
+        "duration": "1 year",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Stores your theme preference (light/dark mode)",
+        "duration": "1 year",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Remembers your cookie consent preferences",
+        "duration": "1 year",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - tracks anonymous usage statistics",
+        "duration": "2 years / 24 hours",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - fraud prevention and payment security",
+        "duration": "1 year / Session",
+        "required": false
+      }
+    ]
   }
 }

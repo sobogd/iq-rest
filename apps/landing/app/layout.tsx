@@ -5,16 +5,20 @@ import { notFound } from "next/navigation";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
   interactiveWidget: "resizes-content",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sobogdqr.com'),
+  metadataBase: new URL('https://grandqr.com'),
   title: {
-    default: "SobogdQR - QR Menu for Restaurant & Cafe | Digital Menu Website",
-    template: "%s | SobogdQR"
+    default: "GrandQR - QR Menu for Restaurant & Cafe | Digital Menu Website",
+    template: "%s | GrandQR"
   },
   description:
     "Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates, multilingual support, and analytics. Perfect for restaurants and cafes.",
@@ -31,9 +35,9 @@ export const metadata: Metadata = {
     "restaurant website builder",
     "cafe website builder"
   ],
-  authors: [{ name: "SobogdQR" }],
-  creator: "SobogdQR",
-  publisher: "SobogdQR",
+  authors: [{ name: "GrandQR" }],
+  creator: "GrandQR",
+  publisher: "GrandQR",
   robots: {
     index: true,
     follow: true,
@@ -49,22 +53,31 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['es_ES'],
-    url: 'https://sobogdqr.com',
-    title: 'SobogdQR - QR Menu for Restaurant & Cafe',
+    url: 'https://grandqr.com',
+    title: 'GrandQR - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates.',
-    siteName: 'SobogdQR',
+    siteName: 'GrandQR',
+    images: [
+      {
+        url: '/changelog/public-menu-qr-scan-1.webp',
+        width: 1200,
+        height: 666,
+        alt: 'GrandQR - QR Menu for Restaurant & Cafe',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SobogdQR - QR Menu for Restaurant & Cafe',
+    title: 'GrandQR - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes.',
+    images: ['/changelog/public-menu-qr-scan-1.webp'],
   },
   alternates: {
-    canonical: 'https://sobogdqr.com/en',
+    canonical: 'https://grandqr.com/en',
     languages: {
-      en: 'https://sobogdqr.com/en',
-      es: 'https://sobogdqr.com/es',
-      'x-default': 'https://sobogdqr.com/en',
+      en: 'https://grandqr.com/en',
+      es: 'https://grandqr.com/es',
+      'x-default': 'https://grandqr.com/en',
     },
   },
   icons: {
@@ -80,7 +93,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'SobogdQR',
+    title: 'GrandQR',
   },
 };
 
