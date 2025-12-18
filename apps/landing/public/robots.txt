@@ -1,9 +1,0 @@
-# Allow all crawlers
-User-agent: *
-Allow: /
-
-# Disallow admin and API routes
-Disallow: /api/
-
-# Sitemap location
-Sitemap: https://sobogdqr.com/sitemap.xml

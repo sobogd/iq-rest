@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin/", "/dashboard/", "/en/dashboard/", "/es/dashboard/", "/m/", "/en/m/", "/es/m/"],
+      disallow: ["/api/", "*/dashboard/", "*/m/"],
     },
     sitemap: "https://grandqr.com/sitemap.xml",
   };
