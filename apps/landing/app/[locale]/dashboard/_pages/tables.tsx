@@ -56,6 +56,7 @@ export function TablesPage() {
 
   useEffect(() => {
     fetchTables();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function fetchTables() {

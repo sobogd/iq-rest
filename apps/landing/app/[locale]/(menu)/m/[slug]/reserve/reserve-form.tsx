@@ -6,6 +6,7 @@ import { Check, Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface TimeSlot {
   time: string;
@@ -466,11 +467,12 @@ export function ReserveForm({
               {availableTables.map((table) => (
                 <div key={table.id} className="flex items-center gap-3">
                   {table.imageUrl && (
-                    <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
-                      <img
+                    <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
+                      <Image
                         src={table.imageUrl}
                         alt={`${t.table} ${table.number}`}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                   )}

@@ -36,6 +36,7 @@ export function DesignPage() {
 
   useEffect(() => {
     fetchRestaurant();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function fetchRestaurant() {

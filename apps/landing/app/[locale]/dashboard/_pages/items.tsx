@@ -90,6 +90,7 @@ export function ItemsPage() {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function fetchData() {
