@@ -178,7 +178,7 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restaurant menu management on smartphone",
-        "cta": "Learn More"
+        "cta": "See Mobile Dashboard"
       },
       {
         "id": "ai-translation",
@@ -195,7 +195,7 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-powered restaurant menu translation interface",
-        "cta": "Learn More"
+        "cta": "Discover AI Translation"
       },
       {
         "id": "multilingual",
@@ -212,7 +212,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Multilingual restaurant website language selector",
-        "cta": "Learn More"
+        "cta": "View Multilingual Features"
       },
       {
         "id": "ai-images",
@@ -246,7 +246,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Easy restaurant menu management dashboard",
-        "cta": "Learn More"
+        "cta": "See Menu Editor"
       },
       {
         "id": "analytics",
@@ -280,7 +280,7 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Online table reservation system for restaurants",
-        "cta": "Learn More"
+        "cta": "Explore Table Reservations"
       },
       {
         "id": "custom-design",
@@ -297,7 +297,7 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restaurant website with video background",
-        "cta": "Learn More"
+        "cta": "See Video Backgrounds"
       },
       {
         "id": "color-scheme",
@@ -314,7 +314,7 @@
         ],
         "image": "/images/features/color-scheme.jpg",
         "imageAlt": "Custom color scheme and branding options",
-        "cta": "Learn More"
+        "cta": "Explore Color Schemes"
       },
       {
         "id": "personal-support",

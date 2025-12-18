@@ -178,7 +178,7 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Gestión de menú de restaurante en smartphone",
-        "cta": "Más Información"
+        "cta": "Ver Panel Móvil"
       },
       {
         "id": "ai-translation",
@@ -195,7 +195,7 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Interfaz de traducción de menú de restaurante con IA",
-        "cta": "Más Información"
+        "cta": "Descubrir Traducción IA"
       },
       {
         "id": "multilingual",
@@ -212,7 +212,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Selector de idioma en sitio web de restaurante multilingüe",
-        "cta": "Más Información"
+        "cta": "Ver Funciones Multilingües"
       },
       {
         "id": "ai-images",
@@ -246,7 +246,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Panel de gestión fácil de menú de restaurante",
-        "cta": "Más Información"
+        "cta": "Ver Editor de Menú"
       },
       {
         "id": "analytics",
@@ -280,7 +280,7 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Sistema de reservación de mesas online para restaurantes",
-        "cta": "Más Información"
+        "cta": "Explorar Reservaciones"
       },
       {
         "id": "custom-design",
@@ -297,7 +297,7 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Sitio web de restaurante con fondo de video",
-        "cta": "Más Información"
+        "cta": "Ver Fondos de Video"
       },
       {
         "id": "color-scheme",
@@ -314,7 +314,7 @@
         ],
         "image": "/images/features/color-scheme.jpg",
         "imageAlt": "Opciones de esquema de colores personalizado y marca",
-        "cta": "Más Información"
+        "cta": "Explorar Esquemas de Colores"
       },
       {
         "id": "personal-support",

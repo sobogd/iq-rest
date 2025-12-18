@@ -3,6 +3,9 @@ import { SHADOW_STYLES, ANIMATION_BASE } from "./styles";
 import type { BaseLayoutProps } from "./types";
 
 export function HeroLayout({ images, className = "", priority = false }: BaseLayoutProps) {
+  const heroSizes = "(max-width: 768px) 160px, 280px";
+  const heroCenterSizes = "(max-width: 768px) 180px, 315px";
+
   return (
     <div className={`relative w-full aspect-square max-w-[400px] md:max-w-[700px] mx-auto ${className}`}>
       {/* Glow effect */}
@@ -16,9 +19,10 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
         <Image
           src={images.left.src}
           alt={images.left.alt}
-          width={260}
-          height={520}
+          width={280}
+          height={560}
           priority={priority}
+          sizes={heroSizes}
           className="w-full h-auto"
         />
       </div>
@@ -31,9 +35,10 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
         <Image
           src={images.center.src}
           alt={images.center.alt}
-          width={280}
-          height={560}
+          width={315}
+          height={630}
           priority={priority}
+          sizes={heroCenterSizes}
           className="w-full h-auto"
         />
       </div>
@@ -46,9 +51,10 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
         <Image
           src={images.right.src}
           alt={images.right.alt}
-          width={260}
-          height={520}
+          width={280}
+          height={560}
           priority={priority}
+          sizes={heroSizes}
           className="w-full h-auto"
         />
       </div>

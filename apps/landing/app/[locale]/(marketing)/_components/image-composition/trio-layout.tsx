@@ -3,6 +3,9 @@ import { SHADOW_STYLES, ANIMATION_BASE } from "./styles";
 import type { BaseLayoutProps } from "./types";
 
 export function TrioLayout({ images, className = "", priority = false }: BaseLayoutProps) {
+  const sideSizes = "(max-width: 768px) 120px, 175px";
+  const centerSizes = "(max-width: 768px) 140px, 200px";
+
   return (
     <div className={`relative w-full aspect-[3/2] max-w-[500px] mx-auto ${className}`}>
       {/* Glow effect */}
@@ -16,9 +19,10 @@ export function TrioLayout({ images, className = "", priority = false }: BaseLay
         <Image
           src={images.left.src}
           alt={images.left.alt}
-          width={260}
-          height={520}
+          width={175}
+          height={350}
           priority={priority}
+          sizes={sideSizes}
           className="w-full h-auto"
         />
       </div>
@@ -31,9 +35,10 @@ export function TrioLayout({ images, className = "", priority = false }: BaseLay
         <Image
           src={images.center.src}
           alt={images.center.alt}
-          width={280}
-          height={560}
+          width={200}
+          height={400}
           priority={priority}
+          sizes={centerSizes}
           className="w-full h-auto"
         />
       </div>
@@ -46,9 +51,10 @@ export function TrioLayout({ images, className = "", priority = false }: BaseLay
         <Image
           src={images.right.src}
           alt={images.right.alt}
-          width={260}
-          height={520}
+          width={175}
+          height={350}
           priority={priority}
+          sizes={sideSizes}
           className="w-full h-auto"
         />
       </div>

@@ -162,7 +162,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="space-y-24">
+            <div className="space-y-32 md:space-y-24">
               {previewFeatures.map((feature, index) => {
                 const Icon =
                   FEATURE_ICONS[feature.id as keyof typeof FEATURE_ICONS];
@@ -171,7 +171,7 @@ export default function HomePage() {
                 return (
                   <div
                     key={feature.id}
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-12 items-center ${
                       !isEven ? "md:flex-row-reverse" : ""
                     }`}
                   >

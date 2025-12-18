@@ -3,6 +3,8 @@ import { SHADOW_STYLES, ANIMATION_BASE } from "./styles";
 import type { BaseLayoutProps } from "./types";
 
 export function DuoLayout({ images, className = "", priority = false }: BaseLayoutProps) {
+  const imageSizes = "(max-width: 768px) 150px, 190px";
+
   return (
     <div className={`relative w-full aspect-[3/2] max-w-[400px] mx-auto ${className}`}>
       {/* Glow effect */}
@@ -16,9 +18,10 @@ export function DuoLayout({ images, className = "", priority = false }: BaseLayo
         <Image
           src={images.left.src}
           alt={images.left.alt}
-          width={280}
-          height={560}
+          width={190}
+          height={380}
           priority={priority}
+          sizes={imageSizes}
           className="w-full h-auto"
         />
       </div>
@@ -31,9 +34,10 @@ export function DuoLayout({ images, className = "", priority = false }: BaseLayo
         <Image
           src={images.right.src}
           alt={images.right.alt}
-          width={280}
-          height={560}
+          width={190}
+          height={380}
           priority={priority}
+          sizes={imageSizes}
           className="w-full h-auto"
         />
       </div>

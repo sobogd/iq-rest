@@ -5,6 +5,13 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  other: {
+    google: "notranslate",
+  },
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,9 +35,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning className="notranslate" translate="no">
       <head>
-        {/* Disable Google Translate popup */}
-        <meta name="google" content="notranslate" />
-        {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
