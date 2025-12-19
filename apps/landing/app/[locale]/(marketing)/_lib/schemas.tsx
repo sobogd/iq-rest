@@ -52,6 +52,14 @@ export const productSchema = {
     "@type": "Brand",
     name: "GrandQR",
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: "2",
+    reviewCount: "2",
+  },
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
@@ -101,10 +109,15 @@ export const productSchema = {
   review: [
     {
       "@type": "Review",
+      itemReviewed: {
+        "@type": "SoftwareApplication",
+        name: "GrandQR",
+      },
       reviewRating: {
         "@type": "Rating",
         ratingValue: "5",
         bestRating: "5",
+        worstRating: "1",
       },
       author: {
         "@type": "Person",
@@ -112,13 +125,19 @@ export const productSchema = {
       },
       reviewBody:
         "GrandQR transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.",
+      datePublished: "2024-10-15",
     },
     {
       "@type": "Review",
+      itemReviewed: {
+        "@type": "SoftwareApplication",
+        name: "GrandQR",
+      },
       reviewRating: {
         "@type": "Rating",
         ratingValue: "5",
         bestRating: "5",
+        worstRating: "1",
       },
       author: {
         "@type": "Person",
@@ -126,6 +145,7 @@ export const productSchema = {
       },
       reviewBody:
         "Easy to set up and maintain. The analytics help us understand what our customers prefer. Highly recommended!",
+      datePublished: "2024-11-20",
     },
   ],
 };
