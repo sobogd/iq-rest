@@ -72,14 +72,6 @@ export const metadata: Metadata = {
     description: 'Create professional QR menu for restaurant and cafe in minutes.',
     images: ['/changelog/public-menu-qr-scan-1.webp'],
   },
-  alternates: {
-    canonical: 'https://grandqr.com/en',
-    languages: {
-      en: 'https://grandqr.com/en',
-      es: 'https://grandqr.com/es',
-      'x-default': 'https://grandqr.com/en',
-    },
-  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },
