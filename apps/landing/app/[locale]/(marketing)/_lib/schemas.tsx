@@ -1,4 +1,4 @@
-const BASE_URL = "https://grandqr.com";
+const BASE_URL = "https://iq-rest.com";
 
 // Dynamic price validity - always 1 year from now
 const getPriceValidUntil = () => {
@@ -10,7 +10,7 @@ const getPriceValidUntil = () => {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "GrandQR",
+  name: "IQ Rest",
   url: BASE_URL,
   logo: `${BASE_URL}/logo.svg`,
   description: "Digital QR menu solution for restaurants and cafes worldwide",
@@ -22,14 +22,14 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    email: "support@grandqr.com",
+    email: "support@iq-rest.com",
   },
 };
 
 export const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "GrandQR",
+  name: "IQ Rest",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web Browser",
   offers: {
@@ -44,13 +44,13 @@ export const softwareSchema = {
 export const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "GrandQR - QR Menu Solution for Restaurants",
+  name: "IQ Rest - QR Menu Solution for Restaurants",
   description:
     "Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics",
   image: [`${BASE_URL}/logo.svg`, `${BASE_URL}/og-image.svg`],
   brand: {
     "@type": "Brand",
-    name: "GrandQR",
+    name: "IQ Rest",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -111,7 +111,7 @@ export const productSchema = {
       "@type": "Review",
       itemReviewed: {
         "@type": "SoftwareApplication",
-        name: "GrandQR",
+        name: "IQ Rest",
       },
       reviewRating: {
         "@type": "Rating",
@@ -124,14 +124,14 @@ export const productSchema = {
         name: "Restaurant Owner",
       },
       reviewBody:
-        "GrandQR transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.",
+        "IQ Rest transformed our restaurant menu experience. Customers love the multilingual support and the ordering process is much smoother.",
       datePublished: "2024-10-15",
     },
     {
       "@type": "Review",
       itemReviewed: {
         "@type": "SoftwareApplication",
-        name: "GrandQR",
+        name: "IQ Rest",
       },
       reviewRating: {
         "@type": "Rating",
@@ -154,18 +154,18 @@ export const productSchema = {
 export const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact GrandQR",
-  description: "Get in touch with the GrandQR team for support with your restaurant QR menu",
+  name: "Contact IQ Rest",
+  description: "Get in touch with the IQ Rest team for support with your restaurant QR menu",
   url: `${BASE_URL}/en/contacts`,
   mainEntity: {
     "@type": "Organization",
-    name: "GrandQR",
-    email: "support@grandqr.com",
+    name: "IQ Rest",
+    email: "support@iq-rest.com",
     url: BASE_URL,
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: "support@grandqr.com",
+      email: "support@iq-rest.com",
       availableLanguage: ["English", "Spanish"],
     },
   },
@@ -186,7 +186,7 @@ export const createWebPageSchema = (
   dateModified,
   publisher: {
     "@type": "Organization",
-    name: "GrandQR",
+    name: "IQ Rest",
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",

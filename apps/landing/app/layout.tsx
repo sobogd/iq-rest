@@ -15,10 +15,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://grandqr.com'),
+  metadataBase: new URL('https://iq-rest.com'),
   title: {
-    default: "GrandQR - QR Menu for Restaurant & Cafe | Digital Menu Website",
-    template: "%s | GrandQR"
+    default: "IQ Rest - QR Menu for Restaurant & Cafe | Digital Menu Website",
+    template: "%s | IQ Rest"
   },
   description:
     "Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates, multilingual support, and analytics. Perfect for restaurants and cafes.",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "restaurant website builder",
     "cafe website builder"
   ],
-  authors: [{ name: "GrandQR" }],
-  creator: "GrandQR",
-  publisher: "GrandQR",
+  authors: [{ name: "IQ Rest" }],
+  creator: "IQ Rest",
+  publisher: "IQ Rest",
   robots: {
     index: true,
     follow: true,
@@ -53,22 +53,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['es_ES'],
-    url: 'https://grandqr.com',
-    title: 'GrandQR - QR Menu for Restaurant & Cafe',
+    url: 'https://iq-rest.com',
+    title: 'IQ Rest - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes. Digital menu website solution with instant updates.',
-    siteName: 'GrandQR',
+    siteName: 'IQ Rest',
     images: [
       {
         url: '/changelog/public-menu-qr-scan-1.webp',
         width: 1200,
         height: 666,
-        alt: 'GrandQR - QR Menu for Restaurant & Cafe',
+        alt: 'IQ Rest - QR Menu for Restaurant & Cafe',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GrandQR - QR Menu for Restaurant & Cafe',
+    title: 'IQ Rest - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes.',
     images: ['/changelog/public-menu-qr-scan-1.webp'],
   },
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'GrandQR',
+    title: 'IQ Rest',
   },
 };
 

@@ -105,25 +105,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/changelog/${entryId}`,
+      canonical: `https://iq-rest.com/${locale}/changelog/${entryId}`,
       languages: {
-        en: `https://grandqr.com/en/changelog/${entryId}`,
-        es: `https://grandqr.com/es/changelog/${entryId}`,
-        "x-default": `https://grandqr.com/en/changelog/${entryId}`,
+        en: `https://iq-rest.com/en/changelog/${entryId}`,
+        es: `https://iq-rest.com/es/changelog/${entryId}`,
+        "x-default": `https://iq-rest.com/en/changelog/${entryId}`,
       },
     },
     openGraph: {
       title: t(`entries.${key}.meta.title`),
       description: t(`entries.${key}.meta.description`),
-      url: `https://grandqr.com/${locale}/changelog/${entryId}`,
+      url: `https://iq-rest.com/${locale}/changelog/${entryId}`,
       type: "article",
       publishedTime: entry.date,
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -131,7 +131,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t(`entries.${key}.meta.title`),
       description: t(`entries.${key}.meta.description`),
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -310,11 +310,11 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
             datePublished: entry.date,
             author: {
               "@type": "Organization",
-              name: "GrandQR",
+              name: "IQ Rest",
             },
             publisher: {
               "@type": "Organization",
-              name: "GrandQR",
+              name: "IQ Rest",
             },
           }}
         />

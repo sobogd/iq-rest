@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "GrandQR",
+    "logo": "IQ Rest",
     "nav": {
       "menu": "Menú",
       "pricing": "Precios",
@@ -151,7 +151,7 @@
         "title": "Configuración Instantánea de Menú QR y Sitio Web",
         "shortDescription": "Crea tu sitio web de restaurante y menú QR solo con un email - listo en 5 minutos",
         "description": "Comienza en segundos con el proceso de registro más simple. Solo ingresa tu email y obtienes instantáneamente un sitio web completo para restaurante con menú QR, página de contactos con mapa y diseño moderno. Sin habilidades técnicas, sin formularios complicados - tu restaurante está online inmediatamente.",
-        "fullDescription": "Los creadores de sitios web tradicionales requieren horas de configuración, conocimiento técnico y a menudo un desarrollador. GrandQR lo cambia todo. Ingresa tu email, verifica con un código simple y tu sitio web de restaurante está listo. Agrega tus platos, sube fotos y comparte tu código QR con los clientes. Todo el proceso toma menos de 5 minutos.",
+        "fullDescription": "Los creadores de sitios web tradicionales requieren horas de configuración, conocimiento técnico y a menudo un desarrollador. IQ Rest lo cambia todo. Ingresa tu email, verifica con un código simple y tu sitio web de restaurante está listo. Agrega tus platos, sube fotos y comparte tu código QR con los clientes. Todo el proceso toma menos de 5 minutos.",
         "benefits": [
           "Solo email requerido para empezar - sin registro complejo",
           "Sitio web de restaurante listo instantáneamente después del registro",
@@ -168,7 +168,7 @@
         "title": "Gestión 100% Compatible con Móvil",
         "shortDescription": "¿Sin computadora? No hay problema. Administra todo tu sitio web de restaurante desde tu teléfono. Agrega platos mientras estás en la cocina, actualiza precios durante el servicio, sube fotos directamente desde tu cámara. Cada función funciona perfectamente en móvil - porque los dueños de restaurantes nunca están sentados en un escritorio.",
         "description": "Agrega categorías, platos, fotos y gestiona todo tu sitio web de restaurante directamente desde tu teléfono. Nuestro panel está completamente optimizado para dispositivos móviles, así puedes actualizar tu menú durante un descanso o agregar especiales del día sobre la marcha.",
-        "fullDescription": "Los dueños de restaurantes son personas ocupadas que no siempre están en una computadora. Por eso construimos GrandQR para funcionar perfectamente en dispositivos móviles. Cada función, desde agregar nuevos platos hasta actualizar precios, está diseñada para pantallas táctiles. Toma una foto de un nuevo plato y súbela instantáneamente. Cambia el especial de hoy mientras estás en la cocina.",
+        "fullDescription": "Los dueños de restaurantes son personas ocupadas que no siempre están en una computadora. Por eso construimos IQ Rest para funcionar perfectamente en dispositivos móviles. Cada función, desde agregar nuevos platos hasta actualizar precios, está diseñada para pantallas táctiles. Toma una foto de un nuevo plato y súbela instantáneamente. Cambia el especial de hoy mientras estás en la cocina.",
         "benefits": [
           "Acceso completo al panel en cualquier smartphone o tablet",
           "Sube fotos directamente desde la cámara de tu teléfono",
@@ -202,7 +202,7 @@
         "title": "Sitio Web de Restaurante Multilingüe",
         "shortDescription": "Da la bienvenida a turistas e invitados internacionales en su idioma nativo. Soporte para más de 25 idiomas significa que cada cliente se siente como en casa. Un toque para cambiar de idioma - menú, precios, descripciones se adaptan instantáneamente. Perfecto para restaurantes en zonas turísticas o ciudades internacionales.",
         "description": "Tu sitio web de restaurante automáticamente soporta múltiples idiomas. Los clientes pueden cambiar de idioma con un toque, y todo el contenido incluyendo menú, información de contacto y navegación se adapta instantáneamente.",
-        "fullDescription": "En áreas turísticas y ciudades internacionales, hablar el idioma de tu cliente es esencial. GrandQR hace tu restaurante accesible para todos. Los clientes ven un selector de idioma y pueden navegar todo tu sitio web - menú, contactos, reservaciones - en su idioma preferido. Combinado con traducción IA, puedes servir al mundo.",
+        "fullDescription": "En áreas turísticas y ciudades internacionales, hablar el idioma de tu cliente es esencial. IQ Rest hace tu restaurante accesible para todos. Los clientes ven un selector de idioma y pueden navegar todo tu sitio web - menú, contactos, reservaciones - en su idioma preferido. Combinado con traducción IA, puedes servir al mundo.",
         "benefits": [
           "Cambio de idioma con un toque para clientes",
           "Menú, contactos y todas las páginas traducidas",
@@ -236,7 +236,7 @@
         "title": "Gestión Fácil del Menú",
         "shortDescription": "Actualiza tu menú en segundos, no en horas. Agrega nuevos platos, edita precios, reorganiza categorías - todo con simple arrastrar y soltar desde cualquier dispositivo. No se necesitan habilidades técnicas. Los cambios se publican instantáneamente, para que tus clientes siempre vean las últimas ofertas.",
         "description": "Gestionar tu menú nunca ha sido más fácil. Agrega categorías, crea platos con fotos y descripciones, establece precios y organiza todo con simple arrastrar y soltar. Los cambios aparecen instantáneamente en tu sitio web activo.",
-        "fullDescription": "Olvida los sistemas de gestión de contenido complicados. El editor de menú de GrandQR está diseñado para dueños de restaurantes, no para desarrolladores web. Crea una nueva categoría en segundos, agrega platos con unos pocos toques, sube fotos directamente desde tu teléfono. Arrastra elementos para reordenar, alterna visibilidad para artículos agotados, y ve los cambios en vivo inmediatamente.",
+        "fullDescription": "Olvida los sistemas de gestión de contenido complicados. El editor de menú de IQ Rest está diseñado para dueños de restaurantes, no para desarrolladores web. Crea una nueva categoría en segundos, agrega platos con unos pocos toques, sube fotos directamente desde tu teléfono. Arrastra elementos para reordenar, alterna visibilidad para artículos agotados, y ve los cambios en vivo inmediatamente.",
         "benefits": [
           "Creación intuitiva de categorías y artículos",
           "Reordenamiento con arrastrar y soltar",
@@ -270,7 +270,7 @@
         "title": "Sistema de Reservaciones de Mesa",
         "shortDescription": "Deja de perder clientes por llamadas perdidas. Acepta reservas 24/7 directamente desde tu sitio web — los clientes eligen fecha, hora y mesa en segundos. Confirmaciones automáticas, notificaciones por email y un panel simple para gestionarlo todo.",
         "description": "El sistema de reservaciones integrado permite a los clientes reservar mesas directamente desde tu sitio web. Elige confirmación automática basada en disponibilidad, o revisa cada reservación manualmente. Gestiona todas las reservaciones desde tu panel.",
-        "fullDescription": "Las reservaciones por teléfono consumen tiempo y son fáciles de perder. El sistema de reservaciones de GrandQR funciona 24/7. Los clientes seleccionan fecha, hora y tamaño del grupo, luego reservan instantáneamente. Puedes configurar confirmación automática basada en disponibilidad de mesas, o revisar cada solicitud manualmente. Reduce no-shows con confirmaciones por email.",
+        "fullDescription": "Las reservaciones por teléfono consumen tiempo y son fáciles de perder. El sistema de reservaciones de IQ Rest funciona 24/7. Los clientes seleccionan fecha, hora y tamaño del grupo, luego reservan instantáneamente. Puedes configurar confirmación automática basada en disponibilidad de mesas, o revisar cada solicitud manualmente. Reduce no-shows con confirmaciones por email.",
         "benefits": [
           "Capacidad de reservación online 24/7",
           "Modos de confirmación automática o manual",
@@ -304,7 +304,7 @@
         "title": "Esquema de Colores Personalizado",
         "shortDescription": "Haz que tu menú sea verdaderamente tuyo con colores de acento personalizados que coincidan con la identidad de marca de tu restaurante. Elige entre 12 hermosos colores preestablecidos o selecciona el tono exacto de tu marca. Cada botón, resaltado y elemento interactivo se adapta para crear un aspecto profesional y cohesivo que los clientes recuerdan.",
         "description": "Tu sitio web de restaurante debe coincidir con tu marca. Elige entre esquemas de colores preestablecidos o selecciona el color exacto de tu marca. Combinado con soporte automático de tema claro/oscuro, tu menú siempre se ve profesional.",
-        "fullDescription": "La consistencia de marca importa. GrandQR te permite personalizar el color de acento usado en todo tu sitio web - botones, resaltados y elementos interactivos todos coinciden con tu marca. Elige de preestablecidos cuidadosamente curados o ingresa el color exacto de tu marca. El sistema automáticamente asegura legibilidad en ambos modos claro y oscuro.",
+        "fullDescription": "La consistencia de marca importa. IQ Rest te permite personalizar el color de acento usado en todo tu sitio web - botones, resaltados y elementos interactivos todos coinciden con tu marca. Elige de preestablecidos cuidadosamente curados o ingresa el color exacto de tu marca. El sistema automáticamente asegura legibilidad en ambos modos claro y oscuro.",
         "benefits": [
           "Selección de color de acento personalizado",
           "Esquemas de colores preestablecidos disponibles",
@@ -339,8 +339,8 @@
     "title": "Precios de Menú QR y Sitio Web para Restaurante",
     "subtitle": "Sin tarifas ocultas, sin sorpresas. Lanza tu sitio web de restaurante gratis hoy — actualiza solo cuando estés listo para crecer.",
     "seo": {
-      "title": "¿Por Qué Elegir GrandQR para Tu Restaurante o Cafetería?",
-      "text": "Crea un menú QR profesional y sitio web para tu restaurante o cafetería en minutos. Tus clientes simplemente escanean un código QR para ver tu menú digital en su teléfono — sin necesidad de app. Actualiza precios, agrega nuevos platos y cambia descripciones al instante. Con traducciones impulsadas por IA, atiende a clientes internacionales en su idioma nativo. Descubre qué platos tienen más vistas con analíticas integradas. Ya sea que tengas una pequeña cafetería o una cadena de restaurantes en crecimiento, GrandQR te ayuda a modernizar tu experiencia de menú mientras reduces costos de impresión."
+      "title": "¿Por Qué Elegir IQ Rest para Tu Restaurante o Cafetería?",
+      "text": "Crea un menú QR profesional y sitio web para tu restaurante o cafetería en minutos. Tus clientes simplemente escanean un código QR para ver tu menú digital en su teléfono — sin necesidad de app. Actualiza precios, agrega nuevos platos y cambia descripciones al instante. Con traducciones impulsadas por IA, atiende a clientes internacionales en su idioma nativo. Descubre qué platos tienen más vistas con analíticas integradas. Ya sea que tengas una pequeña cafetería o una cadena de restaurantes en crecimiento, IQ Rest te ayuda a modernizar tu experiencia de menú mientras reduces costos de impresión."
     },
     "monthly": "Mensual",
     "yearly": "Anual",
@@ -352,7 +352,7 @@
     "plans": {
       "free": {
         "name": "Gratis",
-        "description": "Perfecto para probar GrandQR",
+        "description": "Perfecto para probar IQ Rest",
         "cta": "Comenzar Gratis",
         "highlights": [
           "Sitio web del restaurante",
@@ -423,7 +423,7 @@
   },
   "contacts": {
     "title": "¿Necesitas ayuda? Hablemos",
-    "subtitle": "Hola, soy Bogdan — fundador de GrandQR. Creé esta plataforma para mi propio café y ahora ayuda a cientos de restaurantes en todo el mundo. ¿Tienes una pregunta o idea? Escríbeme directamente. Sin bots, sin esperas — solo una conversación real.",
+    "subtitle": "Hola, soy Bogdan — fundador de IQ Rest. Creé esta plataforma para mi propio café y ahora ayuda a cientos de restaurantes en todo el mundo. ¿Tienes una pregunta o idea? Escríbeme directamente. Sin bots, sin esperas — solo una conversación real.",
     "story": {
       "text": ""
     },
@@ -469,31 +469,31 @@
       "cookies": "Política de Cookies",
       "sitemap": "Mapa del Sitio"
     },
-    "copyright": "© 2025 GrandQR. Todos los derechos reservados."
+    "copyright": "© 2025 IQ Rest. Todos los derechos reservados."
   },
   "changelog": {
     "meta": {
-      "title": "Changelog - Actualizaciones y Nuevas Funciones de GrandQR",
-      "description": "Mantente actualizado con las últimas funciones y mejoras de GrandQR - tu solución de menú QR digital para restaurantes y cafeterías"
+      "title": "Changelog - Actualizaciones y Nuevas Funciones de IQ Rest",
+      "description": "Mantente actualizado con las últimas funciones y mejoras de IQ Rest - tu solución de menú QR digital para restaurantes y cafeterías"
     },
     "title": "Changelog",
     "subtitle": "Últimas actualizaciones y nuevas funciones para tu menú QR de restaurante",
     "readMore": "Leer más",
     "backToChangelog": "Volver al Changelog",
     "seo": {
-      "title": "Sobre las Actualizaciones de GrandQR",
-      "description": "GrandQR mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
+      "title": "Sobre las Actualizaciones de IQ Rest",
+      "description": "IQ Rest mejora constantemente para ayudar a restaurantes y cafeterías a crear menús QR digitales profesionales. Sigue nuestro changelog para estar al día con las últimas funciones para tu sitio web de restaurante y solución de menú QR."
     },
     "entries": {
       "support-qr-menu-restaurant-cafe": {
         "title": "Soporte Operativo para Tu Menú QR de Restaurante",
         "description": "Obtén soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Chat directo con nuestro equipo para asistencia rápida.",
         "meta": {
-          "title": "Soporte Operativo para Menú QR de Restaurante | GrandQR",
+          "title": "Soporte Operativo para Menú QR de Restaurante | IQ Rest",
           "description": "Soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Asistencia rápida para cafeterías y restaurantes con chat de soporte directo."
         },
         "content": {
-          "intro": "GrandQR ahora ofrece soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Entendemos que administrar un restaurante o cafetería requiere soluciones rápidas cuando surgen problemas. Nuestro nuevo chat de soporte en la aplicación te da acceso directo a nuestro equipo, asegurando que tu menú QR se mantenga perfecto y tus clientes siempre tengan la mejor experiencia.",
+          "intro": "IQ Rest ahora ofrece soporte operativo para cualquier pregunta o cambio en tu menú QR de restaurante o cafetería. Entendemos que administrar un restaurante o cafetería requiere soluciones rápidas cuando surgen problemas. Nuestro nuevo chat de soporte en la aplicación te da acceso directo a nuestro equipo, asegurando que tu menú QR se mantenga perfecto y tus clientes siempre tengan la mejor experiencia.",
           "image1Alt": "Interfaz de chat de soporte para menú QR de restaurante",
           "image1Caption": "Chat de soporte directo para asistencia operativa con tu menú QR de restaurante",
           "section1Title": "Chat de Soporte Directo para Tu Restaurante",
@@ -510,7 +510,7 @@
           "benefit5": "Solicitudes de funciones y sugerencias bienvenidas y consideradas",
           "benefit6": "Soporte que entiende las operaciones de restaurantes y cafeterías",
           "conclusionTitle": "Obtén Soporte Operativo Hoy",
-          "conclusionText": "Con el soporte operativo de GrandQR para tu menú QR de restaurante o cafetería, la ayuda siempre está al alcance. Nuestro equipo dedicado asegura que tu menú digital funcione perfectamente, dándote más tiempo para enfocarte en lo que importa - servir excelente comida. Accede al soporte directamente desde tu panel de control y experimenta la diferencia que hace la asistencia operativa para tu restaurante o cafetería.",
+          "conclusionText": "Con el soporte operativo de IQ Rest para tu menú QR de restaurante o cafetería, la ayuda siempre está al alcance. Nuestro equipo dedicado asegura que tu menú digital funcione perfectamente, dándote más tiempo para enfocarte en lo que importa - servir excelente comida. Accede al soporte directamente desde tu panel de control y experimenta la diferencia que hace la asistencia operativa para tu restaurante o cafetería.",
           "ctaText": "¿Listo para experimentar soporte operativo para tu menú QR?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -519,11 +519,11 @@
         "title": "Análisis Detallado para Tu Sitio Web de Restaurante y Menú QR",
         "description": "Obtén análisis detallado de tu sitio web de restaurante y menú QR. Rastrea vistas de página, visitantes únicos, uso por idioma y tendencias diarias para optimizar tu menú digital.",
         "meta": {
-          "title": "Análisis Detallado para Tu Sitio Web de Restaurante y Menú QR | GrandQR",
+          "title": "Análisis Detallado para Tu Sitio Web de Restaurante y Menú QR | IQ Rest",
           "description": "Análisis detallado para tu sitio web de restaurante y menú QR. Rastrea vistas de página, visitantes únicos, estadísticas de idioma y tendencias de visualización. Panel de análisis gratuito para restaurantes y cafeterías."
         },
         "content": {
-          "intro": "GrandQR ahora ofrece análisis detallado para tu sitio web de restaurante y menú QR. Rastrea exactamente cómo los clientes interactúan con tu menú digital: cuántas veces se ve tu menú, qué páginas visitan, qué idiomas prefieren y las tendencias de visualización a lo largo del tiempo. Este análisis detallado te ayuda a entender a tu audiencia y optimizar tu sitio web de restaurante con menú QR para máximo impacto.",
+          "intro": "IQ Rest ahora ofrece análisis detallado para tu sitio web de restaurante y menú QR. Rastrea exactamente cómo los clientes interactúan con tu menú digital: cuántas veces se ve tu menú, qué páginas visitan, qué idiomas prefieren y las tendencias de visualización a lo largo del tiempo. Este análisis detallado te ayuda a entender a tu audiencia y optimizar tu sitio web de restaurante con menú QR para máximo impacto.",
           "image1Alt": "Panel de análisis detallado para sitio web de restaurante y menú QR",
           "image1Caption": "Panel de análisis mostrando vistas, visitantes y estadísticas de idioma para tu menú QR",
           "section1Title": "Qué Rastrea el Análisis Detallado de Tu Menú QR",
@@ -540,7 +540,7 @@
           "benefit5": "Gráfico de tendencias diarias visualiza patrones durante la semana",
           "benefit6": "Datos accionables para optimizar tu sitio web de restaurante con menú QR",
           "conclusionTitle": "Comienza a Usar el Análisis Detallado para Tu Menú QR",
-          "conclusionText": "Con el análisis detallado de GrandQR para tu sitio web de restaurante y menú QR, obtienes información valiosa sobre el comportamiento de tus clientes. Ya no adivinas cuántas personas ven tu menú o qué idiomas prefieren. Cada escaneo, cada vista, cada preferencia de idioma se rastrea y se presenta en un panel fácil de entender. Usa estos datos para tomar decisiones informadas sobre tu menú, marketing y operaciones del restaurante.",
+          "conclusionText": "Con el análisis detallado de IQ Rest para tu sitio web de restaurante y menú QR, obtienes información valiosa sobre el comportamiento de tus clientes. Ya no adivinas cuántas personas ven tu menú o qué idiomas prefieren. Cada escaneo, cada vista, cada preferencia de idioma se rastrea y se presenta en un panel fácil de entender. Usa estos datos para tomar decisiones informadas sobre tu menú, marketing y operaciones del restaurante.",
           "ctaText": "¿Listo para obtener análisis detallado de tu sitio web de restaurante?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -549,11 +549,11 @@
         "title": "Generador Instantáneo de Menú QR y Sitio Web de Restaurante",
         "description": "Crea tu menú QR y sitio web de restaurante o cafetería al instante. Genera códigos QR imprimibles con texto personalizado y múltiples diseños en minutos - sin conocimientos técnicos.",
         "meta": {
-          "title": "Generador Instantáneo de Menú QR y Sitio Web de Restaurante | GrandQR",
+          "title": "Generador Instantáneo de Menú QR y Sitio Web de Restaurante | IQ Rest",
           "description": "Genera menú QR y sitio web de restaurante instantáneamente. Crea códigos QR personalizados para tu cafetería o restaurante en minutos con diseños imprimibles para formatos A4, A5, A6. Generador instantáneo gratuito."
         },
         "content": {
-          "intro": "GrandQR ahora ofrece un generador instantáneo de menú QR y sitio web de restaurante que crea menús digitales profesionales en minutos. Ya sea que dirijas una acogedora cafetería o un concurrido restaurante, nuestro generador instantáneo te permite crear, personalizar e imprimir códigos QR que enlazan directamente con tu sitio web de menú digital. Sin conocimientos técnicos requeridos, sin esperas - solo creación instantánea de menú QR para restaurantes y cafeterías de cualquier tamaño.",
+          "intro": "IQ Rest ahora ofrece un generador instantáneo de menú QR y sitio web de restaurante que crea menús digitales profesionales en minutos. Ya sea que dirijas una acogedora cafetería o un concurrido restaurante, nuestro generador instantáneo te permite crear, personalizar e imprimir códigos QR que enlazan directamente con tu sitio web de menú digital. Sin conocimientos técnicos requeridos, sin esperas - solo creación instantánea de menú QR para restaurantes y cafeterías de cualquier tamaño.",
           "image1Alt": "Generador instantáneo de menú QR para sitios web de restaurantes y cafeterías",
           "image1Caption": "Genera códigos QR personalizados para tu sitio web de restaurante al instante",
           "section1Title": "Cómo Funciona el Generador Instantáneo de Menú QR",
@@ -570,7 +570,7 @@
           "benefit5": "Salida lista para imprimir con márgenes y espaciado automáticos",
           "benefit6": "Descarga como PNG o imprime directamente desde tu navegador",
           "conclusionTitle": "Comienza a Usar el Generador Instantáneo de Menú QR",
-          "conclusionText": "Con el generador instantáneo de menú QR y sitio web de restaurante de GrandQR, puedes tener un menú digital profesional funcionando en minutos. Sin habilidades de diseño necesarias, sin software costoso requerido - solo generación instantánea de hermosos códigos QR escaneables que conectan a los clientes con tu menú. Perfecto para nuevos restaurantes lanzando su primer menú QR o cafeterías establecidas actualizando su configuración existente. Genera tu menú QR instantáneo hoy y moderniza tu experiencia gastronómica.",
+          "conclusionText": "Con el generador instantáneo de menú QR y sitio web de restaurante de IQ Rest, puedes tener un menú digital profesional funcionando en minutos. Sin habilidades de diseño necesarias, sin software costoso requerido - solo generación instantánea de hermosos códigos QR escaneables que conectan a los clientes con tu menú. Perfecto para nuevos restaurantes lanzando su primer menú QR o cafeterías establecidas actualizando su configuración existente. Genera tu menú QR instantáneo hoy y moderniza tu experiencia gastronómica.",
           "ctaText": "¿Listo para generar tu menú QR instantáneo?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -579,11 +579,11 @@
         "title": "Sitio Web Público de Restaurante para Escaneo de Menú QR",
         "description": "Lanza tu sitio web público de restaurante con menú QR. Los clientes escanean el código y ven instantáneamente tu menú digital con categorías, productos, fotos y precios.",
         "meta": {
-          "title": "Sitio Web Público de Restaurante para Escaneo de Menú QR | GrandQR",
+          "title": "Sitio Web Público de Restaurante para Escaneo de Menú QR | IQ Rest",
           "description": "Crea un sitio web público de restaurante para escaneo de menú QR. Los clientes escanean el código QR y ven tu menú digital con categorías, platos, fotos y precios al instante."
         },
         "content": {
-          "intro": "GrandQR ahora ofrece un sitio web público de restaurante completamente funcional para escaneo de menú QR. Tus clientes simplemente escanean un código QR y acceden instantáneamente a tu menú digital completo. El sitio web público muestra todas tus categorías, productos del menú, fotos, descripciones y precios en una interfaz hermosa y optimizada para móviles. Este sitio web público de restaurante para escaneo QR transforma la forma en que los comensales interactúan con tu menú.",
+          "intro": "IQ Rest ahora ofrece un sitio web público de restaurante completamente funcional para escaneo de menú QR. Tus clientes simplemente escanean un código QR y acceden instantáneamente a tu menú digital completo. El sitio web público muestra todas tus categorías, productos del menú, fotos, descripciones y precios en una interfaz hermosa y optimizada para móviles. Este sitio web público de restaurante para escaneo QR transforma la forma en que los comensales interactúan con tu menú.",
           "image1Alt": "Sitio web público de restaurante mostrando categorías del menú QR",
           "image1Caption": "Sitio web público de restaurante optimizado para móviles mostrando categorías del menú para escaneo QR",
           "section1Title": "Cómo Funciona el Sitio Web Público de Restaurante con Escaneo QR",
@@ -604,7 +604,7 @@
           "benefit5": "Soporte multilingüe para clientes internacionales",
           "benefit6": "Carga rápida con imágenes optimizadas y tecnología moderna",
           "conclusionTitle": "Comienza a Usar Tu Sitio Web Público de Menú QR de Restaurante",
-          "conclusionText": "Con el sitio web público de restaurante de GrandQR para escaneo de menú QR, proporcionas a los clientes acceso instantáneo a tu menú completo. Simplemente agrega tus categorías y productos a través del panel de administración, genera tu código QR y muéstralo en tus mesas. Los clientes escanean y navegan por tu hermoso menú digital en segundos. Sin más costos de impresión, sin más menús desactualizados - solo una experiencia gastronómica moderna.",
+          "conclusionText": "Con el sitio web público de restaurante de IQ Rest para escaneo de menú QR, proporcionas a los clientes acceso instantáneo a tu menú completo. Simplemente agrega tus categorías y productos a través del panel de administración, genera tu código QR y muéstralo en tus mesas. Los clientes escanean y navegan por tu hermoso menú digital en segundos. Sin más costos de impresión, sin más menús desactualizados - solo una experiencia gastronómica moderna.",
           "ctaText": "¿Listo para lanzar tu sitio web público de menú QR de restaurante?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -613,17 +613,17 @@
         "title": "Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR",
         "description": "Guía completa sobre cómo añadir productos a tu sitio web de restaurante con menú QR. Aprende a agregar platos con fotos, precios y descripciones a tu menú digital en minutos.",
         "meta": {
-          "title": "Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR | GrandQR",
+          "title": "Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR | IQ Rest",
           "description": "Guía paso a paso sobre cómo añadir productos al sitio web de restaurante con menú QR. Agrega platos, establece precios, sube fotos y organiza tu menú digital. Gestión fácil de productos para restaurantes."
         },
         "content": {
-          "intro": "¿Quieres saber cómo añadir productos a tu sitio web de restaurante con menú QR? GrandQR hace increíblemente fácil agregar y gestionar elementos del menú en tu sitio web digital de restaurante. Ya sea que estés agregando tu primer plato o actualizando todo tu menú, nuestro intuitivo sistema de gestión de productos te ayuda a crear un menú QR profesional que muestra tu cocina perfectamente. Esta guía te muestra exactamente cómo añadir productos al sitio web de restaurante con menú QR, incluyendo fotos, precios, descripciones y categorías.",
+          "intro": "¿Quieres saber cómo añadir productos a tu sitio web de restaurante con menú QR? IQ Rest hace increíblemente fácil agregar y gestionar elementos del menú en tu sitio web digital de restaurante. Ya sea que estés agregando tu primer plato o actualizando todo tu menú, nuestro intuitivo sistema de gestión de productos te ayuda a crear un menú QR profesional que muestra tu cocina perfectamente. Esta guía te muestra exactamente cómo añadir productos al sitio web de restaurante con menú QR, incluyendo fotos, precios, descripciones y categorías.",
           "image1Alt": "Cómo añadir productos al sitio web de restaurante con menú QR - vista de lista de productos",
           "image1Caption": "Interfaz de gestión de productos que muestra cómo añadir productos a tu sitio web de restaurante con menú QR",
           "section1Title": "Por Qué es Importante Añadir Productos Correctamente a Tu Sitio Web de Restaurante con Menú QR",
           "section1Text": "Cuando añades productos al sitio web de restaurante con menú QR, la presentación lo es todo. Los clientes deciden qué pedir basándose en cómo se ven tus platos y qué tan bien están descritos. Nuestro sistema de gestión de productos te permite agregar fotos hermosas, descripciones detalladas, precios precisos y organizar productos en categorías. Así es como añadir productos al sitio web de restaurante que convierte visitantes en clientes. Las investigaciones muestran que los menús con imágenes de alta calidad aumentan los pedidos hasta un 30%.",
           "section2Title": "Paso a Paso: Cómo Añadir Productos al Sitio Web de Restaurante con Menú QR",
-          "section2Text": "Añadir productos a tu sitio web de restaurante con menú QR es simple con GrandQR. Navega a la sección de Productos en tu panel de control y haz clic en el botón de agregar. Ingresa el nombre del producto, escribe una descripción apetitosa, establece el precio y selecciona una categoría. Sube una foto de tu plato - nuestro sistema optimiza automáticamente las imágenes a 500x500 píxeles para una visualización perfecta. Activa o desactiva el estado para mostrar u ocultar productos al instante. Este proceso simplificado hace fácil añadir productos al sitio web de restaurante con menú QR en solo minutos.",
+          "section2Text": "Añadir productos a tu sitio web de restaurante con menú QR es simple con IQ Rest. Navega a la sección de Productos en tu panel de control y haz clic en el botón de agregar. Ingresa el nombre del producto, escribe una descripción apetitosa, establece el precio y selecciona una categoría. Sube una foto de tu plato - nuestro sistema optimiza automáticamente las imágenes a 500x500 píxeles para una visualización perfecta. Activa o desactiva el estado para mostrar u ocultar productos al instante. Este proceso simplificado hace fácil añadir productos al sitio web de restaurante con menú QR en solo minutos.",
           "image2Alt": "Formulario de producto mostrando cómo añadir productos al sitio web de restaurante con menú QR",
           "image2Caption": "Interfaz simple de formulario para añadir productos a tu sitio web de restaurante con menú QR",
           "section3Title": "Carga y Optimización de Imágenes para los Productos de Tu Restaurante",
@@ -636,7 +636,7 @@
           "benefit5": "Reordenamiento mediante arrastrar y soltar para organizar productos en tu orden preferido",
           "benefit6": "Interfaz compatible con móviles para añadir productos desde cualquier dispositivo",
           "conclusionTitle": "Comienza a Añadir Productos a Tu Sitio Web de Restaurante con Menú QR Hoy",
-          "conclusionText": "Ahora sabes exactamente cómo añadir productos al sitio web de restaurante con menú QR usando GrandQR. Nuestro potente sistema de gestión de productos proporciona todo lo que necesitas para crear un menú digital irresistible. Agrega fotos hermosas, escribe descripciones atractivas, establece precios competitivos y organiza tus productos en categorías lógicas. Ya sea que tengas una pequeña cafetería o un restaurante grande, GrandQR hace fácil añadir productos al sitio web de restaurante que atrae y convierte clientes.",
+          "conclusionText": "Ahora sabes exactamente cómo añadir productos al sitio web de restaurante con menú QR usando IQ Rest. Nuestro potente sistema de gestión de productos proporciona todo lo que necesitas para crear un menú digital irresistible. Agrega fotos hermosas, escribe descripciones atractivas, establece precios competitivos y organiza tus productos en categorías lógicas. Ya sea que tengas una pequeña cafetería o un restaurante grande, IQ Rest hace fácil añadir productos al sitio web de restaurante que atrae y convierte clientes.",
           "ctaText": "¿Listo para añadir productos a tu sitio web de restaurante con menú QR?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -645,17 +645,17 @@
         "title": "Cómo Hacer Menú QR para Restaurante con Categorías",
         "description": "Aprende cómo hacer menú QR para restaurante con categorías organizadas. El nuevo sistema de gestión de categorías hace que crear menús digitales estructurados sea simple y rápido.",
         "meta": {
-          "title": "Cómo Hacer Menú QR para Restaurante con Categorías | GrandQR",
+          "title": "Cómo Hacer Menú QR para Restaurante con Categorías | IQ Rest",
           "description": "Guía paso a paso sobre cómo hacer menú QR para restaurante con categorías. Organiza tu menú digital con gestión fácil de categorías. Crea menús QR profesionales para restaurante en minutos."
         },
         "content": {
-          "intro": "¿Quieres saber cómo hacer menú QR para restaurante con categorías? GrandQR ahora ofrece un potente sistema de gestión de categorías que hace más fácil que nunca crear menús digitales organizados. Ya sea que tengas un restaurante, cafetería o bar, organizar tu menú con categorías ayuda a los clientes a encontrar exactamente lo que buscan. Esta actualización te muestra exactamente cómo hacer menú QR para restaurante con categorías bien estructuradas que mejoran la experiencia gastronómica.",
+          "intro": "¿Quieres saber cómo hacer menú QR para restaurante con categorías? IQ Rest ahora ofrece un potente sistema de gestión de categorías que hace más fácil que nunca crear menús digitales organizados. Ya sea que tengas un restaurante, cafetería o bar, organizar tu menú con categorías ayuda a los clientes a encontrar exactamente lo que buscan. Esta actualización te muestra exactamente cómo hacer menú QR para restaurante con categorías bien estructuradas que mejoran la experiencia gastronómica.",
           "image1Alt": "Cómo hacer menú QR para restaurante - vista de lista de categorías",
           "image1Caption": "Interfaz de gestión de categorías que muestra cómo organizar el menú QR de tu restaurante",
           "section1Title": "Por Qué las Categorías Importan al Hacer Menú QR para Restaurante",
           "section1Text": "Cuando haces menú QR para restaurante, organizar los elementos en categorías es esencial. Los clientes esperan ver agrupaciones lógicas como Entrantes, Platos Principales, Postres y Bebidas. Nuestro nuevo sistema de gestión de categorías te permite crear categorías ilimitadas, establecer su orden de visualización y alternar su visibilidad. Así es exactamente cómo hacer menú QR para restaurante que los clientes aman - claro, organizado y fácil de navegar. Los estudios muestran que los restaurantes con menús digitales bien organizados ven un 35% más de satisfacción del cliente.",
           "section2Title": "Paso a Paso: Cómo Hacer Menú QR para Restaurante con Categorías",
-          "section2Text": "Hacer un menú QR para restaurante con categorías es simple con GrandQR. Primero, navega a la sección de Categorías en tu panel de control. Haz clic en el botón de acción flotante para añadir una nueva categoría. Ingresa el nombre de la categoría, descripción opcional, y establece si está activa. La nueva interfaz simplificada muestra todas tus categorías en una lista limpia con indicadores de actividad. Usa las flechas arriba y abajo para reordenar las categorías exactamente como quieres que aparezcan en tu menú QR. Este enfoque intuitivo para hacer menú QR para restaurante asegura que tu menú esté siempre perfectamente organizado.",
+          "section2Text": "Hacer un menú QR para restaurante con categorías es simple con IQ Rest. Primero, navega a la sección de Categorías en tu panel de control. Haz clic en el botón de acción flotante para añadir una nueva categoría. Ingresa el nombre de la categoría, descripción opcional, y establece si está activa. La nueva interfaz simplificada muestra todas tus categorías en una lista limpia con indicadores de actividad. Usa las flechas arriba y abajo para reordenar las categorías exactamente como quieres que aparezcan en tu menú QR. Este enfoque intuitivo para hacer menú QR para restaurante asegura que tu menú esté siempre perfectamente organizado.",
           "image2Alt": "Formulario de categoría mostrando cómo hacer menú QR para restaurante",
           "image2Caption": "Interfaz de formulario simple para crear categorías de menú de restaurante",
           "section3Title": "Gestión de Categorías Optimizada para Móvil",
@@ -668,7 +668,7 @@
           "benefit5": "Diseño visual limpio con indicadores de actividad para vista rápida del estado",
           "benefit6": "Categorías ilimitadas para representar completamente la estructura del menú de tu restaurante",
           "conclusionTitle": "Comienza a Hacer Tu Menú QR con Categorías Hoy",
-          "conclusionText": "Ahora sabes exactamente cómo hacer menú QR para restaurante con categorías usando GrandQR. Nuestro nuevo sistema de gestión de categorías proporciona todo lo que necesitas para crear un menú digital profesional y bien organizado. Las categorías ayudan a los clientes a navegar tu menú más rápido, encontrar sus platos favoritos y descubrir nuevos elementos. Ya sea que tengas un menú simple con pocas categorías o un menú extenso con docenas de secciones, GrandQR hace fácil hacer menú QR para restaurante que impresione a tus clientes.",
+          "conclusionText": "Ahora sabes exactamente cómo hacer menú QR para restaurante con categorías usando IQ Rest. Nuestro nuevo sistema de gestión de categorías proporciona todo lo que necesitas para crear un menú digital profesional y bien organizado. Las categorías ayudan a los clientes a navegar tu menú más rápido, encontrar sus platos favoritos y descubrir nuevos elementos. Ya sea que tengas un menú simple con pocas categorías o un menú extenso con docenas de secciones, IQ Rest hace fácil hacer menú QR para restaurante que impresione a tus clientes.",
           "ctaText": "¿Listo para hacer menú QR para tu restaurante con categorías?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -677,7 +677,7 @@
         "title": "Creación Fácil de Menú QR para Tu Cafetería - Nuevo Panel de Control",
         "description": "Presentamos nuestro nuevo panel de control que hace increíblemente fácil crear menús QR para tu cafetería. Gestiona categorías, productos y configuraciones con una interfaz moderna de sidebar.",
         "meta": {
-          "title": "Menú QR Fácil para Cafetería - Nuevo Panel de Control | GrandQR",
+          "title": "Menú QR Fácil para Cafetería - Nuevo Panel de Control | IQ Rest",
           "description": "Crea menú QR para tu cafetería fácilmente con nuestro nuevo panel de control. Interfaz moderna de sidebar para gestionar categorías, productos, códigos QR y analíticas. Creación fácil de menú para cafetería."
         },
         "content": {
@@ -698,7 +698,7 @@
           "benefit5": "Analíticas fáciles para entender cómo interactúan los clientes con el menú QR de tu cafetería",
           "benefit6": "Acceso móvil fácil - gestiona el menú QR de tu cafetería desde cualquier dispositivo",
           "conclusionTitle": "Crea el Menú QR de Tu Cafetería de Forma Fácil",
-          "conclusionText": "Nuestro nuevo panel de control representa un gran avance para hacer fácil la creación de menús QR para dueños de cafeterías en todas partes. Con su intuitiva interfaz sidebar, renderizado rápido del servidor y herramientas de gestión completas, crear y mantener el menú QR digital de tu cafetería nunca ha sido más fácil. Únete a miles de cafeterías que ya usan GrandQR para proporcionar a sus clientes una experiencia de menú fácil y moderna.",
+          "conclusionText": "Nuestro nuevo panel de control representa un gran avance para hacer fácil la creación de menús QR para dueños de cafeterías en todas partes. Con su intuitiva interfaz sidebar, renderizado rápido del servidor y herramientas de gestión completas, crear y mantener el menú QR digital de tu cafetería nunca ha sido más fácil. Únete a miles de cafeterías que ya usan IQ Rest para proporcionar a sus clientes una experiencia de menú fácil y moderna.",
           "ctaText": "¿Listo para crear un menú QR fácil para tu cafetería?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -707,7 +707,7 @@
         "title": "Obtener Menú QR para Restaurantes - Actualizaciones FAQ y Guía",
         "description": "Aprende cómo obtener menú QR para restaurantes con nuestra página FAQ mejorada y guía de 4 pasos. Descubre respuestas sobre cómo obtener menús QR para tu restaurante con mejor navegación y contenido SEO optimizado.",
         "meta": {
-          "title": "Obtener Menú QR para Restaurantes - FAQ y Guía | GrandQR",
+          "title": "Obtener Menú QR para Restaurantes - FAQ y Guía | IQ Rest",
           "description": "Aprende cómo obtener menú QR para restaurantes fácilmente. Nueva página FAQ responde todas las preguntas sobre obtener menús QR para tu restaurante. Guía simplificada de 4 pasos."
         },
         "content": {
@@ -737,21 +737,21 @@
         "title": "Creación de Sitio Web Gratis para Restaurante - Optimización Móvil y Mejoras UX",
         "description": "Mejoras importantes en la creación de sitio web gratis para restaurante: navegación móvil optimizada con menú hamburguesa, página de registro mejorada y experiencia de usuario optimizada.",
         "meta": {
-          "title": "Actualizaciones de Creación de Sitio Web Gratis para Restaurante - Changelog GrandQR",
-          "description": "Descubre cómo GrandQR mejoró el proceso de creación de sitio web gratis para restaurante con navegación optimizada para móvil, mejor flujo de registro y experiencia mejorada"
+          "title": "Actualizaciones de Creación de Sitio Web Gratis para Restaurante - Changelog IQ Rest",
+          "description": "Descubre cómo IQ Rest mejoró el proceso de creación de sitio web gratis para restaurante con navegación optimizada para móvil, mejor flujo de registro y experiencia mejorada"
         },
         "content": {
           "intro": "Crear un sitio web gratis para restaurante nunca ha sido tan fácil ni tan compatible con móviles. Hemos realizado mejoras significativas para ayudar a propietarios de restaurantes y cafeterías a construir su sitio web profesional con menú QR digital, especialmente en dispositivos móviles donde la mayoría busca 'creación de sitio web para restaurante gratis'. Estas actualizaciones se centran en la navegación móvil, refinamientos de la página de registro y experiencia de usuario general para asegurar que cualquiera pueda crear un sitio web de restaurante gratis sin conocimientos técnicos.",
           "image1Alt": "Menú hamburguesa optimizado para móvil del sitio web de restaurante",
           "image1Caption": "Nueva navegación móvil con menú hamburguesa para fácil acceso a todas las funciones",
           "section1Title": "Navegación Móvil Primero para Sitios Web de Restaurantes",
-          "section1Text": "La mayoría de propietarios de restaurantes buscan y crean su sitio web gratis en dispositivos móviles. Por eso hemos rediseñado completamente nuestra navegación móvil con un menú hamburguesa profesional. En smartphones y tablets, la navegación ahora se abre como un diálogo modal limpio, mostrando todos los elementos del menú (Precios, Características, Changelog, Contactos) y el botón Comenzar en un diseño vertical fácil de leer. Este enfoque optimizado para móvil hace simple explorar las funciones de GrandQR y comenzar a crear tu sitio web gratis para restaurante directamente desde tu teléfono.",
+          "section1Text": "La mayoría de propietarios de restaurantes buscan y crean su sitio web gratis en dispositivos móviles. Por eso hemos rediseñado completamente nuestra navegación móvil con un menú hamburguesa profesional. En smartphones y tablets, la navegación ahora se abre como un diálogo modal limpio, mostrando todos los elementos del menú (Precios, Características, Changelog, Contactos) y el botón Comenzar en un diseño vertical fácil de leer. Este enfoque optimizado para móvil hace simple explorar las funciones de IQ Rest y comenzar a crear tu sitio web gratis para restaurante directamente desde tu teléfono.",
           "section2Title": "Página Mejorada para Creación de Sitio Web Gratis para Restaurante",
-          "section2Text": "Hemos refinado la página de registro para hacer la creación de un sitio web gratis para restaurante aún más intuitiva. Las mejoras incluyen mejor espaciado en dispositivos móviles, tarjetas de propuesta de valor centradas que explican claramente los beneficios, y diseños de formulario optimizados que funcionan perfectamente en pantallas pequeñas. El contador de restaurantes mostrando cuántos negocios ya usan GrandQR ahora se muestra a ancho completo en móvil, proporcionando fuerte prueba social que anima a nuevos propietarios a comenzar su sitio web gratis.",
+          "section2Text": "Hemos refinado la página de registro para hacer la creación de un sitio web gratis para restaurante aún más intuitiva. Las mejoras incluyen mejor espaciado en dispositivos móviles, tarjetas de propuesta de valor centradas que explican claramente los beneficios, y diseños de formulario optimizados que funcionan perfectamente en pantallas pequeñas. El contador de restaurantes mostrando cuántos negocios ya usan IQ Rest ahora se muestra a ancho completo en móvil, proporcionando fuerte prueba social que anima a nuevos propietarios a comenzar su sitio web gratis.",
           "image2Alt": "Flujo de registro optimizado para creación de sitio web gratis para restaurante",
           "image2Caption": "Proceso de registro optimizado para dispositivos móviles",
           "section3Title": "Proceso de Tres Pasos Optimizado para Todos los Dispositivos",
-          "section3Text": "El indicador visual del proceso mostrando los tres simples pasos para crear tu sitio web gratis para restaurante (Regístrate con tu email, Añade tu menú, Obtén tu código QR y empieza) ahora se adapta hermosamente a diferentes tamaños de pantalla. En móviles y tablets, los pasos se muestran verticalmente con espaciado claro. En pantallas más grandes, se muestran horizontalmente con flechas. Este diseño adaptativo asegura que todos, independientemente de su dispositivo, puedan ver claramente lo rápido y fácil que es crear un sitio web profesional para restaurante gratis con GrandQR.",
+          "section3Text": "El indicador visual del proceso mostrando los tres simples pasos para crear tu sitio web gratis para restaurante (Regístrate con tu email, Añade tu menú, Obtén tu código QR y empieza) ahora se adapta hermosamente a diferentes tamaños de pantalla. En móviles y tablets, los pasos se muestran verticalmente con espaciado claro. En pantallas más grandes, se muestran horizontalmente con flechas. Este diseño adaptativo asegura que todos, independientemente de su dispositivo, puedan ver claramente lo rápido y fácil que es crear un sitio web profesional para restaurante gratis con IQ Rest.",
           "benefitsTitle": "Mejoras Clave para Crear Sitios Web Gratis para Restaurantes",
           "benefit1": "Navegación con menú hamburguesa optimizada para móvil",
           "benefit2": "Página de registro mejorada con mejor espaciado móvil",
@@ -760,7 +760,7 @@
           "benefit5": "Formularios de entrada optimizados para interacción táctil",
           "benefit6": "Problema de redirección de cierre de sesión corregido",
           "conclusionTitle": "Creación de Sitio Web Gratis para Restaurante Simplificada",
-          "conclusionText": "Estas mejoras refuerzan nuestro compromiso de hacer la creación de sitio web gratis para restaurante accesible para todos. Ya seas propietario de una pequeña cafetería revisando GrandQR en tu teléfono durante un descanso, o gerente de restaurante planificando tu estrategia digital en una tablet, la experiencia ahora es fluida y profesional. Puedes crear un sitio web completo para restaurante con menú QR, absolutamente gratis, en solo unos minutos desde cualquier dispositivo.",
+          "conclusionText": "Estas mejoras refuerzan nuestro compromiso de hacer la creación de sitio web gratis para restaurante accesible para todos. Ya seas propietario de una pequeña cafetería revisando IQ Rest en tu teléfono durante un descanso, o gerente de restaurante planificando tu estrategia digital en una tablet, la experiencia ahora es fluida y profesional. Puedes crear un sitio web completo para restaurante con menú QR, absolutamente gratis, en solo unos minutos desde cualquier dispositivo.",
           "ctaText": "¿Listo para crear tu sitio web gratis para restaurante?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -769,17 +769,17 @@
         "title": "Página de Inicio Rediseñada para Mayor Conversión",
         "description": "Hemos rediseñado completamente nuestra página de registro con enfoque en optimización de conversión, incluyendo propuestas de valor, prueba social y experiencia de usuario optimizada.",
         "meta": {
-          "title": "Rediseño de Página de Inicio - Changelog de GrandQR",
-          "description": "GrandQR lanza página de registro rediseñada con UX mejorada, contador de prueba social y diseño enfocado en conversión para creación de menú QR de restaurante"
+          "title": "Rediseño de Página de Inicio - Changelog de IQ Rest",
+          "description": "IQ Rest lanza página de registro rediseñada con UX mejorada, contador de prueba social y diseño enfocado en conversión para creación de menú QR de restaurante"
         },
         "content": {
           "intro": "Estamos emocionados de anunciar un rediseño completo de nuestra página de Comenzar, construida específicamente para ayudar a propietarios de restaurantes y cafeterías a crear su menú QR digital más rápido que nunca. Esta actualización se enfoca en comunicar claramente el valor, construir confianza a través de prueba social y proporcionar una experiencia de registro sin interrupciones que toma menos de 5 minutos de principio a fin.",
-          "image1Alt": "Nueva página de inicio de GrandQR con propuestas de valor y prueba social",
+          "image1Alt": "Nueva página de inicio de IQ Rest con propuestas de valor y prueba social",
           "image1Caption": "Página de registro rediseñada con propuestas de valor claras y contador de restaurantes",
           "section1Title": "Propuestas de Valor Claras de un Vistazo",
-          "section1Text": "El nuevo diseño muestra prominentemente cuatro beneficios clave que más importan a los propietarios de restaurantes: sin habilidades técnicas requeridas, actualizaciones instantáneas del menú, código QR y sitio web incluidos, y gratis para comenzar. Cada beneficio se presenta en un formato de tarjeta limpio con iconos intuitivos, dejando inmediatamente claro lo que ofrece GrandQR. Este enfoque ayuda a los ocupados propietarios de restaurantes a entender la propuesta de valor en segundos al llegar a la página.",
+          "section1Text": "El nuevo diseño muestra prominentemente cuatro beneficios clave que más importan a los propietarios de restaurantes: sin habilidades técnicas requeridas, actualizaciones instantáneas del menú, código QR y sitio web incluidos, y gratis para comenzar. Cada beneficio se presenta en un formato de tarjeta limpio con iconos intuitivos, dejando inmediatamente claro lo que ofrece IQ Rest. Este enfoque ayuda a los ocupados propietarios de restaurantes a entender la propuesta de valor en segundos al llegar a la página.",
           "section2Title": "Prueba Social que Construye Confianza",
-          "section2Text": "Hemos agregado un contador dinámico de restaurantes que muestra cuántos negocios ya están usando GrandQR. Este contador se actualiza automáticamente basado en nuestra tasa de crecimiento, proporcionando prueba social auténtica que ayuda a los nuevos visitantes a sentirse confiados en su decisión de probar nuestra plataforma. Ver que más de 1,400 restaurantes ya confían en GrandQR reduce significativamente la indecisión y fomenta los registros.",
+          "section2Text": "Hemos agregado un contador dinámico de restaurantes que muestra cuántos negocios ya están usando IQ Rest. Este contador se actualiza automáticamente basado en nuestra tasa de crecimiento, proporcionando prueba social auténtica que ayuda a los nuevos visitantes a sentirse confiados en su decisión de probar nuestra plataforma. Ver que más de 1,400 restaurantes ya confían en IQ Rest reduce significativamente la indecisión y fomenta los registros.",
           "section3Title": "Flujo de Registro Optimizado",
           "section3Text": "Todo el proceso de registro ahora ocurre en una sola página con un diseño consistente. Ya sea ingresando tu email o verificando tu código, el diseño permanece igual - solo cambia el campo de entrada. Esto crea una experiencia más suave y menos disruptiva. También hemos agregado un indicador visual del proceso mostrando los tres simples pasos: Registrarse, Agregar menú y Obtener QR. Esta transparencia ayuda a los usuarios a entender exactamente qué esperar y reduce el abandono.",
           "benefitsTitle": "Mejoras Clave en Esta Actualización",
@@ -799,18 +799,18 @@
         "title": "Nueva Interfaz de Autenticación de Usuarios",
         "description": "Hemos lanzado un sistema de autenticación simple y seguro basado en email que te permite crear tu sitio web de restaurante y menú QR en minutos.",
         "meta": {
-          "title": "Interfaz de Autenticación de Usuarios - Changelog de GrandQR",
-          "description": "GrandQR presenta un nuevo sistema de autenticación sin contraseña para crear tu sitio web de restaurante y menú QR digital de forma rápida y segura"
+          "title": "Interfaz de Autenticación de Usuarios - Changelog de IQ Rest",
+          "description": "IQ Rest presenta un nuevo sistema de autenticación sin contraseña para crear tu sitio web de restaurante y menú QR digital de forma rápida y segura"
         },
         "content": {
-          "intro": "Estamos emocionados de anunciar el lanzamiento de nuestra nueva interfaz de autenticación de usuarios para GrandQR. Esta actualización representa un paso significativo para facilitar más que nunca la creación de tu sitio web de restaurante con un menú QR profesional. Nuestro objetivo siempre ha sido ayudar a propietarios de restaurantes y cafeterías a construir su presencia digital en minutos, no horas, y este nuevo sistema de autenticación está diseñado con esa misión en mente.",
-          "image1Alt": "Paso de ingreso de email en la autenticación de GrandQR",
+          "intro": "Estamos emocionados de anunciar el lanzamiento de nuestra nueva interfaz de autenticación de usuarios para IQ Rest. Esta actualización representa un paso significativo para facilitar más que nunca la creación de tu sitio web de restaurante con un menú QR profesional. Nuestro objetivo siempre ha sido ayudar a propietarios de restaurantes y cafeterías a construir su presencia digital en minutos, no horas, y este nuevo sistema de autenticación está diseñado con esa misión en mente.",
+          "image1Alt": "Paso de ingreso de email en la autenticación de IQ Rest",
           "image1Caption": "Autenticación simple basada en email - sin contraseñas que recordar",
           "section1Title": "Autenticación Sin Contraseña para Propietarios de Restaurantes",
           "section1Text": "Entendiendo que los propietarios de restaurantes son personas ocupadas, hemos implementado un sistema de autenticación sin contraseña que solo requiere tu dirección de email. Cuando quieras crear tu sitio web de restaurante o actualizar tu menú QR digital, simplemente ingresa tu email y recibe un código de verificación seguro de 4 dígitos. Este enfoque elimina la frustración de las contraseñas olvidadas mientras mantiene los más altos estándares de seguridad para los datos de tu restaurante. Todo el proceso toma menos de 30 segundos, permitiéndote enfocarte en lo que más importa - administrar tu restaurante y servir a tus clientes.",
           "section2Title": "Proceso Simplificado de Creación de Menú QR",
           "section2Text": "Con nuestro nuevo sistema de autenticación, comenzar con tu menú QR digital nunca ha sido más fácil. Una vez autenticado, tendrás acceso inmediato a nuestro intuitivo constructor de menús donde puedes agregar tus platos, establecer precios, subir fotos y organizar categorías. El menú QR que crees será accesible para tus clientes instantáneamente - simplemente escanean el código y ven tu menú digital bellamente diseñado en su smartphone. No se requiere descarga de apps para tus clientes, ni conocimientos técnicos de tu parte. Esto es exactamente lo que los restaurantes y cafeterías modernas necesitan para competir en el mundo digital actual.",
-          "image2Alt": "Paso de verificación OTP en la autenticación de GrandQR",
+          "image2Alt": "Paso de verificación OTP en la autenticación de IQ Rest",
           "image2Caption": "Verificación segura con código de 4 dígitos enviado directamente a tu email",
           "section3Title": "Construido para Velocidad y Seguridad",
           "section3Text": "La seguridad fue nuestra máxima prioridad al diseñar este sistema de autenticación. Cada código de verificación expira después de 10 minutos y solo puede usarse una vez, protegiendo tu sitio web de restaurante y datos del menú de accesos no autorizados. Al mismo tiempo, hemos optimizado cada paso del proceso para velocidad. Desde ingresar tu email hasta acceder a tu panel de control, todo el flujo de autenticación se completa en menos de un minuto. Esto significa que puedes hacer actualizaciones rápidas a tu menú QR durante el servicio, agregar especiales del día o ajustar precios - todo sin demoras.",
@@ -820,7 +820,7 @@
           "benefit3": "Acceso instantáneo a tu constructor de menú digital desde cualquier dispositivo",
           "benefit4": "Actualizaciones rápidas a tu menú QR incluso durante horas de servicio ocupadas",
           "conclusionTitle": "Comienza a Construir Tu Menú Digital Hoy",
-          "conclusionText": "Esta nueva interfaz de autenticación es solo el comienzo de nuestro compromiso de hacer los menús QR digitales accesibles para cada restaurante y cafetería. Ya sea que tengas una pequeña cafetería o una cadena de restaurantes en crecimiento, GrandQR proporciona las herramientas que necesitas para crear una presencia profesional en línea. Tus clientes esperan encontrar tu menú en línea, y con nuestra solución, puedes superar esas expectativas con un menú QR digital bellamente diseñado, siempre actualizado, que funciona perfectamente en cualquier smartphone.",
+          "conclusionText": "Esta nueva interfaz de autenticación es solo el comienzo de nuestro compromiso de hacer los menús QR digitales accesibles para cada restaurante y cafetería. Ya sea que tengas una pequeña cafetería o una cadena de restaurantes en crecimiento, IQ Rest proporciona las herramientas que necesitas para crear una presencia profesional en línea. Tus clientes esperan encontrar tu menú en línea, y con nuestra solución, puedes superar esas expectativas con un menú QR digital bellamente diseñado, siempre actualizado, que funciona perfectamente en cualquier smartphone.",
           "ctaText": "¿Listo para crear tu sitio web de restaurante con menú QR?",
           "ctaButton": "Comenzar Gratis"
         }
@@ -829,11 +829,11 @@
         "title": "Planes de Suscripción para Menú QR y Creación de Sitio Web de Restaurante",
         "description": "Presentamos planes de suscripción flexibles para crear tu sitio web de restaurante y menú QR. Elige entre planes Gratis, Básico y Pro con opciones de facturación mensual o anual.",
         "meta": {
-          "title": "Planes de Suscripción para Menú QR y Sitio Web de Restaurante | GrandQR",
+          "title": "Planes de Suscripción para Menú QR y Sitio Web de Restaurante | IQ Rest",
           "description": "Elige el plan de suscripción perfecto para la creación de tu sitio web de restaurante y menú QR. Planes Gratis, Básico y Pro con facturación mensual y anual flexible. Comienza gratis hoy."
         },
         "content": {
-          "intro": "Nos complace anunciar el lanzamiento de nuestro nuevo sistema de suscripción para la creación de menú QR y sitio web de restaurante. GrandQR ahora ofrece planes flexibles que crecen con tu negocio - desde un nivel completamente gratuito para pequeñas cafeterías hasta planes profesionales para restaurantes establecidos. Ya sea que estés comenzando o gestionando múltiples ubicaciones, nuestros planes de suscripción proporcionan las características que necesitas para crear y mantener un sitio web profesional de restaurante con capacidades de menú QR.",
+          "intro": "Nos complace anunciar el lanzamiento de nuestro nuevo sistema de suscripción para la creación de menú QR y sitio web de restaurante. IQ Rest ahora ofrece planes flexibles que crecen con tu negocio - desde un nivel completamente gratuito para pequeñas cafeterías hasta planes profesionales para restaurantes establecidos. Ya sea que estés comenzando o gestionando múltiples ubicaciones, nuestros planes de suscripción proporcionan las características que necesitas para crear y mantener un sitio web profesional de restaurante con capacidades de menú QR.",
           "image1Alt": "Planes de suscripción para creación de menú QR y sitio web de restaurante",
           "image1Caption": "Elige el plan perfecto para las necesidades de tu sitio web de restaurante y menú QR",
           "section1Title": "Planes Flexibles para Cada Tamaño de Restaurante",
@@ -850,7 +850,7 @@
           "benefit5": "Gestión fácil de planes a través del panel de facturación simple",
           "benefit6": "Degrada en cualquier momento - no se requieren contratos a largo plazo",
           "conclusionTitle": "Comienza a Crear Tu Sitio Web de Restaurante Hoy",
-          "conclusionText": "Con nuestros nuevos planes de suscripción, crear un menú QR profesional y sitio web de restaurante nunca ha sido más accesible. Comienza con nuestro plan Gratis para experimentar la plataforma, luego actualiza a medida que crece tu restaurante. Nuestras opciones de facturación flexibles, precios transparentes y activación instantánea significan que puedes tener tu menú digital funcionando en minutos. Únete a miles de restaurantes que ya usan GrandQR para conectar con sus clientes a través de menús QR modernos y optimizados para móviles.",
+          "conclusionText": "Con nuestros nuevos planes de suscripción, crear un menú QR profesional y sitio web de restaurante nunca ha sido más accesible. Comienza con nuestro plan Gratis para experimentar la plataforma, luego actualiza a medida que crece tu restaurante. Nuestras opciones de facturación flexibles, precios transparentes y activación instantánea significan que puedes tener tu menú digital funcionando en minutos. Únete a miles de restaurantes que ya usan IQ Rest para conectar con sus clientes a través de menús QR modernos y optimizados para móviles.",
           "ctaText": "¿Listo para elegir tu plan para menú QR y sitio web de restaurante?",
           "ctaButton": "Ver Planes de Precios"
         }
@@ -912,7 +912,7 @@
   },
   "getStarted": {
     "meta": {
-      "title": "Crea Tu Menú Digital en 5 Minutos - GrandQR",
+      "title": "Crea Tu Menú Digital en 5 Minutos - IQ Rest",
       "description": "Menú QR y sitio web para tu restaurante. Listo al instante. Sin conocimientos técnicos."
     },
     "title": "Crea Tu Menú Digital en 5 Minutos",
@@ -945,7 +945,7 @@
     "setupTime": "Configuración en 5 minutos",
     "hasAccount": "¿Ya tienes cuenta?",
     "signIn": "Iniciar sesión",
-    "restaurantCounter": "Únete a {count} Restaurantes que ya usan GrandQR",
+    "restaurantCounter": "Únete a {count} Restaurantes que ya usan IQ Rest",
     "steps": {
       "signUp": "Regístrate con tu email",
       "addMenu": "Añade tu menú",
@@ -1078,15 +1078,15 @@
     "questions": [
       {
         "question": "¿Qué es un menú QR para restaurante y cómo funciona?",
-        "answer": "Un menú QR para restaurante es un menú digital que los clientes pueden acceder escaneando un código QR con su smartphone. GrandQR crea un sitio web profesional de menú digital para tu restaurante o cafetería que se actualiza instantáneamente sin necesidad de reimprimir. Los clientes simplemente escanean el código y ven tu menú en su dispositivo."
+        "answer": "Un menú QR para restaurante es un menú digital que los clientes pueden acceder escaneando un código QR con su smartphone. IQ Rest crea un sitio web profesional de menú digital para tu restaurante o cafetería que se actualiza instantáneamente sin necesidad de reimprimir. Los clientes simplemente escanean el código y ven tu menú en su dispositivo."
       },
       {
         "question": "¿Cuánto cuesta un menú QR para un restaurante o cafetería?",
-        "answer": "GrandQR ofrece precios flexibles desde €0 para siempre con nuestro plan gratuito. Esto hace que sea asequible para cualquier restaurante o cafetería crear un menú QR profesional. Los planes de pago comienzan en solo €4/mes con características adicionales como elementos ilimitados y análisis avanzados."
+        "answer": "IQ Rest ofrece precios flexibles desde €0 para siempre con nuestro plan gratuito. Esto hace que sea asequible para cualquier restaurante o cafetería crear un menú QR profesional. Los planes de pago comienzan en solo €4/mes con características adicionales como elementos ilimitados y análisis avanzados."
       },
       {
         "question": "¿Puedo crear un sitio web para mi restaurante sin programar?",
-        "answer": "¡Sí! GrandQR está diseñado para propietarios de restaurantes y cafeterías sin conocimientos técnicos. Puedes crear un sitio web completo de menú digital para tu restaurante en minutos, sin necesidad de habilidades de programación o código. Simplemente agrega tus platos, precios y fotos a través de nuestra interfaz intuitiva."
+        "answer": "¡Sí! IQ Rest está diseñado para propietarios de restaurantes y cafeterías sin conocimientos técnicos. Puedes crear un sitio web completo de menú digital para tu restaurante en minutos, sin necesidad de habilidades de programación o código. Simplemente agrega tus platos, precios y fotos a través de nuestra interfaz intuitiva."
       },
       {
         "question": "¿Con qué frecuencia puedo actualizar mi menú QR?",
@@ -1094,7 +1094,7 @@
       },
       {
         "question": "¿El menú QR funciona tanto para restaurantes como para cafeterías?",
-        "answer": "¡Absolutamente! GrandQR es perfecto para restaurantes, cafeterías, cafés, bares, food trucks y cualquier negocio de servicio de alimentos. Nuestra solución de menú digital se adapta a cualquier tipo de establecimiento, desde pequeñas cafeterías hasta grandes cadenas de restaurantes."
+        "answer": "¡Absolutamente! IQ Rest es perfecto para restaurantes, cafeterías, cafés, bares, food trucks y cualquier negocio de servicio de alimentos. Nuestra solución de menú digital se adapta a cualquier tipo de establecimiento, desde pequeñas cafeterías hasta grandes cadenas de restaurantes."
       },
       {
         "question": "¿Cómo funciona la traducción automática del menú?",
@@ -1102,10 +1102,10 @@
       },
       {
         "question": "¿Puedo probar la solución de menú QR gratis?",
-        "answer": "¡Sí! Ofrecemos un plan completamente gratuito para restaurantes y cafeterías para probar GrandQR. Puedes crear tu sitio web de menú digital con hasta 15 elementos sin costo, para siempre. No se requiere tarjeta de crédito para empezar. Actualiza solo cuando necesites más características."
+        "answer": "¡Sí! Ofrecemos un plan completamente gratuito para restaurantes y cafeterías para probar IQ Rest. Puedes crear tu sitio web de menú digital con hasta 15 elementos sin costo, para siempre. No se requiere tarjeta de crédito para empezar. Actualiza solo cuando necesites más características."
       },
       {
-        "question": "¿GrandQR es una aplicación que los clientes necesitan descargar?",
+        "question": "¿IQ Rest es una aplicación que los clientes necesitan descargar?",
         "answer": "¡No! Esta es una de las mejores ventajas. Los clientes no necesitan descargar ninguna aplicación. Simplemente escanean tu código QR y el menú se abre instantáneamente en su navegador web. Esto lo hace mucho más conveniente que las aplicaciones de restaurantes que requieren descargas."
       },
       {
@@ -1114,7 +1114,7 @@
       },
       {
         "question": "¿Cómo creo un código QR para el menú de mi restaurante?",
-        "answer": "GrandQR genera automáticamente un código QR profesional cuando creas tu menú digital. Puedes descargar e imprimir este código QR para las mesas de tu restaurante, entrada o mostrador para llevar. El código QR es personalizable y de alta calidad para un escaneo claro."
+        "answer": "IQ Rest genera automáticamente un código QR profesional cuando creas tu menú digital. Puedes descargar e imprimir este código QR para las mesas de tu restaurante, entrada o mostrador para llevar. El código QR es personalizable y de alta calidad para un escaneo claro."
       }
     ],
     "cta": {
@@ -1123,10 +1123,10 @@
       "button": "Contáctanos"
     },
     "linkTitle": "¿Tienes preguntas?",
-    "linkDescription": "Consulta nuestras preguntas frecuentes para conocer más sobre GrandQR",
+    "linkDescription": "Consulta nuestras preguntas frecuentes para conocer más sobre IQ Rest",
     "meta": {
-      "title": "Preguntas Frecuentes - GrandQR",
-      "description": "Encuentra respuestas a preguntas comunes sobre la solución de menú QR digital GrandQR para restaurantes y cafeterías"
+      "title": "Preguntas Frecuentes - IQ Rest",
+      "description": "Encuentra respuestas a preguntas comunes sobre la solución de menú QR digital IQ Rest para restaurantes y cafeterías"
     }
   },
   "billing": {
@@ -1369,7 +1369,7 @@
       "descriptionHint": "Se muestra debajo del título en la página principal",
       "slug": "URL Slug",
       "slugPlaceholder": "mi-restaurante",
-      "slugHint": "Tu sitio web estará disponible en: grandqr.com/{slug}",
+      "slugHint": "Tu sitio web estará disponible en: iq-rest.com/{slug}",
       "currency": "Moneda",
       "currencyPlaceholder": "Seleccionar moneda",
       "save": "Guardar",
@@ -1416,21 +1416,21 @@
       {
         "title": "1. Introducción",
         "content": [
-          "Bienvenido a GrandQR. Estos Términos y Condiciones rigen tu uso de nuestro sitio web y servicios operados por Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrado en España.",
-          "Al acceder o utilizar GrandQR, aceptas estar sujeto a estos Términos. Si no estás de acuerdo con alguna parte de estos términos, no podrás acceder al servicio."
+          "Bienvenido a IQ Rest. Estos Términos y Condiciones rigen tu uso de nuestro sitio web y servicios operados por Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrado en España.",
+          "Al acceder o utilizar IQ Rest, aceptas estar sujeto a estos Términos. Si no estás de acuerdo con alguna parte de estos términos, no podrás acceder al servicio."
         ]
       },
       {
         "title": "2. Descripción del Servicio",
         "content": [
-          "GrandQR proporciona una plataforma de creación de menú QR digital y sitio web para restaurantes, cafeterías y establecimientos de servicio de alimentos. Nuestro servicio incluye gestión de menús, generación de códigos QR, soporte multilingüe con traducciones impulsadas por IA, optimización de imágenes con IA, sistemas de reserva de mesas y análisis.",
+          "IQ Rest proporciona una plataforma de creación de menú QR digital y sitio web para restaurantes, cafeterías y establecimientos de servicio de alimentos. Nuestro servicio incluye gestión de menús, generación de códigos QR, soporte multilingüe con traducciones impulsadas por IA, optimización de imágenes con IA, sistemas de reserva de mesas y análisis.",
           "Nos reservamos el derecho de modificar, suspender o descontinuar cualquier aspecto del servicio en cualquier momento sin previo aviso."
         ]
       },
       {
         "title": "3. Registro de Cuenta",
         "content": [
-          "Para utilizar ciertas funciones de GrandQR, debes registrar una cuenta utilizando una dirección de correo electrónico válida. Eres responsable de mantener la confidencialidad de tu cuenta y de todas las actividades que ocurran bajo tu cuenta.",
+          "Para utilizar ciertas funciones de IQ Rest, debes registrar una cuenta utilizando una dirección de correo electrónico válida. Eres responsable de mantener la confidencialidad de tu cuenta y de todas las actividades que ocurran bajo tu cuenta.",
           "Aceptas proporcionar información precisa, actual y completa durante el registro y actualizar dicha información para mantenerla precisa, actual y completa.",
           "Utilizamos autenticación sin contraseña mediante códigos de verificación por correo electrónico. Eres responsable de mantener la seguridad de tu cuenta de correo electrónico."
         ]
@@ -1438,7 +1438,7 @@
       {
         "title": "4. Planes de Suscripción y Pagos",
         "content": [
-          "GrandQR ofrece planes de suscripción Gratuito, Básico y Pro. El plan Gratuito está disponible sin costo con funciones limitadas. Los planes de pago (Básico y Pro) se facturan mensual o anualmente a través de nuestro procesador de pagos, Stripe.",
+          "IQ Rest ofrece planes de suscripción Gratuito, Básico y Pro. El plan Gratuito está disponible sin costo con funciones limitadas. Los planes de pago (Básico y Pro) se facturan mensual o anualmente a través de nuestro procesador de pagos, Stripe.",
           "Los precios se muestran en Euros (EUR). Al suscribirte a un plan de pago, nos autorizas a cargar tu método de pago de forma recurrente hasta que canceles.",
           "Puedes actualizar, degradar o cancelar tu suscripción en cualquier momento a través de tu panel de control. Las cancelaciones entran en vigor al final del período de facturación actual. No se proporcionan reembolsos por períodos de facturación parciales.",
           "Nos reservamos el derecho de cambiar nuestros precios con 30 días de aviso. Los cambios de precio se aplicarán a los períodos de facturación que comiencen después del período de aviso."
@@ -1447,7 +1447,7 @@
       {
         "title": "5. Funciones con Inteligencia Artificial",
         "content": [
-          "GrandQR utiliza inteligencia artificial para traducciones de menús y optimización de imágenes. Si bien nos esforzamos por la precisión, las traducciones generadas por IA pueden contener errores. Eres responsable de revisar y verificar todo el contenido generado por IA antes de publicarlo.",
+          "IQ Rest utiliza inteligencia artificial para traducciones de menús y optimización de imágenes. Si bien nos esforzamos por la precisión, las traducciones generadas por IA pueden contener errores. Eres responsable de revisar y verificar todo el contenido generado por IA antes de publicarlo.",
           "La optimización de imágenes con IA procesa automáticamente las imágenes subidas para mejorar el rendimiento de carga. Las imágenes originales no se almacenan después del procesamiento.",
           "No garantizamos la precisión, integridad o confiabilidad del contenido generado por IA. Reconoces que las funciones de IA se proporcionan 'tal cual' y las utilizas bajo tu propia discreción."
         ]
@@ -1455,36 +1455,36 @@
       {
         "title": "6. Contenido del Usuario",
         "content": [
-          "Conservas la propiedad de todo el contenido que subes a GrandQR, incluidos elementos del menú, descripciones, imágenes e información comercial.",
-          "Al subir contenido, otorgas a GrandQR una licencia no exclusiva, mundial y libre de regalías para usar, mostrar y distribuir tu contenido únicamente con el propósito de proporcionar el servicio.",
+          "Conservas la propiedad de todo el contenido que subes a IQ Rest, incluidos elementos del menú, descripciones, imágenes e información comercial.",
+          "Al subir contenido, otorgas a IQ Rest una licencia no exclusiva, mundial y libre de regalías para usar, mostrar y distribuir tu contenido únicamente con el propósito de proporcionar el servicio.",
           "Eres el único responsable del contenido que subes y debes asegurarte de que no viole ninguna ley o derechos de terceros. El contenido prohibido incluye: material ilegal, contenido con derechos de autor sin autorización, información engañosa o fraudulenta y contenido que viole las regulaciones de salud y seguridad."
         ]
       },
       {
         "title": "7. Uso Aceptable",
         "content": [
-          "Aceptas no utilizar GrandQR para ningún propósito ilegal o de cualquier manera que pueda dañar, deshabilitar o perjudicar el servicio.",
+          "Aceptas no utilizar IQ Rest para ningún propósito ilegal o de cualquier manera que pueda dañar, deshabilitar o perjudicar el servicio.",
           "Las actividades prohibidas incluyen: intentar obtener acceso no autorizado a otras cuentas o sistemas, usar el servicio para distribuir spam o malware, scraping o minería de datos, suplantar a otros individuos o empresas y eludir los límites de uso o medidas de seguridad."
         ]
       },
       {
         "title": "8. Propiedad Intelectual",
         "content": [
-          "El nombre GrandQR, el logotipo, el diseño del sitio web y toda la propiedad intelectual relacionada son propiedad de Bogdan Sokolov y están protegidos por las leyes de propiedad intelectual aplicables.",
+          "El nombre IQ Rest, el logotipo, el diseño del sitio web y toda la propiedad intelectual relacionada son propiedad de Bogdan Sokolov y están protegidos por las leyes de propiedad intelectual aplicables.",
           "No puedes copiar, modificar, distribuir o crear obras derivadas basadas en nuestra propiedad intelectual sin permiso expreso por escrito."
         ]
       },
       {
         "title": "9. Privacidad y Protección de Datos",
         "content": [
-          "Tu uso de GrandQR también está regido por nuestra Política de Privacidad. Cumplimos con el Reglamento General de Protección de Datos (RGPD) y las leyes españolas de protección de datos (LOPDGDD).",
+          "Tu uso de IQ Rest también está regido por nuestra Política de Privacidad. Cumplimos con el Reglamento General de Protección de Datos (RGPD) y las leyes españolas de protección de datos (LOPDGDD).",
           "Recopilamos y procesamos los datos personales necesarios para proporcionar el servicio, incluidas direcciones de correo electrónico, información comercial y análisis de uso. Puedes solicitar acceso, corrección o eliminación de tus datos personales en cualquier momento."
         ]
       },
       {
         "title": "10. Limitación de Responsabilidad",
         "content": [
-          "GrandQR se proporciona 'tal cual' y 'según disponibilidad' sin garantías de ningún tipo, ya sean expresas o implícitas, incluidas, entre otras, las garantías implícitas de comerciabilidad e idoneidad para un propósito particular.",
+          "IQ Rest se proporciona 'tal cual' y 'según disponibilidad' sin garantías de ningún tipo, ya sean expresas o implícitas, incluidas, entre otras, las garantías implícitas de comerciabilidad e idoneidad para un propósito particular.",
           "En la máxima medida permitida por la ley, Bogdan Sokolov no será responsable de ningún daño indirecto, incidental, especial, consecuente o punitivo, incluida la pérdida de beneficios, datos u oportunidades comerciales.",
           "Nuestra responsabilidad total por cualquier reclamación derivada o relacionada con el servicio no excederá el monto que nos pagaste en los doce (12) meses anteriores a la reclamación."
         ]
@@ -1513,13 +1513,13 @@
         "title": "14. Cambios en los Términos",
         "content": [
           "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Te notificaremos de cambios significativos por correo electrónico o a través del servicio.",
-          "Tu uso continuado de GrandQR después de que los cambios entren en vigor constituye la aceptación de los Términos revisados."
+          "Tu uso continuado de IQ Rest después de que los cambios entren en vigor constituye la aceptación de los Términos revisados."
         ]
       },
       {
         "title": "15. Ley Aplicable y Jurisdicción",
         "content": [
-          "Estos Términos se rigen por las leyes de España y la Unión Europea. Cualquier disputa que surja de estos Términos o tu uso de GrandQR estará sujeta a la jurisdicción exclusiva de los tribunales de España.",
+          "Estos Términos se rigen por las leyes de España y la Unión Europea. Cualquier disputa que surja de estos Términos o tu uso de IQ Rest estará sujeta a la jurisdicción exclusiva de los tribunales de España.",
           "Si alguna disposición de estos Términos se considera inaplicable, las disposiciones restantes continuarán en pleno vigor y efecto."
         ]
       }
@@ -1537,14 +1537,14 @@
       {
         "title": "1. Introducción",
         "content": [
-          "Esta Política de Privacidad explica cómo GrandQR, operado por Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrado en España, recopila, utiliza, almacena y protege tus datos personales cuando utilizas nuestra plataforma de menú QR.",
+          "Esta Política de Privacidad explica cómo IQ Rest, operado por Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrado en España, recopila, utiliza, almacena y protege tus datos personales cuando utilizas nuestra plataforma de menú QR.",
           "Estamos comprometidos a proteger tu privacidad y cumplir con el Reglamento General de Protección de Datos (RGPD), la Ley Orgánica de Protección de Datos española (LOPDGDD) y otras leyes de protección de datos aplicables."
         ]
       },
       {
         "title": "2. Responsable del Tratamiento",
         "content": [
-          "El responsable del tratamiento de tus datos personales es: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrado en España. Para cualquier consulta sobre protección de datos, contáctanos en support@grandqr.com."
+          "El responsable del tratamiento de tus datos personales es: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrado en España. Para cualquier consulta sobre protección de datos, contáctanos en support@iq-rest.com."
         ]
       },
       {
@@ -1619,20 +1619,20 @@
           "Derecho a la Portabilidad de los Datos: Recibir tus datos en un formato estructurado y legible por máquina.",
           "Derecho de Oposición: Oponerte al tratamiento basado en intereses legítimos o para marketing directo.",
           "Derecho a Retirar el Consentimiento: Cuando el tratamiento se base en el consentimiento, puedes retirarlo en cualquier momento.",
-          "Para ejercer estos derechos, contáctanos en support@grandqr.com. Responderemos dentro de 30 días. Si no estás satisfecho con nuestra respuesta, tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en www.aepd.es."
+          "Para ejercer estos derechos, contáctanos en support@iq-rest.com. Responderemos dentro de 30 días. Si no estás satisfecho con nuestra respuesta, tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en www.aepd.es."
         ]
       },
       {
         "title": "11. Privacidad de los Niños",
         "content": [
-          "GrandQR no está destinado para uso por personas menores de 16 años. No recopilamos conscientemente datos personales de niños. Si nos enteramos de que hemos recopilado datos de un niño, los eliminaremos de inmediato."
+          "IQ Rest no está destinado para uso por personas menores de 16 años. No recopilamos conscientemente datos personales de niños. Si nos enteramos de que hemos recopilado datos de un niño, los eliminaremos de inmediato."
         ]
       },
       {
         "title": "12. Cambios en esta Política",
         "content": [
           "Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos de cambios significativos por correo electrónico o mediante un aviso en nuestro sitio web. La fecha de 'Última actualización' en la parte superior indica cuándo se revisó la política por última vez.",
-          "Tu uso continuado de GrandQR después de que se publiquen los cambios constituye la aceptación de la política revisada."
+          "Tu uso continuado de IQ Rest después de que se publiquen los cambios constituye la aceptación de la política revisada."
         ]
       }
     ]
@@ -1658,7 +1658,7 @@
         "title": "1. Qué son las Cookies",
         "content": [
           "Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tableta o teléfono móvil) cuando visitas un sitio web. Ayudan a los sitios web a funcionar correctamente, recordar tus preferencias y proporcionar información a los propietarios del sitio.",
-          "Esta Política de Cookies explica cómo GrandQR, operado por Bogdan Sokolov (Autónomo), utiliza cookies y tecnologías similares en nuestro sitio web grandqr.com."
+          "Esta Política de Cookies explica cómo IQ Rest, operado por Bogdan Sokolov (Autónomo), utiliza cookies y tecnologías similares en nuestro sitio web iq-rest.com."
         ]
       },
       {

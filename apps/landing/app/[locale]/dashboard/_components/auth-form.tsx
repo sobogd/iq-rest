@@ -107,8 +107,8 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
     <div className="flex min-h-dvh flex-col items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm flex flex-col gap-6">
         <div className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="GrandQR" width={32} height={32} />
-          <span className="text-xl font-semibold">GrandQR</span>
+          <Image src="/logo.svg" alt="IQ Rest" width={32} height={32} />
+          <span className="text-xl font-semibold">IQ Rest</span>
         </div>
 
         <Card>

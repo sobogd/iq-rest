@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "*/dashboard/", "*/m/"],
     },
-    sitemap: "https://grandqr.com/sitemap.xml",
+    sitemap: "https://iq-rest.com/sitemap.xml",
   };
 }

@@ -10,13 +10,13 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles = {
-    en: "Privacy Policy - GrandQR",
-    es: "Política de Privacidad - GrandQR",
+    en: "Privacy Policy - IQ Rest",
+    es: "Política de Privacidad - IQ Rest",
   };
 
   const descriptions = {
-    en: "Privacy Policy for GrandQR - QR menu solution for restaurants and cafes. Learn how we collect, use, and protect your data.",
-    es: "Política de Privacidad de GrandQR - solución de menú QR para restaurantes y cafeterías. Aprende cómo recopilamos, usamos y protegemos tus datos.",
+    en: "Privacy Policy for IQ Rest - QR menu solution for restaurants and cafes. Learn how we collect, use, and protect your data.",
+    es: "Política de Privacidad de IQ Rest - solución de menú QR para restaurantes y cafeterías. Aprende cómo recopilamos, usamos y protegemos tus datos.",
   };
 
   return {
@@ -27,24 +27,24 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/privacy`,
+      canonical: `https://iq-rest.com/${locale}/privacy`,
       languages: {
-        en: "https://grandqr.com/en/privacy",
-        es: "https://grandqr.com/es/privacy",
-        "x-default": "https://grandqr.com/en/privacy",
+        en: "https://iq-rest.com/en/privacy",
+        es: "https://iq-rest.com/es/privacy",
+        "x-default": "https://iq-rest.com/en/privacy",
       },
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      url: `https://grandqr.com/${locale}/privacy`,
+      url: `https://iq-rest.com/${locale}/privacy`,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - Privacy Policy",
+          alt: "IQ Rest - Privacy Policy",
         },
       ],
     },
@@ -52,7 +52,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -72,8 +72,8 @@ export default async function PrivacyPage({
 
   const webPageSchema = createWebPageSchema(
     t("title"),
-    "Privacy Policy for GrandQR - QR menu solution for restaurants and cafes",
-    `https://grandqr.com/${locale}/privacy`
+    "Privacy Policy for IQ Rest - QR menu solution for restaurants and cafes",
+    `https://iq-rest.com/${locale}/privacy`
   );
 
   return (
@@ -105,7 +105,7 @@ export default async function PrivacyPage({
           <h2 className="text-xl font-semibold mb-4">{t("contact.title")}</h2>
           <p className="text-muted-foreground">{t("contact.description")}</p>
           <p className="text-muted-foreground mt-2">
-            <strong>Email:</strong> support@grandqr.com
+            <strong>Email:</strong> support@iq-rest.com
           </p>
           <p className="text-muted-foreground mt-1">
             <strong>{t("contact.controller")}:</strong> Bogdan Sokolov (Autónomo), NIE: Z1894474S

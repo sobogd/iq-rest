@@ -89,8 +89,8 @@ function SidebarMenuContent() {
     <>
       <SidebarHeader>
         <div className="flex items-center gap-3 md:gap-2 px-1 mb-2">
-          <Image src="/logo.svg" alt="GrandQR" width={48} height={48} className="size-12 md:size-8" />
-          <span className="text-2xl md:text-base font-semibold">GrandQR</span>
+          <Image src="/logo.svg" alt="IQ Rest" width={48} height={48} className="size-12 md:size-8" />
+          <span className="text-2xl md:text-base font-semibold">IQ Rest</span>
         </div>
       </SidebarHeader>
       <SidebarContent>

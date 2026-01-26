@@ -18,24 +18,24 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/faq`,
+      canonical: `https://iq-rest.com/${locale}/faq`,
       languages: {
-        en: "https://grandqr.com/en/faq",
-        es: "https://grandqr.com/es/faq",
-        "x-default": "https://grandqr.com/en/faq",
+        en: "https://iq-rest.com/en/faq",
+        es: "https://iq-rest.com/es/faq",
+        "x-default": "https://iq-rest.com/en/faq",
       },
     },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: `https://grandqr.com/${locale}/faq`,
+      url: `https://iq-rest.com/${locale}/faq`,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -43,7 +43,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }

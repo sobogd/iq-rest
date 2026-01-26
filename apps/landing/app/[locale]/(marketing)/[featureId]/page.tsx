@@ -29,26 +29,26 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/${featureId}`,
+      canonical: `https://iq-rest.com/${locale}/${featureId}`,
       languages: {
-        en: `https://grandqr.com/en/${featureId}`,
-        es: `https://grandqr.com/es/${featureId}`,
-        "x-default": `https://grandqr.com/en/${featureId}`,
+        en: `https://iq-rest.com/en/${featureId}`,
+        es: `https://iq-rest.com/es/${featureId}`,
+        "x-default": `https://iq-rest.com/en/${featureId}`,
       },
     },
     openGraph: {
       title: metadata.title,
       description: metadata.description,
-      url: `https://grandqr.com/${locale}/${featureId}`,
-      siteName: "GrandQR",
+      url: `https://iq-rest.com/${locale}/${featureId}`,
+      siteName: "IQ Rest",
       locale,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -56,7 +56,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: metadata.title,
       description: metadata.description,
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -134,13 +134,13 @@ export default async function FeaturePage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: `https://grandqr.com/${locale}`,
+        item: `https://iq-rest.com/${locale}`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: feature.title,
-        item: `https://grandqr.com/${locale}/${featureId}`,
+        item: `https://iq-rest.com/${locale}/${featureId}`,
       },
     ],
   };

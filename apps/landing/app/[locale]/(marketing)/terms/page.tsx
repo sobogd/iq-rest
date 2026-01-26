@@ -10,13 +10,13 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles = {
-    en: "Terms and Conditions - GrandQR",
-    es: "Términos y Condiciones - GrandQR",
+    en: "Terms and Conditions - IQ Rest",
+    es: "Términos y Condiciones - IQ Rest",
   };
 
   const descriptions = {
-    en: "Terms and Conditions for using GrandQR - QR menu solution for restaurants and cafes.",
-    es: "Términos y Condiciones de uso de GrandQR - solución de menú QR para restaurantes y cafeterías.",
+    en: "Terms and Conditions for using IQ Rest - QR menu solution for restaurants and cafes.",
+    es: "Términos y Condiciones de uso de IQ Rest - solución de menú QR para restaurantes y cafeterías.",
   };
 
   return {
@@ -27,24 +27,24 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/terms`,
+      canonical: `https://iq-rest.com/${locale}/terms`,
       languages: {
-        en: "https://grandqr.com/en/terms",
-        es: "https://grandqr.com/es/terms",
-        "x-default": "https://grandqr.com/en/terms",
+        en: "https://iq-rest.com/en/terms",
+        es: "https://iq-rest.com/es/terms",
+        "x-default": "https://iq-rest.com/en/terms",
       },
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      url: `https://grandqr.com/${locale}/terms`,
+      url: `https://iq-rest.com/${locale}/terms`,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - Terms and Conditions",
+          alt: "IQ Rest - Terms and Conditions",
         },
       ],
     },
@@ -52,7 +52,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -72,8 +72,8 @@ export default async function TermsPage({
 
   const webPageSchema = createWebPageSchema(
     t("title"),
-    "Terms and Conditions for using GrandQR - QR menu solution for restaurants and cafes",
-    `https://grandqr.com/${locale}/terms`
+    "Terms and Conditions for using IQ Rest - QR menu solution for restaurants and cafes",
+    `https://iq-rest.com/${locale}/terms`
   );
 
   return (
@@ -105,7 +105,7 @@ export default async function TermsPage({
           <h2 className="text-xl font-semibold mb-4">{t("contact.title")}</h2>
           <p className="text-muted-foreground">{t("contact.description")}</p>
           <p className="text-muted-foreground mt-2">
-            <strong>Email:</strong> support@grandqr.com
+            <strong>Email:</strong> support@iq-rest.com
           </p>
         </div>
       </div>

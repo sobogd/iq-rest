@@ -20,24 +20,24 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/get-started`,
+      canonical: `https://iq-rest.com/${locale}/get-started`,
       languages: {
-        en: "https://grandqr.com/en/get-started",
-        es: "https://grandqr.com/es/get-started",
-        "x-default": "https://grandqr.com/en/get-started",
+        en: "https://iq-rest.com/en/get-started",
+        es: "https://iq-rest.com/es/get-started",
+        "x-default": "https://iq-rest.com/en/get-started",
       },
     },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: `https://grandqr.com/${locale}/get-started`,
+      url: `https://iq-rest.com/${locale}/get-started`,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -45,7 +45,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -66,7 +66,7 @@ export default async function GetStartedPage({
 
   const breadcrumbSchema = createBreadcrumbSchema(locale, [
     { name: "Home", path: "" },
-    { name: t("meta.title").replace(" - GrandQR", "").replace(" | GrandQR", "") },
+    { name: t("meta.title").replace(" - IQ Rest", "").replace(" | IQ Rest", "") },
   ]);
 
   return (

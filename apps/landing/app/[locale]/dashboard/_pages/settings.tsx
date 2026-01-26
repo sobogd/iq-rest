@@ -145,7 +145,7 @@ export function SettingsPage() {
         setOriginalCurrency(currency);
 
         if (slugWasChanged && slug.trim()) {
-          setNewSlugUrl(`https://grandqr.com/m/${slug.trim()}`);
+          setNewSlugUrl(`https://iq-rest.com/m/${slug.trim()}`);
           setShowSlugChangedDialog(true);
         }
       } else {

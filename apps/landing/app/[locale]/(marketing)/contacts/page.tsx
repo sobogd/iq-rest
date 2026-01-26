@@ -12,13 +12,13 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles = {
-    en: "Contact Us - Get Help with Your Restaurant QR Menu | GrandQR",
-    es: "Contáctanos - Obtén Ayuda con tu Menú QR de Restaurante | GrandQR",
+    en: "Contact Us - Get Help with Your Restaurant QR Menu | IQ Rest",
+    es: "Contáctanos - Obtén Ayuda con tu Menú QR de Restaurante | IQ Rest",
   };
 
   const descriptions = {
-    en: "Get in touch with the GrandQR team. We're here to help with your digital QR menu for restaurant or cafe. Personal support from real people.",
-    es: "Ponte en contacto con el equipo de GrandQR. Estamos aquí para ayudarte con tu menú QR digital para restaurante o cafetería. Soporte personal de personas reales.",
+    en: "Get in touch with the IQ Rest team. We're here to help with your digital QR menu for restaurant or cafe. Personal support from real people.",
+    es: "Ponte en contacto con el equipo de IQ Rest. Estamos aquí para ayudarte con tu menú QR digital para restaurante o cafetería. Soporte personal de personas reales.",
   };
 
   return {
@@ -29,24 +29,24 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/contacts`,
+      canonical: `https://iq-rest.com/${locale}/contacts`,
       languages: {
-        en: "https://grandqr.com/en/contacts",
-        es: "https://grandqr.com/es/contacts",
-        "x-default": "https://grandqr.com/en/contacts",
+        en: "https://iq-rest.com/en/contacts",
+        es: "https://iq-rest.com/es/contacts",
+        "x-default": "https://iq-rest.com/en/contacts",
       },
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      url: `https://grandqr.com/${locale}/contacts`,
+      url: `https://iq-rest.com/${locale}/contacts`,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -54,7 +54,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: titles[locale as keyof typeof titles] || titles.en,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }

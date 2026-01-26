@@ -26,24 +26,24 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/changelog`,
+      canonical: `https://iq-rest.com/${locale}/changelog`,
       languages: {
-        en: "https://grandqr.com/en/changelog",
-        es: "https://grandqr.com/es/changelog",
-        "x-default": "https://grandqr.com/en/changelog",
+        en: "https://iq-rest.com/en/changelog",
+        es: "https://iq-rest.com/es/changelog",
+        "x-default": "https://iq-rest.com/en/changelog",
       },
     },
     openGraph: {
       title: t("meta.title"),
       description: t("meta.description"),
-      url: `https://grandqr.com/${locale}/changelog`,
+      url: `https://iq-rest.com/${locale}/changelog`,
       type: "website",
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -51,7 +51,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("meta.title"),
       description: t("meta.description"),
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -150,16 +150,16 @@ export default async function ChangelogPage({
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "GrandQR Changelog",
+    name: "IQ Rest Changelog",
     description:
-      "Latest updates and new features for GrandQR - digital QR menu solution for restaurants",
-    url: "https://grandqr.com/changelog",
+      "Latest updates and new features for IQ Rest - digital QR menu solution for restaurants",
+    url: "https://iq-rest.com/changelog",
     publisher: {
       "@type": "Organization",
-      name: "GrandQR",
+      name: "IQ Rest",
       logo: {
         "@type": "ImageObject",
-        url: "https://grandqr.com/logo.svg",
+        url: "https://iq-rest.com/logo.svg",
       },
     },
     blogPost: CHANGELOG_ENTRIES.map((entry) => ({
@@ -167,10 +167,10 @@ export default async function ChangelogPage({
       headline: t(entry.titleKey),
       description: t(entry.descriptionKey),
       datePublished: entry.date,
-      url: `https://grandqr.com/changelog/${entry.id}`,
+      url: `https://iq-rest.com/changelog/${entry.id}`,
       author: {
         "@type": "Organization",
-        name: "GrandQR",
+        name: "IQ Rest",
       },
     })),
   };

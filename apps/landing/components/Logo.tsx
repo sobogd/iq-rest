@@ -10,7 +10,7 @@ export function Logo({ width = 40, height = 40, className }: LogoProps) {
   return (
     <Image
       src="/logo.svg"
-      alt="GrandQR Logo"
+      alt="IQ Rest Logo"
       width={width}
       height={height}
       className={className}

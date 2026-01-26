@@ -11,8 +11,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles = {
-    en: "QR Menu & Website for Restaurant or Cafe | Pricing from €0 - GrandQR",
-    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde €0 - GrandQR",
+    en: "QR Menu & Website for Restaurant or Cafe | Pricing from €0 - IQ Rest",
+    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde €0 - IQ Rest",
   };
 
   const descriptions = {
@@ -35,11 +35,11 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: `https://grandqr.com/${locale}/pricing`,
+      canonical: `https://iq-rest.com/${locale}/pricing`,
       languages: {
-        en: "https://grandqr.com/en/pricing",
-        es: "https://grandqr.com/es/pricing",
-        "x-default": "https://grandqr.com/en/pricing",
+        en: "https://iq-rest.com/en/pricing",
+        es: "https://iq-rest.com/es/pricing",
+        "x-default": "https://iq-rest.com/en/pricing",
       },
     },
     openGraph: {
@@ -47,13 +47,13 @@ export async function generateMetadata({
       description:
         descriptions[locale as keyof typeof descriptions] || descriptions.en,
       type: "website",
-      url: `https://grandqr.com/${locale}/pricing`,
+      url: `https://iq-rest.com/${locale}/pricing`,
       images: [
         {
-          url: "https://grandqr.com/og-image.png",
+          url: "https://iq-rest.com/og-image.png",
           width: 1200,
           height: 630,
-          alt: "GrandQR - QR Menu for Restaurants",
+          alt: "IQ Rest - QR Menu for Restaurants",
         },
       ],
     },
@@ -62,7 +62,7 @@ export async function generateMetadata({
       title: titles[locale as keyof typeof titles] || titles.en,
       description:
         descriptions[locale as keyof typeof descriptions] || descriptions.en,
-      images: ["https://grandqr.com/og-image.png"],
+      images: ["https://iq-rest.com/og-image.png"],
     },
   };
 }
@@ -112,7 +112,7 @@ const createOffer = (name: string, price: string) => ({
   priceCurrency: "EUR",
   availability: "https://schema.org/InStock",
   priceValidUntil: "2026-12-31",
-  url: "https://grandqr.com/pricing",
+  url: "https://iq-rest.com/pricing",
   hasMerchantReturnPolicy: merchantReturnPolicy,
   shippingDetails,
 });
@@ -120,13 +120,13 @@ const createOffer = (name: string, price: string) => ({
 const pricingProductSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "QR Menu & Website for Restaurant and Cafe - GrandQR",
+  name: "QR Menu & Website for Restaurant and Cafe - IQ Rest",
   description:
     "Create a QR menu and website for your restaurant or cafe. Digital menu with QR code access, AI translations, analytics, and instant updates. Free plan available.",
-  image: ["https://grandqr.com/logo.svg", "https://grandqr.com/product-image.svg"],
+  image: ["https://iq-rest.com/logo.svg", "https://iq-rest.com/product-image.svg"],
   brand: {
     "@type": "Brand",
-    name: "GrandQR",
+    name: "IQ Rest",
   },
   category: "Restaurant Software",
   offers: [
@@ -149,7 +149,7 @@ const pricingProductSchema = {
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Restaurant Owner" },
       reviewBody:
-        "GrandQR is the best QR menu solution for our restaurant. Customers scan the code and see our menu instantly. The multilingual support helps us serve tourists.",
+        "IQ Rest is the best QR menu solution for our restaurant. Customers scan the code and see our menu instantly. The multilingual support helps us serve tourists.",
     },
     {
       "@type": "Review",

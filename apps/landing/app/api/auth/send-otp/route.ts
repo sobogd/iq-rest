@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: process.env.FROM_EMAIL,
       to: email,
-      subject: `Your GrandQR verification code: ${otpCode}`,
+      subject: `Your IQ Rest verification code: ${otpCode}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
           </h2>
           <div style="margin: 20px 0; text-align: center;">
             <p style="font-size: 16px; color: #666;">
-              Enter this code to sign in to GrandQR:
+              Enter this code to sign in to IQ Rest:
             </p>
             <div style="margin: 30px 0; padding: 20px; background-color: #f5f5f5; border-radius: 10px;">
               <span style="font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #333;">
@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
         </div>
       `,
       text: `
-Your GrandQR Verification Code
+Your IQ Rest Verification Code
 
 Enter this code to sign in: ${otpCode}
 

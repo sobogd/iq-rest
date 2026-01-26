@@ -8,7 +8,7 @@ type RouteConfig = {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://grandqr.com'
+  const baseUrl = 'https://iq-rest.com'
   const locales = ['en', 'es']
 
   // Define all routes with individual settings

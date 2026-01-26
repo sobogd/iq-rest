@@ -40,8 +40,8 @@ export function QrMenuPage() {
   const [qrSvg, setQrSvg] = useState<string>("");
   const printRef = useRef<HTMLDivElement>(null);
 
-  const menuUrl = slug ? `grandqr.com/m/${slug}` : "";
-  const fullMenuUrl = slug ? `https://grandqr.com/m/${slug}` : "";
+  const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
+  const fullMenuUrl = slug ? `https://iq-rest.com/m/${slug}` : "";
   const paper = PAPER_FORMATS[paperFormat];
   const isSmallPaper = paperFormat === "a5" || paperFormat === "a6";
 
