@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
   // Hide dev indicator
   devIndicators: false,
 
-  // Allow images from S3 with light optimization
+  // Allow images from S3 with optimized settings
   images: {
     remotePatterns: [
       {
@@ -26,7 +26,8 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
-    formats: ["image/webp"],
+    // AVIF is 20-30% smaller than WebP, with WebP as fallback
+    formats: ["image/avif", "image/webp"],
   },
 };
 

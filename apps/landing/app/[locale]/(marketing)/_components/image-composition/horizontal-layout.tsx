@@ -23,6 +23,8 @@ export function HorizontalLayout({ images, className = "", priority = false }: B
           height={320}
           priority={priority}
           sizes={sideSizes}
+          placeholder={typeof images.left.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>
@@ -39,6 +41,8 @@ export function HorizontalLayout({ images, className = "", priority = false }: B
           height={420}
           priority={priority}
           sizes={centerSizes}
+          placeholder={typeof images.center.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>
@@ -55,6 +59,8 @@ export function HorizontalLayout({ images, className = "", priority = false }: B
           height={320}
           priority={priority}
           sizes={sideSizes}
+          placeholder={typeof images.right.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>

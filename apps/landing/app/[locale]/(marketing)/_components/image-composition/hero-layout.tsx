@@ -23,6 +23,8 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
           height={560}
           priority={priority}
           sizes={heroSizes}
+          placeholder={typeof images.left.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>
@@ -39,6 +41,8 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
           height={630}
           priority={priority}
           sizes={heroCenterSizes}
+          placeholder={typeof images.center.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>
@@ -55,6 +59,8 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
           height={560}
           priority={priority}
           sizes={heroSizes}
+          placeholder={typeof images.right.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>

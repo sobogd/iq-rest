@@ -1,5 +1,7 @@
+import type { StaticImageData } from "next/image";
+
 export interface ImageData {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
 }
 

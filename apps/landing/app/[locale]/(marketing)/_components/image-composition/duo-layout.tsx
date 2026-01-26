@@ -22,6 +22,8 @@ export function DuoLayout({ images, className = "", priority = false }: BaseLayo
           height={380}
           priority={priority}
           sizes={imageSizes}
+          placeholder={typeof images.left.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>
@@ -38,6 +40,8 @@ export function DuoLayout({ images, className = "", priority = false }: BaseLayo
           height={380}
           priority={priority}
           sizes={imageSizes}
+          placeholder={typeof images.right.src === "object" ? "blur" : undefined}
+          quality={80}
           className="w-full h-auto"
         />
       </div>
