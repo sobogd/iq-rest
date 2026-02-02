@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface MenuPreviewModalProps {
   buttonText: string;
@@ -33,7 +34,10 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
         size="lg"
         variant="outline"
         className="text-lg px-8 py-6"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          analytics.marketing.clickDemo();
+        }}
       >
         {buttonText}
       </Button>

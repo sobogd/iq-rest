@@ -37,6 +37,7 @@ import { LANGUAGE_NAMES } from "../_lib/constants";
 import type { AllergenCode } from "@/lib/allergens";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
+import { analytics } from "@/lib/analytics";
 
 interface TranslationData {
   name?: string;
@@ -148,6 +149,7 @@ export function ItemsPage() {
         toast.error(t.updateError);
       } else {
         toast.success(newActive ? `${itemName} ${t.enabled}` : `${itemName} ${t.disabled}`);
+        analytics.item.toggleActive(newActive);
       }
     } catch {
       setItems((prev) =>
@@ -230,6 +232,7 @@ export function ItemsPage() {
 
       if (allOk) {
         toast.success(t.sortSaved);
+        analytics.item.reorder();
         setSortMode(false);
         fetchData();
       } else {
@@ -491,6 +494,7 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
 
       if (res.ok) {
         toast.success(t.deleted);
+        analytics.item.delete();
         onSaved();
       } else {
         const data = await res.json();
@@ -558,6 +562,13 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
 
       if (res.ok) {
         toast.success(isEdit ? t.updated : t.created);
+        const hasImage = !!imageUrl;
+        const hasAllergens = allergens.length > 0;
+        if (isEdit) {
+          analytics.item.update(hasImage, hasAllergens);
+        } else {
+          analytics.item.create(hasImage, hasAllergens);
+        }
         onSaved();
       } else {
         const data = await res.json();

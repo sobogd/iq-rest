@@ -14,6 +14,7 @@ import {
 import { Check, X } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { analytics } from "@/lib/analytics";
 
 interface Plan {
   id: string;
@@ -100,7 +101,11 @@ export function PricingCards() {
           {t("monthly")}
         </span>
         <button
-          onClick={() => setIsYearly(!isYearly)}
+          onClick={() => {
+            const newValue = !isYearly;
+            setIsYearly(newValue);
+            analytics.trackEvent("pricing_toggle_billing", { interval: newValue ? "yearly" : "monthly" });
+          }}
           className={cn(
             "relative inline-flex h-6 w-11 items-center rounded-full transition-colors",
             isYearly ? "bg-primary" : "bg-muted"
@@ -188,6 +193,7 @@ export function PricingCards() {
                   className="w-full"
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
+                  onClick={() => analytics.billing.selectPlan(plan.id, isYearly ? "yearly" : "monthly")}
                 >
                   <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
                 </Button>

@@ -14,6 +14,7 @@ import {
   QrCode,
   Gift,
 } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 type Step = "email" | "otp";
 type Status = "idle" | "loading" | "error";
@@ -74,6 +75,7 @@ export function GetStartedForm() {
 
     setStatus("loading");
     setErrorMessage("");
+    analytics.auth.submitEmail();
 
     try {
       const response = await fetch("/api/auth/send-otp", {
@@ -103,6 +105,7 @@ export function GetStartedForm() {
 
     setStatus("loading");
     setErrorMessage("");
+    analytics.auth.verifyCode();
 
     try {
       const response = await fetch("/api/auth/verify-otp", {
@@ -114,6 +117,7 @@ export function GetStartedForm() {
       const data = await response.json();
 
       if (response.ok) {
+        analytics.auth.signInSuccess();
         router.push(`/${locale}/dashboard`);
         router.refresh();
       } else {

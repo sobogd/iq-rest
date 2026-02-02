@@ -18,6 +18,7 @@ import {
 import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
+import { analytics } from "@/lib/analytics";
 
 export function DesignPage() {
   const t = useTranslations("dashboard.design");
@@ -142,6 +143,10 @@ export function DesignPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
+        analytics.design.update();
+        if (accentColor !== originalAccentColor) {
+          analytics.design.changeAccentColor(accentColor);
+        }
         setOriginalSource(source);
         setOriginalAccentColor(accentColor);
         returnToOnboarding();

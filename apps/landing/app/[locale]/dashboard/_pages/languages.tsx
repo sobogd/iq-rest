@@ -17,6 +17,7 @@ import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
+import { analytics } from "@/lib/analytics";
 
 const ALL_LANGUAGES = [
   "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
@@ -70,6 +71,7 @@ export function LanguagesPage() {
       try {
         await saveLanguages(newLangs, defaultLanguage);
         toast.success(t("languageEnabled", { language: LANGUAGE_NAMES[langCode] || langCode }));
+        analytics.languages.enable(langCode);
         returnToOnboarding();
       } catch {
         setLanguages(languages);
@@ -106,6 +108,7 @@ export function LanguagesPage() {
       await saveLanguages(newLangs, defaultLanguage);
       await fetch(`/api/translations?language=${langCode}`, { method: "DELETE" });
       toast.success(t("languageDisabled", { language: LANGUAGE_NAMES[langCode] || langCode }));
+      analytics.languages.disable(langCode);
     } catch {
       setLanguages(languages);
       toast.error(t("disableError"));
@@ -128,6 +131,7 @@ export function LanguagesPage() {
     try {
       await saveLanguages(languages, langCode);
       toast.success(t("defaultSet", { language: LANGUAGE_NAMES[langCode] || langCode }));
+      analytics.languages.setDefault(langCode);
     } catch {
       setDefaultLanguage(prevDefault);
       toast.error(t("defaultError"));

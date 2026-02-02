@@ -31,6 +31,7 @@ import { FormSwitch } from "../_ui/form-switch";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
+import { analytics } from "@/lib/analytics";
 
 interface CategoryWithTranslations extends Category {
   translations?: Record<string, { name?: string }> | null;
@@ -94,6 +95,7 @@ export function CategoriesPage() {
         toast.error(t.updateError);
       } else {
         toast.success(newActive ? `${categoryName} ${t.enabled}` : `${categoryName} ${t.disabled}`);
+        analytics.category.toggleActive(newActive);
       }
     } catch {
       setCategories((prev) =>
@@ -145,6 +147,7 @@ export function CategoriesPage() {
       if (res.ok) {
         toast.success(t.sortSaved);
         setSortMode(false);
+        analytics.category.reorder();
       } else {
         toast.error(t.sortError);
       }
@@ -328,6 +331,7 @@ function CategoryFormSheet({ category, onClose, onSaved }: CategoryFormSheetProp
 
       if (res.ok) {
         toast.success(t.deleted);
+        analytics.category.delete();
         onSaved();
       } else {
         const data = await res.json();
@@ -377,6 +381,11 @@ function CategoryFormSheet({ category, onClose, onSaved }: CategoryFormSheetProp
 
       if (res.ok) {
         toast.success(isEdit ? t.updated : t.created);
+        if (isEdit) {
+          analytics.category.update();
+        } else {
+          analytics.category.create();
+        }
         onSaved();
       } else {
         const data = await res.json();

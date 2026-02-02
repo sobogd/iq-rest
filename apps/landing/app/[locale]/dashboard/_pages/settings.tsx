@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
+import { analytics } from "@/lib/analytics";
 
 const CURRENCIES = [
   { code: "EUR", symbol: "€" },
@@ -140,6 +141,10 @@ export function SettingsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
+        analytics.settings.updateGeneral();
+        if (slugWasChanged) {
+          analytics.settings.changeSlug(slug);
+        }
 
         setOriginalName(name);
         setOriginalDescription(description);

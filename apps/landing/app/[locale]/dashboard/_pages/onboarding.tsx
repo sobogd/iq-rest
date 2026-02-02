@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useDashboard, PageKey } from "../_context/dashboard-context";
 import { ExternalLink, Loader2 } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface OnboardingProgress {
   hasTitle: boolean;
@@ -60,6 +61,10 @@ export function OnboardingPage() {
         if (response.ok) {
           const result = await response.json();
           setData(result);
+          analytics.onboarding.viewOnboarding();
+          if (result.requiredCompleted) {
+            analytics.onboarding.completeAllRequired();
+          }
         }
       } catch (error) {
         console.error("Failed to fetch onboarding progress:", error);
@@ -70,7 +75,8 @@ export function OnboardingPage() {
     fetchProgress();
   }, []);
 
-  const handleStepClick = (page: PageKey) => {
+  const handleStepClick = (step: StepKey, page: PageKey) => {
+    analytics.onboarding.clickStep(step);
     navigateFromOnboarding(page);
   };
 
@@ -126,7 +132,10 @@ export function OnboardingPage() {
             <Button
               className="w-full"
               size="lg"
-              onClick={() => window.open(`/${slug}`, "_blank")}
+              onClick={() => {
+                analytics.onboarding.viewMenu();
+                window.open(`/${slug}`, "_blank");
+              }}
             >
               <ExternalLink className="mr-2 h-4 w-4" />
               {t("viewMenu")}
@@ -144,7 +153,7 @@ export function OnboardingPage() {
               return (
                 <button
                   key={step.key}
-                  onClick={() => handleStepClick(step.page)}
+                  onClick={() => handleStepClick(step.key, step.page)}
                   className="w-full flex flex-col p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors text-left"
                 >
                   <span className="font-medium">{t(`steps.${step.key}.name`)}</span>
@@ -174,7 +183,7 @@ export function OnboardingPage() {
               return (
                 <button
                   key={step.key}
-                  onClick={() => handleStepClick(step.page)}
+                  onClick={() => handleStepClick(step.key, step.page)}
                   className="w-full flex flex-col p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors text-left"
                 >
                   <span className="font-medium">{t(`steps.${step.key}.name`)}</span>
