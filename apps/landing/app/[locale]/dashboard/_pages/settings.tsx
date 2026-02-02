@@ -25,6 +25,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { useTranslations } from "next-intl";
+import { useDashboard } from "../_context/dashboard-context";
 
 const CURRENCIES = [
   { code: "EUR", symbol: "€" },
@@ -41,6 +42,7 @@ interface Restaurant {
 
 export function SettingsPage() {
   const t = useTranslations("dashboard.general");
+  const { returnToOnboarding } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -147,6 +149,8 @@ export function SettingsPage() {
         if (slugWasChanged && slug.trim()) {
           setNewSlugUrl(`https://iq-rest.com/m/${slug.trim()}`);
           setShowSlugChangedDialog(true);
+        } else {
+          returnToOnboarding();
         }
       } else {
         const data = await res.json();
@@ -162,6 +166,12 @@ export function SettingsPage() {
   function handleViewSite() {
     window.open(newSlugUrl, "_blank");
     setShowSlugChangedDialog(false);
+    returnToOnboarding();
+  }
+
+  function handleCloseSlugDialog() {
+    setShowSlugChangedDialog(false);
+    returnToOnboarding();
   }
 
   if (loading) {
@@ -234,7 +244,7 @@ export function SettingsPage() {
         </Button>
       </div>
 
-      <Dialog open={showSlugChangedDialog} onOpenChange={setShowSlugChangedDialog}>
+      <Dialog open={showSlugChangedDialog} onOpenChange={(open) => !open && handleCloseSlugDialog()}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{t("slugChangedTitle")}</DialogTitle>
@@ -243,7 +253,7 @@ export function SettingsPage() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setShowSlugChangedDialog(false)}>
+            <Button variant="outline" onClick={handleCloseSlugDialog}>
               {t("close")}
             </Button>
             <Button onClick={handleViewSite}>

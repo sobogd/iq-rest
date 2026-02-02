@@ -8,9 +8,11 @@ import { PageLoader } from "../_ui/page-loader";
 import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
 import { useTranslations } from "next-intl";
+import { useDashboard } from "../_context/dashboard-context";
 
 export function ContactsPage() {
   const t = useTranslations("dashboard.contacts");
+  const { returnToOnboarding } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -98,6 +100,7 @@ export function ContactsPage() {
         setOriginalWhatsapp(whatsapp);
         setOriginalLat(lat);
         setOriginalLng(lng);
+        returnToOnboarding();
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));

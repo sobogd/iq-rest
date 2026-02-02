@@ -1044,7 +1044,25 @@
     "openGoogleMaps": "Abrir en Google Maps",
     "noLocation": "Ubicación no disponible",
     "english": "English",
-    "spanish": "Español"
+    "spanish": "Español",
+    "allergens": "Alérgenos",
+    "allergensInfo": "Este plato contiene los siguientes alérgenos:",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Crustáceos",
+      "eggs": "Huevos",
+      "fish": "Pescado",
+      "peanuts": "Cacahuetes",
+      "soybeans": "Soja",
+      "dairy": "Lácteos",
+      "nuts": "Frutos secos",
+      "celery": "Apio",
+      "mustard": "Mostaza",
+      "sesame": "Sésamo",
+      "sulphites": "Sulfitos",
+      "lupin": "Altramuces",
+      "molluscs": "Moluscos"
+    }
   },
   "faq": {
     "title": "Preguntas Frecuentes Sobre Menú QR para Restaurante y Cafetería",
@@ -1184,6 +1202,7 @@
     },
     "sidebar": {
       "qrMenu": "Menú QR",
+      "menu": "Menú",
       "settings": "Configuración",
       "reservations": "Reservaciones",
       "account": "Cuenta",
@@ -1303,7 +1322,25 @@
       "sort": "Ordenar",
       "saveSort": "Guardar",
       "sortSaved": "Orden guardado",
-      "sortError": "Error al guardar el orden"
+      "sortError": "Error al guardar el orden",
+      "allergens": "Alérgenos",
+      "allergensHint": "Selecciona los alérgenos presentes en este plato",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Crustáceos",
+        "eggs": "Huevos",
+        "fish": "Pescado",
+        "peanuts": "Cacahuetes",
+        "soybeans": "Soja",
+        "dairy": "Lácteos",
+        "nuts": "Frutos secos",
+        "celery": "Apio",
+        "mustard": "Mostaza",
+        "sesame": "Sésamo",
+        "sulphites": "Sulfitos",
+        "lupin": "Altramuces",
+        "molluscs": "Moluscos"
+      }
     },
     "languages": {
       "translationProgress": "Progreso de traducción",
@@ -1383,6 +1420,51 @@
       "slugChangedDescription": "Tu restaurante ahora está disponible en:",
       "close": "Cerrar",
       "view": "Ver"
+    },
+    "onboarding": {
+      "title": "¡Bienvenido a IQ Rest!",
+      "subtitle": "Completa estos pasos para lanzar el sitio web de tu restaurante",
+      "requiredSteps": "Pasos Requeridos",
+      "optionalSteps": "Pasos Opcionales",
+      "viewMenu": "Ver Tu Menú",
+      "steps": {
+        "title": {
+          "name": "Añadir Nombre del Restaurante",
+          "description": "Dale a tu restaurante un nombre que aparecerá en tu sitio web"
+        },
+        "slug": {
+          "name": "Configurar Dirección Web",
+          "description": "Elige una URL única para el sitio web de tu restaurante"
+        },
+        "categories": {
+          "name": "Crear Categorías del Menú",
+          "description": "Organiza tu menú con categorías como Entrantes, Platos Principales, etc."
+        },
+        "items": {
+          "name": "Añadir Artículos del Menú",
+          "description": "Añade platos a tu menú con precios y descripciones"
+        },
+        "design": {
+          "name": "Personalizar Diseño",
+          "description": "Elige colores y fondo para tu sitio web"
+        },
+        "contacts": {
+          "name": "Añadir Info de Contacto",
+          "description": "Añade teléfono, WhatsApp, Instagram y ubicación"
+        },
+        "reservations": {
+          "name": "Habilitar Reservaciones",
+          "description": "Permite que los clientes reserven mesas en línea"
+        },
+        "translations": {
+          "name": "Añadir Idiomas",
+          "description": "Haz que tu menú esté disponible en múltiples idiomas"
+        }
+      },
+      "completed": "Completado",
+      "notCompleted": "No completado",
+      "allDone": "¡Todo listo! Tu menú está en vivo.",
+      "requiredRemaining": "{count} pasos requeridos restantes"
     }
   },
   "reservationSettings": {

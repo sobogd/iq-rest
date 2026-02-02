@@ -32,7 +32,9 @@ import { FormTextarea } from "../_ui/form-textarea";
 import { FormTextareaTranslate } from "../_ui/form-textarea-translate";
 import { FormSwitch } from "../_ui/form-switch";
 import { FormSelect } from "../_ui/form-select";
+import { FormAllergens } from "../_ui/form-allergens";
 import { LANGUAGE_NAMES } from "../_lib/constants";
+import type { AllergenCode } from "@/lib/allergens";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
 
@@ -47,6 +49,7 @@ interface ItemWithTranslations {
   description: string | null;
   price: number;
   imageUrl: string | null;
+  allergens: string[];
   sortOrder: number;
   isActive: boolean;
   categoryId: string;
@@ -55,7 +58,7 @@ interface ItemWithTranslations {
 }
 
 export function ItemsPage() {
-  const { translations } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
   const t = translations.items;
 
   const [items, setItems] = useState<ItemWithTranslations[]>([]);
@@ -258,6 +261,7 @@ export function ItemsPage() {
     setShowForm(false);
     setEditingItem(null);
     fetchData();
+    returnToOnboarding();
   }
 
   if (loading) {
@@ -406,6 +410,7 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
   const [price, setPrice] = useState(item?.price?.toString() || "");
   const [categoryId, setCategoryId] = useState(item?.categoryId || "");
   const [imageUrl, setImageUrl] = useState(item?.imageUrl || "");
+  const [allergens, setAllergens] = useState<string[]>(item?.allergens || []);
   const [isActive, setIsActive] = useState(item?.isActive ?? true);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -544,6 +549,7 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
           description: description.trim() || null,
           price: Number(price),
           imageUrl: imageUrl || null,
+          allergens,
           categoryId,
           isActive,
           translations: Object.keys(cleanTranslations).length > 0 ? cleanTranslations : null,
@@ -716,6 +722,13 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
                     disabled={uploading}
                   />
                 </div>
+
+                <FormAllergens
+                  label={`${t.allergens}:`}
+                  value={allergens}
+                  onChange={setAllergens}
+                  allergenNames={t.allergenNames as Record<AllergenCode, string>}
+                />
               </div>
 
               <div className="flex items-center justify-end gap-3 px-6 py-4 border-t shrink-0">

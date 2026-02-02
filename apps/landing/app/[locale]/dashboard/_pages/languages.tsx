@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
 import { LANGUAGE_NAMES } from "../_lib/constants";
+import { useDashboard } from "../_context/dashboard-context";
 
 const ALL_LANGUAGES = [
   "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
@@ -28,6 +29,7 @@ const ALL_LANGUAGES = [
 
 export function LanguagesPage() {
   const t = useTranslations("dashboard.languages");
+  const { returnToOnboarding } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<string | null>(null);
@@ -68,6 +70,7 @@ export function LanguagesPage() {
       try {
         await saveLanguages(newLangs, defaultLanguage);
         toast.success(t("languageEnabled", { language: LANGUAGE_NAMES[langCode] || langCode }));
+        returnToOnboarding();
       } catch {
         setLanguages(languages);
         toast.error(t("enableError"));

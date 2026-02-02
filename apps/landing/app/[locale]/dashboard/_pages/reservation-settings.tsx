@@ -16,13 +16,17 @@ import { FormSwitch } from "../_ui/form-switch";
 import { useDashboard } from "../_context/dashboard-context";
 import { toast } from "sonner";
 import { AlertCircle, Save, Loader2 } from "lucide-react";
+import type { SubscriptionStatus } from "@prisma/client";
+import type { PlanType } from "@/lib/stripe-config";
 
 export function ReservationSettingsPage() {
   const t = useTranslations("reservationSettings");
-  const { setActivePage } = useDashboard();
+  const { setActivePage, returnToOnboarding } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
+  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
 
   const [reservationsEnabled, setReservationsEnabled] = useState(false);
   const [reservationMode, setReservationMode] = useState("manual");
@@ -47,8 +51,22 @@ export function ReservationSettingsPage() {
 
   useEffect(() => {
     fetchSettings();
+    fetchSubscriptionStatus();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  async function fetchSubscriptionStatus() {
+    try {
+      const response = await fetch("/api/subscription/status");
+      if (response.ok) {
+        const data = await response.json();
+        setSubscriptionStatus(data.subscriptionStatus);
+        setCurrentPlan(data.plan);
+      }
+    } catch (error) {
+      console.error("Failed to fetch subscription status:", error);
+    }
+  }
 
   async function fetchSettings() {
     try {
@@ -109,6 +127,7 @@ export function ReservationSettingsPage() {
           workingHoursStart,
           workingHoursEnd,
         });
+        returnToOnboarding();
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));
@@ -124,27 +143,31 @@ export function ReservationSettingsPage() {
     return <PageLoader />;
   }
 
+  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
+
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-auto p-6 space-y-6">
-        <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
-          <div className="flex gap-3 md:gap-4 md:items-center">
-            <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
-            <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
-              <p className="text-sm">
-                {t("subscriptionRequired")}
-              </p>
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                onClick={() => setActivePage("billing")}
-              >
-                {t("subscribe")}
-              </Button>
+        {!hasActiveSubscription && (
+          <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
+            <div className="flex gap-3 md:gap-4 md:items-center">
+              <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
+              <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
+                <p className="text-sm">
+                  {t("subscriptionRequired")}
+                </p>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
+                  onClick={() => setActivePage("billing")}
+                >
+                  {t("subscribe")}
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         <FormSwitch
           id="reservationsEnabled"

@@ -1044,7 +1044,25 @@
     "openGoogleMaps": "Open in Google Maps",
     "noLocation": "No location available",
     "english": "English",
-    "spanish": "Español"
+    "spanish": "Español",
+    "allergens": "Allergens",
+    "allergensInfo": "This dish contains the following allergens:",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Crustaceans",
+      "eggs": "Eggs",
+      "fish": "Fish",
+      "peanuts": "Peanuts",
+      "soybeans": "Soybeans",
+      "dairy": "Dairy",
+      "nuts": "Tree Nuts",
+      "celery": "Celery",
+      "mustard": "Mustard",
+      "sesame": "Sesame",
+      "sulphites": "Sulphites",
+      "lupin": "Lupin",
+      "molluscs": "Molluscs"
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions About QR Menu for Restaurant & Cafe",
@@ -1184,6 +1202,7 @@
     },
     "sidebar": {
       "qrMenu": "QR Menu",
+      "menu": "Menu",
       "settings": "Settings",
       "reservations": "Reservations",
       "account": "Account",
@@ -1303,7 +1322,25 @@
       "sort": "Sort",
       "saveSort": "Save",
       "sortSaved": "Sort order saved",
-      "sortError": "Failed to save sort order"
+      "sortError": "Failed to save sort order",
+      "allergens": "Allergens",
+      "allergensHint": "Select allergens present in this dish",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Crustaceans",
+        "eggs": "Eggs",
+        "fish": "Fish",
+        "peanuts": "Peanuts",
+        "soybeans": "Soybeans",
+        "dairy": "Dairy",
+        "nuts": "Tree Nuts",
+        "celery": "Celery",
+        "mustard": "Mustard",
+        "sesame": "Sesame",
+        "sulphites": "Sulphites",
+        "lupin": "Lupin",
+        "molluscs": "Molluscs"
+      }
     },
     "languages": {
       "translationProgress": "Translation Progress",
@@ -1383,6 +1420,51 @@
       "slugChangedDescription": "Your restaurant is now available at:",
       "close": "Close",
       "view": "View"
+    },
+    "onboarding": {
+      "title": "Welcome to IQ Rest!",
+      "subtitle": "Complete these steps to launch your restaurant website",
+      "requiredSteps": "Required Steps",
+      "optionalSteps": "Optional Steps",
+      "viewMenu": "View Your Menu",
+      "steps": {
+        "title": {
+          "name": "Add Restaurant Name",
+          "description": "Give your restaurant a name that will appear on your website"
+        },
+        "slug": {
+          "name": "Set Website Address",
+          "description": "Choose a unique URL for your restaurant website"
+        },
+        "categories": {
+          "name": "Create Menu Categories",
+          "description": "Organize your menu with categories like Appetizers, Main Courses, etc."
+        },
+        "items": {
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
+        },
+        "design": {
+          "name": "Customize Design",
+          "description": "Choose colors and background for your website"
+        },
+        "contacts": {
+          "name": "Add Contact Info",
+          "description": "Add phone, WhatsApp, Instagram, and location"
+        },
+        "reservations": {
+          "name": "Enable Reservations",
+          "description": "Allow customers to book tables online"
+        },
+        "translations": {
+          "name": "Add Languages",
+          "description": "Make your menu available in multiple languages"
+        }
+      },
+      "completed": "Completed",
+      "notCompleted": "Not completed",
+      "allDone": "All done! Your menu is live.",
+      "requiredRemaining": "{count} required steps remaining"
     }
   },
   "reservationSettings": {

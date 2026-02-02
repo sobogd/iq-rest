@@ -51,6 +51,7 @@ async function getRestaurantWithMenu(slug: string) {
           description: true,
           price: true,
           imageUrl: true,
+          allergens: true,
           translations: true,
         },
       },
@@ -95,6 +96,7 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
       description: getTranslatedValue(item.translations as Translations, "description", item.description),
       price: Number(item.price),
       imageUrl: item.imageUrl,
+      allergens: item.allergens,
     })),
   }));
 
@@ -112,7 +114,15 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
           {t("noCategories")}
         </div>
       ) : (
-        <MenuFeed categories={categoriesWithItems} accentColor={restaurant.accentColor} />
+        <MenuFeed
+          categories={categoriesWithItems}
+          accentColor={restaurant.accentColor}
+          allergenTranslations={{
+            title: t("allergens"),
+            info: t("allergensInfo"),
+            names: t.raw("allergenNames") as Record<string, string>,
+          }}
+        />
       )}
     </MenuPageWrapper>
   );

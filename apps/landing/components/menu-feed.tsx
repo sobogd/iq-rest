@@ -2,6 +2,8 @@
 
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { X } from "lucide-react";
+import { getAllergenIcon, ALLERGENS } from "@/lib/allergens";
 
 interface Item {
   id: string;
@@ -9,6 +11,7 @@ interface Item {
   description: string | null;
   price: number;
   imageUrl: string | null;
+  allergens: string[];
 }
 
 interface Category {
@@ -17,13 +20,21 @@ interface Category {
   items: Item[];
 }
 
+interface AllergenTranslations {
+  title: string;
+  info: string;
+  names: Record<string, string>;
+}
+
 interface MenuFeedProps {
   categories: Category[];
   accentColor?: string;
+  allergenTranslations: AllergenTranslations;
 }
 
-export function MenuFeed({ categories, accentColor }: MenuFeedProps) {
+export function MenuFeed({ categories, accentColor, allergenTranslations }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
+  const [selectedAllergens, setSelectedAllergens] = useState<string[] | null>(null);
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const tabsRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -168,16 +179,25 @@ export function MenuFeed({ categories, accentColor }: MenuFeedProps) {
                         />
                       </div>
                     )}
-                    <div className="p-5 flex justify-between gap-4">
-                      <div>
+                    <div className="p-5">
+                      <div className="flex justify-between items-start gap-4">
                         <h3 className="font-semibold text-lg text-black">{item.name}</h3>
-                        {item.description && (
-                          <p className="mt-1 text-sm text-gray-500">{item.description}</p>
-                        )}
+                        <span className="font-bold text-lg shrink-0 text-black">
+                          €{Number(item.price).toFixed(2)}
+                        </span>
                       </div>
-                      <span className="font-bold text-lg shrink-0 text-black">
-                        €{Number(item.price).toFixed(2)}
-                      </span>
+                      {item.description && (
+                        <p className="mt-2 text-sm text-gray-500">{item.description}</p>
+                      )}
+                      {item.allergens && item.allergens.length > 0 && (
+                        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+                          {item.allergens.map((code) => (
+                            <span key={code} className="text-sm text-gray-500 inline-flex items-center gap-1">
+                              <span className="text-xs">{getAllergenIcon(code)}</span> {allergenTranslations.names[code] || code}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </article>
                 ))}
@@ -186,6 +206,51 @@ export function MenuFeed({ categories, accentColor }: MenuFeedProps) {
           </div>
         </div>
       </div>
+
+      {/* Allergens Modal */}
+      {selectedAllergens && (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center"
+          onClick={() => setSelectedAllergens(null)}
+        >
+          <div className="absolute inset-0 bg-black/50" />
+          <div
+            className="relative bg-white w-full max-w-[440px] rounded-t-2xl p-6 animate-in slide-in-from-bottom duration-300"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-1">
+              <h3 className="text-lg font-semibold text-black">
+                {allergenTranslations.title}
+              </h3>
+              <button
+                onClick={() => setSelectedAllergens(null)}
+                className="p-1 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                <X className="h-5 w-5 text-gray-500" />
+              </button>
+            </div>
+            <p className="text-sm text-gray-500 mb-4">
+              {allergenTranslations.info}
+            </p>
+            <div className="flex flex-col gap-2">
+              {selectedAllergens.map((code) => {
+                const allergen = ALLERGENS.find((a) => a.code === code);
+                return (
+                  <div
+                    key={code}
+                    className="flex items-center gap-3"
+                  >
+                    <span className="text-xl">{allergen?.icon || "⚠️"}</span>
+                    <span className="text-sm text-black">
+                      {allergenTranslations.names[code] || code}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

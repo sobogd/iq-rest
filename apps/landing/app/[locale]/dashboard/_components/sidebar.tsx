@@ -48,6 +48,8 @@ const topLevelItems: MenuItem[] = [
 const menuData = {
   qrMenu: [
     { key: "analytics", icon: BarChart3 },
+  ] as MenuItem[],
+  menu: [
     { key: "categories", icon: FolderOpen },
     { key: "items", icon: Package },
   ] as MenuItem[],
@@ -110,6 +112,29 @@ function SidebarMenuContent() {
                 </SidebarMenuItem>
               ))}
               {menuData.qrMenu.map((item) => (
+                <SidebarMenuItem key={item.key}>
+                  <SidebarMenuButton
+                    tooltip={translations.pages[item.key]}
+                    isActive={activePage === item.key}
+                    onClick={() => handleMenuClick(item.key)}
+                  >
+                    <item.icon />
+                    <span>{translations.pages[item.key]}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>
+            <Package className="size-4 mr-2" />
+            {translations.sidebar.menu}
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {menuData.menu.map((item) => (
                 <SidebarMenuItem key={item.key}>
                   <SidebarMenuButton
                     tooltip={translations.pages[item.key]}

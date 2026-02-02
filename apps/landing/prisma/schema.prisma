@@ -176,6 +176,7 @@ model Item {
   translations Json?    // { "en": { "name": "...", "description": "..." }, "es": {...} }
   price        Decimal  @db.Decimal(10, 2)
   imageUrl     String?
+  allergens    String[] @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
   sortOrder    Int      @default(0)
   isActive     Boolean  @default(true)
   categoryId   String

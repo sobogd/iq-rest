@@ -109,6 +109,9 @@ export interface ItemsTranslations {
   saveSort: string;
   sortSaved: string;
   sortError: string;
+  allergens: string;
+  allergensHint: string;
+  allergenNames: Record<string, string>;
 }
 
 export interface SettingsTranslations {
@@ -138,6 +141,7 @@ export interface DashboardTranslations {
   pages: Record<PageKey, string>;
   sidebar: {
     qrMenu: string;
+    menu: string;
     settings: string;
     reservations: string;
     account: string;
@@ -153,6 +157,8 @@ export interface DashboardTranslations {
 interface DashboardContextType {
   activePage: PageKey;
   setActivePage: (page: PageKey) => void;
+  navigateFromOnboarding: (page: PageKey) => void;
+  returnToOnboarding: () => boolean;
   translations: DashboardTranslations;
 }
 
@@ -210,8 +216,25 @@ export function DashboardProvider({
     setPageCookie(page);
   }, []);
 
+  const navigateFromOnboarding = useCallback((page: PageKey) => {
+    sessionStorage.setItem("returnToOnboarding", "true");
+    setActivePageState(page);
+    setPageCookie(page);
+  }, []);
+
+  const returnToOnboarding = useCallback(() => {
+    const shouldReturn = sessionStorage.getItem("returnToOnboarding") === "true";
+    if (shouldReturn) {
+      sessionStorage.removeItem("returnToOnboarding");
+      setActivePageState("onboarding");
+      setPageCookie("onboarding");
+      return true;
+    }
+    return false;
+  }, []);
+
   return (
-    <DashboardContext.Provider value={{ activePage, setActivePage, translations }}>
+    <DashboardContext.Provider value={{ activePage, setActivePage, navigateFromOnboarding, returnToOnboarding, translations }}>
       {children}
     </DashboardContext.Provider>
   );

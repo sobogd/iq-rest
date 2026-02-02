@@ -47,6 +47,7 @@ export default async function DashboardLayout({
     },
     sidebar: {
       qrMenu: t("sidebar.qrMenu"),
+      menu: t("sidebar.menu"),
       settings: t("sidebar.settings"),
       reservations: t("sidebar.reservations"),
       account: t("sidebar.account"),
@@ -152,6 +153,9 @@ export default async function DashboardLayout({
       saveSort: t("items.saveSort"),
       sortSaved: t("items.sortSaved"),
       sortError: t("items.sortError"),
+      allergens: t("items.allergens"),
+      allergensHint: t("items.allergensHint"),
+      allergenNames: t.raw("items.allergenNames") as Record<string, string>,
     },
     settings: {
       name: "",

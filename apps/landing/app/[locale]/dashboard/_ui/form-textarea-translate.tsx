@@ -28,7 +28,7 @@ export function FormTextareaTranslate({
   onChange,
   placeholder,
   disabled,
-  rows = 2,
+  rows = 4,
   sourceText,
   sourceLanguage,
   targetLanguage,
@@ -77,7 +77,7 @@ export function FormTextareaTranslate({
           placeholder={placeholder}
           disabled={disabled}
           rows={rows}
-          className="resize-none flex-1"
+          className="resize-none overflow-hidden flex-1"
         />
         <Button
           type="button"

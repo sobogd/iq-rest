@@ -37,7 +37,7 @@ interface CategoryWithTranslations extends Category {
 }
 
 export function CategoriesPage() {
-  const { translations } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
   const t = translations.categories;
 
   const [categories, setCategories] = useState<CategoryWithTranslations[]>([]);
@@ -174,6 +174,7 @@ export function CategoriesPage() {
     setShowForm(false);
     setEditingCategory(null);
     fetchCategories();
+    returnToOnboarding();
   }
 
   if (loading) {

@@ -17,9 +17,11 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
+import { useDashboard } from "../_context/dashboard-context";
 
 export function DesignPage() {
   const t = useTranslations("dashboard.design");
+  const { returnToOnboarding } = useDashboard();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [loading, setLoading] = useState(true);
@@ -142,6 +144,7 @@ export function DesignPage() {
         toast.success(t("saved"));
         setOriginalSource(source);
         setOriginalAccentColor(accentColor);
+        returnToOnboarding();
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));

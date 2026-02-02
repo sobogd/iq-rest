@@ -20,7 +20,7 @@ export function FormTextarea({
   onChange,
   placeholder,
   disabled,
-  rows = 2,
+  rows = 4,
 }: FormTextareaProps) {
   const textareaId = id || label.toLowerCase().replace(/\s+/g, "-");
 
@@ -34,7 +34,7 @@ export function FormTextarea({
         placeholder={placeholder}
         disabled={disabled}
         rows={rows}
-        className="resize-none"
+        className="resize-none overflow-hidden"
       />
     </div>
   );
