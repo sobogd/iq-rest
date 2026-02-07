@@ -9,8 +9,6 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  output: "standalone",
-
   // Enable static optimization
   reactStrictMode: true,
 
