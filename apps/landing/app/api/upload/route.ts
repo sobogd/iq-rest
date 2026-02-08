@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
       buffer = await sharp(buffer)
         .resize(1000, 1000, { fit: "inside", withoutEnlargement: true })
         .sharpen({ sigma: 1, m1: 1, m2: 0.5 })
-        .webp({ quality: 100, lossless: true })
+        .webp({ quality: 80 })
         .toBuffer() as Buffer;
       extension = "webp";
       contentType = "image/webp";
