@@ -25,7 +25,7 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
           sizes={heroSizes}
           placeholder={typeof images.left.src === "object" ? "blur" : undefined}
           quality={80}
-          className="w-full h-auto"
+          className="w-full h-auto rounded-2xl"
         />
       </div>
 
@@ -43,7 +43,7 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
           sizes={heroCenterSizes}
           placeholder={typeof images.center.src === "object" ? "blur" : undefined}
           quality={80}
-          className="w-full h-auto"
+          className="w-full h-auto rounded-2xl"
         />
       </div>
 
@@ -61,7 +61,7 @@ export function HeroLayout({ images, className = "", priority = false }: BaseLay
           sizes={heroSizes}
           placeholder={typeof images.right.src === "object" ? "blur" : undefined}
           quality={80}
-          className="w-full h-auto"
+          className="w-full h-auto rounded-2xl"
         />
       </div>
     </div>
