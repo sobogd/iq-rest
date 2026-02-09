@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Matseðill",
+      "pricing": "Verðlag",
+      "features": "Eiginleikar",
+      "faq": "Spurningar",
+      "changelog": "Breytingaskrá",
+      "contacts": "Samskipti"
+    },
+    "getStarted": "Skrá inn",
+    "selectLanguage": "Veldu tungumál",
+    "selectLanguageDescription": "Veldu þitt uppáhalds tungumál fyrir vefsíðuna.",
+    "searchLanguage": "Leita að tungumáli...",
+    "noLanguagesFound": "Engin tungumál fundust"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Matseðill & Vefsíða fyrir Veitingastað á 5 Mínútum",
+      "subtitle": "Sláðu inn tölvupóstinn þinn og fáðu fullkomna veitingastaðavefsíðu með QR matseðli, tengiliðasíðu, fjöltyngda stuðning og nútímalegt útlit. Stilltu allt frá símanum þínum.",
+      "cta": {
+        "create": "Búa til Matseðil",
+        "view": "Skoða Raunverulegan Matseðil"
+      },
+      "benefits": [
+        {
+          "title": "Nútímaleg vefsíða",
+          "description": "Fagmannlegt útlit sem lítur vel út á hvaða tæki sem er"
+        },
+        {
+          "title": "Bókanir",
+          "description": "Móttaka borðabókanir beint frá vefsíðunni þinni"
+        },
+        {
+          "title": "AI þýðingar",
+          "description": "Sjálfvirk þýðing matseðils á hvaða tungumál sem er"
+        },
+        {
+          "title": "Daglegar greiningar",
+          "description": "Fylgdu eftir heimsóknum og vinsælum réttum á hverjum degi"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Treyst af 500+ veitingastöðum um allan heim",
+      "title": "Allt sem Veitingastaðurinn Þinn Þarfnast á Netinu",
+      "description": "Skráðu þig með tölvupóstinum þínum og fáðu strax: faglega veitingastaðavefsíðu, QR matseðil í nútíma sniði, virk tengiliðasíðu með korti, fjöltyngdan stuðning með AI þýðingu, myndband eða ljósabakgrunn, og sérsniðna litaskemmu. Allt stjórnanlegt frá símanum þínum - engin tölva nauðsynleg."
+    },
+    "whyUs": {
+      "title": "Frá Engu til Vefsíðunnar á 5 Mínútum",
+      "subtitle": "Bara 4 einfaldar skref til að koma veitingastaðnum þínum á netið",
+      "items": [
+        {
+          "step": "1",
+          "title": "Sláðu Inn Tölvupóstinn Þinn",
+          "description": "Fljótleg skráning með tölvupóstfanginu þínu. Engin kreditkort nauðsynleg."
+        },
+        {
+          "step": "2",
+          "title": "Fylltu út Upplýsingar um Veitingastað",
+          "description": "Bættu við nafni veitingastaðarins, heimilisfangi, tengiliðum og opnunartímum."
+        },
+        {
+          "step": "3",
+          "title": "Bættu við Matseðilsatriðum",
+          "description": "Búðu til flokka og bættu við réttum þínum með myndum og verðlagningu."
+        },
+        {
+          "step": "4",
+          "title": "Njóttu Matseðilsins Þíns",
+          "description": "QR matseðillinn þinn er tilbúinn! Deildu honum með viðskiptavinum og fylgdu eftir greiningum."
+        }
+      ],
+      "cta": "Ertu Tilbúinn að Nútímavæða Veitingastaðinn Þinn?"
+    },
+    "featuresPreview": {
+      "title": "Miklar Eiginleikar fyrir Veitingastaðinn Þinn",
+      "subtitle": "Allt sem þú þarft til að búa til faglega netveru",
+      "viewAll": "Skoða Alla Eiginleika"
+    }
+  },
+  "features": {
+    "title": "Miklar eiginleikar fyrir QR matseðilinn þinn og vefsíðu",
+    "subtitle": "Allt sem þú þarft til að búa til faglega stafræna nærveru fyrir veitingastaðinn eða kaffihúsið þitt",
+    "backToFeatures": "Til baka á eiginleika",
+    "getStarted": "Búa til Matseðil",
+    "viewPricing": "Skoða Verðlag",
+    "readyTitle": "Ertu tilbúinn að byrja?",
+    "readyDescription": "Búðu til fagmannlegt QR matseðil og veitingahús vefsíðu á nokkrum mínútum. Allar aðgerðir innifaldar.",
+    "keyBenefits": "Aðal Kostir",
+    "faqTitle": "Algengar Spurningar",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Hvað þarf ég til að byrja?",
+          "a": "Bara netfangið þitt. Engin kreditkort, engar flóknar eyðublöð."
+        },
+        {
+          "q": "Hversu lengi tekur að setja upp?",
+          "a": "Vefsíðan þín er tilbúin strax. Bættu við matseðilsatriðum og þú ert komin í loftið á 5 mínútum."
+        },
+        {
+          "q": "Er til ókeypis áætlun?",
+          "a": "Já, byrjaðu ókeypis með öllum nauðsynlegum eiginleikum."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Þarf ég að setja upp app?",
+          "a": "Engin app þarf - allt virkar í vafranum á símanum þínum."
+        },
+        {
+          "q": "Get ég hlaðið upp myndum úr símanum mínum?",
+          "a": "Já, taktu myndir með myndavélinni þinni og hlaðið þeim beint upp á matseðilinn þinn."
+        },
+        {
+          "q": "Virkar þetta á spjaldtölvum?",
+          "a": "Já, stjórnborðið er hámarkað fyrir síma, spjaldtölvur og skrifborðstölvur."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Hversu nákvæm er AI þýðing?",
+          "a": "AI okkar skilur matreiðslusamhengi, varðveitir nafnréttindi og þýðir lýsingar á náttúrulegan hátt."
+        },
+        {
+          "q": "Hversu hratt er þýðingin?",
+          "a": "Heilar matseðlar eru þýddir á sekúndum, ekki klukkustundum."
+        },
+        {
+          "q": "Get ég breytt AI þýðingum?",
+          "a": "Já, allar þýðingar eru breytanlegar - skoðaðu og aðlagaðu eftir þörfum."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Hversu margar tungumál eru studd?",
+          "a": "25+ tungumál þar á meðal öll helstu evrópsku tungumál, kínverska, japönsku, kóresku, arabísku og hebresku."
+        },
+        {
+          "q": "Hvernig skipta viðskiptavinir tungumálum?",
+          "a": "Tungumálaval birtist á matseðlinum þínum - ein snerting til að skipta yfir í hvaða tungumál sem er."
+        },
+        {
+          "q": "Er þýðingin sjálfvirk?",
+          "a": "Þú getur notað AI þýðingu eða slegið inn þýðingar handvirkt fyrir hvert tungumál."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Hvaða myndform eru studd?",
+          "a": "Hlaðið upp JPG, PNG eða WebP - myndirnar eru sjálfkrafa hámarkaðar."
+        },
+        {
+          "q": "Minnkar hámarkun gæði?",
+          "a": "Nei, AI okkar viðheldur sjónrænum gæðum á meðan það minnkar skráarstærð fyrir hraðari hleðslu."
+        },
+        {
+          "q": "Er takmörk á skráarstærð?",
+          "a": "Hlaðið upp myndum allt að 10MB - þær verða sjálfkrafa hámarkaðar."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Hvernig bætir ég við nýju rétti?",
+          "a": "Snertið 'Bæta við atriði', sláðu inn nafn, lýsingu, verð og hlaðið valfrjálst upp mynd. Það er allt!"
+        },
+        {
+          "q": "Get ég endurraðað matseðilsatriðum?",
+          "a": "Já, dragðu einfaldlega og slepptu atriðum eða flokkum til að endurraða þeim."
+        },
+        {
+          "q": "Hvað ef réttur er uppseldur?",
+          "a": "Slökktu tímabundið á atriðinu - það hverfur af matseðlinum en er ekki eytt."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Hvaða mælingar get ég fylgst með?",
+          "a": "Daglegar heimsóknir, frammistöðu síðunnar, tungumálaval og þróun yfir tíma."
+        },
+        {
+          "q": "Hversu oft er gögnin uppfærð?",
+          "a": "Greiningar eru uppfærðar í rauntíma - sjáðu heimsóknir dagsins eins og þær gerast."
+        },
+        {
+          "q": "Get ég flutt út greiningargögn?",
+          "a": "Skoðaðu ítarlegar skýrslur beint í stjórnborðinu þínu."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Hvernig gera viðskiptavinir bókanir?",
+          "a": "Viðskiptavinir geta bókað beint frá vefsíðu veitingastaðarins þíns. Þeir velja dagsetningu, tíma og fjölda gesta, og fá síðan staðfestingu í tölvupósti."
+        },
+        {
+          "q": "Get ég samþykkt bókanir handvirkt?",
+          "a": "Já, þú getur valið á milli sjálfvirkrar staðfestingar eða handvirkrar samþykktar fyrir hverja bókun."
+        },
+        {
+          "q": "Fæ ég tilkynningu um nýjar bókanir?",
+          "a": "Já, þú færð tölvupósttilkynningar fyrir hverja nýja bókun."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Hvaða vídeóform eru studd?",
+          "a": "MP4 og WebM form eru studd. Vídeó eru sjálfkrafa hámarkaðar fyrir hraðari hleðslu."
+        },
+        {
+          "q": "Get ég notað eigin myndir?",
+          "a": "Já, hlaðið upp hvaða mynd sem er og hún verður sjálfkrafa hámarkað fyrir vefsýningu."
+        },
+        {
+          "q": "Hindrar vídeó hleðslu matseðilsins?",
+          "a": "Nei, vídeó eru þjappaðar og hlaðið inn á skynsamlegan hátt til að tryggja hraða frammistöðu síðunnar."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Hversu margar litir get ég valið úr?",
+          "a": "Veldu úr 12 fyrirfram ákveðnum litum eða sláðu inn nákvæman lit fyrirtækisins þíns með hex kóða."
+        },
+        {
+          "q": "Stuðlar það að dökku móti?",
+          "a": "Já, litaskemað þitt aðlagast sjálfkrafa bæði ljósum og dökkum þemum."
+        },
+        {
+          "q": "Get ég breytt litum hvenær sem er?",
+          "a": "Já, breyttu áherslulitnum þínum strax frá stjórnborðinu - uppfærslur birtast strax."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Hvernig get ég haft samband við stuðning?",
+          "a": "Notaðu tengiliðareyðublaðið eða sendu okkur tölvupóst beint - raunverulegir menn svara, ekki vélmenni."
+        },
+        {
+          "q": "Hvað er svörunartíminn?",
+          "a": "Við svörum venjulega innan nokkurra klukkustunda á virkum dögum."
+        },
+        {
+          "q": "Er stuðningur í boði fyrir ókeypis áætlanir?",
+          "a": "Já, persónulegur stuðningur er í boði fyrir allar áætlanir, þar á meðal ókeypis."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Sofandi QR Matseðill & Vefsíðu Uppsetning",
+        "shortDescription": "Búðu til vefsíðu veitingastaðarins þíns og QR matseðil með bara netfangi - tilbúin á 5 mínútum",
+        "description": "Byrjaðu á sekúndum með einfaldasta skráningarferlinu. Sláðu bara inn netfangið þitt og þú færð strax fulla vefsíðu veitingastaðarins með QR matseðli, tengiliðasíðu með korti, og nútímalegu útliti. Engin tæknikunnátta nauðsynleg, engin flókin eyðublöð - veitingastaðurinn þinn fer á netið strax.",
+        "fullDescription": "He tradicional vefsíðugerðaraferli krafist klukkutíma af uppsetningu, tæknilegri þekkingu, og oft forritara. IQ Rest breytir öllu. Sláðu inn netfangið þitt, staðfestu með einföldu kóði, og vefsíðan þín er tilbúin. Bættu við réttum, hlaðið upp myndum, og deildu QR kóðanum þínum með viðskiptavinum. Allt ferlið tekur minna en 5 mínútur.",
+        "benefits": [
+          "Bara netfang krafist til að byrja - engin flókin skráning",
+          "Vefsíða veitingastaðarins tilbúin strax eftir skráningu",
+          "QR matseðill sjálfkrafa búinn til og tengdur",
+          "Tengiliðasíða með korti innifalin sjálfkrafa",
+          "Engin tæknikunnátta eða forritunarkunnátta nauðsynleg"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Ferli við uppsetningu vefsíðu veitingastaðarins og QR matseðils",
+        "cta": "Lærðu meira"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% Farsíma-væn Stjórn",
+        "shortDescription": "Enginn tölva? Engin vandamál. Rekið alla vefsíðu veitingastaðarins frá símanum þínum. Bættu við réttum meðan þú stendur í eldhúsinu, uppfærðu verð meðan á þjónustu stendur, hlaðið upp myndum beint úr myndavélinni þinni. Allir eiginleikar virka fullkomlega á farsímum - því veitingastaðareigendur sitja aldrei við skrifborð.",
+        "description": "Bættu við flokkum, réttum, myndum, og stjórnaðu allri vefsíðu veitingastaðarins beint úr símanum þínum. Stjórnborðið okkar er fullkomlega hámarkað fyrir farsíma, svo þú getur uppfært matseðilinn meðan á kaffihlé stendur eða bætt við daglegum sértilboðum á ferðinni.",
+        "fullDescription": "Veitingastaðareigendur eru uppteknir einstaklingar sem eru ekki alltaf við tölvu. Þess vegna byggðum við IQ Rest til að virka fullkomlega á farsímum. Allir eiginleikar, frá því að bæta við nýjum réttum til að uppfæra verð, eru hannaðir fyrir snertiskjái. Taktu mynd af nýjum rétti og hlaðið henni upp strax. Breyttu sértilboði dagsins meðan þú stendur í eldhúsinu.",
+        "benefits": [
+          "Fullkomin aðgangur að stjórnborði á hvaða snjallsíma eða spjaldtölvu sem er",
+          "Hlaðið upp myndum beint úr myndavél símans þíns",
+          "Uppfærðu verð og lýsingar á ferðinni",
+          "Stjórnaðu flokkum með snertivænu viðmóti",
+          "Engin tölva nauðsynleg - aldrei"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Stjórn matseðils veitingastaðarins á snjallsíma",
+        "cta": "Sjá Farsíma Stjórnborð"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI-Styrkt Matseðils Þýðing",
+        "shortDescription": "Haltu ekki að missa alþjóðlega viðskiptavini vegna tungumálahindrana. AI okkar þýðir allan matseðilinn þinn í 25+ tungumál á sekúndum - ekki almenn þýðing, heldur samhengi-viðkvæmt AI sem skilur matreiðsluskilmála. 'Beef Wellington' verður 'Beef Wellington', á meðan lýsingar lesa náttúrulega á hverju tungumáli.",
+        "description": "Náðu alþjóðlegum viðskiptavinum með greindri AI þýðingu sem skilur matarsamhengi. Nafnréttindi þín og lýsingar eru þýddar nákvæmlega, varðveita matreiðsluskilmála og gera sens á hvaða tungumáli sem er.",
+        "fullDescription": "Almennir þýðendur mistakast oft með matseðlum - þeir þýða bókstaflega án þess að skilja samhengi. AI okkar er þjálfað sérstaklega fyrir efni veitingastaða. Það veit að 'Beef Wellington' á ekki að þýða bókstaflega, og að 'al dente' þýðir það sama á hvaða tungumáli sem er. Þjóna ferðamönnum og alþjóðlegum gestum með matseðlum sem lesa náttúrulega á þeirra tungumáli.",
+        "benefits": [
+          "Samhengi-viðkvæm þýðing fyrir mat og matreiðsluskilmála",
+          "10+ tungumál þar á meðal spænsku, frönsku, þýsku, kínversku, japönsku",
+          "Verndun matreiðsluskilmála og menningarlegra smáatriða",
+          "Strax þýðing - matseðillinn er aðgengilegur á sekúndum",
+          "Eykur sölu um 23% með alþjóðlegum viðskiptavinum"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI-styrkt þýðingarviðmót fyrir matseðil veitingastaða",
+        "cta": "Kynntu þér AI Þýðingu"
+      },
+      {
+        "id": "multilingual",
+        "title": "Fjöltyngd Vefsíða Veitingastaðar",
+        "shortDescription": "Velkomin ferðamenn og alþjóðlegir gestir á þeirra móðurmáli. Stuðningur við 25+ tungumál þýðir að hver viðskiptavinur finnur sig heima. Ein snerting til að skipta tungumálum - matseðill, verð, lýsingar aðlagast strax. Fullkomið fyrir veitingastaði á ferðamannasvæðum eða alþjóðlegum borgum.",
+        "description": "Vefsíða veitingastaðarins þíns styður sjálfkrafa mörg tungumál. Viðskiptavinir geta skipt tungumálum með einni snertingu, og allt efni þar á meðal matseðill, tengiliðaupplýsingar, og leiðsögn aðlagast strax.",
+        "fullDescription": "Á ferðamannasvæðum og alþjóðlegum borgum er mikilvægt að tala tungumál viðskiptavinarins. IQ Rest gerir veitingastaðinn þinn aðgengilegan fyrir alla. Viðskiptavinir sjá tungumálaval og geta skoðað alla vefsíðu sína - matseðill, tengiliðir, bókanir - á þeirra valda tungumáli. Sameinað með AI þýðingu geturðu þjónað heiminum.",
+        "benefits": [
+          "Ein snerting tungumálaskipting fyrir viðskiptavini",
+          "Matseðill, tengiliðir, og allar síður þýddar",
+          "Tungumálaval munað fyrir endurkomur",
+          "Fullkomið fyrir ferðamannasvæði og alþjóðlegar borgir",
+          "Virkar óaðfinnanlega með AI þýðingar eiginleikanum"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Fjöltyngt vefsíðu veitingastaðar með tungumálaval",
+        "cta": "Skoðaðu Fjöltyngda Eiginleika"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI Mynd Hámarkun",
+        "shortDescription": "Sjálfvirk myndabætir fyrir hraðari hleðslu og betri gæði",
+        "description": "Hlaðið upp hvaða mynd sem er og AI okkar hámarkar hana sjálfkrafa fyrir vefsýningu. Myndir hlaðast hratt á hvaða tengingu sem er á meðan þær viðhalda ótrúlegum gæðum sem gera rétti þína ómótstæðilega.",
+        "fullDescription": "Stórar, óhámarkaðar myndir hægja á vefsíðu þinni og valda óþægindum fyrir viðskiptavini. AI okkar fer í gegnum hverja hlaðna mynd: breytir í bestu stærð, breytir í nútíma form, og bætir gæði. Niðurstaðan? Réttir þínir líta frábærlega út, og síður hlaðast á innan við sekúndu jafnvel á hægum farsímatengjum.",
+        "benefits": [
+          "Sjálfvirk stærðarbreyting í bestu vefsíðum",
+          "Umbreyting í WebP form fyrir hraðari hleðslu",
+          "Gæðabætir fyrir betri framsetningu",
+          "Síður hlaðast á innan við 1 sekúndu",
+          "Virkar með hvaða myndformi sem þú hlaðar upp"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI mynd hámarkun fyrir og eftir samanburð",
+        "cta": "Lærðu meira"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Auðveld Matseðilsstjórn",
+        "shortDescription": "Uppfærðu matseðilinn þinn á sekúndum, ekki klukkutímum. Bættu við nýjum réttum, breyttu verð, endurraðaðu flokkum - allt með einfaldri draga-og-slepptu aðferð frá hvaða tæki sem er. Engin tæknikunnátta nauðsynleg. Breytingar fara í loftið strax, svo viðskiptavinir þínir sjá alltaf nýjustu tilboðin.",
+        "description": "Að stjórna matseðlinum þínum hefur aldrei verið auðveldara. Bættu við flokkum, búðu til rétti með myndum og lýsingum, settu verð, og skipuleggðu allt með einfaldri draga-og-slepptu aðferð. Breytingar birtast strax á vefsíðunni þinni.",
+        "fullDescription": "Gleyma flóknum efnisstjórnunarkerfum. Matseðilsritari IQ Rest er hannaður fyrir veitingastaðareigendur, ekki vefþróunara. Búðu til nýjan flokk á sekúndum, bættu við réttum með nokkrum snertingum, hlaðið upp myndum beint úr símanum þínum. Dragðu atriði til að endurraða, slökktu á sýnileika fyrir uppseld atriði, og sjáðu breytingar í beinni útsendingu strax.",
+        "benefits": [
+          "Skiljanleg flokka- og atriðasköpun",
+          "Draga-og-sleppa endurraðning",
+          "Slökktu á atriði án þess að eyða",
+          "Strax uppfærslur - breytingar birtast á sekúndum",
+          "Skipuleggðu óendanlega flokka og rétti"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Auðvelt stjórnborð fyrir matseðil veitingastaðar",
+        "cta": "Sjá Matseðilsritara"
+      },
+      {
+        "id": "analytics",
+        "title": "Daglegar Greiningar & Innsýn",
+        "shortDescription": "Fylgstu með heimsóknum, tungumálum, og hegðun viðskiptavina með ítarlegum daglegum skýrslum",
+        "description": "Skildu viðskiptavini þína með heildstæðum greiningum. Sjáðu daglegar heimsóknir, vinsæl tungumál, mest skoðuðu síður, og fylgdu þróun yfir tíma. Gerðu gögnin að grundvelli ákvarðana til að hámarka matseðilinn þinn.",
+        "fullDescription": "Þekking er vald. Stjórnborð greininga okkar sýnir þér nákvæmlega hvernig viðskiptavinir hafa samskipti við vefsíðu veitingastaðarins þíns. Hvaða síður fá flest heimsóknir? Hvaða tungumál kjósa viðskiptavinir þínir? Eru heimsóknir að aukast viku yfir viku? Notaðu þessar innsýn til að hámarka matseðilinn þinn, miða á rétta viðskiptavini, og vaxa fyrirtæki þitt.",
+        "benefits": [
+          "Daglegar, vikulegar, og mánaðarlegar heimsóknartölur",
+          "Tungumálaval sundurliðað",
+          "Frammistöðu skráning á hverri síðu",
+          "Greining á þróun yfir tíma",
+          "Flytja út gögn til frekari greiningar"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Greiningar stjórnborð veitingastaðar með daglegum tölum",
+        "cta": "Lærðu meira"
+      },
+      {
+        "id": "reservations",
+        "title": "Bókunarkerfi Borða",
+        "shortDescription": "Haltu ekki að missa viðskiptavini vegna missaðra símtala. Þú getur tekið borðbókanir 24/7 beint frá vefsíðunni þinni - viðskiptavinir velja dagsetningu, tíma, og borð á sekúndum. Sjálfvirkar staðfestingar, tölvupósttilkynningar, og einfalt stjórnborð til að stjórna öllu.",
+        "description": "Innbyggt bókunarkerfi leyfir viðskiptavinum að bóka borð beint frá vefsíðunni þinni. Veldu sjálfvirka staðfestingu byggða á framboði, eða skoðaðu hverja bókun handvirkt. Stjórnaðu öllum bókunum frá stjórnborðinu þínu.",
+        "fullDescription": "Símtalsbókanir eru tímafrekar og auðvelt að missa af. Bókunarkerfi IQ Rest virkar 24/7. Viðskiptavinir velja dagsetningu, tíma, og fjölda, og bóka strax. Þú getur stillt sjálfvirka staðfestingu byggða á framboði borða, eða skoðað hverja beiðni handvirkt. Minnkaðu ekki-sýningar með tölvupóststaðfestingum.",
+        "benefits": [
+          "24/7 netbókunarhæfni",
+          "Sjálfvirkar eða handvirkar staðfestingar",
+          "Stjórnun borða og getu",
+          "Tölvupósttilkynningar fyrir bókanir",
+          "Dagskrá útlit fyrir auðvelda skipulagningu"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Nett bókunarkerfi fyrir veitingastaði",
+        "cta": "Kynntu þér Borðbókanir"
+      },
+      {
+        "id": "custom-design",
+        "title": "Vídeó & Mynd Bakgrunnir",
+        "shortDescription": "Fyrstu áhrifin selja. Fangaðu viðskiptavini strax þegar þeir skanna QR kóðann þinn með glæsilegu vídeói af andrúmslofti veitingastaðarins þíns eða fallegri mynd af þínum sérstöku rétti. Skildu eftir samkeppnina með heimasíðu sem finnst dýrmæt og fagleg.",
+        "description": "Búðu til eftirminnilegt fyrsta áhrif með sérsniðnum vídeó- eða myndabakgrunnum á heimasíðunni þinni. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns eða fallegri matarmynd til að fanga viðskiptavini strax.",
+        "fullDescription": "Fyrstu áhrifin skipta máli. Þegar viðskiptavinir skanna QR kóðann þinn, ættu þeir að vera hrifnir strax. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns, tímaskot af eldhúsinu þínu, eða glæsilegri mynd af þínum sérstöku rétti. Heimasíðan þín verður sjónrænt upplifun sem endurspeglar persónuleika veitingastaðarins þíns.",
+        "benefits": [
+          "Stuðningur fyrir vídeó og myndabakgrunna",
+          "Sjálfvirk hámarkun fyrir hraðari hleðslu",
+          "Virkar fullkomlega á farsímum",
+          "Skapar eftirminnilegt fyrsta áhrif",
+          "Endurspeglar einstakt andrúmsloft veitingastaðarins þíns"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Vefsíða veitingastaðar með vídeó bakgrunni",
+        "cta": "Sjá Vídeó Bakgrunna"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Sérsniðið Litaskema",
+        "shortDescription": "Gerðu matseðilinn þinn sannarlega þinn með sérsniðnum áherslulitum sem passa við auðkenni veitingastaðarins þíns. Veldu úr 12 fallegum fyrirfram ákveðnum litum eða veldu nákvæman lit fyrirtækisins þíns. Hver hnappur, áhersla, og gagnvirkur þáttur aðlagast til að skapa samræmt, faglegt útlit sem viðskiptavinir muna.",
+        "description": "Vefsíða veitingastaðarins þíns ætti að passa við merkið þitt. Veldu úr fyrirfram ákveðnum litaskemum eða veldu nákvæman lit fyrirtækisins þíns. Sameinað við sjálfvirkan stuðning við ljós/dökk þemu, lítur matseðillinn alltaf fagmannlega út.",
+        "fullDescription": "Samræmi í merki skiptir máli. IQ Rest leyfir þér að sérsníða áherslulitinn sem notaður er um alla vefsíðu þína - hnappana, áherslur, og gagnvirka þætti passa allir við merkið þitt. Veldu úr vandlega valin fyrirfram ákveðnum litum eða sláðu inn nákvæman lit fyrirtækisins þíns. Kerfið tryggir sjálfkrafa læsileika í bæði ljósum og dökkum stillingum.",
+        "benefits": [
+          "Sérsniðin áherslulitaval",
+          "Fyrirfram ákveðin litaskemur í boði",
+          "Sjálfvirkur stuðningur við ljós/dökk þemu",
+          "Samræmt merki um allar síður",
+          "Aðgengis hámarkaður litamunur"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Sérsniðin litaskema og auðkenningarmöguleikar",
+        "cta": "Kynntu þér Litaskemur"
+      },
+      {
+        "id": "personal-support",
+        "title": "Persónulegur Netstuðningur",
+        "shortDescription": "Fáðu persónulega aðstoð frá raunverulegum fólki - ekki spjallbotnum - fyrir allar spurningar",
+        "description": "Sérhver veitingastaður fær persónulegan netstuðning. Hefurðu spurningu? Þarftu aðstoð við uppsetningu? Viltu leggja til eiginleika? Raunverulegt fólk svarar fljótt til að hjálpa þér að ná árangri með stafræna matseðilinn þinn.",
+        "fullDescription": "Við trúum því að hver veitingastaður eigi skilið persónulega athygli. Þegar þú hefur samband við stuðning, ertu að tala við raunverulegt fólk sem skilur veitingastaði og getur í raun aðstoðað. Engir spjallbotar, engin sjálfvirk svör, engin biðraðir. Hvort sem þú þarft aðstoð við að bæta við fyrsta réttinum þínum eða vilt ráðleggingar um að hámarka matseðilinn þinn, erum við hér fyrir þig.",
+        "benefits": [
+          "Raunverulegur mannlegur stuðningur - engir spjallbotar",
+          "Fljótur svörunartími",
+          "Aðstoð við uppsetningu og hámarkun",
+          "Óskir um eiginleika velkomnar",
+          "Í boði fyrir allar áætlanir, þar á meðal ókeypis"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Persónulegur netstuðningur fyrir veitingastaði",
+        "cta": "Lærðu meira"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR Matseðill & Verðlagning veitingahúss vefsíðu",
+    "subtitle": "Engin falin gjöld, engar óvæntar upphæðir. Settu veitingahús vefsíðuna þína í gang ókeypis í dag — uppfærðu aðeins þegar þú ert tilbúin(n) að vaxa.",
+    "seo": {
+      "title": "Af hverju að velja IQ Rest fyrir veitingahús eða kaffihús?",
+      "text": "Búðu til faglegan QR matseðil og vefsíðu fyrir veitingahúsið eða kaffihúsið þitt á nokkrum mínútum. Gestir þínir skanna einfaldlega QR kóða til að skoða stafræna matseðilinn á símanum sínum — engin app nauðsynleg. Uppfærðu verð, bættu við nýjum réttum og breyttu lýsingum strax. Með AI-stuðningi þýðingum, þjónustu alþjóðlegum viðskiptavinum á þeirra móðurmáli. Fylgdu eftir hvaða rétti fá flest skoðanir með innbyggðum greiningum. Hvort sem þú rekur lítið kaffihús eða vaxandi veitingakeðju, hjálpar IQ Rest þér að nútímavæða matseðilinn þinn á meðan þú minnkar prentkostnað."
+    },
+    "monthly": "Mánaðarlega",
+    "yearly": "Árslega",
+    "save": "(Sparaðu 25%)",
+    "perMonth": "/mánuði",
+    "billedYearly": "Reiknað árlega (€{total})",
+    "forever": "Ókeypis að eilífu",
+    "popular": "Vinsælast",
+    "plans": {
+      "free": {
+        "name": "Ókeypis",
+        "description": "Fullkomið til að prófa IQ Rest",
+        "cta": "Byrjaðu ókeypis",
+        "highlights": [
+          "Veitingahús vefsíða",
+          "QR Matseðill",
+          "300 skannanir/mánuði",
+          "2 tungumál",
+          "AI myndabætir",
+          "Greiningar"
+        ]
+      },
+      "basic": {
+        "name": "Grunn",
+        "description": "Frábært fyrir smá veitingahús",
+        "cta": "Byrjaðu",
+        "highlights": [
+          "Allt í Ókeypis, auk:",
+          "4,500 skannanir/mánuði",
+          "3 tungumál",
+          "AI þýðingar",
+          "Sérsniðin litapalletta",
+          "Bókanir"
+        ]
+      },
+      "pro": {
+        "name": "Faglegur",
+        "description": "Fyrir vaxandi veitingakeðjur",
+        "cta": "Byrjaðu",
+        "highlights": [
+          "Allt í Grunn, auk:",
+          "Ótakmarkaðar skannanir",
+          "6 tungumál",
+          "Forgangs stuðningur",
+          "Allar aðgerðir innifaldar"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Samanburður á áætlunum",
+      "subtitle": "Skoðaðu hvaða áætlun hentar þér best"
+    },
+    "features": {
+      "website": "Veitingahús vefsíða",
+      "qrMenu": "QR Matseðill",
+      "scans": "Mánaðarlegar skannanir",
+      "languages": "Stutt tungumál",
+      "aiTranslation": "AI þýðingar",
+      "aiImages": "AI myndabætir",
+      "analytics": "Greiningar",
+      "customTheme": "Sérsniðin litapalletta",
+      "background": "Bakgrunnsmynd & myndband",
+      "support": "Stuðningur",
+      "reservations": "Bókanir"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Ótakmarkað",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Þarfir þú aðstoð? Við skulum spjalla",
+    "subtitle": "Sæll, ég er Bogdan — stofnandi IQ Rest. Ég byggði þessa vettvang fyrir mitt eigið kaffihús og nú hjálpar það hundruðum veitingastaða um allan heim. Hefur þú spurningu eða hugmynd? Skrifaðu beint til mín. Engir vélmenni, engin bið — bara raunverulegt samtal.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Hafðu samband",
+      "email": "Þín tölvupóstfang",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Efni",
+      "subjectPlaceholder": "Hvað snýst þetta um?",
+      "message": "Skilaboð",
+      "messagePlaceholder": "Segðu mér hvað er á hjarta...",
+      "submit": "Senda skilaboð",
+      "sending": "Sending...",
+      "success": "Skilaboðin þín hafa verið send! Takk fyrir að hafa samband. Ég mun svara þér fljótlega.",
+      "error": "Mistókst að senda skilaboð. Vinsamlegast reyndu aftur síðar."
+    }
+  },
+  "languages": {
+    "en": "Enska",
+    "es": "Spænska"
+  },
+  "cookieConsent": {
+    "title": "Við notum vefkökurnar",
+    "description": "Við notum vefkökurnar til að bæta vefskoðun þína, veita persónulega efni og greina umferð okkar. Með því að smella á \"Samþykkja allt\" samþykkir þú notkun okkar á vefkökum.",
+    "acceptAll": "Samþykkja allt",
+    "rejectAll": "Hafna öllu",
+    "customize": "Sérsníða",
+    "learnMore": "Lærðu meira"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Vöruval",
+      "pricing": "Verðlagning",
+      "features": "Eiginleikar",
+      "contacts": "Samskipti",
+      "faq": "Spurningar",
+      "changelog": "Breytingaskrá"
+    },
+    "legal": {
+      "title": "Lögfræði",
+      "terms": "Skilmálar",
+      "privacy": "Persónuverndarstefna",
+      "cookies": "Kökurstefna",
+      "sitemap": "Vefkort"
+    },
+    "copyright": "© 2025 IQ Rest. Öll réttindi áskilin."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Breytingaskrá - IQ Rest uppfærslur og nýjar eiginleikar",
+      "description": "Vertu uppfærður um nýjustu eiginleikana og umbætur á IQ Rest - þínu stafræna QR matseðli fyrir veitingahús og kaffihús"
+    },
+    "title": "Breytingaskrá",
+    "subtitle": "Nýjustu uppfærslur og nýir eiginleikar fyrir QR matseðilinn þinn",
+    "readMore": "Lestu meira",
+    "backToChangelog": "Til baka í breytingaskrá",
+    "seo": {
+      "title": "Um IQ Rest uppfærslur",
+      "description": "IQ Rest er stöðugt að bæta sig til að hjálpa veitingastöðum og kaffihúsum að búa til faglegar stafrænar QR matseðla. Fylgdu breytingaskránni okkar til að vera uppfærður með nýjustu eiginleikum fyrir vefsíðu veitingastaðarins þíns og QR matseðla lausn."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsive Support for Your Restaurant QR Menu",
+        "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
+        "meta": {
+          "title": "Responsive Support for Restaurant QR Menu | IQ Rest",
+          "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
+        },
+        "content": {
+          "intro": "IQ Rest now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "image1Alt": "Support chat interface for restaurant QR menu",
+          "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
+          "section1Title": "Direct Chat Support for Your Restaurant",
+          "section1Text": "Our responsive support system for your QR menu restaurant or cafe works directly within your dashboard. No need to search for contact emails or wait in phone queues. Simply open the support chat, type your question or describe the change you need, and our team responds quickly. Whether you need help updating menu items, fixing display issues, or understanding analytics - responsive support is just a message away.",
+          "section2Title": "Quick Assistance for Any QR Menu Changes",
+          "section2Text": "Need to update prices before a busy weekend? Want to add seasonal items to your restaurant QR menu? Our responsive support helps cafes and restaurants make changes quickly. We guide you through the process or can assist directly when needed. This responsive support ensures your digital menu always reflects your current offerings, keeping customers informed and happy.",
+          "section3Title": "Support That Understands Restaurant Needs",
+          "section3Text": "Our responsive support team understands the unique challenges of running a restaurant or cafe. We know that a broken QR menu can mean lost customers and frustrated staff. That's why our support for your QR menu restaurant or cafe prioritizes quick response times and practical solutions. From technical questions to feature requests, we're here to help your digital menu succeed.",
+          "benefitsTitle": "Benefits of Responsive QR Menu Support",
+          "benefit1": "Direct in-app chat - no external emails or phone calls needed",
+          "benefit2": "Quick response times to keep your restaurant running smoothly",
+          "benefit3": "Guidance on menu updates, changes, and new features",
+          "benefit4": "Technical assistance for any QR code or website issues",
+          "benefit5": "Feature requests and suggestions welcomed and considered",
+          "benefit6": "Support that understands restaurant and cafe operations",
+          "conclusionTitle": "Get Responsive Support Today",
+          "conclusionText": "With IQ Rest's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "ctaText": "Ready to experience responsive support for your QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
+        "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
+        "meta": {
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | IQ Rest",
+          "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
+        },
+        "content": {
+          "intro": "IQ Rest now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
+          "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
+          "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
+          "section1Text": "Our detailed analytics for your restaurant website and QR menu track every customer interaction. See total page views for today, this week, and this month at a glance. Track unique visitors to understand your real audience size. The analytics dashboard provides detailed insights into how customers navigate your QR menu - from the home page to your full menu, contacts, and language selection. This detailed analytics helps restaurants make data-driven decisions.",
+          "section2Title": "Page and Language Analytics",
+          "section2Text": "Understand which pages of your restaurant website and QR menu are most popular. Our detailed analytics break down views by page type: Home, Menu, Contacts, and Language selection. See which languages your customers prefer, helping you prioritize translations and serve international guests better. These detailed analytics for your restaurant QR menu reveal customer behavior patterns you never knew existed.",
+          "section3Title": "Daily Trends and Usage Monitoring",
+          "section3Text": "Track how your restaurant website and QR menu perform over time with daily view charts. See patterns in customer engagement throughout the week. Monitor your monthly usage against your plan limits with a clear progress bar. Our detailed analytics help restaurants identify peak times and optimize their digital presence. Whether you're a small cafe or a busy restaurant, these insights help you understand your customers better.",
+          "benefitsTitle": "Benefits of Detailed Analytics for Restaurants",
+          "benefit1": "Real-time view counts: today, weekly, and monthly statistics at a glance",
+          "benefit2": "Unique visitor tracking to understand your actual customer reach",
+          "benefit3": "Page-by-page breakdown showing what content customers view most",
+          "benefit4": "Language analytics to optimize multilingual menu offerings",
+          "benefit5": "Daily trend charts to identify patterns in customer behavior",
+          "benefit6": "Usage monitoring with clear limits and upgrade prompts",
+          "conclusionTitle": "Start Using Detailed Analytics Today",
+          "conclusionText": "With IQ Rest's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "ctaText": "Ready to explore detailed analytics for your restaurant?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu and Restaurant Website Generator",
+        "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
+        "meta": {
+          "title": "Instant QR Menu and Restaurant Website Generator | IQ Rest",
+          "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
+        },
+        "content": {
+          "intro": "IQ Rest now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
+          "image1Caption": "Generate custom QR codes for your restaurant website instantly",
+          "section1Title": "How the Instant QR Menu Generator Works",
+          "section1Text": "Our instant QR menu and restaurant website generator creates everything you need in minutes. Simply add your menu items, and the system instantly generates a unique QR code linked to your restaurant website. The generator supports multiple paper formats (A4, A5, A6, Letter), various QR layouts per page (1 to 16 codes), and customizable text beneath each QR code. Preview exactly what you'll print, then download or print directly - your instant QR menu is ready to display at your tables.",
+          "section2Title": "Customizable QR Codes for Any Restaurant or Cafe",
+          "section2Text": "The instant QR menu generator offers complete customization for your restaurant or cafe branding. Add your restaurant name above the QR code, include custom text like 'Scan for Menu' or 'QR Menu' below, and choose from three text sizes. The generator produces clean, simple QR codes optimized for fast scanning. Whether you need a single large QR code for a poster or 16 smaller codes for individual table cards, our instant generator adapts to your restaurant's needs.",
+          "section3Title": "Print-Ready QR Menus in Seconds",
+          "section3Text": "Unlike complicated design tools, our instant QR menu generator creates print-ready layouts automatically. Select your paper format, choose how many QR codes per page, and hit print - that's it. The generator handles margins, spacing, and sizing to ensure perfect prints every time. For cafes and restaurants that need professional QR menus quickly, this instant approach saves hours of design work and gets your digital menu in front of customers faster.",
+          "benefitsTitle": "Benefits of Instant QR Menu Generation",
+          "benefit1": "Generate complete QR menu and restaurant website in minutes, not hours",
+          "benefit2": "Multiple paper formats: A4, A5, A6, and Letter sizes supported",
+          "benefit3": "Flexible layouts: from single large QR to 16 codes per page",
+          "benefit4": "Custom text and sizing options for your restaurant branding",
+          "benefit5": "Print-ready output with automatic margins and spacing",
+          "benefit6": "Download as PNG or print directly from your browser",
+          "conclusionTitle": "Start Using the Instant QR Menu Generator",
+          "conclusionText": "With IQ Rest's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "ctaText": "Ready to generate your instant QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Public Restaurant Website for QR Menu Scanning",
+        "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
+        "meta": {
+          "title": "Public Restaurant Website for QR Menu Scanning | IQ Rest",
+          "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
+        },
+        "content": {
+          "intro": "IQ Rest now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "image1Alt": "Public restaurant website showing QR menu categories",
+          "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
+          "section1Title": "How the Public Restaurant Website Works with QR Scanning",
+          "section1Text": "When customers scan your restaurant's QR code, they're instantly taken to your public website displaying the complete menu. No app download required, no waiting - just immediate access to your offerings. The public restaurant website for QR menu shows categories at the top for easy navigation, with items displayed in an elegant card layout featuring photos, descriptions, and prices. Customers can tap on categories to filter items or scroll through the entire menu.",
+          "section2Title": "Features of Your Public Restaurant QR Menu Website",
+          "section2Text": "Your public restaurant website includes everything customers need: category tabs for quick navigation, high-quality dish photos, detailed descriptions, prices in your currency, and active item indicators. The design is optimized for mobile devices since most QR scans happen on phones. Items load quickly thanks to optimized images, and the interface is intuitive for guests of all ages. Changes made in your admin panel appear instantly on the public website.",
+          "image2Alt": "Restaurant QR menu website showing food items with photos",
+          "image2Caption": "Public menu website displaying dishes with optimized photos and descriptions",
+          "section3Title": "Multilingual Support for International Guests",
+          "section3Text": "The public restaurant website includes a language selector so international guests can view your menu in their preferred language. Currently supporting English and Spanish, with more languages coming soon. This makes your public restaurant QR menu accessible to tourists and diverse customer bases. The language preference is remembered for return visits, providing a personalized experience.",
+          "image3Alt": "Language selection on public restaurant QR menu website",
+          "image3Caption": "Language selector allowing guests to view the public menu in their preferred language",
+          "benefitsTitle": "Benefits of Your Public Restaurant QR Menu Website",
+          "benefit1": "Instant menu access - customers scan and view immediately, no app needed",
+          "benefit2": "Mobile-optimized design for perfect display on any smartphone",
+          "benefit3": "Real-time updates - menu changes appear instantly to customers",
+          "benefit4": "Category navigation for easy browsing of your offerings",
+          "benefit5": "Multilingual support for international customers",
+          "benefit6": "Fast loading with optimized images and modern technology",
+          "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
+          "conclusionText": "With IQ Rest's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "ctaText": "Ready to launch your public restaurant QR menu website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "How to Add Items to Restaurant Website with QR Menu",
+        "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
+        "meta": {
+          "title": "How to Add Items to Restaurant Website with QR Menu | IQ Rest",
+          "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
+        },
+        "content": {
+          "intro": "Want to know how to add items to your restaurant website with QR menu? IQ Rest makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "image1Alt": "How to add items to restaurant website with QR menu - item list view",
+          "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
+          "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
+          "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
+          "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with IQ Rest. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "image2Alt": "Item form showing how to add items to restaurant QR menu website",
+          "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
+          "section3Title": "Image Upload and Optimization for Your Restaurant Items",
+          "section3Text": "High-quality images are essential when you add items to restaurant website with QR menu. Our system accepts JPEG, PNG, WebP, and GIF formats up to 5MB. Every image is automatically resized to 500x500 pixels and converted to WebP format for fast loading while maintaining excellent quality. This means your dishes always look their best on any device. Professional food photography significantly improves how customers perceive your restaurant when browsing your QR menu website.",
+          "benefitsTitle": "Benefits of Adding Items to Your Restaurant QR Menu Website",
+          "benefit1": "Add unlimited menu items with photos, descriptions, and prices",
+          "benefit2": "Automatic image optimization for fast loading and perfect display",
+          "benefit3": "Organize items into categories for easy customer navigation",
+          "benefit4": "Active/inactive toggle to hide sold-out items without deleting",
+          "benefit5": "Drag and drop reordering to arrange items in your preferred order",
+          "benefit6": "Mobile-friendly interface to add items from any device",
+          "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using IQ Rest. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, IQ Rest makes it easy to add items to restaurant website that attracts and converts customers.",
+          "ctaText": "Ready to add items to your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "How to Make QR Code Menu for Restaurant with Categories",
+        "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
+        "meta": {
+          "title": "How to Make QR Code Menu for Restaurant with Categories | IQ Rest",
+          "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
+        },
+        "content": {
+          "intro": "Want to know how to make QR code menu for restaurant with categories? IQ Rest now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "image1Alt": "How to make QR code menu for restaurant - categories list view",
+          "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
+          "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
+          "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
+          "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with IQ Rest. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "image2Alt": "Category form showing how to make QR code menu for restaurant",
+          "image2Caption": "Simple form interface for creating restaurant menu categories",
+          "section3Title": "Mobile-Optimized Category Management",
+          "section3Text": "We know restaurant owners are busy and often manage their menus on the go. That's why our category management is fully optimized for mobile devices. When you make QR code menu for restaurant using your phone, you'll find a compact interface with a three-dot menu for quick actions. Move categories up or down, edit details, or delete categories - all from your smartphone. This mobile-first approach ensures you can make QR code menu for restaurant with categories anytime, anywhere.",
+          "benefitsTitle": "Benefits of Making QR Code Menu with Categories",
+          "benefit1": "Organize menu items logically so customers can easily find what they want",
+          "benefit2": "Drag and drop reordering to arrange categories in your preferred display order",
+          "benefit3": "Active/inactive toggle to hide seasonal categories without deleting them",
+          "benefit4": "Mobile-optimized interface to manage categories from any device",
+          "benefit5": "Clean visual design with activity indicators for quick status overview",
+          "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
+          "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using IQ Rest. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, IQ Rest makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "ctaText": "Ready to make QR code menu for your restaurant with categories?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
+        "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
+        "meta": {
+          "title": "Easy QR Menu for Cafe - New Control Panel | IQ Rest",
+          "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
+        },
+        "content": {
+          "intro": "We're excited to introduce our brand new admin control panel designed to make creating QR menus for your cafe as easy as possible. Whether you're running a small coffee shop or a bustling cafe, our easy-to-use interface helps you manage your digital menu effortlessly. The new control panel features a modern sidebar design that puts all the tools you need to create your cafe's QR menu right at your fingertips.",
+          "image1Alt": "Easy QR menu control panel for cafe management",
+          "image1Caption": "New control panel with sidebar navigation for easy cafe QR menu creation",
+          "section1Title": "Modern Sidebar Interface for Easy Menu Management",
+          "section1Text": "The new control panel features a sleek sidebar that makes navigating your cafe's QR menu settings incredibly easy. With clearly organized sections for Dashboard, Categories, Products, QR Code, Analytics, Settings, Billing, and Support, you can easily find and manage every aspect of your cafe's digital menu. The sidebar collapses on mobile devices, ensuring easy access to all features regardless of what device you're using to manage your cafe's QR menu.",
+          "section2Title": "Easy Category and Product Management for Your Cafe",
+          "section2Text": "Creating and organizing your cafe's QR menu has never been easier. Our new category and product management pages are designed with simplicity in mind, allowing cafe owners to easily add, edit, and organize their menu items. Whether you're updating daily specials or adding seasonal drinks, the easy-to-use interface ensures your cafe's QR menu stays current and appealing to customers.",
+          "section3Title": "Server-Side Rendering for Fast Performance",
+          "section3Text": "The new control panel is built with server-side rendering (SSR) technology, ensuring your cafe's QR menu management dashboard loads quickly and efficiently. All data is fetched from the server, providing real-time updates and a smooth experience. This easy and fast approach means you spend less time waiting and more time perfecting your cafe's QR menu.",
+          "benefitsTitle": "Why This Makes QR Menu Creation Easy for Cafes",
+          "benefit1": "Easy navigation with modern sidebar interface for quick access to all cafe menu features",
+          "benefit2": "Easy category management to organize your cafe's QR menu logically",
+          "benefit3": "Easy product editing with instant updates to your cafe's digital menu",
+          "benefit4": "Easy QR code generation and customization for your cafe",
+          "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
+          "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
+          "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using IQ Rest to provide their customers with an easy, modern menu experience.",
+          "ctaText": "Ready to create an easy QR menu for your cafe?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
+        "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
+        "meta": {
+          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | IQ Rest",
+          "description": "Learn how to get QR menu for restaurants easily. New dedicated FAQ page answers all questions about getting QR menus for your restaurant. Streamlined 4-step guide to get started."
+        },
+        "content": {
+          "intro": "We've made it easier than ever to get QR menu for restaurants. Our reorganized FAQ and how-to content helps restaurant owners quickly find answers about how to get QR menus for their establishments. Whether you're looking to get a QR menu for your restaurant or café, this update provides all the information you need in one place.",
+          "image1Alt": "How to get QR menu for restaurants - dedicated FAQ page",
+          "image1Caption": "New FAQ page showing how to get QR menu for restaurants with organized questions and answers",
+          "section1Title": "Dedicated FAQ Page for Getting QR Menus",
+          "section1Text": "All questions about how to get QR menu for restaurants are now on a dedicated /faq page. Restaurant owners can easily find answers about getting QR menus, from setup to customization. Each question about getting a QR menu for your restaurant is displayed in its own card with expanded answers, making it simple to get the information you need to get started with QR menus for your restaurant.",
+          "section2Title": "4-Step Guide to Get QR Menu for Restaurants",
+          "section2Text": "Our streamlined guide shows exactly how to get QR menu for restaurants in just 4 easy steps. Whether you want to get a QR menu for your restaurant, café, or bar, the new card-based design makes it clear how to get started. This guide to get QR menus for restaurants appears on all pages, ensuring you always know how to get your restaurant's QR menu set up quickly.",
+          "section3Title": "SEO-Optimized Content to Help Restaurants Get QR Menus",
+          "section3Text": "We've optimized our content to help more restaurants discover how to get QR menus. The guide appears with full Schema.org structured data on the homepage, helping restaurants searching for how to get QR menu solutions find us easily. Our smart content distribution ensures restaurants can get the QR menu information they need while maintaining strong search engine visibility.",
+          "benefitsTitle": "Why This Helps You Get QR Menu for Your Restaurant",
+          "benefit1": "Dedicated FAQ page answers all questions about getting QR menus for restaurants",
+          "benefit2": "Clear 4-step guide shows exactly how to get QR menu for your restaurant",
+          "benefit3": "Easy access to FAQ and contact options to help you get your QR menu set up",
+          "benefit4": "SEO-optimized to help restaurants discover how to get QR menus easily",
+          "benefit5": "Consistent information about getting QR menus across the entire platform",
+          "benefit6": "Faster path to get QR menu for your restaurant with improved navigation",
+          "conclusionTitle": "Get QR Menu for Your Restaurant Today",
+          "conclusionText": "These improvements make it incredibly easy for restaurants to get QR menus. Whether you're a small café looking to get a QR menu or a large restaurant chain, our reorganized content helps you understand exactly how to get QR menu solutions for your establishment. Start now and get your restaurant's QR menu up and running in minutes.",
+          "ctaText": "Ready to get QR menu for your restaurant?",
+          "ctaButton": "Get QR Menu Now"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Free Restaurant Website Creation - Mobile Optimization & UX Improvements",
+        "description": "Major improvements to creating a free restaurant website: optimized mobile navigation with hamburger menu, enhanced signup page for better conversions, and streamlined user experience.",
+        "meta": {
+          "title": "Free Restaurant Website Creation Updates - IQ Rest Changelog",
+          "description": "Learn how IQ Rest improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
+        },
+        "content": {
+          "intro": "Creating a free restaurant website has never been easier or more mobile-friendly. We've made significant improvements to help restaurant and cafe owners build their professional website with a digital QR menu, especially on mobile devices where most people search for 'создание сайта для ресторана бесплатно' (free restaurant website creation). These updates focus on mobile navigation, signup page refinements, and overall user experience to ensure anyone can create a restaurant website for free without any technical knowledge.",
+          "image1Alt": "Mobile-optimized hamburger menu for restaurant website",
+          "image1Caption": "New mobile navigation with hamburger menu for easy access to all features",
+          "section1Title": "Mobile-First Navigation for Restaurant Websites",
+          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore IQ Rest's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
+          "section2Title": "Enhanced Get Started Page for Free Restaurant Website Creation",
+          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use IQ Rest now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
+          "image2Alt": "Optimized signup flow for free restaurant website creation",
+          "image2Caption": "Streamlined signup process optimized for mobile devices",
+          "section3Title": "Three-Step Process Optimized for All Devices",
+          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with IQ Rest.",
+          "benefitsTitle": "Key Improvements for Creating Free Restaurant Websites",
+          "benefit1": "Mobile-optimized hamburger menu navigation for easy access on smartphones",
+          "benefit2": "Enhanced signup page with better mobile spacing and centered layouts",
+          "benefit3": "Full-width restaurant counter on mobile providing strong social proof",
+          "benefit4": "Adaptive three-step process indicator that works on all screen sizes",
+          "benefit5": "Streamlined input forms optimized for mobile touch interaction",
+          "benefit6": "Fixed logout redirect issue ensuring proper navigation across all pages",
+          "conclusionTitle": "Free Restaurant Website Creation Made Simple",
+          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out IQ Rest on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
+          "ctaText": "Ready to create your free restaurant website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "landing-redesign": {
+        "title": "Redesigned Get Started Page for Higher Conversions",
+        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
+        "meta": {
+          "title": "Get Started Page Redesign - IQ Rest Changelog",
+          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+        },
+        "content": {
+          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
+          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
+          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
+          "section1Title": "Clear Value Propositions at a Glance",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section2Title": "Social Proof That Builds Trust",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
+          "section3Title": "Streamlined Signup Flow",
+          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
+          "benefitsTitle": "Key Improvements in This Update",
+          "benefit1": "Value proposition cards with icons for instant comprehension",
+          "benefit2": "Live restaurant counter providing authentic social proof",
+          "benefit3": "Unified page design for both email and OTP verification steps",
+          "benefit4": "Visual 3-step process indicator for transparency",
+          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
+          "benefit6": "Real-time email validation with visual feedback",
+          "conclusionTitle": "Designed for Restaurant Success",
+          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
+          "ctaText": "Ready to create your restaurant's digital menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "auth": {
+        "title": "New User Authentication Interface",
+        "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
+        "meta": {
+          "title": "User Authentication Interface - IQ Rest Changelog",
+          "description": "IQ Rest introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+        },
+        "content": {
+          "intro": "We are excited to announce the launch of our new user authentication interface for IQ Rest. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of IQ Rest authentication",
+          "image1Caption": "Simple email-based authentication - no passwords to remember",
+          "section1Title": "Passwordless Authentication for Restaurant Owners",
+          "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
+          "section2Title": "Streamlined QR Menu Creation Process",
+          "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
+          "image2Alt": "OTP verification step of IQ Rest authentication",
+          "image2Caption": "Secure 4-digit code verification sent directly to your email",
+          "section3Title": "Built for Speed and Security",
+          "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
+          "benefitsTitle": "Key Benefits for Your Restaurant",
+          "benefit1": "Create your restaurant website with QR menu in minutes - no technical skills required",
+          "benefit2": "No passwords to remember - secure email-based verification keeps your account safe",
+          "benefit3": "Instant access to your digital menu builder from any device",
+          "benefit4": "Quick updates to your QR menu even during busy service hours",
+          "conclusionTitle": "Start Building Your Digital Menu Today",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, IQ Rest provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "ctaText": "Ready to create your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "meta": {
+          "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+        },
+        "content": {
+          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
+          "image1Alt": "Subscription plans for QR menu and restaurant website creation",
+          "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
+          "section1Title": "Flexible Plans for Every Restaurant Size",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section2Title": "Simple Billing Dashboard",
+          "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
+          "section3Title": "Save 25% with Yearly Billing",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "benefitsTitle": "Benefits of Our Subscription Plans",
+          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
+          "benefit3": "Instant plan upgrades - new features activate immediately",
+          "benefit4": "Secure Stripe payment processing for all transactions",
+          "benefit5": "Easy plan management through simple billing dashboard",
+          "benefit6": "Downgrade anytime - no long-term contracts required",
+          "conclusionTitle": "Start Creating Your Restaurant Website Today",
+          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using IQ Rest to connect with their customers through modern, mobile-friendly QR menus.",
+          "ctaText": "Ready to choose your plan for QR menu and restaurant website?",
+          "ctaButton": "View Pricing Plans"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR Kóði",
+    "description": "Sæktu og prentaðu QR kóðann þinn fyrir viðskiptavini til að skanna",
+    "preview": "Forskoðun",
+    "paperFormat": "Pappírsform",
+    "qrPerPage": "QR Kóðar á síðu",
+    "customText": "Texti fyrir neðan QR kóðann",
+    "customTextPlaceholder": "Skannaðu til að skoða matseðilinn",
+    "print": "Prenta",
+    "download": "Sæktu PNG",
+    "viewMenu": "Skoða Matseðil",
+    "noSlug": "Engin Matseðilslína Stillt",
+    "noSlugDescription": "Vinsamlegast stilltu vefsíðu veitingastaðarins í stillingum fyrst til að búa til QR kóða.",
+    "goToSettings": "Fara í Stillingar",
+    "loading": "Hladar...",
+    "menuUrl": "Vefsíða þín",
+    "websiteReady": "Vefsíða þín er tilbúin!",
+    "openWebsite": "Opna Vefsíðu",
+    "printSection": "Prenta & Sæktu QR Kóða:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Bréf (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Heil síða)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Stærð Texta",
+    "textSizes": {
+      "small": "Lítill",
+      "medium": "Meðal",
+      "large": "Stór"
+    }
+  },
+  "support": {
+    "title": "Skilaboð",
+    "subtitle": "Fáðu aðstoð frá teymi okkar",
+    "unauthorized": "Vinsamlegast skráðu þig inn til að fá aðgang að stuðningi",
+    "lastUpdated": "Uppfært",
+    "emptyTitle": "Engin skilaboð enn",
+    "emptyDescription": "Sendu skilaboð til að hefja samtalið",
+    "sendMessage": "Senda skilaboð",
+    "placeholder": "Sláðu inn skilaboðin þín...",
+    "hint": "Ýttu á Enter til að senda, Shift+Enter fyrir nýja línu",
+    "send": "Senda",
+    "supportTeam": "Stuðningsteymi"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Búðu til stafræna matseðilinn þinn á 5 mínútum - IQ Rest",
+      "description": "QR matseðill og vefsíða fyrir veitingastaðinn þinn. Klárast strax. Engar tæknilegar færni nauðsynlegar."
+    },
+    "title": "Búðu til stafræna matseðilinn þinn á 5 mínútum",
+    "subtitle": "QR matseðill og vefsíða fyrir veitingastaðinn þinn. Klárast strax.",
+    "emailLabel": "Tölvupóstur",
+    "emailPlaceholder": "Sláðu inn tölvupóst til að byrja að búa til",
+    "otpPlaceholder": "Sláðu inn 4-sifru kóða",
+    "continue": "Búðu til matseðilinn minn",
+    "sending": "Búið til...",
+    "verifyTitle": "Athugaðu tölvupóstinn þinn",
+    "verifySubtitle": "Við sendum 4-sifru kóða til {email}",
+    "verify": "Staðfesta",
+    "verifying": "Staðfestir...",
+    "changeEmail": "Breyta tölvupósti",
+    "resendCode": "Endursenda kóða",
+    "successTitle": "Velkomin!",
+    "successSubtitle": "Þú hefur skráð þig inn með góðum árangri",
+    "redirecting": "Að vísa á stjórnborð...",
+    "errors": {
+      "sendFailed": "Mistókst að senda staðfestingarkóða. Vinsamlegast reyndu aftur.",
+      "verifyFailed": "Mistókst að staðfesta kóðann. Vinsamlegast reyndu aftur."
+    },
+    "valueProps": {
+      "noSkills": "Engar tæknilegar færni nauðsynlegar",
+      "instantUpdates": "Strax uppfærslur á matseðli",
+      "qrIncluded": "QR kóði + vefsíða innifalin",
+      "freeStart": "Ókeypis að byrja"
+    },
+    "formHelper": "Engin kreditkort nauðsynleg",
+    "setupTime": "Uppsetning á 5 mínútum",
+    "hasAccount": "Ertu með reikning nú þegar?",
+    "signIn": "Skráðu þig inn",
+    "restaurantCounter": "Taktu þátt í {count} veitingastöðum sem þegar nota IQ Rest",
+    "steps": {
+      "signUp": "Skráðu þig með tölvupóstinum þínum",
+      "addMenu": "Bættu við matseðilsatriðum þínum",
+      "getQr": "Fáðu QR kóðann þinn & byrjaðu"
+    },
+    "motivational": {
+      "title": "Byrjaðu að taka við pöntunum í dag",
+      "subtitle": "Kúnnar þínir bíða eftir stafrænum matseðli"
+    }
+  },
+  "reservations": {
+    "title": "Bókanir",
+    "tables": "Borð",
+    "settings": "Stillingar",
+    "addTable": "Bæta við borði",
+    "newTable": "Nýtt borð",
+    "editTable": "Breyta borði",
+    "tableNumber": "Borðnúmer",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Rúm fyrir (gesti)",
+    "capacityPlaceholder": "4",
+    "zone": "Svæði",
+    "zonePlaceholder": "Verönd, Gluggi, Aðal salur...",
+    "image": "Mynd",
+    "uploadImage": "Smelltu til að hlaða upp mynd",
+    "removeImage": "Fjarlægja",
+    "isActive": "Virkt",
+    "active": "Virkt",
+    "inactive": "Óvirkt",
+    "save": "Vista",
+    "saving": "Vistar...",
+    "cancel": "Hætta við",
+    "delete": "Eyða",
+    "deleteConfirm": "Ertu viss um að þú viljir eyða þessu borði?",
+    "table": "Borð",
+    "noTables": "Engin borð enn. Bættu við þínu fyrsta borði til að virkja bókanir.",
+    "error": "Villa",
+    "close": "Loka",
+    "noReservations": "Engar bókanir enn",
+    "pending": "Í bið",
+    "confirmed": "Staðfest",
+    "cancelled": "Hætt við",
+    "completed": "Lokið",
+    "confirm": "Staðfesta",
+    "reject": "Hafna",
+    "guests": "gestir",
+    "date": "Dagsetning",
+    "time": "Tími",
+    "guest": "Gestur",
+    "status": "Staða",
+    "notes": "Athugasemdir",
+    "awaitingResponse": "Bíð eftir svörum",
+    "today": "Í dag",
+    "tomorrow": "Á morgun",
+    "otherReservations": "Aðrar bókanir",
+    "sort": "Skrá"
+  },
+  "publicReserve": {
+    "title": "Bóka Borð",
+    "selectDate": "Veldu Dagsetningu",
+    "selectTime": "Veldu Tíma",
+    "selectGuests": "Fjöldi Gesta",
+    "selectTable": "Veldu Borð",
+    "yourDetails": "Þínar Upplýsingar",
+    "name": "Nafn",
+    "namePlaceholder": "Þitt nafn",
+    "email": "Tölvupóstur",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Sími (valfrjálst)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Sérstakar óskir (valfrjálst)",
+    "notesPlaceholder": "Allar sérstakar óskir eða athugasemdir...",
+    "submit": "Bóka Borð",
+    "submitting": "Bókun í gangi...",
+    "success": "Bókun Send!",
+    "successAuto": "Bókun þín er staðfest. Þú munt fá staðfestingarpóst fljótlega.",
+    "successManual": "Bókunarbeiðni þín hefur verið send. Þú munt fá tölvupóst þegar hún er staðfest.",
+    "error": "Villa",
+    "guests": "gestir",
+    "table": "Borð",
+    "capacity": "getu",
+    "noAvailableTables": "Engin borð í boði fyrir þennan fjölda gesta",
+    "back": "Tilbaka í Matseðil",
+    "noTimeSlotsAvailable": "Engir tímar í boði fyrir þessa dagsetningu",
+    "loadingAvailability": "Athuga aðgengi..."
+  },
+  "publicMenu": {
+    "contacts": "Samskipti",
+    "language": "Tungumál",
+    "reserve": "Panta borð",
+    "onlineMenu": "Vefmatseðill",
+    "noCategories": "Engar flokkarnir í boði",
+    "openInstagram": "Opna Instagram",
+    "makeCall": "Hringja",
+    "writeWhatsApp": "Skrifa á WhatsApp",
+    "openGoogleMaps": "Opna í Google Maps",
+    "noLocation": "Engin staðsetning í boði",
+    "english": "Enska",
+    "spanish": "Spænska",
+    "allergens": "Ofnæmisvaldar",
+    "allergensInfo": "Þetta réttur inniheldur eftirfarandi ofnæmisvalda:",
+    "allergenNames": {
+      "gluten": "Glúten",
+      "crustaceans": "Krabbadýr",
+      "eggs": "Egg",
+      "fish": "Fiskur",
+      "peanuts": "Jarðhnetur",
+      "soybeans": "Soja",
+      "dairy": "Mjólkurvörur",
+      "nuts": "Tréhneta",
+      "celery": "Sellerí",
+      "mustard": "Sins",
+      "sesame": "Sesam",
+      "sulphites": "Súlfít",
+      "lupin": "Lúpín",
+      "molluscs": "Molluskur"
+    }
+  },
+  "faq": {
+    "title": "Algengar spurningar um QR matseðil fyrir veitingastaði og kaffihús",
+    "subtitle": "Finndu svör við algengum spurningum um að búa til og stjórna stafrænum QR matseðli fyrir veitingastaði og kaffihús",
+    "howto": {
+      "question": "Hvernig á að búa til QR matseðil og veitingastaðavef í 4 einföldum skrefum?",
+      "answer": "Fáðu veitingastaðinn þinn á netið á 5 mínútum - sláðu bara inn netfangið þitt og byrjaðu frá símanum þínum",
+      "faqTitle": "Ertu með fleiri spurningar?",
+      "faqDescription": "Skoðaðu ítarlegar algengar spurningar okkar til að læra allt um að búa til og stjórna QR matseðli og vefsíðu veitingastaðarins þíns",
+      "faqButton": "Skoða allar algengar spurningar",
+      "contactButton": "Hafðu samband við okkur",
+      "steps": [
+        {
+          "name": "Skráðu þig inn með netfangi",
+          "text": "Fáðu nútíma veitingastaðavef með QR matseðli, tengiliðasíðu með korti, netpantanir og sérsniðna vörumerkjaskiptingu - allt innifalið frá upphafi."
+        },
+        {
+          "name": "Settu upp veitingastaðinn þinn",
+          "text": "Sláðu inn nafn veitingastaðarins þíns og veldu einstakt URL. Bættu við vídeó- eða myndabaki, stilltu litina þína og virkðu borðpantanir."
+        },
+        {
+          "name": "Bættu við flokkum og réttum",
+          "text": "Búðu til flokka á matseðli og bættu við réttum með myndum. AI hámarkar myndirnar þínar sjálfkrafa og þýðir matseðilinn þinn á 10+ tungumál."
+        },
+        {
+          "name": "Skoðaðu tilbúinn matseðil þinn",
+          "text": "Faglega vefsíðan þín er lifandi! Viðskiptavinir geta skoðað matseðilinn þinn, gert pantanir og fundið þig á kortinu. Fylgdu öllu með daglegum greiningum."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Hvað er QR matseðill fyrir veitingastað og hvernig virkar hann?",
+        "answer": "QR matseðill fyrir veitingastað er stafrænn matseðill sem viðskiptavinir geta aðgengið með því að skanna QR kóða með snjallsímanum sínum. IQ Rest býr til faglega stafræna matseðilvefsíðu fyrir veitingastaðinn þinn eða kaffihúsið sem uppfærir strax án þess að prenta út. Viðskiptavinir skanna einfaldlega kóðann og skoða matseðilinn á tækinu sínu."
+      },
+      {
+        "question": "Hvað kostar QR matseðill fyrir veitingastað eða kaffihús?",
+        "answer": "IQ Rest býður upp á sveigjanleg verðlagningu sem byrjar frá €0 að eilífu með okkar ókeypis áætlun. Þetta gerir það aðgengilegt fyrir hvaða veitingastað eða kaffihús sem er að búa til faglegan QR matseðil. Greiddar áætlanir byrja á aðeins €4/mánuði með aukafítum eins og ótakmarkaðar vörur og háþróaðar greiningar."
+      },
+      {
+        "question": "Get ég búið til vefsíðu fyrir veitingastaðinn minn án þess að kóða?",
+        "answer": "Já! IQ Rest er hannað fyrir eigendur veitingastaða og kaffihúsa án tæknilegrar þekkingar. Þú getur búið til fullkomna stafræna matseðilvefsíðu fyrir veitingastaðinn þinn á nokkrum mínútum, engin forritun eða kóðunarkunnátta nauðsynleg. Bættu einfaldlega við réttum, verðunum og myndum í gegnum okkar notendavæna viðmót."
+      },
+      {
+        "question": "Hversu oft get ég uppfært QR matseðilinn minn?",
+        "answer": "Þú getur uppfært matseðil veitingastaðarins eða kaffihússins eins oft og þú þarft. Allar breytingar eru sýndar í rauntíma, sem gerir þér kleift að uppfæra verð strax, bæta við nýjum réttum eða breyta lýsingum án þess að prenta út líkamlega matseðla. Fullkomið fyrir dagleg tilboð og árstíðabundnar uppfærslur."
+      },
+      {
+        "question": "Virkar QR matseðillinn fyrir bæði veitingastaði og kaffihús?",
+        "answer": "Algjörlega! IQ Rest er fullkomið fyrir veitingastaði, kaffihús, kaffihús, barir, matvagn og hvaða matþjónustufyrirtæki sem er. Stafræna matseðilllausnin okkar aðlagast að hvaða tegund stofnunar sem er, frá litlum kaffihúsum til stórra veitingastaðakeðja."
+      },
+      {
+        "question": "Hvernig virkar sjálfvirk þýðing matseðils?",
+        "answer": "QR matseðilkerfið okkar notar gervigreind til að þýða matseðil veitingastaðarins eða kaffihússins þíns sjálfkrafa á mörg tungumál. Þetta er fullkomið fyrir ferðamannasvæði og alþjóðlega viðskiptavini. Þú getur boðið matseðilinn þinn á ensku, spænsku og öðrum tungumálum, sem hjálpar þér að þjóna fleiri viðskiptavinum."
+      },
+      {
+        "question": "Get ég prófað QR matseðilllausnina ókeypis?",
+        "answer": "Já! Við bjóðum upp á alveg ókeypis áætlun fyrir veitingastaði og kaffihús til að prófa IQ Rest. Þú getur búið til stafræna matseðilvefsíðu þína með allt að 15 vörum án kostnaðar, að eilífu. Engin kreditkort þarf til að byrja. Uppfærðu aðeins þegar þú þarft fleiri aðgerðir."
+      },
+      {
+        "question": "Er IQ Rest forrit sem viðskiptavinir þurfa að sækja?",
+        "answer": "Nei! Þetta er ein af bestu kostunum. Viðskiptavinir þurfa ekki að sækja neitt forrit. Þeir skanna einfaldlega QR kóðann þinn og matseðillinn opnast strax í vafranum þeirra. Þetta gerir það mun þægilegra en veitingastaðaforrit sem krafist er niðurhal."
+      },
+      {
+        "question": "Hverjir eru kostir stafrænnar matseðilvefsíðu fyrir veitingastaðinn minn?",
+        "answer": "Stafrænn matseðillvefur býður upp á marga kosti: strax uppfærslur á matseðli án kostnaðar við prentun, fjöltyngd stuðningur fyrir alþjóðlega viðskiptavini, snertilaus pöntun fyrir öryggi, greiningar til að sjá vinsæla rétti, og fagleg framsetning. Auk þess er það umhverfisvænt þar sem þú útrýmir pappírs matseðilrusli."
+      },
+      {
+        "question": "Hvernig bjó ég til QR kóða fyrir matseðilinn minn?",
+        "answer": "IQ Rest býr sjálfkrafa til faglegan QR kóða þegar þú býrð til stafræna matseðilinn þinn. Þú getur halað niður og prentað þennan QR kóða fyrir borð veitingastaðarins þíns, innganginn eða afgreiðsluborðið. QR kóðinn er sérsniðinn og hágæðakóðun fyrir skýra skönnun."
+      }
+    ],
+    "cta": {
+      "title": "Ertu enn með spurningar?",
+      "subtitle": "Spyrðu okkur og fáðu svar á sem skemmstum tíma",
+      "button": "Hafðu samband við okkur"
+    },
+    "linkTitle": "Ertu með spurningar?",
+    "linkDescription": "Skoðaðu algengar spurningar okkar til að læra meira um IQ Rest",
+    "meta": {
+      "title": "Algengar spurningar - IQ Rest",
+      "description": "Finndu svör við algengum spurningum um stafræna QR matseðilllausn IQ Rest fyrir veitingastaði og kaffihús"
+    }
+  },
+  "billing": {
+    "title": "Reikningur",
+    "description": "Stjórnaðu áskrift þinni og reikningum",
+    "unauthorized": "Vinsamlegast skráðu þig inn til að stjórna áskrift þinni",
+    "perMonth": "/mánuði",
+    "currentPlan": "Núverandi áætlun",
+    "upgrade": "Uppfæra",
+    "manage": "Stjórna",
+    "subscriptionSuccess": "Þín áskrift hefur verið virkjuð með góðum árangri!",
+    "subscriptionCanceled": "Áskriftarferlið var aflýst.",
+    "subscriptionProcessing": "Greiðslan þín er í vinnslu. Það getur tekið nokkrar mínútur að virkja.",
+    "processingPayment": "Vinnsla greiðslu þinnar...",
+    "processingPaymentDescription": "Vinsamlegast bíðu meðan við staðfestum áskrift þína. Þetta tekur venjulega nokkrar sekúndur.",
+    "checkoutError": "Mistókst að hefja greiðsluferlið. Vinsamlegast reyndu aftur.",
+    "portalError": "Mistókst að opna reikningsportalinn. Vinsamlegast reyndu aftur.",
+    "detailsNote": "Fyrir frekari upplýsingar, heimsæktu okkar",
+    "pricingPage": "Verðsíðu",
+    "plans": {
+      "FREE": {
+        "name": "Frítt"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Grunn mánaðarlega"
+      },
+      "BASIC_YEARLY": {
+        "name": "Grunn árlega"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro mánaðarlega"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro árlega"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Stjórnborð",
+      "onboarding": "Upphaf",
+      "qrMenu": "QR Matseðill",
+      "analytics": "Greining",
+      "categories": "Flokkar",
+      "items": "Vörur",
+      "settings": "Almennar stillingar",
+      "design": "Hönnun",
+      "contacts": "Samskipti",
+      "languages": "Tungumál",
+      "reservations": "Bókanir",
+      "reservationSettings": "Bókunarstillingar",
+      "tables": "Borð",
+      "billing": "Reikningur",
+      "support": "Stuðningur"
+    },
+    "sidebar": {
+      "qrMenu": "QR Matseðill",
+      "menu": "Matseðill",
+      "settings": "Stillingar",
+      "reservations": "Bókanir",
+      "account": "Reikningur",
+      "reservationSettings": "Skilgreining"
+    },
+    "logout": "Útskráning",
+    "auth": {
+      "title": "Skrá inn",
+      "subtitle": "Nútímaleg vefsíða með QR matseðli, bókunum og AI þýðingum",
+      "benefits": "Engin lykilorð. Engin kreditkort.",
+      "emailPlaceholder": "your@email.com",
+      "continue": "Halda áfram",
+      "verifyTitle": "Athugaðu tölvupóstinn þinn",
+      "verifySubtitle": "Við sendum kóða á {email}",
+      "verify": "Staðfesta",
+      "changeEmail": "Nota annan tölvupóst",
+      "errors": {
+        "sendFailed": "Mistókst að senda kóðann. Vinsamlegast reyndu aftur.",
+        "verifyFailed": "Ógildur kóði. Vinsamlegast reyndu aftur."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Mánaðarleg notkun",
+      "scansThisMonth": "skönnunir þennan mánuð",
+      "limitReached": "Þú hefur náð mánaðarlegu skönnunarhámarki þínu. Uppfærðu áætlunina þína fyrir ótakmarkaðar skönnanir.",
+      "todayViews": "Í dag",
+      "weeklyViews": "Þessa viku",
+      "monthlyViews": "Þennan mánuð",
+      "uniqueVisitors": "Einstaklingar",
+      "viewsByPage": "Skoðanir eftir síðu",
+      "viewsByLanguage": "Skoðanir eftir tungumáli",
+      "dailyViews": "Daglegar skoðanir",
+      "noData": "Engin gögn tiltæk enn",
+      "pageNames": {
+        "home": "Heim",
+        "menu": "Matseðill",
+        "contacts": "Samskipti",
+        "language": "Tungumál",
+        "reserve": "Bóka"
+      },
+      "languageNames": {
+        "en": "Enska",
+        "es": "Español",
+        "de": "Þýska",
+        "fr": "Franska",
+        "ru": "Русский"
+      }
+    },
+    "categories": {
+      "noCategories": "Engar flokka enn. Búðu til þinn fyrsta flokk til að byrja.",
+      "addCategory": "Bæta við",
+      "editCategory": "Breyta flokki",
+      "name": "Nafn",
+      "namePlaceholder": "Sláðu inn nafn flokks",
+      "status": "Staða",
+      "active": "Virkt",
+      "inactive": "Óvirkt",
+      "save": "Vista",
+      "saving": "Vinn að vistun...",
+      "cancel": "Hætta við",
+      "delete": "Eyða",
+      "deleteConfirm": "Ertu viss um að þú viljir eyða þessum flokki? Þessi aðgerð er ekki hægt að afturkalla.",
+      "fetchError": "Mistókst að hlaða flokkum",
+      "updateError": "Mistókst að uppfæra flokk",
+      "saveError": "Mistókst að vista flokk",
+      "deleteError": "Mistókst að eyða flokki",
+      "translateError": "Þýðing mistókst",
+      "nameRequired": "Nafn er nauðsynlegt",
+      "enabled": "virkt",
+      "disabled": "óvirkt",
+      "created": "Flokkur búinn til",
+      "updated": "Flokkur uppfærður",
+      "deleted": "Flokkur eytt",
+      "validationErrorTitle": "Vinsamlegast lagfærðu eftirfarandi villur",
+      "sort": "Raða",
+      "saveSort": "Vista",
+      "sortSaved": "Röðun vistuð",
+      "sortError": "Mistókst að vista röðun"
+    },
+    "items": {
+      "noItems": "Engir hlutir enn. Búðu til þinn fyrsta hlut til að byrja.",
+      "addItem": "Bæta við",
+      "editItem": "Breyta hlut",
+      "name": "Nafn",
+      "namePlaceholder": "Sláðu inn nafn hlut",
+      "description": "Lýsing",
+      "descriptionPlaceholder": "Sláðu inn lýsingu á hlut",
+      "price": "Verð",
+      "pricePlaceholder": "0.00",
+      "category": "Flokkur",
+      "categoryPlaceholder": "Veldu flokk",
+      "image": "Mynd",
+      "uploadImage": "Hlaða upp mynd",
+      "removeImage": "Fjarlægja mynd",
+      "status": "Staða",
+      "active": "Virkt",
+      "inactive": "Óvirkt",
+      "save": "Vista",
+      "saving": "Vistar...",
+      "cancel": "Hætta við",
+      "delete": "Eyða",
+      "deleteConfirm": "Ertu viss um að þú viljir eyða þessum hlut? Þessi aðgerð er ekki hægt að afturkalla.",
+      "fetchError": "Mistókst að hlaða inn hlutum",
+      "updateError": "Mistókst að uppfæra hlut",
+      "saveError": "Mistókst að vista hlut",
+      "deleteError": "Mistókst að eyða hlut",
+      "translateError": "Þýðing mistókst",
+      "nameRequired": "Nafn er nauðsynlegt",
+      "categoryRequired": "Flokkur er nauðsynlegur",
+      "priceRequired": "Gilt verð er nauðsynlegt",
+      "enabled": "virkt",
+      "disabled": "óvirkt",
+      "created": "Hlutur búinn til",
+      "updated": "Hlutur uppfærður",
+      "deleted": "Hlutur eytt",
+      "validationErrorTitle": "Vinsamlegast lagfærðu eftirfarandi villur",
+      "sort": "Raða",
+      "saveSort": "Vista",
+      "sortSaved": "Röðun vistuð",
+      "sortError": "Mistókst að vista röðun",
+      "allergens": "Ofnæmisvaldar",
+      "allergensHint": "Veldu ofnæmisvalda sem eru til staðar í þessum rétt",
+      "allergenNames": {
+        "gluten": "Glúten",
+        "crustaceans": "Krabbadýr",
+        "eggs": "Egg",
+        "fish": "Fiskur",
+        "peanuts": "Hnetur",
+        "soybeans": "Soyabönn",
+        "dairy": "Mjólkurvörur",
+        "nuts": "Hnetur",
+        "celery": "Sellerí",
+        "mustard": "Sínaps",
+        "sesame": "Sesam",
+        "sulphites": "Súlfít",
+        "lupin": "Lúpín",
+        "molluscs": "Molluskur"
+      }
+    },
+    "languages": {
+      "translationProgress": "Þýðingarframvinda",
+      "availableLanguages": "Í boði tungumál",
+      "europeanLanguages": "Evrópsk tungumál",
+      "starToSetDefault": "Smelltu á stjörnu til að stilla sem sjálfgefið",
+      "default": "sjálfgefið",
+      "hint": "Virkjaðu tungumál til að leyfa viðskiptavinum að skoða matseðilinn þinn á mörgum tungumálum. Sjálfgefið tungumál er notað fyrir aðalefnið.",
+      "fetchError": "Mistókst að hlaða inn tungumálum",
+      "enableError": "Mistókst að virkja tungumál",
+      "disableError": "Mistókst að óvirkja tungumál",
+      "defaultError": "Mistókst að stilla sjálfgefið tungumál",
+      "languageEnabled": "{language} virkt",
+      "languageDisabled": "{language} óvirkt",
+      "defaultSet": "{language} stillt sem sjálfgefið",
+      "cannotDisableDefault": "Ekki er hægt að óvirkja sjálfgefið tungumál",
+      "atLeastOneRequired": "Að minnsta kosti eitt tungumál er nauðsynlegt",
+      "enableFirst": "Virkjaðu tungumál fyrst",
+      "deleteConfirm": "Að óvirkja þetta tungumál mun eyða öllum þýðingum fyrir það. Þessi aðgerð er ekki hægt að afturkalla.",
+      "cancel": "Hætta við",
+      "confirm": "Óvirkja"
+    },
+    "contacts": {
+      "phone": "Sími",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Símatalna fyrir viðskiptavini þína",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "veitingastaðurinn þinn",
+      "instagramHint": "Notendanafn þitt á Instagram (án @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp númer fyrir fyrirspurnir viðskiptavina",
+      "location": "Staðsetning",
+      "locationHint": "Smelltu á kortið eða leitaðu til að stilla staðsetningu veitingastaðarins þíns",
+      "save": "Vista",
+      "fetchError": "Mistókst að hlaða inn tengiliðaupplýsingum",
+      "saveError": "Mistókst að vista tengiliðaupplýsingar",
+      "saved": "Tengiliðaupplýsingar vistaðar"
+    },
+    "design": {
+      "background": "Bakgrunn",
+      "backgroundHint": "Hladdu upp vídeó eða mynd fyrir bakgrunn heimasíðu þinnar",
+      "uploadMedia": "Hladdu upp vídeó eða mynd",
+      "removeMedia": "Fjarlægja",
+      "accentColor": "Aðal litur",
+      "accentColorHint": "Aðal litur fyrir takka og áherslur á vefsíðunni þinni",
+      "presetColors": "Fyrirfram stilltir litir",
+      "customColor": "Sérsniðinn litur",
+      "save": "Vista",
+      "fetchError": "Mistókst að hlaða hönnunarskilyrðum",
+      "saveError": "Mistókst að vista hönnunarskilyrði",
+      "saved": "Hönnunarskilyrði vistuð",
+      "uploadError": "Mistókst að hlaða upp skjali",
+      "invalidFileType": "Ógild skjalategund. Leyfð: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Skrá er of stór. Hámarksstærð: 50MB fyrir vídeó, 5MB fyrir myndir"
+    },
+    "general": {
+      "name": "Titill",
+      "namePlaceholder": "Sláðu inn nafn veitingastaðar",
+      "nameHint": "Sýnt á heimasíðu opinberu vefsíðunnar þinnar",
+      "description": "Undirtitill",
+      "descriptionPlaceholder": "Stutt lýsing (valfrjálst)",
+      "descriptionHint": "Sýnt undir titlinum á heimasíðunni",
+      "slug": "URL Slug",
+      "slugPlaceholder": "minn-veitingastaður",
+      "slugHint": "Vefsíðan þín verður aðgengileg á: iq-rest.com/{slug}",
+      "currency": "Gjaldmiðill",
+      "currencyPlaceholder": "Veldu gjaldmiðil",
+      "save": "Vista",
+      "fetchError": "Mistókst að hlaða stillingum",
+      "saveError": "Mistókst að vista stillingar",
+      "saved": "Stillingar vistaðar",
+      "nameRequired": "Nafn veitingastaðar er nauðsynlegt",
+      "slugRequired": "URL slug er nauðsynlegt",
+      "validationErrorTitle": "Vinsamlegast lagfærðu eftirfarandi villur",
+      "slugChangedTitle": "Vefsíðuheimilisfang uppfært",
+      "slugChangedDescription": "Veitingastaðurinn þinn er nú aðgengilegur á:",
+      "close": "Loka",
+      "view": "Skoða"
+    },
+    "onboarding": {
+      "title": "Velkomin/n til IQ Rest!",
+      "subtitle": "Fylltu út þessar skref til að hefja vefsíðu veitingastaðarins þíns",
+      "requiredSteps": "Nauðsynleg skref",
+      "optionalSteps": "Valfrjáls skref",
+      "viewMenu": "Skoða Matseðilinn þinn",
+      "steps": {
+        "title": {
+          "name": "Bæta við Nafni Veitingastaðar",
+          "description": "Gefðu veitingastaðnum þínum nafn sem mun birtast á vefsíðunni þinni"
+        },
+        "slug": {
+          "name": "Setja Vefsíðuheimilisfang",
+          "description": "Veldu einstakt URL fyrir vefsíðu veitingastaðarins þíns"
+        },
+        "categories": {
+          "name": "Búa til Flokkar á Matseðli",
+          "description": "Skipuleggja matseðilinn þinn með flokkum eins og Forréttir, Aðalréttir, o.s.frv."
+        },
+        "items": {
+          "name": "Bæta við Matseðilsatriðum",
+          "description": "Bæta réttum við matseðilinn þinn með verð og lýsingum"
+        },
+        "design": {
+          "name": "Sérsníða Hönnun",
+          "description": "Veldu liti og bakgrunn fyrir vefsíðuna þína"
+        },
+        "contacts": {
+          "name": "Bæta við Tengiliðaupplýsingum",
+          "description": "Bæta við síma, WhatsApp, Instagram og staðsetningu"
+        },
+        "reservations": {
+          "name": "Virkja Pantanir",
+          "description": "Leyfa viðskiptavinum að panta borð á netinu"
+        },
+        "translations": {
+          "name": "Bæta við Tungumálum",
+          "description": "Gera matseðilinn þinn aðgengilegan á mörgum tungumálum"
+        }
+      },
+      "completed": "Lokið",
+      "notCompleted": "Ekki lokið",
+      "allDone": "Allt klárt! Matseðillinn þinn er lifandi.",
+      "requiredRemaining": "{count} nauðsynleg skref eftir"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Til að gera bókanir aðgengilegar fyrir gesti veitingastaðarins þíns þarftu að skrá þig í þjónustuna.",
+    "subscribe": "Skrá sig",
+    "reservationsEnabled": "Virkja bókanir",
+    "enabled": "Bókanir eru virkar",
+    "disabled": "Bókanir eru óvirkar",
+    "reservationMode": "Staðfestingarástand",
+    "modeAuto": "Sjálfvirkt",
+    "modeManual": "Handvirkt",
+    "modeAutoDescription": "Bókanir verða sjálfkrafa staðfestar miðað við framboð á borðum",
+    "modeManualDescription": "Þú þarft að staðfesta hverja bókun handvirkt",
+    "slotDuration": "Bókunartími",
+    "minutes": "mínútur",
+    "workingHours": "Vinnustundir",
+    "save": "Vista",
+    "saving": "Er að vista...",
+    "saved": "Stillingar vistaðar",
+    "fetchError": "Mistókst að hlaða stillingum",
+    "saveError": "Mistókst að vista stillingar"
+  },
+  "terms": {
+    "title": "Skilmálar og skilyrði",
+    "lastUpdated": "Síðast uppfært: 17. desember 2025",
+    "contact": {
+      "title": "Hafðu samband við okkur",
+      "description": "Ef þú hefur einhverjar spurningar um þessa skilmála og skilyrði, vinsamlegast hafðu samband við okkur."
+    },
+    "sections": [
+      {
+        "title": "1. Inngangur",
+        "content": [
+          "Velkomin(n) í IQ Rest. Þessir skilmálar og skilyrði stjórna notkun þinni á vefsíðu okkar og þjónustu sem rekin er af Bogdan Sokolov (Autónomo), NIE: Z1894474S, skráð í Spáni.",
+          "Með því að nálgast eða nota IQ Rest samþykkir þú að vera bundinn af þessum skilmálum. Ef þú ert ekki sammála einhverju af þessum skilmálum, máttu ekki nálgast þjónustuna."
+        ]
+      },
+      {
+        "title": "2. Lýsing á þjónustu",
+        "content": [
+          "IQ Rest býður upp á stafrænt QR matseðil og vefsíðugerðarpall fyrir veitingastaði, kaffihús og matvælaþjónustu. Þjónustan okkar felur í sér matseðilstjórnun, QR kóða myndun, fjöltyngda stuðning með AI-stuðlaðri þýðingu, AI myndabætur, borðpantanakerfi og greiningar.",
+          "Við áskiljum okkur rétt til að breyta, fresta eða hætta hvaða hluta þjónustunnar sem er hvenær sem er án fyrirvara."
+        ]
+      },
+      {
+        "title": "3. Skráning á reikning",
+        "content": [
+          "Til að nota ákveðna eiginleika IQ Rest þarftu að skrá reikning með gilt netfang. Þú berð ábyrgð á að viðhalda trúnaði reikningsins þíns og öllum aðgerðum sem eiga sér stað undir þínum reikningi.",
+          "Þú samþykkir að veita nákvæmar, núverandi og fullnægjandi upplýsingar við skráningu og að uppfæra slíkar upplýsingar til að halda þeim nákvæmum, núverandi og fullnægjandi.",
+          "Við notum lykilorðslaus auðkenningu í gegnum netfangsstaðfestingarkóða. Þú berð ábyrgð á að viðhalda öryggi netfangs reikningsins þíns."
+        ]
+      },
+      {
+        "title": "4. Afgreiðslusamningar og greiðslur",
+        "content": [
+          "IQ Rest býður upp á fríar, grunn- og próf afgreiðslusamninga. Fríi samningurinn er í boði án kostnaðar með takmörkuðum eiginleikum. Greiddir samningar (Grunn og Pró) eru reiknaðir mánaðarlega eða árlega í gegnum greiðsluvinnsluaðila okkar, Stripe.",
+          "Verð er sýnt í evrum (EUR). Með því að skrá þig í greiddan samning heimilar þú okkur að rukka greiðsluaðferð þína á reglulegu millibili þar til þú segir upp.",
+          "Þú getur uppfært, lækkað eða sagt upp áskrift þinni hvenær sem er í gegnum stjórnborðið þitt. Uppsagnir taka gildi við lok núverandi greiðslutímabils. Engar endurgreiðslur eru veittar fyrir hlutbundin greiðslutímabil.",
+          "Við áskiljum okkur rétt til að breyta verðinu okkar með 30 daga fyrirvara. Verðbreytingar munu gilda fyrir greiðslutímabil sem hefjast eftir fyrirvara."
+        ]
+      },
+      {
+        "title": "5. AI-stuðlaðir eiginleikar",
+        "content": [
+          "IQ Rest notar gervigreind fyrir þýðingar á matseðlum og myndabætur. Þó við stefnum að nákvæmni, geta AI-sköpuð þýðingar innihaldið villur. Þú berð ábyrgð á að fara yfir og staðfesta allt AI-sköpuð efni áður en það er birt.",
+          "AI myndabætur fer sjálfkrafa í gegnum hlaðnar myndir til að bæta hleðsluhraða. Upprunalegar myndir eru ekki geymdar eftir vinnslu.",
+          "Við ábyrgjumst ekki nákvæmni, fullnægjandi eða áreiðanleika AI-sköpuðs efnis. Þú viðurkennir að AI-eiginleikar eru veittir 'eins og þeir eru' og notar þá á eigin ábyrgð."
+        ]
+      },
+      {
+        "title": "6. Notenduefni",
+        "content": [
+          "Þú heldur áfram að eiga allt efni sem þú hleður upp í IQ Rest, þar á meðal matseðilgreinar, lýsingar, myndir og fyrirtækjaupplýsingar.",
+          "Með því að hlaða upp efni veitirðu IQ Rest óframseljanlegan, alþjóðlegan, gjaldfrjálsan leyfi til að nota, sýna og dreifa efni þínu eingöngu í því skyni að veita þjónustuna.",
+          "Þú berð einungis ábyrgð á efni sem þú hleður upp og verður að tryggja að það brjóti ekki gegn lögum eða réttindum þriðja aðila. Bannað efni felur í sér: ólöglegt efni, höfundarréttarvarið efni án heimildar, villandi eða sviksamlegar upplýsingar, og efni sem brýtur gegn heilsu- og öryggisreglum."
+        ]
+      },
+      {
+        "title": "7. Viðunandi notkun",
+        "content": [
+          "Þú samþykkir að nota ekki IQ Rest í neinum ólöglegum tilgangi eða á neinn hátt sem gæti skaðað, lamað eða skert þjónustuna.",
+          "Bannaðar aðgerðir fela í sér: að reyna að fá óheimilan aðgang að öðrum reikningum eða kerfum, að nota þjónustuna til að dreifa ruslpósti eða skaðlegum hugbúnaði, að skrapa eða safna gögnum, að þykjast vera aðrir einstaklingar eða fyrirtæki, og að umganga notkunarmörk eða öryggisráðstafanir."
+        ]
+      },
+      {
+        "title": "8. Hugverkaréttur",
+        "content": [
+          "Heitið IQ Rest, merkið, hönnun vefsíðunnar og allt tengt hugverkaréttur er í eigu Bogdan Sokolov og er varið af gildandi hugverkaréttarlögum.",
+          "Þú mátt ekki afrita, breyta, dreifa eða búa til afleidd verk byggð á hugverkarétti okkar án skriflegrar heimildar."
+        ]
+      },
+      {
+        "title": "9. Persónuvernd og gagnavernd",
+        "content": [
+          "Notkun þín á IQ Rest er einnig stjórnað af persónuverndarstefnu okkar. Við fylgjum almennum reglugerðum um gagnavernd (GDPR) og spænskum lögum um gagnavernd (LOPDGDD).",
+          "Við söfnum og vinnum persónuupplýsingar sem nauðsynlegar eru til að veita þjónustuna, þar á meðal netföng, fyrirtækjaupplýsingar og notkunargreiningar. Þú getur óskað eftir aðgangi að, leiðréttingu á, eða eyðingu persónuupplýsinga þinna hvenær sem er."
+        ]
+      },
+      {
+        "title": "10. Takmörkun á ábyrgð",
+        "content": [
+          "IQ Rest er veitt 'eins og það er' og 'eins og það er tiltækt' án neinna ábyrgða, hvort sem þær eru skriflegar eða óskriflegar, þar á meðal en ekki takmarkað við óskriflegar ábyrgðir um söluhæfi og hæfi fyrir ákveðinn tilgang.",
+          "Að því marki sem lög leyfa, ber Bogdan Sokolov ekki ábyrgð á neinum óbeinum, tilfallandi, sérstökum, afleiðingum eða refsiviðurlögum, þar á meðal tapi á hagnaði, gögnum eða viðskiptatækifærum.",
+          "Heildar ábyrgð okkar á öllum kröfum sem stafa af eða tengjast þjónustunni má ekki fara yfir þá upphæð sem þú greiddir okkur á tólf (12) mánuðum áður en krafa var gerð."
+        ]
+      },
+      {
+        "title": "11. Skaðabætur",
+        "content": [
+          "Þú samþykkir að skaðabætur, verja og halda Bogdan Sokolov skaðlausum fyrir allar kröfur, skaða, tap eða kostnað sem stafar af notkun þinni á þjónustunni, efni þínu, eða broti á þessum skilmálum."
+        ]
+      },
+      {
+        "title": "12. Aðgengi að þjónustu",
+        "content": [
+          "Við stefnum að því að viðhalda háum aðgengi að þjónustunni okkar en ábyrgjumst ekki óslitna aðgang. Þjónustan getur verið tímabundið ófáanleg vegna viðhalds, uppfærslna eða aðstæðna sem eru utan okkar stjórn.",
+          "Við berum ekki ábyrgð á neinu tapi eða skaða sem stafar af truflunum á þjónustu eða niðurföllum."
+        ]
+      },
+      {
+        "title": "13. Uppsögn",
+        "content": [
+          "Við getum sagt upp eða frestað reikningi þínum strax, án fyrirvara, vegna hegðunar sem við teljum að brjóti gegn þessum skilmálum eða sé skaðleg öðrum notendum, okkur eða þriðja aðila.",
+          "Við uppsögn, hættir réttur þinn til að nota þjónustuna strax. Við gætum eytt gögnum þínum innan 30 daga frá uppsögn, nema lög krafist að viðhalda þeim."
+        ]
+      },
+      {
+        "title": "14. Breytingar á skilmálum",
+        "content": [
+          "Við áskiljum okkur rétt til að breyta þessum skilmálum hvenær sem er. Við munum tilkynna þér um verulegar breytingar í gegnum netfang eða í gegnum þjónustuna.",
+          "Þín áframhaldandi notkun á IQ Rest eftir að breytingar taka gildi telst samþykki á endurskoðuðum skilmálum."
+        ]
+      },
+      {
+        "title": "15. Gildandi lög og dómstólar",
+        "content": [
+          "Þessir skilmálar eru stjórnaðir af lögum Spánar og Evrópusambandsins. Allar deilur sem stafa af þessum skilmálum eða notkun þinni á IQ Rest skulu vera háðar einkarétti dómstóla í Spáni.",
+          "Ef einhver ákvæði þessara skilmála er talið óframkvæmanlegt, munu hin ákvæðin halda áfram að gilda í fullum gildi."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Persónuverndarstefna",
+    "lastUpdated": "Síðast uppfært: 17. desember 2025",
+    "contact": {
+      "title": "Hafðu samband við okkur",
+      "description": "Ef þú hefur einhverjar spurningar um þessa persónuverndarstefnu eða vilt nýta réttindi þín varðandi persónuvernd, vinsamlegast hafðu samband við okkur.",
+      "controller": "Persónuupplýsingastjóri"
+    },
+    "sections": [
+      {
+        "title": "1. Inngangur",
+        "content": [
+          "Þessi persónuverndarstefna útskýrir hvernig IQ Rest, rekið af Bogdan Sokolov (Autónomo), NIE: Z1894474S, skráð í Spáni, safnar, notar, geymir og verndar persónuupplýsingar þínar þegar þú notar QR matseðil vettvang okkar.",
+          "Við erum skuldbundin til að vernda friðhelgi þína og fylgja almennu persónuverndarlögunum (GDPR), spænsku lífrænu lögunum um persónuvernd (LOPDGDD) og öðrum viðeigandi lögum um persónuvernd."
+        ]
+      },
+      {
+        "title": "2. Persónuupplýsingastjóri",
+        "content": [
+          "Persónuupplýsingastjórinn sem ber ábyrgð á persónuupplýsingum þínum er: Bogdan Sokolov (Autónomo), NIE: Z1894474S, skráð í Spáni. Fyrir allar fyrirspurnir um persónuvernd, vinsamlegast hafðu samband við okkur á support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Persónuupplýsingar sem við safna",
+        "content": [
+          "Aðgangsupplýsingar: Þegar þú skráir þig, safnar við netfangi þínu til að staðfesta og hafa samband. Við notum lykilorðalausa staðfestingu, svo við geymum ekki lykilorð.",
+          "Fyrirtækjaupplýsingar: Nafn veitingastaðar, lýsing, URL slug, tengiliðaupplýsingar (sími, WhatsApp, Instagram), staðsetningargögn og opnunartímar sem þú veitir fyrir opinberan matseðil vefsíðuna þína.",
+          "Matseðil innihald: Flokkar, matseðil atriði, lýsingar, verð og myndir sem þú hleður upp til að búa til stafrænan matseðil.",
+          "Notkunargögn: Upplýsingar um hvernig þú notar þjónustu okkar, þar á meðal heimsóknir á síður, notkun eiginleika og samskiptamynstur sem safnað er með greiningum.",
+          "Greiðsluupplýsingar: Þegar þú skráir þig í greidd áætlun, er greiðsluferlið unnið af Stripe. Við geymum ekki fullar kreditkortaupplýsingar þínar; Stripe fer með og tryggir þessar upplýsingar.",
+          "Tæknileg gögn: IP heimildir, vafra tegund, tækinfó og kökur eins og lýst er í kökustefnu okkar."
+        ]
+      },
+      {
+        "title": "4. Hvernig við notum gögnin þín",
+        "content": [
+          "Við notum persónuupplýsingar þínar í eftirfarandi tilgangi: Til að veita og viðhalda QR matseðil þjónustu okkar, þar á meðal að búa til vefsíðu veitingastaðarins þíns og búa til QR kóða. Til að staðfesta aðgang þinn með netfang staðfestingarkóðum. Til að vinna úr greiðslum og stjórna áskrift þinni í gegnum Stripe. Til að hafa samband við þig um aðgang þinn, þjónustufréttir og stuðningsbeiðnir. Til að veita AI-styrkt eiginleika eins og matseðil þýðingar og myndabætur. Til að greina notkun þjónustunnar og bæta vettvang okkar. Til að fylgja lagalegum skyldum og vernda lögmæta hagsmuni okkar."
+        ]
+      },
+      {
+        "title": "5. Lagalegur grundvöllur fyrir vinnslu",
+        "content": [
+          "Samningsframkvæmd: Vinnsla sem nauðsynleg er til að veita þér þjónustu okkar (Grein 6(1)(b) GDPR).",
+          "Lögmætir hagsmunir: Greiningar og þjónustubætur, svikavarnir (Grein 6(1)(f) GDPR).",
+          "Samþykki: Fyrir valfrjáls eiginleika eins og markaðssetningu (Grein 6(1)(a) GDPR).",
+          "Lagaleg skylda: Þegar lög eða reglugerðir krefjast þess (Grein 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Geymsla og öryggi gagna",
+        "content": [
+          "Gögnin þín eru geymd á öruggum þjónustum sem Amazon Web Services (AWS) veitir. Gagnagrunnur okkar er hýstur í AWS Stokkhólmi (eu-north-1) svæðinu innan Evrópusambandsins, sem tryggir að við fylgjum kröfum um persónuvernd í ESB.",
+          "Myndir og fjölmiðlafailar sem þú hleður upp eru geymd á AWS S3 þjónustum sem staðsettar eru í ESB svæðinu. Gögnin eru dulkóðuð á ferðinni með TLS/SSL og í hvíld með AES-256 dulkóðun.",
+          "Við innleiðum viðeigandi tæknilegar og skipulagslegar aðgerðir til að vernda gögnin þín gegn óheimilum aðgangi, breytingum, birtingu eða eyðingu. Þessar aðgerðir fela í sér örugga staðfestingu, aðgangsstýringar, reglulegar öryggisúttektir og þjálfun starfsmanna."
+        ]
+      },
+      {
+        "title": "7. Gagnaskipti og þriðju aðilar",
+        "content": [
+          "Við deilum gögnunum þínum með eftirfarandi flokkum þriðju aðila:",
+          "Stripe (Greiðsluvinnsluaðili): Vinnur áskriftargreiðslur. Stripe er vottað samkvæmt persónuverndarramma ESB-Bandaríkjanna. Persónuverndarstefna þeirra: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastrúktúr): Hýslar þjónusturnar okkar og gagnagrunnana í ESB svæðum. AWS fylgir GDPR og er vottað samkvæmt persónuverndarramma ESB-Bandaríkjanna.",
+          "AI þjónustuveitendur: Við notum AI þjónustu fyrir matseðil þýðingar og myndabætur. Gögnin eru unnin í samræmi við persónuverndarstefnur þeirra og samninga um vinnslu gagna.",
+          "Google Analytics: Fyrir nafnlausa vefsíðugreiningu (ef virkjuð). Þú getur valið að hætta við í gegnum kókuvalkosti.",
+          "Við seljum ekki persónuupplýsingar þínar til þriðju aðila. Við gætum afhjúpað gögn ef lög krefjast þess eða til að vernda lögmæta réttindi okkar."
+        ]
+      },
+      {
+        "title": "8. Alþjóðleg gagnaflutningar",
+        "content": [
+          "Gögnin þín eru aðallega geymd og unnin innan Evrópusambandsins (AWS Stokkhólmi, eu-north-1 svæðið). Þegar gögn eru flutt út fyrir ESB (til dæmis til þjónustuveitenda í Bandaríkjunum), tryggjum við að viðeigandi öryggisráðstafanir séu til staðar, þar á meðal staðlaðar samningsklausur (SCCs) og vottun samkvæmt viðurkenndum persónuverndarramma."
+        ]
+      },
+      {
+        "title": "9. Gagnageymsla",
+        "content": [
+          "Aðgangsgögn: Geymd meðan aðgangur þinn er virkur. Við eyðingu aðgangs er persónuupplýsingum eytt innan 30 daga, nema þar sem geymsla er nauðsynleg samkvæmt lögum.",
+          "Matseðil innihald: Geymt meðan aðgangur þinn er virkur. Eytt við lokun aðgangs.",
+          "Greiðsluskýrslur: Geymdar í 7 ár eins og krafist er samkvæmt spænskum skattalögum.",
+          "Greiningargögn: Samsett og nafnlaus gögn geta verið geymd að eilífu til að bæta þjónustu.",
+          "Afritagögn: Geymd í dulkóðuðum afritum í allt að 90 daga eftir eyðingu í þeim tilgangi að endurheimta eftir hamfarir."
+        ]
+      },
+      {
+        "title": "10. Réttindi þín samkvæmt GDPR",
+        "content": [
+          "Samkvæmt GDPR hefur þú eftirfarandi réttindi varðandi persónuupplýsingar þínar:",
+          "Réttur til aðgangs: Beiðni um afrit af persónuupplýsingum sem við höfum.",
+          "Réttur til leiðréttingar: Beiðni um leiðréttingu á ófullnægjandi eða ófullkomnum gögnum.",
+          "Réttur til eyðingar: Beiðni um eyðingu persónuupplýsinga þinna ('réttur til að vera gleymdur').",
+          "Réttur til takmörkunar: Beiðni um takmörkun á vinnslu í ákveðnum aðstæðum.",
+          "Réttur til gagnaflutnings: Að fá gögnin þín í uppbyggðu, vélarlesanlegu sniði.",
+          "Réttur til andmæla: Andmæla vinnslu byggt á lögmætum hagsmunum eða fyrir beinar markaðssetningar.",
+          "Réttur til að afturkalla samþykki: Þegar vinnsla er byggð á samþykki, geturðu afturkallað það hvenær sem er.",
+          "Til að nýta þessi réttindi, hafðu samband við okkur á support@iq-rest.com. Við munum svara innan 30 daga. Ef þú ert ekki ánægður með svörin okkar, hefurðu rétt til að leggja fram kvörtun hjá spænsku persónuverndarnefndinni (AEPD) á www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Persónuvernd barna",
+        "content": [
+          "IQ Rest er ekki ætlað til notkunar af einstaklingum yngri en 16 ára. Við safna ekki meðvitað persónuupplýsingum frá börnum. Ef við verðum vör við að við höfum safnað gögnum frá barni, munum við eyða þeim strax."
+        ]
+      },
+      {
+        "title": "12. Breytingar á þessari stefnu",
+        "content": [
+          "Við gætum uppfært þessa persónuverndarstefnu öðru hverju. Við munum tilkynna þér um verulegar breytingar með tölvupósti eða með tilkynningu á vefsíðu okkar. Dagssetningin 'Síðast uppfært' efst bendir til þess hvenær stefnan var síðast endurskoðuð.",
+          "Þín áframhaldandi notkun á IQ Rest eftir að breytingar hafa verið birtar telst samþykki á endurskoðaðri stefnunni."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Vefkökur Stefnan",
+    "lastUpdated": "Síðast uppfært: 17. desember 2025",
+    "yes": "Já",
+    "no": "Nei",
+    "cookieTableTitle": "Vefkökur sem við notum",
+    "tableHeaders": {
+      "name": "Nafn Vefkökunnar",
+      "purpose": "Tilgangur",
+      "duration": "Tímalengd",
+      "required": "Nauðsynlegt"
+    },
+    "contact": {
+      "title": "Spurningar um Vefkökurnar",
+      "description": "Ef þú hefur einhverjar spurningar um notkun okkar á vefkökum, vinsamlegast hafðu samband við okkur."
+    },
+    "sections": [
+      {
+        "title": "1. Hvað eru Vefkökurnar",
+        "content": [
+          "Vefkökur eru litlar textaskrár sem eru vistaðar á tækinu þínu (tölvu, spjaldtölvu eða farsíma) þegar þú heimsækir vefsíðu. Þær hjálpa vefsíðum að virka rétt, muna val þitt og veita upplýsingar til vefsíðueigenda.",
+          "Þessi Vefkökur Stefnan útskýrir hvernig IQ Rest, rekið af Bogdan Sokolov (Autónomo), notar vefkökur og svipaðar tækni á vefsíðu okkar iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Hvernig við notum Vefkökurnar",
+        "content": [
+          "Við notum vefkökur í ýmsum tilgangi: til að tryggja að vefsíðan okkar virki rétt, til að muna val þitt og stillingar, til að staðfesta aðgang þinn og halda þér innskráðri, til að greina hvernig gestir nota vefsíðuna okkar svo við getum bætt hana, og til að muna samþykki þitt fyrir vefkökum."
+        ]
+      },
+      {
+        "title": "3. Tegundir Vefkökunnar sem við notum",
+        "content": [
+          "Nauðsynlegar Vefkökur: Þessar vefkökur eru nauðsynlegar fyrir vefsíðuna að virka og er ekki hægt að slökkva á þeim. Þær eru venjulega settar í svar við aðgerðum sem þú framkvæmir, eins og að skrá þig inn eða stilla persónuverndarval þitt.",
+          "Funkcional Vefkökur: Þessar vefkökur gera mögulegt að bæta virkni og persónuleika, eins og að muna tungumálaval þitt og þema stillingar.",
+          "Greiningar Vefkökur: Þessar vefkökur hjálpa okkur að skilja hvernig gestir hafa samskipti við vefsíðuna okkar með því að safna og skrá upplýsingar nafnlaust. Við notum þessar upplýsingar til að bæta þjónustu okkar.",
+          "Þriðja aðila Vefkökur: Sumir vefkökurnar eru settar af þriðja aðila þjónustum sem birtast á síðum okkar, eins og greiðsluvinnslufyrirtæki (Stripe) og greiningaraðila (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Valið þitt um Vefkökurnar",
+        "content": [
+          "Þegar þú heimsækir vefsíðuna okkar í fyrsta skipti, munt þú sjá vefkökusamþykki banner sem leyfir þér að samþykkja eða hafna óþarfa vefkökum. Þú getur breytt valinu þínu hvenær sem er.",
+          "Þú getur einnig stjórnað vefkökum í gegnum stillingar vafrans þíns. Flestir vafrar leyfa þér að hafna vefkökum, eyða núverandi vefkökum, eða fá tilkynningu þegar vefkökum er sent. Vinsamlegast athugaðu að að loka fyrir nauðsynlegar vefkökur getur haft áhrif á virkni vefsíðunnar okkar.",
+          "Til að afskrá þig frá Google Analytics skráningu geturðu sett upp Google Analytics Opt-out Browser Add-on."
+        ]
+      },
+      {
+        "title": "5. Tímalengd Vefkökunnar",
+        "content": [
+          "Samskipta Vefkökur: Þessar vefkökur eru tímabundnar og eru eytt þegar þú lokar vafranum þínum.",
+          "Varanlegar Vefkökur: Þessar vefkökur verða eftir á tækinu þínu í ákveðinn tíma eða þar til þú eyðir þeim. Þær hjálpa okkur að þekkja þig þegar þú kemur aftur á vefsíðuna okkar."
+        ]
+      },
+      {
+        "title": "6. Þriðja aðila Vefkökur",
+        "content": [
+          "Stripe: Notað fyrir örugga greiðsluvinnslu. Stripe getur sett vefkökur til að koma í veg fyrir svik og vinna greiðslur örugglega. Lærðu meira á stripe.com/cookies-policy",
+          "Google Analytics: Notað til að safna nafnlausum tölfræði um notkun vefsíðunnar. Þú getur afskráð þig með því að nota vefkökubannern eða stillingar vafrans. Lærðu meira á policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Uppfærslur á þessari Stefnunni",
+        "content": [
+          "Við gætum uppfært þessa Vefkökur Stefnuna af og til til að endurspegla breytingar á venjum okkar eða af rekstrar-, lagalegum eða reglugerðarlegum ástæðum. Dagsetningin 'Síðast uppfært' efst bendir til þess hvenær stefnan var síðast endurskoðuð."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Viðheldur innskráningu þinni og staðfestingu",
+        "duration": "Session / 30 dagar",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Muna valið tungumál þitt (Enska/Spænska)",
+        "duration": "1 ár",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Vista þema val þitt (ljós/dökkur stilling)",
+        "duration": "1 ár",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Muna samþykki þitt fyrir vefkökum",
+        "duration": "1 ár",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - fylgir nafnlausum notkunartölfræði",
+        "duration": "2 ár / 24 klukkustundir",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - svikavarnir og greiðsluvernd",
+        "duration": "1 ár / Session",
+        "required": false
+      }
+    ]
+  }
+}

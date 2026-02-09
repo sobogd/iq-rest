@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { locales } from "@/i18n/routing";
 
 const BASE_URL = "https://iq-rest.com";
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
@@ -9,6 +10,17 @@ interface PageMetaConfig {
   titles: Record<LocaleKey, string>;
   descriptions: Record<LocaleKey, string>;
   path: string;
+}
+
+// Build alternates object for all supported locales
+export function buildAlternates(path: string) {
+  const languages: Record<string, string> = {
+    "x-default": `${BASE_URL}/en${path}`,
+  };
+  locales.forEach((loc) => {
+    languages[loc] = `${BASE_URL}/${loc}${path}`;
+  });
+  return languages;
 }
 
 export function generatePageMetadata(
@@ -25,11 +37,7 @@ export function generatePageMetadata(
     description,
     alternates: {
       canonical: url,
-      languages: {
-        en: `${BASE_URL}/en${config.path}`,
-        es: `${BASE_URL}/es${config.path}`,
-        "x-default": `${BASE_URL}/en${config.path}`,
-      },
+      languages: buildAlternates(config.path),
     },
     openGraph: {
       title,

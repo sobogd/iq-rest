@@ -11,7 +11,9 @@
     },
     "getStarted": "Entrar",
     "selectLanguage": "Seleccionar Idioma",
-    "selectLanguageDescription": "Elige tu idioma preferido para el sitio web."
+    "selectLanguageDescription": "Elige tu idioma preferido para el sitio web.",
+    "searchLanguage": "Buscar idioma...",
+    "noLanguagesFound": "No se encontraron idiomas"
   },
   "home": {
     "hero": {

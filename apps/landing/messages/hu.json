@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menü",
+      "pricing": "Árazás",
+      "features": "Funkciók",
+      "faq": "Kérdések",
+      "changelog": "Változások",
+      "contacts": "Kapcsolatok"
+    },
+    "getStarted": "Bejelentkezés",
+    "selectLanguage": "Nyelv kiválasztása",
+    "selectLanguageDescription": "Válaszd ki a weboldalhoz preferált nyelvedet.",
+    "searchLanguage": "Nyelv keresése...",
+    "noLanguagesFound": "Nincs nyelv találva"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Menü és Weboldal Éttermeknek 5 Perc Alatt",
+      "subtitle": "Csak add meg az email címed, és kapj egy teljes étterem weboldalt QR menüvel, kapcsolati oldallal, többnyelvű támogatással és modern dizájnnal. Minden beállítható a telefonodról.",
+      "cta": {
+        "create": "Menü Létrehozása",
+        "view": "Valódi Menü Megtekintése"
+      },
+      "benefits": [
+        {
+          "title": "Modern weboldal",
+          "description": "Professzionális dizájn, amely bármilyen eszközön jól mutat"
+        },
+        {
+          "title": "Foglalások",
+          "description": "Foglalj asztalokat közvetlenül a weboldaladról"
+        },
+        {
+          "title": "AI fordítások",
+          "description": "Automatikus menüfordítás bármilyen nyelvre"
+        },
+        {
+          "title": "Napi analitika",
+          "description": "Kövesd nyomon a látogatásokat és a népszerű ételeket minden nap"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Több mint 500 étterem bízik bennünk világszerte",
+      "title": "Minden, Amire Az Éttermednek Szüksége Van Online",
+      "description": "Regisztrálj csak az email címeddel, és azonnal megkapod: egy professzionális étterem weboldalt, QR menüt modern formátumban, funkcionális kapcsolati oldalt térképpel, többnyelvű támogatást AI fordítással, videó vagy fénykép hátteret, és egyedi színsémát. Mindez kezelhető a telefonodról - számítógép nem szükséges."
+    },
+    "whyUs": {
+      "title": "Nulláról Online Menüre 5 Perc Alatt",
+      "subtitle": "Csak 4 egyszerű lépés, hogy az éttermed online legyen",
+      "items": [
+        {
+          "step": "1",
+          "title": "Add Meg Az Email Címed",
+          "description": "Gyors regisztráció csak az email címeddel. Nincs szükség bankkártyára."
+        },
+        {
+          "step": "2",
+          "title": "Töltsd Ki Az Étterem Információit",
+          "description": "Add meg az étterem nevét, címét, elérhetőségeit és nyitvatartását."
+        },
+        {
+          "step": "3",
+          "title": "Add Meg A Menüelemeket",
+          "description": "Hozz létre kategóriákat, és add hozzá az ételeidet fényképekkel és árakkal."
+        },
+        {
+          "step": "4",
+          "title": "Élvezd A Menüt",
+          "description": "A QR menüd készen áll! Oszd meg a vendégekkel és kövesd nyomon az analitikát."
+        }
+      ],
+      "cta": "Készen állsz, hogy modernizáld az éttermedet?"
+    },
+    "featuresPreview": {
+      "title": "Erőteljes Funkciók Az Éttermed Számára",
+      "subtitle": "Minden, amire szükséged van egy professzionális online jelenlét létrehozásához",
+      "viewAll": "Összes Funkció Megtekintése"
+    }
+  },
+  "features": {
+    "title": "Erőteljes funkciók az Ön étterem QR menüjéhez és weboldalához",
+    "subtitle": "Minden, amire szüksége van, hogy professzionális digitális jelenlétet hozzon létre étterméhez vagy kávézójához",
+    "backToFeatures": "Vissza a funkciókhoz",
+    "getStarted": "Menü létrehozása",
+    "viewPricing": "Árak megtekintése",
+    "readyTitle": "Készen áll a kezdésre?",
+    "readyDescription": "Hozza létre professzionális QR menüjét és étterem weboldalát percek alatt. Minden funkciót tartalmaz.",
+    "keyBenefits": "Főbb Előnyök",
+    "faqTitle": "Gyakran Ismételt Kérdések",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Mire van szükségem a kezdéshez?",
+          "a": "Csak az email címére. Nincs szükség hitelkártyára, bonyolult űrlapokra."
+        },
+        {
+          "q": "Mennyi időt vesz igénybe a beállítás?",
+          "a": "A weboldalad azonnal készen áll. Add hozzá az étlap elemeit, és 5 percen belül élőben vagy."
+        },
+        {
+          "q": "Van ingyenes csomag?",
+          "a": "Igen, kezdj ingyenesen, minden alapvető funkcióval."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Szükségem van alkalmazás telepítésére?",
+          "a": "Nincs szükség alkalmazásra - minden a telefonod böngészőjében működik."
+        },
+        {
+          "q": "Feltölthetek fényképeket a telefonomról?",
+          "a": "Igen, készíts fényképeket a kameráddal, és töltsd fel közvetlenül az étlapodra."
+        },
+        {
+          "q": "Működik táblagépeken is?",
+          "a": "Igen, a vezérlőpult optimalizálva van telefonokhoz, táblagépekhez és asztali számítógépekhez."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Mennyire pontos az AI fordítás?",
+          "a": "AI-nk érti a kulináris kontextust, megőrzi az ételneveket és természetesen fordítja a leírásokat."
+        },
+        {
+          "q": "Milyen gyors a fordítás?",
+          "a": "Teljes étlapok másodpercek alatt lefordítva, nem órák alatt."
+        },
+        {
+          "q": "Szerkeszthetem az AI fordításokat?",
+          "a": "Igen, minden fordítás szerkeszthető - nézd át és állítsd be szükség szerint."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Hány nyelvet támogat?",
+          "a": "Több mint 25 nyelvet, beleértve az összes főbb európai nyelvet, kínai, japán, koreai, arab és héber."
+        },
+        {
+          "q": "Hogyan válthatnak nyelvet az ügyfelek?",
+          "a": "Egy nyelvválasztó jelenik meg az étlapodon - egy érintéssel válthatnak bármelyik elérhető nyelvre."
+        },
+        {
+          "q": "Automatikus a fordítás?",
+          "a": "Használhatod az AI fordítást, vagy manuálisan is megadhatod a fordításokat minden nyelvre."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Milyen képfájlformátumokat támogat?",
+          "a": "Tölts fel JPG, PNG vagy WebP formátumú képeket - a képek automatikusan optimalizálva vannak."
+        },
+        {
+          "q": "Csökkenti az optimalizálás a minőséget?",
+          "a": "Nem, AI-nk megőrzi a vizuális minőséget, miközben csökkenti a fájlméretet a gyors betöltés érdekében."
+        },
+        {
+          "q": "Van fájlméret korlátozás?",
+          "a": "Tölts fel legfeljebb 10MB méretű képeket - ezek automatikusan optimalizálva lesznek."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Hogyan adhatok hozzá új ételt?",
+          "a": "Érints az 'Elem hozzáadása' gombra, írd be a nevet, leírást, árat, és opcionálisan tölts fel egy fényképet. Ennyi az egész!"
+        },
+        {
+          "q": "Átrendezhetem az étlap elemeit?",
+          "a": "Igen, egyszerűen húzd és ejtsd az elemeket vagy kategóriákat az átrendezéshez."
+        },
+        {
+          "q": "Mi van, ha egy étel elfogyott?",
+          "a": "Ideiglenesen kapcsold ki az elemet - eltűnik az étlapról, de nem törlődik."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Milyen mutatókat követhetek?",
+          "a": "Napi megtekintések, oldal teljesítmény, nyelvi preferenciák és időbeli trendek."
+        },
+        {
+          "q": "Milyen gyakran frissülnek az adatok?",
+          "a": "Az analitikák valós időben frissülnek - lásd a mai látogatókat, ahogy történnek."
+        },
+        {
+          "q": "Exportálhatom az analitika adatokat?",
+          "a": "Nézd meg a részletes jelentéseket közvetlenül a vezérlőpultodon."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Hogyan foglalnak az ügyfelek asztalt?",
+          "a": "Az ügyfelek közvetlenül a te étterem weboldaláról foglalhatnak. Kiválasztják a dátumot, időpontot és a vendégek számát, majd emailben kapnak visszaigazolást."
+        },
+        {
+          "q": "Manuálisan is jóváhagyhatom a foglalásokat?",
+          "a": "Igen, választhatsz automatikus visszaigazolás vagy manuális jóváhagyás között minden foglalásnál."
+        },
+        {
+          "q": "Értesítést kapok az új foglalásokról?",
+          "a": "Igen, email értesítéseket kapsz minden új foglalásról."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Milyen videóformátumokat támogat?",
+          "a": "MP4 és WebM formátumok támogatottak. A videók automatikusan optimalizálva vannak a gyors betöltés érdekében."
+        },
+        {
+          "q": "Használhatom a saját fényképeimet?",
+          "a": "Igen, tölts fel bármilyen fényképet, és az automatikusan optimalizálva lesz webes megjelenítésre."
+        },
+        {
+          "q": "Lassítja a videó az étlapot?",
+          "a": "Nem, a videók tömörítve vannak és késleltetve töltődnek be, hogy biztosítsák a gyors oldal teljesítményt."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Hány színből választhatok?",
+          "a": "Válassz 12 előre beállított szín közül, vagy add meg a pontos márkaszínt hex kóddal."
+        },
+        {
+          "q": "Támogatja a sötét módot?",
+          "a": "Igen, a színséma automatikusan alkalmazkodik a világos és sötét témákhoz."
+        },
+        {
+          "q": "Bármikor változtathatok a színeken?",
+          "a": "Igen, azonnal megváltoztathatod a hangsúly színét a vezérlőpultból - a frissítések azonnal megjelennek."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Hogyan léphetek kapcsolatba a támogatással?",
+          "a": "Használj kapcsolatfelvételi űrlapot, vagy írj nekünk közvetlenül - valós emberek válaszolnak, nem botok."
+        },
+        {
+          "q": "Mennyi a válaszidő?",
+          "a": "Általában néhány órán belül válaszolunk munkanapokon."
+        },
+        {
+          "q": "Elérhető a támogatás ingyenes csomagokhoz?",
+          "a": "Igen, személyes támogatás elérhető minden csomaghoz, beleértve az ingyeneset is."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Azonnali QR Menü és Weboldal Beállítás",
+        "shortDescription": "Hozd létre az étterem weboldalát és QR menüjét csak egy email címmel - 5 perc alatt készen áll",
+        "description": "Kezdj el másodpercek alatt a legegyszerűbb regisztrációs folyamattal. Csak írd be az email címed, és azonnal kapsz egy teljes étterem weboldalt QR menüvel, térképes kapcsolatfelvételi oldallal és modern dizájnnal. Nincs szükség technikai tudásra, bonyolult űrlapokra - az éttermed azonnal online lesz.",
+        "fullDescription": "A hagyományos weboldal készítők órákig tartó beállítást, technikai tudást és gyakran fejlesztőt igényelnek. Az IQ Rest mindent megváltoztat. Írd be az email címed, igazold egy egyszerű kóddal, és az étterem weboldalad készen áll. Add hozzá az ételeidet, tölts fel fényképeket, és oszd meg a QR kódodat az ügyfelekkel. Az egész folyamat kevesebb mint 5 percet vesz igénybe.",
+        "benefits": [
+          "Csak email szükséges a kezdéshez - nincs bonyolult regisztráció",
+          "Az étterem weboldala azonnal készen áll a regisztráció után",
+          "QR menü automatikusan generálva és összekapcsolva",
+          "Kapcsolatfelvételi oldal térképpel alapértelmezés szerint",
+          "Nincs szükség technikai tudásra vagy kódolási ismeretekre"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Az étterem weboldala és QR menü azonnali beállítási folyamata",
+        "cta": "Tudd meg többet"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% Mobilbarát Kezelés",
+        "shortDescription": "Nincs számítógép? Nincs probléma. Futtasd az egész étterem weboldaladat a telefonodról. Adj hozzá ételeket, miközben a konyhában állsz, frissítsd az árakat a szolgáltatás alatt, tölts fel fényképeket közvetlenül a kamerádból. Minden funkció tökéletesen működik mobilon - mert az étterem tulajdonosai sosem ülnek az íróasztalnál.",
+        "description": "Adj hozzá kategóriákat, ételeket, fényképeket, és kezeld az egész étterem weboldaladat közvetlenül a telefonodról. A vezérlőpultunk teljesen optimalizálva van mobil eszközökre, így frissítheted az étlapodat egy kávészünet alatt vagy hozzáadhatod a napi ajánlatokat útközben.",
+        "fullDescription": "Az étterem tulajdonosai elfoglalt emberek, akik nem mindig ülnek számítógép előtt. Ezért építettük az IQ Rest-et, hogy tökéletesen működjön mobil eszközökön. Minden funkció, az új ételek hozzáadásától kezdve az árak frissítéséig, érintőképernyőkre van tervezve. Készíts egy fényképet egy új ételről, és töltsd fel azonnal. Változtasd meg a mai ajánlatot, miközben a konyhában állsz.",
+        "benefits": [
+          "Teljes vezérlőpult hozzáférés bármely okostelefonon vagy táblagépen",
+          "Tölts fel fényképeket közvetlenül a telefonod kamerájából",
+          "Frissítsd az árakat és leírásokat útközben",
+          "Kezeld a kategóriákat érintésbarát felületen",
+          "Nincs szükség számítógépre - soha"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Az étterem menedzsment okostelefonon",
+        "cta": "Nézd meg a Mobil Vezérlőpultot"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI-Alapú Menüfordítás",
+        "shortDescription": "Ne veszítsd el a nemzetközi ügyfeleket a nyelvi akadályok miatt. AI-nk az egész étlapodat lefordítja több mint 25 nyelvre másodpercek alatt - nem általános fordítás, hanem kontextusérzékeny AI, amely érti a kulináris kifejezéseket. A 'Beef Wellington' marad 'Beef Wellington', míg a leírások természetesen olvashatók minden nyelven.",
+        "description": "Érd el a nemzetközi ügyfeleket intelligens AI fordítással, amely érti az étkezési kontextust. Az ételneveid és leírásaid pontosan le vannak fordítva, megőrizve a kulináris kifejezéseket és értelmesen bármely nyelven.",
+        "fullDescription": "Az általános fordítók gyakran kudarcot vallanak az étlapokkal - szó szerint fordítanak, anélkül, hogy értenék a kontextust. AI-nk kifejezetten éttermi tartalomra van betanítva. Tudja, hogy a 'Beef Wellington'-t nem szabad szó szerint lefordítani, és hogy az 'al dente' bármely nyelven ugyanazt jelenti. Szolgáld a turistákat és a nemzetközi vendégeket olyan étlapokkal, amelyek természetesen olvashatók az ő nyelvükön.",
+        "benefits": [
+          "Kontekztusérzékeny fordítás az ételek és kulináris kifejezések számára",
+          "10+ nyelv, beleértve a spanyol, francia, német, kínai, japán",
+          "Megőrzi a kulináris terminológiát és kulturális árnyalatokat",
+          "Azonnali fordítás - az étlap másodpercek alatt elérhető",
+          "23%-kal növeli az eladásokat a nemzetközi ügyfelekkel"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI-alapú étterem menü fordító felület",
+        "cta": "Fedezd fel az AI Fordítást"
+      },
+      {
+        "id": "multilingual",
+        "title": "Többnyelvű Étterem Weboldal",
+        "shortDescription": "Üdvözöld a turistákat és a nemzetközi vendégeket anyanyelvükön. A 25+ nyelv támogatása azt jelenti, hogy minden ügyfél otthon érzi magát. Egy érintéssel válthatsz nyelvet - az étlap, árak, leírások azonnal alkalmazkodnak. Tökéletes éttermeknek turisztikai területeken vagy nemzetközi városokban.",
+        "description": "Az étterem weboldalad automatikusan támogatja a több nyelvet. Az ügyfelek egy érintéssel válthatnak nyelvet, és minden tartalom, beleértve az étlapot, kapcsolati információkat és navigációt, azonnal alkalmazkodik.",
+        "fullDescription": "A turisztikai területeken és nemzetközi városokban elengedhetetlen, hogy beszélj az ügyfeleid nyelvén. Az IQ Rest lehetővé teszi, hogy az éttermed mindenki számára elérhető legyen. Az ügyfelek látnak egy nyelvválasztót, és böngészhetik az egész weboldaladat - étlap, kapcsolatok, foglalások - a preferált nyelvükön. Az AI fordítással kombinálva a világot szolgálhatod.",
+        "benefits": [
+          "Egy érintéssel válthatnak nyelvet az ügyfelek",
+          "Az étlap, kapcsolatok és minden oldal lefordítva",
+          "A nyelvi preferenciát megjegyzi a visszatérő látogatásokhoz",
+          "Tökéletes turisztikai területeken és nemzetközi városokban",
+          "Zökkenőmentesen működik az AI fordító funkcióval"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Többnyelvű étterem weboldal nyelvválasztó",
+        "cta": "Nézd meg a Többnyelvű Funkciókat"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI Képoptimalizálás",
+        "shortDescription": "Automatikus képjavítás a gyorsabb betöltés és jobb minőség érdekében",
+        "description": "Tölts fel bármilyen fényképet, és AI-nk automatikusan optimalizálja webes megjelenítésre. A képek gyorsan betöltődnek bármilyen kapcsolaton, miközben megőrzik a lenyűgöző minőséget, amely az ételeidet ellenállhatatlanná teszi.",
+        "fullDescription": "A nagy, optimalizálatlan képek lelassítják a weboldalad, és frusztrálják az ügyfeleket. AI-nk feldolgozza az összes feltöltött képet: optimalizált méretekre méretezi, modern formátumokra konvertálja és javítja a minőséget. Az eredmény? Az ételeid csodásan néznek ki, és az oldalak kevesebb mint egy másodperc alatt betöltődnek, még lassú mobil kapcsolatok esetén is.",
+        "benefits": [
+          "Automatikus méretezés az optimális webes méretekhez",
+          "Konvertálás WebP formátumba a gyors betöltés érdekében",
+          "Minőségjavítás a jobb megjelenítéshez",
+          "Oldalak kevesebb mint 1 másodperc alatt betöltődnek",
+          "Működik bármilyen képfájlformátummal, amit feltöltesz"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI képoptimalizálás előtte és utána összehasonlítás",
+        "cta": "Tudd meg többet"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Egyszerű Menükezelés",
+        "shortDescription": "Frissítsd az étlapodat másodpercek alatt, nem órák alatt. Adj hozzá új ételeket, módosítsd az árakat, szervezd át a kategóriákat - mindezt egyszerű húzd és ejtsd módszerrel bármilyen eszközről. Nincs szükség technikai tudásra. A változások azonnal életbe lépnek, így az ügyfeleid mindig a legfrissebb ajánlatokat látják.",
+        "description": "Az étlapod kezelése sosem volt ennyire egyszerű. Adj hozzá kategóriákat, készíts ételeket fényképekkel és leírásokkal, állítsd be az árakat, és szervezd meg mindent egyszerű húzd és ejtsd módszerrel. A változások azonnal megjelennek az élő weboldaladon.",
+        "fullDescription": "Felejtsd el a bonyolult tartalomkezelő rendszereket. Az IQ Rest étlap szerkesztője az étterem tulajdonosok számára készült, nem webfejlesztőknek. Hozz létre egy új kategóriát másodpercek alatt, adj hozzá ételeket néhány érintéssel, tölts fel fényképeket közvetlenül a telefonodról. Húzd az elemeket az átrendezéshez, kapcsold ki az elfogyott elemeket, és lásd a változásokat azonnal élőben.",
+        "benefits": [
+          "Intuitív kategória- és elemkészítés",
+          "Húzd és ejtsd átrendezés",
+          "Kapcsold ki/ki az elemeket törlés nélkül",
+          "Azonnali frissítések - a változások másodpercek alatt megjelennek",
+          "Korlátlan kategóriák és ételek szervezése"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Egyszerű étterem menükezelő vezérlőpult",
+        "cta": "Nézd meg az Étlap Szerkesztőt"
+      },
+      {
+        "id": "analytics",
+        "title": "Napi Analitika és Elemzések",
+        "shortDescription": "Kövesd a megtekintéseket, nyelveket és az ügyfélviselkedést részletes napi jelentésekkel",
+        "description": "Értsd meg az ügyfeleidet átfogó analitikával. Lásd a napi megtekintéseket, népszerű nyelveket, legnépszerűbb oldalakat, és kövesd a trendeket az idő múlásával. Hozz adatvezérelt döntéseket az étlapod optimalizálásához.",
+        "fullDescription": "A tudás hatalom. Az analitika vezérlőpultunk pontosan megmutatja, hogyan lépnek kapcsolatba az ügyfelek az étterem weboldaladdal. Mely oldalak kapják a legtöbb megtekintést? Milyen nyelveket preferálnak az ügyfeleid? Növekszik-e a megtekintések száma hetente? Használj ezeket az információkat az étlapod optimalizálásához, a megfelelő ügyfelek megcélzásához és a vállalkozásod növeléséhez.",
+        "benefits": [
+          "Napi, heti és havi megtekintési statisztikák",
+          "Nyelvi preferenciák bontása",
+          "Oldalankénti teljesítménykövetés",
+          "Időbeli trendelemzés",
+          "Adatok exportálása további elemzéshez"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Az étterem analitika vezérlőpultja napi statisztikákkal",
+        "cta": "Tudd meg többet"
+      },
+      {
+        "id": "reservations",
+        "title": "Asztalfoglalási Rendszer",
+        "shortDescription": "Ne veszítsd el az ügyfeleket a kihagyott hívások miatt. Fogadj asztalfoglalásokat 24/7 közvetlenül a weboldaladról - az ügyfelek másodpercek alatt választhatják ki a dátumot, időpontot és asztalt. Automatikus visszaigazolások, email értesítések, és egy egyszerű vezérlőpult az összes kezeléséhez.",
+        "description": "A beépített foglalási rendszer lehetővé teszi az ügyfelek számára, hogy közvetlenül a weboldaladról foglaljanak asztalt. Válaszd az automatikus visszaigazolást a rendelkezésre állás alapján, vagy nézd át manuálisan minden foglalást. Kezeld az összes foglalást a vezérlőpultodon.",
+        "fullDescription": "A telefonos foglalások időigényesek és könnyen kihagyhatók. Az IQ Rest foglalási rendszere 24/7 működik. Az ügyfelek kiválasztják a dátumot, időpontot és a létszámot, majd azonnal foglalnak. Beállíthatod az automatikus visszaigazolást az asztalok rendelkezésre állása alapján, vagy manuálisan is átnézheted minden kérést. Csökkentsd a meg nem jelenéseket email visszaigazolásokkal.",
+        "benefits": [
+          "24/7 online foglalási lehetőség",
+          "Automatikus vagy manuális visszaigazolási módok",
+          "Asztal- és kapacitáskezelés",
+          "Email értesítések a foglalásokról",
+          "Naptár nézet az egyszerű ütemezéshez"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Online asztalfoglalási rendszer éttermek számára",
+        "cta": "Fedezd fel az Asztalfoglalásokat"
+      },
+      {
+        "id": "custom-design",
+        "title": "Videó és Fotó Háttér",
+        "shortDescription": "Az első benyomások eladnak. Ragadd meg az ügyfelek figyelmét, amint beolvassák a QR kódodat egy lenyűgöző videóval az étterem hangulatáról vagy egy gyönyörű fényképpel a jellegzetes ételedről. Tűnj ki a versenytársak közül egy prémium és professzionális megjelenésű kezdőoldallal.",
+        "description": "Hozz létre egy emlékezetes első benyomást egyedi videó- vagy fénykép háttérrel a kezdőoldaladon. Töltsd fel az étterem hangulatát bemutató videót, vagy egy gyönyörű ételfotót, hogy azonnal megragadd az ügyfelek figyelmét.",
+        "fullDescription": "Az első benyomások számítanak. Amikor az ügyfelek beolvassák a QR kódodat, azonnal lenyűgözve kell lenniük. Tölts fel egy videót az étterem hangulatáról, egy időeltolódásos felvételt a konyhádról, vagy egy lenyűgöző fényképet a jellegzetes ételedről. A kezdőoldalad vizuális élménnyé válik, amely tükrözi az éttermed személyiségét.",
+        "benefits": [
+          "Támogatja a videó- és képháttereket",
+          "Automatikus optimalizálás a gyors betöltés érdekében",
+          "Tökéletesen működik mobil eszközökön",
+          "Emlékezetes első benyomást teremt",
+          "Tükrözi az éttermed egyedi hangulatát"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Étterem weboldal videó háttérrel",
+        "cta": "Nézd meg a Videó Háttéreket"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Egyedi Színséma",
+        "shortDescription": "Tedd igazán a tiéd az étlapodat egyedi hangsúly színekkel, amelyek illeszkednek az éttermed márkájához. Válassz 12 gyönyörű előre beállított szín közül, vagy válaszd ki a pontos márkaszínt. Minden gomb, kiemelés és interaktív elem alkalmazkodik, hogy egy koherens, professzionális megjelenést hozzon létre, amelyet az ügyfelek megjegyeznek.",
+        "description": "Az étterem weboldaladnak illeszkednie kell a márkádhoz. Válassz előre beállított színsémák közül, vagy válaszd ki a pontos márkaszínt. Az automatikus világos/sötét téma támogatásával az étlapod mindig professzionálisan néz ki.",
+        "fullDescription": "A márkakonszisztencia fontos. Az IQ Rest lehetővé teszi, hogy testreszabd a hangsúly színt, amelyet az egész weboldalon használsz - a gombok, kiemelések és interaktív elemek mind a márkádhoz illeszkednek. Válassz gondosan válogatott előre beállított színek közül, vagy add meg a pontos márkaszínt. A rendszer automatikusan biztosítja az olvashatóságot világos és sötét módokban is.",
+        "benefits": [
+          "Egyedi hangsúly szín választás",
+          "Előre beállított színsémák elérhetők",
+          "Automatikus világos/sötét téma támogatás",
+          "Konzisztens márkázás az összes oldalon",
+          "Hozzáférhetőség-optimalizált színkontraszt"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Egyedi színséma és márkázási lehetőségek",
+        "cta": "Fedezd fel a Színsémákat"
+      },
+      {
+        "id": "personal-support",
+        "title": "Személyre Szabott Online Támogatás",
+        "shortDescription": "Kapj személyes segítséget valós emberektől - nem chatbotoktól - bármilyen kérdésben",
+        "description": "Minden étterem egyedi online támogatást kap. Van kérdésed? Segítségre van szükséged a beállításhoz? Szeretnél javasolni egy funkciót? Valós emberek gyorsan válaszolnak, hogy segítsenek neked a digitális menüddel.",
+        "fullDescription": "Hiszünk abban, hogy minden étterem megérdemli a személyes figyelmet. Amikor kapcsolatba lépsz a támogatással, valós emberekkel beszélsz, akik értik az éttermeket és valóban segíthetnek. Nincs chatbot, nincs automatikus válasz, nincs jegy sor. Akár az első ételed hozzáadásában, akár az étlapod optimalizálásában kérsz tanácsot, itt vagyunk neked.",
+        "benefits": [
+          "Valódi emberi támogatás - nincs chatbot",
+          "Gyors válaszidők",
+          "Segítség a beállításban és optimalizálásban",
+          "Funkciókérések üdvözölve",
+          "Elérhető minden csomaghoz, beleértve az ingyeneset is"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Személyes online támogatás csevegés az éttermek számára",
+        "cta": "Tudd meg többet"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR Menü & Étterem Weboldal Árak",
+    "subtitle": "Nincsenek rejtett költségek, nincsenek meglepetések. Indítsa el étterem weboldalát ingyen ma — frissítse csak akkor, amikor készen áll a növekedésre.",
+    "seo": {
+      "title": "Miért válassza az IQ Rest-et az étterméhez vagy kávézójához?",
+      "text": "Hozzon létre professzionális QR menüt és weboldalt étterméhez vagy kávézójához percek alatt. Vendégei egyszerűen beolvassák a QR kódot, hogy megtekinthessék digitális menüjüket a telefonjukon — nincs szükség alkalmazásra. Az árakat azonnal frissítheti, új ételeket adhat hozzá, és megváltoztathatja a leírásokat. Az AI-alapú fordításokkal nemzetközi vendégeit az anyanyelvükön szolgálhatja ki. Kövesse nyomon, hogy mely ételek kapják a legtöbb megtekintést a beépített analitikával. Akár egy kis kávézót üzemeltet, akár egy növekvő étteremláncot, az IQ Rest segít modernizálni menüélményét, miközben csökkenti a nyomtatási költségeket."
+    },
+    "monthly": "Havi",
+    "yearly": "Éves",
+    "save": "(25% megtakarítás)",
+    "perMonth": "/hó",
+    "billedYearly": "Évente számlázva (€{total})",
+    "forever": "Ingyenesen örökre",
+    "popular": "Legnépszerűbb",
+    "plans": {
+      "free": {
+        "name": "Ingyenes",
+        "description": "Tökéletes az IQ Rest kipróbálásához",
+        "cta": "Kezdje el ingyen",
+        "highlights": [
+          "Éttermek weboldala",
+          "QR Menü",
+          "300 beolvasás/hónap",
+          "2 nyelv",
+          "AI képfeldolgozás",
+          "Analitika"
+        ]
+      },
+      "basic": {
+        "name": "Alap",
+        "description": "Remek kis éttermek számára",
+        "cta": "Kezdje el",
+        "highlights": [
+          "Minden az Ingyenesből, plusz:",
+          "4,500 beolvasás/hónap",
+          "3 nyelv",
+          "AI fordítások",
+          "Egyedi színséma",
+          "Asztalfoglalás"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Növekvő étteremláncok számára",
+        "cta": "Kezdje el",
+        "highlights": [
+          "Minden az Alapból, plusz:",
+          "Korlátlan beolvasás",
+          "6 nyelv",
+          "Prioritásos támogatás",
+          "Minden funkció benne van"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Tervek összehasonlítása",
+      "subtitle": "Nézze meg, melyik terv a megfelelő az Ön számára"
+    },
+    "features": {
+      "website": "Éttermek weboldala",
+      "qrMenu": "QR Menü",
+      "scans": "Havi beolvasások",
+      "languages": "Támogatott nyelvek",
+      "aiTranslation": "AI fordítások",
+      "aiImages": "AI képfeldolgozás",
+      "analytics": "Analitika",
+      "customTheme": "Egyedi színséma",
+      "background": "Háttérkép & videó",
+      "support": "Támogatás",
+      "reservations": "Asztalfoglalás"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Korlátlan",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Szüksége van segítségre? Beszélgessünk",
+    "subtitle": "Szia, én Bogdan vagyok — az IQ Rest alapítója. Ezt a platformot a saját kávézóm számára építettem, és most már több száz étteremnek segít világszerte. Van kérdése vagy ötlete? Írjon nekem közvetlenül. Nincsenek botok, nincsen várakozás — csak egy igazi beszélgetés.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Lépjen kapcsolatba velünk",
+      "email": "Az Ön email címe",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Tárgy",
+      "subjectPlaceholder": "Miről van szó?",
+      "message": "Üzenet",
+      "messagePlaceholder": "Mondja el, mi jár a fejében...",
+      "submit": "Üzenet küldése",
+      "sending": "Küldés...",
+      "success": "Az üzenete el lett küldve! Köszönöm, hogy megkeresett. Hamarosan visszajelzek.",
+      "error": "Az üzenet küldése nem sikerült. Kérjük, próbálja meg később."
+    }
+  },
+  "languages": {
+    "en": "Angol",
+    "es": "Spanyol"
+  },
+  "cookieConsent": {
+    "title": "Sütiket használunk",
+    "description": "Sütiket használunk a böngészési élmény fokozására, személyre szabott tartalom szolgáltatására és a forgalmunk elemzésére. Az \"Összes elfogadása\" gombra kattintva hozzájárul a sütik használatához.",
+    "acceptAll": "Összes elfogadása",
+    "rejectAll": "Összes elutasítása",
+    "customize": "Testreszabás",
+    "learnMore": "Tudj meg többet"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigáció",
+      "pricing": "Árazás",
+      "features": "Funkciók",
+      "contacts": "Kapcsolatok",
+      "faq": "Kérdések",
+      "changelog": "Változásnapló"
+    },
+    "legal": {
+      "title": "Jogi",
+      "terms": "Felhasználási feltételek",
+      "privacy": "Adatvédelmi irányelvek",
+      "cookies": "Süti irányelvek",
+      "sitemap": "Webhelytérkép"
+    },
+    "copyright": "© 2025 IQ Rest. Minden jog fenntartva."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Változásnapló - IQ Rest frissítések és új funkciók",
+      "description": "Maradjon naprakész a legújabb funkciókkal és fejlesztésekkel az IQ Rest - az Ön digitális QR menümegoldása éttermek és kávézók számára"
+    },
+    "title": "Változásnapló",
+    "subtitle": "Legújabb frissítések és új funkciók az Ön étterem QR menüjéhez",
+    "readMore": "Tovább olvasom",
+    "backToChangelog": "Vissza a Változásnaplóhoz",
+    "seo": {
+      "title": "Az IQ Rest Frissítései",
+      "description": "Az IQ Rest folyamatosan fejlődik, hogy segítsen az éttermeknek és kávézóknak professzionális digitális QR menük létrehozásában. Kövesd a változásnaplónkat, hogy naprakész legyél a legújabb funkciókkal az étterem weboldalad és QR menü megoldásod számára."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsive Support for Your Restaurant QR Menu",
+        "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
+        "meta": {
+          "title": "Responsive Support for Restaurant QR Menu | IQ Rest",
+          "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
+        },
+        "content": {
+          "intro": "IQ Rest now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "image1Alt": "Support chat interface for restaurant QR menu",
+          "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
+          "section1Title": "Direct Chat Support for Your Restaurant",
+          "section1Text": "Our responsive support system for your QR menu restaurant or cafe works directly within your dashboard. No need to search for contact emails or wait in phone queues. Simply open the support chat, type your question or describe the change you need, and our team responds quickly. Whether you need help updating menu items, fixing display issues, or understanding analytics - responsive support is just a message away.",
+          "section2Title": "Quick Assistance for Any QR Menu Changes",
+          "section2Text": "Need to update prices before a busy weekend? Want to add seasonal items to your restaurant QR menu? Our responsive support helps cafes and restaurants make changes quickly. We guide you through the process or can assist directly when needed. This responsive support ensures your digital menu always reflects your current offerings, keeping customers informed and happy.",
+          "section3Title": "Support That Understands Restaurant Needs",
+          "section3Text": "Our responsive support team understands the unique challenges of running a restaurant or cafe. We know that a broken QR menu can mean lost customers and frustrated staff. That's why our support for your QR menu restaurant or cafe prioritizes quick response times and practical solutions. From technical questions to feature requests, we're here to help your digital menu succeed.",
+          "benefitsTitle": "Benefits of Responsive QR Menu Support",
+          "benefit1": "Direct in-app chat - no external emails or phone calls needed",
+          "benefit2": "Quick response times to keep your restaurant running smoothly",
+          "benefit3": "Guidance on menu updates, changes, and new features",
+          "benefit4": "Technical assistance for any QR code or website issues",
+          "benefit5": "Feature requests and suggestions welcomed and considered",
+          "benefit6": "Support that understands restaurant and cafe operations",
+          "conclusionTitle": "Get Responsive Support Today",
+          "conclusionText": "With IQ Rest's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "ctaText": "Ready to experience responsive support for your QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
+        "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
+        "meta": {
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | IQ Rest",
+          "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
+        },
+        "content": {
+          "intro": "IQ Rest now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
+          "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
+          "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
+          "section1Text": "Our detailed analytics for your restaurant website and QR menu track every customer interaction. See total page views for today, this week, and this month at a glance. Track unique visitors to understand your real audience size. The analytics dashboard provides detailed insights into how customers navigate your QR menu - from the home page to your full menu, contacts, and language selection. This detailed analytics helps restaurants make data-driven decisions.",
+          "section2Title": "Page and Language Analytics",
+          "section2Text": "Understand which pages of your restaurant website and QR menu are most popular. Our detailed analytics break down views by page type: Home, Menu, Contacts, and Language selection. See which languages your customers prefer, helping you prioritize translations and serve international guests better. These detailed analytics for your restaurant QR menu reveal customer behavior patterns you never knew existed.",
+          "section3Title": "Daily Trends and Usage Monitoring",
+          "section3Text": "Track how your restaurant website and QR menu perform over time with daily view charts. See patterns in customer engagement throughout the week. Monitor your monthly usage against your plan limits with a clear progress bar. Our detailed analytics help restaurants identify peak times and optimize their digital presence. Whether you're a small cafe or a busy restaurant, these insights help you understand your customers better.",
+          "benefitsTitle": "Benefits of Detailed Analytics for Restaurants",
+          "benefit1": "Real-time view counts: today, weekly, and monthly statistics at a glance",
+          "benefit2": "Unique visitor tracking to understand your actual customer reach",
+          "benefit3": "Page-by-page breakdown showing what content customers view most",
+          "benefit4": "Language analytics to optimize multilingual menu offerings",
+          "benefit5": "Daily trend charts to identify patterns in customer behavior",
+          "benefit6": "Usage monitoring with clear limits and upgrade prompts",
+          "conclusionTitle": "Start Using Detailed Analytics Today",
+          "conclusionText": "With IQ Rest's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "ctaText": "Ready to explore detailed analytics for your restaurant?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu and Restaurant Website Generator",
+        "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
+        "meta": {
+          "title": "Instant QR Menu and Restaurant Website Generator | IQ Rest",
+          "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
+        },
+        "content": {
+          "intro": "IQ Rest now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
+          "image1Caption": "Generate custom QR codes for your restaurant website instantly",
+          "section1Title": "How the Instant QR Menu Generator Works",
+          "section1Text": "Our instant QR menu and restaurant website generator creates everything you need in minutes. Simply add your menu items, and the system instantly generates a unique QR code linked to your restaurant website. The generator supports multiple paper formats (A4, A5, A6, Letter), various QR layouts per page (1 to 16 codes), and customizable text beneath each QR code. Preview exactly what you'll print, then download or print directly - your instant QR menu is ready to display at your tables.",
+          "section2Title": "Customizable QR Codes for Any Restaurant or Cafe",
+          "section2Text": "The instant QR menu generator offers complete customization for your restaurant or cafe branding. Add your restaurant name above the QR code, include custom text like 'Scan for Menu' or 'QR Menu' below, and choose from three text sizes. The generator produces clean, simple QR codes optimized for fast scanning. Whether you need a single large QR code for a poster or 16 smaller codes for individual table cards, our instant generator adapts to your restaurant's needs.",
+          "section3Title": "Print-Ready QR Menus in Seconds",
+          "section3Text": "Unlike complicated design tools, our instant QR menu generator creates print-ready layouts automatically. Select your paper format, choose how many QR codes per page, and hit print - that's it. The generator handles margins, spacing, and sizing to ensure perfect prints every time. For cafes and restaurants that need professional QR menus quickly, this instant approach saves hours of design work and gets your digital menu in front of customers faster.",
+          "benefitsTitle": "Benefits of Instant QR Menu Generation",
+          "benefit1": "Generate complete QR menu and restaurant website in minutes, not hours",
+          "benefit2": "Multiple paper formats: A4, A5, A6, and Letter sizes supported",
+          "benefit3": "Flexible layouts: from single large QR to 16 codes per page",
+          "benefit4": "Custom text and sizing options for your restaurant branding",
+          "benefit5": "Print-ready output with automatic margins and spacing",
+          "benefit6": "Download as PNG or print directly from your browser",
+          "conclusionTitle": "Start Using the Instant QR Menu Generator",
+          "conclusionText": "With IQ Rest's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "ctaText": "Ready to generate your instant QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Public Restaurant Website for QR Menu Scanning",
+        "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
+        "meta": {
+          "title": "Public Restaurant Website for QR Menu Scanning | IQ Rest",
+          "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
+        },
+        "content": {
+          "intro": "IQ Rest now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "image1Alt": "Public restaurant website showing QR menu categories",
+          "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
+          "section1Title": "How the Public Restaurant Website Works with QR Scanning",
+          "section1Text": "When customers scan your restaurant's QR code, they're instantly taken to your public website displaying the complete menu. No app download required, no waiting - just immediate access to your offerings. The public restaurant website for QR menu shows categories at the top for easy navigation, with items displayed in an elegant card layout featuring photos, descriptions, and prices. Customers can tap on categories to filter items or scroll through the entire menu.",
+          "section2Title": "Features of Your Public Restaurant QR Menu Website",
+          "section2Text": "Your public restaurant website includes everything customers need: category tabs for quick navigation, high-quality dish photos, detailed descriptions, prices in your currency, and active item indicators. The design is optimized for mobile devices since most QR scans happen on phones. Items load quickly thanks to optimized images, and the interface is intuitive for guests of all ages. Changes made in your admin panel appear instantly on the public website.",
+          "image2Alt": "Restaurant QR menu website showing food items with photos",
+          "image2Caption": "Public menu website displaying dishes with optimized photos and descriptions",
+          "section3Title": "Multilingual Support for International Guests",
+          "section3Text": "The public restaurant website includes a language selector so international guests can view your menu in their preferred language. Currently supporting English and Spanish, with more languages coming soon. This makes your public restaurant QR menu accessible to tourists and diverse customer bases. The language preference is remembered for return visits, providing a personalized experience.",
+          "image3Alt": "Language selection on public restaurant QR menu website",
+          "image3Caption": "Language selector allowing guests to view the public menu in their preferred language",
+          "benefitsTitle": "Benefits of Your Public Restaurant QR Menu Website",
+          "benefit1": "Instant menu access - customers scan and view immediately, no app needed",
+          "benefit2": "Mobile-optimized design for perfect display on any smartphone",
+          "benefit3": "Real-time updates - menu changes appear instantly to customers",
+          "benefit4": "Category navigation for easy browsing of your offerings",
+          "benefit5": "Multilingual support for international customers",
+          "benefit6": "Fast loading with optimized images and modern technology",
+          "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
+          "conclusionText": "With IQ Rest's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "ctaText": "Ready to launch your public restaurant QR menu website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "How to Add Items to Restaurant Website with QR Menu",
+        "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
+        "meta": {
+          "title": "How to Add Items to Restaurant Website with QR Menu | IQ Rest",
+          "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
+        },
+        "content": {
+          "intro": "Want to know how to add items to your restaurant website with QR menu? IQ Rest makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "image1Alt": "How to add items to restaurant website with QR menu - item list view",
+          "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
+          "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
+          "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
+          "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with IQ Rest. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "image2Alt": "Item form showing how to add items to restaurant QR menu website",
+          "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
+          "section3Title": "Image Upload and Optimization for Your Restaurant Items",
+          "section3Text": "High-quality images are essential when you add items to restaurant website with QR menu. Our system accepts JPEG, PNG, WebP, and GIF formats up to 5MB. Every image is automatically resized to 500x500 pixels and converted to WebP format for fast loading while maintaining excellent quality. This means your dishes always look their best on any device. Professional food photography significantly improves how customers perceive your restaurant when browsing your QR menu website.",
+          "benefitsTitle": "Benefits of Adding Items to Your Restaurant QR Menu Website",
+          "benefit1": "Add unlimited menu items with photos, descriptions, and prices",
+          "benefit2": "Automatic image optimization for fast loading and perfect display",
+          "benefit3": "Organize items into categories for easy customer navigation",
+          "benefit4": "Active/inactive toggle to hide sold-out items without deleting",
+          "benefit5": "Drag and drop reordering to arrange items in your preferred order",
+          "benefit6": "Mobile-friendly interface to add items from any device",
+          "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using IQ Rest. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, IQ Rest makes it easy to add items to restaurant website that attracts and converts customers.",
+          "ctaText": "Ready to add items to your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "How to Make QR Code Menu for Restaurant with Categories",
+        "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
+        "meta": {
+          "title": "How to Make QR Code Menu for Restaurant with Categories | IQ Rest",
+          "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
+        },
+        "content": {
+          "intro": "Want to know how to make QR code menu for restaurant with categories? IQ Rest now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "image1Alt": "How to make QR code menu for restaurant - categories list view",
+          "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
+          "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
+          "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
+          "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with IQ Rest. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "image2Alt": "Category form showing how to make QR code menu for restaurant",
+          "image2Caption": "Simple form interface for creating restaurant menu categories",
+          "section3Title": "Mobile-Optimized Category Management",
+          "section3Text": "We know restaurant owners are busy and often manage their menus on the go. That's why our category management is fully optimized for mobile devices. When you make QR code menu for restaurant using your phone, you'll find a compact interface with a three-dot menu for quick actions. Move categories up or down, edit details, or delete categories - all from your smartphone. This mobile-first approach ensures you can make QR code menu for restaurant with categories anytime, anywhere.",
+          "benefitsTitle": "Benefits of Making QR Code Menu with Categories",
+          "benefit1": "Organize menu items logically so customers can easily find what they want",
+          "benefit2": "Drag and drop reordering to arrange categories in your preferred display order",
+          "benefit3": "Active/inactive toggle to hide seasonal categories without deleting them",
+          "benefit4": "Mobile-optimized interface to manage categories from any device",
+          "benefit5": "Clean visual design with activity indicators for quick status overview",
+          "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
+          "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using IQ Rest. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, IQ Rest makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "ctaText": "Ready to make QR code menu for your restaurant with categories?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
+        "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
+        "meta": {
+          "title": "Easy QR Menu for Cafe - New Control Panel | IQ Rest",
+          "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
+        },
+        "content": {
+          "intro": "We're excited to introduce our brand new admin control panel designed to make creating QR menus for your cafe as easy as possible. Whether you're running a small coffee shop or a bustling cafe, our easy-to-use interface helps you manage your digital menu effortlessly. The new control panel features a modern sidebar design that puts all the tools you need to create your cafe's QR menu right at your fingertips.",
+          "image1Alt": "Easy QR menu control panel for cafe management",
+          "image1Caption": "New control panel with sidebar navigation for easy cafe QR menu creation",
+          "section1Title": "Modern Sidebar Interface for Easy Menu Management",
+          "section1Text": "The new control panel features a sleek sidebar that makes navigating your cafe's QR menu settings incredibly easy. With clearly organized sections for Dashboard, Categories, Products, QR Code, Analytics, Settings, Billing, and Support, you can easily find and manage every aspect of your cafe's digital menu. The sidebar collapses on mobile devices, ensuring easy access to all features regardless of what device you're using to manage your cafe's QR menu.",
+          "section2Title": "Easy Category and Product Management for Your Cafe",
+          "section2Text": "Creating and organizing your cafe's QR menu has never been easier. Our new category and product management pages are designed with simplicity in mind, allowing cafe owners to easily add, edit, and organize their menu items. Whether you're updating daily specials or adding seasonal drinks, the easy-to-use interface ensures your cafe's QR menu stays current and appealing to customers.",
+          "section3Title": "Server-Side Rendering for Fast Performance",
+          "section3Text": "The new control panel is built with server-side rendering (SSR) technology, ensuring your cafe's QR menu management dashboard loads quickly and efficiently. All data is fetched from the server, providing real-time updates and a smooth experience. This easy and fast approach means you spend less time waiting and more time perfecting your cafe's QR menu.",
+          "benefitsTitle": "Why This Makes QR Menu Creation Easy for Cafes",
+          "benefit1": "Easy navigation with modern sidebar interface for quick access to all cafe menu features",
+          "benefit2": "Easy category management to organize your cafe's QR menu logically",
+          "benefit3": "Easy product editing with instant updates to your cafe's digital menu",
+          "benefit4": "Easy QR code generation and customization for your cafe",
+          "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
+          "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
+          "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using IQ Rest to provide their customers with an easy, modern menu experience.",
+          "ctaText": "Ready to create an easy QR menu for your cafe?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
+        "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
+        "meta": {
+          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | IQ Rest",
+          "description": "Learn how to get QR menu for restaurants easily. New dedicated FAQ page answers all questions about getting QR menus for your restaurant. Streamlined 4-step guide to get started."
+        },
+        "content": {
+          "intro": "We've made it easier than ever to get QR menu for restaurants. Our reorganized FAQ and how-to content helps restaurant owners quickly find answers about how to get QR menus for their establishments. Whether you're looking to get a QR menu for your restaurant or café, this update provides all the information you need in one place.",
+          "image1Alt": "How to get QR menu for restaurants - dedicated FAQ page",
+          "image1Caption": "New FAQ page showing how to get QR menu for restaurants with organized questions and answers",
+          "section1Title": "Dedicated FAQ Page for Getting QR Menus",
+          "section1Text": "All questions about how to get QR menu for restaurants are now on a dedicated /faq page. Restaurant owners can easily find answers about getting QR menus, from setup to customization. Each question about getting a QR menu for your restaurant is displayed in its own card with expanded answers, making it simple to get the information you need to get started with QR menus for your restaurant.",
+          "section2Title": "4-Step Guide to Get QR Menu for Restaurants",
+          "section2Text": "Our streamlined guide shows exactly how to get QR menu for restaurants in just 4 easy steps. Whether you want to get a QR menu for your restaurant, café, or bar, the new card-based design makes it clear how to get started. This guide to get QR menus for restaurants appears on all pages, ensuring you always know how to get your restaurant's QR menu set up quickly.",
+          "section3Title": "SEO-Optimized Content to Help Restaurants Get QR Menus",
+          "section3Text": "We've optimized our content to help more restaurants discover how to get QR menus. The guide appears with full Schema.org structured data on the homepage, helping restaurants searching for how to get QR menu solutions find us easily. Our smart content distribution ensures restaurants can get the QR menu information they need while maintaining strong search engine visibility.",
+          "benefitsTitle": "Why This Helps You Get QR Menu for Your Restaurant",
+          "benefit1": "Dedicated FAQ page answers all questions about getting QR menus for restaurants",
+          "benefit2": "Clear 4-step guide shows exactly how to get QR menu for your restaurant",
+          "benefit3": "Easy access to FAQ and contact options to help you get your QR menu set up",
+          "benefit4": "SEO-optimized to help restaurants discover how to get QR menus easily",
+          "benefit5": "Consistent information about getting QR menus across the entire platform",
+          "benefit6": "Faster path to get QR menu for your restaurant with improved navigation",
+          "conclusionTitle": "Get QR Menu for Your Restaurant Today",
+          "conclusionText": "These improvements make it incredibly easy for restaurants to get QR menus. Whether you're a small café looking to get a QR menu or a large restaurant chain, our reorganized content helps you understand exactly how to get QR menu solutions for your establishment. Start now and get your restaurant's QR menu up and running in minutes.",
+          "ctaText": "Ready to get QR menu for your restaurant?",
+          "ctaButton": "Get QR Menu Now"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Free Restaurant Website Creation - Mobile Optimization & UX Improvements",
+        "description": "Major improvements to creating a free restaurant website: optimized mobile navigation with hamburger menu, enhanced signup page for better conversions, and streamlined user experience.",
+        "meta": {
+          "title": "Free Restaurant Website Creation Updates - IQ Rest Changelog",
+          "description": "Learn how IQ Rest improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
+        },
+        "content": {
+          "intro": "Creating a free restaurant website has never been easier or more mobile-friendly. We've made significant improvements to help restaurant and cafe owners build their professional website with a digital QR menu, especially on mobile devices where most people search for 'создание сайта для ресторана бесплатно' (free restaurant website creation). These updates focus on mobile navigation, signup page refinements, and overall user experience to ensure anyone can create a restaurant website for free without any technical knowledge.",
+          "image1Alt": "Mobile-optimized hamburger menu for restaurant website",
+          "image1Caption": "New mobile navigation with hamburger menu for easy access to all features",
+          "section1Title": "Mobile-First Navigation for Restaurant Websites",
+          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore IQ Rest's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
+          "section2Title": "Enhanced Get Started Page for Free Restaurant Website Creation",
+          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use IQ Rest now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
+          "image2Alt": "Optimized signup flow for free restaurant website creation",
+          "image2Caption": "Streamlined signup process optimized for mobile devices",
+          "section3Title": "Three-Step Process Optimized for All Devices",
+          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with IQ Rest.",
+          "benefitsTitle": "Key Improvements for Creating Free Restaurant Websites",
+          "benefit1": "Mobile-optimized hamburger menu navigation for easy access on smartphones",
+          "benefit2": "Enhanced signup page with better mobile spacing and centered layouts",
+          "benefit3": "Full-width restaurant counter on mobile providing strong social proof",
+          "benefit4": "Adaptive three-step process indicator that works on all screen sizes",
+          "benefit5": "Streamlined input forms optimized for mobile touch interaction",
+          "benefit6": "Fixed logout redirect issue ensuring proper navigation across all pages",
+          "conclusionTitle": "Free Restaurant Website Creation Made Simple",
+          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out IQ Rest on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
+          "ctaText": "Ready to create your free restaurant website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "landing-redesign": {
+        "title": "Redesigned Get Started Page for Higher Conversions",
+        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
+        "meta": {
+          "title": "Get Started Page Redesign - IQ Rest Changelog",
+          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+        },
+        "content": {
+          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
+          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
+          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
+          "section1Title": "Clear Value Propositions at a Glance",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section2Title": "Social Proof That Builds Trust",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
+          "section3Title": "Streamlined Signup Flow",
+          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
+          "benefitsTitle": "Key Improvements in This Update",
+          "benefit1": "Value proposition cards with icons for instant comprehension",
+          "benefit2": "Live restaurant counter providing authentic social proof",
+          "benefit3": "Unified page design for both email and OTP verification steps",
+          "benefit4": "Visual 3-step process indicator for transparency",
+          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
+          "benefit6": "Real-time email validation with visual feedback",
+          "conclusionTitle": "Designed for Restaurant Success",
+          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
+          "ctaText": "Ready to create your restaurant's digital menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "auth": {
+        "title": "New User Authentication Interface",
+        "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
+        "meta": {
+          "title": "User Authentication Interface - IQ Rest Changelog",
+          "description": "IQ Rest introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+        },
+        "content": {
+          "intro": "We are excited to announce the launch of our new user authentication interface for IQ Rest. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of IQ Rest authentication",
+          "image1Caption": "Simple email-based authentication - no passwords to remember",
+          "section1Title": "Passwordless Authentication for Restaurant Owners",
+          "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
+          "section2Title": "Streamlined QR Menu Creation Process",
+          "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
+          "image2Alt": "OTP verification step of IQ Rest authentication",
+          "image2Caption": "Secure 4-digit code verification sent directly to your email",
+          "section3Title": "Built for Speed and Security",
+          "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
+          "benefitsTitle": "Key Benefits for Your Restaurant",
+          "benefit1": "Create your restaurant website with QR menu in minutes - no technical skills required",
+          "benefit2": "No passwords to remember - secure email-based verification keeps your account safe",
+          "benefit3": "Instant access to your digital menu builder from any device",
+          "benefit4": "Quick updates to your QR menu even during busy service hours",
+          "conclusionTitle": "Start Building Your Digital Menu Today",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, IQ Rest provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "ctaText": "Ready to create your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "meta": {
+          "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+        },
+        "content": {
+          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
+          "image1Alt": "Subscription plans for QR menu and restaurant website creation",
+          "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
+          "section1Title": "Flexible Plans for Every Restaurant Size",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section2Title": "Simple Billing Dashboard",
+          "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
+          "section3Title": "Save 25% with Yearly Billing",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "benefitsTitle": "Benefits of Our Subscription Plans",
+          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
+          "benefit3": "Instant plan upgrades - new features activate immediately",
+          "benefit4": "Secure Stripe payment processing for all transactions",
+          "benefit5": "Easy plan management through simple billing dashboard",
+          "benefit6": "Downgrade anytime - no long-term contracts required",
+          "conclusionTitle": "Start Creating Your Restaurant Website Today",
+          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using IQ Rest to connect with their customers through modern, mobile-friendly QR menus.",
+          "ctaText": "Ready to choose your plan for QR menu and restaurant website?",
+          "ctaButton": "View Pricing Plans"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR Kód",
+    "description": "Töltse le és nyomtassa ki a QR kódját, hogy az ügyfelek be tudják olvasni",
+    "preview": "Előnézet",
+    "paperFormat": "Papírformátum",
+    "qrPerPage": "QR Kódok oldalonként",
+    "customText": "Szöveg a QR Kód alatt",
+    "customTextPlaceholder": "Olvassa be a menü megtekintéséhez",
+    "print": "Nyomtatás",
+    "download": "PNG letöltése",
+    "viewMenu": "Menü megtekintése",
+    "noSlug": "Nincs beállítva menü URL",
+    "noSlugDescription": "Kérjük, először állítsa be az éttermének URL-jét a beállításokban a QR kód generálásához.",
+    "goToSettings": "Menj a Beállításokhoz",
+    "loading": "Betöltés...",
+    "menuUrl": "Az Ön weboldala",
+    "websiteReady": "Az Ön weboldala készen áll!",
+    "openWebsite": "Weboldal megnyitása",
+    "printSection": "QR Kód nyomtatása és letöltése:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Levél (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Teljes oldal)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Szövegméret",
+    "textSizes": {
+      "small": "Kicsi",
+      "medium": "Közepes",
+      "large": "Nagy"
+    }
+  },
+  "support": {
+    "title": "Üzenetek",
+    "subtitle": "Kérjen segítséget csapatunktól",
+    "unauthorized": "Kérjük, jelentkezzen be a támogatás eléréséhez",
+    "lastUpdated": "Frissítve",
+    "emptyTitle": "Még nincsenek üzenetek",
+    "emptyDescription": "Küldjön üzenetet a beszélgetés megkezdéséhez",
+    "sendMessage": "Üzenet küldése",
+    "placeholder": "Írja be az üzenetét...",
+    "hint": "Nyomja meg az Entert a küldéshez, Shift+Enter az új sorhoz",
+    "send": "Küldés",
+    "supportTeam": "Támogatói Csapat"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Hozza létre digitális menüjét 5 perc alatt - IQ Rest",
+      "description": "QR menü és weboldal az étterméhez. Azonnal készen áll. Nincs szükség technikai tudásra."
+    },
+    "title": "Hozza létre digitális menüjét 5 perc alatt",
+    "subtitle": "QR menü és weboldal az étterméhez. Azonnal készen áll.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Adja meg az emailt a kezdéshez",
+    "otpPlaceholder": "Adja meg a 4 számjegyű kódot",
+    "continue": "Hozza létre a menümet",
+    "sending": "Készítés...",
+    "verifyTitle": "Ellenőrizze az emailjét",
+    "verifySubtitle": "Küldtünk egy 4 számjegyű kódot a(z) {email} címre",
+    "verify": "Ellenőrzés",
+    "verifying": "Ellenőrzés folyamatban...",
+    "changeEmail": "Email megváltoztatása",
+    "resendCode": "Kód újraküldése",
+    "successTitle": "Üdvözöljük!",
+    "successSubtitle": "Sikeresen bejelentkezett",
+    "redirecting": "Átirányítás a vezérlőpultra...",
+    "errors": {
+      "sendFailed": "A megerősítő kód küldése nem sikerült. Kérjük, próbálja újra.",
+      "verifyFailed": "A kód ellenőrzése nem sikerült. Kérjük, próbálja újra."
+    },
+    "valueProps": {
+      "noSkills": "Nincs szükség technikai tudásra",
+      "instantUpdates": "Azonnali menüfrissítések",
+      "qrIncluded": "QR kód + weboldal benne van",
+      "freeStart": "Ingyenes a kezdés"
+    },
+    "formHelper": "Nincs szükség hitelkártyára",
+    "setupTime": "Beállítás 5 perc alatt",
+    "hasAccount": "Már van fiókja?",
+    "signIn": "Bejelentkezés",
+    "restaurantCounter": "Csatlakozzon a(z) {count} étteremhez, akik már használják az IQ Restet",
+    "steps": {
+      "signUp": "Regisztráljon az email címével",
+      "addMenu": "Adja hozzá a menüpontjait",
+      "getQr": "Szerezze meg a QR kódját és kezdje el"
+    },
+    "motivational": {
+      "title": "Kezdje el ma az rendeléseket",
+      "subtitle": "Az ügyfelei várják a digitális menüt"
+    }
+  },
+  "reservations": {
+    "title": "Foglalások",
+    "tables": "Asztalok",
+    "settings": "Beállítások",
+    "addTable": "Asztal hozzáadása",
+    "newTable": "Új asztal",
+    "editTable": "Asztal szerkesztése",
+    "tableNumber": "Asztalszám",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Kapacitás (vendégek)",
+    "capacityPlaceholder": "4",
+    "zone": "Zóna",
+    "zonePlaceholder": "Terasz, Ablak, Fő terem...",
+    "image": "Kép",
+    "uploadImage": "Kattintson a kép feltöltéséhez",
+    "removeImage": "Eltávolítás",
+    "isActive": "Aktív",
+    "active": "Aktív",
+    "inactive": "Inaktív",
+    "save": "Mentés",
+    "saving": "Mentés folyamatban...",
+    "cancel": "Mégse",
+    "delete": "Törlés",
+    "deleteConfirm": "Biztos benne, hogy törölni szeretné ezt az asztalt?",
+    "table": "Asztal",
+    "noTables": "Még nincsenek asztalok. Adja hozzá az első asztalát a foglalások engedélyezéséhez.",
+    "error": "Hiba",
+    "close": "Bezárás",
+    "noReservations": "Még nincsenek foglalások",
+    "pending": "Függőben",
+    "confirmed": "Megerősítve",
+    "cancelled": "Törölve",
+    "completed": "Teljesítve",
+    "confirm": "Megerősít",
+    "reject": "Elutasít",
+    "guests": "vendégek",
+    "date": "Dátum",
+    "time": "Idő",
+    "guest": "Vendég",
+    "status": "Státusz",
+    "notes": "Megjegyzések",
+    "awaitingResponse": "Válaszra vár",
+    "today": "Ma",
+    "tomorrow": "Holnap",
+    "otherReservations": "Egyéb foglalások",
+    "sort": "Rendezés"
+  },
+  "publicReserve": {
+    "title": "Asztalfoglalás",
+    "selectDate": "Dátum kiválasztása",
+    "selectTime": "Időpont kiválasztása",
+    "selectGuests": "Vendégek száma",
+    "selectTable": "Asztal kiválasztása",
+    "yourDetails": "Adatai",
+    "name": "Név",
+    "namePlaceholder": "A neve",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Telefon (opcionális)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Különleges kérések (opcionális)",
+    "notesPlaceholder": "Bármilyen különleges kérés vagy megjegyzés...",
+    "submit": "Asztalfoglalás",
+    "submitting": "Foglalás folyamatban...",
+    "success": "Foglalás elküldve!",
+    "successAuto": "A foglalása megerősítve. Hamarosan kap egy megerősítő emailt.",
+    "successManual": "A foglalási kérelme elküldve. Emailt kap, amint megerősítik.",
+    "error": "Hiba",
+    "guests": "vendég",
+    "table": "Asztal",
+    "capacity": "kapacitás",
+    "noAvailableTables": "Nincs elérhető asztal ennyi vendég számára",
+    "back": "Vissza a menübe",
+    "noTimeSlotsAvailable": "Nincs elérhető időpont ezen a napon",
+    "loadingAvailability": "Elérhetőség ellenőrzése..."
+  },
+  "publicMenu": {
+    "contacts": "Kapcsolatok",
+    "language": "Nyelv",
+    "reserve": "Asztalfoglalás",
+    "onlineMenu": "Online Menü",
+    "noCategories": "Nincsenek elérhető kategóriák",
+    "openInstagram": "Instagram megnyitása",
+    "makeCall": "Hívás indítása",
+    "writeWhatsApp": "Írás a WhatsApp-on",
+    "openGoogleMaps": "Megnyitás a Google Térképen",
+    "noLocation": "Nincs elérhető helyszín",
+    "english": "Angol",
+    "spanish": "Spanyol",
+    "allergens": "Allergének",
+    "allergensInfo": "Ez az étel a következő allergéneket tartalmazza:",
+    "allergenNames": {
+      "gluten": "Glutén",
+      "crustaceans": "Rákfélék",
+      "eggs": "Tojás",
+      "fish": "Hal",
+      "peanuts": "Földimogyoró",
+      "soybeans": "Szója",
+      "dairy": "Tejtermékek",
+      "nuts": "Diófélék",
+      "celery": "Zeller",
+      "mustard": "Mustár",
+      "sesame": "Szezámmag",
+      "sulphites": "Kén-dioxid",
+      "lupin": "Lupin",
+      "molluscs": "Puhatestűek"
+    }
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések a QR Menüvel Kapcsolatban Éttermek és Kávézók Számára",
+    "subtitle": "Találja meg a válaszokat a digitális QR menü létrehozásával és kezelésével kapcsolatos gyakori kérdésekre éttermek és kávézók számára",
+    "howto": {
+      "question": "Hogyan lehet QR menüt és étterem weboldalt létrehozni 4 egyszerű lépésben?",
+      "answer": "Hozza online éttermét 5 perc alatt - csak adja meg az e-mail címét és kezdje el a telefonjáról",
+      "faqTitle": "További kérdései vannak?",
+      "faqDescription": "Nézze meg átfogó GYIK-ünket, hogy mindent megtudjon az éttermének QR menüjével és weboldalával kapcsolatos létrehozásáról és kezeléséről",
+      "faqButton": "Összes GYIK megtekintése",
+      "contactButton": "Lépjen Velünk Kapcsolatba",
+      "steps": [
+        {
+          "name": "Jelentkezzen be e-maillel",
+          "text": "Szerezzen modern étterem weboldalt QR menüvel, térképes kapcsolattartó oldallal, online foglalásokkal és egyedi márkázással - mindez az elejétől fogva benne van."
+        },
+        {
+          "name": "Állítsa be éttermét",
+          "text": "Adja meg éttermének nevét és válassza ki egyedi URL-jét. Adjon hozzá videó- vagy fényképes hátteret, állítsa be márkájának színeit, engedélyezze az asztalfoglalásokat."
+        },
+        {
+          "name": "Adjon hozzá kategóriákat és ételeket",
+          "text": "Hozzon létre menü kategóriákat és adjon hozzá ételeket fényképekkel. Az AI automatikusan optimalizálja a képeit és lefordítja a menüjét több mint 10 nyelvre."
+        },
+        {
+          "name": "Tekintse meg kész menüjét",
+          "text": "Az Ön professzionális weboldala élő! Az ügyfelek böngészhetik a menüjét, foglalhatnak asztalt, és megtalálhatják Önt a térképen. Kövesse nyomon mindent napi analitikával."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Mi az a QR menü éttermek számára és hogyan működik?",
+        "answer": "A QR menü egy digitális menü, amelyhez az ügyfelek QR kód beolvasásával férhetnek hozzá okostelefonjukkal. Az IQ Rest professzionális digitális menü weboldalt készít az éttermének vagy kávézójának, amely azonnal frissül nyomtatás nélkül. Az ügyfelek egyszerűen beolvassák a kódot, és megtekintik a menüjét az eszközükön."
+      },
+      {
+        "question": "Mennyibe kerül egy QR menü éttermeknek vagy kávézóknak?",
+        "answer": "Az IQ Rest rugalmas árazást kínál, amely €0-tól kezdődik örökre a ingyenes tervünkkel. Ez lehetővé teszi, hogy bármely étterem vagy kávézó professzionális QR menüt készítsen. A fizetős tervek már havi €4-tól kezdődnek, további funkciókkal, mint például korlátlan tételek és fejlett analitika."
+      },
+      {
+        "question": "Létrehozhatok weboldalt az éttermem számára kódolás nélkül?",
+        "answer": "Igen! Az IQ Rest olyan étterem- és kávézó tulajdonosok számára készült, akiknek nincs technikai tudásuk. Pár perc alatt létrehozhat egy teljes digitális menü weboldalt az éttermének, programozási vagy kódolási ismeretek nélkül. Egyszerűen adja hozzá az ételeit, áraikat és fényképeiket intuitív felületünkön."
+      },
+      {
+        "question": "Milyen gyakran frissíthetem a QR menümet?",
+        "answer": "Bármikor frissítheti éttermének vagy kávézójának menüjét, ahogy szüksége van rá. Minden változás valós időben tükröződik, lehetővé téve az árak azonnali frissítését, új ételek hozzáadását vagy leírások módosítását nyomtatás nélkül. Tökéletes napi ajánlatokhoz és szezonális frissítésekhez."
+      },
+      {
+        "question": "A QR menü működik éttermek és kávézók számára is?",
+        "answer": "Abszolút! Az IQ Rest tökéletes éttermek, kávézók, kávézók, bárok, ételkamionok és bármilyen élelmiszerek szolgáltatására. Digitális menü megoldásunk alkalmazkodik bármilyen típusú létesítményhez, a kis kávézóktól a nagy étteremláncokig."
+      },
+      {
+        "question": "Hogyan működik az automatikus menüfordítás?",
+        "answer": "QR menü rendszerünk mesterséges intelligenciát használ az étterem vagy kávézó menüjének automatikus lefordítására több nyelvre. Ez tökéletes a turisztikai területeken és a nemzetközi ügyfelek számára. Kínálhatja menüjét angolul, spanyolul és más nyelveken, segítve ezzel, hogy több ügyfelet szolgáljon ki."
+      },
+      {
+        "question": "Ingyen kipróbálhatom a QR menü megoldást?",
+        "answer": "Igen! Teljesen ingyenes tervet kínálunk éttermek és kávézók számára, hogy kipróbálhassák az IQ Rest-et. Létrehozhatja digitális menü weboldalát akár 15 tétellel költség nélkül, örökre. Nincs szükség hitelkártyára a kezdéshez. Csak akkor frissítse, ha több funkcióra van szüksége."
+      },
+      {
+        "question": "Az IQ Rest egy alkalmazás, amit az ügyfeleknek le kell tölteniük?",
+        "answer": "Nem! Ez az egyik legjobb előny. Az ügyfeleknek nem kell letölteniük semmilyen alkalmazást. Egyszerűen beolvassák a QR kódját, és a menü azonnal megnyílik a böngészőjükben. Ez sokkal kényelmesebb, mint az étterem alkalmazások, amelyek letöltést igényelnek."
+      },
+      {
+        "question": "Mik a digitális menü weboldal előnyei az éttermem számára?",
+        "answer": "A digitális menü weboldal számos előnyt kínál: azonnali menüfrissítések nyomtatási költségek nélkül, többnyelvű támogatás a nemzetközi ügyfelek számára, érintkezés nélküli rendelés a biztonság érdekében, analitika a népszerű ételek megtekintéséhez, és professzionális bemutatás. Ráadásul környezetbarát, mivel megszünteti a papír menü hulladékot."
+      },
+      {
+        "question": "Hogyan hozhatok létre QR kódot az éttermem menüjéhez?",
+        "answer": "Az IQ Rest automatikusan generál egy professzionális QR kódot, amikor létrehozza digitális menüjét. Letöltheti és kinyomtathatja ezt a QR kódot az étterem asztalaihoz, bejáratához vagy elviteli pultjához. A QR kód testreszabható és magas minőségű a tiszta beolvasáshoz."
+      }
+    ],
+    "cta": {
+      "title": "Még mindig vannak kérdései?",
+      "subtitle": "Kérdezzen tőlünk, és a lehető leghamarabb választ kap",
+      "button": "Lépjen Velünk Kapcsolatba"
+    },
+    "linkTitle": "Kérdései vannak?",
+    "linkDescription": "Nézze meg a gyakran ismételt kérdéseinket, hogy többet tudjon meg az IQ Rest-ről",
+    "meta": {
+      "title": "Gyakran Ismételt Kérdések - IQ Rest",
+      "description": "Találja meg a válaszokat a gyakori kérdésekre az IQ Rest digitális QR menü megoldásával kapcsolatban éttermek és kávézók számára"
+    }
+  },
+  "billing": {
+    "title": "Számlázás",
+    "description": "Kezelje előfizetését és számlázását",
+    "unauthorized": "Kérjük, jelentkezzen be az előfizetésének kezeléséhez",
+    "perMonth": "/hó",
+    "currentPlan": "Jelenlegi csomag",
+    "upgrade": "Frissítés",
+    "manage": "Kezelés",
+    "subscriptionSuccess": "Az előfizetése sikeresen aktiválva lett!",
+    "subscriptionCanceled": "Az előfizetési folyamat megszakítva.",
+    "subscriptionProcessing": "Az Ön fizetése feldolgozás alatt áll. Ez néhány percet igénybe vehet az aktiváláshoz.",
+    "processingPayment": "A fizetése feldolgozása folyamatban...",
+    "processingPaymentDescription": "Kérjük, várjon, amíg megerősítjük az előfizetését. Ez általában néhány másodpercet vesz igénybe.",
+    "checkoutError": "A pénztár megnyitása nem sikerült. Kérjük, próbálja újra.",
+    "portalError": "A számlázási portál megnyitása nem sikerült. Kérjük, próbálja újra.",
+    "detailsNote": "További részletekért látogasson el a",
+    "pricingPage": "Árazási oldalra",
+    "plans": {
+      "FREE": {
+        "name": "Ingyenes"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Alap havi"
+      },
+      "BASIC_YEARLY": {
+        "name": "Alap éves"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro havi"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro éves"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Irányítópult",
+      "onboarding": "Bevezetés",
+      "qrMenu": "QR Menü",
+      "analytics": "Elemzések",
+      "categories": "Kategóriák",
+      "items": "Tételek",
+      "settings": "Általános",
+      "design": "Tervezés",
+      "contacts": "Kapcsolatok",
+      "languages": "Nyelvek",
+      "reservations": "Foglalások",
+      "reservationSettings": "Foglalási beállítások",
+      "tables": "Asztalok",
+      "billing": "Számlázás",
+      "support": "Támogatás"
+    },
+    "sidebar": {
+      "qrMenu": "QR Menü",
+      "menu": "Menü",
+      "settings": "Beállítások",
+      "reservations": "Foglalások",
+      "account": "Fiók",
+      "reservationSettings": "Konfiguráció"
+    },
+    "logout": "Kijelentkezés",
+    "auth": {
+      "title": "Bejelentkezés",
+      "subtitle": "Modern weboldal QR menüvel, foglalásokkal és AI fordításokkal",
+      "benefits": "Nincsenek jelszavak. Nincsenek hitelkártyák.",
+      "emailPlaceholder": "your@email.com",
+      "continue": "Folytatás",
+      "verifyTitle": "Ellenőrizd az emailed",
+      "verifySubtitle": "Küldtünk egy kódot a(z) {email} címre",
+      "verify": "Ellenőrzés",
+      "changeEmail": "Másik email használata",
+      "errors": {
+        "sendFailed": "A kód küldése nem sikerült. Kérlek, próbáld újra.",
+        "verifyFailed": "Érvénytelen kód. Kérlek, próbáld újra."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Havi Használat",
+      "scansThisMonth": "beolvasás ebben a hónapban",
+      "limitReached": "Elérted a havi beolvasási limitet. Frissítsd a csomagod korlátlan beolvasásokhoz.",
+      "todayViews": "Ma",
+      "weeklyViews": "Ezen a Héten",
+      "monthlyViews": "Ebben a Hónapban",
+      "uniqueVisitors": "Egyedi Látogatók",
+      "viewsByPage": "Oldalankénti Megtekintések",
+      "viewsByLanguage": "Nyelv szerinti Megtekintések",
+      "dailyViews": "Napi Megtekintések",
+      "noData": "Még nincs elérhető adat",
+      "pageNames": {
+        "home": "Főoldal",
+        "menu": "Menü",
+        "contacts": "Kapcsolatok",
+        "language": "Nyelv",
+        "reserve": "Foglalás"
+      },
+      "languageNames": {
+        "en": "Angol",
+        "es": "Spanyol",
+        "de": "Német",
+        "fr": "Francia",
+        "ru": "Orosz"
+      }
+    },
+    "categories": {
+      "noCategories": "Még nincsenek kategóriák. Hozd létre az első kategóriádat a kezdéshez.",
+      "addCategory": "Hozzáadás",
+      "editCategory": "Kategória szerkesztése",
+      "name": "Név",
+      "namePlaceholder": "Add meg a kategória nevét",
+      "status": "Állapot",
+      "active": "Aktív",
+      "inactive": "Inaktív",
+      "save": "Mentés",
+      "saving": "Mentés...",
+      "cancel": "Mégsem",
+      "delete": "Törlés",
+      "deleteConfirm": "Biztosan törölni szeretnéd ezt a kategóriát? Ez a művelet nem vonható vissza.",
+      "fetchError": "A kategóriák betöltése nem sikerült",
+      "updateError": "A kategória frissítése nem sikerült",
+      "saveError": "A kategória mentése nem sikerült",
+      "deleteError": "A kategória törlése nem sikerült",
+      "translateError": "A fordítás nem sikerült",
+      "nameRequired": "A név megadása kötelező",
+      "enabled": "engedélyezve",
+      "disabled": "letiltva",
+      "created": "Kategória létrehozva",
+      "updated": "Kategória frissítve",
+      "deleted": "Kategória törölve",
+      "validationErrorTitle": "Kérlek, javítsd ki a következő hibákat",
+      "sort": "Rendezés",
+      "saveSort": "Mentés",
+      "sortSaved": "Rendezési sorrend mentve",
+      "sortError": "A rendezési sorrend mentése nem sikerült"
+    },
+    "items": {
+      "noItems": "Még nincsenek tételek. Hozza létre az első tételt a kezdéshez.",
+      "addItem": "Hozzáadás",
+      "editItem": "Tétel szerkesztése",
+      "name": "Név",
+      "namePlaceholder": "Írja be a tétel nevét",
+      "description": "Leírás",
+      "descriptionPlaceholder": "Írja be a tétel leírását",
+      "price": "Ár",
+      "pricePlaceholder": "0.00",
+      "category": "Kategória",
+      "categoryPlaceholder": "Válassza ki a kategóriát",
+      "image": "Kép",
+      "uploadImage": "Kép feltöltése",
+      "removeImage": "Kép eltávolítása",
+      "status": "Állapot",
+      "active": "Aktív",
+      "inactive": "Inaktív",
+      "save": "Mentés",
+      "saving": "Mentés...",
+      "cancel": "Mégse",
+      "delete": "Törlés",
+      "deleteConfirm": "Biztos benne, hogy törölni szeretné ezt a tételt? Ez a művelet nem vonható vissza.",
+      "fetchError": "A tételek betöltése nem sikerült",
+      "updateError": "A tétel frissítése nem sikerült",
+      "saveError": "A tétel mentése nem sikerült",
+      "deleteError": "A tétel törlése nem sikerült",
+      "translateError": "A fordítás nem sikerült",
+      "nameRequired": "A név megadása kötelező",
+      "categoryRequired": "A kategória megadása kötelező",
+      "priceRequired": "Érvényes ár megadása kötelező",
+      "enabled": "engedélyezve",
+      "disabled": "letiltva",
+      "created": "Tétel létrehozva",
+      "updated": "Tétel frissítve",
+      "deleted": "Tétel törölve",
+      "validationErrorTitle": "Kérjük, javítsa ki a következő hibákat",
+      "sort": "Rendezés",
+      "saveSort": "Mentés",
+      "sortSaved": "Rendezési sorrend mentve",
+      "sortError": "A rendezési sorrend mentése nem sikerült",
+      "allergens": "Allergének",
+      "allergensHint": "Válassza ki az ebben az ételben található allergéneket",
+      "allergenNames": {
+        "gluten": "Glutén",
+        "crustaceans": "Rákfélék",
+        "eggs": "Tojás",
+        "fish": "Hal",
+        "peanuts": "Földimogyoró",
+        "soybeans": "Szója",
+        "dairy": "Tejtermékek",
+        "nuts": "Diófélék",
+        "celery": "Zeller",
+        "mustard": "Mustár",
+        "sesame": "Szezám",
+        "sulphites": "Kén-dioxid",
+        "lupin": "Lupin",
+        "molluscs": "Puhatestűek"
+      }
+    },
+    "languages": {
+      "translationProgress": "Fordítási előrehaladás",
+      "availableLanguages": "Elérhető nyelvek",
+      "europeanLanguages": "Európai nyelvek",
+      "starToSetDefault": "Kattintson a csillagra az alapértelmezett beállításához",
+      "default": "alapértelmezett",
+      "hint": "Engedélyezze a nyelveket, hogy az ügyfelek több nyelven is megtekinthessék az étlapját. Az alapértelmezett nyelv a fő tartalomhoz használatos.",
+      "fetchError": "A nyelvek betöltése nem sikerült",
+      "enableError": "A nyelv engedélyezése nem sikerült",
+      "disableError": "A nyelv letiltása nem sikerült",
+      "defaultError": "Az alapértelmezett nyelv beállítása nem sikerült",
+      "languageEnabled": "{language} engedélyezve",
+      "languageDisabled": "{language} letiltva",
+      "defaultSet": "{language} beállítva alapértelmezettnek",
+      "cannotDisableDefault": "Az alapértelmezett nyelv nem tiltható le",
+      "atLeastOneRequired": "Legalább egy nyelv megadása kötelező",
+      "enableFirst": "Először engedélyezze a nyelvet",
+      "deleteConfirm": "Ennek a nyelvnek a letiltása törli az összes fordítást. Ez a művelet nem vonható vissza.",
+      "cancel": "Mégse",
+      "confirm": "Letiltás"
+    },
+    "contacts": {
+      "phone": "Telefon",
+      "phonePlaceholder": "+36 1 234 5678",
+      "phoneHint": "Kapcsolattartó telefonszám az ügyfelek számára",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "az_ön_étterme",
+      "instagramHint": "Az Instagram felhasználóneve (nincs @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+36 1 234 5678",
+      "whatsappHint": "WhatsApp szám az ügyfélinformációkhoz",
+      "location": "Helyszín",
+      "locationHint": "Kattintson a térképre vagy keressen, hogy beállítsa az étterem helyét",
+      "save": "Mentés",
+      "fetchError": "A kapcsolattartó információk betöltése nem sikerült",
+      "saveError": "A kapcsolattartó információk mentése nem sikerült",
+      "saved": "Kapcsolattartó információk mentve"
+    },
+    "design": {
+      "background": "Háttér",
+      "backgroundHint": "Töltsön fel egy videót vagy képet a kezdőlap háttéréhez",
+      "uploadMedia": "Videó vagy kép feltöltése",
+      "removeMedia": "Eltávolítás",
+      "accentColor": "Kiemelő szín",
+      "accentColorHint": "Fő szín a gombokhoz és kiemelésekhez a weboldalán",
+      "presetColors": "Előre beállított színek",
+      "customColor": "Egyedi szín",
+      "save": "Mentés",
+      "fetchError": "A dizájnbeállítások betöltése nem sikerült",
+      "saveError": "A dizájnbeállítások mentése nem sikerült",
+      "saved": "Dizájnbeállítások mentve",
+      "uploadError": "A fájl feltöltése nem sikerült",
+      "invalidFileType": "Érvénytelen fájltípus. Engedélyezett: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "A fájl túl nagy. Maximális méret: 50MB videókhoz, 5MB képekhez"
+    },
+    "general": {
+      "name": "Cím",
+      "namePlaceholder": "Írja be az étterem nevét",
+      "nameHint": "Megjelenik a nyilvános weboldal kezdőlapján",
+      "description": "Alcím",
+      "descriptionPlaceholder": "Rövid leírás (opcionális)",
+      "descriptionHint": "Megjelenik a cím alatt a kezdőlapján",
+      "slug": "URL Slug",
+      "slugPlaceholder": "az-en-etterem",
+      "slugHint": "Weboldala elérhető lesz itt: iq-rest.com/{slug}",
+      "currency": "Pénznem",
+      "currencyPlaceholder": "Válasszon pénznemet",
+      "save": "Mentés",
+      "fetchError": "A beállítások betöltése nem sikerült",
+      "saveError": "A beállítások mentése nem sikerült",
+      "saved": "Beállítások mentve",
+      "nameRequired": "Az étterem neve kötelező",
+      "slugRequired": "Az URL slug kötelező",
+      "validationErrorTitle": "Kérjük, javítsa ki a következő hibákat",
+      "slugChangedTitle": "A weboldal címe frissítve",
+      "slugChangedDescription": "Az étterme mostantól elérhető itt:",
+      "close": "Bezárás",
+      "view": "Megtekintés"
+    },
+    "onboarding": {
+      "title": "Üdvözöljük az IQ Rest-nél!",
+      "subtitle": "Fejezze be ezeket a lépéseket az étterem weboldala indításához",
+      "requiredSteps": "Kötelező lépések",
+      "optionalSteps": "Opcionális lépések",
+      "viewMenu": "Tekintse meg az étlapját",
+      "steps": {
+        "title": {
+          "name": "Adja meg az étterem nevét",
+          "description": "Adjon nevet az éttermének, amely megjelenik a weboldalán"
+        },
+        "slug": {
+          "name": "Állítsa be a weboldal címét",
+          "description": "Válasszon egyedi URL-t az étterem weboldalához"
+        },
+        "categories": {
+          "name": "Hozzon létre étlap kategóriákat",
+          "description": "Szervezze meg az étlapját olyan kategóriákba, mint a Előételek, Főételek, stb."
+        },
+        "items": {
+          "name": "Adjon hozzá étlap tételeket",
+          "description": "Adjon ételeket az étlapjához árakkal és leírásokkal"
+        },
+        "design": {
+          "name": "Testreszabás",
+          "description": "Válasszon színeket és háttérképet a weboldalához"
+        },
+        "contacts": {
+          "name": "Adja meg a kapcsolattartási információkat",
+          "description": "Adjon meg telefonszámot, WhatsApp-ot, Instagramot és címet"
+        },
+        "reservations": {
+          "name": "Foglalások engedélyezése",
+          "description": "Engedje meg az ügyfeleknek, hogy online asztalt foglaljanak"
+        },
+        "translations": {
+          "name": "Nyelvek hozzáadása",
+          "description": "Tegye elérhetővé az étlapját több nyelven"
+        }
+      },
+      "completed": "Befejezve",
+      "notCompleted": "Nincs befejezve",
+      "allDone": "Minden kész! Az étlapja élő.",
+      "requiredRemaining": "{count} kötelező lépés maradt"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Ahhoz, hogy a vendégeid számára elérhetővé tedd a foglalásokat, előfizetned kell a szolgáltatásra.",
+    "subscribe": "Előfizetés",
+    "reservationsEnabled": "Foglalások engedélyezése",
+    "enabled": "A foglalások engedélyezve vannak",
+    "disabled": "A foglalások le vannak tiltva",
+    "reservationMode": "Megerősítési mód",
+    "modeAuto": "Automatikus",
+    "modeManual": "Manuális",
+    "modeAutoDescription": "A foglalásokat automatikusan megerősítjük az asztal elérhetősége alapján",
+    "modeManualDescription": "Minden foglalást manuálisan kell megerősítened",
+    "slotDuration": "Foglalás időtartama",
+    "minutes": "perc",
+    "workingHours": "Nyitvatartási idő",
+    "save": "Mentés",
+    "saving": "Mentés...",
+    "saved": "Beállítások mentve",
+    "fetchError": "A beállítások betöltése nem sikerült",
+    "saveError": "A beállítások mentése nem sikerült"
+  },
+  "terms": {
+    "title": "Felhasználási feltételek",
+    "lastUpdated": "Utolsó frissítés: 2025. december 17.",
+    "contact": {
+      "title": "Lépjen kapcsolatba velünk",
+      "description": "Ha bármilyen kérdése van a felhasználási feltételekkel kapcsolatban, kérjük, lépjen kapcsolatba velünk."
+    },
+    "sections": [
+      {
+        "title": "1. Bevezetés",
+        "content": [
+          "Üdvözöljük az IQ Rest-nél. Ezek a felhasználási feltételek szabályozzák weboldalunk és a Bogdan Sokolov (Autónomo), NIE: Z1894474S által üzemeltetett szolgáltatások használatát, amely Spanyolországban van bejegyezve.",
+          "Az IQ Rest elérésével vagy használatával elfogadja, hogy kötelező érvényűnek tekinti ezeket a feltételeket. Ha nem ért egyet ezek bármelyikével, nem férhet hozzá a szolgáltatáshoz."
+        ]
+      },
+      {
+        "title": "2. A szolgáltatás leírása",
+        "content": [
+          "Az IQ Rest digitális QR menü és weboldal létrehozó platformot kínál éttermek, kávézók és élelmiszeripari létesítmények számára. Szolgáltatásunk magában foglalja a menedzsmentet, QR kód generálást, többnyelvű támogatást AI-alapú fordításokkal, AI képkészítési optimalizálást, asztalfoglalási rendszereket és analitikát.",
+          "Fenntartjuk a jogot, hogy bármikor, előzetes értesítés nélkül módosítsuk, felfüggesszük vagy megszüntessük a szolgáltatás bármely aspektusát."
+        ]
+      },
+      {
+        "title": "3. Fiók regisztráció",
+        "content": [
+          "Az IQ Rest bizonyos funkcióinak használatához érvényes e-mail cím használatával regisztrálnia kell egy fiókot. Ön felelős a fiókja titkosságának megőrzéséért és minden olyan tevékenységért, amely a fiókján belül történik.",
+          "Elfogadja, hogy pontos, aktuális és teljes információt ad meg a regisztráció során, és hogy frissíti ezeket az információkat, hogy azok pontosak, aktuálisak és teljesek maradjanak.",
+          "Jelszó nélküli hitelesítést használunk e-mail ellenőrző kódokkal. Ön felelős az e-mail fiókja biztonságának megőrzéséért."
+        ]
+      },
+      {
+        "title": "4. Előfizetési tervek és fizetések",
+        "content": [
+          "Az IQ Rest ingyenes, alap és pro előfizetési terveket kínál. Az ingyenes terv költségmentes, de korlátozott funkciókkal rendelkezik. A fizetős tervek (Alap és Pro) havi vagy éves díjjal kerülnek kiszámlázásra a Stripe fizetési feldolgozón keresztül.",
+          "Az árak euróban (EUR) vannak feltüntetve. A fizetős tervre való előfizetéssel felhatalmazza minket, hogy rendszeresen terheljük a fizetési módját, amíg le nem mondja.",
+          "Bármikor frissítheti, csökkentheti vagy lemondhatja az előfizetését a műszerfalán keresztül. A lemondások a jelenlegi számlázási időszak végén lépnek életbe. Részleges számlázási időszakok esetén nem nyújtunk visszatérítést.",
+          "Fenntartjuk a jogot, hogy 30 napos értesítéssel megváltoztassuk az árainkat. Az árak változásai a bejelentési időszakot követő számlázási időszakokra vonatkoznak."
+        ]
+      },
+      {
+        "title": "5. AI-alapú funkciók",
+        "content": [
+          "Az IQ Rest mesterséges intelligenciát használ a menüfordításokhoz és a képek optimalizálásához. Bár törekszünk a pontosságra, az AI által generált fordítások hibákat tartalmazhatnak. Ön felelős az összes AI által generált tartalom ellenőrzéséért és hitelesítéséért a közzététel előtt.",
+          "Az AI képkészítési optimalizálás automatikusan feldolgozza a feltöltött képeket a betöltési teljesítmény javítása érdekében. Az eredeti képek nem kerülnek tárolásra a feldolgozás után.",
+          "Nem garantáljuk az AI által generált tartalom pontosságát, teljességét vagy megbízhatóságát. Tudomásul veszi, hogy az AI funkciók 'ahogy vannak' alapon állnak rendelkezésre, és saját belátása szerint használhatók."
+        ]
+      },
+      {
+        "title": "6. Felhasználói tartalom",
+        "content": [
+          "Ön megtartja a tulajdonjogot minden olyan tartalom felett, amelyet feltölt az IQ Rest-re, beleértve a menüelemeket, leírásokat, képeket és üzleti információkat.",
+          "A tartalom feltöltésével nem kizárólagos, világszerte érvényes, jogdíjmentes engedélyt ad az IQ Rest-nek a tartalmának használatára, megjelenítésére és terjesztésére, kizárólag a szolgáltatás nyújtásának céljából.",
+          "Ön kizárólagosan felelős a feltöltött tartalomért, és biztosítania kell, hogy az ne sértsen meg semmilyen törvényt vagy harmadik fél jogait. Tilos tartalom: illegális anyagok, szerzői joggal védett tartalom engedély nélkül, félrevezető vagy csalárd információk, valamint az egészségügyi és biztonsági előírásoknak nem megfelelő tartalom."
+        ]
+      },
+      {
+        "title": "7. Elfogadható használat",
+        "content": [
+          "Elfogadja, hogy az IQ Rest-et nem használja jogellenes célokra, vagy olyan módon, amely károsíthatja, letilthatja vagy megzavarhatja a szolgáltatást.",
+          "Tilos tevékenységek: jogosulatlan hozzáférés megkísérlése más fiókokhoz vagy rendszerekhez, a szolgáltatás spam vagy rosszindulatú programok terjesztésére való használata, adatgyűjtés vagy adatbányászat, más egyének vagy vállalkozások megszemélyesítése, valamint a használati korlátok vagy biztonsági intézkedések megkerülése."
+        ]
+      },
+      {
+        "title": "8. Szellemi tulajdon",
+        "content": [
+          "Az IQ Rest név, logó, weboldal dizájn és minden kapcsolódó szellemi tulajdon Bogdan Sokolov tulajdonát képezi, és a vonatkozó szellemi tulajdonjogok védelme alatt áll.",
+          "Nem másolhatja, módosíthatja, terjesztheti vagy hozhat létre származékos műveket a szellemi tulajdonunk alapján kifejezett írásbeli engedély nélkül."
+        ]
+      },
+      {
+        "title": "9. Adatvédelem és adatvédelem",
+        "content": [
+          "Az IQ Rest használatát a Adatvédelmi irányelvünk is szabályozza. Megfelelünk az Általános Adatvédelmi Rendeletnek (GDPR) és a spanyol adatvédelmi törvényeknek (LOPDGDD).",
+          "Személyes adatokat gyűjtünk és dolgozunk fel, amelyek szükségesek a szolgáltatás nyújtásához, beleértve az e-mail címeket, üzleti információkat és használati analitikát. Bármikor kérheti személyes adataihoz való hozzáférést, azok helyesbítését vagy törlését."
+        ]
+      },
+      {
+        "title": "10. Felelősség korlátozása",
+        "content": [
+          "Az IQ Rest 'ahogy van' és 'ahogy elérhető' alapon kerül biztosításra, bármilyen garancia nélkül, legyen az kifejezett vagy hallgatólagos, beleértve, de nem korlátozva a hallgatólagos kereskedelmi garanciákra és a konkrét célra való alkalmasságra.",
+          "A törvény által megengedett legnagyobb mértékben Bogdan Sokolov nem felelős semmilyen közvetett, véletlen, különleges, következményes vagy büntető jellegű kárért, beleértve a profit, adatok vagy üzleti lehetőségek elvesztését.",
+          "Összes felelősségünk bármilyen, a szolgáltatásból eredő vagy ahhoz kapcsolódó követelésért nem haladhatja meg azt az összeget, amelyet az előző tizenkét (12) hónapban kifizetett nekünk."
+        ]
+      },
+      {
+        "title": "11. Kártalanítás",
+        "content": [
+          "Elfogadja, hogy kártalanítja, megvédi és mentesíti Bogdan Sokolov-ot minden olyan követeléstől, kártól, veszteségtől vagy költségtől, amely az Ön szolgáltatás használatából, tartalmából vagy e feltételek megsértéséből ered."
+        ]
+      },
+      {
+        "title": "12. Szolgáltatás elérhetősége",
+        "content": [
+          "Törekszünk a szolgáltatásunk magas rendelkezésre állásának fenntartására, de nem garantáljuk a megszakítás nélküli hozzáférést. A szolgáltatás ideiglenesen nem elérhető lehet karbantartás, frissítések vagy a hatáskörünkön kívüli körülmények miatt.",
+          "Nem vállalunk felelősséget semmilyen veszteségért vagy kárért, amely a szolgáltatás megszakításából vagy leállásából ered."
+        ]
+      },
+      {
+        "title": "13. Felmondás",
+        "content": [
+          "Bármikor azonnal, előzetes értesítés nélkül megszüntethetjük vagy felfüggeszthetjük a fiókját, ha úgy véljük, hogy a magatartása megsérti ezeket a feltételeket, vagy káros más felhasználókra, ránk vagy harmadik felekre.",
+          "A felmondáskor a szolgáltatás használatára való jogának azonnal vége. A felmondást követően 30 napon belül törölhetjük az adatait, hacsak jogilag nem köteleznek azok megőrzésére."
+        ]
+      },
+      {
+        "title": "14. A feltételek módosítása",
+        "content": [
+          "Fenntartjuk a jogot, hogy bármikor módosítsuk ezeket a feltételeket. Jelentős változásokról e-mailben vagy a szolgáltatáson keresztül értesítjük Önt.",
+          "Az IQ Rest folyamatos használata a változások hatályba lépése után a módosított feltételek elfogadásának minősül."
+        ]
+      },
+      {
+        "title": "15. Irányadó jog és joghatóság",
+        "content": [
+          "Ezeket a feltételeket Spanyolország és az Európai Unió jogai szabályozzák. A feltételekből vagy az IQ Rest használatából eredő viták a spanyol bíróságok kizárólagos joghatósága alá tartoznak.",
+          "Ha a feltételek bármely rendelkezése végrehajthatatlannak bizonyul, a fennmaradó rendelkezések teljes mértékben érvényben maradnak."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Adatvédelmi Nyilatkozat",
+    "lastUpdated": "Utolsó frissítés: 2025. december 17.",
+    "contact": {
+      "title": "Kapcsolatfelvétel",
+      "description": "Ha bármilyen kérdése van ezzel az Adatvédelmi Nyilatkozattal kapcsolatban, vagy szeretné gyakorolni az adatvédelmi jogait, kérjük, lépjen velünk kapcsolatba.",
+      "controller": "Adatkezelő"
+    },
+    "sections": [
+      {
+        "title": "1. Bevezetés",
+        "content": [
+          "Ez az Adatvédelmi Nyilatkozat ismerteti, hogyan gyűjti, használja, tárolja és védi az IQ Rest, amelyet Bogdan Sokolov (Autónomo) üzemeltet, NIE: Z1894474S, Spanyolországban bejegyezve, a személyes adatait, amikor használja QR menü platformunkat.",
+          "Elkötelezettek vagyunk az Ön magánéletének védelme mellett, és megfelelünk az Általános Adatvédelmi Rendeletnek (GDPR), a spanyol Adatvédelmi Törvénynek (LOPDGDD) és más vonatkozó adatvédelmi jogszabályoknak."
+        ]
+      },
+      {
+        "title": "2. Adatkezelő",
+        "content": [
+          "A személyes adataiért felelős adatkezelő: Bogdan Sokolov (Autónomo), NIE: Z1894474S, Spanyolországban bejegyezve. Bármilyen adatvédelmi kérdés esetén kérjük, lépjen velünk kapcsolatba a support@iq-rest.com címen."
+        ]
+      },
+      {
+        "title": "3. Gyűjtött Személyes Adatok",
+        "content": [
+          "Fiók Információ: Amikor regisztrál, összegyűjtjük az Ön e-mail címét az azonosítás és kommunikáció céljából. Jelszó nélküli azonosítást használunk, így nem tárolunk jelszavakat.",
+          "Üzleti Információ: Az étterem neve, leírása, URL slug, kapcsolattartási adatok (telefon, WhatsApp, Instagram), helyadatok és nyitvatartási idő, amelyeket a nyilvános menü weboldala számára ad meg.",
+          "Menü Tartalom: Kategóriák, menüelemek, leírások, árak és képek, amelyeket feltölt a digitális menü létrehozásához.",
+          "Használati Adatok: Információk arról, hogyan használja szolgáltatásunkat, beleértve az oldalletöltéseket, a funkciók használatát és az interakciós mintákat, amelyeket az elemzések során gyűjtünk.",
+          "Fizetési Információ: Amikor előfizet a fizetős csomagokra, a Stripe kezeli a fizetési folyamatot. Nem tároljuk a teljes bankkártya adatait; a Stripe dolgozza fel és biztosítja ezt az információt.",
+          "Technikai Adatok: IP címek, böngészőtípus, eszközinformációk és sütik, ahogy azt a Sütik Szabályzatunkban leírtuk."
+        ]
+      },
+      {
+        "title": "4. Hogyan Használjuk Az Ön Adatait",
+        "content": [
+          "Személyes adatait a következő célokra használjuk: QR menü szolgáltatásunk nyújtása és fenntartása, beleértve az étterem weboldalának létrehozását és QR kódok generálását. Az Ön fiókjának hitelesítése e-mail ellenőrző kódok segítségével. A Stripe-on keresztül történő fizetések feldolgozása és az előfizetés kezelése. Kommunikáció Önnel a fiókjával, szolgáltatásfrissítésekkel és támogatási kérésekkel kapcsolatban. AI-alapú funkciók biztosítása, mint például menüfordítások és képtömörítés. A szolgáltatás használatának elemzése és platformunk fejlesztése. Jogi kötelezettségek teljesítése és jogos érdekeink védelme."
+        ]
+      },
+      {
+        "title": "5. A Feldolgozás Jogi Alapja",
+        "content": [
+          "Szerződés Teljesítése: A feldolgozás szükséges a szolgáltatásunk nyújtásához (GDPR 6. cikk (1) bekezdés (b)).",
+          "Jogos Érdekek: Elemzések és szolgáltatásfejlesztés, csalásmegelőzés (GDPR 6. cikk (1) bekezdés (f)).",
+          "Hozzájárulás: Opcionális funkciók esetén, mint például marketingkommunikációk (GDPR 6. cikk (1) bekezdés (a)).",
+          "Jogi Kötelezettség: Amikor a törvény vagy szabályozási követelmények megkövetelik (GDPR 6. cikk (1) bekezdés (c))."
+        ]
+      },
+      {
+        "title": "6. Adattárolás és Biztonság",
+        "content": [
+          "Adatai biztonságos szervereken vannak tárolva, amelyeket az Amazon Web Services (AWS) biztosít. Adatbázisunk az AWS Stockholm (eu-north-1) régiójában található az Európai Unió területén, biztosítva az EU adatvédelmi követelményeinek való megfelelést.",
+          "A feltöltött képek és médiafájlok az EU régióban található AWS S3 szervereken vannak tárolva. Az adatok titkosítva vannak az átvitel során TLS/SSL segítségével, és nyugalmi állapotban AES-256 titkosítással.",
+          "Megfelelő technikai és szervezési intézkedéseket alkalmazunk adatai védelme érdekében a jogosulatlan hozzáférés, módosítás, nyilvánosságra hozatal vagy megsemmisítés ellen. Ezek közé tartozik a biztonságos azonosítás, hozzáférés-ellenőrzések, rendszeres biztonsági auditok és munkavállalói képzés."
+        ]
+      },
+      {
+        "title": "7. Adatmegosztás és Harmadik Felek",
+        "content": [
+          "Adatainkat a következő harmadik felek kategóriáival osztjuk meg:",
+          "Stripe (Fizetési Feldolgozó): Kezeli az előfizetési kifizetéseket. A Stripe az EU-USA Adatvédelmi Keretrendszer alatt tanúsított. Adatvédelmi nyilatkozatuk: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastruktúra): Szolgáltatja szervereinket és adatbázisainkat az EU régióiban. Az AWS megfelel a GDPR-nak és az EU-USA Adatvédelmi Keretrendszer alatt tanúsított.",
+          "AI Szolgáltatók: AI szolgáltatásokat használunk menüfordításokhoz és képtömörítéshez. Az adatok a saját adatvédelmi nyilatkozataik és adatfeldolgozási megállapodásaik szerint kerülnek feldolgozásra.",
+          "Google Analytics: Anonimizált weboldal-elemzésekhez (ha engedélyezve van). Lehetősége van leiratkozni a süti beállításokon keresztül.",
+          "Nem értékesítjük személyes adatait harmadik feleknek. Az adatokat jogi kötelezettség vagy jogi jogaink védelme érdekében nyilvánosságra hozhatjuk."
+        ]
+      },
+      {
+        "title": "8. Nemzetközi Adatátvételek",
+        "content": [
+          "Adatai elsősorban az Európai Unión belül (AWS Stockholm, eu-north-1 régió) vannak tárolva és feldolgozva. Amikor az adatokat az EU-n kívülre (például az Egyesült Államokban található szolgáltatókhoz) továbbítják, biztosítjuk, hogy megfelelő védelmi intézkedések legyenek érvényben, beleértve a Standard Szerződéses Klauzulákat (SCC) és a elismert adatvédelmi keretrendszerek alatti tanúsítást."
+        ]
+      },
+      {
+        "title": "9. Adatmegőrzés",
+        "content": [
+          "Fiók Adatok: Megtartva, amíg a fiókja aktív. A fiók törlésekor a személyes adatokat 30 napon belül eltávolítjuk, kivéve, ha a megőrzés törvény által kötelező.",
+          "Menü Tartalom: Megtartva, amíg a fiókja aktív. A fiók megszüntetésekor törölve.",
+          "Fizetési Nyilvántartások: Megtartva 7 évig a spanyol adótörvényeknek megfelelően.",
+          "Elemzési Adatok: Aggregált és anonimizált adatok korlátlan ideig megőrizhetők a szolgáltatás fejlesztése érdekében.",
+          "Biztonsági Adatok: Titkosított biztonsági mentésekben legfeljebb 90 napig megőrizhetők a törlés után katasztrófa-helyreállítási célokra."
+        ]
+      },
+      {
+        "title": "10. Az Ön Jogi Jogai a GDPR Alapján",
+        "content": [
+          "A GDPR alapján az alábbi jogok illetik meg az Ön személyes adatait:",
+          "Hozzáférési Jog: Kérheti a birtokunkban lévő személyes adatai másolatát.",
+          "Javítási Jog: Kérheti a pontatlan vagy hiányos adatok kijavítását.",
+          "Törlési Jog: Kérheti a személyes adatai törlését ('elfeledéshez való jog').",
+          "Korlátozási Jog: Kérheti a feldolgozás korlátozását bizonyos körülmények között.",
+          "Adathordozhatósági Jog: Kérheti adatai megkapását strukturált, gépileg olvasható formátumban.",
+          "Tiltakozási Jog: Tiltakozhat a jogos érdekeken alapuló feldolgozás vagy közvetlen marketing ellen.",
+          "Hozzájárulás Visszavonásának Joga: Amennyiben a feldolgozás hozzájáruláson alapul, bármikor visszavonhatja.",
+          "E jogok gyakorlásához lépjen kapcsolatba velünk a support@iq-rest.com címen. 30 napon belül válaszolunk. Ha nem elégedett a válaszunkkal, joga van panaszt tenni a Spanyol Adatvédelmi Ügynökségnél (AEPD) a www.aepd.es címen."
+        ]
+      },
+      {
+        "title": "11. Gyermekek Adatvédelme",
+        "content": [
+          "Az IQ Rest nem készült 16 év alatti személyek számára. Nem gyűjtünk tudatosan személyes adatokat gyermekektől. Ha tudomásunkra jut, hogy adatokat gyűjtöttünk egy gyermektől, azokat haladéktalanul töröljük."
+        ]
+      },
+      {
+        "title": "12. A Politika Módosításai",
+        "content": [
+          "Időről időre frissíthetjük ezt az Adatvédelmi Nyilatkozatot. Értesítjük Önt a jelentős változásokról e-mailben vagy értesítés formájában a weboldalunkon. A 'Utolsó frissítés' dátuma a tetején jelzi, mikor történt a legutolsó módosítás.",
+          "Az IQ Rest folyamatos használata a módosítások közzététele után a módosított politika elfogadását jelenti."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Süti Szabályzat",
+    "lastUpdated": "Utolsó frissítés: 2025. december 17.",
+    "yes": "Igen",
+    "no": "Nem",
+    "cookieTableTitle": "Használt Sütik",
+    "tableHeaders": {
+      "name": "Süti Neve",
+      "purpose": "Cél",
+      "duration": "Időtartam",
+      "required": "Kötelező"
+    },
+    "contact": {
+      "title": "Kérdések a Sütikkel Kapcsolatban",
+      "description": "Ha bármilyen kérdése van a sütik használatával kapcsolatban, kérjük, lépjen velünk kapcsolatba."
+    },
+    "sections": [
+      {
+        "title": "1. Mik azok a Sütik",
+        "content": [
+          "A sütik kis szöveges fájlok, amelyeket az eszközén (számítógép, tablet vagy mobiltelefon) tárolnak, amikor meglátogat egy weboldalt. Segítenek a weboldalak megfelelő működésében, megjegyzik a preferenciáit, és információt nyújtanak a weboldal tulajdonosainak.",
+          "Ez a Süti Szabályzat elmagyarázza, hogyan használja az IQ Rest, amelyet Bogdan Sokolov (Autónomo) üzemeltet, a sütiket és hasonló technológiákat az iq-rest.com weboldalunkon."
+        ]
+      },
+      {
+        "title": "2. Hogyan Használjuk a Sütiket",
+        "content": [
+          "Sütiket több célra használunk: annak biztosítására, hogy weboldalunk helyesen működjön, megjegyezzük a preferenciáit és beállításait, hitelesítjük a fiókját és bejelentkezve tartjuk, elemezzük, hogyan használják a látogatók a weboldalunkat, hogy javíthassuk azt, és megjegyezzük a süti hozzájárulási preferenciáit."
+        ]
+      },
+      {
+        "title": "3. A Használt Sütik Típusai",
+        "content": [
+          "Alapvető Sütik: Ezek a sütik szükségesek a weboldal működéséhez, és nem lehet őket kikapcsolni. Általában az Ön által végzett műveletekre válaszul állítják be őket, például bejelentkezéskor vagy a magánéleti preferenciák beállításakor.",
+          "Funkcionális Sütik: Ezek a sütik lehetővé teszik a továbbfejlesztett funkcionalitást és személyre szabást, például megjegyzik a nyelvi preferenciáját és a téma beállításait.",
+          "Elemző Sütik: Ezek a sütik segítenek megérteni, hogyan lépnek interakcióba a látogatók a weboldalunkkal, anonim információk gyűjtésével és jelentésével. Ezt az adatot a szolgáltatásunk javítására használjuk.",
+          "Harmadik Fél Sütik: Néhány sütit harmadik fél szolgáltatások helyeznek el az oldalainkon, például a fizetési feldolgozók (Stripe) és az elemző szolgáltatók (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. A Sütikkel Kapcsolatos Választásai",
+        "content": [
+          "Amikor először látogat el a weboldalunkra, egy süti hozzájárulási banner jelenik meg, amely lehetővé teszi, hogy elfogadja vagy elutasítsa a nem kötelező sütiket. Bármikor módosíthatja a preferenciáit.",
+          "A sütiket a böngésző beállításaival is vezérelheti. A legtöbb böngésző lehetővé teszi a sütik elutasítását, a meglévő sütik törlését, vagy értesítést kap, amikor sütiket küldenek. Kérjük, vegye figyelembe, hogy az alapvető sütik blokkolása befolyásolhatja weboldalunk működését.",
+          "A Google Analytics nyomkövetésből való leiratkozáshoz telepítheti a Google Analytics Opt-out Böngésző Kiegészítőt."
+        ]
+      },
+      {
+        "title": "5. Süti Időtartam",
+        "content": [
+          "Munkamenet Sütik: Ezek a sütik ideiglenesek, és törlődnek, amikor bezárja a böngészőt.",
+          "Tartós Sütik: Ezek a sütik a készülékén egy meghatározott ideig maradnak, vagy amíg törli őket. Segítenek felismerni, amikor visszatér a weboldalunkra."
+        ]
+      },
+      {
+        "title": "6. Harmadik Fél Sütik",
+        "content": [
+          "Stripe: Használják a biztonságos fizetési feldolgozáshoz. A Stripe sütiket állíthat be a csalások megelőzése és a biztonságos tranzakciók lebonyolítása érdekében. További információ: stripe.com/cookies-policy",
+          "Google Analytics: Használják az anonim statisztikák gyűjtésére a weboldal használatáról. Leiratkozhat a süti banner vagy a böngésző beállításai segítségével. További információ: policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. A Szabályzat Frissítései",
+        "content": [
+          "Időnként frissíthetjük ezt a Süti Szabályzatot, hogy tükrözze a gyakorlatainkban bekövetkezett változásokat, vagy működési, jogi vagy szabályozási okokból. A 'Utolsó frissítés' dátum a tetején jelzi, mikor történt a legutolsó módosítás."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Fenntartja a bejelentkezési munkamenetet és a hitelesítési állapotot",
+        "duration": "Munkamenet / 30 nap",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Megjegyzi a preferált nyelvét (angol/spanyol)",
+        "duration": "1 év",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Tárolja a téma preferenciáját (világos/sötét mód)",
+        "duration": "1 év",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Megjegyzi a süti hozzájárulási preferenciáit",
+        "duration": "1 év",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - anonim használati statisztikák nyomon követése",
+        "duration": "2 év / 24 óra",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - csalásmegelőzés és fizetési biztonság",
+        "duration": "1 év / Munkamenet",
+        "required": false
+      }
+    ]
+  }
+}

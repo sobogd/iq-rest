@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ContactForm, CtaSection } from "../_components";
-import { JsonLd, contactPageSchema, createBreadcrumbSchema } from "../_lib";
+import { JsonLd, contactPageSchema, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -30,11 +30,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/contacts`,
-      languages: {
-        en: "https://iq-rest.com/en/contacts",
-        es: "https://iq-rest.com/es/contacts",
-        "x-default": "https://iq-rest.com/en/contacts",
-      },
+      languages: buildAlternates("/contacts"),
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,

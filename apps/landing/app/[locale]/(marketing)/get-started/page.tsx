@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { GetStartedForm } from "../_components";
-import { JsonLd, createBreadcrumbSchema } from "../_lib";
+import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 
 export async function generateMetadata({
   params,
@@ -21,11 +21,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/get-started`,
-      languages: {
-        en: "https://iq-rest.com/en/get-started",
-        es: "https://iq-rest.com/es/get-started",
-        "x-default": "https://iq-rest.com/en/get-started",
-      },
+      languages: buildAlternates("/get-started"),
     },
     openGraph: {
       title: t("meta.title"),

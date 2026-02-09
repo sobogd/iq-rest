@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Meny",
+      "pricing": "Priser",
+      "features": "Funktioner",
+      "faq": "Frågor",
+      "changelog": "Ändringslogg",
+      "contacts": "Kontakter"
+    },
+    "getStarted": "Logga in",
+    "selectLanguage": "Välj språk",
+    "selectLanguageDescription": "Välj ditt föredragna språk för webbplatsen.",
+    "searchLanguage": "Sök språk...",
+    "noLanguagesFound": "Inga språk hittades"
+  },
+  "home": {
+    "hero": {
+      "title": "QR-meny & webbplats för restaurang på 5 minuter",
+      "subtitle": "Ange bara din e-post och få en komplett restaurangwebbplats med QR-meny, kontaktsida, flerspråkigt stöd och modern design. Ställ in allt från din telefon.",
+      "cta": {
+        "create": "Skapa meny",
+        "view": "Visa verklig meny"
+      },
+      "benefits": [
+        {
+          "title": "Modern webbplats",
+          "description": "Professionell design som ser bra ut på alla enheter"
+        },
+        {
+          "title": "Bokningar",
+          "description": "Acceptera bordbokningar direkt från din webbplats"
+        },
+        {
+          "title": "AI-översättningar",
+          "description": "Automatisk menyöversättning till vilket språk som helst"
+        },
+        {
+          "title": "Daglig analys",
+          "description": "Följ besök och populära rätter varje dag"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Betrodd av över 500 restauranger världen över",
+      "title": "Allt Din Restaurang Behöver Online",
+      "description": "Registrera dig med bara din e-post och få direkt: en professionell restaurangwebbplats, QR-meny i modernt format, funktionell kontaktsida med karta, flerspråkigt stöd med AI-översättning, video- eller fotobakgrund, och anpassad färgschema. Allt hanterbart från din telefon - ingen dator krävs."
+    },
+    "whyUs": {
+      "title": "Från Noll till Online Meny på 5 Minuter",
+      "subtitle": "Bara 4 enkla steg för att få din restaurang online",
+      "items": [
+        {
+          "step": "1",
+          "title": "Ange Din E-post",
+          "description": "Snabb registrering med bara din e-postadress. Ingen kreditkort krävs."
+        },
+        {
+          "step": "2",
+          "title": "Fyll i Restauranginformation",
+          "description": "Lägg till ditt restaurangnamn, adress, kontaktuppgifter och öppettider."
+        },
+        {
+          "step": "3",
+          "title": "Lägg till Menyobjekt",
+          "description": "Skapa kategorier och lägg till dina rätter med foton och priser."
+        },
+        {
+          "step": "4",
+          "title": "Njut av Din Meny",
+          "description": "Din QR-meny är redo! Dela den med kunder och följ analysen."
+        }
+      ],
+      "cta": "Redo att modernisera din restaurang?"
+    },
+    "featuresPreview": {
+      "title": "Kraftfulla Funktioner för Din Restaurang",
+      "subtitle": "Allt du behöver för att skapa en professionell online-närvaro",
+      "viewAll": "Visa alla funktioner"
+    }
+  },
+  "features": {
+    "title": "Mäktiga funktioner för din restaurangs QR-meny och webbplats",
+    "subtitle": "Allt du behöver för att skapa en professionell digital närvaro för din restaurang eller kafé",
+    "backToFeatures": "Tillbaka till funktioner",
+    "getStarted": "Skapa meny",
+    "viewPricing": "Se priser",
+    "readyTitle": "Redo att komma igång?",
+    "readyDescription": "Skapa din professionella QR-meny och restaurangwebbplats på några minuter. Alla funktioner ingår.",
+    "keyBenefits": "Nyckelfördelar",
+    "faqTitle": "Vanliga Frågor",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Vad behöver jag för att komma igång?",
+          "a": "Bara din e-postadress. Ingen kreditkort, inga komplicerade formulär."
+        },
+        {
+          "q": "Hur lång tid tar det att sätta upp?",
+          "a": "Din webbplats är redo omedelbart. Lägg till dina menyobjekt och du är live på 5 minuter."
+        },
+        {
+          "q": "Finns det en gratisplan?",
+          "a": "Ja, börja gratis med alla nödvändiga funktioner inkluderade."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Måste jag installera en app?",
+          "a": "Ingen app behövs - allt fungerar i din telefons webbläsare."
+        },
+        {
+          "q": "Kan jag ladda upp bilder från min telefon?",
+          "a": "Ja, ta bilder med din kamera och ladda upp direkt till din meny."
+        },
+        {
+          "q": "Fungerar det på surfplattor?",
+          "a": "Ja, instrumentpanelen är optimerad för telefoner, surfplattor och stationära datorer."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Hur exakt är AI-översättning?",
+          "a": "Vår AI förstår kulinarisk kontext, bevarar rätter namn och översätter beskrivningar naturligt."
+        },
+        {
+          "q": "Hur snabbt är översättningen?",
+          "a": "Hela menyer översätts på sekunder, inte timmar."
+        },
+        {
+          "q": "Kan jag redigera AI-översättningar?",
+          "a": "Ja, alla översättningar är redigerbara - granska och justera vid behov."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Hur många språk stöds?",
+          "a": "25+ språk inklusive alla stora europeiska språk, kinesiska, japanska, koreanska, arabiska och hebreiska."
+        },
+        {
+          "q": "Hur byter kunder språk?",
+          "a": "En språkväxlare visas på din meny - ett tryck för att byta till vilket tillgängligt språk som helst."
+        },
+        {
+          "q": "Är översättningen automatisk?",
+          "a": "Du kan använda AI-översättning eller manuellt ange översättningar för varje språk."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Vilka bildformat stöds?",
+          "a": "Ladda upp JPG, PNG eller WebP - bilder optimeras automatiskt."
+        },
+        {
+          "q": "Minskar optimering kvaliteten?",
+          "a": "Nej, vår AI bibehåller visuell kvalitet samtidigt som filstorleken minskas för snabb laddning."
+        },
+        {
+          "q": "Finns det en filstorleksgräns?",
+          "a": "Ladda upp bilder upp till 10MB - de optimeras automatiskt."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Hur lägger jag till en ny rätt?",
+          "a": "Tryck på 'Lägg till objekt', ange namn, beskrivning, pris och ladda eventuellt upp en bild. Det är allt!"
+        },
+        {
+          "q": "Kan jag omordna menyobjekt?",
+          "a": "Ja, dra och släpp helt enkelt objekt eller kategorier för att omordna dem."
+        },
+        {
+          "q": "Vad händer om en rätt är slut?",
+          "a": "Stäng av objektet tillfälligt - det försvinner från menyn men tas inte bort."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Vilka mätvärden kan jag spåra?",
+          "a": "Dagliga visningar, sidprestanda, språkpreferenser och trender över tid."
+        },
+        {
+          "q": "Hur ofta uppdateras data?",
+          "a": "Analysdata uppdateras i realtid - se dagens besökare medan de händer."
+        },
+        {
+          "q": "Kan jag exportera analysdata?",
+          "a": "Se detaljerade rapporter direkt i din instrumentpanel."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Hur gör kunder reservationer?",
+          "a": "Kunder kan boka direkt från din restaurangwebbplats. De väljer datum, tid och antal gäster, och får sedan en e-postbekräftelse."
+        },
+        {
+          "q": "Kan jag godkänna reservationer manuellt?",
+          "a": "Ja, du kan välja mellan automatisk bekräftelse eller manuell godkännande för varje bokning."
+        },
+        {
+          "q": "Kommer jag att få meddelande om nya bokningar?",
+          "a": "Ja, du får e-postmeddelanden för varje ny reservation."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Vilka videoformat stöds?",
+          "a": "MP4 och WebM-format stöds. Videor optimeras automatiskt för snabb laddning."
+        },
+        {
+          "q": "Kan jag använda mina egna bilder?",
+          "a": "Ja, ladda upp vilken bild som helst och den kommer att optimeras automatiskt för webbvisning."
+        },
+        {
+          "q": "Saktar video ner menyn?",
+          "a": "Nej, videor komprimeras och laddas in långsamt för att säkerställa snabb sidprestanda."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Hur många färger kan jag välja mellan?",
+          "a": "Välj mellan 12 förinställda färger eller ange din exakta varumärkesfärg med en hex-kod."
+        },
+        {
+          "q": "Stöder det mörkt läge?",
+          "a": "Ja, din färgschema anpassar sig automatiskt till både ljusa och mörka teman."
+        },
+        {
+          "q": "Kan jag ändra färger när som helst?",
+          "a": "Ja, ändra din accentfärg omedelbart från instrumentpanelen - uppdateringar visas omedelbart."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Hur kontaktar jag support?",
+          "a": "Använd kontaktformuläret eller mejla oss direkt - riktiga människor svarar, inte botar."
+        },
+        {
+          "q": "Vad är svarstiden?",
+          "a": "Vi svarar vanligtvis inom några timmar under arbetsdagar."
+        },
+        {
+          "q": "Finns support tillgänglig för gratisplaner?",
+          "a": "Ja, personlig support är tillgänglig för alla planer inklusive gratis."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Omedelbar QR Meny & Webbplatsuppsättning",
+        "shortDescription": "Skapa din restaurangwebbplats och QR-meny med bara en e-post - redo på 5 minuter",
+        "description": "Kom igång på sekunder med den enklaste registreringsprocessen. Ange bara din e-post och du får omedelbart en komplett restaurangwebbplats med QR-meny, kontaktsida med karta och modern design. Inga tekniska färdigheter behövs, inga komplicerade formulär - din restaurang går online omedelbart.",
+        "fullDescription": "Traditionella webbplatsbyggare kräver timmar av installation, teknisk kunskap och ofta en utvecklare. IQ Rest förändrar allt. Ange din e-post, verifiera med en enkel kod, och din restaurangwebbplats är redo. Lägg till dina rätter, ladda upp bilder och dela din QR-kod med kunder. Hela processen tar mindre än 5 minuter.",
+        "benefits": [
+          "Endast e-post krävs för att börja - ingen komplicerad registrering",
+          "Restaurangwebbplats redo omedelbart efter registrering",
+          "QR-meny genereras automatiskt och länkas",
+          "Kontaktsida med karta ingår som standard",
+          "Inga tekniska färdigheter eller kodningskunskaper behövs"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Process för omedelbar uppsättning av restaurangwebbplats och QR-meny",
+        "cta": "Läs Mer"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% Mobilvänlig Hantering",
+        "shortDescription": "Ingen dator? Inga problem. Driv hela din restaurangwebbplats från din telefon. Lägg till rätter medan du står i köket, uppdatera priser under service, ladda upp bilder direkt från din kamera. Varje funktion fungerar perfekt på mobil - för restaurangägare sitter aldrig vid ett skrivbord.",
+        "description": "Lägg till kategorier, rätter, bilder och hantera hela din restaurangwebbplats direkt från din telefon. Vår instrumentpanel är helt optimerad för mobila enheter, så du kan uppdatera din meny under en kaffepaus eller lägga till dagens specialer på språng.",
+        "fullDescription": "Restaurangägare är upptagna människor som inte alltid är vid en dator. Det är därför vi byggde IQ Rest för att fungera perfekt på mobila enheter. Varje funktion, från att lägga till nya rätter till att uppdatera priser, är designad för pekskärmar. Ta en bild av en ny rätt och ladda upp den omedelbart. Ändra dagens special medan du står i köket.",
+        "benefits": [
+          "Fullständig instrumentpanelstillgång på vilken smartphone eller surfplatta som helst",
+          "Ladda upp bilder direkt från din telefonkamera",
+          "Uppdatera priser och beskrivningar på språng",
+          "Hantera kategorier med pekvänligt gränssnitt",
+          "Ingen dator krävs - någonsin"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Restaurangmenyhantering på smartphone",
+        "cta": "Se Mobil Instrumentpanel"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI-Driven Menyöversättning",
+        "shortDescription": "Sluta förlora internationella kunder på grund av språkbarriärer. Vår AI översätter hela din meny till 25+ språk på sekunder - inte generisk översättning, utan kontextmedveten AI som förstår kulinariska termer. 'Beef Wellington' förblir 'Beef Wellington', medan beskrivningar läses naturligt på varje språk.",
+        "description": "Nå internationella kunder med intelligent AI-översättning som förstår matkontext. Ditt rätter namn och beskrivningar översätts noggrant, vilket bevarar kulinariska termer och gör mening på vilket språk som helst.",
+        "fullDescription": "Generiska översättare misslyckas ofta med matmenyer - de översätter bokstavligt utan att förstå kontext. Vår AI är specifikt tränad för restauranginnehåll. Den vet att 'Beef Wellington' inte ska översättas bokstavligt, och att 'al dente' betyder samma sak på vilket språk som helst. Servera turister och internationella gäster med menyer som läses naturligt på deras språk.",
+        "benefits": [
+          "Kontextmedveten översättning för mat och kulinariska termer",
+          "10+ språk inklusive spanska, franska, tyska, kinesiska, japanska",
+          "Bevarar kulinarisk terminologi och kulturella nyanser",
+          "Omedelbar översättning - meny tillgänglig på sekunder",
+          "Ökar försäljningen med 23% med internationella kunder"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI-driven restaurangmenyöversättningsgränssnitt",
+        "cta": "Upptäck AI-Översättning"
+      },
+      {
+        "id": "multilingual",
+        "title": "Flerspråkig Restaurangwebbplats",
+        "shortDescription": "Välkomna turister och internationella gäster på deras modersmål. Stöd för 25+ språk innebär att varje kund känner sig hemma. Ett tryck för att byta språk - meny, priser, beskrivningar anpassas omedelbart. Perfekt för restauranger i turistområden eller internationella städer.",
+        "description": "Din restaurangwebbplats stöder automatiskt flera språk. Kunder kan byta språk med ett tryck, och allt innehåll inklusive meny, kontaktinformation och navigering anpassas omedelbart.",
+        "fullDescription": "I turistområden och internationella städer är det avgörande att tala ditt kunds språk. IQ Rest gör din restaurang tillgänglig för alla. Kunder ser en språkväxlare och kan bläddra igenom hela din webbplats - meny, kontakter, reservationer - på sitt föredragna språk. Tillsammans med AI-översättning kan du servera världen.",
+        "benefits": [
+          "Ett tryck för språkbyte för kunder",
+          "Meny, kontakter och alla sidor översatta",
+          "Språkpreferens kommer ihåg för återbesök",
+          "Perfekt för turistområden och internationella städer",
+          "Fungerar sömlöst med AI-översättningsfunktionen"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Flerspråkig restaurangwebbplats språkväxlare",
+        "cta": "Se Flerspråkiga Funktioner"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI Bildoptimering",
+        "shortDescription": "Automatisk bildförbättring för snabbare laddning och bättre kvalitet",
+        "description": "Ladda upp vilken bild som helst och vår AI optimerar den automatiskt för webbvisning. Bilder laddas snabbt på vilken anslutning som helst samtidigt som de behåller fantastisk kvalitet som gör dina rätter oemotståndliga.",
+        "fullDescription": "Stora, ooptimerade bilder saktar ner din webbplats och frustrerar kunder. Vår AI bearbetar varje uppladdad bild: ändrar storlek till optimala dimensioner, konverterar till moderna format och förbättrar kvaliteten. Resultatet? Dina rätter ser fantastiska ut, och sidor laddas på under en sekund även på långsamma mobila anslutningar.",
+        "benefits": [
+          "Automatisk ändring av storlek till optimala webbdimensioner",
+          "Konvertering till WebP-format för snabb laddning",
+          "Kvalitetsförbättring för bättre presentation",
+          "Sidor laddas på under 1 sekund",
+          "Fungerar med vilket bildformat du laddar upp"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI bildoptimering före och efter jämförelse",
+        "cta": "Läs Mer"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Enkel Menyhantering",
+        "shortDescription": "Uppdatera din meny på sekunder, inte timmar. Lägg till nya rätter, redigera priser, omorganisera kategorier - allt med enkel drag-and-drop från vilken enhet som helst. Inga tekniska färdigheter behövs. Ändringar går live omedelbart, så dina kunder ser alltid de senaste erbjudandena.",
+        "description": "Att hantera din meny har aldrig varit enklare. Lägg till kategorier, skapa rätter med bilder och beskrivningar, ställ in priser och organisera allt med enkel drag-and-drop. Ändringar visas omedelbart på din live-webbplats.",
+        "fullDescription": "Glöm komplicerade innehållshanteringssystem. IQ Rest's menyredigerare är designad för restaurangägare, inte webb utvecklare. Skapa en ny kategori på sekunder, lägg till rätter med några tryck, ladda upp bilder direkt från din telefon. Dra objekt för att omordna, stäng av synlighet för slutsålda objekt och se ändringar live omedelbart.",
+        "benefits": [
+          "Intuitiv kategori- och objektsskapande",
+          "Drag-and-drop omordning",
+          "Stäng av objekt utan att ta bort dem",
+          "Omedelbara uppdateringar - ändringar visas på sekunder",
+          "Organisera obegränsade kategorier och rätter"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Enkel restaurangmenyhanteringsinstrumentpanel",
+        "cta": "Se Menyredigerare"
+      },
+      {
+        "id": "analytics",
+        "title": "Daglig Analys & Insikter",
+        "shortDescription": "Spåra sidvisningar, språk och kundbeteende med detaljerade dagliga rapporter",
+        "description": "Förstå dina kunder med omfattande analyser. Se dagliga sidvisningar, populära språk, mest visade sidor och spåra trender över tid. Gör datadrivna beslut för att optimera din meny.",
+        "fullDescription": "Kunskap är makt. Vår analysinstrumentpanel visar dig exakt hur kunder interagerar med din restaurangwebbplats. Vilka sidor får flest visningar? Vilka språk föredrar dina kunder? Ökar visningarna vecka för vecka? Använd dessa insikter för att optimera din meny, rikta in dig på rätt kunder och växa din verksamhet.",
+        "benefits": [
+          "Dagliga, veckovisa och månatliga visningsstatistik",
+          "Språkpreferensuppdelning",
+          "Sid-för-sid-prestandaövervakning",
+          "Trendanalys över tid",
+          "Exportera data för vidare analys"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Restauranganalysinstrumentpanel med dagliga statistik",
+        "cta": "Läs Mer"
+      },
+      {
+        "id": "reservations",
+        "title": "Bordsreservationssystem",
+        "shortDescription": "Sluta förlora kunder på grund av missade samtal. Acceptera bordsbokningar 24/7 direkt från din webbplats - kunder väljer datum, tid och bord på sekunder. Automatiska bekräftelser, e-postmeddelanden och en enkel instrumentpanel för att hantera allt.",
+        "description": "Det inbyggda reservationssystemet låter kunder boka bord direkt från din webbplats. Välj automatisk bekräftelse baserat på tillgänglighet, eller granska varje bokning manuellt. Hantera alla reservationer från din instrumentpanel.",
+        "fullDescription": "Telefonreservationer tar tid och är lätta att missa. IQ Rest's reservationssystem fungerar 24/7. Kunder väljer datum, tid och antal personer, och bokar sedan omedelbart. Du kan ställa in automatisk bekräftelse baserat på bordstillgänglighet, eller granska varje begäran manuellt. Minska no-shows med e-postbekräftelser.",
+        "benefits": [
+          "24/7 online bokningskapacitet",
+          "Automatiska eller manuella bekräftelselägen",
+          "Bords- och kapacitetsförvaltning",
+          "E-postmeddelanden för bokningar",
+          "Kalendervy för enkel schemaläggning"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Online bordsreservationssystem för restauranger",
+        "cta": "Utforska Bordsreservationer"
+      },
+      {
+        "id": "custom-design",
+        "title": "Video & Foto Bakgrunder",
+        "shortDescription": "Första intryck säljer. Fängsla kunder i det ögonblick de skannar din QR-kod med en fantastisk video av din restaurangmiljö eller en vacker bild av din signaturrätt. Stick ut från konkurrenterna med en hemsida som känns premium och professionell.",
+        "description": "Skapa ett minnesvärt första intryck med anpassade video- eller fotobakgrunder på din hemsida. Ladda upp din restaurangmiljövideo eller en vacker matbild för att omedelbart fängsla kunder.",
+        "fullDescription": "Första intryck spelar roll. När kunder skannar din QR-kod ska de bli imponerade omedelbart. Ladda upp en video av din restaurangmiljö, en timelapse av ditt kök eller en fantastisk bild av din signaturrätt. Din hemsida blir en visuell upplevelse som återspeglar din restaurangs personlighet.",
+        "benefits": [
+          "Stöd för video- och bildbakgrunder",
+          "Automatisk optimering för snabb laddning",
+          "Fungerar perfekt på mobila enheter",
+          "Skapar ett minnesvärt första intryck",
+          "Återspeglar din restaurangs unika atmosfär"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Restaurangwebbplats med videobakgrund",
+        "cta": "Se Videobakgrunder"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Anpassad Färgschema",
+        "shortDescription": "Gör din meny verkligen din med anpassade accentfärger som matchar din restaurangs varumärkesidentitet. Välj mellan 12 vackra förinställda färger eller välj din exakta varumärkesnyans. Varje knapp, markering och interaktivt element anpassas för att skapa ett sammanhängande, professionellt utseende som kunderna minns.",
+        "description": "Din restaurangwebbplats bör matcha ditt varumärke. Välj mellan förinställda färgscheman eller välj din exakta varumärkesfärg. Tillsammans med automatisk stöd för ljusa/mörka teman ser din meny alltid professionell ut.",
+        "fullDescription": "Varumärkeskonsekvens spelar roll. IQ Rest låter dig anpassa accentfärgen som används genom hela din webbplats - knappar, markeringar och interaktiva element matchar alla ditt varumärke. Välj mellan noggrant utvalda förinställningar eller ange din exakta varumärkesfärg. Systemet säkerställer automatiskt läsbarhet i både ljusa och mörka lägen.",
+        "benefits": [
+          "Anpassad accentfärgsval",
+          "Förinställda färgscheman tillgängliga",
+          "Automatisk stöd för ljusa/mörka teman",
+          "Konsekvent varumärkning över alla sidor",
+          "Tillgänglighetsoptimerad färgkontrast"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Alternativ för anpassat färgschema och varumärkning",
+        "cta": "Utforska Färgscheman"
+      },
+      {
+        "id": "personal-support",
+        "title": "Individuell Online Support",
+        "shortDescription": "Få personlig hjälp från riktiga människor - inte chattbotar - för alla frågor",
+        "description": "Varje restaurang får individuell online support. Har du en fråga? Behöver hjälp med installation? Vill du föreslå en funktion? Riktiga människor svarar snabbt för att hjälpa dig lyckas med din digitala meny.",
+        "fullDescription": "Vi tror att varje restaurang förtjänar personlig uppmärksamhet. När du kontaktar support pratar du med riktiga människor som förstår restauranger och kan faktiskt hjälpa. Inga chattbotar, inga automatiserade svar, inga biljettköer. Oavsett om du behöver hjälp med att lägga till din första rätt eller vill ha råd om att optimera din meny, är vi här för dig.",
+        "benefits": [
+          "Riktig mänsklig support - inga chattbotar",
+          "Snabba svarstider",
+          "Hjälp med installation och optimering",
+          "Funktionsförfrågningar välkomnas",
+          "Tillgänglig för alla planer inklusive gratis"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Personlig online supportchatt för restauranger",
+        "cta": "Läs Mer"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR Meny & Restaurangwebbplats Prissättning",
+    "subtitle": "Inga dolda avgifter, inga överraskningar. Lansera din restaurangwebbplats gratis idag — uppgradera endast när du är redo att växa.",
+    "seo": {
+      "title": "Varför Välja IQ Rest för Din Restaurang eller Café?",
+      "text": "Skapa en professionell QR-meny och webbplats för din restaurang eller ditt café på några minuter. Dine gäster skannar helt enkelt en QR-kod för att se din digitala meny på sin telefon — ingen app behövs. Uppdatera priser, lägg till nya rätter och ändra beskrivningar omedelbart. Med AI-drivna översättningar kan du betjäna internationella kunder på deras modersmål. Spåra vilka rätter som får flest visningar med inbyggd analys. Oavsett om du driver ett litet café eller en växande restaurangkedja, hjälper IQ Rest dig att modernisera din menyupplevelse samtidigt som du minskar tryckkostnader."
+    },
+    "monthly": "Månatlig",
+    "yearly": "Årlig",
+    "save": "(Spara 25%)",
+    "perMonth": "/månad",
+    "billedYearly": "Faktureras årligen (€{total})",
+    "forever": "Gratis för alltid",
+    "popular": "Mest Populär",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Perfekt för att prova IQ Rest",
+        "cta": "Börja Gratis",
+        "highlights": [
+          "Restaurangwebbplats",
+          "QR Meny",
+          "300 skanningar/månad",
+          "2 språk",
+          "AI bildförbättring",
+          "Analys"
+        ]
+      },
+      "basic": {
+        "name": "Grundläggande",
+        "description": "Bra för små restauranger",
+        "cta": "Kom Igång",
+        "highlights": [
+          "Allt i Gratis, plus:",
+          "4,500 skanningar/månad",
+          "3 språk",
+          "AI översättningar",
+          "Anpassad färgtema",
+          "Bokningar"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "För växande restaurangkedjor",
+        "cta": "Kom Igång",
+        "highlights": [
+          "Allt i Grundläggande, plus:",
+          "Obegränsade skanningar",
+          "6 språk",
+          "Prioriterad support",
+          "Alla funktioner inkluderade"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Jämför planer",
+      "subtitle": "Se vilken plan som passar dig"
+    },
+    "features": {
+      "website": "Restaurangwebbplats",
+      "qrMenu": "QR Meny",
+      "scans": "Månatliga skanningar",
+      "languages": "Stödda språk",
+      "aiTranslation": "AI översättningar",
+      "aiImages": "AI bildförbättring",
+      "analytics": "Analys",
+      "customTheme": "Anpassad färgtema",
+      "background": "Bakgrundsbild & video",
+      "support": "Support",
+      "reservations": "Bokningar"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Obegränsade",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Behöver du hjälp? Låt oss prata",
+    "subtitle": "Hej, jag är Bogdan — grundare av IQ Rest. Jag byggde denna plattform för mitt eget café och nu hjälper den hundratals restauranger världen över. Har du en fråga eller idé? Skriv till mig direkt. Inga botar, ingen väntan — bara en verklig konversation.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Kontakta oss",
+      "email": "Din E-post",
+      "emailPlaceholder": "din@email.com",
+      "subject": "Ämne",
+      "subjectPlaceholder": "Vad handlar detta om?",
+      "message": "Meddelande",
+      "messagePlaceholder": "Berätta vad du tänker på...",
+      "submit": "Skicka Meddelande",
+      "sending": "Skickar...",
+      "success": "Ditt meddelande har skickats! Tack för att du kontaktade oss. Jag återkommer snart.",
+      "error": "Misslyckades med att skicka meddelande. Vänligen försök igen senare."
+    }
+  },
+  "languages": {
+    "en": "Engelska",
+    "es": "Spanska"
+  },
+  "cookieConsent": {
+    "title": "Vi använder cookies",
+    "description": "Vi använder cookies för att förbättra din surfupplevelse, servera personligt innehåll och analysera vår trafik. Genom att klicka på \"Acceptera alla\" samtycker du till vår användning av cookies.",
+    "acceptAll": "Acceptera alla",
+    "rejectAll": "Avvisa alla",
+    "customize": "Anpassa",
+    "learnMore": "Läs mer"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigering",
+      "pricing": "Priser",
+      "features": "Funktioner",
+      "contacts": "Kontakter",
+      "faq": "Frågor",
+      "changelog": "Ändringslogg"
+    },
+    "legal": {
+      "title": "Juridiskt",
+      "terms": "Villkor",
+      "privacy": "Integritetspolicy",
+      "cookies": "Cookiespolicy",
+      "sitemap": "Sitemap"
+    },
+    "copyright": "© 2025 IQ Rest. Alla rättigheter förbehållna."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Ändringslogg - IQ Rest Uppdateringar & Nya Funktioner",
+      "description": "Håll dig uppdaterad med de senaste funktionerna och förbättringarna av IQ Rest - din digitala QR-meny lösning för restauranger och kaféer"
+    },
+    "title": "Ändringslogg",
+    "subtitle": "Senaste uppdateringar och nya funktioner för din restaurang QR-meny",
+    "readMore": "Läs mer",
+    "backToChangelog": "Tillbaka till ändringsloggen",
+    "seo": {
+      "title": "Om IQ Rest Uppdateringar",
+      "description": "IQ Rest förbättras ständigt för att hjälpa restauranger och kaféer att skapa professionella digitala QR-menyer. Följ vår ändringslogg för att hålla dig uppdaterad med de senaste funktionerna för din restaurangwebbplats och QR-menylösning."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsiv support för din restaurang QR-meny",
+        "description": "Få responsiv support för eventuella frågor och ändringar av din QR-meny för restaurang eller café. Direkt chatt med vårt team för snabb hjälp.",
+        "meta": {
+          "title": "Responsiv support för restaurang QR-meny | IQ Rest",
+          "description": "Få responsiv support för eventuella frågor och ändringar av din QR-meny för restaurang eller café. Snabb hjälp för caféer och restauranger med direkt chatt-support."
+        },
+        "content": {
+          "intro": "IQ Rest erbjuder nu responsiv support för eventuella frågor och ändringar av din QR-meny för restaurang eller café. Vi förstår att driva en restaurang eller café kräver snabba lösningar när problem uppstår. Vår nya in-app supportchatt ger dig direkt tillgång till vårt team, vilket säkerställer att din QR-meny förblir perfekt och att dina kunder alltid har den bästa upplevelsen.",
+          "image1Alt": "Supportchattgränssnitt för restaurang QR-meny",
+          "image1Caption": "Direkt supportchatt för responsiv hjälp med din restaurang QR-meny",
+          "section1Title": "Direkt chattstöd för din restaurang",
+          "section1Text": "Vårt responsiva supportsystem för din QR-meny för restaurang eller café fungerar direkt inom din instrumentpanel. Ingen anledning att söka efter kontakt-e-post eller vänta i telefonköer. Öppna helt enkelt supportchatten, skriv din fråga eller beskriv den ändring du behöver, och vårt team svarar snabbt. Oavsett om du behöver hjälp med att uppdatera menyobjekt, fixa visningsproblem eller förstå analyser - responsiv support är bara ett meddelande bort.",
+          "section2Title": "Snabb hjälp för eventuella ändringar av QR-menyn",
+          "section2Text": "Behöver du uppdatera priser innan en hektisk helg? Vill du lägga till säsongsbetonade objekt till din restaurang QR-meny? Vår responsiva support hjälper caféer och restauranger att göra ändringar snabbt. Vi vägleder dig genom processen eller kan hjälpa direkt när det behövs. Denna responsiva support säkerställer att din digitala meny alltid återspeglar dina aktuella erbjudanden, vilket håller kunderna informerade och nöjda.",
+          "section3Title": "Support som förstår restaurangens behov",
+          "section3Text": "Vårt responsiva supportteam förstår de unika utmaningarna med att driva en restaurang eller café. Vi vet att en trasig QR-meny kan betyda förlorade kunder och frustrerad personal. Därför prioriterar vår support för din QR-meny för restaurang eller café snabba svarstider och praktiska lösningar. Från tekniska frågor till funktionsförfrågningar, vi är här för att hjälpa din digitala meny att lyckas.",
+          "benefitsTitle": "Fördelar med responsiv QR-meny support",
+          "benefit1": "Direkt in-app chatt - inga externa e-postmeddelanden eller telefonsamtal behövs",
+          "benefit2": "Snabba svarstider för att hålla din restaurang igång smidigt",
+          "benefit3": "Vägledning om menyuppdateringar, ändringar och nya funktioner",
+          "benefit4": "Teknisk hjälp för eventuella QR-kod eller webbplatsproblem",
+          "benefit5": "Funktionsförfrågningar och förslag välkomnas och beaktas",
+          "benefit6": "Support som förstår restaurang- och caféverksamhet",
+          "conclusionTitle": "Få responsiv support idag",
+          "conclusionText": "Med IQ Rest's responsiva support för din QR-meny för restaurang eller café, är hjälp alltid inom räckhåll. Vårt dedikerade team säkerställer att din digitala meny fungerar felfritt, vilket ger dig mer tid att fokusera på det som betyder mest - att servera god mat. Få tillgång till support direkt från din instrumentpanel och upplev skillnaden responsiv hjälp gör för din restaurang eller café.",
+          "ctaText": "Redo att uppleva responsiv support för din QR-meny?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detaljerad analys för din restaurangwebbplats och QR-meny",
+        "description": "Spåra besöksinsikter med detaljerad analys för din restaurangwebbplats och QR-meny. Övervaka sidvisningar, unika besökare, språk och dagliga trender.",
+        "meta": {
+          "title": "Detaljerad analys för restaurangwebbplats och QR-meny | IQ Rest",
+          "description": "Få detaljerad analys för din restaurangwebbplats och QR-meny. Spåra sidvisningar, unika besökare, populära sidor och språkpreferenser. Omfattande insikter för restauranger och caféer."
+        },
+        "content": {
+          "intro": "IQ Rest erbjuder nu detaljerad analys för din restaurangwebbplats och QR-meny. Att förstå hur kunder interagerar med din digitala meny är avgörande för framgång. Vår nya analysinstrumentpanel ger dig omfattande insikter i besökarbeteende, populära sidor, språkpreferenser och dagliga trender - all den detaljerade analys som din restaurangwebbplats och QR-meny behöver för att blomstra.",
+          "image1Alt": "Detaljerad analysinstrumentpanel för restaurangwebbplats och QR-meny",
+          "image1Caption": "Omfattande analysinstrumentpanel som visar detaljerad statistik för din restaurang QR-meny",
+          "section1Title": "Omfattande besökarspårning för din restaurang",
+          "section1Text": "Vår detaljerade analys för din restaurangwebbplats och QR-meny spårar varje kundinteraktion. Se totala sidvisningar för idag, denna vecka och denna månad på ett ögonblick. Spåra unika besökare för att förstå din verkliga publikstorlek. Analysinstrumentpanelen ger detaljerade insikter i hur kunder navigerar din QR-meny - från hemsidan till din fullständiga meny, kontakter och språkval. Denna detaljerade analys hjälper restauranger att fatta datadrivna beslut.",
+          "section2Title": "Sidan och språkanalys",
+          "section2Text": "Förstå vilka sidor på din restaurangwebbplats och QR-meny som är mest populära. Vår detaljerade analys bryter ner visningar efter sidtyp: Hem, Meny, Kontakter och Språkval. Se vilka språk dina kunder föredrar, vilket hjälper dig att prioritera översättningar och betjäna internationella gäster bättre. Denna detaljerade analys för din restaurang QR-meny avslöjar kundbeteendemönster du aldrig visste fanns.",
+          "section3Title": "Dagliga trender och användningsövervakning",
+          "section3Text": "Spåra hur din restaurangwebbplats och QR-meny presterar över tid med dagliga visningsdiagram. Se mönster i kundengagemang under veckan. Övervaka din månatliga användning mot dina planbegränsningar med en tydlig framstegsindikator. Vår detaljerade analys hjälper restauranger att identifiera högtrafikstider och optimera sin digitala närvaro. Oavsett om du är ett litet café eller en upptagen restaurang, hjälper dessa insikter dig att förstå dina kunder bättre.",
+          "benefitsTitle": "Fördelar med detaljerad analys för restauranger",
+          "benefit1": "Real-tids visningar: idag, veckovis och månatlig statistik på ett ögonblick",
+          "benefit2": "Spårning av unika besökare för att förstå din faktiska kundräckvidd",
+          "benefit3": "Sid-för-sid-beskrivning som visar vilket innehåll kunderna ser mest",
+          "benefit4": "Språkanalys för att optimera flerspråkiga menyerbjudanden",
+          "benefit5": "Dagliga trenddiagram för att identifiera mönster i kundbeteende",
+          "benefit6": "Användningsövervakning med tydliga gränser och uppgraderingsuppmaningar",
+          "conclusionTitle": "Börja använda detaljerad analys idag",
+          "conclusionText": "Med IQ Rest's detaljerade analys för din restaurangwebbplats och QR-meny får du värdefulla insikter i kundbeteende. Spåra visningar, övervaka trender och förstå din publik bättre än någonsin tidigare. Denna detaljerade analys hjälper restauranger och caféer att fatta informerade beslut om sin digitala menystrategi. Få tillgång till din analysinstrumentpanel nu och upptäck vad dina kunder verkligen vill ha.",
+          "ctaText": "Redo att utforska detaljerad analys för din restaurang?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Omedelbar QR-meny och restaurangwebbplatsgenerator",
+        "description": "Skapa din restaurang eller café QR-meny och webbplats omedelbart. Generera utskrivbara QR-koder med anpassad text och flera layouter på några minuter - inga tekniska färdigheter krävs.",
+        "meta": {
+          "title": "Omedelbar QR-meny och restaurangwebbplatsgenerator | IQ Rest",
+          "description": "Generera QR-meny och restaurangwebbplats omedelbart. Skapa anpassade QR-koder för ditt café eller restaurang på några minuter med utskrivbara layouter för A4, A5, A6 pappersformat. Gratis omedelbar generator."
+        },
+        "content": {
+          "intro": "IQ Rest erbjuder nu en omedelbar QR-meny och restaurangwebbplatsgenerator som skapar professionella digitala menyer på några minuter. Oavsett om du driver ett mysigt café eller en upptagen restaurang, låter vår omedelbara generator dig skapa, anpassa och skriva ut QR-koder som länkar direkt till din digitala menywebbplats. Inga tekniska färdigheter krävs, ingen väntan - bara omedelbar QR-meny skapelse för restauranger och caféer av alla storlekar.",
+          "image1Alt": "Omedelbar QR-menygenerator för restaurang- och caféwebbplatser",
+          "image1Caption": "Generera anpassade QR-koder för din restaurangwebbplats omedelbart",
+          "section1Title": "Hur den omedelbara QR-menygeneratorn fungerar",
+          "section1Text": "Vår omedelbara QR-meny och restaurangwebbplatsgenerator skapar allt du behöver på några minuter. Lägg helt enkelt till dina menyobjekt, och systemet genererar omedelbart en unik QR-kod kopplad till din restaurangwebbplats. Generatorn stöder flera pappersformat (A4, A5, A6, Brev), olika QR-layouter per sida (1 till 16 koder) och anpassad text under varje QR-kod. Förhandsgranska exakt vad du kommer att skriva ut, ladda ner eller skriv ut direkt - din omedelbara QR-meny är redo att visas vid dina bord.",
+          "section2Title": "Anpassningsbara QR-koder för alla restauranger eller caféer",
+          "section2Text": "Den omedelbara QR-menygeneratorn erbjuder fullständig anpassning för din restaurang eller cafébranding. Lägg till ditt restaurangnamn ovanför QR-koden, inkludera anpassad text som 'Skanna för meny' eller 'QR-meny' nedan, och välj mellan tre textstorlekar. Generatorn producerar rena, enkla QR-koder som är optimerade för snabb skanning. Oavsett om du behöver en stor QR-kod för en affisch eller 16 mindre koder för individuella bordskort, anpassar vår omedelbara generator sig efter din restaurangs behov.",
+          "section3Title": "Utskriftsklara QR-menyer på sekunder",
+          "section3Text": "Till skillnad från komplicerade designverktyg skapar vår omedelbara QR-menygenerator utskriftsklara layouter automatiskt. Välj ditt pappersformat, välj hur många QR-koder per sida och tryck på skriv ut - det är allt. Generatorn hanterar marginaler, avstånd och storlekar för att säkerställa perfekta utskrifter varje gång. För caféer och restauranger som snabbt behöver professionella QR-menyer sparar detta omedelbara tillvägagångssätt timmar av designarbete och får din digitala meny framför kunderna snabbare.",
+          "benefitsTitle": "Fördelar med omedelbar QR-menyproduktion",
+          "benefit1": "Generera komplett QR-meny och restaurangwebbplats på minuter, inte timmar",
+          "benefit2": "Flera pappersformat: A4, A5, A6 och Brevstorlekar stöds",
+          "benefit3": "Flexibla layouter: från en stor QR till 16 koder per sida",
+          "benefit4": "Anpassad text och storleksalternativ för din restaurangbranding",
+          "benefit5": "Utskriftsklar utdata med automatiska marginaler och avstånd",
+          "benefit6": "Ladda ner som PNG eller skriv ut direkt från din webbläsare",
+          "conclusionTitle": "Börja använda den omedelbara QR-menygeneratorn",
+          "conclusionText": "Med IQ Rest's omedelbara QR-meny och restaurangwebbplatsgenerator kan du ha en professionell digital meny igång på några minuter. Inga designfärdigheter behövs, ingen dyr programvara krävs - bara omedelbar generering av vackra, skanningsbara QR-koder som kopplar kunder till din meny. Perfekt för nya restauranger som lanserar sin första QR-meny eller etablerade caféer som uppdaterar sin befintliga setup. Generera din omedelbara QR-meny idag och modernisera din matupplevelse.",
+          "ctaText": "Redo att generera din omedelbara QR-meny?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Offentlig restaurangwebbplats för QR-menyavläsning",
+        "description": "Lansera din offentliga restaurangwebbplats med QR-meny. Kunder skannar koden och ser omedelbart din digitala meny med kategorier, objekt, foton och priser.",
+        "meta": {
+          "title": "Offentlig restaurangwebbplats för QR-menyavläsning | IQ Rest",
+          "description": "Skapa en offentlig restaurangwebbplats för QR-menyavläsning. Kunder skannar QR-koden och ser din digitala meny med kategorier, rätter, foton och priser omedelbart."
+        },
+        "content": {
+          "intro": "IQ Rest erbjuder nu en fullt fungerande offentlig restaurangwebbplats för QR-menyavläsning. Dina kunder kan enkelt skanna en QR-kod och omedelbart få tillgång till din kompletta digitala meny. Den offentliga webbplatsen visar alla dina kategorier, menyobjekt, foton, beskrivningar och priser i ett vackert, mobiloptimerat gränssnitt. Denna offentliga restaurangwebbplats för QR-avläsning förändrar hur gäster interagerar med din meny.",
+          "image1Alt": "Offentlig restaurangwebbplats som visar QR-meny kategorier",
+          "image1Caption": "Mobilvänlig offentlig restaurangwebbplats som visar meny kategorier för QR-avläsning",
+          "section1Title": "Hur den offentliga restaurangwebbplatsen fungerar med QR-avläsning",
+          "section1Text": "När kunder skannar din restaurangs QR-kod tas de omedelbart till din offentliga webbplats som visar den kompletta menyn. Ingen appnedladdning krävs, ingen väntan - bara omedelbar tillgång till dina erbjudanden. Den offentliga restaurangwebbplatsen för QR-meny visar kategorier högst upp för enkel navigering, med objekt som visas i en elegant kortlayout med foton, beskrivningar och priser. Kunder kan trycka på kategorier för att filtrera objekt eller bläddra igenom hela menyn.",
+          "section2Title": "Funktioner på din offentliga restaurang QR-menywebbplats",
+          "section2Text": "Din offentliga restaurangwebbplats inkluderar allt kunder behöver: kategoritabbar för snabb navigering, högkvalitativa maträtter, detaljerade beskrivningar, priser i din valuta och aktiva objektindikatorer. Designen är optimerad för mobila enheter eftersom de flesta QR-skanningar sker på telefoner. Objekt laddas snabbt tack vare optimerade bilder, och gränssnittet är intuitivt för gäster i alla åldrar. Ändringar som görs i din adminpanel visas omedelbart på den offentliga webbplatsen.",
+          "image2Alt": "Restaurang QR-menywebbplats som visar matobjekt med foton",
+          "image2Caption": "Offentlig menywebbplats som visar rätter med optimerade foton och beskrivningar",
+          "section3Title": "Flerspråkigt stöd för internationella gäster",
+          "section3Text": "Den offentliga restaurangwebbplatsen inkluderar en språkvalare så att internationella gäster kan se din meny på sitt föredragna språk. För närvarande stöder vi engelska och spanska, med fler språk som kommer snart. Detta gör din offentliga restaurang QR-meny tillgänglig för turister och mångsidiga kundbaser. Språkpreferensen kommer ihåg för återbesök, vilket ger en personlig upplevelse.",
+          "image3Alt": "Språkval på offentlig restaurang QR-menywebbplats",
+          "image3Caption": "Språkvalare som gör att gäster kan se den offentliga menyn på sitt föredragna språk",
+          "benefitsTitle": "Fördelar med din offentliga restaurang QR-menywebbplats",
+          "benefit1": "Omedelbar menyåtkomst - kunder skannar och ser omedelbart, ingen app behövs",
+          "benefit2": "Mobiloptimerad design för perfekt visning på alla smartphones",
+          "benefit3": "Real-tidsuppdateringar - menyändringar visas omedelbart för kunder",
+          "benefit4": "Kategorinavigering för enkel bläddring av dina erbjudanden",
+          "benefit5": "Flerspråkigt stöd för internationella kunder",
+          "benefit6": "Snabb laddning med optimerade bilder och modern teknik",
+          "conclusionTitle": "Börja använda din offentliga restaurang QR-menywebbplats",
+          "conclusionText": "Med IQ Rest's offentliga restaurangwebbplats för QR-menyavläsning ger du kunderna omedelbar tillgång till din kompletta meny. Lägg helt enkelt till dina kategorier och objekt genom adminpanelen, generera din QR-kod och visa den vid dina bord. Kunder skannar och bläddrar snabbt igenom din vackra digitala meny. Inga fler tryckkostnader, inga fler föråldrade menyer - bara en modern matupplevelse.",
+          "ctaText": "Redo att lansera din offentliga restaurang QR-menywebbplats?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Hur man lägger till objekt till restaurangwebbplats med QR-meny",
+        "description": "Fullständig guide om hur man lägger till objekt till din restaurangwebbplats med QR-meny. Lär dig att lägga till rätter med foton, priser och beskrivningar till din digitala meny på några minuter.",
+        "meta": {
+          "title": "Hur man lägger till objekt till restaurangwebbplats med QR-meny | IQ Rest",
+          "description": "Steg-för-steg-guide om hur man lägger till objekt till restaurangwebbplats med QR-meny. Lägg till rätter, ställ in priser, ladda upp foton och organisera din digitala meny. Enkel objektshantering för restauranger."
+        },
+        "content": {
+          "intro": "Vill du veta hur man lägger till objekt till din restaurangwebbplats med QR-meny? IQ Rest gör det otroligt enkelt att lägga till och hantera menyobjekt på din digitala restaurangwebbplats. Oavsett om du lägger till din första rätt eller uppdaterar hela din meny, hjälper vårt intuitiva objektshanteringssystem dig att skapa en professionell QR-meny som visar din mat på bästa sätt. Denna guide visar dig exakt hur man lägger till objekt till restaurangwebbplats med QR-meny, inklusive foton, priser, beskrivningar och kategorier.",
+          "image1Alt": "Hur man lägger till objekt till restaurangwebbplats med QR-meny - objektlista vy",
+          "image1Caption": "Objekthanteringsgränssnitt som visar hur man lägger till objekt till din restaurang QR-menywebbplats",
+          "section1Title": "Varför korrekt tillägg av objekt är viktigt för din restaurang QR-menywebbplats",
+          "section1Text": "När du lägger till objekt till restaurangwebbplats med QR-meny är presentation allt. Kunder bestämmer vad de ska beställa baserat på hur dina rätter ser ut och hur väl de beskrivs. Vårt objektshanteringssystem låter dig lägga till vackra foton, detaljerade beskrivningar, korrekta priser och organisera objekt i kategorier. Detta är hur man lägger till objekt till restaurangwebbplats som konverterar besökare till kunder. Forskning visar att menyer med högkvalitativa bilder ökar beställningar med upp till 30%.",
+          "section2Title": "Steg-för-steg: Hur man lägger till objekt till restaurangwebbplats med QR-meny",
+          "section2Text": "Att lägga till objekt till din restaurangwebbplats med QR-meny är enkelt med IQ Rest. Navigera till avsnittet Objekt i din instrumentpanel och klicka på lägg till-knappen. Ange objektets namn, skriv en aptitretande beskrivning, ställ in priset och välj en kategori. Ladda upp ett foto av din rätt - vårt system optimerar automatiskt bilder till 500x500 pixlar för perfekt visning. Växla den aktiva statusen för att visa eller dölja objekt omedelbart. Denna strömlinjeformade process gör det enkelt att lägga till objekt till restaurangwebbplats med QR-meny på bara några minuter.",
+          "image2Alt": "Objektform som visar hur man lägger till objekt till restaurang QR-menywebbplats",
+          "image2Caption": "Enkel formulärgränssnitt för att lägga till objekt till din restaurangwebbplats med QR-meny",
+          "section3Title": "Bilduppladdning och optimering för dina restaurangobjekt",
+          "section3Text": "Högkvalitativa bilder är avgörande när du lägger till objekt till restaurangwebbplats med QR-meny. Vårt system accepterar JPEG, PNG, WebP och GIF-format upp till 5MB. Varje bild ändras automatiskt till 500x500 pixlar och konverteras till WebP-format för snabb laddning samtidigt som utmärkt kvalitet bibehålls. Detta innebär att dina rätter alltid ser sina bästa ut på alla enheter. Professionell matfotografi förbättrar avsevärt hur kunder uppfattar din restaurang när de bläddrar igenom din QR-menywebbplats.",
+          "benefitsTitle": "Fördelar med att lägga till objekt till din restaurang QR-menywebbplats",
+          "benefit1": "Lägg till obegränsat med menyobjekt med foton, beskrivningar och priser",
+          "benefit2": "Automatisk bildoptimering för snabb laddning och perfekt visning",
+          "benefit3": "Organisera objekt i kategorier för enkel kundnavigering",
+          "benefit4": "Aktiv/inaktiv växling för att dölja slutsålda objekt utan att ta bort dem",
+          "benefit5": "Dra och släpp omordning för att ordna objekt i din föredragna ordning",
+          "benefit6": "Mobilvänligt gränssnitt för att lägga till objekt från vilken enhet som helst",
+          "conclusionTitle": "Börja lägga till objekt till din restaurang QR-menywebbplats idag",
+          "conclusionText": "Nu vet du exakt hur man lägger till objekt till restaurangwebbplats med QR-meny med IQ Rest. Vårt kraftfulla objektshanteringssystem ger allt du behöver för att skapa en läcker digital meny. Lägg till vackra foton, skriv övertygande beskrivningar, ställ in konkurrenskraftiga priser och organisera dina objekt i logiska kategorier. Oavsett om du driver ett litet café eller en stor restaurang, gör IQ Rest det enkelt att lägga till objekt till restaurangwebbplats som attraherar och konverterar kunder.",
+          "ctaText": "Redo att lägga till objekt till din restaurangwebbplats med QR-meny?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "Hur man gör QR-kodmeny för restaurang med kategorier",
+        "description": "Lär dig hur man gör QR-kodmeny för restaurang med organiserade kategorier. Det nya kategorihanteringssystemet gör att skapa strukturerade digitala menyer enkelt och snabbt.",
+        "meta": {
+          "title": "Hur man gör QR-kodmeny för restaurang med kategorier | IQ Rest",
+          "description": "Steg-för-steg-guide om hur man gör QR-kodmeny för restaurang med kategorier. Organisera din digitala meny med enkel kategorihantering. Skapa professionella restaurang QR-menyer på några minuter."
+        },
+        "content": {
+          "intro": "Vill du veta hur man gör QR-kodmeny för restaurang med kategorier? IQ Rest erbjuder nu ett kraftfullt kategorihanteringssystem som gör att skapa organiserade digitala menyer enklare än någonsin. Oavsett om du driver en restaurang, ett café eller en bar, hjälper organiseringen av din meny med kategorier kunder att hitta exakt vad de letar efter. Denna uppdatering visar dig exakt hur man gör QR-kodmeny för restaurang med välstrukturerade kategorier som förbättrar matupplevelsen.",
+          "image1Alt": "Hur man gör QR-kodmeny för restaurang - kategorilista vy",
+          "image1Caption": "Kategorihanteringsgränssnitt som visar hur man organiserar din restaurang QR-meny",
+          "section1Title": "Varför kategorier är viktiga när du gör QR-kodmeny för restaurang",
+          "section1Text": "När du gör QR-kodmeny för restaurang är det avgörande att organisera objekt i kategorier. Kunder förväntar sig att se logiska grupperingar som Förrätter, Huvudrätter, Desserter och Drycker. Vårt nya kategorihanteringssystem låter dig skapa obegränsade kategorier, ställa in deras visningsordning och växla deras synlighet. Detta är exakt hur man gör QR-kodmeny för restaurang som kunder älskar - tydlig, organiserad och lätt att navigera. Studier visar att restauranger med välorganiserade digitala menyer ser 35% högre kundnöjdhet.",
+          "section2Title": "Steg-för-steg: Hur man gör QR-kodmeny för restaurang med kategorier",
+          "section2Text": "Att göra en QR-kodmeny för restaurang med kategorier är enkelt med IQ Rest. Först, navigera till avsnittet Kategorier i din instrumentpanel. Klicka på den flytande åtgärdsknappen för att lägga till en ny kategori. Ange kategorinamnet, valfri beskrivning och ställ in om den är aktiv. Det nya strömlinjeformade gränssnittet visar alla dina kategorier i en ren lista med aktivitetsindikatorer. Använd upp- och nedpilarna för att omordna kategorier precis som du vill att de ska visas på din QR-meny. Detta intuitiva tillvägagångssätt för att göra QR-kodmeny för restaurang säkerställer att din meny alltid är perfekt organiserad.",
+          "image2Alt": "Kategori form som visar hur man gör QR-kodmeny för restaurang",
+          "image2Caption": "Enkel formulärgränssnitt för att skapa restaurangmenykategorier",
+          "section3Title": "Mobiloptimerad kategorihantering",
+          "section3Text": "Vi vet att restaurangägare är upptagna och ofta hanterar sina menyer på språng. Därför är vår kategorihantering helt optimerad för mobila enheter. När du gör QR-kodmeny för restaurang med din telefon, hittar du ett kompakt gränssnitt med en trepunktsmeny för snabba åtgärder. Flytta kategorier upp eller ner, redigera detaljer eller ta bort kategorier - allt från din smartphone. Denna mobilförsta strategi säkerställer att du kan göra QR-kodmeny för restaurang med kategorier när som helst, var som helst.",
+          "benefitsTitle": "Fördelar med att göra QR-kodmeny med kategorier",
+          "benefit1": "Organisera menyobjekt logiskt så att kunder enkelt kan hitta vad de vill ha",
+          "benefit2": "Dra och släpp omordning för att ordna kategorier i din föredragna visningsordning",
+          "benefit3": "Aktiv/inaktiv växling för att dölja säsongskategorier utan att ta bort dem",
+          "benefit4": "Mobiloptimerat gränssnitt för att hantera kategorier från vilken enhet som helst",
+          "benefit5": "Ren visuell design med aktivitetsindikatorer för snabb statusöversikt",
+          "benefit6": "Obegränsade kategorier för att fullt ut representera din restaurangs menystruktur",
+          "conclusionTitle": "Börja göra din QR-kodmeny med kategorier idag",
+          "conclusionText": "Nu vet du exakt hur man gör QR-kodmeny för restaurang med kategorier med IQ Rest. Vårt nya kategorihanteringssystem ger allt du behöver för att skapa en professionell, välorganiserad digital meny. Kategorier hjälper kunder att navigera din meny snabbare, hitta sina favoritdesserter och upptäcka nya objekt. Oavsett om du har en enkel meny med några kategorier eller en omfattande meny med dussintals sektioner, gör IQ Rest det enkelt att göra QR-kodmeny för restaurang som imponerar på dina kunder.",
+          "ctaText": "Redo att göra QR-kodmeny för din restaurang med kategorier?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Enkel QR-meny skapelse för ditt café - Ny kontrollpanel",
+        "description": "Vi presenterar vår nya admin kontrollpanel som gör skapandet av QR-menyer för ditt café otroligt enkelt. Hantera kategorier, produkter och inställningar med ett modernt shadcn sidofältgränssnitt.",
+        "meta": {
+          "title": "Enkel QR-meny för café - Ny kontrollpanel | IQ Rest",
+          "description": "Skapa QR-meny för ditt café enkelt med vår nya kontrollpanel. Modernt sidofältgränssnitt för att hantera kategorier, produkter, QR-koder och analyser. Enkel skapelse av cafémeny."
+        },
+        "content": {
+          "intro": "Vi är glada att presentera vår helt nya admin kontrollpanel som är utformad för att göra skapandet av QR-menyer för ditt café så enkelt som möjligt. Oavsett om du driver ett litet kafé eller ett livligt café, hjälper vårt användarvänliga gränssnitt dig att hantera din digitala meny utan ansträngning. Den nya kontrollpanelen har en modern sidofältsdesign som sätter alla verktyg du behöver för att skapa ditt cafés QR-meny precis vid dina fingertoppar.",
+          "image1Alt": "Enkel QR-meny kontrollpanel för caféhantering",
+          "image1Caption": "Ny kontrollpanel med sidofältsnavigering för enkel skapelse av café QR-meny",
+          "section1Title": "Modern sidofältsgränssnitt för enkel menyhantering",
+          "section1Text": "Den nya kontrollpanelen har ett elegant sidofält som gör navigeringen av ditt cafés QR-menyinställningar otroligt enkel. Med tydligt organiserade sektioner för Instrumentpanel, Kategorier, Produkter, QR-kod, Analyser, Inställningar, Fakturering och Support kan du enkelt hitta och hantera varje aspekt av ditt cafés digitala meny. Sidofältet kollapsar på mobila enheter, vilket säkerställer enkel åtkomst till alla funktioner oavsett vilken enhet du använder för att hantera ditt cafés QR-meny.",
+          "section2Title": "Enkel kategorihantering och produktledning för ditt café",
+          "section2Text": "Att skapa och organisera ditt cafés QR-meny har aldrig varit enklare. Våra nya sidor för kategorihantering och produktledning är utformade med enkelhet i åtanke, vilket gör det möjligt för caféägare att enkelt lägga till, redigera och organisera sina menyobjekt. Oavsett om du uppdaterar dagens specialiteter eller lägger till säsongsdrycker, säkerställer det användarvänliga gränssnittet att ditt cafés QR-meny förblir aktuellt och tilltalande för kunder.",
+          "section3Title": "Server-side rendering för snabb prestanda",
+          "section3Text": "Den nya kontrollpanelen är byggd med server-side rendering (SSR) teknik, vilket säkerställer att ditt cafés QR-menyhanteringsinstrumentpanel laddas snabbt och effektivt. All data hämtas från servern, vilket ger realtidsuppdateringar och en smidig upplevelse. Detta enkla och snabba tillvägagångssätt innebär att du spenderar mindre tid på att vänta och mer tid på att perfekta ditt cafés QR-meny.",
+          "benefitsTitle": "Varför detta gör QR-meny skapelse enkelt för caféer",
+          "benefit1": "Enkel navigering med modernt sidofältsgränssnitt för snabb åtkomst till alla cafémenyfunktioner",
+          "benefit2": "Enkel kategorihantering för att organisera ditt cafés QR-meny logiskt",
+          "benefit3": "Enkel produktredigering med omedelbara uppdateringar till ditt cafés digitala meny",
+          "benefit4": "Enkel QR-kodgenerering och anpassning för ditt café",
+          "benefit5": "Enkel analys för att förstå hur kunder interagerar med ditt cafés QR-meny",
+          "benefit6": "Enkel mobilåtkomst - hantera ditt cafés QR-meny från vilken enhet som helst",
+          "conclusionTitle": "Skapa ditt cafés QR-meny på det enkla sättet",
+          "conclusionText": "Vår nya kontrollpanel representerar ett stort steg framåt för att göra QR-meny skapelse enkelt för caféägare överallt. Med sitt intuitiva sidofältsgränssnitt, snabba server-side rendering och omfattande hanteringsverktyg har skapandet och underhållet av ditt cafés digitala QR-meny aldrig varit enklare. Gå med tusentals caféer som redan använder IQ Rest för att ge sina kunder en enkel, modern menyupplevelse.",
+          "ctaText": "Redo att skapa en enkel QR-meny för ditt café?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Få QR-meny för restauranger - FAQ-sida & Hur-man-guideuppdateringar",
+        "description": "Lär dig hur du får QR-meny för restauranger med vår förbättrade FAQ-sida och 4-stegs guide. Upptäck svar på vanliga frågor om att få QR-menyer för din restaurang, med bättre navigering och SEO-optimerat innehåll.",
+        "meta": {
+          "title": "Få QR-meny för restauranger - FAQ & Guideuppdateringar | IQ Rest",
+          "description": "Lär dig hur du enkelt får QR-meny för restauranger. Ny dedikerad FAQ-sida svarar på alla frågor om att få QR-menyer för din restaurang. Strömlinjeformad 4-stegs guide för att komma igång."
+        },
+        "content": {
+          "intro": "Vi har gjort det enklare än någonsin att få QR-meny för restauranger. Vårt omorganiserade FAQ- och hur-man-innehåll hjälper restaurangägare att snabbt hitta svar på hur man får QR-menyer för sina verksamheter. Oavsett om du vill få en QR-meny för din restaurang eller café, ger denna uppdatering all information du behöver på ett ställe.",
+          "image1Alt": "Hur man får QR-meny för restauranger - dedikerad FAQ-sida",
+          "image1Caption": "Ny FAQ-sida som visar hur man får QR-meny för restauranger med organiserade frågor och svar",
+          "section1Title": "Dedikerad FAQ-sida för att få QR-menyer",
+          "section1Text": "Alla frågor om hur man får QR-meny för restauranger finns nu på en dedikerad /faq-sida. Restaurangägare kan enkelt hitta svar om att få QR-menyer, från installation till anpassning. Varje fråga om att få en QR-meny för din restaurang visas i sitt eget kort med utvidgade svar, vilket gör det enkelt att få den information du behöver för att komma igång med QR-menyer för din restaurang.",
+          "section2Title": "4-stegs guide för att få QR-meny för restauranger",
+          "section2Text": "Vår strömlinjeformade guide visar exakt hur man får QR-meny för restauranger i bara 4 enkla steg. Oavsett om du vill få en QR-meny för din restaurang, café eller bar, gör den nya kortbaserade designen det tydligt hur man kommer igång. Denna guide för att få QR-menyer för restauranger visas på alla sidor, vilket säkerställer att du alltid vet hur du snabbt kan ställa in din restaurangs QR-meny.",
+          "section3Title": "SEO-optimerat innehåll för att hjälpa restauranger att få QR-menyer",
+          "section3Text": "Vi har optimerat vårt innehåll för att hjälpa fler restauranger att upptäcka hur man får QR-menyer. Guiden visas med full Schema.org strukturerad data på startsidan, vilket hjälper restauranger som söker efter hur man får QR-meny-lösningar att enkelt hitta oss. Vår smarta innehållsdistribution säkerställer att restauranger kan få den QR-menyinformation de behöver samtidigt som de upprätthåller stark synlighet i sökmotorer.",
+          "benefitsTitle": "Varför detta hjälper dig att få QR-meny för din restaurang",
+          "benefit1": "Dedikerad FAQ-sida svarar på alla frågor om att få QR-menyer för restauranger",
+          "benefit2": "Tydlig 4-stegs guide visar exakt hur man får QR-meny för din restaurang",
+          "benefit3": "Enkel åtkomst till FAQ och kontaktalternativ för att hjälpa dig att ställa in din QR-meny",
+          "benefit4": "SEO-optimerat för att hjälpa restauranger att enkelt upptäcka hur man får QR-menyer",
+          "benefit5": "Konsistent information om att få QR-menyer över hela plattformen",
+          "benefit6": "Snabbare väg för att få QR-meny för din restaurang med förbättrad navigering",
+          "conclusionTitle": "Få QR-meny för din restaurang idag",
+          "conclusionText": "Dessa förbättringar gör det otroligt enkelt för restauranger att få QR-menyer. Oavsett om du är ett litet café som vill få en QR-meny eller en stor restaurangkedja, hjälper vårt omorganiserade innehåll dig att förstå exakt hur du får QR-meny-lösningar för din verksamhet. Börja nu och få din restaurangs QR-meny igång på några minuter.",
+          "ctaText": "Redo att få QR-meny för din restaurang?",
+          "ctaButton": "Få QR-meny nu"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Gratis restaurangwebbplats skapelse - Mobiloptimering & UX-förbättringar",
+        "description": "Stora förbättringar av skapandet av en gratis restaurangwebbplats: optimerad mobilnavigering med hamburgermeny, förbättrad registreringssida för bättre konverteringar och strömlinjeformad användarupplevelse.",
+        "meta": {
+          "title": "Gratis restaurangwebbplats skapelseuppdateringar - IQ Rest changelog",
+          "description": "Lär dig hur IQ Rest förbättrade processen för skapande av gratis restaurangwebbplats med mobiloptimerad navigering, bättre registreringsflöde och förbättrad användarupplevelse för caféer och restauranger"
+        },
+        "content": {
+          "intro": "Att skapa en gratis restaurangwebbplats har aldrig varit enklare eller mer mobilvänlig. Vi har gjort betydande förbättringar för att hjälpa restaurang- och caféägare att bygga sin professionella webbplats med en digital QR-meny, särskilt på mobila enheter där de flesta söker efter 'создание сайта для ресторана бесплатно' (gratis restaurangwebbplats skapelse). Dessa uppdateringar fokuserar på mobilnavigering, förbättringar av registreringssidan och den övergripande användarupplevelsen för att säkerställa att alla kan skapa en restaurangwebbplats gratis utan någon teknisk kunskap.",
+          "image1Alt": "Mobiloptimerad hamburgermeny för restaurangwebbplats",
+          "image1Caption": "Ny mobilnavigering med hamburgermeny för enkel åtkomst till alla funktioner",
+          "section1Title": "Mobil-först navigering för restaurangwebbplatser",
+          "section1Text": "De flesta restaurangägare söker efter och skapar sin gratis restaurangwebbplats på mobila enheter. Därför har vi helt omdesignat vår mobilnavigering med en professionell hamburgermeny. På smartphones och surfplattor öppnas navigeringen nu som en ren modal dialog, som visar alla menyobjekt (Prissättning, Funktioner, Changelog, Kontakter) och knappen Kom igång i en lättläst vertikal layout. Denna mobiloptimerade strategi gör det enkelt att utforska IQ Rest's funktioner och börja skapa din gratis restaurangwebbplats direkt från din telefon. Temat och språkvalen förblir lättillgängliga i rubriken, medan hamburgermenyn håller gränssnittet rent och oöverskådligt.",
+          "section2Title": "Förbättrad Kom igång-sida för skapande av gratis restaurangwebbplats",
+          "section2Text": "Vi har förbättrat registreringssidan för att göra skapandet av en gratis restaurangwebbplats ännu mer intuitivt. Förbättringarna inkluderar bättre avstånd på mobila enheter, centrerade värdepropositionskort som tydligt förklarar fördelarna, och optimerade formulärlayouter som fungerar perfekt på små skärmar. Restaurangräknaren som visar hur många företag som redan använder IQ Rest visas nu i full bredd på mobilen, vilket ger stark social bevisning som uppmuntrar nya restaurangägare att starta sin gratis webbplats. Varje element har testats noggrant för att säkerställa att skapandet av din restaurangwebbplats är smidigt och snabbt, oavsett om du är på en stationär dator eller din smartphone.",
+          "image2Alt": "Optimerat registreringsflöde för skapande av gratis restaurangwebbplats",
+          "image2Caption": "Strömlinjeformad registreringsprocess optimerad för mobila enheter",
+          "section3Title": "Tre-stegsprocess optimerad för alla enheter",
+          "section3Text": "Den visuella processindikatorn som visar de tre enkla stegen för att skapa din gratis restaurangwebbplats (Registrera dig med din e-post, Lägg till dina menyobjekt, Få din QR-kod & börja) anpassar sig nu vackert till olika skärmstorlekar. På mobila enheter och surfplattor visas stegen vertikalt med tydligt avstånd, vilket gör det enkelt att förstå den enkla processen. På större skärmar visas de horisontellt med pilar. Denna adaptiva design säkerställer att alla, oavsett enhet, tydligt kan se hur snabbt och enkelt det är att skapa en professionell restaurangwebbplats gratis med IQ Rest.",
+          "benefitsTitle": "Viktiga förbättringar för att skapa gratis restaurangwebbplatser",
+          "benefit1": "Mobiloptimerad hamburgermeny navigering för enkel åtkomst på smartphones",
+          "benefit2": "Förbättrad registreringssida med bättre mobilavstånd och centrerade layouter",
+          "benefit3": "Fullbredd restaurangräknare på mobilen som ger stark social bevisning",
+          "benefit4": "Adaptiv tre-stegsprocessindikator som fungerar på alla skärmstorlekar",
+          "benefit5": "Strömlinjeformade inmatningsformulär optimerade för mobilberöring",
+          "benefit6": "Fixad utloggningsomdirigeringsproblem som säkerställer korrekt navigering över alla sidor",
+          "conclusionTitle": "Gratis restaurangwebbplats skapelse gjord enkel",
+          "conclusionText": "Dessa förbättringar förstärker vårt åtagande att göra skapandet av gratis restaurangwebbplatser tillgängligt för alla. Oavsett om du är en liten caféägare som kollar in IQ Rest på din telefon under en paus, eller en restaurangchef som planerar din digitala strategi på en surfplatta, är upplevelsen nu sömlös och professionell. Du kan skapa en komplett restaurangwebbplats med QR-meny, helt gratis, på bara några minuter från vilken enhet som helst. Ingen kreditkort krävs, inga tekniska färdigheter behövs - bara din meny och några minuter av tid för att bygga din professionella online-närvaro.",
+          "ctaText": "Redo att skapa din gratis restaurangwebbplats?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "landing-redesign": {
+        "title": "Omdesignad Kom igång-sida för högre konverteringar",
+        "description": "Vi har helt omdesignat vår registreringssida med fokus på konverteringsoptimering, med värdepropositioner, social bevisning och en strömlinjeformad användarupplevelse.",
+        "meta": {
+          "title": "Omdesignad Kom igång-sida - IQ Rest changelog",
+          "description": "IQ Rest lanserar omdesignad registreringssida med förbättrad UX, social bevisningsräknare och konverteringsfokuserad design för skapande av restaurang QR-meny"
+        },
+        "content": {
+          "intro": "Vi är glada att kunna meddela en fullständig omdesign av vår Kom igång-sida, byggd specifikt för att hjälpa restaurang- och caféägare att skapa sin digitala QR-meny snabbare än någonsin. Denna uppdatering fokuserar på att tydligt kommunicera värde, bygga förtroende genom social bevisning och ge en sömlös registreringsupplevelse som tar mindre än 5 minuter från början till slut.",
+          "image1Alt": "Ny IQ Rest kom igång-sida med värdepropositioner och social bevisning",
+          "image1Caption": "Omdesignad registreringssida med tydliga värdepropositioner och restaurangräknare",
+          "section1Title": "Tydliga värdepropositioner vid en ögonkast",
+          "section1Text": "Den nya designen visar framträdande fyra nyckelfördelar som restaurangägare bryr sig mest om: inga tekniska färdigheter krävs, omedelbara menyuppdateringar, QR-kod och webbplats ingår, och gratis att börja. Varje fördel presenteras i ett rent kortformat med intuitiva ikoner, vilket gör det omedelbart tydligt vad IQ Rest erbjuder. Denna strategi hjälper upptagna restaurangägare att förstå värdepropositionen inom sekunder efter att de landat på sidan.",
+          "section2Title": "Social bevisning som bygger förtroende",
+          "section2Text": "Vi har lagt till en dynamisk restaurangräknare som visar hur många företag som redan använder IQ Rest. Denna räknare uppdateras automatiskt baserat på vår tillväxttakt, vilket ger autentisk social bevisning som hjälper nya besökare att känna sig säkra i sitt beslut att prova vår plattform. Att se att över 1 400 restauranger redan litar på IQ Rest minskar avsevärt tvekan och uppmuntrar registreringar.",
+          "section3Title": "Strömlinjeformad registreringsflöde",
+          "section3Text": "Hela registreringsprocessen sker nu på en enda sida med en konsekvent layout. Oavsett om du anger din e-post eller verifierar din kod, förblir designen densamma - endast inmatningsfältet ändras. Detta skapar en smidigare, mindre störande upplevelse. Vi har också lagt till en visuell processindikator som visar de tre enkla stegen: Registrera dig, Lägg till meny och Få QR. Denna transparens hjälper användare att förstå exakt vad de kan förvänta sig och minskar avhopp.",
+          "benefitsTitle": "Viktiga förbättringar i denna uppdatering",
+          "benefit1": "Värdepropositionskort med ikoner för omedelbar förståelse",
+          "benefit2": "Live restaurangräknare som ger autentisk social bevisning",
+          "benefit3": "Enhetlig sidlayout för både e-post och OTP-verifieringssteg",
+          "benefit4": "Visuell 3-stegs processindikator för transparens",
+          "benefit5": "Konverteringsfokuserad text: 'Skapa din digitala meny på 5 minuter'",
+          "benefit6": "Real-tids e-postvalidering med visuell feedback",
+          "conclusionTitle": "Designad för restaurangens framgång",
+          "conclusionText": "Varje element i denna omdesign har utformats med restaurang- och caféägare i åtanke. Vi förstår att du är upptagen med att driva ditt företag, så vi har gjort registreringsprocessen så snabb och trygg som möjligt. Den nya sidan visar tydligt vad du får, hur enkelt det är att komma igång och att tusentals andra restauranger redan har gjort samma val. Oavsett om du är ett litet café eller en växande restaurangkedja kan du nu skapa din professionella QR-menywebbplats på bara 5 minuter.",
+          "ctaText": "Redo att skapa din restaurangs digitala meny?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "auth": {
+        "title": "Nytt användarautentiseringsgränssnitt",
+        "description": "Vi har lanserat ett enkelt och säkert e-postbaserat autentiseringssystem som låter dig skapa din restaurangwebbplats och QR-meny på några minuter.",
+        "meta": {
+          "title": "Användarautentiseringsgränssnitt - IQ Rest changelog",
+          "description": "IQ Rest introducerar ett nytt lösenordsfritt autentiseringssystem för att snabbt och säkert skapa din restaurangwebbplats och digitala QR-meny"
+        },
+        "content": {
+          "intro": "Vi är glada att kunna meddela lanseringen av vårt nya användarautentiseringsgränssnitt för IQ Rest. Denna uppdatering representerar ett betydande steg framåt för att göra det enklare än någonsin att skapa din restaurangwebbplats med en professionell QR-meny. Vårt mål har alltid varit att hjälpa restaurang- och caféägare att bygga sin digitala närvaro på minuter, inte timmar, och detta nya autentiseringssystem är utformat med det uppdraget i åtanke.",
+          "image1Alt": "E-postinmatningssteg av IQ Rest-autentisering",
+          "image1Caption": "Enkel e-postbaserad autentisering - inga lösenord att komma ihåg",
+          "section1Title": "Lösenordsfri autentisering för restaurangägare",
+          "section1Text": "Med förståelsen att restaurangägare är upptagna personer har vi implementerat ett lösenordsfritt autentiseringssystem som endast kräver din e-postadress. När du vill skapa din restaurangwebbplats eller uppdatera din digitala QR-meny, ange helt enkelt din e-post och få en säker 4-siffrig verifieringskod. Detta tillvägagångssätt eliminerar frustrationen av glömda lösenord samtidigt som de högsta säkerhetsstandarderna för din restaurangs data upprätthålls. Hela processen tar mindre än 30 sekunder, vilket gör att du kan fokusera på det som är viktigast - att driva din restaurang och betjäna dina kunder.",
+          "section2Title": "Strömlinjeformad QR-meny skapelseprocess",
+          "section2Text": "Med vårt nya autentiseringssystem har det aldrig varit enklare att komma igång med din digitala QR-meny. När du har autentiserats får du omedelbar tillgång till vår intuitiva menybyggare där du kan lägga till dina rätter, ställa in priser, ladda upp foton och organisera kategorier. Den QR-meny du skapar kommer att vara tillgänglig för dina kunder omedelbart - de skannar helt enkelt koden och ser din vackert designade digitala meny på sin smartphone. Inga appnedladdningar krävs för dina kunder, och inga tekniska kunskaper krävs från dig. Detta är exakt vad moderna restauranger och caféer behöver för att konkurrera i dagens digitala värld.",
+          "image2Alt": "OTP-verifieringssteg av IQ Rest-autentisering",
+          "image2Caption": "Säker 4-siffrig kodverifiering skickad direkt till din e-post",
+          "section3Title": "Byggd för hastighet och säkerhet",
+          "section3Text": "Säkerhet var vår högsta prioritet när vi designade detta autentiseringssystem. Varje verifieringskod går ut efter 10 minuter och kan endast användas en gång, vilket skyddar din restaurangwebbplats och menydata från obehörig åtkomst. Samtidigt har vi optimerat varje steg i processen för hastighet. Från att ange din e-post till att få tillgång till din instrumentpanel, slutförs hela autentiseringsflödet på under en minut. Detta innebär att du kan göra snabba uppdateringar av din QR-meny under service, lägga till dagens specialiteter eller justera priser - allt utan några förseningar.",
+          "benefitsTitle": "Nyckelfördelar för din restaurang",
+          "benefit1": "Skapa din restaurangwebbplats med QR-meny på några minuter - inga tekniska färdigheter krävs",
+          "benefit2": "Inga lösenord att komma ihåg - säker e-postbaserad verifiering håller ditt konto säkert",
+          "benefit3": "Omedelbar tillgång till din digitala menybyggare från vilken enhet som helst",
+          "benefit4": "Snabba uppdateringar av din QR-meny även under hektiska service timmar",
+          "conclusionTitle": "Börja bygga din digitala meny idag",
+          "conclusionText": "Detta nya autentiseringsgränssnitt är bara början på vårt åtagande att göra digitala QR-menyer tillgängliga för varje restaurang och café. Oavsett om du är ett litet kafé eller en växande restaurangkedja, ger IQ Rest de verktyg du behöver för att skapa en professionell online-närvaro. Dina kunder förväntar sig att hitta din meny online, och med vår lösning kan du överträffa dessa förväntningar med en vackert designad, alltid uppdaterad digital QR-meny som fungerar perfekt på vilken smartphone som helst.",
+          "ctaText": "Redo att skapa din restaurangwebbplats med QR-meny?",
+          "ctaButton": "Kom igång gratis"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Prenumerationsplaner för QR-meny och restaurangwebbplats skapelse",
+        "description": "Vi presenterar flexibla prenumerationsplaner för att skapa din restaurangwebbplats och QR-meny. Välj mellan gratis, grundläggande och pro-planer med månatliga eller årliga faktureringsalternativ.",
+        "meta": {
+          "title": "Prenumerationsplaner för QR-meny och restaurangwebbplats | IQ Rest",
+          "description": "Välj den perfekta prenumerationsplanen för din restaurangwebbplats och QR-meny skapelse. Gratis, grundläggande och pro-planer med flexibla månatliga och årliga fakturering. Börja gratis idag."
+        },
+        "content": {
+          "intro": "Vi är glada att kunna meddela lanseringen av vårt nya prenumerationssystem för QR-meny och restaurangwebbplats skapelse. IQ Rest erbjuder nu flexibla planer som växer med ditt företag - från en helt gratis nivå för små caféer till professionella planer för etablerade restauranger. Oavsett om du just har startat eller hanterar flera platser, ger våra prenumerationsplaner de funktioner du behöver för att skapa och underhålla en professionell restaurangwebbplats med QR-menyfunktioner.",
+          "image1Alt": "Prenumerationsplaner för QR-meny och restaurangwebbplats skapelse",
+          "image1Caption": "Välj den perfekta planen för dina behov av restaurangwebbplats och QR-meny",
+          "section1Title": "Flexibla planer för varje restaurangstorlek",
+          "section1Text": "Vårt prenumerationssystem för QR-meny och restaurangwebbplats skapelse erbjuder tre nivåer som är utformade för att matcha dina behov. Den gratis planen låter dig komma igång med upp till 15 menyobjekt - perfekt för små caféer eller för att prova plattformen. Den grundläggande planen för €4/månad (eller €3/månad fakturerad årligen) utökar din kapacitet till 100 objekt med 3 språk och 2 000 månatliga skanningar. För växande restauranger erbjuder vår pro-plan för €7/månad (eller €6/månad årligen) obegränsade objekt, språk och skanningar - allt du behöver för professionell restaurangwebbplats och QR-menyhantering.",
+          "section2Title": "Enkel faktureringsinstrumentpanel",
+          "section2Text": "Att hantera din prenumeration för QR-meny och restaurangwebbplats tjänster är nu enklare än någonsin. Vår nya faktureringsinstrumentpanel visar alla tillgängliga planer i ett rent, enkelt gränssnitt. Du kan se din nuvarande plan på ett ögonblick, jämföra funktioner och uppgradera eller nedgradera med ett enda klick. Den strömlinjeformade designen visar varje plan med sitt månatliga pris, vilket gör det enkelt att välja rätt alternativ för din restaurangwebbplats och QR-menybehov. Säkra betalningar behandlas genom Stripe, branschstandarden för online-transaktioner.",
+          "section3Title": "Spara 25% med årlig fakturering",
+          "section3Text": "Restaurangägare som åtar sig årlig fakturering för sin QR-meny och webbplatsprenumeration sparar 25% jämfört med månatliga betalningar. Den grundläggande planen sjunker från €4 till €3 per månad, medan pro-planen går från €7 till €6 per månad när den faktureras årligen. Dessa betydande besparingar hjälper restauranger att investera mer i sin kärnverksamhet samtidigt som de upprätthåller en professionell digital närvaro. Växla mellan månatlig och årlig fakturering när som helst genom din instrumentpanel.",
+          "benefitsTitle": "Fördelar med våra prenumerationsplaner",
+          "benefit1": "Gratis plan tillgänglig för alltid - inget kreditkort krävs för att börja",
+          "benefit2": "Flexibel månatlig eller årlig fakturering med 25% besparingar på årliga planer",
+          "benefit3": "Omedelbara planuppgraderingar - nya funktioner aktiveras omedelbart",
+          "benefit4": "Säker Stripe betalningsbehandling för alla transaktioner",
+          "benefit5": "Enkel planhantering genom enkel faktureringsinstrumentpanel",
+          "benefit6": "Nedgradering när som helst - inga långsiktiga kontrakt krävs",
+          "conclusionTitle": "Börja skapa din restaurangwebbplats idag",
+          "conclusionText": "Med våra nya prenumerationsplaner har skapandet av en professionell QR-meny och restaurangwebbplats aldrig varit mer tillgängligt. Börja med vår gratis plan för att uppleva plattformen, och uppgradera sedan när din restaurang växer. Våra flexibla faktureringsalternativ, transparent prissättning och omedelbar aktivering innebär att du kan få din digitala meny igång på några minuter. Gå med tusentals restauranger som redan använder IQ Rest för att koppla samman med sina kunder genom moderna, mobilvänliga QR-menyer.",
+          "ctaText": "Redo att välja din plan för QR-meny och restaurangwebbplats?",
+          "ctaButton": "Visa prissättningsplaner"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR-kod",
+    "description": "Ladda ner och skriv ut din QR-kod så att kunder kan skanna",
+    "preview": "Förhandsgranskning",
+    "paperFormat": "Pappersformat",
+    "qrPerPage": "QR-koder per sida",
+    "customText": "Text under QR-koden",
+    "customTextPlaceholder": "Skanna för att se menyn",
+    "print": "Skriv ut",
+    "download": "Ladda ner PNG",
+    "viewMenu": "Visa meny",
+    "noSlug": "Ingen meny-URL inställd",
+    "noSlugDescription": "Vänligen ställ in din restaurang-URL i inställningarna först för att generera en QR-kod.",
+    "goToSettings": "Gå till inställningar",
+    "loading": "Laddar...",
+    "menuUrl": "Din webbplats",
+    "websiteReady": "Din webbplats är redo!",
+    "openWebsite": "Öppna webbplats",
+    "printSection": "Skriv ut & Ladda ner QR-kod:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Brev (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Hela sidan)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Textstorlek",
+    "textSizes": {
+      "small": "Liten",
+      "medium": "Medium",
+      "large": "Stor"
+    }
+  },
+  "support": {
+    "title": "Meddelanden",
+    "subtitle": "Få hjälp av vårt team",
+    "unauthorized": "Vänligen logga in för att få tillgång till support",
+    "lastUpdated": "Uppdaterad",
+    "emptyTitle": "Inga meddelanden än",
+    "emptyDescription": "Skicka ett meddelande för att börja konversationen",
+    "sendMessage": "Skicka Meddelande",
+    "placeholder": "Skriv ditt meddelande...",
+    "hint": "Tryck på Enter för att skicka, Shift+Enter för ny rad",
+    "send": "Skicka",
+    "supportTeam": "Supportteam"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Skapa din digitala meny på 5 minuter - IQ Rest",
+      "description": "QR-meny och webbplats för din restaurang. Redo på en gång. Inga tekniska färdigheter krävs."
+    },
+    "title": "Skapa din digitala meny på 5 minuter",
+    "subtitle": "QR-meny och webbplats för din restaurang. Redo på en gång.",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Ange e-post för att börja skapa",
+    "otpPlaceholder": "Ange 4-siffrig kod",
+    "continue": "Skapa min meny",
+    "sending": "Skapar...",
+    "verifyTitle": "Kontrollera din e-post",
+    "verifySubtitle": "Vi har skickat en 4-siffrig kod till {email}",
+    "verify": "Verifiera",
+    "verifying": "Verifierar...",
+    "changeEmail": "Ändra e-post",
+    "resendCode": "Skicka koden igen",
+    "successTitle": "Välkommen!",
+    "successSubtitle": "Du har loggat in framgångsrikt",
+    "redirecting": "Omdirigerar till instrumentpanelen...",
+    "errors": {
+      "sendFailed": "Misslyckades med att skicka verifieringskoden. Försök igen.",
+      "verifyFailed": "Misslyckades med att verifiera koden. Försök igen."
+    },
+    "valueProps": {
+      "noSkills": "Inga tekniska färdigheter krävs",
+      "instantUpdates": "Omedelbara menyuppdateringar",
+      "qrIncluded": "QR-kod + webbplats ingår",
+      "freeStart": "Gratis att börja"
+    },
+    "formHelper": "Ingen kreditkort krävs",
+    "setupTime": "Inställning på 5 minuter",
+    "hasAccount": "Har du redan ett konto?",
+    "signIn": "Logga in",
+    "restaurantCounter": "Gå med i {count} restauranger som redan använder IQ Rest",
+    "steps": {
+      "signUp": "Registrera dig med din e-post",
+      "addMenu": "Lägg till dina menyobjekt",
+      "getQr": "Få din QR-kod och börja"
+    },
+    "motivational": {
+      "title": "Börja ta emot beställningar idag",
+      "subtitle": "Dina kunder väntar på en digital meny"
+    }
+  },
+  "reservations": {
+    "title": "Bokningar",
+    "tables": "Bord",
+    "settings": "Inställningar",
+    "addTable": "Lägg till bord",
+    "newTable": "Nytt bord",
+    "editTable": "Redigera bord",
+    "tableNumber": "Bordsnummer",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Kapacitet (gäster)",
+    "capacityPlaceholder": "4",
+    "zone": "Zon",
+    "zonePlaceholder": "Terrass, Fönster, Huvudsal...",
+    "image": "Foto",
+    "uploadImage": "Klicka för att ladda upp foto",
+    "removeImage": "Ta bort",
+    "isActive": "Aktiv",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "save": "Spara",
+    "saving": "Sparar...",
+    "cancel": "Avbryt",
+    "delete": "Ta bort",
+    "deleteConfirm": "Är du säker på att du vill ta bort detta bord?",
+    "table": "Bord",
+    "noTables": "Inga bord ännu. Lägg till ditt första bord för att aktivera bokningar.",
+    "error": "Fel",
+    "close": "Stäng",
+    "noReservations": "Inga bokningar ännu",
+    "pending": "Väntande",
+    "confirmed": "Bekräftad",
+    "cancelled": "Avbokad",
+    "completed": "Slutförd",
+    "confirm": "Bekräfta",
+    "reject": "Avvisa",
+    "guests": "gäster",
+    "date": "Datum",
+    "time": "Tid",
+    "guest": "Gäst",
+    "status": "Status",
+    "notes": "Anteckningar",
+    "awaitingResponse": "Väntar på svar",
+    "today": "Idag",
+    "tomorrow": "Imorgon",
+    "otherReservations": "Andra bokningar",
+    "sort": "Sortera"
+  },
+  "publicReserve": {
+    "title": "Boka ett Bord",
+    "selectDate": "Välj Datum",
+    "selectTime": "Välj Tid",
+    "selectGuests": "Antal Gäster",
+    "selectTable": "Välj Bord",
+    "yourDetails": "Dina Uppgifter",
+    "name": "Namn",
+    "namePlaceholder": "Ditt namn",
+    "email": "E-post",
+    "emailPlaceholder": "din@email.com",
+    "phone": "Telefon (valfritt)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Speciella önskemål (valfritt)",
+    "notesPlaceholder": "Eventuella speciella önskemål eller anteckningar...",
+    "submit": "Boka Bord",
+    "submitting": "Bokar...",
+    "success": "Bokningen Skickad!",
+    "successAuto": "Din bokning är bekräftad. Du kommer att få ett bekräftelsemail inom kort.",
+    "successManual": "Din bokningsförfrågan har skickats. Du kommer att få ett mail när den är bekräftad.",
+    "error": "Fel",
+    "guests": "gäster",
+    "table": "Bord",
+    "capacity": "kapacitet",
+    "noAvailableTables": "Inga bord tillgängliga för detta antal gäster",
+    "back": "Tillbaka till Menyn",
+    "noTimeSlotsAvailable": "Inga tidsluckor tillgängliga för detta datum",
+    "loadingAvailability": "Kontrollerar tillgänglighet..."
+  },
+  "publicMenu": {
+    "contacts": "Kontakter",
+    "language": "Språk",
+    "reserve": "Boka ett bord",
+    "onlineMenu": "Online meny",
+    "noCategories": "Inga kategorier tillgängliga",
+    "openInstagram": "Öppna Instagram",
+    "makeCall": "Ring ett samtal",
+    "writeWhatsApp": "Skriv på WhatsApp",
+    "openGoogleMaps": "Öppna i Google Maps",
+    "noLocation": "Ingen plats tillgänglig",
+    "english": "Engelska",
+    "spanish": "Spanska",
+    "allergens": "Allergener",
+    "allergensInfo": "Denna rätt innehåller följande allergener:",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Skaldjur",
+      "eggs": "Ägg",
+      "fish": "Fisk",
+      "peanuts": "Jordnötter",
+      "soybeans": "Sojabönor",
+      "dairy": "Mejeriprodukter",
+      "nuts": "Nötter",
+      "celery": "Selleri",
+      "mustard": "Senap",
+      "sesame": "Sesam",
+      "sulphites": "Sulfiter",
+      "lupin": "Lupin",
+      "molluscs": "Mollusker"
+    }
+  },
+  "faq": {
+    "title": "Vanliga Frågor Om QR Meny för Restaurang & Café",
+    "subtitle": "Hitta svar på vanliga frågor om att skapa och hantera din digitala QR meny för restauranger och caféer",
+    "howto": {
+      "question": "Hur skapar man en QR meny och restaurangwebbplats i 4 enkla steg?",
+      "answer": "Få din restaurang online på 5 minuter - ange bara din e-post och börja från din telefon",
+      "faqTitle": "Har du fler frågor?",
+      "faqDescription": "Kolla in vår omfattande FAQ för att lära dig allt om att skapa och hantera din restaurangs QR meny och webbplats",
+      "faqButton": "Visa Alla FAQs",
+      "contactButton": "Kontakta Oss",
+      "steps": [
+        {
+          "name": "Logga in med e-post",
+          "text": "Få en modern restaurangwebbplats med QR meny, kontaktsida med karta, onlinebokningar och anpassad branding - allt ingår från början."
+        },
+        {
+          "name": "Ställ in din restaurang",
+          "text": "Ange ditt restaurangnamn och välj din unika URL. Lägg till video eller fotobakgrund, ställ in dina varumärkesfärger, aktivera bordsbokningar."
+        },
+        {
+          "name": "Lägg till kategorier och rätter",
+          "text": "Skapa meny-kategorier och lägg till rätter med foton. AI optimerar automatiskt dina bilder och översätter din meny till 10+ språk."
+        },
+        {
+          "name": "Se din färdiga meny",
+          "text": "Din professionella webbplats är live! Kunder kan bläddra i din meny, göra bokningar och hitta dig på kartan. Håll koll på allt med daglig analys."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Vad är en QR meny för restaurang och hur fungerar den?",
+        "answer": "En QR meny för restaurang är en digital meny som kunder kan få tillgång till genom att skanna en QR-kod med sin smartphone. IQ Rest skapar en professionell digital menywebbplats för din restaurang eller café som uppdateras omedelbart utan att behöva skriva ut på nytt. Kunder skannar helt enkelt koden och ser din meny på sin enhet."
+      },
+      {
+        "question": "Hur mycket kostar en QR meny för en restaurang eller café?",
+        "answer": "IQ Rest erbjuder flexibla priser som börjar från €0 för alltid med vår kostnadsfria plan. Detta gör det överkomligt för alla restauranger eller caféer att skapa en professionell QR meny. Betalda planer börjar på bara €4/månad med ytterligare funktioner som obegränsade objekt och avancerad analys."
+      },
+      {
+        "question": "Kan jag skapa en webbplats för min restaurang utan kodning?",
+        "answer": "Ja! IQ Rest är utformat för restaurang- och caféägare utan teknisk kunskap. Du kan skapa en komplett digital menywebbplats för din restaurang på några minuter, ingen programmering eller kodningskunskaper krävs. Lägg bara till dina rätter, priser och foton genom vårt intuitiva gränssnitt."
+      },
+      {
+        "question": "Hur ofta kan jag uppdatera min QR meny?",
+        "answer": "Du kan uppdatera din restaurang eller cafés meny så ofta du behöver. Alla ändringar återspeglas i realtid, vilket gör att du snabbt kan uppdatera priser, lägga till nya rätter eller ändra beskrivningar utan att behöva skriva ut fysiska menyer. Perfekt för dagens specialerbjudanden och säsongsuppdateringar."
+      },
+      {
+        "question": "Fungerar QR menyn för både restauranger och caféer?",
+        "answer": "Absolut! IQ Rest är perfekt för restauranger, caféer, kaffebarer, barer, matvagnar och alla typer av livsmedelsverksamheter. Vår digitala meny-lösning anpassar sig till alla typer av verksamheter, från små caféer till stora restaurangkedjor."
+      },
+      {
+        "question": "Hur fungerar den automatiska menyöversättningen?",
+        "answer": "Vårt QR meny-system använder artificiell intelligens för att automatiskt översätta din restaurang eller cafés meny till flera språk. Detta är perfekt för turistområden och internationella kunder. Du kan erbjuda din meny på engelska, spanska och andra språk, vilket hjälper dig att betjäna fler kunder."
+      },
+      {
+        "question": "Kan jag prova QR meny-lösningen gratis?",
+        "answer": "Ja! Vi erbjuder en helt gratis plan för restauranger och caféer att prova IQ Rest. Du kan skapa din digitala menywebbplats med upp till 15 objekt utan kostnad, för alltid. Ingen kreditkort krävs för att börja. Uppgradera endast när du behöver fler funktioner."
+      },
+      {
+        "question": "Är IQ Rest en app som kunder behöver ladda ner?",
+        "answer": "Nej! Detta är en av de bästa fördelarna. Kunder behöver inte ladda ner någon app. De skannar helt enkelt din QR-kod och menyn öppnas omedelbart i deras webbläsare. Detta gör det mycket mer bekvämt än restaurangappar som kräver nedladdningar."
+      },
+      {
+        "question": "Vilka är fördelarna med en digital menywebbplats för min restaurang?",
+        "answer": "En digital menywebbplats erbjuder många fördelar: omedelbara menyuppdateringar utan kostnader för omtryck, flerspråkigt stöd för internationella kunder, kontaktlös beställning för säkerhet, analys för att se populära rätter och professionell presentation. Dessutom är det miljövänligt eftersom du eliminerar pappersmenyavfall."
+      },
+      {
+        "question": "Hur skapar jag en QR-kod för min restaurangmeny?",
+        "answer": "IQ Rest genererar automatiskt en professionell QR-kod när du skapar din digitala meny. Du kan ladda ner och skriva ut denna QR-kod för dina restaurangbord, entré eller takeout-disk. QR-koden är anpassningsbar och av hög kvalitet för tydlig skanning."
+      }
+    ],
+    "cta": {
+      "title": "Har du fortfarande frågor?",
+      "subtitle": "Fråga oss och få ett svar så snabbt som möjligt",
+      "button": "Kontakta Oss"
+    },
+    "linkTitle": "Har du frågor?",
+    "linkDescription": "Kolla in våra vanliga frågor för att lära dig mer om IQ Rest",
+    "meta": {
+      "title": "Vanliga Frågor - IQ Rest",
+      "description": "Hitta svar på vanliga frågor om IQ Rest digitala QR meny-lösning för restauranger och caféer"
+    }
+  },
+  "billing": {
+    "title": "Fakturering",
+    "description": "Hantera din prenumeration och fakturering",
+    "unauthorized": "Vänligen logga in för att hantera din prenumeration",
+    "perMonth": "/månad",
+    "currentPlan": "Aktuell plan",
+    "upgrade": "Uppgradera",
+    "manage": "Hantera",
+    "subscriptionSuccess": "Din prenumeration har aktiverats framgångsrikt!",
+    "subscriptionCanceled": "Prenumerationsprocessen avbröts.",
+    "subscriptionProcessing": "Din betalning behandlas. Det kan ta några ögonblick att aktivera.",
+    "processingPayment": "Behandlar din betalning...",
+    "processingPaymentDescription": "Vänligen vänta medan vi bekräftar din prenumeration. Detta tar vanligtvis några sekunder.",
+    "checkoutError": "Misslyckades med att påbörja kassan. Vänligen försök igen.",
+    "portalError": "Misslyckades med att öppna faktureringsportalen. Vänligen försök igen.",
+    "detailsNote": "För mer information, besök vår",
+    "pricingPage": "Prissättningssida",
+    "plans": {
+      "FREE": {
+        "name": "Gratis"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Grundläggande Månatlig"
+      },
+      "BASIC_YEARLY": {
+        "name": "Grundläggande Årlig"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Månatlig"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Årlig"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Instrumentpanel",
+      "onboarding": "Introduktion",
+      "qrMenu": "QR-meny",
+      "analytics": "Analys",
+      "categories": "Kategorier",
+      "items": "Objekt",
+      "settings": "Allmänna",
+      "design": "Design",
+      "contacts": "Kontakter",
+      "languages": "Språk",
+      "reservations": "Bokningar",
+      "reservationSettings": "Bokningsinställningar",
+      "tables": "Bord",
+      "billing": "Fakturering",
+      "support": "Support"
+    },
+    "sidebar": {
+      "qrMenu": "QR-meny",
+      "menu": "Meny",
+      "settings": "Inställningar",
+      "reservations": "Bokningar",
+      "account": "Konto",
+      "reservationSettings": "Konfiguration"
+    },
+    "logout": "Logga ut",
+    "auth": {
+      "title": "Logga in",
+      "subtitle": "Modern webbplats med QR-meny, bokningar och AI-översättningar",
+      "benefits": "Inga lösenord. Inga kreditkort.",
+      "emailPlaceholder": "din@email.com",
+      "continue": "Fortsätt",
+      "verifyTitle": "Kontrollera din e-post",
+      "verifySubtitle": "Vi har skickat en kod till {email}",
+      "verify": "Verifiera",
+      "changeEmail": "Använd en annan e-post",
+      "errors": {
+        "sendFailed": "Misslyckades med att skicka koden. Vänligen försök igen.",
+        "verifyFailed": "Ogiltig kod. Vänligen försök igen."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Månatlig användning",
+      "scansThisMonth": "skanningar denna månad",
+      "limitReached": "Du har nått din månatliga skanningsgräns. Uppgradera din plan för obegränsade skanningar.",
+      "todayViews": "Idag",
+      "weeklyViews": "Denna vecka",
+      "monthlyViews": "Denna månad",
+      "uniqueVisitors": "Unika besökare",
+      "viewsByPage": "Visningar per sida",
+      "viewsByLanguage": "Visningar per språk",
+      "dailyViews": "Dagliga visningar",
+      "noData": "Ingen data tillgänglig ännu",
+      "pageNames": {
+        "home": "Hem",
+        "menu": "Meny",
+        "contacts": "Kontakter",
+        "language": "Språk",
+        "reserve": "Boka"
+      },
+      "languageNames": {
+        "en": "Engelska",
+        "es": "Spanska",
+        "de": "Tyska",
+        "fr": "Franska",
+        "ru": "Ryska"
+      }
+    },
+    "categories": {
+      "noCategories": "Inga kategorier ännu. Skapa din första kategori för att komma igång.",
+      "addCategory": "Lägg till",
+      "editCategory": "Redigera kategori",
+      "name": "Namn",
+      "namePlaceholder": "Ange kategori namn",
+      "status": "Status",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "save": "Spara",
+      "saving": "Sparar...",
+      "cancel": "Avbryt",
+      "delete": "Ta bort",
+      "deleteConfirm": "Är du säker på att du vill ta bort denna kategori? Denna åtgärd kan inte ångras.",
+      "fetchError": "Misslyckades med att ladda kategorier",
+      "updateError": "Misslyckades med att uppdatera kategori",
+      "saveError": "Misslyckades med att spara kategori",
+      "deleteError": "Misslyckades med att ta bort kategori",
+      "translateError": "Översättning misslyckades",
+      "nameRequired": "Namn krävs",
+      "enabled": "aktiverad",
+      "disabled": "inaktiverad",
+      "created": "Kategori skapad",
+      "updated": "Kategori uppdaterad",
+      "deleted": "Kategori borttagen",
+      "validationErrorTitle": "Vänligen åtgärda följande fel",
+      "sort": "Sortera",
+      "saveSort": "Spara",
+      "sortSaved": "Sorteringsordning sparad",
+      "sortError": "Misslyckades med att spara sorteringsordning"
+    },
+    "items": {
+      "noItems": "Inga objekt ännu. Skapa ditt första objekt för att komma igång.",
+      "addItem": "Lägg till",
+      "editItem": "Redigera objekt",
+      "name": "Namn",
+      "namePlaceholder": "Ange objektnamn",
+      "description": "Beskrivning",
+      "descriptionPlaceholder": "Ange objektsbeskrivning",
+      "price": "Pris",
+      "pricePlaceholder": "0.00",
+      "category": "Kategori",
+      "categoryPlaceholder": "Välj kategori",
+      "image": "Bild",
+      "uploadImage": "Ladda upp bild",
+      "removeImage": "Ta bort bild",
+      "status": "Status",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "save": "Spara",
+      "saving": "Sparar...",
+      "cancel": "Avbryt",
+      "delete": "Ta bort",
+      "deleteConfirm": "Är du säker på att du vill ta bort detta objekt? Denna åtgärd kan inte ångras.",
+      "fetchError": "Misslyckades med att ladda objekt",
+      "updateError": "Misslyckades med att uppdatera objekt",
+      "saveError": "Misslyckades med att spara objekt",
+      "deleteError": "Misslyckades med att ta bort objekt",
+      "translateError": "Översättning misslyckades",
+      "nameRequired": "Namn krävs",
+      "categoryRequired": "Kategori krävs",
+      "priceRequired": "Giltigt pris krävs",
+      "enabled": "aktiverad",
+      "disabled": "inaktiverad",
+      "created": "Objekt skapat",
+      "updated": "Objekt uppdaterat",
+      "deleted": "Objekt borttaget",
+      "validationErrorTitle": "Vänligen åtgärda följande fel",
+      "sort": "Sortera",
+      "saveSort": "Spara",
+      "sortSaved": "Sorteringsordning sparad",
+      "sortError": "Misslyckades med att spara sorteringsordning",
+      "allergens": "Allergener",
+      "allergensHint": "Välj allergener som finns i denna rätt",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Skaldjur",
+        "eggs": "Ägg",
+        "fish": "Fisk",
+        "peanuts": "Jordnötter",
+        "soybeans": "Sojabönor",
+        "dairy": "Mejeriprodukter",
+        "nuts": "Nötter",
+        "celery": "Selleri",
+        "mustard": "Senap",
+        "sesame": "Sesam",
+        "sulphites": "Sulfiter",
+        "lupin": "Lupin",
+        "molluscs": "Mollusker"
+      }
+    },
+    "languages": {
+      "translationProgress": "Översättningsframsteg",
+      "availableLanguages": "Tillgängliga språk",
+      "europeanLanguages": "Europeiska språk",
+      "starToSetDefault": "Klicka på stjärnan för att ställa in som standard",
+      "default": "standard",
+      "hint": "Aktivera språk för att låta kunderna se din meny på flera språk. Standardspråket används för huvudinnehållet.",
+      "fetchError": "Misslyckades med att ladda språk",
+      "enableError": "Misslyckades med att aktivera språk",
+      "disableError": "Misslyckades med att inaktivera språk",
+      "defaultError": "Misslyckades med att ställa in standardspråk",
+      "languageEnabled": "{language} aktiverad",
+      "languageDisabled": "{language} inaktiverad",
+      "defaultSet": "{language} inställt som standard",
+      "cannotDisableDefault": "Kan inte inaktivera standardspråk",
+      "atLeastOneRequired": "Minst ett språk krävs",
+      "enableFirst": "Aktivera språk först",
+      "deleteConfirm": "Att inaktivera detta språk kommer att ta bort alla översättningar för det. Denna åtgärd kan inte ångras.",
+      "cancel": "Avbryt",
+      "confirm": "Inaktivera"
+    },
+    "contacts": {
+      "phone": "Telefon",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Kontakttelefonnummer för dina kunder",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "din_restaurang",
+      "instagramHint": "Ditt Instagram-användarnamn (utan @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp-nummer för kundförfrågningar",
+      "location": "Plats",
+      "locationHint": "Klicka på kartan eller sök för att ställa in din restaurangs plats",
+      "save": "Spara",
+      "fetchError": "Misslyckades med att ladda kontaktinformation",
+      "saveError": "Misslyckades med att spara kontaktinformation",
+      "saved": "Kontaktinformation sparad"
+    },
+    "design": {
+      "background": "Bakgrund",
+      "backgroundHint": "Ladda upp en video eller bild för din hemsides bakgrund",
+      "uploadMedia": "Ladda upp video eller bild",
+      "removeMedia": "Ta bort",
+      "accentColor": "Accentfärg",
+      "accentColorHint": "Huvudfärg för knappar och markeringar på din webbplats",
+      "presetColors": "Förinställda färger",
+      "customColor": "Anpassad färg",
+      "save": "Spara",
+      "fetchError": "Misslyckades med att ladda designinställningar",
+      "saveError": "Misslyckades med att spara designinställningar",
+      "saved": "Designinställningar sparade",
+      "uploadError": "Misslyckades med att ladda upp fil",
+      "invalidFileType": "Ogiltig filtyp. Tillåtna: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Filen är för stor. Max storlek: 50MB för videor, 5MB för bilder"
+    },
+    "general": {
+      "name": "Titel",
+      "namePlaceholder": "Ange restaurangens namn",
+      "nameHint": "Visas på hemsidan för din offentliga webbplats",
+      "description": "Undertitel",
+      "descriptionPlaceholder": "Kort beskrivning (valfritt)",
+      "descriptionHint": "Visas under titeln på hemsidan",
+      "slug": "URL Slug",
+      "slugPlaceholder": "min-restaurang",
+      "slugHint": "Din webbplats kommer att vara tillgänglig på: iq-rest.com/{slug}",
+      "currency": "Valuta",
+      "currencyPlaceholder": "Välj valuta",
+      "save": "Spara",
+      "fetchError": "Misslyckades med att ladda inställningar",
+      "saveError": "Misslyckades med att spara inställningar",
+      "saved": "Inställningar sparade",
+      "nameRequired": "Restaurangens namn krävs",
+      "slugRequired": "URL slug krävs",
+      "validationErrorTitle": "Vänligen åtgärda följande fel",
+      "slugChangedTitle": "Webbadressen uppdaterad",
+      "slugChangedDescription": "Din restaurang är nu tillgänglig på:",
+      "close": "Stäng",
+      "view": "Visa"
+    },
+    "onboarding": {
+      "title": "Välkommen till IQ Rest!",
+      "subtitle": "Slutför dessa steg för att lansera din restaurangwebbplats",
+      "requiredSteps": "Obligatoriska Steg",
+      "optionalSteps": "Valfria Steg",
+      "viewMenu": "Visa Din Meny",
+      "steps": {
+        "title": {
+          "name": "Lägg till Restaurangnamn",
+          "description": "Ge din restaurang ett namn som kommer att visas på din webbplats"
+        },
+        "slug": {
+          "name": "Ställ in Webbplatsadress",
+          "description": "Välj en unik URL för din restaurangwebbplats"
+        },
+        "categories": {
+          "name": "Skapa Menykategorier",
+          "description": "Organisera din meny med kategorier som Förrätter, Huvudrätter, etc."
+        },
+        "items": {
+          "name": "Lägg till Menyobjekt",
+          "description": "Lägg till rätter till din meny med priser och beskrivningar"
+        },
+        "design": {
+          "name": "Anpassa Design",
+          "description": "Välj färger och bakgrund för din webbplats"
+        },
+        "contacts": {
+          "name": "Lägg till Kontaktinformation",
+          "description": "Lägg till telefon, WhatsApp, Instagram och plats"
+        },
+        "reservations": {
+          "name": "Aktivera Bokningar",
+          "description": "Tillåt kunder att boka bord online"
+        },
+        "translations": {
+          "name": "Lägg till Språk",
+          "description": "Gör din meny tillgänglig på flera språk"
+        }
+      },
+      "completed": "Slutförd",
+      "notCompleted": "Ej slutförd",
+      "allDone": "Allt klart! Din meny är live.",
+      "requiredRemaining": "{count} obligatoriska steg kvar"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "För att göra bokningar tillgängliga för dina restauranggäster måste du prenumerera på tjänsten.",
+    "subscribe": "Prenumerera",
+    "reservationsEnabled": "Aktivera Bokningar",
+    "enabled": "Bokningar är aktiverade",
+    "disabled": "Bokningar är inaktiverade",
+    "reservationMode": "Bekräftelseläge",
+    "modeAuto": "Automatisk",
+    "modeManual": "Manuell",
+    "modeAutoDescription": "Bokningar kommer att bekräftas automatiskt baserat på tillgången på bord",
+    "modeManualDescription": "Du måste manuellt bekräfta varje bokning",
+    "slotDuration": "Bokningens Varaktighet",
+    "minutes": "minuter",
+    "workingHours": "Arbetstider",
+    "save": "Spara",
+    "saving": "Sparar...",
+    "saved": "Inställningar sparade",
+    "fetchError": "Misslyckades med att ladda inställningar",
+    "saveError": "Misslyckades med att spara inställningar"
+  },
+  "terms": {
+    "title": "Villkor och bestämmelser",
+    "lastUpdated": "Senast uppdaterad: 17 december 2025",
+    "contact": {
+      "title": "Kontakta oss",
+      "description": "Om du har några frågor om dessa villkor och bestämmelser, vänligen kontakta oss."
+    },
+    "sections": [
+      {
+        "title": "1. Introduktion",
+        "content": [
+          "Välkommen till IQ Rest. Dessa villkor och bestämmelser reglerar din användning av vår webbplats och tjänster som drivs av Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrerad i Spanien.",
+          "Genom att få tillgång till eller använda IQ Rest godkänner du att följa dessa villkor. Om du inte håller med om någon del av dessa villkor får du inte få tillgång till tjänsten."
+        ]
+      },
+      {
+        "title": "2. Tjänstebeskrivning",
+        "content": [
+          "IQ Rest erbjuder en digital QR-meny och plattform för webbplats skapande för restauranger, kaféer och matserviceetableringar. Vår tjänst inkluderar menyhantering, QR-kodsgenerering, flerspråkigt stöd med AI-drivna översättningar, AI-bildoptimering, bordbokningssystem och analys.",
+          "Vi förbehåller oss rätten att ändra, stänga av eller avbryta någon aspekt av tjänsten när som helst utan föregående meddelande."
+        ]
+      },
+      {
+        "title": "3. Kontoregistrering",
+        "content": [
+          "För att använda vissa funktioner av IQ Rest måste du registrera ett konto med en giltig e-postadress. Du är ansvarig för att upprätthålla konfidentialiteten för ditt konto och för alla aktiviteter som sker under ditt konto.",
+          "Du godkänner att tillhandahålla korrekt, aktuell och fullständig information vid registreringen och att uppdatera sådan information för att hålla den korrekt, aktuell och fullständig.",
+          "Vi använder lösenordsfri autentisering via e-postverifieringskoder. Du är ansvarig för att upprätthålla säkerheten för ditt e-postkonto."
+        ]
+      },
+      {
+        "title": "4. Prenumerationsplaner och betalningar",
+        "content": [
+          "IQ Rest erbjuder gratis, grundläggande och pro prenumerationsplaner. Den gratis planen är tillgänglig utan kostnad med begränsade funktioner. Betalda planer (grundläggande och pro) faktureras månadsvis eller årligen genom vår betalningsprocessor, Stripe.",
+          "Priserna visas i Euro (EUR). Genom att prenumerera på en betald plan godkänner du att vi debiterar din betalningsmetod på en återkommande basis tills du avbryter.",
+          "Du kan uppgradera, nedgradera eller avbryta din prenumeration när som helst via din instrumentpanel. Avbokningar träder i kraft i slutet av den aktuella faktureringsperioden. Inga återbetalningar ges för delvisa faktureringsperioder.",
+          "Vi förbehåller oss rätten att ändra våra priser med 30 dagars varsel. Prishöjningar kommer att gälla för faktureringsperioder som börjar efter varselperioden."
+        ]
+      },
+      {
+        "title": "5. AI-drivna funktioner",
+        "content": [
+          "IQ Rest använder artificiell intelligens för menyöversättningar och bildoptimering. Även om vi strävar efter noggrannhet kan AI-genererade översättningar innehålla fel. Du är ansvarig för att granska och verifiera allt AI-genererat innehåll innan publicering.",
+          "AI-bildoptimering bearbetar automatiskt uppladdade bilder för att förbättra laddningsprestanda. Originalbilder lagras inte efter bearbetning.",
+          "Vi garanterar inte noggrannheten, fullständigheten eller tillförlitligheten av AI-genererat innehåll. Du erkänner att AI-funktioner tillhandahålls 'i befintligt skick' och att du använder dem på egen risk."
+        ]
+      },
+      {
+        "title": "6. Användarinnehåll",
+        "content": [
+          "Du behåller äganderätten till allt innehåll du laddar upp till IQ Rest, inklusive menyobjekt, beskrivningar, bilder och företagsinformation.",
+          "Genom att ladda upp innehåll ger du IQ Rest en icke-exklusiv, världsomspännande, royaltyfri licens att använda, visa och distribuera ditt innehåll enbart för syftet att tillhandahålla tjänsten.",
+          "Du är ensam ansvarig för det innehåll du laddar upp och måste säkerställa att det inte bryter mot några lagar eller tredje parts rättigheter. Förbjudet innehåll inkluderar: olagligt material, upphovsrättsskyddat innehåll utan tillstånd, vilseledande eller bedräglig information, och innehåll som bryter mot hälso- och säkerhetsregler."
+        ]
+      },
+      {
+        "title": "7. Acceptabel användning",
+        "content": [
+          "Du godkänner att inte använda IQ Rest för något olagligt syfte eller på något sätt som kan skada, inaktivera eller försämra tjänsten.",
+          "Förbjudna aktiviteter inkluderar: att försöka få obehörig åtkomst till andra konton eller system, använda tjänsten för att distribuera skräppost eller skadlig programvara, skrapa eller datamining, utge sig för att vara andra individer eller företag, och kringgå användningsgränser eller säkerhetsåtgärder."
+        ]
+      },
+      {
+        "title": "8. Immateriella rättigheter",
+        "content": [
+          "Namnet IQ Rest, logotypen, webbplatsdesignen och all relaterad immateriell egendom ägs av Bogdan Sokolov och skyddas av tillämpliga immaterialrättslagar.",
+          "Du får inte kopiera, modifiera, distribuera eller skapa derivatverk baserat på vår immateriella egendom utan uttryckligt skriftligt tillstånd."
+        ]
+      },
+      {
+        "title": "9. Integritet och dataskydd",
+        "content": [
+          "Din användning av IQ Rest regleras också av vår integritetspolicy. Vi följer den allmänna dataskyddsförordningen (GDPR) och spanska dataskyddslagar (LOPDGDD).",
+          "Vi samlar in och behandlar personuppgifter som är nödvändiga för att tillhandahålla tjänsten, inklusive e-postadresser, företagsinformation och användningsanalys. Du kan begära åtkomst till, rättelse av eller radering av dina personuppgifter när som helst."
+        ]
+      },
+      {
+        "title": "10. Ansvarsbegränsning",
+        "content": [
+          "IQ Rest tillhandahålls 'i befintligt skick' och 'i tillgängligt skick' utan garantier av något slag, varken uttryckliga eller underförstådda, inklusive men inte begränsat till underförstådda garantier om säljbarhet och lämplighet för ett visst ändamål.",
+          "I den utsträckning som lagen tillåter, ska Bogdan Sokolov inte vara ansvarig för några indirekta, tillfälliga, särskilda, följd- eller straffskador, inklusive förlust av vinster, data eller affärsmöjligheter.",
+          "Vårt totala ansvar för eventuella krav som uppstår från eller relaterar till tjänsten får inte överstiga det belopp du betalade oss under de tolv (12) månader som föregick kravet."
+        ]
+      },
+      {
+        "title": "11. Skadeersättning",
+        "content": [
+          "Du godkänner att ersätta, försvara och hålla Bogdan Sokolov skadeslös från eventuella krav, skador, förluster eller utgifter som uppstår från din användning av tjänsten, ditt innehåll eller din överträdelse av dessa villkor."
+        ]
+      },
+      {
+        "title": "12. Tjänstetillgänglighet",
+        "content": [
+          "Vi strävar efter att upprätthålla hög tillgänglighet av vår tjänst men garanterar inte oavbruten åtkomst. Tjänsten kan vara tillfälligt otillgänglig på grund av underhåll, uppdateringar eller omständigheter utanför vår kontroll.",
+          "Vi är inte ansvariga för någon förlust eller skada som uppstår till följd av tjänstavbrott eller driftstopp."
+        ]
+      },
+      {
+        "title": "13. Uppsägning",
+        "content": [
+          "Vi kan omedelbart avsluta eller stänga av ditt konto utan föregående meddelande för beteende som vi anser bryter mot dessa villkor eller är skadligt för andra användare, oss eller tredje parter.",
+          "Vid uppsägning upphör din rätt att använda tjänsten omedelbart. Vi kan radera dina data inom 30 dagar efter uppsägning, om vi inte är juridiskt skyldiga att behålla dem."
+        ]
+      },
+      {
+        "title": "14. Ändringar av villkor",
+        "content": [
+          "Vi förbehåller oss rätten att ändra dessa villkor när som helst. Vi kommer att meddela dig om betydande ändringar via e-post eller genom tjänsten.",
+          "Din fortsatta användning av IQ Rest efter att ändringarna träder i kraft utgör acceptans av de reviderade villkoren."
+        ]
+      },
+      {
+        "title": "15. Tillämplig lag och jurisdiktion",
+        "content": [
+          "Dessa villkor regleras av lagarna i Spanien och Europeiska unionen. Eventuella tvister som uppstår från dessa villkor eller din användning av IQ Rest ska omfattas av den exklusiva jurisdiktionen hos domstolarna i Spanien.",
+          "Om någon bestämmelse i dessa villkor befinns vara ogenomförbar, kommer de återstående bestämmelserna att fortsätta att gälla fullt ut."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: 17 december 2025",
+    "contact": {
+      "title": "Kontakta oss",
+      "description": "Om du har några frågor om denna integritetspolicy eller vill utöva dina rättigheter angående dataskydd, vänligen kontakta oss.",
+      "controller": "Datakontrollant"
+    },
+    "sections": [
+      {
+        "title": "1. Introduktion",
+        "content": [
+          "Denna integritetspolicy förklarar hur IQ Rest, som drivs av Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrerad i Spanien, samlar in, använder, lagrar och skyddar dina personuppgifter när du använder vår QR-menyplattform.",
+          "Vi är engagerade i att skydda din integritet och följa den allmänna dataskyddsförordningen (GDPR), den spanska organisk lagen om dataskydd (LOPDGDD) och andra tillämpliga dataskyddslagar."
+        ]
+      },
+      {
+        "title": "2. Datakontrollant",
+        "content": [
+          "Datakontrollanten som ansvarar för dina personuppgifter är: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrerad i Spanien. För frågor angående dataskydd, vänligen kontakta oss på support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Personuppgifter vi samlar in",
+        "content": [
+          "Kontoinformation: När du registrerar dig samlar vi in din e-postadress för autentisering och kommunikationsändamål. Vi använder lösenordsfri autentisering, så vi lagrar inte lösenord.",
+          "Företagsinformation: Restaurangens namn, beskrivning, URL-slug, kontaktuppgifter (telefon, WhatsApp, Instagram), platsdata och arbetstider som du tillhandahåller för din offentliga menywebbplats.",
+          "Menyinnehåll: Kategorier, menyobjekt, beskrivningar, priser och bilder du laddar upp för att skapa din digitala meny.",
+          "Användningsdata: Information om hur du använder vår tjänst, inklusive sidvisningar, funktionanvändning och interaktionsmönster som samlas in genom analys.",
+          "Betalningsinformation: När du prenumererar på betalda planer hanteras betalningsbehandlingen av Stripe. Vi lagrar inte dina fullständiga kreditkortsuppgifter; Stripe bearbetar och säkrar denna information.",
+          "Teknisk data: IP-adresser, webbläsartyp, enhetsinformation och cookies som beskrivs i vår cookiepolicy."
+        ]
+      },
+      {
+        "title": "4. Hur vi använder dina uppgifter",
+        "content": [
+          "Vi använder dina personuppgifter för följande ändamål: Att tillhandahålla och underhålla vår QR-menyservice, inklusive att skapa din restaurangwebbplats och generera QR-koder. Att autentisera ditt konto med hjälp av e-postverifieringskoder. Att bearbeta betalningar och hantera din prenumeration genom Stripe. Att kommunicera med dig om ditt konto, tjänsteuppdateringar och supportförfrågningar. Att tillhandahålla AI-drivna funktioner som menyöversättningar och bildoptimering. Att analysera tjänstanvändning och förbättra vår plattform. Att uppfylla juridiska skyldigheter och skydda våra legitima intressen."
+        ]
+      },
+      {
+        "title": "5. Rättslig grund för behandling",
+        "content": [
+          "Avtalets fullgörande: Behandling som är nödvändig för att tillhandahålla vår tjänst till dig (Artikel 6(1)(b) GDPR).",
+          "Legitima intressen: Analys och tjänsteförbättring, bedrägeriförebyggande (Artikel 6(1)(f) GDPR).",
+          "Samtycke: För valfria funktioner som marknadsföringskommunikation (Artikel 6(1)(a) GDPR).",
+          "Juridisk skyldighet: När det krävs av lag eller reglerande krav (Artikel 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Datastorage och säkerhet",
+        "content": [
+          "Dina uppgifter lagras på säkra servrar som tillhandahålls av Amazon Web Services (AWS). Vår databas är värd i AWS Stockholm (eu-north-1) regionen inom Europeiska unionen, vilket säkerställer efterlevnad av EU:s dataskyddskrav.",
+          "Bilder och mediefiler du laddar upp lagras på AWS S3-servrar belägna i EU-regionen. Data krypteras under överföring med TLS/SSL och i vila med AES-256-kryptering.",
+          "Vi genomför lämpliga tekniska och organisatoriska åtgärder för att skydda dina uppgifter mot obehörig åtkomst, ändring, avslöjande eller förstörelse. Dessa inkluderar säker autentisering, åtkomstkontroller, regelbundna säkerhetsgranskningar och utbildning av anställda."
+        ]
+      },
+      {
+        "title": "7. Dela data och tredje parter",
+        "content": [
+          "Vi delar dina uppgifter med följande kategorier av tredje parter:",
+          "Stripe (Betalningsprocessor): Bearbetar prenumerationsbetalningar. Stripe är certifierad under EU-US Data Privacy Framework. Deras integritetspolicy: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastruktur): Värdar våra servrar och databaser i EU-regioner. AWS följer GDPR och är certifierad under EU-US Data Privacy Framework.",
+          "AI-tjänsteleverantörer: Vi använder AI-tjänster för menyöversättningar och bildoptimering. Data behandlas i enlighet med deras integritetspolicyer och databehandlingsavtal.",
+          "Google Analytics: För anonymiserad webbplatsanalys (om aktiverad). Du kan välja bort via cookieinställningar.",
+          "Vi säljer inte dina personuppgifter till tredje parter. Vi kan avslöja data om det krävs av lag eller för att skydda våra juridiska rättigheter."
+        ]
+      },
+      {
+        "title": "8. Internationella datatransfer",
+        "content": [
+          "Dina uppgifter lagras och behandlas främst inom Europeiska unionen (AWS Stockholm, eu-north-1-regionen). När data överförs utanför EU (till exempel till tjänsteleverantörer i USA), säkerställer vi att lämpliga skyddsåtgärder finns på plats, inklusive standardavtalsklausuler (SCC) och certifiering under erkända dataskyddsramar."
+        ]
+      },
+      {
+        "title": "9. Databevarande",
+        "content": [
+          "Kontodata: Bevaras så länge ditt konto är aktivt. Vid kontoborttagning tas personuppgifter bort inom 30 dagar, utom där bevarande krävs enligt lag.",
+          "Menyinnehåll: Bevaras så länge ditt konto är aktivt. Tas bort vid kontots uppsägning.",
+          "Betalningsregister: Bevaras i 7 år som krävs av spansk skattelagstiftning.",
+          "Analysdata: Aggregerad och anonymiserad data kan bevaras på obestämd tid för tjänsteförbättring.",
+          "Backupdata: Kan bevaras i krypterade säkerhetskopior i upp till 90 dagar efter borttagning för katastrofåterställningsändamål."
+        ]
+      },
+      {
+        "title": "10. Dina rättigheter enligt GDPR",
+        "content": [
+          "Enligt GDPR har du följande rättigheter angående dina personuppgifter:",
+          "Rätt till åtkomst: Begära en kopia av dina personuppgifter som vi har.",
+          "Rätt till rättelse: Begära korrigering av felaktiga eller ofullständiga uppgifter.",
+          "Rätt till radering: Begära radering av dina personuppgifter ('rätt att bli glömd').",
+          "Rätt till begränsning: Begära begränsning av behandling i vissa omständigheter.",
+          "Rätt till dataportabilitet: Ta emot dina uppgifter i ett strukturerat, maskinläsbart format.",
+          "Rätt att invända: Invända mot behandling baserad på legitima intressen eller för direktmarknadsföring.",
+          "Rätt att återkalla samtycke: När behandlingen baseras på samtycke kan du återkalla det när som helst.",
+          "För att utöva dessa rättigheter, kontakta oss på support@iq-rest.com. Vi kommer att svara inom 30 dagar. Om du är missnöjd med vårt svar har du rätt att lämna in ett klagomål till den spanska dataskyddsmyndigheten (AEPD) på www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Barns integritet",
+        "content": [
+          "IQ Rest är inte avsett för användning av individer under 16 år. Vi samlar inte medvetet in personuppgifter från barn. Om vi blir medvetna om att vi har samlat in data från ett barn kommer vi att radera det omedelbart."
+        ]
+      },
+      {
+        "title": "12. Ändringar av denna policy",
+        "content": [
+          "Vi kan uppdatera denna integritetspolicy från tid till annan. Vi kommer att informera dig om betydande ändringar via e-post eller genom en avisering på vår webbplats. Datumet 'Senast uppdaterad' högst upp indikerar när policyn senast reviderades.",
+          "Din fortsatta användning av IQ Rest efter att ändringar har publicerats utgör acceptans av den reviderade policyn."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookies Policy",
+    "lastUpdated": "Senast uppdaterad: 17 december 2025",
+    "yes": "Ja",
+    "no": "Nej",
+    "cookieTableTitle": "Cookies Vi Använder",
+    "tableHeaders": {
+      "name": "Cookie Namn",
+      "purpose": "Syfte",
+      "duration": "Varaktighet",
+      "required": "Obligatorisk"
+    },
+    "contact": {
+      "title": "Frågor Om Cookies",
+      "description": "Om du har några frågor om vår användning av cookies, vänligen kontakta oss."
+    },
+    "sections": [
+      {
+        "title": "1. Vad Är Cookies",
+        "content": [
+          "Cookies är små textfiler som lagras på din enhet (dator, surfplatta eller mobiltelefon) när du besöker en webbplats. De hjälper webbplatser att fungera korrekt, komma ihåg dina preferenser och ge information till webbplatsägare.",
+          "Denna Cookies Policy förklarar hur IQ Rest, som drivs av Bogdan Sokolov (Autónomo), använder cookies och liknande teknologier på vår webbplats iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Hur Vi Använder Cookies",
+        "content": [
+          "Vi använder cookies för flera syften: för att säkerställa att vår webbplats fungerar korrekt, för att komma ihåg dina preferenser och inställningar, för att autentisera ditt konto och hålla dig inloggad, för att analysera hur besökare använder vår webbplats så att vi kan förbättra den, och för att komma ihåg dina preferenser för cookie-samtycke."
+        ]
+      },
+      {
+        "title": "3. Typer av Cookies Vi Använder",
+        "content": [
+          "Nödvändiga Cookies: Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av. De sätts vanligtvis som svar på åtgärder du vidtar, såsom att logga in eller ställa in dina sekretesspreferenser.",
+          "Funktionella Cookies: Dessa cookies möjliggör förbättrad funktionalitet och personalisering, såsom att komma ihåg dina språkinställningar och tema-inställningar.",
+          "Analytiska Cookies: Dessa cookies hjälper oss att förstå hur besökare interagerar med vår webbplats genom att samla in och rapportera information anonymt. Vi använder dessa data för att förbättra vår tjänst.",
+          "Tredjeparts Cookies: Vissa cookies placeras av tredjepartstjänster som visas på våra sidor, såsom betalningsprocessorer (Stripe) och analysleverantörer (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Ditt Cookieval",
+        "content": [
+          "När du först besöker vår webbplats kommer du att se en cookie-samtyckesbanner som låter dig acceptera eller avvisa icke-nödvändiga cookies. Du kan ändra dina preferenser när som helst.",
+          "Du kan också kontrollera cookies genom dina webbläsarinställningar. De flesta webbläsare tillåter dig att vägra cookies, radera befintliga cookies eller få en varning när cookies skickas. Vänligen notera att blockering av nödvändiga cookies kan påverka funktionaliteten på vår webbplats.",
+          "För att avregistrera dig från Google Analytics spårning kan du installera Google Analytics Opt-out Browser Add-on."
+        ]
+      },
+      {
+        "title": "5. Cookie Varaktighet",
+        "content": [
+          "Sessionscookies: Dessa cookies är temporära och raderas när du stänger din webbläsare.",
+          "Persistenta Cookies: Dessa cookies förblir på din enhet under en viss period eller tills du raderar dem. De hjälper oss att känna igen dig när du återvänder till vår webbplats."
+        ]
+      },
+      {
+        "title": "6. Tredjeparts Cookies",
+        "content": [
+          "Stripe: Används för säker betalningshantering. Stripe kan sätta cookies för att förhindra bedrägerier och bearbeta betalningar säkert. Läs mer på stripe.com/cookies-policy",
+          "Google Analytics: Används för att samla in anonyma statistik om webbplatsanvändning. Du kan avregistrera dig med hjälp av cookie-bannern eller webbläsarinställningarna. Läs mer på policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Uppdateringar av Denna Policy",
+        "content": [
+          "Vi kan uppdatera denna Cookies Policy från tid till annan för att återspegla förändringar i våra rutiner eller av operativa, juridiska eller regulatoriska skäl. Datumet 'Senast uppdaterad' högst upp indikerar när policyn senast reviderades."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Upprätthåller din inloggningssession och autentiseringstillstånd",
+        "duration": "Session / 30 dagar",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Kommer ihåg ditt föredragna språk (Engelska/Spanska)",
+        "duration": "1 år",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Lagrar din tema-preferens (ljus/mörkt läge)",
+        "duration": "1 år",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Kommer ihåg dina preferenser för cookie-samtycke",
+        "duration": "1 år",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - spårar anonyma användningsstatistik",
+        "duration": "2 år / 24 timmar",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - bedrägeriförebyggande och betalningssäkerhet",
+        "duration": "1 år / Session",
+        "required": false
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { JsonLd, createBreadcrumbSchema } from "../_lib";
+import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { CtaSection } from "../_components";
 
 export async function generateMetadata({
@@ -19,11 +19,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/faq`,
-      languages: {
-        en: "https://iq-rest.com/en/faq",
-        es: "https://iq-rest.com/es/faq",
-        "x-default": "https://iq-rest.com/en/faq",
-      },
+      languages: buildAlternates("/faq"),
     },
     openGraph: {
       title: t("meta.title"),

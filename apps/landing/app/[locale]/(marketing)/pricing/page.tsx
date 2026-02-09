@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { PricingCards, CtaSection } from "../_components";
-import { JsonLd, createBreadcrumbSchema } from "../_lib";
+import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -36,11 +36,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/pricing`,
-      languages: {
-        en: "https://iq-rest.com/en/pricing",
-        es: "https://iq-rest.com/es/pricing",
-        "x-default": "https://iq-rest.com/en/pricing",
-      },
+      languages: buildAlternates("/pricing"),
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,

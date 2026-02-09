@@ -1,14 +1,18 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
-import { routing } from "./i18n/routing";
+import { routing, locales } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
+
+// Create regex pattern for all locales
+const localePattern = locales.join("|");
+const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Permanent redirect (308) for paths without locale prefix
-  if (!pathname.startsWith("/en") && !pathname.startsWith("/es") && pathname !== "/") {
+  // Permanent redirect for paths without locale prefix
+  if (!localeRegex.test(pathname) && pathname !== "/") {
     return NextResponse.redirect(new URL(`/en${pathname}`, request.url), 301);
   }
 
@@ -17,9 +21,10 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/en", request.url), 301);
   }
 
-  // Redirect /demo to demo menu
-  if (pathname.match(/^\/(en|es)\/demo$/)) {
-    const locale = pathname.startsWith("/es") ? "es" : "en";
+  // Redirect /demo to demo menu (extract locale from path)
+  const demoMatch = pathname.match(new RegExp(`^/(${localePattern})/demo$`));
+  if (demoMatch) {
+    const locale = demoMatch[1];
     return NextResponse.redirect(new URL(`/${locale}/m/love-eatery`, request.url), 301);
   }
 

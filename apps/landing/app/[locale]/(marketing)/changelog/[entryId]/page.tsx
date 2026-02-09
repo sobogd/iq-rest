@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { JsonLd } from "../../_lib";
+import { JsonLd, buildAlternates } from "../../_lib";
 
 // Define changelog entries data
 const changelogEntries: Record<string, {
@@ -106,11 +106,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/changelog/${entryId}`,
-      languages: {
-        en: `https://iq-rest.com/en/changelog/${entryId}`,
-        es: `https://iq-rest.com/es/changelog/${entryId}`,
-        "x-default": `https://iq-rest.com/en/changelog/${entryId}`,
-      },
+      languages: buildAlternates(`/changelog/${entryId}`),
     },
     openGraph: {
       title: t(`entries.${key}.meta.title`),

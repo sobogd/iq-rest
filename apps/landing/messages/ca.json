@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menú",
+      "pricing": "Preus",
+      "features": "Funcions",
+      "faq": "Preguntes",
+      "changelog": "Registre de canvis",
+      "contacts": "Contactes"
+    },
+    "getStarted": "Iniciar sessió",
+    "selectLanguage": "Selecciona l'idioma",
+    "selectLanguageDescription": "Tria l'idioma que prefereixes per al lloc web.",
+    "searchLanguage": "Cerca idioma...",
+    "noLanguagesFound": "No s'han trobat idiomes"
+  },
+  "home": {
+    "hero": {
+      "title": "Menú QR i lloc web per a restaurants en 5 minuts",
+      "subtitle": "Només has d'introduir el teu correu electrònic i obtenir un lloc web complet per al restaurant amb menú QR, pàgina de contacte, suport multilingüe i disseny modern. Configura-ho tot des del teu telèfon.",
+      "cta": {
+        "create": "Crear Menú",
+        "view": "Veure Menú Real"
+      },
+      "benefits": [
+        {
+          "title": "Lloc web modern",
+          "description": "Disseny professional que es veu genial en qualsevol dispositiu"
+        },
+        {
+          "title": "Reserves",
+          "description": "Accepta reserves de taules directament des del teu lloc web"
+        },
+        {
+          "title": "Traduccions AI",
+          "description": "Traducció automàtica del menú a qualsevol idioma"
+        },
+        {
+          "title": "Analítiques diàries",
+          "description": "Fes un seguiment de les visites i plats populars cada dia"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Confiat per més de 500 restaurants a tot el món",
+      "title": "Tot el que el teu restaurant necessita en línia",
+      "description": "Registra't només amb el teu correu electrònic i obtén instantàniament: un lloc web professional per al restaurant, menú QR en format modern, pàgina de contacte funcional amb mapa, suport multilingüe amb traducció AI, fons de vídeo o foto, i esquema de colors personalitzat. Tot gestionable des del teu telèfon - no es requereix ordinador."
+    },
+    "whyUs": {
+      "title": "De Zero a Menú en Línia en 5 Minuts",
+      "subtitle": "Només 4 passos senzills per posar el teu restaurant en línia",
+      "items": [
+        {
+          "step": "1",
+          "title": "Introdueix el Teu Correu Electrònic",
+          "description": "Registre ràpid només amb la teva adreça de correu electrònic. No es requereix targeta de crèdit."
+        },
+        {
+          "step": "2",
+          "title": "Omple la Informació del Restaurant",
+          "description": "Afegeix el nom del teu restaurant, adreça, contactes i horaris d'obertura."
+        },
+        {
+          "step": "3",
+          "title": "Afegeix Articles al Menú",
+          "description": "Crea categories i afegeix els teus plats amb fotos i preus."
+        },
+        {
+          "step": "4",
+          "title": "Gaudeix del Teu Menú",
+          "description": "El teu menú QR està llest! Comparteix-lo amb els clients i fes un seguiment de les analítiques."
+        }
+      ],
+      "cta": "Estàs llest per modernitzar el teu restaurant?"
+    },
+    "featuresPreview": {
+      "title": "Funcions Potents per al Teu Restaurant",
+      "subtitle": "Tot el que necessites per crear una presència professional en línia",
+      "viewAll": "Veure Totes les Funcions"
+    }
+  },
+  "features": {
+    "title": "Funcions Potents per al Menú QR del Teu Restaurant i Lloc Web",
+    "subtitle": "Tot el que necessites per crear una presència digital professional per al teu restaurant o cafè",
+    "backToFeatures": "Torna a Funcions",
+    "getStarted": "Crea el Menú",
+    "viewPricing": "Veure Preus",
+    "readyTitle": "Preparat per Començar?",
+    "readyDescription": "Crea el teu menú QR professional i el lloc web del restaurant en minuts. Totes les funcions incloses.",
+    "keyBenefits": "Avantatges Clau",
+    "faqTitle": "Preguntes Freqüents",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Què necessito per començar?",
+          "a": "Només la teva adreça de correu electrònic. Sense targeta de crèdit, sense formularis complexos."
+        },
+        {
+          "q": "Quant temps triga la configuració?",
+          "a": "El teu lloc web està llest instantàniament. Afegeix els teus articles de menú i estaràs en línia en 5 minuts."
+        },
+        {
+          "q": "Hi ha un pla gratuït?",
+          "a": "Sí, comença de forma gratuïta amb totes les funcions essencials incloses."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Necessito instal·lar una aplicació?",
+          "a": "No cal cap aplicació - tot funciona al navegador del teu telèfon."
+        },
+        {
+          "q": "Puc pujar fotos des del meu telèfon?",
+          "a": "Sí, fes fotos amb la teva càmera i puja-les directament al teu menú."
+        },
+        {
+          "q": "Funciona en tauletes?",
+          "a": "Sí, el tauler de control està optimitzat per a telèfons, tauletes i ordinadors de sobretaula."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Quina precisió té la traducció AI?",
+          "a": "La nostra IA entén el context culinari, preservant els noms dels plats i traduint les descripcions de manera natural."
+        },
+        {
+          "q": "Quina velocitat té la traducció?",
+          "a": "Els menús complets es tradueixen en segons, no en hores."
+        },
+        {
+          "q": "Puc editar les traduccions de la IA?",
+          "a": "Sí, totes les traduccions són editables - revisa i ajusta segons sigui necessari."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Quantes llengües es suporten?",
+          "a": "Més de 25 llengües, incloent totes les llengües europees principals, xinès, japonès, coreà, àrab i hebreu."
+        },
+        {
+          "q": "Com canvien els clients d'idioma?",
+          "a": "Un selector d'idioma apareix al teu menú - un toc per canviar a qualsevol llengua disponible."
+        },
+        {
+          "q": "La traducció és automàtica?",
+          "a": "Pots utilitzar la traducció AI o introduir manualment les traduccions per a cada llengua."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Quins formats d'imatge es suporten?",
+          "a": "Puja JPG, PNG o WebP - les imatges es poden optimitzar automàticament."
+        },
+        {
+          "q": "L'optimització redueix la qualitat?",
+          "a": "No, la nostra IA manté la qualitat visual mentre redueix la mida del fitxer per a una càrrega ràpida."
+        },
+        {
+          "q": "Hi ha un límit de mida de fitxer?",
+          "a": "Puja imatges de fins a 10MB - seran optimitzades automàticament."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Com afegeixo un nou plat?",
+          "a": "Toca 'Afegeix Article', introdueix el nom, la descripció, el preu i opcionalment puja una foto. Això és tot!"
+        },
+        {
+          "q": "Puc reorganitzar els articles del menú?",
+          "a": "Sí, simplement arrossega i deixa caure articles o categories per reorganitzar-los."
+        },
+        {
+          "q": "Què passa si un plat està esgotat?",
+          "a": "Desactiva temporalment l'article - desapareix del menú però no es suprimeix."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Quines mètriques puc seguir?",
+          "a": "Visites diàries, rendiment de pàgines, preferències d'idioma i tendències al llarg del temps."
+        },
+        {
+          "q": "Amb quina freqüència s'actualitzen les dades?",
+          "a": "Les analítiques s'actualitzen en temps real - veus els visitants d'avui a mesura que succeeixen."
+        },
+        {
+          "q": "Puc exportar dades analítiques?",
+          "a": "Veure informes detallats directament al teu tauler de control."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Com fan els clients les reserves?",
+          "a": "Els clients poden reservar directament des del lloc web del teu restaurant. Seleccionen la data, l'hora i el nombre de convidats, i després reben una confirmació per correu electrònic."
+        },
+        {
+          "q": "Puc aprovar les reserves manualment?",
+          "a": "Sí, pots triar entre confirmació automàtica o aprovació manual per a cada reserva."
+        },
+        {
+          "q": "Rebré notificacions de noves reserves?",
+          "a": "Sí, reps notificacions per correu electrònic per cada nova reserva."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Quins formats de vídeo es suporten?",
+          "a": "Es suporten formats MP4 i WebM. Els vídeos es poden optimitzar automàticament per a una càrrega ràpida."
+        },
+        {
+          "q": "Puc utilitzar les meves pròpies fotos?",
+          "a": "Sí, puja qualsevol foto i es podrà optimitzar automàticament per a la visualització web."
+        },
+        {
+          "q": "El vídeo redueix la velocitat del menú?",
+          "a": "No, els vídeos es comprimeixen i es carreguen de manera lazy per assegurar un bon rendiment de la pàgina."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Quants colors puc triar?",
+          "a": "Tria entre 12 colors predefinits o introdueix el teu color de marca exacte utilitzant un codi hex."
+        },
+        {
+          "q": "Admet el mode fosc?",
+          "a": "Sí, la teva paleta de colors s'adapta automàticament tant a temes clars com foscos."
+        },
+        {
+          "q": "Puc canviar els colors en qualsevol moment?",
+          "a": "Sí, canvia el teu color d'accent instantàniament des del tauler de control - les actualitzacions apareixen immediatament."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Com puc contactar amb el suport?",
+          "a": "Utilitza el formulari de contacte o envia'ns un correu electrònic directament - persones reals responen, no bots."
+        },
+        {
+          "q": "Quin és el temps de resposta?",
+          "a": "Normalment responem en poques hores durant els dies laborables."
+        },
+        {
+          "q": "Hi ha suport disponible per a plans gratuïts?",
+          "a": "Sí, el suport personal està disponible per a tots els plans, incloent el gratuït."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Configuració Instantània de Menú QR i Lloc Web",
+        "shortDescription": "Crea el lloc web del teu restaurant i el menú QR només amb un correu electrònic - llest en 5 minuts",
+        "description": "Comença en segons amb el procés de registre més senzill. Només introdueix el teu correu electrònic i obtindràs instantàniament un lloc web complet per al restaurant amb menú QR, pàgina de contacte amb mapa i disseny modern. No es necessiten habilitats tècniques, ni formularis complicats - el teu restaurant es posa en línia immediatament.",
+        "fullDescription": "Els constructors de llocs web tradicionals requereixen hores de configuració, coneixements tècnics i sovint un desenvolupador. IQ Rest ho canvia tot. Introdueix el teu correu electrònic, verifica amb un codi senzill i el teu lloc web del restaurant està llest. Afegeix els teus plats, puja fotos i comparteix el teu codi QR amb els clients. Tot el procés triga menys de 5 minuts.",
+        "benefits": [
+          "Només es requereix correu electrònic per començar - sense registre complex",
+          "Lloc web del restaurant llest instantàniament després del registre",
+          "Menú QR generat automàticament i enllaçat",
+          "Pàgina de contacte amb mapa inclosa per defecte",
+          "No es necessiten habilitats tècniques ni coneixements de codificació"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Procés de configuració instantània del lloc web del restaurant i menú QR",
+        "cta": "Més Informació"
+      },
+      {
+        "id": "mobile-management",
+        "title": "Gestió 100% Amigable per a Mòbils",
+        "shortDescription": "Sense ordinador? Sense problema. Gestiona tot el lloc web del teu restaurant des del teu telèfon. Afegeix plats mentre estàs a la cuina, actualitza preus durant el servei, puja fotos directament des de la teva càmera. Cada funció funciona perfectament en mòbil - perquè els propietaris de restaurants mai no estan asseguts a una taula.",
+        "description": "Afegeix categories, plats, fotos i gestiona tot el lloc web del teu restaurant directament des del teu telèfon. El nostre tauler de control està totalment optimitzat per a dispositius mòbils, així que pots actualitzar el teu menú durant una pausa per al cafè o afegir ofertes diàries en moviment.",
+        "fullDescription": "Els propietaris de restaurants són persones ocupades que no sempre estan davant d'un ordinador. Per això hem dissenyat IQ Rest per funcionar perfectament en dispositius mòbils. Cada funció, des d'afegir nous plats fins a actualitzar preus, està dissenyada per a pantalles tàctils. Fes una foto d'un nou plat i puja-la instantàniament. Canvia l'especial d'avui mentre estàs a la cuina.",
+        "benefits": [
+          "Accés complet al tauler de control en qualsevol telèfon intel·ligent o tauleta",
+          "Puja fotos directament des de la càmera del teu telèfon",
+          "Actualitza preus i descripcions en moviment",
+          "Gestiona categories amb una interfície amigable per a tocs",
+          "No es requereix ordinador - mai"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Gestió del menú del restaurant en telèfon intel·ligent",
+        "cta": "Veure Tauler Mòbil"
+      },
+      {
+        "id": "ai-translation",
+        "title": "Traducció de Menú Impulsada per IA",
+        "shortDescription": "Deixa de perdre clients internacionals per barreres idiomàtiques. La nostra IA tradueix tot el teu menú a més de 25 llengües en segons - no és una traducció genèrica, sinó una IA conscient del context que entén els termes culinaris. 'Beef Wellington' es manté com 'Beef Wellington', mentre que les descripcions sonen de manera natural en cada llengua.",
+        "description": "Arriba a clients internacionals amb una traducció intel·ligent d'IA que entén el context del menjar. Els noms dels teus plats i les descripcions es tradueixen amb precisió, preservant els termes culinaris i tenint sentit en qualsevol llengua.",
+        "fullDescription": "Els traductors genèrics sovint fallen amb els menús de menjar - tradueixen literalment sense entendre el context. La nostra IA està entrenada específicament per al contingut de restaurants. Sap que 'Beef Wellington' no s'ha de traduir literalment, i que 'al dente' significa el mateix en qualsevol llengua. Serveix turistes i convidats internacionals amb menús que sonen de manera natural en la seva llengua.",
+        "benefits": [
+          "Traducció conscient del context per a termes alimentaris i culinaris",
+          "Més de 10 llengües, incloent espanyol, francès, alemany, xinès, japonès",
+          "Preserva la terminologia culinària i les nuances culturals",
+          "Traducció instantània - menú disponible en segons",
+          "Augmenta les vendes en un 23% amb clients internacionals"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "Interfície de traducció de menú de restaurant impulsada per IA",
+        "cta": "Descobreix la Traducció AI"
+      },
+      {
+        "id": "multilingual",
+        "title": "Lloc Web de Restaurant Multilingüe",
+        "shortDescription": "Benvinguts turistes i convidats internacionals en la seva llengua nativa. El suport per a més de 25 llengües significa que cada client se sent com a casa. Un toc per canviar d'idioma - menú, preus, descripcions s'adapten instantàniament. Perfecte per a restaurants en zones turístiques o ciutats internacionals.",
+        "description": "El lloc web del teu restaurant suporta automàticament múltiples llengües. Els clients poden canviar d'idioma amb un toc, i tot el contingut, incloent menú, informació de contacte i navegació s'adapta instantàniament.",
+        "fullDescription": "En zones turístiques i ciutats internacionals, parlar la llengua del teu client és essencial. IQ Rest fa que el teu restaurant sigui accessible per a tothom. Els clients veuen un selector d'idioma i poden navegar per tot el teu lloc web - menú, contactes, reserves - en la seva llengua preferida. Combinat amb la traducció AI, pots servir al món.",
+        "benefits": [
+          "Canvi d'idioma amb un toc per als clients",
+          "Menú, contactes i totes les pàgines traduïdes",
+          "Preferència d'idioma recordada per a visites de retorn",
+          "Perfecte per a zones turístiques i ciutats internacionals",
+          "Funciona perfectament amb la funció de traducció AI"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Selector d'idioma del lloc web de restaurant multilingüe",
+        "cta": "Veure Funcions Multilingües"
+      },
+      {
+        "id": "ai-images",
+        "title": "Optimització d'Imatges AI",
+        "shortDescription": "Millora automàtica d'imatges per a una càrrega més ràpida i millor qualitat",
+        "description": "Puja qualsevol foto i la nostra IA l'optimitza automàticament per a la visualització web. Les imatges es carreguen ràpidament en qualsevol connexió mentre mantenen una qualitat impressionant que fa que els teus plats semblin irresistibles.",
+        "fullDescription": "Imatges grans i no optimitzades redueixen la velocitat del teu lloc web i frustren els clients. La nostra IA processa cada imatge pujada: redimensionant a dimensions òptimes, convertint a formats moderns i millorant la qualitat. El resultat? Els teus plats semblen increïbles, i les pàgines es carreguen en menys d'un segon fins i tot en connexions mòbils lentes.",
+        "benefits": [
+          "Redimensionament automàtic a dimensions web òptimes",
+          "Conversió a format WebP per a càrregues ràpides",
+          "Millora de qualitat per a una millor presentació",
+          "Les pàgines es carreguen en menys d'1 segon",
+          "Funciona amb qualsevol format d'imatge que pugis"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "Comparació abans i després de l'optimització d'imatges AI",
+        "cta": "Més Informació"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Gestió de Menú Fàcil",
+        "shortDescription": "Actualitza el teu menú en segons, no en hores. Afegeix nous plats, edita preus, reorganitza categories - tot amb un senzill arrossegar i deixar caure des de qualsevol dispositiu. No es necessiten habilitats tècniques. Els canvis es publiquen instantàniament, així que els teus clients sempre veuen les últimes ofertes.",
+        "description": "Gestionar el teu menú mai ha estat tan fàcil. Afegeix categories, crea plats amb fotos i descripcions, fixa preus i organitza-ho tot amb un senzill arrossegar i deixar caure. Els canvis apareixen instantàniament al teu lloc web en viu.",
+        "fullDescription": "Oblida't dels sistemes de gestió de continguts complicats. L'editor de menú d'IQ Rest està dissenyat per a propietaris de restaurants, no per a desenvolupadors web. Crea una nova categoria en segons, afegeix plats amb uns pocs tocs, puja fotos directament des del teu telèfon. Arrossega articles per reorganitzar, activa o desactiva la visibilitat dels articles esgotats, i veu els canvis en viu immediatament.",
+        "benefits": [
+          "Creació intuïtiva de categories i articles",
+          "Reorganització per arrossegar i deixar caure",
+          "Activa o desactiva articles sense suprimir-los",
+          "Actualitzacions instantànies - els canvis apareixen en segons",
+          "Organitza categories i plats il·limitats"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Tauler de gestió fàcil del menú del restaurant",
+        "cta": "Veure Editor de Menú"
+      },
+      {
+        "id": "analytics",
+        "title": "Analítiques i Informes Diaris",
+        "shortDescription": "Fes un seguiment de les visites a la pàgina, llengües i comportament dels clients amb informes diaris detallats",
+        "description": "Entén els teus clients amb analítiques completes. Veus visites diàries a la pàgina, llengües populars, pàgines més vistes i segueixes tendències al llarg del temps. Pren decisions basades en dades per optimitzar el teu menú.",
+        "fullDescription": "El coneixement és poder. El nostre tauler d'analítiques et mostra exactament com interactuen els clients amb el teu lloc web del restaurant. Quines pàgines reben més visites? Quines llengües prefereixen els teus clients? Estan augmentant les visites setmana rere setmana? Utilitza aquestes informacions per optimitzar el teu menú, dirigir-te als clients adequats i fer créixer el teu negoci.",
+        "benefits": [
+          "Estadístiques de visualitzacions diàries, setmanals i mensuals",
+          "Desglossament de preferències d'idioma",
+          "Seguiment del rendiment pàgina per pàgina",
+          "Anàlisi de tendències al llarg del temps",
+          "Exporta dades per a una anàlisi més profunda"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Tauler d'analítiques del restaurant amb estadístiques diàries",
+        "cta": "Més Informació"
+      },
+      {
+        "id": "reservations",
+        "title": "Sistema de Reserves de Taules",
+        "shortDescription": "Deixa de perdre clients per trucades perdudes. Accepta reserves de taules 24/7 directament des del teu lloc web — els clients escullen data, hora i taula en segons. Confirmacions automàtiques, notificacions per correu electrònic i un tauler senzill per gestionar-ho tot.",
+        "description": "El sistema de reserves integrat permet als clients reservar taules directament des del teu lloc web. Escull confirmació automàtica basada en disponibilitat, o revisa cada reserva manualment. Gestiona totes les reserves des del teu tauler de control.",
+        "fullDescription": "Les reserves per telèfon són laborioses i fàcils de perdre. El sistema de reserves d'IQ Rest funciona 24/7. Els clients seleccionen data, hora i nombre de persones, i després reserven instantàniament. Pots configurar la confirmació automàtica basada en la disponibilitat de taules, o revisar cada sol·licitud manualment. Redueix les no presentacions amb confirmacions per correu electrònic.",
+        "benefits": [
+          "Capacitat de reserva en línia 24/7",
+          "Modes de confirmació automàtica o manual",
+          "Gestió de taules i capacitat",
+          "Notificacions per correu electrònic per a reserves",
+          "Vista de calendari per a una programació fàcil"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Sistema de reserva de taules en línia per a restaurants",
+        "cta": "Explora les Reserves de Taules"
+      },
+      {
+        "id": "custom-design",
+        "title": "Fons de Vídeo i Foto",
+        "shortDescription": "Les primeres impressions venen. Captiva els clients en el moment que escanejen el teu codi QR amb un vídeo impressionant de l'ambient del teu restaurant o una bella foto del teu plat estrella. Destaca entre la competència amb una pàgina d'inici que se senti premium i professional.",
+        "description": "Crea una primera impressió memorable amb fons de vídeo o foto personalitzats a la teva pàgina d'inici. Puja el vídeo de l'ambient del teu restaurant o una bella foto de menjar per captivar els clients instantàniament.",
+        "fullDescription": "Les primeres impressions importen. Quan els clients escanejen el teu codi QR, han d'impressionar-se immediatament. Puja un vídeo de l'ambient del teu restaurant, un time-lapse de la teva cuina, o una foto impressionant del teu plat estrella. La teva pàgina d'inici es converteix en una experiència visual que reflecteix la personalitat del teu restaurant.",
+        "benefits": [
+          "Suport per a fons de vídeo i imatge",
+          "Optimització automàtica per a càrregues ràpides",
+          "Funciona perfectament en dispositius mòbils",
+          "Crea una primera impressió memorable",
+          "Reflexa l'atmosfera única del teu restaurant"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Lloc web de restaurant amb fons de vídeo",
+        "cta": "Veure Fons de Vídeo"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Esquema de Colors Personalitzat",
+        "shortDescription": "Fes que el teu menú sigui realment teu amb colors d'accent personalitzats que coincideixin amb la identitat de marca del teu restaurant. Tria entre 12 colors predefinits bonics o escull la teva tonalitat exacta de marca. Cada botó, destacat i element interactiu s'adapta per crear un aspecte cohesiu i professional que els clients recorden.",
+        "description": "El lloc web del teu restaurant ha de coincidir amb la teva marca. Tria entre esquemes de colors predefinits o escull el teu color de marca exacte. Combinat amb el suport automàtic per a temes clars/foscos, el teu menú sempre es veu professional.",
+        "fullDescription": "La consistència de marca és important. IQ Rest et permet personalitzar el color d'accent utilitzat a tot el teu lloc web - botons, destacats i elements interactius coincideixen amb la teva marca. Tria entre presets curosament seleccionats o introdueix el teu color de marca exacte. El sistema assegura automàticament la llegibilitat tant en modes clars com foscos.",
+        "benefits": [
+          "Selecció de color d'accent personalitzat",
+          "Esquemes de colors predefinits disponibles",
+          "Suport automàtic per a temes clars/foscos",
+          "Branding consistent a totes les pàgines",
+          "Contrast de colors optimitzat per a l'accessibilitat"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Opcions d'esquema de colors i branding personalitzats",
+        "cta": "Explora Esquemes de Colors"
+      },
+      {
+        "id": "personal-support",
+        "title": "Suport en Línia Individual",
+        "shortDescription": "Obtingues ajuda personal de persones reals - no xatbots - per a qualsevol pregunta",
+        "description": "Cada restaurant obté suport en línia individual. Tens una pregunta? Necessites ajuda amb la configuració? Vols suggerir una funció? Persones reals responen ràpidament per ajudar-te a tenir èxit amb el teu menú digital.",
+        "fullDescription": "Creiem que cada restaurant mereix atenció personal. Quan et poses en contacte amb el suport, estàs parlant amb persones reals que entenen els restaurants i poden ajudar-te realment. Sense xatbots, sense respostes automatitzades, sense cues de tiquets. Tant si necessites ajuda per afegir el teu primer plat com si vols consells sobre com optimitzar el teu menú, estem aquí per a tu.",
+        "benefits": [
+          "Suport humà real - sense xatbots",
+          "Temps de resposta ràpids",
+          "Ajuda amb la configuració i optimització",
+          "Suggeriments de funcions benvinguts",
+          "Disponible per a tots els plans, incloent el gratuït"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Xat de suport en línia personal per a restaurants",
+        "cta": "Més Informació"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Preus del menú QR i del lloc web del restaurant",
+    "subtitle": "Sense comissions ocultes, sense sorpreses. Llança el lloc web del teu restaurant de manera gratuïta avui mateix — actualitza només quan estiguis llest per créixer.",
+    "seo": {
+      "title": "Per què triar IQ Rest per al teu restaurant o cafè?",
+      "text": "Crea un menú QR professional i un lloc web per al teu restaurant o cafè en minuts. Els teus convidats simplement escanejen un codi QR per veure el teu menú digital al seu telèfon — no cal cap aplicació. Actualitza preus, afegeix nous plats i canvia descripcions al moment. Amb traduccions impulsades per IA, serveix clients internacionals en el seu idioma nadiu. Fes un seguiment dels plats que més visualitzacions reben amb l'analítica integrada. Tant si gestiones un petit cafè com una cadena de restaurants en creixement, IQ Rest t'ajuda a modernitzar l'experiència del teu menú mentre redueixes costos de impressió."
+    },
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "(Estalvia un 25%)",
+    "perMonth": "/mes",
+    "billedYearly": "Facturat anualment (€{total})",
+    "forever": "Gratuït per sempre",
+    "popular": "Més popular",
+    "plans": {
+      "free": {
+        "name": "Gratuït",
+        "description": "Perfecte per provar IQ Rest",
+        "cta": "Comença gratuïtament",
+        "highlights": [
+          "Lloc web del restaurant",
+          "Menú QR",
+          "300 escaneigs/mes",
+          "2 idiomes",
+          "Millora d'imatges amb IA",
+          "Analítica"
+        ]
+      },
+      "basic": {
+        "name": "Bàsic",
+        "description": "Ideal per a petits restaurants",
+        "cta": "Comença ara",
+        "highlights": [
+          "Tot el que hi ha a Gratuït, més:",
+          "4,500 escaneigs/mes",
+          "3 idiomes",
+          "Traduccions amb IA",
+          "Tema de color personalitzat",
+          "Reservacions"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Per a cadenes de restaurants en creixement",
+        "cta": "Comença ara",
+        "highlights": [
+          "Tot el que hi ha a Bàsic, més:",
+          "Escaneigs il·limitats",
+          "6 idiomes",
+          "Suport prioritari",
+          "Totes les funcions incloses"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Compara plans",
+      "subtitle": "Veure quin pla és el més adequat per a tu"
+    },
+    "features": {
+      "website": "Lloc web del restaurant",
+      "qrMenu": "Menú QR",
+      "scans": "Escaneigs mensuals",
+      "languages": "Idiomes compatibles",
+      "aiTranslation": "Traduccions amb IA",
+      "aiImages": "Millora d'imatges amb IA",
+      "analytics": "Analítica",
+      "customTheme": "Tema de color personalitzat",
+      "background": "Imatge i vídeo de fons",
+      "support": "Suport",
+      "reservations": "Reservacions"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Il·limitat",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Necessites ajuda? Parlem",
+    "subtitle": "Hola, sóc en Bogdan — fundador d'IQ Rest. He creat aquesta plataforma per al meu propi cafè i ara ajuda centenars de restaurants a tot el món. Tens alguna pregunta o idea? Escriu-me directament. Sense bots, sense esperar — només una conversa real.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Posa't en contacte",
+      "email": "El teu correu electrònic",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Assumpte",
+      "subjectPlaceholder": "De què es tracta?",
+      "message": "Missatge",
+      "messagePlaceholder": "Digues-me què tens al cap...",
+      "submit": "Enviar missatge",
+      "sending": "Enviant...",
+      "success": "El teu missatge s'ha enviat! Gràcies per posar-te en contacte. Et respondre aviat.",
+      "error": "No s'ha pogut enviar el missatge. Si us plau, torna-ho a intentar més tard."
+    }
+  },
+  "languages": {
+    "en": "Anglès",
+    "es": "Espanyol"
+  },
+  "cookieConsent": {
+    "title": "Fem servir galetes",
+    "description": "Fem servir galetes per millorar la teva experiència de navegació, oferir contingut personalitzat i analitzar el nostre trànsit. En fer clic a \"Acceptar Totes\", consenteixes l'ús de galetes.",
+    "acceptAll": "Acceptar Totes",
+    "rejectAll": "Rebutjar Totes",
+    "customize": "Personalitzar",
+    "learnMore": "Més informació"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navegació",
+      "pricing": "Preus",
+      "features": "Funcions",
+      "contacts": "Contactes",
+      "faq": "Preguntes",
+      "changelog": "Registre de canvis"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Termes i Condicions",
+      "privacy": "Política de Privacitat",
+      "cookies": "Política de Cookies",
+      "sitemap": "Mapa del lloc"
+    },
+    "copyright": "© 2025 IQ Rest. Tots els drets reservats."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Registre de canvis - Actualitzacions i noves funcions d'IQ Rest",
+      "description": "Mantingueu-vos al dia amb les últimes funcions i millores d'IQ Rest - la vostra solució de menú QR digital per a restaurants i cafeteries"
+    },
+    "title": "Registre de canvis",
+    "subtitle": "Últimes actualitzacions i noves funcions per al vostre menú QR de restaurant",
+    "readMore": "Llegir més",
+    "backToChangelog": "Tornar al registre de canvis",
+    "seo": {
+      "title": "Sobre les actualitzacions d'IQ Rest",
+      "description": "IQ Rest està constantment millorant per ajudar restaurants i cafeteries a crear menús digitals professionals en QR. Seguiu el nostre registre de canvis per estar al dia amb les últimes funcions per al vostre lloc web de restaurant i solució de menú QR."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Suport Responsiu per al Menú QR del Teu Restaurant",
+        "description": "Obté suport responsiu per a qualsevol pregunta i canvi al teu menú QR del restaurant o cafè. Xat directe amb el nostre equip per a una assistència ràpida.",
+        "meta": {
+          "title": "Suport Responsiu per al Menú QR del Restaurant | IQ Rest",
+          "description": "Obté suport responsiu per a qualsevol pregunta i canvi al teu menú QR del restaurant o cafè. Assistència ràpida per a cafès i restaurants amb suport de xat directe."
+        },
+        "content": {
+          "intro": "IQ Rest ara proporciona suport responsiu per a qualsevol pregunta i canvi al teu menú QR del restaurant o cafè. Entenem que gestionar un restaurant o cafè requereix solucions ràpides quan sorgeixen problemes. El nostre nou xat de suport dins de l'aplicació et dóna accés directe al nostre equip, assegurant que el teu menú QR es mantingui perfecte i que els teus clients sempre tinguin la millor experiència.",
+          "image1Alt": "Interfície de xat de suport per al menú QR del restaurant",
+          "image1Caption": "Xat de suport directe per a assistència responsiva amb el teu menú QR del restaurant",
+          "section1Title": "Suport de Xat Directe per al Teu Restaurant",
+          "section1Text": "El nostre sistema de suport responsiu per al teu menú QR del restaurant o cafè funciona directament dins del teu tauler de control. No cal buscar correus electrònics de contacte ni esperar en cues telefòniques. Simplement obre el xat de suport, escriu la teva pregunta o descriu el canvi que necessites, i el nostre equip respon ràpidament. Tant si necessites ajuda per actualitzar articles del menú, solucionar problemes de visualització o entendre les analítiques, el suport responsiu és només un missatge de distància.",
+          "section2Title": "Assistència Ràpida per a Canvis al Menú QR",
+          "section2Text": "Necessites actualitzar preus abans d'un cap de setmana ocupat? Vols afegir articles de temporada al teu menú QR del restaurant? El nostre suport responsiu ajuda els cafès i restaurants a fer canvis ràpidament. Et guiem durant el procés o podem ajudar directament quan sigui necessari. Aquest suport responsiu assegura que el teu menú digital sempre reflecteixi les teves ofertes actuals, mantenint els clients informats i contents.",
+          "section3Title": "Suport que Entén les Necessitats del Restaurant",
+          "section3Text": "El nostre equip de suport responsiu entén els desafiaments únics de gestionar un restaurant o cafè. Sabem que un menú QR trencat pot significar clients perduts i personal frustrat. És per això que el nostre suport per al teu menú QR del restaurant o cafè prioritza els temps de resposta ràpids i solucions pràctiques. Des de preguntes tècniques fins a sol·licituds de funcions, estem aquí per ajudar el teu menú digital a tenir èxit.",
+          "benefitsTitle": "Beneficis del Suport Responsiu al Menú QR",
+          "benefit1": "Xat directe dins de l'aplicació - sense correus electrònics o trucades externes necessàries",
+          "benefit2": "Temps de resposta ràpids per mantenir el teu restaurant funcionant sense problemes",
+          "benefit3": "Orientació sobre actualitzacions del menú, canvis i noves funcions",
+          "benefit4": "Assistència tècnica per a qualsevol problema de codi QR o lloc web",
+          "benefit5": "Sol·licituds de funcions i suggeriments benvinguts i considerats",
+          "benefit6": "Suport que entén les operacions de restaurants i cafès",
+          "conclusionTitle": "Obté Suport Responsiu Avui",
+          "conclusionText": "Amb el suport responsiu d'IQ Rest per al teu menú QR del restaurant o cafè, l'ajuda sempre està a l'abast. El nostre equip dedicat assegura que el teu menú digital funcioni perfectament, donant-te més temps per centrar-te en el que importa: servir un bon menjar. Accedeix al suport directament des del teu tauler de control i experimenta la diferència que fa l'assistència responsiva per al teu restaurant o cafè.",
+          "ctaText": "Estàs llest per experimentar el suport responsiu per al teu menú QR?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Analítiques Detallades per al Teu Lloc Web del Restaurant i Menú QR",
+        "description": "Fes un seguiment de les dades dels visitants amb analítiques detallades per al teu lloc web del restaurant i menú QR. Controla les visualitzacions de pàgina, visitants únics, idiomes i tendències diàries.",
+        "meta": {
+          "title": "Analítiques Detallades per al Lloc Web del Restaurant i Menú QR | IQ Rest",
+          "description": "Obté analítiques detallades per al teu lloc web del restaurant i menú QR. Fes un seguiment de les visualitzacions de pàgina, visitants únics, pàgines populars i preferències d'idioma. Informes complets per a restaurants i cafès."
+        },
+        "content": {
+          "intro": "IQ Rest ara proporciona analítiques detallades per al teu lloc web del restaurant i menú QR. Entendre com interactuen els clients amb el teu menú digital és crucial per a l'èxit. El nostre nou tauler d'analítiques et proporciona informació completa sobre el comportament dels visitants, pàgines populars, preferències d'idioma i tendències diàries - totes les analítiques detallades que el teu lloc web del restaurant i menú QR necessiten per prosperar.",
+          "image1Alt": "Tauler d'analítiques detallades per al lloc web del restaurant i menú QR",
+          "image1Caption": "Tauler d'analítiques complet que mostra estadístiques detallades per al teu menú QR del restaurant",
+          "section1Title": "Seguiment Completo dels Visitants per al Teu Restaurant",
+          "section1Text": "Les nostres analítiques detallades per al teu lloc web del restaurant i menú QR fan un seguiment de cada interacció dels clients. Veure el total de visualitzacions de pàgina d'avui, aquesta setmana i aquest mes d'un cop d'ull. Fes un seguiment dels visitants únics per entendre la mida real de la teva audiència. El tauler d'analítiques proporciona informació detallada sobre com els clients naveguen pel teu menú QR - des de la pàgina d'inici fins al teu menú complet, contactes i selecció d'idioma. Aquestes analítiques detallades ajuden els restaurants a prendre decisions basades en dades.",
+          "section2Title": "Analítiques de Pàgina i Idioma",
+          "section2Text": "Entén quines pàgines del teu lloc web del restaurant i menú QR són més populars. Les nostres analítiques detallades desglossen les visualitzacions per tipus de pàgina: Inici, Menú, Contactes i selecció d'idioma. Veure quins idiomes prefereixen els teus clients, ajudant-te a prioritzar les traduccions i a servir millor als convidats internacionals. Aquestes analítiques detallades per al teu menú QR del restaurant revelen patrons de comportament dels clients que mai havies conegut.",
+          "section3Title": "Tendències Diàries i Monitoratge d'Ús",
+          "section3Text": "Fes un seguiment de com es comporten el teu lloc web del restaurant i menú QR al llarg del temps amb gràfics de visualització diària. Veure patrons en la interacció dels clients al llarg de la setmana. Controla el teu ús mensual en comparació amb els límits del teu pla amb una barra de progrés clara. Les nostres analítiques detallades ajuden els restaurants a identificar els moments àlgids i a optimitzar la seva presència digital. Tant si ets un petit cafè com un restaurant ocupat, aquestes informacions t'ajuden a entendre millor els teus clients.",
+          "benefitsTitle": "Beneficis de les Analítiques Detallades per als Restaurants",
+          "benefit1": "Comptes de visualització en temps real: estadístiques d'avui, setmanals i mensuals d'un cop d'ull",
+          "benefit2": "Seguiment de visitants únics per entendre el teu abast real de clients",
+          "benefit3": "Desglossament pàgina per pàgina que mostra quin contingut veuen més els clients",
+          "benefit4": "Analítiques d'idioma per optimitzar les ofertes de menú multilingües",
+          "benefit5": "Gràfics de tendències diàries per identificar patrons en el comportament dels clients",
+          "benefit6": "Monitoratge d'ús amb límits clars i suggeriments d'actualització",
+          "conclusionTitle": "Comença a Utilitzar Analítiques Detallades Avui",
+          "conclusionText": "Amb les analítiques detallades d'IQ Rest per al teu lloc web del restaurant i menú QR, obtens informació valuosa sobre el comportament dels clients. Fes un seguiment de les visualitzacions, controla les tendències i entén millor la teva audiència que mai. Aquestes analítiques detallades ajuden els restaurants i cafès a prendre decisions informades sobre la seva estratègia de menú digital. Accedeix al teu tauler d'analítiques ara i descobreix què volen realment els teus clients.",
+          "ctaText": "Estàs llest per explorar analítiques detallades per al teu restaurant?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Generador Instantani de Menú QR i Lloc Web del Restaurant",
+        "description": "Crea el teu menú QR del restaurant o cafè i lloc web instantàniament. Genera codis QR imprimibles amb text personalitzat i múltiples dissenys en minuts - sense habilitats tècniques requerides.",
+        "meta": {
+          "title": "Generador Instantani de Menú QR i Lloc Web del Restaurant | IQ Rest",
+          "description": "Genera el menú QR i lloc web del restaurant instantàniament. Crea codis QR personalitzats per al teu cafè o restaurant en minuts amb dissenys imprimibles per a formats de paper A4, A5, A6. Generador instantani gratuït."
+        },
+        "content": {
+          "intro": "IQ Rest ara ofereix un generador instantani de menú QR i lloc web del restaurant que crea menús digitals professionals en minuts. Tant si gestiones un acollidor cafè com un restaurant ocupat, el nostre generador instantani et permet crear, personalitzar i imprimir codis QR que enllacen directament al teu lloc web del menú digital. Sense habilitats tècniques requerides, sense esperar - només creació instantània de menús QR per a restaurants i cafès de qualsevol mida.",
+          "image1Alt": "Generador instantani de menú QR per a llocs web de restaurants i cafès",
+          "image1Caption": "Genera codis QR personalitzats per al teu lloc web del restaurant instantàniament",
+          "section1Title": "Com Funciona el Generador Instantani de Menú QR",
+          "section1Text": "El nostre generador instantani de menú QR i lloc web del restaurant crea tot el que necessites en minuts. Simplement afegeix els articles del teu menú, i el sistema genera instantàniament un codi QR únic enllaçat al teu lloc web del restaurant. El generador admet múltiples formats de paper (A4, A5, A6, Carta), diversos dissenys de QR per pàgina (de 1 a 16 codis) i text personalitzable sota cada codi QR. Previsualitza exactament el que imprimiràs, després descarrega o imprimeix directament - el teu menú QR instantani està llest per mostrar-se als teus taules.",
+          "section2Title": "Codis QR Personalitzables per a Qualsevol Restaurant o Cafè",
+          "section2Text": "El generador instantani de menú QR ofereix una personalització completa per a la marca del teu restaurant o cafè. Afegeix el nom del teu restaurant a sobre del codi QR, inclou text personalitzat com 'Escaneja per al Menú' o 'Menú QR' a sota, i tria entre tres mides de text. El generador produeix codis QR nets i simples optimitzats per a un escaneig ràpid. Tant si necessites un codi QR gran per a un pòster com 16 codis més petits per a targetes de taula individuals, el nostre generador instantani s'adapta a les necessitats del teu restaurant.",
+          "section3Title": "Menús QR Preparats per Imprimir en Segons",
+          "section3Text": "A diferència d'eines de disseny complicades, el nostre generador instantani de menú QR crea dissenys preparats per imprimir automàticament. Selecciona el teu format de paper, tria quants codis QR per pàgina, i prem imprimir - això és tot. El generador s'encarrega dels marges, l'espaiat i la mida per assegurar impressions perfectes cada vegada. Per a cafès i restaurants que necessiten menús QR professionals ràpidament, aquest enfocament instantani estalvia hores de treball de disseny i posa el teu menú digital davant dels clients més ràpidament.",
+          "benefitsTitle": "Beneficis de la Generació Instantània de Menús QR",
+          "benefit1": "Genera el menú QR complet i lloc web del restaurant en minuts, no en hores",
+          "benefit2": "Múltiples formats de paper: A4, A5, A6 i mides de Carta suportades",
+          "benefit3": "Dissenys flexibles: des d'un sol codi QR gran fins a 16 codis per pàgina",
+          "benefit4": "Opcions de text i mida personalitzades per a la teva marca de restaurant",
+          "benefit5": "Sortida preparada per imprimir amb marges i espaiat automàtics",
+          "benefit6": "Descarrega com a PNG o imprimeix directament des del teu navegador",
+          "conclusionTitle": "Comença a Utilitzar el Generador Instantani de Menú QR",
+          "conclusionText": "Amb el generador instantani de menú QR i lloc web del restaurant d'IQ Rest, pots tenir un menú digital professional en funcionament en minuts. Sense habilitats de disseny necessàries, sense programari car requerit - només generació instantània de codis QR bonics i escanejables que connecten els clients amb el teu menú. Perfecte per a nous restaurants que llançen el seu primer menú QR o cafès establerts que actualitzen la seva configuració existent. Genera el teu menú QR instantani avui i modernitza la teva experiència gastronòmica.",
+          "ctaText": "Estàs llest per generar el teu menú QR instantani?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Lloc Web Públic del Restaurant per a Escaneig de Menú QR",
+        "description": "Llança el teu lloc web públic del restaurant amb menú QR. Els clients escanejen el codi i veuen instantàniament el teu menú digital amb categories, articles, fotos i preus.",
+        "meta": {
+          "title": "Lloc Web Públic del Restaurant per a Escaneig de Menú QR | IQ Rest",
+          "description": "Crea un lloc web públic del restaurant per a escaneig de menú QR. Els clients escanejen el codi QR i veuen el teu menú digital amb categories, plats, fotos i preus instantàniament."
+        },
+        "content": {
+          "intro": "IQ Rest ara ofereix un lloc web públic complet per a escaneig de menú QR del restaurant. Els teus clients poden simplement escanejar un codi QR i accedir instantàniament al teu menú digital complet. El lloc web públic mostra totes les teves categories, articles del menú, fotos, descripcions i preus en una interfície bonica i optimitzada per a mòbils. Aquest lloc web públic del restaurant per a escaneig de QR transforma la manera com els convidats interactuen amb el teu menú.",
+          "image1Alt": "Lloc web públic del restaurant mostrant categories del menú QR",
+          "image1Caption": "Lloc web públic amigable amb mòbils mostrant categories del menú per a escaneig de QR",
+          "section1Title": "Com Funciona el Lloc Web Públic del Restaurant amb Escaneig QR",
+          "section1Text": "Quan els clients escanejen el codi QR del teu restaurant, són portats instantàniament al teu lloc web públic que mostra el menú complet. No cal descarregar cap aplicació, no hi ha espera - només accés immediat a les teves ofertes. El lloc web públic del restaurant per al menú QR mostra categories a la part superior per a una navegació fàcil, amb articles mostrats en un elegant disseny de targeta amb fotos, descripcions i preus. Els clients poden tocar les categories per filtrar articles o desplaçar-se pel menú complet.",
+          "section2Title": "Funcions del Teu Lloc Web Públic del Menú QR del Restaurant",
+          "section2Text": "El teu lloc web públic del restaurant inclou tot el que els clients necessiten: pestanyes de categories per a una navegació ràpida, fotos de plats d'alta qualitat, descripcions detallades, preus en la teva moneda i indicadors d'articles actius. El disseny està optimitzat per a dispositius mòbils, ja que la majoria dels escaneigs de QR es fan en telèfons. Els articles es carreguen ràpidament gràcies a les imatges optimitzades, i la interfície és intuïtiva per a convidats de totes les edats. Els canvis fets al teu panell d'administració apareixen instantàniament al lloc web públic.",
+          "image2Alt": "Lloc web del menú QR del restaurant mostrant articles de menjar amb fotos",
+          "image2Caption": "Lloc web públic mostrant plats amb fotos i descripcions optimitzades",
+          "section3Title": "Suport Multilingüe per a Convidats Internacionals",
+          "section3Text": "El lloc web públic del restaurant inclou un selector d'idioma perquè els convidats internacionals puguin veure el teu menú en el seu idioma preferit. Actualment suporta anglès i espanyol, amb més idiomes que vindran aviat. Això fa que el teu menú QR públic del restaurant sigui accessible per a turistes i bases de clients diverses. La preferència d'idioma es recorda per a visites de tornada, proporcionant una experiència personalitzada.",
+          "image3Alt": "Selecció d'idioma al lloc web públic del menú QR del restaurant",
+          "image3Caption": "Selector d'idioma que permet als convidats veure el menú públic en el seu idioma preferit",
+          "benefitsTitle": "Beneficis del Teu Lloc Web Públic del Menú QR del Restaurant",
+          "benefit1": "Accés instantani al menú - els clients escanejen i veuen immediatament, no cal aplicació",
+          "benefit2": "Disseny optimitzat per a mòbils per a una visualització perfecta en qualsevol smartphone",
+          "benefit3": "Actualitzacions en temps real - els canvis al menú apareixen instantàniament als clients",
+          "benefit4": "Navegació per categories per a una exploració fàcil de les teves ofertes",
+          "benefit5": "Suport multilingüe per a clients internacionals",
+          "benefit6": "Carregament ràpid amb imatges optimitzades i tecnologia moderna",
+          "conclusionTitle": "Comença a Utilitzar el Teu Lloc Web Públic del Menú QR del Restaurant",
+          "conclusionText": "Amb el lloc web públic d'IQ Rest per a escaneig de menú QR, proporcionis als clients accés instantani al teu menú complet. Simplement afegeix les teves categories i articles a través del panell d'administració, genera el teu codi QR i mostra'l als teus taules. Els clients escanejen i naveguen pel teu bonic menú digital en segons. No més costos d'impressió, no més menús obsolets - només una experiència gastronòmica moderna.",
+          "ctaText": "Estàs llest per llançar el teu lloc web públic del menú QR del restaurant?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Com Afegir Articles al Lloc Web del Restaurant amb Menú QR",
+        "description": "Guia completa sobre com afegir articles al teu lloc web del restaurant amb menú QR. Aprèn a afegir plats amb fotos, preus i descripcions al teu menú digital en minuts.",
+        "meta": {
+          "title": "Com Afegir Articles al Lloc Web del Restaurant amb Menú QR | IQ Rest",
+          "description": "Guia pas a pas sobre com afegir articles al lloc web del restaurant amb menú QR. Afegeix plats, estableix preus, puja fotos i organitza el teu menú digital. Gestió d'articles fàcil per a restaurants."
+        },
+        "content": {
+          "intro": "Vols saber com afegir articles al teu lloc web del restaurant amb menú QR? IQ Rest ho fa increïblement fàcil d'afegir i gestionar articles del menú al teu lloc web digital del restaurant. Tant si estàs afegint el teu primer plat com actualitzant tot el teu menú, el nostre sistema de gestió d'articles intuïtiu t'ajuda a crear un menú QR professional que mostra la teva cuina perfectament. Aquesta guia et mostra exactament com afegir articles al lloc web del restaurant amb menú QR, incloent fotos, preus, descripcions i categories.",
+          "image1Alt": "Com afegir articles al lloc web del restaurant amb menú QR - vista de llista d'articles",
+          "image1Caption": "Interfície de gestió d'articles mostrant com afegir articles al teu lloc web del menú QR del restaurant",
+          "section1Title": "Per què Afegir Articles Correctament Importa per al Teu Lloc Web del Menú QR del Restaurant",
+          "section1Text": "Quan afegeixes articles al lloc web del restaurant amb menú QR, la presentació és tot. Els clients decideixen què demanar en funció de com es veuen els teus plats i com estan descrits. El nostre sistema de gestió d'articles et permet afegir fotos boniques, descripcions detallades, preus precisos i organitzar articles en categories. Això és com afegir articles al lloc web del restaurant que converteix navegants en clients. La investigació mostra que els menús amb imatges d'alta qualitat augmenten les comandes fins a un 30%.",
+          "section2Title": "Pas a Pas: Com Afegir Articles al Lloc Web del Restaurant amb Menú QR",
+          "section2Text": "Afegir articles al teu lloc web del restaurant amb menú QR és senzill amb IQ Rest. Navega a la secció d'Articles al teu tauler de control i fes clic al botó d'afegir. Introdueix el nom de l'article, escriu una descripció apetitosa, estableix el preu i selecciona una categoria. Puja una foto del teu plat - el nostre sistema optimitza automàticament les imatges a 500x500 píxels per a una visualització perfecta. Activa l'estat actiu per mostrar o amagar articles instantàniament. Aquest procés simplificat fa que sigui fàcil afegir articles al lloc web del restaurant amb menú QR en només minuts.",
+          "image2Alt": "Formulari d'articles mostrant com afegir articles al lloc web del menú QR del restaurant",
+          "image2Caption": "Interfície de formulari senzilla per afegir articles al teu lloc web del restaurant amb menú QR",
+          "section3Title": "Pujada i Optimització d'Imatges per als Teus Articles del Restaurant",
+          "section3Text": "Les imatges d'alta qualitat són essencials quan afegeixes articles al lloc web del restaurant amb menú QR. El nostre sistema accepta formats JPEG, PNG, WebP i GIF de fins a 5MB. Cada imatge es redimensiona automàticament a 500x500 píxels i es converteix al format WebP per a una càrrega ràpida mentre manté una excel·lent qualitat. Això significa que els teus plats sempre es veuen millor en qualsevol dispositiu. La fotografia professional de menjar millora significativament com els clients perceben el teu restaurant quan naveguen pel teu lloc web del menú QR.",
+          "benefitsTitle": "Beneficis d'Afegir Articles al Teu Lloc Web del Menú QR del Restaurant",
+          "benefit1": "Afegeix articles il·limitats del menú amb fotos, descripcions i preus",
+          "benefit2": "Optimització automàtica d'imatges per a càrregues ràpides i visualització perfecta",
+          "benefit3": "Organitza articles en categories per a una navegació fàcil dels clients",
+          "benefit4": "Interruptor actiu/inactiu per amagar articles esgotats sense eliminar-los",
+          "benefit5": "Reordenació per arrossegar i deixar per organitzar articles en l'ordre que prefereixis",
+          "benefit6": "Interfície amigable amb mòbils per afegir articles des de qualsevol dispositiu",
+          "conclusionTitle": "Comença a Afegir Articles al Teu Lloc Web del Menú QR del Restaurant Avui",
+          "conclusionText": "Ara saps exactament com afegir articles al lloc web del restaurant amb menú QR utilitzant IQ Rest. El nostre potent sistema de gestió d'articles proporciona tot el que necessites per crear un menú digital de boca a boca. Afegeix fotos boniques, escriu descripcions atractives, estableix preus competitius i organitza els teus articles en categories lògiques. Tant si gestiones un petit cafè com un gran restaurant, IQ Rest fa que sigui fàcil afegir articles al lloc web del restaurant que atrau i converteix clients.",
+          "ctaText": "Estàs llest per afegir articles al teu lloc web del restaurant amb menú QR?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "Com Fer un Menú de Codi QR per al Restaurant amb Categories",
+        "description": "Aprèn com fer un menú de codi QR per al restaurant amb categories organitzades. El nou sistema de gestió de categories fa que crear menús digitals estructurats sigui senzill i ràpid.",
+        "meta": {
+          "title": "Com Fer un Menú de Codi QR per al Restaurant amb Categories | IQ Rest",
+          "description": "Guia pas a pas sobre com fer un menú de codi QR per al restaurant amb categories. Organitza el teu menú digital amb una fàcil gestió de categories. Crea menús QR professionals per a restaurants en minuts."
+        },
+        "content": {
+          "intro": "Vols saber com fer un menú de codi QR per al restaurant amb categories? IQ Rest ara ofereix un potent sistema de gestió de categories que fa que crear menús digitals organitzats sigui més fàcil que mai. Tant si gestiones un restaurant, cafè o bar, organitzar el teu menú amb categories ajuda els clients a trobar exactament el que busquen. Aquesta actualització et mostra exactament com fer un menú de codi QR per al restaurant amb categories ben estructurades que milloren l'experiència gastronòmica.",
+          "image1Alt": "Com fer un menú de codi QR per al restaurant - vista de llista de categories",
+          "image1Caption": "Interfície de gestió de categories mostrant com organitzar el teu menú QR del restaurant",
+          "section1Title": "Per què les Categories Importen Quan Fas un Menú de Codi QR per al Restaurant",
+          "section1Text": "Quan fas un menú de codi QR per al restaurant, organitzar articles en categories és essencial. Els clients esperen veure agrupacions lògiques com Entrants, Plats Principals, Postres i Begudes. El nostre nou sistema de gestió de categories et permet crear categories il·limitades, establir el seu ordre de visualització i activar o desactivar la seva visibilitat. Això és exactament com fer un menú de codi QR per al restaurant que els clients estimen - clar, organitzat i fàcil de navegar. Els estudis demostren que els restaurants amb menús digitals ben organitzats veuen un 35% més de satisfacció dels clients.",
+          "section2Title": "Pas a Pas: Com Fer un Menú de Codi QR per al Restaurant amb Categories",
+          "section2Text": "Fer un menú de codi QR per al restaurant amb categories és senzill amb IQ Rest. Primer, navega a la secció de Categories al teu tauler de control. Fes clic al botó d'acció flotant per afegir una nova categoria. Introdueix el nom de la categoria, una descripció opcional i estableix si és activa. La nova interfície simplificada mostra totes les teves categories en una llista neta amb indicadors d'activitat. Utilitza les fletxes amunt i avall per reordenar les categories exactament com vols que apareguin al teu menú QR. Aquest enfocament intuïtiu per fer un menú de codi QR per al restaurant assegura que el teu menú estigui sempre perfectament organitzat.",
+          "image2Alt": "Formulari de categoria mostrant com fer un menú de codi QR per al restaurant",
+          "image2Caption": "Interfície de formulari senzilla per crear categories de menú del restaurant",
+          "section3Title": "Gestió de Categories Optimitzada per a Mòbils",
+          "section3Text": "Sabem que els propietaris de restaurants estan ocupats i sovint gestionen els seus menús en moviment. És per això que la nostra gestió de categories està totalment optimitzada per a dispositius mòbils. Quan fas un menú de codi QR per al restaurant utilitzant el teu telèfon, trobaràs una interfície compacta amb un menú de tres punts per a accions ràpides. Mou les categories amunt o avall, edita detalls o elimina categories - tot des del teu smartphone. Aquest enfocament mòbil primer assegura que puguis fer un menú de codi QR per al restaurant amb categories en qualsevol moment i lloc.",
+          "benefitsTitle": "Beneficis de Fer un Menú de Codi QR amb Categories",
+          "benefit1": "Organitza els articles del menú de manera lògica perquè els clients puguin trobar fàcilment el que volen",
+          "benefit2": "Reordenació per arrossegar i deixar per organitzar categories en l'ordre de visualització que prefereixis",
+          "benefit3": "Interruptor actiu/inactiu per amagar categories estacionals sense eliminar-les",
+          "benefit4": "Interfície optimitzada per a mòbils per gestionar categories des de qualsevol dispositiu",
+          "benefit5": "Disseny visual net amb indicadors d'activitat per a una ràpida visió general de l'estat",
+          "benefit6": "Categories il·limitades per representar completament l'estructura del menú del teu restaurant",
+          "conclusionTitle": "Comença a Fer el Teu Menú de Codi QR amb Categories Avui",
+          "conclusionText": "Ara saps exactament com fer un menú de codi QR per al restaurant amb categories utilitzant IQ Rest. El nostre nou sistema de gestió de categories proporciona tot el que necessites per crear un menú digital professional i ben organitzat. Les categories ajuden els clients a navegar pel teu menú més ràpidament, trobar els seus plats favorits i descobrir nous articles. Tant si tens un menú senzill amb poques categories com un extens menú amb desenes de seccions, IQ Rest fa que sigui fàcil fer un menú de codi QR per al restaurant que impressioni els teus clients.",
+          "ctaText": "Estàs llest per fer un menú de codi QR per al teu restaurant amb categories?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Creació Fàcil de Menú QR per al Teu Cafè - Nou Panell de Control",
+        "description": "Presentem el nostre nou panell de control d'administració que fa que la creació de menús QR per al teu cafè sigui increïblement fàcil. Gestiona categories, productes i configuracions amb una interfície moderna de barra lateral shadcn.",
+        "meta": {
+          "title": "Menú QR Fàcil per al Cafè - Nou Panell de Control | IQ Rest",
+          "description": "Crea un menú QR per al teu cafè fàcilment amb el nostre nou panell de control. Interfície moderna de barra lateral per gestionar categories, productes, codis QR i analítiques. Creació fàcil de menús per a cafès."
+        },
+        "content": {
+          "intro": "Estem emocionats de presentar el nostre nou panell de control d'administració dissenyat per fer que la creació de menús QR per al teu cafè sigui tan fàcil com sigui possible. Tant si gestiones una petita cafeteria com un cafè concorregut, la nostra interfície fàcil d'utilitzar t'ajuda a gestionar el teu menú digital sense esforç. El nou panell de control presenta un disseny modern de barra lateral que posa totes les eines que necessites per crear el menú QR del teu cafè a l'abast de la mà.",
+          "image1Alt": "Panell de control fàcil de menú QR per a la gestió del cafè",
+          "image1Caption": "Nou panell de control amb navegació de barra lateral per a una fàcil creació del menú QR del cafè",
+          "section1Title": "Interfície Moderna de Barra Lateral per a una Gestió Fàcil del Menú",
+          "section1Text": "El nou panell de control presenta una barra lateral elegant que fa que navegar per les configuracions del menú QR del teu cafè sigui increïblement fàcil. Amb seccions clarament organitzades per a Tauler de Control, Categories, Productes, Codi QR, Analítiques, Configuracions, Facturació i Suport, pots trobar i gestionar fàcilment cada aspecte del menú digital del teu cafè. La barra lateral es col·lapsa en dispositius mòbils, assegurant un fàcil accés a totes les funcions independentment del dispositiu que estiguis utilitzant per gestionar el menú QR del teu cafè.",
+          "section2Title": "Gestió Fàcil de Categories i Productes per al Teu Cafè",
+          "section2Text": "Crear i organitzar el menú QR del teu cafè mai ha estat tan fàcil. Les nostres noves pàgines de gestió de categories i productes estan dissenyades amb la simplicitat en ment, permetent als propietaris de cafès afegir, editar i organitzar fàcilment els seus articles del menú. Tant si actualitzes les ofertes diàries com si afegeixes begudes de temporada, la interfície fàcil d'utilitzar assegura que el menú QR del teu cafè es mantingui actualitzat i atractiu per als clients.",
+          "section3Title": "Renderització del Lloc del Servidor per a un Rendiment Ràpid",
+          "section3Text": "El nou panell de control està construït amb tecnologia de renderització del servidor (SSR), assegurant que el tauler de gestió del menú QR del teu cafè es carregui ràpidament i de manera eficient. Tots els dades es recuperen del servidor, proporcionant actualitzacions en temps real i una experiència fluida. Aquest enfocament fàcil i ràpid significa que passes menys temps esperant i més temps perfeccionant el menú QR del teu cafè.",
+          "benefitsTitle": "Per què Això Fa que la Creació de Menús QR sigui Fàcil per als Cafès",
+          "benefit1": "Navegació fàcil amb una interfície moderna de barra lateral per a un ràpid accés a totes les funcions del menú del cafè",
+          "benefit2": "Gestió de categories fàcil per organitzar el menú QR del teu cafè de manera lògica",
+          "benefit3": "Edició de productes fàcil amb actualitzacions instantànies al menú digital del teu cafè",
+          "benefit4": "Generació i personalització fàcil de codis QR per al teu cafè",
+          "benefit5": "Analítiques fàcils per entendre com interactuen els clients amb el menú QR del teu cafè",
+          "benefit6": "Accés fàcil mòbil - gestiona el menú QR del teu cafè des de qualsevol dispositiu",
+          "conclusionTitle": "Crea el Menú QR del Teu Cafè de la Manera Fàcil",
+          "conclusionText": "El nostre nou panell de control representa un gran pas endavant per fer que la creació de menús QR sigui fàcil per als propietaris de cafès arreu. Amb la seva interfície intuïtiva de barra lateral, una ràpida renderització del servidor i eines de gestió completes, crear i mantenir el menú digital QR del teu cafè mai ha estat tan fàcil. Uneix-te a milers de cafès que ja utilitzen IQ Rest per proporcionar als seus clients una experiència de menú moderna i fàcil.",
+          "ctaText": "Estàs llest per crear un menú QR fàcil per al teu cafè?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Obté Menú QR per a Restaurants - Actualitzacions de la Pàgina FAQ i Guia Pràctica",
+        "description": "Aprèn com obtenir un menú QR per a restaurants amb la nostra pàgina FAQ millorada i guia de 4 passos. Descobreix respostes a preguntes comunes sobre com obtenir menús QR per al teu restaurant, amb una millor navegació i contingut optimitzat per SEO.",
+        "meta": {
+          "title": "Obté Menú QR per a Restaurants - Actualitzacions de FAQ i Guia | IQ Rest",
+          "description": "Aprèn com obtenir un menú QR per a restaurants fàcilment. Nova pàgina FAQ dedicada respon a totes les preguntes sobre com obtenir menús QR per al teu restaurant. Guia simplificada de 4 passos per començar."
+        },
+        "content": {
+          "intro": "Hem facilitat més que mai obtenir un menú QR per a restaurants. El nostre contingut reorganitzat de FAQ i com fer ajuda als propietaris de restaurants a trobar ràpidament respostes sobre com obtenir menús QR per als seus establiments. Tant si busques obtenir un menú QR per al teu restaurant o cafè, aquesta actualització proporciona tota la informació que necessites en un sol lloc.",
+          "image1Alt": "Com obtenir un menú QR per a restaurants - pàgina FAQ dedicada",
+          "image1Caption": "Nova pàgina FAQ mostrant com obtenir un menú QR per a restaurants amb preguntes i respostes organitzades",
+          "section1Title": "Pàgina FAQ Dedicada per a Obtenir Menús QR",
+          "section1Text": "Totes les preguntes sobre com obtenir un menú QR per a restaurants ara es troben en una pàgina /faq dedicada. Els propietaris de restaurants poden trobar fàcilment respostes sobre com obtenir menús QR, des de la configuració fins a la personalització. Cada pregunta sobre com obtenir un menú QR per al teu restaurant es mostra en la seva pròpia targeta amb respostes ampliades, facilitant-te obtenir la informació que necessites per començar amb menús QR per al teu restaurant.",
+          "section2Title": "Guia de 4 Passos per Obtenir Menú QR per a Restaurants",
+          "section2Text": "La nostra guia simplificada mostra exactament com obtenir un menú QR per a restaurants en només 4 passos fàcils. Tant si vols obtenir un menú QR per al teu restaurant, cafè o bar, el nou disseny basat en targetes deixa clar com començar. Aquesta guia per obtenir menús QR per a restaurants apareix a totes les pàgines, assegurant-te que sempre saps com configurar ràpidament el menú QR del teu restaurant.",
+          "section3Title": "Contingut Optimitzat per SEO per Ajudar Restaurants a Obtenir Menús QR",
+          "section3Text": "Hem optimitzat el nostre contingut per ajudar més restaurants a descobrir com obtenir menús QR. La guia apareix amb dades estructurades de Schema.org completes a la pàgina d'inici, ajudant els restaurants que busquen solucions per obtenir menús QR a trobar-nos fàcilment. La nostra intel·ligent distribució de contingut assegura que els restaurants puguin obtenir la informació sobre menús QR que necessiten mentre mantenen una forta visibilitat en els motors de cerca.",
+          "benefitsTitle": "Per què Això T'ajuda a Obtenir Menú QR per al Teu Restaurant",
+          "benefit1": "Pàgina FAQ dedicada respon a totes les preguntes sobre obtenir menús QR per a restaurants",
+          "benefit2": "Clara guia de 4 passos mostra exactament com obtenir un menú QR per al teu restaurant",
+          "benefit3": "Accés fàcil a FAQ i opcions de contacte per ajudar-te a configurar el teu menú QR",
+          "benefit4": "Optimitzat per SEO per ajudar restaurants a descobrir com obtenir menús QR fàcilment",
+          "benefit5": "Informació consistent sobre obtenir menús QR a tota la plataforma",
+          "benefit6": "Camí més ràpid per obtenir un menú QR per al teu restaurant amb una navegació millorada",
+          "conclusionTitle": "Obté Menú QR per al Teu Restaurant Avui",
+          "conclusionText": "Aquestes millores fan que sigui increïblement fàcil per als restaurants obtenir menús QR. Tant si ets un petit cafè que busca obtenir un menú QR com una gran cadena de restaurants, el nostre contingut reorganitzat t'ajuda a entendre exactament com obtenir solucions de menús QR per al teu establiment. Comença ara i obtén el menú QR del teu restaurant en funcionament en minuts.",
+          "ctaText": "Estàs llest per obtenir un menú QR per al teu restaurant?",
+          "ctaButton": "Obté Menú QR Ara"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Creació de Lloc Web de Restaurant Gratuït - Optimització Mòbil i Millores UX",
+        "description": "Millores importants per a la creació d'un lloc web de restaurant gratuït: navegació mòbil optimitzada amb menú d'hamburguesa, pàgina d'inscripció millorada per a millors conversions i experiència d'usuari simplificada.",
+        "meta": {
+          "title": "Actualitzacions de Creació de Lloc Web de Restaurant Gratuït - Registre de Canvis d'IQ Rest",
+          "description": "Aprèn com IQ Rest va millorar el procés de creació de lloc web de restaurant gratuït amb navegació optimitzada per a mòbils, millor flux d'inscripció i millora de l'experiència d'usuari per a cafès i restaurants"
+        },
+        "content": {
+          "intro": "Crear un lloc web de restaurant gratuït mai ha estat tan fàcil ni tan amigable amb mòbils. Hem fet millores significatives per ajudar els propietaris de restaurants i cafès a construir el seu lloc web professional amb un menú digital QR, especialment en dispositius mòbils on la majoria de la gent busca 'creació de lloc web per a restaurants gratuït'. Aquestes actualitzacions se centren en la navegació mòbil, refinaments de la pàgina d'inscripció i l'experiència d'usuari general per assegurar que qualsevol pugui crear un lloc web de restaurant de franc sense cap coneixement tècnic.",
+          "image1Alt": "Navegació mòbil optimitzada amb menú d'hamburguesa per al lloc web del restaurant",
+          "image1Caption": "Nova navegació mòbil amb menú d'hamburguesa per a un fàcil accés a totes les funcions",
+          "section1Title": "Navegació Mòbil Primer per a Llocs Web de Restaurants",
+          "section1Text": "La majoria dels propietaris de restaurants busquen i creen el seu lloc web gratuït de restaurant en dispositius mòbils. És per això que hem redissenyat completament la nostra navegació mòbil amb un professional menú d'hamburguesa. En smartphones i tauletes, la navegació ara s'obre com un diàleg modal net, mostrant tots els elements del menú (Preus, Funcions, Registre de Canvis, Contactes) i el botó Començar en un disseny vertical fàcil de llegir. Aquest enfocament optimitzat per a mòbils fa que sigui senzill explorar les funcions d'IQ Rest i començar a crear el teu lloc web gratuït de restaurant directament des del teu telèfon. Els selectors de tema i idioma romanen fàcilment accessibles a la capçalera, mentre que el menú d'hamburguesa manté la interfície neta i ordenada.",
+          "section2Title": "Millorat Flux de Començar per a la Creació de Lloc Web de Restaurant Gratuït",
+          "section2Text": "Hem millorat la pàgina d'inscripció per fer que la creació d'un lloc web gratuït de restaurant sigui encara més intuïtiva. Les millores inclouen un millor espaiat en dispositius mòbils, targetes de proposta de valor centrades que expliquen clarament els beneficis, i dissenys de formularis optimitzats que funcionen perfectament en pantalles petites. El comptador de restaurants que mostra quantes empreses ja utilitzen IQ Rest ara es mostra a tot llarg del mòbil, proporcionant una forta prova social que anima nous propietaris de restaurants a començar el seu lloc web gratuït. Cada element ha estat testat curosament per assegurar que crear el teu lloc web de restaurant sigui ràpid i fluid, tant si estàs en un ordinador de sobretaula com en el teu smartphone.",
+          "image2Alt": "Flux d'inscripció optimitzat per a la creació de lloc web gratuït de restaurant",
+          "image2Caption": "Procés d'inscripció simplificat optimitzat per a dispositius mòbils",
+          "section3Title": "Procés de Tres Passos Optimitzat per a Tots els Dispositius",
+          "section3Text": "L'indicador visual del procés que mostra els tres passos senzills per crear el teu lloc web gratuït de restaurant (Inscriu-te amb el teu correu electrònic, Afegeix els teus articles del menú, Obté el teu codi QR i comença) ara s'adapta perfectament a diferents mides de pantalla. En mòbils i tauletes, els passos es mostren verticalment amb un espai clar, facilitant la comprensió del procés senzill. En pantalles més grans, es mostren horitzontalment amb fletxes. Aquest disseny adaptatiu assegura que tothom, independentment del seu dispositiu, pugui veure clarament com de ràpid i fàcil és crear un lloc web professional de restaurant de franc amb IQ Rest.",
+          "benefitsTitle": "Millores Clau per a la Creació de Llocs Web de Restaurants Gratuïts",
+          "benefit1": "Navegació mòbil optimitzada amb menú d'hamburguesa per a un fàcil accés en smartphones",
+          "benefit2": "Pàgina d'inscripció millorada amb millor espaiat mòbil i dissenys centrats",
+          "benefit3": "Comptador de restaurants a tot llarg del mòbil proporcionant una forta prova social",
+          "benefit4": "Indicador de procés de tres passos adaptatiu que funciona en totes les mides de pantalla",
+          "benefit5": "Formularis d'entrada simplificats optimitzats per a la interacció tàctil mòbil",
+          "benefit6": "Solució de redirecció de tancament arreglada assegurant una navegació adequada a totes les pàgines",
+          "conclusionTitle": "Creació de Lloc Web de Restaurant Gratuït Feta Senzilla",
+          "conclusionText": "Aquestes millores reforcen el nostre compromís a fer que la creació de lloc web de restaurant gratuït sigui accessible per a tothom. Tant si ets un petit propietari de cafè que explora IQ Rest al telèfon durant una pausa, com si ets un gerent de restaurant que planifica la teva estratègia digital en una tauleta, l'experiència és ara fluida i professional. Pots crear un lloc web complet de restaurant amb menú QR, absolutament gratuït, en només uns minuts des de qualsevol dispositiu. Sense targeta de crèdit requerida, sense habilitats tècniques necessàries - només el teu menú i uns minuts de temps per construir la teva presència en línia professional.",
+          "ctaText": "Estàs llest per crear el teu lloc web gratuït de restaurant?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "landing-redesign": {
+        "title": "Redisseny de la Pàgina de Començar per a Més Conversió",
+        "description": "Hem redissenyat completament la nostra pàgina d'inscripció amb un enfocament en l'optimització de la conversió, amb propostes de valor, prova social i una experiència d'usuari simplificada.",
+        "meta": {
+          "title": "Redisseny de la Pàgina de Començar - Registre de Canvis d'IQ Rest",
+          "description": "IQ Rest llança la pàgina d'inscripció redissenyada amb millores d'UX, comptador de prova social i disseny enfocat a la conversió per a la creació de menús QR de restaurants"
+        },
+        "content": {
+          "intro": "Estem emocionats d'anunciar un redisseny complet de la nostra pàgina de Començar, construïda específicament per ajudar els propietaris de restaurants i cafès a crear el seu menú digital QR més ràpid que mai. Aquesta actualització se centra en comunicar clarament el valor, construir confiança a través de la prova social i proporcionar una experiència d'inscripció sense problemes que triga menys de 5 minuts des del principi fins al final.",
+          "image1Alt": "Nova pàgina de començament d'IQ Rest amb propostes de valor i prova social",
+          "image1Caption": "Pàgina d'inscripció redissenyada amb propostes de valor clares i comptador de restaurants",
+          "section1Title": "Propostes de Valor Clares d'un Cop d'ull",
+          "section1Text": "El nou disseny mostra de manera prominent quatre beneficis clau que més importen als propietaris de restaurants: no es requereixen habilitats tècniques, actualitzacions instantànies del menú, codi QR i lloc web inclosos, i gratuït per començar. Cada benefici es presenta en un format de targeta net amb icones intuïtives, fent que sigui immediatament clar el que ofereix IQ Rest. Aquest enfocament ajuda els ocupats propietaris de restaurants a entendre la proposta de valor en pocs segons després d'arribar a la pàgina.",
+          "section2Title": "Prova Social que Construeix Confiança",
+          "section2Text": "Hem afegit un comptador dinàmic de restaurants que mostra quantes empreses ja estan utilitzant IQ Rest. Aquest comptador s'actualitza automàticament en funció de la nostra taxa de creixement, proporcionant una prova social autèntica que ajuda als nous visitants a sentir-se segurs en la seva decisió de provar la nostra plataforma. Veure que més de 1.400 restaurants ja confien en IQ Rest redueix significativament la indecisió i fomenta les inscripcions.",
+          "section3Title": "Flux d'Inscripció Simplificat",
+          "section3Text": "Tot el procés d'inscripció ara es realitza en una sola pàgina amb un disseny consistent. Tant si estàs introduint el teu correu electrònic com si estàs verificant el teu codi, el disseny roman igual - només canvia el camp d'entrada. Això crea una experiència més suau i menys brusca. També hem afegit un indicador visual del procés que mostra els tres passos senzills: Inscriu-te, Afegeix el menú i Obté QR. Aquesta transparència ajuda als usuaris a entendre exactament què esperar i redueix l'abandonament.",
+          "benefitsTitle": "Millores Clau en Aquesta Actualització",
+          "benefit1": "Targetes de proposta de valor amb icones per a una comprensió instantània",
+          "benefit2": "Comptador de restaurants en viu que proporciona prova social autèntica",
+          "benefit3": "Disseny unificat de pàgina tant per als passos de verificació d'email com d'OTP",
+          "benefit4": "Indicador visual del procés de 3 passos per a la transparència",
+          "benefit5": "Còpia enfocada a la conversió: 'Crea el Teu Menú Digital en 5 Minuts'",
+          "benefit6": "Validació d'email en temps real amb retroalimentació visual",
+          "conclusionTitle": "Dissenyat per a l'Èxit del Restaurant",
+          "conclusionText": "Cada element d'aquest redisseny ha estat creat tenint en compte els propietaris de restaurants i cafès. Entenem que estàs ocupat gestionant el teu negoci, així que hem fet que el procés d'inscripció sigui tan ràpid i tranquil·litzador com sigui possible. La nova pàgina mostra clarament què obtindràs, com de fàcil és començar i que milers d'altres restaurants ja han pres la mateixa decisió. Tant si ets un petit cafè com una cadena de restaurants en creixement, ara pots crear el teu lloc web professional de menú QR en només 5 minuts.",
+          "ctaText": "Estàs llest per crear el menú digital del teu restaurant?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "auth": {
+        "title": "Nova Interfície d'Autenticació d'Usuaris",
+        "description": "Hem llançat un sistema d'autenticació senzill i segur basat en correu electrònic que et permet crear el teu lloc web de restaurant i menú QR en minuts.",
+        "meta": {
+          "title": "Interfície d'Autenticació d'Usuaris - Registre de Canvis d'IQ Rest",
+          "description": "IQ Rest introdueix un nou sistema d'autenticació sense contrasenya per crear ràpidament el teu lloc web de restaurant i menú digital QR de manera segura"
+        },
+        "content": {
+          "intro": "Estem emocionats d'anunciar el llançament de la nostra nova interfície d'autenticació d'usuaris per a IQ Rest. Aquesta actualització representa un pas significatiu cap a fer que sigui més fàcil que mai crear el teu lloc web de restaurant amb un menú QR professional. El nostre objectiu sempre ha estat ajudar els propietaris de restaurants i cafès a construir la seva presència digital en minuts, no en hores, i aquest nou sistema d'autenticació està dissenyat amb aquesta missió en ment.",
+          "image1Alt": "Pas d'entrada de correu electrònic de l'autenticació d'IQ Rest",
+          "image1Caption": "Autenticació senzilla basada en correu electrònic - sense contrasenyes per recordar",
+          "section1Title": "Autenticació Sense Contrasenya per a Propietaris de Restaurants",
+          "section1Text": "Entenent que els propietaris de restaurants són persones ocupades, hem implementat un sistema d'autenticació sense contrasenya que requereix només la teva adreça de correu electrònic. Quan vulguis crear el teu lloc web de restaurant o actualitzar el teu menú QR digital, simplement introdueix el teu correu electrònic i rep un codi de verificació segur de 4 dígits. Aquest enfocament elimina la frustració de les contrasenyes oblidades mentre manté els més alts estàndards de seguretat per a les dades del teu restaurant. Tot el procés triga menys de 30 segons, permetent-te centrar-te en el que més importa: gestionar el teu restaurant i servir els teus clients.",
+          "section2Title": "Procés de Creació de Menú QR Simplificat",
+          "section2Text": "Amb el nostre nou sistema d'autenticació, començar amb el teu menú QR digital mai ha estat tan fàcil. Un cop autenticat, tindràs accés immediat al nostre constructor de menús intuïtiu on podràs afegir els teus plats, establir preus, pujar fotos i organitzar categories. El menú QR que crees serà accessible per als teus clients instantàniament - simplement escanejen el codi i veuen el teu bonic menú digital dissenyat al seu smartphone. No cal descarregar aplicacions per als teus clients, i no es requereix coneixement tècnic per part teva. Això és exactament el que necessiten els restaurants i cafès moderns per competir en el món digital actual.",
+          "image2Alt": "Pas de verificació OTP de l'autenticació d'IQ Rest",
+          "image2Caption": "Verificació segura del codi de 4 dígits enviat directament al teu correu electrònic",
+          "section3Title": "Construït per a la Velocitat i la Seguretat",
+          "section3Text": "La seguretat va ser la nostra màxima prioritat en dissenyar aquest sistema d'autenticació. Cada codi de verificació expira després de 10 minuts i només es pot utilitzar una vegada, protegint el teu lloc web de restaurant i les dades del menú d'accés no autoritzat. Al mateix temps, hem optimitzat cada pas del procés per a la velocitat. Des de la introducció del teu correu electrònic fins a l'accés al teu tauler de control, tot el flux d'autenticació es completa en menys d'un minut. Això significa que pots fer actualitzacions ràpides al teu menú QR durant el servei, afegir ofertes diàries o ajustar preus - tot sense cap retard.",
+          "benefitsTitle": "Beneficis Clau per al Teu Restaurant",
+          "benefit1": "Crea el teu lloc web de restaurant amb menú QR en minuts - sense habilitats tècniques requerides",
+          "benefit2": "Sense contrasenyes per recordar - la verificació segura basada en correu electrònic manté el teu compte segur",
+          "benefit3": "Accés instantani al teu constructor de menús digitals des de qualsevol dispositiu",
+          "benefit4": "Actualitzacions ràpides al teu menú QR fins i tot durant hores de servei ocupades",
+          "conclusionTitle": "Comença a Construir el Teu Menú Digital Avui",
+          "conclusionText": "Aquesta nova interfície d'autenticació és només el començament del nostre compromís a fer que els menús QR digitals siguin accessibles a cada restaurant i cafè. Tant si ets una petita cafeteria com una cadena de restaurants en creixement, IQ Rest proporciona les eines que necessites per crear una presència en línia professional. Els teus clients esperen trobar el teu menú en línia, i amb la nostra solució, pots superar aquestes expectatives amb un menú digital dissenyat bonicament, sempre actualitzat, que funciona perfectament en qualsevol smartphone.",
+          "ctaText": "Estàs llest per crear el teu lloc web de restaurant amb menú QR?",
+          "ctaButton": "Comença Gratis"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Plans de Subscripció per a la Creació de Menú QR i Lloc Web del Restaurant",
+        "description": "Presentem plans de subscripció flexibles per a la creació del teu lloc web de restaurant i menú QR. Tria entre plans Gratuït, Bàsic i Pro amb opcions de facturació mensual o anual.",
+        "meta": {
+          "title": "Plans de Subscripció per a Menú QR i Lloc Web del Restaurant | IQ Rest",
+          "description": "Tria el pla de subscripció perfecte per a la creació del teu lloc web de restaurant i menú QR. Plans Gratuït, Bàsic i Pro amb facturació mensual i anual flexible. Comença gratuït avui."
+        },
+        "content": {
+          "intro": "Estem emocionats d'anunciar el llançament del nostre nou sistema de subscripció per a la creació de menú QR i lloc web del restaurant. IQ Rest ara ofereix plans flexibles que creixen amb el teu negoci - des d'un nivell completament gratuït per a petits cafès fins a plans professionals per a restaurants establerts. Tant si acabes de començar com si gestiones diverses ubicacions, els nostres plans de subscripció proporcionen les funcions que necessites per crear i mantenir un lloc web professional de restaurant amb capacitats de menú QR.",
+          "image1Alt": "Plans de subscripció per a la creació de menú QR i lloc web del restaurant",
+          "image1Caption": "Tria el pla perfecte per a les necessitats del teu lloc web de restaurant i menú QR",
+          "section1Title": "Plans Flexibles per a Cada Mida de Restaurant",
+          "section1Text": "El nostre sistema de subscripció per a la creació de menú QR i lloc web del restaurant ofereix tres nivells dissenyats per adaptar-se a les teves necessitats. El pla Gratuït et permet començar amb fins a 15 articles del menú - perfecte per a petits cafès o per provar la plataforma. El pla Bàsic a 4€/mes (o 3€/mes facturat anualment) expandeix la teva capacitat a 100 articles amb 3 idiomes i 2.000 escaneigs mensuals. Per a restaurants en creixement, el nostre pla Pro a 7€/mes (o 6€/mes anual) ofereix articles, idiomes i escaneigs il·limitats - tot el que necessites per a la gestió professional del lloc web del restaurant i menú QR.",
+          "section2Title": "Tauler de Facturació Simple",
+          "section2Text": "Gestionar la teva subscripció per als serveis de menú QR i lloc web del restaurant ara és més fàcil que mai. El nostre nou tauler de facturació mostra tots els plans disponibles en una interfície neta i senzilla. Pots veure el teu pla actual d'un cop d'ull, comparar funcions i actualitzar o rebaixar amb un sol clic. El disseny simplificat mostra cada pla amb el seu preu mensual, facilitant la tria de l'opció correcta per a les necessitats del teu lloc web de restaurant i menú QR. Els pagaments segurs es processen a través de Stripe, l'estàndard de la indústria per a transaccions en línia.",
+          "section3Title": "Estalvia un 25% amb Facturació Anual",
+          "section3Text": "Els propietaris de restaurants que es comprometen a la facturació anual per a la seva subscripció de menú QR i lloc web estalvien un 25% en comparació amb els pagaments mensuals. El pla Bàsic passa de 4€ a 3€ per mes, mentre que el pla Pro passa de 7€ a 6€ per mes quan es factura anualment. Aquest estalvi significatiu ajuda els restaurants a invertir més en el seu negoci principal mentre mantenen una presència digital professional. Canvia entre la facturació mensual i anual en qualsevol moment a través del teu tauler de control.",
+          "benefitsTitle": "Beneficis dels Nostres Plans de Subscripció",
+          "benefit1": "Pla gratuït disponible per sempre - no es requereix targeta de crèdit per començar",
+          "benefit2": "Facturació mensual o anual flexible amb un 25% d'estalvi en plans anuals",
+          "benefit3": "Actualitzacions instantànies de pla - noves funcions s'activen immediatament",
+          "benefit4": "Processament de pagaments segur a través de Stripe per a totes les transaccions",
+          "benefit5": "Gestió fàcil del pla a través d'un tauler de facturació senzill",
+          "benefit6": "Rebaixa en qualsevol moment - no es requereixen contractes a llarg termini",
+          "conclusionTitle": "Comença a Crear el Teu Lloc Web de Restaurant Avui",
+          "conclusionText": "Amb els nostres nous plans de subscripció, crear un menú QR professional i un lloc web de restaurant mai ha estat tan accessible. Comença amb el nostre pla gratuït per experimentar la plataforma, després actualitza a mesura que el teu restaurant creix. Les nostres opcions de facturació flexibles, preus transparents i activació instantània signifiquen que pots tenir el teu menú digital en funcionament en minuts. Uneix-te a milers de restaurants que ja utilitzen IQ Rest per connectar-se amb els seus clients a través de menús QR moderns i amigables amb mòbils.",
+          "ctaText": "Estàs llest per triar el teu pla per al menú QR i lloc web del restaurant?",
+          "ctaButton": "Veure Plans de Preus"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "Codi QR",
+    "description": "Descarrega i imprimeix el teu codi QR perquè els clients el puguin escanejar",
+    "preview": "Previsualització",
+    "paperFormat": "Format de Paper",
+    "qrPerPage": "Codis QR per Pàgina",
+    "customText": "Text A sota del Codi QR",
+    "customTextPlaceholder": "Escaneja per veure el menú",
+    "print": "Imprimir",
+    "download": "Descarregar PNG",
+    "viewMenu": "Veure Menú",
+    "noSlug": "No s'ha establert cap URL del menú",
+    "noSlugDescription": "Si us plau, configura primer l'URL del teu restaurant a la configuració per generar un codi QR.",
+    "goToSettings": "Ves a la Configuració",
+    "loading": "Carregant...",
+    "menuUrl": "El teu Lloc Web",
+    "websiteReady": "El teu lloc web està llest!",
+    "openWebsite": "Obre el Lloc Web",
+    "printSection": "Imprimir i Descarregar Codi QR:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Carta (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Pàgina completa)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Mida del Text",
+    "textSizes": {
+      "small": "Petit",
+      "medium": "Mitjà",
+      "large": "Gran"
+    }
+  },
+  "support": {
+    "title": "Missatges",
+    "subtitle": "Obteniu ajuda del nostre equip",
+    "unauthorized": "Si us plau, inicieu sessió per accedir al suport",
+    "lastUpdated": "Actualitzat",
+    "emptyTitle": "Encara no hi ha missatges",
+    "emptyDescription": "Envieu un missatge per començar la conversa",
+    "sendMessage": "Enviar missatge",
+    "placeholder": "Escriviu el vostre missatge...",
+    "hint": "Prem Enter per enviar, Shift+Enter per a nova línia",
+    "send": "Enviar",
+    "supportTeam": "Equip de suport"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Crea el teu menú digital en 5 minuts - IQ Rest",
+      "description": "Menú QR i lloc web per al teu restaurant. Preparat instantàniament. No es requereixen habilitats tècniques."
+    },
+    "title": "Crea el teu menú digital en 5 minuts",
+    "subtitle": "Menú QR i lloc web per al teu restaurant. Preparat instantàniament.",
+    "emailLabel": "Correu electrònic",
+    "emailPlaceholder": "Introdueix el correu electrònic per començar a crear",
+    "otpPlaceholder": "Introdueix el codi de 4 dígits",
+    "continue": "Crea el meu menú",
+    "sending": "Creant...",
+    "verifyTitle": "Comprova el teu correu electrònic",
+    "verifySubtitle": "Hem enviat un codi de 4 dígits a {email}",
+    "verify": "Verifica",
+    "verifying": "Verificant...",
+    "changeEmail": "Canvia el correu electrònic",
+    "resendCode": "Reenviar codi",
+    "successTitle": "Benvingut!",
+    "successSubtitle": "T'has registrat correctament",
+    "redirecting": "Redirigint al tauler de control...",
+    "errors": {
+      "sendFailed": "No s'ha pogut enviar el codi de verificació. Si us plau, torna a intentar-ho.",
+      "verifyFailed": "No s'ha pogut verificar el codi. Si us plau, torna a intentar-ho."
+    },
+    "valueProps": {
+      "noSkills": "No es requereixen habilitats tècniques",
+      "instantUpdates": "Actualitzacions de menú instantànies",
+      "qrIncluded": "Codi QR + lloc web inclòs",
+      "freeStart": "Gratuït per començar"
+    },
+    "formHelper": "No es requereix targeta de crèdit",
+    "setupTime": "Configuració en 5 minuts",
+    "hasAccount": "Ja tens un compte?",
+    "signIn": "Inicia sessió",
+    "restaurantCounter": "Uneix-te a {count} restaurants que ja utilitzen IQ Rest",
+    "steps": {
+      "signUp": "Registra't amb el teu correu electrònic",
+      "addMenu": "Afegeix els teus articles de menú",
+      "getQr": "Obté el teu codi QR i comença"
+    },
+    "motivational": {
+      "title": "Comença a acceptar comandes avui",
+      "subtitle": "Els teus clients estan esperant un menú digital"
+    }
+  },
+  "reservations": {
+    "title": "Reserves",
+    "tables": "Taules",
+    "settings": "Configuració",
+    "addTable": "Afegir Taula",
+    "newTable": "Nova Taula",
+    "editTable": "Editar Taula",
+    "tableNumber": "Número de Taula",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Capacitat (convidats)",
+    "capacityPlaceholder": "4",
+    "zone": "Zona",
+    "zonePlaceholder": "Terrassa, Finestra, Sala principal...",
+    "image": "Foto",
+    "uploadImage": "Feu clic per pujar la foto",
+    "removeImage": "Eliminar",
+    "isActive": "Actiu",
+    "active": "Actiu",
+    "inactive": "Inactiu",
+    "save": "Desa",
+    "saving": "Desant...",
+    "cancel": "Cancel·lar",
+    "delete": "Eliminar",
+    "deleteConfirm": "Esteu segur que voleu eliminar aquesta taula?",
+    "table": "Taula",
+    "noTables": "Encara no hi ha taules. Afegiu la vostra primera taula per habilitar les reserves.",
+    "error": "Error",
+    "close": "Tancar",
+    "noReservations": "Encara no hi ha reserves",
+    "pending": "Pendent",
+    "confirmed": "Confirmat",
+    "cancelled": "Cancel·lat",
+    "completed": "Completat",
+    "confirm": "Confirmar",
+    "reject": "Rebutjar",
+    "guests": "convidats",
+    "date": "Data",
+    "time": "Hora",
+    "guest": "Convidat",
+    "status": "Estat",
+    "notes": "Notes",
+    "awaitingResponse": "Esperant Resposta",
+    "today": "Avui",
+    "tomorrow": "Demà",
+    "otherReservations": "Altres Reserves",
+    "sort": "Ordenar"
+  },
+  "publicReserve": {
+    "title": "Reserva una Taula",
+    "selectDate": "Selecciona la Data",
+    "selectTime": "Selecciona l'Hora",
+    "selectGuests": "Nombre de Convidats",
+    "selectTable": "Selecciona la Taula",
+    "yourDetails": "Les Teves Dades",
+    "name": "Nom",
+    "namePlaceholder": "El teu nom",
+    "email": "Correu electrònic",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Telèfon (opcional)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Sol·licituds especials (opcional)",
+    "notesPlaceholder": "Qualsevol sol·licitud o nota especial...",
+    "submit": "Reservar Taula",
+    "submitting": "Reservant...",
+    "success": "Reserva Enviada!",
+    "successAuto": "La teva reserva està confirmada. Rebràs un correu electrònic de confirmació aviat.",
+    "successManual": "La teva sol·licitud de reserva ha estat enviada. Rebràs un correu electrònic un cop confirmada.",
+    "error": "Error",
+    "guests": "convidats",
+    "table": "Taula",
+    "capacity": "capacitat",
+    "noAvailableTables": "No hi ha taules disponibles per aquest nombre de convidats",
+    "back": "Tornar al Menú",
+    "noTimeSlotsAvailable": "No hi ha franges horàries disponibles per a aquesta data",
+    "loadingAvailability": "Comprovant disponibilitat..."
+  },
+  "publicMenu": {
+    "contacts": "Contactes",
+    "language": "Idioma",
+    "reserve": "Reservar una taula",
+    "onlineMenu": "Menú en línia",
+    "noCategories": "No hi ha categories disponibles",
+    "openInstagram": "Obrir Instagram",
+    "makeCall": "Fer una trucada",
+    "writeWhatsApp": "Escriure per WhatsApp",
+    "openGoogleMaps": "Obrir a Google Maps",
+    "noLocation": "No hi ha ubicació disponible",
+    "english": "Anglès",
+    "spanish": "Español",
+    "allergens": "Al·lèrgens",
+    "allergensInfo": "Aquest plat conté els següents al·lèrgens:",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Crustacis",
+      "eggs": "Ous",
+      "fish": "Peix",
+      "peanuts": "Cacauets",
+      "soybeans": "Soja",
+      "dairy": "Làctics",
+      "nuts": "Fruits secs",
+      "celery": "Api",
+      "mustard": "Mostassa",
+      "sesame": "Sèsam",
+      "sulphites": "Sulfits",
+      "lupin": "Llúpol",
+      "molluscs": "Molluscs"
+    }
+  },
+  "faq": {
+    "title": "Preguntes Freqüents Sobre el Menú QR per a Restaurants i Cafès",
+    "subtitle": "Troba respostes a preguntes comunes sobre la creació i gestió del teu menú digital QR per a restaurants i cafès",
+    "howto": {
+      "question": "Com crear un menú QR i un lloc web de restaurant en 4 passos fàcils?",
+      "answer": "Posa el teu restaurant en línia en 5 minuts - només has d'introduir el teu correu electrònic i començar des del teu telèfon",
+      "faqTitle": "Tens més preguntes?",
+      "faqDescription": "Consulta les nostres preguntes freqüents completes per aprendre tot sobre la creació i gestió del menú QR i del lloc web del teu restaurant",
+      "faqButton": "Veure Totes les Preguntes Freqüents",
+      "contactButton": "Contacta'ns",
+      "steps": [
+        {
+          "name": "Inicia sessió amb el correu electrònic",
+          "text": "Obtingues un lloc web modern per al teu restaurant amb menú QR, pàgina de contacte amb mapa, reserves en línia i marca personalitzada - tot inclòs des del principi."
+        },
+        {
+          "name": "Configura el teu restaurant",
+          "text": "Introdueix el nom del teu restaurant i tria la teva URL única. Afegeix un fons de vídeo o foto, estableix els colors de la teva marca, activa les reserves de taula."
+        },
+        {
+          "name": "Afegeix categories i plats",
+          "text": "Crea categories de menú i afegeix plats amb fotos. La IA optimitza les teves imatges automàticament i tradueix el teu menú a més de 10 idiomes."
+        },
+        {
+          "name": "Veure el teu menú llest",
+          "text": "El teu lloc web professional està en línia! Els clients poden navegar pel teu menú, fer reserves i trobar-te al mapa. Fes un seguiment de tot amb analítiques diàries."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Què és un menú QR per a restaurants i com funciona?",
+        "answer": "Un menú QR per a restaurants és un menú digital que els clients poden accedir escanejant un codi QR amb el seu telèfon intel·ligent. IQ Rest crea un lloc web de menú digital professional per al teu restaurant o cafè que s'actualitza instantàniament sense necessitat de reimpressió. Els clients simplement escanejen el codi i veuen el teu menú al seu dispositiu."
+      },
+      {
+        "question": "Quant costa un menú QR per a un restaurant o cafè?",
+        "answer": "IQ Rest ofereix preus flexibles a partir de 0 € per sempre amb el nostre pla gratuït. Això ho fa assequible per a qualsevol restaurant o cafè per crear un menú QR professional. Els plans de pagament comencen només a 4 €/mes amb funcions addicionals com articles il·limitats i analítiques avançades."
+      },
+      {
+        "question": "Puc crear un lloc web per al meu restaurant sense programar?",
+        "answer": "Sí! IQ Rest està dissenyat per a propietaris de restaurants i cafès sense cap coneixement tècnic. Pots crear un lloc web complet de menú digital per al teu restaurant en minuts, sense necessitat de coneixements de programació o codificació. Simplement afegeix els teus plats, preus i fotos a través de la nostra interfície intuïtiva."
+      },
+      {
+        "question": "Amb quina freqüència puc actualitzar el meu menú QR?",
+        "answer": "Pots actualitzar el menú del teu restaurant o cafè tan sovint com necessitis. Tots els canvis es reflecteixen en temps real, permetent-te actualitzar immediatament els preus, afegir nous plats o canviar descripcions sense reimprimir menús físics. Perfecte per a ofertes diàries i actualitzacions estacionals."
+      },
+      {
+        "question": "El menú QR funciona tant per a restaurants com per a cafès?",
+        "answer": "Absolutament! IQ Rest és perfecte per a restaurants, cafès, cafeteries, bars, food trucks i qualsevol negoci de servei d'aliments. La nostra solució de menú digital s'adapta a qualsevol tipus d'establiment, des de petits cafès fins a grans cadenes de restaurants."
+      },
+      {
+        "question": "Com funciona la traducció automàtica del menú?",
+        "answer": "El nostre sistema de menú QR utilitza intel·ligència artificial per traduir automàticament el menú del teu restaurant o cafè a múltiples idiomes. Això és perfecte per a zones turístiques i clients internacionals. Pots oferir el teu menú en anglès, espanyol i altres idiomes, ajudant-te a atendre més clients."
+      },
+      {
+        "question": "Puc provar la solució de menú QR de manera gratuïta?",
+        "answer": "Sí! Oferim un pla completament gratuït per a restaurants i cafès per provar IQ Rest. Pots crear el teu lloc web de menú digital amb fins a 15 articles sense cost, per sempre. No es requereix targeta de crèdit per començar. Actualitza només quan necessitis més funcions."
+      },
+      {
+        "question": "És IQ Rest una aplicació que els clients han de descarregar?",
+        "answer": "No! Aquesta és una de les millors avantatges. Els clients no necessiten descarregar cap aplicació. Simplement escanejen el teu codi QR i el menú s'obre instantàniament al seu navegador web. Això ho fa molt més convenient que les aplicacions de restaurants que requereixen descàrregues."
+      },
+      {
+        "question": "Quins són els beneficis d'un lloc web de menú digital per al meu restaurant?",
+        "answer": "Un lloc web de menú digital ofereix molts beneficis: actualitzacions instantànies del menú sense costos de reimpressió, suport multilingüe per a clients internacionals, comandes sense contacte per a la seguretat, analítiques per veure plats populars i presentació professional. A més, és ecològic ja que elimines els residus de menús de paper."
+      },
+      {
+        "question": "Com puc crear un codi QR per al meu menú de restaurant?",
+        "answer": "IQ Rest genera automàticament un codi QR professional quan crees el teu menú digital. Pots descarregar i imprimir aquest codi QR per a les taules del teu restaurant, l'entrada o el taulell de menjar per emportar. El codi QR és personalitzable i d'alta qualitat per a un escaneig clar."
+      }
+    ],
+    "cta": {
+      "title": "Encara tens preguntes?",
+      "subtitle": "Pregunta'ns i obté una resposta en el menor temps possible",
+      "button": "Contacta'ns"
+    },
+    "linkTitle": "Tens preguntes?",
+    "linkDescription": "Consulta les nostres preguntes freqüents per aprendre més sobre IQ Rest",
+    "meta": {
+      "title": "Preguntes Freqüents - IQ Rest",
+      "description": "Troba respostes a preguntes comunes sobre la solució de menú digital QR d'IQ Rest per a restaurants i cafès"
+    }
+  },
+  "billing": {
+    "title": "Facturació",
+    "description": "Gestiona la teva subscripció i facturació",
+    "unauthorized": "Si us plau, inicia sessió per gestionar la teva subscripció",
+    "perMonth": "/mes",
+    "currentPlan": "Pla actual",
+    "upgrade": "Millorar",
+    "manage": "Gestionar",
+    "subscriptionSuccess": "La teva subscripció s'ha activat correctament!",
+    "subscriptionCanceled": "El procés de subscripció ha estat cancel·lat.",
+    "subscriptionProcessing": "El teu pagament s'està processant. Pot trigar uns moments a activar-se.",
+    "processingPayment": "Processant el teu pagament...",
+    "processingPaymentDescription": "Si us plau, espera mentre confirmem la teva subscripció. Normalment això triga uns segons.",
+    "checkoutError": "No s'ha pogut iniciar el procés de pagament. Si us plau, torna a provar.",
+    "portalError": "No s'ha pogut obrir el portal de facturació. Si us plau, torna a provar.",
+    "detailsNote": "Per més detalls, visita la nostra",
+    "pricingPage": "pàgina de preus",
+    "plans": {
+      "FREE": {
+        "name": "Gratuït"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Bàsic Mensual"
+      },
+      "BASIC_YEARLY": {
+        "name": "Bàsic Anual"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Mensual"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Anual"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Tauler de control",
+      "onboarding": "Integració",
+      "qrMenu": "Menú QR",
+      "analytics": "Analítica",
+      "categories": "Categories",
+      "items": "Articles",
+      "settings": "General",
+      "design": "Disseny",
+      "contacts": "Contactes",
+      "languages": "Idiomes",
+      "reservations": "Reserves",
+      "reservationSettings": "Configuració de reserves",
+      "tables": "Taules",
+      "billing": "Facturació",
+      "support": "Suport"
+    },
+    "sidebar": {
+      "qrMenu": "Menú QR",
+      "menu": "Menú",
+      "settings": "Configuració",
+      "reservations": "Reserves",
+      "account": "Compte",
+      "reservationSettings": "Configuració"
+    },
+    "logout": "Tancar sessió",
+    "auth": {
+      "title": "Iniciar sessió",
+      "subtitle": "Lloc web modern amb menú QR, reserves i traduccions d'IA",
+      "benefits": "Sense contrasenyes. Sense targeta de crèdit.",
+      "emailPlaceholder": "your@email.com",
+      "continue": "Continuar",
+      "verifyTitle": "Comproveu el vostre correu electrònic",
+      "verifySubtitle": "Hem enviat un codi a {email}",
+      "verify": "Verificar",
+      "changeEmail": "Utilitzar un correu electrònic diferent",
+      "errors": {
+        "sendFailed": "No s'ha pogut enviar el codi. Si us plau, torneu-ho a intentar.",
+        "verifyFailed": "Codi no vàlid. Si us plau, torneu-ho a intentar."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Ús mensual",
+      "scansThisMonth": "escans aquest mes",
+      "limitReached": "Heu arribat al límit d'escans mensuals. Actualitzeu el vostre pla per a escans il·limitats.",
+      "todayViews": "Avui",
+      "weeklyViews": "Aquesta setmana",
+      "monthlyViews": "Aquest mes",
+      "uniqueVisitors": "Visitants únics",
+      "viewsByPage": "Visites per pàgina",
+      "viewsByLanguage": "Visites per idioma",
+      "dailyViews": "Visites diàries",
+      "noData": "No hi ha dades disponibles encara",
+      "pageNames": {
+        "home": "Inici",
+        "menu": "Menú",
+        "contacts": "Contactes",
+        "language": "Idioma",
+        "reserve": "Reservar"
+      },
+      "languageNames": {
+        "en": "Anglès",
+        "es": "Español",
+        "de": "Alemany",
+        "fr": "Francès",
+        "ru": "Русский"
+      }
+    },
+    "categories": {
+      "noCategories": "Encara no hi ha categories. Creeu la vostra primera categoria per començar.",
+      "addCategory": "Afegir",
+      "editCategory": "Editar categoria",
+      "name": "Nom",
+      "namePlaceholder": "Introduïu el nom de la categoria",
+      "status": "Estat",
+      "active": "Actiu",
+      "inactive": "Inactiu",
+      "save": "Desar",
+      "saving": "Desant...",
+      "cancel": "Cancel·lar",
+      "delete": "Esborrar",
+      "deleteConfirm": "Esteu segur que voleu esborrar aquesta categoria? Aquesta acció no es pot desfer.",
+      "fetchError": "No s'ha pogut carregar les categories",
+      "updateError": "No s'ha pogut actualitzar la categoria",
+      "saveError": "No s'ha pogut desar la categoria",
+      "deleteError": "No s'ha pogut esborrar la categoria",
+      "translateError": "La traducció ha fallat",
+      "nameRequired": "El nom és obligatori",
+      "enabled": "habilitat",
+      "disabled": "deshabilitat",
+      "created": "Categoria creada",
+      "updated": "Categoria actualitzada",
+      "deleted": "Categoria esborrada",
+      "validationErrorTitle": "Si us plau, corregiu els següents errors",
+      "sort": "Ordenar",
+      "saveSort": "Desar",
+      "sortSaved": "Ordre d'ordenació desat",
+      "sortError": "No s'ha pogut desar l'ordre d'ordenació"
+    },
+    "items": {
+      "noItems": "Encara no hi ha articles. Crea el teu primer article per començar.",
+      "addItem": "Afegir",
+      "editItem": "Editar article",
+      "name": "Nom",
+      "namePlaceholder": "Introdueix el nom de l'article",
+      "description": "Descripció",
+      "descriptionPlaceholder": "Introdueix la descripció de l'article",
+      "price": "Preu",
+      "pricePlaceholder": "0.00",
+      "category": "Categoria",
+      "categoryPlaceholder": "Selecciona la categoria",
+      "image": "Imatge",
+      "uploadImage": "Puja la imatge",
+      "removeImage": "Elimina la imatge",
+      "status": "Estat",
+      "active": "Actiu",
+      "inactive": "Inactiu",
+      "save": "Desa",
+      "saving": "Desant...",
+      "cancel": "Cancel·la",
+      "delete": "Elimina",
+      "deleteConfirm": "Estàs segur que vols eliminar aquest article? Aquesta acció no es pot desfer.",
+      "fetchError": "No s'han pogut carregar els articles",
+      "updateError": "No s'ha pogut actualitzar l'article",
+      "saveError": "No s'ha pogut desar l'article",
+      "deleteError": "No s'ha pogut eliminar l'article",
+      "translateError": "La traducció ha fallat",
+      "nameRequired": "El nom és obligatori",
+      "categoryRequired": "La categoria és obligatòria",
+      "priceRequired": "Es requereix un preu vàlid",
+      "enabled": "habilitat",
+      "disabled": "deshabilitat",
+      "created": "Article creat",
+      "updated": "Article actualitzat",
+      "deleted": "Article eliminat",
+      "validationErrorTitle": "Si us plau, corregeix els següents errors",
+      "sort": "Ordenar",
+      "saveSort": "Desa",
+      "sortSaved": "Ordre d'ordenació desat",
+      "sortError": "No s'ha pogut desar l'ordre d'ordenació",
+      "allergens": "Al·lèrgens",
+      "allergensHint": "Selecciona els al·lèrgens presents en aquest plat",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Crustacis",
+        "eggs": "Ous",
+        "fish": "Peix",
+        "peanuts": "Cacauets",
+        "soybeans": "Soja",
+        "dairy": "Làctics",
+        "nuts": "Fruits secs",
+        "celery": "Api",
+        "mustard": "Mostassa",
+        "sesame": "Sèsam",
+        "sulphites": "Sulfits",
+        "lupin": "Llupar",
+        "molluscs": "Molluscs"
+      }
+    },
+    "languages": {
+      "translationProgress": "Progrés de la traducció",
+      "availableLanguages": "Idiomes disponibles",
+      "europeanLanguages": "Idiomes europeus",
+      "starToSetDefault": "Fes clic a l'estrella per establir com a predeterminat",
+      "default": "predeterminat",
+      "hint": "Habilita idiomes per permetre als clients veure el teu menú en múltiples idiomes. L'idioma predeterminat s'utilitza per al contingut principal.",
+      "fetchError": "No s'han pogut carregar els idiomes",
+      "enableError": "No s'ha pogut habilitar l'idioma",
+      "disableError": "No s'ha pogut deshabilitar l'idioma",
+      "defaultError": "No s'ha pogut establir l'idioma predeterminat",
+      "languageEnabled": "{language} habilitat",
+      "languageDisabled": "{language} deshabilitat",
+      "defaultSet": "{language} establert com a predeterminat",
+      "cannotDisableDefault": "No es pot deshabilitar l'idioma predeterminat",
+      "atLeastOneRequired": "Es requereix almenys un idioma",
+      "enableFirst": "Habilita primer l'idioma",
+      "deleteConfirm": "Deshabilitar aquest idioma eliminarà totes les traduccions per a ell. Aquesta acció no es pot desfer.",
+      "cancel": "Cancel·la",
+      "confirm": "Deshabilita"
+    },
+    "contacts": {
+      "phone": "Telèfon",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Número de telèfon de contacte per als teus clients",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "el_teu_restaurant",
+      "instagramHint": "El teu nom d'usuari d'Instagram (sense @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "Número de WhatsApp per a consultes dels clients",
+      "location": "Ubicació",
+      "locationHint": "Fes clic al mapa o cerca per establir la ubicació del teu restaurant",
+      "save": "Desa",
+      "fetchError": "No s'han pogut carregar la informació de contacte",
+      "saveError": "No s'ha pogut desar la informació de contacte",
+      "saved": "Informació de contacte desada"
+    },
+    "design": {
+      "background": "Fons",
+      "backgroundHint": "Puja un vídeo o imatge per al fons de la teva pàgina d'inici",
+      "uploadMedia": "Puja vídeo o imatge",
+      "removeMedia": "Eliminar",
+      "accentColor": "Color d'accent",
+      "accentColorHint": "Color principal per a botons i ressaltats al teu lloc web",
+      "presetColors": "Colors predefinits",
+      "customColor": "Color personalitzat",
+      "save": "Desa",
+      "fetchError": "No s'ha pogut carregar la configuració del disseny",
+      "saveError": "No s'ha pogut desar la configuració del disseny",
+      "saved": "Configuració del disseny desada",
+      "uploadError": "No s'ha pogut pujar el fitxer",
+      "invalidFileType": "Tipus de fitxer no vàlid. Permesos: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "El fitxer és massa gran. Mida màxima: 50MB per a vídeos, 5MB per a imatges"
+    },
+    "general": {
+      "name": "Títol",
+      "namePlaceholder": "Introdueix el nom del restaurant",
+      "nameHint": "Mostrat a la pàgina d'inici del teu lloc web públic",
+      "description": "Subtítol",
+      "descriptionPlaceholder": "Breu descripció (opcional)",
+      "descriptionHint": "Mostrat sota el títol a la pàgina d'inici",
+      "slug": "URL Slug",
+      "slugPlaceholder": "el-meu-restaurant",
+      "slugHint": "El teu lloc web estarà disponible a: iq-rest.com/{slug}",
+      "currency": "Moneda",
+      "currencyPlaceholder": "Selecciona moneda",
+      "save": "Desa",
+      "fetchError": "No s'ha pogut carregar la configuració",
+      "saveError": "No s'ha pogut desar la configuració",
+      "saved": "Configuració desada",
+      "nameRequired": "El nom del restaurant és obligatori",
+      "slugRequired": "L'URL slug és obligatori",
+      "validationErrorTitle": "Si us plau, corregeix els següents errors",
+      "slugChangedTitle": "Adreça del lloc web actualitzada",
+      "slugChangedDescription": "El teu restaurant ara està disponible a:",
+      "close": "Tancar",
+      "view": "Veure"
+    },
+    "onboarding": {
+      "title": "Benvingut a IQ Rest!",
+      "subtitle": "Completa aquests passos per llançar el teu lloc web de restaurant",
+      "requiredSteps": "Passos obligatoris",
+      "optionalSteps": "Passos opcionals",
+      "viewMenu": "Veure el teu menú",
+      "steps": {
+        "title": {
+          "name": "Afegir nom del restaurant",
+          "description": "Dóna un nom al teu restaurant que apareixerà al teu lloc web"
+        },
+        "slug": {
+          "name": "Establir adreça del lloc web",
+          "description": "Tria una URL única per al teu lloc web de restaurant"
+        },
+        "categories": {
+          "name": "Crear categories del menú",
+          "description": "Organitza el teu menú amb categories com Entrants, Plats principals, etc."
+        },
+        "items": {
+          "name": "Afegir articles al menú",
+          "description": "Afegeix plats al teu menú amb preus i descripcions"
+        },
+        "design": {
+          "name": "Personalitzar disseny",
+          "description": "Tria colors i fons per al teu lloc web"
+        },
+        "contacts": {
+          "name": "Afegir informació de contacte",
+          "description": "Afegeix telèfon, WhatsApp, Instagram i ubicació"
+        },
+        "reservations": {
+          "name": "Habilitar reserves",
+          "description": "Permet als clients reservar taules en línia"
+        },
+        "translations": {
+          "name": "Afegir idiomes",
+          "description": "Fes que el teu menú estigui disponible en diversos idiomes"
+        }
+      },
+      "completed": "Completat",
+      "notCompleted": "No completat",
+      "allDone": "Tot fet! El teu menú està en línia.",
+      "requiredRemaining": "{count} passos obligatoris restants"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Per fer que les reserves estiguin disponibles per als teus clients del restaurant, necessites subscriure't al servei.",
+    "subscribe": "Subscriure's",
+    "reservationsEnabled": "Habilitar Reserves",
+    "enabled": "Les reserves estan habilitades",
+    "disabled": "Les reserves estan deshabilitades",
+    "reservationMode": "Mode de Confirmació",
+    "modeAuto": "Automàtic",
+    "modeManual": "Manual",
+    "modeAutoDescription": "Les reserves es confirmaran automàticament en funció de la disponibilitat de taules",
+    "modeManualDescription": "Hauràs de confirmar manualment cada reserva",
+    "slotDuration": "Durada de la Reserva",
+    "minutes": "minuts",
+    "workingHours": "Horari Laboral",
+    "save": "Desa",
+    "saving": "Desant...",
+    "saved": "Configuracions desades",
+    "fetchError": "No s'ha pogut carregar les configuracions",
+    "saveError": "No s'ha pogut desar les configuracions"
+  },
+  "terms": {
+    "title": "Termes i Condicions",
+    "lastUpdated": "Última actualització: 17 de desembre de 2025",
+    "contact": {
+      "title": "Contacta'ns",
+      "description": "Si tens alguna pregunta sobre aquests Termes i Condicions, si us plau, contacta'ns."
+    },
+    "sections": [
+      {
+        "title": "1. Introducció",
+        "content": [
+          "Benvingut a IQ Rest. Aquests Termes i Condicions regulen l'ús del nostre lloc web i dels serveis operats per Bogdan Sokolov (Autònom), NIE: Z1894474S, registrat a Espanya.",
+          "En accedir o utilitzar IQ Rest, acceptes estar subjecte a aquests Termes. Si no estàs d'acord amb alguna part d'aquests termes, no podràs accedir al servei."
+        ]
+      },
+      {
+        "title": "2. Descripció del Servei",
+        "content": [
+          "IQ Rest proporciona una plataforma digital de menú QR i creació de llocs web per a restaurants, cafeteries i establiments de servei d'aliments. El nostre servei inclou gestió de menús, generació de codis QR, suport multilingüe amb traduccions impulsades per IA, optimització d'imatges amb IA, sistemes de reserva de taules i analítiques.",
+          "Ens reservem el dret de modificar, suspendre o interrompre qualsevol aspecte del servei en qualsevol moment sense previ avís."
+        ]
+      },
+      {
+        "title": "3. Registre d'Compte",
+        "content": [
+          "Per utilitzar certes funcions de IQ Rest, has de registrar un compte utilitzant una adreça de correu electrònic vàlida. Ets responsable de mantenir la confidencialitat del teu compte i de totes les activitats que es produeixin sota el teu compte.",
+          "Acceptes proporcionar informació precisa, actual i completa durant el registre i actualitzar aquesta informació per mantenir-la precisa, actual i completa.",
+          "Utilitzem autenticació sense contrasenya mitjançant codis de verificació per correu electrònic. Ets responsable de mantenir la seguretat del teu compte de correu electrònic."
+        ]
+      },
+      {
+        "title": "4. Plans de Subscripció i Pagaments",
+        "content": [
+          "IQ Rest ofereix plans de subscripció Gratuït, Bàsic i Pro. El pla Gratuït està disponible sense cost amb funcions limitades. Els plans de pagament (Bàsic i Pro) es facturen mensualment o anualment a través del nostre processador de pagaments, Stripe.",
+          "Els preus es mostren en Euros (EUR). En subscriure't a un pla de pagament, autoritzes a cobrar el teu mètode de pagament de manera recurrent fins que cancel·lis.",
+          "Pots actualitzar, rebaixar o cancel·lar la teva subscripció en qualsevol moment a través del teu tauler de control. Les cancel·lacions entren en vigor al final del període de facturació actual. No es proporcionen reemborsaments per períodes de facturació parcials.",
+          "Ens reservem el dret de canviar els nostres preus amb un avís de 30 dies. Els canvis de preu s'aplicaran als períodes de facturació que comencin després del període d'avís."
+        ]
+      },
+      {
+        "title": "5. Funcions Impulsades per IA",
+        "content": [
+          "IQ Rest utilitza intel·ligència artificial per a traduccions de menús i optimització d'imatges. Tot i que ens esforcem per aconseguir precisió, les traduccions generades per IA poden contenir errors. Ets responsable de revisar i verificar tot el contingut generat per IA abans de publicar-lo.",
+          "L'optimització d'imatges amb IA processa automàticament les imatges pujades per millorar el rendiment de càrrega. Les imatges originals no es guarden després del processament.",
+          "No garantim la precisió, completitud o fiabilitat del contingut generat per IA. Reconeixes que les funcions d'IA es proporcionen 'tal com són' i les utilitzes a la teva pròpia discreció."
+        ]
+      },
+      {
+        "title": "6. Contingut de l'Usuari",
+        "content": [
+          "Mantenen la propietat de tot el contingut que puges a IQ Rest, incloent articles del menú, descripcions, imatges i informació empresarial.",
+          "En pujar contingut, atorgues a IQ Rest una llicència no exclusiva, mundial i sense drets d'autor per utilitzar, mostrar i distribuir el teu contingut exclusivament amb l'objectiu de proporcionar el servei.",
+          "Ets l'únic responsable del contingut que puges i has d'assegurar-te que no viola cap llei ni drets de tercers. El contingut prohibit inclou: material il·legal, contingut protegit per drets d'autor sense autorització, informació enganyosa o fraudulenta, i contingut que viola les normatives de salut i seguretat."
+        ]
+      },
+      {
+        "title": "7. Ús Acceptable",
+        "content": [
+          "Acceptes no utilitzar IQ Rest per a cap propòsit il·legal ni de cap manera que pugui danyar, desactivar o perjudicar el servei.",
+          "Les activitats prohibides inclouen: intentar obtenir accés no autoritzat a altres comptes o sistemes, utilitzar el servei per distribuir correu brossa o malware, raspallar o extreure dades, fer-se passar per altres individus o empreses, i eludir els límits d'ús o mesures de seguretat."
+        ]
+      },
+      {
+        "title": "8. Propietat Intel·lectual",
+        "content": [
+          "El nom IQ Rest, el logotip, el disseny del lloc web i tota la propietat intel·lectual relacionada són propietat de Bogdan Sokolov i estan protegits per les lleis de propietat intel·lectual aplicables.",
+          "No pots copiar, modificar, distribuir ni crear obres derivades basades en la nostra propietat intel·lectual sense permís escrit exprés."
+        ]
+      },
+      {
+        "title": "9. Privacitat i Protecció de Dades",
+        "content": [
+          "El teu ús de IQ Rest també està regulat per la nostra Política de Privacitat. Complim amb el Reglament General de Protecció de Dades (GDPR) i les lleis espanyoles de protecció de dades (LOPDGDD).",
+          "Recollim i processsem dades personals necessàries per proporcionar el servei, incloent adreces de correu electrònic, informació empresarial i analítiques d'ús. Pots sol·licitar accés, correcció o eliminació de les teves dades personals en qualsevol moment."
+        ]
+      },
+      {
+        "title": "10. Limitació de Responsabilitat",
+        "content": [
+          "IQ Rest es proporciona 'tal com és' i 'segons disponibilitat' sense garanties de cap tipus, ja siguin expressades o implicades, incloent però no limitades a garanties implicades de comerciabilitat i adequació per a un propòsit particular.",
+          "En la màxima mesura permesa per la llei, Bogdan Sokolov no serà responsable de cap dany indirecte, incidental, especial, conseqüencial o punitiu, incloent la pèrdua de beneficis, dades o oportunitats comercials.",
+          "La nostra responsabilitat total per qualsevol reclamació derivada o relacionada amb el servei no superarà l'import que ens has pagat durant els dotze (12) mesos anteriors a la reclamació."
+        ]
+      },
+      {
+        "title": "11. Indemnització",
+        "content": [
+          "Acceptes indemnitzar, defensar i mantenir indemne a Bogdan Sokolov de qualsevol reclamació, dany, pèrdua o despesa derivada de l'ús que facis del servei, del teu contingut o de la teva violació d'aquests Termes."
+        ]
+      },
+      {
+        "title": "12. Disponibilitat del Servei",
+        "content": [
+          "Ens esforcem per mantenir una alta disponibilitat del nostre servei però no garantim un accés ininterromput. El servei pot estar temporalment unavailable a causa de manteniment, actualitzacions o circumstàncies fora del nostre control.",
+          "No som responsables de cap pèrdua o dany resultant d'interrupcions del servei o temps d'inactivitat."
+        ]
+      },
+      {
+        "title": "13. Terminació",
+        "content": [
+          "Podem terminat o suspendre el teu compte immediatament, sense previ avís, per conductes que creiem que violen aquests Termes o que són perjudicials per a altres usuaris, per a nosaltres o per a tercers.",
+          "En cas de terminació, el teu dret a utilitzar el servei cessa immediatament. Podem eliminar les teves dades dins dels 30 dies posteriors a la terminació, llevat que estiguem legalment obligats a conservar-les."
+        ]
+      },
+      {
+        "title": "14. Canvis als Termes",
+        "content": [
+          "Ens reservem el dret de modificar aquests Termes en qualsevol moment. T'informarem de canvis significatius per correu electrònic o a través del servei.",
+          "El teu ús continuat de IQ Rest després que els canvis entrin en vigor constitueix l'acceptació dels Termes revisats."
+        ]
+      },
+      {
+        "title": "15. Llei Aplicable i Jurisdicció",
+        "content": [
+          "Aquests Termes es regeixen per les lleis d'Espanya i de la Unió Europea. Qualsevol disputa derivada d'aquests Termes o del teu ús de IQ Rest estarà subjecta a la jurisdicció exclusiva dels jutjats d'Espanya.",
+          "Si alguna disposició d'aquests Termes es considera inaplicable, les disposicions restants continuaran en plena vigència i efecte."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Política de Privacitat",
+    "lastUpdated": "Última actualització: 17 de desembre de 2025",
+    "contact": {
+      "title": "Contacta'ns",
+      "description": "Si tens qualsevol pregunta sobre aquesta Política de Privacitat o desitges exercir els teus drets de protecció de dades, si us plau, contacta'ns.",
+      "controller": "Responsable de Dades"
+    },
+    "sections": [
+      {
+        "title": "1. Introducció",
+        "content": [
+          "Aquesta Política de Privacitat explica com IQ Rest, operat per Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrat a Espanya, recopila, utilitza, emmagatzema i protegeix les teves dades personals quan utilitzes la nostra plataforma de menú QR.",
+          "Estem compromesos a protegir la teva privacitat i a complir amb el Reglament General de Protecció de Dades (GDPR), la Llei Orgànica Espanyola de Protecció de Dades (LOPDGDD) i altres lleis de protecció de dades aplicables."
+        ]
+      },
+      {
+        "title": "2. Responsable de Dades",
+        "content": [
+          "El responsable de dades que gestiona les teves dades personals és: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrat a Espanya. Per a qualsevol consulta sobre protecció de dades, si us plau, contacta'ns a support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Dades Personals que Recopilem",
+        "content": [
+          "Informació del Compte: Quan et registres, recopilem la teva adreça de correu electrònic per a fins d'autenticació i comunicació. Utilitzem autenticació sense contrasenya, així que no emmagatzemem contrasenyes.",
+          "Informació del Negoci: Nom del restaurant, descripció, URL slug, dades de contacte (telèfon, WhatsApp, Instagram), dades de localització i horaris d'obertura que proporcionis per al teu lloc web de menú públic.",
+          "Contingut del Menú: Categories, articles del menú, descripcions, preus i imatges que pugis per crear el teu menú digital.",
+          "Dades d'Ús: Informació sobre com utilitzes el nostre servei, incloent visites a pàgines, ús de funcions i patrons d'interacció recopilats a través d'analítiques.",
+          "Informació de Pagament: Quan et subscrius a plans de pagament, el processament de pagaments és gestionat per Stripe. No emmagatzemem els teus detalls complets de targeta de crèdit; Stripe processa i assegura aquesta informació.",
+          "Dades Tècniques: Adreces IP, tipus de navegador, informació del dispositiu i cookies tal com es descriu a la nostra Política de Cookies."
+        ]
+      },
+      {
+        "title": "4. Com Utilitzem les Teves Dades",
+        "content": [
+          "Utilitzem les teves dades personals per als següents fins: Proporcionar i mantenir el nostre servei de menú QR, incloent la creació del teu lloc web de restaurant i la generació de codis QR. Autenticar el teu compte mitjançant codis de verificació per correu electrònic. Processar pagaments i gestionar la teva subscripció a través de Stripe. Comunicar-nos amb tu sobre el teu compte, actualitzacions del servei i sol·licituds d'assistència. Proporcionar funcions impulsades per IA com traduccions de menús i optimització d'imatges. Analitzar l'ús del servei i millorar la nostra plataforma. Complir amb les obligacions legals i protegir els nostres interessos legítims."
+        ]
+      },
+      {
+        "title": "5. Base Legal per al Processament",
+        "content": [
+          "Execució del Contracte: Processament necessari per proporcionar-te el nostre servei (Article 6(1)(b) GDPR).",
+          "Interessos Legítims: Analítiques i millora del servei, prevenció del frau (Article 6(1)(f) GDPR).",
+          "Consentiment: Per a funcions opcionals com comunicacions de màrqueting (Article 6(1)(a) GDPR).",
+          "Obligació Legal: Quan sigui requerit per llei o requisits normatius (Article 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Emmagatzematge i Seguretat de Dades",
+        "content": [
+          "Les teves dades es guarden en servidors segurs proporcionats per Amazon Web Services (AWS). La nostra base de dades està allotjada a la regió d'AWS Estocolm (eu-north-1) dins de la Unió Europea, assegurant el compliment dels requisits de protecció de dades de la UE.",
+          "Les imatges i fitxers multimèdia que pugis es guarden en servidors AWS S3 situats a la regió de la UE. Les dades es xifren en trànsit mitjançant TLS/SSL i en repòs mitjançant xifrat AES-256.",
+          "Implementem mesures tècniques i organitzatives adequades per protegir les teves dades contra l'accés no autoritzat, alteració, divulgació o destrucció. Aquestes inclouen autenticació segura, controls d'accés, auditories de seguretat regulars i formació dels empleats."
+        ]
+      },
+      {
+        "title": "7. Compartició de Dades i Tercers",
+        "content": [
+          "Compartim les teves dades amb les següents categories de tercers:",
+          "Stripe (Processador de Pagaments): Processa els pagaments de subscripció. Stripe està certificat sota el Marc de Privacitat de Dades UE-EUA. La seva política de privacitat: https://stripe.com/privacy",
+          "Amazon Web Services (Infraestructura): Allotja els nostres servidors i bases de dades a regions de la UE. AWS compleix amb el GDPR i està certificat sota el Marc de Privacitat de Dades UE-EUA.",
+          "Proveïdors de Serveis d'IA: Utilitzem serveis d'IA per a traduccions de menús i optimització d'imatges. Les dades es processen d'acord amb les seves polítiques de privacitat i acords de processament de dades.",
+          "Google Analytics: Per a analítiques de lloc web anonimitzades (si està habilitat). Pots optar per no participar a través de preferències de cookies.",
+          "No venem les teves dades personals a tercers. Podem divulgar dades si és requerit per llei o per protegir els nostres drets legals."
+        ]
+      },
+      {
+        "title": "8. Transfers Internacionals de Dades",
+        "content": [
+          "Les teves dades es guarden i processen principalment dins de la Unió Europea (AWS Estocolm, regió eu-north-1). Quan les dades es transfereixen fora de la UE (per exemple, a proveïdors de serveis amb seu als EUA), assegurem que hi hagi salvaguardes adequades, incloent Clàusules Contractuals Estàndard (SCC) i certificació sota marcs de protecció de dades reconeguts."
+        ]
+      },
+      {
+        "title": "9. Retenció de Dades",
+        "content": [
+          "Dades del Compte: Retingudes mentre el teu compte estigui actiu. En eliminar el compte, les dades personals es retiren en un termini de 30 dies, excepte quan la retenció sigui requerida per llei.",
+          "Contingut del Menú: Retingut mentre el teu compte estigui actiu. Eliminat en la terminació del compte.",
+          "Registres de Pagament: Retinguts durant 7 anys tal com exigeix la legislació fiscal espanyola.",
+          "Dades d'Analítiques: Dades agregades i anonimitzades poden ser retingudes indefinidament per a la millora del servei.",
+          "Dades de Còpia de Seguretat: Poden ser retingudes en còpies de seguretat xifrades durant un màxim de 90 dies després de l'eliminació per a fins de recuperació davant desastres."
+        ]
+      },
+      {
+        "title": "10. Els Teus Drets sota el GDPR",
+        "content": [
+          "Segons el GDPR, tens els següents drets respecte a les teves dades personals:",
+          "Dret d'Accés: Sol·licitar una còpia de les teves dades personals que tenim.",
+          "Dret a la Rectificació: Sol·licitar la correcció de dades inexactes o incompletes.",
+          "Dret a l'Esborrament: Sol·licitar l'eliminació de les teves dades personals ('dret a ser oblidat').",
+          "Dret a la Restricció: Sol·licitar la limitació del processament en determinades circumstàncies.",
+          "Dret a la Portabilitat de Dades: Rebre les teves dades en un format estructurat, llegible per màquina.",
+          "Dret a Oposar-se: Oposar-se al processament basat en interessos legítims o per màrqueting directe.",
+          "Dret a Retirar el Consentiment: Quan el processament es basa en el consentiment, pots retirar-lo en qualsevol moment.",
+          "Per exercir aquests drets, contacta'ns a support@iq-rest.com. Respondrem en un termini de 30 dies. Si no estàs satisfet amb la nostra resposta, tens el dret a presentar una queixa davant l'Agència Espanyola de Protecció de Dades (AEPD) a www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Privacitat dels Nens",
+        "content": [
+          "IQ Rest no està destinat a ser utilitzat per persones menors de 16 anys. No recopilem intencionadament dades personals de nens. Si ens adonem que hem recopilat dades d'un nen, les eliminarem ràpidament."
+        ]
+      },
+      {
+        "title": "12. Canvis a Aquesta Política",
+        "content": [
+          "Podem actualitzar aquesta Política de Privacitat de tant en tant. T'informarem de canvis significatius per correu electrònic o a través d'un avís al nostre lloc web. La data 'Última actualització' a la part superior indica quan es va revisar per última vegada la política.",
+          "El teu ús continuat d'IQ Rest després que es publiquin canvis constitueix l'acceptació de la política revisada."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Política de Cookies",
+    "lastUpdated": "Última actualització: 17 de desembre de 2025",
+    "yes": "Sí",
+    "no": "No",
+    "cookieTableTitle": "Cookies que Fem Servir",
+    "tableHeaders": {
+      "name": "Nom de la Cookie",
+      "purpose": "Finalitat",
+      "duration": "Durada",
+      "required": "Requerida"
+    },
+    "contact": {
+      "title": "Preguntes sobre Cookies",
+      "description": "Si teniu qualsevol pregunta sobre l'ús de cookies, si us plau, contacteu amb nosaltres."
+    },
+    "sections": [
+      {
+        "title": "1. Què Són les Cookies",
+        "content": [
+          "Les cookies són petits fitxers de text que es guarden al vostre dispositiu (ordinador, tauleta o telèfon mòbil) quan visiteu un lloc web. Ajuden els llocs web a funcionar correctament, recordar les vostres preferències i proporcionar informació als propietaris del lloc web.",
+          "Aquesta Política de Cookies explica com IQ Rest, operat per Bogdan Sokolov (Autónomo), utilitza cookies i tecnologies similars al nostre lloc web iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Com Fem Servir les Cookies",
+        "content": [
+          "Fem servir cookies per diverses finalitats: per assegurar-nos que el nostre lloc web funcioni correctament, per recordar les vostres preferències i configuracions, per autenticar el vostre compte i mantenir-vos connectat, per analitzar com els visitants utilitzen el nostre lloc web per poder millorar-lo, i per recordar les vostres preferències de consentiment de cookies."
+        ]
+      },
+      {
+        "title": "3. Tipus de Cookies que Fem Servir",
+        "content": [
+          "Cookies Essencials: Aquestes cookies són necessàries perquè el lloc web funcioni i no es poden desactivar. Normalment s'estableixen en resposta a accions que realitzeu, com ara iniciar sessió o establir les vostres preferències de privadesa.",
+          "Cookies Funcionals: Aquestes cookies permeten una funcionalitat i personalització millorades, com ara recordar la vostra preferència d'idioma i configuracions de tema.",
+          "Cookies d'Analítica: Aquestes cookies ens ajuden a entendre com els visitants interactuen amb el nostre lloc web recollint i informant informació de manera anònima. Fem servir aquestes dades per millorar el nostre servei.",
+          "Cookies de Tercers: Algunes cookies són col·locades per serveis de tercers que apareixen a les nostres pàgines, com ara processadors de pagament (Stripe) i proveïdors d'analítica (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Les Teves Opcions de Cookies",
+        "content": [
+          "Quan visiteu per primera vegada el nostre lloc web, veureu un banner de consentiment de cookies que us permet acceptar o rebutjar cookies no essencials. Podeu canviar les vostres preferències en qualsevol moment.",
+          "També podeu controlar les cookies a través de la configuració del vostre navegador. La majoria dels navegadors us permeten rebutjar cookies, suprimir cookies existents o ser alertats quan s'estan enviant cookies. Tingueu en compte que bloquejar cookies essencials pot afectar la funcionalitat del nostre lloc web.",
+          "Per optar per no participar en el seguiment de Google Analytics, podeu instal·lar l'extensió del navegador Google Analytics Opt-out."
+        ]
+      },
+      {
+        "title": "5. Durada de les Cookies",
+        "content": [
+          "Cookies de Sessió: Aquestes cookies són temporals i s'eliminen quan tanqueu el vostre navegador.",
+          "Cookies Persistents: Aquestes cookies romanen al vostre dispositiu durant un període determinat o fins que les suprimiu. Ens ajuden a reconèixer-vos quan torneu al nostre lloc web."
+        ]
+      },
+      {
+        "title": "6. Cookies de Tercers",
+        "content": [
+          "Stripe: Utilitzat per al processament de pagaments segurs. Stripe pot establir cookies per prevenir el frau i processar pagaments de manera segura. Més informació a stripe.com/cookies-policy",
+          "Google Analytics: Utilitzat per recollir estadístiques anònimes sobre l'ús del lloc web. Podeu optar per no participar utilitzant el banner de cookies o la configuració del navegador. Més informació a policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Actualitzacions d'aquesta Política",
+        "content": [
+          "Podem actualitzar aquesta Política de Cookies de tant en tant per reflectir canvis en les nostres pràctiques o per motius operatius, legals o reguladors. La data de 'Última actualització' a la part superior indica quan es va revisar per última vegada la política."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Manté la vostra sessió d'inici de sessió i estat d'autenticació",
+        "duration": "Sessió / 30 dies",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Recorda el vostre idioma preferit (Anglès/Espanyol)",
+        "duration": "1 any",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Emmagatzema la vostra preferència de tema (mode clar/fosc)",
+        "duration": "1 any",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Recorda les vostres preferències de consentiment de cookies",
+        "duration": "1 any",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - rastreja estadístiques d'ús anònimes",
+        "duration": "2 anys / 24 hores",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - prevenció de frau i seguretat de pagaments",
+        "duration": "1 any / Sessió",
+        "required": false
+      }
+    ]
+  }
+}

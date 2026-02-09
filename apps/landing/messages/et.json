@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menüü",
+      "pricing": "Hinnakujundus",
+      "features": "Funktsioonid",
+      "faq": "Küsimused",
+      "changelog": "Muudatuste logi",
+      "contacts": "Kontaktid"
+    },
+    "getStarted": "Logi sisse",
+    "selectLanguage": "Vali keel",
+    "selectLanguageDescription": "Vali oma eelistatud keel veebisaidi jaoks.",
+    "searchLanguage": "Otsi keelt...",
+    "noLanguagesFound": "Keeli ei leitud"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Menüü ja Veebileht Restoranile 5 Minutiga",
+      "subtitle": "Lihtsalt sisestage oma e-post ja saate täieliku restoraniveebilehe QR menüü, kontaktlehe, mitmekeelse toe ja modernse disainiga. Seadistage kõik oma telefonist.",
+      "cta": {
+        "create": "Loo Menüü",
+        "view": "Vaata Reaalset Menüü"
+      },
+      "benefits": [
+        {
+          "title": "Moodne veebileht",
+          "description": "Professionaalne disain, mis näeb suurepärane välja igas seadmes"
+        },
+        {
+          "title": "Broneeringud",
+          "description": "Võtke laua broneeringud otse oma veebilehelt"
+        },
+        {
+          "title": "AI tõlked",
+          "description": "Automaatne menüü tõlge igasse keelde"
+        },
+        {
+          "title": "Igapäevane analüütika",
+          "description": "Jälgige külastusi ja populaarseid roogasid iga päev"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Usaldavad 500+ restorani üle kogu maailma",
+      "title": "Kõik, Mida Teie Restoran Vajab Veebis",
+      "description": "Registreerige lihtsalt oma e-posti aadressiga ja saate koheselt: professionaalse restoraniveebilehe, QR menüü modernses formaadis, funktsionaalse kontaktlehe kaardiga, mitmekeelse toe AI tõlkega, video või foto tausta ja kohandatud värviskeemi. Kõik hallatav teie telefonist - arvutit pole vaja."
+    },
+    "whyUs": {
+      "title": "Nullist Veebimenüüni 5 Minutiga",
+      "subtitle": "Lihtsalt 4 lihtsat sammu, et saada oma restoran veebis",
+      "items": [
+        {
+          "step": "1",
+          "title": "Sisestage Oma E-post",
+          "description": "Kiire registreerimine lihtsalt oma e-posti aadressiga. Krediitkaarti pole vaja."
+        },
+        {
+          "step": "2",
+          "title": "Täida Restorani Info",
+          "description": "Lisage oma restorani nimi, aadress, kontaktid ja tööajad."
+        },
+        {
+          "step": "3",
+          "title": "Lisage Menüü Esemed",
+          "description": "Looge kategooriad ja lisage oma road koos fotode ja hindadega."
+        },
+        {
+          "step": "4",
+          "title": "Naudi Oma Menüü",
+          "description": "Teie QR menüü on valmis! Jagage seda klientidega ja jälgige analüütikat."
+        }
+      ],
+      "cta": "Kas olete valmis oma restorani moderniseerima?"
+    },
+    "featuresPreview": {
+      "title": "Tugevad Funktsioonid Teie Restoranile",
+      "subtitle": "Kõik, mida vajate professionaalse veebipresence'i loomiseks",
+      "viewAll": "Vaata Kõiki Funktsioone"
+    }
+  },
+  "features": {
+    "title": "Tugevad funktsioonid teie restorani QR menüü ja veebisaidi jaoks",
+    "subtitle": "Kõik, mida vajate, et luua oma restorani või kohviku jaoks professionaalne digitaalne kohalolek",
+    "backToFeatures": "Tagasi funktsioonide juurde",
+    "getStarted": "Loo menüü",
+    "viewPricing": "Vaata hindu",
+    "readyTitle": "Kas oled valmis alustama?",
+    "readyDescription": "Loo oma professionaalne QR menüü ja restoran veebileht minutitega. Kõik funktsioonid on kaasatud.",
+    "keyBenefits": "Peamised eelised",
+    "faqTitle": "Korduma kippuvad küsimused",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Mida mul on vaja, et alustada?",
+          "a": "Lihtsalt oma e-posti aadress. Ei mingit krediitkaarti, ei keerulisi vorme."
+        },
+        {
+          "q": "Kui kaua võtab seadistamine aega?",
+          "a": "Teie veebisait on kohe valmis. Lisage oma menüütooted ja olete 5 minuti pärast online."
+        },
+        {
+          "q": "Kas on tasuta plaan?",
+          "a": "Jah, alustage tasuta, kõik olulised funktsioonid on kaasatud."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Kas pean rakendust installima?",
+          "a": "Rakendust ei ole vaja - kõik töötab teie telefoni brauseris."
+        },
+        {
+          "q": "Kas ma saan oma telefonist fotosid üles laadida?",
+          "a": "Jah, tehke fotosid oma kaameraga ja laadige need otse oma menüüsse."
+        },
+        {
+          "q": "Kas see töötab tahvelarvutites?",
+          "a": "Jah, juhtpaneel on optimeeritud telefonide, tahvelarvutite ja lauaarvutite jaoks."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Kui täpne on AI tõlge?",
+          "a": "Meie AI mõistab kulinaarset konteksti, säilitades roogade nimed ja tõlkides kirjeldused loomulikult."
+        },
+        {
+          "q": "Kui kiiresti toimub tõlge?",
+          "a": "Kogu menüü tõlgitakse sekunditega, mitte tundidega."
+        },
+        {
+          "q": "Kas ma saan AI tõlkeid redigeerida?",
+          "a": "Jah, kõik tõlked on redigeeritavad - vaadake üle ja kohandage vastavalt vajadusele."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Kui palju keeli on toetatud?",
+          "a": "25+ keelt, sealhulgas kõik peamised Euroopa keeled, hiina, jaapani, korea, araabia ja heebrea."
+        },
+        {
+          "q": "Kuidas kliendid keeli vahetavad?",
+          "a": "Menüüs kuvatakse keelevalija - ühe puudutusega saate vahetada mis tahes saadaval oleva keele."
+        },
+        {
+          "q": "Kas tõlge on automaatne?",
+          "a": "Saate kasutada AI tõlget või sisestada tõlked käsitsi iga keele jaoks."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Milliseid pildiformaate toetatakse?",
+          "a": "Laadige üles JPG, PNG või WebP - pildid optimeeritakse automaatselt."
+        },
+        {
+          "q": "Kas optimeerimine vähendab kvaliteeti?",
+          "a": "Ei, meie AI säilitab visuaalse kvaliteedi, vähendades samal ajal faili suurust kiireks laadimiseks."
+        },
+        {
+          "q": "Kas on faili suuruse piirang?",
+          "a": "Laadige üles pilte kuni 10MB - need optimeeritakse automaatselt."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Kuidas ma saan uut rooga lisada?",
+          "a": "Puudutage 'Lisa ese', sisestage nimi, kirjeldus, hind ja vajadusel laadige üles foto. See on kõik!"
+        },
+        {
+          "q": "Kas ma saan menüütooteid ümber korraldada?",
+          "a": "Jah, lihtsalt lohistage ja kukutage esemeid või kategooriaid, et neid ümber korraldada."
+        },
+        {
+          "q": "Mis juhtub, kui roog on otsas?",
+          "a": "Lülitage ese ajutiselt välja - see kaob menüüst, kuid ei kustutata."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Milliseid mõõdikuid ma saan jälgida?",
+          "a": "Igapäevased vaatamised, lehe tulemuslikkus, keele eelistused ja trendid aja jooksul."
+        },
+        {
+          "q": "Kui sageli andmeid uuendatakse?",
+          "a": "Analüütika uuendatakse reaalajas - näete tänaseid külastajaid, kui need juhtuvad."
+        },
+        {
+          "q": "Kas ma saan analüütika andmeid eksportida?",
+          "a": "Vaadake üksikasjalikke aruandeid otse oma juhtpaneelil."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Kuidas kliendid broneeringuid teevad?",
+          "a": "Kliendid saavad broneerida otse teie restorani veebisaidilt. Nad valivad kuupäeva, kellaaja ja külaliste arvu ning saavad seejärel e-posti kinnituse."
+        },
+        {
+          "q": "Kas ma saan broneeringuid käsitsi kinnitada?",
+          "a": "Jah, saate valida automaatse kinnituse või käsitsi kinnitamise iga broneeringu jaoks."
+        },
+        {
+          "q": "Kas ma saan uute broneeringute kohta teavitusi?",
+          "a": "Jah, saate e-posti teavitusi iga uue broneeringu kohta."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Milliseid videoforameid toetatakse?",
+          "a": "Toetatakse MP4 ja WebM formaate. Videod optimeeritakse automaatselt kiireks laadimiseks."
+        },
+        {
+          "q": "Kas ma saan kasutada oma fotosid?",
+          "a": "Jah, laadige üles ükskõik milline foto ja see optimeeritakse automaatselt veebivaatamiseks."
+        },
+        {
+          "q": "Kas video aeglustab menüüd?",
+          "a": "Ei, videod on kompressitud ja laetakse aeglaselt, et tagada kiire lehe tulemuslikkus."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Kui palju värve ma saan valida?",
+          "a": "Valige 12 eelnevalt määratud värvi hulgast või sisestage oma täpne brändi värv, kasutades heksakoodi."
+        },
+        {
+          "q": "Kas see toetab tumedat režiimi?",
+          "a": "Jah, teie värviskeem kohandub automaatselt nii heledate kui ka tumedate teemadega."
+        },
+        {
+          "q": "Kas ma saan värve igal ajal muuta?",
+          "a": "Jah, muutke oma aktsentvärvi kohe juhtpaneelilt - uuendused ilmuvad koheselt."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Kuidas ma saan toetusega ühendust võtta?",
+          "a": "Kasutage kontaktvormi või kirjutage meile otse - reaalsed inimesed vastavad, mitte robotid."
+        },
+        {
+          "q": "Mis on vastamise aeg?",
+          "a": "Tavaliselt vastame mõne tunni jooksul tööpäevadel."
+        },
+        {
+          "q": "Kas tugi on saadaval tasuta plaanide jaoks?",
+          "a": "Jah, isiklik tugi on saadaval kõigi plaanide jaoks, sealhulgas tasuta."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Kohene QR Menüü ja Veebisaidi Seadistamine",
+        "shortDescription": "Looge oma restorani veebisait ja QR menüü vaid e-posti aadressiga - valmis 5 minutiga",
+        "description": "Alustage sekunditega kõige lihtsama registreerimisprotsessiga. Sisestage lihtsalt oma e-posti aadress ja saate kohe täieliku restorani veebisaidi koos QR menüü, kontaktlehe ja kaardiga ning kaasaegse disainiga. Ei ole tehnilisi oskusi vaja, ei keerulisi vorme - teie restoran läheb kohe online.",
+        "fullDescription": "Traditsioonilised veebisaidi koostajad nõuavad seadistamiseks tunde, tehnilisi teadmisi ja sageli arendajat. IQ Rest muudab kõik. Sisestage oma e-posti aadress, kinnitage lihtsa koodiga ja teie restorani veebisait on valmis. Lisage oma toidud, laadige üles fotosid ja jagage oma QR koodi klientidega. Kogu protsess võtab vähem kui 5 minutit.",
+        "benefits": [
+          "Ainult e-post on vajalik alustamiseks - ei mingeid keerulisi registreerimisi",
+          "Restorani veebisait on kohe valmis pärast registreerimist",
+          "QR menüü genereeritakse automaatselt ja lingitakse",
+          "Kontaktleht koos kaardiga on vaikimisi kaasas",
+          "Ei ole tehnilisi oskusi ega kodeerimise teadmisi vaja"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Restorani veebisaidi ja QR menüü kohene seadistamise protsess",
+        "cta": "Loe lähemalt"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% Mobiilisõbralik Halduse",
+        "shortDescription": "Ei ole arvutit? Pole probleemi. Halda oma kogu restorani veebisaiti oma telefonist. Lisa toite, seistes köögis, uuenda hindu teeninduse ajal, laadi üles fotosid otse oma kaamerast. Iga funktsioon töötab mobiilis ideaalselt - sest restoranide omanikud ei istu kunagi laua taga.",
+        "description": "Lisage kategooriaid, toite, fotosid ja hallake oma kogu restorani veebisaiti otse oma telefonist. Meie juhtpaneel on täielikult optimeeritud mobiilseadmete jaoks, nii et saate oma menüüd uuendada kohvi pausi ajal või lisada päevapakkumisi liikvel olles.",
+        "fullDescription": "Restoranide omanikud on hõivatud inimesed, kes ei viibi alati arvuti juures. Seetõttu ehitasime IQ Rest'i, et see töötaks mobiilseadmetes ideaalselt. Iga funktsioon, alates uute toitude lisamisest kuni hindade uuendamiseni, on loodud puutetundlike ekraanide jaoks. Tehke foto uuest roost ja laadige see kohe üles. Muutke tänast eripakkumist, seistes köögis.",
+        "benefits": [
+          "Täielik juhtpaneeli juurdepääs igal nutitelefonil või tahvelarvutil",
+          "Laadige fotosid otse oma telefoni kaamerast",
+          "Uuendage hindu ja kirjeldusi liikvel olles",
+          "Hallake kategooriaid puutetundlikult",
+          "Arvutit ei ole kunagi vaja - kunagi"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Restorani menüü haldamine nutitelefonis",
+        "cta": "Vaata Mobiilset Juhtpaneeli"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI-Põhine Menüü Tõlge",
+        "shortDescription": "Lõpetage rahvusvaheliste klientide kaotamine keelebarjääride tõttu. Meie AI tõlgib teie kogu menüü 25+ keelde sekunditega - mitte üldine tõlge, vaid kontekstitundlik AI, mis mõistab kulinaarseid termineid. 'Beef Wellington' jääb 'Beef Wellington'iks, samas kui kirjeldused kõlavad igas keeles loomulikult.",
+        "description": "Saavutage rahvusvahelised kliendid intelligentse AI tõlkega, mis mõistab toidu konteksti. Teie roogade nimed ja kirjeldused tõlgitakse täpselt, säilitades kulinaarsed terminid ja tehes mõistlikuks igas keeles.",
+        "fullDescription": "Üldised tõlgid ebaõnnestuvad sageli toidumenüüdega - nad tõlgivad sõna-sõnalt, ilma konteksti mõistmata. Meie AI on koolitatud spetsiaalselt restoranisisu jaoks. Ta teab, et 'Beef Wellington' ei tohiks tõlkida sõna-sõnalt ja et 'al dente' tähendab igas keeles sama. Teenindage turiste ja rahvusvahelisi külalisi menüüdega, mis kõlavad loomulikult nende keeles.",
+        "benefits": [
+          "Kontekstitundlik tõlge toidu ja kulinaarsete terminite jaoks",
+          "10+ keelt, sealhulgas hispaania, prantsuse, saksa, hiina, jaapani",
+          "Säilitab kulinaarse terminoloogia ja kultuurilised nüansid",
+          "Kohene tõlge - menüü saadaval sekunditega",
+          "Suurendab müüki 23% rahvusvaheliste klientide seas"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI-põhine restorani menüü tõlke liides",
+        "cta": "Avasta AI Tõlge"
+      },
+      {
+        "id": "multilingual",
+        "title": "Mitmekeeline Restorani Veebisait",
+        "shortDescription": "Tere tulemast turistidele ja rahvusvahelistele külalistele nende emakeeles. 25+ keele toetamine tähendab, et iga klient tunneb end koduselt. Ühe puudutusega keele vahetamine - menüü, hinnad, kirjeldused kohanduvad koheselt. Täiuslik turistide piirkondades või rahvusvahelistes linnades.",
+        "description": "Teie restorani veebisait toetab automaatselt mitmeid keeli. Kliendid saavad keeli vahetada ühe puudutusega, ja kogu sisu, sealhulgas menüü, kontaktandmed ja navigeerimine, kohandub koheselt.",
+        "fullDescription": "Turistide piirkondades ja rahvusvahelistes linnades on oluline rääkida oma kliendi keelt. IQ Rest muudab teie restorani kergesti kättesaadavaks kõigile. Kliendid näevad keelevalijat ja saavad sirvida teie kogu veebisaiti - menüü, kontaktid, broneeringud - oma eelistatud keeles. Koos AI tõlkega saate teenindada kogu maailma.",
+        "benefits": [
+          "Ühe puudutusega keele vahetamine klientidele",
+          "Menüü, kontaktid ja kõik lehed tõlgitud",
+          "Keele eelistus meeles tagasivisiitide jaoks",
+          "Täiuslik turistide piirkondades ja rahvusvahelistes linnades",
+          "Töötavad sujuvalt koos AI tõlke funktsiooniga"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Mitmekeelse restorani veebisaidi keelevalija",
+        "cta": "Vaata Mitmekeelseid Funktsioone"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI Pildi Optimeerimine",
+        "shortDescription": "Automaatne pildi täiustamine kiiremate laadimiste ja parema kvaliteedi jaoks",
+        "description": "Laadige üles ükskõik milline foto ja meie AI optimeerib selle automaatselt veebivaatamiseks. Pildid laadivad kiiresti igas ühenduses, säilitades samas hämmastava kvaliteedi, mis muudab teie toidud vastupandamatuks.",
+        "fullDescription": "Suured, optimeerimata pildid aeglustavad teie veebisaiti ja häirivad kliente. Meie AI töötleb iga üles laaditud pilti: muudab optimaalse suurusega, konverteerib kaasaegsetesse formaatidesse ja täiustab kvaliteeti. Tulemuseks? Teie toidud näevad suurepärased välja ja lehed laadivad alla ühe sekundi jooksul isegi aeglastel mobiilsetel ühendustel.",
+        "benefits": [
+          "Automaatne suuruse muutmine optimaalse veebimõõtmete jaoks",
+          "Konverteerimine WebP formaati kiireks laadimiseks",
+          "Kvaliteedi täiustamine parema esituse jaoks",
+          "Lehed laadivad alla ühe sekundi jooksul",
+          "Töötavad koos igasuguste pildiformaatidega, mida üles laadite"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI pildi optimeerimise enne ja pärast võrdlus",
+        "cta": "Loe lähemalt"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Lihtne Menüü Halduse",
+        "shortDescription": "Uuendage oma menüüd sekunditega, mitte tundidega. Lisage uusi toite, muutke hindu, korraldage kategooriaid - kõik lihtsa lohistamise ja kukutamisega igalt seadmelt. Ei ole tehnilisi oskusi vaja. Muudatused lähevad kohe live, nii et teie kliendid näevad alati uusimaid pakkumisi.",
+        "description": "Menüü haldamine pole kunagi olnud lihtsam. Lisage kategooriaid, looge toite koos fotode ja kirjeldustega, seadke hinnad ja korraldage kõik lihtsa lohistamise ja kukutamisega. Muudatused ilmuvad kohe teie live veebisaidil.",
+        "fullDescription": "Unustage keerulised sisuhaldussüsteemid. IQ Rest'i menüü redaktor on loodud restoranide omanikele, mitte veebiarendajatele. Looge uus kategooria sekunditega, lisage toite mõne puudutusega, laadige fotosid otse oma telefonist. Looge esemeid ümber, lülitage nähtavust välja müüdud toodete jaoks ja näete muudatusi kohe live.",
+        "benefits": [
+          "Intuitiivne kategooriate ja esemete loomine",
+          "Lohistamine ja kukutamine ümberkorraldamiseks",
+          "Lülitage esemed sisse/välja ilma kustutamata",
+          "Kohesed uuendused - muudatused ilmuvad sekunditega",
+          "Korraldage piiramatult kategooriaid ja toite"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Lihtne restorani menüü haldamise juhtpaneel",
+        "cta": "Vaata Menüü Redaktorit"
+      },
+      {
+        "id": "analytics",
+        "title": "Igapäevased Analüütika ja Ülevaated",
+        "shortDescription": "Jälgige lehevaateid, keeli ja kliendi käitumist üksikasjalike igapäevaste aruannetega",
+        "description": "Mõistke oma kliente põhjalike analüütikate abil. Näete igapäevaseid lehevaateid, populaarseid keeli, enim vaadatud lehti ja jälgige trende aja jooksul. Tehke andmepõhiseid otsuseid oma menüü optimeerimiseks.",
+        "fullDescription": "Teadmine on jõud. Meie analüütika juhtpaneel näitab teile täpselt, kuidas kliendid teie restorani veebisaidiga suhtlevad. Millised lehed saavad kõige rohkem vaateid? Milliseid keeli teie kliendid eelistavad? Kas vaated suurenevad nädalast nädalasse? Kasutage neid teadmisi oma menüü optimeerimiseks, sihtige õigeid kliente ja kasvatage oma äri.",
+        "benefits": [
+          "Igapäevased, nädalased ja kuised vaatamisstatistikad",
+          "Keele eelistuse jaotamine",
+          "Lehekülg-lehelt tulemuslikkuse jälgimine",
+          "Aja jooksul trendide analüüs",
+          "Andmete eksportimine edasiseks analüüsiks"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Restorani analüütika juhtpaneel igapäevaste statistikutega",
+        "cta": "Loe lähemalt"
+      },
+      {
+        "id": "reservations",
+        "title": "Laudade Broneerimise Süsteem",
+        "shortDescription": "Lõpetage klientide kaotamine mööda läinud kõnede tõttu. Aktsepteerige laudade broneeringuid 24/7 otse oma veebisaidilt - kliendid valivad kuupäeva, kellaaja ja laua sekunditega. Automaatne kinnitamine, e-posti teavitused ja lihtne juhtpaneel, et kõike hallata.",
+        "description": "Sisseehitatud broneerimissüsteem võimaldab klientidel broneerida laudu otse teie veebisaidilt. Valige automaatne kinnitamine saadavuse alusel või vaadake iga broneeringut käsitsi. Hallake kõiki broneeringuid oma juhtpaneelilt.",
+        "fullDescription": "Telefoniga broneerimine on aeganõudev ja kergesti unustatav. IQ Rest'i broneerimissüsteem töötab 24/7. Kliendid valivad kuupäeva, kellaaja ja seltskonna suuruse ning broneerivad kohe. Saate seadistada automaatse kinnitamise laua saadavuse alusel või vaadata iga taotlust käsitsi. Vähendage mitte-tulekuid e-posti kinnitustega.",
+        "benefits": [
+          "24/7 online broneerimise võimalus",
+          "Automaatne või käsitsi kinnitamise režiimid",
+          "Laudade ja mahutavuse haldamine",
+          "E-posti teavitused broneeringute kohta",
+          "Kalendri vaade lihtsaks ajakava koostamiseks"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Restoranide veebipõhine laudade broneerimise süsteem",
+        "cta": "Uurige Laudade Broneerimist"
+      },
+      {
+        "id": "custom-design",
+        "title": "Video ja Foto Taustad",
+        "shortDescription": "Esimene mulje müüb. Köitke kliente hetkest, kui nad skaneerivad teie QR koodi, hämmastava video või kauni foto abil teie restorani atmosfäärist või teie allkirja roogast. Erakordne konkurentidest, luues esilehe, mis tundub kvaliteetne ja professionaalne.",
+        "description": "Looge meeldejääv esimene mulje kohandatud video või foto taustadega oma esilehel. Laadige üles oma restorani atmosfääri video või kauni toidu foto, et köita kliente kohe.",
+        "fullDescription": "Esimese mulje loomine on oluline. Kui kliendid skaneerivad teie QR koodi, peaksid nad kohe muljet saama. Laadige üles video oma restorani atmosfäärist, köögi ajakava või hämmastav foto oma allkirja roogast. Teie esileht muutub visuaalseks kogemuseks, mis peegeldab teie restorani isikupära.",
+        "benefits": [
+          "Toetab video ja pildi taustu",
+          "Automaatne optimeerimine kiireks laadimiseks",
+          "Töötavad ideaalselt mobiilseadmetes",
+          "Loob meeldejääva esimese mulje",
+          "Peegeldab teie restorani ainulaadset atmosfääri"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Restorani veebisait video taustaga",
+        "cta": "Vaata Video Taustu"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Kohandatud Värviskeem",
+        "shortDescription": "Tehke oma menüü tõeliselt enda omaks kohandatud aktsentvärvidega, mis sobivad teie restorani brändi identiteediga. Valige 12 kaunist eelnevalt määratud värvi hulgast või valige oma täpne brändi varjund. Iga nupp, esiletõstetud element ja interaktiivne element kohandub, et luua ühtne, professionaalne välimus, mida kliendid mäletavad.",
+        "description": "Teie restorani veebisait peaks vastama teie brändile. Valige eelnevalt määratud värviskeemide hulgast või valige oma täpne brändi värv. Koos automaatse heleda/tumedate teemade toetusega näeb teie menüü alati professionaalne välja.",
+        "fullDescription": "Brändi järjepidevus on oluline. IQ Rest võimaldab teil kohandada aktsentvärvi, mida kasutatakse kogu teie veebisaidil - nupud, esiletõstetud elemendid ja interaktiivsed elemendid kõik vastavad teie brändile. Valige hoolikalt koostatud eelnevalt määratud värvide hulgast või sisestage oma täpne brändi värv. Süsteem tagab automaatselt loetavuse nii heledates kui tumedates režiimides.",
+        "benefits": [
+          "Kohandatud aktsentvärvi valik",
+          "Eelnevalt määratud värviskeemid saadaval",
+          "Automaatne hele/tume teema tugi",
+          "Järjepidev bränding kõigil lehtedel",
+          "Ligipääsetavuse optimeeritud värvi kontrast"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Kohandatud värviskeem ja brändinguvõimalused",
+        "cta": "Uurige Värviskeeme"
+      },
+      {
+        "id": "personal-support",
+        "title": "Isiklik Veebitugi",
+        "shortDescription": "Saage isiklikku abi tõelistelt inimestelt - mitte vestlusrobotidelt - kõigi küsimuste jaoks",
+        "description": "Iga restoran saab isiklikku veebitugi. Kas teil on küsimus? Kas vajate abi seadistamisel? Kas soovite funktsiooni soovitada? Tõelised inimesed vastavad kiiresti, et aidata teil oma digitaalses menüüs edu saavutada.",
+        "fullDescription": "Usume, et iga restoran väärib isiklikku tähelepanu. Kui võtate ühendust toega, räägite tõeliste inimestega, kes mõistavad restorane ja saavad tegelikult aidata. Ei mingeid vestlusroboteid, ei automaatseid vastuseid, ei pileti järjekordi. Olgu teil abi oma esimese roa lisamisel või soovite nõu oma menüü optimeerimiseks, oleme siin teie jaoks.",
+        "benefits": [
+          "Reaalsed inimtoetused - ei vestlusroboteid",
+          "Kiired vastamise ajad",
+          "Abi seadistamise ja optimeerimisega",
+          "Funktsioonisoovitused on teretulnud",
+          "Saadaval kõigi plaanide jaoks, sealhulgas tasuta"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Isiklik veebitugi restoranidele",
+        "cta": "Loe lähemalt"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR Menüü ja Restorani Veebisaidi Hinnakujundus",
+    "subtitle": "Ilma peidetud tasudeta, ilma üllatusteta. Käivita oma restorani veebisait täna tasuta — uuenda ainult siis, kui oled valmis kasvama.",
+    "seo": {
+      "title": "Miks valida IQ Rest oma restorani või kohviku jaoks?",
+      "text": "Loo professionaalne QR menüü ja veebisait oma restoranile või kohvikule minutitega. Sinu külalised skaneerivad lihtsalt QR koodi, et vaadata sinu digitaalset menüüd oma telefonis — rakendust pole vaja. Uuenda hindu, lisa uusi roogasid ja muuda kirjeldusi koheselt. AI-põhiste tõlgete abil teenindad rahvusvahelisi kliente nende emakeeles. Jälgi, millised road saavad kõige rohkem vaatamisi sisseehitatud analüütika abil. Olgu sul väike kohvik või kasvav restoranikett, IQ Rest aitab sul moderniseerida oma menüü kogemust, samal ajal vähendades trükikulusid."
+    },
+    "monthly": "Kuu",
+    "yearly": "Aasta",
+    "save": "(Säästa 25%)",
+    "perMonth": "/kuu",
+    "billedYearly": "Arve aastas (€{total})",
+    "forever": "Tasuta igavesti",
+    "popular": "Kõige Populaarsem",
+    "plans": {
+      "free": {
+        "name": "Tasuta",
+        "description": "Täiuslik IQ Resti proovimiseks",
+        "cta": "Alusta tasuta",
+        "highlights": [
+          "Restorani veebisait",
+          "QR Menüü",
+          "300 skaneerimist/kuu",
+          "2 keelt",
+          "AI pilditöötlus",
+          "Analüütika"
+        ]
+      },
+      "basic": {
+        "name": "Põhi",
+        "description": "Suurepärane väikestele restoranidele",
+        "cta": "Alusta",
+        "highlights": [
+          "Kõik Tasuta plaanis, pluss:",
+          "4,500 skaneerimist/kuu",
+          "3 keelt",
+          "AI tõlked",
+          "Kohandatud värviteema",
+          "Broneeringud"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Kasvavatele restoranikettidele",
+        "cta": "Alusta",
+        "highlights": [
+          "Kõik Põhi plaanis, pluss:",
+          "Piiramatu skaneerimine",
+          "6 keelt",
+          "Prioriteetne tugi",
+          "Kõik funktsioonid kaasatud"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Võrdle plaane",
+      "subtitle": "Vaata, milline plaan sobib sulle"
+    },
+    "features": {
+      "website": "Restorani veebisait",
+      "qrMenu": "QR Menüü",
+      "scans": "Kuu skaneerimised",
+      "languages": "Toetatud keeled",
+      "aiTranslation": "AI tõlked",
+      "aiImages": "AI pilditöötlus",
+      "analytics": "Analüütika",
+      "customTheme": "Kohandatud värviteema",
+      "background": "Taustapilt ja video",
+      "support": "Tugi",
+      "reservations": "Broneeringud"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Piiramatu",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Vaja on abi? Räägime",
+    "subtitle": "Tere, mina olen Bogdan — IQ Resti asutaja. Ma lõin selle platvormi oma kohviku jaoks ja nüüd aitab see sadu restorane üle kogu maailma. Kas sul on küsimus või idee? Kirjuta mulle otse. Ei mingeid roboteid, ei mingit ootamist — lihtsalt tõeline vestlus.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Võta ühendust",
+      "email": "Teie e-post",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Teema",
+      "subjectPlaceholder": "Millest see räägib?",
+      "message": "Sõnum",
+      "messagePlaceholder": "Räägi mulle, mis sul mõttes on...",
+      "submit": "Saada sõnum",
+      "sending": "Saatmine...",
+      "success": "Teie sõnum on saadetud! Aitäh, et ühendust võtsite. Vastan teile varsti.",
+      "error": "Sõnumi saatmine ebaõnnestus. Palun proovige hiljem uuesti."
+    }
+  },
+  "languages": {
+    "en": "Inglise",
+    "es": "Hispaania"
+  },
+  "cookieConsent": {
+    "title": "Kasutame küpsiseid",
+    "description": "Kasutame küpsiseid, et parandada teie sirvimiskogemust, pakkuda isikupärastatud sisu ja analüüsida meie liiklust. Klõpsates \"Aktsepteeri kõik\", nõustute meie küpsiste kasutamisega.",
+    "acceptAll": "Aktsepteeri kõik",
+    "rejectAll": "Lükka kõik tagasi",
+    "customize": "Kohanda",
+    "learnMore": "Uuri lähemalt"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigeerimine",
+      "pricing": "Hinnakujundus",
+      "features": "Funktsioonid",
+      "contacts": "Kontaktid",
+      "faq": "Küsimused",
+      "changelog": "Muudatuste ajalugu"
+    },
+    "legal": {
+      "title": "Õiguslik",
+      "terms": "Kasutustingimused",
+      "privacy": "Privaatsuspoliitika",
+      "cookies": "Küpsiste poliitika",
+      "sitemap": "Saidikaart"
+    },
+    "copyright": "© 2025 IQ Rest. Kõik õigused kaitstud."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Muutuste ajalugu - IQ Rest uuendused ja uued funktsioonid",
+      "description": "Püsi kursis IQ Rest'i uusimate funktsioonide ja täiustustega - sinu digitaalne QR menüü lahendus restoranidele ja kohvikutele"
+    },
+    "title": "Muutuste ajalugu",
+    "subtitle": "Viimased uuendused ja uued funktsioonid sinu restorani QR menüüs",
+    "readMore": "Loe rohkem",
+    "backToChangelog": "Tagasi muudatuste logisse",
+    "seo": {
+      "title": "IQ Rest uuenduste kohta",
+      "description": "IQ Rest paraneb pidevalt, et aidata restoranidel ja kohvikutel luua professionaalseid digitaalseid QR menüüsid. Jälgige meie muudatuste logi, et olla kursis oma restorani veebisaidi ja QR menüü lahenduse uusimate funktsioonidega."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Kohandatav tugi teie restorani QR menüü jaoks",
+        "description": "Saage kohandatud tugi kõigi küsimuste ja muudatuste jaoks teie restorani või kohviku QR menüüs. Otsene vestlus meie meeskonnaga kiireks abiks.",
+        "meta": {
+          "title": "Kohandatav tugi restorani QR menüü jaoks | IQ Rest",
+          "description": "Saage kohandatud tugi kõigi küsimuste ja muudatuste jaoks teie restorani või kohviku QR menüüs. Kiire abi kohvikutele ja restoranidele otsese vestluse toe kaudu."
+        },
+        "content": {
+          "intro": "IQ Rest pakub nüüd kohandatud tuge kõigi küsimuste ja muudatuste jaoks teie restorani või kohviku QR menüüs. Me mõistame, et restorani või kohviku juhtimine nõuab kiireid lahendusi, kui probleemid tekivad. Meie uus rakendusesisene tugivestlus annab teile otsese juurdepääsu meie meeskonnale, tagades, et teie QR menüü jääb täiuslikuks ja teie kliendid saavad alati parima kogemuse.",
+          "image1Alt": "Tugivestluse liides restorani QR menüü jaoks",
+          "image1Caption": "Otsene tugivestlus kohandatud abiks teie restorani QR menüüga",
+          "section1Title": "Otsene vestlustugi teie restoranile",
+          "section1Text": "Meie kohandatud tugisüsteem teie QR menüü restorani või kohviku jaoks töötab otse teie armatuurlaud. Pole vaja otsida kontaktmeile või oodata telefonijärjekordades. Lihtsalt avage tugivestlus, kirjutage oma küsimus või kirjeldage vajalikku muudatust ning meie meeskond vastab kiiresti. Kas vajate abi menüüelementide värskendamisel, kuvamisprobleemide lahendamisel või analüütika mõistmisel - kohandatud tugi on vaid sõnumi kaugusel.",
+          "section2Title": "Kiire abi kõigi QR menüü muudatuste jaoks",
+          "section2Text": "Kas peate enne kiiret nädalavahetust hindu värskendama? Soovite lisada hooajalisi tooteid oma restorani QR menüüsse? Meie kohandatud tugi aitab kohvikutel ja restoranidel muudatusi kiiresti teha. Me juhendame teid protsessis või saame vajadusel otse abiks olla. See kohandatud tugi tagab, et teie digitaalne menüü kajastab alati teie praeguseid pakkumisi, hoides kliendid informeeritud ja rahul.",
+          "section3Title": "Tugi, mis mõistab restoranide vajadusi",
+          "section3Text": "Meie kohandatud tugimeeskond mõistab restorani või kohviku juhtimise ainulaadseid väljakutseid. Me teame, et katki QR menüü võib tähendada kaotatud kliente ja pettunud töötajaid. Seetõttu prioriseerib meie tugi teie QR menüü restorani või kohviku jaoks kiireid reageerimisaegu ja praktilisi lahendusi. Alates tehnilistest küsimustest kuni funktsioonide taotlusteni - me oleme siin, et aidata teie digitaalsel menüül õnnestuda.",
+          "benefitsTitle": "Kohandatud QR menüü toe eelised",
+          "benefit1": "Otsene rakendusesisene vestlus - ei ole vaja väliseid e-kirju ega telefonikõnesid",
+          "benefit2": "Kiired reageerimised, et hoida teie restoran sujuvalt toimimas",
+          "benefit3": "Juhend menüü värskenduste, muudatuste ja uute funktsioonide osas",
+          "benefit4": "Tehniline abi kõigi QR koodi või veebisaidi probleemide jaoks",
+          "benefit5": "Funktsioonide taotlused ja ettepanekud on oodatud ja arvesse võetud",
+          "benefit6": "Tugi, mis mõistab restorani ja kohviku tegevust",
+          "conclusionTitle": "Saage täna kohandatud tugi",
+          "conclusionText": "IQ Rest'i kohandatud tugi teie QR menüü restorani või kohviku jaoks on alati käeulatuses. Meie pühendunud meeskond tagab, et teie digitaalne menüü töötab laitmatult, andes teile rohkem aega keskenduda sellele, mis on oluline - suurepärase toidu serveerimine. Juurdepääs tugiteenusele otse oma armatuurlaud ja kogege erinevust, mida kohandatud abi teie restoranile või kohvikule toob.",
+          "ctaText": "Kas olete valmis kogema kohandatud tuge oma QR menüü jaoks?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Üksikasjalik analüütika teie restorani veebisaidi ja QR menüü jaoks",
+        "description": "Jälgige külastajate ülevaateid üksikasjaliku analüütikaga teie restorani veebisaidi ja QR menüü jaoks. Jälgige lehevaateid, unikaalseid külastajaid, keeli ja päevaseid suundi.",
+        "meta": {
+          "title": "Üksikasjalik analüütika restorani veebisaidi ja QR menüü jaoks | IQ Rest",
+          "description": "Saage üksikasjalik analüütika oma restorani veebisaidi ja QR menüü jaoks. Jälgige lehevaateid, unikaalseid külastajaid, populaarseid lehti ja keele eelistusi. Üksikasjalikud ülevaated restoranide ja kohvikute jaoks."
+        },
+        "content": {
+          "intro": "IQ Rest pakub nüüd üksikasjalikku analüütikat teie restorani veebisaidi ja QR menüü jaoks. Arusaamine, kuidas kliendid teie digitaalse menüüga suhtlevad, on eduks ülioluline. Meie uus analüütika armatuurlaud annab teile põhjalikud ülevaated külastajate käitumisest, populaarsetest lehtedest, keele eelistustest ja päevastest suundadest - kõik vajalikud üksikasjalikud analüütikad, et teie restorani veebisait ja QR menüü õitseksid.",
+          "image1Alt": "Üksikasjalik analüütika armatuurlaud restorani veebisaidi ja QR menüü jaoks",
+          "image1Caption": "Üksikasjalik analüütika armatuurlaud, mis näitab teie restorani QR menüü statistikat",
+          "section1Title": "Üksikasjalik külastajate jälgimine teie restoranile",
+          "section1Text": "Meie üksikasjalik analüütika teie restorani veebisaidi ja QR menüü jaoks jälgib iga kliendi interaktsiooni. Vaadake täna, selle nädala ja selle kuu kokkuvõtteid. Jälgige unikaalseid külastajaid, et mõista oma tegelikku sihtrühma suurust. Analüütika armatuurlaud annab üksikasjalikud ülevaated, kuidas kliendid teie QR menüüd navigeerivad - alates avalehelt kuni teie täis menüü, kontaktide ja keele valikuni. See üksikasjalik analüütika aitab restoranidel teha andmepõhiseid otsuseid.",
+          "section2Title": "Lehe ja keele analüütika",
+          "section2Text": "Mõistke, millised teie restorani veebisaidi ja QR menüü lehed on kõige populaarsemad. Meie üksikasjalik analüütika jagab vaateid lehe tüübi järgi: Avaleht, Menüü, Kontaktid ja Keele valik. Vaadake, milliseid keeli teie kliendid eelistavad, aidates teil prioriseerida tõlkeid ja paremini teenindada rahvusvahelisi külalisi. Need üksikasjalikud analüütikad teie restorani QR menüü jaoks paljastavad kliendi käitumismustrid, millest te kunagi teadlikud ei olnud.",
+          "section3Title": "Päevased suundumused ja kasutuse jälgimine",
+          "section3Text": "Jälgige, kuidas teie restorani veebisait ja QR menüü aja jooksul toimivad päevase vaate graafikute abil. Vaadake mustreid kliendi kaasamises nädalas. Jälgige oma igakuist kasutust oma plaani piirangute suhtes selge edenemise ribaga. Meie üksikasjalik analüütika aitab restoranidel tuvastada tipptunde ja optimeerida oma digitaalset kohalolekut. Olenemata sellest, kas olete väike kohvik või hõivatud restoran, aitavad need ülevaated teil oma kliente paremini mõista.",
+          "benefitsTitle": "Üksikasjaliku analüütika eelised restoranidele",
+          "benefit1": "Reaalajas vaate arvud: täna, nädalas ja kuus statistika kiire ülevaade",
+          "benefit2": "Unikaalsete külastajate jälgimine, et mõista oma tegelikku kliendikatte",
+          "benefit3": "Lehekülgede kaupa jaotus, mis näitab, millist sisu kliendid kõige rohkem vaatavad",
+          "benefit4": "Keele analüütika, et optimeerida mitmekeelse menüü pakkumisi",
+          "benefit5": "Päevased suundumuste graafikud, et tuvastada mustreid kliendi käitumises",
+          "benefit6": "Kasutuse jälgimine selgete piirangute ja uuendamise meeldetuletustega",
+          "conclusionTitle": "Alustage täna üksikasjaliku analüütika kasutamist",
+          "conclusionText": "IQ Rest'i üksikasjaliku analüütikaga teie restorani veebisaidi ja QR menüü jaoks saate väärtuslikke ülevaateid kliendi käitumisest. Jälgige vaateid, jälgige suundi ja mõistke oma sihtrühma paremini kui kunagi varem. Need üksikasjalikud analüütikad aitavad restoranidel ja kohvikutel teha teadlikke otsuseid oma digitaalse menüü strateegia osas. Juurdepääs oma analüütika armatuurlaud nüüd ja avastage, mida teie kliendid tõeliselt soovivad.",
+          "ctaText": "Kas olete valmis uurima üksikasjalikku analüütikat oma restorani jaoks?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Kohene QR menüü ja restorani veebisaidi generaator",
+        "description": "Looge oma restorani või kohviku QR menüü ja veebisait koheselt. Genereerige printimiseks QR koode kohandatud tekstiga ja mitme paigutusega minutitega - tehnilisi oskusi pole vaja.",
+        "meta": {
+          "title": "Kohene QR menüü ja restorani veebisaidi generaator | IQ Rest",
+          "description": "Genereerige QR menüü ja restorani veebisait koheselt. Looge oma kohviku või restorani jaoks kohandatud QR koode minutitega printimiseks A4, A5, A6 paberiformaatidele. Tasuta kohene generaator."
+        },
+        "content": {
+          "intro": "IQ Rest pakub nüüd kohest QR menüü ja restorani veebisaidi generaatorit, mis loob professionaalseid digitaalseid menüüsid minutitega. Olenemata sellest, kas juhite hubast kohvikut või hõivatud restorani, võimaldab meie kohene generaator teil luua, kohandada ja printida QR koode, mis viivad otse teie digitaalse menüü veebisaidile. Tehnilisi oskusi pole vaja, pole ooteaega - lihtsalt kohene QR menüü loomine restoranidele ja kohvikutele igas suuruses.",
+          "image1Alt": "Kohene QR menüü generaator restorani ja kohviku veebisaitidele",
+          "image1Caption": "Genereerige kohandatud QR koode oma restorani veebisaidi jaoks koheselt",
+          "section1Title": "Kuidas kohene QR menüü generaator töötab",
+          "section1Text": "Meie kohene QR menüü ja restorani veebisaidi generaator loob kõik, mida vajate minutitega. Lihtsalt lisage oma menüüelemendid ja süsteem genereerib koheselt unikaalse QR koodi, mis on seotud teie restorani veebisaidiga. Generaator toetab mitmeid paberiformaate (A4, A5, A6, Letter), erinevaid QR paigutusi lehe kohta (1 kuni 16 koodi) ja kohandatavat teksti iga QR koodi all. Vaadake täpselt, mida printite, seejärel laadige alla või printige otse - teie kohene QR menüü on valmis lauda esitamiseks.",
+          "section2Title": "Kohandatavad QR koodid igasuguste restoranide või kohvikute jaoks",
+          "section2Text": "Kohene QR menüü generaator pakub täielikku kohandamist teie restorani või kohviku brändingu jaoks. Lisage oma restorani nimi QR koodi kohale, lisage kohandatud tekst nagu 'Skaneeri menüü jaoks' või 'QR menüü' all, ja valige kolme teksti suuruse vahel. Generaator toodab puhtaid, lihtsaid QR koode, mis on optimeeritud kiireks skaneerimiseks. Olenemata sellest, kas vajate suurt QR koodi plakati jaoks või 16 väiksemat koodi individuaalsetele laudade kaartidele, meie kohene generaator kohandub teie restorani vajadustega.",
+          "section3Title": "Prinditavad QR menüüd sekunditega",
+          "section3Text": "Erinevalt keerukatest disainitööriistadest loob meie kohene QR menüü generaator automaatselt prinditavad paigutused. Valige oma paberiformaat, valige, kui palju QR koode lehe kohta, ja vajutage print - see on kõik. Generaator hoolitseb marginaalide, vahemaa ja suuruse eest, et tagada iga kord täiuslikud prindid. Kohvikutele ja restoranidele, kes vajavad professionaalseid QR menüüsid kiiresti, säästab see kohene lähenemine tunde disainitööd ja toob teie digitaalse menüü kiiremini klientide ette.",
+          "benefitsTitle": "Kohese QR menüü genereerimise eelised",
+          "benefit1": "Genereerige täielik QR menüü ja restorani veebisait minutitega, mitte tundidega",
+          "benefit2": "Mitmed paberiformaadid: A4, A5, A6 ja Letter suurused toetatud",
+          "benefit3": "Paindlikud paigutused: alates ühest suurest QR koodist kuni 16 koodi lehe kohta",
+          "benefit4": "Kohandatud tekst ja suuruse valikud teie restorani brändingu jaoks",
+          "benefit5": "Prinditav väljund automaatsete marginaalide ja vahemaa seadistustega",
+          "benefit6": "Laadige alla PNG-na või printige otse oma brauserist",
+          "conclusionTitle": "Alustage kohese QR menüü generaatori kasutamist",
+          "conclusionText": "IQ Rest'i kohese QR menüü ja restorani veebisaidi generaatoriga saate professionaalse digitaalse menüü minutitega üles seada. Ei ole vajalik disainioskusi, ei ole vajalik kallis tarkvara - lihtsalt kohene kauni, skaneeritava QR koodi genereerimine, mis ühendab kliendid teie menüüga. Täiuslik uutele restoranidele, kes käivitavad oma esimese QR menüü või kehtivatele kohvikutele, kes uuendavad oma olemasolevat seadet. Genereerige oma kohene QR menüü täna ja moderniseerige oma söögikogemus.",
+          "ctaText": "Kas olete valmis genereerima oma kohese QR menüü?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Avalik restorani veebisait QR menüü skaneerimiseks",
+        "description": "Käitage oma avalikku restorani veebisaiti QR menüüga. Kliendid skaneerivad koodi ja näevad koheselt teie digitaalset menüüd koos kategooriate, elementide, piltide ja hindadega.",
+        "meta": {
+          "title": "Avalik restorani veebisait QR menüü skaneerimiseks | IQ Rest",
+          "description": "Looge avalik restorani veebisait QR menüü skaneerimiseks. Kliendid skaneerivad QR koodi ja vaatavad teie digitaalset menüüd koos kategooriate, roogade, piltide ja hindadega koheselt."
+        },
+        "content": {
+          "intro": "IQ Rest pakub nüüd täielikult funktsionaalset avalikku restorani veebisaiti QR menüü skaneerimiseks. Teie kliendid saavad lihtsalt skaneerida QR koodi ja koheselt pääseda juurde teie täielikule digitaalsele menüüle. Avalik veebisait kuvab kõik teie kategooriad, menüüelemendid, pildid, kirjeldused ja hinnad kaunis, mobiilisõbralikus liideses. See avalik restorani veebisait QR skaneerimiseks muudab seda, kuidas külalised teie menüüga suhtlevad.",
+          "image1Alt": "Avalik restorani veebisait, mis näitab QR menüü kategooriaid",
+          "image1Caption": "Mobiilisõbralik avalik restorani veebisait, mis kuvab menüü kategooriaid QR skaneerimiseks",
+          "section1Title": "Kuidas avalik restorani veebisait töötab QR skaneerimisega",
+          "section1Text": "Kui kliendid skaneerivad teie restorani QR koodi, viiakse nad koheselt teie avalikule veebisaidile, mis kuvab täielikku menüüd. Rakenduse allalaadimist ei ole vajalik, pole ooteaega - lihtsalt kohene juurdepääs teie pakkumistele. Avalik restorani veebisait QR menüü jaoks näitab kategooriaid üleval, et hõlbustada navigeerimist, kus elemendid on esitatud elegantse kaardipaigutuse kaudu, mis sisaldab pilte, kirjeldusi ja hindu. Kliendid saavad kategooriatele klõpsata, et filtreerida elemente või kerida läbi kogu menüü.",
+          "section2Title": "Teie avaliku restorani QR menüü veebisaidi funktsioonid",
+          "section2Text": "Teie avalik restorani veebisait sisaldab kõike, mida kliendid vajavad: kategooria vahekaartide kiireks navigeerimiseks, kvaliteetseid roogade pilte, üksikasjalikke kirjeldusi, hindu teie valuutas ja aktiivseid elemendi indikaatoreid. Disain on optimeeritud mobiilseadmete jaoks, kuna enamik QR skaneeringuid toimub telefonides. Elemendid laadivad kiiresti, tänu optimeeritud piltidele, ja liides on intuitiivne igas vanuses külalistele. Administraatori paneelis tehtud muudatused kuvatakse koheselt avalikul veebisaidil.",
+          "image2Alt": "Restorani QR menüü veebisait, mis näitab toidu elemente koos piltidega",
+          "image2Caption": "Avalik menüü veebisait, mis kuvab roogasid optimeeritud piltide ja kirjeldustega",
+          "section3Title": "Mitmekeelne tugi rahvusvahelistele külalistele",
+          "section3Text": "Avalik restorani veebisait sisaldab keele valijat, et rahvusvahelised külalised saaksid vaadata teie menüüd oma eelistatud keeles. Praegu toetatakse inglise ja hispaania keelt, varsti lisanduvad veel keeled. See muudab teie avaliku restorani QR menüü turistidele ja mitmekesistele kliendibaasidele kergesti ligipääsetavaks. Keele eelistus salvestatakse tagasikülastuste jaoks, pakkudes isikupärastatud kogemust.",
+          "image3Alt": "Keele valik avalikul restorani QR menüü veebisaidil",
+          "image3Caption": "Keele valija, mis võimaldab külalistel vaadata avalikku menüüd oma eelistatud keeles",
+          "benefitsTitle": "Teie avaliku restorani QR menüü veebisaidi eelised",
+          "benefit1": "Kohene menüü juurdepääs - kliendid skaneerivad ja vaatavad kohe, rakendust pole vaja",
+          "benefit2": "Mobiilis optimeeritud disain, et tagada ideaalne kuvamine igas nutitelefonis",
+          "benefit3": "Reaalajas uuendused - menüü muudatused kuvatakse koheselt klientidele",
+          "benefit4": "Kategooria navigeerimine, et hõlbustada teie pakkumiste sirvimist",
+          "benefit5": "Mitmekeelne tugi rahvusvahelistele klientidele",
+          "benefit6": "Kiire laadimine optimeeritud piltide ja kaasaegse tehnoloogia abil",
+          "conclusionTitle": "Alustage oma avaliku restorani QR menüü veebisaidi kasutamist",
+          "conclusionText": "IQ Rest'i avaliku restorani veebisaidi QR menüü skaneerimiseks pakute klientidele kohest juurdepääsu teie täielikule menüüle. Lihtsalt lisage oma kategooriad ja elemendid administraatori paneeli kaudu, genereerige oma QR kood ja kuvage see oma laudadel. Kliendid skaneerivad ja sirvivad teie kaunist digitaalset menüüd sekunditega. Ei rohkem trükikulusid, ei rohkem aegunud menüüsid - lihtsalt kaasaegne söögikogemus.",
+          "ctaText": "Kas olete valmis käivitama oma avaliku restorani QR menüü veebisaidi?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Kuidas lisada elemente restorani veebisaidile QR menüüga",
+        "description": "Täielik juhend, kuidas lisada elemente oma restorani veebisaidile QR menüüga. Õppige, kuidas lisada roogasid koos piltide, hindade ja kirjeldustega oma digitaalsesse menüüsse minutitega.",
+        "meta": {
+          "title": "Kuidas lisada elemente restorani veebisaidile QR menüüga | IQ Rest",
+          "description": "Samm-sammuline juhend, kuidas lisada elemente restorani veebisaidile QR menüüga. Lisage roogasid, seadke hinnad, laadige üles pilte ja korraldage oma digitaalne menüü. Lihtne elementide haldamine restoranidele."
+        },
+        "content": {
+          "intro": "Kas soovite teada, kuidas lisada elemente oma restorani veebisaidile QR menüüga? IQ Rest teeb menüüelementide lisamise ja haldamise oma digitaalses restorani veebisaidil uskumatult lihtsaks. Olenemata sellest, kas lisate oma esimest rooga või värskendate kogu menüüd, aitab meie intuitiivne elementide haldamise süsteem teil luua professionaalse QR menüü, mis esitleb teie kööki täiuslikult. See juhend näitab teile täpselt, kuidas lisada elemente restorani veebisaidile QR menüüga, sealhulgas pilte, hindasid, kirjeldusi ja kategooriaid.",
+          "image1Alt": "Kuidas lisada elemente restorani veebisaidile QR menüüga - elementide loendi vaade",
+          "image1Caption": "Elementide haldamise liides, mis näitab, kuidas lisada elemente teie restorani QR menüü veebisaidile",
+          "section1Title": "Miks on elementide nõuetekohane lisamine teie restorani QR menüü veebisaidile oluline",
+          "section1Text": "Kui lisate elemente restorani veebisaidile QR menüüga, on esitlus kõik. Kliendid otsustavad, mida tellida, lähtudes sellest, kuidas teie roogade välimus ja kui hästi need on kirjeldatud. Meie elementide haldamise süsteem võimaldab teil lisada kauneid pilte, üksikasjalikke kirjeldusi, täpseid hindu ja korraldada elemendid kategooriatesse. Nii lisate elemente restorani veebisaidile, mis muudab sirvijad klientideks. Uuringud näitavad, et menüüd, millel on kvaliteetsed pildid, suurendavad tellimusi kuni 30%.",
+          "section2Title": "Samm-sammult: Kuidas lisada elemente restorani veebisaidile QR menüüga",
+          "section2Text": "Elementide lisamine oma restorani veebisaidile QR menüüga on IQ Restiga lihtne. Liikuge oma armatuurlaudade elementide sektsiooni ja klõpsake nuppu 'Lisa'. Sisestage elemendi nimi, kirjutage isuäratav kirjeldus, seadke hind ja valige kategooria. Laadige üles pilt oma roogast - meie süsteem optimeerib automaatselt pildid 500x500 piksliks, et tagada täiuslik kuvamine. Lülitage aktiivne olek, et näidata või varjata elemente koheselt. See sujuv protsess muudab elementide lisamise restorani veebisaidile QR menüüga minutitega lihtsaks.",
+          "image2Alt": "Elemendi vorm, mis näitab, kuidas lisada elemente restorani QR menüü veebisaidile",
+          "image2Caption": "Lihtne vormi liides elementide lisamiseks teie restorani veebisaidile QR menüüga",
+          "section3Title": "Pildi üleslaadimine ja optimeerimine teie restorani elementide jaoks",
+          "section3Text": "Kvaliteetsed pildid on hädavajalikud, kui lisate elemente restorani veebisaidile QR menüüga. Meie süsteem aktsepteerib JPEG, PNG, WebP ja GIF formaate kuni 5MB. Iga pilt on automaatselt suurendatud 500x500 piksliks ja muudetud WebP formaati kiireks laadimiseks, säilitades samas suurepärase kvaliteedi. See tähendab, et teie roogad näevad igas seadmes alati parimad välja. Professionaalne toidufotograafia parandab oluliselt, kuidas kliendid teie restorani tajuvad, kui nad sirvivad teie QR menüü veebisaiti.",
+          "benefitsTitle": "Elementide lisamise eelised teie restorani QR menüü veebisaidile",
+          "benefit1": "Lisage piiramatult menüüelemente koos piltide, kirjelduste ja hindadega",
+          "benefit2": "Automaatne pildi optimeerimine kiireks laadimiseks ja täiuslikuks kuvamiseks",
+          "benefit3": "Kategooriatesse korraldamine, et hõlbustada klientide navigeerimist",
+          "benefit4": "Aktiivne/aktiivne lüliti, et varjata välja müüdud elemente ilma kustutamata",
+          "benefit5": "Looge ja looge elemendid soovitud järjekorras",
+          "benefit6": "Mobiilisõbralik liides elementide lisamiseks igast seadmest",
+          "conclusionTitle": "Alustage elementide lisamist oma restorani QR menüü veebisaidile täna",
+          "conclusionText": "Nüüd teate täpselt, kuidas lisada elemente restorani veebisaidile QR menüüga, kasutades IQ Rest'i. Meie võimas elementide haldamise süsteem pakub kõike, mida vajate, et luua isuäratav digitaalne menüü. Lisage kauneid pilte, kirjutage veenvaid kirjeldusi, seadke konkurentsivõimelised hinnad ja korraldage oma elemendid loogilistesse kategooriatesse. Olenemata sellest, kas juhite väikest kohvikut või suurt restorani, teeb IQ Rest elementide lisamise restorani veebisaidile lihtsaks, et meelitada ja konverteerida kliente.",
+          "ctaText": "Kas olete valmis lisama elemente oma restorani veebisaidile QR menüüga?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "Kuidas teha QR koodi menüü restoranile kategooriatega",
+        "description": "Õppige, kuidas teha QR koodi menüü restoranile korraldatud kategooriatega. Uus kategooriate haldamise süsteem muudab struktureeritud digitaalsete menüüde loomise lihtsaks ja kiireks.",
+        "meta": {
+          "title": "Kuidas teha QR koodi menüü restoranile kategooriatega | IQ Rest",
+          "description": "Samm-sammuline juhend, kuidas teha QR koodi menüü restoranile kategooriatega. Korraldage oma digitaalne menüü lihtsa kategooriate haldamise abil. Looge professionaalsed restoranide QR menüüd minutitega."
+        },
+        "content": {
+          "intro": "Kas soovite teada, kuidas teha QR koodi menüü restoranile kategooriatega? IQ Rest pakub nüüd võimsat kategooriate haldamise süsteemi, mis muudab korraldatud digitaalsete menüüde loomise lihtsamaks kui kunagi varem. Olenemata sellest, kas juhite restorani, kohvikut või baari, aitab teie menüü korraldamine kategooriatega klientidel leida täpselt seda, mida nad otsivad. See värskendus näitab teile täpselt, kuidas teha QR koodi menüü restoranile hästi struktureeritud kategooriatega, mis parandavad söögikogemust.",
+          "image1Alt": "Kuidas teha QR koodi menüü restoranile - kategooriate loendi vaade",
+          "image1Caption": "Kategooriate haldamise liides, mis näitab, kuidas korraldada oma restorani QR menüü",
+          "section1Title": "Miks on kategooriad olulised, kui teete QR koodi menüü restoranile",
+          "section1Text": "Kui teete QR koodi menüü restoranile, on elementide korraldamine kategooriatesse hädavajalik. Kliendid ootavad loogilisi rühmitusi nagu eelroad, pearoad, magustoidud ja joogid. Meie uus kategooriate haldamise süsteem võimaldab teil luua piiramatult kategooriaid, seada nende kuvamise järjekorra ja lülitada nende nähtavust. Nii teete QR koodi menüü restoranile, mida kliendid armastavad - selge, korraldatud ja lihtne navigeerida. Uuringud näitavad, et restoranid, millel on hästi korraldatud digitaalsed menüüd, näevad 35% kõrgemat kliendi rahulolu.",
+          "section2Title": "Samm-sammult: Kuidas teha QR koodi menüü restoranile kategooriatega",
+          "section2Text": "QR koodi menüü tegemine restoranile kategooriatega on IQ Restiga lihtne. Esiteks, liikuge oma armatuurlaudade Kategooriate sektsiooni. Klõpsake rippmenüü nuppu, et lisada uus kategooria. Sisestage kategooria nimi, valikuline kirjeldus ja seadke, kas see on aktiivne. Uus sujuv liides näitab kõiki teie kategooriaid puhtas loendis koos tegevuse indikaatoritega. Kasutage üles- ja allanoole, et korraldada kategooriaid täpselt nii, nagu soovite, et need teie QR menüüs kuvataks. See intuitiivne lähenemine QR koodi menüü tegemisel restoranile tagab, et teie menüü on alati ideaalselt korraldatud.",
+          "image2Alt": "Kategooria vorm, mis näitab, kuidas teha QR koodi menüü restoranile",
+          "image2Caption": "Lihtne vormi liides restoranimenüü kategooriate loomiseks",
+          "section3Title": "Mobiilis optimeeritud kategooriate haldamine",
+          "section3Text": "Me teame, et restoranide omanikud on hõivatud ja haldavad sageli oma menüüsid liikvel olles. Seetõttu on meie kategooriate haldamine täielikult optimeeritud mobiilseadmete jaoks. Kui teete QR koodi menüü restoranile oma telefoniga, leiate kompaktse liidese, kus on kolme punkti menüü kiirete toimingute jaoks. Liigutage kategooriaid üles või alla, redigeerige üksikasju või kustutage kategooriaid - kõik oma nutitelefonist. See mobiilikeskne lähenemine tagab, et saate teha QR koodi menüü restoranile kategooriatega igal ajal ja igal pool.",
+          "benefitsTitle": "Kohandatud QR koodi menüü eelised kategooriatega",
+          "benefit1": "Korraldage menüüelemendid loogiliselt, et kliendid saaksid hõlpsasti leida, mida nad soovivad",
+          "benefit2": "Looge ja looge kategooriaid soovitud kuvamise järjekorras",
+          "benefit3": "Aktiivne/aktiivne lüliti, et varjata hooajalisi kategooriaid ilma kustutamata",
+          "benefit4": "Mobiilis optimeeritud liides, et hallata kategooriaid igast seadmest",
+          "benefit5": "Puhtad visuaalsed kujundused koos tegevuse indikaatoritega kiireks ülevaateks",
+          "benefit6": "Piiramatud kategooriad, et täielikult esindada teie restorani menüü struktuuri",
+          "conclusionTitle": "Alustage oma QR koodi menüü loomist kategooriatega täna",
+          "conclusionText": "Nüüd teate täpselt, kuidas teha QR koodi menüü restoranile kategooriatega, kasutades IQ Rest'i. Meie uus kategooriate haldamise süsteem pakub kõike, mida vajate professionaalse, hästi korraldatud digitaalse menüü loomiseks. Kategooriad aitavad klientidel teie menüüs kiiremini navigeerida, leida oma lemmikroogasid ja avastada uusi elemente. Olenemata sellest, kas teil on lihtne menüü mõne kategooriaga või ulatuslik menüü, kus on kümneid sektsioone, teeb IQ Rest QR koodi menüü loomise restoranile, mis jätab teie klientidele mulje, lihtsaks.",
+          "ctaText": "Kas olete valmis tegema QR koodi menüü oma restoranile kategooriatega?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Lihtne QR menüü loomine teie kohvikule - uus juhtpaneel",
+        "description": "Tutvustame meie uut administraatori juhtpaneeli, mis muudab QR menüüde loomise teie kohvikule uskumatult lihtsaks. Hallake kategooriaid, tooteid ja seadeid kaasaegse shadcn külgriba liidese kaudu.",
+        "meta": {
+          "title": "Lihtne QR menüü kohvikule - uus juhtpaneel | IQ Rest",
+          "description": "Looge QR menüü oma kohvikule lihtsalt meie uue juhtpaneeli abil. Kaasaegne külgriba liides kategooriate, toodete, QR koodide ja analüütika haldamiseks. Lihtne kohviku menüü loomine."
+        },
+        "content": {
+          "intro": "Meil on hea meel tutvustada meie täiesti uut administraatori juhtpaneeli, mis on loodud selleks, et muuta QR menüüde loomine teie kohvikule võimalikult lihtsaks. Olenemata sellest, kas juhite väikest kohvikut või hõivatud kohvikut, aitab meie kasutajasõbralik liides teil oma digitaalset menüüd vaevata hallata. Uus juhtpaneel sisaldab kaasaegset külgriba disaini, mis toob kõik tööriistad, mida vajate oma kohviku QR menüü loomiseks, otse teie sõrmede juurde.",
+          "image1Alt": "Lihtne QR menüü juhtpaneel kohviku haldamiseks",
+          "image1Caption": "Uus juhtpaneel külgriba navigeerimisega lihtsaks kohviku QR menüü loomiseks",
+          "section1Title": "Kaasaegne külgriba liides lihtsaks menüü haldamiseks",
+          "section1Text": "Uus juhtpaneel sisaldab sujuvat külgriba, mis muudab teie kohviku QR menüü seadete navigeerimise uskumatult lihtsaks. Selgelt korraldatud sektsioonidega, nagu Armatuurlaud, Kategooriad, Tooted, QR Kood, Analüütika, Seaded, Arveldamine ja Tugi, leiate ja haldate hõlpsasti iga aspekti oma kohviku digitaalsest menüüst. Külgriba kokku kukub mobiilseadmetes, tagades, et kõik funktsioonid on hõlpsasti ligipääsetavad, sõltumata sellest, millist seadet kasutate oma kohviku QR menüü haldamiseks.",
+          "section2Title": "Lihtne kategooriate ja toodete haldamine teie kohvikule",
+          "section2Text": "Oma kohviku QR menüü loomine ja korraldamine pole kunagi olnud lihtsam. Meie uued kategooriate ja toodete haldamise lehed on loodud lihtsust silmas pidades, võimaldades kohviku omanikel hõlpsasti lisada, redigeerida ja korraldada oma menüüelemente. Olenemata sellest, kas värskendate päevapakkumisi või lisate hooajalisi jooke, tagab kasutajasõbralik liides, et teie kohviku QR menüü jääb ajakohaseks ja atraktiivseks klientide jaoks.",
+          "section3Title": "Serveripoolne renderdamine kiireks jõudluseks",
+          "section3Text": "Uus juhtpaneel on loodud serveripoolse renderdamise (SSR) tehnoloogiaga, tagades, et teie kohviku QR menüü haldamise armatuurlaud laadib kiiresti ja tõhusalt. Kõik andmed tuuakse serverist, pakkudes reaalajas uuendusi ja sujuvat kogemust. See lihtne ja kiire lähenemine tähendab, et kulutate vähem aega ootamisele ja rohkem aega oma kohviku QR menüü täiuslikuks muutmisele.",
+          "benefitsTitle": "Miks see muudab QR menüü loomise kohvikutele lihtsaks",
+          "benefit1": "Lihtne navigeerimine kaasaegse külgriba liidese kaudu, et kiiresti pääseda juurde kõigile kohviku menüü funktsioonidele",
+          "benefit2": "Lihtne kategooriate haldamine, et korraldada oma kohviku QR menüü loogiliselt",
+          "benefit3": "Lihtne toote redigeerimine, et koheselt uuendada oma kohviku digitaalset menüüd",
+          "benefit4": "Lihtne QR koodi genereerimine ja kohandamine teie kohviku jaoks",
+          "benefit5": "Lihtne analüütika, et mõista, kuidas kliendid teie kohviku QR menüüga suhtlevad",
+          "benefit6": "Lihtne mobiilne juurdepääs - hallake oma kohviku QR menüüd igast seadmest",
+          "conclusionTitle": "Looge oma kohviku QR menüü lihtsal viisil",
+          "conclusionText": "Meie uus juhtpaneel tähistab suurt sammu edasi, et muuta QR menüü loomine kohvikute omanikele lihtsaks. Oma intuitiivse külgriba liidese, kiire serveripoolse renderdamise ja põhjalike haldustööriistadega pole kunagi olnud lihtsam luua ja hallata oma kohviku digitaalset QR menüüd. Liituge tuhandete kohvikutega, kes juba kasutavad IQ Rest'i, et pakkuda oma klientidele lihtsat, kaasaegset menüü kogemust.",
+          "ctaText": "Kas olete valmis looma lihtsa QR menüü oma kohvikule?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Saage QR menüü restoranidele - KKK lehe ja juhendite värskendused",
+        "description": "Uurige, kuidas saada QR menüü restoranidele meie täiustatud KKK lehe ja 4-sammulise juhendi abil. Avasta vastused levinud küsimustele oma restorani QR menüü saamise kohta, parema navigeerimise ja SEO optimeeritud sisuga.",
+        "meta": {
+          "title": "Saage QR menüü restoranidele - KKK ja juhendite värskendused | IQ Rest",
+          "description": "Uurige, kuidas saada QR menüü restoranidele lihtsalt. Uus pühendatud KKK leht vastab kõikidele küsimustele oma restorani QR menüü saamise kohta. Sujuv 4-sammuline juhend, et alustada."
+        },
+        "content": {
+          "intro": "Oleme teinud QR menüü saamise lihtsamaks kui kunagi varem. Meie ümberkorraldatud KKK ja kuidas teha sisu aitab restoranide omanikel kiiresti leida vastuseid küsimustele, kuidas saada QR menüüsid oma asutustele. Olenemata sellest, kas soovite saada QR menüü oma restoranile või kohvikule, pakub see värskendus kogu teavet, mida vajate, ühes kohas.",
+          "image1Alt": "Kuidas saada QR menüü restoranidele - pühendatud KKK leht",
+          "image1Caption": "Uus KKK leht, mis näitab, kuidas saada QR menüü restoranidele korraldatud küsimuste ja vastustega",
+          "section1Title": "Pühendatud KKK leht QR menüü saamiseks",
+          "section1Text": "Kõik küsimused, kuidas saada QR menüü restoranidele, on nüüd pühendatud /faq lehel. Restoranide omanikud saavad hõlpsasti leida vastuseid QR menüüde saamise kohta, alates seadistamisest kuni kohandamiseni. Iga küsimus, kuidas saada QR menüü oma restoranile, kuvatakse oma kaardil koos laiendatud vastustega, muutes teabe saamise lihtsaks, et alustada QR menüüdega oma restoranis.",
+          "section2Title": "4-sammuline juhend QR menüü saamiseks restoranidele",
+          "section2Text": "Meie sujuv juhend näitab täpselt, kuidas saada QR menüü restoranidele vaid 4 lihtsa sammuga. Olenemata sellest, kas soovite saada QR menüü oma restoranile, kohvikule või baarile, uue kaardipõhise kujunduse abil on selge, kuidas alustada. See juhend QR menüüde saamiseks restoranidele kuvatakse kõigil lehtedel, tagades, et teate alati, kuidas oma restorani QR menüü kiiresti seadistada.",
+          "section3Title": "SEO optimeeritud sisu, et aidata restoranidel saada QR menüüde",
+          "section3Text": "Oleme optimeerinud oma sisu, et aidata rohkematel restoranidel avastada, kuidas saada QR menüüde. Juhend kuvatakse koos täieliku Schema.org struktureeritud andmetega avalehel, aidates restoranidel, kes otsivad, kuidas saada QR menüü lahendusi, meid kergesti leida. Meie nutikas sisu jaotamine tagab, et restoranid saavad vajalikku QR menüü teavet, säilitades samal ajal tugeva otsingumootori nähtavuse.",
+          "benefitsTitle": "Miks see aitab teil saada QR menüü oma restoranile",
+          "benefit1": "Pühendatud KKK leht vastab kõikidele küsimustele oma restorani QR menüü saamise kohta",
+          "benefit2": "Selge 4-sammuline juhend näitab täpselt, kuidas saada QR menüü oma restoranile",
+          "benefit3": "Lihtne juurdepääs KKK-le ja kontaktvõimalustele, et aidata teil oma QR menüü seadistada",
+          "benefit4": "SEO optimeeritud, et aidata restoranidel avastada, kuidas saada QR menüüde lihtsalt",
+          "benefit5": "Konsistentne teave QR menüüde saamise kohta kogu platvormil",
+          "benefit6": "Kiirem tee saada QR menüü oma restoranile, parandatud navigeerimisega",
+          "conclusionTitle": "Saage QR menüü oma restoranile täna",
+          "conclusionText": "Need täiustused muudavad QR menüü saamise restoranidele uskumatult lihtsaks. Olenemata sellest, kas olete väike kohvik, kes soovib saada QR menüü või suur restoranikett, aitab meie ümberkorraldatud sisu teil mõista, kuidas saada QR menüü lahendusi oma asutusele. Alustage nüüd ja saage oma restorani QR menüü minutitega üles ja jooksma.",
+          "ctaText": "Kas olete valmis saama QR menüü oma restoranile?",
+          "ctaButton": "Saage QR menüü kohe"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Tasuta restorani veebisaidi loomine - mobiili optimeerimine ja UX täiustused",
+        "description": "Olulised täiustused tasuta restorani veebisaidi loomisel: optimeeritud mobiilinavigatsioon hamburgerimenüüga, täiustatud registreerimisleht paremate konversioonide jaoks ja sujuvam kasutajakogemus.",
+        "meta": {
+          "title": "Tasuta restorani veebisaidi loomise värskendused - IQ Rest Changelog",
+          "description": "Uurige, kuidas IQ Rest parandas tasuta restorani veebisaidi loomise protsessi mobiili optimeeritud navigeerimise, parema registreerimisvoo ja täiustatud kasutajakogemusega kohvikutele ja restoranidele."
+        },
+        "content": {
+          "intro": "Tasuta restorani veebisaidi loomine pole kunagi olnud lihtsam ega mobiilisõbralikum. Oleme teinud olulisi täiustusi, et aidata restoranide ja kohvikute omanikel luua oma professionaalne veebisait digitaalse QR menüüga, eriti mobiilseadmetes, kus enamik inimesi otsib 'создание сайта для ресторана бесплатно' (tasuta restorani veebisaidi loomine). Need värskendused keskenduvad mobiilinavigatsioonile, registreerimislehe täiustamisele ja üldisele kasutajakogemusele, et tagada, et igaüks saaks luua restorani veebisaidi tasuta ilma tehniliste teadmisteta.",
+          "image1Alt": "Mobiilis optimeeritud hamburgerimenüü restorani veebisaidile",
+          "image1Caption": "Uus mobiilinavigatsioon hamburgerimenüüga, et hõlpsasti pääseda juurde kõigile funktsioonidele",
+          "section1Title": "Mobiilikeskne navigeerimine restorani veebisaitidele",
+          "section1Text": "Enamik restoraniomanikke otsib ja loob oma tasuta restorani veebisaiti mobiilseadmetes. Seetõttu oleme täielikult ümber kujundanud meie mobiilinavigatsiooni professionaalse hamburgerimenüüga. Nutitelefonides ja tahvelarvutites avatakse navigeerimine nüüd puhta modaalakna kujul, kuvades kõik menüüelemendid (Hinnakujundus, Funktsioonid, Changelog, Kontaktid) ja 'Alustage' nupu kergesti loetavas vertikaalses paigutuses. See mobiilis optimeeritud lähenemine muudab IQ Rest'i funktsioonide uurimise ja tasuta restorani veebisaidi loomise alustamise lihtsaks otse teie telefonist. Teema ja keele valijad jäävad kergesti ligipääsetavaks päisesse, samas kui hamburgerimenüü hoiab liidese puhtana ja korrastatuna.",
+          "section2Title": "Täiustatud 'Alustage' leht tasuta restorani veebisaidi loomisel",
+          "section2Text": "Oleme täiustanud registreerimislehte, et muuta tasuta restorani veebisaidi loomine veelgi intuitiivsemaks. Täiustused hõlmavad paremat vahemaa mobiilseadmetes, keskendatud väärtuspakkumise kaarte, mis selgelt selgitavad eeliseid, ja optimeeritud vormi paigutusi, mis töötavad suurepäraselt väikestel ekraanidel. Restorani loend, mis näitab, kui palju ettevõtteid juba IQ Rest'i kasutab, kuvatakse nüüd mobiilseadmetes täispikkuses, pakkudes tugevat sotsiaalset tõendit, mis julgustab uusi restoraniomanikke alustama oma tasuta veebisaiti. Iga element on hoolikalt testitud, et tagada, et restorani veebisaidi loomine oleks sujuv ja kiire, olenemata sellest, kas olete lauaarvutis või nutitelefonis.",
+          "image2Alt": "Optimeeritud registreerimisvoog tasuta restorani veebisaidi loomisel",
+          "image2Caption": "Sujuv registreerimisprotsess, mis on optimeeritud mobiilseadmetele",
+          "section3Title": "Kolme sammu protsess, mis on optimeeritud kõigile seadmetele",
+          "section3Text": "Visuaalne protsessi indikaator, mis näitab kolme lihtsat sammu tasuta restorani veebisaidi loomiseks (Registreeruge oma e-posti aadressiga, Lisage oma menüüelemendid, Saage oma QR kood ja alustage), kohandub nüüd kaunilt erinevatele ekraanisuurustele. Mobiilseadmetes ja tahvelarvutites kuvatakse sammud vertikaalselt selgete vahedega, muutes lihtsaks arusaamise lihtsast protsessist. Suurematel ekraanidel kuvatakse need horisontaalselt koos nooltega. See kohanduv disain tagab, et igaüks, sõltumata seadmest, näeb selgelt, kui kiire ja lihtne on tasuta professionaalse restorani veebisaidi loomine IQ Rest'iga.",
+          "benefitsTitle": "Peamised täiustused tasuta restorani veebisaitide loomisel",
+          "benefit1": "Mobiilis optimeeritud hamburgerimenüü navigeerimine, et hõlpsasti pääseda juurde nutitelefonides",
+          "benefit2": "Täiustatud registreerimisleht parema mobiilse vahemaa ja kesksete paigutustega",
+          "benefit3": "Täispikk restorani loend mobiilseadmetes, mis pakub tugevat sotsiaalset tõendit",
+          "benefit4": "Kohanduv kolme sammu protsessi indikaator, mis töötab kõigil ekraanidel",
+          "benefit5": "Sujuvad sisestusvormid, mis on optimeeritud mobiilse puuteinteraktsiooni jaoks",
+          "benefit6": "Parandatud väljalogimise suunamise probleem, mis tagab õige navigeerimise kõigil lehtedel",
+          "conclusionTitle": "Tasuta restorani veebisaidi loomine lihtsaks",
+          "conclusionText": "Need täiustused kinnitavad meie pühendumust muuta tasuta restorani veebisaidi loomine kõigile kergesti kättesaadavaks. Olenemata sellest, kas olete väike kohviku omanik, kes uurib IQ Rest'i oma telefonis pauside ajal, või restorani juht, kes planeerib oma digitaalset strateegiat tahvelarvutis, on kogemus nüüd sujuv ja professionaalne. Saate luua täieliku restorani veebisaidi QR menüüga täiesti tasuta vaid mõne minutiga igast seadmest. Ei ole krediitkaardi nõuet, ei ole tehnilisi oskusi vajalikud - lihtsalt teie menüü ja mõned minutid aega oma professionaalse veebipõhise kohaloleku loomiseks.",
+          "ctaText": "Kas olete valmis looma oma tasuta restorani veebisaiti?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "landing-redesign": {
+        "title": "Uuendatud 'Alustage' leht kõrgemate konversioonide jaoks",
+        "description": "Oleme täielikult ümber kujundanud meie registreerimislehe, keskendudes konversioonide optimeerimisele, esitledes väärtuspakkumisi, sotsiaalset tõendit ja sujuvat kasutajakogemust.",
+        "meta": {
+          "title": "'Alustage' lehe ümberkujundamine - IQ Rest Changelog",
+          "description": "IQ Rest käivitab ümber kujundatud registreerimislehe, millel on paranenud UX, sotsiaalne tõend ja konversioonikeskne disain restorani QR menüü loomise jaoks."
+        },
+        "content": {
+          "intro": "Meil on hea meel teatada meie 'Alustage' lehe täielikust ümberkujundamisest, mis on loodud spetsiaalselt selleks, et aidata restoranide ja kohvikute omanikel luua oma digitaalset QR menüüd kiiremini kui kunagi varem. See värskendus keskendub väärtuse selgele edastamisele, usalduse loomisele sotsiaalse tõendiga ja sujuva registreerimiskogemuse pakkumisele, mis kestab vähem kui 5 minutit algusest lõpuni.",
+          "image1Alt": "Uus IQ Rest'i alustamise leht väärtuspakkumiste ja sotsiaalse tõendiga",
+          "image1Caption": "Uuendatud registreerimisleht, millel on selged väärtuspakkumised ja restorani loend",
+          "section1Title": "Selged väärtuspakkumised kiirelt",
+          "section1Text": "Uus disain kuvab silmapaistvalt neli peamist eelist, mis restoranide omanikele kõige rohkem korda lähevad: tehnilisi oskusi pole vaja, kohesed menüü värskendused, QR kood ja veebisait on kaasas ning tasuta alustamine. Iga eelis esitatakse puhtas kaardiformaadis intuitiivsete ikoonidega, muutes kohe selgeks, mida IQ Rest pakub. See lähenemine aitab hõivatud restoranide omanikel mõista väärtuspakkumist sekunditega pärast lehe avamist.",
+          "section2Title": "Sotsiaalne tõend, mis loob usaldust",
+          "section2Text": "Oleme lisanud dünaamilise restorani loendi, mis näitab, kui palju ettevõtteid juba IQ Rest'i kasutab. See loend uuendab automaatselt meie kasvumäära põhjal, pakkudes autentset sotsiaalset tõendit, mis aitab uutel külastajatel end otsuse tegemisel kindlalt tunda. Näha, et üle 1400 restorani usaldab juba IQ Rest, vähendab oluliselt kõhklusi ja julgustab registreerimisi.",
+          "section3Title": "Sujuv registreerimisvoog",
+          "section3Text": "Kogu registreerimisprotsess toimub nüüd ühel lehel ühtse paigutusega. Olenemata sellest, kas sisestate oma e-posti aadressi või kinnitate oma koodi, jääb disain samaks - ainult sisestusväli muutub. See loob sujuvama, vähem järsu kogemuse. Oleme lisanud ka visuaalse protsessi indikaatori, mis näitab kolme lihtsat sammu: Registreeruge, Lisage menüü ja Saage QR. See läbipaistvus aitab kasutajatel mõista, mida oodata, ja vähendab loobumist.",
+          "benefitsTitle": "Peamised täiustused selles värskenduses",
+          "benefit1": "Väärtuspakkumise kaardid koos ikoonidega kiireks arusaamiseks",
+          "benefit2": "Reaalajas restorani loend, mis pakub autentset sotsiaalset tõendit",
+          "benefit3": "Ühtne lehe disain nii e-posti kui OTP kinnitamise etappide jaoks",
+          "benefit4": "Visuaalne 3-sammuline protsessi indikaator läbipaistvuse tagamiseks",
+          "benefit5": "Konversioonikeskne tekst: 'Looge oma digitaalne menüü 5 minutiga'",
+          "benefit6": "Reaalajas e-posti valideerimine visuaalse tagasisidega",
+          "conclusionTitle": "Restoranide edu nimel loodud",
+          "conclusionText": "Iga selle ümberkujundamise element on loodud restoranide ja kohvikute omanike silmas pidades. Me mõistame, et olete hõivatud oma äri juhtimisega, seetõttu oleme registreerimisprotsessi teinud võimalikult kiireks ja rahustavaks. Uus leht näitab selgelt, mida te saate, kui lihtne on alustada ja et tuhanded teised restoranid on juba sama valiku teinud. Olenemata sellest, kas olete väike kohvik või kasvav restoranikett, saate nüüd luua oma professionaalse QR menüü veebisaidi vaid 5 minutiga.",
+          "ctaText": "Kas olete valmis looma oma restorani digitaalset menüüd?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "auth": {
+        "title": "Uus kasutaja autentimise liides",
+        "description": "Oleme käivitanud lihtsa ja turvalise e-posti põhise autentimissüsteemi, mis võimaldab teil luua oma restorani veebisaidi ja QR menüü minutitega.",
+        "meta": {
+          "title": "Kasutaja autentimise liides - IQ Rest Changelog",
+          "description": "IQ Rest tutvustab uut paroolita autentimissüsteemi, et luua oma restorani veebisait ja digitaalne QR menüü kiiresti ja turvaliselt."
+        },
+        "content": {
+          "intro": "Meil on hea meel teatada meie uue kasutaja autentimise liidese käivitamisest IQ Rest'is. See värskendus tähistab olulist sammu edasi, et muuta oma restorani veebisaidi loomine professionaalse QR menüüga lihtsamaks kui kunagi varem. Meie eesmärk on alati olnud aidata restoranide ja kohvikute omanikel luua oma digitaalset kohalolekut minutitega, mitte tundidega, ja see uus autentimissüsteem on loodud selle missiooniga silmas pidades.",
+          "image1Alt": "IQ Rest autentimise e-posti sisestamise samm",
+          "image1Caption": "Lihtne e-posti põhine autentimine - ei ole paroolide meelespidamist",
+          "section1Title": "Paroolita autentimine restoranide omanikele",
+          "section1Text": "Mõistes, et restoranide omanikud on hõivatud inimesed, oleme rakendanud paroolita autentimissüsteemi, mis nõuab ainult teie e-posti aadressi. Kui soovite luua oma restorani veebisaiti või värskendada oma digitaalset QR menüü, sisestage lihtsalt oma e-post ja saate turvalise 4-kohalise kinnituskoodi. See lähenemine kõrvaldab unustatud paroolide frustratsiooni, säilitades samal ajal kõrgeimad turvastandardid teie restorani andmete kaitsmiseks. Kogu protsess kestab vähem kui 30 sekundit, võimaldades teil keskenduda sellele, mis on kõige olulisem - oma restorani juhtimine ja klientide teenindamine.",
+          "section2Title": "Sujuv QR menüü loomise protsess",
+          "section2Text": "Meie uue autentimissüsteemiga pole digitaalsete QR menüüde loomine kunagi olnud lihtsam. Pärast autentimist on teil kohene juurdepääs meie intuitiivsele menüü koostajale, kus saate lisada oma roogasid, seadistada hindu, laadida üles pilte ja korraldada kategooriaid. QR menüü, mille loote, on teie klientidele koheselt kergesti ligipääsetav - nad skaneerivad lihtsalt koodi ja vaatavad teie kaunilt kujundatud digitaalset menüüd oma nutitelefonis. Teie klientidelt ei ole rakenduste allalaadimist vajalik ja teilt ei ole tehnilisi teadmisi vajalikud. See on just see, mida tänapäeva digitaalses esirinnas olevad restoranid ja kohvikud vajavad, et konkureerida.",
+          "image2Alt": "IQ Rest autentimise OTP kinnitamise samm",
+          "image2Caption": "Turvaline 4-kohaline kood, mis saadetakse otse teie e-posti aadressile",
+          "section3Title": "Kiirus ja turvalisus",
+          "section3Text": "Turvalisus oli meie peamine prioriteet, kui kujundasime seda autentimissüsteemi. Iga kinnituskood aegub 10 minuti pärast ja seda saab kasutada ainult üks kord, kaitstes teie restorani veebisaiti ja menüü andmeid volitamata juurdepääsu eest. Samal ajal oleme optimeerinud iga protsessi sammu kiirusel. Alates oma e-posti aadressi sisestamisest kuni oma armatuurlauda pääsemiseni toimub kogu autentimise voog vähem kui minuti jooksul. See tähendab, et saate teeninduse ajal kiiresti oma QR menüüd uuendada, lisada päevapakkumisi või kohandada hindu - kõik ilma viivitusteta.",
+          "benefitsTitle": "Peamised eelised teie restoranile",
+          "benefit1": "Looge oma restorani veebisait QR menüüga minutitega - tehnilisi oskusi pole vaja",
+          "benefit2": "Ei ole paroolide meelespidamist - turvaline e-posti põhine kinnitamine hoiab teie konto turvalisena",
+          "benefit3": "Kohene juurdepääs oma digitaalse menüü koostajale igast seadmest",
+          "benefit4": "Kiired uuendused teie QR menüüsse isegi hõivatud teenindustundidel",
+          "conclusionTitle": "Alustage oma digitaalse menüü loomist täna",
+          "conclusionText": "See uus autentimise liides on alles meie pühendumuse algus, et muuta digitaalsed QR menüüd kergesti kättesaadavaks igale restoranile ja kohvikule. Olenemata sellest, kas olete väike kohvik või kasvav restoranikett, pakub IQ Rest teile vajalikke tööriistu professionaalse veebipõhise kohaloleku loomiseks. Teie kliendid ootavad, et leida teie menüü veebis, ja meie lahenduse abil saate ületada neid ootusi kauni, alati ajakohase digitaalse QR menüüga, mis töötab ideaalselt igas nutitelefonis.",
+          "ctaText": "Kas olete valmis looma oma restorani veebisaiti QR menüüga?",
+          "ctaButton": "Alustage tasuta"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Tellimuse plaanid QR menüü ja restorani veebisaidi loomiseks",
+        "description": "Tutvustame paindlikke tellimuse plaane oma restorani veebisaidi ja QR menüü loomise jaoks. Valige tasuta, põhjalik ja professionaalne plaan koos igakuise või aastase arveldamisega.",
+        "meta": {
+          "title": "Tellimuse plaanid QR menüü ja restorani veebisaidi jaoks | IQ Rest",
+          "description": "Valige oma restorani veebisaidi ja QR menüü loomise jaoks ideaalne tellimuse plaan. Tasuta, põhjalik ja professionaalne plaan koos paindlike igakuise ja aastase arveldamisega. Alustage tasuta täna."
+        },
+        "content": {
+          "intro": "Meil on hea meel teatada meie uue tellimissüsteemi käivitamisest QR menüü ja restorani veebisaidi loomisel. IQ Rest pakub nüüd paindlikke plaane, mis kasvavad koos teie ettevõttega - alates täiesti tasuta tasemest väikestele kohvikutele kuni professionaalsete plaanideni kehtivatele restoranidele. Olenemata sellest, kas alles alustate või haldate mitmeid asukohti, pakuvad meie tellimuse plaanid funktsioone, mida vajate professionaalse restorani veebisaidi ja QR menüü haldamiseks.",
+          "image1Alt": "Tellimuse plaanid QR menüü ja restorani veebisaidi loomiseks",
+          "image1Caption": "Valige oma restorani veebisaidi ja QR menüü vajaduste jaoks ideaalne plaan",
+          "section1Title": "Paindlikud plaanid igasuguste restoranide jaoks",
+          "section1Text": "Meie tellimissüsteem QR menüü ja restorani veebisaidi loomisel pakub kolme taset, mis on loodud vastama teie vajadustele. Tasuta plaan võimaldab teil alustada kuni 15 menüüelemendiga - ideaalne väikestele kohvikutele või platvormi proovimiseks. Põhjalik plaan 4 €/kuu (või 3 €/kuu aastas) laiendab teie mahtu 100 elemendini, 3 keelt ja 2000 igakuist skaneerimist. Kasvavatele restoranidele pakub meie professionaalne plaan 7 €/kuu (või 6 €/kuu aastas) piiramatult elemente, keeli ja skaneerimisi - kõik, mida vajate professionaalse restorani veebisaidi ja QR menüü haldamiseks.",
+          "section2Title": "Lihtne arveldamise armatuurlaud",
+          "section2Text": "Teie tellimuse haldamine QR menüü ja restorani veebisaidi teenuste jaoks on nüüd lihtsam kui kunagi varem. Meie uus arveldamise armatuurlaud kuvab kõik saadaval olevad plaanid puhtas, lihtsas liideses. Saate kiiresti vaadata oma praegust plaani, võrrelda funktsioone ning uuendada või alandada ühe klõpsuga. Sujuv disain näitab iga plaani koos selle igakuise hinnaga, muutes õige valiku tegemise lihtsaks oma restorani veebisaidi ja QR menüü vajaduste jaoks. Turvalised maksed töödeldakse Stripe'i kaudu, mis on tööstuse standard veebitehingute jaoks.",
+          "section3Title": "Aastase arveldamisega säästate 25%",
+          "section3Text": "Restoranide omanikud, kes valivad aastase arveldamise oma QR menüü ja veebisaidi tellimuse jaoks, säästavad 25% võrreldes igakuiste maksetega. Põhjalik plaan langeb 4 €-lt 3 €-le kuus, samas kui professionaalne plaan langeb 7 €-lt 6 €-le kuus, kui arveldatakse aastas. See märkimisväärne sääst aitab restoranidel investeerida rohkem oma põhitegevusse, säilitades samal ajal professionaalse digitaalse kohaloleku. Vahetage igakuise ja aastase arveldamise vahel igal ajal oma armatuurlaudade kaudu.",
+          "benefitsTitle": "Meie tellimuse plaanide eelised",
+          "benefit1": "Tasuta plaan igavesti saadaval - ei ole krediitkaardi nõuet, et alustada",
+          "benefit2": "Paindlik igakuine või aastane arveldamine, kus aastaplaanidel on 25% sääst",
+          "benefit3": "Kohesed plaani uuendused - uued funktsioonid aktiveeritakse kohe",
+          "benefit4": "Turvaline Stripe maksetöötlus kõigi tehingute jaoks",
+          "benefit5": "Lihtne plaani haldamine lihtsa arveldamise armatuurlauda kaudu",
+          "benefit6": "Alandage igal ajal - ei ole pikaajalisi lepinguid nõutud",
+          "conclusionTitle": "Alustage oma restorani veebisaidi loomist täna",
+          "conclusionText": "Meie uute tellimuse plaanidega pole professionaalse QR menüü ja restorani veebisaidi loomine kunagi olnud kergem. Alustage meie tasuta plaaniga, et kogeda platvormi, seejärel uuendage, kui teie restoran kasvab. Meie paindlikud arveldamise valikud, läbipaistev hinnakujundus ja kohene aktiveerimine tähendavad, et saate oma digitaalse menüü minutitega üles ja jooksma. Liituge tuhandete restoranidega, kes juba kasutavad IQ Rest'i, et suhelda oma klientidega kaasaegsete, mobiilisõbralike QR menüüde kaudu.",
+          "ctaText": "Kas olete valmis valima oma plaani QR menüü ja restorani veebisaidi jaoks?",
+          "ctaButton": "Vaadake hinnaplaane"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR Kood",
+    "description": "Laadige alla ja printige oma QR kood, et kliendid saaksid seda skaneerida",
+    "preview": "Eelvaade",
+    "paperFormat": "Paberiformaat",
+    "qrPerPage": "QR Koode lehe kohta",
+    "customText": "Tekst QR Koodi all",
+    "customTextPlaceholder": "Skaneeri, et menüüd vaadata",
+    "print": "Prindi",
+    "download": "Laadi alla PNG",
+    "viewMenu": "Vaata menüüd",
+    "noSlug": "Menüü URL ei ole seadistatud",
+    "noSlugDescription": "Palun seadistage oma restorani URL seadetes, et genereerida QR kood.",
+    "goToSettings": "Mine seadistustesse",
+    "loading": "Laadimine...",
+    "menuUrl": "Teie veebisait",
+    "websiteReady": "Teie veebisait on valmis!",
+    "openWebsite": "Ava veebisait",
+    "printSection": "Prindi ja laadi alla QR Kood:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Kiri (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Täielik leht)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Teksti suurus",
+    "textSizes": {
+      "small": "Väike",
+      "medium": "Keskmine",
+      "large": "Suur"
+    }
+  },
+  "support": {
+    "title": "Sõnumid",
+    "subtitle": "Saage abi meie meeskonnalt",
+    "unauthorized": "Palun logige sisse, et pääseda tugiteenusele",
+    "lastUpdated": "Uuendatud",
+    "emptyTitle": "Ei mingeid sõnumeid veel",
+    "emptyDescription": "Saatke sõnum, et alustada vestlust",
+    "sendMessage": "Saada sõnum",
+    "placeholder": "Sisestage oma sõnum...",
+    "hint": "Kinnitage Enter, et saata, Shift+Enter uue rea jaoks",
+    "send": "Saada",
+    "supportTeam": "Tugimeeskond"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Loo oma digitaalne menüü 5 minutiga - IQ Rest",
+      "description": "QR menüü ja veebisait teie restoranile. Valmis koheselt. Tehnilisi oskusi ei ole vaja."
+    },
+    "title": "Loo oma digitaalne menüü 5 minutiga",
+    "subtitle": "QR menüü ja veebisait teie restoranile. Valmis koheselt.",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Sisestage e-post, et alustada loomist",
+    "otpPlaceholder": "Sisestage 4-kohaline kood",
+    "continue": "Loo minu menüü",
+    "sending": "Loomine...",
+    "verifyTitle": "Kontrollige oma e-posti",
+    "verifySubtitle": "Saime 4-kohalise koodi aadressile {email}",
+    "verify": "Kinnita",
+    "verifying": "Kinnitamine...",
+    "changeEmail": "Muuda e-posti",
+    "resendCode": "Saada kood uuesti",
+    "successTitle": "Tere tulemast!",
+    "successSubtitle": "Olete edukalt sisse logitud",
+    "redirecting": "Suunamine juhtpaneelile...",
+    "errors": {
+      "sendFailed": "Kinnituskoode ei õnnestunud saata. Palun proovige uuesti.",
+      "verifyFailed": "Koodi kinnitamine ebaõnnestus. Palun proovige uuesti."
+    },
+    "valueProps": {
+      "noSkills": "Tehnilisi oskusi ei ole vaja",
+      "instantUpdates": "Kohesed menüü värskendused",
+      "qrIncluded": "QR kood + veebisait kaasas",
+      "freeStart": "Tasuta alustamiseks"
+    },
+    "formHelper": "Krediitkaarti ei ole vaja",
+    "setupTime": "Seadistamine 5 minutiga",
+    "hasAccount": "Kas teil on juba konto?",
+    "signIn": "Logi sisse",
+    "restaurantCounter": "Liitu {count} restoraniga, kes juba kasutavad IQ Rest",
+    "steps": {
+      "signUp": "Registreeru oma e-posti aadressiga",
+      "addMenu": "Lisa oma menüütooted",
+      "getQr": "Hangi oma QR kood ja alusta"
+    },
+    "motivational": {
+      "title": "Alustage tellimuste vastuvõtmist juba täna",
+      "subtitle": "Teie kliendid ootavad digitaalset menüüd"
+    }
+  },
+  "reservations": {
+    "title": "Broneeringud",
+    "tables": "Lauad",
+    "settings": "Seaded",
+    "addTable": "Lisa laud",
+    "newTable": "Uus laud",
+    "editTable": "Muuda lauda",
+    "tableNumber": "Laua number",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Mahutavus (külalised)",
+    "capacityPlaceholder": "4",
+    "zone": "Zone",
+    "zonePlaceholder": "Terrass, Aken, Peasaal...",
+    "image": "Foto",
+    "uploadImage": "Kliki, et üles laadida foto",
+    "removeImage": "Eemalda",
+    "isActive": "Aktiivne",
+    "active": "Aktiivne",
+    "inactive": "Passiivne",
+    "save": "Salvesta",
+    "saving": "Salvestamine...",
+    "cancel": "Tühista",
+    "delete": "Kustuta",
+    "deleteConfirm": "Kas olete kindel, et soovite selle laua kustutada?",
+    "table": "Laud",
+    "noTables": "Laudu pole veel. Lisa oma esimene laud, et broneeringud lubada.",
+    "error": "Viga",
+    "close": "Sulge",
+    "noReservations": "Broneeringuid pole veel",
+    "pending": "Ootel",
+    "confirmed": "Kinnitatud",
+    "cancelled": "Tühistatud",
+    "completed": "Lõpetatud",
+    "confirm": "Kinnita",
+    "reject": "Lükka tagasi",
+    "guests": "külalised",
+    "date": "Kuupäev",
+    "time": "Aeg",
+    "guest": "Külastaja",
+    "status": "Olek",
+    "notes": "Märkmed",
+    "awaitingResponse": "Ootab vastust",
+    "today": "Täna",
+    "tomorrow": "Homme",
+    "otherReservations": "Teised broneeringud",
+    "sort": "Sorteeri"
+  },
+  "publicReserve": {
+    "title": "Broneeri laud",
+    "selectDate": "Vali kuupäev",
+    "selectTime": "Vali kellaaeg",
+    "selectGuests": "Külastajate arv",
+    "selectTable": "Vali laud",
+    "yourDetails": "Teie andmed",
+    "name": "Nimi",
+    "namePlaceholder": "Teie nimi",
+    "email": "E-post",
+    "emailPlaceholder": "teie@email.com",
+    "phone": "Telefon (valikuline)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Erilised soovid (valikuline)",
+    "notesPlaceholder": "Igasugused erilised soovid või märkused...",
+    "submit": "Broneeri laud",
+    "submitting": "Broneerimine...",
+    "success": "Broneering esitatud!",
+    "successAuto": "Teie broneering on kinnitatud. Saate peagi kinnituse e-kirja.",
+    "successManual": "Teie broneeringu taotlus on esitatud. Saate e-kirja, kui see on kinnitatud.",
+    "error": "Viga",
+    "guests": "külastajat",
+    "table": "Laud",
+    "capacity": "maht",
+    "noAvailableTables": "Selle külastajate arvu jaoks pole laudu saadaval",
+    "back": "Tagasi menüüsse",
+    "noTimeSlotsAvailable": "Selle kuupäeva jaoks pole saadaval aegu",
+    "loadingAvailability": "Kontrollin saadavust..."
+  },
+  "publicMenu": {
+    "contacts": "Kontaktid",
+    "language": "Keel",
+    "reserve": "Broneeri laud",
+    "onlineMenu": "Veebimenüü",
+    "noCategories": "Kategooriaid pole saadaval",
+    "openInstagram": "Ava Instagram",
+    "makeCall": "Helista",
+    "writeWhatsApp": "Kirjuta WhatsAppis",
+    "openGoogleMaps": "Ava Google Mapsis",
+    "noLocation": "Asukohta pole saadaval",
+    "english": "Inglise",
+    "spanish": "Hispaania",
+    "allergens": "Allergeenid",
+    "allergensInfo": "See roog sisaldab järgmisi allergeene:",
+    "allergenNames": {
+      "gluten": "Gluteen",
+      "crustaceans": "Krevetid",
+      "eggs": "Munad",
+      "fish": "Kala",
+      "peanuts": "Maapähklid",
+      "soybeans": "Sojaoad",
+      "dairy": "Piimatooted",
+      "nuts": "Pähklid",
+      "celery": "Seller",
+      "mustard": "Sinapp",
+      "sesame": "Seesam",
+      "sulphites": "Sulfiidid",
+      "lupin": "Lupiin",
+      "molluscs": "Molluskid"
+    }
+  },
+  "faq": {
+    "title": "Korduma Kippuvad Küsimused QR Menüü Kohta Restoranide ja Kohvikute jaoks",
+    "subtitle": "Leia vastused levinud küsimustele oma digitaalse QR menüü loomise ja haldamise kohta restoranides ja kohvikutes",
+    "howto": {
+      "question": "Kuidas luua QR menüü ja restoranile veebileht 4 lihtsa sammuga?",
+      "answer": "Saada oma restoran veebis 5 minutiga - lihtsalt sisesta oma e-post ja alusta oma telefonist",
+      "faqTitle": "On veel küsimusi?",
+      "faqDescription": "Vaata meie põhjalikku KKK-d, et õppida kõike oma restorani QR menüü ja veebilehe loomise ja haldamise kohta",
+      "faqButton": "Vaata Kõiki KKK-sid",
+      "contactButton": "Võta Meiega Ühendust",
+      "steps": [
+        {
+          "name": "Logi sisse e-posti teel",
+          "text": "Saada kaasaegne restoranide veebileht koos QR menüü, kontaktlehe kaardiga, veebireservatsioonide ja kohandatud brändinguga - kõik on algusest peale kaasas."
+        },
+        {
+          "name": "Seadista oma restoran",
+          "text": "Sisesta oma restorani nimi ja vali oma ainulaadne URL. Lisa video või foto taust, seadista oma brändi värvid, luba laudade reservatsioonid."
+        },
+        {
+          "name": "Lisa kategooriad ja toidud",
+          "text": "Loo menüü kategooriad ja lisa toidud koos fotodega. AI optimeerib sinu pilte automaatselt ja tõlgib sinu menüü 10+ keelde."
+        },
+        {
+          "name": "Vaata oma valmis menüüd",
+          "text": "Sinu professionaalne veebileht on avatud! Kliendid saavad sirvida sinu menüüd, teha reservatsioone ja leida sind kaardilt. Jälgi kõike igapäevaste analüütikate abil."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Mis on QR menüü restoranile ja kuidas see töötab?",
+        "answer": "QR menüü restoranile on digitaalne menüü, millele kliendid pääsevad ligi, skaneerides QR koodi oma nutitelefoniga. IQ Rest loob sinu restoranile või kohvikule professionaalse digitaalse menüü veebilehe, mis uuendab end koheselt ilma ümbertrükkimiseta. Kliendid skaneerivad lihtsalt koodi ja vaatavad sinu menüüd oma seadmes."
+      },
+      {
+        "question": "Kui palju maksab QR menüü restoranile või kohvikule?",
+        "answer": "IQ Rest pakub paindlikku hinnakujundust alates 0 € igaveseks meie tasuta plaaniga. See teeb professionaalse QR menüü loomise taskukohaseks igale restoranile või kohvikule. Tasulised plaanid algavad vaid 4 €/kuu koos täiendavate funktsioonidega nagu piiramatud tooted ja täiustatud analüütika."
+      },
+      {
+        "question": "Kas ma saan luua veebilehe oma restoranile ilma kodeerimiseta?",
+        "answer": "Jah! IQ Rest on loodud restoranide ja kohvikute omanikele, kellel pole tehnilisi teadmisi. Sa saad luua täieliku digitaalse menüü veebilehe oma restoranile minutitega, ilma programmeerimise või kodeerimise oskusteta. Lihtsalt lisa oma toidud, hinnad ja fotod meie intuitiivse liidese kaudu."
+      },
+      {
+        "question": "Kui tihti ma saan oma QR menüüd uuendada?",
+        "answer": "Sa saad oma restorani või kohviku menüüd uuendada nii tihti kui vajad. Kõik muudatused kajastuvad reaalajas, võimaldades sul koheselt uuendada hindu, lisada uusi toite või muuta kirjeldusi ilma füüsiliste menüüde ümbertrükkimiseta. Täiuslik igapäevaste eripakkumiste ja hooajaliste uuenduste jaoks."
+      },
+      {
+        "question": "Kas QR menüü töötab nii restoranide kui ka kohvikute jaoks?",
+        "answer": "Absoluutselt! IQ Rest sobib ideaalselt restoranidele, kohvikutele, kohvi poodidele, baaridele, toidukäru ja igasugustele toiduteenuse ettevõtetele. Meie digitaalne menüü lahendus kohandub igasuguste asutustega, alates väikestest kohvikutest kuni suurte restoranikettideni."
+      },
+      {
+        "question": "Kuidas töötab automaatne menüü tõlge?",
+        "answer": "Meie QR menüü süsteem kasutab tehisintellekti, et automaatselt tõlkida sinu restorani või kohviku menüü mitmesse keelde. See on ideaalne turismi piirkondades ja rahvusvahelistele klientidele. Sa saad pakkuda oma menüüd inglise, hispaania ja muudes keeltes, aidates sul teenindada rohkem kliente."
+      },
+      {
+        "question": "Kas ma saan proovida QR menüü lahendust tasuta?",
+        "answer": "Jah! Me pakume täiesti tasuta plaani restoranidele ja kohvikutele, et proovida IQ Resti. Sa saad luua oma digitaalse menüü veebilehe kuni 15 tootele tasuta, igaveseks. Alustamiseks ei ole krediitkaarti vajalik. Uuenda ainult siis, kui vajad rohkem funktsioone."
+      },
+      {
+        "question": "Kas IQ Rest on rakendus, mille kliendid peavad alla laadima?",
+        "answer": "Ei! See on üks parimaid eeliseid. Kliendid ei pea alla laadima ühtegi rakendust. Nad skaneerivad lihtsalt sinu QR koodi ja menüü avaneb koheselt nende veebibrauseris. See teeb selle palju mugavamaks kui restoranide rakendused, mis nõuavad allalaadimist."
+      },
+      {
+        "question": "Millised on digitaalse menüü veebilehe eelised minu restoranile?",
+        "answer": "Digitaalne menüü veebileht pakub palju eeliseid: kohesed menüü uuendused ilma ümbertrükkimise kuludeta, mitmekeelne tugi rahvusvahelistele klientidele, kontaktivaba tellimine ohutuse nimel, analüütika populaarsete toitude nägemiseks ja professionaalne esitlus. Lisaks on see keskkonnasõbralik, kuna kaotad paberist menüü raiskamise."
+      },
+      {
+        "question": "Kuidas ma loon QR koodi oma restorani menüü jaoks?",
+        "answer": "IQ Rest genereerib automaatselt professionaalse QR koodi, kui sa lood oma digitaalse menüü. Sa saad selle QR koodi alla laadida ja printida oma restorani laudadele, sissepääsule või kaasaostmise leti juurde. QR kood on kohandatav ja kvaliteetne, et tagada selge skaneerimine."
+      }
+    ],
+    "cta": {
+      "title": "Kas on veel küsimusi?",
+      "subtitle": "Küsi meilt ja saa vastus võimalikult lühikese aja jooksul",
+      "button": "Võta Meiega Ühendust"
+    },
+    "linkTitle": "On küsimusi?",
+    "linkDescription": "Vaata meie korduma kippuvaid küsimusi, et õppida rohkem IQ Restist",
+    "meta": {
+      "title": "Korduma Kippuvad Küsimused - IQ Rest",
+      "description": "Leia vastused levinud küsimustele IQ Resti digitaalse QR menüü lahenduse kohta restoranidele ja kohvikutele"
+    }
+  },
+  "billing": {
+    "title": "Arveldamine",
+    "description": "Halda oma tellimust ja arveldamist",
+    "unauthorized": "Palun logige sisse, et hallata oma tellimust",
+    "perMonth": "/kuu",
+    "currentPlan": "Praegune plaan",
+    "upgrade": "Uuenda",
+    "manage": "Halda",
+    "subscriptionSuccess": "Teie tellimus on edukalt aktiveeritud!",
+    "subscriptionCanceled": "Tellimuse protsess tühistati.",
+    "subscriptionProcessing": "Teie makse on töös. Aktiveerimine võib võtta paar minutit.",
+    "processingPayment": "Teie makse töötlemine...",
+    "processingPaymentDescription": "Palun oodake, kuni kinnitame teie tellimuse. See võtab tavaliselt paar sekundit.",
+    "checkoutError": "Ostuprotsessi alustamine ebaõnnestus. Palun proovige uuesti.",
+    "portalError": "Arveldamise portaali avamine ebaõnnestus. Palun proovige uuesti.",
+    "detailsNote": "Rohkemate üksikasjade saamiseks külastage meie",
+    "pricingPage": "Hinnakujunduse leht",
+    "plans": {
+      "FREE": {
+        "name": "Tasuta"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Põhikuuline"
+      },
+      "BASIC_YEARLY": {
+        "name": "Põhiaalane aastane"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro kuuline"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro aastane"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Armatuurlaud",
+      "onboarding": "Sissejuhatus",
+      "qrMenu": "QR Menüü",
+      "analytics": "Analüütika",
+      "categories": "Kategooriad",
+      "items": "Tooted",
+      "settings": "Üldine",
+      "design": "Disain",
+      "contacts": "Kontaktid",
+      "languages": "Keeled",
+      "reservations": "Broneeringud",
+      "reservationSettings": "Broneeringute Seaded",
+      "tables": "Lauad",
+      "billing": "Arveldamine",
+      "support": "Tugi"
+    },
+    "sidebar": {
+      "qrMenu": "QR Menüü",
+      "menu": "Menüü",
+      "settings": "Seaded",
+      "reservations": "Broneeringud",
+      "account": "Konto",
+      "reservationSettings": "Konfiguratsioon"
+    },
+    "logout": "Logi välja",
+    "auth": {
+      "title": "Logi sisse",
+      "subtitle": "Kaasaegne veebileht QR menüü, broneeringute ja AI tõlgetega",
+      "benefits": "Ilma paroolideta. Ilma krediitkaardita.",
+      "emailPlaceholder": "teie@email.com",
+      "continue": "Jätka",
+      "verifyTitle": "Kontrollige oma e-posti",
+      "verifySubtitle": "Saatsime koodi aadressile {email}",
+      "verify": "Kinnita",
+      "changeEmail": "Kasutage teist e-posti",
+      "errors": {
+        "sendFailed": "Koodi saatmine ebaõnnestus. Palun proovige uuesti.",
+        "verifyFailed": "Vale kood. Palun proovige uuesti."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Kuu kasutus",
+      "scansThisMonth": "skaneeringud sel kuul",
+      "limitReached": "Olete saavutanud oma kuu skaneerimise limiidi. Uuendage oma plaani, et saada piiramatu skaneerimine.",
+      "todayViews": "Täna",
+      "weeklyViews": "Sel nädalal",
+      "monthlyViews": "Sel kuul",
+      "uniqueVisitors": "Ainulaadsed külastajad",
+      "viewsByPage": "Vaated lehe kaupa",
+      "viewsByLanguage": "Vaated keele kaupa",
+      "dailyViews": "Päevased vaated",
+      "noData": "Andmeid pole veel saadaval",
+      "pageNames": {
+        "home": "Avaleht",
+        "menu": "Menüü",
+        "contacts": "Kontaktid",
+        "language": "Keel",
+        "reserve": "Broneeri"
+      },
+      "languageNames": {
+        "en": "Inglise",
+        "es": "Hispaania",
+        "de": "Saksa",
+        "fr": "Prantsuse",
+        "ru": "Vene"
+      }
+    },
+    "categories": {
+      "noCategories": "Kategooriaid pole veel. Looge oma esimene kategooria, et alustada.",
+      "addCategory": "Lisa",
+      "editCategory": "Muuda kategooriat",
+      "name": "Nimi",
+      "namePlaceholder": "Sisestage kategooria nimi",
+      "status": "Olek",
+      "active": "Aktiivne",
+      "inactive": "Passiivne",
+      "save": "Salvesta",
+      "saving": "Salvestamine...",
+      "cancel": "Tühista",
+      "delete": "Kustuta",
+      "deleteConfirm": "Kas olete kindel, et soovite selle kategooria kustutada? Seda toimingut ei saa tagasi võtta.",
+      "fetchError": "Kategooriate laadimine ebaõnnestus",
+      "updateError": "Kategooria uuendamine ebaõnnestus",
+      "saveError": "Kategooria salvestamine ebaõnnestus",
+      "deleteError": "Kategooria kustutamine ebaõnnestus",
+      "translateError": "Tõlkimine ebaõnnestus",
+      "nameRequired": "Nimi on kohustuslik",
+      "enabled": "lubatud",
+      "disabled": "keelatud",
+      "created": "Kategooria loodud",
+      "updated": "Kategooria uuendatud",
+      "deleted": "Kategooria kustutatud",
+      "validationErrorTitle": "Palun parandage järgmised vead",
+      "sort": "Sorteeri",
+      "saveSort": "Salvesta",
+      "sortSaved": "Sorteerimise järjekord salvestatud",
+      "sortError": "Sorteerimise järjekorra salvestamine ebaõnnestus"
+    },
+    "items": {
+      "noItems": "Ei ole veel tooteid. Looge oma esimene toode, et alustada.",
+      "addItem": "Lisa",
+      "editItem": "Muuda toodet",
+      "name": "Nimi",
+      "namePlaceholder": "Sisestage toote nimi",
+      "description": "Kirjeldus",
+      "descriptionPlaceholder": "Sisestage toote kirjeldus",
+      "price": "Hind",
+      "pricePlaceholder": "0.00",
+      "category": "Kategooria",
+      "categoryPlaceholder": "Valige kategooria",
+      "image": "Pilt",
+      "uploadImage": "Laadige pilt üles",
+      "removeImage": "Eemaldage pilt",
+      "status": "Olek",
+      "active": "Aktiivne",
+      "inactive": "Passiivne",
+      "save": "Salvesta",
+      "saving": "Salvestamine...",
+      "cancel": "Tühista",
+      "delete": "Kustuta",
+      "deleteConfirm": "Kas olete kindel, et soovite selle toote kustutada? Seda toimingut ei saa tagasi võtta.",
+      "fetchError": "Tooteid ei õnnestunud laadida",
+      "updateError": "Toote uuendamine ebaõnnestus",
+      "saveError": "Toote salvestamine ebaõnnestus",
+      "deleteError": "Toote kustutamine ebaõnnestus",
+      "translateError": "Tõlkimine ebaõnnestus",
+      "nameRequired": "Nimi on kohustuslik",
+      "categoryRequired": "Kategooria on kohustuslik",
+      "priceRequired": "Kehtiv hind on kohustuslik",
+      "enabled": "lubatud",
+      "disabled": "keelatud",
+      "created": "Toode loodud",
+      "updated": "Toode uuendatud",
+      "deleted": "Toode kustutatud",
+      "validationErrorTitle": "Palun parandage järgmised vead",
+      "sort": "Sorteeri",
+      "saveSort": "Salvesta",
+      "sortSaved": "Sorteerimisjärjekord salvestatud",
+      "sortError": "Sorteerimisjärjekorra salvestamine ebaõnnestus",
+      "allergens": "Allergiad",
+      "allergensHint": "Valige selle roogi koostisosad, mis võivad põhjustada allergiat",
+      "allergenNames": {
+        "gluten": "Gluteen",
+        "crustaceans": "Koorikloomad",
+        "eggs": "Munad",
+        "fish": "Kala",
+        "peanuts": "Maapähklid",
+        "soybeans": "Sojaoad",
+        "dairy": "Piimatooted",
+        "nuts": "Pähklid",
+        "celery": "Seller",
+        "mustard": "Sinapp",
+        "sesame": "Seesam",
+        "sulphites": "Sulfidid",
+        "lupin": "Lupiin",
+        "molluscs": "Molluskid"
+      }
+    },
+    "languages": {
+      "translationProgress": "Tõlke edenemine",
+      "availableLanguages": "Saadaval keeled",
+      "europeanLanguages": "Euroopa keeled",
+      "starToSetDefault": "Klõpsake tähte, et seada vaikekeeleks",
+      "default": "vaikimisi",
+      "hint": "Lubage keeled, et võimaldada klientidel vaadata teie menüüd mitmes keeles. Vaikekeelt kasutatakse põhisisu jaoks.",
+      "fetchError": "Keele laadimine ebaõnnestus",
+      "enableError": "Keele lubamine ebaõnnestus",
+      "disableError": "Keele keelamine ebaõnnestus",
+      "defaultError": "Vaikekeele seadmine ebaõnnestus",
+      "languageEnabled": "{language} lubatud",
+      "languageDisabled": "{language} keelatud",
+      "defaultSet": "{language} seadistatud vaikekeeleks",
+      "cannotDisableDefault": "Ei saa vaikimisi keelt keelata",
+      "atLeastOneRequired": "Vähemalt üks keel on kohustuslik",
+      "enableFirst": "Lubage keel esmalt",
+      "deleteConfirm": "Selle keele keelamine kustutab kõik tõlked selle jaoks. Seda toimingut ei saa tagasi võtta.",
+      "cancel": "Tühista",
+      "confirm": "Keela"
+    },
+    "contacts": {
+      "phone": "Telefon",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Teie klientide kontakttelefoninumber",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "teie_restoran",
+      "instagramHint": "Teie Instagrami kasutajanimi (ilma @-ta)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp number klientide päringute jaoks",
+      "location": "Asukoht",
+      "locationHint": "Klõpsake kaardil või otsige, et määrata oma restorani asukoht",
+      "save": "Salvesta",
+      "fetchError": "Kontaktandmete laadimine ebaõnnestus",
+      "saveError": "Kontaktandmete salvestamine ebaõnnestus",
+      "saved": "Kontaktandmed salvestatud"
+    },
+    "design": {
+      "background": "Taust",
+      "backgroundHint": "Laadige üles video või pilt oma avalehe taustaks",
+      "uploadMedia": "Laadige üles video või pilt",
+      "removeMedia": "Eemalda",
+      "accentColor": "Aktsentvärv",
+      "accentColorHint": "Peamine värv nuppude ja esiletõstetud elementide jaoks teie veebisaidil",
+      "presetColors": "Eelseadistatud värvid",
+      "customColor": "Kohandatud värv",
+      "save": "Salvesta",
+      "fetchError": "Disaini seadeid ei õnnestunud laadida",
+      "saveError": "Disaini seadeid ei õnnestunud salvestada",
+      "saved": "Disaini seaded salvestatud",
+      "uploadError": "Faili üleslaadimine ebaõnnestus",
+      "invalidFileType": "Kehtetu failitüüp. Lubatud: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Fail on liiga suur. Maksimaalne suurus: 50MB videotele, 5MB piltidele"
+    },
+    "general": {
+      "name": "Pealkiri",
+      "namePlaceholder": "Sisestage restorani nimi",
+      "nameHint": "Kuvatakse teie avalehel",
+      "description": "Alapealkiri",
+      "descriptionPlaceholder": "Lühike kirjeldus (valikuline)",
+      "descriptionHint": "Kuvatakse pealkirja all avalehel",
+      "slug": "URL Slug",
+      "slugPlaceholder": "minu-restoran",
+      "slugHint": "Teie veebisait on saadaval aadressil: iq-rest.com/{slug}",
+      "currency": "Valuuta",
+      "currencyPlaceholder": "Valige valuuta",
+      "save": "Salvesta",
+      "fetchError": "Seadeid ei õnnestunud laadida",
+      "saveError": "Seadeid ei õnnestunud salvestada",
+      "saved": "Seaded salvestatud",
+      "nameRequired": "Restorani nimi on kohustuslik",
+      "slugRequired": "URL slug on kohustuslik",
+      "validationErrorTitle": "Palun parandage järgmised vead",
+      "slugChangedTitle": "Veebisaidi aadress uuendatud",
+      "slugChangedDescription": "Teie restoran on nüüd saadaval aadressil:",
+      "close": "Sulge",
+      "view": "Vaata"
+    },
+    "onboarding": {
+      "title": "Tere tulemast IQ Resti!",
+      "subtitle": "Lõpetage need sammud, et käivitada oma restorani veebisait",
+      "requiredSteps": "Kohustuslikud sammud",
+      "optionalSteps": "Valikulised sammud",
+      "viewMenu": "Vaata oma menüüd",
+      "steps": {
+        "title": {
+          "name": "Lisage restorani nimi",
+          "description": "Andke oma restoranile nimi, mis kuvatakse teie veebisaidil"
+        },
+        "slug": {
+          "name": "Seadke veebisaidi aadress",
+          "description": "Valige oma restorani veebisaidi jaoks ainulaadne URL"
+        },
+        "categories": {
+          "name": "Looge menüü kategooriad",
+          "description": "Korrastage oma menüü kategooriatega nagu Eelroad, Pearoad jne."
+        },
+        "items": {
+          "name": "Lisage menüütooted",
+          "description": "Lisage oma menüüsse roogasid koos hindade ja kirjeldustega"
+        },
+        "design": {
+          "name": "Kohandage disaini",
+          "description": "Valige värvid ja taust oma veebisaidile"
+        },
+        "contacts": {
+          "name": "Lisage kontaktandmed",
+          "description": "Lisage telefon, WhatsApp, Instagram ja asukoht"
+        },
+        "reservations": {
+          "name": "Luba broneeringud",
+          "description": "Lubage klientidel broneerida laudu veebis"
+        },
+        "translations": {
+          "name": "Lisage keeled",
+          "description": "Tehke oma menüü kättesaadavaks mitmes keeles"
+        }
+      },
+      "completed": "Lõpetatud",
+      "notCompleted": "Ei ole lõpetatud",
+      "allDone": "Kõik tehtud! Teie menüü on aktiivne.",
+      "requiredRemaining": "{count} kohustuslikku sammu on jäänud"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Kuna teie restorani külalistele broneeringute tegemine on vajalik, peate teenusele tellima.",
+    "subscribe": "Telli",
+    "reservationsEnabled": "Luba broneeringud",
+    "enabled": "Broneeringud on lubatud",
+    "disabled": "Broneeringud on keelatud",
+    "reservationMode": "Kinnitamise režiim",
+    "modeAuto": "Automaatne",
+    "modeManual": "Käsitsi",
+    "modeAutoDescription": "Broneeringud kinnitatakse automaatselt laua saadavuse põhjal",
+    "modeManualDescription": "Iga broneering tuleb käsitsi kinnitada",
+    "slotDuration": "Broneeringu kestus",
+    "minutes": "minutit",
+    "workingHours": "Tööaeg",
+    "save": "Salvesta",
+    "saving": "Salvestamine...",
+    "saved": "Seaded salvestatud",
+    "fetchError": "Seadete laadimine ebaõnnestus",
+    "saveError": "Seadete salvestamine ebaõnnestus"
+  },
+  "terms": {
+    "title": "Tingimused ja sätted",
+    "lastUpdated": "Viimati uuendatud: 17. detsember 2025",
+    "contact": {
+      "title": "Võta meiega ühendust",
+      "description": "Kui teil on küsimusi nende Tingimuste ja sätete kohta, võtke meiega palun ühendust."
+    },
+    "sections": [
+      {
+        "title": "1. Sissejuhatus",
+        "content": [
+          "Tere tulemast IQ Rest'i. Need Tingimused ja sätted reguleerivad teie kasutamist meie veebisaidil ja teenustes, mida haldab Bogdan Sokolov (Autónomo), NIE: Z1894474S, registreeritud Hispaanias.",
+          "IQ Rest'i kasutamisega nõustute nende Tingimustega. Kui te ei nõustu nende tingimuste ühegi osaga, ei tohi te teenusele juurde pääseda."
+        ]
+      },
+      {
+        "title": "2. Teenuse kirjeldus",
+        "content": [
+          "IQ Rest pakub digitaalset QR menüü ja veebilehe loomise platvormi restoranidele, kohvikutele ja toitlustusasutustele. Meie teenus sisaldab menüü haldamist, QR-koodide genereerimist, mitmekeelsust toetavaid AI-põhiseid tõlkeid, AI-põhist pilditöötlust, laudade broneerimise süsteeme ja analüütikat.",
+          "Jätame endale õiguse muuta, peatada või lõpetada teenuse mis tahes aspekti igal ajal ette teatamata."
+        ]
+      },
+      {
+        "title": "3. Konto registreerimine",
+        "content": [
+          "Teatud IQ Rest'i funktsioonide kasutamiseks peate registreerima konto, kasutades kehtivat e-posti aadressi. Te vastutate oma konto konfidentsiaalsuse säilitamise eest ja kõigi tegevuste eest, mis toimuvad teie konto all.",
+          "Nõustute esitama registreerimise ajal täpset, ajakohast ja täielikku teavet ning uuendama seda teavet, et see oleks täpne, ajakohane ja täielik.",
+          "Kasutame paroolita autentimist e-posti kinnituskoodide kaudu. Te vastutate oma e-posti konto turvalisuse säilitamise eest."
+        ]
+      },
+      {
+        "title": "4. Tellimuse plaanid ja maksed",
+        "content": [
+          "IQ Rest pakub tasuta, põhja- ja pro tellimuse plaane. Tasuta plaan on saadaval tasuta piiratud funktsioonidega. Tasulised plaanid (Põhi ja Pro) arveldatakse igakuiselt või aastaselt meie maksetöötleja Stripe kaudu.",
+          "Hinnad on näidatud eurodes (EUR). Tasulise plaani tellimisega volitate meid teie makseviisi korduvaks arveldamiseks kuni tühistamiseni.",
+          "Võite oma tellimust igal ajal oma juhtpaneeli kaudu uuendada, alandada või tühistada. Tühistamised jõustuvad jooksva arveldusperioodi lõpus. Osalise arveldamise perioodi eest ei maksta tagasimakseid.",
+          "Jätame endale õiguse muuta oma hindu 30 päeva ette teatamisega. Hinnamuutused kehtivad arveldamisperioodidele, mis algavad pärast teavitamisperioodi."
+        ]
+      },
+      {
+        "title": "5. AI-põhised funktsioonid",
+        "content": [
+          "IQ Rest kasutab menüü tõlgete ja pilditöötluse jaoks tehisintellekti. Kuigi püüame täpsuse poole, võivad AI genereeritud tõlked sisaldada vigu. Te vastutate kõigi AI genereeritud sisu ülevaatamise ja kinnitamise eest enne avaldamist.",
+          "AI pilditöötlus töötleb automaatselt üles laaditud pilte, et parandada laadimiskiirus. Originaalpildid ei salvestata pärast töötlemist.",
+          "Me ei garanteeri AI genereeritud sisu täpsust, täielikkust ega usaldusväärsust. Te tunnustate, et AI funktsioonid on saadaval 'nagu on' ja kasutate neid oma äranägemise järgi."
+        ]
+      },
+      {
+        "title": "6. Kasutaja sisu",
+        "content": [
+          "Te säilitate kõikide IQ Rest'i üles laaditud sisu, sealhulgas menüüelementide, kirjelduste, piltide ja äriteabe omandiõiguse.",
+          "Sisu üles laadimisega annate IQ Rest'ile mitteeksklusiivse, ülemaailmse, autoritasuta litsentsi teie sisu kasutamiseks, kuvamiseks ja levitamiseks ainult teenuse osutamise eesmärgil.",
+          "Te olete ainuisikuliselt vastutav oma üles laaditud sisu eest ja peate tagama, et see ei rikuks seadusi ega kolmandate osapoolte õigusi. Keelatud sisu hulka kuuluvad: ebaseaduslikud materjalid, autoriõigusega kaitstud sisu ilma loata, eksitav või petlik teave ning sisu, mis rikub tervise- ja ohutusnõudeid."
+        ]
+      },
+      {
+        "title": "7. Vastuvõetav kasutamine",
+        "content": [
+          "Te nõustute mitte kasutama IQ Rest'i ebaseaduslikel eesmärkidel ega viisil, mis võiks kahjustada, keelata või kahjustada teenust.",
+          "Keelatud tegevused hõlmavad: katseid saada volitamata juurdepääs teistele kontodele või süsteemidele, teenuse kasutamine rämpsposti või pahavara levitamiseks, andmete kraapimine või kaevandamine, teiste isikute või ettevõtete jäljendamine ning kasutuspiirangute või turvameetmete ületamine."
+        ]
+      },
+      {
+        "title": "8. Intellektuaalne omand",
+        "content": [
+          "IQ Rest'i nimi, logo, veebilehe disain ja kõik sellega seotud intellektuaalne omand kuuluvad Bogdan Sokolovile ja on kaitstud kehtivate intellektuaalomandi seadustega.",
+          "Te ei tohi kopeerida, muuta, levitada ega luua tuletatud teoseid meie intellektuaalse omandi alusel ilma selgesõnalise kirjaliku loata."
+        ]
+      },
+      {
+        "title": "9. Privaatsus ja andmekaitse",
+        "content": [
+          "Teie IQ Rest'i kasutamine on samuti reguleeritud meie Privaatsuspoliitikaga. Me järgime Euroopa Liidu isikuandmete kaitse määrust (GDPR) ja Hispaania andmekaitseseadusi (LOPDGDD).",
+          "Kogume ja töötleme isikuandmeid, mis on vajalikud teenuse osutamiseks, sealhulgas e-posti aadresse, äriteavet ja kasutusanalüüse. Te saate igal ajal taotleda juurdepääsu, parandamist või oma isikuandmete kustutamist."
+        ]
+      },
+      {
+        "title": "10. Vastutuse piiramine",
+        "content": [
+          "IQ Rest'i pakutakse 'nagu on' ja 'nagu saadaval' ilma igasuguste garantiideta, kas väljendatud või kaudsed, sealhulgas, kuid mitte ainult, kaudsed garantiid kaubanduslikkuse ja konkreetse otstarbe sobivuse osas.",
+          "Kuni seadusega lubatud maksimaalse ulatuseni ei vastuta Bogdan Sokolov mitte mingite kaudsete, juhuslike, erakorraliste, tagajärgede või karistuslike kahjude eest, sealhulgas kasumi, andmete või äri võimaluste kaotuse eest.",
+          "Meie koguvastutus mis tahes nõuete eest, mis tulenevad teenusest või on sellega seotud, ei ületa summat, mille te meile maksisite kaheteistkümne (12) kuu jooksul enne nõude esitamist."
+        ]
+      },
+      {
+        "title": "11. Kahjutasu",
+        "content": [
+          "Te nõustute hüvitama, kaitsma ja hoidma Bogdan Sokolovi kahjutuks mis tahes nõuete, kahjude, kaotuste või kulude eest, mis tulenevad teie teenuse kasutamisest, teie sisust või nende Tingimuste rikkumisest."
+        ]
+      },
+      {
+        "title": "12. Teenuse kättesaadavus",
+        "content": [
+          "Püüame säilitada meie teenuse kõrget kättesaadavust, kuid ei garanteeri katkematut juurdepääsu. Teenus võib olla ajutiselt kättesaamatu hoolduse, uuenduste või meie kontrolli alt väljas olevate asjaolude tõttu.",
+          "Me ei vastuta teenuse katkestustest või seisakutest tuleneva kaotuse või kahju eest."
+        ]
+      },
+      {
+        "title": "13. Lõpetamine",
+        "content": [
+          "Me võime teie konto kohe lõpetada või peatada, ilma ette teatamata, käitumise tõttu, mis meie arvates rikub neid Tingimusi või on kahjulik teistele kasutajatele, meile või kolmandatele osapooltele.",
+          "Lõpetamise korral lõpeb teie õigus teenust kasutada kohe. Me võime teie andmed kustutada 30 päeva jooksul pärast lõpetamist, välja arvatud juhul, kui seadus nõuab nende säilitamist."
+        ]
+      },
+      {
+        "title": "14. Muudatused tingimustes",
+        "content": [
+          "Jätame endale õiguse neid Tingimusi igal ajal muuta. Teavitame teid olulistest muudatustest e-posti teel või teenuse kaudu.",
+          "Teie jätkuv IQ Rest'i kasutamine pärast muudatuste jõustumist tähendab muudetud Tingimuste aktsepteerimist."
+        ]
+      },
+      {
+        "title": "15. Kohaldatav seadus ja jurisdiktsioon",
+        "content": [
+          "Need Tingimused on reguleeritud Hispaania ja Euroopa Liidu seadustega. Kõik vaidlused, mis tulenevad nendest Tingimustest või teie IQ Rest'i kasutamisest, kuuluvad Hispaania kohtute ainupädevusse.",
+          "Kui mõni Tingimuste säte osutub jõustamatuks, jäävad ülejäänud sätted täielikult kehtima."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "lastUpdated": "Viimati uuendatud: 17. detsember 2025",
+    "contact": {
+      "title": "Võta meiega ühendust",
+      "description": "Kui teil on küsimusi selle privaatsuspoliitika kohta või soovite kasutada oma andmekaitse õigusi, palun võtke meiega ühendust.",
+      "controller": "Andmete vastutav töötleja"
+    },
+    "sections": [
+      {
+        "title": "1. Sissejuhatus",
+        "content": [
+          "See privaatsuspoliitika selgitab, kuidas IQ Rest, mida haldab Bogdan Sokolov (Autónomo), NIE: Z1894474S, registreeritud Hispaanias, kogub, kasutab, salvestab ja kaitseb teie isikuandmeid, kui kasutate meie QR menüü platvormi.",
+          "Me pühendume teie privaatsuse kaitsmisele ja Euroopa Liidu isikuandmete kaitse määruse (GDPR), Hispaania orgaanilise seaduse isikuandmete kaitse kohta (LOPDGDD) ja teiste kohaldatavate andmekaitse seaduste järgimisele."
+        ]
+      },
+      {
+        "title": "2. Andmete vastutav töötleja",
+        "content": [
+          "Teie isikuandmete eest vastutav töötleja on: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registreeritud Hispaanias. Andmekaitse küsimuste korral palun võtke meiega ühendust aadressil support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Kogutavad isikuandmed",
+        "content": [
+          "Konto teave: Kui registreerite, kogume teie e-posti aadressi autentimise ja suhtlemise eesmärkidel. Kasutame paroolivaba autentimist, seega ei salvesta me paroole.",
+          "Äriregister: Restorani nimi, kirjeldus, URL slug, kontaktandmed (telefon, WhatsApp, Instagram), asukohaandmed ja tööajad, mille te annate oma avaliku menüü veebisaidi jaoks.",
+          "Menüü sisu: Kategooriad, menüüelemendid, kirjeldused, hinnad ja pildid, mille te üles laadite, et luua oma digitaalne menüü.",
+          "Kasutusandmed: Teave selle kohta, kuidas te meie teenust kasutate, sealhulgas lehevaated, funktsioonide kasutamine ja interaktsioonimustrid, mida kogutakse analüütika kaudu.",
+          "Makseandmed: Kui tellite tasulisi plaane, töötleb makseid Stripe. Me ei salvesta teie täielikke krediitkaardi andmeid; Stripe töötleb ja kaitseb neid andmeid.",
+          "Tehnilised andmed: IP-aadressid, brauseri tüüp, seadme teave ja küpsised, nagu on kirjeldatud meie küpsiste poliitikas."
+        ]
+      },
+      {
+        "title": "4. Kuidas me teie andmeid kasutame",
+        "content": [
+          "Kasutame teie isikuandmeid järgmiste eesmärkide saavutamiseks: meie QR menüü teenuse pakkumine ja säilitamine, sealhulgas teie restorani veebisaidi loomine ja QR-koodide genereerimine. Teie konto autentimine e-posti kinnituskoodide abil. Maksete töötlemine ja teie tellimuse haldamine Stripe'i kaudu. Teiega suhtlemine teie konto, teenuseuuenduste ja tugitaotluste kohta. AI-põhiste funktsioonide pakkumine, nagu menüü tõlked ja piltide optimeerimine. Teenuse kasutuse analüüsimine ja meie platvormi parandamine. Õiguslike kohustuste täitmine ja meie seaduslike huvide kaitsmine."
+        ]
+      },
+      {
+        "title": "5. Andmete töötlemise õiguslik alus",
+        "content": [
+          "Lepingu täitmine: Andmete töötlemine, mis on vajalik meie teenuse pakkumiseks (Artikkel 6(1)(b) GDPR).",
+          "Legitiimsed huvid: Analüütika ja teenuse parandamine, pettuse ennetamine (Artikkel 6(1)(f) GDPR).",
+          "Nõusolek: Valikuliste funktsioonide jaoks, nagu turunduskommunikatsioon (Artikkel 6(1)(a) GDPR).",
+          "Õiguslik kohustus: Kui seadus või regulatiivsed nõuded seda nõuavad (Artikkel 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Andmete säilitamine ja turvalisus",
+        "content": [
+          "Teie andmeid hoitakse turvalistel serveritel, mida pakub Amazon Web Services (AWS). Meie andmebaas asub AWS Stockholmi (eu-north-1) piirkonnas Euroopa Liidus, tagades vastavuse ELi andmekaitsenõuetele.",
+          "Teie üles laaditud pildid ja meediafailid salvestatakse AWS S3 serverites, mis asuvad ELi piirkonnas. Andmed on edastamise ajal krüpteeritud TLS/SSL abil ja puhkeolekus AES-256 krüpteerimisega.",
+          "Rakendame sobivaid tehnilisi ja organisatsioonilisi meetmeid, et kaitsta teie andmeid volitamata juurdepääsu, muutmise, avalikustamise või hävitamise eest. Nende hulka kuuluvad turvaline autentimine, juurdepääsukontrollid, regulaarne turbeaudit ja töötajate koolitus."
+        ]
+      },
+      {
+        "title": "7. Andmete jagamine ja kolmandad osalised",
+        "content": [
+          "Jagame teie andmeid järgmiste kolmandate osaliste kategooriatega:",
+          "Stripe (Makse töötleja): Töötleb tellimuse makseid. Stripe on sertifitseeritud EL-USA andmekaitse raamistikus. Nende privaatsuspoliitika: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastruktuur): Majutab meie servereid ja andmebaase ELi piirkondades. AWS järgib GDPR-i ja on sertifitseeritud EL-USA andmekaitse raamistikus.",
+          "AI teenusepakkujad: Kasutame AI teenuseid menüü tõlgete ja piltide optimeerimise jaoks. Andmeid töödeldakse vastavalt nende privaatsuspoliitikatele ja andmete töötlemise lepingutele.",
+          "Google Analytics: Anonüümsete veebianalüüside jaoks (kui lubatud). Saate loobuda küpsiste eelistuste kaudu.",
+          "Me ei müü teie isikuandmeid kolmandatele osalistele. Võime andmeid avalikustada, kui seadus seda nõuab või meie seaduslike õiguste kaitsmiseks."
+        ]
+      },
+      {
+        "title": "8. Rahvusvahelised andmeülekanded",
+        "content": [
+          "Teie andmeid hoitakse ja töödeldakse peamiselt Euroopa Liidus (AWS Stockholmi, eu-north-1 piirkond). Kui andmeid edastatakse väljaspool ELi (näiteks USA-s asuvatele teenusepakkujatele), tagame, et on olemas sobivad kaitsemeetmed, sealhulgas standardlepingulised klauslid (SCC-d) ja sertifitseerimine tunnustatud andmekaitse raamistikutes."
+        ]
+      },
+      {
+        "title": "9. Andmete säilitamine",
+        "content": [
+          "Konto andmed: Säilitatakse, kuni teie konto on aktiivne. Konto kustutamisel eemaldatakse isikuandmed 30 päeva jooksul, välja arvatud juhul, kui seadus nõuab säilitamist.",
+          "Menüü sisu: Säilitatakse, kuni teie konto on aktiivne. Kustutatakse konto lõpetamisel.",
+          "Makseandmed: Säilitatakse 7 aastat, nagu nõuab Hispaania maksuseadus.",
+          "Analüütika andmed: Kogutud ja anonüümseid andmeid võib säilitada määramata ajaks teenuse parandamiseks.",
+          "Varukoopia andmed: Võidakse säilitada krüpteeritud varukoopiatena kuni 90 päeva pärast kustutamist hädaolukordade taastamise eesmärgil."
+        ]
+      },
+      {
+        "title": "10. Teie õigused GDPR-i alusel",
+        "content": [
+          "GDPR-i alusel on teil järgmised õigused seoses teie isikuandmetega:",
+          "Juurdepääsu õigus: Taotlege koopia teie isikuandmetest, mida me hoiame.",
+          "Parandamise õigus: Taotlege vale või puuduliku andmete parandamist.",
+          "Kustutamise õigus: Taotlege oma isikuandmete kustutamist ('õigus olla unustatud').",
+          "Töötlemise piiramise õigus: Taotlege töötlemise piiramist teatud olukordades.",
+          "Andmete üleviimise õigus: Saage oma andmed struktureeritud, masinloetavas formaadis.",
+          "Vastuväite õigus: Esitage vastuväiteid töötlemisele, mis põhineb legitiimsetel huvidel või otseturundusel.",
+          "Nõusoleku tagasivõtmise õigus: Kui töötlemine põhineb nõusolekul, võite selle igal ajal tagasi võtta.",
+          "Nende õiguste kasutamiseks võtke meiega ühendust aadressil support@iq-rest.com. Vastame 30 päeva jooksul. Kui te ei ole meie vastusega rahul, on teil õigus esitada kaebus Hispaania Andmekaitse Ametile (AEPD) aadressil www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Laste privaatsus",
+        "content": [
+          "IQ Rest ei ole mõeldud alla 16-aastaste isikute kasutamiseks. Me ei kogu teadlikult laste isikuandmeid. Kui saame teada, et oleme kogunud andmeid lapselt, kustutame need viivitamatult."
+        ]
+      },
+      {
+        "title": "12. Muudatused selles poliitikas",
+        "content": [
+          "V võime seda privaatsuspoliitikat aeg-ajalt uuendada. Teavitame teid olulistest muudatustest e-posti teel või teate kaudu meie veebisaidil. Ülemine 'Viimati uuendatud' kuupäev näitab, millal poliitikat viimati muudeti.",
+          "Teie jätkuv IQ Rest'i kasutamine pärast muudatuste postitamist tähendab muudetud poliitika aktsepteerimist."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Küpsiste poliitika",
+    "lastUpdated": "Viimati uuendatud: 17. detsember 2025",
+    "yes": "Jah",
+    "no": "Ei",
+    "cookieTableTitle": "Küpsised, mida me kasutame",
+    "tableHeaders": {
+      "name": "Küpsise nimi",
+      "purpose": "Eesmärk",
+      "duration": "Kestus",
+      "required": "Nõutav"
+    },
+    "contact": {
+      "title": "Küsimused küpsiste kohta",
+      "description": "Kui teil on küsimusi meie küpsiste kasutamise kohta, palun võtke meiega ühendust."
+    },
+    "sections": [
+      {
+        "title": "1. Mis on küpsised",
+        "content": [
+          "Küpsised on väikesed tekstifailid, mis salvestatakse teie seadmesse (arvuti, tahvelarvuti või nutitelefon), kui külastate veebisaiti. Need aitavad veebisaitidel korralikult toimida, meenutada teie eelistusi ja anda teavet veebisaidi omanikele.",
+          "See küpsiste poliitika selgitab, kuidas IQ Rest, mida haldab Bogdan Sokolov (Autónomo), kasutab küpsiseid ja sarnaseid tehnoloogiaid meie veebisaidil iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Kuidas me küpsiseid kasutame",
+        "content": [
+          "Kasutame küpsiseid mitmel eesmärgil: et tagada meie veebisaidi korrektne toimimine, et meenutada teie eelistusi ja seadeid, et autentida teie kontot ja hoida teid sisse logituna, et analüüsida, kuidas külastajad meie veebisaiti kasutavad, et saaksime seda parandada, ja et meenutada teie küpsiste nõusoleku eelistusi."
+        ]
+      },
+      {
+        "title": "3. Küpsiste tüübid, mida me kasutame",
+        "content": [
+          "Olulised küpsised: Need küpsised on vajalikud veebisaidi toimimiseks ja neid ei saa välja lülitada. Need seadistatakse tavaliselt vastuseks teie tegevustele, näiteks sisselogimise või privaatsuse seadete seadistamise korral.",
+          "Funktsionaalsed küpsised: Need küpsised võimaldavad täiustatud funktsionaalsust ja isikupärastamist, näiteks teie keele eelistuse ja teema seadete meeldejätmist.",
+          "Analüütilised küpsised: Need küpsised aitavad meil mõista, kuidas külastajad meie veebisaidiga suhtlevad, kogudes ja esitades teavet anonüümselt. Kasutame neid andmeid meie teenuse parandamiseks.",
+          "Kolmandate osapoolte küpsised: Mõned küpsised paigutavad kolmandate osapoolte teenused, mis ilmuvad meie lehtedel, näiteks maksetöötlejate (Stripe) ja analüütika pakkujate (Google Analytics) poolt."
+        ]
+      },
+      {
+        "title": "4. Teie küpsiste valikud",
+        "content": [
+          "Kui külastate meie veebisaiti esmakordselt, näete küpsiste nõusoleku bännerit, mis võimaldab teil aktsepteerida või tagasi lükata mitteolulised küpsised. Saate oma eelistusi igal ajal muuta.",
+          "Saate küpsiseid kontrollida ka oma brauseri seadete kaudu. Enamik brausereid võimaldab teil küpsiseid keelduda, olemasolevaid küpsiseid kustutada või saada teateid, kui küpsiseid saadetakse. Palun pange tähele, et oluliste küpsiste blokeerimine võib mõjutada meie veebisaidi funktsionaalsust.",
+          "Google Analytics jälgimisest loobumiseks saate installida Google Analyticsi loobumise brauseri lisandmooduli."
+        ]
+      },
+      {
+        "title": "5. Küpsiste kestus",
+        "content": [
+          "Seansi küpsised: Need küpsised on ajutised ja kustutatakse, kui sulgete oma brauseri.",
+          "Püsivad küpsised: Need küpsised jäävad teie seadmesse kindlaksmääratud ajaks või kuni te need kustutate. Need aitavad meil teid ära tunda, kui naasete meie veebisaidile."
+        ]
+      },
+      {
+        "title": "6. Kolmandate osapoolte küpsised",
+        "content": [
+          "Stripe: Kasutatakse turvaliseks maksetöötluseks. Stripe võib seada küpsiseid, et vältida pettusi ja töödelda makseid turvaliselt. Lisateavet leiate aadressilt stripe.com/cookies-policy",
+          "Google Analytics: Kasutatakse anonüümsete statistika kogumiseks veebisaidi kasutamise kohta. Saate loobuda, kasutades küpsiste bännerit või brauseri seadeid. Lisateavet leiate aadressilt policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Uuendused sellele poliitikale",
+        "content": [
+          "V võime aeg-ajalt seda küpsiste poliitikat uuendada, et kajastada muudatusi meie praktikates või operatiivsetel, õiguslikel või regulatiivsetel põhjustel. Ülemises osas olev 'Viimati uuendatud' kuupäev näitab, millal poliitikat viimati muudeti."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Hoidke teie sisselogimise seanssi ja autentimise olekut",
+        "duration": "Seanss / 30 päeva",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Meenutab teie eelistatud keelt (inglise/hispaania)",
+        "duration": "1 aasta",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Salvestab teie teema eelistuse (hele/tume režiim)",
+        "duration": "1 aasta",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Meenutab teie küpsiste nõusoleku eelistusi",
+        "duration": "1 aasta",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - jälgib anonüümseid kasutusstatistikat",
+        "duration": "2 aastat / 24 tundi",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - pettuste ennetamine ja maksete turvalisus",
+        "duration": "1 aasta / Seanss",
+        "required": false
+      }
+    ]
+  }
+}

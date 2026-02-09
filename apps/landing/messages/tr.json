@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menü",
+      "pricing": "Fiyatlandırma",
+      "features": "Özellikler",
+      "faq": "Sıkça Sorulan Sorular",
+      "changelog": "Değişiklik Günlüğü",
+      "contacts": "İletişim"
+    },
+    "getStarted": "Giriş Yap",
+    "selectLanguage": "Dil Seçin",
+    "selectLanguageDescription": "Web sitesi için tercih ettiğiniz dili seçin.",
+    "searchLanguage": "Dil ara...",
+    "noLanguagesFound": "Hiçbir dil bulunamadı"
+  },
+  "home": {
+    "hero": {
+      "title": "Restoran için QR Menü ve Web Sitesi 5 Dakikada",
+      "subtitle": "Sadece e-posta adresinizi girin ve QR menü, iletişim sayfası, çok dilli destek ve modern tasarıma sahip tam bir restoran web sitesi edinin. Her şeyi telefonunuzdan ayarlayın.",
+      "cta": {
+        "create": "Menü Oluştur",
+        "view": "Gerçek Menüyü Gör"
+      },
+      "benefits": [
+        {
+          "title": "Modern web sitesi",
+          "description": "Her cihazda harika görünen profesyonel tasarım"
+        },
+        {
+          "title": "Rezervasyonlar",
+          "description": "Web sitenizden doğrudan masa rezervasyonu kabul edin"
+        },
+        {
+          "title": "Yapay Zeka çevirileri",
+          "description": "Herhangi bir dile otomatik menü çevirisi"
+        },
+        {
+          "title": "Günlük analizler",
+          "description": "Her gün ziyaretleri ve popüler yemekleri takip edin"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Dünya genelinde 500+ restoran tarafından güvenilir",
+      "title": "Restoranınızın Online İhtiyaçları",
+      "description": "Sadece e-posta adresinizle kaydolun ve anında şunları edinin: profesyonel bir restoran web sitesi, modern formatta QR menü, harita ile işlevsel iletişim sayfası, yapay zeka çevirisi ile çok dilli destek, video veya fotoğraf arka planı ve özel renk şeması. Hepsi telefonunuzdan yönetilebilir - bilgisayar gerekmez."
+    },
+    "whyUs": {
+      "title": "5 Dakikada Sıfırdan Online Menüye",
+      "subtitle": "Restoranınızı çevrimiçi almak için sadece 4 basit adım",
+      "items": [
+        {
+          "step": "1",
+          "title": "E-posta Adresinizi Girin",
+          "description": "Sadece e-posta adresinizle hızlı kayıt. Kredi kartı gerekmez."
+        },
+        {
+          "step": "2",
+          "title": "Restoran Bilgilerini Doldurun",
+          "description": "Restoran adınızı, adresinizi, iletişim bilgilerinizi ve çalışma saatlerinizi ekleyin."
+        },
+        {
+          "step": "3",
+          "title": "Menü Öğeleri Ekleyin",
+          "description": "Kategoriler oluşturun ve yemeklerinizi fotoğraflar ve fiyatlarla ekleyin."
+        },
+        {
+          "step": "4",
+          "title": "Menünüzün Tadını Çıkarın",
+          "description": "QR menünüz hazır! Müşterilerle paylaşın ve analizleri takip edin."
+        }
+      ],
+      "cta": "Restoranınızı Modernleştirmeye Hazır Mısınız?"
+    },
+    "featuresPreview": {
+      "title": "Restoranınız için Güçlü Özellikler",
+      "subtitle": "Profesyonel bir çevrimiçi varlık oluşturmak için ihtiyacınız olan her şey",
+      "viewAll": "Tüm Özellikleri Gör"
+    }
+  },
+  "features": {
+    "title": "Restoranınızın QR Menüsü ve Web Sitesi için Güçlü Özellikler",
+    "subtitle": "Restoranınız veya kafeniz için profesyonel bir dijital varlık oluşturmak için ihtiyaç duyduğunuz her şey",
+    "backToFeatures": "Özelliklere Geri Dön",
+    "getStarted": "Menü Oluştur",
+    "viewPricing": "Fiyatları Görüntüle",
+    "readyTitle": "Başlamaya Hazır Mısınız?",
+    "readyDescription": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. Tüm özellikler dahil.",
+    "keyBenefits": "Ana Faydalar",
+    "faqTitle": "Sıkça Sorulan Sorular",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Başlamak için neye ihtiyacım var?",
+          "a": "Sadece e-posta adresiniz. Kredi kartı yok, karmaşık formlar yok."
+        },
+        {
+          "q": "Kurulum ne kadar sürüyor?",
+          "a": "Web siteniz anında hazır. Menü öğelerinizi ekleyin ve 5 dakikada yayına geçin."
+        },
+        {
+          "q": "Ücretsiz bir plan var mı?",
+          "a": "Evet, tüm temel özellikler dahil olmak üzere ücretsiz başlayın."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Bir uygulama yüklemem gerekiyor mu?",
+          "a": "Uygulamaya gerek yok - her şey telefonunuzun tarayıcısında çalışıyor."
+        },
+        {
+          "q": "Telefonumdan fotoğraf yükleyebilir miyim?",
+          "a": "Evet, kameranızla fotoğraf çekin ve menünüze doğrudan yükleyin."
+        },
+        {
+          "q": "Tabletlerde çalışıyor mu?",
+          "a": "Evet, kontrol paneli telefonlar, tabletler ve masaüstü bilgisayarlar için optimize edilmiştir."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Yapay zeka çevirisi ne kadar doğru?",
+          "a": "Yapay zekamız mutfak bağlamını anlar, yemek isimlerini korur ve açıklamaları doğal bir şekilde çevirir."
+        },
+        {
+          "q": "Çeviri ne kadar hızlı?",
+          "a": "Tüm menüler saniyeler içinde, saatler değil."
+        },
+        {
+          "q": "Yapay zeka çevirilerini düzenleyebilir miyim?",
+          "a": "Evet, tüm çeviriler düzenlenebilir - gözden geçirin ve gerektiği gibi ayarlayın."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Kaç dil destekleniyor?",
+          "a": "25'ten fazla dil, tüm büyük Avrupa dilleri, Çince, Japonca, Korece, Arapça ve İbranice dahil."
+        },
+        {
+          "q": "Müşteriler dilleri nasıl değiştiriyor?",
+          "a": "Menünüzde bir dil seçici görünür - mevcut herhangi bir dile geçmek için bir dokunuş yeter."
+        },
+        {
+          "q": "Çeviri otomatik mi?",
+          "a": "Yapay zeka çevirisini kullanabilir veya her dil için çevirileri manuel olarak girebilirsiniz."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Hangi resim formatları destekleniyor?",
+          "a": "JPG, PNG veya WebP yükleyin - resimler otomatik olarak optimize edilir."
+        },
+        {
+          "q": "Optimizasyon kaliteyi düşürüyor mu?",
+          "a": "Hayır, yapay zekamız hızlı yükleme için dosya boyutunu azaltırken görsel kaliteyi korur."
+        },
+        {
+          "q": "Bir dosya boyutu limiti var mı?",
+          "a": "10MB'a kadar resim yükleyin - otomatik olarak optimize edilecektir."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Yeni bir yemek nasıl eklerim?",
+          "a": " 'Öğe Ekle'ye dokunun, adını, açıklamasını, fiyatını girin ve isteğe bağlı olarak bir fotoğraf yükleyin. Hepsi bu kadar!"
+        },
+        {
+          "q": "Menü öğelerini yeniden sıralayabilir miyim?",
+          "a": "Evet, öğeleri veya kategorileri sürükleyip bırakarak yeniden sıralayabilirsiniz."
+        },
+        {
+          "q": "Bir yemek tükendiğinde ne yapmalıyım?",
+          "a": "Öğeyi geçici olarak kapatın - menüden kaybolur ama silinmez."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Hangi metrikleri takip edebilirim?",
+          "a": "Günlük görüntülemeler, sayfa performansı, dil tercihleri ve zaman içindeki eğilimler."
+        },
+        {
+          "q": "Veriler ne sıklıkla güncelleniyor?",
+          "a": "Analizler gerçek zamanlı olarak güncellenir - bugünkü ziyaretçileri anlık olarak görün."
+        },
+        {
+          "q": "Analiz verilerini dışa aktarabilir miyim?",
+          "a": "Detaylı raporları doğrudan kontrol panelinizde görüntüleyin."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Müşteriler rezervasyonları nasıl yapıyor?",
+          "a": "Müşteriler doğrudan restoran web sitenizden rezervasyon yapabilir. Tarih, saat ve misafir sayısını seçerler, ardından bir e-posta onayı alırlar."
+        },
+        {
+          "q": "Rezervasyonları manuel olarak onaylayabilir miyim?",
+          "a": "Evet, her rezervasyon için otomatik onay veya manuel onay arasında seçim yapabilirsiniz."
+        },
+        {
+          "q": "Yeni rezervasyonlar hakkında bildirim alacak mıyım?",
+          "a": "Evet, her yeni rezervasyon için e-posta bildirimleri alırsınız."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Hangi video formatları destekleniyor?",
+          "a": "MP4 ve WebM formatları desteklenmektedir. Videolar hızlı yükleme için otomatik olarak optimize edilir."
+        },
+        {
+          "q": "Kendi fotoğraflarımı kullanabilir miyim?",
+          "a": "Evet, herhangi bir fotoğraf yükleyin ve web görüntülemesi için otomatik olarak optimize edilecektir."
+        },
+        {
+          "q": "Video menüyü yavaşlatır mı?",
+          "a": "Hayır, videolar sıkıştırılır ve hızlı sayfa performansı sağlamak için tembel yüklenir."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Kaç renk seçeneğim var?",
+          "a": "12 önceden ayarlanmış renkten birini seçin veya hex kodu kullanarak tam marka renginizi girin."
+        },
+        {
+          "q": "Karanlık mod destekliyor mu?",
+          "a": "Evet, renk şemanız otomatik olarak hem açık hem de koyu temalara uyum sağlar."
+        },
+        {
+          "q": "Renkleri istediğim zaman değiştirebilir miyim?",
+          "a": "Evet, vurgulayıcı renginizi anında kontrol panelinden değiştirin - güncellemeler hemen görünür."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Destekle nasıl iletişime geçebilirim?",
+          "a": "İletişim formunu kullanın veya doğrudan bize e-posta gönderin - gerçek insanlar yanıt verir, botlar değil."
+        },
+        {
+          "q": "Yanıt süresi nedir?",
+          "a": "Genellikle iş günlerinde birkaç saat içinde yanıt veriyoruz."
+        },
+        {
+          "q": "Ücretsiz planlar için destek mevcut mu?",
+          "a": "Evet, kişisel destek tüm planlar için mevcuttur, ücretsiz dahil."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Anında QR Menü ve Web Sitesi Kurulumu",
+        "shortDescription": "Sadece bir e-posta ile restoran web sitenizi ve QR menünüzü oluşturun - 5 dakikada hazır",
+        "description": "En basit kayıt süreciyle birkaç saniyede başlayın. Sadece e-posta adresinizi girin ve anında QR menü, harita ile iletişim sayfası ve modern tasarımla tam bir restoran web sitesi elde edin. Teknik bilgiye gerek yok, karmaşık formlar yok - restoranınız hemen çevrimiçi.",
+        "fullDescription": "Geleneksel web sitesi oluşturucuları saatler süren kurulum, teknik bilgi ve genellikle bir geliştirici gerektirir. IQ Rest her şeyi değiştiriyor. E-posta adresinizi girin, basit bir kodla doğrulayın ve restoran web siteniz hazır. Yemeklerinizi ekleyin, fotoğraflar yükleyin ve QR kodunuzu müşterilerle paylaşın. Tüm süreç 5 dakikadan az sürer.",
+        "benefits": [
+          "Başlamak için sadece e-posta gerekiyor - karmaşık kayıt yok",
+          "Kayıttan sonra restoran web sitesi anında hazır",
+          "QR menü otomatik olarak oluşturulur ve bağlanır",
+          "Varsayılan olarak harita ile iletişim sayfası dahil",
+          "Teknik bilgi veya kodlama bilgisi gerekmiyor"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Restoran web sitesi ve QR menü anında kurulum süreci",
+        "cta": "Daha Fazla Bilgi"
+      },
+      {
+        "id": "mobile-management",
+        "title": "%100 Mobil Uyumlu Yönetim",
+        "shortDescription": "Bilgisayar yok mu? Sorun değil. Tüm restoran web sitenizi telefonunuzdan yönetin. Mutfakta dururken yemek ekleyin, hizmet sırasında fiyatları güncelleyin, fotoğrafları doğrudan kameranızdan yükleyin. Her özellik mobilde mükemmel çalışır - çünkü restoran sahipleri asla bir masada oturmazlar.",
+        "description": "Kategorileri, yemekleri, fotoğrafları ekleyin ve tüm restoran web sitenizi doğrudan telefonunuzdan yönetin. Kontrol panelimiz tamamen mobil cihazlar için optimize edilmiştir, böylece bir kahve molasında menünüzü güncelleyebilir veya hareket halindeyken günlük özel yemekleri ekleyebilirsiniz.",
+        "fullDescription": "Restoran sahipleri, her zaman bilgisayar başında olmayan meşgul insanlardır. Bu yüzden IQ Rest'i mobil cihazlarda mükemmel çalışacak şekilde tasarladık. Yeni yemek eklemekten fiyat güncellemeye kadar her özellik dokunmatik ekranlar için tasarlanmıştır. Yeni bir yemeğin fotoğrafını çekin ve anında yükleyin. Mutfakta dururken bugünün özelini değiştirin.",
+        "benefits": [
+          "Herhangi bir akıllı telefon veya tablette tam kontrol paneli erişimi",
+          "Fotoğrafları doğrudan telefon kameranızdan yükleyin",
+          "Fiyatları ve açıklamaları hareket halindeyken güncelleyin",
+          "Kategorileri dokunmaya duyarlı arayüzle yönetin",
+          "Asla bilgisayar gerekmez"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Restoran menüsü yönetimi akıllı telefonda",
+        "cta": "Mobil Kontrol Panelini Gör"
+      },
+      {
+        "id": "ai-translation",
+        "title": "Yapay Zeka Destekli Menü Çevirisi",
+        "shortDescription": "Dil engelleri nedeniyle uluslararası müşterileri kaybetmeyi durdurun. Yapay zekamız tüm menünüzü 25'ten fazla dile saniyeler içinde çevirir - genel bir çeviri değil, mutfak terimlerini anlayan bağlam odaklı bir yapay zeka. 'Beef Wellington' 'Beef Wellington' olarak kalır, açıklamalar her dilde doğal bir şekilde okunur.",
+        "description": "Yemek bağlamını anlayan akıllı yapay zeka çevirisi ile uluslararası müşterilere ulaşın. Yemek isimleriniz ve açıklamalarınız doğru bir şekilde çevrilir, mutfak terimlerini korur ve her dilde anlamlı hale getirir.",
+        "fullDescription": "Genel çevirmenler genellikle yemek menülerinde başarısız olur - bağlamı anlamadan kelime kelime çevirirler. Yapay zekamız, restoran içeriği için özel olarak eğitilmiştir. 'Beef Wellington'ın kelime kelime çevrilmemesi gerektiğini ve 'al dente'nin her dilde aynı anlama geldiğini bilir. Turistleri ve uluslararası misafirleri, dillerinde doğal bir şekilde okunan menülerle karşılayın.",
+        "benefits": [
+          "Yemek ve mutfak terimleri için bağlam odaklı çeviri",
+          "İspanyolca, Fransızca, Almanca, Çince, Japonca dahil 10'dan fazla dil",
+          "Mutfak terminolojisini ve kültürel nüansları korur",
+          "Anlık çeviri - menü saniyeler içinde mevcut",
+          "Uluslararası müşterilerle satışları %23 artırır"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "Yapay zeka destekli restoran menüsü çeviri arayüzü",
+        "cta": "Yapay Zeka Çevirisini Keşfedin"
+      },
+      {
+        "id": "multilingual",
+        "title": "Çok Dilli Restoran Web Sitesi",
+        "shortDescription": "Turistleri ve uluslararası misafirleri kendi dillerinde karşılayın. 25'ten fazla dil desteği, her müşterinin kendini evinde hissetmesini sağlar. Dilleri değiştirmek için bir dokunuş - menü, fiyatlar, açıklamalar anında uyum sağlar. Turistik bölgelerde veya uluslararası şehirlerdeki restoranlar için mükemmel.",
+        "description": "Restoran web siteniz otomatik olarak birden fazla dili destekler. Müşteriler bir dokunuşla dilleri değiştirebilir ve menü, iletişim bilgileri ve navigasyon dahil tüm içerik anında uyum sağlar.",
+        "fullDescription": "Turistik bölgelerde ve uluslararası şehirlerde, müşterinizin dilinde konuşmak çok önemlidir. IQ Rest, restoranınızı herkes için erişilebilir hale getirir. Müşteriler bir dil seçici görür ve tercih ettikleri dilde tüm web sitenizi - menü, iletişim, rezervasyonlar - gezinebilirler. Yapay zeka çevirisi ile birleştirildiğinde, dünyaya hizmet edebilirsiniz.",
+        "benefits": [
+          "Müşteriler için bir dokunuşla dil değiştirme",
+          "Menü, iletişim ve tüm sayfalar çevrildi",
+          "Dönüş ziyaretleri için dil tercihi hatırlanır",
+          "Turistik bölgeler ve uluslararası şehirler için mükemmel",
+          "Yapay zeka çeviri özelliği ile sorunsuz çalışır"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Çok dilli restoran web sitesi dil seçici",
+        "cta": "Çok Dilli Özellikleri Gör"
+      },
+      {
+        "id": "ai-images",
+        "title": "Yapay Zeka Resim Optimizasyonu",
+        "shortDescription": "Daha hızlı yükleme ve daha iyi kalite için otomatik resim iyileştirme",
+        "description": "Herhangi bir fotoğraf yükleyin ve yapay zekamız otomatik olarak web görüntülemesi için optimize eder. Resimler, bağlantı hızından bağımsız olarak hızlı yüklenir ve yemeklerinizin cazip görünmesini sağlayan harika bir kaliteyi korur.",
+        "fullDescription": "Büyük, optimize edilmemiş resimler web sitenizi yavaşlatır ve müşterileri hayal kırıklığına uğratır. Yapay zekamız her yüklenen resmi işler: optimal boyutlara yeniden boyutlandırma, modern formatlara dönüştürme ve kaliteyi artırma. Sonuç? Yemekleriniz harika görünür ve sayfalar, yavaş mobil bağlantılarda bile bir saniyeden daha kısa sürede yüklenir.",
+        "benefits": [
+          "Optimal web boyutlarına otomatik yeniden boyutlandırma",
+          "Hızlı yükleme için WebP formatına dönüştürme",
+          "Daha iyi sunum için kalite artırma",
+          "Sayfalar 1 saniyeden daha kısa sürede yüklenir",
+          "Yüklediğiniz herhangi bir resim formatıyla çalışır"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "Yapay zeka resim optimizasyonu öncesi ve sonrası karşılaştırma",
+        "cta": "Daha Fazla Bilgi"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Kolay Menü Yönetimi",
+        "shortDescription": "Menünüzü saniyeler içinde güncelleyin, saatler değil. Yeni yemekler ekleyin, fiyatları düzenleyin, kategorileri yeniden sıralayın - tüm bunları herhangi bir cihazdan basit sürükle-bırak ile yapın. Teknik bilgiye gerek yok. Değişiklikler anında yayına geçer, böylece müşterileriniz her zaman en son teklifleri görür.",
+        "description": "Menünüzü yönetmek hiç bu kadar kolay olmamıştı. Kategoriler ekleyin, fotoğraflar ve açıklamalarla yemekler oluşturun, fiyatları belirleyin ve her şeyi basit sürükle-bırak ile düzenleyin. Değişiklikler anında canlı web sitenizde görünür.",
+        "fullDescription": "Karmaşık içerik yönetim sistemlerini unutun. IQ Rest'in menü editörü, restoran sahipleri için tasarlanmıştır, web geliştiricileri için değil. Saniyeler içinde yeni bir kategori oluşturun, birkaç dokunuşla yemekler ekleyin, fotoğrafları doğrudan telefonunuzdan yükleyin. Öğeleri yeniden sıralamak için sürükleyin, tükendi öğelerin görünürlüğünü kapatın ve değişiklikleri hemen canlı görün.",
+        "benefits": [
+          "Sezgisel kategori ve öğe oluşturma",
+          "Sürükle-bırak ile yeniden sıralama",
+          "Öğeleri silmeden açıp kapatma",
+          "Anlık güncellemeler - değişiklikler saniyeler içinde görünür",
+          "Sınırsız kategori ve yemek düzenleme"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Kolay restoran menüsü yönetim paneli",
+        "cta": "Menü Editörünü Gör"
+      },
+      {
+        "id": "analytics",
+        "title": "Günlük Analizler ve İçgörüler",
+        "shortDescription": "Sayfa görüntülemelerini, dilleri ve müşteri davranışını detaylı günlük raporlarla takip edin",
+        "description": "Müşterilerinizi kapsamlı analizlerle anlayın. Günlük sayfa görüntülemelerini, popüler dilleri, en çok görüntülenen sayfaları görün ve zaman içindeki eğilimleri takip edin. Menünüzü optimize etmek için veri odaklı kararlar alın.",
+        "fullDescription": "Bilgi güçtür. Analiz kontrol panelimiz, müşterilerin restoran web sitenizle nasıl etkileşimde bulunduğunu tam olarak gösterir. Hangi sayfalar en çok görüntüleniyor? Müşterileriniz hangi dilleri tercih ediyor? Görüntülemeler haftadan haftaya artıyor mu? Bu içgörüleri kullanarak menünüzü optimize edin, doğru müşterileri hedefleyin ve işinizi büyütün.",
+        "benefits": [
+          "Günlük, haftalık ve aylık görüntüleme istatistikleri",
+          "Dil tercihleri analizi",
+          "Sayfa bazında performans takibi",
+          "Zaman içindeki eğilim analizi",
+          "Daha fazla analiz için verileri dışa aktar"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Günlük istatistiklerle restoran analiz kontrol paneli",
+        "cta": "Daha Fazla Bilgi"
+      },
+      {
+        "id": "reservations",
+        "title": "Masa Rezervasyon Sistemi",
+        "shortDescription": "Kaçırılan çağrılar nedeniyle müşterileri kaybetmeyi durdurun. Masa rezervasyonlarını web sitenizden 7/24 kabul edin - müşteriler tarih, saat ve masayı saniyeler içinde seçer. Otomatik onaylar, e-posta bildirimleri ve her şeyi yönetmek için basit bir kontrol paneli.",
+        "description": "Yerleşik rezervasyon sistemi, müşterilerin doğrudan web sitenizden masa ayırtmalarını sağlar. Mevcutlığa göre otomatik onay seçin veya her rezervasyonu manuel olarak gözden geçirin. Tüm rezervasyonları kontrol panelinizden yönetin.",
+        "fullDescription": "Telefonla rezervasyon almak zaman alıcıdır ve kolayca gözden kaçabilir. IQ Rest'in rezervasyon sistemi 7/24 çalışır. Müşteriler tarih, saat ve grup büyüklüğünü seçer ve anında rezervasyon yaparlar. Masa mevcutlığına göre otomatik onay ayarlayabilir veya her talebi manuel olarak gözden geçirebilirsiniz. E-posta onayları ile no-show'ları azaltın.",
+        "benefits": [
+          "7/24 çevrimiçi rezervasyon imkanı",
+          "Otomatik veya manuel onay modları",
+          "Masa ve kapasite yönetimi",
+          "Rezervasyonlar için e-posta bildirimleri",
+          "Kolay planlama için takvim görünümü"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Restoranlar için çevrimiçi masa rezervasyon sistemi",
+        "cta": "Masa Rezervasyonlarını Keşfedin"
+      },
+      {
+        "id": "custom-design",
+        "title": "Video ve Fotoğraf Arka Planları",
+        "shortDescription": "İlk izlenimler önemlidir. Müşterilerinizi QR kodunuzu taradıkları anda restoran atmosferinizin etkileyici bir videosu veya imza yemeğinizin güzel bir fotoğrafıyla büyüleyin. Rakiplerinizden sıyrılın ve premium ve profesyonel bir his veren bir ana sayfa oluşturun.",
+        "description": "Ana sayfanızda özel video veya fotoğraf arka planları ile unutulmaz bir ilk izlenim oluşturun. Restoran atmosferinizi yansıtan bir video veya güzel bir yemek fotoğrafı yükleyin ve müşterilerinizi anında etkileyin.",
+        "fullDescription": "İlk izlenimler önemlidir. Müşteriler QR kodunuzu taradıklarında hemen etkilenmelidirler. Restoran atmosferinizin bir videosunu, mutfak zaman atlamalı görüntüsünü veya imza yemeğinizin etkileyici bir fotoğrafını yükleyin. Ana sayfanız, restoranınızın kişiliğini yansıtan görsel bir deneyim haline gelir.",
+        "benefits": [
+          "Video ve resim arka planları desteği",
+          "Hızlı yükleme için otomatik optimizasyon",
+          "Mobil cihazlarda mükemmel çalışır",
+          "Unutulmaz ilk izlenim oluşturur",
+          "Restoranınızın eşsiz atmosferini yansıtır"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Video arka planına sahip restoran web sitesi",
+        "cta": "Video Arka Planlarını Gör"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Özel Renk Şeması",
+        "shortDescription": "Menünüzü gerçekten kendinize ait kılın, restoranınızın marka kimliğiyle uyumlu özel vurgulayıcı renklerle. 12 güzel önceden ayarlanmış renkten birini seçin veya tam marka tonunuzu seçin. Her düğme, vurgulayıcı ve etkileşimli öğe, müşterilerin hatırlayacağı uyumlu ve profesyonel bir görünüm oluşturacak şekilde uyum sağlar.",
+        "description": "Restoran web siteniz markanızla uyumlu olmalıdır. Önceden ayarlanmış renk şemalarından birini seçin veya tam marka renginizi seçin. Otomatik açık/koyu tema desteği ile menünüz her zaman profesyonel görünür.",
+        "fullDescription": "Marka tutarlılığı önemlidir. IQ Rest, web siteniz boyunca kullanılan vurgulayıcı rengi özelleştirmenizi sağlar - düğmeler, vurgulayıcılar ve etkileşimli öğeler markanızla uyumlu hale gelir. Özenle hazırlanmış önceden ayarlardan birini seçin veya tam marka renginizi girin. Sistem, hem açık hem de koyu modlarda okunabilirliği otomatik olarak sağlar.",
+        "benefits": [
+          "Özel vurgulayıcı renk seçimi",
+          "Önceden ayarlanmış renk şemaları mevcut",
+          "Otomatik açık/koyu tema desteği",
+          "Tüm sayfalarda tutarlı marka",
+          "Erişilebilirlik için optimize edilmiş renk kontrastı"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Özel renk şeması ve marka seçenekleri",
+        "cta": "Renk Şemalarını Keşfedin"
+      },
+      {
+        "id": "personal-support",
+        "title": "Bireysel Çevrimiçi Destek",
+        "shortDescription": "Herhangi bir soru için gerçek insanlardan kişisel yardım alın - chatbotlar değil",
+        "description": "Her restoran bireysel çevrimiçi destek alır. Bir sorunuz mu var? Kurulumda yardıma mı ihtiyacınız var? Bir özellik önermek mi istiyorsunuz? Gerçek insanlar, dijital menünüzle başarılı olmanıza yardımcı olmak için hızlı bir şekilde yanıt verir.",
+        "fullDescription": "Her restoranın kişisel ilgiye layık olduğuna inanıyoruz. Destekle iletişime geçtiğinizde, restoranları anlayan ve gerçekten yardımcı olabilen gerçek insanlarla konuşuyorsunuz. Bot yok, otomatik yanıt yok, bilet kuyrukları yok. İlk yemeğinizi eklemede yardıma mı ihtiyacınız var yoksa menünüzü optimize etme konusunda tavsiye mi istiyorsunuz, buradayız.",
+        "benefits": [
+          "Gerçek insan desteği - bot yok",
+          "Hızlı yanıt süreleri",
+          "Kurulum ve optimizasyon konusunda yardım",
+          "Özellik talepleri memnuniyetle karşılanır",
+          "Ücretsiz dahil tüm planlar için mevcut"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Restoranlar için kişisel çevrimiçi destek sohbeti",
+        "cta": "Daha Fazla Bilgi"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR Menü & Restoran Web Sitesi Fiyatlandırması",
+    "subtitle": "Gizli ücret yok, sürpriz yok. Bugün restoran web sitenizi ücretsiz başlatın — büyümeye hazır olduğunuzda yükseltin.",
+    "seo": {
+      "title": "Restoranınız veya Kafeniz için Neden IQ Rest'i Seçmelisiniz?",
+      "text": "Restoranınız veya kafeniz için profesyonel bir QR menü ve web sitesi birkaç dakikada oluşturun. Misafirleriniz, dijital menünüzü telefonlarında görüntülemek için yalnızca bir QR kodunu tarar — uygulama gerekmez. Fiyatları güncelleyin, yeni yemekler ekleyin ve açıklamaları anında değiştirin. AI destekli çevirilerle, uluslararası müşterilere kendi dillerinde hizmet verin. Hangi yemeklerin en çok görüntülendiğini yerleşik analizlerle takip edin. İster küçük bir kafe işletin, ister büyüyen bir restoran zinciri, IQ Rest menü deneyiminizi modernize etmenize yardımcı olurken baskı maliyetlerinizi azaltır."
+    },
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "save": "(%25 Tasarruf)",
+    "perMonth": "/ay",
+    "billedYearly": "Yıllık faturalandırma (€{total})",
+    "forever": "Sonsuza dek ücretsiz",
+    "popular": "En Popüler",
+    "plans": {
+      "free": {
+        "name": "Ücretsiz",
+        "description": "IQ Rest'i denemek için mükemmel",
+        "cta": "Ücretsiz Başlayın",
+        "highlights": [
+          "Restoran web sitesi",
+          "QR Menü",
+          "300 tarama/ay",
+          "2 dil",
+          "AI görüntü iyileştirme",
+          "Analiz"
+        ]
+      },
+      "basic": {
+        "name": "Temel",
+        "description": "Küçük restoranlar için harika",
+        "cta": "Başlayın",
+        "highlights": [
+          "Ücretsizdeki her şey, artı:",
+          "4,500 tarama/ay",
+          "3 dil",
+          "AI çeviriler",
+          "Özel renk teması",
+          "Rezervasyonlar"
+        ]
+      },
+      "pro": {
+        "name": "Profesyonel",
+        "description": "Büyüyen restoran zincirleri için",
+        "cta": "Başlayın",
+        "highlights": [
+          "Temeldeki her şey, artı:",
+          "Sınırsız tarama",
+          "6 dil",
+          "Öncelikli destek",
+          "Tüm özellikler dahil"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Planları Karşılaştır",
+      "subtitle": "Hangi planın sizin için uygun olduğunu görün"
+    },
+    "features": {
+      "website": "Restoran web sitesi",
+      "qrMenu": "QR Menü",
+      "scans": "Aylık taramalar",
+      "languages": "Desteklenen diller",
+      "aiTranslation": "AI çeviriler",
+      "aiImages": "AI görüntü iyileştirme",
+      "analytics": "Analiz",
+      "customTheme": "Özel renk teması",
+      "background": "Arka plan resmi & video",
+      "support": "Destek",
+      "reservations": "Rezervasyonlar"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Sınırsız",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Yardım mı lazım? Sohbet edelim",
+    "subtitle": "Merhaba, ben Bogdan — IQ Rest'in kurucusuyum. Bu platformu kendi kafem için geliştirdim ve şimdi dünya genelinde yüzlerce restorana yardımcı oluyor. Bir sorunuz veya fikriniz mi var? Bana doğrudan yazın. Bot yok, bekleme yok — sadece gerçek bir sohbet.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "İletişime geç",
+      "email": "E-posta Adresiniz",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Bu ne hakkında?",
+      "message": "Mesaj",
+      "messagePlaceholder": "Aklınızdakileri söyleyin...",
+      "submit": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız gönderildi! İletişime geçtiğiniz için teşekkürler. Yakında size döneceğim.",
+      "error": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin."
+    }
+  },
+  "languages": {
+    "en": "İngilizce",
+    "es": "İspanyolca"
+  },
+  "cookieConsent": {
+    "title": "Çerezleri Kullanıyoruz",
+    "description": "Tarayıcı deneyiminizi geliştirmek, kişiselleştirilmiş içerik sunmak ve trafiğimizi analiz etmek için çerezler kullanıyoruz. \"Tümünü Kabul Et\" butonuna tıklayarak çerez kullanımımızı kabul etmiş olursunuz.",
+    "acceptAll": "Tümünü Kabul Et",
+    "rejectAll": "Tümünü Reddet",
+    "customize": "Özelleştir",
+    "learnMore": "Daha Fazla Öğren"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigasyon",
+      "pricing": "Fiyatlandırma",
+      "features": "Özellikler",
+      "contacts": "İletişim",
+      "faq": "Sıkça Sorulan Sorular",
+      "changelog": "Değişiklik Günlüğü"
+    },
+    "legal": {
+      "title": "Hukuki",
+      "terms": "Şartlar ve Koşullar",
+      "privacy": "Gizlilik Politikası",
+      "cookies": "Çerez Politikası",
+      "sitemap": "Site Haritası"
+    },
+    "copyright": "© 2025 IQ Rest. Tüm hakları saklıdır."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Değişiklikler - IQ Rest Güncellemeleri ve Yeni Özellikler",
+      "description": "IQ Rest ile en son özellikler ve iyileştirmelerden haberdar olun - restoranlar ve kafeler için dijital QR menü çözümünüz"
+    },
+    "title": "Değişiklikler",
+    "subtitle": "Restoran QR menünüz için en son güncellemeler ve yeni özellikler",
+    "readMore": "Daha fazla oku",
+    "backToChangelog": "Değişiklik Günlüğüne Dön",
+    "seo": {
+      "title": "IQ Rest Güncellemeleri Hakkında",
+      "description": "IQ Rest, restoranlar ve kafelerin profesyonel dijital QR menüler oluşturmasına yardımcı olmak için sürekli olarak gelişmektedir. Restoran web siteniz ve QR menü çözümünüz için en son özelliklerden haberdar olmak için değişiklik günlüğümüzü takip edin."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Restoran QR Menünüz İçin Duyarlı Destek",
+        "description": "QR menünüzle ilgili her türlü soru ve değişiklik için duyarlı destek alın. Hızlı yardım için ekibimizle doğrudan sohbet edin.",
+        "meta": {
+          "title": "Restoran QR Menüsü İçin Duyarlı Destek | IQ Rest",
+          "description": "QR menünüzle ilgili her türlü soru ve değişiklik için duyarlı destek alın. Kafeler ve restoranlar için doğrudan sohbet desteği ile hızlı yardım."
+        },
+        "content": {
+          "intro": "IQ Rest artık QR menünüzle ilgili her türlü soru ve değişiklik için duyarlı destek sunuyor. Bir restoran veya kafe işletmenin sorunlar ortaya çıktığında hızlı çözümler gerektirdiğini anlıyoruz. Uygulama içindeki yeni destek sohbetimiz, ekibimize doğrudan erişim sağlar, böylece QR menünüz mükemmel kalır ve müşterileriniz her zaman en iyi deneyimi yaşar.",
+          "image1Alt": "Restoran QR menüsü için destek sohbeti arayüzü",
+          "image1Caption": "Restoran QR menünüzle ilgili duyarlı yardım için doğrudan destek sohbeti",
+          "section1Title": "Restoranınız İçin Doğrudan Sohbet Desteği",
+          "section1Text": "QR menünüzle ilgili duyarlı destek sistemimiz, doğrudan kontrol paneliniz içinde çalışır. İletişim e-postalarını aramanıza veya telefon kuyruklarında beklemenize gerek yok. Destek sohbetini açın, sorunuzu yazın veya ihtiyaç duyduğunuz değişikliği tanımlayın ve ekibimiz hızlı bir şekilde yanıt verir. Menü öğelerini güncelleme, görüntüleme sorunlarını düzeltme veya analizleri anlama konusunda yardıma ihtiyacınız olsun - duyarlı destek sadece bir mesaj uzağınızda.",
+          "section2Title": "Herhangi Bir QR Menü Değişikliği İçin Hızlı Yardım",
+          "section2Text": "Yoğun bir hafta sonundan önce fiyatları güncellemeniz mi gerekiyor? Restoran QR menünüze mevsimsel öğeler eklemek mi istiyorsunuz? Duyarlı destek, kafelere ve restoranlara hızlı değişiklikler yapmalarında yardımcı olur. Süreci sizinle birlikte yönlendiririz veya gerektiğinde doğrudan yardımcı olabiliriz. Bu duyarlı destek, dijital menünüzün her zaman mevcut tekliflerinizi yansıtmasını sağlar, müşterilerinizi bilgilendirir ve mutlu eder.",
+          "section3Title": "Restoran İhtiyaçlarını Anlayan Destek",
+          "section3Text": "Duyarlı destek ekibimiz, bir restoran veya kafe işletmenin benzersiz zorluklarını anlıyor. Bozuk bir QR menüsünün kaybedilen müşteriler ve hayal kırıklığına uğramış personel anlamına gelebileceğini biliyoruz. Bu nedenle, QR menünüzle ilgili destek, hızlı yanıt süreleri ve pratik çözümler sunmaya öncelik verir. Teknik sorulardan özellik taleplerine kadar, dijital menünüzün başarılı olması için buradayız.",
+          "benefitsTitle": "Duyarlı QR Menü Desteğinin Faydaları",
+          "benefit1": "Uygulama içi doğrudan sohbet - dış e-posta veya telefon görüşmesine gerek yok",
+          "benefit2": "Restoranınızın sorunsuz çalışmasını sağlamak için hızlı yanıt süreleri",
+          "benefit3": "Menü güncellemeleri, değişiklikler ve yeni özellikler hakkında rehberlik",
+          "benefit4": "Herhangi bir QR kodu veya web sitesi sorunu için teknik destek",
+          "benefit5": "Özellik talepleri ve öneriler memnuniyetle karşılanır ve dikkate alınır",
+          "benefit6": "Restoran ve kafe operasyonlarını anlayan destek",
+          "conclusionTitle": "Bugün Duyarlı Destek Alın",
+          "conclusionText": "IQ Rest'in QR menünüzle ilgili duyarlı desteği ile yardım her zaman elinizin altında. Özel ekibimiz, dijital menünüzün kusursuz çalışmasını sağlar, böylece önemli olan şeye - harika yemekler sunmaya - daha fazla zaman ayırabilirsiniz. Destek erişimini doğrudan kontrol panelinizden alın ve duyarlı yardımın restoranınıza sağladığı farkı deneyimleyin.",
+          "ctaText": "QR menünüz için duyarlı desteği deneyimlemeye hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Restoran Web Siteniz ve QR Menünüz İçin Ayrıntılı Analizler",
+        "description": "Restoran web siteniz ve QR menünüz için ayrıntılı analizlerle ziyaretçi içgörülerini takip edin. Sayfa görüntülemeleri, benzersiz ziyaretçiler, diller ve günlük eğilimleri izleyin.",
+        "meta": {
+          "title": "Restoran Web Sitesi ve QR Menüsü İçin Ayrıntılı Analizler | IQ Rest",
+          "description": "Restoran web siteniz ve QR menünüz için ayrıntılı analizler alın. Sayfa görüntülemelerini, benzersiz ziyaretçileri, popüler sayfaları ve dil tercihlerini takip edin. Restoranlar ve kafeler için kapsamlı içgörüler."
+        },
+        "content": {
+          "intro": "IQ Rest artık restoran web siteniz ve QR menünüz için ayrıntılı analizler sunuyor. Müşterilerin dijital menünüzle nasıl etkileşimde bulunduğunu anlamak başarı için kritik öneme sahiptir. Yeni analiz kontrol panelimiz, ziyaretçi davranışları, popüler sayfalar, dil tercihleri ve günlük eğilimler hakkında kapsamlı içgörüler sunar - restoran web siteniz ve QR menünüzün başarılı olması için gereken tüm ayrıntılı analizler.",
+          "image1Alt": "Restoran web sitesi ve QR menüsü için ayrıntılı analiz kontrol paneli",
+          "image1Caption": "Restoran QR menünüz için ayrıntılı istatistikleri gösteren kapsamlı analiz kontrol paneli",
+          "section1Title": "Restoranınız İçin Kapsamlı Ziyaretçi Takibi",
+          "section1Text": "Restoran web siteniz ve QR menünüz için ayrıntılı analizler, her müşteri etkileşimini takip eder. Bugün, bu hafta ve bu ay için toplam sayfa görüntülemelerini bir bakışta görün. Gerçek izleyici boyutunuzu anlamak için benzersiz ziyaretçileri takip edin. Analiz kontrol paneli, müşterilerin QR menünüzde nasıl gezindiğine dair ayrıntılı içgörüler sağlar - ana sayfadan tam menünüze, iletişim bilgilerine ve dil seçimine kadar. Bu ayrıntılı analizler, restoranların veri odaklı kararlar almasına yardımcı olur.",
+          "section2Title": "Sayfa ve Dil Analizleri",
+          "section2Text": "Restoran web siteniz ve QR menünüzün hangi sayfalarının en popüler olduğunu anlayın. Ayrıntılı analizlerimiz, görüntülemeleri sayfa türüne göre ayırır: Ana Sayfa, Menü, İletişim ve Dil seçimi. Müşterilerinizin hangi dilleri tercih ettiğini görün, bu da çevirileri önceliklendirmenize ve uluslararası misafirlere daha iyi hizmet etmenize yardımcı olur. Restoran QR menünüz için bu ayrıntılı analizler, daha önce hiç fark etmediğiniz müşteri davranış kalıplarını ortaya çıkarır.",
+          "section3Title": "Günlük Eğilimler ve Kullanım İzleme",
+          "section3Text": "Restoran web siteniz ve QR menünüzün zaman içindeki performansını günlük görüntüleme grafikleri ile takip edin. Haftanın ilerleyen günlerinde müşteri etkileşimindeki kalıpları görün. Aylık kullanımınızı plan limitlerinizle karşılaştırın ve net bir ilerleme çubuğu ile izleyin. Ayrıntılı analizlerimiz, restoranların yoğun zamanları belirlemesine ve dijital varlıklarını optimize etmesine yardımcı olur. İster küçük bir kafe ister yoğun bir restoran olun, bu içgörüler müşterilerinizi daha iyi anlamanıza yardımcı olur.",
+          "benefitsTitle": "Restoranlar İçin Ayrıntılı Analizlerin Faydaları",
+          "benefit1": "Gerçek zamanlı görüntü sayıları: bugün, haftalık ve aylık istatistikler bir bakışta",
+          "benefit2": "Gerçek müşteri erişiminizi anlamak için benzersiz ziyaretçi takibi",
+          "benefit3": "Müşterilerin en çok hangi içeriği görüntülediğini gösteren sayfa bazında ayrıntılı analiz",
+          "benefit4": "Çok dilli menü sunumlarını optimize etmek için dil analizleri",
+          "benefit5": "Müşteri davranışındaki kalıpları belirlemek için günlük eğilim grafikleri",
+          "benefit6": "Açık limitler ve yükseltme bildirimleri ile kullanım izleme",
+          "conclusionTitle": "Ayrıntılı Analizleri Bugün Kullanmaya Başlayın",
+          "conclusionText": "IQ Rest'in restoran web siteniz ve QR menünüz için sunduğu ayrıntılı analizlerle, müşteri davranışına dair değerli içgörüler elde edersiniz. Görüntülemeleri takip edin, eğilimleri izleyin ve hedef kitlenizi daha önce hiç olmadığı kadar iyi anlayın. Bu ayrıntılı analizler, restoranların ve kafelerin dijital menü stratejileri hakkında bilinçli kararlar almasına yardımcı olur. Şimdi analiz kontrol panelinize erişin ve müşterilerinizin gerçekten ne istediğini keşfedin.",
+          "ctaText": "Restoranınız için ayrıntılı analizleri keşfetmeye hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Anında QR Menü ve Restoran Web Sitesi Oluşturucu",
+        "description": "Restoran veya kafe QR menünüzü ve web sitenizi anında oluşturun. Özel metin ve birden fazla düzen ile dakikalar içinde yazdırılabilir QR kodları oluşturun - teknik beceri gerektirmez.",
+        "meta": {
+          "title": "Anında QR Menü ve Restoran Web Sitesi Oluşturucu | IQ Rest",
+          "description": "QR menüsü ve restoran web sitesini anında oluşturun. Restoranınız veya kafeniz için dakikalar içinde yazdırılabilir düzenlerle özel QR kodları oluşturun. Ücretsiz anında oluşturucu."
+        },
+        "content": {
+          "intro": "IQ Rest artık profesyonel dijital menüler oluşturmanızı sağlayan anında QR menü ve restoran web sitesi oluşturucu sunuyor. İster rahat bir kafe ister yoğun bir restoran işletiyor olun, anında oluşturucumuz, QR kodları oluşturmanıza, özelleştirmenize ve yazdırmanıza olanak tanır. Teknik beceri gerektirmez, beklemeden - sadece her boyuttaki restoran ve kafeler için anında QR menü oluşturma.",
+          "image1Alt": "Restoran ve kafe web siteleri için anında QR menü oluşturucu",
+          "image1Caption": "Restoran web siteniz için özel QR kodları anında oluşturun",
+          "section1Title": "Anında QR Menü Oluşturucu Nasıl Çalışır",
+          "section1Text": "Anında QR menü ve restoran web sitesi oluşturucumuz, ihtiyacınız olan her şeyi dakikalar içinde oluşturur. Menü öğelerinizi ekleyin ve sistem, restoran web sitenize bağlı benzersiz bir QR kodu anında oluşturur. Oluşturucu, birden fazla kağıt formatını (A4, A5, A6, Mektup), sayfa başına çeşitli QR düzenlerini (1'den 16 koda kadar) ve her QR kodunun altında özelleştirilebilir metinleri destekler. Ne yazdıracağınızı tam olarak önizleyin, ardından doğrudan indirin veya yazdırın - anında QR menünüz masalarınızda sergilemeye hazır.",
+          "section2Title": "Her Restoran veya Kafe İçin Özelleştirilebilir QR Kodları",
+          "section2Text": "Anında QR menü oluşturucu, restoran veya kafe markanızı tamamen özelleştirmenizi sağlar. QR kodunun üzerine restoran adınızı ekleyin, 'Menü için Tara' veya 'QR Menü' gibi özel metinleri altına ekleyin ve üç metin boyutundan birini seçin. Oluşturucu, hızlı tarama için optimize edilmiş temiz, basit QR kodları üretir. İster bir poster için tek büyük QR koduna, ister bireysel masa kartları için 16 daha küçük koda ihtiyacınız olsun, anında oluşturucumuz restoranınızın ihtiyaçlarına uyum sağlar.",
+          "section3Title": "Dakikalar İçinde Yazdırmaya Hazır QR Menüler",
+          "section3Text": "Karmaşık tasarım araçlarının aksine, anında QR menü oluşturucumuz otomatik olarak yazdırmaya hazır düzenler oluşturur. Kağıt formatınızı seçin, sayfa başına kaç QR kodu olacağını belirleyin ve yazdır'ı tıklayın - hepsi bu kadar. Oluşturucu, mükemmel yazdırmalar sağlamak için kenar boşluklarını, aralıkları ve boyutlandırmayı yönetir. Hızlı bir şekilde profesyonel QR menülere ihtiyacı olan kafeler ve restoranlar için bu anında yaklaşım, tasarım işinde saatler kazandırır ve dijital menünüzü müşterilerin önüne daha hızlı getirir.",
+          "benefitsTitle": "Anında QR Menü Oluşturmanın Faydaları",
+          "benefit1": "Dakikalar içinde, saatler değil, tam QR menü ve restoran web sitesi oluşturun",
+          "benefit2": "Birden fazla kağıt formatı: A4, A5, A6 ve Mektup boyutları desteklenir",
+          "benefit3": "Esnek düzenler: tek büyük QR'dan sayfa başına 16 koda kadar",
+          "benefit4": "Restoran markanız için özel metin ve boyutlandırma seçenekleri",
+          "benefit5": "Otomatik kenar boşlukları ve aralıklarla yazdırmaya hazır çıktı",
+          "benefit6": "PNG olarak indirin veya tarayıcınızdan doğrudan yazdırın",
+          "conclusionTitle": "Anında QR Menü Oluşturucuyu Kullanmayı Başlayın",
+          "conclusionText": "IQ Rest'in anında QR menü ve restoran web sitesi oluşturucusu ile profesyonel bir dijital menüyü dakikalar içinde oluşturabilirsiniz. Tasarım becerisi gerektirmez, pahalı yazılımlar gerekmez - sadece müşterilerinizi menünüze bağlayan güzel, taranabilir QR kodlarının anında oluşturulması. İlk QR menüsünü başlatan yeni restoranlar veya mevcut kurulumlarını güncelleyen yerleşik kafeler için mükemmel. Anında QR menünüzü bugün oluşturun ve yemek deneyiminizi modernleştirin.",
+          "ctaText": "Anında QR menünüzü oluşturmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "QR Menü Tarama İçin Kamu Restoran Web Sitesi",
+        "description": "QR menüsü ile kamu restoran web sitenizi başlatın. Müşteriler kodu tarar ve anında kategoriler, öğeler, fotoğraflar ve fiyatlarla dijital menünüzü görür.",
+        "meta": {
+          "title": "QR Menü Tarama İçin Kamu Restoran Web Sitesi | IQ Rest",
+          "description": "QR menüsü tarama için kamu restoran web sitesi oluşturun. Müşteriler QR kodunu tarar ve anında kategoriler, yemekler, fotoğraflar ve fiyatlarla dijital menünüzü görüntüler."
+        },
+        "content": {
+          "intro": "IQ Rest artık QR menüsü tarama için tamamen işlevsel bir kamu restoran web sitesi sunuyor. Müşterileriniz basitçe bir QR kodunu tarayarak tam dijital menünüze anında erişebilir. Kamu web sitesi, tüm kategorilerinizi, menü öğelerinizi, fotoğraflarınızı, açıklamalarınızı ve fiyatlarınızı güzel, mobil uyumlu bir arayüzde görüntüler. QR tarama için bu kamu restoran web sitesi, misafirlerin menünüzle etkileşim biçimini dönüştürüyor.",
+          "image1Alt": "QR menü kategorilerini gösteren kamu restoran web sitesi",
+          "image1Caption": "QR tarama için menü kategorilerini görüntüleyen mobil uyumlu kamu restoran web sitesi",
+          "section1Title": "Kamu Restoran Web Sitesi QR Tarama ile Nasıl Çalışır",
+          "section1Text": "Müşteriler, restoranınızın QR kodunu taradıklarında, anında tam menüyü görüntüleyen kamu web sitenize yönlendirilirler. Uygulama indirmeye gerek yok, bekleme yok - sadece tekliflerinize anında erişim. QR menüsü için kamu restoran web sitesi, kolay gezinme için üstte kategorileri gösterir ve öğeleri fotoğraflar, açıklamalar ve fiyatlarla şık bir kart düzeninde sergiler. Müşteriler, öğeleri filtrelemek için kategorilere dokunabilir veya tüm menüde kaydırabilir.",
+          "section2Title": "Kamu Restoran QR Menü Web Sitenizin Özellikleri",
+          "section2Text": "Kamu restoran web siteniz, müşterilerin ihtiyaç duyduğu her şeyi içerir: hızlı gezinme için kategori sekmeleri, yüksek kaliteli yemek fotoğrafları, ayrıntılı açıklamalar, yerel para biriminizde fiyatlar ve aktif öğe göstergeleri. Tasarım, çoğu QR taramasının telefonlarda gerçekleştiği için mobil cihazlar için optimize edilmiştir. Optimize edilmiş görüntüler sayesinde öğeler hızlı bir şekilde yüklenir ve arayüz, her yaştan misafir için sezgisel hale getirilmiştir. Yönetici panelinizde yaptığınız değişiklikler, kamu web sitesinde anında görünür.",
+          "image2Alt": "Yemek öğelerini fotoğraflarla gösteren restoran QR menü web sitesi",
+          "image2Caption": "Optimize edilmiş fotoğraflar ve açıklamalarla yemekleri görüntüleyen kamu menü web sitesi",
+          "section3Title": "Uluslararası Misafirler İçin Çok Dilli Destek",
+          "section3Text": "Kamu restoran web sitesi, uluslararası misafirlerin menünüzü tercih ettikleri dilde görüntülemelerine olanak tanıyan bir dil seçici içerir. Şu anda İngilizce ve İspanyolca desteklenmektedir, daha fazla dil yakında geliyor. Bu, kamu restoran QR menünüzü turistler ve çeşitli müşteri kitleleri için erişilebilir hale getirir. Dil tercihi, geri dönüş ziyaretlerinde hatırlanır ve kişiselleştirilmiş bir deneyim sunar.",
+          "image3Alt": "Kamu restoran QR menü web sitesinde dil seçimi",
+          "image3Caption": "Misafirlerin kamu menüyü tercih ettikleri dilde görüntülemelerine olanak tanıyan dil seçici",
+          "benefitsTitle": "Kamu Restoran QR Menü Web Sitenizin Faydaları",
+          "benefit1": "Anında menü erişimi - müşteriler tarar ve hemen görüntüler, uygulama gerekmez",
+          "benefit2": "Herhangi bir akıllı telefonda mükemmel görüntüleme için mobil uyumlu tasarım",
+          "benefit3": "Gerçek zamanlı güncellemeler - menü değişiklikleri müşterilere anında görünür",
+          "benefit4": "Tekliflerinizi kolayca göz atmak için kategori navigasyonu",
+          "benefit5": "Uluslararası müşteriler için çok dilli destek",
+          "benefit6": "Optimize edilmiş görüntüler ve modern teknoloji ile hızlı yükleme",
+          "conclusionTitle": "Kamu Restoran QR Menü Web Sitenizi Kullanmayı Başlayın",
+          "conclusionText": "IQ Rest'in QR menüsü tarama için kamu restoran web sitesi ile, müşterilerinize tam menünüze anında erişim sağlarsınız. Kategorilerinizi ve öğelerinizi yönetici paneli aracılığıyla ekleyin, QR kodunuzu oluşturun ve masalarınızda sergileyin. Müşteriler, birkaç saniye içinde güzel dijital menünüzü tarayıp göz atabilir. Artık baskı maliyetleri yok, artık güncel olmayan menüler yok - sadece modern bir yemek deneyimi.",
+          "ctaText": "Kamu restoran QR menü web sitenizi başlatmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Restoran Web Sitesine QR Menü ile Nasıl Öğeler Eklenir",
+        "description": "Restoran web sitenize QR menü ile nasıl öğeler ekleyeceğinize dair kapsamlı bir rehber. Dakikalar içinde dijital menünüze fotoğraflar, fiyatlar ve açıklamalarla yemekler eklemeyi öğrenin.",
+        "meta": {
+          "title": "Restoran Web Sitesine QR Menü ile Nasıl Öğeler Eklenir | IQ Rest",
+          "description": "Restoran web sitesine QR menü ile nasıl öğeler ekleyeceğinize dair adım adım rehber. Yemekler ekleyin, fiyatları ayarlayın, fotoğrafları yükleyin ve dijital menünüzü düzenleyin. Restoranlar için kolay öğe yönetimi."
+        },
+        "content": {
+          "intro": "Restoran web sitenize QR menü ile nasıl öğeler ekleyeceğinizi mi öğrenmek istiyorsunuz? IQ Rest, dijital restoran web sitenizde menü öğelerini eklemeyi ve yönetmeyi son derece kolay hale getiriyor. İlk yemeğinizi ekliyor olun ya da tüm menünüzü güncelliyor olun, sezgisel öğe yönetim sistemimiz, mutfağınızı mükemmel bir şekilde sergileyen profesyonel bir QR menü oluşturmanıza yardımcı olur. Bu rehber, QR menü ile restoran web sitenize öğeler eklemeyi, fotoğraflar, fiyatlar, açıklamalar ve kategoriler dahil olmak üzere tam olarak nasıl yapacağınızı gösterir.",
+          "image1Alt": "Restoran web sitesine QR menü ile öğeler ekleme - öğe liste görünümü",
+          "image1Caption": "Restoran QR menü web sitenize öğeler ekleme yöntemini gösteren öğe yönetim arayüzü",
+          "section1Title": "Öğeleri Doğru Eklemek Neden Önemlidir",
+          "section1Text": "Restoran web sitenize QR menü ile öğeler eklediğinizde, sunum her şeydir. Müşteriler, yemeklerinizin nasıl göründüğüne ve ne kadar iyi tanımlandığına göre ne sipariş edeceklerine karar verirler. Öğe yönetim sistemimiz, güzel fotoğraflar, ayrıntılı açıklamalar, doğru fiyatlar eklemenizi ve öğeleri kategorilere ayırmanızı sağlar. İşte, tarayıcıları müşterilere dönüştüren restoran web sitenize öğeler eklemenin yolu. Araştırmalar, yüksek kaliteli görsellere sahip menülerin siparişleri %30 oranında artırdığını göstermektedir.",
+          "section2Title": "Adım Adım: Restoran Web Sitesine QR Menü ile Nasıl Öğeler Eklenir",
+          "section2Text": "Restoran web sitenize QR menü ile öğeler eklemek IQ Rest ile basittir. Kontrol panelinizdeki Öğeler bölümüne gidin ve ekle butonuna tıklayın. Öğenin adını girin, iştah açıcı bir açıklama yazın, fiyatı ayarlayın ve bir kategori seçin. Yemeğinizin fotoğrafını yükleyin - sistemimiz, görüntüleri mükemmel görüntüleme için otomatik olarak 500x500 piksel boyutuna optimize eder. Aktif durumu açıp kapatarak öğeleri anında gösterip gizleyebilirsiniz. Bu akıcı süreç, dakikalar içinde restoran web sitenize QR menü ile öğeler eklemeyi kolaylaştırır.",
+          "image2Alt": "Restoran QR menü web sitesine öğeler ekleme formu",
+          "image2Caption": "Restoran web sitenize QR menü ile öğeler eklemek için basit form arayüzü",
+          "section3Title": "Restoran Öğeleriniz İçin Görüntü Yükleme ve Optimizasyonu",
+          "section3Text": "Restoran web sitenize QR menü ile öğeler eklerken yüksek kaliteli görseller önemlidir. Sistemimiz, JPEG, PNG, WebP ve GIF formatlarını 5MB'a kadar kabul eder. Her görüntü otomatik olarak 500x500 piksel boyutuna yeniden boyutlandırılır ve hızlı yükleme için WebP formatına dönüştürülürken mükemmel kalite korunur. Bu, yemeklerinizin her cihazda en iyi şekilde görünmesini sağlar. Profesyonel yemek fotoğrafçılığı, müşterilerin QR menü web sitenizi incelerken restoranınızı nasıl algıladığını önemli ölçüde iyileştirir.",
+          "benefitsTitle": "Restoran QR Menü Web Sitenize Öğeler Eklemenin Faydaları",
+          "benefit1": "Sınırsız menü öğesi ekleyin, fotoğraflar, açıklamalar ve fiyatlarla",
+          "benefit2": "Hızlı yükleme ve mükemmel görüntüleme için otomatik görüntü optimizasyonu",
+          "benefit3": "Müşterilerin kolayca gezinmesi için öğeleri kategorilere ayırın",
+          "benefit4": "Satışta olmayan öğeleri silmeden gizlemek için aktif/pasif geçiş",
+          "benefit5": "Öğeleri tercih ettiğiniz sıraya yerleştirmek için sürükleyip bırakma",
+          "benefit6": "Herhangi bir cihazdan öğe eklemek için mobil uyumlu arayüz",
+          "conclusionTitle": "Bugün Restoran QR Menü Web Sitenize Öğeler Eklemeye Başlayın",
+          "conclusionText": "Artık IQ Rest kullanarak restoran web sitenize QR menü ile öğeler eklemeyi tam olarak biliyorsunuz. Güçlü öğe yönetim sistemimiz, iştah açıcı bir dijital menü oluşturmak için ihtiyaç duyduğunuz her şeyi sağlar. Güzel fotoğraflar ekleyin, etkileyici açıklamalar yazın, rekabetçi fiyatlar belirleyin ve öğelerinizi mantıklı kategorilere ayırın. İster küçük bir kafe ister büyük bir restoran işletiyor olun, IQ Rest, müşterileri çeken ve dönüştüren restoran web sitenize öğeler eklemeyi kolaylaştırır.",
+          "ctaText": "Restoran web sitenize QR menü ile öğe eklemeye hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "Kategorilerle Restoran İçin QR Kod Menü Nasıl Yapılır",
+        "description": "Organize edilmiş kategorilerle restoran için QR kod menü yapmayı öğrenin. Yeni kategori yönetim sistemi, yapılandırılmış dijital menüler oluşturmayı basit ve hızlı hale getiriyor.",
+        "meta": {
+          "title": "Kategorilerle Restoran İçin QR Kod Menü Nasıl Yapılır | IQ Rest",
+          "description": "Kategorilerle restoran için QR kod menü yapmanın adım adım rehberi. Kolay kategori yönetimi ile dijital menünüzü organize edin. Dakikalar içinde profesyonel restoran QR menüleri oluşturun."
+        },
+        "content": {
+          "intro": "Kategorilerle restoran için QR kod menü nasıl yapılır öğrenmek ister misiniz? IQ Rest, organize edilmiş dijital menüler oluşturmayı her zamankinden daha kolay hale getiren güçlü bir kategori yönetim sistemi sunuyor. İster bir restoran, kafe veya bar işletiyor olun, menünüzü kategorilerle organize etmek, müşterilerin aradıklarını bulmalarına yardımcı olur. Bu güncelleme, yemek deneyimini artıran iyi yapılandırılmış kategorilerle restoran için QR kod menü yapmanın tam yolunu gösterir.",
+          "image1Alt": "Restoran için QR kod menü yapma - kategoriler liste görünümü",
+          "image1Caption": "Restoran QR menünüzü organize etmenin yolunu gösteren kategori yönetim arayüzü",
+          "section1Title": "QR Kod Menü Yaparken Kategorilerin Önemi",
+          "section1Text": "Restoran için QR kod menü yaparken, öğeleri kategorilere ayırmak esastır. Müşteriler, Atıştırmalıklar, Ana Yemekler, Tatlılar ve İçecekler gibi mantıklı gruplamalar görmeyi beklerler. Yeni kategori yönetim sistemimiz, sınırsız kategoriler oluşturmanıza, görüntüleme sırasını ayarlamanıza ve görünürlüğünü açıp kapatmanıza olanak tanır. İşte, müşterilerin sevdiği QR kod menüsü yapmanın yolu - net, organize ve kolay gezinilebilir. Araştırmalar, iyi organize edilmiş dijital menülere sahip restoranların müşteri memnuniyetinin %35 daha yüksek olduğunu göstermektedir.",
+          "section2Title": "Adım Adım: Kategorilerle Restoran İçin QR Kod Menü Nasıl Yapılır",
+          "section2Text": "Kategorilerle restoran için QR kod menü yapmak IQ Rest ile basittir. Öncelikle, kontrol panelinizdeki Kategoriler bölümüne gidin. Yeni bir kategori eklemek için yüzen eylem butonuna tıklayın. Kategori adını girin, isteğe bağlı açıklama ekleyin ve aktif olup olmadığını ayarlayın. Yeni akıcı arayüz, tüm kategorilerinizi temiz bir listede gösterir ve etkinlik göstergeleri içerir. Kategorilerin QR menünüzde nasıl görüneceğini istediğiniz gibi sıralamak için yukarı ve aşağı okları kullanın. Kategorilerle restoran için QR kod menü yapmanın bu sezgisel yaklaşımı, menünüzün her zaman mükemmel bir şekilde organize olmasını sağlar.",
+          "image2Alt": "Restoran için QR kod menü yapma formu",
+          "image2Caption": "Restoran menü kategorileri oluşturmak için basit form arayüzü",
+          "section3Title": "Mobil Uyumlu Kategori Yönetimi",
+          "section3Text": "Restoran sahiplerinin meşgul olduğunu ve genellikle menülerini hareket halindeyken yönettiklerini biliyoruz. Bu nedenle, kategori yönetimimiz tamamen mobil cihazlar için optimize edilmiştir. Telefonunuzu kullanarak restoran için QR kod menü yaparken, hızlı işlemler için üç noktalı bir menü ile kompakt bir arayüz bulacaksınız. Kategorileri yukarı veya aşağı taşıyın, ayrıntıları düzenleyin veya kategorileri silin - tüm bunları akıllı telefonunuzdan yapabilirsiniz. Bu mobil öncelikli yaklaşım, istediğiniz zaman, istediğiniz yerde kategorilerle restoran için QR kod menü yapmanızı sağlar.",
+          "benefitsTitle": "Kategorilerle QR Kod Menü Yapmanın Faydaları",
+          "benefit1": "Müşterilerin istediklerini kolayca bulabilmesi için menü öğelerini mantıklı bir şekilde organize edin",
+          "benefit2": "Kategorileri tercih ettiğiniz görüntüleme sırasına göre düzenlemek için sürükleyip bırakma",
+          "benefit3": "Mevsimlik kategorileri silmeden gizlemek için aktif/pasif geçiş",
+          "benefit4": "Herhangi bir cihazdan kategorileri yönetmek için mobil uyumlu arayüz",
+          "benefit5": "Hızlı durum genel görünümü için etkinlik göstergeleri ile temiz görsel tasarım",
+          "benefit6": "Restoran menü yapısını tam olarak temsil etmek için sınırsız kategoriler",
+          "conclusionTitle": "Bugün Kategorilerle QR Kod Menünüzü Yapmaya Başlayın",
+          "conclusionText": "Artık IQ Rest kullanarak kategorilerle restoran için QR kod menü yapmayı tam olarak biliyorsunuz. Yeni kategori yönetim sistemimiz, profesyonel, iyi organize edilmiş dijital menü oluşturmak için ihtiyaç duyduğunuz her şeyi sağlar. Kategoriler, müşterilerin menünüzde daha hızlı gezinmesine, favori yemeklerini bulmasına ve yeni öğeleri keşfetmesine yardımcı olur. İster birkaç kategorili basit bir menünüz olsun, ister onlarca bölüm içeren kapsamlı bir menünüz olsun, IQ Rest, müşterilerinizi etkileyecek bir restoran için QR kod menü yapmayı kolaylaştırır.",
+          "ctaText": "Kategorilerle restoranınız için QR kod menü yapmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Kafeniz İçin Kolay QR Menü Oluşturma - Yeni Kontrol Paneli",
+        "description": "QR menü oluşturmayı son derece kolay hale getiren yeni yönetici kontrol panelimizi tanıtıyoruz. Kategorileri, ürünleri ve ayarları modern bir shadcn yan menü arayüzü ile yönetin.",
+        "meta": {
+          "title": "Kafe İçin Kolay QR Menü - Yeni Kontrol Paneli | IQ Rest",
+          "description": "Yeni kontrol panelimizle kafeniz için QR menü oluşturmayı kolayca gerçekleştirin. Kategorileri, ürünleri, QR kodları ve analizleri yönetmek için modern yan menü arayüzü. Kolay kafe menüsü oluşturma."
+        },
+        "content": {
+          "intro": "Kafeniz için QR menü oluşturmayı mümkün olduğunca kolaylaştırmak üzere tasarlanmış yeni yönetici kontrol panelimizi tanıtmaktan heyecan duyuyoruz. İster küçük bir kahve dükkanı işletiyor olun, ister yoğun bir kafe, kullanımı kolay arayüzümüz dijital menünüzü zahmetsizce yönetmenize yardımcı olur. Yeni kontrol paneli, kafenizin QR menüsünü oluşturmak için ihtiyaç duyduğunuz tüm araçları parmaklarınızın ucuna getiren modern bir yan menü tasarımına sahiptir.",
+          "image1Alt": "Kafe yönetimi için kolay QR menü kontrol paneli",
+          "image1Caption": "Kolay kafe QR menüsü oluşturma için yan menü navigasyonu ile yeni kontrol paneli",
+          "section1Title": "Kolay Menü Yönetimi İçin Modern Yan Menü Arayüzü",
+          "section1Text": "Yeni kontrol paneli, kafenizin QR menü ayarlarında gezinmeyi son derece kolay hale getiren şık bir yan menü sunar. Kontrol panelinizdeki Gösterge Tablosu, Kategoriler, Ürünler, QR Kodu, Analizler, Ayarlar, Faturalama ve Destek için net bir şekilde organize edilmiş bölümlerle, kafenizin dijital menüsünün her yönünü kolayca bulabilir ve yönetebilirsiniz. Yan menü, mobil cihazlarda daralır ve kafenizin QR menüsünü yönetmek için kullandığınız cihazdan bağımsız olarak tüm özelliklere kolay erişim sağlar.",
+          "section2Title": "Kafeniz İçin Kolay Kategori ve Ürün Yönetimi",
+          "section2Text": "Kafenizin QR menüsünü oluşturmak ve düzenlemek hiç bu kadar kolay olmamıştı. Yeni kategori ve ürün yönetim sayfalarımız, kafe sahiplerinin menü öğelerini kolayca eklemesine, düzenlemesine ve organize etmesine olanak tanıyacak şekilde tasarlanmıştır. İster günlük özel yemekleri güncelliyor olun, ister mevsimlik içecekler ekliyor olun, kullanımı kolay arayüz, kafenizin QR menüsünün güncel ve müşterilere çekici kalmasını sağlar.",
+          "section3Title": "Hızlı Performans İçin Sunucu Tarafı Oluşturma",
+          "section3Text": "Yeni kontrol paneli, kafenizin QR menü yönetim panelinin hızlı ve verimli bir şekilde yüklenmesini sağlamak için sunucu tarafı oluşturma (SSR) teknolojisi ile inşa edilmiştir. Tüm veriler sunucudan alınır, gerçek zamanlı güncellemeler ve akıcı bir deneyim sunar. Bu kolay ve hızlı yaklaşım, beklemek için daha az zaman harcamanız ve kafenizin QR menüsünü mükemmelleştirmek için daha fazla zaman harcamanız anlamına gelir.",
+          "benefitsTitle": "Bu, Kafeler İçin QR Menü Oluşturmayı Kolaylaştırır",
+          "benefit1": "Tüm kafe menüsü özelliklerine hızlı erişim için modern yan menü arayüzü ile kolay gezinme",
+          "benefit2": "Kafenizin QR menüsünü mantıklı bir şekilde organize etmek için kolay kategori yönetimi",
+          "benefit3": "Kafenizin dijital menüsüne anında güncellemeler ile kolay ürün düzenleme",
+          "benefit4": "Kafeniz için kolay QR kod oluşturma ve özelleştirme",
+          "benefit5": "Müşterilerin kafenizin QR menüsü ile nasıl etkileşimde bulunduğunu anlamak için kolay analizler",
+          "benefit6": "Herhangi bir cihazdan kafenizin QR menüsünü yönetmek için kolay mobil erişim",
+          "conclusionTitle": "Kafenizin QR Menüsünü Kolayca Oluşturun",
+          "conclusionText": "Yeni kontrol panelimiz, kafe sahiplerinin her yerde QR menü oluşturmasını kolaylaştırmak için büyük bir adım temsil ediyor. Sezgisel yan menü arayüzü, hızlı sunucu tarafı oluşturma ve kapsamlı yönetim araçları ile kafenizin dijital QR menüsünü oluşturmak ve sürdürmek hiç bu kadar kolay olmamıştı. Zaten IQ Rest'i kullanarak müşterilerine kolay, modern bir menü deneyimi sunan binlerce kafeye katılın.",
+          "ctaText": "Kafeniz için kolay bir QR menü oluşturmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Restoranlar İçin QR Menü Alın - SSS Sayfası ve Nasıl Yapılır Güncellemeleri",
+        "description": "Geliştirilmiş SSS sayfamız ve 4 adımlı rehberimizle restoranlar için QR menü almayı öğrenin. Restoranınız için QR menü almayla ilgili sıkça sorulan sorulara daha iyi gezinme ve SEO optimize edilmiş içerikle yanıtlar keşfedin.",
+        "meta": {
+          "title": "Restoranlar İçin QR Menü Alın - SSS ve Rehber Güncellemeleri | IQ Rest",
+          "description": "Restoranlar için QR menü almayı kolayca öğrenin. Yeni özel SSS sayfası, restoranınız için QR menü almayla ilgili tüm soruları yanıtlar. Başlamak için akıcı 4 adımlı rehber."
+        },
+        "content": {
+          "intro": "Restoranlar için QR menü almayı her zamankinden daha kolay hale getirdik. Yeniden düzenlenmiş SSS ve nasıl yapılır içeriğimiz, restoran sahiplerinin QR menü almakla ilgili soruları hızlıca bulmalarına yardımcı olur. İster restoranınız için QR menü almak istiyor olun, ister kafede, bu güncelleme tüm bilgileri tek bir yerde sunar.",
+          "image1Alt": "Restoranlar için QR menü alma - özel SSS sayfası",
+          "image1Caption": "Organize edilmiş sorular ve yanıtlarla restoranlar için QR menü alma yöntemini gösteren yeni SSS sayfası",
+          "section1Title": "QR Menüler Almak İçin Özel SSS Sayfası",
+          "section1Text": "Restoranlar için QR menü almakla ilgili tüm sorular artık özel bir /sss sayfasında. Restoran sahipleri, QR menü almakla ilgili yanıtları kolayca bulabilir, kurulumdan özelleştirmeye kadar. Restoranınız için QR menü almakla ilgili her soru, genişletilmiş yanıtlarla kendi kartında görüntülenir, böylece QR menülerle ilgili bilgi almayı kolaylaştırır.",
+          "section2Title": "Restoranlar İçin QR Menü Almanın 4 Adımlı Rehberi",
+          "section2Text": "Akıcı rehberimiz, restoranlar için QR menü almanın sadece 4 kolay adımda nasıl yapılacağını gösterir. İster restoran, kafe veya bar için QR menü almak isteyin, yeni kart tabanlı tasarım, nasıl başlayacağınızı net bir şekilde gösterir. Restoranlar için QR menü almakla ilgili bu rehber, tüm sayfalarda görünür, böylece restoranınızın QR menüsünü hızlıca kurmayı her zaman bilirsiniz.",
+          "section3Title": "Restoranların QR Menüler Almasına Yardımcı Olacak SEO Optimize Edilmiş İçerik",
+          "section3Text": "İçeriğimizi, daha fazla restoranın QR menü almayı keşfetmesine yardımcı olacak şekilde optimize ettik. Rehber, ana sayfada tam Schema.org yapılandırılmış veri ile görünür, restoranların QR menü çözümleri ararken bizi kolayca bulmalarına yardımcı olur. Akıllı içerik dağıtımımız, restoranların ihtiyaç duyduğu QR menü bilgilerini almasını sağlarken güçlü arama motoru görünürlüğünü korur.",
+          "benefitsTitle": "Bu, Restoranınız İçin QR Menü Almanıza Nasıl Yardımcı Olur",
+          "benefit1": "Özel SSS sayfası, restoranlar için QR menü almakla ilgili tüm soruları yanıtlar",
+          "benefit2": "Açık 4 adımlı rehber, restoranınız için QR menü almanın nasıl yapılacağını net bir şekilde gösterir",
+          "benefit3": "QR menünüzü kurmanıza yardımcı olmak için SSS ve iletişim seçeneklerine kolay erişim",
+          "benefit4": "Restoranların QR menü almayı kolayca keşfetmesine yardımcı olmak için SEO optimize edilmiş",
+          "benefit5": "Tüm platformda QR menü almakla ilgili tutarlı bilgiler",
+          "benefit6": "Geliştirilmiş gezinme ile restoranınız için QR menü almanın daha hızlı yolu",
+          "conclusionTitle": "Bugün Restoranınız İçin QR Menü Alın",
+          "conclusionText": "Bu iyileştirmeler, restoranların QR menü almasını son derece kolay hale getiriyor. İster QR menü almak isteyen küçük bir kafe olun, ister büyük bir restoran zinciri, yeniden düzenlenmiş içeriğimiz, QR menü çözümleri almak için tam olarak ne yapmanız gerektiğini anlamanıza yardımcı olur. Hemen başlayın ve restoranınızın QR menüsünü dakikalar içinde kurun.",
+          "ctaText": "Restoranınız için QR menü almaya hazır mısınız?",
+          "ctaButton": "QR Menüyü Al"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Ücretsiz Restoran Web Sitesi Oluşturma - Mobil Optimizasyon ve UX İyileştirmeleri",
+        "description": "Ücretsiz restoran web sitesi oluşturma sürecinde büyük iyileştirmeler: hamburger menü ile optimize edilmiş mobil navigasyon, daha iyi dönüşümler için geliştirilmiş kayıt sayfası ve akıcı kullanıcı deneyimi.",
+        "meta": {
+          "title": "Ücretsiz Restoran Web Sitesi Oluşturma Güncellemeleri - IQ Rest Günlüğü",
+          "description": "IQ Rest'in mobil uyumlu navigasyon, daha iyi kayıt akışı ve kafeler ve restoranlar için geliştirilmiş kullanıcı deneyimi ile ücretsiz restoran web sitesi oluşturma sürecini nasıl iyileştirdiğini öğrenin."
+        },
+        "content": {
+          "intro": "Ücretsiz restoran web sitesi oluşturmak hiç bu kadar kolay veya mobil dostu olmamıştı. Restoran ve kafe sahiplerinin profesyonel web sitelerini dijital QR menü ile oluşturmalarına yardımcı olmak için önemli iyileştirmeler yaptık, özellikle de çoğu insanın 'ücretsiz restoran web sitesi oluşturma' aradığı mobil cihazlarda. Bu güncellemeler, mobil navigasyona, kayıt sayfası iyileştirmelerine ve genel kullanıcı deneyimine odaklanarak, teknik bilgi olmadan herkesin ücretsiz bir restoran web sitesi oluşturmasını sağlıyor.",
+          "image1Alt": "Restoran web sitesi için mobil uyumlu hamburger menü",
+          "image1Caption": "Tüm özelliklere kolay erişim için yeni mobil navigasyon hamburger menüsü",
+          "section1Title": "Restoran Web Siteleri İçin Mobil Öncelikli Navigasyon",
+          "section1Text": "Çoğu restoran sahibi, ücretsiz restoran web sitelerini mobil cihazlarda arar ve oluşturur. Bu nedenle, mobil navigasyonumuzu profesyonel bir hamburger menüsü ile tamamen yeniden tasarladık. Akıllı telefonlar ve tabletlerde, navigasyon artık tüm menü öğelerini (Fiyatlandırma, Özellikler, Günlük, İletişim) ve Başlayın butonunu okunması kolay dikey bir düzenle gösteren temiz bir modal diyalog olarak açılır. Bu mobil uyumlu yaklaşım, IQ Rest'in özelliklerini keşfetmeyi ve ücretsiz restoran web sitenizi telefonunuzdan hemen oluşturmaya başlamayı basit hale getirir. Tema ve dil seçicileri, başlıkta kolayca erişilebilir durumda kalır, hamburger menüsü ise arayüzü temiz ve düzenli tutar.",
+          "section2Title": "Ücretsiz Restoran Web Sitesi Oluşturma İçin Geliştirilmiş Başlayın Sayfası",
+          "section2Text": "Ücretsiz restoran web sitesi oluşturmayı daha sezgisel hale getirmek için kayıt sayfasını geliştirdik. İyileştirmeler, mobil cihazlarda daha iyi boşluk, fayda açıklamalarını net bir şekilde açıklayan ortalanmış değer önerisi kartları ve küçük ekranlarda mükemmel çalışan optimize edilmiş form düzenleri içerir. IQ Rest'i zaten kullanan işletmelerin sayısını gösteren restoran sayacı artık mobilde tam genişlikte görüntüleniyor, bu da yeni restoran sahiplerini ücretsiz web sitelerini başlatmaya teşvik eden güçlü bir sosyal kanıt sağlıyor. Her bir öğe, restoran web sitenizi oluşturmanın sorunsuz ve hızlı olmasını sağlamak için dikkatlice test edilmiştir, ister masaüstü bilgisayarınızda ister akıllı telefonunuzda olun.",
+          "image2Alt": "Ücretsiz restoran web sitesi oluşturma için optimize edilmiş kayıt akışı",
+          "image2Caption": "Mobil cihazlar için optimize edilmiş akıcı kayıt süreci",
+          "section3Title": "Tüm Cihazlar İçin Optimize Edilmiş Üç Adımlı Süreç",
+          "section3Text": "Ücretsiz restoran web sitesi oluşturmanın üç basit adımını gösteren görsel süreç göstergesi, farklı ekran boyutlarına mükemmel bir şekilde uyum sağlar. Mobil ve tabletlerde, adımlar net boşluklarla dikey olarak görüntülenir, bu da basit süreci anlamayı kolaylaştırır. Daha büyük ekranlarda ise yatay olarak oklarla gösterilir. Bu uyumlu tasarım, herkesin hangi cihazdan olursa olsun, profesyonel bir restoran web sitesi oluşturmanın ne kadar hızlı ve kolay olduğunu net bir şekilde görmesini sağlar.",
+          "benefitsTitle": "Ücretsiz Restoran Web Siteleri Oluşturma İçin Temel İyileştirmeler",
+          "benefit1": "Akıllı telefonlarda kolay erişim için mobil uyumlu hamburger menü navigasyonu",
+          "benefit2": "Mobil boşluk ve ortalanmış düzenlerle geliştirilmiş kayıt sayfası",
+          "benefit3": "Mobilde güçlü sosyal kanıt sağlayan tam genişlikte restoran sayacı",
+          "benefit4": "Tüm ekran boyutlarında çalışan uyumlu üç adımlı süreç göstergesi",
+          "benefit5": "Mobil dokunmatik etkileşim için optimize edilmiş akıcı giriş formları",
+          "benefit6": "Tüm sayfalarda doğru yönlendirme sağlayan sabit çıkış yönlendirme sorunu",
+          "conclusionTitle": "Ücretsiz Restoran Web Sitesi Oluşturmayı Kolaylaştırdık",
+          "conclusionText": "Bu iyileştirmeler, ücretsiz restoran web sitesi oluşturmayı herkes için erişilebilir hale getirme taahhüdümüzü pekiştiriyor. İster bir mola sırasında telefonunuzdan IQ Rest'i kontrol eden küçük bir kafe sahibi olun, ister tabletinizde dijital stratejinizi planlayan bir restoran yöneticisi, deneyim artık kesintisiz ve profesyonel. Herhangi bir cihazdan sadece birkaç dakika içinde, tamamen ücretsiz bir QR menü ile birlikte tam bir restoran web sitesi oluşturabilirsiniz. Kredi kartı gerekmez, teknik beceri gerekmez - sadece menünüz ve profesyonel çevrimiçi varlığınızı oluşturmak için birkaç dakikanız olsun.",
+          "ctaText": "Ücretsiz restoran web sitenizi oluşturmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "landing-redesign": {
+        "title": "Daha Yüksek Dönüşümler İçin Yeniden Tasarlanmış Başlayın Sayfası",
+        "description": "Kayıt sayfamızı dönüşüm optimizasyonuna odaklanarak tamamen yeniden tasarladık, değer önerileri, sosyal kanıt ve akıcı bir kullanıcı deneyimi içeriyor.",
+        "meta": {
+          "title": "Başlayın Sayfası Yeniden Tasarımı - IQ Rest Günlüğü",
+          "description": "IQ Rest, restoran QR menüsü oluşturma için geliştirilmiş UX, sosyal kanıt sayacı ve dönüşüm odaklı tasarımla yeniden tasarlanmış kayıt sayfasını sunuyor."
+        },
+        "content": {
+          "intro": "Restoran ve kafe sahiplerinin dijital QR menülerini daha hızlı oluşturmalarına yardımcı olmak için özel olarak tasarlanmış Başlayın sayfamızın tamamen yeniden tasarlandığını duyurmaktan heyecan duyuyoruz. Bu güncelleme, değeri net bir şekilde iletmeye, sosyal kanıt aracılığıyla güven oluşturmaya ve başlangıçtan sona kadar 5 dakikadan daha kısa sürede sorunsuz bir kayıt deneyimi sunmaya odaklanıyor.",
+          "image1Alt": "Yeni IQ Rest başlatma sayfası, değer önerileri ve sosyal kanıt ile",
+          "image1Caption": "Açık değer önerileri ve restoran sayacı ile yeniden tasarlanmış kayıt sayfası",
+          "section1Title": "Bir Bakışta Açık Değer Önerileri",
+          "section1Text": "Yeni tasarım, restoran sahiplerinin en çok önem verdiği dört temel faydayı belirgin bir şekilde gösterir: teknik beceri gerektirmez, anlık menü güncellemeleri, QR kodu ve web sitesi dahildir, ve ücretsiz olarak başlamak. Her fayda, sezgisel simgelerle temiz bir kart formatında sunulur, bu da IQ Rest'in ne sunduğunu hemen netleştirir. Bu yaklaşım, meşgul restoran sahiplerinin sayfaya geldiklerinde değer önerisini anlamalarını sağlar.",
+          "section2Title": "Güveni Artıran Sosyal Kanıt",
+          "section2Text": "IQ Rest'i zaten kullanan işletmelerin sayısını gösteren dinamik bir restoran sayacı ekledik. Bu sayaç, büyüme oranımıza göre otomatik olarak güncellenir ve yeni ziyaretçilerin platformumuzu denemek için kendilerini güvende hissetmelerine yardımcı olan otantik sosyal kanıt sağlar. 1,400'den fazla restoranın IQ Rest'e güvendiğini görmek, tereddütü önemli ölçüde azaltır ve kayıtları teşvik eder.",
+          "section3Title": "Akıcı Kayıt Akışı",
+          "section3Text": "Tüm kayıt süreci artık tek bir sayfada tutarlı bir düzenle gerçekleşiyor. E-posta adresinizi girerken veya kodunuzu doğrularken, tasarım aynı kalıyor - sadece giriş alanı değişiyor. Bu, daha akıcı, daha az sarsıcı bir deneyim yaratır. Ayrıca, üç basit adımı gösteren görsel bir süreç göstergesi ekledik: Kayıt Ol, Menü Ekle ve QR Al. Bu şeffaflık, kullanıcıların ne bekleyeceklerini anlamalarına yardımcı olur ve terk oranını azaltır.",
+          "benefitsTitle": "Bu Güncellemedeki Temel İyileştirmeler",
+          "benefit1": "Anında kavrayış için simgelerle değer önerisi kartları",
+          "benefit2": "Otantik sosyal kanıt sağlayan canlı restoran sayacı",
+          "benefit3": "E-posta ve OTP doğrulama adımları için birleşik sayfa tasarımı",
+          "benefit4": "Şeffaflık için görsel 3 adımlı süreç göstergesi",
+          "benefit5": "Dönüşüm odaklı metin: 'Dijital Menünüzü 5 Dakikada Oluşturun'",
+          "benefit6": "Görsel geri bildirim ile gerçek zamanlı e-posta doğrulaması",
+          "conclusionTitle": "Restoran Başarısı İçin Tasarlandı",
+          "conclusionText": "Bu yeniden tasarımın her unsuru, restoran ve kafe sahipleri göz önünde bulundurularak hazırlandı. İşletmenizi yönetirken meşgul olduğunuzu anlıyoruz, bu nedenle kayıt sürecini mümkün olduğunca hızlı ve güven verici hale getirdik. Yeni sayfa, ne alacağınızı, nasıl başlayacağınızı ve diğer binlerce restoranın aynı seçimi yaptığını açıkça gösteriyor. İster küçük bir kafe olun, ister büyüyen bir restoran zinciri, artık profesyonel QR menü web sitenizi sadece 5 dakikada oluşturabilirsiniz.",
+          "ctaText": "Restoranınızın dijital menüsünü oluşturmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "auth": {
+        "title": "Yeni Kullanıcı Kimlik Doğrulama Arayüzü",
+        "description": "Restoran web sitenizi ve QR menünüzü dakikalar içinde oluşturmanızı sağlayan basit ve güvenli bir e-posta tabanlı kimlik doğrulama sistemi başlattık.",
+        "meta": {
+          "title": "Kullanıcı Kimlik Doğrulama Arayüzü - IQ Rest Günlüğü",
+          "description": "IQ Rest, restoran web sitenizi ve dijital QR menünüzü hızlı ve güvenli bir şekilde oluşturmak için yeni bir şifresiz kimlik doğrulama sistemi sunuyor."
+        },
+        "content": {
+          "intro": "IQ Rest için yeni kullanıcı kimlik doğrulama arayüzümüzün lansmanını duyurmaktan heyecan duyuyoruz. Bu güncelleme, profesyonel bir QR menü ile restoran web sitenizi oluşturmayı her zamankinden daha kolay hale getirmek için önemli bir adım temsil ediyor. Amacımız her zaman restoran ve kafe sahiplerinin dijital varlıklarını dakikalar içinde, saatler değil, oluşturmasına yardımcı olmaktı ve bu yeni kimlik doğrulama sistemi bu misyonla tasarlandı.",
+          "image1Alt": "IQ Rest kimlik doğrulama adımında e-posta girişi",
+          "image1Caption": "Basit e-posta tabanlı kimlik doğrulama - hatırlanacak şifre yok",
+          "section1Title": "Restoran Sahipleri İçin Şifresiz Kimlik Doğrulama",
+          "section1Text": "Restoran sahiplerinin meşgul insanlar olduğunu anlayarak, yalnızca e-posta adresinizi gerektiren şifresiz bir kimlik doğrulama sistemi uyguladık. Restoran web sitenizi oluşturmak veya dijital QR menünüzü güncellemek istediğinizde, sadece e-posta adresinizi girin ve güvenli bir 4 haneli doğrulama kodu alın. Bu yaklaşım, unutulmuş şifrelerin getirdiği hayal kırıklığını ortadan kaldırırken, restoranınızın verileri için en yüksek güvenlik standartlarını korur. Tüm süreç 30 saniyeden kısa sürer, böylece en önemli şeye - restoranınızı işletmeye ve müşterilerinize hizmet etmeye - odaklanabilirsiniz.",
+          "section2Title": "Hızlı QR Menü Oluşturma Süreci",
+          "section2Text": "Yeni kimlik doğrulama sistemimizle, dijital QR menünüzle başlamanın hiç bu kadar kolay olmamıştı. Doğrulandıktan sonra, yemeklerinizi ekleyebileceğiniz, fiyatları ayarlayabileceğiniz, fotoğrafları yükleyebileceğiniz ve kategorileri organize edebileceğiniz sezgisel menü oluşturucumuza anında erişiminiz olacak. Oluşturduğunuz QR menü, müşterilerinize anında erişilebilir olacak - sadece kodu tarayıp güzel tasarlanmış dijital menünüzü akıllı telefonlarında görüntüleyecekler. Müşterileriniz için uygulama indirmeye gerek yok ve sizden teknik bilgi gerekmiyor. Bu, modern restoranların ve kafelerin, günümüzün dijital odaklı dünyasında rekabet etmesi için ihtiyaç duyduğu tam şey.",
+          "image2Alt": "IQ Rest kimlik doğrulama adımında OTP doğrulama",
+          "image2Caption": "E-postanıza doğrudan gönderilen güvenli 4 haneli kod doğrulaması",
+          "section3Title": "Hız ve Güvenlik İçin Tasarlandı",
+          "section3Text": "Bu kimlik doğrulama sistemini tasarlarken güvenlik önceliğimizdi. Her doğrulama kodu 10 dakika sonra sona erer ve yalnızca bir kez kullanılabilir, bu da restoran web sitenizi ve menü verilerinizi yetkisiz erişimden korur. Aynı zamanda, sürecin her adımını hız için optimize ettik. E-posta adresinizi girmekten kontrol panelinize erişmeye kadar, tüm kimlik doğrulama akışı bir dakikadan kısa sürede tamamlanır. Bu, hizmet sırasında QR menünüzde hızlı güncellemeler yapmanızı, günlük özel yemekler eklemenizi veya fiyatları ayarlamanızı sağlar - tüm bunları gecikme olmadan.",
+          "benefitsTitle": "Restoranınız İçin Temel Faydalar",
+          "benefit1": "Restoran web sitenizi QR menü ile dakikalar içinde oluşturun - teknik beceri gerektirmez",
+          "benefit2": "Hatırlanacak şifre yok - güvenli e-posta tabanlı doğrulama hesabınızı güvende tutar",
+          "benefit3": "Herhangi bir cihazdan dijital menü oluşturucunuza anında erişim",
+          "benefit4": "Yoğun hizmet saatlerinde bile QR menünüzde hızlı güncellemeler",
+          "conclusionTitle": "Dijital Menünüzü Bugün Oluşturmaya Başlayın",
+          "conclusionText": "Bu yeni kimlik doğrulama arayüzü, dijital QR menülerin her restoran ve kafe için erişilebilir olmasını sağlama taahhüdümüzün sadece başlangıcıdır. İster küçük bir kahve dükkanı olun, ister büyüyen bir restoran zinciri, IQ Rest, profesyonel bir çevrimiçi varlık oluşturmanız için ihtiyaç duyduğunuz araçları sağlar. Müşterileriniz menünüzü çevrimiçi bulmayı bekliyor ve çözümümüzle, her zaman güncel, güzel tasarlanmış bir dijital QR menü ile bu beklentileri aşabilirsiniz.",
+          "ctaText": "Restoran web sitenizi QR menü ile oluşturmaya hazır mısınız?",
+          "ctaButton": "Ücretsiz Başlayın"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "QR Menü ve Restoran Web Sitesi Oluşturma için Abonelik Planları",
+        "description": "Restoran web sitenizi ve QR menünüzü oluşturmak için esnek abonelik planlarını tanıtıyoruz. Ücretsiz, Temel ve Pro planları ile aylık veya yıllık faturalama seçenekleri arasından seçim yapın.",
+        "meta": {
+          "title": "QR Menü ve Restoran Web Sitesi için Abonelik Planları | IQ Rest",
+          "description": "Restoran web siteniz ve QR menü oluşturma için mükemmel abonelik planını seçin. Ücretsiz, Temel ve Pro planları ile esnek aylık ve yıllık faturalama. Bugün ücretsiz başlayın."
+        },
+        "content": {
+          "intro": "QR menü ve restoran web sitesi oluşturma için yeni abonelik sistemimizin lansmanını duyurmaktan heyecan duyuyoruz. IQ Rest, işletmenizle birlikte büyüyen esnek planlar sunuyor - küçük kafeler için tamamen ücretsiz bir katmandan, yerleşik restoranlar için profesyonel planlara kadar. İster yeni başlıyor olun, ister birden fazla lokasyon yönetiyor olun, abonelik planlarımız, profesyonel bir restoran web sitesi oluşturmak ve sürdürmek için ihtiyaç duyduğunuz özellikleri sağlar.",
+          "image1Alt": "QR menü ve restoran web sitesi oluşturma için abonelik planları",
+          "image1Caption": "Restoran web siteniz ve QR menü ihtiyaçlarınız için mükemmel planı seçin",
+          "section1Title": "Her Restoran Büyüklüğü İçin Esnek Planlar",
+          "section1Text": "QR menü ve restoran web sitesi oluşturma için abonelik sistemimiz, ihtiyaçlarınıza göre tasarlanmış üç katman sunar. Ücretsiz plan, 15 menü öğesi ile başlamanıza olanak tanır - küçük kafeler veya platformu denemek için mükemmel. Temel plan, aylık 4 € (veya yıllık faturalama ile aylık 3 €) ile kapasitenizi 100 öğeye, 3 dile ve 2,000 aylık taramaya çıkarır. Büyüyen restoranlar için, Pro plan, aylık 7 € (veya yıllık 6 €) ile sınırsız öğe, dil ve tarama sunar - profesyonel restoran web sitesi ve QR menü yönetimi için ihtiyacınız olan her şey.",
+          "section2Title": "Basit Faturalama Kontrol Paneli",
+          "section2Text": "QR menü ve restoran web sitesi hizmetleri için aboneliğinizi yönetmek artık her zamankinden daha kolay. Yeni faturalama kontrol panelimiz, tüm mevcut planları temiz, basit bir arayüzde görüntüler. Mevcut planınızı bir bakışta görebilir, özellikleri karşılaştırabilir ve tek tıklama ile yükseltebilir veya düşürebilirsiniz. Akıcı tasarım, her planı aylık fiyatıyla gösterir, bu da restoran web siteniz ve QR menü ihtiyaçlarınız için doğru seçeneği seçmeyi kolaylaştırır. Güvenli ödemeler, çevrimiçi işlemler için endüstri standardı olan Stripe aracılığıyla işlenir.",
+          "section3Title": "Yıllık Faturalama ile %25 Tasarruf",
+          "section3Text": "QR menü ve web sitesi aboneliğiniz için yıllık faturalamayı tercih eden restoran sahipleri, aylık ödemelere kıyasla %25 tasarruf eder. Temel plan, aylık 4 €'dan 3 €'ya düşerken, Pro plan yıllık faturalamada aylık 7 €'dan 6 €'ya düşer. Bu önemli tasarruf, restoranların ana işlerine daha fazla yatırım yapmalarına yardımcı olurken profesyonel bir dijital varlık sürdürmelerini sağlar. Kontrol panelinizden istediğiniz zaman aylık ve yıllık faturalama arasında geçiş yapabilirsiniz.",
+          "benefitsTitle": "Abonelik Planlarımızın Faydaları",
+          "benefit1": "Sonsuza dek mevcut ücretsiz plan - başlamak için kredi kartı gerekmez",
+          "benefit2": "Esnek aylık veya yıllık faturalama ile yıllık planlarda %25 tasarruf",
+          "benefit3": "Anında plan yükseltmeleri - yeni özellikler hemen etkinleşir",
+          "benefit4": "Tüm işlemler için güvenli Stripe ödeme işleme",
+          "benefit5": "Basit faturalama kontrol paneli ile kolay plan yönetimi",
+          "benefit6": "İstediğiniz zaman düşürme - uzun vadeli sözleşme gerekmez",
+          "conclusionTitle": "Bugün Restoran Web Sitenizi Oluşturmaya Başlayın",
+          "conclusionText": "Yeni abonelik planlarımız ile profesyonel bir QR menü ve restoran web sitesi oluşturmak hiç bu kadar erişilebilir olmamıştı. Ücretsiz planımızla platformu deneyimlemeye başlayın, ardından restoranınız büyüdükçe yükseltin. Esnek faturalama seçeneklerimiz, şeffaf fiyatlandırmamız ve anında etkinleştirme, dijital menünüzü dakikalar içinde kurmanızı sağlar. Modern, mobil uyumlu QR menüler aracılığıyla müşterileriyle bağlantı kuran binlerce restorana katılın.",
+          "ctaText": "QR menü ve restoran web siteniz için planınızı seçmeye hazır mısınız?",
+          "ctaButton": "Fiyatlandırma Planlarını Görüntüle"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR Kodu",
+    "description": "Müşterilerin taraması için QR kodunuzu indirin ve yazdırın",
+    "preview": "Önizleme",
+    "paperFormat": "Kağıt Formatı",
+    "qrPerPage": "Sayfa Başına QR Kodu",
+    "customText": "QR Kodunun Altındaki Metin",
+    "customTextPlaceholder": "Menüyü görüntülemek için tara",
+    "print": "Yazdır",
+    "download": "PNG İndir",
+    "viewMenu": "Menüyü Görüntüle",
+    "noSlug": "Menü URL'si Ayarlanmamış",
+    "noSlugDescription": "QR kodu oluşturmak için lütfen önce ayarlarda restoran URL'nizi ayarlayın.",
+    "goToSettings": "Ayarlar'a Git",
+    "loading": "Yükleniyor...",
+    "menuUrl": "Web Siteniz",
+    "websiteReady": "Web siteniz hazır!",
+    "openWebsite": "Web Sitesini Aç",
+    "printSection": "QR Kodunu Yazdır & İndir:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Letter (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Tam sayfa)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Metin Boyutu",
+    "textSizes": {
+      "small": "Küçük",
+      "medium": "Orta",
+      "large": "Büyük"
+    }
+  },
+  "support": {
+    "title": "Mesajlar",
+    "subtitle": "Ekibimizden yardım alın",
+    "unauthorized": "Destek erişimi için lütfen giriş yapın",
+    "lastUpdated": "Güncellendi",
+    "emptyTitle": "Henüz mesaj yok",
+    "emptyDescription": "Sohbete başlamak için bir mesaj gönderin",
+    "sendMessage": "Mesaj Gönder",
+    "placeholder": "Mesajınızı yazın...",
+    "hint": "Göndermek için Enter'a, yeni satır için Shift+Enter'a basın",
+    "send": "Gönder",
+    "supportTeam": "Destek Ekibi"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Dijital Menünüzü 5 Dakikada Oluşturun - IQ Rest",
+      "description": "Restoranınız için QR menü ve web sitesi. Anında hazır. Teknik beceri gerektirmiyor."
+    },
+    "title": "Dijital Menünüzü 5 Dakikada Oluşturun",
+    "subtitle": "Restoranınız için QR menü ve web sitesi. Anında hazır.",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "Oluşturmaya başlamak için e-posta girin",
+    "otpPlaceholder": "4 haneli kodu girin",
+    "continue": "Menümü Oluştur",
+    "sending": "Oluşturuluyor...",
+    "verifyTitle": "E-postanızı kontrol edin",
+    "verifySubtitle": "{email} adresine 4 haneli bir kod gönderdik",
+    "verify": "Doğrula",
+    "verifying": "Doğrulama yapılıyor...",
+    "changeEmail": "E-postayı değiştir",
+    "resendCode": "Kodu yeniden gönder",
+    "successTitle": "Hoş geldiniz!",
+    "successSubtitle": "Başarıyla oturum açtınız",
+    "redirecting": "Kontrol paneline yönlendiriliyor...",
+    "errors": {
+      "sendFailed": "Doğrulama kodu gönderilemedi. Lütfen tekrar deneyin.",
+      "verifyFailed": "Kod doğrulaması başarısız oldu. Lütfen tekrar deneyin."
+    },
+    "valueProps": {
+      "noSkills": "Teknik beceri gerektirmiyor",
+      "instantUpdates": "Anlık menü güncellemeleri",
+      "qrIncluded": "QR kodu + web sitesi dahil",
+      "freeStart": "Başlamak ücretsiz"
+    },
+    "formHelper": "Kredi kartı gerekmiyor",
+    "setupTime": "5 dakikada kurulum",
+    "hasAccount": "Zaten bir hesabınız var mı?",
+    "signIn": "Oturum aç",
+    "restaurantCounter": "IQ Rest'i kullanan {count} Restorana katılın",
+    "steps": {
+      "signUp": "E-posta ile kaydolun",
+      "addMenu": "Menü öğelerinizi ekleyin",
+      "getQr": "QR kodunuzu alın ve başlayın"
+    },
+    "motivational": {
+      "title": "Bugün sipariş almaya başlayın",
+      "subtitle": "Müşterileriniz dijital menüyü bekliyor"
+    }
+  },
+  "reservations": {
+    "title": "Rezervasyonlar",
+    "tables": "Masalar",
+    "settings": "Ayarlar",
+    "addTable": "Masa Ekle",
+    "newTable": "Yeni Masa",
+    "editTable": "Masa Düzenle",
+    "tableNumber": "Masa Numarası",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Kapasite (misafir)",
+    "capacityPlaceholder": "4",
+    "zone": "Bölge",
+    "zonePlaceholder": "Terasta, Pencerede, Ana salonda...",
+    "image": "Fotoğraf",
+    "uploadImage": "Fotoğraf yüklemek için tıklayın",
+    "removeImage": "Kaldır",
+    "isActive": "Aktif",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "deleteConfirm": "Bu masayı silmek istediğinizden emin misiniz?",
+    "table": "Masa",
+    "noTables": "Henüz masa yok. Rezervasyonları etkinleştirmek için ilk masanızı ekleyin.",
+    "error": "Hata",
+    "close": "Kapat",
+    "noReservations": "Henüz rezervasyon yok",
+    "pending": "Beklemede",
+    "confirmed": "Onaylandı",
+    "cancelled": "İptal Edildi",
+    "completed": "Tamamlandı",
+    "confirm": "Onayla",
+    "reject": "Reddet",
+    "guests": "misafir",
+    "date": "Tarih",
+    "time": "Saat",
+    "guest": "Misafir",
+    "status": "Durum",
+    "notes": "Notlar",
+    "awaitingResponse": "Cevap Bekleniyor",
+    "today": "Bugün",
+    "tomorrow": "Yarın",
+    "otherReservations": "Diğer Rezervasyonlar",
+    "sort": "Sırala"
+  },
+  "publicReserve": {
+    "title": "Masa Ayırt",
+    "selectDate": "Tarih Seç",
+    "selectTime": "Saat Seç",
+    "selectGuests": "Misafir Sayısı",
+    "selectTable": "Masa Seç",
+    "yourDetails": "Bilgileriniz",
+    "name": "İsim",
+    "namePlaceholder": "Adınız",
+    "email": "E-posta",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Telefon (isteğe bağlı)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Özel talepler (isteğe bağlı)",
+    "notesPlaceholder": "Herhangi bir özel talep veya not...",
+    "submit": "Masa Ayırt",
+    "submitting": "Rezervasyon yapılıyor...",
+    "success": "Rezervasyon Gönderildi!",
+    "successAuto": "Rezervasyonunuz onaylandı. Kısa süre içinde bir onay e-postası alacaksınız.",
+    "successManual": "Rezervasyon talebiniz gönderildi. Onaylandığında bir e-posta alacaksınız.",
+    "error": "Hata",
+    "guests": "misafir",
+    "table": "Masa",
+    "capacity": "kapasite",
+    "noAvailableTables": "Bu misafir sayısı için uygun masa yok",
+    "back": "Menüye Dön",
+    "noTimeSlotsAvailable": "Bu tarih için uygun zaman dilimi yok",
+    "loadingAvailability": "Uygunluk kontrol ediliyor..."
+  },
+  "publicMenu": {
+    "contacts": "İletişim",
+    "language": "Dil",
+    "reserve": "Masa Ayırt",
+    "onlineMenu": "Çevrimiçi Menü",
+    "noCategories": "Mevcut kategori yok",
+    "openInstagram": "Instagram'ı Aç",
+    "makeCall": "Arama Yap",
+    "writeWhatsApp": "WhatsApp'ta Yaz",
+    "openGoogleMaps": "Google Haritalar'da Aç",
+    "noLocation": "Mevcut konum yok",
+    "english": "İngilizce",
+    "spanish": "İspanyolca",
+    "allergens": "Alerjenler",
+    "allergensInfo": "Bu yemek aşağıdaki alerjenleri içermektedir:",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Kabuklu Deniz Ürünleri",
+      "eggs": "Yumurta",
+      "fish": "Balık",
+      "peanuts": "Fıstık",
+      "soybeans": "Soya Fasulyesi",
+      "dairy": "Süt Ürünleri",
+      "nuts": "Kuruyemişler",
+      "celery": "Kereviz",
+      "mustard": "Hardal",
+      "sesame": "Susam",
+      "sulphites": "Sülfür Dioksit",
+      "lupin": "Lupin",
+      "molluscs": "Yumuşakçalar"
+    }
+  },
+  "faq": {
+    "title": "Restoran ve Kafe için QR Menü Hakkında Sıkça Sorulan Sorular",
+    "subtitle": "Restoranlar ve kafeler için dijital QR menünüzü oluşturma ve yönetme hakkında yaygın sorulara yanıt bulun",
+    "howto": {
+      "question": "4 kolay adımda nasıl bir QR menü ve restoran web sitesi oluşturabilirim?",
+      "answer": "Restoranınızı 5 dakikada çevrimiçi hale getirin - sadece e-posta adresinizi girin ve telefonunuzdan başlayın",
+      "faqTitle": "Daha fazla sorunuz var mı?",
+      "faqDescription": "Restoranınızın QR menüsünü ve web sitesini oluşturma ve yönetme hakkında her şeyi öğrenmek için kapsamlı SSS'mizi inceleyin",
+      "faqButton": "Tüm SSS'leri Görüntüle",
+      "contactButton": "Bize Ulaşın",
+      "steps": [
+        {
+          "name": "E-posta ile giriş yapın",
+          "text": "QR menü, harita ile iletişim sayfası, çevrimiçi rezervasyonlar ve özel marka tasarımı ile modern bir restoran web sitesi edinin - hepsi başlangıçta dahil."
+        },
+        {
+          "name": "Restoranınızı ayarlayın",
+          "text": "Restoran adınızı girin ve benzersiz URL'nizi seçin. Video veya fotoğraf arka planı ekleyin, marka renklerinizi ayarlayın, masa rezervasyonlarını etkinleştirin."
+        },
+        {
+          "name": "Kategoriler ve yemekler ekleyin",
+          "text": "Menü kategorileri oluşturun ve fotoğraflarla yemekler ekleyin. AI, görüntülerinizi otomatik olarak optimize eder ve menünüzü 10'dan fazla dile çevirir."
+        },
+        {
+          "name": "Hazır menünüzü görüntüleyin",
+          "text": "Profesyonel web siteniz yayında! Müşteriler menünüzü inceleyebilir, rezervasyon yapabilir ve haritada sizi bulabilir. Her şeyi günlük analizlerle takip edin."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Restoran için QR menü nedir ve nasıl çalışır?",
+        "answer": "Restoran için QR menü, müşterilerin akıllı telefonlarıyla bir QR kodunu tarayarak erişebileceği dijital bir menüdür. IQ Rest, restoranınız veya kafeniz için anında güncellenen profesyonel bir dijital menü web sitesi oluşturur. Müşteriler kodu tarar ve menünüzü cihazlarında görüntüler."
+      },
+      {
+        "question": "Restoran veya kafe için QR menü ne kadar?",
+        "answer": "IQ Rest, ücretsiz planımızla €0'dan başlayan esnek fiyatlandırma sunar. Bu, herhangi bir restoran veya kafenin profesyonel bir QR menü oluşturmasını uygun hale getirir. Ücretli planlar, sınırsız öğe ve gelişmiş analizler gibi ek özelliklerle sadece €4/ay'dan başlar."
+      },
+      {
+        "question": "Kodlama olmadan restoranım için bir web sitesi oluşturabilir miyim?",
+        "answer": "Evet! IQ Rest, teknik bilgisi olmayan restoran ve kafe sahipleri için tasarlanmıştır. Restoranınız için dakikalar içinde tam bir dijital menü web sitesi oluşturabilirsiniz, programlama veya kodlama becerisi gerektirmez. Sadece yemeklerinizi, fiyatlarınızı ve fotoğraflarınızı sezgisel arayüzümüz aracılığıyla ekleyin."
+      },
+      {
+        "question": "QR menümü ne sıklıkla güncelleyebilirim?",
+        "answer": "Restoran veya kafe menünüzü ihtiyaç duyduğunuz sıklıkta güncelleyebilirsiniz. Tüm değişiklikler gerçek zamanlı olarak yansır, böylece fiyatları anında güncelleyebilir, yeni yemekler ekleyebilir veya açıklamaları değiştirebilirsiniz; fiziksel menüleri yeniden basmanıza gerek kalmaz. Günlük özel teklifler ve mevsimsel güncellemeler için mükemmel."
+      },
+      {
+        "question": "QR menü hem restoranlar hem de kafeler için mi çalışır?",
+        "answer": "Kesinlikle! IQ Rest, restoranlar, kafeler, kahvehaneler, barlar, yemek kamyonları ve her türlü yiyecek hizmeti işletmesi için mükemmeldir. Dijital menü çözümümüz, küçük kafelerden büyük restoran zincirlerine kadar her türlü işletmeye uyum sağlar."
+      },
+      {
+        "question": "Otomatik menü çevirisi nasıl çalışır?",
+        "answer": "QR menü sistemimiz, restoran veya kafe menünüzü otomatik olarak birden fazla dile çevirmek için yapay zeka kullanır. Bu, turistik bölgeler ve uluslararası müşteriler için mükemmeldir. Menünüzü İngilizce, İspanyolca ve diğer dillerde sunarak daha fazla müşteriye hizmet etmenizi sağlar."
+      },
+      {
+        "question": "QR menü çözümünü ücretsiz deneyebilir miyim?",
+        "answer": "Evet! Restoranlar ve kafeler için IQ Rest'i denemeleri için tamamen ücretsiz bir plan sunuyoruz. 15 öğeye kadar dijital menü web sitenizi hiçbir maliyet olmadan, sonsuza dek oluşturabilirsiniz. Başlamak için kredi kartı gerekmez. Sadece daha fazla özelliğe ihtiyaç duyduğunuzda yükseltin."
+      },
+      {
+        "question": "IQ Rest, müşterilerin indirmesi gereken bir uygulama mı?",
+        "answer": "Hayır! Bu, en büyük avantajlardan biridir. Müşterilerin herhangi bir uygulama indirmesine gerek yoktur. Sadece QR kodunuzu tararlar ve menü anında web tarayıcılarında açılır. Bu, indirme gerektiren restoran uygulamalarından çok daha kullanışlıdır."
+      },
+      {
+        "question": "Restoranım için dijital menü web sitesinin faydaları nelerdir?",
+        "answer": "Dijital menü web sitesi birçok fayda sunar: yeniden basım maliyeti olmadan anlık menü güncellemeleri, uluslararası müşteriler için çok dilli destek, güvenlik için temassız sipariş, popüler yemekleri görmek için analizler ve profesyonel sunum. Ayrıca, kağıt menü atığını ortadan kaldırarak çevre dostudur."
+      },
+      {
+        "question": "Restoran menüm için nasıl bir QR kodu oluşturabilirim?",
+        "answer": "IQ Rest, dijital menünüzü oluşturduğunuzda otomatik olarak profesyonel bir QR kodu oluşturur. Bu QR kodunu restoran masalarınızda, girişte veya paket servis tezgahında indirebilir ve yazdırabilirsiniz. QR kodu özelleştirilebilir ve net tarama için yüksek kalitededir."
+      }
+    ],
+    "cta": {
+      "title": "Hala sorularınız mı var?",
+      "subtitle": "Bize sorun ve en kısa sürede cevap alın",
+      "button": "Bize Ulaşın"
+    },
+    "linkTitle": "Sorularınız mı var?",
+    "linkDescription": "IQ Rest hakkında daha fazla bilgi edinmek için sıkça sorulan sorularımızı inceleyin",
+    "meta": {
+      "title": "Sıkça Sorulan Sorular - IQ Rest",
+      "description": "Restoranlar ve kafeler için IQ Rest dijital QR menü çözümü hakkında yaygın sorulara yanıt bulun"
+    }
+  },
+  "billing": {
+    "title": "Faturalama",
+    "description": "Aboneliğinizi ve faturalamanızı yönetin",
+    "unauthorized": "Aboneliğinizi yönetmek için lütfen giriş yapın",
+    "perMonth": "/ay",
+    "currentPlan": "Mevcut Plan",
+    "upgrade": "Yükselt",
+    "manage": "Yönet",
+    "subscriptionSuccess": "Aboneliğiniz başarıyla etkinleştirildi!",
+    "subscriptionCanceled": "Abonelik işlemi iptal edildi.",
+    "subscriptionProcessing": "Ödemeniz işleniyor. Etkinleştirilmesi birkaç dakika sürebilir.",
+    "processingPayment": "Ödemenizi işliyoruz...",
+    "processingPaymentDescription": "Aboneliğinizi onaylarken lütfen bekleyin. Bu genellikle birkaç saniye sürer.",
+    "checkoutError": "Ödeme işlemi başlatılamadı. Lütfen tekrar deneyin.",
+    "portalError": "Faturalama portalı açılamadı. Lütfen tekrar deneyin.",
+    "detailsNote": "Daha fazla bilgi için,",
+    "pricingPage": "Fiyatlandırma sayfasını ziyaret edin",
+    "plans": {
+      "FREE": {
+        "name": "Ücretsiz"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Temel Aylık"
+      },
+      "BASIC_YEARLY": {
+        "name": "Temel Yıllık"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Aylık"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Yıllık"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Gösterge Paneli",
+      "onboarding": "Eğitim",
+      "qrMenu": "QR Menü",
+      "analytics": "Analitik",
+      "categories": "Kategoriler",
+      "items": "Ürünler",
+      "settings": "Genel",
+      "design": "Tasarım",
+      "contacts": "İletişim",
+      "languages": "Diller",
+      "reservations": "Rezervasyonlar",
+      "reservationSettings": "Rezervasyon Ayarları",
+      "tables": "Masalar",
+      "billing": "Faturalama",
+      "support": "Destek"
+    },
+    "sidebar": {
+      "qrMenu": "QR Menü",
+      "menu": "Menü",
+      "settings": "Ayarlar",
+      "reservations": "Rezervasyonlar",
+      "account": "Hesap",
+      "reservationSettings": "Yapılandırma"
+    },
+    "logout": "Çıkış Yap",
+    "auth": {
+      "title": "Giriş yap",
+      "subtitle": "QR menü, rezervasyonlar ve AI çevirileri ile modern web sitesi",
+      "benefits": "Şifre yok. Kredi kartı yok.",
+      "emailPlaceholder": "your@email.com",
+      "continue": "Devam et",
+      "verifyTitle": "E-postanızı kontrol edin",
+      "verifySubtitle": "{email} adresine bir kod gönderdik",
+      "verify": "Doğrula",
+      "changeEmail": "Farklı bir e-posta kullan",
+      "errors": {
+        "sendFailed": "Kodu göndermekte başarısız olundu. Lütfen tekrar deneyin.",
+        "verifyFailed": "Geçersiz kod. Lütfen tekrar deneyin."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Aylık Kullanım",
+      "scansThisMonth": "bu ay tarama",
+      "limitReached": "Aylık tarama limitinize ulaştınız. Sınırsız tarama için planınızı yükseltin.",
+      "todayViews": "Bugün",
+      "weeklyViews": "Bu Hafta",
+      "monthlyViews": "Bu Ay",
+      "uniqueVisitors": "Benzersiz Ziyaretçiler",
+      "viewsByPage": "Sayfa Görüntüleme",
+      "viewsByLanguage": "Dil Görüntüleme",
+      "dailyViews": "Günlük Görüntüleme",
+      "noData": "Henüz veri yok",
+      "pageNames": {
+        "home": "Ana Sayfa",
+        "menu": "Menü",
+        "contacts": "İletişim",
+        "language": "Dil",
+        "reserve": "Rezervasyon"
+      },
+      "languageNames": {
+        "en": "İngilizce",
+        "es": "İspanyolca",
+        "de": "Almanca",
+        "fr": "Fransızca",
+        "ru": "Rusça"
+      }
+    },
+    "categories": {
+      "noCategories": "Henüz kategori yok. Başlamak için ilk kategorinizi oluşturun.",
+      "addCategory": "Ekle",
+      "editCategory": "Kategoriyi Düzenle",
+      "name": "İsim",
+      "namePlaceholder": "Kategori adını girin",
+      "status": "Durum",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor...",
+      "cancel": "İptal",
+      "delete": "Sil",
+      "deleteConfirm": "Bu kategoriyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "fetchError": "Kategorileri yüklemede başarısız olundu",
+      "updateError": "Kategoriyi güncellemeye başarısız olundu",
+      "saveError": "Kategoriyi kaydetmede başarısız olundu",
+      "deleteError": "Kategoriyi silmede başarısız olundu",
+      "translateError": "Çeviri başarısız",
+      "nameRequired": "İsim gereklidir",
+      "enabled": "etkin",
+      "disabled": "etkin değil",
+      "created": "Kategori oluşturuldu",
+      "updated": "Kategori güncellendi",
+      "deleted": "Kategori silindi",
+      "validationErrorTitle": "Lütfen aşağıdaki hataları düzeltin",
+      "sort": "Sırala",
+      "saveSort": "Kaydet",
+      "sortSaved": "Sıralama kaydedildi",
+      "sortError": "Sıralama kaydetmede başarısız olundu"
+    },
+    "items": {
+      "noItems": "Henüz hiç ürün yok. Başlamak için ilk ürününüzü oluşturun.",
+      "addItem": "Ekle",
+      "editItem": "Ürünü Düzenle",
+      "name": "İsim",
+      "namePlaceholder": "Ürün adını girin",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Ürün açıklamasını girin",
+      "price": "Fiyat",
+      "pricePlaceholder": "0.00",
+      "category": "Kategori",
+      "categoryPlaceholder": "Kategori seçin",
+      "image": "Görüntü",
+      "uploadImage": "Görüntü yükle",
+      "removeImage": "Görüntüyü kaldır",
+      "status": "Durum",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor...",
+      "cancel": "İptal",
+      "delete": "Sil",
+      "deleteConfirm": "Bu ürünü silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "fetchError": "Ürünleri yükleme başarısız oldu",
+      "updateError": "Ürünü güncelleme başarısız oldu",
+      "saveError": "Ürünü kaydetme başarısız oldu",
+      "deleteError": "Ürünü silme başarısız oldu",
+      "translateError": "Çeviri başarısız oldu",
+      "nameRequired": "İsim gereklidir",
+      "categoryRequired": "Kategori gereklidir",
+      "priceRequired": "Geçerli bir fiyat gereklidir",
+      "enabled": "aktif",
+      "disabled": "pasif",
+      "created": "Ürün oluşturuldu",
+      "updated": "Ürün güncellendi",
+      "deleted": "Ürün silindi",
+      "validationErrorTitle": "Lütfen aşağıdaki hataları düzeltin",
+      "sort": "Sırala",
+      "saveSort": "Kaydet",
+      "sortSaved": "Sıralama kaydedildi",
+      "sortError": "Sıralama kaydetme başarısız oldu",
+      "allergens": "Alerjenler",
+      "allergensHint": "Bu yemekte bulunan alerjenleri seçin",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Kabuklu Deniz Ürünleri",
+        "eggs": "Yumurta",
+        "fish": "Balık",
+        "peanuts": "Fıstık",
+        "soybeans": "Soya Fasulyesi",
+        "dairy": "Süt Ürünleri",
+        "nuts": "Ağaç Kuruyemişleri",
+        "celery": "Kereviz",
+        "mustard": "Hardal",
+        "sesame": "Susam",
+        "sulphites": "Sülfürler",
+        "lupin": "Lupin",
+        "molluscs": "Yumuşakçalar"
+      }
+    },
+    "languages": {
+      "translationProgress": "Çeviri İlerlemesi",
+      "availableLanguages": "Mevcut Diller",
+      "europeanLanguages": "Avrupa Dilleri",
+      "starToSetDefault": "Varsayılan olarak ayarlamak için yıldıza tıklayın",
+      "default": "varsayılan",
+      "hint": "Müşterilerin menünüzü birden fazla dilde görüntülemesine izin vermek için dilleri etkinleştirin. Varsayılan dil ana içerik için kullanılır.",
+      "fetchError": "Dilleri yükleme başarısız oldu",
+      "enableError": "Dili etkinleştirme başarısız oldu",
+      "disableError": "Dili devre dışı bırakma başarısız oldu",
+      "defaultError": "Varsayılan dili ayarlama başarısız oldu",
+      "languageEnabled": "{language} etkinleştirildi",
+      "languageDisabled": "{language} devre dışı bırakıldı",
+      "defaultSet": "{language} varsayılan olarak ayarlandı",
+      "cannotDisableDefault": "Varsayılan dili devre dışı bırakamazsınız",
+      "atLeastOneRequired": "En az bir dil gereklidir",
+      "enableFirst": "Önce dili etkinleştirin",
+      "deleteConfirm": "Bu dili devre dışı bırakmak, onun için tüm çevirileri silecektir. Bu işlem geri alınamaz.",
+      "cancel": "İptal",
+      "confirm": "Devre Dışı Bırak"
+    },
+    "contacts": {
+      "phone": "Telefon",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Müşterileriniz için iletişim telefon numarası",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "restoranınız",
+      "instagramHint": "Instagram kullanıcı adınız (@ olmadan)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "Müşteri talepleri için WhatsApp numarası",
+      "location": "Konum",
+      "locationHint": "Restoran konumunuzu ayarlamak için haritaya tıklayın veya arama yapın",
+      "save": "Kaydet",
+      "fetchError": "İletişim bilgilerini yükleme başarısız oldu",
+      "saveError": "İletişim bilgilerini kaydetme başarısız oldu",
+      "saved": "İletişim bilgileri kaydedildi"
+    },
+    "design": {
+      "background": "Arka Plan",
+      "backgroundHint": "Ana sayfanız için bir video veya resim yükleyin",
+      "uploadMedia": "Video veya resim yükle",
+      "removeMedia": "Kaldır",
+      "accentColor": "Vurgu Rengi",
+      "accentColorHint": "Web sitenizdeki butonlar ve vurgular için ana renk",
+      "presetColors": "Ön ayarlı renkler",
+      "customColor": "Özel renk",
+      "save": "Kaydet",
+      "fetchError": "Tasarım ayarlarını yükleme başarısız oldu",
+      "saveError": "Tasarım ayarlarını kaydetme başarısız oldu",
+      "saved": "Tasarım ayarları kaydedildi",
+      "uploadError": "Dosya yükleme başarısız oldu",
+      "invalidFileType": "Geçersiz dosya türü. İzin verilenler: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Dosya çok büyük. Maksimum boyut: Videolar için 50MB, Resimler için 5MB"
+    },
+    "general": {
+      "name": "Başlık",
+      "namePlaceholder": "Restoran adını girin",
+      "nameHint": "Halka açık web sitenizin ana sayfasında görüntülenir",
+      "description": "Alt Başlık",
+      "descriptionPlaceholder": "Kısa açıklama (isteğe bağlı)",
+      "descriptionHint": "Ana başlığın altında görüntülenir",
+      "slug": "URL Kısmı",
+      "slugPlaceholder": "benim-restoranım",
+      "slugHint": "Web siteniz şu adreste erişilebilir olacak: iq-rest.com/{slug}",
+      "currency": "Para Birimi",
+      "currencyPlaceholder": "Para birimini seçin",
+      "save": "Kaydet",
+      "fetchError": "Ayarları yükleme başarısız oldu",
+      "saveError": "Ayarları kaydetme başarısız oldu",
+      "saved": "Ayarlar kaydedildi",
+      "nameRequired": "Restoran adı gereklidir",
+      "slugRequired": "URL kısmı gereklidir",
+      "validationErrorTitle": "Lütfen aşağıdaki hataları düzeltin",
+      "slugChangedTitle": "Web sitesi adresi güncellendi",
+      "slugChangedDescription": "Restoranınız artık şu adreste mevcut:",
+      "close": "Kapat",
+      "view": "Görüntüle"
+    },
+    "onboarding": {
+      "title": "IQ Rest'e Hoş Geldiniz!",
+      "subtitle": "Restoran web sitenizi başlatmak için bu adımları tamamlayın",
+      "requiredSteps": "Gerekli Adımlar",
+      "optionalSteps": "İsteğe Bağlı Adımlar",
+      "viewMenu": "Menünüzü Görüntüleyin",
+      "steps": {
+        "title": {
+          "name": "Restoran Adı Ekleyin",
+          "description": "Web sitenizde görünecek bir isim verin"
+        },
+        "slug": {
+          "name": "Web Sitesi Adresini Ayarlayın",
+          "description": "Restoran web siteniz için benzersiz bir URL seçin"
+        },
+        "categories": {
+          "name": "Menü Kategorileri Oluşturun",
+          "description": "Menünüzü Meze, Ana Yemekler gibi kategorilerle düzenleyin"
+        },
+        "items": {
+          "name": "Menü Öğeleri Ekleyin",
+          "description": "Menünüze fiyatlar ve açıklamalarla yemekler ekleyin"
+        },
+        "design": {
+          "name": "Tasarımı Özelleştirin",
+          "description": "Web siteniz için renkler ve arka plan seçin"
+        },
+        "contacts": {
+          "name": "İletişim Bilgilerini Ekleyin",
+          "description": "Telefon, WhatsApp, Instagram ve konum ekleyin"
+        },
+        "reservations": {
+          "name": "Rezervasyonları Etkinleştir",
+          "description": "Müşterilerin çevrimiçi masa ayırtmasına izin verin"
+        },
+        "translations": {
+          "name": "Diller Ekleyin",
+          "description": "Menünüzü birden fazla dilde erişilebilir hale getirin"
+        }
+      },
+      "completed": "Tamamlandı",
+      "notCompleted": "Tamamlanmadı",
+      "allDone": "Hepsi tamam! Menünüz yayında.",
+      "requiredRemaining": "{count} gerekli adım kaldı"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Restoran misafirlerinize rezervasyon imkanı sunmak için hizmete abone olmanız gerekmektedir.",
+    "subscribe": "Abone Ol",
+    "reservationsEnabled": "Rezervasyonları Etkinleştir",
+    "enabled": "Rezervasyonlar etkinleştirildi",
+    "disabled": "Rezervasyonlar devre dışı bırakıldı",
+    "reservationMode": "Onay Modu",
+    "modeAuto": "Otomatik",
+    "modeManual": "Manuel",
+    "modeAutoDescription": "Rezervasyonlar, masa müsaitliğine göre otomatik olarak onaylanacaktır",
+    "modeManualDescription": "Her rezervasyonu manuel olarak onaylamanız gerekecek",
+    "slotDuration": "Rezervasyon Süresi",
+    "minutes": "dakika",
+    "workingHours": "Çalışma Saatleri",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "saved": "Ayarlar kaydedildi",
+    "fetchError": "Ayarlar yüklenemedi",
+    "saveError": "Ayarlar kaydedilemedi"
+  },
+  "terms": {
+    "title": "Şartlar ve Koşullar",
+    "lastUpdated": "Son güncelleme: 17 Aralık 2025",
+    "contact": {
+      "title": "Bize Ulaşın",
+      "description": "Bu Şartlar ve Koşullar hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin."
+    },
+    "sections": [
+      {
+        "title": "1. Giriş",
+        "content": [
+          "IQ Rest'e hoş geldiniz. Bu Şartlar ve Koşullar, Bogdan Sokolov (Autónomo), NIE: Z1894474S tarafından işletilen web sitemizi ve hizmetlerimizi kullanmanızı düzenler.",
+          "IQ Rest'e erişerek veya kullanarak, bu Şartlara uymayı kabul edersiniz. Bu şartların herhangi bir kısmına katılmıyorsanız, hizmete erişemezsiniz."
+        ]
+      },
+      {
+        "title": "2. Hizmetin Tanımı",
+        "content": [
+          "IQ Rest, restoranlar, kafeler ve yiyecek hizmeti işletmeleri için dijital QR menü ve web sitesi oluşturma platformu sunar. Hizmetimiz, menü yönetimi, QR kodu oluşturma, çok dilli destek ile AI destekli çeviriler, AI görüntü optimizasyonu, masa rezervasyon sistemleri ve analizleri içerir.",
+          "Hizmetin herhangi bir yönünü önceden bildirimde bulunmaksızın değiştirme, askıya alma veya durdurma hakkını saklı tutarız."
+        ]
+      },
+      {
+        "title": "3. Hesap Kaydı",
+        "content": [
+          "IQ Rest'in belirli özelliklerini kullanmak için geçerli bir e-posta adresi ile bir hesap kaydı oluşturmalısınız. Hesabınızın gizliliğini korumaktan ve hesabınız altında gerçekleşen tüm etkinliklerden siz sorumlusunuz.",
+          "Kayıt sırasında doğru, güncel ve eksiksiz bilgi sağlamayı ve bu bilgileri güncel tutmayı kabul edersiniz.",
+          "Şifre gerektirmeyen kimlik doğrulama için e-posta doğrulama kodları kullanıyoruz. E-posta hesabınızın güvenliğini sağlamak sizin sorumluluğunuzdadır."
+        ]
+      },
+      {
+        "title": "4. Abonelik Planları ve Ödemeler",
+        "content": [
+          "IQ Rest, Ücretsiz, Temel ve Pro abonelik planları sunar. Ücretsiz plan, sınırlı özelliklerle ücretsiz olarak mevcuttur. Ücretli planlar (Temel ve Pro), ödeme işlemcimiz Stripe aracılığıyla aylık veya yıllık olarak faturalandırılır.",
+          "Fiyatlar Euro (EUR) cinsinden gösterilmektedir. Ücretli bir plana abone olarak, iptal edene kadar ödeme yönteminizden düzenli olarak ücret alınmasını onaylarsınız.",
+          "Aboneliğinizi istediğiniz zaman kontrol panelinizden yükseltebilir, düşürebilir veya iptal edebilirsiniz. İptaller, mevcut faturalandırma döneminin sonunda geçerli olur. Kısmi faturalandırma dönemleri için geri ödeme yapılmaz.",
+          "Fiyatlarımızı 30 gün önceden bildirimde bulunarak değiştirme hakkını saklı tutarız. Fiyat değişiklikleri, bildirim süresinin ardından başlayan faturalandırma dönemlerine uygulanacaktır."
+        ]
+      },
+      {
+        "title": "5. AI Destekli Özellikler",
+        "content": [
+          "IQ Rest, menü çevirileri ve görüntü optimizasyonu için yapay zeka kullanır. Doğruluğa ulaşmaya çalışsak da, AI tarafından üretilen çeviriler hatalar içerebilir. Yayınlamadan önce tüm AI tarafından üretilen içeriği gözden geçirip doğrulamaktan siz sorumlusunuz.",
+          "AI görüntü optimizasyonu, yüklenen görüntüleri otomatik olarak işleyerek yükleme performansını artırır. İşlemden sonra orijinal görüntüler saklanmaz.",
+          "AI tarafından üretilen içeriğin doğruluğunu, eksiksizliğini veya güvenilirliğini garanti etmiyoruz. AI özelliklerinin 'olduğu gibi' sağlandığını kabul edersiniz ve bunları kendi takdirinize göre kullanırsınız."
+        ]
+      },
+      {
+        "title": "6. Kullanıcı İçeriği",
+        "content": [
+          "IQ Rest'e yüklediğiniz tüm içerik, menü öğeleri, açıklamalar, görüntüler ve işletme bilgileri dahil olmak üzere, sizin mülkiyetinizdedir.",
+          "İçerik yükleyerek, IQ Rest'e yalnızca hizmet sağlama amacıyla içeriğinizi kullanma, görüntüleme ve dağıtma konusunda münhasır olmayan, dünya genelinde, telif ücreti ödemeksizin bir lisans vermiş olursunuz.",
+          "Yüklediğiniz içerikten yalnızca siz sorumlusunuz ve bunun herhangi bir yasayı veya üçüncü taraf haklarını ihlal etmediğinden emin olmalısınız. Yasaklı içerikler arasında: yasadışı materyal, yetkisiz telif hakkına sahip içerik, yanıltıcı veya dolandırıcı bilgiler ve sağlık ve güvenlik düzenlemelerini ihlal eden içerikler bulunmaktadır."
+        ]
+      },
+      {
+        "title": "7. Kabul Edilebilir Kullanım",
+        "content": [
+          "IQ Rest'i herhangi bir yasadışı amaçla veya hizmete zarar verebilecek, devre dışı bırakabilecek veya etkileyebilecek herhangi bir şekilde kullanmamayı kabul edersiniz.",
+          "Yasaklı faaliyetler arasında: diğer hesaplara veya sistemlere yetkisiz erişim sağlamaya çalışmak, hizmeti spam veya kötü amaçlı yazılım dağıtmak için kullanmak, veri kazıma veya veri madenciliği yapmak, diğer bireyleri veya işletmeleri taklit etmek ve kullanım sınırlarını veya güvenlik önlemlerini aşmak bulunmaktadır."
+        ]
+      },
+      {
+        "title": "8. Fikri Mülkiyet",
+        "content": [
+          "IQ Rest adı, logosu, web sitesi tasarımı ve ilgili tüm fikri mülkiyet, Bogdan Sokolov'a aittir ve geçerli fikri mülkiyet yasalarıyla korunmaktadır.",
+          "Fikri mülkiyetimizi kopyalamak, değiştirmek, dağıtmak veya türev eserler oluşturmak için açık yazılı izin almadan bunu yapamazsınız."
+        ]
+      },
+      {
+        "title": "9. Gizlilik ve Veri Koruma",
+        "content": [
+          "IQ Rest'i kullanmanız ayrıca Gizlilik Politikasına tabidir. Genel Veri Koruma Yönetmeliği (GDPR) ve İspanyol veri koruma yasalarına (LOPDGDD) uymaktayız.",
+          "Hizmeti sağlamak için gerekli olan kişisel verileri toplar ve işleriz; bu veriler arasında e-posta adresleri, işletme bilgileri ve kullanım analizleri bulunmaktadır. Kişisel verilerinize erişim, düzeltme veya silme talebinde bulunabilirsiniz."
+        ]
+      },
+      {
+        "title": "10. Sorumluluğun Sınırlandırılması",
+        "content": [
+          "IQ Rest, 'olduğu gibi' ve 'mevcut olduğu gibi' sağlanmaktadır, herhangi bir türde, açık veya zımni, ticari uygunluk ve belirli bir amaca uygunluk dahil, herhangi bir garanti vermeksizin.",
+          "Yasal olarak izin verilen en yüksek ölçüde, Bogdan Sokolov, dolaylı, tesadüfi, özel, sonuçsal veya cezai zararlardan, kâr kaybı, veri kaybı veya iş fırsatları kaybı dahil olmak üzere, sorumlu olmayacaktır.",
+          "Hizmetten kaynaklanan veya hizmetle ilgili herhangi bir talep için toplam sorumluluğumuz, talebin gerçekleştiği on iki (12) ay öncesinde bize ödediğiniz tutarı aşmayacaktır."
+        ]
+      },
+      {
+        "title": "11. Tazminat",
+        "content": [
+          "Hizmeti kullanımınızdan, içeriğinizden veya bu Şartları ihlal etmenizden kaynaklanan herhangi bir talep, zarar, kayıp veya masraflara karşı Bogdan Sokolov'u tazmin etmeyi, savunmayı ve zarar vermemeyi kabul edersiniz."
+        ]
+      },
+      {
+        "title": "12. Hizmetin Kullanılabilirliği",
+        "content": [
+          "Hizmetimizin yüksek kullanılabilirliğini sağlamaya çalışıyoruz, ancak kesintisiz erişim garantisi vermiyoruz. Hizmet, bakım, güncellemeler veya kontrolümüz dışındaki koşullar nedeniyle geçici olarak kullanılamayabilir.",
+          "Hizmet kesintileri veya duraklamalardan kaynaklanan herhangi bir kayıp veya zarardan sorumlu değiliz."
+        ]
+      },
+      {
+        "title": "13. Fesih",
+        "content": [
+          "Bu Şartları ihlal ettiğini düşündüğümüz veya diğer kullanıcılar, biz veya üçüncü şahıslar için zararlı olabilecek davranışlar nedeniyle hesabınızı hemen, önceden bildirimde bulunmaksızın feshedebilir veya askıya alabiliriz.",
+          "Fesih durumunda, hizmeti kullanma hakkınız hemen sona erer. Fesih tarihinden itibaren 30 gün içinde verilerinizi silebiliriz, aksi yasal olarak saklanması gerekiyorsa."
+        ]
+      },
+      {
+        "title": "14. Şartlarda Değişiklikler",
+        "content": [
+          "Bu Şartları istediğimiz zaman değiştirme hakkını saklı tutarız. Önemli değişiklikler hakkında sizi e-posta veya hizmet aracılığıyla bilgilendireceğiz.",
+          "Değişikliklerin yürürlüğe girmesinden sonra IQ Rest'i kullanmaya devam etmeniz, revize edilmiş Şartları kabul ettiğiniz anlamına gelir."
+        ]
+      },
+      {
+        "title": "15. Geçerli Hukuk ve Yetki",
+        "content": [
+          "Bu Şartlar, İspanya ve Avrupa Birliği yasalarına tabidir. Bu Şartlardan veya IQ Rest'i kullanımınızdan kaynaklanan herhangi bir uyuşmazlık, İspanya mahkemelerinin münhasır yargı yetkisine tabi olacaktır.",
+          "Bu Şartların herhangi bir hükmü uygulanamaz olarak bulunursa, kalan hükümler tam olarak yürürlükte kalmaya devam edecektir."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: 17 Aralık 2025",
+    "contact": {
+      "title": "Bizimle İletişime Geçin",
+      "description": "Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa veya veri koruma haklarınızı kullanmak istiyorsanız, lütfen bizimle iletişime geçin.",
+      "controller": "Veri Sorumlusu"
+    },
+    "sections": [
+      {
+        "title": "1. Giriş",
+        "content": [
+          "Bu Gizlilik Politikası, Bogdan Sokolov (Autónomo) tarafından işletilen IQ Rest'in, İspanya'da kayıtlı NIE: Z1894474S, QR menü platformumuzu kullandığınızda kişisel verilerinizi nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklar.",
+          "Gizliliğinizi korumaya ve Genel Veri Koruma Yönetmeliği (GDPR), İspanyol Organik Veri Koruma Yasası (LOPDGDD) ve diğer geçerli veri koruma yasalarına uymaya kararlıyız."
+        ]
+      },
+      {
+        "title": "2. Veri Sorumlusu",
+        "content": [
+          "Kişisel verilerinizden sorumlu veri sorumlusudur: Bogdan Sokolov (Autónomo), NIE: Z1894474S, İspanya'da kayıtlı. Veri koruma ile ilgili her türlü soru için lütfen support@iq-rest.com adresiyle bizimle iletişime geçin."
+        ]
+      },
+      {
+        "title": "3. Topladığımız Kişisel Veriler",
+        "content": [
+          "Hesap Bilgileri: Kayıt olduğunuzda, kimlik doğrulama ve iletişim amaçları için e-posta adresinizi topluyoruz. Parolasız kimlik doğrulama kullanıyoruz, bu nedenle parolaları saklamıyoruz.",
+          "İşletme Bilgileri: Kamu menü web siteniz için sağladığınız restoran adı, açıklama, URL slug, iletişim bilgileri (telefon, WhatsApp, Instagram), konum verileri ve çalışma saatleri.",
+          "Menü İçeriği: Dijital menünüzü oluşturmak için yüklediğiniz kategoriler, menü öğeleri, açıklamalar, fiyatlar ve görseller.",
+          "Kullanım Verileri: Hizmetimizi nasıl kullandığınıza dair bilgiler, sayfa görüntülemeleri, özellik kullanımı ve analizler aracılığıyla toplanan etkileşim desenleri dahil.",
+          "Ödeme Bilgileri: Ücretli planlara abone olduğunuzda, ödeme işlemleri Stripe tarafından gerçekleştirilir. Tam kredi kartı bilgilerinizi saklamıyoruz; Stripe bu bilgileri işler ve güvence altına alır.",
+          "Teknik Veriler: IP adresleri, tarayıcı türü, cihaz bilgileri ve Çerez Politikamızda açıklandığı gibi çerezler."
+        ]
+      },
+      {
+        "title": "4. Verilerinizi Nasıl Kullanıyoruz",
+        "content": [
+          "Kişisel verilerinizi aşağıdaki amaçlar için kullanıyoruz: QR menü hizmetimizi sağlamak ve sürdürmek, restoran web sitenizi oluşturmak ve QR kodları üretmek. E-posta doğrulama kodları kullanarak hesabınızı kimlik doğrulamak. Ödemeleri işlemek ve aboneliğinizi Stripe aracılığıyla yönetmek. Hesabınız, hizmet güncellemeleri ve destek talepleri hakkında sizinle iletişim kurmak. Menü çevirileri ve görsel optimizasyon gibi yapay zeka destekli özellikler sağlamak. Hizmet kullanımını analiz etmek ve platformumuzu geliştirmek. Yasal yükümlülüklere uymak ve meşru menfaatlerimizi korumak."
+        ]
+      },
+      {
+        "title": "5. İşleme İçin Hukuki Dayanak",
+        "content": [
+          "Sözleşme İfası: Size hizmet sağlamak için gerekli olan işleme (GDPR Madde 6(1)(b)).",
+          "Meşru Menfaatler: Analiz ve hizmet iyileştirme, dolandırıcılık önleme (GDPR Madde 6(1)(f)).",
+          "Rıza: Pazarlama iletişimleri gibi isteğe bağlı özellikler için (GDPR Madde 6(1)(a)).",
+          "Yasal Yükümlülük: Yasa veya düzenleyici gereklilikler gerektirdiğinde (GDPR Madde 6(1)(c))."
+        ]
+      },
+      {
+        "title": "6. Veri Saklama ve Güvenlik",
+        "content": [
+          "Verileriniz, Amazon Web Services (AWS) tarafından sağlanan güvenli sunucularda saklanmaktadır. Veritabanımız, Avrupa Birliği içinde, Avrupa Birliği veri koruma gerekliliklerine uyum sağlamak amacıyla AWS Stockholm (eu-north-1) bölgesinde barındırılmaktadır.",
+          "Yüklediğiniz görseller ve medya dosyaları, AB bölgesinde bulunan AWS S3 sunucularında saklanmaktadır. Veriler, TLS/SSL kullanılarak aktarım sırasında ve AES-256 şifrelemesi ile dinlenme durumunda şifrelenmektedir.",
+          "Yetkisiz erişim, değişiklik, ifşa veya imha gibi durumlara karşı verilerinizi korumak için uygun teknik ve organizasyonel önlemler alıyoruz. Bu önlemler arasında güvenli kimlik doğrulama, erişim kontrolleri, düzenli güvenlik denetimleri ve çalışan eğitimi bulunmaktadır."
+        ]
+      },
+      {
+        "title": "7. Veri Paylaşımı ve Üçüncü Taraflar",
+        "content": [
+          "Verilerinizi aşağıdaki üçüncü taraf kategorileriyle paylaşıyoruz:",
+          "Stripe (Ödeme İşlemcisi): Abonelik ödemelerini işler. Stripe, AB-ABD Veri Gizliliği Çerçevesi altında sertifikalıdır. Gizlilik politikaları: https://stripe.com/privacy",
+          "Amazon Web Services (Altyapı): Sunucularımızı ve veritabanlarımızı AB bölgelerinde barındırır. AWS, GDPR'ye uymakta ve AB-ABD Veri Gizliliği Çerçevesi altında sertifikalıdır.",
+          "Yapay Zeka Hizmet Sağlayıcıları: Menü çevirileri ve görsel optimizasyon için yapay zeka hizmetleri kullanıyoruz. Veriler, onların gizlilik politikalarına ve veri işleme anlaşmalarına uygun olarak işlenmektedir.",
+          "Google Analytics: Anonimleştirilmiş web sitesi analitiği için (eğer etkinleştirilmişse). Çerez tercihleri aracılığıyla çıkış yapabilirsiniz.",
+          "Kişisel verilerinizi üçüncü taraflara satmıyoruz. Yasal olarak gerekirse veya yasal haklarımızı korumak amacıyla verileri açıklayabiliriz."
+        ]
+      },
+      {
+        "title": "8. Uluslararası Veri Aktarımları",
+        "content": [
+          "Verileriniz esasen Avrupa Birliği içinde (AWS Stockholm, eu-north-1 bölgesi) saklanmakta ve işlenmektedir. Veriler AB dışına aktarıldığında (örneğin, ABD merkezli hizmet sağlayıcılara), uygun koruma önlemlerinin alındığından emin oluyoruz, bunlar arasında Standart Sözleşme Maddeleri (SCC'ler) ve tanınmış veri koruma çerçeveleri altında sertifikasyon bulunmaktadır."
+        ]
+      },
+      {
+        "title": "9. Veri Saklama Süresi",
+        "content": [
+          "Hesap Verileri: Hesabınız aktif olduğu sürece saklanır. Hesap silindiğinde, kişisel veriler 30 gün içinde kaldırılır, yasal olarak saklanması gereken durumlar hariç.",
+          "Menü İçeriği: Hesabınız aktif olduğu sürece saklanır. Hesap kapatıldığında silinir.",
+          "Ödeme Kayıtları: İspanyol vergi yasası gereği 7 yıl süreyle saklanır.",
+          "Analiz Verileri: Toplu ve anonimleştirilmiş veriler, hizmet iyileştirmesi için süresiz olarak saklanabilir.",
+          "Yedek Verileri: Silindikten sonra felaket kurtarma amaçları için 90 güne kadar şifrelenmiş yedeklerde saklanabilir."
+        ]
+      },
+      {
+        "title": "10. GDPR Kapsamında Haklarınız",
+        "content": [
+          "GDPR kapsamında, kişisel verilerinizle ilgili aşağıdaki haklara sahipsiniz:",
+          "Erişim Hakkı: Bizde bulunan kişisel verilerinizin bir kopyasını talep etme.",
+          "Düzeltme Hakkı: Hatalı veya eksik verilerin düzeltilmesini talep etme.",
+          "Silme Hakkı: Kişisel verilerinizin silinmesini talep etme ('unutulma hakkı').",
+          "Sınırlama Hakkı: Belirli durumlarda işlemenin sınırlandırılmasını talep etme.",
+          "Veri Taşınabilirliği Hakkı: Verilerinizi yapılandırılmış, makine tarafından okunabilir bir formatta alma.",
+          "İtiraz Hakkı: Meşru menfaatlere dayalı işleme veya doğrudan pazarlama için itiraz etme.",
+          "Rızanın Geri Alınması Hakkı: İşleme rızaya dayalıysa, istediğiniz zaman geri alabilirsiniz.",
+          "Bu hakları kullanmak için lütfen support@iq-rest.com adresiyle bizimle iletişime geçin. 30 gün içinde yanıt vereceğiz. Yanıtımızdan memnun kalmazsanız, İspanyol Veri Koruma Ajansı (AEPD) ile www.aepd.es adresinde şikayette bulunma hakkına sahipsiniz."
+        ]
+      },
+      {
+        "title": "11. Çocukların Gizliliği",
+        "content": [
+          "IQ Rest, 16 yaşın altındaki bireyler tarafından kullanılmak üzere tasarlanmamıştır. Bilinçli olarak çocuklardan kişisel veri toplamıyoruz. Eğer bir çocuktan veri topladığımızı fark edersek, bunu derhal sileceğiz."
+        ]
+      },
+      {
+        "title": "12. Bu Politika Üzerindeki Değişiklikler",
+        "content": [
+          "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikleri e-posta veya web sitemizde bir bildirim aracılığıyla size bildireceğiz. Üstteki 'Son güncelleme' tarihi, politikanın en son ne zaman gözden geçirildiğini gösterir.",
+          "Değişikliklerin yayınlanmasından sonra IQ Rest'i kullanmaya devam etmeniz, revize edilmiş politikayı kabul ettiğiniz anlamına gelir."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Çerez Politikası",
+    "lastUpdated": "Son güncelleme: 17 Aralık 2025",
+    "yes": "Evet",
+    "no": "Hayır",
+    "cookieTableTitle": "Kullandığımız Çerezler",
+    "tableHeaders": {
+      "name": "Çerez Adı",
+      "purpose": "Amaç",
+      "duration": "Süre",
+      "required": "Gerekli"
+    },
+    "contact": {
+      "title": "Çerezler Hakkında Sorular",
+      "description": "Çerez kullanımımız hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin."
+    },
+    "sections": [
+      {
+        "title": "1. Çerezler Nedir",
+        "content": [
+          "Çerezler, bir web sitesini ziyaret ettiğinizde cihazınıza (bilgisayar, tablet veya cep telefonu) kaydedilen küçük metin dosyalarıdır. Web sitelerinin düzgün çalışmasına yardımcı olur, tercihlerinizi hatırlar ve web sitesi sahiplerine bilgi sağlar.",
+          "Bu Çerez Politikası, Bogdan Sokolov (Autónomo) tarafından işletilen IQ Rest'in iq-rest.com web sitesinde çerezleri ve benzer teknolojileri nasıl kullandığını açıklamaktadır."
+        ]
+      },
+      {
+        "title": "2. Çerezleri Nasıl Kullanıyoruz",
+        "content": [
+          "Web sitemizin doğru çalışmasını sağlamak, tercihlerinizi ve ayarlarınızı hatırlamak, hesabınızı doğrulamak ve oturumunuzu açık tutmak, ziyaretçilerin web sitemizi nasıl kullandığını analiz ederek iyileştirmek ve çerez onay tercihlerinizi hatırlamak için çerezleri çeşitli amaçlarla kullanıyoruz."
+        ]
+      },
+      {
+        "title": "3. Kullandığımız Çerez Türleri",
+        "content": [
+          "Zorunlu Çerezler: Bu çerezler, web sitesinin çalışması için gereklidir ve kapatılamaz. Genellikle, giriş yapma veya gizlilik tercihlerinizi ayarlama gibi yaptığınız eylemlere yanıt olarak ayarlanır.",
+          "Fonksiyonel Çerezler: Bu çerezler, dil tercihinizi ve tema ayarlarınızı hatırlamak gibi geliştirilmiş işlevsellik ve kişiselleştirme sağlar.",
+          "Analitik Çerezler: Bu çerezler, ziyaretçilerin web sitemizle nasıl etkileşimde bulunduğunu anlamamıza yardımcı olur; bilgileri anonim olarak toplar ve raporlar. Bu verileri hizmetimizi geliştirmek için kullanıyoruz.",
+          "Üçüncü Taraf Çerezleri: Bazı çerezler, sayfalarımızda görünen üçüncü taraf hizmetleri tarafından yerleştirilir; örneğin, ödeme işlemcileri (Stripe) ve analitik sağlayıcılar (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Çerez Tercihleriniz",
+        "content": [
+          "Web sitemizi ilk ziyaret ettiğinizde, gereksiz çerezleri kabul etmenizi veya reddetmenizi sağlayan bir çerez onay banner'ı göreceksiniz. Tercihlerinizi istediğiniz zaman değiştirebilirsiniz.",
+          "Ayrıca çerezleri tarayıcı ayarlarınız aracılığıyla kontrol edebilirsiniz. Çoğu tarayıcı, çerezleri reddetmenize, mevcut çerezleri silmenize veya çerezlerin gönderildiğinde uyarı almanıza olanak tanır. Lütfen zorunlu çerezleri engellemenin web sitemizin işlevselliğini etkileyebileceğini unutmayın.",
+          "Google Analytics izlemeyi reddetmek için Google Analytics Opt-out Tarayıcı Eklentisi'ni yükleyebilirsiniz."
+        ]
+      },
+      {
+        "title": "5. Çerez Süresi",
+        "content": [
+          "Oturum Çerezleri: Bu çerezler geçicidir ve tarayıcınızı kapattığınızda silinir.",
+          "Kalıcı Çerezler: Bu çerezler, cihazınızda belirli bir süre boyunca veya silene kadar kalır. Web sitemize geri döndüğünüzde sizi tanımamıza yardımcı olurlar."
+        ]
+      },
+      {
+        "title": "6. Üçüncü Taraf Çerezleri",
+        "content": [
+          "Stripe: Güvenli ödeme işlemleri için kullanılır. Stripe, dolandırıcılığı önlemek ve ödemeleri güvenli bir şekilde işlemek için çerezler ayarlayabilir. Daha fazla bilgi için stripe.com/cookies-policy adresini ziyaret edin.",
+          "Google Analytics: Web sitesi kullanımına dair anonim istatistikler toplamak için kullanılır. Çerez banner'ını veya tarayıcı ayarlarını kullanarak çıkış yapabilirsiniz. Daha fazla bilgi için policies.google.com/privacy adresini ziyaret edin."
+        ]
+      },
+      {
+        "title": "7. Bu Politikanın Güncellemeleri",
+        "content": [
+          "Uygulamalarımızdaki değişiklikleri yansıtmak veya operasyonel, yasal veya düzenleyici nedenlerle bu Çerez Politikasını zaman zaman güncelleyebiliriz. Politikanın en üstündeki 'Son güncelleme' tarihi, politikanın en son ne zaman gözden geçirildiğini gösterir."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Giriş oturumunuzu ve kimlik doğrulama durumunuzu korur",
+        "duration": "Oturum / 30 gün",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Tercih ettiğiniz dili (İngilizce/İspanyolca) hatırlar",
+        "duration": "1 yıl",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Tema tercihinizi (açık/koyu mod) saklar",
+        "duration": "1 yıl",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Çerez onay tercihlerinizi hatırlar",
+        "duration": "1 yıl",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - anonim kullanım istatistiklerini takip eder",
+        "duration": "2 yıl / 24 saat",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - dolandırıcılığı önleme ve ödeme güvenliği",
+        "duration": "1 yıl / Oturum",
+        "required": false
+      }
+    ]
+  }
+}

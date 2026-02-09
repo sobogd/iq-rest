@@ -11,7 +11,9 @@
     },
     "getStarted": "Sign In",
     "selectLanguage": "Select Language",
-    "selectLanguageDescription": "Choose your preferred language for the website."
+    "selectLanguageDescription": "Choose your preferred language for the website.",
+    "searchLanguage": "Search language...",
+    "noLanguagesFound": "No languages found"
   },
   "home": {
     "hero": {

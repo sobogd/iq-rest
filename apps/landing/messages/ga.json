@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Biachlár",
+      "pricing": "Praghsanna",
+      "features": "Gnéithe",
+      "faq": "Ceisteanna",
+      "changelog": "Clár Athruithe",
+      "contacts": "Teagmhálachtaí"
+    },
+    "getStarted": "Cláraigh isteach",
+    "selectLanguage": "Roghnaigh Teanga",
+    "selectLanguageDescription": "Roghnaigh do theanga is fearr leat don suíomh gréasáin.",
+    "searchLanguage": "Cuardaigh teanga...",
+    "noLanguagesFound": "Níl aon teangacha le fáil"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Menú & Suíomh Gréasáin do Restaurant i 5 Nóiméad",
+      "subtitle": "Ní gá ach do ríomhphost a chur isteach agus faigh suíomh gréasáin iomlán do restaurant le menú QR, leathanach teagmhála, tacaíocht ilteangach, agus dearadh nua-aimseartha. Socraigh gach rud ó do guthán.",
+      "cta": {
+        "create": "Cruthaigh Menú",
+        "view": "Féach ar an Menú Réalaíoch"
+      },
+      "benefits": [
+        {
+          "title": "Suíomh Gréasáin Nua-aimseartha",
+          "description": "Dearadh gairmiúil a fheictear go hiontach ar aon ghléas"
+        },
+        {
+          "title": "Conradh",
+          "description": "Glac le leabhair tábla go díreach ó do shuíomh gréasáin"
+        },
+        {
+          "title": "Aistriúcháin AI",
+          "description": "Aistriúchán uathoibríoch ar an menú go haon teanga"
+        },
+        {
+          "title": "Anailís laethúil",
+          "description": "Rian a choinneáil ar chuairteanna agus ar na miasa is coitianta gach lá"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Iontaofa ag 500+ bialann ar fud an domhain",
+      "title": "Gach Rud a D'fhéadfadh a bheith ag Teastáil ó do Restaurant Ar Líne",
+      "description": "Cláraigh le do ríomhphost amháin agus faigh láithreach: suíomh gréasáin gairmiúil do restaurant, menú QR i bhformáid nua-aimseartha, leathanach teagmhála feidhmiúil le mapa, tacaíocht ilteangach le haistriúchán AI, cúlra físe nó grianghraf, agus scéim dathanna saincheaptha. Gach rud inbhainistíochta ó do guthán - ní gá ríomhaire."
+    },
+    "whyUs": {
+      "title": "Ó Nialas go Menú Ar Líne i 5 Nóiméad",
+      "subtitle": "Níl ach 4 chéim shimplí ann chun do restaurant a chur ar líne",
+      "items": [
+        {
+          "step": "1",
+          "title": "Cuir Do Ríomhphost isteach",
+          "description": "Clárú tapa le do sheoladh ríomhphoist amháin. Ní gá cárta creidmheasa."
+        },
+        {
+          "step": "2",
+          "title": "Líon isteach Eolas ar an Restaurant",
+          "description": "Cuir isteach ainm do restaurant, seoladh, teagmhálacha agus uaireanta oibre."
+        },
+        {
+          "step": "3",
+          "title": "Cuir Míreanna Menú leis",
+          "description": "Cruthaigh catagóirí agus cuir do miasa leis na grianghraif agus na praghsanna."
+        },
+        {
+          "step": "4",
+          "title": "Bain sult as do Menú",
+          "description": "Tá do menú QR réidh! Roinn é le custaiméirí agus rian a choinneáil ar anailís."
+        }
+      ],
+      "cta": "Réidh le Nuachóiriú do Restaurant?"
+    },
+    "featuresPreview": {
+      "title": "Gnéithe Laigeacha do do Restaurant",
+      "subtitle": "Gach rud a theastaíonn uait chun láithreacht ghairmiúil ar líne a chruthú",
+      "viewAll": "Féach ar Gach Gné"
+    }
+  },
+  "features": {
+    "title": "Gnéithe Cumhachtacha do do Mhuinín QR & Suíomh Gréasáin",
+    "subtitle": "Gach rud a theastaíonn uait chun láithreacht dhigiteach ghréasáin ghréasáin ghairmiúil a chruthú do do bialann nó do chaifé",
+    "backToFeatures": "Ar ais chuig Gnéithe",
+    "getStarted": "Cruthaigh Meniu",
+    "viewPricing": "Féach ar Praghsanna",
+    "readyTitle": "Réidh le Tús a Chur?",
+    "readyDescription": "Cruthaigh do mhuinchinn QR ghrád proifisiúnta agus suíomh gréasáin do bhialann laistigh de nóiméid. Gach gné san áireamh.",
+    "keyBenefits": "Buntáistí Tábhachtacha",
+    "faqTitle": "Ceisteanna a Chuirtear Go Minic",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Cad atá uaim chun tús a chur?",
+          "a": "Níl ach do sheoladh ríomhphoist ag teastáil. Níl cárta creidmheasa, níl foirmeacha casta."
+        },
+        {
+          "q": "Cé chomh fada is a thógann an socrú?",
+          "a": "Tá do shuíomh gréasáin réidh láithreach. Cuir do chuid míreanna ar an mbiachlár agus tá tú beo i 5 nóiméad."
+        },
+        {
+          "q": "An bhfuil plean saor in aisce ann?",
+          "a": "Tá, tús a chur saor in aisce le gach gné riachtanach san áireamh."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "An gá dom aip a shuiteáil?",
+          "a": "Níl aip ag teastáil - oibríonn gach rud i bhrabhsálaí do gutháin."
+        },
+        {
+          "q": "An féidir liom grianghraif a uaslódáil ó mo guthán?",
+          "a": "Sea, tóg grianghraif le do cheamara agus uaslódáil go díreach chuig do bhiachlár."
+        },
+        {
+          "q": "An oibríonn sé ar táibléid?",
+          "a": "Sea, tá an painéal rialaithe optamaithe do gutháin, táibléid, agus ríomhairí deisce."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Cé chomh cruinn atá aistriú AI?",
+          "a": "Tuigeann ár n-AI comhoibriú cócaireachta, ag coimeád ainmneacha miasa agus ag aistriú cur síos go nádúrtha."
+        },
+        {
+          "q": "Cé chomh tapa is atá an aistriú?",
+          "a": "Aistrítear biachláir iomlána i soicind, ní i n-uaireanta."
+        },
+        {
+          "q": "An féidir liom aistriúcháin AI a chur in eagar?",
+          "a": "Sea, tá gach aistriúchán in eagar - athbhreithnigh agus coigeartaigh de réir mar is gá."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Cé mhéad teanga atá tacaíocht aici?",
+          "a": "Teangacha 25+ lena n-áirítear gach teanga mór le rá san Eoraip, Sínis, Seapáinis, Cóiré, Araibis, agus Eabhra."
+        },
+        {
+          "q": "Conas a athraíonn custaiméirí teangacha?",
+          "a": "Taispeántar rogha teanga ar do bhiachlár - aon tap amháin chun athrú chuig aon teanga atá ar fáil."
+        },
+        {
+          "q": "An bhfuil an aistriú uathoibríoch?",
+          "a": "Is féidir leat aistriú AI a úsáid nó aistriúcháin a chur isteach go láimhe do gach teanga."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Cad iad na formáidí íomhá atá tacaíocht acu?",
+          "a": "Uaslódáil JPG, PNG, nó WebP - optimítear íomhánna go huathoibríoch."
+        },
+        {
+          "q": "An laghdaíonn optimú an cáilíocht?",
+          "a": "Níl, coimeádann ár n-AI cáilíocht fhísúil agus é ag laghdú méid an chomhoibrithe le haghaidh luchtú tapa."
+        },
+        {
+          "q": "An bhfuil teorainn ar mhéid an chomhoibrithe?",
+          "a": "Uaslódáil íomhánna suas le 10MB - optimítear iad go huathoibríoch."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Conas a chuirim mias nua leis?",
+          "a": "Tap 'Cuir Mír', cuir isteach ainm, cur síos, praghas, agus más mian leat, uaslódáil grianghraf. Sin é!"
+        },
+        {
+          "q": "An féidir liom míreanna an bhiachlár a athordú?",
+          "a": "Sea, tarraing agus tóg míreanna nó catagóirí chun iad a athordú."
+        },
+        {
+          "q": "Cad a tharlóidh má tá mias as stoc?",
+          "a": "Dún an mír go sealadach - imíonn sé ón mbiachlár ach ní scriostar é."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Cad iad na méadrachtaí is féidir liom a rianú?",
+          "a": "Radharcanna laethúla, feidhmíocht leathanach, roghanna teanga, agus treochtaí thar am."
+        },
+        {
+          "q": "Cé chomh minic a nuashonraítear na sonraí?",
+          "a": "Nuashonraítear anailísí i réaltam - feic na cuairteoirí inniu de réir mar a tharlaíonn siad."
+        },
+        {
+          "q": "An féidir liom sonraí anailíse a onnmhairiú?",
+          "a": "Feic tuairiscí mionsonraithe go díreach i do phainéal rialaithe."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Conas a dhéanann custaiméirí áirithintí?",
+          "a": "Is féidir le custaiméirí áirithintí a dhéanamh go díreach ó shuíomh gréasáin do bhialann. Roghnaíonn siad dáta, am, agus líon na n-aíonna, ansin faigheann siad dearbhú ríomhphoist."
+        },
+        {
+          "q": "An féidir liom áirithintí a cheadú go láimhe?",
+          "a": "Sea, is féidir leat rogha a dhéanamh idir dearbhú uathoibríoch nó ceadú láimhe do gach áirithint."
+        },
+        {
+          "q": "An gcuirfidh mé fógra faoi áirithintí nua?",
+          "a": "Sea, faigheann tú fógraí ríomhphoist do gach áirithint nua."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Cad iad na formáidí físe atá tacaíocht acu?",
+          "a": "Tacaítear le formáidí MP4 agus WebM. Optimítear físeáin go huathoibríoch le haghaidh luchtú tapa."
+        },
+        {
+          "q": "An féidir liom mo chuid grianghraf féin a úsáid?",
+          "a": "Sea, uaslódáil aon ghrianghraf agus optimítear é go huathoibríoch le haghaidh taispeáint ar an ngréasán."
+        },
+        {
+          "q": "An gcuireann físeán mo bhiachlár moill?",
+          "a": "Níl, déantar comhoibrithe a comhoibriú agus a luchtú go mall chun feidhmiúlacht leathanach tapa a chinntiú."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Cé mhéad dath is féidir liom a roghnú?",
+          "a": "Roghnaigh ó 12 dathanna réamhshocraithe nó cuir isteach do dhath branda cruinn ag baint úsáide as cód heicseagónach."
+        },
+        {
+          "q": "An dtacaíonn sé le mód dorcha?",
+          "a": "Sea, oibríonn do scéim dhath go huathoibríoch le téamaí solais agus dorcha."
+        },
+        {
+          "q": "An féidir liom dathanna a athrú ag am ar bith?",
+          "a": "Sea, athraigh do dhath accent láithreach ó do phainéal rialaithe - taispeántar nuashonruithe láithreach."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Conas a dteastaíonn uaim teagmháil a dhéanamh le tacaíocht?",
+          "a": "Úsáid an foirm teagmhála nó seol ríomhphost chugainn go díreach - freagraíonn daoine fíor, ní bots."
+        },
+        {
+          "q": "Cad é an t-am freagartha?",
+          "a": "De ghnáth freagraímid laistigh de chúpla uair an chloig le linn laethanta gnó."
+        },
+        {
+          "q": "An bhfuil tacaíocht ar fáil do phleananna saor in aisce?",
+          "a": "Sea, tá tacaíocht phearsanta ar fáil do gach plean lena n-áirítear saor in aisce."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Socrú QR Biachlár & Suíomh Gréasáin Láithreach",
+        "shortDescription": "Cruthaigh do shuíomh gréasáin bialainne agus biachlár QR le haghaidh ríomhphoist amháin - réidh i 5 nóiméad",
+        "description": "Tosaigh i soicind le próiseas clárúcháin is simplí. Ní gá ach do ríomhphoist a chur isteach agus faigheann tú láithreach suíomh gréasáin iomlán bialainne le biachlár QR, leathanach teagmhála le mapa, agus dearadh nua-aimseartha. Níl scileanna teicniúla ag teastáil, níl foirmeacha casta - téann do bhialann ar líne láithreach.",
+        "fullDescription": "Tógann foirne gréasáin traidisiúnta uaireanta socrú, eolas teicniúil, agus go minic forbróir. Athraíonn IQ Rest gach rud. Cuir isteach do ríomhphoist, deimhnigh le cód simplí, agus tá do shuíomh gréasáin bialainne réidh. Cuir do mhiasa, uaslódáil grianghraif, agus roinn do chód QR le custaiméirí. Tógann an próiseas iomlán níos lú ná 5 nóiméad.",
+        "benefits": [
+          "Níl ach ríomhphoist ag teastáil chun tús a chur - níl clárú casta",
+          "Suíomh gréasáin bialainne réidh láithreach tar éis clárúcháin",
+          "Biachlár QR a ghintear go huathoibríoch agus a nascadh",
+          "Leathanach teagmhála le mapa san áireamh de réir réamhshocraithe",
+          "Níl scileanna teicniúla nó eolas códála ag teastáil"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Próiseas socrú láithreach do shuíomh gréasáin bialainne agus biachlár QR",
+        "cta": "Foghlaim Tuilleadh"
+      },
+      {
+        "id": "mobile-management",
+        "title": "Bainistíocht 100% Comhoiriúnach le gutháin",
+        "shortDescription": "Níl ríomhaire? Níl fadhb. Rith do shuíomh gréasáin bialainne go léir ó do guthán. Cuir míosa le chéile agus tú ag seasamh sa chistin, nuashonraigh praghsanna le linn na seirbhíse, uaslódáil grianghraif go díreach ó do cheamara. Oibríonn gach gné go foirfe ar gutháin - mar ní bhíonn úinéirí bialainne riamh ag suí ag deasc.",
+        "description": "Cuir catagóirí, míosa, grianghraif, agus bainistigh do shuíomh gréasáin bialainne go léir go díreach ó do guthán. Tá ár bpainéal rialaithe go hiomlán optamaithe do ghléasanna soghluaiste, ionas gur féidir leat do bhiachlár a nuashonrú le linn sos caife nó míosa laethúil a chur leis ar an gconair.",
+        "fullDescription": "Is daoine gnóthacha iad úinéirí bialainne nach bhfuil i gcónaí ag ríomhaire. Sin é an fáth a thógamar IQ Rest chun oibriú go foirfe ar ghléasanna soghluaiste. Tá gach gné, ó mhíosa nua a chur leis go nuashonrú praghsanna, deartha do scáileáin tadhaill. Tóg grianghraf de mhias nua agus uaslódáil é láithreach. Athraigh speisialtacht an lae agus tú ag seasamh sa chistin.",
+        "benefits": [
+          "Rochtain iomlán ar an bpainéal ar aon ghuthán cliste nó táibléad",
+          "Uaslódáil grianghraif go díreach ó cheamara do gutháin",
+          "Nuashonraigh praghsanna agus cur síos ar an gconair",
+          "Bainistigh catagóirí le comhoiriúnacht tadhaill",
+          "Níl ríomhaire ag teastáil - riamh"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Bainistíocht biachlár bialainne ar guthán cliste",
+        "cta": "Feic Painéal Soghluaiste"
+      },
+      {
+        "id": "ai-translation",
+        "title": "Aistriú Biachlár Powered by AI",
+        "shortDescription": "Stop ag cailleadh custaiméirí idirnáisiúnta toisc go bhfuil bacainní teanga. Aistríonn ár n-AI do bhiachlár iomlán go 25+ teangacha i soicind - ní aistriú ginearálta, ach AI atá feasach ar chomhthéacs a thuigeann téarmaí cócaireachta. Fanann 'Beef Wellington' mar 'Beef Wellington', agus léitear cur síos go nádúrtha i ngach teanga.",
+        "description": "Sroich custaiméirí idirnáisiúnta le haistriúchán cliste AI a thuigeann comhoibriú bia. Aistrítear ainmneacha agus cur síos do mhiasa go cruinn, ag coimeád téarmaí cócaireachta agus ag déanamh ciall i ngach teanga.",
+        "fullDescription": "Teangairí ginearálta go minic a theip ar bhiachlair bia - aistríonn siad go litriúil gan tuiscint ar chomhthéacs. Tá ár n-AI oiliúnaithe go sonrach do chontae bialainne. Tuigeann sé nach ba chóir 'Beef Wellington' a aistriú go litriúil, agus go bhfuil 'al dente' ag brath ar an teanga. Freastal ar thurasóirí agus ar aoi idirnáisiúnta le biachláir a léitear go nádúrtha ina dteanga.",
+        "benefits": [
+          "Aistriú atá feasach ar chomhthéacs do théarmaí bia agus cócaireachta",
+          "10+ teangacha lena n-áirítear Spáinnis, Francais, Gearmáinis, Sínis, Seapáinis",
+          "Coimeádann téarmaíocht cócaireachta agus nuancanna cultúrtha",
+          "Aistriú láithreach - biachlár ar fáil i soicind",
+          "Ardaíonn díolacháin le 23% le custaiméirí idirnáisiúnta"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "Comhoibriú aistriú biachlár bialainne powered by AI",
+        "cta": "Faigh amach Aistriú AI"
+      },
+      {
+        "id": "multilingual",
+        "title": "Suíomh Gréasáin Bialainne Ilteangach",
+        "shortDescription": "Fáilte roimh thurasóirí agus aoi idirnáisiúnta ina dteanga dhúchais. Tacaíocht do 25+ teangacha a chiallaíonn go mbíonn gach custaiméir ag mothú mar bhaile. Tap amháin chun teangacha a athrú - biachlár, praghsanna, cur síos go léir a oireann láithreach. Foirfe do bhialanna i gceantair thurasóireachta nó i gcathracha idirnáisiúnta.",
+        "description": "Tacaíonn do shuíomh gréasáin bialainne go huathoibríoch le teangacha il. Is féidir le custaiméirí teangacha a athrú le tap amháin, agus oireann gach ábhar lena n-áirítear biachlár, faisnéis teagmhála, agus nascleanúint láithreach.",
+        "fullDescription": "I gceantair thurasóireachta agus cathracha idirnáisiúnta, tá sé riachtanach do theanga custaiméirí a labhairt. Déanann IQ Rest do bhialann inrochtana do gach duine. Feiceann custaiméirí rogha teanga agus is féidir leo brabhsáil ar do shuíomh gréasáin go hiomlán - biachlár, teagmhálacha, áirithintí - ina dteanga is fearr. Comhoibríonn sé le haistriúchán AI, is féidir leat freastal ar an domhan.",
+        "benefits": [
+          "Athrú teanga le tap amháin do chustaiméirí",
+          "Biachlár, teagmhálacha, agus gach leathanach a aistrítear",
+          "Cuimhneofar rogha teanga do chuairteanna ar ais",
+          "Foirmiúil do cheantair thurasóireachta agus cathracha idirnáisiúnta",
+          "Oibríonn sé go seamless le gné aistriú AI"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Rogha teanga suíomh gréasáin bialainne ilteangach",
+        "cta": "Feic Gnéithe Ilteangacha"
+      },
+      {
+        "id": "ai-images",
+        "title": "Optimú Íomhánna AI",
+        "shortDescription": "Feabhsú íomhá uathoibríoch le haghaidh luchtú níos tapúla agus cáilíocht níos fearr",
+        "description": "Uaslódáil aon ghrianghraf agus optimítear é go huathoibríoch le haghaidh taispeáint ar an ngréasán. Luchtóidh íomhánna go tapa ar aon nasc agus coimeádann cáilíocht iontach a dhéanann do mhiasa a bheith irresistible.",
+        "fullDescription": "Téann íomhánna móra, neamh-optimáilte i bhfeidhm ar do shuíomh gréasáin agus cuireann siad isteach ar chustaiméirí. Próiseálann ár n-AI gach íomhá a uaslódálann tú: ag athrú go méid optamach, ag comhoibriú le formáidí nua-aimseartha, agus ag feabhsú cáilíochta. Is é an toradh? Feictear do mhiasa go hiontach, agus luchtóidh leathanacha i níos lú ná soicind fiú ar na nascanna gutháin mall.",
+        "benefits": [
+          "Athrú go méid optamach do ghréasáin",
+          "Comhoibriú le formáid WebP le haghaidh luchtú tapa",
+          "Feabhsú cáilíochta le haghaidh taispeáint níos fearr",
+          "Luchtóidh leathanacha i níos lú ná 1 soicind",
+          "Oibríonn sé le haon fhormáid íomhá a uaslódálann tú"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "Comparáid roimh agus tar éis optimú íomhá AI",
+        "cta": "Foghlaim Tuilleadh"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Bainistíocht Éasca Biachlár",
+        "shortDescription": "Nuashonraigh do bhiachlár i soicind, ní i n-uaireanta. Cuir míosa nua leis, eagarthóireacht praghsanna, athordú catagóirí - go léir le tarraingt agus titim shimplí ó aon ghléas. Níl scileanna teicniúla ag teastáil. Téann na hathruithe beo láithreach, ionas go bhfeiceann do chustaiméirí i gcónaí na tairiscintí is déanaí.",
+        "description": "Ní raibh bainistíocht do bhiachlár riamh níos éasca. Cuir catagóirí, cruthaigh míosa le grianghraif agus cur síos, socraigh praghsanna, agus eagraigh gach rud le tarraingt agus titim shimplí. Taispeántar na hathruithe láithreach ar do shuíomh gréasáin beo.",
+        "fullDescription": "Déanaimis dearmad ar chórais bainistíochta ábhair casta. Tá eagarthóir biachlár IQ Rest deartha do úinéirí bialainne, ní do fhorbróirí gréasáin. Cruthaigh catagóir nua i soicind, cuir míosa le cúpla tap, uaslódáil grianghraif go díreach ó do guthán. Tarraing míreanna chun athordú, dún infheictheacht do mhíreanna as stoc, agus feic na hathruithe beo láithreach.",
+        "benefits": [
+          "Cruthú catagóirí agus míreanna intuigthe",
+          "Tarraingt agus titim athordú",
+          "Dún míreanna ar/off gan scriosadh",
+          "Nuashonruithe láithreach - taispeántar athruithe i soicind",
+          "Eagraigh catagóirí agus míosa gan teorainn"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Painéal bainistíochta biachlár bialainne éasca",
+        "cta": "Feic Eagarthóir Biachlár"
+      },
+      {
+        "id": "analytics",
+        "title": "Anailísí & Tuairimí Laethúla",
+        "shortDescription": "Rianaigh radharcanna leathanach, teangacha, agus iompar custaiméirí le tuairiscí laethúla mionsonraithe",
+        "description": "Tuig do chustaiméirí le hanailísí cuimsitheacha. Feic radharcanna laethúla leathanach, teangacha coitianta, na leathanacha is mó a fheictear, agus rianaigh treochtaí thar am. Déan cinntí bunaithe ar shonraí chun do bhiachlár a bharrfheabhsú.",
+        "fullDescription": "Is é an eolas an chumhacht. Taispeánann ár bpainéal anailíse duit go díreach conas a dhéanann custaiméirí idirghníomhú le do shuíomh gréasáin bialainne. Cé na leathanacha a fhaigheann na radharcanna is mó? Cé na teangacha is fearr le do chustaiméirí? An bhfuil radharcanna ag méadú seachtain ar seachtain? Úsáid na tuairimí seo chun do bhiachlár a bharrfheabhsú, sprioc a dhéanamh ar na custaiméirí ceart, agus do ghnó a fhás.",
+        "benefits": [
+          "Staitisticí radharc laethúil, seachtainiúil, agus míosúil",
+          "Briseadh síos rogha teanga",
+          "Rianú feidhmíochta leathanach ar leathanach",
+          "Anailís treochtaí thar am",
+          "Onnmhairiú sonraí le haghaidh anailísí breise"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Painéal anailíse bialainne le staitisticí laethúla",
+        "cta": "Foghlaim Tuilleadh"
+      },
+      {
+        "id": "reservations",
+        "title": "Córas Áirithintí Tábla",
+        "shortDescription": "Stop ag cailleadh custaiméirí toisc go bhfuil gutháin caillte. Glac le h-áirithintí tábla 24/7 go díreach ó do shuíomh gréasáin - roghnaíonn custaiméirí dáta, am, agus tábla i soicind. Dearbhuithe uathoibríocha, fógraí ríomhphoist, agus painéal simplí chun gach rud a bhainistiú.",
+        "description": "Tugann an córas áirithintí atá tógtha isteach do chustaiméirí an deis táblaí a chur in áirithe go díreach ó do shuíomh gréasáin. Roghnaigh dearbhú uathoibríoch bunaithe ar infhaighteacht, nó athbhreithnigh gach áirithint go láimhe. Bainistigh gach áirithint ó do phainéal rialaithe.",
+        "fullDescription": "Tógann áirithintí gutháin am agus tá sé éasca a chailleadh. Oibríonn córas áirithintí IQ Rest 24/7. Roghnaíonn custaiméirí dáta, am, agus méid na páirtí, agus déanann siad áirithint láithreach. Is féidir leat dearbhú uathoibríoch a shocrú bunaithe ar infhaighteacht tábla, nó athbhreithnigh gach iarratas go láimhe. Laghdaigh na no-shows le dearbhuithe ríomhphoist.",
+        "benefits": [
+          "Cumas áirithintí ar líne 24/7",
+          "Módanna dearbhaithe uathoibríocha nó láimhe",
+          "Bainistíocht tábla agus cumas",
+          "Fógraí ríomhphoist do na h-áirithintí",
+          "Radharc calandar le haghaidh sceidealú éasca"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Córas áirithintí tábla ar líne do bhialanna",
+        "cta": "Súil ar Áirithintí Tábla"
+      },
+      {
+        "id": "custom-design",
+        "title": "Físeáin & Grianghraif Chúlraí",
+        "shortDescription": "Tosaíonn na chéad tuairimí ag díol. Tóg custaiméirí ag an nóiméad a scanann siad do chód QR le físeán iontach de do atmaisféar bialainne nó grianghraf álainn de do mhias síneadh. Seas amach ó na comhoibrithe le leathanach baile a bhraitheann préimhe agus proifisiúnta.",
+        "description": "Cruthaigh tuairim chéad tuairim atá cuimhneacháin le físeáin chúlra nó grianghraif ar do leathanach baile. Uaslódáil do físeán atmaisféar bialainne nó grianghraf álainn bia chun custaiméirí a thógáil láithreach.",
+        "fullDescription": "Tugann tuairimí chéad tuairim tábhacht. Nuair a scanann custaiméirí do chód QR, ba chóir go mbeadh tionchar láithreach orthu. Uaslódáil físeán de do atmaisféar bialainne, am-laps de do chistin, nó grianghraf iontach de do mhias síneadh. Déanann do leathanach baile taithí amhairc a chruthú a léiríonn pearsantacht do bhialainne.",
+        "benefits": [
+          "Tacaíocht do chúlraí físe agus íomhá",
+          "Optimú uathoibríoch le haghaidh luchtú tapa",
+          "Oibríonn sé go foirfe ar ghléasanna soghluaiste",
+          "Cruthaíonn tuairim chéad tuairim atá cuimhneacháin",
+          "Léiríonn atmaisféar uathúil do bhialainne"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Suíomh gréasáin bialainne le cúlra físe",
+        "cta": "Feic Cúlraí Físe"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Scéim Dathanna Saincheaptha",
+        "shortDescription": "Déan do bhiachlár go hiomlán do chuid féin le dathanna accent saincheaptha a oireann do shaintréithe branda do bhialainne. Roghnaigh ó 12 dathanna réamhshocraithe álainn nó roghnaigh do dhath branda cruinn. Oireann gach cnaipe, gile, agus eilimint idirghníomhach chun cruth a chruthú a chuireann le cuimhne na gcustaiméirí.",
+        "description": "Ba chóir do shuíomh gréasáin bialainne a oiriúnú do do bhranda. Roghnaigh ó scéimeanna dathanna réamhshocraithe nó roghnaigh do dhath branda cruinn. Comhoibríonn sé le tacaíocht uathoibríoch do théamaí solais/dorcha, tá do bhiachlár i gcónaí le feiceáil go proifisiúnta.",
+        "fullDescription": "Tá comhoiriúnacht branda tábhachtach. Tugann IQ Rest deis duit do dhath accent a shaincheapadh a úsáidtear ar fud do shuíomh gréasáin - oireann cnaipe, gile, agus eilimint idirghníomhach do do bhranda. Roghnaigh ó réamhshocruithe cúramach nó cuir isteach do dhath branda cruinn. Cinntíonn an córas go huathoibríoch go bhfuil léitheoireacht éasca i mód solais agus dorcha.",
+        "benefits": [
+          "Rogha dath accent saincheaptha",
+          "Scéimeanna dathanna réamhshocraithe ar fáil",
+          "Tacaíocht uathoibríoch do théamaí solais/dorcha",
+          "Comhoiriúnacht branda ar fud na leathanach go léir",
+          "Contrárthacht dathanna a bharrfheabhsú le haghaidh inrochtana"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Rogha scéime dathanna agus branda",
+        "cta": "Súil ar Scéimeanna Dathanna"
+      },
+      {
+        "id": "personal-support",
+        "title": "Tacaíocht Ar Líne Duine-uasal",
+        "shortDescription": "Faigh cabhair phearsanta ó dhaoine fíor - ní bots comhoibrithe - do cheisteanna ar bith",
+        "description": "Tugtar tacaíocht ar líne duitse do gach bialann. An bhfuil ceist agat? Teastaíonn cabhair uait le socrú? Ba mhaith leat gné a mholadh? Freagraíonn daoine fíor go tapa chun cabhrú leat rath a bhaint amach le do bhiachlár digiteach.",
+        "fullDescription": "Creidimid go bhfuil gach bialann tuillte go bhfuil aird phearsanta acu. Nuair a théann tú i dteagmháil le tacaíocht, tá tú ag caint le daoine fíor a thuigeann bialanna agus a d'fhéadfadh cabhrú go fírinneach. Níl bots, níl freagraí uathoibríocha, níl liostaí ticéad. Cibé an bhfuil cabhair uait le do mhias chéad nó más mian leat comhairle ar do bhiachlár a bharrfheabhsú, táimid anseo duitse.",
+        "benefits": [
+          "Tacaíocht duitse ó dhaoine fíor - níl bots",
+          "Amanna freagartha tapa",
+          "Cabhair le socrú agus barrfheabhsú",
+          "Tugtar fáilte roimh iarratais gné",
+          "Ar fáil do gach plean lena n-áirítear saor in aisce"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Comhoibriú tacaíochta ar líne do bhialanna",
+        "cta": "Foghlaim Tuilleadh"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Praghsáil QR Menu & Suíomh Gréasáin Bialann",
+    "subtitle": "Níl aon táillí folaithe, níl aon iontas. Tosaigh do shuíomh gréasáin bialann saor in aisce inniu — uasghrádú amháin nuair a bheidh tú réidh le fás.",
+    "seo": {
+      "title": "Cén fáth a roghnaigh IQ Rest do do Bialann nó Café?",
+      "text": "Cruthaigh QR menu agus suíomh gréasáin gairmiúil do do bialann nó café laistigh de nóiméid. Scannaíonn do chuairteoirí cód QR chun do mhenu digiteach a fheiceáil ar a gcluaisín — níl aon aip ag teastáil. Nuashonraigh praghsanna, cuir miasa nua leis, agus athraigh tuairiscí go tobann. Le haistriúcháin atá á rith ag AI, freastalaigh ar chustaiméirí idirnáisiúnta ina dteanga dhúchais. Rian na miasa a fhaigheann na radharcanna is mó le hanailísíocht atá comhoiriúnaithe. Cibé an bhfuil tú ag rith café beag nó slabhra bialann atá ag fás, cuireann IQ Rest ar do chumas do thaithí mheniú a nuachóiriú agus costais priontála a laghdú."
+    },
+    "monthly": "Míosúil",
+    "yearly": "Bliantúil",
+    "save": "(Sábháil 25%)",
+    "perMonth": "/mí",
+    "billedYearly": "Áireamh bliantúil (€{total})",
+    "forever": "Saor go deo",
+    "popular": "Is Coitianta",
+    "plans": {
+      "free": {
+        "name": "Saor",
+        "description": "Foirmiúil chun IQ Rest a thriail",
+        "cta": "Tosaigh Saor",
+        "highlights": [
+          "Suíomh gréasáin bialann",
+          "QR Menu",
+          "300 scans/mí",
+          "2 teangacha",
+          "Feabhsú íomhá AI",
+          "Anailísíocht"
+        ]
+      },
+      "basic": {
+        "name": "Básic",
+        "description": "Skvelé pre malé reštaurácie",
+        "cta": "Tosaigh",
+        "highlights": [
+          "Gach rud atá sa Saor, chomh maith le:",
+          "4,500 scans/mí",
+          "3 teangacha",
+          "Aistriúcháin AI",
+          "Téama dath saincheaptha",
+          "Conradh"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Do shlabhra bialann atá ag fás",
+        "cta": "Tosaigh",
+        "highlights": [
+          "Gach rud atá sa Básic, chomh maith le:",
+          "Scans neamhtheoranta",
+          "6 teangacha",
+          "Tacaíocht tosaíochta",
+          "Gach gné san áireamh"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Comparáid pleananna",
+      "subtitle": "Féach cé acu plean atá ceart duitse"
+    },
+    "features": {
+      "website": "Suíomh gréasáin bialann",
+      "qrMenu": "QR Menu",
+      "scans": "Scans míosúla",
+      "languages": "Teangacha tacaíochta",
+      "aiTranslation": "Aistriúcháin AI",
+      "aiImages": "Feabhsú íomhá AI",
+      "analytics": "Anailísíocht",
+      "customTheme": "Téama dath saincheaptha",
+      "background": "Íomhá & físeán cúlra",
+      "support": "Tacaíocht",
+      "reservations": "Conradh"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Neamhtheoranta",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Need help? Let's chat",
+    "subtitle": "Dia dhuit, is mise Bogdan — bunaitheoir IQ Rest. Thóg mé an t-ardán seo do mo chafa agus anois cuireann sé cabhair ar na céadta bialanna ar fud an domhain. An bhfuil ceist nó smaoineamh agat? Scríobh chugam go díreach. Níl aon bots, níl aon fanacht — comhrá fíor amháin.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Déanaigí teagmháil",
+      "email": "Do Ríomhphost",
+      "emailPlaceholder": "do@ríomhphost.com",
+      "subject": "Ábhar",
+      "subjectPlaceholder": "Cad é atá i gceist leis seo?",
+      "message": "Teachtaireacht",
+      "messagePlaceholder": "Inis dom cad atá ar do chroí...",
+      "submit": "Seol Teachtaireacht",
+      "sending": "Ag seoladh...",
+      "success": "Tá do theachtaireacht seolta! Go raibh maith agat as do theagmháil. Beidh mé ar ais chugat go luath.",
+      "error": "Theip ar an teachtaireacht a sheoladh. Bain triail as arís níos déanaí."
+    }
+  },
+  "languages": {
+    "en": "Béarla",
+    "es": "Spáinnis"
+  },
+  "cookieConsent": {
+    "title": "Úsáidimid fianáin",
+    "description": "Úsáidimid fianáin chun do thaithí brabhsála a fheabhsú, ábhar pearsanta a sholáthar, agus ár dtrácht a anailísiú. Trí chliceáil ar \"Glac Leis An Gach Rud\", tugann tú do thoiliú d'úsáid fianán.",
+    "acceptAll": "Glac Leis An Gach Rud",
+    "rejectAll": "Diúltaigh Do Gach Rud",
+    "customize": "Saincheap",
+    "learnMore": "Foghlaim Tuilleadh"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Naveagadh",
+      "pricing": "Praghsáil",
+      "features": "Gnéithe",
+      "contacts": "Teagmhálacha",
+      "faq": "Ceisteanna",
+      "changelog": "Clár Athruithe"
+    },
+    "legal": {
+      "title": "Dlí",
+      "terms": "Téarmaí agus Coinníollacha",
+      "privacy": "Polasaí Príobháideachta",
+      "cookies": "Polasaí Fianán",
+      "sitemap": "Léarscáil Suímh"
+    },
+    "copyright": "© 2025 IQ Rest. Gach ceart ar cosaint."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Clár Athruithe - Nuashonruithe & Gnéithe Nua IQ Rest",
+      "description": "Fan ar an eolas le na gnéithe is déanaí agus feabhsuithe ar IQ Rest - do réiteach digiteach QR menu do bhialanna agus caiféanna"
+    },
+    "title": "Clár Athruithe",
+    "subtitle": "Na nuashonruithe is déanaí agus gnéithe nua do do QR menu bialann",
+    "readMore": "Léigh tuilleadh",
+    "backToChangelog": "Ar ais chuig an gClár Athruithe",
+    "seo": {
+      "title": "Maidir le Nuashonruithe IQ Rest",
+      "description": "Tá IQ Rest ag feabhsú go leanúnach chun cabhrú le bialanna agus caiféanna na miontuairiscí QR digiteacha proifisiúnta a chruthú. Lean ár gclár athruithe chun fanacht suas chun dáta le na gnéithe is déanaí do do shuíomh gréasáin bialainne agus do réiteach miontuairiscí QR."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsive Support for Your Restaurant QR Menu",
+        "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
+        "meta": {
+          "title": "Responsive Support for Restaurant QR Menu | IQ Rest",
+          "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
+        },
+        "content": {
+          "intro": "IQ Rest now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "image1Alt": "Support chat interface for restaurant QR menu",
+          "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
+          "section1Title": "Direct Chat Support for Your Restaurant",
+          "section1Text": "Our responsive support system for your QR menu restaurant or cafe works directly within your dashboard. No need to search for contact emails or wait in phone queues. Simply open the support chat, type your question or describe the change you need, and our team responds quickly. Whether you need help updating menu items, fixing display issues, or understanding analytics - responsive support is just a message away.",
+          "section2Title": "Quick Assistance for Any QR Menu Changes",
+          "section2Text": "Need to update prices before a busy weekend? Want to add seasonal items to your restaurant QR menu? Our responsive support helps cafes and restaurants make changes quickly. We guide you through the process or can assist directly when needed. This responsive support ensures your digital menu always reflects your current offerings, keeping customers informed and happy.",
+          "section3Title": "Support That Understands Restaurant Needs",
+          "section3Text": "Our responsive support team understands the unique challenges of running a restaurant or cafe. We know that a broken QR menu can mean lost customers and frustrated staff. That's why our support for your QR menu restaurant or cafe prioritizes quick response times and practical solutions. From technical questions to feature requests, we're here to help your digital menu succeed.",
+          "benefitsTitle": "Benefits of Responsive QR Menu Support",
+          "benefit1": "Direct in-app chat - no external emails or phone calls needed",
+          "benefit2": "Quick response times to keep your restaurant running smoothly",
+          "benefit3": "Guidance on menu updates, changes, and new features",
+          "benefit4": "Technical assistance for any QR code or website issues",
+          "benefit5": "Feature requests and suggestions welcomed and considered",
+          "benefit6": "Support that understands restaurant and cafe operations",
+          "conclusionTitle": "Get Responsive Support Today",
+          "conclusionText": "With IQ Rest's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "ctaText": "Ready to experience responsive support for your QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
+        "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
+        "meta": {
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | IQ Rest",
+          "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
+        },
+        "content": {
+          "intro": "IQ Rest now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
+          "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
+          "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
+          "section1Text": "Our detailed analytics for your restaurant website and QR menu track every customer interaction. See total page views for today, this week, and this month at a glance. Track unique visitors to understand your real audience size. The analytics dashboard provides detailed insights into how customers navigate your QR menu - from the home page to your full menu, contacts, and language selection. This detailed analytics helps restaurants make data-driven decisions.",
+          "section2Title": "Page and Language Analytics",
+          "section2Text": "Understand which pages of your restaurant website and QR menu are most popular. Our detailed analytics break down views by page type: Home, Menu, Contacts, and Language selection. See which languages your customers prefer, helping you prioritize translations and serve international guests better. These detailed analytics for your restaurant QR menu reveal customer behavior patterns you never knew existed.",
+          "section3Title": "Daily Trends and Usage Monitoring",
+          "section3Text": "Track how your restaurant website and QR menu perform over time with daily view charts. See patterns in customer engagement throughout the week. Monitor your monthly usage against your plan limits with a clear progress bar. Our detailed analytics help restaurants identify peak times and optimize their digital presence. Whether you're a small cafe or a busy restaurant, these insights help you understand your customers better.",
+          "benefitsTitle": "Benefits of Detailed Analytics for Restaurants",
+          "benefit1": "Real-time view counts: today, weekly, and monthly statistics at a glance",
+          "benefit2": "Unique visitor tracking to understand your actual customer reach",
+          "benefit3": "Page-by-page breakdown showing what content customers view most",
+          "benefit4": "Language analytics to optimize multilingual menu offerings",
+          "benefit5": "Daily trend charts to identify patterns in customer behavior",
+          "benefit6": "Usage monitoring with clear limits and upgrade prompts",
+          "conclusionTitle": "Start Using Detailed Analytics Today",
+          "conclusionText": "With IQ Rest's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "ctaText": "Ready to explore detailed analytics for your restaurant?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu and Restaurant Website Generator",
+        "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
+        "meta": {
+          "title": "Instant QR Menu and Restaurant Website Generator | IQ Rest",
+          "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
+        },
+        "content": {
+          "intro": "IQ Rest now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
+          "image1Caption": "Generate custom QR codes for your restaurant website instantly",
+          "section1Title": "How the Instant QR Menu Generator Works",
+          "section1Text": "Our instant QR menu and restaurant website generator creates everything you need in minutes. Simply add your menu items, and the system instantly generates a unique QR code linked to your restaurant website. The generator supports multiple paper formats (A4, A5, A6, Letter), various QR layouts per page (1 to 16 codes), and customizable text beneath each QR code. Preview exactly what you'll print, then download or print directly - your instant QR menu is ready to display at your tables.",
+          "section2Title": "Customizable QR Codes for Any Restaurant or Cafe",
+          "section2Text": "The instant QR menu generator offers complete customization for your restaurant or cafe branding. Add your restaurant name above the QR code, include custom text like 'Scan for Menu' or 'QR Menu' below, and choose from three text sizes. The generator produces clean, simple QR codes optimized for fast scanning. Whether you need a single large QR code for a poster or 16 smaller codes for individual table cards, our instant generator adapts to your restaurant's needs.",
+          "section3Title": "Print-Ready QR Menus in Seconds",
+          "section3Text": "Unlike complicated design tools, our instant QR menu generator creates print-ready layouts automatically. Select your paper format, choose how many QR codes per page, and hit print - that's it. The generator handles margins, spacing, and sizing to ensure perfect prints every time. For cafes and restaurants that need professional QR menus quickly, this instant approach saves hours of design work and gets your digital menu in front of customers faster.",
+          "benefitsTitle": "Benefits of Instant QR Menu Generation",
+          "benefit1": "Generate complete QR menu and restaurant website in minutes, not hours",
+          "benefit2": "Multiple paper formats: A4, A5, A6, and Letter sizes supported",
+          "benefit3": "Flexible layouts: from single large QR to 16 codes per page",
+          "benefit4": "Custom text and sizing options for your restaurant branding",
+          "benefit5": "Print-ready output with automatic margins and spacing",
+          "benefit6": "Download as PNG or print directly from your browser",
+          "conclusionTitle": "Start Using the Instant QR Menu Generator",
+          "conclusionText": "With IQ Rest's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "ctaText": "Ready to generate your instant QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Public Restaurant Website for QR Menu Scanning",
+        "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
+        "meta": {
+          "title": "Public Restaurant Website for QR Menu Scanning | IQ Rest",
+          "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
+        },
+        "content": {
+          "intro": "IQ Rest now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "image1Alt": "Public restaurant website showing QR menu categories",
+          "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
+          "section1Title": "How the Public Restaurant Website Works with QR Scanning",
+          "section1Text": "When customers scan your restaurant's QR code, they're instantly taken to your public website displaying the complete menu. No app download required, no waiting - just immediate access to your offerings. The public restaurant website for QR menu shows categories at the top for easy navigation, with items displayed in an elegant card layout featuring photos, descriptions, and prices. Customers can tap on categories to filter items or scroll through the entire menu.",
+          "section2Title": "Features of Your Public Restaurant QR Menu Website",
+          "section2Text": "Your public restaurant website includes everything customers need: category tabs for quick navigation, high-quality dish photos, detailed descriptions, prices in your currency, and active item indicators. The design is optimized for mobile devices since most QR scans happen on phones. Items load quickly thanks to optimized images, and the interface is intuitive for guests of all ages. Changes made in your admin panel appear instantly on the public website.",
+          "image2Alt": "Restaurant QR menu website showing food items with photos",
+          "image2Caption": "Public menu website displaying dishes with optimized photos and descriptions",
+          "section3Title": "Multilingual Support for International Guests",
+          "section3Text": "The public restaurant website includes a language selector so international guests can view your menu in their preferred language. Currently supporting English and Spanish, with more languages coming soon. This makes your public restaurant QR menu accessible to tourists and diverse customer bases. The language preference is remembered for return visits, providing a personalized experience.",
+          "image3Alt": "Language selection on public restaurant QR menu website",
+          "image3Caption": "Language selector allowing guests to view the public menu in their preferred language",
+          "benefitsTitle": "Benefits of Your Public Restaurant QR Menu Website",
+          "benefit1": "Instant menu access - customers scan and view immediately, no app needed",
+          "benefit2": "Mobile-optimized design for perfect display on any smartphone",
+          "benefit3": "Real-time updates - menu changes appear instantly to customers",
+          "benefit4": "Category navigation for easy browsing of your offerings",
+          "benefit5": "Multilingual support for international customers",
+          "benefit6": "Fast loading with optimized images and modern technology",
+          "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
+          "conclusionText": "With IQ Rest's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "ctaText": "Ready to launch your public restaurant QR menu website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "How to Add Items to Restaurant Website with QR Menu",
+        "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
+        "meta": {
+          "title": "How to Add Items to Restaurant Website with QR Menu | IQ Rest",
+          "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
+        },
+        "content": {
+          "intro": "Want to know how to add items to your restaurant website with QR menu? IQ Rest makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "image1Alt": "How to add items to restaurant website with QR menu - item list view",
+          "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
+          "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
+          "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
+          "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with IQ Rest. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "image2Alt": "Item form showing how to add items to restaurant QR menu website",
+          "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
+          "section3Title": "Image Upload and Optimization for Your Restaurant Items",
+          "section3Text": "High-quality images are essential when you add items to restaurant website with QR menu. Our system accepts JPEG, PNG, WebP, and GIF formats up to 5MB. Every image is automatically resized to 500x500 pixels and converted to WebP format for fast loading while maintaining excellent quality. This means your dishes always look their best on any device. Professional food photography significantly improves how customers perceive your restaurant when browsing your QR menu website.",
+          "benefitsTitle": "Benefits of Adding Items to Your Restaurant QR Menu Website",
+          "benefit1": "Add unlimited menu items with photos, descriptions, and prices",
+          "benefit2": "Automatic image optimization for fast loading and perfect display",
+          "benefit3": "Organize items into categories for easy customer navigation",
+          "benefit4": "Active/inactive toggle to hide sold-out items without deleting",
+          "benefit5": "Drag and drop reordering to arrange items in your preferred order",
+          "benefit6": "Mobile-friendly interface to add items from any device",
+          "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using IQ Rest. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, IQ Rest makes it easy to add items to restaurant website that attracts and converts customers.",
+          "ctaText": "Ready to add items to your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "How to Make QR Code Menu for Restaurant with Categories",
+        "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
+        "meta": {
+          "title": "How to Make QR Code Menu for Restaurant with Categories | IQ Rest",
+          "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
+        },
+        "content": {
+          "intro": "Want to know how to make QR code menu for restaurant with categories? IQ Rest now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "image1Alt": "How to make QR code menu for restaurant - categories list view",
+          "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
+          "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
+          "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
+          "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with IQ Rest. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "image2Alt": "Category form showing how to make QR code menu for restaurant",
+          "image2Caption": "Simple form interface for creating restaurant menu categories",
+          "section3Title": "Mobile-Optimized Category Management",
+          "section3Text": "We know restaurant owners are busy and often manage their menus on the go. That's why our category management is fully optimized for mobile devices. When you make QR code menu for restaurant using your phone, you'll find a compact interface with a three-dot menu for quick actions. Move categories up or down, edit details, or delete categories - all from your smartphone. This mobile-first approach ensures you can make QR code menu for restaurant with categories anytime, anywhere.",
+          "benefitsTitle": "Benefits of Making QR Code Menu with Categories",
+          "benefit1": "Organize menu items logically so customers can easily find what they want",
+          "benefit2": "Drag and drop reordering to arrange categories in your preferred display order",
+          "benefit3": "Active/inactive toggle to hide seasonal categories without deleting them",
+          "benefit4": "Mobile-optimized interface to manage categories from any device",
+          "benefit5": "Clean visual design with activity indicators for quick status overview",
+          "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
+          "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using IQ Rest. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, IQ Rest makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "ctaText": "Ready to make QR code menu for your restaurant with categories?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
+        "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
+        "meta": {
+          "title": "Easy QR Menu for Cafe - New Control Panel | IQ Rest",
+          "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
+        },
+        "content": {
+          "intro": "We're excited to introduce our brand new admin control panel designed to make creating QR menus for your cafe as easy as possible. Whether you're running a small coffee shop or a bustling cafe, our easy-to-use interface helps you manage your digital menu effortlessly. The new control panel features a modern sidebar design that puts all the tools you need to create your cafe's QR menu right at your fingertips.",
+          "image1Alt": "Easy QR menu control panel for cafe management",
+          "image1Caption": "New control panel with sidebar navigation for easy cafe QR menu creation",
+          "section1Title": "Modern Sidebar Interface for Easy Menu Management",
+          "section1Text": "The new control panel features a sleek sidebar that makes navigating your cafe's QR menu settings incredibly easy. With clearly organized sections for Dashboard, Categories, Products, QR Code, Analytics, Settings, Billing, and Support, you can easily find and manage every aspect of your cafe's digital menu. The sidebar collapses on mobile devices, ensuring easy access to all features regardless of what device you're using to manage your cafe's QR menu.",
+          "section2Title": "Easy Category and Product Management for Your Cafe",
+          "section2Text": "Creating and organizing your cafe's QR menu has never been easier. Our new category and product management pages are designed with simplicity in mind, allowing cafe owners to easily add, edit, and organize their menu items. Whether you're updating daily specials or adding seasonal drinks, the easy-to-use interface ensures your cafe's QR menu stays current and appealing to customers.",
+          "section3Title": "Server-Side Rendering for Fast Performance",
+          "section3Text": "The new control panel is built with server-side rendering (SSR) technology, ensuring your cafe's QR menu management dashboard loads quickly and efficiently. All data is fetched from the server, providing real-time updates and a smooth experience. This easy and fast approach means you spend less time waiting and more time perfecting your cafe's QR menu.",
+          "benefitsTitle": "Why This Makes QR Menu Creation Easy for Cafes",
+          "benefit1": "Easy navigation with modern sidebar interface for quick access to all cafe menu features",
+          "benefit2": "Easy category management to organize your cafe's QR menu logically",
+          "benefit3": "Easy product editing with instant updates to your cafe's digital menu",
+          "benefit4": "Easy QR code generation and customization for your cafe",
+          "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
+          "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
+          "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using IQ Rest to provide their customers with an easy, modern menu experience.",
+          "ctaText": "Ready to create an easy QR menu for your cafe?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
+        "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
+        "meta": {
+          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | IQ Rest",
+          "description": "Learn how to get QR menu for restaurants easily. New dedicated FAQ page answers all questions about getting QR menus for your restaurant. Streamlined 4-step guide to get started."
+        },
+        "content": {
+          "intro": "We've made it easier than ever to get QR menu for restaurants. Our reorganized FAQ and how-to content helps restaurant owners quickly find answers about how to get QR menus for their establishments. Whether you're looking to get a QR menu for your restaurant or café, this update provides all the information you need in one place.",
+          "image1Alt": "How to get QR menu for restaurants - dedicated FAQ page",
+          "image1Caption": "New FAQ page showing how to get QR menu for restaurants with organized questions and answers",
+          "section1Title": "Dedicated FAQ Page for Getting QR Menus",
+          "section1Text": "All questions about how to get QR menu for restaurants are now on a dedicated /faq page. Restaurant owners can easily find answers about getting QR menus, from setup to customization. Each question about getting a QR menu for your restaurant is displayed in its own card with expanded answers, making it simple to get the information you need to get started with QR menus for your restaurant.",
+          "section2Title": "4-Step Guide to Get QR Menu for Restaurants",
+          "section2Text": "Our streamlined guide shows exactly how to get QR menu for restaurants in just 4 easy steps. Whether you want to get a QR menu for your restaurant, café, or bar, the new card-based design makes it clear how to get started. This guide to get QR menus for restaurants appears on all pages, ensuring you always know how to get your restaurant's QR menu set up quickly.",
+          "section3Title": "SEO-Optimized Content to Help Restaurants Get QR Menus",
+          "section3Text": "We've optimized our content to help more restaurants discover how to get QR menus. The guide appears with full Schema.org structured data on the homepage, helping restaurants searching for how to get QR menu solutions find us easily. Our smart content distribution ensures restaurants can get the QR menu information they need while maintaining strong search engine visibility.",
+          "benefitsTitle": "Why This Helps You Get QR Menu for Your Restaurant",
+          "benefit1": "Dedicated FAQ page answers all questions about getting QR menus for restaurants",
+          "benefit2": "Clear 4-step guide shows exactly how to get QR menu for your restaurant",
+          "benefit3": "Easy access to FAQ and contact options to help you get your QR menu set up",
+          "benefit4": "SEO-optimized to help restaurants discover how to get QR menus easily",
+          "benefit5": "Consistent information about getting QR menus across the entire platform",
+          "benefit6": "Faster path to get QR menu for your restaurant with improved navigation",
+          "conclusionTitle": "Get QR Menu for Your Restaurant Today",
+          "conclusionText": "These improvements make it incredibly easy for restaurants to get QR menus. Whether you're a small café looking to get a QR menu or a large restaurant chain, our reorganized content helps you understand exactly how to get QR menu solutions for your establishment. Start now and get your restaurant's QR menu up and running in minutes.",
+          "ctaText": "Ready to get QR menu for your restaurant?",
+          "ctaButton": "Get QR Menu Now"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Free Restaurant Website Creation - Mobile Optimization & UX Improvements",
+        "description": "Major improvements to creating a free restaurant website: optimized mobile navigation with hamburger menu, enhanced signup page for better conversions, and streamlined user experience.",
+        "meta": {
+          "title": "Free Restaurant Website Creation Updates - IQ Rest Changelog",
+          "description": "Learn how IQ Rest improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
+        },
+        "content": {
+          "intro": "Creating a free restaurant website has never been easier or more mobile-friendly. We've made significant improvements to help restaurant and cafe owners build their professional website with a digital QR menu, especially on mobile devices where most people search for 'создание сайта для ресторана бесплатно' (free restaurant website creation). These updates focus on mobile navigation, signup page refinements, and overall user experience to ensure anyone can create a restaurant website for free without any technical knowledge.",
+          "image1Alt": "Mobile-optimized hamburger menu for restaurant website",
+          "image1Caption": "New mobile navigation with hamburger menu for easy access to all features",
+          "section1Title": "Mobile-First Navigation for Restaurant Websites",
+          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore IQ Rest's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
+          "section2Title": "Enhanced Get Started Page for Free Restaurant Website Creation",
+          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use IQ Rest now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
+          "image2Alt": "Optimized signup flow for free restaurant website creation",
+          "image2Caption": "Streamlined signup process optimized for mobile devices",
+          "section3Title": "Three-Step Process Optimized for All Devices",
+          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with IQ Rest.",
+          "benefitsTitle": "Key Improvements for Creating Free Restaurant Websites",
+          "benefit1": "Mobile-optimized hamburger menu navigation for easy access on smartphones",
+          "benefit2": "Enhanced signup page with better mobile spacing and centered layouts",
+          "benefit3": "Full-width restaurant counter on mobile providing strong social proof",
+          "benefit4": "Adaptive three-step process indicator that works on all screen sizes",
+          "benefit5": "Streamlined input forms optimized for mobile touch interaction",
+          "benefit6": "Fixed logout redirect issue ensuring proper navigation across all pages",
+          "conclusionTitle": "Free Restaurant Website Creation Made Simple",
+          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out IQ Rest on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
+          "ctaText": "Ready to create your free restaurant website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "landing-redesign": {
+        "title": "Redesigned Get Started Page for Higher Conversions",
+        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
+        "meta": {
+          "title": "Get Started Page Redesign - IQ Rest Changelog",
+          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+        },
+        "content": {
+          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
+          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
+          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
+          "section1Title": "Clear Value Propositions at a Glance",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section2Title": "Social Proof That Builds Trust",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
+          "section3Title": "Streamlined Signup Flow",
+          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
+          "benefitsTitle": "Key Improvements in This Update",
+          "benefit1": "Value proposition cards with icons for instant comprehension",
+          "benefit2": "Live restaurant counter providing authentic social proof",
+          "benefit3": "Unified page design for both email and OTP verification steps",
+          "benefit4": "Visual 3-step process indicator for transparency",
+          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
+          "benefit6": "Real-time email validation with visual feedback",
+          "conclusionTitle": "Designed for Restaurant Success",
+          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
+          "ctaText": "Ready to create your restaurant's digital menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "auth": {
+        "title": "New User Authentication Interface",
+        "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
+        "meta": {
+          "title": "User Authentication Interface - IQ Rest Changelog",
+          "description": "IQ Rest introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+        },
+        "content": {
+          "intro": "We are excited to announce the launch of our new user authentication interface for IQ Rest. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of IQ Rest authentication",
+          "image1Caption": "Simple email-based authentication - no passwords to remember",
+          "section1Title": "Passwordless Authentication for Restaurant Owners",
+          "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
+          "section2Title": "Streamlined QR Menu Creation Process",
+          "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
+          "image2Alt": "OTP verification step of IQ Rest authentication",
+          "image2Caption": "Secure 4-digit code verification sent directly to your email",
+          "section3Title": "Built for Speed and Security",
+          "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
+          "benefitsTitle": "Key Benefits for Your Restaurant",
+          "benefit1": "Create your restaurant website with QR menu in minutes - no technical skills required",
+          "benefit2": "No passwords to remember - secure email-based verification keeps your account safe",
+          "benefit3": "Instant access to your digital menu builder from any device",
+          "benefit4": "Quick updates to your QR menu even during busy service hours",
+          "conclusionTitle": "Start Building Your Digital Menu Today",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, IQ Rest provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "ctaText": "Ready to create your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "meta": {
+          "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+        },
+        "content": {
+          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
+          "image1Alt": "Subscription plans for QR menu and restaurant website creation",
+          "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
+          "section1Title": "Flexible Plans for Every Restaurant Size",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section2Title": "Simple Billing Dashboard",
+          "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
+          "section3Title": "Save 25% with Yearly Billing",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "benefitsTitle": "Benefits of Our Subscription Plans",
+          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
+          "benefit3": "Instant plan upgrades - new features activate immediately",
+          "benefit4": "Secure Stripe payment processing for all transactions",
+          "benefit5": "Easy plan management through simple billing dashboard",
+          "benefit6": "Downgrade anytime - no long-term contracts required",
+          "conclusionTitle": "Start Creating Your Restaurant Website Today",
+          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using IQ Rest to connect with their customers through modern, mobile-friendly QR menus.",
+          "ctaText": "Ready to choose your plan for QR menu and restaurant website?",
+          "ctaButton": "View Pricing Plans"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "Cód QR",
+    "description": "Íoslódáil agus priontáil do chód QR le haghaidh na gcustaiméirí chun é a scanadh",
+    "preview": "Réamhamharc",
+    "paperFormat": "Formáid Páipéir",
+    "qrPerPage": "Códanna QR in aghaidh an Leathanach",
+    "customText": "Téacs Thíos an Chóid QR",
+    "customTextPlaceholder": "Scanáil chun an menu a fheiceáil",
+    "print": "Priontáil",
+    "download": "Íoslódáil PNG",
+    "viewMenu": "Féach ar an Menu",
+    "noSlug": "Níl URL an Menu Socraithe",
+    "noSlugDescription": "Le do thoil socraigh URL do bhialann i socruithe ar dtús chun cód QR a ghiniúint.",
+    "goToSettings": "Téigh chuig Socruithe",
+    "loading": "Ag Lódáil...",
+    "menuUrl": "Do Shuíomh Gréasáin",
+    "websiteReady": "Tá do shuíomh gréasáin réidh!",
+    "openWebsite": "Oscail Suíomh Gréasáin",
+    "printSection": "Priontáil & Íoslódáil Cód QR:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Litir (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Leathanach iomlán)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Méid Téacs",
+    "textSizes": {
+      "small": "Beag",
+      "medium": "Meán",
+      "large": "Mór"
+    }
+  },
+  "support": {
+    "title": "Teachtaireachtaí",
+    "subtitle": "Faigh cabhair ó ár bhfoireann",
+    "unauthorized": "Le do thoil logáil isteach chun rochtain a fháil ar thacaíocht",
+    "lastUpdated": "Nuashonraithe",
+    "emptyTitle": "Níl aon theachtaireachtaí ann fós",
+    "emptyDescription": "Seol teachtaireacht chun an comhrá a thosú",
+    "sendMessage": "Seol Teachtaireacht",
+    "placeholder": "Clóscríobh do theachtaireacht...",
+    "hint": "Brúigh Enter chun a sheoladh, Shift+Enter le haghaidh líne nua",
+    "send": "Seol",
+    "supportTeam": "Foireann Tacaíochta"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Cruthaigh do Mheán Digiteach i 5 Nóiméad - IQ Rest",
+      "description": "Meán QR agus suíomh gréasáin do do bialann. Réidh go huathoibríoch. Ní gá scileanna teicniúla."
+    },
+    "title": "Cruthaigh do Mheán Digiteach i 5 Nóiméad",
+    "subtitle": "Meán QR agus suíomh gréasáin do do bialann. Réidh go huathoibríoch.",
+    "emailLabel": "Ríomhphost",
+    "emailPlaceholder": "Cuir isteach ríomhphost chun tosú ag cruthú",
+    "otpPlaceholder": "Cuir isteach cód 4-uimhir",
+    "continue": "Cruthaigh Mo Mheán",
+    "sending": "Ag cruthú...",
+    "verifyTitle": "Seiceáil do ríomhphost",
+    "verifySubtitle": "Chuir muid cód 4-uimhir chuig {email}",
+    "verify": "Déan dearbhú",
+    "verifying": "Ag déanamh dearbhaithe...",
+    "changeEmail": "Athraigh ríomhphost",
+    "resendCode": "Athsheol cód",
+    "successTitle": "Fáilte!",
+    "successSubtitle": "Tá tú sínithe isteach go rathúil",
+    "redirecting": "Ag atreorú chuig an gclár rialaithe...",
+    "errors": {
+      "sendFailed": "Theip ar an gcód dearbhaithe a sheoladh. Le do thoil, déan iarracht arís.",
+      "verifyFailed": "Theip ar an gcód a dhearbhú. Le do thoil, déan iarracht arís."
+    },
+    "valueProps": {
+      "noSkills": "Níl scileanna teicniúla ag teastáil",
+      "instantUpdates": "Nuashonruithe meán láithreach",
+      "qrIncluded": "Cód QR + suíomh gréasáin san áireamh",
+      "freeStart": "Saor in aisce chun tosú"
+    },
+    "formHelper": "Níl cárta creidmheasa ag teastáil",
+    "setupTime": "Socraigh i 5 nóiméad",
+    "hasAccount": "An bhfuil cuntas agat cheana?",
+    "signIn": "Sínigh isteach",
+    "restaurantCounter": "Bí i do bhall {count} Bialann atá ag úsáid IQ Rest cheana",
+    "steps": {
+      "signUp": "Cláraigh le do ríomhphost",
+      "addMenu": "Cuir do chuid míreanna meán leis",
+      "getQr": "Faigh do chód QR & tosú"
+    },
+    "motivational": {
+      "title": "Tosaigh ag glacadh orduithe inniu",
+      "subtitle": "Tá do chustaiméirí ag fanacht le meán digiteach"
+    }
+  },
+  "reservations": {
+    "title": "Conradh",
+    "tables": "Táblaí",
+    "settings": "Socruithe",
+    "addTable": "Cuir Tábla leis",
+    "newTable": "Tábla Nua",
+    "editTable": "Cuir in Eagar Tábla",
+    "tableNumber": "Uimhir Tábla",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Cumas (aoichainteoirí)",
+    "capacityPlaceholder": "4",
+    "zone": "Ceantar",
+    "zonePlaceholder": "Tearmann, Fuinneog, Halla Príomha...",
+    "image": "Grianghraf",
+    "uploadImage": "Cliceáil chun grianghraf a uaslódáil",
+    "removeImage": "Bain",
+    "isActive": "Gníomhach",
+    "active": "Gníomhach",
+    "inactive": "Neamhghníomhach",
+    "save": "Sábháil",
+    "saving": "Ag Sábháil...",
+    "cancel": "Cealaigh",
+    "delete": "Scrios",
+    "deleteConfirm": "An bhfuil tú cinnte gur mhaith leat an tábla seo a scriosadh?",
+    "table": "Tábla",
+    "noTables": "Níl táblaí ann go fóill. Cuir do thábla chéad a chur ar fáil chun conradh a chumasú.",
+    "error": "Earráid",
+    "close": "Dún",
+    "noReservations": "Níl conarthaí ann go fóill",
+    "pending": "Ag Fanacht",
+    "confirmed": "Deimhnithe",
+    "cancelled": "Cealaíodh",
+    "completed": "Críochnaithe",
+    "confirm": "Deimhnigh",
+    "reject": "Diúltóidh",
+    "guests": "aoichainteoirí",
+    "date": "Dáta",
+    "time": "Am",
+    "guest": "Aoichainteoir",
+    "status": "Stádas",
+    "notes": "Nótaí",
+    "awaitingResponse": "Ag Fanacht le Freagairt",
+    "today": "Inniu",
+    "tomorrow": "Amárach",
+    "otherReservations": "Conarthaí Eile",
+    "sort": "Cuir in Ord"
+  },
+  "publicReserve": {
+    "title": "Cuir Tábla in Áirithe",
+    "selectDate": "Roghnaigh Dáta",
+    "selectTime": "Roghnaigh Am",
+    "selectGuests": "Uimhir na nAíonna",
+    "selectTable": "Roghnaigh Tábla",
+    "yourDetails": "Do Shonraí",
+    "name": "Ainm",
+    "namePlaceholder": "Do ainm",
+    "email": "Ríomhphost",
+    "emailPlaceholder": "do@ríomhphost.com",
+    "phone": "Guthán (roghnach)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Iarratais speisialta (roghnach)",
+    "notesPlaceholder": "Aon iarratais nó nótaí speisialta...",
+    "submit": "Cuir Tábla in Áirithe",
+    "submitting": "Ag cur in áirithe...",
+    "success": "Áirithint Curtha isteach!",
+    "successAuto": "Tá do áirithint deimhnithe. Gheobhaidh tú ríomhphost deimhnithe go luath.",
+    "successManual": "Tá d'iarratas áirithinte curtha isteach. Gheobhaidh tú ríomhphost nuair a bheidh sé deimhnithe.",
+    "error": "Earráid",
+    "guests": "aíonna",
+    "table": "Tábla",
+    "capacity": "cumas",
+    "noAvailableTables": "Níl táblaí ar fáil don uimhir seo de na haíonna",
+    "back": "Ar ais chuig an gClár",
+    "noTimeSlotsAvailable": "Níl aon spásanna ama ar fáil don dáta seo",
+    "loadingAvailability": "Ag seiceáil ar fáil..."
+  },
+  "publicMenu": {
+    "contacts": "Teagmhálachtaí",
+    "language": "Teanga",
+    "reserve": "Cuir Tábla in Áirithe",
+    "onlineMenu": "Meniu Ar Líne",
+    "noCategories": "Níl catagóirí ar fáil",
+    "openInstagram": "Oscail Instagram",
+    "makeCall": "Glaoigh",
+    "writeWhatsApp": "Scríobh ar WhatsApp",
+    "openGoogleMaps": "Oscail i Google Maps",
+    "noLocation": "Níl suíomh ar fáil",
+    "english": "Béarla",
+    "spanish": "Spáinnis",
+    "allergens": "Allergíní",
+    "allergensInfo": "Tá na h-allergíní seo a leanas sa mhias seo:",
+    "allergenNames": {
+      "gluten": "Glútan",
+      "crustaceans": "Crustacean",
+      "eggs": "Uibheacha",
+      "fish": "Éisc",
+      "peanuts": "Pionna",
+      "soybeans": "Soithigh",
+      "dairy": "Déiríochta",
+      "nuts": "Cnónna Crainn",
+      "celery": "Searbhóg",
+      "mustard": "Mustaird",
+      "sesame": "Seasamh",
+      "sulphites": "Sulfithe",
+      "lupin": "Lupin",
+      "molluscs": "Mollusc"
+    }
+  },
+  "faq": {
+    "title": "Ceisteanna Coitianta Faoi Mheán QR do Bialann & Caifé",
+    "subtitle": "Faigh freagraí ar cheisteanna coitianta faoi chruthú agus bainistíocht do mheán QR digiteach do bhialanna agus caiféanna",
+    "howto": {
+      "question": "Conas a chruthóidh mé meán QR agus suíomh gréasáin bialainne i 4 chéim éasca?",
+      "answer": "Faigh do bhialann ar líne laistigh de 5 nóiméad - ní gá ach do ríomhphost a chur isteach agus tosú ó do guthán",
+      "faqTitle": "An bhfuil tuilleadh ceisteanna agat?",
+      "faqDescription": "Seiceáil ár n-FAQ cuimsitheach chun gach rud a fhoghlaim faoi chruthú agus bainistíocht mheán QR agus suíomh gréasáin do bhialann",
+      "faqButton": "Féach ar Gach FAQ",
+      "contactButton": "Déanaigí Teagmháil Linn",
+      "steps": [
+        {
+          "name": "Logáil isteach le ríomhphost",
+          "text": "Faigh suíomh gréasáin nua-aimseartha bialainne le meán QR, leathanach teagmhála le léarscáil, áirithintí ar líne, agus brandaíocht shaincheaptha - uile san áireamh ó thús."
+        },
+        {
+          "name": "Socraigh do bhialann",
+          "text": "Cuir isteach ainm do bhialann agus roghnaigh do URL uathúil. Cuir cúlra físe nó grianghraf, socraigh do dhathanna branda, agus cumasaigh áirithintí tábla."
+        },
+        {
+          "name": "Cuir catagóirí agus miasa leis",
+          "text": "Cruthaigh catagóirí miasa agus cuir miasa le grianghraif. Uasmhéadaíonn AI do ghrianghraif go huathoibríoch agus aistríonn do mheán isteach i 10+ teangacha."
+        },
+        {
+          "name": "Féach ar do mheán réidh",
+          "text": "Tá do shuíomh gréasáin gairmiúil beo! Is féidir le custaiméirí do mheán a bhrabhsáil, áirithintí a dhéanamh, agus tú a fháil ar an léarscáil. Rian do gach rud le hanailís laethúil."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Cad é meán QR do bhialann agus conas a oibríonn sé?",
+        "answer": "Is meán digiteach é meán QR do bhialann a bhfuil rochtain ag custaiméirí air trí chód QR a scanadh lena bhfón cliste. Cruthaíonn IQ Rest suíomh gréasáin meán digiteach gairmiúil do do bhialann nó caifé a nuashonraíonn go láithreach gan athphriontáil. Ní gá do chustaiméirí ach an cód a scanadh agus féachaint ar do mheán ar a bhfeiste."
+      },
+      {
+        "question": "Cé mhéad a chosnaíonn meán QR do bhialann nó caifé?",
+        "answer": "Tugann IQ Rest praghsáil solúbtha ag tosú ó €0 go deo le ár bplean saor in aisce. Déanann sé seo é inacmhainne do bhialann nó caifé ar bith chun meán QR gairmiúil a chruthú. Tosaíonn pleananna íoctha ag €4/mí le gnéithe breise cosúil le míreanna gan teorainn agus anailísí chun cinn."
+      },
+      {
+        "question": "An féidir liom suíomh gréasáin a chruthú do mo bhialann gan cód a scríobh?",
+        "answer": "Sea! Tá IQ Rest deartha do na húinéirí bialann agus caifé gan aon eolas teicniúil. Is féidir leat suíomh gréasáin meán digiteach iomlán do do bhialann a chruthú laistigh de nóiméid, gan scileanna cláraithe nó cód a scríobh ag teastáil. Ní gá ach do miasa, praghsanna, agus grianghraif a chur isteach trí ár n-idirghníomhach."
+      },
+      {
+        "question": "Cé chomh minic is féidir liom mo mheán QR a nuashonrú?",
+        "answer": "Is féidir leat do mheán bialainne nó caifé a nuashonrú chomh minic agus is gá. Taispeántar gach athrú i ndáiríre, ag ligean duit praghsanna a nuashonrú láithreach, miasa nua a chur leis, nó cur síos a athrú gan athphriontáil na miasa fisiciúla. Foirfe do shonraí laethúla agus nuashonruithe séasúracha."
+      },
+      {
+        "question": "Oibríonn an meán QR do bhialanna agus caiféanna araon?",
+        "answer": "Ar ndóigh! Tá IQ Rest foirfe do bhialanna, caiféanna, siopaí caife, barraí, trucailí bia, agus aon ghnó seirbhíse bia. Oireann ár réiteach meán digiteach do gach cineál bunáite, ó chaiféanna beaga go slabhraí bialann móra."
+      },
+      {
+        "question": "Conas a oibríonn an t-aistriúchán uathoibríoch meán?",
+        "answer": "Úsáideann ár gcóras meán QR intleacht shaorga chun do mheán bialainne nó caifé a aistriú go huathoibríoch isteach i roinnt teangacha. Tá sé foirfe do cheantair turasóireachta agus do chustaiméirí idirnáisiúnta. Is féidir leat do mheán a thairiscint i mBéarla, Spáinnis, agus teangacha eile, ag cabhrú leat níos mó custaiméirí a sheirbheáil."
+      },
+      {
+        "question": "An féidir liom an réiteach meán QR a thriail saor in aisce?",
+        "answer": "Sea! Tairgimid plean go hiomlán saor in aisce do bhialanna agus caiféanna chun IQ Rest a thriail. Is féidir leat do shuíomh gréasáin meán digiteach a chruthú le suas le 15 mír gan aon chostas, go deo. Ní gá cárta creidmheasa a bheith agat chun tosú. Uasghrádaigh amháin nuair a theastaíonn níos mó gnéithe uait."
+      },
+      {
+        "question": "An app é IQ Rest a gcaithfidh custaiméirí a íoslódáil?",
+        "answer": "Níl! Is é seo laige amháin de na buntáistí is fearr. Ní gá do chustaiméirí aon aip a íoslódáil. Ní gá ach an cód QR a scanadh agus osclóidh an meán go láithreach ina n-ardán gréasáin. Déanann sé seo é i bhfad níos áisiúla ná aipeanna bialainne a éilíonn íoslódálacha."
+      },
+      {
+        "question": "Cad iad na buntáistí a bhaineann le suíomh gréasáin meán digiteach do mo bhialann?",
+        "answer": "Tugann suíomh gréasáin meán digiteach go leor buntáistí: nuashonruithe láithreach ar an meán gan costas athphriontála, tacaíocht ilteangach do chustaiméirí idirnáisiúnta, ordú gan teagmháil le haghaidh sábháilteachta, anailísí chun miasa coitianta a fheiceáil, agus cur i láthair ghairmiúil. Chomh maith leis sin, tá sé éicea-chairdiúil mar go gcuireann tú deireadh le dramhaíl páipéir."
+      },
+      {
+        "question": "Conas a chruthóidh mé cód QR do mo mheán bialainne?",
+        "answer": "Cruthaíonn IQ Rest cód QR gairmiúil go huathoibríoch nuair a chruthaíonn tú do mheán digiteach. Is féidir leat an cód QR seo a íoslódáil agus a phriontáil do tháblaí bialainne, do dhoras, nó do chuntar tógála. Tá an cód QR inathraithe agus ardchaighdeáin le haghaidh scanadh soiléir."
+      }
+    ],
+    "cta": {
+      "title": "An bhfuil ceisteanna fós agat?",
+      "subtitle": "Cuir ceist orainn agus faigh freagra laistigh den am is giorra is féidir",
+      "button": "Déanaigí Teagmháil Linn"
+    },
+    "linkTitle": "An bhfuil ceisteanna agat?",
+    "linkDescription": "Seiceáil ár gceisteanna coitianta chun tuilleadh a fhoghlaim faoi IQ Rest",
+    "meta": {
+      "title": "Ceisteanna Coitianta - IQ Rest",
+      "description": "Faigh freagraí ar cheisteanna coitianta faoi réiteach meán QR digiteach IQ Rest do bhialanna agus caiféanna"
+    }
+  },
+  "billing": {
+    "title": "Íocaíocht",
+    "description": "Bainistigh do shíntiús agus íocaíocht",
+    "unauthorized": "Le do thoil logáil isteach chun do shíntiús a bhainistiú",
+    "perMonth": "/mí",
+    "currentPlan": "Plean Reatha",
+    "upgrade": "Uasghrádú",
+    "manage": "Bainistigh",
+    "subscriptionSuccess": "Tá do shíntiús gníomhachtaithe go rathúil!",
+    "subscriptionCanceled": "Cuireadh deireadh leis an bpróiseas síntiúis.",
+    "subscriptionProcessing": "Tá do íocaíocht á próiseáil. D'fhéadfadh sé cúpla nóiméad a thógáil chun gníomhachtú.",
+    "processingPayment": "Ag próiseáil do íocaíochta...",
+    "processingPaymentDescription": "Le do thoil fan go gcuirfimid do shíntiús deimhnithe. Tógtar sé seo de ghnáth cúpla soicind.",
+    "checkoutError": "Theip ar an gcríochfort a thosú. Le do thoil déan iarracht arís.",
+    "portalError": "Theip ar an gcuairt ar an bportail íocaíochta. Le do thoil déan iarracht arís.",
+    "detailsNote": "Chun tuilleadh sonraí, tabhair cuairt ar ár",
+    "pricingPage": "Leathanach Praghsanna",
+    "plans": {
+      "FREE": {
+        "name": "Saor"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Básic Míosúil"
+      },
+      "BASIC_YEARLY": {
+        "name": "Básic Bliantúil"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Míosúil"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Bliantúil"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Painéal",
+      "onboarding": "Tús",
+      "qrMenu": "QR Menu",
+      "analytics": "Anailís",
+      "categories": "Catagóirí",
+      "items": "Míreanna",
+      "settings": "Ginearálta",
+      "design": "Dearadh",
+      "contacts": "Teagmhálacha",
+      "languages": "Teangacha",
+      "reservations": "Conradh",
+      "reservationSettings": "Socruithe Conradh",
+      "tables": "Táblaí",
+      "billing": "Billeáil",
+      "support": "Tacaíocht"
+    },
+    "sidebar": {
+      "qrMenu": "QR Menu",
+      "menu": "Menu",
+      "settings": "Socruithe",
+      "reservations": "Conradh",
+      "account": "Cuntas",
+      "reservationSettings": "Confighuration"
+    },
+    "logout": "Logáil Amach",
+    "auth": {
+      "title": "Sínigh isteach",
+      "subtitle": "Suíomh gréasáin nua-aimseartha le comhoiriúnacht QR, áirithintí, agus aistriúcháin AI",
+      "benefits": "Níl pasfhocail. Níl cárta creidmheasa.",
+      "emailPlaceholder": "do@email.com",
+      "continue": "Lean ort",
+      "verifyTitle": "Seiceáil do ríomhphost",
+      "verifySubtitle": "Sheolamar cód chuig {email}",
+      "verify": "Deimhnigh",
+      "changeEmail": "Úsáid ríomhphost difriúil",
+      "errors": {
+        "sendFailed": "Theip ar an gcód a sheoladh. Bain triail as arís.",
+        "verifyFailed": "Cód neamhbhailí. Bain triail as arís."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Úsáid Mhíosúil",
+      "scansThisMonth": "scananna an mhí seo",
+      "limitReached": "Bhí do theorainn scananna míosúla bainte amach. Uasghrádaigh do phlean le haghaidh scananna gan teorainn.",
+      "todayViews": "Inniu",
+      "weeklyViews": "An tSeachtain seo",
+      "monthlyViews": "An Mí seo",
+      "uniqueVisitors": "Cuairteoirí Uathúla",
+      "viewsByPage": "Radharcanna de réir Leathanach",
+      "viewsByLanguage": "Radharcanna de réir Teanga",
+      "dailyViews": "Radharcanna Laethúla",
+      "noData": "Níl aon shonraí ar fáil fós",
+      "pageNames": {
+        "home": "Baile",
+        "menu": "Meniu",
+        "contacts": "Teagmhálacha",
+        "language": "Teanga",
+        "reserve": "Áirithint"
+      },
+      "languageNames": {
+        "en": "Béarla",
+        "es": "Spáinnis",
+        "de": "Gearmáinis",
+        "fr": "Fraincis",
+        "ru": "Русский"
+      }
+    },
+    "categories": {
+      "noCategories": "Níl aon chatagóirí ann fós. Cruthaigh do chatagóir chéad chun tús a chur.",
+      "addCategory": "Cuir leis",
+      "editCategory": "Cuir in eagar Catagóir",
+      "name": "Ainm",
+      "namePlaceholder": "Cuir ainm na catagóire isteach",
+      "status": "Stádas",
+      "active": "Gníomhach",
+      "inactive": "Neamhghníomhach",
+      "save": "Sábháil",
+      "saving": "Ag sábháil...",
+      "cancel": "Cealaigh",
+      "delete": "Scrios",
+      "deleteConfirm": "An bhfuil tú cinnte go muốn tú an catagóir seo a scriosadh? Ní féidir an gníomh seo a chur ar ais.",
+      "fetchError": "Theip ar chatagóirí a luchtú",
+      "updateError": "Theip ar an gcatagóir a nuashonrú",
+      "saveError": "Theip ar an gcatagóir a shábháil",
+      "deleteError": "Theip ar an gcatagóir a scriosadh",
+      "translateError": "Theip ar an aistriú",
+      "nameRequired": "Tá ainm riachtanach",
+      "enabled": "gníomhachtaithe",
+      "disabled": "neamhghníomhachtaithe",
+      "created": "Catagóir cruthaithe",
+      "updated": "Catagóir nuashonraithe",
+      "deleted": "Catagóir scriosta",
+      "validationErrorTitle": "Le do thoil, ceartigh na hearráidí seo a leanas",
+      "sort": "Sórtáil",
+      "saveSort": "Sábháil",
+      "sortSaved": "Ord sórtála sábháilte",
+      "sortError": "Theip ar ord sórtála a shábháil"
+    },
+    "items": {
+      "noItems": "Níl aon earraí ann fós. Cruthaigh do chéad earra chun tús a chur.",
+      "addItem": "Cuir leis",
+      "editItem": "Cuir in eagar an tEarrach",
+      "name": "Ainm",
+      "namePlaceholder": "Cuir isteach ainm an earra",
+      "description": "Cur síos",
+      "descriptionPlaceholder": "Cuir isteach cur síos ar an earra",
+      "price": "Praghas",
+      "pricePlaceholder": "0.00",
+      "category": "Catagóir",
+      "categoryPlaceholder": "Roghnaigh catagóir",
+      "image": "Íomhá",
+      "uploadImage": "Uaslódáil íomhá",
+      "removeImage": "Bain íomhá",
+      "status": "Stádas",
+      "active": "Gníomhach",
+      "inactive": "Neamhghníomhach",
+      "save": "Sábháil",
+      "saving": "Ag sábháil...",
+      "cancel": "Cealaigh",
+      "delete": "Scrios",
+      "deleteConfirm": "An bhfuil tú cinnte go muốn tú an t-earra seo a scriosadh? Ní féidir an gníomh seo a chur ar ais.",
+      "fetchError": "Theip ar earraí a luchtú",
+      "updateError": "Theip ar an t-earra a nuashonrú",
+      "saveError": "Theip ar an t-earra a shábháil",
+      "deleteError": "Theip ar an t-earra a scriosadh",
+      "translateError": "Theip ar an aistriú",
+      "nameRequired": "Tá ainm riachtanach",
+      "categoryRequired": "Tá catagóir riachtanach",
+      "priceRequired": "Tá praghas bailí riachtanach",
+      "enabled": "gníomhachtaithe",
+      "disabled": "neamhghníomhachtaithe",
+      "created": "Earrach cruthaithe",
+      "updated": "Earrach nuashonraithe",
+      "deleted": "Earrach scriosta",
+      "validationErrorTitle": "Le do thoil, ceartigh na laigeanna seo a leanas",
+      "sort": "Sort",
+      "saveSort": "Sábháil",
+      "sortSaved": "Ord na n-earraí sábháilte",
+      "sortError": "Theip ar ord na n-earraí a shábháil",
+      "allergens": "Ailseáin",
+      "allergensHint": "Roghnaigh ailseáin atá i láthair sa mhias seo",
+      "allergenNames": {
+        "gluten": "Glútan",
+        "crustaceans": "Crustaceáin",
+        "eggs": "Uibheacha",
+        "fish": "Iasc",
+        "peanuts": "Pionta",
+        "soybeans": "Soithigh",
+        "dairy": "Déiríochta",
+        "nuts": "Nótaí Crann",
+        "celery": "Searbhóg",
+        "mustard": "Mustaird",
+        "sesame": "Sesaim",
+        "sulphites": "Sulfití",
+        "lupin": "Lupin",
+        "molluscs": "Mollusc"
+      }
+    },
+    "languages": {
+      "translationProgress": "Dul chun cinn aistriúcháin",
+      "availableLanguages": "Teangacha ar fáil",
+      "europeanLanguages": "Teangacha Eorpacha",
+      "starToSetDefault": "Cliceáil ar an réalta chun é a shocrú mar réamhshocrú",
+      "default": "réamhshocrú",
+      "hint": "Gníomhachtaigh teangacha chun ligean do chustaiméirí do mhenu a fheiceáil i mionteangacha. Úsáidtear an teanga réamhshocraithe don phríomh ábhar.",
+      "fetchError": "Theip ar theangacha a luchtú",
+      "enableError": "Theip ar theanga a gníomhachtú",
+      "disableError": "Theip ar theanga a dhíghníomhachtú",
+      "defaultError": "Theip ar an teanga réamhshocraithe a shocrú",
+      "languageEnabled": "{language} gníomhachtaithe",
+      "languageDisabled": "{language} neamhghníomhachtaithe",
+      "defaultSet": "{language} socraithe mar réamhshocrú",
+      "cannotDisableDefault": "Ní féidir an teanga réamhshocraithe a dhíghníomhachtú",
+      "atLeastOneRequired": "Teanga amháin ar a laghad riachtanach",
+      "enableFirst": "Gníomhachtaigh an teanga ar dtús",
+      "deleteConfirm": "Díghníomhachtú na teanga seo a scriosfaidh na haistriúcháin go léir di. Ní féidir an gníomh seo a chur ar ais.",
+      "cancel": "Cealaigh",
+      "confirm": "Díghníomhachtú"
+    },
+    "contacts": {
+      "phone": "Guthán",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Uimhir gutháin teagmhála do do chustaiméirí",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "do_bialann",
+      "instagramHint": "Do ainm úsáideora Instagram (gan @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "Uimhir WhatsApp do cheisteanna ó chustaiméirí",
+      "location": "Suíomh",
+      "locationHint": "Cliceáil ar an mapa nó cuardaigh chun suíomh do bhialann a shocrú",
+      "save": "Sábháil",
+      "fetchError": "Theip ar eolas teagmhála a luchtú",
+      "saveError": "Theip ar eolas teagmhála a shábháil",
+      "saved": "Eolas teagmhála sábháilte"
+    },
+    "design": {
+      "background": "Cúlra",
+      "backgroundHint": "Uaslódáil físeán nó íomhá do chúlra do leathanach baile",
+      "uploadMedia": "Uaslódáil físeán nó íomhá",
+      "removeMedia": "Bain",
+      "accentColor": "Dath Breise",
+      "accentColorHint": "Príomh-dath do bhratacha agus gileanna ar do shuíomh gréasáin",
+      "presetColors": "Dathanna réamhshocraithe",
+      "customColor": "Dath saincheaptha",
+      "save": "Sábháil",
+      "fetchError": "Theip ar shocruithe dearaidh a luchtú",
+      "saveError": "Theip ar shocruithe dearaidh a shábháil",
+      "saved": "Socruithe dearaidh sábháilte",
+      "uploadError": "Theip ar an comhad a uaslódáil",
+      "invalidFileType": "Cineál comhoibrithe neamhbhailí. Ceadaithe: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Tá an comhad ró-mhór. Méid uasta: 50MB do fhíseáin, 5MB do íomhánna"
+    },
+    "general": {
+      "name": "Teideal",
+      "namePlaceholder": "Cuir ainm an bhialann isteach",
+      "nameHint": "Taispeántar ar leathanach baile do shuíomh gréasáin poiblí",
+      "description": "Fo-theideal",
+      "descriptionPlaceholder": "Cur síos ginearálta (rogha)",
+      "descriptionHint": "Taispeántar thíos an teideal ar an leathanach baile",
+      "slug": "URL Slug",
+      "slugPlaceholder": "mo-bialann",
+      "slugHint": "Beidh do shuíomh gréasáin ar fáil ag: iq-rest.com/{slug}",
+      "currency": "Airgeadra",
+      "currencyPlaceholder": "Roghnaigh airgeadra",
+      "save": "Sábháil",
+      "fetchError": "Theip ar shocruithe a luchtú",
+      "saveError": "Theip ar shocruithe a shábháil",
+      "saved": "Socruithe sábháilte",
+      "nameRequired": "Teideal an bhialann riachtanach",
+      "slugRequired": "URL slug riachtanach",
+      "validationErrorTitle": "Le do thoil, ceartigh na laigeanna seo a leanas",
+      "slugChangedTitle": "Seoladh an ghréasáin nuashonraithe",
+      "slugChangedDescription": "Tá do bhialann ar fáil anois ag:",
+      "close": "Dún",
+      "view": "Taispeáin"
+    },
+    "onboarding": {
+      "title": "Fáilte chuig IQ Rest!",
+      "subtitle": "Comhlánaigh na céimeanna seo chun do shuíomh gréasáin bialann a sheoladh",
+      "requiredSteps": "Céimeanna Riachtanacha",
+      "optionalSteps": "Céimeanna Rogha",
+      "viewMenu": "Taispeáin Do Mheán",
+      "steps": {
+        "title": {
+          "name": "Cuir Ainm an Bhialann leis",
+          "description": "Tabhair ainm do bhialann a bheidh le feiceáil ar do shuíomh gréasáin"
+        },
+        "slug": {
+          "name": "Socraigh Seoladh an Ghréasáin",
+          "description": "Roghnaigh URL uathúil do shuíomh gréasáin do bhialann"
+        },
+        "categories": {
+          "name": "Cruthaigh Catagóirí Mheán",
+          "description": "Eagraigh do mheán le catagóirí cosúil le Tús, Príomhchúrsaí, srl."
+        },
+        "items": {
+          "name": "Cuir Míreanna Mheán leis",
+          "description": "Cuir miasa le do mheán le praghsanna agus cur síos"
+        },
+        "design": {
+          "name": "Saincheap Dearthóir",
+          "description": "Roghnaigh dathanna agus cúlra do shuíomh gréasáin"
+        },
+        "contacts": {
+          "name": "Cuir Eolas Teagmhála leis",
+          "description": "Cuir guthán, WhatsApp, Instagram, agus suíomh leis"
+        },
+        "reservations": {
+          "name": "Cuir Réamhchúirteanna ar Fáil",
+          "description": "Lig do chustaiméirí táblaí a chur in áirithe ar líne"
+        },
+        "translations": {
+          "name": "Cuir Teangacha leis",
+          "description": "Déanaigh do mheán ar fáil i dteangacha éagsúla"
+        }
+      },
+      "completed": "Críochnaithe",
+      "notCompleted": "Níl críochnaithe",
+      "allDone": "Gach rud críochnaithe! Tá do mheán beo.",
+      "requiredRemaining": "{count} céimeanna riachtanacha fágtha"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Chun na hiontrálacha a dhéanamh ar fáil do do chuid aíonna, ní mór duit clárú don tseirbhís.",
+    "subscribe": "Cláraigh",
+    "reservationsEnabled": "Cuir Iontróil ar Siúl",
+    "enabled": "Tá na hiontrálacha ar siúl",
+    "disabled": "Tá na hiontrálacha dí-íoctha",
+    "reservationMode": "Mód Deimhnithe",
+    "modeAuto": "Uathoibríoch",
+    "modeManual": "Lámh",
+    "modeAutoDescription": "Déantar na hiontrálacha a dhearbhú go huathoibríoch bunaithe ar infhaighteacht na tábla",
+    "modeManualDescription": "Beidh ort gach hiontráil a dhearbhú go láimhe",
+    "slotDuration": "Tréimhse Iontóra",
+    "minutes": "nóiméad",
+    "workingHours": "Uaireanta Oibre",
+    "save": "Sábháil",
+    "saving": "Ag Sábháil...",
+    "saved": "Socruithe sábháilte",
+    "fetchError": "Theip ar na socruithe a lódáil",
+    "saveError": "Theip ar na socruithe a shábháil"
+  },
+  "terms": {
+    "title": "Téarmaí agus Coinníollacha",
+    "lastUpdated": "Nuashonraithe le déanaí: 17 Nollaig, 2025",
+    "contact": {
+      "title": "Déanaigí Teagmháil Linn",
+      "description": "Má tá aon cheist agat faoi na Téarmaí agus Coinníollacha seo, déan teagmháil linn."
+    },
+    "sections": [
+      {
+        "title": "1. Réamhrá",
+        "content": [
+          "Fáilte chuig IQ Rest. Rialann na Téarmaí agus Coinníollacha seo do úsáid ár suíomh gréasáin agus seirbhísí a oibríonn Bogdan Sokolov (Autónomo), NIE: Z1894474S, atá cláraithe sa Spáinn.",
+          "Trí rochtain a fháil ar IQ Rest nó é a úsáid, aontaíonn tú le bheith faoi réir na Téarmaí seo. Mura aontaíonn tú le haon chuid de na téarmaí seo, ní féidir leat rochtain a fháil ar an tseirbhís."
+        ]
+      },
+      {
+        "title": "2. Cur Síos ar an Seirbhís",
+        "content": [
+          "Tugann IQ Rest ardán digiteach le haghaidh miontaí QR agus cruthú suíomh gréasáin do bhialanna, caiféanna, agus gnóthaí seirbhíse bia. Áirítear ar ár seirbhís bainistíocht miontaí, giniúint cód QR, tacaíocht ilteangach le haistriúcháin atá feistithe le hintleachta saorga, optamú íomhá AI, córais áirithinte tábla, agus anailísíocht.",
+          "Coimeádaimid an ceart chun aon ghné den tseirbhís a mhodhnú, a chur ar fionraí, nó a chur ar ceal ag am ar bith gan fógra roimh ré."
+        ]
+      },
+      {
+        "title": "3. Clárú Cuntais",
+        "content": [
+          "Chun gnéithe áirithe de IQ Rest a úsáid, caithfidh tú cuntas a chlárú ag úsáid seoladh ríomhphoist bailí. Tá tú freagrach as rúndacht do chuntais a choinneáil agus as gach gníomhaíocht a tharlaíonn faoi do chuntas.",
+          "Aontaíonn tú faisnéis chruinn, reatha, agus iomlán a sholáthar le linn clárúcháin agus an fhaisnéis sin a nuashonrú chun í a choinneáil cruinn, reatha, agus iomlán.",
+          "Úsáidimid bailíochtú gan phasfhocal trí chódanna bailíochta ríomhphoist. Tá tú freagrach as slándáil do chuntais ríomhphoist a choinneáil."
+        ]
+      },
+      {
+        "title": "4. Pleananna Suibscríobha agus Íocaíochtaí",
+        "content": [
+          "Tugann IQ Rest pleananna suibscríobha Saor, Bunúsach, agus Pro. Tá an plean Saor ar fáil saor in aisce le gnéithe teoranta. Déantar pleananna íoctha (Bunúsach agus Pro) a íoc ar bhonn míosúil nó bliantúil trí ár bpróiseálaí íocaíochta, Stripe.",
+          "Taispeántar na praghsanna i nEoró. Trí shíniú ar phlean íoctha, ceadaíonn tú dúinn do mhodh íocaíochta a ghearradh ar bhonn athrá go dtí go gcuirfidh tú ar ceal é.",
+          "Is féidir leat do shíniú a uasghrádú, a laghdú, nó a chur ar ceal ag am ar bith trí do dheasc. Tosaíonn cealuithe ag éifeacht ag deireadh na tréimhse billeála reatha. Ní sholáthraítear aon aisíocaíochtaí do thréimhsí billeála páirteach.",
+          "Coimeádaimid an ceart chun ár bpraghsanna a athrú le fógra 30 lá. Beidh athruithe praghsanna i bhfeidhm ar thréimhsí billeála a thosaíonn tar éis an tréimhse fógra."
+        ]
+      },
+      {
+        "title": "5. Gnéithe Feistithe le Hintleachta Saorga",
+        "content": [
+          "Úsáideann IQ Rest intleacht shaorga le haghaidh aistriúcháin miontaí agus optamú íomhá. Cé go dtagaimid ar chruinneas, d'fhéadfadh go mbeadh earráidí i d'aistriúcháin a ghintear le hintleacht shaorga. Tá tú freagrach as athbhreithniú agus a dhearbhú ar gach ábhar a ghintear le hintleacht shaorga sula gcuirtear ar fáil é.",
+          "Déantar optamú íomhá AI a phróiseáil go huathoibríoch ar íomhánna a uaslódáil chun feidhmíocht luchtaithe a fheabhsú. Ní stóráiltear íomhánna bunaidh tar éis próiseála.",
+          "Ní dhéanaimid barántas ar chruinneas, iomláine, nó iontaofacht ábhar a ghintear le hintleacht shaorga. Aithníonn tú go soláthraítear gnéithe AI 'mar atá' agus go n-úsáideann tú iad ar do chostas féin."
+        ]
+      },
+      {
+        "title": "6. Ábhar Úsáideoirí",
+        "content": [
+          "Coimeádaíonn tú úinéireacht ar gach ábhar a uaslódálann tú chuig IQ Rest, lena n-áirítear miontaí, cur síos, íomhánna, agus faisnéis ghnó.",
+          "Trí ábhar a uaslódáil, tugann tú cead do IQ Rest ceadúnas neamh-eisiatach, domhanda, saor ó royaltaí chun do ábhar a úsáid, a thaispeáint, agus a dháileadh go heisiach chun an tseirbhís a sholáthar.",
+          "Tá tú freagrach go hiomlán as an ábhar a uaslódálann tú agus caithfidh tú a chinntiú nach sáraíonn sé aon dlíthe nó cearta tríú páirtí. Áirítear ar ábhar toirmiscthe: ábhar mídhleathach, ábhar cóipchirt gan údarás, faisnéis míchruinn nó chalaois, agus ábhar a sháraíonn rialacháin sláinte agus sábháilteachta."
+        ]
+      },
+      {
+        "title": "7. Úsáid Inbhainte",
+        "content": [
+          "Aontaíonn tú gan IQ Rest a úsáid chun aon chuspóir mídhleathach nó ar bhealach ar bith a d'fhéadfadh dochar, a chur as feidhm, nó a laghdú ar an tseirbhís.",
+          "Áirítear ar ghníomhaíochtaí toirmiscthe: iarracht a dhéanamh rochtain neamhúdaraithe a fháil ar chuntais nó ar chóras eile, an tseirbhís a úsáid chun spam nó malware a dháileadh, scraping nó miondealú sonraí, ag déanamh gníomhartha mar dhaoine eile nó gnóthaí, agus ag dul timpeall teorainneacha úsáide nó bearta slándála."
+        ]
+      },
+      {
+        "title": "8. Maoin Intleachtúil",
+        "content": [
+          "Is é ainm IQ Rest, an lógó, dearadh an tsuímh ghréasáin, agus gach maoin intleachtúil gaolmhar atá ag Bogdan Sokolov agus tá siad cosanta faoi na dlíthe maoine intleachtúla atá i bhfeidhm.",
+          "Ní féidir leat ár maoin intleachtúil a chóipeáil, a mhodhnú, a dháileadh, nó a chruthú ar dhoiciméid dhíorthacha bunaithe ar ár maoin intleachtúil gan cead scríofa soiléir."
+        ]
+      },
+      {
+        "title": "9. Príobháideachas agus Cosaint Sonraí",
+        "content": [
+          "Rialaítear do úsáid ar IQ Rest freisin ag ár gConas Príobháideachta. Cloímid le Rialachán Ginearálta um Chosaint Sonraí (GDPR) agus le dlíthe cosanta sonraí na Spáinne (LOPDGDD).",
+          "Bailímid agus próiseálaimid sonraí pearsanta atá riachtanach chun an tseirbhís a sholáthar, lena n-áirítear seoltaí ríomhphoist, faisnéis ghnó, agus anailísíocht úsáide. Is féidir leat rochtain a iarraidh ar do shonraí pearsanta, a cheartú, nó a scriosadh ag am ar bith."
+        ]
+      },
+      {
+        "title": "10. Teorannú ar Dhliteanas",
+        "content": [
+          "Tugtar IQ Rest 'mar atá' agus 'mar atá ar fáil' gan barántais ar bith, bíodh siad soiléire nó i bhfoirm tuairimí, lena n-áirítear ach ní teoranta do bharántais tuairimí agus oiriúnachta do chuspóir ar leith.",
+          "Go dtí an leibhéal is mó a cheadaítear faoi dhlí, ní bheidh Bogdan Sokolov freagrach as aon dochar indíreach, comhoibritheach, speisialta, comhoibritheach, nó pionóis, lena n-áirítear caillteanas brabúis, sonraí, nó deiseanna gnó.",
+          "Ní bheidh ár dhliteanas iomlán maidir le haon éilimh a eascraíonn as nó atá bainteach leis an tseirbhís níos mó ná an méid a íoc tú dúinn sna dvan (12) mí a chuaigh roimh an éileamh."
+        ]
+      },
+      {
+        "title": "11. Indemnification",
+        "content": [
+          "Aontaíonn tú le hiontráil, a chosaint, agus a choinneáil saor ó dhamáiste Bogdan Sokolov ó aon éilimh, dochar, caillteanas, nó costais a eascraíonn as do úsáid ar an tseirbhís, do ábhar, nó do shárú ar na Téarmaí seo."
+        ]
+      },
+      {
+        "title": "12. Ar fáil na Seirbhíse",
+        "content": [
+          "Déanaimid ár ndícheall chun ardchaighdeán a choinneáil ar ár seirbhís ach ní dhéanaimid barántas ar rochtain leanúnach. D'fhéadfadh go mbeadh an tseirbhís ar fáil go sealadach mar gheall ar chothabháil, nuashonruithe, nó cúinsí lasmuigh dár smacht.",
+          "Ní bheidh muid freagrach as aon chaillteanas nó dochar a eascraíonn as cur isteach ar an tseirbhís nó as amanna neamhghníomhacha."
+        ]
+      },
+      {
+        "title": "13. Críoch",
+        "content": [
+          "Féadfaimid do chuntas a chur ar ceal nó a chur ar fionraí láithreach, gan fógra roimh ré, as gníomhartha a chreidimid a sháraíonn na Téarmaí seo nó atá díobhálach do úsáideoirí eile, dúinn, nó tríú páirtithe.",
+          "Tar éis críochnú, stopann do cheart chun an tseirbhís a úsáid láithreach. Féadfaimid do shonraí a scriosadh laistigh de 30 lá tar éis críochnaithe, ach amháin má tá orainn é a choinneáil de réir dlí."
+        ]
+      },
+      {
+        "title": "14. Athruithe ar na Téarmaí",
+        "content": [
+          "Coimeádaimid an ceart chun na Téarmaí seo a mhodhnú ag am ar bith. Cuirfimid fógra ort faoi athruithe suntasacha trí ríomhphost nó trí na seirbhís.",
+          "Is é do úsáid leanúnach ar IQ Rest tar éis do na hathruithe a bheith i bhfeidhm aontú le na Téarmaí athraithe."
+        ]
+      },
+      {
+        "title": "15. Dlí agus Conradh",
+        "content": [
+          "Rialaítear na Téarmaí seo ag dlíthe na Spáinne agus an Aontais Eorpaigh. Beidh aon choimhlint a eascraíonn as na Téarmaí seo nó do úsáid ar IQ Rest faoi réir dlínse eisiach na gcúirteanna sa Spáinn.",
+          "Mura bhfaightear aon shocrú de na Téarmaí seo a bheith neamh-infheidhmithe, leanfaidh na socrú atá fágtha ar aghaidh go hiomlán."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Polasaí Príobháideachais",
+    "lastUpdated": "Nuashonraithe ar: 17 Nollaig, 2025",
+    "contact": {
+      "title": "Déanaigí Conradh Linn",
+      "description": "Má tá aon cheist agat faoi seo Polasaí Príobháideachais nó más mian leat do chearta cosanta sonraí a fheidhmiú, déan teagmháil linn le do thoil.",
+      "controller": "Rialtóir Sonraí"
+    },
+    "sections": [
+      {
+        "title": "1. Réamhrá",
+        "content": [
+          "Míníonn an Polasaí Príobháideachais seo conas a bhailíonn, a úsáideann, a stórálann agus a chosnaíonn IQ Rest, a rithtear ag Bogdan Sokolov (Autónomo), NIE: Z1894474S, atá cláraithe sa Spáinn, do shonraí pearsanta nuair a úsáideann tú ár n-ardán QR menu.",
+          "Táimid tiomanta do chosaint do phríobháideachta agus do chomhoibriú leis an gConradh Ginearálta um Chosaint Sonraí (GDPR), le Conradh Orgánach na Spáinne ar Chosaint Sonraí (LOPDGDD), agus le dlíthe cosanta sonraí eile atá i bhfeidhm."
+        ]
+      },
+      {
+        "title": "2. Rialtóir Sonraí",
+        "content": [
+          "Is é an rialtóir sonraí atá freagrach as do shonraí pearsanta: Bogdan Sokolov (Autónomo), NIE: Z1894474S, atá cláraithe sa Spáinn. Maidir le haon cheisteanna cosanta sonraí, déan teagmháil linn ag support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Sonraí Pearsanta a Bhailímid",
+        "content": [
+          "Eolas Cuntais: Nuair a chláraíonn tú, bailímid do sheoladh ríomhphoist le haghaidh fíoraithe agus cumarsáide. Úsáidimid fíorú gan phasfhocal, mar sin ní stórálann muid pasfhocail.",
+          "Eolas Gnó: Ainm an bhialainne, cur síos, URL slug, sonraí teagmhála (guthán, WhatsApp, Instagram), sonraí suíomh, agus uaireanta oibre a sholáthraíonn tú do do shuíomh gréasáin poiblí menu.",
+          "Ábhar Menu: Catagóirí, míreanna menu, cur síos, praghsanna, agus íomhánna a uaslódáil tú chun do mhuirear digiteach a chruthú.",
+          "Sonraí Úsáide: Eolas faoi conas a úsáideann tú ár seirbhís, lena n-áirítear radharcanna leathanach, úsáid gné, agus patrúin idirghníomhaíochta a bhailítear trí anailís.",
+          "Eolas Íocaíochta: Nuair a shíneoidh tú do phleananna íoctha, déantar próiseáil íocaíochta ag Stripe. Ní stórálann muid do chuid sonraí cárta creidmheasa iomlána; déantar próiseáil agus cosaint ar an eolas seo ag Stripe.",
+          "Sonraí Teicniúla: Seoltaí IP, cineál brabhsálaí, eolas ar ghléas, agus fianáin mar atá curtha in iúl inár bPolasaí Fianán."
+        ]
+      },
+      {
+        "title": "4. Conas a Úsáidimid Do Shonraí",
+        "content": [
+          "Úsáidimid do shonraí pearsanta do na críocha seo a leanas: Chun ár seirbhís QR menu a sholáthar agus a chothabháil, lena n-áirítear do shuíomh gréasáin bialainne a chruthú agus cód QR a ghiniúint. Chun do chuntas a fhíorú ag baint úsáide as cód fíoraithe ríomhphoist. Chun íocaíochtaí a phróiseáil agus do shíniú a bhainistiú trí Stripe. Chun cumarsáid a dhéanamh leat faoi do chuntas, nuashonruithe seirbhíse, agus iarratais tacaíochta. Chun gnéithe a sholáthar atá á gcumhachtú ag AI mar aistriúcháin menu agus optamú íomhá. Chun úsáid seirbhíse a anailísiú agus ár n-ardán a fheabhsú. Chun comhoibriú le dualgais dhlíthiúla agus chun ár suimeanna dlisteanacha a chosaint."
+        ]
+      },
+      {
+        "title": "5. Bunús Dlíthiúil le haghaidh Próiseála",
+        "content": [
+          "Feidhmiú Conartha: Próiseáil atá riachtanach chun ár seirbhís a sholáthar duit (Airteagal 6(1)(b) GDPR).",
+          "Suimeanna Dlíthiúla: Anailís agus feabhsú seirbhíse, cosc ar dhrochúsáid (Airteagal 6(1)(f) GDPR).",
+          "Toiliú: Maidir le gnéithe roghnach mar chumarsáid margaíochta (Airteagal 6(1)(a) GDPR).",
+          "Dualgais Dlíthiúla: Nuair a éilítear é de réir an dlí nó na n-iarratas rialála (Airteagal 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Stóráil Sonraí agus Slándáil",
+        "content": [
+          "Tá do shonraí stóráilte ar sheirbhísí slán a sholáthraíonn Amazon Web Services (AWS). Tá ár mbunachar sonraí óstáilte i réigiún AWS Stockholm (eu-north-1) laistigh den Aontas Eorpach, ag cinntiú comhoiriúnachta le riachtanais cosanta sonraí AE.",
+          "Tá íomhánna agus comhoibrithe a uaslódáil tú stóráilte ar sheirbhísí AWS S3 atá suite i réigiún AE. Tá sonraí criptithe le linn aistrithe ag baint úsáide as TLS/SSL agus ag fanacht le AES-256 criptithe.",
+          "Cuireann muid bearta teicniúla agus eagraíochta cuí i bhfeidhm chun do shonraí a chosaint i gcoinne rochtain, athrú, nochtadh, nó scriosadh neamhúdaraithe. Áirítear leis seo fíorú slán, rialuithe rochtana, iniúchtaí slándála rialta, agus oiliúint do fhostaithe."
+        ]
+      },
+      {
+        "title": "7. Comhoibriú Sonraí agus Tríú Páirtithe",
+        "content": [
+          "Roinnimid do shonraí le na catagóirí seo a leanas de thríú páirtithe:",
+          "Stripe (Próiseálaí Íocaíochta): Próiseálann íocaíochtaí síntiús. Tá Stripe deimhnithe faoi Chreatlaí Príobháideachta Sonraí AE-NA. A bpolasaí príobháideachta: https://stripe.com/privacy",
+          "Amazon Web Services (Infreastruchtúr): Óstálann ár seirbhísí agus bunachair sonraí i réigiún AE. Comhoibríonn AWS le GDPR agus tá deimhnithe faoi Chreatlaí Príobháideachta Sonraí AE-NA.",
+          "Soláthraithe Seirbhísí AI: Úsáidimid seirbhísí AI le haghaidh aistriúcháin menu agus optamú íomhá. Déantar sonraí a phróiseáil de réir a bpolasaithe príobháideachta agus comhoibriúnachtaí próiseála sonraí.",
+          "Google Analytics: Le haghaidh anailís gréasáin anaithnid (más gníomhachtaithe). Is féidir leat éirí as trí roghanna fianán.",
+          "Ní dhíolaimid do shonraí pearsanta le tríú páirtithe. D'fhéadfaimid sonraí a nochtadh más éilítear é de réir an dlí nó chun ár gcearta dlíthiúla a chosaint."
+        ]
+      },
+      {
+        "title": "8. Aistriú Sonraí Idirnáisiúnta",
+        "content": [
+          "Tá do shonraí stóráilte agus próiseáilte go príomha laistigh den Aontas Eorpach (réigiún AWS Stockholm, eu-north-1). Nuair a aistrítear sonraí lasmuigh den AE (mar shampla, chuig soláthraithe seirbhíse atá bunaithe sna Stáit Aontaithe), cinntímid go bhfuil cosaintí cuí i bhfeidhm, lena n-áirítear Conradh Chaighdeánach (SCCs) agus deimhniú faoi chreatlaí cosanta sonraí aitheanta."
+        ]
+      },
+      {
+        "title": "9. Coinneáil Sonraí",
+        "content": [
+          "Sonraí Cuntais: Coinneáil ar feadh go bhfuil do chuntas gníomhach. Tar éis do chuntas a scriosadh, baintear sonraí pearsanta laistigh de 30 lá, seachas nuair a éilítear coinneáil de réir an dlí.",
+          "Ábhar Menu: Coinneáil ar feadh go bhfuil do chuntas gníomhach. Scriosadh tar éis críochnaigh do chuntais.",
+          "Taifid Íocaíochta: Coinneáil ar feadh 7 mbliana de réir dlí cánach na Spáinne.",
+          "Sonraí Anailíse: D'fhéadfadh sonraí comhoibrithe agus anaithnid a bheith coinnithe go deo le haghaidh feabhsú seirbhíse.",
+          "Sonraí Cúlchiste: D'fhéadfadh a bheith coinnithe i gcúlchistí criptithe ar feadh suas le 90 lá tar éis scriosadh le haghaidh cruthú na tubaiste."
+        ]
+      },
+      {
+        "title": "10. Do Chearta Faoi GDPR",
+        "content": [
+          "Faoi GDPR, tá na cearta seo a leanas agat maidir le do shonraí pearsanta:",
+          "Ceart Rochtana: Iarr cóip de do shonraí pearsanta atá againn.",
+          "Ceart le haghaidh Leasú: Iarr ceartú ar shonraí míchearta nó neamhiomlána.",
+          "Ceart le haghaidh Scriosadh: Iarr scriosadh do shonraí pearsanta ('ceart a bheith dearmadta').",
+          "Ceart le haghaidh Teorannú: Iarr teorannú ar phróiseáil i gcásanna áirithe.",
+          "Ceart le haghaidh Innéacs Sonraí: Faigh do shonraí i bhformáid struchtúraithe, inléite ag meaisín.",
+          "Ceart le haghaidh Freagairt: Freagair ar phróiseáil atá bunaithe ar suimeanna dlisteanacha nó le haghaidh margaíochta díreach.",
+          "Ceart le haghaidh Toiliú a Tharraingt Siar: Nuair a bhíonn próiseáil bunaithe ar toiliú, is féidir leat é a tharraingt siar ag am ar bith.",
+          "Chun na cearta seo a fheidhmiú, déan teagmháil linn ag support@iq-rest.com. Freagróimid laistigh de 30 lá. Má tá tú míshásta lenár freagra, tá an ceart agat gearán a chur isteach le gníomhaireacht cosanta sonraí na Spáinne (AEPD) ag www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Príobháideachas Leanaí",
+        "content": [
+          "Níl IQ Rest beartaithe le húsáid ag daoine faoi 16 bliana d'aois. Ní bhailímid go fonnmhar sonraí pearsanta ó leanaí. Má fhaighimid amach go bhfuil sonraí bailithe againn ó leanbh, scriosfaimid é go gasta."
+        ]
+      },
+      {
+        "title": "12. Athruithe ar an bPolasaí seo",
+        "content": [
+          "D'fhéadfadh muid an Polasaí Príobháideachais seo a nuashonrú ó am go ham. Cuirfimid in iúl duit faoi athruithe tábhachtacha trí ríomhphost nó trí fhógra ar ár suíomh gréasáin. Taispeánann an dáta 'Nuashonraithe' ag an mbarr cathain a cuireadh an polasaí in athbhreithniú.",
+          "Is é do úsáid leanúnach ar IQ Rest tar éis na n-athruithe a phostáil a chiallaíonn glacadh leis an bpolasaí athbhreithnithe."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Polasaí Cnaipí",
+    "lastUpdated": "Nuashonraithe ar: 17 Nollaig, 2025",
+    "yes": "Tá",
+    "no": "Níl",
+    "cookieTableTitle": "Cnaipí a Úsáidimid",
+    "tableHeaders": {
+      "name": "Ainm an Chnaip",
+      "purpose": "Cuspóir",
+      "duration": "Tréimhse",
+      "required": "Teastaíonn"
+    },
+    "contact": {
+      "title": "Ceisteanna Maidir le Cnaipí",
+      "description": "Má tá ceisteanna agat faoi úsáid cnaipí againn, déan teagmháil linn le do thoil."
+    },
+    "sections": [
+      {
+        "title": "1. Cad iad na Cnaipí",
+        "content": [
+          "Is comhoibrithe beaga téacs iad cnaipí a stóráiltear ar do ghléas (ríomhaire, táibléad, nó guthán póca) nuair a thugann tú cuairt ar shuíomh gréasáin. Cuireann siad ar chumas suíomhanna gréasáin feidhmiú go ceart, cuimhneamh ar do roghanna, agus soláthar eolais do na húinéirí suíomhanna gréasáin.",
+          "Míníonn an Polasaí Cnaipí seo conas a úsáideann IQ Rest, a reáchtáiltear ag Bogdan Sokolov (Autónomo), cnaipí agus teicneolaíochtaí comhchosúla ar ár suíomh gréasáin iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Conas a Úsáideann muid Cnaipí",
+        "content": [
+          "Úsáideann muid cnaipí ar roinnt cúiseanna: chun a chinntiú go feidhmíonn ár suíomh gréasáin go ceart, chun cuimhneamh ar do roghanna agus socruithe, chun do chuntas a fhíorú agus tú a choinneáil logáilte isteach, chun anailís a dhéanamh ar conas a úsáideann cuairteoirí ár suíomh gréasáin ionas gur féidir linn é a fheabhsú, agus chun cuimhneamh ar do roghanna comhoiriúnachta cnaipí."
+        ]
+      },
+      {
+        "title": "3. Cineálacha Cnaipí a Úsáidimid",
+        "content": [
+          "Cnaipí Riachtanacha: Tá na cnaipí seo riachtanach chun go bhfeidhmeoidh an suíomh gréasáin agus ní féidir iad a mhúchadh. Socraítear iad de ghnáth mar fhreagairt ar gníomhartha a dhéanann tú, mar shampla logáil isteach nó socruithe príobháideachta a shocrú.",
+          "Cnaipí Feidhmiúla: Cuireann na cnaipí seo ar chumas feidhmiúlacht agus pearsantú feabhsaithe, mar shampla cuimhneamh ar do rogha teanga agus socruithe téama.",
+          "Cnaipí Anailíse: Cuireann na cnaipí seo ar ár gcumas tuiscint a fháil ar conas a idirghníomhaíonn cuairteoirí lenár suíomh gréasáin trí eolas a bhailiú agus a thuairisciú go hanonama. Úsáideann muid an t-eolas seo chun ár seirbhís a fheabhsú.",
+          "Cnaipí Tríú Páirtí: Cuireann roinnt cnaipí a sholáthraíonn seirbhísí tríú páirtí a léirítear ar ár leathanach, mar shampla próiseálaithe íocaíochta (Stripe) agus soláthraithe anailíse (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Do Roghanna Cnaipí",
+        "content": [
+          "Nuair a thugann tú cuairt ar ár suíomh gréasáin den chéad uair, feicfidh tú banna comhoiriúnachta cnaipí a ligeann duit cnaipí neamh-riachtanacha a ghlacadh nó a dhiúltú. Is féidir leat do roghanna a athrú ag am ar bith.",
+          "Is féidir leat freisin cnaipí a rialú trí shocruithe do bhrabhsálaí. Ceadaíonn an chuid is mó de na brabhsálaithe duit cnaipí a dhiúltú, cnaipí atá ann cheana a scriosadh, nó a bheith ar an eolas nuair a bhíonn cnaipí á seoladh. Tabhair faoi deara go bhféadfadh blocáil cnaipí riachtanacha tionchar a imirt ar fheidhmiúlacht ár suíomh gréasáin.",
+          "Chun dul as rianú Google Analytics, is féidir leat breiseán brabhsála Google Analytics Opt-out a shuiteáil."
+        ]
+      },
+      {
+        "title": "5. Tréimhse Cnaipí",
+        "content": [
+          "Cnaipí Seisiúin: Is cnaipí sealadacha iad seo agus scriostar iad nuair a dhúnann tú do bhrabhsálaí.",
+          "Cnaipí Seasta: Fanann na cnaipí seo ar do ghléas ar feadh tréimhse shocraithe nó go dtí go scriosfaidh tú iad. Cuireann siad ar ár gcumas tú a aithint nuair a fhilleann tú ar ár suíomh gréasáin."
+        ]
+      },
+      {
+        "title": "6. Cnaipí Tríú Páirtí",
+        "content": [
+          "Stripe: Úsáidtear é le haghaidh próiseáil íocaíochta shlán. D'fhéadfadh Stripe cnaipí a shocrú chun calaois a chosc agus íocaíochtaí a phróiseáil go slán. Tuilleadh eolais ag stripe.com/cookies-policy",
+          "Google Analytics: Úsáidtear é chun staitisticí anaonama a bhailiú faoi úsáid an láithreáin ghréasáin. Is féidir leat dul as ag baint úsáide as an mbanna cnaipí nó socruithe do bhrabhsálaí. Tuilleadh eolais ag policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Nuashonruithe ar an bPolasaí seo",
+        "content": [
+          "D'fhéadfadh muid an Polasaí Cnaipí seo a nuashonrú ó am go ham chun athruithe a léiriú ar ár gcleachtais nó ar chúiseanna oibríochta, dlíthiúla, nó rialála. Taispeánann an dáta 'Nuashonraithe ar' ag an mbarr cathain a cuireadh an polasaí in athbhreithniú."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Coimeádann do sheisiún logála isteach agus staid fhíoraithe",
+        "duration": "Seisiún / 30 lá",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Cuireann sé ar a cuimhneamh do theanga is fearr leat (Béarla/Spáinnis)",
+        "duration": "1 bhliain",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Stóráiltear do rogha téama (mód éadrom/dorcha)",
+        "duration": "1 bhliain",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Cuireann sé ar a cuimhneamh do roghanna comhoiriúnachta cnaipí",
+        "duration": "1 bhliain",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - rianaíonn staitisticí anaonama",
+        "duration": "2 bhliain / 24 uair an chloig",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - cosc ar chalaois agus slándáil íocaíochta",
+        "duration": "1 bhliain / Seisiún",
+        "required": false
+      }
+    ]
+  }
+}

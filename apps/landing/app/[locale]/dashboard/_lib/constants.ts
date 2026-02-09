@@ -25,6 +25,10 @@ export const LANGUAGE_NAMES: Record<string, string> = {
   et: "Eesti",
   lv: "Latviešu",
   lt: "Lietuvių",
+  sr: "Српски",
+  ca: "Català",
+  ga: "Gaeilge",
+  is: "Íslenska",
   zh: "中文",
   ja: "日本語",
   ko: "한국어",
@@ -40,6 +44,7 @@ export const EUROPEAN_LANGUAGES = [
   "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
   "sv", "da", "no", "fi", "cs", "el", "tr", "ro",
   "hu", "bg", "hr", "sk", "sl", "et", "lv", "lt",
+  "sr", "ca", "ga", "is",
 ];
 
 export const AVAILABLE_LANGUAGES = TOP_LANGUAGES.map((code) => ({

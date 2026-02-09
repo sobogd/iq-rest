@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menu",
+      "pricing": "Ceny",
+      "features": "Funkcie",
+      "faq": "Otázky",
+      "changelog": "Záznam zmien",
+      "contacts": "Kontakty"
+    },
+    "getStarted": "Prihlásiť sa",
+    "selectLanguage": "Vyberte jazyk",
+    "selectLanguageDescription": "Vyberte si preferovaný jazyk pre webovú stránku.",
+    "searchLanguage": "Hľadať jazyk...",
+    "noLanguagesFound": "Nenašli sa žiadne jazyky"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Menu a Webstránka pre Reštauráciu za 5 Minút",
+      "subtitle": "Jednoducho zadajte svoj e-mail a získajte kompletnú webstránku reštaurácie s QR menom, kontaktnou stránkou, viacjazyčnou podporou a moderným dizajnom. Nastavte všetko z vášho telefónu.",
+      "cta": {
+        "create": "Vytvoriť Menu",
+        "view": "Zobraziť Skutočné Menu"
+      },
+      "benefits": [
+        {
+          "title": "Moderná webstránka",
+          "description": "Profesionálny dizajn, ktorý vyzerá skvele na akomkoľvek zariadení"
+        },
+        {
+          "title": "Rezervácie",
+          "description": "Prijímajte rezervácie stolov priamo z vašej webstránky"
+        },
+        {
+          "title": "AI preklady",
+          "description": "Automatický preklad menu do akéhokoľvek jazyka"
+        },
+        {
+          "title": "Denná analytika",
+          "description": "Sledujte návštevy a obľúbené jedlá každý deň"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Dôveryhodné 500+ reštauráciami po celom svete",
+      "title": "Všetko, čo Vaša Reštaurácia Potrebuje Online",
+      "description": "Zaregistrujte sa len so svojím e-mailom a okamžite získajte: profesionálnu webstránku reštaurácie, QR menu v modernom formáte, funkčnú kontaktnú stránku s mapou, viacjazyčnú podporu s AI prekladom, video alebo fotografické pozadie a vlastnú farebnú schému. Všetko spravovateľné z vášho telefónu - bez potreby počítača."
+    },
+    "whyUs": {
+      "title": "Od Nuly k Online Menu za 5 Minút",
+      "subtitle": "Len 4 jednoduché kroky, ako dostať vašu reštauráciu online",
+      "items": [
+        {
+          "step": "1",
+          "title": "Zadajte Svoj E-mail",
+          "description": "Rýchla registrácia len s vašou e-mailovou adresou. Bez potreby kreditnej karty."
+        },
+        {
+          "step": "2",
+          "title": "Vyplňte Informácie o Reštaurácii",
+          "description": "Pridajte názov vašej reštaurácie, adresu, kontakty a otváracie hodiny."
+        },
+        {
+          "step": "3",
+          "title": "Pridajte Položky Menu",
+          "description": "Vytvorte kategórie a pridajte svoje jedlá s fotografiami a cenami."
+        },
+        {
+          "step": "4",
+          "title": "Užite si Svoje Menu",
+          "description": "Vaše QR menu je pripravené! Zdieľajte ho so zákazníkmi a sledujte analytiku."
+        }
+      ],
+      "cta": "Pripravení modernizovať vašu reštauráciu?"
+    },
+    "featuresPreview": {
+      "title": "Silné Funkcie pre Vašu Reštauráciu",
+      "subtitle": "Všetko, čo potrebujete na vytvorenie profesionálnej online prítomnosti",
+      "viewAll": "Zobraziť Všetky Funkcie"
+    }
+  },
+  "features": {
+    "title": "Silné funkcie pre váš QR menu a webovú stránku reštaurácie",
+    "subtitle": "Všetko, čo potrebujete na vytvorenie profesionálnej digitálnej prítomnosti pre vašu reštauráciu alebo kaviareň",
+    "backToFeatures": "Späť na funkcie",
+    "getStarted": "Vytvoriť menu",
+    "viewPricing": "Zobraziť ceny",
+    "readyTitle": "Ste pripravení začať?",
+    "readyDescription": "Vytvorte si profesionálne QR menu a webovú stránku reštaurácie za pár minút. Všetky funkcie sú zahrnuté.",
+    "keyBenefits": "Hlavné výhody",
+    "faqTitle": "Často kladené otázky",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Čo potrebujem na začiatok?",
+          "a": "Len svoju e-mailovú adresu. Žiadna kreditná karta, žiadne zložité formuláre."
+        },
+        {
+          "q": "Ako dlho trvá nastavenie?",
+          "a": "Vaša webová stránka je pripravená okamžite. Pridajte svoje položky menu a ste online za 5 minút."
+        },
+        {
+          "q": "Existuje bezplatný plán?",
+          "a": "Áno, začnite zadarmo so všetkými základnými funkciami."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Musím nainštalovať aplikáciu?",
+          "a": "Aplikácia nie je potrebná - všetko funguje v prehliadači vášho telefónu."
+        },
+        {
+          "q": "Môžem nahrávať fotografie z môjho telefónu?",
+          "a": "Áno, urobte fotografie svojím fotoaparátom a nahrajte ich priamo do svojho menu."
+        },
+        {
+          "q": "Funguje to na tabletoch?",
+          "a": "Áno, ovládací panel je optimalizovaný pre telefóny, tablety a stolné počítače."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Ako presný je preklad AI?",
+          "a": "Naša AI rozumie kulinárskemu kontextu, zachováva názvy jedál a prekladá popisy prirodzene."
+        },
+        {
+          "q": "Ako rýchly je preklad?",
+          "a": "Celé menu je preložené za sekundy, nie hodiny."
+        },
+        {
+          "q": "Môžem upravovať preklady AI?",
+          "a": "Áno, všetky preklady sú editovateľné - skontrolujte a upravte podľa potreby."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Koľko jazykov je podporovaných?",
+          "a": "25+ jazykov vrátane všetkých hlavných európskych jazykov, čínštiny, japončiny, kórejčiny, arabčiny a hebrejčiny."
+        },
+        {
+          "q": "Ako môžu zákazníci prepínať jazyky?",
+          "a": "Na vašom menu sa objaví výber jazyka - jedno ťuknutie na prepnutie do akéhokoľvek dostupného jazyka."
+        },
+        {
+          "q": "Je preklad automatický?",
+          "a": "Môžete použiť preklad AI alebo manuálne zadať preklady pre každý jazyk."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Aké formáty obrázkov sú podporované?",
+          "a": "Nahrajte JPG, PNG alebo WebP - obrázky sú automaticky optimalizované."
+        },
+        {
+          "q": "Znižuje optimalizácia kvalitu?",
+          "a": "Nie, naša AI udržuje vizuálnu kvalitu pri znižovaní veľkosti súboru pre rýchle načítanie."
+        },
+        {
+          "q": "Existuje limit veľkosti súboru?",
+          "a": "Nahrajte obrázky až do 10MB - budú automaticky optimalizované."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Ako pridám nové jedlo?",
+          "a": "Ťuknite na 'Pridať položku', zadajte názov, popis, cenu a voliteľne nahrajte fotografiu. To je všetko!"
+        },
+        {
+          "q": "Môžem preusporiadať položky menu?",
+          "a": "Áno, jednoducho presuňte a pustite položky alebo kategórie, aby ste ich preusporiadali."
+        },
+        {
+          "q": "Čo ak je jedlo vypredané?",
+          "a": "Dočasne vypnite položku - zmizne z menu, ale nebude vymazaná."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Aké metriky môžem sledovať?",
+          "a": "Denné zobrazenia, výkon stránok, jazykové preferencie a trendy v priebehu času."
+        },
+        {
+          "q": "Ako často sa údaje aktualizujú?",
+          "a": "Analytika sa aktualizuje v reálnom čase - sledujte návštevníkov dnes, ako sa to deje."
+        },
+        {
+          "q": "Môžem exportovať analytické údaje?",
+          "a": "Zobraziť podrobné správy priamo vo vašom ovládacom paneli."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Ako si zákazníci robia rezervácie?",
+          "a": "Zákazníci si môžu rezervovať priamo z webovej stránky vašej reštaurácie. Vyberú dátum, čas a počet hostí, potom dostanú e-mailovú potvrdenku."
+        },
+        {
+          "q": "Môžem ručne schváliť rezervácie?",
+          "a": "Áno, môžete si vybrať medzi automatickým potvrdením alebo manuálnym schválením pre každú rezerváciu."
+        },
+        {
+          "q": "Budem informovaný o nových rezerváciách?",
+          "a": "Áno, dostávate e-mailové upozornenia na každú novú rezerváciu."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Aké video formáty sú podporované?",
+          "a": "Podporované sú formáty MP4 a WebM. Videá sú automaticky optimalizované pre rýchle načítanie."
+        },
+        {
+          "q": "Môžem použiť svoje vlastné fotografie?",
+          "a": "Áno, nahrajte akúkoľvek fotografiu a bude automaticky optimalizovaná pre webové zobrazenie."
+        },
+        {
+          "q": "Zpomaluje video menu?",
+          "a": "Nie, videá sú komprimované a načítané len v prípade potreby, aby sa zabezpečil rýchly výkon stránky."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Koľko farieb si môžem vybrať?",
+          "a": "Vyberte si z 12 prednastavených farieb alebo zadajte svoju presnú farbu značky pomocou hex kódu."
+        },
+        {
+          "q": "Podporuje to tmavý režim?",
+          "a": "Áno, vaša farebná schéma sa automaticky prispôsobuje svetlým a tmavým témam."
+        },
+        {
+          "q": "Môžem meniť farby kedykoľvek?",
+          "a": "Áno, okamžite zmeňte svoju akcentovú farbu z ovládacieho panela - aktualizácie sa objavia okamžite."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Ako sa môžem skontaktovať s podporou?",
+          "a": "Použite kontaktný formulár alebo nám napíšte priamo - odpovedajú skutoční ľudia, nie roboty."
+        },
+        {
+          "q": "Aká je doba odpovede?",
+          "a": "Zvyčajne odpovedáme do niekoľkých hodín počas pracovných dní."
+        },
+        {
+          "q": "Je podpora dostupná pre bezplatné plány?",
+          "a": "Áno, osobná podpora je dostupná pre všetky plány vrátane bezplatného."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Okamžité nastavenie QR menu a webovej stránky",
+        "shortDescription": "Vytvorte webovú stránku svojej reštaurácie a QR menu len s e-mailom - pripravené za 5 minút",
+        "description": "Začnite za sekundy s najjednoduchším registračným procesom. Stačí zadať svoj e-mail a okamžite získate kompletnú webovú stránku reštaurácie s QR menu, kontaktnou stránkou s mapou a moderným dizajnom. Žiadne technické zručnosti nie sú potrebné, žiadne zložité formuláre - vaša reštaurácia ide online okamžite.",
+        "fullDescription": "Tradičné tvorcovia webových stránok vyžadujú hodiny nastavenia, technické znalosti a často aj vývojára. IQ Rest mení všetko. Zadajte svoj e-mail, overte jednoduchým kódom a vaša webová stránka reštaurácie je pripravená. Pridajte svoje jedlá, nahrajte fotografie a zdieľajte svoj QR kód so zákazníkmi. Celý proces trvá menej ako 5 minút.",
+        "benefits": [
+          "Na začiatok je potrebný len e-mail - žiadna zložitá registrácia",
+          "Webová stránka reštaurácie je pripravená okamžite po registrácii",
+          "QR menu je automaticky generované a prepojené",
+          "Kontaktná stránka s mapou je zahrnutá predvolene",
+          "Žiadne technické zručnosti alebo znalosti kódovania nie sú potrebné"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Proces okamžitého nastavenia webovej stránky reštaurácie a QR menu",
+        "cta": "Zistiť viac"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% mobilne priateľské riadenie",
+        "shortDescription": "Nemáte počítač? Žiadny problém. Spravujte celú webovú stránku reštaurácie zo svojho telefónu. Pridávajte jedlá, keď stojíte v kuchyni, aktualizujte ceny počas služby, nahrávajte fotografie priamo zo svojho fotoaparátu. Každá funkcia funguje perfektne na mobile - pretože majitelia reštaurácií nikdy nesedia za stolom.",
+        "description": "Pridávajte kategórie, jedlá, fotografie a spravujte celú webovú stránku reštaurácie priamo zo svojho telefónu. Náš ovládací panel je plne optimalizovaný pre mobilné zariadenia, takže môžete aktualizovať svoje menu počas prestávky na kávu alebo pridať denné špeciály na cestách.",
+        "fullDescription": "Majitelia reštaurácií sú zaneprázdnení ľudia, ktorí nie sú vždy pri počítači. Preto sme vytvorili IQ Rest, aby fungoval perfektne na mobilných zariadeniach. Každá funkcia, od pridávania nových jedál po aktualizáciu cien, je navrhnutá pre dotykové obrazovky. Urobte fotografiu nového jedla a okamžite ju nahrajte. Zmeňte dnešnú špecialitu, keď stojíte v kuchyni.",
+        "benefits": [
+          "Plný prístup k ovládaciemu panelu na akomkoľvek smartfóne alebo tablete",
+          "Nahrajte fotografie priamo z fotoaparátu svojho telefónu",
+          "Aktualizujte ceny a popisy na cestách",
+          "Spravujte kategórie s dotykovo priateľským rozhraním",
+          "Žiadny počítač nie je potrebný - nikdy"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Správa menu reštaurácie na smartfóne",
+        "cta": "Zobraziť mobilný ovládací panel"
+      },
+      {
+        "id": "ai-translation",
+        "title": "Preklad menu poháňaný AI",
+        "shortDescription": "Prestante strácať medzinárodných zákazníkov kvôli jazykovým bariéram. Naša AI prekladá celé vaše menu do 25+ jazykov za sekundy - nie generický preklad, ale AI, ktorá rozumie kulinárskym termínom. 'Beef Wellington' zostáva 'Beef Wellington', zatiaľ čo popisy znejú prirodzene v každom jazyku.",
+        "description": "Osvojte si medzinárodných zákazníkov s inteligentným prekladom AI, ktorý rozumie kontextu jedla. Názvy vašich jedál a popisy sú presne preložené, pričom sa zachovávajú kulinárske termíny a dávajú zmysel v akomkoľvek jazyku.",
+        "fullDescription": "Generickí prekladatelia často zlyhávajú pri jedálnych lístkoch - prekladajú doslovne bez pochopenia kontextu. Naša AI je špeciálne vyškolená na obsah reštaurácií. Vie, že 'Beef Wellington' by sa nemal prekladať doslovne, a že 'al dente' znamená to isté v akomkoľvek jazyku. Obslúžte turistov a medzinárodných hostí s jedálnymi lístkami, ktoré znejú prirodzene v ich jazyku.",
+        "benefits": [
+          "Preklad s ohľadom na kontext pre jedlo a kulinárske termíny",
+          "10+ jazykov vrátane španielčiny, francúzštiny, nemčiny, čínštiny, japončiny",
+          "Zachováva kulinársku terminológiu a kultúrne nuansy",
+          "Okamžitý preklad - menu dostupné za sekundy",
+          "Zvyšuje predaj o 23% s medzinárodnými zákazníkmi"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "Rozhranie prekladu menu poháňané AI",
+        "cta": "Objavte preklad AI"
+      },
+      {
+        "id": "multilingual",
+        "title": "Viacjazyčná webová stránka reštaurácie",
+        "shortDescription": "Privítajte turistov a medzinárodných hostí v ich rodnom jazyku. Podpora pre 25+ jazykov znamená, že sa každý zákazník cíti ako doma. Jedno ťuknutie na prepnutie jazykov - menu, ceny, popisy sa okamžite prispôsobia. Perfektné pre reštaurácie v turistických oblastiach alebo medzinárodných mestách.",
+        "description": "Vaša webová stránka reštaurácie automaticky podporuje viacero jazykov. Zákazníci môžu prepínať jazyky jedným ťuknutím a celý obsah vrátane menu, kontaktných informácií a navigácie sa okamžite prispôsobí.",
+        "fullDescription": "V turistických oblastiach a medzinárodných mestách je nevyhnutné hovoriť jazykom svojich zákazníkov. IQ Rest robí vašu reštauráciu prístupnou pre každého. Zákazníci vidia výber jazyka a môžu prehliadať celú vašu webovú stránku - menu, kontakty, rezervácie - v preferovanom jazyku. V kombinácii s prekladom AI môžete obslúžiť svet.",
+        "benefits": [
+          "Jedno ťuknutie na prepínanie jazykov pre zákazníkov",
+          "Menu, kontakty a všetky stránky preložené",
+          "Jazyková preferencia si pamätá pre návraty",
+          "Perfektné pre turistické oblasti a medzinárodné mestá",
+          "Funguje bezproblémovo s funkciou prekladu AI"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Výber jazyka na viacjazyčnej webovej stránke reštaurácie",
+        "cta": "Zobraziť viacjazyčné funkcie"
+      },
+      {
+        "id": "ai-images",
+        "title": "Optimalizácia obrázkov AI",
+        "shortDescription": "Automatické vylepšenie obrázkov pre rýchlejšie načítanie a lepšiu kvalitu",
+        "description": "Nahrajte akúkoľvek fotografiu a naša AI ju automaticky optimalizuje pre webové zobrazenie. Obrázky sa rýchlo načítajú na akomkoľvek pripojení a zachovávajú úžasnú kvalitu, ktorá robí vaše jedlá neodolateľnými.",
+        "fullDescription": "Veľké, neoptimalizované obrázky spomaľujú vašu webovú stránku a frustrujú zákazníkov. Naša AI spracováva každý nahraný obrázok: zmenšuje na optimálne rozmery, konvertuje na moderné formáty a zlepšuje kvalitu. Výsledok? Vaše jedlá vyzerajú úžasne a stránky sa načítajú za menej ako sekundu aj na pomalých mobilných pripojeniach.",
+        "benefits": [
+          "Automatické zmenšovanie na optimálne webové rozmery",
+          "Konverzia na formát WebP pre rýchle načítanie",
+          "Zlepšenie kvality pre lepšiu prezentáciu",
+          "Stránky sa načítajú za menej ako 1 sekundu",
+          "Funguje s akýmkoľvek formátom obrázkov, ktorý nahráte"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "Porovnanie optimalizácie obrázkov AI pred a po",
+        "cta": "Zistiť viac"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Jednoduché riadenie menu",
+        "shortDescription": "Aktualizujte svoje menu za sekundy, nie hodiny. Pridávajte nové jedlá, upravujte ceny, reorganizujte kategórie - všetko s jednoduchým ťahaním a púšťaním z akéhokoľvek zariadenia. Žiadne technické zručnosti nie sú potrebné. Zmeny sa okamžite prejavia, takže vaši zákazníci vždy vidia najnovšie ponuky.",
+        "description": "Správa vášho menu nikdy nebola jednoduchšia. Pridávajte kategórie, vytvárajte jedlá s fotografiami a popismi, nastavte ceny a organizujte všetko jednoduchým ťahaním a púšťaním. Zmeny sa okamžite objavia na vašej živé webovej stránke.",
+        "fullDescription": "Zabudnite na zložitý systémy správy obsahu. Editor menu IQ Rest je navrhnutý pre majiteľov reštaurácií, nie webových vývojárov. Vytvorte novú kategóriu za sekundy, pridajte jedlá s niekoľkými ťuknutiami, nahrajte fotografie priamo zo svojho telefónu. Presuňte položky na preusporiadanie, dočasne vypnite viditeľnosť pre vypredané položky a okamžite vidíte zmeny naživo.",
+        "benefits": [
+          "Intuitívne vytváranie kategórií a položiek",
+          "Ťahanie a púšťanie pre preusporiadanie",
+          "Dočasne vypnite položky bez vymazania",
+          "Okamžité aktualizácie - zmeny sa objavia za sekundy",
+          "Organizujte neobmedzené kategórie a jedlá"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Jednoduchý ovládací panel na správu menu reštaurácie",
+        "cta": "Zobraziť editor menu"
+      },
+      {
+        "id": "analytics",
+        "title": "Denné analytické údaje a prehľady",
+        "shortDescription": "Sledujte zobrazenia stránok, jazyky a správanie zákazníkov s podrobnými dennými správami",
+        "description": "Pochopte svojich zákazníkov s komplexnou analytikou. Sledujte denné zobrazenia stránok, populárne jazyky, najviac zobrazené stránky a sledujte trendy v priebehu času. Robte rozhodnutia založené na údajoch na optimalizáciu vášho menu.",
+        "fullDescription": "Poznanie je moc. Náš analytický panel vám ukáže presne, ako zákazníci interagujú s webovou stránkou vašej reštaurácie. Ktoré stránky majú najviac zobrazení? Aké jazyky preferujú vaši zákazníci? Zvyšujú sa zobrazenia týždeň po týždni? Využite tieto poznatky na optimalizáciu svojho menu, cielenie na správnych zákazníkov a rast vášho podnikania.",
+        "benefits": [
+          "Denné, týždenné a mesačné štatistiky zobrazení",
+          "Rozdelenie jazykových preferencií",
+          "Sledovanie výkonu stránok po stránkach",
+          "Analýza trendov v priebehu času",
+          "Export údajov na ďalšiu analýzu"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Analytický panel reštaurácie s dennými štatistikami",
+        "cta": "Zistiť viac"
+      },
+      {
+        "id": "reservations",
+        "title": "Systém rezervácií stolov",
+        "shortDescription": "Prestante strácať zákazníkov kvôli zmeškaným hovorom. Akceptujte rezervácie stolov 24/7 priamo z vašej webovej stránky - zákazníci si vyberajú dátum, čas a stôl za sekundy. Automatické potvrdenia, e-mailové upozornenia a jednoduchý ovládací panel na správu všetkého.",
+        "description": "Zabudovaný rezervačný systém umožňuje zákazníkom rezervovať stoly priamo z vašej webovej stránky. Vyberte si automatické potvrdenie na základe dostupnosti alebo si každú rezerváciu skontrolujte manuálne. Spravujte všetky rezervácie z vášho ovládacieho panela.",
+        "fullDescription": "Rezervácie po telefóne sú časovo náročné a ľahko sa prehliadnu. Rezervačný systém IQ Rest funguje 24/7. Zákazníci si vyberajú dátum, čas a veľkosť skupiny, potom rezervujú okamžite. Môžete nastaviť automatické potvrdenie na základe dostupnosti stolov alebo si každú žiadosť skontrolovať manuálne. Znížte počet nepreukázaných rezervácií s e-mailovými potvrdeniami.",
+        "benefits": [
+          "24/7 online rezervačná kapacita",
+          "Automatické alebo manuálne režimy potvrdenia",
+          "Správa stolov a kapacity",
+          "E-mailové upozornenia na rezervácie",
+          "Kalendárny pohľad pre jednoduché plánovanie"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Online systém rezervácie stolov pre reštaurácie",
+        "cta": "Preskúmať rezervácie stolov"
+      },
+      {
+        "id": "custom-design",
+        "title": "Videá a fotografie na pozadí",
+        "shortDescription": "Prvé dojmy predávajú. Uchváťte zákazníkov v momente, keď naskenujú váš QR kód, ohromujúcim videom atmosféry vašej reštaurácie alebo krásnou fotografiou vášho podpisového jedla. Vyniknite medzi konkurenciou s domovskou stránkou, ktorá pôsobí prémiovo a profesionálne.",
+        "description": "Vytvorte nezabudnuteľný prvý dojem s vlastnými videami alebo fotografiami na pozadí na vašej domovskej stránke. Nahrajte video atmosféry vašej reštaurácie alebo krásnu fotografiu jedla, aby ste okamžite uchvátili zákazníkov.",
+        "fullDescription": "Prvé dojmy sú dôležité. Keď zákazníci naskenujú váš QR kód, mali by byť okamžite ohromení. Nahrajte video atmosféry vašej reštaurácie, časozberné video vašej kuchyne alebo ohromujúcu fotografiu vášho podpisového jedla. Vaša domovská stránka sa stáva vizuálnym zážitkom, ktorý odráža osobnosť vašej reštaurácie.",
+        "benefits": [
+          "Podpora videí a obrázkov na pozadí",
+          "Automatická optimalizácia pre rýchle načítanie",
+          "Funguje perfektne na mobilných zariadeniach",
+          "Vytvára nezabudnuteľný prvý dojem",
+          "Odráža jedinečnú atmosféru vašej reštaurácie"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Webová stránka reštaurácie s videom na pozadí",
+        "cta": "Zobraziť videá na pozadí"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Vlastná farebná schéma",
+        "shortDescription": "Urobte svoje menu skutočne svojim s vlastnými akcentovými farbami, ktoré zodpovedajú identite vašej reštaurácie. Vyberte si z 12 krásnych prednastavených farieb alebo vyberte svoju presnú farbu značky. Každé tlačidlo, zvýraznenie a interaktívny prvok sa prispôsobí, aby vytvoril súdržný, profesionálny vzhľad, ktorý si zákazníci zapamätajú.",
+        "description": "Vaša webová stránka reštaurácie by mala zodpovedať vašej značke. Vyberte si z prednastavených farebných schém alebo zadajte svoju presnú farbu značky. V kombinácii s automatickou podporou svetlého/tmavého režimu vyzerá vaše menu vždy profesionálne.",
+        "fullDescription": "Konzistencia značky je dôležitá. IQ Rest vám umožňuje prispôsobiť akcentovú farbu použitú na celej vašej webovej stránke - tlačidlá, zvýraznenia a interaktívne prvky sa všetky zhodujú s vašou značkou. Vyberte si z starostlivo vybraných predvolieb alebo zadajte svoju presnú farbu značky. Systém automaticky zabezpečuje čitateľnosť v oboch svetlých a tmavých režimoch.",
+        "benefits": [
+          "Výber vlastnej akcentovej farby",
+          "Prednastavené farebné schémy sú k dispozícii",
+          "Automatická podpora svetlého/tmavého režimu",
+          "Konzistentné značkovanie na všetkých stránkach",
+          "Farba s optimalizovaným kontrastom pre prístupnosť"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Možnosti vlastnej farebnej schémy a branding",
+        "cta": "Preskúmať farebné schémy"
+      },
+      {
+        "id": "personal-support",
+        "title": "Individuálna online podpora",
+        "shortDescription": "Získajte osobnú pomoc od skutočných ľudí - nie chatbotov - na akékoľvek otázky",
+        "description": "Každá reštaurácia dostáva individuálnu online podporu. Máte otázku? Potrebujete pomoc s nastavením? Chcete navrhnúť funkciu? Skutoční ľudia rýchlo odpovedajú, aby vám pomohli uspieť s vaším digitálnym menu.",
+        "fullDescription": "Veríme, že každá reštaurácia si zaslúži osobnú pozornosť. Keď sa obrátite na podporu, hovoríte so skutočnými ľuďmi, ktorí rozumejú reštauráciám a môžu vám skutočne pomôcť. Žiadni chatboty, žiadne automatizované odpovede, žiadne fronty na lístky. Či už potrebujete pomoc pri pridávaní svojho prvého jedla alebo chcete radu o optimalizácii svojho menu, sme tu pre vás.",
+        "benefits": [
+          "Skutočná podpora od ľudí - žiadni chatboty",
+          "Rýchle doby odpovede",
+          "Pomoc s nastavením a optimalizáciou",
+          "Žiadosti o funkcie sú vítané",
+          "Dostupné pre každý plán vrátane bezplatného"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Osobná online podpora pre reštaurácie",
+        "cta": "Zistiť viac"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Cenník QR menu a webovej stránky reštaurácie",
+    "subtitle": "Žiadne skryté poplatky, žiadne prekvapenia. Spustite webovú stránku svojej reštaurácie zadarmo ešte dnes — upgradujte len vtedy, keď ste pripravení rásť.",
+    "seo": {
+      "title": "Prečo si vybrať IQ Rest pre vašu reštauráciu alebo kaviareň?",
+      "text": "Vytvorte profesionálne QR menu a webovú stránku pre vašu reštauráciu alebo kaviareň za pár minút. Vaši hostia jednoducho naskenujú QR kód, aby si na svojom telefóne pozreli vaše digitálne menu — žiadna aplikácia nie je potrebná. Aktualizujte ceny, pridávajte nové jedlá a okamžite meníte popisy. S prekladmi poháňanými AI obslúžte medzinárodných zákazníkov v ich rodnom jazyku. Sledujte, ktoré jedlá majú najviac zobrazení s integrovanou analytikou. Či už prevádzkujete malú kaviareň alebo rastúcu reštauračnú sieť, IQ Rest vám pomôže modernizovať vašu menu skúsenosť a zároveň znížiť náklady na tlač."
+    },
+    "monthly": "Mesačne",
+    "yearly": "Ročne",
+    "save": "(Ušetrite 25%)",
+    "perMonth": "/mes",
+    "billedYearly": "Fakturované ročne (€{total})",
+    "forever": "Navždy zadarmo",
+    "popular": "Najobľúbenejšie",
+    "plans": {
+      "free": {
+        "name": "Zadarmo",
+        "description": "Ideálne na vyskúšanie IQ Rest",
+        "cta": "Začať zadarmo",
+        "highlights": [
+          "Webová stránka reštaurácie",
+          "QR Menu",
+          "300 skenovaní/mesečne",
+          "2 jazyky",
+          "Vylepšenie obrázkov pomocou AI",
+          "Analytika"
+        ]
+      },
+      "basic": {
+        "name": "Základný",
+        "description": "Skvelé pre malé reštaurácie",
+        "cta": "Začať",
+        "highlights": [
+          "Všetko v Zadarmo, plus:",
+          "4 500 skenovaní/mesečne",
+          "3 jazyky",
+          "Preklady pomocou AI",
+          "Vlastná farebná téma",
+          "Rezervácie"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Pre rastúce reštauračné siete",
+        "cta": "Začať",
+        "highlights": [
+          "Všetko v Základnom, plus:",
+          "Neobmedzené skenovania",
+          "6 jazykov",
+          "Prioritná podpora",
+          "Všetky funkcie zahrnuté"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Porovnať plány",
+      "subtitle": "Zistite, ktorý plán je pre vás ten pravý"
+    },
+    "features": {
+      "website": "Webová stránka reštaurácie",
+      "qrMenu": "QR Menu",
+      "scans": "Mesačné skenovania",
+      "languages": "Podporované jazyky",
+      "aiTranslation": "Preklady pomocou AI",
+      "aiImages": "Vylepšenie obrázkov pomocou AI",
+      "analytics": "Analytika",
+      "customTheme": "Vlastná farebná téma",
+      "background": "Pozadí obrázok a video",
+      "support": "Podpora",
+      "reservations": "Rezervácie"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4 500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Neobmedzené",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Potrebujete pomoc? Poďme si pokecať",
+    "subtitle": "Ahoj, som Bogdan — zakladateľ IQ Rest. Túto platformu som vytvoril pre svoju vlastnú kaviareň a teraz pomáha stovkám reštaurácií po celom svete. Máte otázku alebo nápad? Napíšte mi priamo. Žiadne roboty, žiadne čakanie — len skutočný rozhovor.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Skontaktujte sa s nami",
+      "email": "Váš email",
+      "emailPlaceholder": "vas@email.com",
+      "subject": "Predmet",
+      "subjectPlaceholder": "O čom to je?",
+      "message": "Správa",
+      "messagePlaceholder": "Povedzte mi, čo máte na srdci...",
+      "submit": "Odoslať správu",
+      "sending": "Odosielam...",
+      "success": "Vaša správa bola odoslaná! Ďakujem, že ste sa ozvali. Čoskoro sa vám ozvem.",
+      "error": "Nepodarilo sa odoslať správu. Skúste to prosím neskôr."
+    }
+  },
+  "languages": {
+    "en": "Angličtina",
+    "es": "Španielčina"
+  },
+  "cookieConsent": {
+    "title": "Používame cookies",
+    "description": "Používame cookies na zlepšenie vášho prehliadania, poskytovanie personalizovaného obsahu a analýzu našej návštevnosti. Kliknutím na \"Prijať všetko\" súhlasíte s naším používaním cookies.",
+    "acceptAll": "Prijať všetko",
+    "rejectAll": "Odmietnuť všetko",
+    "customize": "Prispôsobiť",
+    "learnMore": "Zistiť viac"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigácia",
+      "pricing": "Cenník",
+      "features": "Funkcie",
+      "contacts": "Kontakty",
+      "faq": "Otázky",
+      "changelog": "Záznam zmien"
+    },
+    "legal": {
+      "title": "Právne",
+      "terms": "Podmienky používania",
+      "privacy": "Zásady ochrany osobných údajov",
+      "cookies": "Zásady používania súborov cookie",
+      "sitemap": "Mapa stránok"
+    },
+    "copyright": "© 2025 IQ Rest. Všetky práva vyhradené."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Zoznam zmien - Aktualizácie a nové funkcie IQ Rest",
+      "description": "Buďte informovaní o najnovších funkciách a vylepšeniach IQ Rest - vaše digitálne QR menu riešenie pre reštaurácie a kaviarne"
+    },
+    "title": "Zoznam zmien",
+    "subtitle": "Najnovšie aktualizácie a nové funkcie pre vaše QR menu v reštaurácii",
+    "readMore": "Čítať viac",
+    "backToChangelog": "Späť na Zoznam zmien",
+    "seo": {
+      "title": "O aktualizáciách IQ Rest",
+      "description": "IQ Rest sa neustále zlepšuje, aby pomohol reštauráciám a kaviarňam vytvárať profesionálne digitálne QR menu. Sledujte náš zoznam zmien, aby ste boli informovaní o najnovších funkciách pre vašu webovú stránku reštaurácie a riešenie QR menu."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsive Support for Your Restaurant QR Menu",
+        "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
+        "meta": {
+          "title": "Responsive Support for Restaurant QR Menu | IQ Rest",
+          "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
+        },
+        "content": {
+          "intro": "IQ Rest now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "image1Alt": "Support chat interface for restaurant QR menu",
+          "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
+          "section1Title": "Direct Chat Support for Your Restaurant",
+          "section1Text": "Our responsive support system for your QR menu restaurant or cafe works directly within your dashboard. No need to search for contact emails or wait in phone queues. Simply open the support chat, type your question or describe the change you need, and our team responds quickly. Whether you need help updating menu items, fixing display issues, or understanding analytics - responsive support is just a message away.",
+          "section2Title": "Quick Assistance for Any QR Menu Changes",
+          "section2Text": "Need to update prices before a busy weekend? Want to add seasonal items to your restaurant QR menu? Our responsive support helps cafes and restaurants make changes quickly. We guide you through the process or can assist directly when needed. This responsive support ensures your digital menu always reflects your current offerings, keeping customers informed and happy.",
+          "section3Title": "Support That Understands Restaurant Needs",
+          "section3Text": "Our responsive support team understands the unique challenges of running a restaurant or cafe. We know that a broken QR menu can mean lost customers and frustrated staff. That's why our support for your QR menu restaurant or cafe prioritizes quick response times and practical solutions. From technical questions to feature requests, we're here to help your digital menu succeed.",
+          "benefitsTitle": "Benefits of Responsive QR Menu Support",
+          "benefit1": "Direct in-app chat - no external emails or phone calls needed",
+          "benefit2": "Quick response times to keep your restaurant running smoothly",
+          "benefit3": "Guidance on menu updates, changes, and new features",
+          "benefit4": "Technical assistance for any QR code or website issues",
+          "benefit5": "Feature requests and suggestions welcomed and considered",
+          "benefit6": "Support that understands restaurant and cafe operations",
+          "conclusionTitle": "Get Responsive Support Today",
+          "conclusionText": "With IQ Rest's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "ctaText": "Ready to experience responsive support for your QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
+        "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
+        "meta": {
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | IQ Rest",
+          "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
+        },
+        "content": {
+          "intro": "IQ Rest now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
+          "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
+          "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
+          "section1Text": "Our detailed analytics for your restaurant website and QR menu track every customer interaction. See total page views for today, this week, and this month at a glance. Track unique visitors to understand your real audience size. The analytics dashboard provides detailed insights into how customers navigate your QR menu - from the home page to your full menu, contacts, and language selection. This detailed analytics helps restaurants make data-driven decisions.",
+          "section2Title": "Page and Language Analytics",
+          "section2Text": "Understand which pages of your restaurant website and QR menu are most popular. Our detailed analytics break down views by page type: Home, Menu, Contacts, and Language selection. See which languages your customers prefer, helping you prioritize translations and serve international guests better. These detailed analytics for your restaurant QR menu reveal customer behavior patterns you never knew existed.",
+          "section3Title": "Daily Trends and Usage Monitoring",
+          "section3Text": "Track how your restaurant website and QR menu perform over time with daily view charts. See patterns in customer engagement throughout the week. Monitor your monthly usage against your plan limits with a clear progress bar. Our detailed analytics help restaurants identify peak times and optimize their digital presence. Whether you're a small cafe or a busy restaurant, these insights help you understand your customers better.",
+          "benefitsTitle": "Benefits of Detailed Analytics for Restaurants",
+          "benefit1": "Real-time view counts: today, weekly, and monthly statistics at a glance",
+          "benefit2": "Unique visitor tracking to understand your actual customer reach",
+          "benefit3": "Page-by-page breakdown showing what content customers view most",
+          "benefit4": "Language analytics to optimize multilingual menu offerings",
+          "benefit5": "Daily trend charts to identify patterns in customer behavior",
+          "benefit6": "Usage monitoring with clear limits and upgrade prompts",
+          "conclusionTitle": "Start Using Detailed Analytics Today",
+          "conclusionText": "With IQ Rest's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "ctaText": "Ready to explore detailed analytics for your restaurant?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu and Restaurant Website Generator",
+        "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
+        "meta": {
+          "title": "Instant QR Menu and Restaurant Website Generator | IQ Rest",
+          "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
+        },
+        "content": {
+          "intro": "IQ Rest now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
+          "image1Caption": "Generate custom QR codes for your restaurant website instantly",
+          "section1Title": "How the Instant QR Menu Generator Works",
+          "section1Text": "Our instant QR menu and restaurant website generator creates everything you need in minutes. Simply add your menu items, and the system instantly generates a unique QR code linked to your restaurant website. The generator supports multiple paper formats (A4, A5, A6, Letter), various QR layouts per page (1 to 16 codes), and customizable text beneath each QR code. Preview exactly what you'll print, then download or print directly - your instant QR menu is ready to display at your tables.",
+          "section2Title": "Customizable QR Codes for Any Restaurant or Cafe",
+          "section2Text": "The instant QR menu generator offers complete customization for your restaurant or cafe branding. Add your restaurant name above the QR code, include custom text like 'Scan for Menu' or 'QR Menu' below, and choose from three text sizes. The generator produces clean, simple QR codes optimized for fast scanning. Whether you need a single large QR code for a poster or 16 smaller codes for individual table cards, our instant generator adapts to your restaurant's needs.",
+          "section3Title": "Print-Ready QR Menus in Seconds",
+          "section3Text": "Unlike complicated design tools, our instant QR menu generator creates print-ready layouts automatically. Select your paper format, choose how many QR codes per page, and hit print - that's it. The generator handles margins, spacing, and sizing to ensure perfect prints every time. For cafes and restaurants that need professional QR menus quickly, this instant approach saves hours of design work and gets your digital menu in front of customers faster.",
+          "benefitsTitle": "Benefits of Instant QR Menu Generation",
+          "benefit1": "Generate complete QR menu and restaurant website in minutes, not hours",
+          "benefit2": "Multiple paper formats: A4, A5, A6, and Letter sizes supported",
+          "benefit3": "Flexible layouts: from single large QR to 16 codes per page",
+          "benefit4": "Custom text and sizing options for your restaurant branding",
+          "benefit5": "Print-ready output with automatic margins and spacing",
+          "benefit6": "Download as PNG or print directly from your browser",
+          "conclusionTitle": "Start Using the Instant QR Menu Generator",
+          "conclusionText": "With IQ Rest's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "ctaText": "Ready to generate your instant QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Public Restaurant Website for QR Menu Scanning",
+        "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
+        "meta": {
+          "title": "Public Restaurant Website for QR Menu Scanning | IQ Rest",
+          "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
+        },
+        "content": {
+          "intro": "IQ Rest now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "image1Alt": "Public restaurant website showing QR menu categories",
+          "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
+          "section1Title": "How the Public Restaurant Website Works with QR Scanning",
+          "section1Text": "When customers scan your restaurant's QR code, they're instantly taken to your public website displaying the complete menu. No app download required, no waiting - just immediate access to your offerings. The public restaurant website for QR menu shows categories at the top for easy navigation, with items displayed in an elegant card layout featuring photos, descriptions, and prices. Customers can tap on categories to filter items or scroll through the entire menu.",
+          "section2Title": "Features of Your Public Restaurant QR Menu Website",
+          "section2Text": "Your public restaurant website includes everything customers need: category tabs for quick navigation, high-quality dish photos, detailed descriptions, prices in your currency, and active item indicators. The design is optimized for mobile devices since most QR scans happen on phones. Items load quickly thanks to optimized images, and the interface is intuitive for guests of all ages. Changes made in your admin panel appear instantly on the public website.",
+          "image2Alt": "Restaurant QR menu website showing food items with photos",
+          "image2Caption": "Public menu website displaying dishes with optimized photos and descriptions",
+          "section3Title": "Multilingual Support for International Guests",
+          "section3Text": "The public restaurant website includes a language selector so international guests can view your menu in their preferred language. Currently supporting English and Spanish, with more languages coming soon. This makes your public restaurant QR menu accessible to tourists and diverse customer bases. The language preference is remembered for return visits, providing a personalized experience.",
+          "image3Alt": "Language selection on public restaurant QR menu website",
+          "image3Caption": "Language selector allowing guests to view the public menu in their preferred language",
+          "benefitsTitle": "Benefits of Your Public Restaurant QR Menu Website",
+          "benefit1": "Instant menu access - customers scan and view immediately, no app needed",
+          "benefit2": "Mobile-optimized design for perfect display on any smartphone",
+          "benefit3": "Real-time updates - menu changes appear instantly to customers",
+          "benefit4": "Category navigation for easy browsing of your offerings",
+          "benefit5": "Multilingual support for international customers",
+          "benefit6": "Fast loading with optimized images and modern technology",
+          "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
+          "conclusionText": "With IQ Rest's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "ctaText": "Ready to launch your public restaurant QR menu website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "How to Add Items to Restaurant Website with QR Menu",
+        "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
+        "meta": {
+          "title": "How to Add Items to Restaurant Website with QR Menu | IQ Rest",
+          "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
+        },
+        "content": {
+          "intro": "Want to know how to add items to your restaurant website with QR menu? IQ Rest makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "image1Alt": "How to add items to restaurant website with QR menu - item list view",
+          "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
+          "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
+          "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
+          "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with IQ Rest. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "image2Alt": "Item form showing how to add items to restaurant QR menu website",
+          "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
+          "section3Title": "Image Upload and Optimization for Your Restaurant Items",
+          "section3Text": "High-quality images are essential when you add items to restaurant website with QR menu. Our system accepts JPEG, PNG, WebP, and GIF formats up to 5MB. Every image is automatically resized to 500x500 pixels and converted to WebP format for fast loading while maintaining excellent quality. This means your dishes always look their best on any device. Professional food photography significantly improves how customers perceive your restaurant when browsing your QR menu website.",
+          "benefitsTitle": "Benefits of Adding Items to Your Restaurant QR Menu Website",
+          "benefit1": "Add unlimited menu items with photos, descriptions, and prices",
+          "benefit2": "Automatic image optimization for fast loading and perfect display",
+          "benefit3": "Organize items into categories for easy customer navigation",
+          "benefit4": "Active/inactive toggle to hide sold-out items without deleting",
+          "benefit5": "Drag and drop reordering to arrange items in your preferred order",
+          "benefit6": "Mobile-friendly interface to add items from any device",
+          "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using IQ Rest. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, IQ Rest makes it easy to add items to restaurant website that attracts and converts customers.",
+          "ctaText": "Ready to add items to your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "How to Make QR Code Menu for Restaurant with Categories",
+        "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
+        "meta": {
+          "title": "How to Make QR Code Menu for Restaurant with Categories | IQ Rest",
+          "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
+        },
+        "content": {
+          "intro": "Want to know how to make QR code menu for restaurant with categories? IQ Rest now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "image1Alt": "How to make QR code menu for restaurant - categories list view",
+          "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
+          "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
+          "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
+          "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with IQ Rest. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "image2Alt": "Category form showing how to make QR code menu for restaurant",
+          "image2Caption": "Simple form interface for creating restaurant menu categories",
+          "section3Title": "Mobile-Optimized Category Management",
+          "section3Text": "We know restaurant owners are busy and often manage their menus on the go. That's why our category management is fully optimized for mobile devices. When you make QR code menu for restaurant using your phone, you'll find a compact interface with a three-dot menu for quick actions. Move categories up or down, edit details, or delete categories - all from your smartphone. This mobile-first approach ensures you can make QR code menu for restaurant with categories anytime, anywhere.",
+          "benefitsTitle": "Benefits of Making QR Code Menu with Categories",
+          "benefit1": "Organize menu items logically so customers can easily find what they want",
+          "benefit2": "Drag and drop reordering to arrange categories in your preferred display order",
+          "benefit3": "Active/inactive toggle to hide seasonal categories without deleting them",
+          "benefit4": "Mobile-optimized interface to manage categories from any device",
+          "benefit5": "Clean visual design with activity indicators for quick status overview",
+          "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
+          "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using IQ Rest. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, IQ Rest makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "ctaText": "Ready to make QR code menu for your restaurant with categories?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
+        "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
+        "meta": {
+          "title": "Easy QR Menu for Cafe - New Control Panel | IQ Rest",
+          "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
+        },
+        "content": {
+          "intro": "We're excited to introduce our brand new admin control panel designed to make creating QR menus for your cafe as easy as possible. Whether you're running a small coffee shop or a bustling cafe, our easy-to-use interface helps you manage your digital menu effortlessly. The new control panel features a modern sidebar design that puts all the tools you need to create your cafe's QR menu right at your fingertips.",
+          "image1Alt": "Easy QR menu control panel for cafe management",
+          "image1Caption": "New control panel with sidebar navigation for easy cafe QR menu creation",
+          "section1Title": "Modern Sidebar Interface for Easy Menu Management",
+          "section1Text": "The new control panel features a sleek sidebar that makes navigating your cafe's QR menu settings incredibly easy. With clearly organized sections for Dashboard, Categories, Products, QR Code, Analytics, Settings, Billing, and Support, you can easily find and manage every aspect of your cafe's digital menu. The sidebar collapses on mobile devices, ensuring easy access to all features regardless of what device you're using to manage your cafe's QR menu.",
+          "section2Title": "Easy Category and Product Management for Your Cafe",
+          "section2Text": "Creating and organizing your cafe's QR menu has never been easier. Our new category and product management pages are designed with simplicity in mind, allowing cafe owners to easily add, edit, and organize their menu items. Whether you're updating daily specials or adding seasonal drinks, the easy-to-use interface ensures your cafe's QR menu stays current and appealing to customers.",
+          "section3Title": "Server-Side Rendering for Fast Performance",
+          "section3Text": "The new control panel is built with server-side rendering (SSR) technology, ensuring your cafe's QR menu management dashboard loads quickly and efficiently. All data is fetched from the server, providing real-time updates and a smooth experience. This easy and fast approach means you spend less time waiting and more time perfecting your cafe's QR menu.",
+          "benefitsTitle": "Why This Makes QR Menu Creation Easy for Cafes",
+          "benefit1": "Easy navigation with modern sidebar interface for quick access to all cafe menu features",
+          "benefit2": "Easy category management to organize your cafe's QR menu logically",
+          "benefit3": "Easy product editing with instant updates to your cafe's digital menu",
+          "benefit4": "Easy QR code generation and customization for your cafe",
+          "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
+          "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
+          "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using IQ Rest to provide their customers with an easy, modern menu experience.",
+          "ctaText": "Ready to create an easy QR menu for your cafe?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
+        "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
+        "meta": {
+          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | IQ Rest",
+          "description": "Learn how to get QR menu for restaurants easily. New dedicated FAQ page answers all questions about getting QR menus for your restaurant. Streamlined 4-step guide to get started."
+        },
+        "content": {
+          "intro": "We've made it easier than ever to get QR menu for restaurants. Our reorganized FAQ and how-to content helps restaurant owners quickly find answers about how to get QR menus for their establishments. Whether you're looking to get a QR menu for your restaurant or café, this update provides all the information you need in one place.",
+          "image1Alt": "How to get QR menu for restaurants - dedicated FAQ page",
+          "image1Caption": "New FAQ page showing how to get QR menu for restaurants with organized questions and answers",
+          "section1Title": "Dedicated FAQ Page for Getting QR Menus",
+          "section1Text": "All questions about how to get QR menu for restaurants are now on a dedicated /faq page. Restaurant owners can easily find answers about getting QR menus, from setup to customization. Each question about getting a QR menu for your restaurant is displayed in its own card with expanded answers, making it simple to get the information you need to get started with QR menus for your restaurant.",
+          "section2Title": "4-Step Guide to Get QR Menu for Restaurants",
+          "section2Text": "Our streamlined guide shows exactly how to get QR menu for restaurants in just 4 easy steps. Whether you want to get a QR menu for your restaurant, café, or bar, the new card-based design makes it clear how to get started. This guide to get QR menus for restaurants appears on all pages, ensuring you always know how to get your restaurant's QR menu set up quickly.",
+          "section3Title": "SEO-Optimized Content to Help Restaurants Get QR Menus",
+          "section3Text": "We've optimized our content to help more restaurants discover how to get QR menus. The guide appears with full Schema.org structured data on the homepage, helping restaurants searching for how to get QR menu solutions find us easily. Our smart content distribution ensures restaurants can get the QR menu information they need while maintaining strong search engine visibility.",
+          "benefitsTitle": "Why This Helps You Get QR Menu for Your Restaurant",
+          "benefit1": "Dedicated FAQ page answers all questions about getting QR menus for restaurants",
+          "benefit2": "Clear 4-step guide shows exactly how to get QR menu for your restaurant",
+          "benefit3": "Easy access to FAQ and contact options to help you get your QR menu set up",
+          "benefit4": "SEO-optimized to help restaurants discover how to get QR menus easily",
+          "benefit5": "Consistent information about getting QR menus across the entire platform",
+          "benefit6": "Faster path to get QR menu for your restaurant with improved navigation",
+          "conclusionTitle": "Get QR Menu for Your Restaurant Today",
+          "conclusionText": "These improvements make it incredibly easy for restaurants to get QR menus. Whether you're a small café looking to get a QR menu or a large restaurant chain, our reorganized content helps you understand exactly how to get QR menu solutions for your establishment. Start now and get your restaurant's QR menu up and running in minutes.",
+          "ctaText": "Ready to get QR menu for your restaurant?",
+          "ctaButton": "Get QR Menu Now"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Free Restaurant Website Creation - Mobile Optimization & UX Improvements",
+        "description": "Major improvements to creating a free restaurant website: optimized mobile navigation with hamburger menu, enhanced signup page for better conversions, and streamlined user experience.",
+        "meta": {
+          "title": "Free Restaurant Website Creation Updates - IQ Rest Changelog",
+          "description": "Learn how IQ Rest improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
+        },
+        "content": {
+          "intro": "Creating a free restaurant website has never been easier or more mobile-friendly. We've made significant improvements to help restaurant and cafe owners build their professional website with a digital QR menu, especially on mobile devices where most people search for 'создание сайта для ресторана бесплатно' (free restaurant website creation). These updates focus on mobile navigation, signup page refinements, and overall user experience to ensure anyone can create a restaurant website for free without any technical knowledge.",
+          "image1Alt": "Mobile-optimized hamburger menu for restaurant website",
+          "image1Caption": "New mobile navigation with hamburger menu for easy access to all features",
+          "section1Title": "Mobile-First Navigation for Restaurant Websites",
+          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore IQ Rest's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
+          "section2Title": "Enhanced Get Started Page for Free Restaurant Website Creation",
+          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use IQ Rest now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
+          "image2Alt": "Optimized signup flow for free restaurant website creation",
+          "image2Caption": "Streamlined signup process optimized for mobile devices",
+          "section3Title": "Three-Step Process Optimized for All Devices",
+          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with IQ Rest.",
+          "benefitsTitle": "Key Improvements for Creating Free Restaurant Websites",
+          "benefit1": "Mobile-optimized hamburger menu navigation for easy access on smartphones",
+          "benefit2": "Enhanced signup page with better mobile spacing and centered layouts",
+          "benefit3": "Full-width restaurant counter on mobile providing strong social proof",
+          "benefit4": "Adaptive three-step process indicator that works on all screen sizes",
+          "benefit5": "Streamlined input forms optimized for mobile touch interaction",
+          "benefit6": "Fixed logout redirect issue ensuring proper navigation across all pages",
+          "conclusionTitle": "Free Restaurant Website Creation Made Simple",
+          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out IQ Rest on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
+          "ctaText": "Ready to create your free restaurant website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "landing-redesign": {
+        "title": "Redesigned Get Started Page for Higher Conversions",
+        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
+        "meta": {
+          "title": "Get Started Page Redesign - IQ Rest Changelog",
+          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+        },
+        "content": {
+          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
+          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
+          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
+          "section1Title": "Clear Value Propositions at a Glance",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section2Title": "Social Proof That Builds Trust",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
+          "section3Title": "Streamlined Signup Flow",
+          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
+          "benefitsTitle": "Key Improvements in This Update",
+          "benefit1": "Value proposition cards with icons for instant comprehension",
+          "benefit2": "Live restaurant counter providing authentic social proof",
+          "benefit3": "Unified page design for both email and OTP verification steps",
+          "benefit4": "Visual 3-step process indicator for transparency",
+          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
+          "benefit6": "Real-time email validation with visual feedback",
+          "conclusionTitle": "Designed for Restaurant Success",
+          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
+          "ctaText": "Ready to create your restaurant's digital menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "auth": {
+        "title": "New User Authentication Interface",
+        "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
+        "meta": {
+          "title": "User Authentication Interface - IQ Rest Changelog",
+          "description": "IQ Rest introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+        },
+        "content": {
+          "intro": "We are excited to announce the launch of our new user authentication interface for IQ Rest. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of IQ Rest authentication",
+          "image1Caption": "Simple email-based authentication - no passwords to remember",
+          "section1Title": "Passwordless Authentication for Restaurant Owners",
+          "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
+          "section2Title": "Streamlined QR Menu Creation Process",
+          "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
+          "image2Alt": "OTP verification step of IQ Rest authentication",
+          "image2Caption": "Secure 4-digit code verification sent directly to your email",
+          "section3Title": "Built for Speed and Security",
+          "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
+          "benefitsTitle": "Key Benefits for Your Restaurant",
+          "benefit1": "Create your restaurant website with QR menu in minutes - no technical skills required",
+          "benefit2": "No passwords to remember - secure email-based verification keeps your account safe",
+          "benefit3": "Instant access to your digital menu builder from any device",
+          "benefit4": "Quick updates to your QR menu even during busy service hours",
+          "conclusionTitle": "Start Building Your Digital Menu Today",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, IQ Rest provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "ctaText": "Ready to create your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "meta": {
+          "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+        },
+        "content": {
+          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
+          "image1Alt": "Subscription plans for QR menu and restaurant website creation",
+          "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
+          "section1Title": "Flexible Plans for Every Restaurant Size",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section2Title": "Simple Billing Dashboard",
+          "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
+          "section3Title": "Save 25% with Yearly Billing",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "benefitsTitle": "Benefits of Our Subscription Plans",
+          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
+          "benefit3": "Instant plan upgrades - new features activate immediately",
+          "benefit4": "Secure Stripe payment processing for all transactions",
+          "benefit5": "Easy plan management through simple billing dashboard",
+          "benefit6": "Downgrade anytime - no long-term contracts required",
+          "conclusionTitle": "Start Creating Your Restaurant Website Today",
+          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using IQ Rest to connect with their customers through modern, mobile-friendly QR menus.",
+          "ctaText": "Ready to choose your plan for QR menu and restaurant website?",
+          "ctaButton": "View Pricing Plans"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR Kód",
+    "description": "Stiahnite si a vytlačte svoj QR kód, aby ho zákazníci mohli naskenovať",
+    "preview": "Náhľad",
+    "paperFormat": "Formát papiera",
+    "qrPerPage": "QR kódy na stránku",
+    "customText": "Text pod QR kódom",
+    "customTextPlaceholder": "Naskenujte na zobrazenie menu",
+    "print": "Tlačiť",
+    "download": "Stiahnuť PNG",
+    "viewMenu": "Zobraziť menu",
+    "noSlug": "Nastavená URL menu",
+    "noSlugDescription": "Najprv nastavte URL vašej reštaurácie v nastaveniach, aby ste mohli vygenerovať QR kód.",
+    "goToSettings": "Prejsť do nastavení",
+    "loading": "Načítava sa...",
+    "menuUrl": "Vaša webová stránka",
+    "websiteReady": "Vaša webová stránka je pripravená!",
+    "openWebsite": "Otvoriť webovú stránku",
+    "printSection": "Tlačiť a stiahnuť QR kód:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "List (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Celá stránka)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Veľkosť textu",
+    "textSizes": {
+      "small": "Malý",
+      "medium": "Stredný",
+      "large": "Veľký"
+    }
+  },
+  "support": {
+    "title": "Správy",
+    "subtitle": "Získajte pomoc od nášho tímu",
+    "unauthorized": "Prosím, prihláste sa na prístup k podpore",
+    "lastUpdated": "Aktualizované",
+    "emptyTitle": "Zatiaľ žiadne správy",
+    "emptyDescription": "Odošlite správu, aby ste začali konverzáciu",
+    "sendMessage": "Odoslať správu",
+    "placeholder": "Napíšte svoju správu...",
+    "hint": "Stlačte Enter na odoslanie, Shift+Enter pre nový riadok",
+    "send": "Odoslať",
+    "supportTeam": "Tím podpory"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Vytvorte si digitálny menu za 5 minút - IQ Rest",
+      "description": "QR menu a webová stránka pre vašu reštauráciu. Pripravené okamžite. Žiadne technické zručnosti nie sú potrebné."
+    },
+    "title": "Vytvorte si digitálny menu za 5 minút",
+    "subtitle": "QR menu a webová stránka pre vašu reštauráciu. Pripravené okamžite.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Zadajte email na začatie vytvárania",
+    "otpPlaceholder": "Zadajte 4-ciferný kód",
+    "continue": "Vytvoriť moje menu",
+    "sending": "Vytváram...",
+    "verifyTitle": "Skontrolujte svoj email",
+    "verifySubtitle": "Poslali sme 4-ciferný kód na {email}",
+    "verify": "Overiť",
+    "verifying": "Overujem...",
+    "changeEmail": "Zmeniť email",
+    "resendCode": "Znova poslať kód",
+    "successTitle": "Vitajte!",
+    "successSubtitle": "Úspešne ste sa prihlásili",
+    "redirecting": "Presmerovávam na dashboard...",
+    "errors": {
+      "sendFailed": "Nepodarilo sa odoslať overovací kód. Skúste to prosím znova.",
+      "verifyFailed": "Nepodarilo sa overiť kód. Skúste to prosím znova."
+    },
+    "valueProps": {
+      "noSkills": "Žiadne technické zručnosti nie sú potrebné",
+      "instantUpdates": "Okamžité aktualizácie menu",
+      "qrIncluded": "QR kód + webová stránka zahrnutá",
+      "freeStart": "Bezplatné na začiatok"
+    },
+    "formHelper": "Nie je potrebná kreditná karta",
+    "setupTime": "Nastavenie za 5 minút",
+    "hasAccount": "Už máte účet?",
+    "signIn": "Prihlásiť sa",
+    "restaurantCounter": "Pridajte sa k {count} reštauráciám, ktoré už používajú IQ Rest",
+    "steps": {
+      "signUp": "Zaregistrujte sa pomocou svojho emailu",
+      "addMenu": "Pridajte svoje položky menu",
+      "getQr": "Získajte svoj QR kód a začnite"
+    },
+    "motivational": {
+      "title": "Začnite prijímať objednávky ešte dnes",
+      "subtitle": "Vaši zákazníci čakajú na digitálne menu"
+    }
+  },
+  "reservations": {
+    "title": "Rezervácie",
+    "tables": "Stoly",
+    "settings": "Nastavenia",
+    "addTable": "Pridať stôl",
+    "newTable": "Nový stôl",
+    "editTable": "Upraviť stôl",
+    "tableNumber": "Číslo stola",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Kapacita (hostia)",
+    "capacityPlaceholder": "4",
+    "zone": "Zóna",
+    "zonePlaceholder": "Terasa, Okno, Hlavná sála...",
+    "image": "Fotografia",
+    "uploadImage": "Kliknite na nahranie fotografie",
+    "removeImage": "Odstrániť",
+    "isActive": "Aktívny",
+    "active": "Aktívny",
+    "inactive": "Neaktívny",
+    "save": "Uložiť",
+    "saving": "Ukladám...",
+    "cancel": "Zrušiť",
+    "delete": "Odstrániť",
+    "deleteConfirm": "Ste si istý, že chcete odstrániť tento stôl?",
+    "table": "Stôl",
+    "noTables": "Zatiaľ žiadne stoly. Pridajte svoj prvý stôl na povolenie rezervácií.",
+    "error": "Chyba",
+    "close": "Zavrieť",
+    "noReservations": "Zatiaľ žiadne rezervácie",
+    "pending": "Čakajúce",
+    "confirmed": "Potvrdené",
+    "cancelled": "Zrušené",
+    "completed": "Dokončené",
+    "confirm": "Potvrdiť",
+    "reject": "Odmietnuť",
+    "guests": "hostia",
+    "date": "Dátum",
+    "time": "Čas",
+    "guest": "Hosť",
+    "status": "Stav",
+    "notes": "Poznámky",
+    "awaitingResponse": "Čaká na odpoveď",
+    "today": "Dnes",
+    "tomorrow": "Zajtra",
+    "otherReservations": "Iné rezervácie",
+    "sort": "Zoradiť"
+  },
+  "publicReserve": {
+    "title": "Rezervujte stôl",
+    "selectDate": "Vyberte dátum",
+    "selectTime": "Vyberte čas",
+    "selectGuests": "Počet hostí",
+    "selectTable": "Vyberte stôl",
+    "yourDetails": "Vaše údaje",
+    "name": "Meno",
+    "namePlaceholder": "Vaše meno",
+    "email": "Email",
+    "emailPlaceholder": "vas@email.com",
+    "phone": "Telefón (voliteľné)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Špeciálne požiadavky (voliteľné)",
+    "notesPlaceholder": "Akékoľvek špeciálne požiadavky alebo poznámky...",
+    "submit": "Rezervovať stôl",
+    "submitting": "Rezervujem...",
+    "success": "Rezervácia odoslaná!",
+    "successAuto": "Vaša rezervácia bola potvrdená. Čoskoro obdržíte potvrdzovací email.",
+    "successManual": "Vaša žiadosť o rezerváciu bola odoslaná. Obdržíte email, akonáhle bude potvrdená.",
+    "error": "Chyba",
+    "guests": "hostia",
+    "table": "Stôl",
+    "capacity": "kapacita",
+    "noAvailableTables": "Pre tento počet hostí nie sú k dispozícii žiadne stoly",
+    "back": "Späť do menu",
+    "noTimeSlotsAvailable": "Pre tento dátum nie sú k dispozícii žiadne časové sloty",
+    "loadingAvailability": "Kontrola dostupnosti..."
+  },
+  "publicMenu": {
+    "contacts": "Kontakty",
+    "language": "Jazyk",
+    "reserve": "Rezervovať stôl",
+    "onlineMenu": "Online menu",
+    "noCategories": "Žiadne dostupné kategórie",
+    "openInstagram": "Otvorené na Instagrame",
+    "makeCall": "Zavolať",
+    "writeWhatsApp": "Napísať na WhatsApp",
+    "openGoogleMaps": "Otvorené v Google Maps",
+    "noLocation": "Žiadna dostupná lokalita",
+    "english": "Angličtina",
+    "spanish": "Španielčina",
+    "allergens": "Alergény",
+    "allergensInfo": "Tento pokrm obsahuje nasledujúce alergény:",
+    "allergenNames": {
+      "gluten": "Glutén",
+      "crustaceans": "Kôrovce",
+      "eggs": "Vajcia",
+      "fish": "Ryby",
+      "peanuts": "Arašidy",
+      "soybeans": "Sója",
+      "dairy": "Mliečne výrobky",
+      "nuts": "Orechy",
+      "celery": "Zeler",
+      "mustard": "Horčica",
+      "sesame": "Sezam",
+      "sulphites": "Sulfity",
+      "lupin": "Ľuľkovec",
+      "molluscs": "Mäkkýše"
+    }
+  },
+  "faq": {
+    "title": "Často kladené otázky o QR menu pre reštaurácie a kaviarne",
+    "subtitle": "Nájdite odpovede na bežné otázky o vytváraní a správe vášho digitálneho QR menu pre reštaurácie a kaviarne",
+    "howto": {
+      "question": "Ako vytvoriť QR menu a webovú stránku reštaurácie v 4 jednoduchých krokoch?",
+      "answer": "Dostaňte svoju reštauráciu online za 5 minút - stačí zadať svoj e-mail a začať zo svojho telefónu",
+      "faqTitle": "Máte ďalšie otázky?",
+      "faqDescription": "Pozrite si naše komplexné FAQ, aby ste sa dozvedeli všetko o vytváraní a správe QR menu a webovej stránky vašej reštaurácie",
+      "faqButton": "Zobraziť všetky FAQ",
+      "contactButton": "Kontaktujte nás",
+      "steps": [
+        {
+          "name": "Prihláste sa pomocou e-mailu",
+          "text": "Získajte modernú webovú stránku reštaurácie s QR menu, kontaktnou stránkou s mapou, online rezerváciami a vlastným brandingom - všetko zahrnuté od začiatku."
+        },
+        {
+          "name": "Nastavte svoju reštauráciu",
+          "text": "Zadajte názov svojej reštaurácie a vyberte si jedinečné URL. Pridajte video alebo fotografiu na pozadí, nastavte farby svojej značky, povolte rezervácie stolov."
+        },
+        {
+          "name": "Pridajte kategórie a jedlá",
+          "text": "Vytvorte kategórie menu a pridajte jedlá s fotografiami. AI automaticky optimalizuje vaše obrázky a prekladá vaše menu do viac ako 10 jazykov."
+        },
+        {
+          "name": "Zobraziť vaše hotové menu",
+          "text": "Vaša profesionálna webová stránka je online! Zákazníci môžu prehliadať vaše menu, robiť rezervácie a nájsť vás na mape. Sledujte všetko s dennou analýzou."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Čo je QR menu pre reštauráciu a ako funguje?",
+        "answer": "QR menu pre reštauráciu je digitálne menu, ku ktorému sa zákazníci dostanú skenovaním QR kódu svojím smartfónom. IQ Rest vytvára profesionálnu webovú stránku digitálneho menu pre vašu reštauráciu alebo kaviareň, ktorá sa okamžite aktualizuje bez potreby pretláčania. Zákazníci jednoducho naskenujú kód a zobrazia si vaše menu na svojom zariadení."
+      },
+      {
+        "question": "Koľko stojí QR menu pre reštauráciu alebo kaviareň?",
+        "answer": "IQ Rest ponúka flexibilné ceny začínajúce od 0 € navždy s naším bezplatným plánom. To robí vytvorenie profesionálneho QR menu dostupným pre akúkoľvek reštauráciu alebo kaviareň. Platené plány začínajú len na 4 €/mesiac s ďalšími funkciami ako neobmedzené položky a pokročilé analýzy."
+      },
+      {
+        "question": "Môžem vytvoriť webovú stránku pre svoju reštauráciu bez programovania?",
+        "answer": "Áno! IQ Rest je navrhnutý pre majiteľov reštaurácií a kaviarní bez akýchkoľvek technických znalostí. Môžete vytvoriť kompletnú webovú stránku digitálneho menu pre svoju reštauráciu za pár minút, bez potreby programovacích alebo kódovacích zručností. Jednoducho pridajte svoje jedlá, ceny a fotografie prostredníctvom nášho intuitívneho rozhrania."
+      },
+      {
+        "question": "Ako často môžem aktualizovať svoje QR menu?",
+        "answer": "Svoje menu reštaurácie alebo kaviarne môžete aktualizovať tak často, ako potrebujete. Všetky zmeny sa odrážajú v reálnom čase, čo vám umožňuje okamžite aktualizovať ceny, pridávať nové jedlá alebo meniť popisy bez potreby pretláčania fyzických menu. Ideálne pre denné špeciály a sezónne aktualizácie."
+      },
+      {
+        "question": "Funguje QR menu pre reštaurácie aj kaviarne?",
+        "answer": "Absolútne! IQ Rest je ideálny pre reštaurácie, kaviarne, kaviarne, bary, food trucky a akékoľvek podniky v oblasti stravovania. Naše digitálne menu riešenie sa prispôsobí akémukoľvek typu zariadenia, od malých kaviarní po veľké reštauračné reťazce."
+      },
+      {
+        "question": "Ako funguje automatický preklad menu?",
+        "answer": "Náš systém QR menu používa umelú inteligenciu na automatický preklad menu vašej reštaurácie alebo kaviarne do viacerých jazykov. To je ideálne pre turistické oblasti a medzinárodných zákazníkov. Môžete ponúknuť svoje menu v angličtine, španielčine a ďalších jazykoch, čo vám pomôže obslúžiť viac zákazníkov."
+      },
+      {
+        "question": "Môžem vyskúšať riešenie QR menu zadarmo?",
+        "answer": "Áno! Ponúkame úplne bezplatný plán pre reštaurácie a kaviarne, aby si mohli vyskúšať IQ Rest. Môžete vytvoriť svoju webovú stránku digitálneho menu s až 15 položkami bez nákladov, navždy. Na začiatok nie je potrebná žiadna kreditná karta. Upgradujte len vtedy, keď potrebujete viac funkcií."
+      },
+      {
+        "question": "Je IQ Rest aplikácia, ktorú si zákazníci musia stiahnuť?",
+        "answer": "Nie! Toto je jedna z najlepších výhod. Zákazníci nemusia sťahovať žiadnu aplikáciu. Jednoducho naskenujú váš QR kód a menu sa okamžite otvorí v ich webovom prehliadači. To je oveľa pohodlnejšie ako aplikácie reštaurácií, ktoré vyžadujú sťahovanie."
+      },
+      {
+        "question": "Aké sú výhody digitálnej webovej stránky menu pre moju reštauráciu?",
+        "answer": "Digitálna webová stránka menu ponúka mnoho výhod: okamžité aktualizácie menu bez nákladov na pretláčanie, viacjazyčnú podporu pre medzinárodných zákazníkov, bezkontaktné objednávanie pre bezpečnosť, analytiku na sledovanie populárnych jedál a profesionálnu prezentáciu. Navyše je to ekologické, pretože eliminujete odpad z papierových menu."
+      },
+      {
+        "question": "Ako vytvorím QR kód pre menu mojej reštaurácie?",
+        "answer": "IQ Rest automaticky generuje profesionálny QR kód, keď vytvoríte svoje digitálne menu. Tento QR kód si môžete stiahnuť a vytlačiť pre stoly vašej reštaurácie, vstup alebo výdajný pult. QR kód je prispôsobiteľný a kvalitný pre jasné skenovanie."
+      }
+    ],
+    "cta": {
+      "title": "Stále máte otázky?",
+      "subtitle": "Opýtajte sa nás a získajte odpoveď v najkratšom možnom čase",
+      "button": "Kontaktujte nás"
+    },
+    "linkTitle": "Máte otázky?",
+    "linkDescription": "Pozrite si naše často kladené otázky, aby ste sa dozvedeli viac o IQ Rest",
+    "meta": {
+      "title": "Často kladené otázky - IQ Rest",
+      "description": "Nájdite odpovede na bežné otázky o digitálnom QR menu riešení IQ Rest pre reštaurácie a kaviarne"
+    }
+  },
+  "billing": {
+    "title": "Fakturácia",
+    "description": "Spravujte svoje predplatné a fakturáciu",
+    "unauthorized": "Prosím, prihláste sa na správu svojho predplatného",
+    "perMonth": "/mesiac",
+    "currentPlan": "Aktuálny plán",
+    "upgrade": "Zvýšiť",
+    "manage": "Spravovať",
+    "subscriptionSuccess": "Vaše predplatné bolo úspešne aktivované!",
+    "subscriptionCanceled": "Proces predplatného bol zrušený.",
+    "subscriptionProcessing": "Vaša platba sa spracováva. Môže to chvíľu trvať, kým sa aktivuje.",
+    "processingPayment": "Spracovávame vašu platbu...",
+    "processingPaymentDescription": "Prosím, počkajte, kým potvrdíme vaše predplatné. Zvyčajne to trvá niekoľko sekúnd.",
+    "checkoutError": "Nepodarilo sa začať proces platby. Skúste to prosím znova.",
+    "portalError": "Nepodarilo sa otvoriť fakturačný portál. Skúste to prosím znova.",
+    "detailsNote": "Pre viac informácií navštívte našu",
+    "pricingPage": "Cenovú stránku",
+    "plans": {
+      "FREE": {
+        "name": "Bezplatný"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Základný mesačný"
+      },
+      "BASIC_YEARLY": {
+        "name": "Základný ročný"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro mesačný"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro ročný"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Nástenka",
+      "onboarding": "Úvod",
+      "qrMenu": "QR Menu",
+      "analytics": "Analytika",
+      "categories": "Kategórie",
+      "items": "Položky",
+      "settings": "Všeobecné",
+      "design": "Dizajn",
+      "contacts": "Kontakty",
+      "languages": "Jazyky",
+      "reservations": "Rezervácie",
+      "reservationSettings": "Nastavenia rezervácie",
+      "tables": "Stoly",
+      "billing": "Fakturácia",
+      "support": "Podpora"
+    },
+    "sidebar": {
+      "qrMenu": "QR Menu",
+      "menu": "Menu",
+      "settings": "Nastavenia",
+      "reservations": "Rezervácie",
+      "account": "Účet",
+      "reservationSettings": "Konfigurácia"
+    },
+    "logout": "Odhlásiť sa",
+    "auth": {
+      "title": "Prihlásiť sa",
+      "subtitle": "Moderná webová stránka s QR menu, rezerváciami a AI prekladmi",
+      "benefits": "Žiadne heslá. Žiadna kreditná karta.",
+      "emailPlaceholder": "tvoj@email.com",
+      "continue": "Pokračovať",
+      "verifyTitle": "Skontrolujte svoj e-mail",
+      "verifySubtitle": "Poslali sme kód na {email}",
+      "verify": "Overiť",
+      "changeEmail": "Použiť iný e-mail",
+      "errors": {
+        "sendFailed": "Nepodarilo sa poslať kód. Skúste to prosím znova.",
+        "verifyFailed": "Neplatný kód. Skúste to prosím znova."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Mesačné používanie",
+      "scansThisMonth": "skany tento mesiac",
+      "limitReached": "Dosiahli ste svoj mesačný limit skenovania. Upgradujte svoj plán na neobmedzené skeny.",
+      "todayViews": "Dnes",
+      "weeklyViews": "Tento týždeň",
+      "monthlyViews": "Tento mesiac",
+      "uniqueVisitors": "Jedineční návštevníci",
+      "viewsByPage": "Zobrazenia podľa stránky",
+      "viewsByLanguage": "Zobrazenia podľa jazyka",
+      "dailyViews": "Denné zobrazenia",
+      "noData": "Údaje zatiaľ nie sú k dispozícii",
+      "pageNames": {
+        "home": "Domov",
+        "menu": "Menu",
+        "contacts": "Kontakty",
+        "language": "Jazyk",
+        "reserve": "Rezervovať"
+      },
+      "languageNames": {
+        "en": "Angličtina",
+        "es": "Španielčina",
+        "de": "Nemčina",
+        "fr": "Francúzština",
+        "ru": "Ruština"
+      }
+    },
+    "categories": {
+      "noCategories": "Zatiaľ žiadne kategórie. Vytvorte svoju prvú kategóriu, aby ste mohli začať.",
+      "addCategory": "Pridať",
+      "editCategory": "Upraviť kategóriu",
+      "name": "Názov",
+      "namePlaceholder": "Zadajte názov kategórie",
+      "status": "Stav",
+      "active": "Aktívne",
+      "inactive": "Neaktívne",
+      "save": "Uložiť",
+      "saving": "Ukladám...",
+      "cancel": "Zrušiť",
+      "delete": "Odstrániť",
+      "deleteConfirm": "Ste si istý, že chcete odstrániť túto kategóriu? Túto akciu nie je možné zrušiť.",
+      "fetchError": "Nepodarilo sa načítať kategórie",
+      "updateError": "Nepodarilo sa aktualizovať kategóriu",
+      "saveError": "Nepodarilo sa uložiť kategóriu",
+      "deleteError": "Nepodarilo sa odstrániť kategóriu",
+      "translateError": "Preklad zlyhal",
+      "nameRequired": "Názov je povinný",
+      "enabled": "povolené",
+      "disabled": "zakázané",
+      "created": "Kategória vytvorená",
+      "updated": "Kategória aktualizovaná",
+      "deleted": "Kategória odstránená",
+      "validationErrorTitle": "Prosím, opravte nasledujúce chyby",
+      "sort": "Triediť",
+      "saveSort": "Uložiť",
+      "sortSaved": "Poradie triedenia uložené",
+      "sortError": "Nepodarilo sa uložiť poradie triedenia"
+    },
+    "items": {
+      "noItems": "Zatiaľ žiadne položky. Vytvorte svoju prvú položku a začnite.",
+      "addItem": "Pridať",
+      "editItem": "Upraviť položku",
+      "name": "Názov",
+      "namePlaceholder": "Zadajte názov položky",
+      "description": "Popis",
+      "descriptionPlaceholder": "Zadajte popis položky",
+      "price": "Cena",
+      "pricePlaceholder": "0.00",
+      "category": "Kategória",
+      "categoryPlaceholder": "Vyberte kategóriu",
+      "image": "Obrázok",
+      "uploadImage": "Nahrať obrázok",
+      "removeImage": "Odstrániť obrázok",
+      "status": "Stav",
+      "active": "Aktívne",
+      "inactive": "Neaktívne",
+      "save": "Uložiť",
+      "saving": "Ukladám...",
+      "cancel": "Zrušiť",
+      "delete": "Odstrániť",
+      "deleteConfirm": "Ste si istí, že chcete odstrániť túto položku? Túto akciu nie je možné zrušiť.",
+      "fetchError": "Nepodarilo sa načítať položky",
+      "updateError": "Nepodarilo sa aktualizovať položku",
+      "saveError": "Nepodarilo sa uložiť položku",
+      "deleteError": "Nepodarilo sa odstrániť položku",
+      "translateError": "Preklad zlyhal",
+      "nameRequired": "Názov je povinný",
+      "categoryRequired": "Kategória je povinná",
+      "priceRequired": "Platná cena je povinná",
+      "enabled": "povolené",
+      "disabled": "zakázané",
+      "created": "Položka vytvorená",
+      "updated": "Položka aktualizovaná",
+      "deleted": "Položka odstránená",
+      "validationErrorTitle": "Prosím, opravte nasledujúce chyby",
+      "sort": "Zoradiť",
+      "saveSort": "Uložiť",
+      "sortSaved": "Poradie uložené",
+      "sortError": "Nepodarilo sa uložiť poradie",
+      "allergens": "Alergény",
+      "allergensHint": "Vyberte alergény prítomné v tomto jedle",
+      "allergenNames": {
+        "gluten": "Glutén",
+        "crustaceans": "Kôrovce",
+        "eggs": "Vajcia",
+        "fish": "Ryby",
+        "peanuts": "Arašidy",
+        "soybeans": "Sója",
+        "dairy": "Mliečne výrobky",
+        "nuts": "Orechy",
+        "celery": "Zeler",
+        "mustard": "Horčica",
+        "sesame": "Sezam",
+        "sulphites": "Sulfity",
+        "lupin": "Lúpan",
+        "molluscs": "Mollusky"
+      }
+    },
+    "languages": {
+      "translationProgress": "Pokrok prekladu",
+      "availableLanguages": "Dostupné jazyky",
+      "europeanLanguages": "Európske jazyky",
+      "starToSetDefault": "Kliknite na hviezdičku, aby ste nastavili ako predvolený",
+      "default": "predvolený",
+      "hint": "Povoľte jazyky, aby ste umožnili zákazníkom zobraziť vaše menu v rôznych jazykoch. Predvolený jazyk sa používa pre hlavný obsah.",
+      "fetchError": "Nepodarilo sa načítať jazyky",
+      "enableError": "Nepodarilo sa povoliť jazyk",
+      "disableError": "Nepodarilo sa zakázať jazyk",
+      "defaultError": "Nepodarilo sa nastaviť predvolený jazyk",
+      "languageEnabled": "{language} povolené",
+      "languageDisabled": "{language} zakázané",
+      "defaultSet": "{language} nastavené ako predvolené",
+      "cannotDisableDefault": "Nie je možné zakázať predvolený jazyk",
+      "atLeastOneRequired": "Vyžaduje sa aspoň jeden jazyk",
+      "enableFirst": "Najprv povoľte jazyk",
+      "deleteConfirm": "Zakázanie tohto jazyka odstráni všetky preklady preň. Túto akciu nie je možné zrušiť.",
+      "cancel": "Zrušiť",
+      "confirm": "Zakázať"
+    },
+    "contacts": {
+      "phone": "Telefón",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Kontaktné telefónne číslo pre vašich zákazníkov",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "vaša_reštaurácia",
+      "instagramHint": "Vaše užívateľské meno na Instagrame (bez @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp číslo pre otázky zákazníkov",
+      "location": "Poloha",
+      "locationHint": "Kliknite na mapu alebo hľadajte, aby ste nastavili polohu vašej reštaurácie",
+      "save": "Uložiť",
+      "fetchError": "Nepodarilo sa načítať kontaktné informácie",
+      "saveError": "Nepodarilo sa uložiť kontaktné informácie",
+      "saved": "Kontaktné informácie uložené"
+    },
+    "design": {
+      "background": "Pozadie",
+      "backgroundHint": "Nahrajte video alebo obrázok pre pozadie vašej domovskej stránky",
+      "uploadMedia": "Nahrať video alebo obrázok",
+      "removeMedia": "Odstrániť",
+      "accentColor": "Akcentová farba",
+      "accentColorHint": "Hlavná farba pre tlačidlá a zvýraznenia na vašej webovej stránke",
+      "presetColors": "Prednastavené farby",
+      "customColor": "Vlastná farba",
+      "save": "Uložiť",
+      "fetchError": "Nepodarilo sa načítať nastavenia dizajnu",
+      "saveError": "Nepodarilo sa uložiť nastavenia dizajnu",
+      "saved": "Nastavenia dizajnu uložené",
+      "uploadError": "Nepodarilo sa nahrať súbor",
+      "invalidFileType": "Neplatný typ súboru. Povolené: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Súbor je príliš veľký. Maximálna veľkosť: 50MB pre videá, 5MB pre obrázky"
+    },
+    "general": {
+      "name": "Názov",
+      "namePlaceholder": "Zadajte názov reštaurácie",
+      "nameHint": "Zobrazené na domovskej stránke vašej verejnej webovej stránky",
+      "description": "Podnadpis",
+      "descriptionPlaceholder": "Krátky popis (voliteľné)",
+      "descriptionHint": "Zobrazené pod názvom na domovskej stránke",
+      "slug": "URL Slug",
+      "slugPlaceholder": "moje-reštaurácia",
+      "slugHint": "Vaša webová stránka bude dostupná na: iq-rest.com/{slug}",
+      "currency": "Mena",
+      "currencyPlaceholder": "Vyberte menu",
+      "save": "Uložiť",
+      "fetchError": "Nepodarilo sa načítať nastavenia",
+      "saveError": "Nepodarilo sa uložiť nastavenia",
+      "saved": "Nastavenia uložené",
+      "nameRequired": "Názov reštaurácie je povinný",
+      "slugRequired": "URL slug je povinný",
+      "validationErrorTitle": "Prosím, opravte nasledujúce chyby",
+      "slugChangedTitle": "Adresa webovej stránky bola aktualizovaná",
+      "slugChangedDescription": "Vaša reštaurácia je teraz dostupná na:",
+      "close": "Zavrieť",
+      "view": "Zobraziť"
+    },
+    "onboarding": {
+      "title": "Vitajte v IQ Rest!",
+      "subtitle": "Dokončite tieto kroky na spustenie webovej stránky vašej reštaurácie",
+      "requiredSteps": "Povinné kroky",
+      "optionalSteps": "Voliteľné kroky",
+      "viewMenu": "Zobraziť vaše menu",
+      "steps": {
+        "title": {
+          "name": "Pridať názov reštaurácie",
+          "description": "Dajte svojej reštaurácii názov, ktorý sa zobrazí na vašej webovej stránke"
+        },
+        "slug": {
+          "name": "Nastaviť adresu webovej stránky",
+          "description": "Vyberte jedinečné URL pre webovú stránku vašej reštaurácie"
+        },
+        "categories": {
+          "name": "Vytvoriť kategórie menu",
+          "description": "Organizujte svoje menu do kategórií ako Predjedlá, Hlavné jedlá, atď."
+        },
+        "items": {
+          "name": "Pridať položky do menu",
+          "description": "Pridajte jedlá do svojho menu s cenami a popismi"
+        },
+        "design": {
+          "name": "Prispôsobiť dizajn",
+          "description": "Vyberte farby a pozadie pre vašu webovú stránku"
+        },
+        "contacts": {
+          "name": "Pridať kontaktné informácie",
+          "description": "Pridajte telefón, WhatsApp, Instagram a polohu"
+        },
+        "reservations": {
+          "name": "Povoliť rezervácie",
+          "description": "Umožnite zákazníkom rezervovať stoly online"
+        },
+        "translations": {
+          "name": "Pridať jazyky",
+          "description": "Zabezpečte, aby bolo vaše menu dostupné v niekoľkých jazykoch"
+        }
+      },
+      "completed": "Dokončené",
+      "notCompleted": "Nedokončené",
+      "allDone": "Všetko hotové! Vaše menu je online.",
+      "requiredRemaining": "Zostáva {count} povinných krokov"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Aby ste mohli sprístupniť rezervácie vašim hosťom v reštaurácii, musíte sa prihlásiť na službu.",
+    "subscribe": "Prihlásiť sa",
+    "reservationsEnabled": "Povoliť rezervácie",
+    "enabled": "Rezervácie sú povolené",
+    "disabled": "Rezervácie sú zakázané",
+    "reservationMode": "Režim potvrdenia",
+    "modeAuto": "Automatický",
+    "modeManual": "Ručný",
+    "modeAutoDescription": "Rezervácie budú automaticky potvrdené na základe dostupnosti stolov",
+    "modeManualDescription": "Každú rezerváciu budete musieť potvrdiť ručne",
+    "slotDuration": "Dĺžka rezervácie",
+    "minutes": "minúty",
+    "workingHours": "Pracovné hodiny",
+    "save": "Uložiť",
+    "saving": "Ukladá sa...",
+    "saved": "Nastavenia uložené",
+    "fetchError": "Nepodarilo sa načítať nastavenia",
+    "saveError": "Nepodarilo sa uložiť nastavenia"
+  },
+  "terms": {
+    "title": "Podmienky a ustanovenia",
+    "lastUpdated": "Posledná aktualizácia: 17. december 2025",
+    "contact": {
+      "title": "Kontaktujte nás",
+      "description": "Ak máte akékoľvek otázky týkajúce sa týchto Podmienok a ustanovení, kontaktujte nás."
+    },
+    "sections": [
+      {
+        "title": "1. Úvod",
+        "content": [
+          "Vitajte v IQ Rest. Tieto Podmienky a ustanovenia upravujú vaše používanie našich webových stránok a služieb prevádzkovaných Bogdanom Sokolovom (Autónomo), NIE: Z1894474S, registrovaným v Španielsku.",
+          "Prístupom alebo používaním IQ Rest súhlasíte s týmito Podmienkami. Ak nesúhlasíte s ktoroukoľvek časťou týchto podmienok, nemôžete pristupovať k službe."
+        ]
+      },
+      {
+        "title": "2. Popis služby",
+        "content": [
+          "IQ Rest poskytuje digitálnu QR menu a platformu na vytváranie webových stránok pre reštaurácie, kaviarne a stravovacie zariadenia. Naša služba zahŕňa správu menu, generovanie QR kódov, viacjazyčnú podporu s prekladmi poháňanými AI, optimalizáciu obrázkov pomocou AI, systémy rezervácie stolov a analytiku.",
+          "Vyhradzujeme si právo kedykoľvek bez predchádzajúceho upozornenia upraviť, pozastaviť alebo zrušiť akýkoľvek aspekt služby."
+        ]
+      },
+      {
+        "title": "3. Registrácia účtu",
+        "content": [
+          "Na používanie určitých funkcií IQ Rest sa musíte zaregistrovať pomocou platnej e-mailovej adresy. Ste zodpovední za udržanie dôvernosti vášho účtu a za všetky aktivity, ktoré sa uskutočňujú pod vaším účtom.",
+          "Súhlasíte s poskytnutím presných, aktuálnych a úplných informácií počas registrácie a s aktualizáciou týchto informácií, aby ste ich udržali presné, aktuálne a úplné.",
+          "Používame autentifikáciu bez hesla prostredníctvom overovacích kódov zaslaných na e-mail. Ste zodpovední za zabezpečenie vášho e-mailového účtu."
+        ]
+      },
+      {
+        "title": "4. Predplatné plány a platby",
+        "content": [
+          "IQ Rest ponúka bezplatné, základné a profesionálne predplatné plány. Bezplatný plán je k dispozícii bez nákladov s obmedzenými funkciami. Platené plány (Základný a Profesionálny) sú fakturované mesačne alebo ročne prostredníctvom nášho spracovateľa platieb, Stripe.",
+          "Ceny sú zobrazené v eurách (EUR). Predplatným plateného plánu nám dávate súhlas na pravidelné zaúčtovanie vašej platobnej metódy, kým ho nezrušíte.",
+          "Môžete kedykoľvek upgradovať, downgradeovať alebo zrušiť svoje predplatné prostredníctvom svojho ovládacieho panela. Zrušenia nadobúdajú účinnosť na konci aktuálneho fakturačného obdobia. Žiadne refundácie nie sú poskytované za čiastočné fakturačné obdobia.",
+          "Vyhradzujeme si právo zmeniť naše ceny s 30-dňovým upozornením. Zmeny cien sa budú vzťahovať na fakturačné obdobia začínajúce po uplynutí oznámenia."
+        ]
+      },
+      {
+        "title": "5. Funkcie poháňané AI",
+        "content": [
+          "IQ Rest používa umelú inteligenciu na preklady menu a optimalizáciu obrázkov. Aj keď sa snažíme o presnosť, preklady generované AI môžu obsahovať chyby. Ste zodpovední za kontrolu a overenie všetkého obsahu generovaného AI pred jeho publikovaním.",
+          "Optimalizácia obrázkov pomocou AI automaticky spracováva nahrané obrázky na zlepšenie výkonu načítania. Pôvodné obrázky nie sú po spracovaní uložené.",
+          "Neručíme za presnosť, úplnosť ani spoľahlivosť obsahu generovaného AI. Uznávate, že funkcie AI sú poskytované 'tak, ako sú' a používate ich na vlastné riziko."
+        ]
+      },
+      {
+        "title": "6. Obsah používateľa",
+        "content": [
+          "Zachovávate vlastníctvo všetkého obsahu, ktorý nahráte do IQ Rest, vrátane položiek menu, popisov, obrázkov a informácií o podnikaní.",
+          "Nahraním obsahu udeľujete IQ Rest nevýhradnú, celosvetovú, bezodplatnú licenciu na používanie, zobrazenie a distribúciu vášho obsahu výlučne na účely poskytovania služby.",
+          "Ste výlučne zodpovední za obsah, ktorý nahráte, a musíte zabezpečiť, aby neporušoval žiadne zákony ani práva tretích strán. Zakázaný obsah zahŕňa: nezákonný materiál, autorsky chránený obsah bez povolenia, zavádzajúce alebo podvodné informácie a obsah, ktorý porušuje predpisy o zdraví a bezpečnosti."
+        ]
+      },
+      {
+        "title": "7. Prijateľné používanie",
+        "content": [
+          "Súhlasíte s tým, že nebudete používať IQ Rest na žiadny nezákonný účel alebo akýmkoľvek spôsobom, ktorý by mohol poškodiť, deaktivovať alebo narušiť službu.",
+          "Zakázané aktivity zahŕňajú: pokusy o neoprávnený prístup k iným účtom alebo systémom, používanie služby na distribúciu spamu alebo malvéru, scraping alebo ťažbu dát, predstieranie identity iných osôb alebo podnikov a obchádzanie limitov používania alebo bezpečnostných opatrení."
+        ]
+      },
+      {
+        "title": "8. Duševné vlastníctvo",
+        "content": [
+          "Názov IQ Rest, logo, dizajn webových stránok a všetko súvisiace duševné vlastníctvo sú vlastníctvom Bogdana Sokolova a sú chránené príslušnými zákonmi o duševnom vlastníctve.",
+          "Nemôžete kopírovať, upravovať, distribuovať ani vytvárať odvodené dielo na základe nášho duševného vlastníctva bez výslovného písomného povolenia."
+        ]
+      },
+      {
+        "title": "9. Ochrana osobných údajov a ochrana údajov",
+        "content": [
+          "Vaše používanie IQ Rest sa riadi aj našou Zásadou ochrany osobných údajov. Dodržiavame Všeobecné nariadenie o ochrane údajov (GDPR) a španielske zákony o ochrane údajov (LOPDGDD).",
+          "Zhromažďujeme a spracovávame osobné údaje potrebné na poskytovanie služby, vrátane e-mailových adries, informácií o podnikaní a analytiky používania. Kedykoľvek môžete požiadať o prístup k svojim osobným údajom, ich opravu alebo vymazanie."
+        ]
+      },
+      {
+        "title": "10. Obmedzenie zodpovednosti",
+        "content": [
+          "IQ Rest je poskytované 'tak, ako je' a 'podľa dostupnosti' bez akýchkoľvek záruk, či už výslovných alebo implicitných, vrátane, ale nie obmedzene na, implicitné záruky obchodovateľnosti a vhodnosti na konkrétny účel.",
+          "V maximálnom rozsahu povolenom zákonom, Bogdan Sokolov nenesie zodpovednosť za žiadne nepriame, náhodné, osobitné, následné alebo trestné škody, vrátane straty zisku, údajov alebo obchodných príležitostí.",
+          "Naša celková zodpovednosť za akékoľvek nároky vyplývajúce z alebo súvisiace so službou nepresiahne sumu, ktorú ste nám zaplatili v dvanástich (12) mesiacoch predchádzajúcich nároku."
+        ]
+      },
+      {
+        "title": "11. Odškodnenie",
+        "content": [
+          "Súhlasíte s tým, že odškodníte, obhájite a ochránite Bogdana Sokolova pred akýmikoľvek nárokmi, škodami, stratami alebo výdavkami vyplývajúcimi z vášho používania služby, vášho obsahu alebo vášho porušenia týchto Podmienok."
+        ]
+      },
+      {
+        "title": "12. Dostupnosť služby",
+        "content": [
+          "Snažíme sa udržiavať vysokú dostupnosť našich služieb, ale nezaručujeme neprerušený prístup. Služba môže byť dočasne nedostupná z dôvodu údržby, aktualizácií alebo okolností mimo našu kontrolu.",
+          "Nesmieme byť zodpovední za akékoľvek straty alebo škody vyplývajúce z prerušenia služby alebo výpadkov."
+        ]
+      },
+      {
+        "title": "13. Ukončenie",
+        "content": [
+          "Môžeme okamžite ukončiť alebo pozastaviť váš účet bez predchádzajúceho upozornenia za správanie, ktoré považujeme za porušenie týchto Podmienok alebo ktoré je škodlivé pre iných používateľov, nás alebo tretie strany.",
+          "Po ukončení vaše právo používať službu okamžite zaniká. Môžeme vymazať vaše údaje do 30 dní od ukončenia, pokiaľ nie sme právne povinní ich uchovávať."
+        ]
+      },
+      {
+        "title": "14. Zmeny podmienok",
+        "content": [
+          "Vyhradzujeme si právo kedykoľvek upraviť tieto Podmienky. O významných zmenách vás budeme informovať e-mailom alebo prostredníctvom služby.",
+          "Vaše pokračujúce používanie IQ Rest po nadobudnutí účinnosti zmien predstavuje akceptáciu revidovaných Podmienok."
+        ]
+      },
+      {
+        "title": "15. Rozhodné právo a jurisdikcia",
+        "content": [
+          "Tieto Podmienky sa riadia zákonmi Španielska a Európskej únie. Akékoľvek spory vyplývajúce z týchto Podmienok alebo vášho používania IQ Rest podliehajú výlučnej jurisdikcii súdov v Španielsku.",
+          "Ak sa akékoľvek ustanovenie týchto Podmienok ukáže ako nevykonateľné, zostávajúce ustanovenia budú naďalej v plnej platnosti a účinnosti."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobných údajov",
+    "lastUpdated": "Posledná aktualizácia: 17. decembra 2025",
+    "contact": {
+      "title": "Kontaktujte nás",
+      "description": "Ak máte akékoľvek otázky týkajúce sa týchto Zásad ochrany osobných údajov alebo si prajete uplatniť svoje práva na ochranu údajov, prosím, kontaktujte nás.",
+      "controller": "Správca údajov"
+    },
+    "sections": [
+      {
+        "title": "1. Úvod",
+        "content": [
+          "Tieto Zásady ochrany osobných údajov vysvetľujú, ako IQ Rest, prevádzkovaný Bogdanom Sokolovom (Autónomo), NIE: Z1894474S, registrovaným v Španielsku, zhromažďuje, používa, uchováva a chráni vaše osobné údaje, keď používate našu platformu QR menu.",
+          "Zaväzujeme sa chrániť vaše súkromie a dodržiavať Všeobecné nariadenie o ochrane údajov (GDPR), španielsku organickú zákon o ochrane údajov (LOPDGDD) a ďalšie platné zákony o ochrane údajov."
+        ]
+      },
+      {
+        "title": "2. Správca údajov",
+        "content": [
+          "Správcom údajov zodpovedným za vaše osobné údaje je: Bogdan Sokolov (Autónomo), NIE: Z1894474S, registrovaný v Španielsku. Pre akékoľvek otázky týkajúce sa ochrany údajov nás prosím kontaktujte na support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Osobné údaje, ktoré zhromažďujeme",
+        "content": [
+          "Informácie o účte: Pri registrácii zhromažďujeme vašu e-mailovú adresu na účely autentifikácie a komunikácie. Používame autentifikáciu bez hesla, takže neuchovávame heslá.",
+          "Informácie o podnikaní: Názov reštaurácie, popis, URL slug, kontaktné údaje (telefón, WhatsApp, Instagram), údaje o polohe a otváracie hodiny, ktoré poskytujete pre svoju verejnú webovú stránku menu.",
+          "Obsah menu: Kategórie, položky menu, popisy, ceny a obrázky, ktoré nahráte na vytvorenie svojho digitálneho menu.",
+          "Údaje o používaní: Informácie o tom, ako používate našu službu, vrátane zobrazení stránok, používania funkcií a vzorcov interakcie zhromaždených prostredníctvom analytiky.",
+          "Informácie o platbe: Keď sa prihlásite na platené plány, spracovanie platieb zabezpečuje Stripe. Neuchovávame vaše úplné údaje o kreditnej karte; Stripe spracováva a zabezpečuje tieto informácie.",
+          "Technické údaje: IP adresy, typ prehliadača, informácie o zariadení a cookies, ako je popísané v našich Zásadách používania cookies."
+        ]
+      },
+      {
+        "title": "4. Ako používame vaše údaje",
+        "content": [
+          "Vaše osobné údaje používame na nasledujúce účely: Na poskytovanie a udržiavanie našej služby QR menu, vrátane vytvárania webovej stránky vašej reštaurácie a generovania QR kódov. Na autentifikáciu vášho účtu pomocou overovacích kódov e-mailu. Na spracovanie platieb a správu vášho predplatného prostredníctvom Stripe. Na komunikáciu s vami o vašom účte, aktualizáciách služby a požiadavkách na podporu. Na poskytovanie funkcií poháňaných AI, ako sú preklady menu a optimalizácia obrázkov. Na analýzu používania služby a zlepšovanie našej platformy. Na dodržiavanie právnych povinností a ochranu našich legitímnych záujmov."
+        ]
+      },
+      {
+        "title": "5. Právny základ na spracovanie",
+        "content": [
+          "Plnenie zmluvy: Spracovanie potrebné na poskytovanie našich služieb vám (článok 6(1)(b) GDPR).",
+          "Legitímne záujmy: Analytika a zlepšovanie služieb, prevencia podvodov (článok 6(1)(f) GDPR).",
+          "Súhlas: Pre voliteľné funkcie ako marketingová komunikácia (článok 6(1)(a) GDPR).",
+          "Právna povinnosť: Keď to vyžaduje zákon alebo regulačné požiadavky (článok 6(1)(c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Ukladanie a zabezpečenie údajov",
+        "content": [
+          "Vaše údaje sú uložené na zabezpečených serveroch poskytovaných spoločnosťou Amazon Web Services (AWS). Naša databáza je hostená v regióne AWS Stockholm (eu-north-1) v rámci Európskej únie, čo zabezpečuje dodržiavanie požiadaviek na ochranu údajov EÚ.",
+          "Obrázky a mediálne súbory, ktoré nahráte, sú uložené na serveroch AWS S3 nachádzajúcich sa v regióne EÚ. Údaje sú šifrované počas prenosu pomocou TLS/SSL a v pokoji pomocou šifrovania AES-256.",
+          "Implementujeme vhodné technické a organizačné opatrenia na ochranu vašich údajov pred neoprávneným prístupom, zmenou, zverejnením alebo zničením. Tieto opatrenia zahŕňajú bezpečnú autentifikáciu, prístupové kontroly, pravidelné bezpečnostné audity a školenie zamestnancov."
+        ]
+      },
+      {
+        "title": "7. Zdieľanie údajov a tretie strany",
+        "content": [
+          "Zdieľame vaše údaje s nasledujúcimi kategóriami tretích strán:",
+          "Stripe (Spracovateľ platieb): Spracováva platby za predplatné. Stripe je certifikovaný podľa rámca ochrany osobných údajov EÚ-USA. Ich zásady ochrany osobných údajov: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastruktúra): Hostí naše servery a databázy v regiónoch EÚ. AWS dodržiava GDPR a je certifikovaný podľa rámca ochrany osobných údajov EÚ-USA.",
+          "Poskytovatelia AI služieb: Používame AI služby na preklady menu a optimalizáciu obrázkov. Údaje sú spracovávané v súlade s ich zásadami ochrany osobných údajov a dohodami o spracovaní údajov.",
+          "Google Analytics: Pre anonymizovanú analytiku webových stránok (ak je povolené). Môžete sa odhlásiť prostredníctvom preferencií cookies.",
+          "Nepredávame vaše osobné údaje tretím stranám. Môžeme zverejniť údaje, ak to vyžaduje zákon alebo na ochranu našich práv."
+        ]
+      },
+      {
+        "title": "8. Medzinárodné prenosy údajov",
+        "content": [
+          "Vaše údaje sú primárne uložené a spracovávané v rámci Európskej únie (AWS Stockholm, región eu-north-1). Keď sú údaje prenášané mimo EÚ (napríklad k poskytovateľom služieb so sídlom v USA), zabezpečujeme, aby boli prijaté vhodné ochranné opatrenia, vrátane štandardných zmluvných doložiek (SCC) a certifikácie podľa uznávaných rámcov ochrany údajov."
+        ]
+      },
+      {
+        "title": "9. Uchovávanie údajov",
+        "content": [
+          "Údaje o účte: Uchovávané, kým je váš účet aktívny. Po zrušení účtu sú osobné údaje odstránené do 30 dní, pokiaľ uchovávanie nie je vyžadované zákonom.",
+          "Obsah menu: Uchovávané, kým je váš účet aktívny. Odstránené po ukončení účtu.",
+          "Záznamy o platbách: Uchovávané po dobu 7 rokov, ako vyžaduje španielske daňové právo.",
+          "Údaje o analytike: Agregované a anonymizované údaje môžu byť uchovávané neobmedzene na zlepšenie služieb.",
+          "Zálohové údaje: Môžu byť uchovávané v šifrovaných zálohách až 90 dní po odstránení na účely obnovy po havárii."
+        ]
+      },
+      {
+        "title": "10. Vaše práva podľa GDPR",
+        "content": [
+          "Podľa GDPR máte nasledujúce práva týkajúce sa vašich osobných údajov:",
+          "Právo na prístup: Požiadajte o kópiu vašich osobných údajov, ktoré máme.",
+          "Právo na opravu: Požiadajte o opravu nepresných alebo neúplných údajov.",
+          "Právo na vymazanie: Požiadajte o vymazanie vašich osobných údajov ('právo na zabudnutie').",
+          "Právo na obmedzenie: Požiadajte o obmedzenie spracovania za určitých okolností.",
+          "Právo na prenosnosť údajov: Získajte svoje údaje v štruktúrovanom, strojovo čitateľnom formáte.",
+          "Právo namietať: Namietať proti spracovaniu na základe legitímnych záujmov alebo na účely priameho marketingu.",
+          "Právo na odvolanie súhlasu: Ak je spracovanie založené na súhlase, môžete ho kedykoľvek odvolať.",
+          "Na uplatnenie týchto práv nás kontaktujte na support@iq-rest.com. Odpovieme vám do 30 dní. Ak nebudete spokojní s našou odpoveďou, máte právo podať sťažnosť na španielsku Agentúru na ochranu údajov (AEPD) na www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Ochrana súkromia detí",
+        "content": [
+          "IQ Rest nie je určený na používanie osobami mladšími ako 16 rokov. Vedome nezbierame osobné údaje od detí. Ak sa dozvieme, že sme zhromaždili údaje od dieťaťa, okamžite ich vymažeme."
+        ]
+      },
+      {
+        "title": "12. Zmeny týchto zásad",
+        "content": [
+          "Tieto Zásady ochrany osobných údajov môžeme občas aktualizovať. O významných zmenách vás budeme informovať e-mailom alebo prostredníctvom oznámenia na našej webovej stránke. Dátum 'Posledná aktualizácia' na vrchu označuje, kedy boli zásady naposledy revidované.",
+          "Vaše pokračujúce používanie IQ Rest po zverejnení zmien predstavuje akceptáciu revidovaných zásad."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Zásady používania cookies",
+    "lastUpdated": "Posledná aktualizácia: 17. decembra 2025",
+    "yes": "Áno",
+    "no": "Nie",
+    "cookieTableTitle": "Cookies, ktoré používame",
+    "tableHeaders": {
+      "name": "Názov cookie",
+      "purpose": "Účel",
+      "duration": "Doba trvania",
+      "required": "Povinné"
+    },
+    "contact": {
+      "title": "Otázky o cookies",
+      "description": "Ak máte akékoľvek otázky týkajúce sa našich cookies, prosím kontaktujte nás."
+    },
+    "sections": [
+      {
+        "title": "1. Čo sú cookies",
+        "content": [
+          "Cookies sú malé textové súbory, ktoré sa ukladajú na vašom zariadení (počítač, tablet alebo mobilný telefón) pri návšteve webovej stránky. Pomáhajú webovým stránkam správne fungovať, pamätajú si vaše preferencie a poskytujú informácie vlastníkom webových stránok.",
+          "Tieto Zásady používania cookies vysvetľujú, ako IQ Rest, prevádzkované Bogdanom Sokolovom (Autónomo), používa cookies a podobné technológie na našej webovej stránke iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Ako používame cookies",
+        "content": [
+          "Cookies používame na niekoľko účelov: aby sme zabezpečili správne fungovanie našej webovej stránky, aby sme si zapamätali vaše preferencie a nastavenia, aby sme autentifikovali váš účet a udržali vás prihláseného, aby sme analyzovali, ako návštevníci používajú našu webovú stránku, aby sme ju mohli zlepšiť, a aby sme si zapamätali vaše preferencie týkajúce sa súhlasu s cookies."
+        ]
+      },
+      {
+        "title": "3. Typy cookies, ktoré používame",
+        "content": [
+          "Základné cookies: Tieto cookies sú nevyhnutné na fungovanie webovej stránky a nemožno ich vypnúť. Zvyčajne sa nastavujú v reakcii na akcie, ktoré vykonávate, ako je prihlásenie alebo nastavenie vašich preferencií ochrany súkromia.",
+          "Funkčné cookies: Tieto cookies umožňujú rozšírenú funkčnosť a personalizáciu, ako je zapamätanie vašej preferovanej jazykovej verzie a nastavení témy.",
+          "Analytické cookies: Tieto cookies nám pomáhajú pochopiť, ako návštevníci interagujú s našou webovou stránkou tým, že anonymne zbierajú a hlásia informácie. Tieto údaje používame na zlepšenie našich služieb.",
+          "Cookies tretích strán: Niektoré cookies sú umiestnené službami tretích strán, ktoré sa objavujú na našich stránkach, ako sú spracovatelia platieb (Stripe) a poskytovatelia analytiky (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Vaše voľby týkajúce sa cookies",
+        "content": [
+          "Keď prvýkrát navštívite našu webovú stránku, uvidíte banner so súhlasom s cookies, ktorý vám umožní prijať alebo odmietnuť nepovinné cookies. Svoje preferencie môžete kedykoľvek zmeniť.",
+          "Cookies môžete tiež ovládať prostredníctvom nastavení svojho prehliadača. Väčšina prehliadačov vám umožňuje odmietnuť cookies, vymazať existujúce cookies alebo byť upozornený, keď sa cookies odosielajú. Upozorňujeme, že blokovanie základných cookies môže ovplyvniť funkčnosť našej webovej stránky.",
+          "Ak sa chcete odhlásiť z sledovania Google Analytics, môžete nainštalovať rozšírenie prehliadača Google Analytics Opt-out."
+        ]
+      },
+      {
+        "title": "5. Doba trvania cookies",
+        "content": [
+          "Relácie cookies: Tieto cookies sú dočasné a vymažú sa, keď zavriete svoj prehliadač.",
+          "Trvalé cookies: Tieto cookies zostávajú na vašom zariadení po stanovenú dobu alebo kým ich nevymažete. Pomáhajú nám vás rozpoznať, keď sa vrátite na našu webovú stránku."
+        ]
+      },
+      {
+        "title": "6. Cookies tretích strán",
+        "content": [
+          "Stripe: Používa sa na zabezpečené spracovanie platieb. Stripe môže nastaviť cookies na prevenciu podvodov a zabezpečenie platieb. Viac informácií nájdete na stripe.com/cookies-policy",
+          "Google Analytics: Používa sa na zbieranie anonymných štatistík o používaní webovej stránky. Môžete sa odhlásiť pomocou banneru s cookies alebo nastavení prehliadača. Viac informácií nájdete na policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Aktualizácie týchto zásad",
+        "content": [
+          "Tieto Zásady používania cookies môžeme občas aktualizovať, aby sme odrážali zmeny v našich praktikách alebo z operatívnych, právnych alebo regulačných dôvodov. Dátum 'Posledná aktualizácia' na vrchu indikuje, kedy boli zásady naposledy revidované."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Udržuje vašu prihlásenú reláciu a stav autentifikácie",
+        "duration": "Relácia / 30 dní",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Pamätá si váš preferovaný jazyk (angličtina/španielčina)",
+        "duration": "1 rok",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Ukladá vašu preferenciu témy (svetlý/tmavý režim)",
+        "duration": "1 rok",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Pamätá si vaše preferencie týkajúce sa súhlasu s cookies",
+        "duration": "1 rok",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - sleduje anonymné štatistiky používania",
+        "duration": "2 roky / 24 hodín",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - prevencia podvodov a zabezpečenie platieb",
+        "duration": "1 rok / Relácia",
+        "required": false
+      }
+    ]
+  }
+}

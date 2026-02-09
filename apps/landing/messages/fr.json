@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menu",
+      "pricing": "Tarification",
+      "features": "Fonctionnalités",
+      "faq": "Questions",
+      "changelog": "Journal des modifications",
+      "contacts": "Contacts"
+    },
+    "getStarted": "Se connecter",
+    "selectLanguage": "Sélectionner la langue",
+    "selectLanguageDescription": "Choisissez votre langue préférée pour le site.",
+    "searchLanguage": "Rechercher une langue...",
+    "noLanguagesFound": "Aucune langue trouvée"
+  },
+  "home": {
+    "hero": {
+      "title": "Menu QR & Site Web pour Restaurant en 5 Minutes",
+      "subtitle": "Il vous suffit d'entrer votre email et d'obtenir un site web complet pour votre restaurant avec menu QR, page de contact, support multilingue et design moderne. Configurez tout depuis votre téléphone.",
+      "cta": {
+        "create": "Créer le Menu",
+        "view": "Voir le Menu Réel"
+      },
+      "benefits": [
+        {
+          "title": "Site web moderne",
+          "description": "Design professionnel qui a fière allure sur n'importe quel appareil"
+        },
+        {
+          "title": "Réservations",
+          "description": "Acceptez les réservations de tables directement depuis votre site web"
+        },
+        {
+          "title": "Traductions IA",
+          "description": "Traduction automatique du menu dans n'importe quelle langue"
+        },
+        {
+          "title": "Analytique quotidienne",
+          "description": "Suivez les visites et les plats populaires chaque jour"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Fiable par plus de 500 restaurants dans le monde",
+      "title": "Tout Ce Dont Votre Restaurant a Besoin en Ligne",
+      "description": "Inscrivez-vous avec juste votre email et obtenez instantanément : un site web professionnel pour votre restaurant, un menu QR au format moderne, une page de contact fonctionnelle avec carte, un support multilingue avec traduction IA, un fond vidéo ou photo, et un schéma de couleurs personnalisé. Tout gérable depuis votre téléphone - aucun ordinateur requis."
+    },
+    "whyUs": {
+      "title": "De Zéro à Menu en Ligne en 5 Minutes",
+      "subtitle": "Juste 4 étapes simples pour mettre votre restaurant en ligne",
+      "items": [
+        {
+          "step": "1",
+          "title": "Entrez Votre Email",
+          "description": "Inscription rapide avec juste votre adresse email. Pas de carte de crédit requise."
+        },
+        {
+          "step": "2",
+          "title": "Remplissez les Informations du Restaurant",
+          "description": "Ajoutez le nom de votre restaurant, l'adresse, les contacts et les horaires d'ouverture."
+        },
+        {
+          "step": "3",
+          "title": "Ajoutez des Articles au Menu",
+          "description": "Créez des catégories et ajoutez vos plats avec des photos et des prix."
+        },
+        {
+          "step": "4",
+          "title": "Profitez de Votre Menu",
+          "description": "Votre menu QR est prêt ! Partagez-le avec les clients et suivez les analyses."
+        }
+      ],
+      "cta": "Prêt à Moderniser Votre Restaurant ?"
+    },
+    "featuresPreview": {
+      "title": "Fonctionnalités Puissantes pour Votre Restaurant",
+      "subtitle": "Tout ce dont vous avez besoin pour créer une présence en ligne professionnelle",
+      "viewAll": "Voir Toutes les Fonctionnalités"
+    }
+  },
+  "features": {
+    "title": "Fonctionnalités puissantes pour votre menu QR de restaurant et votre site Web",
+    "subtitle": "Tout ce dont vous avez besoin pour créer une présence numérique professionnelle pour votre restaurant ou café",
+    "backToFeatures": "Retour aux fonctionnalités",
+    "getStarted": "Créer un menu",
+    "viewPricing": "Voir les prix",
+    "readyTitle": "Prêt à commencer ?",
+    "readyDescription": "Créez votre menu QR professionnel et votre site Web de restaurant en quelques minutes. Toutes les fonctionnalités incluses.",
+    "keyBenefits": "Avantages clés",
+    "faqTitle": "Questions Fréquemment Posées",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "De quoi ai-je besoin pour commencer ?",
+          "a": "Juste votre adresse e-mail. Pas de carte de crédit, pas de formulaires compliqués."
+        },
+        {
+          "q": "Combien de temps prend la configuration ?",
+          "a": "Votre site web est prêt instantanément. Ajoutez vos plats et vous êtes en ligne en 5 minutes."
+        },
+        {
+          "q": "Y a-t-il un plan gratuit ?",
+          "a": "Oui, commencez gratuitement avec toutes les fonctionnalités essentielles incluses."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Dois-je installer une application ?",
+          "a": "Aucune application nécessaire - tout fonctionne dans le navigateur de votre téléphone."
+        },
+        {
+          "q": "Puis-je télécharger des photos depuis mon téléphone ?",
+          "a": "Oui, prenez des photos avec votre appareil photo et téléchargez-les directement sur votre menu."
+        },
+        {
+          "q": "Est-ce que ça fonctionne sur les tablettes ?",
+          "a": "Oui, le tableau de bord est optimisé pour les téléphones, les tablettes et les ordinateurs de bureau."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Quelle est la précision de la traduction par IA ?",
+          "a": "Notre IA comprend le contexte culinaire, préservant les noms des plats et traduisant les descriptions de manière naturelle."
+        },
+        {
+          "q": "Quelle est la rapidité de la traduction ?",
+          "a": "L'ensemble des menus est traduit en quelques secondes, pas en heures."
+        },
+        {
+          "q": "Puis-je modifier les traductions de l'IA ?",
+          "a": "Oui, toutes les traductions sont modifiables - examinez et ajustez selon vos besoins."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Combien de langues sont prises en charge ?",
+          "a": "Plus de 25 langues, y compris toutes les principales langues européennes, le chinois, le japonais, le coréen, l'arabe et l'hébreu."
+        },
+        {
+          "q": "Comment les clients changent-ils de langue ?",
+          "a": "Un sélecteur de langue apparaît sur votre menu - une touche pour passer à n'importe quelle langue disponible."
+        },
+        {
+          "q": "La traduction est-elle automatique ?",
+          "a": "Vous pouvez utiliser la traduction par IA ou entrer manuellement les traductions pour chaque langue."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Quels formats d'image sont pris en charge ?",
+          "a": "Téléchargez des JPG, PNG ou WebP - les images sont automatiquement optimisées."
+        },
+        {
+          "q": "L'optimisation réduit-elle la qualité ?",
+          "a": "Non, notre IA maintient la qualité visuelle tout en réduisant la taille du fichier pour un chargement rapide."
+        },
+        {
+          "q": "Y a-t-il une limite de taille de fichier ?",
+          "a": "Téléchargez des images jusqu'à 10 Mo - elles seront optimisées automatiquement."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Comment ajouter un nouveau plat ?",
+          "a": "Appuyez sur 'Ajouter un élément', entrez le nom, la description, le prix et, si vous le souhaitez, téléchargez une photo. C'est tout !"
+        },
+        {
+          "q": "Puis-je réorganiser les éléments du menu ?",
+          "a": "Oui, il suffit de faire glisser et de déposer les éléments ou les catégories pour les réorganiser."
+        },
+        {
+          "q": "Que faire si un plat est épuisé ?",
+          "a": "Désactivez temporairement l'élément - il disparaît du menu mais n'est pas supprimé."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Quelles métriques puis-je suivre ?",
+          "a": "Vues quotidiennes, performance des pages, préférences linguistiques et tendances au fil du temps."
+        },
+        {
+          "q": "À quelle fréquence les données sont-elles mises à jour ?",
+          "a": "Les analyses sont mises à jour en temps réel - voyez les visiteurs d'aujourd'hui au fur et à mesure."
+        },
+        {
+          "q": "Puis-je exporter les données d'analyse ?",
+          "a": "Consultez des rapports détaillés directement dans votre tableau de bord."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Comment les clients font-ils des réservations ?",
+          "a": "Les clients peuvent réserver directement depuis le site web de votre restaurant. Ils sélectionnent la date, l'heure et le nombre de convives, puis reçoivent une confirmation par e-mail."
+        },
+        {
+          "q": "Puis-je approuver les réservations manuellement ?",
+          "a": "Oui, vous pouvez choisir entre confirmation automatique ou approbation manuelle pour chaque réservation."
+        },
+        {
+          "q": "Serai-je informé des nouvelles réservations ?",
+          "a": "Oui, vous recevez des notifications par e-mail pour chaque nouvelle réservation."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Quels formats vidéo sont pris en charge ?",
+          "a": "Les formats MP4 et WebM sont pris en charge. Les vidéos sont optimisées automatiquement pour un chargement rapide."
+        },
+        {
+          "q": "Puis-je utiliser mes propres photos ?",
+          "a": "Oui, téléchargez n'importe quelle photo et elle sera automatiquement optimisée pour l'affichage web."
+        },
+        {
+          "q": "La vidéo ralentit-elle le menu ?",
+          "a": "Non, les vidéos sont compressées et chargées paresseusement pour garantir une performance rapide de la page."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Combien de couleurs puis-je choisir ?",
+          "a": "Choisissez parmi 12 couleurs prédéfinies ou entrez votre couleur de marque exacte en utilisant un code hexadécimal."
+        },
+        {
+          "q": "Prend-il en charge le mode sombre ?",
+          "a": "Oui, votre schéma de couleurs s'adapte automatiquement aux thèmes clairs et sombres."
+        },
+        {
+          "q": "Puis-je changer les couleurs à tout moment ?",
+          "a": "Oui, changez instantanément votre couleur d'accent depuis le tableau de bord - les mises à jour apparaissent immédiatement."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Comment contacter le support ?",
+          "a": "Utilisez le formulaire de contact ou envoyez-nous un e-mail directement - de vraies personnes répondent, pas des bots."
+        },
+        {
+          "q": "Quel est le temps de réponse ?",
+          "a": "Nous répondons généralement dans quelques heures pendant les jours ouvrables."
+        },
+        {
+          "q": "Le support est-il disponible pour les plans gratuits ?",
+          "a": "Oui, le support personnel est disponible pour tous les plans, y compris le gratuit."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Configuration Instantanée du Menu QR & du Site Web",
+        "shortDescription": "Créez le site web de votre restaurant et le menu QR avec juste un e-mail - prêt en 5 minutes",
+        "description": "Commencez en quelques secondes avec le processus d'inscription le plus simple. Entrez simplement votre e-mail et vous obtenez instantanément un site web complet pour votre restaurant avec un menu QR, une page de contact avec carte, et un design moderne. Aucune compétence technique requise, aucun formulaire compliqué - votre restaurant est en ligne immédiatement.",
+        "fullDescription": "Les constructeurs de sites web traditionnels nécessitent des heures de configuration, des connaissances techniques, et souvent un développeur. IQ Rest change tout. Entrez votre e-mail, vérifiez avec un code simple, et votre site web de restaurant est prêt. Ajoutez vos plats, téléchargez des photos, et partagez votre code QR avec vos clients. L'ensemble du processus prend moins de 5 minutes.",
+        "benefits": [
+          "Seulement un e-mail requis pour commencer - pas d'inscription complexe",
+          "Site web de restaurant prêt instantanément après l'inscription",
+          "Menu QR généré automatiquement et lié",
+          "Page de contact avec carte incluse par défaut",
+          "Aucune compétence technique ou connaissance en codage requise"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Processus de configuration instantanée du site web de restaurant et du menu QR",
+        "cta": "En savoir plus"
+      },
+      {
+        "id": "mobile-management",
+        "title": "Gestion 100 % Mobile-Friendly",
+        "shortDescription": "Pas d'ordinateur ? Pas de problème. Gérez l'ensemble du site web de votre restaurant depuis votre téléphone. Ajoutez des plats tout en étant dans la cuisine, mettez à jour les prix pendant le service, téléchargez des photos directement depuis votre appareil photo. Chaque fonctionnalité fonctionne parfaitement sur mobile - car les propriétaires de restaurants ne sont jamais assis à un bureau.",
+        "description": "Ajoutez des catégories, des plats, des photos, et gérez l'ensemble du site web de votre restaurant directement depuis votre téléphone. Notre tableau de bord est entièrement optimisé pour les appareils mobiles, vous pouvez donc mettre à jour votre menu pendant une pause café ou ajouter des spécialités du jour en déplacement.",
+        "fullDescription": "Les propriétaires de restaurants sont des personnes occupées qui ne sont pas toujours devant un ordinateur. C'est pourquoi nous avons conçu IQ Rest pour fonctionner parfaitement sur les appareils mobiles. Chaque fonctionnalité, de l'ajout de nouveaux plats à la mise à jour des prix, est conçue pour les écrans tactiles. Prenez une photo d'un nouveau plat et téléchargez-la instantanément. Changez la spécialité du jour tout en étant dans la cuisine.",
+        "benefits": [
+          "Accès complet au tableau de bord sur n'importe quel smartphone ou tablette",
+          "Téléchargez des photos directement depuis l'appareil photo de votre téléphone",
+          "Mettez à jour les prix et les descriptions en déplacement",
+          "Gérez les catégories avec une interface conviviale pour le tactile",
+          "Aucun ordinateur requis - jamais"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Gestion du menu du restaurant sur smartphone",
+        "cta": "Voir le tableau de bord mobile"
+      },
+      {
+        "id": "ai-translation",
+        "title": "Traduction de Menu Alimentée par IA",
+        "shortDescription": "Ne perdez plus de clients internationaux à cause des barrières linguistiques. Notre IA traduit l'ensemble de votre menu en plus de 25 langues en quelques secondes - pas une traduction générique, mais une IA consciente du contexte qui comprend les termes culinaires. 'Boeuf Wellington' reste 'Boeuf Wellington', tandis que les descriptions se lisent naturellement dans chaque langue.",
+        "description": "Atteignez des clients internationaux avec une traduction intelligente par IA qui comprend le contexte alimentaire. Les noms de vos plats et les descriptions sont traduits avec précision, préservant les termes culinaires et ayant du sens dans n'importe quelle langue.",
+        "fullDescription": "Les traducteurs génériques échouent souvent avec les menus alimentaires - ils traduisent littéralement sans comprendre le contexte. Notre IA est spécifiquement formée pour le contenu de restaurant. Elle sait que 'Boeuf Wellington' ne doit pas être traduit littéralement, et que 'al dente' signifie la même chose dans n'importe quelle langue. Servez les touristes et les invités internationaux avec des menus qui se lisent naturellement dans leur langue.",
+        "benefits": [
+          "Traduction consciente du contexte pour les termes alimentaires et culinaires",
+          "Plus de 10 langues, y compris l'espagnol, le français, l'allemand, le chinois, le japonais",
+          "Préserve la terminologie culinaire et les nuances culturelles",
+          "Traduction instantanée - menu disponible en quelques secondes",
+          "Augmente les ventes de 23 % avec des clients internationaux"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "Interface de traduction de menu de restaurant alimentée par IA",
+        "cta": "Découvrez la traduction par IA"
+      },
+      {
+        "id": "multilingual",
+        "title": "Site Web de Restaurant Multilingue",
+        "shortDescription": "Accueillez les touristes et les invités internationaux dans leur langue maternelle. Le support pour plus de 25 langues signifie que chaque client se sent chez lui. Un tap pour changer de langue - menu, prix, descriptions s'adaptent instantanément. Parfait pour les restaurants dans les zones touristiques ou les villes internationales.",
+        "description": "Votre site web de restaurant prend automatiquement en charge plusieurs langues. Les clients peuvent changer de langue d'un simple tap, et tout le contenu, y compris le menu, les informations de contact et la navigation, s'adapte instantanément.",
+        "fullDescription": "Dans les zones touristiques et les villes internationales, parler la langue de votre client est essentiel. IQ Rest rend votre restaurant accessible à tous. Les clients voient un sélecteur de langue et peuvent parcourir l'ensemble de votre site web - menu, contacts, réservations - dans leur langue préférée. Associé à la traduction par IA, vous pouvez servir le monde.",
+        "benefits": [
+          "Changement de langue en un tap pour les clients",
+          "Menu, contacts et toutes les pages traduites",
+          "Préférence linguistique mémorisée pour les visites de retour",
+          "Parfait pour les zones touristiques et les villes internationales",
+          "Fonctionne parfaitement avec la fonctionnalité de traduction par IA"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Sélecteur de langue du site web de restaurant multilingue",
+        "cta": "Voir les fonctionnalités multilingues"
+      },
+      {
+        "id": "ai-images",
+        "title": "Optimisation d'Images par IA",
+        "shortDescription": "Amélioration automatique des images pour un chargement plus rapide et une meilleure qualité",
+        "description": "Téléchargez n'importe quelle photo et notre IA l'optimise automatiquement pour l'affichage web. Les images se chargent rapidement sur n'importe quelle connexion tout en maintenant une qualité époustouflante qui rend vos plats irrésistibles.",
+        "fullDescription": "Des images grandes et non optimisées ralentissent votre site web et frustrent les clients. Notre IA traite chaque image téléchargée : redimensionnement aux dimensions optimales, conversion en formats modernes, et amélioration de la qualité. Le résultat ? Vos plats ont l'air incroyables, et les pages se chargent en moins d'une seconde même sur des connexions mobiles lentes.",
+        "benefits": [
+          "Redimensionnement automatique aux dimensions web optimales",
+          "Conversion au format WebP pour un chargement rapide",
+          "Amélioration de la qualité pour une meilleure présentation",
+          "Les pages se chargent en moins de 1 seconde",
+          "Fonctionne avec n'importe quel format d'image que vous téléchargez"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "Comparaison avant et après de l'optimisation d'images par IA",
+        "cta": "En savoir plus"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Gestion Facile du Menu",
+        "shortDescription": "Mettez à jour votre menu en quelques secondes, pas en heures. Ajoutez de nouveaux plats, modifiez les prix, réorganisez les catégories - le tout avec un simple glisser-déposer depuis n'importe quel appareil. Aucune compétence technique requise. Les changements sont en ligne instantanément, donc vos clients voient toujours les dernières offres.",
+        "description": "Gérer votre menu n'a jamais été aussi facile. Ajoutez des catégories, créez des plats avec des photos et des descriptions, définissez des prix, et organisez le tout avec un simple glisser-déposer. Les changements apparaissent instantanément sur votre site web en direct.",
+        "fullDescription": "Oubliez les systèmes de gestion de contenu compliqués. L'éditeur de menu d'IQ Rest est conçu pour les propriétaires de restaurants, pas pour les développeurs web. Créez une nouvelle catégorie en quelques secondes, ajoutez des plats en quelques taps, téléchargez des photos directement depuis votre téléphone. Faites glisser des éléments pour les réorganiser, activez ou désactivez la visibilité des éléments épuisés, et voyez les changements en direct immédiatement.",
+        "benefits": [
+          "Création intuitive de catégories et d'éléments",
+          "Réorganisation par glisser-déposer",
+          "Activation/désactivation d'éléments sans suppression",
+          "Mises à jour instantanées - les changements apparaissent en quelques secondes",
+          "Organisez un nombre illimité de catégories et de plats"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Tableau de bord de gestion facile du menu de restaurant",
+        "cta": "Voir l'éditeur de menu"
+      },
+      {
+        "id": "analytics",
+        "title": "Analyses et Insights Quotidiens",
+        "shortDescription": "Suivez les vues de pages, les langues et le comportement des clients avec des rapports quotidiens détaillés",
+        "description": "Comprenez vos clients avec des analyses complètes. Consultez les vues de pages quotidiennes, les langues populaires, les pages les plus vues, et suivez les tendances au fil du temps. Prenez des décisions basées sur les données pour optimiser votre menu.",
+        "fullDescription": "La connaissance est un pouvoir. Notre tableau de bord d'analyses vous montre exactement comment les clients interagissent avec votre site web de restaurant. Quelles pages obtiennent le plus de vues ? Quelles langues vos clients préfèrent-ils ? Les vues augmentent-elles semaine après semaine ? Utilisez ces insights pour optimiser votre menu, cibler les bons clients, et développer votre entreprise.",
+        "benefits": [
+          "Statistiques de vues quotidiennes, hebdomadaires et mensuelles",
+          "Répartition des préférences linguistiques",
+          "Suivi des performances page par page",
+          "Analyse des tendances au fil du temps",
+          "Exportation des données pour une analyse plus approfondie"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Tableau de bord d'analyses de restaurant avec statistiques quotidiennes",
+        "cta": "En savoir plus"
+      },
+      {
+        "id": "reservations",
+        "title": "Système de Réservations de Tables",
+        "shortDescription": "Ne perdez plus de clients à cause d'appels manqués. Acceptez les réservations de tables 24/7 directement depuis votre site web - les clients choisissent la date, l'heure et la table en quelques secondes. Confirmations automatiques, notifications par e-mail, et un tableau de bord simple pour tout gérer.",
+        "description": "Le système de réservation intégré permet aux clients de réserver des tables directement depuis votre site web. Choisissez la confirmation automatique en fonction de la disponibilité, ou examinez chaque réservation manuellement. Gérez toutes les réservations depuis votre tableau de bord.",
+        "fullDescription": "Les réservations par téléphone prennent du temps et sont faciles à manquer. Le système de réservation d'IQ Rest fonctionne 24/7. Les clients sélectionnent la date, l'heure et la taille du groupe, puis réservent instantanément. Vous pouvez configurer une confirmation automatique en fonction de la disponibilité des tables, ou examiner chaque demande manuellement. Réduisez les absences avec des confirmations par e-mail.",
+        "benefits": [
+          "Capacité de réservation en ligne 24/7",
+          "Modes de confirmation automatiques ou manuels",
+          "Gestion des tables et de la capacité",
+          "Notifications par e-mail pour les réservations",
+          "Vue calendrier pour une planification facile"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Système de réservation de table en ligne pour restaurants",
+        "cta": "Explorer les réservations de tables"
+      },
+      {
+        "id": "custom-design",
+        "title": "Arrière-plans Vidéo & Photo",
+        "shortDescription": "Les premières impressions vendent. Captivez les clients dès qu'ils scannent votre code QR avec une vidéo époustouflante de l'ambiance de votre restaurant ou une belle photo de votre plat signature. Démarquez-vous de la concurrence avec une page d'accueil qui semble premium et professionnelle.",
+        "description": "Créez une première impression mémorable avec des arrière-plans vidéo ou photo personnalisés sur votre page d'accueil. Téléchargez votre vidéo d'ambiance de restaurant ou une belle photo de plat pour captiver instantanément les clients.",
+        "fullDescription": "Les premières impressions comptent. Lorsque les clients scannent votre code QR, ils doivent être impressionnés immédiatement. Téléchargez une vidéo de l'ambiance de votre restaurant, un time-lapse de votre cuisine, ou une photo époustouflante de votre plat signature. Votre page d'accueil devient une expérience visuelle qui reflète la personnalité de votre restaurant.",
+        "benefits": [
+          "Support pour les arrière-plans vidéo et image",
+          "Optimisation automatique pour un chargement rapide",
+          "Fonctionne parfaitement sur les appareils mobiles",
+          "Crée une première impression mémorable",
+          "Reflète l'atmosphère unique de votre restaurant"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Site web de restaurant avec arrière-plan vidéo",
+        "cta": "Voir les arrière-plans vidéo"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Schéma de Couleurs Personnalisé",
+        "shortDescription": "Faites de votre menu le vôtre avec des couleurs d'accent personnalisées qui correspondent à l'identité de votre marque de restaurant. Choisissez parmi 12 belles couleurs prédéfinies ou choisissez votre teinte de marque exacte. Chaque bouton, surlignage et élément interactif s'adapte pour créer un look cohérent et professionnel que les clients se souviennent.",
+        "description": "Votre site web de restaurant doit correspondre à votre marque. Choisissez parmi des schémas de couleurs prédéfinis ou choisissez votre couleur de marque exacte. Associé à un support automatique des thèmes clairs/sombres, votre menu a toujours l'air professionnel.",
+        "fullDescription": "La cohérence de la marque est importante. IQ Rest vous permet de personnaliser la couleur d'accent utilisée sur l'ensemble de votre site web - les boutons, les surlignages et les éléments interactifs correspondent tous à votre marque. Choisissez parmi des présélections soigneusement choisies ou entrez votre couleur de marque exacte. Le système garantit automatiquement la lisibilité en modes clair et sombre.",
+        "benefits": [
+          "Sélection de couleur d'accent personnalisée",
+          "Schémas de couleurs prédéfinis disponibles",
+          "Support automatique des thèmes clairs/sombres",
+          "Cohérence de la marque sur toutes les pages",
+          "Contraste de couleur optimisé pour l'accessibilité"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Options de schéma de couleurs et de branding personnalisés",
+        "cta": "Explorer les schémas de couleurs"
+      },
+      {
+        "id": "personal-support",
+        "title": "Support en Ligne Individuel",
+        "shortDescription": "Obtenez de l'aide personnelle de vraies personnes - pas de chatbots - pour toutes vos questions",
+        "description": "Chaque restaurant bénéficie d'un support en ligne individuel. Vous avez une question ? Besoin d'aide pour la configuration ? Vous souhaitez suggérer une fonctionnalité ? De vraies personnes répondent rapidement pour vous aider à réussir avec votre menu numérique.",
+        "fullDescription": "Nous croyons que chaque restaurant mérite une attention personnelle. Lorsque vous contactez le support, vous parlez à de vraies personnes qui comprennent les restaurants et peuvent réellement aider. Pas de chatbots, pas de réponses automatisées, pas de files d'attente. Que vous ayez besoin d'aide pour ajouter votre premier plat ou que vous souhaitiez des conseils sur l'optimisation de votre menu, nous sommes là pour vous.",
+        "benefits": [
+          "Support humain réel - pas de chatbots",
+          "Temps de réponse rapides",
+          "Aide à la configuration et à l'optimisation",
+          "Demandes de fonctionnalités bienvenues",
+          "Disponible pour tous les plans, y compris le gratuit"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Chat de support en ligne personnel pour restaurants",
+        "cta": "En savoir plus"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification du Menu QR & du Site Web de Restaurant",
+    "subtitle": "Pas de frais cachés, pas de surprises. Lancez le site web de votre restaurant gratuitement aujourd'hui — passez à la version supérieure seulement lorsque vous êtes prêt à grandir.",
+    "seo": {
+      "title": "Pourquoi Choisir IQ Rest pour Votre Restaurant ou Café ?",
+      "text": "Créez un menu QR professionnel et un site web pour votre restaurant ou café en quelques minutes. Vos invités scannent simplement un code QR pour consulter votre menu numérique sur leur téléphone — aucune application nécessaire. Mettez à jour les prix, ajoutez de nouveaux plats et changez les descriptions instantanément. Avec des traductions alimentées par l'IA, servez des clients internationaux dans leur langue maternelle. Suivez quels plats obtiennent le plus de vues grâce à des analyses intégrées. Que vous gériez un petit café ou une chaîne de restaurants en pleine croissance, IQ Rest vous aide à moderniser votre expérience de menu tout en réduisant les coûts d'impression."
+    },
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "save": "(Économisez 25%)",
+    "perMonth": "/mois",
+    "billedYearly": "Facturé annuellement (€{total})",
+    "forever": "Gratuit pour toujours",
+    "popular": "Le Plus Populaire",
+    "plans": {
+      "free": {
+        "name": "Gratuit",
+        "description": "Parfait pour essayer IQ Rest",
+        "cta": "Commencer Gratuitement",
+        "highlights": [
+          "Site web de restaurant",
+          "Menu QR",
+          "300 scans/mois",
+          "2 langues",
+          "Amélioration d'image par IA",
+          "Analytique"
+        ]
+      },
+      "basic": {
+        "name": "Basique",
+        "description": "Idéal pour les petits restaurants",
+        "cta": "Commencer",
+        "highlights": [
+          "Tout dans Gratuit, plus :",
+          "4 500 scans/mois",
+          "3 langues",
+          "Traductions par IA",
+          "Thème de couleur personnalisé",
+          "Réservations"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Pour les chaînes de restaurants en croissance",
+        "cta": "Commencer",
+        "highlights": [
+          "Tout dans Basique, plus :",
+          "Scans illimités",
+          "6 langues",
+          "Support prioritaire",
+          "Toutes les fonctionnalités incluses"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Comparer les plans",
+      "subtitle": "Voyez quel plan vous convient"
+    },
+    "features": {
+      "website": "Site web de restaurant",
+      "qrMenu": "Menu QR",
+      "scans": "Scans mensuels",
+      "languages": "Langues supportées",
+      "aiTranslation": "Traductions par IA",
+      "aiImages": "Amélioration d'image par IA",
+      "analytics": "Analytique",
+      "customTheme": "Thème de couleur personnalisé",
+      "background": "Image & vidéo de fond",
+      "support": "Support",
+      "reservations": "Réservations"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4 500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Illimité",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Besoin d'aide ? Discutons",
+    "subtitle": "Bonjour, je suis Bogdan — fondateur d'IQ Rest. J'ai créé cette plateforme pour mon propre café et maintenant elle aide des centaines de restaurants dans le monde entier. Vous avez une question ou une idée ? Écrivez-moi directement. Pas de bots, pas d'attente — juste une vraie conversation.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Entrons en contact",
+      "email": "Votre Email",
+      "emailPlaceholder": "votre@email.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "De quoi s'agit-il ?",
+      "message": "Message",
+      "messagePlaceholder": "Dites-moi ce que vous avez en tête...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Votre message a été envoyé ! Merci de nous avoir contactés. Je reviendrai vers vous bientôt.",
+      "error": "Échec de l'envoi du message. Veuillez réessayer plus tard."
+    }
+  },
+  "languages": {
+    "en": "Anglais",
+    "es": "Espagnol"
+  },
+  "cookieConsent": {
+    "title": "Nous utilisons des cookies",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, servir un contenu personnalisé et analyser notre trafic. En cliquant sur \"Accepter tout\", vous consentez à notre utilisation des cookies.",
+    "acceptAll": "Accepter tout",
+    "rejectAll": "Rejeter tout",
+    "customize": "Personnaliser",
+    "learnMore": "En savoir plus"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigation",
+      "pricing": "Tarification",
+      "features": "Fonctionnalités",
+      "contacts": "Contacts",
+      "faq": "Questions",
+      "changelog": "Journal des modifications"
+    },
+    "legal": {
+      "title": "Légal",
+      "terms": "Conditions Générales",
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Politique de Cookies",
+      "sitemap": "Plan du Site"
+    },
+    "copyright": "© 2025 IQ Rest. Tous droits réservés."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Journal des modifications - Mises à jour et nouvelles fonctionnalités d'IQ Rest",
+      "description": "Restez informé des dernières fonctionnalités et améliorations d'IQ Rest - votre solution de menu QR numérique pour restaurants et cafés"
+    },
+    "title": "Journal des modifications",
+    "subtitle": "Dernières mises à jour et nouvelles fonctionnalités pour votre menu QR de restaurant",
+    "readMore": "En savoir plus",
+    "backToChangelog": "Retour au journal des modifications",
+    "seo": {
+      "title": "À propos des mises à jour d'IQ Rest",
+      "description": "IQ Rest s'améliore constamment pour aider les restaurants et les cafés à créer des menus QR numériques professionnels. Suivez notre journal des modifications pour rester informé des dernières fonctionnalités pour votre site web de restaurant et votre solution de menu QR."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Support Réactif pour Votre Menu QR de Restaurant",
+        "description": "Obtenez un support réactif pour toutes vos questions et modifications concernant le menu QR de votre restaurant ou café. Discussion directe avec notre équipe pour une assistance rapide.",
+        "meta": {
+          "title": "Support Réactif pour le Menu QR de Restaurant | IQ Rest",
+          "description": "Obtenez un support réactif pour toutes vos questions et modifications concernant le menu QR de votre restaurant ou café. Assistance rapide pour les cafés et restaurants avec un support de chat direct."
+        },
+        "content": {
+          "intro": "IQ Rest propose désormais un support réactif pour toutes vos questions et modifications concernant le menu QR de votre restaurant ou café. Nous comprenons que gérer un restaurant ou un café nécessite des solutions rapides lorsque des problèmes surviennent. Notre nouveau chat de support intégré vous donne un accès direct à notre équipe, garantissant que votre menu QR reste parfait et que vos clients aient toujours la meilleure expérience.",
+          "image1Alt": "Interface de chat de support pour le menu QR de restaurant",
+          "image1Caption": "Chat de support direct pour une assistance réactive avec votre menu QR de restaurant",
+          "section1Title": "Support de Chat Direct pour Votre Restaurant",
+          "section1Text": "Notre système de support réactif pour votre menu QR de restaurant ou café fonctionne directement dans votre tableau de bord. Pas besoin de chercher des e-mails de contact ou d'attendre dans des files d'attente téléphoniques. Il vous suffit d'ouvrir le chat de support, de taper votre question ou de décrire le changement dont vous avez besoin, et notre équipe répond rapidement. Que vous ayez besoin d'aide pour mettre à jour des éléments de menu, résoudre des problèmes d'affichage ou comprendre les analyses - le support réactif est à un message près.",
+          "section2Title": "Assistance Rapide pour Tous Changement de Menu QR",
+          "section2Text": "Besoin de mettre à jour les prix avant un week-end chargé ? Vous souhaitez ajouter des éléments saisonniers à votre menu QR de restaurant ? Notre support réactif aide les cafés et restaurants à effectuer des changements rapidement. Nous vous guidons à travers le processus ou pouvons assister directement si nécessaire. Ce support réactif garantit que votre menu numérique reflète toujours vos offres actuelles, tenant les clients informés et satisfaits.",
+          "section3Title": "Un Support Qui Comprend les Besoins des Restaurants",
+          "section3Text": "Notre équipe de support réactif comprend les défis uniques de la gestion d'un restaurant ou d'un café. Nous savons qu'un menu QR défectueux peut signifier des clients perdus et un personnel frustré. C'est pourquoi notre support pour votre menu QR de restaurant ou café priorise des temps de réponse rapides et des solutions pratiques. Des questions techniques aux demandes de fonctionnalités, nous sommes là pour aider votre menu numérique à réussir.",
+          "benefitsTitle": "Avantages du Support Réactif pour le Menu QR",
+          "benefit1": "Chat direct dans l'application - pas besoin d'e-mails ou d'appels externes",
+          "benefit2": "Temps de réponse rapides pour garder votre restaurant en bon état",
+          "benefit3": "Conseils sur les mises à jour de menu, les changements et les nouvelles fonctionnalités",
+          "benefit4": "Assistance technique pour tout problème de code QR ou de site web",
+          "benefit5": "Demandes de fonctionnalités et suggestions bienvenues et prises en compte",
+          "benefit6": "Support qui comprend les opérations de restaurant et de café",
+          "conclusionTitle": "Obtenez un Support Réactif Aujourd'hui",
+          "conclusionText": "Avec le support réactif d'IQ Rest pour votre menu QR de restaurant ou café, l'aide est toujours à portée de main. Notre équipe dédiée garantit que votre menu numérique fonctionne parfaitement, vous donnant plus de temps pour vous concentrer sur ce qui compte - servir de bons plats. Accédez au support directement depuis votre tableau de bord et découvrez la différence que l'assistance réactive fait pour votre restaurant ou café.",
+          "ctaText": "Prêt à découvrir un support réactif pour votre menu QR ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Analyses Détaillées pour Votre Site Web de Restaurant et Menu QR",
+        "description": "Suivez les insights des visiteurs avec des analyses détaillées pour votre site web de restaurant et menu QR. Surveillez les pages vues, les visiteurs uniques, les langues et les tendances quotidiennes.",
+        "meta": {
+          "title": "Analyses Détaillées pour le Site Web de Restaurant et Menu QR | IQ Rest",
+          "description": "Obtenez des analyses détaillées pour votre site web de restaurant et menu QR. Suivez les pages vues, les visiteurs uniques, les pages populaires et les préférences linguistiques. Insights complets pour les restaurants et cafés."
+        },
+        "content": {
+          "intro": "IQ Rest propose désormais des analyses détaillées pour votre site web de restaurant et menu QR. Comprendre comment les clients interagissent avec votre menu numérique est crucial pour le succès. Notre nouveau tableau de bord d'analyses vous donne des insights complets sur le comportement des visiteurs, les pages populaires, les préférences linguistiques et les tendances quotidiennes - toutes les analyses détaillées dont votre site web de restaurant et menu QR a besoin pour prospérer.",
+          "image1Alt": "Tableau de bord d'analyses détaillées pour le site web de restaurant et menu QR",
+          "image1Caption": "Tableau de bord d'analyses complet montrant des statistiques détaillées pour votre menu QR de restaurant",
+          "section1Title": "Suivi Complet des Visiteurs pour Votre Restaurant",
+          "section1Text": "Nos analyses détaillées pour votre site web de restaurant et menu QR suivent chaque interaction client. Voir le nombre total de pages vues pour aujourd'hui, cette semaine et ce mois d'un coup d'œil. Suivez les visiteurs uniques pour comprendre la taille réelle de votre audience. Le tableau de bord d'analyses fournit des insights détaillés sur la façon dont les clients naviguent dans votre menu QR - de la page d'accueil à votre menu complet, contacts et sélection de langue. Ces analyses détaillées aident les restaurants à prendre des décisions basées sur les données.",
+          "section2Title": "Analyses des Pages et des Langues",
+          "section2Text": "Comprenez quelles pages de votre site web de restaurant et menu QR sont les plus populaires. Nos analyses détaillées décomposent les vues par type de page : Accueil, Menu, Contacts et Sélection de langue. Voyez quelles langues vos clients préfèrent, vous aidant à prioriser les traductions et à mieux servir les clients internationaux. Ces analyses détaillées pour votre menu QR de restaurant révèlent des modèles de comportement des clients que vous ne connaissiez pas.",
+          "section3Title": "Tendances Quotidiennes et Suivi d'Utilisation",
+          "section3Text": "Suivez comment votre site web de restaurant et menu QR se comporte au fil du temps avec des graphiques de vues quotidiennes. Voyez les modèles d'engagement des clients tout au long de la semaine. Surveillez votre utilisation mensuelle par rapport à vos limites de plan avec une barre de progression claire. Nos analyses détaillées aident les restaurants à identifier les heures de pointe et à optimiser leur présence numérique. Que vous soyez un petit café ou un restaurant animé, ces insights vous aident à mieux comprendre vos clients.",
+          "benefitsTitle": "Avantages des Analyses Détaillées pour les Restaurants",
+          "benefit1": "Comptage des vues en temps réel : statistiques quotidiennes, hebdomadaires et mensuelles en un coup d'œil",
+          "benefit2": "Suivi des visiteurs uniques pour comprendre votre portée client réelle",
+          "benefit3": "Décomposition page par page montrant quel contenu les clients consultent le plus",
+          "benefit4": "Analyses linguistiques pour optimiser les offres de menu multilingues",
+          "benefit5": "Graphiques de tendances quotidiennes pour identifier les modèles de comportement des clients",
+          "benefit6": "Suivi d'utilisation avec des limites claires et des invites de mise à niveau",
+          "conclusionTitle": "Commencez à Utiliser les Analyses Détaillées Aujourd'hui",
+          "conclusionText": "Avec les analyses détaillées d'IQ Rest pour votre site web de restaurant et menu QR, vous obtenez des insights précieux sur le comportement des clients. Suivez les vues, surveillez les tendances et comprenez votre audience mieux que jamais. Ces analyses détaillées aident les restaurants et cafés à prendre des décisions éclairées sur leur stratégie de menu numérique. Accédez à votre tableau de bord d'analyses maintenant et découvrez ce que vos clients veulent vraiment.",
+          "ctaText": "Prêt à explorer des analyses détaillées pour votre restaurant ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Générateur Instantané de Menu QR et de Site Web de Restaurant",
+        "description": "Créez instantanément votre menu QR de restaurant ou café et votre site web. Générez des codes QR imprimables avec du texte personnalisé et plusieurs mises en page en quelques minutes - aucune compétence technique requise.",
+        "meta": {
+          "title": "Générateur Instantané de Menu QR et de Site Web de Restaurant | IQ Rest",
+          "description": "Générez instantanément un menu QR et un site web de restaurant. Créez des codes QR personnalisés pour votre café ou restaurant en quelques minutes avec des mises en page imprimables pour les formats de papier A4, A5, A6. Générateur instantané gratuit."
+        },
+        "content": {
+          "intro": "IQ Rest propose désormais un générateur instantané de menu QR et de site web de restaurant qui crée des menus numériques professionnels en quelques minutes. Que vous gériez un café cosy ou un restaurant animé, notre générateur instantané vous permet de créer, personnaliser et imprimer des codes QR qui renvoient directement à votre site web de menu numérique. Aucune compétence technique requise, pas d'attente - juste une création instantanée de menu QR pour les restaurants et cafés de toutes tailles.",
+          "image1Alt": "Générateur de menu QR instantané pour les sites web de restaurant et de café",
+          "image1Caption": "Générez des codes QR personnalisés pour votre site web de restaurant instantanément",
+          "section1Title": "Comment Fonctionne le Générateur Instantané de Menu QR",
+          "section1Text": "Notre générateur instantané de menu QR et de site web de restaurant crée tout ce dont vous avez besoin en quelques minutes. Il vous suffit d'ajouter vos éléments de menu, et le système génère instantanément un code QR unique lié à votre site web de restaurant. Le générateur prend en charge plusieurs formats de papier (A4, A5, A6, Lettre), diverses mises en page de QR par page (1 à 16 codes) et un texte personnalisable sous chaque code QR. Prévisualisez exactement ce que vous allez imprimer, puis téléchargez ou imprimez directement - votre menu QR instantané est prêt à être affiché à vos tables.",
+          "section2Title": "Codes QR Personnalisables pour Tout Restaurant ou Café",
+          "section2Text": "Le générateur de menu QR instantané offre une personnalisation complète pour l'image de marque de votre restaurant ou café. Ajoutez le nom de votre restaurant au-dessus du code QR, incluez un texte personnalisé comme 'Scannez pour le Menu' ou 'Menu QR' en dessous, et choisissez parmi trois tailles de texte. Le générateur produit des codes QR propres et simples optimisés pour un scan rapide. Que vous ayez besoin d'un grand code QR unique pour un poster ou de 16 codes plus petits pour des cartes de table individuelles, notre générateur instantané s'adapte aux besoins de votre restaurant.",
+          "section3Title": "Menus QR Prêts à Imprimer en Quelques Secondes",
+          "section3Text": "Contrairement aux outils de design compliqués, notre générateur instantané de menu QR crée automatiquement des mises en page prêtes à imprimer. Sélectionnez votre format de papier, choisissez combien de codes QR par page, et appuyez sur imprimer - c'est tout. Le générateur gère les marges, l'espacement et la taille pour garantir des impressions parfaites à chaque fois. Pour les cafés et restaurants qui ont besoin de menus QR professionnels rapidement, cette approche instantanée fait gagner des heures de travail de design et met votre menu numérique devant les clients plus rapidement.",
+          "benefitsTitle": "Avantages de la Génération Instantanée de Menu QR",
+          "benefit1": "Générez un menu QR complet et un site web de restaurant en quelques minutes, pas en heures",
+          "benefit2": "Multiples formats de papier : A4, A5, A6 et Lettre pris en charge",
+          "benefit3": "Mises en page flexibles : d'un grand QR unique à 16 codes par page",
+          "benefit4": "Options de texte et de taille personnalisables pour votre image de marque de restaurant",
+          "benefit5": "Sortie prête à imprimer avec marges et espacements automatiques",
+          "benefit6": "Téléchargez au format PNG ou imprimez directement depuis votre navigateur",
+          "conclusionTitle": "Commencez à Utiliser le Générateur Instantané de Menu QR",
+          "conclusionText": "Avec le générateur instantané de menu QR et de site web de restaurant d'IQ Rest, vous pouvez avoir un menu numérique professionnel opérationnel en quelques minutes. Aucune compétence en design requise, aucun logiciel coûteux nécessaire - juste une génération instantanée de codes QR beaux et scannables qui connectent les clients à votre menu. Parfait pour les nouveaux restaurants lançant leur premier menu QR ou les cafés établis mettant à jour leur configuration existante. Générez votre menu QR instantané aujourd'hui et modernisez votre expérience culinaire.",
+          "ctaText": "Prêt à générer votre menu QR instantané ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Site Web Public de Restaurant pour le Scan de Menu QR",
+        "description": "Lancez votre site web public de restaurant avec menu QR. Les clients scannent le code et voient instantanément votre menu numérique avec catégories, éléments, photos et prix.",
+        "meta": {
+          "title": "Site Web Public de Restaurant pour le Scan de Menu QR | IQ Rest",
+          "description": "Créez un site web public de restaurant pour le scan de menu QR. Les clients scannent le code QR et voient instantanément votre menu numérique avec catégories, plats, photos et prix."
+        },
+        "content": {
+          "intro": "IQ Rest propose désormais un site web public entièrement fonctionnel pour le scan de menu QR. Vos clients peuvent simplement scanner un code QR et accéder instantanément à votre menu numérique complet. Le site public affiche toutes vos catégories, éléments de menu, photos, descriptions et prix dans une interface mobile optimisée et attrayante. Ce site web public de restaurant pour le scan QR transforme la façon dont les invités interagissent avec votre menu.",
+          "image1Alt": "Site web public de restaurant montrant les catégories de menu QR",
+          "image1Caption": "Site web public adapté aux mobiles affichant les catégories de menu pour le scan QR",
+          "section1Title": "Comment le Site Web Public de Restaurant Fonctionne avec le Scan QR",
+          "section1Text": "Lorsque les clients scannent le code QR de votre restaurant, ils sont immédiatement dirigés vers votre site public affichant le menu complet. Pas besoin de télécharger d'application, pas d'attente - juste un accès immédiat à vos offres. Le site public de restaurant pour le menu QR montre les catégories en haut pour une navigation facile, avec des éléments affichés dans une mise en page élégante en carte avec photos, descriptions et prix. Les clients peuvent toucher les catégories pour filtrer les éléments ou faire défiler l'ensemble du menu.",
+          "section2Title": "Fonctionnalités de Votre Site Web Public de Menu QR de Restaurant",
+          "section2Text": "Votre site web public de restaurant comprend tout ce dont les clients ont besoin : onglets de catégorie pour une navigation rapide, photos de plats de haute qualité, descriptions détaillées, prix dans votre devise, et indicateurs d'éléments actifs. Le design est optimisé pour les appareils mobiles puisque la plupart des scans QR se font sur des téléphones. Les éléments se chargent rapidement grâce à des images optimisées, et l'interface est intuitive pour les invités de tous âges. Les changements effectués dans votre panneau d'administration apparaissent instantanément sur le site public.",
+          "image2Alt": "Site web de menu QR de restaurant montrant des éléments alimentaires avec photos",
+          "image2Caption": "Site web public affichant des plats avec des photos et descriptions optimisées",
+          "section3Title": "Support Multilingue pour les Invités Internationaux",
+          "section3Text": "Le site web public de restaurant comprend un sélecteur de langue afin que les invités internationaux puissent voir votre menu dans leur langue préférée. Actuellement, il prend en charge l'anglais et l'espagnol, avec d'autres langues à venir bientôt. Cela rend votre menu QR public de restaurant accessible aux touristes et à des clientèles diverses. La préférence linguistique est mémorisée pour les visites de retour, offrant une expérience personnalisée.",
+          "image3Alt": "Sélection de langue sur le site web public de menu QR de restaurant",
+          "image3Caption": "Sélecteur de langue permettant aux invités de voir le menu public dans leur langue préférée",
+          "benefitsTitle": "Avantages de Votre Site Web Public de Menu QR de Restaurant",
+          "benefit1": "Accès instantané au menu - les clients scannent et voient immédiatement, pas d'application nécessaire",
+          "benefit2": "Design optimisé pour mobile pour un affichage parfait sur n'importe quel smartphone",
+          "benefit3": "Mises à jour en temps réel - les changements de menu apparaissent instantanément aux clients",
+          "benefit4": "Navigation par catégorie pour un parcours facile de vos offres",
+          "benefit5": "Support multilingue pour les clients internationaux",
+          "benefit6": "Chargement rapide avec des images optimisées et une technologie moderne",
+          "conclusionTitle": "Commencez à Utiliser Votre Site Web Public de Menu QR de Restaurant",
+          "conclusionText": "Avec le site web public d'IQ Rest pour le scan de menu QR, vous offrez aux clients un accès instantané à votre menu complet. Il vous suffit d'ajouter vos catégories et éléments via le panneau d'administration, de générer votre code QR, et de l'afficher à vos tables. Les clients scannent et parcourent votre beau menu numérique en quelques secondes. Plus de coûts d'impression, plus de menus obsolètes - juste une expérience culinaire moderne.",
+          "ctaText": "Prêt à lancer votre site web public de menu QR de restaurant ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Comment Ajouter des Éléments au Site Web de Restaurant avec Menu QR",
+        "description": "Guide complet sur la façon d'ajouter des éléments à votre site web de restaurant avec menu QR. Apprenez à ajouter des plats avec photos, prix et descriptions à votre menu numérique en quelques minutes.",
+        "meta": {
+          "title": "Comment Ajouter des Éléments au Site Web de Restaurant avec Menu QR | IQ Rest",
+          "description": "Guide étape par étape sur la façon d'ajouter des éléments au site web de restaurant avec menu QR. Ajoutez des plats, définissez les prix, téléchargez des photos et organisez votre menu numérique. Gestion facile des éléments pour les restaurants."
+        },
+        "content": {
+          "intro": "Vous voulez savoir comment ajouter des éléments à votre site web de restaurant avec menu QR ? IQ Rest rend incroyablement facile l'ajout et la gestion des éléments de menu sur votre site web de restaurant numérique. Que vous ajoutiez votre premier plat ou que vous mettiez à jour l'ensemble de votre menu, notre système de gestion des éléments intuitif vous aide à créer un menu QR professionnel qui met parfaitement en valeur votre cuisine. Ce guide vous montre exactement comment ajouter des éléments au site web de restaurant avec menu QR, y compris des photos, des prix, des descriptions et des catégories.",
+          "image1Alt": "Comment ajouter des éléments au site web de restaurant avec menu QR - vue de la liste des éléments",
+          "image1Caption": "Interface de gestion des éléments montrant comment ajouter des éléments à votre site web de menu QR de restaurant",
+          "section1Title": "Pourquoi Ajouter des Éléments Correctement Est Important pour Votre Site Web de Menu QR de Restaurant",
+          "section1Text": "Lorsque vous ajoutez des éléments au site web de restaurant avec menu QR, la présentation est primordiale. Les clients décident quoi commander en fonction de l'apparence de vos plats et de la qualité de leur description. Notre système de gestion des éléments vous permet d'ajouter de belles photos, des descriptions détaillées, des prix précis et d'organiser les éléments en catégories. C'est ainsi que vous ajoutez des éléments au site web de restaurant qui convertit les visiteurs en clients. Des recherches montrent que les menus avec des images de haute qualité augmentent les commandes jusqu'à 30%.",
+          "section2Title": "Étape par Étape : Comment Ajouter des Éléments au Site Web de Restaurant avec Menu QR",
+          "section2Text": "Ajouter des éléments à votre site web de restaurant avec menu QR est simple avec IQ Rest. Naviguez vers la section Éléments dans votre tableau de bord et cliquez sur le bouton d'ajout. Entrez le nom de l'élément, rédigez une description appétissante, définissez le prix et sélectionnez une catégorie. Téléchargez une photo de votre plat - notre système optimise automatiquement les images à 500x500 pixels pour un affichage parfait. Basculez le statut actif pour afficher ou masquer les éléments instantanément. Ce processus simplifié facilite l'ajout d'éléments au site web de restaurant avec menu QR en quelques minutes.",
+          "image2Alt": "Formulaire d'élément montrant comment ajouter des éléments au site web de menu QR de restaurant",
+          "image2Caption": "Interface de formulaire simple pour ajouter des éléments à votre site web de restaurant avec menu QR",
+          "section3Title": "Téléchargement et Optimisation d'Image pour Vos Éléments de Restaurant",
+          "section3Text": "Des images de haute qualité sont essentielles lorsque vous ajoutez des éléments au site web de restaurant avec menu QR. Notre système accepte les formats JPEG, PNG, WebP et GIF jusqu'à 5 Mo. Chaque image est automatiquement redimensionnée à 500x500 pixels et convertie en format WebP pour un chargement rapide tout en maintenant une excellente qualité. Cela signifie que vos plats ont toujours fière allure sur n'importe quel appareil. La photographie culinaire professionnelle améliore considérablement la perception que les clients ont de votre restaurant lorsqu'ils parcourent votre site web de menu QR.",
+          "benefitsTitle": "Avantages d'Ajouter des Éléments à Votre Site Web de Menu QR de Restaurant",
+          "benefit1": "Ajoutez un nombre illimité d'éléments de menu avec photos, descriptions et prix",
+          "benefit2": "Optimisation automatique des images pour un chargement rapide et un affichage parfait",
+          "benefit3": "Organisez les éléments en catégories pour une navigation facile pour les clients",
+          "benefit4": "Basculez entre actif/inactif pour masquer les éléments épuisés sans les supprimer",
+          "benefit5": "Réorganisation par glisser-déposer pour arranger les éléments dans l'ordre de votre choix",
+          "benefit6": "Interface adaptée aux mobiles pour ajouter des éléments depuis n'importe quel appareil",
+          "conclusionTitle": "Commencez à Ajouter des Éléments à Votre Site Web de Menu QR de Restaurant Aujourd'hui",
+          "conclusionText": "Maintenant, vous savez exactement comment ajouter des éléments au site web de restaurant avec menu QR en utilisant IQ Rest. Notre puissant système de gestion des éléments fournit tout ce dont vous avez besoin pour créer un menu numérique appétissant. Ajoutez de belles photos, rédigez des descriptions convaincantes, définissez des prix compétitifs et organisez vos éléments en catégories logiques. Que vous gériez un petit café ou un grand restaurant, IQ Rest facilite l'ajout d'éléments au site web de restaurant qui attire et convertit les clients.",
+          "ctaText": "Prêt à ajouter des éléments à votre site web de restaurant avec menu QR ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "Comment Créer un Menu QR de Restaurant avec Catégories",
+        "description": "Apprenez à créer un menu QR de restaurant avec des catégories organisées. Le nouveau système de gestion des catégories rend la création de menus numériques structurés simple et rapide.",
+        "meta": {
+          "title": "Comment Créer un Menu QR de Restaurant avec Catégories | IQ Rest",
+          "description": "Guide étape par étape sur la façon de créer un menu QR de restaurant avec des catégories. Organisez votre menu numérique avec une gestion facile des catégories. Créez des menus QR professionnels en quelques minutes."
+        },
+        "content": {
+          "intro": "Vous voulez savoir comment créer un menu QR de restaurant avec des catégories ? IQ Rest propose désormais un puissant système de gestion des catégories qui facilite la création de menus numériques organisés. Que vous gériez un restaurant, un café ou un bar, organiser votre menu avec des catégories aide les clients à trouver exactement ce qu'ils recherchent. Cette mise à jour vous montre exactement comment créer un menu QR de restaurant avec des catégories bien structurées qui améliorent l'expérience culinaire.",
+          "image1Alt": "Comment créer un menu QR de restaurant - vue de la liste des catégories",
+          "image1Caption": "Interface de gestion des catégories montrant comment organiser votre menu QR de restaurant",
+          "section1Title": "Pourquoi les Catégories Comptent Lors de la Création d'un Menu QR de Restaurant",
+          "section1Text": "Lorsque vous créez un menu QR de restaurant, organiser les éléments en catégories est essentiel. Les clients s'attendent à voir des regroupements logiques comme Apéritifs, Plats Principaux, Desserts et Boissons. Notre nouveau système de gestion des catégories vous permet de créer des catégories illimitées, de définir leur ordre d'affichage et de basculer leur visibilité. C'est exactement comment créer un menu QR de restaurant que les clients adorent - clair, organisé et facile à naviguer. Des études montrent que les restaurants avec des menus numériques bien organisés voient une satisfaction client supérieure de 35%.",
+          "section2Title": "Étape par Étape : Comment Créer un Menu QR de Restaurant avec Catégories",
+          "section2Text": "Créer un menu QR de restaurant avec des catégories est simple avec IQ Rest. Tout d'abord, naviguez vers la section Catégories dans votre tableau de bord. Cliquez sur le bouton d'action flottant pour ajouter une nouvelle catégorie. Entrez le nom de la catégorie, une description optionnelle et définissez si elle est active. La nouvelle interface simplifiée montre toutes vos catégories dans une liste claire avec des indicateurs d'activité. Utilisez les flèches haut et bas pour réorganiser les catégories exactement comme vous souhaitez qu'elles apparaissent sur votre menu QR. Cette approche intuitive pour créer un menu QR de restaurant garantit que votre menu est toujours parfaitement organisé.",
+          "image2Alt": "Formulaire de catégorie montrant comment créer un menu QR de restaurant",
+          "image2Caption": "Interface de formulaire simple pour créer des catégories de menu de restaurant",
+          "section3Title": "Gestion des Catégories Optimisée pour Mobile",
+          "section3Text": "Nous savons que les propriétaires de restaurants sont occupés et gèrent souvent leurs menus en déplacement. C'est pourquoi notre gestion des catégories est entièrement optimisée pour les appareils mobiles. Lorsque vous créez un menu QR de restaurant en utilisant votre téléphone, vous trouverez une interface compacte avec un menu à trois points pour des actions rapides. Déplacez les catégories vers le haut ou vers le bas, modifiez les détails ou supprimez des catégories - tout cela depuis votre smartphone. Cette approche mobile-first garantit que vous pouvez créer un menu QR de restaurant avec des catégories à tout moment, n'importe où.",
+          "benefitsTitle": "Avantages de la Création d'un Menu QR avec Catégories",
+          "benefit1": "Organisez les éléments de menu de manière logique afin que les clients puissent facilement trouver ce qu'ils veulent",
+          "benefit2": "Réorganisation par glisser-déposer pour arranger les catégories dans l'ordre d'affichage de votre choix",
+          "benefit3": "Basculez entre actif/inactif pour masquer les catégories saisonnières sans les supprimer",
+          "benefit4": "Interface optimisée pour mobile pour gérer les catégories depuis n'importe quel appareil",
+          "benefit5": "Design visuel propre avec des indicateurs d'activité pour un aperçu rapide de l'état",
+          "benefit6": "Catégories illimitées pour représenter pleinement la structure de votre menu de restaurant",
+          "conclusionTitle": "Commencez à Créer Votre Menu QR avec Catégories Aujourd'hui",
+          "conclusionText": "Maintenant, vous savez exactement comment créer un menu QR de restaurant avec des catégories en utilisant IQ Rest. Notre nouveau système de gestion des catégories fournit tout ce dont vous avez besoin pour créer un menu numérique professionnel et bien organisé. Les catégories aident les clients à naviguer plus rapidement dans votre menu, à trouver leurs plats préférés et à découvrir de nouveaux éléments. Que vous ayez un menu simple avec quelques catégories ou un menu étendu avec des dizaines de sections, IQ Rest facilite la création d'un menu QR de restaurant qui impressionne vos clients.",
+          "ctaText": "Prêt à créer un menu QR pour votre restaurant avec des catégories ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Création Facile de Menu QR pour Votre Café - Nouveau Panneau de Contrôle",
+        "description": "Présentation de notre nouveau panneau de contrôle admin qui rend la création de menus QR pour votre café incroyablement facile. Gérez les catégories, les produits et les paramètres avec une interface moderne de barre latérale shadcn.",
+        "meta": {
+          "title": "Menu QR Facile pour Café - Nouveau Panneau de Contrôle | IQ Rest",
+          "description": "Créez facilement un menu QR pour votre café avec notre nouveau panneau de contrôle. Interface moderne de barre latérale pour gérer les catégories, les produits, les codes QR et les analyses. Création facile de menus pour cafés."
+        },
+        "content": {
+          "intro": "Nous sommes ravis de présenter notre tout nouveau panneau de contrôle admin conçu pour rendre la création de menus QR pour votre café aussi facile que possible. Que vous gériez un petit café ou un café animé, notre interface facile à utiliser vous aide à gérer votre menu numérique sans effort. Le nouveau panneau de contrôle présente un design de barre latérale moderne qui met tous les outils dont vous avez besoin pour créer le menu QR de votre café à portée de main.",
+          "image1Alt": "Panneau de contrôle de menu QR facile pour la gestion de café",
+          "image1Caption": "Nouveau panneau de contrôle avec navigation par barre latérale pour une création facile de menu QR de café",
+          "section1Title": "Interface de Barre Latérale Moderne pour une Gestion Facile du Menu",
+          "section1Text": "Le nouveau panneau de contrôle présente une barre latérale élégante qui rend la navigation dans les paramètres du menu QR de votre café incroyablement facile. Avec des sections clairement organisées pour Tableau de Bord, Catégories, Produits, Code QR, Analyses, Paramètres, Facturation et Support, vous pouvez facilement trouver et gérer chaque aspect du menu numérique de votre café. La barre latérale se réduit sur les appareils mobiles, garantissant un accès facile à toutes les fonctionnalités, quel que soit l'appareil que vous utilisez pour gérer le menu QR de votre café.",
+          "section2Title": "Gestion Facile des Catégories et Produits pour Votre Café",
+          "section2Text": "Créer et organiser le menu QR de votre café n'a jamais été aussi facile. Nos nouvelles pages de gestion des catégories et des produits sont conçues dans un souci de simplicité, permettant aux propriétaires de café d'ajouter, de modifier et d'organiser facilement leurs éléments de menu. Que vous mettiez à jour des plats du jour ou ajoutiez des boissons saisonnières, l'interface facile à utiliser garantit que le menu QR de votre café reste actuel et attrayant pour les clients.",
+          "section3Title": "Rendu Côté Serveur pour des Performances Rapides",
+          "section3Text": "Le nouveau panneau de contrôle est construit avec la technologie de rendu côté serveur (SSR), garantissant que le tableau de bord de gestion du menu QR de votre café se charge rapidement et efficacement. Toutes les données sont récupérées depuis le serveur, fournissant des mises à jour en temps réel et une expérience fluide. Cette approche facile et rapide signifie que vous passez moins de temps à attendre et plus de temps à perfectionner le menu QR de votre café.",
+          "benefitsTitle": "Pourquoi Cela Rend la Création de Menu QR Facile pour les Cafés",
+          "benefit1": "Navigation facile avec une interface de barre latérale moderne pour un accès rapide à toutes les fonctionnalités du menu de café",
+          "benefit2": "Gestion facile des catégories pour organiser logiquement le menu QR de votre café",
+          "benefit3": "Édition facile des produits avec des mises à jour instantanées du menu numérique de votre café",
+          "benefit4": "Génération et personnalisation faciles des codes QR pour votre café",
+          "benefit5": "Analyses faciles pour comprendre comment les clients interagissent avec le menu QR de votre café",
+          "benefit6": "Accès mobile facile - gérez le menu QR de votre café depuis n'importe quel appareil",
+          "conclusionTitle": "Créez le Menu QR de Votre Café de Manière Facile",
+          "conclusionText": "Notre nouveau panneau de contrôle représente un grand pas en avant pour rendre la création de menus QR facile pour les propriétaires de cafés partout. Avec son interface intuitive de barre latérale, son rendu côté serveur rapide et ses outils de gestion complets, créer et maintenir le menu QR numérique de votre café n'a jamais été aussi simple. Rejoignez des milliers de cafés utilisant déjà IQ Rest pour offrir à leurs clients une expérience de menu moderne et facile.",
+          "ctaText": "Prêt à créer un menu QR facile pour votre café ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Obtenez un Menu QR pour Restaurants - Mises à Jour de la Page FAQ & Guide Pratique",
+        "description": "Apprenez à obtenir un menu QR pour les restaurants avec notre page FAQ améliorée et notre guide en 4 étapes. Découvrez les réponses aux questions courantes sur l'obtention de menus QR pour votre restaurant, avec une meilleure navigation et un contenu optimisé pour le SEO.",
+        "meta": {
+          "title": "Obtenez un Menu QR pour Restaurants - FAQ & Mises à Jour du Guide | IQ Rest",
+          "description": "Apprenez à obtenir facilement un menu QR pour les restaurants. Nouvelle page FAQ dédiée répond à toutes les questions sur l'obtention de menus QR pour votre restaurant. Guide simplifié en 4 étapes pour commencer."
+        },
+        "content": {
+          "intro": "Nous avons rendu plus facile que jamais d'obtenir un menu QR pour les restaurants. Notre FAQ réorganisée et notre contenu pratique aident les propriétaires de restaurants à trouver rapidement des réponses sur la façon d'obtenir des menus QR pour leurs établissements. Que vous cherchiez à obtenir un menu QR pour votre restaurant ou café, cette mise à jour fournit toutes les informations dont vous avez besoin en un seul endroit.",
+          "image1Alt": "Comment obtenir un menu QR pour les restaurants - page FAQ dédiée",
+          "image1Caption": "Nouvelle page FAQ montrant comment obtenir un menu QR pour les restaurants avec des questions et réponses organisées",
+          "section1Title": "Page FAQ Dédiée pour Obtenir des Menus QR",
+          "section1Text": "Toutes les questions sur la façon d'obtenir un menu QR pour les restaurants sont désormais sur une page /faq dédiée. Les propriétaires de restaurants peuvent facilement trouver des réponses sur l'obtention de menus QR, de la configuration à la personnalisation. Chaque question sur l'obtention d'un menu QR pour votre restaurant est affichée dans sa propre carte avec des réponses développées, rendant simple l'accès à l'information dont vous avez besoin pour commencer avec les menus QR pour votre restaurant.",
+          "section2Title": "Guide en 4 Étapes pour Obtenir un Menu QR pour Restaurants",
+          "section2Text": "Notre guide simplifié montre exactement comment obtenir un menu QR pour les restaurants en seulement 4 étapes faciles. Que vous souhaitiez obtenir un menu QR pour votre restaurant, café ou bar, le nouveau design basé sur des cartes rend clair comment commencer. Ce guide pour obtenir des menus QR pour les restaurants apparaît sur toutes les pages, garantissant que vous sachiez toujours comment configurer rapidement le menu QR de votre restaurant.",
+          "section3Title": "Contenu Optimisé pour le SEO pour Aider les Restaurants à Obtenir des Menus QR",
+          "section3Text": "Nous avons optimisé notre contenu pour aider davantage de restaurants à découvrir comment obtenir des menus QR. Le guide apparaît avec des données structurées Schema.org complètes sur la page d'accueil, aidant les restaurants à rechercher des solutions de menu QR à nous trouver facilement. Notre distribution de contenu intelligente garantit que les restaurants peuvent obtenir les informations nécessaires sur les menus QR tout en maintenant une forte visibilité sur les moteurs de recherche.",
+          "benefitsTitle": "Pourquoi Cela Vous Aide à Obtenir un Menu QR pour Votre Restaurant",
+          "benefit1": "Page FAQ dédiée répond à toutes les questions sur l'obtention de menus QR pour les restaurants",
+          "benefit2": "Guide clair en 4 étapes montrant exactement comment obtenir un menu QR pour votre restaurant",
+          "benefit3": "Accès facile à la FAQ et aux options de contact pour vous aider à configurer votre menu QR",
+          "benefit4": "Optimisé pour le SEO pour aider les restaurants à découvrir comment obtenir des menus QR facilement",
+          "benefit5": "Informations cohérentes sur l'obtention de menus QR sur l'ensemble de la plateforme",
+          "benefit6": "Chemin plus rapide pour obtenir un menu QR pour votre restaurant avec une navigation améliorée",
+          "conclusionTitle": "Obtenez un Menu QR pour Votre Restaurant Aujourd'hui",
+          "conclusionText": "Ces améliorations rendent incroyablement facile pour les restaurants d'obtenir des menus QR. Que vous soyez un petit café cherchant à obtenir un menu QR ou une grande chaîne de restaurants, notre contenu réorganisé vous aide à comprendre exactement comment obtenir des solutions de menu QR pour votre établissement. Commencez maintenant et mettez en place le menu QR de votre restaurant en quelques minutes.",
+          "ctaText": "Prêt à obtenir un menu QR pour votre restaurant ?",
+          "ctaButton": "Obtenir le Menu QR Maintenant"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Création de Site Web de Restaurant Gratuit - Optimisation Mobile & Améliorations UX",
+        "description": "Améliorations majeures pour la création d'un site web de restaurant gratuit : navigation mobile optimisée avec menu hamburger, page d'inscription améliorée pour de meilleures conversions, et expérience utilisateur simplifiée.",
+        "meta": {
+          "title": "Mises à Jour de la Création de Site Web de Restaurant Gratuit - Changelog IQ Rest",
+          "description": "Découvrez comment IQ Rest a amélioré le processus de création de site web de restaurant gratuit avec une navigation optimisée pour mobile, un meilleur flux d'inscription et une expérience utilisateur améliorée pour les cafés et restaurants"
+        },
+        "content": {
+          "intro": "Créer un site web de restaurant gratuit n'a jamais été aussi facile ou adapté aux mobiles. Nous avons apporté des améliorations significatives pour aider les propriétaires de restaurants et de cafés à construire leur site web professionnel avec un menu QR numérique, en particulier sur les appareils mobiles où la plupart des gens recherchent 'создание сайта для ресторана бесплатно' (création de site web de restaurant gratuit). Ces mises à jour se concentrent sur la navigation mobile, les améliorations de la page d'inscription et l'expérience utilisateur globale pour garantir que tout le monde puisse créer un site web de restaurant gratuitement sans aucune connaissance technique.",
+          "image1Alt": "Menu hamburger optimisé pour mobile pour le site web de restaurant",
+          "image1Caption": "Nouvelle navigation mobile avec menu hamburger pour un accès facile à toutes les fonctionnalités",
+          "section1Title": "Navigation Mobile-First pour les Sites Web de Restaurant",
+          "section1Text": "La plupart des propriétaires de restaurants recherchent et créent leur site web de restaurant gratuit sur des appareils mobiles. C'est pourquoi nous avons complètement repensé notre navigation mobile avec un menu hamburger professionnel. Sur les smartphones et les tablettes, la navigation s'ouvre maintenant sous forme de boîte de dialogue modale propre, affichant tous les éléments de menu (Tarification, Fonctionnalités, Changelog, Contacts) et le bouton Commencer dans une mise en page verticale facile à lire. Cette approche optimisée pour mobile facilite l'exploration des fonctionnalités d'IQ Rest et le démarrage de la création de votre site web de restaurant gratuit directement depuis votre téléphone. Les sélecteurs de thème et de langue restent facilement accessibles dans l'en-tête, tandis que le menu hamburger garde l'interface propre et dégagée.",
+          "section2Title": "Page d'Inscription Améliorée pour la Création de Site Web de Restaurant Gratuit",
+          "section2Text": "Nous avons affiné la page d'inscription pour rendre la création d'un site web de restaurant gratuit encore plus intuitive. Les améliorations incluent un meilleur espacement sur les appareils mobiles, des cartes de proposition de valeur centrées qui expliquent clairement les avantages, et des mises en page de formulaires optimisées qui fonctionnent parfaitement sur les petits écrans. Le compteur de restaurants montrant combien d'entreprises utilisent déjà IQ Rest s'affiche maintenant en pleine largeur sur mobile, fournissant une forte preuve sociale qui encourage les nouveaux propriétaires de restaurants à démarrer leur site web gratuit. Chaque élément a été soigneusement testé pour garantir que la création de votre site web de restaurant soit fluide et rapide, que vous soyez sur un ordinateur de bureau ou votre smartphone.",
+          "image2Alt": "Flux d'inscription optimisé pour la création de site web de restaurant gratuit",
+          "image2Caption": "Processus d'inscription simplifié optimisé pour les appareils mobiles",
+          "section3Title": "Processus en Trois Étapes Optimisé pour Tous les Appareils",
+          "section3Text": "L'indicateur visuel du processus montrant les trois étapes simples pour créer votre site web de restaurant gratuit (Inscrivez-vous avec votre e-mail, Ajoutez vos éléments de menu, Obtenez votre code QR & commencez) s'adapte désormais magnifiquement à différentes tailles d'écran. Sur mobile et tablettes, les étapes s'affichent verticalement avec un espacement clair, facilitant la compréhension du processus simple. Sur les écrans plus grands, elles s'affichent horizontalement avec des flèches. Ce design adaptatif garantit que tout le monde, quel que soit son appareil, peut clairement voir à quel point il est rapide et facile de créer un site web professionnel de restaurant gratuitement avec IQ Rest.",
+          "benefitsTitle": "Améliorations Clés pour la Création de Sites Web de Restaurant Gratuits",
+          "benefit1": "Navigation mobile optimisée avec menu hamburger pour un accès facile sur smartphones",
+          "benefit2": "Page d'inscription améliorée avec un meilleur espacement mobile et des mises en page centrées",
+          "benefit3": "Compteur de restaurants en pleine largeur sur mobile fournissant une forte preuve sociale",
+          "benefit4": "Indicateur de processus en trois étapes adaptatif qui fonctionne sur toutes les tailles d'écran",
+          "benefit5": "Formulaires d'entrée simplifiés optimisés pour l'interaction tactile mobile",
+          "benefit6": "Problème de redirection de déconnexion corrigé garantissant une navigation correcte sur toutes les pages",
+          "conclusionTitle": "Création de Site Web de Restaurant Gratuit Simplifiée",
+          "conclusionText": "Ces améliorations renforcent notre engagement à rendre la création de site web de restaurant gratuit accessible à tous. Que vous soyez un petit propriétaire de café consultant IQ Rest sur votre téléphone pendant une pause, ou un responsable de restaurant planifiant votre stratégie numérique sur une tablette, l'expérience est désormais fluide et professionnelle. Vous pouvez créer un site web complet de restaurant avec menu QR, totalement gratuit, en quelques minutes depuis n'importe quel appareil. Aucune carte de crédit requise, aucune compétence technique nécessaire - juste votre menu et quelques minutes de temps pour construire votre présence en ligne professionnelle.",
+          "ctaText": "Prêt à créer votre site web de restaurant gratuit ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "landing-redesign": {
+        "title": "Page de Démarrage Redesignée pour de Meilleures Conversions",
+        "description": "Nous avons complètement repensé notre page d'inscription avec un accent sur l'optimisation des conversions, mettant en avant des propositions de valeur, des preuves sociales et une expérience utilisateur simplifiée.",
+        "meta": {
+          "title": "Refonte de la Page de Démarrage - Changelog IQ Rest",
+          "description": "IQ Rest lance une page d'inscription redesignée avec une UX améliorée, un compteur de preuve sociale et un design axé sur la conversion pour la création de menus QR de restaurant"
+        },
+        "content": {
+          "intro": "Nous sommes ravis d'annoncer une refonte complète de notre page de démarrage, conçue spécifiquement pour aider les propriétaires de restaurants et de cafés à créer leur menu QR numérique plus rapidement que jamais. Cette mise à jour se concentre sur la communication claire de la valeur, la construction de la confiance grâce à des preuves sociales, et la fourniture d'une expérience d'inscription fluide qui prend moins de 5 minutes du début à la fin.",
+          "image1Alt": "Nouvelle page de démarrage IQ Rest avec propositions de valeur et preuve sociale",
+          "image1Caption": "Page d'inscription redesignée avec des propositions de valeur claires et un compteur de restaurants",
+          "section1Title": "Propositions de Valeur Claires en Un Coup d'Œil",
+          "section1Text": "Le nouveau design affiche en évidence quatre avantages clés qui intéressent le plus les propriétaires de restaurants : aucune compétence technique requise, mises à jour instantanées du menu, code QR et site web inclus, et gratuit pour commencer. Chaque avantage est présenté dans un format de carte propre avec des icônes intuitives, rendant immédiatement clair ce qu'IQ Rest offre. Cette approche aide les propriétaires de restaurants occupés à comprendre la proposition de valeur en quelques secondes après leur arrivée sur la page.",
+          "section2Title": "Preuve Sociale Qui Renforce la Confiance",
+          "section2Text": "Nous avons ajouté un compteur de restaurants dynamique qui montre combien d'entreprises utilisent déjà IQ Rest. Ce compteur se met à jour automatiquement en fonction de notre taux de croissance, fournissant une preuve sociale authentique qui aide les nouveaux visiteurs à se sentir confiants dans leur décision d'essayer notre plateforme. Voir que plus de 1 400 restaurants font déjà confiance à IQ Rest réduit considérablement l'hésitation et encourage les inscriptions.",
+          "section3Title": "Flux d'Inscription Simplifié",
+          "section3Text": "L'ensemble du processus d'inscription se déroule désormais sur une seule page avec une mise en page cohérente. Que vous saisissiez votre e-mail ou vérifiiez votre code, le design reste le même - seul le champ de saisie change. Cela crée une expérience plus fluide et moins perturbante. Nous avons également ajouté un indicateur visuel du processus montrant les trois étapes simples : Inscrivez-vous, Ajoutez le menu et Obtenez le QR. Cette transparence aide les utilisateurs à comprendre exactement à quoi s'attendre et réduit l'abandon.",
+          "benefitsTitle": "Améliorations Clés de Cette Mise à Jour",
+          "benefit1": "Cartes de propositions de valeur avec icônes pour une compréhension instantanée",
+          "benefit2": "Compteur de restaurants en direct fournissant une preuve sociale authentique",
+          "benefit3": "Design de page unifié pour les étapes de vérification par e-mail et OTP",
+          "benefit4": "Indicateur visuel du processus en 3 étapes pour la transparence",
+          "benefit5": "Texte axé sur la conversion : 'Créez Votre Menu Numérique en 5 Minutes'",
+          "benefit6": "Validation d'e-mail en temps réel avec retour visuel",
+          "conclusionTitle": "Conçu pour le Succès des Restaurants",
+          "conclusionText": "Chaque élément de cette refonte a été conçu en tenant compte des propriétaires de restaurants et de cafés. Nous comprenons que vous êtes occupé à gérer votre entreprise, nous avons donc rendu le processus d'inscription aussi rapide et rassurant que possible. La nouvelle page montre clairement ce que vous obtiendrez, à quel point il est facile de commencer, et que des milliers d'autres restaurants ont déjà fait le même choix. Que vous soyez un petit café ou une chaîne de restaurants en pleine croissance, vous pouvez désormais créer votre site web professionnel de menu QR en seulement 5 minutes.",
+          "ctaText": "Prêt à créer le menu numérique de votre restaurant ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "auth": {
+        "title": "Nouvelle Interface d'Authentification Utilisateur",
+        "description": "Nous avons lancé un système d'authentification simple et sécurisé basé sur l'e-mail qui vous permet de créer votre site web de restaurant et votre menu QR en quelques minutes.",
+        "meta": {
+          "title": "Interface d'Authentification Utilisateur - Changelog IQ Rest",
+          "description": "IQ Rest introduit un nouveau système d'authentification sans mot de passe pour créer rapidement et en toute sécurité votre site web de restaurant et votre menu QR numérique"
+        },
+        "content": {
+          "intro": "Nous sommes ravis d'annoncer le lancement de notre nouvelle interface d'authentification utilisateur pour IQ Rest. Cette mise à jour représente un pas en avant significatif pour rendre plus facile que jamais la création de votre site web de restaurant avec un menu QR professionnel. Notre objectif a toujours été d'aider les propriétaires de restaurants et de cafés à construire leur présence numérique en quelques minutes, pas en heures, et ce nouveau système d'authentification est conçu avec cette mission à l'esprit.",
+          "image1Alt": "Étape de saisie d'e-mail de l'authentification IQ Rest",
+          "image1Caption": "Authentification simple basée sur l'e-mail - aucun mot de passe à retenir",
+          "section1Title": "Authentification Sans Mot de Passe pour les Propriétaires de Restaurants",
+          "section1Text": "Comprenant que les propriétaires de restaurants sont des personnes occupées, nous avons mis en place un système d'authentification sans mot de passe qui nécessite uniquement votre adresse e-mail. Lorsque vous souhaitez créer votre site web de restaurant ou mettre à jour votre menu QR numérique, il vous suffit d'entrer votre e-mail et de recevoir un code de vérification sécurisé à 4 chiffres. Cette approche élimine la frustration des mots de passe oubliés tout en maintenant les normes de sécurité les plus élevées pour les données de votre restaurant. L'ensemble du processus prend moins de 30 secondes, vous permettant de vous concentrer sur ce qui compte le plus - gérer votre restaurant et servir vos clients.",
+          "section2Title": "Processus de Création de Menu QR Simplifié",
+          "section2Text": "Avec notre nouveau système d'authentification, commencer avec votre menu QR numérique n'a jamais été aussi facile. Une fois authentifié, vous aurez un accès immédiat à notre constructeur de menu intuitif où vous pouvez ajouter vos plats, définir les prix, télécharger des photos et organiser les catégories. Le menu QR que vous créez sera accessible à vos clients instantanément - ils n'ont qu'à scanner le code et voir votre menu numérique magnifiquement conçu sur leur smartphone. Aucun téléchargement d'application requis pour vos clients, et aucune connaissance technique requise de votre part. C'est exactement ce dont les restaurants et cafés modernes ont besoin pour rivaliser dans le monde numérique d'aujourd'hui.",
+          "image2Alt": "Étape de vérification OTP de l'authentification IQ Rest",
+          "image2Caption": "Vérification sécurisée par code à 4 chiffres envoyée directement à votre e-mail",
+          "section3Title": "Conçu pour la Vitesse et la Sécurité",
+          "section3Text": "La sécurité était notre priorité absolue lors de la conception de ce système d'authentification. Chaque code de vérification expire après 10 minutes et ne peut être utilisé qu'une seule fois, protégeant votre site web de restaurant et les données de votre menu contre tout accès non autorisé. En même temps, nous avons optimisé chaque étape du processus pour la vitesse. De la saisie de votre e-mail à l'accès à votre tableau de bord, l'ensemble du flux d'authentification se complète en moins d'une minute. Cela signifie que vous pouvez apporter des mises à jour rapides à votre menu QR pendant le service, ajouter des plats du jour ou ajuster les prix - le tout sans aucun retard.",
+          "benefitsTitle": "Avantages Clés pour Votre Restaurant",
+          "benefit1": "Créez votre site web de restaurant avec menu QR en quelques minutes - aucune compétence technique requise",
+          "benefit2": "Aucun mot de passe à retenir - la vérification sécurisée par e-mail garde votre compte en sécurité",
+          "benefit3": "Accès instantané à votre constructeur de menu numérique depuis n'importe quel appareil",
+          "benefit4": "Mises à jour rapides de votre menu QR même pendant les heures de service chargées",
+          "conclusionTitle": "Commencez à Construire Votre Menu Numérique Aujourd'hui",
+          "conclusionText": "Cette nouvelle interface d'authentification n'est que le début de notre engagement à rendre les menus QR numériques accessibles à chaque restaurant et café. Que vous soyez un petit café ou une chaîne de restaurants en pleine croissance, IQ Rest fournit les outils dont vous avez besoin pour créer une présence en ligne professionnelle. Vos clients s'attendent à trouver votre menu en ligne, et avec notre solution, vous pouvez dépasser ces attentes avec un menu QR numérique magnifiquement conçu, toujours à jour, qui fonctionne parfaitement sur n'importe quel smartphone.",
+          "ctaText": "Prêt à créer votre site web de restaurant avec menu QR ?",
+          "ctaButton": "Commencer Gratuitement"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Plans d'Abonnement pour la Création de Menu QR et de Site Web de Restaurant",
+        "description": "Présentation de plans d'abonnement flexibles pour créer votre site web de restaurant et menu QR. Choisissez parmi des plans Gratuit, Basique et Pro avec options de facturation mensuelle ou annuelle.",
+        "meta": {
+          "title": "Plans d'Abonnement pour Menu QR et Site Web de Restaurant | IQ Rest",
+          "description": "Choisissez le plan d'abonnement parfait pour la création de votre site web de restaurant et menu QR. Plans Gratuit, Basique et Pro avec facturation mensuelle et annuelle flexible. Commencez gratuitement aujourd'hui."
+        },
+        "content": {
+          "intro": "Nous sommes ravis d'annoncer le lancement de notre nouveau système d'abonnement pour la création de menu QR et de site web de restaurant. IQ Rest propose désormais des plans flexibles qui évoluent avec votre entreprise - d'un niveau totalement gratuit pour les petits cafés aux plans professionnels pour les restaurants établis. Que vous soyez en train de démarrer ou de gérer plusieurs emplacements, nos plans d'abonnement fournissent les fonctionnalités dont vous avez besoin pour créer et maintenir un site web de restaurant professionnel avec des capacités de menu QR.",
+          "image1Alt": "Plans d'abonnement pour la création de menu QR et de site web de restaurant",
+          "image1Caption": "Choisissez le plan parfait pour vos besoins de site web de restaurant et de menu QR",
+          "section1Title": "Plans Flexibles pour Chaque Taille de Restaurant",
+          "section1Text": "Notre système d'abonnement pour la création de menu QR et de site web de restaurant propose trois niveaux conçus pour correspondre à vos besoins. Le plan Gratuit vous permet de commencer avec jusqu'à 15 éléments de menu - parfait pour les petits cafés ou pour essayer la plateforme. Le plan Basique à 4 €/mois (ou 3 €/mois facturé annuellement) augmente votre capacité à 100 éléments avec 3 langues et 2 000 scans mensuels. Pour les restaurants en croissance, notre plan Pro à 7 €/mois (ou 6 €/mois annuellement) offre des éléments, langues et scans illimités - tout ce dont vous avez besoin pour la gestion professionnelle de votre site web de restaurant et de menu QR.",
+          "section2Title": "Tableau de Bord de Facturation Simple",
+          "section2Text": "Gérer votre abonnement pour les services de menu QR et de site web de restaurant est désormais plus facile que jamais. Notre nouveau tableau de bord de facturation affiche tous les plans disponibles dans une interface propre et simple. Vous pouvez voir votre plan actuel d'un coup d'œil, comparer les fonctionnalités, et mettre à niveau ou rétrograder d'un simple clic. Le design simplifié montre chaque plan avec son prix mensuel, rendant facile le choix de l'option qui convient le mieux à vos besoins de site web de restaurant et de menu QR. Les paiements sécurisés sont traités via Stripe, la norme de l'industrie pour les transactions en ligne.",
+          "section3Title": "Économisez 25% avec la Facturation Annuelle",
+          "section3Text": "Les propriétaires de restaurants qui s'engagent à la facturation annuelle pour leur abonnement de menu QR et de site web économisent 25% par rapport aux paiements mensuels. Le plan Basique passe de 4 € à 3 € par mois, tandis que le plan Pro passe de 7 € à 6 € par mois lorsqu'il est facturé annuellement. Ces économies significatives aident les restaurants à investir davantage dans leur cœur de métier tout en maintenant une présence numérique professionnelle. Changez entre la facturation mensuelle et annuelle à tout moment via votre tableau de bord.",
+          "benefitsTitle": "Avantages de Nos Plans d'Abonnement",
+          "benefit1": "Plan gratuit disponible pour toujours - aucune carte de crédit requise pour commencer",
+          "benefit2": "Facturation mensuelle ou annuelle flexible avec 25% d'économies sur les plans annuels",
+          "benefit3": "Mises à niveau de plan instantanées - nouvelles fonctionnalités activées immédiatement",
+          "benefit4": "Traitement sécurisé des paiements via Stripe pour toutes les transactions",
+          "benefit5": "Gestion facile des plans via un tableau de bord de facturation simple",
+          "benefit6": "Rétrogradez à tout moment - aucun contrat à long terme requis",
+          "conclusionTitle": "Commencez à Créer Votre Site Web de Restaurant Aujourd'hui",
+          "conclusionText": "Avec nos nouveaux plans d'abonnement, créer un menu QR professionnel et un site web de restaurant n'a jamais été aussi accessible. Commencez avec notre plan Gratuit pour découvrir la plateforme, puis mettez à niveau à mesure que votre restaurant grandit. Nos options de facturation flexibles, nos prix transparents et notre activation instantanée signifient que vous pouvez avoir votre menu numérique opérationnel en quelques minutes. Rejoignez des milliers de restaurants utilisant déjà IQ Rest pour se connecter avec leurs clients grâce à des menus QR modernes et adaptés aux mobiles.",
+          "ctaText": "Prêt à choisir votre plan pour le menu QR et le site web de restaurant ?",
+          "ctaButton": "Voir les Plans de Tarification"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "Code QR",
+    "description": "Téléchargez et imprimez votre code QR pour que les clients puissent le scanner",
+    "preview": "Aperçu",
+    "paperFormat": "Format Papier",
+    "qrPerPage": "Codes QR par Page",
+    "customText": "Texte Sous le Code QR",
+    "customTextPlaceholder": "Scannez pour voir le menu",
+    "print": "Imprimer",
+    "download": "Télécharger PNG",
+    "viewMenu": "Voir le Menu",
+    "noSlug": "Aucune URL de Menu Définie",
+    "noSlugDescription": "Veuillez d'abord configurer l'URL de votre restaurant dans les paramètres pour générer un code QR.",
+    "goToSettings": "Aller aux Paramètres",
+    "loading": "Chargement...",
+    "menuUrl": "Votre Site Web",
+    "websiteReady": "Votre site web est prêt !",
+    "openWebsite": "Ouvrir le Site Web",
+    "printSection": "Imprimer & Télécharger le Code QR :",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Lettre (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Page entière)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Taille du Texte",
+    "textSizes": {
+      "small": "Petit",
+      "medium": "Moyen",
+      "large": "Grand"
+    }
+  },
+  "support": {
+    "title": "Messages",
+    "subtitle": "Obtenez de l'aide de notre équipe",
+    "unauthorized": "Veuillez vous connecter pour accéder au support",
+    "lastUpdated": "Mis à jour",
+    "emptyTitle": "Aucun message pour l'instant",
+    "emptyDescription": "Envoyez un message pour commencer la conversation",
+    "sendMessage": "Envoyer le message",
+    "placeholder": "Tapez votre message...",
+    "hint": "Appuyez sur Entrée pour envoyer, Maj+Entrée pour une nouvelle ligne",
+    "send": "Envoyer",
+    "supportTeam": "Équipe de support"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Créez votre menu numérique en 5 minutes - IQ Rest",
+      "description": "Menu QR et site web pour votre restaurant. Prêt instantanément. Aucune compétence technique requise."
+    },
+    "title": "Créez votre menu numérique en 5 minutes",
+    "subtitle": "Menu QR et site web pour votre restaurant. Prêt instantanément.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Entrez l'email pour commencer à créer",
+    "otpPlaceholder": "Entrez le code à 4 chiffres",
+    "continue": "Créer mon menu",
+    "sending": "Création en cours...",
+    "verifyTitle": "Vérifiez votre email",
+    "verifySubtitle": "Nous avons envoyé un code à 4 chiffres à {email}",
+    "verify": "Vérifier",
+    "verifying": "Vérification en cours...",
+    "changeEmail": "Changer d'email",
+    "resendCode": "Renvoyer le code",
+    "successTitle": "Bienvenue !",
+    "successSubtitle": "Vous vous êtes connecté avec succès",
+    "redirecting": "Redirection vers le tableau de bord...",
+    "errors": {
+      "sendFailed": "Échec de l'envoi du code de vérification. Veuillez réessayer.",
+      "verifyFailed": "Échec de la vérification du code. Veuillez réessayer."
+    },
+    "valueProps": {
+      "noSkills": "Aucune compétence technique requise",
+      "instantUpdates": "Mises à jour instantanées du menu",
+      "qrIncluded": "Code QR + site web inclus",
+      "freeStart": "Gratuit pour commencer"
+    },
+    "formHelper": "Aucune carte de crédit requise",
+    "setupTime": "Configuration en 5 minutes",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "signIn": "Se connecter",
+    "restaurantCounter": "Rejoignez {count} restaurants utilisant déjà IQ Rest",
+    "steps": {
+      "signUp": "Inscrivez-vous avec votre email",
+      "addMenu": "Ajoutez vos articles de menu",
+      "getQr": "Obtenez votre code QR et commencez"
+    },
+    "motivational": {
+      "title": "Commencez à accepter des commandes aujourd'hui",
+      "subtitle": "Vos clients attendent un menu numérique"
+    }
+  },
+  "reservations": {
+    "title": "Réservations",
+    "tables": "Tables",
+    "settings": "Paramètres",
+    "addTable": "Ajouter une Table",
+    "newTable": "Nouvelle Table",
+    "editTable": "Modifier la Table",
+    "tableNumber": "Numéro de Table",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Capacité (invités)",
+    "capacityPlaceholder": "4",
+    "zone": "Zone",
+    "zonePlaceholder": "Terrasse, Fenêtre, Salle principale...",
+    "image": "Photo",
+    "uploadImage": "Cliquez pour télécharger la photo",
+    "removeImage": "Supprimer",
+    "isActive": "Actif",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette table ?",
+    "table": "Table",
+    "noTables": "Aucune table pour le moment. Ajoutez votre première table pour activer les réservations.",
+    "error": "Erreur",
+    "close": "Fermer",
+    "noReservations": "Aucune réservation pour le moment",
+    "pending": "En attente",
+    "confirmed": "Confirmé",
+    "cancelled": "Annulé",
+    "completed": "Terminé",
+    "confirm": "Confirmer",
+    "reject": "Rejeter",
+    "guests": "invités",
+    "date": "Date",
+    "time": "Heure",
+    "guest": "Invité",
+    "status": "Statut",
+    "notes": "Notes",
+    "awaitingResponse": "En attente de réponse",
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "otherReservations": "Autres Réservations",
+    "sort": "Trier"
+  },
+  "publicReserve": {
+    "title": "Réserver une Table",
+    "selectDate": "Sélectionner la Date",
+    "selectTime": "Sélectionner l'Heure",
+    "selectGuests": "Nombre de Convives",
+    "selectTable": "Sélectionner la Table",
+    "yourDetails": "Vos Détails",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "phone": "Téléphone (facultatif)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Demandes spéciales (facultatif)",
+    "notesPlaceholder": "Toutes demandes ou notes spéciales...",
+    "submit": "Réserver la Table",
+    "submitting": "Réservation en cours...",
+    "success": "Réservation Soumise !",
+    "successAuto": "Votre réservation est confirmée. Vous recevrez un email de confirmation sous peu.",
+    "successManual": "Votre demande de réservation a été soumise. Vous recevrez un email une fois confirmée.",
+    "error": "Erreur",
+    "guests": "convives",
+    "table": "Table",
+    "capacity": "capacité",
+    "noAvailableTables": "Aucune table disponible pour ce nombre de convives",
+    "back": "Retour au Menu",
+    "noTimeSlotsAvailable": "Aucun créneau horaire disponible pour cette date",
+    "loadingAvailability": "Vérification de la disponibilité..."
+  },
+  "publicMenu": {
+    "contacts": "Contacts",
+    "language": "Langue",
+    "reserve": "Réserver une table",
+    "onlineMenu": "Menu en ligne",
+    "noCategories": "Aucune catégorie disponible",
+    "openInstagram": "Ouvrir Instagram",
+    "makeCall": "Passer un appel",
+    "writeWhatsApp": "Écrire sur WhatsApp",
+    "openGoogleMaps": "Ouvrir dans Google Maps",
+    "noLocation": "Aucun emplacement disponible",
+    "english": "Anglais",
+    "spanish": "Espagnol",
+    "allergens": "Allergènes",
+    "allergensInfo": "Ce plat contient les allergènes suivants :",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Crustacés",
+      "eggs": "Œufs",
+      "fish": "Poisson",
+      "peanuts": "Arachides",
+      "soybeans": "Soja",
+      "dairy": "Produits laitiers",
+      "nuts": "Fruits à coque",
+      "celery": "Céleri",
+      "mustard": "Moutarde",
+      "sesame": "Sésame",
+      "sulphites": "Sulfites",
+      "lupin": "Lupin",
+      "molluscs": "Mollusques"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées Sur le Menu QR pour Restaurant & Café",
+    "subtitle": "Trouvez des réponses aux questions courantes sur la création et la gestion de votre menu QR numérique pour restaurants et cafés",
+    "howto": {
+      "question": "Comment créer un menu QR et un site web de restaurant en 4 étapes faciles ?",
+      "answer": "Mettez votre restaurant en ligne en 5 minutes - il vous suffit d'entrer votre e-mail et de commencer depuis votre téléphone",
+      "faqTitle": "Vous avez d'autres questions ?",
+      "faqDescription": "Consultez notre FAQ complète pour tout savoir sur la création et la gestion du menu QR et du site web de votre restaurant",
+      "faqButton": "Voir Toutes les FAQ",
+      "contactButton": "Contactez-nous",
+      "steps": [
+        {
+          "name": "Connectez-vous avec votre e-mail",
+          "text": "Obtenez un site web de restaurant moderne avec un menu QR, une page de contact avec carte, des réservations en ligne et un branding personnalisé - tout inclus dès le départ."
+        },
+        {
+          "name": "Configurez votre restaurant",
+          "text": "Entrez le nom de votre restaurant et choisissez votre URL unique. Ajoutez une vidéo ou une photo en arrière-plan, définissez vos couleurs de marque, activez les réservations de table."
+        },
+        {
+          "name": "Ajoutez des catégories et des plats",
+          "text": "Créez des catégories de menu et ajoutez des plats avec des photos. L'IA optimise automatiquement vos images et traduit votre menu en plus de 10 langues."
+        },
+        {
+          "name": "Visualisez votre menu prêt",
+          "text": "Votre site web professionnel est en ligne ! Les clients peuvent parcourir votre menu, faire des réservations et vous trouver sur la carte. Suivez tout avec des analyses quotidiennes."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Qu'est-ce qu'un menu QR pour restaurant et comment ça fonctionne ?",
+        "answer": "Un menu QR pour restaurant est un menu numérique auquel les clients peuvent accéder en scannant un code QR avec leur smartphone. IQ Rest crée un site web de menu numérique professionnel pour votre restaurant ou café qui se met à jour instantanément sans réimpression. Les clients scannent simplement le code et consultent votre menu sur leur appareil."
+      },
+      {
+        "question": "Combien coûte un menu QR pour un restaurant ou un café ?",
+        "answer": "IQ Rest propose des tarifs flexibles à partir de 0 € à vie avec notre plan gratuit. Cela rend abordable pour tout restaurant ou café de créer un menu QR professionnel. Les plans payants commencent à seulement 4 €/mois avec des fonctionnalités supplémentaires comme des articles illimités et des analyses avancées."
+      },
+      {
+        "question": "Puis-je créer un site web pour mon restaurant sans coder ?",
+        "answer": "Oui ! IQ Rest est conçu pour les propriétaires de restaurants et de cafés sans aucune connaissance technique. Vous pouvez créer un site web de menu numérique complet pour votre restaurant en quelques minutes, sans compétences en programmation ou en codage requises. Il vous suffit d'ajouter vos plats, prix et photos via notre interface intuitive."
+      },
+      {
+        "question": "À quelle fréquence puis-je mettre à jour mon menu QR ?",
+        "answer": "Vous pouvez mettre à jour le menu de votre restaurant ou café aussi souvent que nécessaire. Tous les changements sont reflétés en temps réel, vous permettant de mettre à jour instantanément les prix, d'ajouter de nouveaux plats ou de modifier les descriptions sans réimpression de menus physiques. Parfait pour les offres du jour et les mises à jour saisonnières."
+      },
+      {
+        "question": "Le menu QR fonctionne-t-il pour les restaurants et les cafés ?",
+        "answer": "Absolument ! IQ Rest est parfait pour les restaurants, cafés, salons de thé, bars, camions de nourriture et toute entreprise de services alimentaires. Notre solution de menu numérique s'adapte à tout type d'établissement, des petits cafés aux grandes chaînes de restaurants."
+      },
+      {
+        "question": "Comment fonctionne la traduction automatique du menu ?",
+        "answer": "Notre système de menu QR utilise l'intelligence artificielle pour traduire automatiquement le menu de votre restaurant ou café en plusieurs langues. C'est parfait pour les zones touristiques et les clients internationaux. Vous pouvez proposer votre menu en anglais, espagnol et d'autres langues, vous aidant à servir plus de clients."
+      },
+      {
+        "question": "Puis-je essayer la solution de menu QR gratuitement ?",
+        "answer": "Oui ! Nous proposons un plan entièrement gratuit pour les restaurants et cafés afin d'essayer IQ Rest. Vous pouvez créer votre site web de menu numérique avec jusqu'à 15 articles sans frais, pour toujours. Aucune carte de crédit requise pour commencer. Mettez à niveau uniquement lorsque vous avez besoin de plus de fonctionnalités."
+      },
+      {
+        "question": "IQ Rest est-il une application que les clients doivent télécharger ?",
+        "answer": "Non ! C'est l'un des meilleurs avantages. Les clients n'ont pas besoin de télécharger d'application. Ils scannent simplement votre code QR et le menu s'ouvre instantanément dans leur navigateur web. Cela rend l'expérience beaucoup plus pratique que les applications de restaurant qui nécessitent des téléchargements."
+      },
+      {
+        "question": "Quels sont les avantages d'un site web de menu numérique pour mon restaurant ?",
+        "answer": "Un site web de menu numérique offre de nombreux avantages : mises à jour instantanées du menu sans coûts de réimpression, support multilingue pour les clients internationaux, commande sans contact pour la sécurité, analyses pour voir les plats populaires, et présentation professionnelle. De plus, c'est écologique car vous éliminez les déchets de menus en papier."
+      },
+      {
+        "question": "Comment créer un code QR pour le menu de mon restaurant ?",
+        "answer": "IQ Rest génère automatiquement un code QR professionnel lorsque vous créez votre menu numérique. Vous pouvez télécharger et imprimer ce code QR pour les tables de votre restaurant, l'entrée ou le comptoir de vente à emporter. Le code QR est personnalisable et de haute qualité pour un scan clair."
+      }
+    ],
+    "cta": {
+      "title": "Vous avez encore des questions ?",
+      "subtitle": "Demandez-nous et obtenez une réponse dans les plus brefs délais",
+      "button": "Contactez-nous"
+    },
+    "linkTitle": "Vous avez des questions ?",
+    "linkDescription": "Consultez nos questions fréquemment posées pour en savoir plus sur IQ Rest",
+    "meta": {
+      "title": "Questions Fréquemment Posées - IQ Rest",
+      "description": "Trouvez des réponses aux questions courantes sur la solution de menu QR numérique IQ Rest pour restaurants et cafés"
+    }
+  },
+  "billing": {
+    "title": "Facturation",
+    "description": "Gérez votre abonnement et votre facturation",
+    "unauthorized": "Veuillez vous connecter pour gérer votre abonnement",
+    "perMonth": "/mois",
+    "currentPlan": "Abonnement Actuel",
+    "upgrade": "Mettre à Niveau",
+    "manage": "Gérer",
+    "subscriptionSuccess": "Votre abonnement a été activé avec succès !",
+    "subscriptionCanceled": "Le processus d'abonnement a été annulé.",
+    "subscriptionProcessing": "Votre paiement est en cours de traitement. Cela peut prendre quelques instants pour s'activer.",
+    "processingPayment": "Traitement de votre paiement...",
+    "processingPaymentDescription": "Veuillez patienter pendant que nous confirmons votre abonnement. Cela prend généralement quelques secondes.",
+    "checkoutError": "Échec du démarrage du processus de paiement. Veuillez réessayer.",
+    "portalError": "Échec de l'ouverture du portail de facturation. Veuillez réessayer.",
+    "detailsNote": "Pour plus de détails, visitez notre",
+    "pricingPage": "Page de Tarification",
+    "plans": {
+      "FREE": {
+        "name": "Gratuit"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Basique Mensuel"
+      },
+      "BASIC_YEARLY": {
+        "name": "Basique Annuel"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Mensuel"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Annuel"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Tableau de bord",
+      "onboarding": "Intégration",
+      "qrMenu": "Menu QR",
+      "analytics": "Analytique",
+      "categories": "Catégories",
+      "items": "Articles",
+      "settings": "Général",
+      "design": "Design",
+      "contacts": "Contacts",
+      "languages": "Langues",
+      "reservations": "Réservations",
+      "reservationSettings": "Paramètres de réservation",
+      "tables": "Tables",
+      "billing": "Facturation",
+      "support": "Support"
+    },
+    "sidebar": {
+      "qrMenu": "Menu QR",
+      "menu": "Menu",
+      "settings": "Paramètres",
+      "reservations": "Réservations",
+      "account": "Compte",
+      "reservationSettings": "Configuration"
+    },
+    "logout": "Déconnexion",
+    "auth": {
+      "title": "Se connecter",
+      "subtitle": "Site web moderne avec menu QR, réservations et traductions AI",
+      "benefits": "Pas de mots de passe. Pas de carte de crédit.",
+      "emailPlaceholder": "votre@email.com",
+      "continue": "Continuer",
+      "verifyTitle": "Vérifiez votre email",
+      "verifySubtitle": "Nous avons envoyé un code à {email}",
+      "verify": "Vérifier",
+      "changeEmail": "Utiliser un email différent",
+      "errors": {
+        "sendFailed": "Échec de l'envoi du code. Veuillez réessayer.",
+        "verifyFailed": "Code invalide. Veuillez réessayer."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Utilisation Mensuelle",
+      "scansThisMonth": "scans ce mois-ci",
+      "limitReached": "Vous avez atteint votre limite de scans mensuels. Mettez à niveau votre plan pour des scans illimités.",
+      "todayViews": "Aujourd'hui",
+      "weeklyViews": "Cette Semaine",
+      "monthlyViews": "Ce Mois",
+      "uniqueVisitors": "Visiteurs Uniques",
+      "viewsByPage": "Vues par Page",
+      "viewsByLanguage": "Vues par Langue",
+      "dailyViews": "Vues Quotidiennes",
+      "noData": "Aucune donnée disponible pour le moment",
+      "pageNames": {
+        "home": "Accueil",
+        "menu": "Menu",
+        "contacts": "Contacts",
+        "language": "Langue",
+        "reserve": "Réserver"
+      },
+      "languageNames": {
+        "en": "Anglais",
+        "es": "Espagnol",
+        "de": "Allemand",
+        "fr": "Français",
+        "ru": "Русский"
+      }
+    },
+    "categories": {
+      "noCategories": "Pas encore de catégories. Créez votre première catégorie pour commencer.",
+      "addCategory": "Ajouter",
+      "editCategory": "Modifier la Catégorie",
+      "name": "Nom",
+      "namePlaceholder": "Entrez le nom de la catégorie",
+      "status": "Statut",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette catégorie ? Cette action ne peut pas être annulée.",
+      "fetchError": "Échec du chargement des catégories",
+      "updateError": "Échec de la mise à jour de la catégorie",
+      "saveError": "Échec de l'enregistrement de la catégorie",
+      "deleteError": "Échec de la suppression de la catégorie",
+      "translateError": "Échec de la traduction",
+      "nameRequired": "Le nom est requis",
+      "enabled": "activé",
+      "disabled": "désactivé",
+      "created": "Catégorie créée",
+      "updated": "Catégorie mise à jour",
+      "deleted": "Catégorie supprimée",
+      "validationErrorTitle": "Veuillez corriger les erreurs suivantes",
+      "sort": "Trier",
+      "saveSort": "Enregistrer",
+      "sortSaved": "Ordre de tri enregistré",
+      "sortError": "Échec de l'enregistrement de l'ordre de tri"
+    },
+    "items": {
+      "noItems": "Aucun élément pour le moment. Créez votre premier élément pour commencer.",
+      "addItem": "Ajouter",
+      "editItem": "Modifier l'élément",
+      "name": "Nom",
+      "namePlaceholder": "Entrez le nom de l'élément",
+      "description": "Description",
+      "descriptionPlaceholder": "Entrez la description de l'élément",
+      "price": "Prix",
+      "pricePlaceholder": "0,00",
+      "category": "Catégorie",
+      "categoryPlaceholder": "Sélectionnez la catégorie",
+      "image": "Image",
+      "uploadImage": "Télécharger l'image",
+      "removeImage": "Supprimer l'image",
+      "status": "Statut",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cet élément ? Cette action ne peut pas être annulée.",
+      "fetchError": "Échec du chargement des éléments",
+      "updateError": "Échec de la mise à jour de l'élément",
+      "saveError": "Échec de l'enregistrement de l'élément",
+      "deleteError": "Échec de la suppression de l'élément",
+      "translateError": "Échec de la traduction",
+      "nameRequired": "Le nom est requis",
+      "categoryRequired": "La catégorie est requise",
+      "priceRequired": "Un prix valide est requis",
+      "enabled": "activé",
+      "disabled": "désactivé",
+      "created": "Élément créé",
+      "updated": "Élément mis à jour",
+      "deleted": "Élément supprimé",
+      "validationErrorTitle": "Veuillez corriger les erreurs suivantes",
+      "sort": "Trier",
+      "saveSort": "Enregistrer",
+      "sortSaved": "Ordre de tri enregistré",
+      "sortError": "Échec de l'enregistrement de l'ordre de tri",
+      "allergens": "Allergènes",
+      "allergensHint": "Sélectionnez les allergènes présents dans ce plat",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Crustacés",
+        "eggs": "Œufs",
+        "fish": "Poisson",
+        "peanuts": "Arachides",
+        "soybeans": "Soja",
+        "dairy": "Produits laitiers",
+        "nuts": "Fruits à coque",
+        "celery": "Céleri",
+        "mustard": "Moutarde",
+        "sesame": "Sésame",
+        "sulphites": "Sulfites",
+        "lupin": "Lupin",
+        "molluscs": "Mollusques"
+      }
+    },
+    "languages": {
+      "translationProgress": "Progression de la traduction",
+      "availableLanguages": "Langues disponibles",
+      "europeanLanguages": "Langues européennes",
+      "starToSetDefault": "Cliquez sur l'étoile pour définir comme par défaut",
+      "default": "par défaut",
+      "hint": "Activez les langues pour permettre aux clients de consulter votre menu dans plusieurs langues. La langue par défaut est utilisée pour le contenu principal.",
+      "fetchError": "Échec du chargement des langues",
+      "enableError": "Échec de l'activation de la langue",
+      "disableError": "Échec de la désactivation de la langue",
+      "defaultError": "Échec de la définition de la langue par défaut",
+      "languageEnabled": "{language} activé",
+      "languageDisabled": "{language} désactivé",
+      "defaultSet": "{language} défini comme par défaut",
+      "cannotDisableDefault": "Impossible de désactiver la langue par défaut",
+      "atLeastOneRequired": "Au moins une langue est requise",
+      "enableFirst": "Activez d'abord la langue",
+      "deleteConfirm": "La désactivation de cette langue supprimera toutes les traductions associées. Cette action ne peut pas être annulée.",
+      "cancel": "Annuler",
+      "confirm": "Désactiver"
+    },
+    "contacts": {
+      "phone": "Téléphone",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Numéro de téléphone de contact pour vos clients",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "votre_restaurant",
+      "instagramHint": "Votre nom d'utilisateur Instagram (sans @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "Numéro WhatsApp pour les demandes des clients",
+      "location": "Emplacement",
+      "locationHint": "Cliquez sur la carte ou recherchez pour définir l'emplacement de votre restaurant",
+      "save": "Enregistrer",
+      "fetchError": "Échec du chargement des informations de contact",
+      "saveError": "Échec de l'enregistrement des informations de contact",
+      "saved": "Informations de contact enregistrées"
+    },
+    "design": {
+      "background": "Arrière-plan",
+      "backgroundHint": "Téléchargez une vidéo ou une image pour l'arrière-plan de votre page d'accueil",
+      "uploadMedia": "Télécharger une vidéo ou une image",
+      "removeMedia": "Supprimer",
+      "accentColor": "Couleur d'accent",
+      "accentColorHint": "Couleur principale pour les boutons et les mises en évidence sur votre site web",
+      "presetColors": "Couleurs prédéfinies",
+      "customColor": "Couleur personnalisée",
+      "save": "Enregistrer",
+      "fetchError": "Échec du chargement des paramètres de conception",
+      "saveError": "Échec de l'enregistrement des paramètres de conception",
+      "saved": "Paramètres de conception enregistrés",
+      "uploadError": "Échec du téléchargement du fichier",
+      "invalidFileType": "Type de fichier invalide. Autorisés : JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Le fichier est trop volumineux. Taille maximale : 50 Mo pour les vidéos, 5 Mo pour les images"
+    },
+    "general": {
+      "name": "Titre",
+      "namePlaceholder": "Entrez le nom du restaurant",
+      "nameHint": "Affiché sur la page d'accueil de votre site web public",
+      "description": "Sous-titre",
+      "descriptionPlaceholder": "Brève description (facultatif)",
+      "descriptionHint": "Affiché sous le titre sur la page d'accueil",
+      "slug": "URL Slug",
+      "slugPlaceholder": "mon-restaurant",
+      "slugHint": "Votre site web sera disponible à : iq-rest.com/{slug}",
+      "currency": "Devise",
+      "currencyPlaceholder": "Sélectionnez la devise",
+      "save": "Enregistrer",
+      "fetchError": "Échec du chargement des paramètres",
+      "saveError": "Échec de l'enregistrement des paramètres",
+      "saved": "Paramètres enregistrés",
+      "nameRequired": "Le nom du restaurant est requis",
+      "slugRequired": "L'URL slug est requise",
+      "validationErrorTitle": "Veuillez corriger les erreurs suivantes",
+      "slugChangedTitle": "Adresse du site web mise à jour",
+      "slugChangedDescription": "Votre restaurant est maintenant disponible à :",
+      "close": "Fermer",
+      "view": "Voir"
+    },
+    "onboarding": {
+      "title": "Bienvenue chez IQ Rest !",
+      "subtitle": "Complétez ces étapes pour lancer le site web de votre restaurant",
+      "requiredSteps": "Étapes requises",
+      "optionalSteps": "Étapes facultatives",
+      "viewMenu": "Voir Votre Menu",
+      "steps": {
+        "title": {
+          "name": "Ajouter le Nom du Restaurant",
+          "description": "Donnez un nom à votre restaurant qui apparaîtra sur votre site web"
+        },
+        "slug": {
+          "name": "Définir l'Adresse du Site Web",
+          "description": "Choisissez une URL unique pour le site web de votre restaurant"
+        },
+        "categories": {
+          "name": "Créer des Catégories de Menu",
+          "description": "Organisez votre menu avec des catégories comme Entrées, Plats Principaux, etc."
+        },
+        "items": {
+          "name": "Ajouter des Éléments au Menu",
+          "description": "Ajoutez des plats à votre menu avec des prix et des descriptions"
+        },
+        "design": {
+          "name": "Personnaliser le Design",
+          "description": "Choisissez des couleurs et un arrière-plan pour votre site web"
+        },
+        "contacts": {
+          "name": "Ajouter des Informations de Contact",
+          "description": "Ajoutez téléphone, WhatsApp, Instagram et localisation"
+        },
+        "reservations": {
+          "name": "Activer les Réservations",
+          "description": "Permettre aux clients de réserver des tables en ligne"
+        },
+        "translations": {
+          "name": "Ajouter des Langues",
+          "description": "Rendez votre menu disponible en plusieurs langues"
+        }
+      },
+      "completed": "Terminé",
+      "notCompleted": "Non terminé",
+      "allDone": "Tout est fait ! Votre menu est en ligne.",
+      "requiredRemaining": "{count} étapes requises restantes"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Pour rendre les réservations disponibles à vos clients, vous devez vous abonner au service.",
+    "subscribe": "S'abonner",
+    "reservationsEnabled": "Activer les Réservations",
+    "enabled": "Les réservations sont activées",
+    "disabled": "Les réservations sont désactivées",
+    "reservationMode": "Mode de Confirmation",
+    "modeAuto": "Automatique",
+    "modeManual": "Manuel",
+    "modeAutoDescription": "Les réservations seront automatiquement confirmées en fonction de la disponibilité des tables",
+    "modeManualDescription": "Vous devrez confirmer manuellement chaque réservation",
+    "slotDuration": "Durée de la Réservation",
+    "minutes": "minutes",
+    "workingHours": "Heures de Travail",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "saved": "Paramètres enregistrés",
+    "fetchError": "Échec du chargement des paramètres",
+    "saveError": "Échec de l'enregistrement des paramètres"
+  },
+  "terms": {
+    "title": "Conditions Générales",
+    "lastUpdated": "Dernière mise à jour : 17 décembre 2025",
+    "contact": {
+      "title": "Contactez-nous",
+      "description": "Si vous avez des questions concernant ces Conditions Générales, veuillez nous contacter."
+    },
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "content": [
+          "Bienvenue chez IQ Rest. Ces Conditions Générales régissent votre utilisation de notre site web et des services opérés par Bogdan Sokolov (Autónomo), NIE : Z1894474S, enregistré en Espagne.",
+          "En accédant ou en utilisant IQ Rest, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord avec une partie de ces conditions, vous ne pouvez pas accéder au service."
+        ]
+      },
+      {
+        "title": "2. Description du Service",
+        "content": [
+          "IQ Rest fournit une plateforme de création de menus numériques QR et de sites web pour les restaurants, cafés et établissements de restauration. Notre service inclut la gestion des menus, la génération de codes QR, un support multilingue avec des traductions alimentées par l'IA, l'optimisation d'images par IA, des systèmes de réservation de tables et des analyses.",
+          "Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect du service à tout moment sans préavis."
+        ]
+      },
+      {
+        "title": "3. Inscription au Compte",
+        "content": [
+          "Pour utiliser certaines fonctionnalités de IQ Rest, vous devez enregistrer un compte en utilisant une adresse email valide. Vous êtes responsable du maintien de la confidentialité de votre compte et de toutes les activités qui se produisent sous votre compte.",
+          "Vous acceptez de fournir des informations exactes, actuelles et complètes lors de l'inscription et de mettre à jour ces informations pour qu'elles restent exactes, actuelles et complètes.",
+          "Nous utilisons une authentification sans mot de passe via des codes de vérification par email. Vous êtes responsable de la sécurité de votre compte email."
+        ]
+      },
+      {
+        "title": "4. Plans d'Abonnement et Paiements",
+        "content": [
+          "IQ Rest propose des plans d'abonnement Gratuit, Basique et Pro. Le plan Gratuit est disponible sans frais avec des fonctionnalités limitées. Les plans payants (Basique et Pro) sont facturés mensuellement ou annuellement via notre processeur de paiement, Stripe.",
+          "Les prix sont affichés en Euros (EUR). En vous abonnant à un plan payant, vous nous autorisez à facturer votre méthode de paiement de manière récurrente jusqu'à ce que vous annuliez.",
+          "Vous pouvez mettre à niveau, rétrograder ou annuler votre abonnement à tout moment via votre tableau de bord. Les annulations prennent effet à la fin de la période de facturation en cours. Aucun remboursement n'est prévu pour les périodes de facturation partielles.",
+          "Nous nous réservons le droit de modifier nos prix avec un préavis de 30 jours. Les changements de prix s'appliqueront aux périodes de facturation commençant après la période de préavis."
+        ]
+      },
+      {
+        "title": "5. Fonctionnalités Alimentées par l'IA",
+        "content": [
+          "IQ Rest utilise l'intelligence artificielle pour les traductions de menus et l'optimisation d'images. Bien que nous nous efforçons d'assurer l'exactitude, les traductions générées par l'IA peuvent contenir des erreurs. Vous êtes responsable de la révision et de la vérification de tout contenu généré par l'IA avant publication.",
+          "L'optimisation d'images par IA traite automatiquement les images téléchargées pour améliorer les performances de chargement. Les images originales ne sont pas stockées après traitement.",
+          "Nous ne garantissons pas l'exactitude, l'exhaustivité ou la fiabilité du contenu généré par l'IA. Vous reconnaissez que les fonctionnalités IA sont fournies 'telles quelles' et que vous les utilisez à vos propres risques."
+        ]
+      },
+      {
+        "title": "6. Contenu Utilisateur",
+        "content": [
+          "Vous conservez la propriété de tout le contenu que vous téléchargez sur IQ Rest, y compris les éléments de menu, descriptions, images et informations commerciales.",
+          "En téléchargeant du contenu, vous accordez à IQ Rest une licence non exclusive, mondiale et sans redevance pour utiliser, afficher et distribuer votre contenu uniquement dans le but de fournir le service.",
+          "Vous êtes seul responsable du contenu que vous téléchargez et devez vous assurer qu'il ne viole aucune loi ou droits de tiers. Le contenu interdit comprend : matériel illégal, contenu protégé par des droits d'auteur sans autorisation, informations trompeuses ou frauduleuses, et contenu qui viole les réglementations de santé et de sécurité."
+        ]
+      },
+      {
+        "title": "7. Utilisation Acceptable",
+        "content": [
+          "Vous acceptez de ne pas utiliser IQ Rest à des fins illégales ou de manière à endommager, désactiver ou altérer le service.",
+          "Les activités interdites incluent : tenter d'accéder sans autorisation à d'autres comptes ou systèmes, utiliser le service pour distribuer des spams ou des logiciels malveillants, le scraping ou l'extraction de données, usurper l'identité d'autres individus ou entreprises, et contourner les limites d'utilisation ou les mesures de sécurité."
+        ]
+      },
+      {
+        "title": "8. Propriété Intellectuelle",
+        "content": [
+          "Le nom IQ Rest, le logo, le design du site web et toute la propriété intellectuelle associée sont la propriété de Bogdan Sokolov et sont protégés par les lois de propriété intellectuelle applicables.",
+          "Vous ne pouvez pas copier, modifier, distribuer ou créer des œuvres dérivées basées sur notre propriété intellectuelle sans autorisation écrite expresse."
+        ]
+      },
+      {
+        "title": "9. Confidentialité et Protection des Données",
+        "content": [
+          "Votre utilisation de IQ Rest est également régie par notre Politique de Confidentialité. Nous respectons le Règlement Général sur la Protection des Données (RGPD) et les lois espagnoles sur la protection des données (LOPDGDD).",
+          "Nous collectons et traitons les données personnelles nécessaires pour fournir le service, y compris les adresses email, les informations commerciales et les analyses d'utilisation. Vous pouvez demander l'accès, la correction ou la suppression de vos données personnelles à tout moment."
+        ]
+      },
+      {
+        "title": "10. Limitation de Responsabilité",
+        "content": [
+          "IQ Rest est fourni 'tel quel' et 'selon disponibilité' sans garanties d'aucune sorte, explicites ou implicites, y compris mais sans s'y limiter les garanties implicites de qualité marchande et d'adéquation à un usage particulier.",
+          "Dans la mesure maximale permise par la loi, Bogdan Sokolov ne pourra être tenu responsable d'aucun dommage indirect, accessoire, spécial, consécutif ou punitif, y compris la perte de bénéfices, de données ou d'opportunités commerciales.",
+          "Notre responsabilité totale pour toute réclamation découlant de ou liée au service ne dépassera pas le montant que vous nous avez payé au cours des douze (12) mois précédant la réclamation."
+        ]
+      },
+      {
+        "title": "11. Indemnisation",
+        "content": [
+          "Vous acceptez d'indemniser, de défendre et de dégager de toute responsabilité Bogdan Sokolov pour toute réclamation, dommage, perte ou dépense découlant de votre utilisation du service, de votre contenu ou de votre violation de ces Conditions."
+        ]
+      },
+      {
+        "title": "12. Disponibilité du Service",
+        "content": [
+          "Nous nous efforçons de maintenir une haute disponibilité de notre service mais ne garantissons pas un accès ininterrompu. Le service peut être temporairement indisponible en raison de maintenance, de mises à jour ou de circonstances échappant à notre contrôle.",
+          "Nous ne sommes pas responsables de toute perte ou dommage résultant d'interruptions de service ou de temps d'arrêt."
+        ]
+      },
+      {
+        "title": "13. Résiliation",
+        "content": [
+          "Nous pouvons résilier ou suspendre votre compte immédiatement, sans préavis, pour un comportement que nous croyons violer ces Conditions ou nuire à d'autres utilisateurs, à nous ou à des tiers.",
+          "En cas de résiliation, votre droit d'utiliser le service cesse immédiatement. Nous pouvons supprimer vos données dans les 30 jours suivant la résiliation, sauf si la loi exige de les conserver."
+        ]
+      },
+      {
+        "title": "14. Modifications des Conditions",
+        "content": [
+          "Nous nous réservons le droit de modifier ces Conditions à tout moment. Nous vous informerons des changements significatifs par email ou via le service.",
+          "Votre utilisation continue de IQ Rest après que les changements soient entrés en vigueur constitue une acceptation des Conditions révisées."
+        ]
+      },
+      {
+        "title": "15. Droit Applicable et Juridiction",
+        "content": [
+          "Ces Conditions sont régies par les lois de l'Espagne et de l'Union Européenne. Tout litige découlant de ces Conditions ou de votre utilisation de IQ Rest sera soumis à la juridiction exclusive des tribunaux espagnols.",
+          "Si une disposition de ces Conditions est jugée inapplicable, les dispositions restantes continueront à avoir plein effet."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : 17 décembre 2025",
+    "contact": {
+      "title": "Contactez-nous",
+      "description": "Si vous avez des questions concernant cette Politique de Confidentialité ou si vous souhaitez exercer vos droits en matière de protection des données, veuillez nous contacter.",
+      "controller": "Responsable des Données"
+    },
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "content": [
+          "Cette Politique de Confidentialité explique comment IQ Rest, opéré par Bogdan Sokolov (Autónomo), NIE : Z1894474S, enregistré en Espagne, collecte, utilise, stocke et protège vos données personnelles lorsque vous utilisez notre plateforme de menu QR.",
+          "Nous nous engageons à protéger votre vie privée et à respecter le Règlement Général sur la Protection des Données (RGPD), la Loi Organique Espagnole sur la Protection des Données (LOPDGDD) et d'autres lois applicables en matière de protection des données."
+        ]
+      },
+      {
+        "title": "2. Responsable des Données",
+        "content": [
+          "Le responsable des données chargé de vos données personnelles est : Bogdan Sokolov (Autónomo), NIE : Z1894474S, enregistré en Espagne. Pour toute demande concernant la protection des données, veuillez nous contacter à support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Données Personnelles que Nous Collectons",
+        "content": [
+          "Informations sur le Compte : Lorsque vous vous inscrivez, nous collectons votre adresse e-mail à des fins d'authentification et de communication. Nous utilisons une authentification sans mot de passe, donc nous ne stockons pas de mots de passe.",
+          "Informations sur l'Entreprise : Nom du restaurant, description, slug URL, coordonnées (téléphone, WhatsApp, Instagram), données de localisation et horaires de travail que vous fournissez pour votre site web de menu public.",
+          "Contenu du Menu : Catégories, éléments du menu, descriptions, prix et images que vous téléchargez pour créer votre menu numérique.",
+          "Données d'Utilisation : Informations sur la façon dont vous utilisez notre service, y compris les pages vues, l'utilisation des fonctionnalités et les modèles d'interaction collectés par le biais d'analyses.",
+          "Informations de Paiement : Lorsque vous vous abonnez à des plans payants, le traitement des paiements est géré par Stripe. Nous ne stockons pas vos coordonnées complètes de carte de crédit ; Stripe traite et sécurise ces informations.",
+          "Données Techniques : Adresses IP, type de navigateur, informations sur l'appareil et cookies comme décrit dans notre Politique de Cookies."
+        ]
+      },
+      {
+        "title": "4. Comment Nous Utilisons Vos Données",
+        "content": [
+          "Nous utilisons vos données personnelles aux fins suivantes : Fournir et maintenir notre service de menu QR, y compris la création de votre site web de restaurant et la génération de codes QR. Authentifier votre compte en utilisant des codes de vérification par e-mail. Traiter les paiements et gérer votre abonnement via Stripe. Communiquer avec vous concernant votre compte, les mises à jour du service et les demandes de support. Fournir des fonctionnalités alimentées par l'IA telles que les traductions de menu et l'optimisation d'images. Analyser l'utilisation du service et améliorer notre plateforme. Respecter les obligations légales et protéger nos intérêts légitimes."
+        ]
+      },
+      {
+        "title": "5. Base Légale pour le Traitement",
+        "content": [
+          "Exécution du Contrat : Traitement nécessaire pour fournir notre service (Article 6(1)(b) RGPD).",
+          "Intérêts Légitimes : Analyses et amélioration du service, prévention de la fraude (Article 6(1)(f) RGPD).",
+          "Consentement : Pour des fonctionnalités optionnelles comme les communications marketing (Article 6(1)(a) RGPD).",
+          "Obligation Légale : Lorsque requis par la loi ou les exigences réglementaires (Article 6(1)(c) RGPD)."
+        ]
+      },
+      {
+        "title": "6. Stockage et Sécurité des Données",
+        "content": [
+          "Vos données sont stockées sur des serveurs sécurisés fournis par Amazon Web Services (AWS). Notre base de données est hébergée dans la région AWS Stockholm (eu-north-1) au sein de l'Union Européenne, garantissant le respect des exigences de protection des données de l'UE.",
+          "Les images et fichiers multimédias que vous téléchargez sont stockés sur des serveurs AWS S3 situés dans la région de l'UE. Les données sont cryptées en transit à l'aide de TLS/SSL et au repos à l'aide du cryptage AES-256.",
+          "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès, modification, divulgation ou destruction non autorisés. Cela inclut une authentification sécurisée, des contrôles d'accès, des audits de sécurité réguliers et une formation des employés."
+        ]
+      },
+      {
+        "title": "7. Partage des Données et Tiers",
+        "content": [
+          "Nous partageons vos données avec les catégories de tiers suivantes :",
+          "Stripe (Processeur de Paiement) : Traite les paiements d'abonnement. Stripe est certifié sous le Cadre de Protection des Données UE-États-Unis. Leur politique de confidentialité : https://stripe.com/privacy",
+          "Amazon Web Services (Infrastructure) : Héberge nos serveurs et bases de données dans les régions de l'UE. AWS respecte le RGPD et est certifié sous le Cadre de Protection des Données UE-États-Unis.",
+          "Fournisseurs de Services d'IA : Nous utilisons des services d'IA pour les traductions de menu et l'optimisation d'images. Les données sont traitées conformément à leurs politiques de confidentialité et accords de traitement des données.",
+          "Google Analytics : Pour des analyses de site web anonymisées (si activé). Vous pouvez vous désinscrire via les préférences de cookies.",
+          "Nous ne vendons pas vos données personnelles à des tiers. Nous pouvons divulguer des données si requis par la loi ou pour protéger nos droits légaux."
+        ]
+      },
+      {
+        "title": "8. Transferts Internationaux de Données",
+        "content": [
+          "Vos données sont principalement stockées et traitées au sein de l'Union Européenne (AWS Stockholm, région eu-north-1). Lorsque les données sont transférées en dehors de l'UE (par exemple, vers des fournisseurs de services basés aux États-Unis), nous veillons à ce que des garanties appropriées soient en place, y compris des Clauses Contractuelles Standards (CCS) et une certification sous des cadres de protection des données reconnus."
+        ]
+      },
+      {
+        "title": "9. Conservation des Données",
+        "content": [
+          "Données de Compte : Conservées tant que votre compte est actif. Lors de la suppression du compte, les données personnelles sont supprimées dans un délai de 30 jours, sauf si la conservation est requise par la loi.",
+          "Contenu du Menu : Conservé tant que votre compte est actif. Supprimé lors de la résiliation du compte.",
+          "Enregistrements de Paiement : Conservés pendant 7 ans comme l'exige la loi fiscale espagnole.",
+          "Données d'Analyse : Les données agrégées et anonymisées peuvent être conservées indéfiniment pour l'amélioration du service.",
+          "Données de Sauvegarde : Peuvent être conservées dans des sauvegardes cryptées pendant 90 jours après suppression à des fins de récupération après sinistre."
+        ]
+      },
+      {
+        "title": "10. Vos Droits en vertu du RGPD",
+        "content": [
+          "En vertu du RGPD, vous avez les droits suivants concernant vos données personnelles :",
+          "Droit d'Accès : Demander une copie de vos données personnelles que nous détenons.",
+          "Droit de Rectification : Demander la correction de données inexactes ou incomplètes.",
+          "Droit à l'Effacement : Demander la suppression de vos données personnelles ('droit à l'oubli').",
+          "Droit à la Limitation : Demander la limitation du traitement dans certaines circonstances.",
+          "Droit à la Portabilité des Données : Recevoir vos données dans un format structuré et lisible par machine.",
+          "Droit d'Opposition : S'opposer au traitement basé sur des intérêts légitimes ou pour le marketing direct.",
+          "Droit de Retirer le Consentement : Lorsque le traitement est basé sur le consentement, vous pouvez le retirer à tout moment.",
+          "Pour exercer ces droits, contactez-nous à support@iq-rest.com. Nous répondrons dans un délai de 30 jours. Si vous n'êtes pas satisfait de notre réponse, vous avez le droit de déposer une plainte auprès de l'Agence Espagnole de Protection des Données (AEPD) à www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Vie Privée des Enfants",
+        "content": [
+          "IQ Rest n'est pas destiné à être utilisé par des personnes de moins de 16 ans. Nous ne collectons pas sciemment des données personnelles auprès des enfants. Si nous prenons connaissance que nous avons collecté des données d'un enfant, nous les supprimerons rapidement."
+        ]
+      },
+      {
+        "title": "12. Modifications de Cette Politique",
+        "content": [
+          "Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. Nous vous informerons des changements significatifs par e-mail ou par un avis sur notre site web. La date 'Dernière mise à jour' en haut indique quand la politique a été révisée pour la dernière fois.",
+          "Votre utilisation continue d'IQ Rest après la publication des changements constitue une acceptation de la politique révisée."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Politique de Cookies",
+    "lastUpdated": "Dernière mise à jour : 17 décembre 2025",
+    "yes": "Oui",
+    "no": "Non",
+    "cookieTableTitle": "Cookies que Nous Utilisons",
+    "tableHeaders": {
+      "name": "Nom du Cookie",
+      "purpose": "Objectif",
+      "duration": "Durée",
+      "required": "Requis"
+    },
+    "contact": {
+      "title": "Questions sur les Cookies",
+      "description": "Si vous avez des questions concernant notre utilisation des cookies, veuillez nous contacter."
+    },
+    "sections": [
+      {
+        "title": "1. Qu'est-ce que les Cookies",
+        "content": [
+          "Les cookies sont de petits fichiers texte qui sont stockés sur votre appareil (ordinateur, tablette ou téléphone mobile) lorsque vous visitez un site web. Ils aident les sites web à fonctionner correctement, à mémoriser vos préférences et à fournir des informations aux propriétaires de sites.",
+          "Cette Politique de Cookies explique comment IQ Rest, géré par Bogdan Sokolov (Autónomo), utilise des cookies et des technologies similaires sur notre site web iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Comment Nous Utilisons les Cookies",
+        "content": [
+          "Nous utilisons des cookies pour plusieurs raisons : pour garantir le bon fonctionnement de notre site web, pour mémoriser vos préférences et paramètres, pour authentifier votre compte et vous garder connecté, pour analyser comment les visiteurs utilisent notre site afin de l'améliorer, et pour mémoriser vos préférences de consentement aux cookies."
+        ]
+      },
+      {
+        "title": "3. Types de Cookies que Nous Utilisons",
+        "content": [
+          "Cookies Essentiels : Ces cookies sont nécessaires au fonctionnement du site et ne peuvent pas être désactivés. Ils sont généralement définis en réponse à des actions que vous effectuez, comme vous connecter ou définir vos préférences de confidentialité.",
+          "Cookies Fonctionnels : Ces cookies permettent une fonctionnalité et une personnalisation améliorées, comme mémoriser votre langue préférée et vos paramètres de thème.",
+          "Cookies d'Analyse : Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site en collectant et en rapportant des informations de manière anonyme. Nous utilisons ces données pour améliorer notre service.",
+          "Cookies de Tiers : Certains cookies sont placés par des services tiers qui apparaissent sur nos pages, comme les processeurs de paiement (Stripe) et les fournisseurs d'analytique (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Vos Choix de Cookies",
+        "content": [
+          "Lorsque vous visitez notre site pour la première fois, vous verrez une bannière de consentement aux cookies qui vous permet d'accepter ou de rejeter les cookies non essentiels. Vous pouvez changer vos préférences à tout moment.",
+          "Vous pouvez également contrôler les cookies via les paramètres de votre navigateur. La plupart des navigateurs vous permettent de refuser les cookies, de supprimer les cookies existants ou d'être alerté lorsque des cookies sont envoyés. Veuillez noter que bloquer les cookies essentiels peut affecter la fonctionnalité de notre site.",
+          "Pour vous désinscrire du suivi de Google Analytics, vous pouvez installer l'extension de navigateur Google Analytics Opt-out."
+        ]
+      },
+      {
+        "title": "5. Durée des Cookies",
+        "content": [
+          "Cookies de Session : Ces cookies sont temporaires et sont supprimés lorsque vous fermez votre navigateur.",
+          "Cookies Persistants : Ces cookies restent sur votre appareil pendant une période définie ou jusqu'à ce que vous les supprimiez. Ils nous aident à vous reconnaître lorsque vous revenez sur notre site."
+        ]
+      },
+      {
+        "title": "6. Cookies de Tiers",
+        "content": [
+          "Stripe : Utilisé pour le traitement sécurisé des paiements. Stripe peut définir des cookies pour prévenir la fraude et traiter les paiements de manière sécurisée. En savoir plus sur stripe.com/cookies-policy",
+          "Google Analytics : Utilisé pour collecter des statistiques anonymes sur l'utilisation du site web. Vous pouvez vous désinscrire en utilisant la bannière de cookies ou les paramètres de votre navigateur. En savoir plus sur policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Mises à Jour de Cette Politique",
+        "content": [
+          "Nous pouvons mettre à jour cette Politique de Cookies de temps à autre pour refléter des changements dans nos pratiques ou pour des raisons opérationnelles, légales ou réglementaires. La date 'Dernière mise à jour' en haut indique quand la politique a été révisée pour la dernière fois."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Maintient votre session de connexion et l'état d'authentification",
+        "duration": "Session / 30 jours",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Mémorise votre langue préférée (anglais/espagnol)",
+        "duration": "1 an",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Stocke votre préférence de thème (mode clair/sombre)",
+        "duration": "1 an",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Mémorise vos préférences de consentement aux cookies",
+        "duration": "1 an",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - suit des statistiques d'utilisation anonymes",
+        "duration": "2 ans / 24 heures",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - prévention de la fraude et sécurité des paiements",
+        "duration": "1 an / Session",
+        "required": false
+      }
+    ]
+  }
+}

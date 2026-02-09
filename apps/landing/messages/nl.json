@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Menu",
+      "pricing": "Prijzen",
+      "features": "Kenmerken",
+      "faq": "Vragen",
+      "changelog": "Wijzigingslog",
+      "contacts": "Contacten"
+    },
+    "getStarted": "Inloggen",
+    "selectLanguage": "Selecteer Taal",
+    "selectLanguageDescription": "Kies uw voorkeurstaal voor de website.",
+    "searchLanguage": "Zoek taal...",
+    "noLanguagesFound": "Geen talen gevonden"
+  },
+  "home": {
+    "hero": {
+      "title": "QR Menu & Website voor Restaurant in 5 Minuten",
+      "subtitle": "Voer gewoon je e-mailadres in en krijg een complete restaurantwebsite met QR-menu, contactpagina, meertalige ondersteuning en modern ontwerp. Stel alles in vanaf je telefoon.",
+      "cta": {
+        "create": "Menu Aanmaken",
+        "view": "Bekijk Echt Menu"
+      },
+      "benefits": [
+        {
+          "title": "Moderne website",
+          "description": "Professioneel ontwerp dat er op elk apparaat geweldig uitziet"
+        },
+        {
+          "title": "Reserveringen",
+          "description": "Accepteer tafelreserveringen rechtstreeks vanaf je website"
+        },
+        {
+          "title": "AI vertalingen",
+          "description": "Automatische menuvertaling naar elke taal"
+        },
+        {
+          "title": "Dagelijkse analyses",
+          "description": "Volg bezoeken en populaire gerechten elke dag"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Vertrouwd door 500+ restaurants wereldwijd",
+      "title": "Alles Wat Je Restaurant Online Nodig Heeft",
+      "description": "Registreer met alleen je e-mailadres en ontvang direct: een professionele restaurantwebsite, QR-menu in modern formaat, functionele contactpagina met kaart, meertalige ondersteuning met AI-vertaling, video- of foto-achtergrond, en een op maat gemaakt kleurenschema. Alles te beheren vanaf je telefoon - geen computer nodig."
+    },
+    "whyUs": {
+      "title": "Van Nul naar Online Menu in 5 Minuten",
+      "subtitle": "Slechts 4 eenvoudige stappen om je restaurant online te krijgen",
+      "items": [
+        {
+          "step": "1",
+          "title": "Voer Je E-mailadres In",
+          "description": "Snelle registratie met alleen je e-mailadres. Geen creditcard vereist."
+        },
+        {
+          "step": "2",
+          "title": "Vul Restaurantinformatie In",
+          "description": "Voeg je restaurantnaam, adres, contactgegevens en openingstijden toe."
+        },
+        {
+          "step": "3",
+          "title": "Voeg Menu-items Toe",
+          "description": "Maak categorieën aan en voeg je gerechten toe met foto's en prijzen."
+        },
+        {
+          "step": "4",
+          "title": "Geniet van Je Menu",
+          "description": "Je QR-menu is klaar! Deel het met klanten en volg de analyses."
+        }
+      ],
+      "cta": "Klaar om Je Restaurant te Moderniseren?"
+    },
+    "featuresPreview": {
+      "title": "Krachtige Functies voor Je Restaurant",
+      "subtitle": "Alles wat je nodig hebt om een professionele online aanwezigheid te creëren",
+      "viewAll": "Bekijk Alle Functies"
+    }
+  },
+  "features": {
+    "title": "Krachtige functies voor uw restaurant QR-menu en website",
+    "subtitle": "Alles wat u nodig heeft om een professionele digitale aanwezigheid voor uw restaurant of café te creëren",
+    "backToFeatures": "Terug naar functies",
+    "getStarted": "Menu Aanmaken",
+    "viewPricing": "Bekijk Prijzen",
+    "readyTitle": "Klaar om te Beginnen?",
+    "readyDescription": "Maak uw professionele QR-menu en restaurantwebsite in enkele minuten. Alle functies inbegrepen.",
+    "keyBenefits": "Belangrijkste Voordelen",
+    "faqTitle": "Veelgestelde Vragen",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Wat heb ik nodig om te beginnen?",
+          "a": "Alleen je e-mailadres. Geen creditcard, geen ingewikkelde formulieren."
+        },
+        {
+          "q": "Hoe lang duurt de installatie?",
+          "a": "Je website is direct klaar. Voeg je menu-items toe en je bent binnen 5 minuten live."
+        },
+        {
+          "q": "Is er een gratis plan?",
+          "a": "Ja, begin gratis met alle essentiële functies inbegrepen."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Moet ik een app installeren?",
+          "a": "Geen app nodig - alles werkt in de browser van je telefoon."
+        },
+        {
+          "q": "Kan ik foto's vanaf mijn telefoon uploaden?",
+          "a": "Ja, maak foto's met je camera en upload ze direct naar je menu."
+        },
+        {
+          "q": "Werkt het op tablets?",
+          "a": "Ja, het dashboard is geoptimaliseerd voor telefoons, tablets en desktopcomputers."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Hoe nauwkeurig is AI-vertaling?",
+          "a": "Onze AI begrijpt culinaire context, behoudt de namen van gerechten en vertaalt beschrijvingen op een natuurlijke manier."
+        },
+        {
+          "q": "Hoe snel is de vertaling?",
+          "a": "Hele menu's worden in seconden vertaald, niet in uren."
+        },
+        {
+          "q": "Kan ik AI-vertalingen bewerken?",
+          "a": "Ja, alle vertalingen zijn bewerkbaar - controleer en pas aan waar nodig."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Hoeveel talen worden ondersteund?",
+          "a": "25+ talen, inclusief alle belangrijke Europese talen, Chinees, Japans, Koreaans, Arabisch en Hebreeuws."
+        },
+        {
+          "q": "Hoe schakelen klanten van taal?",
+          "a": "Een taalselector verschijnt op je menu - één tik om over te schakelen naar elke beschikbare taal."
+        },
+        {
+          "q": "Is de vertaling automatisch?",
+          "a": "Je kunt AI-vertaling gebruiken of handmatig vertalingen invoeren voor elke taal."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Welke afbeeldingsformaten worden ondersteund?",
+          "a": "Upload JPG, PNG of WebP - afbeeldingen worden automatisch geoptimaliseerd."
+        },
+        {
+          "q": "Vermindert optimalisatie de kwaliteit?",
+          "a": "Nee, onze AI behoudt de visuele kwaliteit terwijl de bestandsgrootte wordt verminderd voor snelle laadtijden."
+        },
+        {
+          "q": "Is er een limiet voor de bestandsgrootte?",
+          "a": "Upload afbeeldingen tot 10MB - ze worden automatisch geoptimaliseerd."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Hoe voeg ik een nieuw gerecht toe?",
+          "a": "Tik op 'Item Toevoegen', voer naam, beschrijving, prijs in en upload eventueel een foto. Dat is het!"
+        },
+        {
+          "q": "Kan ik menu-items opnieuw ordenen?",
+          "a": "Ja, sleep eenvoudig items of categorieën om ze opnieuw te ordenen."
+        },
+        {
+          "q": "Wat als een gerecht uitverkocht is?",
+          "a": "Schakel het item tijdelijk uit - het verdwijnt uit het menu maar wordt niet verwijderd."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Welke statistieken kan ik volgen?",
+          "a": "Dagelijkse weergaven, pagina-prestaties, taalvoorkeuren en trends in de loop van de tijd."
+        },
+        {
+          "q": "Hoe vaak worden gegevens bijgewerkt?",
+          "a": "Analytics worden in real-time bijgewerkt - zie de bezoekers van vandaag terwijl ze binnenkomen."
+        },
+        {
+          "q": "Kan ik analytics-gegevens exporteren?",
+          "a": "Bekijk gedetailleerde rapporten direct in je dashboard."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Hoe maken klanten reserveringen?",
+          "a": "Klanten kunnen rechtstreeks vanaf je restaurantwebsite reserveren. Ze selecteren datum, tijd en aantal gasten, en ontvangen vervolgens een e-mailbevestiging."
+        },
+        {
+          "q": "Kan ik reserveringen handmatig goedkeuren?",
+          "a": "Ja, je kunt kiezen tussen automatische bevestiging of handmatige goedkeuring voor elke boeking."
+        },
+        {
+          "q": "Word ik op de hoogte gesteld van nieuwe boekingen?",
+          "a": "Ja, je ontvangt e-mailmeldingen voor elke nieuwe reservering."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Welke videoformaten worden ondersteund?",
+          "a": "MP4- en WebM-formaten worden ondersteund. Video's worden automatisch geoptimaliseerd voor snelle laadtijden."
+        },
+        {
+          "q": "Kan ik mijn eigen foto's gebruiken?",
+          "a": "Ja, upload elke foto en deze wordt automatisch geoptimaliseerd voor webweergave."
+        },
+        {
+          "q": "Vertraagt video het menu?",
+          "a": "Nee, video's worden gecomprimeerd en lazy-loaded om snelle pagina-prestaties te garanderen."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Hoeveel kleuren kan ik kiezen?",
+          "a": "Kies uit 12 vooraf ingestelde kleuren of voer je exacte merk kleur in met een hex-code."
+        },
+        {
+          "q": "Ondersteunt het donkere modus?",
+          "a": "Ja, je kleurenschema past zich automatisch aan zowel lichte als donkere thema's aan."
+        },
+        {
+          "q": "Kan ik kleuren op elk moment wijzigen?",
+          "a": "Ja, wijzig je accentkleur direct vanuit het dashboard - updates verschijnen onmiddellijk."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Hoe neem ik contact op met de ondersteuning?",
+          "a": "Gebruik het contactformulier of e-mail ons direct - echte mensen reageren, geen bots."
+        },
+        {
+          "q": "Wat is de responstijd?",
+          "a": "We reageren meestal binnen enkele uren op werkdagen."
+        },
+        {
+          "q": "Is ondersteuning beschikbaar voor gratis plannen?",
+          "a": "Ja, persoonlijke ondersteuning is beschikbaar voor alle plannen, inclusief gratis."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Instant QR Menu & Website Setup",
+        "shortDescription": "Maak je restaurantwebsite en QR-menu met alleen een e-mailadres - klaar in 5 minuten",
+        "description": "Begin in seconden met het eenvoudigste registratieproces. Voer gewoon je e-mailadres in en je krijgt onmiddellijk een complete restaurantwebsite met QR-menu, contactpagina met kaart en modern ontwerp. Geen technische vaardigheden nodig, geen ingewikkelde formulieren - je restaurant gaat onmiddellijk online.",
+        "fullDescription": "Traditionele websitebouwers vereisen uren van installatie, technische kennis en vaak een ontwikkelaar. IQ Rest verandert alles. Voer je e-mailadres in, verifieer met een eenvoudige code en je restaurantwebsite is klaar. Voeg je gerechten toe, upload foto's en deel je QR-code met klanten. Het hele proces duurt minder dan 5 minuten.",
+        "benefits": [
+          "Alleen een e-mailadres nodig om te starten - geen ingewikkelde registratie",
+          "Restaurantwebsite is direct klaar na registratie",
+          "QR-menu automatisch gegenereerd en gelinkt",
+          "Contactpagina met kaart standaard inbegrepen",
+          "Geen technische vaardigheden of programmeerkennis nodig"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Restaurantwebsite en QR-menu instant installatieproces",
+        "cta": "Meer Informatie"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% Mobielvriendelijk Beheer",
+        "shortDescription": "Geen computer? Geen probleem. Beheer je hele restaurantwebsite vanaf je telefoon. Voeg gerechten toe terwijl je in de keuken staat, update prijzen tijdens de service, upload foto's rechtstreeks vanaf je camera. Elke functie werkt perfect op mobiel - omdat restaurant eigenaren nooit achter een bureau zitten.",
+        "description": "Voeg categorieën, gerechten, foto's toe en beheer je hele restaurantwebsite rechtstreeks vanaf je telefoon. Ons dashboard is volledig geoptimaliseerd voor mobiele apparaten, zodat je je menu kunt bijwerken tijdens een koffiepauze of dagelijkse specials onderweg kunt toevoegen.",
+        "fullDescription": "Restaurant eigenaren zijn drukke mensen die niet altijd achter een computer zitten. Daarom hebben we IQ Rest gebouwd om perfect te werken op mobiele apparaten. Elke functie, van het toevoegen van nieuwe gerechten tot het bijwerken van prijzen, is ontworpen voor touchscreens. Maak een foto van een nieuw gerecht en upload het onmiddellijk. Wijzig de special van vandaag terwijl je in de keuken staat.",
+        "benefits": [
+          "Volledige dashboardtoegang op elke smartphone of tablet",
+          "Upload foto's rechtstreeks vanaf je telefooncamera",
+          "Update prijzen en beschrijvingen onderweg",
+          "Beheer categorieën met een touch-vriendelijke interface",
+          "Geen computer nodig - ooit"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Restaurantmenu beheer op smartphone",
+        "cta": "Bekijk Mobiel Dashboard"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI-Aangedreven Menuvertaling",
+        "shortDescription": "Stop met het verliezen van internationale klanten door taalbarrières. Onze AI vertaalt je hele menu in 25+ talen in seconden - geen generieke vertaling, maar contextbewuste AI die culinaire termen begrijpt. 'Beef Wellington' blijft 'Beef Wellington', terwijl beschrijvingen natuurlijk lezen in elke taal.",
+        "description": "Bereik internationale klanten met intelligente AI-vertaling die voedselcontext begrijpt. De namen en beschrijvingen van je gerechten worden nauwkeurig vertaald, waarbij culinaire termen behouden blijven en logisch zijn in elke taal.",
+        "fullDescription": "Generieke vertalers falen vaak met voedselmenu's - ze vertalen letterlijk zonder de context te begrijpen. Onze AI is specifiek getraind voor restaurantinhoud. Het weet dat 'Beef Wellington' niet letterlijk vertaald moet worden, en dat 'al dente' in elke taal hetzelfde betekent. Serveer toeristen en internationale gasten met menu's die natuurlijk lezen in hun taal.",
+        "benefits": [
+          "Contextbewuste vertaling voor voedsel- en culinaire termen",
+          "10+ talen, waaronder Spaans, Frans, Duits, Chinees, Japans",
+          "Behoudt culinaire terminologie en culturele nuances",
+          "Instant vertaling - menu beschikbaar in seconden",
+          "Verhoogt de verkoop met 23% bij internationale klanten"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI-aangedreven restaurantmenu vertaalinterface",
+        "cta": "Ontdek AI Vertaling"
+      },
+      {
+        "id": "multilingual",
+        "title": "Meertalige Restaurantwebsite",
+        "shortDescription": "Verwelkom toeristen en internationale gasten in hun moedertaal. Ondersteuning voor 25+ talen betekent dat elke klant zich thuis voelt. Eén tik om van taal te wisselen - menu, prijzen, beschrijvingen passen zich onmiddellijk aan. Perfect voor restaurants in toeristische gebieden of internationale steden.",
+        "description": "Je restaurantwebsite ondersteunt automatisch meerdere talen. Klanten kunnen met één tik van taal wisselen, en alle inhoud, inclusief menu, contactinformatie en navigatie, past zich onmiddellijk aan.",
+        "fullDescription": "In toeristische gebieden en internationale steden is het essentieel om de taal van je klant te spreken. IQ Rest maakt je restaurant toegankelijk voor iedereen. Klanten zien een taalselector en kunnen je hele website bekijken - menu, contacten, reserveringen - in hun voorkeurstaal. Gecombineerd met AI-vertaling, kun je de wereld bedienen.",
+        "benefits": [
+          "Eén-tik taalwisseling voor klanten",
+          "Menu, contacten en alle pagina's vertaald",
+          "Taalvoorkeur wordt onthouden voor terugkerende bezoeken",
+          "Perfect voor toeristische gebieden en internationale steden",
+          "Werkt naadloos samen met de AI-vertalingsfunctie"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Meertalige restaurantwebsite taalselector",
+        "cta": "Bekijk Meertalige Functies"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI Afbeeldingsoptimalisatie",
+        "shortDescription": "Automatische afbeeldingsverbetering voor snellere laadtijden en betere kwaliteit",
+        "description": "Upload elke foto en onze AI optimaliseert deze automatisch voor webweergave. Afbeeldingen laden snel op elke verbinding terwijl ze een verbluffende kwaliteit behouden die je gerechten onweerstaanbaar maakt.",
+        "fullDescription": "Grote, niet-geoptimaliseerde afbeeldingen vertragen je website en frustreren klanten. Onze AI verwerkt elke geüploade afbeelding: het aanpassen van de afmetingen, converteren naar moderne formaten en het verbeteren van de kwaliteit. Het resultaat? Je gerechten zien er geweldig uit, en pagina's laden in minder dan een seconde, zelfs op trage mobiele verbindingen.",
+        "benefits": [
+          "Automatische aanpassing aan optimale webafmetingen",
+          "Conversie naar WebP-formaat voor snelle laadtijden",
+          "Kwaliteitsverbetering voor betere presentatie",
+          "Pagina's laden in minder dan 1 seconde",
+          "Werkt met elk afbeeldingsformaat dat je uploadt"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI afbeeldingsoptimalisatie voor en na vergelijking",
+        "cta": "Meer Informatie"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Eenvoudig Menu Beheer",
+        "shortDescription": "Update je menu in seconden, niet in uren. Voeg nieuwe gerechten toe, bewerk prijzen, reorganiseer categorieën - alles met eenvoudige slepen-en-neerzetten vanaf elk apparaat. Geen technische vaardigheden nodig. Wijzigingen worden onmiddellijk live, zodat je klanten altijd de nieuwste aanbiedingen zien.",
+        "description": "Het beheren van je menu is nog nooit zo eenvoudig geweest. Voeg categorieën toe, maak gerechten met foto's en beschrijvingen, stel prijzen in en organiseer alles met eenvoudige slepen-en-neerzetten. Wijzigingen verschijnen onmiddellijk op je live website.",
+        "fullDescription": "Vergeet ingewikkelde contentmanagementsystemen. De menu-editor van IQ Rest is ontworpen voor restaurant eigenaren, niet voor webontwikkelaars. Maak in enkele seconden een nieuwe categorie aan, voeg gerechten toe met een paar tikken, upload foto's rechtstreeks vanaf je telefoon. Sleep items om ze opnieuw te ordenen, schakel de zichtbaarheid in of uit voor uitverkochte items en zie wijzigingen onmiddellijk live.",
+        "benefits": [
+          "Intuïtieve creatie van categorieën en items",
+          "Slepen-en-neerzetten opnieuw ordenen",
+          "Items in- of uitschakelen zonder te verwijderen",
+          "Instant updates - wijzigingen verschijnen in seconden",
+          "Organiseer onbeperkte categorieën en gerechten"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Eenvoudig restaurantmenu beheerdashboard",
+        "cta": "Bekijk Menu Editor"
+      },
+      {
+        "id": "analytics",
+        "title": "Dagelijkse Analytics & Inzichten",
+        "shortDescription": "Volg paginaweergaven, talen en klantgedrag met gedetailleerde dagelijkse rapporten",
+        "description": "Begrijp je klanten met uitgebreide analytics. Zie dagelijkse paginaweergaven, populaire talen, meest bekeken pagina's en volg trends in de loop van de tijd. Neem datagestuurde beslissingen om je menu te optimaliseren.",
+        "fullDescription": "Kennis is macht. Ons analytics-dashboard toont je precies hoe klanten interactie hebben met je restaurantwebsite. Welke pagina's krijgen de meeste weergaven? Welke talen geven je klanten de voorkeur? Nemen de weergaven week na week toe? Gebruik deze inzichten om je menu te optimaliseren, de juiste klanten te targeten en je bedrijf te laten groeien.",
+        "benefits": [
+          "Dagelijkse, wekelijkse en maandelijkse weergavestatistieken",
+          "Taalvoorkeur uitsplitsing",
+          "Pagina-voor-pagina prestatie tracking",
+          "Trendanalyses in de loop van de tijd",
+          "Exporteer gegevens voor verdere analyse"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Restaurant analytics dashboard met dagelijkse statistieken",
+        "cta": "Meer Informatie"
+      },
+      {
+        "id": "reservations",
+        "title": "Tafelreserveringssysteem",
+        "shortDescription": "Stop met het verliezen van klanten door gemiste oproepen. Accepteer tafelboekingen 24/7 rechtstreeks vanaf je website - klanten kiezen datum, tijd en tafel in seconden. Automatische bevestigingen, e-mailmeldingen en een eenvoudig dashboard om alles te beheren.",
+        "description": "Het ingebouwde reserveringssysteem stelt klanten in staat om tafels rechtstreeks vanaf je website te boeken. Kies automatische bevestiging op basis van beschikbaarheid, of bekijk elke boeking handmatig. Beheer alle reserveringen vanuit je dashboard.",
+        "fullDescription": "Telefoonreserveringen zijn tijdrovend en gemakkelijk te missen. Het reserveringssysteem van IQ Rest werkt 24/7. Klanten selecteren datum, tijd en groepsgrootte, en boeken vervolgens onmiddellijk. Je kunt automatische bevestiging instellen op basis van tafelbeschikbaarheid, of elke aanvraag handmatig bekijken. Verminder no-shows met e-mailbevestigingen.",
+        "benefits": [
+          "24/7 online boekingsmogelijkheid",
+          "Automatische of handmatige bevestigingsmodi",
+          "Tafel- en capaciteitsbeheer",
+          "E-mailmeldingen voor boekingen",
+          "Kalenderweergave voor eenvoudige planning"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Online tafelreserveringssysteem voor restaurants",
+        "cta": "Verken Tafelreserveringen"
+      },
+      {
+        "id": "custom-design",
+        "title": "Video & Foto Achtergronden",
+        "shortDescription": "Eerste indrukken verkopen. Boei klanten op het moment dat ze je QR-code scannen met een verbluffende video van de sfeer van je restaurant of een mooie foto van je handtekening gerecht. Val op tussen concurrenten met een homepage die premium en professioneel aanvoelt.",
+        "description": "Creëer een onvergetelijke eerste indruk met aangepaste video- of foto-achtergronden op je homepage. Upload je restaurant sfeer video of een mooie voedsel foto om klanten onmiddellijk te boeien.",
+        "fullDescription": "Eerste indrukken zijn belangrijk. Wanneer klanten je QR-code scannen, moeten ze onmiddellijk onder de indruk zijn. Upload een video van de sfeer van je restaurant, een timelapse van je keuken, of een verbluffende foto van je handtekening gerecht. Je homepage wordt een visuele ervaring die de persoonlijkheid van je restaurant weerspiegelt.",
+        "benefits": [
+          "Ondersteuning voor video- en afbeeldingsachtergronden",
+          "Automatische optimalisatie voor snelle laadtijden",
+          "Werkt perfect op mobiele apparaten",
+          "Creëert een onvergetelijke eerste indruk",
+          "Reflecteert de unieke sfeer van je restaurant"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Restaurantwebsite met video-achtergrond",
+        "cta": "Bekijk Video Achtergronden"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Aangepast Kleurenpalet",
+        "shortDescription": "Maak je menu echt van jou met aangepaste accentkleuren die passen bij de merkidentiteit van je restaurant. Kies uit 12 mooie vooraf ingestelde kleuren of kies je exacte merk tint. Elke knop, highlight en interactief element past zich aan om een samenhangende, professionele uitstraling te creëren die klanten zich herinneren.",
+        "description": "Je restaurantwebsite moet passen bij je merk. Kies uit vooraf ingestelde kleurenschema's of kies je exacte merk kleur. Gecombineerd met automatische ondersteuning voor lichte/donkere thema's, ziet je menu er altijd professioneel uit.",
+        "fullDescription": "Merkconsistentie is belangrijk. IQ Rest stelt je in staat om de accentkleur die door je website wordt gebruikt aan te passen - knoppen, highlights en interactieve elementen passen allemaal bij je merk. Kies uit zorgvuldig samengestelde presets of voer je exacte merk kleur in. Het systeem zorgt automatisch voor leesbaarheid in zowel lichte als donkere modi.",
+        "benefits": [
+          "Aangepaste accentkleur selectie",
+          "Vooraf ingestelde kleurenschema's beschikbaar",
+          "Automatische ondersteuning voor lichte/donkere thema's",
+          "Consistente branding op alle pagina's",
+          "Toegankelijkheid-geoptimaliseerde kleurcontrast"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Aangepast kleurenpalet en branding opties",
+        "cta": "Verken Kleurenpaletten"
+      },
+      {
+        "id": "personal-support",
+        "title": "Individuele Online Ondersteuning",
+        "shortDescription": "Krijg persoonlijke hulp van echte mensen - geen chatbots - voor al je vragen",
+        "description": "Elk restaurant krijgt individuele online ondersteuning. Heb je een vraag? Hulp nodig bij de installatie? Wil je een functie voorstellen? Echte mensen reageren snel om je te helpen slagen met je digitale menu.",
+        "fullDescription": "We geloven dat elk restaurant persoonlijke aandacht verdient. Wanneer je contact opneemt met de ondersteuning, praat je met echte mensen die restaurants begrijpen en daadwerkelijk kunnen helpen. Geen chatbots, geen geautomatiseerde antwoorden, geen ticketwachtrijen. Of je nu hulp nodig hebt bij het toevoegen van je eerste gerecht of advies wilt over het optimaliseren van je menu, wij zijn er voor je.",
+        "benefits": [
+          "Echte menselijke ondersteuning - geen chatbots",
+          "Snelle responstijden",
+          "Hulp bij installatie en optimalisatie",
+          "Functie verzoeken zijn welkom",
+          "Beschikbaar voor elk plan, inclusief gratis"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Persoonlijke online ondersteuning chat voor restaurants",
+        "cta": "Meer Informatie"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR Menu & Restaurant Website Prijzen",
+    "subtitle": "Geen verborgen kosten, geen verrassingen. Lanceer vandaag nog uw restaurantwebsite gratis — upgrade alleen wanneer u klaar bent om te groeien.",
+    "seo": {
+      "title": "Waarom kiezen voor IQ Rest voor uw restaurant of café?",
+      "text": "Maak in enkele minuten een professioneel QR-menu en website voor uw restaurant of café. Uw gasten scannen eenvoudig een QR-code om uw digitale menu op hun telefoon te bekijken — geen app nodig. Werk prijzen bij, voeg nieuwe gerechten toe en wijzig beschrijvingen onmiddellijk. Met AI-gestuurde vertalingen bedient u internationale klanten in hun moedertaal. Volg welke gerechten de meeste weergaven krijgen met ingebouwde analyses. Of u nu een klein café runt of een groeiende restaurantketen, IQ Rest helpt u uw menu-ervaring te moderniseren terwijl u de drukkosten verlaagt."
+    },
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "save": "(Bespaar 25%)",
+    "perMonth": "/maand",
+    "billedYearly": "Jaarlijks gefactureerd (€{total})",
+    "forever": "Voor altijd gratis",
+    "popular": "Meest populair",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Perfect om IQ Rest uit te proberen",
+        "cta": "Begin Gratis",
+        "highlights": [
+          "Restaurantwebsite",
+          "QR Menu",
+          "300 scans/maand",
+          "2 talen",
+          "AI beeldverbetering",
+          "Analyses"
+        ]
+      },
+      "basic": {
+        "name": "Basis",
+        "description": "Geweldig voor kleine restaurants",
+        "cta": "Aan de slag",
+        "highlights": [
+          "Alles in Gratis, plus:",
+          "4.500 scans/maand",
+          "3 talen",
+          "AI vertalingen",
+          "Aangepast kleurthema",
+          "Reserveringen"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Voor groeiende restaurantketens",
+        "cta": "Aan de slag",
+        "highlights": [
+          "Alles in Basis, plus:",
+          "Onbeperkte scans",
+          "6 talen",
+          "Prioriteit ondersteuning",
+          "Alle functies inbegrepen"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Vergelijk plannen",
+      "subtitle": "Bekijk welk plan bij u past"
+    },
+    "features": {
+      "website": "Restaurantwebsite",
+      "qrMenu": "QR Menu",
+      "scans": "Maandelijkse scans",
+      "languages": "Ondersteunde talen",
+      "aiTranslation": "AI vertalingen",
+      "aiImages": "AI beeldverbetering",
+      "analytics": "Analyses",
+      "customTheme": "Aangepast kleurthema",
+      "background": "Achtergrondafbeelding & video",
+      "support": "Ondersteuning",
+      "reservations": "Reserveringen"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4.500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Onbeperkt",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Hulp nodig? Laten we chatten",
+    "subtitle": "Hallo, ik ben Bogdan — oprichter van IQ Rest. Ik heb dit platform gebouwd voor mijn eigen café en nu helpt het honderden restaurants wereldwijd. Heb je een vraag of idee? Schrijf me direct. Geen bots, geen wachten — gewoon een echt gesprek.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Neem contact op",
+      "email": "Je E-mail",
+      "emailPlaceholder": "jouw@email.com",
+      "subject": "Onderwerp",
+      "subjectPlaceholder": "Waar gaat dit over?",
+      "message": "Bericht",
+      "messagePlaceholder": "Vertel me wat je denkt...",
+      "submit": "Bericht Verzenden",
+      "sending": "Verzenden...",
+      "success": "Je bericht is verzonden! Bedankt voor je bericht. Ik kom snel bij je terug.",
+      "error": "Verzenden van bericht mislukt. Probeer het later opnieuw."
+    }
+  },
+  "languages": {
+    "en": "Engels",
+    "es": "Spaans"
+  },
+  "cookieConsent": {
+    "title": "Wij gebruiken cookies",
+    "description": "Wij gebruiken cookies om uw browse-ervaring te verbeteren, gepersonaliseerde inhoud te bieden en ons verkeer te analyseren. Door op \"Alles Accepteren\" te klikken, stemt u in met ons gebruik van cookies.",
+    "acceptAll": "Alles Accepteren",
+    "rejectAll": "Alles Afwijzen",
+    "customize": "Aanpassen",
+    "learnMore": "Meer Informatie"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigatie",
+      "pricing": "Prijzen",
+      "features": "Kenmerken",
+      "contacts": "Contacten",
+      "faq": "Vragen",
+      "changelog": "Wijzigingslog"
+    },
+    "legal": {
+      "title": "Juridisch",
+      "terms": "Algemene Voorwaarden",
+      "privacy": "Privacybeleid",
+      "cookies": "Cookiesbeleid",
+      "sitemap": "Sitemap"
+    },
+    "copyright": "© 2025 IQ Rest. Alle rechten voorbehouden."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Wijzigingslog - IQ Rest Updates & Nieuwe Functies",
+      "description": "Blijf op de hoogte van de nieuwste functies en verbeteringen van IQ Rest - uw digitale QR-menuoplossing voor restaurants en cafés"
+    },
+    "title": "Wijzigingslog",
+    "subtitle": "Laatste updates en nieuwe functies voor uw restaurant QR-menu",
+    "readMore": "Lees meer",
+    "backToChangelog": "Terug naar Changelog",
+    "seo": {
+      "title": "Over IQ Rest Updates",
+      "description": "IQ Rest verbetert voortdurend om restaurants en cafés te helpen professionele digitale QR-menu's te creëren. Volg onze changelog om op de hoogte te blijven van de nieuwste functies voor uw restaurantwebsite en QR-menuoplossing."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsieve Ondersteuning voor Uw Restaurant QR Menu",
+        "description": "Krijg responsieve ondersteuning voor al uw vragen en wijzigingen aan uw QR menu restaurant of café. Directe chat met ons team voor snelle hulp.",
+        "meta": {
+          "title": "Responsieve Ondersteuning voor Restaurant QR Menu | IQ Rest",
+          "description": "Krijg responsieve ondersteuning voor al uw vragen en wijzigingen aan uw QR menu restaurant of café. Snelle hulp voor cafés en restaurants met directe chatondersteuning."
+        },
+        "content": {
+          "intro": "IQ Rest biedt nu responsieve ondersteuning voor al uw vragen en wijzigingen aan uw QR menu restaurant of café. We begrijpen dat het runnen van een restaurant of café snelle oplossingen vereist wanneer zich problemen voordoen. Onze nieuwe in-app ondersteuningschat geeft u directe toegang tot ons team, zodat uw QR menu perfect blijft en uw klanten altijd de beste ervaring hebben.",
+          "image1Alt": "Ondersteuningschatinterface voor restaurant QR menu",
+          "image1Caption": "Directe ondersteuningschat voor responsieve hulp met uw restaurant QR menu",
+          "section1Title": "Directe Chatondersteuning voor Uw Restaurant",
+          "section1Text": "Ons responsieve ondersteuningssysteem voor uw QR menu restaurant of café werkt direct binnen uw dashboard. Geen behoefte om naar contact-e-mails te zoeken of in telefoonwachtrijen te wachten. Open eenvoudig de ondersteuningschat, typ uw vraag of beschrijf de wijziging die u nodig heeft, en ons team reageert snel. Of u nu hulp nodig heeft bij het bijwerken van menu-items, het oplossen van weergaveproblemen of het begrijpen van analyses - responsieve ondersteuning is slechts een bericht verwijderd.",
+          "section2Title": "Snelle Hulp voor Alle QR Menu Wijzigingen",
+          "section2Text": "Moet u prijzen bijwerken voor een druk weekend? Wilt u seizoensgebonden items aan uw restaurant QR menu toevoegen? Onze responsieve ondersteuning helpt cafés en restaurants om snel wijzigingen aan te brengen. We begeleiden u door het proces of kunnen direct helpen wanneer dat nodig is. Deze responsieve ondersteuning zorgt ervoor dat uw digitale menu altijd uw huidige aanbiedingen weerspiegelt, zodat klanten geïnformeerd en tevreden blijven.",
+          "section3Title": "Ondersteuning Die Restaurantbehoeften Begrijpt",
+          "section3Text": "Ons responsieve ondersteuningsteam begrijpt de unieke uitdagingen van het runnen van een restaurant of café. We weten dat een defect QR menu verloren klanten en gefrustreerd personeel kan betekenen. Daarom geeft onze ondersteuning voor uw QR menu restaurant of café prioriteit aan snelle reactietijden en praktische oplossingen. Van technische vragen tot functieaanvragen, we zijn hier om uw digitale menu te laten slagen.",
+          "benefitsTitle": "Voordelen van Responsieve QR Menu Ondersteuning",
+          "benefit1": "Directe in-app chat - geen externe e-mails of telefoontjes nodig",
+          "benefit2": "Snelle reactietijden om uw restaurant soepel te laten draaien",
+          "benefit3": "Begeleiding bij menu-updates, wijzigingen en nieuwe functies",
+          "benefit4": "Technische ondersteuning voor alle QR-code of websiteproblemen",
+          "benefit5": "Functieaanvragen en suggesties zijn welkom en worden overwogen",
+          "benefit6": "Ondersteuning die restaurant- en caféoperaties begrijpt",
+          "conclusionTitle": "Krijg Vandaag Nog Responsieve Ondersteuning",
+          "conclusionText": "Met IQ Rest's responsieve ondersteuning voor uw QR menu restaurant of café is hulp altijd binnen handbereik. Ons toegewijde team zorgt ervoor dat uw digitale menu perfect functioneert, zodat u meer tijd heeft om te focussen op wat belangrijk is - het serveren van geweldig eten. Toegang tot ondersteuning direct vanuit uw dashboard en ervaar het verschil dat responsieve hulp maakt voor uw restaurant of café.",
+          "ctaText": "Klaar om responsieve ondersteuning voor uw QR menu te ervaren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Gedetailleerde Analyse voor Uw Restaurantwebsite en QR Menu",
+        "description": "Volg bezoekersinzichten met gedetailleerde analyses voor uw restaurantwebsite en QR menu. Bewaak paginaweergaven, unieke bezoekers, talen en dagelijkse trends.",
+        "meta": {
+          "title": "Gedetailleerde Analyse voor Restaurantwebsite en QR Menu | IQ Rest",
+          "description": "Krijg gedetailleerde analyses voor uw restaurantwebsite en QR menu. Volg paginaweergaven, unieke bezoekers, populaire pagina's en taalvoorkeuren. Uitgebreide inzichten voor restaurants en cafés."
+        },
+        "content": {
+          "intro": "IQ Rest biedt nu gedetailleerde analyses voor uw restaurantwebsite en QR menu. Begrijpen hoe klanten interactie hebben met uw digitale menu is cruciaal voor succes. Ons nieuwe analysetableau geeft u uitgebreide inzichten in bezoekersgedrag, populaire pagina's, taalvoorkeuren en dagelijkse trends - alle gedetailleerde analyses die uw restaurantwebsite en QR menu nodig hebben om te gedijen.",
+          "image1Alt": "Gedetailleerd analysetableau voor restaurantwebsite en QR menu",
+          "image1Caption": "Uitgebreid analysetableau met gedetailleerde statistieken voor uw restaurant QR menu",
+          "section1Title": "Uitgebreide Bezoekerstracking voor Uw Restaurant",
+          "section1Text": "Onze gedetailleerde analyses voor uw restaurantwebsite en QR menu volgen elke klantinteractie. Zie het totaal aantal paginaweergaven voor vandaag, deze week en deze maand in één oogopslag. Volg unieke bezoekers om uw werkelijke publieksgrootte te begrijpen. Het analysetableau biedt gedetailleerde inzichten in hoe klanten door uw QR menu navigeren - van de homepage naar uw volledige menu, contacten en taalkeuze. Deze gedetailleerde analyses helpen restaurants om datagestuurde beslissingen te nemen.",
+          "section2Title": "Pagina- en Taalanalyses",
+          "section2Text": "Begrijp welke pagina's van uw restaurantwebsite en QR menu het populairst zijn. Onze gedetailleerde analyses splitsen weergaven op per paginatype: Home, Menu, Contacten en Taalkeuze. Zie welke talen uw klanten verkiezen, zodat u vertalingen kunt prioriteren en internationale gasten beter kunt bedienen. Deze gedetailleerde analyses voor uw restaurant QR menu onthullen klantgedragspatronen die u nooit eerder kende.",
+          "section3Title": "Dagelijkse Trends en Gebruik Monitoring",
+          "section3Text": "Volg hoe uw restaurantwebsite en QR menu in de loop van de tijd presteren met dagelijkse weergavegrafieken. Zie patronen in klantbetrokkenheid gedurende de week. Bewaak uw maandelijkse gebruik in vergelijking met uw planlimieten met een duidelijke voortgangsbalk. Onze gedetailleerde analyses helpen restaurants om piektijden te identificeren en hun digitale aanwezigheid te optimaliseren. Of u nu een klein café of een druk restaurant bent, deze inzichten helpen u om uw klanten beter te begrijpen.",
+          "benefitsTitle": "Voordelen van Gedetailleerde Analyse voor Restaurants",
+          "benefit1": "Realtime weergave-aantallen: vandaag, wekelijks en maandelijks statistieken in één oogopslag",
+          "benefit2": "Tracking van unieke bezoekers om uw werkelijke klantenbereik te begrijpen",
+          "benefit3": "Pagina-voor-pagina uitsplitsing die toont welke inhoud klanten het meest bekijken",
+          "benefit4": "Taalanalyses om meertalige menu-aanbiedingen te optimaliseren",
+          "benefit5": "Dagelijkse trendgrafieken om patronen in klantgedrag te identificeren",
+          "benefit6": "Gebruik monitoring met duidelijke limieten en upgrade prompts",
+          "conclusionTitle": "Begin Vandaag met Gedetailleerde Analyse",
+          "conclusionText": "Met IQ Rest's gedetailleerde analyses voor uw restaurantwebsite en QR menu, krijgt u waardevolle inzichten in klantgedrag. Volg weergaven, monitor trends en begrijp uw publiek beter dan ooit tevoren. Deze gedetailleerde analyses helpen restaurants en cafés om weloverwogen beslissingen te nemen over hun digitale menu strategie. Toegang tot uw analysetableau nu en ontdek wat uw klanten echt willen.",
+          "ctaText": "Klaar om gedetailleerde analyses voor uw restaurant te verkennen?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu en Restaurantwebsite Generator",
+        "description": "Maak uw restaurant of café QR menu en website onmiddellijk. Genereer afdrukbare QR-codes met aangepaste tekst en meerdere lay-outs in enkele minuten - geen technische vaardigheden vereist.",
+        "meta": {
+          "title": "Instant QR Menu en Restaurantwebsite Generator | IQ Rest",
+          "description": "Genereer QR menu en restaurantwebsite onmiddellijk. Maak aangepaste QR-codes voor uw café of restaurant in enkele minuten met afdrukbare lay-outs voor A4, A5, A6 papierformaten. Gratis instant generator."
+        },
+        "content": {
+          "intro": "IQ Rest biedt nu een instant QR menu en restaurantwebsite generator die professionele digitale menu's in enkele minuten creëert. Of u nu een gezellig café of een druk restaurant runt, onze instant generator stelt u in staat om QR-codes te maken, aan te passen en af te drukken die rechtstreeks linken naar uw digitale menuwebsite. Geen technische vaardigheden vereist, geen wachten - gewoon instant QR menu creatie voor restaurants en cafés van elke grootte.",
+          "image1Alt": "Instant QR menu generator voor restaurant- en caféwebsites",
+          "image1Caption": "Genereer aangepaste QR-codes voor uw restaurantwebsite onmiddellijk",
+          "section1Title": "Hoe de Instant QR Menu Generator Werkt",
+          "section1Text": "Onze instant QR menu en restaurantwebsite generator creëert alles wat u nodig heeft in enkele minuten. Voeg eenvoudig uw menu-items toe, en het systeem genereert onmiddellijk een unieke QR-code die aan uw restaurantwebsite is gekoppeld. De generator ondersteunt meerdere papierformaten (A4, A5, A6, Letter), verschillende QR-lay-outs per pagina (1 tot 16 codes) en aanpasbare tekst onder elke QR-code. Bekijk precies wat u gaat afdrukken, download of print direct - uw instant QR menu is klaar om op uw tafels te worden weergegeven.",
+          "section2Title": "Aanpasbare QR Codes voor Elk Restaurant of Café",
+          "section2Text": "De instant QR menu generator biedt volledige aanpassing voor uw restaurant of café branding. Voeg uw restaurantnaam boven de QR-code toe, inclusief aangepaste tekst zoals 'Scan voor Menu' of 'QR Menu' eronder, en kies uit drie tekstgroottes. De generator produceert schone, eenvoudige QR-codes die zijn geoptimaliseerd voor snelle scanning. Of u nu een enkele grote QR-code voor een poster nodig heeft of 16 kleinere codes voor individuele tafelkaarten, onze instant generator past zich aan de behoeften van uw restaurant aan.",
+          "section3Title": "Afdrukklare QR Menu's in Seconden",
+          "section3Text": "In tegenstelling tot ingewikkelde ontwerptools, creëert onze instant QR menu generator automatisch afdrukklare lay-outs. Kies uw papierformaat, kies hoeveel QR-codes per pagina, en druk af - dat is het. De generator zorgt voor marges, ruimte en afmetingen om elke keer perfecte afdrukken te garanderen. Voor cafés en restaurants die snel professionele QR-menu's nodig hebben, bespaart deze instant aanpak uren aan ontwerptijd en brengt uw digitale menu sneller voor klanten.",
+          "benefitsTitle": "Voordelen van Instant QR Menu Generatie",
+          "benefit1": "Genereer compleet QR menu en restaurantwebsite in enkele minuten, geen uren",
+          "benefit2": "Meerdere papierformaten: A4, A5, A6 en Letterformaten ondersteund",
+          "benefit3": "Flexibele lay-outs: van enkele grote QR tot 16 codes per pagina",
+          "benefit4": "Aangepaste tekst en maatopties voor uw restaurantbranding",
+          "benefit5": "Afdrukklare output met automatische marges en ruimte",
+          "benefit6": "Download als PNG of print direct vanuit uw browser",
+          "conclusionTitle": "Begin met de Instant QR Menu Generator",
+          "conclusionText": "Met IQ Rest's instant QR menu en restaurantwebsite generator kunt u binnen enkele minuten een professioneel digitaal menu opzetten. Geen ontwerpskills nodig, geen dure software vereist - gewoon instant generatie van mooie, scanbare QR-codes die klanten met uw menu verbinden. Perfect voor nieuwe restaurants die hun eerste QR-menu lanceren of gevestigde cafés die hun bestaande opzet bijwerken. Genereer vandaag uw instant QR menu en moderniseer uw eetervaring.",
+          "ctaText": "Klaar om uw instant QR menu te genereren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Openbare Restaurantwebsite voor QR Menu Scanning",
+        "description": "Lanceer uw openbare restaurantwebsite met QR menu. Klanten scannen de code en zien onmiddellijk uw digitale menu met categorieën, items, foto's en prijzen.",
+        "meta": {
+          "title": "Openbare Restaurantwebsite voor QR Menu Scanning | IQ Rest",
+          "description": "Maak een openbare restaurantwebsite voor QR menu scanning. Klanten scannen de QR-code en bekijken uw digitale menu met categorieën, gerechten, foto's en prijzen onmiddellijk."
+        },
+        "content": {
+          "intro": "IQ Rest biedt nu een volledig functionele openbare restaurantwebsite voor QR menu scanning. Uw klanten kunnen eenvoudig een QR-code scannen en onmiddellijk toegang krijgen tot uw complete digitale menu. De openbare website toont al uw categorieën, menu-items, foto's, beschrijvingen en prijzen in een mooie, mobiel geoptimaliseerde interface. Deze openbare restaurantwebsite voor QR scanning transformeert de manier waarop gasten met uw menu omgaan.",
+          "image1Alt": "Openbare restaurantwebsite die QR menu categorieën toont",
+          "image1Caption": "Mobielvriendelijke openbare restaurantwebsite die menu categorieën toont voor QR scanning",
+          "section1Title": "Hoe de Openbare Restaurantwebsite Werkt met QR Scanning",
+          "section1Text": "Wanneer klanten de QR-code van uw restaurant scannen, worden ze onmiddellijk naar uw openbare website geleid die het complete menu toont. Geen app-download nodig, geen wachten - gewoon directe toegang tot uw aanbiedingen. De openbare restaurantwebsite voor QR menu toont categorieën bovenaan voor gemakkelijke navigatie, met items die worden weergegeven in een elegante kaartlay-out met foto's, beschrijvingen en prijzen. Klanten kunnen op categorieën tikken om items te filteren of door het volledige menu scrollen.",
+          "section2Title": "Kenmerken van Uw Openbare Restaurant QR Menu Website",
+          "section2Text": "Uw openbare restaurantwebsite bevat alles wat klanten nodig hebben: categorietabs voor snelle navigatie, hoogwaardige foto's van gerechten, gedetailleerde beschrijvingen, prijzen in uw valuta en actieve itemindicatoren. Het ontwerp is geoptimaliseerd voor mobiele apparaten, aangezien de meeste QR-scans op telefoons plaatsvinden. Items laden snel dankzij geoptimaliseerde afbeeldingen, en de interface is intuïtief voor gasten van alle leeftijden. Wijzigingen die in uw beheerpaneel worden aangebracht, verschijnen onmiddellijk op de openbare website.",
+          "image2Alt": "Restaurant QR menu website die voedselitems met foto's toont",
+          "image2Caption": "Openbare menuwebsite die gerechten toont met geoptimaliseerde foto's en beschrijvingen",
+          "section3Title": "Meertalige Ondersteuning voor Internationale Gasten",
+          "section3Text": "De openbare restaurantwebsite bevat een taalselector zodat internationale gasten uw menu in hun voorkeurstaal kunnen bekijken. Momenteel ondersteund in het Engels en Spaans, met meer talen die binnenkort beschikbaar zijn. Dit maakt uw openbare restaurant QR menu toegankelijk voor toeristen en diverse klantgroepen. De taalvoorkeur wordt onthouden voor terugkerende bezoeken, wat zorgt voor een gepersonaliseerde ervaring.",
+          "image3Alt": "Taalselectie op openbare restaurant QR menu website",
+          "image3Caption": "Taalselector waarmee gasten het openbare menu in hun voorkeurstaal kunnen bekijken",
+          "benefitsTitle": "Voordelen van Uw Openbare Restaurant QR Menu Website",
+          "benefit1": "Instant menu toegang - klanten scannen en bekijken onmiddellijk, geen app nodig",
+          "benefit2": "Mobiel-geoptimaliseerd ontwerp voor perfecte weergave op elke smartphone",
+          "benefit3": "Realtime updates - menu wijzigingen verschijnen onmiddellijk voor klanten",
+          "benefit4": "Categorie navigatie voor gemakkelijke doorbladering van uw aanbiedingen",
+          "benefit5": "Meertalige ondersteuning voor internationale klanten",
+          "benefit6": "Snelle laadtijden met geoptimaliseerde afbeeldingen en moderne technologie",
+          "conclusionTitle": "Begin met Uw Openbare Restaurant QR Menu Website",
+          "conclusionText": "Met IQ Rest's openbare restaurantwebsite voor QR menu scanning, biedt u klanten directe toegang tot uw complete menu. Voeg eenvoudig uw categorieën en items toe via het beheerpaneel, genereer uw QR-code en toon deze op uw tafels. Klanten scannen en bladeren in uw prachtige digitale menu in enkele seconden. Geen afdrukkosten meer, geen verouderde menu's meer - gewoon een moderne eetervaring.",
+          "ctaText": "Klaar om uw openbare restaurant QR menu website te lanceren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "Hoe Items Toe Te Voegen aan Restaurantwebsite met QR Menu",
+        "description": "Volledige gids over hoe u items aan uw restaurantwebsite met QR menu kunt toevoegen. Leer hoe u gerechten met foto's, prijzen en beschrijvingen in enkele minuten aan uw digitale menu toevoegt.",
+        "meta": {
+          "title": "Hoe Items Toe Te Voegen aan Restaurantwebsite met QR Menu | IQ Rest",
+          "description": "Stapsgewijze gids over hoe u items aan restaurantwebsite met QR menu kunt toevoegen. Voeg gerechten toe, stel prijzen in, upload foto's en organiseer uw digitale menu. Eenvoudig itembeheer voor restaurants."
+        },
+        "content": {
+          "intro": "Wilt u weten hoe u items aan uw restaurantwebsite met QR menu kunt toevoegen? IQ Rest maakt het ongelooflijk eenvoudig om menu-items op uw digitale restaurantwebsite toe te voegen en te beheren. Of u nu uw eerste gerecht toevoegt of uw volledige menu bijwerkt, ons intuïtieve itembeheersysteem helpt u een professioneel QR menu te creëren dat uw keuken perfect toont. Deze gids laat u precies zien hoe u items aan restaurantwebsite met QR menu kunt toevoegen, inclusief foto's, prijzen, beschrijvingen en categorieën.",
+          "image1Alt": "Hoe items toe te voegen aan restaurantwebsite met QR menu - itemlijstweergave",
+          "image1Caption": "Itembeheerinterface die toont hoe u items aan uw restaurant QR menu website kunt toevoegen",
+          "section1Title": "Waarom Het Belangrijk Is Om Items Goed Toe Te Voegen Voor Uw Restaurant QR Menu Website",
+          "section1Text": "Wanneer u items aan restaurantwebsite met QR menu toevoegt, is presentatie alles. Klanten beslissen wat ze willen bestellen op basis van hoe uw gerechten eruitzien en hoe goed ze zijn beschreven. Ons itembeheersysteem stelt u in staat om mooie foto's, gedetailleerde beschrijvingen, nauwkeurige prijzen toe te voegen en items in categorieën te organiseren. Dit is hoe u items aan restaurantwebsite toevoegt die browsers in klanten omzet. Onderzoek toont aan dat menu's met hoogwaardige afbeeldingen bestellingen met tot 30% verhogen.",
+          "section2Title": "Stapsgewijs: Hoe Items Toe Te Voegen aan Restaurantwebsite met QR Menu",
+          "section2Text": "Items aan uw restaurantwebsite met QR menu toevoegen is eenvoudig met IQ Rest. Navigeer naar de sectie Items in uw dashboard en klik op de knop toevoegen. Voer de itemnaam in, schrijf een smakelijke beschrijving, stel de prijs in en selecteer een categorie. Upload een foto van uw gerecht - ons systeem optimaliseert automatisch afbeeldingen tot 500x500 pixels voor perfecte weergave. Schakel de actieve status in om items onmiddellijk te tonen of te verbergen. Dit gestroomlijnde proces maakt het eenvoudig om items aan restaurantwebsite met QR menu in slechts enkele minuten toe te voegen.",
+          "image2Alt": "Itemformulier dat toont hoe u items aan restaurant QR menu website kunt toevoegen",
+          "image2Caption": "Eenvoudig formulierinterface voor het toevoegen van items aan uw restaurantwebsite met QR menu",
+          "section3Title": "Afbeelding Uploaden en Optimalisatie voor Uw Restaurantitems",
+          "section3Text": "Hoogwaardige afbeeldingen zijn essentieel wanneer u items aan restaurantwebsite met QR menu toevoegt. Ons systeem accepteert JPEG, PNG, WebP en GIF-indelingen tot 5MB. Elke afbeelding wordt automatisch verkleind tot 500x500 pixels en geconverteerd naar WebP-indeling voor snelle laadtijden terwijl de kwaliteit uitstekend blijft. Dit betekent dat uw gerechten er altijd op hun best uitzien op elk apparaat. Professionele voedselfotografie verbetert aanzienlijk hoe klanten uw restaurant waarnemen wanneer ze door uw QR menu website bladeren.",
+          "benefitsTitle": "Voordelen van Het Toevoegen van Items aan Uw Restaurant QR Menu Website",
+          "benefit1": "Voeg onbeperkte menu-items toe met foto's, beschrijvingen en prijzen",
+          "benefit2": "Automatische afbeeldingoptimalisatie voor snelle laadtijden en perfecte weergave",
+          "benefit3": "Organiseer items in categorieën voor gemakkelijke navigatie voor klanten",
+          "benefit4": "Actieve/inactieve schakelaar om uitverkochte items te verbergen zonder ze te verwijderen",
+          "benefit5": "Sleep-en-neerzetten herordening om items in uw gewenste volgorde te rangschikken",
+          "benefit6": "Mobielvriendelijke interface om items vanaf elk apparaat toe te voegen",
+          "conclusionTitle": "Begin Vandaag Nog Met Het Toevoegen van Items aan Uw Restaurant QR Menu Website",
+          "conclusionText": "Nu weet u precies hoe u items aan restaurantwebsite met QR menu kunt toevoegen met IQ Rest. Ons krachtige itembeheersysteem biedt alles wat u nodig heeft om een smakelijk digitaal menu te creëren. Voeg mooie foto's toe, schrijf overtuigende beschrijvingen, stel concurrerende prijzen in en organiseer uw items in logische categorieën. Of u nu een klein café of een groot restaurant runt, IQ Rest maakt het eenvoudig om items aan restaurantwebsite toe te voegen die klanten aantrekken en converteren.",
+          "ctaText": "Klaar om items aan uw restaurantwebsite met QR menu toe te voegen?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "Hoe Een QR Code Menu Voor Restaurant Te Maken Met Categorieën",
+        "description": "Leer hoe u een QR code menu voor restaurant maakt met georganiseerde categorieën. Nieuw categoriebeheersysteem maakt het creëren van gestructureerde digitale menu's eenvoudig en snel.",
+        "meta": {
+          "title": "Hoe Een QR Code Menu Voor Restaurant Te Maken Met Categorieën | IQ Rest",
+          "description": "Stapsgewijze gids over hoe een QR code menu voor restaurant te maken met categorieën. Organiseer uw digitale menu met eenvoudig categoriebeheer. Maak professionele restaurant QR menu's in enkele minuten."
+        },
+        "content": {
+          "intro": "Wilt u weten hoe u een QR code menu voor restaurant maakt met categorieën? IQ Rest biedt nu een krachtig categoriebeheersysteem dat het creëren van georganiseerde digitale menu's gemakkelijker dan ooit maakt. Of u nu een restaurant, café of bar runt, het organiseren van uw menu met categorieën helpt klanten precies te vinden wat ze zoeken. Deze update laat u precies zien hoe u een QR code menu voor restaurant maakt met goed gestructureerde categorieën die de eetervaring verbeteren.",
+          "image1Alt": "Hoe een QR code menu voor restaurant te maken - categorieën lijstweergave",
+          "image1Caption": "Categoriebeheersinterface die toont hoe u uw restaurant QR menu organiseert",
+          "section1Title": "Waarom Categorieën Belangrijk Zijn Wanneer U Een QR Code Menu Voor Restaurant Maakt",
+          "section1Text": "Wanneer u een QR code menu voor restaurant maakt, is het essentieel om items in categorieën te organiseren. Klanten verwachten logische groeperingen zoals Voorgerechten, Hoofdgerechten, Nagerechten en Dranken te zien. Ons nieuwe categoriebeheersysteem stelt u in staat om onbeperkte categorieën te creëren, hun weergavevolgorde in te stellen en hun zichtbaarheid in te schakelen. Dit is precies hoe u een QR code menu voor restaurant maakt dat klanten leuk vinden - duidelijk, georganiseerd en gemakkelijk te navigeren. Studies tonen aan dat restaurants met goed georganiseerde digitale menu's 35% hogere klanttevredenheid ervaren.",
+          "section2Title": "Stapsgewijs: Hoe Een QR Code Menu Voor Restaurant Te Maken Met Categorieën",
+          "section2Text": "Een QR code menu voor restaurant met categorieën maken is eenvoudig met IQ Rest. Navigeer eerst naar de sectie Categorieën in uw dashboard. Klik op de drijvende actieknop om een nieuwe categorie toe te voegen. Voer de categorienaam in, een optionele beschrijving en stel in of deze actief is. De nieuwe gestroomlijnde interface toont al uw categorieën in een schone lijst met activiteitindicatoren. Gebruik de omhoog- en omlaag pijlen om categorieën in de volgorde te rangschikken zoals u ze op uw QR menu wilt laten verschijnen. Deze intuïtieve aanpak voor het maken van een QR code menu voor restaurant zorgt ervoor dat uw menu altijd perfect georganiseerd is.",
+          "image2Alt": "Categorieformulier dat toont hoe een QR code menu voor restaurant te maken",
+          "image2Caption": "Eenvoudige formulierinterface voor het creëren van restaurantmenu-categorieën",
+          "section3Title": "Mobiel-Geoptimaliseerd Categoriebeheer",
+          "section3Text": "We weten dat restaurant eigenaren het druk hebben en vaak hun menu's onderweg beheren. Daarom is ons categoriebeheer volledig geoptimaliseerd voor mobiele apparaten. Wanneer u een QR code menu voor restaurant maakt met uw telefoon, vindt u een compacte interface met een drie-punt menu voor snelle acties. Verplaats categorieën omhoog of omlaag, bewerk details of verwijder categorieën - allemaal vanaf uw smartphone. Deze mobiele aanpak zorgt ervoor dat u een QR code menu voor restaurant met categorieën kunt maken, waar en wanneer u maar wilt.",
+          "benefitsTitle": "Voordelen van Het Maken van QR Code Menu Met Categorieën",
+          "benefit1": "Organiseer menu-items logisch zodat klanten gemakkelijk kunnen vinden wat ze willen",
+          "benefit2": "Sleep-en-neerzetten herordening om categorieën in uw gewenste weergavevolgorde te rangschikken",
+          "benefit3": "Actieve/inactieve schakelaar om seizoensgebonden categorieën te verbergen zonder ze te verwijderen",
+          "benefit4": "Mobiel-geoptimaliseerde interface om categorieën vanaf elk apparaat te beheren",
+          "benefit5": "Schone visuele indeling met activiteitindicatoren voor snelle statusoverzicht",
+          "benefit6": "Onbeperkte categorieën om de menu-structuur van uw restaurant volledig weer te geven",
+          "conclusionTitle": "Begin Vandaag Met Het Maken Van Uw QR Code Menu Met Categorieën",
+          "conclusionText": "Nu weet u precies hoe u een QR code menu voor restaurant met categorieën maakt met IQ Rest. Ons nieuwe categoriebeheersysteem biedt alles wat u nodig heeft om een professioneel, goed georganiseerd digitaal menu te creëren. Categorieën helpen klanten sneller door uw menu te navigeren, hun favoriete gerechten te vinden en nieuwe items te ontdekken. Of u nu een eenvoudig menu heeft met een paar categorieën of een uitgebreid menu met tientallen secties, IQ Rest maakt het eenvoudig om een QR code menu voor restaurant te maken dat uw klanten zal imponeren.",
+          "ctaText": "Klaar om een QR code menu voor uw restaurant met categorieën te maken?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Eenvoudige QR Menu Creatie Voor Uw Café - Nieuw Beheerpaneel",
+        "description": "Introductie van ons nieuwe admin beheerpaneel dat het creëren van QR menu's voor uw café ongelooflijk eenvoudig maakt. Beheer categorieën, producten en instellingen met een moderne shadcn zijbalkinterface.",
+        "meta": {
+          "title": "Eenvoudig QR Menu Voor Café - Nieuw Beheerpaneel | IQ Rest",
+          "description": "Maak eenvoudig QR menu voor uw café met ons nieuwe beheerpaneel. Moderne zijbalkinterface voor het beheren van categorieën, producten, QR-codes en analyses. Eenvoudige café menu creatie."
+        },
+        "content": {
+          "intro": "We zijn verheugd om ons gloednieuwe admin beheerpaneel voor te stellen dat het creëren van QR menu's voor uw café zo eenvoudig mogelijk maakt. Of u nu een kleine koffiebar of een druk café runt, onze gebruiksvriendelijke interface helpt u uw digitale menu moeiteloos te beheren. Het nieuwe beheerpaneel heeft een modern ontwerp met een zijbalk die alle tools die u nodig heeft om het QR menu van uw café te creëren, binnen handbereik plaatst.",
+          "image1Alt": "Eenvoudig QR menu beheerpaneel voor cafébeheer",
+          "image1Caption": "Nieuw beheerpaneel met zijbalknavigatie voor eenvoudige café QR menu creatie",
+          "section1Title": "Moderne Zijbalkinterface Voor Eenvoudig Menu Beheer",
+          "section1Text": "Het nieuwe beheerpaneel heeft een slanke zijbalk die het navigeren door de instellingen van uw café's QR menu ongelooflijk eenvoudig maakt. Met duidelijk georganiseerde secties voor Dashboard, Categorieën, Producten, QR Code, Analyses, Instellingen, Facturering en Ondersteuning, kunt u gemakkelijk elk aspect van uw café's digitale menu vinden en beheren. De zijbalk klapt in op mobiele apparaten, zodat u gemakkelijk toegang heeft tot alle functies, ongeacht welk apparaat u gebruikt om het QR menu van uw café te beheren.",
+          "section2Title": "Eenvoudig Categorie- en Productbeheer Voor Uw Café",
+          "section2Text": "Het creëren en organiseren van uw café's QR menu is nog nooit zo eenvoudig geweest. Onze nieuwe pagina's voor categorie- en productbeheer zijn ontworpen met eenvoud in gedachten, zodat café-eigenaren gemakkelijk hun menu-items kunnen toevoegen, bewerken en organiseren. Of u nu dagelijkse specials bijwerkt of seizoensgebonden dranken toevoegt, de gebruiksvriendelijke interface zorgt ervoor dat het QR menu van uw café actueel en aantrekkelijk blijft voor klanten.",
+          "section3Title": "Server-Side Rendering Voor Snelle Prestaties",
+          "section3Text": "Het nieuwe beheerpaneel is gebouwd met server-side rendering (SSR) technologie, waardoor uw café's QR menu beheerdashboard snel en efficiënt laadt. Alle gegevens worden van de server opgehaald, waardoor realtime updates en een soepele ervaring worden gegarandeerd. Deze eenvoudige en snelle aanpak betekent dat u minder tijd kwijt bent aan wachten en meer tijd aan het perfectioneren van het QR menu van uw café.",
+          "benefitsTitle": "Waarom Dit QR Menu Creatie Eenvoudig Maakt Voor Cafés",
+          "benefit1": "Eenvoudige navigatie met moderne zijbalkinterface voor snelle toegang tot alle café menu functies",
+          "benefit2": "Eenvoudig categoriebeheer om het QR menu van uw café logisch te organiseren",
+          "benefit3": "Eenvoudige productbewerking met directe updates naar het digitale menu van uw café",
+          "benefit4": "Eenvoudige QR code generatie en aanpassing voor uw café",
+          "benefit5": "Eenvoudige analyses om te begrijpen hoe klanten interactie hebben met het QR menu van uw café",
+          "benefit6": "Eenvoudige mobiele toegang - beheer het QR menu van uw café vanaf elk apparaat",
+          "conclusionTitle": "Creëer Het QR Menu Van Uw Café Op Een Eenvoudige Manier",
+          "conclusionText": "Ons nieuwe beheerpaneel vertegenwoordigt een belangrijke stap voorwaarts in het eenvoudig maken van QR menu creatie voor café-eigenaren overal. Met zijn intuïtieve zijbalkinterface, snelle server-side rendering en uitgebreide beheertools is het creëren en onderhouden van uw café's digitale QR menu nog nooit zo eenvoudig geweest. Sluit u aan bij duizenden cafés die IQ Rest al gebruiken om hun klanten een gemakkelijke, moderne menu-ervaring te bieden.",
+          "ctaText": "Klaar om een eenvoudig QR menu voor uw café te creëren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Krijg QR Menu Voor Restaurants - FAQ Pagina & Hoe Te Gids Updates",
+        "description": "Leer hoe u QR menu voor restaurants kunt krijgen met onze verbeterde FAQ-pagina en 4-stappen gids. Ontdek antwoorden op veelgestelde vragen over het verkrijgen van QR menu's voor uw restaurant, met betere navigatie en SEO-geoptimaliseerde inhoud.",
+        "meta": {
+          "title": "Krijg QR Menu Voor Restaurants - FAQ & Gids Updates | IQ Rest",
+          "description": "Leer hoe u QR menu voor restaurants eenvoudig kunt krijgen. Nieuwe speciale FAQ-pagina beantwoordt alle vragen over het verkrijgen van QR menu's voor uw restaurant. Gestroomlijnde 4-stappen gids om aan de slag te gaan."
+        },
+        "content": {
+          "intro": "We hebben het gemakkelijker dan ooit gemaakt om QR menu voor restaurants te krijgen. Onze gereorganiseerde FAQ en hoe-te-inhoud helpt restaurant eigenaren snel antwoorden te vinden over hoe ze QR menu's voor hun etablissementen kunnen krijgen. Of u nu een QR menu voor uw restaurant of café wilt krijgen, deze update biedt alle informatie die u nodig heeft op één plek.",
+          "image1Alt": "Hoe QR menu voor restaurants te krijgen - speciale FAQ-pagina",
+          "image1Caption": "Nieuwe FAQ-pagina die toont hoe QR menu voor restaurants te krijgen met georganiseerde vragen en antwoorden",
+          "section1Title": "Speciale FAQ Pagina Voor Het Krijgen Van QR Menu's",
+          "section1Text": "Alle vragen over hoe QR menu voor restaurants te krijgen staan nu op een speciale /faq pagina. Restaurant eigenaren kunnen gemakkelijk antwoorden vinden over het verkrijgen van QR menu's, van opzetten tot aanpassing. Elke vraag over het verkrijgen van een QR menu voor uw restaurant wordt weergegeven in zijn eigen kaart met uitgebreide antwoorden, waardoor het eenvoudig is om de informatie te krijgen die u nodig heeft om aan de slag te gaan met QR menu's voor uw restaurant.",
+          "section2Title": "4-Stappen Gids Voor Het Krijgen Van QR Menu Voor Restaurants",
+          "section2Text": "Onze gestroomlijnde gids toont precies hoe u QR menu voor restaurants in slechts 4 eenvoudige stappen kunt krijgen. Of u nu een QR menu voor uw restaurant, café of bar wilt krijgen, het nieuwe kaartgebaseerde ontwerp maakt duidelijk hoe u aan de slag kunt. Deze gids om QR menu's voor restaurants te krijgen verschijnt op alle pagina's, zodat u altijd weet hoe u het QR menu van uw restaurant snel kunt instellen.",
+          "section3Title": "SEO-Geoptimaliseerde Inhoud Om Restaurants Te Helpen QR Menu's Te Krijgen",
+          "section3Text": "We hebben onze inhoud geoptimaliseerd om meer restaurants te helpen ontdekken hoe ze QR menu's kunnen krijgen. De gids verschijnt met volledige Schema.org gestructureerde gegevens op de homepage, waardoor restaurants die zoeken naar oplossingen voor het verkrijgen van QR menu's ons gemakkelijk kunnen vinden. Onze slimme inhoudsdistributie zorgt ervoor dat restaurants de QR menu-informatie die ze nodig hebben kunnen krijgen, terwijl ze sterke zichtbaarheid in zoekmachines behouden.",
+          "benefitsTitle": "Waarom Dit U Helpt QR Menu Voor Uw Restaurant Te Krijgen",
+          "benefit1": "Speciale FAQ-pagina beantwoordt alle vragen over het verkrijgen van QR menu's voor restaurants",
+          "benefit2": "Duidelijke 4-stappen gids toont precies hoe u QR menu voor uw restaurant kunt krijgen",
+          "benefit3": "Gemakkelijke toegang tot FAQ en contactopties om u te helpen uw QR menu in te stellen",
+          "benefit4": "SEO-geoptimaliseerd om restaurants te helpen ontdekken hoe ze QR menu's eenvoudig kunnen krijgen",
+          "benefit5": "Consistente informatie over het verkrijgen van QR menu's over het hele platform",
+          "benefit6": "Snellere weg om QR menu voor uw restaurant te krijgen met verbeterde navigatie",
+          "conclusionTitle": "Krijg Vandaag Nog QR Menu Voor Uw Restaurant",
+          "conclusionText": "Deze verbeteringen maken het ongelooflijk eenvoudig voor restaurants om QR menu's te krijgen. Of u nu een klein café bent dat een QR menu wilt krijgen of een grote restaurantketen, onze gereorganiseerde inhoud helpt u precies te begrijpen hoe u QR menu oplossingen voor uw etablissement kunt krijgen. Begin nu en krijg het QR menu van uw restaurant in enkele minuten operationeel.",
+          "ctaText": "Klaar om QR menu voor uw restaurant te krijgen?",
+          "ctaButton": "Krijg QR Menu Nu"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Gratis Restaurantwebsite Creatie - Mobiele Optimalisatie & UX Verbeteringen",
+        "description": "Belangrijke verbeteringen aan het creëren van een gratis restaurantwebsite: geoptimaliseerde mobiele navigatie met hamburger menu, verbeterde aanmeldpagina voor betere conversies en gestroomlijnde gebruikerservaring.",
+        "meta": {
+          "title": "Gratis Restaurantwebsite Creatie Updates - IQ Rest Changelog",
+          "description": "Leer hoe IQ Rest het proces van gratis restaurantwebsite creatie heeft verbeterd met mobiele-geoptimaliseerde navigatie, betere aanmeldflow en verbeterde gebruikerservaring voor cafés en restaurants"
+        },
+        "content": {
+          "intro": "Het creëren van een gratis restaurantwebsite is nog nooit zo eenvoudig of mobielvriendelijk geweest. We hebben aanzienlijke verbeteringen aangebracht om restaurant- en café-eigenaren te helpen hun professionele website met een digitaal QR menu te bouwen, vooral op mobiele apparaten waar de meeste mensen zoeken naar 'создание сайта для ресторана бесплатно' (gratis restaurantwebsite creatie). Deze updates richten zich op mobiele navigatie, verfijningen van de aanmeldpagina en de algehele gebruikerservaring om ervoor te zorgen dat iedereen een restaurantwebsite gratis kan creëren zonder enige technische kennis.",
+          "image1Alt": "Mobiel-geoptimaliseerd hamburger menu voor restaurantwebsite",
+          "image1Caption": "Nieuwe mobiele navigatie met hamburger menu voor gemakkelijke toegang tot alle functies",
+          "section1Title": "Mobiel-Eerste Navigatie Voor Restaurantwebsites",
+          "section1Text": "De meeste restaurant eigenaren zoeken naar en creëren hun gratis restaurantwebsite op mobiele apparaten. Daarom hebben we onze mobiele navigatie volledig opnieuw ontworpen met een professioneel hamburger menu. Op smartphones en tablets opent de navigatie nu als een schone modale dialoog, die alle menu-items (Prijzen, Kenmerken, Changelog, Contacten) en de Begin knop in een gemakkelijk leesbare verticale lay-out toont. Deze mobiel-geoptimaliseerde aanpak maakt het eenvoudig om de functies van IQ Rest te verkennen en te beginnen met het creëren van uw gratis restaurantwebsite rechtstreeks vanaf uw telefoon. De thema- en taalselectoren blijven gemakkelijk toegankelijk in de header, terwijl het hamburger menu de interface schoon en overzichtelijk houdt.",
+          "section2Title": "Verbeterde Aanmeldpagina Voor Gratis Restaurantwebsite Creatie",
+          "section2Text": "We hebben de aanmeldpagina verfijnd om het creëren van een gratis restaurantwebsite nog intuïtiever te maken. De verbeteringen omvatten betere ruimte op mobiele apparaten, gecentreerde waardepropositiekaarten die duidelijk voordelen uitleggen, en geoptimaliseerde formulierlay-outs die perfect werken op kleine schermen. De restaurant teller die toont hoeveel bedrijven IQ Rest al gebruiken, wordt nu volledig breed weergegeven op mobiel, wat sterke sociale bewijskracht biedt die nieuwe restaurant eigenaren aanmoedigt om hun gratis website te starten. Elk element is zorgvuldig getest om ervoor te zorgen dat het creëren van uw restaurantwebsite soepel en snel verloopt, of u nu op een desktopcomputer of uw smartphone bent.",
+          "image2Alt": "Geoptimaliseerde aanmeldflow voor gratis restaurantwebsite creatie",
+          "image2Caption": "Gestroomlijnd aanmeldproces geoptimaliseerd voor mobiele apparaten",
+          "section3Title": "Drie-Stappen Proces Geoptimaliseerd Voor Alle Apparaten",
+          "section3Text": "De visuele procesindicator die de drie eenvoudige stappen toont om uw gratis restaurantwebsite te creëren (Meld u aan met uw e-mail, Voeg uw menu-items toe, Krijg uw QR-code & begin) past zich nu prachtig aan verschillende schermformaten aan. Op mobiel en tablets worden de stappen verticaal weergegeven met duidelijke ruimte, waardoor het eenvoudig te begrijpen is hoe eenvoudig het proces is. Op grotere schermen worden ze horizontaal weergegeven met pijlen. Dit adaptieve ontwerp zorgt ervoor dat iedereen, ongeacht hun apparaat, duidelijk kan zien hoe snel en eenvoudig het is om een professionele restaurantwebsite gratis te creëren met IQ Rest.",
+          "benefitsTitle": "Belangrijke Verbeteringen Voor Het Creëren Van Gratis Restaurantwebsites",
+          "benefit1": "Mobiel-geoptimaliseerde hamburger menu navigatie voor eenvoudige toegang op smartphones",
+          "benefit2": "Verbeterde aanmeldpagina met betere mobiele ruimte en gecentreerde lay-outs",
+          "benefit3": "Volledig brede restaurant teller op mobiel die sterke sociale bewijskracht biedt",
+          "benefit4": "Adaptieve drie-stappen procesindicator die op alle schermformaten werkt",
+          "benefit5": "Gestroomlijnde invoervormen geoptimaliseerd voor mobiele aanraking",
+          "benefit6": "Opgelost probleem met uitloggen om een goede navigatie op alle pagina's te waarborgen",
+          "conclusionTitle": "Gratis Restaurantwebsite Creatie Eenvoudig Gemaakt",
+          "conclusionText": "Deze verbeteringen versterken onze toewijding om gratis restaurantwebsite creatie toegankelijk te maken voor iedereen. Of u nu een kleine café-eigenaar bent die IQ Rest op uw telefoon bekijkt tijdens een pauze, of een restaurantmanager die uw digitale strategie op een tablet plant, de ervaring is nu naadloos en professioneel. U kunt een complete restaurantwebsite met QR menu, volledig gratis, in slechts een paar minuten vanaf elk apparaat creëren. Geen creditcard vereist, geen technische vaardigheden nodig - alleen uw menu en een paar minuten tijd om uw professionele online aanwezigheid op te bouwen.",
+          "ctaText": "Klaar om uw gratis restaurantwebsite te creëren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "landing-redesign": {
+        "title": "Herontworpen Aanmeldpagina Voor Hogere Conversies",
+        "description": "We hebben onze aanmeldpagina volledig herontworpen met een focus op conversieoptimalisatie, met waardeproposities, sociale bewijskracht en een gestroomlijnde gebruikerservaring.",
+        "meta": {
+          "title": "Aanmeldpagina Herontwerp - IQ Rest Changelog",
+          "description": "IQ Rest lanceert herontworpen aanmeldpagina met verbeterde UX, sociale bewijskracht teller en conversiegerichte indeling voor restaurant QR menu creatie"
+        },
+        "content": {
+          "intro": "We zijn verheugd om een complete herontwerp van onze Aanmeldpagina aan te kondigen, speciaal gebouwd om restaurant- en café-eigenaren sneller dan ooit hun digitale QR menu te laten creëren. Deze update richt zich op het duidelijk communiceren van waarde, vertrouwen opbouwen via sociale bewijskracht en het bieden van een naadloze aanmeldervaring die minder dan 5 minuten duurt van begin tot eind.",
+          "image1Alt": "Nieuwe IQ Rest aanmeldpagina met waardeproposities en sociale bewijskracht",
+          "image1Caption": "Herontworpen aanmeldpagina met duidelijke waardeproposities en restaurant teller",
+          "section1Title": "Duidelijke Waardeproposities In Één Oogopslag",
+          "section1Text": "Het nieuwe ontwerp toont prominent vier belangrijke voordelen waar restaurant eigenaren het meest om geven: geen technische vaardigheden vereist, directe menu-updates, QR-code en website inbegrepen, en gratis om te beginnen. Elk voordeel wordt gepresenteerd in een schone kaartindeling met intuïtieve pictogrammen, waardoor het onmiddellijk duidelijk is wat IQ Rest biedt. Deze aanpak helpt drukke restaurant eigenaren om de waardepropositie binnen enkele seconden na het landen op de pagina te begrijpen.",
+          "section2Title": "Sociale Bewijskracht Die Vertrouwen Opbouwt",
+          "section2Text": "We hebben een dynamische restaurant teller toegevoegd die toont hoeveel bedrijven IQ Rest al gebruiken. Deze teller wordt automatisch bijgewerkt op basis van onze groeisnelheid, waardoor authentieke sociale bewijskracht wordt geboden die nieuwe bezoekers helpt zich zeker te voelen in hun beslissing om ons platform uit te proberen. Te zien dat meer dan 1.400 restaurants IQ Rest al vertrouwen, vermindert aanzienlijk de aarzeling en moedigt aanmeldingen aan.",
+          "section3Title": "Gestroomlijnde Aanmeldflow",
+          "section3Text": "Het hele aanmeldproces gebeurt nu op één pagina met een consistente lay-out. Of u nu uw e-mail invoert of uw code verifieert, het ontwerp blijft hetzelfde - alleen het invoerveld verandert. Dit creëert een soepelere, minder schokkende ervaring. We hebben ook een visuele procesindicator toegevoegd die de drie eenvoudige stappen toont: Meld u aan, Voeg menu toe en Krijg QR. Deze transparantie helpt gebruikers precies te begrijpen wat ze kunnen verwachten en vermindert het verlaten.",
+          "benefitsTitle": "Belangrijke Verbeteringen In Deze Update",
+          "benefit1": "Waardepropositiekaarten met pictogrammen voor directe begrip",
+          "benefit2": "Live restaurant teller die authentieke sociale bewijskracht biedt",
+          "benefit3": "Eenduidig paginadesign voor zowel e-mail als OTP verificatiestappen",
+          "benefit4": "Visuele 3-stappen procesindicator voor transparantie",
+          "benefit5": "Conversiegerichte tekst: 'Creëer Uw Digitale Menu In 5 Minuten'",
+          "benefit6": "Realtime e-mailvalidatie met visuele feedback",
+          "conclusionTitle": "Ontworpen Voor Restaurant Succes",
+          "conclusionText": "Elk element van dit herontwerp is gemaakt met restaurant- en café-eigenaren in gedachten. We begrijpen dat u druk bezig bent met het runnen van uw bedrijf, dus hebben we het aanmeldproces zo snel en geruststellend mogelijk gemaakt. De nieuwe pagina toont duidelijk wat u krijgt, hoe eenvoudig het is om aan de slag te gaan, en dat duizenden andere restaurants al dezelfde keuze hebben gemaakt. Of u nu een klein café of een groeiende restaurantketen bent, u kunt nu uw professionele QR menu website in slechts 5 minuten creëren.",
+          "ctaText": "Klaar om het digitale menu van uw restaurant te creëren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "auth": {
+        "title": "Nieuwe Gebruikersauthenticatie Interface",
+        "description": "We hebben een eenvoudig en veilig op e-mail gebaseerd authenticatiesysteem gelanceerd waarmee u in enkele minuten uw restaurantwebsite en QR menu kunt creëren.",
+        "meta": {
+          "title": "Gebruikersauthenticatie Interface - IQ Rest Changelog",
+          "description": "IQ Rest introduceert een nieuw wachtwoordloos authenticatiesysteem voor het snel en veilig creëren van uw restaurantwebsite en digitale QR menu"
+        },
+        "content": {
+          "intro": "We zijn verheugd om de lancering van onze nieuwe gebruikersauthenticatie-interface voor IQ Rest aan te kondigen. Deze update vertegenwoordigt een belangrijke stap voorwaarts in het gemakkelijker dan ooit maken van het creëren van uw restaurantwebsite met een professioneel QR menu. Ons doel is altijd geweest om restaurant- en café-eigenaren te helpen hun digitale aanwezigheid in minuten, niet uren, op te bouwen, en dit nieuwe authenticatiesysteem is ontworpen met die missie in gedachten.",
+          "image1Alt": "E-mail invoer stap van IQ Rest authenticatie",
+          "image1Caption": "Eenvoudige e-mailgebaseerde authenticatie - geen wachtwoorden om te onthouden",
+          "section1Title": "Wachtwoordloze Authenticatie Voor Restaurant Eigenaren",
+          "section1Text": "Met begrip dat restaurant eigenaren drukke mensen zijn, hebben we een wachtwoordloos authenticatiesysteem geïmplementeerd dat alleen uw e-mailadres vereist. Wanneer u uw restaurantwebsite wilt creëren of uw digitale QR menu wilt bijwerken, voert u eenvoudig uw e-mail in en ontvangt u een veilige 4-cijferige verificatiecode. Deze aanpak elimineert de frustratie van vergeten wachtwoorden terwijl de hoogste beveiligingsnormen voor de gegevens van uw restaurant worden gehandhaafd. Het hele proces duurt minder dan 30 seconden, zodat u zich kunt concentreren op wat het belangrijkst is - het runnen van uw restaurant en het bedienen van uw klanten.",
+          "section2Title": "Gestroomlijnd QR Menu Creatie Proces",
+          "section2Text": "Met ons nieuwe authenticatiesysteem is het nog nooit zo eenvoudig geweest om te beginnen met uw digitale QR menu. Zodra u bent geverifieerd, heeft u onmiddellijke toegang tot onze intuïtieve menu-builder waar u uw gerechten kunt toevoegen, prijzen kunt instellen, foto's kunt uploaden en categorieën kunt organiseren. Het QR menu dat u maakt, is onmiddellijk toegankelijk voor uw klanten - ze scannen eenvoudig de code en bekijken uw prachtig ontworpen digitale menu op hun smartphone. Geen app-downloads vereist voor uw klanten, en geen technische kennis vereist van u. Dit is precies wat moderne restaurants en cafés nodig hebben om te concurreren in de digitale wereld van vandaag.",
+          "image2Alt": "OTP verificatiestap van IQ Rest authenticatie",
+          "image2Caption": "Veilige 4-cijferige code verificatie die direct naar uw e-mail wordt verzonden",
+          "section3Title": "Gebouwd Voor Snelheid En Beveiliging",
+          "section3Text": "Beveiliging was onze hoogste prioriteit bij het ontwerpen van dit authenticatiesysteem. Elke verificatiecode verloopt na 10 minuten en kan slechts één keer worden gebruikt, waardoor uw restaurantwebsite en menu-gegevens worden beschermd tegen ongeautoriseerde toegang. Tegelijkertijd hebben we elke stap van het proces geoptimaliseerd voor snelheid. Van het invoeren van uw e-mail tot het toegang krijgen tot uw dashboard, de hele authenticatiestroom is binnen een minuut voltooid. Dit betekent dat u snel updates aan uw QR menu kunt aanbrengen tijdens de service, dagelijkse specials kunt toevoegen of prijzen kunt aanpassen - alles zonder vertraging.",
+          "benefitsTitle": "Belangrijke Voordelen Voor Uw Restaurant",
+          "benefit1": "Creëer uw restaurantwebsite met QR menu in enkele minuten - geen technische vaardigheden vereist",
+          "benefit2": "Geen wachtwoorden om te onthouden - veilige e-mailgebaseerde verificatie houdt uw account veilig",
+          "benefit3": "Directe toegang tot uw digitale menu-builder vanaf elk apparaat",
+          "benefit4": "Snelle updates aan uw QR menu, zelfs tijdens drukke service-uren",
+          "conclusionTitle": "Begin Vandaag Met Het Bouwen Van Uw Digitale Menu",
+          "conclusionText": "Deze nieuwe authenticatie-interface is slechts het begin van onze toewijding om digitale QR menu's toegankelijk te maken voor elk restaurant en café. Of u nu een klein koffiehuis bent of een groeiende restaurantketen, IQ Rest biedt de tools die u nodig heeft om een professionele online aanwezigheid te creëren. Uw klanten verwachten uw menu online te vinden, en met onze oplossing kunt u die verwachtingen overtreffen met een prachtig ontworpen, altijd up-to-date digitaal QR menu dat perfect werkt op elk smartphone.",
+          "ctaText": "Klaar om uw restaurantwebsite met QR menu te creëren?",
+          "ctaButton": "Begin Gratis"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Abonnementsplannen Voor QR Menu En Restaurantwebsite Creatie",
+        "description": "Introductie van flexibele abonnementsplannen voor het creëren van uw restaurantwebsite en QR menu. Kies uit Gratis, Basis en Pro plannen met maandelijkse of jaarlijkse factureringsopties.",
+        "meta": {
+          "title": "Abonnementsplannen Voor QR Menu En Restaurantwebsite | IQ Rest",
+          "description": "Kies het perfecte abonnementsplan voor uw restaurantwebsite en QR menu creatie. Gratis, Basis en Pro plannen met flexibele maandelijkse en jaarlijkse facturering. Begin gratis vandaag."
+        },
+        "content": {
+          "intro": "We zijn verheugd om de lancering van ons nieuwe abonnementsysteem voor QR menu en restaurantwebsite creatie aan te kondigen. IQ Rest biedt nu flexibele plannen die met uw bedrijf meegroeien - van een volledig gratis niveau voor kleine cafés tot professionele plannen voor gevestigde restaurants. Of u nu net begint of meerdere locaties beheert, onze abonnementsplannen bieden de functies die u nodig heeft om een professionele restaurantwebsite met QR menu mogelijkheden te creëren en te onderhouden.",
+          "image1Alt": "Abonnementsplannen voor QR menu en restaurantwebsite creatie",
+          "image1Caption": "Kies het perfecte plan voor uw restaurantwebsite en QR menu behoeften",
+          "section1Title": "Flexibele Plannen Voor Elke Restaurantgrootte",
+          "section1Text": "Ons abonnementsysteem voor QR menu en restaurantwebsite creatie biedt drie niveaus die zijn ontworpen om aan uw behoeften te voldoen. Het Gratis plan laat u beginnen met tot 15 menu-items - perfect voor kleine cafés of om het platform uit te proberen. Het Basis plan voor €4/maand (of €3/maand bij jaarlijkse facturering) vergroot uw capaciteit tot 100 items met 3 talen en 2.000 maandelijkse scans. Voor groeiende restaurants biedt ons Pro plan voor €7/maand (of €6/maand jaarlijks) onbeperkte items, talen en scans - alles wat u nodig heeft voor professioneel restaurantwebsite en QR menu beheer.",
+          "section2Title": "Eenvoudig Factureringsdashboard",
+          "section2Text": "Het beheren van uw abonnement voor QR menu en restaurantwebsite diensten is nu gemakkelijker dan ooit. Ons nieuwe factureringsdashboard toont alle beschikbare plannen in een schone, eenvoudige interface. U kunt uw huidige plan in één oogopslag zien, functies vergelijken en met één klik upgraden of downgraden. Het gestroomlijnde ontwerp toont elk plan met zijn maandelijkse prijs, waardoor het eenvoudig is om de juiste optie voor uw restaurantwebsite en QR menu behoeften te kiezen. Veilige betalingen worden verwerkt via Stripe, de industriestandaard voor online transacties.",
+          "section3Title": "Bespaar 25% Met Jaarlijkse Facturering",
+          "section3Text": "Restaurant eigenaren die zich committeren aan jaarlijkse facturering voor hun QR menu en website abonnement besparen 25% vergeleken met maandelijkse betalingen. Het Basis plan daalt van €4 naar €3 per maand, terwijl het Pro plan van €7 naar €6 per maand gaat bij jaarlijkse facturering. Deze aanzienlijke besparingen helpen restaurants om meer in hun kernbedrijf te investeren terwijl ze een professionele digitale aanwezigheid behouden. Wissel op elk moment tussen maandelijkse en jaarlijkse facturering via uw dashboard.",
+          "benefitsTitle": "Voordelen Van Onze Abonnementsplannen",
+          "benefit1": "Gratis plan voor altijd beschikbaar - geen creditcard vereist om te beginnen",
+          "benefit2": "Flexibele maandelijkse of jaarlijkse facturering met 25% besparing op jaarlijkse plannen",
+          "benefit3": "Instant plan upgrades - nieuwe functies worden onmiddellijk geactiveerd",
+          "benefit4": "Veilige Stripe betalingsverwerking voor alle transacties",
+          "benefit5": "Eenvoudig planbeheer via eenvoudig factureringsdashboard",
+          "benefit6": "Downgrade op elk moment - geen langetermijncontracten vereist",
+          "conclusionTitle": "Begin Vandaag Met Het Creëren Van Uw Restaurantwebsite",
+          "conclusionText": "Met onze nieuwe abonnementsplannen is het creëren van een professioneel QR menu en restaurantwebsite nog nooit zo toegankelijk geweest. Begin met ons Gratis plan om het platform te ervaren, en upgrade vervolgens naarmate uw restaurant groeit. Onze flexibele factureringsopties, transparante prijzen en directe activatie betekenen dat u uw digitale menu in enkele minuten operationeel kunt hebben. Sluit u aan bij duizenden restaurants die IQ Rest al gebruiken om verbinding te maken met hun klanten via moderne, mobielvriendelijke QR menu's.",
+          "ctaText": "Klaar om uw plan voor QR menu en restaurantwebsite te kiezen?",
+          "ctaButton": "Bekijk Prijsplannen"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR-code",
+    "description": "Download en print uw QR-code zodat klanten deze kunnen scannen",
+    "preview": "Voorbeeld",
+    "paperFormat": "Papierformaat",
+    "qrPerPage": "QR-codes per pagina",
+    "customText": "Tekst onder QR-code",
+    "customTextPlaceholder": "Scan om het menu te bekijken",
+    "print": "Afdrukken",
+    "download": "Download PNG",
+    "viewMenu": "Bekijk menu",
+    "noSlug": "Geen menu-URL ingesteld",
+    "noSlugDescription": "Stel eerst uw restaurant-URL in de instellingen in om een QR-code te genereren.",
+    "goToSettings": "Ga naar instellingen",
+    "loading": "Laden...",
+    "menuUrl": "Uw website",
+    "websiteReady": "Uw website is klaar!",
+    "openWebsite": "Open website",
+    "printSection": "Print & download QR-code:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Letter (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Volledige pagina)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Tekstgrootte",
+    "textSizes": {
+      "small": "Klein",
+      "medium": "Gemiddeld",
+      "large": "Groot"
+    }
+  },
+  "support": {
+    "title": "Berichten",
+    "subtitle": "Krijg hulp van ons team",
+    "unauthorized": "Log alstublieft in om toegang te krijgen tot ondersteuning",
+    "lastUpdated": "Bijgewerkt",
+    "emptyTitle": "Nog geen berichten",
+    "emptyDescription": "Stuur een bericht om het gesprek te starten",
+    "sendMessage": "Bericht verzenden",
+    "placeholder": "Typ uw bericht...",
+    "hint": "Druk op Enter om te verzenden, Shift+Enter voor een nieuwe regel",
+    "send": "Verzenden",
+    "supportTeam": "Ondersteuningsteam"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Maak uw digitale menu in 5 minuten - IQ Rest",
+      "description": "QR-menu en website voor uw restaurant. Direct klaar. Geen technische vaardigheden vereist."
+    },
+    "title": "Maak uw digitale menu in 5 minuten",
+    "subtitle": "QR-menu en website voor uw restaurant. Direct klaar.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Voer e-mail in om te beginnen met creëren",
+    "otpPlaceholder": "Voer 4-cijferige code in",
+    "continue": "Maak Mijn Menu",
+    "sending": "Aan het creëren...",
+    "verifyTitle": "Controleer uw e-mail",
+    "verifySubtitle": "We hebben een 4-cijferige code naar {email} gestuurd",
+    "verify": "Verifiëren",
+    "verifying": "Verifiëren...",
+    "changeEmail": "E-mail wijzigen",
+    "resendCode": "Code opnieuw verzenden",
+    "successTitle": "Welkom!",
+    "successSubtitle": "U bent succesvol ingelogd",
+    "redirecting": "Wordt doorgestuurd naar het dashboard...",
+    "errors": {
+      "sendFailed": "Verzenden van verificatiecode mislukt. Probeer het opnieuw.",
+      "verifyFailed": "Verifiëren van code mislukt. Probeer het opnieuw."
+    },
+    "valueProps": {
+      "noSkills": "Geen technische vaardigheden vereist",
+      "instantUpdates": "Directe menu-updates",
+      "qrIncluded": "QR-code + website inbegrepen",
+      "freeStart": "Gratis om te beginnen"
+    },
+    "formHelper": "Geen creditcard vereist",
+    "setupTime": "Instellen in 5 minuten",
+    "hasAccount": "Heeft u al een account?",
+    "signIn": "Inloggen",
+    "restaurantCounter": "Sluit je aan bij {count} restaurants die IQ Rest al gebruiken",
+    "steps": {
+      "signUp": "Meld u aan met uw e-mail",
+      "addMenu": "Voeg uw menu-items toe",
+      "getQr": "Krijg uw QR-code & begin"
+    },
+    "motivational": {
+      "title": "Begin vandaag met het accepteren van bestellingen",
+      "subtitle": "Uw klanten wachten op een digitaal menu"
+    }
+  },
+  "reservations": {
+    "title": "Reserveringen",
+    "tables": "Tafels",
+    "settings": "Instellingen",
+    "addTable": "Tafel Toevoegen",
+    "newTable": "Nieuwe Tafel",
+    "editTable": "Tafel Bewerken",
+    "tableNumber": "Tafelnummmer",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Capaciteit (gasten)",
+    "capacityPlaceholder": "4",
+    "zone": "Zone",
+    "zonePlaceholder": "Terras, Raam, Hoofdzal...",
+    "image": "Foto",
+    "uploadImage": "Klik om foto te uploaden",
+    "removeImage": "Verwijderen",
+    "isActive": "Actief",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "deleteConfirm": "Weet je zeker dat je deze tafel wilt verwijderen?",
+    "table": "Tafel",
+    "noTables": "Nog geen tafels. Voeg je eerste tafel toe om reserveringen mogelijk te maken.",
+    "error": "Fout",
+    "close": "Sluiten",
+    "noReservations": "Nog geen reserveringen",
+    "pending": "In afwachting",
+    "confirmed": "Bevestigd",
+    "cancelled": "Geannuleerd",
+    "completed": "Voltooid",
+    "confirm": "Bevestigen",
+    "reject": "Afwijzen",
+    "guests": "gasten",
+    "date": "Datum",
+    "time": "Tijd",
+    "guest": "Gast",
+    "status": "Status",
+    "notes": "Notities",
+    "awaitingResponse": "In afwachting van reactie",
+    "today": "Vandaag",
+    "tomorrow": "Morgen",
+    "otherReservations": "Andere Reserveringen",
+    "sort": "Sorteren"
+  },
+  "publicReserve": {
+    "title": "Boek een Tafel",
+    "selectDate": "Selecteer Datum",
+    "selectTime": "Selecteer Tijd",
+    "selectGuests": "Aantal Gasten",
+    "selectTable": "Selecteer Tafel",
+    "yourDetails": "Uw Gegevens",
+    "name": "Naam",
+    "namePlaceholder": "Uw naam",
+    "email": "E-mail",
+    "emailPlaceholder": "uw@email.com",
+    "phone": "Telefoon (optioneel)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Speciale verzoeken (optioneel)",
+    "notesPlaceholder": "Eventuele speciale verzoeken of opmerkingen...",
+    "submit": "Tafel Boeken",
+    "submitting": "Boeken...",
+    "success": "Reservering Verzonden!",
+    "successAuto": "Uw reservering is bevestigd. U ontvangt binnenkort een bevestigingsmail.",
+    "successManual": "Uw reserveringsverzoek is verzonden. U ontvangt een e-mail zodra het is bevestigd.",
+    "error": "Fout",
+    "guests": "gasten",
+    "table": "Tafel",
+    "capacity": "capaciteit",
+    "noAvailableTables": "Geen tafels beschikbaar voor dit aantal gasten",
+    "back": "Terug naar Menu",
+    "noTimeSlotsAvailable": "Geen tijdslots beschikbaar voor deze datum",
+    "loadingAvailability": "Beschikbaarheid controleren..."
+  },
+  "publicMenu": {
+    "contacts": "Contacten",
+    "language": "Taal",
+    "reserve": "Reserveer een Tafel",
+    "onlineMenu": "Online Menu",
+    "noCategories": "Geen categorieën beschikbaar",
+    "openInstagram": "Open Instagram",
+    "makeCall": "Bel",
+    "writeWhatsApp": "Schrijf op WhatsApp",
+    "openGoogleMaps": "Open in Google Maps",
+    "noLocation": "Geen locatie beschikbaar",
+    "english": "Engels",
+    "spanish": "Spaans",
+    "allergens": "Allergenen",
+    "allergensInfo": "Dit gerecht bevat de volgende allergenen:",
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Schaaldieren",
+      "eggs": "Eieren",
+      "fish": "Vis",
+      "peanuts": "Pinda's",
+      "soybeans": "Sojabonen",
+      "dairy": "Zuivel",
+      "nuts": "Noten",
+      "celery": "Selderij",
+      "mustard": "Mosterd",
+      "sesame": "Sesam",
+      "sulphites": "Sulfieten",
+      "lupin": "Lupine",
+      "molluscs": "Weekdieren"
+    }
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen Over QR Menu voor Restaurant & Café",
+    "subtitle": "Vind antwoorden op veelvoorkomende vragen over het maken en beheren van uw digitale QR-menu voor restaurants en cafés",
+    "howto": {
+      "question": "Hoe maak je een QR-menu en restaurantwebsite in 4 eenvoudige stappen?",
+      "answer": "Krijg uw restaurant binnen 5 minuten online - voer gewoon uw e-mailadres in en begin vanaf uw telefoon",
+      "faqTitle": "Heeft u meer vragen?",
+      "faqDescription": "Bekijk onze uitgebreide FAQ om alles te leren over het maken en beheren van het QR-menu en de website van uw restaurant",
+      "faqButton": "Bekijk Alle FAQ's",
+      "contactButton": "Neem Contact Op",
+      "steps": [
+        {
+          "name": "Aanmelden met e-mailadres",
+          "text": "Krijg een moderne restaurantwebsite met QR-menu, contactpagina met kaart, online reserveringen en aangepaste branding - alles inbegrepen vanaf het begin."
+        },
+        {
+          "name": "Stel uw restaurant in",
+          "text": "Voer de naam van uw restaurant in en kies uw unieke URL. Voeg een video- of foto-achtergrond toe, stel uw merk kleuren in, schakel tafelreserveringen in."
+        },
+        {
+          "name": "Voeg categorieën en gerechten toe",
+          "text": "Maak menucategorieën en voeg gerechten met foto's toe. AI optimaliseert uw afbeeldingen automatisch en vertaalt uw menu in 10+ talen."
+        },
+        {
+          "name": "Bekijk uw gereed menu",
+          "text": "Uw professionele website is live! Klanten kunnen uw menu doorbladeren, reserveringen maken en u op de kaart vinden. Volg alles met dagelijkse analyses."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Wat is een QR-menu voor restaurants en hoe werkt het?",
+        "answer": "Een QR-menu voor restaurants is een digitaal menu dat klanten kunnen openen door een QR-code te scannen met hun smartphone. IQ Rest creëert een professionele digitale menuwebsite voor uw restaurant of café die onmiddellijk wordt bijgewerkt zonder opnieuw te drukken. Klanten scannen eenvoudig de code en bekijken uw menu op hun apparaat."
+      },
+      {
+        "question": "Hoeveel kost een QR-menu voor een restaurant of café?",
+        "answer": "IQ Rest biedt flexibele prijzen vanaf €0 voor altijd met ons gratis plan. Dit maakt het voor elk restaurant of café betaalbaar om een professioneel QR-menu te maken. Betaalde plannen beginnen al bij €4/maand met extra functies zoals onbeperkte items en geavanceerde analyses."
+      },
+      {
+        "question": "Kan ik een website voor mijn restaurant maken zonder coderen?",
+        "answer": "Ja! IQ Rest is ontworpen voor restaurant- en café-eigenaren zonder technische kennis. U kunt in enkele minuten een complete digitale menuwebsite voor uw restaurant maken, zonder programmeer- of coderingsvaardigheden. Voeg eenvoudig uw gerechten, prijzen en foto's toe via onze intuïtieve interface."
+      },
+      {
+        "question": "Hoe vaak kan ik mijn QR-menu bijwerken?",
+        "answer": "U kunt uw restaurant- of café-menu zo vaak bijwerken als u nodig heeft. Alle wijzigingen worden in realtime weergegeven, zodat u prijzen onmiddellijk kunt bijwerken, nieuwe gerechten kunt toevoegen of beschrijvingen kunt wijzigen zonder fysieke menu's opnieuw te drukken. Perfect voor dagelijkse specials en seizoensgebonden updates."
+      },
+      {
+        "question": "Werkt het QR-menu voor zowel restaurants als cafés?",
+        "answer": "Absoluut! IQ Rest is perfect voor restaurants, cafés, koffiebars, bars, foodtrucks en elke voedselservice. Onze digitale men oplossing past zich aan elk type onderneming aan, van kleine cafés tot grote restaurantketens."
+      },
+      {
+        "question": "Hoe werkt de automatische menuvertaling?",
+        "answer": "Ons QR-menu systeem gebruikt kunstmatige intelligentie om uw restaurant- of café-menu automatisch in meerdere talen te vertalen. Dit is perfect voor toeristische gebieden en internationale klanten. U kunt uw menu in het Engels, Spaans en andere talen aanbieden, zodat u meer klanten kunt bedienen."
+      },
+      {
+        "question": "Kan ik de QR-menuoplossing gratis uitproberen?",
+        "answer": "Ja! We bieden een volledig gratis plan voor restaurants en cafés om IQ Rest uit te proberen. U kunt uw digitale menuwebsite maken met tot 15 items zonder kosten, voor altijd. Geen creditcard vereist om te beginnen. Upgrade alleen wanneer u meer functies nodig heeft."
+      },
+      {
+        "question": "Is IQ Rest een app die klanten moeten downloaden?",
+        "answer": "Nee! Dit is een van de grootste voordelen. Klanten hoeven geen app te downloaden. Ze scannen eenvoudig uw QR-code en het menu opent onmiddellijk in hun webbrowser. Dit maakt het veel handiger dan restaurant-apps die downloads vereisen."
+      },
+      {
+        "question": "Wat zijn de voordelen van een digitale menuwebsite voor mijn restaurant?",
+        "answer": "Een digitale menuwebsite biedt veel voordelen: onmiddellijke menu-updates zonder herdrukkosten, meertalige ondersteuning voor internationale klanten, contactloos bestellen voor veiligheid, analyses om populaire gerechten te zien, en professionele presentatie. Bovendien is het milieuvriendelijk omdat u papierafval van menu's elimineert."
+      },
+      {
+        "question": "Hoe maak ik een QR-code voor mijn restaurantmenu?",
+        "answer": "IQ Rest genereert automatisch een professionele QR-code wanneer u uw digitale menu maakt. U kunt deze QR-code downloaden en afdrukken voor uw restauranttafels, ingang of afhaalbalie. De QR-code is aanpasbaar en van hoge kwaliteit voor duidelijke scanning."
+      }
+    ],
+    "cta": {
+      "title": "Heeft u nog vragen?",
+      "subtitle": "Vraag het ons en ontvang zo snel mogelijk een antwoord",
+      "button": "Neem Contact Op"
+    },
+    "linkTitle": "Heeft u vragen?",
+    "linkDescription": "Bekijk onze veelgestelde vragen om meer te leren over IQ Rest",
+    "meta": {
+      "title": "Veelgestelde Vragen - IQ Rest",
+      "description": "Vind antwoorden op veelvoorkomende vragen over de digitale QR-menuoplossing van IQ Rest voor restaurants en cafés"
+    }
+  },
+  "billing": {
+    "title": "Facturering",
+    "description": "Beheer uw abonnement en facturering",
+    "unauthorized": "Log alstublieft in om uw abonnement te beheren",
+    "perMonth": "/maand",
+    "currentPlan": "Huidig Abonnement",
+    "upgrade": "Upgrade",
+    "manage": "Beheren",
+    "subscriptionSuccess": "Uw abonnement is succesvol geactiveerd!",
+    "subscriptionCanceled": "Abonnementsproces is geannuleerd.",
+    "subscriptionProcessing": "Uw betaling wordt verwerkt. Het kan een paar momenten duren om te activeren.",
+    "processingPayment": "Uw betaling wordt verwerkt...",
+    "processingPaymentDescription": "Gelieve te wachten terwijl we uw abonnement bevestigen. Dit duurt meestal een paar seconden.",
+    "checkoutError": "Het is niet gelukt om de afrekenpagina te starten. Probeer het opnieuw.",
+    "portalError": "Het is niet gelukt om het factureringsportaal te openen. Probeer het opnieuw.",
+    "detailsNote": "Voor meer details, bezoek onze",
+    "pricingPage": "Prijspagina",
+    "plans": {
+      "FREE": {
+        "name": "Gratis"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Basis Maandelijks"
+      },
+      "BASIC_YEARLY": {
+        "name": "Basis Jaarlijks"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro Maandelijks"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro Jaarlijks"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Dashboard",
+      "onboarding": "Introductie",
+      "qrMenu": "QR Menu",
+      "analytics": "Analyse",
+      "categories": "Categorieën",
+      "items": "Items",
+      "settings": "Algemeen",
+      "design": "Ontwerp",
+      "contacts": "Contacten",
+      "languages": "Talen",
+      "reservations": "Reserveringen",
+      "reservationSettings": "Reserveringsinstellingen",
+      "tables": "Tafels",
+      "billing": "Facturering",
+      "support": "Ondersteuning"
+    },
+    "sidebar": {
+      "qrMenu": "QR Menu",
+      "menu": "Menu",
+      "settings": "Instellingen",
+      "reservations": "Reserveringen",
+      "account": "Account",
+      "reservationSettings": "Configuratie"
+    },
+    "logout": "Uitloggen",
+    "auth": {
+      "title": "Inloggen",
+      "subtitle": "Moderne website met QR-menu, reserveringen en AI-vertalingen",
+      "benefits": "Geen wachtwoorden. Geen creditcard.",
+      "emailPlaceholder": "jouw@email.com",
+      "continue": "Doorgaan",
+      "verifyTitle": "Controleer je e-mail",
+      "verifySubtitle": "We hebben een code naar {email} gestuurd",
+      "verify": "Verifiëren",
+      "changeEmail": "Gebruik een ander e-mailadres",
+      "errors": {
+        "sendFailed": "Verzenden van de code is mislukt. Probeer het opnieuw.",
+        "verifyFailed": "Ongeldige code. Probeer het opnieuw."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Maandelijks Gebruik",
+      "scansThisMonth": "scans deze maand",
+      "limitReached": "Je hebt je maandelijkse scanlimiet bereikt. Upgrade je plan voor onbeperkte scans.",
+      "todayViews": "Vandaag",
+      "weeklyViews": "Deze Week",
+      "monthlyViews": "Deze Maand",
+      "uniqueVisitors": "Unieke Bezoekers",
+      "viewsByPage": "Weergaven per Pagina",
+      "viewsByLanguage": "Weergaven per Taal",
+      "dailyViews": "Dagelijkse Weergaven",
+      "noData": "Nog geen gegevens beschikbaar",
+      "pageNames": {
+        "home": "Home",
+        "menu": "Menu",
+        "contacts": "Contacten",
+        "language": "Taal",
+        "reserve": "Reserveren"
+      },
+      "languageNames": {
+        "en": "Engels",
+        "es": "Spaans",
+        "de": "Duits",
+        "fr": "Frans",
+        "ru": "Russisch"
+      }
+    },
+    "categories": {
+      "noCategories": "Nog geen categorieën. Maak je eerste categorie om te beginnen.",
+      "addCategory": "Toevoegen",
+      "editCategory": "Categorie Bewerken",
+      "name": "Naam",
+      "namePlaceholder": "Voer de categorienaam in",
+      "status": "Status",
+      "active": "Actief",
+      "inactive": "Inactief",
+      "save": "Opslaan",
+      "saving": "Opslaan...",
+      "cancel": "Annuleren",
+      "delete": "Verwijderen",
+      "deleteConfirm": "Weet je zeker dat je deze categorie wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "fetchError": "Laden van categorieën is mislukt",
+      "updateError": "Bijwerken van categorie is mislukt",
+      "saveError": "Opslaan van categorie is mislukt",
+      "deleteError": "Verwijderen van categorie is mislukt",
+      "translateError": "Vertaling is mislukt",
+      "nameRequired": "Naam is vereist",
+      "enabled": "ingeschakeld",
+      "disabled": "uitgeschakeld",
+      "created": "Categorie aangemaakt",
+      "updated": "Categorie bijgewerkt",
+      "deleted": "Categorie verwijderd",
+      "validationErrorTitle": "Los de volgende fouten op",
+      "sort": "Sorteren",
+      "saveSort": "Opslaan",
+      "sortSaved": "Sorteervolgorde opgeslagen",
+      "sortError": "Opslaan van sorteervolgorde is mislukt"
+    },
+    "items": {
+      "noItems": "Nog geen items. Maak uw eerste item om te beginnen.",
+      "addItem": "Toevoegen",
+      "editItem": "Item Bewerken",
+      "name": "Naam",
+      "namePlaceholder": "Voer de naam van het item in",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Voer de beschrijving van het item in",
+      "price": "Prijs",
+      "pricePlaceholder": "0,00",
+      "category": "Categorie",
+      "categoryPlaceholder": "Selecteer categorie",
+      "image": "Afbeelding",
+      "uploadImage": "Afbeelding uploaden",
+      "removeImage": "Afbeelding verwijderen",
+      "status": "Status",
+      "active": "Actief",
+      "inactive": "Inactief",
+      "save": "Opslaan",
+      "saving": "Opslaan...",
+      "cancel": "Annuleren",
+      "delete": "Verwijderen",
+      "deleteConfirm": "Weet u zeker dat u dit item wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "fetchError": "Kon items niet laden",
+      "updateError": "Kon item niet bijwerken",
+      "saveError": "Kon item niet opslaan",
+      "deleteError": "Kon item niet verwijderen",
+      "translateError": "Vertaling mislukt",
+      "nameRequired": "Naam is verplicht",
+      "categoryRequired": "Categorie is verplicht",
+      "priceRequired": "Geldige prijs is verplicht",
+      "enabled": "ingeschakeld",
+      "disabled": "uitgeschakeld",
+      "created": "Item aangemaakt",
+      "updated": "Item bijgewerkt",
+      "deleted": "Item verwijderd",
+      "validationErrorTitle": "Los alstublieft de volgende fouten op",
+      "sort": "Sorteren",
+      "saveSort": "Opslaan",
+      "sortSaved": "Sorteervolgorde opgeslagen",
+      "sortError": "Kon sorteervolgorde niet opslaan",
+      "allergens": "Allergenen",
+      "allergensHint": "Selecteer allergenen die in dit gerecht aanwezig zijn",
+      "allergenNames": {
+        "gluten": "Gluten",
+        "crustaceans": "Schaaldieren",
+        "eggs": "Eieren",
+        "fish": "Vis",
+        "peanuts": "Pinda's",
+        "soybeans": "Sojabonen",
+        "dairy": "Zuivel",
+        "nuts": "Noten",
+        "celery": "Selderij",
+        "mustard": "Mosterd",
+        "sesame": "Sesam",
+        "sulphites": "Sulfieten",
+        "lupin": "Lupine",
+        "molluscs": "Weekdieren"
+      }
+    },
+    "languages": {
+      "translationProgress": "Vertaalvoortgang",
+      "availableLanguages": "Beschikbare Talen",
+      "europeanLanguages": "Europese Talen",
+      "starToSetDefault": "Klik op de ster om als standaard in te stellen",
+      "default": "standaard",
+      "hint": "Schakel talen in om klanten uw menu in meerdere talen te laten bekijken. De standaardtaal wordt gebruikt voor de hoofdinhoud.",
+      "fetchError": "Kon talen niet laden",
+      "enableError": "Kon taal niet inschakelen",
+      "disableError": "Kon taal niet uitschakelen",
+      "defaultError": "Kon standaardtaal niet instellen",
+      "languageEnabled": "{language} ingeschakeld",
+      "languageDisabled": "{language} uitgeschakeld",
+      "defaultSet": "{language} ingesteld als standaard",
+      "cannotDisableDefault": "Kan standaardtaal niet uitschakelen",
+      "atLeastOneRequired": "Minstens één taal is vereist",
+      "enableFirst": "Schakel eerst de taal in",
+      "deleteConfirm": "Het uitschakelen van deze taal verwijdert alle vertalingen ervoor. Deze actie kan niet ongedaan worden gemaakt.",
+      "cancel": "Annuleren",
+      "confirm": "Uitschakelen"
+    },
+    "contacts": {
+      "phone": "Telefoon",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Contacttelefoonnummer voor uw klanten",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "uw_restaurant",
+      "instagramHint": "Uw Instagram-gebruikersnaam (zonder @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp-nummer voor klantvragen",
+      "location": "Locatie",
+      "locationHint": "Klik op de kaart of zoek om uw restaurantlocatie in te stellen",
+      "save": "Opslaan",
+      "fetchError": "Kon contactinformatie niet laden",
+      "saveError": "Kon contactinformatie niet opslaan",
+      "saved": "Contactinformatie opgeslagen"
+    },
+    "design": {
+      "background": "Achtergrond",
+      "backgroundHint": "Upload een video of afbeelding voor de achtergrond van je homepage",
+      "uploadMedia": "Upload video of afbeelding",
+      "removeMedia": "Verwijderen",
+      "accentColor": "Accentkleur",
+      "accentColorHint": "Hoofdkleur voor knoppen en highlights op je website",
+      "presetColors": "Vooraf ingestelde kleuren",
+      "customColor": "Aangepaste kleur",
+      "save": "Opslaan",
+      "fetchError": "Kon de ontwerpsinstellingen niet laden",
+      "saveError": "Kon de ontwerpsinstellingen niet opslaan",
+      "saved": "Ontwerpsinstellingen opgeslagen",
+      "uploadError": "Kon bestand niet uploaden",
+      "invalidFileType": "Ongeldig bestandstype. Toegestaan: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Bestand is te groot. Maximale grootte: 50MB voor video's, 5MB voor afbeeldingen"
+    },
+    "general": {
+      "name": "Titel",
+      "namePlaceholder": "Voer de naam van het restaurant in",
+      "nameHint": "Weergegeven op de homepage van je openbare website",
+      "description": "Subtitel",
+      "descriptionPlaceholder": "Korte beschrijving (optioneel)",
+      "descriptionHint": "Weergegeven onder de titel op de homepage",
+      "slug": "URL Slug",
+      "slugPlaceholder": "mijn-restaurant",
+      "slugHint": "Je website is beschikbaar op: iq-rest.com/{slug}",
+      "currency": "Valuta",
+      "currencyPlaceholder": "Selecteer valuta",
+      "save": "Opslaan",
+      "fetchError": "Kon instellingen niet laden",
+      "saveError": "Kon instellingen niet opslaan",
+      "saved": "Instellingen opgeslagen",
+      "nameRequired": "Naam van het restaurant is verplicht",
+      "slugRequired": "URL slug is verplicht",
+      "validationErrorTitle": "Los alstublieft de volgende fouten op",
+      "slugChangedTitle": "Websiteadres bijgewerkt",
+      "slugChangedDescription": "Je restaurant is nu beschikbaar op:",
+      "close": "Sluiten",
+      "view": "Bekijken"
+    },
+    "onboarding": {
+      "title": "Welkom bij IQ Rest!",
+      "subtitle": "Voltooi deze stappen om je restaurantwebsite te lanceren",
+      "requiredSteps": "Vereiste Stappen",
+      "optionalSteps": "Optionele Stappen",
+      "viewMenu": "Bekijk Je Menu",
+      "steps": {
+        "title": {
+          "name": "Voeg Restaurantnaam Toe",
+          "description": "Geef je restaurant een naam die op je website zal verschijnen"
+        },
+        "slug": {
+          "name": "Stel Websiteadres In",
+          "description": "Kies een unieke URL voor je restaurantwebsite"
+        },
+        "categories": {
+          "name": "Maak Menu-categorieën",
+          "description": "Organiseer je menu met categorieën zoals Voorgerechten, Hoofdgerechten, enz."
+        },
+        "items": {
+          "name": "Voeg Menu-items Toe",
+          "description": "Voeg gerechten toe aan je menu met prijzen en beschrijvingen"
+        },
+        "design": {
+          "name": "Pas Ontwerp Aan",
+          "description": "Kies kleuren en achtergrond voor je website"
+        },
+        "contacts": {
+          "name": "Voeg Contactinformatie Toe",
+          "description": "Voeg telefoon, WhatsApp, Instagram en locatie toe"
+        },
+        "reservations": {
+          "name": "Schakel Reserveringen In",
+          "description": "Sta klanten toe om online tafels te reserveren"
+        },
+        "translations": {
+          "name": "Voeg Talen Toe",
+          "description": "Maak je menu beschikbaar in meerdere talen"
+        }
+      },
+      "completed": "Voltooid",
+      "notCompleted": "Niet voltooid",
+      "allDone": "Alles gedaan! Je menu is live.",
+      "requiredRemaining": "{count} vereiste stappen over"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Om reserveringen beschikbaar te maken voor uw restaurantgasten, moet u zich abonneren op de service.",
+    "subscribe": "Abonneren",
+    "reservationsEnabled": "Reserveringen inschakelen",
+    "enabled": "Reserveringen zijn ingeschakeld",
+    "disabled": "Reserveringen zijn uitgeschakeld",
+    "reservationMode": "Bevestigingsmodus",
+    "modeAuto": "Automatisch",
+    "modeManual": "Handmatig",
+    "modeAutoDescription": "Reserveringen worden automatisch bevestigd op basis van de beschikbaarheid van tafels",
+    "modeManualDescription": "U moet elke reservering handmatig bevestigen",
+    "slotDuration": "Duur van de reservering",
+    "minutes": "minuten",
+    "workingHours": "Werkuren",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "saved": "Instellingen opgeslagen",
+    "fetchError": "Kon instellingen niet laden",
+    "saveError": "Kon instellingen niet opslaan"
+  },
+  "terms": {
+    "title": "Algemene Voorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: 17 december 2025",
+    "contact": {
+      "title": "Neem Contact Met Ons Op",
+      "description": "Als u vragen heeft over deze Algemene Voorwaarden, neem dan contact met ons op."
+    },
+    "sections": [
+      {
+        "title": "1. Inleiding",
+        "content": [
+          "Welkom bij IQ Rest. Deze Algemene Voorwaarden regelen uw gebruik van onze website en diensten die worden beheerd door Bogdan Sokolov (Autónomo), NIE: Z1894474S, geregistreerd in Spanje.",
+          "Door toegang te krijgen tot of gebruik te maken van IQ Rest, gaat u akkoord met deze Voorwaarden. Als u het niet eens bent met een deel van deze voorwaarden, mag u de dienst niet gebruiken."
+        ]
+      },
+      {
+        "title": "2. Beschrijving van de Dienst",
+        "content": [
+          "IQ Rest biedt een digitaal QR-menu en een platform voor het maken van websites voor restaurants, cafés en voedselvoorzieningsbedrijven. Onze dienst omvat menu-beheer, QR-code generatie, meertalige ondersteuning met AI-gestuurde vertalingen, AI-afbeeldingsoptimalisatie, tafelreserveringssystemen en analyses.",
+          "We behouden ons het recht voor om op elk moment zonder voorafgaande kennisgeving een aspect van de dienst te wijzigen, op te schorten of stop te zetten."
+        ]
+      },
+      {
+        "title": "3. Accountregistratie",
+        "content": [
+          "Om bepaalde functies van IQ Rest te gebruiken, moet u een account registreren met een geldig e-mailadres. U bent verantwoordelijk voor het handhaven van de vertrouwelijkheid van uw account en voor alle activiteiten die plaatsvinden onder uw account.",
+          "U stemt ermee in om nauwkeurige, actuele en volledige informatie te verstrekken tijdens de registratie en deze informatie bij te werken om deze nauwkeurig, actueel en volledig te houden.",
+          "We gebruiken wachtwoordloze authenticatie via e-mailverificatiecodes. U bent verantwoordelijk voor het handhaven van de beveiliging van uw e-mailaccount."
+        ]
+      },
+      {
+        "title": "4. Abonnementsplannen en Betalingen",
+        "content": [
+          "IQ Rest biedt gratis, basis- en pro-abonnementsplannen aan. Het gratis plan is beschikbaar zonder kosten met beperkte functies. Betaalde plannen (Basis en Pro) worden maandelijks of jaarlijks gefactureerd via onze betalingsverwerker, Stripe.",
+          "Prijzen worden weergegeven in Euro (EUR). Door u in te schrijven voor een betaald plan, machtigt u ons om uw betaalmethode op terugkerende basis te belasten totdat u annuleert.",
+          "U kunt uw abonnement op elk moment upgraden, downgraden of annuleren via uw dashboard. Annuleringen worden effectief aan het einde van de huidige factureringsperiode. Er worden geen terugbetalingen gegeven voor gedeeltelijke factureringsperioden.",
+          "We behouden ons het recht voor om onze prijzen met 30 dagen kennisgeving te wijzigen. Prijswijzigingen zijn van toepassing op factureringsperioden die beginnen na de kennisgevingsperiode."
+        ]
+      },
+      {
+        "title": "5. AI-gestuurde Functies",
+        "content": [
+          "IQ Rest maakt gebruik van kunstmatige intelligentie voor menuvertalingen en afbeeldingsoptimalisatie. Hoewel we streven naar nauwkeurigheid, kunnen AI-gegenereerde vertalingen fouten bevatten. U bent verantwoordelijk voor het controleren en verifiëren van alle AI-gegenereerde inhoud voordat u deze publiceert.",
+          "AI-afbeeldingsoptimalisatie verwerkt automatisch geüploade afbeeldingen om de laadsnelheid te verbeteren. Originele afbeeldingen worden niet opgeslagen na verwerking.",
+          "We garanderen niet de nauwkeurigheid, volledigheid of betrouwbaarheid van AI-gegenereerde inhoud. U erkent dat AI-functies worden geleverd 'zoals ze zijn' en gebruikt ze op eigen risico."
+        ]
+      },
+      {
+        "title": "6. Gebruikersinhoud",
+        "content": [
+          "U behoudt het eigendom van alle inhoud die u uploadt naar IQ Rest, inclusief menu-items, beschrijvingen, afbeeldingen en bedrijfsinformatie.",
+          "Door inhoud te uploaden, verleent u IQ Rest een niet-exclusieve, wereldwijde, royaltyvrije licentie om uw inhoud te gebruiken, weer te geven en te verspreiden uitsluitend voor het doel van het verlenen van de dienst.",
+          "U bent uitsluitend verantwoordelijk voor de inhoud die u uploadt en moet ervoor zorgen dat deze geen enkele wet of rechten van derden schendt. Verboden inhoud omvat: illegaal materiaal, auteursrechtelijk beschermd materiaal zonder toestemming, misleidende of frauduleuze informatie, en inhoud die in strijd is met gezondheids- en veiligheidsvoorschriften."
+        ]
+      },
+      {
+        "title": "7. Acceptabel Gebruik",
+        "content": [
+          "U stemt ermee in IQ Rest niet te gebruiken voor enige onwettige doeleinden of op een manier die de dienst zou kunnen beschadigen, uitschakelen of verslechteren.",
+          "Verboden activiteiten omvatten: proberen ongeautoriseerde toegang te krijgen tot andere accounts of systemen, de dienst gebruiken om spam of malware te verspreiden, gegevens verzamelen of datamining, andere personen of bedrijven imiteren, en gebruiksbeperkingen of beveiligingsmaatregelen omzeilen."
+        ]
+      },
+      {
+        "title": "8. Intellectuele Eigendom",
+        "content": [
+          "De naam IQ Rest, het logo, het ontwerp van de website en alle gerelateerde intellectuele eigendommen zijn eigendom van Bogdan Sokolov en zijn beschermd door de toepasselijke intellectuele eigendomswetten.",
+          "U mag onze intellectuele eigendom niet kopiëren, wijzigen, verspreiden of afgeleide werken creëren zonder uitdrukkelijke schriftelijke toestemming."
+        ]
+      },
+      {
+        "title": "9. Privacy en Gegevensbescherming",
+        "content": [
+          "Uw gebruik van IQ Rest wordt ook geregeld door ons Privacybeleid. We voldoen aan de Algemene Verordening Gegevensbescherming (AVG) en de Spaanse gegevensbeschermingswetten (LOPDGDD).",
+          "We verzamelen en verwerken persoonlijke gegevens die nodig zijn om de dienst te verlenen, inclusief e-mailadressen, bedrijfsinformatie en gebruiksanalyse. U kunt op elk moment toegang tot, correctie van of verwijdering van uw persoonlijke gegevens aanvragen."
+        ]
+      },
+      {
+        "title": "10. Beperking van Aansprakelijkheid",
+        "content": [
+          "IQ Rest wordt geleverd 'zoals het is' en 'zoals beschikbaar' zonder enige garanties, hetzij expliciet of impliciet, inclusief maar niet beperkt tot impliciete garanties van verhandelbaarheid en geschiktheid voor een bepaald doel.",
+          "Voor zover toegestaan door de wet, is Bogdan Sokolov niet aansprakelijk voor enige indirecte, incidentele, speciale, gevolg- of strafschade, inclusief verlies van winst, gegevens of zakelijke kansen.",
+          "Onze totale aansprakelijkheid voor claims die voortvloeien uit of verband houden met de dienst, zal niet meer bedragen dan het bedrag dat u ons in de twaalf (12) maanden voorafgaand aan de claim heeft betaald."
+        ]
+      },
+      {
+        "title": "11. Schadeloosstelling",
+        "content": [
+          "U stemt ermee in Bogdan Sokolov te vrijwaren, te verdedigen en onschadelijk te houden voor enige claims, schade, verliezen of uitgaven die voortvloeien uit uw gebruik van de dienst, uw inhoud of uw schending van deze Voorwaarden."
+        ]
+      },
+      {
+        "title": "12. Beschikbaarheid van de Dienst",
+        "content": [
+          "We streven ernaar om een hoge beschikbaarheid van onze dienst te handhaven, maar garanderen geen ononderbroken toegang. De dienst kan tijdelijk niet beschikbaar zijn vanwege onderhoud, updates of omstandigheden buiten onze controle.",
+          "We zijn niet aansprakelijk voor enig verlies of schade als gevolg van onderbrekingen van de dienst of downtime."
+        ]
+      },
+      {
+        "title": "13. Beëindiging",
+        "content": [
+          "We kunnen uw account onmiddellijk beëindigen of opschorten, zonder voorafgaande kennisgeving, voor gedrag waarvan we geloven dat het deze Voorwaarden schendt of schadelijk is voor andere gebruikers, ons of derden.",
+          "Bij beëindiging vervalt uw recht om de dienst te gebruiken onmiddellijk. We kunnen uw gegevens binnen 30 dagen na beëindiging verwijderen, tenzij wettelijk verplicht is om deze te behouden."
+        ]
+      },
+      {
+        "title": "14. Wijzigingen in de Voorwaarden",
+        "content": [
+          "We behouden ons het recht voor om deze Voorwaarden op elk moment te wijzigen. We zullen u op de hoogte stellen van belangrijke wijzigingen via e-mail of via de dienst.",
+          "Uw voortdurende gebruik van IQ Rest na de inwerkingtreding van wijzigingen vormt acceptatie van de herziene Voorwaarden."
+        ]
+      },
+      {
+        "title": "15. Toepasselijk Recht en Jurisdictie",
+        "content": [
+          "Deze Voorwaarden worden beheerst door de wetten van Spanje en de Europese Unie. Geschillen die voortvloeien uit deze Voorwaarden of uw gebruik van IQ Rest zijn onderworpen aan de exclusieve jurisdictie van de rechtbanken van Spanje.",
+          "Als enige bepaling van deze Voorwaarden niet afdwingbaar blijkt te zijn, blijven de overige bepalingen volledig van kracht en effect."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: 17 december 2025",
+    "contact": {
+      "title": "Neem contact met ons op",
+      "description": "Als u vragen heeft over dit Privacybeleid of uw rechten met betrekking tot gegevensbescherming wilt uitoefenen, neem dan contact met ons op.",
+      "controller": "Gegevensbeheerder"
+    },
+    "sections": [
+      {
+        "title": "1. Inleiding",
+        "content": [
+          "Dit Privacybeleid legt uit hoe IQ Rest, beheerd door Bogdan Sokolov (Autónomo), NIE: Z1894474S, geregistreerd in Spanje, uw persoonlijke gegevens verzamelt, gebruikt, opslaat en beschermt wanneer u onze QR-menu platform gebruikt.",
+          "Wij zetten ons in voor het beschermen van uw privacy en het naleven van de Algemene Verordening Gegevensbescherming (AVG), de Spaanse Organieke Wet op Gegevensbescherming (LOPDGDD) en andere toepasselijke gegevensbeschermingswetten."
+        ]
+      },
+      {
+        "title": "2. Gegevensbeheerder",
+        "content": [
+          "De gegevensbeheerder die verantwoordelijk is voor uw persoonlijke gegevens is: Bogdan Sokolov (Autónomo), NIE: Z1894474S, geregistreerd in Spanje. Voor vragen over gegevensbescherming kunt u contact met ons opnemen via support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Persoonlijke Gegevens die We Verzamelen",
+        "content": [
+          "Accountinformatie: Wanneer u zich registreert, verzamelen we uw e-mailadres voor authenticatie- en communicatiedoeleinden. We gebruiken wachtwoordloze authenticatie, dus we slaan geen wachtwoorden op.",
+          "Bedrijfsinformatie: Restaurantnaam, beschrijving, URL-slug, contactgegevens (telefoon, WhatsApp, Instagram), locatiegegevens en openingstijden die u opgeeft voor uw openbare menuwesite.",
+          "Menu-inhoud: Categorieën, menu-items, beschrijvingen, prijzen en afbeeldingen die u uploadt om uw digitale menu te creëren.",
+          "Gebruikgegevens: Informatie over hoe u onze service gebruikt, inclusief paginaweergaven, functiegebruik en interactiepatronen verzameld via analytics.",
+          "Betalingsinformatie: Wanneer u zich abonneert op betaalde plannen, wordt de betalingsverwerking afgehandeld door Stripe. We slaan uw volledige creditcardgegevens niet op; Stripe verwerkt en beveiligt deze informatie.",
+          "Technische gegevens: IP-adressen, browsertype, apparaatinformatie en cookies zoals beschreven in ons Cookiesbeleid."
+        ]
+      },
+      {
+        "title": "4. Hoe We Uw Gegevens Gebruiken",
+        "content": [
+          "We gebruiken uw persoonlijke gegevens voor de volgende doeleinden: Om onze QR-menu service te bieden en te onderhouden, inclusief het creëren van uw restaurantwebsite en het genereren van QR-codes. Om uw account te authenticeren met behulp van e-mailverificatiecodes. Om betalingen te verwerken en uw abonnement via Stripe te beheren. Om met u te communiceren over uw account, service-updates en ondersteuningsverzoeken. Om AI-gestuurde functies te bieden zoals menuvertalingen en afbeeldingsoptimalisatie. Om het gebruik van de service te analyseren en ons platform te verbeteren. Om te voldoen aan wettelijke verplichtingen en onze legitieme belangen te beschermen."
+        ]
+      },
+      {
+        "title": "5. Juridische Basis voor Verwerking",
+        "content": [
+          "Contractuitvoering: Verwerking die nodig is om onze service aan u te bieden (Artikel 6(1)(b) AVG).",
+          "Legitieme belangen: Analytics en serviceverbetering, fraudepreventie (Artikel 6(1)(f) AVG).",
+          "Toestemming: Voor optionele functies zoals marketingcommunicatie (Artikel 6(1)(a) AVG).",
+          "Wettelijke verplichting: Wanneer vereist door de wet of regelgevende vereisten (Artikel 6(1)(c) AVG)."
+        ]
+      },
+      {
+        "title": "6. Gegevensopslag en Beveiliging",
+        "content": [
+          "Uw gegevens worden opgeslagen op veilige servers die worden geleverd door Amazon Web Services (AWS). Onze database is gehost in de AWS Stockholm (eu-north-1) regio binnen de Europese Unie, wat zorgt voor naleving van de EU-gegevensbeschermingsvereisten.",
+          "Afbeeldingen en mediabestanden die u uploadt, worden opgeslagen op AWS S3-servers die zich in de EU-regio bevinden. Gegevens worden versleuteld tijdens verzending met TLS/SSL en in rust met AES-256-versleuteling.",
+          "We implementeren passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen ongeautoriseerde toegang, wijziging, openbaarmaking of vernietiging. Deze omvatten veilige authenticatie, toegangscontroles, regelmatige beveiligingsaudits en training van medewerkers."
+        ]
+      },
+      {
+        "title": "7. Gegevensdeling en Derden",
+        "content": [
+          "We delen uw gegevens met de volgende categorieën van derden:",
+          "Stripe (Betalingsverwerker): Verwerkt abonnementsbetalingen. Stripe is gecertificeerd onder het EU-VS Gegevensprivacykader. Hun privacybeleid: https://stripe.com/privacy",
+          "Amazon Web Services (Infrastructuur): Host onze servers en databases in EU-regio's. AWS voldoet aan de AVG en is gecertificeerd onder het EU-VS Gegevensprivacykader.",
+          "AI-dienstverleners: We gebruiken AI-diensten voor menuvertalingen en afbeeldingsoptimalisatie. Gegevens worden verwerkt in overeenstemming met hun privacybeleid en gegevensverwerkingsovereenkomsten.",
+          "Google Analytics: Voor geanonimiseerde website-analyse (indien ingeschakeld). U kunt zich afmelden via cookievoorkeuren.",
+          "We verkopen uw persoonlijke gegevens niet aan derden. We kunnen gegevens openbaar maken als dat wettelijk vereist is of om onze juridische rechten te beschermen."
+        ]
+      },
+      {
+        "title": "8. Internationale Gegevensoverdrachten",
+        "content": [
+          "Uw gegevens worden voornamelijk opgeslagen en verwerkt binnen de Europese Unie (AWS Stockholm, eu-north-1 regio). Wanneer gegevens buiten de EU worden overgedragen (bijvoorbeeld aan op de VS gebaseerde dienstverleners), zorgen we ervoor dat er passende waarborgen zijn, waaronder Standaardcontractbepalingen (SCC's) en certificering onder erkende gegevensbeschermingskaders."
+        ]
+      },
+      {
+        "title": "9. Gegevensbewaring",
+        "content": [
+          "Accountgegevens: Behouden zolang uw account actief is. Bij accountverwijdering worden persoonlijke gegevens binnen 30 dagen verwijderd, behalve waar bewaring wettelijk vereist is.",
+          "Menu-inhoud: Behouden zolang uw account actief is. Verwijderd bij beëindiging van het account.",
+          "Betalingsrecords: Behouden voor 7 jaar zoals vereist door de Spaanse belastingwet.",
+          "Analyticsgegevens: Geaggregeerde en geanonimiseerde gegevens kunnen onbeperkt worden bewaard voor serviceverbetering.",
+          "Back-upgegevens: Kunnen worden bewaard in versleutelde back-ups tot 90 dagen na verwijdering voor hersteldoeleinden bij rampen."
+        ]
+      },
+      {
+        "title": "10. Uw Rechten Onder de AVG",
+        "content": [
+          "Onder de AVG heeft u de volgende rechten met betrekking tot uw persoonlijke gegevens:",
+          "Recht op Toegang: Vraag een kopie aan van uw persoonlijke gegevens die wij hebben.",
+          "Recht op Rectificatie: Vraag correctie aan van onjuiste of onvolledige gegevens.",
+          "Recht op Verwijdering: Vraag verwijdering aan van uw persoonlijke gegevens ('recht om vergeten te worden').",
+          "Recht op Beperking: Vraag beperking van verwerking in bepaalde omstandigheden.",
+          "Recht op Gegevensoverdraagbaarheid: Ontvang uw gegevens in een gestructureerd, machineleesbaar formaat.",
+          "Recht om Bezwaar te Maken: Maak bezwaar tegen verwerking op basis van legitieme belangen of voor directe marketing.",
+          "Recht om Toestemming In te Trekking: Waar verwerking is gebaseerd op toestemming, kunt u deze op elk moment intrekken.",
+          "Om deze rechten uit te oefenen, kunt u contact met ons opnemen via support@iq-rest.com. We zullen binnen 30 dagen reageren. Als u niet tevreden bent met onze reactie, heeft u het recht om een klacht in te dienen bij de Spaanse Gegevensbeschermingsautoriteit (AEPD) op www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Privacy van Kinderen",
+        "content": [
+          "IQ Rest is niet bedoeld voor gebruik door personen onder de 16 jaar. We verzamelen niet opzettelijk persoonlijke gegevens van kinderen. Als we erachter komen dat we gegevens van een kind hebben verzameld, zullen we deze onmiddellijk verwijderen."
+        ]
+      },
+      {
+        "title": "12. Wijzigingen in Dit Beleid",
+        "content": [
+          "We kunnen dit Privacybeleid van tijd tot tijd bijwerken. We zullen u op de hoogte stellen van belangrijke wijzigingen via e-mail of via een kennisgeving op onze website. De 'Laatst bijgewerkt' datum bovenaan geeft aan wanneer het beleid voor het laatst is herzien.",
+          "Uw voortdurende gebruik van IQ Rest na het plaatsen van wijzigingen vormt acceptatie van het herziene beleid."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookiesbeleid",
+    "lastUpdated": "Laatst bijgewerkt: 17 december 2025",
+    "yes": "Ja",
+    "no": "Nee",
+    "cookieTableTitle": "Cookies Die We Gebruiken",
+    "tableHeaders": {
+      "name": "Cookie Naam",
+      "purpose": "Doel",
+      "duration": "Duur",
+      "required": "Vereist"
+    },
+    "contact": {
+      "title": "Vragen Over Cookies",
+      "description": "Als u vragen heeft over ons gebruik van cookies, neem dan contact met ons op."
+    },
+    "sections": [
+      {
+        "title": "1. Wat Zijn Cookies",
+        "content": [
+          "Cookies zijn kleine tekstbestanden die op uw apparaat (computer, tablet of mobiele telefoon) worden opgeslagen wanneer u een website bezoekt. Ze helpen websites goed te functioneren, onthouden uw voorkeuren en bieden informatie aan website-eigenaren.",
+          "Dit Cookiesbeleid legt uit hoe IQ Rest, beheerd door Bogdan Sokolov (Autónomo), cookies en vergelijkbare technologieën op onze website iq-rest.com gebruikt."
+        ]
+      },
+      {
+        "title": "2. Hoe We Cookies Gebruiken",
+        "content": [
+          "We gebruiken cookies voor verschillende doeleinden: om ervoor te zorgen dat onze website correct functioneert, om uw voorkeuren en instellingen te onthouden, om uw account te verifiëren en ingelogd te blijven, om te analyseren hoe bezoekers onze website gebruiken zodat we deze kunnen verbeteren, en om uw cookie-toestemming voorkeuren te onthouden."
+        ]
+      },
+      {
+        "title": "3. Soorten Cookies Die We Gebruiken",
+        "content": [
+          "Essentiële Cookies: Deze cookies zijn noodzakelijk voor de website om te functioneren en kunnen niet worden uitgeschakeld. Ze worden meestal ingesteld als reactie op acties die u onderneemt, zoals inloggen of het instellen van uw privacyvoorkeuren.",
+          "Functionele Cookies: Deze cookies maken verbeterde functionaliteit en personalisatie mogelijk, zoals het onthouden van uw taalvoorkeur en thema-instellingen.",
+          "Analytische Cookies: Deze cookies helpen ons te begrijpen hoe bezoekers interactie hebben met onze website door informatie anoniem te verzamelen en te rapporteren. We gebruiken deze gegevens om onze service te verbeteren.",
+          "Cookies van Derden: Sommige cookies worden geplaatst door derde partijen die op onze pagina's verschijnen, zoals betalingsverwerkers (Stripe) en analysetools (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Uw Cookie Keuzes",
+        "content": [
+          "Wanneer u onze website voor het eerst bezoekt, ziet u een cookie-toestemmingsbanner waarmee u niet-essentiële cookies kunt accepteren of afwijzen. U kunt uw voorkeuren op elk moment wijzigen.",
+          "U kunt ook cookies beheren via uw browserinstellingen. De meeste browsers staan u toe om cookies te weigeren, bestaande cookies te verwijderen of een melding te ontvangen wanneer cookies worden verzonden. Houd er rekening mee dat het blokkeren van essentiële cookies de functionaliteit van onze website kan beïnvloeden.",
+          "Om u af te melden voor Google Analytics-tracking, kunt u de Google Analytics Opt-out Browser Add-on installeren."
+        ]
+      },
+      {
+        "title": "5. Cookie Duur",
+        "content": [
+          "Sessie Cookies: Deze cookies zijn tijdelijk en worden verwijderd wanneer u uw browser sluit.",
+          "Persistente Cookies: Deze cookies blijven op uw apparaat voor een bepaalde periode of totdat u ze verwijdert. Ze helpen ons u te herkennen wanneer u terugkeert naar onze website."
+        ]
+      },
+      {
+        "title": "6. Cookies van Derden",
+        "content": [
+          "Stripe: Gebruikt voor veilige betalingsverwerking. Stripe kan cookies instellen om fraude te voorkomen en betalingen veilig te verwerken. Leer meer op stripe.com/cookies-policy",
+          "Google Analytics: Gebruikt om anonieme statistieken over het gebruik van de website te verzamelen. U kunt zich afmelden via de cookie-banner of browserinstellingen. Leer meer op policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Updates van Dit Beleid",
+        "content": [
+          "We kunnen dit Cookiesbeleid van tijd tot tijd bijwerken om wijzigingen in onze praktijken of om operationele, juridische of regelgevende redenen weer te geven. De datum 'Laatst bijgewerkt' bovenaan geeft aan wanneer het beleid voor het laatst is herzien."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "sessie",
+        "purpose": "Beheert uw inlogsessie en authenticatietoestand",
+        "duration": "Sessie / 30 dagen",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Herinnert uw voorkeurstaal (Engels/Spaans)",
+        "duration": "1 jaar",
+        "required": true
+      },
+      {
+        "name": "thema",
+        "purpose": "Slaat uw thema voorkeur op (lichte/donkere modus)",
+        "duration": "1 jaar",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Herinnert uw cookie-toestemming voorkeuren",
+        "duration": "1 jaar",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - volgt anonieme gebruiksstatistieken",
+        "duration": "2 jaar / 24 uur",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - fraudepreventie en betalingsbeveiliging",
+        "duration": "1 jaar / Sessie",
+        "required": false
+      }
+    ]
+  }
+}

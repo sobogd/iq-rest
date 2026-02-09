@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { JsonLd, createWebPageSchema } from "../_lib";
+import { JsonLd, createWebPageSchema, buildAlternates } from "../_lib";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -28,11 +28,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/cookies`,
-      languages: {
-        en: "https://iq-rest.com/en/cookies",
-        es: "https://iq-rest.com/es/cookies",
-        "x-default": "https://iq-rest.com/en/cookies",
-      },
+      languages: buildAlternates("/cookies"),
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,

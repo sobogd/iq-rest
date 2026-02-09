@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { JsonLd, createWebPageSchema } from "../_lib";
+import { JsonLd, createWebPageSchema, buildAlternates } from "../_lib";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -28,11 +28,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/terms`,
-      languages: {
-        en: "https://iq-rest.com/en/terms",
-        es: "https://iq-rest.com/es/terms",
-        "x-default": "https://iq-rest.com/en/terms",
-      },
+      languages: buildAlternates("/terms"),
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,

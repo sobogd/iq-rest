@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { locales } from '@/i18n/routing'
 
 type RouteConfig = {
   path: string
@@ -9,7 +10,6 @@ type RouteConfig = {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://iq-rest.com'
-  const locales = ['en', 'es']
 
   // Define all routes with individual settings
   const routes: RouteConfig[] = [
@@ -46,6 +46,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Generate sitemap entries for all locales
   const sitemapEntries: MetadataRoute.Sitemap = []
 
+  // Build alternates object for all locales
+  const buildAlternates = (path: string = '') => {
+    const languages: Record<string, string> = { 'x-default': `${baseUrl}/en${path}` }
+    locales.forEach(locale => {
+      languages[locale] = `${baseUrl}/${locale}${path}`
+    })
+    return { languages }
+  }
+
   // Add localized home pages (x-default points to /en as the default)
   locales.forEach(locale => {
     sitemapEntries.push({
@@ -53,13 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2025-12-16'),
       changeFrequency: 'weekly',
       priority: 1.0,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/en`,
-          es: `${baseUrl}/es`,
-          'x-default': `${baseUrl}/en`,
-        }
-      }
+      alternates: buildAlternates()
     })
   })
 
@@ -70,13 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(route.lastModified),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
-        alternates: {
-          languages: {
-            en: `${baseUrl}/en${route.path}`,
-            es: `${baseUrl}/es${route.path}`,
-            'x-default': `${baseUrl}/en${route.path}`,
-          }
-        }
+        alternates: buildAlternates(route.path)
       })
     })
   })

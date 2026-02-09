@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Check } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { JsonLd } from "../_lib";
+import { JsonLd, buildAlternates } from "../_lib";
 import { CtaSection } from "../_components";
 import Image from "next/image";
 import { FEATURE_IMAGES, VALID_FEATURE_IDS, type FeatureId } from "../_lib/feature-data";
@@ -30,11 +30,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/${featureId}`,
-      languages: {
-        en: `https://iq-rest.com/en/${featureId}`,
-        es: `https://iq-rest.com/es/${featureId}`,
-        "x-default": `https://iq-rest.com/en/${featureId}`,
-      },
+      languages: buildAlternates(`/${featureId}`),
     },
     openGraph: {
       title: metadata.title,

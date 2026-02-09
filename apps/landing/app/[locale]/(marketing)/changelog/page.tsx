@@ -8,7 +8,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { HowToSteps } from "../_components";
-import { JsonLd, createBreadcrumbSchema } from "../_lib";
+import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 
 export async function generateMetadata({
   params,
@@ -27,11 +27,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/changelog`,
-      languages: {
-        en: "https://iq-rest.com/en/changelog",
-        es: "https://iq-rest.com/es/changelog",
-        "x-default": "https://iq-rest.com/en/changelog",
-      },
+      languages: buildAlternates("/changelog"),
     },
     openGraph: {
       title: t("meta.title"),

@@ -1,0 +1,1930 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "Ēdienkarte",
+      "pricing": "Cenas",
+      "features": "Iespējas",
+      "faq": "Jautājumi",
+      "changelog": "Izmaiņu žurnāls",
+      "contacts": "Kontakti"
+    },
+    "getStarted": "Pieteikties",
+    "selectLanguage": "Izvēlieties valodu",
+    "selectLanguageDescription": "Izvēlieties savu vēlamo valodu vietnei.",
+    "searchLanguage": "Meklēt valodu...",
+    "noLanguagesFound": "Nav atrastas valodas"
+  },
+  "home": {
+    "hero": {
+      "title": "QR ēdienkarte un mājaslapa restorānam 5 minūtēs",
+      "subtitle": "Vienkārši ievadiet savu e-pastu un iegūstiet pilnīgu restorāna mājaslapu ar QR ēdienkarti, kontaktu lapu, daudzvalodu atbalstu un modernu dizainu. Iestatiet visu no sava telefona.",
+      "cta": {
+        "create": "Izveidot ēdienkarti",
+        "view": "Skatīt reālo ēdienkarti"
+      },
+      "benefits": [
+        {
+          "title": "Mūsdienīga mājaslapa",
+          "description": "Profesionāls dizains, kas izskatās lieliski jebkurā ierīcē"
+        },
+        {
+          "title": "Rezervācijas",
+          "description": "Pieņemiet galdu rezervācijas tieši no savas mājaslapas"
+        },
+        {
+          "title": "AI tulkojumi",
+          "description": "Automātiska ēdienkartes tulkošana jebkurā valodā"
+        },
+        {
+          "title": "Ikdienas analītika",
+          "description": "Sekojiet apmeklējumiem un populārākajiem ēdieniem katru dienu"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "Uzticējušies 500+ restorāni visā pasaulē",
+      "title": "Viss, kas jūsu restorānam nepieciešams tiešsaistē",
+      "description": "Reģistrējieties tikai ar savu e-pastu un nekavējoties iegūstiet: profesionālu restorāna mājaslapu, QR ēdienkarti modernā formātā, funkcionālu kontaktu lapu ar karti, daudzvalodu atbalstu ar AI tulkojumu, video vai foto fonu un pielāgotu krāsu shēmu. Viss pārvaldāms no jūsu telefona - dators nav nepieciešams."
+    },
+    "whyUs": {
+      "title": "No nulles līdz tiešsaistes ēdienkartei 5 minūtēs",
+      "subtitle": "Tikai 4 vienkārši soļi, lai jūsu restorāns būtu tiešsaistē",
+      "items": [
+        {
+          "step": "1",
+          "title": "Ievadiet savu e-pastu",
+          "description": "Ātra reģistrācija tikai ar savu e-pasta adresi. Kredītkartes nav nepieciešamas."
+        },
+        {
+          "step": "2",
+          "title": "Aizpildiet restorāna informāciju",
+          "description": "Pievienojiet sava restorāna nosaukumu, adresi, kontaktus un darba laikus."
+        },
+        {
+          "step": "3",
+          "title": "Pievienojiet ēdienu vienības",
+          "description": "Izveidojiet kategorijas un pievienojiet savus ēdienus ar fotogrāfijām un cenām."
+        },
+        {
+          "step": "4",
+          "title": "Izbaudiet savu ēdienkarti",
+          "description": "Jūsu QR ēdienkarte ir gatava! Dalieties ar to ar klientiem un sekojiet analītikai."
+        }
+      ],
+      "cta": "Gatavi modernizēt savu restorānu?"
+    },
+    "featuresPreview": {
+      "title": "Jaudīgas funkcijas jūsu restorānam",
+      "subtitle": "Viss, kas jums nepieciešams, lai izveidotu profesionālu tiešsaistes klātbūtni",
+      "viewAll": "Skatīt visas funkcijas"
+    }
+  },
+  "features": {
+    "title": "Jaudīgas funkcijas jūsu restorāna QR izvēlnei un tīmekļa vietnei",
+    "subtitle": "Viss, kas jums nepieciešams, lai izveidotu profesionālu digitālo klātbūtni jūsu restorānam vai kafejnīcai",
+    "backToFeatures": "Atpakaļ pie funkcijām",
+    "getStarted": "Izveidot ēdienkarti",
+    "viewPricing": "Skatīt cenas",
+    "readyTitle": "Gatavs sākt?",
+    "readyDescription": "Izveidojiet savu profesionālo QR ēdienkarti un restorāna vietni minūšu laikā. Visas funkcijas iekļautas.",
+    "keyBenefits": "Galvenie ieguvumi",
+    "faqTitle": "Biežāk uzdotie jautājumi",
+    "faq": {
+      "instant-setup": [
+        {
+          "q": "Ko man vajag, lai sāktu?",
+          "a": "Tikai savu e-pasta adresi. Nav nepieciešama kredītkarte, nav sarežģītu formu."
+        },
+        {
+          "q": "Cik ilgs laiks nepieciešams iestatīšanai?",
+          "a": "Tava mājaslapa ir gatava nekavējoties. Pievieno savus ēdienus un esi tiešsaistē 5 minūtēs."
+        },
+        {
+          "q": "Vai ir bezmaksas plāns?",
+          "a": "Jā, sāc bez maksas ar visām būtiskajām funkcijām."
+        }
+      ],
+      "mobile-management": [
+        {
+          "q": "Vai man jāinstalē lietotne?",
+          "a": "Nav nepieciešama lietotne - viss darbojas tavā telefona pārlūkā."
+        },
+        {
+          "q": "Vai varu augšupielādēt fotogrāfijas no sava telefona?",
+          "a": "Jā, uzņem fotogrāfijas ar savu kameru un augšupielādē tieši savā ēdienkartē."
+        },
+        {
+          "q": "Vai tas darbojas uz planšetdatoriem?",
+          "a": "Jā, vadības panelis ir optimizēts telefonam, planšetdatoriem un galddatoriem."
+        }
+      ],
+      "ai-translation": [
+        {
+          "q": "Cik precīza ir AI tulkošana?",
+          "a": "Mūsu AI saprot kulinārijas kontekstu, saglabājot ēdienu nosaukumus un tulkojot aprakstus dabiski."
+        },
+        {
+          "q": "Cik ātri notiek tulkošana?",
+          "a": "Visas ēdienkartes tiek tulkotas sekundēs, nevis stundās."
+        },
+        {
+          "q": "Vai varu rediģēt AI tulkojumus?",
+          "a": "Jā, visi tulkojumi ir rediģējami - pārskati un pielāgojumi pēc vajadzības."
+        }
+      ],
+      "multilingual": [
+        {
+          "q": "Cik valodas tiek atbalstītas?",
+          "a": "25+ valodas, tostarp visas galvenās Eiropas valodas, ķīniešu, japāņu, korejiešu, arābu un hebreju."
+        },
+        {
+          "q": "Kā klienti var mainīt valodas?",
+          "a": "Valodas izvēles rīks parādās tavā ēdienkartē - viens pieskāriens, lai pārietu uz jebkuru pieejamo valodu."
+        },
+        {
+          "q": "Vai tulkošana ir automātiska?",
+          "a": "Tu vari izmantot AI tulkošanu vai manuāli ievadīt tulkojumus katrai valodai."
+        }
+      ],
+      "ai-images": [
+        {
+          "q": "Kuri attēlu formāti tiek atbalstīti?",
+          "a": "Augšupielādē JPG, PNG vai WebP - attēli tiek automātiski optimizēti."
+        },
+        {
+          "q": "Vai optimizācija samazina kvalitāti?",
+          "a": "Nē, mūsu AI saglabā vizuālo kvalitāti, samazinot faila izmēru ātrai ielādei."
+        },
+        {
+          "q": "Vai ir faila izmēra ierobežojums?",
+          "a": "Augšupielādē attēlus līdz 10MB - tie tiks automātiski optimizēti."
+        }
+      ],
+      "easy-menu": [
+        {
+          "q": "Kā pievienot jaunu ēdienu?",
+          "a": "Pieskaries 'Pievienot preci', ievadi nosaukumu, aprakstu, cenu un, ja vēlies, augšupielādē fotogrāfiju. Tas ir viss!"
+        },
+        {
+          "q": "Vai varu pārvietot ēdienkartes vienumus?",
+          "a": "Jā, vienkārši velc un nomet vienumus vai kategorijas, lai tos pārvietotu."
+        },
+        {
+          "q": "Ko darīt, ja ēdiens ir izpārdots?",
+          "a": "Uz laiku izslēdz preci - tā pazūd no ēdienkartes, bet netiek dzēsta."
+        }
+      ],
+      "analytics": [
+        {
+          "q": "Kurus rādītājus varu izsekot?",
+          "a": "Ikdienas skatījumi, lapas veiktspēja, valodu preferences un tendences laika gaitā."
+        },
+        {
+          "q": "Cik bieži tiek atjaunināti dati?",
+          "a": "Analītika tiek atjaunināta reālajā laikā - redzi šodienas apmeklētājus, kad tie notiek."
+        },
+        {
+          "q": "Vai varu eksportēt analītikas datus?",
+          "a": "Skati detalizētus pārskatus tieši savā vadības panelī."
+        }
+      ],
+      "reservations": [
+        {
+          "q": "Kā klienti veic rezervācijas?",
+          "a": "Klienti var rezervēt tieši no tavas restorāna mājaslapas. Viņi izvēlas datumu, laiku un viesu skaitu, pēc tam saņem e-pasta apstiprinājumu."
+        },
+        {
+          "q": "Vai varu apstiprināt rezervācijas manuāli?",
+          "a": "Jā, tu vari izvēlēties starp automātisko apstiprinājumu vai manuālu apstiprināšanu katrai rezervācijai."
+        },
+        {
+          "q": "Vai saņemšu paziņojumus par jaunām rezervācijām?",
+          "a": "Jā, tu saņem e-pasta paziņojumus par katru jauno rezervāciju."
+        }
+      ],
+      "custom-design": [
+        {
+          "q": "Kuri video formāti tiek atbalstīti?",
+          "a": "MP4 un WebM formāti tiek atbalstīti. Video tiek automātiski optimizēti ātrai ielādei."
+        },
+        {
+          "q": "Vai varu izmantot savas fotogrāfijas?",
+          "a": "Jā, augšupielādē jebkuru fotogrāfiju un tā tiks automātiski optimizēta tīmekļa attēlošanai."
+        },
+        {
+          "q": "Vai video palēnina ēdienkarti?",
+          "a": "Nē, video tiek saspiesti un ielādēti lēni, lai nodrošinātu ātru lapas veiktspēju."
+        }
+      ],
+      "color-scheme": [
+        {
+          "q": "Cik krāsas varu izvēlēties?",
+          "a": "Izvēlies no 12 iepriekšnoteiktām krāsām vai ievadi savu precīzo zīmola krāsu, izmantojot hex kodu."
+        },
+        {
+          "q": "Vai tas atbalsta tumšo režīmu?",
+          "a": "Jā, tava krāsu shēma automātiski pielāgojas gan gaišajiem, gan tumšajiem tematiem."
+        },
+        {
+          "q": "Vai varu mainīt krāsas jebkurā laikā?",
+          "a": "Jā, maini savu akcenta krāsu nekavējoties no vadības paneļa - atjauninājumi parādās nekavējoties."
+        }
+      ],
+      "personal-support": [
+        {
+          "q": "Kā sazināties ar atbalstu?",
+          "a": "Izmanto kontaktformu vai raksti mums tieši - reāli cilvēki atbild, nevis roboti."
+        },
+        {
+          "q": "Kāds ir atbildes laiks?",
+          "a": "Mēs parasti atbildam dažu stundu laikā darba dienās."
+        },
+        {
+          "q": "Vai atbalsts ir pieejams bezmaksas plāniem?",
+          "a": "Jā, personīgais atbalsts ir pieejams visiem plāniem, tostarp bezmaksas."
+        }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "Instant QR ēdienkartes un mājaslapas iestatīšana",
+        "shortDescription": "Izveido savu restorāna mājaslapu un QR ēdienkarti tikai ar e-pastu - gatavs 5 minūtēs",
+        "description": "Sāc sekundēs ar visvienkāršāko reģistrācijas procesu. Vienkārši ievadi savu e-pastu un tu nekavējoties saņem pilnīgu restorāna mājaslapu ar QR ēdienkarti, kontaktlapu ar karti un modernu dizainu. Nav nepieciešamas tehniskās prasmes, nav sarežģītu formu - tavs restorāns kļūst tiešsaistē nekavējoties.",
+        "fullDescription": "Tradicionālie mājaslapu veidotāji prasa stundas iestatīšanai, tehniskās zināšanas un bieži vien izstrādātāju. IQ Rest maina visu. Ievadi savu e-pastu, apstiprini ar vienkāršu kodu un tava restorāna mājaslapa ir gatava. Pievieno savus ēdienus, augšupielādē fotogrāfijas un dalies ar savu QR kodu ar klientiem. Visa procesa ilgums ir mazāk par 5 minūtēm.",
+        "benefits": [
+          "Tikai e-pasts nepieciešams, lai sāktu - nav sarežģītas reģistrācijas",
+          "Restorāna mājaslapa gatava nekavējoties pēc reģistrācijas",
+          "QR ēdienkarte automātiski ģenerēta un saistīta",
+          "Kontaktlapa ar karti iekļauta pēc noklusējuma",
+          "Nav nepieciešamas tehniskās prasmes vai kodēšanas zināšanas"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "Restorāna mājaslapas un QR ēdienkartes iestatīšanas process",
+        "cta": "Uzzināt vairāk"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100% mobilajām ierīcēm draudzīga pārvaldība",
+        "shortDescription": "Nav datora? Nav problēmu. Vadi savu visu restorāna mājaslapu no sava telefona. Pievieno ēdienus, stāvot virtuvē, atjaunini cenas pakalpojuma laikā, augšupielādē fotogrāfijas tieši no savas kameras. Katrs rīks darbojas nevainojami mobilajās ierīcēs - jo restorānu īpašnieki nekad nesēž pie galda.",
+        "description": "Pievieno kategorijas, ēdienus, fotogrāfijas un pārvaldi savu visu restorāna mājaslapu tieši no sava telefona. Mūsu vadības panelis ir pilnībā optimizēts mobilajām ierīcēm, tāpēc tu vari atjaunināt savu ēdienkarti kafijas pauzes laikā vai pievienot ikdienas piedāvājumus ceļā.",
+        "fullDescription": "Restorānu īpašnieki ir aizņemti cilvēki, kuri ne vienmēr atrodas pie datora. Tāpēc mēs izveidojām IQ Rest, lai tas darbotos nevainojami mobilajās ierīcēs. Katrs rīks, sākot no jaunu ēdienu pievienošanas līdz cenu atjaunināšanai, ir izstrādāts skārienekrāniem. Uzņem jauna ēdiena fotogrāfiju un augšupielādē to nekavējoties. Maini šodienas īpašo piedāvājumu, stāvot virtuvē.",
+        "benefits": [
+          "Pilnīga vadības paneļa piekļuve jebkurā viedtālrunī vai planšetdatorā",
+          "Augšupielādē fotogrāfijas tieši no sava telefona kameras",
+          "Atjaunini cenas un aprakstus ceļā",
+          "Pārvaldi kategorijas ar skārienam draudzīgu interfeisu",
+          "Nav nepieciešams dators - nekad"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "Restorāna ēdienkartes pārvaldība viedtālrunī",
+        "cta": "Skatīt mobilā vadības paneļa"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI vadīta ēdienkartes tulkošana",
+        "shortDescription": "Pārtrauc zaudēt starptautiskos klientus valodu barjeru dēļ. Mūsu AI tulko visu tavu ēdienkarti 25+ valodās sekundēs - nevis vispārēju tulkojumu, bet konteksta apzinātas AI, kas saprot kulinārijas terminus. 'Beef Wellington' paliek 'Beef Wellington', kamēr apraksti izklausās dabiski katrā valodā.",
+        "description": "Sasniedz starptautiskos klientus ar inteliģentu AI tulkošanu, kas saprot ēdiena kontekstu. Tavi ēdienu nosaukumi un apraksti tiek precīzi tulkoti, saglabājot kulinārijas terminus un padarot jēgu jebkurā valodā.",
+        "fullDescription": "Vispārēji tulkotāji bieži neizdodas ar ēdienkartēm - tie tulko burtiski, nesaprotot kontekstu. Mūsu AI ir apmācīts tieši restorānu saturam. Tas zina, ka 'Beef Wellington' nedrīkst tulkot burtiski, un ka 'al dente' nozīmē to pašu jebkurā valodā. Pasniedz tūristiem un starptautiskajiem viesiem ēdienkartes, kas dabiski izklausās viņu valodā.",
+        "benefits": [
+          "Konteksta apzināta tulkošana ēdiena un kulinārijas terminiem",
+          "10+ valodas, tostarp spāņu, franču, vācu, ķīniešu, japāņu",
+          "Saglabā kulinārijas terminoloģiju un kultūras nianses",
+          "Nekavējoties tulkošana - ēdienkarte pieejama sekundēs",
+          "Palielina pārdošanu par 23% ar starptautiskajiem klientiem"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI vadīta restorāna ēdienkartes tulkošanas saskarne",
+        "cta": "Atklāj AI tulkošanu"
+      },
+      {
+        "id": "multilingual",
+        "title": "Multivalodu restorāna mājaslapa",
+        "shortDescription": "Sveic tūristus un starptautiskos viesus viņu dzimtajā valodā. Atbalsts 25+ valodām nozīmē, ka katrs klients jūtas kā mājās. Viens pieskāriens, lai mainītu valodas - ēdienkarte, cenas, apraksti visi nekavējoties pielāgojas. Ideāli piemērots restorāniem tūristu rajonos vai starptautiskās pilsētās.",
+        "description": "Tava restorāna mājaslapa automātiski atbalsta vairākas valodas. Klienti var mainīt valodas ar vienu pieskārienu, un viss saturs, tostarp ēdienkarte, kontaktinformācija un navigācija, nekavējoties pielāgojas.",
+        "fullDescription": "Tūristu rajonos un starptautiskās pilsētās runāšana ar klienta valodu ir būtiska. IQ Rest padara tavu restorānu pieejamu visiem. Klienti redz valodas izvēles rīku un var pārlūkot tavu visu mājaslapu - ēdienkarti, kontaktus, rezervācijas - viņu izvēlētajā valodā. Apvienojumā ar AI tulkošanu tu vari apkalpot pasauli.",
+        "benefits": [
+          "Viens pieskāriens valodas maiņai klientiem",
+          "Ēdienkarte, kontakti un visas lapas tulkotas",
+          "Valodas preference atceras atkārtotām vizītēm",
+          "Ideāli piemērots tūristu rajoniem un starptautiskām pilsētām",
+          "Darbojas nevainojami ar AI tulkošanas funkciju"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "Multivalodu restorāna mājaslapas valodas izvēles rīks",
+        "cta": "Skatīt multivalodu funkcijas"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI attēlu optimizācija",
+        "shortDescription": "Automātiska attēlu uzlabošana ātrākai ielādei un labākai kvalitātei",
+        "description": "Augšupielādē jebkuru fotogrāfiju un mūsu AI automātiski optimizē to tīmekļa attēlošanai. Attēli ielādējas ātri jebkurā savienojumā, saglabājot satriecošu kvalitāti, kas padara tavus ēdienus neizturamus.",
+        "fullDescription": "Lieli, neoptimizēti attēli palēnina tavu mājaslapu un kaitina klientus. Mūsu AI apstrādā katru augšupielādēto attēlu: maina izmērus uz optimālām dimensijām, pārvērš mūsdienu formātos un uzlabo kvalitāti. Rezultāts? Tavi ēdieni izskatās lieliski, un lapas ielādējas mazāk nekā sekundē pat lēnos mobilajos savienojumos.",
+        "benefits": [
+          "Automātiska izmēru maiņa uz optimālām tīmekļa dimensijām",
+          "Pārvēršana uz WebP formātu ātrai ielādei",
+          "Kvalitātes uzlabošana labākai prezentācijai",
+          "Lapas ielādējas mazāk nekā 1 sekundē",
+          "Darbojas ar jebkuru attēlu formātu, ko tu augšupielādē"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI attēlu optimizācijas pirms un pēc salīdzinājums",
+        "cta": "Uzzināt vairāk"
+      },
+      {
+        "id": "easy-menu",
+        "title": "Vienkārša ēdienkartes pārvaldība",
+        "shortDescription": "Atjaunini savu ēdienkarti sekundēs, nevis stundās. Pievieno jaunus ēdienus, rediģē cenas, reorganizē kategorijas - viss ar vienkāršu vilkšanu un nomešanu no jebkuras ierīces. Nav nepieciešamas tehniskās prasmes. Izmaiņas tiek publicētas nekavējoties, tāpēc tavi klienti vienmēr redz jaunākos piedāvājumus.",
+        "description": "Ēdienkartes pārvaldīšana nekad nav bijusi vieglāka. Pievieno kategorijas, izveido ēdienus ar fotogrāfijām un aprakstiem, iestati cenas un organizē visu ar vienkāršu vilkšanu un nomešanu. Izmaiņas parādās nekavējoties tavā tiešsaistes mājaslapā.",
+        "fullDescription": "Aizmirsti sarežģītas satura pārvaldības sistēmas. IQ Rest ēdienkartes redaktors ir izstrādāts restorānu īpašniekiem, nevis tīmekļa izstrādātājiem. Izveido jaunu kategoriju sekundēs, pievieno ēdienus ar dažiem pieskārieniem, augšupielādē fotogrāfijas tieši no sava telefona. Velc vienumus, lai pārvietotu, izslēdz redzamību izpārdotiem vienumiem un redzi izmaiņas tiešsaistē nekavējoties.",
+        "benefits": [
+          "Intuitīva kategoriju un vienumu izveide",
+          "Vilkšanas un nomešanas pārvietošana",
+          "Izslēdz vienumus bez dzēšanas",
+          "Nekavējoties atjauninājumi - izmaiņas parādās sekundēs",
+          "Organizē neierobežotas kategorijas un ēdienus"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "Vienkārša restorāna ēdienkartes pārvaldības vadības panelis",
+        "cta": "Skatīt ēdienkartes redaktoru"
+      },
+      {
+        "id": "analytics",
+        "title": "Ikdienas analītika un ieskati",
+        "shortDescription": "Izseko lapas skatījumus, valodas un klientu uzvedību ar detalizētiem ikdienas pārskatiem",
+        "description": "Izproti savus klientus ar visaptverošu analītiku. Redzi ikdienas lapas skatījumus, populārās valodas, visvairāk skatītās lapas un izseko tendences laika gaitā. Pieņem datu balstītus lēmumus, lai optimizētu savu ēdienkarti.",
+        "fullDescription": "Zināšanas ir vara. Mūsu analītikas vadības panelis parāda, kā klienti mijiedarbojas ar tavu restorāna mājaslapu. Kuras lapas saņem visvairāk skatījumu? Kādas valodas tavi klienti dod priekšroku? Vai skatījumi pieaug nedēļu no nedēļas? Izmanto šos ieskatus, lai optimizētu savu ēdienkarti, mērķētu uz pareizajiem klientiem un attīstītu savu biznesu.",
+        "benefits": [
+          "Ikdienas, nedēļas un mēneša skatījumu statistika",
+          "Valodas preferences sadalījums",
+          "Lapas veiktspējas izsekošana pa lapām",
+          "Tendences analīze laika gaitā",
+          "Eksportē datus tālākai analīzei"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "Restorāna analītikas vadības panelis ar ikdienas statistiku",
+        "cta": "Uzzināt vairāk"
+      },
+      {
+        "id": "reservations",
+        "title": "Galdu rezervēšanas sistēma",
+        "shortDescription": "Pārtrauc zaudēt klientus, jo neizdodas piezvanīt. Pieņem galdu rezervācijas 24/7 tieši no savas mājaslapas — klienti izvēlas datumu, laiku un galdu sekundēs. Automātiski apstiprinājumi, e-pasta paziņojumi un vienkāršs vadības panelis, lai pārvaldītu visu.",
+        "description": "Iebūvētā rezervēšanas sistēma ļauj klientiem rezervēt galdus tieši no tavas mājaslapas. Izvēlies automātisko apstiprinājumu atkarībā no pieejamības vai pārskati katru rezervāciju manuāli. Pārvaldi visas rezervācijas no sava vadības paneļa.",
+        "fullDescription": "Tālruņa rezervācijas ir laikietilpīgas un viegli izlaist. IQ Rest rezervēšanas sistēma darbojas 24/7. Klienti izvēlas datumu, laiku un viesu skaitu, pēc tam rezervē nekavējoties. Tu vari iestatīt automātisko apstiprinājumu atkarībā no galdu pieejamības vai pārskatīt katru pieprasījumu manuāli. Samazini neierašanās gadījumus ar e-pasta apstiprinājumiem.",
+        "benefits": [
+          "24/7 tiešsaistes rezervēšanas iespēja",
+          "Automātiskie vai manuālie apstiprinājuma režīmi",
+          "Galdu un kapacitātes pārvaldība",
+          "E-pasta paziņojumi par rezervācijām",
+          "Kalendāra skats vieglai plānošanai"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "Tiešsaistes galdu rezervēšanas sistēma restorāniem",
+        "cta": "Izpētīt galdu rezervācijas"
+      },
+      {
+        "id": "custom-design",
+        "title": "Video un foto foni",
+        "shortDescription": "Pirmie iespaidi pārdod. Iegūsti klientu uzmanību brīdī, kad viņi skenē tavu QR kodu, ar satriecošu video par tavu restorāna atmosfēru vai skaistu fotogrāfiju par tavu paraksta ēdienu. Izcelies no konkurentiem ar mājaslapu, kas izskatās augstvērtīgi un profesionāli.",
+        "description": "Izveido neaizmirstamu pirmo iespaidu ar pielāgotu video vai foto fonu savā mājaslapā. Augšupielādē savu restorāna atmosfēras video vai skaistu ēdiena fotogrāfiju, lai nekavējoties iegūtu klientu uzmanību.",
+        "fullDescription": "Pirmie iespaidi ir svarīgi. Kad klienti skenē tavu QR kodu, viņiem jābūt uzreiz pārsteigtiem. Augšupielādē video par savu restorāna atmosfēru, laika plūsmu no savas virtuves vai satriecošu fotogrāfiju par tavu paraksta ēdienu. Tava mājaslapa kļūst par vizuālu pieredzi, kas atspoguļo tava restorāna personību.",
+        "benefits": [
+          "Atbalsts video un attēlu foniem",
+          "Automātiska optimizācija ātrai ielādei",
+          "Darbojas nevainojami mobilajās ierīcēs",
+          "Radīt neaizmirstamu pirmo iespaidu",
+          "Atspoguļo tava restorāna unikālo atmosfēru"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "Restorāna mājaslapa ar video fonu",
+        "cta": "Skatīt video fonus"
+      },
+      {
+        "id": "color-scheme",
+        "title": "Pielāgota krāsu shēma",
+        "shortDescription": "Padari savu ēdienkarti patiešām savu ar pielāgotām akcentu krāsām, kas atbilst tava restorāna zīmola identitātei. Izvēlies no 12 skaistām iepriekšnoteiktām krāsām vai izvēlies savu precīzo zīmola toni. Katrs pogas, izcelšanas un interaktīvais elements pielāgojas, lai radītu saskaņotu, profesionālu izskatu, ko klienti atceras.",
+        "description": "Tavai restorāna mājaslapai jāatbilst tavām zīmola krāsām. Izvēlies no iepriekšnoteiktām krāsu shēmām vai izvēlies savu precīzo zīmola krāsu. Apvienojumā ar automātisku gaišā/tumšā tēmas atbalstu, tava ēdienkarte vienmēr izskatās profesionāli.",
+        "fullDescription": "Zīmola konsekvence ir svarīga. IQ Rest ļauj tev pielāgot akcentu krāsu, kas tiek izmantota visā tavā mājaslapā - pogas, izcelšanas un interaktīvie elementi visi atbilst tavam zīmolam. Izvēlies no rūpīgi izvēlētiem iepriekšnoteikumiem vai ievadi savu precīzo zīmola krāsu. Sistēma automātiski nodrošina lasāmību gan gaišajos, gan tumšajos režīmos.",
+        "benefits": [
+          "Pielāgota akcentu krāsu izvēle",
+          "Pieejamas iepriekšnoteiktas krāsu shēmas",
+          "Automātiska gaišā/tumšā tēmas atbalsts",
+          "Konsekventa zīmola identitāte visās lapās",
+          "Pieejamības optimizēta krāsu kontrasts"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "Pielāgotas krāsu shēmas un zīmola iespējas",
+        "cta": "Izpētīt krāsu shēmas"
+      },
+      {
+        "id": "personal-support",
+        "title": "Individuālais tiešsaistes atbalsts",
+        "shortDescription": "Saņem personīgu palīdzību no reāliem cilvēkiem - nevis čatbotiem - par jebkuriem jautājumiem",
+        "description": "Katrs restorāns saņem individuālu tiešsaistes atbalstu. Vai tev ir jautājums? Nepieciešama palīdzība ar iestatīšanu? Vēlies ieteikt funkciju? Reāli cilvēki ātri atbild, lai palīdzētu tev gūt panākumus ar savu digitālo ēdienkarti.",
+        "fullDescription": "Mēs uzskatām, ka katram restorānam ir pelnījusi individuāla uzmanība. Kad tu sazinies ar atbalstu, tu runā ar reāliem cilvēkiem, kuri saprot restorānus un var patiešām palīdzēt. Nav čatbotu, nav automatizētu atbilžu, nav biļešu rindas. Neatkarīgi no tā, vai tev nepieciešama palīdzība ar pirmā ēdiena pievienošanu vai vēlies padomu par ēdienkartes optimizāciju, mēs esam šeit, lai palīdzētu.",
+        "benefits": [
+          "Reāls cilvēku atbalsts - nav čatbotu",
+          "Ātri atbildes laiki",
+          "Palīdzība ar iestatīšanu un optimizāciju",
+          "Funkciju ieteikumi laipni gaidīti",
+          "Pieejams visiem plāniem, tostarp bezmaksas"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "Personīgais tiešsaistes atbalsta čats restorāniem",
+        "cta": "Uzzināt vairāk"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR ēdienkarte un restorāna tīmekļa vietnes cenas",
+    "subtitle": "Bez slēptām maksām, bez pārsteigumiem. Uzsāc savu restorāna tīmekļa vietni bez maksas jau šodien — uzlabojumi tikai tad, kad esi gatavs augt.",
+    "seo": {
+      "title": "Kāpēc izvēlēties IQ Rest savai restorānam vai kafejnīcai?",
+      "text": "Izveido profesionālu QR ēdienkarti un tīmekļa vietni savai restorānam vai kafejnīcai dažu minūšu laikā. Tavi viesi vienkārši skenē QR kodu, lai apskatītu tavu digitālo ēdienkarti savā telefonā — nav nepieciešama lietotne. Atjaunojiet cenas, pievienojiet jaunus ēdienus un mainiet aprakstus nekavējoties. Ar AI atbalstītām tulkošanām apkalpo starptautiskos klientus viņu dzimtajā valodā. Izseko, kuri ēdieni saņem visvairāk skatījumu, izmantojot iebūvēto analītiku. Neatkarīgi no tā, vai tu vadi mazu kafejnīcu vai augošu restorānu ķēdi, IQ Rest palīdz modernizēt tavu ēdienkartes pieredzi, vienlaikus samazinot drukāšanas izmaksas."
+    },
+    "monthly": "Mēnesī",
+    "yearly": "Gadā",
+    "save": "(Ietaupīt 25%)",
+    "perMonth": "/mēn.",
+    "billedYearly": "Norēķinās reizi gadā (€{total})",
+    "forever": "Bezmaksas uz mūžu",
+    "popular": "Vispopulārākais",
+    "plans": {
+      "free": {
+        "name": "Bezmaksas",
+        "description": "Ideāli, lai izmēģinātu IQ Rest",
+        "cta": "Sākt bez maksas",
+        "highlights": [
+          "Restorāna tīmekļa vietne",
+          "QR ēdienkarte",
+          "300 skenējumi/mēnesī",
+          "2 valodas",
+          "AI attēlu uzlabošana",
+          "Analītika"
+        ]
+      },
+      "basic": {
+        "name": "Pamatplāns",
+        "description": "Lieliski piemērots mazām restorāniem",
+        "cta": "Sākt",
+        "highlights": [
+          "Viss Bezmaksas plānā, plus:",
+          "4,500 skenējumi/mēnesī",
+          "3 valodas",
+          "AI tulkojumi",
+          "Pielāgota krāsu tēma",
+          "Rezervācijas"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Augošām restorānu ķēdēm",
+        "cta": "Sākt",
+        "highlights": [
+          "Viss Pamatplānā, plus:",
+          "Neierobežoti skenējumi",
+          "6 valodas",
+          "Prioritāte atbalstam",
+          "Visas funkcijas iekļautas"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Salīdzināt plānus",
+      "subtitle": "Skatiet, kurš plāns ir piemērots jums"
+    },
+    "features": {
+      "website": "Restorāna tīmekļa vietne",
+      "qrMenu": "QR ēdienkarte",
+      "scans": "Mēneša skenējumi",
+      "languages": "Atbalstītās valodas",
+      "aiTranslation": "AI tulkojumi",
+      "aiImages": "AI attēlu uzlabošana",
+      "analytics": "Analītika",
+      "customTheme": "Pielāgota krāsu tēma",
+      "background": "Fona attēls un video",
+      "support": "Atbalsts",
+      "reservations": "Rezervācijas"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "Neierobežoti",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Nepieciešama palīdzība? Sarunāsimies",
+    "subtitle": "Sveiki, esmu Bogdans — IQ Rest dibinātājs. Es izveidoju šo platformu savai kafejnīcai, un tagad tā palīdz simtiem restorānu visā pasaulē. Vai jums ir jautājums vai ideja? Rakstiet man tieši. Nav robotu, nav gaidīšanas — tikai īsta saruna.",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "Sazinieties ar mums",
+      "email": "Jūsu e-pasts",
+      "emailPlaceholder": "jūsu@email.com",
+      "subject": "Tēma",
+      "subjectPlaceholder": "Par ko ir runa?",
+      "message": "Ziņojums",
+      "messagePlaceholder": "Pastāstiet, kas jums ir prātā...",
+      "submit": "Sūtīt ziņojumu",
+      "sending": "Sūtu...",
+      "success": "Jūsu ziņojums ir nosūtīts! Paldies, ka sazinājāties. Drīz atbildēšu.",
+      "error": "Ziņojuma nosūtīšana neizdevās. Lūdzu, mēģiniet vēlreiz vēlāk."
+    }
+  },
+  "languages": {
+    "en": "Angļu",
+    "es": "Spāņu"
+  },
+  "cookieConsent": {
+    "title": "Mēs izmantojam sīkdatnes",
+    "description": "Mēs izmantojam sīkdatnes, lai uzlabotu jūsu pārlūkošanas pieredzi, sniegtu personalizētu saturu un analizētu mūsu trafiku. Noklikšķinot uz \"Pieņemt visu\", jūs piekrītat mūsu sīkdatņu izmantošanai.",
+    "acceptAll": "Pieņemt visu",
+    "rejectAll": "Noraidīt visu",
+    "customize": "Pielāgot",
+    "learnMore": "Uzzināt vairāk"
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigācija",
+      "pricing": "Cenu noteikumi",
+      "features": "Iespējas",
+      "contacts": "Kontakti",
+      "faq": "Jautājumi",
+      "changelog": "Izmaiņu žurnāls"
+    },
+    "legal": {
+      "title": "Juridiskā informācija",
+      "terms": "Noteikumi un nosacījumi",
+      "privacy": "Privātuma politika",
+      "cookies": "Sīkdatņu politika",
+      "sitemap": "Sitemap"
+    },
+    "copyright": "© 2025 IQ Rest. Visas tiesības aizsargātas."
+  },
+  "changelog": {
+    "meta": {
+      "title": "Izmaiņu žurnāls - IQ Rest atjauninājumi un jaunas funkcijas",
+      "description": "Esiet informēti par jaunākajām funkcijām un uzlabojumiem IQ Rest - jūsu digitālā QR ēdienkarte risinājums restorāniem un kafejnīcām"
+    },
+    "title": "Izmaiņu žurnāls",
+    "subtitle": "Jaunākie atjauninājumi un jaunas funkcijas jūsu restorāna QR ēdienkartei",
+    "readMore": "Lasīt tālāk",
+    "backToChangelog": "Atpakaļ uz izmaiņu žurnālu",
+    "seo": {
+      "title": "Par IQ Rest atjauninājumiem",
+      "description": "IQ Rest pastāvīgi uzlabo pakalpojumu, lai palīdzētu restorāniem un kafejnīcām izveidot profesionālus digitālos QR ēdienkartes. Sekojiet mūsu izmaiņu žurnālam, lai būtu informēti par jaunākajām funkcijām jūsu restorāna tīmekļa vietnei un QR ēdienkartes risinājumam."
+    },
+    "entries": {
+      "support-qr-menu-restaurant-cafe": {
+        "title": "Responsive Support for Your Restaurant QR Menu",
+        "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
+        "meta": {
+          "title": "Responsive Support for Restaurant QR Menu | IQ Rest",
+          "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Quick assistance for cafes and restaurants with direct chat support."
+        },
+        "content": {
+          "intro": "IQ Rest now provides responsive support for any questions and changes to your QR menu restaurant or cafe. We understand that running a restaurant or cafe requires quick solutions when issues arise. Our new in-app support chat gives you direct access to our team, ensuring your QR menu stays perfect and your customers always have the best experience.",
+          "image1Alt": "Support chat interface for restaurant QR menu",
+          "image1Caption": "Direct support chat for responsive assistance with your restaurant QR menu",
+          "section1Title": "Direct Chat Support for Your Restaurant",
+          "section1Text": "Our responsive support system for your QR menu restaurant or cafe works directly within your dashboard. No need to search for contact emails or wait in phone queues. Simply open the support chat, type your question or describe the change you need, and our team responds quickly. Whether you need help updating menu items, fixing display issues, or understanding analytics - responsive support is just a message away.",
+          "section2Title": "Quick Assistance for Any QR Menu Changes",
+          "section2Text": "Need to update prices before a busy weekend? Want to add seasonal items to your restaurant QR menu? Our responsive support helps cafes and restaurants make changes quickly. We guide you through the process or can assist directly when needed. This responsive support ensures your digital menu always reflects your current offerings, keeping customers informed and happy.",
+          "section3Title": "Support That Understands Restaurant Needs",
+          "section3Text": "Our responsive support team understands the unique challenges of running a restaurant or cafe. We know that a broken QR menu can mean lost customers and frustrated staff. That's why our support for your QR menu restaurant or cafe prioritizes quick response times and practical solutions. From technical questions to feature requests, we're here to help your digital menu succeed.",
+          "benefitsTitle": "Benefits of Responsive QR Menu Support",
+          "benefit1": "Direct in-app chat - no external emails or phone calls needed",
+          "benefit2": "Quick response times to keep your restaurant running smoothly",
+          "benefit3": "Guidance on menu updates, changes, and new features",
+          "benefit4": "Technical assistance for any QR code or website issues",
+          "benefit5": "Feature requests and suggestions welcomed and considered",
+          "benefit6": "Support that understands restaurant and cafe operations",
+          "conclusionTitle": "Get Responsive Support Today",
+          "conclusionText": "With IQ Rest's responsive support for your QR menu restaurant or cafe, help is always within reach. Our dedicated team ensures your digital menu runs flawlessly, giving you more time to focus on what matters - serving great food. Access support directly from your dashboard and experience the difference responsive assistance makes for your restaurant or cafe.",
+          "ctaText": "Ready to experience responsive support for your QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "detailed-analytics-restaurant-qr-menu-website": {
+        "title": "Detailed Analytics for Your Restaurant Website and QR Menu",
+        "description": "Track visitor insights with detailed analytics for your restaurant website and QR menu. Monitor page views, unique visitors, languages, and daily trends.",
+        "meta": {
+          "title": "Detailed Analytics for Restaurant Website and QR Menu | IQ Rest",
+          "description": "Get detailed analytics for your restaurant website and QR menu. Track page views, unique visitors, popular pages, and language preferences. Comprehensive insights for restaurants and cafes."
+        },
+        "content": {
+          "intro": "IQ Rest now provides detailed analytics for your restaurant website and QR menu. Understanding how customers interact with your digital menu is crucial for success. Our new analytics dashboard gives you comprehensive insights into visitor behavior, popular pages, language preferences, and daily trends - all the detailed analytics your restaurant website and QR menu need to thrive.",
+          "image1Alt": "Detailed analytics dashboard for restaurant website and QR menu",
+          "image1Caption": "Comprehensive analytics dashboard showing detailed statistics for your restaurant QR menu",
+          "section1Title": "Comprehensive Visitor Tracking for Your Restaurant",
+          "section1Text": "Our detailed analytics for your restaurant website and QR menu track every customer interaction. See total page views for today, this week, and this month at a glance. Track unique visitors to understand your real audience size. The analytics dashboard provides detailed insights into how customers navigate your QR menu - from the home page to your full menu, contacts, and language selection. This detailed analytics helps restaurants make data-driven decisions.",
+          "section2Title": "Page and Language Analytics",
+          "section2Text": "Understand which pages of your restaurant website and QR menu are most popular. Our detailed analytics break down views by page type: Home, Menu, Contacts, and Language selection. See which languages your customers prefer, helping you prioritize translations and serve international guests better. These detailed analytics for your restaurant QR menu reveal customer behavior patterns you never knew existed.",
+          "section3Title": "Daily Trends and Usage Monitoring",
+          "section3Text": "Track how your restaurant website and QR menu perform over time with daily view charts. See patterns in customer engagement throughout the week. Monitor your monthly usage against your plan limits with a clear progress bar. Our detailed analytics help restaurants identify peak times and optimize their digital presence. Whether you're a small cafe or a busy restaurant, these insights help you understand your customers better.",
+          "benefitsTitle": "Benefits of Detailed Analytics for Restaurants",
+          "benefit1": "Real-time view counts: today, weekly, and monthly statistics at a glance",
+          "benefit2": "Unique visitor tracking to understand your actual customer reach",
+          "benefit3": "Page-by-page breakdown showing what content customers view most",
+          "benefit4": "Language analytics to optimize multilingual menu offerings",
+          "benefit5": "Daily trend charts to identify patterns in customer behavior",
+          "benefit6": "Usage monitoring with clear limits and upgrade prompts",
+          "conclusionTitle": "Start Using Detailed Analytics Today",
+          "conclusionText": "With IQ Rest's detailed analytics for your restaurant website and QR menu, you gain valuable insights into customer behavior. Track views, monitor trends, and understand your audience better than ever before. These detailed analytics help restaurants and cafes make informed decisions about their digital menu strategy. Access your analytics dashboard now and discover what your customers really want.",
+          "ctaText": "Ready to explore detailed analytics for your restaurant?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "instant-qr-menu-restaurant-website-generator": {
+        "title": "Instant QR Menu and Restaurant Website Generator",
+        "description": "Create your restaurant or cafe QR menu and website instantly. Generate printable QR codes with custom text and multiple layouts in minutes - no technical skills required.",
+        "meta": {
+          "title": "Instant QR Menu and Restaurant Website Generator | IQ Rest",
+          "description": "Generate QR menu and restaurant website instantly. Create custom QR codes for your cafe or restaurant in minutes with printable layouts for A4, A5, A6 paper formats. Free instant generator."
+        },
+        "content": {
+          "intro": "IQ Rest now offers an instant QR menu and restaurant website generator that creates professional digital menus in minutes. Whether you run a cozy cafe or a busy restaurant, our instant generator lets you create, customize, and print QR codes that link directly to your digital menu website. No technical skills required, no waiting - just instant QR menu creation for restaurants and cafes of any size.",
+          "image1Alt": "Instant QR menu generator for restaurant and cafe websites",
+          "image1Caption": "Generate custom QR codes for your restaurant website instantly",
+          "section1Title": "How the Instant QR Menu Generator Works",
+          "section1Text": "Our instant QR menu and restaurant website generator creates everything you need in minutes. Simply add your menu items, and the system instantly generates a unique QR code linked to your restaurant website. The generator supports multiple paper formats (A4, A5, A6, Letter), various QR layouts per page (1 to 16 codes), and customizable text beneath each QR code. Preview exactly what you'll print, then download or print directly - your instant QR menu is ready to display at your tables.",
+          "section2Title": "Customizable QR Codes for Any Restaurant or Cafe",
+          "section2Text": "The instant QR menu generator offers complete customization for your restaurant or cafe branding. Add your restaurant name above the QR code, include custom text like 'Scan for Menu' or 'QR Menu' below, and choose from three text sizes. The generator produces clean, simple QR codes optimized for fast scanning. Whether you need a single large QR code for a poster or 16 smaller codes for individual table cards, our instant generator adapts to your restaurant's needs.",
+          "section3Title": "Print-Ready QR Menus in Seconds",
+          "section3Text": "Unlike complicated design tools, our instant QR menu generator creates print-ready layouts automatically. Select your paper format, choose how many QR codes per page, and hit print - that's it. The generator handles margins, spacing, and sizing to ensure perfect prints every time. For cafes and restaurants that need professional QR menus quickly, this instant approach saves hours of design work and gets your digital menu in front of customers faster.",
+          "benefitsTitle": "Benefits of Instant QR Menu Generation",
+          "benefit1": "Generate complete QR menu and restaurant website in minutes, not hours",
+          "benefit2": "Multiple paper formats: A4, A5, A6, and Letter sizes supported",
+          "benefit3": "Flexible layouts: from single large QR to 16 codes per page",
+          "benefit4": "Custom text and sizing options for your restaurant branding",
+          "benefit5": "Print-ready output with automatic margins and spacing",
+          "benefit6": "Download as PNG or print directly from your browser",
+          "conclusionTitle": "Start Using the Instant QR Menu Generator",
+          "conclusionText": "With IQ Rest's instant QR menu and restaurant website generator, you can have a professional digital menu up and running in minutes. No design skills needed, no expensive software required - just instant generation of beautiful, scannable QR codes that connect customers to your menu. Perfect for new restaurants launching their first QR menu or established cafes updating their existing setup. Generate your instant QR menu today and modernize your dining experience.",
+          "ctaText": "Ready to generate your instant QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "public-restaurant-qr-menu-website": {
+        "title": "Public Restaurant Website for QR Menu Scanning",
+        "description": "Launch your public restaurant website with QR menu. Customers scan the code and instantly see your digital menu with categories, items, photos and prices.",
+        "meta": {
+          "title": "Public Restaurant Website for QR Menu Scanning | IQ Rest",
+          "description": "Create a public restaurant website for QR menu scanning. Customers scan the QR code and view your digital menu with categories, dishes, photos, and prices instantly."
+        },
+        "content": {
+          "intro": "IQ Rest now offers a fully functional public restaurant website for QR menu scanning. Your customers can simply scan a QR code and instantly access your complete digital menu. The public website displays all your categories, menu items, photos, descriptions, and prices in a beautiful, mobile-optimized interface. This public restaurant website for QR scanning transforms how guests interact with your menu.",
+          "image1Alt": "Public restaurant website showing QR menu categories",
+          "image1Caption": "Mobile-friendly public restaurant website displaying menu categories for QR scanning",
+          "section1Title": "How the Public Restaurant Website Works with QR Scanning",
+          "section1Text": "When customers scan your restaurant's QR code, they're instantly taken to your public website displaying the complete menu. No app download required, no waiting - just immediate access to your offerings. The public restaurant website for QR menu shows categories at the top for easy navigation, with items displayed in an elegant card layout featuring photos, descriptions, and prices. Customers can tap on categories to filter items or scroll through the entire menu.",
+          "section2Title": "Features of Your Public Restaurant QR Menu Website",
+          "section2Text": "Your public restaurant website includes everything customers need: category tabs for quick navigation, high-quality dish photos, detailed descriptions, prices in your currency, and active item indicators. The design is optimized for mobile devices since most QR scans happen on phones. Items load quickly thanks to optimized images, and the interface is intuitive for guests of all ages. Changes made in your admin panel appear instantly on the public website.",
+          "image2Alt": "Restaurant QR menu website showing food items with photos",
+          "image2Caption": "Public menu website displaying dishes with optimized photos and descriptions",
+          "section3Title": "Multilingual Support for International Guests",
+          "section3Text": "The public restaurant website includes a language selector so international guests can view your menu in their preferred language. Currently supporting English and Spanish, with more languages coming soon. This makes your public restaurant QR menu accessible to tourists and diverse customer bases. The language preference is remembered for return visits, providing a personalized experience.",
+          "image3Alt": "Language selection on public restaurant QR menu website",
+          "image3Caption": "Language selector allowing guests to view the public menu in their preferred language",
+          "benefitsTitle": "Benefits of Your Public Restaurant QR Menu Website",
+          "benefit1": "Instant menu access - customers scan and view immediately, no app needed",
+          "benefit2": "Mobile-optimized design for perfect display on any smartphone",
+          "benefit3": "Real-time updates - menu changes appear instantly to customers",
+          "benefit4": "Category navigation for easy browsing of your offerings",
+          "benefit5": "Multilingual support for international customers",
+          "benefit6": "Fast loading with optimized images and modern technology",
+          "conclusionTitle": "Start Using Your Public Restaurant QR Menu Website",
+          "conclusionText": "With IQ Rest's public restaurant website for QR menu scanning, you provide customers with instant access to your complete menu. Simply add your categories and items through the admin panel, generate your QR code, and display it at your tables. Customers scan and browse your beautiful digital menu in seconds. No more printing costs, no more outdated menus - just a modern dining experience.",
+          "ctaText": "Ready to launch your public restaurant QR menu website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "add-items-restaurant-qr-menu-website": {
+        "title": "How to Add Items to Restaurant Website with QR Menu",
+        "description": "Complete guide on how to add items to your restaurant website with QR menu. Learn to add dishes with photos, prices, and descriptions to your digital menu in minutes.",
+        "meta": {
+          "title": "How to Add Items to Restaurant Website with QR Menu | IQ Rest",
+          "description": "Step-by-step guide on how to add items to restaurant website with QR menu. Add dishes, set prices, upload photos, and organize your digital menu. Easy item management for restaurants."
+        },
+        "content": {
+          "intro": "Want to know how to add items to your restaurant website with QR menu? IQ Rest makes it incredibly easy to add and manage menu items on your digital restaurant website. Whether you're adding your first dish or updating your entire menu, our intuitive item management system helps you create a professional QR menu that showcases your cuisine perfectly. This guide shows you exactly how to add items to restaurant website with QR menu, including photos, prices, descriptions, and categories.",
+          "image1Alt": "How to add items to restaurant website with QR menu - item list view",
+          "image1Caption": "Item management interface showing how to add items to your restaurant QR menu website",
+          "section1Title": "Why Adding Items Properly Matters for Your Restaurant QR Menu Website",
+          "section1Text": "When you add items to restaurant website with QR menu, presentation is everything. Customers decide what to order based on how your dishes look and how well they're described. Our item management system lets you add beautiful photos, detailed descriptions, accurate prices, and organize items into categories. This is how to add items to restaurant website that converts browsers into customers. Research shows that menus with high-quality images increase orders by up to 30%.",
+          "section2Title": "Step-by-Step: How to Add Items to Restaurant Website with QR Menu",
+          "section2Text": "Adding items to your restaurant website with QR menu is simple with IQ Rest. Navigate to the Items section in your dashboard and click the add button. Enter the item name, write an appetizing description, set the price, and select a category. Upload a photo of your dish - our system automatically optimizes images to 500x500 pixels for perfect display. Toggle the active status to show or hide items instantly. This streamlined process makes it easy to add items to restaurant website with QR menu in just minutes.",
+          "image2Alt": "Item form showing how to add items to restaurant QR menu website",
+          "image2Caption": "Simple form interface for adding items to your restaurant website with QR menu",
+          "section3Title": "Image Upload and Optimization for Your Restaurant Items",
+          "section3Text": "High-quality images are essential when you add items to restaurant website with QR menu. Our system accepts JPEG, PNG, WebP, and GIF formats up to 5MB. Every image is automatically resized to 500x500 pixels and converted to WebP format for fast loading while maintaining excellent quality. This means your dishes always look their best on any device. Professional food photography significantly improves how customers perceive your restaurant when browsing your QR menu website.",
+          "benefitsTitle": "Benefits of Adding Items to Your Restaurant QR Menu Website",
+          "benefit1": "Add unlimited menu items with photos, descriptions, and prices",
+          "benefit2": "Automatic image optimization for fast loading and perfect display",
+          "benefit3": "Organize items into categories for easy customer navigation",
+          "benefit4": "Active/inactive toggle to hide sold-out items without deleting",
+          "benefit5": "Drag and drop reordering to arrange items in your preferred order",
+          "benefit6": "Mobile-friendly interface to add items from any device",
+          "conclusionTitle": "Start Adding Items to Your Restaurant QR Menu Website Today",
+          "conclusionText": "Now you know exactly how to add items to restaurant website with QR menu using IQ Rest. Our powerful item management system provides everything you need to create a mouth-watering digital menu. Add beautiful photos, write compelling descriptions, set competitive prices, and organize your items into logical categories. Whether you run a small cafe or a large restaurant, IQ Rest makes it easy to add items to restaurant website that attracts and converts customers.",
+          "ctaText": "Ready to add items to your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "qr-menu-restaurant-categories": {
+        "title": "How to Make QR Code Menu for Restaurant with Categories",
+        "description": "Learn how to make QR code menu for restaurant with organized categories. New category management system makes creating structured digital menus simple and fast.",
+        "meta": {
+          "title": "How to Make QR Code Menu for Restaurant with Categories | IQ Rest",
+          "description": "Step-by-step guide on how to make QR code menu for restaurant with categories. Organize your digital menu with easy category management. Create professional restaurant QR menus in minutes."
+        },
+        "content": {
+          "intro": "Want to know how to make QR code menu for restaurant with categories? IQ Rest now offers a powerful category management system that makes creating organized digital menus easier than ever. Whether you're running a restaurant, cafe, or bar, organizing your menu with categories helps customers find exactly what they're looking for. This update shows you exactly how to make QR code menu for restaurant with well-structured categories that enhance the dining experience.",
+          "image1Alt": "How to make QR code menu for restaurant - categories list view",
+          "image1Caption": "Category management interface showing how to organize your restaurant QR menu",
+          "section1Title": "Why Categories Matter When You Make QR Code Menu for Restaurant",
+          "section1Text": "When you make QR code menu for restaurant, organizing items into categories is essential. Customers expect to see logical groupings like Appetizers, Main Courses, Desserts, and Beverages. Our new category management system lets you create unlimited categories, set their display order, and toggle their visibility. This is exactly how to make QR code menu for restaurant that customers love - clear, organized, and easy to navigate. Studies show restaurants with well-organized digital menus see 35% higher customer satisfaction.",
+          "section2Title": "Step-by-Step: How to Make QR Code Menu for Restaurant with Categories",
+          "section2Text": "Making a QR code menu for restaurant with categories is simple with IQ Rest. First, navigate to the Categories section in your dashboard. Click the floating action button to add a new category. Enter the category name, optional description, and set whether it's active. The new streamlined interface shows all your categories in a clean list with activity indicators. Use the up and down arrows to reorder categories exactly how you want them to appear on your QR menu. This intuitive approach to making QR code menu for restaurant ensures your menu is always organized perfectly.",
+          "image2Alt": "Category form showing how to make QR code menu for restaurant",
+          "image2Caption": "Simple form interface for creating restaurant menu categories",
+          "section3Title": "Mobile-Optimized Category Management",
+          "section3Text": "We know restaurant owners are busy and often manage their menus on the go. That's why our category management is fully optimized for mobile devices. When you make QR code menu for restaurant using your phone, you'll find a compact interface with a three-dot menu for quick actions. Move categories up or down, edit details, or delete categories - all from your smartphone. This mobile-first approach ensures you can make QR code menu for restaurant with categories anytime, anywhere.",
+          "benefitsTitle": "Benefits of Making QR Code Menu with Categories",
+          "benefit1": "Organize menu items logically so customers can easily find what they want",
+          "benefit2": "Drag and drop reordering to arrange categories in your preferred display order",
+          "benefit3": "Active/inactive toggle to hide seasonal categories without deleting them",
+          "benefit4": "Mobile-optimized interface to manage categories from any device",
+          "benefit5": "Clean visual design with activity indicators for quick status overview",
+          "benefit6": "Unlimited categories to fully represent your restaurant's menu structure",
+          "conclusionTitle": "Start Making Your QR Code Menu with Categories Today",
+          "conclusionText": "Now you know exactly how to make QR code menu for restaurant with categories using IQ Rest. Our new category management system provides everything you need to create a professional, well-organized digital menu. Categories help customers navigate your menu faster, find their favorite dishes, and discover new items. Whether you have a simple menu with a few categories or an extensive menu with dozens of sections, IQ Rest makes it easy to make QR code menu for restaurant that impresses your customers.",
+          "ctaText": "Ready to make QR code menu for your restaurant with categories?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "easy-qr-menu-cafe-control-panel": {
+        "title": "Easy QR Menu Creation for Your Cafe - New Control Panel",
+        "description": "Introducing our new admin control panel that makes creating QR menus for your cafe incredibly easy. Manage categories, products, and settings with a modern shadcn sidebar interface.",
+        "meta": {
+          "title": "Easy QR Menu for Cafe - New Control Panel | IQ Rest",
+          "description": "Create QR menu for your cafe easily with our new control panel. Modern sidebar interface for managing categories, products, QR codes, and analytics. Easy cafe menu creation."
+        },
+        "content": {
+          "intro": "We're excited to introduce our brand new admin control panel designed to make creating QR menus for your cafe as easy as possible. Whether you're running a small coffee shop or a bustling cafe, our easy-to-use interface helps you manage your digital menu effortlessly. The new control panel features a modern sidebar design that puts all the tools you need to create your cafe's QR menu right at your fingertips.",
+          "image1Alt": "Easy QR menu control panel for cafe management",
+          "image1Caption": "New control panel with sidebar navigation for easy cafe QR menu creation",
+          "section1Title": "Modern Sidebar Interface for Easy Menu Management",
+          "section1Text": "The new control panel features a sleek sidebar that makes navigating your cafe's QR menu settings incredibly easy. With clearly organized sections for Dashboard, Categories, Products, QR Code, Analytics, Settings, Billing, and Support, you can easily find and manage every aspect of your cafe's digital menu. The sidebar collapses on mobile devices, ensuring easy access to all features regardless of what device you're using to manage your cafe's QR menu.",
+          "section2Title": "Easy Category and Product Management for Your Cafe",
+          "section2Text": "Creating and organizing your cafe's QR menu has never been easier. Our new category and product management pages are designed with simplicity in mind, allowing cafe owners to easily add, edit, and organize their menu items. Whether you're updating daily specials or adding seasonal drinks, the easy-to-use interface ensures your cafe's QR menu stays current and appealing to customers.",
+          "section3Title": "Server-Side Rendering for Fast Performance",
+          "section3Text": "The new control panel is built with server-side rendering (SSR) technology, ensuring your cafe's QR menu management dashboard loads quickly and efficiently. All data is fetched from the server, providing real-time updates and a smooth experience. This easy and fast approach means you spend less time waiting and more time perfecting your cafe's QR menu.",
+          "benefitsTitle": "Why This Makes QR Menu Creation Easy for Cafes",
+          "benefit1": "Easy navigation with modern sidebar interface for quick access to all cafe menu features",
+          "benefit2": "Easy category management to organize your cafe's QR menu logically",
+          "benefit3": "Easy product editing with instant updates to your cafe's digital menu",
+          "benefit4": "Easy QR code generation and customization for your cafe",
+          "benefit5": "Easy analytics to understand how customers interact with your cafe's QR menu",
+          "benefit6": "Easy mobile access - manage your cafe's QR menu from any device",
+          "conclusionTitle": "Create Your Cafe's QR Menu the Easy Way",
+          "conclusionText": "Our new control panel represents a major step forward in making QR menu creation easy for cafe owners everywhere. With its intuitive sidebar interface, fast server-side rendering, and comprehensive management tools, creating and maintaining your cafe's digital QR menu has never been easier. Join thousands of cafes already using IQ Rest to provide their customers with an easy, modern menu experience.",
+          "ctaText": "Ready to create an easy QR menu for your cafe?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "faq-page-organization": {
+        "title": "Get QR Menu for Restaurants - FAQ Page & How-To Guide Updates",
+        "description": "Learn how to get QR menu for restaurants with our improved FAQ page and 4-step guide. Discover answers to common questions about getting QR menus for your restaurant, with better navigation and SEO-optimized content.",
+        "meta": {
+          "title": "Get QR Menu for Restaurants - FAQ & Guide Updates | IQ Rest",
+          "description": "Learn how to get QR menu for restaurants easily. New dedicated FAQ page answers all questions about getting QR menus for your restaurant. Streamlined 4-step guide to get started."
+        },
+        "content": {
+          "intro": "We've made it easier than ever to get QR menu for restaurants. Our reorganized FAQ and how-to content helps restaurant owners quickly find answers about how to get QR menus for their establishments. Whether you're looking to get a QR menu for your restaurant or café, this update provides all the information you need in one place.",
+          "image1Alt": "How to get QR menu for restaurants - dedicated FAQ page",
+          "image1Caption": "New FAQ page showing how to get QR menu for restaurants with organized questions and answers",
+          "section1Title": "Dedicated FAQ Page for Getting QR Menus",
+          "section1Text": "All questions about how to get QR menu for restaurants are now on a dedicated /faq page. Restaurant owners can easily find answers about getting QR menus, from setup to customization. Each question about getting a QR menu for your restaurant is displayed in its own card with expanded answers, making it simple to get the information you need to get started with QR menus for your restaurant.",
+          "section2Title": "4-Step Guide to Get QR Menu for Restaurants",
+          "section2Text": "Our streamlined guide shows exactly how to get QR menu for restaurants in just 4 easy steps. Whether you want to get a QR menu for your restaurant, café, or bar, the new card-based design makes it clear how to get started. This guide to get QR menus for restaurants appears on all pages, ensuring you always know how to get your restaurant's QR menu set up quickly.",
+          "section3Title": "SEO-Optimized Content to Help Restaurants Get QR Menus",
+          "section3Text": "We've optimized our content to help more restaurants discover how to get QR menus. The guide appears with full Schema.org structured data on the homepage, helping restaurants searching for how to get QR menu solutions find us easily. Our smart content distribution ensures restaurants can get the QR menu information they need while maintaining strong search engine visibility.",
+          "benefitsTitle": "Why This Helps You Get QR Menu for Your Restaurant",
+          "benefit1": "Dedicated FAQ page answers all questions about getting QR menus for restaurants",
+          "benefit2": "Clear 4-step guide shows exactly how to get QR menu for your restaurant",
+          "benefit3": "Easy access to FAQ and contact options to help you get your QR menu set up",
+          "benefit4": "SEO-optimized to help restaurants discover how to get QR menus easily",
+          "benefit5": "Consistent information about getting QR menus across the entire platform",
+          "benefit6": "Faster path to get QR menu for your restaurant with improved navigation",
+          "conclusionTitle": "Get QR Menu for Your Restaurant Today",
+          "conclusionText": "These improvements make it incredibly easy for restaurants to get QR menus. Whether you're a small café looking to get a QR menu or a large restaurant chain, our reorganized content helps you understand exactly how to get QR menu solutions for your establishment. Start now and get your restaurant's QR menu up and running in minutes.",
+          "ctaText": "Ready to get QR menu for your restaurant?",
+          "ctaButton": "Get QR Menu Now"
+        }
+      },
+      "free-restaurant-website-improvements": {
+        "title": "Free Restaurant Website Creation - Mobile Optimization & UX Improvements",
+        "description": "Major improvements to creating a free restaurant website: optimized mobile navigation with hamburger menu, enhanced signup page for better conversions, and streamlined user experience.",
+        "meta": {
+          "title": "Free Restaurant Website Creation Updates - IQ Rest Changelog",
+          "description": "Learn how IQ Rest improved the free restaurant website creation process with mobile-optimized navigation, better signup flow, and enhanced user experience for cafes and restaurants"
+        },
+        "content": {
+          "intro": "Creating a free restaurant website has never been easier or more mobile-friendly. We've made significant improvements to help restaurant and cafe owners build their professional website with a digital QR menu, especially on mobile devices where most people search for 'создание сайта для ресторана бесплатно' (free restaurant website creation). These updates focus on mobile navigation, signup page refinements, and overall user experience to ensure anyone can create a restaurant website for free without any technical knowledge.",
+          "image1Alt": "Mobile-optimized hamburger menu for restaurant website",
+          "image1Caption": "New mobile navigation with hamburger menu for easy access to all features",
+          "section1Title": "Mobile-First Navigation for Restaurant Websites",
+          "section1Text": "Most restaurant owners search for and create their free restaurant website on mobile devices. That's why we've completely redesigned our mobile navigation with a professional hamburger menu. On smartphones and tablets, the navigation now opens as a clean modal dialog, displaying all menu items (Pricing, Features, Changelog, Contacts) and the Get Started button in an easy-to-read vertical layout. This mobile-optimized approach makes it simple to explore IQ Rest's features and start creating your free restaurant website right from your phone. The theme and language selectors remain easily accessible in the header, while the hamburger menu keeps the interface clean and uncluttered.",
+          "section2Title": "Enhanced Get Started Page for Free Restaurant Website Creation",
+          "section2Text": "We've refined the signup page to make creating a free restaurant website even more intuitive. The improvements include better spacing on mobile devices, centered value proposition cards that clearly explain benefits, and optimized form layouts that work perfectly on small screens. The restaurant counter showing how many businesses already use IQ Rest now displays full-width on mobile, providing strong social proof that encourages new restaurant owners to start their free website. Every element has been carefully tested to ensure that creating your restaurant website is smooth and fast, whether you're on a desktop computer or your smartphone.",
+          "image2Alt": "Optimized signup flow for free restaurant website creation",
+          "image2Caption": "Streamlined signup process optimized for mobile devices",
+          "section3Title": "Three-Step Process Optimized for All Devices",
+          "section3Text": "The visual process indicator showing the three simple steps to create your free restaurant website (Sign up with your email, Add your menu items, Get your QR code & start) now adapts beautifully to different screen sizes. On mobile and tablets, the steps display vertically with clear spacing, making it easy to understand the simple process. On larger screens, they show horizontally with arrows. This adaptive design ensures that everyone, regardless of their device, can clearly see how quick and easy it is to create a professional restaurant website for free with IQ Rest.",
+          "benefitsTitle": "Key Improvements for Creating Free Restaurant Websites",
+          "benefit1": "Mobile-optimized hamburger menu navigation for easy access on smartphones",
+          "benefit2": "Enhanced signup page with better mobile spacing and centered layouts",
+          "benefit3": "Full-width restaurant counter on mobile providing strong social proof",
+          "benefit4": "Adaptive three-step process indicator that works on all screen sizes",
+          "benefit5": "Streamlined input forms optimized for mobile touch interaction",
+          "benefit6": "Fixed logout redirect issue ensuring proper navigation across all pages",
+          "conclusionTitle": "Free Restaurant Website Creation Made Simple",
+          "conclusionText": "These improvements reinforce our commitment to making free restaurant website creation accessible to everyone. Whether you're a small cafe owner checking out IQ Rest on your phone during a break, or a restaurant manager planning your digital strategy on a tablet, the experience is now seamless and professional. You can create a complete restaurant website with QR menu, absolutely free, in just a few minutes from any device. No credit card required, no technical skills needed - just your menu and a few minutes of time to build your professional online presence.",
+          "ctaText": "Ready to create your free restaurant website?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "landing-redesign": {
+        "title": "Redesigned Get Started Page for Higher Conversions",
+        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
+        "meta": {
+          "title": "Get Started Page Redesign - IQ Rest Changelog",
+          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
+        },
+        "content": {
+          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
+          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
+          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
+          "section1Title": "Clear Value Propositions at a Glance",
+          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
+          "section2Title": "Social Proof That Builds Trust",
+          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
+          "section3Title": "Streamlined Signup Flow",
+          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
+          "benefitsTitle": "Key Improvements in This Update",
+          "benefit1": "Value proposition cards with icons for instant comprehension",
+          "benefit2": "Live restaurant counter providing authentic social proof",
+          "benefit3": "Unified page design for both email and OTP verification steps",
+          "benefit4": "Visual 3-step process indicator for transparency",
+          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
+          "benefit6": "Real-time email validation with visual feedback",
+          "conclusionTitle": "Designed for Restaurant Success",
+          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
+          "ctaText": "Ready to create your restaurant's digital menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "auth": {
+        "title": "New User Authentication Interface",
+        "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
+        "meta": {
+          "title": "User Authentication Interface - IQ Rest Changelog",
+          "description": "IQ Rest introduces a new passwordless authentication system for creating your restaurant website and digital QR menu quickly and securely"
+        },
+        "content": {
+          "intro": "We are excited to announce the launch of our new user authentication interface for IQ Rest. This update represents a significant step forward in making it easier than ever to create your restaurant website with a professional QR menu. Our goal has always been to help restaurant and cafe owners build their digital presence in minutes, not hours, and this new authentication system is designed with that mission in mind.",
+          "image1Alt": "Email input step of IQ Rest authentication",
+          "image1Caption": "Simple email-based authentication - no passwords to remember",
+          "section1Title": "Passwordless Authentication for Restaurant Owners",
+          "section1Text": "Understanding that restaurant owners are busy people, we've implemented a passwordless authentication system that requires only your email address. When you want to create your restaurant website or update your digital QR menu, simply enter your email and receive a secure 4-digit verification code. This approach eliminates the frustration of forgotten passwords while maintaining the highest security standards for your restaurant's data. The entire process takes less than 30 seconds, allowing you to focus on what matters most - running your restaurant and serving your customers.",
+          "section2Title": "Streamlined QR Menu Creation Process",
+          "section2Text": "With our new authentication system, getting started with your digital QR menu has never been easier. Once authenticated, you'll have immediate access to our intuitive menu builder where you can add your dishes, set prices, upload photos, and organize categories. The QR menu you create will be accessible to your customers instantly - they simply scan the code and view your beautifully designed digital menu on their smartphone. No app downloads required for your customers, and no technical knowledge required from you. This is exactly what modern restaurants and cafes need to compete in today's digital-first world.",
+          "image2Alt": "OTP verification step of IQ Rest authentication",
+          "image2Caption": "Secure 4-digit code verification sent directly to your email",
+          "section3Title": "Built for Speed and Security",
+          "section3Text": "Security was our top priority when designing this authentication system. Each verification code expires after 10 minutes and can only be used once, protecting your restaurant website and menu data from unauthorized access. At the same time, we've optimized every step of the process for speed. From entering your email to accessing your dashboard, the entire authentication flow completes in under a minute. This means you can make quick updates to your QR menu during service, add daily specials, or adjust prices - all without any delays.",
+          "benefitsTitle": "Key Benefits for Your Restaurant",
+          "benefit1": "Create your restaurant website with QR menu in minutes - no technical skills required",
+          "benefit2": "No passwords to remember - secure email-based verification keeps your account safe",
+          "benefit3": "Instant access to your digital menu builder from any device",
+          "benefit4": "Quick updates to your QR menu even during busy service hours",
+          "conclusionTitle": "Start Building Your Digital Menu Today",
+          "conclusionText": "This new authentication interface is just the beginning of our commitment to making digital QR menus accessible to every restaurant and cafe. Whether you're a small coffee shop or a growing restaurant chain, IQ Rest provides the tools you need to create a professional online presence. Your customers expect to find your menu online, and with our solution, you can exceed those expectations with a beautifully designed, always up-to-date digital QR menu that works perfectly on any smartphone.",
+          "ctaText": "Ready to create your restaurant website with QR menu?",
+          "ctaButton": "Get Started Free"
+        }
+      },
+      "subscription-plans-qr-menu-restaurant-website": {
+        "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "meta": {
+          "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+        },
+        "content": {
+          "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
+          "image1Alt": "Subscription plans for QR menu and restaurant website creation",
+          "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
+          "section1Title": "Flexible Plans for Every Restaurant Size",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section2Title": "Simple Billing Dashboard",
+          "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
+          "section3Title": "Save 25% with Yearly Billing",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "benefitsTitle": "Benefits of Our Subscription Plans",
+          "benefit1": "Free plan available forever - no credit card required to start",
+          "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
+          "benefit3": "Instant plan upgrades - new features activate immediately",
+          "benefit4": "Secure Stripe payment processing for all transactions",
+          "benefit5": "Easy plan management through simple billing dashboard",
+          "benefit6": "Downgrade anytime - no long-term contracts required",
+          "conclusionTitle": "Start Creating Your Restaurant Website Today",
+          "conclusionText": "With our new subscription plans, creating a professional QR menu and restaurant website has never been more accessible. Start with our Free plan to experience the platform, then upgrade as your restaurant grows. Our flexible billing options, transparent pricing, and instant activation mean you can have your digital menu up and running in minutes. Join thousands of restaurants already using IQ Rest to connect with their customers through modern, mobile-friendly QR menus.",
+          "ctaText": "Ready to choose your plan for QR menu and restaurant website?",
+          "ctaButton": "View Pricing Plans"
+        }
+      }
+    }
+  },
+  "qrCode": {
+    "title": "QR kods",
+    "description": "Lejupielādējiet un izdrukājiet savu QR kodu, lai klienti varētu to skenēt",
+    "preview": "Priekšskatījums",
+    "paperFormat": "Papīra formāts",
+    "qrPerPage": "QR kodi uz lapas",
+    "customText": "Teksts zem QR koda",
+    "customTextPlaceholder": "Skenējiet, lai skatītu ēdienkarti",
+    "print": "Izdrukāt",
+    "download": "Lejupielādēt PNG",
+    "viewMenu": "Skatīt ēdienkarti",
+    "noSlug": "Nav iestatīta ēdienkartes URL",
+    "noSlugDescription": "Lūdzu, vispirms iestatiet sava restorāna URL iestatījumos, lai ģenerētu QR kodu.",
+    "goToSettings": "Doties uz iestatījumiem",
+    "loading": "Ielādē...",
+    "menuUrl": "Jūsu mājaslapa",
+    "websiteReady": "Jūsu mājaslapa ir gatava!",
+    "openWebsite": "Atvērt mājaslapu",
+    "printSection": "Izdrukāt un lejupielādēt QR kodu:",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Vēstule (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1 (Viss lapa)",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "Teksta izmērs",
+    "textSizes": {
+      "small": "Mazs",
+      "medium": "Vidējs",
+      "large": "Liels"
+    }
+  },
+  "support": {
+    "title": "Ziņojumi",
+    "subtitle": "Saņemiet palīdzību no mūsu komandas",
+    "unauthorized": "Lūdzu, piesakieties, lai piekļūtu atbalstam",
+    "lastUpdated": "Atjaunots",
+    "emptyTitle": "Vēl nav ziņojumu",
+    "emptyDescription": "Nosūtiet ziņojumu, lai uzsāktu sarunu",
+    "sendMessage": "Nosūtīt ziņojumu",
+    "placeholder": "Ierakstiet savu ziņojumu...",
+    "hint": "Nospiediet Enter, lai nosūtītu, Shift+Enter, lai izveidotu jaunu rindu",
+    "send": "Nosūtīt",
+    "supportTeam": "Atbalsta komanda"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Izveidojiet savu digitālo ēdienkarti 5 minūtēs - IQ Rest",
+      "description": "QR ēdienkarte un mājaslapa jūsu restorānam. Gatava uzreiz. Nav nepieciešamas tehniskās prasmes."
+    },
+    "title": "Izveidojiet savu digitālo ēdienkarti 5 minūtēs",
+    "subtitle": "QR ēdienkarte un mājaslapa jūsu restorānam. Gatava uzreiz.",
+    "emailLabel": "E-pasts",
+    "emailPlaceholder": "Ievadiet e-pastu, lai sāktu izveidi",
+    "otpPlaceholder": "Ievadiet 4 ciparu kodu",
+    "continue": "Izveidot manu ēdienkarti",
+    "sending": "Izveido...",
+    "verifyTitle": "Pārbaudiet savu e-pastu",
+    "verifySubtitle": "Mēs nosūtījām 4 ciparu kodu uz {email}",
+    "verify": "Apstiprināt",
+    "verifying": "Apstiprina...",
+    "changeEmail": "Mainīt e-pastu",
+    "resendCode": "Nosūtīt kodu atkārtoti",
+    "successTitle": "Laipni lūdzam!",
+    "successSubtitle": "Jūs esat veiksmīgi pierakstījies",
+    "redirecting": "Pāradresē uz vadības paneli...",
+    "errors": {
+      "sendFailed": "Neizdevās nosūtīt apstiprināšanas kodu. Lūdzu, mēģiniet vēlreiz.",
+      "verifyFailed": "Neizdevās apstiprināt kodu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "valueProps": {
+      "noSkills": "Nav nepieciešamas tehniskās prasmes",
+      "instantUpdates": "Instant ēdienkartes atjauninājumi",
+      "qrIncluded": "QR kods + mājaslapa iekļauta",
+      "freeStart": "Bezmaksas uzsākšanai"
+    },
+    "formHelper": "Nav nepieciešama kredītkarte",
+    "setupTime": "Iestatīšana 5 minūtēs",
+    "hasAccount": "Jau ir konts?",
+    "signIn": "Pierakstīties",
+    "restaurantCounter": "Pievienojieties {count} restorāniem, kas jau izmanto IQ Rest",
+    "steps": {
+      "signUp": "Reģistrējieties ar savu e-pastu",
+      "addMenu": "Pievienojiet savus ēdienus",
+      "getQr": "Iegūstiet savu QR kodu un sāciet"
+    },
+    "motivational": {
+      "title": "Sāciet pieņemt pasūtījumus jau šodien",
+      "subtitle": "Jūsu klienti gaida digitālo ēdienkarti"
+    }
+  },
+  "reservations": {
+    "title": "Rezervācijas",
+    "tables": "Galdi",
+    "settings": "Iestatījumi",
+    "addTable": "Pievienot galdu",
+    "newTable": "Jauns galds",
+    "editTable": "Rediģēt galdu",
+    "tableNumber": "Galda numurs",
+    "tableNumberPlaceholder": "1",
+    "capacity": "Jauda (viesi)",
+    "capacityPlaceholder": "4",
+    "zone": "Zona",
+    "zonePlaceholder": "Terase, Logs, Galvenā zāle...",
+    "image": "Foto",
+    "uploadImage": "Noklikšķiniet, lai augšupielādētu foto",
+    "removeImage": "Noņemt",
+    "isActive": "Aktīvs",
+    "active": "Aktīvs",
+    "inactive": "Neaktīvs",
+    "save": "Saglabāt",
+    "saving": "Saglabā...",
+    "cancel": "Atcelt",
+    "delete": "Dzēst",
+    "deleteConfirm": "Vai tiešām vēlaties dzēst šo galdu?",
+    "table": "Galds",
+    "noTables": "Vēl nav galdu. Pievienojiet savu pirmo galdu, lai aktivizētu rezervācijas.",
+    "error": "Kļūda",
+    "close": "Aizvērt",
+    "noReservations": "Vēl nav rezervāciju",
+    "pending": "Gaida",
+    "confirmed": "Apstiprināts",
+    "cancelled": "Atcelts",
+    "completed": "Pabeigts",
+    "confirm": "Apstiprināt",
+    "reject": "Noraidīt",
+    "guests": "viesi",
+    "date": "Datums",
+    "time": "Laiks",
+    "guest": "Viesis",
+    "status": "Statuss",
+    "notes": "Piezīmes",
+    "awaitingResponse": "Gaida atbildi",
+    "today": "Šodien",
+    "tomorrow": "Rīt",
+    "otherReservations": "Citas rezervācijas",
+    "sort": "Kārtot"
+  },
+  "publicReserve": {
+    "title": "Rezervēt Galdu",
+    "selectDate": "Izvēlieties Datumu",
+    "selectTime": "Izvēlieties Laiku",
+    "selectGuests": "Viesu Skaits",
+    "selectTable": "Izvēlieties Galdu",
+    "yourDetails": "Jūsu Dati",
+    "name": "Vārds",
+    "namePlaceholder": "Jūsu vārds",
+    "email": "E-pasts",
+    "emailPlaceholder": "jūsu@email.com",
+    "phone": "Tālrunis (pēc izvēles)",
+    "phonePlaceholder": "+1 234 567 8900",
+    "notes": "Īpašas prasības (pēc izvēles)",
+    "notesPlaceholder": "Jebkādas īpašas prasības vai piezīmes...",
+    "submit": "Rezervēt Galdu",
+    "submitting": "Rezervēšana...",
+    "success": "Rezervācija Iesniegta!",
+    "successAuto": "Jūsu rezervācija ir apstiprināta. Drīz saņemsiet apstiprinājuma e-pastu.",
+    "successManual": "Jūsu rezervācijas pieprasījums ir iesniegts. Jūs saņemsiet e-pastu, kad tas tiks apstiprināts.",
+    "error": "Kļūda",
+    "guests": "viesi",
+    "table": "Galds",
+    "capacity": "jauda",
+    "noAvailableTables": "Nav pieejamu galdu šim viesu skaitam",
+    "back": "Atpakaļ uz Menu",
+    "noTimeSlotsAvailable": "Nav pieejamu laika slotu šim datumam",
+    "loadingAvailability": "Pārbauda pieejamību..."
+  },
+  "publicMenu": {
+    "contacts": "Kontakti",
+    "language": "Valoda",
+    "reserve": "Rezervēt galdu",
+    "onlineMenu": "Tiešsaistes ēdienkarte",
+    "noCategories": "Nav pieejamu kategoriju",
+    "openInstagram": "Atvērt Instagram",
+    "makeCall": "Veikt zvanu",
+    "writeWhatsApp": "Rakstīt WhatsApp",
+    "openGoogleMaps": "Atvērt Google Maps",
+    "noLocation": "Nav pieejamas atrašanās vietas",
+    "english": "Angļu",
+    "spanish": "Spāņu",
+    "allergens": "Alerģēni",
+    "allergensInfo": "Šis ēdiens satur sekojošus alerģēnus:",
+    "allergenNames": {
+      "gluten": "Glutēns",
+      "crustaceans": "Krabji",
+      "eggs": "Olas",
+      "fish": "Zivs",
+      "peanuts": "Zemesrieksti",
+      "soybeans": "Soja",
+      "dairy": "Piena produkti",
+      "nuts": "Rieksti",
+      "celery": "Selērija",
+      "mustard": "Sinepes",
+      "sesame": "Sezama",
+      "sulphites": "Sulfīti",
+      "lupin": "Lupīns",
+      "molluscs": "Molluski"
+    }
+  },
+  "faq": {
+    "title": "Biežāk uzdotie jautājumi par QR ēdienkarti restorāniem un kafejnīcām",
+    "subtitle": "Atrodiet atbildes uz biežāk uzdotajiem jautājumiem par digitālās QR ēdienkartes izveidi un pārvaldību restorāniem un kafejnīcām",
+    "howto": {
+      "question": "Kā izveidot QR ēdienkarti un restorāna vietni 4 vienkāršos soļos?",
+      "answer": "Iegūstiet savu restorānu tiešsaistē 5 minūtēs - vienkārši ievadiet savu e-pastu un sāciet no sava telefona",
+      "faqTitle": "Vai ir vēl jautājumi?",
+      "faqDescription": "Pārbaudiet mūsu visaptverošo FAQ, lai uzzinātu visu par jūsu restorāna QR ēdienkartes un vietnes izveidi un pārvaldību",
+      "faqButton": "Skatīt visus FAQ",
+      "contactButton": "Sazinieties ar mums",
+      "steps": [
+        {
+          "name": "Pierakstieties ar e-pastu",
+          "text": "Iegūstiet modernu restorāna vietni ar QR ēdienkarti, kontaktu lapu ar karti, tiešsaistes rezervācijām un pielāgotu zīmolu - viss iekļauts jau no paša sākuma."
+        },
+        {
+          "name": "Iestatiet savu restorānu",
+          "text": "Ievadiet sava restorāna nosaukumu un izvēlieties savu unikālo URL. Pievienojiet video vai foto fonu, iestatiet sava zīmola krāsas, iespējot galdu rezervācijas."
+        },
+        {
+          "name": "Pievienojiet kategorijas un ēdienus",
+          "text": "Izveidojiet ēdienkartes kategorijas un pievienojiet ēdienus ar fotogrāfijām. AI automātiski optimizē jūsu attēlus un tulko jūsu ēdienkarti vairāk nekā 10 valodās."
+        },
+        {
+          "name": "Skatiet savu gatavo ēdienkarti",
+          "text": "Jūsu profesionālā vietne ir tiešsaistē! Klienti var pārlūkot jūsu ēdienkarti, veikt rezervācijas un atrast jūs kartē. Izsekojiet visu ar ikdienas analītiku."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "Kas ir QR ēdienkarte restorānam un kā tā darbojas?",
+        "answer": "QR ēdienkarte restorānam ir digitāla ēdienkarte, kuru klienti var piekļūt, skenējot QR kodu ar savu viedtālruni. IQ Rest izveido profesionālu digitālas ēdienkartes vietni jūsu restorānam vai kafejnīcai, kas tiek atjaunināta nekavējoties bez pārdrukāšanas. Klienti vienkārši skenē kodu un skatās jūsu ēdienkarti savā ierīcē."
+      },
+      {
+        "question": "Cik maksā QR ēdienkarte restorānam vai kafejnīcai?",
+        "answer": "IQ Rest piedāvā elastīgu cenu sākot no €0 uz mūžu ar mūsu bezmaksas plānu. Tas padara to pieejamu ikvienam restorānam vai kafejnīcai, lai izveidotu profesionālu QR ēdienkarti. Apmaksātie plāni sākas tikai no €4/mēnesī ar papildu funkcijām, piemēram, neierobežotiem vienumiem un uzlabotu analītiku."
+      },
+      {
+        "question": "Vai es varu izveidot vietni savam restorānam bez programmēšanas?",
+        "answer": "Jā! IQ Rest ir izstrādāts restorānu un kafejnīcu īpašniekiem bez jebkādām tehniskām zināšanām. Jūs varat izveidot pilnīgu digitālas ēdienkartes vietni savam restorānam dažu minūšu laikā, neprasot programmēšanas vai kodēšanas prasmes. Vienkārši pievienojiet savus ēdienus, cenas un fotogrāfijas caur mūsu intuitīvo saskarni."
+      },
+      {
+        "question": "Cik bieži es varu atjaunināt savu QR ēdienkarti?",
+        "answer": "Jūs varat atjaunināt sava restorāna vai kafejnīcas ēdienkarti tik bieži, cik nepieciešams. Visas izmaiņas tiek atspoguļotas reāllaikā, ļaujot jums nekavējoties atjaunināt cenas, pievienot jaunus ēdienus vai mainīt aprakstus bez fizisku ēdienkaršu pārdrukāšanas. Ideāli piemērots ikdienas piedāvājumiem un sezonālajiem atjauninājumiem."
+      },
+      {
+        "question": "Vai QR ēdienkarte darbojas gan restorāniem, gan kafejnīcām?",
+        "answer": "Noteikti! IQ Rest ir lieliski piemērots restorāniem, kafejnīcām, kafijas veikaliem, bāriem, ēdienu furgoniem un jebkurai pārtikas pakalpojumu uzņēmumam. Mūsu digitālās ēdienkartes risinājums pielāgojas jebkura veida iestādēm, sākot no mazām kafejnīcām līdz lielām restorānu ķēdēm."
+      },
+      {
+        "question": "Kā darbojas automātiskā ēdienkartes tulkošana?",
+        "answer": "Mūsu QR ēdienkartes sistēma izmanto mākslīgo intelektu, lai automātiski tulkotu jūsu restorāna vai kafejnīcas ēdienkarti vairākās valodās. Tas ir lieliski piemērots tūristu apgabaliem un starptautiskiem klientiem. Jūs varat piedāvāt savu ēdienkarti angļu, spāņu un citās valodās, palīdzot jums apkalpot vairāk klientu."
+      },
+      {
+        "question": "Vai es varu izmēģināt QR ēdienkartes risinājumu bez maksas?",
+        "answer": "Jā! Mēs piedāvājam pilnīgi bezmaksas plānu restorāniem un kafejnīcām, lai izmēģinātu IQ Rest. Jūs varat izveidot savu digitālās ēdienkartes vietni ar līdz 15 vienumiem bez maksas, uz mūžu. Nav nepieciešama kredītkartes informācija, lai sāktu. Jauniniet tikai tad, kad jums nepieciešamas papildu funkcijas."
+      },
+      {
+        "question": "Vai IQ Rest ir lietotne, kuru klienti jālejupielādē?",
+        "answer": "Nē! Tas ir viens no labākajiem ieguvumiem. Klientiem nav jālejupielādē neviena lietotne. Viņi vienkārši skenē jūsu QR kodu un ēdienkarte atveras nekavējoties viņu tīmekļa pārlūkā. Tas padara to daudz ērtāku nekā restorānu lietotnes, kurām nepieciešama lejupielāde."
+      },
+      {
+        "question": "Kādi ir digitālās ēdienkartes vietnes ieguvumi manam restorānam?",
+        "answer": "Digitālā ēdienkartes vietne piedāvā daudz ieguvumu: tūlītējas ēdienkartes atjaunināšanas bez pārdrukāšanas izmaksām, daudzvalodu atbalstu starptautiskiem klientiem, bezkontakta pasūtīšanu drošībai, analītiku, lai redzētu populāros ēdienus, un profesionālu prezentāciju. Turklāt tā ir videi draudzīga, jo jūs novēršat papīra ēdienkaršu atkritumus."
+      },
+      {
+        "question": "Kā es varu izveidot QR kodu sava restorāna ēdienkartei?",
+        "answer": "IQ Rest automātiski ģenerē profesionālu QR kodu, kad jūs izveidojat savu digitālo ēdienkarti. Jūs varat lejupielādēt un izdrukāt šo QR kodu saviem restorāna galdiem, ieejai vai līdzņemšanas letēm. QR kods ir pielāgojams un augstas kvalitātes, lai nodrošinātu skaidru skenēšanu."
+      }
+    ],
+    "cta": {
+      "title": "Vēl ir jautājumi?",
+      "subtitle": "Uzdodiet mums jautājumu un saņemiet atbildi pēc iespējas ātrāk",
+      "button": "Sazinieties ar mums"
+    },
+    "linkTitle": "Vai ir jautājumi?",
+    "linkDescription": "Pārbaudiet mūsu biežāk uzdotos jautājumus, lai uzzinātu vairāk par IQ Rest",
+    "meta": {
+      "title": "Biežāk uzdotie jautājumi - IQ Rest",
+      "description": "Atrodiet atbildes uz biežāk uzdotajiem jautājumiem par IQ Rest digitālo QR ēdienkartes risinājumu restorāniem un kafejnīcām"
+    }
+  },
+  "billing": {
+    "title": "Rēķināšana",
+    "description": "Pārvaldiet savu abonementu un rēķinus",
+    "unauthorized": "Lūdzu, piesakieties, lai pārvaldītu savu abonementu",
+    "perMonth": "/mēn",
+    "currentPlan": "Pašreizējais plāns",
+    "upgrade": "Uzlabot",
+    "manage": "Pārvaldīt",
+    "subscriptionSuccess": "Jūsu abonements ir veiksmīgi aktivizēts!",
+    "subscriptionCanceled": "Abonementa process tika atcelts.",
+    "subscriptionProcessing": "Jūsu maksājums tiek apstrādāts. Aktivizācija var aizņemt dažas minūtes.",
+    "processingPayment": "Apstrādājam jūsu maksājumu...",
+    "processingPaymentDescription": "Lūdzu, gaidiet, kamēr mēs apstiprinām jūsu abonementu. Tas parasti aizņem dažas sekundes.",
+    "checkoutError": "Neizdevās uzsākt norēķinu procesu. Lūdzu, mēģiniet vēlreiz.",
+    "portalError": "Neizdevās atvērt rēķinu portālu. Lūdzu, mēģiniet vēlreiz.",
+    "detailsNote": "Lai iegūtu vairāk informācijas, apmeklējiet mūsu",
+    "pricingPage": "Cenu lapa",
+    "plans": {
+      "FREE": {
+        "name": "Bezmaksas"
+      },
+      "BASIC_MONTHLY": {
+        "name": "Pamatmēnesis"
+      },
+      "BASIC_YEARLY": {
+        "name": "Pamatgads"
+      },
+      "PRO_MONTHLY": {
+        "name": "Pro mēnesis"
+      },
+      "PRO_YEARLY": {
+        "name": "Pro gads"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "Vadības panelis",
+      "onboarding": "Iepazīšanās",
+      "qrMenu": "QR izvēlne",
+      "analytics": "Analītika",
+      "categories": "Kategorijas",
+      "items": "Preces",
+      "settings": "Vispārīgi",
+      "design": "Dizains",
+      "contacts": "Kontakti",
+      "languages": "Valodas",
+      "reservations": "Rezervācijas",
+      "reservationSettings": "Rezervāciju iestatījumi",
+      "tables": "Galdi",
+      "billing": "Rēķini",
+      "support": "Atbalsts"
+    },
+    "sidebar": {
+      "qrMenu": "QR izvēlne",
+      "menu": "Izvēlne",
+      "settings": "Iestatījumi",
+      "reservations": "Rezervācijas",
+      "account": "Konts",
+      "reservationSettings": "Konfigurācija"
+    },
+    "logout": "Iziet",
+    "auth": {
+      "title": "Pieteikties",
+      "subtitle": "Mūsdienu mājaslapa ar QR ēdienkarti, rezervācijām un AI tulkojumiem",
+      "benefits": "Nav paroles. Nav kredītkartes.",
+      "emailPlaceholder": "jūsu@email.com",
+      "continue": "Turpināt",
+      "verifyTitle": "Pārbaudiet savu e-pastu",
+      "verifySubtitle": "Mēs nosūtījām kodu uz {email}",
+      "verify": "Apstiprināt",
+      "changeEmail": "Izmantot citu e-pastu",
+      "errors": {
+        "sendFailed": "Koda nosūtīšana neizdevās. Lūdzu, mēģiniet vēlreiz.",
+        "verifyFailed": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz."
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "Mēneša lietojums",
+      "scansThisMonth": "skanējumi šajā mēnesī",
+      "limitReached": "Jūs esat sasniedzis savu mēneša skanējumu limitu. Jauniniet savu plānu neierobežotiem skanējumiem.",
+      "todayViews": "Šodien",
+      "weeklyViews": "Šajā nedēļā",
+      "monthlyViews": "Šajā mēnesī",
+      "uniqueVisitors": "Unikālie apmeklētāji",
+      "viewsByPage": "Skatījumi pa lapām",
+      "viewsByLanguage": "Skatījumi pa valodām",
+      "dailyViews": "Ikdienas skatījumi",
+      "noData": "Dati vēl nav pieejami",
+      "pageNames": {
+        "home": "Sākumlapa",
+        "menu": "Ēdienkarte",
+        "contacts": "Kontakti",
+        "language": "Valoda",
+        "reserve": "Rezervēt"
+      },
+      "languageNames": {
+        "en": "Angļu",
+        "es": "Spāņu",
+        "de": "Vācu",
+        "fr": "Franču",
+        "ru": "Krievu"
+      }
+    },
+    "categories": {
+      "noCategories": "Vēl nav kategoriju. Izveidojiet savu pirmo kategoriju, lai sāktu.",
+      "addCategory": "Pievienot",
+      "editCategory": "Rediģēt kategoriju",
+      "name": "Nosaukums",
+      "namePlaceholder": "Ievadiet kategorijas nosaukumu",
+      "status": "Statuss",
+      "active": "Aktīvs",
+      "inactive": "Neaktīvs",
+      "save": "Saglabāt",
+      "saving": "Saglabā...",
+      "cancel": "Atcelt",
+      "delete": "Dzēst",
+      "deleteConfirm": "Vai tiešām vēlaties dzēst šo kategoriju? Šo darbību nevar atsaukt.",
+      "fetchError": "Kategoriju ielāde neizdevās",
+      "updateError": "Kategorijas atjaunināšana neizdevās",
+      "saveError": "Kategorijas saglabāšana neizdevās",
+      "deleteError": "Kategorijas dzēšana neizdevās",
+      "translateError": "Tulkošana neizdevās",
+      "nameRequired": "Nosaukums ir obligāts",
+      "enabled": "ieslēgts",
+      "disabled": "izslēgts",
+      "created": "Kategorija izveidota",
+      "updated": "Kategorija atjaunināta",
+      "deleted": "Kategorija dzēsta",
+      "validationErrorTitle": "Lūdzu, labojiet sekojošās kļūdas",
+      "sort": "Kārtot",
+      "saveSort": "Saglabāt",
+      "sortSaved": "Kārtības secība saglabāta",
+      "sortError": "Kārtības secības saglabāšana neizdevās"
+    },
+    "items": {
+      "noItems": "Vēl nav neviena ēdiena. Izveidojiet savu pirmo ēdienu, lai sāktu.",
+      "addItem": "Pievienot",
+      "editItem": "Rediģēt ēdienu",
+      "name": "Nosaukums",
+      "namePlaceholder": "Ievadiet ēdiena nosaukumu",
+      "description": "Apraksts",
+      "descriptionPlaceholder": "Ievadiet ēdiena aprakstu",
+      "price": "Cena",
+      "pricePlaceholder": "0.00",
+      "category": "Kategorija",
+      "categoryPlaceholder": "Izvēlieties kategoriju",
+      "image": "Attēls",
+      "uploadImage": "Augšupielādēt attēlu",
+      "removeImage": "Noņemt attēlu",
+      "status": "Statuss",
+      "active": "Aktīvs",
+      "inactive": "Neaktīvs",
+      "save": "Saglabāt",
+      "saving": "Saglabā...",
+      "cancel": "Atcelt",
+      "delete": "Dzēst",
+      "deleteConfirm": "Vai tiešām vēlaties dzēst šo ēdienu? Šo darbību nevar atsaukt.",
+      "fetchError": "Neizdevās ielādēt ēdienus",
+      "updateError": "Neizdevās atjaunināt ēdienu",
+      "saveError": "Neizdevās saglabāt ēdienu",
+      "deleteError": "Neizdevās dzēst ēdienu",
+      "translateError": "Tulkošana neizdevās",
+      "nameRequired": "Nosaukums ir obligāts",
+      "categoryRequired": "Kategorija ir obligāta",
+      "priceRequired": "Nepieciešama derīga cena",
+      "enabled": "ieslēgts",
+      "disabled": "izslēgts",
+      "created": "Ēdiens izveidots",
+      "updated": "Ēdiens atjaunināts",
+      "deleted": "Ēdiens dzēsts",
+      "validationErrorTitle": "Lūdzu, labojiet šādas kļūdas",
+      "sort": "Kārtot",
+      "saveSort": "Saglabāt",
+      "sortSaved": "Kārtības secība saglabāta",
+      "sortError": "Neizdevās saglabāt kārtības secību",
+      "allergens": "Alergēni",
+      "allergensHint": "Izvēlieties alergēnus, kas atrodas šajā ēdienā",
+      "allergenNames": {
+        "gluten": "Glutēns",
+        "crustaceans": "Vēžveidīgie",
+        "eggs": "Olas",
+        "fish": "Zivs",
+        "peanuts": "Zemesrieksti",
+        "soybeans": "Soja",
+        "dairy": "Piena produkti",
+        "nuts": "Rieksti",
+        "celery": "Selērs",
+        "mustard": "Sinepes",
+        "sesame": "Sezama",
+        "sulphites": "Sulfīti",
+        "lupin": "Lupīns",
+        "molluscs": "Molluski"
+      }
+    },
+    "languages": {
+      "translationProgress": "Tulkošanas progress",
+      "availableLanguages": "Pieejamās valodas",
+      "europeanLanguages": "Eiropas valodas",
+      "starToSetDefault": "Noklikšķiniet uz zvaigznītes, lai iestatītu kā noklusējumu",
+      "default": "noklusējums",
+      "hint": "Ieslēdziet valodas, lai ļautu klientiem skatīt jūsu ēdienkarti vairākās valodās. Noklusējuma valoda tiek izmantota galvenajam saturam.",
+      "fetchError": "Neizdevās ielādēt valodas",
+      "enableError": "Neizdevās ieslēgt valodu",
+      "disableError": "Neizdevās izslēgt valodu",
+      "defaultError": "Neizdevās iestatīt noklusējuma valodu",
+      "languageEnabled": "{language} ieslēgts",
+      "languageDisabled": "{language} izslēgts",
+      "defaultSet": "{language} iestatīts kā noklusējums",
+      "cannotDisableDefault": "Nav iespējams izslēgt noklusējuma valodu",
+      "atLeastOneRequired": "Nepieciešama vismaz viena valoda",
+      "enableFirst": "Vispirms ieslēdziet valodu",
+      "deleteConfirm": "Šīs valodas izslēgšana dzēsīs visus tulkojumus. Šo darbību nevar atsaukt.",
+      "cancel": "Atcelt",
+      "confirm": "Izslēgt"
+    },
+    "contacts": {
+      "phone": "Tālrunis",
+      "phonePlaceholder": "+1 234 567 8900",
+      "phoneHint": "Kontakta tālruņa numurs jūsu klientiem",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "jūsu_restorāns",
+      "instagramHint": "Jūsu Instagram lietotājvārds (bez @)",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+1 234 567 8900",
+      "whatsappHint": "WhatsApp numurs klientu jautājumiem",
+      "location": "Atrašanās vieta",
+      "locationHint": "Noklikšķiniet uz kartes vai meklējiet, lai iestatītu sava restorāna atrašanās vietu",
+      "save": "Saglabāt",
+      "fetchError": "Neizdevās ielādēt kontaktinformāciju",
+      "saveError": "Neizdevās saglabāt kontaktinformāciju",
+      "saved": "Kontaktinformācija saglabāta"
+    },
+    "design": {
+      "background": "Fons",
+      "backgroundHint": "Augšupielādējiet video vai attēlu sava mājaslapas fona",
+      "uploadMedia": "Augšupielādēt video vai attēlu",
+      "removeMedia": "Noņemt",
+      "accentColor": "Akcenta krāsa",
+      "accentColorHint": "Galvenā krāsa pogām un izcelšanai jūsu vietnē",
+      "presetColors": "Iepriekš iestatītas krāsas",
+      "customColor": "Pielāgota krāsa",
+      "save": "Saglabāt",
+      "fetchError": "Neizdevās ielādēt dizaina iestatījumus",
+      "saveError": "Neizdevās saglabāt dizaina iestatījumus",
+      "saved": "Dizaina iestatījumi saglabāti",
+      "uploadError": "Neizdevās augšupielādēt failu",
+      "invalidFileType": "Nederīgs faila tips. Atļautie: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
+      "fileTooLarge": "Fails ir pārāk liels. Maksimālais izmērs: 50MB video, 5MB attēliem"
+    },
+    "general": {
+      "name": "Nosaukums",
+      "namePlaceholder": "Ievadiet restorāna nosaukumu",
+      "nameHint": "Parādīts jūsu publiskās vietnes sākumlapā",
+      "description": "Apakšvirsraksts",
+      "descriptionPlaceholder": "Īss apraksts (pēc izvēles)",
+      "descriptionHint": "Parādīts zem nosaukuma sākumlapā",
+      "slug": "URL Slugs",
+      "slugPlaceholder": "mans-restorāns",
+      "slugHint": "Jūsu vietne būs pieejama: iq-rest.com/{slug}",
+      "currency": "Valūta",
+      "currencyPlaceholder": "Izvēlieties valūtu",
+      "save": "Saglabāt",
+      "fetchError": "Neizdevās ielādēt iestatījumus",
+      "saveError": "Neizdevās saglabāt iestatījumus",
+      "saved": "Iestatījumi saglabāti",
+      "nameRequired": "Restorāna nosaukums ir obligāts",
+      "slugRequired": "URL slug ir obligāts",
+      "validationErrorTitle": "Lūdzu, labojiet šādas kļūdas",
+      "slugChangedTitle": "Vietnes adrese atjaunināta",
+      "slugChangedDescription": "Jūsu restorāns tagad ir pieejams:",
+      "close": "Aizvērt",
+      "view": "Skatīt"
+    },
+    "onboarding": {
+      "title": "Laipni lūdzam IQ Rest!",
+      "subtitle": "Pabeidziet šos soļus, lai palaistu savu restorāna vietni",
+      "requiredSteps": "Obligātie soļi",
+      "optionalSteps": "Pēc izvēles soļi",
+      "viewMenu": "Skatīt savu ēdienkarti",
+      "steps": {
+        "title": {
+          "name": "Pievienojiet restorāna nosaukumu",
+          "description": "Dodiet savam restorānam nosaukumu, kas parādīsies jūsu vietnē"
+        },
+        "slug": {
+          "name": "Iestatiet vietnes adresi",
+          "description": "Izvēlieties unikālu URL sava restorāna vietnei"
+        },
+        "categories": {
+          "name": "Izveidojiet ēdienkartes kategorijas",
+          "description": "Organizējiet savu ēdienkarti ar kategorijām, piemēram, Uzkodas, Galvenie ēdieni utt."
+        },
+        "items": {
+          "name": "Pievienojiet ēdienkartes vienumus",
+          "description": "Pievienojiet ēdienus savai ēdienkartei ar cenām un aprakstiem"
+        },
+        "design": {
+          "name": "Pielāgojiet dizainu",
+          "description": "Izvēlieties krāsas un fonu savai vietnei"
+        },
+        "contacts": {
+          "name": "Pievienojiet kontaktinformāciju",
+          "description": "Pievienojiet tālruni, WhatsApp, Instagram un atrašanās vietu"
+        },
+        "reservations": {
+          "name": "Iespējot rezervācijas",
+          "description": "Atļaut klientiem rezervēt galdus tiešsaistē"
+        },
+        "translations": {
+          "name": "Pievienojiet valodas",
+          "description": "Padariet savu ēdienkarti pieejamu vairākās valodās"
+        }
+      },
+      "completed": "Pabeigts",
+      "notCompleted": "Nepabeigts",
+      "allDone": "Viss izdarīts! Jūsu ēdienkarte ir aktīva.",
+      "requiredRemaining": "{count} obligātie soļi palikuši"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "Lai jūsu restorāna viesiem būtu pieejamas rezervācijas, jums jāabonē pakalpojums.",
+    "subscribe": "Abonēt",
+    "reservationsEnabled": "Iespējot rezervācijas",
+    "enabled": "Rezervācijas ir iespējotas",
+    "disabled": "Rezervācijas ir atslēgtas",
+    "reservationMode": "Apstiprinājuma režīms",
+    "modeAuto": "Automātiski",
+    "modeManual": "Manuāli",
+    "modeAutoDescription": "Rezervācijas tiks automātiski apstiprinātas, pamatojoties uz galdu pieejamību",
+    "modeManualDescription": "Jums būs manuāli jāapstiprina katra rezervācija",
+    "slotDuration": "Rezervācijas ilgums",
+    "minutes": "minūtes",
+    "workingHours": "Darba laiks",
+    "save": "Saglabāt",
+    "saving": "Saglabā...",
+    "saved": "Iestatījumi saglabāti",
+    "fetchError": "Neizdevās ielādēt iestatījumus",
+    "saveError": "Neizdevās saglabāt iestatījumus"
+  },
+  "terms": {
+    "title": "Noteikumi un nosacījumi",
+    "lastUpdated": "Pēdējoreiz atjaunots: 2025. gada 17. decembrī",
+    "contact": {
+      "title": "Sazinieties ar mums",
+      "description": "Ja jums ir kādi jautājumi par šiem noteikumiem un nosacījumiem, lūdzu, sazinieties ar mums."
+    },
+    "sections": [
+      {
+        "title": "1. Ievads",
+        "content": [
+          "Laipni lūdzam IQ Rest. Šie noteikumi un nosacījumi regulē jūsu lietošanu mūsu tīmekļa vietnē un pakalpojumos, ko nodrošina Bogdan Sokolov (Autónomo), NIE: Z1894474S, reģistrēts Spānijā.",
+          "Piekļūstot vai izmantojot IQ Rest, jūs piekrītat šiem noteikumiem. Ja jūs nepiekrītat kādai daļai no šiem noteikumiem, jūs nevarat piekļūt pakalpojumam."
+        ]
+      },
+      {
+        "title": "2. Pakalpojuma apraksts",
+        "content": [
+          "IQ Rest nodrošina digitālo QR ēdienkarti un tīmekļa vietnes izveides platformu restorāniem, kafejnīcām un pārtikas pakalpojumu iestādēm. Mūsu pakalpojums ietver ēdienkartes pārvaldību, QR kodu ģenerēšanu, daudzvalodu atbalstu ar AI atbalstītām tulkošanām, AI attēlu optimizāciju, galdu rezervācijas sistēmas un analītiku.",
+          "Mēs paturam tiesības jebkurā laikā bez iepriekšēja brīdinājuma mainīt, apturēt vai pārtraukt jebkuru pakalpojuma aspektu."
+        ]
+      },
+      {
+        "title": "3. Konta reģistrācija",
+        "content": [
+          "Lai izmantotu noteiktas IQ Rest funkcijas, jums jāreģistrē konts, izmantojot derīgu e-pasta adresi. Jūs esat atbildīgs par sava konta konfidencialitātes uzturēšanu un visām darbībām, kas notiek jūsu kontā.",
+          "Jūs piekrītat sniegt precīzu, aktuālu un pilnīgu informāciju reģistrācijas laikā un atjaunināt šo informāciju, lai tā būtu precīza, aktuāla un pilnīga.",
+          "Mēs izmantojam bezparole autentifikāciju, izmantojot e-pasta verifikācijas kodus. Jūs esat atbildīgs par sava e-pasta konta drošības uzturēšanu."
+        ]
+      },
+      {
+        "title": "4. Abonēšanas plāni un maksājumi",
+        "content": [
+          "IQ Rest piedāvā Bezmaksas, Pamata un Pro abonēšanas plānus. Bezmaksas plāns ir pieejams bez maksas ar ierobežotām funkcijām. Apmaksātie plāni (Pamata un Pro) tiek norakstīti ikmēneša vai ikgadējā maksājumā caur mūsu maksājumu apstrādātāju, Stripe.",
+          "Cenas tiek norādītas eiro (EUR). Abonējot apmaksātu plānu, jūs piekrītat, ka mēs varam iekasēt maksājumu no jūsu maksājuma metodes atkārtoti, līdz jūs to atcelsiet.",
+          "Jūs varat uzlabot, samazināt vai atcelt savu abonementu jebkurā laikā caur savu informācijas paneli. Atcelšanas stājas spēkā pašreizējā norēķinu perioda beigās. Nav pieejami atmaksas par daļējiem norēķinu periodiem.",
+          "Mēs paturam tiesības mainīt mūsu cenas ar 30 dienu iepriekšēju brīdinājumu. Cenu izmaiņas attieksies uz norēķinu periodiem, kas sākas pēc brīdinājuma perioda."
+        ]
+      },
+      {
+        "title": "5. AI atbalstītās funkcijas",
+        "content": [
+          "IQ Rest izmanto mākslīgo intelektu ēdienkaršu tulkošanai un attēlu optimizācijai. Lai gan mēs cenšamies nodrošināt precizitāti, AI ģenerētie tulkojumi var saturēt kļūdas. Jūs esat atbildīgs par visu AI ģenerēto saturu pārskatīšanu un apstiprināšanu pirms publicēšanas.",
+          "AI attēlu optimizācija automātiski apstrādā augšupielādētos attēlus, lai uzlabotu ielādes veiktspēju. Oriģinālie attēli pēc apstrādes netiek saglabāti.",
+          "Mēs negarantējam AI ģenerētā satura precizitāti, pilnīgumu vai uzticamību. Jūs atzīstat, ka AI funkcijas tiek nodrošinātas 'kā ir' un izmantojat tās pēc saviem ieskatiem."
+        ]
+      },
+      {
+        "title": "6. Lietotāja saturs",
+        "content": [
+          "Jūs saglabājat īpašumtiesības uz visu saturu, ko augšupielādējat IQ Rest, tostarp ēdienu vienumiem, aprakstiem, attēliem un uzņēmuma informāciju.",
+          "Augšupielādējot saturu, jūs piešķirat IQ Rest neekskluzīvu, globālu, bezatlīdzības licenci izmantot, rādīt un izplatīt jūsu saturu tikai pakalpojuma sniegšanas nolūkos.",
+          "Jūs esat pilnībā atbildīgs par saturu, ko augšupielādējat, un jums jānodrošina, ka tas nepārkāpj nevienu likumu vai trešo personu tiesības. Aizliegts saturs ietver: nelikumīgu materiālu, autortiesību saturu bez atļaujas, maldinošu vai krāpniecisku informāciju un saturu, kas pārkāpj veselības un drošības noteikumus."
+        ]
+      },
+      {
+        "title": "7. Pieņemama lietošana",
+        "content": [
+          "Jūs piekrītat neizmantot IQ Rest nelikumīgiem mērķiem vai jebkurā veidā, kas varētu kaitēt, atslēgt vai traucēt pakalpojumu.",
+          "Aizliegtas darbības ietver: mēģinājumus iegūt neatļautu piekļuvi citiem kontiem vai sistēmām, pakalpojuma izmantošanu, lai izplatītu surogātpastu vai ļaunprātīgu programmatūru, datu ieguvi vai datu ieguvi, citu personu vai uzņēmumu izlikšanos un lietošanas ierobežojumu vai drošības pasākumu apietšanu."
+        ]
+      },
+      {
+        "title": "8. Intelektuālā īpašuma tiesības",
+        "content": [
+          "IQ Rest nosaukums, logo, tīmekļa vietnes dizains un visa saistītā intelektuālā īpašuma tiesības pieder Bogdan Sokolov un ir aizsargātas ar piemērojamajiem intelektuālā īpašuma likumiem.",
+          "Jūs nedrīkstat kopēt, modificēt, izplatīt vai veidot atvasinātas darbības, pamatojoties uz mūsu intelektuālo īpašumu, bez skaidras rakstiskas atļaujas."
+        ]
+      },
+      {
+        "title": "9. Privātums un datu aizsardzība",
+        "content": [
+          "Jūsu IQ Rest lietošana tiek regulēta arī ar mūsu Privātuma politiku. Mēs ievērojam Vispārīgo datu aizsardzības regulu (GDPR) un Spānijas datu aizsardzības likumus (LOPDGDD).",
+          "Mēs vācam un apstrādājam personiskos datus, kas nepieciešami pakalpojuma nodrošināšanai, tostarp e-pasta adreses, uzņēmuma informāciju un lietošanas analītiku. Jūs jebkurā laikā varat pieprasīt piekļuvi, labojumus vai savu personisko datu dzēšanu."
+        ]
+      },
+      {
+        "title": "10. Atbildības ierobežojums",
+        "content": [
+          "IQ Rest tiek nodrošināts 'kā ir' un 'kā pieejams' bez jebkādām garantijām, gan izteiktām, gan netiešām, tostarp, bet neaprobežojoties ar netiešām garantijām par tirgojamību un piemērotību konkrētam mērķim.",
+          "Cik vien to atļauj likums, Bogdan Sokolov nebūs atbildīgs par jebkādiem netiešiem, nejaušiem, īpašiem, sekām vai sodus zaudējumiem, tostarp peļņas, datu vai uzņēmējdarbības iespēju zaudējumiem.",
+          "Mūsu kopējā atbildība par jebkādiem prasījumiem, kas izriet no vai ir saistīti ar pakalpojumu, nepārsniegs summu, ko jūs mums samaksājāt divpadsmit (12) mēnešu laikā pirms prasījuma."
+        ]
+      },
+      {
+        "title": "11. Atlīdzība",
+        "content": [
+          "Jūs piekrītat atlīdzināt, aizstāvēt un pasargāt Bogdan Sokolov no jebkādiem prasījumiem, zaudējumiem, bojājumiem vai izdevumiem, kas izriet no jūsu pakalpojuma lietošanas, jūsu satura vai jūsu šo noteikumu pārkāpuma."
+        ]
+      },
+      {
+        "title": "12. Pakalpojuma pieejamība",
+        "content": [
+          "Mēs cenšamies uzturēt augstu mūsu pakalpojuma pieejamību, bet negarantējam nepārtrauktu piekļuvi. Pakalpojums var būt pagaidu nepieejams uzturēšanas, atjauninājumu vai apstākļu dēļ, kas ir ārpus mūsu kontroles.",
+          "Mēs neesam atbildīgi par jebkādiem zaudējumiem vai bojājumiem, kas izriet no pakalpojuma pārtraukumiem vai dīkstāves."
+        ]
+      },
+      {
+        "title": "13. Līguma izbeigšana",
+        "content": [
+          "Mēs varam nekavējoties izbeigt vai apturēt jūsu kontu bez iepriekšēja brīdinājuma par uzvedību, ko uzskatām par šo noteikumu pārkāpumu vai kas ir kaitīga citiem lietotājiem, mums vai trešajām personām.",
+          "Pēc līguma izbeigšanas jūsu tiesības izmantot pakalpojumu nekavējoties izbeidzas. Mēs varam dzēst jūsu datus 30 dienu laikā pēc līguma izbeigšanas, ja vien nav likumīgu prasību tos saglabāt."
+        ]
+      },
+      {
+        "title": "14. Izmaiņas noteikumos",
+        "content": [
+          "Mēs paturam tiesības jebkurā laikā mainīt šos noteikumus. Mēs jūs informēsim par būtiskām izmaiņām, izmantojot e-pastu vai caur pakalpojumu.",
+          "Jūsu turpmākā IQ Rest lietošana pēc izmaiņu stāšanās spēkā nozīmē, ka jūs piekrītat grozītajiem noteikumiem."
+        ]
+      },
+      {
+        "title": "15. Regulatīvā likumdošana un jurisdikcija",
+        "content": [
+          "Šie noteikumi tiek regulēti ar Spānijas un Eiropas Savienības likumiem. Jebkuri strīdi, kas izriet no šiem noteikumiem vai jūsu IQ Rest lietošanas, būs pakļauti tikai Spānijas tiesu jurisdikcijai.",
+          "Ja kāda šī noteikuma norma tiek atzīta par neizpildāmu, pārējās normas paliks spēkā un darbībā."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privātuma politika",
+    "lastUpdated": "Pēdējoreiz atjaunināts: 2025. gada 17. decembrī",
+    "contact": {
+      "title": "Sazinieties ar mums",
+      "description": "Ja jums ir kādi jautājumi par šo privātuma politiku vai vēlaties izmantot savas datu aizsardzības tiesības, lūdzu, sazinieties ar mums.",
+      "controller": "Datu pārvaldnieks"
+    },
+    "sections": [
+      {
+        "title": "1. Ievads",
+        "content": [
+          "Šī privātuma politika skaidro, kā IQ Rest, ko pārvalda Bogdan Sokolov (Autónomo), NIE: Z1894474S, reģistrēts Spānijā, apkopo, izmanto, glabā un aizsargā jūsu personas datus, kad izmantojat mūsu QR ēdienkarti.",
+          "Mēs esam apņēmušies aizsargāt jūsu privātumu un ievērot Vispārīgo datu aizsardzības regulu (GDPR), Spānijas Organisko likumu par datu aizsardzību (LOPDGDD) un citus piemērojamos datu aizsardzības likumus."
+        ]
+      },
+      {
+        "title": "2. Datu pārvaldnieks",
+        "content": [
+          "Datu pārvaldnieks, kas atbild par jūsu personas datiem, ir: Bogdan Sokolov (Autónomo), NIE: Z1894474S, reģistrēts Spānijā. Par jebkādiem datu aizsardzības jautājumiem, lūdzu, sazinieties ar mums pa e-pastu support@iq-rest.com."
+        ]
+      },
+      {
+        "title": "3. Personas dati, kurus mēs apkopo",
+        "content": [
+          "Kontu informācija: Kad reģistrējaties, mēs apkopo jūsu e-pasta adresi autentifikācijas un saziņas nolūkiem. Mēs izmantojam bezparole autentifikāciju, tāpēc mēs nesaglabājam paroles.",
+          "Uzņēmuma informācija: Restorāna nosaukums, apraksts, URL slug, kontaktinformācija (tālrunis, WhatsApp, Instagram), atrašanās vietas dati un darba laiki, kurus jūs sniedzat savai publiskajai ēdienkartei.",
+          "Ēdienkartes saturs: Kategorijas, ēdienu vienumi, apraksti, cenas un attēli, kurus jūs augšupielādējat, lai izveidotu savu digitālo ēdienkarti.",
+          "Izmantošanas dati: Informācija par to, kā jūs izmantojat mūsu pakalpojumu, tostarp lapu skatījumi, funkciju izmantošana un mijiedarbības modeļi, kas apkopoti, izmantojot analītiku.",
+          "Maksājumu informācija: Kad jūs abonējat maksas plānus, maksājumu apstrādi veic Stripe. Mēs nesaglabājam jūsu pilnu kredītkartes informāciju; Stripe apstrādā un nodrošina šo informāciju.",
+          "Tehniskie dati: IP adreses, pārlūkprogrammas veids, ierīces informācija un sīkdatnes, kā aprakstīts mūsu Sīkdatņu politikā."
+        ]
+      },
+      {
+        "title": "4. Kā mēs izmantojam jūsu datus",
+        "content": [
+          "Mēs izmantojam jūsu personas datus šādiem nolūkiem: Lai nodrošinātu un uzturētu mūsu QR ēdienkartes pakalpojumu, tostarp izveidotu jūsu restorāna vietni un ģenerētu QR kodus. Lai autentificētu jūsu kontu, izmantojot e-pasta verifikācijas kodus. Lai apstrādātu maksājumus un pārvaldītu jūsu abonementu, izmantojot Stripe. Lai sazinātos ar jums par jūsu kontu, pakalpojumu atjauninājumiem un atbalsta pieprasījumiem. Lai nodrošinātu mākslīgā intelekta funkcijas, piemēram, ēdienkaršu tulkošanu un attēlu optimizāciju. Lai analizētu pakalpojuma izmantošanu un uzlabotu mūsu platformu. Lai ievērotu juridiskās saistības un aizsargātu mūsu likumīgās intereses."
+        ]
+      },
+      {
+        "title": "5. Juridiskais pamats apstrādei",
+        "content": [
+          "Līguma izpilde: Apstrāde, kas nepieciešama, lai nodrošinātu mūsu pakalpojumu jums (6. panta 1. punkts b) GDPR).",
+          "Likumīgās intereses: Analītika un pakalpojuma uzlabošana, krāpšanas novēršana (6. panta 1. punkts f) GDPR).",
+          "Piekrīšana: Attiecībā uz izvēles funkcijām, piemēram, mārketinga komunikācijām (6. panta 1. punkts a) GDPR).",
+          "Juridiskā saistība: Kad to prasa likums vai regulatīvās prasības (6. panta 1. punkts c) GDPR)."
+        ]
+      },
+      {
+        "title": "6. Datu glabāšana un drošība",
+        "content": [
+          "Jūsu dati tiek glabāti drošos serveros, ko nodrošina Amazon Web Services (AWS). Mūsu datubāze tiek mitināta AWS Stokholmā (eu-north-1) reģionā Eiropas Savienībā, nodrošinot atbilstību ES datu aizsardzības prasībām.",
+          "Attēli un multivides faili, ko jūs augšupielādējat, tiek glabāti AWS S3 serveros, kas atrodas ES reģionā. Dati tiek šifrēti pārsūtīšanas laikā, izmantojot TLS/SSL, un miera stāvoklī, izmantojot AES-256 šifrēšanu.",
+          "Mēs īstenojam atbilstošus tehniskos un organizatoriskos pasākumus, lai aizsargātu jūsu datus pret nesankcionētu piekļuvi, izmaiņām, atklāšanu vai iznīcināšanu. Tie ietver drošu autentifikāciju, piekļuves kontroli, regulāras drošības auditus un darbinieku apmācību."
+        ]
+      },
+      {
+        "title": "7. Datu koplietošana un trešās puses",
+        "content": [
+          "Mēs kopīgojam jūsu datus ar šādām trešo pušu kategorijām:",
+          "Stripe (maksājumu apstrādātājs): Apstrādā abonementa maksājumus. Stripe ir sertificēts saskaņā ar ES-ASV datu privātuma sistēmu. Viņu privātuma politika: https://stripe.com/privacy",
+          "Amazon Web Services (infrastruktūra): Mitina mūsu serverus un datubāzes ES reģionos. AWS ievēro GDPR un ir sertificēts saskaņā ar ES-ASV datu privātuma sistēmu.",
+          "Mākslīgā intelekta pakalpojumu sniedzēji: Mēs izmantojam AI pakalpojumus ēdienkaršu tulkošanai un attēlu optimizācijai. Dati tiek apstrādāti saskaņā ar viņu privātuma politikām un datu apstrādes līgumiem.",
+          "Google Analytics: Anonimizētai vietnes analītikai (ja iespējots). Jūs varat atteikties, izmantojot sīkdatņu preferences.",
+          "Mēs nepārdodam jūsu personas datus trešajām pusēm. Mēs varam atklāt datus, ja to prasa likums vai lai aizsargātu mūsu juridiskās tiesības."
+        ]
+      },
+      {
+        "title": "8. Starptautiskie datu pārsūtījumi",
+        "content": [
+          "Jūsu dati galvenokārt tiek glabāti un apstrādāti Eiropas Savienībā (AWS Stokholmā, eu-north-1 reģionā). Kad dati tiek pārsūtīti ārpus ES (piemēram, uz ASV bāzētiem pakalpojumu sniedzējiem), mēs nodrošinām atbilstošus drošības pasākumus, tostarp Standarta līgumslēgšanas klauzulas (SCC) un sertifikāciju saskaņā ar atzītām datu aizsardzības sistēmām."
+        ]
+      },
+      {
+        "title": "9. Datu glabāšanas termiņš",
+        "content": [
+          "Kontu dati: Glabājas, kamēr jūsu konts ir aktīvs. Pēc konta dzēšanas personas dati tiek dzēsti 30 dienu laikā, izņemot gadījumus, kad glabāšana ir nepieciešama saskaņā ar likumu.",
+          "Ēdienkartes saturs: Glabājas, kamēr jūsu konts ir aktīvs. Tiek dzēsts pēc konta izbeigšanas.",
+          "Maksājumu ieraksti: Glabājas 7 gadus, kā to prasa Spānijas nodokļu likums.",
+          "Analītikas dati: Apkopoti un anonimizēti dati var tikt glabāti neierobežoti pakalpojuma uzlabošanai.",
+          "Dublēšanas dati: Var tikt glabāti šifrētās dublējumos līdz 90 dienām pēc dzēšanas katastrofu atjaunošanas nolūkiem."
+        ]
+      },
+      {
+        "title": "10. Jūsu tiesības saskaņā ar GDPR",
+        "content": [
+          "Saskaņā ar GDPR jums ir šādas tiesības attiecībā uz jūsu personas datiem:",
+          "Tiesības uz piekļuvi: Pieprasīt kopiju no jūsu personas datiem, kurus mēs glabājam.",
+          "Tiesības uz labošanu: Pieprasīt neprecīzu vai nepilnīgu datu labošanu.",
+          "Tiesības uz dzēšanu: Pieprasīt savu personas datu dzēšanu ('tiesības tikt aizmirstam').",
+          "Tiesības uz ierobežojumu: Pieprasīt apstrādes ierobežojumu noteiktos apstākļos.",
+          "Tiesības uz datu pārnesamību: Saņemt savus datus strukturētā, mašīnā lasāmā formātā.",
+          "Tiesības iebilst: Iebilst pret apstrādi, pamatojoties uz likumīgām interesēm vai tiešo mārketingu.",
+          "Tiesības atsaukt piekrišanu: Ja apstrāde balstās uz piekrišanu, jūs varat to atsaukt jebkurā laikā.",
+          "Lai izmantotu šīs tiesības, sazinieties ar mums pa e-pastu support@iq-rest.com. Mēs atbildēsim 30 dienu laikā. Ja jūs neesat apmierināti ar mūsu atbildi, jums ir tiesības iesniegt sūdzību Spānijas Datu aizsardzības aģentūrā (AEPD) vietnē www.aepd.es."
+        ]
+      },
+      {
+        "title": "11. Bērnu privātums",
+        "content": [
+          "IQ Rest nav paredzēts lietošanai personām, kas jaunākas par 16 gadiem. Mēs neapzināti apkopojam personas datus no bērniem. Ja mēs uzzinām, ka esam apkopojuši datus no bērna, mēs tos nekavējoties dzēsīsim."
+        ]
+      },
+      {
+        "title": "12. Izmaiņas šajā politikā",
+        "content": [
+          "Mēs varam laiku pa laikam atjaunināt šo privātuma politiku. Mēs jūs informēsim par būtiskām izmaiņām, izmantojot e-pastu vai paziņojumu mūsu vietnē. 'Pēdējoreiz atjaunināts' datums augšpusē norāda, kad politika tika pēdējo reizi pārskatīta.",
+          "Jūsu turpmākā IQ Rest izmantošana pēc izmaiņu publicēšanas nozīmē, ka jūs piekrītat pārskatītajai politikai."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Sīkdatņu politika",
+    "lastUpdated": "Pēdējoreiz atjaunināts: 2025. gada 17. decembrī",
+    "yes": "Jā",
+    "no": "Nē",
+    "cookieTableTitle": "Sīkdatnes, ko mēs izmantojam",
+    "tableHeaders": {
+      "name": "Sīkdatnes nosaukums",
+      "purpose": "Mērķis",
+      "duration": "Ilgums",
+      "required": "Nepieciešams"
+    },
+    "contact": {
+      "title": "Jautājumi par sīkdatnēm",
+      "description": "Ja jums ir kādi jautājumi par mūsu sīkdatņu izmantošanu, lūdzu, sazinieties ar mums."
+    },
+    "sections": [
+      {
+        "title": "1. Kas ir sīkdatnes",
+        "content": [
+          "Sīkdatnes ir mazi teksta faili, kas tiek saglabāti jūsu ierīcē (datorā, planšetē vai mobilajā telefonā), kad apmeklējat tīmekļa vietni. Tās palīdz tīmekļa vietnēm pareizi darboties, atcerēties jūsu preferences un sniegt informāciju tīmekļa vietņu īpašniekiem.",
+          "Šī sīkdatņu politika izskaidro, kā IQ Rest, ko pārvalda Bogdan Sokolov (Autónomo), izmanto sīkdatnes un līdzīgas tehnoloģijas mūsu tīmekļa vietnē iq-rest.com."
+        ]
+      },
+      {
+        "title": "2. Kā mēs izmantojam sīkdatnes",
+        "content": [
+          "Mēs izmantojam sīkdatnes vairākiem mērķiem: lai nodrošinātu, ka mūsu tīmekļa vietne darbojas pareizi, lai atcerētos jūsu preferences un iestatījumus, lai autentificētu jūsu kontu un saglabātu jūs pieslēgtu, lai analizētu, kā apmeklētāji izmanto mūsu tīmekļa vietni, lai mēs varētu to uzlabot, un lai atcerētos jūsu sīkdatņu piekrišanas preferences."
+        ]
+      },
+      {
+        "title": "3. Sīkdatņu veidi, ko mēs izmantojam",
+        "content": [
+          "Nepieciešamās sīkdatnes: Šīs sīkdatnes ir nepieciešamas, lai tīmekļa vietne darbotos un tās nevar izslēgt. Tās parasti tiek iestatītas kā atbilde uz darbībām, ko veicat, piemēram, pieslēdzoties vai iestatot savas privātuma preferences.",
+          "Funkcionālās sīkdatnes: Šīs sīkdatnes nodrošina uzlabotu funkcionalitāti un personalizāciju, piemēram, atceroties jūsu valodas preference un tēmas iestatījumus.",
+          "Analītiskās sīkdatnes: Šīs sīkdatnes palīdz mums saprast, kā apmeklētāji mijiedarbojas ar mūsu tīmekļa vietni, vācot un ziņojot par informāciju anonīmi. Mēs izmantojam šos datus, lai uzlabotu mūsu pakalpojumu.",
+          "Trešo pušu sīkdatnes: Dažas sīkdatnes tiek iestatītas no trešo pušu pakalpojumiem, kas parādās mūsu lapās, piemēram, maksājumu apstrādātāji (Stripe) un analītikas pakalpojumu sniedzēji (Google Analytics)."
+        ]
+      },
+      {
+        "title": "4. Jūsu sīkdatņu izvēles",
+        "content": [
+          "Kad pirmo reizi apmeklējat mūsu tīmekļa vietni, jūs redzēsiet sīkdatņu piekrišanas baneri, kas ļauj jums pieņemt vai noraidīt neobligātās sīkdatnes. Jūs varat mainīt savas preferences jebkurā laikā.",
+          "Jūs varat arī kontrolēt sīkdatnes, izmantojot pārlūkprogrammas iestatījumus. Lielākā daļa pārlūkprogrammu ļauj jums atteikties no sīkdatnēm, dzēst esošās sīkdatnes vai saņemt brīdinājumus, kad sīkdatnes tiek nosūtītas. Lūdzu, ņemiet vērā, ka nepieciešamo sīkdatņu bloķēšana var ietekmēt mūsu tīmekļa vietnes funkcionalitāti.",
+          "Lai atteiktos no Google Analytics izsekošanas, jūs varat instalēt Google Analytics Opt-out pārlūkprogrammas paplašinājumu."
+        ]
+      },
+      {
+        "title": "5. Sīkdatņu ilgums",
+        "content": [
+          "Sesijas sīkdatnes: Šīs sīkdatnes ir pagaidu un tiek dzēstas, kad jūs aizverat pārlūkprogrammu.",
+          "Pastāvīgās sīkdatnes: Šīs sīkdatnes paliek jūsu ierīcē noteiktu laiku vai līdz jūs tās izdzēšat. Tās palīdz mums jūs atpazīt, kad atgriežaties mūsu tīmekļa vietnē."
+        ]
+      },
+      {
+        "title": "6. Trešo pušu sīkdatnes",
+        "content": [
+          "Stripe: Izmanto drošai maksājumu apstrādei. Stripe var iestatīt sīkdatnes, lai novērstu krāpšanu un droši apstrādātu maksājumus. Uzziniet vairāk vietnē stripe.com/cookies-policy",
+          "Google Analytics: Izmanto, lai vāktu anonīmus statistikas datus par tīmekļa vietnes izmantošanu. Jūs varat atteikties, izmantojot sīkdatņu baneri vai pārlūkprogrammas iestatījumus. Uzziniet vairāk vietnē policies.google.com/privacy"
+        ]
+      },
+      {
+        "title": "7. Atjauninājumi šai politikai",
+        "content": [
+          "Mēs varam laiku pa laikam atjaunināt šo sīkdatņu politiku, lai atspoguļotu izmaiņas mūsu praksē vai operatīvos, juridiskos vai regulatīvos iemeslus. Datums 'Pēdējoreiz atjaunināts' augšpusē norāda, kad politika tika pēdējo reizi pārskatīta."
+        ]
+      }
+    ],
+    "cookieTypes": [
+      {
+        "name": "session",
+        "purpose": "Uztur jūsu pieslēgšanās sesiju un autentifikācijas stāvokli",
+        "duration": "Sesija / 30 dienas",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "purpose": "Atceras jūsu izvēlēto valodu (angļu/spāņu)",
+        "duration": "1 gads",
+        "required": true
+      },
+      {
+        "name": "theme",
+        "purpose": "Saglabā jūsu tēmas preference (gaišais/ Tumšais režīms)",
+        "duration": "1 gads",
+        "required": false
+      },
+      {
+        "name": "cookie-consent",
+        "purpose": "Atceras jūsu sīkdatņu piekrišanas preferences",
+        "duration": "1 gads",
+        "required": true
+      },
+      {
+        "name": "_ga, _gid",
+        "purpose": "Google Analytics - izseko anonīmus lietošanas statistikas datus",
+        "duration": "2 gadi / 24 stundas",
+        "required": false
+      },
+      {
+        "name": "__stripe_mid, __stripe_sid",
+        "purpose": "Stripe - krāpšanas novēršana un maksājumu drošība",
+        "duration": "1 gads / Sesija",
+        "required": false
+      }
+    ]
+  }
+}
