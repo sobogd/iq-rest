@@ -134,7 +134,7 @@ export function OnboardingPage() {
               size="lg"
               onClick={() => {
                 analytics.onboarding.viewMenu();
-                window.open(`/${slug}`, "_blank");
+                window.open(`/m/${slug}`, "_blank");
               }}
             >
               <ExternalLink className="mr-2 h-4 w-4" />
