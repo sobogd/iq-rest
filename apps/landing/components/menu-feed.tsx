@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { getAllergenIcon, ALLERGENS } from "@/lib/allergens";
+import { formatPrice } from "@/lib/currencies";
 
 interface Item {
   id: string;
@@ -29,10 +30,11 @@ interface AllergenTranslations {
 interface MenuFeedProps {
   categories: Category[];
   accentColor?: string;
+  currency?: string;
   allergenTranslations: AllergenTranslations;
 }
 
-export function MenuFeed({ categories, accentColor, allergenTranslations }: MenuFeedProps) {
+export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTranslations }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
   const [selectedAllergens, setSelectedAllergens] = useState<string[] | null>(null);
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -183,7 +185,7 @@ export function MenuFeed({ categories, accentColor, allergenTranslations }: Menu
                       <div className="flex justify-between items-start gap-4">
                         <h3 className="font-semibold text-lg text-black">{item.name}</h3>
                         <span className="font-bold text-lg shrink-0 text-black">
-                          €{Number(item.price).toFixed(2)}
+                          {formatPrice(Number(item.price), currency)}
                         </span>
                       </div>
                       {item.description && (

@@ -38,6 +38,7 @@ import type { AllergenCode } from "@/lib/allergens";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
 import { analytics } from "@/lib/analytics";
+import { formatPrice } from "@/lib/currencies";
 
 interface TranslationData {
   name?: string;
@@ -64,6 +65,7 @@ export function ItemsPage() {
 
   const [items, setItems] = useState<ItemWithTranslations[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [currency, setCurrency] = useState("EUR");
   const [loading, setLoading] = useState(true);
   const [editingItem, setEditingItem] = useState<ItemWithTranslations | null>(null);
   const [showForm, setShowForm] = useState(false);
@@ -99,21 +101,26 @@ export function ItemsPage() {
 
   async function fetchData() {
     try {
-      const [itemsRes, categoriesRes] = await Promise.all([
+      const [itemsRes, categoriesRes, restaurantRes] = await Promise.all([
         fetch("/api/items"),
         fetch("/api/categories"),
+        fetch("/api/restaurant"),
       ]);
 
       if (!itemsRes.ok) throw new Error("Failed to fetch items");
       if (!categoriesRes.ok) throw new Error("Failed to fetch categories");
 
-      const [itemsData, categoriesData] = await Promise.all([
+      const [itemsData, categoriesData, restaurantData] = await Promise.all([
         itemsRes.json(),
         categoriesRes.json(),
+        restaurantRes.ok ? restaurantRes.json() : null,
       ]);
 
       setItems(itemsData);
       setCategories(categoriesData);
+      if (restaurantData?.currency) {
+        setCurrency(restaurantData.currency);
+      }
     } catch (error) {
       console.error("Failed to fetch data:", error);
       toast.error(t.fetchError);
@@ -314,7 +321,7 @@ export function ItemsPage() {
 
                         {!sortMode && (
                           <span className="text-sm text-muted-foreground ml-2">
-                            €{item.price.toFixed(2)}
+                            {formatPrice(item.price, currency)}
                           </span>
                         )}
 

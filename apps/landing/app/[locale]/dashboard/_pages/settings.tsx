@@ -27,11 +27,7 @@ import {
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
-
-const CURRENCIES = [
-  { code: "EUR", symbol: "€" },
-  { code: "USD", symbol: "$" },
-];
+import { CURRENCIES } from "@/lib/currencies";
 
 interface Restaurant {
   id: string;
@@ -233,7 +229,7 @@ export function SettingsPage() {
           placeholder={t("currencyPlaceholder")}
           options={CURRENCIES.map((c) => ({
             value: c.code,
-            label: `${c.code} (${c.symbol})`,
+            label: `${c.code} (${c.symbol}) - ${c.name}`,
           }))}
         />
       </form>

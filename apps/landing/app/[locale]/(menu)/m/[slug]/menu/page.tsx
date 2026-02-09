@@ -27,6 +27,7 @@ async function getRestaurantWithMenu(slug: string) {
       companyId: true,
       defaultLanguage: true,
       accentColor: true,
+      currency: true,
     },
   });
 
@@ -117,6 +118,7 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
         <MenuFeed
           categories={categoriesWithItems}
           accentColor={restaurant.accentColor}
+          currency={restaurant.currency}
           allergenTranslations={{
             title: t("allergens"),
             info: t("allergensInfo"),
