@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { moveFromTemp } from "@/lib/s3";
 import { Prisma } from "@prisma/client";
+import { locales } from "@/i18n/routing";
 
 type TranslationData = {
   name?: string;
@@ -117,6 +118,12 @@ export async function POST(request: NextRequest) {
         );
       }
 
+      // Get locale from cookie for default language
+      const localeCookie = request.cookies.get("NEXT_LOCALE")?.value;
+      const userLocale = localeCookie && locales.includes(localeCookie as typeof locales[number])
+        ? localeCookie
+        : "en";
+
       const restaurant = await prisma.restaurant.create({
         data: {
           title: data.title,
@@ -124,15 +131,15 @@ export async function POST(request: NextRequest) {
           slug: data.slug || null,
           currency: data.currency || "EUR",
           source: finalSource,
-          accentColor: data.accentColor || "#E11D48",
+          accentColor: data.accentColor || "#000000",
           address: data.address || null,
           x: data.x || null,
           y: data.y || null,
           phone: data.phone || null,
           instagram: data.instagram || null,
           whatsapp: data.whatsapp || null,
-          languages: data.languages || ["en"],
-          defaultLanguage: data.defaultLanguage || "en",
+          languages: data.languages || [userLocale],
+          defaultLanguage: data.defaultLanguage || userLocale,
           // Reservation settings
           reservationsEnabled: data.reservationsEnabled ?? false,
           reservationMode: data.reservationMode ?? "manual",
