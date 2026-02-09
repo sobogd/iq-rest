@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Sāciet pieņemt pasūtījumus jau šodien",
       "subtitle": "Jūsu klienti gaida digitālo ēdienkarti"
-    }
+    },
+    "icloudWarning": "iCloud var aizkavēt vai bloķēt e-pastus. Pārbaudiet surogātpastu vai izmantojiet Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezervācijas",

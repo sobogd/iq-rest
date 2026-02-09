@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Aloita tilausten vastaanottaminen tänään",
       "subtitle": "Asiakkaasi odottavat digitaalista valikkoa"
-    }
+    },
+    "icloudWarning": "iCloud voi viivästyttää tai estää sähköposteja. Tarkista roskaposti tai käytä Gmail/Outlook."
   },
   "reservations": {
     "title": "Varaus",

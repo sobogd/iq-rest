@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Begynn å ta imot bestillinger i dag",
       "subtitle": "Kundene dine venter på en digital meny"
-    }
+    },
+    "icloudWarning": "iCloud kan forsinke eller blokkere e-poster. Sjekk spam eller bruk Gmail/Outlook."
   },
   "reservations": {
     "title": "Reservasjoner",

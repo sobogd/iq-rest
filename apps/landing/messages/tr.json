@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Bugün sipariş almaya başlayın",
       "subtitle": "Müşterileriniz dijital menüyü bekliyor"
-    }
+    },
+    "icloudWarning": "iCloud e-postaları geciktirebilir veya engelleyebilir. Spam klasörünü kontrol edin veya Gmail/Outlook kullanın."
   },
   "reservations": {
     "title": "Rezervasyonlar",

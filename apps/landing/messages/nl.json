@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Begin vandaag met het accepteren van bestellingen",
       "subtitle": "Uw klanten wachten op een digitaal menu"
-    }
+    },
+    "icloudWarning": "iCloud kan e-mails vertragen of blokkeren. Controleer uw spam of gebruik Gmail/Outlook."
   },
   "reservations": {
     "title": "Reserveringen",

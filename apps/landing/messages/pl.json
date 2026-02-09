@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Zacznij przyjmować zamówienia już dziś",
       "subtitle": "Twoi klienci czekają na cyfrowe menu"
-    }
+    },
+    "icloudWarning": "iCloud może opóźniać lub blokować e-maile. Sprawdź spam lub użyj Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezerwacje",

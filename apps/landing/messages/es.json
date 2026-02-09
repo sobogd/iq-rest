@@ -937,6 +937,7 @@
       "sendFailed": "Error al enviar el código de verificación. Por favor, inténtalo de nuevo.",
       "verifyFailed": "Error al verificar el código. Por favor, inténtalo de nuevo."
     },
+    "icloudWarning": "iCloud puede retrasar o bloquear correos de nuevos remitentes. Revisa tu carpeta de Spam o usa otro correo (Gmail, Outlook).",
     "valueProps": {
       "noSkills": "Sin conocimientos técnicos",
       "instantUpdates": "Actualizaciones instantáneas",

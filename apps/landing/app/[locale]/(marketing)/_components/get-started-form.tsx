@@ -58,6 +58,11 @@ export function GetStartedForm() {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }, [email]);
 
+  const isICloudEmail = useMemo(() => {
+    const domain = email.toLowerCase().split("@")[1];
+    return ["icloud.com", "me.com", "mac.com"].includes(domain);
+  }, [email]);
+
   useEffect(() => {
     setIsVisible(true);
     emailInputRef.current?.focus();
@@ -248,6 +253,12 @@ export function GetStartedForm() {
 
       {step === "otp" && (
         <div className="space-y-4">
+          {isICloudEmail && (
+            <div className="p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-yellow-600 dark:text-yellow-400 text-sm text-left max-w-[500px] mx-auto">
+              {t("icloudWarning")}
+            </div>
+          )}
+
           {status === "error" && errorMessage && (
             <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm text-left max-w-[400px] mx-auto">
               {errorMessage}

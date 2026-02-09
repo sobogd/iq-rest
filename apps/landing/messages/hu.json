@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Kezdje el ma az rendeléseket",
       "subtitle": "Az ügyfelei várják a digitális menüt"
-    }
+    },
+    "icloudWarning": "Az iCloud késleltetheti vagy blokkolhatja az e-maileket. Ellenőrizze a spam mappát vagy használjon Gmail/Outlook."
   },
   "reservations": {
     "title": "Foglalások",

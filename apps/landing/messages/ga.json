@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Tosaigh ag glacadh orduithe inniu",
       "subtitle": "Tá do chustaiméirí ag fanacht le meán digiteach"
-    }
+    },
+    "icloudWarning": "D'fhéadfadh iCloud ríomhphoist a mhoilliú nó a bhac. Seiceáil spam nó úsáid Gmail/Outlook."
   },
   "reservations": {
     "title": "Conradh",

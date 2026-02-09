@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Pradėkite priimti užsakymus šiandien",
       "subtitle": "Jūsų klientai laukia skaitmeninio meniu"
-    }
+    },
+    "icloudWarning": "iCloud gali vėluoti arba blokuoti el. laiškus. Patikrinkite šlamštą arba naudokite Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezervacijos",

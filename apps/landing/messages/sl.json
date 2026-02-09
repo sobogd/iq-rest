@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Začnite sprejemati naročila danes",
       "subtitle": "Vaši kupci čakajo na digitalni meni"
-    }
+    },
+    "icloudWarning": "iCloud lahko zamuja ali blokira e-pošto. Preverite neželeno pošto ali uporabite Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezervacije",

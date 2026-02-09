@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Začněte přijímat objednávky ještě dnes",
       "subtitle": "Vaši zákazníci čekají na digitální menu"
-    }
+    },
+    "icloudWarning": "iCloud může zpozdit nebo blokovat e-maily. Zkontrolujte spam nebo použijte Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezervace",

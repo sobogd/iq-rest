@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
     // Email content
     const mailOptions = {
       from: process.env.FROM_EMAIL,
+      replyTo: email,
       to: process.env.TO_EMAIL,
       subject: `IQ Rest Contact Form: ${subject}`,
       html: `

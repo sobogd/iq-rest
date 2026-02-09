@@ -937,6 +937,7 @@
       "sendFailed": "Failed to send verification code. Please try again.",
       "verifyFailed": "Failed to verify code. Please try again."
     },
+    "icloudWarning": "iCloud may delay or block emails from new senders. Check your Spam folder or try a different email (Gmail, Outlook).",
     "valueProps": {
       "noSkills": "No technical skills required",
       "instantUpdates": "Instant menu updates",

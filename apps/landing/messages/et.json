@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Alustage tellimuste vastuvõtmist juba täna",
       "subtitle": "Teie kliendid ootavad digitaalset menüüd"
-    }
+    },
+    "icloudWarning": "iCloud võib e-kirju viivitada või blokeerida. Kontrollige rämpsposti või kasutage Gmail/Outlook."
   },
   "reservations": {
     "title": "Broneeringud",

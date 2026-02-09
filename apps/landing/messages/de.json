@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Beginnen Sie noch heute mit der Annahme von Bestellungen",
       "subtitle": "Ihre Kunden warten auf ein digitales Menü"
-    }
+    },
+    "icloudWarning": "iCloud kann E-Mails verzögern oder blockieren. Prüfen Sie Ihren Spam-Ordner oder verwenden Sie Gmail/Outlook."
   },
   "reservations": {
     "title": "Reservierungen",

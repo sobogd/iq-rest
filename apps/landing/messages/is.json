@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Byrjaðu að taka við pöntunum í dag",
       "subtitle": "Kúnnar þínir bíða eftir stafrænum matseðli"
-    }
+    },
+    "icloudWarning": "iCloud gæti seinkað eða lokað á tölvupósta. Athugaðu ruslpóst eða notaðu Gmail/Outlook."
   },
   "reservations": {
     "title": "Bókanir",

@@ -1055,7 +1055,8 @@
     "motivational": {
       "title": "Începe să accepți comenzi astăzi",
       "subtitle": "Clienții tăi așteaptă un meniu digital"
-    }
+    },
+    "icloudWarning": "iCloud poate întârzia sau bloca e-mailurile. Verificați spam-ul sau folosiți Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezerve",
