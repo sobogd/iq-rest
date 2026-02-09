@@ -70,6 +70,9 @@ export function LanguageSelector() {
   }, [search]);
 
   const handleLanguageChange = (newLocale: string) => {
+    // Сохраняем выбор языка в cookie на 1 год
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
+
     startTransition(() => {
       router.replace(pathname, { locale: newLocale });
       setOpen(false);
