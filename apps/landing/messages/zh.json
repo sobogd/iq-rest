@@ -1,0 +1,1193 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "菜单",
+      "pricing": "价格",
+      "features": "功能",
+      "faq": "问题",
+      "changelog": "更新日志",
+      "contacts": "联系我们"
+    },
+    "getStarted": "登录",
+    "selectLanguage": "选择语言",
+    "selectLanguageDescription": "选择您偏好的网站语言。",
+    "searchLanguage": "搜索语言...",
+    "noLanguagesFound": "未找到语言"
+  },
+  "home": {
+    "hero": {
+      "title": "5分钟创建餐厅QR菜单和网站",
+      "subtitle": "只需输入您的电子邮件，即可获得完整的餐厅网站，包括QR菜单、联系页面、多语言支持和现代设计。在手机上完成所有设置。",
+      "cta": {
+        "create": "创建菜单",
+        "view": "查看真实菜单"
+      },
+      "benefits": [
+        {
+          "title": "现代网站",
+          "description": "在任何设备上都看起来很棒的专业设计"
+        },
+        {
+          "title": "预订",
+          "description": "直接从您的网站接受餐桌预订"
+        },
+        {
+          "title": "AI翻译",
+          "description": "自动将菜单翻译成任何语言"
+        },
+        {
+          "title": "每日分析",
+          "description": "每天跟踪访问量和热门菜品"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "全球500多家餐厅信赖",
+      "title": "餐厅所需的一切在线功能",
+      "description": "只需电子邮件即可注册并立即获得：专业餐厅网站、现代格式的QR菜单、带地图的功能性联系页面、AI翻译多语言支持、视频或照片背景以及自定义配色方案。所有功能都可在手机上管理 - 无需电脑。"
+    },
+    "whyUs": {
+      "title": "从零到在线菜单只需5分钟",
+      "subtitle": "只需4个简单步骤让您的餐厅上线",
+      "items": [
+        {
+          "step": "1",
+          "title": "输入您的电子邮件",
+          "description": "只需电子邮件地址即可快速注册。无需信用卡。"
+        },
+        {
+          "step": "2",
+          "title": "填写餐厅信息",
+          "description": "添加您的餐厅名称、地址、联系方式和营业时间。"
+        },
+        {
+          "step": "3",
+          "title": "添加菜单项目",
+          "description": "创建类别并添加带照片和价格的菜品。"
+        },
+        {
+          "step": "4",
+          "title": "享受您的菜单",
+          "description": "您的QR菜单已准备就绪！与顾客分享并跟踪分析。"
+        }
+      ],
+      "cta": "准备好让您的餐厅现代化了吗？"
+    },
+    "featuresPreview": {
+      "title": "为您的餐厅提供强大功能",
+      "subtitle": "创建专业在线形象所需的一切",
+      "viewAll": "查看所有功能"
+    }
+  },
+  "features": {
+    "title": "餐厅QR菜单和网站的强大功能",
+    "subtitle": "为您的餐厅或咖啡厅创建专业数字形象所需的一切",
+    "backToFeatures": "返回功能",
+    "getStarted": "创建菜单",
+    "viewPricing": "查看价格",
+    "readyTitle": "准备开始了吗？",
+    "readyDescription": "几分钟内创建您的专业QR菜单和餐厅网站。包含所有功能。",
+    "keyBenefits": "主要优势",
+    "faqTitle": "常见问题",
+    "faq": {
+      "instant-setup": [
+        { "q": "开始需要什么？", "a": "只需您的电子邮件地址。无需信用卡，无需复杂表格。" },
+        { "q": "设置需要多长时间？", "a": "您的网站即刻就绪。添加菜单项目后5分钟即可上线。" },
+        { "q": "有免费计划吗？", "a": "是的，免费开始，包含所有基本功能。" }
+      ],
+      "mobile-management": [
+        { "q": "需要安装应用吗？", "a": "无需应用 - 一切都在手机浏览器中运行。" },
+        { "q": "可以从手机上传照片吗？", "a": "是的，用相机拍照并直接上传到菜单。" },
+        { "q": "平板电脑上能用吗？", "a": "是的，仪表板针对手机、平板电脑和台式电脑进行了优化。" }
+      ],
+      "ai-translation": [
+        { "q": "AI翻译有多准确？", "a": "我们的AI理解烹饪上下文，保留菜名并自然翻译描述。" },
+        { "q": "翻译有多快？", "a": "整个菜单在几秒钟内翻译完成，而不是几小时。" },
+        { "q": "可以编辑AI翻译吗？", "a": "是的，所有翻译都可编辑 - 根据需要审查和调整。" }
+      ],
+      "multilingual": [
+        { "q": "支持多少种语言？", "a": "25种以上语言，包括所有主要欧洲语言、中文、日语、韩语、阿拉伯语和希伯来语。" },
+        { "q": "顾客如何切换语言？", "a": "菜单上会显示语言选择器 - 一键切换到任何可用语言。" },
+        { "q": "翻译是自动的吗？", "a": "您可以使用AI翻译或手动输入每种语言的翻译。" }
+      ],
+      "ai-images": [
+        { "q": "支持哪些图像格式？", "a": "上传JPG、PNG或WebP - 图像会自动优化。" },
+        { "q": "优化会降低质量吗？", "a": "不会，我们的AI在减小文件大小以加快加载的同时保持视觉质量。" },
+        { "q": "有文件大小限制吗？", "a": "上传最大10MB的图像 - 它们会自动优化。" }
+      ],
+      "easy-menu": [
+        { "q": "如何添加新菜品？", "a": "点击'添加项目'，输入名称、描述、价格，可选上传照片。就是这样！" },
+        { "q": "可以重新排序菜单项目吗？", "a": "是的，只需拖放项目或类别即可重新排序。" },
+        { "q": "如果菜品售罄怎么办？", "a": "暂时关闭该项目 - 它会从菜单中消失但不会被删除。" }
+      ],
+      "analytics": [
+        { "q": "可以跟踪哪些指标？", "a": "每日浏览量、页面表现、语言偏好和时间趋势。" },
+        { "q": "数据多久更新一次？", "a": "分析实时更新 - 立即查看今天的访客。" },
+        { "q": "可以导出分析数据吗？", "a": "直接在仪表板中查看详细报告。" }
+      ],
+      "reservations": [
+        { "q": "顾客如何预订？", "a": "顾客可以直接从您的餐厅网站预订。他们选择日期、时间和人数，然后收到电子邮件确认。" },
+        { "q": "可以手动批准预订吗？", "a": "是的，您可以为每个预订选择自动确认或手动批准。" },
+        { "q": "会收到新预订通知吗？", "a": "是的，每个新预订都会收到电子邮件通知。" }
+      ],
+      "custom-design": [
+        { "q": "支持哪些视频格式？", "a": "支持MP4和WebM格式。视频会自动优化以加快加载。" },
+        { "q": "可以使用自己的照片吗？", "a": "是的，上传任何照片，它会自动优化以供网页显示。" },
+        { "q": "视频会使菜单变慢吗？", "a": "不会，视频经过压缩和延迟加载以确保快速页面性能。" }
+      ],
+      "color-scheme": [
+        { "q": "可以选择多少种颜色？", "a": "从12种预设颜色中选择，或使用十六进制代码输入您的确切品牌颜色。" },
+        { "q": "支持深色模式吗？", "a": "是的，您的配色方案会自动适应浅色和深色主题。" },
+        { "q": "可以随时更改颜色吗？", "a": "是的，从仪表板即时更改强调色 - 更新立即显示。" }
+      ],
+      "personal-support": [
+        { "q": "如何联系支持？", "a": "使用联系表单或直接发送电子邮件 - 真人回复，不是机器人。" },
+        { "q": "响应时间是多久？", "a": "我们通常在工作日几小时内回复。" },
+        { "q": "免费计划有支持吗？", "a": "是的，所有计划都提供个人支持，包括免费计划。" }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "即时QR菜单和网站设置",
+        "shortDescription": "只需电子邮件即可创建餐厅网站和QR菜单 - 5分钟内准备就绪",
+        "description": "通过最简单的注册流程在几秒钟内开始。只需输入您的电子邮件，即可立即获得完整的餐厅网站，包括QR菜单、带地图的联系页面和现代设计。无需技术技能，无需复杂表格 - 您的餐厅立即上线。",
+        "fullDescription": "传统网站构建器需要数小时的设置、技术知识，通常还需要开发人员。IQ Rest改变了一切。输入您的电子邮件，用简单的代码验证，您的餐厅网站就准备好了。添加菜品，上传照片，与顾客分享您的QR码。整个过程不到5分钟。",
+        "benefits": [
+          "只需电子邮件即可开始 - 无需复杂注册",
+          "注册后餐厅网站即刻准备就绪",
+          "QR菜单自动生成并链接",
+          "默认包含带地图的联系页面",
+          "无需技术技能或编码知识"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "餐厅网站和QR菜单即时设置流程",
+        "cta": "了解更多"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100%移动友好管理",
+        "shortDescription": "没有电脑？没问题。在手机上运营整个餐厅网站。在厨房里添加菜品，服务期间更新价格，直接从相机上传照片。所有功能在移动设备上完美运行 - 因为餐厅老板从不坐在办公桌前。",
+        "description": "直接从手机添加类别、菜品、照片，并管理整个餐厅网站。我们的仪表板完全针对移动设备优化，因此您可以在咖啡休息时间更新菜单或在移动中添加每日特色。",
+        "fullDescription": "餐厅老板是忙碌的人，并不总是在电脑前。这就是为什么我们构建IQ Rest在移动设备上完美运行。从添加新菜品到更新价格，每个功能都是为触摸屏设计的。拍摄新菜品的照片并立即上传。站在厨房里更改今天的特色。",
+        "benefits": [
+          "在任何智能手机或平板电脑上完整访问仪表板",
+          "直接从手机相机上传照片",
+          "随时随地更新价格和描述",
+          "触摸友好界面管理类别",
+          "永远不需要电脑"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "在智能手机上管理餐厅菜单",
+        "cta": "查看移动仪表板"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AI驱动的菜单翻译",
+        "shortDescription": "不要因为语言障碍而失去国际顾客。我们的AI在几秒钟内将整个菜单翻译成25种以上语言 - 不是普通翻译，而是理解烹饪术语的上下文感知AI。'惠灵顿牛排'保持为'惠灵顿牛排'，而描述在每种语言中都读起来自然。",
+        "description": "通过理解食物上下文的智能AI翻译接触国际顾客。您的菜名和描述被准确翻译，保留烹饪术语并在任何语言中都有意义。",
+        "fullDescription": "普通翻译器通常在食品菜单上失败 - 它们不理解上下文就进行字面翻译。我们的AI专门针对餐厅内容进行训练。它知道'惠灵顿牛排'不应该被字面翻译，'al dente'在任何语言中都意味着相同的东西。为游客和国际客人提供用他们的语言自然阅读的菜单。",
+        "benefits": [
+          "针对食物和烹饪术语的上下文感知翻译",
+          "10种以上语言，包括西班牙语、法语、德语、中文、日语",
+          "保留烹饪术语和文化细微差别",
+          "即时翻译 - 菜单在几秒钟内可用",
+          "国际顾客销售额增加23%"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AI驱动的餐厅菜单翻译界面",
+        "cta": "探索AI翻译"
+      },
+      {
+        "id": "multilingual",
+        "title": "多语言餐厅网站",
+        "shortDescription": "用母语欢迎游客和国际客人。支持25种以上语言意味着每位顾客都感到宾至如归。一键切换语言 - 菜单、价格、描述全部即时适应。非常适合旅游区或国际城市的餐厅。",
+        "description": "您的餐厅网站自动支持多种语言。顾客可以一键切换语言，所有内容包括菜单、联系信息和导航都会即时适应。",
+        "fullDescription": "在旅游区和国际城市，用顾客的语言交流至关重要。IQ Rest让您的餐厅对每个人都可访问。顾客会看到语言选择器，可以用他们喜欢的语言浏览整个网站 - 菜单、联系方式、预订。结合AI翻译，您可以服务全世界。",
+        "benefits": [
+          "顾客一键语言切换",
+          "菜单、联系方式和所有页面都已翻译",
+          "再次访问时记住语言偏好",
+          "非常适合旅游区和国际城市",
+          "与AI翻译功能无缝配合"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "多语言餐厅网站语言选择器",
+        "cta": "查看多语言功能"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI图像优化",
+        "shortDescription": "自动图像增强，加快加载速度并提高质量",
+        "description": "上传任何照片，我们的AI会自动优化以供网页显示。图像在任何连接上都能快速加载，同时保持令人惊艳的质量，使您的菜品看起来令人垂涎。",
+        "fullDescription": "大型未优化的图像会减慢您的网站速度并让顾客沮丧。我们的AI处理每个上传的图像：调整到最佳尺寸、转换为现代格式并增强质量。结果？您的菜品看起来很棒，即使在慢速移动连接上页面也能在一秒内加载。",
+        "benefits": [
+          "自动调整到最佳网页尺寸",
+          "转换为WebP格式以加快加载",
+          "增强质量以获得更好的展示",
+          "页面在一秒内加载",
+          "适用于您上传的任何图像格式"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI图像优化前后对比",
+        "cta": "了解更多"
+      },
+      {
+        "id": "easy-menu",
+        "title": "轻松菜单管理",
+        "shortDescription": "几秒钟内更新菜单，而不是几小时。添加新菜品、编辑价格、重新组织类别 - 全部通过简单的拖放从任何设备完成。无需技术技能。更改立即生效，因此顾客始终看到最新的产品。",
+        "description": "管理菜单从未如此简单。添加类别，创建带照片和描述的菜品，设置价格，用简单的拖放组织一切。更改会立即出现在您的实时网站上。",
+        "fullDescription": "忘记复杂的内容管理系统。IQ Rest的菜单编辑器是为餐厅老板设计的，不是网页开发人员。几秒钟内创建新类别，几次点击即可添加菜品，直接从手机上传照片。拖动项目重新排序，切换售罄项目的可见性，立即看到更改生效。",
+        "benefits": [
+          "直观的类别和项目创建",
+          "拖放重新排序",
+          "无需删除即可切换项目开/关",
+          "即时更新 - 更改在几秒内显示",
+          "组织无限类别和菜品"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "轻松餐厅菜单管理仪表板",
+        "cta": "查看菜单编辑器"
+      },
+      {
+        "id": "analytics",
+        "title": "每日分析和洞察",
+        "shortDescription": "通过详细的每日报告跟踪页面浏览量、语言和顾客行为",
+        "description": "通过全面的分析了解您的顾客。查看每日页面浏览量、热门语言、最常查看的页面，并跟踪时间趋势。做出数据驱动的决策来优化您的菜单。",
+        "fullDescription": "知识就是力量。我们的分析仪表板准确显示顾客如何与您的餐厅网站互动。哪些页面浏览量最多？您的顾客偏好哪些语言？浏览量是否每周增加？使用这些洞察来优化您的菜单、定位正确的顾客并发展您的业务。",
+        "benefits": [
+          "每日、每周和每月浏览统计",
+          "语言偏好细分",
+          "逐页性能跟踪",
+          "时间趋势分析",
+          "导出数据进行进一步分析"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "带每日统计的餐厅分析仪表板",
+        "cta": "了解更多"
+      },
+      {
+        "id": "reservations",
+        "title": "餐桌预订系统",
+        "shortDescription": "不要因为漏接电话而失去顾客。直接从您的网站24/7接受餐桌预订 — 顾客在几秒钟内选择日期、时间和餐桌。自动确认、电子邮件通知和简单的仪表板来管理一切。",
+        "description": "内置的预订系统让顾客可以直接从您的网站预订餐桌。选择基于可用性的自动确认，或手动审核每个预订。从仪表板管理所有预订。",
+        "fullDescription": "电话预订既耗时又容易遗漏。IQ Rest的预订系统24/7工作。顾客选择日期、时间和人数，然后立即预订。您可以设置基于餐桌可用性的自动确认，或手动审核每个请求。通过电子邮件确认减少爽约。",
+        "benefits": [
+          "24/7在线预订功能",
+          "自动或手动确认模式",
+          "餐桌和容量管理",
+          "预订电子邮件通知",
+          "日历视图便于安排"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "餐厅在线餐桌预订系统",
+        "cta": "探索餐桌预订"
+      },
+      {
+        "id": "custom-design",
+        "title": "视频和照片背景",
+        "shortDescription": "第一印象能促成销售。在顾客扫描QR码的那一刻，用餐厅氛围的精彩视频或招牌菜的美丽照片吸引他们。用感觉高端专业的主页从竞争对手中脱颖而出。",
+        "description": "用主页上的自定义视频或照片背景创造难忘的第一印象。上传您餐厅氛围的视频或美丽的食物照片，立即吸引顾客。",
+        "fullDescription": "第一印象很重要。当顾客扫描您的QR码时，他们应该立即被打动。上传您餐厅氛围的视频、厨房的延时摄影或招牌菜的精彩照片。您的主页成为反映餐厅个性的视觉体验。",
+        "benefits": [
+          "支持视频和图像背景",
+          "自动优化以加快加载",
+          "在移动设备上完美运行",
+          "创造难忘的第一印象",
+          "反映您餐厅的独特氛围"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "带视频背景的餐厅网站",
+        "cta": "查看视频背景"
+      },
+      {
+        "id": "color-scheme",
+        "title": "自定义配色方案",
+        "shortDescription": "用与餐厅品牌标识相匹配的自定义强调色使菜单真正属于您。从12种美丽的预设颜色中选择或选择您确切的品牌色调。每个按钮、高亮和交互元素都会适应，创造顾客记住的统一专业外观。",
+        "description": "您的餐厅网站应该与您的品牌相匹配。从预设配色方案中选择或选择您确切的品牌颜色。结合自动明/暗主题支持，您的菜单始终看起来专业。",
+        "fullDescription": "品牌一致性很重要。IQ Rest让您自定义整个网站使用的强调色 - 按钮、高亮和交互元素都与您的品牌相匹配。从精心策划的预设中选择或输入您确切的品牌颜色。系统自动确保在明暗模式下的可读性。",
+        "benefits": [
+          "自定义强调色选择",
+          "可用预设配色方案",
+          "自动明/暗主题支持",
+          "所有页面的一致品牌",
+          "针对可访问性优化的颜色对比度"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "自定义配色方案和品牌选项",
+        "cta": "探索配色方案"
+      },
+      {
+        "id": "personal-support",
+        "title": "个人在线支持",
+        "shortDescription": "从真人而非聊天机器人获得任何问题的个人帮助",
+        "description": "每家餐厅都获得个人在线支持。有问题？需要设置帮助？想建议功能？真人会快速回复帮助您的数字菜单取得成功。",
+        "fullDescription": "我们相信每家餐厅都值得获得个人关注。当您联系支持时，您是在与了解餐厅并能真正提供帮助的真人交谈。没有聊天机器人，没有自动回复，没有工单队列。无论您需要帮助添加第一道菜还是需要优化菜单的建议，我们都在这里为您服务。",
+        "benefits": [
+          "真人支持 - 没有聊天机器人",
+          "快速响应时间",
+          "设置和优化帮助",
+          "欢迎功能请求",
+          "所有计划都可用，包括免费"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "餐厅个人在线支持聊天",
+        "cta": "了解更多"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QR菜单和餐厅网站价格",
+    "subtitle": "没有隐藏费用，没有惊喜。今天免费启动您的餐厅网站 — 准备好成长时再升级。",
+    "seo": {
+      "title": "为什么为您的餐厅或咖啡厅选择IQ Rest？",
+      "text": "几分钟内为您的餐厅或咖啡厅创建专业的QR菜单和网站。您的客人只需扫描QR码即可在手机上查看数字菜单 — 无需下载应用。即时更新价格、添加新菜品和更改描述。通过AI驱动的翻译，用母语服务国际顾客。通过内置分析跟踪哪些菜品浏览量最高。无论您经营小咖啡厅还是成长中的连锁餐厅，IQ Rest都能帮助您现代化菜单体验，同时降低印刷成本。"
+    },
+    "monthly": "月付",
+    "yearly": "年付",
+    "save": "（节省25%）",
+    "perMonth": "/月",
+    "billedYearly": "按年计费（€{total}）",
+    "forever": "永久免费",
+    "popular": "最受欢迎",
+    "plans": {
+      "free": {
+        "name": "免费",
+        "description": "非常适合试用IQ Rest",
+        "cta": "免费开始",
+        "highlights": [
+          "餐厅网站",
+          "QR菜单",
+          "每月300次扫描",
+          "2种语言",
+          "AI图像增强",
+          "分析"
+        ]
+      },
+      "basic": {
+        "name": "基础版",
+        "description": "适合小型餐厅",
+        "cta": "开始使用",
+        "highlights": [
+          "免费版所有功能，加上：",
+          "每月4,500次扫描",
+          "3种语言",
+          "AI翻译",
+          "自定义颜色主题",
+          "预订"
+        ]
+      },
+      "pro": {
+        "name": "专业版",
+        "description": "适合成长中的连锁餐厅",
+        "cta": "开始使用",
+        "highlights": [
+          "基础版所有功能，加上：",
+          "无限扫描",
+          "6种语言",
+          "优先支持",
+          "包含所有功能"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "比较计划",
+      "subtitle": "看看哪个计划适合您"
+    },
+    "features": {
+      "website": "餐厅网站",
+      "qrMenu": "QR菜单",
+      "scans": "每月扫描",
+      "languages": "支持的语言",
+      "aiTranslation": "AI翻译",
+      "aiImages": "AI图像增强",
+      "analytics": "分析",
+      "customTheme": "自定义颜色主题",
+      "background": "背景图像和视频",
+      "support": "支持",
+      "reservations": "预订"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "无限",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "需要帮助？让我们聊聊",
+    "subtitle": "你好，我是Bogdan — IQ Rest的创始人。我为自己的咖啡厅创建了这个平台，现在它帮助全球数百家餐厅。有问题或想法？直接写信给我。没有机器人，没有等待 — 只是真实的对话。",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "联系我们",
+      "email": "您的电子邮件",
+      "emailPlaceholder": "your@email.com",
+      "subject": "主题",
+      "subjectPlaceholder": "这是关于什么的？",
+      "message": "消息",
+      "messagePlaceholder": "告诉我您在想什么...",
+      "submit": "发送消息",
+      "sending": "发送中...",
+      "success": "您的消息已发送！感谢您的联系。我会尽快回复您。",
+      "error": "发送消息失败。请稍后再试。"
+    }
+  },
+  "languages": {
+    "en": "英语",
+    "es": "西班牙语",
+    "de": "德语",
+    "fr": "法语",
+    "it": "意大利语",
+    "pt": "葡萄牙语",
+    "nl": "荷兰语",
+    "pl": "波兰语",
+    "ru": "俄语",
+    "uk": "乌克兰语",
+    "sv": "瑞典语",
+    "da": "丹麦语",
+    "no": "挪威语",
+    "fi": "芬兰语",
+    "cs": "捷克语",
+    "el": "希腊语",
+    "tr": "土耳其语",
+    "ro": "罗马尼亚语",
+    "hu": "匈牙利语",
+    "bg": "保加利亚语",
+    "hr": "克罗地亚语",
+    "sk": "斯洛伐克语",
+    "sl": "斯洛文尼亚语",
+    "et": "爱沙尼亚语",
+    "lv": "拉脱维亚语",
+    "lt": "立陶宛语",
+    "sr": "塞尔维亚语",
+    "ca": "加泰罗尼亚语",
+    "ga": "爱尔兰语",
+    "is": "冰岛语",
+    "fa": "波斯语",
+    "ar": "阿拉伯语",
+    "ja": "日语",
+    "ko": "韩语",
+    "zh": "中文"
+  },
+  "cookieConsent": {
+    "title": "我们使用Cookie",
+    "description": "我们使用Cookie来增强您的浏览体验、提供个性化内容并分析我们的流量。点击「全部接受」，即表示您同意我们使用Cookie。",
+    "acceptAll": "全部接受",
+    "rejectAll": "全部拒绝",
+    "customize": "自定义",
+    "learnMore": "了解更多"
+  },
+  "footer": {
+    "navigation": {
+      "title": "导航",
+      "pricing": "价格",
+      "features": "功能",
+      "contacts": "联系我们",
+      "faq": "问题",
+      "changelog": "更新日志"
+    },
+    "legal": {
+      "title": "法律",
+      "terms": "条款和条件",
+      "privacy": "隐私政策",
+      "cookies": "Cookie政策",
+      "sitemap": "网站地图"
+    },
+    "copyright": "© 2025 IQ Rest. 保留所有权利。"
+  },
+  "changelog": {
+    "meta": {
+      "title": "更新日志 - IQ Rest更新和新功能",
+      "description": "了解IQ Rest的最新功能和改进 - 您的餐厅和咖啡厅数字QR菜单解决方案"
+    },
+    "title": "更新日志",
+    "subtitle": "您餐厅QR菜单的最新更新和新功能",
+    "readMore": "阅读更多",
+    "backToChangelog": "返回更新日志",
+    "seo": {
+      "title": "关于IQ Rest更新",
+      "description": "IQ Rest不断改进，帮助餐厅和咖啡厅创建专业的数字QR菜单。关注我们的更新日志，了解您餐厅网站和QR菜单解决方案的最新功能。"
+    },
+    "entries": {}
+  },
+  "qrCode": {
+    "title": "QR码",
+    "description": "下载并打印QR码供顾客扫描",
+    "preview": "预览",
+    "paperFormat": "纸张格式",
+    "qrPerPage": "每页QR码数",
+    "customText": "QR码下方文字",
+    "customTextPlaceholder": "扫描查看菜单",
+    "print": "打印",
+    "download": "下载PNG",
+    "viewMenu": "查看菜单",
+    "noSlug": "未设置菜单URL",
+    "noSlugDescription": "请先在设置中设置您的餐厅URL以生成QR码。",
+    "goToSettings": "转到设置",
+    "loading": "加载中...",
+    "menuUrl": "您的网站",
+    "websiteReady": "您的网站已准备就绪！",
+    "openWebsite": "打开网站",
+    "printSection": "打印和下载QR码：",
+    "formats": {
+      "a4": "A4 (210 × 297 mm)",
+      "a5": "A5 (148 × 210 mm)",
+      "a6": "A6 (105 × 148 mm)",
+      "letter": "Letter (216 × 279 mm)"
+    },
+    "perPage": {
+      "one": "1（整页）",
+      "two": "2 (1×2)",
+      "four": "4 (2×2)",
+      "six": "6 (2×3)",
+      "nine": "9 (3×3)",
+      "sixteen": "16 (4×4)"
+    },
+    "textSize": "文字大小",
+    "textSizes": {
+      "small": "小",
+      "medium": "中",
+      "large": "大"
+    }
+  },
+  "support": {
+    "title": "消息",
+    "subtitle": "从我们的团队获得帮助",
+    "unauthorized": "请登录以访问支持",
+    "lastUpdated": "已更新",
+    "emptyTitle": "还没有消息",
+    "emptyDescription": "发送消息开始对话",
+    "sendMessage": "发送消息",
+    "placeholder": "输入您的消息...",
+    "hint": "按Enter发送，Shift+Enter换行",
+    "send": "发送",
+    "supportTeam": "支持团队"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "5分钟创建您的数字菜单 - IQ Rest",
+      "description": "为您的餐厅提供QR菜单和网站。即刻准备。无需技术技能。"
+    },
+    "title": "5分钟创建您的数字菜单",
+    "subtitle": "为您的餐厅提供QR菜单和网站。即刻准备。",
+    "emailLabel": "电子邮件",
+    "emailPlaceholder": "输入电子邮件开始创建",
+    "otpPlaceholder": "输入4位数代码",
+    "continue": "创建我的菜单",
+    "sending": "创建中...",
+    "verifyTitle": "检查您的电子邮件",
+    "verifySubtitle": "我们已向{email}发送了4位数代码",
+    "verify": "验证",
+    "verifying": "验证中...",
+    "changeEmail": "更改电子邮件",
+    "resendCode": "重新发送代码",
+    "successTitle": "欢迎！",
+    "successSubtitle": "您已成功登录",
+    "redirecting": "正在跳转到仪表板...",
+    "errors": {
+      "sendFailed": "发送验证码失败。请重试。",
+      "verifyFailed": "验证代码失败。请重试。"
+    },
+    "icloudWarning": "iCloud可能会延迟或阻止来自新发件人的电子邮件。请检查您的垃圾邮件文件夹或尝试其他电子邮件（Gmail、Outlook）。",
+    "valueProps": {
+      "noSkills": "无需技术技能",
+      "instantUpdates": "即时菜单更新",
+      "qrIncluded": "包含QR码+网站",
+      "freeStart": "免费开始"
+    },
+    "formHelper": "无需信用卡",
+    "setupTime": "5分钟内设置",
+    "hasAccount": "已有账户？",
+    "signIn": "登录",
+    "restaurantCounter": "加入已使用IQ Rest的{count}家餐厅",
+    "steps": {
+      "signUp": "用电子邮件注册",
+      "addMenu": "添加菜单项目",
+      "getQr": "获取QR码并开始"
+    },
+    "motivational": {
+      "title": "今天就开始接受订单",
+      "subtitle": "您的顾客正在等待数字菜单"
+    }
+  },
+  "reservations": {
+    "title": "预订",
+    "tables": "餐桌",
+    "settings": "设置",
+    "addTable": "添加餐桌",
+    "newTable": "新餐桌",
+    "editTable": "编辑餐桌",
+    "tableNumber": "餐桌号",
+    "tableNumberPlaceholder": "1",
+    "capacity": "容量（客人）",
+    "capacityPlaceholder": "4",
+    "zone": "区域",
+    "zonePlaceholder": "露台、窗边、大厅...",
+    "image": "照片",
+    "uploadImage": "点击上传照片",
+    "removeImage": "移除",
+    "isActive": "激活",
+    "active": "激活",
+    "inactive": "未激活",
+    "save": "保存",
+    "saving": "保存中...",
+    "cancel": "取消",
+    "delete": "删除",
+    "deleteConfirm": "您确定要删除这张餐桌吗？",
+    "table": "餐桌",
+    "noTables": "还没有餐桌。添加第一张餐桌以启用预订。",
+    "error": "错误",
+    "close": "关闭",
+    "noReservations": "还没有预订",
+    "pending": "待处理",
+    "confirmed": "已确认",
+    "cancelled": "已取消",
+    "completed": "已完成",
+    "confirm": "确认",
+    "reject": "拒绝",
+    "guests": "客人",
+    "date": "日期",
+    "time": "时间",
+    "guest": "客人",
+    "status": "状态",
+    "notes": "备注",
+    "awaitingResponse": "等待回复",
+    "today": "今天",
+    "tomorrow": "明天",
+    "otherReservations": "其他预订",
+    "sort": "排序"
+  },
+  "publicReserve": {
+    "title": "预订餐桌",
+    "selectDate": "选择日期",
+    "selectTime": "选择时间",
+    "selectGuests": "客人数量",
+    "selectTable": "选择餐桌",
+    "yourDetails": "您的详细信息",
+    "name": "姓名",
+    "namePlaceholder": "您的姓名",
+    "email": "电子邮件",
+    "emailPlaceholder": "your@email.com",
+    "phone": "电话（可选）",
+    "phonePlaceholder": "+86 123 4567 8900",
+    "notes": "特殊要求（可选）",
+    "notesPlaceholder": "任何特殊要求或备注...",
+    "submit": "预订餐桌",
+    "submitting": "预订中...",
+    "success": "预订已提交！",
+    "successAuto": "您的预订已确认。您将很快收到确认邮件。",
+    "successManual": "您的预订请求已提交。确认后您将收到电子邮件。",
+    "error": "错误",
+    "guests": "客人",
+    "table": "餐桌",
+    "capacity": "容量",
+    "noAvailableTables": "此客人数量没有可用餐桌",
+    "back": "返回菜单",
+    "noTimeSlotsAvailable": "此日期没有可用时段",
+    "loadingAvailability": "正在检查可用性..."
+  },
+  "publicMenu": {
+    "contacts": "联系方式",
+    "language": "语言",
+    "reserve": "预订餐桌",
+    "onlineMenu": "在线菜单",
+    "noCategories": "没有可用类别",
+    "openInstagram": "打开Instagram",
+    "makeCall": "拨打电话",
+    "writeWhatsApp": "在WhatsApp上留言",
+    "openGoogleMaps": "在谷歌地图中打开",
+    "noLocation": "没有可用位置",
+    "english": "英语",
+    "spanish": "西班牙语",
+    "allergens": "过敏原",
+    "allergensInfo": "这道菜包含以下过敏原：",
+    "allergenNames": {
+      "gluten": "麸质",
+      "crustaceans": "甲壳类",
+      "eggs": "鸡蛋",
+      "fish": "鱼",
+      "peanuts": "花生",
+      "soybeans": "大豆",
+      "dairy": "乳制品",
+      "nuts": "坚果",
+      "celery": "芹菜",
+      "mustard": "芥末",
+      "sesame": "芝麻",
+      "sulphites": "亚硫酸盐",
+      "lupin": "羽扇豆",
+      "molluscs": "软体动物"
+    }
+  },
+  "faq": {
+    "title": "餐厅和咖啡厅QR菜单常见问题",
+    "subtitle": "查找有关为餐厅和咖啡厅创建和管理数字QR菜单的常见问题的答案",
+    "howto": {
+      "question": "如何用4个简单步骤创建QR菜单和餐厅网站？",
+      "answer": "5分钟让您的餐厅上线 - 只需输入您的电子邮件并从手机开始",
+      "faqTitle": "还有更多问题？",
+      "faqDescription": "查看我们的综合FAQ，了解有关创建和管理餐厅QR菜单和网站的所有信息",
+      "faqButton": "查看所有FAQ",
+      "contactButton": "联系我们",
+      "steps": [
+        {
+          "name": "用电子邮件登录",
+          "text": "获得现代餐厅网站，包括QR菜单、带地图的联系页面、在线预订和自定义品牌 - 从一开始就全部包含。"
+        },
+        {
+          "name": "设置您的餐厅",
+          "text": "输入您的餐厅名称并选择您的唯一URL。添加视频或照片背景，设置品牌颜色，启用餐桌预订。"
+        },
+        {
+          "name": "添加类别和菜品",
+          "text": "创建菜单类别并添加带照片的菜品。AI自动优化您的图像并将菜单翻译成10种以上语言。"
+        },
+        {
+          "name": "查看您准备好的菜单",
+          "text": "您的专业网站已上线！顾客可以浏览您的菜单、预订并在地图上找到您。通过每日分析跟踪一切。"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "什么是餐厅QR菜单，它如何工作？",
+        "answer": "餐厅QR菜单是顾客可以通过用智能手机扫描QR码访问的数字菜单。IQ Rest为您的餐厅或咖啡厅创建专业的数字菜单网站，无需重新打印即可即时更新。顾客只需扫描代码即可在设备上查看您的菜单。"
+      },
+      {
+        "question": "餐厅或咖啡厅的QR菜单费用是多少？",
+        "answer": "IQ Rest提供灵活的定价，免费计划从€0开始永久有效。这使任何餐厅或咖啡厅都能负担得起创建专业QR菜单。付费计划从每月€4起，提供无限项目和高级分析等额外功能。"
+      },
+      {
+        "question": "我可以不编码就创建餐厅网站吗？",
+        "answer": "是的！IQ Rest专为没有任何技术知识的餐厅和咖啡厅老板设计。您可以在几分钟内为您的餐厅创建完整的数字菜单网站，无需编程或编码技能。只需通过我们直观的界面添加菜品、价格和照片。"
+      },
+      {
+        "question": "我可以多久更新一次QR菜单？",
+        "answer": "您可以根据需要随时更新您的餐厅或咖啡厅菜单。所有更改都会实时反映，让您无需重新打印实体菜单即可即时更新价格、添加新菜品或更改描述。非常适合每日特色和季节性更新。"
+      },
+      {
+        "question": "QR菜单适用于餐厅和咖啡厅吗？",
+        "answer": "当然！IQ Rest非常适合餐厅、咖啡厅、咖啡店、酒吧、餐车和任何餐饮服务企业。我们的数字菜单解决方案适应任何类型的场所，从小咖啡厅到大型连锁餐厅。"
+      },
+      {
+        "question": "自动菜单翻译如何工作？",
+        "answer": "我们的QR菜单系统使用人工智能自动将您的餐厅或咖啡厅菜单翻译成多种语言。非常适合旅游区和国际顾客。您可以用英语、西班牙语和其他语言提供菜单，帮助您服务更多顾客。"
+      },
+      {
+        "question": "我可以免费试用QR菜单解决方案吗？",
+        "answer": "是的！我们为餐厅和咖啡厅提供完全免费的计划来试用IQ Rest。您可以免费创建最多15个项目的数字菜单网站，永久有效。无需信用卡即可开始。只有在需要更多功能时才升级。"
+      },
+      {
+        "question": "IQ Rest是顾客需要下载的应用吗？",
+        "answer": "不是！这是最大的优势之一。顾客不需要下载任何应用。他们只需扫描您的QR码，菜单就会在网页浏览器中即时打开。这比需要下载的餐厅应用方便得多。"
+      },
+      {
+        "question": "数字菜单网站对我的餐厅有什么好处？",
+        "answer": "数字菜单网站提供许多好处：无需重新打印成本的即时菜单更新、国际顾客的多语言支持、安全的非接触式点餐、查看热门菜品的分析和专业展示。此外，它还很环保，因为您消除了纸质菜单浪费。"
+      },
+      {
+        "question": "如何为我的餐厅菜单创建QR码？",
+        "answer": "当您创建数字菜单时，IQ Rest会自动生成专业的QR码。您可以下载并打印这个QR码放在餐厅餐桌、入口或外带柜台。QR码可自定义，高质量以确保清晰扫描。"
+      }
+    ],
+    "cta": {
+      "title": "还有问题？",
+      "subtitle": "问我们，尽快得到答案",
+      "button": "联系我们"
+    },
+    "linkTitle": "有问题？",
+    "linkDescription": "查看我们的常见问题了解更多关于IQ Rest的信息",
+    "meta": {
+      "title": "常见问题 - IQ Rest",
+      "description": "查找有关IQ Rest餐厅和咖啡厅数字QR菜单解决方案的常见问题的答案"
+    }
+  },
+  "billing": {
+    "title": "账单",
+    "description": "管理您的订阅和账单",
+    "unauthorized": "请登录以管理您的订阅",
+    "perMonth": "/月",
+    "currentPlan": "当前计划",
+    "upgrade": "升级",
+    "manage": "管理",
+    "subscriptionSuccess": "您的订阅已成功激活！",
+    "subscriptionCanceled": "订阅流程已取消。",
+    "subscriptionProcessing": "您的付款正在处理中。激活可能需要几分钟。",
+    "processingPayment": "正在处理您的付款...",
+    "processingPaymentDescription": "请稍候，我们正在确认您的订阅。这通常需要几秒钟。",
+    "checkoutError": "无法开始结账。请重试。",
+    "portalError": "无法打开账单门户。请重试。",
+    "detailsNote": "有关更多详情，请访问我们的",
+    "pricingPage": "价格页面",
+    "plans": {
+      "FREE": {
+        "name": "免费"
+      },
+      "BASIC_MONTHLY": {
+        "name": "基础版月付"
+      },
+      "BASIC_YEARLY": {
+        "name": "基础版年付"
+      },
+      "PRO_MONTHLY": {
+        "name": "专业版月付"
+      },
+      "PRO_YEARLY": {
+        "name": "专业版年付"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "仪表板",
+      "onboarding": "入门",
+      "qrMenu": "QR菜单",
+      "analytics": "分析",
+      "categories": "类别",
+      "items": "项目",
+      "settings": "常规",
+      "design": "设计",
+      "contacts": "联系方式",
+      "languages": "语言",
+      "reservations": "预订",
+      "reservationSettings": "预订设置",
+      "tables": "餐桌",
+      "billing": "账单",
+      "support": "支持"
+    },
+    "sidebar": {
+      "qrMenu": "QR菜单",
+      "menu": "菜单",
+      "settings": "设置",
+      "reservations": "预订",
+      "account": "账户",
+      "reservationSettings": "配置"
+    },
+    "logout": "退出",
+    "auth": {
+      "title": "登录",
+      "subtitle": "包含QR菜单、预订和AI翻译的现代网站",
+      "benefits": "无需密码。无需信用卡。",
+      "emailPlaceholder": "your@email.com",
+      "continue": "继续",
+      "verifyTitle": "检查您的电子邮件",
+      "verifySubtitle": "我们已向{email}发送了代码",
+      "verify": "验证",
+      "changeEmail": "使用不同的电子邮件",
+      "errors": {
+        "sendFailed": "发送代码失败。请重试。",
+        "verifyFailed": "代码无效。请重试。"
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "每月使用量",
+      "scansThisMonth": "本月扫描次数",
+      "limitReached": "您已达到每月扫描限制。升级您的计划以获得无限扫描。",
+      "todayViews": "今天",
+      "weeklyViews": "本周",
+      "monthlyViews": "本月",
+      "uniqueVisitors": "独立访客",
+      "viewsByPage": "按页面查看",
+      "viewsByLanguage": "按语言查看",
+      "dailyViews": "每日查看",
+      "noData": "暂无数据",
+      "pageNames": {
+        "home": "首页",
+        "menu": "菜单",
+        "contacts": "联系方式",
+        "language": "语言",
+        "reserve": "预订"
+      },
+      "languageNames": {
+        "en": "英语",
+        "es": "西班牙语",
+        "de": "德语",
+        "fr": "法语",
+        "ru": "俄语"
+      }
+    },
+    "categories": {
+      "noCategories": "还没有类别。创建您的第一个类别开始。",
+      "addCategory": "添加",
+      "editCategory": "编辑类别",
+      "name": "名称",
+      "namePlaceholder": "输入类别名称",
+      "status": "状态",
+      "active": "激活",
+      "inactive": "未激活",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "取消",
+      "delete": "删除",
+      "deleteConfirm": "您确定要删除此类别吗？此操作无法撤销。",
+      "fetchError": "加载类别失败",
+      "updateError": "更新类别失败",
+      "saveError": "保存类别失败",
+      "deleteError": "删除类别失败",
+      "translateError": "翻译失败",
+      "nameRequired": "名称是必需的",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "created": "类别已创建",
+      "updated": "类别已更新",
+      "deleted": "类别已删除",
+      "validationErrorTitle": "请修复以下错误",
+      "sort": "排序",
+      "saveSort": "保存",
+      "sortSaved": "排序顺序已保存",
+      "sortError": "保存排序顺序失败"
+    },
+    "items": {
+      "noItems": "还没有项目。创建您的第一个项目开始。",
+      "addItem": "添加",
+      "editItem": "编辑项目",
+      "name": "名称",
+      "namePlaceholder": "输入项目名称",
+      "description": "描述",
+      "descriptionPlaceholder": "输入项目描述",
+      "price": "价格",
+      "pricePlaceholder": "0.00",
+      "category": "类别",
+      "categoryPlaceholder": "选择类别",
+      "image": "图像",
+      "uploadImage": "上传图像",
+      "removeImage": "移除图像",
+      "status": "状态",
+      "active": "激活",
+      "inactive": "未激活",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "取消",
+      "delete": "删除",
+      "deleteConfirm": "您确定要删除此项目吗？此操作无法撤销。",
+      "fetchError": "加载项目失败",
+      "updateError": "更新项目失败",
+      "saveError": "保存项目失败",
+      "deleteError": "删除项目失败",
+      "translateError": "翻译失败",
+      "nameRequired": "名称是必需的",
+      "categoryRequired": "类别是必需的",
+      "priceRequired": "需要有效价格",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "created": "项目已创建",
+      "updated": "项目已更新",
+      "deleted": "项目已删除",
+      "validationErrorTitle": "请修复以下错误",
+      "sort": "排序",
+      "saveSort": "保存",
+      "sortSaved": "排序顺序已保存",
+      "sortError": "保存排序顺序失败",
+      "allergens": "过敏原",
+      "allergensHint": "选择这道菜中存在的过敏原",
+      "allergenNames": {
+        "gluten": "麸质",
+        "crustaceans": "甲壳类",
+        "eggs": "鸡蛋",
+        "fish": "鱼",
+        "peanuts": "花生",
+        "soybeans": "大豆",
+        "dairy": "乳制品",
+        "nuts": "坚果",
+        "celery": "芹菜",
+        "mustard": "芥末",
+        "sesame": "芝麻",
+        "sulphites": "亚硫酸盐",
+        "lupin": "羽扇豆",
+        "molluscs": "软体动物"
+      }
+    },
+    "languages": {
+      "translationProgress": "翻译进度",
+      "availableLanguages": "可用语言",
+      "europeanLanguages": "欧洲语言",
+      "starToSetDefault": "点击星号设为默认",
+      "default": "默认",
+      "hint": "启用语言以允许顾客查看多语言菜单。默认语言用于主要内容。",
+      "fetchError": "加载语言失败",
+      "enableError": "启用语言失败",
+      "disableError": "禁用语言失败",
+      "defaultError": "设置默认语言失败",
+      "languageEnabled": "{language}已启用",
+      "languageDisabled": "{language}已禁用",
+      "defaultSet": "{language}已设为默认",
+      "cannotDisableDefault": "无法禁用默认语言",
+      "atLeastOneRequired": "至少需要一种语言",
+      "enableFirst": "请先启用语言",
+      "deleteConfirm": "禁用此语言将删除其所有翻译。此操作无法撤销。",
+      "cancel": "取消",
+      "confirm": "禁用"
+    },
+    "contacts": {
+      "phone": "电话",
+      "phonePlaceholder": "+86 123 4567 8900",
+      "phoneHint": "顾客的联系电话",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "your_restaurant",
+      "instagramHint": "您的Instagram用户名（不带@）",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+86 123 4567 8900",
+      "whatsappHint": "顾客咨询的WhatsApp号码",
+      "location": "位置",
+      "locationHint": "点击地图或搜索以设置您的餐厅位置",
+      "save": "保存",
+      "fetchError": "加载联系信息失败",
+      "saveError": "保存联系信息失败",
+      "saved": "联系信息已保存"
+    },
+    "design": {
+      "background": "背景",
+      "backgroundHint": "为您的主页背景上传视频或图像",
+      "uploadMedia": "上传视频或图像",
+      "removeMedia": "移除",
+      "accentColor": "强调色",
+      "accentColorHint": "网站按钮和高亮的主要颜色",
+      "presetColors": "预设颜色",
+      "customColor": "自定义颜色",
+      "save": "保存",
+      "fetchError": "加载设计设置失败",
+      "saveError": "保存设计设置失败",
+      "saved": "设计设置已保存",
+      "uploadError": "上传文件失败",
+      "invalidFileType": "无效的文件类型。允许：JPEG、PNG、WebP、GIF、MP4、WebM、MOV",
+      "fileTooLarge": "文件太大。最大大小：视频50MB，图像5MB"
+    },
+    "general": {
+      "name": "标题",
+      "namePlaceholder": "输入餐厅名称",
+      "nameHint": "显示在您公开网站的主页上",
+      "description": "副标题",
+      "descriptionPlaceholder": "简短描述（可选）",
+      "descriptionHint": "显示在主页标题下方",
+      "slug": "URL别名",
+      "slugPlaceholder": "my-restaurant",
+      "slugHint": "您的网站将在以下地址可用：iq-rest.com/{slug}",
+      "currency": "货币",
+      "currencyPlaceholder": "选择货币",
+      "save": "保存",
+      "fetchError": "加载设置失败",
+      "saveError": "保存设置失败",
+      "saved": "设置已保存",
+      "nameRequired": "餐厅名称是必需的",
+      "slugRequired": "URL别名是必需的",
+      "validationErrorTitle": "请修复以下错误",
+      "slugChangedTitle": "网站地址已更新",
+      "slugChangedDescription": "您的餐厅现在可在以下地址访问：",
+      "close": "关闭",
+      "view": "查看"
+    },
+    "onboarding": {
+      "title": "欢迎使用IQ Rest！",
+      "subtitle": "完成这些步骤以启动您的餐厅网站",
+      "requiredSteps": "必要步骤",
+      "optionalSteps": "可选步骤",
+      "viewMenu": "查看您的菜单",
+      "steps": {
+        "title": {
+          "name": "添加餐厅名称",
+          "description": "为您的餐厅取一个将显示在网站上的名称"
+        },
+        "slug": {
+          "name": "设置网站地址",
+          "description": "为您的餐厅网站选择一个唯一的URL"
+        },
+        "categories": {
+          "name": "创建菜单类别",
+          "description": "用开胃菜、主菜等类别组织您的菜单"
+        },
+        "items": {
+          "name": "添加菜单项目",
+          "description": "将带价格和描述的菜品添加到菜单中"
+        },
+        "design": {
+          "name": "自定义设计",
+          "description": "为您的网站选择颜色和背景"
+        },
+        "contacts": {
+          "name": "添加联系信息",
+          "description": "添加电话、WhatsApp、Instagram和位置"
+        },
+        "reservations": {
+          "name": "启用预订",
+          "description": "允许顾客在线预订餐桌"
+        },
+        "translations": {
+          "name": "添加语言",
+          "description": "让您的菜单支持多种语言"
+        }
+      },
+      "completed": "已完成",
+      "notCompleted": "未完成",
+      "allDone": "全部完成！您的菜单已上线。",
+      "requiredRemaining": "还剩{count}个必要步骤"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "要向餐厅客人提供预订服务，您需要订阅服务。",
+    "subscribe": "订阅",
+    "reservationsEnabled": "启用预订",
+    "enabled": "预订已启用",
+    "disabled": "预订已禁用",
+    "reservationMode": "确认模式",
+    "modeAuto": "自动",
+    "modeManual": "手动",
+    "modeAutoDescription": "预订将根据餐桌可用性自动确认",
+    "modeManualDescription": "您需要手动确认每个预订",
+    "slotDuration": "预订时长",
+    "minutes": "分钟",
+    "workingHours": "营业时间",
+    "save": "保存",
+    "saving": "保存中...",
+    "saved": "设置已保存",
+    "fetchError": "加载设置失败",
+    "saveError": "保存设置失败"
+  },
+  "terms": {
+    "title": "条款和条件",
+    "lastUpdated": "最后更新：2025年12月17日",
+    "contact": {
+      "title": "联系我们",
+      "description": "如果您对这些条款和条件有任何疑问，请联系我们。"
+    },
+    "sections": []
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2025年12月17日",
+    "contact": {
+      "title": "联系我们",
+      "description": "如果您对本隐私政策有任何疑问或希望行使您的数据保护权利，请联系我们。",
+      "controller": "数据控制者"
+    },
+    "sections": []
+  },
+  "cookies": {
+    "title": "Cookie政策",
+    "lastUpdated": "最后更新：2025年12月17日",
+    "yes": "是",
+    "no": "否",
+    "cookieTableTitle": "我们使用的Cookie",
+    "tableHeaders": {
+      "name": "Cookie名称",
+      "purpose": "目的",
+      "duration": "持续时间",
+      "required": "必需"
+    },
+    "contact": {
+      "title": "关于Cookie的问题",
+      "description": "如果您对我们使用Cookie有任何疑问，请联系我们。"
+    },
+    "sections": [],
+    "cookieTypes": []
+  }
+}

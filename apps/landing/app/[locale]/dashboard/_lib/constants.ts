@@ -34,6 +34,7 @@ export const LANGUAGE_NAMES: Record<string, string> = {
   ko: "한국어",
   ar: "العربية",
   he: "עברית",
+  fa: "فارسی",
 };
 
 // Top languages shown first

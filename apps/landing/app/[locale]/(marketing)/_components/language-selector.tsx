@@ -47,6 +47,11 @@ const LANGUAGE_NAMES: Record<string, string> = {
   ca: "Català",
   ga: "Gaeilge",
   is: "Íslenska",
+  fa: "فارسی",
+  ar: "العربية",
+  ja: "日本語",
+  ko: "한국어",
+  zh: "中文",
 };
 
 export function LanguageSelector() {

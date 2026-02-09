@@ -1,0 +1,1173 @@
+{
+  "header": {
+    "logo": "IQ Rest",
+    "nav": {
+      "menu": "メニュー",
+      "pricing": "料金",
+      "features": "機能",
+      "faq": "よくある質問",
+      "changelog": "更新履歴",
+      "contacts": "お問い合わせ"
+    },
+    "getStarted": "ログイン",
+    "selectLanguage": "言語を選択",
+    "selectLanguageDescription": "ウェブサイトの言語を選択してください。",
+    "searchLanguage": "言語を検索...",
+    "noLanguagesFound": "言語が見つかりません"
+  },
+  "home": {
+    "hero": {
+      "title": "5分でQRメニュー＆レストランウェブサイト",
+      "subtitle": "メールアドレスを入力するだけで、QRメニュー、連絡先ページ、多言語サポート、モダンなデザインを備えた完全なレストランウェブサイトが手に入ります。すべてスマートフォンから設定できます。",
+      "cta": {
+        "create": "メニューを作成",
+        "view": "実際のメニューを見る"
+      },
+      "benefits": [
+        {
+          "title": "モダンなウェブサイト",
+          "description": "どのデバイスでも美しく見えるプロフェッショナルなデザイン"
+        },
+        {
+          "title": "テーブル予約",
+          "description": "ウェブサイトから直接テーブル予約を受付"
+        },
+        {
+          "title": "AI翻訳",
+          "description": "あらゆる言語への自動メニュー翻訳"
+        },
+        {
+          "title": "日次分析",
+          "description": "毎日の訪問数と人気料理を追跡"
+        }
+      ]
+    },
+    "intro": {
+      "socialProof": "世界中の500以上のレストランに信頼されています",
+      "title": "レストランに必要なすべてをオンラインで",
+      "description": "メールアドレスだけで登録し、すぐに手に入れましょう：プロフェッショナルなレストランウェブサイト、モダンなフォーマットのQRメニュー、地図付きの連絡先ページ、AI翻訳による多言語サポート、動画または写真の背景、カスタムカラースキーム。すべてスマートフォンから管理可能 - コンピュータは不要です。"
+    },
+    "whyUs": {
+      "title": "ゼロからオンラインメニューまで5分",
+      "subtitle": "レストランをオンラインにするたった4つの簡単なステップ",
+      "items": [
+        {
+          "step": "1",
+          "title": "メールアドレスを入力",
+          "description": "メールアドレスだけで素早く登録。クレジットカード不要。"
+        },
+        {
+          "step": "2",
+          "title": "レストラン情報を入力",
+          "description": "レストラン名、住所、連絡先、営業時間を追加。"
+        },
+        {
+          "step": "3",
+          "title": "メニュー項目を追加",
+          "description": "カテゴリを作成し、写真と価格付きで料理を追加。"
+        },
+        {
+          "step": "4",
+          "title": "メニューを楽しむ",
+          "description": "QRメニューの準備完了！お客様と共有し、分析を追跡。"
+        }
+      ],
+      "cta": "レストランを近代化する準備はできましたか？"
+    },
+    "featuresPreview": {
+      "title": "レストランのための強力な機能",
+      "subtitle": "プロフェッショナルなオンラインプレゼンスを作成するために必要なすべて",
+      "viewAll": "すべての機能を見る"
+    }
+  },
+  "features": {
+    "title": "レストランのQRメニュー＆ウェブサイトのための強力な機能",
+    "subtitle": "レストランやカフェのプロフェッショナルなデジタルプレゼンスを作成するために必要なすべて",
+    "backToFeatures": "機能に戻る",
+    "getStarted": "メニューを作成",
+    "viewPricing": "料金を見る",
+    "readyTitle": "始める準備はできましたか？",
+    "readyDescription": "数分でプロフェッショナルなQRメニューとレストランウェブサイトを作成。すべての機能が含まれています。",
+    "keyBenefits": "主なメリット",
+    "faqTitle": "よくある質問",
+    "faq": {
+      "instant-setup": [
+        { "q": "始めるには何が必要ですか？", "a": "メールアドレスだけです。クレジットカード不要、複雑なフォームなし。" },
+        { "q": "セットアップにはどのくらいかかりますか？", "a": "ウェブサイトは即座に準備完了。メニュー項目を追加すれば5分でオンラインに。" },
+        { "q": "無料プランはありますか？", "a": "はい、すべての必須機能を含む無料プランで始められます。" }
+      ],
+      "mobile-management": [
+        { "q": "アプリをインストールする必要がありますか？", "a": "アプリは不要 - すべてスマートフォンのブラウザで動作します。" },
+        { "q": "スマートフォンから写真をアップロードできますか？", "a": "はい、カメラで撮影してメニューに直接アップロードできます。" },
+        { "q": "タブレットでも動作しますか？", "a": "はい、ダッシュボードはスマートフォン、タブレット、デスクトップに最適化されています。" }
+      ],
+      "ai-translation": [
+        { "q": "AI翻訳はどのくらい正確ですか？", "a": "当社のAIは料理の文脈を理解し、料理名を保持しながら説明を自然に翻訳します。" },
+        { "q": "翻訳はどのくらい速いですか？", "a": "メニュー全体が数時間ではなく数秒で翻訳されます。" },
+        { "q": "AI翻訳を編集できますか？", "a": "はい、すべての翻訳は編集可能です - 必要に応じて確認・調整してください。" }
+      ],
+      "multilingual": [
+        { "q": "何言語に対応していますか？", "a": "主要なヨーロッパ言語、中国語、日本語、韓国語、アラビア語、ヘブライ語を含む25以上の言語。" },
+        { "q": "お客様はどのように言語を切り替えますか？", "a": "メニューに言語セレクターが表示されます - ワンタップで利用可能な言語に切り替え。" },
+        { "q": "翻訳は自動ですか？", "a": "AI翻訳を使用するか、各言語の翻訳を手動で入力できます。" }
+      ],
+      "ai-images": [
+        { "q": "どの画像フォーマットに対応していますか？", "a": "JPG、PNG、WebPをアップロード可能 - 画像は自動的に最適化されます。" },
+        { "q": "最適化で品質は落ちますか？", "a": "いいえ、AIは視覚品質を維持しながら高速読み込みのためにファイルサイズを削減します。" },
+        { "q": "ファイルサイズ制限はありますか？", "a": "10MBまでの画像をアップロード可能 - 自動的に最適化されます。" }
+      ],
+      "easy-menu": [
+        { "q": "新しい料理はどうやって追加しますか？", "a": "「項目を追加」をタップし、名前、説明、価格を入力、オプションで写真をアップロード。それだけです！" },
+        { "q": "メニュー項目を並べ替えられますか？", "a": "はい、項目やカテゴリをドラッグ＆ドロップで簡単に並べ替え。" },
+        { "q": "料理が売り切れたらどうすればいいですか？", "a": "項目を一時的にオフに切り替え - メニューから消えますが削除されません。" }
+      ],
+      "analytics": [
+        { "q": "どの指標を追跡できますか？", "a": "日次ビュー、ページパフォーマンス、言語設定、時間経過によるトレンド。" },
+        { "q": "データはどのくらいの頻度で更新されますか？", "a": "分析はリアルタイムで更新 - 今日の訪問者をリアルタイムで確認。" },
+        { "q": "分析データをエクスポートできますか？", "a": "詳細レポートをダッシュボードで直接表示。" }
+      ],
+      "reservations": [
+        { "q": "お客様はどのように予約しますか？", "a": "お客様はレストランウェブサイトから直接予約できます。日付、時間、人数を選択し、確認メールを受け取ります。" },
+        { "q": "予約を手動で承認できますか？", "a": "はい、各予約に対して自動確認または手動承認を選択できます。" },
+        { "q": "新しい予約の通知を受け取れますか？", "a": "はい、新しい予約ごとにメール通知を受け取ります。" }
+      ],
+      "custom-design": [
+        { "q": "どの動画フォーマットに対応していますか？", "a": "MP4とWebMフォーマットに対応。動画は高速読み込みのために自動的に最適化されます。" },
+        { "q": "自分の写真を使用できますか？", "a": "はい、どんな写真でもアップロードすればウェブ表示用に自動的に最適化されます。" },
+        { "q": "動画でメニューが遅くなりませんか？", "a": "いいえ、動画は圧縮され、遅延読み込みで高速ページパフォーマンスを確保します。" }
+      ],
+      "color-scheme": [
+        { "q": "何色から選べますか？", "a": "12のプリセットカラーから選択するか、16進コードで正確なブランドカラーを入力。" },
+        { "q": "ダークモードに対応していますか？", "a": "はい、カラースキームはライト/ダークテーマに自動的に適応します。" },
+        { "q": "いつでも色を変更できますか？", "a": "はい、ダッシュボードからアクセントカラーを即座に変更 - 更新はすぐに反映されます。" }
+      ],
+      "personal-support": [
+        { "q": "サポートにはどう連絡しますか？", "a": "お問い合わせフォームを使用するか直接メール - ボットではなく本物の人間が対応します。" },
+        { "q": "応答時間はどのくらいですか？", "a": "通常、営業日内に数時間で返信します。" },
+        { "q": "無料プランでもサポートを受けられますか？", "a": "はい、無料を含むすべてのプランで個人サポートを利用可能。" }
+      ]
+    },
+    "list": [
+      {
+        "id": "instant-setup",
+        "title": "即時QRメニュー＆ウェブサイトセットアップ",
+        "shortDescription": "メールだけでレストランウェブサイトとQRメニューを作成 - 5分で準備完了",
+        "description": "最もシンプルな登録プロセスで数秒で開始。メールを入力するだけで、QRメニュー、地図付き連絡先ページ、モダンなデザインを備えた完全なレストランウェブサイトを即座に取得。技術的なスキル不要、複雑なフォームなし - レストランは即座にオンラインに。",
+        "fullDescription": "従来のウェブサイトビルダーは、セットアップに何時間も、技術的な知識、そしてしばしば開発者が必要です。IQ Restはすべてを変えます。メールを入力し、簡単なコードで確認すれば、レストランウェブサイトの準備完了。料理を追加し、写真をアップロードし、QRコードをお客様と共有。全プロセスは5分以内で完了。",
+        "benefits": [
+          "開始に必要なのはメールのみ - 複雑な登録なし",
+          "登録後すぐにレストランウェブサイトが準備完了",
+          "QRメニューは自動的に生成・リンク",
+          "地図付き連絡先ページがデフォルトで含まれる",
+          "技術的なスキルやコーディング知識は不要"
+        ],
+        "image": "/images/features/instant-setup.jpg",
+        "imageAlt": "レストランウェブサイトとQRメニューの即時セットアッププロセス",
+        "cta": "詳細を見る"
+      },
+      {
+        "id": "mobile-management",
+        "title": "100%モバイルフレンドリーな管理",
+        "shortDescription": "コンピュータがない？問題ありません。レストランウェブサイト全体をスマートフォンから運営。",
+        "description": "カテゴリ、料理、写真を追加し、レストランウェブサイト全体をスマートフォンから直接管理。ダッシュボードはモバイルデバイスに完全最適化。",
+        "fullDescription": "レストランオーナーは忙しく、常にコンピュータの前にいるわけではありません。そのため、IQ Restはモバイルデバイスで完璧に動作するように構築しました。",
+        "benefits": [
+          "あらゆるスマートフォンやタブレットで完全なダッシュボードアクセス",
+          "スマートフォンのカメラから直接写真をアップロード",
+          "外出先で価格と説明を更新",
+          "タッチフレンドリーなインターフェースでカテゴリを管理",
+          "コンピュータは決して必要なし"
+        ],
+        "image": "/images/features/mobile-management.jpg",
+        "imageAlt": "スマートフォンでのレストランメニュー管理",
+        "cta": "モバイルダッシュボードを見る"
+      },
+      {
+        "id": "ai-translation",
+        "title": "AIによるメニュー翻訳",
+        "shortDescription": "言語の壁で国際的なお客様を失うのをやめましょう。AIが数秒でメニュー全体を25以上の言語に翻訳。",
+        "description": "食べ物の文脈を理解するインテリジェントなAI翻訳で国際的なお客様にリーチ。",
+        "fullDescription": "一般的な翻訳ツールは食品メニューでよく失敗します。当社のAIはレストランコンテンツ専用に訓練されています。",
+        "benefits": [
+          "食べ物と料理用語のコンテキスト対応翻訳",
+          "スペイン語、フランス語、ドイツ語、中国語、日本語を含む10以上の言語",
+          "料理用語と文化的ニュアンスを保持",
+          "即時翻訳 - メニューは数秒で利用可能",
+          "国際的なお客様で売上23%増加"
+        ],
+        "image": "/images/features/ai-translation.jpg",
+        "imageAlt": "AIによるレストランメニュー翻訳インターフェース",
+        "cta": "AI翻訳を発見"
+      },
+      {
+        "id": "multilingual",
+        "title": "多言語レストランウェブサイト",
+        "shortDescription": "観光客や国際的なゲストを母国語で歓迎。25以上の言語をサポート。",
+        "description": "レストランウェブサイトは自動的に複数の言語をサポート。お客様はワンタップで言語を切り替え可能。",
+        "fullDescription": "観光地や国際都市では、お客様の言語を話すことが不可欠です。IQ Restはレストランをすべての人がアクセスできるようにします。",
+        "benefits": [
+          "お客様向けワンタップ言語切り替え",
+          "メニュー、連絡先、すべてのページが翻訳済み",
+          "再訪問時に言語設定を記憶",
+          "観光地や国際都市に最適",
+          "AI翻訳機能とシームレスに連携"
+        ],
+        "image": "/images/features/multilingual.jpg",
+        "imageAlt": "多言語レストランウェブサイトの言語セレクター",
+        "cta": "多言語機能を見る"
+      },
+      {
+        "id": "ai-images",
+        "title": "AI画像最適化",
+        "shortDescription": "より高速な読み込みと高品質のための自動画像強化",
+        "description": "どんな写真でもアップロードすれば、AIが自動的にウェブ表示用に最適化。",
+        "fullDescription": "大きく最適化されていない画像はウェブサイトを遅くし、お客様をイライラさせます。当社のAIはすべてのアップロード画像を処理します。",
+        "benefits": [
+          "最適なウェブサイズへの自動リサイズ",
+          "高速読み込みのためのWebP形式への変換",
+          "より良いプレゼンテーションのための品質向上",
+          "1秒以内でページ読み込み",
+          "アップロードするどんな画像形式でも対応"
+        ],
+        "image": "/images/features/ai-images.jpg",
+        "imageAlt": "AI画像最適化のビフォー・アフター比較",
+        "cta": "詳細を見る"
+      },
+      {
+        "id": "easy-menu",
+        "title": "簡単メニュー管理",
+        "shortDescription": "メニューを数時間ではなく数秒で更新。",
+        "description": "メニュー管理がこれまでになく簡単に。カテゴリを追加し、写真と説明付きで料理を作成。",
+        "fullDescription": "複雑なコンテンツ管理システムは忘れてください。IQ Restのメニューエディターはウェブ開発者ではなくレストランオーナー向けに設計されています。",
+        "benefits": [
+          "直感的なカテゴリと項目の作成",
+          "ドラッグ＆ドロップでの並べ替え",
+          "削除せずに項目のオン/オフを切り替え",
+          "即時更新 - 変更は数秒で反映",
+          "無制限のカテゴリと料理を整理"
+        ],
+        "image": "/images/features/easy-menu.jpg",
+        "imageAlt": "簡単なレストランメニュー管理ダッシュボード",
+        "cta": "メニューエディターを見る"
+      },
+      {
+        "id": "analytics",
+        "title": "日次分析とインサイト",
+        "shortDescription": "詳細な日次レポートでページビュー、言語、顧客行動を追跡",
+        "description": "包括的な分析で顧客を理解。",
+        "fullDescription": "知識は力です。分析ダッシュボードは、お客様がレストランウェブサイトとどのように対話しているかを正確に示します。",
+        "benefits": [
+          "日次、週次、月次のビュー統計",
+          "言語設定の内訳",
+          "ページごとのパフォーマンス追跡",
+          "時間経過によるトレンド分析",
+          "さらなる分析のためのデータエクスポート"
+        ],
+        "image": "/images/features/analytics.jpg",
+        "imageAlt": "日次統計付きレストラン分析ダッシュボード",
+        "cta": "詳細を見る"
+      },
+      {
+        "id": "reservations",
+        "title": "テーブル予約システム",
+        "shortDescription": "電話の取り逃しでお客様を失うのをやめましょう。ウェブサイトから24時間テーブル予約を受付。",
+        "description": "内蔵の予約システムで、お客様はウェブサイトから直接テーブルを予約可能。",
+        "fullDescription": "電話予約は時間がかかり、見逃しやすいです。IQ Restの予約システムは24時間稼働。",
+        "benefits": [
+          "24時間オンライン予約機能",
+          "自動または手動確認モード",
+          "テーブルと収容人数の管理",
+          "予約のメール通知",
+          "簡単なスケジューリングのためのカレンダービュー"
+        ],
+        "image": "/images/features/reservations.jpg",
+        "imageAlt": "レストラン向けオンラインテーブル予約システム",
+        "cta": "テーブル予約を探索"
+      },
+      {
+        "id": "custom-design",
+        "title": "動画＆写真背景",
+        "shortDescription": "第一印象が売上を作ります。QRコードをスキャンした瞬間にお客様を魅了。",
+        "description": "ホームページにカスタム動画または写真の背景で記憶に残る第一印象を作成。",
+        "fullDescription": "第一印象は重要です。お客様がQRコードをスキャンしたとき、すぐに感動させるべきです。",
+        "benefits": [
+          "動画と画像の背景をサポート",
+          "高速読み込みのための自動最適化",
+          "モバイルデバイスで完璧に動作",
+          "記憶に残る第一印象を作成",
+          "レストランのユニークな雰囲気を反映"
+        ],
+        "image": "/images/features/custom-design.jpg",
+        "imageAlt": "動画背景付きレストランウェブサイト",
+        "cta": "動画背景を見る"
+      },
+      {
+        "id": "color-scheme",
+        "title": "カスタムカラースキーム",
+        "shortDescription": "ブランドアイデンティティに合わせたカスタムアクセントカラーでメニューを本当にあなたのものに。",
+        "description": "レストランウェブサイトはブランドと一致するべきです。",
+        "fullDescription": "ブランドの一貫性は重要です。IQ Restでは、ウェブサイト全体で使用されるアクセントカラーをカスタマイズできます。",
+        "benefits": [
+          "カスタムアクセントカラーの選択",
+          "プリセットカラースキームが利用可能",
+          "自動ライト/ダークテーマサポート",
+          "すべてのページで一貫したブランディング",
+          "アクセシビリティ最適化されたカラーコントラスト"
+        ],
+        "image": "/images/features/color-scheme.jpg",
+        "imageAlt": "カスタムカラースキームとブランディングオプション",
+        "cta": "カラースキームを探索"
+      },
+      {
+        "id": "personal-support",
+        "title": "個別オンラインサポート",
+        "shortDescription": "ボットではなく本物の人間からの個別サポート",
+        "description": "すべてのレストランが個別オンラインサポートを受けられます。",
+        "fullDescription": "すべてのレストランが個別の注意を受ける価値があると信じています。サポートに連絡すると、本物の人間と話します。",
+        "benefits": [
+          "本物の人間によるサポート - ボットなし",
+          "迅速な応答時間",
+          "セットアップと最適化のサポート",
+          "機能リクエスト歓迎",
+          "無料を含むすべてのプランで利用可能"
+        ],
+        "image": "/images/features/personal-support.jpg",
+        "imageAlt": "レストラン向け個別オンラインサポートチャット",
+        "cta": "詳細を見る"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "QRメニュー＆レストランウェブサイトの料金",
+    "subtitle": "隠れた費用なし、サプライズなし。今日から無料でレストランウェブサイトを立ち上げ — 成長の準備ができたらアップグレード。",
+    "seo": {
+      "title": "なぜレストランやカフェにIQ Restを選ぶのか？",
+      "text": "数分でレストランやカフェのプロフェッショナルなQRメニューとウェブサイトを作成。"
+    },
+    "monthly": "月額",
+    "yearly": "年額",
+    "save": "（25%お得）",
+    "perMonth": "/月",
+    "billedYearly": "年間一括払い（€{total}）",
+    "forever": "永久無料",
+    "popular": "最も人気",
+    "plans": {
+      "free": {
+        "name": "無料",
+        "description": "IQ Restを試すのに最適",
+        "cta": "無料で開始",
+        "highlights": [
+          "レストランウェブサイト",
+          "QRメニュー",
+          "月300スキャン",
+          "2言語",
+          "AI画像強化",
+          "分析"
+        ]
+      },
+      "basic": {
+        "name": "ベーシック",
+        "description": "小規模レストランに最適",
+        "cta": "始める",
+        "highlights": [
+          "無料のすべて、さらに：",
+          "月4,500スキャン",
+          "3言語",
+          "AI翻訳",
+          "カスタムカラーテーマ",
+          "予約"
+        ]
+      },
+      "pro": {
+        "name": "プロ",
+        "description": "成長中のレストランチェーン向け",
+        "cta": "始める",
+        "highlights": [
+          "ベーシックのすべて、さらに：",
+          "無制限スキャン",
+          "6言語",
+          "優先サポート",
+          "すべての機能を含む"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "プランを比較",
+      "subtitle": "どのプランがあなたに適しているか確認"
+    },
+    "features": {
+      "website": "レストランウェブサイト",
+      "qrMenu": "QRメニュー",
+      "scans": "月間スキャン数",
+      "languages": "対応言語",
+      "aiTranslation": "AI翻訳",
+      "aiImages": "AI画像強化",
+      "analytics": "分析",
+      "customTheme": "カスタムカラーテーマ",
+      "background": "背景画像＆動画",
+      "support": "サポート",
+      "reservations": "予約"
+    },
+    "values": {
+      "free": {
+        "scans": "300",
+        "languages": "2"
+      },
+      "basic": {
+        "scans": "4,500",
+        "languages": "3"
+      },
+      "pro": {
+        "scans": "無制限",
+        "languages": "6"
+      }
+    }
+  },
+  "contacts": {
+    "title": "お困りですか？お話しましょう",
+    "subtitle": "こんにちは、私はボグダンです — IQ Restの創設者です。自分のカフェのためにこのプラットフォームを作り、今では世界中の数百のレストランを支援しています。",
+    "story": {
+      "text": ""
+    },
+    "form": {
+      "title": "お問い合わせ",
+      "email": "メールアドレス",
+      "emailPlaceholder": "your@email.com",
+      "subject": "件名",
+      "subjectPlaceholder": "何についてですか？",
+      "message": "メッセージ",
+      "messagePlaceholder": "お気軽にお書きください...",
+      "submit": "メッセージを送信",
+      "sending": "送信中...",
+      "success": "メッセージが送信されました！お問い合わせありがとうございます。すぐに返信いたします。",
+      "error": "メッセージの送信に失敗しました。後でもう一度お試しください。"
+    }
+  },
+  "languages": {
+    "en": "英語",
+    "es": "スペイン語",
+    "de": "ドイツ語",
+    "fr": "フランス語",
+    "it": "イタリア語",
+    "pt": "ポルトガル語",
+    "nl": "オランダ語",
+    "pl": "ポーランド語",
+    "ru": "ロシア語",
+    "uk": "ウクライナ語",
+    "sv": "スウェーデン語",
+    "da": "デンマーク語",
+    "no": "ノルウェー語",
+    "fi": "フィンランド語",
+    "cs": "チェコ語",
+    "el": "ギリシャ語",
+    "tr": "トルコ語",
+    "ro": "ルーマニア語",
+    "hu": "ハンガリー語",
+    "bg": "ブルガリア語",
+    "hr": "クロアチア語",
+    "sk": "スロバキア語",
+    "sl": "スロベニア語",
+    "et": "エストニア語",
+    "lv": "ラトビア語",
+    "lt": "リトアニア語",
+    "sr": "セルビア語",
+    "ca": "カタルーニャ語",
+    "ga": "アイルランド語",
+    "is": "アイスランド語",
+    "fa": "ペルシア語",
+    "ar": "アラビア語",
+    "ja": "日本語",
+    "ko": "韓国語",
+    "zh": "中国語"
+  },
+  "cookieConsent": {
+    "title": "Cookieを使用しています",
+    "description": "ブラウジング体験の向上、パーソナライズされたコンテンツの提供、トラフィックの分析のためにCookieを使用しています。",
+    "acceptAll": "すべて承諾",
+    "rejectAll": "すべて拒否",
+    "customize": "カスタマイズ",
+    "learnMore": "詳細を見る"
+  },
+  "footer": {
+    "navigation": {
+      "title": "ナビゲーション",
+      "pricing": "料金",
+      "features": "機能",
+      "contacts": "お問い合わせ",
+      "faq": "よくある質問",
+      "changelog": "更新履歴"
+    },
+    "legal": {
+      "title": "法的情報",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "cookies": "Cookieポリシー",
+      "sitemap": "サイトマップ"
+    },
+    "copyright": "© 2025 IQ Rest. All rights reserved."
+  },
+  "changelog": {
+    "meta": {
+      "title": "更新履歴 - IQ Restアップデート＆新機能",
+      "description": "IQ Restの最新機能と改善点を確認"
+    },
+    "title": "更新履歴",
+    "subtitle": "レストランQRメニューの最新アップデートと新機能",
+    "readMore": "続きを読む",
+    "backToChangelog": "更新履歴に戻る",
+    "seo": {
+      "title": "IQ Restアップデートについて",
+      "description": "IQ Restは、レストランやカフェがプロフェッショナルなデジタルQRメニューを作成できるよう常に改善しています。"
+    },
+    "entries": {}
+  },
+  "qrCode": {
+    "title": "QRコード",
+    "description": "お客様がスキャンするQRコードをダウンロード・印刷",
+    "preview": "プレビュー",
+    "paperFormat": "用紙サイズ",
+    "qrPerPage": "ページあたりのQRコード数",
+    "customText": "QRコード下のテキスト",
+    "customTextPlaceholder": "メニューを見るにはスキャン",
+    "print": "印刷",
+    "download": "PNGをダウンロード",
+    "viewMenu": "メニューを見る",
+    "noSlug": "メニューURLが設定されていません",
+    "noSlugDescription": "QRコードを生成するには、まず設定でレストランURLを設定してください。",
+    "goToSettings": "設定へ移動",
+    "loading": "読み込み中...",
+    "menuUrl": "あなたのウェブサイト",
+    "websiteReady": "ウェブサイトの準備完了！",
+    "openWebsite": "ウェブサイトを開く",
+    "printSection": "QRコードを印刷＆ダウンロード：",
+    "formats": {
+      "a4": "A4（210 × 297 mm）",
+      "a5": "A5（148 × 210 mm）",
+      "a6": "A6（105 × 148 mm）",
+      "letter": "レター（216 × 279 mm）"
+    },
+    "perPage": {
+      "one": "1（フルページ）",
+      "two": "2（1×2）",
+      "four": "4（2×2）",
+      "six": "6（2×3）",
+      "nine": "9（3×3）",
+      "sixteen": "16（4×4）"
+    },
+    "textSize": "テキストサイズ",
+    "textSizes": {
+      "small": "小",
+      "medium": "中",
+      "large": "大"
+    }
+  },
+  "support": {
+    "title": "メッセージ",
+    "subtitle": "チームからサポートを受ける",
+    "unauthorized": "サポートにアクセスするにはログインしてください",
+    "lastUpdated": "更新日",
+    "emptyTitle": "まだメッセージがありません",
+    "emptyDescription": "会話を始めるにはメッセージを送信してください",
+    "sendMessage": "メッセージを送信",
+    "placeholder": "メッセージを入力...",
+    "hint": "Enterで送信、Shift+Enterで改行",
+    "send": "送信",
+    "supportTeam": "サポートチーム"
+  },
+  "getStarted": {
+    "meta": {
+      "title": "5分でデジタルメニューを作成 - IQ Rest",
+      "description": "レストランのQRメニューとウェブサイト。すぐに準備完了。技術的なスキル不要。"
+    },
+    "title": "5分でデジタルメニューを作成",
+    "subtitle": "レストランのQRメニューとウェブサイト。すぐに準備完了。",
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "メールを入力して作成開始",
+    "otpPlaceholder": "4桁のコードを入力",
+    "continue": "メニューを作成",
+    "sending": "作成中...",
+    "verifyTitle": "メールを確認してください",
+    "verifySubtitle": "{email}に4桁のコードを送信しました",
+    "verify": "確認",
+    "verifying": "確認中...",
+    "changeEmail": "メールを変更",
+    "resendCode": "コードを再送信",
+    "successTitle": "ようこそ！",
+    "successSubtitle": "正常にログインしました",
+    "redirecting": "ダッシュボードにリダイレクト中...",
+    "errors": {
+      "sendFailed": "確認コードの送信に失敗しました。もう一度お試しください。",
+      "verifyFailed": "コードの確認に失敗しました。もう一度お試しください。"
+    },
+    "icloudWarning": "iCloudは新しい送信者からのメールを遅延またはブロックする場合があります。迷惑メールフォルダを確認するか、別のメール（Gmail、Outlook）をお試しください。",
+    "valueProps": {
+      "noSkills": "技術的なスキル不要",
+      "instantUpdates": "即時メニュー更新",
+      "qrIncluded": "QRコード + ウェブサイト込み",
+      "freeStart": "無料で開始"
+    },
+    "formHelper": "クレジットカード不要",
+    "setupTime": "5分でセットアップ",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "signIn": "ログイン",
+    "restaurantCounter": "IQ Restを使用する{count}のレストランに参加",
+    "steps": {
+      "signUp": "メールで登録",
+      "addMenu": "メニュー項目を追加",
+      "getQr": "QRコードを取得して開始"
+    },
+    "motivational": {
+      "title": "今日から注文を受け付け開始",
+      "subtitle": "お客様はデジタルメニューを待っています"
+    }
+  },
+  "reservations": {
+    "title": "予約",
+    "tables": "テーブル",
+    "settings": "設定",
+    "addTable": "テーブルを追加",
+    "newTable": "新しいテーブル",
+    "editTable": "テーブルを編集",
+    "tableNumber": "テーブル番号",
+    "tableNumberPlaceholder": "1",
+    "capacity": "収容人数（ゲスト）",
+    "capacityPlaceholder": "4",
+    "zone": "ゾーン",
+    "zonePlaceholder": "テラス、窓際、メインホール...",
+    "image": "写真",
+    "uploadImage": "クリックして写真をアップロード",
+    "removeImage": "削除",
+    "isActive": "有効",
+    "active": "有効",
+    "inactive": "無効",
+    "save": "保存",
+    "saving": "保存中...",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "deleteConfirm": "このテーブルを削除してもよろしいですか？",
+    "table": "テーブル",
+    "noTables": "まだテーブルがありません。予約を有効にするには最初のテーブルを追加してください。",
+    "error": "エラー",
+    "close": "閉じる",
+    "noReservations": "まだ予約がありません",
+    "pending": "保留中",
+    "confirmed": "確認済み",
+    "cancelled": "キャンセル",
+    "completed": "完了",
+    "confirm": "確認",
+    "reject": "拒否",
+    "guests": "ゲスト",
+    "date": "日付",
+    "time": "時間",
+    "guest": "ゲスト",
+    "status": "ステータス",
+    "notes": "メモ",
+    "awaitingResponse": "返答待ち",
+    "today": "今日",
+    "tomorrow": "明日",
+    "otherReservations": "その他の予約",
+    "sort": "並べ替え"
+  },
+  "publicReserve": {
+    "title": "テーブルを予約",
+    "selectDate": "日付を選択",
+    "selectTime": "時間を選択",
+    "selectGuests": "ゲスト数",
+    "selectTable": "テーブルを選択",
+    "yourDetails": "お客様情報",
+    "name": "お名前",
+    "namePlaceholder": "お名前",
+    "email": "メールアドレス",
+    "emailPlaceholder": "your@email.com",
+    "phone": "電話番号（任意）",
+    "phonePlaceholder": "+81 90 1234 5678",
+    "notes": "特別なリクエスト（任意）",
+    "notesPlaceholder": "特別なリクエストやメモ...",
+    "submit": "テーブルを予約",
+    "submitting": "予約中...",
+    "success": "予約を受け付けました！",
+    "successAuto": "予約が確認されました。すぐに確認メールが届きます。",
+    "successManual": "予約リクエストが送信されました。確認後にメールが届きます。",
+    "error": "エラー",
+    "guests": "ゲスト",
+    "table": "テーブル",
+    "capacity": "収容人数",
+    "noAvailableTables": "この人数に対応できるテーブルがありません",
+    "back": "メニューに戻る",
+    "noTimeSlotsAvailable": "この日に利用可能な時間枠がありません",
+    "loadingAvailability": "空き状況を確認中..."
+  },
+  "publicMenu": {
+    "contacts": "連絡先",
+    "language": "言語",
+    "reserve": "テーブルを予約",
+    "onlineMenu": "オンラインメニュー",
+    "noCategories": "カテゴリがありません",
+    "openInstagram": "Instagramを開く",
+    "makeCall": "電話をかける",
+    "writeWhatsApp": "WhatsAppで連絡",
+    "openGoogleMaps": "Googleマップで開く",
+    "noLocation": "位置情報がありません",
+    "english": "英語",
+    "spanish": "スペイン語",
+    "allergens": "アレルゲン",
+    "allergensInfo": "この料理には以下のアレルゲンが含まれています：",
+    "allergenNames": {
+      "gluten": "グルテン",
+      "crustaceans": "甲殻類",
+      "eggs": "卵",
+      "fish": "魚",
+      "peanuts": "ピーナッツ",
+      "soybeans": "大豆",
+      "dairy": "乳製品",
+      "nuts": "ナッツ類",
+      "celery": "セロリ",
+      "mustard": "マスタード",
+      "sesame": "ゴマ",
+      "sulphites": "亜硫酸塩",
+      "lupin": "ルピナス",
+      "molluscs": "軟体動物"
+    }
+  },
+  "faq": {
+    "title": "レストラン＆カフェのQRメニューに関するよくある質問",
+    "subtitle": "デジタルQRメニューの作成と管理に関するよくある質問の回答を見つける",
+    "howto": {
+      "question": "4つの簡単なステップでQRメニューとレストランウェブサイトを作成するには？",
+      "answer": "5分でレストランをオンラインに — メールを入力してスマートフォンから開始",
+      "faqTitle": "もっと質問がありますか？",
+      "faqDescription": "包括的なFAQでQRメニューとレストランウェブサイトの作成・管理について詳しく学ぶ",
+      "faqButton": "すべての質問を見る",
+      "contactButton": "お問い合わせ",
+      "steps": [
+        {
+          "name": "メールでログイン",
+          "text": "QRメニュー、地図付き連絡先ページ、オンライン予約、カスタムブランディングを備えたモダンなレストランウェブサイトを取得。"
+        },
+        {
+          "name": "レストランをセットアップ",
+          "text": "レストラン名を入力し、ユニークなURLを選択。動画または写真の背景を追加、ブランドカラーを設定。"
+        },
+        {
+          "name": "カテゴリと料理を追加",
+          "text": "メニューカテゴリを作成し、写真付きで料理を追加。AIが画像を自動最適化し、メニューを翻訳。"
+        },
+        {
+          "name": "準備完了のメニューを見る",
+          "text": "プロフェッショナルなウェブサイトが公開！お客様はメニューを閲覧し、予約し、地図で見つけられます。"
+        }
+      ]
+    },
+    "questions": [
+      {
+        "question": "レストランのQRメニューとは何ですか？どのように機能しますか？",
+        "answer": "レストランのQRメニューは、お客様がスマートフォンでQRコードをスキャンしてアクセスできるデジタルメニューです。"
+      },
+      {
+        "question": "レストランやカフェのQRメニューはいくらですか？",
+        "answer": "IQ Restは無料プランで€0からの柔軟な価格設定を提供しています。"
+      },
+      {
+        "question": "コーディングなしでレストランのウェブサイトを作成できますか？",
+        "answer": "はい！IQ Restは技術的な知識のないレストランやカフェのオーナー向けに設計されています。"
+      },
+      {
+        "question": "QRメニューはどのくらいの頻度で更新できますか？",
+        "answer": "必要に応じていつでもメニューを更新できます。すべての変更はリアルタイムで反映されます。"
+      },
+      {
+        "question": "QRメニューはレストランとカフェの両方で使えますか？",
+        "answer": "もちろん！IQ Restはレストラン、カフェ、喫茶店、バー、フードトラックに最適です。"
+      }
+    ],
+    "cta": {
+      "title": "まだ質問がありますか？",
+      "subtitle": "お問い合わせいただければできるだけ早く回答します",
+      "button": "お問い合わせ"
+    },
+    "linkTitle": "質問がありますか？",
+    "linkDescription": "IQ Restについてもっと知るにはFAQをご覧ください",
+    "meta": {
+      "title": "よくある質問 - IQ Rest",
+      "description": "IQ RestデジタルQRメニューソリューションに関するよくある質問の回答を見つける"
+    }
+  },
+  "billing": {
+    "title": "請求",
+    "description": "サブスクリプションと請求を管理",
+    "unauthorized": "サブスクリプションを管理するにはログインしてください",
+    "perMonth": "/月",
+    "currentPlan": "現在のプラン",
+    "upgrade": "アップグレード",
+    "manage": "管理",
+    "subscriptionSuccess": "サブスクリプションが正常に有効化されました！",
+    "subscriptionCanceled": "サブスクリプションプロセスがキャンセルされました。",
+    "subscriptionProcessing": "お支払いを処理中です。有効化に数秒かかる場合があります。",
+    "processingPayment": "お支払いを処理中...",
+    "processingPaymentDescription": "サブスクリプションを確認中です。通常数秒で完了します。",
+    "checkoutError": "チェックアウトの開始に失敗しました。もう一度お試しください。",
+    "portalError": "請求ポータルを開けませんでした。もう一度お試しください。",
+    "detailsNote": "詳細については",
+    "pricingPage": "料金ページ",
+    "plans": {
+      "FREE": {
+        "name": "無料"
+      },
+      "BASIC_MONTHLY": {
+        "name": "ベーシック月額"
+      },
+      "BASIC_YEARLY": {
+        "name": "ベーシック年額"
+      },
+      "PRO_MONTHLY": {
+        "name": "プロ月額"
+      },
+      "PRO_YEARLY": {
+        "name": "プロ年額"
+      }
+    }
+  },
+  "dashboard": {
+    "pages": {
+      "home": "ダッシュボード",
+      "onboarding": "オンボーディング",
+      "qrMenu": "QRメニュー",
+      "analytics": "分析",
+      "categories": "カテゴリ",
+      "items": "アイテム",
+      "settings": "一般",
+      "design": "デザイン",
+      "contacts": "連絡先",
+      "languages": "言語",
+      "reservations": "予約",
+      "reservationSettings": "予約設定",
+      "tables": "テーブル",
+      "billing": "請求",
+      "support": "サポート"
+    },
+    "sidebar": {
+      "qrMenu": "QRメニュー",
+      "menu": "メニュー",
+      "settings": "設定",
+      "reservations": "予約",
+      "account": "アカウント",
+      "reservationSettings": "設定"
+    },
+    "logout": "ログアウト",
+    "auth": {
+      "title": "ログイン",
+      "subtitle": "QRメニュー、予約、AI翻訳付きのモダンなウェブサイト",
+      "benefits": "パスワード不要。クレジットカード不要。",
+      "emailPlaceholder": "your@email.com",
+      "continue": "続ける",
+      "verifyTitle": "メールを確認してください",
+      "verifySubtitle": "{email}にコードを送信しました",
+      "verify": "確認",
+      "changeEmail": "別のメールを使用",
+      "errors": {
+        "sendFailed": "コードの送信に失敗しました。もう一度お試しください。",
+        "verifyFailed": "無効なコードです。もう一度お試しください。"
+      }
+    },
+    "analytics": {
+      "monthlyUsage": "月間使用量",
+      "scansThisMonth": "今月のスキャン",
+      "limitReached": "月間スキャン上限に達しました。無制限スキャンにはプランをアップグレードしてください。",
+      "todayViews": "今日",
+      "weeklyViews": "今週",
+      "monthlyViews": "今月",
+      "uniqueVisitors": "ユニーク訪問者",
+      "viewsByPage": "ページ別ビュー",
+      "viewsByLanguage": "言語別ビュー",
+      "dailyViews": "日次ビュー",
+      "noData": "まだデータがありません",
+      "pageNames": {
+        "home": "ホーム",
+        "menu": "メニュー",
+        "contacts": "連絡先",
+        "language": "言語",
+        "reserve": "予約"
+      },
+      "languageNames": {
+        "en": "英語",
+        "es": "スペイン語",
+        "de": "ドイツ語",
+        "fr": "フランス語",
+        "ru": "ロシア語"
+      }
+    },
+    "categories": {
+      "noCategories": "まだカテゴリがありません。最初のカテゴリを作成してください。",
+      "addCategory": "追加",
+      "editCategory": "カテゴリを編集",
+      "name": "名前",
+      "namePlaceholder": "カテゴリ名を入力",
+      "status": "ステータス",
+      "active": "有効",
+      "inactive": "無効",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "deleteConfirm": "このカテゴリを削除してもよろしいですか？この操作は取り消せません。",
+      "fetchError": "カテゴリの読み込みに失敗しました",
+      "updateError": "カテゴリの更新に失敗しました",
+      "saveError": "カテゴリの保存に失敗しました",
+      "deleteError": "カテゴリの削除に失敗しました",
+      "translateError": "翻訳に失敗しました",
+      "nameRequired": "名前は必須です",
+      "enabled": "有効化されました",
+      "disabled": "無効化されました",
+      "created": "カテゴリが作成されました",
+      "updated": "カテゴリが更新されました",
+      "deleted": "カテゴリが削除されました",
+      "validationErrorTitle": "以下のエラーを修正してください",
+      "sort": "並べ替え",
+      "saveSort": "保存",
+      "sortSaved": "並び順が保存されました",
+      "sortError": "並び順の保存に失敗しました"
+    },
+    "items": {
+      "noItems": "まだアイテムがありません。最初のアイテムを作成してください。",
+      "addItem": "追加",
+      "editItem": "アイテムを編集",
+      "name": "名前",
+      "namePlaceholder": "アイテム名を入力",
+      "description": "説明",
+      "descriptionPlaceholder": "アイテムの説明を入力",
+      "price": "価格",
+      "pricePlaceholder": "0.00",
+      "category": "カテゴリ",
+      "categoryPlaceholder": "カテゴリを選択",
+      "image": "画像",
+      "uploadImage": "画像をアップロード",
+      "removeImage": "画像を削除",
+      "status": "ステータス",
+      "active": "有効",
+      "inactive": "無効",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "deleteConfirm": "このアイテムを削除してもよろしいですか？この操作は取り消せません。",
+      "fetchError": "アイテムの読み込みに失敗しました",
+      "updateError": "アイテムの更新に失敗しました",
+      "saveError": "アイテムの保存に失敗しました",
+      "deleteError": "アイテムの削除に失敗しました",
+      "translateError": "翻訳に失敗しました",
+      "nameRequired": "名前は必須です",
+      "categoryRequired": "カテゴリは必須です",
+      "priceRequired": "有効な価格が必要です",
+      "enabled": "有効化されました",
+      "disabled": "無効化されました",
+      "created": "アイテムが作成されました",
+      "updated": "アイテムが更新されました",
+      "deleted": "アイテムが削除されました",
+      "validationErrorTitle": "以下のエラーを修正してください",
+      "sort": "並べ替え",
+      "saveSort": "保存",
+      "sortSaved": "並び順が保存されました",
+      "sortError": "並び順の保存に失敗しました",
+      "allergens": "アレルゲン",
+      "allergensHint": "この料理に含まれるアレルゲンを選択",
+      "allergenNames": {
+        "gluten": "グルテン",
+        "crustaceans": "甲殻類",
+        "eggs": "卵",
+        "fish": "魚",
+        "peanuts": "ピーナッツ",
+        "soybeans": "大豆",
+        "dairy": "乳製品",
+        "nuts": "ナッツ類",
+        "celery": "セロリ",
+        "mustard": "マスタード",
+        "sesame": "ゴマ",
+        "sulphites": "亜硫酸塩",
+        "lupin": "ルピナス",
+        "molluscs": "軟体動物"
+      }
+    },
+    "languages": {
+      "translationProgress": "翻訳の進捗",
+      "availableLanguages": "利用可能な言語",
+      "europeanLanguages": "ヨーロッパ言語",
+      "starToSetDefault": "星をクリックしてデフォルトに設定",
+      "default": "デフォルト",
+      "hint": "言語を有効にしてお客様が複数の言語でメニューを表示できるようにします。",
+      "fetchError": "言語の読み込みに失敗しました",
+      "enableError": "言語の有効化に失敗しました",
+      "disableError": "言語の無効化に失敗しました",
+      "defaultError": "デフォルト言語の設定に失敗しました",
+      "languageEnabled": "{language}が有効化されました",
+      "languageDisabled": "{language}が無効化されました",
+      "defaultSet": "{language}がデフォルトに設定されました",
+      "cannotDisableDefault": "デフォルト言語は無効化できません",
+      "atLeastOneRequired": "少なくとも1つの言語が必要です",
+      "enableFirst": "まず言語を有効化してください",
+      "deleteConfirm": "この言語を無効化するとすべての翻訳が削除されます。この操作は取り消せません。",
+      "cancel": "キャンセル",
+      "confirm": "無効化"
+    },
+    "contacts": {
+      "phone": "電話番号",
+      "phonePlaceholder": "+81 90 1234 5678",
+      "phoneHint": "お客様用の連絡先電話番号",
+      "instagram": "Instagram",
+      "instagramPlaceholder": "your_restaurant",
+      "instagramHint": "Instagramユーザー名（@なし）",
+      "whatsapp": "WhatsApp",
+      "whatsappPlaceholder": "+81 90 1234 5678",
+      "whatsappHint": "お客様からのお問い合わせ用WhatsApp番号",
+      "location": "所在地",
+      "locationHint": "地図をクリックまたは検索してレストランの場所を設定",
+      "save": "保存",
+      "fetchError": "連絡先情報の読み込みに失敗しました",
+      "saveError": "連絡先情報の保存に失敗しました",
+      "saved": "連絡先情報が保存されました"
+    },
+    "design": {
+      "background": "背景",
+      "backgroundHint": "ホームページの背景用に動画または画像をアップロード",
+      "uploadMedia": "動画または画像をアップロード",
+      "removeMedia": "削除",
+      "accentColor": "アクセントカラー",
+      "accentColorHint": "ウェブサイトのボタンとハイライトのメインカラー",
+      "presetColors": "プリセットカラー",
+      "customColor": "カスタムカラー",
+      "save": "保存",
+      "fetchError": "デザイン設定の読み込みに失敗しました",
+      "saveError": "デザイン設定の保存に失敗しました",
+      "saved": "デザイン設定が保存されました",
+      "uploadError": "ファイルのアップロードに失敗しました",
+      "invalidFileType": "無効なファイルタイプです。許可：JPEG、PNG、WebP、GIF、MP4、WebM、MOV",
+      "fileTooLarge": "ファイルが大きすぎます。最大サイズ：動画50MB、画像5MB"
+    },
+    "general": {
+      "name": "タイトル",
+      "namePlaceholder": "レストラン名を入力",
+      "nameHint": "公開ウェブサイトのホームページに表示されます",
+      "description": "サブタイトル",
+      "descriptionPlaceholder": "簡単な説明（任意）",
+      "descriptionHint": "ホームページのタイトルの下に表示されます",
+      "slug": "URLスラッグ",
+      "slugPlaceholder": "my-restaurant",
+      "slugHint": "ウェブサイトは以下で利用可能になります：iq-rest.com/{slug}",
+      "currency": "通貨",
+      "currencyPlaceholder": "通貨を選択",
+      "save": "保存",
+      "fetchError": "設定の読み込みに失敗しました",
+      "saveError": "設定の保存に失敗しました",
+      "saved": "設定が保存されました",
+      "nameRequired": "レストラン名は必須です",
+      "slugRequired": "URLスラッグは必須です",
+      "validationErrorTitle": "以下のエラーを修正してください",
+      "slugChangedTitle": "ウェブサイトアドレスが更新されました",
+      "slugChangedDescription": "レストランは以下で利用可能になりました：",
+      "close": "閉じる",
+      "view": "表示"
+    },
+    "onboarding": {
+      "title": "IQ Restへようこそ！",
+      "subtitle": "これらのステップを完了してレストランウェブサイトを立ち上げましょう",
+      "requiredSteps": "必須ステップ",
+      "optionalSteps": "オプションステップ",
+      "viewMenu": "メニューを表示",
+      "steps": {
+        "title": {
+          "name": "レストラン名を追加",
+          "description": "ウェブサイトに表示されるレストラン名を入力"
+        },
+        "slug": {
+          "name": "ウェブサイトアドレスを設定",
+          "description": "レストランウェブサイトのユニークなURLを選択"
+        },
+        "categories": {
+          "name": "メニューカテゴリを作成",
+          "description": "前菜、メインコースなどのカテゴリでメニューを整理"
+        },
+        "items": {
+          "name": "メニューアイテムを追加",
+          "description": "価格と説明付きで料理をメニューに追加"
+        },
+        "design": {
+          "name": "デザインをカスタマイズ",
+          "description": "ウェブサイトの色と背景を選択"
+        },
+        "contacts": {
+          "name": "連絡先情報を追加",
+          "description": "電話、WhatsApp、Instagram、所在地を追加"
+        },
+        "reservations": {
+          "name": "予約を有効化",
+          "description": "お客様がオンラインでテーブルを予約できるようにする"
+        },
+        "translations": {
+          "name": "言語を追加",
+          "description": "メニューを複数の言語で利用可能にする"
+        }
+      },
+      "completed": "完了",
+      "notCompleted": "未完了",
+      "allDone": "すべて完了！メニューが公開されています。",
+      "requiredRemaining": "あと{count}つの必須ステップ"
+    }
+  },
+  "reservationSettings": {
+    "subscriptionRequired": "レストランのお客様が予約できるようにするには、サービスに登録する必要があります。",
+    "subscribe": "登録",
+    "reservationsEnabled": "予約を有効化",
+    "enabled": "予約が有効です",
+    "disabled": "予約が無効です",
+    "reservationMode": "確認モード",
+    "modeAuto": "自動",
+    "modeManual": "手動",
+    "modeAutoDescription": "テーブルの空き状況に基づいて予約が自動的に確認されます",
+    "modeManualDescription": "各予約を手動で確認する必要があります",
+    "slotDuration": "予約時間",
+    "minutes": "分",
+    "workingHours": "営業時間",
+    "save": "保存",
+    "saving": "保存中...",
+    "saved": "設定が保存されました",
+    "fetchError": "設定の読み込みに失敗しました",
+    "saveError": "設定の保存に失敗しました"
+  },
+  "terms": {
+    "title": "利用規約",
+    "lastUpdated": "最終更新日：2025年12月17日",
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "この利用規約についてご質問がある場合は、お問い合わせください。"
+    },
+    "sections": []
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日：2025年12月17日",
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "このプライバシーポリシーについてご質問がある場合、またはデータ保護の権利を行使したい場合は、お問い合わせください。",
+      "controller": "データ管理者"
+    },
+    "sections": []
+  },
+  "cookies": {
+    "title": "Cookieポリシー",
+    "lastUpdated": "最終更新日：2025年12月17日",
+    "yes": "はい",
+    "no": "いいえ",
+    "cookieTableTitle": "使用するCookie",
+    "tableHeaders": {
+      "name": "Cookie名",
+      "purpose": "目的",
+      "duration": "期間",
+      "required": "必須"
+    },
+    "contact": {
+      "title": "Cookieについての質問",
+      "description": "Cookieの使用についてご質問がある場合は、お問い合わせください。"
+    },
+    "sections": [],
+    "cookieTypes": []
+  }
+}
