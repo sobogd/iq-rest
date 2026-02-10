@@ -506,7 +506,9 @@
       "customTheme": "Temă de culoare personalizată",
       "background": "Imagine & video de fundal",
       "support": "Asistență",
-      "reservations": "Rezerve"
+      "reservations": "Rezerve",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

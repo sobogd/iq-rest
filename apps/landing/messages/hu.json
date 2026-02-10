@@ -506,7 +506,9 @@
       "customTheme": "Egyedi színséma",
       "background": "Háttérkép & videó",
       "support": "Támogatás",
-      "reservations": "Asztalfoglalás"
+      "reservations": "Asztalfoglalás",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

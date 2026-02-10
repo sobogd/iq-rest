@@ -506,7 +506,9 @@
       "customTheme": "Egendefinert fargetema",
       "background": "Bakgrunnsbilde & video",
       "support": "Støtte",
-      "reservations": "Reservasjoner"
+      "reservations": "Reservasjoner",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

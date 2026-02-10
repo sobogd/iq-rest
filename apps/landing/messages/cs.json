@@ -506,7 +506,9 @@
       "customTheme": "Vlastní barevné téma",
       "background": "Pozadí obrázek & video",
       "support": "Podpora",
-      "reservations": "Rezervace"
+      "reservations": "Rezervace",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

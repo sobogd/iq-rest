@@ -506,7 +506,9 @@
       "customTheme": "Пользовательская цветовая тема",
       "background": "Фоновое изображение и видео",
       "support": "Поддержка",
-      "reservations": "Бронирования"
+      "reservations": "Бронирования",
+      "multiRestaurant": "Несколько ресторанов",
+      "customDomain": "Собственный домен"
     },
     "values": {
       "free": {

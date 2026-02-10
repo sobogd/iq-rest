@@ -506,7 +506,9 @@
       "customTheme": "맞춤 색상 테마",
       "background": "배경 이미지 및 비디오",
       "support": "지원",
-      "reservations": "예약"
+      "reservations": "예약",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

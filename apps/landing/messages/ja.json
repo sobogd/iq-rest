@@ -506,7 +506,9 @@
       "customTheme": "カスタムカラーテーマ",
       "background": "背景画像＆動画",
       "support": "サポート",
-      "reservations": "予約"
+      "reservations": "予約",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

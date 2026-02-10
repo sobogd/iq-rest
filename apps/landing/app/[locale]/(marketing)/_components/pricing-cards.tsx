@@ -31,14 +31,14 @@ const PLANS: Plan[] = [
   },
   {
     id: "basic",
-    price: { monthly: 5, yearly: 4 },
-    yearlyTotal: 48,
+    price: { monthly: 14.9, yearly: 9.9 },
+    yearlyTotal: 118.8,
     popular: true,
   },
   {
     id: "pro",
-    price: { monthly: 7, yearly: 6 },
-    yearlyTotal: 72,
+    price: { monthly: 39.9, yearly: 29 },
+    yearlyTotal: 348,
     popular: false,
   },
 ];
@@ -64,7 +64,9 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "customTheme", free: false, basic: true, pro: true },
   { key: "background", free: true, basic: true, pro: true },
   { key: "support", free: true, basic: true, pro: true },
-  { key: "reservations", free: false, basic: false, pro: true },
+  { key: "reservations", free: false, basic: true, pro: true },
+  { key: "multiRestaurant", free: false, basic: false, pro: true },
+  { key: "customDomain", free: false, basic: false, pro: true },
 ];
 
 export function PricingCards() {

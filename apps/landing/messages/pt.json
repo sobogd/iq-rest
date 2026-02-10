@@ -506,7 +506,9 @@
       "customTheme": "Tema de cor personalizado",
       "background": "Imagem e vídeo de fundo",
       "support": "Suporte",
-      "reservations": "Reservas"
+      "reservations": "Reservas",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

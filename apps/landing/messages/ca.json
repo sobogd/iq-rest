@@ -506,7 +506,9 @@
       "customTheme": "Tema de color personalitzat",
       "background": "Imatge i vídeo de fons",
       "support": "Suport",
-      "reservations": "Reservacions"
+      "reservations": "Reservacions",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

@@ -506,7 +506,9 @@
       "customTheme": "Prilagođena tema boja",
       "background": "Pozadinska slika i video",
       "support": "Podrška",
-      "reservations": "Rezervacije"
+      "reservations": "Rezervacije",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

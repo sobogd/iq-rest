@@ -506,7 +506,9 @@
       "customTheme": "Individuali spalvų tema",
       "background": "Fono vaizdas ir vaizdo įrašas",
       "support": "Pagalba",
-      "reservations": "Rezervacijos"
+      "reservations": "Rezervacijos",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

@@ -506,7 +506,9 @@
       "customTheme": "Téama dath saincheaptha",
       "background": "Íomhá & físeán cúlra",
       "support": "Tacaíocht",
-      "reservations": "Conradh"
+      "reservations": "Conradh",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

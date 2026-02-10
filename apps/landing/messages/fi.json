@@ -506,7 +506,9 @@
       "customTheme": "Mukautettu väriteema",
       "background": "Taustakuva & video",
       "support": "Tuki",
-      "reservations": "Varausmahdollisuus"
+      "reservations": "Varausmahdollisuus",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

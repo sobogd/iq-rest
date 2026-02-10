@@ -506,7 +506,9 @@
       "customTheme": "Aangepast kleurthema",
       "background": "Achtergrondafbeelding & video",
       "support": "Ondersteuning",
-      "reservations": "Reserveringen"
+      "reservations": "Reserveringen",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

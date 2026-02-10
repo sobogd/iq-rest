@@ -506,7 +506,9 @@
       "customTheme": "سمة ألوان مخصصة",
       "background": "صورة وفيديو الخلفية",
       "support": "الدعم",
-      "reservations": "الحجوزات"
+      "reservations": "الحجوزات",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

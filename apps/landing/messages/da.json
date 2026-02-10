@@ -506,7 +506,9 @@
       "customTheme": "Tilpasset farvetema",
       "background": "Baggrundsbillede & video",
       "support": "Support",
-      "reservations": "Reservationer"
+      "reservations": "Reservationer",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

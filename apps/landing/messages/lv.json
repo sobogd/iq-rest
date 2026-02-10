@@ -506,7 +506,9 @@
       "customTheme": "Pielāgota krāsu tēma",
       "background": "Fona attēls un video",
       "support": "Atbalsts",
-      "reservations": "Rezervācijas"
+      "reservations": "Rezervācijas",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

@@ -128,10 +128,10 @@ const pricingProductSchema = {
   category: "Restaurant Software",
   offers: [
     createOffer("QR Menu Free Plan - Restaurant Website", "0"),
-    createOffer("QR Menu Basic Plan Monthly - Restaurant Website", "5"),
-    createOffer("QR Menu Basic Plan Yearly - Restaurant Website", "48"),
-    createOffer("QR Menu Pro Plan Monthly - Restaurant Website", "7"),
-    createOffer("QR Menu Pro Plan Yearly - Restaurant Website", "72"),
+    createOffer("QR Menu Basic Plan Monthly - Restaurant Website", "14.9"),
+    createOffer("QR Menu Basic Plan Yearly - Restaurant Website", "118.8"),
+    createOffer("QR Menu Pro Plan Monthly - Restaurant Website", "39.9"),
+    createOffer("QR Menu Pro Plan Yearly - Restaurant Website", "348"),
   ],
   aggregateRating: {
     "@type": "AggregateRating",

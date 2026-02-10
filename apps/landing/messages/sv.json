@@ -506,7 +506,9 @@
       "customTheme": "Anpassad färgtema",
       "background": "Bakgrundsbild & video",
       "support": "Support",
-      "reservations": "Bokningar"
+      "reservations": "Bokningar",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

@@ -506,7 +506,9 @@
       "customTheme": "تم رنگی سفارشی",
       "background": "تصویر و ویدیوی پس‌زمینه",
       "support": "پشتیبانی",
-      "reservations": "رزروها"
+      "reservations": "رزروها",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

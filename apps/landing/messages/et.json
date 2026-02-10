@@ -506,7 +506,9 @@
       "customTheme": "Kohandatud värviteema",
       "background": "Taustapilt ja video",
       "support": "Tugi",
-      "reservations": "Broneeringud"
+      "reservations": "Broneeringud",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

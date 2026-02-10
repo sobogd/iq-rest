@@ -506,7 +506,9 @@
       "customTheme": "Tema colore personalizzato",
       "background": "Immagine e video di sfondo",
       "support": "Supporto",
-      "reservations": "Prenotazioni"
+      "reservations": "Prenotazioni",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

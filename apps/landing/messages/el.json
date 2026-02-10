@@ -506,7 +506,9 @@
       "customTheme": "Προσαρμοσμένο χρωματικό θέμα",
       "background": "Εικόνα & βίντεο φόντου",
       "support": "Υποστήριξη",
-      "reservations": "Κρατήσεις"
+      "reservations": "Κρατήσεις",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

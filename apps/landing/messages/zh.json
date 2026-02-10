@@ -506,7 +506,9 @@
       "customTheme": "自定义颜色主题",
       "background": "背景图像和视频",
       "support": "支持",
-      "reservations": "预订"
+      "reservations": "预订",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

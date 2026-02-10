@@ -506,7 +506,9 @@
       "customTheme": "Sérsniðin litapalletta",
       "background": "Bakgrunnsmynd & myndband",
       "support": "Stuðningur",
-      "reservations": "Bókanir"
+      "reservations": "Bókanir",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

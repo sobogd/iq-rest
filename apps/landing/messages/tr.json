@@ -506,7 +506,9 @@
       "customTheme": "Özel renk teması",
       "background": "Arka plan resmi & video",
       "support": "Destek",
-      "reservations": "Rezervasyonlar"
+      "reservations": "Rezervasyonlar",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

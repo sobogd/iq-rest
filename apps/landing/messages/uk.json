@@ -506,7 +506,9 @@
       "customTheme": "Користувацька кольорова тема",
       "background": "Фонове зображення та відео",
       "support": "Підтримка",
-      "reservations": "Резервування"
+      "reservations": "Резервування",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {

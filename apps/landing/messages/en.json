@@ -407,7 +407,9 @@
       "customTheme": "Custom color theme",
       "background": "Background image & video",
       "support": "Support",
-      "reservations": "Reservations"
+      "reservations": "Reservations",
+      "multiRestaurant": "Multiple restaurants",
+      "customDomain": "Custom domain"
     },
     "values": {
       "free": {
