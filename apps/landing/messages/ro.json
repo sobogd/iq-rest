@@ -1531,20 +1531,20 @@
       "viewMenu": "Vizualizați Meniul Dvs.",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Informații Restaurant",
+          "description": "Adăugați numele restaurantului și alegeți o adresă web"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Creați Categorii",
+          "description": "Organizați meniul cu categorii precum Aperitive, Feluri Principale, etc."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Adăugați Produse",
+          "description": "Adăugați preparate în meniu cu prețuri și descrieri"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Adăugați Contacte",
+          "description": "Adăugați telefon, WhatsApp, Instagram și locație"
         }
       },
       "completed": "Finalizat",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} pași necesari rămași",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "Meniu QR",
+          "description": "Tipăriți și partajați meniul"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Categorii",
+          "description": "Adăugați sau editați categoriile meniului"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Produse Meniu",
+          "description": "Adăugați sau editați preparatele"
         },
         "design": {
           "name": "Design",
-          "description": "Customize colors and background"
+          "description": "Personalizați culorile și fundalul"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Contacte",
+          "description": "Editați informațiile de contact"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Limbi",
+          "description": "Adăugați mai multe limbi în meniu"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analiză",
+          "description": "Vizualizați statisticile de scanare a meniului"
         }
       }
     }

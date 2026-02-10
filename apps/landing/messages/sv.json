@@ -1531,20 +1531,20 @@
       "viewMenu": "Visa Din Meny",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Restauranginformation",
+          "description": "Lägg till ditt restaurangnamn och välj en webbadress"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Skapa kategorier",
+          "description": "Organisera din meny med kategorier som Förrätter, Huvudrätter osv."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Lägg till menyobjekt",
+          "description": "Lägg till rätter i din meny med priser och beskrivningar"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Lägg till kontakter",
+          "description": "Lägg till telefon, WhatsApp, Instagram och plats"
         }
       },
       "completed": "Slutförd",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} obligatoriska steg kvar",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR-meny",
+          "description": "Skriv ut och dela din meny"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategorier",
+          "description": "Lägg till eller redigera menykategorier"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Menyobjekt",
+          "description": "Lägg till eller redigera rätter"
         },
         "design": {
           "name": "Design",
-          "description": "Customize colors and background"
+          "description": "Anpassa färger och bakgrund"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontakter",
+          "description": "Redigera kontaktinformation"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Språk",
+          "description": "Lägg till fler språk i din meny"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analys",
+          "description": "Visa menyskanningsstatistik"
         }
       }
     }

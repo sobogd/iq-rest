@@ -1531,20 +1531,20 @@
       "viewMenu": "Näytä valikkosi",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Ravintolan tiedot",
+          "description": "Lisää ravintolasi nimi ja valitse verkko-osoite"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Luo kategoriat",
+          "description": "Järjestä valikkosi kategorioilla kuten Alkupalat, Pääruoat jne."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Lisää valikon kohteet",
+          "description": "Lisää ruokia valikkoosi hintojen ja kuvausten kanssa"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Lisää yhteystiedot",
+          "description": "Lisää puhelin, WhatsApp, Instagram ja sijainti"
         }
       },
       "completed": "Valmis",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} pakollista vaihetta jäljellä",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR-valikko",
+          "description": "Tulosta ja jaa valikkosi"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategoriat",
+          "description": "Lisää tai muokkaa valikon kategorioita"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Valikon kohteet",
+          "description": "Lisää tai muokkaa ruokia"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Ulkoasu",
+          "description": "Mukauta värejä ja taustaa"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Yhteystiedot",
+          "description": "Muokkaa yhteystietoja"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Kielet",
+          "description": "Lisää valikkoon lisää kieliä"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analytiikka",
+          "description": "Katso valikon skannaustilastot"
         }
       }
     }

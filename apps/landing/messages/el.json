@@ -1531,20 +1531,20 @@
       "viewMenu": "Δείτε το Μενού σας",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Πληροφορίες Εστιατορίου",
+          "description": "Προσθέστε το όνομα του εστιατορίου σας και επιλέξτε διεύθυνση ιστοσελίδας"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Δημιουργία Κατηγοριών",
+          "description": "Οργανώστε το μενού σας με κατηγορίες όπως Ορεκτικά, Κυρίως Πιάτα κλπ."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Προσθήκη Πιάτων",
+          "description": "Προσθέστε πιάτα στο μενού σας με τιμές και περιγραφές"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Προσθήκη Επαφών",
+          "description": "Προσθέστε τηλέφωνο, WhatsApp, Instagram και τοποθεσία"
         }
       },
       "completed": "Ολοκληρώθηκε",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} υποχρεωτικά βήματα απομένουν",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Μενού",
+          "description": "Εκτυπώστε και μοιραστείτε το μενού σας"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Κατηγορίες",
+          "description": "Προσθήκη ή επεξεργασία κατηγοριών μενού"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Πιάτα Μενού",
+          "description": "Προσθήκη ή επεξεργασία πιάτων"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Σχεδιασμός",
+          "description": "Προσαρμόστε χρώματα και φόντο"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Επαφές",
+          "description": "Επεξεργασία στοιχείων επικοινωνίας"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Γλώσσες",
+          "description": "Προσθέστε περισσότερες γλώσσες στο μενού σας"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Αναλυτικά",
+          "description": "Δείτε στατιστικά σάρωσης μενού"
         }
       }
     }

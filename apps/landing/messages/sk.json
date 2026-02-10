@@ -1531,20 +1531,20 @@
       "viewMenu": "Zobraziť vaše menu",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Informácie o reštaurácii",
+          "description": "Pridajte názov reštaurácie a vyberte webovú adresu"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Vytvoriť kategórie",
+          "description": "Organizujte menu kategóriami ako Predjedlá, Hlavné jedlá atď."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Pridať položky menu",
+          "description": "Pridajte jedlá do menu s cenami a popismi"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Pridať kontakty",
+          "description": "Pridajte telefón, WhatsApp, Instagram a polohu"
         }
       },
       "completed": "Dokončené",
@@ -1554,31 +1554,31 @@
       "quickActions": {
         "qrMenu": {
           "name": "QR Menu",
-          "description": "Print and share your menu"
+          "description": "Vytlačte a zdieľajte svoje menu"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategórie",
+          "description": "Pridať alebo upraviť kategórie menu"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Položky menu",
+          "description": "Pridať alebo upraviť jedlá"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dizajn",
+          "description": "Prispôsobte farby a pozadie"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontakty",
+          "description": "Upraviť kontaktné informácie"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Jazyky",
+          "description": "Pridajte do menu ďalšie jazyky"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analytika",
+          "description": "Zobraziť štatistiky skenovania menu"
         }
       }
     }

@@ -1564,20 +1564,20 @@
       "viewMenu": "查看您的菜单",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "餐厅信息",
+          "description": "添加您的餐厅名称并选择网站地址"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "创建分类",
+          "description": "使用分类整理菜单，如开胃菜、主菜等"
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "添加菜品",
+          "description": "添加菜品到菜单，包含价格和描述"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "添加联系方式",
+          "description": "添加电话、WhatsApp、Instagram和位置"
         }
       },
       "completed": "已完成",
@@ -1586,32 +1586,32 @@
       "requiredRemaining": "还剩{count}个必要步骤",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "二维码菜单",
+          "description": "打印并分享您的菜单"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "分类",
+          "description": "添加或编辑菜单分类"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "菜品",
+          "description": "添加或编辑菜品"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "设计",
+          "description": "自定义颜色和背景"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "联系方式",
+          "description": "编辑联系信息"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "语言",
+          "description": "为菜单添加更多语言"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "分析",
+          "description": "查看菜单扫描统计"
         }
       }
     }

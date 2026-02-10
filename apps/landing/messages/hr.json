@@ -1531,20 +1531,20 @@
       "viewMenu": "Pogledajte svoj jelovnik",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Podaci o restoranu",
+          "description": "Dodajte naziv restorana i odaberite web adresu"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Kreiraj kategorije",
+          "description": "Organizirajte jelovnik s kategorijama poput Predjela, Glavna jela itd."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Dodaj stavke jelovnika",
+          "description": "Dodajte jela na jelovnik s cijenama i opisima"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Dodaj kontakte",
+          "description": "Dodajte telefon, WhatsApp, Instagram i lokaciju"
         }
       },
       "completed": "Završeno",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "Preostalo je {count} obaveznih koraka",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Jelovnik",
+          "description": "Ispišite i podijelite svoj jelovnik"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategorije",
+          "description": "Dodajte ili uredite kategorije jelovnika"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Stavke jelovnika",
+          "description": "Dodajte ili uredite jela"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dizajn",
+          "description": "Prilagodite boje i pozadinu"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontakti",
+          "description": "Uredite kontakt informacije"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Jezici",
+          "description": "Dodajte više jezika na jelovnik"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analitika",
+          "description": "Pogledajte statistiku skeniranja jelovnika"
         }
       }
     }

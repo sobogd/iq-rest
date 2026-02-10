@@ -1531,20 +1531,20 @@
       "viewMenu": "Pogledajte svoj meni",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Informacije o restoranu",
+          "description": "Dodajte ime restorana i izaberite web adresu"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Kreirajte kategorije",
+          "description": "Organizujte meni kategorijama kao što su Predjela, Glavna jela itd."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Dodajte stavke menija",
+          "description": "Dodajte jela u meni sa cenama i opisima"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Dodajte kontakte",
+          "description": "Dodajte telefon, WhatsApp, Instagram i lokaciju"
         }
       },
       "completed": "Završeno",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "Preostalo je {count} obaveznih koraka",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Meni",
+          "description": "Odštampajte i podelite svoj meni"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategorije",
+          "description": "Dodajte ili uredite kategorije menija"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Stavke menija",
+          "description": "Dodajte ili uredite jela"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dizajn",
+          "description": "Prilagodite boje i pozadinu"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontakti",
+          "description": "Uredite kontakt informacije"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Jezici",
+          "description": "Dodajte više jezika u meni"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analitika",
+          "description": "Pogledajte statistiku skeniranja menija"
         }
       }
     }

@@ -1531,20 +1531,20 @@
       "viewMenu": "Visualizza il Tuo Menu",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Info Ristorante",
+          "description": "Aggiungi il nome del tuo ristorante e scegli un indirizzo web"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Crea Categorie",
+          "description": "Organizza il tuo menu con categorie come Antipasti, Primi Piatti, ecc."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Aggiungi Piatti",
+          "description": "Aggiungi piatti al tuo menu con prezzi e descrizioni"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Aggiungi Contatti",
+          "description": "Aggiungi telefono, WhatsApp, Instagram e posizione"
         }
       },
       "completed": "Completato",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} passaggi obbligatori rimanenti",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "Menu QR",
+          "description": "Stampa e condividi il tuo menu"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Categorie",
+          "description": "Aggiungi o modifica le categorie del menu"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Piatti del Menu",
+          "description": "Aggiungi o modifica i piatti"
         },
         "design": {
           "name": "Design",
-          "description": "Customize colors and background"
+          "description": "Personalizza colori e sfondo"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Contatti",
+          "description": "Modifica le informazioni di contatto"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Lingue",
+          "description": "Aggiungi più lingue al tuo menu"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analisi",
+          "description": "Visualizza le statistiche di scansione del menu"
         }
       }
     }

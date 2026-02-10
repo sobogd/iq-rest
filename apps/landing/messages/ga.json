@@ -1531,20 +1531,20 @@
       "viewMenu": "Taispeáin Do Mheán",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Eolas Bialainne",
+          "description": "Cuir ainm do bhialainne agus roghnaigh seoladh suímh gréasáin"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Cruthaigh Catagóirí",
+          "description": "Eagraigh do bhiachlár le catagóirí mar Tosaitheoirí, Príomhchúrsaí, srl."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Cuir Míreanna Biachlár",
+          "description": "Cuir béilí le do bhiachlár le praghsanna agus tuairiscí"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Cuir Teagmhálaithe",
+          "description": "Cuir fón, WhatsApp, Instagram, agus suíomh"
         }
       },
       "completed": "Críochnaithe",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} céimeanna riachtanacha fágtha",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "Biachlár QR",
+          "description": "Priontáil agus roinn do bhiachlár"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Catagóirí",
+          "description": "Cuir nó cuir in eagar catagóirí biachlár"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Míreanna Biachlár",
+          "description": "Cuir nó cuir in eagar béilí"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dearadh",
+          "description": "Saincheap dathanna agus cúlra"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Teagmhálaithe",
+          "description": "Cuir in eagar eolas teagmhála"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Teangacha",
+          "description": "Cuir tuilleadh teangacha le do bhiachlár"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Anailísíocht",
+          "description": "Féach ar staitisticí scanadh biachlár"
         }
       }
     }

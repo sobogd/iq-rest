@@ -1544,20 +1544,20 @@
       "viewMenu": "メニューを表示",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "レストラン情報",
+          "description": "レストラン名を追加し、ウェブアドレスを選択してください"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "カテゴリを作成",
+          "description": "前菜、メインコースなどのカテゴリでメニューを整理"
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "メニュー項目を追加",
+          "description": "価格と説明付きで料理をメニューに追加"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "連絡先を追加",
+          "description": "電話、WhatsApp、Instagram、所在地を追加"
         }
       },
       "completed": "完了",
@@ -1566,32 +1566,32 @@
       "requiredRemaining": "あと{count}つの必須ステップ",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QRメニュー",
+          "description": "メニューを印刷して共有"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "カテゴリ",
+          "description": "メニューカテゴリを追加または編集"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "メニュー項目",
+          "description": "料理を追加または編集"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "デザイン",
+          "description": "色と背景をカスタマイズ"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "連絡先",
+          "description": "連絡先情報を編集"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "言語",
+          "description": "メニューに言語を追加"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "分析",
+          "description": "メニュースキャン統計を表示"
         }
       }
     }

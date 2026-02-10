@@ -1544,20 +1544,20 @@
       "viewMenu": "عرض قائمتك",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "معلومات المطعم",
+          "description": "أضف اسم مطعمك واختر عنوان الموقع"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "إنشاء الفئات",
+          "description": "نظم قائمتك بفئات مثل المقبلات، الأطباق الرئيسية، إلخ."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "إضافة عناصر القائمة",
+          "description": "أضف الأطباق إلى قائمتك مع الأسعار والأوصاف"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "إضافة جهات الاتصال",
+          "description": "أضف الهاتف، واتساب، انستغرام، والموقع"
         }
       },
       "completed": "مكتمل",
@@ -1566,32 +1566,32 @@
       "requiredRemaining": "{count} خطوات مطلوبة متبقية",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "قائمة QR",
+          "description": "اطبع وشارك قائمتك"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "الفئات",
+          "description": "إضافة أو تعديل فئات القائمة"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "عناصر القائمة",
+          "description": "إضافة أو تعديل الأطباق"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "التصميم",
+          "description": "تخصيص الألوان والخلفية"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "جهات الاتصال",
+          "description": "تعديل معلومات الاتصال"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "اللغات",
+          "description": "إضافة المزيد من اللغات لقائمتك"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "التحليلات",
+          "description": "عرض إحصائيات مسح القائمة"
         }
       }
     }

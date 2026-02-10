@@ -1531,20 +1531,20 @@
       "viewMenu": "Skatīt savu ēdienkarti",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Restorāna informācija",
+          "description": "Pievienojiet sava restorāna nosaukumu un izvēlieties tīmekļa adresi"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Izveidot kategorijas",
+          "description": "Organizējiet ēdienkarti ar kategorijām, piemēram, Uzkodas, Pamatēdieni utt."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Pievienot ēdienkartes vienumus",
+          "description": "Pievienojiet ēdienus ēdienkartei ar cenām un aprakstiem"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Pievienot kontaktus",
+          "description": "Pievienojiet tālruni, WhatsApp, Instagram un atrašanās vietu"
         }
       },
       "completed": "Pabeigts",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} obligātie soļi palikuši",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Ēdienkarte",
+          "description": "Izdrukājiet un dalieties ar savu ēdienkarti"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategorijas",
+          "description": "Pievienot vai rediģēt ēdienkartes kategorijas"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Ēdienkartes vienumi",
+          "description": "Pievienot vai rediģēt ēdienus"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dizains",
+          "description": "Pielāgot krāsas un fonu"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontakti",
+          "description": "Rediģēt kontaktinformāciju"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Valodas",
+          "description": "Pievienot vairāk valodu ēdienkartei"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analītika",
+          "description": "Skatīt ēdienkartes skenēšanas statistiku"
         }
       }
     }

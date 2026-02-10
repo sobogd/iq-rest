@@ -1564,20 +1564,20 @@
       "viewMenu": "مشاهده منوی شما",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "اطلاعات رستوران",
+          "description": "نام رستوران خود را اضافه کنید و آدرس وبسایت را انتخاب کنید"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "ایجاد دسته‌بندی‌ها",
+          "description": "منوی خود را با دسته‌بندی‌هایی مثل پیش‌غذا، غذای اصلی و غیره سازماندهی کنید"
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "افزودن آیتم‌های منو",
+          "description": "غذاها را با قیمت و توضیحات به منوی خود اضافه کنید"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "افزودن اطلاعات تماس",
+          "description": "تلفن، واتساپ، اینستاگرام و موقعیت مکانی را اضافه کنید"
         }
       },
       "completed": "تکمیل شده",
@@ -1586,32 +1586,32 @@
       "requiredRemaining": "{count} مرحله الزامی باقی‌مانده",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "منوی QR",
+          "description": "چاپ و اشتراک‌گذاری منوی شما"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "دسته‌بندی‌ها",
+          "description": "افزودن یا ویرایش دسته‌بندی‌های منو"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "آیتم‌های منو",
+          "description": "افزودن یا ویرایش غذاها"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "طراحی",
+          "description": "سفارشی‌سازی رنگ‌ها و پس‌زمینه"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "اطلاعات تماس",
+          "description": "ویرایش اطلاعات تماس"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "زبان‌ها",
+          "description": "افزودن زبان‌های بیشتر به منوی شما"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "تحلیل‌ها",
+          "description": "مشاهده آمار اسکن منو"
         }
       }
     }

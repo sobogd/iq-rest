@@ -1531,20 +1531,20 @@
       "viewMenu": "Tekintse meg az étlapját",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Étterem adatai",
+          "description": "Adja meg az étterem nevét és válasszon webcímet"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Kategóriák létrehozása",
+          "description": "Rendezze étlapját kategóriákba, mint Előételek, Főételek stb."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Ételek hozzáadása",
+          "description": "Adjon hozzá ételeket az étlaphoz árakkal és leírásokkal"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Kapcsolatok hozzáadása",
+          "description": "Adja hozzá a telefont, WhatsApp-ot, Instagramot és helyszínt"
         }
       },
       "completed": "Befejezve",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} kötelező lépés maradt",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Menü",
+          "description": "Nyomtassa ki és ossza meg étlapját"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategóriák",
+          "description": "Kategóriák hozzáadása vagy szerkesztése"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Étlap tételek",
+          "description": "Ételek hozzáadása vagy szerkesztése"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dizájn",
+          "description": "Színek és háttér testreszabása"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kapcsolatok",
+          "description": "Kapcsolattartási adatok szerkesztése"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Nyelvek",
+          "description": "További nyelvek hozzáadása az étlaphoz"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Elemzések",
+          "description": "Étlap szkennelési statisztikák megtekintése"
         }
       }
     }

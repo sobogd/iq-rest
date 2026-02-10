@@ -1531,20 +1531,20 @@
       "viewMenu": "Veure el teu menú",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Informació del Restaurant",
+          "description": "Afegeix el nom del teu restaurant i tria una adreça web"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Crear Categories",
+          "description": "Organitza el teu menú amb categories com Entrants, Plats Principals, etc."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Afegir Plats",
+          "description": "Afegeix plats al teu menú amb preus i descripcions"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Afegir Contactes",
+          "description": "Afegeix telèfon, WhatsApp, Instagram i ubicació"
         }
       },
       "completed": "Completat",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} passos obligatoris restants",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "Menú QR",
+          "description": "Imprimeix i comparteix el teu menú"
         },
         "categories": {
           "name": "Categories",
-          "description": "Add or edit menu categories"
+          "description": "Afegeix o edita les categories del menú"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Plats del Menú",
+          "description": "Afegeix o edita plats"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Disseny",
+          "description": "Personalitza colors i fons"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Contactes",
+          "description": "Edita la informació de contacte"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Idiomes",
+          "description": "Afegeix més idiomes al teu menú"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analítiques",
+          "description": "Veure estadístiques d'escaneig del menú"
         }
       }
     }

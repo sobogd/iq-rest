@@ -1531,20 +1531,20 @@
       "viewMenu": "Menünüzü Görüntüleyin",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Restoran Bilgileri",
+          "description": "Restoran adınızı ekleyin ve bir web adresi seçin"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Kategoriler Oluşturun",
+          "description": "Menünüzü Başlangıçlar, Ana Yemekler gibi kategorilerle düzenleyin"
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Menü Öğeleri Ekleyin",
+          "description": "Menünüze fiyatlar ve açıklamalarla yemekler ekleyin"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "İletişim Bilgileri Ekleyin",
+          "description": "Telefon, WhatsApp, Instagram ve konum ekleyin"
         }
       },
       "completed": "Tamamlandı",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} gerekli adım kaldı",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Menü",
+          "description": "Menünüzü yazdırın ve paylaşın"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategoriler",
+          "description": "Menü kategorilerini ekleyin veya düzenleyin"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Menü Öğeleri",
+          "description": "Yemekleri ekleyin veya düzenleyin"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Tasarım",
+          "description": "Renkleri ve arka planı özelleştirin"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "İletişim",
+          "description": "İletişim bilgilerini düzenleyin"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Diller",
+          "description": "Menünüze daha fazla dil ekleyin"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analitik",
+          "description": "Menü tarama istatistiklerini görüntüleyin"
         }
       }
     }

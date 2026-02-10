@@ -1531,20 +1531,20 @@
       "viewMenu": "Vaata oma menüüd",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Restorani teave",
+          "description": "Lisage oma restorani nimi ja valige veebiaadress"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Loo kategooriad",
+          "description": "Korraldage oma menüü kategooriatega nagu Eelroad, Põhiroad jne."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Lisa menüüelemendid",
+          "description": "Lisage menüüsse roogasid koos hindade ja kirjeldustega"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Lisa kontaktid",
+          "description": "Lisage telefon, WhatsApp, Instagram ja asukoht"
         }
       },
       "completed": "Lõpetatud",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "{count} kohustuslikku sammu on jäänud",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Menüü",
+          "description": "Printige ja jagage oma menüüd"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategooriad",
+          "description": "Lisa või muuda menüü kategooriaid"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Menüüelemendid",
+          "description": "Lisa või muuda roogasid"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Disain",
+          "description": "Kohandage värve ja tausta"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontaktid",
+          "description": "Muuda kontaktteavet"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Keeled",
+          "description": "Lisage menüüsse rohkem keeli"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analüütika",
+          "description": "Vaadake menüü skaneerimise statistikat"
         }
       }
     }

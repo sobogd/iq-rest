@@ -1531,20 +1531,20 @@
       "viewMenu": "Peržiūrėti savo meniu",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Restorano informacija",
+          "description": "Pridėkite savo restorano pavadinimą ir pasirinkite svetainės adresą"
         },
         "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories"
+          "name": "Sukurti kategorijas",
+          "description": "Sutvarkykite meniu kategorijomis, pvz., Užkandžiai, Pagrindiniai patiekalai ir kt."
         },
         "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
+          "name": "Pridėti meniu elementus",
+          "description": "Pridėkite patiekalus į meniu su kainomis ir aprašymais"
         },
         "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
+          "name": "Pridėti kontaktus",
+          "description": "Pridėkite telefoną, WhatsApp, Instagram ir vietą"
         }
       },
       "completed": "Užbaigta",
@@ -1553,32 +1553,32 @@
       "requiredRemaining": "Liko {count} privalomi žingsniai",
       "quickActions": {
         "qrMenu": {
-          "name": "QR Menu",
-          "description": "Print and share your menu"
+          "name": "QR Meniu",
+          "description": "Spausdinkite ir dalinkitės savo meniu"
         },
         "categories": {
-          "name": "Categories",
-          "description": "Add or edit menu categories"
+          "name": "Kategorijos",
+          "description": "Pridėti arba redaguoti meniu kategorijas"
         },
         "items": {
-          "name": "Menu Items",
-          "description": "Add or edit dishes"
+          "name": "Meniu elementai",
+          "description": "Pridėti arba redaguoti patiekalus"
         },
         "design": {
-          "name": "Design",
-          "description": "Customize colors and background"
+          "name": "Dizainas",
+          "description": "Pritaikyti spalvas ir foną"
         },
         "contacts": {
-          "name": "Contacts",
-          "description": "Edit contact information"
+          "name": "Kontaktai",
+          "description": "Redaguoti kontaktinę informaciją"
         },
         "languages": {
-          "name": "Languages",
-          "description": "Add more languages to your menu"
+          "name": "Kalbos",
+          "description": "Pridėti daugiau kalbų į meniu"
         },
         "analytics": {
-          "name": "Analytics",
-          "description": "View menu scan statistics"
+          "name": "Analitika",
+          "description": "Peržiūrėti meniu nuskaitymo statistiką"
         }
       }
     }
