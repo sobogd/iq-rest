@@ -371,8 +371,8 @@
         "cta": "Get Started",
         "highlights": [
           "Everything in Free, plus:",
-          "4,500 scans/month",
-          "3 languages",
+          "Unlimited scans",
+          "6 languages",
           "AI translations",
           "Custom color theme",
           "Reservations"
@@ -384,10 +384,10 @@
         "cta": "Get Started",
         "highlights": [
           "Everything in Basic, plus:",
-          "Unlimited scans",
-          "6 languages",
-          "Priority support",
-          "All features included"
+          "Unlimited languages",
+          "Multiple restaurants",
+          "Custom domain",
+          "Priority support"
         ]
       }
     },
@@ -417,8 +417,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Unlimited",
+        "languages": "6"
       },
       "pro": {
         "scans": "Unlimited",

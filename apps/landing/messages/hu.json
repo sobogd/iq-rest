@@ -470,8 +470,8 @@
         "cta": "Kezdje el",
         "highlights": [
           "Minden az Ingyenesből, plusz:",
-          "4,500 beolvasás/hónap",
-          "3 nyelv",
+          "Korlátlan beolvasás",
+          "6 nyelv",
           "AI fordítások",
           "Egyedi színséma",
           "Asztalfoglalás"
@@ -483,10 +483,10 @@
         "cta": "Kezdje el",
         "highlights": [
           "Minden az Alapból, plusz:",
-          "Korlátlan beolvasás",
-          "6 nyelv",
-          "Prioritásos támogatás",
-          "Minden funkció benne van"
+          "Korlátlan nyelvek",
+          "Több étterem",
+          "Saját domain",
+          "Prioritásos támogatás"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Korlátlan",
+        "languages": "6"
       },
       "pro": {
         "scans": "Korlátlan",

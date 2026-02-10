@@ -470,8 +470,8 @@
         "cta": "Başlayın",
         "highlights": [
           "Ücretsizdeki her şey, artı:",
-          "4,500 tarama/ay",
-          "3 dil",
+          "Sınırsız tarama",
+          "6 dil",
           "AI çeviriler",
           "Özel renk teması",
           "Rezervasyonlar"
@@ -483,10 +483,10 @@
         "cta": "Başlayın",
         "highlights": [
           "Temeldeki her şey, artı:",
-          "Sınırsız tarama",
-          "6 dil",
-          "Öncelikli destek",
-          "Tüm özellikler dahil"
+          "Sınırsız dil",
+          "Birden fazla restoran",
+          "Özel alan adı",
+          "Öncelikli destek"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Sınırsız",
+        "languages": "6"
       },
       "pro": {
         "scans": "Sınırsız",

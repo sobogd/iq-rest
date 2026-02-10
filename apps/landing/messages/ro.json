@@ -470,8 +470,8 @@
         "cta": "Începeți",
         "highlights": [
           "Tot ce este în Gratuit, plus:",
-          "4,500 scanări/lună",
-          "3 limbi",
+          "Scanări nelimitate",
+          "6 limbi",
           "Traduceri AI",
           "Temă de culoare personalizată",
           "Rezerve"
@@ -483,10 +483,10 @@
         "cta": "Începeți",
         "highlights": [
           "Tot ce este în Basic, plus:",
-          "Scanări nelimitate",
-          "6 limbi",
-          "Asistență prioritară",
-          "Toate funcțiile incluse"
+          "Limbi nelimitate",
+          "Restaurante multiple",
+          "Domeniu personalizat",
+          "Asistență prioritară"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Nelimitat",
+        "languages": "6"
       },
       "pro": {
         "scans": "Nelimitat",

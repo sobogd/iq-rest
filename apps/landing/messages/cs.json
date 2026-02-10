@@ -470,8 +470,8 @@
         "cta": "Začněte",
         "highlights": [
           "Vše v bezplatné verzi, navíc:",
-          "4 500 skenů/měsíc",
-          "3 jazyky",
+          "Neomezené skeny",
+          "6 jazyků",
           "Překlady pomocí AI",
           "Vlastní barevné téma",
           "Rezervace"
@@ -483,10 +483,10 @@
         "cta": "Začněte",
         "highlights": [
           "Vše v základní verzi, navíc:",
-          "Neomezené skeny",
-          "6 jazyků",
-          "Prioritní podpora",
-          "Všechny funkce zahrnuty"
+          "Neomezené jazyky",
+          "Více restaurací",
+          "Vlastní doména",
+          "Prioritní podpora"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4 500",
-        "languages": "3"
+        "scans": "Neomezené",
+        "languages": "6"
       },
       "pro": {
         "scans": "Neomezené",

@@ -470,8 +470,8 @@
         "cta": "Aan de slag",
         "highlights": [
           "Alles in Gratis, plus:",
-          "4.500 scans/maand",
-          "3 talen",
+          "Onbeperkte scans",
+          "6 talen",
           "AI vertalingen",
           "Aangepast kleurthema",
           "Reserveringen"
@@ -483,10 +483,10 @@
         "cta": "Aan de slag",
         "highlights": [
           "Alles in Basis, plus:",
-          "Onbeperkte scans",
-          "6 talen",
-          "Prioriteit ondersteuning",
-          "Alle functies inbegrepen"
+          "Onbeperkte talen",
+          "Meerdere restaurants",
+          "Eigen domein",
+          "Prioriteit ondersteuning"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4.500",
-        "languages": "3"
+        "scans": "Onbeperkt",
+        "languages": "6"
       },
       "pro": {
         "scans": "Onbeperkt",

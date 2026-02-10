@@ -470,8 +470,8 @@
         "cta": "Alusta",
         "highlights": [
           "Kõik Tasuta plaanis, pluss:",
-          "4,500 skaneerimist/kuu",
-          "3 keelt",
+          "Piiramatu skaneerimine",
+          "6 keelt",
           "AI tõlked",
           "Kohandatud värviteema",
           "Broneeringud"
@@ -483,10 +483,10 @@
         "cta": "Alusta",
         "highlights": [
           "Kõik Põhi plaanis, pluss:",
-          "Piiramatu skaneerimine",
-          "6 keelt",
-          "Prioriteetne tugi",
-          "Kõik funktsioonid kaasatud"
+          "Piiramatult keeli",
+          "Mitu restorani",
+          "Oma domeen",
+          "Prioriteetne tugi"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Piiramatu",
+        "languages": "6"
       },
       "pro": {
         "scans": "Piiramatu",

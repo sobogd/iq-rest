@@ -470,8 +470,8 @@
         "cta": "Sākt",
         "highlights": [
           "Viss Bezmaksas plānā, plus:",
-          "4,500 skenējumi/mēnesī",
-          "3 valodas",
+          "Neierobežoti skenējumi",
+          "6 valodas",
           "AI tulkojumi",
           "Pielāgota krāsu tēma",
           "Rezervācijas"
@@ -483,10 +483,10 @@
         "cta": "Sākt",
         "highlights": [
           "Viss Pamatplānā, plus:",
-          "Neierobežoti skenējumi",
-          "6 valodas",
-          "Prioritāte atbalstam",
-          "Visas funkcijas iekļautas"
+          "Neierobežotas valodas",
+          "Vairāki restorāni",
+          "Pielāgots domēns",
+          "Prioritāte atbalstam"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Neierobežoti",
+        "languages": "6"
       },
       "pro": {
         "scans": "Neierobežoti",

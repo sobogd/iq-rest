@@ -470,8 +470,8 @@
         "cta": "Započnite",
         "highlights": [
           "Sve u Besplatnom, plus:",
-          "4,500 skeniranja/mjesečno",
-          "3 jezika",
+          "Neograničena skeniranja",
+          "6 jezika",
           "AI prijevodi",
           "Prilagođena shema boja",
           "Rezervacije"
@@ -483,10 +483,10 @@
         "cta": "Započnite",
         "highlights": [
           "Sve u Osnovnom, plus:",
-          "Neograničena skeniranja",
-          "6 jezika",
-          "Prioritetna podrška",
-          "Sve značajke uključene"
+          "Neograničeni jezici",
+          "Više restorana",
+          "Vlastita domena",
+          "Prioritetna podrška"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Neograničeno",
+        "languages": "6"
       },
       "pro": {
         "scans": "Neograničeno",

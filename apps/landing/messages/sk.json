@@ -470,8 +470,8 @@
         "cta": "Začať",
         "highlights": [
           "Všetko v Zadarmo, plus:",
-          "4 500 skenovaní/mesečne",
-          "3 jazyky",
+          "Neobmedzené skenovania",
+          "6 jazykov",
           "Preklady pomocou AI",
           "Vlastná farebná téma",
           "Rezervácie"
@@ -483,10 +483,10 @@
         "cta": "Začať",
         "highlights": [
           "Všetko v Základnom, plus:",
-          "Neobmedzené skenovania",
-          "6 jazykov",
-          "Prioritná podpora",
-          "Všetky funkcie zahrnuté"
+          "Neobmedzené jazyky",
+          "Viacero reštaurácií",
+          "Vlastná doména",
+          "Prioritná podpora"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4 500",
-        "languages": "3"
+        "scans": "Neobmedzené",
+        "languages": "6"
       },
       "pro": {
         "scans": "Neobmedzené",

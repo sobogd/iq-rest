@@ -470,8 +470,8 @@
         "cta": "Aloita",
         "highlights": [
           "Kaikki Ilmaisessa, lisäksi:",
-          "4,500 skannausta/kuukausi",
-          "3 kieltä",
+          "Rajattomat skannaukset",
+          "6 kieltä",
           "AI-käännökset",
           "Mukautettu väriteema",
           "Varausmahdollisuus"
@@ -483,10 +483,10 @@
         "cta": "Aloita",
         "highlights": [
           "Kaikki Peruspaketissa, lisäksi:",
-          "Rajattomat skannaukset",
-          "6 kieltä",
-          "Prioriteettituki",
-          "Kaikki ominaisuudet mukana"
+          "Rajattomat kielet",
+          "Useita ravintoloita",
+          "Oma domain",
+          "Prioriteettituki"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Rajattomat",
+        "languages": "6"
       },
       "pro": {
         "scans": "Rajattomat",

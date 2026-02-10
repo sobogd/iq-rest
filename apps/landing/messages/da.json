@@ -470,8 +470,8 @@
         "cta": "Kom i Gang",
         "highlights": [
           "Alt i Gratis, plus:",
-          "4.500 scanninger/måned",
-          "3 sprog",
+          "Ubegrænsede scanninger",
+          "6 sprog",
           "AI oversættelser",
           "Tilpasset farvetema",
           "Reservationer"
@@ -483,10 +483,10 @@
         "cta": "Kom i Gang",
         "highlights": [
           "Alt i Basis, plus:",
-          "Ubegrænsede scanninger",
-          "6 sprog",
-          "Prioriteret support",
-          "Alle funktioner inkluderet"
+          "Ubegrænsede sprog",
+          "Flere restauranter",
+          "Eget domæne",
+          "Prioriteret support"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4.500",
-        "languages": "3"
+        "scans": "Ubegrænsede",
+        "languages": "6"
       },
       "pro": {
         "scans": "Ubegrænsede",

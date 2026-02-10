@@ -470,8 +470,8 @@
         "cta": "Rozpocznij",
         "highlights": [
           "Wszystko w darmowym, plus:",
-          "4,500 skanów/miesiąc",
-          "3 języki",
+          "Nieograniczone skany",
+          "6 języków",
           "Tłumaczenia AI",
           "Dostosowany motyw kolorystyczny",
           "Rezerwacje"
@@ -483,10 +483,10 @@
         "cta": "Rozpocznij",
         "highlights": [
           "Wszystko w podstawowym, plus:",
-          "Nieograniczone skany",
-          "6 języków",
-          "Priorytetowe wsparcie",
-          "Wszystkie funkcje w zestawie"
+          "Nieograniczone języki",
+          "Wiele restauracji",
+          "Własna domena",
+          "Priorytetowe wsparcie"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Nieograniczone",
+        "languages": "6"
       },
       "pro": {
         "scans": "Nieograniczone",

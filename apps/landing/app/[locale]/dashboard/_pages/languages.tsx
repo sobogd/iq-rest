@@ -44,11 +44,11 @@ export function LanguagesPage() {
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
   const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
 
-  // Language limits by plan: FREE=2, BASIC=3, PRO=unlimited
+  // Language limits by plan: FREE=2, BASIC=6, PRO=unlimited
   const getLanguageLimit = () => {
     if (subscriptionStatus !== "ACTIVE") return 2;
     if (currentPlan === "PRO") return Infinity;
-    if (currentPlan === "BASIC") return 3;
+    if (currentPlan === "BASIC") return 6;
     return 2;
   };
 

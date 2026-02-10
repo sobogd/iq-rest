@@ -470,8 +470,8 @@
         "cta": "Comença ara",
         "highlights": [
           "Tot el que hi ha a Gratuït, més:",
-          "4,500 escaneigs/mes",
-          "3 idiomes",
+          "Escaneigs il·limitats",
+          "6 idiomes",
           "Traduccions amb IA",
           "Tema de color personalitzat",
           "Reservacions"
@@ -483,10 +483,10 @@
         "cta": "Comença ara",
         "highlights": [
           "Tot el que hi ha a Bàsic, més:",
-          "Escaneigs il·limitats",
-          "6 idiomes",
-          "Suport prioritari",
-          "Totes les funcions incloses"
+          "Idiomes il·limitats",
+          "Múltiples restaurants",
+          "Domini personalitzat",
+          "Suport prioritari"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Il·limitat",
+        "languages": "6"
       },
       "pro": {
         "scans": "Il·limitat",

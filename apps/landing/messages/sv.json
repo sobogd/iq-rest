@@ -470,8 +470,8 @@
         "cta": "Kom Igång",
         "highlights": [
           "Allt i Gratis, plus:",
-          "4,500 skanningar/månad",
-          "3 språk",
+          "Obegränsade skanningar",
+          "6 språk",
           "AI översättningar",
           "Anpassad färgtema",
           "Bokningar"
@@ -483,10 +483,10 @@
         "cta": "Kom Igång",
         "highlights": [
           "Allt i Grundläggande, plus:",
-          "Obegränsade skanningar",
-          "6 språk",
-          "Prioriterad support",
-          "Alla funktioner inkluderade"
+          "Obegränsade språk",
+          "Flera restauranger",
+          "Egen domän",
+          "Prioriterad support"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Obegränsade",
+        "languages": "6"
       },
       "pro": {
         "scans": "Obegränsade",

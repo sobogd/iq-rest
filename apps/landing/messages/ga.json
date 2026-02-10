@@ -470,8 +470,8 @@
         "cta": "Tosaigh",
         "highlights": [
           "Gach rud atá sa Saor, chomh maith le:",
-          "4,500 scans/mí",
-          "3 teangacha",
+          "Scans neamhtheoranta",
+          "6 teangacha",
           "Aistriúcháin AI",
           "Téama dath saincheaptha",
           "Conradh"
@@ -483,10 +483,10 @@
         "cta": "Tosaigh",
         "highlights": [
           "Gach rud atá sa Básic, chomh maith le:",
-          "Scans neamhtheoranta",
-          "6 teangacha",
-          "Tacaíocht tosaíochta",
-          "Gach gné san áireamh"
+          "Teangacha neamhtheoranta",
+          "Bialanna iolracha",
+          "Fearann saincheaptha",
+          "Tacaíocht tosaíochta"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Neamhtheoranta",
+        "languages": "6"
       },
       "pro": {
         "scans": "Neamhtheoranta",

@@ -71,7 +71,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
 
 export function PricingCards() {
   const t = useTranslations("pricing");
-  const [isYearly, setIsYearly] = useState(false);
+  const [isYearly, setIsYearly] = useState(true);
 
   const renderCellValue = (
     value: FeatureValue,

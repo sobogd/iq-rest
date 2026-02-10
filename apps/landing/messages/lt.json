@@ -470,8 +470,8 @@
         "cta": "Pradėti",
         "highlights": [
           "Viskas, kas yra Nemokamai, plius:",
-          "4,500 nuskenavimų/mėn",
-          "3 kalbos",
+          "Neriboti nuskenavimai",
+          "6 kalbos",
           "AI vertimai",
           "Individuali spalvų tema",
           "Rezervacijos"
@@ -483,10 +483,10 @@
         "cta": "Pradėti",
         "highlights": [
           "Viskas, kas yra Pagrindiniame, plius:",
-          "Neriboti nuskenavimai",
-          "6 kalbos",
-          "Prioritetinė pagalba",
-          "Visos funkcijos įtrauktos"
+          "Neribotos kalbos",
+          "Keli restoranai",
+          "Nuosavas domenas",
+          "Prioritetinė pagalba"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Neriboti",
+        "languages": "6"
       },
       "pro": {
         "scans": "Neriboti",

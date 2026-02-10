@@ -470,8 +470,8 @@
         "cta": "Loslegen",
         "highlights": [
           "Alles in Kostenlos, plus:",
-          "4.500 Scans/Monat",
-          "3 Sprachen",
+          "Unbegrenzte Scans",
+          "6 Sprachen",
           "KI-Übersetzungen",
           "Benutzerdefiniertes Farbschema",
           "Reservierungen"
@@ -483,10 +483,10 @@
         "cta": "Loslegen",
         "highlights": [
           "Alles in Basis, plus:",
-          "Unbegrenzte Scans",
-          "6 Sprachen",
-          "Priorisierter Support",
-          "Alle Funktionen enthalten"
+          "Unbegrenzte Sprachen",
+          "Mehrere Restaurants",
+          "Eigene Domain",
+          "Priorisierter Support"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4.500",
-        "languages": "3"
+        "scans": "Unbegrenzt",
+        "languages": "6"
       },
       "pro": {
         "scans": "Unbegrenzt",

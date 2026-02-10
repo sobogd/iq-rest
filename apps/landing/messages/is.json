@@ -470,8 +470,8 @@
         "cta": "Byrjaðu",
         "highlights": [
           "Allt í Ókeypis, auk:",
-          "4,500 skannanir/mánuði",
-          "3 tungumál",
+          "Ótakmarkaðar skannanir",
+          "6 tungumál",
           "AI þýðingar",
           "Sérsniðin litapalletta",
           "Bókanir"
@@ -483,10 +483,10 @@
         "cta": "Byrjaðu",
         "highlights": [
           "Allt í Grunn, auk:",
-          "Ótakmarkaðar skannanir",
-          "6 tungumál",
-          "Forgangs stuðningur",
-          "Allar aðgerðir innifaldar"
+          "Ótakmörkuð tungumál",
+          "Mörg veitingahús",
+          "Sérsniðið lén",
+          "Forgangs stuðningur"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4,500",
-        "languages": "3"
+        "scans": "Ótakmarkað",
+        "languages": "6"
       },
       "pro": {
         "scans": "Ótakmarkað",

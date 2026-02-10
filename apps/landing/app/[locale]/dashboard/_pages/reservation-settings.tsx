@@ -159,12 +159,12 @@ export function ReservationSettingsPage() {
     return <PageLoader />;
   }
 
-  const hasProSubscription = subscriptionStatus === "ACTIVE" && currentPlan === "PRO";
+  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-auto p-6 space-y-6">
-        {!hasProSubscription && (
+        {!hasActiveSubscription && (
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">
               <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
@@ -185,15 +185,15 @@ export function ReservationSettingsPage() {
           </div>
         )}
 
-        <div className={!hasProSubscription ? "opacity-50" : ""}>
+        <div className={!hasActiveSubscription ? "opacity-50" : ""}>
           <FormSwitch
             id="reservationsEnabled"
             label={`${t("reservationsEnabled")}:`}
             checked={reservationsEnabled}
-            onCheckedChange={hasProSubscription ? setReservationsEnabled : () => {}}
+            onCheckedChange={hasActiveSubscription ? setReservationsEnabled : () => {}}
             activeText={t("enabled")}
             inactiveText={t("disabled")}
-            disabled={!hasProSubscription}
+            disabled={!hasActiveSubscription}
           />
         </div>
 

@@ -470,8 +470,8 @@
         "cta": "Inizia",
         "highlights": [
           "Tutto in Gratuito, più:",
-          "4.500 scansioni/mese",
-          "3 lingue",
+          "Scansioni illimitate",
+          "6 lingue",
           "Traduzioni con IA",
           "Tema colore personalizzato",
           "Prenotazioni"
@@ -483,10 +483,10 @@
         "cta": "Inizia",
         "highlights": [
           "Tutto in Base, più:",
-          "Scansioni illimitate",
-          "6 lingue",
-          "Supporto prioritario",
-          "Tutte le funzionalità incluse"
+          "Lingue illimitate",
+          "Più ristoranti",
+          "Dominio personalizzato",
+          "Supporto prioritario"
         ]
       }
     },
@@ -516,8 +516,8 @@
         "languages": "2"
       },
       "basic": {
-        "scans": "4.500",
-        "languages": "3"
+        "scans": "Illimitato",
+        "languages": "6"
       },
       "pro": {
         "scans": "Illimitate",
