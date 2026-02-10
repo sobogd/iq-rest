@@ -1,10 +1,35 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ExternalLink, Building2, FolderOpen, Package, Users, Trash2, Loader2 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useState, useRef, useCallback } from "react";
+import {
+  ExternalLink,
+  Building2,
+  FolderOpen,
+  Package,
+  Users,
+  Trash2,
+  Loader2,
+  Send,
+  MessageSquare,
+  ChevronRight,
+  Calendar,
+  CreditCard,
+  Phone,
+  MapPin,
+  Instagram,
+  Globe,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,6 +43,13 @@ import {
 import { toast } from "sonner";
 import { PageLoader } from "../_ui/page-loader";
 
+interface User {
+  id: string;
+  email: string;
+  createdAt: string;
+  role: string;
+}
+
 interface Restaurant {
   id: string;
   title: string;
@@ -25,6 +57,13 @@ interface Restaurant {
   slug: string | null;
   accentColor: string;
   createdAt: string;
+  address: string | null;
+  phone: string | null;
+  instagram: string | null;
+  whatsapp: string | null;
+  reservationsEnabled: boolean;
+  defaultLanguage: string | null;
+  languages: string[];
   url: string | null;
 }
 
@@ -34,18 +73,68 @@ interface Company {
   createdAt: string;
   plan: string;
   subscriptionStatus: string;
+  billingCycle: string | null;
+  currentPeriodEnd: string | null;
+  stripeCustomerId: string | null;
+  stripeSubscriptionId: string | null;
   categoriesCount: number;
   itemsCount: number;
-  users: string[];
+  messagesCount: number;
+  users: User[];
   restaurants: Restaurant[];
+}
+
+interface Message {
+  id: string;
+  message: string;
+  isAdmin: boolean;
+  createdAt: string;
+  user: { email: string };
 }
 
 export function AdminPage() {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<Company | null>(null);
   const [deleting, setDeleting] = useState(false);
+
+  // Chat state
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [loadingMessages, setLoadingMessages] = useState(false);
+  const [newMessage, setNewMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const fetchMessages = useCallback(async (companyId: string) => {
+    setLoadingMessages(true);
+    try {
+      const res = await fetch(`/api/admin/companies/${companyId}/messages`);
+      if (res.ok) {
+        const data = await res.json();
+        setMessages(data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch messages:", error);
+    } finally {
+      setLoadingMessages(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (selectedCompany) {
+      fetchMessages(selectedCompany.id);
+    } else {
+      setMessages([]);
+      setNewMessage("");
+    }
+  }, [selectedCompany, fetchMessages]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   async function handleDelete() {
     if (!deleteTarget) return;
@@ -58,6 +147,9 @@ export function AdminPage() {
 
       if (res.ok) {
         setCompanies((prev) => prev.filter((c) => c.id !== deleteTarget.id));
+        if (selectedCompany?.id === deleteTarget.id) {
+          setSelectedCompany(null);
+        }
         toast.success(`Company "${deleteTarget.name}" deleted`);
       } else {
         const data = await res.json();
@@ -70,6 +162,41 @@ export function AdminPage() {
       setDeleteTarget(null);
     }
   }
+
+  const handleSend = async () => {
+    if (!newMessage.trim() || isSending || !selectedCompany) return;
+
+    setIsSending(true);
+    try {
+      const response = await fetch(
+        `/api/admin/companies/${selectedCompany.id}/messages`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: newMessage.trim() }),
+        }
+      );
+
+      if (response.ok) {
+        const sentMessage = await response.json();
+        setMessages((prev) => [...prev, sentMessage]);
+        setNewMessage("");
+        textareaRef.current?.focus();
+      }
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast.error("Failed to send message");
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
 
   useEffect(() => {
     async function fetchCompanies() {
@@ -93,6 +220,33 @@ export function AdminPage() {
     }
     fetchCompanies();
   }, []);
+
+  const formatDate = (dateString: string, withTime = false) => {
+    const date = new Date(dateString);
+    if (withTime) {
+      return date.toLocaleString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    }
+    return date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
+  const formatDateTime = (dateString: string) => {
+    return new Date(dateString).toLocaleString("en-GB", {
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
 
   if (loading) {
     return <PageLoader />;
@@ -164,109 +318,348 @@ export function AdminPage() {
 
         {/* Companies List */}
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Registered Companies</h2>
-          <div className="space-y-4">
-            {companies.map((company) => (
-              <Card key={company.id}>
-                <CardHeader className="pb-3">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="text-lg flex items-center gap-2">
-                        {company.name}
-                        <Badge variant={company.plan === "FREE" ? "secondary" : "default"}>
-                          {company.plan}
-                        </Badge>
-                        {company.subscriptionStatus === "ACTIVE" && (
-                          <Badge variant="outline" className="text-green-600 border-green-600">
-                            Active
-                          </Badge>
-                        )}
-                      </CardTitle>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Registered: {new Date(company.createdAt).toLocaleDateString()}
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="text-right text-sm text-muted-foreground">
-                        <p>{company.categoriesCount} categories</p>
-                        <p>{company.itemsCount} items</p>
-                      </div>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="text-destructive hover:text-destructive hover:bg-destructive/10"
-                        onClick={() => setDeleteTarget(company)}
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0 space-y-3">
-                  {/* Users */}
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-1">Users:</p>
-                    <div className="flex flex-wrap gap-1">
-                      {company.users.map((email) => (
-                        <Badge key={email} variant="outline" className="text-xs">
-                          {email}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
+          <h2 className="text-xl font-semibold">Clients</h2>
+          <div className="space-y-2">
+            {companies.map((company) => {
+              const restaurant = company.restaurants[0];
+              const title = restaurant?.title || "No name";
 
-                  {/* Restaurants */}
-                  {company.restaurants.length > 0 && (
-                    <div>
-                      <p className="text-xs text-muted-foreground mb-2">Restaurants:</p>
-                      <div className="space-y-2">
-                        {company.restaurants.map((restaurant) => (
-                          <div
-                            key={restaurant.id}
-                            className="flex items-center gap-3 p-2 rounded-lg bg-muted/50"
-                          >
-                            <div
-                              className="w-4 h-4 rounded-full shrink-0"
-                              style={{ backgroundColor: restaurant.accentColor }}
-                            />
-                            <div className="flex-1 min-w-0">
-                              <p className="font-medium truncate">{restaurant.title}</p>
-                              {restaurant.description && (
-                                <p className="text-xs text-muted-foreground truncate">
-                                  {restaurant.description}
-                                </p>
-                              )}
-                            </div>
-                            {restaurant.url && (
-                              <a
-                                href={restaurant.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-1 text-xs text-primary hover:underline shrink-0"
-                              >
-                                {restaurant.slug}
-                                <ExternalLink className="h-3 w-3" />
-                              </a>
-                            )}
-                          </div>
-                        ))}
-                      </div>
+              return (
+                <div
+                  key={company.id}
+                  onClick={() => setSelectedCompany(company)}
+                  className="flex items-center justify-between p-4 rounded-lg border bg-card hover:bg-muted/50 cursor-pointer transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className={`font-medium ${!restaurant?.title ? "text-muted-foreground italic" : ""}`}>
+                      {title}
+                    </span>
+                    <Badge
+                      variant={company.plan === "FREE" ? "secondary" : "default"}
+                      className="text-xs"
+                    >
+                      {company.plan}
+                    </Badge>
+                    {company.subscriptionStatus === "ACTIVE" && (
+                      <Badge
+                        variant="outline"
+                        className="text-xs text-green-600 border-green-600"
+                      >
+                        Active
+                      </Badge>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <FolderOpen className="h-3.5 w-3.5" />
+                        {company.categoriesCount}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Package className="h-3.5 w-3.5" />
+                        {company.itemsCount}
+                      </span>
+                      {company.messagesCount > 0 && (
+                        <span className="flex items-center gap-1">
+                          <MessageSquare className="h-3.5 w-3.5" />
+                          {company.messagesCount}
+                        </span>
+                      )}
                     </div>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                    <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
 
-      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => !open && setDeleteTarget(null)}>
+      {/* Company Details Sheet */}
+      <Sheet
+        open={!!selectedCompany}
+        onOpenChange={(open) => !open && setSelectedCompany(null)}
+      >
+        <SheetContent className="w-full sm:max-w-xl overflow-hidden flex flex-col p-0">
+          <SheetHeader className="px-6 pt-6 pb-4 border-b shrink-0">
+            {(() => {
+              const restaurant = selectedCompany?.restaurants[0];
+              return (
+                <div className="flex items-start justify-between pr-8">
+                  <div className="flex items-center gap-3">
+                    {restaurant?.accentColor && (
+                      <div
+                        className="w-5 h-5 rounded-full shrink-0"
+                        style={{ backgroundColor: restaurant.accentColor }}
+                      />
+                    )}
+                    <div>
+                      <SheetTitle className={!restaurant?.title ? "text-muted-foreground italic" : ""}>
+                        {restaurant?.title || "No name"}
+                      </SheetTitle>
+                      <SheetDescription>
+                        {selectedCompany && formatDate(selectedCompany.createdAt, true)}
+                      </SheetDescription>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Badge
+                      variant={selectedCompany?.plan === "FREE" ? "secondary" : "default"}
+                    >
+                      {selectedCompany?.plan}
+                    </Badge>
+                    {selectedCompany?.subscriptionStatus === "ACTIVE" && (
+                      <Badge
+                        variant="outline"
+                        className="text-green-600 border-green-600"
+                      >
+                        Active
+                      </Badge>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+          </SheetHeader>
+
+          <div className="flex-1 overflow-auto">
+            <div className="p-6 space-y-6">
+              {/* Subscription Info */}
+              {selectedCompany && selectedCompany.plan !== "FREE" && (
+                <div className="space-y-2">
+                  <h3 className="text-sm font-medium flex items-center gap-2">
+                    <CreditCard className="h-4 w-4" />
+                    Subscription
+                  </h3>
+                  <div className="text-sm text-muted-foreground space-y-1">
+                    <p>Billing: {selectedCompany.billingCycle || "N/A"}</p>
+                    {selectedCompany.currentPeriodEnd && (
+                      <p>
+                        Period ends: {formatDate(selectedCompany.currentPeriodEnd)}
+                      </p>
+                    )}
+                    {selectedCompany.stripeCustomerId && (
+                      <p className="font-mono text-xs">
+                        Customer: {selectedCompany.stripeCustomerId}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center p-3 rounded-lg bg-muted/50">
+                  <p className="text-2xl font-bold">{selectedCompany?.categoriesCount}</p>
+                  <p className="text-xs text-muted-foreground">Categories</p>
+                </div>
+                <div className="text-center p-3 rounded-lg bg-muted/50">
+                  <p className="text-2xl font-bold">{selectedCompany?.itemsCount}</p>
+                  <p className="text-xs text-muted-foreground">Items</p>
+                </div>
+                <div className="text-center p-3 rounded-lg bg-muted/50">
+                  <p className="text-2xl font-bold">{selectedCompany?.restaurants.length}</p>
+                  <p className="text-xs text-muted-foreground">Restaurants</p>
+                </div>
+              </div>
+
+              {/* Users */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium flex items-center gap-2">
+                  <Users className="h-4 w-4" />
+                  Users ({selectedCompany?.users.length})
+                </h3>
+                <div className="space-y-2">
+                  {selectedCompany?.users.map((user) => (
+                    <div
+                      key={user.id}
+                      className="flex items-center justify-between text-sm p-2 rounded-lg bg-muted/30"
+                    >
+                      <span>{user.email}</span>
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Badge variant="outline" className="text-xs">
+                          {user.role}
+                        </Badge>
+                        <span className="text-xs">{formatDate(user.createdAt)}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Restaurant Details */}
+              {(() => {
+                const restaurant = selectedCompany?.restaurants[0];
+                if (!restaurant) return null;
+
+                return (
+                  <div className="space-y-3">
+                    <h3 className="text-sm font-medium flex items-center gap-2">
+                      <Building2 className="h-4 w-4" />
+                      Restaurant Details
+                    </h3>
+                    {restaurant.url && (
+                      <a
+                        href={restaurant.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-sm flex items-center gap-1"
+                      >
+                        {restaurant.url}
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                    {restaurant.description && (
+                      <p className="text-sm text-muted-foreground">
+                        {restaurant.description}
+                      </p>
+                    )}
+                    <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
+                      {restaurant.address && (
+                        <span className="flex items-center gap-1">
+                          <MapPin className="h-4 w-4" />
+                          {restaurant.address}
+                        </span>
+                      )}
+                      {restaurant.phone && (
+                        <span className="flex items-center gap-1">
+                          <Phone className="h-4 w-4" />
+                          {restaurant.phone}
+                        </span>
+                      )}
+                      {restaurant.instagram && (
+                        <span className="flex items-center gap-1">
+                          <Instagram className="h-4 w-4" />
+                          @{restaurant.instagram}
+                        </span>
+                      )}
+                      {restaurant.languages.length > 0 && (
+                        <span className="flex items-center gap-1">
+                          <Globe className="h-4 w-4" />
+                          {restaurant.languages.join(", ")}
+                        </span>
+                      )}
+                    </div>
+                    {restaurant.reservationsEnabled && (
+                      <Badge variant="outline" className="text-xs">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        Reservations enabled
+                      </Badge>
+                    )}
+                  </div>
+                );
+              })()}
+
+              {/* Support Chat */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium flex items-center gap-2">
+                  <MessageSquare className="h-4 w-4" />
+                  Support Chat
+                </h3>
+                <div className="border rounded-lg">
+                  {/* Messages */}
+                  <div className="h-[300px] overflow-auto p-4 space-y-3">
+                    {loadingMessages ? (
+                      <div className="flex items-center justify-center h-full">
+                        <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+                      </div>
+                    ) : messages.length === 0 ? (
+                      <div className="flex items-center justify-center h-full text-sm text-muted-foreground">
+                        No messages yet
+                      </div>
+                    ) : (
+                      messages.map((msg) => (
+                        <div
+                          key={msg.id}
+                          className={`flex ${msg.isAdmin ? "justify-end" : "justify-start"}`}
+                        >
+                          <div
+                            className={`max-w-[80%] rounded-xl px-4 py-3 ${
+                              msg.isAdmin
+                                ? "bg-primary text-primary-foreground"
+                                : "bg-muted/50 text-foreground"
+                            }`}
+                          >
+                            {!msg.isAdmin && (
+                              <div className="text-xs font-medium mb-1 opacity-70">
+                                {msg.user.email}
+                              </div>
+                            )}
+                            <p className="text-sm whitespace-pre-wrap break-words">
+                              {msg.message}
+                            </p>
+                            <div
+                              className={`text-xs mt-1 ${
+                                msg.isAdmin ? "opacity-70" : "text-muted-foreground"
+                              }`}
+                            >
+                              {formatDateTime(msg.createdAt)}
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    )}
+                    <div ref={messagesEndRef} />
+                  </div>
+
+                  {/* Input */}
+                  <div className="border-t p-3">
+                    <div className="flex gap-2">
+                      <Textarea
+                        ref={textareaRef}
+                        value={newMessage}
+                        onChange={(e) => setNewMessage(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                        placeholder="Type a message..."
+                        className="min-h-[60px] resize-none flex-1"
+                        rows={2}
+                      />
+                      <Button
+                        onClick={handleSend}
+                        disabled={!newMessage.trim() || isSending}
+                        size="icon"
+                        className="shrink-0 h-[60px] w-[60px]"
+                      >
+                        {isSending ? (
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                        ) : (
+                          <Send className="h-4 w-4" />
+                        )}
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Delete Button */}
+              <div className="pt-4 border-t">
+                <Button
+                  variant="destructive"
+                  className="w-full"
+                  onClick={() => {
+                    setDeleteTarget(selectedCompany);
+                  }}
+                >
+                  <Trash2 className="h-4 w-4 mr-2" />
+                  Delete Company
+                </Button>
+              </div>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+      <AlertDialog
+        open={!!deleteTarget}
+        onOpenChange={(open) => !open && setDeleteTarget(null)}
+      >
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Company</AlertDialogTitle>
             <AlertDialogDescription>
               Are you sure you want to delete <strong>{deleteTarget?.name}</strong>?
-              <br /><br />
+              <br />
+              <br />
               This will permanently delete:
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>{deleteTarget?.restaurants.length || 0} restaurant(s)</li>
