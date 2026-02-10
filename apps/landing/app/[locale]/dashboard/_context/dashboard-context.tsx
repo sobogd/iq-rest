@@ -217,6 +217,7 @@ export function DashboardProvider({
     }
   }, [searchParams, router]);
 
+
   const trackPageView = useCallback((page: PageKey) => {
     const pageEvents: Record<PageKey, (() => void) | undefined> = {
       onboarding: undefined,

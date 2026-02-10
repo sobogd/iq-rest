@@ -116,15 +116,18 @@ export function GetStartedForm() {
       });
 
       const data = await response.json();
+      console.log("[Auth Debug] OTP response:", { ok: response.ok, isNewUser: data.isNewUser });
 
       if (response.ok) {
         // Disable analytics tracking for admin
         if (isAdminEmail(email)) {
           analytics.disableTracking();
         }
+        // Track auth event
         if (data.isNewUser) {
           analytics.auth.signUp();
-          await new Promise((resolve) => setTimeout(resolve, 100));
+        } else {
+          analytics.auth.codeVerify();
         }
         router.push(`/${locale}/dashboard`);
         router.refresh();

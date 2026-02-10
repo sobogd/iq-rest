@@ -93,6 +93,12 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
         if (isAdminEmail(email)) {
           analytics.disableTracking();
         }
+        // Track auth event
+        if (data.isNewUser) {
+          analytics.auth.signUp();
+        } else {
+          analytics.auth.codeVerify();
+        }
         onSuccess();
       } else {
         setErrorMessage(data.error || t("auth.errors.verifyFailed"));
