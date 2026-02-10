@@ -88,8 +88,6 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     // Replace {restaurant} placeholder in translations
     const subject = t.subject.replace("{restaurant}", restaurantName);
     const body = t.body.replace("{restaurant}", restaurantName);
-    const signature = t.signature.replace(/\n/g, "<br>");
-    const signatureText = t.signature;
 
     // Email content - friendly, non-pushy reminder
     const mailOptions = {
@@ -107,21 +105,20 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             ${body}
           </p>
 
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 28px;">
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
             ${t.timeNote}
           </p>
 
-          <a href="https://iq-rest.com/dashboard"
-             style="display: inline-block; padding: 14px 28px; background-color: #000; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px;">
-            ${t.cta}
-          </a>
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+            <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+          </p>
 
-          <p style="font-size: 15px; line-height: 1.7; margin: 36px 0 0; color: #666;">
+          <p style="font-size: 15px; line-height: 1.7; margin: 24px 0 0; color: #666;">
             ${t.helpNote}
           </p>
 
-          <p style="font-size: 15px; margin: 28px 0 0; color: #1a1a1a;">
-            ${signature}
+          <p style="font-size: 15px; margin: 20px 0 0; color: #1a1a1a;">
+            ${t.signature}
           </p>
 
         </div>
@@ -136,7 +133,7 @@ ${t.cta}: https://iq-rest.com/dashboard
 
 ${t.helpNote}
 
-${signatureText}`,
+${t.signature}`,
     };
 
     await transporter.sendMail(mailOptions);
