@@ -1431,43 +1431,57 @@
       "optionalSteps": "Optional Steps",
       "viewMenu": "View Your Menu",
       "steps": {
-        "title": {
-          "name": "Add Restaurant Name",
-          "description": "Give your restaurant a name that will appear on your website"
-        },
-        "slug": {
-          "name": "Set Website Address",
-          "description": "Choose a unique URL for your restaurant website"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Create Menu Categories",
+          "name": "Create Categories",
           "description": "Organize your menu with categories like Appetizers, Main Courses, etc."
         },
         "items": {
           "name": "Add Menu Items",
           "description": "Add dishes to your menu with prices and descriptions"
         },
-        "design": {
-          "name": "Customize Design",
-          "description": "Choose colors and background for your website"
-        },
         "contacts": {
-          "name": "Add Contact Info",
+          "name": "Add Contacts",
           "description": "Add phone, WhatsApp, Instagram, and location"
-        },
-        "reservations": {
-          "name": "Enable Reservations",
-          "description": "Allow customers to book tables online"
-        },
-        "translations": {
-          "name": "Add Languages",
-          "description": "Make your menu available in multiple languages"
         }
       },
       "completed": "Completed",
       "notCompleted": "Not completed",
       "allDone": "All done! Your menu is live.",
-      "requiredRemaining": "{count} required steps remaining"
+      "requiredRemaining": "{count} required steps remaining",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

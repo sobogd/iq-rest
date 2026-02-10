@@ -1,20 +1,12 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
-import { Loader2, Save, ExternalLink } from "lucide-react";
+import { Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { PageLoader } from "../_ui/page-loader";
 import { FormInput } from "../_ui/form-input";
 import { FormSelect } from "../_ui/form-select";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -56,8 +48,6 @@ export function SettingsPage() {
   const [originalCurrency, setOriginalCurrency] = useState("EUR");
 
   const [validationError, setValidationError] = useState<string | null>(null);
-  const [showSlugChangedDialog, setShowSlugChangedDialog] = useState(false);
-  const [newSlugUrl, setNewSlugUrl] = useState("");
 
   useEffect(() => {
     fetchRestaurant();
@@ -147,12 +137,7 @@ export function SettingsPage() {
         setOriginalSlug(slug);
         setOriginalCurrency(currency);
 
-        if (slugWasChanged && slug.trim()) {
-          setNewSlugUrl(`https://iq-rest.com/m/${slug.trim()}`);
-          setShowSlugChangedDialog(true);
-        } else {
-          returnToOnboarding();
-        }
+        returnToOnboarding();
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));
@@ -162,17 +147,6 @@ export function SettingsPage() {
     } finally {
       setSaving(false);
     }
-  }
-
-  function handleViewSite() {
-    window.open(newSlugUrl, "_blank");
-    setShowSlugChangedDialog(false);
-    returnToOnboarding();
-  }
-
-  function handleCloseSlugDialog() {
-    setShowSlugChangedDialog(false);
-    returnToOnboarding();
   }
 
   if (loading) {
@@ -244,26 +218,6 @@ export function SettingsPage() {
           {t("save")}
         </Button>
       </div>
-
-      <Dialog open={showSlugChangedDialog} onOpenChange={(open) => !open && handleCloseSlugDialog()}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{t("slugChangedTitle")}</DialogTitle>
-            <DialogDescription>
-              {t("slugChangedDescription")}<br /><a href={newSlugUrl} target="_blank" rel="noopener noreferrer" className="hover:underline break-all">{newSlugUrl}</a>
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button variant="outline" onClick={handleCloseSlugDialog}>
-              {t("close")}
-            </Button>
-            <Button onClick={handleViewSite}>
-              <ExternalLink className="h-4 w-4 mr-2" />
-              {t("view")}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
 
       <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
         <AlertDialogContent>

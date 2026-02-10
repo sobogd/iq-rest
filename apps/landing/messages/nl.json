@@ -1530,43 +1530,57 @@
       "optionalSteps": "Optionele Stappen",
       "viewMenu": "Bekijk Je Menu",
       "steps": {
-        "title": {
-          "name": "Voeg Restaurantnaam Toe",
-          "description": "Geef je restaurant een naam die op je website zal verschijnen"
-        },
-        "slug": {
-          "name": "Stel Websiteadres In",
-          "description": "Kies een unieke URL voor je restaurantwebsite"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Maak Menu-categorieën",
-          "description": "Organiseer je menu met categorieën zoals Voorgerechten, Hoofdgerechten, enz."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Voeg Menu-items Toe",
-          "description": "Voeg gerechten toe aan je menu met prijzen en beschrijvingen"
-        },
-        "design": {
-          "name": "Pas Ontwerp Aan",
-          "description": "Kies kleuren en achtergrond voor je website"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Voeg Contactinformatie Toe",
-          "description": "Voeg telefoon, WhatsApp, Instagram en locatie toe"
-        },
-        "reservations": {
-          "name": "Schakel Reserveringen In",
-          "description": "Sta klanten toe om online tafels te reserveren"
-        },
-        "translations": {
-          "name": "Voeg Talen Toe",
-          "description": "Maak je menu beschikbaar in meerdere talen"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Voltooid",
       "notCompleted": "Niet voltooid",
       "allDone": "Alles gedaan! Je menu is live.",
-      "requiredRemaining": "{count} vereiste stappen over"
+      "requiredRemaining": "{count} vereiste stappen over",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

@@ -1530,43 +1530,57 @@
       "optionalSteps": "Pēc izvēles soļi",
       "viewMenu": "Skatīt savu ēdienkarti",
       "steps": {
-        "title": {
-          "name": "Pievienojiet restorāna nosaukumu",
-          "description": "Dodiet savam restorānam nosaukumu, kas parādīsies jūsu vietnē"
-        },
-        "slug": {
-          "name": "Iestatiet vietnes adresi",
-          "description": "Izvēlieties unikālu URL sava restorāna vietnei"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Izveidojiet ēdienkartes kategorijas",
-          "description": "Organizējiet savu ēdienkarti ar kategorijām, piemēram, Uzkodas, Galvenie ēdieni utt."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Pievienojiet ēdienkartes vienumus",
-          "description": "Pievienojiet ēdienus savai ēdienkartei ar cenām un aprakstiem"
-        },
-        "design": {
-          "name": "Pielāgojiet dizainu",
-          "description": "Izvēlieties krāsas un fonu savai vietnei"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Pievienojiet kontaktinformāciju",
-          "description": "Pievienojiet tālruni, WhatsApp, Instagram un atrašanās vietu"
-        },
-        "reservations": {
-          "name": "Iespējot rezervācijas",
-          "description": "Atļaut klientiem rezervēt galdus tiešsaistē"
-        },
-        "translations": {
-          "name": "Pievienojiet valodas",
-          "description": "Padariet savu ēdienkarti pieejamu vairākās valodās"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Pabeigts",
       "notCompleted": "Nepabeigts",
       "allDone": "Viss izdarīts! Jūsu ēdienkarte ir aktīva.",
-      "requiredRemaining": "{count} obligātie soļi palikuši"
+      "requiredRemaining": "{count} obligātie soļi palikuši",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

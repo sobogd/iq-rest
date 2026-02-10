@@ -1530,43 +1530,57 @@
       "optionalSteps": "Opcioni koraci",
       "viewMenu": "Pogledajte svoj meni",
       "steps": {
-        "title": {
-          "name": "Dodajte ime restorana",
-          "description": "Dajte svom restoranu ime koje će se pojaviti na vašem vebsajtu"
-        },
-        "slug": {
-          "name": "Postavite adresu vebsajta",
-          "description": "Izaberite jedinstveni URL za vebsajt vašeg restorana"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Kreirajte kategorije menija",
-          "description": "Organizujte svoj meni sa kategorijama kao što su Predjela, Glavna jela, itd."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Dodajte stavke menija",
-          "description": "Dodajte jela u svoj meni sa cenama i opisima"
-        },
-        "design": {
-          "name": "Prilagodite dizajn",
-          "description": "Izaberite boje i pozadinu za vaš vebsajt"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Dodajte kontakt informacije",
-          "description": "Dodajte telefon, WhatsApp, Instagram i lokaciju"
-        },
-        "reservations": {
-          "name": "Omogućite rezervacije",
-          "description": "Dozvolite kupcima da rezervišu stolove online"
-        },
-        "translations": {
-          "name": "Dodajte jezike",
-          "description": "Učinite svoj meni dostupnim na više jezika"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Završeno",
       "notCompleted": "Nije završeno",
       "allDone": "Sve je gotovo! Vaš meni je aktivan.",
-      "requiredRemaining": "Preostalo je {count} obaveznih koraka"
+      "requiredRemaining": "Preostalo je {count} obaveznih koraka",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

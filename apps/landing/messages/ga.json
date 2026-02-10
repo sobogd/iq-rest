@@ -1530,43 +1530,57 @@
       "optionalSteps": "Céimeanna Rogha",
       "viewMenu": "Taispeáin Do Mheán",
       "steps": {
-        "title": {
-          "name": "Cuir Ainm an Bhialann leis",
-          "description": "Tabhair ainm do bhialann a bheidh le feiceáil ar do shuíomh gréasáin"
-        },
-        "slug": {
-          "name": "Socraigh Seoladh an Ghréasáin",
-          "description": "Roghnaigh URL uathúil do shuíomh gréasáin do bhialann"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Cruthaigh Catagóirí Mheán",
-          "description": "Eagraigh do mheán le catagóirí cosúil le Tús, Príomhchúrsaí, srl."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Cuir Míreanna Mheán leis",
-          "description": "Cuir miasa le do mheán le praghsanna agus cur síos"
-        },
-        "design": {
-          "name": "Saincheap Dearthóir",
-          "description": "Roghnaigh dathanna agus cúlra do shuíomh gréasáin"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Cuir Eolas Teagmhála leis",
-          "description": "Cuir guthán, WhatsApp, Instagram, agus suíomh leis"
-        },
-        "reservations": {
-          "name": "Cuir Réamhchúirteanna ar Fáil",
-          "description": "Lig do chustaiméirí táblaí a chur in áirithe ar líne"
-        },
-        "translations": {
-          "name": "Cuir Teangacha leis",
-          "description": "Déanaigh do mheán ar fáil i dteangacha éagsúla"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Críochnaithe",
       "notCompleted": "Níl críochnaithe",
       "allDone": "Gach rud críochnaithe! Tá do mheán beo.",
-      "requiredRemaining": "{count} céimeanna riachtanacha fágtha"
+      "requiredRemaining": "{count} céimeanna riachtanacha fágtha",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

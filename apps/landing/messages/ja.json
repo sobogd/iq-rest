@@ -1543,43 +1543,57 @@
       "optionalSteps": "オプションステップ",
       "viewMenu": "メニューを表示",
       "steps": {
-        "title": {
-          "name": "レストラン名を追加",
-          "description": "ウェブサイトに表示されるレストラン名を入力"
-        },
-        "slug": {
-          "name": "ウェブサイトアドレスを設定",
-          "description": "レストランウェブサイトのユニークなURLを選択"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "メニューカテゴリを作成",
-          "description": "前菜、メインコースなどのカテゴリでメニューを整理"
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "メニューアイテムを追加",
-          "description": "価格と説明付きで料理をメニューに追加"
-        },
-        "design": {
-          "name": "デザインをカスタマイズ",
-          "description": "ウェブサイトの色と背景を選択"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "連絡先情報を追加",
-          "description": "電話、WhatsApp、Instagram、所在地を追加"
-        },
-        "reservations": {
-          "name": "予約を有効化",
-          "description": "お客様がオンラインでテーブルを予約できるようにする"
-        },
-        "translations": {
-          "name": "言語を追加",
-          "description": "メニューを複数の言語で利用可能にする"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "完了",
       "notCompleted": "未完了",
       "allDone": "すべて完了！メニューが公開されています。",
-      "requiredRemaining": "あと{count}つの必須ステップ"
+      "requiredRemaining": "あと{count}つの必須ステップ",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

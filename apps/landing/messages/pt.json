@@ -1530,43 +1530,57 @@
       "optionalSteps": "Etapas Opcionais",
       "viewMenu": "Ver Seu Menu",
       "steps": {
-        "title": {
-          "name": "Adicionar Nome do Restaurante",
-          "description": "Dê um nome ao seu restaurante que aparecerá no seu site"
-        },
-        "slug": {
-          "name": "Definir Endereço do Site",
-          "description": "Escolha uma URL única para o site do seu restaurante"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Criar Categorias de Menu",
-          "description": "Organize seu menu com categorias como Entradas, Pratos Principais, etc."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Adicionar Itens ao Menu",
-          "description": "Adicione pratos ao seu menu com preços e descrições"
-        },
-        "design": {
-          "name": "Personalizar Design",
-          "description": "Escolha cores e fundo para o seu site"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Adicionar Informações de Contato",
-          "description": "Adicione telefone, WhatsApp, Instagram e localização"
-        },
-        "reservations": {
-          "name": "Ativar Reservas",
-          "description": "Permita que os clientes reservem mesas online"
-        },
-        "translations": {
-          "name": "Adicionar Idiomas",
-          "description": "Torne seu menu disponível em vários idiomas"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Concluído",
       "notCompleted": "Não concluído",
       "allDone": "Tudo pronto! Seu menu está ao vivo.",
-      "requiredRemaining": "{count} etapas obrigatórias restantes"
+      "requiredRemaining": "{count} etapas obrigatórias restantes",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

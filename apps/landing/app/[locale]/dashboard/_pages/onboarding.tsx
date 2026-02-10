@@ -4,18 +4,28 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useDashboard, PageKey } from "../_context/dashboard-context";
-import { ChevronLeft, ChevronRight, ExternalLink, Loader2, Check, ArrowRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Loader2,
+  Check,
+  ArrowRight,
+  QrCode,
+  FolderOpen,
+  Package,
+  Palette,
+  Phone,
+  Languages,
+  BarChart3,
+} from "lucide-react";
 import { analytics } from "@/lib/analytics";
 
 interface OnboardingProgress {
-  hasTitle: boolean;
-  hasSlug: boolean;
+  hasInfo: boolean;
   hasCategories: boolean;
   hasItems: boolean;
-  hasDesign: boolean;
   hasContacts: boolean;
-  hasReservations: boolean;
-  hasTranslations: boolean;
 }
 
 interface OnboardingData {
@@ -24,7 +34,7 @@ interface OnboardingData {
   slug: string | null;
 }
 
-type StepKey = "title" | "slug" | "categories" | "items" | "design" | "contacts" | "reservations" | "translations";
+type StepKey = "info" | "categories" | "items" | "contacts";
 
 interface Step {
   key: StepKey;
@@ -33,19 +43,31 @@ interface Step {
 }
 
 const allSteps: Step[] = [
-  { key: "title", progressKey: "hasTitle", page: "settings" },
-  { key: "slug", progressKey: "hasSlug", page: "settings" },
+  { key: "info", progressKey: "hasInfo", page: "settings" },
   { key: "categories", progressKey: "hasCategories", page: "categories" },
   { key: "items", progressKey: "hasItems", page: "items" },
   { key: "contacts", progressKey: "hasContacts", page: "contacts" },
-  { key: "translations", progressKey: "hasTranslations", page: "languages" },
-  { key: "design", progressKey: "hasDesign", page: "design" },
-  { key: "reservations", progressKey: "hasReservations", page: "reservationSettings" },
+];
+
+interface QuickAction {
+  key: string;
+  page: PageKey;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const quickActions: QuickAction[] = [
+  { key: "qrMenu", page: "qrMenu", icon: QrCode },
+  { key: "categories", page: "categories", icon: FolderOpen },
+  { key: "items", page: "items", icon: Package },
+  { key: "design", page: "design", icon: Palette },
+  { key: "contacts", page: "contacts", icon: Phone },
+  { key: "languages", page: "languages", icon: Languages },
+  { key: "analytics", page: "analytics", icon: BarChart3 },
 ];
 
 export function OnboardingPage() {
   const t = useTranslations("dashboard.onboarding");
-  const { navigateFromOnboarding } = useDashboard();
+  const { navigateFromOnboarding, setActivePage } = useDashboard();
   const [data, setData] = useState<OnboardingData | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
@@ -82,14 +104,10 @@ export function OnboardingPage() {
 
   const handleStepClick = (step: StepKey, page: PageKey) => {
     const stepEvents: Record<StepKey, () => void> = {
-      title: analytics.onboarding.stepTitleClick,
-      slug: analytics.onboarding.stepSlugClick,
+      info: analytics.onboarding.stepTitleClick,
       categories: analytics.onboarding.stepCategoriesClick,
       items: analytics.onboarding.stepItemsClick,
       contacts: analytics.onboarding.stepContactsClick,
-      translations: analytics.onboarding.stepLanguagesClick,
-      design: analytics.onboarding.stepDesignClick,
-      reservations: analytics.onboarding.stepReservationsClick,
     };
     stepEvents[step]?.();
     navigateFromOnboarding(page);
@@ -126,6 +144,54 @@ export function OnboardingPage() {
   const isCompleted = progress[step.progressKey];
   const completedCount = allSteps.filter(s => progress[s.progressKey]).length;
   const allCompleted = completedCount === allSteps.length;
+
+  // Show completed view when all steps are done
+  if (allCompleted && slug) {
+    return (
+      <div className="flex flex-col h-full overflow-auto">
+        {/* Header with View Restaurant button */}
+        <div className="p-6 space-y-4">
+          <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
+            <Check className="h-5 w-5" />
+            <span className="font-medium">{t("allDone")}</span>
+          </div>
+          <Button
+            className="w-full"
+            size="lg"
+            onClick={() => {
+              analytics.onboarding.menuView();
+              window.open(`/m/${slug}`, "_blank");
+            }}
+          >
+            <ExternalLink className="mr-2 h-4 w-4" />
+            {t("viewMenu")}
+          </Button>
+        </div>
+
+        {/* Quick Actions */}
+        <div className="flex-1 px-6 pb-6">
+          <div className="grid gap-3">
+            {quickActions.map((action) => (
+              <button
+                key={action.key}
+                onClick={() => setActivePage(action.page)}
+                className="flex items-center gap-4 p-4 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
+              >
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                  <action.icon className="h-5 w-5 text-primary" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium">{t(`quickActions.${action.key}.name`)}</p>
+                  <p className="text-sm text-muted-foreground">{t(`quickActions.${action.key}.description`)}</p>
+                </div>
+                <ArrowRight className="h-4 w-4 text-muted-foreground" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-full">
@@ -186,28 +252,14 @@ export function OnboardingPage() {
       {/* Bottom Action */}
       <div className="px-6 pt-4 pb-6 bg-background shrink-0">
         <div className="max-w-md mx-auto">
-          {allCompleted && slug ? (
-            <Button
-              className="w-full"
-              size="lg"
-              onClick={() => {
-                analytics.onboarding.menuView();
-                window.open(`/m/${slug}`, "_blank");
-              }}
-            >
-              <ExternalLink className="mr-2 h-4 w-4" />
-              {t("viewMenu")}
-            </Button>
-          ) : (
-            <Button
-              className="w-full"
-              size="lg"
-              onClick={() => handleStepClick(step.key, step.page)}
-            >
-              {t(`steps.${step.key}.name`)}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          )}
+          <Button
+            className="w-full"
+            size="lg"
+            onClick={() => handleStepClick(step.key, step.page)}
+          >
+            {t(`steps.${step.key}.name`)}
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </div>
       </div>
     </div>

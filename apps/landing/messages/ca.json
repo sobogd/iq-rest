@@ -1530,43 +1530,57 @@
       "optionalSteps": "Passos opcionals",
       "viewMenu": "Veure el teu menú",
       "steps": {
-        "title": {
-          "name": "Afegir nom del restaurant",
-          "description": "Dóna un nom al teu restaurant que apareixerà al teu lloc web"
-        },
-        "slug": {
-          "name": "Establir adreça del lloc web",
-          "description": "Tria una URL única per al teu lloc web de restaurant"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Crear categories del menú",
-          "description": "Organitza el teu menú amb categories com Entrants, Plats principals, etc."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Afegir articles al menú",
-          "description": "Afegeix plats al teu menú amb preus i descripcions"
-        },
-        "design": {
-          "name": "Personalitzar disseny",
-          "description": "Tria colors i fons per al teu lloc web"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Afegir informació de contacte",
-          "description": "Afegeix telèfon, WhatsApp, Instagram i ubicació"
-        },
-        "reservations": {
-          "name": "Habilitar reserves",
-          "description": "Permet als clients reservar taules en línia"
-        },
-        "translations": {
-          "name": "Afegir idiomes",
-          "description": "Fes que el teu menú estigui disponible en diversos idiomes"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Completat",
       "notCompleted": "No completat",
       "allDone": "Tot fet! El teu menú està en línia.",
-      "requiredRemaining": "{count} passos obligatoris restants"
+      "requiredRemaining": "{count} passos obligatoris restants",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

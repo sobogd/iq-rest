@@ -1530,43 +1530,57 @@
       "optionalSteps": "Valgfrie trinn",
       "viewMenu": "Se menyen din",
       "steps": {
-        "title": {
-          "name": "Legg til restaurantnavn",
-          "description": "Gi restauranten din et navn som vil vises på nettstedet ditt"
-        },
-        "slug": {
-          "name": "Sett nettstedadresse",
-          "description": "Velg en unik URL for restaurantnettstedet ditt"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Opprett meny-kategorier",
-          "description": "Organiser menyen din med kategorier som Forretter, Hovedretter, osv."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Legg til meny-elementer",
-          "description": "Legg til retter på menyen din med priser og beskrivelser"
-        },
-        "design": {
-          "name": "Tilpass design",
-          "description": "Velg farger og bakgrunn for nettstedet ditt"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Legg til kontaktinformasjon",
-          "description": "Legg til telefon, WhatsApp, Instagram og beliggenhet"
-        },
-        "reservations": {
-          "name": "Aktiver reservasjoner",
-          "description": "Tillat kunder å bestille bord online"
-        },
-        "translations": {
-          "name": "Legg til språk",
-          "description": "Gjør menyen din tilgjengelig på flere språk"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Fullført",
       "notCompleted": "Ikke fullført",
       "allDone": "Alt er gjort! Menyen din er live.",
-      "requiredRemaining": "{count} påkrevde trinn gjenstår"
+      "requiredRemaining": "{count} påkrevde trinn gjenstår",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

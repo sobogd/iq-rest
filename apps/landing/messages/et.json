@@ -1530,43 +1530,57 @@
       "optionalSteps": "Valikulised sammud",
       "viewMenu": "Vaata oma menüüd",
       "steps": {
-        "title": {
-          "name": "Lisage restorani nimi",
-          "description": "Andke oma restoranile nimi, mis kuvatakse teie veebisaidil"
-        },
-        "slug": {
-          "name": "Seadke veebisaidi aadress",
-          "description": "Valige oma restorani veebisaidi jaoks ainulaadne URL"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Looge menüü kategooriad",
-          "description": "Korrastage oma menüü kategooriatega nagu Eelroad, Pearoad jne."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Lisage menüütooted",
-          "description": "Lisage oma menüüsse roogasid koos hindade ja kirjeldustega"
-        },
-        "design": {
-          "name": "Kohandage disaini",
-          "description": "Valige värvid ja taust oma veebisaidile"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Lisage kontaktandmed",
-          "description": "Lisage telefon, WhatsApp, Instagram ja asukoht"
-        },
-        "reservations": {
-          "name": "Luba broneeringud",
-          "description": "Lubage klientidel broneerida laudu veebis"
-        },
-        "translations": {
-          "name": "Lisage keeled",
-          "description": "Tehke oma menüü kättesaadavaks mitmes keeles"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Lõpetatud",
       "notCompleted": "Ei ole lõpetatud",
       "allDone": "Kõik tehtud! Teie menüü on aktiivne.",
-      "requiredRemaining": "{count} kohustuslikku sammu on jäänud"
+      "requiredRemaining": "{count} kohustuslikku sammu on jäänud",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

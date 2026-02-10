@@ -30,6 +30,7 @@ async function getRestaurant(slug: string) {
       whatsapp: true,
       accentColor: true,
       reservationsEnabled: true,
+      languages: true,
       _count: {
         select: {
           tables: {
@@ -108,12 +109,14 @@ export default async function MenuPage({ params }: MenuPageProps) {
             {t("contacts")}
           </span>
         </MenuNavLink>
-        <MenuNavLink href={`/m/${slug}/language/`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
-          <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
-            <Globe className="h-5 w-5" />
-            {t("language")}
-          </span>
-        </MenuNavLink>
+        {(restaurant.languages?.length || 0) > 1 && (
+          <MenuNavLink href={`/m/${slug}/language/`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+            <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
+              <Globe className="h-5 w-5" />
+              {t("language")}
+            </span>
+          </MenuNavLink>
+        )}
       </nav>
 
       {/* Online Menu block */}

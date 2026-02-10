@@ -1530,43 +1530,57 @@
       "optionalSteps": "Pasirinktiniai žingsniai",
       "viewMenu": "Peržiūrėti savo meniu",
       "steps": {
-        "title": {
-          "name": "Pridėti restorano pavadinimą",
-          "description": "Suteikite savo restoranui pavadinimą, kuris bus rodomas jūsų svetainėje"
-        },
-        "slug": {
-          "name": "Nustatyti svetainės adresą",
-          "description": "Pasirinkite unikalų URL savo restorano svetainei"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Sukurti meniu kategorijas",
-          "description": "Organizuokite savo meniu su kategorijomis, tokiomis kaip Užkandžiai, Pagrindiniai patiekalai ir kt."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Pridėti meniu elementus",
-          "description": "Pridėkite patiekalus į savo meniu su kainomis ir aprašymais"
-        },
-        "design": {
-          "name": "Pritaikyti dizainą",
-          "description": "Pasirinkite spalvas ir foną savo svetainei"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Pridėti kontaktinę informaciją",
-          "description": "Pridėkite telefoną, WhatsApp, Instagram ir vietą"
-        },
-        "reservations": {
-          "name": "Įgalinti rezervacijas",
-          "description": "Leiskite klientams užsisakyti stalus internetu"
-        },
-        "translations": {
-          "name": "Pridėti kalbas",
-          "description": "Padarykite savo meniu prieinamą keliomis kalbomis"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Užbaigta",
       "notCompleted": "Neužbaigta",
       "allDone": "Viskas padaryta! Jūsų meniu yra gyvas.",
-      "requiredRemaining": "Liko {count} privalomi žingsniai"
+      "requiredRemaining": "Liko {count} privalomi žingsniai",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

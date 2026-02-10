@@ -16,13 +16,10 @@ export async function GET() {
         select: {
           title: true,
           slug: true,
-          accentColor: true,
           phone: true,
           instagram: true,
           whatsapp: true,
           address: true,
-          reservationsEnabled: true,
-          languages: true,
         },
       }),
       prisma.category.count({ where: { companyId } }),
@@ -30,29 +27,25 @@ export async function GET() {
     ]);
 
     const progress = {
-      // Required steps
-      hasTitle: Boolean(restaurant?.title && restaurant.title.trim().length > 0),
-      hasSlug: Boolean(restaurant?.slug && restaurant.slug.trim().length > 0),
+      hasInfo: Boolean(
+        restaurant?.title && restaurant.title.trim().length > 0 &&
+        restaurant?.slug && restaurant.slug.trim().length > 0
+      ),
       hasCategories: categoriesCount > 0,
       hasItems: itemsCount > 0,
-
-      // Optional steps
-      hasDesign: restaurant?.accentColor !== "#E11D48", // not default color
       hasContacts: Boolean(
         restaurant?.phone ||
         restaurant?.instagram ||
         restaurant?.whatsapp ||
         restaurant?.address
       ),
-      hasReservations: Boolean(restaurant?.reservationsEnabled),
-      hasTranslations: (restaurant?.languages?.length || 0) > 1,
     };
 
     const requiredCompleted =
-      progress.hasTitle &&
-      progress.hasSlug &&
+      progress.hasInfo &&
       progress.hasCategories &&
-      progress.hasItems;
+      progress.hasItems &&
+      progress.hasContacts;
 
     return NextResponse.json({
       progress,

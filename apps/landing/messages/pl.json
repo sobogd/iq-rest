@@ -1530,43 +1530,57 @@
       "optionalSteps": "Opcjonalne kroki",
       "viewMenu": "Zobacz swoje menu",
       "steps": {
-        "title": {
-          "name": "Dodaj nazwę restauracji",
-          "description": "Nadaj swojej restauracji nazwę, która pojawi się na Twojej stronie"
-        },
-        "slug": {
-          "name": "Ustaw adres strony internetowej",
-          "description": "Wybierz unikalny URL dla swojej strony internetowej restauracji"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Utwórz kategorie menu",
-          "description": "Zorganizuj swoje menu w kategorie, takie jak Przystawki, Dania główne itp."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Dodaj pozycje menu",
-          "description": "Dodaj dania do swojego menu z cenami i opisami"
-        },
-        "design": {
-          "name": "Dostosuj projekt",
-          "description": "Wybierz kolory i tło dla swojej strony"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Dodaj informacje kontaktowe",
-          "description": "Dodaj telefon, WhatsApp, Instagram i lokalizację"
-        },
-        "reservations": {
-          "name": "Włącz rezerwacje",
-          "description": "Pozwól klientom rezerwować stoliki online"
-        },
-        "translations": {
-          "name": "Dodaj języki",
-          "description": "Udostępnij swoje menu w wielu językach"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Zakończono",
       "notCompleted": "Nie zakończono",
       "allDone": "Wszystko gotowe! Twoje menu jest aktywne.",
-      "requiredRemaining": "Pozostało {count} wymaganych kroków"
+      "requiredRemaining": "Pozostało {count} wymaganych kroków",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

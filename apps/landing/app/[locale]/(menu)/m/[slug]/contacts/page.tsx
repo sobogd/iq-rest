@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MapView } from "@/components/map-view";
 import { MenuHeader, MenuPageWrapper } from "../_components";
+import { getCountryCenter } from "@/lib/country-centers";
 
 interface ContactsPageProps {
   params: Promise<{
@@ -31,7 +32,7 @@ async function getRestaurant(slug: string) {
 }
 
 export default async function ContactsPage({ params }: ContactsPageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
@@ -48,6 +49,9 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
     ? `https://www.google.com/maps?q=${restaurant.y},${restaurant.x}`
     : null;
 
+  // Get fallback coordinates based on locale
+  const fallback = getCountryCenter(locale);
+
   return (
     <MenuPageWrapper slug={slug}>
       <div className="flex-1 relative">
@@ -55,9 +59,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
         {lat && lng ? (
           <MapView lat={lat} lng={lng} />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-400">
-            {t("noLocation")}
-          </div>
+          <MapView lat={fallback.lat} lng={fallback.lng} zoom={fallback.zoom} showMarker={false} />
         )}
 
         {/* Header */}

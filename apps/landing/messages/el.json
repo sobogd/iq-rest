@@ -1530,43 +1530,57 @@
       "optionalSteps": "Προαιρετικά Βήματα",
       "viewMenu": "Δείτε το Μενού σας",
       "steps": {
-        "title": {
-          "name": "Προσθέστε το Όνομα του Εστιατορίου",
-          "description": "Δώστε στο εστιατόριό σας ένα όνομα που θα εμφανίζεται στην ιστοσελίδα σας"
-        },
-        "slug": {
-          "name": "Ορίστε τη Διεύθυνση της Ιστοσελίδας",
-          "description": "Επιλέξτε μια μοναδική διεύθυνση URL για την ιστοσελίδα του εστιατορίου σας"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Δημιουργία Κατηγοριών Μενού",
-          "description": "Οργανώστε το μενού σας με κατηγορίες όπως Ορεκτικά, Κυρίως Πιάτα, κ.λπ."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Προσθέστε Στοιχεία Μενού",
-          "description": "Προσθέστε πιάτα στο μενού σας με τιμές και περιγραφές"
-        },
-        "design": {
-          "name": "Προσαρμογή Σχεδίασης",
-          "description": "Επιλέξτε χρώματα και φόντο για την ιστοσελίδα σας"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Προσθέστε Πληροφορίες Επικοινωνίας",
-          "description": "Προσθέστε τηλέφωνο, WhatsApp, Instagram και τοποθεσία"
-        },
-        "reservations": {
-          "name": "Ενεργοποίηση Κρατήσεων",
-          "description": "Επιτρέψτε στους πελάτες να κάνουν κρατήσεις online"
-        },
-        "translations": {
-          "name": "Προσθέστε Γλώσσες",
-          "description": "Κάντε το μενού σας διαθέσιμο σε πολλές γλώσσες"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Ολοκληρώθηκε",
       "notCompleted": "Δεν ολοκληρώθηκε",
       "allDone": "Όλα έτοιμα! Το μενού σας είναι ενεργό.",
-      "requiredRemaining": "{count} υποχρεωτικά βήματα απομένουν"
+      "requiredRemaining": "{count} υποχρεωτικά βήματα απομένουν",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

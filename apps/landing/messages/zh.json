@@ -1563,43 +1563,57 @@
       "optionalSteps": "可选步骤",
       "viewMenu": "查看您的菜单",
       "steps": {
-        "title": {
-          "name": "添加餐厅名称",
-          "description": "为您的餐厅取一个将显示在网站上的名称"
-        },
-        "slug": {
-          "name": "设置网站地址",
-          "description": "为您的餐厅网站选择一个唯一的URL"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "创建菜单类别",
-          "description": "用开胃菜、主菜等类别组织您的菜单"
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "添加菜单项目",
-          "description": "将带价格和描述的菜品添加到菜单中"
-        },
-        "design": {
-          "name": "自定义设计",
-          "description": "为您的网站选择颜色和背景"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "添加联系信息",
-          "description": "添加电话、WhatsApp、Instagram和位置"
-        },
-        "reservations": {
-          "name": "启用预订",
-          "description": "允许顾客在线预订餐桌"
-        },
-        "translations": {
-          "name": "添加语言",
-          "description": "让您的菜单支持多种语言"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "已完成",
       "notCompleted": "未完成",
       "allDone": "全部完成！您的菜单已上线。",
-      "requiredRemaining": "还剩{count}个必要步骤"
+      "requiredRemaining": "还剩{count}个必要步骤",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

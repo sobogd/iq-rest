@@ -1543,43 +1543,57 @@
       "optionalSteps": "الخطوات الاختيارية",
       "viewMenu": "عرض قائمتك",
       "steps": {
-        "title": {
-          "name": "أضف اسم المطعم",
-          "description": "أعطِ مطعمك اسماً يظهر على موقعك"
-        },
-        "slug": {
-          "name": "عيّن عنوان الموقع",
-          "description": "اختر عنوان URL فريد لموقع مطعمك"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "أنشئ فئات القائمة",
-          "description": "نظّم قائمتك بفئات مثل المقبلات والأطباق الرئيسية وغيرها"
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "أضف عناصر القائمة",
-          "description": "أضف الأطباق إلى قائمتك بالأسعار والأوصاف"
-        },
-        "design": {
-          "name": "خصص التصميم",
-          "description": "اختر الألوان والخلفية لموقعك"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "أضف معلومات الاتصال",
-          "description": "أضف الهاتف والواتساب وانستغرام والموقع"
-        },
-        "reservations": {
-          "name": "فعّل الحجوزات",
-          "description": "اسمح للعملاء بحجز الطاولات عبر الإنترنت"
-        },
-        "translations": {
-          "name": "أضف اللغات",
-          "description": "اجعل قائمتك متاحة بلغات متعددة"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "مكتمل",
       "notCompleted": "غير مكتمل",
       "allDone": "تم الانتهاء! قائمتك مباشرة.",
-      "requiredRemaining": "{count} خطوات مطلوبة متبقية"
+      "requiredRemaining": "{count} خطوات مطلوبة متبقية",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

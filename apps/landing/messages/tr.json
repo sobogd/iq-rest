@@ -1530,43 +1530,57 @@
       "optionalSteps": "İsteğe Bağlı Adımlar",
       "viewMenu": "Menünüzü Görüntüleyin",
       "steps": {
-        "title": {
-          "name": "Restoran Adı Ekleyin",
-          "description": "Web sitenizde görünecek bir isim verin"
-        },
-        "slug": {
-          "name": "Web Sitesi Adresini Ayarlayın",
-          "description": "Restoran web siteniz için benzersiz bir URL seçin"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Menü Kategorileri Oluşturun",
-          "description": "Menünüzü Meze, Ana Yemekler gibi kategorilerle düzenleyin"
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Menü Öğeleri Ekleyin",
-          "description": "Menünüze fiyatlar ve açıklamalarla yemekler ekleyin"
-        },
-        "design": {
-          "name": "Tasarımı Özelleştirin",
-          "description": "Web siteniz için renkler ve arka plan seçin"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "İletişim Bilgilerini Ekleyin",
-          "description": "Telefon, WhatsApp, Instagram ve konum ekleyin"
-        },
-        "reservations": {
-          "name": "Rezervasyonları Etkinleştir",
-          "description": "Müşterilerin çevrimiçi masa ayırtmasına izin verin"
-        },
-        "translations": {
-          "name": "Diller Ekleyin",
-          "description": "Menünüzü birden fazla dilde erişilebilir hale getirin"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Tamamlandı",
       "notCompleted": "Tamamlanmadı",
       "allDone": "Hepsi tamam! Menünüz yayında.",
-      "requiredRemaining": "{count} gerekli adım kaldı"
+      "requiredRemaining": "{count} gerekli adım kaldı",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

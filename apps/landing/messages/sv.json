@@ -1530,43 +1530,57 @@
       "optionalSteps": "Valfria Steg",
       "viewMenu": "Visa Din Meny",
       "steps": {
-        "title": {
-          "name": "Lägg till Restaurangnamn",
-          "description": "Ge din restaurang ett namn som kommer att visas på din webbplats"
-        },
-        "slug": {
-          "name": "Ställ in Webbplatsadress",
-          "description": "Välj en unik URL för din restaurangwebbplats"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Skapa Menykategorier",
-          "description": "Organisera din meny med kategorier som Förrätter, Huvudrätter, etc."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Lägg till Menyobjekt",
-          "description": "Lägg till rätter till din meny med priser och beskrivningar"
-        },
-        "design": {
-          "name": "Anpassa Design",
-          "description": "Välj färger och bakgrund för din webbplats"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Lägg till Kontaktinformation",
-          "description": "Lägg till telefon, WhatsApp, Instagram och plats"
-        },
-        "reservations": {
-          "name": "Aktivera Bokningar",
-          "description": "Tillåt kunder att boka bord online"
-        },
-        "translations": {
-          "name": "Lägg till Språk",
-          "description": "Gör din meny tillgänglig på flera språk"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Slutförd",
       "notCompleted": "Ej slutförd",
       "allDone": "Allt klart! Din meny är live.",
-      "requiredRemaining": "{count} obligatoriska steg kvar"
+      "requiredRemaining": "{count} obligatoriska steg kvar",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

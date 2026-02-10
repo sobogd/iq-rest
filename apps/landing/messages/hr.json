@@ -1530,43 +1530,57 @@
       "optionalSteps": "Opcionalni koraci",
       "viewMenu": "Pogledajte svoj jelovnik",
       "steps": {
-        "title": {
-          "name": "Dodajte ime restorana",
-          "description": "Dajte svom restoranu ime koje će se prikazivati na vašoj web stranici"
-        },
-        "slug": {
-          "name": "Postavite adresu web stranice",
-          "description": "Odaberite jedinstveni URL za web stranicu vašeg restorana"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Kreirajte kategorije jelovnika",
-          "description": "Organizirajte svoj jelovnik s kategorijama poput Predjela, Glavna jela itd."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Dodajte stavke jelovnika",
-          "description": "Dodajte jela u svoj jelovnik s cijenama i opisima"
-        },
-        "design": {
-          "name": "Prilagodite dizajn",
-          "description": "Odaberite boje i pozadinu za svoju web stranicu"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Dodajte kontakt informacije",
-          "description": "Dodajte telefon, WhatsApp, Instagram i lokaciju"
-        },
-        "reservations": {
-          "name": "Omogućite rezervacije",
-          "description": "Dopustite kupcima da rezerviraju stolove online"
-        },
-        "translations": {
-          "name": "Dodajte jezike",
-          "description": "Učinite svoj jelovnik dostupnim na više jezika"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Završeno",
       "notCompleted": "Nije završeno",
       "allDone": "Sve gotovo! Vaš jelovnik je aktivan.",
-      "requiredRemaining": "Preostalo je {count} obaveznih koraka"
+      "requiredRemaining": "Preostalo je {count} obaveznih koraka",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

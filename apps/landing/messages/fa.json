@@ -1563,43 +1563,57 @@
       "optionalSteps": "مراحل اختیاری",
       "viewMenu": "مشاهده منوی شما",
       "steps": {
-        "title": {
-          "name": "افزودن نام رستوران",
-          "description": "یک نام برای رستوران خود بدهید که در وبسایت شما ظاهر شود"
-        },
-        "slug": {
-          "name": "تنظیم آدرس وبسایت",
-          "description": "یک آدرس URL یکتا برای وبسایت رستوران خود انتخاب کنید"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "ایجاد دسته‌بندی‌های منو",
-          "description": "منوی خود را با دسته‌بندی‌هایی مانند پیش‌غذاها، غذاهای اصلی و غیره سازماندهی کنید"
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "افزودن آیتم‌های منو",
-          "description": "غذاها را با قیمت‌ها و توضیحات به منوی خود اضافه کنید"
-        },
-        "design": {
-          "name": "سفارشی‌سازی طراحی",
-          "description": "رنگ‌ها و پس‌زمینه برای وبسایت خود انتخاب کنید"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "افزودن اطلاعات تماس",
-          "description": "تلفن، واتساپ، اینستاگرام و موقعیت اضافه کنید"
-        },
-        "reservations": {
-          "name": "فعال کردن رزروها",
-          "description": "به مشتریان اجازه دهید میز آنلاین رزرو کنند"
-        },
-        "translations": {
-          "name": "افزودن زبان‌ها",
-          "description": "منوی خود را به چندین زبان در دسترس قرار دهید"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "تکمیل شده",
       "notCompleted": "تکمیل نشده",
       "allDone": "همه انجام شد! منوی شما آنلاین است.",
-      "requiredRemaining": "{count} مرحله الزامی باقی‌مانده"
+      "requiredRemaining": "{count} مرحله الزامی باقی‌مانده",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

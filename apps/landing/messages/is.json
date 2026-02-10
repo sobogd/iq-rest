@@ -1530,43 +1530,57 @@
       "optionalSteps": "Valfrjáls skref",
       "viewMenu": "Skoða Matseðilinn þinn",
       "steps": {
-        "title": {
-          "name": "Bæta við Nafni Veitingastaðar",
-          "description": "Gefðu veitingastaðnum þínum nafn sem mun birtast á vefsíðunni þinni"
-        },
-        "slug": {
-          "name": "Setja Vefsíðuheimilisfang",
-          "description": "Veldu einstakt URL fyrir vefsíðu veitingastaðarins þíns"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Búa til Flokkar á Matseðli",
-          "description": "Skipuleggja matseðilinn þinn með flokkum eins og Forréttir, Aðalréttir, o.s.frv."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Bæta við Matseðilsatriðum",
-          "description": "Bæta réttum við matseðilinn þinn með verð og lýsingum"
-        },
-        "design": {
-          "name": "Sérsníða Hönnun",
-          "description": "Veldu liti og bakgrunn fyrir vefsíðuna þína"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Bæta við Tengiliðaupplýsingum",
-          "description": "Bæta við síma, WhatsApp, Instagram og staðsetningu"
-        },
-        "reservations": {
-          "name": "Virkja Pantanir",
-          "description": "Leyfa viðskiptavinum að panta borð á netinu"
-        },
-        "translations": {
-          "name": "Bæta við Tungumálum",
-          "description": "Gera matseðilinn þinn aðgengilegan á mörgum tungumálum"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Lokið",
       "notCompleted": "Ekki lokið",
       "allDone": "Allt klárt! Matseðillinn þinn er lifandi.",
-      "requiredRemaining": "{count} nauðsynleg skref eftir"
+      "requiredRemaining": "{count} nauðsynleg skref eftir",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

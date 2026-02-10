@@ -92,59 +92,158 @@
     "faqTitle": "Preguntas Frecuentes",
     "faq": {
       "instant-setup": [
-        { "q": "¿Qué necesito para empezar?", "a": "Solo tu dirección de email. Sin tarjeta de crédito, sin formularios complejos." },
-        { "q": "¿Cuánto tiempo toma la configuración?", "a": "Tu sitio web está listo instantáneamente. Agrega tus artículos del menú y estarás en vivo en 5 minutos." },
-        { "q": "¿Hay un plan gratuito?", "a": "Sí, comienza gratis con todas las funciones esenciales incluidas." }
+        {
+          "q": "¿Qué necesito para empezar?",
+          "a": "Solo tu dirección de email. Sin tarjeta de crédito, sin formularios complejos."
+        },
+        {
+          "q": "¿Cuánto tiempo toma la configuración?",
+          "a": "Tu sitio web está listo instantáneamente. Agrega tus artículos del menú y estarás en vivo en 5 minutos."
+        },
+        {
+          "q": "¿Hay un plan gratuito?",
+          "a": "Sí, comienza gratis con todas las funciones esenciales incluidas."
+        }
       ],
       "mobile-management": [
-        { "q": "¿Necesito instalar una app?", "a": "No se necesita app - todo funciona en el navegador de tu teléfono." },
-        { "q": "¿Puedo subir fotos desde mi teléfono?", "a": "Sí, toma fotos con tu cámara y súbelas directamente a tu menú." },
-        { "q": "¿Funciona en tablets?", "a": "Sí, el panel está optimizado para teléfonos, tablets y computadoras de escritorio." }
+        {
+          "q": "¿Necesito instalar una app?",
+          "a": "No se necesita app - todo funciona en el navegador de tu teléfono."
+        },
+        {
+          "q": "¿Puedo subir fotos desde mi teléfono?",
+          "a": "Sí, toma fotos con tu cámara y súbelas directamente a tu menú."
+        },
+        {
+          "q": "¿Funciona en tablets?",
+          "a": "Sí, el panel está optimizado para teléfonos, tablets y computadoras de escritorio."
+        }
       ],
       "ai-translation": [
-        { "q": "¿Qué tan precisa es la traducción IA?", "a": "Nuestra IA entiende el contexto culinario, preservando nombres de platos y traduciendo descripciones naturalmente." },
-        { "q": "¿Qué tan rápida es la traducción?", "a": "Menús completos se traducen en segundos, no en horas." },
-        { "q": "¿Puedo editar las traducciones IA?", "a": "Sí, todas las traducciones son editables - revisa y ajusta según sea necesario." }
+        {
+          "q": "¿Qué tan precisa es la traducción IA?",
+          "a": "Nuestra IA entiende el contexto culinario, preservando nombres de platos y traduciendo descripciones naturalmente."
+        },
+        {
+          "q": "¿Qué tan rápida es la traducción?",
+          "a": "Menús completos se traducen en segundos, no en horas."
+        },
+        {
+          "q": "¿Puedo editar las traducciones IA?",
+          "a": "Sí, todas las traducciones son editables - revisa y ajusta según sea necesario."
+        }
       ],
       "multilingual": [
-        { "q": "¿Cuántos idiomas se soportan?", "a": "Más de 25 idiomas incluyendo todos los principales idiomas europeos, chino, japonés, coreano, árabe y hebreo." },
-        { "q": "¿Cómo cambian de idioma los clientes?", "a": "Un selector de idioma aparece en tu menú - un toque para cambiar a cualquier idioma disponible." },
-        { "q": "¿La traducción es automática?", "a": "Puedes usar traducción IA o ingresar traducciones manualmente para cada idioma." }
+        {
+          "q": "¿Cuántos idiomas se soportan?",
+          "a": "Más de 25 idiomas incluyendo todos los principales idiomas europeos, chino, japonés, coreano, árabe y hebreo."
+        },
+        {
+          "q": "¿Cómo cambian de idioma los clientes?",
+          "a": "Un selector de idioma aparece en tu menú - un toque para cambiar a cualquier idioma disponible."
+        },
+        {
+          "q": "¿La traducción es automática?",
+          "a": "Puedes usar traducción IA o ingresar traducciones manualmente para cada idioma."
+        }
       ],
       "ai-images": [
-        { "q": "¿Qué formatos de imagen se soportan?", "a": "Sube JPG, PNG o WebP - las imágenes se optimizan automáticamente." },
-        { "q": "¿La optimización reduce la calidad?", "a": "No, nuestra IA mantiene la calidad visual mientras reduce el tamaño del archivo para carga rápida." },
-        { "q": "¿Hay límite de tamaño de archivo?", "a": "Sube imágenes hasta 10MB - se optimizarán automáticamente." }
+        {
+          "q": "¿Qué formatos de imagen se soportan?",
+          "a": "Sube JPG, PNG o WebP - las imágenes se optimizan automáticamente."
+        },
+        {
+          "q": "¿La optimización reduce la calidad?",
+          "a": "No, nuestra IA mantiene la calidad visual mientras reduce el tamaño del archivo para carga rápida."
+        },
+        {
+          "q": "¿Hay límite de tamaño de archivo?",
+          "a": "Sube imágenes hasta 10MB - se optimizarán automáticamente."
+        }
       ],
       "easy-menu": [
-        { "q": "¿Cómo agrego un nuevo plato?", "a": "Toca 'Agregar Artículo', ingresa nombre, descripción, precio y opcionalmente sube una foto. ¡Eso es todo!" },
-        { "q": "¿Puedo reordenar los artículos del menú?", "a": "Sí, simplemente arrastra y suelta artículos o categorías para reordenarlos." },
-        { "q": "¿Qué pasa si un plato se agota?", "a": "Desactiva el artículo temporalmente - desaparece del menú pero no se elimina." }
+        {
+          "q": "¿Cómo agrego un nuevo plato?",
+          "a": "Toca 'Agregar Artículo', ingresa nombre, descripción, precio y opcionalmente sube una foto. ¡Eso es todo!"
+        },
+        {
+          "q": "¿Puedo reordenar los artículos del menú?",
+          "a": "Sí, simplemente arrastra y suelta artículos o categorías para reordenarlos."
+        },
+        {
+          "q": "¿Qué pasa si un plato se agota?",
+          "a": "Desactiva el artículo temporalmente - desaparece del menú pero no se elimina."
+        }
       ],
       "analytics": [
-        { "q": "¿Qué métricas puedo rastrear?", "a": "Vistas diarias, rendimiento de páginas, preferencias de idioma y tendencias en el tiempo." },
-        { "q": "¿Con qué frecuencia se actualizan los datos?", "a": "Los análisis se actualizan en tiempo real - ve los visitantes de hoy mientras suceden." },
-        { "q": "¿Puedo exportar datos de análisis?", "a": "Ve reportes detallados directamente en tu panel." }
+        {
+          "q": "¿Qué métricas puedo rastrear?",
+          "a": "Vistas diarias, rendimiento de páginas, preferencias de idioma y tendencias en el tiempo."
+        },
+        {
+          "q": "¿Con qué frecuencia se actualizan los datos?",
+          "a": "Los análisis se actualizan en tiempo real - ve los visitantes de hoy mientras suceden."
+        },
+        {
+          "q": "¿Puedo exportar datos de análisis?",
+          "a": "Ve reportes detallados directamente en tu panel."
+        }
       ],
       "reservations": [
-        { "q": "¿Cómo hacen las reservaciones los clientes?", "a": "Los clientes pueden reservar directamente desde tu sitio web. Seleccionan fecha, hora y número de invitados, luego reciben confirmación por email." },
-        { "q": "¿Puedo aprobar reservaciones manualmente?", "a": "Sí, puedes elegir entre confirmación automática o aprobación manual para cada reserva." },
-        { "q": "¿Recibiré notificaciones de nuevas reservas?", "a": "Sí, recibes notificaciones por email de cada nueva reservación." }
+        {
+          "q": "¿Cómo hacen las reservaciones los clientes?",
+          "a": "Los clientes pueden reservar directamente desde tu sitio web. Seleccionan fecha, hora y número de invitados, luego reciben confirmación por email."
+        },
+        {
+          "q": "¿Puedo aprobar reservaciones manualmente?",
+          "a": "Sí, puedes elegir entre confirmación automática o aprobación manual para cada reserva."
+        },
+        {
+          "q": "¿Recibiré notificaciones de nuevas reservas?",
+          "a": "Sí, recibes notificaciones por email de cada nueva reservación."
+        }
       ],
       "custom-design": [
-        { "q": "¿Qué formatos de video se soportan?", "a": "Se soportan formatos MP4 y WebM. Los videos se optimizan automáticamente para carga rápida." },
-        { "q": "¿Puedo usar mis propias fotos?", "a": "Sí, sube cualquier foto y se optimizará automáticamente para visualización web." },
-        { "q": "¿El video ralentiza el menú?", "a": "No, los videos se comprimen y cargan de forma diferida para asegurar rendimiento rápido." }
+        {
+          "q": "¿Qué formatos de video se soportan?",
+          "a": "Se soportan formatos MP4 y WebM. Los videos se optimizan automáticamente para carga rápida."
+        },
+        {
+          "q": "¿Puedo usar mis propias fotos?",
+          "a": "Sí, sube cualquier foto y se optimizará automáticamente para visualización web."
+        },
+        {
+          "q": "¿El video ralentiza el menú?",
+          "a": "No, los videos se comprimen y cargan de forma diferida para asegurar rendimiento rápido."
+        }
       ],
       "color-scheme": [
-        { "q": "¿De cuántos colores puedo elegir?", "a": "Elige entre 12 colores preestablecidos o ingresa el color exacto de tu marca usando código hex." },
-        { "q": "¿Soporta modo oscuro?", "a": "Sí, tu esquema de colores se adapta automáticamente a temas claro y oscuro." },
-        { "q": "¿Puedo cambiar colores en cualquier momento?", "a": "Sí, cambia tu color de acento instantáneamente desde el panel - las actualizaciones aparecen inmediatamente." }
+        {
+          "q": "¿De cuántos colores puedo elegir?",
+          "a": "Elige entre 12 colores preestablecidos o ingresa el color exacto de tu marca usando código hex."
+        },
+        {
+          "q": "¿Soporta modo oscuro?",
+          "a": "Sí, tu esquema de colores se adapta automáticamente a temas claro y oscuro."
+        },
+        {
+          "q": "¿Puedo cambiar colores en cualquier momento?",
+          "a": "Sí, cambia tu color de acento instantáneamente desde el panel - las actualizaciones aparecen inmediatamente."
+        }
       ],
       "personal-support": [
-        { "q": "¿Cómo contacto al soporte?", "a": "Usa el formulario de contacto o envíanos email directamente - personas reales responden, no bots." },
-        { "q": "¿Cuál es el tiempo de respuesta?", "a": "Típicamente respondemos en unas pocas horas durante días hábiles." },
-        { "q": "¿El soporte está disponible para planes gratuitos?", "a": "Sí, el soporte personal está disponible para todos los planes incluyendo gratuito." }
+        {
+          "q": "¿Cómo contacto al soporte?",
+          "a": "Usa el formulario de contacto o envíanos email directamente - personas reales responden, no bots."
+        },
+        {
+          "q": "¿Cuál es el tiempo de respuesta?",
+          "a": "Típicamente respondemos en unas pocas horas durante días hábiles."
+        },
+        {
+          "q": "¿El soporte está disponible para planes gratuitos?",
+          "a": "Sí, el soporte personal está disponible para todos los planes incluyendo gratuito."
+        }
       ]
     },
     "list": [
@@ -1431,43 +1530,57 @@
       "optionalSteps": "Pasos Opcionales",
       "viewMenu": "Ver Tu Menú",
       "steps": {
-        "title": {
-          "name": "Añadir Nombre del Restaurante",
-          "description": "Dale a tu restaurante un nombre que aparecerá en tu sitio web"
-        },
-        "slug": {
-          "name": "Configurar Dirección Web",
-          "description": "Elige una URL única para el sitio web de tu restaurante"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Crear Categorías del Menú",
-          "description": "Organiza tu menú con categorías como Entrantes, Platos Principales, etc."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Añadir Artículos del Menú",
-          "description": "Añade platos a tu menú con precios y descripciones"
-        },
-        "design": {
-          "name": "Personalizar Diseño",
-          "description": "Elige colores y fondo para tu sitio web"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Añadir Info de Contacto",
-          "description": "Añade teléfono, WhatsApp, Instagram y ubicación"
-        },
-        "reservations": {
-          "name": "Habilitar Reservaciones",
-          "description": "Permite que los clientes reserven mesas en línea"
-        },
-        "translations": {
-          "name": "Añadir Idiomas",
-          "description": "Haz que tu menú esté disponible en múltiples idiomas"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Completado",
       "notCompleted": "No completado",
       "allDone": "¡Todo listo! Tu menú está en vivo.",
-      "requiredRemaining": "{count} pasos requeridos restantes"
+      "requiredRemaining": "{count} pasos requeridos restantes",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

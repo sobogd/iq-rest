@@ -1530,43 +1530,57 @@
       "optionalSteps": "Valinnaiset vaiheet",
       "viewMenu": "Näytä valikkosi",
       "steps": {
-        "title": {
-          "name": "Lisää ravintolan nimi",
-          "description": "Anna ravintolallesi nimi, joka näkyy verkkosivustollasi"
-        },
-        "slug": {
-          "name": "Aseta verkkosivuston osoite",
-          "description": "Valitse ainutlaatuinen URL ravintolan verkkosivustolle"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Luo valikkokategoriat",
-          "description": "Järjestä valikkosi kategorioihin, kuten Alkuruoat, Pääruoat jne."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Lisää valikkokohteet",
-          "description": "Lisää ruokia valikkoosi hintojen ja kuvausten kanssa"
-        },
-        "design": {
-          "name": "Mukauta suunnittelua",
-          "description": "Valitse värit ja tausta verkkosivustollesi"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Lisää yhteystiedot",
-          "description": "Lisää puhelin, WhatsApp, Instagram ja sijainti"
-        },
-        "reservations": {
-          "name": "Ota varaukset käyttöön",
-          "description": "Salli asiakkaiden varata pöytiä verkossa"
-        },
-        "translations": {
-          "name": "Lisää kielet",
-          "description": "Tee valikkosi saataville useilla kielillä"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Valmis",
       "notCompleted": "Ei valmis",
       "allDone": "Kaikki tehty! Valikkosi on nyt aktiivinen.",
-      "requiredRemaining": "{count} pakollista vaihetta jäljellä"
+      "requiredRemaining": "{count} pakollista vaihetta jäljellä",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

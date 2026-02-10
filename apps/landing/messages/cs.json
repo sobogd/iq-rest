@@ -1530,43 +1530,57 @@
       "optionalSteps": "Volitelné kroky",
       "viewMenu": "Zobrazit vaše menu",
       "steps": {
-        "title": {
-          "name": "Přidat název restaurace",
-          "description": "Dejte své restauraci název, který se zobrazí na vaší webové stránce"
-        },
-        "slug": {
-          "name": "Nastavit adresu webové stránky",
-          "description": "Vyberte jedinečné URL pro webovou stránku vaší restaurace"
+        "info": {
+          "name": "Restaurant Info",
+          "description": "Add your restaurant name and choose a website address"
         },
         "categories": {
-          "name": "Vytvořit kategorie menu",
-          "description": "Organizujte své menu do kategorií jako Předkrmy, Hlavní jídla atd."
+          "name": "Create Categories",
+          "description": "Organize your menu with categories"
         },
         "items": {
-          "name": "Přidat položky menu",
-          "description": "Přidejte jídla do svého menu s cenami a popisy"
-        },
-        "design": {
-          "name": "Přizpůsobit design",
-          "description": "Vyberte barvy a pozadí pro vaši webovou stránku"
+          "name": "Add Menu Items",
+          "description": "Add dishes to your menu with prices and descriptions"
         },
         "contacts": {
-          "name": "Přidat kontaktní informace",
-          "description": "Přidejte telefon, WhatsApp, Instagram a lokaci"
-        },
-        "reservations": {
-          "name": "Povolit rezervace",
-          "description": "Umožněte zákazníkům rezervovat stoly online"
-        },
-        "translations": {
-          "name": "Přidat jazyky",
-          "description": "Umožněte, aby bylo vaše menu dostupné v několika jazycích"
+          "name": "Add Contacts",
+          "description": "Add phone, WhatsApp, Instagram, and location"
         }
       },
       "completed": "Dokončeno",
       "notCompleted": "Nedokončeno",
       "allDone": "Všechno hotovo! Vaše menu je online.",
-      "requiredRemaining": "Zbývá {count} povinných kroků"
+      "requiredRemaining": "Zbývá {count} povinných kroků",
+      "quickActions": {
+        "qrMenu": {
+          "name": "QR Menu",
+          "description": "Print and share your menu"
+        },
+        "categories": {
+          "name": "Categories",
+          "description": "Add or edit menu categories"
+        },
+        "items": {
+          "name": "Menu Items",
+          "description": "Add or edit dishes"
+        },
+        "design": {
+          "name": "Design",
+          "description": "Customize colors and background"
+        },
+        "contacts": {
+          "name": "Contacts",
+          "description": "Edit contact information"
+        },
+        "languages": {
+          "name": "Languages",
+          "description": "Add more languages to your menu"
+        },
+        "analytics": {
+          "name": "Analytics",
+          "description": "View menu scan statistics"
+        }
+      }
     }
   },
   "reservationSettings": {

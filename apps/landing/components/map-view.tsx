@@ -7,6 +7,8 @@ import { Loader2 } from "lucide-react";
 interface MapViewProps {
   lat: number;
   lng: number;
+  zoom?: number;
+  showMarker?: boolean;
 }
 
 const containerStyle = {
@@ -14,7 +16,7 @@ const containerStyle = {
   height: "100%",
 };
 
-export function MapView({ lat, lng }: MapViewProps) {
+export function MapView({ lat, lng, zoom = 15, showMarker = true }: MapViewProps) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY || "",
@@ -40,14 +42,14 @@ export function MapView({ lat, lng }: MapViewProps) {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={15}
+      zoom={zoom}
       onLoad={onLoad}
       options={{
         disableDefaultUI: true,
         gestureHandling: "greedy",
       }}
     >
-      <Marker position={center} />
+      {showMarker && <Marker position={center} />}
     </GoogleMap>
   );
 }
