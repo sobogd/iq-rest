@@ -109,11 +109,16 @@ export async function POST(request: NextRequest) {
       path: "/",
     });
 
+    // Check if user is new (created within last 15 minutes)
+    const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000);
+    const isNewUser = user.createdAt > fifteenMinutesAgo;
+
     return NextResponse.json(
       {
         message: "Authentication successful",
         email: normalizedEmail,
-        userId: user.id
+        userId: user.id,
+        isNewUser,
       },
       { status: 200 }
     );

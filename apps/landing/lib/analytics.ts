@@ -42,7 +42,7 @@ export const auth = {
   signInStart: () => trackEvent("auth_signin_start"),
   emailSubmit: () => trackEvent("auth_email_submit"),
   codeVerify: () => trackEvent("auth_code_verify"),
-  signInSuccess: () => trackEvent("auth_signin_success"),
+  signUp: () => trackEvent("auth_signup"),
   signOut: () => trackEvent("auth_signout"),
 };
 

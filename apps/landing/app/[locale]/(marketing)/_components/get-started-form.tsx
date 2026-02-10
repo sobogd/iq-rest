@@ -122,7 +122,10 @@ export function GetStartedForm() {
       const data = await response.json();
 
       if (response.ok) {
-        analytics.auth.signInSuccess();
+        if (data.isNewUser) {
+          analytics.auth.signUp();
+          await new Promise((resolve) => setTimeout(resolve, 100));
+        }
         router.push(`/${locale}/dashboard`);
         router.refresh();
       } else {
