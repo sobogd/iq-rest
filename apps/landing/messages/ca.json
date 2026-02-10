@@ -1941,5 +1941,14 @@
         "required": false
       }
     ]
+  },
+  "reminderEmail": {
+    "subject": "El teu menú per a {restaurant} t'està esperant",
+    "greeting": "Hola!",
+    "body": "Només una nota ràpida — el teu menú digital per a {restaurant} està gairebé a punt. Hem guardat el teu progrés, així que pots continuar des d'on ho vas deixar.",
+    "timeNote": "Normalment es triga uns 5 minuts a acabar.",
+    "cta": "Obre el tauler",
+    "helpNote": "Si has tingut algun problema o tens preguntes — només respon a aquest correu. Encantats d'ajudar!",
+    "signature": "Salutacions,\nL'equip d'IQ Rest"
   }
 }

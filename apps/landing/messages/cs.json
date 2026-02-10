@@ -1941,5 +1941,14 @@
         "required": false
       }
     ]
+  },
+  "reminderEmail": {
+    "subject": "Vaše menu pro {restaurant} na vás čeká",
+    "greeting": "Ahoj!",
+    "body": "Jen rychlá poznámka — vaše digitální menu pro {restaurant} je téměř hotové. Uložili jsme váš postup, takže můžete pokračovat tam, kde jste přestali.",
+    "timeNote": "Obvykle to zabere asi 5 minut.",
+    "cta": "Otevřít dashboard",
+    "helpNote": "Pokud jste narazili na nějaké problémy nebo máte otázky — jednoduše odpovězte na tento email. Rádi pomůžeme!",
+    "signature": "S pozdravem,\nTým IQ Rest"
   }
 }

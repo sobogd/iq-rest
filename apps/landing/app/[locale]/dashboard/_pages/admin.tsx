@@ -18,6 +18,7 @@ import {
   MapPin,
   Instagram,
   Globe,
+  Mail,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -99,6 +100,7 @@ export function AdminPage() {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<Company | null>(null);
   const [deleting, setDeleting] = useState(false);
+  const [sendingReminder, setSendingReminder] = useState(false);
 
   // Chat state
   const [messages, setMessages] = useState<Message[]>([]);
@@ -135,6 +137,29 @@ export function AdminPage() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  async function handleSendReminder() {
+    if (!selectedCompany || sendingReminder) return;
+
+    setSendingReminder(true);
+    try {
+      const res = await fetch(`/api/admin/companies/${selectedCompany.id}/remind`, {
+        method: "POST",
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        toast.success(`Reminder sent to ${data.sentTo}`);
+      } else {
+        const data = await res.json();
+        toast.error(data.error || "Failed to send reminder");
+      }
+    } catch {
+      toast.error("Failed to send reminder");
+    } finally {
+      setSendingReminder(false);
+    }
+  }
 
   async function handleDelete() {
     if (!deleteTarget) return;
@@ -631,8 +656,21 @@ export function AdminPage() {
                 </div>
               </div>
 
-              {/* Delete Button */}
-              <div className="pt-4 border-t">
+              {/* Actions */}
+              <div className="pt-4 border-t space-y-3">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={handleSendReminder}
+                  disabled={sendingReminder}
+                >
+                  {sendingReminder ? (
+                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  ) : (
+                    <Mail className="h-4 w-4 mr-2" />
+                  )}
+                  Send Reminder Email
+                </Button>
                 <Button
                   variant="destructive"
                   className="w-full"

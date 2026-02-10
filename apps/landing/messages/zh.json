@@ -1673,5 +1673,14 @@
     },
     "sections": [],
     "cookieTypes": []
+  },
+  "reminderEmail": {
+    "subject": "您的 {restaurant} 菜单正在等待您",
+    "greeting": "您好！",
+    "body": "温馨提示 — 您为 {restaurant} 制作的数字菜单即将完成。我们已保存您的进度，您可以从上次中断的地方继续。",
+    "timeNote": "通常只需约5分钟即可完成。",
+    "cta": "打开控制面板",
+    "helpNote": "如果您遇到任何问题或有疑问，请直接回复此邮件。我们很乐意为您提供帮助！",
+    "signature": "祝好，\nIQ Rest 团队"
   }
 }

@@ -1941,5 +1941,14 @@
         "required": false
       }
     ]
+  },
+  "reminderEmail": {
+    "subject": "Menyen din for {restaurant} venter på deg",
+    "greeting": "Hei!",
+    "body": "Bare en rask påminnelse — din digitale meny for {restaurant} er nesten klar. Vi har lagret fremgangen din, så du kan fortsette der du slapp.",
+    "timeNote": "Det tar vanligvis omtrent 5 minutter å fullføre.",
+    "cta": "Åpne dashbord",
+    "helpNote": "Hvis du støtte på problemer eller har spørsmål — bare svar på denne e-posten. Vi hjelper gjerne!",
+    "signature": "Hilsen,\nIQ Rest-teamet"
   }
 }

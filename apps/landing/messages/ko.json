@@ -1673,5 +1673,14 @@
     },
     "sections": [],
     "cookieTypes": []
+  },
+  "reminderEmail": {
+    "subject": "{restaurant}의 메뉴가 기다리고 있습니다",
+    "greeting": "안녕하세요!",
+    "body": "간단한 알림입니다 — {restaurant}의 디지털 메뉴가 거의 완성되었습니다. 진행 상황을 저장했으므로 중단한 곳에서 바로 계속할 수 있습니다.",
+    "timeNote": "보통 완료하는 데 약 5분이 걸립니다.",
+    "cta": "대시보드 열기",
+    "helpNote": "문제가 발생했거나 질문이 있으시면 이 이메일에 답장해 주세요. 기꺼이 도와드리겠습니다!",
+    "signature": "감사합니다,\nIQ Rest 팀"
   }
 }

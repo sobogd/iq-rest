@@ -1941,5 +1941,14 @@
         "required": false
       }
     ]
+  },
+  "reminderEmail": {
+    "subject": "O teu menu para {restaurant} está à espera",
+    "greeting": "Olá!",
+    "body": "Só um lembrete rápido — o teu menu digital para {restaurant} está quase pronto. Guardámos o teu progresso, por isso podes continuar exatamente de onde paraste.",
+    "timeNote": "Normalmente demora cerca de 5 minutos a terminar.",
+    "cta": "Abrir Dashboard",
+    "helpNote": "Se tiveste algum problema ou tens dúvidas — responde a este email. Estamos cá para ajudar!",
+    "signature": "Até já,\nA Equipa IQ Rest"
   }
 }

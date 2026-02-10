@@ -1941,5 +1941,14 @@
         "required": false
       }
     ]
+  },
+  "reminderEmail": {
+    "subject": "Tá do bhiachlár do {restaurant} ag fanacht leat",
+    "greeting": "Dia duit!",
+    "body": "Nóta tapa — tá do bhiachlár digiteach do {restaurant} beagnach réidh. Shábháil muid do dhul chun cinn, ionas gur féidir leat leanúint ar aghaidh ón áit ar stop tú.",
+    "timeNote": "De ghnáth tógann sé thart ar 5 nóiméad chun críochnú.",
+    "cta": "Oscail an Painéal",
+    "helpNote": "Má bhí fadhbanna agat nó má tá ceisteanna agat — freagair an ríomhphost seo. Sásta cabhrú!",
+    "signature": "Le dea-ghuí,\nFoireann IQ Rest"
   }
 }
