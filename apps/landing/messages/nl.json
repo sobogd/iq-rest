@@ -1312,6 +1312,12 @@
       "reservationSettings": "Configuratie"
     },
     "logout": "Uitloggen",
+    "aiTranslate": {
+      "title": "AI Vertaling",
+      "description": "AI-vertaling is beschikbaar met een Basic- of Pro-abonnement. Upgrade je plan om automatische vertalingen te gebruiken.",
+      "cancel": "Annuleren",
+      "subscribe": "Abonneren"
+    },
     "auth": {
       "title": "Inloggen",
       "subtitle": "Moderne website met QR-menu, reserveringen en AI-vertalingen",

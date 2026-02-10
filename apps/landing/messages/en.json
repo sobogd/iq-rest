@@ -1213,6 +1213,12 @@
       "reservationSettings": "Configuration"
     },
     "logout": "Logout",
+    "aiTranslate": {
+      "title": "AI Translation",
+      "description": "AI translation is available with a Basic or Pro subscription. Upgrade your plan to use automatic translations.",
+      "cancel": "Cancel",
+      "subscribe": "Subscribe"
+    },
     "auth": {
       "title": "Sign in",
       "subtitle": "Modern website with QR menu, reservations, and AI translations",

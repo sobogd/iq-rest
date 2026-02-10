@@ -1312,6 +1312,12 @@
       "reservationSettings": "Confighuration"
     },
     "logout": "Logáil Amach",
+    "aiTranslate": {
+      "title": "Aistriúchán AI",
+      "description": "Tá aistriúchán AI ar fáil le síntiús Basic nó Pro. Uasghrádaigh do phlean chun aistriúcháin uathoibríocha a úsáid.",
+      "cancel": "Cealaigh",
+      "subscribe": "Liostáil"
+    },
     "auth": {
       "title": "Sínigh isteach",
       "subtitle": "Suíomh gréasáin nua-aimseartha le comhoiriúnacht QR, áirithintí, agus aistriúcháin AI",

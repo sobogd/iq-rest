@@ -1345,6 +1345,12 @@
       "reservationSettings": "配置"
     },
     "logout": "退出",
+    "aiTranslate": {
+      "title": "AI翻译",
+      "description": "AI翻译需要Basic或Pro订阅。升级您的计划以使用自动翻译。",
+      "cancel": "取消",
+      "subscribe": "订阅"
+    },
     "auth": {
       "title": "登录",
       "subtitle": "包含QR菜单、预订和AI翻译的现代网站",

@@ -1345,6 +1345,12 @@
       "reservationSettings": "설정"
     },
     "logout": "로그아웃",
+    "aiTranslate": {
+      "title": "AI 번역",
+      "description": "AI 번역은 Basic 또는 Pro 구독으로 이용 가능합니다. 자동 번역을 사용하려면 플랜을 업그레이드하세요.",
+      "cancel": "취소",
+      "subscribe": "구독하기"
+    },
     "auth": {
       "title": "로그인",
       "subtitle": "QR 메뉴, 예약, AI 번역이 포함된 모던한 웹사이트",

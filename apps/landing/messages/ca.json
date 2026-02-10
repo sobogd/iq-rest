@@ -1312,6 +1312,12 @@
       "reservationSettings": "Configuració"
     },
     "logout": "Tancar sessió",
+    "aiTranslate": {
+      "title": "Traducció IA",
+      "description": "La traducció IA està disponible amb una subscripció Basic o Pro. Actualitza el teu pla per utilitzar traduccions automàtiques.",
+      "cancel": "Cancel·lar",
+      "subscribe": "Subscriure's"
+    },
     "auth": {
       "title": "Iniciar sessió",
       "subtitle": "Lloc web modern amb menú QR, reserves i traduccions d'IA",

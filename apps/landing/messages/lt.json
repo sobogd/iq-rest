@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfigūracija"
     },
     "logout": "Atsijungti",
+    "aiTranslate": {
+      "title": "AI Vertimas",
+      "description": "AI vertimas galimas su Basic arba Pro prenumerata. Atnaujinkite savo planą, kad galėtumėte naudoti automatinius vertimus.",
+      "cancel": "Atšaukti",
+      "subscribe": "Prenumeruoti"
+    },
     "auth": {
       "title": "Prisijungti",
       "subtitle": "Moderni svetainė su QR meniu, rezervacijomis ir AI vertimais",

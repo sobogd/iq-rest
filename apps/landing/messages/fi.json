@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguraatio"
     },
     "logout": "Kirjaudu ulos",
+    "aiTranslate": {
+      "title": "Tekoälykäännös",
+      "description": "Tekoälykäännös on saatavilla Basic- tai Pro-tilauksella. Päivitä tilaussi käyttääksesi automaattisia käännöksiä.",
+      "cancel": "Peruuta",
+      "subscribe": "Tilaa"
+    },
     "auth": {
       "title": "Kirjaudu sisään",
       "subtitle": "Moderni verkkosivusto QR-valikolla, varauksilla ja tekoälykäännöksillä",

@@ -1312,6 +1312,12 @@
       "reservationSettings": "Configurare"
     },
     "logout": "Deconectare",
+    "aiTranslate": {
+      "title": "Traducere AI",
+      "description": "Traducerea AI este disponibilă cu un abonament Basic sau Pro. Actualizează-ți planul pentru a folosi traduceri automate.",
+      "cancel": "Anulează",
+      "subscribe": "Abonează-te"
+    },
     "auth": {
       "title": "Conectare",
       "subtitle": "Website modern cu meniu QR, rezervări și traduceri AI",

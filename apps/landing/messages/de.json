@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguration"
     },
     "logout": "Abmelden",
+    "aiTranslate": {
+      "title": "KI-Übersetzung",
+      "description": "KI-Übersetzung ist mit einem Basic- oder Pro-Abonnement verfügbar. Aktualisieren Sie Ihren Plan, um automatische Übersetzungen zu nutzen.",
+      "cancel": "Abbrechen",
+      "subscribe": "Abonnieren"
+    },
     "auth": {
       "title": "Anmelden",
       "subtitle": "Moderne Website mit QR-Menü, Reservierungen und KI-Übersetzungen",

@@ -1312,6 +1312,12 @@
       "reservationSettings": "Skilgreining"
     },
     "logout": "Útskráning",
+    "aiTranslate": {
+      "title": "AI Þýðing",
+      "description": "AI þýðing er í boði með Basic eða Pro áskrift. Uppfærðu áætlun þína til að nota sjálfvirkar þýðingar.",
+      "cancel": "Hætta við",
+      "subscribe": "Gerast áskrifandi"
+    },
     "auth": {
       "title": "Skrá inn",
       "subtitle": "Nútímaleg vefsíða með QR matseðli, bókunum og AI þýðingum",

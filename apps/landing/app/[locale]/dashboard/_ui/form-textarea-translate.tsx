@@ -1,11 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Loader2, Sparkles } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import type { SubscriptionStatus } from "@prisma/client";
+import type { PlanType } from "@/lib/stripe-config";
 
 interface FormTextareaTranslateProps {
   id?: string;
@@ -34,11 +46,38 @@ export function FormTextareaTranslate({
   targetLanguage,
   translateErrorMessage = "Translation failed",
 }: FormTextareaTranslateProps) {
+  const t = useTranslations("dashboard.aiTranslate");
   const [translating, setTranslating] = useState(false);
+  const [showSubscriptionDialog, setShowSubscriptionDialog] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
+  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
   const textareaId = id || label.toLowerCase().replace(/\s+/g, "-");
+
+  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
+
+  useEffect(() => {
+    async function fetchSubscriptionStatus() {
+      try {
+        const response = await fetch("/api/subscription/status");
+        if (response.ok) {
+          const data = await response.json();
+          setSubscriptionStatus(data.subscriptionStatus);
+          setCurrentPlan(data.plan);
+        }
+      } catch (error) {
+        console.error("Failed to fetch subscription status:", error);
+      }
+    }
+    fetchSubscriptionStatus();
+  }, []);
 
   async function handleTranslate() {
     if (!sourceText.trim()) return;
+
+    if (!hasActiveSubscription) {
+      setShowSubscriptionDialog(true);
+      return;
+    }
 
     setTranslating(true);
 
@@ -67,33 +106,52 @@ export function FormTextareaTranslate({
   }
 
   return (
-    <div className="space-y-2">
-      <Label htmlFor={textareaId}>{label}</Label>
-      <div className="flex gap-2">
-        <Textarea
-          id={textareaId}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-          disabled={disabled}
-          rows={rows}
-          className="resize-none overflow-hidden flex-1"
-        />
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          onClick={handleTranslate}
-          disabled={translating || !sourceText.trim() || disabled}
-          className="shrink-0 h-11 w-11 bg-muted/30 hover:bg-muted/50 self-start"
-        >
-          {translating ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <Sparkles className="h-4 w-4" />
-          )}
-        </Button>
+    <>
+      <div className="space-y-2">
+        <Label htmlFor={textareaId}>{label}</Label>
+        <div className="flex gap-2">
+          <Textarea
+            id={textareaId}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={placeholder}
+            disabled={disabled}
+            rows={rows}
+            className="resize-none overflow-hidden flex-1"
+          />
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            onClick={handleTranslate}
+            disabled={translating || !sourceText.trim() || disabled}
+            className="shrink-0 h-11 w-11 bg-muted/30 hover:bg-muted/50 self-start"
+          >
+            {translating ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Sparkles className="h-4 w-4" />
+            )}
+          </Button>
+        </div>
       </div>
-    </div>
+
+      <Dialog open={showSubscriptionDialog} onOpenChange={setShowSubscriptionDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t("title")}</DialogTitle>
+            <DialogDescription>{t("description")}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowSubscriptionDialog(false)}>
+              {t("cancel")}
+            </Button>
+            <Button asChild>
+              <Link href="/dashboard?page=billing">{t("subscribe")}</Link>
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }

@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguracija"
     },
     "logout": "Odjava",
+    "aiTranslate": {
+      "title": "AI Prijevod",
+      "description": "AI prijevod je dostupan s Basic ili Pro pretplatom. Nadogradite svoj plan za korištenje automatskih prijevoda.",
+      "cancel": "Odustani",
+      "subscribe": "Pretplati se"
+    },
     "auth": {
       "title": "Prijavite se",
       "subtitle": "Moderna web stranica s QR menijem, rezervacijama i AI prijevodima",

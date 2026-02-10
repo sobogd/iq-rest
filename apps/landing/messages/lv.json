@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfigurācija"
     },
     "logout": "Iziet",
+    "aiTranslate": {
+      "title": "AI Tulkojums",
+      "description": "AI tulkojums ir pieejams ar Basic vai Pro abonementu. Uzlabojiet savu plānu, lai izmantotu automātiskos tulkojumus.",
+      "cancel": "Atcelt",
+      "subscribe": "Abonēt"
+    },
     "auth": {
       "title": "Pieteikties",
       "subtitle": "Mūsdienu mājaslapa ar QR ēdienkarti, rezervācijām un AI tulkojumiem",

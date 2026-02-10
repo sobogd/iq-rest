@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguration"
     },
     "logout": "Logga ut",
+    "aiTranslate": {
+      "title": "AI Översättning",
+      "description": "AI-översättning är tillgänglig med ett Basic- eller Pro-abonnemang. Uppgradera din plan för att använda automatiska översättningar.",
+      "cancel": "Avbryt",
+      "subscribe": "Prenumerera"
+    },
     "auth": {
       "title": "Logga in",
       "subtitle": "Modern webbplats med QR-meny, bokningar och AI-översättningar",

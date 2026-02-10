@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguratsioon"
     },
     "logout": "Logi välja",
+    "aiTranslate": {
+      "title": "AI Tõlge",
+      "description": "AI tõlge on saadaval Basic või Pro tellimusega. Täiendage oma plaani automaatsete tõlgete kasutamiseks.",
+      "cancel": "Tühista",
+      "subscribe": "Telli"
+    },
     "auth": {
       "title": "Logi sisse",
       "subtitle": "Kaasaegne veebileht QR menüü, broneeringute ja AI tõlgetega",

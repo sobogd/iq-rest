@@ -1325,6 +1325,12 @@
       "reservationSettings": "設定"
     },
     "logout": "ログアウト",
+    "aiTranslate": {
+      "title": "AI翻訳",
+      "description": "AI翻訳はBasicまたはProサブスクリプションでご利用いただけます。自動翻訳を使用するにはプランをアップグレードしてください。",
+      "cancel": "キャンセル",
+      "subscribe": "購読する"
+    },
     "auth": {
       "title": "ログイン",
       "subtitle": "QRメニュー、予約、AI翻訳付きのモダンなウェブサイト",

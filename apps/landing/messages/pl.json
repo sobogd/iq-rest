@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguracja"
     },
     "logout": "Wyloguj się",
+    "aiTranslate": {
+      "title": "Tłumaczenie AI",
+      "description": "Tłumaczenie AI jest dostępne z subskrypcją Basic lub Pro. Ulepsz swój plan, aby korzystać z automatycznych tłumaczeń.",
+      "cancel": "Anuluj",
+      "subscribe": "Subskrybuj"
+    },
     "auth": {
       "title": "Zaloguj się",
       "subtitle": "Nowoczesna strona internetowa z menu QR, rezerwacjami i tłumaczeniami AI",

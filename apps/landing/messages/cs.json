@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfigurace"
     },
     "logout": "Odhlásit se",
+    "aiTranslate": {
+      "title": "AI Překlad",
+      "description": "AI překlad je k dispozici s předplatným Basic nebo Pro. Upgradujte svůj plán pro použití automatických překladů.",
+      "cancel": "Zrušit",
+      "subscribe": "Předplatit"
+    },
     "auth": {
       "title": "Přihlásit se",
       "subtitle": "Moderní webová stránka s QR menu, rezervacemi a AI překlady",

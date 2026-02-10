@@ -1312,6 +1312,12 @@
       "reservationSettings": "Konfiguráció"
     },
     "logout": "Kijelentkezés",
+    "aiTranslate": {
+      "title": "AI Fordítás",
+      "description": "Az AI fordítás Basic vagy Pro előfizetéssel érhető el. Frissítse csomagját az automatikus fordítások használatához.",
+      "cancel": "Mégse",
+      "subscribe": "Feliratkozás"
+    },
     "auth": {
       "title": "Bejelentkezés",
       "subtitle": "Modern weboldal QR menüvel, foglalásokkal és AI fordításokkal",

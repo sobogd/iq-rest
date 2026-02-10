@@ -1312,6 +1312,12 @@
       "reservationSettings": "Configuração"
     },
     "logout": "Sair",
+    "aiTranslate": {
+      "title": "Tradução IA",
+      "description": "A tradução IA está disponível com uma assinatura Basic ou Pro. Atualize seu plano para usar traduções automáticas.",
+      "cancel": "Cancelar",
+      "subscribe": "Assinar"
+    },
     "auth": {
       "title": "Entrar",
       "subtitle": "Site moderno com menu QR, reservas e traduções de IA",

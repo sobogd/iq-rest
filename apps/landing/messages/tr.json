@@ -1312,6 +1312,12 @@
       "reservationSettings": "Yapılandırma"
     },
     "logout": "Çıkış Yap",
+    "aiTranslate": {
+      "title": "Yapay Zeka Çevirisi",
+      "description": "Yapay zeka çevirisi Basic veya Pro aboneliğiyle kullanılabilir. Otomatik çevirileri kullanmak için planınızı yükseltin.",
+      "cancel": "İptal",
+      "subscribe": "Abone Ol"
+    },
     "auth": {
       "title": "Giriş yap",
       "subtitle": "QR menü, rezervasyonlar ve AI çevirileri ile modern web sitesi",
