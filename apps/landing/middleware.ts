@@ -1,5 +1,8 @@
+import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
-import { locales, Locale } from "./i18n/routing";
+import { routing, locales, Locale } from "./i18n/routing";
+
+const intlMiddleware = createMiddleware(routing);
 
 // Create regex pattern for all locales
 const localePattern = locales.join("|");
@@ -108,19 +111,11 @@ export default function middleware(request: NextRequest) {
     );
   }
 
-  // Handle pages with locale prefix - just pass through and set cookie
-  const urlLocaleMatch = pathname.match(localeRegex);
-  const urlLocale = urlLocaleMatch ? urlLocaleMatch[1] : null;
-
-  const response = NextResponse.next();
+  // Use next-intl middleware for locale handling
+  const response = intlMiddleware(request);
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
-
-  // Set locale cookie based on URL locale
-  if (urlLocale) {
-    setLocaleCookie(response, urlLocale);
-  }
 
   return response;
 }

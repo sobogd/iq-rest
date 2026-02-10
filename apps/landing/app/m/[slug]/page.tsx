@@ -1,5 +1,5 @@
-import { redirect, notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import { notFound, redirect } from "next/navigation";
 
 interface PageProps {
   params: Promise<{
@@ -14,6 +14,8 @@ export default async function MenuRedirect({ params }: PageProps) {
     where: { slug },
     select: { defaultLanguage: true },
   });
+
+  console.log(`[MenuRedirect] slug: ${slug}, defaultLanguage: ${restaurant?.defaultLanguage}`);
 
   if (!restaurant) {
     notFound();
