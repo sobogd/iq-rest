@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, useCallback, useEffect, useRef, ReactNode } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import { analytics } from "@/lib/analytics";
 
 export type PageKey =
   | "onboarding"
@@ -195,6 +196,7 @@ export function DashboardProvider({
   const effectiveInitialPage = pageParam && isValidPageKey(pageParam) ? pageParam : initialPage;
 
   const [activePage, setActivePageState] = useState<PageKey>(effectiveInitialPage);
+  const previousPageRef = useRef<PageKey>(effectiveInitialPage);
 
   useEffect(() => {
     const pageParam = searchParams.get("page");
@@ -212,11 +214,18 @@ export function DashboardProvider({
   }, [searchParams, router]);
 
   const setActivePage = useCallback((page: PageKey) => {
+    const fromPage = previousPageRef.current;
+    if (fromPage !== page) {
+      analytics.dashboard.navigateTo(fromPage, page);
+    }
+    previousPageRef.current = page;
     setActivePageState(page);
     setPageCookie(page);
   }, []);
 
   const navigateFromOnboarding = useCallback((page: PageKey) => {
+    analytics.dashboard.navigateTo("onboarding", page);
+    previousPageRef.current = page;
     sessionStorage.setItem("returnToOnboarding", "true");
     setActivePageState(page);
     setPageCookie(page);
@@ -225,6 +234,8 @@ export function DashboardProvider({
   const returnToOnboarding = useCallback(() => {
     const shouldReturn = sessionStorage.getItem("returnToOnboarding") === "true";
     if (shouldReturn) {
+      analytics.dashboard.returnToOnboarding(previousPageRef.current);
+      previousPageRef.current = "onboarding";
       sessionStorage.removeItem("returnToOnboarding");
       setActivePageState("onboarding");
       setPageCookie("onboarding");

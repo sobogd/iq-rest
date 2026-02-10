@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import { useDashboard, PageKey } from "../_context/dashboard-context";
-import { ExternalLink, Loader2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Loader2, Check, ArrowRight } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 
 interface OnboardingProgress {
@@ -34,18 +32,15 @@ interface Step {
   page: PageKey;
 }
 
-const requiredSteps: Step[] = [
+const allSteps: Step[] = [
   { key: "title", progressKey: "hasTitle", page: "settings" },
   { key: "slug", progressKey: "hasSlug", page: "settings" },
   { key: "categories", progressKey: "hasCategories", page: "categories" },
   { key: "items", progressKey: "hasItems", page: "items" },
-];
-
-const optionalSteps: Step[] = [
-  { key: "design", progressKey: "hasDesign", page: "design" },
   { key: "contacts", progressKey: "hasContacts", page: "contacts" },
-  { key: "reservations", progressKey: "hasReservations", page: "reservationSettings" },
   { key: "translations", progressKey: "hasTranslations", page: "languages" },
+  { key: "design", progressKey: "hasDesign", page: "design" },
+  { key: "reservations", progressKey: "hasReservations", page: "reservationSettings" },
 ];
 
 export function OnboardingPage() {
@@ -53,6 +48,7 @@ export function OnboardingPage() {
   const { navigateFromOnboarding } = useDashboard();
   const [data, setData] = useState<OnboardingData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
     async function fetchProgress() {
@@ -62,6 +58,15 @@ export function OnboardingPage() {
           const result = await response.json();
           setData(result);
           analytics.onboarding.viewOnboarding();
+
+          // Find first incomplete step
+          const firstIncomplete = allSteps.findIndex(
+            step => !result.progress[step.progressKey]
+          );
+          if (firstIncomplete !== -1) {
+            setCurrentStep(firstIncomplete);
+          }
+
           if (result.requiredCompleted) {
             analytics.onboarding.completeAllRequired();
           }
@@ -80,6 +85,24 @@ export function OnboardingPage() {
     navigateFromOnboarding(page);
   };
 
+  const goToPrevious = () => {
+    if (currentStep > 0) {
+      const fromStep = allSteps[currentStep].key;
+      const toStep = allSteps[currentStep - 1].key;
+      analytics.onboarding.navigatePrev(fromStep, toStep);
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const goToNext = () => {
+    if (currentStep < allSteps.length - 1) {
+      const fromStep = allSteps[currentStep].key;
+      const toStep = allSteps[currentStep + 1].key;
+      analytics.onboarding.navigateNext(fromStep, toStep);
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-full">
@@ -92,43 +115,72 @@ export function OnboardingPage() {
     return null;
   }
 
-  const { progress, requiredCompleted, slug } = data;
-
-  const requiredCount = requiredSteps.filter(step => progress[step.progressKey]).length;
-  const optionalCount = optionalSteps.filter(step => progress[step.progressKey]).length;
-  const totalRequired = requiredSteps.length;
-  const totalOptional = optionalSteps.length;
-  const progressPercent = Math.round((requiredCount / totalRequired) * 100);
+  const { progress, slug } = data;
+  const step = allSteps[currentStep];
+  const isCompleted = progress[step.progressKey];
+  const completedCount = allSteps.filter(s => progress[s.progressKey]).length;
+  const allCompleted = completedCount === allSteps.length;
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6">
-        <div className="max-w-2xl mx-auto space-y-6">
-          {/* Header */}
-          <div className="text-left space-y-1">
-            <h1 className="text-2xl font-bold">{t("title")}</h1>
-            <p className="text-muted-foreground">{t("subtitle")}</p>
+      {/* Top Navigation */}
+      <div className="flex items-center justify-between px-6 py-4">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={goToPrevious}
+          disabled={currentStep === 0}
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
+
+        <span className="text-sm text-muted-foreground">
+          {currentStep + 1} / {allSteps.length}
+        </span>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={goToNext}
+          disabled={currentStep === allSteps.length - 1}
+        >
+          <ChevronRight className="h-5 w-5" />
+        </Button>
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 flex flex-col items-center justify-center p-6">
+        <div className="max-w-md w-full text-center space-y-6">
+          {/* Status Badge */}
+          <div className="flex justify-center">
+            {isCompleted ? (
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium">
+                <Check className="h-4 w-4" />
+                {t("completed")}
+              </div>
+            ) : (
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-sm font-medium">
+                {t("notCompleted")}
+              </div>
+            )}
           </div>
 
-          {/* Progress Bar */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">
-                    {requiredCompleted
-                      ? t("allDone")
-                      : t("requiredRemaining", { count: totalRequired - requiredCount })}
-                  </span>
-                  <span className="font-medium">{requiredCount}/{totalRequired}</span>
-                </div>
-                <Progress value={progressPercent} className="h-2" />
-              </div>
-            </CardContent>
-          </Card>
+          {/* Step Title */}
+          <div className="space-y-3">
+            <h1 className="text-2xl font-bold">
+              {t(`steps.${step.key}.name`)}
+            </h1>
+            <p className="text-muted-foreground">
+              {t(`steps.${step.key}.description`)}
+            </p>
+          </div>
+        </div>
+      </div>
 
-          {/* View Menu Button */}
-          {requiredCompleted && slug && (
+      {/* Bottom Action */}
+      <div className="px-6 pt-4 pb-6 bg-background shrink-0">
+        <div className="max-w-md mx-auto">
+          {allCompleted && slug ? (
             <Button
               className="w-full"
               size="lg"
@@ -140,67 +192,16 @@ export function OnboardingPage() {
               <ExternalLink className="mr-2 h-4 w-4" />
               {t("viewMenu")}
             </Button>
+          ) : (
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={() => handleStepClick(step.key, step.page)}
+            >
+              {t(`steps.${step.key}.name`)}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           )}
-
-          {/* Required Steps */}
-          <div className="space-y-3">
-            <div>
-              <h2 className="text-lg font-semibold">{t("requiredSteps")}</h2>
-              <p className="text-sm text-muted-foreground">{requiredCount}/{totalRequired} {t("completed").toLowerCase()}</p>
-            </div>
-            {requiredSteps.map((step) => {
-              const isCompleted = progress[step.progressKey];
-              return (
-                <button
-                  key={step.key}
-                  onClick={() => handleStepClick(step.key, step.page)}
-                  className="w-full flex flex-col p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors text-left"
-                >
-                  <span className="font-medium">{t(`steps.${step.key}.name`)}</span>
-                  <span className="text-sm text-muted-foreground mt-1">
-                    {t(`steps.${step.key}.description`)}
-                  </span>
-                  <span className={`text-sm mt-1 ${
-                    isCompleted
-                      ? "text-green-600 dark:text-green-400"
-                      : "text-orange-500 dark:text-orange-400"
-                  }`}>
-                    {isCompleted ? t("completed") : t("notCompleted")}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Optional Steps */}
-          <div className="space-y-3">
-            <div>
-              <h2 className="text-lg font-semibold">{t("optionalSteps")}</h2>
-              <p className="text-sm text-muted-foreground">{optionalCount}/{totalOptional} {t("completed").toLowerCase()}</p>
-            </div>
-            {optionalSteps.map((step) => {
-              const isCompleted = progress[step.progressKey];
-              return (
-                <button
-                  key={step.key}
-                  onClick={() => handleStepClick(step.key, step.page)}
-                  className="w-full flex flex-col p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors text-left"
-                >
-                  <span className="font-medium">{t(`steps.${step.key}.name`)}</span>
-                  <span className="text-sm text-muted-foreground mt-1">
-                    {t(`steps.${step.key}.description`)}
-                  </span>
-                  <span className={`text-sm mt-1 ${
-                    isCompleted
-                      ? "text-green-600 dark:text-green-400"
-                      : "text-orange-500 dark:text-orange-400"
-                  }`}>
-                    {isCompleted ? t("completed") : t("notCompleted")}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
         </div>
       </div>
     </div>

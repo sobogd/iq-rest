@@ -43,11 +43,15 @@ export const onboarding = {
   completeStep: (step: string) => trackEvent("onboarding_complete_step", { step }),
   completeAllRequired: () => trackEvent("onboarding_complete_required"),
   viewMenu: () => trackEvent("onboarding_view_menu"),
+  navigateNext: (fromStep: string, toStep: string) => trackEvent("onboarding_navigate_next", { from_step: fromStep, to_step: toStep }),
+  navigatePrev: (fromStep: string, toStep: string) => trackEvent("onboarding_navigate_prev", { from_step: fromStep, to_step: toStep }),
 };
 
 // Dashboard navigation events
 export const dashboard = {
   viewPage: (page: string) => trackEvent("dashboard_view_page", { page }),
+  navigateTo: (fromPage: string, toPage: string) => trackEvent("dashboard_navigate", { from_page: fromPage, to_page: toPage }),
+  returnToOnboarding: (fromPage: string) => trackEvent("dashboard_return_to_onboarding", { from_page: fromPage }),
   openSidebar: () => trackEvent("dashboard_open_sidebar"),
   closeSidebar: () => trackEvent("dashboard_close_sidebar"),
 };
