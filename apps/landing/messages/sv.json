@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Inga objekt ännu. Skapa ditt första objekt för att komma igång.",
+      "noCategoriesHint": "Lägg till en kategori först för att skapa objekt.",
       "addItem": "Lägg till",
       "editItem": "Redigera objekt",
       "name": "Namn",

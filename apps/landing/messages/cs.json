@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Zatím žádné položky. Vytvořte svou první položku, abyste mohli začít.",
+      "noCategoriesHint": "Nejprve přidejte kategorii pro vytvoření položek.",
       "addItem": "Přidat",
       "editItem": "Upravit položku",
       "name": "Název",

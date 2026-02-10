@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Ei ole veel tooteid. Looge oma esimene toode, et alustada.",
+      "noCategoriesHint": "Lisage esmalt kategooria, et luua tooteid.",
       "addItem": "Lisa",
       "editItem": "Muuda toodet",
       "name": "Nimi",

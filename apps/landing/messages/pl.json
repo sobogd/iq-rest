@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Brak pozycji. Utwórz swoją pierwszą pozycję, aby rozpocząć.",
+      "noCategoriesHint": "Najpierw dodaj kategorię, aby tworzyć pozycje.",
       "addItem": "Dodaj",
       "editItem": "Edytuj pozycję",
       "name": "Nazwa",

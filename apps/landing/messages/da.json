@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Ingen varer endnu. Opret din første vare for at komme i gang.",
+      "noCategoriesHint": "Tilføj en kategori først for at oprette varer.",
       "addItem": "Tilføj",
       "editItem": "Rediger vare",
       "name": "Navn",

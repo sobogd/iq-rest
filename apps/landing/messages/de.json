@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Noch keine Artikel. Erstellen Sie Ihren ersten Artikel, um zu beginnen.",
+      "noCategoriesHint": "Fügen Sie zuerst eine Kategorie hinzu, um Artikel zu erstellen.",
       "addItem": "Hinzufügen",
       "editItem": "Artikel bearbeiten",
       "name": "Name",

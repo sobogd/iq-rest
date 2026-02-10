@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Zatiaľ žiadne položky. Vytvorte svoju prvú položku a začnite.",
+      "noCategoriesHint": "Najprv pridajte kategóriu pre vytvorenie položiek.",
       "addItem": "Pridať",
       "editItem": "Upraviť položku",
       "name": "Názov",

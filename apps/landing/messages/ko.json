@@ -1420,6 +1420,7 @@
     },
     "items": {
       "noItems": "아직 항목이 없습니다. 첫 번째 항목을 만들어 시작하세요.",
+      "noCategoriesHint": "항목을 만들려면 먼저 카테고리를 추가하세요.",
       "addItem": "추가",
       "editItem": "항목 편집",
       "name": "이름",

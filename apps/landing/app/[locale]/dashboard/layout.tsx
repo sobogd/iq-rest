@@ -115,6 +115,7 @@ export default async function DashboardLayout({
     },
     items: {
       noItems: t("items.noItems"),
+      noCategoriesHint: t("items.noCategoriesHint"),
       addItem: t("items.addItem"),
       editItem: t("items.editItem"),
       name: t("items.name"),

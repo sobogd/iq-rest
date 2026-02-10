@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Engir hlutir enn. Búðu til þinn fyrsta hlut til að byrja.",
+      "noCategoriesHint": "Bættu við flokki fyrst til að búa til hluti.",
       "addItem": "Bæta við",
       "editItem": "Breyta hlut",
       "name": "Nafn",

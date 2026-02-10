@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Ei vielä tuotteita. Luo ensimmäinen tuote aloittaaksesi.",
+      "noCategoriesHint": "Lisää ensin kategoria luodaksesi tuotteita.",
       "addItem": "Lisää",
       "editItem": "Muokkaa tuotetta",
       "name": "Nimi",

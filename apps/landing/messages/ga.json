@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Níl aon earraí ann fós. Cruthaigh do chéad earra chun tús a chur.",
+      "noCategoriesHint": "Cuir catagóir leis ar dtús chun earraí a chruthú.",
       "addItem": "Cuir leis",
       "editItem": "Cuir in eagar an tEarrach",
       "name": "Ainm",

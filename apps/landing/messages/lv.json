@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Vēl nav neviena ēdiena. Izveidojiet savu pirmo ēdienu, lai sāktu.",
+      "noCategoriesHint": "Vispirms pievienojiet kategoriju, lai izveidotu ēdienus.",
       "addItem": "Pievienot",
       "editItem": "Rediģēt ēdienu",
       "name": "Nosaukums",

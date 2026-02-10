@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Henüz hiç ürün yok. Başlamak için ilk ürününüzü oluşturun.",
+      "noCategoriesHint": "Ürün oluşturmak için önce bir kategori ekleyin.",
       "addItem": "Ekle",
       "editItem": "Ürünü Düzenle",
       "name": "İsim",

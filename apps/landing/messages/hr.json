@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Još nema stavki. Kreirajte svoju prvu stavku da biste započeli.",
+      "noCategoriesHint": "Prvo dodajte kategoriju za kreiranje stavki.",
       "addItem": "Dodaj",
       "editItem": "Uredi stavku",
       "name": "Ime",

@@ -1420,6 +1420,7 @@
     },
     "items": {
       "noItems": "还没有项目。创建您的第一个项目开始。",
+      "noCategoriesHint": "请先添加一个类别以创建项目。",
       "addItem": "添加",
       "editItem": "编辑项目",
       "name": "名称",

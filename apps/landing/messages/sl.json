@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Še ni predmetov. Ustvarite svoj prvi predmet, da začnete.",
+      "noCategoriesHint": "Najprej dodajte kategorijo za ustvarjanje predmetov.",
       "addItem": "Dodaj",
       "editItem": "Uredi predmet",
       "name": "Ime",

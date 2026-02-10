@@ -295,12 +295,10 @@ export function ItemsPage() {
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-auto p-6">
         {items.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-16">
-            <p className="text-muted-foreground mb-4">{t.noItems}</p>
-            <Button onClick={handleAddItem} disabled={categories.length === 0}>
-              <Plus className="h-4 w-4 mr-2" />
-              {t.addItem}
-            </Button>
+          <div className="flex flex-col items-center justify-center h-full">
+            <p className="text-muted-foreground text-center">
+              {categories.length === 0 ? t.noCategoriesHint : t.noItems}
+            </p>
           </div>
         ) : (
           <div>
@@ -369,39 +367,37 @@ export function ItemsPage() {
         )}
       </div>
 
-      {(items.length > 0 || categories.length > 0) && (
-        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
-          {sortMode ? (
-            <>
-              <Button onClick={handleCancelSortMode} variant="outline" disabled={savingSort}>
-                <X className="h-4 w-4 mr-2" />
-                {t.cancel}
-              </Button>
-              <Button onClick={handleSaveSortOrder} disabled={savingSort}>
-                {savingSort ? (
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                ) : (
-                  <Save className="h-4 w-4 mr-2" />
-                )}
-                {t.saveSort}
-              </Button>
-            </>
-          ) : (
-            <>
-              {items.length > 0 && (
-                <Button onClick={handleStartSortMode} variant="outline">
-                  <ArrowUpDown className="h-4 w-4 mr-2" />
-                  {t.sort}
-                </Button>
+      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
+        {sortMode ? (
+          <>
+            <Button onClick={handleCancelSortMode} variant="outline" disabled={savingSort}>
+              <X className="h-4 w-4 mr-2" />
+              {t.cancel}
+            </Button>
+            <Button onClick={handleSaveSortOrder} disabled={savingSort}>
+              {savingSort ? (
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              ) : (
+                <Save className="h-4 w-4 mr-2" />
               )}
-              <Button onClick={handleAddItem} disabled={categories.length === 0}>
-                <Plus className="h-4 w-4 mr-2" />
-                {t.addItem}
+              {t.saveSort}
+            </Button>
+          </>
+        ) : (
+          <>
+            {items.length > 0 && (
+              <Button onClick={handleStartSortMode} variant="outline">
+                <ArrowUpDown className="h-4 w-4 mr-2" />
+                {t.sort}
               </Button>
-            </>
-          )}
-        </div>
-      )}
+            )}
+            <Button onClick={handleAddItem} disabled={categories.length === 0}>
+              <Plus className="h-4 w-4 mr-2" />
+              {t.addItem}
+            </Button>
+          </>
+        )}
+      </div>
 
       {showForm && (
         <ItemFormSheet

@@ -1288,6 +1288,7 @@
     },
     "items": {
       "noItems": "No items yet. Create your first item to get started.",
+      "noCategoriesHint": "Add a category first to create items.",
       "addItem": "Add",
       "editItem": "Edit Item",
       "name": "Name",

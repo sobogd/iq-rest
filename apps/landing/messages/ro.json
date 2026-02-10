@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Nu există încă articole. Creați primul articol pentru a începe.",
+      "noCategoriesHint": "Adăugați mai întâi o categorie pentru a crea articole.",
       "addItem": "Adaugă",
       "editItem": "Editează articolul",
       "name": "Nume",

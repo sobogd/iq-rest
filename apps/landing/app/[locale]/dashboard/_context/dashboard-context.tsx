@@ -72,6 +72,7 @@ export interface CategoriesTranslations {
 
 export interface ItemsTranslations {
   noItems: string;
+  noCategoriesHint: string;
   addItem: string;
   editItem: string;
   name: string;

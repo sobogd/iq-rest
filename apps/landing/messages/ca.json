@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Encara no hi ha articles. Crea el teu primer article per començar.",
+      "noCategoriesHint": "Afegeix una categoria primer per crear articles.",
       "addItem": "Afegir",
       "editItem": "Editar article",
       "name": "Nom",

@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Dar nėra prekių. Sukurkite savo pirmąją prekę, kad pradėtumėte.",
+      "noCategoriesHint": "Pirmiausia pridėkite kategoriją, kad galėtumėte kurti prekes.",
       "addItem": "Pridėti",
       "editItem": "Redaguoti prekę",
       "name": "Pavadinimas",

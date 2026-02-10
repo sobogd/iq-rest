@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Még nincsenek tételek. Hozza létre az első tételt a kezdéshez.",
+      "noCategoriesHint": "Először adjon hozzá egy kategóriát a tételek létrehozásához.",
       "addItem": "Hozzáadás",
       "editItem": "Tétel szerkesztése",
       "name": "Név",

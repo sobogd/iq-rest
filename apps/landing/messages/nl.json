@@ -1387,6 +1387,7 @@
     },
     "items": {
       "noItems": "Nog geen items. Maak uw eerste item om te beginnen.",
+      "noCategoriesHint": "Voeg eerst een categorie toe om items te maken.",
       "addItem": "Toevoegen",
       "editItem": "Item Bewerken",
       "name": "Naam",
