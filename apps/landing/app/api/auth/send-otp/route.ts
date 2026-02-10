@@ -30,6 +30,10 @@ export async function POST(request: NextRequest) {
 
     const normalizedEmail = email.toLowerCase();
 
+    // Check if iCloud email
+    const emailDomain = normalizedEmail.split("@")[1];
+    const isICloudEmail = ["icloud.com", "me.com", "mac.com"].includes(emailDomain);
+
     // Generate 4-digit OTP code
     const otpCode = Math.floor(1000 + Math.random() * 9000).toString();
     const otpExpiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
@@ -78,20 +82,37 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Create transporter
+    // Create transporter - use different SMTP for iCloud emails
+    const smtpConfig = isICloudEmail
+      ? {
+          host: process.env.ICLOUD_SMTP_HOST,
+          port: Number(process.env.ICLOUD_SMTP_PORT),
+          auth: {
+            user: process.env.ICLOUD_SMTP_USER,
+            pass: process.env.ICLOUD_SMTP_PASS,
+          },
+          fromEmail: process.env.ICLOUD_FROM_EMAIL,
+        }
+      : {
+          host: process.env.SMTP_HOST,
+          port: Number(process.env.SMTP_PORT),
+          auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
+          },
+          fromEmail: process.env.FROM_EMAIL,
+        };
+
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
+      host: smtpConfig.host,
+      port: smtpConfig.port,
       secure: false,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+      auth: smtpConfig.auth,
     });
 
     // Email content
     const mailOptions = {
-      from: process.env.FROM_EMAIL,
+      from: smtpConfig.fromEmail,
       to: email,
       subject: `Your IQ Rest verification code: ${otpCode}`,
       html: `

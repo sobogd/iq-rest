@@ -250,6 +250,10 @@ export function DashboardProvider({
     trackPageView(page);
     previousPageRef.current = page;
     sessionStorage.setItem("returnToOnboarding", "true");
+    // For categories/items pages, open form directly
+    if (page === "categories" || page === "items") {
+      sessionStorage.setItem("openFormOnNavigate", "true");
+    }
     setActivePageState(page);
     setPageCookie(page);
   }, [trackPageView]);

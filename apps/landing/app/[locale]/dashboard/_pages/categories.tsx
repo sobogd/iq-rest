@@ -51,6 +51,12 @@ export function CategoriesPage() {
 
   useEffect(() => {
     fetchCategories();
+
+    // Check if we should open form directly (from onboarding)
+    if (sessionStorage.getItem("openFormOnNavigate") === "true") {
+      sessionStorage.removeItem("openFormOnNavigate");
+      setShowForm(true);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

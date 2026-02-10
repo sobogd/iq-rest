@@ -1,9 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ExternalLink, Building2, FolderOpen, Package, Users } from "lucide-react";
+import { ExternalLink, Building2, FolderOpen, Package, Users, Trash2, Loader2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import { toast } from "sonner";
 import { PageLoader } from "../_ui/page-loader";
 
 interface Restaurant {
@@ -32,6 +44,32 @@ export function AdminPage() {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<Company | null>(null);
+  const [deleting, setDeleting] = useState(false);
+
+  async function handleDelete() {
+    if (!deleteTarget) return;
+
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/admin/companies/${deleteTarget.id}`, {
+        method: "DELETE",
+      });
+
+      if (res.ok) {
+        setCompanies((prev) => prev.filter((c) => c.id !== deleteTarget.id));
+        toast.success(`Company "${deleteTarget.name}" deleted`);
+      } else {
+        const data = await res.json();
+        toast.error(data.error || "Failed to delete");
+      }
+    } catch {
+      toast.error("Failed to delete");
+    } finally {
+      setDeleting(false);
+      setDeleteTarget(null);
+    }
+  }
 
   useEffect(() => {
     async function fetchCompanies() {
@@ -148,9 +186,19 @@ export function AdminPage() {
                         Registered: {new Date(company.createdAt).toLocaleDateString()}
                       </p>
                     </div>
-                    <div className="text-right text-sm text-muted-foreground">
-                      <p>{company.categoriesCount} categories</p>
-                      <p>{company.itemsCount} items</p>
+                    <div className="flex items-start gap-3">
+                      <div className="text-right text-sm text-muted-foreground">
+                        <p>{company.categoriesCount} categories</p>
+                        <p>{company.itemsCount} items</p>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="text-destructive hover:text-destructive hover:bg-destructive/10"
+                        onClick={() => setDeleteTarget(company)}
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
                     </div>
                   </div>
                 </CardHeader>
@@ -211,6 +259,41 @@ export function AdminPage() {
           </div>
         </div>
       </div>
+
+      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => !open && setDeleteTarget(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete Company</AlertDialogTitle>
+            <AlertDialogDescription>
+              Are you sure you want to delete <strong>{deleteTarget?.name}</strong>?
+              <br /><br />
+              This will permanently delete:
+              <ul className="list-disc list-inside mt-2 space-y-1">
+                <li>{deleteTarget?.restaurants.length || 0} restaurant(s)</li>
+                <li>{deleteTarget?.categoriesCount || 0} categories</li>
+                <li>{deleteTarget?.itemsCount || 0} items</li>
+                <li>{deleteTarget?.users.length || 0} user(s)</li>
+                <li>All reservations, tables, and analytics data</li>
+              </ul>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deleting}>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDelete}
+              disabled={deleting}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {deleting ? (
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+              ) : (
+                <Trash2 className="h-4 w-4 mr-2" />
+              )}
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
