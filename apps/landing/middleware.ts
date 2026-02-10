@@ -83,7 +83,7 @@ export default function middleware(request: NextRequest) {
     const targetLocale = detectUserLocale(request);
     const response = NextResponse.redirect(
       new URL(`/${targetLocale}`, request.url),
-      307
+      302
     );
     return setLocaleCookie(response, targetLocale);
   }
@@ -93,7 +93,7 @@ export default function middleware(request: NextRequest) {
     const targetLocale = detectUserLocale(request);
     const response = NextResponse.redirect(
       new URL(`/${targetLocale}${pathname}`, request.url),
-      307
+      302
     );
     return setLocaleCookie(response, targetLocale);
   }
