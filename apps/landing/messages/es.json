@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfitos",
         "lupin": "Altramuces",
         "molluscs": "Moluscos"
-      }
+      },
+      "subscribeForAllergens": "Suscríbete para añadir etiquetas de alérgenos",
+      "subscribe": "Suscribirse"
     },
     "languages": {
       "translationProgress": "Progreso de traducción",
@@ -1509,7 +1511,9 @@
       "saved": "Configuración de diseño guardada",
       "uploadError": "Error al subir archivo",
       "invalidFileType": "Tipo de archivo no válido. Permitidos: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Archivo demasiado grande. Máximo: 50MB para videos, 5MB para imágenes"
+      "fileTooLarge": "Archivo demasiado grande. Máximo: 50MB para videos, 5MB para imágenes",
+      "subscribeForAccentColor": "Suscríbete para personalizar el color de acento",
+      "subscribe": "Suscribirse"
     },
     "general": {
       "name": "Título",

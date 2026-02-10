@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfití",
         "lupin": "Lupin",
         "molluscs": "Mollusc"
-      }
+      },
+      "subscribeForAllergens": "Liostáil chun lipéid ailléirginí a chur leis",
+      "subscribe": "Liostáil"
     },
     "languages": {
       "translationProgress": "Dul chun cinn aistriúcháin",
@@ -1509,7 +1511,9 @@
       "saved": "Socruithe dearaidh sábháilte",
       "uploadError": "Theip ar an comhad a uaslódáil",
       "invalidFileType": "Cineál comhoibrithe neamhbhailí. Ceadaithe: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Tá an comhad ró-mhór. Méid uasta: 50MB do fhíseáin, 5MB do íomhánna"
+      "fileTooLarge": "Tá an comhad ró-mhór. Méid uasta: 50MB do fhíseáin, 5MB do íomhánna",
+      "subscribeForAccentColor": "Liostáil chun an dath béime a shaincheapadh",
+      "subscribe": "Liostáil"
     },
     "general": {
       "name": "Teideal",

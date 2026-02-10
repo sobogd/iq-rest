@@ -1450,7 +1450,9 @@
         "sulphites": "Kén-dioxid",
         "lupin": "Lupin",
         "molluscs": "Puhatestűek"
-      }
+      },
+      "subscribeForAllergens": "Fizessen elő az allergéncímkék hozzáadásához",
+      "subscribe": "Feliratkozás"
     },
     "languages": {
       "translationProgress": "Fordítási előrehaladás",
@@ -1509,7 +1511,9 @@
       "saved": "Dizájnbeállítások mentve",
       "uploadError": "A fájl feltöltése nem sikerült",
       "invalidFileType": "Érvénytelen fájltípus. Engedélyezett: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "A fájl túl nagy. Maximális méret: 50MB videókhoz, 5MB képekhez"
+      "fileTooLarge": "A fájl túl nagy. Maximális méret: 50MB videókhoz, 5MB képekhez",
+      "subscribeForAccentColor": "Iratkozzon fel a kiemelő szín testreszabásához",
+      "subscribe": "Feliratkozás"
     },
     "general": {
       "name": "Cím",

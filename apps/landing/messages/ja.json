@@ -1463,7 +1463,9 @@
         "sulphites": "亜硫酸塩",
         "lupin": "ルピナス",
         "molluscs": "軟体動物"
-      }
+      },
+      "subscribeForAllergens": "アレルゲンラベルを追加するには購読してください",
+      "subscribe": "購読する"
     },
     "languages": {
       "translationProgress": "翻訳の進捗",
@@ -1522,7 +1524,9 @@
       "saved": "デザイン設定が保存されました",
       "uploadError": "ファイルのアップロードに失敗しました",
       "invalidFileType": "無効なファイルタイプです。許可：JPEG、PNG、WebP、GIF、MP4、WebM、MOV",
-      "fileTooLarge": "ファイルが大きすぎます。最大サイズ：動画50MB、画像5MB"
+      "fileTooLarge": "ファイルが大きすぎます。最大サイズ：動画50MB、画像5MB",
+      "subscribeForAccentColor": "アクセントカラーをカスタマイズするには購読してください",
+      "subscribe": "購読する"
     },
     "general": {
       "name": "タイトル",

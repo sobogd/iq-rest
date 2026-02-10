@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfidid",
         "lupin": "Lupiin",
         "molluscs": "Molluskid"
-      }
+      },
+      "subscribeForAllergens": "Telli allergeenide siltide lisamiseks",
+      "subscribe": "Telli"
     },
     "languages": {
       "translationProgress": "Tõlke edenemine",
@@ -1509,7 +1511,9 @@
       "saved": "Disaini seaded salvestatud",
       "uploadError": "Faili üleslaadimine ebaõnnestus",
       "invalidFileType": "Kehtetu failitüüp. Lubatud: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Fail on liiga suur. Maksimaalne suurus: 50MB videotele, 5MB piltidele"
+      "fileTooLarge": "Fail on liiga suur. Maksimaalne suurus: 50MB videotele, 5MB piltidele",
+      "subscribeForAccentColor": "Tellige aktsentvärvi kohandamiseks",
+      "subscribe": "Telli"
     },
     "general": {
       "name": "Pealkiri",

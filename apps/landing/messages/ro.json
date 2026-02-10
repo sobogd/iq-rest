@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfiti",
         "lupin": "Lupin",
         "molluscs": "Moluște"
-      }
+      },
+      "subscribeForAllergens": "Abonați-vă pentru a adăuga etichete de alergeni",
+      "subscribe": "Abonează-te"
     },
     "languages": {
       "translationProgress": "Progresul traducerii",
@@ -1509,7 +1511,9 @@
       "saved": "Setările de design au fost salvate",
       "uploadError": "Încărcarea fișierului a eșuat",
       "invalidFileType": "Tip de fișier invalid. Permise: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Fișierul este prea mare. Dimensiune maximă: 50MB pentru videoclipuri, 5MB pentru imagini"
+      "fileTooLarge": "Fișierul este prea mare. Dimensiune maximă: 50MB pentru videoclipuri, 5MB pentru imagini",
+      "subscribeForAccentColor": "Abonați-vă pentru a personaliza culoarea de accent",
+      "subscribe": "Abonați-vă"
     },
     "general": {
       "name": "Titlu",

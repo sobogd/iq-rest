@@ -25,7 +25,7 @@ import type { PlanType } from "@/lib/stripe-config";
 
 export function DesignPage() {
   const t = useTranslations("dashboard.design");
-  const { returnToOnboarding } = useDashboard();
+  const { returnToOnboarding, setActivePage } = useDashboard();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [loading, setLoading] = useState(true);
@@ -257,60 +257,71 @@ export function DesignPage() {
         <div className="space-y-2">
           <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
             {t("accentColor")}:
-            {!hasActiveSubscription && (
-              <Link href="/dashboard" onClick={() => {}} className="ml-2 text-xs text-primary hover:underline">
-                Basic
-              </Link>
-            )}
           </label>
 
-          <div className={`space-y-2 ${!hasActiveSubscription ? "opacity-50 pointer-events-none" : ""}`}>
-            <p className="text-xs text-muted-foreground">{t("presetColors")}</p>
-            <div className="flex flex-wrap gap-2">
-              {ACCENT_COLORS.map((color) => (
-                <button
-                  key={color}
-                  type="button"
-                  disabled={!hasActiveSubscription}
-                  className={`w-8 h-8 rounded-full border-2 transition-all ${
-                    accentColor === color ? "border-foreground scale-110" : "border-transparent"
-                  }`}
-                  style={{ backgroundColor: color }}
-                  onClick={() => setAccentColor(color)}
-                />
-              ))}
+          {!hasActiveSubscription ? (
+            <div className="space-y-2">
+              <p className="text-sm text-amber-500">
+                {t("subscribeForAccentColor")}
+              </p>
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                className="border-amber-500/50 hover:bg-amber-500/10"
+                onClick={() => setActivePage("billing")}
+              >
+                {t("subscribe")}
+              </Button>
             </div>
-          </div>
+          ) : (
+            <>
+              <div className="space-y-2">
+                <p className="text-xs text-muted-foreground">{t("presetColors")}</p>
+                <div className="flex flex-wrap gap-2">
+                  {ACCENT_COLORS.map((color) => (
+                    <button
+                      key={color}
+                      type="button"
+                      className={`w-8 h-8 rounded-full border-2 transition-all ${
+                        accentColor === color ? "border-foreground scale-110" : "border-transparent"
+                      }`}
+                      style={{ backgroundColor: color }}
+                      onClick={() => setAccentColor(color)}
+                    />
+                  ))}
+                </div>
+              </div>
 
-          <div className={`space-y-2 ${!hasActiveSubscription ? "opacity-50 pointer-events-none" : ""}`}>
-            <p className="text-xs text-muted-foreground">{t("customColor")}</p>
-            <div className="flex items-center gap-3">
-              <input
-                type="color"
-                value={accentColor}
-                disabled={!hasActiveSubscription}
-                onChange={(e) => setAccentColor(e.target.value)}
-                className="w-10 h-10 rounded cursor-pointer border-0 p-0"
-              />
-              <input
-                type="text"
-                value={accentColor}
-                disabled={!hasActiveSubscription}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  if (/^#[0-9A-Fa-f]{0,6}$/.test(value)) {
-                    setAccentColor(value);
-                  }
-                }}
-                className="w-24 h-10 px-3 rounded-md border border-input bg-background text-sm font-mono uppercase"
-                placeholder="#E11D48"
-              />
-            </div>
-          </div>
+              <div className="space-y-2">
+                <p className="text-xs text-muted-foreground">{t("customColor")}</p>
+                <div className="flex items-center gap-3">
+                  <input
+                    type="color"
+                    value={accentColor}
+                    onChange={(e) => setAccentColor(e.target.value)}
+                    className="w-10 h-10 rounded cursor-pointer border-0 p-0"
+                  />
+                  <input
+                    type="text"
+                    value={accentColor}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      if (/^#[0-9A-Fa-f]{0,6}$/.test(value)) {
+                        setAccentColor(value);
+                      }
+                    }}
+                    className="w-24 h-10 px-3 rounded-md border border-input bg-background text-sm font-mono uppercase"
+                    placeholder="#E11D48"
+                  />
+                </div>
+              </div>
 
-          <p className="text-xs text-muted-foreground px-1">
-            {t("accentColorHint")}
-          </p>
+              <p className="text-xs text-muted-foreground px-1">
+                {t("accentColorHint")}
+              </p>
+            </>
+          )}
         </div>
       </form>
 

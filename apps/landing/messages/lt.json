@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfitai",
         "lupin": "Lupinas",
         "molluscs": "Moliuskai"
-      }
+      },
+      "subscribeForAllergens": "Prenumeruokite, kad pridėtumėte alergenų etiketes",
+      "subscribe": "Prenumeruoti"
     },
     "languages": {
       "translationProgress": "Vertimo pažanga",
@@ -1509,7 +1511,9 @@
       "saved": "Dizaino nustatymai išsaugoti",
       "uploadError": "Nepavyko įkelti failo",
       "invalidFileType": "Neteisingas failo tipas. Leidžiami: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Failas per didelis. Maksimalus dydis: 50MB vaizdo įrašams, 5MB nuotraukoms"
+      "fileTooLarge": "Failas per didelis. Maksimalus dydis: 50MB vaizdo įrašams, 5MB nuotraukoms",
+      "subscribeForAccentColor": "Prenumeruokite, kad galėtumėte pritaikyti akcento spalvą",
+      "subscribe": "Prenumeruoti"
     },
     "general": {
       "name": "Pavadinimas",

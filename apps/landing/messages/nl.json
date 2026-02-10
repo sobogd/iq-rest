@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfieten",
         "lupin": "Lupine",
         "molluscs": "Weekdieren"
-      }
+      },
+      "subscribeForAllergens": "Abonneer om allergenlabels toe te voegen",
+      "subscribe": "Abonneren"
     },
     "languages": {
       "translationProgress": "Vertaalvoortgang",
@@ -1509,7 +1511,9 @@
       "saved": "Ontwerpsinstellingen opgeslagen",
       "uploadError": "Kon bestand niet uploaden",
       "invalidFileType": "Ongeldig bestandstype. Toegestaan: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Bestand is te groot. Maximale grootte: 50MB voor video's, 5MB voor afbeeldingen"
+      "fileTooLarge": "Bestand is te groot. Maximale grootte: 50MB voor video's, 5MB voor afbeeldingen",
+      "subscribeForAccentColor": "Abonneer om de accentkleur aan te passen",
+      "subscribe": "Abonneren"
     },
     "general": {
       "name": "Titel",

@@ -1450,7 +1450,9 @@
         "sulphites": "Sülfürler",
         "lupin": "Lupin",
         "molluscs": "Yumuşakçalar"
-      }
+      },
+      "subscribeForAllergens": "Alerjen etiketleri eklemek için abone olun",
+      "subscribe": "Abone Ol"
     },
     "languages": {
       "translationProgress": "Çeviri İlerlemesi",
@@ -1509,7 +1511,9 @@
       "saved": "Tasarım ayarları kaydedildi",
       "uploadError": "Dosya yükleme başarısız oldu",
       "invalidFileType": "Geçersiz dosya türü. İzin verilenler: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Dosya çok büyük. Maksimum boyut: Videolar için 50MB, Resimler için 5MB"
+      "fileTooLarge": "Dosya çok büyük. Maksimum boyut: Videolar için 50MB, Resimler için 5MB",
+      "subscribeForAccentColor": "Vurgu rengini özelleştirmek için abone olun",
+      "subscribe": "Abone ol"
     },
     "general": {
       "name": "Başlık",

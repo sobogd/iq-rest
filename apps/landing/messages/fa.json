@@ -1483,7 +1483,9 @@
         "sulphites": "سولفیت‌ها",
         "lupin": "لوپین",
         "molluscs": "نرم‌تنان"
-      }
+      },
+      "subscribeForAllergens": "برای افزودن برچسب‌های حساسیت‌زا اشتراک بگیرید",
+      "subscribe": "اشتراک"
     },
     "languages": {
       "translationProgress": "پیشرفت ترجمه",
@@ -1542,7 +1544,9 @@
       "saved": "تنظیمات طراحی ذخیره شد",
       "uploadError": "آپلود فایل ناموفق بود",
       "invalidFileType": "نوع فایل نامعتبر. مجاز: JPEG، PNG، WebP، GIF، MP4، WebM، MOV",
-      "fileTooLarge": "فایل خیلی بزرگ است. حداکثر اندازه: ۵۰ مگابایت برای ویدیو، ۵ مگابایت برای تصاویر"
+      "fileTooLarge": "فایل خیلی بزرگ است. حداکثر اندازه: ۵۰ مگابایت برای ویدیو، ۵ مگابایت برای تصاویر",
+      "subscribeForAccentColor": "برای سفارشی کردن رنگ تاکیدی اشتراک بگیرید",
+      "subscribe": "اشتراک"
     },
     "general": {
       "name": "عنوان",

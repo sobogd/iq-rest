@@ -115,6 +115,8 @@ export interface ItemsTranslations {
   allergens: string;
   allergensHint: string;
   allergenNames: Record<string, string>;
+  subscribeForAllergens: string;
+  subscribe: string;
 }
 
 export interface SettingsTranslations {

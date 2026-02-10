@@ -1483,7 +1483,9 @@
         "sulphites": "亚硫酸盐",
         "lupin": "羽扇豆",
         "molluscs": "软体动物"
-      }
+      },
+      "subscribeForAllergens": "订阅以添加过敏原标签",
+      "subscribe": "订阅"
     },
     "languages": {
       "translationProgress": "翻译进度",
@@ -1542,7 +1544,9 @@
       "saved": "设计设置已保存",
       "uploadError": "上传文件失败",
       "invalidFileType": "无效的文件类型。允许：JPEG、PNG、WebP、GIF、MP4、WebM、MOV",
-      "fileTooLarge": "文件太大。最大大小：视频50MB，图像5MB"
+      "fileTooLarge": "文件太大。最大大小：视频50MB，图像5MB",
+      "subscribeForAccentColor": "订阅以自定义强调色",
+      "subscribe": "订阅"
     },
     "general": {
       "name": "标题",

@@ -1450,7 +1450,9 @@
         "sulphites": "Siarczyny",
         "lupin": "Lupina",
         "molluscs": "Małże"
-      }
+      },
+      "subscribeForAllergens": "Subskrybuj, aby dodać etykiety alergenów",
+      "subscribe": "Subskrybuj"
     },
     "languages": {
       "translationProgress": "Postęp tłumaczenia",
@@ -1509,7 +1511,9 @@
       "saved": "Ustawienia projektu zapisane",
       "uploadError": "Nie udało się przesłać pliku",
       "invalidFileType": "Nieprawidłowy typ pliku. Dozwolone: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Plik jest zbyt duży. Maksymalny rozmiar: 50MB dla wideo, 5MB dla obrazków"
+      "fileTooLarge": "Plik jest zbyt duży. Maksymalny rozmiar: 50MB dla wideo, 5MB dla obrazków",
+      "subscribeForAccentColor": "Subskrybuj, aby dostosować kolor akcentu",
+      "subscribe": "Subskrybuj"
     },
     "general": {
       "name": "Tytuł",

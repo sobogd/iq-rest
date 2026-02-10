@@ -158,6 +158,8 @@ export default async function DashboardLayout({
       allergens: t("items.allergens"),
       allergensHint: t("items.allergensHint"),
       allergenNames: t.raw("items.allergenNames") as Record<string, string>,
+      subscribeForAllergens: t("items.subscribeForAllergens"),
+      subscribe: t("items.subscribe"),
     },
     settings: {
       name: "",

@@ -58,9 +58,9 @@ export default async function MenuPage({ params }: MenuPageProps) {
   return (
     <div className="h-dvh flex flex-col">
       {/* Hero section with background - takes remaining space */}
-      <div className="flex-1 bg-black relative overflow-hidden">
+      <div className="flex-1 relative overflow-hidden min-h-[50vh]">
         {/* Background media */}
-        {restaurant.source && (
+        {restaurant.source ? (
           isVideo(restaurant.source) ? (
             <video
               src={restaurant.source}
@@ -76,9 +76,12 @@ export default async function MenuPage({ params }: MenuPageProps) {
               alt={restaurant.title}
               fill
               className="object-cover"
+              sizes="100vw"
               priority
             />
           )
+        ) : (
+          <div className="absolute inset-0 bg-black" />
         )}
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />

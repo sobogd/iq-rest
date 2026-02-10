@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfitter",
         "lupin": "Lupin",
         "molluscs": "Bløddyr"
-      }
+      },
+      "subscribeForAllergens": "Abonner for at tilføje allergenetiketter",
+      "subscribe": "Abonner"
     },
     "languages": {
       "translationProgress": "Oversættelsesfremskridt",
@@ -1509,7 +1511,9 @@
       "saved": "Designindstillinger gemt",
       "uploadError": "Kunne ikke uploade fil",
       "invalidFileType": "Ugyldig filtype. Tilladt: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Fil er for stor. Maksimal størrelse: 50MB for videoer, 5MB for billeder"
+      "fileTooLarge": "Fil er for stor. Maksimal størrelse: 50MB for videoer, 5MB for billeder",
+      "subscribeForAccentColor": "Abonner for at tilpasse accentfarven",
+      "subscribe": "Abonner"
     },
     "general": {
       "name": "Titel",

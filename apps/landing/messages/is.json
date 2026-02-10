@@ -1450,7 +1450,9 @@
         "sulphites": "Súlfít",
         "lupin": "Lúpín",
         "molluscs": "Molluskur"
-      }
+      },
+      "subscribeForAllergens": "Gerast áskrifandi til að bæta við ofnæmisvaldamerki",
+      "subscribe": "Gerast áskrifandi"
     },
     "languages": {
       "translationProgress": "Þýðingarframvinda",
@@ -1509,7 +1511,9 @@
       "saved": "Hönnunarskilyrði vistuð",
       "uploadError": "Mistókst að hlaða upp skjali",
       "invalidFileType": "Ógild skjalategund. Leyfð: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Skrá er of stór. Hámarksstærð: 50MB fyrir vídeó, 5MB fyrir myndir"
+      "fileTooLarge": "Skrá er of stór. Hámarksstærð: 50MB fyrir vídeó, 5MB fyrir myndir",
+      "subscribeForAccentColor": "Gerast áskrifandi til að sérsníða áherslulit",
+      "subscribe": "Gerast áskrifandi"
     },
     "general": {
       "name": "Titill",

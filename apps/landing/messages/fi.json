@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfiitit",
         "lupin": "Lupiini",
         "molluscs": "Nilviäiset"
-      }
+      },
+      "subscribeForAllergens": "Tilaa lisätäksesi allergeenimerkinnät",
+      "subscribe": "Tilaa"
     },
     "languages": {
       "translationProgress": "Käännösprosessin edistyminen",
@@ -1509,7 +1511,9 @@
       "saved": "Suunnitteluasetukset tallennettu",
       "uploadError": "Tiedoston lataaminen epäonnistui",
       "invalidFileType": "Virheellinen tiedostotyyppi. Sallittu: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Tiedosto on liian suuri. Suurin koko: 50MB videoille, 5MB kuville"
+      "fileTooLarge": "Tiedosto on liian suuri. Suurin koko: 50MB videoille, 5MB kuville",
+      "subscribeForAccentColor": "Tilaa mukauttaaksesi korostusväriä",
+      "subscribe": "Tilaa"
     },
     "general": {
       "name": "Otsikko",

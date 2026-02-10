@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfiti",
         "lupin": "Lupin",
         "molluscs": "Molušci"
-      }
+      },
+      "subscribeForAllergens": "Pretplatite se za dodavanje oznaka alergena",
+      "subscribe": "Pretplati se"
     },
     "languages": {
       "translationProgress": "Napredak prevođenja",
@@ -1509,7 +1511,9 @@
       "saved": "Postavke dizajna spremljene",
       "uploadError": "Nije moguće otpremiti datoteku",
       "invalidFileType": "Neispravan tip datoteke. Dozvoljeno: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Datoteka je prevelika. Maksimalna veličina: 50MB za videe, 5MB za slike"
+      "fileTooLarge": "Datoteka je prevelika. Maksimalna veličina: 50MB za videe, 5MB za slike",
+      "subscribeForAccentColor": "Pretplatite se za prilagodbu boje naglaska",
+      "subscribe": "Pretplatite se"
     },
     "general": {
       "name": "Naslov",

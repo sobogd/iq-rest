@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfity",
         "lupin": "Lupina",
         "molluscs": "Měkkýši"
-      }
+      },
+      "subscribeForAllergens": "Předplaťte si přidávání štítků alergenů",
+      "subscribe": "Předplatit"
     },
     "languages": {
       "translationProgress": "Pokrok v překladu",
@@ -1509,7 +1511,9 @@
       "saved": "Nastavení designu uložena",
       "uploadError": "Nepodařilo se nahrát soubor",
       "invalidFileType": "Neplatný typ souboru. Povolené: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Soubor je příliš velký. Maximální velikost: 50MB pro videa, 5MB pro obrázky"
+      "fileTooLarge": "Soubor je příliš velký. Maximální velikost: 50MB pro videa, 5MB pro obrázky",
+      "subscribeForAccentColor": "Přihlaste se k odběru pro přizpůsobení barvy zvýraznění",
+      "subscribe": "Odebírat"
     },
     "general": {
       "name": "Název",

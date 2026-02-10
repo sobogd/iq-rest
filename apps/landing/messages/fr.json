@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfites",
         "lupin": "Lupin",
         "molluscs": "Mollusques"
-      }
+      },
+      "subscribeForAllergens": "Abonnez-vous pour ajouter des étiquettes d'allergènes",
+      "subscribe": "S'abonner"
     },
     "languages": {
       "translationProgress": "Progression de la traduction",
@@ -1509,7 +1511,9 @@
       "saved": "Paramètres de conception enregistrés",
       "uploadError": "Échec du téléchargement du fichier",
       "invalidFileType": "Type de fichier invalide. Autorisés : JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Le fichier est trop volumineux. Taille maximale : 50 Mo pour les vidéos, 5 Mo pour les images"
+      "fileTooLarge": "Le fichier est trop volumineux. Taille maximale : 50 Mo pour les vidéos, 5 Mo pour les images",
+      "subscribeForAccentColor": "Abonnez-vous pour personnaliser la couleur d'accent",
+      "subscribe": "S'abonner"
     },
     "general": {
       "name": "Titre",

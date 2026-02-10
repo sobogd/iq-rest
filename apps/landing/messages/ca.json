@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfits",
         "lupin": "Llupar",
         "molluscs": "Molluscs"
-      }
+      },
+      "subscribeForAllergens": "Subscriu-te per afegir etiquetes d'al·lèrgens",
+      "subscribe": "Subscriu-te"
     },
     "languages": {
       "translationProgress": "Progrés de la traducció",
@@ -1509,7 +1511,9 @@
       "saved": "Configuració del disseny desada",
       "uploadError": "No s'ha pogut pujar el fitxer",
       "invalidFileType": "Tipus de fitxer no vàlid. Permesos: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "El fitxer és massa gran. Mida màxima: 50MB per a vídeos, 5MB per a imatges"
+      "fileTooLarge": "El fitxer és massa gran. Mida màxima: 50MB per a vídeos, 5MB per a imatges",
+      "subscribeForAccentColor": "Subscriu-te per personalitzar el color d'accent",
+      "subscribe": "Subscriu-te"
     },
     "general": {
       "name": "Títol",

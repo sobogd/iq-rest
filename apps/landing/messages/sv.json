@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfiter",
         "lupin": "Lupin",
         "molluscs": "Mollusker"
-      }
+      },
+      "subscribeForAllergens": "Prenumerera för att lägga till allergenetiketter",
+      "subscribe": "Prenumerera"
     },
     "languages": {
       "translationProgress": "Översättningsframsteg",
@@ -1509,7 +1511,9 @@
       "saved": "Designinställningar sparade",
       "uploadError": "Misslyckades med att ladda upp fil",
       "invalidFileType": "Ogiltig filtyp. Tillåtna: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Filen är för stor. Max storlek: 50MB för videor, 5MB för bilder"
+      "fileTooLarge": "Filen är för stor. Max storlek: 50MB för videor, 5MB för bilder",
+      "subscribeForAccentColor": "Prenumerera för att anpassa accentfärgen",
+      "subscribe": "Prenumerera"
     },
     "general": {
       "name": "Titel",

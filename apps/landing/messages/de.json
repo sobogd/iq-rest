@@ -1450,7 +1450,9 @@
         "sulphites": "Schwefelverbindungen",
         "lupin": "Lupine",
         "molluscs": "Weichtiere"
-      }
+      },
+      "subscribeForAllergens": "Abonnieren Sie, um Allergenkennzeichnungen hinzuzufügen",
+      "subscribe": "Abonnieren"
     },
     "languages": {
       "translationProgress": "Übersetzungsfortschritt",
@@ -1509,7 +1511,9 @@
       "saved": "Designeinstellungen gespeichert",
       "uploadError": "Fehler beim Hochladen der Datei",
       "invalidFileType": "Ungültiger Dateityp. Erlaubt: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Datei ist zu groß. Maximalgröße: 50MB für Videos, 5MB für Bilder"
+      "fileTooLarge": "Datei ist zu groß. Maximalgröße: 50MB für Videos, 5MB für Bilder",
+      "subscribeForAccentColor": "Abonnieren Sie, um die Akzentfarbe anzupassen",
+      "subscribe": "Abonnieren"
     },
     "general": {
       "name": "Titel",

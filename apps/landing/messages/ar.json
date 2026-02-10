@@ -1463,7 +1463,9 @@
         "sulphites": "الكبريتات",
         "lupin": "الترمس",
         "molluscs": "الرخويات"
-      }
+      },
+      "subscribeForAllergens": "اشترك لإضافة ملصقات مسببات الحساسية",
+      "subscribe": "اشترك"
     },
     "languages": {
       "translationProgress": "تقدم الترجمة",
@@ -1522,7 +1524,9 @@
       "saved": "تم حفظ إعدادات التصميم",
       "uploadError": "فشل تحميل الملف",
       "invalidFileType": "نوع ملف غير صالح. المسموح: JPEG، PNG، WebP، GIF، MP4، WebM، MOV",
-      "fileTooLarge": "الملف كبير جداً. الحد الأقصى: 50 ميجابايت للفيديو، 5 ميجابايت للصور"
+      "fileTooLarge": "الملف كبير جداً. الحد الأقصى: 50 ميجابايت للفيديو، 5 ميجابايت للصور",
+      "subscribeForAccentColor": "اشترك لتخصيص لون التمييز",
+      "subscribe": "اشترك"
     },
     "general": {
       "name": "العنوان",

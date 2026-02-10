@@ -419,7 +419,7 @@ interface ItemFormSheetProps {
 }
 
 function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProps) {
-  const { translations } = useDashboard();
+  const { translations, setActivePage } = useDashboard();
   const t = translations.items;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
@@ -771,24 +771,33 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
                   />
                 </div>
 
-                <div className={!hasActiveSubscription ? "opacity-50" : ""}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
-                      {t.allergens}:
-                    </label>
-                    {!hasActiveSubscription && (
-                      <Link href="/dashboard" className="text-xs text-primary hover:underline">
-                        Basic
-                      </Link>
-                    )}
-                  </div>
-                  <FormAllergens
-                    label=""
-                    value={allergens}
-                    onChange={hasActiveSubscription ? setAllergens : () => {}}
-                    allergenNames={t.allergenNames as Record<AllergenCode, string>}
-                    disabled={!hasActiveSubscription}
-                  />
+                <div>
+                  <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
+                    {t.allergens}:
+                  </label>
+                  {!hasActiveSubscription ? (
+                    <div className="space-y-2 mt-2">
+                      <p className="text-sm text-amber-500">
+                        {t.subscribeForAllergens}
+                      </p>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        className="border-amber-500/50 hover:bg-amber-500/10"
+                        onClick={() => setActivePage("billing")}
+                      >
+                        {t.subscribe}
+                      </Button>
+                    </div>
+                  ) : (
+                    <FormAllergens
+                      label=""
+                      value={allergens}
+                      onChange={setAllergens}
+                      allergenNames={t.allergenNames as Record<AllergenCode, string>}
+                    />
+                  )}
                 </div>
               </div>
 

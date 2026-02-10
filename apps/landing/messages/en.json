@@ -1351,7 +1351,9 @@
         "sulphites": "Sulphites",
         "lupin": "Lupin",
         "molluscs": "Molluscs"
-      }
+      },
+      "subscribeForAllergens": "Subscribe to add allergen labels",
+      "subscribe": "Subscribe"
     },
     "languages": {
       "translationProgress": "Translation Progress",
@@ -1410,7 +1412,9 @@
       "saved": "Design settings saved",
       "uploadError": "Failed to upload file",
       "invalidFileType": "Invalid file type. Allowed: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "File is too large. Max size: 50MB for videos, 5MB for images"
+      "fileTooLarge": "File is too large. Max size: 50MB for videos, 5MB for images",
+      "subscribeForAccentColor": "Subscribe to customize accent color",
+      "subscribe": "Subscribe"
     },
     "general": {
       "name": "Title",

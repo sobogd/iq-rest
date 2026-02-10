@@ -1450,7 +1450,9 @@
         "sulphites": "Sulfīti",
         "lupin": "Lupīns",
         "molluscs": "Molluski"
-      }
+      },
+      "subscribeForAllergens": "Abonējiet, lai pievienotu alergēnu etiķetes",
+      "subscribe": "Abonēt"
     },
     "languages": {
       "translationProgress": "Tulkošanas progress",
@@ -1509,7 +1511,9 @@
       "saved": "Dizaina iestatījumi saglabāti",
       "uploadError": "Neizdevās augšupielādēt failu",
       "invalidFileType": "Nederīgs faila tips. Atļautie: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
-      "fileTooLarge": "Fails ir pārāk liels. Maksimālais izmērs: 50MB video, 5MB attēliem"
+      "fileTooLarge": "Fails ir pārāk liels. Maksimālais izmērs: 50MB video, 5MB attēliem",
+      "subscribeForAccentColor": "Abonējiet, lai pielāgotu akcenta krāsu",
+      "subscribe": "Abonēt"
     },
     "general": {
       "name": "Nosaukums",
