@@ -106,7 +106,7 @@ export default async function FeaturePage({
     offers: {
       "@type": "Offer",
       price: "0",
-      priceCurrency: "EUR",
+      priceCurrency: "USD",
     },
   };
 

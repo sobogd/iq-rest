@@ -31,8 +31,8 @@ const PLANS: Plan[] = [
   },
   {
     id: "basic",
-    price: { monthly: 4, yearly: 3 },
-    yearlyTotal: 36,
+    price: { monthly: 5, yearly: 4 },
+    yearlyTotal: 48,
     popular: true,
   },
   {
@@ -162,7 +162,7 @@ export function PricingCards() {
               <CardContent className="flex-1">
                 <div className="space-y-1 mb-6">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold">€{price}</span>
+                    <span className="text-4xl font-bold">${price}</span>
                     <span className="text-muted-foreground">{t("perMonth")}</span>
                   </div>
                   {isYearly && plan.yearlyTotal && (

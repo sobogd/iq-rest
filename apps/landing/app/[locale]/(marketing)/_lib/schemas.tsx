@@ -35,7 +35,7 @@ export const softwareSchema = {
   offers: {
     "@type": "Offer",
     price: "0",
-    priceCurrency: "EUR",
+    priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     priceValidUntil: getPriceValidUntil(),
   },
@@ -64,7 +64,7 @@ export const productSchema = {
     "@type": "AggregateOffer",
     lowPrice: "0",
     highPrice: "9",
-    priceCurrency: "EUR",
+    priceCurrency: "USD",
     offerCount: "3",
     availability: "https://schema.org/InStock",
     priceValidUntil: getPriceValidUntil(),
@@ -83,7 +83,7 @@ export const productSchema = {
       shippingRate: {
         "@type": "MonetaryAmount",
         value: "0",
-        currency: "EUR",
+        currency: "USD",
       },
       shippingDestination: {
         "@type": "DefinedRegion",
