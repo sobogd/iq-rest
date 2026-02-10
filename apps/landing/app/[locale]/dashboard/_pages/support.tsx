@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Loader2 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
+import { analytics } from "@/lib/analytics";
 
 interface Message {
   id: string;
@@ -40,6 +41,7 @@ export function SupportPage() {
   }, []);
 
   useEffect(() => {
+    analytics.support.openChat();
     fetchMessages();
   }, [fetchMessages]);
 
@@ -64,6 +66,7 @@ export function SupportPage() {
       });
 
       if (response.ok) {
+        analytics.support.sendMessage();
         const sentMessage = await response.json();
         setMessages((prev) => [...prev, sentMessage]);
         setNewMessage("");

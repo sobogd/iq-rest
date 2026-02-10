@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { analytics } from "@/lib/analytics";
 import {
   FolderOpen,
   Package,
@@ -83,6 +84,7 @@ function SidebarMenuContent() {
   };
 
   const handleLogout = () => {
+    analytics.auth.signOut();
     setIsLoggingOut(true);
     window.location.href = "/api/auth/logout";
   };

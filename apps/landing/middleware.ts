@@ -1,8 +1,5 @@
-import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
-import { routing, locales, Locale } from "./i18n/routing";
-
-const intlMiddleware = createMiddleware(routing);
+import { locales, Locale } from "./i18n/routing";
 
 // Create regex pattern for all locales
 const localePattern = locales.join("|");
@@ -12,7 +9,6 @@ const LOCALE_COOKIE = "NEXT_LOCALE";
 
 /**
  * Парсит Accept-Language заголовок и возвращает лучший подходящий язык
- * Пример заголовка: "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
  */
 function getLocaleFromAcceptLanguage(
   acceptLanguage: string | null
@@ -21,7 +17,6 @@ function getLocaleFromAcceptLanguage(
 
   const localeSet = new Set<string>(locales);
 
-  // Парсим заголовок и сортируем по качеству (q)
   const parsed = acceptLanguage
     .split(",")
     .map((part) => {
@@ -32,9 +27,7 @@ function getLocaleFromAcceptLanguage(
     .sort((a, b) => b.q - a.q);
 
   for (const { lang } of parsed) {
-    // Сначала проверяем точное совпадение (например "en-US" → "en")
     const shortLang = lang.split("-")[0].toLowerCase();
-
     if (localeSet.has(shortLang)) {
       return shortLang as Locale;
     }
@@ -50,9 +43,12 @@ function getLocaleFromAcceptLanguage(
  * 3. Язык по умолчанию (en)
  */
 function detectUserLocale(request: NextRequest): Locale {
-  // 1. Проверяем cookie с сохранённым выбором
-  const savedLocale = request.cookies.get(LOCALE_COOKIE)?.value;
-  if (savedLocale && locales.includes(savedLocale as Locale)) {
+  // 1. Проверяем cookie с сохранённым выбором - читаем из заголовка напрямую
+  const cookieHeader = request.headers.get("cookie") || "";
+  const match = cookieHeader.match(/NEXT_LOCALE=([^;]+)/);
+  const savedLocale = match ? match[1] : null;
+
+  if (savedLocale && (locales as readonly string[]).includes(savedLocale)) {
     return savedLocale as Locale;
   }
 
@@ -64,42 +60,74 @@ function detectUserLocale(request: NextRequest): Locale {
   }
 
   // 3. Fallback на язык по умолчанию
-  return routing.defaultLocale;
+  return "en";
+}
+
+/**
+ * Устанавливает cookie локали в response
+ */
+function setLocaleCookie(response: NextResponse, locale: string): NextResponse {
+  response.cookies.set(LOCALE_COOKIE, locale, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 365, // 1 year
+    sameSite: "lax",
+  });
+  return response;
 }
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Permanent redirect for paths without locale prefix
-  if (!localeRegex.test(pathname) && pathname !== "/") {
-    const targetLocale = detectUserLocale(request);
-    return NextResponse.redirect(
-      new URL(`/${targetLocale}${pathname}`, request.url),
-      307
-    );
-  }
-
   // Redirect root to detected locale
   if (pathname === "/") {
     const targetLocale = detectUserLocale(request);
-    return NextResponse.redirect(new URL(`/${targetLocale}`, request.url), 307);
+    const response = NextResponse.redirect(
+      new URL(`/${targetLocale}`, request.url),
+      307
+    );
+    return setLocaleCookie(response, targetLocale);
   }
 
-  // Redirect /demo to demo menu (extract locale from path)
+  // Redirect paths without locale prefix
+  if (!localeRegex.test(pathname)) {
+    const targetLocale = detectUserLocale(request);
+    const response = NextResponse.redirect(
+      new URL(`/${targetLocale}${pathname}`, request.url),
+      307
+    );
+    return setLocaleCookie(response, targetLocale);
+  }
+
+  // Redirect /demo to demo menu
   const demoMatch = pathname.match(new RegExp(`^/(${localePattern})/demo$`));
   if (demoMatch) {
     const locale = demoMatch[1];
-    return NextResponse.redirect(new URL(`/${locale}/m/love-eatery`, request.url), 301);
+    return NextResponse.redirect(
+      new URL(`/${locale}/m/love-eatery`, request.url),
+      301
+    );
   }
 
-  const response = intlMiddleware(request);
+  // Handle pages with locale prefix - just pass through and set cookie
+  const urlLocaleMatch = pathname.match(localeRegex);
+  const urlLocale = urlLocaleMatch ? urlLocaleMatch[1] : null;
+
+  const response = NextResponse.next();
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
+
+  // Set locale cookie based on URL locale
+  if (urlLocale) {
+    setLocaleCookie(response, urlLocale);
+  }
 
   return response;
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|m/|.*\\..*).*)"],
+  matcher: [
+    "/",
+    "/((?!api|_next|_vercel|m/|.*\\..*).*)",
+  ],
 };
