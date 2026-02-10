@@ -19,7 +19,8 @@ export type PageKey =
   | "reservationSettings"
   | "tables"
   | "billing"
-  | "support";
+  | "support"
+  | "admin";
 
 export interface AnalyticsTranslations {
   monthlyUsage: string;
@@ -169,7 +170,7 @@ const COOKIE_KEY = "dashboard-active-page";
 
 const validPages: PageKey[] = [
   "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
-  "contacts", "languages", "reservations", "reservationSettings", "tables", "billing", "support"
+  "contacts", "languages", "reservations", "reservationSettings", "tables", "billing", "support", "admin"
 ];
 
 export function isValidPageKey(value: string): value is PageKey {
@@ -230,6 +231,7 @@ export function DashboardProvider({
       tables: analytics.dashboard.pageTablesView,
       billing: analytics.dashboard.pageBillingView,
       support: analytics.dashboard.pageSupportView,
+      admin: undefined,
     };
     pageEvents[page]?.();
   }, []);

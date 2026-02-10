@@ -28,6 +28,7 @@ import { SupportPage } from "../_pages/support";
 import { DashboardHome } from "../_pages/home";
 import { OnboardingPage } from "../_pages/onboarding";
 import { QrMenuPage } from "../_pages/qr-menu";
+import { AdminPage } from "../_pages/admin";
 
 const pageComponents: Record<PageKey, React.ComponentType> = {
   home: DashboardHome,
@@ -45,6 +46,7 @@ const pageComponents: Record<PageKey, React.ComponentType> = {
   tables: TablesPage,
   billing: BillingPage,
   support: SupportPage,
+  admin: AdminPage,
 };
 
 function PageRenderer() {

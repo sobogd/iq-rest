@@ -15,6 +15,7 @@ import {
   Gift,
 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { isAdminEmail } from "@/lib/admin";
 
 type Step = "email" | "otp";
 type Status = "idle" | "loading" | "error";
@@ -122,6 +123,10 @@ export function GetStartedForm() {
       const data = await response.json();
 
       if (response.ok) {
+        // Disable analytics tracking for admin
+        if (isAdminEmail(email)) {
+          analytics.disableTracking();
+        }
         if (data.isNewUser) {
           analytics.auth.signUp();
           await new Promise((resolve) => setTimeout(resolve, 100));

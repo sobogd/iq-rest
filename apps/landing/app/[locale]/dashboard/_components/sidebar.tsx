@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { analytics } from "@/lib/analytics";
+import { isAdminEmail } from "@/lib/admin";
 import {
   FolderOpen,
   Package,
@@ -21,6 +22,7 @@ import {
   LogOut,
   Rocket,
   Loader2,
+  Shield,
 } from "lucide-react";
 import {
   Sidebar,
@@ -75,6 +77,16 @@ function SidebarMenuContent() {
   const { activePage, setActivePage, translations } = useDashboard();
   const { setOpenMobile, isMobile } = useSidebar();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const cookies = document.cookie.split(";");
+    const emailCookie = cookies.find((c) => c.trim().startsWith("user_email="));
+    if (emailCookie) {
+      const email = decodeURIComponent(emailCookie.split("=")[1]);
+      setIsAdmin(isAdminEmail(email));
+    }
+  }, []);
 
   const handleMenuClick = (key: PageKey) => {
     setActivePage(key);
@@ -239,6 +251,29 @@ function SidebarMenuContent() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        {isAdmin && (
+          <SidebarGroup className="pb-4">
+            <SidebarGroupLabel>
+              <Shield className="size-4 mr-2" />
+              Admin
+            </SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                <SidebarMenuItem>
+                  <SidebarMenuButton
+                    tooltip="Admin Panel"
+                    isActive={activePage === "admin"}
+                    onClick={() => handleMenuClick("admin")}
+                  >
+                    <Shield />
+                    <span>Companies</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        )}
       </SidebarContent>
     </>
   );

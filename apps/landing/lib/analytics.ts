@@ -6,15 +6,33 @@ declare global {
   }
 }
 
+function isTrackingDisabled(): boolean {
+  if (typeof window === "undefined") return false;
+  return localStorage.getItem("analytics_disabled") === "true";
+}
+
 function trackEvent(eventName: string) {
-  if (typeof window !== "undefined" && window.gtag) {
+  if (typeof window !== "undefined" && window.gtag && !isTrackingDisabled()) {
     window.gtag("event", eventName);
   }
 }
 
 function pageView(slug: string) {
+  if (isTrackingDisabled()) return;
   const eventName = `page_view_${slug.replace(/-/g, "_")}`;
   trackEvent(eventName);
+}
+
+export function disableTracking() {
+  if (typeof window !== "undefined") {
+    localStorage.setItem("analytics_disabled", "true");
+  }
+}
+
+export function enableTracking() {
+  if (typeof window !== "undefined") {
+    localStorage.removeItem("analytics_disabled");
+  }
 }
 
 // Marketing events
@@ -202,6 +220,8 @@ export const analytics = {
   trackEvent,
   pageView,
   section,
+  disableTracking,
+  enableTracking,
   marketing,
   auth,
   onboarding,

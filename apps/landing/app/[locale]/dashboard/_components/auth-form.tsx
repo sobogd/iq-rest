@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
+import { analytics } from "@/lib/analytics";
+import { isAdminEmail } from "@/lib/admin";
 
 type Step = "email" | "otp";
 
@@ -88,6 +90,9 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
       const data = await response.json();
 
       if (response.ok) {
+        if (isAdminEmail(email)) {
+          analytics.disableTracking();
+        }
         onSuccess();
       } else {
         setErrorMessage(data.error || t("auth.errors.verifyFailed"));
