@@ -81,8 +81,12 @@ export function LanguageSelector() {
     setOpen(false);
     setSearch("");
 
-    // Полный редирект
-    window.location.href = `/${newLocale}${pathname}`;
+    // Убираем текущую локаль из пути и добавляем новую
+    const currentPath = window.location.pathname;
+    const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}(\/|$)/, '/');
+    const newPath = `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+
+    window.location.href = newPath;
   };
 
   const handleOpenChange = (isOpen: boolean) => {
