@@ -458,7 +458,7 @@
         "highlights": [
           "Restaurantwebsite",
           "QR Menu",
-          "300 scans/maand",
+          "150 scans/maand",
           "2 talen",
           "AI beeldverbetering",
           "Analyses"
@@ -501,6 +501,7 @@
       "languages": "Ondersteunde talen",
       "aiTranslation": "AI vertalingen",
       "aiImages": "AI beeldverbetering",
+      "allergens": "Allergeenlabels",
       "analytics": "Analyses",
       "customTheme": "Aangepast kleurthema",
       "background": "Achtergrondafbeelding & video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Onbeperkt",
-        "languages": "6"
+        "languages": "Onbeperkt"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Schakel eerst de taal in",
       "deleteConfirm": "Het uitschakelen van deze taal verwijdert alle vertalingen ervoor. Deze actie kan niet ongedaan worden gemaakt.",
       "cancel": "Annuleren",
-      "confirm": "Uitschakelen"
+      "confirm": "Uitschakelen",
+      "createRestaurantFirst": "Vul eerst uw restaurantgegevens in om talen te beheren.",
+      "goToSettings": "Ga naar Instellingen",
+      "limitReached": "U heeft de limiet van {limit} talen voor uw abonnement bereikt.",
+      "upgrade": "Upgraden"
     },
     "contacts": {
       "phone": "Telefoon",

@@ -458,7 +458,7 @@
         "highlights": [
           "Restorano svetainė",
           "QR Meniu",
-          "300 nuskenavimų/mėn",
+          "150 nuskenavimų/mėn",
           "2 kalbos",
           "AI vaizdų tobulinimas",
           "Analitika"
@@ -501,6 +501,7 @@
       "languages": "Palaikomos kalbos",
       "aiTranslation": "AI vertimai",
       "aiImages": "AI vaizdų tobulinimas",
+      "allergens": "Alergenų etiketės",
       "analytics": "Analitika",
       "customTheme": "Individuali spalvų tema",
       "background": "Fono vaizdas ir vaizdo įrašas",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Neriboti",
-        "languages": "6"
+        "languages": "Neriboti"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Pirmiausia įgalinkite kalbą",
       "deleteConfirm": "Išjungus šią kalbą, bus ištrintos visos jos vertimai. Šios operacijos negalima atšaukti.",
       "cancel": "Atšaukti",
-      "confirm": "Išjungti"
+      "confirm": "Išjungti",
+      "createRestaurantFirst": "Norėdami valdyti kalbas, pirmiausia užpildykite savo restorano duomenis.",
+      "goToSettings": "Eiti į Nustatymus",
+      "limitReached": "Pasiekėte savo plano {limit} kalbų limitą.",
+      "upgrade": "Atnaujinti"
     },
     "contacts": {
       "phone": "Telefonas",

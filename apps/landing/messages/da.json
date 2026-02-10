@@ -458,7 +458,7 @@
         "highlights": [
           "Restaurant hjemmeside",
           "QR Menu",
-          "300 scanninger/måned",
+          "150 scanninger/måned",
           "2 sprog",
           "AI billedforbedring",
           "Analyser"
@@ -501,6 +501,7 @@
       "languages": "Understøttede sprog",
       "aiTranslation": "AI oversættelser",
       "aiImages": "AI billedforbedring",
+      "allergens": "Allergenetiketter",
       "analytics": "Analyser",
       "customTheme": "Tilpasset farvetema",
       "background": "Baggrundsbillede & video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Ubegrænsede",
-        "languages": "6"
+        "languages": "Ubegrænsede"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Aktivér sprog først",
       "deleteConfirm": "Deaktivering af dette sprog vil slette alle oversættelser for det. Denne handling kan ikke fortrydes.",
       "cancel": "Annuller",
-      "confirm": "Deaktiver"
+      "confirm": "Deaktiver",
+      "createRestaurantFirst": "Udfyld venligst dine restaurantoplysninger først for at administrere sprog.",
+      "goToSettings": "Gå til Indstillinger",
+      "limitReached": "Du har nået grænsen på {limit} sprog for din plan.",
+      "upgrade": "Opgrader"
     },
     "contacts": {
       "phone": "Telefon",

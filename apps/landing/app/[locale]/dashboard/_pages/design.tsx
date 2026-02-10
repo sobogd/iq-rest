@@ -19,6 +19,9 @@ import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
+import { Link } from "@/i18n/routing";
+import type { SubscriptionStatus } from "@prisma/client";
+import type { PlanType } from "@/lib/stripe-config";
 
 export function DesignPage() {
   const t = useTranslations("dashboard.design");
@@ -36,9 +39,12 @@ export function DesignPage() {
   const [originalAccentColor, setOriginalAccentColor] = useState("#E11D48");
 
   const [validationError, setValidationError] = useState<string | null>(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
+  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
 
   useEffect(() => {
     fetchRestaurant();
+    fetchSubscriptionStatus();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -61,6 +67,21 @@ export function DesignPage() {
       setLoading(false);
     }
   }
+
+  async function fetchSubscriptionStatus() {
+    try {
+      const response = await fetch("/api/subscription/status");
+      if (response.ok) {
+        const data = await response.json();
+        setSubscriptionStatus(data.subscriptionStatus);
+        setCurrentPlan(data.plan);
+      }
+    } catch (error) {
+      console.error("Failed to fetch subscription status:", error);
+    }
+  }
+
+  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   const hasChanges = useMemo(() => {
     return source !== originalSource || accentColor !== originalAccentColor;
@@ -234,15 +255,23 @@ export function DesignPage() {
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium">{t("accentColor")}:</label>
+          <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
+            {t("accentColor")}:
+            {!hasActiveSubscription && (
+              <Link href="/dashboard" onClick={() => {}} className="ml-2 text-xs text-primary hover:underline">
+                Basic
+              </Link>
+            )}
+          </label>
 
-          <div className="space-y-2">
+          <div className={`space-y-2 ${!hasActiveSubscription ? "opacity-50 pointer-events-none" : ""}`}>
             <p className="text-xs text-muted-foreground">{t("presetColors")}</p>
             <div className="flex flex-wrap gap-2">
               {ACCENT_COLORS.map((color) => (
                 <button
                   key={color}
                   type="button"
+                  disabled={!hasActiveSubscription}
                   className={`w-8 h-8 rounded-full border-2 transition-all ${
                     accentColor === color ? "border-foreground scale-110" : "border-transparent"
                   }`}
@@ -253,18 +282,20 @@ export function DesignPage() {
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className={`space-y-2 ${!hasActiveSubscription ? "opacity-50 pointer-events-none" : ""}`}>
             <p className="text-xs text-muted-foreground">{t("customColor")}</p>
             <div className="flex items-center gap-3">
               <input
                 type="color"
                 value={accentColor}
+                disabled={!hasActiveSubscription}
                 onChange={(e) => setAccentColor(e.target.value)}
                 className="w-10 h-10 rounded cursor-pointer border-0 p-0"
               />
               <input
                 type="text"
                 value={accentColor}
+                disabled={!hasActiveSubscription}
                 onChange={(e) => {
                   const value = e.target.value;
                   if (/^#[0-9A-Fa-f]{0,6}$/.test(value)) {

@@ -359,7 +359,7 @@
         "highlights": [
           "Restaurant website",
           "QR Menu",
-          "300 scans/month",
+          "150 scans/month",
           "2 languages",
           "AI image enhancement",
           "Analytics"
@@ -402,6 +402,7 @@
       "languages": "Supported languages",
       "aiTranslation": "AI translations",
       "aiImages": "AI image enhancement",
+      "allergens": "Allergen labels",
       "analytics": "Analytics",
       "customTheme": "Custom color theme",
       "background": "Background image & video",
@@ -410,7 +411,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -419,7 +420,7 @@
       },
       "pro": {
         "scans": "Unlimited",
-        "languages": "6"
+        "languages": "Unlimited"
       }
     }
   },
@@ -1364,7 +1365,11 @@
       "enableFirst": "Enable language first",
       "deleteConfirm": "Disabling this language will delete all translations for it. This action cannot be undone.",
       "cancel": "Cancel",
-      "confirm": "Disable"
+      "confirm": "Disable",
+      "createRestaurantFirst": "Please fill in your restaurant details first to manage languages.",
+      "goToSettings": "Go to Settings",
+      "limitReached": "You've reached the limit of {limit} languages for your plan.",
+      "upgrade": "Upgrade"
     },
     "contacts": {
       "phone": "Phone",

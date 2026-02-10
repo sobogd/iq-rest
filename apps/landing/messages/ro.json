@@ -458,7 +458,7 @@
         "highlights": [
           "Website pentru restaurant",
           "Meniu QR",
-          "300 scanări/lună",
+          "150 scanări/lună",
           "2 limbi",
           "Îmbunătățire a imaginilor cu AI",
           "Analize"
@@ -501,6 +501,7 @@
       "languages": "Limbi suportate",
       "aiTranslation": "Traduceri AI",
       "aiImages": "Îmbunătățire a imaginilor cu AI",
+      "allergens": "Etichete pentru alergeni",
       "analytics": "Analize",
       "customTheme": "Temă de culoare personalizată",
       "background": "Imagine & video de fundal",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Nelimitat",
-        "languages": "6"
+        "languages": "Nelimitat"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Activați mai întâi limba",
       "deleteConfirm": "Dezactivarea acestei limbi va șterge toate traducerile pentru aceasta. Această acțiune nu poate fi anulată.",
       "cancel": "Anulează",
-      "confirm": "Dezactivează"
+      "confirm": "Dezactivează",
+      "createRestaurantFirst": "Vă rugăm să completați mai întâi detaliile restaurantului pentru a gestiona limbile.",
+      "goToSettings": "Mergi la Setări",
+      "limitReached": "Ai atins limita de {limit} limbi pentru planul tău.",
+      "upgrade": "Actualizează"
     },
     "contacts": {
       "phone": "Telefon",

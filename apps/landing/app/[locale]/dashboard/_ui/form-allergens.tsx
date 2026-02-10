@@ -9,6 +9,7 @@ interface FormAllergensProps {
   value: string[];
   onChange: (allergens: string[]) => void;
   allergenNames: Record<AllergenCode, string>;
+  disabled?: boolean;
 }
 
 export function FormAllergens({
@@ -16,8 +17,10 @@ export function FormAllergens({
   value,
   onChange,
   allergenNames,
+  disabled = false,
 }: FormAllergensProps) {
   const handleToggle = (code: string) => {
+    if (disabled) return;
     if (value.includes(code)) {
       onChange(value.filter((c) => c !== code));
     } else {
@@ -27,12 +30,14 @@ export function FormAllergens({
 
   return (
     <div className="space-y-2">
-      <Label>{label}</Label>
-      <div className="flex flex-col gap-2">
+      {label && <Label>{label}</Label>}
+      <div className={`flex flex-col gap-2 ${disabled ? "pointer-events-none" : ""}`}>
         {ALLERGENS.map((allergen) => (
           <label
             key={allergen.code}
-            className="flex items-center justify-between h-11 px-3 rounded-md bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors"
+            className={`flex items-center justify-between h-11 px-3 rounded-md bg-muted/30 transition-colors ${
+              disabled ? "cursor-not-allowed" : "cursor-pointer hover:bg-muted/50"
+            }`}
           >
             <span className="flex items-center gap-2">
               <span className="text-lg">{allergen.icon}</span>
@@ -43,6 +48,7 @@ export function FormAllergens({
             <Switch
               checked={value.includes(allergen.code)}
               onCheckedChange={() => handleToggle(allergen.code)}
+              disabled={disabled}
             />
           </label>
         ))}

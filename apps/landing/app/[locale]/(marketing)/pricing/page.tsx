@@ -17,8 +17,8 @@ export async function generateMetadata({
   };
 
   const descriptions = {
-    en: "Create a QR menu and website for your restaurant or cafe. Free plan with 300 scans/month. Digital menu with AI translations, analytics, and instant updates. Start free today!",
-    es: "Crea un menú QR y sitio web para tu restaurante o cafetería. Plan gratuito con 300 escaneos/mes. Menú digital con traducciones IA, analíticas y actualizaciones instantáneas. ¡Comienza gratis hoy!",
+    en: "Create a QR menu and website for your restaurant or cafe. Free plan with 150 scans/month. Digital menu with AI translations, analytics, and instant updates. Start free today!",
+    es: "Crea un menú QR y sitio web para tu restaurante o cafetería. Plan gratuito con 150 escaneos/mes. Menú digital con traducciones IA, analíticas y actualizaciones instantáneas. ¡Comienza gratis hoy!",
   };
 
   const keywords = {

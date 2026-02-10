@@ -458,7 +458,7 @@
         "highlights": [
           "Lloc web del restaurant",
           "Menú QR",
-          "300 escaneigs/mes",
+          "150 escaneigs/mes",
           "2 idiomes",
           "Millora d'imatges amb IA",
           "Analítica"
@@ -501,6 +501,7 @@
       "languages": "Idiomes compatibles",
       "aiTranslation": "Traduccions amb IA",
       "aiImages": "Millora d'imatges amb IA",
+      "allergens": "Etiquetes d'al·lèrgens",
       "analytics": "Analítica",
       "customTheme": "Tema de color personalitzat",
       "background": "Imatge i vídeo de fons",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Il·limitat",
-        "languages": "6"
+        "languages": "Il·limitat"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Habilita primer l'idioma",
       "deleteConfirm": "Deshabilitar aquest idioma eliminarà totes les traduccions per a ell. Aquesta acció no es pot desfer.",
       "cancel": "Cancel·la",
-      "confirm": "Deshabilita"
+      "confirm": "Deshabilita",
+      "createRestaurantFirst": "Si us plau, completa primer les dades del teu restaurant per gestionar els idiomes.",
+      "goToSettings": "Anar a Configuració",
+      "limitReached": "Has arribat al límit de {limit} idiomes per al teu pla.",
+      "upgrade": "Millorar pla"
     },
     "contacts": {
       "phone": "Telèfon",

@@ -458,7 +458,7 @@
         "highlights": [
           "餐厅网站",
           "QR菜单",
-          "每月300次扫描",
+          "每月150次扫描",
           "2种语言",
           "AI图像增强",
           "分析"
@@ -501,6 +501,7 @@
       "languages": "支持的语言",
       "aiTranslation": "AI翻译",
       "aiImages": "AI图像增强",
+      "allergens": "过敏原标签",
       "analytics": "分析",
       "customTheme": "自定义颜色主题",
       "background": "背景图像和视频",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "无限",
-        "languages": "6"
+        "languages": "无限"
       }
     }
   },
@@ -1496,7 +1497,11 @@
       "enableFirst": "请先启用语言",
       "deleteConfirm": "禁用此语言将删除其所有翻译。此操作无法撤销。",
       "cancel": "取消",
-      "confirm": "禁用"
+      "confirm": "禁用",
+      "createRestaurantFirst": "请先填写您的餐厅信息以管理语言。",
+      "goToSettings": "前往设置",
+      "limitReached": "您已达到您的计划的{limit}种语言限制。",
+      "upgrade": "升级"
     },
     "contacts": {
       "phone": "电话",

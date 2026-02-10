@@ -458,7 +458,7 @@
         "highlights": [
           "Sito web del ristorante",
           "Menu QR",
-          "300 scansioni/mese",
+          "150 scansioni/mese",
           "2 lingue",
           "Miglioramento delle immagini con IA",
           "Analisi"
@@ -501,6 +501,7 @@
       "languages": "Lingue supportate",
       "aiTranslation": "Traduzioni con IA",
       "aiImages": "Miglioramento delle immagini con IA",
+      "allergens": "Etichette allergeni",
       "analytics": "Analisi",
       "customTheme": "Tema colore personalizzato",
       "background": "Immagine e video di sfondo",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Illimitate",
-        "languages": "6"
+        "languages": "Illimitate"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Abilita prima la lingua",
       "deleteConfirm": "Disabilitare questa lingua eliminerà tutte le traduzioni per essa. Questa azione non può essere annullata.",
       "cancel": "Annulla",
-      "confirm": "Disabilita"
+      "confirm": "Disabilita",
+      "createRestaurantFirst": "Per favore, compila prima i dati del tuo ristorante per gestire le lingue.",
+      "goToSettings": "Vai alle Impostazioni",
+      "limitReached": "Hai raggiunto il limite di {limit} lingue per il tuo piano.",
+      "upgrade": "Aggiorna"
     },
     "contacts": {
       "phone": "Telefono",

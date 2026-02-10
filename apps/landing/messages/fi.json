@@ -458,7 +458,7 @@
         "highlights": [
           "Ravintolasivusto",
           "QR-menu",
-          "300 skannausta/kuukausi",
+          "150 skannausta/kuukausi",
           "2 kieltä",
           "AI-kuvaparannus",
           "Analytiikka"
@@ -501,6 +501,7 @@
       "languages": "Tuetut kielet",
       "aiTranslation": "AI-käännökset",
       "aiImages": "AI-kuvaparannus",
+      "allergens": "Allergeenimerkinnät",
       "analytics": "Analytiikka",
       "customTheme": "Mukautettu väriteema",
       "background": "Taustakuva & video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Rajattomat",
-        "languages": "6"
+        "languages": "Rajattomat"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Ota kieli ensin käyttöön",
       "deleteConfirm": "Tämän kielen poistaminen käytöstä poistaa kaikki käännökset siitä. Tätä toimintoa ei voi peruuttaa.",
       "cancel": "Peruuta",
-      "confirm": "Poista käytöstä"
+      "confirm": "Poista käytöstä",
+      "createRestaurantFirst": "Täytä ensin ravintolasi tiedot hallitaksesi kieliä.",
+      "goToSettings": "Siirry Asetuksiin",
+      "limitReached": "Olet saavuttanut {limit} kielen rajan suunnitelmassasi.",
+      "upgrade": "Päivitä"
     },
     "contacts": {
       "phone": "Puhelin",

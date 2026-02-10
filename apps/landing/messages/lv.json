@@ -458,7 +458,7 @@
         "highlights": [
           "Restorāna tīmekļa vietne",
           "QR ēdienkarte",
-          "300 skenējumi/mēnesī",
+          "150 skenējumi/mēnesī",
           "2 valodas",
           "AI attēlu uzlabošana",
           "Analītika"
@@ -501,6 +501,7 @@
       "languages": "Atbalstītās valodas",
       "aiTranslation": "AI tulkojumi",
       "aiImages": "AI attēlu uzlabošana",
+      "allergens": "Alergēnu marķējums",
       "analytics": "Analītika",
       "customTheme": "Pielāgota krāsu tēma",
       "background": "Fona attēls un video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Neierobežoti",
-        "languages": "6"
+        "languages": "Neierobežoti"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Vispirms ieslēdziet valodu",
       "deleteConfirm": "Šīs valodas izslēgšana dzēsīs visus tulkojumus. Šo darbību nevar atsaukt.",
       "cancel": "Atcelt",
-      "confirm": "Izslēgt"
+      "confirm": "Izslēgt",
+      "createRestaurantFirst": "Lūdzu, vispirms aizpildiet sava restorāna datus, lai pārvaldītu valodas.",
+      "goToSettings": "Doties uz Iestatījumiem",
+      "limitReached": "Esat sasnieguši sava plāna {limit} valodu ierobežojumu.",
+      "upgrade": "Jaunināt"
     },
     "contacts": {
       "phone": "Tālrunis",

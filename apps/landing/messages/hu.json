@@ -458,7 +458,7 @@
         "highlights": [
           "Éttermek weboldala",
           "QR Menü",
-          "300 beolvasás/hónap",
+          "150 beolvasás/hónap",
           "2 nyelv",
           "AI képfeldolgozás",
           "Analitika"
@@ -501,6 +501,7 @@
       "languages": "Támogatott nyelvek",
       "aiTranslation": "AI fordítások",
       "aiImages": "AI képfeldolgozás",
+      "allergens": "Allergén címkék",
       "analytics": "Analitika",
       "customTheme": "Egyedi színséma",
       "background": "Háttérkép & videó",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Korlátlan",
-        "languages": "6"
+        "languages": "Korlátlan"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Először engedélyezze a nyelvet",
       "deleteConfirm": "Ennek a nyelvnek a letiltása törli az összes fordítást. Ez a művelet nem vonható vissza.",
       "cancel": "Mégse",
-      "confirm": "Letiltás"
+      "confirm": "Letiltás",
+      "createRestaurantFirst": "Kérjük, először töltse ki az étterem adatait a nyelvek kezeléséhez.",
+      "goToSettings": "Beállítások",
+      "limitReached": "Elérte a(z) {limit} nyelv korlátot a csomagjában.",
+      "upgrade": "Frissítés"
     },
     "contacts": {
       "phone": "Telefon",

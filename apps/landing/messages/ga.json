@@ -458,7 +458,7 @@
         "highlights": [
           "Suíomh gréasáin bialann",
           "QR Menu",
-          "300 scans/mí",
+          "150 scans/mí",
           "2 teangacha",
           "Feabhsú íomhá AI",
           "Anailísíocht"
@@ -501,6 +501,7 @@
       "languages": "Teangacha tacaíochta",
       "aiTranslation": "Aistriúcháin AI",
       "aiImages": "Feabhsú íomhá AI",
+      "allergens": "Lipéid ailléirginí",
       "analytics": "Anailísíocht",
       "customTheme": "Téama dath saincheaptha",
       "background": "Íomhá & físeán cúlra",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Neamhtheoranta",
-        "languages": "6"
+        "languages": "Neamhtheoranta"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Gníomhachtaigh an teanga ar dtús",
       "deleteConfirm": "Díghníomhachtú na teanga seo a scriosfaidh na haistriúcháin go léir di. Ní féidir an gníomh seo a chur ar ais.",
       "cancel": "Cealaigh",
-      "confirm": "Díghníomhachtú"
+      "confirm": "Díghníomhachtú",
+      "createRestaurantFirst": "Líon isteach sonraí do bhialainne ar dtús le teangacha a bhainistiú.",
+      "goToSettings": "Téigh go Socruithe",
+      "limitReached": "Tá teorainn {limit} teanga do do phlean bainte amach agat.",
+      "upgrade": "Uasghrádú"
     },
     "contacts": {
       "phone": "Guthán",

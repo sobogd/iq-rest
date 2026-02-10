@@ -458,7 +458,7 @@
         "highlights": [
           "Veitingahús vefsíða",
           "QR Matseðill",
-          "300 skannanir/mánuði",
+          "150 skannanir/mánuði",
           "2 tungumál",
           "AI myndabætir",
           "Greiningar"
@@ -501,6 +501,7 @@
       "languages": "Stutt tungumál",
       "aiTranslation": "AI þýðingar",
       "aiImages": "AI myndabætir",
+      "allergens": "Ofnæmismerki",
       "analytics": "Greiningar",
       "customTheme": "Sérsniðin litapalletta",
       "background": "Bakgrunnsmynd & myndband",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Ótakmarkað",
-        "languages": "6"
+        "languages": "Ótakmarkað"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Virkjaðu tungumál fyrst",
       "deleteConfirm": "Að óvirkja þetta tungumál mun eyða öllum þýðingum fyrir það. Þessi aðgerð er ekki hægt að afturkalla.",
       "cancel": "Hætta við",
-      "confirm": "Óvirkja"
+      "confirm": "Óvirkja",
+      "createRestaurantFirst": "Vinsamlegast fylltu út upplýsingar um veitingastaðinn þinn fyrst til að stjórna tungumálum.",
+      "goToSettings": "Fara í Stillingar",
+      "limitReached": "Þú hefur náð hámarki {limit} tungumála fyrir áskriftina þína.",
+      "upgrade": "Uppfæra"
     },
     "contacts": {
       "phone": "Sími",

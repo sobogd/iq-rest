@@ -458,7 +458,7 @@
         "highlights": [
           "Web stranica restorana",
           "QR Meni",
-          "300 skeniranja/mjesečno",
+          "150 skeniranja/mjesečno",
           "2 jezika",
           "AI poboljšanje slika",
           "Analitika"
@@ -501,6 +501,7 @@
       "languages": "Podržani jezici",
       "aiTranslation": "AI prijevodi",
       "aiImages": "AI poboljšanje slika",
+      "allergens": "Oznake alergena",
       "analytics": "Analitika",
       "customTheme": "Prilagođena shema boja",
       "background": "Pozadinska slika i video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Neograničeno",
-        "languages": "6"
+        "languages": "Neograničeno"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Prvo omogućite jezik",
       "deleteConfirm": "Onemogućavanje ovog jezika izbrisat će sve prijevode za njega. Ova radnja se ne može poništiti.",
       "cancel": "Odustani",
-      "confirm": "Onemogući"
+      "confirm": "Onemogući",
+      "createRestaurantFirst": "Molimo prvo ispunite podatke o restoranu za upravljanje jezicima.",
+      "goToSettings": "Idi na Postavke",
+      "limitReached": "Dosegli ste ograničenje od {limit} jezika za vaš plan.",
+      "upgrade": "Nadogradi"
     },
     "contacts": {
       "phone": "Telefon",

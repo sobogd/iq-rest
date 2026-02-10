@@ -458,7 +458,7 @@
         "highlights": [
           "Webové stránky restaurace",
           "QR Menu",
-          "300 skenů/měsíc",
+          "150 skenů/měsíc",
           "2 jazyky",
           "Vylepšení obrázků pomocí AI",
           "Analytika"
@@ -501,6 +501,7 @@
       "languages": "Podporované jazyky",
       "aiTranslation": "Překlady pomocí AI",
       "aiImages": "Vylepšení obrázků pomocí AI",
+      "allergens": "Štítky alergenů",
       "analytics": "Analytika",
       "customTheme": "Vlastní barevné téma",
       "background": "Pozadí obrázek & video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Neomezené",
-        "languages": "6"
+        "languages": "Neomezené"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Nejprve povolte jazyk",
       "deleteConfirm": "Zakázání tohoto jazyka odstraní všechny překlady pro něj. Tuto akci nelze vrátit zpět.",
       "cancel": "Zrušit",
-      "confirm": "Zakázat"
+      "confirm": "Zakázat",
+      "createRestaurantFirst": "Nejprve prosím vyplňte údaje o restauraci pro správu jazyků.",
+      "goToSettings": "Přejít do Nastavení",
+      "limitReached": "Dosáhli jste limitu {limit} jazyků pro váš plán.",
+      "upgrade": "Upgradovat"
     },
     "contacts": {
       "phone": "Telefon",

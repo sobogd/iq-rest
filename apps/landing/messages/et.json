@@ -458,7 +458,7 @@
         "highlights": [
           "Restorani veebisait",
           "QR Menüü",
-          "300 skaneerimist/kuu",
+          "150 skaneerimist/kuu",
           "2 keelt",
           "AI pilditöötlus",
           "Analüütika"
@@ -501,6 +501,7 @@
       "languages": "Toetatud keeled",
       "aiTranslation": "AI tõlked",
       "aiImages": "AI pilditöötlus",
+      "allergens": "Allergeenimärgised",
       "analytics": "Analüütika",
       "customTheme": "Kohandatud värviteema",
       "background": "Taustapilt ja video",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "Piiramatu",
-        "languages": "6"
+        "languages": "Piiramatu"
       }
     }
   },
@@ -1463,7 +1464,11 @@
       "enableFirst": "Lubage keel esmalt",
       "deleteConfirm": "Selle keele keelamine kustutab kõik tõlked selle jaoks. Seda toimingut ei saa tagasi võtta.",
       "cancel": "Tühista",
-      "confirm": "Keela"
+      "confirm": "Keela",
+      "createRestaurantFirst": "Keelte haldamiseks täitke palun esmalt oma restorani andmed.",
+      "goToSettings": "Mine Seadetesse",
+      "limitReached": "Olete saavutanud oma plaani {limit} keele piiri.",
+      "upgrade": "Uuenda"
     },
     "contacts": {
       "phone": "Telefon",

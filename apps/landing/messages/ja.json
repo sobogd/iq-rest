@@ -458,7 +458,7 @@
         "highlights": [
           "レストランウェブサイト",
           "QRメニュー",
-          "月300スキャン",
+          "月150スキャン",
           "2言語",
           "AI画像強化",
           "分析"
@@ -501,6 +501,7 @@
       "languages": "対応言語",
       "aiTranslation": "AI翻訳",
       "aiImages": "AI画像強化",
+      "allergens": "アレルゲン表示",
       "analytics": "分析",
       "customTheme": "カスタムカラーテーマ",
       "background": "背景画像＆動画",
@@ -509,7 +510,7 @@
     },
     "values": {
       "free": {
-        "scans": "300",
+        "scans": "150",
         "languages": "2"
       },
       "basic": {
@@ -518,7 +519,7 @@
       },
       "pro": {
         "scans": "無制限",
-        "languages": "6"
+        "languages": "無制限"
       }
     }
   },
@@ -1476,7 +1477,11 @@
       "enableFirst": "まず言語を有効化してください",
       "deleteConfirm": "この言語を無効化するとすべての翻訳が削除されます。この操作は取り消せません。",
       "cancel": "キャンセル",
-      "confirm": "無効化"
+      "confirm": "無効化",
+      "createRestaurantFirst": "言語を管理するには、まずレストランの詳細を入力してください。",
+      "goToSettings": "設定へ移動",
+      "limitReached": "お使いのプランでは{limit}言語の上限に達しました。",
+      "upgrade": "アップグレード"
     },
     "contacts": {
       "phone": "電話番号",

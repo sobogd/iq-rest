@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Star, Loader2 } from "lucide-react";
+import { Star, Loader2, AlertCircle } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +18,8 @@ import { useTranslations } from "next-intl";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
+import type { SubscriptionStatus } from "@prisma/client";
+import type { PlanType } from "@/lib/stripe-config";
 
 const ALL_LANGUAGES = [
   "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
@@ -30,7 +32,7 @@ const ALL_LANGUAGES = [
 
 export function LanguagesPage() {
   const t = useTranslations("dashboard.languages");
-  const { returnToOnboarding } = useDashboard();
+  const { returnToOnboarding, setActivePage } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<string | null>(null);
@@ -38,9 +40,24 @@ export function LanguagesPage() {
   const [defaultLanguage, setDefaultLanguage] = useState("en");
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [pendingDisable, setPendingDisable] = useState<string | null>(null);
+  const [hasRestaurant, setHasRestaurant] = useState(true);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
+  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
+
+  // Language limits by plan: FREE=2, BASIC=3, PRO=unlimited
+  const getLanguageLimit = () => {
+    if (subscriptionStatus !== "ACTIVE") return 2;
+    if (currentPlan === "PRO") return Infinity;
+    if (currentPlan === "BASIC") return 3;
+    return 2;
+  };
+
+  const languageLimit = getLanguageLimit();
+  const isAtLimit = languages.length >= languageLimit;
 
   useEffect(() => {
     fetchLanguages();
+    fetchSubscriptionStatus();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -49,16 +66,34 @@ export function LanguagesPage() {
       const res = await fetch("/api/restaurant");
       if (res.ok) {
         const data = await res.json();
-        if (data) {
+        if (data && data.title) {
+          setHasRestaurant(true);
           setLanguages(data.languages || ["en"]);
           setDefaultLanguage(data.defaultLanguage || "en");
+        } else {
+          setHasRestaurant(false);
         }
+      } else {
+        setHasRestaurant(false);
       }
     } catch (error) {
       console.error("Failed to fetch languages:", error);
       toast.error(t("fetchError"));
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function fetchSubscriptionStatus() {
+    try {
+      const response = await fetch("/api/subscription/status");
+      if (response.ok) {
+        const data = await response.json();
+        setSubscriptionStatus(data.subscriptionStatus);
+        setCurrentPlan(data.plan);
+      }
+    } catch (error) {
+      console.error("Failed to fetch subscription status:", error);
     }
   }
 
@@ -156,22 +191,65 @@ export function LanguagesPage() {
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-auto p-6 space-y-6">
-        <div className="space-y-2">
+        {!hasRestaurant && (
+          <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
+            <div className="flex gap-3 md:gap-4 md:items-center">
+              <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
+              <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
+                <p className="text-sm">
+                  {t("createRestaurantFirst")}
+                </p>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
+                  onClick={() => setActivePage("settings")}
+                >
+                  {t("goToSettings")}
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {isAtLimit && languageLimit !== Infinity && (
+          <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
+            <div className="flex gap-3 md:gap-4 md:items-center">
+              <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
+              <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
+                <p className="text-sm">
+                  {t("limitReached", { limit: languageLimit })}
+                </p>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
+                  onClick={() => setActivePage("billing")}
+                >
+                  {t("upgrade")}
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className={`space-y-2 ${!hasRestaurant ? "opacity-50 pointer-events-none" : ""}`}>
           {ALL_LANGUAGES.map((lang) => {
             const isEnabled = languages.includes(lang.code);
             const isDefault = defaultLanguage === lang.code;
             const isSaving = saving === lang.code;
+            const isDisabledByLimit = !isEnabled && isAtLimit;
 
             return (
               <div
                 key={lang.code}
-                className="flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl"
+                className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl ${isDisabledByLimit ? "opacity-50" : ""}`}
               >
                 <div className="flex items-center gap-3 flex-1 min-w-0">
                   <Switch
                     checked={isEnabled}
                     onCheckedChange={(checked) => handleToggleLanguage(lang.code, checked)}
-                    disabled={isSaving || (isDefault && isEnabled)}
+                    disabled={isSaving || (isDefault && isEnabled) || isDisabledByLimit}
                   />
                   <span className="text-sm font-medium truncate">{lang.name}</span>
                 </div>

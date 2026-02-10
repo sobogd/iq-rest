@@ -39,6 +39,9 @@ import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
 import { analytics } from "@/lib/analytics";
 import { formatPrice } from "@/lib/currencies";
+import type { SubscriptionStatus } from "@prisma/client";
+import type { PlanType } from "@/lib/stripe-config";
+import { Link } from "@/i18n/routing";
 
 interface TranslationData {
   name?: string;
@@ -440,8 +443,27 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
     (item?.translations as Record<string, TranslationData>) || {}
   );
   const [validationError, setValidationError] = useState<string | null>(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
+  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
 
   const isEdit = !!item;
+  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
+
+  useEffect(() => {
+    async function fetchSubscriptionStatus() {
+      try {
+        const response = await fetch("/api/subscription/status");
+        if (response.ok) {
+          const data = await response.json();
+          setSubscriptionStatus(data.subscriptionStatus);
+          setCurrentPlan(data.plan);
+        }
+      } catch (error) {
+        console.error("Failed to fetch subscription status:", error);
+      }
+    }
+    fetchSubscriptionStatus();
+  }, []);
 
   function handleTranslationChange(lang: string, field: "name" | "description", value: string) {
     setItemTranslations((prev) => ({
@@ -753,12 +775,25 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
                   />
                 </div>
 
-                <FormAllergens
-                  label={`${t.allergens}:`}
-                  value={allergens}
-                  onChange={setAllergens}
-                  allergenNames={t.allergenNames as Record<AllergenCode, string>}
-                />
+                <div className={!hasActiveSubscription ? "opacity-50" : ""}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
+                      {t.allergens}:
+                    </label>
+                    {!hasActiveSubscription && (
+                      <Link href="/dashboard" className="text-xs text-primary hover:underline">
+                        Basic
+                      </Link>
+                    )}
+                  </div>
+                  <FormAllergens
+                    label=""
+                    value={allergens}
+                    onChange={hasActiveSubscription ? setAllergens : () => {}}
+                    allergenNames={t.allergenNames as Record<AllergenCode, string>}
+                    disabled={!hasActiveSubscription}
+                  />
+                </div>
               </div>
 
               <div className="flex items-center justify-end gap-3 px-6 py-4 border-t shrink-0">

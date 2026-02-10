@@ -59,11 +59,12 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "languages", free: "value", basic: "value", pro: "value" },
   { key: "aiTranslation", free: false, basic: true, pro: true },
   { key: "aiImages", free: true, basic: true, pro: true },
+  { key: "allergens", free: false, basic: true, pro: true },
   { key: "analytics", free: true, basic: true, pro: true },
   { key: "customTheme", free: false, basic: true, pro: true },
   { key: "background", free: true, basic: true, pro: true },
   { key: "support", free: true, basic: true, pro: true },
-  { key: "reservations", free: false, basic: true, pro: true },
+  { key: "reservations", free: false, basic: false, pro: true },
 ];
 
 export function PricingCards() {
