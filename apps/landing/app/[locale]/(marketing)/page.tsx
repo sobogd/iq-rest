@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
 import { HowToSteps, MenuPreviewModal, HeroImages, ImageComposition, CtaSection } from "./_components";
+import { PageView } from "@/components/PageView";
+import { SectionTracker } from "@/components/SectionTracker";
 import {
   JsonLd,
   productSchema,
@@ -90,12 +92,13 @@ export default function HomePage() {
 
   return (
     <>
+      <PageView slug="home" />
       <JsonLd data={productSchema} />
       <JsonLd data={organizationSchema} />
       <JsonLd data={softwareSchema} />
 
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-80px)] pt-8 pb-16 md:pt-12 md:pb-20 flex flex-col">
+      <SectionTracker section="hero" className="min-h-[calc(100vh-80px)] pt-8 pb-16 md:pt-12 md:pb-20 flex flex-col">
         <div className="container mx-auto px-4 flex-1">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
             {/* Left side - Text content */}
@@ -147,10 +150,10 @@ export default function HomePage() {
             })}
           </div>
         </div>
-      </section>
+      </SectionTracker>
 
       {/* Features Preview Section */}
-      <section id="features" className="py-16 bg-muted/50 scroll-mt-20">
+      <SectionTracker section="features" className="py-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
@@ -169,8 +172,9 @@ export default function HomePage() {
                 const isEven = index % 2 === 0;
 
                 return (
-                  <div
+                  <SectionTracker
                     key={feature.id}
+                    section={`feature_${feature.id}`}
                     className={`grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-12 items-center ${
                       !isEven ? "md:flex-row-reverse" : ""
                     }`}
@@ -280,17 +284,17 @@ export default function HomePage() {
                         </Link>
                       </Button>
                     </div>
-                  </div>
+                  </SectionTracker>
                 );
               })}
             </div>
 
           </div>
         </div>
-      </section>
+      </SectionTracker>
 
       {/* Intro Section */}
-      <section className="py-16">
+      <SectionTracker section="intro" className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <p className="text-base md:text-lg font-medium text-primary">{tIntro("socialProof")}</p>
@@ -311,10 +315,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </SectionTracker>
 
       {/* Why Us Section */}
-      <section className="py-16 bg-muted/50">
+      <SectionTracker section="why_us" className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
@@ -346,9 +350,11 @@ export default function HomePage() {
 
           </div>
         </div>
-      </section>
+      </SectionTracker>
 
-      <CtaSection />
+      <SectionTracker section="cta">
+        <CtaSection />
+      </SectionTracker>
     </>
   );
 }

@@ -213,28 +213,49 @@ export function DashboardProvider({
     }
   }, [searchParams, router]);
 
+  const trackPageView = useCallback((page: PageKey) => {
+    const pageEvents: Record<PageKey, (() => void) | undefined> = {
+      onboarding: undefined,
+      qrMenu: analytics.dashboard.pageQrMenuView,
+      home: analytics.dashboard.pageHomeView,
+      analytics: analytics.dashboard.pageAnalyticsView,
+      categories: analytics.dashboard.pageCategoriesView,
+      items: analytics.dashboard.pageItemsView,
+      settings: analytics.dashboard.pageSettingsView,
+      design: analytics.dashboard.pageDesignView,
+      contacts: analytics.dashboard.pageContactsView,
+      languages: analytics.dashboard.pageLanguagesView,
+      reservations: analytics.dashboard.pageReservationsView,
+      reservationSettings: analytics.dashboard.pageReservationSettingsView,
+      tables: analytics.dashboard.pageTablesView,
+      billing: analytics.dashboard.pageBillingView,
+      support: analytics.dashboard.pageSupportView,
+    };
+    pageEvents[page]?.();
+  }, []);
+
   const setActivePage = useCallback((page: PageKey) => {
     const fromPage = previousPageRef.current;
     if (fromPage !== page) {
-      analytics.dashboard.navigateTo(fromPage, page);
+      trackPageView(page);
     }
     previousPageRef.current = page;
     setActivePageState(page);
     setPageCookie(page);
-  }, []);
+  }, [trackPageView]);
 
   const navigateFromOnboarding = useCallback((page: PageKey) => {
-    analytics.dashboard.navigateTo("onboarding", page);
+    trackPageView(page);
     previousPageRef.current = page;
     sessionStorage.setItem("returnToOnboarding", "true");
     setActivePageState(page);
     setPageCookie(page);
-  }, []);
+  }, [trackPageView]);
 
   const returnToOnboarding = useCallback(() => {
     const shouldReturn = sessionStorage.getItem("returnToOnboarding") === "true";
     if (shouldReturn) {
-      analytics.dashboard.returnToOnboarding(previousPageRef.current);
+      analytics.dashboard.returnToOnboarding();
       previousPageRef.current = "onboarding";
       sessionStorage.removeItem("returnToOnboarding");
       setActivePageState("onboarding");

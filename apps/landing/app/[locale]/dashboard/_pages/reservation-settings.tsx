@@ -121,7 +121,7 @@ export function ReservationSettingsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.reservations.updateSettings();
+        analytics.reservations.save();
         if (reservationsEnabled !== initialValues.reservationsEnabled) {
           if (reservationsEnabled) {
             analytics.reservations.enable();
@@ -130,10 +130,11 @@ export function ReservationSettingsPage() {
           }
         }
         if (reservationMode !== initialValues.reservationMode) {
-          analytics.reservations.setMode(reservationMode);
-        }
-        if (reservationSlotMinutes !== initialValues.reservationSlotMinutes) {
-          analytics.reservations.setDuration(reservationSlotMinutes);
+          if (reservationMode === "manual") {
+            analytics.reservations.modeManual();
+          } else {
+            analytics.reservations.modeAuto();
+          }
         }
         setInitialValues({
           reservationsEnabled,

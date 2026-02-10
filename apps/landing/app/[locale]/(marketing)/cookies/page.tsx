@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { JsonLd, createWebPageSchema, buildAlternates } from "../_lib";
+import { PageView } from "@/components/PageView";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -81,6 +82,7 @@ export default async function CookiesPage({
 
   return (
     <>
+      <PageView slug="cookies" />
       <JsonLd data={webPageSchema} />
       <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">

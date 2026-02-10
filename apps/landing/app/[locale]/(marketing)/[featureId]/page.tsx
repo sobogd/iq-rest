@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd, buildAlternates } from "../_lib";
 import { CtaSection } from "../_components";
+import { PageView } from "@/components/PageView";
 import Image from "next/image";
 import { FEATURE_IMAGES, VALID_FEATURE_IDS, type FeatureId } from "../_lib/feature-data";
 import { getFeatureMetadata } from "../_lib/feature-metadata";
@@ -143,6 +144,7 @@ export default async function FeaturePage({
 
   return (
     <>
+      <PageView slug={featureId} />
       <JsonLd data={featureJsonLd} />
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <JsonLd data={breadcrumbJsonLd} />

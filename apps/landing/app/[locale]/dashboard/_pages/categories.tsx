@@ -95,7 +95,11 @@ export function CategoriesPage() {
         toast.error(t.updateError);
       } else {
         toast.success(newActive ? `${categoryName} ${t.enabled}` : `${categoryName} ${t.disabled}`);
-        analytics.category.toggleActive(newActive);
+        if (newActive) {
+          analytics.category.activate();
+        } else {
+          analytics.category.deactivate();
+        }
       }
     } catch {
       setCategories((prev) =>

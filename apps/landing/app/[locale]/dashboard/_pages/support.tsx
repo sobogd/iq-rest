@@ -41,7 +41,7 @@ export function SupportPage() {
   }, []);
 
   useEffect(() => {
-    analytics.support.openChat();
+    analytics.support.chatOpen();
     fetchMessages();
   }, [fetchMessages]);
 
@@ -66,7 +66,7 @@ export function SupportPage() {
       });
 
       if (response.ok) {
-        analytics.support.sendMessage();
+        analytics.support.messageSend();
         const sentMessage = await response.json();
         setMessages((prev) => [...prev, sentMessage]);
         setNewMessage("");

@@ -6,54 +6,82 @@ declare global {
   }
 }
 
-type EventParams = Record<string, string | number | boolean | undefined>;
-
-export function trackEvent(eventName: string, params?: EventParams) {
+function trackEvent(eventName: string) {
   if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", eventName, params);
+    window.gtag("event", eventName);
   }
+}
+
+function pageView(slug: string) {
+  const eventName = `page_view_${slug.replace(/-/g, "_")}`;
+  trackEvent(eventName);
 }
 
 // Marketing events
 export const marketing = {
-  clickCTA: (location: string) => trackEvent("click_cta", { location }),
-  clickPricing: (plan: string) => trackEvent("click_pricing", { plan }),
-  clickFeature: (feature: string) => trackEvent("click_feature", { feature }),
-  clickDemo: () => trackEvent("click_demo"),
-  clickSignIn: (location: string) => trackEvent("click_sign_in", { location }),
-  viewPricing: () => trackEvent("view_pricing"),
-  viewFeatures: () => trackEvent("view_features"),
-  viewFAQ: () => trackEvent("view_faq"),
-  scrollToSection: (section: string) => trackEvent("scroll_to_section", { section }),
+  ctaHeaderClick: () => trackEvent("marketing_cta_header_click"),
+  ctaHeroClick: () => trackEvent("marketing_cta_hero_click"),
+  ctaFeaturesClick: () => trackEvent("marketing_cta_features_click"),
+  ctaPricingClick: () => trackEvent("marketing_cta_pricing_click"),
+  ctaFooterClick: () => trackEvent("marketing_cta_footer_click"),
+  pricingFreeClick: () => trackEvent("marketing_pricing_free_click"),
+  pricingBasicClick: () => trackEvent("marketing_pricing_basic_click"),
+  pricingProClick: () => trackEvent("marketing_pricing_pro_click"),
+  demoClick: () => trackEvent("marketing_demo_click"),
+  signInHeaderClick: () => trackEvent("marketing_signin_header_click"),
+  signInHeroClick: () => trackEvent("marketing_signin_hero_click"),
+  pricingView: () => trackEvent("marketing_pricing_view"),
+  featuresView: () => trackEvent("marketing_features_view"),
+  faqView: () => trackEvent("marketing_faq_view"),
+  mobileMenuOpen: () => trackEvent("marketing_mobile_menu_open"),
+  mobileMenuNavClick: (section: string) => trackEvent(`marketing_mobile_menu_nav_${section}_click`),
 };
 
 // Auth events
 export const auth = {
-  startSignIn: () => trackEvent("auth_start_sign_in"),
-  submitEmail: () => trackEvent("auth_submit_email"),
-  verifyCode: () => trackEvent("auth_verify_code"),
-  signInSuccess: () => trackEvent("auth_sign_in_success"),
-  signOut: () => trackEvent("auth_sign_out"),
+  signInStart: () => trackEvent("auth_signin_start"),
+  emailSubmit: () => trackEvent("auth_email_submit"),
+  codeVerify: () => trackEvent("auth_code_verify"),
+  signInSuccess: () => trackEvent("auth_signin_success"),
+  signOut: () => trackEvent("auth_signout"),
 };
 
 // Onboarding events
 export const onboarding = {
-  viewOnboarding: () => trackEvent("onboarding_view"),
-  clickStep: (step: string) => trackEvent("onboarding_click_step", { step }),
-  completeStep: (step: string) => trackEvent("onboarding_complete_step", { step }),
-  completeAllRequired: () => trackEvent("onboarding_complete_required"),
-  viewMenu: () => trackEvent("onboarding_view_menu"),
-  navigateNext: (fromStep: string, toStep: string) => trackEvent("onboarding_navigate_next", { from_step: fromStep, to_step: toStep }),
-  navigatePrev: (fromStep: string, toStep: string) => trackEvent("onboarding_navigate_prev", { from_step: fromStep, to_step: toStep }),
+  view: () => trackEvent("onboarding_view"),
+  stepTitleClick: () => trackEvent("onboarding_step_title_click"),
+  stepSlugClick: () => trackEvent("onboarding_step_slug_click"),
+  stepCategoriesClick: () => trackEvent("onboarding_step_categories_click"),
+  stepItemsClick: () => trackEvent("onboarding_step_items_click"),
+  stepContactsClick: () => trackEvent("onboarding_step_contacts_click"),
+  stepLanguagesClick: () => trackEvent("onboarding_step_languages_click"),
+  stepDesignClick: () => trackEvent("onboarding_step_design_click"),
+  stepReservationsClick: () => trackEvent("onboarding_step_reservations_click"),
+  allComplete: () => trackEvent("onboarding_all_complete"),
+  menuView: () => trackEvent("onboarding_menu_view"),
+  navigateNext: () => trackEvent("onboarding_navigate_next"),
+  navigatePrev: () => trackEvent("onboarding_navigate_prev"),
 };
 
 // Dashboard navigation events
 export const dashboard = {
-  viewPage: (page: string) => trackEvent("dashboard_view_page", { page }),
-  navigateTo: (fromPage: string, toPage: string) => trackEvent("dashboard_navigate", { from_page: fromPage, to_page: toPage }),
-  returnToOnboarding: (fromPage: string) => trackEvent("dashboard_return_to_onboarding", { from_page: fromPage }),
-  openSidebar: () => trackEvent("dashboard_open_sidebar"),
-  closeSidebar: () => trackEvent("dashboard_close_sidebar"),
+  pageQrMenuView: () => trackEvent("dashboard_page_qrmenu_view"),
+  pageHomeView: () => trackEvent("dashboard_page_home_view"),
+  pageAnalyticsView: () => trackEvent("dashboard_page_analytics_view"),
+  pageCategoriesView: () => trackEvent("dashboard_page_categories_view"),
+  pageItemsView: () => trackEvent("dashboard_page_items_view"),
+  pageSettingsView: () => trackEvent("dashboard_page_settings_view"),
+  pageDesignView: () => trackEvent("dashboard_page_design_view"),
+  pageContactsView: () => trackEvent("dashboard_page_contacts_view"),
+  pageLanguagesView: () => trackEvent("dashboard_page_languages_view"),
+  pageReservationsView: () => trackEvent("dashboard_page_reservations_view"),
+  pageReservationSettingsView: () => trackEvent("dashboard_page_reservation_settings_view"),
+  pageTablesView: () => trackEvent("dashboard_page_tables_view"),
+  pageBillingView: () => trackEvent("dashboard_page_billing_view"),
+  pageSupportView: () => trackEvent("dashboard_page_support_view"),
+  returnToOnboarding: () => trackEvent("dashboard_return_to_onboarding"),
+  sidebarOpen: () => trackEvent("dashboard_sidebar_open"),
+  sidebarClose: () => trackEvent("dashboard_sidebar_close"),
 };
 
 // Category events
@@ -61,101 +89,119 @@ export const category = {
   create: () => trackEvent("category_create"),
   update: () => trackEvent("category_update"),
   delete: () => trackEvent("category_delete"),
-  toggleActive: (active: boolean) => trackEvent("category_toggle_active", { active }),
+  activate: () => trackEvent("category_activate"),
+  deactivate: () => trackEvent("category_deactivate"),
   reorder: () => trackEvent("category_reorder"),
-  openForm: (isEdit: boolean) => trackEvent("category_open_form", { is_edit: isEdit }),
+  formOpenNew: () => trackEvent("category_form_open_new"),
+  formOpenEdit: () => trackEvent("category_form_open_edit"),
 };
 
 // Item events
 export const item = {
-  create: (hasImage: boolean, hasAllergens: boolean) =>
-    trackEvent("item_create", { has_image: hasImage, has_allergens: hasAllergens }),
-  update: (hasImage: boolean, hasAllergens: boolean) =>
-    trackEvent("item_update", { has_image: hasImage, has_allergens: hasAllergens }),
+  create: () => trackEvent("item_create"),
+  createWithImage: () => trackEvent("item_create_with_image"),
+  createWithAllergens: () => trackEvent("item_create_with_allergens"),
+  update: () => trackEvent("item_update"),
   delete: () => trackEvent("item_delete"),
-  toggleActive: (active: boolean) => trackEvent("item_toggle_active", { active }),
+  activate: () => trackEvent("item_activate"),
+  deactivate: () => trackEvent("item_deactivate"),
   reorder: () => trackEvent("item_reorder"),
-  openForm: (isEdit: boolean) => trackEvent("item_open_form", { is_edit: isEdit }),
-  uploadImage: () => trackEvent("item_upload_image"),
-  removeImage: () => trackEvent("item_remove_image"),
-  selectAllergen: (allergen: string) => trackEvent("item_select_allergen", { allergen }),
+  formOpenNew: () => trackEvent("item_form_open_new"),
+  formOpenEdit: () => trackEvent("item_form_open_edit"),
+  imageUpload: () => trackEvent("item_image_upload"),
+  imageRemove: () => trackEvent("item_image_remove"),
 };
 
 // Settings events
 export const settings = {
-  updateGeneral: () => trackEvent("settings_update_general"),
-  changeSlug: (newSlug: string) => trackEvent("settings_change_slug", { new_slug: newSlug }),
-  changeCurrency: (currency: string) => trackEvent("settings_change_currency", { currency }),
+  save: () => trackEvent("settings_save"),
+  slugChange: () => trackEvent("settings_slug_change"),
+  currencyChange: () => trackEvent("settings_currency_change"),
 };
 
 // Design events
 export const design = {
-  update: () => trackEvent("design_update"),
-  uploadBackground: (type: "image" | "video") => trackEvent("design_upload_background", { type }),
-  removeBackground: () => trackEvent("design_remove_background"),
-  changeAccentColor: (color: string) => trackEvent("design_change_accent_color", { color }),
-  selectPresetColor: (color: string) => trackEvent("design_select_preset_color", { color }),
+  save: () => trackEvent("design_save"),
+  backgroundUploadImage: () => trackEvent("design_background_upload_image"),
+  backgroundUploadVideo: () => trackEvent("design_background_upload_video"),
+  backgroundRemove: () => trackEvent("design_background_remove"),
+  accentColorChange: () => trackEvent("design_accent_color_change"),
+  presetColorSelect: () => trackEvent("design_preset_color_select"),
 };
 
 // Contacts events
 export const contacts = {
-  update: () => trackEvent("contacts_update"),
-  addPhone: () => trackEvent("contacts_add_phone"),
-  addInstagram: () => trackEvent("contacts_add_instagram"),
-  addWhatsapp: () => trackEvent("contacts_add_whatsapp"),
-  setLocation: () => trackEvent("contacts_set_location"),
+  save: () => trackEvent("contacts_save"),
+  phoneAdd: () => trackEvent("contacts_phone_add"),
+  instagramAdd: () => trackEvent("contacts_instagram_add"),
+  whatsappAdd: () => trackEvent("contacts_whatsapp_add"),
+  locationSet: () => trackEvent("contacts_location_set"),
 };
 
 // Languages events
 export const languages = {
-  enable: (language: string) => trackEvent("language_enable", { language }),
-  disable: (language: string) => trackEvent("language_disable", { language }),
-  setDefault: (language: string) => trackEvent("language_set_default", { language }),
+  enable: (lang: string) => trackEvent(`languages_${lang}_enable`),
+  disable: (lang: string) => trackEvent(`languages_${lang}_disable`),
+  setDefault: (lang: string) => trackEvent(`languages_${lang}_set_default`),
 };
 
 // Reservations events
 export const reservations = {
   enable: () => trackEvent("reservations_enable"),
   disable: () => trackEvent("reservations_disable"),
-  updateSettings: () => trackEvent("reservations_update_settings"),
-  setMode: (mode: string) => trackEvent("reservations_set_mode", { mode }),
-  setDuration: (minutes: number) => trackEvent("reservations_set_duration", { minutes }),
-  setWorkingHours: () => trackEvent("reservations_set_working_hours"),
+  save: () => trackEvent("reservations_save"),
+  modeManual: () => trackEvent("reservations_mode_manual"),
+  modeAuto: () => trackEvent("reservations_mode_auto"),
 };
 
 // Tables events
 export const tables = {
-  create: (capacity: number) => trackEvent("table_create", { capacity }),
-  update: () => trackEvent("table_update"),
-  delete: () => trackEvent("table_delete"),
-  toggleActive: (active: boolean) => trackEvent("table_toggle_active", { active }),
+  create: () => trackEvent("tables_create"),
+  update: () => trackEvent("tables_update"),
+  delete: () => trackEvent("tables_delete"),
+  activate: () => trackEvent("tables_activate"),
+  deactivate: () => trackEvent("tables_deactivate"),
 };
 
 // Billing events
 export const billing = {
-  viewPlans: () => trackEvent("billing_view_plans"),
-  selectPlan: (plan: string, interval: string) =>
-    trackEvent("billing_select_plan", { plan, interval }),
-  startCheckout: (plan: string) => trackEvent("billing_start_checkout", { plan }),
-  cancelSubscription: () => trackEvent("billing_cancel_subscription"),
+  plansView: () => trackEvent("billing_plans_view"),
+  planFreeSelect: () => trackEvent("billing_plan_free_select"),
+  planBasicMonthlySelect: () => trackEvent("billing_plan_basic_monthly_select"),
+  planBasicYearlySelect: () => trackEvent("billing_plan_basic_yearly_select"),
+  planProMonthlySelect: () => trackEvent("billing_plan_pro_monthly_select"),
+  planProYearlySelect: () => trackEvent("billing_plan_pro_yearly_select"),
+  checkoutStart: () => trackEvent("billing_checkout_start"),
+  subscriptionCancel: () => trackEvent("billing_subscription_cancel"),
 };
 
 // QR Code events
 export const qrCode = {
-  view: () => trackEvent("qr_code_view"),
-  download: (format: string) => trackEvent("qr_code_download", { format }),
-  copy: () => trackEvent("qr_code_copy"),
+  view: () => trackEvent("qrcode_view"),
+  downloadPng: () => trackEvent("qrcode_download_png"),
+  print: () => trackEvent("qrcode_print"),
 };
 
 // Support events
 export const support = {
-  openChat: () => trackEvent("support_open_chat"),
-  sendMessage: () => trackEvent("support_send_message"),
+  chatOpen: () => trackEvent("support_chat_open"),
+  messageSend: () => trackEvent("support_message_send"),
+};
+
+// Section visibility events
+export const section = {
+  show: (name: string) => trackEvent(`show_${name.replace(/-/g, "_")}`),
+  timeSpent: (name: string, seconds: number) => {
+    const bucket = seconds < 5 ? "under_5s" : seconds < 15 ? "5_15s" : seconds < 30 ? "15_30s" : "over_30s";
+    trackEvent(`time_${name.replace(/-/g, "_")}_${bucket}`);
+  },
 };
 
 // Export all as analytics object for convenience
 export const analytics = {
   trackEvent,
+  pageView,
+  section,
   marketing,
   auth,
   onboarding,

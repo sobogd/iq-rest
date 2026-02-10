@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { JsonLd, buildAlternates } from "../../_lib";
+import { PageView } from "@/components/PageView";
 
 // Define changelog entries data
 const changelogEntries: Record<string, {
@@ -145,10 +146,12 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   const hasSixBenefits = key === "landing-redesign" || key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator" || key === "detailed-analytics-restaurant-qr-menu-website" || key === "support-qr-menu-restaurant-cafe";
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="max-w-4xl mx-auto">
-        {/* Breadcrumb */}
-        <nav className="mb-8">
+    <>
+      <PageView slug={`changelog-${entryId}`} />
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
           <Link href="/changelog" className="text-primary hover:underline">
             ← {t("backToChangelog")}
           </Link>
@@ -316,5 +319,6 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
         />
       </div>
     </div>
+    </>
   );
 }

@@ -36,7 +36,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
         className="text-lg px-8 py-6"
         onClick={() => {
           setOpen(true);
-          analytics.marketing.clickDemo();
+          analytics.marketing.demoClick();
         }}
       >
         {buttonText}

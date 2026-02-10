@@ -30,7 +30,7 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
   return (
     <Dialog open={open} onOpenChange={(value) => {
       setOpen(value);
-      if (value) analytics.trackEvent("mobile_menu_open");
+      if (value) analytics.marketing.mobileMenuOpen();
     }}>
       <DialogTrigger asChild className="lg:hidden">
         <Button
@@ -57,7 +57,8 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
                 }`}
                 onClick={() => {
                   setOpen(false);
-                  analytics.trackEvent("nav_click", { link: link.href, source: "mobile_menu" });
+                  const section = link.href.replace(/^#/, "");
+                  analytics.marketing.mobileMenuNavClick(section);
                 }}
               >
                 {link.label}
@@ -67,7 +68,7 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
           <Button asChild className="w-full mt-6">
             <Link href="/dashboard" onClick={() => {
               setOpen(false);
-              analytics.marketing.clickCTA("mobile_menu");
+              analytics.marketing.ctaHeaderClick();
             }}>
               {getStartedLabel}
             </Link>

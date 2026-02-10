@@ -96,11 +96,11 @@ export function ContactsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.contacts.update();
-        if (phone && phone !== originalPhone) analytics.contacts.addPhone();
-        if (instagram && instagram !== originalInstagram) analytics.contacts.addInstagram();
-        if (whatsapp && whatsapp !== originalWhatsapp) analytics.contacts.addWhatsapp();
-        if (lat && lng && (lat !== originalLat || lng !== originalLng)) analytics.contacts.setLocation();
+        analytics.contacts.save();
+        if (phone && phone !== originalPhone) analytics.contacts.phoneAdd();
+        if (instagram && instagram !== originalInstagram) analytics.contacts.instagramAdd();
+        if (whatsapp && whatsapp !== originalWhatsapp) analytics.contacts.whatsappAdd();
+        if (lat && lng && (lat !== originalLat || lng !== originalLng)) analytics.contacts.locationSet();
         setOriginalPhone(phone);
         setOriginalInstagram(instagram);
         setOriginalWhatsapp(whatsapp);

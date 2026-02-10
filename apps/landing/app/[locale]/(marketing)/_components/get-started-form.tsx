@@ -80,7 +80,7 @@ export function GetStartedForm() {
 
     setStatus("loading");
     setErrorMessage("");
-    analytics.auth.submitEmail();
+    analytics.auth.emailSubmit();
 
     try {
       const response = await fetch("/api/auth/send-otp", {
@@ -110,7 +110,7 @@ export function GetStartedForm() {
 
     setStatus("loading");
     setErrorMessage("");
-    analytics.auth.verifyCode();
+    analytics.auth.codeVerify();
 
     try {
       const response = await fetch("/api/auth/verify-otp", {

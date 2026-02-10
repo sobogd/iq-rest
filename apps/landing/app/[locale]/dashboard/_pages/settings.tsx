@@ -137,9 +137,9 @@ export function SettingsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.settings.updateGeneral();
+        analytics.settings.save();
         if (slugWasChanged) {
-          analytics.settings.changeSlug(slug);
+          analytics.settings.slugChange();
         }
 
         setOriginalName(name);

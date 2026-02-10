@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { HowToSteps } from "../_components";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
+import { PageView } from "@/components/PageView";
 
 export async function generateMetadata({
   params,
@@ -173,6 +174,7 @@ export default async function ChangelogPage({
 
   return (
     <>
+      <PageView slug="changelog" />
       <JsonLd data={blogSchema} />
       <JsonLd data={breadcrumbSchema} />
       <div className="container mx-auto px-4 py-16">

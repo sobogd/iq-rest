@@ -156,7 +156,11 @@ export function ItemsPage() {
         toast.error(t.updateError);
       } else {
         toast.success(newActive ? `${itemName} ${t.enabled}` : `${itemName} ${t.disabled}`);
-        analytics.item.toggleActive(newActive);
+        if (newActive) {
+          analytics.item.activate();
+        } else {
+          analytics.item.deactivate();
+        }
       }
     } catch {
       setItems((prev) =>
@@ -572,9 +576,11 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
         const hasImage = !!imageUrl;
         const hasAllergens = allergens.length > 0;
         if (isEdit) {
-          analytics.item.update(hasImage, hasAllergens);
+          analytics.item.update();
         } else {
-          analytics.item.create(hasImage, hasAllergens);
+          analytics.item.create();
+          if (hasImage) analytics.item.createWithImage();
+          if (hasAllergens) analytics.item.createWithAllergens();
         }
         onSaved();
       } else {

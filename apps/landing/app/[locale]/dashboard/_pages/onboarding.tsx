@@ -57,7 +57,7 @@ export function OnboardingPage() {
         if (response.ok) {
           const result = await response.json();
           setData(result);
-          analytics.onboarding.viewOnboarding();
+          analytics.onboarding.view();
 
           // Find first incomplete step
           const firstIncomplete = allSteps.findIndex(
@@ -68,7 +68,7 @@ export function OnboardingPage() {
           }
 
           if (result.requiredCompleted) {
-            analytics.onboarding.completeAllRequired();
+            analytics.onboarding.allComplete();
           }
         }
       } catch (error) {
@@ -81,24 +81,30 @@ export function OnboardingPage() {
   }, []);
 
   const handleStepClick = (step: StepKey, page: PageKey) => {
-    analytics.onboarding.clickStep(step);
+    const stepEvents: Record<StepKey, () => void> = {
+      title: analytics.onboarding.stepTitleClick,
+      slug: analytics.onboarding.stepSlugClick,
+      categories: analytics.onboarding.stepCategoriesClick,
+      items: analytics.onboarding.stepItemsClick,
+      contacts: analytics.onboarding.stepContactsClick,
+      translations: analytics.onboarding.stepLanguagesClick,
+      design: analytics.onboarding.stepDesignClick,
+      reservations: analytics.onboarding.stepReservationsClick,
+    };
+    stepEvents[step]?.();
     navigateFromOnboarding(page);
   };
 
   const goToPrevious = () => {
     if (currentStep > 0) {
-      const fromStep = allSteps[currentStep].key;
-      const toStep = allSteps[currentStep - 1].key;
-      analytics.onboarding.navigatePrev(fromStep, toStep);
+      analytics.onboarding.navigatePrev();
       setCurrentStep(currentStep - 1);
     }
   };
 
   const goToNext = () => {
     if (currentStep < allSteps.length - 1) {
-      const fromStep = allSteps[currentStep].key;
-      const toStep = allSteps[currentStep + 1].key;
-      analytics.onboarding.navigateNext(fromStep, toStep);
+      analytics.onboarding.navigateNext();
       setCurrentStep(currentStep + 1);
     }
   };
@@ -185,7 +191,7 @@ export function OnboardingPage() {
               className="w-full"
               size="lg"
               onClick={() => {
-                analytics.onboarding.viewMenu();
+                analytics.onboarding.menuView();
                 window.open(`/m/${slug}`, "_blank");
               }}
             >

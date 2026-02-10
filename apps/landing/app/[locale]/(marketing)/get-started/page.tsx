@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { GetStartedForm } from "../_components";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
+import { PageView } from "@/components/PageView";
 
 export async function generateMetadata({
   params,
@@ -67,6 +68,7 @@ export default async function GetStartedPage({
 
   return (
     <>
+      <PageView slug="get-started" />
       <JsonLd data={breadcrumbSchema} />
       <div className="flex items-center justify-center min-h-[calc(100vh-200px)] py-8">
         <div className="w-full max-w-[1000px] mx-auto px-4">

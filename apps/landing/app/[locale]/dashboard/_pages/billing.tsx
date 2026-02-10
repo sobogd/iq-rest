@@ -64,7 +64,7 @@ export function BillingPage() {
   }, []);
 
   useEffect(() => {
-    analytics.billing.viewPlans();
+    analytics.billing.plansView();
     fetchSubscriptionStatus().then(() => setLoading(false));
   }, [fetchSubscriptionStatus]);
 

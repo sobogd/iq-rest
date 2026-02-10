@@ -104,7 +104,7 @@ export function PricingCards() {
           onClick={() => {
             const newValue = !isYearly;
             setIsYearly(newValue);
-            analytics.trackEvent("pricing_toggle_billing", { interval: newValue ? "yearly" : "monthly" });
+            analytics.trackEvent(newValue ? "billing_toggle_yearly" : "billing_toggle_monthly");
           }}
           className={cn(
             "relative inline-flex h-6 w-11 items-center rounded-full transition-colors",
@@ -193,7 +193,14 @@ export function PricingCards() {
                   className="w-full"
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
-                  onClick={() => analytics.billing.selectPlan(plan.id, isYearly ? "yearly" : "monthly")}
+                  onClick={() => {
+                    const events: Record<string, Record<string, () => void>> = {
+                      free: { monthly: analytics.billing.planFreeSelect, yearly: analytics.billing.planFreeSelect },
+                      basic: { monthly: analytics.billing.planBasicMonthlySelect, yearly: analytics.billing.planBasicYearlySelect },
+                      pro: { monthly: analytics.billing.planProMonthlySelect, yearly: analytics.billing.planProYearlySelect },
+                    };
+                    events[plan.id]?.[isYearly ? "yearly" : "monthly"]?.();
+                  }}
                 >
                   <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
                 </Button>

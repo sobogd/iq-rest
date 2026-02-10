@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { CtaSection } from "../_components";
+import { PageView } from "@/components/PageView";
 
 export async function generateMetadata({
   params,
@@ -76,6 +77,7 @@ export default async function FAQPage({
 
   return (
     <>
+      <PageView slug="faq" />
       <JsonLd data={faqSchema} />
       <JsonLd data={breadcrumbSchema} />
       <section className="w-full py-16 bg-background" aria-labelledby="faq-heading">

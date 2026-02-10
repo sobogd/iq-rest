@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { PricingCards, CtaSection } from "../_components";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
+import { PageView } from "@/components/PageView";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -172,6 +173,7 @@ export default async function PricingPage({
 
   return (
     <>
+      <PageView slug="pricing" />
       <JsonLd data={pricingProductSchema} />
       <JsonLd data={breadcrumbSchema} />
       <div className="container mx-auto px-4 py-16">

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { ContactForm, CtaSection } from "../_components";
 import { JsonLd, contactPageSchema, createBreadcrumbSchema, buildAlternates } from "../_lib";
+import { PageView } from "@/components/PageView";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -70,6 +71,7 @@ export default async function ContactsPage({
 
   return (
     <>
+      <PageView slug="contacts" />
       <JsonLd data={contactPageSchema} />
       <JsonLd data={breadcrumbSchema} />
       <div className="text-center mb-16 px-4 pt-16">

@@ -143,9 +143,9 @@ export function DesignPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.design.update();
+        analytics.design.save();
         if (accentColor !== originalAccentColor) {
-          analytics.design.changeAccentColor(accentColor);
+          analytics.design.accentColorChange();
         }
         setOriginalSource(source);
         setOriginalAccentColor(accentColor);
