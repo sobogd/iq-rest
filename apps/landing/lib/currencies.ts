@@ -67,6 +67,8 @@ export const CURRENCIES = [
   { code: "GHS", symbol: "₵", name: "Ghanaian Cedi" },
   { code: "MAD", symbol: "د.م.", name: "Moroccan Dirham" },
   { code: "TND", symbol: "د.ت", name: "Tunisian Dinar" },
+  { code: "XOF", symbol: "CFA", name: "West African CFA Franc" },
+  { code: "XAF", symbol: "FCFA", name: "Central African CFA Franc" },
 
   // Oceania
   { code: "NZD", symbol: "NZ$", name: "New Zealand Dollar" },
