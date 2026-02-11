@@ -5,6 +5,15 @@ import { MapView } from "@/components/map-view";
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { getCountryCenter } from "@/lib/country-centers";
 
+function getInstagramUrl(instagram: string): string {
+  // If already a full URL, use as is
+  if (instagram.startsWith("http://") || instagram.startsWith("https://")) {
+    return instagram;
+  }
+  // Otherwise, build URL from username (remove @ if present)
+  return `https://instagram.com/${instagram.replace("@", "")}`;
+}
+
 interface ContactsPageProps {
   params: Promise<{
     locale: string;
@@ -83,7 +92,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
             )}
             {restaurant.instagram && (
               <a
-                href={`https://instagram.com/${restaurant.instagram.replace('@', '')}`}
+                href={getInstagramUrl(restaurant.instagram)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 flex items-center justify-center rounded-full shadow-lg bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white"
