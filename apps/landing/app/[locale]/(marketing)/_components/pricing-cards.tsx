@@ -31,14 +31,14 @@ const PLANS: Plan[] = [
   },
   {
     id: "basic",
-    price: { monthly: 14.9, yearly: 9.9 },
-    yearlyTotal: 118.8,
+    price: { monthly: 9.9, yearly: 7.4 },
+    yearlyTotal: 88.8,
     popular: true,
   },
   {
     id: "pro",
-    price: { monthly: 39.9, yearly: 29 },
-    yearlyTotal: 348,
+    price: { monthly: 29.9, yearly: 20.75 },
+    yearlyTotal: 249,
     popular: false,
   },
 ];
@@ -165,7 +165,7 @@ export function PricingCards() {
               <CardContent className="flex-1">
                 <div className="space-y-1 mb-6">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold">${price}</span>
+                    <span className="text-4xl font-bold">€{price}</span>
                     <span className="text-muted-foreground">{t("perMonth")}</span>
                   </div>
                   {isYearly && plan.yearlyTotal && (

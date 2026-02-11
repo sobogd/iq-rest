@@ -22,10 +22,10 @@ interface SubscriptionStatusResponse {
 
 const SUBSCRIPTION_OPTIONS = [
   { id: "FREE", plan: "FREE" as PlanType, cycle: null, price: 0, lookupKey: null },
-  { id: "BASIC_MONTHLY", plan: "BASIC" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 14.9, lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
-  { id: "BASIC_YEARLY", plan: "BASIC" as PlanType, cycle: "YEARLY" as BillingCycle, price: 9.9, lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY },
-  { id: "PRO_MONTHLY", plan: "PRO" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 39.9, lookupKey: PRICE_LOOKUP_KEYS.PRO_MONTHLY },
-  { id: "PRO_YEARLY", plan: "PRO" as PlanType, cycle: "YEARLY" as BillingCycle, price: 29, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
+  { id: "BASIC_MONTHLY", plan: "BASIC" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 9.9, lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
+  { id: "BASIC_YEARLY", plan: "BASIC" as PlanType, cycle: "YEARLY" as BillingCycle, price: 7.4, lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY },
+  { id: "PRO_MONTHLY", plan: "PRO" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 29.9, lookupKey: PRICE_LOOKUP_KEYS.PRO_MONTHLY },
+  { id: "PRO_YEARLY", plan: "PRO" as PlanType, cycle: "YEARLY" as BillingCycle, price: 20.75, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
 ] as const;
 
 export function BillingPage() {
@@ -231,7 +231,7 @@ export function BillingPage() {
                   <div className="flex flex-col min-w-0">
                     <span className="text-sm font-medium">{t(`plans.${option.id}.name`)}</span>
                     <span className="text-sm text-muted-foreground">
-                      ${option.price}{t("perMonth")}
+                      €{option.price}{t("perMonth")}
                     </span>
                   </div>
                 </div>

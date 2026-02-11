@@ -12,8 +12,8 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles = {
-    en: "QR Menu & Website for Restaurant or Cafe | Pricing from $0 - IQ Rest",
-    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde $0 - IQ Rest",
+    en: "QR Menu & Website for Restaurant or Cafe | Pricing from €0 - IQ Rest",
+    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde €0 - IQ Rest",
   };
 
   const descriptions = {
@@ -79,7 +79,7 @@ const shippingDetails = {
   shippingRate: {
     "@type": "MonetaryAmount",
     value: "0",
-    currency: "USD",
+    currency: "EUR",
   },
   shippingDestination: {
     "@type": "DefinedRegion",
@@ -106,7 +106,7 @@ const createOffer = (name: string, price: string) => ({
   "@type": "Offer",
   name,
   price,
-  priceCurrency: "USD",
+  priceCurrency: "EUR",
   availability: "https://schema.org/InStock",
   priceValidUntil: "2026-12-31",
   url: "https://iq-rest.com/pricing",
@@ -128,10 +128,10 @@ const pricingProductSchema = {
   category: "Restaurant Software",
   offers: [
     createOffer("QR Menu Free Plan - Restaurant Website", "0"),
-    createOffer("QR Menu Basic Plan Monthly - Restaurant Website", "14.9"),
-    createOffer("QR Menu Basic Plan Yearly - Restaurant Website", "118.8"),
-    createOffer("QR Menu Pro Plan Monthly - Restaurant Website", "39.9"),
-    createOffer("QR Menu Pro Plan Yearly - Restaurant Website", "348"),
+    createOffer("QR Menu Basic Plan Monthly - Restaurant Website", "9.9"),
+    createOffer("QR Menu Basic Plan Yearly - Restaurant Website", "88.8"),
+    createOffer("QR Menu Pro Plan Monthly - Restaurant Website", "29.9"),
+    createOffer("QR Menu Pro Plan Yearly - Restaurant Website", "249"),
   ],
   aggregateRating: {
     "@type": "AggregateRating",
