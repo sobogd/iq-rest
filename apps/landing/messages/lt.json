@@ -1968,5 +1968,12 @@
     "cta": "Atidaryti valdymo skydelį",
     "helpNote": "Jei turite klausimų, parašykite mums valdymo skydelio Palaikymo skiltyje.",
     "signature": "Pagarbiai, IQ Rest komanda"
+  },
+  "supportEmail": {
+    "subject": "Turite naują pranešimą iš IQ Rest palaikymo",
+    "greeting": "Sveiki!",
+    "body": "Turite naują pranešimą iš mūsų palaikymo komandos. Patikrinkite jį savo valdymo skydelyje.",
+    "cta": "Atidaryti palaikymo pokalbį",
+    "signature": "Pagarbiai,<br>IQ Rest komanda"
   }
 }

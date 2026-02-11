@@ -1968,5 +1968,12 @@
     "cta": "Odpri nadzorno ploščo",
     "helpNote": "Če imate vprašanja, nam pišite v razdelku Podpora na vaši nadzorni plošči.",
     "signature": "Lep pozdrav, Ekipa IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Imate novo sporočilo od podpore IQ Rest",
+    "greeting": "Pozdravljeni!",
+    "body": "Imate novo sporočilo od naše ekipe za podporo. Preverite ga na svoji nadzorni plošči.",
+    "cta": "Odpri klepet za podporo",
+    "signature": "Lep pozdrav,<br>Ekipa IQ Rest"
   }
 }

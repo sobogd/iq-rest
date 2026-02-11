@@ -1968,5 +1968,12 @@
     "cta": "Kontrol Panelini Aç",
     "helpNote": "Sorularınız varsa, kontrol panelinizin Destek bölümünden bize yazın.",
     "signature": "Selamlar, IQ Rest Ekibi"
+  },
+  "supportEmail": {
+    "subject": "IQ Rest Destek'ten yeni bir mesajınız var",
+    "greeting": "Merhaba!",
+    "body": "Destek ekibimizden yeni bir mesajınız var. Lütfen kontrol panelinizden kontrol edin.",
+    "cta": "Destek sohbetini aç",
+    "signature": "Saygılarımızla,<br>IQ Rest Ekibi"
   }
 }

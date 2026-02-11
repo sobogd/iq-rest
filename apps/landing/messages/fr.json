@@ -1968,5 +1968,12 @@
     "cta": "Ouvrir le Dashboard",
     "helpNote": "Si tu as des questions, écris-nous dans la section Support de ton tableau de bord.",
     "signature": "À bientôt, L'équipe IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Vous avez un nouveau message du support IQ Rest",
+    "greeting": "Bonjour!",
+    "body": "Vous avez un nouveau message de notre équipe de support. Veuillez le consulter dans votre tableau de bord.",
+    "cta": "Ouvrir le chat support",
+    "signature": "Cordialement,<br>L'équipe IQ Rest"
   }
 }

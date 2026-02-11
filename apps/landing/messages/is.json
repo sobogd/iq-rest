@@ -1968,5 +1968,12 @@
     "cta": "Opna stjórnborð",
     "helpNote": "Ef þú hefur spurningar, skrifaðu okkur í Stuðningshlutanum á stjórnborðinu þínu.",
     "signature": "Bestu kveðjur, IQ Rest teymið"
+  },
+  "supportEmail": {
+    "subject": "Þú hefur ný skilaboð frá IQ Rest þjónustuver",
+    "greeting": "Hæ!",
+    "body": "Þú hefur ný skilaboð frá þjónustuteyminu okkar. Vinsamlegast skoðaðu þau á stjórnborðinu þínu.",
+    "cta": "Opna þjónustuspjall",
+    "signature": "Bestu kveðjur,<br>IQ Rest teymið"
   }
 }

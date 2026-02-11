@@ -1968,5 +1968,12 @@
     "cta": "Open Dashboard",
     "helpNote": "Als je vragen hebt, schrijf ons in het Support-gedeelte van je dashboard.",
     "signature": "Groetjes, Het IQ Rest Team"
+  },
+  "supportEmail": {
+    "subject": "Je hebt een nieuw bericht van IQ Rest Support",
+    "greeting": "Hallo!",
+    "body": "Je hebt een nieuw bericht van ons supportteam. Bekijk het in je dashboard.",
+    "cta": "Open support chat",
+    "signature": "Met vriendelijke groet,<br>Het IQ Rest Team"
   }
 }

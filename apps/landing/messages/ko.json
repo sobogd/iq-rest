@@ -1700,5 +1700,12 @@
     "cta": "대시보드 열기",
     "helpNote": "질문이 있으시면 대시보드의 지원 섹션에서 문의해 주세요.",
     "signature": "감사합니다, IQ Rest 팀"
+  },
+  "supportEmail": {
+    "subject": "IQ Rest 지원팀에서 새 메시지가 있습니다",
+    "greeting": "안녕하세요!",
+    "body": "지원팀에서 새 메시지가 있습니다. 대시보드에서 확인해 주세요.",
+    "cta": "지원 채팅 열기",
+    "signature": "감사합니다,<br>IQ Rest 팀"
   }
 }

@@ -1968,5 +1968,12 @@
     "cta": "Deschide panoul de control",
     "helpNote": "Dacă ai întrebări, scrie-ne în secțiunea Suport din panoul tău de control.",
     "signature": "Cu drag, Echipa IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Aveți un mesaj nou de la suportul IQ Rest",
+    "greeting": "Bună!",
+    "body": "Aveți un mesaj nou de la echipa noastră de suport. Vă rugăm să îl verificați în panoul de control.",
+    "cta": "Deschide chat suport",
+    "signature": "Cu stimă,<br>Echipa IQ Rest"
   }
 }

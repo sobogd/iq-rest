@@ -1968,5 +1968,12 @@
     "cta": "Abrir Panel",
     "helpNote": "Si tienes alguna pregunta, escríbenos en la sección de Soporte de tu panel de control.",
     "signature": "Saludos, El equipo de IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Tienes un nuevo mensaje del soporte de IQ Rest",
+    "greeting": "¡Hola!",
+    "body": "Tienes un nuevo mensaje de nuestro equipo de soporte. Por favor, revísalo en tu panel de control.",
+    "cta": "Abrir chat de soporte",
+    "signature": "Saludos,<br>El equipo de IQ Rest"
   }
 }

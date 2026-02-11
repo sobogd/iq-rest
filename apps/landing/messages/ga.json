@@ -1968,5 +1968,12 @@
     "cta": "Oscail an Painéal",
     "helpNote": "Má tá ceisteanna agat, scríobh chugainn sa rannán Tacaíochta ar do phainéal.",
     "signature": "Le dea-ghuí, Foireann IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Tá teachtaireacht nua agat ó Thacaíocht IQ Rest",
+    "greeting": "Dia duit!",
+    "body": "Tá teachtaireacht nua agat ónár bhfoireann tacaíochta. Seiceáil í ar do dheais.",
+    "cta": "Oscail comhrá tacaíochta",
+    "signature": "Le meas,<br>Foireann IQ Rest"
   }
 }

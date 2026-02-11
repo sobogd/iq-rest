@@ -1,7 +1,71 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
+import nodemailer from "nodemailer";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
+
+interface SupportEmailTranslations {
+  subject: string;
+  greeting: string;
+  body: string;
+  cta: string;
+  signature: string;
+}
+
+async function getTranslations(locale: string): Promise<SupportEmailTranslations> {
+  try {
+    const messages = await import(`@/messages/${locale}.json`);
+    return messages.supportEmail;
+  } catch {
+    const messages = await import(`@/messages/en.json`);
+    return messages.supportEmail;
+  }
+}
+
+async function sendNewMessageEmail(toEmail: string, locale: string) {
+  const t = await getTranslations(locale);
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT),
+    secure: false,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.FROM_EMAIL,
+    to: toEmail,
+    subject: t.subject,
+    html: `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+          ${t.greeting}
+        </p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+          ${t.body}
+        </p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+          <a href="https://iq-rest.com/dashboard?page=support" style="color: #0066cc;">${t.cta}</a>
+        </p>
+        <p style="font-size: 15px; margin: 20px 0 0; color: #1a1a1a;">
+          ${t.signature}
+        </p>
+      </div>
+    `,
+    text: `${t.greeting}
+
+${t.body}
+
+${t.cta}: https://iq-rest.com/dashboard?page=support
+
+${t.signature}`,
+  };
+
+  await transporter.sendMail(mailOptions);
+}
 
 interface RouteParams {
   params: Promise<{ id: string }>;
@@ -80,6 +144,24 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       );
     }
 
+    // Get client email and restaurant language to send notification
+    const companyWithUsers = await prisma.company.findUnique({
+      where: { id: companyId },
+      include: {
+        users: {
+          include: {
+            user: {
+              select: { email: true },
+            },
+          },
+        },
+        restaurants: {
+          select: { defaultLanguage: true },
+          take: 1,
+        },
+      },
+    });
+
     const supportMessage = await prisma.supportMessage.create({
       data: {
         message: message.trim(),
@@ -99,6 +181,17 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         },
       },
     });
+
+    // Send email notification to client
+    const clientEmail = companyWithUsers?.users[0]?.user?.email;
+    const locale = companyWithUsers?.restaurants[0]?.defaultLanguage || "en";
+    if (clientEmail) {
+      try {
+        await sendNewMessageEmail(clientEmail, locale);
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+      }
+    }
 
     return NextResponse.json(supportMessage, { status: 201 });
   } catch (error) {

@@ -1968,5 +1968,12 @@
     "cta": "Irányítópult megnyitása",
     "helpNote": "Ha bármilyen kérdésed van, írj nekünk az irányítópultod Támogatás részében.",
     "signature": "Üdvözlettel, Az IQ Rest csapata"
+  },
+  "supportEmail": {
+    "subject": "Új üzeneted van az IQ Rest ügyfélszolgálattól",
+    "greeting": "Szia!",
+    "body": "Új üzeneted van az ügyfélszolgálati csapatunktól. Kérjük, ellenőrizd a vezérlőpultodon.",
+    "cta": "Támogatási chat megnyitása",
+    "signature": "Üdvözlettel,<br>Az IQ Rest csapat"
   }
 }

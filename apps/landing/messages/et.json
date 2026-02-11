@@ -1968,5 +1968,12 @@
     "cta": "Ava töölaud",
     "helpNote": "Kui teil on küsimusi, kirjutage meile oma juhtpaneeli tugisektsioonis.",
     "signature": "Tervitustega, IQ Rest meeskond"
+  },
+  "supportEmail": {
+    "subject": "Teil on uus sõnum IQ Rest toelt",
+    "greeting": "Tere!",
+    "body": "Teil on uus sõnum meie tugimeeskonnalt. Palun vaadake seda oma juhtpaneelil.",
+    "cta": "Ava tugivestlus",
+    "signature": "Lugupidamisega,<br>IQ Rest meeskond"
   }
 }

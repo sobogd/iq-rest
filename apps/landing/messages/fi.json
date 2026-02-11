@@ -1968,5 +1968,12 @@
     "cta": "Avaa hallintapaneeli",
     "helpNote": "Jos sinulla on kysymyksiä, kirjoita meille hallintapaneelisi Tuki-osiossa.",
     "signature": "Terveisin, IQ Rest -tiimi"
+  },
+  "supportEmail": {
+    "subject": "Sinulla on uusi viesti IQ Rest -tuelta",
+    "greeting": "Hei!",
+    "body": "Sinulla on uusi viesti tukitiimiltämme. Tarkista se kojelaudaltasi.",
+    "cta": "Avaa tukikeskustelu",
+    "signature": "Ystävällisin terveisin,<br>IQ Rest -tiimi"
   }
 }

@@ -84,20 +84,18 @@ export default function middleware(request: NextRequest) {
   // Redirect root to detected locale
   if (pathname === "/") {
     const targetLocale = detectUserLocale(request);
-    const response = NextResponse.redirect(
-      new URL(`/${targetLocale}`, request.url),
-      302
-    );
+    const redirectUrl = new URL(`/${targetLocale}`, request.url);
+    redirectUrl.search = request.nextUrl.search;
+    const response = NextResponse.redirect(redirectUrl, 302);
     return setLocaleCookie(response, targetLocale);
   }
 
   // Redirect paths without locale prefix
   if (!localeRegex.test(pathname)) {
     const targetLocale = detectUserLocale(request);
-    const response = NextResponse.redirect(
-      new URL(`/${targetLocale}${pathname}`, request.url),
-      302
-    );
+    const redirectUrl = new URL(`/${targetLocale}${pathname}`, request.url);
+    redirectUrl.search = request.nextUrl.search;
+    const response = NextResponse.redirect(redirectUrl, 302);
     return setLocaleCookie(response, targetLocale);
   }
 

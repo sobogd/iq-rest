@@ -1968,5 +1968,12 @@
     "cta": "Atvērt vadības paneli",
     "helpNote": "Ja jums ir jautājumi, rakstiet mums vadības paneļa Atbalsta sadaļā.",
     "signature": "Ar cieņu, IQ Rest komanda"
+  },
+  "supportEmail": {
+    "subject": "Jums ir jauna ziņa no IQ Rest atbalsta",
+    "greeting": "Sveiki!",
+    "body": "Jums ir jauna ziņa no mūsu atbalsta komandas. Lūdzu, pārbaudiet to savā vadības panelī.",
+    "cta": "Atvērt atbalsta tērzēšanu",
+    "signature": "Ar cieņu,<br>IQ Rest komanda"
   }
 }

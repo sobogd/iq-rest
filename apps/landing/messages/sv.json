@@ -1968,5 +1968,12 @@
     "cta": "Öppna kontrollpanelen",
     "helpNote": "Om du har frågor, skriv till oss i Support-sektionen på din kontrollpanel.",
     "signature": "Hälsningar, IQ Rest-teamet"
+  },
+  "supportEmail": {
+    "subject": "Du har ett nytt meddelande från IQ Rest Support",
+    "greeting": "Hej!",
+    "body": "Du har ett nytt meddelande från vårt supportteam. Vänligen kontrollera det i din instrumentpanel.",
+    "cta": "Öppna supportchatt",
+    "signature": "Med vänliga hälsningar,<br>IQ Rest-teamet"
   }
 }

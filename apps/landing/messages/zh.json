@@ -1700,5 +1700,12 @@
     "cta": "打开控制面板",
     "helpNote": "如有任何问题，请在您的控制面板的支持部分给我们留言。",
     "signature": "祝好，IQ Rest 团队"
+  },
+  "supportEmail": {
+    "subject": "您收到了来自IQ Rest支持团队的新消息",
+    "greeting": "您好！",
+    "body": "您收到了来自我们支持团队的新消息。请在您的仪表板中查看。",
+    "cta": "打开支持聊天",
+    "signature": "此致敬礼，<br>IQ Rest团队"
   }
 }

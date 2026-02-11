@@ -1968,5 +1968,12 @@
     "cta": "Otvoriť dashboard",
     "helpNote": "Ak máte otázky, napíšte nám v sekcii Podpora na vašom dashboarde.",
     "signature": "S pozdravom, Tím IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Máte novú správu od podpory IQ Rest",
+    "greeting": "Ahoj!",
+    "body": "Máte novú správu od nášho tímu podpory. Skontrolujte ju prosím na svojom paneli.",
+    "cta": "Otvoriť chat podpory",
+    "signature": "S pozdravom,<br>Tím IQ Rest"
   }
 }

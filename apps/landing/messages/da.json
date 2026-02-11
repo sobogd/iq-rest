@@ -1968,5 +1968,12 @@
     "cta": "Åbn dashboard",
     "helpNote": "Hvis du har spørgsmål, skriv til os i Support-sektionen på dit dashboard.",
     "signature": "Venlig hilsen, IQ Rest teamet"
+  },
+  "supportEmail": {
+    "subject": "Du har en ny besked fra IQ Rest Support",
+    "greeting": "Hej!",
+    "body": "Du har en ny besked fra vores supportteam. Tjek den venligst i dit dashboard.",
+    "cta": "Åbn support chat",
+    "signature": "Med venlig hilsen,<br>IQ Rest Teamet"
   }
 }

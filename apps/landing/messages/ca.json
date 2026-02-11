@@ -1968,5 +1968,12 @@
     "cta": "Obre el tauler",
     "helpNote": "Si tens alguna pregunta, escriu-nos a la secció de Suport del teu panell de control.",
     "signature": "Salutacions, L'equip d'IQ Rest"
+  },
+  "supportEmail": {
+    "subject": "Tens un nou missatge del suport d'IQ Rest",
+    "greeting": "Hola!",
+    "body": "Tens un nou missatge del nostre equip de suport. Si us plau, revisa'l al teu tauler.",
+    "cta": "Obrir xat de suport",
+    "signature": "Salutacions,<br>L'equip d'IQ Rest"
   }
 }
