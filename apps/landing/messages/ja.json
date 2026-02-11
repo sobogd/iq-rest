@@ -1552,7 +1552,11 @@
       "slugChangedTitle": "ウェブサイトアドレスが更新されました",
       "slugChangedDescription": "レストランは以下で利用可能になりました：",
       "close": "閉じる",
-      "view": "表示"
+      "view": "表示",
+      "hideTitleLabel": "レストラン名",
+      "hideTitleVisible": "ホームページに表示",
+      "hideTitleHidden": "ホームページで非表示",
+      "hideTitleHint": "背景画像や動画のみを表示するために、ホームページのタイトルと暗いオーバーレイを非表示にします"
     },
     "onboarding": {
       "title": "IQ Restへようこそ！",

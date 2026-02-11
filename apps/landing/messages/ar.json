@@ -1552,7 +1552,11 @@
       "slugChangedTitle": "تم تحديث عنوان الموقع",
       "slugChangedDescription": "مطعمك متاح الآن على:",
       "close": "إغلاق",
-      "view": "عرض"
+      "view": "عرض",
+      "hideTitleLabel": "اسم المطعم",
+      "hideTitleVisible": "مرئي على الصفحة الرئيسية",
+      "hideTitleHidden": "مخفي على الصفحة الرئيسية",
+      "hideTitleHint": "إخفاء العنوان والطبقة الداكنة على صفحتك الرئيسية لعرض صورة أو فيديو الخلفية فقط"
     },
     "onboarding": {
       "title": "مرحباً بك في IQ Rest!",

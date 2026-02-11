@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Svetainės adresas atnaujintas",
       "slugChangedDescription": "Jūsų restoranas dabar prieinamas adresu:",
       "close": "Uždaryti",
-      "view": "Peržiūrėti"
+      "view": "Peržiūrėti",
+      "hideTitleLabel": "Restorano pavadinimas",
+      "hideTitleVisible": "Matomas pagrindiniame puslapyje",
+      "hideTitleHidden": "Paslėptas pagrindiniame puslapyje",
+      "hideTitleHint": "Paslėpkite pavadinimą ir tamsią perdangą pagrindiniame puslapyje, kad būtų rodomas tik fono paveikslėlis arba vaizdo įrašas"
     },
     "onboarding": {
       "title": "Sveiki atvykę į IQ Rest!",

@@ -87,19 +87,21 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
     return trans?.[locale]?.[field] || fallback;
   };
 
-  // Convert Decimal to number and apply translations
-  const categoriesWithItems = categories.map((cat) => ({
-    id: cat.id,
-    name: getTranslatedValue(cat.translations as Translations, "name", cat.name) || cat.name,
-    items: cat.items.map((item) => ({
-      id: item.id,
-      name: getTranslatedValue(item.translations as Translations, "name", item.name) || item.name,
-      description: getTranslatedValue(item.translations as Translations, "description", item.description),
-      price: Number(item.price),
-      imageUrl: item.imageUrl,
-      allergens: item.allergens,
-    })),
-  }));
+  // Convert Decimal to number, apply translations, and filter out empty categories
+  const categoriesWithItems = categories
+    .filter((cat) => cat.items.length > 0)
+    .map((cat) => ({
+      id: cat.id,
+      name: getTranslatedValue(cat.translations as Translations, "name", cat.name) || cat.name,
+      items: cat.items.map((item) => ({
+        id: item.id,
+        name: getTranslatedValue(item.translations as Translations, "name", item.name) || item.name,
+        description: getTranslatedValue(item.translations as Translations, "description", item.description),
+        price: Number(item.price),
+        imageUrl: item.imageUrl,
+        allergens: item.allergens,
+      })),
+    }));
 
   return (
     <MenuPageWrapper slug={slug}>
@@ -107,7 +109,7 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
       <MenuHeader slug={slug} title={t("onlineMenu")} accentColor={restaurant.accentColor} />
 
       {/* Menu feed */}
-      {categories.length === 0 ? (
+      {categoriesWithItems.length === 0 ? (
         <div
           className="flex-1 flex items-center justify-center"
           style={{ color: "#9ca3af" }}

@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Web sitesi adresi güncellendi",
       "slugChangedDescription": "Restoranınız artık şu adreste mevcut:",
       "close": "Kapat",
-      "view": "Görüntüle"
+      "view": "Görüntüle",
+      "hideTitleLabel": "Restoran adı",
+      "hideTitleVisible": "Ana sayfada görünür",
+      "hideTitleHidden": "Ana sayfada gizli",
+      "hideTitleHint": "Yalnızca arka plan görselini veya videoyu göstermek için ana sayfadaki başlığı ve koyu katmanı gizleyin"
     },
     "onboarding": {
       "title": "IQ Rest'e Hoş Geldiniz!",

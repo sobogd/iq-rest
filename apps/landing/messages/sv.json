@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Webbadressen uppdaterad",
       "slugChangedDescription": "Din restaurang är nu tillgänglig på:",
       "close": "Stäng",
-      "view": "Visa"
+      "view": "Visa",
+      "hideTitleLabel": "Restaurangnamn",
+      "hideTitleVisible": "Synlig på startsidan",
+      "hideTitleHidden": "Dold på startsidan",
+      "hideTitleHint": "Dölj titeln och den mörka överlagringen på startsidan för att endast visa bakgrundsbilden eller videon"
     },
     "onboarding": {
       "title": "Välkommen till IQ Rest!",

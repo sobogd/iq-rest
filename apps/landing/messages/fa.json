@@ -1572,7 +1572,11 @@
       "slugChangedTitle": "آدرس وبسایت به‌روز شد",
       "slugChangedDescription": "رستوران شما اکنون در دسترس است در:",
       "close": "بستن",
-      "view": "مشاهده"
+      "view": "مشاهده",
+      "hideTitleLabel": "نام رستوران",
+      "hideTitleVisible": "قابل مشاهده در صفحه اصلی",
+      "hideTitleHidden": "پنهان در صفحه اصلی",
+      "hideTitleHint": "عنوان و لایه تیره را در صفحه اصلی پنهان کنید تا فقط تصویر یا ویدیوی پس‌زمینه نمایش داده شود"
     },
     "onboarding": {
       "title": "به IQ Rest خوش آمدید!",

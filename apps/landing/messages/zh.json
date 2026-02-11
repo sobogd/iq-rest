@@ -1572,7 +1572,11 @@
       "slugChangedTitle": "网站地址已更新",
       "slugChangedDescription": "您的餐厅现在可在以下地址访问：",
       "close": "关闭",
-      "view": "查看"
+      "view": "查看",
+      "hideTitleLabel": "餐厅名称",
+      "hideTitleVisible": "在首页显示",
+      "hideTitleHidden": "在首页隐藏",
+      "hideTitleHint": "隐藏首页上的标题和深色遮罩，仅显示背景图片或视频"
     },
     "onboarding": {
       "title": "欢迎使用IQ Rest！",

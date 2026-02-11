@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Veebisaidi aadress uuendatud",
       "slugChangedDescription": "Teie restoran on nüüd saadaval aadressil:",
       "close": "Sulge",
-      "view": "Vaata"
+      "view": "Vaata",
+      "hideTitleLabel": "Restorani nimi",
+      "hideTitleVisible": "Nähtav avalehel",
+      "hideTitleHidden": "Peidetud avalehel",
+      "hideTitleHint": "Peida pealkiri ja tume kate avalehel, et kuvada ainult taustapilt või video"
     },
     "onboarding": {
       "title": "Tere tulemast IQ Resti!",

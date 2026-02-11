@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Websiteadres bijgewerkt",
       "slugChangedDescription": "Je restaurant is nu beschikbaar op:",
       "close": "Sluiten",
-      "view": "Bekijken"
+      "view": "Bekijken",
+      "hideTitleLabel": "Restaurantnaam",
+      "hideTitleVisible": "Zichtbaar op de homepage",
+      "hideTitleHidden": "Verborgen op de homepage",
+      "hideTitleHint": "Verberg de titel en donkere overlay op je homepage om alleen de achtergrondafbeelding of video te tonen"
     },
     "onboarding": {
       "title": "Welkom bij IQ Rest!",

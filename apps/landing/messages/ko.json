@@ -1572,7 +1572,11 @@
       "slugChangedTitle": "웹사이트 주소가 업데이트되었습니다",
       "slugChangedDescription": "레스토랑이 이제 다음 주소에서 이용 가능합니다:",
       "close": "닫기",
-      "view": "보기"
+      "view": "보기",
+      "hideTitleLabel": "레스토랑 이름",
+      "hideTitleVisible": "홈페이지에 표시",
+      "hideTitleHidden": "홈페이지에서 숨김",
+      "hideTitleHint": "배경 이미지나 비디오만 표시하려면 홈페이지의 제목과 어두운 오버레이를 숨기세요"
     },
     "onboarding": {
       "title": "IQ Rest에 오신 것을 환영합니다!",

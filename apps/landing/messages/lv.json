@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Vietnes adrese atjaunināta",
       "slugChangedDescription": "Jūsu restorāns tagad ir pieejams:",
       "close": "Aizvērt",
-      "view": "Skatīt"
+      "view": "Skatīt",
+      "hideTitleLabel": "Restorāna nosaukums",
+      "hideTitleVisible": "Redzams sākumlapā",
+      "hideTitleHidden": "Paslēpts sākumlapā",
+      "hideTitleHint": "Paslēpiet virsrakstu un tumšo pārklājumu sākumlapā, lai rādītu tikai fona attēlu vai video"
     },
     "onboarding": {
       "title": "Laipni lūdzam IQ Rest!",

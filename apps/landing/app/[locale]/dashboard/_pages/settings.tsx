@@ -20,6 +20,7 @@ import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
 import { CURRENCIES } from "@/lib/currencies";
+import { FormSwitch } from "../_ui/form-switch";
 
 interface Restaurant {
   id: string;
@@ -27,6 +28,7 @@ interface Restaurant {
   description: string | null;
   slug: string | null;
   currency: string;
+  hideTitle: boolean;
 }
 
 export function SettingsPage() {
@@ -41,11 +43,13 @@ export function SettingsPage() {
   const [description, setDescription] = useState("");
   const [slug, setSlug] = useState("");
   const [currency, setCurrency] = useState("EUR");
+  const [hideTitle, setHideTitle] = useState(false);
 
   const [originalName, setOriginalName] = useState("");
   const [originalDescription, setOriginalDescription] = useState("");
   const [originalSlug, setOriginalSlug] = useState("");
   const [originalCurrency, setOriginalCurrency] = useState("EUR");
+  const [originalHideTitle, setOriginalHideTitle] = useState(false);
 
   const [validationError, setValidationError] = useState<string | null>(null);
 
@@ -65,10 +69,12 @@ export function SettingsPage() {
           setDescription(data.description || "");
           setSlug(data.slug || "");
           setCurrency(data.currency || "EUR");
+          setHideTitle(data.hideTitle || false);
           setOriginalName(data.title || "");
           setOriginalDescription(data.description || "");
           setOriginalSlug(data.slug || "");
           setOriginalCurrency(data.currency || "EUR");
+          setOriginalHideTitle(data.hideTitle || false);
         }
       }
     } catch (error) {
@@ -84,9 +90,10 @@ export function SettingsPage() {
       name !== originalName ||
       description !== originalDescription ||
       slug !== originalSlug ||
-      currency !== originalCurrency
+      currency !== originalCurrency ||
+      hideTitle !== originalHideTitle
     );
-  }, [name, description, slug, currency, originalName, originalDescription, originalSlug, originalCurrency]);
+  }, [name, description, slug, currency, hideTitle, originalName, originalDescription, originalSlug, originalCurrency, originalHideTitle]);
 
   function handleSlugChange(value: string) {
     const cleanSlug = value
@@ -122,6 +129,7 @@ export function SettingsPage() {
           description: description.trim() || null,
           slug: slug.trim(),
           currency,
+          hideTitle,
         }),
       });
 
@@ -136,6 +144,7 @@ export function SettingsPage() {
         setOriginalDescription(description);
         setOriginalSlug(slug);
         setOriginalCurrency(currency);
+        setOriginalHideTitle(hideTitle);
 
         returnToOnboarding();
       } else {
@@ -166,6 +175,20 @@ export function SettingsPage() {
           />
           <p className="text-xs text-muted-foreground px-1">
             {t("nameHint")}
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <FormSwitch
+            id="hideTitle"
+            label={t("hideTitleLabel")}
+            checked={!hideTitle}
+            onCheckedChange={(checked) => setHideTitle(!checked)}
+            activeText={t("hideTitleVisible")}
+            inactiveText={t("hideTitleHidden")}
+          />
+          <p className="text-xs text-muted-foreground px-1">
+            {t("hideTitleHint")}
           </p>
         </div>
 

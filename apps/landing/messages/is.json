@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Vefsíðuheimilisfang uppfært",
       "slugChangedDescription": "Veitingastaðurinn þinn er nú aðgengilegur á:",
       "close": "Loka",
-      "view": "Skoða"
+      "view": "Skoða",
+      "hideTitleLabel": "Nafn veitingastaðar",
+      "hideTitleVisible": "Sýnilegt á forsíðu",
+      "hideTitleHidden": "Falið á forsíðu",
+      "hideTitleHint": "Feldu titilinn og dökka yfirlöguna á forsíðunni til að sýna aðeins bakgrunnsmyndina eða myndbandið"
     },
     "onboarding": {
       "title": "Velkomin/n til IQ Rest!",

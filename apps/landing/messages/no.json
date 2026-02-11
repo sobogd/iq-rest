@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Nettadresse oppdatert",
       "slugChangedDescription": "Restauranten din er nå tilgjengelig på:",
       "close": "Lukk",
-      "view": "Vis"
+      "view": "Vis",
+      "hideTitleLabel": "Restaurantnavn",
+      "hideTitleVisible": "Synlig på forsiden",
+      "hideTitleHidden": "Skjult på forsiden",
+      "hideTitleHint": "Skjul tittelen og det mørke overlegget på forsiden for å vise bare bakgrunnsbildet eller videoen"
     },
     "onboarding": {
       "title": "Velkommen til IQ Rest!",

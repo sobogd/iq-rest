@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "A weboldal címe frissítve",
       "slugChangedDescription": "Az étterme mostantól elérhető itt:",
       "close": "Bezárás",
-      "view": "Megtekintés"
+      "view": "Megtekintés",
+      "hideTitleLabel": "Étterem neve",
+      "hideTitleVisible": "Látható a kezdőlapon",
+      "hideTitleHidden": "Rejtett a kezdőlapon",
+      "hideTitleHint": "Rejtse el a címet és a sötét fedőréteget a kezdőlapon, hogy csak a háttérkép vagy videó jelenjen meg"
     },
     "onboarding": {
       "title": "Üdvözöljük az IQ Rest-nél!",

@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Adresa site-ului a fost actualizată",
       "slugChangedDescription": "Restaurantul dvs. este acum disponibil la:",
       "close": "Închide",
-      "view": "Vizualizează"
+      "view": "Vizualizează",
+      "hideTitleLabel": "Numele restaurantului",
+      "hideTitleVisible": "Vizibil pe pagina de start",
+      "hideTitleHidden": "Ascuns pe pagina de start",
+      "hideTitleHint": "Ascundeți titlul și stratul întunecat de pe pagina de start pentru a afișa doar imaginea sau videoclipul de fundal"
     },
     "onboarding": {
       "title": "Bine ați venit la IQ Rest!",

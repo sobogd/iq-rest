@@ -23,6 +23,7 @@ async function getRestaurant(slug: string) {
       id: true,
       title: true,
       description: true,
+      hideTitle: true,
       source: true,
       address: true,
       phone: true,
@@ -83,17 +84,22 @@ export default async function MenuPage({ params }: MenuPageProps) {
         ) : (
           <div className="absolute inset-0 bg-black" />
         )}
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
-        {/* Restaurant name at 30% from top */}
-        <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
-          <div className="max-w-[440px] w-full">
-            <h1 className="text-6xl font-black text-white break-words">{restaurant.title}</h1>
-            {restaurant.description && (
-              <p className="text-xl text-white/90 mt-3">{restaurant.description}</p>
-            )}
-          </div>
-        </div>
+        {/* Dark overlay and title - hidden if hideTitle is true */}
+        {!restaurant.hideTitle && (
+          <>
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/40" />
+            {/* Restaurant name at 30% from top */}
+            <div className="absolute inset-x-0 top-[30%] z-10 flex justify-center px-[8%]">
+              <div className="max-w-[440px] w-full">
+                <h1 className="text-6xl font-black text-white break-words">{restaurant.title}</h1>
+                {restaurant.description && (
+                  <p className="text-xl text-white/90 mt-3">{restaurant.description}</p>
+                )}
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Navigation links */}

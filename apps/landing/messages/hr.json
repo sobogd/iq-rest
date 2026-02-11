@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Adresa web stranice ažurirana",
       "slugChangedDescription": "Vaš restoran je sada dostupan na:",
       "close": "Zatvori",
-      "view": "Pogledaj"
+      "view": "Pogledaj",
+      "hideTitleLabel": "Naziv restorana",
+      "hideTitleVisible": "Vidljivo na početnoj stranici",
+      "hideTitleHidden": "Skriveno na početnoj stranici",
+      "hideTitleHint": "Sakrijte naslov i tamni sloj na početnoj stranici kako biste prikazali samo pozadinsku sliku ili video"
     },
     "onboarding": {
       "title": "Dobrodošli u IQ Rest!",

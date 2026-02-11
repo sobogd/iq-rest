@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Adresa webové stránky byla aktualizována",
       "slugChangedDescription": "Vaše restaurace je nyní dostupná na:",
       "close": "Zavřít",
-      "view": "Zobrazit"
+      "view": "Zobrazit",
+      "hideTitleLabel": "Název restaurace",
+      "hideTitleVisible": "Viditelný na hlavní stránce",
+      "hideTitleHidden": "Skrytý na hlavní stránce",
+      "hideTitleHint": "Skryjte název a tmavou vrstvu na hlavní stránce a zobrazte pouze obrázek nebo video na pozadí"
     },
     "onboarding": {
       "title": "Vítejte v IQ Rest!",

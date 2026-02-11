@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Adresse du site web mise à jour",
       "slugChangedDescription": "Votre restaurant est maintenant disponible à :",
       "close": "Fermer",
-      "view": "Voir"
+      "view": "Voir",
+      "hideTitleLabel": "Nom du restaurant",
+      "hideTitleVisible": "Visible sur la page d'accueil",
+      "hideTitleHidden": "Masqué sur la page d'accueil",
+      "hideTitleHint": "Masquez le titre et l'overlay sombre sur votre page d'accueil pour afficher uniquement l'image ou la vidéo de fond"
     },
     "onboarding": {
       "title": "Bienvenue chez IQ Rest !",

@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Adreça del lloc web actualitzada",
       "slugChangedDescription": "El teu restaurant ara està disponible a:",
       "close": "Tancar",
-      "view": "Veure"
+      "view": "Veure",
+      "hideTitleLabel": "Nom del restaurant",
+      "hideTitleVisible": "Visible a la pàgina d'inici",
+      "hideTitleHidden": "Amagat a la pàgina d'inici",
+      "hideTitleHint": "Amaga el títol i la superposició fosca a la teva pàgina d'inici per mostrar només la imatge o el vídeo de fons"
     },
     "onboarding": {
       "title": "Benvingut a IQ Rest!",

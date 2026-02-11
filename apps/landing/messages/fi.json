@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Verkkosivuston osoite päivitetty",
       "slugChangedDescription": "Ravintolasi on nyt saatavilla osoitteessa:",
       "close": "Sulje",
-      "view": "Näytä"
+      "view": "Näytä",
+      "hideTitleLabel": "Ravintolan nimi",
+      "hideTitleVisible": "Näkyvissä etusivulla",
+      "hideTitleHidden": "Piilotettu etusivulla",
+      "hideTitleHint": "Piilota otsikko ja tumma peite etusivulta näyttääksesi vain taustakuvan tai videon"
     },
     "onboarding": {
       "title": "Tervetuloa IQ Restiin!",

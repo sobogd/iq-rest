@@ -1539,7 +1539,11 @@
       "slugChangedTitle": "Seoladh an ghréasáin nuashonraithe",
       "slugChangedDescription": "Tá do bhialann ar fáil anois ag:",
       "close": "Dún",
-      "view": "Taispeáin"
+      "view": "Taispeáin",
+      "hideTitleLabel": "Ainm na bialainne",
+      "hideTitleVisible": "Infheicthe ar an leathanach baile",
+      "hideTitleHidden": "I bhfolach ar an leathanach baile",
+      "hideTitleHint": "Cuir an teideal agus an forluí dorcha i bhfolach ar do leathanach baile chun an íomhá nó an físeán cúlra amháin a thaispeáint"
     },
     "onboarding": {
       "title": "Fáilte chuig IQ Rest!",

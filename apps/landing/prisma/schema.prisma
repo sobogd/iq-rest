@@ -86,6 +86,7 @@ model Restaurant {
   whatsapp        String?
   languages       String[] @default(["en"])
   defaultLanguage String   @default("en")
+  hideTitle       Boolean  @default(false)
   companyId       String
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt

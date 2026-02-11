@@ -99,6 +99,7 @@ export async function POST(request: NextRequest) {
           whatsapp: data.whatsapp !== undefined ? (data.whatsapp || null) : existing.whatsapp,
           languages: data.languages ?? existing.languages,
           defaultLanguage: newDefaultLanguage,
+          hideTitle: data.hideTitle ?? existing.hideTitle,
           // Reservation settings
           reservationsEnabled: data.reservationsEnabled ?? existing.reservationsEnabled,
           reservationMode: data.reservationMode ?? existing.reservationMode,
@@ -140,6 +141,7 @@ export async function POST(request: NextRequest) {
           whatsapp: data.whatsapp || null,
           languages: data.languages || [userLocale],
           defaultLanguage: data.defaultLanguage || userLocale,
+          hideTitle: data.hideTitle ?? false,
           // Reservation settings
           reservationsEnabled: data.reservationsEnabled ?? false,
           reservationMode: data.reservationMode ?? "manual",
