@@ -5,16 +5,18 @@ import { analytics } from "@/lib/analytics";
 
 interface PageViewProps {
   slug: string;
+  variant?: string;
 }
 
-export function PageView({ slug }: PageViewProps) {
+export function PageView({ slug, variant }: PageViewProps) {
   const hasFired = useRef(false);
 
   useEffect(() => {
     if (hasFired.current) return;
     hasFired.current = true;
-    analytics.pageView(slug);
-  }, [slug]);
+    const fullSlug = variant ? `${slug}_${variant}` : slug;
+    analytics.pageView(fullSlug);
+  }, [slug, variant]);
 
   return null;
 }

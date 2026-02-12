@@ -51,7 +51,14 @@ const FEATURE_ICONS = {
   "personal-support": HeadphonesIcon,
 } as const;
 
-export default function HomePage() {
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ v?: string }>;
+}) {
+  const { v: variant } = await searchParams;
+  const isVariantB = variant === "b";
+
   const tHero = useTranslations("home.hero");
   const tIntro = useTranslations("home.intro");
   const tWhyUs = useTranslations("home.whyUs");
@@ -92,65 +99,125 @@ export default function HomePage() {
 
   return (
     <>
-      <PageView slug="home" />
+      <PageView slug="home" variant={isVariantB ? "b" : undefined} />
       <JsonLd data={productSchema} />
       <JsonLd data={organizationSchema} />
       <JsonLd data={softwareSchema} />
 
-      {/* Hero Section */}
-      <SectionTracker section="hero" className="min-h-[calc(100vh-80px)] pt-8 pb-16 md:pt-12 md:pb-20 flex flex-col">
-        <div className="container mx-auto px-4 flex-1">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
-            {/* Left side - Text content */}
-            <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-                {tHero("title")}
-              </h1>
-              <p className="text-base sm:text-lg md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                {tHero("subtitle")}
-              </p>
+      {/* Hero Section - Variant B: compact, no benefits inside */}
+      {isVariantB ? (
+        <SectionTracker section="hero_b" className="pt-8 pb-12 md:pt-12 md:pb-16">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left side - Text content */}
+              <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+                  {tHero("title")}
+                </h1>
+                <p className="text-base sm:text-lg md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
+                  {tHero("subtitle")}
+                </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                <Button asChild size="lg" className="text-lg px-8 py-6">
-                  <Link href="/dashboard">{tHero("cta.create")}</Link>
-                </Button>
-                <MenuPreviewModal
-                  buttonText={tHero("cta.view")}
-                  menuUrl="/m/love-eatery"
-                />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                  <Button asChild size="lg" className="text-lg px-8 py-6">
+                    <Link href="/dashboard">{tHero("cta.create")}</Link>
+                  </Button>
+                  <MenuPreviewModal
+                    buttonText={tHero("cta.view")}
+                    menuUrl="/m/love-eatery"
+                  />
+                </div>
+              </div>
+
+              {/* Right side - Images composition */}
+              <div className="order-1 lg:order-2">
+                <HeroImages />
               </div>
             </div>
+          </div>
+        </SectionTracker>
+      ) : (
+        <SectionTracker section="hero" className="min-h-[calc(100vh-80px)] pt-8 pb-16 md:pt-12 md:pb-20 flex flex-col">
+          <div className="container mx-auto px-4 flex-1">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
+              {/* Left side - Text content */}
+              <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+                  {tHero("title")}
+                </h1>
+                <p className="text-base sm:text-lg md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
+                  {tHero("subtitle")}
+                </p>
 
-            {/* Right side - Images composition */}
-            <div className="order-1 lg:order-2">
-              <HeroImages />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                  <Button asChild size="lg" className="text-lg px-8 py-6">
+                    <Link href="/dashboard">{tHero("cta.create")}</Link>
+                  </Button>
+                  <MenuPreviewModal
+                    buttonText={tHero("cta.view")}
+                    menuUrl="/m/love-eatery"
+                  />
+                </div>
+              </div>
+
+              {/* Right side - Images composition */}
+              <div className="order-1 lg:order-2">
+                <HeroImages />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Benefits cards */}
-        <div className="container mx-auto px-4 pt-14 md:pt-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => {
-              const icons = [Globe, CalendarCheck, Languages, BarChart3];
-              const Icon = icons[index];
-              return (
-                <Card key={index} className="border bg-card">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-6 lg:gap-3">
-                      <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-1.5 lg:mt-0.5" />
-                      <div>
-                        <h3 className="font-semibold text-lg lg:text-base">{benefit.title}</h3>
-                        <p className="text-base lg:text-sm text-muted-foreground mt-1">{benefit.description}</p>
+          {/* Benefits cards - inside hero for variant A */}
+          <div className="container mx-auto px-4 pt-14 md:pt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {benefits.map((benefit, index) => {
+                const icons = [Globe, CalendarCheck, Languages, BarChart3];
+                const Icon = icons[index];
+                return (
+                  <Card key={index} className="border bg-card">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-6 lg:gap-3">
+                        <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-1.5 lg:mt-0.5" />
+                        <div>
+                          <h3 className="font-semibold text-lg lg:text-base">{benefit.title}</h3>
+                          <p className="text-base lg:text-sm text-muted-foreground mt-1">{benefit.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </SectionTracker>
+        </SectionTracker>
+      )}
+
+      {/* Benefits Section - separate for variant B */}
+      {isVariantB && (
+        <SectionTracker section="benefits_b" className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {benefits.map((benefit, index) => {
+                const icons = [Globe, CalendarCheck, Languages, BarChart3];
+                const Icon = icons[index];
+                return (
+                  <Card key={index} className="border bg-card">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-6 lg:gap-3">
+                        <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-1.5 lg:mt-0.5" />
+                        <div>
+                          <h3 className="font-semibold text-lg lg:text-base">{benefit.title}</h3>
+                          <p className="text-base lg:text-sm text-muted-foreground mt-1">{benefit.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </SectionTracker>
+      )}
 
       {/* Features Preview Section */}
       <SectionTracker section="features" className="py-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
