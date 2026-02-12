@@ -106,12 +106,9 @@ export async function GET(request: NextRequest) {
     let dateTo: Date;
 
     if (fromParam && toParam) {
-      // Parse dates and set time boundaries
+      // Use exact timestamps from params (supports minute-level filtering)
       dateFrom = new Date(fromParam);
-      dateFrom.setHours(0, 0, 0, 0);
-
       dateTo = new Date(toParam);
-      dateTo.setHours(23, 59, 59, 999);
     } else {
       // Default: last 30 days
       dateTo = new Date();

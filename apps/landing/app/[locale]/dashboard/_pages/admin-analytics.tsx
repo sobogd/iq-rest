@@ -9,6 +9,7 @@ import {
   Calendar,
   Globe,
   Monitor,
+  RefreshCw,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -381,6 +382,15 @@ export function AdminAnalyticsPage() {
                   {range.label}
                 </Button>
               ))}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={fetchData}
+                disabled={loading}
+                className="ml-2"
+              >
+                <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
+              </Button>
             </div>
           </CardContent>
         </Card>
