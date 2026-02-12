@@ -39,6 +39,7 @@ next-env.d.ts
 /lib/generated/prisma
 
 # lock files
+package-lock.json
 pnpm-lock.yaml
 
 # deployment configs
