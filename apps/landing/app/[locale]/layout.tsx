@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -40,16 +41,18 @@ export default async function LocaleLayout({
       </head>
       <body>
         <GoogleAnalytics />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem={true}
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider messages={messages}>
+              {children}
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
