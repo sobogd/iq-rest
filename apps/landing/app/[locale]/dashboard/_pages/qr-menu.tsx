@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Printer, Download, ExternalLink } from "lucide-react";
+import { Printer, Download, Eye } from "lucide-react";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
@@ -41,7 +42,7 @@ export function QrMenuPage() {
   const printRef = useRef<HTMLDivElement>(null);
 
   const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
-  const fullMenuUrl = slug ? `https://iq-rest.com/m/${slug}` : "";
+  const fullMenuUrl = slug ? `/m/${slug}` : "";
   const paper = PAPER_FORMATS[paperFormat];
   const isSmallPaper = paperFormat === "a5" || paperFormat === "a6";
 
@@ -264,12 +265,12 @@ export function QrMenuPage() {
               <p className="text-sm text-muted-foreground mb-0.5">{t("websiteReady")}</p>
               <p className="font-medium truncate">{menuUrl}</p>
             </div>
-            <Button asChild className="w-full sm:w-auto shrink-0">
-              <a href={fullMenuUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
+            <MenuPreviewModal menuUrl={fullMenuUrl}>
+              <Button className="w-full sm:w-auto shrink-0">
+                <Eye className="mr-2 h-4 w-4" />
                 {t("openWebsite")}
-              </a>
-            </Button>
+              </Button>
+            </MenuPreviewModal>
           </div>
         </div>
 

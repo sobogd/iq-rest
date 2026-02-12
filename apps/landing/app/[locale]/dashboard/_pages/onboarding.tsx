@@ -7,7 +7,7 @@ import { useDashboard, PageKey } from "../_context/dashboard-context";
 import {
   ChevronLeft,
   ChevronRight,
-  ExternalLink,
+  Eye,
   Loader2,
   Check,
   ArrowRight,
@@ -19,6 +19,7 @@ import {
   Languages,
   BarChart3,
 } from "lucide-react";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 
 interface OnboardingProgress {
   hasInfo: boolean;
@@ -146,17 +147,12 @@ export function OnboardingPage() {
             <Check className="h-5 w-5" />
             <span className="font-medium">{t("allDone")}</span>
           </div>
-          <Button
-            className="w-full"
-            size="lg"
-            onClick={() => {
-
-              window.open(`/m/${slug}`, "_blank");
-            }}
-          >
-            <ExternalLink className="mr-2 h-4 w-4" />
-            {t("viewMenu")}
-          </Button>
+          <MenuPreviewModal menuUrl={`/m/${slug}`}>
+            <Button className="w-full" size="lg">
+              <Eye className="mr-2 h-4 w-4" />
+              {t("viewMenu")}
+            </Button>
+          </MenuPreviewModal>
         </div>
 
         {/* Quick Actions */}

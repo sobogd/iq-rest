@@ -11,7 +11,6 @@ import {
   Loader2,
   Send,
   MessageSquare,
-  ChevronRight,
   Calendar,
   CreditCard,
   Phone,
@@ -19,7 +18,10 @@ import {
   Instagram,
   Globe,
   Mail,
+  Eye,
+  Info,
 } from "lucide-react";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -98,7 +100,10 @@ export function AdminPage() {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+
+  // Separate states for different sheets
+  const [chatCompany, setChatCompany] = useState<Company | null>(null);
+  const [detailsCompany, setDetailsCompany] = useState<Company | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<Company | null>(null);
   const [deleting, setDeleting] = useState(false);
   const [sendingReminder, setSendingReminder] = useState(false);
@@ -127,37 +132,36 @@ export function AdminPage() {
   }, []);
 
   useEffect(() => {
-    if (selectedCompany) {
-      fetchMessages(selectedCompany.id);
+    if (chatCompany) {
+      fetchMessages(chatCompany.id);
     } else {
       setMessages([]);
       setNewMessage("");
     }
-  }, [selectedCompany, fetchMessages]);
+  }, [chatCompany, fetchMessages]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   async function handleSendReminder() {
-    if (!selectedCompany || sendingReminder) return;
+    if (!detailsCompany || sendingReminder) return;
 
     setSendingReminder(true);
     try {
-      const res = await fetch(`/api/admin/companies/${selectedCompany.id}/remind`, {
+      const res = await fetch(`/api/admin/companies/${detailsCompany.id}/remind`, {
         method: "POST",
       });
 
       if (res.ok) {
         const data = await res.json();
         const now = new Date().toISOString();
-        // Update local state
         setCompanies((prev) =>
           prev.map((c) =>
-            c.id === selectedCompany.id ? { ...c, reminderSentAt: now } : c
+            c.id === detailsCompany.id ? { ...c, reminderSentAt: now } : c
           )
         );
-        setSelectedCompany({ ...selectedCompany, reminderSentAt: now });
+        setDetailsCompany({ ...detailsCompany, reminderSentAt: now });
         toast.success(`Reminder sent to ${data.sentTo}`);
       } else {
         const data = await res.json();
@@ -181,8 +185,8 @@ export function AdminPage() {
 
       if (res.ok) {
         setCompanies((prev) => prev.filter((c) => c.id !== deleteTarget.id));
-        if (selectedCompany?.id === deleteTarget.id) {
-          setSelectedCompany(null);
+        if (detailsCompany?.id === deleteTarget.id) {
+          setDetailsCompany(null);
         }
         toast.success(`Company "${deleteTarget.name}" deleted`);
       } else {
@@ -198,12 +202,12 @@ export function AdminPage() {
   }
 
   const handleSend = async () => {
-    if (!newMessage.trim() || isSending || !selectedCompany) return;
+    if (!newMessage.trim() || isSending || !chatCompany) return;
 
     setIsSending(true);
     try {
       const response = await fetch(
-        `/api/admin/companies/${selectedCompany.id}/messages`,
+        `/api/admin/companies/${chatCompany.id}/messages`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -361,51 +365,84 @@ export function AdminPage() {
               return (
                 <div
                   key={company.id}
-                  onClick={() => setSelectedCompany(company)}
-                  className="flex items-center justify-between p-4 rounded-lg border bg-card hover:bg-muted/50 cursor-pointer transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-lg border bg-card"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className={`font-medium ${!restaurant?.title ? "text-muted-foreground italic" : ""}`}>
-                      {title}
-                    </span>
-                    <Badge
-                      variant={company.plan === "FREE" ? "secondary" : "default"}
-                      className="text-xs"
-                    >
-                      {company.plan}
-                    </Badge>
-                    {company.subscriptionStatus === "ACTIVE" && (
-                      <Badge
-                        variant="outline"
-                        className="text-xs text-green-600 border-green-600"
-                      >
-                        Active
-                      </Badge>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1">
+                  {/* Top/Left: stats + name */}
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground shrink-0">
+                      <span className="flex items-center gap-1" title="Categories">
                         <FolderOpen className="h-3.5 w-3.5" />
                         {company.categoriesCount}
                       </span>
-                      <span className="flex items-center gap-1">
+                      <span className="flex items-center gap-1" title="Items">
                         <Package className="h-3.5 w-3.5" />
                         {company.itemsCount}
                       </span>
                       {company.messagesCount > 0 && (
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1" title="Messages">
                           <MessageSquare className="h-3.5 w-3.5" />
                           {company.messagesCount}
                         </span>
                       )}
                       {company.reminderSentAt && (
-                        <span className="flex items-center gap-1 text-green-600" title={`Reminder sent ${formatDate(company.reminderSentAt)}`}>
+                        <span
+                          className="flex items-center gap-1 text-green-600"
+                          title={`Reminder sent ${formatDate(company.reminderSentAt)}`}
+                        >
                           <Mail className="h-3.5 w-3.5" />
                         </span>
                       )}
                     </div>
-                    <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                    <span
+                      className={`font-medium truncate ${
+                        !restaurant?.title ? "text-muted-foreground italic" : ""
+                      }`}
+                    >
+                      {title}
+                    </span>
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <Badge
+                        variant={company.plan === "FREE" ? "secondary" : "default"}
+                        className="text-xs"
+                      >
+                        {company.plan}
+                      </Badge>
+                      {company.subscriptionStatus === "ACTIVE" && (
+                        <Badge
+                          variant="outline"
+                          className="text-xs text-green-600 border-green-600"
+                        >
+                          Active
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Bottom/Right: action buttons */}
+                  <div className="flex items-center gap-1 shrink-0 -ml-2 sm:ml-0">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setChatCompany(company)}
+                      title="Chat"
+                    >
+                      <MessageSquare className="h-4 w-4" />
+                    </Button>
+                    {restaurant?.slug && (
+                      <MenuPreviewModal menuUrl={`/m/${restaurant.slug}`}>
+                        <Button variant="ghost" size="icon" title="View Menu">
+                          <Eye className="h-4 w-4" />
+                        </Button>
+                      </MenuPreviewModal>
+                    )}
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setDetailsCompany(company)}
+                      title="Details"
+                    >
+                      <Info className="h-4 w-4" />
+                    </Button>
                   </div>
                 </div>
               );
@@ -414,15 +451,104 @@ export function AdminPage() {
         </div>
       </div>
 
-      {/* Company Details Sheet */}
+      {/* Chat Sheet */}
+      <Sheet open={!!chatCompany} onOpenChange={(open) => !open && setChatCompany(null)}>
+        <SheetContent className="w-full sm:max-w-md overflow-hidden flex flex-col p-0">
+          <SheetHeader className="px-6 pt-6 pb-4 border-b shrink-0">
+            <SheetTitle className="flex items-center gap-2">
+              <MessageSquare className="h-5 w-5" />
+              Chat with {chatCompany?.restaurants[0]?.title || "Client"}
+            </SheetTitle>
+            <SheetDescription>
+              {chatCompany?.users[0]?.email}
+            </SheetDescription>
+          </SheetHeader>
+
+          <div className="flex-1 flex flex-col overflow-hidden">
+            {/* Messages */}
+            <div className="flex-1 overflow-auto p-4 space-y-3">
+              {loadingMessages ? (
+                <div className="flex items-center justify-center h-full">
+                  <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+                </div>
+              ) : messages.length === 0 ? (
+                <div className="flex items-center justify-center h-full text-sm text-muted-foreground">
+                  No messages yet
+                </div>
+              ) : (
+                messages.map((msg) => (
+                  <div
+                    key={msg.id}
+                    className={`flex ${msg.isAdmin ? "justify-end" : "justify-start"}`}
+                  >
+                    <div
+                      className={`max-w-[80%] rounded-xl px-4 py-3 ${
+                        msg.isAdmin
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted/50 text-foreground"
+                      }`}
+                    >
+                      {!msg.isAdmin && (
+                        <div className="text-xs font-medium mb-1 opacity-70">
+                          {msg.user.email}
+                        </div>
+                      )}
+                      <p className="text-sm whitespace-pre-wrap break-words">
+                        {msg.message}
+                      </p>
+                      <div
+                        className={`text-xs mt-1 ${
+                          msg.isAdmin ? "opacity-70" : "text-muted-foreground"
+                        }`}
+                      >
+                        {formatDateTime(msg.createdAt)}
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input */}
+            <div className="border-t p-4 shrink-0">
+              <div className="flex gap-2">
+                <Textarea
+                  ref={textareaRef}
+                  value={newMessage}
+                  onChange={(e) => setNewMessage(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Type a message..."
+                  className="min-h-[60px] resize-none flex-1"
+                  rows={2}
+                />
+                <Button
+                  onClick={handleSend}
+                  disabled={!newMessage.trim() || isSending}
+                  size="icon"
+                  className="shrink-0 h-[60px] w-[60px]"
+                >
+                  {isSending ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <Send className="h-4 w-4" />
+                  )}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+      {/* Details Sheet */}
       <Sheet
-        open={!!selectedCompany}
-        onOpenChange={(open) => !open && setSelectedCompany(null)}
+        open={!!detailsCompany}
+        onOpenChange={(open) => !open && setDetailsCompany(null)}
       >
         <SheetContent className="w-full sm:max-w-xl overflow-hidden flex flex-col p-0">
           <SheetHeader className="px-6 pt-6 pb-4 border-b shrink-0">
             {(() => {
-              const restaurant = selectedCompany?.restaurants[0];
+              const restaurant = detailsCompany?.restaurants[0];
               return (
                 <div className="flex items-start justify-between pr-8">
                   <div className="flex items-center gap-3">
@@ -433,21 +559,25 @@ export function AdminPage() {
                       />
                     )}
                     <div>
-                      <SheetTitle className={!restaurant?.title ? "text-muted-foreground italic" : ""}>
+                      <SheetTitle
+                        className={
+                          !restaurant?.title ? "text-muted-foreground italic" : ""
+                        }
+                      >
                         {restaurant?.title || "No name"}
                       </SheetTitle>
                       <SheetDescription>
-                        {selectedCompany && formatDate(selectedCompany.createdAt, true)}
+                        {detailsCompany && formatDate(detailsCompany.createdAt, true)}
                       </SheetDescription>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <Badge
-                      variant={selectedCompany?.plan === "FREE" ? "secondary" : "default"}
+                      variant={detailsCompany?.plan === "FREE" ? "secondary" : "default"}
                     >
-                      {selectedCompany?.plan}
+                      {detailsCompany?.plan}
                     </Badge>
-                    {selectedCompany?.subscriptionStatus === "ACTIVE" && (
+                    {detailsCompany?.subscriptionStatus === "ACTIVE" && (
                       <Badge
                         variant="outline"
                         className="text-green-600 border-green-600"
@@ -464,22 +594,20 @@ export function AdminPage() {
           <div className="flex-1 overflow-auto">
             <div className="p-6 space-y-6">
               {/* Subscription Info */}
-              {selectedCompany && selectedCompany.plan !== "FREE" && (
+              {detailsCompany && detailsCompany.plan !== "FREE" && (
                 <div className="space-y-2">
                   <h3 className="text-sm font-medium flex items-center gap-2">
                     <CreditCard className="h-4 w-4" />
                     Subscription
                   </h3>
                   <div className="text-sm text-muted-foreground space-y-1">
-                    <p>Billing: {selectedCompany.billingCycle || "N/A"}</p>
-                    {selectedCompany.currentPeriodEnd && (
-                      <p>
-                        Period ends: {formatDate(selectedCompany.currentPeriodEnd)}
-                      </p>
+                    <p>Billing: {detailsCompany.billingCycle || "N/A"}</p>
+                    {detailsCompany.currentPeriodEnd && (
+                      <p>Period ends: {formatDate(detailsCompany.currentPeriodEnd)}</p>
                     )}
-                    {selectedCompany.stripeCustomerId && (
+                    {detailsCompany.stripeCustomerId && (
                       <p className="font-mono text-xs">
-                        Customer: {selectedCompany.stripeCustomerId}
+                        Customer: {detailsCompany.stripeCustomerId}
                       </p>
                     )}
                   </div>
@@ -489,15 +617,19 @@ export function AdminPage() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-3 rounded-lg bg-muted/50">
-                  <p className="text-2xl font-bold">{selectedCompany?.categoriesCount}</p>
+                  <p className="text-2xl font-bold">
+                    {detailsCompany?.categoriesCount}
+                  </p>
                   <p className="text-xs text-muted-foreground">Categories</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-muted/50">
-                  <p className="text-2xl font-bold">{selectedCompany?.itemsCount}</p>
+                  <p className="text-2xl font-bold">{detailsCompany?.itemsCount}</p>
                   <p className="text-xs text-muted-foreground">Items</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-muted/50">
-                  <p className="text-2xl font-bold">{selectedCompany?.restaurants.length}</p>
+                  <p className="text-2xl font-bold">
+                    {detailsCompany?.restaurants.length}
+                  </p>
                   <p className="text-xs text-muted-foreground">Restaurants</p>
                 </div>
               </div>
@@ -506,10 +638,10 @@ export function AdminPage() {
               <div className="space-y-2">
                 <h3 className="text-sm font-medium flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  Users ({selectedCompany?.users.length})
+                  Users ({detailsCompany?.users.length})
                 </h3>
                 <div className="space-y-2">
-                  {selectedCompany?.users.map((user) => (
+                  {detailsCompany?.users.map((user) => (
                     <div
                       key={user.id}
                       className="flex items-center justify-between text-sm p-2 rounded-lg bg-muted/30"
@@ -528,7 +660,7 @@ export function AdminPage() {
 
               {/* Restaurant Details */}
               {(() => {
-                const restaurant = selectedCompany?.restaurants[0];
+                const restaurant = detailsCompany?.restaurants[0];
                 if (!restaurant) return null;
 
                 return (
@@ -589,87 +721,6 @@ export function AdminPage() {
                 );
               })()}
 
-              {/* Support Chat */}
-              <div className="space-y-2">
-                <h3 className="text-sm font-medium flex items-center gap-2">
-                  <MessageSquare className="h-4 w-4" />
-                  Support Chat
-                </h3>
-                <div className="border rounded-lg">
-                  {/* Messages */}
-                  <div className="h-[300px] overflow-auto p-4 space-y-3">
-                    {loadingMessages ? (
-                      <div className="flex items-center justify-center h-full">
-                        <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-                      </div>
-                    ) : messages.length === 0 ? (
-                      <div className="flex items-center justify-center h-full text-sm text-muted-foreground">
-                        No messages yet
-                      </div>
-                    ) : (
-                      messages.map((msg) => (
-                        <div
-                          key={msg.id}
-                          className={`flex ${msg.isAdmin ? "justify-end" : "justify-start"}`}
-                        >
-                          <div
-                            className={`max-w-[80%] rounded-xl px-4 py-3 ${
-                              msg.isAdmin
-                                ? "bg-primary text-primary-foreground"
-                                : "bg-muted/50 text-foreground"
-                            }`}
-                          >
-                            {!msg.isAdmin && (
-                              <div className="text-xs font-medium mb-1 opacity-70">
-                                {msg.user.email}
-                              </div>
-                            )}
-                            <p className="text-sm whitespace-pre-wrap break-words">
-                              {msg.message}
-                            </p>
-                            <div
-                              className={`text-xs mt-1 ${
-                                msg.isAdmin ? "opacity-70" : "text-muted-foreground"
-                              }`}
-                            >
-                              {formatDateTime(msg.createdAt)}
-                            </div>
-                          </div>
-                        </div>
-                      ))
-                    )}
-                    <div ref={messagesEndRef} />
-                  </div>
-
-                  {/* Input */}
-                  <div className="border-t p-3">
-                    <div className="flex gap-2">
-                      <Textarea
-                        ref={textareaRef}
-                        value={newMessage}
-                        onChange={(e) => setNewMessage(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                        placeholder="Type a message..."
-                        className="min-h-[60px] resize-none flex-1"
-                        rows={2}
-                      />
-                      <Button
-                        onClick={handleSend}
-                        disabled={!newMessage.trim() || isSending}
-                        size="icon"
-                        className="shrink-0 h-[60px] w-[60px]"
-                      >
-                        {isSending ? (
-                          <Loader2 className="h-4 w-4 animate-spin" />
-                        ) : (
-                          <Send className="h-4 w-4" />
-                        )}
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* Actions */}
               <div className="pt-4 border-t space-y-3">
                 <div className="space-y-2">
@@ -684,11 +735,13 @@ export function AdminPage() {
                     ) : (
                       <Mail className="h-4 w-4 mr-2" />
                     )}
-                    {selectedCompany?.reminderSentAt ? "Send Reminder Again" : "Send Reminder Email"}
+                    {detailsCompany?.reminderSentAt
+                      ? "Send Reminder Again"
+                      : "Send Reminder Email"}
                   </Button>
-                  {selectedCompany?.reminderSentAt && (
+                  {detailsCompany?.reminderSentAt && (
                     <p className="text-xs text-center text-muted-foreground">
-                      Last sent: {formatDate(selectedCompany.reminderSentAt, true)}
+                      Last sent: {formatDate(detailsCompany.reminderSentAt, true)}
                     </p>
                   )}
                 </div>
@@ -696,7 +749,7 @@ export function AdminPage() {
                   variant="destructive"
                   className="w-full"
                   onClick={() => {
-                    setDeleteTarget(selectedCompany);
+                    setDeleteTarget(detailsCompany);
                   }}
                 >
                   <Trash2 className="h-4 w-4 mr-2" />
@@ -716,7 +769,8 @@ export function AdminPage() {
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Company</AlertDialogTitle>
             <AlertDialogDescription>
-              Are you sure you want to delete <strong>{deleteTarget?.name}</strong>?
+              Are you sure you want to delete{" "}
+              <strong>{deleteTarget?.name}</strong>?
               <br />
               <br />
               This will permanently delete:

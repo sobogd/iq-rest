@@ -14,6 +14,7 @@ interface MenuPageProps {
     locale: string;
     slug: string;
   }>;
+  searchParams: Promise<{ preview?: string }>;
 }
 
 async function getRestaurant(slug: string) {
@@ -45,8 +46,10 @@ async function getRestaurant(slug: string) {
   return restaurant;
 }
 
-export default async function MenuPage({ params }: MenuPageProps) {
+export default async function MenuPage({ params, searchParams }: MenuPageProps) {
   const { slug, locale } = await params;
+  const { preview } = await searchParams;
+  const previewParam = preview === "1" ? "?preview=1" : "";
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
@@ -105,21 +108,21 @@ export default async function MenuPage({ params }: MenuPageProps) {
       {/* Navigation links */}
       <nav className="bg-white">
         {restaurant.reservationsEnabled && restaurant._count.tables > 0 && (
-          <MenuNavLink href={`/m/${slug}/reserve`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+          <MenuNavLink href={`/m/${slug}/reserve${previewParam}`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
             <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
               <CalendarDays className="h-5 w-5" />
               {t("reserve")}
             </span>
           </MenuNavLink>
         )}
-        <MenuNavLink href={`/m/${slug}/contacts`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+        <MenuNavLink href={`/m/${slug}/contacts${previewParam}`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
           <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
             <Phone className="h-5 w-5" />
             {t("contacts")}
           </span>
         </MenuNavLink>
         {(restaurant.languages?.length || 0) > 1 && (
-          <MenuNavLink href={`/m/${slug}/language/`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+          <MenuNavLink href={`/m/${slug}/language/${previewParam}`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
             <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
               <Globe className="h-5 w-5" />
               {t("language")}
@@ -130,7 +133,7 @@ export default async function MenuPage({ params }: MenuPageProps) {
 
       {/* Online Menu block */}
       <MenuNavLink
-        href={`/m/${slug}/menu/`}
+        href={`/m/${slug}/menu/${previewParam}`}
         className="flex justify-center px-[8%]"
         style={{ backgroundColor: restaurant.accentColor }}
       >

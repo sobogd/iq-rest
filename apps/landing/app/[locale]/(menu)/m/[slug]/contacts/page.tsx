@@ -19,6 +19,7 @@ interface ContactsPageProps {
     locale: string;
     slug: string;
   }>;
+  searchParams: Promise<{ preview?: string }>;
 }
 
 async function getRestaurant(slug: string) {
@@ -40,8 +41,10 @@ async function getRestaurant(slug: string) {
   return restaurant;
 }
 
-export default async function ContactsPage({ params }: ContactsPageProps) {
+export default async function ContactsPage({ params, searchParams }: ContactsPageProps) {
   const { slug, locale } = await params;
+  const { preview } = await searchParams;
+  const isPreview = preview === "1";
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
@@ -72,7 +75,7 @@ export default async function ContactsPage({ params }: ContactsPageProps) {
         )}
 
         {/* Header */}
-        <MenuHeader slug={slug} title={t("contacts")} absolute accentColor={restaurant.accentColor} />
+        <MenuHeader slug={slug} title={t("contacts")} absolute accentColor={restaurant.accentColor} isPreview={isPreview} />
 
         {/* Action buttons */}
         <nav className="absolute bottom-0 inset-x-0 flex justify-center pb-8 z-10">

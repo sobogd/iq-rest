@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { AdModal } from "@/components/analytics/AdModal";
 
 interface MenuLayoutClientProps {
@@ -37,13 +37,18 @@ export function MenuLayoutClient({
   children,
 }: MenuLayoutClientProps) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const isPreview = searchParams.get("preview") === "1";
   const [adComplete, setAdComplete] = useState(!showAd);
   const [tracked, setTracked] = useState(false);
 
-  // Track page view
+  // Track page view (skip if preview mode)
   useEffect(() => {
     if (tracked) return;
     setTracked(true);
+
+    // Don't track in preview mode (demo/admin preview)
+    if (isPreview) return;
 
     const sessionId = getSessionId();
     const page = getPageFromPath(pathname);

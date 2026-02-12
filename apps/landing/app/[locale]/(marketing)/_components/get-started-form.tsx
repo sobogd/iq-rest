@@ -88,6 +88,19 @@ export function GetStartedForm() {
       const data = await response.json();
 
       if (response.ok) {
+        // Check if auto-login (new user, no OTP needed)
+        if (data.autoLogin) {
+          if (isAdminEmail(email)) {
+            analytics.disableTracking();
+          }
+          analytics.auth.signUp();
+          analytics.linkSession(data.userId);
+          router.push(`/${locale}/dashboard`);
+          router.refresh();
+          return;
+        }
+
+        // Existing user - proceed to OTP step
         setStep("otp");
         setStatus("idle");
       } else {

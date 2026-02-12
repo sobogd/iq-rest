@@ -9,6 +9,7 @@ interface ReservePageProps {
     locale: string;
     slug: string;
   }>;
+  searchParams: Promise<{ preview?: string }>;
 }
 
 async function getRestaurant(slug: string) {
@@ -34,8 +35,10 @@ async function getRestaurant(slug: string) {
   return restaurant;
 }
 
-export default async function ReservePage({ params }: ReservePageProps) {
+export default async function ReservePage({ params, searchParams }: ReservePageProps) {
   const { slug, locale } = await params;
+  const { preview } = await searchParams;
+  const isPreview = preview === "1";
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicReserve"),
@@ -86,7 +89,7 @@ export default async function ReservePage({ params }: ReservePageProps) {
   return (
     <MenuPageWrapper slug={slug}>
       {/* Header */}
-      <MenuHeader slug={slug} title={translations.title} sticky accentColor={restaurant.accentColor} />
+      <MenuHeader slug={slug} title={translations.title} sticky accentColor={restaurant.accentColor} isPreview={isPreview} />
 
       {/* Content */}
       <main className="flex-1 flex justify-center px-5 py-6 bg-white overflow-auto">

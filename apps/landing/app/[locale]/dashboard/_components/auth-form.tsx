@@ -63,6 +63,19 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
 
       if (response.ok) {
         analytics.auth.emailSubmit();
+
+        // Check if auto-login (new user, no OTP needed)
+        if (data.autoLogin) {
+          if (isAdminEmail(email)) {
+            analytics.disableTracking();
+          }
+          analytics.auth.signUp();
+          analytics.linkSession(data.userId);
+          onSuccess();
+          return;
+        }
+
+        // Existing user - proceed to OTP step
         setStep("otp");
         setStatus("idle");
       } else {

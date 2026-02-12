@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import nodemailer from "nodemailer";
 import { prisma } from "@/lib/prisma";
+
+// Simple session token generator
+function generateSessionToken(): string {
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+    ""
+  );
+}
 
 // Default company names by locale
 const defaultCompanyNames: Record<string, string> = {
@@ -75,7 +85,7 @@ export async function POST(request: NextRequest) {
         },
       });
     } else {
-      // Create new user with company
+      // NEW USER - auto-login without OTP verification
       const companyName = defaultCompanyNames[locale] || defaultCompanyNames.en;
 
       // Create company first
@@ -85,12 +95,10 @@ export async function POST(request: NextRequest) {
         },
       });
 
-      // Create user with OTP
+      // Create user WITHOUT OTP (no verification needed for new users)
       user = await prisma.user.create({
         data: {
           email: normalizedEmail,
-          otp: otpCode,
-          otpExpiresAt,
         },
       });
 
@@ -102,6 +110,45 @@ export async function POST(request: NextRequest) {
           role: "owner",
         },
       });
+
+      // Auto-login: set session cookies
+      const sessionToken = generateSessionToken();
+      const cookieStore = await cookies();
+
+      cookieStore.set("session", sessionToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 60 * 60 * 24 * 7, // 7 days
+        path: "/",
+      });
+
+      cookieStore.set("user_email", normalizedEmail, {
+        httpOnly: false,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 60 * 60 * 24 * 7,
+        path: "/",
+      });
+
+      cookieStore.set("user_id", user.id, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 60 * 60 * 24 * 7,
+        path: "/",
+      });
+
+      // Return auto-login response (skip OTP step)
+      return NextResponse.json(
+        {
+          autoLogin: true,
+          isNewUser: true,
+          userId: user.id,
+          email: normalizedEmail,
+        },
+        { status: 200 }
+      );
     }
 
     // Create transporter - use different SMTP for iCloud emails

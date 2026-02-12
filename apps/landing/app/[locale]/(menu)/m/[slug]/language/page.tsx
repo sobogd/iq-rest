@@ -9,6 +9,7 @@ interface LanguagePageProps {
     locale: string;
     slug: string;
   }>;
+  searchParams: Promise<{ preview?: string }>;
 }
 
 async function getRestaurant(slug: string) {
@@ -24,8 +25,10 @@ async function getRestaurant(slug: string) {
   return restaurant;
 }
 
-export default async function LanguagePage({ params }: LanguagePageProps) {
+export default async function LanguagePage({ params, searchParams }: LanguagePageProps) {
   const { slug, locale } = await params;
+  const { preview } = await searchParams;
+  const isPreview = preview === "1";
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
@@ -85,10 +88,12 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
       return 0;
     });
 
+  const previewParam = isPreview ? "?preview=1" : "";
+
   return (
     <MenuPageWrapper slug={slug}>
       {/* Header */}
-      <MenuHeader slug={slug} title={t("language")} accentColor={restaurant.accentColor} />
+      <MenuHeader slug={slug} title={t("language")} accentColor={restaurant.accentColor} isPreview={isPreview} />
 
       {/* Language list */}
       <nav className="flex-1 pt-5 bg-white flex justify-center">
@@ -96,7 +101,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
           {languages.map((lang) => (
             <LanguageLink
               key={lang.code}
-              href={`/m/${slug}`}
+              href={`/m/${slug}${previewParam}`}
               locale={lang.code}
               className="h-14 flex items-center justify-between border-b border-gray-100 text-black px-5"
             >

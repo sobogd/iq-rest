@@ -9,6 +9,7 @@ interface MenuListPageProps {
     locale: string;
     slug: string;
   }>;
+  searchParams: Promise<{ preview?: string }>;
 }
 
 type TranslationData = {
@@ -62,8 +63,10 @@ async function getRestaurantWithMenu(slug: string) {
   return { restaurant, categories };
 }
 
-export default async function MenuListPage({ params }: MenuListPageProps) {
+export default async function MenuListPage({ params, searchParams }: MenuListPageProps) {
   const { slug, locale } = await params;
+  const { preview } = await searchParams;
+  const isPreview = preview === "1";
   const [data, t] = await Promise.all([
     getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),
@@ -106,7 +109,7 @@ export default async function MenuListPage({ params }: MenuListPageProps) {
   return (
     <MenuPageWrapper slug={slug}>
       {/* Header */}
-      <MenuHeader slug={slug} title={t("onlineMenu")} accentColor={restaurant.accentColor} />
+      <MenuHeader slug={slug} title={t("onlineMenu")} accentColor={restaurant.accentColor} isPreview={isPreview} />
 
       {/* Menu feed */}
       {categoriesWithItems.length === 0 ? (

@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
-import { analytics } from "@/lib/analytics";
 
 interface MenuPreviewModalProps {
-  buttonText: string;
   menuUrl: string;
+  children: React.ReactNode;
 }
 
 function addPreviewParam(url: string): string {
@@ -15,12 +14,18 @@ function addPreviewParam(url: string): string {
   return `${url}${separator}preview=1`;
 }
 
-export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps) {
+export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (open) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     } else {
@@ -35,47 +40,16 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
 
   const handleClose = () => {
     setOpen(false);
-    analytics.marketing.demoClose();
   };
 
-  if (!open) {
-    return (
-      <Button
-        size="lg"
-        variant="outline"
-        className="text-lg px-8 py-6"
-        onClick={() => {
-          setOpen(true);
-          analytics.marketing.demoOpen();
-        }}
-      >
-        {buttonText}
-      </Button>
-    );
-  }
-
-  return (
-    <>
-      <Button
-        size="lg"
-        variant="outline"
-        className="text-lg px-8 py-6"
-        onClick={() => setOpen(true)}
-      >
-        {buttonText}
-      </Button>
-
-      {/* Backdrop */}
+  const modal = open && mounted ? (
+    createPortal(
       <div
         className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
         onClick={handleClose}
-        data-noindex="true"
       >
         {/* Phone frame */}
-        <div
-          className="relative"
-          onClick={(e) => e.stopPropagation()}
-        >
+        <div className="relative" onClick={(e) => e.stopPropagation()}>
           {/* Close button */}
           <button
             onClick={handleClose}
@@ -113,7 +87,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
               </div>
             </div>
 
-            {/* Overlay to hide white edge artifacts - positioned over entire phone frame */}
+            {/* Overlay to hide white edge artifacts */}
             <div
               className="absolute inset-0 rounded-[40px] pointer-events-none z-20"
               style={{
@@ -130,7 +104,15 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
             <div className="absolute right-[-2px] top-[28%] w-[2px] h-[12%] bg-[#2a2a2a] rounded-r-sm" />
           </div>
         </div>
-      </div>
+      </div>,
+      document.body
+    )
+  ) : null;
+
+  return (
+    <>
+      <div onClick={() => setOpen(true)}>{children}</div>
+      {modal}
     </>
   );
 }
