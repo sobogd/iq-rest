@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { PageLoader } from "../_ui/page-loader";
 
 interface FunnelStep {
@@ -170,25 +169,82 @@ function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
   );
 }
 
+type TimeRange =
+  | "5m"
+  | "30m"
+  | "1h"
+  | "2h"
+  | "12h"
+  | "today"
+  | "yesterday"
+  | "7d";
+
+const TIME_RANGES: { value: TimeRange; label: string }[] = [
+  { value: "5m", label: "5 min" },
+  { value: "30m", label: "30 min" },
+  { value: "1h", label: "1 hour" },
+  { value: "2h", label: "2 hours" },
+  { value: "12h", label: "12 hours" },
+  { value: "today", label: "Today" },
+  { value: "yesterday", label: "Yesterday" },
+  { value: "7d", label: "7 days" },
+];
+
+function getDateRange(range: TimeRange): { from: string; to: string } {
+  const now = new Date();
+  const to = now.toISOString();
+  let from: Date;
+
+  switch (range) {
+    case "5m":
+      from = new Date(now.getTime() - 5 * 60 * 1000);
+      break;
+    case "30m":
+      from = new Date(now.getTime() - 30 * 60 * 1000);
+      break;
+    case "1h":
+      from = new Date(now.getTime() - 60 * 60 * 1000);
+      break;
+    case "2h":
+      from = new Date(now.getTime() - 2 * 60 * 60 * 1000);
+      break;
+    case "12h":
+      from = new Date(now.getTime() - 12 * 60 * 60 * 1000);
+      break;
+    case "today":
+      from = new Date(now);
+      from.setHours(0, 0, 0, 0);
+      break;
+    case "yesterday":
+      from = new Date(now);
+      from.setDate(from.getDate() - 1);
+      from.setHours(0, 0, 0, 0);
+      const yesterdayEnd = new Date(now);
+      yesterdayEnd.setHours(0, 0, 0, 0);
+      return { from: from.toISOString(), to: yesterdayEnd.toISOString() };
+    case "7d":
+      from = new Date(now);
+      from.setDate(from.getDate() - 7);
+      from.setHours(0, 0, 0, 0);
+      break;
+    default:
+      from = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+  }
+
+  return { from: from.toISOString(), to };
+}
+
 export function AdminAnalyticsPage() {
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  // Date range state
-  const [dateFrom, setDateFrom] = useState(() => {
-    const d = new Date();
-    d.setDate(d.getDate() - 30);
-    return d.toISOString().split("T")[0];
-  });
-  const [dateTo, setDateTo] = useState(() => {
-    return new Date().toISOString().split("T")[0];
-  });
+  const [timeRange, setTimeRange] = useState<TimeRange>("today");
 
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const params = new URLSearchParams({ from: dateFrom, to: dateTo });
+      const { from, to } = getDateRange(timeRange);
+      const params = new URLSearchParams({ from, to });
       const res = await fetch(`/api/admin/analytics?${params}`);
       if (!res.ok) {
         if (res.status === 403) {
@@ -206,7 +262,7 @@ export function AdminAnalyticsPage() {
     } finally {
       setLoading(false);
     }
-  }, [dateFrom, dateTo]);
+  }, [timeRange]);
 
   useEffect(() => {
     fetchData();
@@ -238,32 +294,22 @@ export function AdminAnalyticsPage() {
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-auto p-6 space-y-6">
-        {/* Date Range Filter */}
+        {/* Time Range Filter */}
         <Card>
           <CardContent className="pt-4">
-            <div className="flex flex-wrap items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">From:</span>
-                <Input
-                  type="date"
-                  value={dateFrom}
-                  onChange={(e) => setDateFrom(e.target.value)}
-                  className="w-40"
-                />
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">To:</span>
-                <Input
-                  type="date"
-                  value={dateTo}
-                  onChange={(e) => setDateTo(e.target.value)}
-                  className="w-40"
-                />
-              </div>
-              <Button onClick={fetchData} size="sm" disabled={loading}>
-                {loading ? "Loading..." : "Apply"}
-              </Button>
+            <div className="flex flex-wrap items-center gap-2">
+              <Calendar className="h-4 w-4 text-muted-foreground" />
+              {TIME_RANGES.map((range) => (
+                <Button
+                  key={range.value}
+                  variant={timeRange === range.value ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setTimeRange(range.value)}
+                  disabled={loading}
+                >
+                  {range.label}
+                </Button>
+              ))}
             </div>
           </CardContent>
         </Card>
