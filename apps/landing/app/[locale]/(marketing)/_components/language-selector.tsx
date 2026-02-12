@@ -2,6 +2,7 @@
 
 import { useState, useTransition, useMemo } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { analytics } from "@/lib/analytics";
 import { usePathname, useRouter, locales } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import {
@@ -75,6 +76,9 @@ export function LanguageSelector() {
   }, [search]);
 
   const handleLanguageChange = (newLocale: string) => {
+    // Track language change
+    analytics.marketing.languageChange(locale, newLocale);
+
     // Сохраняем в cookie
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 
@@ -102,6 +106,7 @@ export function LanguageSelector() {
           size="icon"
           aria-label={t("selectLanguage")}
           className="border-0 md:border"
+          onClick={() => analytics.marketing.languageSelectorOpen()}
         >
           <Globe className="h-5 w-5" />
           <span className="sr-only">{t("selectLanguage")}</span>

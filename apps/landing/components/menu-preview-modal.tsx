@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { X } from "lucide-react";
+import { X, Loader2 } from "lucide-react";
 
 interface MenuPreviewModalProps {
   menuUrl: string;
@@ -17,6 +17,7 @@ function addPreviewParam(url: string): string {
 export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setMounted(true);
@@ -73,6 +74,13 @@ export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
                 {/* Dynamic Island */}
                 <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-full z-10" />
 
+                {/* Loading spinner */}
+                {loading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black z-5">
+                    <Loader2 className="w-8 h-8 animate-spin text-white/50" />
+                  </div>
+                )}
+
                 {/* Screen */}
                 <iframe
                   src={addPreviewParam(menuUrl)}
@@ -83,6 +91,7 @@ export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
                     transform: "scale(0.8)",
                   }}
                   title="Menu Preview"
+                  onLoad={() => setTimeout(() => setLoading(false), 500)}
                 />
               </div>
             </div>
@@ -111,7 +120,7 @@ export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
 
   return (
     <>
-      <div onClick={() => setOpen(true)}>{children}</div>
+      <div onClick={() => { setOpen(true); setLoading(true); }}>{children}</div>
       {modal}
     </>
   );

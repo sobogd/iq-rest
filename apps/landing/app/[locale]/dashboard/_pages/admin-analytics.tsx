@@ -10,9 +10,23 @@ import {
   Globe,
   Monitor,
   RefreshCw,
+  X,
+  ChevronRight,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { PageLoader } from "../_ui/page-loader";
 
 interface FunnelStep {
@@ -27,7 +41,15 @@ interface AnalyticsEvent {
   sessionId: string;
   userId: string | null;
   page: string | null;
+  meta?: Record<string, unknown> | null;
   createdAt: string;
+}
+
+interface SessionInfo {
+  sessionId: string;
+  userId: string | null;
+  createdAt: string;
+  meta?: Record<string, unknown> | null;
 }
 
 interface Stats {
@@ -73,6 +95,43 @@ function countryToFlag(countryCode: string): string {
     code.charCodeAt(0) + offset,
     code.charCodeAt(1) + offset
   );
+}
+
+// Format meta object into readable lines
+function formatMeta(meta: Record<string, unknown>): React.ReactNode[] {
+  const lines: React.ReactNode[] = [];
+
+  const formatValue = (prefix: string, obj: Record<string, unknown>) => {
+    for (const [key, value] of Object.entries(obj)) {
+      if (value && typeof value === "object" && !Array.isArray(value)) {
+        formatValue(`${prefix} ${key.charAt(0).toUpperCase() + key.slice(1)}`, value as Record<string, unknown>);
+      } else if (value !== null && value !== undefined) {
+        const label = `${prefix} ${key.charAt(0).toUpperCase() + key.slice(1)}`.trim();
+        lines.push(
+          <div key={label} className="flex gap-2">
+            <span className="text-muted-foreground">{label}:</span>
+            <span>{String(value)}</span>
+          </div>
+        );
+      }
+    }
+  };
+
+  for (const [key, value] of Object.entries(meta)) {
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      formatValue(key.charAt(0).toUpperCase() + key.slice(1), value as Record<string, unknown>);
+    } else if (value !== null && value !== undefined) {
+      const label = key.charAt(0).toUpperCase() + key.slice(1);
+      lines.push(
+        <div key={label} className="flex gap-2">
+          <span className="text-muted-foreground">{label}:</span>
+          <span>{String(value)}</span>
+        </div>
+      );
+    }
+  }
+
+  return lines;
 }
 
 function StatsListCard({
@@ -138,7 +197,15 @@ function StatsListCard({
   );
 }
 
-function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
+function FunnelCard({
+  title,
+  steps,
+  onBarClick,
+}: {
+  title: string;
+  steps: FunnelStep[];
+  onBarClick?: (step: FunnelStep) => void;
+}) {
   const maxCount = Math.max(...steps.map((s) => s.count), 1);
 
   return (
@@ -154,7 +221,7 @@ function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
               const prevCount = index > 0 ? steps[index - 1].count : step.count;
               const dropoff = prevCount > 0 ? ((prevCount - step.count) / prevCount) * 100 : 0;
 
-              const tooltipText = `${step.label}\n${step.count} users${index > 0 && dropoff > 0 ? `\n-${dropoff.toFixed(0)}% drop` : ""}`;
+              const tooltipText = `${step.label}\n${step.count} users${index > 0 && dropoff > 0 ? `\n-${dropoff.toFixed(0)}% drop` : ""}\nClick to view sessions`;
 
               return (
                 <div key={step.event} className="flex flex-col items-center w-16">
@@ -163,6 +230,7 @@ function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
                       className="w-10 rounded-t cursor-pointer transition-all bg-primary/70 hover:bg-primary"
                       style={{ height: `${Math.max(percentage, 4)}%` }}
                       title={tooltipText}
+                      onClick={() => step.count > 0 && onBarClick?.(step)}
                     />
                   </div>
                   <div className="mt-1 text-center">
@@ -255,6 +323,19 @@ export function AdminAnalyticsPage() {
   const [error, setError] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<TimeRange>("today");
 
+  // Sessions modal state
+  const [sessionsModalOpen, setSessionsModalOpen] = useState(false);
+  const [sessionsModalTitle, setSessionsModalTitle] = useState("");
+  const [sessionsModalEvent, setSessionsModalEvent] = useState<string | null>(null);
+  const [sessions, setSessions] = useState<SessionInfo[]>([]);
+  const [sessionsLoading, setSessionsLoading] = useState(false);
+
+  // Session events modal state
+  const [eventsModalOpen, setEventsModalOpen] = useState(false);
+  const [eventsModalSessionId, setEventsModalSessionId] = useState<string | null>(null);
+  const [sessionEvents, setSessionEvents] = useState<AnalyticsEvent[]>([]);
+  const [eventsLoading, setEventsLoading] = useState(false);
+
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
@@ -290,6 +371,46 @@ export function AdminAnalyticsPage() {
       hour: "2-digit",
       minute: "2-digit",
     });
+  };
+
+  const handleBarClick = async (step: FunnelStep) => {
+    setSessionsModalTitle(`${step.label} (${step.count})`);
+    setSessionsModalEvent(step.event);
+    setSessionsModalOpen(true);
+    setSessionsLoading(true);
+
+    try {
+      const { from, to } = getDateRange(timeRange);
+      const params = new URLSearchParams({ event: step.event, from, to });
+      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
+      if (res.ok) {
+        const data = await res.json();
+        setSessions(data.sessions || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch sessions:", err);
+    } finally {
+      setSessionsLoading(false);
+    }
+  };
+
+  const handleSessionClick = async (sessionId: string) => {
+    setEventsModalSessionId(sessionId);
+    setEventsModalOpen(true);
+    setEventsLoading(true);
+
+    try {
+      const params = new URLSearchParams({ sessionId });
+      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
+      if (res.ok) {
+        const data = await res.json();
+        setSessionEvents(data.events || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch session events:", err);
+    } finally {
+      setEventsLoading(false);
+    }
   };
 
   const formatEventName = (event: string): string => {
@@ -449,10 +570,10 @@ export function AdminAnalyticsPage() {
 
         {/* 4 Funnels */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FunnelCard title="Landing Sections" steps={data.funnels.sections} />
-          <FunnelCard title="Marketing Pages" steps={data.funnels.marketing} />
-          <FunnelCard title="Dashboard Pages" steps={data.funnels.dashboard} />
-          <FunnelCard title="Conversion Funnel" steps={data.funnels.conversion} />
+          <FunnelCard title="Landing Sections" steps={data.funnels.sections} onBarClick={handleBarClick} />
+          <FunnelCard title="Marketing Pages" steps={data.funnels.marketing} onBarClick={handleBarClick} />
+          <FunnelCard title="Dashboard Pages" steps={data.funnels.dashboard} onBarClick={handleBarClick} />
+          <FunnelCard title="Conversion Funnel" steps={data.funnels.conversion} onBarClick={handleBarClick} />
         </div>
 
         {/* Geo & Device Stats */}
@@ -490,7 +611,8 @@ export function AdminAnalyticsPage() {
               {data.recentEvents.map((event) => (
                 <div
                   key={event.id}
-                  className="flex items-center justify-between p-3 rounded-lg bg-muted/30"
+                  className="flex items-center justify-between p-3 rounded-lg bg-muted/30 cursor-pointer hover:bg-muted/50"
+                  onClick={() => handleSessionClick(event.sessionId)}
                 >
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
@@ -516,6 +638,119 @@ export function AdminAnalyticsPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Sessions Modal */}
+      <Dialog open={sessionsModalOpen} onOpenChange={setSessionsModalOpen}>
+        <DialogContent className="max-w-lg">
+          <DialogHeader>
+            <DialogTitle>{sessionsModalTitle}</DialogTitle>
+          </DialogHeader>
+          <ScrollArea className="max-h-[60vh]">
+            {sessionsLoading ? (
+              <div className="flex justify-center py-8">
+                <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
+              </div>
+            ) : sessions.length === 0 ? (
+              <p className="text-center text-muted-foreground py-8">No sessions found</p>
+            ) : (
+              <div className="space-y-2 pr-4">
+                {sessions.map((session) => {
+                  const meta = session.meta as { geo?: { country?: string } } | null;
+                  const country = meta?.geo?.country;
+                  return (
+                    <div
+                      key={session.sessionId}
+                      className="flex items-center justify-between p-3 rounded-lg bg-muted/30 cursor-pointer hover:bg-muted/50"
+                      onClick={() => handleSessionClick(session.sessionId)}
+                    >
+                      <div className="flex flex-col gap-0.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-mono">{session.sessionId.slice(0, 12)}...</span>
+                          {session.userId && (
+                            <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
+                              logged in
+                            </span>
+                          )}
+                          {country && (
+                            <span className="text-sm">{countryToFlag(country)}</span>
+                          )}
+                        </div>
+                        <span className="text-[10px] text-muted-foreground">
+                          {formatDate(session.createdAt)}
+                        </span>
+                      </div>
+                      <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </ScrollArea>
+        </DialogContent>
+      </Dialog>
+
+      {/* Session Events Modal */}
+      <Dialog open={eventsModalOpen} onOpenChange={setEventsModalOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>
+              Session: {eventsModalSessionId?.slice(0, 12)}...
+            </DialogTitle>
+          </DialogHeader>
+          <ScrollArea className="max-h-[70vh]">
+            {eventsLoading ? (
+              <div className="flex justify-center py-8">
+                <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
+              </div>
+            ) : sessionEvents.length === 0 ? (
+              <p className="text-center text-muted-foreground py-8">No events found</p>
+            ) : (
+              <div className="space-y-3 pr-4">
+                {sessionEvents.map((event) => (
+                  <div
+                    key={event.id}
+                    className="p-3 rounded-lg bg-muted/30 space-y-2"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium">
+                          {formatEventName(event.event)}
+                        </span>
+                        {event.userId && (
+                          <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
+                            logged in
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-xs text-muted-foreground">
+                        {formatDate(event.createdAt)}
+                      </span>
+                    </div>
+                    {event.page && (
+                      <p className="text-xs text-muted-foreground">
+                        Page: {event.page}
+                      </p>
+                    )}
+                    {event.meta && Object.keys(event.meta).length > 0 && (
+                      <Collapsible>
+                        <CollapsibleTrigger className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
+                          <ChevronRight className="h-3 w-3 transition-transform [[data-state=open]>&]:rotate-90" />
+                          Details
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <div className="text-xs bg-muted p-2 rounded space-y-0.5 mt-1">
+                            {formatMeta(event.meta)}
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </ScrollArea>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

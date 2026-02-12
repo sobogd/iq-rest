@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
+import { analytics } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -71,6 +72,37 @@ const COMPARISON_FEATURES: FeatureRow[] = [
 export function PricingCards() {
   const t = useTranslations("pricing");
   const [isYearly, setIsYearly] = useState(true);
+  const comparisonRef = useRef<HTMLDivElement>(null);
+  const comparisonTracked = useRef(false);
+
+  // Track comparison table view
+  useEffect(() => {
+    const el = comparisonRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !comparisonTracked.current) {
+          comparisonTracked.current = true;
+          analytics.marketing.pricingComparisonView();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const handleToggle = () => {
+    const newIsYearly = !isYearly;
+    setIsYearly(newIsYearly);
+    if (newIsYearly) {
+      analytics.marketing.pricingToggleYearly();
+    } else {
+      analytics.marketing.pricingToggleMonthly();
+    }
+  };
 
   const renderCellValue = (
     value: FeatureValue,
@@ -103,7 +135,7 @@ export function PricingCards() {
           {t("monthly")}
         </span>
         <button
-          onClick={() => setIsYearly(!isYearly)}
+          onClick={handleToggle}
           className={cn(
             "relative inline-flex h-6 w-11 items-center rounded-full transition-colors",
             isYearly ? "bg-primary" : "bg-muted"
@@ -191,6 +223,7 @@ export function PricingCards() {
                   className="w-full"
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
+                  onClick={() => analytics.marketing.pricingPlanClick(plan.id)}
                 >
                   <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
                 </Button>
@@ -201,7 +234,7 @@ export function PricingCards() {
       </div>
 
       {/* Comparison Table */}
-      <div className="space-y-6">
+      <div ref={comparisonRef} className="space-y-6">
         <div className="text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">
             {t("comparison.title")}

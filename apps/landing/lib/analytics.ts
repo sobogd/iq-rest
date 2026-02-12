@@ -129,7 +129,22 @@ export function linkSession(userId: string) {
 
 // Page view events
 export const page = {
-  view: (pageName: string) => trackEvent(`page_view_${pageName.replace(/-/g, "_")}`),
+  view: (pageName: string) => {
+    // Collect all query params
+    let queryParams: Record<string, string> | undefined;
+    if (typeof window !== "undefined" && window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      const paramsObj: Record<string, string> = {};
+      params.forEach((value, key) => {
+        paramsObj[key] = value;
+      });
+      if (Object.keys(paramsObj).length > 0) {
+        queryParams = paramsObj;
+      }
+    }
+
+    trackEvent(`page_view_${pageName.replace(/-/g, "_")}`, queryParams ? { params: queryParams } : undefined);
+  },
 };
 
 // Marketing events (landing page)
@@ -137,7 +152,15 @@ export const marketing = {
   heroCreateClick: () => trackEvent("hero_create_click"),
   demoOpen: () => trackEvent("demo_open"),
   demoClose: () => trackEvent("demo_close"),
-};
+  // Pricing page
+  pricingToggleMonthly: () => trackEvent("pricing_toggle_monthly"),
+  pricingToggleYearly: () => trackEvent("pricing_toggle_yearly"),
+  pricingComparisonView: () => trackEvent("pricing_comparison_view"),
+  pricingPlanClick: (plan: string) => trackEvent("pricing_plan_click", { plan }),
+  // Language
+  languageSelectorOpen: () => trackEvent("language_selector_open"),
+  languageChange: (from: string, to: string) => trackEvent("language_change", { from, to }),
+  };
 
 // Auth events
 export const auth = {
