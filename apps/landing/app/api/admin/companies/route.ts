@@ -65,6 +65,7 @@ export async function GET() {
       currentPeriodEnd: company.currentPeriodEnd,
       stripeCustomerId: company.stripeCustomerId,
       stripeSubscriptionId: company.stripeSubscriptionId,
+      reminderSentAt: company.reminderSentAt,
       categoriesCount: company._count.categories,
       itemsCount: company._count.items,
       messagesCount: company._count.supportMessages,

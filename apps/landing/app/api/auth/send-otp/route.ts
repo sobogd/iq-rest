@@ -8,6 +8,28 @@ const defaultCompanyNames: Record<string, string> = {
   es: "Mi Empresa",
 };
 
+interface OtpEmailTranslations {
+  subject: string;
+  greeting: string;
+  welcome: string;
+  instructions: string;
+  helpOffer: string;
+  cta: string;
+  signature: string;
+  expiry: string;
+  ignore: string;
+}
+
+async function getTranslations(locale: string): Promise<OtpEmailTranslations> {
+  try {
+    const messages = await import(`@/messages/${locale}.json`);
+    return messages.otpEmail;
+  } catch {
+    const messages = await import(`@/messages/en.json`);
+    return messages.otpEmail;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { email, locale = "en" } = await request.json();
@@ -110,44 +132,76 @@ export async function POST(request: NextRequest) {
       auth: smtpConfig.auth,
     });
 
+    // Get translations for the user's locale
+    const t = await getTranslations(locale);
+    const subject = t.subject.replace("{code}", otpCode);
+
     // Email content
     const mailOptions = {
       from: smtpConfig.fromEmail,
       to: email,
-      subject: `Your IQ Rest verification code: ${otpCode}`,
+      subject,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">
-            Your Verification Code
-          </h2>
-          <div style="margin: 20px 0; text-align: center;">
-            <p style="font-size: 16px; color: #666;">
-              Enter this code to sign in to IQ Rest:
-            </p>
-            <div style="margin: 30px 0; padding: 20px; background-color: #f5f5f5; border-radius: 10px;">
-              <span style="font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #333;">
-                ${otpCode}
-              </span>
-            </div>
-            <p style="font-size: 14px; color: #999;">
-              This code will expire in 10 minutes.
-            </p>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+            ${t.greeting}
+          </p>
+
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">
+            ${t.welcome}
+          </p>
+
+          <div style="margin: 24px 0; padding: 24px; background-color: #f5f5f5; border-radius: 12px; text-align: center;">
+            <span style="font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #1a1a1a;">
+              ${otpCode}
+            </span>
           </div>
-          <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
-          <p style="color: #666; font-size: 12px;">
-            If you didn't request this code, you can safely ignore this email.
+
+          <p style="font-size: 14px; color: #666; margin: 0 0 24px; text-align: center;">
+            ${t.expiry}
+          </p>
+
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+            ${t.instructions}
+          </p>
+
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+            ${t.helpOffer}
+          </p>
+
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+            <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+          </p>
+
+          <p style="font-size: 15px; margin: 0 0 20px; color: #1a1a1a;">
+            ${t.signature}
+          </p>
+
+          <hr style="border: none; border-top: 1px solid #ddd; margin: 24px 0;">
+
+          <p style="color: #999; font-size: 13px; margin: 0;">
+            ${t.ignore}
           </p>
         </div>
       `,
-      text: `
-Your IQ Rest Verification Code
+      text: `${t.greeting}
 
-Enter this code to sign in: ${otpCode}
+${t.welcome}
 
-This code will expire in 10 minutes.
+${otpCode}
 
-If you didn't request this code, you can safely ignore this email.
-      `,
+${t.expiry}
+
+${t.instructions}
+
+${t.helpOffer}
+
+${t.cta}: https://iq-rest.com/dashboard
+
+${t.signature.replace("<br>", "\n")}
+
+---
+${t.ignore}`,
     };
 
     // Send email

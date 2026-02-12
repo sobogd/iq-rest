@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Din menu til {restaurant} venter på dig",
-    "greeting": "Hej!",
-    "body": "Bare en hurtig besked — din digitale menu til {restaurant} er næsten klar. Vi har gemt din fremgang, så du kan fortsætte, hvor du slap.",
-    "timeNote": "Det tager normalt omkring 5 minutter at færdiggøre.",
-    "cta": "Åbn dashboard",
-    "helpNote": "Hvis du har spørgsmål, skriv til os i Support-sektionen på dit dashboard.",
-    "signature": "Venlig hilsen, IQ Rest teamet"
+    "subject": "Din IQ Rest-menu venter på dig",
+    "greeting": "Hej,",
+    "body": "Du tilmeldte dig for nylig IQ Rest, men din menu er stadig tom. Ingen bekymringer — opsætningen tager kun et par minutter:",
+    "step1": "Tilføj en kategori (f.eks. \"Hovedretter\")",
+    "step2": "Tilføj nogle varer med priser",
+    "step3": "Download din QR-kode — færdig!",
+    "helpOffer": "Har du ikke tid? Send os bare din menu i et hvilket som helst format — PDF, foto eller link til din hjemmeside — og vi sætter det hele op for dig, helt gratis.",
+    "helpAction": "Svar bare på denne email med din menu vedhæftet.",
+    "cta": "Åbn Dashboard",
+    "signature": "Med venlig hilsen,<br>IQ Rest-teamet"
   },
   "supportEmail": {
     "subject": "Du har en ny besked fra IQ Rest Support",
@@ -1979,5 +1982,16 @@
     "body": "Du har en ny besked fra vores supportteam. Tjek den venligst i dit dashboard.",
     "cta": "Åbn support chat",
     "signature": "Med venlig hilsen,<br>IQ Rest Teamet"
+  },
+  "otpEmail": {
+    "subject": "Din IQ Rest-bekræftelseskode: {code}",
+    "greeting": "Hej,",
+    "welcome": "Velkommen til IQ Rest! Din bekræftelseskode er:",
+    "instructions": "Efter login kan du oprette din digitale menu på få minutter — tilføj kategorier, varer med priser og download en klar-til-brug QR-kode til dine borde.",
+    "helpOffer": "Brug for hjælp? Svar bare på denne email — vi hjælper gerne.",
+    "cta": "Åbn Dashboard",
+    "signature": "Med venlig hilsen,<br>IQ Rest-teamet",
+    "expiry": "Denne kode udløber om 10 minutter.",
+    "ignore": "Hvis du ikke har anmodet om denne kode, kan du ignorere denne email."
   }
 }

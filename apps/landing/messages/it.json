@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Il tuo menu per {restaurant} ti aspetta",
-    "greeting": "Ciao!",
-    "body": "Solo un promemoria veloce — il tuo menu digitale per {restaurant} è quasi pronto. Abbiamo salvato i tuoi progressi, così puoi riprendere esattamente da dove ti eri fermato.",
-    "timeNote": "Di solito ci vogliono circa 5 minuti per completarlo.",
-    "cta": "Apri la Dashboard",
-    "helpNote": "Se hai domande, scrivici nella sezione Supporto della tua dashboard.",
-    "signature": "A presto, Il Team IQ Rest"
+    "subject": "Il tuo menu IQ Rest ti sta aspettando",
+    "greeting": "Ciao,",
+    "body": "Ti sei registrato di recente su IQ Rest, ma il tuo menu è ancora vuoto. Non preoccuparti — bastano pochi minuti per iniziare:",
+    "step1": "Aggiungi una categoria (es. \"Piatti principali\")",
+    "step2": "Aggiungi alcuni articoli con i prezzi",
+    "step3": "Scarica il tuo codice QR — fatto!",
+    "helpOffer": "Non hai tempo? Inviaci semplicemente il tuo menu in qualsiasi formato — PDF, foto o link al tuo sito — e lo configureremo per te, completamente gratis.",
+    "helpAction": "Rispondi semplicemente a questa email allegando il tuo menu.",
+    "cta": "Apri Dashboard",
+    "signature": "Cordiali saluti,<br>Il team IQ Rest"
   },
   "supportEmail": {
     "subject": "Hai un nuovo messaggio dal supporto IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Hai un nuovo messaggio dal nostro team di supporto. Controllalo nella tua dashboard.",
     "cta": "Apri chat supporto",
     "signature": "Cordiali saluti,<br>Il team IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "Il tuo codice di verifica IQ Rest: {code}",
+    "greeting": "Ciao,",
+    "welcome": "Benvenuto su IQ Rest! Il tuo codice di verifica è:",
+    "instructions": "Dopo aver effettuato l'accesso, potrai creare il tuo menu digitale in pochi minuti — aggiungi categorie, articoli con prezzi e scarica un codice QR pronto all'uso per i tuoi tavoli.",
+    "helpOffer": "Hai bisogno di aiuto? Rispondi semplicemente a questa email — saremo felici di assisterti.",
+    "cta": "Apri Dashboard",
+    "signature": "Cordiali saluti,<br>Il team IQ Rest",
+    "expiry": "Questo codice scade tra 10 minuti.",
+    "ignore": "Se non hai richiesto questo codice, puoi ignorare questa email."
   }
 }

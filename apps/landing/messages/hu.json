@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "A {restaurant} menüje vár rád",
-    "greeting": "Szia!",
-    "body": "Csak egy gyors emlékeztető — a digitális menüd a {restaurant} számára majdnem kész. Elmentettük a haladásodat, így onnan folytathatod, ahol abbahagytad.",
-    "timeNote": "Általában körülbelül 5 percet vesz igénybe a befejezés.",
+    "subject": "Az IQ Rest menüje várja Önt",
+    "greeting": "Üdvözöljük!",
+    "body": "Nemrég regisztrált az IQ Rest-re, de a menüje még üres. Ne aggódjon — a beállítás csak néhány percet vesz igénybe:",
+    "step1": "Adjon hozzá egy kategóriát (pl. \"Főételek\")",
+    "step2": "Adjon hozzá néhány tételt árakkal",
+    "step3": "Töltse le a QR-kódját — kész!",
+    "helpOffer": "Nincs ideje? Csak küldje el nekünk a menüjét bármilyen formátumban — PDF, fotó vagy weboldal linkje — és mi mindent beállítunk Önnek, teljesen ingyen.",
+    "helpAction": "Egyszerűen válaszoljon erre az e-mailre a menüjével csatolva.",
     "cta": "Irányítópult megnyitása",
-    "helpNote": "Ha bármilyen kérdésed van, írj nekünk az irányítópultod Támogatás részében.",
-    "signature": "Üdvözlettel, Az IQ Rest csapata"
+    "signature": "Üdvözlettel,<br>Az IQ Rest csapata"
   },
   "supportEmail": {
     "subject": "Új üzeneted van az IQ Rest ügyfélszolgálattól",
@@ -1979,5 +1982,16 @@
     "body": "Új üzeneted van az ügyfélszolgálati csapatunktól. Kérjük, ellenőrizd a vezérlőpultodon.",
     "cta": "Támogatási chat megnyitása",
     "signature": "Üdvözlettel,<br>Az IQ Rest csapat"
+  },
+  "otpEmail": {
+    "subject": "Az Ön IQ Rest ellenőrző kódja: {code}",
+    "greeting": "Üdvözöljük!",
+    "welcome": "Üdvözöljük az IQ Rest-ben! Az Ön ellenőrző kódja:",
+    "instructions": "Bejelentkezés után néhány perc alatt létrehozhatja digitális menüjét — adjon hozzá kategóriákat, tételeket árakkal, és töltse le a használatra kész QR-kódot asztalaihoz.",
+    "helpOffer": "Segítségre van szüksége? Egyszerűen válaszoljon erre az e-mailre — örömmel segítünk.",
+    "cta": "Irányítópult megnyitása",
+    "signature": "Üdvözlettel,<br>Az IQ Rest csapata",
+    "expiry": "Ez a kód 10 perc múlva lejár.",
+    "ignore": "Ha nem Ön kérte ezt a kódot, hagyja figyelmen kívül ezt az e-mailt."
   }
 }

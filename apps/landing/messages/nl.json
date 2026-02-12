@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Je menu voor {restaurant} wacht op je",
-    "greeting": "Hoi!",
-    "body": "Even een snelle herinnering — je digitale menu voor {restaurant} is bijna klaar. We hebben je voortgang opgeslagen, zodat je verder kunt gaan waar je gebleven was.",
-    "timeNote": "Het duurt meestal ongeveer 5 minuten om af te ronden.",
-    "cta": "Open Dashboard",
-    "helpNote": "Als je vragen hebt, schrijf ons in het Support-gedeelte van je dashboard.",
-    "signature": "Groetjes, Het IQ Rest Team"
+    "subject": "Je IQ Rest menu wacht op je",
+    "greeting": "Hallo,",
+    "body": "Je hebt je onlangs aangemeld bij IQ Rest, maar je menu is nog leeg. Geen zorgen — het kost slechts een paar minuten om te starten:",
+    "step1": "Voeg een categorie toe (bijv. \"Hoofdgerechten\")",
+    "step2": "Voeg enkele items met prijzen toe",
+    "step3": "Download je QR-code — klaar!",
+    "helpOffer": "Geen tijd? Stuur ons gewoon je menu in elk formaat — PDF, foto of een link naar je website — en wij zetten alles voor je op, helemaal gratis.",
+    "helpAction": "Beantwoord deze e-mail gewoon met je menu als bijlage.",
+    "cta": "Dashboard openen",
+    "signature": "Met vriendelijke groet,<br>Het IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Je hebt een nieuw bericht van IQ Rest Support",
@@ -1979,5 +1982,16 @@
     "body": "Je hebt een nieuw bericht van ons supportteam. Bekijk het in je dashboard.",
     "cta": "Open support chat",
     "signature": "Met vriendelijke groet,<br>Het IQ Rest Team"
+  },
+  "otpEmail": {
+    "subject": "Je IQ Rest verificatiecode: {code}",
+    "greeting": "Hallo,",
+    "welcome": "Welkom bij IQ Rest! Je verificatiecode is:",
+    "instructions": "Na het inloggen kun je je digitale menu in slechts een paar minuten aanmaken — voeg categorieën toe, items met prijzen en download een kant-en-klare QR-code voor je tafels.",
+    "helpOffer": "Hulp nodig? Beantwoord gewoon deze e-mail — we helpen je graag.",
+    "cta": "Dashboard openen",
+    "signature": "Met vriendelijke groet,<br>Het IQ Rest Team",
+    "expiry": "Deze code verloopt over 10 minuten.",
+    "ignore": "Als je deze code niet hebt aangevraagd, kun je deze e-mail negeren."
   }
 }

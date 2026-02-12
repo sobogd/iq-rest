@@ -41,6 +41,9 @@ model Company {
   currentPeriodEnd   DateTime?
   paymentProcessing  Boolean            @default(false)
 
+  // Admin
+  reminderSentAt DateTime?
+
   users           UserCompany[]
   categories      Category[]
   items           Item[]

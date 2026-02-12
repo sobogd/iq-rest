@@ -78,6 +78,7 @@ interface Company {
   currentPeriodEnd: string | null;
   stripeCustomerId: string | null;
   stripeSubscriptionId: string | null;
+  reminderSentAt: string | null;
   categoriesCount: number;
   itemsCount: number;
   messagesCount: number;
@@ -149,6 +150,14 @@ export function AdminPage() {
 
       if (res.ok) {
         const data = await res.json();
+        const now = new Date().toISOString();
+        // Update local state
+        setCompanies((prev) =>
+          prev.map((c) =>
+            c.id === selectedCompany.id ? { ...c, reminderSentAt: now } : c
+          )
+        );
+        setSelectedCompany({ ...selectedCompany, reminderSentAt: now });
         toast.success(`Reminder sent to ${data.sentTo}`);
       } else {
         const data = await res.json();
@@ -388,6 +397,11 @@ export function AdminPage() {
                         <span className="flex items-center gap-1">
                           <MessageSquare className="h-3.5 w-3.5" />
                           {company.messagesCount}
+                        </span>
+                      )}
+                      {company.reminderSentAt && (
+                        <span className="flex items-center gap-1 text-green-600" title={`Reminder sent ${formatDate(company.reminderSentAt)}`}>
+                          <Mail className="h-3.5 w-3.5" />
                         </span>
                       )}
                     </div>
@@ -658,19 +672,26 @@ export function AdminPage() {
 
               {/* Actions */}
               <div className="pt-4 border-t space-y-3">
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  onClick={handleSendReminder}
-                  disabled={sendingReminder}
-                >
-                  {sendingReminder ? (
-                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                  ) : (
-                    <Mail className="h-4 w-4 mr-2" />
+                <div className="space-y-2">
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={handleSendReminder}
+                    disabled={sendingReminder}
+                  >
+                    {sendingReminder ? (
+                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                    ) : (
+                      <Mail className="h-4 w-4 mr-2" />
+                    )}
+                    {selectedCompany?.reminderSentAt ? "Send Reminder Again" : "Send Reminder Email"}
+                  </Button>
+                  {selectedCompany?.reminderSentAt && (
+                    <p className="text-xs text-center text-muted-foreground">
+                      Last sent: {formatDate(selectedCompany.reminderSentAt, true)}
+                    </p>
                   )}
-                  Send Reminder Email
-                </Button>
+                </div>
                 <Button
                   variant="destructive"
                   className="w-full"

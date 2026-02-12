@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Vaš jelovnik za {restaurant} vas čeka",
-    "greeting": "Bok!",
-    "body": "Samo kratka poruka — vaš digitalni jelovnik za {restaurant} je skoro gotov. Spremili smo vaš napredak, tako da možete nastaviti gdje ste stali.",
-    "timeNote": "Obično treba oko 5 minuta za završetak.",
-    "cta": "Otvori nadzornu ploču",
-    "helpNote": "Ako imate pitanja, pišite nam u odjeljku Podrška na vašoj nadzornoj ploči.",
-    "signature": "Srdačan pozdrav, Tim IQ Rest"
+    "subject": "Vaš IQ Rest meni vas čeka",
+    "greeting": "Pozdrav,",
+    "body": "Nedavno ste se registrirali na IQ Rest, ali vaš meni je još uvijek prazan. Ne brinite — postavljanje traje samo nekoliko minuta:",
+    "step1": "Dodajte kategoriju (npr. \"Glavna jela\")",
+    "step2": "Dodajte nekoliko artikala s cijenama",
+    "step3": "Preuzmite svoj QR kod — gotovo!",
+    "helpOffer": "Nemate vremena? Samo nam pošaljite svoj meni u bilo kojem formatu — PDF, fotografija ili link na web stranicu — i mi ćemo sve postaviti za vas, potpuno besplatno.",
+    "helpAction": "Jednostavno odgovorite na ovaj email s priloženim menijem.",
+    "cta": "Otvori upravljačku ploču",
+    "signature": "Srdačan pozdrav,<br>IQ Rest tim"
   },
   "supportEmail": {
     "subject": "Imate novu poruku od IQ Rest podrške",
@@ -1979,5 +1982,16 @@
     "body": "Imate novu poruku od našeg tima za podršku. Provjerite je na svojoj nadzornoj ploči.",
     "cta": "Otvori chat podrške",
     "signature": "Srdačan pozdrav,<br>IQ Rest tim"
+  },
+  "otpEmail": {
+    "subject": "Vaš IQ Rest verifikacijski kod: {code}",
+    "greeting": "Pozdrav,",
+    "welcome": "Dobrodošli u IQ Rest! Vaš verifikacijski kod je:",
+    "instructions": "Nakon prijave možete kreirati svoj digitalni meni u samo nekoliko minuta — dodajte kategorije, artikle s cijenama i preuzmite gotov QR kod za svoje stolove.",
+    "helpOffer": "Trebate pomoć? Samo odgovorite na ovaj email — rado ćemo vam pomoći.",
+    "cta": "Otvori upravljačku ploču",
+    "signature": "Srdačan pozdrav,<br>IQ Rest tim",
+    "expiry": "Ovaj kod istječe za 10 minuta.",
+    "ignore": "Ako niste zatražili ovaj kod, možete ignorirati ovaj email."
   }
 }

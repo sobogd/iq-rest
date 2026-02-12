@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Jūsu ēdienkarte {restaurant} gaida jūs",
-    "greeting": "Sveiki!",
-    "body": "Tikai īss atgādinājums — jūsu digitālā ēdienkarte {restaurant} ir gandrīz gatava. Mēs saglabājām jūsu progresu, tāpēc varat turpināt no vietas, kur apstājāties.",
-    "timeNote": "Parasti pabeigšana aizņem apmēram 5 minūtes.",
+    "subject": "Jūsu IQ Rest ēdienkarte gaida jūs",
+    "greeting": "Sveiki,",
+    "body": "Jūs nesen reģistrējāties IQ Rest, bet jūsu ēdienkarte joprojām ir tukša. Neuztraucieties — iestatīšana aizņem tikai dažas minūtes:",
+    "step1": "Pievienojiet kategoriju (piem., \"Pamatēdieni\")",
+    "step2": "Pievienojiet dažas preces ar cenām",
+    "step3": "Lejupielādējiet savu QR kodu — gatavs!",
+    "helpOffer": "Nav laika? Vienkārši nosūtiet mums savu ēdienkarti jebkurā formātā — PDF, foto vai saite uz mājas lapu — un mēs visu iestatīsim jūsu vietā, pilnīgi bez maksas.",
+    "helpAction": "Vienkārši atbildiet uz šo e-pastu, pievienojot savu ēdienkarti.",
     "cta": "Atvērt vadības paneli",
-    "helpNote": "Ja jums ir jautājumi, rakstiet mums vadības paneļa Atbalsta sadaļā.",
-    "signature": "Ar cieņu, IQ Rest komanda"
+    "signature": "Ar cieņu,<br>IQ Rest komanda"
   },
   "supportEmail": {
     "subject": "Jums ir jauna ziņa no IQ Rest atbalsta",
@@ -1979,5 +1982,16 @@
     "body": "Jums ir jauna ziņa no mūsu atbalsta komandas. Lūdzu, pārbaudiet to savā vadības panelī.",
     "cta": "Atvērt atbalsta tērzēšanu",
     "signature": "Ar cieņu,<br>IQ Rest komanda"
+  },
+  "otpEmail": {
+    "subject": "Jūsu IQ Rest verifikācijas kods: {code}",
+    "greeting": "Sveiki,",
+    "welcome": "Laipni lūdzam IQ Rest! Jūsu verifikācijas kods ir:",
+    "instructions": "Pēc pieteikšanās varat izveidot savu digitālo ēdienkarti tikai dažu minūšu laikā — pievienojiet kategorijas, preces ar cenām un lejupielādējiet gatavu QR kodu saviem galdiem.",
+    "helpOffer": "Nepieciešama palīdzība? Vienkārši atbildiet uz šo e-pastu — mēs labprāt palīdzēsim.",
+    "cta": "Atvērt vadības paneli",
+    "signature": "Ar cieņu,<br>IQ Rest komanda",
+    "expiry": "Šis kods derīgs 10 minūtes.",
+    "ignore": "Ja jūs neprasījāt šo kodu, varat ignorēt šo e-pastu."
   }
 }

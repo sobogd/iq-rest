@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "{restaurant} için menünüz sizi bekliyor",
-    "greeting": "Merhaba!",
-    "body": "Kısa bir hatırlatma — {restaurant} için dijital menünüz neredeyse hazır. İlerlemenizi kaydettik, böylece kaldığınız yerden devam edebilirsiniz.",
-    "timeNote": "Genellikle tamamlamak yaklaşık 5 dakika sürer.",
-    "cta": "Kontrol Panelini Aç",
-    "helpNote": "Sorularınız varsa, kontrol panelinizin Destek bölümünden bize yazın.",
-    "signature": "Selamlar, IQ Rest Ekibi"
+    "subject": "IQ Rest menünüz sizi bekliyor",
+    "greeting": "Merhaba,",
+    "body": "Yakın zamanda IQ Rest'e kaydoldunuz, ancak menünüz hâlâ boş. Endişelenmeyin — kurulum sadece birkaç dakika sürer:",
+    "step1": "Bir kategori ekleyin (örn. \"Ana Yemekler\")",
+    "step2": "Fiyatlarıyla birlikte birkaç ürün ekleyin",
+    "step3": "QR kodunuzu indirin — tamam!",
+    "helpOffer": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya web sitenizin linki — ve sizin için tamamen ücretsiz ayarlayalım.",
+    "helpAction": "Bu e-postayı menünüzü ekleyerek yanıtlamanız yeterli.",
+    "cta": "Paneli Aç",
+    "signature": "Saygılarımızla,<br>IQ Rest Ekibi"
   },
   "supportEmail": {
     "subject": "IQ Rest Destek'ten yeni bir mesajınız var",
@@ -1979,5 +1982,16 @@
     "body": "Destek ekibimizden yeni bir mesajınız var. Lütfen kontrol panelinizden kontrol edin.",
     "cta": "Destek sohbetini aç",
     "signature": "Saygılarımızla,<br>IQ Rest Ekibi"
+  },
+  "otpEmail": {
+    "subject": "IQ Rest doğrulama kodunuz: {code}",
+    "greeting": "Merhaba,",
+    "welcome": "IQ Rest'e hoş geldiniz! Doğrulama kodunuz:",
+    "instructions": "Giriş yaptıktan sonra dijital menünüzü sadece birkaç dakikada oluşturabilirsiniz — kategoriler, fiyatlı ürünler ekleyin ve masalarınız için kullanıma hazır QR kodunuzu indirin.",
+    "helpOffer": "Yardıma mı ihtiyacınız var? Bu e-postayı yanıtlamanız yeterli — size yardımcı olmaktan mutluluk duyarız.",
+    "cta": "Paneli Aç",
+    "signature": "Saygılarımızla,<br>IQ Rest Ekibi",
+    "expiry": "Bu kod 10 dakika içinde geçerliliğini yitirecektir.",
+    "ignore": "Bu kodu siz talep etmediyseniz, bu e-postayı görmezden gelebilirsiniz."
   }
 }

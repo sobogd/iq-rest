@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Vaše menu pre {restaurant} na vás čaká",
-    "greeting": "Ahoj!",
-    "body": "Len rýchla poznámka — vaše digitálne menu pre {restaurant} je takmer hotové. Uložili sme váš postup, takže môžete pokračovať tam, kde ste prestali.",
-    "timeNote": "Zvyčajne to trvá asi 5 minút.",
-    "cta": "Otvoriť dashboard",
-    "helpNote": "Ak máte otázky, napíšte nám v sekcii Podpora na vašom dashboarde.",
-    "signature": "S pozdravom, Tím IQ Rest"
+    "subject": "Vaše menu IQ Rest na vás čaká",
+    "greeting": "Dobrý deň,",
+    "body": "Nedávno ste sa zaregistrovali v IQ Rest, ale vaše menu je stále prázdne. Nebojte sa — nastavenie trvá len pár minút:",
+    "step1": "Pridajte kategóriu (napr. \"Hlavné jedlá\")",
+    "step2": "Pridajte niekoľko položiek s cenami",
+    "step3": "Stiahnite si QR kód — hotovo!",
+    "helpOffer": "Nemáte čas? Pošlite nám svoje menu v akomkoľvek formáte — PDF, foto alebo odkaz na web — a my všetko nastavíme za vás, úplne zadarmo.",
+    "helpAction": "Stačí odpovedať na tento email s priloženým menu.",
+    "cta": "Otvoriť panel",
+    "signature": "S pozdravom,<br>Tím IQ Rest"
   },
   "supportEmail": {
     "subject": "Máte novú správu od podpory IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Máte novú správu od nášho tímu podpory. Skontrolujte ju prosím na svojom paneli.",
     "cta": "Otvoriť chat podpory",
     "signature": "S pozdravom,<br>Tím IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "Váš overovací kód IQ Rest: {code}",
+    "greeting": "Dobrý deň,",
+    "welcome": "Vitajte v IQ Rest! Váš overovací kód je:",
+    "instructions": "Po prihlásení môžete vytvoriť svoje digitálne menu za niekoľko minút — pridajte kategórie, položky s cenami a stiahnite si hotový QR kód pre svoje stoly.",
+    "helpOffer": "Potrebujete pomoc? Stačí odpovedať na tento email — radi vám pomôžeme.",
+    "cta": "Otvoriť panel",
+    "signature": "S pozdravom,<br>Tím IQ Rest",
+    "expiry": "Tento kód vyprší o 10 minút.",
+    "ignore": "Ak ste o tento kód nežiadali, môžete tento email ignorovať."
   }
 }

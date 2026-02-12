@@ -12,9 +12,12 @@ interface ReminderEmailTranslations {
   subject: string;
   greeting: string;
   body: string;
-  timeNote: string;
+  step1: string;
+  step2: string;
+  step3: string;
+  helpOffer: string;
+  helpAction: string;
   cta: string;
-  helpNote: string;
   signature: string;
 }
 
@@ -85,15 +88,11 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       },
     });
 
-    // Replace {restaurant} placeholder in translations
-    const subject = t.subject.replace("{restaurant}", restaurantName);
-    const body = t.body.replace("{restaurant}", restaurantName);
-
-    // Email content - friendly, non-pushy reminder
+    // Email content - friendly reminder with steps and help offer
     const mailOptions = {
       from: process.env.FROM_EMAIL,
       to: ownerEmail,
-      subject,
+      subject: t.subject,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
 
@@ -101,23 +100,29 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             ${t.greeting}
           </p>
 
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${body}
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">
+            ${t.body}
+          </p>
+
+          <ol style="font-size: 17px; line-height: 1.7; margin: 0 0 20px; padding-left: 24px;">
+            <li style="margin-bottom: 8px;">${t.step1}</li>
+            <li style="margin-bottom: 8px;">${t.step2}</li>
+            <li>${t.step3}</li>
+          </ol>
+
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">
+            ${t.helpOffer}
           </p>
 
           <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.timeNote}
+            ${t.helpAction}
           </p>
 
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
             <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
           </p>
 
-          <p style="font-size: 15px; line-height: 1.7; margin: 24px 0 0; color: #666;">
-            ${t.helpNote}
-          </p>
-
-          <p style="font-size: 15px; margin: 20px 0 0; color: #1a1a1a;">
+          <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
             ${t.signature}
           </p>
 
@@ -125,18 +130,27 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       `,
       text: `${t.greeting}
 
-${body}
+${t.body}
 
-${t.timeNote}
+1. ${t.step1}
+2. ${t.step2}
+3. ${t.step3}
+
+${t.helpOffer}
+${t.helpAction}
 
 ${t.cta}: https://iq-rest.com/dashboard
-
-${t.helpNote}
 
 ${t.signature}`,
     };
 
     await transporter.sendMail(mailOptions);
+
+    // Update reminderSentAt timestamp
+    await prisma.company.update({
+      where: { id: companyId },
+      data: { reminderSentAt: new Date() },
+    });
 
     return NextResponse.json({ success: true, sentTo: ownerEmail });
   } catch (error) {

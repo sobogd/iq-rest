@@ -1697,13 +1697,16 @@
     "cookieTypes": []
   },
   "reminderEmail": {
-    "subject": "您的 {restaurant} 菜单正在等待您",
-    "greeting": "您好！",
-    "body": "温馨提示 — 您为 {restaurant} 制作的数字菜单即将完成。我们已保存您的进度，您可以从上次中断的地方继续。",
-    "timeNote": "通常只需约5分钟即可完成。",
+    "subject": "您的IQ Rest菜单正在等待您",
+    "greeting": "您好，",
+    "body": "您最近注册了IQ Rest，但您的菜单仍然是空的。别担心——设置只需几分钟：",
+    "step1": "添加一个分类（例如「主菜」）",
+    "step2": "添加几个带价格的菜品",
+    "step3": "下载您的二维码——完成！",
+    "helpOffer": "没有时间？只需将您的菜单以任何格式发送给我们——PDF、照片或网站链接——我们将免费为您设置一切。",
+    "helpAction": "只需回复此邮件并附上您的菜单即可。",
     "cta": "打开控制面板",
-    "helpNote": "如有任何问题，请在您的控制面板的支持部分给我们留言。",
-    "signature": "祝好，IQ Rest 团队"
+    "signature": "此致敬礼，<br>IQ Rest团队"
   },
   "supportEmail": {
     "subject": "您收到了来自IQ Rest支持团队的新消息",
@@ -1711,5 +1714,16 @@
     "body": "您收到了来自我们支持团队的新消息。请在您的仪表板中查看。",
     "cta": "打开支持聊天",
     "signature": "此致敬礼，<br>IQ Rest团队"
+  },
+  "otpEmail": {
+    "subject": "您的IQ Rest验证码：{code}",
+    "greeting": "您好，",
+    "welcome": "欢迎使用IQ Rest！您的验证码是：",
+    "instructions": "登录后，您可以在几分钟内创建数字菜单——添加分类、带价格的菜品，并下载可直接使用的桌面二维码。",
+    "helpOffer": "需要帮助？只需回复此邮件——我们很乐意为您提供帮助。",
+    "cta": "打开控制面板",
+    "signature": "此致敬礼，<br>IQ Rest团队",
+    "expiry": "此验证码将在10分钟后过期。",
+    "ignore": "如果您没有请求此验证码，请忽略此邮件。"
   }
 }

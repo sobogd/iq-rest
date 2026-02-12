@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Tá do bhiachlár do {restaurant} ag fanacht leat",
-    "greeting": "Dia duit!",
-    "body": "Nóta tapa — tá do bhiachlár digiteach do {restaurant} beagnach réidh. Shábháil muid do dhul chun cinn, ionas gur féidir leat leanúint ar aghaidh ón áit ar stop tú.",
-    "timeNote": "De ghnáth tógann sé thart ar 5 nóiméad chun críochnú.",
-    "cta": "Oscail an Painéal",
-    "helpNote": "Má tá ceisteanna agat, scríobh chugainn sa rannán Tacaíochta ar do phainéal.",
-    "signature": "Le dea-ghuí, Foireann IQ Rest"
+    "subject": "Tá do bhiachlár IQ Rest ag fanacht leat",
+    "greeting": "Dia duit,",
+    "body": "Chláraigh tú le déanaí le IQ Rest, ach tá do bhiachlár fós folamh. Ná bí buartha — ní thógann an socrú ach cúpla nóiméad:",
+    "step1": "Cuir catagóir leis (m.sh. \"Príomhchúrsaí\")",
+    "step2": "Cuir roinnt earraí le praghsanna leis",
+    "step3": "Íoslódáil do chód QR — déanta!",
+    "helpOffer": "Gan am agat? Seol chugainn do bhiachlár i bhformáid ar bith — PDF, grianghraf nó nasc chuig do shuíomh gréasáin — agus socróimid gach rud duit, saor in aisce go hiomlán.",
+    "helpAction": "Freagair an ríomhphost seo le do bhiachlár ceangailte.",
+    "cta": "Oscail an Deais",
+    "signature": "Le dea-mhéin,<br>Foireann IQ Rest"
   },
   "supportEmail": {
     "subject": "Tá teachtaireacht nua agat ó Thacaíocht IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Tá teachtaireacht nua agat ónár bhfoireann tacaíochta. Seiceáil í ar do dheais.",
     "cta": "Oscail comhrá tacaíochta",
     "signature": "Le meas,<br>Foireann IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "Do chód fíoraithe IQ Rest: {code}",
+    "greeting": "Dia duit,",
+    "welcome": "Fáilte go IQ Rest! Is é seo do chód fíoraithe:",
+    "instructions": "Tar éis logáil isteach, is féidir leat do bhiachlár digiteach a chruthú i gcúpla nóiméad — cuir catagóirí leis, earraí le praghsanna agus íoslódáil cód QR atá réidh le húsáid do do bhoird.",
+    "helpOffer": "An bhfuil cabhair uait? Freagair an ríomhphost seo — beidh áthas orainn cabhrú.",
+    "cta": "Oscail an Deais",
+    "signature": "Le dea-mhéin,<br>Foireann IQ Rest",
+    "expiry": "Rachaidh an cód seo in éag i gceann 10 nóiméad.",
+    "ignore": "Mura ndearna tú iarratas ar an gcód seo, is féidir leat an ríomhphost seo a neamhaird."
   }
 }

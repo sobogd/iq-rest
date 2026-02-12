@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Your menu for {restaurant} is waiting",
-    "greeting": "Hey!",
-    "body": "Just a quick note — your digital menu for {restaurant} is almost ready. We saved your progress, so you can pick up right where you left off.",
-    "timeNote": "It usually takes about 5 minutes to finish.",
+    "subject": "Your IQ Rest menu is waiting for you",
+    "greeting": "Hi there,",
+    "body": "You recently signed up for IQ Rest, but your menu is still empty. No worries — it only takes a few minutes to get started:",
+    "step1": "Add a category (e.g. \"Main Courses\")",
+    "step2": "Add a few items with prices",
+    "step3": "Download your QR code — done!",
+    "helpOffer": "Short on time? Just send us your menu in any format — PDF, photo, or a link to your website — and we'll set it up for you, completely free.",
+    "helpAction": "Simply reply to this email with your menu attached.",
     "cta": "Open Dashboard",
-    "helpNote": "If you have any questions, write to us in the Support section of your dashboard.",
-    "signature": "Cheers, The IQ Rest Team"
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "You have a new message from IQ Rest Support",
@@ -1979,5 +1982,16 @@
     "body": "You have a new message from our support team. Please check your dashboard to view it.",
     "cta": "Open Support Chat",
     "signature": "Cheers,<br>The IQ Rest Team"
+  },
+  "otpEmail": {
+    "subject": "Your IQ Rest verification code: {code}",
+    "greeting": "Hi there,",
+    "welcome": "Welcome to IQ Rest! Your verification code is:",
+    "instructions": "After signing in, you can create your digital menu in just a few minutes — add categories, items with prices, and download a ready-to-use QR code for your tables.",
+    "helpOffer": "Need help? Just reply to this email — we're happy to assist.",
+    "cta": "Open Dashboard",
+    "signature": "Best regards,<br>IQ Rest Team",
+    "expiry": "This code will expire in 10 minutes.",
+    "ignore": "If you didn't request this code, you can safely ignore this email."
   }
 }

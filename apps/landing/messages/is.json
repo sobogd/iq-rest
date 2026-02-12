@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Matseðillinn þinn fyrir {restaurant} bíður þín",
-    "greeting": "Hæ!",
-    "body": "Bara stutt áminning — stafræni matseðillinn þinn fyrir {restaurant} er næstum tilbúinn. Við vistuðum framfarir þínar, svo þú getur haldið áfram þar sem frá var horfið.",
-    "timeNote": "Það tekur venjulega um 5 mínútur að klára.",
+    "subject": "IQ Rest matseðillinn þinn bíður þín",
+    "greeting": "Halló,",
+    "body": "Þú skráðir þig nýlega á IQ Rest, en matseðillinn þinn er enn tómur. Engar áhyggjur — uppsetningin tekur aðeins nokkrar mínútur:",
+    "step1": "Bættu við flokki (t.d. \"Aðalréttir\")",
+    "step2": "Bættu við nokkrum vörum með verði",
+    "step3": "Sæktu QR-kóðann þinn — búið!",
+    "helpOffer": "Ertu ekki með tíma? Sendu okkur bara matseðilinn þinn á hvaða formi sem er — PDF, mynd eða tengil á vefsíðuna þína — og við setjum allt upp fyrir þig, alveg ókeypis.",
+    "helpAction": "Svaraðu bara þessum tölvupósti með matseðlinum þínum í viðhengi.",
     "cta": "Opna stjórnborð",
-    "helpNote": "Ef þú hefur spurningar, skrifaðu okkur í Stuðningshlutanum á stjórnborðinu þínu.",
-    "signature": "Bestu kveðjur, IQ Rest teymið"
+    "signature": "Bestu kveðjur,<br>IQ Rest teymið"
   },
   "supportEmail": {
     "subject": "Þú hefur ný skilaboð frá IQ Rest þjónustuver",
@@ -1979,5 +1982,16 @@
     "body": "Þú hefur ný skilaboð frá þjónustuteyminu okkar. Vinsamlegast skoðaðu þau á stjórnborðinu þínu.",
     "cta": "Opna þjónustuspjall",
     "signature": "Bestu kveðjur,<br>IQ Rest teymið"
+  },
+  "otpEmail": {
+    "subject": "Staðfestingarkóðinn þinn hjá IQ Rest: {code}",
+    "greeting": "Halló,",
+    "welcome": "Velkomin í IQ Rest! Staðfestingarkóðinn þinn er:",
+    "instructions": "Eftir innskráningu geturðu búið til stafræna matseðilinn þinn á aðeins nokkrum mínútum — bættu við flokkum, vörum með verði og sæktu tilbúinn QR-kóða fyrir borðin þín.",
+    "helpOffer": "Þarftu aðstoð? Svaraðu bara þessum tölvupósti — okkur þykir gott að hjálpa.",
+    "cta": "Opna stjórnborð",
+    "signature": "Bestu kveðjur,<br>IQ Rest teymið",
+    "expiry": "Þessi kóði rennur út eftir 10 mínútur.",
+    "ignore": "Ef þú baðst ekki um þennan kóða geturðu hunsað þennan tölvupóst."
   }
 }

@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Meniul tău pentru {restaurant} te așteaptă",
-    "greeting": "Salut!",
-    "body": "Doar o notă rapidă — meniul tău digital pentru {restaurant} este aproape gata. Am salvat progresul tău, așa că poți continua de unde ai rămas.",
-    "timeNote": "De obicei durează aproximativ 5 minute pentru a finaliza.",
-    "cta": "Deschide panoul de control",
-    "helpNote": "Dacă ai întrebări, scrie-ne în secțiunea Suport din panoul tău de control.",
-    "signature": "Cu drag, Echipa IQ Rest"
+    "subject": "Meniul tău IQ Rest te așteaptă",
+    "greeting": "Bună,",
+    "body": "Te-ai înregistrat recent pe IQ Rest, dar meniul tău este încă gol. Nu-ți face griji — configurarea durează doar câteva minute:",
+    "step1": "Adaugă o categorie (ex. \"Feluri principale\")",
+    "step2": "Adaugă câteva articole cu prețuri",
+    "step3": "Descarcă codul tău QR — gata!",
+    "helpOffer": "Nu ai timp? Trimite-ne pur și simplu meniul în orice format — PDF, poză sau link către site — și noi îl vom configura pentru tine, complet gratuit.",
+    "helpAction": "Răspunde simplu la acest email cu meniul atașat.",
+    "cta": "Deschide Panoul de Control",
+    "signature": "Cu stimă,<br>Echipa IQ Rest"
   },
   "supportEmail": {
     "subject": "Aveți un mesaj nou de la suportul IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Aveți un mesaj nou de la echipa noastră de suport. Vă rugăm să îl verificați în panoul de control.",
     "cta": "Deschide chat suport",
     "signature": "Cu stimă,<br>Echipa IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "Codul tău de verificare IQ Rest: {code}",
+    "greeting": "Bună,",
+    "welcome": "Bine ai venit la IQ Rest! Codul tău de verificare este:",
+    "instructions": "După autentificare, îți poți crea meniul digital în doar câteva minute — adaugă categorii, articole cu prețuri și descarcă un cod QR gata de utilizare pentru mesele tale.",
+    "helpOffer": "Ai nevoie de ajutor? Răspunde simplu la acest email — te ajutăm cu plăcere.",
+    "cta": "Deschide Panoul de Control",
+    "signature": "Cu stimă,<br>Echipa IQ Rest",
+    "expiry": "Acest cod expiră în 10 minute.",
+    "ignore": "Dacă nu ai solicitat acest cod, poți ignora acest email."
   }
 }

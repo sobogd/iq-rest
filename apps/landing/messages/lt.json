@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Jūsų meniu {restaurant} laukia jūsų",
-    "greeting": "Sveiki!",
-    "body": "Tik trumpas priminimas — jūsų skaitmeninis meniu {restaurant} beveik paruoštas. Išsaugojome jūsų pažangą, todėl galite tęsti nuo ten, kur baigėte.",
-    "timeNote": "Paprastai užbaigti užtrunka apie 5 minutes.",
+    "subject": "Jūsų IQ Rest meniu laukia jūsų",
+    "greeting": "Sveiki,",
+    "body": "Neseniai užsiregistravote IQ Rest, bet jūsų meniu vis dar tuščias. Nesijaudinkite — nustatymas užtrunka tik kelias minutes:",
+    "step1": "Pridėkite kategoriją (pvz., \"Pagrindiniai patiekalai\")",
+    "step2": "Pridėkite kelis produktus su kainomis",
+    "step3": "Atsisiųskite savo QR kodą — baigta!",
+    "helpOffer": "Neturite laiko? Tiesiog atsiųskite mums savo meniu bet kokiu formatu — PDF, nuotrauka ar nuoroda į svetainę — ir mes viską nustatysime už jus, visiškai nemokamai.",
+    "helpAction": "Tiesiog atsakykite į šį el. laišką pridėję savo meniu.",
     "cta": "Atidaryti valdymo skydelį",
-    "helpNote": "Jei turite klausimų, parašykite mums valdymo skydelio Palaikymo skiltyje.",
-    "signature": "Pagarbiai, IQ Rest komanda"
+    "signature": "Pagarbiai,<br>IQ Rest komanda"
   },
   "supportEmail": {
     "subject": "Turite naują pranešimą iš IQ Rest palaikymo",
@@ -1979,5 +1982,16 @@
     "body": "Turite naują pranešimą iš mūsų palaikymo komandos. Patikrinkite jį savo valdymo skydelyje.",
     "cta": "Atidaryti palaikymo pokalbį",
     "signature": "Pagarbiai,<br>IQ Rest komanda"
+  },
+  "otpEmail": {
+    "subject": "Jūsų IQ Rest patvirtinimo kodas: {code}",
+    "greeting": "Sveiki,",
+    "welcome": "Sveiki atvykę į IQ Rest! Jūsų patvirtinimo kodas:",
+    "instructions": "Prisijungę galėsite sukurti savo skaitmeninį meniu vos per kelias minutes — pridėkite kategorijas, produktus su kainomis ir atsisiųskite paruoštą QR kodą savo stalams.",
+    "helpOffer": "Reikia pagalbos? Tiesiog atsakykite į šį el. laišką — mielai padėsime.",
+    "cta": "Atidaryti valdymo skydelį",
+    "signature": "Pagarbiai,<br>IQ Rest komanda",
+    "expiry": "Šis kodas galioja 10 minučių.",
+    "ignore": "Jei neprašėte šio kodo, galite ignoruoti šį el. laišką."
   }
 }

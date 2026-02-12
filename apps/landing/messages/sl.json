@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Vaš jedilnik za {restaurant} vas čaka",
-    "greeting": "Živjo!",
-    "body": "Samo kratko sporočilo — vaš digitalni jedilnik za {restaurant} je skoraj pripravljen. Shranili smo vaš napredek, tako da lahko nadaljujete tam, kjer ste končali.",
-    "timeNote": "Običajno traja približno 5 minut za dokončanje.",
+    "subject": "Vaš meni IQ Rest vas čaka",
+    "greeting": "Pozdravljeni,",
+    "body": "Pred kratkim ste se registrirali na IQ Rest, vendar je vaš meni še vedno prazen. Brez skrbi — nastavitev traja le nekaj minut:",
+    "step1": "Dodajte kategorijo (npr. \"Glavne jedi\")",
+    "step2": "Dodajte nekaj artiklov s cenami",
+    "step3": "Prenesite svojo QR kodo — končano!",
+    "helpOffer": "Nimate časa? Preprosto nam pošljite svoj meni v katerem koli formatu — PDF, fotografija ali povezava do spletne strani — in mi bomo vse nastavili namesto vas, popolnoma brezplačno.",
+    "helpAction": "Preprosto odgovorite na to e-pošto s priloženim menijem.",
     "cta": "Odpri nadzorno ploščo",
-    "helpNote": "Če imate vprašanja, nam pišite v razdelku Podpora na vaši nadzorni plošči.",
-    "signature": "Lep pozdrav, Ekipa IQ Rest"
+    "signature": "Lep pozdrav,<br>Ekipa IQ Rest"
   },
   "supportEmail": {
     "subject": "Imate novo sporočilo od podpore IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Imate novo sporočilo od naše ekipe za podporo. Preverite ga na svoji nadzorni plošči.",
     "cta": "Odpri klepet za podporo",
     "signature": "Lep pozdrav,<br>Ekipa IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "Vaša potrditvena koda IQ Rest: {code}",
+    "greeting": "Pozdravljeni,",
+    "welcome": "Dobrodošli v IQ Rest! Vaša potrditvena koda je:",
+    "instructions": "Po prijavi lahko ustvarite svoj digitalni meni v le nekaj minutah — dodajte kategorije, artikle s cenami in prenesite pripravljen QR kodo za svoje mize.",
+    "helpOffer": "Potrebujete pomoč? Preprosto odgovorite na to e-pošto — z veseljem vam bomo pomagali.",
+    "cta": "Odpri nadzorno ploščo",
+    "signature": "Lep pozdrav,<br>Ekipa IQ Rest",
+    "expiry": "Ta koda poteče čez 10 minut.",
+    "ignore": "Če niste zahtevali te kode, lahko to e-pošto prezrete."
   }
 }

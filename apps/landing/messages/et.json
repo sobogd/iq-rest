@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Teie menüü {restaurant} jaoks ootab teid",
-    "greeting": "Tere!",
-    "body": "Lihtsalt kiire meeldetuletus — teie digitaalne menüü {restaurant} jaoks on peaaegu valmis. Salvestasime teie edenemise, nii et saate jätkata sealt, kus pooleli jäite.",
-    "timeNote": "Tavaliselt kulub lõpetamiseks umbes 5 minutit.",
-    "cta": "Ava töölaud",
-    "helpNote": "Kui teil on küsimusi, kirjutage meile oma juhtpaneeli tugisektsioonis.",
-    "signature": "Tervitustega, IQ Rest meeskond"
+    "subject": "Teie IQ Rest menüü ootab teid",
+    "greeting": "Tere,",
+    "body": "Registreerusite hiljuti IQ Resti, kuid teie menüü on endiselt tühi. Ärge muretsege — seadistamine võtab vaid mõne minuti:",
+    "step1": "Lisage kategooria (nt \"Põhiroad\")",
+    "step2": "Lisage mõned tooted hindadega",
+    "step3": "Laadige alla oma QR-kood — valmis!",
+    "helpOffer": "Pole aega? Saatke meile lihtsalt oma menüü mis tahes vormingus — PDF, foto või link veebilehele — ja me seadistame kõik teie eest, täiesti tasuta.",
+    "helpAction": "Lihtsalt vastake sellele e-kirjale, lisades oma menüü manusena.",
+    "cta": "Ava juhtpaneel",
+    "signature": "Parimate soovidega,<br>IQ Rest meeskond"
   },
   "supportEmail": {
     "subject": "Teil on uus sõnum IQ Rest toelt",
@@ -1979,5 +1982,16 @@
     "body": "Teil on uus sõnum meie tugimeeskonnalt. Palun vaadake seda oma juhtpaneelil.",
     "cta": "Ava tugivestlus",
     "signature": "Lugupidamisega,<br>IQ Rest meeskond"
+  },
+  "otpEmail": {
+    "subject": "Teie IQ Rest kinnituskood: {code}",
+    "greeting": "Tere,",
+    "welcome": "Tere tulemast IQ Resti! Teie kinnituskood on:",
+    "instructions": "Pärast sisselogimist saate luua oma digitaalse menüü vaid mõne minutiga — lisage kategooriad, tooted hindadega ja laadige alla kasutamisvalmis QR-kood oma laudade jaoks.",
+    "helpOffer": "Vajate abi? Lihtsalt vastake sellele e-kirjale — aitame teid hea meelega.",
+    "cta": "Ava juhtpaneel",
+    "signature": "Parimate soovidega,<br>IQ Rest meeskond",
+    "expiry": "See kood aegub 10 minuti pärast.",
+    "ignore": "Kui te seda koodi ei küsinud, võite selle e-kirja ignoreerida."
   }
 }

@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "El teu menú per a {restaurant} t'està esperant",
-    "greeting": "Hola!",
-    "body": "Només una nota ràpida — el teu menú digital per a {restaurant} està gairebé a punt. Hem guardat el teu progrés, així que pots continuar des d'on ho vas deixar.",
-    "timeNote": "Normalment es triga uns 5 minuts a acabar.",
-    "cta": "Obre el tauler",
-    "helpNote": "Si tens alguna pregunta, escriu-nos a la secció de Suport del teu panell de control.",
-    "signature": "Salutacions, L'equip d'IQ Rest"
+    "subject": "El teu menú d'IQ Rest t'està esperant",
+    "greeting": "Hola,",
+    "body": "T'has registrat recentment a IQ Rest, però el teu menú encara és buit. No et preocupis — la configuració només triga uns minuts:",
+    "step1": "Afegeix una categoria (p. ex. \"Plats principals\")",
+    "step2": "Afegeix alguns articles amb preus",
+    "step3": "Descarrega el teu codi QR — fet!",
+    "helpOffer": "No tens temps? Simplement envia'ns el teu menú en qualsevol format — PDF, foto o enllaç al teu web — i ho configurarem tot per tu, completament gratis.",
+    "helpAction": "Simplement respon a aquest correu amb el teu menú adjunt.",
+    "cta": "Obrir tauler de control",
+    "signature": "Salutacions cordials,<br>L'equip d'IQ Rest"
   },
   "supportEmail": {
     "subject": "Tens un nou missatge del suport d'IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Tens un nou missatge del nostre equip de suport. Si us plau, revisa'l al teu tauler.",
     "cta": "Obrir xat de suport",
     "signature": "Salutacions,<br>L'equip d'IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "El teu codi de verificació d'IQ Rest: {code}",
+    "greeting": "Hola,",
+    "welcome": "Benvingut a IQ Rest! El teu codi de verificació és:",
+    "instructions": "Després d'iniciar sessió, podràs crear el teu menú digital en només uns minuts — afegeix categories, articles amb preus i descarrega un codi QR preparat per utilitzar a les teves taules.",
+    "helpOffer": "Necessites ajuda? Simplement respon a aquest correu — estarem encantats d'ajudar-te.",
+    "cta": "Obrir tauler de control",
+    "signature": "Salutacions cordials,<br>L'equip d'IQ Rest",
+    "expiry": "Aquest codi caduca en 10 minuts.",
+    "ignore": "Si no has sol·licitat aquest codi, pots ignorar aquest correu."
   }
 }

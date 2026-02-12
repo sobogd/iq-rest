@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
@@ -59,11 +59,11 @@ export default async function HomePage({
   const { v: variant } = await searchParams;
   const isVariantB = variant === "b";
 
-  const tHero = useTranslations("home.hero");
-  const tIntro = useTranslations("home.intro");
-  const tWhyUs = useTranslations("home.whyUs");
-  const tFeaturesPreview = useTranslations("home.featuresPreview");
-  const tFeatures = useTranslations("features");
+  const tHero = await getTranslations("home.hero");
+  const tIntro = await getTranslations("home.intro");
+  const tWhyUs = await getTranslations("home.whyUs");
+  const tFeaturesPreview = await getTranslations("home.featuresPreview");
+  const tFeatures = await getTranslations("features");
 
   const benefits = tHero.raw("benefits") as Array<{
     title: string;

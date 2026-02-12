@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Menusi {restaurant} odottaa sinua",
-    "greeting": "Hei!",
-    "body": "Vain nopea muistutus — digitaalinen menusi {restaurant} on melkein valmis. Tallensimme edistymisesi, joten voit jatkaa siitä, mihin jäit.",
-    "timeNote": "Yleensä viimeistely vie noin 5 minuuttia.",
+    "subject": "IQ Rest -menusi odottaa sinua",
+    "greeting": "Hei,",
+    "body": "Rekisteröidyit äskettäin IQ Restiin, mutta menusi on vielä tyhjä. Ei hätää — käyttöönotto vie vain muutaman minuutin:",
+    "step1": "Lisää kategoria (esim. \"Pääruoat\")",
+    "step2": "Lisää muutama tuote hinnoilla",
+    "step3": "Lataa QR-koodisi — valmis!",
+    "helpOffer": "Eikö ole aikaa? Lähetä meille menusi missä tahansa muodossa — PDF, kuva tai linkki verkkosivuillesi — ja me asetamme kaiken valmiiksi puolestasi, täysin ilmaiseksi.",
+    "helpAction": "Vastaa vain tähän sähköpostiin ja liitä menusi mukaan.",
     "cta": "Avaa hallintapaneeli",
-    "helpNote": "Jos sinulla on kysymyksiä, kirjoita meille hallintapaneelisi Tuki-osiossa.",
-    "signature": "Terveisin, IQ Rest -tiimi"
+    "signature": "Ystävällisin terveisin,<br>IQ Rest -tiimi"
   },
   "supportEmail": {
     "subject": "Sinulla on uusi viesti IQ Rest -tuelta",
@@ -1979,5 +1982,16 @@
     "body": "Sinulla on uusi viesti tukitiimiltämme. Tarkista se kojelaudaltasi.",
     "cta": "Avaa tukikeskustelu",
     "signature": "Ystävällisin terveisin,<br>IQ Rest -tiimi"
+  },
+  "otpEmail": {
+    "subject": "IQ Rest -vahvistuskoodisi: {code}",
+    "greeting": "Hei,",
+    "welcome": "Tervetuloa IQ Restiin! Vahvistuskoodisi on:",
+    "instructions": "Kirjautumisen jälkeen voit luoda digitaalisen menusi vain muutamassa minuutissa — lisää kategoriat, tuotteet hinnoilla ja lataa käyttövalmis QR-koodi pöytiisi.",
+    "helpOffer": "Tarvitsetko apua? Vastaa vain tähän sähköpostiin — autamme mielellämme.",
+    "cta": "Avaa hallintapaneeli",
+    "signature": "Ystävällisin terveisin,<br>IQ Rest -tiimi",
+    "expiry": "Tämä koodi vanhenee 10 minuutissa.",
+    "ignore": "Jos et pyytänyt tätä koodia, voit jättää tämän sähköpostin huomiotta."
   }
 }

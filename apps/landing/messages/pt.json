@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "O teu menu para {restaurant} está à espera",
-    "greeting": "Olá!",
-    "body": "Só um lembrete rápido — o teu menu digital para {restaurant} está quase pronto. Guardámos o teu progresso, por isso podes continuar exatamente de onde paraste.",
-    "timeNote": "Normalmente demora cerca de 5 minutos a terminar.",
-    "cta": "Abrir Dashboard",
-    "helpNote": "Se tiveres alguma dúvida, escreve-nos na secção de Suporte do teu painel de controlo.",
-    "signature": "Até já, A Equipa IQ Rest"
+    "subject": "O seu menu IQ Rest está à sua espera",
+    "greeting": "Olá,",
+    "body": "Registou-se recentemente no IQ Rest, mas o seu menu ainda está vazio. Não se preocupe — a configuração leva apenas alguns minutos:",
+    "step1": "Adicione uma categoria (ex. \"Pratos principais\")",
+    "step2": "Adicione alguns itens com preços",
+    "step3": "Descarregue o seu código QR — pronto!",
+    "helpOffer": "Sem tempo? Envie-nos simplesmente o seu menu em qualquer formato — PDF, foto ou link para o seu site — e nós configuramos tudo por si, totalmente grátis.",
+    "helpAction": "Basta responder a este email com o seu menu em anexo.",
+    "cta": "Abrir Painel",
+    "signature": "Com os melhores cumprimentos,<br>Equipa IQ Rest"
   },
   "supportEmail": {
     "subject": "Você tem uma nova mensagem do suporte IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Você tem uma nova mensagem da nossa equipe de suporte. Por favor, verifique no seu painel.",
     "cta": "Abrir chat de suporte",
     "signature": "Atenciosamente,<br>Equipe IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "O seu código de verificação IQ Rest: {code}",
+    "greeting": "Olá,",
+    "welcome": "Bem-vindo ao IQ Rest! O seu código de verificação é:",
+    "instructions": "Após iniciar sessão, poderá criar o seu menu digital em apenas alguns minutos — adicione categorias, artigos com preços e descarregue um código QR pronto a usar para as suas mesas.",
+    "helpOffer": "Precisa de ajuda? Basta responder a este email — teremos todo o gosto em ajudar.",
+    "cta": "Abrir Painel",
+    "signature": "Com os melhores cumprimentos,<br>Equipa IQ Rest",
+    "expiry": "Este código expira em 10 minutos.",
+    "ignore": "Se não solicitou este código, pode ignorar este email."
   }
 }

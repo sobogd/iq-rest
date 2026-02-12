@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Menyen din for {restaurant} venter på deg",
-    "greeting": "Hei!",
-    "body": "Bare en rask påminnelse — din digitale meny for {restaurant} er nesten klar. Vi har lagret fremgangen din, så du kan fortsette der du slapp.",
-    "timeNote": "Det tar vanligvis omtrent 5 minutter å fullføre.",
-    "cta": "Åpne dashbord",
-    "helpNote": "Hvis du har spørsmål, skriv til oss i Support-seksjonen på dashboardet ditt.",
-    "signature": "Hilsen, IQ Rest-teamet"
+    "subject": "Din IQ Rest-meny venter på deg",
+    "greeting": "Hei,",
+    "body": "Du registrerte deg nylig på IQ Rest, men menyen din er fortsatt tom. Ikke bekymre deg — oppsettet tar bare noen få minutter:",
+    "step1": "Legg til en kategori (f.eks. \"Hovedretter\")",
+    "step2": "Legg til noen varer med priser",
+    "step3": "Last ned QR-koden din — ferdig!",
+    "helpOffer": "Har du ikke tid? Send oss bare menyen din i hvilket som helst format — PDF, bilde eller lenke til nettsiden din — så setter vi opp alt for deg, helt gratis.",
+    "helpAction": "Bare svar på denne e-posten med menyen din vedlagt.",
+    "cta": "Åpne Dashboard",
+    "signature": "Med vennlig hilsen,<br>IQ Rest-teamet"
   },
   "supportEmail": {
     "subject": "Du har en ny melding fra IQ Rest Support",
@@ -1979,5 +1982,16 @@
     "body": "Du har en ny melding fra supportteamet vårt. Vennligst sjekk den i dashbordet ditt.",
     "cta": "Åpne support chat",
     "signature": "Med vennlig hilsen,<br>IQ Rest-teamet"
+  },
+  "otpEmail": {
+    "subject": "Din IQ Rest-bekreftelseskode: {code}",
+    "greeting": "Hei,",
+    "welcome": "Velkommen til IQ Rest! Din bekreftelseskode er:",
+    "instructions": "Etter innlogging kan du opprette din digitale meny på bare noen få minutter — legg til kategorier, varer med priser og last ned en ferdig QR-kode for bordene dine.",
+    "helpOffer": "Trenger du hjelp? Bare svar på denne e-posten — vi hjelper deg gjerne.",
+    "cta": "Åpne Dashboard",
+    "signature": "Med vennlig hilsen,<br>IQ Rest-teamet",
+    "expiry": "Denne koden utløper om 10 minutter.",
+    "ignore": "Hvis du ikke ba om denne koden, kan du ignorere denne e-posten."
   }
 }

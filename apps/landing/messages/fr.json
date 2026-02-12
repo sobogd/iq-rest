@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Ton menu pour {restaurant} t'attend",
-    "greeting": "Salut !",
-    "body": "Petit rappel — ton menu digital pour {restaurant} est presque prêt. On a sauvegardé ta progression, donc tu peux reprendre exactement où tu t'es arrêté.",
-    "timeNote": "En général, ça prend environ 5 minutes pour terminer.",
-    "cta": "Ouvrir le Dashboard",
-    "helpNote": "Si tu as des questions, écris-nous dans la section Support de ton tableau de bord.",
-    "signature": "À bientôt, L'équipe IQ Rest"
+    "subject": "Votre menu IQ Rest vous attend",
+    "greeting": "Bonjour,",
+    "body": "Vous vous êtes récemment inscrit sur IQ Rest, mais votre menu est encore vide. Pas de souci — la configuration ne prend que quelques minutes :",
+    "step1": "Ajoutez une catégorie (ex. \"Plats principaux\")",
+    "step2": "Ajoutez quelques articles avec leurs prix",
+    "step3": "Téléchargez votre code QR — c'est fait !",
+    "helpOffer": "Pas le temps ? Envoyez-nous simplement votre menu dans n'importe quel format — PDF, photo ou lien vers votre site — et nous le configurerons pour vous, entièrement gratuitement.",
+    "helpAction": "Répondez simplement à cet email avec votre menu en pièce jointe.",
+    "cta": "Ouvrir le tableau de bord",
+    "signature": "Cordialement,<br>L'équipe IQ Rest"
   },
   "supportEmail": {
     "subject": "Vous avez un nouveau message du support IQ Rest",
@@ -1979,5 +1982,16 @@
     "body": "Vous avez un nouveau message de notre équipe de support. Veuillez le consulter dans votre tableau de bord.",
     "cta": "Ouvrir le chat support",
     "signature": "Cordialement,<br>L'équipe IQ Rest"
+  },
+  "otpEmail": {
+    "subject": "Votre code de vérification IQ Rest : {code}",
+    "greeting": "Bonjour,",
+    "welcome": "Bienvenue sur IQ Rest ! Votre code de vérification est :",
+    "instructions": "Après vous être connecté, vous pourrez créer votre menu numérique en quelques minutes — ajoutez des catégories, des articles avec leurs prix et téléchargez un code QR prêt à l'emploi pour vos tables.",
+    "helpOffer": "Besoin d'aide ? Répondez simplement à cet email — nous serons ravis de vous aider.",
+    "cta": "Ouvrir le tableau de bord",
+    "signature": "Cordialement,<br>L'équipe IQ Rest",
+    "expiry": "Ce code expire dans 10 minutes.",
+    "ignore": "Si vous n'avez pas demandé ce code, vous pouvez ignorer cet email."
   }
 }

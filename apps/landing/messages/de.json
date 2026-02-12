@@ -1965,13 +1965,16 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Dein Menü für {restaurant} wartet auf dich",
-    "greeting": "Hey!",
-    "body": "Kurze Erinnerung — dein digitales Menü für {restaurant} ist fast fertig. Wir haben deinen Fortschritt gespeichert, damit du genau dort weitermachen kannst, wo du aufgehört hast.",
-    "timeNote": "Es dauert normalerweise nur etwa 5 Minuten, um es fertigzustellen.",
+    "subject": "Ihr IQ Rest Menü wartet auf Sie",
+    "greeting": "Hallo,",
+    "body": "Sie haben sich kürzlich bei IQ Rest angemeldet, aber Ihr Menü ist noch leer. Keine Sorge — die Einrichtung dauert nur wenige Minuten:",
+    "step1": "Fügen Sie eine Kategorie hinzu (z.B. \"Hauptgerichte\")",
+    "step2": "Fügen Sie einige Artikel mit Preisen hinzu",
+    "step3": "Laden Sie Ihren QR-Code herunter — fertig!",
+    "helpOffer": "Keine Zeit? Senden Sie uns einfach Ihr Menü in beliebigem Format — PDF, Foto oder einen Link zu Ihrer Website — und wir richten alles für Sie ein, völlig kostenlos.",
+    "helpAction": "Antworten Sie einfach auf diese E-Mail mit Ihrem Menü im Anhang.",
     "cta": "Dashboard öffnen",
-    "helpNote": "Bei Fragen schreib uns einfach im Support-Bereich deines Dashboards.",
-    "signature": "Viele Grüße, Dein IQ Rest Team"
+    "signature": "Mit freundlichen Grüßen,<br>Das IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Sie haben eine neue Nachricht vom IQ Rest Support",
@@ -1979,5 +1982,16 @@
     "body": "Sie haben eine neue Nachricht von unserem Support-Team. Bitte überprüfen Sie diese in Ihrem Dashboard.",
     "cta": "Support-Chat öffnen",
     "signature": "Mit freundlichen Grüßen,<br>Das IQ Rest Team"
+  },
+  "otpEmail": {
+    "subject": "Ihr IQ Rest Bestätigungscode: {code}",
+    "greeting": "Hallo,",
+    "welcome": "Willkommen bei IQ Rest! Ihr Bestätigungscode lautet:",
+    "instructions": "Nach der Anmeldung können Sie Ihr digitales Menü in nur wenigen Minuten erstellen — fügen Sie Kategorien, Artikel mit Preisen hinzu und laden Sie einen fertigen QR-Code für Ihre Tische herunter.",
+    "helpOffer": "Brauchen Sie Hilfe? Antworten Sie einfach auf diese E-Mail — wir helfen Ihnen gerne.",
+    "cta": "Dashboard öffnen",
+    "signature": "Mit freundlichen Grüßen,<br>Das IQ Rest Team",
+    "expiry": "Dieser Code ist 10 Minuten gültig.",
+    "ignore": "Wenn Sie diesen Code nicht angefordert haben, können Sie diese E-Mail ignorieren."
   }
 }
