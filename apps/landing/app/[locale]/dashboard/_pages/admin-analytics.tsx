@@ -63,14 +63,27 @@ interface AnalyticsData {
   };
 }
 
+// Convert country code to flag emoji (e.g., "US" -> "🇺🇸")
+function countryToFlag(countryCode: string): string {
+  const code = countryCode.toUpperCase();
+  if (code.length !== 2) return "";
+  const offset = 0x1f1e6 - 65; // 🇦 minus 'A'
+  return String.fromCodePoint(
+    code.charCodeAt(0) + offset,
+    code.charCodeAt(1) + offset
+  );
+}
+
 function StatsListCard({
   title,
   items,
   icon: Icon,
+  showFlag = false,
 }: {
   title: string;
   items: GeoStatsItem[];
   icon: React.ElementType;
+  showFlag?: boolean;
 }) {
   const maxCount = Math.max(...items.map((i) => i.count), 1);
 
@@ -102,10 +115,11 @@ function StatsListCard({
         <div className="space-y-2">
           {items.map((item) => {
             const percentage = (item.count / maxCount) * 100;
+            const flag = showFlag ? countryToFlag(item.name) : "";
             return (
               <div key={item.name} className="space-y-1">
                 <div className="flex justify-between text-sm">
-                  <span>{item.name}</span>
+                  <span>{flag ? `${flag} ${item.name}` : item.name}</span>
                   <span className="text-muted-foreground">{item.count}</span>
                 </div>
                 <div className="h-2 bg-muted rounded-full overflow-hidden">
@@ -277,6 +291,63 @@ export function AdminAnalyticsPage() {
     });
   };
 
+  const formatEventName = (event: string): string => {
+    const eventNames: Record<string, string> = {
+      // Page views
+      page_view_home: "Visited Home",
+      page_view_pricing: "Visited Pricing",
+      page_view_faq: "Visited FAQ",
+      page_view_contacts: "Visited Contacts",
+      page_view_changelog: "Visited Changelog",
+      // Features
+      page_view_instant_setup: "Visited Instant Setup",
+      page_view_mobile_management: "Visited Mobile Management",
+      page_view_ai_translation: "Visited AI Translation",
+      page_view_multilingual: "Visited Multilingual",
+      page_view_ai_images: "Visited AI Images",
+      page_view_easy_menu: "Visited Easy Menu",
+      page_view_analytics: "Visited Analytics",
+      page_view_reservations: "Visited Reservations",
+      page_view_custom_design: "Visited Custom Design",
+      page_view_color_scheme: "Visited Color Scheme",
+      page_view_personal_support: "Visited Support",
+      // Marketing
+      hero_create_click: "Clicked Create Button",
+      demo_open: "Opened Demo",
+      demo_close: "Closed Demo",
+      // Auth
+      auth_email_submit: "Submitted Email",
+      auth_code_verify: "Verified Code",
+      auth_signup: "Signed Up",
+      // Dashboard
+      dashboard_onboarding: "Dashboard: Onboarding",
+      dashboard_categories: "Dashboard: Categories",
+      dashboard_items: "Dashboard: Items",
+      dashboard_settings: "Dashboard: Settings",
+      dashboard_design: "Dashboard: Design",
+      dashboard_contacts: "Dashboard: Contacts",
+      dashboard_languages: "Dashboard: Languages",
+      dashboard_analytics: "Dashboard: Analytics",
+      dashboard_qrMenu: "Dashboard: QR Menu",
+      dashboard_billing: "Dashboard: Billing",
+      // Actions
+      category_created: "Created Category",
+      item_created: "Created Item",
+      restaurant_saved: "Saved Restaurant",
+    };
+
+    if (eventNames[event]) return eventNames[event];
+
+    // Fallback: convert section_view_hero -> "Section: Hero"
+    if (event.startsWith("section_view_")) {
+      const section = event.replace("section_view_", "").replace(/_/g, " ");
+      return `Section: ${section.charAt(0).toUpperCase() + section.slice(1)}`;
+    }
+
+    // Fallback: convert snake_case to Title Case
+    return event.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  };
+
   if (loading && !data) {
     return <PageLoader />;
   }
@@ -380,6 +451,7 @@ export function AdminAnalyticsPage() {
             title="Countries"
             items={data.geoStats.countries}
             icon={Globe}
+            showFlag
           />
           <StatsListCard
             title="Devices"
@@ -404,28 +476,30 @@ export function AdminAnalyticsPage() {
             <CardTitle>Recent Events</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-2 max-h-[400px] overflow-auto">
+            <div className="space-y-2">
               {data.recentEvents.map((event) => (
                 <div
                   key={event.id}
-                  className="flex items-center justify-between p-3 rounded-lg bg-muted/30 text-sm"
+                  className="flex items-center justify-between p-3 rounded-lg bg-muted/30"
                 >
-                  <div className="flex items-center gap-3">
-                    <code className="text-xs bg-muted px-2 py-1 rounded">
-                      {event.event}
-                    </code>
-                    {event.userId && (
-                      <span className="text-xs text-green-600 bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded">
-                        logged in
+                  <div className="flex flex-col gap-0.5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium">
+                        {formatEventName(event.event)}
                       </span>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-4 text-muted-foreground">
-                    <span className="text-xs font-mono">
-                      {event.sessionId.slice(0, 8)}...
+                      {event.userId && (
+                        <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
+                          logged in
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-[10px] text-muted-foreground">
+                      {formatDate(event.createdAt)}
                     </span>
-                    <span className="text-xs">{formatDate(event.createdAt)}</span>
                   </div>
+                  <span className="text-[10px] text-muted-foreground font-mono">
+                    {event.sessionId.slice(0, 8)}
+                  </span>
                 </div>
               ))}
             </div>

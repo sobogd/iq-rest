@@ -28,6 +28,18 @@ const MARKETING_FUNNEL = [
   { event: "page_view_faq", label: "FAQ" },
   { event: "page_view_contacts", label: "Contacts" },
   { event: "page_view_changelog", label: "Changelog" },
+  // Feature pages
+  { event: "page_view_instant_setup", label: "Instant Setup" },
+  { event: "page_view_mobile_management", label: "Mobile Mgmt" },
+  { event: "page_view_ai_translation", label: "AI Translation" },
+  { event: "page_view_multilingual", label: "Multilingual" },
+  { event: "page_view_ai_images", label: "AI Images" },
+  { event: "page_view_easy_menu", label: "Easy Menu" },
+  { event: "page_view_analytics", label: "Analytics" },
+  { event: "page_view_reservations", label: "Reservations" },
+  { event: "page_view_custom_design", label: "Custom Design" },
+  { event: "page_view_color_scheme", label: "Color Scheme" },
+  { event: "page_view_personal_support", label: "Support" },
 ];
 
 // Funnel 3: Dashboard pages
@@ -124,7 +136,7 @@ export async function GET(request: NextRequest) {
         createdAt: { gte: dateFrom, lte: dateTo },
       },
       orderBy: { createdAt: "desc" },
-      take: 100,
+      take: 20,
       select: {
         id: true,
         event: true,
