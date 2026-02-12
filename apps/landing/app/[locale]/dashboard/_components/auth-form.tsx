@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Loader2 } from "lucide-react";
+import { Loader2, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { analytics } from "@/lib/analytics";
@@ -120,9 +120,17 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm flex flex-col gap-6">
-        <div className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="IQ Rest" width={32} height={32} />
-          <span className="text-xl font-semibold">IQ Rest</span>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="p-2 -ml-2 rounded-lg hover:bg-muted transition-colors"
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </Link>
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/logo.svg" alt="IQ Rest" width={32} height={32} />
+            <span className="text-xl font-semibold">IQ Rest</span>
+          </Link>
         </div>
 
         <Card>

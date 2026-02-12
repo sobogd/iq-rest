@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
+import { Prisma } from "@prisma/client";
 
 // Funnel 1: Landing page section views
 const SECTION_FUNNEL = [
@@ -164,6 +165,64 @@ export async function GET(request: NextRequest) {
       LIMIT 60
     `;
 
+    // Get country and device stats from meta field
+    const eventsWithMeta = await prisma.analyticsEvent.findMany({
+      where: {
+        createdAt: { gte: dateFrom, lte: dateTo },
+        meta: { not: Prisma.JsonNull },
+      },
+      select: {
+        sessionId: true,
+        meta: true,
+      },
+      distinct: ["sessionId"], // One entry per session
+    });
+
+    // Aggregate by country
+    const countryMap = new Map<string, number>();
+    const deviceMap = new Map<string, number>();
+    const browserMap = new Map<string, number>();
+    const osMap = new Map<string, number>();
+
+    for (const event of eventsWithMeta) {
+      const meta = event.meta as {
+        geo?: { country?: string };
+        device?: { device?: string; browser?: string; os?: string };
+      } | null;
+
+      if (meta?.geo?.country) {
+        const country = meta.geo.country;
+        countryMap.set(country, (countryMap.get(country) || 0) + 1);
+      }
+
+      if (meta?.device) {
+        const { device, browser, os } = meta.device;
+        if (device) {
+          deviceMap.set(device, (deviceMap.get(device) || 0) + 1);
+        }
+        if (browser) {
+          browserMap.set(browser, (browserMap.get(browser) || 0) + 1);
+        }
+        if (os) {
+          osMap.set(os, (osMap.get(os) || 0) + 1);
+        }
+      }
+    }
+
+    // Convert to sorted arrays
+    const sortByCount = (map: Map<string, number>) =>
+      Array.from(map.entries())
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 10); // Top 10
+
+    const geoStats = {
+      countries: sortByCount(countryMap),
+      devices: sortByCount(deviceMap),
+      browsers: sortByCount(browserMap),
+      os: sortByCount(osMap),
+    };
+
     return NextResponse.json({
       funnels: {
         sections: sectionFunnel,
@@ -181,6 +240,7 @@ export async function GET(request: NextRequest) {
         date: row.date,
         count: Number(row.count),
       })),
+      geoStats,
       dateRange: {
         from: dateFrom.toISOString(),
         to: dateTo.toISOString(),

@@ -7,6 +7,8 @@ import {
   UserCheck,
   TrendingUp,
   Calendar,
+  Globe,
+  Monitor,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -34,6 +36,18 @@ interface Stats {
   linkedSessions: number;
 }
 
+interface GeoStatsItem {
+  name: string;
+  count: number;
+}
+
+interface GeoStats {
+  countries: GeoStatsItem[];
+  devices: GeoStatsItem[];
+  browsers: GeoStatsItem[];
+  os: GeoStatsItem[];
+}
+
 interface AnalyticsData {
   funnels: {
     sections: FunnelStep[];
@@ -43,10 +57,71 @@ interface AnalyticsData {
   };
   recentEvents: AnalyticsEvent[];
   stats: Stats;
+  geoStats: GeoStats;
   dateRange: {
     from: string;
     to: string;
   };
+}
+
+function StatsListCard({
+  title,
+  items,
+  icon: Icon,
+}: {
+  title: string;
+  items: GeoStatsItem[];
+  icon: React.ElementType;
+}) {
+  const maxCount = Math.max(...items.map((i) => i.count), 1);
+
+  if (items.length === 0) {
+    return (
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm font-medium flex items-center gap-2">
+            <Icon className="h-4 w-4" />
+            {title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">No data yet</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm font-medium flex items-center gap-2">
+          <Icon className="h-4 w-4" />
+          {title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-2">
+          {items.map((item) => {
+            const percentage = (item.count / maxCount) * 100;
+            return (
+              <div key={item.name} className="space-y-1">
+                <div className="flex justify-between text-sm">
+                  <span>{item.name}</span>
+                  <span className="text-muted-foreground">{item.count}</span>
+                </div>
+                <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-primary/70 rounded-full"
+                    style={{ width: `${percentage}%` }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </CardContent>
+    </Card>
+  );
 }
 
 function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
@@ -251,6 +326,30 @@ export function AdminAnalyticsPage() {
           <FunnelCard title="Marketing Pages" steps={data.funnels.marketing} />
           <FunnelCard title="Dashboard Pages" steps={data.funnels.dashboard} />
           <FunnelCard title="Conversion Funnel" steps={data.funnels.conversion} />
+        </div>
+
+        {/* Geo & Device Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <StatsListCard
+            title="Countries"
+            items={data.geoStats.countries}
+            icon={Globe}
+          />
+          <StatsListCard
+            title="Devices"
+            items={data.geoStats.devices}
+            icon={Monitor}
+          />
+          <StatsListCard
+            title="Browsers"
+            items={data.geoStats.browsers}
+            icon={Globe}
+          />
+          <StatsListCard
+            title="OS"
+            items={data.geoStats.os}
+            icon={Monitor}
+          />
         </div>
 
         {/* Recent Events */}
