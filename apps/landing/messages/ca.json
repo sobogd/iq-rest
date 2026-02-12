@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Iniciar sessió",
       "subtitle": "Lloc web modern amb menú QR, reserves i traduccions d'IA",
-      "benefits": "Sense contrasenyes. Sense targeta de crèdit.",
       "emailPlaceholder": "your@email.com",
       "continue": "Continuar",
       "verifyTitle": "Comproveu el vostre correu electrònic",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "No s'ha pogut enviar el codi. Si us plau, torneu-ho a intentar.",
         "verifyFailed": "Codi no vàlid. Si us plau, torneu-ho a intentar."
+      },
+      "consent": {
+        "text": "En continuar, acceptes els",
+        "terms": "Termes de servei",
+        "and": "i la",
+        "privacy": "Política de privacitat"
       }
     },
     "analytics": {

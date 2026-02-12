@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
+import { HeroCreateButton } from "./hero-create-button";
 
 export async function CtaSection() {
   const t = await getTranslations("features");
@@ -16,9 +17,7 @@ export async function CtaSection() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button asChild size="lg" className="text-lg px-8 py-6">
-              <Link href="/dashboard">{t("getStarted")}</Link>
-            </Button>
+            <HeroCreateButton>{t("getStarted")}</HeroCreateButton>
             <Button
               asChild
               size="lg"

@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Bejelentkezés",
       "subtitle": "Modern weboldal QR menüvel, foglalásokkal és AI fordításokkal",
-      "benefits": "Nincsenek jelszavak. Nincsenek hitelkártyák.",
       "emailPlaceholder": "your@email.com",
       "continue": "Folytatás",
       "verifyTitle": "Ellenőrizd az emailed",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "A kód küldése nem sikerült. Kérlek, próbáld újra.",
         "verifyFailed": "Érvénytelen kód. Kérlek, próbáld újra."
+      },
+      "consent": {
+        "text": "A folytatással elfogadja a",
+        "terms": "Szolgáltatási feltételeket",
+        "and": "és az",
+        "privacy": "Adatvédelmi irányelveket"
       }
     },
     "analytics": {

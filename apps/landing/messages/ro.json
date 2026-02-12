@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Conectare",
       "subtitle": "Website modern cu meniu QR, rezervări și traduceri AI",
-      "benefits": "Fără parole. Fără card de credit.",
       "emailPlaceholder": "your@email.com",
       "continue": "Continuă",
       "verifyTitle": "Verifică-ți emailul",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Nu s-a reușit trimiterea codului. Te rugăm să încerci din nou.",
         "verifyFailed": "Cod invalid. Te rugăm să încerci din nou."
+      },
+      "consent": {
+        "text": "Continuând, sunteți de acord cu",
+        "terms": "Termenii și condițiile",
+        "and": "și",
+        "privacy": "Politica de confidențialitate"
       }
     },
     "analytics": {

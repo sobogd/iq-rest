@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Accedi",
       "subtitle": "Sito web moderno con menu QR, prenotazioni e traduzioni AI",
-      "benefits": "Nessuna password. Nessuna carta di credito.",
       "emailPlaceholder": "tuo@email.com",
       "continue": "Continua",
       "verifyTitle": "Controlla la tua email",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Impossibile inviare il codice. Riprova.",
         "verifyFailed": "Codice non valido. Riprova."
+      },
+      "consent": {
+        "text": "Continuando, accetti i",
+        "terms": "Termini di servizio",
+        "and": "e l'",
+        "privacy": "Informativa sulla privacy"
       }
     },
     "analytics": {

@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Logi sisse",
       "subtitle": "Kaasaegne veebileht QR menüü, broneeringute ja AI tõlgetega",
-      "benefits": "Ilma paroolideta. Ilma krediitkaardita.",
       "emailPlaceholder": "teie@email.com",
       "continue": "Jätka",
       "verifyTitle": "Kontrollige oma e-posti",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Koodi saatmine ebaõnnestus. Palun proovige uuesti.",
         "verifyFailed": "Vale kood. Palun proovige uuesti."
+      },
+      "consent": {
+        "text": "Jätkates nõustute",
+        "terms": "Kasutustingimuste",
+        "and": "ja",
+        "privacy": "Privaatsuspoliitikaga"
       }
     },
     "analytics": {

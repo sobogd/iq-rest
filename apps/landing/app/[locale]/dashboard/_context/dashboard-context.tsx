@@ -20,7 +20,8 @@ export type PageKey =
   | "tables"
   | "billing"
   | "support"
-  | "admin";
+  | "admin"
+  | "adminAnalytics";
 
 export interface AnalyticsTranslations {
   monthlyUsage: string;
@@ -173,7 +174,7 @@ const COOKIE_KEY = "dashboard-active-page";
 
 const validPages: PageKey[] = [
   "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
-  "contacts", "languages", "reservations", "reservationSettings", "tables", "billing", "support", "admin"
+  "contacts", "languages", "reservations", "reservationSettings", "tables", "billing", "support", "admin", "adminAnalytics"
 ];
 
 export function isValidPageKey(value: string): value is PageKey {
@@ -219,25 +220,7 @@ export function DashboardProvider({
 
 
   const trackPageView = useCallback((page: PageKey) => {
-    const pageEvents: Record<PageKey, (() => void) | undefined> = {
-      onboarding: undefined,
-      qrMenu: analytics.dashboard.pageQrMenuView,
-      home: analytics.dashboard.pageHomeView,
-      analytics: analytics.dashboard.pageAnalyticsView,
-      categories: analytics.dashboard.pageCategoriesView,
-      items: analytics.dashboard.pageItemsView,
-      settings: analytics.dashboard.pageSettingsView,
-      design: analytics.dashboard.pageDesignView,
-      contacts: analytics.dashboard.pageContactsView,
-      languages: analytics.dashboard.pageLanguagesView,
-      reservations: analytics.dashboard.pageReservationsView,
-      reservationSettings: analytics.dashboard.pageReservationSettingsView,
-      tables: analytics.dashboard.pageTablesView,
-      billing: analytics.dashboard.pageBillingView,
-      support: analytics.dashboard.pageSupportView,
-      admin: undefined,
-    };
-    pageEvents[page]?.();
+    analytics.dashboard.pageView(page);
   }, []);
 
   const setActivePage = useCallback((page: PageKey) => {
@@ -265,7 +248,6 @@ export function DashboardProvider({
   const returnToOnboarding = useCallback(() => {
     const shouldReturn = sessionStorage.getItem("returnToOnboarding") === "true";
     if (shouldReturn) {
-      analytics.dashboard.returnToOnboarding();
       previousPageRef.current = "onboarding";
       sessionStorage.removeItem("returnToOnboarding");
       setActivePageState("onboarding");

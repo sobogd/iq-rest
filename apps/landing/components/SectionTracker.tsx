@@ -18,7 +18,6 @@ export function SectionTracker({
 }: SectionTrackerProps) {
   const ref = useRef<HTMLDivElement>(null);
   const hasViewed = useRef(false);
-  const viewStartTime = useRef<number | null>(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -27,22 +26,9 @@ export function SectionTracker({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Section came into view
-            if (!hasViewed.current) {
-              hasViewed.current = true;
-              analytics.section.show(section);
-            }
-            viewStartTime.current = Date.now();
-          } else {
-            // Section left view - track time spent
-            if (viewStartTime.current) {
-              const timeSpent = Math.round((Date.now() - viewStartTime.current) / 1000);
-              if (timeSpent >= 2) {
-                analytics.section.timeSpent(section, timeSpent);
-              }
-              viewStartTime.current = null;
-            }
+          if (entry.isIntersecting && !hasViewed.current) {
+            hasViewed.current = true;
+            analytics.section.view(section);
           }
         });
       },
@@ -52,13 +38,6 @@ export function SectionTracker({
     observer.observe(element);
 
     return () => {
-      // Send final time spent on unmount if still viewing
-      if (viewStartTime.current) {
-        const timeSpent = Math.round((Date.now() - viewStartTime.current) / 1000);
-        if (timeSpent >= 2) {
-          analytics.section.timeSpent(section, timeSpent);
-        }
-      }
       observer.disconnect();
     };
   }, [section, threshold]);

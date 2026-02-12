@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Prisijungti",
       "subtitle": "Moderni svetainė su QR meniu, rezervacijomis ir AI vertimais",
-      "benefits": "Be slaptažodžių. Be kredito kortelės.",
       "emailPlaceholder": "jūsų@email.com",
       "continue": "Tęsti",
       "verifyTitle": "Patikrinkite savo el. paštą",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Nepavyko išsiųsti kodo. Prašome bandyti dar kartą.",
         "verifyFailed": "Neteisingas kodas. Prašome bandyti dar kartą."
+      },
+      "consent": {
+        "text": "Tęsdami sutinkate su",
+        "terms": "Paslaugų sąlygomis",
+        "and": "ir",
+        "privacy": "Privatumo politika"
       }
     },
     "analytics": {

@@ -28,6 +28,11 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
     };
   }, [open]);
 
+  const handleClose = () => {
+    setOpen(false);
+    analytics.marketing.demoClose();
+  };
+
   if (!open) {
     return (
       <Button
@@ -36,7 +41,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
         className="text-lg px-8 py-6"
         onClick={() => {
           setOpen(true);
-          analytics.marketing.demoClick();
+          analytics.marketing.demoOpen();
         }}
       >
         {buttonText}
@@ -58,7 +63,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
       {/* Backdrop */}
       <div
         className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-        onClick={() => setOpen(false)}
+        onClick={handleClose}
         data-noindex="true"
       >
         {/* Phone frame */}
@@ -68,7 +73,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
         >
           {/* Close button */}
           <button
-            onClick={() => setOpen(false)}
+            onClick={handleClose}
             className="absolute -top-7 -right-7 text-white hover:text-gray-300 transition-colors z-30"
           >
             <X className="w-8 h-8" />

@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Inloggen",
       "subtitle": "Moderne website met QR-menu, reserveringen en AI-vertalingen",
-      "benefits": "Geen wachtwoorden. Geen creditcard.",
       "emailPlaceholder": "jouw@email.com",
       "continue": "Doorgaan",
       "verifyTitle": "Controleer je e-mail",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Verzenden van de code is mislukt. Probeer het opnieuw.",
         "verifyFailed": "Ongeldige code. Probeer het opnieuw."
+      },
+      "consent": {
+        "text": "Door verder te gaan, gaat u akkoord met de",
+        "terms": "Servicevoorwaarden",
+        "and": "en het",
+        "privacy": "Privacybeleid"
       }
     },
     "analytics": {

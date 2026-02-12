@@ -29,6 +29,7 @@ import { DashboardHome } from "../_pages/home";
 import { OnboardingPage } from "../_pages/onboarding";
 import { QrMenuPage } from "../_pages/qr-menu";
 import { AdminPage } from "../_pages/admin";
+import { AdminAnalyticsPage } from "../_pages/admin-analytics";
 
 const pageComponents: Record<PageKey, React.ComponentType> = {
   home: DashboardHome,
@@ -47,6 +48,7 @@ const pageComponents: Record<PageKey, React.ComponentType> = {
   billing: BillingPage,
   support: SupportPage,
   admin: AdminPage,
+  adminAnalytics: AdminAnalyticsPage,
 };
 
 function PageRenderer() {

@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Logg inn",
       "subtitle": "Moderne nettsted med QR-meny, reservasjoner og AI-oversettelser",
-      "benefits": "Ingen passord. Ingen kredittkort.",
       "emailPlaceholder": "din@email.com",
       "continue": "Fortsett",
       "verifyTitle": "Sjekk e-posten din",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Kunne ikke sende koden. Vennligst prøv igjen.",
         "verifyFailed": "Ugyldig kode. Vennligst prøv igjen."
+      },
+      "consent": {
+        "text": "Ved å fortsette godtar du",
+        "terms": "Tjenestevilkårene",
+        "and": "og",
+        "privacy": "Personvernreglene"
       }
     },
     "analytics": {

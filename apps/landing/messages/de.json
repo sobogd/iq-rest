@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Anmelden",
       "subtitle": "Moderne Website mit QR-Menü, Reservierungen und KI-Übersetzungen",
-      "benefits": "Keine Passwörter. Keine Kreditkarte.",
       "emailPlaceholder": "deine@email.com",
       "continue": "Fortfahren",
       "verifyTitle": "Überprüfen Sie Ihre E-Mail",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Fehler beim Senden des Codes. Bitte versuchen Sie es erneut.",
         "verifyFailed": "Ungültiger Code. Bitte versuchen Sie es erneut."
+      },
+      "consent": {
+        "text": "Mit dem Fortfahren stimmen Sie den",
+        "terms": "Nutzungsbedingungen",
+        "and": "und der",
+        "privacy": "Datenschutzrichtlinie"
       }
     },
     "analytics": {

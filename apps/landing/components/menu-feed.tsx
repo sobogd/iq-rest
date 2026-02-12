@@ -161,13 +161,18 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
       {/* Items feed - scrollable */}
       <div ref={containerRef} className="flex-1 overflow-auto min-h-0 hide-scrollbar" style={{ backgroundColor: "#fff" }}>
         <div className="flex justify-center px-0 min-[440px]:px-5">
-          <div className="max-w-[440px] w-full pt-0 min-[440px]:pt-5 pb-[40vh] space-y-5">
-            {categories.map((category) => (
+          <div className="max-w-[440px] w-full pt-0 min-[440px]:pt-5 pb-[60vh] space-y-5">
+            {categories.map((category, index) => (
               <div
                 key={category.id}
                 ref={(el) => { categoryRefs.current[category.id] = el; }}
                 className="space-y-5"
               >
+                <h2 className="px-5 pt-8 pb-3">
+                  <span className="text-sm font-bold text-gray-400 uppercase tracking-wide border-b-2 border-gray-400 pb-1">
+                    {category.name}
+                  </span>
+                </h2>
                 {category.items.map((item) => (
                   <article key={item.id}>
                     {item.imageUrl && (
@@ -181,7 +186,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                         />
                       </div>
                     )}
-                    <div className="p-5">
+                    <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
                       <div className="flex justify-between items-start gap-4">
                         <h3 className="font-semibold text-lg text-black">{item.name}</h3>
                         <span className="font-bold text-lg shrink-0 text-black">

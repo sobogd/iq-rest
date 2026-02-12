@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Prijava",
       "subtitle": "Sodobna spletna stran z QR menijem, rezervacijami in AI prevodi",
-      "benefits": "Brez gesel. Brez kreditne kartice.",
       "emailPlaceholder": "tvoj@email.com",
       "continue": "Nadaljuj",
       "verifyTitle": "Preverite svoj e-poštni naslov",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Pošiljanje kode ni uspelo. Poskusite znova.",
         "verifyFailed": "Neveljavna koda. Poskusite znova."
+      },
+      "consent": {
+        "text": "Z nadaljevanjem se strinjate s",
+        "terms": "Pogoji storitve",
+        "and": "in",
+        "privacy": "Pravilnikom o zasebnosti"
       }
     },
     "analytics": {

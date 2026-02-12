@@ -1,4 +1,4 @@
-import { Header, Footer, CookieConsent } from "./_components";
+import { Header, Footer } from "./_components";
 
 export default function MarketingLayout({
   children,
@@ -10,7 +10,6 @@ export default function MarketingLayout({
       <Header />
       <main>{children}</main>
       <Footer />
-      <CookieConsent />
     </>
   );
 }

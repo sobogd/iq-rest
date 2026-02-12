@@ -25,13 +25,13 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
+import { analytics } from "@/lib/analytics";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormSwitch } from "../_ui/form-switch";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
-import { analytics } from "@/lib/analytics";
 
 interface CategoryWithTranslations extends Category {
   translations?: Record<string, { name?: string }> | null;
@@ -102,9 +102,9 @@ export function CategoriesPage() {
       } else {
         toast.success(newActive ? `${categoryName} ${t.enabled}` : `${categoryName} ${t.disabled}`);
         if (newActive) {
-          analytics.category.activate();
+
         } else {
-          analytics.category.deactivate();
+
         }
       }
     } catch {
@@ -157,7 +157,7 @@ export function CategoriesPage() {
       if (res.ok) {
         toast.success(t.sortSaved);
         setSortMode(false);
-        analytics.category.reorder();
+
       } else {
         toast.error(t.sortError);
       }
@@ -337,7 +337,7 @@ function CategoryFormSheet({ category, onClose, onSaved }: CategoryFormSheetProp
 
       if (res.ok) {
         toast.success(t.deleted);
-        analytics.category.delete();
+
         onSaved();
       } else {
         const data = await res.json();
@@ -387,10 +387,8 @@ function CategoryFormSheet({ category, onClose, onSaved }: CategoryFormSheetProp
 
       if (res.ok) {
         toast.success(isEdit ? t.updated : t.created);
-        if (isEdit) {
-          analytics.category.update();
-        } else {
-          analytics.category.create();
+        if (!isEdit) {
+          analytics.dashboard.categoryCreated();
         }
         onSaved();
       } else {

@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Log ind",
       "subtitle": "Moderne hjemmeside med QR-menu, reservationer og AI-oversættelser",
-      "benefits": "Ingen adgangskoder. Ingen kreditkort.",
       "emailPlaceholder": "din@email.com",
       "continue": "Fortsæt",
       "verifyTitle": "Tjek din email",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Kunne ikke sende koden. Prøv venligst igen.",
         "verifyFailed": "Ugyldig kode. Prøv venligst igen."
+      },
+      "consent": {
+        "text": "Ved at fortsætte accepterer du",
+        "terms": "Servicevilkårene",
+        "and": "og",
+        "privacy": "Privatlivspolitikken"
       }
     },
     "analytics": {

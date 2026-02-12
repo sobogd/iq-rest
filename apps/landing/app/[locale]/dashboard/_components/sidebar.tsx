@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
 import {
   FolderOpen,
@@ -96,7 +95,6 @@ function SidebarMenuContent() {
   };
 
   const handleLogout = () => {
-    analytics.auth.signOut();
     setIsLoggingOut(true);
     window.location.href = "/api/auth/logout";
   };
@@ -268,6 +266,16 @@ function SidebarMenuContent() {
                   >
                     <Shield />
                     <span>Companies</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+                <SidebarMenuItem>
+                  <SidebarMenuButton
+                    tooltip="Analytics"
+                    isActive={activePage === "adminAnalytics"}
+                    onClick={() => handleMenuClick("adminAnalytics")}
+                  >
+                    <BarChart3 />
+                    <span>Analytics</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </SidebarMenu>

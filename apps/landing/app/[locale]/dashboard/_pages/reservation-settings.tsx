@@ -14,7 +14,6 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { FormSwitch } from "../_ui/form-switch";
 import { useDashboard } from "../_context/dashboard-context";
-import { analytics } from "@/lib/analytics";
 import { toast } from "sonner";
 import { AlertCircle, Save, Loader2 } from "lucide-react";
 import type { SubscriptionStatus } from "@prisma/client";
@@ -121,19 +120,19 @@ export function ReservationSettingsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.reservations.save();
+
         if (reservationsEnabled !== initialValues.reservationsEnabled) {
           if (reservationsEnabled) {
-            analytics.reservations.enable();
+
           } else {
-            analytics.reservations.disable();
+
           }
         }
         if (reservationMode !== initialValues.reservationMode) {
           if (reservationMode === "manual") {
-            analytics.reservations.modeManual();
+
           } else {
-            analytics.reservations.modeAuto();
+
           }
         }
         setInitialValues({

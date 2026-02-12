@@ -4,8 +4,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
-import { PostHogProvider } from "@/components/PostHogProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,24 +33,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className="notranslate" translate="no">
-      <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-      </head>
       <body>
-        <GoogleAnalytics />
-        <PostHogProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem={true}
-            disableTransitionOnChange
-          >
-            <NextIntlClientProvider messages={messages}>
-              {children}
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </PostHogProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

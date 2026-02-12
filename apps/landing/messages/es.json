@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Iniciar sesión",
       "subtitle": "Sitio web moderno con menú QR, reservaciones y traducciones IA",
-      "benefits": "Sin contraseñas. Sin tarjeta de crédito.",
       "emailPlaceholder": "tu@email.com",
       "continue": "Continuar",
       "verifyTitle": "Revisa tu email",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Error al enviar el código. Intenta de nuevo.",
         "verifyFailed": "Código inválido. Intenta de nuevo."
+      },
+      "consent": {
+        "text": "Al continuar, aceptas los",
+        "terms": "Términos de servicio",
+        "and": "y la",
+        "privacy": "Política de privacidad"
       }
     },
     "analytics": {

@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Giriş yap",
       "subtitle": "QR menü, rezervasyonlar ve AI çevirileri ile modern web sitesi",
-      "benefits": "Şifre yok. Kredi kartı yok.",
       "emailPlaceholder": "your@email.com",
       "continue": "Devam et",
       "verifyTitle": "E-postanızı kontrol edin",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Kodu göndermekte başarısız olundu. Lütfen tekrar deneyin.",
         "verifyFailed": "Geçersiz kod. Lütfen tekrar deneyin."
+      },
+      "consent": {
+        "text": "Devam ederek,",
+        "terms": "Hizmet Şartları",
+        "and": "ve",
+        "privacy": "Gizlilik Politikası'nı kabul etmiş olursunuz"
       }
     },
     "analytics": {

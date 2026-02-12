@@ -1336,7 +1336,6 @@
     "auth": {
       "title": "ログイン",
       "subtitle": "QRメニュー、予約、AI翻訳付きのモダンなウェブサイト",
-      "benefits": "パスワード不要。クレジットカード不要。",
       "emailPlaceholder": "your@email.com",
       "continue": "続ける",
       "verifyTitle": "メールを確認してください",
@@ -1346,6 +1345,12 @@
       "errors": {
         "sendFailed": "コードの送信に失敗しました。もう一度お試しください。",
         "verifyFailed": "無効なコードです。もう一度お試しください。"
+      },
+      "consent": {
+        "text": "続行することで、",
+        "terms": "利用規約",
+        "and": "と",
+        "privacy": "プライバシーポリシーに同意したことになります"
       }
     },
     "analytics": {

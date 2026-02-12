@@ -135,9 +135,10 @@ export function SettingsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.settings.save();
+        analytics.dashboard.restaurantSaved();
+
         if (slugWasChanged) {
-          analytics.settings.slugChange();
+
         }
 
         setOriginalName(name);

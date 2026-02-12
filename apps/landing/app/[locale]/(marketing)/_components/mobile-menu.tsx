@@ -11,7 +11,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Menu } from "lucide-react";
-import { analytics } from "@/lib/analytics";
 
 interface NavLink {
   href: string;
@@ -28,10 +27,7 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
   const [open, setOpen] = useState(false);
 
   return (
-    <Dialog open={open} onOpenChange={(value) => {
-      setOpen(value);
-      if (value) analytics.marketing.mobileMenuOpen();
-    }}>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild className="lg:hidden">
         <Button
           variant="outline"
@@ -55,21 +51,14 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
                 className={`text-foreground hover:text-primary transition-colors py-2 text-lg w-full ${
                   index > 0 ? "pt-4" : ""
                 }`}
-                onClick={() => {
-                  setOpen(false);
-                  const section = link.href.replace(/^#/, "");
-                  analytics.marketing.mobileMenuNavClick(section);
-                }}
+                onClick={() => setOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
           </div>
           <Button asChild className="w-full mt-6">
-            <Link href="/dashboard" onClick={() => {
-              setOpen(false);
-              analytics.marketing.ctaHeaderClick();
-            }}>
+            <Link href="/dashboard" onClick={() => setOpen(false)}>
               {getStartedLabel}
             </Link>
           </Button>

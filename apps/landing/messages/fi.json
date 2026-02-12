@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Kirjaudu sisään",
       "subtitle": "Moderni verkkosivusto QR-valikolla, varauksilla ja tekoälykäännöksillä",
-      "benefits": "Ei salasanoja. Ei luottokorttia.",
       "emailPlaceholder": "sinun@email.com",
       "continue": "Jatka",
       "verifyTitle": "Tarkista sähköpostisi",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Koodin lähettäminen epäonnistui. Yritä uudelleen.",
         "verifyFailed": "Virheellinen koodi. Yritä uudelleen."
+      },
+      "consent": {
+        "text": "Jatkamalla hyväksyt",
+        "terms": "Käyttöehdot",
+        "and": "ja",
+        "privacy": "Tietosuojakäytännön"
       }
     },
     "analytics": {

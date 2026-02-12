@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Pieteikties",
       "subtitle": "Mūsdienu mājaslapa ar QR ēdienkarti, rezervācijām un AI tulkojumiem",
-      "benefits": "Nav paroles. Nav kredītkartes.",
       "emailPlaceholder": "jūsu@email.com",
       "continue": "Turpināt",
       "verifyTitle": "Pārbaudiet savu e-pastu",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Koda nosūtīšana neizdevās. Lūdzu, mēģiniet vēlreiz.",
         "verifyFailed": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz."
+      },
+      "consent": {
+        "text": "Turpinot jūs piekrītat",
+        "terms": "Pakalpojumu noteikumiem",
+        "and": "un",
+        "privacy": "Privātuma politikai"
       }
     },
     "analytics": {

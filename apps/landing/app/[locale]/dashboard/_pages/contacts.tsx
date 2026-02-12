@@ -9,7 +9,6 @@ import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
-import { analytics } from "@/lib/analytics";
 
 export function ContactsPage() {
   const t = useTranslations("dashboard.contacts");
@@ -96,11 +95,11 @@ export function ContactsPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.contacts.save();
-        if (phone && phone !== originalPhone) analytics.contacts.phoneAdd();
-        if (instagram && instagram !== originalInstagram) analytics.contacts.instagramAdd();
-        if (whatsapp && whatsapp !== originalWhatsapp) analytics.contacts.whatsappAdd();
-        if (lat && lng && (lat !== originalLat || lng !== originalLng)) analytics.contacts.locationSet();
+
+        if (phone && phone !== originalPhone) 
+        if (instagram && instagram !== originalInstagram) 
+        if (whatsapp && whatsapp !== originalWhatsapp) 
+        if (lat && lng && (lat !== originalLat || lng !== originalLng)) 
         setOriginalPhone(phone);
         setOriginalInstagram(instagram);
         setOriginalWhatsapp(whatsapp);

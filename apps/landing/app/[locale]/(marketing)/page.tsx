@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { HowToSteps, MenuPreviewModal, HeroImages, ImageComposition, CtaSection } from "./_components";
+import { HowToSteps, MenuPreviewModal, HeroImages, ImageComposition, CtaSection, HeroCreateButton } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -119,9 +119,7 @@ export default async function HomePage({
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-                  <Button asChild size="lg" className="text-lg px-8 py-6">
-                    <Link href="/dashboard">{tHero("cta.create")}</Link>
-                  </Button>
+                  <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
                   <MenuPreviewModal
                     buttonText={tHero("cta.view")}
                     menuUrl="/m/love-eatery"
@@ -150,9 +148,7 @@ export default async function HomePage({
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                  <Button asChild size="lg" className="text-lg px-8 py-6">
-                    <Link href="/dashboard">{tHero("cta.create")}</Link>
-                  </Button>
+                  <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
                   <MenuPreviewModal
                     buttonText={tHero("cta.view")}
                     menuUrl="/m/love-eatery"
@@ -372,9 +368,7 @@ export default async function HomePage({
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link href="/dashboard">{tHero("cta.create")}</Link>
-              </Button>
+              <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
               <MenuPreviewModal
                 buttonText={tHero("cta.view")}
                 menuUrl="/m/love-eatery"

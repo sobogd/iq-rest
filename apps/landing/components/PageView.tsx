@@ -15,7 +15,7 @@ export function PageView({ slug, variant }: PageViewProps) {
     if (hasFired.current) return;
     hasFired.current = true;
     const fullSlug = variant ? `${slug}_${variant}` : slug;
-    analytics.pageView(fullSlug);
+    analytics.page.view(fullSlug);
   }, [slug, variant]);
 
   return null;

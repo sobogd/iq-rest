@@ -1356,7 +1356,6 @@
     "auth": {
       "title": "登录",
       "subtitle": "包含QR菜单、预订和AI翻译的现代网站",
-      "benefits": "无需密码。无需信用卡。",
       "emailPlaceholder": "your@email.com",
       "continue": "继续",
       "verifyTitle": "检查您的电子邮件",
@@ -1366,6 +1365,12 @@
       "errors": {
         "sendFailed": "发送代码失败。请重试。",
         "verifyFailed": "代码无效。请重试。"
+      },
+      "consent": {
+        "text": "继续即表示您同意",
+        "terms": "服务条款",
+        "and": "和",
+        "privacy": "隐私政策"
       }
     },
     "analytics": {

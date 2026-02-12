@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
+import { analytics } from "@/lib/analytics";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormTextarea } from "../_ui/form-textarea";
@@ -37,7 +38,6 @@ import { LANGUAGE_NAMES } from "../_lib/constants";
 import type { AllergenCode } from "@/lib/allergens";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
-import { analytics } from "@/lib/analytics";
 import { formatPrice } from "@/lib/currencies";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
@@ -166,9 +166,9 @@ export function ItemsPage() {
       } else {
         toast.success(newActive ? `${itemName} ${t.enabled}` : `${itemName} ${t.disabled}`);
         if (newActive) {
-          analytics.item.activate();
+
         } else {
-          analytics.item.deactivate();
+
         }
       }
     } catch {
@@ -252,7 +252,7 @@ export function ItemsPage() {
 
       if (allOk) {
         toast.success(t.sortSaved);
-        analytics.item.reorder();
+
         setSortMode(false);
         fetchData();
       } else {
@@ -529,7 +529,7 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
 
       if (res.ok) {
         toast.success(t.deleted);
-        analytics.item.delete();
+
         onSaved();
       } else {
         const data = await res.json();
@@ -597,14 +597,8 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
 
       if (res.ok) {
         toast.success(isEdit ? t.updated : t.created);
-        const hasImage = !!imageUrl;
-        const hasAllergens = allergens.length > 0;
-        if (isEdit) {
-          analytics.item.update();
-        } else {
-          analytics.item.create();
-          if (hasImage) analytics.item.createWithImage();
-          if (hasAllergens) analytics.item.createWithAllergens();
+        if (!isEdit) {
+          analytics.dashboard.itemCreated();
         }
         onSaved();
       } else {

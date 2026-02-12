@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Logga in",
       "subtitle": "Modern webbplats med QR-meny, bokningar och AI-översättningar",
-      "benefits": "Inga lösenord. Inga kreditkort.",
       "emailPlaceholder": "din@email.com",
       "continue": "Fortsätt",
       "verifyTitle": "Kontrollera din e-post",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Misslyckades med att skicka koden. Vänligen försök igen.",
         "verifyFailed": "Ogiltig kod. Vänligen försök igen."
+      },
+      "consent": {
+        "text": "Genom att fortsätta godkänner du",
+        "terms": "Användarvillkoren",
+        "and": "och",
+        "privacy": "Integritetspolicyn"
       }
     },
     "analytics": {

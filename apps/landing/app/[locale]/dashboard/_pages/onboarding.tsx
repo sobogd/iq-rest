@@ -19,7 +19,6 @@ import {
   Languages,
   BarChart3,
 } from "lucide-react";
-import { analytics } from "@/lib/analytics";
 
 interface OnboardingProgress {
   hasInfo: boolean;
@@ -79,7 +78,6 @@ export function OnboardingPage() {
         if (response.ok) {
           const result = await response.json();
           setData(result);
-          analytics.onboarding.view();
 
           // Find first incomplete step
           const firstIncomplete = allSteps.findIndex(
@@ -90,7 +88,7 @@ export function OnboardingPage() {
           }
 
           if (result.requiredCompleted) {
-            analytics.onboarding.allComplete();
+
           }
         }
       } catch (error) {
@@ -102,27 +100,20 @@ export function OnboardingPage() {
     fetchProgress();
   }, []);
 
-  const handleStepClick = (step: StepKey, page: PageKey) => {
-    const stepEvents: Record<StepKey, () => void> = {
-      info: analytics.onboarding.stepTitleClick,
-      categories: analytics.onboarding.stepCategoriesClick,
-      items: analytics.onboarding.stepItemsClick,
-      contacts: analytics.onboarding.stepContactsClick,
-    };
-    stepEvents[step]?.();
+  const handleStepClick = (_step: StepKey, page: PageKey) => {
     navigateFromOnboarding(page);
   };
 
   const goToPrevious = () => {
     if (currentStep > 0) {
-      analytics.onboarding.navigatePrev();
+
       setCurrentStep(currentStep - 1);
     }
   };
 
   const goToNext = () => {
     if (currentStep < allSteps.length - 1) {
-      analytics.onboarding.navigateNext();
+
       setCurrentStep(currentStep + 1);
     }
   };
@@ -159,7 +150,7 @@ export function OnboardingPage() {
             className="w-full"
             size="lg"
             onClick={() => {
-              analytics.onboarding.menuView();
+
               window.open(`/m/${slug}`, "_blank");
             }}
           >

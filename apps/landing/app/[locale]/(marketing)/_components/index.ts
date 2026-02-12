@@ -1,8 +1,8 @@
 export { Header } from "./header";
 export { Footer } from "./footer";
 export { LanguageSelector } from "./language-selector";
-export { CookieConsent } from "./cookie-consent";
 export { PricingCards } from "./pricing-cards";
+export { HeroCreateButton } from "./hero-create-button";
 export { ContactForm } from "./contact-form";
 export { GetStartedForm } from "./get-started-form";
 export { HowToSteps } from "./how-to-steps";

@@ -243,3 +243,19 @@ model SupportMessage {
   @@index([companyId, createdAt])
   @@map("support_messages")
 }
+
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  event     String
+  sessionId String
+  userId    String?
+  page      String?
+  meta      Json?
+  createdAt DateTime @default(now())
+
+  @@index([event, createdAt])
+  @@index([sessionId])
+  @@index([userId])
+  @@index([createdAt])
+  @@map("analytics_events")
+}

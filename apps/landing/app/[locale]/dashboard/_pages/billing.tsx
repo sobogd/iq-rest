@@ -11,7 +11,6 @@ import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
 import { Link } from "@/i18n/routing";
 import { PageLoader } from "../_ui/page-loader";
 import { toast } from "sonner";
-import { analytics } from "@/lib/analytics";
 
 interface SubscriptionStatusResponse {
   plan: PlanType;
@@ -64,7 +63,6 @@ export function BillingPage() {
   }, []);
 
   useEffect(() => {
-    analytics.billing.plansView();
     fetchSubscriptionStatus().then(() => setLoading(false));
   }, [fetchSubscriptionStatus]);
 

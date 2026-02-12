@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Prihlásiť sa",
       "subtitle": "Moderná webová stránka s QR menu, rezerváciami a AI prekladmi",
-      "benefits": "Žiadne heslá. Žiadna kreditná karta.",
       "emailPlaceholder": "tvoj@email.com",
       "continue": "Pokračovať",
       "verifyTitle": "Skontrolujte svoj e-mail",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Nepodarilo sa poslať kód. Skúste to prosím znova.",
         "verifyFailed": "Neplatný kód. Skúste to prosím znova."
+      },
+      "consent": {
+        "text": "Pokračovaním súhlasíte s",
+        "terms": "Podmienkami služby",
+        "and": "a",
+        "privacy": "Zásadami ochrany osobných údajov"
       }
     },
     "analytics": {

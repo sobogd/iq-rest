@@ -1323,7 +1323,12 @@
     "auth": {
       "title": "Sign in",
       "subtitle": "Modern website with QR menu, reservations, and AI translations",
-      "benefits": "No passwords. No credit card.",
+      "consent": {
+        "text": "By continuing, you agree to the",
+        "terms": "Terms of Service",
+        "and": "and",
+        "privacy": "Privacy Policy"
+      },
       "emailPlaceholder": "your@email.com",
       "continue": "Continue",
       "verifyTitle": "Check your email",

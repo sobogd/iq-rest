@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Sínigh isteach",
       "subtitle": "Suíomh gréasáin nua-aimseartha le comhoiriúnacht QR, áirithintí, agus aistriúcháin AI",
-      "benefits": "Níl pasfhocail. Níl cárta creidmheasa.",
       "emailPlaceholder": "do@email.com",
       "continue": "Lean ort",
       "verifyTitle": "Seiceáil do ríomhphost",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Theip ar an gcód a sheoladh. Bain triail as arís.",
         "verifyFailed": "Cód neamhbhailí. Bain triail as arís."
+      },
+      "consent": {
+        "text": "Trí leanúint ar aghaidh, aontaíonn tú leis na",
+        "terms": "Téarmaí Seirbhíse",
+        "and": "agus an",
+        "privacy": "Beartas Príobháideachta"
       }
     },
     "analytics": {

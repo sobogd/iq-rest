@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
+import { Link } from "@/i18n/routing";
 import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
 
@@ -61,6 +62,7 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
       const data = await response.json();
 
       if (response.ok) {
+        analytics.auth.emailSubmit();
         setStep("otp");
         setStatus("idle");
       } else {
@@ -93,12 +95,13 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
         if (isAdminEmail(email)) {
           analytics.disableTracking();
         }
-        // Track auth event
+        // Track auth events
+        analytics.auth.codeVerify();
         if (data.isNewUser) {
           analytics.auth.signUp();
-        } else {
-          analytics.auth.codeVerify();
         }
+        // Link session to user
+        analytics.linkSession(data.userId);
         onSuccess();
       } else {
         setErrorMessage(data.error || t("auth.errors.verifyFailed"));
@@ -166,7 +169,14 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
                   </Button>
 
                   <p className="text-xs text-muted-foreground">
-                    {t("auth.benefits")}
+                    {t("auth.consent.text")}{" "}
+                    <Link href="/terms" className="underline hover:text-foreground">
+                      {t("auth.consent.terms")}
+                    </Link>{" "}
+                    {t("auth.consent.and")}{" "}
+                    <Link href="/privacy" className="underline hover:text-foreground">
+                      {t("auth.consent.privacy")}
+                    </Link>
                   </p>
                 </div>
               </form>

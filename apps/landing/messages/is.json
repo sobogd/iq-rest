@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Skrá inn",
       "subtitle": "Nútímaleg vefsíða með QR matseðli, bókunum og AI þýðingum",
-      "benefits": "Engin lykilorð. Engin kreditkort.",
       "emailPlaceholder": "your@email.com",
       "continue": "Halda áfram",
       "verifyTitle": "Athugaðu tölvupóstinn þinn",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Mistókst að senda kóðann. Vinsamlegast reyndu aftur.",
         "verifyFailed": "Ógildur kóði. Vinsamlegast reyndu aftur."
+      },
+      "consent": {
+        "text": "Með því að halda áfram samþykkir þú",
+        "terms": "Þjónustuskilmálana",
+        "and": "og",
+        "privacy": "Persónuverndarstefnuna"
       }
     },
     "analytics": {

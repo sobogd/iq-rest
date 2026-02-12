@@ -1323,7 +1323,6 @@
     "auth": {
       "title": "Zaloguj się",
       "subtitle": "Nowoczesna strona internetowa z menu QR, rezerwacjami i tłumaczeniami AI",
-      "benefits": "Brak haseł. Brak karty kredytowej.",
       "emailPlaceholder": "twój@email.com",
       "continue": "Kontynuuj",
       "verifyTitle": "Sprawdź swój email",
@@ -1333,6 +1332,12 @@
       "errors": {
         "sendFailed": "Nie udało się wysłać kodu. Proszę spróbować ponownie.",
         "verifyFailed": "Nieprawidłowy kod. Proszę spróbować ponownie."
+      },
+      "consent": {
+        "text": "Kontynuując, akceptujesz",
+        "terms": "Regulamin",
+        "and": "i",
+        "privacy": "Politykę prywatności"
       }
     },
     "analytics": {

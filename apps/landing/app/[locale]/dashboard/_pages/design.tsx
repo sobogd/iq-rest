@@ -18,7 +18,6 @@ import {
 import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
-import { analytics } from "@/lib/analytics";
 import { Link } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
@@ -164,9 +163,9 @@ export function DesignPage() {
 
       if (res.ok) {
         toast.success(t("saved"));
-        analytics.design.save();
+
         if (accentColor !== originalAccentColor) {
-          analytics.design.accentColorChange();
+
         }
         setOriginalSource(source);
         setOriginalAccentColor(accentColor);
