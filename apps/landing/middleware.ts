@@ -43,21 +43,30 @@ function detectLocaleByCountry(request: NextRequest): Locale {
 }
 
 /**
- * Устанавливает geo cookies (страна из URL param или Cloudflare)
+ * Устанавливает geo cookies (страна из Cloudflare)
+ * Не перезаписывает если кука уже установлена через ?country= параметр
  */
 function setGeoCookies(request: NextRequest, response: NextResponse): void {
-  const country = getCountry(request);
+  const cfCountry = request.headers.get("cf-ipcountry");
   const city = request.headers.get("cf-ipcity");
 
-  if (country) {
-    response.cookies.set(GEO_COUNTRY_COOKIE, country, {
+  // Проверяем есть ли уже кука geo_country (могла быть установлена через ?country=)
+  const existingCountryCookie = request.cookies.get(GEO_COUNTRY_COOKIE)?.value;
+
+  // Если кука есть и она отличается от Cloudflare — значит установлена вручную, не трогаем
+  if (existingCountryCookie && existingCountryCookie !== cfCountry) {
+    return;
+  }
+
+  if (cfCountry) {
+    response.cookies.set(GEO_COUNTRY_COOKIE, cfCountry, {
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",
     });
 
     // Валюта по стране
-    const currency = getCurrencyByCountry(country);
+    const currency = getCurrencyByCountry(cfCountry);
     response.cookies.set(CURRENCY_COOKIE, currency, {
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 1 week
