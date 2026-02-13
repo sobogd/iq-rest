@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
+import { getLocaleByCountry } from "./lib/country-locale-map";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -8,84 +9,32 @@ const intlMiddleware = createMiddleware(routing);
 const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
-const LOCALE_COOKIE = "NEXT_LOCALE";
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_CITY_COOKIE = "geo_city";
 
 /**
- * Парсит Accept-Language заголовок и возвращает лучший подходящий язык
+ * Определяет язык по стране из Cloudflare
+ * Fallback на английский если страна не определена
  */
-function getLocaleFromAcceptLanguage(
-  acceptLanguage: string | null
-): Locale | null {
-  if (!acceptLanguage) return null;
+function detectLocaleByCountry(request: NextRequest): Locale {
+  const country = request.headers.get("cf-ipcountry");
 
-  const localeSet = new Set<string>(locales);
-
-  const parsed = acceptLanguage
-    .split(",")
-    .map((part) => {
-      const [lang, qPart] = part.trim().split(";");
-      const q = qPart ? parseFloat(qPart.split("=")[1]) : 1;
-      return { lang: lang.trim(), q };
-    })
-    .sort((a, b) => b.q - a.q);
-
-  for (const { lang } of parsed) {
-    const shortLang = lang.split("-")[0].toLowerCase();
-    if (localeSet.has(shortLang)) {
-      return shortLang as Locale;
+  if (country) {
+    const locale = getLocaleByCountry(country);
+    if (locale) {
+      return locale;
     }
   }
 
-  return null;
-}
-
-/**
- * Определяет язык пользователя по приоритету:
- * 1. Сохранённый выбор в cookie
- * 2. Accept-Language заголовок браузера
- * 3. Язык по умолчанию (en)
- */
-function detectUserLocale(request: NextRequest): Locale {
-  // 1. Проверяем cookie с сохранённым выбором - читаем из заголовка напрямую
-  const cookieHeader = request.headers.get("cookie") || "";
-  const match = cookieHeader.match(/NEXT_LOCALE=([^;]+)/);
-  const savedLocale = match ? match[1] : null;
-
-  if (savedLocale && (locales as readonly string[]).includes(savedLocale)) {
-    return savedLocale as Locale;
-  }
-
-  // 2. Парсим Accept-Language заголовок
-  const acceptLanguage = request.headers.get("accept-language");
-  const detectedLocale = getLocaleFromAcceptLanguage(acceptLanguage);
-  if (detectedLocale) {
-    return detectedLocale;
-  }
-
-  // 3. Fallback на язык по умолчанию
   return "en";
-}
-
-/**
- * Устанавливает cookie локали в response
- */
-function setLocaleCookie(response: NextResponse, locale: string): NextResponse {
-  response.cookies.set(LOCALE_COOKIE, locale, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-    sameSite: "lax",
-  });
-  return response;
 }
 
 /**
  * Устанавливает geo cookies из заголовков Cloudflare
  */
 function setGeoCookies(request: NextRequest, response: NextResponse): void {
-  const country = request.headers.get("CF-IPCountry");
-  const city = request.headers.get("CF-IPCity");
+  const country = request.headers.get("cf-ipcountry");
+  const city = request.headers.get("cf-ipcity");
 
   if (country) {
     response.cookies.set(GEO_COUNTRY_COOKIE, country, {
@@ -111,22 +60,22 @@ export default function middleware(request: NextRequest) {
 
   // Redirect root to detected locale
   if (pathname === "/") {
-    const targetLocale = detectUserLocale(request);
+    const targetLocale = detectLocaleByCountry(request);
     const redirectUrl = new URL(`/${targetLocale}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);
     setGeoCookies(request, response);
-    return setLocaleCookie(response, targetLocale);
+    return response;
   }
 
   // Redirect paths without locale prefix
   if (!localeRegex.test(pathname)) {
-    const targetLocale = detectUserLocale(request);
+    const targetLocale = detectLocaleByCountry(request);
     const redirectUrl = new URL(`/${targetLocale}${pathname}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);
     setGeoCookies(request, response);
-    return setLocaleCookie(response, targetLocale);
+    return response;
   }
 
   // Redirect /demo to demo menu
