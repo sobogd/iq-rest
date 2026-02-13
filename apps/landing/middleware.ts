@@ -9,6 +9,8 @@ const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const LOCALE_COOKIE = "NEXT_LOCALE";
+const GEO_COUNTRY_COOKIE = "geo_country";
+const GEO_CITY_COOKIE = "geo_city";
 
 /**
  * Парсит Accept-Language заголовок и возвращает лучший подходящий язык
@@ -78,6 +80,32 @@ function setLocaleCookie(response: NextResponse, locale: string): NextResponse {
   return response;
 }
 
+/**
+ * Устанавливает geo cookies из заголовков Cloudflare
+ */
+function setGeoCookies(request: NextRequest, response: NextResponse): void {
+  const country = request.headers.get("CF-IPCountry");
+  const city = request.headers.get("CF-IPCity");
+
+  if (country) {
+    response.cookies.set(GEO_COUNTRY_COOKIE, country, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+  }
+
+  if (city) {
+    // Cloudflare может отправлять город в URL-encoded формате
+    const decodedCity = decodeURIComponent(city);
+    response.cookies.set(GEO_CITY_COOKIE, decodedCity, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+  }
+}
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -87,6 +115,7 @@ export default function middleware(request: NextRequest) {
     const redirectUrl = new URL(`/${targetLocale}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);
+    setGeoCookies(request, response);
     return setLocaleCookie(response, targetLocale);
   }
 
@@ -96,6 +125,7 @@ export default function middleware(request: NextRequest) {
     const redirectUrl = new URL(`/${targetLocale}${pathname}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);
+    setGeoCookies(request, response);
     return setLocaleCookie(response, targetLocale);
   }
 
@@ -103,10 +133,12 @@ export default function middleware(request: NextRequest) {
   const demoMatch = pathname.match(new RegExp(`^/(${localePattern})/demo$`));
   if (demoMatch) {
     const locale = demoMatch[1];
-    return NextResponse.redirect(
+    const response = NextResponse.redirect(
       new URL(`/${locale}/m/love-eatery`, request.url),
       301
     );
+    setGeoCookies(request, response);
+    return response;
   }
 
   // Use next-intl middleware for locale handling
@@ -114,6 +146,9 @@ export default function middleware(request: NextRequest) {
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
+
+  // Set geo cookies from Cloudflare headers
+  setGeoCookies(request, response);
 
   return response;
 }
