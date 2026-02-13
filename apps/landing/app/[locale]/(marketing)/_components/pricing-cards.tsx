@@ -67,8 +67,17 @@ interface PricingCardsProps {
   hideButtons?: boolean;
 }
 
-function getCurrencyFromCookie(): SupportedCurrency {
-  if (typeof document === "undefined") return "EUR";
+function getCurrency(): SupportedCurrency {
+  if (typeof window === "undefined") return "EUR";
+
+  // 1. URL параметр для тестирования (?currency=MXN)
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlCurrency = urlParams.get("currency")?.toUpperCase();
+  if (urlCurrency && urlCurrency in currencyInfo) {
+    return urlCurrency as SupportedCurrency;
+  }
+
+  // 2. Cookie от middleware
   const match = document.cookie.match(/currency=([^;]+)/);
   return (match?.[1] as SupportedCurrency) || "EUR";
 }
@@ -98,9 +107,9 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
   const comparisonTracked = useRef(false);
   const lastTrackedPlan = useRef<number>(-1);
 
-  // Читаем валюту из куки при монтировании
+  // Читаем валюту из URL или куки при монтировании
   useEffect(() => {
-    setCurrency(getCurrencyFromCookie());
+    setCurrency(getCurrency());
   }, []);
 
   useEffect(() => {
