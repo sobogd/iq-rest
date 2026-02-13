@@ -1,12 +1,10 @@
 // Own analytics - sends events to our backend
 
 const SESSION_ID_KEY = "analytics_session_id";
-const GEO_DATA_KEY = "analytics_geo_data";
 
 interface GeoData {
   country?: string;
   city?: string;
-  region?: string;
 }
 
 function getSessionId(): string {
@@ -25,47 +23,23 @@ function isTrackingDisabled(): boolean {
   return localStorage.getItem("analytics_disabled") === "true";
 }
 
-// Fetch geo data from ipinfo.io (once per session)
-async function getGeoData(): Promise<GeoData | null> {
-  if (typeof window === "undefined") return null;
+// Get geo data from Cloudflare cookies (set by middleware)
+function getGeoFromCookies(): GeoData | null {
+  if (typeof document === "undefined") return null;
 
-  // Check cache first
-  const cached = sessionStorage.getItem(GEO_DATA_KEY);
-  if (cached) {
-    try {
-      return JSON.parse(cached);
-    } catch {
-      // Invalid cache, fetch fresh
+  const cookies = document.cookie.split("; ");
+  const geoData: GeoData = {};
+
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split("=");
+    if (name === "geo_country" && value) {
+      geoData.country = decodeURIComponent(value);
+    } else if (name === "geo_city" && value) {
+      geoData.city = decodeURIComponent(value);
     }
   }
 
-  try {
-    const response = await fetch("https://ipinfo.io/json?token=" + (process.env.NEXT_PUBLIC_IPINFO_TOKEN || ""), {
-      signal: AbortSignal.timeout(3000), // 3s timeout
-    });
-
-    if (!response.ok) return null;
-
-    const data = await response.json();
-    const geoData: GeoData = {
-      country: data.country,
-      city: data.city,
-      region: data.region,
-    };
-
-    sessionStorage.setItem(GEO_DATA_KEY, JSON.stringify(geoData));
-    return geoData;
-  } catch {
-    return null;
-  }
-}
-
-// Initialize geo data fetch on first load (don't block)
-let geoDataPromise: Promise<GeoData | null> | null = null;
-
-function initGeoData() {
-  if (typeof window === "undefined" || geoDataPromise) return;
-  geoDataPromise = getGeoData();
+  return geoData.country || geoData.city ? geoData : null;
 }
 
 function trackEvent(event: string, meta?: Record<string, unknown>) {
@@ -74,31 +48,24 @@ function trackEvent(event: string, meta?: Record<string, unknown>) {
   const sessionId = getSessionId();
   const page = window.location.pathname;
   const userAgent = navigator.userAgent;
+  const geoData = getGeoFromCookies();
 
-  // Start geo data fetch if not already started
-  initGeoData();
-
-  // Fire and forget - don't block UI
-  (async () => {
-    const geoData = await geoDataPromise;
-
-    fetch("/api/analytics/event", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        event,
-        sessionId,
-        page,
-        userAgent,
-        meta: {
-          ...meta,
-          ...(geoData && { geo: geoData }),
-        },
-      }),
-    }).catch(() => {
-      // Silently fail - analytics should never break the app
-    });
-  })();
+  fetch("/api/analytics/event", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      event,
+      sessionId,
+      page,
+      userAgent,
+      meta: {
+        ...meta,
+        ...(geoData && { geo: geoData }),
+      },
+    }),
+  }).catch(() => {
+    // Silently fail - analytics should never break the app
+  });
 }
 
 export function disableTracking() {
