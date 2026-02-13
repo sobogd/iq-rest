@@ -290,7 +290,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
                       <Button
                         asChild
                         className="w-full"
-                        variant={plan.popular || plan.id === "free" ? "default" : "outline"}
+                        variant="default"
                         size="lg"
                         onClick={() => analytics.marketing.pricingPlanClick(plan.id)}
                       >
