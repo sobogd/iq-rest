@@ -3,6 +3,38 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
+export async function DELETE(request: NextRequest) {
+  try {
+    const cookieStore = await cookies();
+    const userEmail = cookieStore.get("user_email")?.value;
+
+    if (!userEmail || !isAdminEmail(userEmail)) {
+      return NextResponse.json({ error: "Access denied" }, { status: 403 });
+    }
+
+    const { sessionId } = await request.json();
+
+    if (!sessionId) {
+      return NextResponse.json(
+        { error: "Missing required field: sessionId" },
+        { status: 400 }
+      );
+    }
+
+    const deleted = await prisma.analyticsEvent.deleteMany({
+      where: { sessionId },
+    });
+
+    return NextResponse.json({ success: true, deleted: deleted.count });
+  } catch (error) {
+    console.error("Admin delete session error:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
+}
+
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();

@@ -12,6 +12,7 @@ import {
   RefreshCw,
   X,
   ChevronRight,
+  Trash2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -360,6 +361,7 @@ export function AdminAnalyticsPage() {
   const [eventsModalAdValues, setEventsModalAdValues] = useState<string | undefined>();
   const [sessionEvents, setSessionEvents] = useState<AnalyticsEvent[]>([]);
   const [eventsLoading, setEventsLoading] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -458,6 +460,31 @@ export function AdminAnalyticsPage() {
       console.error("Failed to fetch session events:", err);
     } finally {
       setEventsLoading(false);
+    }
+  };
+
+  const handleDeleteSession = async (sessionId: string) => {
+    if (!confirm("Delete this session and all its events?")) return;
+
+    setDeleting(true);
+    try {
+      const res = await fetch("/api/admin/analytics/sessions", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId }),
+      });
+
+      if (res.ok) {
+        // Close events modal and remove from sessions list
+        setEventsModalOpen(false);
+        setSessions((prev) => prev.filter((s) => s.sessionId !== sessionId));
+        // Refresh data
+        fetchData();
+      }
+    } catch (err) {
+      console.error("Failed to delete session:", err);
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -747,11 +774,22 @@ export function AdminAnalyticsPage() {
       <Dialog open={eventsModalOpen} onOpenChange={setEventsModalOpen}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle className="flex flex-col gap-1">
-              <span>Session: {eventsModalSessionId?.slice(0, 12)}...</span>
-              <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
-              </span>
+            <DialogTitle className="flex items-start justify-between">
+              <div className="flex flex-col gap-1">
+                <span>Session: {eventsModalSessionId?.slice(0, 12)}...</span>
+                <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                  {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
+                </span>
+              </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-destructive hover:text-destructive hover:bg-destructive/10"
+                onClick={() => eventsModalSessionId && handleDeleteSession(eventsModalSessionId)}
+                disabled={deleting}
+              >
+                <Trash2 className={`h-4 w-4 ${deleting ? "animate-pulse" : ""}`} />
+              </Button>
             </DialogTitle>
           </DialogHeader>
           <ScrollArea className="max-h-[70vh]">
