@@ -488,7 +488,8 @@
       "support": "Tuki",
       "reservations": "Varausmahdollisuus",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Ilman IQ Rest -brändiä"
     },
     "values": {
       "free": {

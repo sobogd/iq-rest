@@ -4,6 +4,7 @@ import { ArrowRight, Phone, Globe, CalendarDays } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MenuNavLink } from "./_components";
+import { Logo } from "@/components/Logo";
 
 function isVideo(url: string) {
   return /\.(mp4|webm|mov)$/i.test(url);
@@ -33,6 +34,11 @@ async function getRestaurant(slug: string) {
       accentColor: true,
       reservationsEnabled: true,
       languages: true,
+      company: {
+        select: {
+          plan: true,
+        },
+      },
       _count: {
         select: {
           tables: {
@@ -86,6 +92,18 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
           )
         ) : (
           <div className="absolute inset-0 bg-black" />
+        )}
+        {/* Powered by IQ Rest - only for free plan */}
+        {restaurant.company.plan === "FREE" && (
+          <a
+            href="https://iq-rest.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors"
+          >
+            <Logo width={20} height={20} className="w-5 h-5" />
+            <span className="text-white text-sm font-medium">IQ Rest</span>
+          </a>
         )}
         {/* Dark overlay and title - hidden if hideTitle is true */}
         {!restaurant.hideTitle && (

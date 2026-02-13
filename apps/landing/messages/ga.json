@@ -488,7 +488,8 @@
       "support": "Tacaíocht",
       "reservations": "Conradh",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Gan brandáil IQ Rest"
     },
     "values": {
       "free": {

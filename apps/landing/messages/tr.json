@@ -488,7 +488,8 @@
       "support": "Destek",
       "reservations": "Rezervasyonlar",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "IQ Rest markası olmadan"
     },
     "values": {
       "free": {

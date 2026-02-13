@@ -488,7 +488,8 @@
       "support": "Suport",
       "reservations": "Reservacions",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Sense marca IQ Rest"
     },
     "values": {
       "free": {

@@ -488,7 +488,8 @@
       "support": "Stuðningur",
       "reservations": "Bókanir",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Án IQ Rest vörumerki"
     },
     "values": {
       "free": {

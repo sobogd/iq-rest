@@ -488,7 +488,8 @@
       "support": "Suporte",
       "reservations": "Reservas",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Sem marca IQ Rest"
     },
     "values": {
       "free": {

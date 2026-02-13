@@ -71,6 +71,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "background", free: true, basic: true, pro: true },
   { key: "support", free: true, basic: true, pro: true },
   { key: "reservations", free: false, basic: true, pro: true },
+  { key: "noBranding", free: false, basic: true, pro: true },
   { key: "multiRestaurant", free: false, basic: false, pro: true },
   { key: "customDomain", free: false, basic: false, pro: true },
 ];

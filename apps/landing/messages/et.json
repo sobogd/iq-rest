@@ -488,7 +488,8 @@
       "support": "Tugi",
       "reservations": "Broneeringud",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Ilma IQ Rest brändinguta"
     },
     "values": {
       "free": {

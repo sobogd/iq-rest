@@ -488,7 +488,8 @@
       "support": "Støtte",
       "reservations": "Reservasjoner",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Uten IQ Rest-merking"
     },
     "values": {
       "free": {

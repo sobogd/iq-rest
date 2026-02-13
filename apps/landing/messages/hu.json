@@ -488,7 +488,8 @@
       "support": "Támogatás",
       "reservations": "Asztalfoglalás",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "IQ Rest márkajelzés nélkül"
     },
     "values": {
       "free": {

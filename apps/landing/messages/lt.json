@@ -488,7 +488,8 @@
       "support": "Pagalba",
       "reservations": "Rezervacijos",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Be IQ Rest prekės ženklo"
     },
     "values": {
       "free": {

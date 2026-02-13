@@ -488,7 +488,8 @@
       "support": "الدعم",
       "reservations": "الحجوزات",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "بدون علامة IQ Rest"
     },
     "values": {
       "free": {

@@ -488,7 +488,8 @@
       "support": "サポート",
       "reservations": "予約",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "IQ Restブランドなし"
     },
     "values": {
       "free": {

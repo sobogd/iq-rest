@@ -488,7 +488,8 @@
       "support": "支持",
       "reservations": "预订",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "无IQ Rest品牌标识"
     },
     "values": {
       "free": {

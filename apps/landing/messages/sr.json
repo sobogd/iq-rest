@@ -488,7 +488,8 @@
       "support": "Podrška",
       "reservations": "Rezervacije",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Без IQ Rest брендирања"
     },
     "values": {
       "free": {

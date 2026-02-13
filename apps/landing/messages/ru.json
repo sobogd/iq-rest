@@ -488,7 +488,8 @@
       "support": "Поддержка",
       "reservations": "Бронирования",
       "multiRestaurant": "Несколько ресторанов",
-      "customDomain": "Собственный домен"
+      "customDomain": "Собственный домен",
+      "noBranding": "Без брендинга IQ Rest"
     },
     "values": {
       "free": {

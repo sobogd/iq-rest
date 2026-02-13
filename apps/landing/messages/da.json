@@ -488,7 +488,8 @@
       "support": "Support",
       "reservations": "Reservationer",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Uden IQ Rest branding"
     },
     "values": {
       "free": {

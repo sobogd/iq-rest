@@ -488,7 +488,8 @@
       "support": "Asistență",
       "reservations": "Rezerve",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Fără branding IQ Rest"
     },
     "values": {
       "free": {

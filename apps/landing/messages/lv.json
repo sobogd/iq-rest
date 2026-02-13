@@ -488,7 +488,8 @@
       "support": "Atbalsts",
       "reservations": "Rezervācijas",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Bez IQ Rest zīmola"
     },
     "values": {
       "free": {

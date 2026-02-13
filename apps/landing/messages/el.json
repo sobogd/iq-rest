@@ -488,7 +488,8 @@
       "support": "Υποστήριξη",
       "reservations": "Κρατήσεις",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Χωρίς επωνυμία IQ Rest"
     },
     "values": {
       "free": {

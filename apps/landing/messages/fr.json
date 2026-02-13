@@ -488,7 +488,8 @@
       "support": "Support",
       "reservations": "Réservations",
       "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain"
+      "customDomain": "Custom domain",
+      "noBranding": "Sans marque IQ Rest"
     },
     "values": {
       "free": {
