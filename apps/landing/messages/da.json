@@ -9,7 +9,7 @@
       "changelog": "Ændringslog",
       "contacts": "Kontakter"
     },
-    "getStarted": "Log ind",
+    "getStarted": "Opret gratis",
     "selectLanguage": "Vælg sprog",
     "selectLanguageDescription": "Vælg dit foretrukne sprog til hjemmesiden.",
     "searchLanguage": "Søg sprog...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menu & Hjemmeside til Restaurant på 5 Minutter",
+      "title": "Start din QR-menu og hjemmeside på 1 minut",
       "subtitle": "Indtast blot din e-mail og få en komplet restaurant hjemmeside med QR menu, kontaktside, flersproget support og moderne design. Opsæt alt fra din telefon.",
       "cta": {
-        "create": "Opret Menu",
-        "view": "Se Den Rigtige Menu"
+        "create": "Opret gratis",
+        "view": "Se demo",
+        "noCreditCard": "Intet kreditkort påkrævet"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Daglig analyse",
           "description": "Spor besøg og populære retter hver dag"
         }
-      ]
+      ],
+      "scrollToFeatures": "Se funktioner",
+      "perfectFor": {
+        "restaurants": "Restauranter",
+        "cafes": "Caféer",
+        "bars": "Barer",
+        "hotels": "Hoteller"
+      }
     },
     "intro": {
       "socialProof": "Betroet af 500+ restauranter verden over",
       "title": "Alt Dit Restaurant Behov Online",
       "description": "Registrer dig med blot din e-mail og få straks: en professionel restaurant hjemmeside, QR menu i moderne format, funktionel kontaktside med kort, flersproget support med AI oversættelse, video- eller foto-baggrund og tilpasset farveskema. Alt kan administreres fra din telefon - ingen computer nødvendig."
-    },
-    "whyUs": {
-      "title": "Fra Zero til Online Menu på 5 Minutter",
-      "subtitle": "Bare 4 enkle trin for at få din restaurant online",
-      "items": [
-        {
-          "step": "1",
-          "title": "Indtast Din E-mail",
-          "description": "Hurtig registrering med blot din e-mailadresse. Ingen kreditkort nødvendig."
-        },
-        {
-          "step": "2",
-          "title": "Udfyld Restaurant Info",
-          "description": "Tilføj dit restaurantnavn, adresse, kontaktoplysninger og åbningstider."
-        },
-        {
-          "step": "3",
-          "title": "Tilføj Menuvarer",
-          "description": "Opret kategorier og tilføj dine retter med fotos og priser."
-        },
-        {
-          "step": "4",
-          "title": "Nyd Din Menu",
-          "description": "Din QR menu er klar! Del den med kunderne og spor analyser."
-        }
-      ],
-      "cta": "Klar til at Modernisere Din Restaurant?"
     },
     "featuresPreview": {
       "title": "Kraftfulde Funktioner til Din Restaurant",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% Mobilvenlig Administration",
-        "shortDescription": "Ingen computer? Intet problem. Kør din hele restaurant hjemmeside fra din telefon. Tilføj retter mens du står i køkkenet, opdater priser under service, upload billeder direkte fra dit kamera. Hver funktion fungerer perfekt på mobil - fordi restaurant ejere aldrig sidder ved et skrivebord.",
+        "shortDescription": "Rediger menuen fra telefonen.{br}{link}Se hvordan det virker{/link}.",
         "description": "Tilføj kategorier, retter, billeder, og administrer din hele restaurant hjemmeside direkte fra din telefon. Vores dashboard er fuldt optimeret til mobile enheder, så du kan opdatere din menu under en kaffepause eller tilføje dagens specialer på farten.",
         "fullDescription": "Restaurant ejere er travle mennesker, der ikke altid er ved en computer. Derfor har vi bygget IQ Rest til at fungere perfekt på mobile enheder. Hver funktion, fra at tilføje nye retter til at opdatere priser, er designet til berøringsskærme. Tag et billede af en ny ret og upload det straks. Skift dagens special, mens du står i køkkenet.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restaurant menu administration på smartphone",
-        "cta": "Se Mobil Dashboard"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI-Drevet Menu Oversættelse",
-        "shortDescription": "Stop med at miste internationale kunder til sprogbarrierer. Vores AI oversætter din hele menu til 25+ sprog på sekunder - ikke generisk oversættelse, men kontekstbevidst AI, der forstår kulinariske termer. 'Beef Wellington' forbliver 'Beef Wellington', mens beskrivelser læses naturligt på hvert sprog.",
+        "shortDescription": "Oversæt hele menuen{br}med {link}AI-oversættelse med 1 klik{/link}.",
         "description": "Nå internationale kunder med intelligent AI-oversættelse, der forstår madkontext. Dine rettenavne og beskrivelser oversættes præcist, bevarer kulinariske termer og giver mening på ethvert sprog.",
         "fullDescription": "Generiske oversættere fejler ofte med madmenuer - de oversætter bogstaveligt uden at forstå konteksten. Vores AI er trænet specifikt til restaurantindhold. Den ved, at 'Beef Wellington' ikke skal oversættes bogstaveligt, og at 'al dente' betyder det samme på ethvert sprog. Server turister og internationale gæster med menuer, der læses naturligt på deres sprog.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-drevet restaurant menu oversættelsesinterface",
-        "cta": "Opdag AI Oversættelse"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Flersproget Restaurant Hjemmeside",
-        "shortDescription": "Byd turister og internationale gæster velkommen på deres modersmål. Understøttelse af 25+ sprog betyder, at hver kunde føler sig hjemme. Et tryk for at skifte sprog - menu, priser, beskrivelser tilpasser sig straks. Perfekt til restauranter i turistområder eller internationale byer.",
+        "shortDescription": "Byd turister velkommen{br}med menu på {link}25+ sprog{/link}.",
         "description": "Din restaurant hjemmeside understøtter automatisk flere sprog. Kunder kan skifte sprog med et tryk, og alt indhold inklusive menu, kontaktinformation og navigation tilpasser sig straks.",
         "fullDescription": "I turistområder og internationale byer er det essentielt at tale din kundes sprog. IQ Rest gør din restaurant tilgængelig for alle. Kunder ser en sprogvælger og kan gennemse din hele hjemmeside - menu, kontakter, reservationer - på deres foretrukne sprog. Kombineret med AI-oversættelse kan du servere verden.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Flersproget restaurant hjemmeside sprogvælger",
-        "cta": "Se Flersprogede Funktioner"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Nem Menu Administration",
-        "shortDescription": "Opdater din menu på sekunder, ikke timer. Tilføj nye retter, rediger priser, reorganiser kategorier - alt med simpel træk-og-slip fra enhver enhed. Ingen tekniske færdigheder nødvendige. Ændringer går live med det samme, så dine kunder altid ser de seneste tilbud.",
+        "title": "Enkel menueditor",
+        "shortDescription": "Træk, slip, færdig.{br}{link}Administrer din menu{/link} på sekunder.",
         "description": "At administrere din menu har aldrig været lettere. Tilføj kategorier, opret retter med billeder og beskrivelser, sæt priser og organiser alt med simpel træk-og-slip. Ændringer vises straks på din live hjemmeside.",
         "fullDescription": "Glem komplicerede indholdsstyringssystemer. IQ Rest's menueditor er designet til restaurant ejere, ikke webudviklere. Opret en ny kategori på sekunder, tilføj retter med et par tryk, upload billeder direkte fra din telefon. Træk varer for at omarrangere, skift synlighed for udsolgte varer, og se ændringer live med det samme.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Nem restaurant menu administrationsdashboard",
-        "cta": "Se Menu Editor"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Tabel Reservationssystem",
-        "shortDescription": "Stop med at miste kunder til glemte opkald. Accepter bordreservationer 24/7 direkte fra din hjemmeside - kunder vælger dato, tid og bord på sekunder. Automatiske bekræftelser, e-mailnotifikationer og et simpelt dashboard til at administrere alt.",
+        "shortDescription": "Modtag reservationer 24/7.{br}{link}Reservationer{/link} direkte fra din hjemmeside.",
         "description": "Det indbyggede reservationssystem lader kunder booke borde direkte fra din hjemmeside. Vælg automatisk bekræftelse baseret på tilgængelighed, eller gennemgå hver booking manuelt. Administrer alle reservationer fra dit dashboard.",
         "fullDescription": "Telefonreservationer er tidskrævende og lette at misse. IQ Rest's reservationssystem fungerer 24/7. Kunder vælger dato, tid og antal personer, og booker derefter straks. Du kan opsætte automatisk bekræftelse baseret på bordets tilgængelighed, eller gennemgå hver anmodning manuelt. Reducer no-shows med e-mailbekræftelser.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video & Foto Baggrunde",
-        "shortDescription": "Første indtryk sælger. Fang kunderne i det øjeblik, de scanner din QR-kode med en fantastisk video af din restaurants atmosfære eller et smukt billede af din signaturret. Skil dig ud fra konkurrenterne med en hjemmeside, der føles premium og professionel.",
+        "shortDescription": "Skab fantastiske førstehåndsindtryk{br}med {link}video- eller fotobaggrunde{/link}.",
         "description": "Skab et mindeværdigt første indtryk med tilpassede video- eller fotobaggrunde på din hjemmeside. Upload din restaurant atmosfære video eller et smukt madbillede for straks at fange kunderne.",
         "fullDescription": "Første indtryk betyder noget. Når kunder scanner din QR-kode, skal de straks imponeres. Upload en video af din restaurant atmosfære, en tidsforkortelse af dit køkken, eller et fantastisk billede af din signaturret. Din hjemmeside bliver en visuel oplevelse, der afspejler din restaurants personlighed.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restaurant hjemmeside med videobaggrund",
-        "cta": "Se Videobaggrunde"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Tilpasset Farveskema",
-        "shortDescription": "Gør din menu virkelig din med tilpassede accentfarver, der matcher din restaurants brandidentitet. Vælg mellem 12 smukke forudindstillede farver eller vælg din præcise brandnuance. Hver knap, fremhævning og interaktivt element tilpasser sig for at skabe et sammenhængende, professionelt look, som kunderne husker.",
+        "shortDescription": "Match farver med dit brand{br}med {link}brugerdefinerede accenter{/link}.",
         "description": "Din restaurant hjemmeside skal matche dit brand. Vælg mellem forudindstillede farveskemaer eller vælg din præcise brandfarve. Kombineret med automatisk lys/mørk tema understøttelse, ser din menu altid professionel ud.",
         "fullDescription": "Brandkonsistens betyder noget. IQ Rest lader dig tilpasse accentfarven, der bruges på tværs af din hjemmeside - knapper, fremhævninger og interaktive elementer matcher alle dit brand. Vælg mellem omhyggeligt udvalgte forudindstillinger eller indtast din præcise brandfarve. Systemet sikrer automatisk læsbarhed i både lyse og mørke tilstande.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Tilgængelighedsoptimeret farvekontrast"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Tilpasset farveskema og brandingmuligheder",
-        "cta": "Udforsk Farveskemaer"
+        "imageAlt": "Tilpasset farveskema og brandingmuligheder"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Gratis",
         "description": "Perfekt til at prøve IQ Rest",
-        "cta": "Start Gratis",
+        "cta": "Opret gratis",
         "highlights": [
           "Restaurant hjemmeside",
           "QR Menu",
@@ -523,7 +503,14 @@
         "scans": "Ubegrænsede",
         "languages": "Ubegrænsede"
       }
-    }
+    },
+    "socialProof": "Over 500 restauranter stoler på os",
+    "simpleTitle": "Start gratis, opgrader når du vil",
+    "trustBenefits": [
+      "Gratis start",
+      "Intet kreditkort",
+      "5 min opsætning"
+    ]
   },
   "contacts": {
     "title": "Har du brug for hjælp? Lad os chatte",

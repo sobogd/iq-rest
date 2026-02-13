@@ -9,7 +9,7 @@
       "changelog": "Clár Athruithe",
       "contacts": "Teagmhálachtaí"
     },
-    "getStarted": "Cláraigh isteach",
+    "getStarted": "Cruthaigh saor in aisce",
     "selectLanguage": "Roghnaigh Teanga",
     "selectLanguageDescription": "Roghnaigh do theanga is fearr leat don suíomh gréasáin.",
     "searchLanguage": "Cuardaigh teanga...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menú & Suíomh Gréasáin do Restaurant i 5 Nóiméad",
+      "title": "Seol do roghchlár QR agus suíomh gréasáin i 1 nóiméad",
       "subtitle": "Ní gá ach do ríomhphost a chur isteach agus faigh suíomh gréasáin iomlán do restaurant le menú QR, leathanach teagmhála, tacaíocht ilteangach, agus dearadh nua-aimseartha. Socraigh gach rud ó do guthán.",
       "cta": {
-        "create": "Cruthaigh Menú",
-        "view": "Féach ar an Menú Réalaíoch"
+        "create": "Cruthaigh saor in aisce",
+        "view": "Féach ar thaispeántas",
+        "noCreditCard": "Níl cárta creidmheasa ag teastáil"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Anailís laethúil",
           "description": "Rian a choinneáil ar chuairteanna agus ar na miasa is coitianta gach lá"
         }
-      ]
+      ],
+      "scrollToFeatures": "Féach ar ghnéithe",
+      "perfectFor": {
+        "restaurants": "Bialanna",
+        "cafes": "Caifí",
+        "bars": "Beáir",
+        "hotels": "Óstáin"
+      }
     },
     "intro": {
       "socialProof": "Iontaofa ag 500+ bialann ar fud an domhain",
       "title": "Gach Rud a D'fhéadfadh a bheith ag Teastáil ó do Restaurant Ar Líne",
       "description": "Cláraigh le do ríomhphost amháin agus faigh láithreach: suíomh gréasáin gairmiúil do restaurant, menú QR i bhformáid nua-aimseartha, leathanach teagmhála feidhmiúil le mapa, tacaíocht ilteangach le haistriúchán AI, cúlra físe nó grianghraf, agus scéim dathanna saincheaptha. Gach rud inbhainistíochta ó do guthán - ní gá ríomhaire."
-    },
-    "whyUs": {
-      "title": "Ó Nialas go Menú Ar Líne i 5 Nóiméad",
-      "subtitle": "Níl ach 4 chéim shimplí ann chun do restaurant a chur ar líne",
-      "items": [
-        {
-          "step": "1",
-          "title": "Cuir Do Ríomhphost isteach",
-          "description": "Clárú tapa le do sheoladh ríomhphoist amháin. Ní gá cárta creidmheasa."
-        },
-        {
-          "step": "2",
-          "title": "Líon isteach Eolas ar an Restaurant",
-          "description": "Cuir isteach ainm do restaurant, seoladh, teagmhálacha agus uaireanta oibre."
-        },
-        {
-          "step": "3",
-          "title": "Cuir Míreanna Menú leis",
-          "description": "Cruthaigh catagóirí agus cuir do miasa leis na grianghraif agus na praghsanna."
-        },
-        {
-          "step": "4",
-          "title": "Bain sult as do Menú",
-          "description": "Tá do menú QR réidh! Roinn é le custaiméirí agus rian a choinneáil ar anailís."
-        }
-      ],
-      "cta": "Réidh le Nuachóiriú do Restaurant?"
     },
     "featuresPreview": {
       "title": "Gnéithe Laigeacha do do Restaurant",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "Bainistíocht 100% Comhoiriúnach le gutháin",
-        "shortDescription": "Níl ríomhaire? Níl fadhb. Rith do shuíomh gréasáin bialainne go léir ó do guthán. Cuir míosa le chéile agus tú ag seasamh sa chistin, nuashonraigh praghsanna le linn na seirbhíse, uaslódáil grianghraif go díreach ó do cheamara. Oibríonn gach gné go foirfe ar gutháin - mar ní bhíonn úinéirí bialainne riamh ag suí ag deasc.",
+        "shortDescription": "Cuir do roghchlár in eagar ón bhfón.{br}{link}Féach conas a oibríonn sé{/link}.",
         "description": "Cuir catagóirí, míosa, grianghraif, agus bainistigh do shuíomh gréasáin bialainne go léir go díreach ó do guthán. Tá ár bpainéal rialaithe go hiomlán optamaithe do ghléasanna soghluaiste, ionas gur féidir leat do bhiachlár a nuashonrú le linn sos caife nó míosa laethúil a chur leis ar an gconair.",
         "fullDescription": "Is daoine gnóthacha iad úinéirí bialainne nach bhfuil i gcónaí ag ríomhaire. Sin é an fáth a thógamar IQ Rest chun oibriú go foirfe ar ghléasanna soghluaiste. Tá gach gné, ó mhíosa nua a chur leis go nuashonrú praghsanna, deartha do scáileáin tadhaill. Tóg grianghraf de mhias nua agus uaslódáil é láithreach. Athraigh speisialtacht an lae agus tú ag seasamh sa chistin.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Bainistíocht biachlár bialainne ar guthán cliste",
-        "cta": "Feic Painéal Soghluaiste"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "Aistriú Biachlár Powered by AI",
-        "shortDescription": "Stop ag cailleadh custaiméirí idirnáisiúnta toisc go bhfuil bacainní teanga. Aistríonn ár n-AI do bhiachlár iomlán go 25+ teangacha i soicind - ní aistriú ginearálta, ach AI atá feasach ar chomhthéacs a thuigeann téarmaí cócaireachta. Fanann 'Beef Wellington' mar 'Beef Wellington', agus léitear cur síos go nádúrtha i ngach teanga.",
+        "shortDescription": "Aistrigh an roghchlár ar fad{br}le {link}aistriúchán AI le 1 clic{/link}.",
         "description": "Sroich custaiméirí idirnáisiúnta le haistriúchán cliste AI a thuigeann comhoibriú bia. Aistrítear ainmneacha agus cur síos do mhiasa go cruinn, ag coimeád téarmaí cócaireachta agus ag déanamh ciall i ngach teanga.",
         "fullDescription": "Teangairí ginearálta go minic a theip ar bhiachlair bia - aistríonn siad go litriúil gan tuiscint ar chomhthéacs. Tá ár n-AI oiliúnaithe go sonrach do chontae bialainne. Tuigeann sé nach ba chóir 'Beef Wellington' a aistriú go litriúil, agus go bhfuil 'al dente' ag brath ar an teanga. Freastal ar thurasóirí agus ar aoi idirnáisiúnta le biachláir a léitear go nádúrtha ina dteanga.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Comhoibriú aistriú biachlár bialainne powered by AI",
-        "cta": "Faigh amach Aistriú AI"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Suíomh Gréasáin Bialainne Ilteangach",
-        "shortDescription": "Fáilte roimh thurasóirí agus aoi idirnáisiúnta ina dteanga dhúchais. Tacaíocht do 25+ teangacha a chiallaíonn go mbíonn gach custaiméir ag mothú mar bhaile. Tap amháin chun teangacha a athrú - biachlár, praghsanna, cur síos go léir a oireann láithreach. Foirfe do bhialanna i gceantair thurasóireachta nó i gcathracha idirnáisiúnta.",
+        "shortDescription": "Fáiltigh roimh thurasóirí{br}le roghchlár i {link}25+ teanga{/link}.",
         "description": "Tacaíonn do shuíomh gréasáin bialainne go huathoibríoch le teangacha il. Is féidir le custaiméirí teangacha a athrú le tap amháin, agus oireann gach ábhar lena n-áirítear biachlár, faisnéis teagmhála, agus nascleanúint láithreach.",
         "fullDescription": "I gceantair thurasóireachta agus cathracha idirnáisiúnta, tá sé riachtanach do theanga custaiméirí a labhairt. Déanann IQ Rest do bhialann inrochtana do gach duine. Feiceann custaiméirí rogha teanga agus is féidir leo brabhsáil ar do shuíomh gréasáin go hiomlán - biachlár, teagmhálacha, áirithintí - ina dteanga is fearr. Comhoibríonn sé le haistriúchán AI, is féidir leat freastal ar an domhan.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Rogha teanga suíomh gréasáin bialainne ilteangach",
-        "cta": "Feic Gnéithe Ilteangacha"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Bainistíocht Éasca Biachlár",
-        "shortDescription": "Nuashonraigh do bhiachlár i soicind, ní i n-uaireanta. Cuir míosa nua leis, eagarthóireacht praghsanna, athordú catagóirí - go léir le tarraingt agus titim shimplí ó aon ghléas. Níl scileanna teicniúla ag teastáil. Téann na hathruithe beo láithreach, ionas go bhfeiceann do chustaiméirí i gcónaí na tairiscintí is déanaí.",
+        "title": "Eagarthóir roghchláir simplí",
+        "shortDescription": "Tarraing, scaoil, déanta.{br}{link}Bainistigh do roghchlár{/link} i soicindí.",
         "description": "Ní raibh bainistíocht do bhiachlár riamh níos éasca. Cuir catagóirí, cruthaigh míosa le grianghraif agus cur síos, socraigh praghsanna, agus eagraigh gach rud le tarraingt agus titim shimplí. Taispeántar na hathruithe láithreach ar do shuíomh gréasáin beo.",
         "fullDescription": "Déanaimis dearmad ar chórais bainistíochta ábhair casta. Tá eagarthóir biachlár IQ Rest deartha do úinéirí bialainne, ní do fhorbróirí gréasáin. Cruthaigh catagóir nua i soicind, cuir míosa le cúpla tap, uaslódáil grianghraif go díreach ó do guthán. Tarraing míreanna chun athordú, dún infheictheacht do mhíreanna as stoc, agus feic na hathruithe beo láithreach.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Painéal bainistíochta biachlár bialainne éasca",
-        "cta": "Feic Eagarthóir Biachlár"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Córas Áirithintí Tábla",
-        "shortDescription": "Stop ag cailleadh custaiméirí toisc go bhfuil gutháin caillte. Glac le h-áirithintí tábla 24/7 go díreach ó do shuíomh gréasáin - roghnaíonn custaiméirí dáta, am, agus tábla i soicind. Dearbhuithe uathoibríocha, fógraí ríomhphoist, agus painéal simplí chun gach rud a bhainistiú.",
+        "shortDescription": "Glac le háirithintí 24/7.{br}{link}Áirithintí{/link} go díreach ó do shuíomh.",
         "description": "Tugann an córas áirithintí atá tógtha isteach do chustaiméirí an deis táblaí a chur in áirithe go díreach ó do shuíomh gréasáin. Roghnaigh dearbhú uathoibríoch bunaithe ar infhaighteacht, nó athbhreithnigh gach áirithint go láimhe. Bainistigh gach áirithint ó do phainéal rialaithe.",
         "fullDescription": "Tógann áirithintí gutháin am agus tá sé éasca a chailleadh. Oibríonn córas áirithintí IQ Rest 24/7. Roghnaíonn custaiméirí dáta, am, agus méid na páirtí, agus déanann siad áirithint láithreach. Is féidir leat dearbhú uathoibríoch a shocrú bunaithe ar infhaighteacht tábla, nó athbhreithnigh gach iarratas go láimhe. Laghdaigh na no-shows le dearbhuithe ríomhphoist.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Físeáin & Grianghraif Chúlraí",
-        "shortDescription": "Tosaíonn na chéad tuairimí ag díol. Tóg custaiméirí ag an nóiméad a scanann siad do chód QR le físeán iontach de do atmaisféar bialainne nó grianghraf álainn de do mhias síneadh. Seas amach ó na comhoibrithe le leathanach baile a bhraitheann préimhe agus proifisiúnta.",
+        "shortDescription": "Cruthaigh chéad iontubairtí iontacha{br}le {link}cúlraí físeáin nó grianghraif{/link}.",
         "description": "Cruthaigh tuairim chéad tuairim atá cuimhneacháin le físeáin chúlra nó grianghraif ar do leathanach baile. Uaslódáil do físeán atmaisféar bialainne nó grianghraf álainn bia chun custaiméirí a thógáil láithreach.",
         "fullDescription": "Tugann tuairimí chéad tuairim tábhacht. Nuair a scanann custaiméirí do chód QR, ba chóir go mbeadh tionchar láithreach orthu. Uaslódáil físeán de do atmaisféar bialainne, am-laps de do chistin, nó grianghraf iontach de do mhias síneadh. Déanann do leathanach baile taithí amhairc a chruthú a léiríonn pearsantacht do bhialainne.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Suíomh gréasáin bialainne le cúlra físe",
-        "cta": "Feic Cúlraí Físe"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Scéim Dathanna Saincheaptha",
-        "shortDescription": "Déan do bhiachlár go hiomlán do chuid féin le dathanna accent saincheaptha a oireann do shaintréithe branda do bhialainne. Roghnaigh ó 12 dathanna réamhshocraithe álainn nó roghnaigh do dhath branda cruinn. Oireann gach cnaipe, gile, agus eilimint idirghníomhach chun cruth a chruthú a chuireann le cuimhne na gcustaiméirí.",
+        "shortDescription": "Meaitseáil dathanna le do bhranda{br}le {link}béimeanna saincheaptha{/link}.",
         "description": "Ba chóir do shuíomh gréasáin bialainne a oiriúnú do do bhranda. Roghnaigh ó scéimeanna dathanna réamhshocraithe nó roghnaigh do dhath branda cruinn. Comhoibríonn sé le tacaíocht uathoibríoch do théamaí solais/dorcha, tá do bhiachlár i gcónaí le feiceáil go proifisiúnta.",
         "fullDescription": "Tá comhoiriúnacht branda tábhachtach. Tugann IQ Rest deis duit do dhath accent a shaincheapadh a úsáidtear ar fud do shuíomh gréasáin - oireann cnaipe, gile, agus eilimint idirghníomhach do do bhranda. Roghnaigh ó réamhshocruithe cúramach nó cuir isteach do dhath branda cruinn. Cinntíonn an córas go huathoibríoch go bhfuil léitheoireacht éasca i mód solais agus dorcha.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Contrárthacht dathanna a bharrfheabhsú le haghaidh inrochtana"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Rogha scéime dathanna agus branda",
-        "cta": "Súil ar Scéimeanna Dathanna"
+        "imageAlt": "Rogha scéime dathanna agus branda"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Saor",
         "description": "Foirmiúil chun IQ Rest a thriail",
-        "cta": "Tosaigh Saor",
+        "cta": "Cruthaigh saor in aisce",
         "highlights": [
           "Suíomh gréasáin bialann",
           "QR Menu",
@@ -523,7 +503,14 @@
         "scans": "Neamhtheoranta",
         "languages": "Neamhtheoranta"
       }
-    }
+    },
+    "socialProof": "Tá muinín ag breis is 500 bialann asainn",
+    "simpleTitle": "Tosaigh saor in aisce, uasghrádaigh nuair is mian leat",
+    "trustBenefits": [
+      "Tosú saor in aisce",
+      "Gan cárta creidmheasa",
+      "5 nóim socrú"
+    ]
   },
   "contacts": {
     "title": "Need help? Let's chat",

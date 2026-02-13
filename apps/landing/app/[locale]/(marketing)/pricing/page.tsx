@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { PricingCards, CtaSection } from "../_components";
+import { PricingSection, CtaSection } from "../_components";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
 import type { Metadata } from "next";
@@ -176,18 +176,7 @@ export default async function PricingPage({
       <PageView slug="pricing" />
       <JsonLd data={pricingProductSchema} />
       <JsonLd data={breadcrumbSchema} />
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <header className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("title")}</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t("subtitle")}
-            </p>
-          </header>
-          <PricingCards />
-        </div>
-      </div>
-
+      <PricingSection />
       <CtaSection />
     </>
   );

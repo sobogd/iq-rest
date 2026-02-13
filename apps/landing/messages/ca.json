@@ -9,7 +9,7 @@
       "changelog": "Registre de canvis",
       "contacts": "Contactes"
     },
-    "getStarted": "Iniciar sessió",
+    "getStarted": "Crea gratis",
     "selectLanguage": "Selecciona l'idioma",
     "selectLanguageDescription": "Tria l'idioma que prefereixes per al lloc web.",
     "searchLanguage": "Cerca idioma...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "Menú QR i lloc web per a restaurants en 5 minuts",
+      "title": "Llança el teu menú QR i web en 1 minut",
       "subtitle": "Només has d'introduir el teu correu electrònic i obtenir un lloc web complet per al restaurant amb menú QR, pàgina de contacte, suport multilingüe i disseny modern. Configura-ho tot des del teu telèfon.",
       "cta": {
-        "create": "Crear Menú",
-        "view": "Veure Menú Real"
+        "create": "Crea gratis",
+        "view": "Veure demo",
+        "noCreditCard": "No cal targeta de crèdit"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Analítiques diàries",
           "description": "Fes un seguiment de les visites i plats populars cada dia"
         }
-      ]
+      ],
+      "scrollToFeatures": "Veure funcions",
+      "perfectFor": {
+        "restaurants": "Restaurants",
+        "cafes": "Cafeteries",
+        "bars": "Bars",
+        "hotels": "Hotels"
+      }
     },
     "intro": {
       "socialProof": "Confiat per més de 500 restaurants a tot el món",
       "title": "Tot el que el teu restaurant necessita en línia",
       "description": "Registra't només amb el teu correu electrònic i obtén instantàniament: un lloc web professional per al restaurant, menú QR en format modern, pàgina de contacte funcional amb mapa, suport multilingüe amb traducció AI, fons de vídeo o foto, i esquema de colors personalitzat. Tot gestionable des del teu telèfon - no es requereix ordinador."
-    },
-    "whyUs": {
-      "title": "De Zero a Menú en Línia en 5 Minuts",
-      "subtitle": "Només 4 passos senzills per posar el teu restaurant en línia",
-      "items": [
-        {
-          "step": "1",
-          "title": "Introdueix el Teu Correu Electrònic",
-          "description": "Registre ràpid només amb la teva adreça de correu electrònic. No es requereix targeta de crèdit."
-        },
-        {
-          "step": "2",
-          "title": "Omple la Informació del Restaurant",
-          "description": "Afegeix el nom del teu restaurant, adreça, contactes i horaris d'obertura."
-        },
-        {
-          "step": "3",
-          "title": "Afegeix Articles al Menú",
-          "description": "Crea categories i afegeix els teus plats amb fotos i preus."
-        },
-        {
-          "step": "4",
-          "title": "Gaudeix del Teu Menú",
-          "description": "El teu menú QR està llest! Comparteix-lo amb els clients i fes un seguiment de les analítiques."
-        }
-      ],
-      "cta": "Estàs llest per modernitzar el teu restaurant?"
     },
     "featuresPreview": {
       "title": "Funcions Potents per al Teu Restaurant",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "Gestió 100% Amigable per a Mòbils",
-        "shortDescription": "Sense ordinador? Sense problema. Gestiona tot el lloc web del teu restaurant des del teu telèfon. Afegeix plats mentre estàs a la cuina, actualitza preus durant el servei, puja fotos directament des de la teva càmera. Cada funció funciona perfectament en mòbil - perquè els propietaris de restaurants mai no estan asseguts a una taula.",
+        "shortDescription": "Edita el menú des del mòbil.{br}{link}Mira com funciona{/link}.",
         "description": "Afegeix categories, plats, fotos i gestiona tot el lloc web del teu restaurant directament des del teu telèfon. El nostre tauler de control està totalment optimitzat per a dispositius mòbils, així que pots actualitzar el teu menú durant una pausa per al cafè o afegir ofertes diàries en moviment.",
         "fullDescription": "Els propietaris de restaurants són persones ocupades que no sempre estan davant d'un ordinador. Per això hem dissenyat IQ Rest per funcionar perfectament en dispositius mòbils. Cada funció, des d'afegir nous plats fins a actualitzar preus, està dissenyada per a pantalles tàctils. Fes una foto d'un nou plat i puja-la instantàniament. Canvia l'especial d'avui mentre estàs a la cuina.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Gestió del menú del restaurant en telèfon intel·ligent",
-        "cta": "Veure Tauler Mòbil"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "Traducció de Menú Impulsada per IA",
-        "shortDescription": "Deixa de perdre clients internacionals per barreres idiomàtiques. La nostra IA tradueix tot el teu menú a més de 25 llengües en segons - no és una traducció genèrica, sinó una IA conscient del context que entén els termes culinaris. 'Beef Wellington' es manté com 'Beef Wellington', mentre que les descripcions sonen de manera natural en cada llengua.",
+        "shortDescription": "Tradueix tot el menú{br}amb {link}traducció IA en 1 clic{/link}.",
         "description": "Arriba a clients internacionals amb una traducció intel·ligent d'IA que entén el context del menjar. Els noms dels teus plats i les descripcions es tradueixen amb precisió, preservant els termes culinaris i tenint sentit en qualsevol llengua.",
         "fullDescription": "Els traductors genèrics sovint fallen amb els menús de menjar - tradueixen literalment sense entendre el context. La nostra IA està entrenada específicament per al contingut de restaurants. Sap que 'Beef Wellington' no s'ha de traduir literalment, i que 'al dente' significa el mateix en qualsevol llengua. Serveix turistes i convidats internacionals amb menús que sonen de manera natural en la seva llengua.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Interfície de traducció de menú de restaurant impulsada per IA",
-        "cta": "Descobreix la Traducció AI"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Lloc Web de Restaurant Multilingüe",
-        "shortDescription": "Benvinguts turistes i convidats internacionals en la seva llengua nativa. El suport per a més de 25 llengües significa que cada client se sent com a casa. Un toc per canviar d'idioma - menú, preus, descripcions s'adapten instantàniament. Perfecte per a restaurants en zones turístiques o ciutats internacionals.",
+        "shortDescription": "Dona la benvinguda als turistes{br}amb menú en {link}25+ idiomes{/link}.",
         "description": "El lloc web del teu restaurant suporta automàticament múltiples llengües. Els clients poden canviar d'idioma amb un toc, i tot el contingut, incloent menú, informació de contacte i navegació s'adapta instantàniament.",
         "fullDescription": "En zones turístiques i ciutats internacionals, parlar la llengua del teu client és essencial. IQ Rest fa que el teu restaurant sigui accessible per a tothom. Els clients veuen un selector d'idioma i poden navegar per tot el teu lloc web - menú, contactes, reserves - en la seva llengua preferida. Combinat amb la traducció AI, pots servir al món.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Selector d'idioma del lloc web de restaurant multilingüe",
-        "cta": "Veure Funcions Multilingües"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Gestió de Menú Fàcil",
-        "shortDescription": "Actualitza el teu menú en segons, no en hores. Afegeix nous plats, edita preus, reorganitza categories - tot amb un senzill arrossegar i deixar caure des de qualsevol dispositiu. No es necessiten habilitats tècniques. Els canvis es publiquen instantàniament, així que els teus clients sempre veuen les últimes ofertes.",
+        "title": "Editor de menú simple",
+        "shortDescription": "Arrossega, deixa anar, fet.{br}{link}Gestiona el menú{/link} en segons.",
         "description": "Gestionar el teu menú mai ha estat tan fàcil. Afegeix categories, crea plats amb fotos i descripcions, fixa preus i organitza-ho tot amb un senzill arrossegar i deixar caure. Els canvis apareixen instantàniament al teu lloc web en viu.",
         "fullDescription": "Oblida't dels sistemes de gestió de continguts complicats. L'editor de menú d'IQ Rest està dissenyat per a propietaris de restaurants, no per a desenvolupadors web. Crea una nova categoria en segons, afegeix plats amb uns pocs tocs, puja fotos directament des del teu telèfon. Arrossega articles per reorganitzar, activa o desactiva la visibilitat dels articles esgotats, i veu els canvis en viu immediatament.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Tauler de gestió fàcil del menú del restaurant",
-        "cta": "Veure Editor de Menú"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Sistema de Reserves de Taules",
-        "shortDescription": "Deixa de perdre clients per trucades perdudes. Accepta reserves de taules 24/7 directament des del teu lloc web — els clients escullen data, hora i taula en segons. Confirmacions automàtiques, notificacions per correu electrònic i un tauler senzill per gestionar-ho tot.",
+        "shortDescription": "Accepta reserves 24/7.{br}{link}Reserves{/link} directament des del web.",
         "description": "El sistema de reserves integrat permet als clients reservar taules directament des del teu lloc web. Escull confirmació automàtica basada en disponibilitat, o revisa cada reserva manualment. Gestiona totes les reserves des del teu tauler de control.",
         "fullDescription": "Les reserves per telèfon són laborioses i fàcils de perdre. El sistema de reserves d'IQ Rest funciona 24/7. Els clients seleccionen data, hora i nombre de persones, i després reserven instantàniament. Pots configurar la confirmació automàtica basada en la disponibilitat de taules, o revisar cada sol·licitud manualment. Redueix les no presentacions amb confirmacions per correu electrònic.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Fons de Vídeo i Foto",
-        "shortDescription": "Les primeres impressions venen. Captiva els clients en el moment que escanejen el teu codi QR amb un vídeo impressionant de l'ambient del teu restaurant o una bella foto del teu plat estrella. Destaca entre la competència amb una pàgina d'inici que se senti premium i professional.",
+        "shortDescription": "Crea primeres impressions increïbles{br}amb {link}fons de vídeo o foto{/link}.",
         "description": "Crea una primera impressió memorable amb fons de vídeo o foto personalitzats a la teva pàgina d'inici. Puja el vídeo de l'ambient del teu restaurant o una bella foto de menjar per captivar els clients instantàniament.",
         "fullDescription": "Les primeres impressions importen. Quan els clients escanejen el teu codi QR, han d'impressionar-se immediatament. Puja un vídeo de l'ambient del teu restaurant, un time-lapse de la teva cuina, o una foto impressionant del teu plat estrella. La teva pàgina d'inici es converteix en una experiència visual que reflecteix la personalitat del teu restaurant.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Lloc web de restaurant amb fons de vídeo",
-        "cta": "Veure Fons de Vídeo"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Esquema de Colors Personalitzat",
-        "shortDescription": "Fes que el teu menú sigui realment teu amb colors d'accent personalitzats que coincideixin amb la identitat de marca del teu restaurant. Tria entre 12 colors predefinits bonics o escull la teva tonalitat exacta de marca. Cada botó, destacat i element interactiu s'adapta per crear un aspecte cohesiu i professional que els clients recorden.",
+        "shortDescription": "Fes coincidir els colors amb la teva marca{br}amb {link}accents personalitzats{/link}.",
         "description": "El lloc web del teu restaurant ha de coincidir amb la teva marca. Tria entre esquemes de colors predefinits o escull el teu color de marca exacte. Combinat amb el suport automàtic per a temes clars/foscos, el teu menú sempre es veu professional.",
         "fullDescription": "La consistència de marca és important. IQ Rest et permet personalitzar el color d'accent utilitzat a tot el teu lloc web - botons, destacats i elements interactius coincideixen amb la teva marca. Tria entre presets curosament seleccionats o introdueix el teu color de marca exacte. El sistema assegura automàticament la llegibilitat tant en modes clars com foscos.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Contrast de colors optimitzat per a l'accessibilitat"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Opcions d'esquema de colors i branding personalitzats",
-        "cta": "Explora Esquemes de Colors"
+        "imageAlt": "Opcions d'esquema de colors i branding personalitzats"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Gratuït",
         "description": "Perfecte per provar IQ Rest",
-        "cta": "Comença gratuïtament",
+        "cta": "Crea gratis",
         "highlights": [
           "Lloc web del restaurant",
           "Menú QR",
@@ -523,7 +503,14 @@
         "scans": "Il·limitat",
         "languages": "Il·limitat"
       }
-    }
+    },
+    "socialProof": "Més de 500 restaurants confien en nosaltres",
+    "simpleTitle": "Comença gratis, actualitza quan vulguis",
+    "trustBenefits": [
+      "Inici gratuït",
+      "Sense targeta de crèdit",
+      "5 min configuració"
+    ]
   },
   "contacts": {
     "title": "Necessites ajuda? Parlem",

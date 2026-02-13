@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { analytics } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
@@ -12,6 +12,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { Check, X } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
@@ -69,11 +75,27 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "customDomain", free: false, basic: false, pro: true },
 ];
 
-export function PricingCards() {
+interface PricingCardsProps {
+  hideComparison?: boolean;
+  hideButtons?: boolean;
+}
+
+export function PricingCards({ hideComparison = false, hideButtons = false }: PricingCardsProps) {
   const t = useTranslations("pricing");
   const [isYearly, setIsYearly] = useState(true);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
   const comparisonRef = useRef<HTMLDivElement>(null);
   const comparisonTracked = useRef(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   // Track comparison table view
   useEffect(() => {
@@ -123,7 +145,7 @@ export function PricingCards() {
   };
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-6">
       {/* Billing Toggle */}
       <div className="flex items-center justify-center gap-4">
         <span
@@ -150,150 +172,184 @@ export function PricingCards() {
         </button>
         <span
           className={cn(
-            "text-sm transition-colors",
+            "text-sm transition-colors flex flex-col",
             isYearly ? "text-foreground" : "text-muted-foreground"
           )}
         >
-          {t("yearly")}{" "}
-          <span className="text-green-600 dark:text-green-400">
+          <span>{t("yearly")}</span>
+          <span className="text-xs text-green-600 dark:text-green-400">
             {t("save")}
           </span>
         </span>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        {PLANS.map((plan) => {
-          const price = isYearly ? plan.price.yearly : plan.price.monthly;
+      {/* Pricing Cards Carousel */}
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "center",
+          startIndex: 0,
+          loop: false,
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-2 md:-ml-4 pt-6">
+          {PLANS.map((plan, index) => {
+            const price = isYearly ? plan.price.yearly : plan.price.monthly;
+            const isActive = current === index;
 
-          return (
-            <Card
-              key={plan.id}
-              className={cn(
-                "relative flex flex-col",
-                plan.popular && "border-primary shadow-lg scale-[1.02]"
-              )}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-0 right-0 flex justify-center">
-                  <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    {t("popular")}
-                  </span>
-                </div>
-              )}
-              <CardHeader className={cn(plan.popular && "pt-8")}>
-                <CardTitle className="text-2xl">
-                  {t(`plans.${plan.id}.name`)}
-                </CardTitle>
-                <CardDescription>
-                  {t(`plans.${plan.id}.description`)}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <div className="space-y-1 mb-6">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold">€{price}</span>
-                    <span className="text-muted-foreground">{t("perMonth")}</span>
-                  </div>
-                  {isYearly && plan.yearlyTotal && (
-                    <div className="text-sm text-muted-foreground">
-                      {t("billedYearly", { total: plan.yearlyTotal })}
-                    </div>
+            return (
+              <CarouselItem
+                key={plan.id}
+                className="pl-2 md:pl-4 basis-[75%] md:basis-1/3"
+              >
+                <Card
+                  className={cn(
+                    "relative flex flex-col h-full transition-all duration-300",
+                    plan.popular && "border-primary shadow-lg",
+                    isActive ? "scale-100 opacity-100" : "md:scale-100 scale-95 opacity-70 md:opacity-100"
                   )}
-                  {plan.id === "free" && (
-                    <div className="text-sm text-muted-foreground">
-                      {t("forever")}
-                    </div>
-                  )}
-                </div>
-                <ul className="space-y-3">
-                  {(t.raw(`plans.${plan.id}.highlights`) as string[]).map(
-                    (highlight, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                        <span className="text-sm">{highlight}</span>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  asChild
-                  className="w-full"
-                  variant={plan.popular ? "default" : "outline"}
-                  size="lg"
-                  onClick={() => analytics.marketing.pricingPlanClick(plan.id)}
                 >
-                  <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          );
-        })}
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-0 right-0 flex justify-center">
+                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                        {t("popular")}
+                      </span>
+                    </div>
+                  )}
+                  <CardHeader className={cn(plan.popular && "pt-8")}>
+                    <CardTitle className="text-2xl">
+                      {t(`plans.${plan.id}.name`)}
+                    </CardTitle>
+                    <CardDescription>
+                      {t(`plans.${plan.id}.description`)}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <div className="space-y-1 mb-6">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-4xl font-bold">€{price}</span>
+                        <span className="text-muted-foreground">{t("perMonth")}</span>
+                      </div>
+                      {isYearly && plan.yearlyTotal && (
+                        <div className="text-sm text-muted-foreground">
+                          {t("billedYearly", { total: plan.yearlyTotal })}
+                        </div>
+                      )}
+                      {plan.id === "free" && (
+                        <div className="text-sm text-muted-foreground">
+                          {t("forever")}
+                        </div>
+                      )}
+                    </div>
+                    <ul className="space-y-3">
+                      {(t.raw(`plans.${plan.id}.highlights`) as string[]).map(
+                        (highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
+                            <span className="text-sm">{highlight}</span>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </CardContent>
+                  {!hideButtons && (
+                    <CardFooter>
+                      <Button
+                        asChild
+                        className="w-full"
+                        variant={plan.popular || plan.id === "free" ? "default" : "outline"}
+                        size="lg"
+                        onClick={() => analytics.marketing.pricingPlanClick(plan.id)}
+                      >
+                        <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
+                      </Button>
+                    </CardFooter>
+                  )}
+                </Card>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+      </Carousel>
+
+      {/* Carousel Dots */}
+      <div className="flex justify-center gap-2 md:hidden">
+        {PLANS.map((_, index) => (
+          <button
+            key={index}
+            className={cn(
+              "w-2 h-2 rounded-full transition-colors",
+              current === index ? "bg-primary" : "bg-muted-foreground/30"
+            )}
+            onClick={() => api?.scrollTo(index)}
+          />
+        ))}
       </div>
 
       {/* Comparison Table */}
-      <div ref={comparisonRef} className="space-y-6">
-        <div className="text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
-            {t("comparison.title")}
-          </h2>
-          <p className="text-muted-foreground">{t("comparison.subtitle")}</p>
-        </div>
+      {!hideComparison && (
+        <div ref={comparisonRef} className="space-y-6">
+          <div className="text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              {t("comparison.title")}
+            </h2>
+            <p className="text-muted-foreground">{t("comparison.subtitle")}</p>
+          </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b">
-                <th className="text-left py-4 px-4 font-medium text-muted-foreground w-1/4">
-                  &nbsp;
-                </th>
-                {PLANS.map((plan) => (
-                  <th
-                    key={plan.id}
-                    className={cn(
-                      "py-4 px-4 text-center font-semibold",
-                      plan.popular && "text-primary"
-                    )}
-                  >
-                    {t(`plans.${plan.id}.name`)}
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b">
+                  <th className="text-left py-4 px-4 font-medium text-muted-foreground w-1/4">
+                    &nbsp;
                   </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {COMPARISON_FEATURES.map((feature, index) => (
-                <tr
-                  key={feature.key}
-                  className={cn(
-                    "border-b",
-                    index % 2 === 0 ? "bg-muted/30" : ""
-                  )}
-                >
-                  <td className="py-4 px-4 text-sm font-medium">
-                    {t(`features.${feature.key}`)}
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    {renderCellValue(feature.free, "free", feature.key)}
-                  </td>
-                  <td
+                  {PLANS.map((plan) => (
+                    <th
+                      key={plan.id}
+                      className={cn(
+                        "py-4 px-4 text-center font-semibold",
+                        plan.popular && "text-primary"
+                      )}
+                    >
+                      {t(`plans.${plan.id}.name`)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON_FEATURES.map((feature, index) => (
+                  <tr
+                    key={feature.key}
                     className={cn(
-                      "py-4 px-4 text-center",
-                      "bg-primary/5"
+                      "border-b",
+                      index % 2 === 0 ? "bg-muted/30" : ""
                     )}
                   >
-                    {renderCellValue(feature.basic, "basic", feature.key)}
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    {renderCellValue(feature.pro, "pro", feature.key)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                    <td className="py-4 px-4 text-sm font-medium">
+                      {t(`features.${feature.key}`)}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {renderCellValue(feature.free, "free", feature.key)}
+                    </td>
+                    <td
+                      className={cn(
+                        "py-4 px-4 text-center",
+                        "bg-primary/5"
+                      )}
+                    >
+                      {renderCellValue(feature.basic, "basic", feature.key)}
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      {renderCellValue(feature.pro, "pro", feature.key)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      )}
 
     </div>
   );

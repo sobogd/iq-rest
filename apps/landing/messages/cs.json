@@ -9,7 +9,7 @@
       "changelog": "Historie změn",
       "contacts": "Kontakty"
     },
-    "getStarted": "Přihlásit se",
+    "getStarted": "Vytvořit zdarma",
     "selectLanguage": "Vybrat jazyk",
     "selectLanguageDescription": "Vyberte si preferovaný jazyk pro webové stránky.",
     "searchLanguage": "Hledat jazyk...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menu a Webová stránka pro Restauraci za 5 Minut",
+      "title": "Spusťte QR menu a web za 1 minutu",
       "subtitle": "Stačí zadat váš e-mail a získat kompletní webovou stránku restaurace s QR menu, kontaktní stránkou, vícejazyčnou podporou a moderním designem. Vše nastavíte ze svého telefonu.",
       "cta": {
-        "create": "Vytvořit Menu",
-        "view": "Zobrazit Skutečné Menu"
+        "create": "Vytvořit zdarma",
+        "view": "Zobrazit demo",
+        "noCreditCard": "Není vyžadována kreditní karta"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Denní analýzy",
           "description": "Sledujte návštěvy a oblíbená jídla každý den"
         }
-      ]
+      ],
+      "scrollToFeatures": "Zobrazit funkce",
+      "perfectFor": {
+        "restaurants": "Restaurace",
+        "cafes": "Kavárny",
+        "bars": "Bary",
+        "hotels": "Hotely"
+      }
     },
     "intro": {
       "socialProof": "Důvěřuje nám více než 500 restaurací po celém světě",
       "title": "Vše, co Vaše Restaurace Potřebuje Online",
       "description": "Zaregistrujte se pouze s vaším e-mailem a okamžitě získáte: profesionální webovou stránku restaurace, QR menu v moderním formátu, funkční kontaktní stránku s mapou, vícejazyčnou podporu s AI překladem, video nebo fotografické pozadí a vlastní barevné schéma. Vše spravovatelné z vašeho telefonu - žádný počítač není potřeba."
-    },
-    "whyUs": {
-      "title": "Od Nuly k Online Menu za 5 Minut",
-      "subtitle": "Pouze 4 jednoduché kroky, jak dostat vaši restauraci online",
-      "items": [
-        {
-          "step": "1",
-          "title": "Zadejte Váš E-mail",
-          "description": "Rychlá registrace pouze s vaší e-mailovou adresou. Žádná kreditní karta není potřeba."
-        },
-        {
-          "step": "2",
-          "title": "Vyplňte Informace o Restauraci",
-          "description": "Přidejte název vaší restaurace, adresu, kontakty a otevírací hodiny."
-        },
-        {
-          "step": "3",
-          "title": "Přidejte Položky Menu",
-          "description": "Vytvořte kategorie a přidejte svá jídla s fotografiemi a cenami."
-        },
-        {
-          "step": "4",
-          "title": "Užijte si Vaše Menu",
-          "description": "Vaše QR menu je připraveno! Sdílejte ho se zákazníky a sledujte analýzy."
-        }
-      ],
-      "cta": "Připraveni modernizovat vaši restauraci?"
     },
     "featuresPreview": {
       "title": "Silné Funkce pro Vaši Restauraci",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% mobilně přívětivé řízení",
-        "shortDescription": "Žádný počítač? Žádný problém. Spravujte celou webovou stránku své restaurace ze svého telefonu. Přidávejte jídla, zatímco stojíte v kuchyni, aktualizujte ceny během služby, nahrávejte fotografie přímo z fotoaparátu. Každá funkce funguje perfektně na mobilních zařízeních - protože majitelé restaurací nikdy nesedí u stolu.",
+        "shortDescription": "Upravujte menu z telefonu.{br}{link}Podívejte se jak{/link}.",
         "description": "Přidávejte kategorie, jídla, fotografie a spravujte celou webovou stránku své restaurace přímo ze svého telefonu. Náš řídicí panel je plně optimalizován pro mobilní zařízení, takže můžete aktualizovat své menu během přestávky na kávu nebo přidat denní speciality na cestách.",
         "fullDescription": "Majitelé restaurací jsou zaneprázdnění lidé, kteří nejsou vždy u počítače. Proto jsme vytvořili IQ Rest, aby fungoval perfektně na mobilních zařízeních. Každá funkce, od přidávání nových jídel po aktualizaci cen, je navržena pro dotykové obrazovky. Pořiďte fotografii nového jídla a okamžitě ji nahrajte. Změňte dnešní specialitu, zatímco stojíte v kuchyni.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Správa menu restaurace na chytrém telefonu",
-        "cta": "Zobrazit mobilní řídicí panel"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "Překlad menu s AI",
-        "shortDescription": "Přestaňte ztrácet mezinárodní zákazníky kvůli jazykovým bariérám. Naše AI překládá celé vaše menu do 25+ jazyků během několika sekund - ne generický překlad, ale AI, která rozumí kulinářským termínům. 'Hovězí Wellington' zůstává 'Hovězí Wellington', zatímco popisy zní přirozeně v každém jazyce.",
+        "shortDescription": "Přeložte celé menu{br}s {link}AI překladem na 1 klik{/link}.",
         "description": "Osvojte si mezinárodní zákazníky s inteligentním překladem AI, který rozumí kontextu jídla. Vaše názvy jídel a popisy jsou překládány přesně, zachovávají kulinářské termíny a dávají smysl v jakémkoli jazyce.",
         "fullDescription": "Generičtí překladatelé často selhávají u jídelních lístků - překládají doslovně, aniž by rozuměli kontextu. Naše AI je speciálně vyškolena pro obsah restaurací. Ví, že 'Hovězí Wellington' by nemělo být překládáno doslovně, a že 'al dente' znamená to samé v jakémkoli jazyce. Obsluhujte turisty a mezinárodní hosty s menu, která zní přirozeně v jejich jazyce.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Rozhraní pro překlad menu poháněné AI",
-        "cta": "Objevte překlad AI"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Vícejazyčná webová stránka restaurace",
-        "shortDescription": "Vítejte turisty a mezinárodní hosty v jejich rodném jazyce. Podpora pro 25+ jazyků znamená, že se každý zákazník cítí jako doma. Jedním dotykem přepněte jazyky - menu, ceny, popisy se okamžitě přizpůsobí. Ideální pro restaurace v turistických oblastech nebo mezinárodních městech.",
+        "shortDescription": "Přivítejte turisty{br}s menu ve {link}25+ jazycích{/link}.",
         "description": "Vaše webová stránka restaurace automaticky podporuje více jazyků. Zákazníci mohou přepínat jazyky jedním dotykem a veškerý obsah včetně menu, kontaktních informací a navigace se okamžitě přizpůsobí.",
         "fullDescription": "V turistických oblastech a mezinárodních městech je nezbytné mluvit jazykem vašich zákazníků. IQ Rest činí vaši restauraci přístupnou pro každého. Zákazníci vidí výběr jazyka a mohou procházet celou vaši webovou stránku - menu, kontakty, rezervace - ve svém preferovaném jazyce. V kombinaci s překladem AI můžete obsluhovat celý svět.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Výběr jazyka na vícejazyčné webové stránce restaurace",
-        "cta": "Zobrazit vícejazyčné funkce"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Snadná správa menu",
-        "shortDescription": "Aktualizujte své menu během několika sekund, ne hodin. Přidávejte nová jídla, upravujte ceny, reorganizujte kategorie - to vše s jednoduchým přetahováním z jakéhokoli zařízení. Žádné technické dovednosti nejsou potřeba. Změny se okamžitě projeví, takže vaši zákazníci vždy vidí nejnovější nabídky.",
+        "title": "Jednoduchý editor menu",
+        "shortDescription": "Přetáhněte, pusťte, hotovo.{br}{link}Spravujte menu{/link} během sekund.",
         "description": "Správa vašeho menu nikdy nebyla jednodušší. Přidávejte kategorie, vytvářejte jídla s fotografiemi a popisy, nastavujte ceny a organizujte vše s jednoduchým přetahováním. Změny se okamžitě objeví na vaší živé webové stránce.",
         "fullDescription": "Zapomeňte na složité systémy správy obsahu. Editor menu IQ Rest je navržen pro majitele restaurací, nikoli pro webové vývojáře. Vytvořte novou kategorii během několika sekund, přidejte jídla několika dotyky, nahrajte fotografie přímo ze svého telefonu. Přetáhněte položky pro přeuspořádání, přepněte viditelnost pro vyprodané položky a okamžitě vidíte změny naživo.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Snadný řídicí panel pro správu menu restaurace",
-        "cta": "Zobrazit editor menu"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Systém rezervací stolů",
-        "shortDescription": "Přestaňte ztrácet zákazníky kvůli zmeškaným hovorům. Přijímejte rezervace stolů 24/7 přímo z vaší webové stránky - zákazníci vybírají datum, čas a stůl během několika sekund. Automatická potvrzení, e-mailová oznámení a jednoduchý řídicí panel pro správu všeho.",
+        "shortDescription": "Přijímejte rezervace 24/7.{br}{link}Rezervace{/link} přímo z webu.",
         "description": "Vestavěný rezervační systém umožňuje zákazníkům rezervovat stoly přímo z vaší webové stránky. Vyberte automatické potvrzení na základě dostupnosti nebo zkontrolujte každou rezervaci ručně. Spravujte všechny rezervace z vašeho řídicího panelu.",
         "fullDescription": "Telefonní rezervace jsou časově náročné a snadno se zmeškají. Rezervační systém IQ Rest funguje 24/7. Zákazníci vybírají datum, čas a velikost skupiny a poté rezervují okamžitě. Můžete nastavit automatické potvrzení na základě dostupnosti stolů, nebo zkontrolovat každou žádost ručně. Snižte počet no-show s e-mailovými potvrzeními.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video a fotografické pozadí",
-        "shortDescription": "První dojmy prodávají. Okouzlete zákazníky ve chvíli, kdy naskenují váš QR kód, ohromujícím videem atmosféry vaší restaurace nebo krásnou fotografií vašeho podpisového jídla. Vynikněte mezi konkurencí s domovskou stránkou, která působí prémiově a profesionálně.",
+        "shortDescription": "Vytvořte úžasné první dojmy{br}s {link}video nebo foto pozadím{/link}.",
         "description": "Vytvořte nezapomenutelný první dojem s vlastním videem nebo fotografickým pozadím na vaší domovské stránce. Nahrajte video atmosféry vaší restaurace nebo krásnou fotografii jídla, abyste okamžitě okouzlili zákazníky.",
         "fullDescription": "První dojmy jsou důležité. Když zákazníci naskenují váš QR kód, měli by být okamžitě ohromeni. Nahrajte video atmosféry vaší restaurace, časosběrný záznam vaší kuchyně nebo ohromující fotografii vašeho podpisového jídla. Vaše domovská stránka se stává vizuálním zážitkem, který odráží osobnost vaší restaurace.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Webová stránka restaurace s videem na pozadí",
-        "cta": "Zobrazit videa na pozadí"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Vlastní barevné schéma",
-        "shortDescription": "Udělejte své menu skutečně svým s vlastními akcentovými barvami, které odpovídají identitě vaší restaurace. Vyberte si z 12 krásných přednastavených barev nebo zvolte svou přesnou barvu značky. Každé tlačítko, zvýraznění a interaktivní prvek se přizpůsobí, aby vytvořil soudržný, profesionální vzhled, který si zákazníci zapamatují.",
+        "shortDescription": "Slaďte barvy s vaší značkou{br}s {link}vlastními akcenty{/link}.",
         "description": "Vaše webová stránka restaurace by měla odpovídat vaší značce. Vyberte si z přednastavených barevných schémat nebo zvolte svou přesnou barvu značky. V kombinaci s automatickou podporou světlého/tmavého tématu vaše menu vždy vypadá profesionálně.",
         "fullDescription": "Konzistence značky je důležitá. IQ Rest vám umožňuje přizpůsobit akcentovou barvu používanou po celé vaší webové stránce - tlačítka, zvýraznění a interaktivní prvky se všechny shodují s vaší značkou. Vyberte si z pečlivě vybraných předvoleb nebo zadejte svou přesnou barvu značky. Systém automaticky zajišťuje čitelnost jak ve světlém, tak v tmavém režimu.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Optimalizovaný kontrast barev pro přístupnost"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Možnosti vlastního barevného schématu a branding",
-        "cta": "Prozkoumat barevná schémata"
+        "imageAlt": "Možnosti vlastního barevného schématu a branding"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Zdarma",
         "description": "Ideální pro vyzkoušení IQ Rest",
-        "cta": "Začněte zdarma",
+        "cta": "Vytvořit zdarma",
         "highlights": [
           "Webové stránky restaurace",
           "QR Menu",
@@ -523,7 +503,14 @@
         "scans": "Neomezené",
         "languages": "Neomezené"
       }
-    }
+    },
+    "socialProof": "Důvěřuje nám více než 500 restaurací",
+    "simpleTitle": "Začněte zdarma, upgradujte kdykoliv",
+    "trustBenefits": [
+      "Zdarma na začátek",
+      "Bez kreditní karty",
+      "Nastavení za 5 min"
+    ]
   },
   "contacts": {
     "title": "Potřebujete pomoc? Pojďme si popovídat",

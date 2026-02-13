@@ -9,7 +9,7 @@
       "changelog": "Wijzigingslog",
       "contacts": "Contacten"
     },
-    "getStarted": "Inloggen",
+    "getStarted": "Gratis maken",
     "selectLanguage": "Selecteer Taal",
     "selectLanguageDescription": "Kies uw voorkeurstaal voor de website.",
     "searchLanguage": "Zoek taal...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menu & Website voor Restaurant in 5 Minuten",
+      "title": "Start je QR-menu en website in 1 minuut",
       "subtitle": "Voer gewoon je e-mailadres in en krijg een complete restaurantwebsite met QR-menu, contactpagina, meertalige ondersteuning en modern ontwerp. Stel alles in vanaf je telefoon.",
       "cta": {
-        "create": "Menu Aanmaken",
-        "view": "Bekijk Echt Menu"
+        "create": "Gratis maken",
+        "view": "Demo bekijken",
+        "noCreditCard": "Geen creditcard vereist"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Dagelijkse analyses",
           "description": "Volg bezoeken en populaire gerechten elke dag"
         }
-      ]
+      ],
+      "scrollToFeatures": "Bekijk functies",
+      "perfectFor": {
+        "restaurants": "Restaurants",
+        "cafes": "Cafés",
+        "bars": "Bars",
+        "hotels": "Hotels"
+      }
     },
     "intro": {
       "socialProof": "Vertrouwd door 500+ restaurants wereldwijd",
       "title": "Alles Wat Je Restaurant Online Nodig Heeft",
       "description": "Registreer met alleen je e-mailadres en ontvang direct: een professionele restaurantwebsite, QR-menu in modern formaat, functionele contactpagina met kaart, meertalige ondersteuning met AI-vertaling, video- of foto-achtergrond, en een op maat gemaakt kleurenschema. Alles te beheren vanaf je telefoon - geen computer nodig."
-    },
-    "whyUs": {
-      "title": "Van Nul naar Online Menu in 5 Minuten",
-      "subtitle": "Slechts 4 eenvoudige stappen om je restaurant online te krijgen",
-      "items": [
-        {
-          "step": "1",
-          "title": "Voer Je E-mailadres In",
-          "description": "Snelle registratie met alleen je e-mailadres. Geen creditcard vereist."
-        },
-        {
-          "step": "2",
-          "title": "Vul Restaurantinformatie In",
-          "description": "Voeg je restaurantnaam, adres, contactgegevens en openingstijden toe."
-        },
-        {
-          "step": "3",
-          "title": "Voeg Menu-items Toe",
-          "description": "Maak categorieën aan en voeg je gerechten toe met foto's en prijzen."
-        },
-        {
-          "step": "4",
-          "title": "Geniet van Je Menu",
-          "description": "Je QR-menu is klaar! Deel het met klanten en volg de analyses."
-        }
-      ],
-      "cta": "Klaar om Je Restaurant te Moderniseren?"
     },
     "featuresPreview": {
       "title": "Krachtige Functies voor Je Restaurant",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% Mobielvriendelijk Beheer",
-        "shortDescription": "Geen computer? Geen probleem. Beheer je hele restaurantwebsite vanaf je telefoon. Voeg gerechten toe terwijl je in de keuken staat, update prijzen tijdens de service, upload foto's rechtstreeks vanaf je camera. Elke functie werkt perfect op mobiel - omdat restaurant eigenaren nooit achter een bureau zitten.",
+        "shortDescription": "Bewerk je menu vanaf je telefoon.{br}{link}Bekijk hoe het werkt{/link}.",
         "description": "Voeg categorieën, gerechten, foto's toe en beheer je hele restaurantwebsite rechtstreeks vanaf je telefoon. Ons dashboard is volledig geoptimaliseerd voor mobiele apparaten, zodat je je menu kunt bijwerken tijdens een koffiepauze of dagelijkse specials onderweg kunt toevoegen.",
         "fullDescription": "Restaurant eigenaren zijn drukke mensen die niet altijd achter een computer zitten. Daarom hebben we IQ Rest gebouwd om perfect te werken op mobiele apparaten. Elke functie, van het toevoegen van nieuwe gerechten tot het bijwerken van prijzen, is ontworpen voor touchscreens. Maak een foto van een nieuw gerecht en upload het onmiddellijk. Wijzig de special van vandaag terwijl je in de keuken staat.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restaurantmenu beheer op smartphone",
-        "cta": "Bekijk Mobiel Dashboard"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI-Aangedreven Menuvertaling",
-        "shortDescription": "Stop met het verliezen van internationale klanten door taalbarrières. Onze AI vertaalt je hele menu in 25+ talen in seconden - geen generieke vertaling, maar contextbewuste AI die culinaire termen begrijpt. 'Beef Wellington' blijft 'Beef Wellington', terwijl beschrijvingen natuurlijk lezen in elke taal.",
+        "shortDescription": "Vertaal je hele menu{br}met {link}AI-vertaling in 1 klik{/link}.",
         "description": "Bereik internationale klanten met intelligente AI-vertaling die voedselcontext begrijpt. De namen en beschrijvingen van je gerechten worden nauwkeurig vertaald, waarbij culinaire termen behouden blijven en logisch zijn in elke taal.",
         "fullDescription": "Generieke vertalers falen vaak met voedselmenu's - ze vertalen letterlijk zonder de context te begrijpen. Onze AI is specifiek getraind voor restaurantinhoud. Het weet dat 'Beef Wellington' niet letterlijk vertaald moet worden, en dat 'al dente' in elke taal hetzelfde betekent. Serveer toeristen en internationale gasten met menu's die natuurlijk lezen in hun taal.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-aangedreven restaurantmenu vertaalinterface",
-        "cta": "Ontdek AI Vertaling"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Meertalige Restaurantwebsite",
-        "shortDescription": "Verwelkom toeristen en internationale gasten in hun moedertaal. Ondersteuning voor 25+ talen betekent dat elke klant zich thuis voelt. Eén tik om van taal te wisselen - menu, prijzen, beschrijvingen passen zich onmiddellijk aan. Perfect voor restaurants in toeristische gebieden of internationale steden.",
+        "shortDescription": "Verwelkom toeristen{br}met menu in {link}25+ talen{/link}.",
         "description": "Je restaurantwebsite ondersteunt automatisch meerdere talen. Klanten kunnen met één tik van taal wisselen, en alle inhoud, inclusief menu, contactinformatie en navigatie, past zich onmiddellijk aan.",
         "fullDescription": "In toeristische gebieden en internationale steden is het essentieel om de taal van je klant te spreken. IQ Rest maakt je restaurant toegankelijk voor iedereen. Klanten zien een taalselector en kunnen je hele website bekijken - menu, contacten, reserveringen - in hun voorkeurstaal. Gecombineerd met AI-vertaling, kun je de wereld bedienen.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Meertalige restaurantwebsite taalselector",
-        "cta": "Bekijk Meertalige Functies"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Eenvoudig Menu Beheer",
-        "shortDescription": "Update je menu in seconden, niet in uren. Voeg nieuwe gerechten toe, bewerk prijzen, reorganiseer categorieën - alles met eenvoudige slepen-en-neerzetten vanaf elk apparaat. Geen technische vaardigheden nodig. Wijzigingen worden onmiddellijk live, zodat je klanten altijd de nieuwste aanbiedingen zien.",
+        "title": "Eenvoudige menu-editor",
+        "shortDescription": "Sleep, drop, klaar.{br}{link}Beheer je menu{/link} in seconden.",
         "description": "Het beheren van je menu is nog nooit zo eenvoudig geweest. Voeg categorieën toe, maak gerechten met foto's en beschrijvingen, stel prijzen in en organiseer alles met eenvoudige slepen-en-neerzetten. Wijzigingen verschijnen onmiddellijk op je live website.",
         "fullDescription": "Vergeet ingewikkelde contentmanagementsystemen. De menu-editor van IQ Rest is ontworpen voor restaurant eigenaren, niet voor webontwikkelaars. Maak in enkele seconden een nieuwe categorie aan, voeg gerechten toe met een paar tikken, upload foto's rechtstreeks vanaf je telefoon. Sleep items om ze opnieuw te ordenen, schakel de zichtbaarheid in of uit voor uitverkochte items en zie wijzigingen onmiddellijk live.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Eenvoudig restaurantmenu beheerdashboard",
-        "cta": "Bekijk Menu Editor"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Tafelreserveringssysteem",
-        "shortDescription": "Stop met het verliezen van klanten door gemiste oproepen. Accepteer tafelboekingen 24/7 rechtstreeks vanaf je website - klanten kiezen datum, tijd en tafel in seconden. Automatische bevestigingen, e-mailmeldingen en een eenvoudig dashboard om alles te beheren.",
+        "shortDescription": "Accepteer reserveringen 24/7.{br}{link}Reserveringen{/link} direct vanaf je website.",
         "description": "Het ingebouwde reserveringssysteem stelt klanten in staat om tafels rechtstreeks vanaf je website te boeken. Kies automatische bevestiging op basis van beschikbaarheid, of bekijk elke boeking handmatig. Beheer alle reserveringen vanuit je dashboard.",
         "fullDescription": "Telefoonreserveringen zijn tijdrovend en gemakkelijk te missen. Het reserveringssysteem van IQ Rest werkt 24/7. Klanten selecteren datum, tijd en groepsgrootte, en boeken vervolgens onmiddellijk. Je kunt automatische bevestiging instellen op basis van tafelbeschikbaarheid, of elke aanvraag handmatig bekijken. Verminder no-shows met e-mailbevestigingen.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video & Foto Achtergronden",
-        "shortDescription": "Eerste indrukken verkopen. Boei klanten op het moment dat ze je QR-code scannen met een verbluffende video van de sfeer van je restaurant of een mooie foto van je handtekening gerecht. Val op tussen concurrenten met een homepage die premium en professioneel aanvoelt.",
+        "shortDescription": "Creëer verbluffende eerste indrukken{br}met {link}video- of foto-achtergronden{/link}.",
         "description": "Creëer een onvergetelijke eerste indruk met aangepaste video- of foto-achtergronden op je homepage. Upload je restaurant sfeer video of een mooie voedsel foto om klanten onmiddellijk te boeien.",
         "fullDescription": "Eerste indrukken zijn belangrijk. Wanneer klanten je QR-code scannen, moeten ze onmiddellijk onder de indruk zijn. Upload een video van de sfeer van je restaurant, een timelapse van je keuken, of een verbluffende foto van je handtekening gerecht. Je homepage wordt een visuele ervaring die de persoonlijkheid van je restaurant weerspiegelt.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restaurantwebsite met video-achtergrond",
-        "cta": "Bekijk Video Achtergronden"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Aangepast Kleurenpalet",
-        "shortDescription": "Maak je menu echt van jou met aangepaste accentkleuren die passen bij de merkidentiteit van je restaurant. Kies uit 12 mooie vooraf ingestelde kleuren of kies je exacte merk tint. Elke knop, highlight en interactief element past zich aan om een samenhangende, professionele uitstraling te creëren die klanten zich herinneren.",
+        "shortDescription": "Match kleuren met je merk{br}met {link}aangepaste accenten{/link}.",
         "description": "Je restaurantwebsite moet passen bij je merk. Kies uit vooraf ingestelde kleurenschema's of kies je exacte merk kleur. Gecombineerd met automatische ondersteuning voor lichte/donkere thema's, ziet je menu er altijd professioneel uit.",
         "fullDescription": "Merkconsistentie is belangrijk. IQ Rest stelt je in staat om de accentkleur die door je website wordt gebruikt aan te passen - knoppen, highlights en interactieve elementen passen allemaal bij je merk. Kies uit zorgvuldig samengestelde presets of voer je exacte merk kleur in. Het systeem zorgt automatisch voor leesbaarheid in zowel lichte als donkere modi.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Toegankelijkheid-geoptimaliseerde kleurcontrast"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Aangepast kleurenpalet en branding opties",
-        "cta": "Verken Kleurenpaletten"
+        "imageAlt": "Aangepast kleurenpalet en branding opties"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Gratis",
         "description": "Perfect om IQ Rest uit te proberen",
-        "cta": "Begin Gratis",
+        "cta": "Gratis maken",
         "highlights": [
           "Restaurantwebsite",
           "QR Menu",
@@ -523,7 +503,14 @@
         "scans": "Onbeperkt",
         "languages": "Onbeperkt"
       }
-    }
+    },
+    "socialProof": "Meer dan 500 restaurants vertrouwen ons",
+    "simpleTitle": "Start gratis, upgrade wanneer je wilt",
+    "trustBenefits": [
+      "Gratis starten",
+      "Geen creditcard nodig",
+      "5 min setup"
+    ]
   },
   "contacts": {
     "title": "Hulp nodig? Laten we chatten",

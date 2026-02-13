@@ -105,7 +105,7 @@ export function LanguageSelector() {
           variant="outline"
           size="icon"
           aria-label={t("selectLanguage")}
-          className="border-0 md:border"
+          className=""
           onClick={() => analytics.marketing.languageSelectorOpen()}
         >
           <Globe className="h-5 w-5" />

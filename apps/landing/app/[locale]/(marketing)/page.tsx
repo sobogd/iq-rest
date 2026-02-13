@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { HowToSteps, MenuPreviewModal, HeroImages, ImageComposition, CtaSection, HeroCreateButton } from "./_components";
+import { MenuPreviewModal, HeroImages, ImageComposition, HeroCreateButton, PricingSection } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -25,6 +25,11 @@ import {
   Video,
   Palette,
   HeadphonesIcon,
+  UtensilsCrossed,
+  Coffee,
+  Wine,
+  Hotel,
+  ChevronDown,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -60,19 +65,7 @@ export default async function HomePage({
   const isVariantB = variant === "b";
 
   const tHero = await getTranslations("home.hero");
-  const tIntro = await getTranslations("home.intro");
-  const tWhyUs = await getTranslations("home.whyUs");
-  const tFeaturesPreview = await getTranslations("home.featuresPreview");
   const tFeatures = await getTranslations("features");
-
-  const benefits = tHero.raw("benefits") as Array<{
-    title: string;
-    description: string;
-  }>;
-  const whyUsItems = tWhyUs.raw("items") as Array<{
-    title: string;
-    description: string;
-  }>;
 
   const features = tFeatures.raw("list") as Array<{
     id: string;
@@ -85,13 +78,12 @@ export default async function HomePage({
 
   // Show selected features on homepage in specific order
   const homeFeatureIds = [
-    "reservations",
-    "custom-design",
     "color-scheme",
-    "easy-menu",
-    "multilingual",
-    "ai-translation",
     "mobile-management",
+    "custom-design",
+    "easy-menu",
+    "ai-translation",
+    "reservations",
   ];
   const previewFeatures = homeFeatureIds
     .map((id) => features.find((f) => f.id === id))
@@ -125,6 +117,9 @@ export default async function HomePage({
                     menuUrl="/m/love-eatery"
                   />
                 </div>
+                <p className="text-[10px] md:text-sm text-muted-foreground text-center lg:text-left mt-3 md:mt-4">
+                  {tHero("cta.noCreditCard")}
+                </p>
               </div>
 
               {/* Right side - Images composition */}
@@ -135,286 +130,217 @@ export default async function HomePage({
           </div>
         </SectionTracker>
       ) : (
-        <SectionTracker section="hero" className="min-h-[calc(100vh-80px)] pt-8 pb-16 md:pt-12 md:pb-20 flex flex-col">
-          <div className="container mx-auto px-4 flex-1">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
+        <SectionTracker section="hero" className="min-h-[calc(100dvh-64px)] flex flex-col relative">
+          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 lg:gap-12 items-center w-full">
               {/* Left side - Text content */}
-              <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+              <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
+                {/* Hero Images - mobile only */}
+                <div className="w-full max-w-[240px] sm:max-w-[280px] mb-6 lg:hidden">
+                  <HeroImages />
+                </div>
+
+                {/* Title */}
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight lg:leading-tight mb-6">
                   {tHero("title")}
                 </h1>
-                <p className="text-base sm:text-lg md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                  {tHero("subtitle")}
-                </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                {/* Perfect for badges */}
+                <div className="flex flex-wrap justify-center lg:justify-start gap-2 lg:gap-3 mb-6">
+                  {[
+                    { icon: UtensilsCrossed, label: tHero("perfectFor.restaurants") },
+                    { icon: Coffee, label: tHero("perfectFor.cafes") },
+                    { icon: Wine, label: tHero("perfectFor.bars") },
+                    { icon: Hotel, label: tHero("perfectFor.hotels") },
+                  ].map(({ icon: Icon, label }) => (
+                    <div
+                      key={label}
+                      className="flex items-center gap-1 lg:gap-1.5 px-2.5 py-1 lg:px-3.5 lg:py-1.5 rounded-full bg-muted/50 text-xs md:text-sm lg:text-base text-muted-foreground"
+                    >
+                      <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+                      <span>{label}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3">
                   <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
                   <MenuPreviewModal
                     buttonText={tHero("cta.view")}
                     menuUrl="/m/love-eatery"
                   />
                 </div>
+                <p className="text-[10px] md:text-sm text-muted-foreground text-center lg:text-left mt-3 md:mt-4">
+                  {tHero("cta.noCreditCard")}
+                </p>
               </div>
 
-              {/* Right side - Images composition */}
-              <div className="order-1 lg:order-2">
+              {/* Right side - Images (desktop only) */}
+              <div className="hidden lg:block order-1 lg:order-2">
                 <HeroImages />
               </div>
             </div>
           </div>
 
-          {/* Benefits cards - inside hero for variant A */}
-          <div className="container mx-auto px-4 pt-14 md:pt-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {benefits.map((benefit, index) => {
-                const icons = [Globe, CalendarCheck, Languages, BarChart3];
-                const Icon = icons[index];
-                return (
-                  <Card key={index} className="border bg-card">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-6 lg:gap-3">
-                        <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-1.5 lg:mt-0.5" />
-                        <div>
-                          <h3 className="font-semibold text-lg lg:text-base">{benefit.title}</h3>
-                          <p className="text-base lg:text-sm text-muted-foreground mt-1">{benefit.description}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </SectionTracker>
-      )}
-
-      {/* Benefits Section - separate for variant B */}
-      {isVariantB && (
-        <SectionTracker section="benefits_b" className="py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {benefits.map((benefit, index) => {
-                const icons = [Globe, CalendarCheck, Languages, BarChart3];
-                const Icon = icons[index];
-                return (
-                  <Card key={index} className="border bg-card">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-6 lg:gap-3">
-                        <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-1.5 lg:mt-0.5" />
-                        <div>
-                          <h3 className="font-semibold text-lg lg:text-base">{benefit.title}</h3>
-                          <p className="text-base lg:text-sm text-muted-foreground mt-1">{benefit.description}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
+          {/* Scroll to features indicator - fixed at bottom */}
+          <a
+            href="#features"
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+          >
+            <span className="text-sm">{tHero("scrollToFeatures")}</span>
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </a>
         </SectionTracker>
       )}
 
       {/* Features Preview Section */}
-      <SectionTracker section="features" className="py-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
+      <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {tFeaturesPreview("title")}
-              </h2>
-              <p className="text-base sm:text-lg md:text-lg text-muted-foreground">
-                {tFeaturesPreview("subtitle")}
-              </p>
-            </div>
-
-            <div className="space-y-32 md:space-y-24">
+          <div className="space-y-0">
               {previewFeatures.map((feature, index) => {
-                const Icon =
-                  FEATURE_ICONS[feature.id as keyof typeof FEATURE_ICONS];
+                const featureImages: Record<string, { layout: "trio" | "duo" | "horizontal"; images: { left: { src: string; alt: string }; center: { src: string; alt: string }; right: { src: string; alt: string } } }> = {
+                  "color-scheme": {
+                    layout: "trio",
+                    images: {
+                      left: { src: "/samples/sample-red-color.webp", alt: "QR menu with red accent color scheme" },
+                      center: { src: "/samples/sample-green-color.webp", alt: "Restaurant menu with green brand colors" },
+                      right: { src: "/samples/sample-blue-color.webp", alt: "Blue themed QR menu design" },
+                    },
+                  },
+                  "mobile-management": {
+                    layout: "trio",
+                    images: {
+                      left: { src: "/samples/sample-analytics-1.webp", alt: "Restaurant menu analytics on mobile" },
+                      center: { src: "/samples/sample-design-settings.webp", alt: "Mobile menu design settings" },
+                      right: { src: "/samples/sample-qr-settings.webp", alt: "QR code customization" },
+                    },
+                  },
+                  "custom-design": {
+                    layout: "duo",
+                    images: {
+                      left: { src: "/samples/sample-background-1.webp", alt: "QR menu with video background" },
+                      center: { src: "/samples/sample-background-1.webp", alt: "" },
+                      right: { src: "/samples/sample-background-2.webp", alt: "Menu with photo background" },
+                    },
+                  },
+                  "easy-menu": {
+                    layout: "duo",
+                    images: {
+                      left: { src: "/samples/sample-list-categories.webp", alt: "Menu category management" },
+                      center: { src: "/samples/sample-list-categories.webp", alt: "" },
+                      right: { src: "/samples/sample-list-items.webp", alt: "Menu item editor" },
+                    },
+                  },
+                  "ai-translation": {
+                    layout: "trio",
+                    images: {
+                      left: { src: "/samples/sample-edit-table.webp", alt: "AI translation for tables" },
+                      center: { src: "/samples/sample-edit-item.webp", alt: "Auto menu translation" },
+                      right: { src: "/samples/sample-edit-category.webp", alt: "AI category translation" },
+                    },
+                  },
+                  "reservations": {
+                    layout: "trio",
+                    images: {
+                      left: { src: "/samples/sample-reservation-1.webp", alt: "Table reservation form" },
+                      center: { src: "/samples/sample-reservation-2.webp", alt: "Reservation management" },
+                      right: { src: "/samples/sample-reservation-3.webp", alt: "Booking confirmation" },
+                    },
+                  },
+                };
+
+                const imageConfig = featureImages[feature.id];
                 const isEven = index % 2 === 0;
 
                 return (
                   <SectionTracker
                     key={feature.id}
                     section={`feature_${feature.id}`}
-                    className={`grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-12 items-center ${
-                      !isEven ? "md:flex-row-reverse" : ""
-                    }`}
+                    className="flex items-center py-8 lg:py-16"
                   >
-                    {/* Image */}
-                    <div
-                      className={`flex justify-center ${
-                        !isEven ? "md:order-2" : ""
-                      }`}
-                    >
-                      {feature.id === "reservations" ? (
-                        <ImageComposition
-                          layout="horizontal"
-                          images={{
-                            left: { src: "/samples/sample-reservation-1.webp", alt: "Restaurant table reservation form on mobile QR menu" },
-                            center: { src: "/samples/sample-reservation-2.webp", alt: "Online booking confirmation for restaurant table" },
-                            right: { src: "/samples/sample-reservation-3.webp", alt: "Guest reservation details in restaurant booking system" },
-                          }}
-                        />
-                      ) : feature.id === "custom-design" ? (
-                        <ImageComposition
-                          layout="duo"
-                          images={{
-                            left: { src: "/samples/sample-background-1.webp", alt: "Restaurant QR menu with custom video background" },
-                            center: { src: "/samples/sample-background-1.webp", alt: "" },
-                            right: { src: "/samples/sample-background-2.webp", alt: "Digital menu with photo background for restaurant branding" },
-                          }}
-                        />
-                      ) : feature.id === "color-scheme" ? (
-                        <ImageComposition
-                          layout="trio"
-                          images={{
-                            left: { src: "/samples/sample-red-color.webp", alt: "QR menu with red accent color scheme for restaurant" },
-                            center: { src: "/samples/sample-green-color.webp", alt: "Restaurant digital menu with green brand colors" },
-                            right: { src: "/samples/sample-blue-color.webp", alt: "Blue themed QR menu design for cafe" },
-                          }}
-                        />
-                      ) : feature.id === "easy-menu" ? (
-                        <ImageComposition
-                          layout="duo"
-                          images={{
-                            left: { src: "/samples/sample-list-categories.webp", alt: "Restaurant menu category management dashboard" },
-                            center: { src: "/samples/sample-list-categories.webp", alt: "" },
-                            right: { src: "/samples/sample-list-items.webp", alt: "Easy drag-and-drop menu item editor for restaurants" },
-                          }}
-                        />
-                      ) : feature.id === "multilingual" ? (
-                        <ImageComposition
-                          layout="duo"
-                          images={{
-                            left: { src: "/samples/sample-lang-settings.webp", alt: "Multilingual restaurant menu language settings" },
-                            center: { src: "/samples/sample-lang-settings.webp", alt: "" },
-                            right: { src: "/samples/sample-langs.webp", alt: "25+ language options for restaurant QR menu" },
-                          }}
-                        />
-                      ) : feature.id === "ai-translation" ? (
-                        <ImageComposition
-                          layout="trio"
-                          images={{
-                            left: { src: "/samples/sample-edit-table.webp", alt: "AI translation for restaurant table descriptions" },
-                            center: { src: "/samples/sample-edit-item.webp", alt: "Automatic menu item translation with AI" },
-                            right: { src: "/samples/sample-edit-category.webp", alt: "AI-powered category translation for digital menu" },
-                          }}
-                        />
-                      ) : feature.id === "mobile-management" ? (
-                        <ImageComposition
-                          layout="trio"
-                          images={{
-                            left: { src: "/samples/sample-analytics-1.webp", alt: "Restaurant menu analytics on mobile phone" },
-                            center: { src: "/samples/sample-design-settings.webp", alt: "Mobile-friendly menu design settings" },
-                            right: { src: "/samples/sample-qr-settings.webp", alt: "QR code customization from smartphone" },
-                          }}
-                        />
-                      ) : (
-                        <div className="w-full aspect-[4/3] rounded-lg border bg-muted overflow-hidden relative">
-                          {feature.image ? (
-                            <Image
-                              src={feature.image}
-                              alt={feature.imageAlt}
-                              fill
-                              className="object-cover"
-                            />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center">
-                              <Icon className="w-16 h-16 text-muted-foreground/30" />
-                            </div>
-                          )}
+                    <div className="container mx-auto px-4">
+                      <div className="max-w-5xl mx-auto">
+                        {/* Desktop: 2 columns */}
+                        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                          {/* Text column */}
+                          <div className={`flex flex-col ${isEven ? "lg:order-1 items-end text-right" : "lg:order-2 items-start text-left"}`}>
+                            <h3 className="text-3xl font-bold mb-4">
+                              {feature.title}
+                            </h3>
+                            <p className="text-lg text-muted-foreground">
+                              {feature.shortDescription.split(/(\{link\}.*?\{\/link\}|\{br\})/).map((part, i) => {
+                                if (part === '{br}') return <br key={i} />;
+                                const linkMatch = part.match(/\{link\}(.*?)\{\/link\}/);
+                                if (linkMatch) {
+                                  return (
+                                    <Link
+                                      key={i}
+                                      href={`/${feature.id}`}
+                                      className="text-primary underline underline-offset-2 hover:text-primary/80"
+                                    >
+                                      {linkMatch[1]}
+                                    </Link>
+                                  );
+                                }
+                                return part;
+                              })}
+                            </p>
+                          </div>
+                          {/* Image column */}
+                          <div className={`flex justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                            {imageConfig && (
+                              <ImageComposition
+                                layout={imageConfig.layout}
+                                images={imageConfig.images}
+                              />
+                            )}
+                          </div>
                         </div>
-                      )}
-                    </div>
 
-                    <div className={!isEven ? "md:order-1" : ""}>
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <Icon className="w-5 h-5 text-primary" />
+                        {/* Mobile: Title → Image → Description */}
+                        <div className="flex flex-col items-center text-center lg:hidden">
+                          <h3 className="text-2xl font-bold mb-4">
+                            {feature.title}
+                          </h3>
+                          <div className={`w-full max-w-[280px] ${imageConfig?.layout === "trio" ? "my-[47px]" : "my-[70px]"}`}>
+                            {imageConfig && (
+                              <ImageComposition
+                                layout={imageConfig.layout}
+                                images={imageConfig.images}
+                              />
+                            )}
+                          </div>
+                          <p className="text-base text-muted-foreground">
+                            {feature.shortDescription.split(/(\{link\}.*?\{\/link\}|\{br\})/).map((part, i) => {
+                              if (part === '{br}') return ' ';
+                              const linkMatch = part.match(/\{link\}(.*?)\{\/link\}/);
+                              if (linkMatch) {
+                                return (
+                                  <Link
+                                    key={i}
+                                    href={`/${feature.id}`}
+                                    className="text-primary underline underline-offset-2 hover:text-primary/80"
+                                  >
+                                    {linkMatch[1]}
+                                  </Link>
+                                );
+                              }
+                              return part;
+                            })}
+                          </p>
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold">
-                          {feature.title}
-                        </h3>
                       </div>
-                      <p className="text-sm md:text-base text-muted-foreground mb-6">
-                        {feature.shortDescription}
-                      </p>
-                      <Button asChild variant="outline">
-                        <Link href={`/${feature.id}`}>
-                          {feature.cta}
-                        </Link>
-                      </Button>
                     </div>
                   </SectionTracker>
                 );
               })}
             </div>
-
-          </div>
         </div>
       </SectionTracker>
 
-      {/* Intro Section */}
-      <SectionTracker section="intro" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <p className="text-base md:text-lg font-medium text-primary">{tIntro("socialProof")}</p>
-            <div className="space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold">{tIntro("title")}</h2>
-              <p className="text-base sm:text-lg md:text-lg text-muted-foreground leading-relaxed">
-                {tIntro("description")}
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
-              <MenuPreviewModal
-                buttonText={tHero("cta.view")}
-                menuUrl="/m/love-eatery"
-              />
-            </div>
-          </div>
-        </div>
-      </SectionTracker>
-
-      {/* Why Us Section */}
-      <SectionTracker section="why_us" className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {tWhyUs("title")}
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                {tWhyUs("subtitle")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {whyUsItems.map((item, index) => (
-                <Card key={index} className="border bg-gradient-to-br from-primary/5 to-primary/10">
-                  <CardContent className="p-6">
-                    <div className="flex gap-4">
-                      <span className="text-4xl font-bold text-primary/70">{index + 1}</span>
-                      <div>
-                        <h3 className="font-semibold text-lg lg:text-base">
-                          {item.title}
-                        </h3>
-                        <p className="text-base lg:text-sm text-muted-foreground mt-1">{item.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </SectionTracker>
-
-      <SectionTracker section="cta">
-        <CtaSection />
+      <SectionTracker id="pricing" section="pricing" className="scroll-mt-20">
+        <PricingSection noIndex hideComparison />
       </SectionTracker>
     </>
   );

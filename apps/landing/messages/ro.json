@@ -9,7 +9,7 @@
       "changelog": "Istoricul modificărilor",
       "contacts": "Contacte"
     },
-    "getStarted": "Conectare",
+    "getStarted": "Creează gratuit",
     "selectLanguage": "Selectați limba",
     "selectLanguageDescription": "Alegeți limba preferată pentru site.",
     "searchLanguage": "Căutați limbă...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "Meniu QR & Website pentru Restaurant în 5 Minute",
+      "title": "Lansați meniul QR și site-ul în 1 minut",
       "subtitle": "Introduceti doar emailul dvs. și obțineți un website complet pentru restaurant cu meniu QR, pagină de contact, suport multilingv și design modern. Configurați totul de pe telefonul dvs.",
       "cta": {
-        "create": "Creează Meniu",
-        "view": "Vezi Meniul Real"
+        "create": "Creează gratuit",
+        "view": "Vezi demo",
+        "noCreditCard": "Nu este necesar cardul de credit"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Analize zilnice",
           "description": "Urmăriți vizitele și preparatele populare în fiecare zi"
         }
-      ]
+      ],
+      "scrollToFeatures": "Vezi funcțiile",
+      "perfectFor": {
+        "restaurants": "Restaurante",
+        "cafes": "Cafenele",
+        "bars": "Baruri",
+        "hotels": "Hoteluri"
+      }
     },
     "intro": {
       "socialProof": "Apreciat de peste 500 de restaurante din întreaga lume",
       "title": "Tot ce are nevoie restaurantul dvs. online",
       "description": "Înregistrați-vă doar cu emailul dvs. și obțineți instantaneu: un website profesional pentru restaurant, meniu QR în format modern, pagină de contact funcțională cu hartă, suport multilingv cu traducere AI, fundal video sau foto și schemă de culori personalizată. Totul gestionabil de pe telefonul dvs. - fără computer necesar."
-    },
-    "whyUs": {
-      "title": "De la Zero la Meniu Online în 5 Minute",
-      "subtitle": "Doar 4 pași simpli pentru a aduce restaurantul dvs. online",
-      "items": [
-        {
-          "step": "1",
-          "title": "Introduceți Emailul Dvs.",
-          "description": "Înregistrare rapidă doar cu adresa dvs. de email. Fără card de credit necesar."
-        },
-        {
-          "step": "2",
-          "title": "Completați Informațiile Restaurantului",
-          "description": "Adăugați numele restaurantului, adresa, contactele și programul de lucru."
-        },
-        {
-          "step": "3",
-          "title": "Adăugați Elemente de Meniu",
-          "description": "Creează categorii și adaugă preparatele tale cu fotografii și prețuri."
-        },
-        {
-          "step": "4",
-          "title": "Bucurați-vă de Meniul Dvs.",
-          "description": "Meniul dvs. QR este gata! Împărtășiți-l cu clienții și urmăriți analizele."
-        }
-      ],
-      "cta": "Sunteți gata să vă modernizați restaurantul?"
     },
     "featuresPreview": {
       "title": "Funcții Puternice pentru Restaurantul Dvs.",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "Management 100% Prietenos cu Mobilul",
-        "shortDescription": "Fără computer? Nicio problemă. Administrează întregul website al restaurantului tău de pe telefon. Adaugă preparate în timp ce stai în bucătărie, actualizează prețurile în timpul serviciului, încarcă fotografii direct de la cameră. Fiecare funcție funcționează perfect pe mobil - pentru că proprietarii de restaurante nu stau niciodată la birou.",
+        "shortDescription": "Editați meniul de pe telefon.{br}{link}Vezi cum funcționează{/link}.",
         "description": "Adaugă categorii, preparate, fotografii și gestionează întregul website al restaurantului tău direct de pe telefon. Tabloul nostru de bord este complet optimizat pentru dispozitive mobile, astfel încât să poți actualiza meniul în timpul unei pauze de cafea sau să adaugi oferte zilnice în mișcare.",
         "fullDescription": "Proprietarii de restaurante sunt oameni ocupați care nu sunt întotdeauna la un computer. De aceea am construit IQ Rest să funcționeze perfect pe dispozitive mobile. Fiecare funcție, de la adăugarea de preparate noi la actualizarea prețurilor, este concepută pentru ecrane tactile. Fă o fotografie a unui nou preparat și încarcă-o instantaneu. Schimbă oferta zilei în timp ce stai în bucătărie.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Gestionarea meniului restaurantului pe smartphone",
-        "cta": "Vezi Tabloul de Bord Mobil"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "Traducerea Meniului cu AI",
-        "shortDescription": "Oprește pierderea clienților internaționali din cauza barierelor lingvistice. AI-ul nostru traduce întregul tău meniu în 25+ limbi în câteva secunde - nu o traducere generică, ci un AI conștient de context care înțelege termenii culinari. 'Beef Wellington' rămâne 'Beef Wellington', în timp ce descrierile sună natural în fiecare limbă.",
+        "shortDescription": "Traduceți întregul meniu{br}cu {link}traducere AI cu 1 clic{/link}.",
         "description": "Atinge clienții internaționali cu traducerea inteligentă AI care înțelege contextul alimentelor. Numele preparatelor și descrierile tale sunt traduse cu precizie, păstrând termenii culinari și având sens în orice limbă.",
         "fullDescription": "Traducătorii generici eșuează adesea cu meniurile de mâncare - traduc literal fără a înțelege contextul. AI-ul nostru este antrenat special pentru conținutul restaurantelor. Știe că 'Beef Wellington' nu ar trebui tradus literal și că 'al dente' înseamnă același lucru în orice limbă. Servește turiști și oaspeți internaționali cu meniuri care sună natural în limba lor.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Interfața de traducere a meniului restaurantului cu AI",
-        "cta": "Descoperă Traducerea AI"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Website-ul Restaurantului Multilingv",
-        "shortDescription": "Bine ai venit turiștilor și oaspeților internaționali în limba lor maternă. Suport pentru 25+ limbi înseamnă că fiecare client se simte ca acasă. O atingere pentru a schimba limbile - meniul, prețurile, descrierile se adaptează instantaneu. Perfect pentru restaurante în zone turistice sau orașe internaționale.",
+        "shortDescription": "Întâmpină turiștii{br}cu meniu în {link}25+ limbi{/link}.",
         "description": "Website-ul restaurantului tău suportă automat mai multe limbi. Clienții pot schimba limbile cu o atingere, iar tot conținutul, inclusiv meniul, informațiile de contact și navigarea, se adaptează instantaneu.",
         "fullDescription": "În zonele turistice și orașele internaționale, a vorbi limba clientului tău este esențial. IQ Rest face restaurantul tău accesibil tuturor. Clienții văd un selector de limbă și pot naviga pe întregul tău website - meniu, contacte, rezervări - în limba preferată. Combinat cu traducerea AI, poți servi lumea.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Selectorul de limbă al website-ului restaurantului multilingv",
-        "cta": "Vezi Funcțiile Multilingve"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Gestionare Ușoară a Meniului",
-        "shortDescription": "Actualizează-ți meniul în câteva secunde, nu ore. Adaugă preparate noi, editează prețuri, reorganizează categorii - toate cu un simplu drag-and-drop de pe orice dispozitiv. Nu sunt necesare abilități tehnice. Schimbările devin active instantaneu, astfel încât clienții tăi să vadă întotdeauna cele mai recente oferte.",
+        "title": "Editor meniu simplu",
+        "shortDescription": "Trage, lasă, gata.{br}{link}Gestionează meniul{/link} în câteva secunde.",
         "description": "Gestionarea meniului tău nu a fost niciodată mai ușoară. Adaugă categorii, creează preparate cu fotografii și descrieri, stabilește prețuri și organizează totul cu un simplu drag-and-drop. Schimbările apar instantaneu pe website-ul tău activ.",
         "fullDescription": "Uită de sistemele complicate de gestionare a conținutului. Editorul de meniu IQ Rest este conceput pentru proprietarii de restaurante, nu pentru dezvoltatori web. Creează o nouă categorie în câteva secunde, adaugă preparate cu câteva atingeri, încarcă fotografii direct de pe telefonul tău. Trage articolele pentru a le reordona, activează/dezactivează vizibilitatea pentru articolele epuizate și vezi schimbările live imediat.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Tabloul de bord pentru gestionarea ușoară a meniului restaurantului",
-        "cta": "Vezi Editorul de Meniu"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Sistem de Rezervări pentru Mese",
-        "shortDescription": "Oprește pierderea clienților din cauza apelurilor ratate. Acceptă rezervări pentru mese 24/7 direct de pe website-ul tău - clienții aleg data, ora și masa în câteva secunde. Confirmări automate, notificări prin email și un tablou de bord simplu pentru a gestiona totul.",
+        "shortDescription": "Acceptă rezervări 24/7.{br}{link}Rezervări{/link} direct de pe site.",
         "description": "Sistemul de rezervări integrat permite clienților să rezerve mese direct de pe website-ul tău. Alege confirmarea automată în funcție de disponibilitate sau revizuiește fiecare rezervare manual. Gestionează toate rezervările din tabloul tău de bord.",
         "fullDescription": "Rezervările telefonice sunt consumatoare de timp și ușor de ratat. Sistemul de rezervări IQ Rest funcționează 24/7. Clienții selectează data, ora și dimensiunea grupului, apoi rezervă instantaneu. Poți configura confirmarea automată în funcție de disponibilitatea meselor sau poți revizui fiecare cerere manual. Reduce absențele cu confirmări prin email.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Videoclipuri & Fotografii de Fundal",
-        "shortDescription": "Primele impresii vând. Captivează clienții în momentul în care scanează codul tău QR cu un videoclip uimitor al atmosferei restaurantului tău sau o fotografie frumoasă a preparatului tău semnătură. Ieși în evidență față de concurență cu o pagină de start care se simte premium și profesional.",
+        "shortDescription": "Creați impresii de neuitat{br}cu {link}fundaluri video sau foto{/link}.",
         "description": "Creează o primă impresie memorabilă cu videoclipuri sau fotografii de fundal personalizate pe pagina ta de start. Încarcă videoclipul cu atmosfera restaurantului tău sau o fotografie frumoasă a preparatului tău pentru a captura instantaneu clienții.",
         "fullDescription": "Primele impresii contează. Când clienții scanează codul tău QR, ar trebui să fie impresionați imediat. Încarcă un videoclip cu atmosfera restaurantului tău, un time-lapse al bucătăriei tale sau o fotografie uimitoare a preparatului tău semnătură. Pagina ta de start devine o experiență vizuală care reflectă personalitatea restaurantului tău.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Website-ul restaurantului cu fundal video",
-        "cta": "Vezi Fundalurile Video"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Schema de Culori Personalizată",
-        "shortDescription": "Fă-ți meniul cu adevărat al tău cu culori de accent personalizate care se potrivesc identității de brand a restaurantului tău. Alege din 12 culori presetate frumoase sau alege nuanța exactă a brandului tău. Fiecare buton, evidențiere și element interactiv se adaptează pentru a crea un aspect coerent și profesional pe care clienții îl vor reține.",
+        "shortDescription": "Potriviți culorile cu brandul{br}cu {link}accente personalizate{/link}.",
         "description": "Website-ul restaurantului tău ar trebui să se potrivească cu brandul tău. Alege din scheme de culori presetate sau alege culoarea exactă a brandului tău. Combinat cu suportul automat pentru teme deschise/întunecate, meniul tău arată întotdeauna profesional.",
         "fullDescription": "Consistența brandului contează. IQ Rest îți permite să personalizezi culoarea de accent utilizată pe întregul website - butoane, evidențieri și elemente interactive se potrivesc toate cu brandul tău. Alege din presetări atent selectate sau introdu culoarea exactă a brandului tău. Sistemul asigură automat lizibilitatea atât în moduri deschise, cât și întunecate.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Contrast de culoare optimizat pentru accesibilitate"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Opțiuni de schemă de culori personalizate și branding",
-        "cta": "Explorează Schemele de Culori"
+        "imageAlt": "Opțiuni de schemă de culori personalizate și branding"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Gratuit",
         "description": "Perfect pentru a încerca IQ Rest",
-        "cta": "Începeți Gratuit",
+        "cta": "Creează gratuit",
         "highlights": [
           "Website pentru restaurant",
           "Meniu QR",
@@ -523,7 +503,14 @@
         "scans": "Nelimitat",
         "languages": "Nelimitat"
       }
-    }
+    },
+    "socialProof": "Peste 500 de restaurante au încredere în noi",
+    "simpleTitle": "Începe gratuit, actualizează când vrei",
+    "trustBenefits": [
+      "Start gratuit",
+      "Fără card de credit",
+      "Configurare în 5 min"
+    ]
   },
   "contacts": {
     "title": "Ai nevoie de ajutor? Să discutăm",

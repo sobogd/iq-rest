@@ -9,7 +9,7 @@
       "changelog": "Zgodovina sprememb",
       "contacts": "Stiki"
     },
-    "getStarted": "Prijavite se",
+    "getStarted": "Ustvari brezplačno",
     "selectLanguage": "Izberite jezik",
     "selectLanguageDescription": "Izberite svoj najljubši jezik za spletno stran.",
     "searchLanguage": "Išči jezik...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Meni in Spletna Stran za Restavracijo v 5 Minutah",
+      "title": "Zaženite QR meni in spletno stran v 1 minuti",
       "subtitle": "Preprosto vnesite svoj e-poštni naslov in pridobite popolno spletno stran restavracije z QR menijem, kontaktnim obrazcem, večjezično podporo in sodobnim dizajnom. Vse nastavite s svojega telefona.",
       "cta": {
-        "create": "Ustvari Meni",
-        "view": "Oglejte si Pravi Meni"
+        "create": "Ustvari brezplačno",
+        "view": "Poglej demo",
+        "noCreditCard": "Kreditna kartica ni potrebna"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Dnevna analitika",
           "description": "Spremljajte obiske in priljubljene jedi vsak dan"
         }
-      ]
+      ],
+      "scrollToFeatures": "Poglej funkcije",
+      "perfectFor": {
+        "restaurants": "Restavracije",
+        "cafes": "Kavarne",
+        "bars": "Bari",
+        "hotels": "Hoteli"
+      }
     },
     "intro": {
       "socialProof": "Zaupa več kot 500 restavracij po vsem svetu",
       "title": "Vse, Kar Vaša Restavracija Potrebuje Na Spletu",
       "description": "Registrirajte se le z vašim e-poštnim naslovom in takoj pridobite: profesionalno spletno stran restavracije, QR meni v sodobnem formatu, funkcionalno kontaktno stran z zemljevidom, večjezično podporo z AI prevodom, video ali fotografsko ozadje ter prilagojeno barvno shemo. Vse je mogoče upravljati s vašega telefona - brez računalnika."
-    },
-    "whyUs": {
-      "title": "Od Nič do Spletnega Menija v 5 Minutah",
-      "subtitle": "Samo 4 preprosti koraki, da svojo restavracijo postavite na splet",
-      "items": [
-        {
-          "step": "1",
-          "title": "Vnesite Svoj E-poštni Naslov",
-          "description": "Hitro registracijo z le vašim e-poštnim naslovom. Brez kreditne kartice."
-        },
-        {
-          "step": "2",
-          "title": "Izpolnite Podatke o Restavraciji",
-          "description": "Dodajte ime vaše restavracije, naslov, kontakte in delovni čas."
-        },
-        {
-          "step": "3",
-          "title": "Dodajte Postavke Menija",
-          "description": "Ustvarite kategorije in dodajte svoje jedi s fotografijami in cenami."
-        },
-        {
-          "step": "4",
-          "title": "Uživajte v Svojem Meniju",
-          "description": "Vaš QR meni je pripravljen! Delite ga s strankami in spremljajte analitiko."
-        }
-      ],
-      "cta": "Ste Pripravljeni Modernizirati Svojo Restavracijo?"
     },
     "featuresPreview": {
       "title": "Močne Funkcije za Vašo Restavracijo",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% mobilno prijazno upravljanje",
-        "shortDescription": "Brez računalnika? Ni problema. Upravljajte celotno spletno stran vaše restavracije s svojega telefona. Dodajte jedi, medtem ko stojite v kuhinji, posodobite cene med storitvijo, naložite fotografije neposredno s svojega fotoaparata. Vsaka funkcija deluje popolnoma na mobilnih napravah - ker lastniki restavracij nikoli ne sedijo za mizo.",
+        "shortDescription": "Urejajte meni s telefona.{br}{link}Poglejte kako deluje{/link}.",
         "description": "Dodajte kategorije, jedi, fotografije in upravljajte celotno spletno stran vaše restavracije neposredno s svojega telefona. Naša nadzorna plošča je popolnoma optimizirana za mobilne naprave, tako da lahko posodobite svoj meni med odmorom za kavo ali dodate dnevne posebnosti na poti.",
         "fullDescription": "Lastniki restavracij so zaposleni ljudje, ki niso vedno za računalnikom. Zato smo zgradili IQ Rest, da deluje popolnoma na mobilnih napravah. Vsaka funkcija, od dodajanja novih jedi do posodabljanja cen, je zasnovana za zaslone na dotik. Posnemite fotografijo nove jedi in jo takoj naložite. Spremenite današnjo posebno jed, medtem ko stojite v kuhinji.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Upravljanje menija restavracije na pametnem telefonu",
-        "cta": "Oglejte si mobilno nadzorno ploščo"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "Prevajanje menija z AI",
-        "shortDescription": "Prenehajte izgubljati mednarodne stranke zaradi jezikovnih ovir. Naš AI prevede vaš celoten meni v več kot 25 jezikov v sekundah - ne generičen prevod, ampak AI, ki razume kulinarične izraze. 'Goveji Wellington' ostane 'Goveji Wellington', medtem ko opisi zvenijo naravno v vsakem jeziku.",
+        "shortDescription": "Prevedite celoten meni{br}z {link}AI prevodom z 1 klikom{/link}.",
         "description": "Dosezite mednarodne stranke z inteligentnim prevodom AI, ki razume kontekst hrane. Imena vaših jedi in opisi so natančno prevedeni, ohranjajo kulinarične izraze in imajo smisel v katerem koli jeziku.",
         "fullDescription": "Generični prevajalci pogosto ne uspejo pri menijih s hrano - prevajajo dobesedno, ne da bi razumeli kontekst. Naš AI je posebej usposobljen za vsebino restavracij. Ve, da 'Goveji Wellington' ne bi smel biti preveden dobesedno, in da 'al dente' pomeni isto v katerem koli jeziku. Postrezite turistom in mednarodnim gostom z meniji, ki zvenijo naravno v njihovem jeziku.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Vmesnik za prevod menija restavracije z AI",
-        "cta": "Odkrijte prevod AI"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Večjezična spletna stran restavracije",
-        "shortDescription": "Pozdravite turiste in mednarodne goste v njihovem maternem jeziku. Podpora za več kot 25 jezikov pomeni, da se vsak kupec počuti kot doma. En dotik za preklop jezikov - meni, cene, opisi se takoj prilagodijo. Popolno za restavracije v turističnih območjih ali mednarodnih mestih.",
+        "shortDescription": "Pozdravite turiste{br}z menijem v {link}25+ jezikih{/link}.",
         "description": "Vaša spletna stran restavracije samodejno podpira več jezikov. Stranke lahko z enim dotikom preklapljajo jezike, vsebina, vključno z menijem, kontaktnimi informacijami in navigacijo, pa se takoj prilagodi.",
         "fullDescription": "V turističnih območjih in mednarodnih mestih je ključnega pomena govoriti jezik vaših strank. IQ Rest omogoča, da je vaša restavracija dostopna vsem. Stranke vidijo izbiro jezika in lahko pregledujejo vašo celotno spletno stran - meni, kontakte, rezervacije - v svojem želenem jeziku. V kombinaciji s prevodom AI lahko postrežete svetu.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Izbira jezika za večjezično spletno stran restavracije",
-        "cta": "Oglejte si večjezične funkcije"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Enostavno upravljanje menija",
-        "shortDescription": "Posodobite svoj meni v sekundah, ne urah. Dodajte nove jedi, uredite cene, reorganizirajte kategorije - vse s preprostim povleci in spusti z kateregakoli naprave. Ni potrebnih tehničnih znanj. Spremembe so takoj aktivne, tako da vaše stranke vedno vidijo najnovejše ponudbe.",
+        "title": "Preprost urejevalnik menija",
+        "shortDescription": "Povleci, spusti, končano.{br}{link}Upravljajte meni{/link} v sekundah.",
         "description": "Upravljanje vašega menija nikoli ni bilo lažje. Dodajte kategorije, ustvarite jedi s fotografijami in opisi, nastavite cene in organizirajte vse s preprostim povleci in spusti. Spremembe se takoj prikažejo na vaši spletni strani.",
         "fullDescription": "Pozabite na zapletene sisteme za upravljanje vsebin. Urejevalnik menija IQ Rest je zasnovan za lastnike restavracij, ne za spletne razvijalce. Ustvarite novo kategorijo v nekaj sekundah, dodajte jedi z nekaj dotiki, naložite fotografije neposredno s svojega telefona. Povlecite elemente za preureditev, izklopite vidnost za razprodane elemente in takoj vidite spremembe v živo.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Enostavna nadzorna plošča za upravljanje menija restavracije",
-        "cta": "Oglejte si urejevalnik menija"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Sistem rezervacij miz",
-        "shortDescription": "Prenehajte izgubljati stranke zaradi zamujenih klicev. Sprejmite rezervacije miz 24/7 neposredno s svoje spletne strani - stranke izberejo datum, čas in mizo v nekaj sekundah. Samodejna potrditev, e-poštna obvestila in preprosta nadzorna plošča za upravljanje vsega.",
+        "shortDescription": "Sprejemajte rezervacije 24/7.{br}{link}Rezervacije{/link} neposredno s spletne strani.",
         "description": "Vgrajen sistem rezervacij omogoča strankam, da rezervirajo mize neposredno s vaše spletne strani. Izberite samodejno potrditev na podlagi razpoložljivosti ali preglejte vsako rezervacijo ročno. Upravljajte vse rezervacije iz svoje nadzorne plošče.",
         "fullDescription": "Rezervacije po telefonu so zamudne in jih je enostavno zamuditi. Rezervacijski sistem IQ Rest deluje 24/7. Stranke izberejo datum, čas in velikost skupine, nato pa rezervirajo takoj. Lahko nastavite samodejno potrditev na podlagi razpoložljivosti miz ali ročno pregledate vsako zahtevo. Zmanjšajte število ne-prihodov z e-poštnimi potrditvami.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video in foto ozadja",
-        "shortDescription": "Prvi vtisi prodajajo. Očarajte stranke, takoj ko skenirajo vaš QR kodo, s čudovitim videom vzdušja vaše restavracije ali lepo fotografijo vaše posebne jedi. Izstopajte med konkurenco s spletno stranjo, ki deluje premium in profesionalno.",
+        "shortDescription": "Ustvarite osupljive prve vtise{br}z {link}video ali foto ozadji{/link}.",
         "description": "Ustvarite nepozaben prvi vtis z lastnimi video ali foto ozadji na vaši domači strani. Naložite video vzdušja vaše restavracije ali lepo fotografijo hrane, da takoj očarate stranke.",
         "fullDescription": "Prvi vtisi so pomembni. Ko stranke skenirajo vaš QR kodo, naj bodo takoj navdušene. Naložite video vzdušja vaše restavracije, pospešeno sliko vaše kuhinje ali osupljivo fotografijo vaše posebne jedi. Vaša domača stran postane vizualna izkušnja, ki odraža osebnost vaše restavracije.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Spletna stran restavracije z video ozadjem",
-        "cta": "Oglejte si video ozadja"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Prilagojena barvna shema",
-        "shortDescription": "Naredite svoj meni resnično svoj z prilagojenimi akcentnimi barvami, ki ustrezajo identiteti blagovne znamke vaše restavracije. Izberite med 12 čudovitimi prednastavljenimi barvami ali izberite svojo natančno barvo blagovne znamke. Vsak gumb, poudarek in interaktivni element se prilagodi, da ustvari usklajen, profesionalen videz, ki si ga stranke zapomnijo.",
+        "shortDescription": "Uskladite barve z blagovno znamko{br}z {link}prilagojenimi poudarki{/link}.",
         "description": "Vaša spletna stran restavracije bi morala ustrezati vaši blagovni znamki. Izberite med prednastavljenimi barvnimi shemami ali izberite svojo natančno barvo blagovne znamke. V kombinaciji s samodejno podporo za svetle/temne teme vaš meni vedno izgleda profesionalno.",
         "fullDescription": "Konsistentnost blagovne znamke je pomembna. IQ Rest vam omogoča prilagoditev akcentne barve, ki se uporablja po celotni spletni strani - gumbi, poudarki in interaktivni elementi se ujemajo z vašo blagovno znamko. Izberite med skrbno izbranimi prednastavitvami ali vnesite svojo natančno barvo blagovne znamke. Sistem samodejno zagotavlja berljivost v svetlih in temnih načinih.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Barvni kontrast optimiziran za dostopnost"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Možnosti prilagojene barvne sheme in blagovne znamke",
-        "cta": "Raziskujte barvne sheme"
+        "imageAlt": "Možnosti prilagojene barvne sheme in blagovne znamke"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Brezplačno",
         "description": "Popolno za preizkušanje IQ Rest",
-        "cta": "Začnite brezplačno",
+        "cta": "Ustvari brezplačno",
         "highlights": [
           "Spletna stran restavracije",
           "QR Meni",
@@ -523,7 +503,14 @@
         "scans": "Brez omejitev",
         "languages": "Brez omejitev"
       }
-    }
+    },
+    "socialProof": "Več kot 500 restavracij nam zaupa",
+    "simpleTitle": "Začni brezplačno, nadgradi kadarkoli",
+    "trustBenefits": [
+      "Brezplačen začetek",
+      "Brez kreditne kartice",
+      "5 min nastavitev"
+    ]
   },
   "contacts": {
     "title": "Potrebujete pomoč? Pogovorimo se",

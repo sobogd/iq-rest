@@ -12,7 +12,6 @@ const NAV_LINKS = [
 const LEGAL_LINKS = [
   { href: "/terms", key: "legal.terms" },
   { href: "/privacy", key: "legal.privacy" },
-  { href: "/cookies", key: "legal.cookies" },
 ] as const;
 
 export async function Footer() {

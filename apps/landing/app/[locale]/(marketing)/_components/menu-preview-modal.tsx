@@ -42,9 +42,8 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
   if (!open) {
     return (
       <Button
-        size="lg"
         variant="outline"
-        className="text-lg px-8 py-6"
+        className="px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
         onClick={() => {
           setOpen(true);
           setLoading(true);
@@ -59,9 +58,8 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
   return (
     <>
       <Button
-        size="lg"
         variant="outline"
-        className="text-lg px-8 py-6"
+        className="px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
         onClick={() => setOpen(true)}
       >
         {buttonText}

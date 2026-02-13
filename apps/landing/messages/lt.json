@@ -9,7 +9,7 @@
       "changelog": "Atnaujinimų žurnalas",
       "contacts": "Kontaktai"
     },
-    "getStarted": "Prisijungti",
+    "getStarted": "Sukurti nemokamai",
     "selectLanguage": "Pasirinkti kalbą",
     "selectLanguageDescription": "Pasirinkite pageidaujamą kalbą svetainei.",
     "searchLanguage": "Ieškoti kalbos...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Meniu ir Svetainė Restoranui per 5 Minutes",
+      "title": "Paleiskite savo QR meniu ir svetainę per 1 minutę",
       "subtitle": "Tiesiog įveskite savo el. paštą ir gauti pilną restorano svetainę su QR menu, kontaktų puslapiu, daugiakalbe parama ir moderniu dizainu. Viską nustatykite iš savo telefono.",
       "cta": {
-        "create": "Sukurti Menį",
-        "view": "Peržiūrėti Tikrą Menį"
+        "create": "Sukurti nemokamai",
+        "view": "Žiūrėti demo",
+        "noCreditCard": "Kreditinė kortelė nereikalinga"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Kasdienė analizė",
           "description": "Sekite apsilankymus ir populiarius patiekalus kiekvieną dieną"
         }
-      ]
+      ],
+      "scrollToFeatures": "Žiūrėti funkcijas",
+      "perfectFor": {
+        "restaurants": "Restoranai",
+        "cafes": "Kavinės",
+        "bars": "Barai",
+        "hotels": "Viešbučiai"
+      }
     },
     "intro": {
       "socialProof": "Pasitikėjo 500+ restoranų visame pasaulyje",
       "title": "Viskas, Ko Jūsų Restoranui Reikia Internete",
       "description": "Registruokitės tik su savo el. paštu ir iš karto gauti: profesionalią restorano svetainę, QR meniu moderniu formatu, funkcinį kontaktų puslapį su žemėlapiu, daugiakalbę paramą su AI vertimu, vaizdo ar nuotraukų foną ir individualią spalvų schemą. Viskas valdoma iš jūsų telefono - kompiuterio nereikia."
-    },
-    "whyUs": {
-      "title": "Nuo Nulio iki Internetinio Menio per 5 Minutes",
-      "subtitle": "Tiesiog 4 paprasti žingsniai, kad jūsų restoranas būtų internete",
-      "items": [
-        {
-          "step": "1",
-          "title": "Įveskite Savo El. Paštą",
-          "description": "Greita registracija tik su jūsų el. pašto adresu. Kredito kortelė nereikalinga."
-        },
-        {
-          "step": "2",
-          "title": "Užpildykite Restorano Informaciją",
-          "description": "Pridėkite savo restorano pavadinimą, adresą, kontaktus ir darbo laiką."
-        },
-        {
-          "step": "3",
-          "title": "Pridėkite Meniu Elementus",
-          "description": "Sukurkite kategorijas ir pridėkite savo patiekalus su nuotraukomis ir kainomis."
-        },
-        {
-          "step": "4",
-          "title": "Mėgaukitės Savo Menu",
-          "description": "Jūsų QR meniu paruoštas! Pasidalykite juo su klientais ir sekite analizę."
-        }
-      ],
-      "cta": "Pasiruošę Modernizuoti Savo Restoraną?"
     },
     "featuresPreview": {
       "title": "Galingos Funkcijos Jūsų Restoranui",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% mobiliesiems pritaikytas valdymas",
-        "shortDescription": "Nėra kompiuterio? Nėra problemų. Vykdykite visą savo restorano svetainę iš savo telefono. Pridėkite patiekalus stovėdami virtuvėje, atnaujinkite kainas paslaugos metu, įkelkite nuotraukas tiesiai iš savo kameros. Kiekviena funkcija veikia puikiai mobiliajame - nes restoranų savininkai niekada nesėdi prie stalo.",
+        "shortDescription": "Redaguokite meniu iš telefono.{br}{link}Pažiūrėkite kaip tai veikia{/link}.",
         "description": "Pridėkite kategorijas, patiekalus, nuotraukas ir valdykite visą savo restorano svetainę tiesiai iš savo telefono. Mūsų valdymo skydelis visiškai optimizuotas mobiliesiems įrenginiams, todėl galite atnaujinti savo meniu per kavos pertraukėlę arba pridėti kasdienius pasiūlymus kelyje.",
         "fullDescription": "Restoranų savininkai yra užimti žmonės, kurie ne visada būna prie kompiuterio. Todėl mes sukūrėme IQ Rest, kad jis puikiai veiktų mobiliajame. Kiekviena funkcija, nuo naujų patiekalų pridėjimo iki kainų atnaujinimo, yra sukurta jutikliniams ekranams. Padarykite naujo patiekalo nuotrauką ir įkelkite ją iš karto. Pakeiskite šios dienos specialų pasiūlymą stovėdami virtuvėje.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restorano meniu valdymas išmaniajame telefone",
-        "cta": "Peržiūrėti mobilųjį valdymo skydelį"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI pagrindu veikiantis meniu vertimas",
-        "shortDescription": "Nustokite prarasti tarptautinius klientus dėl kalbos barjerų. Mūsų AI išverčia visą jūsų meniu į daugiau nei 25 kalbas per kelias sekundes - ne bendrą vertimą, o kontekstą suprantančią AI, kuri žino kulinarinius terminus. 'Jautienos Velingtone' lieka 'Jautienos Velingtone', o aprašymai skamba natūraliai kiekviena kalba.",
+        "shortDescription": "Išverskite visą meniu{br}su {link}AI vertimu vienu paspaudimu{/link}.",
         "description": "Pasiekite tarptautinius klientus su protingu AI vertimu, kuris supranta maisto kontekstą. Jūsų patiekalų pavadinimai ir aprašymai yra tiksliai išversti, išlaikant kulinarinius terminus ir darant prasmę bet kuria kalba.",
         "fullDescription": "Bendrieji vertėjai dažnai nesugeba su maisto meniu - jie verčia pažodžiui, nesuprasdami konteksto. Mūsų AI yra specialiai apmokytas restoranų turiniui. Jis žino, kad 'Jautienos Velingtone' neturėtų būti verčiama pažodžiui, ir kad 'al dente' reiškia tą patį bet kuria kalba. Patiekite turistams ir tarptautiniams svečiams meniu, kurie skamba natūraliai jų kalba.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI pagrindu veikiantis restorano meniu vertimo sąsaja",
-        "cta": "Atraskite AI vertimą"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Daugiakalbė restorano svetainė",
-        "shortDescription": "Pasveikinkite turistus ir tarptautinius svečius jų gimtąja kalba. 25+ kalbų palaikymas reiškia, kad kiekvienas klientas jaučiasi kaip namie. Vienas paspaudimas, kad pakeistumėte kalbas - meniu, kainos, aprašymai visi prisitaiko iš karto. Puikiai tinka restoranams turistinėse vietose arba tarptautiniuose miestuose.",
+        "shortDescription": "Pasveikinkite turistus{br}su meniu {link}25+ kalbomis{/link}.",
         "description": "Jūsų restorano svetainė automatiškai palaiko kelias kalbas. Klientai gali keisti kalbas vienu paspaudimu, o visas turinys, įskaitant meniu, kontaktinę informaciją ir navigaciją, prisitaiko iš karto.",
         "fullDescription": "Turistų vietose ir tarptautiniuose miestuose kalbėti savo kliento kalba yra būtina. IQ Rest padaro jūsų restoraną prieinamą visiems. Klientai mato kalbos pasirinkimo mygtuką ir gali naršyti visą jūsų svetainę - meniu, kontaktus, rezervacijas - savo pageidaujama kalba. Su AI vertimu galite aptarnauti pasaulį.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Daugiakalbė restorano svetainė kalbos pasirinkimo mygtukas",
-        "cta": "Peržiūrėti daugiakalbes funkcijas"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Lengvas meniu valdymas",
-        "shortDescription": "Atnaujinkite savo meniu per kelias sekundes, o ne valandas. Pridėkite naujus patiekalus, redaguokite kainas, pertvarkykite kategorijas - viską su paprastu vilkimo ir numetimo metodu iš bet kurio įrenginio. Nereikia techninių įgūdžių. Pokyčiai pasirodo iš karto, todėl jūsų klientai visada mato naujausius pasiūlymus.",
+        "title": "Paprastas meniu redaktorius",
+        "shortDescription": "Vilk, mesk, baigta.{br}{link}Tvarkykite meniu{/link} per sekundes.",
         "description": "Valdyti savo meniu niekada nebuvo lengviau. Pridėkite kategorijas, kurkite patiekalus su nuotraukomis ir aprašymais, nustatykite kainas ir organizuokite viską su paprastu vilkimo ir numetimo metodu. Pokyčiai pasirodo iš karto jūsų gyvoje svetainėje.",
         "fullDescription": "Pamirškite sudėtingas turinio valdymo sistemas. IQ Rest meniu redaktorius sukurtas restoranų savininkams, o ne interneto kūrėjams. Sukurkite naują kategoriją per kelias sekundes, pridėkite patiekalus su keliais paspaudimais, įkelkite nuotraukas tiesiai iš savo telefono. Vilkite elementus, kad pertvarkytumėte, laikykite matomumą išjungtą išparduotiems elementams ir matykite pokyčius gyvai iš karto.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Lengvas restorano meniu valdymo skydelis",
-        "cta": "Peržiūrėti meniu redaktorių"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Staliukų rezervavimo sistema",
-        "shortDescription": "Nustokite prarasti klientus dėl praleistų skambučių. Priimkite staliukų rezervacijas 24/7 tiesiai iš savo svetainės — klientai pasirenka datą, laiką ir staliuką per kelias sekundes. Automatiniai patvirtinimai, el. pašto pranešimai ir paprastas valdymo skydelis viskam valdyti.",
+        "shortDescription": "Priimkite rezervacijas 24/7.{br}{link}Rezervacijos{/link} tiesiai iš svetainės.",
         "description": "Įmontuota rezervavimo sistema leidžia klientams rezervuoti staliukus tiesiai iš jūsų svetainės. Pasirinkite automatinį patvirtinimą pagal prieinamumą arba peržiūrėkite kiekvieną rezervaciją rankiniu būdu. Valdykite visas rezervacijas iš savo valdymo skydelio.",
         "fullDescription": "Telefoniniai rezervavimai užima daug laiko ir juos lengva praleisti. IQ Rest rezervavimo sistema veikia 24/7. Klientai pasirenka datą, laiką ir svečių skaičių, tada rezervuoja iš karto. Galite nustatyti automatinį patvirtinimą pagal staliuko prieinamumą arba peržiūrėti kiekvieną užklausą rankiniu būdu. Sumažinkite nepasirodymus su el. pašto patvirtinimais.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Vaizdo ir nuotraukų fonai",
-        "shortDescription": "Pirmieji įspūdžiai parduoda. Sužavėkite klientus, kai jie nuskenuoja jūsų QR kodą su nuostabiu jūsų restorano atmosferos vaizdo įrašu arba gražia jūsų firminio patiekalo nuotrauka. Išsiskirkite iš konkurentų su pagrindiniu puslapiu, kuris atrodo prabangiai ir profesionaliai.",
+        "shortDescription": "Sukurkite įspūdingus pirmuosius įspūdžius{br}su {link}vaizdo ar nuotraukų fonais{/link}.",
         "description": "Sukurkite įsimintiną pirmą įspūdį su individualiais vaizdo ar nuotraukų fonais savo pagrindiniame puslapyje. Įkelkite savo restorano atmosferos vaizdo įrašą arba gražią maisto nuotrauką, kad iš karto sužavėtumėte klientus.",
         "fullDescription": "Pirmieji įspūdžiai yra svarbūs. Kai klientai nuskenuoja jūsų QR kodą, jie turėtų būti iš karto sužavėti. Įkelkite savo restorano atmosferos vaizdo įrašą, laiko tėkmės vaizdo įrašą iš virtuvės arba nuostabią jūsų firminio patiekalo nuotrauką. Jūsų pagrindinis puslapis tampa vizualine patirtimi, atspindinčia jūsų restorano asmenybę.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restorano svetainė su vaizdo fonu",
-        "cta": "Peržiūrėti vaizdo fonus"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Individuali spalvų schema",
-        "shortDescription": "Padarykite savo meniu tikrai savo su individualiomis akcentų spalvomis, kurios atitinka jūsų restorano prekės ženklo tapatybę. Pasirinkite iš 12 gražių iš anksto nustatytų spalvų arba pasirinkite savo tikslią prekės ženklo atspalvį. Kiekvienas mygtukas, akcentas ir interaktyvus elementas prisitaiko, kad sukurtų nuoseklų, profesionalų įvaizdį, kurį klientai prisimena.",
+        "shortDescription": "Suderinkite spalvas su prekės ženklu{br}su {link}pasirinktiniais akcentais{/link}.",
         "description": "Jūsų restorano svetainė turėtų atitikti jūsų prekės ženklą. Pasirinkite iš iš anksto nustatytų spalvų schemų arba pasirinkite savo tikslią prekės ženklo spalvą. Su automatinėmis šviesių/tamsių temų palaikymu jūsų meniu visada atrodo profesionaliai.",
         "fullDescription": "Prekės ženklo nuoseklumas yra svarbus. IQ Rest leidžia jums pritaikyti akcento spalvą, naudojamą visoje jūsų svetainėje - mygtukai, akcentai ir interaktyvūs elementai visi atitinka jūsų prekės ženklą. Pasirinkite iš kruopščiai parinktų išankstinių nustatymų arba įveskite savo tikslią prekės ženklo spalvą. Sistema automatiškai užtikrina skaitomumą tiek šviesiuose, tiek tamsiuose režimuose.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Prieinamumo optimizuotas spalvų kontrastas"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Individuali spalvų schema ir prekės ženklo parinktys",
-        "cta": "Ištirti spalvų schemas"
+        "imageAlt": "Individuali spalvų schema ir prekės ženklo parinktys"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Nemokamai",
         "description": "Puikiai tinka IQ Rest išbandymui",
-        "cta": "Pradėti nemokamai",
+        "cta": "Sukurti nemokamai",
         "highlights": [
           "Restorano svetainė",
           "QR Meniu",
@@ -523,7 +503,14 @@
         "scans": "Neriboti",
         "languages": "Neriboti"
       }
-    }
+    },
+    "socialProof": "Daugiau nei 500 restoranų mumis pasitiki",
+    "simpleTitle": "Pradėkite nemokamai, atnaujinkite kada norite",
+    "trustBenefits": [
+      "Nemokama pradžia",
+      "Be kreditinės kortelės",
+      "5 min sąranka"
+    ]
   },
   "contacts": {
     "title": "Reikia pagalbos? Pasikalbėkime",

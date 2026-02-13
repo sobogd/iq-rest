@@ -9,7 +9,7 @@
       "changelog": "Changelog",
       "contacts": "Contacts"
     },
-    "getStarted": "Sign In",
+    "getStarted": "Create Free",
     "selectLanguage": "Select Language",
     "selectLanguageDescription": "Choose your preferred language for the website.",
     "searchLanguage": "Search language...",
@@ -17,11 +17,22 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menu & Website for Restaurant in 5 Minutes",
+      "title": "Launch Your QR Menu & Website in 1 Minute",
       "subtitle": "Just enter your email and get a complete restaurant website with QR menu, contact page, multilingual support, and modern design. Setup everything from your phone.",
       "cta": {
-        "create": "Create Menu",
-        "view": "View Real Menu"
+        "create": "Create Free",
+        "view": "See Demo",
+        "noCreditCard": "No credit card required",
+        "trusted": "Trusted by 500+ restaurants worldwide",
+        "title": "Ready to Go Digital?",
+        "subtitle": "Create your professional QR menu and restaurant website in minutes. Free forever, no credit card required."
+      },
+      "scrollToFeatures": "See Features",
+      "perfectFor": {
+        "restaurants": "Restaurants",
+        "cafes": "Cafés",
+        "bars": "Bars",
+        "hotels": "Hotels"
       },
       "benefits": [
         {
@@ -46,33 +57,6 @@
       "socialProof": "Trusted by 500+ restaurants worldwide",
       "title": "Everything Your Restaurant Needs Online",
       "description": "Register with just your email and instantly get: a professional restaurant website, QR menu in modern format, functional contact page with map, multilingual support with AI translation, video or photo background, and custom color scheme. All manageable from your phone - no computer required."
-    },
-    "whyUs": {
-      "title": "From Zero to Online Menu in 5 Minutes",
-      "subtitle": "Just 4 simple steps to get your restaurant online",
-      "items": [
-        {
-          "step": "1",
-          "title": "Enter Your Email",
-          "description": "Quick registration with just your email address. No credit card required."
-        },
-        {
-          "step": "2",
-          "title": "Fill Restaurant Info",
-          "description": "Add your restaurant name, address, contacts and working hours."
-        },
-        {
-          "step": "3",
-          "title": "Add Menu Items",
-          "description": "Create categories and add your dishes with photos and prices."
-        },
-        {
-          "step": "4",
-          "title": "Enjoy Your Menu",
-          "description": "Your QR menu is ready! Share it with customers and track analytics."
-        }
-      ],
-      "cta": "Ready to Modernize Your Restaurant?"
     },
     "featuresPreview": {
       "title": "Powerful Features for Your Restaurant",
@@ -267,7 +251,7 @@
       {
         "id": "mobile-management",
         "title": "100% Mobile-Friendly Management",
-        "shortDescription": "No computer? No problem. Run your entire restaurant website from your phone. Add dishes while standing in the kitchen, update prices during service, upload photos straight from your camera. Every feature works perfectly on mobile - because restaurant owners are never sitting at a desk.",
+        "shortDescription": "Edit your menu anywhere from your phone.{br}{link}See how it works{/link}.",
         "description": "Add categories, dishes, photos, and manage your entire restaurant website directly from your phone. Our dashboard is fully optimized for mobile devices, so you can update your menu during a coffee break or add daily specials on the go.",
         "fullDescription": "Restaurant owners are busy people who aren't always at a computer. That's why we built IQ Rest to work perfectly on mobile devices. Every feature, from adding new dishes to updating prices, is designed for touch screens. Take a photo of a new dish and upload it instantly. Change today's special while standing in the kitchen.",
         "benefits": [
@@ -279,12 +263,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restaurant menu management on smartphone",
-        "cta": "See Mobile Dashboard"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI-Powered Menu Translation",
-        "shortDescription": "Stop losing international customers to language barriers. Our AI translates your entire menu into 25+ languages in seconds - not generic translation, but context-aware AI that understands culinary terms. 'Beef Wellington' stays 'Beef Wellington', while descriptions read naturally in every language.",
+        "shortDescription": "Translate your entire menu{br}with {link}one-click AI translation{/link}.",
         "description": "Reach international customers with intelligent AI translation that understands food context. Your dish names and descriptions are translated accurately, preserving culinary terms and making sense in any language.",
         "fullDescription": "Generic translators often fail with food menus - they translate literally without understanding context. Our AI is trained specifically for restaurant content. It knows that 'Beef Wellington' shouldn't be translated literally, and that 'al dente' means the same in any language. Serve tourists and international guests with menus that read naturally in their language.",
         "benefits": [
@@ -296,12 +280,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-powered restaurant menu translation interface",
-        "cta": "Discover AI Translation"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Multilingual Restaurant Website",
-        "shortDescription": "Welcome tourists and international guests in their native language. Support for 25+ languages means every customer feels at home. One tap to switch languages - menu, prices, descriptions all adapt instantly. Perfect for restaurants in tourist areas or international cities.",
+        "shortDescription": "Welcome tourists with your menu{br}in {link}25+ languages{/link}.",
         "description": "Your restaurant website automatically supports multiple languages. Customers can switch languages with one tap, and all content including menu, contact info, and navigation adapts instantly.",
         "fullDescription": "In tourist areas and international cities, speaking your customer's language is essential. IQ Rest makes your restaurant accessible to everyone. Customers see a language selector and can browse your entire website - menu, contacts, reservations - in their preferred language. Combined with AI translation, you can serve the world.",
         "benefits": [
@@ -313,7 +297,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Multilingual restaurant website language selector",
-        "cta": "View Multilingual Features"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +318,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Easy Menu Management",
-        "shortDescription": "Update your menu in seconds, not hours. Add new dishes, edit prices, reorganize categories - all with simple drag-and-drop from any device. No technical skills needed. Changes go live instantly, so your customers always see the latest offerings.",
+        "title": "Simple Menu Editor",
+        "shortDescription": "Drag, drop, done.{br}{link}Manage your menu{/link} in seconds.",
         "description": "Managing your menu has never been easier. Add categories, create dishes with photos and descriptions, set prices, and organize everything with simple drag-and-drop. Changes appear instantly on your live website.",
         "fullDescription": "Forget complicated content management systems. IQ Rest's menu editor is designed for restaurant owners, not web developers. Create a new category in seconds, add dishes with a few taps, upload photos directly from your phone. Drag items to reorder, toggle visibility for sold-out items, and see changes live immediately.",
         "benefits": [
@@ -347,7 +331,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Easy restaurant menu management dashboard",
-        "cta": "See Menu Editor"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +353,7 @@
       {
         "id": "reservations",
         "title": "Table Reservations System",
-        "shortDescription": "Stop losing customers to missed calls. Accept table bookings 24/7 directly from your website — customers choose date, time, and table in seconds. Automatic confirmations, email notifications, and a simple dashboard to manage everything.",
+        "shortDescription": "Accept table bookings 24/7.{br}{link}Reservations{/link} directly from your website.",
         "description": "Built-in reservation system lets customers book tables directly from your website. Choose automatic confirmation based on availability, or review each booking manually. Manage all reservations from your dashboard.",
         "fullDescription": "Phone reservations are time-consuming and easy to miss. IQ Rest's reservation system works 24/7. Customers select date, time, and party size, then book instantly. You can set up automatic confirmation based on table availability, or review each request manually. Reduce no-shows with email confirmations.",
         "benefits": [
@@ -386,7 +370,7 @@
       {
         "id": "custom-design",
         "title": "Video & Photo Backgrounds",
-        "shortDescription": "First impressions sell. Captivate customers the moment they scan your QR code with a stunning video of your restaurant ambiance or a beautiful photo of your signature dish. Stand out from competitors with a homepage that feels premium and professional.",
+        "shortDescription": "Create stunning first impressions{br}with {link}video or photo backgrounds{/link}.",
         "description": "Create a memorable first impression with custom video or photo backgrounds on your homepage. Upload your restaurant ambiance video or a beautiful food photo to captivate customers instantly.",
         "fullDescription": "First impressions matter. When customers scan your QR code, they should be impressed immediately. Upload a video of your restaurant ambiance, a time-lapse of your kitchen, or a stunning photo of your signature dish. Your homepage becomes a visual experience that reflects your restaurant's personality.",
         "benefits": [
@@ -398,12 +382,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restaurant website with video background",
-        "cta": "See Video Backgrounds"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Custom Color Scheme",
-        "shortDescription": "Make your menu truly yours with custom accent colors that match your restaurant's brand identity. Choose from 12 beautiful preset colors or pick your exact brand shade. Every button, highlight, and interactive element adapts to create a cohesive, professional look that customers remember.",
+        "shortDescription": "Match your restaurant's brand{br}with {link}custom accent colors{/link}.",
         "description": "Your restaurant website should match your brand. Choose from preset color schemes or pick your exact brand color. Combined with automatic light/dark theme support, your menu always looks professional.",
         "fullDescription": "Brand consistency matters. IQ Rest lets you customize the accent color used throughout your website - buttons, highlights, and interactive elements all match your brand. Choose from carefully curated presets or enter your exact brand color. The system automatically ensures readability in both light and dark modes.",
         "benefits": [
@@ -414,8 +398,7 @@
           "Accessibility-optimized color contrast"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Custom color scheme and branding options",
-        "cta": "Explore Color Schemes"
+        "imageAlt": "Custom color scheme and branding options"
       },
       {
         "id": "personal-support",
@@ -439,6 +422,13 @@
   "pricing": {
     "title": "QR Menu & Restaurant Website Pricing",
     "subtitle": "No hidden fees, no surprises. Launch your restaurant website for free today — upgrade only when you're ready to grow.",
+    "simpleTitle": "Start Free, Upgrade Anytime",
+    "socialProof": "Trusted by 500+ restaurants worldwide",
+    "trustBenefits": [
+      "Free to start",
+      "No credit card required",
+      "5 minute setup"
+    ],
     "seo": {
       "title": "Why Choose IQ Rest for Your Restaurant or Cafe?",
       "text": "Create a professional QR menu and website for your restaurant or cafe in minutes. Your guests simply scan a QR code to view your digital menu on their phone — no app needed. Update prices, add new dishes, and change descriptions instantly. With AI-powered translations, serve international customers in their native language. Track which dishes get the most views with built-in analytics. Whether you run a small cafe or a growing restaurant chain, IQ Rest helps you modernize your menu experience while reducing printing costs."
@@ -454,7 +444,7 @@
       "free": {
         "name": "Free",
         "description": "Perfect for trying out IQ Rest",
-        "cta": "Start Free",
+        "cta": "Create Free",
         "highlights": [
           "Restaurant website",
           "QR Menu",

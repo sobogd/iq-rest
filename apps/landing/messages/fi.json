@@ -9,7 +9,7 @@
       "changelog": "Muutospäiväkirja",
       "contacts": "Yhteystiedot"
     },
-    "getStarted": "Kirjaudu sisään",
+    "getStarted": "Luo ilmaiseksi",
     "selectLanguage": "Valitse kieli",
     "selectLanguageDescription": "Valitse haluamasi kieli verkkosivustolle.",
     "searchLanguage": "Etsi kieltä...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR-menu ja verkkosivusto ravintolalle 5 minuutissa",
+      "title": "Käynnistä QR-menu ja verkkosivusto 1 minuutissa",
       "subtitle": "Syötä vain sähköpostiosoitteesi ja saat täydellisen ravintolaverkkosivuston QR-menuineen, yhteyssivun, monikielisen tuen ja modernin muotoilun. Aseta kaikki puhelimestasi.",
       "cta": {
-        "create": "Luo Menu",
-        "view": "Näytä Todellinen Menu"
+        "create": "Luo ilmaiseksi",
+        "view": "Katso demo",
+        "noCreditCard": "Luottokorttia ei tarvita"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Päivittäinen analytiikka",
           "description": "Seuraa vierailuja ja suosittuja ruokia joka päivä"
         }
-      ]
+      ],
+      "scrollToFeatures": "Katso ominaisuudet",
+      "perfectFor": {
+        "restaurants": "Ravintolat",
+        "cafes": "Kahvilat",
+        "bars": "Baarit",
+        "hotels": "Hotellit"
+      }
     },
     "intro": {
       "socialProof": "Luotettu yli 500 ravintolassa ympäri maailmaa",
       "title": "Kaikki, mitä ravintolasi tarvitsee verkossa",
       "description": "Rekisteröidy vain sähköpostiosoitteellasi ja saat heti: ammattimaisen ravintolaverkkosivuston, QR-menumodernissa muodossa, toimivan yhteyssivun kartan kanssa, monikielisen tuen AI-käännöksellä, video- tai valokuvataustan ja mukautetun värimaailman. Kaikki hallittavissa puhelimestasi - ei tietokonetta vaadita."
-    },
-    "whyUs": {
-      "title": "Nollasta verkkomenuksi 5 minuutissa",
-      "subtitle": "Vain 4 yksinkertaista vaihetta saadaksesi ravintolasi verkkoon",
-      "items": [
-        {
-          "step": "1",
-          "title": "Syötä sähköpostisi",
-          "description": "Nopea rekisteröinti vain sähköpostiosoitteellasi. Ei luottokorttia vaadita."
-        },
-        {
-          "step": "2",
-          "title": "Täytä ravintolan tiedot",
-          "description": "Lisää ravintolasi nimi, osoite, yhteystiedot ja aukioloajat."
-        },
-        {
-          "step": "3",
-          "title": "Lisää menu-kohteita",
-          "description": "Luo kategorioita ja lisää ruokia valokuvien ja hintojen kanssa."
-        },
-        {
-          "step": "4",
-          "title": "Nauti menustasi",
-          "description": "QR-menusisi on valmis! Jaa se asiakkaille ja seuraa analytiikkaa."
-        }
-      ],
-      "cta": "Valmis modernisoimaan ravintolasi?"
     },
     "featuresPreview": {
       "title": "Tehokkaat ominaisuudet ravintolallesi",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% mobiiliystävällinen hallinta",
-        "shortDescription": "Ei tietokonetta? Ei ongelmaa. Hallitse koko ravintolaverkkosivustoasi puhelimestasi. Lisää ruokalajeja seisoessasi keittiössä, päivitä hintoja palvelun aikana, lataa kuvia suoraan kamerastasi. Jokainen ominaisuus toimii täydellisesti mobiilissa - koska ravintoloitsijat eivät koskaan istu pöydän ääressä.",
+        "shortDescription": "Muokkaa menua puhelimesta.{br}{link}Katso miten se toimii{/link}.",
         "description": "Lisää kategorioita, ruokalajeja, kuvia ja hallitse koko ravintolaverkkosivustoasi suoraan puhelimestasi. Hallintapaneelimme on täysin optimoitu mobiililaitteille, joten voit päivittää valikkoasi kahvitauolla tai lisätä päivittäisiä erikoistarjouksia liikkeellä ollessasi.",
         "fullDescription": "Ravintoloitsijat ovat kiireisiä ihmisiä, jotka eivät aina ole tietokoneen ääressä. Siksi rakensimme IQ Restin toimimaan täydellisesti mobiililaitteilla. Jokainen ominaisuus, ruokalajien lisäämisestä hintoja päivittämiseen, on suunniteltu kosketusnäytöille. Ota kuva uudesta ruokalajista ja lataa se heti. Muuta päivän erikoistarjous seisoessasi keittiössä.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Ravintolavalikon hallinta älypuhelimella",
-        "cta": "Katso mobiilihallintapaneeli"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI-pohjainen valikkokäännös",
-        "shortDescription": "Lopeta kansainvälisten asiakkaiden menettäminen kielimuurien vuoksi. AI:mme kääntää koko valikkosi yli 25 kielelle sekunneissa - ei geneeristä käännöstä, vaan kontekstiin perustuvaa AI:ta, joka ymmärtää kulinaarisia termejä. 'Beef Wellington' pysyy 'Beef Wellingtonina', kun taas kuvaukset luetaan luonnollisesti kaikilla kielillä.",
+        "shortDescription": "Käännä koko menu{br}{link}AI-käännöksellä yhdellä klikkauksella{/link}.",
         "description": "Saavuta kansainväliset asiakkaat älykkään AI-käännöksen avulla, joka ymmärtää ruoan kontekstin. Ruokalajien nimet ja kuvaukset käännetään tarkasti, säilyttäen kulinaariset termit ja tehdään ymmärrettäviksi kaikilla kielillä.",
         "fullDescription": "Geneeriset kääntäjät epäonnistuvat usein ruokalistoissa - ne kääntävät kirjaimellisesti ilman kontekstin ymmärtämistä. AI:mme on koulutettu erityisesti ravintolasisältöä varten. Se tietää, että 'Beef Wellington' ei pitäisi kääntää kirjaimellisesti, ja että 'al dente' tarkoittaa samaa kaikilla kielillä. Tarjoa turisteille ja kansainvälisille vieraille valikoita, jotka luetaan luonnollisesti heidän kielellään.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-pohjainen ravintolavalikon käännösohjelmisto",
-        "cta": "Tutustu AI-käännökseen"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Monikielinen ravintolaverkkosivusto",
-        "shortDescription": "Tervetuloa turisteille ja kansainvälisille vieraille heidän äidinkielellään. Tuki yli 25 kielelle tarkoittaa, että jokainen asiakas tuntee olonsa kotoisaksi. Yksi napautus kielen vaihtamiseen - valikko, hinnat, kuvaukset mukautuvat heti. Täydellinen ravintoloille turistialueilla tai kansainvälisissä kaupungeissa.",
+        "shortDescription": "Toivota turistit tervetulleiksi{br}menuulla {link}25+ kielellä{/link}.",
         "description": "Ravintolaverkkosivustosi tukee automaattisesti useita kieliä. Asiakkaat voivat vaihtaa kieliä yhdellä napautuksella, ja kaikki sisältö, mukaan lukien valikko, yhteystiedot ja navigointi, mukautuu heti.",
         "fullDescription": "Turistialueilla ja kansainvälisissä kaupungeissa asiakkaan kielellä puhuminen on olennaista. IQ Rest tekee ravintolastasi saavutettavan kaikille. Asiakkaat näkevät kielivalitsimen ja voivat selata koko verkkosivustosi - valikko, yhteystiedot, varaukset - heidän suosimallaan kielellä. Yhdistettynä AI-käännökseen voit palvella maailmaa.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Monikielisen ravintolaverkkosivuston kielivalitsin",
-        "cta": "Katso monikieliset ominaisuudet"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Helppo valikon hallinta",
-        "shortDescription": "Päivitä valikkosi sekunneissa, ei tunneissa. Lisää uusia ruokalajeja, muokkaa hintoja, järjestä kategorioita - kaikki yksinkertaisella vedä ja pudota -menetelmällä mistä tahansa laitteesta. Ei teknisiä taitoja tarvita. Muutokset tulevat voimaan heti, joten asiakkaasi näkevät aina uusimmat tarjonnat.",
+        "title": "Yksinkertainen menueditori",
+        "shortDescription": "Vedä, pudota, valmis.{br}{link}Hallitse menuasi{/link} sekunneissa.",
         "description": "Valikon hallinta ei ole koskaan ollut helpompaa. Lisää kategorioita, luo ruokalajeja kuvien ja kuvauksien kanssa, aseta hinnat ja järjestä kaikki yksinkertaisella vedä ja pudota -menetelmällä. Muutokset näkyvät heti live-verkkosivustollasi.",
         "fullDescription": "Unohda monimutkaiset sisällönhallintajärjestelmät. IQ Restin valikkotoimittaja on suunniteltu ravintoloitsijoille, ei verkkokehittäjille. Luo uusi kategoria sekunneissa, lisää ruokalajeja muutamalla napautuksella, lataa kuvia suoraan puhelimestasi. Vedä tuotteita järjestääksesi, vaihda näkyvyyttä loppuneille tuotteille ja näe muutokset live-tilassa heti.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Helppo ravintolavalikon hallintapaneeli",
-        "cta": "Katso valikkotoimittaja"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Pöytävarausjärjestelmä",
-        "shortDescription": "Lopeta asiakkaiden menettäminen unohtuneiden puheluiden vuoksi. Hyväksy pöytävaraukset 24/7 suoraan verkkosivustoltasi - asiakkaat valitsevat päivämäärän, kellonajan ja pöydän sekunneissa. Automaattiset vahvistukset, sähköpostiviestit ja yksinkertainen hallintapaneeli kaiken hallintaan.",
+        "shortDescription": "Vastaanota varauksia 24/7.{br}{link}Varaukset{/link} suoraan sivustoltasi.",
         "description": "Sisäänrakennettu varausjärjestelmä antaa asiakkaiden varata pöytiä suoraan verkkosivustoltasi. Valitse automaattinen vahvistus saatavuuden mukaan tai tarkista jokainen varaus manuaalisesti. Hallitse kaikkia varauksia hallintapaneelisi kautta.",
         "fullDescription": "Puhelinvaraukset vievät aikaa ja ovat helppo unohtaa. IQ Restin varausjärjestelmä toimii 24/7. Asiakkaat valitsevat päivämäärän, kellonajan ja seurueen koon, ja varaus tapahtuu heti. Voit asettaa automaattisen vahvistuksen pöytien saatavuuden mukaan tai tarkistaa jokaisen pyynnön manuaalisesti. Vähennä ei-tuloja sähköpostivahvistusten avulla.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video- ja valokuvataustat",
-        "shortDescription": "Ensivaikutelmat myyvät. Vangitse asiakkaat heti, kun he skannaavat QR-koodisi upealla videolla ravintolasi tunnelmasta tai kauniilla kuvalla allekirjoitusruokalajistasi. Erottaudu kilpailijoista kotisivulla, joka tuntuu ensiluokkaiselta ja ammattimaiselta.",
+        "shortDescription": "Luo upeita ensivaikutelmia{br}{link}video- tai kuvataustoilla{/link}.",
         "description": "Luo unohtumaton ensivaikutelma räätälöidyillä video- tai valokuvataustoilla kotisivullasi. Lataa ravintolasi tunnelmavideo tai kaunis ruoka kuva vangitaksesi asiakkaat heti.",
         "fullDescription": "Ensivaikutelmat ovat tärkeitä. Kun asiakkaat skannaavat QR-koodisi, heidän tulisi vaikuttua heti. Lataa video ravintolasi tunnelmasta, aikakatkaisu keittiöstäsi tai upea kuva allekirjoitusruokalajistasi. Kotisivustasi muuttuu visuaaliseksi kokemukseksi, joka heijastaa ravintolasi persoonallisuutta.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Ravintolaverkkosivusto videotaustalla",
-        "cta": "Katso videotaustat"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Räätälöity värimaailma",
-        "shortDescription": "Tee valikostasi todella oma räätälöidyillä korostusväreillä, jotka vastaavat ravintolasi brändi-identiteettiä. Valitse 12 kaunista esiasetettua väriä tai valitse tarkka brändisävy. Jokainen painike, korostus ja interaktiivinen elementti mukautuu luodakseen yhtenäisen, ammattimaisen ilmeen, jonka asiakkaat muistavat.",
+        "shortDescription": "Sovita värit brändiisi{br}{link}mukautetuilla aksenteilla{/link}.",
         "description": "Ravintolasi verkkosivuston tulisi vastata brändiäsi. Valitse esiasetetuista värimaailmoista tai valitse tarkka brändivärisi. Yhdistettynä automaattiseen vaalean/tumman teeman tukeen, valikkosi näyttää aina ammattimaiselta.",
         "fullDescription": "Brändin johdonmukaisuus on tärkeää. IQ Rest antaa sinun mukauttaa korostusvärin, jota käytetään koko verkkosivustollasi - painikkeet, korostukset ja interaktiiviset elementit kaikki vastaavat brändiäsi. Valitse huolellisesti valikoiduista esiasetuksista tai syötä tarkka brändivärisi. Järjestelmä varmistaa automaattisesti luettavuuden sekä vaaleissa että tummissa tiloissa.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Esteettömyyteen optimoitu värikontrasti"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Räätälöity värimaailma ja brändäysvaihtoehdot",
-        "cta": "Tutustu värimaailmoihin"
+        "imageAlt": "Räätälöity värimaailma ja brändäysvaihtoehdot"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Ilmainen",
         "description": "Täydellinen IQ Restin kokeilemiseen",
-        "cta": "Aloita ilmaiseksi",
+        "cta": "Luo ilmaiseksi",
         "highlights": [
           "Ravintolasivusto",
           "QR-menu",
@@ -523,7 +503,14 @@
         "scans": "Rajattomat",
         "languages": "Rajattomat"
       }
-    }
+    },
+    "socialProof": "Yli 500 ravintolaa luottaa meihin",
+    "simpleTitle": "Aloita ilmaiseksi, päivitä milloin haluat",
+    "trustBenefits": [
+      "Ilmainen aloitus",
+      "Ei luottokorttia",
+      "5 min asennus"
+    ]
   },
   "contacts": {
     "title": "Tarvitsetko apua? Keskustellaan",

@@ -9,7 +9,7 @@
       "changelog": "Izmaiņu žurnāls",
       "contacts": "Kontakti"
     },
-    "getStarted": "Pieteikties",
+    "getStarted": "Izveidot bezmaksas",
     "selectLanguage": "Izvēlieties valodu",
     "selectLanguageDescription": "Izvēlieties savu vēlamo valodu vietnei.",
     "searchLanguage": "Meklēt valodu...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR ēdienkarte un mājaslapa restorānam 5 minūtēs",
+      "title": "Palaidiet savu QR ēdienkarti un vietni 1 minūtē",
       "subtitle": "Vienkārši ievadiet savu e-pastu un iegūstiet pilnīgu restorāna mājaslapu ar QR ēdienkarti, kontaktu lapu, daudzvalodu atbalstu un modernu dizainu. Iestatiet visu no sava telefona.",
       "cta": {
-        "create": "Izveidot ēdienkarti",
-        "view": "Skatīt reālo ēdienkarti"
+        "create": "Izveidot bezmaksas",
+        "view": "Skatīt demo",
+        "noCreditCard": "Kredītkarte nav nepieciešama"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Ikdienas analītika",
           "description": "Sekojiet apmeklējumiem un populārākajiem ēdieniem katru dienu"
         }
-      ]
+      ],
+      "scrollToFeatures": "Skatīt funkcijas",
+      "perfectFor": {
+        "restaurants": "Restorāni",
+        "cafes": "Kafejnīcas",
+        "bars": "Bāri",
+        "hotels": "Viesnīcas"
+      }
     },
     "intro": {
       "socialProof": "Uzticējušies 500+ restorāni visā pasaulē",
       "title": "Viss, kas jūsu restorānam nepieciešams tiešsaistē",
       "description": "Reģistrējieties tikai ar savu e-pastu un nekavējoties iegūstiet: profesionālu restorāna mājaslapu, QR ēdienkarti modernā formātā, funkcionālu kontaktu lapu ar karti, daudzvalodu atbalstu ar AI tulkojumu, video vai foto fonu un pielāgotu krāsu shēmu. Viss pārvaldāms no jūsu telefona - dators nav nepieciešams."
-    },
-    "whyUs": {
-      "title": "No nulles līdz tiešsaistes ēdienkartei 5 minūtēs",
-      "subtitle": "Tikai 4 vienkārši soļi, lai jūsu restorāns būtu tiešsaistē",
-      "items": [
-        {
-          "step": "1",
-          "title": "Ievadiet savu e-pastu",
-          "description": "Ātra reģistrācija tikai ar savu e-pasta adresi. Kredītkartes nav nepieciešamas."
-        },
-        {
-          "step": "2",
-          "title": "Aizpildiet restorāna informāciju",
-          "description": "Pievienojiet sava restorāna nosaukumu, adresi, kontaktus un darba laikus."
-        },
-        {
-          "step": "3",
-          "title": "Pievienojiet ēdienu vienības",
-          "description": "Izveidojiet kategorijas un pievienojiet savus ēdienus ar fotogrāfijām un cenām."
-        },
-        {
-          "step": "4",
-          "title": "Izbaudiet savu ēdienkarti",
-          "description": "Jūsu QR ēdienkarte ir gatava! Dalieties ar to ar klientiem un sekojiet analītikai."
-        }
-      ],
-      "cta": "Gatavi modernizēt savu restorānu?"
     },
     "featuresPreview": {
       "title": "Jaudīgas funkcijas jūsu restorānam",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% mobilajām ierīcēm draudzīga pārvaldība",
-        "shortDescription": "Nav datora? Nav problēmu. Vadi savu visu restorāna mājaslapu no sava telefona. Pievieno ēdienus, stāvot virtuvē, atjaunini cenas pakalpojuma laikā, augšupielādē fotogrāfijas tieši no savas kameras. Katrs rīks darbojas nevainojami mobilajās ierīcēs - jo restorānu īpašnieki nekad nesēž pie galda.",
+        "shortDescription": "Rediģējiet ēdienkarti no tālruņa.{br}{link}Skatiet kā tas darbojas{/link}.",
         "description": "Pievieno kategorijas, ēdienus, fotogrāfijas un pārvaldi savu visu restorāna mājaslapu tieši no sava telefona. Mūsu vadības panelis ir pilnībā optimizēts mobilajām ierīcēm, tāpēc tu vari atjaunināt savu ēdienkarti kafijas pauzes laikā vai pievienot ikdienas piedāvājumus ceļā.",
         "fullDescription": "Restorānu īpašnieki ir aizņemti cilvēki, kuri ne vienmēr atrodas pie datora. Tāpēc mēs izveidojām IQ Rest, lai tas darbotos nevainojami mobilajās ierīcēs. Katrs rīks, sākot no jaunu ēdienu pievienošanas līdz cenu atjaunināšanai, ir izstrādāts skārienekrāniem. Uzņem jauna ēdiena fotogrāfiju un augšupielādē to nekavējoties. Maini šodienas īpašo piedāvājumu, stāvot virtuvē.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restorāna ēdienkartes pārvaldība viedtālrunī",
-        "cta": "Skatīt mobilā vadības paneļa"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI vadīta ēdienkartes tulkošana",
-        "shortDescription": "Pārtrauc zaudēt starptautiskos klientus valodu barjeru dēļ. Mūsu AI tulko visu tavu ēdienkarti 25+ valodās sekundēs - nevis vispārēju tulkojumu, bet konteksta apzinātas AI, kas saprot kulinārijas terminus. 'Beef Wellington' paliek 'Beef Wellington', kamēr apraksti izklausās dabiski katrā valodā.",
+        "shortDescription": "Pārtulkojiet visu ēdienkarti{br}ar {link}AI tulkojumu ar 1 klikšķi{/link}.",
         "description": "Sasniedz starptautiskos klientus ar inteliģentu AI tulkošanu, kas saprot ēdiena kontekstu. Tavi ēdienu nosaukumi un apraksti tiek precīzi tulkoti, saglabājot kulinārijas terminus un padarot jēgu jebkurā valodā.",
         "fullDescription": "Vispārēji tulkotāji bieži neizdodas ar ēdienkartēm - tie tulko burtiski, nesaprotot kontekstu. Mūsu AI ir apmācīts tieši restorānu saturam. Tas zina, ka 'Beef Wellington' nedrīkst tulkot burtiski, un ka 'al dente' nozīmē to pašu jebkurā valodā. Pasniedz tūristiem un starptautiskajiem viesiem ēdienkartes, kas dabiski izklausās viņu valodā.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI vadīta restorāna ēdienkartes tulkošanas saskarne",
-        "cta": "Atklāj AI tulkošanu"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Multivalodu restorāna mājaslapa",
-        "shortDescription": "Sveic tūristus un starptautiskos viesus viņu dzimtajā valodā. Atbalsts 25+ valodām nozīmē, ka katrs klients jūtas kā mājās. Viens pieskāriens, lai mainītu valodas - ēdienkarte, cenas, apraksti visi nekavējoties pielāgojas. Ideāli piemērots restorāniem tūristu rajonos vai starptautiskās pilsētās.",
+        "shortDescription": "Sveiciet tūristus{br}ar ēdienkarti {link}25+ valodās{/link}.",
         "description": "Tava restorāna mājaslapa automātiski atbalsta vairākas valodas. Klienti var mainīt valodas ar vienu pieskārienu, un viss saturs, tostarp ēdienkarte, kontaktinformācija un navigācija, nekavējoties pielāgojas.",
         "fullDescription": "Tūristu rajonos un starptautiskās pilsētās runāšana ar klienta valodu ir būtiska. IQ Rest padara tavu restorānu pieejamu visiem. Klienti redz valodas izvēles rīku un var pārlūkot tavu visu mājaslapu - ēdienkarti, kontaktus, rezervācijas - viņu izvēlētajā valodā. Apvienojumā ar AI tulkošanu tu vari apkalpot pasauli.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Multivalodu restorāna mājaslapas valodas izvēles rīks",
-        "cta": "Skatīt multivalodu funkcijas"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Vienkārša ēdienkartes pārvaldība",
-        "shortDescription": "Atjaunini savu ēdienkarti sekundēs, nevis stundās. Pievieno jaunus ēdienus, rediģē cenas, reorganizē kategorijas - viss ar vienkāršu vilkšanu un nomešanu no jebkuras ierīces. Nav nepieciešamas tehniskās prasmes. Izmaiņas tiek publicētas nekavējoties, tāpēc tavi klienti vienmēr redz jaunākos piedāvājumus.",
+        "title": "Vienkāršs ēdienkartes redaktors",
+        "shortDescription": "Velc, nomet, gatavs.{br}{link}Pārvaldiet ēdienkarti{/link} sekundēs.",
         "description": "Ēdienkartes pārvaldīšana nekad nav bijusi vieglāka. Pievieno kategorijas, izveido ēdienus ar fotogrāfijām un aprakstiem, iestati cenas un organizē visu ar vienkāršu vilkšanu un nomešanu. Izmaiņas parādās nekavējoties tavā tiešsaistes mājaslapā.",
         "fullDescription": "Aizmirsti sarežģītas satura pārvaldības sistēmas. IQ Rest ēdienkartes redaktors ir izstrādāts restorānu īpašniekiem, nevis tīmekļa izstrādātājiem. Izveido jaunu kategoriju sekundēs, pievieno ēdienus ar dažiem pieskārieniem, augšupielādē fotogrāfijas tieši no sava telefona. Velc vienumus, lai pārvietotu, izslēdz redzamību izpārdotiem vienumiem un redzi izmaiņas tiešsaistē nekavējoties.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Vienkārša restorāna ēdienkartes pārvaldības vadības panelis",
-        "cta": "Skatīt ēdienkartes redaktoru"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Galdu rezervēšanas sistēma",
-        "shortDescription": "Pārtrauc zaudēt klientus, jo neizdodas piezvanīt. Pieņem galdu rezervācijas 24/7 tieši no savas mājaslapas — klienti izvēlas datumu, laiku un galdu sekundēs. Automātiski apstiprinājumi, e-pasta paziņojumi un vienkāršs vadības panelis, lai pārvaldītu visu.",
+        "shortDescription": "Pieņemiet rezervācijas 24/7.{br}{link}Rezervācijas{/link} tieši no mājaslapas.",
         "description": "Iebūvētā rezervēšanas sistēma ļauj klientiem rezervēt galdus tieši no tavas mājaslapas. Izvēlies automātisko apstiprinājumu atkarībā no pieejamības vai pārskati katru rezervāciju manuāli. Pārvaldi visas rezervācijas no sava vadības paneļa.",
         "fullDescription": "Tālruņa rezervācijas ir laikietilpīgas un viegli izlaist. IQ Rest rezervēšanas sistēma darbojas 24/7. Klienti izvēlas datumu, laiku un viesu skaitu, pēc tam rezervē nekavējoties. Tu vari iestatīt automātisko apstiprinājumu atkarībā no galdu pieejamības vai pārskatīt katru pieprasījumu manuāli. Samazini neierašanās gadījumus ar e-pasta apstiprinājumiem.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video un foto foni",
-        "shortDescription": "Pirmie iespaidi pārdod. Iegūsti klientu uzmanību brīdī, kad viņi skenē tavu QR kodu, ar satriecošu video par tavu restorāna atmosfēru vai skaistu fotogrāfiju par tavu paraksta ēdienu. Izcelies no konkurentiem ar mājaslapu, kas izskatās augstvērtīgi un profesionāli.",
+        "shortDescription": "Radiet pārsteidzošus pirmos iespaidus{br}ar {link}video vai foto foniem{/link}.",
         "description": "Izveido neaizmirstamu pirmo iespaidu ar pielāgotu video vai foto fonu savā mājaslapā. Augšupielādē savu restorāna atmosfēras video vai skaistu ēdiena fotogrāfiju, lai nekavējoties iegūtu klientu uzmanību.",
         "fullDescription": "Pirmie iespaidi ir svarīgi. Kad klienti skenē tavu QR kodu, viņiem jābūt uzreiz pārsteigtiem. Augšupielādē video par savu restorāna atmosfēru, laika plūsmu no savas virtuves vai satriecošu fotogrāfiju par tavu paraksta ēdienu. Tava mājaslapa kļūst par vizuālu pieredzi, kas atspoguļo tava restorāna personību.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restorāna mājaslapa ar video fonu",
-        "cta": "Skatīt video fonus"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Pielāgota krāsu shēma",
-        "shortDescription": "Padari savu ēdienkarti patiešām savu ar pielāgotām akcentu krāsām, kas atbilst tava restorāna zīmola identitātei. Izvēlies no 12 skaistām iepriekšnoteiktām krāsām vai izvēlies savu precīzo zīmola toni. Katrs pogas, izcelšanas un interaktīvais elements pielāgojas, lai radītu saskaņotu, profesionālu izskatu, ko klienti atceras.",
+        "shortDescription": "Saskaņojiet krāsas ar zīmolu{br}ar {link}pielāgotiem akcentiem{/link}.",
         "description": "Tavai restorāna mājaslapai jāatbilst tavām zīmola krāsām. Izvēlies no iepriekšnoteiktām krāsu shēmām vai izvēlies savu precīzo zīmola krāsu. Apvienojumā ar automātisku gaišā/tumšā tēmas atbalstu, tava ēdienkarte vienmēr izskatās profesionāli.",
         "fullDescription": "Zīmola konsekvence ir svarīga. IQ Rest ļauj tev pielāgot akcentu krāsu, kas tiek izmantota visā tavā mājaslapā - pogas, izcelšanas un interaktīvie elementi visi atbilst tavam zīmolam. Izvēlies no rūpīgi izvēlētiem iepriekšnoteikumiem vai ievadi savu precīzo zīmola krāsu. Sistēma automātiski nodrošina lasāmību gan gaišajos, gan tumšajos režīmos.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Pieejamības optimizēta krāsu kontrasts"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Pielāgotas krāsu shēmas un zīmola iespējas",
-        "cta": "Izpētīt krāsu shēmas"
+        "imageAlt": "Pielāgotas krāsu shēmas un zīmola iespējas"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Bezmaksas",
         "description": "Ideāli, lai izmēģinātu IQ Rest",
-        "cta": "Sākt bez maksas",
+        "cta": "Izveidot bezmaksas",
         "highlights": [
           "Restorāna tīmekļa vietne",
           "QR ēdienkarte",
@@ -523,7 +503,14 @@
         "scans": "Neierobežoti",
         "languages": "Neierobežoti"
       }
-    }
+    },
+    "socialProof": "Vairāk nekā 500 restorāni mums uzticas",
+    "simpleTitle": "Sāciet bezmaksas, jauniniet kad vēlaties",
+    "trustBenefits": [
+      "Bezmaksas sākums",
+      "Nav nepieciešama kredītkarte",
+      "5 min iestatīšana"
+    ]
   },
   "contacts": {
     "title": "Nepieciešama palīdzība? Sarunāsimies",

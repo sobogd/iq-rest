@@ -9,7 +9,7 @@
       "changelog": "Historia zmian",
       "contacts": "Kontakty"
     },
-    "getStarted": "Zaloguj się",
+    "getStarted": "Utwórz za darmo",
     "selectLanguage": "Wybierz język",
     "selectLanguageDescription": "Wybierz preferowany język dla strony internetowej.",
     "searchLanguage": "Szukaj języka...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "Menu QR i strona internetowa dla restauracji w 5 minut",
+      "title": "Uruchom menu QR i stronę w 1 minutę",
       "subtitle": "Wystarczy wpisać swój adres e-mail i uzyskać kompletną stronę internetową restauracji z menu QR, stroną kontaktową, wsparciem wielojęzycznym i nowoczesnym designem. Skonfiguruj wszystko z telefonu.",
       "cta": {
-        "create": "Utwórz Menu",
-        "view": "Zobacz Prawdziwe Menu"
+        "create": "Utwórz za darmo",
+        "view": "Zobacz Demo",
+        "noCreditCard": "Karta kredytowa nie jest wymagana"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Codzienna analiza",
           "description": "Śledź wizyty i popularne dania każdego dnia"
         }
-      ]
+      ],
+      "scrollToFeatures": "Zobacz Funkcje",
+      "perfectFor": {
+        "restaurants": "Restauracje",
+        "cafes": "Kawiarnie",
+        "bars": "Bary",
+        "hotels": "Hotele"
+      }
     },
     "intro": {
       "socialProof": "Zaufane przez ponad 500 restauracji na całym świecie",
       "title": "Wszystko, czego potrzebuje Twoja restauracja w Internecie",
       "description": "Zarejestruj się, podając tylko swój adres e-mail i natychmiast uzyskaj: profesjonalną stronę internetową restauracji, menu QR w nowoczesnym formacie, funkcjonalną stronę kontaktową z mapą, wsparcie wielojęzyczne z tłumaczeniem AI, tło wideo lub zdjęcie oraz niestandardowy schemat kolorów. Wszystko zarządzane z telefonu - bez potrzeby używania komputera."
-    },
-    "whyUs": {
-      "title": "Od Zera do Menu Online w 5 Minut",
-      "subtitle": "Tylko 4 proste kroki, aby umieścić swoją restaurację w Internecie",
-      "items": [
-        {
-          "step": "1",
-          "title": "Wprowadź swój adres e-mail",
-          "description": "Szybka rejestracja tylko z adresem e-mail. Nie jest wymagana karta kredytowa."
-        },
-        {
-          "step": "2",
-          "title": "Wypełnij informacje o restauracji",
-          "description": "Dodaj nazwę swojej restauracji, adres, dane kontaktowe i godziny otwarcia."
-        },
-        {
-          "step": "3",
-          "title": "Dodaj pozycje menu",
-          "description": "Utwórz kategorie i dodaj swoje dania ze zdjęciami i cenami."
-        },
-        {
-          "step": "4",
-          "title": "Ciesz się swoim menu",
-          "description": "Twoje menu QR jest gotowe! Podziel się nim z klientami i śledź analizy."
-        }
-      ],
-      "cta": "Gotowy, aby zmodernizować swoją restaurację?"
     },
     "featuresPreview": {
       "title": "Potężne funkcje dla Twojej restauracji",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% Przyjazne dla urządzeń mobilnych zarządzanie",
-        "shortDescription": "Nie masz komputera? Żaden problem. Zarządzaj całą stroną internetową swojej restauracji z telefonu. Dodawaj dania, stojąc w kuchni, aktualizuj ceny podczas serwisu, przesyłaj zdjęcia bezpośrednio z aparatu. Każda funkcja działa doskonale na urządzeniach mobilnych - ponieważ właściciele restauracji nigdy nie siedzą przy biurku.",
+        "shortDescription": "Edytuj menu z telefonu.{br}{link}Zobacz jak to działa{/link}.",
         "description": "Dodawaj kategorie, dania, zdjęcia i zarządzaj całą stroną internetową swojej restauracji bezpośrednio z telefonu. Nasz pulpit nawigacyjny jest w pełni zoptymalizowany dla urządzeń mobilnych, więc możesz aktualizować swoje menu podczas przerwy na kawę lub dodawać codzienne specjalności w drodze.",
         "fullDescription": "Właściciele restauracji to zapracowani ludzie, którzy nie zawsze są przy komputerze. Dlatego zbudowaliśmy IQ Rest, aby działał doskonale na urządzeniach mobilnych. Każda funkcja, od dodawania nowych dań po aktualizację cen, jest zaprojektowana z myślą o ekranach dotykowych. Zrób zdjęcie nowego dania i przesyłaj je natychmiast. Zmień dzisiejszą specjalność, stojąc w kuchni.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Zarządzanie menu restauracji na smartfonie",
-        "cta": "Zobacz pulpit mobilny"
+        "cta": "Zobacz jak"
       },
       {
         "id": "ai-translation",
         "title": "Tłumaczenie menu z wykorzystaniem AI",
-        "shortDescription": "Przestań tracić międzynarodowych klientów z powodu barier językowych. Nasze AI tłumaczy całe menu na ponad 25 języków w sekundy - nie jest to ogólne tłumaczenie, lecz AI świadome kontekstu, które rozumie terminy kulinarne. 'Beef Wellington' pozostaje 'Beef Wellington', podczas gdy opisy brzmią naturalnie w każdym języku.",
+        "shortDescription": "Przetłumacz całe menu{br}z {link}tłumaczeniem AI w 1 klik{/link}.",
         "description": "Dotrzyj do międzynarodowych klientów dzięki inteligentnemu tłumaczeniu AI, które rozumie kontekst kulinarny. Nazwy Twoich dań i opisy są tłumaczone dokładnie, zachowując terminy kulinarne i mając sens w każdym języku.",
         "fullDescription": "Ogólne tłumacze często zawodzą w przypadku menu kulinarnych - tłumaczą dosłownie, nie rozumiejąc kontekstu. Nasze AI jest specjalnie przeszkolone do treści restauracyjnych. Wie, że 'Beef Wellington' nie powinno być tłumaczone dosłownie, a 'al dente' oznacza to samo w każdym języku. Obsłuż turystów i międzynarodowych gości z menu, które brzmi naturalnie w ich języku.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Interfejs tłumaczenia menu restauracji z wykorzystaniem AI",
-        "cta": "Odkryj tłumaczenie AI"
+        "cta": "tłumaczenie AI jednym klikiem"
       },
       {
         "id": "multilingual",
         "title": "Wielojęzyczna strona internetowa restauracji",
-        "shortDescription": "Powitaj turystów i międzynarodowych gości w ich ojczystym języku. Wsparcie dla ponad 25 języków oznacza, że każdy klient czuje się jak w domu. Jedno dotknięcie, aby zmienić języki - menu, ceny, opisy dostosowują się natychmiast. Idealne dla restauracji w obszarach turystycznych lub miastach międzynarodowych.",
+        "shortDescription": "Witaj turystów{br}menu w {link}25+ językach{/link}.",
         "description": "Twoja strona internetowa restauracji automatycznie obsługuje wiele języków. Klienci mogą zmieniać języki jednym dotknięciem, a cała treść, w tym menu, informacje kontaktowe i nawigacja, dostosowuje się natychmiast.",
         "fullDescription": "W obszarach turystycznych i miastach międzynarodowych mówienie językiem klienta jest niezbędne. IQ Rest sprawia, że Twoja restauracja jest dostępna dla wszystkich. Klienci widzą wybór języka i mogą przeglądać całą Twoją stronę internetową - menu, kontakty, rezerwacje - w preferowanym języku. W połączeniu z tłumaczeniem AI, możesz obsłużyć świat.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Wybór języka na wielojęzycznej stronie internetowej restauracji",
-        "cta": "Zobacz funkcje wielojęzyczne"
+        "cta": "25+ języków"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Łatwe zarządzanie menu",
-        "shortDescription": "Aktualizuj swoje menu w kilka sekund, a nie godzin. Dodawaj nowe dania, edytuj ceny, reorganizuj kategorie - wszystko za pomocą prostego przeciągania i upuszczania z dowolnego urządzenia. Nie są potrzebne umiejętności techniczne. Zmiany są natychmiastowe, więc Twoi klienci zawsze widzą najnowsze oferty.",
+        "title": "Prosty Edytor Menu",
+        "shortDescription": "Przeciągnij, upuść, gotowe.{br}{link}Zarządzaj menu{/link} w kilka sekund.",
         "description": "Zarządzanie swoim menu nigdy nie było łatwiejsze. Dodawaj kategorie, twórz dania z zdjęciami i opisami, ustalaj ceny i organizuj wszystko za pomocą prostego przeciągania i upuszczania. Zmiany pojawiają się natychmiast na Twojej stronie internetowej.",
         "fullDescription": "Zapomnij o skomplikowanych systemach zarządzania treścią. Edytor menu IQ Rest jest zaprojektowany dla właścicieli restauracji, a nie programistów. Utwórz nową kategorię w kilka sekund, dodaj dania kilkoma dotknięciami, przesyłaj zdjęcia bezpośrednio z telefonu. Przeciągnij elementy, aby zmienić ich kolejność, przełącz widoczność dla wyprzedanych pozycji i zobacz zmiany na żywo natychmiast.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Łatwy pulpit do zarządzania menu restauracji",
-        "cta": "Zobacz edytor menu"
+        "cta": "Zarządzaj menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "System rezerwacji stolików",
-        "shortDescription": "Przestań tracić klientów z powodu nieodebranych telefonów. Akceptuj rezerwacje stolików 24/7 bezpośrednio z Twojej strony internetowej — klienci wybierają datę, godzinę i stolik w kilka sekund. Automatyczne potwierdzenia, powiadomienia e-mail i prosty pulpit do zarządzania wszystkim.",
+        "shortDescription": "Przyjmuj rezerwacje 24/7.{br}{link}Rezerwacje{/link} bezpośrednio ze strony.",
         "description": "Wbudowany system rezerwacji pozwala klientom rezerwować stoliki bezpośrednio z Twojej strony internetowej. Wybierz automatyczne potwierdzenie w zależności od dostępności lub ręcznie przeglądaj każdą rezerwację. Zarządzaj wszystkimi rezerwacjami z pulpitu nawigacyjnego.",
         "fullDescription": "Rezerwacje telefoniczne są czasochłonne i łatwe do przeoczenia. System rezerwacji IQ Rest działa 24/7. Klienci wybierają datę, godzinę i liczbę osób, a następnie rezerwują natychmiast. Możesz ustawić automatyczne potwierdzenie w zależności od dostępności stolików lub ręcznie przeglądać każdą prośbę. Zmniejsz liczbę nieobecności dzięki potwierdzeniom e-mailowym.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Tła wideo i zdjęcia",
-        "shortDescription": "Pierwsze wrażenia sprzedają. Zafascynuj klientów w momencie, gdy zeskanują Twój kod QR, oszałamiającym wideo przedstawiającym atmosferę Twojej restauracji lub pięknym zdjęciem Twojego dania sygnaturowego. Wyróżnij się spośród konkurencji dzięki stronie głównej, która wydaje się premium i profesjonalna.",
+        "shortDescription": "Twórz niesamowite pierwsze wrażenia{br}z {link}tłami wideo lub zdjęć{/link}.",
         "description": "Stwórz niezatarte pierwsze wrażenie dzięki niestandardowym wideo lub zdjęciom w tle na swojej stronie głównej. Prześlij wideo przedstawiające atmosferę Twojej restauracji lub piękne zdjęcie jedzenia, aby natychmiast zafascynować klientów.",
         "fullDescription": "Pierwsze wrażenia mają znaczenie. Gdy klienci skanują Twój kod QR, powinni być natychmiast zafascynowani. Prześlij wideo przedstawiające atmosferę Twojej restauracji, przyspieszone wideo z kuchni lub oszałamiające zdjęcie Twojego dania sygnaturowego. Twoja strona główna staje się wizualnym doświadczeniem, które odzwierciedla osobowość Twojej restauracji.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Strona internetowa restauracji z tłem wideo",
-        "cta": "Zobacz tła wideo"
+        "cta": "tła wideo i zdjęć"
       },
       {
         "id": "color-scheme",
         "title": "Niestandardowa kolorystyka",
-        "shortDescription": "Spraw, aby Twoje menu było naprawdę Twoje dzięki niestandardowym kolorom akcentującym, które pasują do tożsamości marki Twojej restauracji. Wybierz spośród 12 pięknych wstępnie ustawionych kolorów lub wybierz dokładny odcień swojej marki. Każdy przycisk, wyróżnienie i interaktywny element dostosowuje się, aby stworzyć spójny, profesjonalny wygląd, który klienci zapamiętają.",
+        "shortDescription": "Dopasuj kolory do marki{br}z {link}niestandardowymi akcentami{/link}.",
         "description": "Twoja strona internetowa restauracji powinna pasować do Twojej marki. Wybierz spośród wstępnie ustawionych schematów kolorów lub wybierz dokładny kolor swojej marki. W połączeniu z automatycznym wsparciem dla jasnych/ciemnych motywów, Twoje menu zawsze wygląda profesjonalnie.",
         "fullDescription": "Spójność marki ma znaczenie. IQ Rest pozwala dostosować kolor akcentu używany na całej stronie internetowej - przyciski, wyróżnienia i interaktywne elementy pasują do Twojej marki. Wybierz spośród starannie dobranych presetów lub wprowadź dokładny kolor swojej marki. System automatycznie zapewnia czytelność w trybach jasnym i ciemnym.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Optymalizowany kontrast kolorów dla dostępności"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Opcje niestandardowej kolorystyki i brandingu",
-        "cta": "Zbadaj schematy kolorów"
+        "imageAlt": "Opcje niestandardowej kolorystyki i brandingu"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Darmowe",
         "description": "Idealne do wypróbowania IQ Rest",
-        "cta": "Rozpocznij za darmo",
+        "cta": "Utwórz za darmo",
         "highlights": [
           "Strona internetowa restauracji",
           "Menu QR",
@@ -523,7 +503,14 @@
         "scans": "Nieograniczone",
         "languages": "Nieograniczone"
       }
-    }
+    },
+    "socialProof": "Ponad 500 restauracji nam ufa",
+    "simpleTitle": "Zacznij za Darmo, Aktualizuj Kiedy Chcesz",
+    "trustBenefits": [
+      "Darmowy start",
+      "Bez karty kredytowej",
+      "Konfiguracja w 5 min"
+    ]
   },
   "contacts": {
     "title": "Potrzebujesz pomocy? Porozmawiajmy",

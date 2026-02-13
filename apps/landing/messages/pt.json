@@ -9,7 +9,7 @@
       "changelog": "Registro de alterações",
       "contacts": "Contatos"
     },
-    "getStarted": "Entrar",
+    "getStarted": "Criar Grátis",
     "selectLanguage": "Selecionar idioma",
     "selectLanguageDescription": "Escolha seu idioma preferido para o site.",
     "searchLanguage": "Pesquisar idioma...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "Menu QR & Website para Restaurante em 5 Minutos",
+      "title": "Lance seu menu QR e site em 1 minuto",
       "subtitle": "Basta inserir seu e-mail e obter um site completo para restaurante com menu QR, página de contato, suporte multilíngue e design moderno. Configure tudo a partir do seu telefone.",
       "cta": {
-        "create": "Criar Menu",
-        "view": "Ver Menu Real"
+        "create": "Criar Grátis",
+        "view": "Ver Demo",
+        "noCreditCard": "Não é necessário cartão de crédito"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Análises diárias",
           "description": "Acompanhe visitas e pratos populares todos os dias"
         }
-      ]
+      ],
+      "scrollToFeatures": "Ver Recursos",
+      "perfectFor": {
+        "restaurants": "Restaurantes",
+        "cafes": "Cafés",
+        "bars": "Bares",
+        "hotels": "Hotéis"
+      }
     },
     "intro": {
       "socialProof": "Confiado por mais de 500 restaurantes em todo o mundo",
       "title": "Tudo que Seu Restaurante Precisa Online",
       "description": "Registre-se apenas com seu e-mail e obtenha instantaneamente: um site profissional para restaurante, menu QR em formato moderno, página de contato funcional com mapa, suporte multilíngue com tradução de IA, fundo em vídeo ou foto, e esquema de cores personalizado. Tudo gerenciável a partir do seu telefone - sem computador necessário."
-    },
-    "whyUs": {
-      "title": "Do Zero ao Menu Online em 5 Minutos",
-      "subtitle": "Apenas 4 passos simples para colocar seu restaurante online",
-      "items": [
-        {
-          "step": "1",
-          "title": "Insira Seu E-mail",
-          "description": "Registro rápido apenas com seu endereço de e-mail. Nenhum cartão de crédito necessário."
-        },
-        {
-          "step": "2",
-          "title": "Preencha as Informações do Restaurante",
-          "description": "Adicione o nome do seu restaurante, endereço, contatos e horários de funcionamento."
-        },
-        {
-          "step": "3",
-          "title": "Adicione Itens ao Menu",
-          "description": "Crie categorias e adicione seus pratos com fotos e preços."
-        },
-        {
-          "step": "4",
-          "title": "Aproveite Seu Menu",
-          "description": "Seu menu QR está pronto! Compartilhe com os clientes e acompanhe as análises."
-        }
-      ],
-      "cta": "Pronto para Modernizar Seu Restaurante?"
     },
     "featuresPreview": {
       "title": "Recursos Poderosos para Seu Restaurante",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "Gestão 100% Amigável para Dispositivos Móveis",
-        "shortDescription": "Sem computador? Sem problemas. Gerencie todo o site do seu restaurante pelo telefone. Adicione pratos enquanto está na cozinha, atualize preços durante o serviço, envie fotos diretamente da sua câmera. Cada recurso funciona perfeitamente no celular - porque os proprietários de restaurantes nunca estão sentados em uma mesa.",
+        "shortDescription": "Edite seu menu pelo celular.{br}{link}Veja como funciona{/link}.",
         "description": "Adicione categorias, pratos, fotos e gerencie todo o site do seu restaurante diretamente do seu telefone. Nosso painel é totalmente otimizado para dispositivos móveis, para que você possa atualizar seu menu durante um intervalo para o café ou adicionar especiais do dia em movimento.",
         "fullDescription": "Os proprietários de restaurantes são pessoas ocupadas que nem sempre estão em um computador. É por isso que construímos o IQ Rest para funcionar perfeitamente em dispositivos móveis. Cada recurso, desde adicionar novos pratos até atualizar preços, é projetado para telas sensíveis ao toque. Tire uma foto de um novo prato e envie instantaneamente. Altere o especial do dia enquanto está na cozinha.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Gerenciamento do menu do restaurante em smartphone",
-        "cta": "Veja o Painel Móvel"
+        "cta": "Veja como"
       },
       {
         "id": "ai-translation",
         "title": "Tradução de Menu com IA",
-        "shortDescription": "Pare de perder clientes internacionais devido a barreiras linguísticas. Nossa IA traduz todo o seu menu em mais de 25 idiomas em segundos - não é uma tradução genérica, mas uma IA consciente do contexto que entende termos culinários. 'Beef Wellington' permanece 'Beef Wellington', enquanto as descrições soam naturalmente em cada idioma.",
+        "shortDescription": "Traduza todo o menu{br}com {link}tradução IA em 1 clique{/link}.",
         "description": "Alcance clientes internacionais com tradução inteligente da IA que entende o contexto alimentar. Os nomes e descrições dos seus pratos são traduzidos com precisão, preservando os termos culinários e fazendo sentido em qualquer idioma.",
         "fullDescription": "Tradutores genéricos muitas vezes falham com menus de comida - eles traduzem literalmente sem entender o contexto. Nossa IA é treinada especificamente para conteúdo de restaurante. Ela sabe que 'Beef Wellington' não deve ser traduzido literalmente, e que 'al dente' significa o mesmo em qualquer idioma. Sirva turistas e convidados internacionais com menus que soam naturalmente em seu idioma.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Interface de tradução de menu de restaurante com IA",
-        "cta": "Descubra a Tradução com IA"
+        "cta": "tradução IA com 1 clique"
       },
       {
         "id": "multilingual",
         "title": "Site de Restaurante Multilíngue",
-        "shortDescription": "Dê boas-vindas a turistas e convidados internacionais em seu idioma nativo. O suporte para mais de 25 idiomas significa que cada cliente se sente em casa. Um toque para mudar de idioma - menu, preços, descrições se adaptam instantaneamente. Perfeito para restaurantes em áreas turísticas ou cidades internacionais.",
+        "shortDescription": "Receba turistas{br}com menu em {link}25+ idiomas{/link}.",
         "description": "Seu site de restaurante suporta automaticamente vários idiomas. Os clientes podem trocar de idioma com um toque, e todo o conteúdo, incluindo menu, informações de contato e navegação, se adapta instantaneamente.",
         "fullDescription": "Em áreas turísticas e cidades internacionais, falar a língua do seu cliente é essencial. O IQ Rest torna seu restaurante acessível a todos. Os clientes veem um seletor de idioma e podem navegar por todo o seu site - menu, contatos, reservas - em seu idioma preferido. Combinado com a tradução da IA, você pode servir o mundo.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Seletor de idioma do site de restaurante multilíngue",
-        "cta": "Veja os Recursos Multilíngues"
+        "cta": "25+ idiomas"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Gerenciamento de Menu Fácil",
-        "shortDescription": "Atualize seu menu em segundos, não em horas. Adicione novos pratos, edite preços, reorganize categorias - tudo com um simples arrastar e soltar de qualquer dispositivo. Nenhuma habilidade técnica necessária. As alterações vão ao ar instantaneamente, para que seus clientes vejam sempre as últimas ofertas.",
+        "title": "Editor de Menu Simples",
+        "shortDescription": "Arraste, solte, pronto.{br}{link}Gerencie seu menu{/link} em segundos.",
         "description": "Gerenciar seu menu nunca foi tão fácil. Adicione categorias, crie pratos com fotos e descrições, defina preços e organize tudo com um simples arrastar e soltar. As alterações aparecem instantaneamente no seu site ao vivo.",
         "fullDescription": "Esqueça sistemas de gerenciamento de conteúdo complicados. O editor de menu do IQ Rest é projetado para proprietários de restaurantes, não para desenvolvedores web. Crie uma nova categoria em segundos, adicione pratos com alguns toques, envie fotos diretamente do seu telefone. Arraste itens para reorganizar, ative ou desative a visibilidade de itens esgotados e veja as mudanças ao vivo imediatamente.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Painel de gerenciamento fácil do menu do restaurante",
-        "cta": "Veja o Editor de Menu"
+        "cta": "Gerencie seu menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Sistema de Reservas de Mesas",
-        "shortDescription": "Pare de perder clientes por chamadas perdidas. Aceite reservas de mesas 24/7 diretamente do seu site - os clientes escolhem data, hora e mesa em segundos. Confirmações automáticas, notificações por e-mail e um painel simples para gerenciar tudo.",
+        "shortDescription": "Aceite reservas 24/7.{br}{link}Reservas{/link} diretamente do seu site.",
         "description": "O sistema de reservas embutido permite que os clientes reservem mesas diretamente do seu site. Escolha confirmação automática com base na disponibilidade ou revise cada reserva manualmente. Gerencie todas as reservas a partir do seu painel.",
         "fullDescription": "Reservas por telefone consomem tempo e são fáceis de perder. O sistema de reservas do IQ Rest funciona 24/7. Os clientes selecionam data, hora e tamanho da mesa, e reservam instantaneamente. Você pode configurar a confirmação automática com base na disponibilidade das mesas ou revisar cada solicitação manualmente. Reduza faltas com confirmações por e-mail.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Vídeos e Fotos de Fundo",
-        "shortDescription": "As primeiras impressões vendem. Cative os clientes no momento em que escaneiam seu código QR com um vídeo deslumbrante da atmosfera do seu restaurante ou uma bela foto do seu prato assinatura. Destaque-se da concorrência com uma página inicial que parece premium e profissional.",
+        "shortDescription": "Crie primeiras impressões incríveis{br}com {link}fundos de vídeo ou foto{/link}.",
         "description": "Crie uma primeira impressão memorável com vídeos ou fotos de fundo personalizados na sua página inicial. Envie seu vídeo da atmosfera do restaurante ou uma bela foto de comida para cativar os clientes instantaneamente.",
         "fullDescription": "As primeiras impressões importam. Quando os clientes escaneiam seu código QR, eles devem ficar impressionados imediatamente. Envie um vídeo da atmosfera do seu restaurante, um time-lapse da sua cozinha ou uma foto deslumbrante do seu prato assinatura. Sua página inicial se torna uma experiência visual que reflete a personalidade do seu restaurante.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Site de restaurante com fundo em vídeo",
-        "cta": "Veja Fundos em Vídeo"
+        "cta": "fundos de vídeo e foto"
       },
       {
         "id": "color-scheme",
         "title": "Esquema de Cores Personalizado",
-        "shortDescription": "Torne seu menu verdadeiramente seu com cores de destaque personalizadas que combinam com a identidade da marca do seu restaurante. Escolha entre 12 lindas cores predefinidas ou escolha sua tonalidade exata da marca. Cada botão, destaque e elemento interativo se adapta para criar uma aparência coesa e profissional que os clientes lembram.",
+        "shortDescription": "Combine cores com sua marca{br}com {link}acentos personalizados{/link}.",
         "description": "Seu site de restaurante deve combinar com sua marca. Escolha entre esquemas de cores predefinidos ou escolha sua cor exata da marca. Combinado com suporte automático para temas claros/escuros, seu menu sempre parece profissional.",
         "fullDescription": "A consistência da marca é importante. O IQ Rest permite que você personalize a cor de destaque usada em todo o seu site - botões, destaques e elementos interativos combinam com sua marca. Escolha entre predefinições cuidadosamente selecionadas ou insira sua cor exata da marca. O sistema garante automaticamente legibilidade em modos claros e escuros.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Contraste de cores otimizado para acessibilidade"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Esquema de cores personalizado e opções de branding",
-        "cta": "Explore Esquemas de Cores"
+        "imageAlt": "Esquema de cores personalizado e opções de branding"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Gratuito",
         "description": "Perfeito para experimentar o IQ Rest",
-        "cta": "Começar Gratuito",
+        "cta": "Criar Grátis",
         "highlights": [
           "Site do restaurante",
           "Menu QR",
@@ -523,7 +503,14 @@
         "scans": "Ilimitado",
         "languages": "Ilimitado"
       }
-    }
+    },
+    "socialProof": "Mais de 500 restaurantes confiam em nós",
+    "simpleTitle": "Comece Grátis, Atualize Quando Quiser",
+    "trustBenefits": [
+      "Grátis para começar",
+      "Sem cartão de crédito",
+      "Configuração em 5 min"
+    ]
   },
   "contacts": {
     "title": "Precisa de ajuda? Vamos conversar",

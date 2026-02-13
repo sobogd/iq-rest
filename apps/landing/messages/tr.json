@@ -9,7 +9,7 @@
       "changelog": "Değişiklik Günlüğü",
       "contacts": "İletişim"
     },
-    "getStarted": "Giriş Yap",
+    "getStarted": "Ücretsiz oluştur",
     "selectLanguage": "Dil Seçin",
     "selectLanguageDescription": "Web sitesi için tercih ettiğiniz dili seçin.",
     "searchLanguage": "Dil ara...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "Restoran için QR Menü ve Web Sitesi 5 Dakikada",
+      "title": "QR menünüzü ve web sitenizi 1 dakikada başlatın",
       "subtitle": "Sadece e-posta adresinizi girin ve QR menü, iletişim sayfası, çok dilli destek ve modern tasarıma sahip tam bir restoran web sitesi edinin. Her şeyi telefonunuzdan ayarlayın.",
       "cta": {
-        "create": "Menü Oluştur",
-        "view": "Gerçek Menüyü Gör"
+        "create": "Ücretsiz oluştur",
+        "view": "Demo gör",
+        "noCreditCard": "Kredi kartı gerekmez"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Günlük analizler",
           "description": "Her gün ziyaretleri ve popüler yemekleri takip edin"
         }
-      ]
+      ],
+      "scrollToFeatures": "Özellikleri gör",
+      "perfectFor": {
+        "restaurants": "Restoranlar",
+        "cafes": "Kafeler",
+        "bars": "Barlar",
+        "hotels": "Oteller"
+      }
     },
     "intro": {
       "socialProof": "Dünya genelinde 500+ restoran tarafından güvenilir",
       "title": "Restoranınızın Online İhtiyaçları",
       "description": "Sadece e-posta adresinizle kaydolun ve anında şunları edinin: profesyonel bir restoran web sitesi, modern formatta QR menü, harita ile işlevsel iletişim sayfası, yapay zeka çevirisi ile çok dilli destek, video veya fotoğraf arka planı ve özel renk şeması. Hepsi telefonunuzdan yönetilebilir - bilgisayar gerekmez."
-    },
-    "whyUs": {
-      "title": "5 Dakikada Sıfırdan Online Menüye",
-      "subtitle": "Restoranınızı çevrimiçi almak için sadece 4 basit adım",
-      "items": [
-        {
-          "step": "1",
-          "title": "E-posta Adresinizi Girin",
-          "description": "Sadece e-posta adresinizle hızlı kayıt. Kredi kartı gerekmez."
-        },
-        {
-          "step": "2",
-          "title": "Restoran Bilgilerini Doldurun",
-          "description": "Restoran adınızı, adresinizi, iletişim bilgilerinizi ve çalışma saatlerinizi ekleyin."
-        },
-        {
-          "step": "3",
-          "title": "Menü Öğeleri Ekleyin",
-          "description": "Kategoriler oluşturun ve yemeklerinizi fotoğraflar ve fiyatlarla ekleyin."
-        },
-        {
-          "step": "4",
-          "title": "Menünüzün Tadını Çıkarın",
-          "description": "QR menünüz hazır! Müşterilerle paylaşın ve analizleri takip edin."
-        }
-      ],
-      "cta": "Restoranınızı Modernleştirmeye Hazır Mısınız?"
     },
     "featuresPreview": {
       "title": "Restoranınız için Güçlü Özellikler",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "%100 Mobil Uyumlu Yönetim",
-        "shortDescription": "Bilgisayar yok mu? Sorun değil. Tüm restoran web sitenizi telefonunuzdan yönetin. Mutfakta dururken yemek ekleyin, hizmet sırasında fiyatları güncelleyin, fotoğrafları doğrudan kameranızdan yükleyin. Her özellik mobilde mükemmel çalışır - çünkü restoran sahipleri asla bir masada oturmazlar.",
+        "shortDescription": "Menüyü telefondan düzenleyin.{br}{link}Nasıl çalıştığını görün{/link}.",
         "description": "Kategorileri, yemekleri, fotoğrafları ekleyin ve tüm restoran web sitenizi doğrudan telefonunuzdan yönetin. Kontrol panelimiz tamamen mobil cihazlar için optimize edilmiştir, böylece bir kahve molasında menünüzü güncelleyebilir veya hareket halindeyken günlük özel yemekleri ekleyebilirsiniz.",
         "fullDescription": "Restoran sahipleri, her zaman bilgisayar başında olmayan meşgul insanlardır. Bu yüzden IQ Rest'i mobil cihazlarda mükemmel çalışacak şekilde tasarladık. Yeni yemek eklemekten fiyat güncellemeye kadar her özellik dokunmatik ekranlar için tasarlanmıştır. Yeni bir yemeğin fotoğrafını çekin ve anında yükleyin. Mutfakta dururken bugünün özelini değiştirin.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restoran menüsü yönetimi akıllı telefonda",
-        "cta": "Mobil Kontrol Panelini Gör"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "Yapay Zeka Destekli Menü Çevirisi",
-        "shortDescription": "Dil engelleri nedeniyle uluslararası müşterileri kaybetmeyi durdurun. Yapay zekamız tüm menünüzü 25'ten fazla dile saniyeler içinde çevirir - genel bir çeviri değil, mutfak terimlerini anlayan bağlam odaklı bir yapay zeka. 'Beef Wellington' 'Beef Wellington' olarak kalır, açıklamalar her dilde doğal bir şekilde okunur.",
+        "shortDescription": "Tüm menüyü çevirin{br}{link}1 tıkla AI çevirisiyle{/link}.",
         "description": "Yemek bağlamını anlayan akıllı yapay zeka çevirisi ile uluslararası müşterilere ulaşın. Yemek isimleriniz ve açıklamalarınız doğru bir şekilde çevrilir, mutfak terimlerini korur ve her dilde anlamlı hale getirir.",
         "fullDescription": "Genel çevirmenler genellikle yemek menülerinde başarısız olur - bağlamı anlamadan kelime kelime çevirirler. Yapay zekamız, restoran içeriği için özel olarak eğitilmiştir. 'Beef Wellington'ın kelime kelime çevrilmemesi gerektiğini ve 'al dente'nin her dilde aynı anlama geldiğini bilir. Turistleri ve uluslararası misafirleri, dillerinde doğal bir şekilde okunan menülerle karşılayın.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Yapay zeka destekli restoran menüsü çeviri arayüzü",
-        "cta": "Yapay Zeka Çevirisini Keşfedin"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Çok Dilli Restoran Web Sitesi",
-        "shortDescription": "Turistleri ve uluslararası misafirleri kendi dillerinde karşılayın. 25'ten fazla dil desteği, her müşterinin kendini evinde hissetmesini sağlar. Dilleri değiştirmek için bir dokunuş - menü, fiyatlar, açıklamalar anında uyum sağlar. Turistik bölgelerde veya uluslararası şehirlerdeki restoranlar için mükemmel.",
+        "shortDescription": "Turistleri karşılayın{br}{link}25+ dilde{/link} menüyle.",
         "description": "Restoran web siteniz otomatik olarak birden fazla dili destekler. Müşteriler bir dokunuşla dilleri değiştirebilir ve menü, iletişim bilgileri ve navigasyon dahil tüm içerik anında uyum sağlar.",
         "fullDescription": "Turistik bölgelerde ve uluslararası şehirlerde, müşterinizin dilinde konuşmak çok önemlidir. IQ Rest, restoranınızı herkes için erişilebilir hale getirir. Müşteriler bir dil seçici görür ve tercih ettikleri dilde tüm web sitenizi - menü, iletişim, rezervasyonlar - gezinebilirler. Yapay zeka çevirisi ile birleştirildiğinde, dünyaya hizmet edebilirsiniz.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Çok dilli restoran web sitesi dil seçici",
-        "cta": "Çok Dilli Özellikleri Gör"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Kolay Menü Yönetimi",
-        "shortDescription": "Menünüzü saniyeler içinde güncelleyin, saatler değil. Yeni yemekler ekleyin, fiyatları düzenleyin, kategorileri yeniden sıralayın - tüm bunları herhangi bir cihazdan basit sürükle-bırak ile yapın. Teknik bilgiye gerek yok. Değişiklikler anında yayına geçer, böylece müşterileriniz her zaman en son teklifleri görür.",
+        "title": "Basit Menü Editörü",
+        "shortDescription": "Sürükle, bırak, bitti.{br}{link}Menünüzü yönetin{/link} saniyeler içinde.",
         "description": "Menünüzü yönetmek hiç bu kadar kolay olmamıştı. Kategoriler ekleyin, fotoğraflar ve açıklamalarla yemekler oluşturun, fiyatları belirleyin ve her şeyi basit sürükle-bırak ile düzenleyin. Değişiklikler anında canlı web sitenizde görünür.",
         "fullDescription": "Karmaşık içerik yönetim sistemlerini unutun. IQ Rest'in menü editörü, restoran sahipleri için tasarlanmıştır, web geliştiricileri için değil. Saniyeler içinde yeni bir kategori oluşturun, birkaç dokunuşla yemekler ekleyin, fotoğrafları doğrudan telefonunuzdan yükleyin. Öğeleri yeniden sıralamak için sürükleyin, tükendi öğelerin görünürlüğünü kapatın ve değişiklikleri hemen canlı görün.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Kolay restoran menüsü yönetim paneli",
-        "cta": "Menü Editörünü Gör"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Masa Rezervasyon Sistemi",
-        "shortDescription": "Kaçırılan çağrılar nedeniyle müşterileri kaybetmeyi durdurun. Masa rezervasyonlarını web sitenizden 7/24 kabul edin - müşteriler tarih, saat ve masayı saniyeler içinde seçer. Otomatik onaylar, e-posta bildirimleri ve her şeyi yönetmek için basit bir kontrol paneli.",
+        "shortDescription": "7/24 rezervasyon kabul edin.{br}{link}Rezervasyonlar{/link} doğrudan web sitenizden.",
         "description": "Yerleşik rezervasyon sistemi, müşterilerin doğrudan web sitenizden masa ayırtmalarını sağlar. Mevcutlığa göre otomatik onay seçin veya her rezervasyonu manuel olarak gözden geçirin. Tüm rezervasyonları kontrol panelinizden yönetin.",
         "fullDescription": "Telefonla rezervasyon almak zaman alıcıdır ve kolayca gözden kaçabilir. IQ Rest'in rezervasyon sistemi 7/24 çalışır. Müşteriler tarih, saat ve grup büyüklüğünü seçer ve anında rezervasyon yaparlar. Masa mevcutlığına göre otomatik onay ayarlayabilir veya her talebi manuel olarak gözden geçirebilirsiniz. E-posta onayları ile no-show'ları azaltın.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video ve Fotoğraf Arka Planları",
-        "shortDescription": "İlk izlenimler önemlidir. Müşterilerinizi QR kodunuzu taradıkları anda restoran atmosferinizin etkileyici bir videosu veya imza yemeğinizin güzel bir fotoğrafıyla büyüleyin. Rakiplerinizden sıyrılın ve premium ve profesyonel bir his veren bir ana sayfa oluşturun.",
+        "shortDescription": "Etkileyici ilk izlenimler yaratın{br}{link}video veya fotoğraf arka planlarıyla{/link}.",
         "description": "Ana sayfanızda özel video veya fotoğraf arka planları ile unutulmaz bir ilk izlenim oluşturun. Restoran atmosferinizi yansıtan bir video veya güzel bir yemek fotoğrafı yükleyin ve müşterilerinizi anında etkileyin.",
         "fullDescription": "İlk izlenimler önemlidir. Müşteriler QR kodunuzu taradıklarında hemen etkilenmelidirler. Restoran atmosferinizin bir videosunu, mutfak zaman atlamalı görüntüsünü veya imza yemeğinizin etkileyici bir fotoğrafını yükleyin. Ana sayfanız, restoranınızın kişiliğini yansıtan görsel bir deneyim haline gelir.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Video arka planına sahip restoran web sitesi",
-        "cta": "Video Arka Planlarını Gör"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Özel Renk Şeması",
-        "shortDescription": "Menünüzü gerçekten kendinize ait kılın, restoranınızın marka kimliğiyle uyumlu özel vurgulayıcı renklerle. 12 güzel önceden ayarlanmış renkten birini seçin veya tam marka tonunuzu seçin. Her düğme, vurgulayıcı ve etkileşimli öğe, müşterilerin hatırlayacağı uyumlu ve profesyonel bir görünüm oluşturacak şekilde uyum sağlar.",
+        "shortDescription": "Renkleri markanızla eşleştirin{br}{link}özel vurgularla{/link}.",
         "description": "Restoran web siteniz markanızla uyumlu olmalıdır. Önceden ayarlanmış renk şemalarından birini seçin veya tam marka renginizi seçin. Otomatik açık/koyu tema desteği ile menünüz her zaman profesyonel görünür.",
         "fullDescription": "Marka tutarlılığı önemlidir. IQ Rest, web siteniz boyunca kullanılan vurgulayıcı rengi özelleştirmenizi sağlar - düğmeler, vurgulayıcılar ve etkileşimli öğeler markanızla uyumlu hale gelir. Özenle hazırlanmış önceden ayarlardan birini seçin veya tam marka renginizi girin. Sistem, hem açık hem de koyu modlarda okunabilirliği otomatik olarak sağlar.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Erişilebilirlik için optimize edilmiş renk kontrastı"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Özel renk şeması ve marka seçenekleri",
-        "cta": "Renk Şemalarını Keşfedin"
+        "imageAlt": "Özel renk şeması ve marka seçenekleri"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Ücretsiz",
         "description": "IQ Rest'i denemek için mükemmel",
-        "cta": "Ücretsiz Başlayın",
+        "cta": "Ücretsiz oluştur",
         "highlights": [
           "Restoran web sitesi",
           "QR Menü",
@@ -523,7 +503,14 @@
         "scans": "Sınırsız",
         "languages": "Sınırsız"
       }
-    }
+    },
+    "socialProof": "500'den fazla restoran bize güveniyor",
+    "simpleTitle": "Ücretsiz başla, istediğin zaman yükselt",
+    "trustBenefits": [
+      "Ücretsiz başlangıç",
+      "Kredi kartı yok",
+      "5 dk kurulum"
+    ]
   },
   "contacts": {
     "title": "Yardım mı lazım? Sohbet edelim",

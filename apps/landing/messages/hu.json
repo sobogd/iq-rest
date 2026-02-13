@@ -9,7 +9,7 @@
       "changelog": "Változások",
       "contacts": "Kapcsolatok"
     },
-    "getStarted": "Bejelentkezés",
+    "getStarted": "Ingyenes létrehozás",
     "selectLanguage": "Nyelv kiválasztása",
     "selectLanguageDescription": "Válaszd ki a weboldalhoz preferált nyelvedet.",
     "searchLanguage": "Nyelv keresése...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menü és Weboldal Éttermeknek 5 Perc Alatt",
+      "title": "Indítsd el QR menüdet és weboldaladat 1 perc alatt",
       "subtitle": "Csak add meg az email címed, és kapj egy teljes étterem weboldalt QR menüvel, kapcsolati oldallal, többnyelvű támogatással és modern dizájnnal. Minden beállítható a telefonodról.",
       "cta": {
-        "create": "Menü Létrehozása",
-        "view": "Valódi Menü Megtekintése"
+        "create": "Ingyenes létrehozás",
+        "view": "Demo megtekintése",
+        "noCreditCard": "Nincs szükség bankkártyára"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Napi analitika",
           "description": "Kövesd nyomon a látogatásokat és a népszerű ételeket minden nap"
         }
-      ]
+      ],
+      "scrollToFeatures": "Funkciók megtekintése",
+      "perfectFor": {
+        "restaurants": "Éttermek",
+        "cafes": "Kávézók",
+        "bars": "Bárok",
+        "hotels": "Szállodák"
+      }
     },
     "intro": {
       "socialProof": "Több mint 500 étterem bízik bennünk világszerte",
       "title": "Minden, Amire Az Éttermednek Szüksége Van Online",
       "description": "Regisztrálj csak az email címeddel, és azonnal megkapod: egy professzionális étterem weboldalt, QR menüt modern formátumban, funkcionális kapcsolati oldalt térképpel, többnyelvű támogatást AI fordítással, videó vagy fénykép hátteret, és egyedi színsémát. Mindez kezelhető a telefonodról - számítógép nem szükséges."
-    },
-    "whyUs": {
-      "title": "Nulláról Online Menüre 5 Perc Alatt",
-      "subtitle": "Csak 4 egyszerű lépés, hogy az éttermed online legyen",
-      "items": [
-        {
-          "step": "1",
-          "title": "Add Meg Az Email Címed",
-          "description": "Gyors regisztráció csak az email címeddel. Nincs szükség bankkártyára."
-        },
-        {
-          "step": "2",
-          "title": "Töltsd Ki Az Étterem Információit",
-          "description": "Add meg az étterem nevét, címét, elérhetőségeit és nyitvatartását."
-        },
-        {
-          "step": "3",
-          "title": "Add Meg A Menüelemeket",
-          "description": "Hozz létre kategóriákat, és add hozzá az ételeidet fényképekkel és árakkal."
-        },
-        {
-          "step": "4",
-          "title": "Élvezd A Menüt",
-          "description": "A QR menüd készen áll! Oszd meg a vendégekkel és kövesd nyomon az analitikát."
-        }
-      ],
-      "cta": "Készen állsz, hogy modernizáld az éttermedet?"
     },
     "featuresPreview": {
       "title": "Erőteljes Funkciók Az Éttermed Számára",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% Mobilbarát Kezelés",
-        "shortDescription": "Nincs számítógép? Nincs probléma. Futtasd az egész étterem weboldaladat a telefonodról. Adj hozzá ételeket, miközben a konyhában állsz, frissítsd az árakat a szolgáltatás alatt, tölts fel fényképeket közvetlenül a kamerádból. Minden funkció tökéletesen működik mobilon - mert az étterem tulajdonosai sosem ülnek az íróasztalnál.",
+        "shortDescription": "Szerkessze a menüt telefonról.{br}{link}Nézze meg hogyan működik{/link}.",
         "description": "Adj hozzá kategóriákat, ételeket, fényképeket, és kezeld az egész étterem weboldaladat közvetlenül a telefonodról. A vezérlőpultunk teljesen optimalizálva van mobil eszközökre, így frissítheted az étlapodat egy kávészünet alatt vagy hozzáadhatod a napi ajánlatokat útközben.",
         "fullDescription": "Az étterem tulajdonosai elfoglalt emberek, akik nem mindig ülnek számítógép előtt. Ezért építettük az IQ Rest-et, hogy tökéletesen működjön mobil eszközökön. Minden funkció, az új ételek hozzáadásától kezdve az árak frissítéséig, érintőképernyőkre van tervezve. Készíts egy fényképet egy új ételről, és töltsd fel azonnal. Változtasd meg a mai ajánlatot, miközben a konyhában állsz.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Az étterem menedzsment okostelefonon",
-        "cta": "Nézd meg a Mobil Vezérlőpultot"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI-Alapú Menüfordítás",
-        "shortDescription": "Ne veszítsd el a nemzetközi ügyfeleket a nyelvi akadályok miatt. AI-nk az egész étlapodat lefordítja több mint 25 nyelvre másodpercek alatt - nem általános fordítás, hanem kontextusérzékeny AI, amely érti a kulináris kifejezéseket. A 'Beef Wellington' marad 'Beef Wellington', míg a leírások természetesen olvashatók minden nyelven.",
+        "shortDescription": "Fordítsa le az egész menüt{br}{link}AI fordítással 1 kattintással{/link}.",
         "description": "Érd el a nemzetközi ügyfeleket intelligens AI fordítással, amely érti az étkezési kontextust. Az ételneveid és leírásaid pontosan le vannak fordítva, megőrizve a kulináris kifejezéseket és értelmesen bármely nyelven.",
         "fullDescription": "Az általános fordítók gyakran kudarcot vallanak az étlapokkal - szó szerint fordítanak, anélkül, hogy értenék a kontextust. AI-nk kifejezetten éttermi tartalomra van betanítva. Tudja, hogy a 'Beef Wellington'-t nem szabad szó szerint lefordítani, és hogy az 'al dente' bármely nyelven ugyanazt jelenti. Szolgáld a turistákat és a nemzetközi vendégeket olyan étlapokkal, amelyek természetesen olvashatók az ő nyelvükön.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-alapú étterem menü fordító felület",
-        "cta": "Fedezd fel az AI Fordítást"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Többnyelvű Étterem Weboldal",
-        "shortDescription": "Üdvözöld a turistákat és a nemzetközi vendégeket anyanyelvükön. A 25+ nyelv támogatása azt jelenti, hogy minden ügyfél otthon érzi magát. Egy érintéssel válthatsz nyelvet - az étlap, árak, leírások azonnal alkalmazkodnak. Tökéletes éttermeknek turisztikai területeken vagy nemzetközi városokban.",
+        "shortDescription": "Köszöntse a turistákat{br}menüvel {link}25+ nyelven{/link}.",
         "description": "Az étterem weboldalad automatikusan támogatja a több nyelvet. Az ügyfelek egy érintéssel válthatnak nyelvet, és minden tartalom, beleértve az étlapot, kapcsolati információkat és navigációt, azonnal alkalmazkodik.",
         "fullDescription": "A turisztikai területeken és nemzetközi városokban elengedhetetlen, hogy beszélj az ügyfeleid nyelvén. Az IQ Rest lehetővé teszi, hogy az éttermed mindenki számára elérhető legyen. Az ügyfelek látnak egy nyelvválasztót, és böngészhetik az egész weboldaladat - étlap, kapcsolatok, foglalások - a preferált nyelvükön. Az AI fordítással kombinálva a világot szolgálhatod.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Többnyelvű étterem weboldal nyelvválasztó",
-        "cta": "Nézd meg a Többnyelvű Funkciókat"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Egyszerű Menükezelés",
-        "shortDescription": "Frissítsd az étlapodat másodpercek alatt, nem órák alatt. Adj hozzá új ételeket, módosítsd az árakat, szervezd át a kategóriákat - mindezt egyszerű húzd és ejtsd módszerrel bármilyen eszközről. Nincs szükség technikai tudásra. A változások azonnal életbe lépnek, így az ügyfeleid mindig a legfrissebb ajánlatokat látják.",
+        "title": "Egyszerű menüszerkesztő",
+        "shortDescription": "Húzd, ejtsd, kész.{br}{link}Kezelje a menüt{/link} másodpercek alatt.",
         "description": "Az étlapod kezelése sosem volt ennyire egyszerű. Adj hozzá kategóriákat, készíts ételeket fényképekkel és leírásokkal, állítsd be az árakat, és szervezd meg mindent egyszerű húzd és ejtsd módszerrel. A változások azonnal megjelennek az élő weboldaladon.",
         "fullDescription": "Felejtsd el a bonyolult tartalomkezelő rendszereket. Az IQ Rest étlap szerkesztője az étterem tulajdonosok számára készült, nem webfejlesztőknek. Hozz létre egy új kategóriát másodpercek alatt, adj hozzá ételeket néhány érintéssel, tölts fel fényképeket közvetlenül a telefonodról. Húzd az elemeket az átrendezéshez, kapcsold ki az elfogyott elemeket, és lásd a változásokat azonnal élőben.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Egyszerű étterem menükezelő vezérlőpult",
-        "cta": "Nézd meg az Étlap Szerkesztőt"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Asztalfoglalási Rendszer",
-        "shortDescription": "Ne veszítsd el az ügyfeleket a kihagyott hívások miatt. Fogadj asztalfoglalásokat 24/7 közvetlenül a weboldaladról - az ügyfelek másodpercek alatt választhatják ki a dátumot, időpontot és asztalt. Automatikus visszaigazolások, email értesítések, és egy egyszerű vezérlőpult az összes kezeléséhez.",
+        "shortDescription": "Fogadjon foglalásokat 24/7.{br}{link}Foglalások{/link} közvetlenül a weboldalról.",
         "description": "A beépített foglalási rendszer lehetővé teszi az ügyfelek számára, hogy közvetlenül a weboldaladról foglaljanak asztalt. Válaszd az automatikus visszaigazolást a rendelkezésre állás alapján, vagy nézd át manuálisan minden foglalást. Kezeld az összes foglalást a vezérlőpultodon.",
         "fullDescription": "A telefonos foglalások időigényesek és könnyen kihagyhatók. Az IQ Rest foglalási rendszere 24/7 működik. Az ügyfelek kiválasztják a dátumot, időpontot és a létszámot, majd azonnal foglalnak. Beállíthatod az automatikus visszaigazolást az asztalok rendelkezésre állása alapján, vagy manuálisan is átnézheted minden kérést. Csökkentsd a meg nem jelenéseket email visszaigazolásokkal.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Videó és Fotó Háttér",
-        "shortDescription": "Az első benyomások eladnak. Ragadd meg az ügyfelek figyelmét, amint beolvassák a QR kódodat egy lenyűgöző videóval az étterem hangulatáról vagy egy gyönyörű fényképpel a jellegzetes ételedről. Tűnj ki a versenytársak közül egy prémium és professzionális megjelenésű kezdőoldallal.",
+        "shortDescription": "Lenyűgöző első benyomásokat hozzon létre{br}{link}videó vagy fotó háttérrel{/link}.",
         "description": "Hozz létre egy emlékezetes első benyomást egyedi videó- vagy fénykép háttérrel a kezdőoldaladon. Töltsd fel az étterem hangulatát bemutató videót, vagy egy gyönyörű ételfotót, hogy azonnal megragadd az ügyfelek figyelmét.",
         "fullDescription": "Az első benyomások számítanak. Amikor az ügyfelek beolvassák a QR kódodat, azonnal lenyűgözve kell lenniük. Tölts fel egy videót az étterem hangulatáról, egy időeltolódásos felvételt a konyhádról, vagy egy lenyűgöző fényképet a jellegzetes ételedről. A kezdőoldalad vizuális élménnyé válik, amely tükrözi az éttermed személyiségét.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Étterem weboldal videó háttérrel",
-        "cta": "Nézd meg a Videó Háttéreket"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Egyedi Színséma",
-        "shortDescription": "Tedd igazán a tiéd az étlapodat egyedi hangsúly színekkel, amelyek illeszkednek az éttermed márkájához. Válassz 12 gyönyörű előre beállított szín közül, vagy válaszd ki a pontos márkaszínt. Minden gomb, kiemelés és interaktív elem alkalmazkodik, hogy egy koherens, professzionális megjelenést hozzon létre, amelyet az ügyfelek megjegyeznek.",
+        "shortDescription": "Illessze a színeket a márkához{br}{link}egyéni akcentusokkal{/link}.",
         "description": "Az étterem weboldaladnak illeszkednie kell a márkádhoz. Válassz előre beállított színsémák közül, vagy válaszd ki a pontos márkaszínt. Az automatikus világos/sötét téma támogatásával az étlapod mindig professzionálisan néz ki.",
         "fullDescription": "A márkakonszisztencia fontos. Az IQ Rest lehetővé teszi, hogy testreszabd a hangsúly színt, amelyet az egész weboldalon használsz - a gombok, kiemelések és interaktív elemek mind a márkádhoz illeszkednek. Válassz gondosan válogatott előre beállított színek közül, vagy add meg a pontos márkaszínt. A rendszer automatikusan biztosítja az olvashatóságot világos és sötét módokban is.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Hozzáférhetőség-optimalizált színkontraszt"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Egyedi színséma és márkázási lehetőségek",
-        "cta": "Fedezd fel a Színsémákat"
+        "imageAlt": "Egyedi színséma és márkázási lehetőségek"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Ingyenes",
         "description": "Tökéletes az IQ Rest kipróbálásához",
-        "cta": "Kezdje el ingyen",
+        "cta": "Ingyenes létrehozás",
         "highlights": [
           "Éttermek weboldala",
           "QR Menü",
@@ -523,7 +503,14 @@
         "scans": "Korlátlan",
         "languages": "Korlátlan"
       }
-    }
+    },
+    "socialProof": "Több mint 500 étterem bízik bennünk",
+    "simpleTitle": "Kezdj ingyen, frissíts amikor akarsz",
+    "trustBenefits": [
+      "Ingyenes kezdés",
+      "Bankkártya nélkül",
+      "5 perces beállítás"
+    ]
   },
   "contacts": {
     "title": "Szüksége van segítségre? Beszélgessünk",

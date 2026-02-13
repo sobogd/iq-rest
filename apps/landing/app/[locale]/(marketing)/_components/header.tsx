@@ -2,23 +2,15 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { LanguageSelector } from "./language-selector";
-import { MobileMenu } from "./mobile-menu";
 import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
-  { href: "/#features", key: "nav.features" },
-  { href: "/pricing", key: "nav.pricing" },
-  { href: "/faq", key: "nav.faq" },
-  { href: "/contacts", key: "nav.contacts" },
+  { href: "#features", key: "nav.features" },
+  { href: "#pricing", key: "nav.pricing" },
 ] as const;
 
 export async function Header() {
   const t = await getTranslations("header");
-
-  const mobileLinks = NAV_LINKS.map((link) => ({
-    href: link.href,
-    label: t(link.key),
-  }));
 
   return (
     <header className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -31,27 +23,21 @@ export async function Header() {
 
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 {t(link.key)}
-              </Link>
+              </a>
             ))}
           </nav>
 
-          <div className="flex items-center gap-0 md:gap-3">
+          <div className="flex items-center gap-3">
             <LanguageSelector />
-            <Button asChild className="hidden lg:inline-flex">
+            <Button asChild>
               <Link href="/dashboard">{t("getStarted")}</Link>
             </Button>
-
-            <MobileMenu
-              links={mobileLinks}
-              menuTitle={t("nav.menu")}
-              getStartedLabel={t("getStarted")}
-            />
           </div>
         </div>
       </div>

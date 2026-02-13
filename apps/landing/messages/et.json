@@ -9,7 +9,7 @@
       "changelog": "Muudatuste logi",
       "contacts": "Kontaktid"
     },
-    "getStarted": "Logi sisse",
+    "getStarted": "Loo tasuta",
     "selectLanguage": "Vali keel",
     "selectLanguageDescription": "Vali oma eelistatud keel veebisaidi jaoks.",
     "searchLanguage": "Otsi keelt...",
@@ -17,11 +17,12 @@
   },
   "home": {
     "hero": {
-      "title": "QR Menüü ja Veebileht Restoranile 5 Minutiga",
+      "title": "Käivitage oma QR-menüü ja veebisait 1 minutiga",
       "subtitle": "Lihtsalt sisestage oma e-post ja saate täieliku restoraniveebilehe QR menüü, kontaktlehe, mitmekeelse toe ja modernse disainiga. Seadistage kõik oma telefonist.",
       "cta": {
-        "create": "Loo Menüü",
-        "view": "Vaata Reaalset Menüü"
+        "create": "Loo tasuta",
+        "view": "Vaata demot",
+        "noCreditCard": "Krediitkaarti pole vaja"
       },
       "benefits": [
         {
@@ -40,39 +41,19 @@
           "title": "Igapäevane analüütika",
           "description": "Jälgige külastusi ja populaarseid roogasid iga päev"
         }
-      ]
+      ],
+      "scrollToFeatures": "Vaata funktsioone",
+      "perfectFor": {
+        "restaurants": "Restoranid",
+        "cafes": "Kohvikud",
+        "bars": "Baarid",
+        "hotels": "Hotellid"
+      }
     },
     "intro": {
       "socialProof": "Usaldavad 500+ restorani üle kogu maailma",
       "title": "Kõik, Mida Teie Restoran Vajab Veebis",
       "description": "Registreerige lihtsalt oma e-posti aadressiga ja saate koheselt: professionaalse restoraniveebilehe, QR menüü modernses formaadis, funktsionaalse kontaktlehe kaardiga, mitmekeelse toe AI tõlkega, video või foto tausta ja kohandatud värviskeemi. Kõik hallatav teie telefonist - arvutit pole vaja."
-    },
-    "whyUs": {
-      "title": "Nullist Veebimenüüni 5 Minutiga",
-      "subtitle": "Lihtsalt 4 lihtsat sammu, et saada oma restoran veebis",
-      "items": [
-        {
-          "step": "1",
-          "title": "Sisestage Oma E-post",
-          "description": "Kiire registreerimine lihtsalt oma e-posti aadressiga. Krediitkaarti pole vaja."
-        },
-        {
-          "step": "2",
-          "title": "Täida Restorani Info",
-          "description": "Lisage oma restorani nimi, aadress, kontaktid ja tööajad."
-        },
-        {
-          "step": "3",
-          "title": "Lisage Menüü Esemed",
-          "description": "Looge kategooriad ja lisage oma road koos fotode ja hindadega."
-        },
-        {
-          "step": "4",
-          "title": "Naudi Oma Menüü",
-          "description": "Teie QR menüü on valmis! Jagage seda klientidega ja jälgige analüütikat."
-        }
-      ],
-      "cta": "Kas olete valmis oma restorani moderniseerima?"
     },
     "featuresPreview": {
       "title": "Tugevad Funktsioonid Teie Restoranile",
@@ -267,7 +248,7 @@
       {
         "id": "mobile-management",
         "title": "100% Mobiilisõbralik Halduse",
-        "shortDescription": "Ei ole arvutit? Pole probleemi. Halda oma kogu restorani veebisaiti oma telefonist. Lisa toite, seistes köögis, uuenda hindu teeninduse ajal, laadi üles fotosid otse oma kaamerast. Iga funktsioon töötab mobiilis ideaalselt - sest restoranide omanikud ei istu kunagi laua taga.",
+        "shortDescription": "Muutke menüüd telefonist.{br}{link}Vaadake kuidas see töötab{/link}.",
         "description": "Lisage kategooriaid, toite, fotosid ja hallake oma kogu restorani veebisaiti otse oma telefonist. Meie juhtpaneel on täielikult optimeeritud mobiilseadmete jaoks, nii et saate oma menüüd uuendada kohvi pausi ajal või lisada päevapakkumisi liikvel olles.",
         "fullDescription": "Restoranide omanikud on hõivatud inimesed, kes ei viibi alati arvuti juures. Seetõttu ehitasime IQ Rest'i, et see töötaks mobiilseadmetes ideaalselt. Iga funktsioon, alates uute toitude lisamisest kuni hindade uuendamiseni, on loodud puutetundlike ekraanide jaoks. Tehke foto uuest roost ja laadige see kohe üles. Muutke tänast eripakkumist, seistes köögis.",
         "benefits": [
@@ -279,12 +260,12 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restorani menüü haldamine nutitelefonis",
-        "cta": "Vaata Mobiilset Juhtpaneeli"
+        "cta": "See how"
       },
       {
         "id": "ai-translation",
         "title": "AI-Põhine Menüü Tõlge",
-        "shortDescription": "Lõpetage rahvusvaheliste klientide kaotamine keelebarjääride tõttu. Meie AI tõlgib teie kogu menüü 25+ keelde sekunditega - mitte üldine tõlge, vaid kontekstitundlik AI, mis mõistab kulinaarseid termineid. 'Beef Wellington' jääb 'Beef Wellington'iks, samas kui kirjeldused kõlavad igas keeles loomulikult.",
+        "shortDescription": "Tõlkige kogu menüü{br}{link}AI-tõlkega 1 klikiga{/link}.",
         "description": "Saavutage rahvusvahelised kliendid intelligentse AI tõlkega, mis mõistab toidu konteksti. Teie roogade nimed ja kirjeldused tõlgitakse täpselt, säilitades kulinaarsed terminid ja tehes mõistlikuks igas keeles.",
         "fullDescription": "Üldised tõlgid ebaõnnestuvad sageli toidumenüüdega - nad tõlgivad sõna-sõnalt, ilma konteksti mõistmata. Meie AI on koolitatud spetsiaalselt restoranisisu jaoks. Ta teab, et 'Beef Wellington' ei tohiks tõlkida sõna-sõnalt ja et 'al dente' tähendab igas keeles sama. Teenindage turiste ja rahvusvahelisi külalisi menüüdega, mis kõlavad loomulikult nende keeles.",
         "benefits": [
@@ -296,12 +277,12 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-põhine restorani menüü tõlke liides",
-        "cta": "Avasta AI Tõlge"
+        "cta": "one-click AI"
       },
       {
         "id": "multilingual",
         "title": "Mitmekeeline Restorani Veebisait",
-        "shortDescription": "Tere tulemast turistidele ja rahvusvahelistele külalistele nende emakeeles. 25+ keele toetamine tähendab, et iga klient tunneb end koduselt. Ühe puudutusega keele vahetamine - menüü, hinnad, kirjeldused kohanduvad koheselt. Täiuslik turistide piirkondades või rahvusvahelistes linnades.",
+        "shortDescription": "Tervitage turiste{br}menüüga {link}25+ keeles{/link}.",
         "description": "Teie restorani veebisait toetab automaatselt mitmeid keeli. Kliendid saavad keeli vahetada ühe puudutusega, ja kogu sisu, sealhulgas menüü, kontaktandmed ja navigeerimine, kohandub koheselt.",
         "fullDescription": "Turistide piirkondades ja rahvusvahelistes linnades on oluline rääkida oma kliendi keelt. IQ Rest muudab teie restorani kergesti kättesaadavaks kõigile. Kliendid näevad keelevalijat ja saavad sirvida teie kogu veebisaiti - menüü, kontaktid, broneeringud - oma eelistatud keeles. Koos AI tõlkega saate teenindada kogu maailma.",
         "benefits": [
@@ -313,7 +294,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Mitmekeelse restorani veebisaidi keelevalija",
-        "cta": "Vaata Mitmekeelseid Funktsioone"
+        "cta": "25+ languages"
       },
       {
         "id": "ai-images",
@@ -334,8 +315,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Lihtne Menüü Halduse",
-        "shortDescription": "Uuendage oma menüüd sekunditega, mitte tundidega. Lisage uusi toite, muutke hindu, korraldage kategooriaid - kõik lihtsa lohistamise ja kukutamisega igalt seadmelt. Ei ole tehnilisi oskusi vaja. Muudatused lähevad kohe live, nii et teie kliendid näevad alati uusimaid pakkumisi.",
+        "title": "Lihtne menüüredaktor",
+        "shortDescription": "Lohista, aseta, valmis.{br}{link}Halda menüüd{/link} sekunditega.",
         "description": "Menüü haldamine pole kunagi olnud lihtsam. Lisage kategooriaid, looge toite koos fotode ja kirjeldustega, seadke hinnad ja korraldage kõik lihtsa lohistamise ja kukutamisega. Muudatused ilmuvad kohe teie live veebisaidil.",
         "fullDescription": "Unustage keerulised sisuhaldussüsteemid. IQ Rest'i menüü redaktor on loodud restoranide omanikele, mitte veebiarendajatele. Looge uus kategooria sekunditega, lisage toite mõne puudutusega, laadige fotosid otse oma telefonist. Looge esemeid ümber, lülitage nähtavust välja müüdud toodete jaoks ja näete muudatusi kohe live.",
         "benefits": [
@@ -347,7 +328,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Lihtne restorani menüü haldamise juhtpaneel",
-        "cta": "Vaata Menüü Redaktorit"
+        "cta": "Manage your menu"
       },
       {
         "id": "analytics",
@@ -369,7 +350,7 @@
       {
         "id": "reservations",
         "title": "Laudade Broneerimise Süsteem",
-        "shortDescription": "Lõpetage klientide kaotamine mööda läinud kõnede tõttu. Aktsepteerige laudade broneeringuid 24/7 otse oma veebisaidilt - kliendid valivad kuupäeva, kellaaja ja laua sekunditega. Automaatne kinnitamine, e-posti teavitused ja lihtne juhtpaneel, et kõike hallata.",
+        "shortDescription": "Võtke broneeringuid vastu 24/7.{br}{link}Broneeringud{/link} otse veebisaidilt.",
         "description": "Sisseehitatud broneerimissüsteem võimaldab klientidel broneerida laudu otse teie veebisaidilt. Valige automaatne kinnitamine saadavuse alusel või vaadake iga broneeringut käsitsi. Hallake kõiki broneeringuid oma juhtpaneelilt.",
         "fullDescription": "Telefoniga broneerimine on aeganõudev ja kergesti unustatav. IQ Rest'i broneerimissüsteem töötab 24/7. Kliendid valivad kuupäeva, kellaaja ja seltskonna suuruse ning broneerivad kohe. Saate seadistada automaatse kinnitamise laua saadavuse alusel või vaadata iga taotlust käsitsi. Vähendage mitte-tulekuid e-posti kinnitustega.",
         "benefits": [
@@ -386,7 +367,7 @@
       {
         "id": "custom-design",
         "title": "Video ja Foto Taustad",
-        "shortDescription": "Esimene mulje müüb. Köitke kliente hetkest, kui nad skaneerivad teie QR koodi, hämmastava video või kauni foto abil teie restorani atmosfäärist või teie allkirja roogast. Erakordne konkurentidest, luues esilehe, mis tundub kvaliteetne ja professionaalne.",
+        "shortDescription": "Looge vapustavaid esmamuljeid{br}{link}video- või fototaustadega{/link}.",
         "description": "Looge meeldejääv esimene mulje kohandatud video või foto taustadega oma esilehel. Laadige üles oma restorani atmosfääri video või kauni toidu foto, et köita kliente kohe.",
         "fullDescription": "Esimese mulje loomine on oluline. Kui kliendid skaneerivad teie QR koodi, peaksid nad kohe muljet saama. Laadige üles video oma restorani atmosfäärist, köögi ajakava või hämmastav foto oma allkirja roogast. Teie esileht muutub visuaalseks kogemuseks, mis peegeldab teie restorani isikupära.",
         "benefits": [
@@ -398,12 +379,12 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restorani veebisait video taustaga",
-        "cta": "Vaata Video Taustu"
+        "cta": "video or photo backgrounds"
       },
       {
         "id": "color-scheme",
         "title": "Kohandatud Värviskeem",
-        "shortDescription": "Tehke oma menüü tõeliselt enda omaks kohandatud aktsentvärvidega, mis sobivad teie restorani brändi identiteediga. Valige 12 kaunist eelnevalt määratud värvi hulgast või valige oma täpne brändi varjund. Iga nupp, esiletõstetud element ja interaktiivne element kohandub, et luua ühtne, professionaalne välimus, mida kliendid mäletavad.",
+        "shortDescription": "Sobitage värvid brändiga{br}{link}kohandatud aktsentidega{/link}.",
         "description": "Teie restorani veebisait peaks vastama teie brändile. Valige eelnevalt määratud värviskeemide hulgast või valige oma täpne brändi värv. Koos automaatse heleda/tumedate teemade toetusega näeb teie menüü alati professionaalne välja.",
         "fullDescription": "Brändi järjepidevus on oluline. IQ Rest võimaldab teil kohandada aktsentvärvi, mida kasutatakse kogu teie veebisaidil - nupud, esiletõstetud elemendid ja interaktiivsed elemendid kõik vastavad teie brändile. Valige hoolikalt koostatud eelnevalt määratud värvide hulgast või sisestage oma täpne brändi värv. Süsteem tagab automaatselt loetavuse nii heledates kui tumedates režiimides.",
         "benefits": [
@@ -414,8 +395,7 @@
           "Ligipääsetavuse optimeeritud värvi kontrast"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Kohandatud värviskeem ja brändinguvõimalused",
-        "cta": "Uurige Värviskeeme"
+        "imageAlt": "Kohandatud värviskeem ja brändinguvõimalused"
       },
       {
         "id": "personal-support",
@@ -454,7 +434,7 @@
       "free": {
         "name": "Tasuta",
         "description": "Täiuslik IQ Resti proovimiseks",
-        "cta": "Alusta tasuta",
+        "cta": "Loo tasuta",
         "highlights": [
           "Restorani veebisait",
           "QR Menüü",
@@ -523,7 +503,14 @@
         "scans": "Piiramatu",
         "languages": "Piiramatu"
       }
-    }
+    },
+    "socialProof": "Üle 500 restorani usaldab meid",
+    "simpleTitle": "Alusta tasuta, uuenda millal soovid",
+    "trustBenefits": [
+      "Tasuta algus",
+      "Krediitkaarti pole vaja",
+      "5 min seadistus"
+    ]
   },
   "contacts": {
     "title": "Vaja on abi? Räägime",
