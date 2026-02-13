@@ -4,15 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Loader2, ArrowLeft } from "lucide-react";
-import Image from "next/image";
+import { Loader2 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
@@ -132,128 +124,119 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center p-6 md:p-10">
-      <div className="w-full max-w-sm flex flex-col gap-6">
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="p-2 -ml-2 rounded-lg hover:bg-muted transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </Link>
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="IQ Rest" width={32} height={32} />
-            <span className="text-xl font-semibold">IQ Rest</span>
-          </Link>
-        </div>
+      <div className="w-full max-w-[280px]">
+        {step === "email" ? (
+          <div className="grid gap-6">
+            <div className="grid gap-2">
+              <h1 className="text-2xl font-bold">Create Your Menu</h1>
+              <p className="text-muted-foreground">
+                Enter your email to create your restaurant menu:
+              </p>
+            </div>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl">
-              {step === "email" ? t("auth.title") : t("auth.verifyTitle")}
-            </CardTitle>
-            <CardDescription>
-              {step === "email"
-                ? t("auth.subtitle")
-                : t("auth.verifySubtitle", { email })}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {step === "email" ? (
-              <form onSubmit={handleEmailSubmit}>
-                <div className="grid gap-4">
-                  {status === "error" && errorMessage && (
-                    <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm">
-                      {errorMessage}
-                    </div>
+            <form onSubmit={handleEmailSubmit}>
+              <div className="grid gap-4">
+                {status === "error" && errorMessage && (
+                  <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm">
+                    {errorMessage}
+                  </div>
+                )}
+
+                <Input
+                  ref={emailInputRef}
+                  id="email"
+                  type="email"
+                  placeholder={t("auth.emailPlaceholder")}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === "loading"}
+                  className="h-auto py-2.5 text-base lg:py-3 lg:text-lg"
+                />
+
+                <Button
+                  type="submit"
+                  className="h-auto px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
+                  disabled={status === "loading"}
+                >
+                  {status === "loading" && (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   )}
+                  {t("auth.continue")}
+                </Button>
 
-                  <Input
-                    ref={emailInputRef}
-                    id="email"
-                    type="email"
-                    placeholder={t("auth.emailPlaceholder")}
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    disabled={status === "loading"}
-                  />
+                <p className="text-xs text-muted-foreground/70">
+                  {t("auth.consent.text")}{" "}
+                  <Link href="/terms" className="underline hover:text-foreground">
+                    {t("auth.consent.terms")}
+                  </Link>{" "}
+                  {t("auth.consent.and")}{" "}
+                  <Link href="/privacy" className="underline hover:text-foreground">
+                    {t("auth.consent.privacy")}
+                  </Link>
+                </p>
+              </div>
+            </form>
+          </div>
+        ) : (
+          <div className="grid gap-6">
+            <div className="grid gap-2">
+              <h1 className="text-2xl font-bold">{t("auth.verifyTitle")}</h1>
+              <p className="text-muted-foreground">
+                {t("auth.verifySubtitle", { email })}
+              </p>
+            </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full"
-                    disabled={status === "loading" || !email}
-                  >
-                    {status === "loading" && (
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    )}
-                    {t("auth.continue")}
-                  </Button>
+            <form onSubmit={handleOtpSubmit}>
+              <div className="grid gap-4">
+                {status === "error" && errorMessage && (
+                  <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm">
+                    {errorMessage}
+                  </div>
+                )}
 
-                  <p className="text-xs text-muted-foreground">
-                    {t("auth.consent.text")}{" "}
-                    <Link href="/terms" className="underline hover:text-foreground">
-                      {t("auth.consent.terms")}
-                    </Link>{" "}
-                    {t("auth.consent.and")}{" "}
-                    <Link href="/privacy" className="underline hover:text-foreground">
-                      {t("auth.consent.privacy")}
-                    </Link>
-                  </p>
-                </div>
-              </form>
-            ) : (
-              <form onSubmit={handleOtpSubmit}>
-                <div className="grid gap-4">
-                  {status === "error" && errorMessage && (
-                    <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm">
-                      {errorMessage}
-                    </div>
+                <Input
+                  ref={otpInputRef}
+                  id="otp"
+                  type="text"
+                  inputMode="numeric"
+                  maxLength={4}
+                  placeholder="0000"
+                  required
+                  value={otp}
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/\D/g, "").slice(0, 4);
+                    setOtp(value);
+                  }}
+                  disabled={status === "loading"}
+                  className="h-auto py-2.5 text-base lg:py-3 lg:text-lg text-center tracking-widest"
+                />
+
+                <Button
+                  type="submit"
+                  className="h-auto px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
+                  disabled={status === "loading" || otp.length !== 4}
+                >
+                  {status === "loading" && (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   )}
+                  {t("auth.verify")}
+                </Button>
 
-                  <Input
-                    ref={otpInputRef}
-                    id="otp"
-                    type="text"
-                    inputMode="numeric"
-                    maxLength={4}
-                    placeholder="0000"
-                    required
-                    value={otp}
-                    onChange={(e) => {
-                      const value = e.target.value.replace(/\D/g, "").slice(0, 4);
-                      setOtp(value);
-                    }}
-                    disabled={status === "loading"}
-                    className="text-center text-lg tracking-widest"
-                  />
-
-                  <Button
-                    type="submit"
-                    className="w-full"
-                    disabled={status === "loading" || otp.length !== 4}
-                  >
-                    {status === "loading" && (
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    )}
-                    {t("auth.verify")}
-                  </Button>
-
-                  <p
-                    className="text-xs text-muted-foreground cursor-pointer underline"
-                    onClick={() => {
-                      setStep("email");
-                      setOtp("");
-                      setErrorMessage("");
-                      setStatus("idle");
-                    }}
-                  >
-                    {t("auth.changeEmail")}
-                  </p>
-                </div>
-              </form>
-            )}
-          </CardContent>
-        </Card>
+                <p
+                  className="text-xs text-muted-foreground/70 cursor-pointer underline"
+                  onClick={() => {
+                    setStep("email");
+                    setOtp("");
+                    setErrorMessage("");
+                    setStatus("idle");
+                  }}
+                >
+                  {t("auth.changeEmail")}
+                </p>
+              </div>
+            </form>
+          </div>
+        )}
       </div>
     </div>
   );
