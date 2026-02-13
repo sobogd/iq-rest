@@ -2,7 +2,7 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountry } from "./lib/country-locale-map";
-import { getCurrencyByCountry, supportedCurrencies, SupportedCurrency } from "./lib/country-currency-map";
+import { getCurrencyByCountry } from "./lib/country-currency-map";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -15,11 +15,22 @@ const GEO_CITY_COOKIE = "geo_city";
 const CURRENCY_COOKIE = "currency";
 
 /**
- * Определяет язык по стране из Cloudflare
+ * Получить страну: приоритет URL param ?country= > Cloudflare header
+ */
+function getCountry(request: NextRequest): string | null {
+  const urlCountry = request.nextUrl.searchParams.get("country")?.toUpperCase();
+  if (urlCountry && urlCountry.length === 2) {
+    return urlCountry;
+  }
+  return request.headers.get("cf-ipcountry");
+}
+
+/**
+ * Определяет язык по стране
  * Fallback на английский если страна не определена
  */
 function detectLocaleByCountry(request: NextRequest): Locale {
-  const country = request.headers.get("cf-ipcountry");
+  const country = getCountry(request);
 
   if (country) {
     const locale = getLocaleByCountry(country);
@@ -32,10 +43,10 @@ function detectLocaleByCountry(request: NextRequest): Locale {
 }
 
 /**
- * Устанавливает geo cookies из заголовков Cloudflare
+ * Устанавливает geo cookies (страна из URL param или Cloudflare)
  */
 function setGeoCookies(request: NextRequest, response: NextResponse): void {
-  const country = request.headers.get("cf-ipcountry");
+  const country = getCountry(request);
   const city = request.headers.get("cf-ipcity");
 
   if (country) {
@@ -44,25 +55,21 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",
     });
-  }
 
-  // Валюта: приоритет URL param > geo
-  const urlCurrency = request.nextUrl.searchParams.get("currency")?.toUpperCase();
-  let currency: SupportedCurrency;
-
-  if (urlCurrency && supportedCurrencies.includes(urlCurrency as SupportedCurrency)) {
-    currency = urlCurrency as SupportedCurrency;
-  } else if (country) {
-    currency = getCurrencyByCountry(country);
+    // Валюта по стране
+    const currency = getCurrencyByCountry(country);
+    response.cookies.set(CURRENCY_COOKIE, currency, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
   } else {
-    currency = "EUR";
+    response.cookies.set(CURRENCY_COOKIE, "EUR", {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
   }
-
-  response.cookies.set(CURRENCY_COOKIE, currency, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 7, // 1 week
-    sameSite: "lax",
-  });
 
   if (city) {
     // Cloudflare может отправлять город в URL-encoded формате
