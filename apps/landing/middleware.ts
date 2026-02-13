@@ -2,7 +2,7 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountry } from "./lib/country-locale-map";
-import { getCurrencyByCountry } from "./lib/country-currency-map";
+import { getCurrencyByCountry, supportedCurrencies, SupportedCurrency } from "./lib/country-currency-map";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -44,15 +44,25 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",
     });
-
-    // Устанавливаем валюту по стране
-    const currency = getCurrencyByCountry(country);
-    response.cookies.set(CURRENCY_COOKIE, currency, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      sameSite: "lax",
-    });
   }
+
+  // Валюта: приоритет URL param > geo
+  const urlCurrency = request.nextUrl.searchParams.get("currency")?.toUpperCase();
+  let currency: SupportedCurrency;
+
+  if (urlCurrency && supportedCurrencies.includes(urlCurrency as SupportedCurrency)) {
+    currency = urlCurrency as SupportedCurrency;
+  } else if (country) {
+    currency = getCurrencyByCountry(country);
+  } else {
+    currency = "EUR";
+  }
+
+  response.cookies.set(CURRENCY_COOKIE, currency, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 7, // 1 week
+    sameSite: "lax",
+  });
 
   if (city) {
     // Cloudflare может отправлять город в URL-encoded формате
