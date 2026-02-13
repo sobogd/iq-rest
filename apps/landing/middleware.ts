@@ -85,6 +85,48 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Проверяем есть ли тестовый параметр ?country=
+  const testCountry = request.nextUrl.searchParams.get("country")?.toUpperCase();
+  const hasTestCountry = testCountry && testCountry.length === 2;
+
+  // Если есть тестовый параметр, редиректим на нужную локаль и ставим куки
+  if (hasTestCountry) {
+    const targetLocale = getLocaleByCountry(testCountry) || "en";
+    const currency = getCurrencyByCountry(testCountry);
+
+    // Убираем ?country= из URL после обработки
+    const cleanUrl = new URL(request.url);
+    cleanUrl.searchParams.delete("country");
+
+    // Определяем куда редиректить
+    let targetPath: string;
+    if (pathname === "/") {
+      targetPath = `/${targetLocale}`;
+    } else if (!localeRegex.test(pathname)) {
+      targetPath = `/${targetLocale}${pathname}`;
+    } else {
+      // Заменяем текущую локаль на нужную
+      targetPath = pathname.replace(localeRegex, `/${targetLocale}/`);
+    }
+
+    cleanUrl.pathname = targetPath;
+    const response = NextResponse.redirect(cleanUrl, 302);
+
+    // Ставим куки
+    response.cookies.set(GEO_COUNTRY_COOKIE, testCountry, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: "lax",
+    });
+    response.cookies.set(CURRENCY_COOKIE, currency, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+      sameSite: "lax",
+    });
+
+    return response;
+  }
+
   // Redirect root to detected locale
   if (pathname === "/") {
     const targetLocale = detectLocaleByCountry(request);
