@@ -34,7 +34,29 @@ export async function GET(request: NextRequest) {
         },
       });
 
-      return NextResponse.json({ events });
+      // Determine source for this session
+      const adParamKeys = ["ad", "kw", "mt"];
+      let source = "Direct";
+      let adValues: string | undefined;
+
+      for (const evt of events) {
+        const meta = evt.meta as { params?: Record<string, string> } | null;
+        if (meta?.params) {
+          const hasAdParam = adParamKeys.some(p => p in meta.params!) || "gclid" in meta.params;
+          if (hasAdParam) {
+            source = "Ads";
+            const values = adParamKeys
+              .filter(p => meta.params![p])
+              .map(p => meta.params![p]);
+            if (values.length > 0) {
+              adValues = values.join(", ");
+            }
+            break;
+          }
+        }
+      }
+
+      return NextResponse.json({ events, source, adValues });
     }
 
     // Get unique sessions for a specific event
@@ -58,7 +80,48 @@ export async function GET(request: NextRequest) {
         },
       });
 
-      return NextResponse.json({ sessions });
+      // Check source for each session (Ads vs Direct)
+      const sessionIds = sessions.map(s => s.sessionId);
+      const allEventsForSessions = await prisma.analyticsEvent.findMany({
+        where: {
+          sessionId: { in: sessionIds },
+        },
+        select: {
+          sessionId: true,
+          meta: true,
+        },
+      });
+
+      // Determine source for each session
+      const sessionSourceMap = new Map<string, { source: string; adValues?: string }>();
+      const adParams = ["ad", "kw", "mt"];
+
+      for (const evt of allEventsForSessions) {
+        const meta = evt.meta as { params?: Record<string, string> } | null;
+        if (meta?.params) {
+          const hasAdParam = adParams.some(p => p in meta.params!) || "gclid" in meta.params;
+          if (hasAdParam && !sessionSourceMap.has(evt.sessionId)) {
+            const values = adParams
+              .filter(p => meta.params![p])
+              .map(p => meta.params![p]);
+            sessionSourceMap.set(evt.sessionId, {
+              source: "Ads",
+              adValues: values.length > 0 ? values.join(", ") : undefined,
+            });
+          }
+        }
+      }
+
+      const sessionsWithSource = sessions.map(s => {
+        const sourceInfo = sessionSourceMap.get(s.sessionId);
+        return {
+          ...s,
+          source: sourceInfo?.source || "Direct",
+          adValues: sourceInfo?.adValues,
+        };
+      });
+
+      return NextResponse.json({ sessions: sessionsWithSource });
     }
 
     return NextResponse.json({ error: "Missing event or sessionId param" }, { status: 400 });

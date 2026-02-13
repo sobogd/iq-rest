@@ -50,6 +50,8 @@ interface SessionInfo {
   userId: string | null;
   createdAt: string;
   meta?: Record<string, unknown> | null;
+  source?: string;
+  adValues?: string;
 }
 
 interface Stats {
@@ -95,6 +97,27 @@ function countryToFlag(countryCode: string): string {
     code.charCodeAt(0) + offset,
     code.charCodeAt(1) + offset
   );
+}
+
+// Format time difference between two dates
+function formatTimeDiff(date1: string, date2: string): string {
+  const diff = Math.abs(new Date(date1).getTime() - new Date(date2).getTime()) / 1000;
+
+  if (diff < 60) {
+    return `${Math.round(diff)}s`;
+  } else if (diff < 3600) {
+    const mins = Math.floor(diff / 60);
+    const secs = Math.round(diff % 60);
+    return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`;
+  } else if (diff < 86400) {
+    const hours = Math.floor(diff / 3600);
+    const mins = Math.round((diff % 3600) / 60);
+    return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
+  } else {
+    const days = Math.floor(diff / 86400);
+    const hours = Math.round((diff % 86400) / 3600);
+    return hours > 0 ? `${days}d ${hours}h` : `${days}d`;
+  }
 }
 
 // Format meta object into readable lines
@@ -333,6 +356,8 @@ export function AdminAnalyticsPage() {
   // Session events modal state
   const [eventsModalOpen, setEventsModalOpen] = useState(false);
   const [eventsModalSessionId, setEventsModalSessionId] = useState<string | null>(null);
+  const [eventsModalSource, setEventsModalSource] = useState<string>("Direct");
+  const [eventsModalAdValues, setEventsModalAdValues] = useState<string | undefined>();
   const [sessionEvents, setSessionEvents] = useState<AnalyticsEvent[]>([]);
   const [eventsLoading, setEventsLoading] = useState(false);
 
@@ -405,6 +430,8 @@ export function AdminAnalyticsPage() {
       if (res.ok) {
         const data = await res.json();
         setSessionEvents(data.events || []);
+        setEventsModalSource(data.source || "Direct");
+        setEventsModalAdValues(data.adValues);
       }
     } catch (err) {
       console.error("Failed to fetch session events:", err);
@@ -678,6 +705,9 @@ export function AdminAnalyticsPage() {
                         <span className="text-[10px] text-muted-foreground">
                           {formatDate(session.createdAt)}
                         </span>
+                        <span className={`text-[9px] ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                          {session.source === "Ads" ? `Ads: ${session.adValues || "gclid"}` : "Direct"}
+                        </span>
                       </div>
                       <ChevronRight className="h-4 w-4 text-muted-foreground" />
                     </div>
@@ -693,8 +723,11 @@ export function AdminAnalyticsPage() {
       <Dialog open={eventsModalOpen} onOpenChange={setEventsModalOpen}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>
-              Session: {eventsModalSessionId?.slice(0, 12)}...
+            <DialogTitle className="flex flex-col gap-1">
+              <span>Session: {eventsModalSessionId?.slice(0, 12)}...</span>
+              <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
+              </span>
             </DialogTitle>
           </DialogHeader>
           <ScrollArea className="max-h-[70vh]">
@@ -705,47 +738,80 @@ export function AdminAnalyticsPage() {
             ) : sessionEvents.length === 0 ? (
               <p className="text-center text-muted-foreground py-8">No events found</p>
             ) : (
-              <div className="space-y-3 pr-4">
-                {sessionEvents.map((event) => (
-                  <div
-                    key={event.id}
-                    className="p-3 rounded-lg bg-muted/30 space-y-2"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium">
-                          {formatEventName(event.event)}
-                        </span>
-                        {event.userId && (
-                          <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
-                            logged in
-                          </span>
-                        )}
-                      </div>
-                      <span className="text-xs text-muted-foreground">
-                        {formatDate(event.createdAt)}
-                      </span>
-                    </div>
-                    {event.page && (
-                      <p className="text-xs text-muted-foreground">
-                        Page: {event.page}
-                      </p>
-                    )}
-                    {event.meta && Object.keys(event.meta).length > 0 && (
-                      <Collapsible>
-                        <CollapsibleTrigger className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-                          <ChevronRight className="h-3 w-3 transition-transform [[data-state=open]>&]:rotate-90" />
-                          Details
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <div className="text-xs bg-muted p-2 rounded space-y-0.5 mt-1">
-                            {formatMeta(event.meta)}
+              <div className="space-y-1 pr-4">
+                {sessionEvents.map((event, index) => {
+                  const prevEvent = index < sessionEvents.length - 1 ? sessionEvents[index + 1] : null;
+                  const timeDiff = prevEvent ? formatTimeDiff(event.createdAt, prevEvent.createdAt) : null;
+
+                  return (
+                    <div key={event.id}>
+                      {event.meta && Object.keys(event.meta).length > 0 ? (
+                        <Collapsible>
+                          <CollapsibleTrigger className="w-full text-left">
+                            <div className="p-3 rounded-lg bg-muted/30 hover:bg-muted/50 cursor-pointer">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                  <ChevronRight className="h-3 w-3 text-muted-foreground transition-transform [[data-state=open]_&]:rotate-90" />
+                                  <span className="text-sm font-medium">
+                                    {formatEventName(event.event)}
+                                  </span>
+                                  {event.userId && (
+                                    <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
+                                      logged in
+                                    </span>
+                                  )}
+                                </div>
+                                <span className="text-xs text-muted-foreground">
+                                  {formatDate(event.createdAt)}
+                                </span>
+                              </div>
+                              {event.page && (
+                                <p className="text-xs text-muted-foreground mt-1 ml-5">
+                                  {event.page}
+                                </p>
+                              )}
+                            </div>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent>
+                            <div className="text-xs bg-muted/50 p-3 rounded-b-lg -mt-1 ml-5 mr-0 space-y-0.5 border-t border-muted">
+                              {formatMeta(event.meta)}
+                            </div>
+                          </CollapsibleContent>
+                        </Collapsible>
+                      ) : (
+                        <div className="p-3 rounded-lg bg-muted/30">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-medium ml-5">
+                                {formatEventName(event.event)}
+                              </span>
+                              {event.userId && (
+                                <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
+                                  logged in
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-xs text-muted-foreground">
+                              {formatDate(event.createdAt)}
+                            </span>
                           </div>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    )}
-                  </div>
-                ))}
+                          {event.page && (
+                            <p className="text-xs text-muted-foreground mt-1 ml-5">
+                              {event.page}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                      {timeDiff && (
+                        <div className="flex justify-center py-1">
+                          <span className="text-[10px] text-muted-foreground">
+                            +{timeDiff}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </ScrollArea>
