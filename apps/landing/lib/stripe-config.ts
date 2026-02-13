@@ -1,12 +1,27 @@
 // Client-safe Stripe configuration (no Stripe SDK import)
 
-// Lookup keys for prices (create these in Stripe Dashboard)
+import { SupportedCurrency } from "./country-currency-map";
+
+// Base lookup keys (currency will be appended: basic_monthly_eur, basic_monthly_mxn, etc.)
 export const PRICE_LOOKUP_KEYS = {
   BASIC_MONTHLY: "basic_monthly",
   BASIC_YEARLY: "basic_yearly",
   PRO_MONTHLY: "pro_monthly",
   PRO_YEARLY: "pro_yearly",
 } as const;
+
+export type PriceLookupKey = typeof PRICE_LOOKUP_KEYS[keyof typeof PRICE_LOOKUP_KEYS];
+
+/**
+ * Получить полный lookup key с валютой
+ * Например: basic_monthly + EUR = basic_monthly_eur
+ */
+export function getLookupKeyWithCurrency(
+  baseKey: PriceLookupKey,
+  currency: SupportedCurrency
+): string {
+  return `${baseKey}_${currency.toLowerCase()}`;
+}
 
 // Plan details for UI
 export const PLANS = {

@@ -427,7 +427,7 @@
     "yearly": "Yıllık",
     "save": "(%25 Tasarruf)",
     "perMonth": "/ay",
-    "billedYearly": "Yıllık faturalandırma (€{total})",
+    "billedYearly": "Yıllık faturalandırma ({total})",
     "forever": "Sonsuza dek ücretsiz",
     "popular": "En Popüler",
     "plans": {

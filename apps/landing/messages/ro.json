@@ -427,7 +427,7 @@
     "yearly": "Anual",
     "save": "(Economisiți 25%)",
     "perMonth": "/lună",
-    "billedYearly": "Facturat anual (€{total})",
+    "billedYearly": "Facturat anual ({total})",
     "forever": "Gratuit pentru totdeauna",
     "popular": "Cea mai populară",
     "plans": {

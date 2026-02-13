@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
-import { stripe, PRICE_LOOKUP_KEYS } from "@/lib/stripe";
+import { stripe, PRICE_LOOKUP_KEYS, getLookupKeyWithCurrency } from "@/lib/stripe";
+import { SupportedCurrency } from "@/lib/country-currency-map";
 
 async function getUserCompany() {
   const cookieStore = await cookies();
@@ -32,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     const { priceLookupKey, locale = "en" } = await request.json();
 
-    // Validate price lookup key
+    // Validate base price lookup key
     const validKeys = Object.values(PRICE_LOOKUP_KEYS);
     if (!validKeys.includes(priceLookupKey)) {
       return NextResponse.json(
@@ -40,6 +41,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Get currency from cookie (set by middleware based on geo)
+    const cookieStore = await cookies();
+    const currency = (cookieStore.get("currency")?.value || "EUR") as SupportedCurrency;
+
+    // Build full lookup key with currency (e.g., basic_monthly_eur)
+    const fullLookupKey = getLookupKeyWithCurrency(priceLookupKey, currency);
 
     // Get or create Stripe customer
     let customerId = company.stripeCustomerId;
@@ -68,16 +76,16 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Get price by lookup key
+    // Get price by lookup key with currency
     const prices = await stripe.prices.list({
-      lookup_keys: [priceLookupKey],
+      lookup_keys: [fullLookupKey],
       active: true,
       limit: 1,
     });
 
     if (prices.data.length === 0) {
       return NextResponse.json(
-        { error: "Price not found. Please configure prices in Stripe Dashboard." },
+        { error: `Price not found for ${fullLookupKey}. Please configure prices in Stripe Dashboard.` },
         { status: 404 }
       );
     }

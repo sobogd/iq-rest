@@ -427,7 +427,7 @@
     "yearly": "سنوياً",
     "save": "(وفّر 25%)",
     "perMonth": "/شهر",
-    "billedYearly": "يُدفع سنوياً (€{total})",
+    "billedYearly": "يُدفع سنوياً ({total})",
     "forever": "مجاني للأبد",
     "popular": "الأكثر شعبية",
     "plans": {

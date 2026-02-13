@@ -427,7 +427,7 @@
     "yearly": "年付",
     "save": "（节省25%）",
     "perMonth": "/月",
-    "billedYearly": "按年计费（€{total}）",
+    "billedYearly": "按年计费（{total}）",
     "forever": "永久免费",
     "popular": "最受欢迎",
     "plans": {

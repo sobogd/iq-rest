@@ -427,7 +427,7 @@
     "yearly": "Aasta",
     "save": "(Säästa 25%)",
     "perMonth": "/kuu",
-    "billedYearly": "Arve aastas (€{total})",
+    "billedYearly": "Arve aastas ({total})",
     "forever": "Tasuta igavesti",
     "popular": "Kõige Populaarsem",
     "plans": {

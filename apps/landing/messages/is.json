@@ -427,7 +427,7 @@
     "yearly": "Árslega",
     "save": "(Sparaðu 25%)",
     "perMonth": "/mánuði",
-    "billedYearly": "Reiknað árlega (€{total})",
+    "billedYearly": "Reiknað árlega ({total})",
     "forever": "Ókeypis að eilífu",
     "popular": "Vinsælast",
     "plans": {

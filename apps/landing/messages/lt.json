@@ -427,7 +427,7 @@
     "yearly": "Metinis",
     "save": "(Išsaugokite 25%)",
     "perMonth": "/mėn",
-    "billedYearly": "Apmokama kasmet (€{total})",
+    "billedYearly": "Apmokama kasmet ({total})",
     "forever": "Nemokamai visam laikui",
     "popular": "Populiariausias",
     "plans": {

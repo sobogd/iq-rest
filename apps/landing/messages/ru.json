@@ -427,7 +427,7 @@
     "yearly": "Ежегодно",
     "save": "(Сэкономьте 25%)",
     "perMonth": "/мес",
-    "billedYearly": "Оплата раз в год (€{total})",
+    "billedYearly": "Оплата раз в год ({total})",
     "forever": "Бесплатно навсегда",
     "popular": "Самый популярный",
     "plans": {

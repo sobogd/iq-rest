@@ -427,7 +427,7 @@
     "yearly": "Ετήσια",
     "save": "(Εξοικονομήστε 25%)",
     "perMonth": "/μήνα",
-    "billedYearly": "Χρεώνεται ετησίως (€{total})",
+    "billedYearly": "Χρεώνεται ετησίως ({total})",
     "forever": "Δωρεάν για πάντα",
     "popular": "Πιο Δημοφιλές",
     "plans": {

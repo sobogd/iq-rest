@@ -2,6 +2,7 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
 import { getLocaleByCountry } from "./lib/country-locale-map";
+import { getCurrencyByCountry } from "./lib/country-currency-map";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -11,6 +12,7 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_CITY_COOKIE = "geo_city";
+const CURRENCY_COOKIE = "currency";
 
 /**
  * Определяет язык по стране из Cloudflare
@@ -38,6 +40,14 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 
   if (country) {
     response.cookies.set(GEO_COUNTRY_COOKIE, country, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+
+    // Устанавливаем валюту по стране
+    const currency = getCurrencyByCountry(country);
+    response.cookies.set(CURRENCY_COOKIE, currency, {
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",

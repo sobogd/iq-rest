@@ -427,7 +427,7 @@
     "yearly": "연간",
     "save": "(25% 절약)",
     "perMonth": "/월",
-    "billedYearly": "연간 청구 (€{total})",
+    "billedYearly": "연간 청구 ({total})",
     "forever": "영원히 무료",
     "popular": "가장 인기",
     "plans": {

@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 
 // Re-export client-safe config
-export { PRICE_LOOKUP_KEYS, PLANS, type PlanType } from "./stripe-config";
+export { PRICE_LOOKUP_KEYS, PLANS, type PlanType, getLookupKeyWithCurrency } from "./stripe-config";
 
 // Lazy initialization to avoid build errors when STRIPE_SECRET_KEY is not set
 let stripeInstance: Stripe | null = null;

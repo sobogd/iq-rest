@@ -427,7 +427,7 @@
     "yearly": "Godišnje",
     "save": "(Uštedite 25%)",
     "perMonth": "/mj",
-    "billedYearly": "Naplaćuje se godišnje (€{total})",
+    "billedYearly": "Naplaćuje se godišnje ({total})",
     "forever": "Besplatno zauvek",
     "popular": "Najpopularnije",
     "plans": {

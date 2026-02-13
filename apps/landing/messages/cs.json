@@ -427,7 +427,7 @@
     "yearly": "Ročně",
     "save": "(Ušetřete 25%)",
     "perMonth": "/měs",
-    "billedYearly": "Fakturováno ročně (€{total})",
+    "billedYearly": "Fakturováno ročně ({total})",
     "forever": "Navždy zdarma",
     "popular": "Nejoblíbenější",
     "plans": {

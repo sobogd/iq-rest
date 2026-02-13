@@ -427,7 +427,7 @@
     "yearly": "Bliantúil",
     "save": "(Sábháil 25%)",
     "perMonth": "/mí",
-    "billedYearly": "Áireamh bliantúil (€{total})",
+    "billedYearly": "Áireamh bliantúil ({total})",
     "forever": "Saor go deo",
     "popular": "Is Coitianta",
     "plans": {

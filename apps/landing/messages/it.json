@@ -427,7 +427,7 @@
     "yearly": "Annuale",
     "save": "(Risparmia 25%)",
     "perMonth": "/mese",
-    "billedYearly": "Fatturato annualmente (€{total})",
+    "billedYearly": "Fatturato annualmente ({total})",
     "forever": "Gratuito per sempre",
     "popular": "Più Popolare",
     "plans": {

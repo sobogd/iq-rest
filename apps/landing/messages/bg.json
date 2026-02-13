@@ -427,7 +427,7 @@
     "yearly": "Годишно",
     "save": "(Спестете 25%)",
     "perMonth": "/мес.",
-    "billedYearly": "Фактурира се годишно (€{total})",
+    "billedYearly": "Фактурира се годишно ({total})",
     "forever": "Безплатно завинаги",
     "popular": "Най-популярно",
     "plans": {

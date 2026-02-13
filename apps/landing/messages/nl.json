@@ -427,7 +427,7 @@
     "yearly": "Jaarlijks",
     "save": "(Bespaar 25%)",
     "perMonth": "/maand",
-    "billedYearly": "Jaarlijks gefactureerd (€{total})",
+    "billedYearly": "Jaarlijks gefactureerd ({total})",
     "forever": "Voor altijd gratis",
     "popular": "Meest populair",
     "plans": {

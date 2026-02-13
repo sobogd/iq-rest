@@ -427,7 +427,7 @@
     "yearly": "سالانه",
     "save": "(۲۵٪ تخفیف)",
     "perMonth": "/ماه",
-    "billedYearly": "سالانه پرداخت (€{total})",
+    "billedYearly": "سالانه پرداخت ({total})",
     "forever": "برای همیشه رایگان",
     "popular": "محبوب‌ترین",
     "plans": {

@@ -427,7 +427,7 @@
     "yearly": "Vuosittain",
     "save": "(Säästä 25%)",
     "perMonth": "/kk",
-    "billedYearly": "Laskutetaan vuosittain (€{total})",
+    "billedYearly": "Laskutetaan vuosittain ({total})",
     "forever": "Ilmainen ikuisesti",
     "popular": "Suosituin",
     "plans": {

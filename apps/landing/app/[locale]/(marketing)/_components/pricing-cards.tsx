@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { analytics } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
@@ -21,32 +21,18 @@ import {
 import { Check, X } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { pricing, PlanId } from "@/lib/pricing";
+import { currencyInfo, SupportedCurrency } from "@/lib/country-currency-map";
 
 interface Plan {
-  id: string;
-  price: { monthly: number; yearly: number };
-  yearlyTotal?: number;
+  id: PlanId;
   popular: boolean;
 }
 
 const PLANS: Plan[] = [
-  {
-    id: "free",
-    price: { monthly: 0, yearly: 0 },
-    popular: false,
-  },
-  {
-    id: "basic",
-    price: { monthly: 9.9, yearly: 7.4 },
-    yearlyTotal: 88.8,
-    popular: true,
-  },
-  {
-    id: "pro",
-    price: { monthly: 29.9, yearly: 20.75 },
-    yearlyTotal: 249,
-    popular: false,
-  },
+  { id: "free", popular: false },
+  { id: "basic", popular: true },
+  { id: "pro", popular: false },
 ];
 
 type FeatureValue = boolean | "value";
@@ -81,14 +67,41 @@ interface PricingCardsProps {
   hideButtons?: boolean;
 }
 
+function getCurrencyFromCookie(): SupportedCurrency {
+  if (typeof document === "undefined") return "EUR";
+  const match = document.cookie.match(/currency=([^;]+)/);
+  return (match?.[1] as SupportedCurrency) || "EUR";
+}
+
+function formatPrice(amount: number, currency: SupportedCurrency): string {
+  const info = currencyInfo[currency];
+
+  // Форматируем число с разделителями тысяч
+  const formatted = amount.toLocaleString("en-US", {
+    minimumFractionDigits: info.zeroDecimal ? 0 : (Number.isInteger(amount) ? 0 : 2),
+    maximumFractionDigits: info.zeroDecimal ? 0 : 2,
+  }).replace(/,/g, " "); // пробел как разделитель тысяч
+
+  if (info.symbolPosition === "before") {
+    return `${info.symbol}${formatted}`;
+  }
+  return `${formatted} ${info.symbol}`;
+}
+
 export function PricingCards({ hideComparison = false, hideButtons = false }: PricingCardsProps) {
   const t = useTranslations("pricing");
   const [isYearly, setIsYearly] = useState(true);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [currency, setCurrency] = useState<SupportedCurrency>("EUR");
   const comparisonRef = useRef<HTMLDivElement>(null);
   const comparisonTracked = useRef(false);
   const lastTrackedPlan = useRef<number>(-1);
+
+  // Читаем валюту из куки при монтировании
+  useEffect(() => {
+    setCurrency(getCurrencyFromCookie());
+  }, []);
 
   useEffect(() => {
     if (!api) return;
@@ -213,7 +226,8 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
       >
         <CarouselContent className="-ml-2 md:-ml-4 pt-6">
           {PLANS.map((plan, index) => {
-            const price = isYearly ? plan.price.yearly : plan.price.monthly;
+            const currencyPricing = pricing[currency][plan.id];
+            const price = isYearly ? currencyPricing.yearly : currencyPricing.monthly;
             const isActive = current === index;
 
             return (
@@ -246,12 +260,12 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
                   <CardContent className="flex-1">
                     <div className="space-y-1 mb-6">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-4xl font-bold">€{price}</span>
+                        <span className="text-4xl font-bold">{formatPrice(price, currency)}</span>
                         <span className="text-muted-foreground">{t("perMonth")}</span>
                       </div>
-                      {isYearly && plan.yearlyTotal && (
+                      {isYearly && currencyPricing.yearlyTotal > 0 && (
                         <div className="text-sm text-muted-foreground">
-                          {t("billedYearly", { total: plan.yearlyTotal })}
+                          {t("billedYearly", { total: formatPrice(currencyPricing.yearlyTotal, currency) })}
                         </div>
                       )}
                       {plan.id === "free" && (

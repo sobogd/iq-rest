@@ -427,7 +427,7 @@
     "yearly": "Éves",
     "save": "(25% megtakarítás)",
     "perMonth": "/hó",
-    "billedYearly": "Évente számlázva (€{total})",
+    "billedYearly": "Évente számlázva ({total})",
     "forever": "Ingyenesen örökre",
     "popular": "Legnépszerűbb",
     "plans": {

@@ -427,7 +427,7 @@
     "yearly": "Щорічно",
     "save": "(Зекономте 25%)",
     "perMonth": "/міс",
-    "billedYearly": "Оплата щорічно (€{total})",
+    "billedYearly": "Оплата щорічно ({total})",
     "forever": "Безкоштовно назавжди",
     "popular": "Найпопулярніше",
     "plans": {

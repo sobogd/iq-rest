@@ -427,7 +427,7 @@
     "yearly": "Gadā",
     "save": "(Ietaupīt 25%)",
     "perMonth": "/mēn.",
-    "billedYearly": "Norēķinās reizi gadā (€{total})",
+    "billedYearly": "Norēķinās reizi gadā ({total})",
     "forever": "Bezmaksas uz mūžu",
     "popular": "Vispopulārākais",
     "plans": {

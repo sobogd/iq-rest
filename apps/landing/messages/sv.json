@@ -427,7 +427,7 @@
     "yearly": "Årlig",
     "save": "(Spara 25%)",
     "perMonth": "/månad",
-    "billedYearly": "Faktureras årligen (€{total})",
+    "billedYearly": "Faktureras årligen ({total})",
     "forever": "Gratis för alltid",
     "popular": "Mest Populär",
     "plans": {

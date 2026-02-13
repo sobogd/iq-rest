@@ -427,7 +427,7 @@
     "yearly": "年額",
     "save": "（25%お得）",
     "perMonth": "/月",
-    "billedYearly": "年間一括払い（€{total}）",
+    "billedYearly": "年間一括払い（{total}）",
     "forever": "永久無料",
     "popular": "最も人気",
     "plans": {

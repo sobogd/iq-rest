@@ -427,7 +427,7 @@
     "yearly": "Letno",
     "save": "(Prihranite 25%)",
     "perMonth": "/mesec",
-    "billedYearly": "Zaračunano letno (€{total})",
+    "billedYearly": "Zaračunano letno ({total})",
     "forever": "Brezplačno za vedno",
     "popular": "Najbolj priljubljeno",
     "plans": {
