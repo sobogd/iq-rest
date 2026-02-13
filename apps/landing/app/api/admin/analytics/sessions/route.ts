@@ -59,14 +59,14 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ events, source, adValues });
     }
 
-    // Get unique sessions for a specific event
-    if (event) {
-      const dateFrom = from ? new Date(from) : new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-      const dateTo = to ? new Date(to) : new Date();
+    // Get unique sessions (optionally filtered by event)
+    const dateFrom = from ? new Date(from) : new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    const dateTo = to ? new Date(to) : new Date();
 
+    {
       const sessions = await prisma.analyticsEvent.findMany({
         where: {
-          event,
+          ...(event && { event }),
           createdAt: { gte: dateFrom, lte: dateTo },
         },
         distinct: ["sessionId"],
@@ -123,8 +123,6 @@ export async function GET(request: NextRequest) {
 
       return NextResponse.json({ sessions: sessionsWithSource });
     }
-
-    return NextResponse.json({ error: "Missing event or sessionId param" }, { status: 400 });
   } catch (error) {
     console.error("Admin sessions error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

@@ -419,6 +419,27 @@ export function AdminAnalyticsPage() {
     }
   };
 
+  const handleAllSessionsClick = async () => {
+    setSessionsModalTitle(`All Sessions (${data?.stats.uniqueSessions || 0})`);
+    setSessionsModalEvent(null);
+    setSessionsModalOpen(true);
+    setSessionsLoading(true);
+
+    try {
+      const { from, to } = getDateRange(timeRange);
+      const params = new URLSearchParams({ from, to });
+      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
+      if (res.ok) {
+        const json = await res.json();
+        setSessions(json.sessions || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch sessions:", err);
+    } finally {
+      setSessionsLoading(false);
+    }
+  };
+
   const handleSessionClick = async (sessionId: string) => {
     setEventsModalSessionId(sessionId);
     setEventsModalOpen(true);
@@ -556,7 +577,10 @@ export function AdminAnalyticsPage() {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card
+            className="cursor-pointer hover:bg-muted/50 transition-colors"
+            onClick={handleAllSessionsClick}
+          >
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
                 <Users className="h-8 w-8 text-primary" />
