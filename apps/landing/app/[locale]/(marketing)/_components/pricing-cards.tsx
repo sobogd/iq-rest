@@ -112,11 +112,17 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
     });
   }, [api]);
 
-  // Track plan view on mobile swipe
+  // Track plan view on mobile swipe (not initial render)
   useEffect(() => {
     // Only track on mobile (< 768px)
     const isMobile = window.innerWidth < 768;
     if (!isMobile) return;
+
+    // Skip initial render (lastTrackedPlan starts at -1)
+    if (lastTrackedPlan.current === -1) {
+      lastTrackedPlan.current = current;
+      return;
+    }
 
     // Don't track the same plan twice in a row
     if (lastTrackedPlan.current === current) return;
