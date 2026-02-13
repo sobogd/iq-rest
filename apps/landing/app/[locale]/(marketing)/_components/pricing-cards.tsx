@@ -87,6 +87,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
   const [current, setCurrent] = useState(0);
   const comparisonRef = useRef<HTMLDivElement>(null);
   const comparisonTracked = useRef(false);
+  const lastTrackedPlan = useRef<number>(-1);
 
   useEffect(() => {
     if (!api) return;
@@ -96,6 +97,22 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
+
+  // Track plan view on mobile swipe
+  useEffect(() => {
+    // Only track on mobile (< 768px)
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    // Don't track the same plan twice in a row
+    if (lastTrackedPlan.current === current) return;
+    lastTrackedPlan.current = current;
+
+    const planId = PLANS[current]?.id;
+    if (planId) {
+      analytics.marketing.pricingPlanView(planId);
+    }
+  }, [current]);
 
   // Track comparison table view
   useEffect(() => {

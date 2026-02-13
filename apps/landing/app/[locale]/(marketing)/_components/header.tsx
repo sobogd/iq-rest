@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { Button } from "@/components/ui/button";
 import { LanguageSelector } from "./language-selector";
+import { HeaderCreateButton } from "./header-create-button";
 import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
@@ -35,9 +35,7 @@ export async function Header() {
 
           <div className="flex items-center gap-3">
             <LanguageSelector />
-            <Button asChild>
-              <Link href="/dashboard">{t("getStarted")}</Link>
-            </Button>
+            <HeaderCreateButton>{t("getStarted")}</HeaderCreateButton>
           </div>
         </div>
       </div>

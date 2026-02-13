@@ -4,6 +4,8 @@ export { LanguageSelector } from "./language-selector";
 export { PricingCards } from "./pricing-cards";
 export { PricingSection } from "./pricing-section";
 export { HeroCreateButton } from "./hero-create-button";
+export { HeaderCreateButton } from "./header-create-button";
+export { ScrollToFeatures } from "./scroll-to-features";
 export { ContactForm } from "./contact-form";
 export { GetStartedForm } from "./get-started-form";
 export { HowToSteps } from "./how-to-steps";

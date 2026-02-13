@@ -116,18 +116,25 @@ export const page = {
 
 // Marketing events (landing page)
 export const marketing = {
+  // Header
+  headerCreateClick: () => trackEvent("header_create_click"),
+  // Hero
   heroCreateClick: () => trackEvent("hero_create_click"),
+  heroDemoClick: () => trackEvent("hero_demo_click"),
+  scrollToFeaturesClick: () => trackEvent("scroll_to_features_click"),
+  // Demo modal
   demoOpen: () => trackEvent("demo_open"),
   demoClose: () => trackEvent("demo_close"),
-  // Pricing page
+  // Pricing
   pricingToggleMonthly: () => trackEvent("pricing_toggle_monthly"),
   pricingToggleYearly: () => trackEvent("pricing_toggle_yearly"),
   pricingComparisonView: () => trackEvent("pricing_comparison_view"),
   pricingPlanClick: (plan: string) => trackEvent("pricing_plan_click", { plan }),
+  pricingPlanView: (plan: string) => trackEvent("pricing_plan_view", { plan }),
   // Language
   languageSelectorOpen: () => trackEvent("language_selector_open"),
   languageChange: (from: string, to: string) => trackEvent("language_change", { from, to }),
-  };
+};
 
 // Auth events
 export const auth = {

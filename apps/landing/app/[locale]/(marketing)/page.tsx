@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { MenuPreviewModal, HeroImages, ImageComposition, HeroCreateButton, PricingSection } from "./_components";
+import { MenuPreviewModal, HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -29,7 +29,6 @@ import {
   Coffee,
   Wine,
   Hotel,
-  ChevronDown,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -98,7 +97,7 @@ export default async function HomePage({
 
       {/* Hero Section - Variant B: compact, no benefits inside */}
       {isVariantB ? (
-        <SectionTracker section="hero_b" className="pt-8 pb-12 md:pt-12 md:pb-16">
+        <section className="pt-8 pb-12 md:pt-12 md:pb-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left side - Text content */}
@@ -128,9 +127,9 @@ export default async function HomePage({
               </div>
             </div>
           </div>
-        </SectionTracker>
+        </section>
       ) : (
-        <SectionTracker section="hero" className="min-h-[calc(100dvh-64px)] flex flex-col relative">
+        <section className="min-h-[calc(100dvh-64px)] flex flex-col relative">
           <div className="container mx-auto px-4 flex-1 flex items-center justify-center pb-16">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 lg:gap-12 items-center w-full">
               {/* Left side - Text content */}
@@ -184,14 +183,8 @@ export default async function HomePage({
           </div>
 
           {/* Scroll to features indicator - fixed at bottom */}
-          <a
-            href="#features"
-            className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-          >
-            <span className="text-sm">{tHero("scrollToFeatures")}</span>
-            <ChevronDown className="w-5 h-5 animate-bounce" />
-          </a>
-        </SectionTracker>
+          <ScrollToFeatures label={tHero("scrollToFeatures")} />
+        </section>
       )}
 
       {/* Features Preview Section */}
