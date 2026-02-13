@@ -493,7 +493,7 @@
     },
     "values": {
       "free": {
-        "scans": "150",
+        "scans": "400",
         "languages": "2"
       },
       "basic": {
