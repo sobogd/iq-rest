@@ -49,6 +49,7 @@ export async function GET(request: NextRequest) {
     const sessionId = searchParams.get("sessionId");
     const from = searchParams.get("from");
     const to = searchParams.get("to");
+    const country = searchParams.get("country");
 
     // Get events for a specific session
     if (sessionId) {
@@ -144,7 +145,7 @@ export async function GET(request: NextRequest) {
         }
       }
 
-      const sessionsWithSource = sessions.map(s => {
+      let sessionsWithSource = sessions.map(s => {
         const sourceInfo = sessionSourceMap.get(s.sessionId);
         return {
           ...s,
@@ -152,6 +153,14 @@ export async function GET(request: NextRequest) {
           adValues: sourceInfo?.adValues,
         };
       });
+
+      // Filter by country if specified
+      if (country) {
+        sessionsWithSource = sessionsWithSource.filter(s => {
+          const meta = s.meta as { geo?: { country?: string } } | null;
+          return meta?.geo?.country === country;
+        });
+      }
 
       return NextResponse.json({ sessions: sessionsWithSource });
     }

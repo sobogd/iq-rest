@@ -163,11 +163,13 @@ function StatsListCard({
   items,
   icon: Icon,
   showFlag = false,
+  onItemClick,
 }: {
   title: string;
   items: GeoStatsItem[];
   icon: React.ElementType;
   showFlag?: boolean;
+  onItemClick?: (item: GeoStatsItem) => void;
 }) {
   const maxCount = Math.max(...items.map((i) => i.count), 1);
 
@@ -201,7 +203,11 @@ function StatsListCard({
             const percentage = (item.count / maxCount) * 100;
             const flag = showFlag ? countryToFlag(item.name) : "";
             return (
-              <div key={item.name} className="space-y-1">
+              <div
+                key={item.name}
+                className={`space-y-1 ${onItemClick ? "cursor-pointer hover:opacity-70" : ""}`}
+                onClick={() => onItemClick?.(item)}
+              >
                 <div className="flex justify-between text-sm">
                   <span>{flag ? `${flag} ${item.name}` : item.name}</span>
                   <span className="text-muted-foreground">{item.count}</span>
@@ -488,6 +494,27 @@ export function AdminAnalyticsPage() {
     }
   };
 
+  const handleCountryClick = async (item: GeoStatsItem) => {
+    setSessionsModalTitle(`${countryToFlag(item.name)} ${item.name} (${item.count})`);
+    setSessionsModalEvent(null);
+    setSessionsModalOpen(true);
+    setSessionsLoading(true);
+
+    try {
+      const { from, to } = getDateRange(timeRange);
+      const params = new URLSearchParams({ from, to, country: item.name });
+      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
+      if (res.ok) {
+        const json = await res.json();
+        setSessions(json.sessions || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch sessions by country:", err);
+    } finally {
+      setSessionsLoading(false);
+    }
+  };
+
   const formatEventName = (event: string): string => {
     const eventNames: Record<string, string> = {
       // Page views
@@ -661,6 +688,7 @@ export function AdminAnalyticsPage() {
             items={data.geoStats.countries}
             icon={Globe}
             showFlag
+            onItemClick={handleCountryClick}
           />
           <StatsListCard
             title="Devices"
