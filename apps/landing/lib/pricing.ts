@@ -21,8 +21,8 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
   // Европа (базовые цены)
   EUR: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 9.9, yearly: 7, yearlyTotal: 84 },
-    pro: { monthly: 29.9, yearly: 20, yearlyTotal: 240 },
+    basic: { monthly: 9.9, yearly: 6.9, yearlyTotal: 82.8 },
+    pro: { monthly: 29.9, yearly: 19.9, yearlyTotal: 238.8 },
   },
 
   // Польша
