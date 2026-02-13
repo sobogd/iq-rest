@@ -43,7 +43,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
     return (
       <Button
         variant="outline"
-        className="h-auto px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
+        className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
         onClick={() => {
           setOpen(true);
           setLoading(true);
@@ -59,7 +59,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
     <>
       <Button
         variant="outline"
-        className="h-auto px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
+        className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
         onClick={() => setOpen(true)}
       >
         {buttonText}

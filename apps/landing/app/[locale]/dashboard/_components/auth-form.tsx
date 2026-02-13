@@ -150,12 +150,12 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={status === "loading"}
-                  className="h-auto py-2.5 text-base lg:py-3 lg:text-lg"
+                  className="h-auto py-2 text-base lg:py-2.5 lg:text-lg"
                 />
 
                 <Button
                   type="submit"
-                  className="h-auto px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
+                  className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
                   disabled={status === "loading"}
                 >
                   {status === "loading" && (
@@ -208,12 +208,12 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
                     setOtp(value);
                   }}
                   disabled={status === "loading"}
-                  className="h-auto py-2.5 text-base lg:py-3 lg:text-lg text-center tracking-widest"
+                  className="h-auto py-2 text-base lg:py-2.5 lg:text-lg text-center tracking-widest"
                 />
 
                 <Button
                   type="submit"
-                  className="h-auto px-6 py-2.5 text-base lg:px-8 lg:py-3 lg:text-lg"
+                  className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
                   disabled={status === "loading" || otp.length !== 4}
                 >
                   {status === "loading" && (
