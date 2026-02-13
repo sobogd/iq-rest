@@ -21,64 +21,64 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
   // Европа (базовые цены)
   EUR: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 9.9, yearly: 7.4, yearlyTotal: 88.8 },
-    pro: { monthly: 29.9, yearly: 20.75, yearlyTotal: 249 },
+    basic: { monthly: 9.9, yearly: 7, yearlyTotal: 84 },
+    pro: { monthly: 29.9, yearly: 20, yearlyTotal: 240 },
   },
 
   // Польша
   PLN: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 39, yearly: 29, yearlyTotal: 349 },
-    pro: { monthly: 99, yearly: 75, yearlyTotal: 899 },
+    basic: { monthly: 39, yearly: 29, yearlyTotal: 348 },
+    pro: { monthly: 99, yearly: 75, yearlyTotal: 900 },
   },
 
   // Мексика
   MXN: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 149, yearly: 107, yearlyTotal: 1290 },
-    pro: { monthly: 449, yearly: 325, yearlyTotal: 3900 },
+    basic: { monthly: 149, yearly: 99, yearlyTotal: 1188 },
+    pro: { monthly: 449, yearly: 299, yearlyTotal: 3588 },
   },
 
   // Бразилия
   BRL: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 39, yearly: 29, yearlyTotal: 349 },
-    pro: { monthly: 119, yearly: 82, yearlyTotal: 990 },
+    basic: { monthly: 39, yearly: 29, yearlyTotal: 348 },
+    pro: { monthly: 119, yearly: 79, yearlyTotal: 948 },
   },
 
   // Аргентина
   ARS: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 7900, yearly: 5750, yearlyTotal: 69000 },
-    pro: { monthly: 24900, yearly: 16580, yearlyTotal: 199000 },
+    basic: { monthly: 7900, yearly: 4900, yearlyTotal: 58800 },
+    pro: { monthly: 24900, yearly: 16900, yearlyTotal: 202800 },
   },
 
   // Колумбия
   COP: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 34900, yearly: 24920, yearlyTotal: 299000 },
-    pro: { monthly: 99900, yearly: 74170, yearlyTotal: 890000 },
+    basic: { monthly: 34900, yearly: 24900, yearlyTotal: 298800 },
+    pro: { monthly: 99900, yearly: 74900, yearlyTotal: 898800 },
   },
 
   // Чили (zero-decimal currency!)
   CLP: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 7900, yearly: 5750, yearlyTotal: 69000 },
-    pro: { monthly: 24900, yearly: 16580, yearlyTotal: 199000 },
+    basic: { monthly: 7900, yearly: 4900, yearlyTotal: 58800 },
+    pro: { monthly: 24900, yearly: 16900, yearlyTotal: 202800 },
   },
 
   // Перу
   PEN: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 29, yearly: 21, yearlyTotal: 249 },
-    pro: { monthly: 89, yearly: 66, yearlyTotal: 790 },
+    basic: { monthly: 29, yearly: 19, yearlyTotal: 228 },
+    pro: { monthly: 89, yearly: 59, yearlyTotal: 708 },
   },
 
   // Уругвай
   UYU: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
-    basic: { monthly: 349, yearly: 249, yearlyTotal: 2990 },
-    pro: { monthly: 990, yearly: 742, yearlyTotal: 8900 },
+    basic: { monthly: 349, yearly: 249, yearlyTotal: 2988 },
+    pro: { monthly: 990, yearly: 690, yearlyTotal: 8280 },
   },
 };
 
