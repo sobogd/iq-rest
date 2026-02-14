@@ -62,7 +62,6 @@ const menuData = {
     { key: "languages", icon: Languages },
   ] as MenuItem[],
   reservations: [
-    { key: "reservationSettings", icon: Settings },
     { key: "tables", icon: Armchair },
     { key: "reservations", icon: CalendarDays },
   ] as MenuItem[],
@@ -192,23 +191,18 @@ function SidebarMenuContent() {
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {menuData.reservations.map((item) => {
-                const label = item.key === "reservationSettings"
-                  ? translations.sidebar.reservationSettings
-                  : translations.pages[item.key];
-                return (
-                  <SidebarMenuItem key={item.key}>
-                    <SidebarMenuButton
-                      tooltip={translations.pages[item.key]}
-                      isActive={activePage === item.key}
-                      onClick={() => handleMenuClick(item.key)}
-                    >
-                      <item.icon />
-                      <span>{label}</span>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
+              {menuData.reservations.map((item) => (
+                <SidebarMenuItem key={item.key}>
+                  <SidebarMenuButton
+                    tooltip={translations.pages[item.key]}
+                    isActive={activePage === item.key}
+                    onClick={() => handleMenuClick(item.key)}
+                  >
+                    <item.icon />
+                    <span>{translations.pages[item.key]}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

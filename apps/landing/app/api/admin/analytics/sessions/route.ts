@@ -113,7 +113,7 @@ export async function GET(request: NextRequest) {
         },
       });
 
-      // Check source for each session (Ads vs Direct)
+      // Check source and session type for each session
       const sessionIds = sessions.map(s => s.sessionId);
       const allEventsForSessions = await prisma.analyticsEvent.findMany({
         where: {
@@ -121,15 +121,20 @@ export async function GET(request: NextRequest) {
         },
         select: {
           sessionId: true,
+          event: true,
           meta: true,
         },
       });
 
-      // Determine source for each session
+      // Determine source, type, and event count for each session
       const sessionSourceMap = new Map<string, { source: string; adValues?: string }>();
+      const sessionTypeMap = new Map<string, "signup" | "dashboard" | null>();
+      const sessionEventCount = new Map<string, number>();
       const adParams = ["ad", "kw", "mt"];
 
       for (const evt of allEventsForSessions) {
+        sessionEventCount.set(evt.sessionId, (sessionEventCount.get(evt.sessionId) || 0) + 1);
+        // Track ad source
         const meta = evt.meta as { params?: Record<string, string> } | null;
         if (meta?.params) {
           const hasAdParam = adParams.some(p => p in meta.params!) || "gclid" in meta.params;
@@ -143,6 +148,14 @@ export async function GET(request: NextRequest) {
             });
           }
         }
+
+        // Track session type: signup takes priority over dashboard
+        const currentType = sessionTypeMap.get(evt.sessionId);
+        if (evt.event === "auth_signup") {
+          sessionTypeMap.set(evt.sessionId, "signup");
+        } else if (evt.event.startsWith("dashboard_") && currentType !== "signup") {
+          sessionTypeMap.set(evt.sessionId, "dashboard");
+        }
       }
 
       let sessionsWithSource = sessions.map(s => {
@@ -151,6 +164,8 @@ export async function GET(request: NextRequest) {
           ...s,
           source: sourceInfo?.source || "Direct",
           adValues: sourceInfo?.adValues,
+          sessionType: sessionTypeMap.get(s.sessionId) || null,
+          eventCount: sessionEventCount.get(s.sessionId) || 0,
         };
       });
 

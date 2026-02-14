@@ -857,36 +857,6 @@
           "ctaButton": "Alustage tasuta"
         }
       },
-      "landing-redesign": {
-        "title": "Uuendatud 'Alustage' leht kõrgemate konversioonide jaoks",
-        "description": "Oleme täielikult ümber kujundanud meie registreerimislehe, keskendudes konversioonide optimeerimisele, esitledes väärtuspakkumisi, sotsiaalset tõendit ja sujuvat kasutajakogemust.",
-        "meta": {
-          "title": "'Alustage' lehe ümberkujundamine - IQ Rest Changelog",
-          "description": "IQ Rest käivitab ümber kujundatud registreerimislehe, millel on paranenud UX, sotsiaalne tõend ja konversioonikeskne disain restorani QR menüü loomise jaoks."
-        },
-        "content": {
-          "intro": "Meil on hea meel teatada meie 'Alustage' lehe täielikust ümberkujundamisest, mis on loodud spetsiaalselt selleks, et aidata restoranide ja kohvikute omanikel luua oma digitaalset QR menüüd kiiremini kui kunagi varem. See värskendus keskendub väärtuse selgele edastamisele, usalduse loomisele sotsiaalse tõendiga ja sujuva registreerimiskogemuse pakkumisele, mis kestab vähem kui 5 minutit algusest lõpuni.",
-          "image1Alt": "Uus IQ Rest'i alustamise leht väärtuspakkumiste ja sotsiaalse tõendiga",
-          "image1Caption": "Uuendatud registreerimisleht, millel on selged väärtuspakkumised ja restorani loend",
-          "section1Title": "Selged väärtuspakkumised kiirelt",
-          "section1Text": "Uus disain kuvab silmapaistvalt neli peamist eelist, mis restoranide omanikele kõige rohkem korda lähevad: tehnilisi oskusi pole vaja, kohesed menüü värskendused, QR kood ja veebisait on kaasas ning tasuta alustamine. Iga eelis esitatakse puhtas kaardiformaadis intuitiivsete ikoonidega, muutes kohe selgeks, mida IQ Rest pakub. See lähenemine aitab hõivatud restoranide omanikel mõista väärtuspakkumist sekunditega pärast lehe avamist.",
-          "section2Title": "Sotsiaalne tõend, mis loob usaldust",
-          "section2Text": "Oleme lisanud dünaamilise restorani loendi, mis näitab, kui palju ettevõtteid juba IQ Rest'i kasutab. See loend uuendab automaatselt meie kasvumäära põhjal, pakkudes autentset sotsiaalset tõendit, mis aitab uutel külastajatel end otsuse tegemisel kindlalt tunda. Näha, et üle 1400 restorani usaldab juba IQ Rest, vähendab oluliselt kõhklusi ja julgustab registreerimisi.",
-          "section3Title": "Sujuv registreerimisvoog",
-          "section3Text": "Kogu registreerimisprotsess toimub nüüd ühel lehel ühtse paigutusega. Olenemata sellest, kas sisestate oma e-posti aadressi või kinnitate oma koodi, jääb disain samaks - ainult sisestusväli muutub. See loob sujuvama, vähem järsu kogemuse. Oleme lisanud ka visuaalse protsessi indikaatori, mis näitab kolme lihtsat sammu: Registreeruge, Lisage menüü ja Saage QR. See läbipaistvus aitab kasutajatel mõista, mida oodata, ja vähendab loobumist.",
-          "benefitsTitle": "Peamised täiustused selles värskenduses",
-          "benefit1": "Väärtuspakkumise kaardid koos ikoonidega kiireks arusaamiseks",
-          "benefit2": "Reaalajas restorani loend, mis pakub autentset sotsiaalset tõendit",
-          "benefit3": "Ühtne lehe disain nii e-posti kui OTP kinnitamise etappide jaoks",
-          "benefit4": "Visuaalne 3-sammuline protsessi indikaator läbipaistvuse tagamiseks",
-          "benefit5": "Konversioonikeskne tekst: 'Looge oma digitaalne menüü 5 minutiga'",
-          "benefit6": "Reaalajas e-posti valideerimine visuaalse tagasisidega",
-          "conclusionTitle": "Restoranide edu nimel loodud",
-          "conclusionText": "Iga selle ümberkujundamise element on loodud restoranide ja kohvikute omanike silmas pidades. Me mõistame, et olete hõivatud oma äri juhtimisega, seetõttu oleme registreerimisprotsessi teinud võimalikult kiireks ja rahustavaks. Uus leht näitab selgelt, mida te saate, kui lihtne on alustada ja et tuhanded teised restoranid on juba sama valiku teinud. Olenemata sellest, kas olete väike kohvik või kasvav restoranikett, saate nüüd luua oma professionaalse QR menüü veebisaidi vaid 5 minutiga.",
-          "ctaText": "Kas olete valmis looma oma restorani digitaalset menüüd?",
-          "ctaButton": "Alustage tasuta"
-        }
-      },
       "auth": {
         "title": "Uus kasutaja autentimise liides",
         "description": "Oleme käivitanud lihtsa ja turvalise e-posti põhise autentimissüsteemi, mis võimaldab teil luua oma restorani veebisaidi ja QR menüü minutitega.",
@@ -1001,53 +971,6 @@
     "hint": "Kinnitage Enter, et saata, Shift+Enter uue rea jaoks",
     "send": "Saada",
     "supportTeam": "Tugimeeskond"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Loo oma digitaalne menüü 5 minutiga - IQ Rest",
-      "description": "QR menüü ja veebisait teie restoranile. Valmis koheselt. Tehnilisi oskusi ei ole vaja."
-    },
-    "title": "Loo oma digitaalne menüü 5 minutiga",
-    "subtitle": "QR menüü ja veebisait teie restoranile. Valmis koheselt.",
-    "emailLabel": "E-post",
-    "emailPlaceholder": "Sisestage e-post, et alustada loomist",
-    "otpPlaceholder": "Sisestage 4-kohaline kood",
-    "continue": "Loo minu menüü",
-    "sending": "Loomine...",
-    "verifyTitle": "Kontrollige oma e-posti",
-    "verifySubtitle": "Saime 4-kohalise koodi aadressile {email}",
-    "verify": "Kinnita",
-    "verifying": "Kinnitamine...",
-    "changeEmail": "Muuda e-posti",
-    "resendCode": "Saada kood uuesti",
-    "successTitle": "Tere tulemast!",
-    "successSubtitle": "Olete edukalt sisse logitud",
-    "redirecting": "Suunamine juhtpaneelile...",
-    "errors": {
-      "sendFailed": "Kinnituskoode ei õnnestunud saata. Palun proovige uuesti.",
-      "verifyFailed": "Koodi kinnitamine ebaõnnestus. Palun proovige uuesti."
-    },
-    "valueProps": {
-      "noSkills": "Tehnilisi oskusi ei ole vaja",
-      "instantUpdates": "Kohesed menüü värskendused",
-      "qrIncluded": "QR kood + veebisait kaasas",
-      "freeStart": "Tasuta alustamiseks"
-    },
-    "formHelper": "Krediitkaarti ei ole vaja",
-    "setupTime": "Seadistamine 5 minutiga",
-    "hasAccount": "Kas teil on juba konto?",
-    "signIn": "Logi sisse",
-    "restaurantCounter": "Liitu {count} restoraniga, kes juba kasutavad IQ Rest",
-    "steps": {
-      "signUp": "Registreeru oma e-posti aadressiga",
-      "addMenu": "Lisa oma menüütooted",
-      "getQr": "Hangi oma QR kood ja alusta"
-    },
-    "motivational": {
-      "title": "Alustage tellimuste vastuvõtmist juba täna",
-      "subtitle": "Teie kliendid ootavad digitaalset menüüd"
-    },
-    "icloudWarning": "iCloud võib e-kirju viivitada või blokeerida. Kontrollige rämpsposti või kasutage Gmail/Outlook."
   },
   "reservations": {
     "title": "Broneeringud",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Kuna teie restorani külalistele broneeringute tegemine on vajalik, peate teenusele tellima.",
     "subscribe": "Telli",
     "reservationsEnabled": "Luba broneeringud",

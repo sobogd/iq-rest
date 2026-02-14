@@ -857,36 +857,6 @@
           "ctaButton": "Ücretsiz Başlayın"
         }
       },
-      "landing-redesign": {
-        "title": "Daha Yüksek Dönüşümler İçin Yeniden Tasarlanmış Başlayın Sayfası",
-        "description": "Kayıt sayfamızı dönüşüm optimizasyonuna odaklanarak tamamen yeniden tasarladık, değer önerileri, sosyal kanıt ve akıcı bir kullanıcı deneyimi içeriyor.",
-        "meta": {
-          "title": "Başlayın Sayfası Yeniden Tasarımı - IQ Rest Günlüğü",
-          "description": "IQ Rest, restoran QR menüsü oluşturma için geliştirilmiş UX, sosyal kanıt sayacı ve dönüşüm odaklı tasarımla yeniden tasarlanmış kayıt sayfasını sunuyor."
-        },
-        "content": {
-          "intro": "Restoran ve kafe sahiplerinin dijital QR menülerini daha hızlı oluşturmalarına yardımcı olmak için özel olarak tasarlanmış Başlayın sayfamızın tamamen yeniden tasarlandığını duyurmaktan heyecan duyuyoruz. Bu güncelleme, değeri net bir şekilde iletmeye, sosyal kanıt aracılığıyla güven oluşturmaya ve başlangıçtan sona kadar 5 dakikadan daha kısa sürede sorunsuz bir kayıt deneyimi sunmaya odaklanıyor.",
-          "image1Alt": "Yeni IQ Rest başlatma sayfası, değer önerileri ve sosyal kanıt ile",
-          "image1Caption": "Açık değer önerileri ve restoran sayacı ile yeniden tasarlanmış kayıt sayfası",
-          "section1Title": "Bir Bakışta Açık Değer Önerileri",
-          "section1Text": "Yeni tasarım, restoran sahiplerinin en çok önem verdiği dört temel faydayı belirgin bir şekilde gösterir: teknik beceri gerektirmez, anlık menü güncellemeleri, QR kodu ve web sitesi dahildir, ve ücretsiz olarak başlamak. Her fayda, sezgisel simgelerle temiz bir kart formatında sunulur, bu da IQ Rest'in ne sunduğunu hemen netleştirir. Bu yaklaşım, meşgul restoran sahiplerinin sayfaya geldiklerinde değer önerisini anlamalarını sağlar.",
-          "section2Title": "Güveni Artıran Sosyal Kanıt",
-          "section2Text": "IQ Rest'i zaten kullanan işletmelerin sayısını gösteren dinamik bir restoran sayacı ekledik. Bu sayaç, büyüme oranımıza göre otomatik olarak güncellenir ve yeni ziyaretçilerin platformumuzu denemek için kendilerini güvende hissetmelerine yardımcı olan otantik sosyal kanıt sağlar. 1,400'den fazla restoranın IQ Rest'e güvendiğini görmek, tereddütü önemli ölçüde azaltır ve kayıtları teşvik eder.",
-          "section3Title": "Akıcı Kayıt Akışı",
-          "section3Text": "Tüm kayıt süreci artık tek bir sayfada tutarlı bir düzenle gerçekleşiyor. E-posta adresinizi girerken veya kodunuzu doğrularken, tasarım aynı kalıyor - sadece giriş alanı değişiyor. Bu, daha akıcı, daha az sarsıcı bir deneyim yaratır. Ayrıca, üç basit adımı gösteren görsel bir süreç göstergesi ekledik: Kayıt Ol, Menü Ekle ve QR Al. Bu şeffaflık, kullanıcıların ne bekleyeceklerini anlamalarına yardımcı olur ve terk oranını azaltır.",
-          "benefitsTitle": "Bu Güncellemedeki Temel İyileştirmeler",
-          "benefit1": "Anında kavrayış için simgelerle değer önerisi kartları",
-          "benefit2": "Otantik sosyal kanıt sağlayan canlı restoran sayacı",
-          "benefit3": "E-posta ve OTP doğrulama adımları için birleşik sayfa tasarımı",
-          "benefit4": "Şeffaflık için görsel 3 adımlı süreç göstergesi",
-          "benefit5": "Dönüşüm odaklı metin: 'Dijital Menünüzü 5 Dakikada Oluşturun'",
-          "benefit6": "Görsel geri bildirim ile gerçek zamanlı e-posta doğrulaması",
-          "conclusionTitle": "Restoran Başarısı İçin Tasarlandı",
-          "conclusionText": "Bu yeniden tasarımın her unsuru, restoran ve kafe sahipleri göz önünde bulundurularak hazırlandı. İşletmenizi yönetirken meşgul olduğunuzu anlıyoruz, bu nedenle kayıt sürecini mümkün olduğunca hızlı ve güven verici hale getirdik. Yeni sayfa, ne alacağınızı, nasıl başlayacağınızı ve diğer binlerce restoranın aynı seçimi yaptığını açıkça gösteriyor. İster küçük bir kafe olun, ister büyüyen bir restoran zinciri, artık profesyonel QR menü web sitenizi sadece 5 dakikada oluşturabilirsiniz.",
-          "ctaText": "Restoranınızın dijital menüsünü oluşturmaya hazır mısınız?",
-          "ctaButton": "Ücretsiz Başlayın"
-        }
-      },
       "auth": {
         "title": "Yeni Kullanıcı Kimlik Doğrulama Arayüzü",
         "description": "Restoran web sitenizi ve QR menünüzü dakikalar içinde oluşturmanızı sağlayan basit ve güvenli bir e-posta tabanlı kimlik doğrulama sistemi başlattık.",
@@ -1001,53 +971,6 @@
     "hint": "Göndermek için Enter'a, yeni satır için Shift+Enter'a basın",
     "send": "Gönder",
     "supportTeam": "Destek Ekibi"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Dijital Menünüzü 5 Dakikada Oluşturun - IQ Rest",
-      "description": "Restoranınız için QR menü ve web sitesi. Anında hazır. Teknik beceri gerektirmiyor."
-    },
-    "title": "Dijital Menünüzü 5 Dakikada Oluşturun",
-    "subtitle": "Restoranınız için QR menü ve web sitesi. Anında hazır.",
-    "emailLabel": "E-posta",
-    "emailPlaceholder": "Oluşturmaya başlamak için e-posta girin",
-    "otpPlaceholder": "4 haneli kodu girin",
-    "continue": "Menümü Oluştur",
-    "sending": "Oluşturuluyor...",
-    "verifyTitle": "E-postanızı kontrol edin",
-    "verifySubtitle": "{email} adresine 4 haneli bir kod gönderdik",
-    "verify": "Doğrula",
-    "verifying": "Doğrulama yapılıyor...",
-    "changeEmail": "E-postayı değiştir",
-    "resendCode": "Kodu yeniden gönder",
-    "successTitle": "Hoş geldiniz!",
-    "successSubtitle": "Başarıyla oturum açtınız",
-    "redirecting": "Kontrol paneline yönlendiriliyor...",
-    "errors": {
-      "sendFailed": "Doğrulama kodu gönderilemedi. Lütfen tekrar deneyin.",
-      "verifyFailed": "Kod doğrulaması başarısız oldu. Lütfen tekrar deneyin."
-    },
-    "valueProps": {
-      "noSkills": "Teknik beceri gerektirmiyor",
-      "instantUpdates": "Anlık menü güncellemeleri",
-      "qrIncluded": "QR kodu + web sitesi dahil",
-      "freeStart": "Başlamak ücretsiz"
-    },
-    "formHelper": "Kredi kartı gerekmiyor",
-    "setupTime": "5 dakikada kurulum",
-    "hasAccount": "Zaten bir hesabınız var mı?",
-    "signIn": "Oturum aç",
-    "restaurantCounter": "IQ Rest'i kullanan {count} Restorana katılın",
-    "steps": {
-      "signUp": "E-posta ile kaydolun",
-      "addMenu": "Menü öğelerinizi ekleyin",
-      "getQr": "QR kodunuzu alın ve başlayın"
-    },
-    "motivational": {
-      "title": "Bugün sipariş almaya başlayın",
-      "subtitle": "Müşterileriniz dijital menüyü bekliyor"
-    },
-    "icloudWarning": "iCloud e-postaları geciktirebilir veya engelleyebilir. Spam klasörünü kontrol edin veya Gmail/Outlook kullanın."
   },
   "reservations": {
     "title": "Rezervasyonlar",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Restoran misafirlerinize rezervasyon imkanı sunmak için hizmete abone olmanız gerekmektedir.",
     "subscribe": "Abone Ol",
     "reservationsEnabled": "Rezervasyonları Etkinleştir",

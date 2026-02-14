@@ -857,36 +857,6 @@
           "ctaButton": "Inizia Gratis"
         }
       },
-      "landing-redesign": {
-        "title": "Pagina di Inizio Ridisegnata per Maggiori Conversioni",
-        "description": "Abbiamo completamente ridisegnato la nostra pagina di registrazione con un focus sull'ottimizzazione delle conversioni, presentando proposte di valore, prova sociale e un'esperienza utente semplificata.",
-        "meta": {
-          "title": "Ridisegno della Pagina di Inizio - Changelog IQ Rest",
-          "description": "IQ Rest lancia la pagina di registrazione ridisegnata con UX migliorata, contatore di prova sociale e design focalizzato sulla conversione per la creazione di menu QR per ristoranti"
-        },
-        "content": {
-          "intro": "Siamo entusiasti di annunciare un completo ridisegno della nostra pagina di Inizio, costruita specificamente per aiutare i proprietari di ristoranti e caffè a creare il loro menu QR digitale più velocemente che mai. Questo aggiornamento si concentra sulla comunicazione chiara del valore, sulla costruzione di fiducia attraverso la prova sociale e sulla fornitura di un'esperienza di registrazione senza soluzione di continuità che richiede meno di 5 minuti dall'inizio alla fine.",
-          "image1Alt": "Nuova pagina di inizio IQ Rest con proposte di valore e prova sociale",
-          "image1Caption": "Pagina di registrazione ridisegnata con chiare proposte di valore e contatore del ristorante",
-          "section1Title": "Chiare Proposte di Valore a Colpo d'Occhio",
-          "section1Text": "Il nuovo design mostra in modo prominente quattro vantaggi chiave che interessano di più i proprietari di ristoranti: nessuna competenza tecnica richiesta, aggiornamenti immediati del menu, codice QR e sito web inclusi, e gratuito per iniziare. Ogni vantaggio è presentato in un formato a scheda pulito con icone intuitive, rendendo immediatamente chiaro ciò che offre IQ Rest. Questo approccio aiuta i proprietari di ristoranti impegnati a comprendere la proposta di valore in pochi secondi dall'arrivo sulla pagina.",
-          "section2Title": "Prova Sociale che Costruisce Fiducia",
-          "section2Text": "Abbiamo aggiunto un contatore dinamico dei ristoranti che mostra quante attività stanno già utilizzando IQ Rest. Questo contatore si aggiorna automaticamente in base al nostro tasso di crescita, fornendo una prova sociale autentica che aiuta i nuovi visitatori a sentirsi sicuri nella loro decisione di provare la nostra piattaforma. Vedere che oltre 1.400 ristoranti già si fidano di IQ Rest riduce significativamente l'esitazione e incoraggia le registrazioni.",
-          "section3Title": "Flusso di Registrazione Semplificato",
-          "section3Text": "L'intero processo di registrazione ora avviene su un'unica pagina con un layout coerente. Che tu stia inserendo la tua email o verificando il tuo codice, il design rimane lo stesso - cambia solo il campo di input. Questo crea un'esperienza più fluida e meno sconvolgente. Abbiamo anche aggiunto un indicatore visivo del processo che mostra i tre semplici passaggi: Registrati, Aggiungi menu e Ottieni QR. Questa trasparenza aiuta gli utenti a comprendere esattamente cosa aspettarsi e riduce l'abbandono.",
-          "benefitsTitle": "Miglioramenti Chiave in Questo Aggiornamento",
-          "benefit1": "Schede di proposta di valore con icone per una comprensione immediata",
-          "benefit2": "Contatore di ristoranti dal vivo che fornisce prova sociale autentica",
-          "benefit3": "Design della pagina unificato per i passaggi di verifica email e OTP",
-          "benefit4": "Indicatore visivo del processo in 3 passaggi per trasparenza",
-          "benefit5": "Testo focalizzato sulla conversione: 'Crea il Tuo Menu Digitale in 5 Minuti'",
-          "benefit6": "Validazione email in tempo reale con feedback visivo",
-          "conclusionTitle": "Progettato per il Successo dei Ristoranti",
-          "conclusionText": "Ogni elemento di questo ridisegno è stato creato tenendo presente i proprietari di ristoranti e caffè. Comprendiamo che sei occupato a gestire la tua attività, quindi abbiamo reso il processo di registrazione il più veloce e rassicurante possibile. La nuova pagina mostra chiaramente cosa otterrai, quanto sia facile iniziare e che migliaia di altri ristoranti hanno già fatto la stessa scelta. Che tu sia un piccolo caffè o una catena di ristoranti in crescita, ora puoi creare il tuo sito web professionale per menu QR in soli 5 minuti.",
-          "ctaText": "Pronto a creare il menu digitale del tuo ristorante?",
-          "ctaButton": "Inizia Gratis"
-        }
-      },
       "auth": {
         "title": "Nuova Interfaccia di Autenticazione Utente",
         "description": "Abbiamo lanciato un sistema di autenticazione semplice e sicuro basato su email che ti consente di creare il sito web del tuo ristorante e menu QR in pochi minuti.",
@@ -1001,53 +971,6 @@
     "hint": "Premi Invio per inviare, Shift+Invio per una nuova riga",
     "send": "Invia",
     "supportTeam": "Team di Supporto"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Crea il tuo menu digitale in 5 minuti - IQ Rest",
-      "description": "Menu QR e sito web per il tuo ristorante. Pronto immediatamente. Nessuna competenza tecnica richiesta."
-    },
-    "title": "Crea il tuo menu digitale in 5 minuti",
-    "subtitle": "Menu QR e sito web per il tuo ristorante. Pronto immediatamente.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Inserisci l'email per iniziare a creare",
-    "otpPlaceholder": "Inserisci il codice a 4 cifre",
-    "continue": "Crea il mio menu",
-    "sending": "Creazione in corso...",
-    "verifyTitle": "Controlla la tua email",
-    "verifySubtitle": "Abbiamo inviato un codice a 4 cifre a {email}",
-    "verify": "Verifica",
-    "verifying": "Verifica in corso...",
-    "changeEmail": "Cambia email",
-    "resendCode": "Invia nuovamente il codice",
-    "successTitle": "Benvenuto!",
-    "successSubtitle": "Hai effettuato l'accesso con successo",
-    "redirecting": "Reindirizzamento al pannello di controllo...",
-    "errors": {
-      "sendFailed": "Invio del codice di verifica non riuscito. Per favore riprova.",
-      "verifyFailed": "Verifica del codice non riuscita. Per favore riprova."
-    },
-    "valueProps": {
-      "noSkills": "Nessuna competenza tecnica richiesta",
-      "instantUpdates": "Aggiornamenti del menu istantanei",
-      "qrIncluded": "Codice QR + sito web inclusi",
-      "freeStart": "Gratuito per iniziare"
-    },
-    "formHelper": "Nessuna carta di credito richiesta",
-    "setupTime": "Impostazione in 5 minuti",
-    "hasAccount": "Hai già un account?",
-    "signIn": "Accedi",
-    "restaurantCounter": "Unisciti a {count} ristoranti già utilizzando IQ Rest",
-    "steps": {
-      "signUp": "Registrati con la tua email",
-      "addMenu": "Aggiungi i tuoi piatti",
-      "getQr": "Ottieni il tuo codice QR e inizia"
-    },
-    "motivational": {
-      "title": "Inizia ad accettare ordini oggi",
-      "subtitle": "I tuoi clienti stanno aspettando un menu digitale"
-    },
-    "icloudWarning": "iCloud potrebbe ritardare o bloccare le email. Controlla lo Spam o usa Gmail/Outlook."
   },
   "reservations": {
     "title": "Prenotazioni",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Per rendere disponibili le prenotazioni ai tuoi ospiti del ristorante, devi iscriverti al servizio.",
     "subscribe": "Iscriviti",
     "reservationsEnabled": "Abilita Prenotazioni",

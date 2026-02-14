@@ -37,10 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/changelog/easy-qr-menu-cafe-control-panel', lastModified: '2025-11-29', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/faq-page-organization', lastModified: '2025-11-20', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/free-restaurant-website-improvements', lastModified: '2025-11-20', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/get-started-page-redesign', lastModified: '2025-11-19', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/user-authentication-interface', lastModified: '2024-11-19', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/subscription-plans-qr-menu-restaurant-website', lastModified: '2025-11-30', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/get-started', lastModified: '2025-12-16', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   // Generate sitemap entries for all locales

@@ -20,7 +20,6 @@ import { SettingsPage } from "../_pages/settings";
 import { DesignPage } from "../_pages/design";
 import { ContactsPage } from "../_pages/contacts";
 import { LanguagesPage } from "../_pages/languages";
-import { ReservationSettingsPage } from "../_pages/reservation-settings";
 import { TablesPage } from "../_pages/tables";
 import { ReservationsPage } from "../_pages/reservations";
 import { BillingPage } from "../_pages/billing";
@@ -43,7 +42,6 @@ const pageComponents: Record<PageKey, React.ComponentType> = {
   contacts: ContactsPage,
   languages: LanguagesPage,
   reservations: ReservationsPage,
-  reservationSettings: ReservationSettingsPage,
   tables: TablesPage,
   billing: BillingPage,
   support: SupportPage,

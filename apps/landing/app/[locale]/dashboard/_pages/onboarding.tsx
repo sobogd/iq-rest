@@ -13,9 +13,20 @@ import {
   Palette,
   Phone,
   Languages,
-  Settings,
+  LogOut,
+  FolderOpen,
+  Package,
+  Cog,
+  BarChart3,
+  CalendarDays,
+  Armchair,
+  CreditCard,
+  HelpCircle,
+  Shield,
+  Activity,
 } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
+import { isAdminEmail } from "@/lib/admin";
 import { toast } from "sonner";
 import { onboarding as onboardingAnalytics } from "@/lib/analytics";
 
@@ -45,28 +56,52 @@ const allSteps: Step[] = [
   { key: "items", progressKey: "hasItems", page: "items" },
 ];
 
-interface NextStep {
+interface NavItem {
   key: string;
   page: PageKey;
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const nextSteps: NextStep[] = [
+// Priority actions — drive conversion
+const prioritySteps: NavItem[] = [
   { key: "contacts", page: "contacts", icon: Phone },
-  { key: "settings", page: "settings", icon: Settings },
   { key: "design", page: "design", icon: Palette },
-  { key: "languages", page: "languages", icon: Languages },
   { key: "qrMenu", page: "qrMenu", icon: QrCode },
+];
+
+// All remaining sections
+const allSections: NavItem[] = [
+  { key: "categories", page: "categories", icon: FolderOpen },
+  { key: "items", page: "items", icon: Package },
+  { key: "settings", page: "settings", icon: Cog },
+  { key: "languages", page: "languages", icon: Languages },
+  { key: "analytics", page: "analytics", icon: BarChart3 },
+  { key: "tables", page: "tables", icon: Armchair },
+  { key: "reservations", page: "reservations", icon: CalendarDays },
+  { key: "billing", page: "billing", icon: CreditCard },
+  { key: "support", page: "support", icon: HelpCircle },
 ];
 
 export function OnboardingPage() {
   const t = useTranslations("dashboard.onboarding");
-  const { navigateFromOnboarding, setActivePage } = useDashboard();
+  const tPages = useTranslations("dashboard.pages");
+  const tDashboard = useTranslations("dashboard");
+  const { navigateFromOnboarding, setActivePage, setOnboardingCompleted } = useDashboard();
   const [data, setData] = useState<OnboardingData | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
   const [restaurantName, setRestaurantName] = useState("");
   const [creating, setCreating] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const cookies = document.cookie.split(";");
+    const emailCookie = cookies.find((c) => c.trim().startsWith("user_email="));
+    if (emailCookie) {
+      const email = decodeURIComponent(emailCookie.split("=")[1]);
+      setIsAdmin(isAdminEmail(email));
+    }
+  }, []);
 
   useEffect(() => {
     async function fetchProgress() {
@@ -87,6 +122,7 @@ export function OnboardingPage() {
           } else if (result.requiredCompleted) {
             // Track completed onboarding view
             onboardingAnalytics.complete();
+            setOnboardingCompleted(true);
           }
         }
       } catch (error) {
@@ -166,12 +202,10 @@ export function OnboardingPage() {
   if (allCompleted && slug) {
     return (
       <div className="flex h-full flex-col p-6 overflow-auto">
-        <div className="w-full">
+        <div className="w-full max-w-lg mx-auto">
           <div className="grid gap-6">
-            <div className="grid gap-2">
-              <h1 className="text-2xl font-bold">{t("completedTitle")}</h1>
-              <p className="text-muted-foreground">{t("completedSubtitle")}</p>
-            </div>
+            {/* Hero: status + view menu */}
+            <p className="text-sm font-medium text-green-600 dark:text-green-500">{t("completedSubtitle")}</p>
 
             <MenuPreviewModal menuUrl={`/m/${slug}`}>
               <Button className="w-full h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg">
@@ -180,21 +214,66 @@ export function OnboardingPage() {
               </Button>
             </MenuPreviewModal>
 
+            {/* Priority actions */}
             <div className="grid gap-2">
-              {nextSteps.map((nextStep) => (
+              {prioritySteps.map((item) => (
                 <button
-                  key={nextStep.key}
-                  onClick={() => setActivePage(nextStep.page)}
+                  key={item.key}
+                  onClick={() => setActivePage(item.page)}
                   className="flex items-center gap-3 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
                 >
-                  <nextStep.icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium">{t(`nextSteps.${nextStep.key}.title`)}</p>
+                    <p className="text-sm font-medium">{t(`nextSteps.${item.key}.title`)}</p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-muted-foreground shrink-0" />
                 </button>
               ))}
             </div>
+
+            {/* All sections grid */}
+            <div className="grid grid-cols-3 gap-2">
+              {allSections.map((item) => (
+                <button
+                  key={item.key}
+                  onClick={() => setActivePage(item.page)}
+                  className="flex flex-col items-center gap-1.5 p-3 rounded-lg border bg-card hover:bg-accent transition-colors"
+                >
+                  <item.icon className="h-5 w-5 text-muted-foreground" />
+                  <span className="text-xs text-center leading-tight">{tPages(item.page)}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Admin shortcuts */}
+            {isAdmin && (
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => setActivePage("admin")}
+                  className="flex items-center gap-2 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
+                >
+                  <Shield className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium">Companies</span>
+                </button>
+                <button
+                  onClick={() => setActivePage("adminAnalytics")}
+                  className="flex items-center gap-2 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
+                >
+                  <Activity className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium">Analytics</span>
+                </button>
+              </div>
+            )}
+
+            {/* Logout */}
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => { window.location.href = "/api/auth/logout"; }}
+            >
+              <LogOut className="h-4 w-4 mr-2" />
+              {tDashboard("logout")}
+            </Button>
           </div>
         </div>
       </div>

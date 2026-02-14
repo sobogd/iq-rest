@@ -23,10 +23,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PageLoader } from "../_ui/page-loader";
 
@@ -53,6 +54,8 @@ interface SessionInfo {
   meta?: Record<string, unknown> | null;
   source?: string;
   adValues?: string;
+  sessionType?: "signup" | "dashboard" | null;
+  eventCount?: number;
 }
 
 interface Stats {
@@ -369,6 +372,9 @@ export function AdminAnalyticsPage() {
   const [eventsLoading, setEventsLoading] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
+  // Event detail modal state
+  const [detailEvent, setDetailEvent] = useState<AnalyticsEvent | null>(null);
+
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
@@ -403,6 +409,7 @@ export function AdminAnalyticsPage() {
       month: "short",
       hour: "2-digit",
       minute: "2-digit",
+      second: "2-digit",
     });
   };
 
@@ -713,16 +720,9 @@ export function AdminAnalyticsPage() {
                   onClick={() => handleSessionClick(event.sessionId)}
                 >
                   <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium">
-                        {formatEventName(event.event)}
-                      </span>
-                      {event.userId && (
-                        <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
-                          logged in
-                        </span>
-                      )}
-                    </div>
+                    <span className="text-sm font-medium">
+                      {formatEventName(event.event)}
+                    </span>
                     <span className="text-[10px] text-muted-foreground">
                       {formatDate(event.createdAt)}
                     </span>
@@ -737,13 +737,13 @@ export function AdminAnalyticsPage() {
         </Card>
       </div>
 
-      {/* Sessions Modal */}
-      <Dialog open={sessionsModalOpen} onOpenChange={setSessionsModalOpen}>
-        <DialogContent className="max-w-lg">
-          <DialogHeader>
-            <DialogTitle>{sessionsModalTitle}</DialogTitle>
-          </DialogHeader>
-          <ScrollArea className="max-h-[60vh]">
+      {/* Sessions Sheet */}
+      <Sheet open={sessionsModalOpen} onOpenChange={setSessionsModalOpen}>
+        <SheetContent side="right" className="w-full sm:max-w-lg p-0 flex flex-col">
+          <SheetHeader className="p-6 pb-0 text-left">
+            <SheetTitle>{sessionsModalTitle}</SheetTitle>
+          </SheetHeader>
+          <ScrollArea className="flex-1 px-6 pb-6">
             {sessionsLoading ? (
               <div className="flex justify-center py-8">
                 <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
@@ -761,58 +761,50 @@ export function AdminAnalyticsPage() {
                       className="flex items-center justify-between p-3 rounded-lg bg-muted/30 cursor-pointer hover:bg-muted/50"
                       onClick={() => handleSessionClick(session.sessionId)}
                     >
-                      <div className="flex flex-col gap-0.5">
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-mono">{session.sessionId.slice(0, 12)}...</span>
-                          {session.userId && (
-                            <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
-                              logged in
-                            </span>
-                          )}
-                          {country && (
-                            <span className="text-sm">{countryToFlag(country)}</span>
-                          )}
+                      <div className="flex items-center gap-2.5">
+                        {session.sessionType === "signup" ? (
+                          <span className="h-2.5 w-2.5 rounded-full bg-green-500 shrink-0" title="Signed up" />
+                        ) : session.sessionType === "dashboard" ? (
+                          <span className="h-2.5 w-2.5 rounded-full bg-red-500 shrink-0" title="Returning user" />
+                        ) : (session.eventCount ?? 0) <= 2 ? (
+                          <span className="h-2.5 w-2.5 rounded-full bg-violet-500 shrink-0" title="Bounce" />
+                        ) : (
+                          <span className="h-2.5 w-2.5 rounded-full bg-muted shrink-0" />
+                        )}
+                        {country && (
+                          <span className="text-sm shrink-0">{countryToFlag(country)}</span>
+                        )}
+                        <div className="flex flex-col gap-0.5 min-w-0">
+                          <span className="text-sm">
+                            {formatDate(session.createdAt)}
+                          </span>
+                          <span className={`text-[9px] ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                            {session.source === "Ads" ? `Ads: ${session.adValues || "gclid"}` : "Direct"}
+                          </span>
                         </div>
-                        <span className="text-[10px] text-muted-foreground">
-                          {formatDate(session.createdAt)}
-                        </span>
-                        <span className={`text-[9px] ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                          {session.source === "Ads" ? `Ads: ${session.adValues || "gclid"}` : "Direct"}
-                        </span>
                       </div>
-                      <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                      <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
                     </div>
                   );
                 })}
               </div>
             )}
           </ScrollArea>
-        </DialogContent>
-      </Dialog>
+        </SheetContent>
+      </Sheet>
 
-      {/* Session Events Modal */}
-      <Dialog open={eventsModalOpen} onOpenChange={setEventsModalOpen}>
-        <DialogContent className="max-w-2xl">
-          <DialogHeader>
-            <DialogTitle className="flex items-start justify-between">
-              <div className="flex flex-col gap-1">
-                <span>Session: {eventsModalSessionId?.slice(0, 12)}...</span>
-                <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                  {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
-                </span>
-              </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-destructive hover:text-destructive hover:bg-destructive/10"
-                onClick={() => eventsModalSessionId && handleDeleteSession(eventsModalSessionId)}
-                disabled={deleting}
-              >
-                <Trash2 className={`h-4 w-4 ${deleting ? "animate-pulse" : ""}`} />
-              </Button>
-            </DialogTitle>
-          </DialogHeader>
-          <ScrollArea className="max-h-[70vh]">
+      {/* Session Events Sheet (opens on top of sessions sheet) */}
+      <Sheet open={eventsModalOpen} onOpenChange={setEventsModalOpen}>
+        <SheetContent side="right" className="w-full sm:max-w-lg p-0 flex flex-col">
+          <SheetHeader className="p-6 pb-0 text-left">
+            <SheetTitle className="flex flex-col gap-0.5">
+              <span className="font-mono text-sm break-all">{eventsModalSessionId}</span>
+              <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
+              </span>
+            </SheetTitle>
+          </SheetHeader>
+          <ScrollArea className="flex-1 px-6 pb-6">
             {eventsLoading ? (
               <div className="flex justify-center py-8">
                 <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
@@ -824,66 +816,21 @@ export function AdminAnalyticsPage() {
                 {sessionEvents.map((event, index) => {
                   const prevEvent = index < sessionEvents.length - 1 ? sessionEvents[index + 1] : null;
                   const timeDiff = prevEvent ? formatTimeDiff(event.createdAt, prevEvent.createdAt) : null;
+                  const hasDetails = (event.meta && Object.keys(event.meta).length > 0) || event.page;
 
                   return (
                     <div key={event.id}>
-                      {event.meta && Object.keys(event.meta).length > 0 ? (
-                        <Collapsible>
-                          <CollapsibleTrigger className="w-full text-left">
-                            <div className="p-3 rounded-lg bg-muted/30 hover:bg-muted/50 cursor-pointer">
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                  <ChevronRight className="h-3 w-3 text-muted-foreground transition-transform [[data-state=open]_&]:rotate-90" />
-                                  <span className="text-sm font-medium">
-                                    {formatEventName(event.event)}
-                                  </span>
-                                  {event.userId && (
-                                    <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
-                                      logged in
-                                    </span>
-                                  )}
-                                </div>
-                                <span className="text-xs text-muted-foreground">
-                                  {formatDate(event.createdAt)}
-                                </span>
-                              </div>
-                              {event.page && (
-                                <p className="text-xs text-muted-foreground mt-1 ml-5">
-                                  {event.page}
-                                </p>
-                              )}
-                            </div>
-                          </CollapsibleTrigger>
-                          <CollapsibleContent>
-                            <div className="text-xs bg-muted/50 p-3 rounded-b-lg -mt-1 ml-5 mr-0 space-y-0.5 border-t border-muted">
-                              {formatMeta(event.meta)}
-                            </div>
-                          </CollapsibleContent>
-                        </Collapsible>
-                      ) : (
-                        <div className="p-3 rounded-lg bg-muted/30">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              <span className="text-sm font-medium ml-5">
-                                {formatEventName(event.event)}
-                              </span>
-                              {event.userId && (
-                                <span className="text-[10px] text-green-600 bg-green-100 dark:bg-green-900/30 px-1.5 py-0.5 rounded">
-                                  logged in
-                                </span>
-                              )}
-                            </div>
-                            <span className="text-xs text-muted-foreground">
-                              {formatDate(event.createdAt)}
-                            </span>
-                          </div>
-                          {event.page && (
-                            <p className="text-xs text-muted-foreground mt-1 ml-5">
-                              {event.page}
-                            </p>
-                          )}
-                        </div>
-                      )}
+                      <div
+                        className={`p-3 rounded-lg bg-muted/30 ${hasDetails ? "cursor-pointer hover:bg-muted/50" : ""}`}
+                        onClick={() => hasDetails && setDetailEvent(event)}
+                      >
+                        <p className="text-[10px] text-muted-foreground">
+                          {formatDate(event.createdAt)}
+                        </p>
+                        <p className="text-sm font-medium mt-0.5">
+                          {formatEventName(event.event)}
+                        </p>
+                      </div>
                       {timeDiff && (
                         <div className="flex justify-center py-1">
                           <span className="text-[10px] text-muted-foreground">
@@ -897,6 +844,47 @@ export function AdminAnalyticsPage() {
               </div>
             )}
           </ScrollArea>
+          {!eventsLoading && sessionEvents.length > 0 && (
+            <div className="p-6 pt-0">
+              <Button
+                variant="destructive"
+                className="w-full"
+                onClick={() => eventsModalSessionId && handleDeleteSession(eventsModalSessionId)}
+                disabled={deleting}
+              >
+                <Trash2 className={`h-4 w-4 mr-2 ${deleting ? "animate-pulse" : ""}`} />
+                Delete session
+              </Button>
+            </div>
+          )}
+        </SheetContent>
+      </Sheet>
+
+      {/* Event Detail Modal */}
+      <Dialog open={!!detailEvent} onOpenChange={(open) => !open && setDetailEvent(null)}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>{detailEvent && formatEventName(detailEvent.event)}</DialogTitle>
+          </DialogHeader>
+          {detailEvent && (
+            <div className="space-y-2 text-sm">
+              <div className="flex gap-2">
+                <span className="text-muted-foreground">Time:</span>
+                <span>{formatDate(detailEvent.createdAt)}</span>
+              </div>
+              {detailEvent.page && (
+                <div className="flex gap-2">
+                  <span className="text-muted-foreground">Page:</span>
+                  <span className="break-all">{detailEvent.page}</span>
+                </div>
+              )}
+              {detailEvent.meta && Object.keys(detailEvent.meta).length > 0 && (
+                <div className="space-y-0.5 text-xs pt-1 border-t">
+                  {formatMeta(detailEvent.meta)}
+                </div>
+              )}
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </div>

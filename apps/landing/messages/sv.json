@@ -857,36 +857,6 @@
           "ctaButton": "Kom igång gratis"
         }
       },
-      "landing-redesign": {
-        "title": "Omdesignad Kom igång-sida för högre konverteringar",
-        "description": "Vi har helt omdesignat vår registreringssida med fokus på konverteringsoptimering, med värdepropositioner, social bevisning och en strömlinjeformad användarupplevelse.",
-        "meta": {
-          "title": "Omdesignad Kom igång-sida - IQ Rest changelog",
-          "description": "IQ Rest lanserar omdesignad registreringssida med förbättrad UX, social bevisningsräknare och konverteringsfokuserad design för skapande av restaurang QR-meny"
-        },
-        "content": {
-          "intro": "Vi är glada att kunna meddela en fullständig omdesign av vår Kom igång-sida, byggd specifikt för att hjälpa restaurang- och caféägare att skapa sin digitala QR-meny snabbare än någonsin. Denna uppdatering fokuserar på att tydligt kommunicera värde, bygga förtroende genom social bevisning och ge en sömlös registreringsupplevelse som tar mindre än 5 minuter från början till slut.",
-          "image1Alt": "Ny IQ Rest kom igång-sida med värdepropositioner och social bevisning",
-          "image1Caption": "Omdesignad registreringssida med tydliga värdepropositioner och restaurangräknare",
-          "section1Title": "Tydliga värdepropositioner vid en ögonkast",
-          "section1Text": "Den nya designen visar framträdande fyra nyckelfördelar som restaurangägare bryr sig mest om: inga tekniska färdigheter krävs, omedelbara menyuppdateringar, QR-kod och webbplats ingår, och gratis att börja. Varje fördel presenteras i ett rent kortformat med intuitiva ikoner, vilket gör det omedelbart tydligt vad IQ Rest erbjuder. Denna strategi hjälper upptagna restaurangägare att förstå värdepropositionen inom sekunder efter att de landat på sidan.",
-          "section2Title": "Social bevisning som bygger förtroende",
-          "section2Text": "Vi har lagt till en dynamisk restaurangräknare som visar hur många företag som redan använder IQ Rest. Denna räknare uppdateras automatiskt baserat på vår tillväxttakt, vilket ger autentisk social bevisning som hjälper nya besökare att känna sig säkra i sitt beslut att prova vår plattform. Att se att över 1 400 restauranger redan litar på IQ Rest minskar avsevärt tvekan och uppmuntrar registreringar.",
-          "section3Title": "Strömlinjeformad registreringsflöde",
-          "section3Text": "Hela registreringsprocessen sker nu på en enda sida med en konsekvent layout. Oavsett om du anger din e-post eller verifierar din kod, förblir designen densamma - endast inmatningsfältet ändras. Detta skapar en smidigare, mindre störande upplevelse. Vi har också lagt till en visuell processindikator som visar de tre enkla stegen: Registrera dig, Lägg till meny och Få QR. Denna transparens hjälper användare att förstå exakt vad de kan förvänta sig och minskar avhopp.",
-          "benefitsTitle": "Viktiga förbättringar i denna uppdatering",
-          "benefit1": "Värdepropositionskort med ikoner för omedelbar förståelse",
-          "benefit2": "Live restaurangräknare som ger autentisk social bevisning",
-          "benefit3": "Enhetlig sidlayout för både e-post och OTP-verifieringssteg",
-          "benefit4": "Visuell 3-stegs processindikator för transparens",
-          "benefit5": "Konverteringsfokuserad text: 'Skapa din digitala meny på 5 minuter'",
-          "benefit6": "Real-tids e-postvalidering med visuell feedback",
-          "conclusionTitle": "Designad för restaurangens framgång",
-          "conclusionText": "Varje element i denna omdesign har utformats med restaurang- och caféägare i åtanke. Vi förstår att du är upptagen med att driva ditt företag, så vi har gjort registreringsprocessen så snabb och trygg som möjligt. Den nya sidan visar tydligt vad du får, hur enkelt det är att komma igång och att tusentals andra restauranger redan har gjort samma val. Oavsett om du är ett litet café eller en växande restaurangkedja kan du nu skapa din professionella QR-menywebbplats på bara 5 minuter.",
-          "ctaText": "Redo att skapa din restaurangs digitala meny?",
-          "ctaButton": "Kom igång gratis"
-        }
-      },
       "auth": {
         "title": "Nytt användarautentiseringsgränssnitt",
         "description": "Vi har lanserat ett enkelt och säkert e-postbaserat autentiseringssystem som låter dig skapa din restaurangwebbplats och QR-meny på några minuter.",
@@ -1001,53 +971,6 @@
     "hint": "Tryck på Enter för att skicka, Shift+Enter för ny rad",
     "send": "Skicka",
     "supportTeam": "Supportteam"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Skapa din digitala meny på 5 minuter - IQ Rest",
-      "description": "QR-meny och webbplats för din restaurang. Redo på en gång. Inga tekniska färdigheter krävs."
-    },
-    "title": "Skapa din digitala meny på 5 minuter",
-    "subtitle": "QR-meny och webbplats för din restaurang. Redo på en gång.",
-    "emailLabel": "E-post",
-    "emailPlaceholder": "Ange e-post för att börja skapa",
-    "otpPlaceholder": "Ange 4-siffrig kod",
-    "continue": "Skapa min meny",
-    "sending": "Skapar...",
-    "verifyTitle": "Kontrollera din e-post",
-    "verifySubtitle": "Vi har skickat en 4-siffrig kod till {email}",
-    "verify": "Verifiera",
-    "verifying": "Verifierar...",
-    "changeEmail": "Ändra e-post",
-    "resendCode": "Skicka koden igen",
-    "successTitle": "Välkommen!",
-    "successSubtitle": "Du har loggat in framgångsrikt",
-    "redirecting": "Omdirigerar till instrumentpanelen...",
-    "errors": {
-      "sendFailed": "Misslyckades med att skicka verifieringskoden. Försök igen.",
-      "verifyFailed": "Misslyckades med att verifiera koden. Försök igen."
-    },
-    "valueProps": {
-      "noSkills": "Inga tekniska färdigheter krävs",
-      "instantUpdates": "Omedelbara menyuppdateringar",
-      "qrIncluded": "QR-kod + webbplats ingår",
-      "freeStart": "Gratis att börja"
-    },
-    "formHelper": "Ingen kreditkort krävs",
-    "setupTime": "Inställning på 5 minuter",
-    "hasAccount": "Har du redan ett konto?",
-    "signIn": "Logga in",
-    "restaurantCounter": "Gå med i {count} restauranger som redan använder IQ Rest",
-    "steps": {
-      "signUp": "Registrera dig med din e-post",
-      "addMenu": "Lägg till dina menyobjekt",
-      "getQr": "Få din QR-kod och börja"
-    },
-    "motivational": {
-      "title": "Börja ta emot beställningar idag",
-      "subtitle": "Dina kunder väntar på en digital meny"
-    },
-    "icloudWarning": "iCloud kan fördröja eller blockera e-post. Kontrollera skräppost eller använd Gmail/Outlook."
   },
   "reservations": {
     "title": "Bokningar",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "För att göra bokningar tillgängliga för dina restauranggäster måste du prenumerera på tjänsten.",
     "subscribe": "Prenumerera",
     "reservationsEnabled": "Aktivera Bokningar",

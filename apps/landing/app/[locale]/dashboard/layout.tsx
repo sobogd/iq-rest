@@ -6,7 +6,7 @@ import type { DashboardTranslations, PageKey } from "./_context/dashboard-contex
 
 const validPages: PageKey[] = [
   "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
-  "contacts", "languages", "reservations", "reservationSettings", "tables", "billing", "support", "admin", "adminAnalytics"
+  "contacts", "languages", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
 ];
 
 function isValidPageKey(value: string): value is PageKey {
@@ -40,7 +40,6 @@ export default async function DashboardLayout({
       contacts: t("pages.contacts"),
       languages: t("pages.languages"),
       reservations: t("pages.reservations"),
-      reservationSettings: t("pages.reservationSettings"),
       tables: t("pages.tables"),
       billing: t("pages.billing"),
       support: t("pages.support"),
@@ -53,7 +52,6 @@ export default async function DashboardLayout({
       settings: t("sidebar.settings"),
       reservations: t("sidebar.reservations"),
       account: t("sidebar.account"),
-      reservationSettings: t("sidebar.reservationSettings"),
     },
     logout: t("logout"),
     analytics: {

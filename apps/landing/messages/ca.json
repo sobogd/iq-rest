@@ -857,36 +857,6 @@
           "ctaButton": "Comença Gratis"
         }
       },
-      "landing-redesign": {
-        "title": "Redisseny de la Pàgina de Començar per a Més Conversió",
-        "description": "Hem redissenyat completament la nostra pàgina d'inscripció amb un enfocament en l'optimització de la conversió, amb propostes de valor, prova social i una experiència d'usuari simplificada.",
-        "meta": {
-          "title": "Redisseny de la Pàgina de Començar - Registre de Canvis d'IQ Rest",
-          "description": "IQ Rest llança la pàgina d'inscripció redissenyada amb millores d'UX, comptador de prova social i disseny enfocat a la conversió per a la creació de menús QR de restaurants"
-        },
-        "content": {
-          "intro": "Estem emocionats d'anunciar un redisseny complet de la nostra pàgina de Començar, construïda específicament per ajudar els propietaris de restaurants i cafès a crear el seu menú digital QR més ràpid que mai. Aquesta actualització se centra en comunicar clarament el valor, construir confiança a través de la prova social i proporcionar una experiència d'inscripció sense problemes que triga menys de 5 minuts des del principi fins al final.",
-          "image1Alt": "Nova pàgina de començament d'IQ Rest amb propostes de valor i prova social",
-          "image1Caption": "Pàgina d'inscripció redissenyada amb propostes de valor clares i comptador de restaurants",
-          "section1Title": "Propostes de Valor Clares d'un Cop d'ull",
-          "section1Text": "El nou disseny mostra de manera prominent quatre beneficis clau que més importen als propietaris de restaurants: no es requereixen habilitats tècniques, actualitzacions instantànies del menú, codi QR i lloc web inclosos, i gratuït per començar. Cada benefici es presenta en un format de targeta net amb icones intuïtives, fent que sigui immediatament clar el que ofereix IQ Rest. Aquest enfocament ajuda els ocupats propietaris de restaurants a entendre la proposta de valor en pocs segons després d'arribar a la pàgina.",
-          "section2Title": "Prova Social que Construeix Confiança",
-          "section2Text": "Hem afegit un comptador dinàmic de restaurants que mostra quantes empreses ja estan utilitzant IQ Rest. Aquest comptador s'actualitza automàticament en funció de la nostra taxa de creixement, proporcionant una prova social autèntica que ajuda als nous visitants a sentir-se segurs en la seva decisió de provar la nostra plataforma. Veure que més de 1.400 restaurants ja confien en IQ Rest redueix significativament la indecisió i fomenta les inscripcions.",
-          "section3Title": "Flux d'Inscripció Simplificat",
-          "section3Text": "Tot el procés d'inscripció ara es realitza en una sola pàgina amb un disseny consistent. Tant si estàs introduint el teu correu electrònic com si estàs verificant el teu codi, el disseny roman igual - només canvia el camp d'entrada. Això crea una experiència més suau i menys brusca. També hem afegit un indicador visual del procés que mostra els tres passos senzills: Inscriu-te, Afegeix el menú i Obté QR. Aquesta transparència ajuda als usuaris a entendre exactament què esperar i redueix l'abandonament.",
-          "benefitsTitle": "Millores Clau en Aquesta Actualització",
-          "benefit1": "Targetes de proposta de valor amb icones per a una comprensió instantània",
-          "benefit2": "Comptador de restaurants en viu que proporciona prova social autèntica",
-          "benefit3": "Disseny unificat de pàgina tant per als passos de verificació d'email com d'OTP",
-          "benefit4": "Indicador visual del procés de 3 passos per a la transparència",
-          "benefit5": "Còpia enfocada a la conversió: 'Crea el Teu Menú Digital en 5 Minuts'",
-          "benefit6": "Validació d'email en temps real amb retroalimentació visual",
-          "conclusionTitle": "Dissenyat per a l'Èxit del Restaurant",
-          "conclusionText": "Cada element d'aquest redisseny ha estat creat tenint en compte els propietaris de restaurants i cafès. Entenem que estàs ocupat gestionant el teu negoci, així que hem fet que el procés d'inscripció sigui tan ràpid i tranquil·litzador com sigui possible. La nova pàgina mostra clarament què obtindràs, com de fàcil és començar i que milers d'altres restaurants ja han pres la mateixa decisió. Tant si ets un petit cafè com una cadena de restaurants en creixement, ara pots crear el teu lloc web professional de menú QR en només 5 minuts.",
-          "ctaText": "Estàs llest per crear el menú digital del teu restaurant?",
-          "ctaButton": "Comença Gratis"
-        }
-      },
       "auth": {
         "title": "Nova Interfície d'Autenticació d'Usuaris",
         "description": "Hem llançat un sistema d'autenticació senzill i segur basat en correu electrònic que et permet crear el teu lloc web de restaurant i menú QR en minuts.",
@@ -1001,53 +971,6 @@
     "hint": "Prem Enter per enviar, Shift+Enter per a nova línia",
     "send": "Enviar",
     "supportTeam": "Equip de suport"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Crea el teu menú digital en 5 minuts - IQ Rest",
-      "description": "Menú QR i lloc web per al teu restaurant. Preparat instantàniament. No es requereixen habilitats tècniques."
-    },
-    "title": "Crea el teu menú digital en 5 minuts",
-    "subtitle": "Menú QR i lloc web per al teu restaurant. Preparat instantàniament.",
-    "emailLabel": "Correu electrònic",
-    "emailPlaceholder": "Introdueix el correu electrònic per començar a crear",
-    "otpPlaceholder": "Introdueix el codi de 4 dígits",
-    "continue": "Crea el meu menú",
-    "sending": "Creant...",
-    "verifyTitle": "Comprova el teu correu electrònic",
-    "verifySubtitle": "Hem enviat un codi de 4 dígits a {email}",
-    "verify": "Verifica",
-    "verifying": "Verificant...",
-    "changeEmail": "Canvia el correu electrònic",
-    "resendCode": "Reenviar codi",
-    "successTitle": "Benvingut!",
-    "successSubtitle": "T'has registrat correctament",
-    "redirecting": "Redirigint al tauler de control...",
-    "errors": {
-      "sendFailed": "No s'ha pogut enviar el codi de verificació. Si us plau, torna a intentar-ho.",
-      "verifyFailed": "No s'ha pogut verificar el codi. Si us plau, torna a intentar-ho."
-    },
-    "valueProps": {
-      "noSkills": "No es requereixen habilitats tècniques",
-      "instantUpdates": "Actualitzacions de menú instantànies",
-      "qrIncluded": "Codi QR + lloc web inclòs",
-      "freeStart": "Gratuït per començar"
-    },
-    "formHelper": "No es requereix targeta de crèdit",
-    "setupTime": "Configuració en 5 minuts",
-    "hasAccount": "Ja tens un compte?",
-    "signIn": "Inicia sessió",
-    "restaurantCounter": "Uneix-te a {count} restaurants que ja utilitzen IQ Rest",
-    "steps": {
-      "signUp": "Registra't amb el teu correu electrònic",
-      "addMenu": "Afegeix els teus articles de menú",
-      "getQr": "Obté el teu codi QR i comença"
-    },
-    "motivational": {
-      "title": "Comença a acceptar comandes avui",
-      "subtitle": "Els teus clients estan esperant un menú digital"
-    },
-    "icloudWarning": "iCloud pot retardar o bloquejar correus. Reviseu l'spam o utilitzeu Gmail/Outlook."
   },
   "reservations": {
     "title": "Reserves",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Per fer que les reserves estiguin disponibles per als teus clients del restaurant, necessites subscriure't al servei.",
     "subscribe": "Subscriure's",
     "reservationsEnabled": "Habilitar Reserves",

@@ -144,14 +144,3 @@ export const changelogMetaConfig: PageMetaConfig = {
   path: "/changelog",
 };
 
-export const getStartedMetaConfig: PageMetaConfig = {
-  titles: {
-    en: "Get Started - IQ Rest",
-    es: "Comenzar - IQ Rest",
-  },
-  descriptions: {
-    en: "Create your digital QR menu in minutes. Sign up for free and start building your restaurant menu.",
-    es: "Crea tu menú QR digital en minutos. Regístrate gratis y comienza a construir el menú de tu restaurante.",
-  },
-  path: "/get-started",
-};

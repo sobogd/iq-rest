@@ -16,7 +16,6 @@ export type PageKey =
   | "contacts"
   | "languages"
   | "reservations"
-  | "reservationSettings"
   | "tables"
   | "billing"
   | "support"
@@ -151,7 +150,6 @@ export interface DashboardTranslations {
     settings: string;
     reservations: string;
     account: string;
-    reservationSettings: string;
   };
   logout: string;
   analytics: AnalyticsTranslations;
@@ -168,6 +166,8 @@ interface DashboardContextType {
   translations: DashboardTranslations;
   registerFormClose: (closeHandler: () => void) => void;
   unregisterFormClose: () => void;
+  onboardingCompleted: boolean;
+  setOnboardingCompleted: (v: boolean) => void;
 }
 
 const DashboardContext = createContext<DashboardContextType | null>(null);
@@ -176,7 +176,7 @@ const COOKIE_KEY = "dashboard-active-page";
 
 const validPages: PageKey[] = [
   "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
-  "contacts", "languages", "reservations", "reservationSettings", "tables", "billing", "support", "admin", "adminAnalytics"
+  "contacts", "languages", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
 ];
 
 export function isValidPageKey(value: string): value is PageKey {
@@ -213,6 +213,7 @@ export function DashboardProvider({
   const effectiveInitialPage = hashPage || (pageParam && isValidPageKey(pageParam) ? pageParam : initialPage);
 
   const [activePage, setActivePageState] = useState<PageKey>(effectiveInitialPage);
+  const [onboardingCompleted, setOnboardingCompleted] = useState(false);
   const previousPageRef = useRef<PageKey>(effectiveInitialPage);
 
   // Handle query param (legacy support) - convert to hash
@@ -332,7 +333,7 @@ export function DashboardProvider({
   }, []);
 
   return (
-    <DashboardContext.Provider value={{ activePage, setActivePage, navigateFromOnboarding, returnToOnboarding, translations, registerFormClose, unregisterFormClose }}>
+    <DashboardContext.Provider value={{ activePage, setActivePage, navigateFromOnboarding, returnToOnboarding, translations, registerFormClose, unregisterFormClose, onboardingCompleted, setOnboardingCompleted }}>
       {children}
     </DashboardContext.Provider>
   );

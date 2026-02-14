@@ -857,36 +857,6 @@
           "ctaButton": "Begin Gratis"
         }
       },
-      "landing-redesign": {
-        "title": "Herontworpen Aanmeldpagina Voor Hogere Conversies",
-        "description": "We hebben onze aanmeldpagina volledig herontworpen met een focus op conversieoptimalisatie, met waardeproposities, sociale bewijskracht en een gestroomlijnde gebruikerservaring.",
-        "meta": {
-          "title": "Aanmeldpagina Herontwerp - IQ Rest Changelog",
-          "description": "IQ Rest lanceert herontworpen aanmeldpagina met verbeterde UX, sociale bewijskracht teller en conversiegerichte indeling voor restaurant QR menu creatie"
-        },
-        "content": {
-          "intro": "We zijn verheugd om een complete herontwerp van onze Aanmeldpagina aan te kondigen, speciaal gebouwd om restaurant- en café-eigenaren sneller dan ooit hun digitale QR menu te laten creëren. Deze update richt zich op het duidelijk communiceren van waarde, vertrouwen opbouwen via sociale bewijskracht en het bieden van een naadloze aanmeldervaring die minder dan 5 minuten duurt van begin tot eind.",
-          "image1Alt": "Nieuwe IQ Rest aanmeldpagina met waardeproposities en sociale bewijskracht",
-          "image1Caption": "Herontworpen aanmeldpagina met duidelijke waardeproposities en restaurant teller",
-          "section1Title": "Duidelijke Waardeproposities In Één Oogopslag",
-          "section1Text": "Het nieuwe ontwerp toont prominent vier belangrijke voordelen waar restaurant eigenaren het meest om geven: geen technische vaardigheden vereist, directe menu-updates, QR-code en website inbegrepen, en gratis om te beginnen. Elk voordeel wordt gepresenteerd in een schone kaartindeling met intuïtieve pictogrammen, waardoor het onmiddellijk duidelijk is wat IQ Rest biedt. Deze aanpak helpt drukke restaurant eigenaren om de waardepropositie binnen enkele seconden na het landen op de pagina te begrijpen.",
-          "section2Title": "Sociale Bewijskracht Die Vertrouwen Opbouwt",
-          "section2Text": "We hebben een dynamische restaurant teller toegevoegd die toont hoeveel bedrijven IQ Rest al gebruiken. Deze teller wordt automatisch bijgewerkt op basis van onze groeisnelheid, waardoor authentieke sociale bewijskracht wordt geboden die nieuwe bezoekers helpt zich zeker te voelen in hun beslissing om ons platform uit te proberen. Te zien dat meer dan 1.400 restaurants IQ Rest al vertrouwen, vermindert aanzienlijk de aarzeling en moedigt aanmeldingen aan.",
-          "section3Title": "Gestroomlijnde Aanmeldflow",
-          "section3Text": "Het hele aanmeldproces gebeurt nu op één pagina met een consistente lay-out. Of u nu uw e-mail invoert of uw code verifieert, het ontwerp blijft hetzelfde - alleen het invoerveld verandert. Dit creëert een soepelere, minder schokkende ervaring. We hebben ook een visuele procesindicator toegevoegd die de drie eenvoudige stappen toont: Meld u aan, Voeg menu toe en Krijg QR. Deze transparantie helpt gebruikers precies te begrijpen wat ze kunnen verwachten en vermindert het verlaten.",
-          "benefitsTitle": "Belangrijke Verbeteringen In Deze Update",
-          "benefit1": "Waardepropositiekaarten met pictogrammen voor directe begrip",
-          "benefit2": "Live restaurant teller die authentieke sociale bewijskracht biedt",
-          "benefit3": "Eenduidig paginadesign voor zowel e-mail als OTP verificatiestappen",
-          "benefit4": "Visuele 3-stappen procesindicator voor transparantie",
-          "benefit5": "Conversiegerichte tekst: 'Creëer Uw Digitale Menu In 5 Minuten'",
-          "benefit6": "Realtime e-mailvalidatie met visuele feedback",
-          "conclusionTitle": "Ontworpen Voor Restaurant Succes",
-          "conclusionText": "Elk element van dit herontwerp is gemaakt met restaurant- en café-eigenaren in gedachten. We begrijpen dat u druk bezig bent met het runnen van uw bedrijf, dus hebben we het aanmeldproces zo snel en geruststellend mogelijk gemaakt. De nieuwe pagina toont duidelijk wat u krijgt, hoe eenvoudig het is om aan de slag te gaan, en dat duizenden andere restaurants al dezelfde keuze hebben gemaakt. Of u nu een klein café of een groeiende restaurantketen bent, u kunt nu uw professionele QR menu website in slechts 5 minuten creëren.",
-          "ctaText": "Klaar om het digitale menu van uw restaurant te creëren?",
-          "ctaButton": "Begin Gratis"
-        }
-      },
       "auth": {
         "title": "Nieuwe Gebruikersauthenticatie Interface",
         "description": "We hebben een eenvoudig en veilig op e-mail gebaseerd authenticatiesysteem gelanceerd waarmee u in enkele minuten uw restaurantwebsite en QR menu kunt creëren.",
@@ -1001,53 +971,6 @@
     "hint": "Druk op Enter om te verzenden, Shift+Enter voor een nieuwe regel",
     "send": "Verzenden",
     "supportTeam": "Ondersteuningsteam"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Maak uw digitale menu in 5 minuten - IQ Rest",
-      "description": "QR-menu en website voor uw restaurant. Direct klaar. Geen technische vaardigheden vereist."
-    },
-    "title": "Maak uw digitale menu in 5 minuten",
-    "subtitle": "QR-menu en website voor uw restaurant. Direct klaar.",
-    "emailLabel": "E-mail",
-    "emailPlaceholder": "Voer e-mail in om te beginnen met creëren",
-    "otpPlaceholder": "Voer 4-cijferige code in",
-    "continue": "Maak Mijn Menu",
-    "sending": "Aan het creëren...",
-    "verifyTitle": "Controleer uw e-mail",
-    "verifySubtitle": "We hebben een 4-cijferige code naar {email} gestuurd",
-    "verify": "Verifiëren",
-    "verifying": "Verifiëren...",
-    "changeEmail": "E-mail wijzigen",
-    "resendCode": "Code opnieuw verzenden",
-    "successTitle": "Welkom!",
-    "successSubtitle": "U bent succesvol ingelogd",
-    "redirecting": "Wordt doorgestuurd naar het dashboard...",
-    "errors": {
-      "sendFailed": "Verzenden van verificatiecode mislukt. Probeer het opnieuw.",
-      "verifyFailed": "Verifiëren van code mislukt. Probeer het opnieuw."
-    },
-    "valueProps": {
-      "noSkills": "Geen technische vaardigheden vereist",
-      "instantUpdates": "Directe menu-updates",
-      "qrIncluded": "QR-code + website inbegrepen",
-      "freeStart": "Gratis om te beginnen"
-    },
-    "formHelper": "Geen creditcard vereist",
-    "setupTime": "Instellen in 5 minuten",
-    "hasAccount": "Heeft u al een account?",
-    "signIn": "Inloggen",
-    "restaurantCounter": "Sluit je aan bij {count} restaurants die IQ Rest al gebruiken",
-    "steps": {
-      "signUp": "Meld u aan met uw e-mail",
-      "addMenu": "Voeg uw menu-items toe",
-      "getQr": "Krijg uw QR-code & begin"
-    },
-    "motivational": {
-      "title": "Begin vandaag met het accepteren van bestellingen",
-      "subtitle": "Uw klanten wachten op een digitaal menu"
-    },
-    "icloudWarning": "iCloud kan e-mails vertragen of blokkeren. Controleer uw spam of gebruik Gmail/Outlook."
   },
   "reservations": {
     "title": "Reserveringen",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Om reserveringen beschikbaar te maken voor uw restaurantgasten, moet u zich abonneren op de service.",
     "subscribe": "Abonneren",
     "reservationsEnabled": "Reserveringen inschakelen",

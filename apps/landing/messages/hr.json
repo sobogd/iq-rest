@@ -857,36 +857,6 @@
           "ctaButton": "Započnite besplatno"
         }
       },
-      "landing-redesign": {
-        "title": "Redizajnirana stranica za započinjanje za veće konverzije",
-        "description": "Potpuno smo redizajnirali našu stranicu za prijavu s fokusom na optimizaciju konverzija, s vrijednosnim ponudama, društvenim dokazima i pojednostavljenim korisničkim iskustvom.",
-        "meta": {
-          "title": "Redizajn stranice za započinjanje - IQ Rest Changelog",
-          "description": "IQ Rest pokreće redizajniranu stranicu za prijavu s poboljšanim UX-om, brojačem društvenog dokaza i dizajnom usmjerenim na konverziju za izradu QR menija restorana"
-        },
-        "content": {
-          "intro": "Uzbuđeni smo što možemo najaviti potpuni redizajn naše stranice za započinjanje, izgrađene posebno kako bi pomogla vlasnicima restorana i kafića da brže nego ikad stvore svoj digitalni QR meni. Ova nadogradnja fokusira se na jasno komuniciranje vrijednosti, izgradnju povjerenja kroz društveni dokaz i pružanje besprijekornog iskustva prijave koje traje manje od 5 minuta od početka do kraja.",
-          "image1Alt": "Nova IQ Rest stranica za započinjanje s vrijednosnim ponudama i društvenim dokazima",
-          "image1Caption": "Redizajnirana stranica za prijavu s jasnim vrijednosnim ponudama i brojačem restorana",
-          "section1Title": "Jasne vrijednosne ponude na prvi pogled",
-          "section1Text": "Novi dizajn ističe četiri ključne prednosti koje su vlasnicima restorana najvažnije: nema potrebnih tehničkih vještina, trenutna ažuriranja jelovnika, QR kod i web stranica uključeni, i besplatno za početak. Svaka prednost prikazana je u čistom kartičnom formatu s intuitivnim ikonama, što odmah čini jasno što IQ Rest nudi. Ovaj pristup pomaže zaposlenim vlasnicima restorana da razumiju vrijednost ponude u nekoliko sekundi nakon dolaska na stranicu.",
-          "section2Title": "Društveni dokaz koji gradi povjerenje",
-          "section2Text": "Dodali smo dinamički brojač restorana koji pokazuje koliko poduzeća već koristi IQ Rest. Ovaj brojač se automatski ažurira na temelju naše stope rasta, pružajući autentičan društveni dokaz koji pomaže novim posjetiteljima da se osjećaju sigurnima u svoju odluku da isprobaju našu platformu. Vidjeti da više od 1.400 restorana već vjeruje IQ Rest značajno smanjuje oklijevanje i potiče prijave.",
-          "section3Title": "Pojednostavljeni tok prijave",
-          "section3Text": "Cijeli proces prijave sada se odvija na jednoj stranici s dosljednim rasporedom. Bilo da unosite svoj e-mail ili potvrđujete svoj kod, dizajn ostaje isti - samo se polje za unos mijenja. Ovo stvara glatko, manje stresno iskustvo. Također smo dodali vizualni pokazatelj procesa koji prikazuje tri jednostavna koraka: Prijavite se, Dodajte jelovnik i Dobijte QR. Ova transparentnost pomaže korisnicima da točno razumiju što mogu očekivati i smanjuje napuštanje.",
-          "benefitsTitle": "Ključna poboljšanja u ovoj nadogradnji",
-          "benefit1": "Kartice s vrijednosnim ponudama s ikonama za trenutnu razumljivost",
-          "benefit2": "Živi brojač restorana koji pruža autentičan društveni dokaz",
-          "benefit3": "Ujedinjeni dizajn stranice za korake provjere e-maila i OTP-a",
-          "benefit4": "Vizualni pokazatelj procesa od 3 koraka za transparentnost",
-          "benefit5": "Tekst usmjeren na konverziju: 'Stvorite svoj digitalni meni za 5 minuta'",
-          "benefit6": "Validacija e-maila u stvarnom vremenu s vizualnim povratnim informacijama",
-          "conclusionTitle": "Dizajnirano za uspjeh restorana",
-          "conclusionText": "Svaki element ovog redizajna osmišljen je s vlasnicima restorana i kafića na umu. Razumijemo da ste zauzeti vođenjem svog posla, pa smo proces prijave učinili što bržim i umirujućim. Nova stranica jasno pokazuje što ćete dobiti, koliko je lako započeti i da su tisuće drugih restorana već napravile isti izbor. Bilo da ste mali kafić ili rastući lanac restorana, sada možete stvoriti svoju profesionalnu web stranicu QR menija u samo 5 minuta.",
-          "ctaText": "Spremni ste stvoriti digitalni meni vašeg restorana?",
-          "ctaButton": "Započnite besplatno"
-        }
-      },
       "auth": {
         "title": "Novo korisničko sučelje za autentifikaciju",
         "description": "Pokrenuli smo jednostavan i siguran sustav autentifikacije temeljen na e-mailu koji vam omogućava da stvorite svoju web stranicu restorana i QR meni u nekoliko minuta.",
@@ -1001,53 +971,6 @@
     "hint": "Pritisnite Enter za slanje, Shift+Enter za novi red",
     "send": "Pošalji",
     "supportTeam": "Tim za podršku"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Izradite svoj digitalni meni za 5 minuta - IQ Rest",
-      "description": "QR meni i web stranica za vaš restoran. Spremno odmah. Nema potrebnih tehničkih vještina."
-    },
-    "title": "Izradite svoj digitalni meni za 5 minuta",
-    "subtitle": "QR meni i web stranica za vaš restoran. Spremno odmah.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Unesite email za početak izrade",
-    "otpPlaceholder": "Unesite 4-znamenkasti kod",
-    "continue": "Izradite moj meni",
-    "sending": "Izrada...",
-    "verifyTitle": "Provjerite svoj email",
-    "verifySubtitle": "Poslali smo 4-znamenkasti kod na {email}",
-    "verify": "Potvrdi",
-    "verifying": "Potvrđivanje...",
-    "changeEmail": "Promijeni email",
-    "resendCode": "Ponovno pošalji kod",
-    "successTitle": "Dobrodošli!",
-    "successSubtitle": "Uspješno ste se prijavili",
-    "redirecting": "Preusmjeravanje na nadzornu ploču...",
-    "errors": {
-      "sendFailed": "Slanje verifikacijskog koda nije uspjelo. Pokušajte ponovo.",
-      "verifyFailed": "Verifikacija koda nije uspjela. Pokušajte ponovo."
-    },
-    "valueProps": {
-      "noSkills": "Nema potrebnih tehničkih vještina",
-      "instantUpdates": "Trenutne ažuriranja menija",
-      "qrIncluded": "QR kod + web stranica uključeni",
-      "freeStart": "Besplatno za početak"
-    },
-    "formHelper": "Nema potrebe za kreditnom karticom",
-    "setupTime": "Postavljanje za 5 minuta",
-    "hasAccount": "Već imate račun?",
-    "signIn": "Prijavite se",
-    "restaurantCounter": "Pridružite se {count} restorana koji već koriste IQ Rest",
-    "steps": {
-      "signUp": "Prijavite se sa svojim emailom",
-      "addMenu": "Dodajte stavke u svoj meni",
-      "getQr": "Dobijte svoj QR kod i počnite"
-    },
-    "motivational": {
-      "title": "Počnite primati narudžbe danas",
-      "subtitle": "Vaši kupci čekaju digitalni meni"
-    },
-    "icloudWarning": "iCloud može odgoditi ili blokirati e-poštu. Provjerite spam ili koristite Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezervacije",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Kako biste omogućili rezervacije za goste vašeg restorana, trebate se pretplatiti na uslugu.",
     "subscribe": "Pretplatite se",
     "reservationsEnabled": "Omogući rezervacije",

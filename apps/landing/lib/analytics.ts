@@ -12,7 +12,13 @@ function getSessionId(): string {
 
   let sessionId = sessionStorage.getItem(SESSION_ID_KEY);
   if (!sessionId) {
-    sessionId = crypto.randomUUID();
+    sessionId =
+      typeof crypto.randomUUID === "function"
+        ? crypto.randomUUID()
+        : Array.from(crypto.getRandomValues(new Uint8Array(16)))
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("")
+            .replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
     sessionStorage.setItem(SESSION_ID_KEY, sessionId);
   }
   return sessionId;

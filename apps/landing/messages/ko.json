@@ -890,36 +890,6 @@
           "ctaButton": "Get Started Free"
         }
       },
-      "landing-redesign": {
-        "title": "Redesigned Get Started Page for Higher Conversions",
-        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
-        "meta": {
-          "title": "Get Started Page Redesign - IQ Rest Changelog",
-          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
-        },
-        "content": {
-          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
-          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
-          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
-          "section1Title": "Clear Value Propositions at a Glance",
-          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
-          "section2Title": "Social Proof That Builds Trust",
-          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
-          "section3Title": "Streamlined Signup Flow",
-          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
-          "benefitsTitle": "Key Improvements in This Update",
-          "benefit1": "Value proposition cards with icons for instant comprehension",
-          "benefit2": "Live restaurant counter providing authentic social proof",
-          "benefit3": "Unified page design for both email and OTP verification steps",
-          "benefit4": "Visual 3-step process indicator for transparency",
-          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
-          "benefit6": "Real-time email validation with visual feedback",
-          "conclusionTitle": "Designed for Restaurant Success",
-          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
-          "ctaText": "Ready to create your restaurant's digital menu?",
-          "ctaButton": "Get Started Free"
-        }
-      },
       "auth": {
         "title": "New User Authentication Interface",
         "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
@@ -1034,53 +1004,6 @@
     "hint": "Enter로 전송, Shift+Enter로 새 줄",
     "send": "보내기",
     "supportTeam": "지원팀"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "5분 만에 디지털 메뉴 만들기 - IQ Rest",
-      "description": "레스토랑을 위한 QR 메뉴와 웹사이트. 즉시 준비. 기술 지식 필요 없음."
-    },
-    "title": "5분 만에 디지털 메뉴 만들기",
-    "subtitle": "레스토랑을 위한 QR 메뉴와 웹사이트. 즉시 준비.",
-    "emailLabel": "이메일",
-    "emailPlaceholder": "이메일을 입력하여 만들기 시작",
-    "otpPlaceholder": "4자리 코드 입력",
-    "continue": "내 메뉴 만들기",
-    "sending": "생성 중...",
-    "verifyTitle": "이메일을 확인하세요",
-    "verifySubtitle": "{email}로 4자리 코드를 보냈습니다",
-    "verify": "확인",
-    "verifying": "확인 중...",
-    "changeEmail": "이메일 변경",
-    "resendCode": "코드 재전송",
-    "successTitle": "환영합니다!",
-    "successSubtitle": "로그인에 성공했습니다",
-    "redirecting": "대시보드로 이동 중...",
-    "errors": {
-      "sendFailed": "인증 코드 전송에 실패했습니다. 다시 시도해 주세요.",
-      "verifyFailed": "코드 확인에 실패했습니다. 다시 시도해 주세요."
-    },
-    "icloudWarning": "iCloud는 새 발신자의 이메일을 지연시키거나 차단할 수 있습니다. 스팸 폴더를 확인하거나 다른 이메일(Gmail, Outlook)을 시도해 보세요.",
-    "valueProps": {
-      "noSkills": "기술 지식 필요 없음",
-      "instantUpdates": "즉시 메뉴 업데이트",
-      "qrIncluded": "QR 코드 + 웹사이트 포함",
-      "freeStart": "무료로 시작"
-    },
-    "formHelper": "신용카드 필요 없음",
-    "setupTime": "5분 만에 설정",
-    "hasAccount": "이미 계정이 있으신가요?",
-    "signIn": "로그인",
-    "restaurantCounter": "이미 IQ Rest를 사용 중인 {count}개 레스토랑에 합류하세요",
-    "steps": {
-      "signUp": "이메일로 가입",
-      "addMenu": "메뉴 항목 추가",
-      "getQr": "QR 코드 받기 & 시작"
-    },
-    "motivational": {
-      "title": "오늘 주문 받기 시작하세요",
-      "subtitle": "고객들이 디지털 메뉴를 기다리고 있습니다"
-    }
   },
   "reservations": {
     "title": "예약",
@@ -1628,6 +1551,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "레스토랑 손님에게 예약을 제공하려면 서비스에 가입해야 합니다.",
     "subscribe": "구독",
     "reservationsEnabled": "예약 활성화",

@@ -857,36 +857,6 @@
           "ctaButton": "Get Started Free"
         }
       },
-      "landing-redesign": {
-        "title": "Redesigned Get Started Page for Higher Conversions",
-        "description": "We've completely redesigned our signup page with a focus on conversion optimization, featuring value propositions, social proof, and a streamlined user experience.",
-        "meta": {
-          "title": "Get Started Page Redesign - IQ Rest Changelog",
-          "description": "IQ Rest launches redesigned signup page with improved UX, social proof counter, and conversion-focused design for restaurant QR menu creation"
-        },
-        "content": {
-          "intro": "We're excited to announce a complete redesign of our Get Started page, built specifically to help restaurant and cafe owners create their digital QR menu faster than ever. This update focuses on clearly communicating value, building trust through social proof, and providing a seamless signup experience that takes less than 5 minutes from start to finish.",
-          "image1Alt": "New IQ Rest get started page with value propositions and social proof",
-          "image1Caption": "Redesigned signup page with clear value propositions and restaurant counter",
-          "section1Title": "Clear Value Propositions at a Glance",
-          "section1Text": "The new design prominently displays four key benefits that restaurant owners care about most: no technical skills required, instant menu updates, QR code and website included, and free to start. Each benefit is presented in a clean card format with intuitive icons, making it immediately clear what IQ Rest offers. This approach helps busy restaurant owners understand the value proposition within seconds of landing on the page.",
-          "section2Title": "Social Proof That Builds Trust",
-          "section2Text": "We've added a dynamic restaurant counter that shows how many businesses are already using IQ Rest. This counter updates automatically based on our growth rate, providing authentic social proof that helps new visitors feel confident in their decision to try our platform. Seeing that over 1,400 restaurants already trust IQ Rest significantly reduces hesitation and encourages signups.",
-          "section3Title": "Streamlined Signup Flow",
-          "section3Text": "The entire signup process now happens on a single page with a consistent layout. Whether entering your email or verifying your code, the design remains the same - only the input field changes. This creates a smoother, less jarring experience. We've also added a visual process indicator showing the three simple steps: Sign up, Add menu, and Get QR. This transparency helps users understand exactly what to expect and reduces abandonment.",
-          "benefitsTitle": "Key Improvements in This Update",
-          "benefit1": "Value proposition cards with icons for instant comprehension",
-          "benefit2": "Live restaurant counter providing authentic social proof",
-          "benefit3": "Unified page design for both email and OTP verification steps",
-          "benefit4": "Visual 3-step process indicator for transparency",
-          "benefit5": "Conversion-focused copy: 'Create Your Digital Menu in 5 Minutes'",
-          "benefit6": "Real-time email validation with visual feedback",
-          "conclusionTitle": "Designed for Restaurant Success",
-          "conclusionText": "Every element of this redesign was crafted with restaurant and cafe owners in mind. We understand that you're busy running your business, so we've made the signup process as quick and reassuring as possible. The new page clearly shows what you'll get, how easy it is to get started, and that thousands of other restaurants have already made the same choice. Whether you're a small cafe or a growing restaurant chain, you can now create your professional QR menu website in just 5 minutes.",
-          "ctaText": "Ready to create your restaurant's digital menu?",
-          "ctaButton": "Get Started Free"
-        }
-      },
       "auth": {
         "title": "New User Authentication Interface",
         "description": "We've launched a simple and secure email-based authentication system that lets you create your restaurant website and QR menu in minutes.",
@@ -1001,53 +971,6 @@
     "hint": "Pritisnite Enter za pošiljanje, Shift+Enter za novo vrstico",
     "send": "Pošlji",
     "supportTeam": "Ekipa za podporo"
-  },
-  "getStarted": {
-    "meta": {
-      "title": "Ustvarite svoj digitalni meni v 5 minutah - IQ Rest",
-      "description": "QR meni in spletna stran za vašo restavracijo. Takoj pripravljeno. Brez tehničnih veščin."
-    },
-    "title": "Ustvarite svoj digitalni meni v 5 minutah",
-    "subtitle": "QR meni in spletna stran za vašo restavracijo. Takoj pripravljeno.",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Vnesite email za začetek ustvarjanja",
-    "otpPlaceholder": "Vnesite 4-številčno kodo",
-    "continue": "Ustvari moj meni",
-    "sending": "Ustvarjanje...",
-    "verifyTitle": "Preverite svoj email",
-    "verifySubtitle": "Poslali smo 4-številčno kodo na {email}",
-    "verify": "Potrdi",
-    "verifying": "Potrjujem...",
-    "changeEmail": "Spremeni email",
-    "resendCode": "Ponovno pošlji kodo",
-    "successTitle": "Dobrodošli!",
-    "successSubtitle": "Uspešno ste se prijavili",
-    "redirecting": "Preusmerjam na nadzorno ploščo...",
-    "errors": {
-      "sendFailed": "Pošiljanje potrditvene kode ni uspelo. Poskusite znova.",
-      "verifyFailed": "Preverjanje kode ni uspelo. Poskusite znova."
-    },
-    "valueProps": {
-      "noSkills": "Brez potrebnih tehničnih veščin",
-      "instantUpdates": "Takojšnje posodobitve menija",
-      "qrIncluded": "QR koda + spletna stran vključena",
-      "freeStart": "Brezplačno za začetek"
-    },
-    "formHelper": "Brez potrebe po kreditni kartici",
-    "setupTime": "Nastavitev v 5 minutah",
-    "hasAccount": "Že imate račun?",
-    "signIn": "Prijavite se",
-    "restaurantCounter": "Pridružite se {count} restavracijam, ki že uporabljajo IQ Rest",
-    "steps": {
-      "signUp": "Prijavite se s svojim emailom",
-      "addMenu": "Dodajte svoje jedi",
-      "getQr": "Pridobite svojo QR kodo in začnite"
-    },
-    "motivational": {
-      "title": "Začnite sprejemati naročila danes",
-      "subtitle": "Vaši kupci čakajo na digitalni meni"
-    },
-    "icloudWarning": "iCloud lahko zamuja ali blokira e-pošto. Preverite neželeno pošto ali uporabite Gmail/Outlook."
   },
   "reservations": {
     "title": "Rezervacije",
@@ -1595,6 +1518,7 @@
     }
   },
   "reservationSettings": {
+    "title": "Reservation Settings",
     "subscriptionRequired": "Za omogočanje rezervacij vašim gostom v restavraciji se morate naročiti na storitev.",
     "subscribe": "Naroči se",
     "reservationsEnabled": "Omogoči rezervacije",

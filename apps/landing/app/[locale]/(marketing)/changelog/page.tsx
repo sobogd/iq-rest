@@ -118,12 +118,6 @@ const CHANGELOG_ENTRIES = [
     descriptionKey: "entries.free-restaurant-website-improvements.description",
   },
   {
-    id: "get-started-page-redesign",
-    date: "2025-11-19",
-    titleKey: "entries.landing-redesign.title",
-    descriptionKey: "entries.landing-redesign.description",
-  },
-  {
     id: "user-authentication-interface",
     date: "2024-11-19",
     titleKey: "entries.auth.title",
