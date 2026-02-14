@@ -1597,42 +1597,34 @@
       },
       "completed": "تکمیل شده",
       "notCompleted": "تکمیل نشده",
-      "allDone": "همه انجام شد! منوی شما آنلاین است.",
-      "requiredRemaining": "{count} مرحله الزامی باقی‌مانده",
-      "quickActions": {
-        "qrMenu": {
-          "name": "منوی QR",
-          "description": "چاپ و اشتراک‌گذاری منوی شما"
-        },
-        "categories": {
-          "name": "دسته‌بندی‌ها",
-          "description": "افزودن یا ویرایش دسته‌بندی‌های منو"
-        },
-        "items": {
-          "name": "آیتم‌های منو",
-          "description": "افزودن یا ویرایش غذاها"
-        },
-        "design": {
-          "name": "طراحی",
-          "description": "سفارشی‌سازی رنگ‌ها و پس‌زمینه"
-        },
-        "contacts": {
-          "name": "اطلاعات تماس",
-          "description": "ویرایش اطلاعات تماس"
-        },
-        "languages": {
-          "name": "زبان‌ها",
-          "description": "افزودن زبان‌های بیشتر به منوی شما"
-        },
-        "analytics": {
-          "name": "تحلیل‌ها",
-          "description": "مشاهده آمار اسکن منو"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

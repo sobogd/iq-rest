@@ -8,15 +8,12 @@ import { useDashboard, PageKey } from "../_context/dashboard-context";
 import {
   Eye,
   Loader2,
-  Check,
   ArrowRight,
   QrCode,
-  FolderOpen,
-  Package,
   Palette,
   Phone,
   Languages,
-  BarChart3,
+  Settings,
 } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
@@ -48,20 +45,18 @@ const allSteps: Step[] = [
   { key: "items", progressKey: "hasItems", page: "items" },
 ];
 
-interface QuickAction {
+interface NextStep {
   key: string;
   page: PageKey;
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const quickActions: QuickAction[] = [
-  { key: "qrMenu", page: "qrMenu", icon: QrCode },
-  { key: "categories", page: "categories", icon: FolderOpen },
-  { key: "items", page: "items", icon: Package },
-  { key: "design", page: "design", icon: Palette },
+const nextSteps: NextStep[] = [
   { key: "contacts", page: "contacts", icon: Phone },
+  { key: "settings", page: "settings", icon: Settings },
+  { key: "design", page: "design", icon: Palette },
   { key: "languages", page: "languages", icon: Languages },
-  { key: "analytics", page: "analytics", icon: BarChart3 },
+  { key: "qrMenu", page: "qrMenu", icon: QrCode },
 ];
 
 export function OnboardingPage() {
@@ -170,40 +165,36 @@ export function OnboardingPage() {
   // Show completed view when all steps are done
   if (allCompleted && slug) {
     return (
-      <div className="flex flex-col h-full overflow-auto">
-        {/* Header with View Restaurant button */}
-        <div className="p-6 space-y-4">
-          <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
-            <Check className="h-5 w-5" />
-            <span className="font-medium">{t("allDone")}</span>
-          </div>
-          <MenuPreviewModal menuUrl={`/m/${slug}`}>
-            <Button className="w-full" size="lg">
-              <Eye className="mr-2 h-4 w-4" />
-              {t("viewMenu")}
-            </Button>
-          </MenuPreviewModal>
-        </div>
+      <div className="flex h-full flex-col p-6 overflow-auto">
+        <div className="w-full max-w-[280px]">
+          <div className="grid gap-6">
+            <div className="grid gap-2">
+              <h1 className="text-2xl font-bold">{t("completedTitle")}</h1>
+              <p className="text-muted-foreground">{t("completedSubtitle")}</p>
+            </div>
 
-        {/* Quick Actions */}
-        <div className="flex-1 px-6 pb-6">
-          <div className="grid gap-3">
-            {quickActions.map((action) => (
-              <button
-                key={action.key}
-                onClick={() => setActivePage(action.page)}
-                className="flex items-center gap-4 p-4 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
-                  <action.icon className="h-5 w-5 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-medium">{t(`quickActions.${action.key}.name`)}</p>
-                  <p className="text-sm text-muted-foreground">{t(`quickActions.${action.key}.description`)}</p>
-                </div>
-                <ArrowRight className="h-4 w-4 text-muted-foreground" />
-              </button>
-            ))}
+            <MenuPreviewModal menuUrl={`/m/${slug}`}>
+              <Button className="w-full h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg">
+                <Eye className="mr-2 h-4 w-4" />
+                {t("viewMenu")}
+              </Button>
+            </MenuPreviewModal>
+
+            <div className="grid gap-2">
+              {nextSteps.map((nextStep) => (
+                <button
+                  key={nextStep.key}
+                  onClick={() => setActivePage(nextStep.page)}
+                  className="flex items-center gap-3 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
+                >
+                  <nextStep.icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium">{t(`nextSteps.${nextStep.key}.title`)}</p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-muted-foreground shrink-0" />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1564,42 +1564,34 @@
       },
       "completed": "Críochnaithe",
       "notCompleted": "Níl críochnaithe",
-      "allDone": "Gach rud críochnaithe! Tá do mheán beo.",
-      "requiredRemaining": "{count} céimeanna riachtanacha fágtha",
-      "quickActions": {
-        "qrMenu": {
-          "name": "Biachlár QR",
-          "description": "Priontáil agus roinn do bhiachlár"
-        },
-        "categories": {
-          "name": "Catagóirí",
-          "description": "Cuir nó cuir in eagar catagóirí biachlár"
-        },
-        "items": {
-          "name": "Míreanna Biachlár",
-          "description": "Cuir nó cuir in eagar béilí"
-        },
-        "design": {
-          "name": "Dearadh",
-          "description": "Saincheap dathanna agus cúlra"
-        },
-        "contacts": {
-          "name": "Teagmhálaithe",
-          "description": "Cuir in eagar eolas teagmhála"
-        },
-        "languages": {
-          "name": "Teangacha",
-          "description": "Cuir tuilleadh teangacha le do bhiachlár"
-        },
-        "analytics": {
-          "name": "Anailísíocht",
-          "description": "Féach ar staitisticí scanadh biachlár"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

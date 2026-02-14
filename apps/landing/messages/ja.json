@@ -1577,42 +1577,34 @@
       },
       "completed": "完了",
       "notCompleted": "未完了",
-      "allDone": "すべて完了！メニューが公開されています。",
-      "requiredRemaining": "あと{count}つの必須ステップ",
-      "quickActions": {
-        "qrMenu": {
-          "name": "QRメニュー",
-          "description": "メニューを印刷して共有"
-        },
-        "categories": {
-          "name": "カテゴリ",
-          "description": "メニューカテゴリを追加または編集"
-        },
-        "items": {
-          "name": "メニュー項目",
-          "description": "料理を追加または編集"
-        },
-        "design": {
-          "name": "デザイン",
-          "description": "色と背景をカスタマイズ"
-        },
-        "contacts": {
-          "name": "連絡先",
-          "description": "連絡先情報を編集"
-        },
-        "languages": {
-          "name": "言語",
-          "description": "メニューに言語を追加"
-        },
-        "analytics": {
-          "name": "分析",
-          "description": "メニュースキャン統計を表示"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

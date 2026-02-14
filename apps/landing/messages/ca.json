@@ -1564,42 +1564,34 @@
       },
       "completed": "Completat",
       "notCompleted": "No completat",
-      "allDone": "Tot fet! El teu menú està en línia.",
-      "requiredRemaining": "{count} passos obligatoris restants",
-      "quickActions": {
-        "qrMenu": {
-          "name": "Menú QR",
-          "description": "Imprimeix i comparteix el teu menú"
-        },
-        "categories": {
-          "name": "Categories",
-          "description": "Afegeix o edita les categories del menú"
-        },
-        "items": {
-          "name": "Plats del Menú",
-          "description": "Afegeix o edita plats"
-        },
-        "design": {
-          "name": "Disseny",
-          "description": "Personalitza colors i fons"
-        },
-        "contacts": {
-          "name": "Contactes",
-          "description": "Edita la informació de contacte"
-        },
-        "languages": {
-          "name": "Idiomes",
-          "description": "Afegeix més idiomes al teu menú"
-        },
-        "analytics": {
-          "name": "Analítiques",
-          "description": "Veure estadístiques d'escaneig del menú"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

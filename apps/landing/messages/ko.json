@@ -1597,42 +1597,34 @@
       },
       "completed": "완료됨",
       "notCompleted": "완료되지 않음",
-      "allDone": "모두 완료! 메뉴가 라이브입니다.",
-      "requiredRemaining": "남은 필수 단계 {count}개",
-      "quickActions": {
-        "qrMenu": {
-          "name": "QR 메뉴",
-          "description": "메뉴를 인쇄하고 공유하세요"
-        },
-        "categories": {
-          "name": "카테고리",
-          "description": "메뉴 카테고리 추가 또는 편집"
-        },
-        "items": {
-          "name": "메뉴 항목",
-          "description": "요리 추가 또는 편집"
-        },
-        "design": {
-          "name": "디자인",
-          "description": "색상과 배경 사용자 지정"
-        },
-        "contacts": {
-          "name": "연락처",
-          "description": "연락처 정보 편집"
-        },
-        "languages": {
-          "name": "언어",
-          "description": "메뉴에 언어 추가"
-        },
-        "analytics": {
-          "name": "분석",
-          "description": "메뉴 스캔 통계 보기"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

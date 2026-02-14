@@ -1597,42 +1597,34 @@
       },
       "completed": "已完成",
       "notCompleted": "未完成",
-      "allDone": "全部完成！您的菜单已上线。",
-      "requiredRemaining": "还剩{count}个必要步骤",
-      "quickActions": {
-        "qrMenu": {
-          "name": "二维码菜单",
-          "description": "打印并分享您的菜单"
-        },
-        "categories": {
-          "name": "分类",
-          "description": "添加或编辑菜单分类"
-        },
-        "items": {
-          "name": "菜品",
-          "description": "添加或编辑菜品"
-        },
-        "design": {
-          "name": "设计",
-          "description": "自定义颜色和背景"
-        },
-        "contacts": {
-          "name": "联系方式",
-          "description": "编辑联系信息"
-        },
-        "languages": {
-          "name": "语言",
-          "description": "为菜单添加更多语言"
-        },
-        "analytics": {
-          "name": "分析",
-          "description": "查看菜单扫描统计"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

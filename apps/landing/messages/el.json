@@ -1564,42 +1564,34 @@
       },
       "completed": "Ολοκληρώθηκε",
       "notCompleted": "Δεν ολοκληρώθηκε",
-      "allDone": "Όλα έτοιμα! Το μενού σας είναι ενεργό.",
-      "requiredRemaining": "{count} υποχρεωτικά βήματα απομένουν",
-      "quickActions": {
-        "qrMenu": {
-          "name": "QR Μενού",
-          "description": "Εκτυπώστε και μοιραστείτε το μενού σας"
-        },
-        "categories": {
-          "name": "Κατηγορίες",
-          "description": "Προσθήκη ή επεξεργασία κατηγοριών μενού"
-        },
-        "items": {
-          "name": "Πιάτα Μενού",
-          "description": "Προσθήκη ή επεξεργασία πιάτων"
-        },
-        "design": {
-          "name": "Σχεδιασμός",
-          "description": "Προσαρμόστε χρώματα και φόντο"
-        },
-        "contacts": {
-          "name": "Επαφές",
-          "description": "Επεξεργασία στοιχείων επικοινωνίας"
-        },
-        "languages": {
-          "name": "Γλώσσες",
-          "description": "Προσθέστε περισσότερες γλώσσες στο μενού σας"
-        },
-        "analytics": {
-          "name": "Αναλυτικά",
-          "description": "Δείτε στατιστικά σάρωσης μενού"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {

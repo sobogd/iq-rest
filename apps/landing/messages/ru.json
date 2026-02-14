@@ -1568,36 +1568,28 @@
       "restaurantNamePlaceholder": "Введите название ресторана",
       "continue": "Продолжить",
       "createError": "Не удалось создать ресторан",
-      "allDone": "Готово! Ваше меню опубликовано.",
-      "requiredRemaining": "Осталось {count} обязательных шагов",
-      "quickActions": {
-        "qrMenu": {
-          "name": "QR Меню",
-          "description": "Распечатайте и поделитесь меню"
+      "completedTitle": "Сделайте его своим",
+      "completedSubtitle": "Ваше меню готово! Вот как сделать его ещё лучше.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Помогите клиентам связаться с вами",
+          "description": "Добавьте телефон, WhatsApp и Instagram для связи"
         },
-        "categories": {
-          "name": "Категории",
-          "description": "Добавить или изменить категории"
-        },
-        "items": {
-          "name": "Блюда",
-          "description": "Добавить или изменить блюда"
+        "settings": {
+          "title": "Настройте меню",
+          "description": "Укажите описание, URL и валюту"
         },
         "design": {
-          "name": "Дизайн",
-          "description": "Настроить цвета и фон"
-        },
-        "contacts": {
-          "name": "Контакты",
-          "description": "Изменить контактную информацию"
+          "title": "Оформите под свой бренд",
+          "description": "Выберите цвета и фон в вашем стиле"
         },
         "languages": {
-          "name": "Языки",
-          "description": "Добавить языки в меню"
+          "title": "Привлеките больше клиентов",
+          "description": "Добавьте языки для иностранных гостей"
         },
-        "analytics": {
-          "name": "Аналитика",
-          "description": "Статистика сканирований меню"
+        "qrMenu": {
+          "title": "Начните получать сканы",
+          "description": "Распечатайте QR-код и поделитесь ссылкой"
         }
       }
     }

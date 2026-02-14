@@ -1564,42 +1564,34 @@
       },
       "completed": "Slutförd",
       "notCompleted": "Ej slutförd",
-      "allDone": "Allt klart! Din meny är live.",
-      "requiredRemaining": "{count} obligatoriska steg kvar",
-      "quickActions": {
-        "qrMenu": {
-          "name": "QR-meny",
-          "description": "Skriv ut och dela din meny"
-        },
-        "categories": {
-          "name": "Kategorier",
-          "description": "Lägg till eller redigera menykategorier"
-        },
-        "items": {
-          "name": "Menyobjekt",
-          "description": "Lägg till eller redigera rätter"
-        },
-        "design": {
-          "name": "Design",
-          "description": "Anpassa färger och bakgrund"
-        },
-        "contacts": {
-          "name": "Kontakter",
-          "description": "Redigera kontaktinformation"
-        },
-        "languages": {
-          "name": "Språk",
-          "description": "Lägg till fler språk i din meny"
-        },
-        "analytics": {
-          "name": "Analys",
-          "description": "Visa menyskanningsstatistik"
-        }
-      },
       "stepIndicator": "Step {current} of {total}",
       "restaurantNamePlaceholder": "Enter restaurant name",
       "continue": "Continue",
-      "createError": "Failed to create restaurant"
+      "createError": "Failed to create restaurant",
+      "completedTitle": "Make it yours",
+      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
+      "nextSteps": {
+        "contacts": {
+          "title": "Help customers reach you",
+          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
+        },
+        "settings": {
+          "title": "Fine-tune your menu",
+          "description": "Set your description, custom URL, and currency"
+        },
+        "design": {
+          "title": "Match your brand",
+          "description": "Choose colors and background that reflect your style"
+        },
+        "languages": {
+          "title": "Reach more customers",
+          "description": "Add languages to welcome international guests"
+        },
+        "qrMenu": {
+          "title": "Get customers scanning",
+          "description": "Print your QR code and share your menu link"
+        }
+      }
     }
   },
   "reservationSettings": {
