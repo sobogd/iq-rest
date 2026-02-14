@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { moveFromTemp } from "@/lib/s3";
 import { Prisma } from "@prisma/client";
-import { locales } from "@/i18n/routing";
+import { locales, Locale } from "@/i18n/routing";
 
 type TranslationData = {
   name?: string;
@@ -119,11 +119,10 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      // Get locale from cookie for default language
-      const localeCookie = request.cookies.get("NEXT_LOCALE")?.value;
-      const userLocale = localeCookie && locales.includes(localeCookie as typeof locales[number])
-        ? localeCookie
-        : "en";
+      // Get locale from Referer URL (e.g., /pt/dashboard/onboarding -> pt)
+      const referer = request.headers.get("referer");
+      const localeMatch = referer?.match(new RegExp(`/(${locales.join("|")})/`));
+      const userLocale: Locale = localeMatch?.[1] as Locale || "en";
 
       const restaurant = await prisma.restaurant.create({
         data: {
