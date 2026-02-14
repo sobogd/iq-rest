@@ -21,6 +21,12 @@ const MARKETING_FUNNEL = [
   { event: "page_view_home", label: "Home" },
   { event: "demo_open", label: "Demo" },
   { event: "page_view_pricing", label: "Pricing" },
+  { event: "page_view_faq", label: "FAQ" },
+  { event: "page_view_contacts", label: "Contacts" },
+  { event: "page_view_changelog", label: "Changelog" },
+  { event: "page_view_terms", label: "Terms" },
+  { event: "page_view_privacy", label: "Privacy" },
+  { event: "page_view_cookies", label: "Cookies" },
 ];
 
 // Funnel 3: Dashboard pages

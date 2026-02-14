@@ -520,6 +520,12 @@ export function AdminAnalyticsPage() {
       // Page views
       page_view_home: "Visited Home",
       page_view_pricing: "Visited Pricing",
+      page_view_faq: "Visited FAQ",
+      page_view_contacts: "Visited Contacts",
+      page_view_changelog: "Visited Changelog",
+      page_view_terms: "Visited Terms",
+      page_view_privacy: "Visited Privacy",
+      page_view_cookies: "Visited Cookies",
       // Marketing
       demo_open: "Opened Demo",
       demo_close: "Closed Demo",
