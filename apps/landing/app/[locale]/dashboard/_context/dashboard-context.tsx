@@ -250,16 +250,11 @@ export function DashboardProvider({
     const handlePopState = () => {
       const currentHash = window.location.hash.slice(1) || "onboarding";
 
-      // If a form is open, close it and go to onboarding
+      // If a form is open, close it and stay on current page
       if (formCloseHandlerRef.current) {
         formCloseHandlerRef.current();
         formCloseHandlerRef.current = null;
-        // Go to onboarding
-        window.history.pushState(null, "", "#onboarding");
-        setActivePageState("onboarding");
-        setPageCookie("onboarding");
-        previousPageRef.current = "onboarding";
-        isNavigatingRef.current = true;
+        // Browser already went back to the list URL, just stay there
         return;
       }
 

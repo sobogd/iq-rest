@@ -56,6 +56,7 @@ export function CategoriesPage() {
     if (sessionStorage.getItem("openFormOnNavigate") === "true") {
       sessionStorage.removeItem("openFormOnNavigate");
       setShowForm(true);
+      window.history.pushState(null, "", "#categories-form");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -184,11 +185,13 @@ export function CategoriesPage() {
   function handleEditCategory(category: CategoryWithTranslations) {
     setEditingCategory(category);
     setShowForm(true);
+    window.history.pushState(null, "", "#categories-form");
   }
 
   function handleAddCategory() {
     setEditingCategory(null);
     setShowForm(true);
+    window.history.pushState(null, "", "#categories-form");
   }
 
   function handleFormClose() {

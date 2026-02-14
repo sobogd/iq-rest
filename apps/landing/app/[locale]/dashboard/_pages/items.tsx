@@ -104,6 +104,7 @@ export function ItemsPage() {
     if (sessionStorage.getItem("openFormOnNavigate") === "true") {
       sessionStorage.removeItem("openFormOnNavigate");
       setShowForm(true);
+      window.history.pushState(null, "", "#items-form");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -281,11 +282,13 @@ export function ItemsPage() {
   function handleEditItem(item: ItemWithTranslations) {
     setEditingItem(item);
     setShowForm(true);
+    window.history.pushState(null, "", "#items-form");
   }
 
   function handleAddItem() {
     setEditingItem(null);
     setShowForm(true);
+    window.history.pushState(null, "", "#items-form");
   }
 
   function handleFormClose() {
