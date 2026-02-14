@@ -3,10 +3,9 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useDashboard, PageKey } from "../_context/dashboard-context";
 import {
-  ChevronLeft,
-  ChevronRight,
   Eye,
   Loader2,
   Check,
@@ -20,12 +19,13 @@ import {
   BarChart3,
 } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
+import { toast } from "sonner";
+import { onboarding as onboardingAnalytics } from "@/lib/analytics";
 
 interface OnboardingProgress {
   hasInfo: boolean;
   hasCategories: boolean;
   hasItems: boolean;
-  hasContacts: boolean;
 }
 
 interface OnboardingData {
@@ -34,7 +34,7 @@ interface OnboardingData {
   slug: string | null;
 }
 
-type StepKey = "info" | "categories" | "items" | "contacts";
+type StepKey = "info" | "categories" | "items";
 
 interface Step {
   key: StepKey;
@@ -46,7 +46,6 @@ const allSteps: Step[] = [
   { key: "info", progressKey: "hasInfo", page: "settings" },
   { key: "categories", progressKey: "hasCategories", page: "categories" },
   { key: "items", progressKey: "hasItems", page: "items" },
-  { key: "contacts", progressKey: "hasContacts", page: "contacts" },
 ];
 
 interface QuickAction {
@@ -71,6 +70,8 @@ export function OnboardingPage() {
   const [data, setData] = useState<OnboardingData | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
+  const [restaurantName, setRestaurantName] = useState("");
+  const [creating, setCreating] = useState(false);
 
   useEffect(() => {
     async function fetchProgress() {
@@ -86,10 +87,11 @@ export function OnboardingPage() {
           );
           if (firstIncomplete !== -1) {
             setCurrentStep(firstIncomplete);
-          }
-
-          if (result.requiredCompleted) {
-
+            // Track initial step view
+            onboardingAnalytics.stepView(firstIncomplete + 1);
+          } else if (result.requiredCompleted) {
+            // Track completed onboarding view
+            onboardingAnalytics.complete();
           }
         }
       } catch (error) {
@@ -102,20 +104,48 @@ export function OnboardingPage() {
   }, []);
 
   const handleStepClick = (_step: StepKey, page: PageKey) => {
+    onboardingAnalytics.stepContinue(currentStep + 1);
     navigateFromOnboarding(page);
   };
 
-  const goToPrevious = () => {
-    if (currentStep > 0) {
-
-      setCurrentStep(currentStep - 1);
+  const handleCreateRestaurant = async () => {
+    if (!restaurantName.trim()) {
+      return;
     }
-  };
 
-  const goToNext = () => {
-    if (currentStep < allSteps.length - 1) {
+    setCreating(true);
+    try {
+      const res = await fetch("/api/restaurant", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title: restaurantName.trim() }),
+      });
 
-      setCurrentStep(currentStep + 1);
+      if (res.ok) {
+        const result = await res.json();
+        // Track continue click for step 1
+        onboardingAnalytics.stepContinue(1);
+        // Update local data to reflect restaurant was created
+        setData((prev) =>
+          prev
+            ? {
+                ...prev,
+                progress: { ...prev.progress, hasInfo: true },
+                slug: result.slug,
+              }
+            : prev
+        );
+        // Move to next step and track view
+        setCurrentStep(1);
+        onboardingAnalytics.stepView(2);
+      } else {
+        const error = await res.json();
+        toast.error(error.error || t("createError"));
+      }
+    } catch {
+      toast.error(t("createError"));
+    } finally {
+      setCreating(false);
     }
   };
 
@@ -181,51 +211,13 @@ export function OnboardingPage() {
   }
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Top Navigation */}
-      <div className="flex items-center justify-between px-6 py-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={goToPrevious}
-          disabled={currentStep === 0}
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </Button>
-
-        <span className="text-sm text-muted-foreground">
-          {currentStep + 1} / {allSteps.length}
-        </span>
-
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={goToNext}
-          disabled={currentStep === allSteps.length - 1}
-        >
-          <ChevronRight className="h-5 w-5" />
-        </Button>
-      </div>
-
-      {/* Content */}
-      <div className="flex-1 flex flex-col items-center justify-center p-6">
-        <div className="max-w-md w-full text-center space-y-6">
-          {/* Status Badge */}
-          <div className="flex justify-center">
-            {isCompleted ? (
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium">
-                <Check className="h-4 w-4" />
-                {t("completed")}
-              </div>
-            ) : (
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-sm font-medium">
-                {t("notCompleted")}
-              </div>
-            )}
-          </div>
-
-          {/* Step Title */}
-          <div className="space-y-3">
+    <div className="flex h-full flex-col justify-center p-6">
+      <div className="w-full max-w-[280px]">
+        <div className="grid gap-6">
+          <div className="grid gap-2">
+            <p className="text-sm text-muted-foreground">
+              {t("stepIndicator", { current: currentStep + 1, total: allSteps.length })}
+            </p>
             <h1 className="text-2xl font-bold">
               {t(`steps.${step.key}.name`)}
             </h1>
@@ -233,20 +225,40 @@ export function OnboardingPage() {
               {t(`steps.${step.key}.description`)}
             </p>
           </div>
-        </div>
-      </div>
 
-      {/* Bottom Action */}
-      <div className="px-6 pt-4 pb-6 bg-background shrink-0">
-        <div className="max-w-md mx-auto">
-          <Button
-            className="w-full"
-            size="lg"
-            onClick={() => handleStepClick(step.key, step.page)}
-          >
-            {t(`steps.${step.key}.name`)}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="grid gap-4">
+            {step.key === "info" && !isCompleted ? (
+              <>
+                <Input
+                  value={restaurantName}
+                  onChange={(e) => setRestaurantName(e.target.value)}
+                  placeholder={t("restaurantNamePlaceholder")}
+                  disabled={creating}
+                  className="h-auto py-2 text-base lg:py-2.5 lg:text-lg"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && restaurantName.trim()) {
+                      handleCreateRestaurant();
+                    }
+                  }}
+                />
+                <Button
+                  className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
+                  onClick={handleCreateRestaurant}
+                  disabled={!restaurantName.trim() || creating}
+                >
+                  {creating && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {t("continue")}
+                </Button>
+              </>
+            ) : (
+              <Button
+                className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
+                onClick={() => handleStepClick(step.key, step.page)}
+              >
+                {t("continue")}
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </div>

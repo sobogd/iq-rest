@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { analytics } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -94,9 +93,6 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [currency, setCurrency] = useState<SupportedCurrency>("EUR");
-  const comparisonRef = useRef<HTMLDivElement>(null);
-  const comparisonTracked = useRef(false);
-  const lastTrackedPlan = useRef<number>(-1);
 
   // Читаем валюту из куки при монтировании
   useEffect(() => {
@@ -112,55 +108,8 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
     });
   }, [api]);
 
-  // Track plan view on mobile swipe (not initial render)
-  useEffect(() => {
-    // Only track on mobile (< 768px)
-    const isMobile = window.innerWidth < 768;
-    if (!isMobile) return;
-
-    // Skip initial render (lastTrackedPlan starts at -1)
-    if (lastTrackedPlan.current === -1) {
-      lastTrackedPlan.current = current;
-      return;
-    }
-
-    // Don't track the same plan twice in a row
-    if (lastTrackedPlan.current === current) return;
-    lastTrackedPlan.current = current;
-
-    const planId = PLANS[current]?.id;
-    if (planId) {
-      analytics.marketing.pricingPlanView(planId);
-    }
-  }, [current]);
-
-  // Track comparison table view
-  useEffect(() => {
-    const el = comparisonRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !comparisonTracked.current) {
-          comparisonTracked.current = true;
-          analytics.marketing.pricingComparisonView();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   const handleToggle = () => {
-    const newIsYearly = !isYearly;
-    setIsYearly(newIsYearly);
-    if (newIsYearly) {
-      analytics.marketing.pricingToggleYearly();
-    } else {
-      analytics.marketing.pricingToggleMonthly();
-    }
+    setIsYearly(!isYearly);
   };
 
   const renderCellValue = (
@@ -298,7 +247,6 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
                         className="w-full"
                         variant="default"
                         size="lg"
-                        onClick={() => analytics.marketing.pricingPlanClick(plan.id)}
                       >
                         <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
                       </Button>
@@ -327,7 +275,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
 
       {/* Comparison Table */}
       {!hideComparison && (
-        <div ref={comparisonRef} className="space-y-6">
+        <div className="space-y-6">
           <div className="text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
               {t("comparison.title")}

@@ -1547,10 +1547,11 @@
       "requiredSteps": "Required Steps",
       "optionalSteps": "Optional Steps",
       "viewMenu": "View Your Menu",
+      "stepIndicator": "Step {current} of {total}",
       "steps": {
         "info": {
-          "name": "Restaurant Info",
-          "description": "Add your restaurant name and choose a website address"
+          "name": "Restaurant Name",
+          "description": "Enter the name of your restaurant to get started"
         },
         "categories": {
           "name": "Create Categories",
@@ -1567,6 +1568,9 @@
       },
       "completed": "Completed",
       "notCompleted": "Not completed",
+      "restaurantNamePlaceholder": "Enter restaurant name",
+      "continue": "Continue",
+      "createError": "Failed to create restaurant",
       "allDone": "All done! Your menu is live.",
       "requiredRemaining": "{count} required steps remaining",
       "quickActions": {

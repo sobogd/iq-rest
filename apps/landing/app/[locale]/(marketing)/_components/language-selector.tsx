@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useTransition, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { analytics } from "@/lib/analytics";
-import { usePathname, useRouter, locales } from "@/i18n/routing";
+import { locales } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -58,11 +57,8 @@ const LANGUAGE_NAMES: Record<string, string> = {
 export function LanguageSelector() {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
-  const [isPending, startTransition] = useTransition();
   const t = useTranslations("header");
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
 
   const filteredLocales = useMemo(() => {
     const searchLower = search.toLowerCase();
@@ -76,9 +72,6 @@ export function LanguageSelector() {
   }, [search]);
 
   const handleLanguageChange = (newLocale: string) => {
-    // Track language change
-    analytics.marketing.languageChange(locale, newLocale);
-
     // Сохраняем в cookie
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 
@@ -105,8 +98,6 @@ export function LanguageSelector() {
           variant="outline"
           size="icon"
           aria-label={t("selectLanguage")}
-          className=""
-          onClick={() => analytics.marketing.languageSelectorOpen()}
         >
           <Globe className="h-5 w-5" />
           <span className="sr-only">{t("selectLanguage")}</span>
@@ -134,7 +125,6 @@ export function LanguageSelector() {
                 key={code}
                 variant={locale === code ? "default" : "ghost"}
                 onClick={() => handleLanguageChange(code)}
-                disabled={isPending}
                 className="w-full justify-between h-auto py-3"
               >
                 <span className="flex items-center gap-3">

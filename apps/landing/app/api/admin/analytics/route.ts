@@ -6,50 +6,32 @@ import { Prisma } from "@prisma/client";
 
 // Funnel 1: Landing page section views
 const SECTION_FUNNEL = [
-  { event: "section_view_hero", label: "Hero" },
   { event: "section_view_features", label: "Features" },
-  { event: "section_view_feature_reservations", label: "Reservations" },
-  { event: "section_view_feature_custom_design", label: "Custom Design" },
   { event: "section_view_feature_color_scheme", label: "Color Scheme" },
-  { event: "section_view_feature_easy_menu", label: "Easy Menu" },
-  { event: "section_view_feature_multilingual", label: "Multilingual" },
-  { event: "section_view_feature_ai_translation", label: "AI Translation" },
   { event: "section_view_feature_mobile_management", label: "Mobile Mgmt" },
-  { event: "section_view_intro", label: "Intro" },
-  { event: "section_view_why_us", label: "Why Us" },
-  { event: "section_view_cta", label: "CTA" },
+  { event: "section_view_feature_custom_design", label: "Custom Design" },
+  { event: "section_view_feature_easy_menu", label: "Easy Menu" },
+  { event: "section_view_feature_ai_translation", label: "AI Translation" },
+  { event: "section_view_feature_reservations", label: "Reservations" },
+  { event: "section_view_pricing", label: "Pricing" },
 ];
 
 // Funnel 2: Marketing pages
 const MARKETING_FUNNEL = [
   { event: "page_view_home", label: "Home" },
-  { event: "demo_open", label: "Demo Open" },
+  { event: "demo_open", label: "Demo" },
   { event: "page_view_pricing", label: "Pricing" },
-  { event: "page_view_faq", label: "FAQ" },
-  { event: "page_view_contacts", label: "Contacts" },
-  { event: "page_view_changelog", label: "Changelog" },
-  // Feature pages
-  { event: "page_view_instant_setup", label: "Instant Setup" },
-  { event: "page_view_mobile_management", label: "Mobile Mgmt" },
-  { event: "page_view_ai_translation", label: "AI Translation" },
-  { event: "page_view_multilingual", label: "Multilingual" },
-  { event: "page_view_ai_images", label: "AI Images" },
-  { event: "page_view_easy_menu", label: "Easy Menu" },
-  { event: "page_view_analytics", label: "Analytics" },
-  { event: "page_view_reservations", label: "Reservations" },
-  { event: "page_view_custom_design", label: "Custom Design" },
-  { event: "page_view_color_scheme", label: "Color Scheme" },
-  { event: "page_view_personal_support", label: "Support" },
 ];
 
 // Funnel 3: Dashboard pages
 const DASHBOARD_FUNNEL = [
-  { event: "dashboard_onboarding", label: "Onboarding" },
+  { event: "onboarding_step_view", label: "Onboarding View" },
+  { event: "onboarding_step_continue", label: "Onboarding Click" },
+  { event: "onboarding_complete", label: "Onboarding Done" },
   { event: "dashboard_categories", label: "Categories" },
   { event: "dashboard_items", label: "Items" },
   { event: "dashboard_settings", label: "Settings" },
   { event: "dashboard_design", label: "Design" },
-  { event: "dashboard_contacts", label: "Contacts" },
   { event: "dashboard_languages", label: "Languages" },
   { event: "dashboard_analytics", label: "Analytics" },
   { event: "dashboard_qrMenu", label: "QR Menu" },

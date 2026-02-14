@@ -1544,10 +1544,11 @@
       "requiredSteps": "Обязательные шаги",
       "optionalSteps": "Необязательные шаги",
       "viewMenu": "Просмотреть ваше меню",
+      "stepIndicator": "Шаг {current} из {total}",
       "steps": {
         "info": {
-          "name": "Информация о ресторане",
-          "description": "Добавьте название ресторана и выберите адрес сайта"
+          "name": "Название ресторана",
+          "description": "Введите название вашего ресторана, чтобы начать"
         },
         "categories": {
           "name": "Создать категории",
@@ -1564,6 +1565,9 @@
       },
       "completed": "Завершено",
       "notCompleted": "Не завершено",
+      "restaurantNamePlaceholder": "Введите название ресторана",
+      "continue": "Продолжить",
+      "createError": "Не удалось создать ресторан",
       "allDone": "Готово! Ваше меню опубликовано.",
       "requiredRemaining": "Осталось {count} обязательных шагов",
       "quickActions": {

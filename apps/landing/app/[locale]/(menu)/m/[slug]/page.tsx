@@ -131,12 +131,14 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
             </span>
           </MenuNavLink>
         )}
-        <MenuNavLink href={`/m/${slug}/contacts${previewParam}`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
-          <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
-            <Phone className="h-5 w-5" />
-            {t("contacts")}
-          </span>
-        </MenuNavLink>
+        {(restaurant.phone || restaurant.instagram || restaurant.whatsapp || restaurant.address) && (
+          <MenuNavLink href={`/m/${slug}/contacts${previewParam}`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
+            <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">
+              <Phone className="h-5 w-5" />
+              {t("contacts")}
+            </span>
+          </MenuNavLink>
+        )}
         {(restaurant.languages?.length || 0) > 1 && (
           <MenuNavLink href={`/m/${slug}/language/${previewParam}`} className="border-t border-gray-300/25 flex justify-center px-[8%]">
             <span className="max-w-[440px] w-full py-[22px] flex items-center gap-3 text-black font-semibold">

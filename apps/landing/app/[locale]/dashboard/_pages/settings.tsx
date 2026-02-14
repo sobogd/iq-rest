@@ -17,7 +17,6 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { useTranslations } from "next-intl";
-import { useDashboard } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
 import { CURRENCIES } from "@/lib/currencies";
 import { FormSwitch } from "../_ui/form-switch";
@@ -33,7 +32,6 @@ interface Restaurant {
 
 export function SettingsPage() {
   const t = useTranslations("dashboard.general");
-  const { returnToOnboarding } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -146,8 +144,6 @@ export function SettingsPage() {
         setOriginalSlug(slug);
         setOriginalCurrency(currency);
         setOriginalHideTitle(hideTitle);
-
-        returnToOnboarding();
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));
