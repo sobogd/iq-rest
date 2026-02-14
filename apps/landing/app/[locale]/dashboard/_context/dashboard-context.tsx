@@ -185,6 +185,12 @@ function setPageCookie(page: PageKey) {
   document.cookie = `${COOKIE_KEY}=${page};path=/;max-age=31536000`;
 }
 
+function getPageFromHash(): PageKey | null {
+  if (typeof window === "undefined") return null;
+  const hash = window.location.hash.slice(1); // remove #
+  return isValidPageKey(hash) ? hash : null;
+}
+
 export function DashboardProvider({
   children,
   translations,
@@ -196,27 +202,55 @@ export function DashboardProvider({
 }) {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const isNavigatingRef = useRef(false);
 
+  // Priority: hash > query param > initialPage
   const pageParam = searchParams.get("page");
-  const effectiveInitialPage = pageParam && isValidPageKey(pageParam) ? pageParam : initialPage;
+  const hashPage = typeof window !== "undefined" ? getPageFromHash() : null;
+  const effectiveInitialPage = hashPage || (pageParam && isValidPageKey(pageParam) ? pageParam : initialPage);
 
   const [activePage, setActivePageState] = useState<PageKey>(effectiveInitialPage);
   const previousPageRef = useRef<PageKey>(effectiveInitialPage);
 
+  // Handle query param (legacy support) - convert to hash
   useEffect(() => {
     const pageParam = searchParams.get("page");
     if (pageParam && isValidPageKey(pageParam)) {
       setActivePageState(pageParam);
       setPageCookie(pageParam);
 
+      // Replace URL with hash instead of query param
       const newParams = new URLSearchParams(searchParams.toString());
       newParams.delete("page");
-      const newUrl = newParams.toString()
+      const basePath = newParams.toString()
         ? `${window.location.pathname}?${newParams.toString()}`
         : window.location.pathname;
-      router.replace(newUrl, { scroll: false });
+      router.replace(`${basePath}#${pageParam}`, { scroll: false });
     }
   }, [searchParams, router]);
+
+  // Set initial hash if not present
+  useEffect(() => {
+    if (!window.location.hash && activePage) {
+      window.history.replaceState(null, "", `#${activePage}`);
+    }
+  }, []);
+
+  // Listen for browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const hashPage = getPageFromHash();
+      if (hashPage && hashPage !== activePage) {
+        isNavigatingRef.current = true;
+        setActivePageState(hashPage);
+        setPageCookie(hashPage);
+        previousPageRef.current = hashPage;
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [activePage]);
 
 
   const trackPageView = useCallback((page: PageKey) => {
@@ -227,6 +261,11 @@ export function DashboardProvider({
     const fromPage = previousPageRef.current;
     if (fromPage !== page) {
       trackPageView(page);
+      // Push to history for browser back button support
+      if (!isNavigatingRef.current) {
+        window.history.pushState(null, "", `#${page}`);
+      }
+      isNavigatingRef.current = false;
     }
     previousPageRef.current = page;
     setActivePageState(page);
@@ -241,6 +280,8 @@ export function DashboardProvider({
     if (page === "categories" || page === "items") {
       sessionStorage.setItem("openFormOnNavigate", "true");
     }
+    // Push to history for browser back button support
+    window.history.pushState(null, "", `#${page}`);
     setActivePageState(page);
     setPageCookie(page);
   }, [trackPageView]);
@@ -250,6 +291,8 @@ export function DashboardProvider({
     if (shouldReturn) {
       previousPageRef.current = "onboarding";
       sessionStorage.removeItem("returnToOnboarding");
+      // Push to history for browser back button support
+      window.history.pushState(null, "", "#onboarding");
       setActivePageState("onboarding");
       setPageCookie("onboarding");
       return true;
