@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Settu QR-valmyndina og vefsíðuna af stað á 1 mínútu",
+      "title": "Settu QR-valmynd og vefsíðu'{mbr}' af stað á 1 mínútu",
       "subtitle": "Sláðu inn tölvupóstinn þinn og fáðu fullkomna veitingastaðavefsíðu með QR matseðli, tengiliðasíðu, fjöltyngda stuðning og nútímalegt útlit. Stilltu allt frá símanum þínum.",
       "cta": {
         "create": "Búa til ókeypis",

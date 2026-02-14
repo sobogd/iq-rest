@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Käivitage oma QR-menüü ja veebisait 1 minutiga",
+      "title": "Käivitage QR-menüü ja veebisait'{mbr}' 1 minutiga",
       "subtitle": "Lihtsalt sisestage oma e-post ja saate täieliku restoraniveebilehe QR menüü, kontaktlehe, mitmekeelse toe ja modernse disainiga. Seadistage kõik oma telefonist.",
       "cta": {
         "create": "Loo tasuta",

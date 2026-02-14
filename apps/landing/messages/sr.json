@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Покрените QR мени и сајт за 1 минут",
+      "title": "Покрените QR мени и сајт'{mbr}' за 1 минут",
       "subtitle": "Samo unesite svoju email adresu i dobijate kompletnu veb stranicu restorana sa QR menijem, stranicom za kontakt, višelingvalnom podrškom i modernim dizajnom. Sve postavite sa svog telefona.",
       "cta": {
         "create": "Направи бесплатно",

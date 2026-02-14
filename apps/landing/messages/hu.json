@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Indítsd el QR menüdet és weboldaladat 1 perc alatt",
+      "title": "Indítsd el QR menüd'{mbr}' és weboldalad 1 perc alatt",
       "subtitle": "Csak add meg az email címed, és kapj egy teljes étterem weboldalt QR menüvel, kapcsolati oldallal, többnyelvű támogatással és modern dizájnnal. Minden beállítható a telefonodról.",
       "cta": {
         "create": "Ingyenes létrehozás",

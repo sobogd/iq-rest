@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Zaženite QR meni in spletno stran v 1 minuti",
+      "title": "Zaženite QR meni in stran'{mbr}' v 1 minuti",
       "subtitle": "Preprosto vnesite svoj e-poštni naslov in pridobite popolno spletno stran restavracije z QR menijem, kontaktnim obrazcem, večjezično podporo in sodobnim dizajnom. Vse nastavite s svojega telefona.",
       "cta": {
         "create": "Ustvari brezplačno",

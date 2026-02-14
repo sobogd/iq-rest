@@ -103,7 +103,12 @@ export default async function HomePage({
               {/* Left side - Text content */}
               <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-                  {tHero("title")}
+                  {tHero("title").split("{mbr}").map((part, i, arr) => (
+                    <span key={i}>
+                      {part}
+                      {i < arr.length - 1 && <br className="md:hidden" />}
+                    </span>
+                  ))}
                 </h1>
                 <p className="text-base sm:text-lg md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
                   {tHero("subtitle")}
@@ -141,11 +146,16 @@ export default async function HomePage({
 
                 {/* Title */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight lg:leading-tight mb-6">
-                  {tHero("title")}
+                  {tHero("title").split("{mbr}").map((part, i, arr) => (
+                    <span key={i}>
+                      {part}
+                      {i < arr.length - 1 && <br className="lg:hidden" />}
+                    </span>
+                  ))}
                 </h1>
 
                 {/* Perfect for badges */}
-                <div className="flex flex-wrap justify-center lg:justify-start gap-2 lg:gap-3 mb-6">
+                <div className="flex justify-center lg:justify-start gap-1.5 sm:gap-2 lg:gap-3 mb-6">
                   {[
                     { icon: UtensilsCrossed, label: tHero("perfectFor.restaurants") },
                     { icon: Coffee, label: tHero("perfectFor.cafes") },
@@ -154,9 +164,9 @@ export default async function HomePage({
                   ].map(({ icon: Icon, label }) => (
                     <div
                       key={label}
-                      className="flex items-center gap-1 lg:gap-1.5 px-2.5 py-1 lg:px-3.5 lg:py-1.5 rounded-full bg-muted/50 text-xs md:text-sm lg:text-base text-muted-foreground"
+                      className="flex items-center gap-0.5 sm:gap-1 lg:gap-1.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 lg:px-3.5 lg:py-1.5 rounded-full bg-muted/50 text-[10px] sm:text-xs md:text-sm lg:text-base text-muted-foreground"
                     >
-                      <Icon className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+                      <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 lg:w-4 lg:h-4" />
                       <span>{label}</span>
                     </div>
                   ))}

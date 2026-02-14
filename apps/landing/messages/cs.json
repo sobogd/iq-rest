@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Spusťte QR menu a web za 1 minutu",
+      "title": "Spusťte QR menu a web'{mbr}' za 1 minutu",
       "subtitle": "Stačí zadat váš e-mail a získat kompletní webovou stránku restaurace s QR menu, kontaktní stránkou, vícejazyčnou podporou a moderním designem. Vše nastavíte ze svého telefonu.",
       "cta": {
         "create": "Vytvořit zdarma",

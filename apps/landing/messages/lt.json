@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Paleiskite savo QR meniu ir svetainę per 1 minutę",
+      "title": "Paleiskite QR meniu ir svetainę'{mbr}' per 1 minutę",
       "subtitle": "Tiesiog įveskite savo el. paštą ir gauti pilną restorano svetainę su QR menu, kontaktų puslapiu, daugiakalbe parama ir moderniu dizainu. Viską nustatykite iš savo telefono.",
       "cta": {
         "create": "Sukurti nemokamai",

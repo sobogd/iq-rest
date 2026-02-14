@@ -9,7 +9,7 @@
       "changelog": "Änderungsprotokoll",
       "contacts": "Kontakte"
     },
-    "getStarted": "Kostenlos erstellen",
+    "getStarted": "Jetzt starten",
     "selectLanguage": "Sprache auswählen",
     "selectLanguageDescription": "Wählen Sie Ihre bevorzugte Sprache für die Website.",
     "searchLanguage": "Sprache suchen...",
@@ -17,11 +17,11 @@
   },
   "home": {
     "hero": {
-      "title": "Starten Sie Ihr QR-Menü und Website in 1 Minute",
+      "title": "Starten Sie Ihr QR-Menü'{mbr}' und Website in 1 Minute",
       "subtitle": "Geben Sie einfach Ihre E-Mail-Adresse ein und erhalten Sie eine vollständige Restaurant-Website mit QR-Menü, Kontaktseite, mehrsprachiger Unterstützung und modernem Design. Richten Sie alles von Ihrem Handy aus ein.",
       "cta": {
-        "create": "Kostenlos erstellen",
-        "view": "Demo ansehen",
+        "create": "Jetzt starten",
+        "view": "Demo",
         "noCreditCard": "Keine Kreditkarte erforderlich"
       },
       "benefits": [

@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Llança el teu menú QR i web en 1 minut",
+      "title": "Llança el teu menú QR i web'{mbr}' en 1 minut",
       "subtitle": "Només has d'introduir el teu correu electrònic i obtenir un lloc web complet per al restaurant amb menú QR, pàgina de contacte, suport multilingüe i disseny modern. Configura-ho tot des del teu telèfon.",
       "cta": {
         "create": "Crea gratis",

@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Palaidiet savu QR ēdienkarti un vietni 1 minūtē",
+      "title": "Palaidiet QR ēdienkarti un vietni'{mbr}' 1 minūtē",
       "subtitle": "Vienkārši ievadiet savu e-pastu un iegūstiet pilnīgu restorāna mājaslapu ar QR ēdienkarti, kontaktu lapu, daudzvalodu atbalstu un modernu dizainu. Iestatiet visu no sava telefona.",
       "cta": {
         "create": "Izveidot bezmaksas",

@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Käynnistä QR-menu ja verkkosivusto 1 minuutissa",
+      "title": "Käynnistä QR-menu ja sivusto'{mbr}' 1 minuutissa",
       "subtitle": "Syötä vain sähköpostiosoitteesi ja saat täydellisen ravintolaverkkosivuston QR-menuineen, yhteyssivun, monikielisen tuen ja modernin muotoilun. Aseta kaikki puhelimestasi.",
       "cta": {
         "create": "Luo ilmaiseksi",

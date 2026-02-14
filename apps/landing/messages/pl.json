@@ -9,7 +9,7 @@
       "changelog": "Historia zmian",
       "contacts": "Kontakty"
     },
-    "getStarted": "Utwórz za darmo",
+    "getStarted": "Zacznij teraz",
     "selectLanguage": "Wybierz język",
     "selectLanguageDescription": "Wybierz preferowany język dla strony internetowej.",
     "searchLanguage": "Szukaj języka...",
@@ -17,11 +17,11 @@
   },
   "home": {
     "hero": {
-      "title": "Uruchom menu QR i stronę w 1 minutę",
+      "title": "Uruchom menu QR i stronę'{mbr}' w 1 minutę",
       "subtitle": "Wystarczy wpisać swój adres e-mail i uzyskać kompletną stronę internetową restauracji z menu QR, stroną kontaktową, wsparciem wielojęzycznym i nowoczesnym designem. Skonfiguruj wszystko z telefonu.",
       "cta": {
-        "create": "Utwórz za darmo",
-        "view": "Zobacz Demo",
+        "create": "Zacznij teraz",
+        "view": "Demo",
         "noCreditCard": "Karta kredytowa nie jest wymagana"
       },
       "benefits": [

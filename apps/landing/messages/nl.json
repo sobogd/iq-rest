@@ -9,7 +9,7 @@
       "changelog": "Wijzigingslog",
       "contacts": "Contacten"
     },
-    "getStarted": "Gratis maken",
+    "getStarted": "Nu starten",
     "selectLanguage": "Selecteer Taal",
     "selectLanguageDescription": "Kies uw voorkeurstaal voor de website.",
     "searchLanguage": "Zoek taal...",
@@ -17,11 +17,11 @@
   },
   "home": {
     "hero": {
-      "title": "Start je QR-menu en website in 1 minuut",
+      "title": "Start je QR-menu en website'{mbr}' in 1 minuut",
       "subtitle": "Voer gewoon je e-mailadres in en krijg een complete restaurantwebsite met QR-menu, contactpagina, meertalige ondersteuning en modern ontwerp. Stel alles in vanaf je telefoon.",
       "cta": {
-        "create": "Gratis maken",
-        "view": "Demo bekijken",
+        "create": "Nu starten",
+        "view": "Demo",
         "noCreditCard": "Geen creditcard vereist"
       },
       "benefits": [

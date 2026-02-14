@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "title": "Seol do roghchlár QR agus suíomh gréasáin i 1 nóiméad",
+      "title": "Seol do roghchlár QR'{mbr}' agus suíomh i 1 nóiméad",
       "subtitle": "Ní gá ach do ríomhphost a chur isteach agus faigh suíomh gréasáin iomlán do restaurant le menú QR, leathanach teagmhála, tacaíocht ilteangach, agus dearadh nua-aimseartha. Socraigh gach rud ó do guthán.",
       "cta": {
         "create": "Cruthaigh saor in aisce",
