@@ -166,7 +166,7 @@ export function OnboardingPage() {
   if (allCompleted && slug) {
     return (
       <div className="flex h-full flex-col p-6 overflow-auto">
-        <div className="w-full max-w-[280px]">
+        <div className="w-full max-w-[280px] lg:max-w-none">
           <div className="grid gap-6">
             <div className="grid gap-2">
               <h1 className="text-2xl font-bold">{t("completedTitle")}</h1>
