@@ -229,10 +229,16 @@ export function DashboardProvider({
     }
   }, [searchParams, router]);
 
-  // Set initial hash if not present
+  // Set initial hash and ensure onboarding is in history
   useEffect(() => {
     if (!window.location.hash && activePage) {
-      window.history.replaceState(null, "", `#${activePage}`);
+      // If starting on a page other than onboarding, add onboarding to history first
+      if (activePage !== "onboarding") {
+        window.history.replaceState(null, "", "#onboarding");
+        window.history.pushState(null, "", `#${activePage}`);
+      } else {
+        window.history.replaceState(null, "", `#${activePage}`);
+      }
     }
   }, []);
 
@@ -240,6 +246,18 @@ export function DashboardProvider({
   useEffect(() => {
     const handlePopState = () => {
       const hashPage = getPageFromHash();
+
+      // If navigating away from dashboard (no hash or invalid hash)
+      // and not already on onboarding, redirect to onboarding first
+      if (!hashPage && activePage !== "onboarding") {
+        // Prevent leaving dashboard - redirect to onboarding
+        window.history.pushState(null, "", "#onboarding");
+        setActivePageState("onboarding");
+        setPageCookie("onboarding");
+        previousPageRef.current = "onboarding";
+        return;
+      }
+
       if (hashPage && hashPage !== activePage) {
         isNavigatingRef.current = true;
         setActivePageState(hashPage);
