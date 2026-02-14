@@ -1595,7 +1595,8 @@
           "name": "Analitik",
           "description": "Menü tarama istatistiklerini görüntüleyin"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

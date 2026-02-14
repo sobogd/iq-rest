@@ -1628,7 +1628,8 @@
           "name": "分析",
           "description": "查看菜单扫描统计"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

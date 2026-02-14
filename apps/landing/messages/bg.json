@@ -1595,7 +1595,8 @@
           "name": "Анализи",
           "description": "Вижте статистика за сканиране на менюто"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

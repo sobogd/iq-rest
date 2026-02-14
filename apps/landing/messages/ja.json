@@ -1608,7 +1608,8 @@
           "name": "分析",
           "description": "メニュースキャン統計を表示"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

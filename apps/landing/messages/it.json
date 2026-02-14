@@ -1595,7 +1595,8 @@
           "name": "Analisi",
           "description": "Visualizza le statistiche di scansione del menu"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

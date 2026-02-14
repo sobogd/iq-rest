@@ -1595,7 +1595,8 @@
           "name": "Analytika",
           "description": "Zobrazit statistiky skenování menu"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

@@ -1628,7 +1628,8 @@
           "name": "분석",
           "description": "메뉴 스캔 통계 보기"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

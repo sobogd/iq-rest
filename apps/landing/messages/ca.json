@@ -1595,7 +1595,8 @@
           "name": "Analítiques",
           "description": "Veure estadístiques d'escaneig del menú"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

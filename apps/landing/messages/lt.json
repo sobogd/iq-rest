@@ -1595,7 +1595,8 @@
           "name": "Analitika",
           "description": "Peržiūrėti meniu nuskaitymo statistiką"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

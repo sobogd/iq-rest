@@ -1595,7 +1595,8 @@
           "name": "Analytiikka",
           "description": "Katso valikon skannaustilastot"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

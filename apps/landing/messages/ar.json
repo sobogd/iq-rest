@@ -1608,7 +1608,8 @@
           "name": "التحليلات",
           "description": "عرض إحصائيات مسح القائمة"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

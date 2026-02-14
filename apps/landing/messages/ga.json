@@ -1595,7 +1595,8 @@
           "name": "Anailísíocht",
           "description": "Féach ar staitisticí scanadh biachlár"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

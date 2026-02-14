@@ -1628,7 +1628,8 @@
           "name": "تحلیل‌ها",
           "description": "مشاهده آمار اسکن منو"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

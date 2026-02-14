@@ -1595,7 +1595,8 @@
           "name": "Analyse",
           "description": "Se menyskanningsstatistikk"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

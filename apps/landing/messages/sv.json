@@ -1595,7 +1595,8 @@
           "name": "Analys",
           "description": "Visa menyskanningsstatistik"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

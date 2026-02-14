@@ -1595,7 +1595,8 @@
           "name": "Analitika",
           "description": "Pogledajte statistiku skeniranja menija"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {

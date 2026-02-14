@@ -1595,7 +1595,8 @@
           "name": "Αναλυτικά",
           "description": "Δείτε στατιστικά σάρωσης μενού"
         }
-      }
+      },
+      "stepIndicator": "Step {current} of {total}"
     }
   },
   "reservationSettings": {
