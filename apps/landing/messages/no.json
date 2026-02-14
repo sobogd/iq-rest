@@ -1596,7 +1596,10 @@
           "description": "Se menyskanningsstatistikk"
         }
       },
-      "stepIndicator": "Step {current} of {total}"
+      "stepIndicator": "Step {current} of {total}",
+      "restaurantNamePlaceholder": "Enter restaurant name",
+      "continue": "Continue",
+      "createError": "Failed to create restaurant"
     }
   },
   "reservationSettings": {

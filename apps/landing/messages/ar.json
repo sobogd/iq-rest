@@ -1609,7 +1609,10 @@
           "description": "عرض إحصائيات مسح القائمة"
         }
       },
-      "stepIndicator": "Step {current} of {total}"
+      "stepIndicator": "Step {current} of {total}",
+      "restaurantNamePlaceholder": "Enter restaurant name",
+      "continue": "Continue",
+      "createError": "Failed to create restaurant"
     }
   },
   "reservationSettings": {
