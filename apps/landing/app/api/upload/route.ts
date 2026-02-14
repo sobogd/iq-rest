@@ -73,13 +73,13 @@ export async function POST(request: NextRequest) {
     let extension: string;
     let contentType: string;
 
-    // Convert images (except GIF) to WebP, resize to max 1000x1000, sharpen
+    // Convert images (except GIF) to WebP, resize to max 1500x1500, sharpen
     if (isImage && !isGif) {
       buffer = await sharp(buffer)
         .rotate() // Auto-rotate based on EXIF orientation
-        .resize(1000, 1000, { fit: "inside", withoutEnlargement: true })
-        .sharpen({ sigma: 1, m1: 1, m2: 0.5 })
-        .webp({ quality: 80 })
+        .resize(1500, 1500, { fit: "inside", withoutEnlargement: true })
+        .sharpen({ sigma: 0.8, m1: 0.8, m2: 0.4 })
+        .webp({ quality: 90 })
         .toBuffer() as Buffer;
       extension = "webp";
       contentType = "image/webp";

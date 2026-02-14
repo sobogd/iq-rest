@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import Image from "next/image";
+import { useRef, useEffect, useState, useMemo } from "react";
 import { X } from "lucide-react";
 import { getAllergenIcon, ALLERGENS } from "@/lib/allergens";
 import { formatPrice } from "@/lib/currencies";
+import { MenuImage } from "./menu-image";
 
 interface Item {
   id: string;
@@ -37,10 +37,32 @@ interface MenuFeedProps {
 export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTranslations }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
   const [selectedAllergens, setSelectedAllergens] = useState<string[] | null>(null);
+  const [loadedImageIndex, setLoadedImageIndex] = useState(0);
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const tabsRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isScrollingToCategory = useRef(false);
+
+  // Build ordered list of item IDs with images for sequential loading
+  const imageOrder = useMemo(() => {
+    const order: string[] = [];
+    for (const category of categories) {
+      for (const item of category.items) {
+        if (item.imageUrl) {
+          order.push(item.id);
+        }
+      }
+    }
+    return order;
+  }, [categories]);
+
+  // Get index of an item in the loading queue
+  const getImageIndex = (itemId: string) => imageOrder.indexOf(itemId);
+
+  // Handle image loaded - allow next image to load
+  const handleImageLoaded = () => {
+    setLoadedImageIndex((prev) => prev + 1);
+  };
 
   // Scroll to category when clicking tab
   const scrollToCategory = (categoryId: string) => {
@@ -176,15 +198,12 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                 {category.items.map((item) => (
                   <article key={item.id}>
                     {item.imageUrl && (
-                      <div className="relative aspect-square w-full min-[440px]:rounded-lg overflow-hidden">
-                        <Image
-                          src={item.imageUrl}
-                          alt={item.name}
-                          fill
-                          className="object-cover"
-                          sizes="1000px"
-                        />
-                      </div>
+                      <MenuImage
+                        src={item.imageUrl}
+                        alt={item.name}
+                        canLoad={getImageIndex(item.id) <= loadedImageIndex}
+                        onLoaded={handleImageLoaded}
+                      />
                     )}
                     <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
                       <div className="flex justify-between items-start gap-4">
