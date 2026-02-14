@@ -38,7 +38,7 @@ interface CategoryWithTranslations extends Category {
 }
 
 export function CategoriesPage() {
-  const { translations, returnToOnboarding } = useDashboard();
+  const { translations, returnToOnboarding, registerFormClose, unregisterFormClose } = useDashboard();
   const t = translations.categories;
 
   const [categories, setCategories] = useState<CategoryWithTranslations[]>([]);
@@ -59,6 +59,19 @@ export function CategoriesPage() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Register form close handler for browser back button
+  useEffect(() => {
+    if (showForm) {
+      registerFormClose(() => {
+        setShowForm(false);
+        setEditingCategory(null);
+      });
+      return () => {
+        unregisterFormClose();
+      };
+    }
+  }, [showForm, registerFormClose, unregisterFormClose]);
 
   async function fetchCategories() {
     try {
@@ -181,11 +194,13 @@ export function CategoriesPage() {
   function handleFormClose() {
     setShowForm(false);
     setEditingCategory(null);
+    unregisterFormClose();
   }
 
   function handleFormSaved() {
     setShowForm(false);
     setEditingCategory(null);
+    unregisterFormClose();
     fetchCategories();
     returnToOnboarding();
   }

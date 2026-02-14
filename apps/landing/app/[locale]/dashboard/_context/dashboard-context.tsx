@@ -166,6 +166,8 @@ interface DashboardContextType {
   navigateFromOnboarding: (page: PageKey) => void;
   returnToOnboarding: () => boolean;
   translations: DashboardTranslations;
+  registerFormClose: (closeHandler: () => void) => void;
+  unregisterFormClose: () => void;
 }
 
 const DashboardContext = createContext<DashboardContextType | null>(null);
@@ -203,6 +205,7 @@ export function DashboardProvider({
   const searchParams = useSearchParams();
   const router = useRouter();
   const isNavigatingRef = useRef(false);
+  const formCloseHandlerRef = useRef<(() => void) | null>(null);
 
   // Priority: hash > query param > initialPage
   const pageParam = searchParams.get("page");
@@ -245,25 +248,32 @@ export function DashboardProvider({
   // Listen for browser back/forward buttons
   useEffect(() => {
     const handlePopState = () => {
-      const hashPage = getPageFromHash();
+      const currentHash = window.location.hash.slice(1) || "onboarding";
 
-      // If navigating away from dashboard (no hash or invalid hash)
-      // and not already on onboarding, redirect to onboarding first
-      if (!hashPage && activePage !== "onboarding") {
-        // Prevent leaving dashboard - redirect to onboarding
+      // If a form is open, close it and go to onboarding
+      if (formCloseHandlerRef.current) {
+        formCloseHandlerRef.current();
+        formCloseHandlerRef.current = null;
+        // Go to onboarding
         window.history.pushState(null, "", "#onboarding");
         setActivePageState("onboarding");
         setPageCookie("onboarding");
         previousPageRef.current = "onboarding";
+        isNavigatingRef.current = true;
         return;
       }
 
-      if (hashPage && hashPage !== activePage) {
-        isNavigatingRef.current = true;
-        setActivePageState(hashPage);
-        setPageCookie(hashPage);
-        previousPageRef.current = hashPage;
+      // If on onboarding, allow exit to landing
+      if (currentHash === "onboarding" && activePage === "onboarding") {
+        return;
       }
+
+      // Otherwise redirect to onboarding
+      window.history.pushState(null, "", "#onboarding");
+      setActivePageState("onboarding");
+      setPageCookie("onboarding");
+      previousPageRef.current = "onboarding";
+      isNavigatingRef.current = true;
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -318,8 +328,16 @@ export function DashboardProvider({
     return false;
   }, []);
 
+  const registerFormClose = useCallback((closeHandler: () => void) => {
+    formCloseHandlerRef.current = closeHandler;
+  }, []);
+
+  const unregisterFormClose = useCallback(() => {
+    formCloseHandlerRef.current = null;
+  }, []);
+
   return (
-    <DashboardContext.Provider value={{ activePage, setActivePage, navigateFromOnboarding, returnToOnboarding, translations }}>
+    <DashboardContext.Provider value={{ activePage, setActivePage, navigateFromOnboarding, returnToOnboarding, translations, registerFormClose, unregisterFormClose }}>
       {children}
     </DashboardContext.Provider>
   );

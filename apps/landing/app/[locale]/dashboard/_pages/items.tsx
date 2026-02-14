@@ -63,7 +63,7 @@ interface ItemWithTranslations {
 }
 
 export function ItemsPage() {
-  const { translations, returnToOnboarding } = useDashboard();
+  const { translations, returnToOnboarding, registerFormClose, unregisterFormClose } = useDashboard();
   const t = translations.items;
 
   const [items, setItems] = useState<ItemWithTranslations[]>([]);
@@ -107,6 +107,19 @@ export function ItemsPage() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Register form close handler for browser back button
+  useEffect(() => {
+    if (showForm) {
+      registerFormClose(() => {
+        setShowForm(false);
+        setEditingItem(null);
+      });
+      return () => {
+        unregisterFormClose();
+      };
+    }
+  }, [showForm, registerFormClose, unregisterFormClose]);
 
   async function fetchData() {
     try {
@@ -278,11 +291,13 @@ export function ItemsPage() {
   function handleFormClose() {
     setShowForm(false);
     setEditingItem(null);
+    unregisterFormClose();
   }
 
   function handleFormSaved() {
     setShowForm(false);
     setEditingItem(null);
+    unregisterFormClose();
     fetchData();
     returnToOnboarding();
   }
