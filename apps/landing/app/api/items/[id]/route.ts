@@ -1,55 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { S3Client, CopyObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
-
-const s3Client = new S3Client({
-  region: process.env.S3_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_KEY!,
-    secretAccessKey: process.env.S3_TOKEN!,
-  },
-});
-
-async function moveFromTemp(tempUrl: string, companyId: string): Promise<string | null> {
-  const s3Host = process.env.S3_HOST!;
-
-  if (!tempUrl || !tempUrl.startsWith(s3Host)) {
-    return tempUrl;
-  }
-
-  const tempKey = tempUrl.replace(s3Host, "");
-
-  if (!tempKey.startsWith(`temp/${companyId}/`)) {
-    return tempUrl;
-  }
-
-  try {
-    const filename = tempKey.split("/").pop();
-    const permanentKey = `items/${companyId}/${filename}`;
-
-    await s3Client.send(
-      new CopyObjectCommand({
-        Bucket: process.env.S3_NAME!,
-        CopySource: `${process.env.S3_NAME}/${tempKey}`,
-        Key: permanentKey,
-        ACL: "public-read",
-      })
-    );
-
-    await s3Client.send(
-      new DeleteObjectCommand({
-        Bucket: process.env.S3_NAME!,
-        Key: tempKey,
-      })
-    );
-
-    return `${s3Host}${permanentKey}`;
-  } catch (error) {
-    console.error("Error moving file from temp:", error);
-    return tempUrl;
-  }
-}
+import { moveFromTemp } from "@/lib/s3";
 
 async function getUserCompanyId(): Promise<string | null> {
   const cookieStore = await cookies();

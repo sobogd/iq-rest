@@ -1,15 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { S3Client, CopyObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
+import { CopyObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
-
-const s3Client = new S3Client({
-  region: process.env.S3_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_KEY!,
-    secretAccessKey: process.env.S3_TOKEN!,
-  },
-});
+import { s3Client, s3Key, getPublicUrl, getKeyFromUrl } from "@/lib/s3";
 
 async function getUserCompanyId(): Promise<string | null> {
   const cookieStore = await cookies();
@@ -45,27 +38,25 @@ export async function POST(request: NextRequest) {
     }
 
     // Extract the key from the URL
-    const s3Host = process.env.S3_HOST!;
-    if (!tempUrl.startsWith(s3Host)) {
+    const key = getKeyFromUrl(tempUrl);
+    if (!key) {
       return NextResponse.json({ error: "Invalid S3 URL" }, { status: 400 });
     }
 
-    const tempKey = tempUrl.replace(s3Host, "");
-
-    // Verify it's a temp file for this company
-    if (!tempKey.startsWith(`temp/${companyId}/`)) {
+    const tempPrefix = s3Key("temp", companyId);
+    if (!key.startsWith(tempPrefix + "/")) {
       return NextResponse.json({ error: "Unauthorized access to file" }, { status: 403 });
     }
 
     // Generate new permanent key
-    const filename = tempKey.split("/").pop();
-    const permanentKey = `items/${companyId}/${filename}`;
+    const filename = key.split("/").pop();
+    const permanentKey = s3Key("items", companyId, filename!);
 
     // Copy to new location
     await s3Client.send(
       new CopyObjectCommand({
         Bucket: process.env.S3_NAME!,
-        CopySource: `${process.env.S3_NAME}/${tempKey}`,
+        CopySource: `${process.env.S3_NAME}/${key}`,
         Key: permanentKey,
         ACL: "public-read",
       })
@@ -75,11 +66,11 @@ export async function POST(request: NextRequest) {
     await s3Client.send(
       new DeleteObjectCommand({
         Bucket: process.env.S3_NAME!,
-        Key: tempKey,
+        Key: key,
       })
     );
 
-    const permanentUrl = `${s3Host}${permanentKey}`;
+    const permanentUrl = getPublicUrl(permanentKey);
 
     return NextResponse.json({ url: permanentUrl }, { status: 200 });
   } catch (error) {

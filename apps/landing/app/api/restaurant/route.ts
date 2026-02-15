@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
-import { moveFromTemp } from "@/lib/s3";
+import { moveFromTemp, s3Key, getPublicUrl } from "@/lib/s3";
 import { Prisma } from "@prisma/client";
 import { locales, Locale } from "@/i18n/routing";
 
@@ -182,7 +182,7 @@ export async function POST(request: NextRequest) {
       const slug = await generateUniqueSlug(data.title);
 
       // Set initial background image for new restaurants
-      const initialBackground = `${process.env.S3_HOST}background_initial.webp`;
+      const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
 
       const restaurant = await prisma.restaurant.create({
         data: {

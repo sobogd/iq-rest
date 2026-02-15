@@ -1,16 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
+import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
 import sharp from "sharp";
-
-const s3Client = new S3Client({
-  region: process.env.S3_REGION!,
-  credentials: {
-    accessKeyId: process.env.S3_KEY!,
-    secretAccessKey: process.env.S3_TOKEN!,
-  },
-});
 
 async function getUserCompanyId(): Promise<string | null> {
   const cookieStore = await cookies();
@@ -91,19 +84,19 @@ export async function POST(request: NextRequest) {
       contentType = file.type;
     }
 
-    const filename = `temp/${companyId}/${timestamp}-${randomStr}.${extension}`;
+    const key = s3Key("temp", companyId, `${timestamp}-${randomStr}.${extension}`);
 
     await s3Client.send(
       new PutObjectCommand({
         Bucket: process.env.S3_NAME!,
-        Key: filename,
+        Key: key,
         Body: buffer,
         ContentType: contentType,
         ACL: "public-read",
       })
     );
 
-    const fileUrl = `${process.env.S3_HOST}${filename}`;
+    const fileUrl = getPublicUrl(key);
     return NextResponse.json({ url: fileUrl }, { status: 200 });
   } catch (error) {
     console.error("Error uploading file:", error);
