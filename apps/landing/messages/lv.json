@@ -957,7 +957,8 @@
       "small": "Mazs",
       "medium": "Vidējs",
       "large": "Liels"
-    }
+    },
+    "copyUrl": "Kopēt URL"
   },
   "support": {
     "title": "Ziņojumi",
@@ -1206,8 +1207,8 @@
       "analytics": "Analītika",
       "categories": "Kategorijas",
       "items": "Preces",
-      "settings": "Vispārīgi",
-      "design": "Dizains",
+      "settings": "Iestatījumi",
+      "design": "Izskats",
       "contacts": "Kontakti",
       "languages": "Valodas",
       "reservations": "Rezervācijas",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Nederīgs faila tips. Atļautie: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Fails ir pārāk liels. Maksimālais izmērs: 50MB video, 5MB attēliem",
       "subscribeForAccentColor": "Abonējiet, lai pielāgotu akcenta krāsu",
-      "subscribe": "Abonēt"
+      "subscribe": "Abonēt",
+      "hideTitleLabel": "Restorāna nosaukums",
+      "hideTitleVisible": "Redzams sākumlapā",
+      "hideTitleHidden": "Paslēpts sākumlapā",
+      "hideTitleHint": "Paslēpiet virsrakstu un tumšo pārklājumu sākumlapā, lai rādītu tikai fona attēlu vai video"
     },
     "general": {
       "name": "Nosaukums",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Vietnes adrese atjaunināta",
       "slugChangedDescription": "Jūsu restorāns tagad ir pieejams:",
       "close": "Aizvērt",
-      "view": "Skatīt",
-      "hideTitleLabel": "Restorāna nosaukums",
-      "hideTitleVisible": "Redzams sākumlapā",
-      "hideTitleHidden": "Paslēpts sākumlapā",
-      "hideTitleHint": "Paslēpiet virsrakstu un tumšo pārklājumu sākumlapā, lai rādītu tikai fona attēlu vai video"
+      "view": "Skatīt"
     },
     "onboarding": {
       "title": "Laipni lūdzam IQ Rest!",

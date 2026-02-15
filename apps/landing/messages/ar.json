@@ -990,7 +990,8 @@
       "small": "صغير",
       "medium": "متوسط",
       "large": "كبير"
-    }
+    },
+    "copyUrl": "نسخ الرابط"
   },
   "support": {
     "title": "الرسائل",
@@ -1219,8 +1220,8 @@
       "analytics": "التحليلات",
       "categories": "الفئات",
       "items": "العناصر",
-      "settings": "عام",
-      "design": "التصميم",
+      "settings": "الإعدادات",
+      "design": "المظهر",
       "contacts": "جهات الاتصال",
       "languages": "اللغات",
       "reservations": "الحجوزات",
@@ -1444,7 +1445,11 @@
       "invalidFileType": "نوع ملف غير صالح. المسموح: JPEG، PNG، WebP، GIF، MP4، WebM، MOV",
       "fileTooLarge": "الملف كبير جداً. الحد الأقصى: 50 ميجابايت للفيديو، 5 ميجابايت للصور",
       "subscribeForAccentColor": "اشترك لتخصيص لون التمييز",
-      "subscribe": "اشترك"
+      "subscribe": "اشترك",
+      "hideTitleLabel": "اسم المطعم",
+      "hideTitleVisible": "مرئي على الصفحة الرئيسية",
+      "hideTitleHidden": "مخفي على الصفحة الرئيسية",
+      "hideTitleHint": "إخفاء العنوان والطبقة الداكنة على صفحتك الرئيسية لعرض صورة أو فيديو الخلفية فقط"
     },
     "general": {
       "name": "العنوان",
@@ -1468,11 +1473,7 @@
       "slugChangedTitle": "تم تحديث عنوان الموقع",
       "slugChangedDescription": "مطعمك متاح الآن على:",
       "close": "إغلاق",
-      "view": "عرض",
-      "hideTitleLabel": "اسم المطعم",
-      "hideTitleVisible": "مرئي على الصفحة الرئيسية",
-      "hideTitleHidden": "مخفي على الصفحة الرئيسية",
-      "hideTitleHint": "إخفاء العنوان والطبقة الداكنة على صفحتك الرئيسية لعرض صورة أو فيديو الخلفية فقط"
+      "view": "عرض"
     },
     "onboarding": {
       "title": "مرحباً بك في IQ Rest!",

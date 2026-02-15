@@ -990,7 +990,8 @@
       "small": "کوچک",
       "medium": "متوسط",
       "large": "بزرگ"
-    }
+    },
+    "copyUrl": "کپی URL"
   },
   "support": {
     "title": "پیام‌ها",
@@ -1239,8 +1240,8 @@
       "analytics": "آنالیز",
       "categories": "دسته‌بندی‌ها",
       "items": "آیتم‌ها",
-      "settings": "عمومی",
-      "design": "طراحی",
+      "settings": "تنظیمات",
+      "design": "ظاهر",
       "contacts": "تماس‌ها",
       "languages": "زبان‌ها",
       "reservations": "رزروها",
@@ -1464,7 +1465,11 @@
       "invalidFileType": "نوع فایل نامعتبر. مجاز: JPEG، PNG، WebP، GIF، MP4، WebM، MOV",
       "fileTooLarge": "فایل خیلی بزرگ است. حداکثر اندازه: ۵۰ مگابایت برای ویدیو، ۵ مگابایت برای تصاویر",
       "subscribeForAccentColor": "برای سفارشی کردن رنگ تاکیدی اشتراک بگیرید",
-      "subscribe": "اشتراک"
+      "subscribe": "اشتراک",
+      "hideTitleLabel": "نام رستوران",
+      "hideTitleVisible": "قابل مشاهده در صفحه اصلی",
+      "hideTitleHidden": "پنهان در صفحه اصلی",
+      "hideTitleHint": "عنوان و لایه تیره را در صفحه اصلی پنهان کنید تا فقط تصویر یا ویدیوی پس‌زمینه نمایش داده شود"
     },
     "general": {
       "name": "عنوان",
@@ -1488,11 +1493,7 @@
       "slugChangedTitle": "آدرس وبسایت به‌روز شد",
       "slugChangedDescription": "رستوران شما اکنون در دسترس است در:",
       "close": "بستن",
-      "view": "مشاهده",
-      "hideTitleLabel": "نام رستوران",
-      "hideTitleVisible": "قابل مشاهده در صفحه اصلی",
-      "hideTitleHidden": "پنهان در صفحه اصلی",
-      "hideTitleHint": "عنوان و لایه تیره را در صفحه اصلی پنهان کنید تا فقط تصویر یا ویدیوی پس‌زمینه نمایش داده شود"
+      "view": "مشاهده"
     },
     "onboarding": {
       "title": "به IQ Rest خوش آمدید!",

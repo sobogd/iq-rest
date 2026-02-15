@@ -957,7 +957,8 @@
       "small": "Väike",
       "medium": "Keskmine",
       "large": "Suur"
-    }
+    },
+    "copyUrl": "Kopeeri URL"
   },
   "support": {
     "title": "Sõnumid",
@@ -1206,8 +1207,8 @@
       "analytics": "Analüütika",
       "categories": "Kategooriad",
       "items": "Tooted",
-      "settings": "Üldine",
-      "design": "Disain",
+      "settings": "Seaded",
+      "design": "Välimus",
       "contacts": "Kontaktid",
       "languages": "Keeled",
       "reservations": "Broneeringud",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Kehtetu failitüüp. Lubatud: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Fail on liiga suur. Maksimaalne suurus: 50MB videotele, 5MB piltidele",
       "subscribeForAccentColor": "Tellige aktsentvärvi kohandamiseks",
-      "subscribe": "Telli"
+      "subscribe": "Telli",
+      "hideTitleLabel": "Restorani nimi",
+      "hideTitleVisible": "Nähtav avalehel",
+      "hideTitleHidden": "Peidetud avalehel",
+      "hideTitleHint": "Peida pealkiri ja tume kate avalehel, et kuvada ainult taustapilt või video"
     },
     "general": {
       "name": "Pealkiri",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Veebisaidi aadress uuendatud",
       "slugChangedDescription": "Teie restoran on nüüd saadaval aadressil:",
       "close": "Sulge",
-      "view": "Vaata",
-      "hideTitleLabel": "Restorani nimi",
-      "hideTitleVisible": "Nähtav avalehel",
-      "hideTitleHidden": "Peidetud avalehel",
-      "hideTitleHint": "Peida pealkiri ja tume kate avalehel, et kuvada ainult taustapilt või video"
+      "view": "Vaata"
     },
     "onboarding": {
       "title": "Tere tulemast IQ Resti!",

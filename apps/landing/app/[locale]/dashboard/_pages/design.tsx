@@ -19,7 +19,8 @@ import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
-import { Link, useRouter } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
+import { FormSwitch } from "../_ui/form-switch";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -35,9 +36,11 @@ export function DesignPage() {
 
   const [source, setSource] = useState<string | null>(null);
   const [accentColor, setAccentColor] = useState("#E11D48");
+  const [hideTitle, setHideTitle] = useState(false);
 
   const [originalSource, setOriginalSource] = useState<string | null>(null);
   const [originalAccentColor, setOriginalAccentColor] = useState("#E11D48");
+  const [originalHideTitle, setOriginalHideTitle] = useState(false);
 
   const [validationError, setValidationError] = useState<string | null>(null);
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
@@ -57,8 +60,10 @@ export function DesignPage() {
         if (data) {
           setSource(data.source || null);
           setAccentColor(data.accentColor || "#E11D48");
+          setHideTitle(data.hideTitle || false);
           setOriginalSource(data.source || null);
           setOriginalAccentColor(data.accentColor || "#E11D48");
+          setOriginalHideTitle(data.hideTitle || false);
         }
       }
     } catch (error) {
@@ -85,8 +90,8 @@ export function DesignPage() {
   const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   const hasChanges = useMemo(() => {
-    return source !== originalSource || accentColor !== originalAccentColor;
-  }, [source, accentColor, originalSource, originalAccentColor]);
+    return source !== originalSource || accentColor !== originalAccentColor || hideTitle !== originalHideTitle;
+  }, [source, accentColor, hideTitle, originalSource, originalAccentColor, originalHideTitle]);
 
   function isVideo(url: string) {
     return /\.(mp4|webm|mov)$/i.test(url);
@@ -160,17 +165,16 @@ export function DesignPage() {
         body: JSON.stringify({
           source: source,
           accentColor,
+          hideTitle,
         }),
       });
 
       if (res.ok) {
         toast.success(t("saved"));
 
-        if (accentColor !== originalAccentColor) {
-
-        }
         setOriginalSource(source);
         setOriginalAccentColor(accentColor);
+        setOriginalHideTitle(hideTitle);
         returnToOnboarding();
       } else {
         const data = await res.json();
@@ -191,6 +195,20 @@ export function DesignPage() {
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.design} />
       <form id="design-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6 max-w-md">
+        <div className="space-y-2">
+          <FormSwitch
+            id="hideTitle"
+            label={t("hideTitleLabel")}
+            checked={!hideTitle}
+            onCheckedChange={(checked) => setHideTitle(!checked)}
+            activeText={t("hideTitleVisible")}
+            inactiveText={t("hideTitleHidden")}
+          />
+          <p className="text-xs text-muted-foreground px-1">
+            {t("hideTitleHint")}
+          </p>
+        </div>
+
         <div className="space-y-2">
           <label className="text-sm font-medium">{t("background")}:</label>
           {source ? (

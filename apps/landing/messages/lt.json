@@ -957,7 +957,8 @@
       "small": "Mažas",
       "medium": "Vidutinis",
       "large": "Didelis"
-    }
+    },
+    "copyUrl": "Kopijuoti URL"
   },
   "support": {
     "title": "Žinutės",
@@ -1206,8 +1207,8 @@
       "analytics": "Analitika",
       "categories": "Kategorijos",
       "items": "Patiekalai",
-      "settings": "Bendra",
-      "design": "Dizainas",
+      "settings": "Nustatymai",
+      "design": "Išvaizda",
       "contacts": "Kontaktai",
       "languages": "Kalbos",
       "reservations": "Rezervacijos",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Neteisingas failo tipas. Leidžiami: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Failas per didelis. Maksimalus dydis: 50MB vaizdo įrašams, 5MB nuotraukoms",
       "subscribeForAccentColor": "Prenumeruokite, kad galėtumėte pritaikyti akcento spalvą",
-      "subscribe": "Prenumeruoti"
+      "subscribe": "Prenumeruoti",
+      "hideTitleLabel": "Restorano pavadinimas",
+      "hideTitleVisible": "Matomas pagrindiniame puslapyje",
+      "hideTitleHidden": "Paslėptas pagrindiniame puslapyje",
+      "hideTitleHint": "Paslėpkite pavadinimą ir tamsią perdangą pagrindiniame puslapyje, kad būtų rodomas tik fono paveikslėlis arba vaizdo įrašas"
     },
     "general": {
       "name": "Pavadinimas",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Svetainės adresas atnaujintas",
       "slugChangedDescription": "Jūsų restoranas dabar prieinamas adresu:",
       "close": "Uždaryti",
-      "view": "Peržiūrėti",
-      "hideTitleLabel": "Restorano pavadinimas",
-      "hideTitleVisible": "Matomas pagrindiniame puslapyje",
-      "hideTitleHidden": "Paslėptas pagrindiniame puslapyje",
-      "hideTitleHint": "Paslėpkite pavadinimą ir tamsią perdangą pagrindiniame puslapyje, kad būtų rodomas tik fono paveikslėlis arba vaizdo įrašas"
+      "view": "Peržiūrėti"
     },
     "onboarding": {
       "title": "Sveiki atvykę į IQ Rest!",

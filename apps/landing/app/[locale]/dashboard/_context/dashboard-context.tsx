@@ -14,7 +14,6 @@ export type PageKey =
   | "settings"
   | "design"
   | "contacts"
-  | "languages"
   | "reservations"
   | "tables"
   | "billing"
@@ -32,7 +31,6 @@ export const PAGE_PATHS: Record<PageKey, string> = {
   reservations: "/dashboard/reservations",
   design: "/dashboard/design",
   contacts: "/dashboard/contacts",
-  languages: "/dashboard/languages",
   qrMenu: "/dashboard/qr-menu",
   analytics: "/dashboard/analytics",
   billing: "/dashboard/billing",
@@ -52,7 +50,6 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
   "reservations": "reservations",
   "design": "design",
   "contacts": "contacts",
-  "languages": "languages",
   "qr-menu": "qrMenu",
   "analytics": "analytics",
   "billing": "billing",
@@ -207,7 +204,7 @@ export interface DashboardTranslations {
 
 const validPages: PageKey[] = [
   "onboarding", "qrMenu", "home", "analytics", "menu", "categories", "items", "settings", "design",
-  "contacts", "languages", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
+  "contacts", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
 ];
 
 export function isValidPageKey(value: string): value is PageKey {

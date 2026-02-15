@@ -957,7 +957,8 @@
       "small": "Mic",
       "medium": "Mediu",
       "large": " mare"
-    }
+    },
+    "copyUrl": "Copiază URL"
   },
   "support": {
     "title": "Mesaje",
@@ -1206,8 +1207,8 @@
       "analytics": "Analitice",
       "categories": "Categorii",
       "items": "Articole",
-      "settings": "General",
-      "design": "Design",
+      "settings": "Setări",
+      "design": "Aspect",
       "contacts": "Contacte",
       "languages": "Limbi",
       "reservations": "Rezerve",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Tip de fișier invalid. Permise: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Fișierul este prea mare. Dimensiune maximă: 50MB pentru videoclipuri, 5MB pentru imagini",
       "subscribeForAccentColor": "Abonați-vă pentru a personaliza culoarea de accent",
-      "subscribe": "Abonați-vă"
+      "subscribe": "Abonați-vă",
+      "hideTitleLabel": "Numele restaurantului",
+      "hideTitleVisible": "Vizibil pe pagina de start",
+      "hideTitleHidden": "Ascuns pe pagina de start",
+      "hideTitleHint": "Ascundeți titlul și stratul întunecat de pe pagina de start pentru a afișa doar imaginea sau videoclipul de fundal"
     },
     "general": {
       "name": "Titlu",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Adresa site-ului a fost actualizată",
       "slugChangedDescription": "Restaurantul dvs. este acum disponibil la:",
       "close": "Închide",
-      "view": "Vizualizează",
-      "hideTitleLabel": "Numele restaurantului",
-      "hideTitleVisible": "Vizibil pe pagina de start",
-      "hideTitleHidden": "Ascuns pe pagina de start",
-      "hideTitleHint": "Ascundeți titlul și stratul întunecat de pe pagina de start pentru a afișa doar imaginea sau videoclipul de fundal"
+      "view": "Vizualizează"
     },
     "onboarding": {
       "title": "Bine ați venit la IQ Rest!",

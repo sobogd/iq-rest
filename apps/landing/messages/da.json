@@ -957,7 +957,8 @@
       "small": "Lille",
       "medium": "Medium",
       "large": "Stor"
-    }
+    },
+    "copyUrl": "Kopiér URL"
   },
   "support": {
     "title": "Beskeder",
@@ -1206,8 +1207,8 @@
       "analytics": "Analyse",
       "categories": "Kategorier",
       "items": "Elementer",
-      "settings": "Generelt",
-      "design": "Design",
+      "settings": "Indstillinger",
+      "design": "Udseende",
       "contacts": "Kontakter",
       "languages": "Sprog",
       "reservations": "Reservationer",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Ugyldig filtype. Tilladt: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Fil er for stor. Maksimal størrelse: 50MB for videoer, 5MB for billeder",
       "subscribeForAccentColor": "Abonner for at tilpasse accentfarven",
-      "subscribe": "Abonner"
+      "subscribe": "Abonner",
+      "hideTitleLabel": "Restaurantnavn",
+      "hideTitleVisible": "Synlig på forsiden",
+      "hideTitleHidden": "Skjult på forsiden",
+      "hideTitleHint": "Skjul titlen og det mørke overlay på din forside for kun at vise baggrundsbilledet eller videoen"
     },
     "general": {
       "name": "Titel",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Webadresse opdateret",
       "slugChangedDescription": "Din restaurant er nu tilgængelig på:",
       "close": "Luk",
-      "view": "Vis",
-      "hideTitleLabel": "Restaurantnavn",
-      "hideTitleVisible": "Synlig på forsiden",
-      "hideTitleHidden": "Skjult på forsiden",
-      "hideTitleHint": "Skjul titlen og det mørke overlay på din forside for kun at vise baggrundsbilledet eller videoen"
+      "view": "Vis"
     },
     "onboarding": {
       "title": "Velkommen til IQ Rest!",

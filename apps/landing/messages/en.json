@@ -940,6 +940,7 @@
     "menuUrl": "Your Website",
     "websiteReady": "Your website is ready!",
     "openWebsite": "Open Website",
+    "copyUrl": "Copy URL",
     "printSection": "Print & Download QR Code:",
     "formats": {
       "a4": "A4 (210 × 297 mm)",
@@ -1209,8 +1210,8 @@
       "analytics": "Analytics",
       "categories": "Categories",
       "items": "Items",
-      "settings": "General",
-      "design": "Design",
+      "settings": "Settings",
+      "design": "Appearance",
       "contacts": "Contacts",
       "languages": "Languages",
       "reservations": "Reservations",
@@ -1439,7 +1440,11 @@
       "invalidFileType": "Invalid file type. Allowed: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "File is too large. Max size: 50MB for videos, 5MB for images",
       "subscribeForAccentColor": "Subscribe to customize accent color",
-      "subscribe": "Subscribe"
+      "subscribe": "Subscribe",
+      "hideTitleLabel": "Restaurant name",
+      "hideTitleVisible": "Visible on homepage",
+      "hideTitleHidden": "Hidden on homepage",
+      "hideTitleHint": "Hide the title and dark overlay on your homepage to show only the background image or video"
     },
     "general": {
       "name": "Title",
@@ -1463,11 +1468,7 @@
       "slugChangedTitle": "Website address updated",
       "slugChangedDescription": "Your restaurant is now available at:",
       "close": "Close",
-      "view": "View",
-      "hideTitleLabel": "Restaurant name",
-      "hideTitleVisible": "Visible on homepage",
-      "hideTitleHidden": "Hidden on homepage",
-      "hideTitleHint": "Hide the title and dark overlay on your homepage to show only the background image or video"
+      "view": "View"
     },
     "onboarding": {
       "title": "Welcome to IQ Rest!",

@@ -957,7 +957,8 @@
       "small": "Lítill",
       "medium": "Meðal",
       "large": "Stór"
-    }
+    },
+    "copyUrl": "Afrita URL"
   },
   "support": {
     "title": "Skilaboð",
@@ -1206,8 +1207,8 @@
       "analytics": "Greining",
       "categories": "Flokkar",
       "items": "Vörur",
-      "settings": "Almennar stillingar",
-      "design": "Hönnun",
+      "settings": "Stillingar",
+      "design": "Útlit",
       "contacts": "Samskipti",
       "languages": "Tungumál",
       "reservations": "Bókanir",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Ógild skjalategund. Leyfð: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Skrá er of stór. Hámarksstærð: 50MB fyrir vídeó, 5MB fyrir myndir",
       "subscribeForAccentColor": "Gerast áskrifandi til að sérsníða áherslulit",
-      "subscribe": "Gerast áskrifandi"
+      "subscribe": "Gerast áskrifandi",
+      "hideTitleLabel": "Nafn veitingastaðar",
+      "hideTitleVisible": "Sýnilegt á forsíðu",
+      "hideTitleHidden": "Falið á forsíðu",
+      "hideTitleHint": "Feldu titilinn og dökka yfirlöguna á forsíðunni til að sýna aðeins bakgrunnsmyndina eða myndbandið"
     },
     "general": {
       "name": "Titill",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Vefsíðuheimilisfang uppfært",
       "slugChangedDescription": "Veitingastaðurinn þinn er nú aðgengilegur á:",
       "close": "Loka",
-      "view": "Skoða",
-      "hideTitleLabel": "Nafn veitingastaðar",
-      "hideTitleVisible": "Sýnilegt á forsíðu",
-      "hideTitleHidden": "Falið á forsíðu",
-      "hideTitleHint": "Feldu titilinn og dökka yfirlöguna á forsíðunni til að sýna aðeins bakgrunnsmyndina eða myndbandið"
+      "view": "Skoða"
     },
     "onboarding": {
       "title": "Velkomin/n til IQ Rest!",

@@ -957,7 +957,8 @@
       "small": "Klein",
       "medium": "Gemiddeld",
       "large": "Groot"
-    }
+    },
+    "copyUrl": "URL kopiëren"
   },
   "support": {
     "title": "Berichten",
@@ -1206,8 +1207,8 @@
       "analytics": "Analyse",
       "categories": "Categorieën",
       "items": "Items",
-      "settings": "Algemeen",
-      "design": "Ontwerp",
+      "settings": "Instellingen",
+      "design": "Uiterlijk",
       "contacts": "Contacten",
       "languages": "Talen",
       "reservations": "Reserveringen",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Ongeldig bestandstype. Toegestaan: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Bestand is te groot. Maximale grootte: 50MB voor video's, 5MB voor afbeeldingen",
       "subscribeForAccentColor": "Abonneer om de accentkleur aan te passen",
-      "subscribe": "Abonneren"
+      "subscribe": "Abonneren",
+      "hideTitleLabel": "Restaurantnaam",
+      "hideTitleVisible": "Zichtbaar op de homepage",
+      "hideTitleHidden": "Verborgen op de homepage",
+      "hideTitleHint": "Verberg de titel en donkere overlay op je homepage om alleen de achtergrondafbeelding of video te tonen"
     },
     "general": {
       "name": "Titel",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Websiteadres bijgewerkt",
       "slugChangedDescription": "Je restaurant is nu beschikbaar op:",
       "close": "Sluiten",
-      "view": "Bekijken",
-      "hideTitleLabel": "Restaurantnaam",
-      "hideTitleVisible": "Zichtbaar op de homepage",
-      "hideTitleHidden": "Verborgen op de homepage",
-      "hideTitleHint": "Verberg de titel en donkere overlay op je homepage om alleen de achtergrondafbeelding of video te tonen"
+      "view": "Bekijken"
     },
     "onboarding": {
       "title": "Welkom bij IQ Rest!",

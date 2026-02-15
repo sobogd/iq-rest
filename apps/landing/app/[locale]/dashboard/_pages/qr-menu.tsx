@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Printer, Download, Eye } from "lucide-react";
-import { MenuPreviewModal } from "@/components/menu-preview-modal";
+import { Printer, Download, Copy, Check } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
@@ -42,10 +41,10 @@ export function QrMenuPage() {
   const [customText, setCustomText] = useState<string>("QR Menu\nScan Me");
   const [textSize, setTextSize] = useState<string>("medium");
   const [qrSvg, setQrSvg] = useState<string>("");
+  const [copied, setCopied] = useState(false);
   const printRef = useRef<HTMLDivElement>(null);
 
   const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
-  const fullMenuUrl = slug ? `/m/${slug}` : "";
   const paper = PAPER_FORMATS[paperFormat];
   const isSmallPaper = paperFormat === "a5" || paperFormat === "a6";
 
@@ -255,7 +254,7 @@ export function QrMenuPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.qrMenu} />
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
+      <div className="flex-1 overflow-auto px-6 pt-2 pb-6 space-y-6">
         <div ref={printRef} className="hidden">
           <QRCodeSVG
             value={menuUrl}
@@ -264,20 +263,22 @@ export function QrMenuPage() {
           />
         </div>
 
-        <div className="rounded-xl border bg-gradient-to-br from-primary/5 to-primary/10 p-4">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div className="min-w-0">
-              <p className="text-sm text-muted-foreground mb-0.5">{t("websiteReady")}</p>
-              <p className="font-medium truncate">{menuUrl}</p>
-            </div>
-            <MenuPreviewModal menuUrl={fullMenuUrl}>
-              <Button className="w-full sm:w-auto shrink-0">
-                <Eye className="mr-2 h-4 w-4" />
-                {t("openWebsite")}
-              </Button>
-            </MenuPreviewModal>
-          </div>
-        </div>
+        <Button
+          type="button"
+          className="w-full h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
+          onClick={() => {
+            navigator.clipboard.writeText(`https://${menuUrl}`);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+          }}
+        >
+          {copied ? (
+            <Check className="mr-2 h-4 w-4 text-green-500" />
+          ) : (
+            <Copy className="mr-2 h-4 w-4" />
+          )}
+          {t("copyUrl")}
+        </Button>
 
         <div className="space-y-4">
           <h2 className="text-base font-semibold text-muted-foreground">{t("printSection")}</h2>

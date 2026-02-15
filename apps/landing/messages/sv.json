@@ -957,7 +957,8 @@
       "small": "Liten",
       "medium": "Medium",
       "large": "Stor"
-    }
+    },
+    "copyUrl": "Kopiera URL"
   },
   "support": {
     "title": "Meddelanden",
@@ -1206,8 +1207,8 @@
       "analytics": "Analys",
       "categories": "Kategorier",
       "items": "Objekt",
-      "settings": "Allmänna",
-      "design": "Design",
+      "settings": "Inställningar",
+      "design": "Utseende",
       "contacts": "Kontakter",
       "languages": "Språk",
       "reservations": "Bokningar",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Ogiltig filtyp. Tillåtna: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Filen är för stor. Max storlek: 50MB för videor, 5MB för bilder",
       "subscribeForAccentColor": "Prenumerera för att anpassa accentfärgen",
-      "subscribe": "Prenumerera"
+      "subscribe": "Prenumerera",
+      "hideTitleLabel": "Restaurangnamn",
+      "hideTitleVisible": "Synlig på startsidan",
+      "hideTitleHidden": "Dold på startsidan",
+      "hideTitleHint": "Dölj titeln och den mörka överlagringen på startsidan för att endast visa bakgrundsbilden eller videon"
     },
     "general": {
       "name": "Titel",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Webbadressen uppdaterad",
       "slugChangedDescription": "Din restaurang är nu tillgänglig på:",
       "close": "Stäng",
-      "view": "Visa",
-      "hideTitleLabel": "Restaurangnamn",
-      "hideTitleVisible": "Synlig på startsidan",
-      "hideTitleHidden": "Dold på startsidan",
-      "hideTitleHint": "Dölj titeln och den mörka överlagringen på startsidan för att endast visa bakgrundsbilden eller videon"
+      "view": "Visa"
     },
     "onboarding": {
       "title": "Välkommen till IQ Rest!",

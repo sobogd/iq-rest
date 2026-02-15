@@ -22,7 +22,6 @@ export default async function DashboardLayout({
       settings: t("pages.settings"),
       design: t("pages.design"),
       contacts: t("pages.contacts"),
-      languages: t("pages.languages"),
       reservations: t("pages.reservations"),
       tables: t("pages.tables"),
       billing: t("pages.billing"),

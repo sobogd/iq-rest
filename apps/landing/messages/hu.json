@@ -957,7 +957,8 @@
       "small": "Kicsi",
       "medium": "Közepes",
       "large": "Nagy"
-    }
+    },
+    "copyUrl": "URL másolása"
   },
   "support": {
     "title": "Üzenetek",
@@ -1206,8 +1207,8 @@
       "analytics": "Elemzések",
       "categories": "Kategóriák",
       "items": "Tételek",
-      "settings": "Általános",
-      "design": "Tervezés",
+      "settings": "Beállítások",
+      "design": "Megjelenés",
       "contacts": "Kapcsolatok",
       "languages": "Nyelvek",
       "reservations": "Foglalások",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Érvénytelen fájltípus. Engedélyezett: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "A fájl túl nagy. Maximális méret: 50MB videókhoz, 5MB képekhez",
       "subscribeForAccentColor": "Iratkozzon fel a kiemelő szín testreszabásához",
-      "subscribe": "Feliratkozás"
+      "subscribe": "Feliratkozás",
+      "hideTitleLabel": "Étterem neve",
+      "hideTitleVisible": "Látható a kezdőlapon",
+      "hideTitleHidden": "Rejtett a kezdőlapon",
+      "hideTitleHint": "Rejtse el a címet és a sötét fedőréteget a kezdőlapon, hogy csak a háttérkép vagy videó jelenjen meg"
     },
     "general": {
       "name": "Cím",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "A weboldal címe frissítve",
       "slugChangedDescription": "Az étterme mostantól elérhető itt:",
       "close": "Bezárás",
-      "view": "Megtekintés",
-      "hideTitleLabel": "Étterem neve",
-      "hideTitleVisible": "Látható a kezdőlapon",
-      "hideTitleHidden": "Rejtett a kezdőlapon",
-      "hideTitleHint": "Rejtse el a címet és a sötét fedőréteget a kezdőlapon, hogy csak a háttérkép vagy videó jelenjen meg"
+      "view": "Megtekintés"
     },
     "onboarding": {
       "title": "Üdvözöljük az IQ Rest-nél!",

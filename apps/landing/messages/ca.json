@@ -957,7 +957,8 @@
       "small": "Petit",
       "medium": "Mitjà",
       "large": "Gran"
-    }
+    },
+    "copyUrl": "Copiar URL"
   },
   "support": {
     "title": "Missatges",
@@ -1206,8 +1207,8 @@
       "analytics": "Analítica",
       "categories": "Categories",
       "items": "Articles",
-      "settings": "General",
-      "design": "Disseny",
+      "settings": "Configuració",
+      "design": "Aparença",
       "contacts": "Contactes",
       "languages": "Idiomes",
       "reservations": "Reserves",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Tipus de fitxer no vàlid. Permesos: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "El fitxer és massa gran. Mida màxima: 50MB per a vídeos, 5MB per a imatges",
       "subscribeForAccentColor": "Subscriu-te per personalitzar el color d'accent",
-      "subscribe": "Subscriu-te"
+      "subscribe": "Subscriu-te",
+      "hideTitleLabel": "Nom del restaurant",
+      "hideTitleVisible": "Visible a la pàgina d'inici",
+      "hideTitleHidden": "Amagat a la pàgina d'inici",
+      "hideTitleHint": "Amaga el títol i la superposició fosca a la teva pàgina d'inici per mostrar només la imatge o el vídeo de fons"
     },
     "general": {
       "name": "Títol",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Adreça del lloc web actualitzada",
       "slugChangedDescription": "El teu restaurant ara està disponible a:",
       "close": "Tancar",
-      "view": "Veure",
-      "hideTitleLabel": "Nom del restaurant",
-      "hideTitleVisible": "Visible a la pàgina d'inici",
-      "hideTitleHidden": "Amagat a la pàgina d'inici",
-      "hideTitleHint": "Amaga el títol i la superposició fosca a la teva pàgina d'inici per mostrar només la imatge o el vídeo de fons"
+      "view": "Veure"
     },
     "onboarding": {
       "title": "Benvingut a IQ Rest!",

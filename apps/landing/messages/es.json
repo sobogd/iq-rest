@@ -957,7 +957,8 @@
       "small": "Pequeño",
       "medium": "Mediano",
       "large": "Grande"
-    }
+    },
+    "copyUrl": "Copiar URL"
   },
   "support": {
     "title": "Mensajes",
@@ -1206,8 +1207,8 @@
       "analytics": "Analíticas",
       "categories": "Categorías",
       "items": "Artículos",
-      "settings": "General",
-      "design": "Diseño",
+      "settings": "Configuración",
+      "design": "Apariencia",
       "contacts": "Contactos",
       "languages": "Idiomas",
       "reservations": "Reservaciones",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Tipo de archivo no válido. Permitidos: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Archivo demasiado grande. Máximo: 50MB para videos, 5MB para imágenes",
       "subscribeForAccentColor": "Suscríbete para personalizar el color de acento",
-      "subscribe": "Suscribirse"
+      "subscribe": "Suscribirse",
+      "hideTitleLabel": "Nombre del restaurante",
+      "hideTitleVisible": "Visible en la página de inicio",
+      "hideTitleHidden": "Oculto en la página de inicio",
+      "hideTitleHint": "Oculta el título y la superposición oscura en tu página de inicio para mostrar solo la imagen o video de fondo"
     },
     "general": {
       "name": "Título",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Dirección del sitio actualizada",
       "slugChangedDescription": "Tu restaurante ahora está disponible en:",
       "close": "Cerrar",
-      "view": "Ver",
-      "hideTitleLabel": "Nombre del restaurante",
-      "hideTitleVisible": "Visible en la página de inicio",
-      "hideTitleHidden": "Oculto en la página de inicio",
-      "hideTitleHint": "Oculta el título y la superposición oscura en tu página de inicio para mostrar solo la imagen o video de fondo"
+      "view": "Ver"
     },
     "onboarding": {
       "title": "¡Bienvenido a IQ Rest!",

@@ -1,8 +1,17 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
-import { Loader2, Save } from "lucide-react";
+import { Loader2, Save, Star, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { PageLoader } from "../_ui/page-loader";
 import { FormInput } from "../_ui/form-input";
@@ -21,7 +30,19 @@ import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { analytics } from "@/lib/analytics";
 import { CURRENCIES } from "@/lib/currencies";
-import { FormSwitch } from "../_ui/form-switch";
+import { LANGUAGE_NAMES } from "../_lib/constants";
+import { useRouter } from "@/i18n/routing";
+import type { SubscriptionStatus } from "@prisma/client";
+import type { PlanType } from "@/lib/stripe-config";
+
+const ALL_LANGUAGES = [
+  "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
+  "sv", "da", "no", "fi", "cs", "el", "tr", "ro", "hu", "bg",
+  "hr", "sk", "sl", "et", "lv", "lt",
+].map((code) => ({
+  code,
+  name: LANGUAGE_NAMES[code] || code,
+}));
 
 interface Restaurant {
   id: string;
@@ -29,12 +50,14 @@ interface Restaurant {
   description: string | null;
   slug: string | null;
   currency: string;
-  hideTitle: boolean;
 }
 
 export function SettingsPage() {
   const t = useTranslations("dashboard.general");
+  const tLang = useTranslations("dashboard.languages");
+  const tPages = useTranslations("dashboard.pages");
   const { translations } = useDashboard();
+  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -44,18 +67,37 @@ export function SettingsPage() {
   const [description, setDescription] = useState("");
   const [slug, setSlug] = useState("");
   const [currency, setCurrency] = useState("EUR");
-  const [hideTitle, setHideTitle] = useState(false);
 
   const [originalName, setOriginalName] = useState("");
   const [originalDescription, setOriginalDescription] = useState("");
   const [originalSlug, setOriginalSlug] = useState("");
   const [originalCurrency, setOriginalCurrency] = useState("EUR");
-  const [originalHideTitle, setOriginalHideTitle] = useState(false);
 
   const [validationError, setValidationError] = useState<string | null>(null);
 
+  // Languages state
+  const [languages, setLanguages] = useState<string[]>(["en"]);
+  const [defaultLanguage, setDefaultLanguage] = useState("en");
+  const [originalLanguages, setOriginalLanguages] = useState<string[]>(["en"]);
+  const [originalDefaultLanguage, setOriginalDefaultLanguage] = useState("en");
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [pendingDisable, setPendingDisable] = useState<string | null>(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
+  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
+
+  const getLanguageLimit = () => {
+    if (subscriptionStatus !== "ACTIVE") return 2;
+    if (currentPlan === "PRO") return Infinity;
+    if (currentPlan === "BASIC") return 6;
+    return 2;
+  };
+
+  const languageLimit = getLanguageLimit();
+  const isAtLimit = languages.length >= languageLimit;
+
   useEffect(() => {
     fetchRestaurant();
+    fetchSubscriptionStatus();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -70,12 +112,16 @@ export function SettingsPage() {
           setDescription(data.description || "");
           setSlug(data.slug || "");
           setCurrency(data.currency || "EUR");
-          setHideTitle(data.hideTitle || false);
           setOriginalName(data.title || "");
           setOriginalDescription(data.description || "");
           setOriginalSlug(data.slug || "");
           setOriginalCurrency(data.currency || "EUR");
-          setOriginalHideTitle(data.hideTitle || false);
+          const langs = data.languages || ["en"];
+          const defLang = data.defaultLanguage || "en";
+          setLanguages(langs);
+          setDefaultLanguage(defLang);
+          setOriginalLanguages(langs);
+          setOriginalDefaultLanguage(defLang);
         }
       }
     } catch (error) {
@@ -86,15 +132,31 @@ export function SettingsPage() {
     }
   }
 
+  async function fetchSubscriptionStatus() {
+    try {
+      const response = await fetch("/api/subscription/status");
+      if (response.ok) {
+        const data = await response.json();
+        setSubscriptionStatus(data.subscriptionStatus);
+        setCurrentPlan(data.plan);
+      }
+    } catch (error) {
+      console.error("Failed to fetch subscription status:", error);
+    }
+  }
+
   const hasChanges = useMemo(() => {
+    const langsSorted = [...languages].sort().join(",");
+    const origLangsSorted = [...originalLanguages].sort().join(",");
     return (
       name !== originalName ||
       description !== originalDescription ||
       slug !== originalSlug ||
       currency !== originalCurrency ||
-      hideTitle !== originalHideTitle
+      langsSorted !== origLangsSorted ||
+      defaultLanguage !== originalDefaultLanguage
     );
-  }, [name, description, slug, currency, hideTitle, originalName, originalDescription, originalSlug, originalCurrency, originalHideTitle]);
+  }, [name, description, slug, currency, languages, defaultLanguage, originalName, originalDescription, originalSlug, originalCurrency, originalLanguages, originalDefaultLanguage]);
 
   function handleSlugChange(value: string) {
     const cleanSlug = value
@@ -103,6 +165,40 @@ export function SettingsPage() {
       .replace(/-+/g, "-")
       .replace(/^-|-$/g, "");
     setSlug(cleanSlug);
+  }
+
+  // Languages handlers (local state only, saved on form submit)
+  function handleToggleLanguage(langCode: string, enabled: boolean) {
+    if (enabled) {
+      setLanguages((prev) => [...prev, langCode]);
+    } else {
+      if (langCode === defaultLanguage) {
+        toast.error(tLang("cannotDisableDefault"));
+        return;
+      }
+      if (languages.length <= 1) {
+        toast.error(tLang("atLeastOneRequired"));
+        return;
+      }
+      setPendingDisable(langCode);
+      setShowDeleteDialog(true);
+    }
+  }
+
+  function confirmDisableLanguage() {
+    if (!pendingDisable) return;
+    setLanguages((prev) => prev.filter((l) => l !== pendingDisable));
+    setShowDeleteDialog(false);
+    setPendingDisable(null);
+  }
+
+  function handleSetDefault(langCode: string) {
+    if (langCode === defaultLanguage) return;
+    if (!languages.includes(langCode)) {
+      toast.error(tLang("enableFirst"));
+      return;
+    }
+    setDefaultLanguage(langCode);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -119,7 +215,6 @@ export function SettingsPage() {
     }
 
     setSaving(true);
-    const slugWasChanged = slug !== originalSlug;
 
     try {
       const res = await fetch("/api/restaurant", {
@@ -130,23 +225,29 @@ export function SettingsPage() {
           description: description.trim() || null,
           slug: slug.trim(),
           currency,
-          hideTitle,
+          languages,
+          defaultLanguage,
         }),
       });
 
       if (res.ok) {
+        // Delete translations for removed languages
+        const removedLangs = originalLanguages.filter((l) => !languages.includes(l));
+        await Promise.all(
+          removedLangs.map((lang) =>
+            fetch(`/api/translations?language=${lang}`, { method: "DELETE" })
+          )
+        );
+
         toast.success(t("saved"));
         analytics.dashboard.restaurantSaved();
-
-        if (slugWasChanged) {
-
-        }
 
         setOriginalName(name);
         setOriginalDescription(description);
         setOriginalSlug(slug);
         setOriginalCurrency(currency);
-        setOriginalHideTitle(hideTitle);
+        setOriginalLanguages([...languages]);
+        setOriginalDefaultLanguage(defaultLanguage);
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));
@@ -176,20 +277,6 @@ export function SettingsPage() {
           />
           <p className="text-xs text-muted-foreground px-1">
             {t("nameHint")}
-          </p>
-        </div>
-
-        <div className="space-y-2">
-          <FormSwitch
-            id="hideTitle"
-            label={t("hideTitleLabel")}
-            checked={!hideTitle}
-            onCheckedChange={(checked) => setHideTitle(!checked)}
-            activeText={t("hideTitleVisible")}
-            inactiveText={t("hideTitleHidden")}
-          />
-          <p className="text-xs text-muted-foreground px-1">
-            {t("hideTitleHint")}
           </p>
         </div>
 
@@ -231,6 +318,76 @@ export function SettingsPage() {
           }))}
         />
 
+        {/* Languages section */}
+        <div className="space-y-4 pt-2">
+          <label className="text-sm font-medium">{tPages("languages")}:</label>
+
+          {isAtLimit && languageLimit !== Infinity && (
+            <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
+              <div className="flex gap-3 md:gap-4 md:items-center">
+                <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
+                <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
+                  <p className="text-sm">
+                    {tLang("limitReached", { limit: languageLimit })}
+                  </p>
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
+                    onClick={() => router.push("/dashboard/billing")}
+                  >
+                    {tLang("upgrade")}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="space-y-2">
+            {ALL_LANGUAGES.map((lang) => {
+              const isEnabled = languages.includes(lang.code);
+              const isDefault = defaultLanguage === lang.code;
+              const isDisabledByLimit = !isEnabled && isAtLimit;
+
+              return (
+                <div
+                  key={lang.code}
+                  className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl ${isDisabledByLimit ? "opacity-50" : ""}`}
+                >
+                  <div className="flex items-center gap-3 flex-1 min-w-0">
+                    <Switch
+                      checked={isEnabled}
+                      onCheckedChange={(checked) => handleToggleLanguage(lang.code, checked)}
+                      disabled={(isDefault && isEnabled) || isDisabledByLimit}
+                    />
+                    <span className="text-sm font-medium truncate">{lang.name}</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSetDefault(lang.code)}
+                    disabled={!isEnabled}
+                    className={`p-1.5 rounded-md transition-colors ${
+                      isDefault
+                        ? "text-yellow-500"
+                        : isEnabled
+                          ? "text-muted-foreground hover:text-yellow-500"
+                          : "text-muted-foreground/30 cursor-not-allowed"
+                    }`}
+                  >
+                    <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+
+          <p className="text-xs text-muted-foreground">
+            {tLang("hint")}
+          </p>
+        </div>
+
         <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
           <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
             {saving ? (
@@ -254,6 +411,27 @@ export function SettingsPage() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>
+              {pendingDisable ? (LANGUAGE_NAMES[pendingDisable] || pendingDisable) : ""}
+            </DialogTitle>
+            <DialogDescription>
+              {tLang("deleteConfirm")}
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowDeleteDialog(false)}>
+              {tLang("cancel")}
+            </Button>
+            <Button variant="destructive" onClick={confirmDisableLanguage}>
+              {tLang("confirm")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

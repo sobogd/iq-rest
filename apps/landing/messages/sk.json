@@ -957,7 +957,8 @@
       "small": "Malý",
       "medium": "Stredný",
       "large": "Veľký"
-    }
+    },
+    "copyUrl": "Kopírovať URL"
   },
   "support": {
     "title": "Správy",
@@ -1206,8 +1207,8 @@
       "analytics": "Analytika",
       "categories": "Kategórie",
       "items": "Položky",
-      "settings": "Všeobecné",
-      "design": "Dizajn",
+      "settings": "Nastavenia",
+      "design": "Vzhľad",
       "contacts": "Kontakty",
       "languages": "Jazyky",
       "reservations": "Rezervácie",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Neplatný typ súboru. Povolené: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Súbor je príliš veľký. Maximálna veľkosť: 50MB pre videá, 5MB pre obrázky",
       "subscribeForAccentColor": "Prihláste sa na odber pre prispôsobenie farby zvýraznenia",
-      "subscribe": "Odoberať"
+      "subscribe": "Odoberať",
+      "hideTitleLabel": "Názov reštaurácie",
+      "hideTitleVisible": "Viditeľný na hlavnej stránke",
+      "hideTitleHidden": "Skrytý na hlavnej stránke",
+      "hideTitleHint": "Skryte názov a tmavú vrstvu na hlavnej stránke, aby sa zobrazil iba obrázok alebo video na pozadí"
     },
     "general": {
       "name": "Názov",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Adresa webovej stránky bola aktualizovaná",
       "slugChangedDescription": "Vaša reštaurácia je teraz dostupná na:",
       "close": "Zavrieť",
-      "view": "Zobraziť",
-      "hideTitleLabel": "Názov reštaurácie",
-      "hideTitleVisible": "Viditeľný na hlavnej stránke",
-      "hideTitleHidden": "Skrytý na hlavnej stránke",
-      "hideTitleHint": "Skryte názov a tmavú vrstvu na hlavnej stránke, aby sa zobrazil iba obrázok alebo video na pozadí"
+      "view": "Zobraziť"
     },
     "onboarding": {
       "title": "Vitajte v IQ Rest!",

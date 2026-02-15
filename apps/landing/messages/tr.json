@@ -957,7 +957,8 @@
       "small": "Küçük",
       "medium": "Orta",
       "large": "Büyük"
-    }
+    },
+    "copyUrl": "URL Kopyala"
   },
   "support": {
     "title": "Mesajlar",
@@ -1206,8 +1207,8 @@
       "analytics": "Analitik",
       "categories": "Kategoriler",
       "items": "Ürünler",
-      "settings": "Genel",
-      "design": "Tasarım",
+      "settings": "Ayarlar",
+      "design": "Görünüm",
       "contacts": "İletişim",
       "languages": "Diller",
       "reservations": "Rezervasyonlar",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Geçersiz dosya türü. İzin verilenler: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Dosya çok büyük. Maksimum boyut: Videolar için 50MB, Resimler için 5MB",
       "subscribeForAccentColor": "Vurgu rengini özelleştirmek için abone olun",
-      "subscribe": "Abone ol"
+      "subscribe": "Abone ol",
+      "hideTitleLabel": "Restoran adı",
+      "hideTitleVisible": "Ana sayfada görünür",
+      "hideTitleHidden": "Ana sayfada gizli",
+      "hideTitleHint": "Yalnızca arka plan görselini veya videoyu göstermek için ana sayfadaki başlığı ve koyu katmanı gizleyin"
     },
     "general": {
       "name": "Başlık",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Web sitesi adresi güncellendi",
       "slugChangedDescription": "Restoranınız artık şu adreste mevcut:",
       "close": "Kapat",
-      "view": "Görüntüle",
-      "hideTitleLabel": "Restoran adı",
-      "hideTitleVisible": "Ana sayfada görünür",
-      "hideTitleHidden": "Ana sayfada gizli",
-      "hideTitleHint": "Yalnızca arka plan görselini veya videoyu göstermek için ana sayfadaki başlığı ve koyu katmanı gizleyin"
+      "view": "Görüntüle"
     },
     "onboarding": {
       "title": "IQ Rest'e Hoş Geldiniz!",

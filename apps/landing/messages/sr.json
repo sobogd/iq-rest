@@ -957,7 +957,8 @@
       "small": "Mala",
       "medium": "Srednja",
       "large": "Velika"
-    }
+    },
+    "copyUrl": "Копирај URL"
   },
   "support": {
     "title": "Poruke",
@@ -1206,8 +1207,8 @@
       "analytics": "Analitika",
       "categories": "Kategorije",
       "items": "Stavke",
-      "settings": "Opšte",
-      "design": "Dizajn",
+      "settings": "Podešavanja",
+      "design": "Изглед",
       "contacts": "Kontakti",
       "languages": "Jezici",
       "reservations": "Rezervacije",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Nevažeći tip datoteke. Dozvoljeni: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Datoteka je prevelika. Maksimalna veličina: 50MB za video, 5MB za slike",
       "subscribeForAccentColor": "Pretplatite se da biste prilagodili boju naglaska",
-      "subscribe": "Pretplatite se"
+      "subscribe": "Pretplatite se",
+      "hideTitleLabel": "Naziv restorana",
+      "hideTitleVisible": "Vidljivo na početnoj stranici",
+      "hideTitleHidden": "Sakriveno na početnoj stranici",
+      "hideTitleHint": "Sakrijte naslov i tamni sloj na početnoj stranici da biste prikazali samo pozadinsku sliku ili video"
     },
     "general": {
       "name": "Naslov",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Adresa vebsajta ažurirana",
       "slugChangedDescription": "Vaš restoran je sada dostupan na:",
       "close": "Zatvori",
-      "view": "Pogledaj",
-      "hideTitleLabel": "Naziv restorana",
-      "hideTitleVisible": "Vidljivo na početnoj stranici",
-      "hideTitleHidden": "Sakriveno na početnoj stranici",
-      "hideTitleHint": "Sakrijte naslov i tamni sloj na početnoj stranici da biste prikazali samo pozadinsku sliku ili video"
+      "view": "Pogledaj"
     },
     "onboarding": {
       "title": "Dobrodošli u IQ Rest!",

@@ -957,7 +957,8 @@
       "small": "Mały",
       "medium": "Średni",
       "large": "Duży"
-    }
+    },
+    "copyUrl": "Kopiuj URL"
   },
   "support": {
     "title": "Wiadomości",
@@ -1206,8 +1207,8 @@
       "analytics": "Analiza",
       "categories": "Kategorie",
       "items": "Pozycje",
-      "settings": "Ogólne",
-      "design": "Projekt",
+      "settings": "Ustawienia",
+      "design": "Wygląd",
       "contacts": "Kontakty",
       "languages": "Języki",
       "reservations": "Rezerwacje",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Nieprawidłowy typ pliku. Dozwolone: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Plik jest zbyt duży. Maksymalny rozmiar: 50MB dla wideo, 5MB dla obrazków",
       "subscribeForAccentColor": "Subskrybuj, aby dostosować kolor akcentu",
-      "subscribe": "Subskrybuj"
+      "subscribe": "Subskrybuj",
+      "hideTitleLabel": "Nazwa restauracji",
+      "hideTitleVisible": "Widoczna na stronie głównej",
+      "hideTitleHidden": "Ukryta na stronie głównej",
+      "hideTitleHint": "Ukryj tytuł i ciemną nakładkę na stronie głównej, aby wyświetlić tylko obraz lub wideo w tle"
     },
     "general": {
       "name": "Tytuł",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Adres strony internetowej zaktualizowany",
       "slugChangedDescription": "Twoja restauracja jest teraz dostępna pod adresem:",
       "close": "Zamknij",
-      "view": "Zobacz",
-      "hideTitleLabel": "Nazwa restauracji",
-      "hideTitleVisible": "Widoczna na stronie głównej",
-      "hideTitleHidden": "Ukryta na stronie głównej",
-      "hideTitleHint": "Ukryj tytuł i ciemną nakładkę na stronie głównej, aby wyświetlić tylko obraz lub wideo w tle"
+      "view": "Zobacz"
     },
     "onboarding": {
       "title": "Witamy w IQ Rest!",

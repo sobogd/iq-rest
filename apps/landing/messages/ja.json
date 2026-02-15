@@ -990,7 +990,8 @@
       "small": "小",
       "medium": "中",
       "large": "大"
-    }
+    },
+    "copyUrl": "URLをコピー"
   },
   "support": {
     "title": "メッセージ",
@@ -1219,8 +1220,8 @@
       "analytics": "分析",
       "categories": "カテゴリ",
       "items": "アイテム",
-      "settings": "一般",
-      "design": "デザイン",
+      "settings": "設定",
+      "design": "外観",
       "contacts": "連絡先",
       "languages": "言語",
       "reservations": "予約",
@@ -1444,7 +1445,11 @@
       "invalidFileType": "無効なファイルタイプです。許可：JPEG、PNG、WebP、GIF、MP4、WebM、MOV",
       "fileTooLarge": "ファイルが大きすぎます。最大サイズ：動画50MB、画像5MB",
       "subscribeForAccentColor": "アクセントカラーをカスタマイズするには購読してください",
-      "subscribe": "購読する"
+      "subscribe": "購読する",
+      "hideTitleLabel": "レストラン名",
+      "hideTitleVisible": "ホームページに表示",
+      "hideTitleHidden": "ホームページで非表示",
+      "hideTitleHint": "背景画像や動画のみを表示するために、ホームページのタイトルと暗いオーバーレイを非表示にします"
     },
     "general": {
       "name": "タイトル",
@@ -1468,11 +1473,7 @@
       "slugChangedTitle": "ウェブサイトアドレスが更新されました",
       "slugChangedDescription": "レストランは以下で利用可能になりました：",
       "close": "閉じる",
-      "view": "表示",
-      "hideTitleLabel": "レストラン名",
-      "hideTitleVisible": "ホームページに表示",
-      "hideTitleHidden": "ホームページで非表示",
-      "hideTitleHint": "背景画像や動画のみを表示するために、ホームページのタイトルと暗いオーバーレイを非表示にします"
+      "view": "表示"
     },
     "onboarding": {
       "title": "IQ Restへようこそ！",

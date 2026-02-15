@@ -957,7 +957,8 @@
       "small": "Beag",
       "medium": "Meán",
       "large": "Mór"
-    }
+    },
+    "copyUrl": "Cóipeáil URL"
   },
   "support": {
     "title": "Teachtaireachtaí",
@@ -1206,8 +1207,8 @@
       "analytics": "Anailís",
       "categories": "Catagóirí",
       "items": "Míreanna",
-      "settings": "Ginearálta",
-      "design": "Dearadh",
+      "settings": "Socruithe",
+      "design": "Cuma",
       "contacts": "Teagmhálacha",
       "languages": "Teangacha",
       "reservations": "Conradh",
@@ -1431,7 +1432,11 @@
       "invalidFileType": "Cineál comhoibrithe neamhbhailí. Ceadaithe: JPEG, PNG, WebP, GIF, MP4, WebM, MOV",
       "fileTooLarge": "Tá an comhad ró-mhór. Méid uasta: 50MB do fhíseáin, 5MB do íomhánna",
       "subscribeForAccentColor": "Liostáil chun an dath béime a shaincheapadh",
-      "subscribe": "Liostáil"
+      "subscribe": "Liostáil",
+      "hideTitleLabel": "Ainm na bialainne",
+      "hideTitleVisible": "Infheicthe ar an leathanach baile",
+      "hideTitleHidden": "I bhfolach ar an leathanach baile",
+      "hideTitleHint": "Cuir an teideal agus an forluí dorcha i bhfolach ar do leathanach baile chun an íomhá nó an físeán cúlra amháin a thaispeáint"
     },
     "general": {
       "name": "Teideal",
@@ -1455,11 +1460,7 @@
       "slugChangedTitle": "Seoladh an ghréasáin nuashonraithe",
       "slugChangedDescription": "Tá do bhialann ar fáil anois ag:",
       "close": "Dún",
-      "view": "Taispeáin",
-      "hideTitleLabel": "Ainm na bialainne",
-      "hideTitleVisible": "Infheicthe ar an leathanach baile",
-      "hideTitleHidden": "I bhfolach ar an leathanach baile",
-      "hideTitleHint": "Cuir an teideal agus an forluí dorcha i bhfolach ar do leathanach baile chun an íomhá nó an físeán cúlra amháin a thaispeáint"
+      "view": "Taispeáin"
     },
     "onboarding": {
       "title": "Fáilte chuig IQ Rest!",
