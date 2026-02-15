@@ -121,48 +121,51 @@ export function TablesPage({ initialTables }: TablesPageProps) {
   return (
     <div className="flex flex-col h-full">
       {/* Custom header */}
-      <header className="flex shrink-0 items-center px-6 py-4 shadow-sm">
-        {sortMode ? (
-          <>
-            <button
-              onClick={handleCancelSortMode}
-              disabled={savingSort}
-              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
-            >
-              <X className="h-5 w-5" />
-            </button>
-            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
-            <button
-              onClick={handleSaveSortOrder}
-              disabled={savingSort}
-              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors text-primary"
-            >
-              {savingSort ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
-            </button>
-          </>
-        ) : (
-          <>
-            <button
-              onClick={() => router.back()}
-              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
-            >
-              <ArrowLeft className="h-5 w-5" />
-            </button>
-            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
-            {tables.length > 1 && (
+      <header className="shrink-0 shadow-sm px-6">
+        <div className="flex items-center py-3 max-w-lg mx-auto">
+          {sortMode ? (
+            <>
               <button
-                onClick={handleStartSortMode}
+                onClick={handleCancelSortMode}
+                disabled={savingSort}
                 className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
               >
-                <ArrowUpDown className="h-5 w-5" />
+                <X className="h-5 w-5" />
               </button>
-            )}
-          </>
-        )}
+              <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+              <button
+                onClick={handleSaveSortOrder}
+                disabled={savingSort}
+                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors text-primary"
+              >
+                {savingSort ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => router.back()}
+                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+              >
+                <ArrowLeft className="h-5 w-5" />
+              </button>
+              <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+              {tables.length > 1 && (
+                <button
+                  onClick={handleStartSortMode}
+                  className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+                >
+                  <ArrowUpDown className="h-5 w-5" />
+                </button>
+              )}
+            </>
+          )}
+        </div>
       </header>
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto">
         {tables.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full gap-4">
             <p className="text-muted-foreground">{t("noTables")}</p>
@@ -240,6 +243,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
             </Button>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

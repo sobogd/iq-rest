@@ -305,7 +305,8 @@ export function AdminPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Admin" />
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-6">
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Card>
@@ -450,6 +451,7 @@ export function AdminPage() {
               );
             })}
           </div>
+        </div>
         </div>
       </div>
 

@@ -42,6 +42,9 @@ model Company {
   currentPeriodEnd   DateTime?
   paymentProcessing  Boolean            @default(false)
 
+  // Onboarding
+  onboardingStep Int @default(0) // 0 = not started, 1 = name done, 2 = type done (complete)
+
   // Admin
   reminderSentAt DateTime?
 
@@ -94,6 +97,11 @@ model Restaurant {
   companyId       String
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+
+  // Checklist flags (set once on first user action)
+  checklistMenuEdited      Boolean @default(false)
+  checklistContactsSaved   Boolean @default(false)
+  checklistBrandCustomized Boolean @default(false)
 
   // Reservation settings
   reservationsEnabled    Boolean @default(false)

@@ -254,7 +254,8 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
           <Settings className="h-5 w-5" />
         </button>
       </PageHeader>
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-4">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-4">
 
         {activeReservations.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16">
@@ -299,6 +300,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
             )}
           </div>
         )}
+        </div>
       </div>
 
     </div>

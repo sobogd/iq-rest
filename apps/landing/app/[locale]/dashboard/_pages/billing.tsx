@@ -215,7 +215,7 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.billing} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="space-y-2">
+        <div className="max-w-lg mx-auto space-y-2">
           {SUBSCRIPTION_OPTIONS.map((option) => {
             const isCurrent = isCurrentOption(option);
             const isLoading = actionLoading === option.lookupKey || (isCurrent && actionLoading === "manage");

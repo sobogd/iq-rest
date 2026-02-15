@@ -96,7 +96,8 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.support} />
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-3">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-3">
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full">
             <div className="text-center">
@@ -139,6 +140,7 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
           ))
         )}
         <div ref={messagesEndRef} />
+        </div>
       </div>
 
       <div className="px-6 py-4 bg-background shrink-0">

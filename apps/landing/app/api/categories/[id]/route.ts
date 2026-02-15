@@ -71,6 +71,12 @@ export async function PUT(
       },
     });
 
+    // Mark checklist step done (fire-and-forget, no-op if already set)
+    prisma.restaurant.updateMany({
+      where: { companyId, checklistMenuEdited: false },
+      data: { checklistMenuEdited: true },
+    }).catch(() => {});
+
     return NextResponse.json(category);
   } catch (error) {
     console.error("Error updating category:", error);
@@ -122,6 +128,12 @@ export async function PATCH(
       where: { id },
       data: updateData,
     });
+
+    // Mark checklist step done (fire-and-forget, no-op if already set)
+    prisma.restaurant.updateMany({
+      where: { companyId, checklistMenuEdited: false },
+      data: { checklistMenuEdited: true },
+    }).catch(() => {});
 
     return NextResponse.json({ success: true, ...category });
   } catch (error) {

@@ -589,7 +589,8 @@ export function AdminAnalyticsPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Admin Analytics" />
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-6">
         {/* Time Range Filter */}
         <Card>
           <CardContent className="pt-4">
@@ -737,6 +738,7 @@ export function AdminAnalyticsPage() {
             </div>
           </CardContent>
         </Card>
+        </div>
       </div>
 
       {/* Sessions Sheet */}

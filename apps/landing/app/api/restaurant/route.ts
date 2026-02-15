@@ -4,6 +4,18 @@ import { getUserCompanyId } from "@/lib/auth";
 import { moveFromTemp, s3Key, getPublicUrl } from "@/lib/s3";
 import { Prisma } from "@prisma/client";
 import { locales, Locale } from "@/i18n/routing";
+import { COUNTRY_CENTERS } from "@/lib/country-centers";
+
+// Locale → phone country code mapping
+const LOCALE_PHONE_CODES: Record<string, string> = {
+  en: "+44", es: "+34", de: "+49", fr: "+33", it: "+39",
+  pt: "+351", nl: "+31", pl: "+48", ru: "+7", uk: "+380",
+  sv: "+46", da: "+45", no: "+47", fi: "+358", cs: "+420",
+  el: "+30", tr: "+90", ro: "+40", hu: "+36", bg: "+359",
+  hr: "+385", sk: "+421", sl: "+386", et: "+372", lv: "+371",
+  lt: "+370", sr: "+381", ca: "+34", ga: "+353", is: "+354",
+  fa: "+98", ar: "+966", ja: "+81", ko: "+82", zh: "+86",
+};
 
 type TranslationData = {
   name?: string;
@@ -163,6 +175,29 @@ export async function POST(request: NextRequest) {
         },
       });
 
+      // Ensure onboarding step is at least 1 (name done)
+      await prisma.company.updateMany({
+        where: { id: companyId, onboardingStep: 0 },
+        data: { onboardingStep: 1 },
+      });
+
+      // Mark checklist flags (fire-and-forget, no-op if already set)
+      const isContactsSave = data.phone !== undefined || data.instagram !== undefined || data.whatsapp !== undefined;
+      const isBrandSave = data.source !== undefined || data.accentColor !== undefined;
+
+      if (isContactsSave) {
+        prisma.restaurant.updateMany({
+          where: { companyId, checklistContactsSaved: false },
+          data: { checklistContactsSaved: true },
+        }).catch(() => {});
+      }
+      if (isBrandSave) {
+        prisma.restaurant.updateMany({
+          where: { companyId, checklistBrandCustomized: false },
+          data: { checklistBrandCustomized: true },
+        }).catch(() => {});
+      }
+
       return NextResponse.json(restaurant);
     } else {
       // Create new
@@ -184,6 +219,11 @@ export async function POST(request: NextRequest) {
       // Set initial background image for new restaurants
       const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
 
+      // Generate test contact data based on locale
+      const phoneCode = LOCALE_PHONE_CODES[userLocale] || "+1";
+      const testPhone = `${phoneCode} 12345`;
+      const center = COUNTRY_CENTERS[userLocale];
+
       const restaurant = await prisma.restaurant.create({
         data: {
           title: data.title,
@@ -193,11 +233,11 @@ export async function POST(request: NextRequest) {
           source: finalSource ?? initialBackground,
           accentColor: data.accentColor || "#000000",
           address: data.address || null,
-          x: data.x || null,
-          y: data.y || null,
-          phone: data.phone || null,
-          instagram: data.instagram || null,
-          whatsapp: data.whatsapp || null,
+          x: data.x || center?.lat?.toString() || null,
+          y: data.y || center?.lng?.toString() || null,
+          phone: data.phone || testPhone,
+          instagram: data.instagram || "instagram",
+          whatsapp: data.whatsapp || testPhone,
           languages: data.languages || [userLocale],
           defaultLanguage: data.defaultLanguage || userLocale,
           hideTitle: data.hideTitle ?? false,
@@ -209,6 +249,12 @@ export async function POST(request: NextRequest) {
           workingHoursEnd: data.workingHoursEnd ?? "22:00",
           companyId,
         },
+      });
+
+      // Mark onboarding step 1 complete (name done)
+      await prisma.company.update({
+        where: { id: companyId },
+        data: { onboardingStep: 1 },
       });
 
       return NextResponse.json(restaurant, { status: 201 });

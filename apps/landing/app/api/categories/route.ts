@@ -59,6 +59,12 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    // Mark checklist step done (fire-and-forget, no-op if already set)
+    prisma.restaurant.updateMany({
+      where: { companyId, checklistMenuEdited: false },
+      data: { checklistMenuEdited: true },
+    }).catch(() => {});
+
     return NextResponse.json(category, { status: 201 });
   } catch (error) {
     console.error("Error creating category:", error);

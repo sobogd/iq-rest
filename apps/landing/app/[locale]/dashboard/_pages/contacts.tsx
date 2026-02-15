@@ -22,7 +22,7 @@ interface ContactsPageProps {
 
 export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   const t = useTranslations("dashboard.contacts");
-  const { translations, returnToOnboarding } = useDashboard();
+  const { translations } = useDashboard();
 
   const [saving, setSaving] = useState(false);
 
@@ -89,7 +89,6 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
         setOriginalWhatsapp(whatsapp);
         setOriginalLat(lat);
         setOriginalLng(lng);
-        returnToOnboarding();
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));
@@ -105,6 +104,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.contacts} />
       <form id="contacts-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">
@@ -171,6 +171,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
             )}
             {t("save")}
           </Button>
+        </div>
         </div>
       </form>
     </div>

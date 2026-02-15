@@ -118,7 +118,8 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.analytics} />
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-8">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+      <div className="max-w-lg mx-auto space-y-8">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat) => {
           const value = getStatValue(stat.key);
@@ -212,6 +213,7 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
               </div>
             ))}
         </div>
+      </div>
       </div>
       </div>
     </div>

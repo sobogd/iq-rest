@@ -249,7 +249,8 @@ export function TableFormPage({ id }: TableFormPageProps) {
       </PageHeader>
 
       <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
-        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6 space-y-4">
+        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
+          <div className="max-w-lg mx-auto space-y-4">
           <FormSwitch
             id="isActive"
             label={`${t("isActive")}:`}
@@ -357,6 +358,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
               )}
               {t("save")}
             </Button>
+          </div>
           </div>
         </div>
       </form>

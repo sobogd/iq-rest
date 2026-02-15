@@ -42,7 +42,7 @@ interface CategoryFormPageProps {
 }
 
 export function CategoryFormPage({ id }: CategoryFormPageProps) {
-  const { translations, returnToOnboarding } = useDashboard();
+  const { translations } = useDashboard();
   const router = useRouter();
   const t = translations.categories;
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
@@ -105,9 +105,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        if (!returnToOnboarding()) {
-          router.push("/dashboard/menu");
-        }
+        router.push("/dashboard/menu");
       } else {
         const data = await res.json();
         toast.error(data.error || t.deleteError);
@@ -159,9 +157,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
         if (!isEdit) {
           analytics.dashboard.categoryCreated();
         }
-        if (!returnToOnboarding()) {
-          router.push("/dashboard/menu");
-        }
+        router.push("/dashboard/menu");
       } else {
         const data = await res.json();
         toast.error(data.error || t.saveError);
@@ -193,7 +189,8 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       </PageHeader>
 
       <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
-        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6 space-y-4">
+        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
+          <div className="max-w-lg mx-auto space-y-4">
           <FormInput
             id="name"
             label={`${t.name}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
@@ -234,6 +231,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
               )}
               {t.save}
             </Button>
+          </div>
           </div>
         </div>
       </form>

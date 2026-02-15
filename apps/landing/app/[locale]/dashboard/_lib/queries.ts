@@ -106,52 +106,6 @@ export async function getReservations(companyId: string) {
   }));
 }
 
-// ---- Onboarding Progress ----
-export async function getOnboardingProgress(companyId: string) {
-  const [restaurant, categoriesCount, itemsCount] = await Promise.all([
-    prisma.restaurant.findFirst({
-      where: { companyId },
-      select: {
-        title: true,
-        slug: true,
-        phone: true,
-        instagram: true,
-        whatsapp: true,
-        address: true,
-      },
-    }),
-    prisma.category.count({ where: { companyId } }),
-    prisma.item.count({ where: { companyId } }),
-  ]);
-
-  const progress = {
-    hasInfo: Boolean(
-      restaurant?.title && restaurant.title.trim().length > 0 &&
-      restaurant?.slug && restaurant.slug.trim().length > 0
-    ),
-    hasCategories: categoriesCount > 0,
-    hasItems: itemsCount > 0,
-    hasContacts: Boolean(
-      restaurant?.phone ||
-      restaurant?.instagram ||
-      restaurant?.whatsapp ||
-      restaurant?.address
-    ),
-  };
-
-  const requiredCompleted =
-    progress.hasInfo &&
-    progress.hasCategories &&
-    progress.hasItems &&
-    progress.hasContacts;
-
-  return {
-    progress,
-    requiredCompleted,
-    slug: restaurant?.slug || null,
-  };
-}
-
 // ---- Support Messages ----
 export async function getSupportMessages(companyId: string) {
   const messages = await prisma.supportMessage.findMany({
@@ -260,6 +214,27 @@ export async function getDashboardAnalytics(companyId: string) {
       count: v._count.language,
     })),
     viewsByDay: getLast7Days(viewsByDay),
+  };
+}
+
+// ---- Checklist Status ----
+export async function getChecklistStatus(companyId: string) {
+  const restaurant = await prisma.restaurant.findFirst({
+    where: { companyId },
+    select: {
+      title: true,
+      checklistMenuEdited: true,
+      checklistContactsSaved: true,
+      checklistBrandCustomized: true,
+    },
+  });
+
+  return {
+    nameSet: Boolean(restaurant?.title),
+    templateChosen: true, // guaranteed by onboarding
+    menuEdited: restaurant?.checklistMenuEdited ?? false,
+    contactsAdded: restaurant?.checklistContactsSaved ?? false,
+    brandCustomized: restaurant?.checklistBrandCustomized ?? false,
   };
 }
 

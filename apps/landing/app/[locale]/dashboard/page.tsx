@@ -1,16 +1,17 @@
 import { redirect } from "next/navigation";
 import { getUserCompanyId } from "@/lib/auth";
-import { getOnboardingProgress } from "./_lib/queries";
+import { getRestaurant, checkIsAdmin, getChecklistStatus } from "./_lib/queries";
+import { DashboardHome } from "./_pages/home";
 
 export default async function Page() {
   const companyId = await getUserCompanyId();
-  if (!companyId) return null;
+  if (!companyId) redirect("/login");
 
-  const { progress, requiredCompleted } = await getOnboardingProgress(companyId);
+  const [restaurant, isAdmin, checklist] = await Promise.all([
+    getRestaurant(companyId),
+    checkIsAdmin(),
+    getChecklistStatus(companyId),
+  ]);
 
-  if (requiredCompleted) redirect("/dashboard/home");
-  if (!progress.hasInfo) redirect("/dashboard/onboarding/info");
-  if (!progress.hasItems) redirect("/dashboard/onboarding/menu");
-  if (!progress.hasContacts) redirect("/dashboard/onboarding/contacts");
-  redirect("/dashboard/onboarding/done");
+  return <DashboardHome slug={restaurant?.slug ?? null} isAdmin={isAdmin} checklist={checklist} />;
 }

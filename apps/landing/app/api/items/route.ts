@@ -118,6 +118,12 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    // Mark checklist step done (fire-and-forget, no-op if already set)
+    prisma.restaurant.updateMany({
+      where: { companyId, checklistMenuEdited: false },
+      data: { checklistMenuEdited: true },
+    }).catch(() => {});
+
     return NextResponse.json(
       { ...item, price: Number(item.price) },
       { status: 201 }

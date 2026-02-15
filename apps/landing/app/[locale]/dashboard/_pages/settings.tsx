@@ -224,7 +224,8 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.settings} />
-      <form id="settings-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-4 max-w-md">
+      <form id="settings-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-4">
         <div className="space-y-2">
           <FormInput
             id="name"
@@ -355,6 +356,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
             )}
             {t("save")}
           </Button>
+        </div>
         </div>
       </form>
 
