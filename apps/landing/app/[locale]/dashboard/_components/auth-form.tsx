@@ -63,7 +63,8 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
           }
           analytics.auth.signUp();
           analytics.linkSession(data.userId);
-          onSuccess();
+          // Cookies set — full reload, server decides where to go
+          window.location.href = `/${locale}/dashboard`;
           return;
         }
 
@@ -107,7 +108,8 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
         }
         // Link session to user
         analytics.linkSession(data.userId);
-        onSuccess();
+        // Cookies set — full reload, server decides where to go
+        window.location.href = `/${locale}/dashboard`;
       } else {
         setErrorMessage(data.error || t("auth.errors.verifyFailed"));
         setStatus("error");

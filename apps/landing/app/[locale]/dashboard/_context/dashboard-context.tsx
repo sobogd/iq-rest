@@ -231,10 +231,12 @@ export function DashboardProvider({
   const [onboardingCompleted, setOnboardingCompleted] = useState(false);
 
   const returnToOnboarding = useCallback(() => {
-    const shouldReturn = sessionStorage.getItem("returnToOnboarding") === "true";
-    if (shouldReturn) {
+    const returnPath = sessionStorage.getItem("returnToOnboarding");
+    if (returnPath) {
       sessionStorage.removeItem("returnToOnboarding");
-      router.push("/dashboard/onboarding");
+      // Support both old "true" flag and new path-based values
+      const target = returnPath === "true" ? "/dashboard/onboarding" : returnPath;
+      router.push(target);
       return true;
     }
     return false;

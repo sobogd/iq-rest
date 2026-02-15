@@ -1,31 +1,16 @@
-"use client";
+import { redirect } from "next/navigation";
+import { getUserCompanyId } from "@/lib/auth";
+import { getOnboardingProgress } from "./_lib/queries";
 
-import { useEffect } from "react";
-import { useRouter } from "@/i18n/routing";
-import { isValidPageKey, PAGE_PATHS } from "./_context/dashboard-context";
+export default async function Page() {
+  const companyId = await getUserCompanyId();
+  if (!companyId) return null;
 
-export default function DashboardPage() {
-  const router = useRouter();
+  const { progress, requiredCompleted } = await getOnboardingProgress(companyId);
 
-  useEffect(() => {
-    // Handle legacy hash-based URLs (#categories, #billing, etc.)
-    const hash = window.location.hash.slice(1);
-    if (hash && isValidPageKey(hash)) {
-      router.replace(PAGE_PATHS[hash]);
-      return;
-    }
-
-    // Handle legacy ?page= query params
-    const params = new URLSearchParams(window.location.search);
-    const pageParam = params.get("page");
-    if (pageParam && isValidPageKey(pageParam)) {
-      router.replace(PAGE_PATHS[pageParam]);
-      return;
-    }
-
-    // Default: redirect to onboarding
-    router.replace("/dashboard/onboarding");
-  }, [router]);
-
-  return null;
+  if (requiredCompleted) redirect("/dashboard/home");
+  if (!progress.hasInfo) redirect("/dashboard/onboarding/info");
+  if (!progress.hasItems) redirect("/dashboard/onboarding/menu");
+  if (!progress.hasContacts) redirect("/dashboard/onboarding/contacts");
+  redirect("/dashboard/onboarding/done");
 }
