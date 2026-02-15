@@ -182,7 +182,7 @@ export async function POST(request: NextRequest) {
       const slug = await generateUniqueSlug(data.title);
 
       // Set initial background image for new restaurants
-      const initialBackground = "https://iq-rest.s3.eu-central-1.amazonaws.com/background_initial.webp";
+      const initialBackground = `${process.env.S3_HOST}background_initial.webp`;
 
       const restaurant = await prisma.restaurant.create({
         data: {
