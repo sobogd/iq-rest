@@ -10,6 +10,8 @@ import { PRICE_LOOKUP_KEYS, type PlanType } from "@/lib/stripe-config";
 import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
 import { Link } from "@/i18n/routing";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
+import { useDashboard } from "../_context/dashboard-context";
 import { toast } from "sonner";
 
 interface SubscriptionStatusResponse {
@@ -29,6 +31,7 @@ const SUBSCRIPTION_OPTIONS = [
 
 export function BillingPage() {
   const t = useTranslations("billing");
+  const { translations } = useDashboard();
   const locale = useLocale();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -194,7 +197,8 @@ export function BillingPage() {
   if (isPolling) {
     return (
       <div className="flex flex-col h-full">
-        <div className="flex-1 flex items-center justify-center p-6">
+        <PageHeader title={translations.pages.billing} />
+        <div className="flex-1 flex items-center justify-center px-6 pb-6">
           <div className="flex flex-col items-center gap-4">
             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
             <div className="text-center">
@@ -211,7 +215,8 @@ export function BillingPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6">
+      <PageHeader title={translations.pages.billing} />
+      <div className="flex-1 overflow-auto px-6 pb-6">
         <div className="space-y-2">
           {SUBSCRIPTION_OPTIONS.map((option) => {
             const isCurrent = isCurrentOption(option);

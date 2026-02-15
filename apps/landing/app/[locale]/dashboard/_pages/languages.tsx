@@ -17,6 +17,7 @@ import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
+import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
@@ -32,7 +33,7 @@ const ALL_LANGUAGES = [
 
 export function LanguagesPage() {
   const t = useTranslations("dashboard.languages");
-  const { returnToOnboarding } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
   const router = useRouter();
 
   const [loading, setLoading] = useState(true);
@@ -191,7 +192,8 @@ export function LanguagesPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6 space-y-6">
+      <PageHeader title={translations.pages.languages} />
+      <div className="flex-1 overflow-auto px-6 pb-6 space-y-6">
         {!hasRestaurant && (
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">

@@ -9,11 +9,12 @@ import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
+import { PageHeader } from "../_ui/page-header";
 
 
 export function ContactsPage() {
   const t = useTranslations("dashboard.contacts");
-  const { returnToOnboarding } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -124,7 +125,8 @@ export function ContactsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <form id="contacts-form" onSubmit={handleSubmit} className="flex-1 overflow-auto p-6">
+      <PageHeader title={translations.pages.contacts} />
+      <form id="contacts-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">

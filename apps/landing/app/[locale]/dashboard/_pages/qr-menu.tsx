@@ -9,7 +9,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Printer, Download, Eye } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
+import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 
 const PAPER_FORMATS = {
@@ -30,6 +32,7 @@ const QR_PER_PAGE = {
 
 export function QrMenuPage() {
   const t = useTranslations("qrCode");
+  const { translations } = useDashboard();
   const router = useRouter();
 
   const [loading, setLoading] = useState(true);
@@ -235,7 +238,8 @@ export function QrMenuPage() {
   if (!slug) {
     return (
       <div className="flex flex-col h-full">
-        <div className="flex-1 flex items-center justify-center p-6">
+        <PageHeader title={translations.pages.qrMenu} />
+      <div className="flex-1 flex items-center justify-center px-6 pb-6">
           <div className="text-center">
             <p className="font-medium">{t("noSlug")}</p>
             <p className="text-sm text-muted-foreground max-w-[270px] mt-2">{t("noSlugDescription")}</p>
@@ -250,7 +254,8 @@ export function QrMenuPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6 pt-0 space-y-6">
+      <PageHeader title={translations.pages.qrMenu} />
+      <div className="flex-1 overflow-auto px-6 pb-6 space-y-6">
         <div ref={printRef} className="hidden">
           <QRCodeSVG
             value={menuUrl}

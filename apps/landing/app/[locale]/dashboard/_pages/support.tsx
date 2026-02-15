@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Loader2 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
+import { useDashboard } from "../_context/dashboard-context";
 
 interface Message {
   id: string;
@@ -18,6 +20,7 @@ const POLLING_INTERVAL = 60000;
 
 export function SupportPage() {
   const t = useTranslations("support");
+  const { translations } = useDashboard();
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
   const [newMessage, setNewMessage] = useState("");
@@ -101,7 +104,8 @@ export function SupportPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6 space-y-3">
+      <PageHeader title={translations.pages.support} />
+      <div className="flex-1 overflow-auto px-6 pb-6 space-y-3">
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full">
             <div className="text-center">

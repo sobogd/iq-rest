@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Save, X, Trash2, Upload } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Save, X, Trash2, Upload, ArrowLeft, Check } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -31,6 +31,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
+import { useDashboard } from "../_context/dashboard-context";
+import { useRouter } from "@/i18n/routing";
 
 interface Table {
   id: string;
@@ -45,6 +47,9 @@ interface Table {
 
 export function TablesPage() {
   const t = useTranslations("reservations");
+  const { translations } = useDashboard();
+  const router = useRouter();
+  const pageTitle = translations.pages.tables;
 
   const [tables, setTables] = useState<Table[]>([]);
   const [loading, setLoading] = useState(true);
@@ -184,104 +189,127 @@ export function TablesPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6">
+      {/* Custom header */}
+      <header className="flex h-14 shrink-0 items-center px-6 my-4">
+        {sortMode ? (
+          <>
+            <button
+              onClick={handleCancelSortMode}
+              disabled={savingSort}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+            <button
+              onClick={handleSaveSortOrder}
+              disabled={savingSort}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors text-primary"
+            >
+              {savingSort ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
+            </button>
+          </>
+        ) : (
+          <>
+            <button
+              onClick={() => router.back()}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+            {tables.length > 1 && (
+              <button
+                onClick={handleStartSortMode}
+                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+              >
+                <ArrowUpDown className="h-5 w-5" />
+              </button>
+            )}
+          </>
+        )}
+      </header>
+
+      {/* Content */}
+      <div className="relative flex-1 overflow-auto px-6 pb-6">
         {tables.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-16">
-            <p className="text-muted-foreground mb-4">{t("noTables")}</p>
+          <div className="flex flex-col items-center justify-center h-full gap-4">
+            <p className="text-muted-foreground">{t("noTables")}</p>
             <Button onClick={handleAddTable}>
               <Plus className="h-4 w-4 mr-2" />
               {t("addTable")}
             </Button>
           </div>
         ) : (
-          <div className="space-y-2">
-            {tables.map((table, index) => (
-              <div
-                key={table.id}
-                onClick={() => !sortMode && handleEditTable(table)}
-                className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl transition-colors ${
-                  sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
-                }`}
-              >
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  {!sortMode && (
-                    <div onClick={(e) => e.stopPropagation()} className="flex items-center">
-                      <Switch
-                        checked={table.isActive}
-                        onCheckedChange={() =>
-                          handleToggleActive(table.id, table.isActive, table.number)
-                        }
-                      />
+          <>
+            <div className="space-y-2 pb-16">
+              {tables.map((table, index) => (
+                <div
+                  key={table.id}
+                  className="flex items-center gap-2"
+                >
+                  <div
+                    onClick={() => !sortMode && handleEditTable(table)}
+                    className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-xl transition-colors ${
+                      sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                      {!sortMode && (
+                        <div onClick={(e) => e.stopPropagation()} className="flex items-center">
+                          <Switch
+                            checked={table.isActive}
+                            onCheckedChange={() =>
+                              handleToggleActive(table.id, table.isActive, table.number)
+                            }
+                          />
+                        </div>
+                      )}
+                      <span className="text-sm font-medium">{t("table")} {table.number}</span>
+                    </div>
+
+                    {!sortMode && (
+                      <span className="text-sm text-muted-foreground ml-2">
+                        {table.capacity} {t("guests").slice(0, 3)}.
+                      </span>
+                    )}
+                  </div>
+
+                  {sortMode && (
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => handleMoveTable(table.id, "up")}
+                        disabled={index === 0}
+                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                      >
+                        <ArrowUp className="h-4 w-4" />
+                      </button>
+                      <button
+                        onClick={() => handleMoveTable(table.id, "down")}
+                        disabled={index === tables.length - 1}
+                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                      >
+                        <ArrowDown className="h-4 w-4" />
+                      </button>
                     </div>
                   )}
-                  <span className="text-sm font-medium">{t("table")} {table.number}</span>
                 </div>
+              ))}
+            </div>
 
-                {!sortMode && (
-                  <span className="text-sm text-muted-foreground ml-2">
-                    {table.capacity} {t("guests").slice(0, 3)}.
-                  </span>
-                )}
+          </>
+        )}
 
-                {sortMode && (
-                  <div className="flex items-center gap-1 ml-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8"
-                      onClick={() => handleMoveTable(table.id, "up")}
-                      disabled={index === 0}
-                    >
-                      <ArrowUp className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8"
-                      onClick={() => handleMoveTable(table.id, "down")}
-                      disabled={index === tables.length - 1}
-                    >
-                      <ArrowDown className="h-4 w-4" />
-                    </Button>
-                  </div>
-                )}
-              </div>
-            ))}
+        {/* Fixed add button */}
+        {tables.length > 0 && !sortMode && (
+          <div className="sticky bottom-0 flex justify-end pt-4 pb-2 pointer-events-none">
+            <Button onClick={handleAddTable} className="h-10 px-4 rounded-xl pointer-events-auto">
+              <Plus className="h-6 w-6" />
+              {t("addTable")}
+            </Button>
           </div>
         )}
       </div>
-
-      {tables.length > 0 && (
-        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
-          {sortMode ? (
-            <>
-              <Button onClick={handleCancelSortMode} variant="outline" disabled={savingSort}>
-                <X className="h-4 w-4 mr-2" />
-                {t("cancel")}
-              </Button>
-              <Button onClick={handleSaveSortOrder} disabled={savingSort}>
-                {savingSort ? (
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                ) : (
-                  <Save className="h-4 w-4 mr-2" />
-                )}
-                {t("save")}
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button onClick={handleStartSortMode} variant="outline">
-                <ArrowUpDown className="h-4 w-4 mr-2" />
-                {t("sort") || "Sort"}
-              </Button>
-              <Button onClick={handleAddTable}>
-                <Plus className="h-4 w-4 mr-2" />
-                {t("addTable")}
-              </Button>
-            </>
-          )}
-        </div>
-      )}
 
       {showForm && (
         <TableFormSheet

@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo, useRef } from "react";
 import Image from "next/image";
-import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Save, X, Trash2, Upload } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Save, X, Trash2, Upload, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
@@ -65,7 +65,9 @@ interface ItemWithTranslations {
 
 export function ItemsPage() {
   const { translations, returnToOnboarding } = useDashboard();
+  const router = useRouter();
   const t = translations.items;
+  const pageTitle = translations.pages.items;
 
   const [items, setItems] = useState<ItemWithTranslations[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -294,109 +296,136 @@ export function ItemsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6">
-        {items.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full">
-            <p className="text-muted-foreground text-center">
-              {categories.length === 0 ? t.noCategoriesHint : t.noItems}
-            </p>
-          </div>
-        ) : (
-          <div>
-            {groupedItems.map(([categoryId, group], groupIndex) => (
-              <div key={categoryId} className={groupIndex > 0 ? "mt-6" : ""}>
-                <h3 className="text-base font-semibold px-1 mb-3">{group.category.name}</h3>
-                <div className="space-y-2">
-                  {group.items
-                    .sort((a, b) => a.sortOrder - b.sortOrder)
-                    .map((item, index) => (
-                      <div
-                        key={item.id}
-                        onClick={() => !sortMode && handleEditItem(item)}
-                        className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl transition-colors ${
-                          sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
-                        }`}
-                      >
-                        <div className="flex items-center gap-3 flex-1 min-w-0">
-                          {!sortMode && (
-                            <div onClick={(e) => e.stopPropagation()} className="flex items-center">
-                              <Switch
-                                checked={item.isActive}
-                                onCheckedChange={() =>
-                                  handleToggleActive(item.id, item.isActive, item.name)
-                                }
-                              />
-                            </div>
-                          )}
-                          <span className="text-sm font-medium truncate">{item.name}</span>
-                        </div>
-
-                        {!sortMode && (
-                          <span className="text-sm text-muted-foreground ml-2">
-                            {formatPrice(item.price, currency)}
-                          </span>
-                        )}
-
-                        {sortMode && (
-                          <div className="flex items-center gap-1 ml-2">
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="h-8 w-8"
-                              onClick={() => handleMoveItem(item.id, "up")}
-                              disabled={index === 0}
-                            >
-                              <ArrowUp className="h-4 w-4" />
-                            </Button>
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="h-8 w-8"
-                              onClick={() => handleMoveItem(item.id, "down")}
-                              disabled={index === group.items.length - 1}
-                            >
-                              <ArrowDown className="h-4 w-4" />
-                            </Button>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
+      {/* Custom header */}
+      <header className="flex h-14 shrink-0 items-center px-6 my-4">
         {sortMode ? (
           <>
-            <Button onClick={handleCancelSortMode} variant="outline" disabled={savingSort}>
-              <X className="h-4 w-4 mr-2" />
-              {t.cancel}
-            </Button>
-            <Button onClick={handleSaveSortOrder} disabled={savingSort}>
-              {savingSort ? (
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-              ) : (
-                <Save className="h-4 w-4 mr-2" />
-              )}
-              {t.saveSort}
-            </Button>
+            <button
+              onClick={handleCancelSortMode}
+              disabled={savingSort}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+            <button
+              onClick={handleSaveSortOrder}
+              disabled={savingSort}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors text-primary"
+            >
+              {savingSort ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
+            </button>
           </>
         ) : (
           <>
-            {items.length > 0 && (
-              <Button onClick={handleStartSortMode} variant="outline">
-                <ArrowUpDown className="h-4 w-4 mr-2" />
-                {t.sort}
-              </Button>
+            <button
+              onClick={() => router.back()}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+            {items.length > 1 && (
+              <button
+                onClick={handleStartSortMode}
+                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+              >
+                <ArrowUpDown className="h-5 w-5" />
+              </button>
             )}
+          </>
+        )}
+      </header>
+
+      {/* Content */}
+      <div className="relative flex-1 overflow-auto px-6 pb-6">
+        {items.length === 0 ? (
+          <div className="flex flex-col items-center justify-center h-full gap-4">
+            <p className="text-muted-foreground text-center">
+              {categories.length === 0 ? t.noCategoriesHint : t.noItems}
+            </p>
             <Button onClick={handleAddItem} disabled={categories.length === 0}>
               <Plus className="h-4 w-4 mr-2" />
               {t.addItem}
             </Button>
+          </div>
+        ) : (
+          <>
+            <div className="pb-16">
+              {groupedItems.map(([categoryId, group], groupIndex) => (
+                <div key={categoryId} className={groupIndex > 0 ? "mt-6" : ""}>
+                  <h3 className="text-base font-semibold px-1 mb-3">{group.category.name}</h3>
+                  <div className="space-y-2">
+                    {group.items
+                      .sort((a, b) => a.sortOrder - b.sortOrder)
+                      .map((item, index) => (
+                        <div
+                          key={item.id}
+                          className="flex items-center gap-2"
+                        >
+                          <div
+                            onClick={() => !sortMode && handleEditItem(item)}
+                            className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-xl transition-colors ${
+                              sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
+                            }`}
+                          >
+                            <div className="flex items-center gap-3 flex-1 min-w-0">
+                              {!sortMode && (
+                                <div onClick={(e) => e.stopPropagation()} className="flex items-center">
+                                  <Switch
+                                    checked={item.isActive}
+                                    onCheckedChange={() =>
+                                      handleToggleActive(item.id, item.isActive, item.name)
+                                    }
+                                  />
+                                </div>
+                              )}
+                              <span className="text-sm font-medium truncate">{item.name}</span>
+                            </div>
+
+                            {!sortMode && (
+                              <span className="text-sm text-muted-foreground ml-2">
+                                {formatPrice(item.price, currency)}
+                              </span>
+                            )}
+                          </div>
+
+                          {sortMode && (
+                            <div className="flex items-center gap-2">
+                              <button
+                                onClick={() => handleMoveItem(item.id, "up")}
+                                disabled={index === 0}
+                                className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                              >
+                                <ArrowUp className="h-4 w-4" />
+                              </button>
+                              <button
+                                onClick={() => handleMoveItem(item.id, "down")}
+                                disabled={index === group.items.length - 1}
+                                className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                              >
+                                <ArrowDown className="h-4 w-4" />
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </>
+        )}
+
+        {/* Fixed add button */}
+        {items.length > 0 && !sortMode && (
+          <div className="sticky bottom-0 flex justify-end pt-4 pb-2 pointer-events-none">
+            <Button onClick={handleAddItem} disabled={categories.length === 0} className="h-10 px-4 rounded-xl pointer-events-auto">
+              <Plus className="h-6 w-6" />
+              {t.addItem}
+            </Button>
+          </div>
         )}
       </div>
 

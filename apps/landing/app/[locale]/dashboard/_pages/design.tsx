@@ -18,13 +18,14 @@ import {
 import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
+import { PageHeader } from "../_ui/page-header";
 import { Link, useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
 export function DesignPage() {
   const t = useTranslations("dashboard.design");
-  const { returnToOnboarding } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -188,7 +189,8 @@ export function DesignPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <form id="design-form" onSubmit={handleSubmit} className="flex-1 overflow-auto p-6 space-y-6 max-w-md">
+      <PageHeader title={translations.pages.design} />
+      <form id="design-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pb-6 space-y-6 max-w-md">
         <div className="space-y-2">
           <label className="text-sm font-medium">{t("background")}:</label>
           {source ? (

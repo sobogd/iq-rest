@@ -21,8 +21,10 @@ import {
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
 import { FormSwitch } from "../_ui/form-switch";
 import { useRouter } from "@/i18n/routing";
+import { useDashboard } from "../_context/dashboard-context";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -55,6 +57,7 @@ const POLLING_INTERVAL = 30000;
 export function ReservationsPage() {
   const t = useTranslations("reservations");
   const tSettings = useTranslations("reservationSettings");
+  const { translations } = useDashboard();
   const router = useRouter();
 
   const [reservations, setReservations] = useState<Reservation[]>([]);
@@ -338,7 +341,8 @@ export function ReservationsPage() {
   if (!hasActiveSubscription) {
     return (
       <div className="flex flex-col h-full">
-        <div className="flex-1 overflow-auto p-6">
+        <PageHeader title={translations.pages.reservations} />
+        <div className="flex-1 overflow-auto px-6 pb-6">
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">
               <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
@@ -366,15 +370,15 @@ export function ReservationsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6 space-y-4">
-        <Button
-          variant="outline"
-          className="w-full"
+      <PageHeader title={translations.pages.reservations}>
+        <button
           onClick={() => setSheetOpen(true)}
+          className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
         >
-          <Settings className="h-4 w-4 mr-2" />
-          {tSettings("title")}
-        </Button>
+          <Settings className="h-5 w-5" />
+        </button>
+      </PageHeader>
+      <div className="flex-1 overflow-auto px-6 pb-6 space-y-4">
 
         {activeReservations.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Save, X, Trash2 } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Save, X, Trash2, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
@@ -40,7 +40,9 @@ interface CategoryWithTranslations extends Category {
 
 export function CategoriesPage() {
   const { translations, returnToOnboarding } = useDashboard();
+  const router = useRouter();
   const t = translations.categories;
+  const pageTitle = translations.pages.categories;
 
   const [categories, setCategories] = useState<CategoryWithTranslations[]>([]);
   const [loading, setLoading] = useState(true);
@@ -197,92 +199,119 @@ export function CategoriesPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6">
-        {categories.length === 0 ? (
-          <div className="flex items-center justify-center h-full">
-            <p className="text-muted-foreground text-center">{t.noCategories}</p>
-          </div>
-        ) : (
-          <div className="space-y-2">
-            {categories.map((category, index) => (
-              <div
-                key={category.id}
-                onClick={() => !sortMode && handleEditCategory(category)}
-                className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl transition-colors ${
-                  sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
-                }`}
-              >
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  {!sortMode && (
-                    <div onClick={(e) => e.stopPropagation()} className="flex items-center">
-                      <Switch
-                        checked={category.isActive}
-                        onCheckedChange={() =>
-                          handleToggleActive(category.id, category.isActive, category.name)
-                        }
-                      />
-                    </div>
-                  )}
-                  <span className="text-sm font-medium truncate">{category.name}</span>
-                </div>
-
-                {sortMode && (
-                  <div className="flex items-center gap-1 ml-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8"
-                      onClick={() => handleMoveCategory(category.id, "up")}
-                      disabled={index === 0}
-                    >
-                      <ArrowUp className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8"
-                      onClick={() => handleMoveCategory(category.id, "down")}
-                      disabled={index === categories.length - 1}
-                    >
-                      <ArrowDown className="h-4 w-4" />
-                    </Button>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
+      {/* Custom header */}
+      <header className="flex h-14 shrink-0 items-center px-6 my-4">
         {sortMode ? (
           <>
-            <Button onClick={handleCancelSortMode} variant="outline" disabled={savingSort}>
-              <X className="h-4 w-4 mr-2" />
-              {t.cancel}
-            </Button>
-            <Button onClick={handleSaveSortOrder} disabled={savingSort}>
-              {savingSort ? (
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-              ) : (
-                <Save className="h-4 w-4 mr-2" />
-              )}
-              {t.saveSort}
-            </Button>
+            <button
+              onClick={handleCancelSortMode}
+              disabled={savingSort}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+            <button
+              onClick={handleSaveSortOrder}
+              disabled={savingSort}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors text-primary"
+            >
+              {savingSort ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
+            </button>
           </>
         ) : (
           <>
-            {categories.length > 0 && (
-              <Button onClick={handleStartSortMode} variant="outline">
-                <ArrowUpDown className="h-4 w-4 mr-2" />
-                {t.sort}
-              </Button>
+            <button
+              onClick={() => router.back()}
+              className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+            {categories.length > 1 && (
+              <button
+                onClick={handleStartSortMode}
+                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+              >
+                <ArrowUpDown className="h-5 w-5" />
+              </button>
             )}
+          </>
+        )}
+      </header>
+
+      {/* Content */}
+      <div className="relative flex-1 overflow-auto px-6 pb-6">
+        {categories.length === 0 ? (
+          <div className="flex flex-col items-center justify-center h-full gap-4">
+            <p className="text-muted-foreground text-center">{t.noCategories}</p>
             <Button onClick={handleAddCategory}>
               <Plus className="h-4 w-4 mr-2" />
               {t.addCategory}
             </Button>
+          </div>
+        ) : (
+          <>
+            <div className="space-y-2 pb-16">
+              {categories.map((category, index) => (
+                <div
+                  key={category.id}
+                  className={`flex items-center gap-2 ${sortMode ? "" : ""}`}
+                >
+                  <div
+                    onClick={() => !sortMode && handleEditCategory(category)}
+                    className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-xl transition-colors ${
+                      sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                      {!sortMode && (
+                        <div onClick={(e) => e.stopPropagation()} className="flex items-center">
+                          <Switch
+                            checked={category.isActive}
+                            onCheckedChange={() =>
+                              handleToggleActive(category.id, category.isActive, category.name)
+                            }
+                          />
+                        </div>
+                      )}
+                      <span className="text-sm font-medium truncate">{category.name}</span>
+                    </div>
+                  </div>
+
+                  {sortMode && (
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => handleMoveCategory(category.id, "up")}
+                        disabled={index === 0}
+                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                      >
+                        <ArrowUp className="h-4 w-4" />
+                      </button>
+                      <button
+                        onClick={() => handleMoveCategory(category.id, "down")}
+                        disabled={index === categories.length - 1}
+                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                      >
+                        <ArrowDown className="h-4 w-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
           </>
+        )}
+
+        {/* Fixed add button */}
+        {categories.length > 0 && !sortMode && (
+          <div className="sticky bottom-0 flex justify-end pt-4 pb-2 pointer-events-none">
+            <Button onClick={handleAddCategory} className="h-10 px-4 rounded-xl pointer-events-auto">
+              <Plus className="h-6 w-6" />
+              {t.addCategory}
+            </Button>
+          </div>
         )}
       </div>
 

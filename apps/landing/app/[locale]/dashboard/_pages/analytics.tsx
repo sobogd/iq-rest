@@ -3,6 +3,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
 import { Label } from "@/components/ui/label";
 import { Eye, Calendar, CalendarDays, Users } from "lucide-react";
 
@@ -149,7 +150,9 @@ export function AnalyticsPage() {
   };
 
   return (
-    <div className="h-full overflow-auto p-6 space-y-8">
+    <div className="flex flex-col h-full">
+      <PageHeader title={translations.pages.analytics} />
+      <div className="flex-1 overflow-auto px-6 pb-6 space-y-8">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat) => {
           const value = getStatValue(stat.key);
@@ -251,6 +254,7 @@ export function AnalyticsPage() {
               </div>
             ))}
         </div>
+      </div>
       </div>
     </div>
   );
