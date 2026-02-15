@@ -55,18 +55,11 @@ jobs:
             S3_NAME=${{ secrets.S3_NAME }}
             S3_REGION=${{ secrets.S3_REGION }}
             S3_TOKEN=${{ secrets.S3_TOKEN }}
-            MAPS_API_KEY=${{ secrets.MAPS_API_KEY }}
             NEXT_PUBLIC_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
             STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}
             STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}
             NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
             OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
-            ICLOUD_SMTP_HOST=${{ secrets.ICLOUD_SMTP_HOST }}
-            ICLOUD_SMTP_PORT=${{ secrets.ICLOUD_SMTP_PORT }}
-            ICLOUD_SMTP_USER=${{ secrets.ICLOUD_SMTP_USER }}
-            ICLOUD_SMTP_PASS=${{ secrets.ICLOUD_SMTP_PASS }}
-            ICLOUD_FROM_EMAIL=${{ secrets.ICLOUD_FROM_EMAIL }}
-            ICLOUD_TO_EMAIL=${{ secrets.ICLOUD_TO_EMAIL }}
             EOF
             
             cd /home/deploy/apps/iq-rest
