@@ -72,7 +72,56 @@ export async function POST(request: NextRequest) {
     });
 
     if (user) {
-      // Update existing user with new OTP
+      // Check if user has completed onboarding
+      const userCompany = await prisma.userCompany.findFirst({
+        where: { userId: user.id },
+        include: { company: { select: { onboardingStep: true } } },
+      });
+
+      const onboardingStep = userCompany?.company.onboardingStep ?? 0;
+
+      if (onboardingStep < 2) {
+        // Mid-onboarding user: auto-login without OTP
+        const sessionToken = generateSessionToken();
+        const cookieStore = await cookies();
+
+        cookieStore.set("session", sessionToken, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "lax",
+          maxAge: 60 * 60 * 24 * 7,
+          path: "/",
+        });
+
+        cookieStore.set("user_email", normalizedEmail, {
+          httpOnly: false,
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "lax",
+          maxAge: 60 * 60 * 24 * 7,
+          path: "/",
+        });
+
+        cookieStore.set("user_id", user.id, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "lax",
+          maxAge: 60 * 60 * 24 * 7,
+          path: "/",
+        });
+
+        return NextResponse.json(
+          {
+            autoLogin: true,
+            isNewUser: false,
+            onboardingStep,
+            userId: user.id,
+            email: normalizedEmail,
+          },
+          { status: 200 }
+        );
+      }
+
+      // Fully onboarded user: send OTP
       await prisma.user.update({
         where: { email: normalizedEmail },
         data: {
@@ -140,6 +189,7 @@ export async function POST(request: NextRequest) {
         {
           autoLogin: true,
           isNewUser: true,
+          onboardingStep: 0,
           userId: user.id,
           email: normalizedEmail,
         },

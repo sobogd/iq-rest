@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Tauler de control",
-      "onboarding": "Integració",
       "qrMenu": "Menú QR",
       "analytics": "Analítica",
       "categories": "Categories",
@@ -1219,7 +1218,7 @@
       "tables": "Taules",
       "billing": "Facturació",
       "support": "Suport",
-      "menu": "Menu"
+      "menu": "Menú"
     },
     "sidebar": {
       "qrMenu": "Menú QR",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Iniciar sessió",
       "subtitle": "Lloc web modern amb menú QR, reserves i traduccions d'IA",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "el-teu@email.cat",
       "continue": "Continuar",
       "verifyTitle": "Comproveu el vostre correu electrònic",
       "verifySubtitle": "Hem enviat un codi a {email}",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Encara no hi ha categories. Creeu la vostra primera categoria per començar.",
-      "addCategory": "Afegir",
+      "addCategory": "Afegir categoria",
       "editCategory": "Editar categoria",
       "name": "Nom",
       "namePlaceholder": "Introduïu el nom de la categoria",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Encara no hi ha articles. Crea el teu primer article per començar.",
       "noCategoriesHint": "Afegeix una categoria primer per crear articles.",
-      "addItem": "Afegir",
+      "addItem": "Afegir article",
       "editItem": "Editar article",
       "name": "Nom",
       "namePlaceholder": "Introdueix el nom de l'article",
@@ -1449,7 +1448,7 @@
       "description": "Subtítol",
       "descriptionPlaceholder": "Breu descripció (opcional)",
       "descriptionHint": "Mostrat sota el títol a la pàgina d'inici",
-      "slug": "URL Slug",
+      "slug": "Enllaç URL",
       "slugPlaceholder": "el-meu-restaurant",
       "slugHint": "El teu lloc web estarà disponible a: iq-rest.com/{slug}",
       "currency": "Moneda",
@@ -1466,73 +1465,13 @@
       "close": "Tancar",
       "view": "Veure"
     },
-    "onboarding": {
-      "title": "Benvingut a IQ Rest!",
-      "subtitle": "Completa aquests passos per llançar el teu lloc web de restaurant",
-      "requiredSteps": "Passos obligatoris",
-      "optionalSteps": "Passos opcionals",
-      "viewMenu": "Veure el teu menú",
-      "steps": {
-        "info": {
-          "name": "Informació del Restaurant",
-          "description": "Afegeix el nom del teu restaurant i tria una adreça web"
-        },
-        "categories": {
-          "name": "Crear Categories",
-          "description": "Organitza el teu menú amb categories com Entrants, Plats Principals, etc."
-        },
-        "items": {
-          "name": "Afegir Plats",
-          "description": "Afegeix plats al teu menú amb preus i descripcions"
-        },
-        "contacts": {
-          "name": "Afegir Contactes",
-          "description": "Afegeix telèfon, WhatsApp, Instagram i ubicació"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Completat",
-      "notCompleted": "No completat",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Afegir article",
+      "addCategory": "Afegir categoria"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Configuració de reserves",
     "subscriptionRequired": "Per fer que les reserves estiguin disponibles per als teus clients del restaurant, necessites subscriure't al servei.",
     "subscribe": "Subscriure's",
     "reservationsEnabled": "Habilitar Reserves",

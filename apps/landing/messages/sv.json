@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Instrumentpanel",
-      "onboarding": "Introduktion",
       "qrMenu": "QR-meny",
       "analytics": "Analys",
       "categories": "Kategorier",
@@ -1219,7 +1218,7 @@
       "tables": "Bord",
       "billing": "Fakturering",
       "support": "Support",
-      "menu": "Menu"
+      "menu": "Meny"
     },
     "sidebar": {
       "qrMenu": "QR-meny",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Inga kategorier ännu. Skapa din första kategori för att komma igång.",
-      "addCategory": "Lägg till",
+      "addCategory": "Lägg till kategori",
       "editCategory": "Redigera kategori",
       "name": "Namn",
       "namePlaceholder": "Ange kategori namn",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Inga objekt ännu. Skapa ditt första objekt för att komma igång.",
       "noCategoriesHint": "Lägg till en kategori först för att skapa objekt.",
-      "addItem": "Lägg till",
+      "addItem": "Lägg till artikel",
       "editItem": "Redigera objekt",
       "name": "Namn",
       "namePlaceholder": "Ange objektnamn",
@@ -1449,7 +1448,7 @@
       "description": "Undertitel",
       "descriptionPlaceholder": "Kort beskrivning (valfritt)",
       "descriptionHint": "Visas under titeln på hemsidan",
-      "slug": "URL Slug",
+      "slug": "URL-sökväg",
       "slugPlaceholder": "min-restaurang",
       "slugHint": "Din webbplats kommer att vara tillgänglig på: iq-rest.com/{slug}",
       "currency": "Valuta",
@@ -1466,73 +1465,13 @@
       "close": "Stäng",
       "view": "Visa"
     },
-    "onboarding": {
-      "title": "Välkommen till IQ Rest!",
-      "subtitle": "Slutför dessa steg för att lansera din restaurangwebbplats",
-      "requiredSteps": "Obligatoriska Steg",
-      "optionalSteps": "Valfria Steg",
-      "viewMenu": "Visa Din Meny",
-      "steps": {
-        "info": {
-          "name": "Restauranginformation",
-          "description": "Lägg till ditt restaurangnamn och välj en webbadress"
-        },
-        "categories": {
-          "name": "Skapa kategorier",
-          "description": "Organisera din meny med kategorier som Förrätter, Huvudrätter osv."
-        },
-        "items": {
-          "name": "Lägg till menyobjekt",
-          "description": "Lägg till rätter i din meny med priser och beskrivningar"
-        },
-        "contacts": {
-          "name": "Lägg till kontakter",
-          "description": "Lägg till telefon, WhatsApp, Instagram och plats"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Slutförd",
-      "notCompleted": "Ej slutförd",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Lägg till artikel",
+      "addCategory": "Lägg till kategori"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Bokningsinställningar",
     "subscriptionRequired": "För att göra bokningar tillgängliga för dina restauranggäster måste du prenumerera på tjänsten.",
     "subscribe": "Prenumerera",
     "reservationsEnabled": "Aktivera Bokningar",

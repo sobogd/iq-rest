@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Panel",
-      "onboarding": "Inicio",
       "qrMenu": "Menú QR",
       "analytics": "Analíticas",
       "categories": "Categorías",
@@ -1219,7 +1218,7 @@
       "tables": "Mesas",
       "billing": "Facturación",
       "support": "Soporte",
-      "menu": "Menu"
+      "menu": "Menú"
     },
     "sidebar": {
       "qrMenu": "Menú QR",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "No hay categorías aún. Crea tu primera categoría para comenzar.",
-      "addCategory": "Agregar",
+      "addCategory": "Añadir categoría",
       "editCategory": "Editar Categoría",
       "name": "Nombre",
       "namePlaceholder": "Ingresa el nombre de la categoría",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "No hay artículos aún. Crea tu primer artículo para comenzar.",
       "noCategoriesHint": "Añade una categoría primero para crear artículos.",
-      "addItem": "Agregar",
+      "addItem": "Añadir artículo",
       "editItem": "Editar Artículo",
       "name": "Nombre",
       "namePlaceholder": "Ingresa el nombre del artículo",
@@ -1449,7 +1448,7 @@
       "description": "Subtítulo",
       "descriptionPlaceholder": "Descripción breve (opcional)",
       "descriptionHint": "Se muestra debajo del título en la página principal",
-      "slug": "URL Slug",
+      "slug": "URL amigable",
       "slugPlaceholder": "mi-restaurante",
       "slugHint": "Tu sitio web estará disponible en: iq-rest.com/{slug}",
       "currency": "Moneda",
@@ -1466,73 +1465,13 @@
       "close": "Cerrar",
       "view": "Ver"
     },
-    "onboarding": {
-      "title": "¡Bienvenido a IQ Rest!",
-      "subtitle": "Completa estos pasos para lanzar el sitio web de tu restaurante",
-      "requiredSteps": "Pasos Requeridos",
-      "optionalSteps": "Pasos Opcionales",
-      "viewMenu": "Ver Tu Menú",
-      "steps": {
-        "info": {
-          "name": "Info del Restaurante",
-          "description": "Añade el nombre de tu restaurante y elige una dirección web"
-        },
-        "categories": {
-          "name": "Crear Categorías",
-          "description": "Organiza tu menú con categorías"
-        },
-        "items": {
-          "name": "Añadir Platos",
-          "description": "Añade platos a tu menú con precios y descripciones"
-        },
-        "contacts": {
-          "name": "Añadir Contactos",
-          "description": "Añade teléfono, WhatsApp, Instagram y ubicación"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Completado",
-      "notCompleted": "No completado",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Añadir artículo",
+      "addCategory": "Añadir categoría"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Configuración de reservas",
     "subscriptionRequired": "Para que las reservaciones estén disponibles para los huéspedes de tu restaurante, debes suscribirte al servicio.",
     "subscribe": "Suscribirse",
     "reservationsEnabled": "Habilitar Reservaciones",

@@ -1238,7 +1238,6 @@
   "dashboard": {
     "pages": {
       "home": "داشبورد",
-      "onboarding": "راه‌اندازی",
       "qrMenu": "منوی QR",
       "analytics": "آنالیز",
       "categories": "دسته‌بندی‌ها",
@@ -1252,7 +1251,7 @@
       "tables": "میزها",
       "billing": "صورتحساب",
       "support": "پشتیبانی",
-      "menu": "Menu"
+      "menu": "منو"
     },
     "sidebar": {
       "qrMenu": "منوی QR",
@@ -1272,7 +1271,7 @@
     "auth": {
       "title": "ورود",
       "subtitle": "وبسایت مدرن با منوی QR، رزرو و ترجمه‌های هوش مصنوعی",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "ایمیل@شما.com",
       "continue": "ادامه",
       "verifyTitle": "ایمیل خود را بررسی کنید",
       "verifySubtitle": "کدی به {email} ارسال کردیم",
@@ -1318,7 +1317,7 @@
     },
     "categories": {
       "noCategories": "هنوز دسته‌بندی نیست. اولین دسته‌بندی خود را ایجاد کنید.",
-      "addCategory": "افزودن",
+      "addCategory": "افزودن دسته‌بندی",
       "editCategory": "ویرایش دسته‌بندی",
       "name": "نام",
       "namePlaceholder": "نام دسته‌بندی را وارد کنید",
@@ -1350,7 +1349,7 @@
     "items": {
       "noItems": "هنوز آیتمی نیست. اولین آیتم خود را ایجاد کنید.",
       "noCategoriesHint": "ابتدا یک دسته‌بندی اضافه کنید تا آیتم‌ها را ایجاد کنید.",
-      "addItem": "افزودن",
+      "addItem": "افزودن آیتم",
       "editItem": "ویرایش آیتم",
       "name": "نام",
       "namePlaceholder": "نام آیتم را وارد کنید",
@@ -1499,73 +1498,13 @@
       "close": "بستن",
       "view": "مشاهده"
     },
-    "onboarding": {
-      "title": "به IQ Rest خوش آمدید!",
-      "subtitle": "این مراحل را تکمیل کنید تا وبسایت رستوران خود را راه‌اندازی کنید",
-      "requiredSteps": "مراحل الزامی",
-      "optionalSteps": "مراحل اختیاری",
-      "viewMenu": "مشاهده منوی شما",
-      "steps": {
-        "info": {
-          "name": "اطلاعات رستوران",
-          "description": "نام رستوران خود را اضافه کنید و آدرس وبسایت را انتخاب کنید"
-        },
-        "categories": {
-          "name": "ایجاد دسته‌بندی‌ها",
-          "description": "منوی خود را با دسته‌بندی‌هایی مثل پیش‌غذا، غذای اصلی و غیره سازماندهی کنید"
-        },
-        "items": {
-          "name": "افزودن آیتم‌های منو",
-          "description": "غذاها را با قیمت و توضیحات به منوی خود اضافه کنید"
-        },
-        "contacts": {
-          "name": "افزودن اطلاعات تماس",
-          "description": "تلفن، واتساپ، اینستاگرام و موقعیت مکانی را اضافه کنید"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "تکمیل شده",
-      "notCompleted": "تکمیل نشده",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "افزودن آیتم",
+      "addCategory": "افزودن دسته‌بندی"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "تنظیمات رزرو",
     "subscriptionRequired": "برای در دسترس قرار دادن رزرو برای مهمانان رستوران خود، باید در سرویس مشترک شوید.",
     "subscribe": "اشتراک",
     "reservationsEnabled": "فعال کردن رزروها",

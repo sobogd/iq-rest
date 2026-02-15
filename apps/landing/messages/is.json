@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Stjórnborð",
-      "onboarding": "Upphaf",
       "qrMenu": "QR Matseðill",
       "analytics": "Greining",
       "categories": "Flokkar",
@@ -1219,7 +1218,7 @@
       "tables": "Borð",
       "billing": "Reikningur",
       "support": "Stuðningur",
-      "menu": "Menu"
+      "menu": "Matseðill"
     },
     "sidebar": {
       "qrMenu": "QR Matseðill",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Skrá inn",
       "subtitle": "Nútímaleg vefsíða með QR matseðli, bókunum og AI þýðingum",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "þitt@email.is",
       "continue": "Halda áfram",
       "verifyTitle": "Athugaðu tölvupóstinn þinn",
       "verifySubtitle": "Við sendum kóða á {email}",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Engar flokka enn. Búðu til þinn fyrsta flokk til að byrja.",
-      "addCategory": "Bæta við",
+      "addCategory": "Bæta við flokki",
       "editCategory": "Breyta flokki",
       "name": "Nafn",
       "namePlaceholder": "Sláðu inn nafn flokks",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Engir hlutir enn. Búðu til þinn fyrsta hlut til að byrja.",
       "noCategoriesHint": "Bættu við flokki fyrst til að búa til hluti.",
-      "addItem": "Bæta við",
+      "addItem": "Bæta við vöru",
       "editItem": "Breyta hlut",
       "name": "Nafn",
       "namePlaceholder": "Sláðu inn nafn hlut",
@@ -1449,7 +1448,7 @@
       "description": "Undirtitill",
       "descriptionPlaceholder": "Stutt lýsing (valfrjálst)",
       "descriptionHint": "Sýnt undir titlinum á heimasíðunni",
-      "slug": "URL Slug",
+      "slug": "URL-slóð",
       "slugPlaceholder": "minn-veitingastaður",
       "slugHint": "Vefsíðan þín verður aðgengileg á: iq-rest.com/{slug}",
       "currency": "Gjaldmiðill",
@@ -1466,73 +1465,13 @@
       "close": "Loka",
       "view": "Skoða"
     },
-    "onboarding": {
-      "title": "Velkomin/n til IQ Rest!",
-      "subtitle": "Fylltu út þessar skref til að hefja vefsíðu veitingastaðarins þíns",
-      "requiredSteps": "Nauðsynleg skref",
-      "optionalSteps": "Valfrjáls skref",
-      "viewMenu": "Skoða Matseðilinn þinn",
-      "steps": {
-        "info": {
-          "name": "Upplýsingar um veitingastað",
-          "description": "Bættu við nafni veitingastaðarins og veldu vefslóð"
-        },
-        "categories": {
-          "name": "Búa til flokka",
-          "description": "Skipuleggðu matseðilinn þinn með flokkum eins og Forréttir, Aðalréttir o.s.frv."
-        },
-        "items": {
-          "name": "Bæta við réttum",
-          "description": "Bættu réttum við matseðilinn með verðum og lýsingum"
-        },
-        "contacts": {
-          "name": "Bæta við tengiliðum",
-          "description": "Bættu við síma, WhatsApp, Instagram og staðsetningu"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Lokið",
-      "notCompleted": "Ekki lokið",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Bæta við vöru",
+      "addCategory": "Bæta við flokki"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Stillingar bókana",
     "subscriptionRequired": "Til að gera bókanir aðgengilegar fyrir gesti veitingastaðarins þíns þarftu að skrá þig í þjónustuna.",
     "subscribe": "Skrá sig",
     "reservationsEnabled": "Virkja bókanir",

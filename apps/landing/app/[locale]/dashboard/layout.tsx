@@ -1,5 +1,7 @@
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import { getTranslations } from "next-intl/server";
-
+import { prisma } from "@/lib/prisma";
 import { DashboardShell } from "./_components/shell";
 import type { DashboardTranslations } from "./_context/dashboard-context";
 
@@ -8,12 +10,50 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cookieStore = await cookies();
+  const session = cookieStore.get("session");
+  const userEmail = cookieStore.get("user_email");
+  const isAuthenticated = !!(session?.value && userEmail?.value);
+
+  if (!isAuthenticated) {
+    redirect("/login");
+  }
+
+  // Check onboarding state
+  const user = await prisma.user.findUnique({
+    where: { email: userEmail!.value },
+    include: {
+      companies: {
+        include: { company: true },
+        take: 1,
+      },
+    },
+  });
+
+  const companyId = user?.companies[0]?.company.id;
+  if (companyId) {
+    const [restaurant, itemsCount] = await Promise.all([
+      prisma.restaurant.findFirst({
+        where: { companyId },
+        select: { title: true },
+      }),
+      prisma.item.count({ where: { companyId } }),
+    ]);
+
+    const hasRestaurant = Boolean(restaurant?.title && restaurant.title.trim().length > 0);
+    const hasMenu = itemsCount > 0;
+
+    if (!hasRestaurant) redirect("/onboarding/name");
+    if (!hasMenu) redirect("/onboarding/type");
+  } else {
+    redirect("/onboarding/name");
+  }
+
   const t = await getTranslations("dashboard");
 
   const translations: DashboardTranslations = {
     pages: {
       home: t("pages.home"),
-      onboarding: t("pages.onboarding"),
       qrMenu: t("pages.qrMenu"),
       analytics: t("pages.analytics"),
       menu: t("pages.menu"),

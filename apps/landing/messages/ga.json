@@ -1205,8 +1205,7 @@
   "dashboard": {
     "pages": {
       "home": "Painéal",
-      "onboarding": "Tús",
-      "qrMenu": "QR Menu",
+      "qrMenu": "Biachlár QR",
       "analytics": "Anailís",
       "categories": "Catagóirí",
       "items": "Míreanna",
@@ -1219,11 +1218,11 @@
       "tables": "Táblaí",
       "billing": "Billeáil",
       "support": "Tacaíocht",
-      "menu": "Menu"
+      "menu": "Biachlár"
     },
     "sidebar": {
-      "qrMenu": "QR Menu",
-      "menu": "Menu",
+      "qrMenu": "Biachlár QR",
+      "menu": "Biachlár",
       "settings": "Socruithe",
       "reservations": "Conradh",
       "account": "Cuntas",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Níl aon chatagóirí ann fós. Cruthaigh do chatagóir chéad chun tús a chur.",
-      "addCategory": "Cuir leis",
+      "addCategory": "Cuir catagóir leis",
       "editCategory": "Cuir in eagar Catagóir",
       "name": "Ainm",
       "namePlaceholder": "Cuir ainm na catagóire isteach",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Níl aon earraí ann fós. Cruthaigh do chéad earra chun tús a chur.",
       "noCategoriesHint": "Cuir catagóir leis ar dtús chun earraí a chruthú.",
-      "addItem": "Cuir leis",
+      "addItem": "Cuir mír leis",
       "editItem": "Cuir in eagar an tEarrach",
       "name": "Ainm",
       "namePlaceholder": "Cuir isteach ainm an earra",
@@ -1449,7 +1448,7 @@
       "description": "Fo-theideal",
       "descriptionPlaceholder": "Cur síos ginearálta (rogha)",
       "descriptionHint": "Taispeántar thíos an teideal ar an leathanach baile",
-      "slug": "URL Slug",
+      "slug": "Sluga URL",
       "slugPlaceholder": "mo-bialann",
       "slugHint": "Beidh do shuíomh gréasáin ar fáil ag: iq-rest.com/{slug}",
       "currency": "Airgeadra",
@@ -1466,73 +1465,13 @@
       "close": "Dún",
       "view": "Taispeáin"
     },
-    "onboarding": {
-      "title": "Fáilte chuig IQ Rest!",
-      "subtitle": "Comhlánaigh na céimeanna seo chun do shuíomh gréasáin bialann a sheoladh",
-      "requiredSteps": "Céimeanna Riachtanacha",
-      "optionalSteps": "Céimeanna Rogha",
-      "viewMenu": "Taispeáin Do Mheán",
-      "steps": {
-        "info": {
-          "name": "Eolas Bialainne",
-          "description": "Cuir ainm do bhialainne agus roghnaigh seoladh suímh gréasáin"
-        },
-        "categories": {
-          "name": "Cruthaigh Catagóirí",
-          "description": "Eagraigh do bhiachlár le catagóirí mar Tosaitheoirí, Príomhchúrsaí, srl."
-        },
-        "items": {
-          "name": "Cuir Míreanna Biachlár",
-          "description": "Cuir béilí le do bhiachlár le praghsanna agus tuairiscí"
-        },
-        "contacts": {
-          "name": "Cuir Teagmhálaithe",
-          "description": "Cuir fón, WhatsApp, Instagram, agus suíomh"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Críochnaithe",
-      "notCompleted": "Níl críochnaithe",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Cuir mír leis",
+      "addCategory": "Cuir catagóir leis"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Socruithe áirithinte",
     "subscriptionRequired": "Chun na hiontrálacha a dhéanamh ar fáil do do chuid aíonna, ní mór duit clárú don tseirbhís.",
     "subscribe": "Cláraigh",
     "reservationsEnabled": "Cuir Iontróil ar Siúl",

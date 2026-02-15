@@ -1,10 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
-import { useRouter } from "@/i18n/routing";
+import { createContext, useContext, ReactNode } from "react";
 
 export type PageKey =
-  | "onboarding"
   | "qrMenu"
   | "home"
   | "analytics"
@@ -22,7 +20,6 @@ export type PageKey =
   | "adminAnalytics";
 
 export const PAGE_PATHS: Record<PageKey, string> = {
-  onboarding: "/dashboard/onboarding",
   home: "/dashboard/home",
   menu: "/dashboard/menu",
   categories: "/dashboard/categories",
@@ -41,7 +38,6 @@ export const PAGE_PATHS: Record<PageKey, string> = {
 };
 
 const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
-  "onboarding": "onboarding",
   "home": "home",
   "menu": "menu",
   "categories": "categories",
@@ -62,9 +58,9 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
 export function getPageKeyFromPathname(pathname: string): PageKey {
   const dashboardPrefix = "/dashboard/";
   const idx = pathname.indexOf(dashboardPrefix);
-  if (idx === -1) return "onboarding";
+  if (idx === -1) return "home";
   const subPath = pathname.slice(idx + dashboardPrefix.length);
-  return PATH_TO_PAGE_MAP[subPath] || "onboarding";
+  return PATH_TO_PAGE_MAP[subPath] || "home";
 }
 
 export interface AnalyticsTranslations {
@@ -203,7 +199,7 @@ export interface DashboardTranslations {
 }
 
 const validPages: PageKey[] = [
-  "onboarding", "qrMenu", "home", "analytics", "menu", "categories", "items", "settings", "design",
+  "qrMenu", "home", "analytics", "menu", "categories", "items", "settings", "design",
   "contacts", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
 ];
 
@@ -213,9 +209,6 @@ export function isValidPageKey(value: string): value is PageKey {
 
 interface DashboardContextType {
   translations: DashboardTranslations;
-  onboardingCompleted: boolean;
-  setOnboardingCompleted: (v: boolean) => void;
-  returnToOnboarding: () => boolean;
 }
 
 const DashboardContext = createContext<DashboardContextType | null>(null);
@@ -227,23 +220,8 @@ export function DashboardProvider({
   children: ReactNode;
   translations: DashboardTranslations;
 }) {
-  const router = useRouter();
-  const [onboardingCompleted, setOnboardingCompleted] = useState(false);
-
-  const returnToOnboarding = useCallback(() => {
-    const returnPath = sessionStorage.getItem("returnToOnboarding");
-    if (returnPath) {
-      sessionStorage.removeItem("returnToOnboarding");
-      // Support both old "true" flag and new path-based values
-      const target = returnPath === "true" ? "/dashboard/onboarding" : returnPath;
-      router.push(target);
-      return true;
-    }
-    return false;
-  }, [router]);
-
   return (
-    <DashboardContext.Provider value={{ translations, onboardingCompleted, setOnboardingCompleted, returnToOnboarding }}>
+    <DashboardContext.Provider value={{ translations }}>
       {children}
     </DashboardContext.Provider>
   );

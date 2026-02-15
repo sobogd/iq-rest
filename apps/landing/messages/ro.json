@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Tabloul de bord",
-      "onboarding": "Introducere",
       "qrMenu": "Meniu QR",
       "analytics": "Analitice",
       "categories": "Categorii",
@@ -1219,7 +1218,7 @@
       "tables": "Mese",
       "billing": "Facturare",
       "support": "Asistență",
-      "menu": "Menu"
+      "menu": "Meniu"
     },
     "sidebar": {
       "qrMenu": "Meniu QR",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Conectare",
       "subtitle": "Website modern cu meniu QR, rezervări și traduceri AI",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "al-tau@email.ro",
       "continue": "Continuă",
       "verifyTitle": "Verifică-ți emailul",
       "verifySubtitle": "Am trimis un cod la {email}",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Încă nu sunt categorii. Creează prima ta categorie pentru a începe.",
-      "addCategory": "Adaugă",
+      "addCategory": "Adaugă categorie",
       "editCategory": "Editează categoria",
       "name": "Nume",
       "namePlaceholder": "Introdu numele categoriei",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Nu există încă articole. Creați primul articol pentru a începe.",
       "noCategoriesHint": "Adăugați mai întâi o categorie pentru a crea articole.",
-      "addItem": "Adaugă",
+      "addItem": "Adaugă articol",
       "editItem": "Editează articolul",
       "name": "Nume",
       "namePlaceholder": "Introduceți numele articolului",
@@ -1449,7 +1448,7 @@
       "description": "Subtitlu",
       "descriptionPlaceholder": "Descriere scurtă (opțional)",
       "descriptionHint": "Afișat sub titlu pe pagina principală",
-      "slug": "URL Slug",
+      "slug": "Adresă URL",
       "slugPlaceholder": "restaurantul-meu",
       "slugHint": "Site-ul dvs. va fi disponibil la: iq-rest.com/{slug}",
       "currency": "Monedă",
@@ -1466,73 +1465,13 @@
       "close": "Închide",
       "view": "Vizualizează"
     },
-    "onboarding": {
-      "title": "Bine ați venit la IQ Rest!",
-      "subtitle": "Finalizați acești pași pentru a lansa site-ul restaurantului dvs.",
-      "requiredSteps": "Pași necesari",
-      "optionalSteps": "Pași opționali",
-      "viewMenu": "Vizualizați Meniul Dvs.",
-      "steps": {
-        "info": {
-          "name": "Informații Restaurant",
-          "description": "Adăugați numele restaurantului și alegeți o adresă web"
-        },
-        "categories": {
-          "name": "Creați Categorii",
-          "description": "Organizați meniul cu categorii precum Aperitive, Feluri Principale, etc."
-        },
-        "items": {
-          "name": "Adăugați Produse",
-          "description": "Adăugați preparate în meniu cu prețuri și descrieri"
-        },
-        "contacts": {
-          "name": "Adăugați Contacte",
-          "description": "Adăugați telefon, WhatsApp, Instagram și locație"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Finalizat",
-      "notCompleted": "Nefinalizat",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Adaugă articol",
+      "addCategory": "Adaugă categorie"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Setări rezervări",
     "subscriptionRequired": "Pentru a face rezervările disponibile pentru oaspeții restaurantului dumneavoastră, trebuie să vă abonați la serviciu.",
     "subscribe": "Abonați-vă",
     "reservationsEnabled": "Activați Rezervările",

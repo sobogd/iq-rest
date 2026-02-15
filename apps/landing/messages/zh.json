@@ -1238,7 +1238,6 @@
   "dashboard": {
     "pages": {
       "home": "仪表板",
-      "onboarding": "入门",
       "qrMenu": "QR菜单",
       "analytics": "分析",
       "categories": "类别",
@@ -1252,7 +1251,7 @@
       "tables": "餐桌",
       "billing": "账单",
       "support": "支持",
-      "menu": "Menu"
+      "menu": "菜单"
     },
     "sidebar": {
       "qrMenu": "QR菜单",
@@ -1272,7 +1271,7 @@
     "auth": {
       "title": "登录",
       "subtitle": "包含QR菜单、预订和AI翻译的现代网站",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "你的@email.com",
       "continue": "继续",
       "verifyTitle": "检查您的电子邮件",
       "verifySubtitle": "我们已向{email}发送了代码",
@@ -1318,7 +1317,7 @@
     },
     "categories": {
       "noCategories": "还没有类别。创建您的第一个类别开始。",
-      "addCategory": "添加",
+      "addCategory": "添加分类",
       "editCategory": "编辑类别",
       "name": "名称",
       "namePlaceholder": "输入类别名称",
@@ -1350,7 +1349,7 @@
     "items": {
       "noItems": "还没有项目。创建您的第一个项目开始。",
       "noCategoriesHint": "请先添加一个类别以创建项目。",
-      "addItem": "添加",
+      "addItem": "添加商品",
       "editItem": "编辑项目",
       "name": "名称",
       "namePlaceholder": "输入项目名称",
@@ -1499,73 +1498,13 @@
       "close": "关闭",
       "view": "查看"
     },
-    "onboarding": {
-      "title": "欢迎使用IQ Rest！",
-      "subtitle": "完成这些步骤以启动您的餐厅网站",
-      "requiredSteps": "必要步骤",
-      "optionalSteps": "可选步骤",
-      "viewMenu": "查看您的菜单",
-      "steps": {
-        "info": {
-          "name": "餐厅信息",
-          "description": "添加您的餐厅名称并选择网站地址"
-        },
-        "categories": {
-          "name": "创建分类",
-          "description": "使用分类整理菜单，如开胃菜、主菜等"
-        },
-        "items": {
-          "name": "添加菜品",
-          "description": "添加菜品到菜单，包含价格和描述"
-        },
-        "contacts": {
-          "name": "添加联系方式",
-          "description": "添加电话、WhatsApp、Instagram和位置"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "已完成",
-      "notCompleted": "未完成",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "添加商品",
+      "addCategory": "添加分类"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "预订设置",
     "subscriptionRequired": "要向餐厅客人提供预订服务，您需要订阅服务。",
     "subscribe": "订阅",
     "reservationsEnabled": "启用预订",

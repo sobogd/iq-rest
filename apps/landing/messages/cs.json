@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Hlavní panel",
-      "onboarding": "Úvodní školení",
       "qrMenu": "QR Menu",
       "analytics": "Analytika",
       "categories": "Kategorie",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Zatím žádné kategorie. Vytvořte svou první kategorii, abyste mohli začít.",
-      "addCategory": "Přidat",
+      "addCategory": "Přidat kategorii",
       "editCategory": "Upravit kategorii",
       "name": "Název",
       "namePlaceholder": "Zadejte název kategorie",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Zatím žádné položky. Vytvořte svou první položku, abyste mohli začít.",
       "noCategoriesHint": "Nejprve přidejte kategorii pro vytvoření položek.",
-      "addItem": "Přidat",
+      "addItem": "Přidat položku",
       "editItem": "Upravit položku",
       "name": "Název",
       "namePlaceholder": "Zadejte název položky",
@@ -1449,7 +1448,7 @@
       "description": "Podtitul",
       "descriptionPlaceholder": "Krátký popis (volitelné)",
       "descriptionHint": "Zobrazeno pod názvem na domovské stránce",
-      "slug": "URL Slug",
+      "slug": "URL adresa",
       "slugPlaceholder": "moje-restaurace",
       "slugHint": "Vaše webová stránka bude dostupná na: iq-rest.com/{slug}",
       "currency": "Měna",
@@ -1466,73 +1465,13 @@
       "close": "Zavřít",
       "view": "Zobrazit"
     },
-    "onboarding": {
-      "title": "Vítejte v IQ Rest!",
-      "subtitle": "Dokončete tyto kroky k spuštění webové stránky vaší restaurace",
-      "requiredSteps": "Povinné kroky",
-      "optionalSteps": "Volitelné kroky",
-      "viewMenu": "Zobrazit vaše menu",
-      "steps": {
-        "info": {
-          "name": "Informace o restauraci",
-          "description": "Přidejte název restaurace a zvolte webovou adresu"
-        },
-        "categories": {
-          "name": "Vytvořit kategorie",
-          "description": "Uspořádejte menu do kategorií jako Předkrmy, Hlavní jídla atd."
-        },
-        "items": {
-          "name": "Přidat položky menu",
-          "description": "Přidejte jídla do menu s cenami a popisy"
-        },
-        "contacts": {
-          "name": "Přidat kontakty",
-          "description": "Přidejte telefon, WhatsApp, Instagram a polohu"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Dokončeno",
-      "notCompleted": "Nedokončeno",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Přidat položku",
+      "addCategory": "Přidat kategorii"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Nastavení rezervací",
     "subscriptionRequired": "Aby byly rezervace dostupné pro hosty vaší restaurace, musíte se přihlásit k odběru služby.",
     "subscribe": "Přihlásit se",
     "reservationsEnabled": "Povolit rezervace",

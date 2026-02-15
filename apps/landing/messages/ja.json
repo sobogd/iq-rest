@@ -1238,7 +1238,6 @@
   "dashboard": {
     "pages": {
       "home": "ダッシュボード",
-      "onboarding": "オンボーディング",
       "qrMenu": "QRメニュー",
       "analytics": "分析",
       "categories": "カテゴリ",
@@ -1252,7 +1251,7 @@
       "tables": "テーブル",
       "billing": "請求",
       "support": "サポート",
-      "menu": "Menu"
+      "menu": "メニュー"
     },
     "sidebar": {
       "qrMenu": "QRメニュー",
@@ -1272,7 +1271,7 @@
     "auth": {
       "title": "ログイン",
       "subtitle": "QRメニュー、予約、AI翻訳付きのモダンなウェブサイト",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "あなた@email.com",
       "continue": "続ける",
       "verifyTitle": "メールを確認してください",
       "verifySubtitle": "{email}にコードを送信しました",
@@ -1318,7 +1317,7 @@
     },
     "categories": {
       "noCategories": "まだカテゴリがありません。最初のカテゴリを作成してください。",
-      "addCategory": "追加",
+      "addCategory": "カテゴリーを追加",
       "editCategory": "カテゴリを編集",
       "name": "名前",
       "namePlaceholder": "カテゴリ名を入力",
@@ -1350,7 +1349,7 @@
     "items": {
       "noItems": "まだアイテムがありません。最初のアイテムを作成してください。",
       "noCategoriesHint": "アイテムを作成するには、まずカテゴリを追加してください。",
-      "addItem": "追加",
+      "addItem": "商品を追加",
       "editItem": "アイテムを編集",
       "name": "名前",
       "namePlaceholder": "アイテム名を入力",
@@ -1499,73 +1498,13 @@
       "close": "閉じる",
       "view": "表示"
     },
-    "onboarding": {
-      "title": "IQ Restへようこそ！",
-      "subtitle": "これらのステップを完了してレストランウェブサイトを立ち上げましょう",
-      "requiredSteps": "必須ステップ",
-      "optionalSteps": "オプションステップ",
-      "viewMenu": "メニューを表示",
-      "steps": {
-        "info": {
-          "name": "レストラン情報",
-          "description": "レストラン名を追加し、ウェブアドレスを選択してください"
-        },
-        "categories": {
-          "name": "カテゴリを作成",
-          "description": "前菜、メインコースなどのカテゴリでメニューを整理"
-        },
-        "items": {
-          "name": "メニュー項目を追加",
-          "description": "価格と説明付きで料理をメニューに追加"
-        },
-        "contacts": {
-          "name": "連絡先を追加",
-          "description": "電話、WhatsApp、Instagram、所在地を追加"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "完了",
-      "notCompleted": "未完了",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "商品を追加",
+      "addCategory": "カテゴリーを追加"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "予約設定",
     "subscriptionRequired": "レストランのお客様が予約できるようにするには、サービスに登録する必要があります。",
     "subscribe": "登録",
     "reservationsEnabled": "予約を有効化",

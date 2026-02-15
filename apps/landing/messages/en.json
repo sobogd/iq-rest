@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Dashboard",
-      "onboarding": "Onboarding",
       "qrMenu": "QR Menu",
       "analytics": "Analytics",
       "categories": "Categories",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "No categories yet. Create your first category to get started.",
-      "addCategory": "Add",
+      "addCategory": "Add Category",
       "editCategory": "Edit Category",
       "name": "Name",
       "namePlaceholder": "Enter category name",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "No items yet. Create your first item to get started.",
       "noCategoriesHint": "Add a category first to create items.",
-      "addItem": "Add",
+      "addItem": "Add Item",
       "editItem": "Edit Item",
       "name": "Name",
       "namePlaceholder": "Enter item name",
@@ -1469,66 +1468,6 @@
       "slugChangedDescription": "Your restaurant is now available at:",
       "close": "Close",
       "view": "View"
-    },
-    "onboarding": {
-      "title": "Welcome to IQ Rest!",
-      "subtitle": "Complete these steps to launch your restaurant website",
-      "requiredSteps": "Required Steps",
-      "optionalSteps": "Optional Steps",
-      "viewMenu": "View Your Menu",
-      "stepIndicator": "Step {current} of {total}",
-      "steps": {
-        "info": {
-          "name": "Restaurant Name",
-          "description": "Enter the name of your restaurant to get started"
-        },
-        "categories": {
-          "name": "Create Categories",
-          "description": "Organize your menu with categories like Appetizers, Main Courses, etc."
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        },
-        "items": {
-          "name": "Add Menu Items",
-          "description": "Add dishes to your menu with prices and descriptions"
-        },
-        "contacts": {
-          "name": "Add Contacts",
-          "description": "Add phone, WhatsApp, Instagram, and location"
-        }
-      },
-      "completed": "Completed",
-      "notCompleted": "Not completed",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live!",
-      "goToDashboard": "Go to Dashboard",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      }
     }
   },
   "reservationSettings": {

@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Табло",
-      "onboarding": "Запознаване",
       "qrMenu": "QR Меню",
       "analytics": "Анализи",
       "categories": "Категории",
@@ -1219,7 +1218,7 @@
       "tables": "Масички",
       "billing": "Фактуриране",
       "support": "Поддръжка",
-      "menu": "Menu"
+      "menu": "Меню"
     },
     "sidebar": {
       "qrMenu": "QR Меню",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Вход",
       "subtitle": "Модерен уебсайт с QR меню, резервации и AI преводи",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "вашият@email.bg",
       "continue": "Продължи",
       "verifyTitle": "Проверете имейла си",
       "verifySubtitle": "Изпратихме код на {email}",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Все още няма категории. Създайте първата си категория, за да започнете.",
-      "addCategory": "Добави",
+      "addCategory": "Добавяне на категория",
       "editCategory": "Редактиране на категория",
       "name": "Име",
       "namePlaceholder": "Въведете името на категорията",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Все още няма артикули. Създайте първия си артикул, за да започнете.",
       "noCategoriesHint": "Първо добавете категория, за да създадете артикули.",
-      "addItem": "Добави",
+      "addItem": "Добавяне на артикул",
       "editItem": "Редактиране на артикул",
       "name": "Име",
       "namePlaceholder": "Въведете името на артикула",
@@ -1466,73 +1465,13 @@
       "close": "Затвори",
       "view": "Преглед"
     },
-    "onboarding": {
-      "title": "Добре дошли в IQ Rest!",
-      "subtitle": "Завършете тези стъпки, за да стартирате уебсайта на вашия ресторант",
-      "requiredSteps": "Задължителни стъпки",
-      "optionalSteps": "По избор стъпки",
-      "viewMenu": "Прегледайте вашето меню",
-      "steps": {
-        "info": {
-          "name": "Информация за ресторанта",
-          "description": "Добавете името на вашия ресторант и изберете уеб адрес"
-        },
-        "categories": {
-          "name": "Създаване на категории",
-          "description": "Организирайте менюто си с категории като Предястия, Основни ястия и др."
-        },
-        "items": {
-          "name": "Добавяне на артикули",
-          "description": "Добавете ястия към менюто си с цени и описания"
-        },
-        "contacts": {
-          "name": "Добавяне на контакти",
-          "description": "Добавете телефон, WhatsApp, Instagram и местоположение"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Завършено",
-      "notCompleted": "Не е завършено",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Добавяне на артикул",
+      "addCategory": "Добавяне на категория"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Настройки за резервации",
     "subscriptionRequired": "За да направите резервации налични за вашите ресторантски гости, трябва да се абонирате за услугата.",
     "subscribe": "Абонирайте се",
     "reservationsEnabled": "Активирайте резервации",

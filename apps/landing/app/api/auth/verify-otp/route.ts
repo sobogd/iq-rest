@@ -109,16 +109,20 @@ export async function POST(request: NextRequest) {
       path: "/",
     });
 
-    // Check if user is new (created within last 15 minutes)
-    const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000);
-    const isNewUser = user.createdAt > fifteenMinutesAgo;
+    // Get onboarding step for redirect hint
+    const userCompany = await prisma.userCompany.findFirst({
+      where: { userId: user.id },
+      include: { company: { select: { onboardingStep: true } } },
+    });
+
+    const onboardingStep = userCompany?.company.onboardingStep ?? 0;
 
     return NextResponse.json(
       {
         message: "Authentication successful",
         email: normalizedEmail,
         userId: user.id,
-        isNewUser,
+        onboardingStep,
       },
       { status: 200 }
     );

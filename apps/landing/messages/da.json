@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Dashboard",
-      "onboarding": "Introduktion",
       "qrMenu": "QR Menu",
       "analytics": "Analyse",
       "categories": "Kategorier",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Ingen kategorier endnu. Opret din første kategori for at komme i gang.",
-      "addCategory": "Tilføj",
+      "addCategory": "Tilføj kategori",
       "editCategory": "Rediger kategori",
       "name": "Navn",
       "namePlaceholder": "Indtast kategorinavn",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Ingen varer endnu. Opret din første vare for at komme i gang.",
       "noCategoriesHint": "Tilføj en kategori først for at oprette varer.",
-      "addItem": "Tilføj",
+      "addItem": "Tilføj vare",
       "editItem": "Rediger vare",
       "name": "Navn",
       "namePlaceholder": "Indtast varenavn",
@@ -1449,7 +1448,7 @@
       "description": "Undertitel",
       "descriptionPlaceholder": "Kort beskrivelse (valgfrit)",
       "descriptionHint": "Vises under titlen på forsiden",
-      "slug": "URL Slug",
+      "slug": "URL-sti",
       "slugPlaceholder": "min-restaurant",
       "slugHint": "Din hjemmeside vil være tilgængelig på: iq-rest.com/{slug}",
       "currency": "Valuta",
@@ -1466,73 +1465,13 @@
       "close": "Luk",
       "view": "Vis"
     },
-    "onboarding": {
-      "title": "Velkommen til IQ Rest!",
-      "subtitle": "Fuldfør disse trin for at lancere din restaurant hjemmeside",
-      "requiredSteps": "Nødvendige trin",
-      "optionalSteps": "Valgfri trin",
-      "viewMenu": "Se din menu",
-      "steps": {
-        "info": {
-          "name": "Restaurantinfo",
-          "description": "Tilføj dit restaurantnavn og vælg en webadresse"
-        },
-        "categories": {
-          "name": "Opret kategorier",
-          "description": "Organiser din menu med kategorier som Forretter, Hovedretter osv."
-        },
-        "items": {
-          "name": "Tilføj menupunkter",
-          "description": "Tilføj retter til din menu med priser og beskrivelser"
-        },
-        "contacts": {
-          "name": "Tilføj kontakter",
-          "description": "Tilføj telefon, WhatsApp, Instagram og placering"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Fuldført",
-      "notCompleted": "Ikke fuldført",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Tilføj vare",
+      "addCategory": "Tilføj kategori"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Reservationsindstillinger",
     "subscriptionRequired": "For at gøre reservationer tilgængelige for dine restaurantgæster, skal du abonnere på tjenesten.",
     "subscribe": "Abonner",
     "reservationsEnabled": "Aktiver Reservationer",

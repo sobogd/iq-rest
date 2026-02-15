@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Nadzorna plošča",
-      "onboarding": "Uvod",
       "qrMenu": "QR Meni",
       "analytics": "Analitika",
       "categories": "Kategorije",
@@ -1219,7 +1218,7 @@
       "tables": "Mize",
       "billing": "Zaračunavanje",
       "support": "Podpora",
-      "menu": "Menu"
+      "menu": "Meni"
     },
     "sidebar": {
       "qrMenu": "QR Meni",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Še ni kategorij. Ustvarite svojo prvo kategorijo, da začnete.",
-      "addCategory": "Dodaj",
+      "addCategory": "Dodaj kategorijo",
       "editCategory": "Uredi kategorijo",
       "name": "Ime",
       "namePlaceholder": "Vnesite ime kategorije",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Še ni predmetov. Ustvarite svoj prvi predmet, da začnete.",
       "noCategoriesHint": "Najprej dodajte kategorijo za ustvarjanje predmetov.",
-      "addItem": "Dodaj",
+      "addItem": "Dodaj artikel",
       "editItem": "Uredi predmet",
       "name": "Ime",
       "namePlaceholder": "Vnesite ime predmeta",
@@ -1449,7 +1448,7 @@
       "description": "Podnaslov",
       "descriptionPlaceholder": "Kratka opis (neobvezno)",
       "descriptionHint": "Prikazano pod naslovom na domači strani",
-      "slug": "URL Slug",
+      "slug": "URL-naslov",
       "slugPlaceholder": "moja-restavracija",
       "slugHint": "Vaša spletna stran bo na voljo na: iq-rest.com/{slug}",
       "currency": "Valuta",
@@ -1466,73 +1465,13 @@
       "close": "Zapri",
       "view": "Poglej"
     },
-    "onboarding": {
-      "title": "Dobrodošli v IQ Rest!",
-      "subtitle": "Dokončajte te korake za zagon spletne strani vaše restavracije",
-      "requiredSteps": "Obvezni koraki",
-      "optionalSteps": "Neobvezni koraki",
-      "viewMenu": "Poglejte svoj meni",
-      "steps": {
-        "info": {
-          "name": "Podatki o restavraciji",
-          "description": "Dodajte ime restavracije in izberite spletni naslov"
-        },
-        "categories": {
-          "name": "Ustvari kategorije",
-          "description": "Organizirajte meni s kategorijami kot so Predjedi, Glavne jedi itd."
-        },
-        "items": {
-          "name": "Dodaj postavke menija",
-          "description": "Dodajte jedi v meni s cenami in opisi"
-        },
-        "contacts": {
-          "name": "Dodaj kontakte",
-          "description": "Dodajte telefon, WhatsApp, Instagram in lokacijo"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Dokončano",
-      "notCompleted": "Nedokončano",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Dodaj artikel",
+      "addCategory": "Dodaj kategorijo"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Nastavitve rezervacij",
     "subscriptionRequired": "Za omogočanje rezervacij vašim gostom v restavraciji se morate naročiti na storitev.",
     "subscribe": "Naroči se",
     "reservationsEnabled": "Omogoči rezervacije",

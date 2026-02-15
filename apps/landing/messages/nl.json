@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Dashboard",
-      "onboarding": "Introductie",
       "qrMenu": "QR Menu",
       "analytics": "Analyse",
       "categories": "Categorieën",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Nog geen categorieën. Maak je eerste categorie om te beginnen.",
-      "addCategory": "Toevoegen",
+      "addCategory": "Categorie toevoegen",
       "editCategory": "Categorie Bewerken",
       "name": "Naam",
       "namePlaceholder": "Voer de categorienaam in",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Nog geen items. Maak uw eerste item om te beginnen.",
       "noCategoriesHint": "Voeg eerst een categorie toe om items te maken.",
-      "addItem": "Toevoegen",
+      "addItem": "Artikel toevoegen",
       "editItem": "Item Bewerken",
       "name": "Naam",
       "namePlaceholder": "Voer de naam van het item in",
@@ -1449,7 +1448,7 @@
       "description": "Subtitel",
       "descriptionPlaceholder": "Korte beschrijving (optioneel)",
       "descriptionHint": "Weergegeven onder de titel op de homepage",
-      "slug": "URL Slug",
+      "slug": "URL-pad",
       "slugPlaceholder": "mijn-restaurant",
       "slugHint": "Je website is beschikbaar op: iq-rest.com/{slug}",
       "currency": "Valuta",
@@ -1466,73 +1465,13 @@
       "close": "Sluiten",
       "view": "Bekijken"
     },
-    "onboarding": {
-      "title": "Welkom bij IQ Rest!",
-      "subtitle": "Voltooi deze stappen om je restaurantwebsite te lanceren",
-      "requiredSteps": "Vereiste Stappen",
-      "optionalSteps": "Optionele Stappen",
-      "viewMenu": "Bekijk Je Menu",
-      "steps": {
-        "info": {
-          "name": "Restaurant Info",
-          "description": "Voeg je restaurantnaam toe en kies een webadres"
-        },
-        "categories": {
-          "name": "Categorieën maken",
-          "description": "Organiseer je menu met categorieën zoals Voorgerechten, Hoofdgerechten, enz."
-        },
-        "items": {
-          "name": "Menu-items toevoegen",
-          "description": "Voeg gerechten toe aan je menu met prijzen en beschrijvingen"
-        },
-        "contacts": {
-          "name": "Contacten toevoegen",
-          "description": "Voeg telefoon, WhatsApp, Instagram en locatie toe"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Voltooid",
-      "notCompleted": "Niet voltooid",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Item toevoegen",
+      "addCategory": "Categorie toevoegen"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Reserveringsinstellingen",
     "subscriptionRequired": "Om reserveringen beschikbaar te maken voor uw restaurantgasten, moet u zich abonneren op de service.",
     "subscribe": "Abonneren",
     "reservationsEnabled": "Reserveringen inschakelen",

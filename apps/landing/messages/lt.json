@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Valdymo pultas",
-      "onboarding": "Įvedimas",
       "qrMenu": "QR Meniu",
       "analytics": "Analitika",
       "categories": "Kategorijos",
@@ -1219,7 +1218,7 @@
       "tables": "Stalai",
       "billing": "Apmokėjimas",
       "support": "Pagalba",
-      "menu": "Menu"
+      "menu": "Meniu"
     },
     "sidebar": {
       "qrMenu": "QR Meniu",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Dar nėra kategorijų. Sukurkite savo pirmąją kategoriją, kad pradėtumėte.",
-      "addCategory": "Pridėti",
+      "addCategory": "Pridėti kategoriją",
       "editCategory": "Redaguoti kategoriją",
       "name": "Pavadinimas",
       "namePlaceholder": "Įveskite kategorijos pavadinimą",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Dar nėra prekių. Sukurkite savo pirmąją prekę, kad pradėtumėte.",
       "noCategoriesHint": "Pirmiausia pridėkite kategoriją, kad galėtumėte kurti prekes.",
-      "addItem": "Pridėti",
+      "addItem": "Pridėti prekę",
       "editItem": "Redaguoti prekę",
       "name": "Pavadinimas",
       "namePlaceholder": "Įveskite prekės pavadinimą",
@@ -1466,73 +1465,13 @@
       "close": "Uždaryti",
       "view": "Peržiūrėti"
     },
-    "onboarding": {
-      "title": "Sveiki atvykę į IQ Rest!",
-      "subtitle": "Baikite šiuos žingsnius, kad paleistumėte savo restorano svetainę",
-      "requiredSteps": "Privalomi žingsniai",
-      "optionalSteps": "Pasirinktiniai žingsniai",
-      "viewMenu": "Peržiūrėti savo meniu",
-      "steps": {
-        "info": {
-          "name": "Restorano informacija",
-          "description": "Pridėkite savo restorano pavadinimą ir pasirinkite svetainės adresą"
-        },
-        "categories": {
-          "name": "Sukurti kategorijas",
-          "description": "Sutvarkykite meniu kategorijomis, pvz., Užkandžiai, Pagrindiniai patiekalai ir kt."
-        },
-        "items": {
-          "name": "Pridėti meniu elementus",
-          "description": "Pridėkite patiekalus į meniu su kainomis ir aprašymais"
-        },
-        "contacts": {
-          "name": "Pridėti kontaktus",
-          "description": "Pridėkite telefoną, WhatsApp, Instagram ir vietą"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Užbaigta",
-      "notCompleted": "Neužbaigta",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Pridėti prekę",
+      "addCategory": "Pridėti kategoriją"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Rezervacijos nustatymai",
     "subscriptionRequired": "Norint, kad jūsų restorano svečiai galėtų rezervuoti vietas, turite užsiprenumeruoti paslaugą.",
     "subscribe": "Užsiprenumeruoti",
     "reservationsEnabled": "Įjungti rezervacijas",

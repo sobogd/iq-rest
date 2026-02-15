@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Vadības panelis",
-      "onboarding": "Iepazīšanās",
       "qrMenu": "QR izvēlne",
       "analytics": "Analītika",
       "categories": "Kategorijas",
@@ -1219,7 +1218,7 @@
       "tables": "Galdi",
       "billing": "Rēķini",
       "support": "Atbalsts",
-      "menu": "Menu"
+      "menu": "Ēdienkarte"
     },
     "sidebar": {
       "qrMenu": "QR izvēlne",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Vēl nav kategoriju. Izveidojiet savu pirmo kategoriju, lai sāktu.",
-      "addCategory": "Pievienot",
+      "addCategory": "Pievienot kategoriju",
       "editCategory": "Rediģēt kategoriju",
       "name": "Nosaukums",
       "namePlaceholder": "Ievadiet kategorijas nosaukumu",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Vēl nav neviena ēdiena. Izveidojiet savu pirmo ēdienu, lai sāktu.",
       "noCategoriesHint": "Vispirms pievienojiet kategoriju, lai izveidotu ēdienus.",
-      "addItem": "Pievienot",
+      "addItem": "Pievienot preci",
       "editItem": "Rediģēt ēdienu",
       "name": "Nosaukums",
       "namePlaceholder": "Ievadiet ēdiena nosaukumu",
@@ -1466,73 +1465,13 @@
       "close": "Aizvērt",
       "view": "Skatīt"
     },
-    "onboarding": {
-      "title": "Laipni lūdzam IQ Rest!",
-      "subtitle": "Pabeidziet šos soļus, lai palaistu savu restorāna vietni",
-      "requiredSteps": "Obligātie soļi",
-      "optionalSteps": "Pēc izvēles soļi",
-      "viewMenu": "Skatīt savu ēdienkarti",
-      "steps": {
-        "info": {
-          "name": "Restorāna informācija",
-          "description": "Pievienojiet sava restorāna nosaukumu un izvēlieties tīmekļa adresi"
-        },
-        "categories": {
-          "name": "Izveidot kategorijas",
-          "description": "Organizējiet ēdienkarti ar kategorijām, piemēram, Uzkodas, Pamatēdieni utt."
-        },
-        "items": {
-          "name": "Pievienot ēdienkartes vienumus",
-          "description": "Pievienojiet ēdienus ēdienkartei ar cenām un aprakstiem"
-        },
-        "contacts": {
-          "name": "Pievienot kontaktus",
-          "description": "Pievienojiet tālruni, WhatsApp, Instagram un atrašanās vietu"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Pabeigts",
-      "notCompleted": "Nepabeigts",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Pievienot preci",
+      "addCategory": "Pievienot kategoriju"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Rezervācijas iestatījumi",
     "subscriptionRequired": "Lai jūsu restorāna viesiem būtu pieejamas rezervācijas, jums jāabonē pakalpojums.",
     "subscribe": "Abonēt",
     "reservationsEnabled": "Iespējot rezervācijas",

@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Kontrolna tabla",
-      "onboarding": "Uvod",
       "qrMenu": "QR Meni",
       "analytics": "Analitika",
       "categories": "Kategorije",
@@ -1219,7 +1218,7 @@
       "tables": "Stolovi",
       "billing": "Fakturacija",
       "support": "Podrška",
-      "menu": "Menu"
+      "menu": "Мени"
     },
     "sidebar": {
       "qrMenu": "QR Meni",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Još nema kategorija. Kreirajte svoju prvu kategoriju da biste započeli.",
-      "addCategory": "Dodaj",
+      "addCategory": "Додај категорију",
       "editCategory": "Izmeni kategoriju",
       "name": "Ime",
       "namePlaceholder": "Unesite ime kategorije",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Još nema stavki. Kreirajte svoju prvu stavku da biste počeli.",
       "noCategoriesHint": "Prvo dodajte kategoriju da biste kreirali stavke.",
-      "addItem": "Dodaj",
+      "addItem": "Додај артикал",
       "editItem": "Izmeni stavku",
       "name": "Ime",
       "namePlaceholder": "Unesite ime stavke",
@@ -1359,7 +1358,7 @@
       "allergens": "Alergeni",
       "allergensHint": "Izaberite alergene prisutne u ovom jelu",
       "allergenNames": {
-        "gluten": "Gluten",
+        "gluten": "Глутен",
         "crustaceans": "Krvopije",
         "eggs": "Jaja",
         "fish": "Riba",
@@ -1371,7 +1370,7 @@
         "mustard": "Senf",
         "sesame": "Susam",
         "sulphites": "Sumpor-dioksid",
-        "lupin": "Lupin",
+        "lupin": "Лупин",
         "molluscs": "Molušci"
       },
       "subscribeForAllergens": "Претплатите се за додавање ознака алергена",
@@ -1449,7 +1448,7 @@
       "description": "Podnaslov",
       "descriptionPlaceholder": "Kratak opis (opciono)",
       "descriptionHint": "Prikazuje se ispod naslova na početnoj stranici",
-      "slug": "URL Slug",
+      "slug": "URL адреса",
       "slugPlaceholder": "moj-restoran",
       "slugHint": "Vaš vebsajt će biti dostupan na: iq-rest.com/{slug}",
       "currency": "Valuta",
@@ -1466,73 +1465,13 @@
       "close": "Zatvori",
       "view": "Pogledaj"
     },
-    "onboarding": {
-      "title": "Dobrodošli u IQ Rest!",
-      "subtitle": "Završite ove korake da pokrenete vebsajt vašeg restorana",
-      "requiredSteps": "Obavezni koraci",
-      "optionalSteps": "Opcioni koraci",
-      "viewMenu": "Pogledajte svoj meni",
-      "steps": {
-        "info": {
-          "name": "Informacije o restoranu",
-          "description": "Dodajte ime restorana i izaberite web adresu"
-        },
-        "categories": {
-          "name": "Kreirajte kategorije",
-          "description": "Organizujte meni kategorijama kao što su Predjela, Glavna jela itd."
-        },
-        "items": {
-          "name": "Dodajte stavke menija",
-          "description": "Dodajte jela u meni sa cenama i opisima"
-        },
-        "contacts": {
-          "name": "Dodajte kontakte",
-          "description": "Dodajte telefon, WhatsApp, Instagram i lokaciju"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Završeno",
-      "notCompleted": "Nije završeno",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Додај ставку",
+      "addCategory": "Додај категорију"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Подешавања резервација",
     "subscriptionRequired": "Da biste omogućili rezervacije za goste vašeg restorana, potrebno je da se pretplatite na uslugu.",
     "subscribe": "Pretplatite se",
     "reservationsEnabled": "Omogući rezervacije",

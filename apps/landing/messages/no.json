@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Dashbord",
-      "onboarding": "Introduksjon",
       "qrMenu": "QR-meny",
       "analytics": "Analyse",
       "categories": "Kategorier",
@@ -1219,7 +1218,7 @@
       "tables": "Bord",
       "billing": "Fakturering",
       "support": "Support",
-      "menu": "Menu"
+      "menu": "Meny"
     },
     "sidebar": {
       "qrMenu": "QR-meny",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Ingen kategorier ennå. Opprett din første kategori for å komme i gang.",
-      "addCategory": "Legg til",
+      "addCategory": "Legg til kategori",
       "editCategory": "Rediger kategori",
       "name": "Navn",
       "namePlaceholder": "Skriv inn kategorinavn",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Ingen varer ennå. Opprett din første vare for å komme i gang.",
       "noCategoriesHint": "Legg til en kategori først for å opprette varer.",
-      "addItem": "Legg til",
+      "addItem": "Legg til vare",
       "editItem": "Rediger vare",
       "name": "Navn",
       "namePlaceholder": "Skriv inn varenavn",
@@ -1449,7 +1448,7 @@
       "description": "Undertittel",
       "descriptionPlaceholder": "Kort beskrivelse (valgfritt)",
       "descriptionHint": "Vises under tittelen på hjemmesiden",
-      "slug": "URL Slug",
+      "slug": "URL-sti",
       "slugPlaceholder": "min-restaurant",
       "slugHint": "Ditt nettsted vil være tilgjengelig på: iq-rest.com/{slug}",
       "currency": "Valuta",
@@ -1466,73 +1465,13 @@
       "close": "Lukk",
       "view": "Vis"
     },
-    "onboarding": {
-      "title": "Velkommen til IQ Rest!",
-      "subtitle": "Fullfør disse trinnene for å lansere restaurantnettstedet ditt",
-      "requiredSteps": "Påkrevde trinn",
-      "optionalSteps": "Valgfrie trinn",
-      "viewMenu": "Se menyen din",
-      "steps": {
-        "info": {
-          "name": "Restaurantinfo",
-          "description": "Legg til restaurantnavn og velg en nettadresse"
-        },
-        "categories": {
-          "name": "Opprett kategorier",
-          "description": "Organiser menyen din med kategorier som Forretter, Hovedretter osv."
-        },
-        "items": {
-          "name": "Legg til menyelementer",
-          "description": "Legg til retter i menyen med priser og beskrivelser"
-        },
-        "contacts": {
-          "name": "Legg til kontakter",
-          "description": "Legg til telefon, WhatsApp, Instagram og lokasjon"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Fullført",
-      "notCompleted": "Ikke fullført",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Legg til vare",
+      "addCategory": "Legg til kategori"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Reservasjonsinnstillinger",
     "subscriptionRequired": "For å gjøre reservasjoner tilgjengelige for restaurantgjestene dine, må du abonnere på tjenesten.",
     "subscribe": "Abonner",
     "reservationsEnabled": "Aktiver Reservasjoner",

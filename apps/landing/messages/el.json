@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Πίνακας Ελέγχου",
-      "onboarding": "Εκπαίδευση",
       "qrMenu": "Μενού QR",
       "analytics": "Αναλύσεις",
       "categories": "Κατηγορίες",
@@ -1219,7 +1218,7 @@
       "tables": "Τραπέζια",
       "billing": "Χρέωση",
       "support": "Υποστήριξη",
-      "menu": "Menu"
+      "menu": "Μενού"
     },
     "sidebar": {
       "qrMenu": "Μενού QR",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Σύνδεση",
       "subtitle": "Μοντέρνα ιστοσελίδα με μενού QR, κρατήσεις και μεταφράσεις AI",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "to@email.gr",
       "continue": "Συνέχεια",
       "verifyTitle": "Ελέγξτε το email σας",
       "verifySubtitle": "Στείλαμε έναν κωδικό στο {email}",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Δεν υπάρχουν κατηγορίες ακόμα. Δημιουργήστε την πρώτη σας κατηγορία για να ξεκινήσετε.",
-      "addCategory": "Προσθήκη",
+      "addCategory": "Προσθήκη κατηγορίας",
       "editCategory": "Επεξεργασία Κατηγορίας",
       "name": "Όνομα",
       "namePlaceholder": "Εισάγετε το όνομα της κατηγορίας",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Δεν υπάρχουν στοιχεία ακόμα. Δημιουργήστε το πρώτο σας στοιχείο για να ξεκινήσετε.",
       "noCategoriesHint": "Προσθέστε πρώτα μια κατηγορία για να δημιουργήσετε στοιχεία.",
-      "addItem": "Προσθήκη",
+      "addItem": "Προσθήκη προϊόντος",
       "editItem": "Επεξεργασία Στοιχείου",
       "name": "Όνομα",
       "namePlaceholder": "Εισάγετε το όνομα του στοιχείου",
@@ -1449,7 +1448,7 @@
       "description": "Υπότιτλος",
       "descriptionPlaceholder": "Σύντομη περιγραφή (προαιρετική)",
       "descriptionHint": "Εμφανίζεται κάτω από τον τίτλο στην αρχική σελίδα",
-      "slug": "URL Slug",
+      "slug": "Διεύθυνση URL",
       "slugPlaceholder": "το-εστιατόριό-μου",
       "slugHint": "Η ιστοσελίδα σας θα είναι διαθέσιμη στο: iq-rest.com/{slug}",
       "currency": "Νόμισμα",
@@ -1466,73 +1465,13 @@
       "close": "Κλείσιμο",
       "view": "Προβολή"
     },
-    "onboarding": {
-      "title": "Καλώς ήρθατε στο IQ Rest!",
-      "subtitle": "Ολοκληρώστε αυτά τα βήματα για να ξεκινήσετε την ιστοσελίδα του εστιατορίου σας",
-      "requiredSteps": "Υποχρεωτικά Βήματα",
-      "optionalSteps": "Προαιρετικά Βήματα",
-      "viewMenu": "Δείτε το Μενού σας",
-      "steps": {
-        "info": {
-          "name": "Πληροφορίες Εστιατορίου",
-          "description": "Προσθέστε το όνομα του εστιατορίου σας και επιλέξτε διεύθυνση ιστοσελίδας"
-        },
-        "categories": {
-          "name": "Δημιουργία Κατηγοριών",
-          "description": "Οργανώστε το μενού σας με κατηγορίες όπως Ορεκτικά, Κυρίως Πιάτα κλπ."
-        },
-        "items": {
-          "name": "Προσθήκη Πιάτων",
-          "description": "Προσθέστε πιάτα στο μενού σας με τιμές και περιγραφές"
-        },
-        "contacts": {
-          "name": "Προσθήκη Επαφών",
-          "description": "Προσθέστε τηλέφωνο, WhatsApp, Instagram και τοποθεσία"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Ολοκληρώθηκε",
-      "notCompleted": "Δεν ολοκληρώθηκε",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Προσθήκη είδους",
+      "addCategory": "Προσθήκη κατηγορίας"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Ρυθμίσεις κρατήσεων",
     "subscriptionRequired": "Για να είναι διαθέσιμες οι κρατήσεις στους πελάτες του εστιατορίου σας, πρέπει να εγγραφείτε στην υπηρεσία.",
     "subscribe": "Εγγραφή",
     "reservationsEnabled": "Ενεργοποίηση Κρατήσεων",

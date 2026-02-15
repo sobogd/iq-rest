@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Irányítópult",
-      "onboarding": "Bevezetés",
       "qrMenu": "QR Menü",
       "analytics": "Elemzések",
       "categories": "Kategóriák",
@@ -1219,7 +1218,7 @@
       "tables": "Asztalok",
       "billing": "Számlázás",
       "support": "Támogatás",
-      "menu": "Menu"
+      "menu": "Menü"
     },
     "sidebar": {
       "qrMenu": "QR Menü",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Bejelentkezés",
       "subtitle": "Modern weboldal QR menüvel, foglalásokkal és AI fordításokkal",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "nev@email.hu",
       "continue": "Folytatás",
       "verifyTitle": "Ellenőrizd az emailed",
       "verifySubtitle": "Küldtünk egy kódot a(z) {email} címre",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Még nincsenek kategóriák. Hozd létre az első kategóriádat a kezdéshez.",
-      "addCategory": "Hozzáadás",
+      "addCategory": "Kategória hozzáadása",
       "editCategory": "Kategória szerkesztése",
       "name": "Név",
       "namePlaceholder": "Add meg a kategória nevét",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Még nincsenek tételek. Hozza létre az első tételt a kezdéshez.",
       "noCategoriesHint": "Először adjon hozzá egy kategóriát a tételek létrehozásához.",
-      "addItem": "Hozzáadás",
+      "addItem": "Tétel hozzáadása",
       "editItem": "Tétel szerkesztése",
       "name": "Név",
       "namePlaceholder": "Írja be a tétel nevét",
@@ -1371,7 +1370,7 @@
         "mustard": "Mustár",
         "sesame": "Szezám",
         "sulphites": "Kén-dioxid",
-        "lupin": "Lupin",
+        "lupin": "Csillagfürt",
         "molluscs": "Puhatestűek"
       },
       "subscribeForAllergens": "Fizessen elő az allergéncímkék hozzáadásához",
@@ -1449,7 +1448,7 @@
       "description": "Alcím",
       "descriptionPlaceholder": "Rövid leírás (opcionális)",
       "descriptionHint": "Megjelenik a cím alatt a kezdőlapján",
-      "slug": "URL Slug",
+      "slug": "URL-cím",
       "slugPlaceholder": "az-en-etterem",
       "slugHint": "Weboldala elérhető lesz itt: iq-rest.com/{slug}",
       "currency": "Pénznem",
@@ -1466,73 +1465,13 @@
       "close": "Bezárás",
       "view": "Megtekintés"
     },
-    "onboarding": {
-      "title": "Üdvözöljük az IQ Rest-nél!",
-      "subtitle": "Fejezze be ezeket a lépéseket az étterem weboldala indításához",
-      "requiredSteps": "Kötelező lépések",
-      "optionalSteps": "Opcionális lépések",
-      "viewMenu": "Tekintse meg az étlapját",
-      "steps": {
-        "info": {
-          "name": "Étterem adatai",
-          "description": "Adja meg az étterem nevét és válasszon webcímet"
-        },
-        "categories": {
-          "name": "Kategóriák létrehozása",
-          "description": "Rendezze étlapját kategóriákba, mint Előételek, Főételek stb."
-        },
-        "items": {
-          "name": "Ételek hozzáadása",
-          "description": "Adjon hozzá ételeket az étlaphoz árakkal és leírásokkal"
-        },
-        "contacts": {
-          "name": "Kapcsolatok hozzáadása",
-          "description": "Adja hozzá a telefont, WhatsApp-ot, Instagramot és helyszínt"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Befejezve",
-      "notCompleted": "Nincs befejezve",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Tétel hozzáadása",
+      "addCategory": "Kategória hozzáadása"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Foglalási beállítások",
     "subscriptionRequired": "Ahhoz, hogy a vendégeid számára elérhetővé tedd a foglalásokat, előfizetned kell a szolgáltatásra.",
     "subscribe": "Előfizetés",
     "reservationsEnabled": "Foglalások engedélyezése",

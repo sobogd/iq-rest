@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Панель управления",
-      "onboarding": "Введение",
       "qrMenu": "QR Меню",
       "analytics": "Аналитика",
       "categories": "Категории",
@@ -1219,7 +1218,7 @@
       "tables": "Столы",
       "billing": "Выставление счетов",
       "support": "Поддержка",
-      "menu": "Menu"
+      "menu": "Меню"
     },
     "sidebar": {
       "qrMenu": "QR Меню",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Категорий пока нет. Создайте свою первую категорию, чтобы начать.",
-      "addCategory": "Добавить",
+      "addCategory": "Добавить категорию",
       "editCategory": "Редактировать категорию",
       "name": "Название",
       "namePlaceholder": "Введите название категории",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Пока нет товаров. Создайте свой первый товар, чтобы начать.",
       "noCategoriesHint": "Сначала добавьте категорию, чтобы создать товары.",
-      "addItem": "Добавить",
+      "addItem": "Добавить товар",
       "editItem": "Редактировать товар",
       "name": "Название",
       "namePlaceholder": "Введите название товара",
@@ -1466,73 +1465,13 @@
       "close": "Закрыть",
       "view": "Просмотреть"
     },
-    "onboarding": {
-      "title": "Добро пожаловать в IQ Rest!",
-      "subtitle": "Завершите эти шаги, чтобы запустить сайт вашего ресторана",
-      "requiredSteps": "Обязательные шаги",
-      "optionalSteps": "Необязательные шаги",
-      "viewMenu": "Просмотреть ваше меню",
-      "stepIndicator": "Шаг {current} из {total}",
-      "steps": {
-        "info": {
-          "name": "Название ресторана",
-          "description": "Введите название вашего ресторана, чтобы начать"
-        },
-        "categories": {
-          "name": "Создать категории",
-          "description": "Организуйте меню с помощью категорий: Закуски, Основные блюда и т.д."
-        },
-        "items": {
-          "name": "Добавить блюда",
-          "description": "Добавьте блюда в меню с ценами и описаниями"
-        },
-        "contacts": {
-          "name": "Добавить контакты",
-          "description": "Добавьте телефон, WhatsApp, Instagram и адрес"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Завершено",
-      "notCompleted": "Не завершено",
-      "restaurantNamePlaceholder": "Введите название ресторана",
-      "continue": "Продолжить",
-      "createError": "Не удалось создать ресторан",
-      "completedTitle": "Сделайте его своим",
-      "completedSubtitle": "Ваше меню готово! Вот как сделать его ещё лучше.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Помогите клиентам связаться с вами",
-          "description": "Добавьте телефон, WhatsApp и Instagram для связи"
-        },
-        "settings": {
-          "title": "Настройте меню",
-          "description": "Укажите описание, URL и валюту"
-        },
-        "design": {
-          "title": "Оформите под свой бренд",
-          "description": "Выберите цвета и фон в вашем стиле"
-        },
-        "languages": {
-          "title": "Переведите меню",
-          "description": "Добавьте языки для иностранных гостей"
-        },
-        "qrMenu": {
-          "title": "Начните получать сканы",
-          "description": "Распечатайте QR-код и поделитесь ссылкой"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Добавить товар",
+      "addCategory": "Добавить категорию"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Настройки бронирования",
     "subscriptionRequired": "Чтобы сделать бронирования доступными для ваших гостей, вам необходимо подписаться на сервис.",
     "subscribe": "Подписаться",
     "reservationsEnabled": "Включить бронирования",

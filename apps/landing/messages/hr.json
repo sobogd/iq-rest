@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Nadzorna ploča",
-      "onboarding": "Uvod",
       "qrMenu": "QR Meni",
       "analytics": "Analitika",
       "categories": "Kategorije",
@@ -1219,7 +1218,7 @@
       "tables": "Stolovi",
       "billing": "Naplate",
       "support": "Podrška",
-      "menu": "Menu"
+      "menu": "Jelovnik"
     },
     "sidebar": {
       "qrMenu": "QR Meni",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Još nema kategorija. Kreirajte svoju prvu kategoriju da biste započeli.",
-      "addCategory": "Dodaj",
+      "addCategory": "Dodaj kategoriju",
       "editCategory": "Uredi kategoriju",
       "name": "Ime",
       "namePlaceholder": "Unesite ime kategorije",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Još nema stavki. Kreirajte svoju prvu stavku da biste započeli.",
       "noCategoriesHint": "Prvo dodajte kategoriju za kreiranje stavki.",
-      "addItem": "Dodaj",
+      "addItem": "Dodaj artikl",
       "editItem": "Uredi stavku",
       "name": "Ime",
       "namePlaceholder": "Unesite ime stavke",
@@ -1466,73 +1465,13 @@
       "close": "Zatvori",
       "view": "Pogledaj"
     },
-    "onboarding": {
-      "title": "Dobrodošli u IQ Rest!",
-      "subtitle": "Završite ove korake kako biste pokrenuli web stranicu vašeg restorana",
-      "requiredSteps": "Obavezni koraci",
-      "optionalSteps": "Opcionalni koraci",
-      "viewMenu": "Pogledajte svoj jelovnik",
-      "steps": {
-        "info": {
-          "name": "Podaci o restoranu",
-          "description": "Dodajte naziv restorana i odaberite web adresu"
-        },
-        "categories": {
-          "name": "Kreiraj kategorije",
-          "description": "Organizirajte jelovnik s kategorijama poput Predjela, Glavna jela itd."
-        },
-        "items": {
-          "name": "Dodaj stavke jelovnika",
-          "description": "Dodajte jela na jelovnik s cijenama i opisima"
-        },
-        "contacts": {
-          "name": "Dodaj kontakte",
-          "description": "Dodajte telefon, WhatsApp, Instagram i lokaciju"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Završeno",
-      "notCompleted": "Nije završeno",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Dodaj stavku",
+      "addCategory": "Dodaj kategoriju"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Postavke rezervacija",
     "subscriptionRequired": "Kako biste omogućili rezervacije za goste vašeg restorana, trebate se pretplatiti na uslugu.",
     "subscribe": "Pretplatite se",
     "reservationsEnabled": "Omogući rezervacije",

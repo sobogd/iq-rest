@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Gösterge Paneli",
-      "onboarding": "Eğitim",
       "qrMenu": "QR Menü",
       "analytics": "Analitik",
       "categories": "Kategoriler",
@@ -1219,7 +1218,7 @@
       "tables": "Masalar",
       "billing": "Faturalama",
       "support": "Destek",
-      "menu": "Menu"
+      "menu": "Menü"
     },
     "sidebar": {
       "qrMenu": "QR Menü",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Giriş yap",
       "subtitle": "QR menü, rezervasyonlar ve AI çevirileri ile modern web sitesi",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "isim@email.com",
       "continue": "Devam et",
       "verifyTitle": "E-postanızı kontrol edin",
       "verifySubtitle": "{email} adresine bir kod gönderdik",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Henüz kategori yok. Başlamak için ilk kategorinizi oluşturun.",
-      "addCategory": "Ekle",
+      "addCategory": "Kategori ekle",
       "editCategory": "Kategoriyi Düzenle",
       "name": "İsim",
       "namePlaceholder": "Kategori adını girin",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Henüz hiç ürün yok. Başlamak için ilk ürününüzü oluşturun.",
       "noCategoriesHint": "Ürün oluşturmak için önce bir kategori ekleyin.",
-      "addItem": "Ekle",
+      "addItem": "Ürün ekle",
       "editItem": "Ürünü Düzenle",
       "name": "İsim",
       "namePlaceholder": "Ürün adını girin",
@@ -1466,73 +1465,13 @@
       "close": "Kapat",
       "view": "Görüntüle"
     },
-    "onboarding": {
-      "title": "IQ Rest'e Hoş Geldiniz!",
-      "subtitle": "Restoran web sitenizi başlatmak için bu adımları tamamlayın",
-      "requiredSteps": "Gerekli Adımlar",
-      "optionalSteps": "İsteğe Bağlı Adımlar",
-      "viewMenu": "Menünüzü Görüntüleyin",
-      "steps": {
-        "info": {
-          "name": "Restoran Bilgileri",
-          "description": "Restoran adınızı ekleyin ve bir web adresi seçin"
-        },
-        "categories": {
-          "name": "Kategoriler Oluşturun",
-          "description": "Menünüzü Başlangıçlar, Ana Yemekler gibi kategorilerle düzenleyin"
-        },
-        "items": {
-          "name": "Menü Öğeleri Ekleyin",
-          "description": "Menünüze fiyatlar ve açıklamalarla yemekler ekleyin"
-        },
-        "contacts": {
-          "name": "İletişim Bilgileri Ekleyin",
-          "description": "Telefon, WhatsApp, Instagram ve konum ekleyin"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Tamamlandı",
-      "notCompleted": "Tamamlanmadı",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Ürün ekle",
+      "addCategory": "Kategori ekle"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Rezervasyon ayarları",
     "subscriptionRequired": "Restoran misafirlerinize rezervasyon imkanı sunmak için hizmete abone olmanız gerekmektedir.",
     "subscribe": "Abone Ol",
     "reservationsEnabled": "Rezervasyonları Etkinleştir",

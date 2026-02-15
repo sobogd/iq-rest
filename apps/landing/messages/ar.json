@@ -1238,7 +1238,6 @@
   "dashboard": {
     "pages": {
       "home": "لوحة التحكم",
-      "onboarding": "الإعداد",
       "qrMenu": "قائمة QR",
       "analytics": "التحليلات",
       "categories": "الفئات",
@@ -1252,7 +1251,7 @@
       "tables": "الطاولات",
       "billing": "الفوترة",
       "support": "الدعم",
-      "menu": "Menu"
+      "menu": "القائمة"
     },
     "sidebar": {
       "qrMenu": "قائمة QR",
@@ -1272,7 +1271,7 @@
     "auth": {
       "title": "تسجيل الدخول",
       "subtitle": "موقع عصري مع قائمة QR وحجوزات وترجمات الذكاء الاصطناعي",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "بريدك@email.com",
       "continue": "متابعة",
       "verifyTitle": "تحقق من بريدك الإلكتروني",
       "verifySubtitle": "أرسلنا رمزاً إلى {email}",
@@ -1318,7 +1317,7 @@
     },
     "categories": {
       "noCategories": "لا فئات بعد. أنشئ فئتك الأولى للبدء.",
-      "addCategory": "إضافة",
+      "addCategory": "إضافة فئة",
       "editCategory": "تعديل الفئة",
       "name": "الاسم",
       "namePlaceholder": "أدخل اسم الفئة",
@@ -1350,7 +1349,7 @@
     "items": {
       "noItems": "لا عناصر بعد. أنشئ عنصرك الأول للبدء.",
       "noCategoriesHint": "أضف فئة أولاً لإنشاء العناصر.",
-      "addItem": "إضافة",
+      "addItem": "إضافة عنصر",
       "editItem": "تعديل العنصر",
       "name": "الاسم",
       "namePlaceholder": "أدخل اسم العنصر",
@@ -1499,73 +1498,13 @@
       "close": "إغلاق",
       "view": "عرض"
     },
-    "onboarding": {
-      "title": "مرحباً بك في IQ Rest!",
-      "subtitle": "أكمل هذه الخطوات لإطلاق موقع مطعمك",
-      "requiredSteps": "الخطوات المطلوبة",
-      "optionalSteps": "الخطوات الاختيارية",
-      "viewMenu": "عرض قائمتك",
-      "steps": {
-        "info": {
-          "name": "معلومات المطعم",
-          "description": "أضف اسم مطعمك واختر عنوان الموقع"
-        },
-        "categories": {
-          "name": "إنشاء الفئات",
-          "description": "نظم قائمتك بفئات مثل المقبلات، الأطباق الرئيسية، إلخ."
-        },
-        "items": {
-          "name": "إضافة عناصر القائمة",
-          "description": "أضف الأطباق إلى قائمتك مع الأسعار والأوصاف"
-        },
-        "contacts": {
-          "name": "إضافة جهات الاتصال",
-          "description": "أضف الهاتف، واتساب، انستغرام، والموقع"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "مكتمل",
-      "notCompleted": "غير مكتمل",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "إضافة صنف",
+      "addCategory": "إضافة فئة"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "إعدادات الحجز",
     "subscriptionRequired": "لجعل الحجوزات متاحة لضيوف مطعمك، تحتاج للاشتراك في الخدمة.",
     "subscribe": "اشترك",
     "reservationsEnabled": "تفعيل الحجوزات",

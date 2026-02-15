@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Painel",
-      "onboarding": "Integração",
       "qrMenu": "Menu QR",
       "analytics": "Análises",
       "categories": "Categorias",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Nenhuma categoria ainda. Crie sua primeira categoria para começar.",
-      "addCategory": "Adicionar",
+      "addCategory": "Adicionar categoria",
       "editCategory": "Editar Categoria",
       "name": "Nome",
       "namePlaceholder": "Digite o nome da categoria",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Nenhum item ainda. Crie seu primeiro item para começar.",
       "noCategoriesHint": "Adicione uma categoria primeiro para criar itens.",
-      "addItem": "Adicionar",
+      "addItem": "Adicionar artigo",
       "editItem": "Editar Item",
       "name": "Nome",
       "namePlaceholder": "Digite o nome do item",
@@ -1449,7 +1448,7 @@
       "description": "Subtítulo",
       "descriptionPlaceholder": "Descrição breve (opcional)",
       "descriptionHint": "Exibido abaixo do título na página inicial",
-      "slug": "URL Slug",
+      "slug": "Slug do URL",
       "slugPlaceholder": "meu-restaurante",
       "slugHint": "Seu site estará disponível em: iq-rest.com/{slug}",
       "currency": "Moeda",
@@ -1466,73 +1465,13 @@
       "close": "Fechar",
       "view": "Ver"
     },
-    "onboarding": {
-      "title": "Bem-vindo ao IQ Rest!",
-      "subtitle": "Complete estas etapas para lançar o site do seu restaurante",
-      "requiredSteps": "Etapas Obrigatórias",
-      "optionalSteps": "Etapas Opcionais",
-      "viewMenu": "Ver Seu Menu",
-      "steps": {
-        "info": {
-          "name": "Info do Restaurante",
-          "description": "Adicione o nome do seu restaurante e escolha um endereço web"
-        },
-        "categories": {
-          "name": "Criar Categorias",
-          "description": "Organize seu menu com categorias como Entradas, Pratos Principais, etc."
-        },
-        "items": {
-          "name": "Adicionar Itens do Menu",
-          "description": "Adicione pratos ao menu com preços e descrições"
-        },
-        "contacts": {
-          "name": "Adicionar Contatos",
-          "description": "Adicione telefone, WhatsApp, Instagram e localização"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Concluído",
-      "notCompleted": "Não concluído",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Adicionar item",
+      "addCategory": "Adicionar categoria"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Configurações de reserva",
     "subscriptionRequired": "Para disponibilizar reservas aos seus clientes, você precisa assinar o serviço.",
     "subscribe": "Assinar",
     "reservationsEnabled": "Ativar Reservas",

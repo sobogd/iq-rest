@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Armatuurlaud",
-      "onboarding": "Sissejuhatus",
       "qrMenu": "QR Menüü",
       "analytics": "Analüütika",
       "categories": "Kategooriad",
@@ -1219,7 +1218,7 @@
       "tables": "Lauad",
       "billing": "Arveldamine",
       "support": "Tugi",
-      "menu": "Menu"
+      "menu": "Menüü"
     },
     "sidebar": {
       "qrMenu": "QR Menüü",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Kategooriaid pole veel. Looge oma esimene kategooria, et alustada.",
-      "addCategory": "Lisa",
+      "addCategory": "Lisa kategooria",
       "editCategory": "Muuda kategooriat",
       "name": "Nimi",
       "namePlaceholder": "Sisestage kategooria nimi",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Ei ole veel tooteid. Looge oma esimene toode, et alustada.",
       "noCategoriesHint": "Lisage esmalt kategooria, et luua tooteid.",
-      "addItem": "Lisa",
+      "addItem": "Lisa toode",
       "editItem": "Muuda toodet",
       "name": "Nimi",
       "namePlaceholder": "Sisestage toote nimi",
@@ -1449,7 +1448,7 @@
       "description": "Alapealkiri",
       "descriptionPlaceholder": "Lühike kirjeldus (valikuline)",
       "descriptionHint": "Kuvatakse pealkirja all avalehel",
-      "slug": "URL Slug",
+      "slug": "URL-lühend",
       "slugPlaceholder": "minu-restoran",
       "slugHint": "Teie veebisait on saadaval aadressil: iq-rest.com/{slug}",
       "currency": "Valuuta",
@@ -1466,73 +1465,13 @@
       "close": "Sulge",
       "view": "Vaata"
     },
-    "onboarding": {
-      "title": "Tere tulemast IQ Resti!",
-      "subtitle": "Lõpetage need sammud, et käivitada oma restorani veebisait",
-      "requiredSteps": "Kohustuslikud sammud",
-      "optionalSteps": "Valikulised sammud",
-      "viewMenu": "Vaata oma menüüd",
-      "steps": {
-        "info": {
-          "name": "Restorani teave",
-          "description": "Lisage oma restorani nimi ja valige veebiaadress"
-        },
-        "categories": {
-          "name": "Loo kategooriad",
-          "description": "Korraldage oma menüü kategooriatega nagu Eelroad, Põhiroad jne."
-        },
-        "items": {
-          "name": "Lisa menüüelemendid",
-          "description": "Lisage menüüsse roogasid koos hindade ja kirjeldustega"
-        },
-        "contacts": {
-          "name": "Lisa kontaktid",
-          "description": "Lisage telefon, WhatsApp, Instagram ja asukoht"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Lõpetatud",
-      "notCompleted": "Ei ole lõpetatud",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Lisa toode",
+      "addCategory": "Lisa kategooria"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Broneeringu seaded",
     "subscriptionRequired": "Kuna teie restorani külalistele broneeringute tegemine on vajalik, peate teenusele tellima.",
     "subscribe": "Telli",
     "reservationsEnabled": "Luba broneeringud",

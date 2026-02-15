@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Панель керування",
-      "onboarding": "Онбординг",
       "qrMenu": "QR Меню",
       "analytics": "Аналітика",
       "categories": "Категорії",
@@ -1219,7 +1218,7 @@
       "tables": "Стіли",
       "billing": "Білінг",
       "support": "Підтримка",
-      "menu": "Menu"
+      "menu": "Меню"
     },
     "sidebar": {
       "qrMenu": "QR Меню",
@@ -1239,7 +1238,7 @@
     "auth": {
       "title": "Увійти",
       "subtitle": "Сучасний вебсайт з QR меню, бронюваннями та перекладами на базі ШІ",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "ваш@email.com",
       "continue": "Продовжити",
       "verifyTitle": "Перевірте вашу електронну пошту",
       "verifySubtitle": "Ми надіслали код на {email}",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Категорій поки що немає. Створіть свою першу категорію, щоб розпочати.",
-      "addCategory": "Додати",
+      "addCategory": "Додати категорію",
       "editCategory": "Редагувати категорію",
       "name": "Назва",
       "namePlaceholder": "Введіть назву категорії",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Ще немає жодних позицій. Створіть свою першу позицію, щоб почати.",
       "noCategoriesHint": "Спочатку додайте категорію, щоб створити позиції.",
-      "addItem": "Додати",
+      "addItem": "Додати товар",
       "editItem": "Редагувати позицію",
       "name": "Назва",
       "namePlaceholder": "Введіть назву позиції",
@@ -1466,73 +1465,13 @@
       "close": "Закрити",
       "view": "Переглянути"
     },
-    "onboarding": {
-      "title": "Ласкаво просимо до IQ Rest!",
-      "subtitle": "Виконайте ці кроки, щоб запустити сайт вашого ресторану",
-      "requiredSteps": "Обов'язкові кроки",
-      "optionalSteps": "Необов'язкові кроки",
-      "viewMenu": "Переглянути ваше меню",
-      "steps": {
-        "info": {
-          "name": "Інформація про ресторан",
-          "description": "Додайте назву ресторану та виберіть веб-адресу"
-        },
-        "categories": {
-          "name": "Створити категорії",
-          "description": "Організуйте меню категоріями, такими як Закуски, Основні страви тощо"
-        },
-        "items": {
-          "name": "Додати страви",
-          "description": "Додайте страви до меню з цінами та описами"
-        },
-        "contacts": {
-          "name": "Додати контакти",
-          "description": "Додайте телефон, WhatsApp, Instagram та місцезнаходження"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Завершено",
-      "notCompleted": "Не завершено",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Додати товар",
+      "addCategory": "Додати категорію"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Налаштування бронювання",
     "subscriptionRequired": "Щоб зробити резервування доступним для ваших гостей ресторану, вам потрібно підписатися на сервіс.",
     "subscribe": "Підписатися",
     "reservationsEnabled": "Увімкнути резервування",

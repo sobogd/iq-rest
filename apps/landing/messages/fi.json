@@ -1205,7 +1205,6 @@
   "dashboard": {
     "pages": {
       "home": "Hallintapaneeli",
-      "onboarding": "Aloitus",
       "qrMenu": "QR-valikko",
       "analytics": "Analytiikka",
       "categories": "Kategoriat",
@@ -1285,7 +1284,7 @@
     },
     "categories": {
       "noCategories": "Ei vielä kategorioita. Luo ensimmäinen kategoriasi aloittaaksesi.",
-      "addCategory": "Lisää",
+      "addCategory": "Lisää kategoria",
       "editCategory": "Muokkaa kategoriaa",
       "name": "Nimi",
       "namePlaceholder": "Syötä kategorian nimi",
@@ -1317,7 +1316,7 @@
     "items": {
       "noItems": "Ei vielä tuotteita. Luo ensimmäinen tuote aloittaaksesi.",
       "noCategoriesHint": "Lisää ensin kategoria luodaksesi tuotteita.",
-      "addItem": "Lisää",
+      "addItem": "Lisää tuote",
       "editItem": "Muokkaa tuotetta",
       "name": "Nimi",
       "namePlaceholder": "Syötä tuotteen nimi",
@@ -1449,7 +1448,7 @@
       "description": "Alaotsikko",
       "descriptionPlaceholder": "Lyhyt kuvaus (valinnainen)",
       "descriptionHint": "Näkyy otsikon alla etusivulla",
-      "slug": "URL Slug",
+      "slug": "URL-osoite",
       "slugPlaceholder": "ravintolani",
       "slugHint": "Verkkosivustosi on saatavilla osoitteessa: iq-rest.com/{slug}",
       "currency": "Valuutta",
@@ -1466,73 +1465,13 @@
       "close": "Sulje",
       "view": "Näytä"
     },
-    "onboarding": {
-      "title": "Tervetuloa IQ Restiin!",
-      "subtitle": "Suorita nämä vaiheet käynnistääksesi ravintolan verkkosivuston",
-      "requiredSteps": "Pakolliset vaiheet",
-      "optionalSteps": "Valinnaiset vaiheet",
-      "viewMenu": "Näytä valikkosi",
-      "steps": {
-        "info": {
-          "name": "Ravintolan tiedot",
-          "description": "Lisää ravintolasi nimi ja valitse verkko-osoite"
-        },
-        "categories": {
-          "name": "Luo kategoriat",
-          "description": "Järjestä valikkosi kategorioilla kuten Alkupalat, Pääruoat jne."
-        },
-        "items": {
-          "name": "Lisää valikon kohteet",
-          "description": "Lisää ruokia valikkoosi hintojen ja kuvausten kanssa"
-        },
-        "contacts": {
-          "name": "Lisää yhteystiedot",
-          "description": "Lisää puhelin, WhatsApp, Instagram ja sijainti"
-        },
-        "menu": {
-          "name": "Build Your Menu",
-          "description": "Create categories and add dishes to your menu"
-        }
-      },
-      "completed": "Valmis",
-      "notCompleted": "Ei valmis",
-      "stepIndicator": "Step {current} of {total}",
-      "restaurantNamePlaceholder": "Enter restaurant name",
-      "continue": "Continue",
-      "createError": "Failed to create restaurant",
-      "completedTitle": "Make it yours",
-      "completedSubtitle": "Your menu is live! Here's how to make it even better.",
-      "nextSteps": {
-        "contacts": {
-          "title": "Help customers reach you",
-          "description": "Add phone, WhatsApp, and Instagram so guests can contact you"
-        },
-        "settings": {
-          "title": "Fine-tune your menu",
-          "description": "Set your description, custom URL, and currency"
-        },
-        "design": {
-          "title": "Match your brand",
-          "description": "Choose colors and background that reflect your style"
-        },
-        "languages": {
-          "title": "Translate your menu",
-          "description": "Add languages to welcome international guests"
-        },
-        "qrMenu": {
-          "title": "Get customers scanning",
-          "description": "Print your QR code and share your menu link"
-        }
-      },
-      "goToDashboard": "Go to Dashboard"
-    },
     "menu": {
-      "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addItem": "Lisää tuote",
+      "addCategory": "Lisää kategoria"
     }
   },
   "reservationSettings": {
-    "title": "Reservation Settings",
+    "title": "Varausasetukset",
     "subscriptionRequired": "Jotta voit tehdä varauksia ravintolasi asiakkaille, sinun on tilattava palvelu.",
     "subscribe": "Tilaa",
     "reservationsEnabled": "Ota varaukset käyttöön",
