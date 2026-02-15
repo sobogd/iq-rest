@@ -18,13 +18,14 @@ import {
 import { useTranslations } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
-import { Link } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
 export function DesignPage() {
   const t = useTranslations("dashboard.design");
-  const { returnToOnboarding, setActivePage } = useDashboard();
+  const { returnToOnboarding } = useDashboard();
+  const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [loading, setLoading] = useState(true);
@@ -268,7 +269,7 @@ export function DesignPage() {
                 size="sm"
                 variant="outline"
                 className="border-amber-500/50 hover:bg-amber-500/10"
-                onClick={() => setActivePage("billing")}
+                onClick={() => router.push("/dashboard/billing")}
               >
                 {t("subscribe")}
               </Button>

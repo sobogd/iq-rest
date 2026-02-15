@@ -27,6 +27,7 @@ import {
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { analytics } from "@/lib/analytics";
+import { useRouter } from "@/i18n/routing";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormTextarea } from "../_ui/form-textarea";
@@ -63,7 +64,7 @@ interface ItemWithTranslations {
 }
 
 export function ItemsPage() {
-  const { translations, returnToOnboarding, registerFormClose, unregisterFormClose } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
   const t = translations.items;
 
   const [items, setItems] = useState<ItemWithTranslations[]>([]);
@@ -104,23 +105,9 @@ export function ItemsPage() {
     if (sessionStorage.getItem("openFormOnNavigate") === "true") {
       sessionStorage.removeItem("openFormOnNavigate");
       setShowForm(true);
-      window.history.pushState(null, "", "#items-form");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Register form close handler for browser back button
-  useEffect(() => {
-    if (showForm) {
-      registerFormClose(() => {
-        setShowForm(false);
-        setEditingItem(null);
-      });
-      return () => {
-        unregisterFormClose();
-      };
-    }
-  }, [showForm, registerFormClose, unregisterFormClose]);
 
   async function fetchData() {
     try {
@@ -282,25 +269,21 @@ export function ItemsPage() {
   function handleEditItem(item: ItemWithTranslations) {
     setEditingItem(item);
     setShowForm(true);
-    window.history.pushState(null, "", "#items-form");
   }
 
   function handleAddItem() {
     setEditingItem(null);
     setShowForm(true);
-    window.history.pushState(null, "", "#items-form");
   }
 
   function handleFormClose() {
     setShowForm(false);
     setEditingItem(null);
-    unregisterFormClose();
   }
 
   function handleFormSaved() {
     setShowForm(false);
     setEditingItem(null);
-    unregisterFormClose();
     fetchData();
     returnToOnboarding();
   }
@@ -437,7 +420,8 @@ interface ItemFormSheetProps {
 }
 
 function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProps) {
-  const { translations, setActivePage } = useDashboard();
+  const { translations } = useDashboard();
+  const router = useRouter();
   const t = translations.items;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
@@ -797,7 +781,7 @@ function ItemFormSheet({ item, categories, onClose, onSaved }: ItemFormSheetProp
                         size="sm"
                         variant="outline"
                         className="border-amber-500/50 hover:bg-amber-500/10"
-                        onClick={() => setActivePage("billing")}
+                        onClick={() => router.push("/dashboard/billing")}
                       >
                         {t.subscribe}
                       </Button>

@@ -9,7 +9,6 @@ async function handleLogout(request: NextRequest) {
   cookieStore.delete("user_email");
   cookieStore.delete("user_id");
   cookieStore.delete("dashboard-active-page");
-  cookieStore.delete("sidebar_state");
 
   // Get the origin from host header (works correctly behind reverse proxy)
   const host = request.headers.get("host") || "localhost:3000";

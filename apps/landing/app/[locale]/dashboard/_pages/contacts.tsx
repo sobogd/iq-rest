@@ -10,6 +10,7 @@ import { MapPicker } from "@/components/map-picker";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 
+
 export function ContactsPage() {
   const t = useTranslations("dashboard.contacts");
   const { returnToOnboarding } = useDashboard();

@@ -22,7 +22,7 @@ import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { PageLoader } from "../_ui/page-loader";
 import { FormSwitch } from "../_ui/form-switch";
-import { useDashboard } from "../_context/dashboard-context";
+import { useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -55,7 +55,7 @@ const POLLING_INTERVAL = 30000;
 export function ReservationsPage() {
   const t = useTranslations("reservations");
   const tSettings = useTranslations("reservationSettings");
-  const { setActivePage } = useDashboard();
+  const router = useRouter();
 
   const [reservations, setReservations] = useState<Reservation[]>([]);
   const [loading, setLoading] = useState(true);
@@ -350,7 +350,7 @@ export function ReservationsPage() {
                   size="sm"
                   variant="outline"
                   className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                  onClick={() => setActivePage("billing")}
+                  onClick={() => router.push("/dashboard/billing")}
                 >
                   {tSettings("subscribe")}
                 </Button>

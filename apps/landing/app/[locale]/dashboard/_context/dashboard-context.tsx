@@ -1,8 +1,7 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect, useRef, ReactNode } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-import { analytics } from "@/lib/analytics";
+import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import { useRouter } from "@/i18n/routing";
 
 export type PageKey =
   | "onboarding"
@@ -21,6 +20,52 @@ export type PageKey =
   | "support"
   | "admin"
   | "adminAnalytics";
+
+export const PAGE_PATHS: Record<PageKey, string> = {
+  onboarding: "/dashboard/onboarding",
+  home: "/dashboard/home",
+  categories: "/dashboard/categories",
+  items: "/dashboard/items",
+  tables: "/dashboard/tables",
+  reservations: "/dashboard/reservations",
+  design: "/dashboard/design",
+  contacts: "/dashboard/contacts",
+  languages: "/dashboard/languages",
+  qrMenu: "/dashboard/qr-menu",
+  analytics: "/dashboard/analytics",
+  billing: "/dashboard/billing",
+  settings: "/dashboard/settings",
+  support: "/dashboard/support",
+  admin: "/dashboard/admin",
+  adminAnalytics: "/dashboard/admin/analytics",
+};
+
+const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
+  "onboarding": "onboarding",
+  "home": "home",
+  "categories": "categories",
+  "items": "items",
+  "tables": "tables",
+  "reservations": "reservations",
+  "design": "design",
+  "contacts": "contacts",
+  "languages": "languages",
+  "qr-menu": "qrMenu",
+  "analytics": "analytics",
+  "billing": "billing",
+  "settings": "settings",
+  "support": "support",
+  "admin": "admin",
+  "admin/analytics": "adminAnalytics",
+};
+
+export function getPageKeyFromPathname(pathname: string): PageKey {
+  const dashboardPrefix = "/dashboard/";
+  const idx = pathname.indexOf(dashboardPrefix);
+  if (idx === -1) return "onboarding";
+  const subPath = pathname.slice(idx + dashboardPrefix.length);
+  return PATH_TO_PAGE_MAP[subPath] || "onboarding";
+}
 
 export interface AnalyticsTranslations {
   monthlyUsage: string;
@@ -144,35 +189,12 @@ export interface SettingsTranslations {
 
 export interface DashboardTranslations {
   pages: Record<PageKey, string>;
-  sidebar: {
-    qrMenu: string;
-    menu: string;
-    settings: string;
-    reservations: string;
-    account: string;
-  };
   logout: string;
   analytics: AnalyticsTranslations;
   categories: CategoriesTranslations;
   items: ItemsTranslations;
   settings: SettingsTranslations;
 }
-
-interface DashboardContextType {
-  activePage: PageKey;
-  setActivePage: (page: PageKey) => void;
-  navigateFromOnboarding: (page: PageKey) => void;
-  returnToOnboarding: () => boolean;
-  translations: DashboardTranslations;
-  registerFormClose: (closeHandler: () => void) => void;
-  unregisterFormClose: () => void;
-  onboardingCompleted: boolean;
-  setOnboardingCompleted: (v: boolean) => void;
-}
-
-const DashboardContext = createContext<DashboardContextType | null>(null);
-
-const COOKIE_KEY = "dashboard-active-page";
 
 const validPages: PageKey[] = [
   "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
@@ -183,157 +205,37 @@ export function isValidPageKey(value: string): value is PageKey {
   return validPages.includes(value as PageKey);
 }
 
-function setPageCookie(page: PageKey) {
-  document.cookie = `${COOKIE_KEY}=${page};path=/;max-age=31536000`;
+interface DashboardContextType {
+  translations: DashboardTranslations;
+  onboardingCompleted: boolean;
+  setOnboardingCompleted: (v: boolean) => void;
+  returnToOnboarding: () => boolean;
 }
 
-function getPageFromHash(): PageKey | null {
-  if (typeof window === "undefined") return null;
-  const hash = window.location.hash.slice(1); // remove #
-  return isValidPageKey(hash) ? hash : null;
-}
+const DashboardContext = createContext<DashboardContextType | null>(null);
 
 export function DashboardProvider({
   children,
   translations,
-  initialPage = "home",
 }: {
   children: ReactNode;
   translations: DashboardTranslations;
-  initialPage?: PageKey;
 }) {
-  const searchParams = useSearchParams();
   const router = useRouter();
-  const isNavigatingRef = useRef(false);
-  const formCloseHandlerRef = useRef<(() => void) | null>(null);
-
-  // Priority: hash > query param > initialPage
-  const pageParam = searchParams.get("page");
-  const hashPage = typeof window !== "undefined" ? getPageFromHash() : null;
-  const effectiveInitialPage = hashPage || (pageParam && isValidPageKey(pageParam) ? pageParam : initialPage);
-
-  const [activePage, setActivePageState] = useState<PageKey>(effectiveInitialPage);
   const [onboardingCompleted, setOnboardingCompleted] = useState(false);
-  const previousPageRef = useRef<PageKey>(effectiveInitialPage);
-
-  // Handle query param (legacy support) - convert to hash
-  useEffect(() => {
-    const pageParam = searchParams.get("page");
-    if (pageParam && isValidPageKey(pageParam)) {
-      setActivePageState(pageParam);
-      setPageCookie(pageParam);
-
-      // Replace URL with hash instead of query param
-      const newParams = new URLSearchParams(searchParams.toString());
-      newParams.delete("page");
-      const basePath = newParams.toString()
-        ? `${window.location.pathname}?${newParams.toString()}`
-        : window.location.pathname;
-      router.replace(`${basePath}#${pageParam}`, { scroll: false });
-    }
-  }, [searchParams, router]);
-
-  // Set initial hash and ensure onboarding is in history
-  useEffect(() => {
-    if (!window.location.hash && activePage) {
-      // If starting on a page other than onboarding, add onboarding to history first
-      if (activePage !== "onboarding") {
-        window.history.replaceState(null, "", "#onboarding");
-        window.history.pushState(null, "", `#${activePage}`);
-      } else {
-        window.history.replaceState(null, "", `#${activePage}`);
-      }
-    }
-  }, []);
-
-  // Listen for browser back/forward buttons
-  useEffect(() => {
-    const handlePopState = () => {
-      const currentHash = window.location.hash.slice(1) || "onboarding";
-
-      // If a form is open, close it and stay on current page
-      if (formCloseHandlerRef.current) {
-        formCloseHandlerRef.current();
-        formCloseHandlerRef.current = null;
-        // Browser already went back to the list URL, just stay there
-        return;
-      }
-
-      // If on onboarding, allow exit to landing
-      if (currentHash === "onboarding" && activePage === "onboarding") {
-        return;
-      }
-
-      // Otherwise redirect to onboarding
-      window.history.pushState(null, "", "#onboarding");
-      setActivePageState("onboarding");
-      setPageCookie("onboarding");
-      previousPageRef.current = "onboarding";
-      isNavigatingRef.current = true;
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [activePage]);
-
-
-  const trackPageView = useCallback((page: PageKey) => {
-    analytics.dashboard.pageView(page);
-  }, []);
-
-  const setActivePage = useCallback((page: PageKey) => {
-    const fromPage = previousPageRef.current;
-    if (fromPage !== page) {
-      trackPageView(page);
-      // Push to history for browser back button support
-      if (!isNavigatingRef.current) {
-        window.history.pushState(null, "", `#${page}`);
-      }
-      isNavigatingRef.current = false;
-    }
-    previousPageRef.current = page;
-    setActivePageState(page);
-    setPageCookie(page);
-  }, [trackPageView]);
-
-  const navigateFromOnboarding = useCallback((page: PageKey) => {
-    trackPageView(page);
-    previousPageRef.current = page;
-    sessionStorage.setItem("returnToOnboarding", "true");
-    // For categories/items pages, open form directly
-    if (page === "categories" || page === "items") {
-      sessionStorage.setItem("openFormOnNavigate", "true");
-    }
-    // Push to history for browser back button support
-    window.history.pushState(null, "", `#${page}`);
-    setActivePageState(page);
-    setPageCookie(page);
-  }, [trackPageView]);
 
   const returnToOnboarding = useCallback(() => {
     const shouldReturn = sessionStorage.getItem("returnToOnboarding") === "true";
     if (shouldReturn) {
-      previousPageRef.current = "onboarding";
       sessionStorage.removeItem("returnToOnboarding");
-      // Push to history for browser back button support
-      window.history.pushState(null, "", "#onboarding");
-      setActivePageState("onboarding");
-      setPageCookie("onboarding");
+      router.push("/dashboard/onboarding");
       return true;
     }
     return false;
-  }, []);
-
-  const registerFormClose = useCallback((closeHandler: () => void) => {
-    formCloseHandlerRef.current = closeHandler;
-  }, []);
-
-  const unregisterFormClose = useCallback(() => {
-    formCloseHandlerRef.current = null;
-  }, []);
+  }, [router]);
 
   return (
-    <DashboardContext.Provider value={{ activePage, setActivePage, navigateFromOnboarding, returnToOnboarding, translations, registerFormClose, unregisterFormClose, onboardingCompleted, setOnboardingCompleted }}>
+    <DashboardContext.Provider value={{ translations, onboardingCompleted, setOnboardingCompleted, returnToOnboarding }}>
       {children}
     </DashboardContext.Provider>
   );

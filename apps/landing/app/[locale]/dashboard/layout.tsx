@@ -1,30 +1,13 @@
-import { cookies } from "next/headers";
 import { getTranslations } from "next-intl/server";
 
 import { DashboardShell } from "./_components/shell";
-import type { DashboardTranslations, PageKey } from "./_context/dashboard-context";
-
-const validPages: PageKey[] = [
-  "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
-  "contacts", "languages", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
-];
-
-function isValidPageKey(value: string): value is PageKey {
-  return validPages.includes(value as PageKey);
-}
+import type { DashboardTranslations } from "./_context/dashboard-context";
 
 export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  void children;
-  const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value !== "false";
-
-  const savedPage = cookieStore.get("dashboard-active-page")?.value;
-  const initialPage: PageKey = savedPage && isValidPageKey(savedPage) ? savedPage : "onboarding";
-
   const t = await getTranslations("dashboard");
 
   const translations: DashboardTranslations = {
@@ -45,13 +28,6 @@ export default async function DashboardLayout({
       support: t("pages.support"),
       admin: "Admin",
       adminAnalytics: "Analytics",
-    },
-    sidebar: {
-      qrMenu: t("sidebar.qrMenu"),
-      menu: t("sidebar.menu"),
-      settings: t("sidebar.settings"),
-      reservations: t("sidebar.reservations"),
-      account: t("sidebar.account"),
     },
     logout: t("logout"),
     analytics: {
@@ -185,6 +161,8 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell defaultOpen={defaultOpen} translations={translations} initialPage={initialPage} />
+    <DashboardShell translations={translations}>
+      {children}
+    </DashboardShell>
   );
 }

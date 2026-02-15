@@ -26,6 +26,7 @@ import {
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { analytics } from "@/lib/analytics";
+import { useRouter } from "@/i18n/routing";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormSwitch } from "../_ui/form-switch";
@@ -38,7 +39,7 @@ interface CategoryWithTranslations extends Category {
 }
 
 export function CategoriesPage() {
-  const { translations, returnToOnboarding, registerFormClose, unregisterFormClose } = useDashboard();
+  const { translations, returnToOnboarding } = useDashboard();
   const t = translations.categories;
 
   const [categories, setCategories] = useState<CategoryWithTranslations[]>([]);
@@ -56,23 +57,9 @@ export function CategoriesPage() {
     if (sessionStorage.getItem("openFormOnNavigate") === "true") {
       sessionStorage.removeItem("openFormOnNavigate");
       setShowForm(true);
-      window.history.pushState(null, "", "#categories-form");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Register form close handler for browser back button
-  useEffect(() => {
-    if (showForm) {
-      registerFormClose(() => {
-        setShowForm(false);
-        setEditingCategory(null);
-      });
-      return () => {
-        unregisterFormClose();
-      };
-    }
-  }, [showForm, registerFormClose, unregisterFormClose]);
 
   async function fetchCategories() {
     try {
@@ -185,25 +172,21 @@ export function CategoriesPage() {
   function handleEditCategory(category: CategoryWithTranslations) {
     setEditingCategory(category);
     setShowForm(true);
-    window.history.pushState(null, "", "#categories-form");
   }
 
   function handleAddCategory() {
     setEditingCategory(null);
     setShowForm(true);
-    window.history.pushState(null, "", "#categories-form");
   }
 
   function handleFormClose() {
     setShowForm(false);
     setEditingCategory(null);
-    unregisterFormClose();
   }
 
   function handleFormSaved() {
     setShowForm(false);
     setEditingCategory(null);
-    unregisterFormClose();
     fetchCategories();
     returnToOnboarding();
   }

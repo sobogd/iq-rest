@@ -17,6 +17,7 @@ import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
+import { useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -31,7 +32,8 @@ const ALL_LANGUAGES = [
 
 export function LanguagesPage() {
   const t = useTranslations("dashboard.languages");
-  const { returnToOnboarding, setActivePage } = useDashboard();
+  const { returnToOnboarding } = useDashboard();
+  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<string | null>(null);
@@ -202,7 +204,7 @@ export function LanguagesPage() {
                   size="sm"
                   variant="outline"
                   className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                  onClick={() => setActivePage("settings")}
+                  onClick={() => router.push("/dashboard/settings")}
                 >
                   {t("goToSettings")}
                 </Button>
@@ -223,7 +225,7 @@ export function LanguagesPage() {
                   size="sm"
                   variant="outline"
                   className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                  onClick={() => setActivePage("billing")}
+                  onClick={() => router.push("/dashboard/billing")}
                 >
                   {t("upgrade")}
                 </Button>

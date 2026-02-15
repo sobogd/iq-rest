@@ -14,6 +14,7 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { FormSwitch } from "../_ui/form-switch";
 import { useDashboard } from "../_context/dashboard-context";
+import { useRouter } from "@/i18n/routing";
 import { toast } from "sonner";
 import { AlertCircle, Save, Loader2 } from "lucide-react";
 import type { SubscriptionStatus } from "@prisma/client";
@@ -21,7 +22,8 @@ import type { PlanType } from "@/lib/stripe-config";
 
 export function ReservationSettingsPage() {
   const t = useTranslations("reservationSettings");
-  const { setActivePage, returnToOnboarding } = useDashboard();
+  const { returnToOnboarding } = useDashboard();
+  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -175,7 +177,7 @@ export function ReservationSettingsPage() {
                   size="sm"
                   variant="outline"
                   className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                  onClick={() => setActivePage("billing")}
+                  onClick={() => router.push("/dashboard/billing")}
                 >
                   {t("subscribe")}
                 </Button>

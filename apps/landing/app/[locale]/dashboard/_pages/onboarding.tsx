@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useDashboard, PageKey } from "../_context/dashboard-context";
+import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
+import { useRouter } from "@/i18n/routing";
 import {
   Eye,
   Loader2,
@@ -86,7 +87,8 @@ export function OnboardingPage() {
   const t = useTranslations("dashboard.onboarding");
   const tPages = useTranslations("dashboard.pages");
   const tDashboard = useTranslations("dashboard");
-  const { navigateFromOnboarding, setActivePage, setOnboardingCompleted } = useDashboard();
+  const { setOnboardingCompleted } = useDashboard();
+  const router = useRouter();
   const [data, setData] = useState<OnboardingData | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
@@ -133,6 +135,14 @@ export function OnboardingPage() {
     }
     fetchProgress();
   }, []);
+
+  function navigateFromOnboarding(page: PageKey) {
+    sessionStorage.setItem("returnToOnboarding", "true");
+    if (page === "categories" || page === "items") {
+      sessionStorage.setItem("openFormOnNavigate", "true");
+    }
+    router.push(PAGE_PATHS[page]);
+  }
 
   const handleStepClick = (_step: StepKey, page: PageKey) => {
     onboardingAnalytics.stepContinue(currentStep + 1);
@@ -219,7 +229,7 @@ export function OnboardingPage() {
               {prioritySteps.map((item) => (
                 <button
                   key={item.key}
-                  onClick={() => setActivePage(item.page)}
+                  onClick={() => router.push(PAGE_PATHS[item.page])}
                   className="flex items-center gap-3 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
                 >
                   <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />
@@ -236,7 +246,7 @@ export function OnboardingPage() {
               {allSections.map((item) => (
                 <button
                   key={item.key}
-                  onClick={() => setActivePage(item.page)}
+                  onClick={() => router.push(PAGE_PATHS[item.page])}
                   className="flex flex-col items-center gap-1.5 p-3 rounded-lg border bg-card hover:bg-accent transition-colors"
                 >
                   <item.icon className="h-5 w-5 text-muted-foreground" />
@@ -249,14 +259,14 @@ export function OnboardingPage() {
             {isAdmin && (
               <div className="grid grid-cols-2 gap-2">
                 <button
-                  onClick={() => setActivePage("admin")}
+                  onClick={() => router.push("/dashboard/admin")}
                   className="flex items-center gap-2 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
                 >
                   <Shield className="h-4 w-4 text-muted-foreground shrink-0" />
                   <span className="text-sm font-medium">Companies</span>
                 </button>
                 <button
-                  onClick={() => setActivePage("adminAnalytics")}
+                  onClick={() => router.push("/dashboard/admin/analytics")}
                   className="flex items-center gap-2 p-3 rounded-lg border bg-card hover:bg-accent transition-colors text-left"
                 >
                   <Activity className="h-4 w-4 text-muted-foreground shrink-0" />

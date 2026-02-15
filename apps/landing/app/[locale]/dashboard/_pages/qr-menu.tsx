@@ -10,7 +10,7 @@ import { Printer, Download, Eye } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { PageLoader } from "../_ui/page-loader";
 import { useTranslations } from "next-intl";
-import { useDashboard } from "../_context/dashboard-context";
+import { useRouter } from "@/i18n/routing";
 
 const PAPER_FORMATS = {
   a4: { width: 210, height: 297, name: "A4" },
@@ -30,7 +30,7 @@ const QR_PER_PAGE = {
 
 export function QrMenuPage() {
   const t = useTranslations("qrCode");
-  const { setActivePage } = useDashboard();
+  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [slug, setSlug] = useState<string | null>(null);
@@ -239,7 +239,7 @@ export function QrMenuPage() {
           <div className="text-center">
             <p className="font-medium">{t("noSlug")}</p>
             <p className="text-sm text-muted-foreground max-w-[270px] mt-2">{t("noSlugDescription")}</p>
-            <Button size="sm" className="mt-5" onClick={() => setActivePage("settings")}>
+            <Button size="sm" className="mt-5" onClick={() => router.push("/dashboard/settings")}>
               {t("goToSettings")}
             </Button>
           </div>
