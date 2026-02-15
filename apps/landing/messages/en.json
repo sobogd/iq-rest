@@ -1217,7 +1217,8 @@
       "reservationSettings": "Reservation Settings",
       "tables": "Tables",
       "billing": "Billing",
-      "support": "Support"
+      "support": "Support",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Menu",
@@ -1375,6 +1376,10 @@
       "subscribeForAllergens": "Subscribe to add allergen labels",
       "subscribe": "Subscribe"
     },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
+    },
     "languages": {
       "translationProgress": "Translation Progress",
       "availableLanguages": "Available Languages",
@@ -1479,6 +1484,10 @@
         "categories": {
           "name": "Create Categories",
           "description": "Organize your menu with categories like Appetizers, Main Courses, etc."
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         },
         "items": {
           "name": "Add Menu Items",

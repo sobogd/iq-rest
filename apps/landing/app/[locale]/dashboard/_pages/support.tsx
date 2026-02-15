@@ -105,7 +105,7 @@ export function SupportPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.support} />
-      <div className="flex-1 overflow-auto px-6 pb-6 space-y-3">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-3">
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full">
             <div className="text-center">
@@ -150,7 +150,7 @@ export function SupportPage() {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
+      <div className="px-6 py-4 bg-background shrink-0">
         <div className="flex flex-col md:flex-row md:items-start gap-3">
           <Textarea
             ref={textareaRef}

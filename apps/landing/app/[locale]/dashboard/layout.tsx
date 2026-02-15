@@ -16,6 +16,7 @@ export default async function DashboardLayout({
       onboarding: t("pages.onboarding"),
       qrMenu: t("pages.qrMenu"),
       analytics: t("pages.analytics"),
+      menu: t("pages.menu"),
       categories: t("pages.categories"),
       items: t("pages.items"),
       settings: t("pages.settings"),
@@ -56,6 +57,10 @@ export default async function DashboardLayout({
         fr: t("analytics.languageNames.fr"),
         ru: t("analytics.languageNames.ru"),
       },
+    },
+    menu: {
+      addItem: t("menu.addItem"),
+      addCategory: t("menu.addCategory"),
     },
     categories: {
       noCategories: t("categories.noCategories"),

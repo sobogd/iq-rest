@@ -255,7 +255,7 @@ export function QrMenuPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.qrMenu} />
-      <div className="flex-1 overflow-auto px-6 pb-6 space-y-6">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
         <div ref={printRef} className="hidden">
           <QRCodeSVG
             value={menuUrl}
@@ -342,17 +342,17 @@ export function QrMenuPage() {
             </Select>
           </div>
         </div>
-      </div>
 
-      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
-        <Button onClick={handleDownload} variant="outline">
-          <Download className="mr-2 h-4 w-4" />
-          {t("download")}
-        </Button>
-        <Button onClick={handlePrint}>
-          <Printer className="mr-2 h-4 w-4" />
-          {t("print")}
-        </Button>
+        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
+          <Button onClick={handleDownload} variant="outline" className="h-10 rounded-xl shadow-md">
+            <Download className="mr-2 h-4 w-4" />
+            {t("download")}
+          </Button>
+          <Button onClick={handlePrint} variant="destructive" className="h-10 rounded-xl shadow-md">
+            <Printer className="mr-2 h-4 w-4" />
+            {t("print")}
+          </Button>
+        </div>
       </div>
     </div>
   );

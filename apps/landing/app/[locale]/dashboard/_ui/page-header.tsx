@@ -13,7 +13,7 @@ export function PageHeader({ title, children, onBack }: PageHeaderProps) {
   const router = useRouter();
 
   return (
-    <header className="flex h-14 shrink-0 items-center px-6 my-4">
+    <header className="flex shrink-0 items-center px-6 py-4 shadow-sm">
       <button
         onClick={onBack || (() => router.back())}
         className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"

@@ -8,6 +8,7 @@ export type PageKey =
   | "qrMenu"
   | "home"
   | "analytics"
+  | "menu"
   | "categories"
   | "items"
   | "settings"
@@ -24,6 +25,7 @@ export type PageKey =
 export const PAGE_PATHS: Record<PageKey, string> = {
   onboarding: "/dashboard/onboarding",
   home: "/dashboard/home",
+  menu: "/dashboard/menu",
   categories: "/dashboard/categories",
   items: "/dashboard/items",
   tables: "/dashboard/tables",
@@ -43,6 +45,7 @@ export const PAGE_PATHS: Record<PageKey, string> = {
 const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
   "onboarding": "onboarding",
   "home": "home",
+  "menu": "menu",
   "categories": "categories",
   "items": "items",
   "tables": "tables",
@@ -164,6 +167,11 @@ export interface ItemsTranslations {
   subscribe: string;
 }
 
+export interface MenuTranslations {
+  addItem: string;
+  addCategory: string;
+}
+
 export interface SettingsTranslations {
   name: string;
   namePlaceholder: string;
@@ -191,13 +199,14 @@ export interface DashboardTranslations {
   pages: Record<PageKey, string>;
   logout: string;
   analytics: AnalyticsTranslations;
+  menu: MenuTranslations;
   categories: CategoriesTranslations;
   items: ItemsTranslations;
   settings: SettingsTranslations;
 }
 
 const validPages: PageKey[] = [
-  "onboarding", "qrMenu", "home", "analytics", "categories", "items", "settings", "design",
+  "onboarding", "qrMenu", "home", "analytics", "menu", "categories", "items", "settings", "design",
   "contacts", "languages", "reservations", "tables", "billing", "support", "admin", "adminAnalytics"
 ];
 

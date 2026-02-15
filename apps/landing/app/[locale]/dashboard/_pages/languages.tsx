@@ -193,7 +193,7 @@ export function LanguagesPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.languages} />
-      <div className="flex-1 overflow-auto px-6 pb-6 space-y-6">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
         {!hasRestaurant && (
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">

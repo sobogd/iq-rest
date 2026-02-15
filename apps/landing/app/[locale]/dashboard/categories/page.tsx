@@ -1,5 +1,5 @@
-import { CategoriesPage } from "../_pages/categories";
+import { redirect } from "@/i18n/routing";
 
 export default function Page() {
-  return <CategoriesPage />;
+  redirect("/dashboard/menu");
 }

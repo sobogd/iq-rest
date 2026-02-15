@@ -166,7 +166,7 @@ export function ReservationSettingsPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.reservations} />
-      <div className="flex-1 overflow-auto px-6 pb-6 space-y-6">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
         {!hasActiveSubscription && (
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">
@@ -273,17 +273,17 @@ export function ReservationSettingsPage() {
             </div>
           </>
         )}
-      </div>
 
-      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
-        <Button onClick={handleSave} disabled={saving || !hasChanges}>
-          {saving ? (
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-          ) : (
-            <Save className="h-4 w-4 mr-2" />
-          )}
-          {t("save")}
-        </Button>
+        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
+          <Button onClick={handleSave} disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
+            {saving ? (
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            ) : (
+              <Save className="h-4 w-4 mr-2" />
+            )}
+            {t("save")}
+          </Button>
+        </div>
       </div>
     </div>
   );

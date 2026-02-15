@@ -1,5 +1,5 @@
-import { ItemsPage } from "../_pages/items";
+import { redirect } from "@/i18n/routing";
 
 export default function Page() {
-  return <ItemsPage />;
+  redirect("/dashboard/menu");
 }

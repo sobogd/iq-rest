@@ -190,7 +190,7 @@ export function DesignPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.design} />
-      <form id="design-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pb-6 space-y-6 max-w-md">
+      <form id="design-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6 max-w-md">
         <div className="space-y-2">
           <label className="text-sm font-medium">{t("background")}:</label>
           {source ? (
@@ -325,18 +325,18 @@ export function DesignPage() {
             </>
           )}
         </div>
-      </form>
 
-      <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
-        <Button type="submit" form="design-form" disabled={saving || uploading || !hasChanges}>
-          {saving ? (
-            <Loader2 className="h-4 w-4 animate-spin mr-2" />
-          ) : (
-            <Save className="h-4 w-4 mr-2" />
-          )}
-          {t("save")}
-        </Button>
-      </div>
+        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
+          <Button type="submit" disabled={saving || uploading || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
+            {saving ? (
+              <Loader2 className="h-4 w-4 animate-spin mr-2" />
+            ) : (
+              <Save className="h-4 w-4 mr-2" />
+            )}
+            {t("save")}
+          </Button>
+        </div>
+      </form>
 
       <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
         <AlertDialogContent>

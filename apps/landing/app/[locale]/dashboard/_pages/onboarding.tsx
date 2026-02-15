@@ -15,8 +15,7 @@ import {
   Phone,
   Languages,
   LogOut,
-  FolderOpen,
-  Package,
+  UtensilsCrossed,
   Cog,
   BarChart3,
   CalendarDays,
@@ -43,7 +42,7 @@ interface OnboardingData {
   slug: string | null;
 }
 
-type StepKey = "info" | "categories" | "items";
+type StepKey = "info" | "menu";
 
 interface Step {
   key: StepKey;
@@ -53,8 +52,7 @@ interface Step {
 
 const allSteps: Step[] = [
   { key: "info", progressKey: "hasInfo", page: "settings" },
-  { key: "categories", progressKey: "hasCategories", page: "categories" },
-  { key: "items", progressKey: "hasItems", page: "items" },
+  { key: "menu", progressKey: "hasItems", page: "menu" },
 ];
 
 interface NavItem {
@@ -72,8 +70,7 @@ const prioritySteps: NavItem[] = [
 
 // All remaining sections
 const allSections: NavItem[] = [
-  { key: "categories", page: "categories", icon: FolderOpen },
-  { key: "items", page: "items", icon: Package },
+  { key: "menu", page: "menu", icon: UtensilsCrossed },
   { key: "settings", page: "settings", icon: Cog },
   { key: "languages", page: "languages", icon: Languages },
   { key: "analytics", page: "analytics", icon: BarChart3 },
@@ -138,9 +135,6 @@ export function OnboardingPage() {
 
   function navigateFromOnboarding(page: PageKey) {
     sessionStorage.setItem("returnToOnboarding", "true");
-    if (page === "categories" || page === "items") {
-      sessionStorage.setItem("openFormOnNavigate", "true");
-    }
     router.push(PAGE_PATHS[page]);
   }
 

@@ -342,7 +342,7 @@ export function ReservationsPage() {
     return (
       <div className="flex flex-col h-full">
         <PageHeader title={translations.pages.reservations} />
-        <div className="flex-1 overflow-auto px-6 pb-6">
+        <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">
               <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
@@ -378,7 +378,7 @@ export function ReservationsPage() {
           <Settings className="h-5 w-5" />
         </button>
       </PageHeader>
-      <div className="flex-1 overflow-auto px-6 pb-6 space-y-4">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-4">
 
         {activeReservations.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16">
