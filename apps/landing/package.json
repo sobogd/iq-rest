@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev -p 8123",
     "build": "prisma generate && next build",
-    "start": "next start",
+    "start": "next start -p 8123",
     "lint": "next lint",
     "postinstall": "prisma generate"
   },
