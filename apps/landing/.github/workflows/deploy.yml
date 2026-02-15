@@ -41,9 +41,8 @@ jobs:
           username: deploy
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cat > /home/deploy/apps/iq-rest/.env << 'EOF'
+            cat > /home/deploy/apps/iq-rest/.env <<EOF
             DATABASE_URL=${{ secrets.DATABASE_URL }}
-            PORT=${{ secrets.PORT }}
             SMTP_HOST=${{ secrets.SMTP_HOST }}
             SMTP_PORT=${{ secrets.SMTP_PORT }}
             SMTP_USER=${{ secrets.SMTP_USER }}
@@ -61,7 +60,7 @@ jobs:
             NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
             OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
             EOF
-            
             cd /home/deploy/apps/iq-rest
-            pm2 restart iq-rest || pm2 start npm --name "iq-rest" -- start
+            pm2 delete iq-rest 2>/dev/null || true
+            pm2 start npm --name "iq-rest" -- start
             pm2 save
