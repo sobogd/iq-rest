@@ -22,7 +22,10 @@
       "cta": {
         "create": "Creează gratuit",
         "view": "Vezi demo",
-        "noCreditCard": "Nu este necesar cardul de credit"
+        "noCreditCard": "Nu este necesar cardul de credit",
+        "trusted": "Apreciat de peste 500 de restaurante din întreaga lume",
+        "title": "Ești pregătit să devii digital?",
+        "subtitle": "Creează-ți meniul QR profesional și site-ul restaurantului în câteva minute. Gratuit pentru totdeauna, fără card de credit necesar."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Setări rezervare",
       "tables": "Mese",
       "billing": "Facturare",
-      "support": "Asistență"
+      "support": "Asistență",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "Meniu QR",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Adăugați Contacte",
           "description": "Adăugați telefon, WhatsApp, Instagram și locație"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Finalizat",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

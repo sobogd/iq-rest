@@ -22,7 +22,10 @@
       "cta": {
         "create": "Почати",
         "view": "Демо",
-        "noCreditCard": "Кредитна картка не потрібна"
+        "noCreditCard": "Кредитна картка не потрібна",
+        "trusted": "Довіряють понад 500 ресторанів у всьому світі",
+        "title": "Готові перейти в цифровий формат?",
+        "subtitle": "Створіть своє професійне QR-меню та вебсайт ресторану за кілька хвилин. Безкоштовно назавжди, без необхідності в кредитній картці."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Налаштування резервування",
       "tables": "Стіли",
       "billing": "Білінг",
-      "support": "Підтримка"
+      "support": "Підтримка",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Меню",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Додати контакти",
           "description": "Додайте телефон, WhatsApp, Instagram та місцезнаходження"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Завершено",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

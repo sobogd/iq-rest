@@ -22,7 +22,10 @@
       "cta": {
         "create": "Vytvoriť zadarmo",
         "view": "Zobraziť demo",
-        "noCreditCard": "Kreditná karta nie je potrebná"
+        "noCreditCard": "Kreditná karta nie je potrebná",
+        "trusted": "Dôveryhodné viac ako 500 reštauráciami po celom svete",
+        "title": "Pripravení prejsť na digitálnu formu?",
+        "subtitle": "Vytvorte si profesionálne QR menu a webovú stránku reštaurácie za pár minút. Navždy zadarmo, bez potreby kreditnej karty."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Nastavenia rezervácie",
       "tables": "Stoly",
       "billing": "Fakturácia",
-      "support": "Podpora"
+      "support": "Podpora",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Menu",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Pridať kontakty",
           "description": "Pridajte telefón, WhatsApp, Instagram a polohu"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Dokončené",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

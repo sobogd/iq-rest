@@ -22,7 +22,10 @@
       "cta": {
         "create": "Búa til ókeypis",
         "view": "Sjá sýnishorn",
-        "noCreditCard": "Ekki þarf kreditkort"
+        "noCreditCard": "Ekki þarf kreditkort",
+        "trusted": "Treyst á 500+ veitingastöðum um allan heim",
+        "title": "Ertu tilbúinn að fara í stafræna heim?",
+        "subtitle": "Búðu til þinn faglega QR matseðil og veitingastaðavef á nokkrum mínútum. Ókeypis að eilífu, engin kreditkort krafist."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Bókunarstillingar",
       "tables": "Borð",
       "billing": "Reikningur",
-      "support": "Stuðningur"
+      "support": "Stuðningur",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Matseðill",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Bæta við tengiliðum",
           "description": "Bættu við síma, WhatsApp, Instagram og staðsetningu"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Lokið",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

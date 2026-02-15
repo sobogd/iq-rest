@@ -22,7 +22,10 @@
       "cta": {
         "create": "Opprett gratis",
         "view": "Se demo",
-        "noCreditCard": "Ingen kredittkort nødvendig"
+        "noCreditCard": "Ingen kredittkort nødvendig",
+        "trusted": "Stolt brukt av over 500 restauranter verden over",
+        "title": "Klar for å gå digitalt?",
+        "subtitle": "Lag din profesjonelle QR-meny og restaurantnettsted på minutter. Gratis for alltid, ingen kredittkort nødvendig."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Innstillinger for reservasjoner",
       "tables": "Bord",
       "billing": "Fakturering",
-      "support": "Support"
+      "support": "Support",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR-meny",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Legg til kontakter",
           "description": "Legg til telefon, WhatsApp, Instagram og lokasjon"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Fullført",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

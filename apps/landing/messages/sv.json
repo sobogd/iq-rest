@@ -22,7 +22,10 @@
       "cta": {
         "create": "Skapa gratis",
         "view": "Se demo",
-        "noCreditCard": "Inget kreditkort krävs"
+        "noCreditCard": "Inget kreditkort krävs",
+        "trusted": "Betrodd av över 500 restauranger världen över",
+        "title": "Redo att gå digitalt?",
+        "subtitle": "Skapa din professionella QR-meny och restaurangwebbplats på några minuter. Gratis för alltid, ingen kreditkort krävs."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Bokningsinställningar",
       "tables": "Bord",
       "billing": "Fakturering",
-      "support": "Support"
+      "support": "Support",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR-meny",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Lägg till kontakter",
           "description": "Lägg till telefon, WhatsApp, Instagram och plats"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Slutförd",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

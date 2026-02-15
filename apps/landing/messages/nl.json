@@ -22,7 +22,10 @@
       "cta": {
         "create": "Nu starten",
         "view": "Demo",
-        "noCreditCard": "Geen creditcard vereist"
+        "noCreditCard": "Geen creditcard vereist",
+        "trusted": "Vertrouwd door meer dan 500 restaurants wereldwijd",
+        "title": "Klaar om Digitaal te Gaan?",
+        "subtitle": "Maak binnen enkele minuten je professionele QR-menu en restaurantwebsite. Altijd gratis, geen creditcard vereist."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Reserveringsinstellingen",
       "tables": "Tafels",
       "billing": "Facturering",
-      "support": "Ondersteuning"
+      "support": "Ondersteuning",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Menu",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Contacten toevoegen",
           "description": "Voeg telefoon, WhatsApp, Instagram en locatie toe"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Voltooid",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

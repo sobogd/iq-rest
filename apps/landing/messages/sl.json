@@ -22,7 +22,10 @@
       "cta": {
         "create": "Ustvari brezplačno",
         "view": "Poglej demo",
-        "noCreditCard": "Kreditna kartica ni potrebna"
+        "noCreditCard": "Kreditna kartica ni potrebna",
+        "trusted": "Zaupa več kot 500 restavracij po vsem svetu",
+        "title": "Pripravljeni na digitalizacijo?",
+        "subtitle": "Ustvarite svoj profesionalni QR meni in spletno stran restavracije v nekaj minutah. Brezplačno za vedno, brez potrebe po kreditni kartici."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Nastavitve rezervacij",
       "tables": "Mize",
       "billing": "Zaračunavanje",
-      "support": "Podpora"
+      "support": "Podpora",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Meni",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Dodaj kontakte",
           "description": "Dodajte telefon, WhatsApp, Instagram in lokacijo"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Dokončano",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

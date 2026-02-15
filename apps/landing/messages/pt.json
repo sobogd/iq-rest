@@ -22,7 +22,10 @@
       "cta": {
         "create": "Criar Grátis",
         "view": "Ver Demo",
-        "noCreditCard": "Não é necessário cartão de crédito"
+        "noCreditCard": "Não é necessário cartão de crédito",
+        "trusted": "Confiado por mais de 500 restaurantes em todo o mundo",
+        "title": "Pronto para Ir Digital?",
+        "subtitle": "Crie seu menu QR profissional e site de restaurante em minutos. Gratuito para sempre, sem necessidade de cartão de crédito."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Configurações de Reserva",
       "tables": "Mesas",
       "billing": "Faturamento",
-      "support": "Suporte"
+      "support": "Suporte",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "Menu QR",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Adicionar Contatos",
           "description": "Adicione telefone, WhatsApp, Instagram e localização"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Concluído",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

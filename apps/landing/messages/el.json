@@ -22,7 +22,10 @@
       "cta": {
         "create": "Δημιουργία δωρεάν",
         "view": "Δείτε demo",
-        "noCreditCard": "Δεν απαιτείται πιστωτική κάρτα"
+        "noCreditCard": "Δεν απαιτείται πιστωτική κάρτα",
+        "trusted": "Εμπιστεύονται 500+ εστιατόρια παγκοσμίως",
+        "title": "Έτοιμοι να γίνετε ψηφιακοί;",
+        "subtitle": "Δημιουργήστε το επαγγελματικό σας μενού QR και την ιστοσελίδα του εστιατορίου σας σε λίγα λεπτά. Δωρεάν για πάντα, χωρίς απαίτηση πιστωτικής κάρτας."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Ρυθμίσεις Κρατήσεων",
       "tables": "Τραπέζια",
       "billing": "Χρέωση",
-      "support": "Υποστήριξη"
+      "support": "Υποστήριξη",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "Μενού QR",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Προσθήκη Επαφών",
           "description": "Προσθέστε τηλέφωνο, WhatsApp, Instagram και τοποθεσία"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Ολοκληρώθηκε",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

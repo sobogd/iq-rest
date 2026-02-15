@@ -22,7 +22,10 @@
       "cta": {
         "create": "Начать",
         "view": "Демо",
-        "noCreditCard": "Кредитная карта не требуется"
+        "noCreditCard": "Кредитная карта не требуется",
+        "trusted": "Доверяют более 500 ресторанов по всему миру",
+        "title": "Готовы перейти в цифровой формат?",
+        "subtitle": "Создайте свое профессиональное QR-меню и сайт ресторана за считанные минуты. Бесплатно навсегда, без необходимости в кредитной карте."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Настройки бронирования",
       "tables": "Столы",
       "billing": "Выставление счетов",
-      "support": "Поддержка"
+      "support": "Поддержка",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Меню",
@@ -1485,6 +1489,10 @@
         "contacts": {
           "name": "Добавить контакты",
           "description": "Добавьте телефон, WhatsApp, Instagram и адрес"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Завершено",
@@ -1515,7 +1523,12 @@
           "title": "Начните получать сканы",
           "description": "Распечатайте QR-код и поделитесь ссылкой"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

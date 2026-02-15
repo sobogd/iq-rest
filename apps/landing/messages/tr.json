@@ -22,7 +22,10 @@
       "cta": {
         "create": "Ücretsiz oluştur",
         "view": "Demo gör",
-        "noCreditCard": "Kredi kartı gerekmez"
+        "noCreditCard": "Kredi kartı gerekmez",
+        "trusted": "Dünyada 500'den fazla restoran tarafından güvenilir",
+        "title": "Dijitale Geçmeye Hazır Mısınız?",
+        "subtitle": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. Sonsuza dek ücretsiz, kredi kartı gerektirmez."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Rezervasyon Ayarları",
       "tables": "Masalar",
       "billing": "Faturalama",
-      "support": "Destek"
+      "support": "Destek",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Menü",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "İletişim Bilgileri Ekleyin",
           "description": "Telefon, WhatsApp, Instagram ve konum ekleyin"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Tamamlandı",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

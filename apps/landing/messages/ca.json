@@ -22,7 +22,10 @@
       "cta": {
         "create": "Crea gratis",
         "view": "Veure demo",
-        "noCreditCard": "No cal targeta de crèdit"
+        "noCreditCard": "No cal targeta de crèdit",
+        "trusted": "Confiat per més de 500 restaurants a tot el món",
+        "title": "Preparat per fer el pas al digital?",
+        "subtitle": "Crea el teu menú QR professional i el lloc web del teu restaurant en minuts. Gratuït per sempre, sense necessitat de targeta de crèdit."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Configuració de reserves",
       "tables": "Taules",
       "billing": "Facturació",
-      "support": "Suport"
+      "support": "Suport",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "Menú QR",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Afegir Contactes",
           "description": "Afegeix telèfon, WhatsApp, Instagram i ubicació"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Completat",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

@@ -22,7 +22,10 @@
       "cta": {
         "create": "Luo ilmaiseksi",
         "view": "Katso demo",
-        "noCreditCard": "Luottokorttia ei tarvita"
+        "noCreditCard": "Luottokorttia ei tarvita",
+        "trusted": "Luotettu yli 500 ravintolan toimesta ympäri maailmaa",
+        "title": "Valmiina siirtymään digitaaliseen maailmaan?",
+        "subtitle": "Luo ammattimainen QR-menu ja ravintolan verkkosivusto minuuteissa. Ilmainen ikuisesti, ei vaadita luottokorttia."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Varausasetukset",
       "tables": "Pöydät",
       "billing": "Laskutus",
-      "support": "Tuki"
+      "support": "Tuki",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR-valikko",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Lisää yhteystiedot",
           "description": "Lisää puhelin, WhatsApp, Instagram ja sijainti"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Valmis",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

@@ -22,7 +22,10 @@
       "cta": {
         "create": "Sukurti nemokamai",
         "view": "Žiūrėti demo",
-        "noCreditCard": "Kreditinė kortelė nereikalinga"
+        "noCreditCard": "Kreditinė kortelė nereikalinga",
+        "trusted": "Pasitikėjo daugiau nei 500 restoranų visame pasaulyje",
+        "title": "Pasiruošę pereiti prie skaitmeninių sprendimų?",
+        "subtitle": "Sukurkite savo profesionalų QR meniu ir restorano svetainę per kelias minutes. Visam laikui nemokamai, nereikia kreditinės kortelės."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Rezervacijos nustatymai",
       "tables": "Stalai",
       "billing": "Apmokėjimas",
-      "support": "Pagalba"
+      "support": "Pagalba",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Meniu",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Pridėti kontaktus",
           "description": "Pridėkite telefoną, WhatsApp, Instagram ir vietą"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Užbaigta",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

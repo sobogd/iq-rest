@@ -22,7 +22,10 @@
       "cta": {
         "create": "Ingyenes létrehozás",
         "view": "Demo megtekintése",
-        "noCreditCard": "Nincs szükség bankkártyára"
+        "noCreditCard": "Nincs szükség bankkártyára",
+        "trusted": "Több mint 500 étterem bízik bennünket világszerte",
+        "title": "Készen áll a digitális átállásra?",
+        "subtitle": "Hozza létre professzionális QR menüjét és étterem weboldalát percek alatt. Örökre ingyenes, nincs szükség bankkártyára."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Foglalási beállítások",
       "tables": "Asztalok",
       "billing": "Számlázás",
-      "support": "Támogatás"
+      "support": "Támogatás",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR Menü",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Kapcsolatok hozzáadása",
           "description": "Adja hozzá a telefont, WhatsApp-ot, Instagramot és helyszínt"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Befejezve",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {

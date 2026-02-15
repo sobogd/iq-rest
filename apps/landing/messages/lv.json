@@ -22,7 +22,10 @@
       "cta": {
         "create": "Izveidot bezmaksas",
         "view": "Skatīt demo",
-        "noCreditCard": "Kredītkarte nav nepieciešama"
+        "noCreditCard": "Kredītkarte nav nepieciešama",
+        "trusted": "Uzticams 500+ restorāniem visā pasaulē",
+        "title": "Gatavs pāriet uz digitālo formātu?",
+        "subtitle": "Izveidojiet savu profesionālo QR ēdienkarti un restorāna tīmekļa vietni dažu minūšu laikā. Bezmaksas uz visiem laikiem, nav nepieciešama kredītkarte."
       },
       "benefits": [
         {
@@ -1215,7 +1218,8 @@
       "reservationSettings": "Rezervāciju iestatījumi",
       "tables": "Galdi",
       "billing": "Rēķini",
-      "support": "Atbalsts"
+      "support": "Atbalsts",
+      "menu": "Menu"
     },
     "sidebar": {
       "qrMenu": "QR izvēlne",
@@ -1484,6 +1488,10 @@
         "contacts": {
           "name": "Pievienot kontaktus",
           "description": "Pievienojiet tālruni, WhatsApp, Instagram un atrašanās vietu"
+        },
+        "menu": {
+          "name": "Build Your Menu",
+          "description": "Create categories and add dishes to your menu"
         }
       },
       "completed": "Pabeigts",
@@ -1515,7 +1523,12 @@
           "title": "Get customers scanning",
           "description": "Print your QR code and share your menu link"
         }
-      }
+      },
+      "goToDashboard": "Go to Dashboard"
+    },
+    "menu": {
+      "addItem": "Add Item",
+      "addCategory": "Add Category"
     }
   },
   "reservationSettings": {
