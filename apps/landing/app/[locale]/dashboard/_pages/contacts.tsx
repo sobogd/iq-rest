@@ -1,66 +1,48 @@
 "use client";
 
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { PageLoader } from "../_ui/page-loader";
 import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 
+interface ContactsPageProps {
+  initialRestaurant: {
+    phone: string | null;
+    instagram: string | null;
+    whatsapp: string | null;
+    x: string | null;
+    y: string | null;
+  } | null;
+}
 
-export function ContactsPage() {
+export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   const t = useTranslations("dashboard.contacts");
   const { translations, returnToOnboarding } = useDashboard();
 
-  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  const [phone, setPhone] = useState("");
-  const [instagram, setInstagram] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
-  const [lat, setLat] = useState<number | undefined>(undefined);
-  const [lng, setLng] = useState<number | undefined>(undefined);
+  const initPhone = initialRestaurant?.phone || "";
+  const initInstagram = initialRestaurant?.instagram || "";
+  const initWhatsapp = initialRestaurant?.whatsapp || "";
+  const initLat = initialRestaurant?.y ? parseFloat(initialRestaurant.y) : undefined;
+  const initLng = initialRestaurant?.x ? parseFloat(initialRestaurant.x) : undefined;
 
-  const [originalPhone, setOriginalPhone] = useState("");
-  const [originalInstagram, setOriginalInstagram] = useState("");
-  const [originalWhatsapp, setOriginalWhatsapp] = useState("");
-  const [originalLat, setOriginalLat] = useState<number | undefined>(undefined);
-  const [originalLng, setOriginalLng] = useState<number | undefined>(undefined);
+  const [phone, setPhone] = useState(initPhone);
+  const [instagram, setInstagram] = useState(initInstagram);
+  const [whatsapp, setWhatsapp] = useState(initWhatsapp);
+  const [lat, setLat] = useState<number | undefined>(initLat);
+  const [lng, setLng] = useState<number | undefined>(initLng);
 
-  useEffect(() => {
-    fetchRestaurant();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  async function fetchRestaurant() {
-    try {
-      const res = await fetch("/api/restaurant");
-      if (res.ok) {
-        const data = await res.json();
-        if (data) {
-          setPhone(data.phone || "");
-          setInstagram(data.instagram || "");
-          setWhatsapp(data.whatsapp || "");
-          setLat(data.y ? parseFloat(data.y) : undefined);
-          setLng(data.x ? parseFloat(data.x) : undefined);
-          setOriginalPhone(data.phone || "");
-          setOriginalInstagram(data.instagram || "");
-          setOriginalWhatsapp(data.whatsapp || "");
-          setOriginalLat(data.y ? parseFloat(data.y) : undefined);
-          setOriginalLng(data.x ? parseFloat(data.x) : undefined);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to fetch restaurant:", error);
-      toast.error(t("fetchError"));
-    } finally {
-      setLoading(false);
-    }
-  }
+  const [originalPhone, setOriginalPhone] = useState(initPhone);
+  const [originalInstagram, setOriginalInstagram] = useState(initInstagram);
+  const [originalWhatsapp, setOriginalWhatsapp] = useState(initWhatsapp);
+  const [originalLat, setOriginalLat] = useState<number | undefined>(initLat);
+  const [originalLng, setOriginalLng] = useState<number | undefined>(initLng);
 
   const hasChanges = useMemo(() => {
     return (
@@ -117,10 +99,6 @@ export function ContactsPage() {
     } finally {
       setSaving(false);
     }
-  }
-
-  if (loading) {
-    return <PageLoader />;
   }
 
   return (

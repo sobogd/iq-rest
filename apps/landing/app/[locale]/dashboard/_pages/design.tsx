@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef } from "react";
 import Image from "next/image";
 import { Loader2, Save, Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { PageLoader } from "../_ui/page-loader";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -24,70 +23,42 @@ import { FormSwitch } from "../_ui/form-switch";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
-export function DesignPage() {
+interface DesignPageProps {
+  initialRestaurant: {
+    source: string | null;
+    accentColor: string;
+    hideTitle: boolean;
+  } | null;
+  initialSubscription: {
+    plan: PlanType;
+    subscriptionStatus: SubscriptionStatus;
+  } | null;
+}
+
+export function DesignPage({ initialRestaurant, initialSubscription }: DesignPageProps) {
   const t = useTranslations("dashboard.design");
   const { translations, returnToOnboarding } = useDashboard();
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
 
-  const [source, setSource] = useState<string | null>(null);
-  const [accentColor, setAccentColor] = useState("#E11D48");
-  const [hideTitle, setHideTitle] = useState(false);
+  const initSource = initialRestaurant?.source || null;
+  const initAccent = initialRestaurant?.accentColor || "#E11D48";
+  const initHideTitle = initialRestaurant?.hideTitle || false;
 
-  const [originalSource, setOriginalSource] = useState<string | null>(null);
-  const [originalAccentColor, setOriginalAccentColor] = useState("#E11D48");
-  const [originalHideTitle, setOriginalHideTitle] = useState(false);
+  const [source, setSource] = useState<string | null>(initSource);
+  const [accentColor, setAccentColor] = useState(initAccent);
+  const [hideTitle, setHideTitle] = useState(initHideTitle);
+
+  const [originalSource, setOriginalSource] = useState<string | null>(initSource);
+  const [originalAccentColor, setOriginalAccentColor] = useState(initAccent);
+  const [originalHideTitle, setOriginalHideTitle] = useState(initHideTitle);
 
   const [validationError, setValidationError] = useState<string | null>(null);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
 
-  useEffect(() => {
-    fetchRestaurant();
-    fetchSubscriptionStatus();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  async function fetchRestaurant() {
-    try {
-      const res = await fetch("/api/restaurant");
-      if (res.ok) {
-        const data = await res.json();
-        if (data) {
-          setSource(data.source || null);
-          setAccentColor(data.accentColor || "#E11D48");
-          setHideTitle(data.hideTitle || false);
-          setOriginalSource(data.source || null);
-          setOriginalAccentColor(data.accentColor || "#E11D48");
-          setOriginalHideTitle(data.hideTitle || false);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to fetch restaurant:", error);
-      toast.error(t("fetchError"));
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function fetchSubscriptionStatus() {
-    try {
-      const response = await fetch("/api/subscription/status");
-      if (response.ok) {
-        const data = await response.json();
-        setSubscriptionStatus(data.subscriptionStatus);
-        setCurrentPlan(data.plan);
-      }
-    } catch (error) {
-      console.error("Failed to fetch subscription status:", error);
-    }
-  }
-
-  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
+  const hasActiveSubscription = (initialSubscription?.subscriptionStatus === "ACTIVE") && (initialSubscription?.plan !== "FREE");
 
   const hasChanges = useMemo(() => {
     return source !== originalSource || accentColor !== originalAccentColor || hideTitle !== originalHideTitle;
@@ -185,10 +156,6 @@ export function DesignPage() {
     } finally {
       setSaving(false);
     }
-  }
-
-  if (loading) {
-    return <PageLoader />;
   }
 
   return (

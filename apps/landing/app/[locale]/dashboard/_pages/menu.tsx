@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { ArrowUp, ArrowDown, Plus, ArrowUpDown, ArrowLeft, Loader2, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
-import { PageLoader } from "../_ui/page-loader";
 import { useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
@@ -24,7 +23,13 @@ interface ItemWithTranslations {
   category: Pick<Category, "id" | "name" | "sortOrder">;
 }
 
-export function MenuPage() {
+interface MenuPageProps {
+  initialItems: ItemWithTranslations[];
+  initialCategories: Category[];
+  initialCurrency: string;
+}
+
+export function MenuPage({ initialItems, initialCategories, initialCurrency }: MenuPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const tItems = translations.items;
@@ -32,10 +37,9 @@ export function MenuPage() {
   const tMenu = translations.menu;
   const pageTitle = translations.pages.menu;
 
-  const [items, setItems] = useState<ItemWithTranslations[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [currency, setCurrency] = useState("EUR");
-  const [loading, setLoading] = useState(true);
+  const [items, setItems] = useState<ItemWithTranslations[]>(initialItems);
+  const [categories, setCategories] = useState<Category[]>(initialCategories);
+  const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
 
@@ -43,41 +47,6 @@ export function MenuPage() {
     () => [...categories].sort((a, b) => a.sortOrder - b.sortOrder),
     [categories]
   );
-
-  useEffect(() => {
-    fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  async function fetchData() {
-    try {
-      const [itemsRes, categoriesRes, restaurantRes] = await Promise.all([
-        fetch("/api/items"),
-        fetch("/api/categories"),
-        fetch("/api/restaurant"),
-      ]);
-
-      if (!itemsRes.ok) throw new Error("Failed to fetch items");
-      if (!categoriesRes.ok) throw new Error("Failed to fetch categories");
-
-      const [itemsData, categoriesData, restaurantData] = await Promise.all([
-        itemsRes.json(),
-        categoriesRes.json(),
-        restaurantRes.ok ? restaurantRes.json() : null,
-      ]);
-
-      setItems(itemsData);
-      setCategories(categoriesData);
-      if (restaurantData?.currency) {
-        setCurrency(restaurantData.currency);
-      }
-    } catch (error) {
-      console.error("Failed to fetch data:", error);
-      toast.error(tItems.fetchError);
-    } finally {
-      setLoading(false);
-    }
-  }
 
   async function handleToggleItemActive(
     itemId: string,
@@ -211,10 +180,6 @@ export function MenuPage() {
   }
 
   const showSortButton = categories.length > 1 || items.length > 1;
-
-  if (loading) {
-    return <PageLoader />;
-  }
 
   return (
     <div className="flex flex-col h-full">

@@ -2,27 +2,11 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { format, isToday, isTomorrow, parseISO } from "date-fns";
-import { Check, X, Loader2, Settings, AlertCircle, Save } from "lucide-react";
+import { Check, X, Loader2, Settings, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
-import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
-import { FormSwitch } from "../_ui/form-switch";
 import { useRouter } from "@/i18n/routing";
 import { useDashboard } from "../_context/dashboard-context";
 import type { SubscriptionStatus } from "@prisma/client";
@@ -54,43 +38,28 @@ function getDateFromReservation(date: Date | string): Date {
 
 const POLLING_INTERVAL = 30000;
 
-export function ReservationsPage() {
+interface ReservationsPageProps {
+  initialReservations: Reservation[];
+  initialSubscription: {
+    plan: PlanType;
+    subscriptionStatus: SubscriptionStatus;
+    billingCycle: string | null;
+    currentPeriodEnd: string | null;
+    paymentProcessing: boolean;
+  } | null;
+}
+
+export function ReservationsPage({ initialReservations, initialSubscription }: ReservationsPageProps) {
   const t = useTranslations("reservations");
   const tSettings = useTranslations("reservationSettings");
   const { translations } = useDashboard();
   const router = useRouter();
 
-  const [reservations, setReservations] = useState<Reservation[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [reservations, setReservations] = useState<Reservation[]>(initialReservations);
   const [updating, setUpdating] = useState<string | null>(null);
 
-  // Subscription state
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
-
-  // Settings sheet state
-  const [sheetOpen, setSheetOpen] = useState(false);
-  const [saving, setSaving] = useState(false);
-  const [reservationsEnabled, setReservationsEnabled] = useState(false);
-  const [reservationMode, setReservationMode] = useState("manual");
-  const [reservationSlotMinutes, setReservationSlotMinutes] = useState(90);
-  const [workingHoursStart, setWorkingHoursStart] = useState("10:00");
-  const [workingHoursEnd, setWorkingHoursEnd] = useState("22:00");
-  const [initialValues, setInitialValues] = useState({
-    reservationsEnabled: false,
-    reservationMode: "manual",
-    reservationSlotMinutes: 90,
-    workingHoursStart: "10:00",
-    workingHoursEnd: "22:00",
-  });
-
-  const hasChanges =
-    reservationsEnabled !== initialValues.reservationsEnabled ||
-    reservationMode !== initialValues.reservationMode ||
-    reservationSlotMinutes !== initialValues.reservationSlotMinutes ||
-    workingHoursStart !== initialValues.workingHoursStart ||
-    workingHoursEnd !== initialValues.workingHoursEnd;
-
+  const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
+  const currentPlan = initialSubscription?.plan ?? "FREE";
   const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   const fetchReservations = useCallback(async () => {
@@ -103,102 +72,13 @@ export function ReservationsPage() {
     } catch (error) {
       console.error("Failed to fetch reservations:", error);
       toast.error(t("error"));
-    } finally {
-      setLoading(false);
     }
   }, [t]);
-
-  useEffect(() => {
-    fetchReservations();
-    fetchSubscriptionStatus();
-    fetchSettings();
-  }, [fetchReservations]);
 
   useEffect(() => {
     const interval = setInterval(fetchReservations, POLLING_INTERVAL);
     return () => clearInterval(interval);
   }, [fetchReservations]);
-
-  async function fetchSubscriptionStatus() {
-    try {
-      const response = await fetch("/api/subscription/status");
-      if (response.ok) {
-        const data = await response.json();
-        setSubscriptionStatus(data.subscriptionStatus);
-        setCurrentPlan(data.plan);
-      }
-    } catch (error) {
-      console.error("Failed to fetch subscription status:", error);
-    }
-  }
-
-  async function fetchSettings() {
-    try {
-      const res = await fetch("/api/restaurant");
-      if (res.ok) {
-        const data = await res.json();
-        if (data) {
-          const enabled = data.reservationsEnabled || false;
-          const mode = data.reservationMode || "manual";
-          const slot = data.reservationSlotMinutes || 90;
-          const start = data.workingHoursStart || "10:00";
-          const end = data.workingHoursEnd || "22:00";
-
-          setReservationsEnabled(enabled);
-          setReservationMode(mode);
-          setReservationSlotMinutes(slot);
-          setWorkingHoursStart(start);
-          setWorkingHoursEnd(end);
-
-          setInitialValues({
-            reservationsEnabled: enabled,
-            reservationMode: mode,
-            reservationSlotMinutes: slot,
-            workingHoursStart: start,
-            workingHoursEnd: end,
-          });
-        }
-      }
-    } catch (error) {
-      console.error("Failed to fetch settings:", error);
-    }
-  }
-
-  async function handleSaveSettings() {
-    setSaving(true);
-    try {
-      const res = await fetch("/api/restaurant", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          reservationsEnabled,
-          reservationMode,
-          reservationSlotMinutes,
-          workingHoursStart,
-          workingHoursEnd,
-        }),
-      });
-
-      if (res.ok) {
-        toast.success(tSettings("saved"));
-        setInitialValues({
-          reservationsEnabled,
-          reservationMode,
-          reservationSlotMinutes,
-          workingHoursStart,
-          workingHoursEnd,
-        });
-        setSheetOpen(false);
-      } else {
-        const data = await res.json();
-        toast.error(data.error || tSettings("saveError"));
-      }
-    } catch {
-      toast.error(tSettings("saveError"));
-    } finally {
-      setSaving(false);
-    }
-  }
 
   const groupedReservations = useMemo(() => {
     const pending: Reservation[] = [];
@@ -333,10 +213,6 @@ export function ReservationsPage() {
     );
   }
 
-  if (loading) {
-    return <PageLoader />;
-  }
-
   // No active subscription — show only the amber banner
   if (!hasActiveSubscription) {
     return (
@@ -372,7 +248,7 @@ export function ReservationsPage() {
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.reservations}>
         <button
-          onClick={() => setSheetOpen(true)}
+          onClick={() => router.push("/dashboard/reservation-settings")}
           className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
         >
           <Settings className="h-5 w-5" />
@@ -425,107 +301,6 @@ export function ReservationsPage() {
         )}
       </div>
 
-      <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
-        <SheetContent side="right" className="overflow-auto">
-          <SheetHeader>
-            <SheetTitle>{tSettings("title")}</SheetTitle>
-          </SheetHeader>
-
-          <div className="space-y-6 py-6">
-            <FormSwitch
-              id="reservationsEnabled"
-              label={`${tSettings("reservationsEnabled")}:`}
-              checked={reservationsEnabled}
-              onCheckedChange={setReservationsEnabled}
-              activeText={tSettings("enabled")}
-              inactiveText={tSettings("disabled")}
-            />
-
-            {reservationsEnabled && (
-              <>
-                <div className="space-y-2">
-                  <Label>{tSettings("reservationMode")}:</Label>
-                  <Select value={reservationMode} onValueChange={setReservationMode}>
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="auto">{tSettings("modeAuto")}</SelectItem>
-                      <SelectItem value="manual">{tSettings("modeManual")}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <p className="text-sm text-muted-foreground">
-                    {reservationMode === "auto" ? tSettings("modeAutoDescription") : tSettings("modeManualDescription")}
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <Label>{tSettings("slotDuration")}:</Label>
-                  <Select
-                    value={reservationSlotMinutes.toString()}
-                    onValueChange={(v) => setReservationSlotMinutes(parseInt(v))}
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="60">60 {tSettings("minutes")}</SelectItem>
-                      <SelectItem value="90">90 {tSettings("minutes")}</SelectItem>
-                      <SelectItem value="120">120 {tSettings("minutes")}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label>{tSettings("workingHours")}:</Label>
-                  <div className="flex items-center gap-2">
-                    <Select value={workingHoursStart} onValueChange={setWorkingHoursStart}>
-                      <SelectTrigger className="w-28">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {Array.from({ length: 24 }, (_, i) => {
-                          const hour = i.toString().padStart(2, "0");
-                          return (
-                            <SelectItem key={`start-${hour}:00`} value={`${hour}:00`}>
-                              {hour}:00
-                            </SelectItem>
-                          );
-                        })}
-                      </SelectContent>
-                    </Select>
-                    <span className="text-muted-foreground">—</span>
-                    <Select value={workingHoursEnd} onValueChange={setWorkingHoursEnd}>
-                      <SelectTrigger className="w-28">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {Array.from({ length: 24 }, (_, i) => {
-                          const hour = i.toString().padStart(2, "0");
-                          return (
-                            <SelectItem key={`end-${hour}:00`} value={`${hour}:00`}>
-                              {hour}:00
-                            </SelectItem>
-                          );
-                        })}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-              </>
-            )}
-
-            <Button onClick={handleSaveSettings} disabled={saving || !hasChanges} className="w-full">
-              {saving ? (
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-              ) : (
-                <Save className="h-4 w-4 mr-2" />
-              )}
-              {tSettings("save")}
-            </Button>
-          </div>
-        </SheetContent>
-      </Sheet>
     </div>
   );
 }

@@ -35,44 +35,36 @@ const allSteps: Step[] = [
   { key: "menu", progressKey: "hasItems", page: "menu" },
 ];
 
-export function OnboardingPage() {
+interface OnboardingPageProps {
+  initialData: OnboardingData;
+}
+
+export function OnboardingPage({ initialData }: OnboardingPageProps) {
   const t = useTranslations("dashboard.onboarding");
   const { setOnboardingCompleted } = useDashboard();
   const router = useRouter();
-  const [data, setData] = useState<OnboardingData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [data, setData] = useState<OnboardingData>(initialData);
+  const [currentStep, setCurrentStep] = useState(() => {
+    const firstIncomplete = allSteps.findIndex(
+      step => !initialData.progress[step.progressKey]
+    );
+    return firstIncomplete !== -1 ? firstIncomplete : 0;
+  });
   const [restaurantName, setRestaurantName] = useState("");
   const [creating, setCreating] = useState(false);
 
   useEffect(() => {
-    async function fetchProgress() {
-      try {
-        const response = await fetch("/api/onboarding/progress");
-        if (response.ok) {
-          const result = await response.json();
-          setData(result);
-
-          // Find first incomplete step
-          const firstIncomplete = allSteps.findIndex(
-            step => !result.progress[step.progressKey]
-          );
-          if (firstIncomplete !== -1) {
-            setCurrentStep(firstIncomplete);
-            onboardingAnalytics.stepView(firstIncomplete + 1);
-          } else if (result.requiredCompleted) {
-            onboardingAnalytics.complete();
-            setOnboardingCompleted(true);
-            router.replace("/dashboard/home");
-          }
-        }
-      } catch (error) {
-        console.error("Failed to fetch onboarding progress:", error);
-      } finally {
-        setLoading(false);
-      }
+    // Find first incomplete step
+    const firstIncomplete = allSteps.findIndex(
+      step => !initialData.progress[step.progressKey]
+    );
+    if (firstIncomplete !== -1) {
+      onboardingAnalytics.stepView(firstIncomplete + 1);
+    } else if (initialData.requiredCompleted) {
+      onboardingAnalytics.complete();
+      setOnboardingCompleted(true);
+      router.replace("/dashboard/home");
     }
-    fetchProgress();
   }, []);
 
   function navigateFromOnboarding(page: PageKey) {
@@ -122,18 +114,6 @@ export function OnboardingPage() {
       setCreating(false);
     }
   };
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    );
-  }
-
-  if (!data) {
-    return null;
-  }
 
   const { progress } = data;
   const step = allSteps[currentStep];

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Loader2, Save, Star, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -13,7 +13,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { PageLoader } from "../_ui/page-loader";
 import { FormInput } from "../_ui/form-input";
 import { FormSelect } from "../_ui/form-select";
 import {
@@ -44,46 +43,59 @@ const ALL_LANGUAGES = [
   name: LANGUAGE_NAMES[code] || code,
 }));
 
-interface Restaurant {
-  id: string;
-  title: string;
-  description: string | null;
-  slug: string | null;
-  currency: string;
+interface SettingsPageProps {
+  initialRestaurant: {
+    id: string;
+    title: string;
+    description: string | null;
+    slug: string | null;
+    currency: string;
+    languages: string[];
+    defaultLanguage: string;
+  } | null;
+  initialSubscription: {
+    plan: PlanType;
+    subscriptionStatus: SubscriptionStatus;
+  } | null;
 }
 
-export function SettingsPage() {
+export function SettingsPage({ initialRestaurant, initialSubscription }: SettingsPageProps) {
   const t = useTranslations("dashboard.general");
   const tLang = useTranslations("dashboard.languages");
   const tPages = useTranslations("dashboard.pages");
   const { translations } = useDashboard();
   const router = useRouter();
 
-  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [restaurant, setRestaurant] = useState<Restaurant | null>(null);
 
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [slug, setSlug] = useState("");
-  const [currency, setCurrency] = useState("EUR");
+  const initName = initialRestaurant?.title || "";
+  const initDescription = initialRestaurant?.description || "";
+  const initSlug = initialRestaurant?.slug || "";
+  const initCurrency = initialRestaurant?.currency || "EUR";
+  const initLangs = initialRestaurant?.languages || ["en"];
+  const initDefLang = initialRestaurant?.defaultLanguage || "en";
 
-  const [originalName, setOriginalName] = useState("");
-  const [originalDescription, setOriginalDescription] = useState("");
-  const [originalSlug, setOriginalSlug] = useState("");
-  const [originalCurrency, setOriginalCurrency] = useState("EUR");
+  const [name, setName] = useState(initName);
+  const [description, setDescription] = useState(initDescription);
+  const [slug, setSlug] = useState(initSlug);
+  const [currency, setCurrency] = useState(initCurrency);
+
+  const [originalName, setOriginalName] = useState(initName);
+  const [originalDescription, setOriginalDescription] = useState(initDescription);
+  const [originalSlug, setOriginalSlug] = useState(initSlug);
+  const [originalCurrency, setOriginalCurrency] = useState(initCurrency);
 
   const [validationError, setValidationError] = useState<string | null>(null);
 
   // Languages state
-  const [languages, setLanguages] = useState<string[]>(["en"]);
-  const [defaultLanguage, setDefaultLanguage] = useState("en");
-  const [originalLanguages, setOriginalLanguages] = useState<string[]>(["en"]);
-  const [originalDefaultLanguage, setOriginalDefaultLanguage] = useState("en");
+  const [languages, setLanguages] = useState<string[]>(initLangs);
+  const [defaultLanguage, setDefaultLanguage] = useState(initDefLang);
+  const [originalLanguages, setOriginalLanguages] = useState<string[]>(initLangs);
+  const [originalDefaultLanguage, setOriginalDefaultLanguage] = useState(initDefLang);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [pendingDisable, setPendingDisable] = useState<string | null>(null);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
+  const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
+  const currentPlan = initialSubscription?.plan ?? "FREE";
 
   const getLanguageLimit = () => {
     if (subscriptionStatus !== "ACTIVE") return 2;
@@ -94,56 +106,6 @@ export function SettingsPage() {
 
   const languageLimit = getLanguageLimit();
   const isAtLimit = languages.length >= languageLimit;
-
-  useEffect(() => {
-    fetchRestaurant();
-    fetchSubscriptionStatus();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  async function fetchRestaurant() {
-    try {
-      const res = await fetch("/api/restaurant");
-      if (res.ok) {
-        const data = await res.json();
-        if (data) {
-          setRestaurant(data);
-          setName(data.title || "");
-          setDescription(data.description || "");
-          setSlug(data.slug || "");
-          setCurrency(data.currency || "EUR");
-          setOriginalName(data.title || "");
-          setOriginalDescription(data.description || "");
-          setOriginalSlug(data.slug || "");
-          setOriginalCurrency(data.currency || "EUR");
-          const langs = data.languages || ["en"];
-          const defLang = data.defaultLanguage || "en";
-          setLanguages(langs);
-          setDefaultLanguage(defLang);
-          setOriginalLanguages(langs);
-          setOriginalDefaultLanguage(defLang);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to fetch restaurant:", error);
-      toast.error(t("fetchError"));
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function fetchSubscriptionStatus() {
-    try {
-      const response = await fetch("/api/subscription/status");
-      if (response.ok) {
-        const data = await response.json();
-        setSubscriptionStatus(data.subscriptionStatus);
-        setCurrentPlan(data.plan);
-      }
-    } catch (error) {
-      console.error("Failed to fetch subscription status:", error);
-    }
-  }
 
   const hasChanges = useMemo(() => {
     const langsSorted = [...languages].sort().join(",");
@@ -257,10 +219,6 @@ export function SettingsPage() {
     } finally {
       setSaving(false);
     }
-  }
-
-  if (loading) {
-    return <PageLoader />;
   }
 
   return (

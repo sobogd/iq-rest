@@ -45,6 +45,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
 
 interface User {
   id: string;
@@ -303,7 +304,8 @@ export function AdminPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6 space-y-6">
+      <PageHeader title="Admin" />
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Card>

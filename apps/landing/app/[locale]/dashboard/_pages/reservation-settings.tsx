@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { PageLoader } from "../_ui/page-loader";
 import { FormSwitch } from "../_ui/form-switch";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
@@ -21,29 +20,43 @@ import { AlertCircle, Save, Loader2 } from "lucide-react";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
-export function ReservationSettingsPage() {
+interface ReservationSettingsPageProps {
+  initialRestaurant: {
+    reservationsEnabled: boolean;
+    reservationMode: string;
+    reservationSlotMinutes: number;
+    workingHoursStart: string;
+    workingHoursEnd: string;
+  } | null;
+  initialSubscription: {
+    subscriptionStatus: SubscriptionStatus;
+    plan: PlanType;
+  } | null;
+}
+
+export function ReservationSettingsPage({ initialRestaurant, initialSubscription }: ReservationSettingsPageProps) {
   const t = useTranslations("reservationSettings");
   const { translations, returnToOnboarding } = useDashboard();
   const router = useRouter();
 
-  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
 
-  const [reservationsEnabled, setReservationsEnabled] = useState(false);
-  const [reservationMode, setReservationMode] = useState("manual");
-  const [reservationSlotMinutes, setReservationSlotMinutes] = useState(90);
-  const [workingHoursStart, setWorkingHoursStart] = useState("10:00");
-  const [workingHoursEnd, setWorkingHoursEnd] = useState("22:00");
+  const [reservationsEnabled, setReservationsEnabled] = useState(initialRestaurant?.reservationsEnabled ?? false);
+  const [reservationMode, setReservationMode] = useState(initialRestaurant?.reservationMode ?? "manual");
+  const [reservationSlotMinutes, setReservationSlotMinutes] = useState(initialRestaurant?.reservationSlotMinutes ?? 90);
+  const [workingHoursStart, setWorkingHoursStart] = useState(initialRestaurant?.workingHoursStart ?? "10:00");
+  const [workingHoursEnd, setWorkingHoursEnd] = useState(initialRestaurant?.workingHoursEnd ?? "22:00");
 
   const [initialValues, setInitialValues] = useState({
-    reservationsEnabled: false,
-    reservationMode: "manual",
-    reservationSlotMinutes: 90,
-    workingHoursStart: "10:00",
-    workingHoursEnd: "22:00",
+    reservationsEnabled: initialRestaurant?.reservationsEnabled ?? false,
+    reservationMode: initialRestaurant?.reservationMode ?? "manual",
+    reservationSlotMinutes: initialRestaurant?.reservationSlotMinutes ?? 90,
+    workingHoursStart: initialRestaurant?.workingHoursStart ?? "10:00",
+    workingHoursEnd: initialRestaurant?.workingHoursEnd ?? "22:00",
   });
+
+  const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
+  const currentPlan = initialSubscription?.plan ?? "FREE";
 
   const hasChanges =
     reservationsEnabled !== initialValues.reservationsEnabled ||
@@ -51,60 +64,6 @@ export function ReservationSettingsPage() {
     reservationSlotMinutes !== initialValues.reservationSlotMinutes ||
     workingHoursStart !== initialValues.workingHoursStart ||
     workingHoursEnd !== initialValues.workingHoursEnd;
-
-  useEffect(() => {
-    fetchSettings();
-    fetchSubscriptionStatus();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  async function fetchSubscriptionStatus() {
-    try {
-      const response = await fetch("/api/subscription/status");
-      if (response.ok) {
-        const data = await response.json();
-        setSubscriptionStatus(data.subscriptionStatus);
-        setCurrentPlan(data.plan);
-      }
-    } catch (error) {
-      console.error("Failed to fetch subscription status:", error);
-    }
-  }
-
-  async function fetchSettings() {
-    try {
-      const res = await fetch("/api/restaurant");
-      if (res.ok) {
-        const data = await res.json();
-        if (data) {
-          const enabled = data.reservationsEnabled || false;
-          const mode = data.reservationMode || "manual";
-          const slot = data.reservationSlotMinutes || 90;
-          const start = data.workingHoursStart || "10:00";
-          const end = data.workingHoursEnd || "22:00";
-
-          setReservationsEnabled(enabled);
-          setReservationMode(mode);
-          setReservationSlotMinutes(slot);
-          setWorkingHoursStart(start);
-          setWorkingHoursEnd(end);
-
-          setInitialValues({
-            reservationsEnabled: enabled,
-            reservationMode: mode,
-            reservationSlotMinutes: slot,
-            workingHoursStart: start,
-            workingHoursEnd: end,
-          });
-        }
-      }
-    } catch (error) {
-      console.error("Failed to fetch settings:", error);
-      toast.error(t("fetchError"));
-    } finally {
-      setLoading(false);
-    }
-  }
 
   async function handleSave() {
     setSaving(true);
@@ -155,10 +114,6 @@ export function ReservationSettingsPage() {
     } finally {
       setSaving(false);
     }
-  }
-
-  if (loading) {
-    return <PageLoader />;
   }
 
   const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";

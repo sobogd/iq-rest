@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { PRICE_LOOKUP_KEYS, type PlanType } from "@/lib/stripe-config";
 import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
 import { Link } from "@/i18n/routing";
-import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
 import { toast } from "sonner";
@@ -29,7 +28,17 @@ const SUBSCRIPTION_OPTIONS = [
   { id: "PRO_YEARLY", plan: "PRO" as PlanType, cycle: "YEARLY" as BillingCycle, price: 20.75, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
 ] as const;
 
-export function BillingPage() {
+interface BillingPageProps {
+  initialSubscription: {
+    plan: PlanType;
+    billingCycle: BillingCycle | null;
+    subscriptionStatus: SubscriptionStatus;
+    currentPeriodEnd: string | null;
+    paymentProcessing: boolean;
+  } | null;
+}
+
+export function BillingPage({ initialSubscription }: BillingPageProps) {
   const t = useTranslations("billing");
   const { translations } = useDashboard();
   const locale = useLocale();
@@ -39,14 +48,13 @@ export function BillingPage() {
   const showSuccess = searchParams.get("success") === "true";
   const showCanceled = searchParams.get("canceled") === "true";
 
-  const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [isPolling, setIsPolling] = useState(false);
 
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
-  const [billingCycle, setBillingCycle] = useState<BillingCycle | null>(null);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [paymentProcessing, setPaymentProcessing] = useState(false);
+  const [currentPlan, setCurrentPlan] = useState<PlanType>(initialSubscription?.plan ?? "FREE");
+  const [billingCycle, setBillingCycle] = useState<BillingCycle | null>(initialSubscription?.billingCycle ?? null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>(initialSubscription?.subscriptionStatus ?? "INACTIVE");
+  const [paymentProcessing, setPaymentProcessing] = useState(initialSubscription?.paymentProcessing ?? false);
 
   const fetchSubscriptionStatus = useCallback(async () => {
     try {
@@ -64,10 +72,6 @@ export function BillingPage() {
     }
     return null;
   }, []);
-
-  useEffect(() => {
-    fetchSubscriptionStatus().then(() => setLoading(false));
-  }, [fetchSubscriptionStatus]);
 
   const clearUrlParams = useCallback(() => {
     router.replace(window.location.pathname, { scroll: false });
@@ -87,15 +91,13 @@ export function BillingPage() {
   }, [fetchSubscriptionStatus, clearUrlParams]);
 
   useEffect(() => {
-    if (showSuccess && !paymentProcessing && !loading) {
+    if (showSuccess && !paymentProcessing) {
       fetch("/api/subscription/processing", { method: "POST" });
       setPaymentProcessing(true);
     }
-  }, [showSuccess, paymentProcessing, loading]);
+  }, [showSuccess, paymentProcessing]);
 
   useEffect(() => {
-    if (loading) return;
-
     if (showSuccess || paymentProcessing) {
       setIsPolling(true);
 
@@ -131,7 +133,7 @@ export function BillingPage() {
       toast.error(t("subscriptionCanceled"));
       clearUrlParams();
     }
-  }, [showSuccess, showCanceled, paymentProcessing, pollSubscriptionStatus, t, clearUrlParams, loading]);
+  }, [showSuccess, showCanceled, paymentProcessing, pollSubscriptionStatus, t, clearUrlParams]);
 
   const handleSubscribe = async (lookupKey: string) => {
     setActionLoading(lookupKey);
@@ -189,10 +191,6 @@ export function BillingPage() {
     }
     return currentPlan === option.plan && billingCycle === option.cycle && isActive;
   };
-
-  if (loading) {
-    return <PageLoader />;
-  }
 
   if (isPolling) {
     return (

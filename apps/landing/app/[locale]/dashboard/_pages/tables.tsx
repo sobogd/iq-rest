@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, X, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
-import { PageLoader } from "../_ui/page-loader";
 import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 
@@ -20,36 +19,20 @@ interface Table {
   sortOrder: number;
 }
 
-export function TablesPage() {
+interface TablesPageProps {
+  initialTables: Table[];
+}
+
+export function TablesPage({ initialTables }: TablesPageProps) {
   const t = useTranslations("reservations");
   const { translations } = useDashboard();
   const router = useRouter();
   const pageTitle = translations.pages.tables;
 
-  const [tables, setTables] = useState<Table[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [tables, setTables] = useState<Table[]>(initialTables);
   const [sortMode, setSortMode] = useState(false);
   const [originalOrder, setOriginalOrder] = useState<Table[]>([]);
   const [savingSort, setSavingSort] = useState(false);
-
-  useEffect(() => {
-    fetchTables();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  async function fetchTables() {
-    try {
-      const response = await fetch("/api/tables");
-      if (!response.ok) throw new Error("Failed to fetch");
-      const data = await response.json();
-      setTables(data.sort((a: Table, b: Table) => a.sortOrder - b.sortOrder));
-    } catch (error) {
-      console.error("Failed to fetch tables:", error);
-      toast.error(t("error"));
-    } finally {
-      setLoading(false);
-    }
-  }
 
   async function handleToggleActive(tableId: string, currentActive: boolean, tableNumber: number) {
     const newActive = !currentActive;
@@ -133,10 +116,6 @@ export function TablesPage() {
     } finally {
       setSavingSort(false);
     }
-  }
-
-  if (loading) {
-    return <PageLoader />;
   }
 
   return (

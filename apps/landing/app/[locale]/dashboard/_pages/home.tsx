@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import {
   Eye,
-  Loader2,
   ArrowRight,
   QrCode,
   Palette,
@@ -25,7 +23,6 @@ import {
   Activity,
 } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
-import { isAdminEmail } from "@/lib/admin";
 
 interface NavItem {
   key: string;
@@ -52,50 +49,17 @@ const allSections: NavItem[] = [
   { key: "billing", page: "billing", icon: CreditCard },
 ];
 
-export function DashboardHome() {
+interface DashboardHomeProps {
+  slug: string | null;
+  isAdmin: boolean;
+}
+
+export function DashboardHome({ slug, isAdmin }: DashboardHomeProps) {
   const t = useTranslations("dashboard.onboarding");
   const tPages = useTranslations("dashboard.pages");
   const tDashboard = useTranslations("dashboard");
   const { translations } = useDashboard();
   const router = useRouter();
-
-  const [loading, setLoading] = useState(true);
-  const [slug, setSlug] = useState<string | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  useEffect(() => {
-    const cookies = document.cookie.split(";");
-    const emailCookie = cookies.find((c) => c.trim().startsWith("user_email="));
-    if (emailCookie) {
-      const email = decodeURIComponent(emailCookie.split("=")[1]);
-      setIsAdmin(isAdminEmail(email));
-    }
-  }, []);
-
-  useEffect(() => {
-    async function fetchSlug() {
-      try {
-        const res = await fetch("/api/restaurant");
-        if (res.ok) {
-          const data = await res.json();
-          setSlug(data?.slug || null);
-        }
-      } catch (error) {
-        console.error("Failed to fetch restaurant:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchSlug();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    );
-  }
 
   return (
     <div className="flex flex-col h-full">

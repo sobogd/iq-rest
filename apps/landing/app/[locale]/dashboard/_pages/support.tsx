@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Loader2 } from "lucide-react";
-import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
 
@@ -18,11 +17,14 @@ interface Message {
 
 const POLLING_INTERVAL = 60000;
 
-export function SupportPage() {
+interface SupportPageProps {
+  initialMessages: Message[];
+}
+
+export function SupportPage({ initialMessages }: SupportPageProps) {
   const t = useTranslations("support");
   const { translations } = useDashboard();
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [newMessage, setNewMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -37,15 +39,8 @@ export function SupportPage() {
       }
     } catch (error) {
       console.error("Failed to fetch messages:", error);
-    } finally {
-      setLoading(false);
     }
   }, []);
-
-  useEffect(() => {
-
-    fetchMessages();
-  }, [fetchMessages]);
 
   useEffect(() => {
     const interval = setInterval(fetchMessages, POLLING_INTERVAL);
@@ -97,10 +92,6 @@ export function SupportPage() {
       minute: "2-digit",
     });
   };
-
-  if (loading) {
-    return <PageLoader />;
-  }
 
   return (
     <div className="flex flex-col h-full">

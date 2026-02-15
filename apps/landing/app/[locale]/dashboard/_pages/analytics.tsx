@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useMemo } from "react";
 import { useDashboard } from "../_context/dashboard-context";
-import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { Label } from "@/components/ui/label";
 import { Eye, Calendar, CalendarDays, Users } from "lucide-react";
@@ -71,43 +70,14 @@ const PAGE_ORDER = ["home", "menu", "contacts", "reserve", "language"];
 
 const SKELETON_HEIGHTS = [60, 40, 75, 25, 50, 35, 65];
 
-function getLast7DaysLabels() {
-  const labels = [];
-  for (let i = 6; i >= 0; i--) {
-    const date = new Date();
-    date.setDate(date.getDate() - i);
-    labels.push(date.toLocaleDateString("en", { weekday: "short" }));
-  }
-  return labels;
+interface AnalyticsPageProps {
+  initialData: AnalyticsData | null;
 }
 
-export function AnalyticsPage() {
+export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
   const { translations } = useDashboard();
   const t = translations.analytics;
-  const [data, setData] = useState<AnalyticsData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  const skeletonDayLabels = useMemo(() => getLast7DaysLabels(), []);
-
-  useEffect(() => {
-    async function fetchAnalytics() {
-      try {
-        const response = await fetch("/api/dashboard/analytics");
-        if (!response.ok) {
-          throw new Error("Failed to fetch analytics");
-        }
-        const analyticsData = await response.json();
-        setData(analyticsData);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Unknown error");
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchAnalytics();
-  }, []);
+  const data = initialData;
 
   const maxDayViews = data ? Math.max(...data.viewsByDay.map((v) => v.count), 1) : 1;
 
@@ -119,14 +89,10 @@ export function AnalyticsPage() {
     });
   }, [data, maxDayViews]);
 
-  if (loading) {
-    return <PageLoader />;
-  }
-
-  if (error) {
+  if (!data) {
     return (
       <div className="p-6">
-        <div className="text-destructive">{error}</div>
+        <div className="text-destructive">Failed to load analytics</div>
       </div>
     );
   }
@@ -178,13 +144,9 @@ export function AnalyticsPage() {
           className="bg-muted/30 rounded-xl flex items-end justify-around gap-2 sm:gap-4 overflow-hidden"
           style={{ height: "180px", padding: "40px 12px 24px" }}
         >
-          {(loading ? skeletonDayLabels : data?.viewsByDay || []).map((item, index) => {
-            const isLoading = loading;
-            const dayData = isLoading ? null : (item as { date: string; count: number });
-            const height = isLoading ? SKELETON_HEIGHTS[index] : dayHeights[index];
-            const dayLabel = isLoading
-              ? (item as string)
-              : new Date(dayData!.date).toLocaleDateString("en", { weekday: "short" });
+          {(data.viewsByDay || []).map((item, index) => {
+            const height = dayHeights[index];
+            const dayLabel = new Date(item.date).toLocaleDateString("en", { weekday: "short" });
 
             return (
               <div
@@ -193,16 +155,12 @@ export function AnalyticsPage() {
                 style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
               >
                 <div style={{ height: "16px", marginBottom: "8px" }}>
-                  {!isLoading && (
-                    <span className="text-xs text-muted-foreground">
-                      {dayData!.count}
-                    </span>
-                  )}
+                  <span className="text-xs text-muted-foreground">
+                    {item.count}
+                  </span>
                 </div>
                 <div
-                  className={`transition-all duration-700 ease-out ${
-                    isLoading ? "bg-muted" : "bg-primary/80 hover:bg-primary"
-                  }`}
+                  className="transition-all duration-700 ease-out bg-primary/80 hover:bg-primary"
                   style={{ width: "32px", minWidth: "24px", height: `${height}px`, borderRadius: "4px" }}
                 />
                 <span className="text-xs text-muted-foreground" style={{ marginTop: "8px" }}>

@@ -7,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Printer, Download, Copy, Check } from "lucide-react";
-import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
@@ -29,13 +28,16 @@ const QR_PER_PAGE = {
   sixteen: { count: 16, cols: 4, rows: 4 },
 };
 
-export function QrMenuPage() {
+interface QrMenuPageProps {
+  initialSlug: string | null;
+}
+
+export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
   const t = useTranslations("qrCode");
   const { translations } = useDashboard();
   const router = useRouter();
 
-  const [loading, setLoading] = useState(true);
-  const [slug, setSlug] = useState<string | null>(null);
+  const [slug] = useState<string | null>(initialSlug);
   const [paperFormat, setPaperFormat] = useState<keyof typeof PAPER_FORMATS>("a4");
   const [qrPerPage, setQrPerPage] = useState<keyof typeof QR_PER_PAGE>("sixteen");
   const [customText, setCustomText] = useState<string>("QR Menu\nScan Me");
@@ -47,24 +49,6 @@ export function QrMenuPage() {
   const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
   const paper = PAPER_FORMATS[paperFormat];
   const isSmallPaper = paperFormat === "a5" || paperFormat === "a6";
-
-  useEffect(() => {
-    fetchSlug();
-  }, []);
-
-  async function fetchSlug() {
-    try {
-      const res = await fetch("/api/restaurant");
-      if (res.ok) {
-        const data = await res.json();
-        setSlug(data?.slug || null);
-      }
-    } catch (error) {
-      console.error("Failed to fetch slug:", error);
-    } finally {
-      setLoading(false);
-    }
-  }
 
   useEffect(() => {
     if (isSmallPaper && (qrPerPage === "six" || qrPerPage === "nine" || qrPerPage === "sixteen")) {
@@ -229,10 +213,6 @@ export function QrMenuPage() {
 
     img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
   };
-
-  if (loading) {
-    return <PageLoader />;
-  }
 
   if (!slug) {
     return (

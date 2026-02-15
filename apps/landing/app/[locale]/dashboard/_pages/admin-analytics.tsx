@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PageLoader } from "../_ui/page-loader";
+import { PageHeader } from "../_ui/page-header";
 
 interface FunnelStep {
   event: string;
@@ -587,7 +588,8 @@ export function AdminAnalyticsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-auto p-6 space-y-6">
+      <PageHeader title="Admin Analytics" />
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6 space-y-6">
         {/* Time Range Filter */}
         <Card>
           <CardContent className="pt-4">
