@@ -94,7 +94,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
     } catch (error) {
       console.error("Failed to fetch table:", error);
       toast.error(t("error"));
-      router.back();
+      router.push("/dashboard/tables");
     } finally {
       setLoading(false);
     }
@@ -240,7 +240,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={isEdit ? t("editTable") : t("newTable")}>
+      <PageHeader title={isEdit ? t("editTable") : t("newTable")} backHref="/dashboard/tables">
         {isEdit && (
           <button
             type="button"

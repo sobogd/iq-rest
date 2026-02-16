@@ -124,7 +124,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={translations.pages.reservations} />
+      <PageHeader title={translations.pages.reservations} backHref="/dashboard/reservations" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-6">
         {!hasActiveSubscription && (

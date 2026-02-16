@@ -176,7 +176,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={isEdit ? t.editCategory : t.addCategory}>
+      <PageHeader title={isEdit ? t.editCategory : t.addCategory} backHref="/dashboard/menu">
         {isEdit && (
           <button
             type="button"

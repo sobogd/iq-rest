@@ -305,7 +305,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={isEdit ? t.editItem : t.addItem}>
+      <PageHeader title={isEdit ? t.editItem : t.addItem} backHref="/dashboard/menu">
         {isEdit && (
           <button
             type="button"

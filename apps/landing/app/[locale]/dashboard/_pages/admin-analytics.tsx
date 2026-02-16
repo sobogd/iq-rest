@@ -570,7 +570,7 @@ export function AdminAnalyticsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Admin Analytics" />
+      <PageHeader title="Admin Analytics" backHref="/dashboard/admin" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-6">
         {/* Time Range Filter */}
