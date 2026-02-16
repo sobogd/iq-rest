@@ -14,7 +14,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
@@ -37,6 +37,7 @@ interface DesignPageProps {
 
 export function DesignPage({ initialRestaurant, initialSubscription }: DesignPageProps) {
   const t = useTranslations("dashboard.design");
+  const locale = useLocale();
   const { translations } = useDashboard();
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -142,10 +143,8 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
 
       if (res.ok) {
         toast.success(t("saved"));
-
-        setOriginalSource(source);
-        setOriginalAccentColor(accentColor);
-        setOriginalHideTitle(hideTitle);
+        window.location.href = `/${locale}/dashboard`;
+        return;
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));

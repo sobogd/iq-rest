@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 
@@ -22,6 +22,7 @@ interface ContactsPageProps {
 
 export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   const t = useTranslations("dashboard.contacts");
+  const locale = useLocale();
   const { translations } = useDashboard();
 
   const [saving, setSaving] = useState(false);
@@ -79,16 +80,8 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
 
       if (res.ok) {
         toast.success(t("saved"));
-
-        if (phone && phone !== originalPhone) 
-        if (instagram && instagram !== originalInstagram) 
-        if (whatsapp && whatsapp !== originalWhatsapp) 
-        if (lat && lng && (lat !== originalLat || lng !== originalLng)) 
-        setOriginalPhone(phone);
-        setOriginalInstagram(instagram);
-        setOriginalWhatsapp(whatsapp);
-        setOriginalLat(lat);
-        setOriginalLng(lng);
+        window.location.href = `/${locale}/dashboard`;
+        return;
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));

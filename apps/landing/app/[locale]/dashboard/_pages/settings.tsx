@@ -24,7 +24,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { analytics } from "@/lib/analytics";
@@ -63,6 +63,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   const t = useTranslations("dashboard.general");
   const tLang = useTranslations("dashboard.languages");
   const tPages = useTranslations("dashboard.pages");
+  const locale = useLocale();
   const { translations } = useDashboard();
   const router = useRouter();
 
@@ -203,13 +204,8 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
 
         toast.success(t("saved"));
         analytics.dashboard.restaurantSaved();
-
-        setOriginalName(name);
-        setOriginalDescription(description);
-        setOriginalSlug(slug);
-        setOriginalCurrency(currency);
-        setOriginalLanguages([...languages]);
-        setOriginalDefaultLanguage(defaultLanguage);
+        window.location.href = `/${locale}/dashboard`;
+        return;
       } else {
         const data = await res.json();
         toast.error(data.error || t("saveError"));
