@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useState, useRef } from "react";
+import { useCallback, useState, useRef, useMemo } from "react";
 import { GoogleMap, useJsApiLoader, Marker, Autocomplete } from "@react-google-maps/api";
 import { Loader2 } from "lucide-react";
+import { getCoordinatesByCountry } from "@/lib/country-centers";
 
 interface MapPickerProps {
   lat?: number;
@@ -15,14 +16,20 @@ const containerStyle = {
   height: "300px",
 };
 
-const defaultCenter = {
-  lat: 40.4168,
-  lng: -3.7038,
-};
+function getGeoCountryCookie(): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(/(?:^|; )geo_country=([^;]*)/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+const FALLBACK_CENTER = { lat: 40.4168, lng: -3.7038 };
 
 const libraries: ("places")[] = ["places"];
 
 export function MapPicker({ lat, lng, onLocationSelect }: MapPickerProps) {
+  const defaultCenter = useMemo(() => {
+    return getCoordinatesByCountry(getGeoCountryCookie()) || FALLBACK_CENTER;
+  }, []);
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY || "",

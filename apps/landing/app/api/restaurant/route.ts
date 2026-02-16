@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { moveFromTemp, s3Key, getPublicUrl } from "@/lib/s3";
 import { Prisma } from "@prisma/client";
 import { locales, Locale } from "@/i18n/routing";
-import { COUNTRY_CENTERS } from "@/lib/country-centers";
+import { COUNTRY_CENTERS, getCoordinatesByCountry } from "@/lib/country-centers";
 
 // Locale → phone country code mapping
 const LOCALE_PHONE_CODES: Record<string, string> = {
@@ -222,7 +223,12 @@ export async function POST(request: NextRequest) {
       // Generate test contact data based on locale
       const phoneCode = LOCALE_PHONE_CODES[userLocale] || "+1";
       const testPhone = `${phoneCode} 12345`;
-      const center = COUNTRY_CENTERS[userLocale];
+
+      // Get coordinates: prefer country-specific (from geo_country cookie), fallback to locale-based
+      const cookieStore = await cookies();
+      const geoCountry = cookieStore.get("geo_country")?.value || null;
+      const countryCoords = getCoordinatesByCountry(geoCountry);
+      const center = countryCoords || COUNTRY_CENTERS[userLocale];
 
       const restaurant = await prisma.restaurant.create({
         data: {
