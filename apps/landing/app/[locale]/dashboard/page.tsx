@@ -5,7 +5,7 @@ import { DashboardHome } from "./_pages/home";
 
 export default async function Page() {
   const companyId = await getUserCompanyId();
-  if (!companyId) redirect("/login");
+  if (!companyId) redirect("/");
 
   const [restaurant, isAdmin, checklist] = await Promise.all([
     getRestaurant(companyId),

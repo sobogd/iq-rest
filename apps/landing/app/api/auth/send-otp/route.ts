@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
         });
 
         cookieStore.set("user_email", normalizedEmail, {
-          httpOnly: false,
+          httpOnly: true,
           secure: process.env.NODE_ENV === "production",
           sameSite: "lax",
           maxAge: 60 * 60 * 24 * 7,

@@ -27,9 +27,11 @@ export function OnboardingTypePage() {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
   const [loading, setLoading] = useState<string | null>(null);
+  const [error, setError] = useState(false);
 
   const handleSelect = async (type: string) => {
     setLoading(type);
+    setError(false);
 
     try {
       const response = await fetch("/api/onboarding/setup-menu", {
@@ -41,9 +43,11 @@ export function OnboardingTypePage() {
       if (response.ok) {
         window.location.href = `/${locale}/dashboard`;
       } else {
+        setError(true);
         setLoading(null);
       }
     } catch {
+      setError(true);
       setLoading(null);
     }
   };
@@ -58,6 +62,12 @@ export function OnboardingTypePage() {
               {t("typeSubtitle")}
             </p>
           </div>
+
+          {error && (
+            <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm text-center">
+              {t("error")}
+            </div>
+          )}
 
           <div className="grid grid-cols-3 gap-3">
             {TYPES.map(({ type, translationKey, icon: Icon }) => (

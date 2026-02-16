@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
+import { locales } from "@/i18n/routing";
 
 async function handleLogout(request: NextRequest) {
   const cookieStore = await cookies();
@@ -15,9 +16,11 @@ async function handleLogout(request: NextRequest) {
   const protocol = request.headers.get("x-forwarded-proto") || "https";
   const origin = `${protocol}://${host}`;
 
-  // Get locale from referer or default to en
+  // Extract locale from referer URL path (e.g., /fr/dashboard -> fr)
   const referer = request.headers.get("referer") || "";
-  const locale = referer.includes("/es/") ? "es" : "en";
+  const localePattern = new RegExp(`/(${locales.join("|")})/`);
+  const match = referer.match(localePattern);
+  const locale = match?.[1] || "en";
 
   // Redirect to home page with locale
   return NextResponse.redirect(new URL(`/${locale}`, origin));

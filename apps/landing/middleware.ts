@@ -138,7 +138,11 @@ export default function middleware(request: NextRequest) {
 
   // Redirect root to detected locale
   if (pathname === "/") {
-    const targetLocale = detectLocaleByCountry(request);
+    // User's chosen locale (from language selector) takes priority over geo
+    const preferredLocale = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
+    const targetLocale = (preferredLocale && locales.includes(preferredLocale))
+      ? preferredLocale
+      : detectLocaleByCountry(request);
     const redirectUrl = new URL(`/${targetLocale}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);
@@ -148,7 +152,10 @@ export default function middleware(request: NextRequest) {
 
   // Redirect paths without locale prefix
   if (!localeRegex.test(pathname)) {
-    const targetLocale = detectLocaleByCountry(request);
+    const preferredLocale = request.cookies.get("NEXT_LOCALE")?.value as Locale | undefined;
+    const targetLocale = (preferredLocale && locales.includes(preferredLocale))
+      ? preferredLocale
+      : detectLocaleByCountry(request);
     const redirectUrl = new URL(`/${targetLocale}${pathname}`, request.url);
     redirectUrl.search = request.nextUrl.search;
     const response = NextResponse.redirect(redirectUrl, 302);

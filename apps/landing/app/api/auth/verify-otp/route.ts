@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
 
     // Store user email in a separate cookie for display purposes
     cookieStore.set("user_email", normalizedEmail, {
-      httpOnly: false,
+      httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       maxAge: 60 * 60 * 24 * 7, // 7 days
