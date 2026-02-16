@@ -12,6 +12,7 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_CITY_COOKIE = "geo_city";
+const GEO_IP_COOKIE = "geo_ip";
 const CURRENCY_COOKIE = "currency";
 
 /**
@@ -84,6 +85,18 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
     // Cloudflare может отправлять город в URL-encoded формате
     const decodedCity = decodeURIComponent(city);
     response.cookies.set(GEO_CITY_COOKIE, decodedCity, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+  }
+
+  // IP из Cloudflare или x-forwarded-for
+  const ip =
+    request.headers.get("cf-connecting-ip") ||
+    request.headers.get("x-forwarded-for")?.split(",")[0].trim();
+  if (ip) {
+    response.cookies.set(GEO_IP_COOKIE, ip, {
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",

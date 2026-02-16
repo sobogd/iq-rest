@@ -60,9 +60,7 @@ export async function POST(request: NextRequest) {
 
     // Always record the view (even if limit exceeded)
     const userAgent = request.headers.get("user-agent") || null;
-    const ip = request.headers.get("cf-connecting-ip")
-      || request.headers.get("x-forwarded-for")?.split(",")[0].trim()
-      || null;
+    const ip = request.cookies.get("geo_ip")?.value || null;
 
     await prisma.pageView.create({
       data: {
