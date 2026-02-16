@@ -134,7 +134,7 @@ export async function getScanUsage(companyId: string) {
 
   const PLAN_LIMITS: Record<string, number> = {
     FREE: 500,
-    BASIC: 2000,
+    BASIC: Infinity,
     PRO: Infinity,
   };
 
