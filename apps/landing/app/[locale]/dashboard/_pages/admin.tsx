@@ -85,7 +85,7 @@ interface Company {
   categoriesCount: number;
   itemsCount: number;
   messagesCount: number;
-  menuScans: number;
+  monthlyViews: number;
   users: User[];
   restaurants: Restaurant[];
 }
@@ -382,10 +382,10 @@ export function AdminPage() {
                         <Package className="h-3.5 w-3.5" />
                         {company.itemsCount}
                       </span>
-                      {company.menuScans > 0 && (
-                        <span className="flex items-center gap-1 text-blue-500" title="Menu scans">
+                      {company.monthlyViews > 0 && (
+                        <span className={`flex items-center gap-1 ${company.plan === "FREE" && company.monthlyViews >= 500 ? "text-red-500" : company.plan === "BASIC" && company.monthlyViews >= 2000 ? "text-red-500" : "text-blue-500"}`} title={`Monthly views: ${company.monthlyViews} / ${company.plan === "PRO" ? "∞" : company.plan === "BASIC" ? "2000" : "500"}`}>
                           <Eye className="h-3.5 w-3.5" />
-                          {company.menuScans}
+                          {company.monthlyViews}
                         </span>
                       )}
                       {company.messagesCount > 0 && (
@@ -639,9 +639,9 @@ export function AdminPage() {
                 </div>
                 <div className="text-center p-3 rounded-lg bg-muted/50">
                   <p className="text-2xl font-bold">
-                    {detailsCompany?.menuScans}
+                    {detailsCompany?.monthlyViews} / {detailsCompany?.plan === "PRO" ? "∞" : detailsCompany?.plan === "BASIC" ? "2000" : "500"}
                   </p>
-                  <p className="text-xs text-muted-foreground">Menu Scans</p>
+                  <p className="text-xs text-muted-foreground">Monthly Views</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-muted/50">
                   <p className="text-2xl font-bold">

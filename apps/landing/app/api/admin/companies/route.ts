@@ -56,15 +56,17 @@ export async function GET() {
       },
     });
 
-    // Get unique menu scans (unique sessions) per company
+    // Get monthly page views per company (same metric used for plan limits)
+    const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
     const companyIds = companies.map((c) => c.id);
-    const scanCounts = await prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
-      SELECT "companyId", COUNT(DISTINCT "sessionId") as count
+    const monthlyViewCounts = await prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
+      SELECT "companyId", COUNT(*) as count
       FROM page_views
       WHERE "companyId" = ANY(${companyIds}::text[])
+        AND "createdAt" >= ${startOfMonth}
       GROUP BY "companyId"
     `;
-    const scanMap = new Map(scanCounts.map((r) => [r.companyId, Number(r.count)]));
+    const viewsMap = new Map(monthlyViewCounts.map((r) => [r.companyId, Number(r.count)]));
 
     const result = companies.map((company) => ({
       id: company.id,
@@ -80,7 +82,7 @@ export async function GET() {
       categoriesCount: company._count.categories,
       itemsCount: company._count.items,
       messagesCount: company._count.supportMessages,
-      menuScans: scanMap.get(company.id) || 0,
+      monthlyViews: viewsMap.get(company.id) || 0,
       users: company.users.map((uc) => ({
         id: uc.user.id,
         email: uc.user.email,
