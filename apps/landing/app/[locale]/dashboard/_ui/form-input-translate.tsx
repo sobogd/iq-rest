@@ -16,6 +16,7 @@ import {
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -71,6 +72,7 @@ export function FormInputTranslate({
 
   async function handleTranslate() {
     if (!sourceText.trim()) return;
+    track(DashboardEvent.CLICKED_AI_TRANSLATE);
 
     if (!hasActiveSubscription) {
       setShowSubscriptionDialog(true);
@@ -139,10 +141,10 @@ export function FormInputTranslate({
             <DialogDescription>{t("description")}</DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setShowSubscriptionDialog(false)}>
+            <Button variant="outline" onClick={() => { track(DashboardEvent.CLICKED_AI_CANCEL); setShowSubscriptionDialog(false); }}>
               {t("cancel")}
             </Button>
-            <Button asChild>
+            <Button asChild onClick={() => track(DashboardEvent.CLICKED_AI_SUBSCRIBE)}>
               <Link href="/dashboard?page=billing">{t("subscribe")}</Link>
             </Button>
           </DialogFooter>

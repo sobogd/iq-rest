@@ -146,6 +146,11 @@ export enum DashboardEvent {
   SHOWED_SUPPORT = "showed_support",
   FOCUSED_SUPPORT_MESSAGE = "focused_support_message",
   CLICKED_SEND_MESSAGE = "clicked_send_message",
+
+  // AI Translate
+  CLICKED_AI_TRANSLATE = "clicked_ai_translate",
+  CLICKED_AI_SUBSCRIBE = "clicked_ai_subscribe",
+  CLICKED_AI_CANCEL = "clicked_ai_cancel",
 }
 
 // Human-readable labels for admin analytics display
@@ -294,6 +299,11 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.SHOWED_SUPPORT]: "Showed Support",
   [DashboardEvent.FOCUSED_SUPPORT_MESSAGE]: "Focused Support Message",
   [DashboardEvent.CLICKED_SEND_MESSAGE]: "Clicked Send Message",
+
+  // AI Translate
+  [DashboardEvent.CLICKED_AI_TRANSLATE]: "Clicked AI Translate",
+  [DashboardEvent.CLICKED_AI_SUBSCRIBE]: "Clicked AI Subscribe",
+  [DashboardEvent.CLICKED_AI_CANCEL]: "Clicked AI Cancel",
 };
 
 // Deduplicate: skip if the same event fired less than 1s ago
