@@ -1496,7 +1496,10 @@
       "checklistMenu": "Redaguokite meniu",
       "checklistContacts": "Pridėkite kontaktus",
       "checklistBrand": "Pritaikykite prekės ženklą",
-      "menuReady": "Jūsų meniu paruoštas! Pasidalykite QR kodu su klientais."
+      "menuReady": "Jūsų meniu paruoštas! Pasidalykite QR kodu su klientais.",
+      "scansTitle": "Mėnesio nuskaitymai",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} nuskaitymų"
     }
   },
   "reservationSettings": {

@@ -1496,7 +1496,10 @@
       "checklistMenu": "Cuir an biachlár in eagar",
       "checklistContacts": "Cuir teagmhálacha leis",
       "checklistBrand": "Saincheap do bhranda",
-      "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí."
+      "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí.",
+      "scansTitle": "Scanadh míosúil",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} scanadh"
     }
   },
   "reservationSettings": {

@@ -1496,7 +1496,10 @@
       "checklistMenu": "Редактирайте менюто",
       "checklistContacts": "Добавете контакти",
       "checklistBrand": "Персонализирайте марката",
-      "menuReady": "Менюто ви е готово! Споделете QR кода с клиентите."
+      "menuReady": "Менюто ви е готово! Споделете QR кода с клиентите.",
+      "scansTitle": "Месечни сканирания",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} сканирания"
     }
   },
   "reservationSettings": {

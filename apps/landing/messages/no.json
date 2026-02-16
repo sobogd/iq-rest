@@ -1496,7 +1496,10 @@
       "checklistMenu": "Rediger menyen",
       "checklistContacts": "Legg til kontakter",
       "checklistBrand": "Tilpass merkevaren",
-      "menuReady": "Menyen din er klar! Del QR-koden med gjestene."
+      "menuReady": "Menyen din er klar! Del QR-koden med gjestene.",
+      "scansTitle": "Månedlige skanninger",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skanninger"
     }
   },
   "reservationSettings": {

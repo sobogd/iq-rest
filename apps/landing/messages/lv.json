@@ -1496,7 +1496,10 @@
       "checklistMenu": "Rediģējiet ēdienkarti",
       "checklistContacts": "Pievienojiet kontaktus",
       "checklistBrand": "Pielāgojiet zīmolu",
-      "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem."
+      "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem.",
+      "scansTitle": "Mēneša skenējumi",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skenējumi"
     }
   },
   "reservationSettings": {

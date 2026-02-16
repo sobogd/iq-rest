@@ -1496,7 +1496,10 @@
       "checklistMenu": "Muutke menüüd",
       "checklistContacts": "Lisage kontaktid",
       "checklistBrand": "Kohandage brändi",
-      "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega."
+      "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega.",
+      "scansTitle": "Igakuised skannimised",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skannimist"
     }
   },
   "reservationSettings": {

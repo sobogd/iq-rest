@@ -1496,7 +1496,10 @@
       "checklistMenu": "Breyttu matseðlinum",
       "checklistContacts": "Bættu við tengiliðum",
       "checklistBrand": "Sérsníðið vörumerkið",
-      "menuReady": "Matseðillinn þinn er tilbúinn! Deildu QR kóðanum með viðskiptavinum."
+      "menuReady": "Matseðillinn þinn er tilbúinn! Deildu QR kóðanum með viðskiptavinum.",
+      "scansTitle": "Mánaðarlegar skannanir",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skannanir"
     }
   },
   "reservationSettings": {

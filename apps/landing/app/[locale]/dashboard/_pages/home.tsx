@@ -56,13 +56,19 @@ const checklistKeys: { key: keyof ChecklistStatus; translationKey: string; path:
   { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
 ];
 
+interface ScanUsage {
+  used: number;
+  limit: number | null;
+}
+
 interface DashboardHomeProps {
   slug: string | null;
   isAdmin: boolean;
   checklist: ChecklistStatus;
+  scanUsage: ScanUsage | null;
 }
 
-export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) {
+export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: DashboardHomeProps) {
   const tPages = useTranslations("dashboard.pages");
   const tDashboard = useTranslations("dashboard");
   const tHome = useTranslations("dashboard.home");
@@ -190,6 +196,31 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
                 </button>
               ))}
             </div>
+
+            {/* Scan usage indicator */}
+            {scanUsage && (
+              <div className="rounded-lg border bg-card p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium">{tHome("scansTitle")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {scanUsage.limit
+                      ? tHome("scansUsed", { used: scanUsage.used.toLocaleString(), limit: scanUsage.limit.toLocaleString() })
+                      : tHome("scansUnlimited", { used: scanUsage.used.toLocaleString() })}
+                  </span>
+                </div>
+                {scanUsage.limit && (
+                  <div className="h-2 rounded-full bg-muted overflow-hidden">
+                    <div
+                      className={`h-full rounded-full transition-all duration-500 ${
+                        scanUsage.used / scanUsage.limit > 0.9 ? "bg-red-500" : "bg-primary"
+                      }`}
+                      style={{ width: `${Math.min((scanUsage.used / scanUsage.limit) * 100, 100)}%` }}
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+
             <button
               onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
               className="flex items-center justify-center gap-2 w-full p-3 rounded-lg border bg-card hover:bg-accent transition-colors"

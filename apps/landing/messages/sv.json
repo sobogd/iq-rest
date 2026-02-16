@@ -1496,7 +1496,10 @@
       "checklistMenu": "Redigera menyn",
       "checklistContacts": "Lägg till kontakter",
       "checklistBrand": "Anpassa varumärket",
-      "menuReady": "Din meny är klar! Dela din QR-kod med gästerna."
+      "menuReady": "Din meny är klar! Dela din QR-kod med gästerna.",
+      "scansTitle": "Månatliga skanningar",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skanningar"
     }
   },
   "reservationSettings": {

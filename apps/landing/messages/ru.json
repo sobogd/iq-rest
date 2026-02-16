@@ -1496,7 +1496,10 @@
       "checklistMenu": "Отредактируйте меню",
       "checklistContacts": "Добавьте контакты",
       "checklistBrand": "Настройте бренд",
-      "menuReady": "Ваше меню готово! Поделитесь QR-кодом с клиентами."
+      "menuReady": "Ваше меню готово! Поделитесь QR-кодом с клиентами.",
+      "scansTitle": "Сканирования за месяц",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} сканирований"
     }
   },
   "reservationSettings": {

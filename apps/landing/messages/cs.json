@@ -1496,7 +1496,10 @@
       "checklistMenu": "Upravte menu",
       "checklistContacts": "Přidejte kontakty",
       "checklistBrand": "Přizpůsobte značku",
-      "menuReady": "Vaše menu je připraveno! Sdílejte QR kód se zákazníky."
+      "menuReady": "Vaše menu je připraveno! Sdílejte QR kód se zákazníky.",
+      "scansTitle": "Měsíční skeny",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skenů"
     }
   },
   "reservationSettings": {

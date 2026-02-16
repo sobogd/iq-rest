@@ -1496,7 +1496,10 @@
       "checklistMenu": "Uredite meni",
       "checklistContacts": "Dodajte kontakte",
       "checklistBrand": "Prilagodite blagovno znamko",
-      "menuReady": "Vaš meni je pripravljen! Delite QR kodo s strankami."
+      "menuReady": "Vaš meni je pripravljen! Delite QR kodo s strankami.",
+      "scansTitle": "Mesečna skeniranja",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skeniranj"
     }
   },
   "reservationSettings": {

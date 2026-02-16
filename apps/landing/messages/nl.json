@@ -1496,7 +1496,10 @@
       "checklistMenu": "Bewerk je menu",
       "checklistContacts": "Voeg contacten toe",
       "checklistBrand": "Pas je merk aan",
-      "menuReady": "Je menu is klaar! Deel je QR-code met klanten."
+      "menuReady": "Je menu is klaar! Deel je QR-code met klanten.",
+      "scansTitle": "Maandelijkse scans",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} scans"
     }
   },
   "reservationSettings": {

@@ -1496,7 +1496,10 @@
       "checklistMenu": "Muokkaa menua",
       "checklistContacts": "Lisää yhteystiedot",
       "checklistBrand": "Muokkaa brändiä",
-      "menuReady": "Menusi on valmis! Jaa QR-koodi asiakkaillesi."
+      "menuReady": "Menusi on valmis! Jaa QR-koodi asiakkaillesi.",
+      "scansTitle": "Kuukausittaiset skannaukset",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skannausta"
     }
   },
   "reservationSettings": {

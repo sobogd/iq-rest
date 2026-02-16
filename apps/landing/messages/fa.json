@@ -1529,7 +1529,10 @@
       "checklistMenu": "منو را ویرایش کنید",
       "checklistContacts": "مخاطبین را اضافه کنید",
       "checklistBrand": "برند خود را سفارشی کنید",
-      "menuReady": "منوی شما آماده است! کد QR را با مشتریان به اشتراک بگذارید."
+      "menuReady": "منوی شما آماده است! کد QR را با مشتریان به اشتراک بگذارید.",
+      "scansTitle": "اسکن‌های ماهانه",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} اسکن"
     }
   },
   "reservationSettings": {

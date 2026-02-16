@@ -1496,7 +1496,10 @@
       "checklistMenu": "Editează meniul",
       "checklistContacts": "Adaugă contacte",
       "checklistBrand": "Personalizează brandul",
-      "menuReady": "Meniul tău este gata! Distribuie codul QR clienților."
+      "menuReady": "Meniul tău este gata! Distribuie codul QR clienților.",
+      "scansTitle": "Scanări lunare",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} scanări"
     }
   },
   "reservationSettings": {

@@ -1496,7 +1496,10 @@
       "checklistMenu": "Szerkessze a menüt",
       "checklistContacts": "Adja meg az elérhetőségeket",
       "checklistBrand": "Szabja testre a márkát",
-      "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel."
+      "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel.",
+      "scansTitle": "Havi szkennelések",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} szkennelés"
     }
   },
   "reservationSettings": {

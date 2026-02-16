@@ -124,6 +124,35 @@ export async function getSupportMessages(companyId: string) {
   }));
 }
 
+// ---- Scan Usage (lightweight) ----
+export async function getScanUsage(companyId: string) {
+  const company = await prisma.company.findUnique({
+    where: { id: companyId },
+    select: { plan: true },
+  });
+  if (!company) return null;
+
+  const PLAN_LIMITS: Record<string, number> = {
+    FREE: 500,
+    BASIC: 2000,
+    PRO: Infinity,
+  };
+
+  const now = new Date();
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+
+  const monthlyViews = await prisma.pageView.count({
+    where: { companyId, createdAt: { gte: startOfMonth } },
+  });
+
+  const limit = PLAN_LIMITS[company.plan] || 500;
+
+  return {
+    used: monthlyViews,
+    limit: limit === Infinity ? null : limit,
+  };
+}
+
 // ---- Dashboard Analytics ----
 function getLast7Days(viewsByDay: { date: Date; count: bigint }[]) {
   const result: { date: string; count: number }[] = [];

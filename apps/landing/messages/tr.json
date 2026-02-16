@@ -1496,7 +1496,10 @@
       "checklistMenu": "Menüyü düzenleyin",
       "checklistContacts": "İletişim ekleyin",
       "checklistBrand": "Markayı özelleştirin",
-      "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın."
+      "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın.",
+      "scansTitle": "Aylık taramalar",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} tarama"
     }
   },
   "reservationSettings": {

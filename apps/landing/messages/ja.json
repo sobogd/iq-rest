@@ -1529,7 +1529,10 @@
       "checklistMenu": "メニューを編集",
       "checklistContacts": "連絡先を追加",
       "checklistBrand": "ブランドをカスタマイズ",
-      "menuReady": "メニューの準備ができました！QRコードをお客様に共有しましょう。"
+      "menuReady": "メニューの準備ができました！QRコードをお客様に共有しましょう。",
+      "scansTitle": "月間スキャン",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} スキャン"
     }
   },
   "reservationSettings": {

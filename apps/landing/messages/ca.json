@@ -1496,7 +1496,10 @@
       "checklistMenu": "Edita el menú",
       "checklistContacts": "Afegeix contactes",
       "checklistBrand": "Personalitza la marca",
-      "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients."
+      "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients.",
+      "scansTitle": "Escanejos mensuals",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} escanejos"
     }
   },
   "reservationSettings": {

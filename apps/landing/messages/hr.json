@@ -1496,7 +1496,10 @@
       "checklistMenu": "Uredi meni",
       "checklistContacts": "Dodaj kontakte",
       "checklistBrand": "Prilagodi brend",
-      "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima."
+      "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima.",
+      "scansTitle": "Mjesečna skeniranja",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} skeniranja"
     }
   },
   "reservationSettings": {

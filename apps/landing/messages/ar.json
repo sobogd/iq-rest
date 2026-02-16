@@ -1529,7 +1529,10 @@
       "checklistMenu": "حرّر القائمة",
       "checklistContacts": "أضف جهات الاتصال",
       "checklistBrand": "خصّص علامتك التجارية",
-      "menuReady": "قائمتك جاهزة! شارك رمز QR مع العملاء."
+      "menuReady": "قائمتك جاهزة! شارك رمز QR مع العملاء.",
+      "scansTitle": "المسح الشهري",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} مسح"
     }
   },
   "reservationSettings": {

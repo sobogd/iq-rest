@@ -1496,7 +1496,10 @@
       "checklistMenu": "Edite o menu",
       "checklistContacts": "Adicione contactos",
       "checklistBrand": "Personalize a marca",
-      "menuReady": "O seu menu está pronto! Partilhe o QR code com os clientes."
+      "menuReady": "O seu menu está pronto! Partilhe o QR code com os clientes.",
+      "scansTitle": "Leituras mensais",
+      "scansUsed": "{used} / {limit}",
+      "scansUnlimited": "{used} leituras"
     }
   },
   "reservationSettings": {
