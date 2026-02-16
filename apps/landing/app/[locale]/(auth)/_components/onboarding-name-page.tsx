@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 
 export function OnboardingNamePage() {
   const locale = useLocale();
+  const t = useTranslations("dashboard.onboarding");
+  const tAuth = useTranslations("dashboard.auth");
   const [name, setName] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -41,11 +43,11 @@ export function OnboardingNamePage() {
         window.location.href = `/${locale}/onboarding/type`;
       } else {
         const data = await response.json();
-        setErrorMessage(data.error || "Something went wrong");
+        setErrorMessage(data.error || t("error"));
         setStatus("error");
       }
     } catch {
-      setErrorMessage("Something went wrong");
+      setErrorMessage(t("error"));
       setStatus("error");
     }
   };
@@ -55,9 +57,9 @@ export function OnboardingNamePage() {
       <div className="w-full max-w-[280px]">
         <div className="grid gap-6">
           <div className="grid gap-2">
-            <h1 className="text-2xl font-bold">What&apos;s the name of your place?</h1>
+            <h1 className="text-2xl font-bold">{t("nameTitle")}</h1>
             <p className="text-muted-foreground">
-              You can always change it later
+              {t("nameSubtitle")}
             </p>
           </div>
 
@@ -73,7 +75,7 @@ export function OnboardingNamePage() {
                 ref={inputRef}
                 id="name"
                 type="text"
-                placeholder="e.g. Mario's Pizzeria"
+                placeholder={t("namePlaceholder")}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 disabled={status === "loading"}
@@ -86,7 +88,7 @@ export function OnboardingNamePage() {
                 {status === "loading" && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-                Continue
+                {tAuth("continue")}
               </Button>
             </div>
           </form>

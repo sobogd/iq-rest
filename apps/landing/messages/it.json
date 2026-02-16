@@ -1236,23 +1236,23 @@
       "subscribe": "Abbonati"
     },
     "auth": {
-      "title": "Accedi",
-      "subtitle": "Sito web moderno con menu QR, prenotazioni e traduzioni AI",
-      "emailPlaceholder": "tuo@email.com",
+      "title": "Benvenuto su IQ Rest",
+      "subtitle": "Inserisci la tua email per iniziare",
+      "consent": {
+        "text": "Continuando, accetti i nostri",
+        "terms": "Termini",
+        "and": "e",
+        "privacy": "Informativa sulla privacy"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Continua",
       "verifyTitle": "Controlla la tua email",
       "verifySubtitle": "Abbiamo inviato un codice a {email}",
       "verify": "Verifica",
-      "changeEmail": "Usa un'email diversa",
+      "changeEmail": "Usa un'altra email",
       "errors": {
-        "sendFailed": "Impossibile inviare il codice. Riprova.",
+        "sendFailed": "Invio del codice fallito. Riprova.",
         "verifyFailed": "Codice non valido. Riprova."
-      },
-      "consent": {
-        "text": "Continuando, accetti i",
-        "terms": "Termini di servizio",
-        "and": "e l'",
-        "privacy": "Informativa sulla privacy"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Aggiungi articolo",
       "addCategory": "Aggiungi categoria"
+    },
+    "onboarding": {
+      "nameTitle": "Come si chiama il tuo locale?",
+      "nameSubtitle": "Puoi cambiarlo in seguito",
+      "namePlaceholder": "es. Pizzeria Mario",
+      "typeTitle": "Che tipo di locale hai?",
+      "typeSubtitle": "Prepareremo un menu per te",
+      "types": {
+        "restaurant": "Ristorante",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Hamburgheria",
+        "cafe": "Caffetteria",
+        "bar": "Bar",
+        "bakery": "Panetteria",
+        "hotel": "Hotel",
+        "other": "Altro"
+      },
+      "error": "Qualcosa è andato storto"
     }
   },
   "reservationSettings": {

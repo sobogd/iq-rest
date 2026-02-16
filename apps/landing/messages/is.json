@@ -1236,23 +1236,23 @@
       "subscribe": "Gerast áskrifandi"
     },
     "auth": {
-      "title": "Skrá inn",
-      "subtitle": "Nútímaleg vefsíða með QR matseðli, bókunum og AI þýðingum",
-      "emailPlaceholder": "þitt@email.is",
-      "continue": "Halda áfram",
+      "title": "Velkomin í IQ Rest",
+      "subtitle": "Sláðu inn netfangið þitt til að byrja",
+      "consent": {
+        "text": "Með því að halda áfram samþykkir þú okkar",
+        "terms": "Skilmála",
+        "and": "og",
+        "privacy": "Persónuverndarstefnu"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Áfram",
       "verifyTitle": "Athugaðu tölvupóstinn þinn",
       "verifySubtitle": "Við sendum kóða á {email}",
       "verify": "Staðfesta",
-      "changeEmail": "Nota annan tölvupóst",
+      "changeEmail": "Nota annað netfang",
       "errors": {
-        "sendFailed": "Mistókst að senda kóðann. Vinsamlegast reyndu aftur.",
-        "verifyFailed": "Ógildur kóði. Vinsamlegast reyndu aftur."
-      },
-      "consent": {
-        "text": "Með því að halda áfram samþykkir þú",
-        "terms": "Þjónustuskilmálana",
-        "and": "og",
-        "privacy": "Persónuverndarstefnuna"
+        "sendFailed": "Ekki tókst að senda kóða. Reyndu aftur.",
+        "verifyFailed": "Ógildur kóði. Reyndu aftur."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Bæta við vöru",
       "addCategory": "Bæta við flokki"
+    },
+    "onboarding": {
+      "nameTitle": "Hvað heitir staðurinn þinn?",
+      "nameSubtitle": "Þú getur breytt því seinna",
+      "namePlaceholder": "t.d. Pizzeria Mario",
+      "typeTitle": "Hvers konar stað rekur þú?",
+      "typeSubtitle": "Við útbúum matseðil fyrir þig",
+      "types": {
+        "restaurant": "Veitingahús",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Hamborgarastaður",
+        "cafe": "Kaffihús",
+        "bar": "Bar",
+        "bakery": "Bakarí",
+        "hotel": "Hótel",
+        "other": "Annað"
+      },
+      "error": "Eitthvað fór úrskeiðis"
     }
   },
   "reservationSettings": {

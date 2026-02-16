@@ -1236,23 +1236,23 @@
       "subscribe": "Předplatit"
     },
     "auth": {
-      "title": "Přihlásit se",
-      "subtitle": "Moderní webová stránka s QR menu, rezervacemi a AI překlady",
-      "emailPlaceholder": "váš@email.com",
+      "title": "Vítejte v IQ Rest",
+      "subtitle": "Zadejte svůj e-mail a začněte",
+      "consent": {
+        "text": "Pokračováním souhlasíte s našimi",
+        "terms": "Podmínkami",
+        "and": "a",
+        "privacy": "Zásadami ochrany soukromí"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Pokračovat",
-      "verifyTitle": "Zkontrolujte svůj email",
+      "verifyTitle": "Zkontrolujte svůj e-mail",
       "verifySubtitle": "Poslali jsme kód na {email}",
       "verify": "Ověřit",
-      "changeEmail": "Použít jiný email",
+      "changeEmail": "Použít jiný e-mail",
       "errors": {
-        "sendFailed": "Nepodařilo se odeslat kód. Zkuste to prosím znovu.",
-        "verifyFailed": "Neplatný kód. Zkuste to prosím znovu."
-      },
-      "consent": {
-        "text": "Pokračováním souhlasíte s",
-        "terms": "Podmínkami služby",
-        "and": "a",
-        "privacy": "Zásadami ochrany osobních údajů"
+        "sendFailed": "Nepodařilo se odeslat kód. Zkuste to znovu.",
+        "verifyFailed": "Neplatný kód. Zkuste to znovu."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Přidat položku",
       "addCategory": "Přidat kategorii"
+    },
+    "onboarding": {
+      "nameTitle": "Jak se jmenuje vaše místo?",
+      "nameSubtitle": "Můžete to později změnit",
+      "namePlaceholder": "např. Pizzerie Mario",
+      "typeTitle": "Jaký typ podniku provozujete?",
+      "typeSubtitle": "Připravíme pro vás menu",
+      "types": {
+        "restaurant": "Restaurace",
+        "pizzeria": "Pizzerie",
+        "sushi-bar": "Sushi bar",
+        "burger-joint": "Burger bar",
+        "cafe": "Kavárna",
+        "bar": "Bar",
+        "bakery": "Pekárna",
+        "hotel": "Hotel",
+        "other": "Jiné"
+      },
+      "error": "Něco se pokazilo"
     }
   },
   "reservationSettings": {

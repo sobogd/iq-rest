@@ -238,7 +238,7 @@ export async function POST(request: NextRequest) {
           phone: data.phone || testPhone,
           instagram: data.instagram || "instagram",
           whatsapp: data.whatsapp || testPhone,
-          languages: data.languages || [userLocale],
+          languages: data.languages || (userLocale === "en" ? ["en", "es"] : [userLocale, "en"]),
           defaultLanguage: data.defaultLanguage || userLocale,
           hideTitle: data.hideTitle ?? false,
           // Reservation settings

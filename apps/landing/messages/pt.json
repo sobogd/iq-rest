@@ -1236,23 +1236,23 @@
       "subscribe": "Assinar"
     },
     "auth": {
-      "title": "Entrar",
-      "subtitle": "Site moderno com menu QR, reservas e traduções de IA",
-      "emailPlaceholder": "seu@email.com",
+      "title": "Bem-vindo ao IQ Rest",
+      "subtitle": "Insira seu e-mail para começar",
+      "consent": {
+        "text": "Ao continuar, você concorda com nossos",
+        "terms": "Termos",
+        "and": "e",
+        "privacy": "Política de Privacidade"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Continuar",
       "verifyTitle": "Verifique seu e-mail",
       "verifySubtitle": "Enviamos um código para {email}",
       "verify": "Verificar",
-      "changeEmail": "Usar e-mail diferente",
+      "changeEmail": "Usar outro e-mail",
       "errors": {
-        "sendFailed": "Falha ao enviar o código. Por favor, tente novamente.",
-        "verifyFailed": "Código inválido. Por favor, tente novamente."
-      },
-      "consent": {
-        "text": "Ao continuar, você concorda com os",
-        "terms": "Termos de Serviço",
-        "and": "e a",
-        "privacy": "Política de Privacidade"
+        "sendFailed": "Falha ao enviar o código. Tente novamente.",
+        "verifyFailed": "Código inválido. Tente novamente."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Adicionar item",
       "addCategory": "Adicionar categoria"
+    },
+    "onboarding": {
+      "nameTitle": "Qual o nome do seu estabelecimento?",
+      "nameSubtitle": "Você pode alterar depois",
+      "namePlaceholder": "ex. Pizzaria Mario",
+      "typeTitle": "Que tipo de estabelecimento você tem?",
+      "typeSubtitle": "Vamos preparar um cardápio para você",
+      "types": {
+        "restaurant": "Restaurante",
+        "pizzeria": "Pizzaria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Hamburgueria",
+        "cafe": "Cafeteria",
+        "bar": "Bar",
+        "bakery": "Padaria",
+        "hotel": "Hotel",
+        "other": "Outro"
+      },
+      "error": "Algo deu errado"
     }
   },
   "reservationSettings": {

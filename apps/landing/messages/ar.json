@@ -1269,23 +1269,23 @@
       "subscribe": "اشترك"
     },
     "auth": {
-      "title": "تسجيل الدخول",
-      "subtitle": "موقع عصري مع قائمة QR وحجوزات وترجمات الذكاء الاصطناعي",
-      "emailPlaceholder": "بريدك@email.com",
+      "title": "مرحبًا بك في IQ Rest",
+      "subtitle": "أدخل بريدك الإلكتروني للبدء",
+      "consent": {
+        "text": "بالمتابعة، فإنك توافق على",
+        "terms": "الشروط",
+        "and": "و",
+        "privacy": "سياسة الخصوصية"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "متابعة",
       "verifyTitle": "تحقق من بريدك الإلكتروني",
-      "verifySubtitle": "أرسلنا رمزاً إلى {email}",
+      "verifySubtitle": "أرسلنا رمزًا إلى {email}",
       "verify": "تحقق",
-      "changeEmail": "استخدام بريد إلكتروني مختلف",
+      "changeEmail": "استخدام بريد إلكتروني آخر",
       "errors": {
         "sendFailed": "فشل إرسال الرمز. يرجى المحاولة مرة أخرى.",
         "verifyFailed": "رمز غير صالح. يرجى المحاولة مرة أخرى."
-      },
-      "consent": {
-        "text": "بالمتابعة، فإنك توافق على",
-        "terms": "شروط الخدمة",
-        "and": "و",
-        "privacy": "سياسة الخصوصية"
       }
     },
     "analytics": {
@@ -1501,6 +1501,25 @@
     "menu": {
       "addItem": "إضافة صنف",
       "addCategory": "إضافة فئة"
+    },
+    "onboarding": {
+      "nameTitle": "ما اسم مكانك؟",
+      "nameSubtitle": "يمكنك تغييره لاحقًا",
+      "namePlaceholder": "مثال: بيتزا ماريو",
+      "typeTitle": "ما نوع مكانك؟",
+      "typeSubtitle": "سنُعدّ لك قائمة جاهزة",
+      "types": {
+        "restaurant": "مطعم",
+        "pizzeria": "بيتزيريا",
+        "sushi-bar": "سوشي بار",
+        "burger-joint": "مطعم برجر",
+        "cafe": "مقهى",
+        "bar": "بار",
+        "bakery": "مخبز",
+        "hotel": "فندق",
+        "other": "أخرى"
+      },
+      "error": "حدث خطأ"
     }
   },
   "reservationSettings": {

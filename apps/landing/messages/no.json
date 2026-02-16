@@ -1236,23 +1236,23 @@
       "subscribe": "Abonner"
     },
     "auth": {
-      "title": "Logg inn",
-      "subtitle": "Moderne nettsted med QR-meny, reservasjoner og AI-oversettelser",
-      "emailPlaceholder": "din@email.com",
+      "title": "Velkommen til IQ Rest",
+      "subtitle": "Skriv inn e-posten din for å komme i gang",
+      "consent": {
+        "text": "Ved å fortsette godtar du våre",
+        "terms": "Vilkår",
+        "and": "og",
+        "privacy": "Personvernregler"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Fortsett",
       "verifyTitle": "Sjekk e-posten din",
-      "verifySubtitle": "Vi har sendt en kode til {email}",
+      "verifySubtitle": "Vi sendte en kode til {email}",
       "verify": "Bekreft",
-      "changeEmail": "Bruk annen e-post",
+      "changeEmail": "Bruk en annen e-post",
       "errors": {
-        "sendFailed": "Kunne ikke sende koden. Vennligst prøv igjen.",
-        "verifyFailed": "Ugyldig kode. Vennligst prøv igjen."
-      },
-      "consent": {
-        "text": "Ved å fortsette godtar du",
-        "terms": "Tjenestevilkårene",
-        "and": "og",
-        "privacy": "Personvernreglene"
+        "sendFailed": "Kunne ikke sende koden. Prøv igjen.",
+        "verifyFailed": "Ugyldig kode. Prøv igjen."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Legg til vare",
       "addCategory": "Legg til kategori"
+    },
+    "onboarding": {
+      "nameTitle": "Hva heter stedet ditt?",
+      "nameSubtitle": "Du kan endre det senere",
+      "namePlaceholder": "f.eks. Marios Pizzeria",
+      "typeTitle": "Hva slags sted driver du?",
+      "typeSubtitle": "Vi lager en meny for deg",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burgersted",
+        "cafe": "Kafé",
+        "bar": "Bar",
+        "bakery": "Bakeri",
+        "hotel": "Hotell",
+        "other": "Annet"
+      },
+      "error": "Noe gikk galt"
     }
   },
   "reservationSettings": {

@@ -1236,23 +1236,23 @@
       "subscribe": "Abonează-te"
     },
     "auth": {
-      "title": "Conectare",
-      "subtitle": "Website modern cu meniu QR, rezervări și traduceri AI",
-      "emailPlaceholder": "al-tau@email.ro",
-      "continue": "Continuă",
-      "verifyTitle": "Verifică-ți emailul",
-      "verifySubtitle": "Am trimis un cod la {email}",
-      "verify": "Verifică",
-      "changeEmail": "Folosește un email diferit",
-      "errors": {
-        "sendFailed": "Nu s-a reușit trimiterea codului. Te rugăm să încerci din nou.",
-        "verifyFailed": "Cod invalid. Te rugăm să încerci din nou."
-      },
+      "title": "Bine ați venit la IQ Rest",
+      "subtitle": "Introduceți e-mailul pentru a începe",
       "consent": {
-        "text": "Continuând, sunteți de acord cu",
-        "terms": "Termenii și condițiile",
+        "text": "Continuând, acceptați",
+        "terms": "Termenii",
         "and": "și",
         "privacy": "Politica de confidențialitate"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Continuă",
+      "verifyTitle": "Verificați e-mailul",
+      "verifySubtitle": "Am trimis un cod la {email}",
+      "verify": "Verifică",
+      "changeEmail": "Folosește alt e-mail",
+      "errors": {
+        "sendFailed": "Trimiterea codului a eșuat. Încercați din nou.",
+        "verifyFailed": "Cod invalid. Încercați din nou."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Adaugă articol",
       "addCategory": "Adaugă categorie"
+    },
+    "onboarding": {
+      "nameTitle": "Cum se numește localul tău?",
+      "nameSubtitle": "Poți schimba mai târziu",
+      "namePlaceholder": "ex. Pizzeria Mario",
+      "typeTitle": "Ce tip de local ai?",
+      "typeSubtitle": "Vom pregăti un meniu pentru tine",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzerie",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger",
+        "cafe": "Cafenea",
+        "bar": "Bar",
+        "bakery": "Brutărie",
+        "hotel": "Hotel",
+        "other": "Altul"
+      },
+      "error": "Ceva nu a funcționat"
     }
   },
   "reservationSettings": {

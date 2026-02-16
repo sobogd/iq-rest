@@ -1236,23 +1236,23 @@
       "subscribe": "Subskrybuj"
     },
     "auth": {
-      "title": "Zaloguj się",
-      "subtitle": "Nowoczesna strona internetowa z menu QR, rezerwacjami i tłumaczeniami AI",
-      "emailPlaceholder": "twój@email.com",
-      "continue": "Kontynuuj",
-      "verifyTitle": "Sprawdź swój email",
-      "verifySubtitle": "Wysłaliśmy kod na {email}",
-      "verify": "Zweryfikuj",
-      "changeEmail": "Użyj innego emaila",
-      "errors": {
-        "sendFailed": "Nie udało się wysłać kodu. Proszę spróbować ponownie.",
-        "verifyFailed": "Nieprawidłowy kod. Proszę spróbować ponownie."
-      },
+      "title": "Witamy w IQ Rest",
+      "subtitle": "Wpisz swój e-mail, aby rozpocząć",
       "consent": {
-        "text": "Kontynuując, akceptujesz",
+        "text": "Kontynuując, akceptujesz nasze",
         "terms": "Regulamin",
         "and": "i",
         "privacy": "Politykę prywatności"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Dalej",
+      "verifyTitle": "Sprawdź swój e-mail",
+      "verifySubtitle": "Wysłaliśmy kod na {email}",
+      "verify": "Potwierdź",
+      "changeEmail": "Użyj innego e-maila",
+      "errors": {
+        "sendFailed": "Nie udało się wysłać kodu. Spróbuj ponownie.",
+        "verifyFailed": "Nieprawidłowy kod. Spróbuj ponownie."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Dodaj pozycję",
       "addCategory": "Dodaj kategorię"
+    },
+    "onboarding": {
+      "nameTitle": "Jak nazywa się Twoje miejsce?",
+      "nameSubtitle": "Możesz to zmienić później",
+      "namePlaceholder": "np. Pizzeria Mario",
+      "typeTitle": "Jaki typ lokalu prowadzisz?",
+      "typeSubtitle": "Przygotujemy dla Ciebie menu",
+      "types": {
+        "restaurant": "Restauracja",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger bar",
+        "cafe": "Kawiarnia",
+        "bar": "Bar",
+        "bakery": "Piekarnia",
+        "hotel": "Hotel",
+        "other": "Inne"
+      },
+      "error": "Coś poszło nie tak"
     }
   },
   "reservationSettings": {

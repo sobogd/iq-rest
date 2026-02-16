@@ -1269,23 +1269,23 @@
       "subscribe": "订阅"
     },
     "auth": {
-      "title": "登录",
-      "subtitle": "包含QR菜单、预订和AI翻译的现代网站",
-      "emailPlaceholder": "你的@email.com",
-      "continue": "继续",
-      "verifyTitle": "检查您的电子邮件",
-      "verifySubtitle": "我们已向{email}发送了代码",
-      "verify": "验证",
-      "changeEmail": "使用不同的电子邮件",
-      "errors": {
-        "sendFailed": "发送代码失败。请重试。",
-        "verifyFailed": "代码无效。请重试。"
-      },
+      "title": "欢迎使用 IQ Rest",
+      "subtitle": "输入您的邮箱开始使用",
       "consent": {
-        "text": "继续即表示您同意",
-        "terms": "服务条款",
+        "text": "继续即表示您同意我们的",
+        "terms": "条款",
         "and": "和",
         "privacy": "隐私政策"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "继续",
+      "verifyTitle": "请查看您的邮箱",
+      "verifySubtitle": "我们已向 {email} 发送了验证码",
+      "verify": "验证",
+      "changeEmail": "使用其他邮箱",
+      "errors": {
+        "sendFailed": "发送验证码失败，请重试。",
+        "verifyFailed": "验证码无效，请重试。"
       }
     },
     "analytics": {
@@ -1501,6 +1501,25 @@
     "menu": {
       "addItem": "添加商品",
       "addCategory": "添加分类"
+    },
+    "onboarding": {
+      "nameTitle": "您的店铺叫什么名字？",
+      "nameSubtitle": "您可以稍后更改",
+      "namePlaceholder": "例如：马里奥披萨店",
+      "typeTitle": "您经营什么类型的店铺？",
+      "typeSubtitle": "我们将为您准备一份菜单",
+      "types": {
+        "restaurant": "餐厅",
+        "pizzeria": "披萨店",
+        "sushi-bar": "寿司吧",
+        "burger-joint": "汉堡店",
+        "cafe": "咖啡馆",
+        "bar": "酒吧",
+        "bakery": "面包店",
+        "hotel": "酒店",
+        "other": "其他"
+      },
+      "error": "出了点问题"
     }
   },
   "reservationSettings": {

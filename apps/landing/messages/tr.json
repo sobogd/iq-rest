@@ -1236,23 +1236,23 @@
       "subscribe": "Abone Ol"
     },
     "auth": {
-      "title": "Giriş yap",
-      "subtitle": "QR menü, rezervasyonlar ve AI çevirileri ile modern web sitesi",
-      "emailPlaceholder": "isim@email.com",
-      "continue": "Devam et",
+      "title": "IQ Rest'e hoş geldiniz",
+      "subtitle": "Başlamak için e-postanızı girin",
+      "consent": {
+        "text": "Devam ederek kabul etmiş olursunuz",
+        "terms": "Şartlar",
+        "and": "ve",
+        "privacy": "Gizlilik Politikası"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Devam",
       "verifyTitle": "E-postanızı kontrol edin",
       "verifySubtitle": "{email} adresine bir kod gönderdik",
       "verify": "Doğrula",
-      "changeEmail": "Farklı bir e-posta kullan",
+      "changeEmail": "Başka e-posta kullan",
       "errors": {
-        "sendFailed": "Kodu göndermekte başarısız olundu. Lütfen tekrar deneyin.",
+        "sendFailed": "Kod gönderilemedi. Lütfen tekrar deneyin.",
         "verifyFailed": "Geçersiz kod. Lütfen tekrar deneyin."
-      },
-      "consent": {
-        "text": "Devam ederek,",
-        "terms": "Hizmet Şartları",
-        "and": "ve",
-        "privacy": "Gizlilik Politikası'nı kabul etmiş olursunuz"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Ürün ekle",
       "addCategory": "Kategori ekle"
+    },
+    "onboarding": {
+      "nameTitle": "Mekanınızın adı nedir?",
+      "nameSubtitle": "Daha sonra değiştirebilirsiniz",
+      "namePlaceholder": "örn. Mario'nun Pizzacısı",
+      "typeTitle": "Ne tür bir mekan işletiyorsunuz?",
+      "typeSubtitle": "Sizin için hazır bir menü oluşturacağız",
+      "types": {
+        "restaurant": "Restoran",
+        "pizzeria": "Pizzacı",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger Mekanı",
+        "cafe": "Kafe",
+        "bar": "Bar",
+        "bakery": "Fırın",
+        "hotel": "Otel",
+        "other": "Diğer"
+      },
+      "error": "Bir şeyler ters gitti"
     }
   },
   "reservationSettings": {

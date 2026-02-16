@@ -1236,23 +1236,23 @@
       "subscribe": "Liostáil"
     },
     "auth": {
-      "title": "Sínigh isteach",
-      "subtitle": "Suíomh gréasáin nua-aimseartha le comhoiriúnacht QR, áirithintí, agus aistriúcháin AI",
-      "emailPlaceholder": "do@email.com",
-      "continue": "Lean ort",
-      "verifyTitle": "Seiceáil do ríomhphost",
-      "verifySubtitle": "Sheolamar cód chuig {email}",
-      "verify": "Deimhnigh",
-      "changeEmail": "Úsáid ríomhphost difriúil",
-      "errors": {
-        "sendFailed": "Theip ar an gcód a sheoladh. Bain triail as arís.",
-        "verifyFailed": "Cód neamhbhailí. Bain triail as arís."
-      },
+      "title": "Fáilte go IQ Rest",
+      "subtitle": "Cuir isteach do ríomhphost chun tosú",
       "consent": {
-        "text": "Trí leanúint ar aghaidh, aontaíonn tú leis na",
-        "terms": "Téarmaí Seirbhíse",
-        "and": "agus an",
-        "privacy": "Beartas Príobháideachta"
+        "text": "Trí leanúint ar aghaidh, aontaíonn tú lenár",
+        "terms": "Téarmaí",
+        "and": "agus",
+        "privacy": "Polasaí Príobháideachta"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Lean ar aghaidh",
+      "verifyTitle": "Seiceáil do ríomhphost",
+      "verifySubtitle": "Sheol muid cód chuig {email}",
+      "verify": "Deimhnigh",
+      "changeEmail": "Úsáid ríomhphost eile",
+      "errors": {
+        "sendFailed": "Theip ar sheoladh an chóid. Bain triail eile as.",
+        "verifyFailed": "Cód neamhbhailí. Bain triail eile as."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Cuir mír leis",
       "addCategory": "Cuir catagóir leis"
+    },
+    "onboarding": {
+      "nameTitle": "Cad is ainm do d'áit?",
+      "nameSubtitle": "Is féidir leat é a athrú níos déanaí",
+      "namePlaceholder": "m.sh. Pizzeria Mario",
+      "typeTitle": "Cén cineál áite a bhfuil agat?",
+      "typeSubtitle": "Ullmhóimid biachlár duit",
+      "types": {
+        "restaurant": "Bialann",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burgair",
+        "cafe": "Caife",
+        "bar": "Bár",
+        "bakery": "Bácús",
+        "hotel": "Óstán",
+        "other": "Eile"
+      },
+      "error": "Chuaigh rud éigin mícheart"
     }
   },
   "reservationSettings": {

@@ -1269,23 +1269,23 @@
       "subscribe": "اشتراک"
     },
     "auth": {
-      "title": "ورود",
-      "subtitle": "وبسایت مدرن با منوی QR، رزرو و ترجمه‌های هوش مصنوعی",
-      "emailPlaceholder": "ایمیل@شما.com",
+      "title": "به IQ Rest خوش آمدید",
+      "subtitle": "ایمیل خود را وارد کنید",
+      "consent": {
+        "text": "با ادامه دادن، شما موافقت می‌کنید با",
+        "terms": "شرایط",
+        "and": "و",
+        "privacy": "سیاست حریم خصوصی"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "ادامه",
       "verifyTitle": "ایمیل خود را بررسی کنید",
       "verifySubtitle": "کدی به {email} ارسال کردیم",
       "verify": "تأیید",
       "changeEmail": "استفاده از ایمیل دیگر",
       "errors": {
-        "sendFailed": "ارسال کد ناموفق بود. لطفاً دوباره امتحان کنید.",
-        "verifyFailed": "کد نامعتبر. لطفاً دوباره امتحان کنید."
-      },
-      "consent": {
-        "text": "با ادامه دادن، شما با",
-        "terms": "شرایط خدمات",
-        "and": "و",
-        "privacy": "سیاست حفظ حریم خصوصی موافقت می‌کنید"
+        "sendFailed": "ارسال کد ناموفق بود. لطفاً دوباره تلاش کنید.",
+        "verifyFailed": "کد نامعتبر. لطفاً دوباره تلاش کنید."
       }
     },
     "analytics": {
@@ -1501,6 +1501,25 @@
     "menu": {
       "addItem": "افزودن آیتم",
       "addCategory": "افزودن دسته‌بندی"
+    },
+    "onboarding": {
+      "nameTitle": "نام مکان شما چیست؟",
+      "nameSubtitle": "بعداً می‌توانید تغییرش دهید",
+      "namePlaceholder": "مثلاً پیتزا ماریو",
+      "typeTitle": "چه نوع مکانی دارید؟",
+      "typeSubtitle": "یک منوی آماده برای شما تنظیم می‌کنیم",
+      "types": {
+        "restaurant": "رستوران",
+        "pizzeria": "پیتزافروشی",
+        "sushi-bar": "سوشی بار",
+        "burger-joint": "برگرفروشی",
+        "cafe": "کافه",
+        "bar": "بار",
+        "bakery": "نانوایی",
+        "hotel": "هتل",
+        "other": "سایر"
+      },
+      "error": "مشکلی پیش آمد"
     }
   },
   "reservationSettings": {

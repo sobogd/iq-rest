@@ -1236,23 +1236,23 @@
       "subscribe": "Prenumerera"
     },
     "auth": {
-      "title": "Logga in",
-      "subtitle": "Modern webbplats med QR-meny, bokningar och AI-översättningar",
-      "emailPlaceholder": "din@email.com",
+      "title": "Välkommen till IQ Rest",
+      "subtitle": "Ange din e-post för att börja",
+      "consent": {
+        "text": "Genom att fortsätta godkänner du våra",
+        "terms": "Villkor",
+        "and": "och",
+        "privacy": "Integritetspolicy"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Fortsätt",
-      "verifyTitle": "Kontrollera din e-post",
-      "verifySubtitle": "Vi har skickat en kod till {email}",
+      "verifyTitle": "Kolla din e-post",
+      "verifySubtitle": "Vi skickade en kod till {email}",
       "verify": "Verifiera",
       "changeEmail": "Använd en annan e-post",
       "errors": {
-        "sendFailed": "Misslyckades med att skicka koden. Vänligen försök igen.",
-        "verifyFailed": "Ogiltig kod. Vänligen försök igen."
-      },
-      "consent": {
-        "text": "Genom att fortsätta godkänner du",
-        "terms": "Användarvillkoren",
-        "and": "och",
-        "privacy": "Integritetspolicyn"
+        "sendFailed": "Kunde inte skicka koden. Försök igen.",
+        "verifyFailed": "Ogiltig kod. Försök igen."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Lägg till artikel",
       "addCategory": "Lägg till kategori"
+    },
+    "onboarding": {
+      "nameTitle": "Vad heter ditt ställe?",
+      "nameSubtitle": "Du kan ändra det senare",
+      "namePlaceholder": "t.ex. Marios Pizzeria",
+      "typeTitle": "Vilken typ av ställe driver du?",
+      "typeSubtitle": "Vi skapar en meny åt dig",
+      "types": {
+        "restaurant": "Restaurang",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burgerställe",
+        "cafe": "Kafé",
+        "bar": "Bar",
+        "bakery": "Bageri",
+        "hotel": "Hotell",
+        "other": "Övrigt"
+      },
+      "error": "Något gick fel"
     }
   },
   "reservationSettings": {

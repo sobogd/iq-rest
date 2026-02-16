@@ -1236,23 +1236,23 @@
       "subscribe": "Подписаться"
     },
     "auth": {
-      "title": "Войти",
-      "subtitle": "Современный сайт с QR-меню, бронированиями и переводами на основе ИИ",
-      "emailPlaceholder": "ваш@email.com",
-      "continue": "Продолжить",
-      "verifyTitle": "Проверьте свою почту",
-      "verifySubtitle": "Мы отправили код на {email}",
-      "verify": "Подтвердить",
-      "changeEmail": "Использовать другой email",
-      "errors": {
-        "sendFailed": "Не удалось отправить код. Пожалуйста, попробуйте снова.",
-        "verifyFailed": "Неверный код. Пожалуйста, попробуйте снова."
-      },
+      "title": "Добро пожаловать в IQ Rest",
+      "subtitle": "Введите ваш e-mail, чтобы начать",
       "consent": {
-        "text": "Продолжая, вы соглашаетесь с",
-        "terms": "Условиями использования",
+        "text": "Продолжая, вы соглашаетесь с нашими",
+        "terms": "Условиями",
         "and": "и",
         "privacy": "Политикой конфиденциальности"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Продолжить",
+      "verifyTitle": "Проверьте вашу почту",
+      "verifySubtitle": "Мы отправили код на {email}",
+      "verify": "Подтвердить",
+      "changeEmail": "Использовать другой e-mail",
+      "errors": {
+        "sendFailed": "Не удалось отправить код. Попробуйте ещё раз.",
+        "verifyFailed": "Неверный код. Попробуйте ещё раз."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Добавить товар",
       "addCategory": "Добавить категорию"
+    },
+    "onboarding": {
+      "nameTitle": "Как называется ваше заведение?",
+      "nameSubtitle": "Вы сможете изменить это позже",
+      "namePlaceholder": "напр. Пиццерия Марио",
+      "typeTitle": "Какой тип заведения вы ведёте?",
+      "typeSubtitle": "Мы подготовим для вас готовое меню",
+      "types": {
+        "restaurant": "Ресторан",
+        "pizzeria": "Пиццерия",
+        "sushi-bar": "Суши-бар",
+        "burger-joint": "Бургерная",
+        "cafe": "Кафе",
+        "bar": "Бар",
+        "bakery": "Пекарня",
+        "hotel": "Отель",
+        "other": "Другое"
+      },
+      "error": "Что-то пошло не так"
     }
   },
   "reservationSettings": {

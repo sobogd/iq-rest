@@ -1236,23 +1236,23 @@
       "subscribe": "Feliratkozás"
     },
     "auth": {
-      "title": "Bejelentkezés",
-      "subtitle": "Modern weboldal QR menüvel, foglalásokkal és AI fordításokkal",
-      "emailPlaceholder": "nev@email.hu",
-      "continue": "Folytatás",
-      "verifyTitle": "Ellenőrizd az emailed",
-      "verifySubtitle": "Küldtünk egy kódot a(z) {email} címre",
-      "verify": "Ellenőrzés",
-      "changeEmail": "Másik email használata",
-      "errors": {
-        "sendFailed": "A kód küldése nem sikerült. Kérlek, próbáld újra.",
-        "verifyFailed": "Érvénytelen kód. Kérlek, próbáld újra."
-      },
+      "title": "Üdvözöljük az IQ Rest-ben",
+      "subtitle": "Adja meg e-mail címét a kezdéshez",
       "consent": {
         "text": "A folytatással elfogadja a",
-        "terms": "Szolgáltatási feltételeket",
-        "and": "és az",
-        "privacy": "Adatvédelmi irányelveket"
+        "terms": "Feltételeket",
+        "and": "és",
+        "privacy": "Adatvédelmi szabályzatot"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Tovább",
+      "verifyTitle": "Ellenőrizze e-mailjét",
+      "verifySubtitle": "Kódot küldtünk a {email} címre",
+      "verify": "Megerősítés",
+      "changeEmail": "Másik e-mail használata",
+      "errors": {
+        "sendFailed": "A kód küldése sikertelen. Próbálja újra.",
+        "verifyFailed": "Érvénytelen kód. Próbálja újra."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Tétel hozzáadása",
       "addCategory": "Kategória hozzáadása"
+    },
+    "onboarding": {
+      "nameTitle": "Mi a helye neve?",
+      "nameSubtitle": "Később módosíthatja",
+      "namePlaceholder": "pl. Mario Pizzéria",
+      "typeTitle": "Milyen típusú helyet vezet?",
+      "typeSubtitle": "Előkészítünk egy menüt az Ön számára",
+      "types": {
+        "restaurant": "Étterem",
+        "pizzeria": "Pizzéria",
+        "sushi-bar": "Sushi bár",
+        "burger-joint": "Hamburgerezô",
+        "cafe": "Kávézó",
+        "bar": "Bár",
+        "bakery": "Pékség",
+        "hotel": "Hotel",
+        "other": "Egyéb"
+      },
+      "error": "Valami hiba történt"
     }
   },
   "reservationSettings": {

@@ -1236,23 +1236,23 @@
       "subscribe": "Suscribirse"
     },
     "auth": {
-      "title": "Iniciar sesión",
-      "subtitle": "Sitio web moderno con menú QR, reservaciones y traducciones IA",
-      "emailPlaceholder": "tu@email.com",
+      "title": "Bienvenido a IQ Rest",
+      "subtitle": "Introduce tu correo para empezar",
+      "consent": {
+        "text": "Al continuar, aceptas nuestros",
+        "terms": "Términos",
+        "and": "y",
+        "privacy": "Política de Privacidad"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Continuar",
-      "verifyTitle": "Revisa tu email",
+      "verifyTitle": "Revisa tu correo",
       "verifySubtitle": "Enviamos un código a {email}",
       "verify": "Verificar",
-      "changeEmail": "Usar otro email",
+      "changeEmail": "Usar otro correo",
       "errors": {
-        "sendFailed": "Error al enviar el código. Intenta de nuevo.",
-        "verifyFailed": "Código inválido. Intenta de nuevo."
-      },
-      "consent": {
-        "text": "Al continuar, aceptas los",
-        "terms": "Términos de servicio",
-        "and": "y la",
-        "privacy": "Política de privacidad"
+        "sendFailed": "Error al enviar el código. Inténtalo de nuevo.",
+        "verifyFailed": "Código inválido. Inténtalo de nuevo."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Añadir artículo",
       "addCategory": "Añadir categoría"
+    },
+    "onboarding": {
+      "nameTitle": "¿Cómo se llama tu local?",
+      "nameSubtitle": "Puedes cambiarlo después",
+      "namePlaceholder": "ej. Pizzería Mario",
+      "typeTitle": "¿Qué tipo de local tienes?",
+      "typeSubtitle": "Prepararemos un menú para ti",
+      "types": {
+        "restaurant": "Restaurante",
+        "pizzeria": "Pizzería",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Hamburguesería",
+        "cafe": "Cafetería",
+        "bar": "Bar",
+        "bakery": "Panadería",
+        "hotel": "Hotel",
+        "other": "Otro"
+      },
+      "error": "Algo salió mal"
     }
   },
   "reservationSettings": {

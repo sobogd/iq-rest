@@ -1236,11 +1236,11 @@
       "subscribe": "Subscribe"
     },
     "auth": {
-      "title": "Sign in",
-      "subtitle": "Modern website with QR menu, reservations, and AI translations",
+      "title": "Welcome to IQ Rest",
+      "subtitle": "Enter your email to get started",
       "consent": {
-        "text": "By continuing, you agree to the",
-        "terms": "Terms of Service",
+        "text": "By continuing, you agree to our",
+        "terms": "Terms",
         "and": "and",
         "privacy": "Privacy Policy"
       },
@@ -1249,11 +1249,30 @@
       "verifyTitle": "Check your email",
       "verifySubtitle": "We sent a code to {email}",
       "verify": "Verify",
-      "changeEmail": "Use different email",
+      "changeEmail": "Use a different email",
       "errors": {
         "sendFailed": "Failed to send code. Please try again.",
         "verifyFailed": "Invalid code. Please try again."
       }
+    },
+    "onboarding": {
+      "nameTitle": "What's the name of your place?",
+      "nameSubtitle": "You can always change it later",
+      "namePlaceholder": "e.g. Mario's Pizzeria",
+      "typeTitle": "What type of place do you run?",
+      "typeSubtitle": "We'll set up a ready-made menu for you",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger Joint",
+        "cafe": "Cafe",
+        "bar": "Bar",
+        "bakery": "Bakery",
+        "hotel": "Hotel",
+        "other": "Other"
+      },
+      "error": "Something went wrong"
     },
     "analytics": {
       "monthlyUsage": "Monthly Usage",

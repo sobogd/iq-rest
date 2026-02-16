@@ -1236,23 +1236,23 @@
       "subscribe": "Abonner"
     },
     "auth": {
-      "title": "Log ind",
-      "subtitle": "Moderne hjemmeside med QR-menu, reservationer og AI-oversættelser",
-      "emailPlaceholder": "din@email.com",
+      "title": "Velkommen til IQ Rest",
+      "subtitle": "Indtast din e-mail for at komme i gang",
+      "consent": {
+        "text": "Ved at fortsætte accepterer du vores",
+        "terms": "Vilkår",
+        "and": "og",
+        "privacy": "Privatlivspolitik"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Fortsæt",
-      "verifyTitle": "Tjek din email",
+      "verifyTitle": "Tjek din e-mail",
       "verifySubtitle": "Vi har sendt en kode til {email}",
       "verify": "Bekræft",
-      "changeEmail": "Brug en anden email",
+      "changeEmail": "Brug en anden e-mail",
       "errors": {
-        "sendFailed": "Kunne ikke sende koden. Prøv venligst igen.",
-        "verifyFailed": "Ugyldig kode. Prøv venligst igen."
-      },
-      "consent": {
-        "text": "Ved at fortsætte accepterer du",
-        "terms": "Servicevilkårene",
-        "and": "og",
-        "privacy": "Privatlivspolitikken"
+        "sendFailed": "Kunne ikke sende koden. Prøv igen.",
+        "verifyFailed": "Ugyldig kode. Prøv igen."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Tilføj vare",
       "addCategory": "Tilføj kategori"
+    },
+    "onboarding": {
+      "nameTitle": "Hvad hedder dit sted?",
+      "nameSubtitle": "Du kan altid ændre det senere",
+      "namePlaceholder": "f.eks. Marios Pizzeria",
+      "typeTitle": "Hvilken type sted driver du?",
+      "typeSubtitle": "Vi opretter en menu til dig",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burgerbar",
+        "cafe": "Café",
+        "bar": "Bar",
+        "bakery": "Bageri",
+        "hotel": "Hotel",
+        "other": "Andet"
+      },
+      "error": "Noget gik galt"
     }
   },
   "reservationSettings": {

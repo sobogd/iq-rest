@@ -1236,23 +1236,23 @@
       "subscribe": "Abonnieren"
     },
     "auth": {
-      "title": "Anmelden",
-      "subtitle": "Moderne Website mit QR-Menü, Reservierungen und KI-Übersetzungen",
-      "emailPlaceholder": "deine@email.com",
-      "continue": "Fortfahren",
-      "verifyTitle": "Überprüfen Sie Ihre E-Mail",
+      "title": "Willkommen bei IQ Rest",
+      "subtitle": "Geben Sie Ihre E-Mail-Adresse ein",
+      "consent": {
+        "text": "Durch Fortfahren stimmen Sie unseren",
+        "terms": "AGB",
+        "and": "und",
+        "privacy": "Datenschutzrichtlinien"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Weiter",
+      "verifyTitle": "Prüfen Sie Ihre E-Mail",
       "verifySubtitle": "Wir haben einen Code an {email} gesendet",
-      "verify": "Überprüfen",
+      "verify": "Bestätigen",
       "changeEmail": "Andere E-Mail verwenden",
       "errors": {
-        "sendFailed": "Fehler beim Senden des Codes. Bitte versuchen Sie es erneut.",
+        "sendFailed": "Code konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
         "verifyFailed": "Ungültiger Code. Bitte versuchen Sie es erneut."
-      },
-      "consent": {
-        "text": "Mit dem Fortfahren stimmen Sie den",
-        "terms": "Nutzungsbedingungen",
-        "and": "und der",
-        "privacy": "Datenschutzrichtlinie"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Artikel hinzufügen",
       "addCategory": "Kategorie hinzufügen"
+    },
+    "onboarding": {
+      "nameTitle": "Wie heißt Ihr Lokal?",
+      "nameSubtitle": "Sie können es später ändern",
+      "namePlaceholder": "z.B. Marios Pizzeria",
+      "typeTitle": "Was für ein Lokal betreiben Sie?",
+      "typeSubtitle": "Wir erstellen ein fertiges Menü für Sie",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger-Restaurant",
+        "cafe": "Café",
+        "bar": "Bar",
+        "bakery": "Bäckerei",
+        "hotel": "Hotel",
+        "other": "Sonstiges"
+      },
+      "error": "Etwas ist schiefgelaufen"
     }
   },
   "reservationSettings": {

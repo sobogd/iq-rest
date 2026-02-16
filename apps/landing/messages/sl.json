@@ -1236,23 +1236,23 @@
       "subscribe": "Naroči se"
     },
     "auth": {
-      "title": "Prijava",
-      "subtitle": "Sodobna spletna stran z QR menijem, rezervacijami in AI prevodi",
-      "emailPlaceholder": "tvoj@email.com",
+      "title": "Dobrodošli v IQ Rest",
+      "subtitle": "Vnesite svoj e-mail za začetek",
+      "consent": {
+        "text": "Z nadaljevanjem se strinjate z našimi",
+        "terms": "Pogoji",
+        "and": "in",
+        "privacy": "Pravilnikom o zasebnosti"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Nadaljuj",
-      "verifyTitle": "Preverite svoj e-poštni naslov",
-      "verifySubtitle": "Poslali smo kodo na {email}",
+      "verifyTitle": "Preverite svojo e-pošto",
+      "verifySubtitle": "Kodo smo poslali na {email}",
       "verify": "Potrdi",
-      "changeEmail": "Uporabi drug e-poštni naslov",
+      "changeEmail": "Uporabi drug e-mail",
       "errors": {
         "sendFailed": "Pošiljanje kode ni uspelo. Poskusite znova.",
         "verifyFailed": "Neveljavna koda. Poskusite znova."
-      },
-      "consent": {
-        "text": "Z nadaljevanjem se strinjate s",
-        "terms": "Pogoji storitve",
-        "and": "in",
-        "privacy": "Pravilnikom o zasebnosti"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Dodaj artikel",
       "addCategory": "Dodaj kategorijo"
+    },
+    "onboarding": {
+      "nameTitle": "Kako se imenuje vaš lokal?",
+      "nameSubtitle": "Lahko spremenite pozneje",
+      "namePlaceholder": "npr. Pizzerija Mario",
+      "typeTitle": "Kakšen tip lokala vodite?",
+      "typeSubtitle": "Pripravili bomo meni za vas",
+      "types": {
+        "restaurant": "Restavracija",
+        "pizzeria": "Pizzerija",
+        "sushi-bar": "Sushi bar",
+        "burger-joint": "Burger lokal",
+        "cafe": "Kavarna",
+        "bar": "Bar",
+        "bakery": "Pekarna",
+        "hotel": "Hotel",
+        "other": "Drugo"
+      },
+      "error": "Nekaj je šlo narobe"
     }
   },
   "reservationSettings": {

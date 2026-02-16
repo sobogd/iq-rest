@@ -1236,23 +1236,23 @@
       "subscribe": "Pretplati se"
     },
     "auth": {
-      "title": "Prijavite se",
-      "subtitle": "Moderna web stranica s QR menijem, rezervacijama i AI prijevodima",
-      "emailPlaceholder": "vaša@email.com",
+      "title": "Dobrodošli u IQ Rest",
+      "subtitle": "Unesite svoj e-mail za početak",
+      "consent": {
+        "text": "Nastavkom prihvaćate naše",
+        "terms": "Uvjete",
+        "and": "i",
+        "privacy": "Pravila privatnosti"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Nastavi",
-      "verifyTitle": "Provjerite svoju e-poštu",
+      "verifyTitle": "Provjerite svoj e-mail",
       "verifySubtitle": "Poslali smo kod na {email}",
       "verify": "Potvrdi",
-      "changeEmail": "Koristite drugačiju e-poštu",
+      "changeEmail": "Koristi drugi e-mail",
       "errors": {
         "sendFailed": "Slanje koda nije uspjelo. Pokušajte ponovo.",
         "verifyFailed": "Nevažeći kod. Pokušajte ponovo."
-      },
-      "consent": {
-        "text": "Nastavljajući, slažete se s",
-        "terms": "Uvjetima korištenja",
-        "and": "i",
-        "privacy": "Politikom privatnosti"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Dodaj stavku",
       "addCategory": "Dodaj kategoriju"
+    },
+    "onboarding": {
+      "nameTitle": "Kako se zove vaš lokal?",
+      "nameSubtitle": "Možete to promijeniti kasnije",
+      "namePlaceholder": "npr. Pizzeria Mario",
+      "typeTitle": "Kakvu vrstu lokala vodite?",
+      "typeSubtitle": "Pripremit ćemo jelovnik za vas",
+      "types": {
+        "restaurant": "Restoran",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi bar",
+        "burger-joint": "Burger restoran",
+        "cafe": "Kafić",
+        "bar": "Bar",
+        "bakery": "Pekara",
+        "hotel": "Hotel",
+        "other": "Ostalo"
+      },
+      "error": "Nešto je pošlo po krivu"
     }
   },
   "reservationSettings": {

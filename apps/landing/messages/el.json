@@ -1236,23 +1236,23 @@
       "subscribe": "Εγγραφή"
     },
     "auth": {
-      "title": "Σύνδεση",
-      "subtitle": "Μοντέρνα ιστοσελίδα με μενού QR, κρατήσεις και μεταφράσεις AI",
-      "emailPlaceholder": "to@email.gr",
+      "title": "Καλώς ήρθατε στο IQ Rest",
+      "subtitle": "Εισάγετε το email σας για να ξεκινήσετε",
+      "consent": {
+        "text": "Συνεχίζοντας, αποδέχεστε τους",
+        "terms": "Όρους",
+        "and": "και",
+        "privacy": "Πολιτική Απορρήτου"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Συνέχεια",
       "verifyTitle": "Ελέγξτε το email σας",
-      "verifySubtitle": "Στείλαμε έναν κωδικό στο {email}",
-      "verify": "Επιβεβαίωση",
-      "changeEmail": "Χρησιμοποιήστε διαφορετικό email",
+      "verifySubtitle": "Στείλαμε κωδικό στο {email}",
+      "verify": "Επαλήθευση",
+      "changeEmail": "Χρήση διαφορετικού email",
       "errors": {
-        "sendFailed": "Αποτυχία αποστολής κωδικού. Παρακαλώ δοκιμάστε ξανά.",
-        "verifyFailed": "Μη έγκυρος κωδικός. Παρακαλώ δοκιμάστε ξανά."
-      },
-      "consent": {
-        "text": "Συνεχίζοντας, συμφωνείτε με τους",
-        "terms": "Όρους Χρήσης",
-        "and": "και την",
-        "privacy": "Πολιτική Απορρήτου"
+        "sendFailed": "Αποτυχία αποστολής κωδικού. Δοκιμάστε ξανά.",
+        "verifyFailed": "Μη έγκυρος κωδικός. Δοκιμάστε ξανά."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Προσθήκη είδους",
       "addCategory": "Προσθήκη κατηγορίας"
+    },
+    "onboarding": {
+      "nameTitle": "Πώς ονομάζεται το μαγαζί σας;",
+      "nameSubtitle": "Μπορείτε να το αλλάξετε αργότερα",
+      "namePlaceholder": "π.χ. Πιτσαρία Μάριο",
+      "typeTitle": "Τι είδους κατάστημα έχετε;",
+      "typeSubtitle": "Θα ετοιμάσουμε ένα μενού για εσάς",
+      "types": {
+        "restaurant": "Εστιατόριο",
+        "pizzeria": "Πιτσαρία",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger",
+        "cafe": "Καφετέρια",
+        "bar": "Μπαρ",
+        "bakery": "Αρτοποιείο",
+        "hotel": "Ξενοδοχείο",
+        "other": "Άλλο"
+      },
+      "error": "Κάτι πήγε στραβά"
     }
   },
   "reservationSettings": {

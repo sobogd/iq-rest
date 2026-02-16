@@ -1236,23 +1236,23 @@
       "subscribe": "Prenumeruoti"
     },
     "auth": {
-      "title": "Prisijungti",
-      "subtitle": "Moderni svetainė su QR meniu, rezervacijomis ir AI vertimais",
-      "emailPlaceholder": "jūsų@email.com",
+      "title": "Sveiki atvykę į IQ Rest",
+      "subtitle": "Įveskite savo el. paštą, kad pradėtumėte",
+      "consent": {
+        "text": "Tęsdami sutinkate su mūsų",
+        "terms": "Sąlygomis",
+        "and": "ir",
+        "privacy": "Privatumo politika"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Tęsti",
       "verifyTitle": "Patikrinkite savo el. paštą",
-      "verifySubtitle": "Mes išsiuntėme kodą į {email}",
+      "verifySubtitle": "Išsiuntėme kodą adresu {email}",
       "verify": "Patvirtinti",
       "changeEmail": "Naudoti kitą el. paštą",
       "errors": {
-        "sendFailed": "Nepavyko išsiųsti kodo. Prašome bandyti dar kartą.",
-        "verifyFailed": "Neteisingas kodas. Prašome bandyti dar kartą."
-      },
-      "consent": {
-        "text": "Tęsdami sutinkate su",
-        "terms": "Paslaugų sąlygomis",
-        "and": "ir",
-        "privacy": "Privatumo politika"
+        "sendFailed": "Nepavyko išsiųsti kodo. Bandykite dar kartą.",
+        "verifyFailed": "Neteisingas kodas. Bandykite dar kartą."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Pridėti prekę",
       "addCategory": "Pridėti kategoriją"
+    },
+    "onboarding": {
+      "nameTitle": "Koks jūsų vietos pavadinimas?",
+      "nameSubtitle": "Galėsite pakeisti vėliau",
+      "namePlaceholder": "pvz. Mario Picerija",
+      "typeTitle": "Kokio tipo vietą valdote?",
+      "typeSubtitle": "Paruošime jums meniu",
+      "types": {
+        "restaurant": "Restoranas",
+        "pizzeria": "Picerija",
+        "sushi-bar": "Sushi baras",
+        "burger-joint": "Burgerių baras",
+        "cafe": "Kavinė",
+        "bar": "Baras",
+        "bakery": "Kepykla",
+        "hotel": "Viešbutis",
+        "other": "Kita"
+      },
+      "error": "Kažkas nutiko"
     }
   },
   "reservationSettings": {

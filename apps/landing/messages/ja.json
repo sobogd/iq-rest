@@ -1269,23 +1269,23 @@
       "subscribe": "購読する"
     },
     "auth": {
-      "title": "ログイン",
-      "subtitle": "QRメニュー、予約、AI翻訳付きのモダンなウェブサイト",
-      "emailPlaceholder": "あなた@email.com",
-      "continue": "続ける",
-      "verifyTitle": "メールを確認してください",
-      "verifySubtitle": "{email}にコードを送信しました",
-      "verify": "確認",
-      "changeEmail": "別のメールを使用",
-      "errors": {
-        "sendFailed": "コードの送信に失敗しました。もう一度お試しください。",
-        "verifyFailed": "無効なコードです。もう一度お試しください。"
-      },
+      "title": "IQ Restへようこそ",
+      "subtitle": "メールアドレスを入力して始めましょう",
       "consent": {
         "text": "続行することで、",
         "terms": "利用規約",
         "and": "と",
-        "privacy": "プライバシーポリシーに同意したことになります"
+        "privacy": "プライバシーポリシー"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "続行",
+      "verifyTitle": "メールを確認してください",
+      "verifySubtitle": "{email}にコードを送信しました",
+      "verify": "確認",
+      "changeEmail": "別のメールアドレスを使用",
+      "errors": {
+        "sendFailed": "コードの送信に失敗しました。もう一度お試しください。",
+        "verifyFailed": "無効なコードです。もう一度お試しください。"
       }
     },
     "analytics": {
@@ -1501,6 +1501,25 @@
     "menu": {
       "addItem": "商品を追加",
       "addCategory": "カテゴリーを追加"
+    },
+    "onboarding": {
+      "nameTitle": "お店の名前は？",
+      "nameSubtitle": "後から変更できます",
+      "namePlaceholder": "例：マリオのピッツェリア",
+      "typeTitle": "どのようなお店ですか？",
+      "typeSubtitle": "メニューのテンプレートをご用意します",
+      "types": {
+        "restaurant": "レストラン",
+        "pizzeria": "ピッツェリア",
+        "sushi-bar": "寿司バー",
+        "burger-joint": "バーガーショップ",
+        "cafe": "カフェ",
+        "bar": "バー",
+        "bakery": "ベーカリー",
+        "hotel": "ホテル",
+        "other": "その他"
+      },
+      "error": "エラーが発生しました"
     }
   },
   "reservationSettings": {

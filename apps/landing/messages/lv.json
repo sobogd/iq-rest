@@ -1236,23 +1236,23 @@
       "subscribe": "Abonēt"
     },
     "auth": {
-      "title": "Pieteikties",
-      "subtitle": "Mūsdienu mājaslapa ar QR ēdienkarti, rezervācijām un AI tulkojumiem",
-      "emailPlaceholder": "jūsu@email.com",
+      "title": "Laipni lūdzam IQ Rest",
+      "subtitle": "Ievadiet savu e-pastu, lai sāktu",
+      "consent": {
+        "text": "Turpinot jūs piekrītat mūsu",
+        "terms": "Noteikumiem",
+        "and": "un",
+        "privacy": "Privātuma politikai"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Turpināt",
       "verifyTitle": "Pārbaudiet savu e-pastu",
       "verifySubtitle": "Mēs nosūtījām kodu uz {email}",
       "verify": "Apstiprināt",
       "changeEmail": "Izmantot citu e-pastu",
       "errors": {
-        "sendFailed": "Koda nosūtīšana neizdevās. Lūdzu, mēģiniet vēlreiz.",
+        "sendFailed": "Neizdevās nosūtīt kodu. Lūdzu, mēģiniet vēlreiz.",
         "verifyFailed": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz."
-      },
-      "consent": {
-        "text": "Turpinot jūs piekrītat",
-        "terms": "Pakalpojumu noteikumiem",
-        "and": "un",
-        "privacy": "Privātuma politikai"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Pievienot preci",
       "addCategory": "Pievienot kategoriju"
+    },
+    "onboarding": {
+      "nameTitle": "Kāds ir jūsu vietas nosaukums?",
+      "nameSubtitle": "Vēlāk varat to mainīt",
+      "namePlaceholder": "piem. Mario Picērija",
+      "typeTitle": "Kāda veida vietu jūs vadāt?",
+      "typeSubtitle": "Sagatavosim jums ēdienkarti",
+      "types": {
+        "restaurant": "Restorāns",
+        "pizzeria": "Picērija",
+        "sushi-bar": "Suši bārs",
+        "burger-joint": "Burgeru bārs",
+        "cafe": "Kafejnīca",
+        "bar": "Bārs",
+        "bakery": "Maiznīca",
+        "hotel": "Viesnīca",
+        "other": "Cits"
+      },
+      "error": "Kaut kas nogāja greizi"
     }
   },
   "reservationSettings": {

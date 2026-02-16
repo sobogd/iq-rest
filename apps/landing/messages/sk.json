@@ -1236,23 +1236,23 @@
       "subscribe": "Predplatiť"
     },
     "auth": {
-      "title": "Prihlásiť sa",
-      "subtitle": "Moderná webová stránka s QR menu, rezerváciami a AI prekladmi",
-      "emailPlaceholder": "tvoj@email.com",
+      "title": "Vitajte v IQ Rest",
+      "subtitle": "Zadajte svoj e-mail a začnite",
+      "consent": {
+        "text": "Pokračovaním súhlasíte s našimi",
+        "terms": "Podmienkami",
+        "and": "a",
+        "privacy": "Zásadami ochrany súkromia"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Pokračovať",
       "verifyTitle": "Skontrolujte svoj e-mail",
       "verifySubtitle": "Poslali sme kód na {email}",
       "verify": "Overiť",
       "changeEmail": "Použiť iný e-mail",
       "errors": {
-        "sendFailed": "Nepodarilo sa poslať kód. Skúste to prosím znova.",
-        "verifyFailed": "Neplatný kód. Skúste to prosím znova."
-      },
-      "consent": {
-        "text": "Pokračovaním súhlasíte s",
-        "terms": "Podmienkami služby",
-        "and": "a",
-        "privacy": "Zásadami ochrany osobných údajov"
+        "sendFailed": "Nepodarilo sa odoslať kód. Skúste to znova.",
+        "verifyFailed": "Neplatný kód. Skúste to znova."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Pridať položku",
       "addCategory": "Pridať kategóriu"
+    },
+    "onboarding": {
+      "nameTitle": "Ako sa volá vaše miesto?",
+      "nameSubtitle": "Neskôr to môžete zmeniť",
+      "namePlaceholder": "napr. Pizzéria Mario",
+      "typeTitle": "Aký typ podniku prevádzkujete?",
+      "typeSubtitle": "Pripravíme pre vás menu",
+      "types": {
+        "restaurant": "Reštaurácia",
+        "pizzeria": "Pizzéria",
+        "sushi-bar": "Sushi bar",
+        "burger-joint": "Burger bar",
+        "cafe": "Kaviareň",
+        "bar": "Bar",
+        "bakery": "Pekáreň",
+        "hotel": "Hotel",
+        "other": "Iné"
+      },
+      "error": "Niečo sa pokazilo"
     }
   },
   "reservationSettings": {

@@ -1236,23 +1236,23 @@
       "subscribe": "Telli"
     },
     "auth": {
-      "title": "Logi sisse",
-      "subtitle": "Kaasaegne veebileht QR menüü, broneeringute ja AI tõlgetega",
-      "emailPlaceholder": "teie@email.com",
+      "title": "Tere tulemast IQ Rest'i",
+      "subtitle": "Sisestage oma e-posti aadress alustamiseks",
+      "consent": {
+        "text": "Jätkates nõustute meie",
+        "terms": "Tingimustega",
+        "and": "ja",
+        "privacy": "Privaatsuspoliitikaga"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Jätka",
       "verifyTitle": "Kontrollige oma e-posti",
       "verifySubtitle": "Saatsime koodi aadressile {email}",
       "verify": "Kinnita",
-      "changeEmail": "Kasutage teist e-posti",
+      "changeEmail": "Kasuta teist e-posti",
       "errors": {
-        "sendFailed": "Koodi saatmine ebaõnnestus. Palun proovige uuesti.",
-        "verifyFailed": "Vale kood. Palun proovige uuesti."
-      },
-      "consent": {
-        "text": "Jätkates nõustute",
-        "terms": "Kasutustingimuste",
-        "and": "ja",
-        "privacy": "Privaatsuspoliitikaga"
+        "sendFailed": "Koodi saatmine ebaõnnestus. Proovige uuesti.",
+        "verifyFailed": "Vale kood. Proovige uuesti."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Lisa toode",
       "addCategory": "Lisa kategooria"
+    },
+    "onboarding": {
+      "nameTitle": "Mis on teie koha nimi?",
+      "nameSubtitle": "Saate seda hiljem muuta",
+      "namePlaceholder": "nt Mario Pitsakoht",
+      "typeTitle": "Millist tüüpi kohta te juhite?",
+      "typeSubtitle": "Koostame teile valmis menüü",
+      "types": {
+        "restaurant": "Restoran",
+        "pizzeria": "Pitseria",
+        "sushi-bar": "Sushi baar",
+        "burger-joint": "Burgerikohvik",
+        "cafe": "Kohvik",
+        "bar": "Baar",
+        "bakery": "Pagariäri",
+        "hotel": "Hotell",
+        "other": "Muu"
+      },
+      "error": "Midagi läks valesti"
     }
   },
   "reservationSettings": {

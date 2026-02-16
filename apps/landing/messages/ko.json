@@ -1269,9 +1269,15 @@
       "subscribe": "구독하기"
     },
     "auth": {
-      "title": "로그인",
-      "subtitle": "QR 메뉴, 예약, AI 번역이 포함된 모던한 웹사이트",
-      "emailPlaceholder": "이름@email.com",
+      "title": "IQ Rest에 오신 것을 환영합니다",
+      "subtitle": "이메일을 입력하여 시작하세요",
+      "consent": {
+        "text": "계속하면 다음에 동의하게 됩니다",
+        "terms": "이용약관",
+        "and": "및",
+        "privacy": "개인정보처리방침"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "계속",
       "verifyTitle": "이메일을 확인하세요",
       "verifySubtitle": "{email}로 코드를 보냈습니다",
@@ -1280,12 +1286,6 @@
       "errors": {
         "sendFailed": "코드 전송에 실패했습니다. 다시 시도해 주세요.",
         "verifyFailed": "잘못된 코드입니다. 다시 시도해 주세요."
-      },
-      "consent": {
-        "text": "계속하면",
-        "terms": "서비스 약관",
-        "and": "및",
-        "privacy": "개인정보 처리방침에 동의하게 됩니다"
       }
     },
     "analytics": {
@@ -1501,6 +1501,25 @@
     "menu": {
       "addItem": "항목 추가",
       "addCategory": "카테고리 추가"
+    },
+    "onboarding": {
+      "nameTitle": "가게 이름이 무엇인가요?",
+      "nameSubtitle": "나중에 변경할 수 있습니다",
+      "namePlaceholder": "예: 마리오 피자",
+      "typeTitle": "어떤 종류의 가게인가요?",
+      "typeSubtitle": "맞춤 메뉴를 준비해 드리겠습니다",
+      "types": {
+        "restaurant": "레스토랑",
+        "pizzeria": "피자 전문점",
+        "sushi-bar": "스시바",
+        "burger-joint": "버거 전문점",
+        "cafe": "카페",
+        "bar": "바",
+        "bakery": "베이커리",
+        "hotel": "호텔",
+        "other": "기타"
+      },
+      "error": "문제가 발생했습니다"
     }
   },
   "reservationSettings": {

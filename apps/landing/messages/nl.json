@@ -1236,23 +1236,23 @@
       "subscribe": "Abonneren"
     },
     "auth": {
-      "title": "Inloggen",
-      "subtitle": "Moderne website met QR-menu, reserveringen en AI-vertalingen",
-      "emailPlaceholder": "jouw@email.com",
+      "title": "Welkom bij IQ Rest",
+      "subtitle": "Voer je e-mail in om te beginnen",
+      "consent": {
+        "text": "Door verder te gaan ga je akkoord met onze",
+        "terms": "Voorwaarden",
+        "and": "en",
+        "privacy": "Privacybeleid"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Doorgaan",
       "verifyTitle": "Controleer je e-mail",
-      "verifySubtitle": "We hebben een code naar {email} gestuurd",
+      "verifySubtitle": "We hebben een code gestuurd naar {email}",
       "verify": "Verifiëren",
-      "changeEmail": "Gebruik een ander e-mailadres",
+      "changeEmail": "Ander e-mailadres gebruiken",
       "errors": {
-        "sendFailed": "Verzenden van de code is mislukt. Probeer het opnieuw.",
+        "sendFailed": "Kon de code niet verzenden. Probeer het opnieuw.",
         "verifyFailed": "Ongeldige code. Probeer het opnieuw."
-      },
-      "consent": {
-        "text": "Door verder te gaan, gaat u akkoord met de",
-        "terms": "Servicevoorwaarden",
-        "and": "en het",
-        "privacy": "Privacybeleid"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Item toevoegen",
       "addCategory": "Categorie toevoegen"
+    },
+    "onboarding": {
+      "nameTitle": "Hoe heet je zaak?",
+      "nameSubtitle": "Je kunt het later wijzigen",
+      "namePlaceholder": "bijv. Pizzeria Mario",
+      "typeTitle": "Wat voor soort zaak heb je?",
+      "typeSubtitle": "We maken een menu voor je klaar",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burgerrestaurant",
+        "cafe": "Café",
+        "bar": "Bar",
+        "bakery": "Bakkerij",
+        "hotel": "Hotel",
+        "other": "Anders"
+      },
+      "error": "Er ging iets mis"
     }
   },
   "reservationSettings": {

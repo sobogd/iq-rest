@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
@@ -11,6 +11,7 @@ import { isAdminEmail } from "@/lib/admin";
 
 export function LoginPage() {
   const locale = useLocale();
+  const t = useTranslations("dashboard.auth");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -62,11 +63,11 @@ export function LoginPage() {
 
         window.location.href = `/${locale}/otp?email=${encodeURIComponent(email)}`;
       } else {
-        setErrorMessage(data.error || "Failed to send code");
+        setErrorMessage(data.error || t("errors.sendFailed"));
         setStatus("error");
       }
     } catch {
-      setErrorMessage("Failed to send code");
+      setErrorMessage(t("errors.sendFailed"));
       setStatus("error");
     }
   };
@@ -76,9 +77,9 @@ export function LoginPage() {
       <div className="w-full max-w-[280px]">
         <div className="grid gap-6">
           <div className="grid gap-2">
-            <h1 className="text-2xl font-bold">Welcome to IQ Rest</h1>
+            <h1 className="text-2xl font-bold">{t("title")}</h1>
             <p className="text-muted-foreground">
-              Enter your email to get started
+              {t("subtitle")}
             </p>
           </div>
 
@@ -94,7 +95,7 @@ export function LoginPage() {
                 ref={emailInputRef}
                 id="email"
                 type="email"
-                placeholder="your@email.com"
+                placeholder={t("emailPlaceholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
@@ -107,17 +108,17 @@ export function LoginPage() {
                 {status === "loading" && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-                Continue
+                {t("continue")}
               </Button>
 
               <p className="text-xs text-muted-foreground/70">
-                By continuing, you agree to our{" "}
+                {t("consent.text")}{" "}
                 <Link href="/terms" className="underline hover:text-foreground">
-                  Terms
+                  {t("consent.terms")}
                 </Link>{" "}
-                and{" "}
+                {t("consent.and")}{" "}
                 <Link href="/privacy" className="underline hover:text-foreground">
-                  Privacy Policy
+                  {t("consent.privacy")}
                 </Link>
               </p>
             </div>

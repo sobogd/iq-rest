@@ -1236,23 +1236,23 @@
       "subscribe": "Tilaa"
     },
     "auth": {
-      "title": "Kirjaudu sisään",
-      "subtitle": "Moderni verkkosivusto QR-valikolla, varauksilla ja tekoälykäännöksillä",
-      "emailPlaceholder": "sinun@email.com",
+      "title": "Tervetuloa IQ Restiin",
+      "subtitle": "Syötä sähköpostiosoitteesi aloittaaksesi",
+      "consent": {
+        "text": "Jatkamalla hyväksyt meidän",
+        "terms": "Ehdot",
+        "and": "ja",
+        "privacy": "Tietosuojakäytännön"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Jatka",
       "verifyTitle": "Tarkista sähköpostisi",
       "verifySubtitle": "Lähetimme koodin osoitteeseen {email}",
       "verify": "Vahvista",
-      "changeEmail": "Käytä eri sähköpostia",
+      "changeEmail": "Käytä toista sähköpostia",
       "errors": {
-        "sendFailed": "Koodin lähettäminen epäonnistui. Yritä uudelleen.",
+        "sendFailed": "Koodin lähetys epäonnistui. Yritä uudelleen.",
         "verifyFailed": "Virheellinen koodi. Yritä uudelleen."
-      },
-      "consent": {
-        "text": "Jatkamalla hyväksyt",
-        "terms": "Käyttöehdot",
-        "and": "ja",
-        "privacy": "Tietosuojakäytännön"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Lisää tuote",
       "addCategory": "Lisää kategoria"
+    },
+    "onboarding": {
+      "nameTitle": "Mikä on paikkasi nimi?",
+      "nameSubtitle": "Voit muuttaa sen myöhemmin",
+      "namePlaceholder": "esim. Marion Pizzeria",
+      "typeTitle": "Millaista paikkaa pidät?",
+      "typeSubtitle": "Luomme sinulle valmiin menun",
+      "types": {
+        "restaurant": "Ravintola",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi-baari",
+        "burger-joint": "Hampurilaisravintola",
+        "cafe": "Kahvila",
+        "bar": "Baari",
+        "bakery": "Leipomo",
+        "hotel": "Hotelli",
+        "other": "Muu"
+      },
+      "error": "Jokin meni pieleen"
     }
   },
   "reservationSettings": {

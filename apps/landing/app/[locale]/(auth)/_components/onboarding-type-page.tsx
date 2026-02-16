@@ -1,30 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Loader2, UtensilsCrossed, Pizza, Fish, Beef, Coffee, Beer, Croissant, Hotel, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface RestaurantType {
   type: string;
-  label: string;
+  translationKey: string;
   icon: LucideIcon;
 }
 
 const TYPES: RestaurantType[] = [
-  { type: "restaurant", label: "Restaurant", icon: UtensilsCrossed },
-  { type: "pizzeria", label: "Pizzeria", icon: Pizza },
-  { type: "sushi-bar", label: "Sushi Bar", icon: Fish },
-  { type: "burger-joint", label: "Burger Joint", icon: Beef },
-  { type: "cafe", label: "Cafe", icon: Coffee },
-  { type: "bar", label: "Bar", icon: Beer },
-  { type: "bakery", label: "Bakery", icon: Croissant },
-  { type: "hotel", label: "Hotel", icon: Hotel },
-  { type: "other", label: "Other", icon: Sparkles },
+  { type: "restaurant", translationKey: "restaurant", icon: UtensilsCrossed },
+  { type: "pizzeria", translationKey: "pizzeria", icon: Pizza },
+  { type: "sushi-bar", translationKey: "sushi-bar", icon: Fish },
+  { type: "burger-joint", translationKey: "burger-joint", icon: Beef },
+  { type: "cafe", translationKey: "cafe", icon: Coffee },
+  { type: "bar", translationKey: "bar", icon: Beer },
+  { type: "bakery", translationKey: "bakery", icon: Croissant },
+  { type: "hotel", translationKey: "hotel", icon: Hotel },
+  { type: "other", translationKey: "other", icon: Sparkles },
 ];
 
 export function OnboardingTypePage() {
   const locale = useLocale();
+  const t = useTranslations("dashboard.onboarding");
   const [loading, setLoading] = useState<string | null>(null);
 
   const handleSelect = async (type: string) => {
@@ -34,7 +35,7 @@ export function OnboardingTypePage() {
       const response = await fetch("/api/onboarding/setup-menu", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type }),
+        body: JSON.stringify({ type, locale }),
       });
 
       if (response.ok) {
@@ -52,14 +53,14 @@ export function OnboardingTypePage() {
       <div className="w-full max-w-[400px]">
         <div className="grid gap-6">
           <div className="grid gap-2 text-center">
-            <h1 className="text-2xl font-bold">What type of place do you run?</h1>
+            <h1 className="text-2xl font-bold">{t("typeTitle")}</h1>
             <p className="text-muted-foreground">
-              We&apos;ll set up a ready-made menu for you
+              {t("typeSubtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-3 gap-3">
-            {TYPES.map(({ type, label, icon: Icon }) => (
+            {TYPES.map(({ type, translationKey, icon: Icon }) => (
               <button
                 key={type}
                 onClick={() => handleSelect(type)}
@@ -71,7 +72,7 @@ export function OnboardingTypePage() {
                 ) : (
                   <Icon className="h-6 w-6 shrink-0 text-muted-foreground" />
                 )}
-                <span className="text-sm font-medium text-center leading-tight line-clamp-2">{label}</span>
+                <span className="text-sm font-medium text-center leading-tight line-clamp-2">{t(`types.${translationKey}`)}</span>
               </button>
             ))}
           </div>

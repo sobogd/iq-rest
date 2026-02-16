@@ -1236,23 +1236,23 @@
       "subscribe": "Pretplati se"
     },
     "auth": {
-      "title": "Prijavite se",
-      "subtitle": "Moderna veb stranica sa QR menijem, rezervacijama i AI prevodima",
-      "emailPlaceholder": "vaša@email.com",
-      "continue": "Nastavi",
-      "verifyTitle": "Proverite svoj email",
-      "verifySubtitle": "Poslali smo kod na {email}",
-      "verify": "Verifikuj",
-      "changeEmail": "Koristite drugi email",
-      "errors": {
-        "sendFailed": "Slanje koda nije uspelo. Molimo pokušajte ponovo.",
-        "verifyFailed": "Nevažeći kod. Molimo pokušajte ponovo."
-      },
+      "title": "Добродошли у IQ Rest",
+      "subtitle": "Унесите свој е-маил да бисте почели",
       "consent": {
-        "text": "Настављајући, слажете се са",
-        "terms": "Условима коришћења",
+        "text": "Настављајући, прихватате наше",
+        "terms": "Услове",
         "and": "и",
-        "privacy": "Политиком приватности"
+        "privacy": "Политику приватности"
+      },
+      "emailPlaceholder": "your@email.com",
+      "continue": "Настави",
+      "verifyTitle": "Проверите свој е-маил",
+      "verifySubtitle": "Послали смо код на {email}",
+      "verify": "Потврди",
+      "changeEmail": "Користите други е-маил",
+      "errors": {
+        "sendFailed": "Слање кода није успело. Покушајте поново.",
+        "verifyFailed": "Неважећи код. Покушајте поново."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Додај ставку",
       "addCategory": "Додај категорију"
+    },
+    "onboarding": {
+      "nameTitle": "Како се зове ваш локал?",
+      "nameSubtitle": "Можете то променити касније",
+      "namePlaceholder": "нпр. Пицерија Марио",
+      "typeTitle": "Какву врсту локала водите?",
+      "typeSubtitle": "Припремићемо мени за вас",
+      "types": {
+        "restaurant": "Ресторан",
+        "pizzeria": "Пицерија",
+        "sushi-bar": "Суши бар",
+        "burger-joint": "Бургер ресторан",
+        "cafe": "Кафић",
+        "bar": "Бар",
+        "bakery": "Пекара",
+        "hotel": "Хотел",
+        "other": "Остало"
+      },
+      "error": "Нешто није у реду"
     }
   },
   "reservationSettings": {

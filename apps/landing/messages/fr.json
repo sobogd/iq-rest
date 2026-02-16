@@ -1236,23 +1236,23 @@
       "subscribe": "S'abonner"
     },
     "auth": {
-      "title": "Se connecter",
-      "subtitle": "Site web moderne avec menu QR, réservations et traductions AI",
-      "emailPlaceholder": "votre@email.com",
+      "title": "Bienvenue sur IQ Rest",
+      "subtitle": "Entrez votre e-mail pour commencer",
+      "consent": {
+        "text": "En continuant, vous acceptez nos",
+        "terms": "Conditions",
+        "and": "et",
+        "privacy": "Politique de confidentialité"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Continuer",
-      "verifyTitle": "Vérifiez votre email",
+      "verifyTitle": "Vérifiez votre e-mail",
       "verifySubtitle": "Nous avons envoyé un code à {email}",
       "verify": "Vérifier",
-      "changeEmail": "Utiliser un email différent",
+      "changeEmail": "Utiliser un autre e-mail",
       "errors": {
         "sendFailed": "Échec de l'envoi du code. Veuillez réessayer.",
         "verifyFailed": "Code invalide. Veuillez réessayer."
-      },
-      "consent": {
-        "text": "En continuant, vous acceptez les",
-        "terms": "Conditions d'utilisation",
-        "and": "et la",
-        "privacy": "Politique de confidentialité"
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Ajouter un article",
       "addCategory": "Ajouter une catégorie"
+    },
+    "onboarding": {
+      "nameTitle": "Comment s'appelle votre établissement ?",
+      "nameSubtitle": "Vous pourrez le modifier plus tard",
+      "namePlaceholder": "ex. Pizzeria Mario",
+      "typeTitle": "Quel type d'établissement avez-vous ?",
+      "typeSubtitle": "Nous préparerons un menu pour vous",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Burger",
+        "cafe": "Café",
+        "bar": "Bar",
+        "bakery": "Boulangerie",
+        "hotel": "Hôtel",
+        "other": "Autre"
+      },
+      "error": "Une erreur est survenue"
     }
   },
   "reservationSettings": {

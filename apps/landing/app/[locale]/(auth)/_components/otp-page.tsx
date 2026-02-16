@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
@@ -14,6 +14,7 @@ interface OtpPageProps {
 
 export function OtpPage({ email }: OtpPageProps) {
   const locale = useLocale();
+  const t = useTranslations("dashboard.auth");
   const [otp, setOtp] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -56,13 +57,13 @@ export function OtpPage({ email }: OtpPageProps) {
           window.location.href = `/${locale}/dashboard`;
         }
       } else {
-        setErrorMessage(data.error || "Invalid code");
+        setErrorMessage(data.error || t("errors.verifyFailed"));
         setStatus("error");
         setOtp("");
         otpInputRef.current?.focus();
       }
     } catch {
-      setErrorMessage("Invalid code");
+      setErrorMessage(t("errors.verifyFailed"));
       setStatus("error");
       setOtp("");
       otpInputRef.current?.focus();
@@ -74,9 +75,9 @@ export function OtpPage({ email }: OtpPageProps) {
       <div className="w-full max-w-[280px]">
         <div className="grid gap-6">
           <div className="grid gap-2">
-            <h1 className="text-2xl font-bold">Check your email</h1>
+            <h1 className="text-2xl font-bold">{t("verifyTitle")}</h1>
             <p className="text-muted-foreground">
-              We sent a code to {email}
+              {t("verifySubtitle", { email })}
             </p>
           </div>
 
@@ -112,7 +113,7 @@ export function OtpPage({ email }: OtpPageProps) {
                 {status === "loading" && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
-                Verify
+                {t("verify")}
               </Button>
 
               <p
@@ -121,7 +122,7 @@ export function OtpPage({ email }: OtpPageProps) {
                   window.location.href = `/${locale}/login`;
                 }}
               >
-                Use a different email
+                {t("changeEmail")}
               </p>
             </div>
           </form>

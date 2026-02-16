@@ -1236,23 +1236,23 @@
       "subscribe": "Subscriure's"
     },
     "auth": {
-      "title": "Iniciar sessió",
-      "subtitle": "Lloc web modern amb menú QR, reserves i traduccions d'IA",
-      "emailPlaceholder": "el-teu@email.cat",
+      "title": "Benvingut a IQ Rest",
+      "subtitle": "Introdueix el teu correu per començar",
+      "consent": {
+        "text": "En continuar, acceptes els nostres",
+        "terms": "Termes",
+        "and": "i",
+        "privacy": "Política de privadesa"
+      },
+      "emailPlaceholder": "your@email.com",
       "continue": "Continuar",
-      "verifyTitle": "Comproveu el vostre correu electrònic",
+      "verifyTitle": "Comprova el teu correu",
       "verifySubtitle": "Hem enviat un codi a {email}",
       "verify": "Verificar",
-      "changeEmail": "Utilitzar un correu electrònic diferent",
+      "changeEmail": "Utilitza un altre correu",
       "errors": {
-        "sendFailed": "No s'ha pogut enviar el codi. Si us plau, torneu-ho a intentar.",
-        "verifyFailed": "Codi no vàlid. Si us plau, torneu-ho a intentar."
-      },
-      "consent": {
-        "text": "En continuar, acceptes els",
-        "terms": "Termes de servei",
-        "and": "i la",
-        "privacy": "Política de privacitat"
+        "sendFailed": "Error en enviar el codi. Torna-ho a provar.",
+        "verifyFailed": "Codi no vàlid. Torna-ho a provar."
       }
     },
     "analytics": {
@@ -1468,6 +1468,25 @@
     "menu": {
       "addItem": "Afegir article",
       "addCategory": "Afegir categoria"
+    },
+    "onboarding": {
+      "nameTitle": "Com es diu el teu local?",
+      "nameSubtitle": "Pots canviar-ho més tard",
+      "namePlaceholder": "p. ex. Pizzeria Mario",
+      "typeTitle": "Quin tipus de local tens?",
+      "typeSubtitle": "Prepararem un menú per a tu",
+      "types": {
+        "restaurant": "Restaurant",
+        "pizzeria": "Pizzeria",
+        "sushi-bar": "Sushi Bar",
+        "burger-joint": "Hamburgueseria",
+        "cafe": "Cafeteria",
+        "bar": "Bar",
+        "bakery": "Fleca",
+        "hotel": "Hotel",
+        "other": "Altre"
+      },
+      "error": "Alguna cosa ha anat malament"
     }
   },
   "reservationSettings": {
