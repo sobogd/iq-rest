@@ -296,10 +296,18 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_SEND_MESSAGE]: "Clicked Send Message",
 };
 
+// Deduplicate: skip if the same event fired less than 1s ago
+const lastFired = new Map<string, number>();
+
 // Thin wrapper — fire-and-forget, no meta
 export function track(event: DashboardEvent) {
   if (typeof window === "undefined") return;
   if (typeof localStorage !== "undefined" && localStorage.getItem("analytics_disabled") === "true") return;
+
+  const now = Date.now();
+  const last = lastFired.get(event);
+  if (last && now - last < 1000) return;
+  lastFired.set(event, now);
 
   const SESSION_ID_KEY = "analytics_session_id";
   let sessionId = sessionStorage.getItem(SESSION_ID_KEY);
