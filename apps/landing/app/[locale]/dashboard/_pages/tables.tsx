@@ -167,10 +167,10 @@ export function TablesPage({ initialTables }: TablesPageProps) {
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto">
         {tables.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full gap-4">
-            <p className="text-muted-foreground">{t("noTables")}</p>
-            <Button onClick={() => router.push("/dashboard/tables/add")}>
-              <Plus className="h-4 w-4 mr-2" />
+          <div className="flex flex-col items-center justify-center py-20 gap-4">
+            <p className="text-muted-foreground text-center">{t("noTables")}</p>
+            <Button onClick={() => router.push("/dashboard/tables/add")} variant="destructive" className="h-10 rounded-xl shadow-md">
+              <Plus className="h-4 w-4" />
               {t("addTable")}
             </Button>
           </div>
@@ -236,9 +236,9 @@ export function TablesPage({ initialTables }: TablesPageProps) {
 
         {/* Fixed add button */}
         {tables.length > 0 && !sortMode && (
-          <div className="sticky bottom-0 flex justify-end pt-4 pb-2 pointer-events-none">
-            <Button onClick={() => router.push("/dashboard/tables/add")} className="h-10 px-4 rounded-xl pointer-events-auto">
-              <Plus className="h-6 w-6" />
+          <div className="sticky bottom-0 flex justify-end pt-4 pb-2">
+            <Button onClick={() => router.push("/dashboard/tables/add")} variant="destructive" className="h-10 rounded-xl shadow-md">
+              <Plus className="h-4 w-4" />
               {t("addTable")}
             </Button>
           </div>

@@ -236,7 +236,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
       <PageHeader title={translations.pages.qrMenu} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-6">
-        <div ref={printRef} className="hidden">
+        <div ref={printRef} className="hidden" hidden>
           <QRCodeSVG
             value={menuUrl}
             size={200}
