@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 import { isAdminEmail } from "@/lib/admin";
 
 export async function GET() {
@@ -55,6 +56,16 @@ export async function GET() {
       },
     });
 
+    // Get unique menu scans (unique sessions) per company
+    const companyIds = companies.map((c) => c.id);
+    const scanCounts = await prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
+      SELECT "companyId", COUNT(DISTINCT "sessionId") as count
+      FROM page_views
+      WHERE "companyId" = ANY(${companyIds}::text[])
+      GROUP BY "companyId"
+    `;
+    const scanMap = new Map(scanCounts.map((r) => [r.companyId, Number(r.count)]));
+
     const result = companies.map((company) => ({
       id: company.id,
       name: company.name,
@@ -69,6 +80,7 @@ export async function GET() {
       categoriesCount: company._count.categories,
       itemsCount: company._count.items,
       messagesCount: company._count.supportMessages,
+      menuScans: scanMap.get(company.id) || 0,
       users: company.users.map((uc) => ({
         id: uc.user.id,
         email: uc.user.email,

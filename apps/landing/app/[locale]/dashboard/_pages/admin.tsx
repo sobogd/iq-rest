@@ -85,6 +85,7 @@ interface Company {
   categoriesCount: number;
   itemsCount: number;
   messagesCount: number;
+  menuScans: number;
   users: User[];
   restaurants: Restaurant[];
 }
@@ -381,6 +382,12 @@ export function AdminPage() {
                         <Package className="h-3.5 w-3.5" />
                         {company.itemsCount}
                       </span>
+                      {company.menuScans > 0 && (
+                        <span className="flex items-center gap-1 text-blue-500" title="Menu scans">
+                          <Eye className="h-3.5 w-3.5" />
+                          {company.menuScans}
+                        </span>
+                      )}
                       {company.messagesCount > 0 && (
                         <span className="flex items-center gap-1" title="Messages">
                           <MessageSquare className="h-3.5 w-3.5" />
@@ -619,7 +626,7 @@ export function AdminPage() {
               )}
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-3 rounded-lg bg-muted/50">
                   <p className="text-2xl font-bold">
                     {detailsCompany?.categoriesCount}
@@ -629,6 +636,12 @@ export function AdminPage() {
                 <div className="text-center p-3 rounded-lg bg-muted/50">
                   <p className="text-2xl font-bold">{detailsCompany?.itemsCount}</p>
                   <p className="text-xs text-muted-foreground">Items</p>
+                </div>
+                <div className="text-center p-3 rounded-lg bg-muted/50">
+                  <p className="text-2xl font-bold">
+                    {detailsCompany?.menuScans}
+                  </p>
+                  <p className="text-xs text-muted-foreground">Menu Scans</p>
                 </div>
                 <div className="text-center p-3 rounded-lg bg-muted/50">
                   <p className="text-2xl font-bold">
