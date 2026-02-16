@@ -1266,6 +1266,10 @@
       "viewsByPage": "Ogledi po straneh",
       "viewsByLanguage": "Ogledi po jeziku",
       "dailyViews": "Dnevni ogledi",
+      "deviceStats": "Naprave in brskalniki",
+      "devices": "Naprave",
+      "browsers": "Brskalniki",
+      "os": "OS",
       "noData": "Podatki še niso na voljo",
       "pageNames": {
         "home": "Domov",

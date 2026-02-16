@@ -4,8 +4,13 @@ import { useEffect, useState, useMemo } from "react";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { Label } from "@/components/ui/label";
-import { Eye, Calendar, CalendarDays, Users } from "lucide-react";
+import { Eye, Calendar, CalendarDays, Users, Monitor, Globe, Smartphone } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+
+interface DeviceStatsItem {
+  name: string;
+  count: number;
+}
 
 interface AnalyticsData {
   plan: string;
@@ -17,6 +22,11 @@ interface AnalyticsData {
   viewsByPage: { page: string; count: number }[];
   viewsByLanguage: { language: string; count: number }[];
   viewsByDay: { date: string; count: number }[];
+  deviceStats?: {
+    devices: DeviceStatsItem[];
+    browsers: DeviceStatsItem[];
+    os: DeviceStatsItem[];
+  };
 }
 
 function AnimatedNumber({
@@ -70,6 +80,46 @@ const statIcons = {
 const PAGE_ORDER = ["home", "menu", "contacts", "reserve", "language"];
 
 const SKELETON_HEIGHTS = [60, 40, 75, 25, 50, 35, 65];
+
+function DeviceStatsCard({
+  title,
+  icon: Icon,
+  items,
+}: {
+  title: string;
+  icon: React.ElementType;
+  items: DeviceStatsItem[];
+}) {
+  const maxCount = Math.max(...items.map((i) => i.count), 1);
+
+  return (
+    <div className="p-4 bg-muted/30 rounded-xl space-y-3">
+      <div className="flex items-center gap-2 text-sm font-medium">
+        <Icon className="h-4 w-4 text-primary" />
+        {title}
+      </div>
+      <div className="space-y-2">
+        {items.map((item) => {
+          const percentage = (item.count / maxCount) * 100;
+          return (
+            <div key={item.name} className="space-y-1">
+              <div className="flex justify-between text-sm">
+                <span className="capitalize">{item.name}</span>
+                <span className="text-muted-foreground">{item.count}</span>
+              </div>
+              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary/70 rounded-full"
+                  style={{ width: `${percentage}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 interface AnalyticsPageProps {
   initialData: AnalyticsData | null;
@@ -219,6 +269,34 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
             ))}
         </div>
       </div>
+      {data.deviceStats && (data.deviceStats.devices.length > 0 || data.deviceStats.browsers.length > 0 || data.deviceStats.os.length > 0) && (
+        <div className="space-y-4">
+          <Label className="text-base">{t.deviceStats || "Devices & Browsers"}</Label>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {data.deviceStats.devices.length > 0 && (
+              <DeviceStatsCard
+                title={t.devices || "Devices"}
+                icon={Smartphone}
+                items={data.deviceStats.devices}
+              />
+            )}
+            {data.deviceStats.browsers.length > 0 && (
+              <DeviceStatsCard
+                title={t.browsers || "Browsers"}
+                icon={Globe}
+                items={data.deviceStats.browsers}
+              />
+            )}
+            {data.deviceStats.os.length > 0 && (
+              <DeviceStatsCard
+                title={t.os || "OS"}
+                icon={Monitor}
+                items={data.deviceStats.os}
+              />
+            )}
+          </div>
+        </div>
+      )}
       </div>
       </div>
     </div>

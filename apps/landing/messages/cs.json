@@ -1266,6 +1266,10 @@
       "viewsByPage": "Zobrazení podle stránky",
       "viewsByLanguage": "Zobrazení podle jazyka",
       "dailyViews": "Denní zobrazení",
+      "deviceStats": "Zařízení a prohlížeče",
+      "devices": "Zařízení",
+      "browsers": "Prohlížeče",
+      "os": "OS",
       "noData": "Žádná data zatím nejsou k dispozici",
       "pageNames": {
         "home": "Domov",

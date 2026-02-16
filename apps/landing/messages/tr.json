@@ -1266,6 +1266,10 @@
       "viewsByPage": "Sayfa Görüntüleme",
       "viewsByLanguage": "Dil Görüntüleme",
       "dailyViews": "Günlük Görüntüleme",
+      "deviceStats": "Cihazlar ve tarayıcılar",
+      "devices": "Cihazlar",
+      "browsers": "Tarayıcılar",
+      "os": "İS",
       "noData": "Henüz veri yok",
       "pageNames": {
         "home": "Ana Sayfa",

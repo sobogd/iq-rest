@@ -1266,6 +1266,10 @@
       "viewsByPage": "Pregledi po stranici",
       "viewsByLanguage": "Pregledi po jeziku",
       "dailyViews": "Dnevni pregledi",
+      "deviceStats": "Уређаји и прегледачи",
+      "devices": "Уређаји",
+      "browsers": "Прегледачи",
+      "os": "ОС",
       "noData": "Podaci još nisu dostupni",
       "pageNames": {
         "home": "Početna",

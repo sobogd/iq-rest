@@ -65,6 +65,10 @@ export default async function DashboardLayout({
       viewsByLanguage: t("analytics.viewsByLanguage"),
       dailyViews: t("analytics.dailyViews"),
       noData: t("analytics.noData"),
+      deviceStats: t("analytics.deviceStats"),
+      devices: t("analytics.devices"),
+      browsers: t("analytics.browsers"),
+      os: t("analytics.os"),
       pageNames: {
         home: t("analytics.pageNames.home"),
         menu: t("analytics.pageNames.menu"),

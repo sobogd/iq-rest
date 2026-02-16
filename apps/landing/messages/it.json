@@ -1266,6 +1266,10 @@
       "viewsByPage": "Visualizzazioni per Pagina",
       "viewsByLanguage": "Visualizzazioni per Lingua",
       "dailyViews": "Visualizzazioni Giornalieri",
+      "deviceStats": "Dispositivi e browser",
+      "devices": "Dispositivi",
+      "browsers": "Browser",
+      "os": "SO",
       "noData": "Nessun dato disponibile ancora",
       "pageNames": {
         "home": "Home",

@@ -1266,6 +1266,10 @@
       "viewsByPage": "Vaated lehe kaupa",
       "viewsByLanguage": "Vaated keele kaupa",
       "dailyViews": "Päevased vaated",
+      "deviceStats": "Seadmed ja brauserid",
+      "devices": "Seadmed",
+      "browsers": "Brauserid",
+      "os": "OS",
       "noData": "Andmeid pole veel saadaval",
       "pageNames": {
         "home": "Avaleht",

@@ -1266,6 +1266,10 @@
       "viewsByPage": "Wyświetlenia według strony",
       "viewsByLanguage": "Wyświetlenia według języka",
       "dailyViews": "Codzienne wyświetlenia",
+      "deviceStats": "Urządzenia i przeglądarki",
+      "devices": "Urządzenia",
+      "browsers": "Przeglądarki",
+      "os": "System",
       "noData": "Brak dostępnych danych",
       "pageNames": {
         "home": "Strona główna",

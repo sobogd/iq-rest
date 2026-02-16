@@ -1266,6 +1266,10 @@
       "viewsByPage": "Radharcanna de réir Leathanach",
       "viewsByLanguage": "Radharcanna de réir Teanga",
       "dailyViews": "Radharcanna Laethúla",
+      "deviceStats": "Gléasanna agus brabhsálaithe",
+      "devices": "Gléasanna",
+      "browsers": "Brabhsálaithe",
+      "os": "CS",
       "noData": "Níl aon shonraí ar fáil fós",
       "pageNames": {
         "home": "Baile",

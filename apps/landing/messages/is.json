@@ -1266,6 +1266,10 @@
       "viewsByPage": "Skoðanir eftir síðu",
       "viewsByLanguage": "Skoðanir eftir tungumáli",
       "dailyViews": "Daglegar skoðanir",
+      "deviceStats": "Tæki og vafrar",
+      "devices": "Tæki",
+      "browsers": "Vafrar",
+      "os": "SK",
       "noData": "Engin gögn tiltæk enn",
       "pageNames": {
         "home": "Heim",

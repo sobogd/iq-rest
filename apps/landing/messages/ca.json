@@ -1266,6 +1266,10 @@
       "viewsByPage": "Visites per pàgina",
       "viewsByLanguage": "Visites per idioma",
       "dailyViews": "Visites diàries",
+      "deviceStats": "Dispositius i navegadors",
+      "devices": "Dispositius",
+      "browsers": "Navegadors",
+      "os": "SO",
       "noData": "No hi ha dades disponibles encara",
       "pageNames": {
         "home": "Inici",

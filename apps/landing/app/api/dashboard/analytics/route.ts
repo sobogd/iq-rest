@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
+import { UAParser } from "ua-parser-js";
 
 const PLAN_LIMITS: Record<string, number> = {
   FREE: 500,
@@ -121,6 +122,38 @@ export async function GET() {
       `,
     ]);
 
+    // Get device stats from userAgent (last 7 days, one per session)
+    const viewsWithUA = await prisma.pageView.findMany({
+      where: {
+        companyId: company.id,
+        createdAt: { gte: startOfWeek },
+        userAgent: { not: null },
+      },
+      select: { sessionId: true, userAgent: true },
+      distinct: ["sessionId"],
+    });
+
+    const deviceMap = new Map<string, number>();
+    const browserMap = new Map<string, number>();
+    const osMap = new Map<string, number>();
+
+    for (const view of viewsWithUA) {
+      if (!view.userAgent) continue;
+      const result = UAParser(view.userAgent);
+      const device = result.device.type || "desktop";
+      const browser = result.browser.name || "Unknown";
+      const os = result.os.name || "Unknown";
+      deviceMap.set(device, (deviceMap.get(device) || 0) + 1);
+      browserMap.set(browser, (browserMap.get(browser) || 0) + 1);
+      osMap.set(os, (osMap.get(os) || 0) + 1);
+    }
+
+    const sortByCount = (map: Map<string, number>) =>
+      Array.from(map.entries())
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 10);
+
     const limit = PLAN_LIMITS[company.plan] || 500;
 
     return NextResponse.json({
@@ -139,6 +172,11 @@ export async function GET() {
         count: v._count.language,
       })),
       viewsByDay: getLast7Days(viewsByDay),
+      deviceStats: {
+        devices: sortByCount(deviceMap),
+        browsers: sortByCount(browserMap),
+        os: sortByCount(osMap),
+      },
     });
   } catch (error) {
     console.error("Dashboard analytics error:", error);

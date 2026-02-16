@@ -59,6 +59,11 @@ export async function POST(request: NextRequest) {
     const remaining = Math.max(0, limit - currentMonthViews);
 
     // Always record the view (even if limit exceeded)
+    const userAgent = request.headers.get("user-agent") || null;
+    const ip = request.headers.get("cf-connecting-ip")
+      || request.headers.get("x-forwarded-for")?.split(",")[0].trim()
+      || null;
+
     await prisma.pageView.create({
       data: {
         companyId: company.id,
@@ -66,6 +71,8 @@ export async function POST(request: NextRequest) {
         page,
         language,
         referrer: referrer || null,
+        userAgent,
+        ip,
       },
     });
 

@@ -1299,6 +1299,10 @@
       "viewsByPage": "ページ別ビュー",
       "viewsByLanguage": "言語別ビュー",
       "dailyViews": "日次ビュー",
+      "deviceStats": "デバイスとブラウザ",
+      "devices": "デバイス",
+      "browsers": "ブラウザ",
+      "os": "OS",
       "noData": "まだデータがありません",
       "pageNames": {
         "home": "ホーム",

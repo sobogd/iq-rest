@@ -1266,6 +1266,10 @@
       "viewsByPage": "Skatījumi pa lapām",
       "viewsByLanguage": "Skatījumi pa valodām",
       "dailyViews": "Ikdienas skatījumi",
+      "deviceStats": "Ierīces un pārlūkprogrammas",
+      "devices": "Ierīces",
+      "browsers": "Pārlūkprogrammas",
+      "os": "OS",
       "noData": "Dati vēl nav pieejami",
       "pageNames": {
         "home": "Sākumlapa",

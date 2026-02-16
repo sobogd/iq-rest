@@ -1266,6 +1266,10 @@
       "viewsByPage": "Vues par Page",
       "viewsByLanguage": "Vues par Langue",
       "dailyViews": "Vues Quotidiennes",
+      "deviceStats": "Appareils et navigateurs",
+      "devices": "Appareils",
+      "browsers": "Navigateurs",
+      "os": "SE",
       "noData": "Aucune donnée disponible pour le moment",
       "pageNames": {
         "home": "Accueil",

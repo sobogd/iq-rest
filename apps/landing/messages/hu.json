@@ -1266,6 +1266,10 @@
       "viewsByPage": "Oldalankénti Megtekintések",
       "viewsByLanguage": "Nyelv szerinti Megtekintések",
       "dailyViews": "Napi Megtekintések",
+      "deviceStats": "Eszközök és böngészők",
+      "devices": "Eszközök",
+      "browsers": "Böngészők",
+      "os": "OS",
       "noData": "Még nincs elérhető adat",
       "pageNames": {
         "home": "Főoldal",

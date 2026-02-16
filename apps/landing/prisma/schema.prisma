@@ -232,6 +232,8 @@ model PageView {
   page      String   // 'home' | 'contacts' | 'language' | 'menu'
   language  String
   referrer  String?
+  userAgent String?
+  ip        String?
   createdAt DateTime @default(now())
 
   company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)

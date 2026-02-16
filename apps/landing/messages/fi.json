@@ -1266,6 +1266,10 @@
       "viewsByPage": "Näkymät sivukohtaisesti",
       "viewsByLanguage": "Näkymät kieleittäin",
       "dailyViews": "Päivittäiset näkymät",
+      "deviceStats": "Laitteet ja selaimet",
+      "devices": "Laitteet",
+      "browsers": "Selaimet",
+      "os": "KJ",
       "noData": "Tietoja ei ole vielä saatavilla",
       "pageNames": {
         "home": "Etusivu",

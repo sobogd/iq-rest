@@ -1266,6 +1266,10 @@
       "viewsByPage": "Visninger efter side",
       "viewsByLanguage": "Visninger efter sprog",
       "dailyViews": "Daglige visninger",
+      "deviceStats": "Enheder & browsere",
+      "devices": "Enheder",
+      "browsers": "Browsere",
+      "os": "OS",
       "noData": "Ingen data tilgængelige endnu",
       "pageNames": {
         "home": "Hjem",

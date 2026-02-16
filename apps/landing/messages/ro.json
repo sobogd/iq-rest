@@ -1266,6 +1266,10 @@
       "viewsByPage": "Vizualizări pe pagină",
       "viewsByLanguage": "Vizualizări pe limbă",
       "dailyViews": "Vizualizări zilnice",
+      "deviceStats": "Dispozitive și browsere",
+      "devices": "Dispozitive",
+      "browsers": "Browsere",
+      "os": "SO",
       "noData": "Nu sunt date disponibile încă",
       "pageNames": {
         "home": "Acasă",

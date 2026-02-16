@@ -1266,6 +1266,10 @@
       "viewsByPage": "Peržiūros pagal puslapį",
       "viewsByLanguage": "Peržiūros pagal kalbą",
       "dailyViews": "Dienos peržiūros",
+      "deviceStats": "Įrenginiai ir naršyklės",
+      "devices": "Įrenginiai",
+      "browsers": "Naršyklės",
+      "os": "OS",
       "noData": "Duomenų dar nėra",
       "pageNames": {
         "home": "Pagrindinis",

@@ -1299,6 +1299,10 @@
       "viewsByPage": "按页面查看",
       "viewsByLanguage": "按语言查看",
       "dailyViews": "每日查看",
+      "deviceStats": "设备与浏览器",
+      "devices": "设备",
+      "browsers": "浏览器",
+      "os": "操作系统",
       "noData": "暂无数据",
       "pageNames": {
         "home": "首页",

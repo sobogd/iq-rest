@@ -9,6 +9,7 @@ import {
   Calendar,
   Globe,
   Monitor,
+  Network,
   RefreshCw,
   X,
   ChevronRight,
@@ -78,6 +79,12 @@ interface GeoStats {
   os: GeoStatsItem[];
 }
 
+interface ReturningIp {
+  ip: string;
+  sessions: number;
+  views: number;
+}
+
 interface AnalyticsData {
   funnels: {
     sections: FunnelStep[];
@@ -88,6 +95,7 @@ interface AnalyticsData {
   recentEvents: AnalyticsEvent[];
   stats: Stats;
   geoStats: GeoStats;
+  returningIps?: ReturningIp[];
   dateRange: {
     from: string;
     to: string;
@@ -690,6 +698,34 @@ export function AdminAnalyticsPage() {
             icon={Monitor}
           />
         </div>
+
+        {/* Returning IPs */}
+        {data.returningIps && data.returningIps.length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium flex items-center gap-2">
+                <Network className="h-4 w-4" />
+                Returning IPs ({data.returningIps.length})
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                {data.returningIps.map((item) => (
+                  <div
+                    key={item.ip}
+                    className="flex items-center justify-between p-3 rounded-lg bg-muted/30"
+                  >
+                    <span className="text-sm font-mono">{item.ip}</span>
+                    <div className="flex gap-3 text-xs text-muted-foreground">
+                      <span>{item.sessions} sessions</span>
+                      <span>{item.views} views</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Recent Events */}
         <Card>

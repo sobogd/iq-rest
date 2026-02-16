@@ -1266,6 +1266,10 @@
       "viewsByPage": "Aufrufe nach Seite",
       "viewsByLanguage": "Aufrufe nach Sprache",
       "dailyViews": "Tägliche Aufrufe",
+      "deviceStats": "Geräte & Browser",
+      "devices": "Geräte",
+      "browsers": "Browser",
+      "os": "BS",
       "noData": "Noch keine Daten verfügbar",
       "pageNames": {
         "home": "Startseite",

@@ -1266,6 +1266,10 @@
       "viewsByPage": "Visningar per sida",
       "viewsByLanguage": "Visningar per språk",
       "dailyViews": "Dagliga visningar",
+      "deviceStats": "Enheter & webbläsare",
+      "devices": "Enheter",
+      "browsers": "Webbläsare",
+      "os": "OS",
       "noData": "Ingen data tillgänglig ännu",
       "pageNames": {
         "home": "Hem",

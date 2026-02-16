@@ -1266,6 +1266,10 @@
       "viewsByPage": "Weergaven per Pagina",
       "viewsByLanguage": "Weergaven per Taal",
       "dailyViews": "Dagelijkse Weergaven",
+      "deviceStats": "Apparaten & browsers",
+      "devices": "Apparaten",
+      "browsers": "Browsers",
+      "os": "BS",
       "noData": "Nog geen gegevens beschikbaar",
       "pageNames": {
         "home": "Home",

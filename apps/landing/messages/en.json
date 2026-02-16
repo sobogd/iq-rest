@@ -1298,6 +1298,10 @@
       "viewsByPage": "Views by Page",
       "viewsByLanguage": "Views by Language",
       "dailyViews": "Daily Views",
+      "deviceStats": "Devices & Browsers",
+      "devices": "Devices",
+      "browsers": "Browsers",
+      "os": "OS",
       "noData": "No data available yet",
       "pageNames": {
         "home": "Home",

@@ -75,6 +75,10 @@ export interface AnalyticsTranslations {
   viewsByLanguage: string;
   dailyViews: string;
   noData: string;
+  deviceStats: string;
+  devices: string;
+  browsers: string;
+  os: string;
   pageNames: Record<string, string>;
   languageNames: Record<string, string>;
 }

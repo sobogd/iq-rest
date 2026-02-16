@@ -1299,6 +1299,10 @@
       "viewsByPage": "페이지별 조회수",
       "viewsByLanguage": "언어별 조회수",
       "dailyViews": "일일 조회수",
+      "deviceStats": "기기 및 브라우저",
+      "devices": "기기",
+      "browsers": "브라우저",
+      "os": "OS",
       "noData": "아직 데이터가 없습니다",
       "pageNames": {
         "home": "홈",

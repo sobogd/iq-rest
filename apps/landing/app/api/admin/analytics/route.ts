@@ -219,6 +219,18 @@ export async function GET(request: NextRequest) {
       os: sortByCount(osMap),
     };
 
+    // Get IPs with multiple sessions from PageView
+    const returningIps = await prisma.$queryRaw<{ ip: string; sessions: bigint; views: bigint }[]>`
+      SELECT ip, COUNT(DISTINCT "sessionId") as sessions, COUNT(*) as views
+      FROM page_views
+      WHERE ip IS NOT NULL
+        AND "createdAt" >= ${dateFrom} AND "createdAt" <= ${dateTo}
+      GROUP BY ip
+      HAVING COUNT(DISTINCT "sessionId") > 1
+      ORDER BY sessions DESC
+      LIMIT 20
+    `;
+
     return NextResponse.json({
       funnels: {
         sections: sectionFunnel,
@@ -237,6 +249,11 @@ export async function GET(request: NextRequest) {
         count: Number(row.count),
       })),
       geoStats,
+      returningIps: returningIps.map((row) => ({
+        ip: row.ip,
+        sessions: Number(row.sessions),
+        views: Number(row.views),
+      })),
       dateRange: {
         from: dateFrom.toISOString(),
         to: dateTo.toISOString(),
