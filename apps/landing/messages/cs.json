@@ -1487,6 +1487,15 @@
         "other": "Jiné"
       },
       "error": "Něco se pokazilo"
+    },
+    "home": {
+      "viewMenu": "Zobrazit menu",
+      "getReady": "Připravte si menu",
+      "checklistName": "Pojmenujte podnik",
+      "checklistTemplate": "Vyberte šablonu",
+      "checklistMenu": "Upravte menu",
+      "checklistContacts": "Přidejte kontakty",
+      "checklistBrand": "Přizpůsobte značku"
     }
   },
   "reservationSettings": {

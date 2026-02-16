@@ -1487,6 +1487,15 @@
         "other": "Drugo"
       },
       "error": "Nekaj je šlo narobe"
+    },
+    "home": {
+      "viewMenu": "Ogled menija",
+      "getReady": "Pripravite meni",
+      "checklistName": "Poimenujte lokal",
+      "checklistTemplate": "Izberite predlogo",
+      "checklistMenu": "Uredite meni",
+      "checklistContacts": "Dodajte kontakte",
+      "checklistBrand": "Prilagodite blagovno znamko"
     }
   },
   "reservationSettings": {

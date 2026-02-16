@@ -1487,6 +1487,15 @@
         "other": "Остало"
       },
       "error": "Нешто није у реду"
+    },
+    "home": {
+      "viewMenu": "Погледајте мени",
+      "getReady": "Припремите мени",
+      "checklistName": "Именујте локал",
+      "checklistTemplate": "Изаберите шаблон",
+      "checklistMenu": "Уредите мени",
+      "checklistContacts": "Додајте контакте",
+      "checklistBrand": "Прилагодите бренд"
     }
   },
   "reservationSettings": {

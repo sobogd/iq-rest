@@ -1487,6 +1487,15 @@
         "other": "Muu"
       },
       "error": "Jokin meni pieleen"
+    },
+    "home": {
+      "viewMenu": "Katso menusi",
+      "getReady": "Valmistele menu",
+      "checklistName": "Nimeä paikkasi",
+      "checklistTemplate": "Valitse pohja",
+      "checklistMenu": "Muokkaa menua",
+      "checklistContacts": "Lisää yhteystiedot",
+      "checklistBrand": "Muokkaa brändiä"
     }
   },
   "reservationSettings": {

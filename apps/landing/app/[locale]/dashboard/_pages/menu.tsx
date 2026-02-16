@@ -345,22 +345,22 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
 
             {/* Fixed add buttons */}
             {!sortMode && (
-              <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-                <Button
-                  onClick={() => router.push("/dashboard/categories/add")}
-                  variant="destructive"
-                  className="h-10 rounded-xl shadow-md"
-                >
-                  <Plus className="h-4 w-4" />
-                  {tMenu.addCategory}
-                </Button>
+              <div className="sticky bottom-0 flex flex-col gap-2 pt-4 pb-2">
                 <Button
                   onClick={() => router.push("/dashboard/items/add")}
                   variant="destructive"
-                  className="h-10 rounded-xl shadow-md"
+                  className="w-full h-10 rounded-xl shadow-md"
                 >
                   <Plus className="h-4 w-4" />
                   {tMenu.addItem}
+                </Button>
+                <Button
+                  onClick={() => router.push("/dashboard/categories/add")}
+                  variant="outline"
+                  className="w-full h-10 rounded-xl shadow-md"
+                >
+                  <Plus className="h-4 w-4" />
+                  {tMenu.addCategory}
                 </Button>
               </div>
             )}

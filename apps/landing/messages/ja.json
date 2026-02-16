@@ -1520,6 +1520,15 @@
         "other": "その他"
       },
       "error": "エラーが発生しました"
+    },
+    "home": {
+      "viewMenu": "メニューを見る",
+      "getReady": "メニューを準備する",
+      "checklistName": "お店の名前を入力",
+      "checklistTemplate": "テンプレートを選択",
+      "checklistMenu": "メニューを編集",
+      "checklistContacts": "連絡先を追加",
+      "checklistBrand": "ブランドをカスタマイズ"
     }
   },
   "reservationSettings": {

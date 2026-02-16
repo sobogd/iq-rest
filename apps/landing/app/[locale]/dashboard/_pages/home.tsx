@@ -46,12 +46,12 @@ interface ChecklistStatus {
   brandCustomized: boolean;
 }
 
-const checklistItems: { key: keyof ChecklistStatus; label: string; path: string }[] = [
-  { key: "nameSet", label: "Name your place", path: PAGE_PATHS.settings },
-  { key: "templateChosen", label: "Choose menu template", path: PAGE_PATHS.menu },
-  { key: "menuEdited", label: "Edit your menu", path: PAGE_PATHS.menu },
-  { key: "contactsAdded", label: "Add your contacts", path: PAGE_PATHS.contacts },
-  { key: "brandCustomized", label: "Customize your brand", path: PAGE_PATHS.design },
+const checklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
+  { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
+  { key: "templateChosen", translationKey: "checklistTemplate", path: PAGE_PATHS.menu },
+  { key: "menuEdited", translationKey: "checklistMenu", path: PAGE_PATHS.menu },
+  { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
+  { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
 ];
 
 interface DashboardHomeProps {
@@ -63,6 +63,7 @@ interface DashboardHomeProps {
 export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) {
   const tPages = useTranslations("dashboard.pages");
   const tDashboard = useTranslations("dashboard");
+  const tHome = useTranslations("dashboard.home");
   const { translations } = useDashboard();
   const router = useRouter();
 
@@ -92,7 +93,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
               <MenuPreviewModal menuUrl={`/m/${slug}`}>
                 <Button variant="destructive" className="w-full h-10 rounded-xl shadow-md">
                   <Eye className="h-4 w-4" />
-                  View Your Menu
+                  {tHome("viewMenu")}
                 </Button>
               </MenuPreviewModal>
             )}
@@ -102,7 +103,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
               <div className="grid gap-6">
                 <div>
                   <p className="text-sm font-semibold mb-2">
-                    Get your menu ready ({completedCount}/5)
+                    {tHome("getReady")} ({completedCount}/5)
                   </p>
                   <div className="h-2 rounded-full bg-muted overflow-hidden">
                     <div
@@ -112,9 +113,9 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
                   </div>
                 </div>
                 <div className="grid gap-2">
-                {checklistItems.map((item) => {
+                {checklistKeys.map((item) => {
                   const done = checklist[item.key];
-                  const isNext = !done && !checklistItems.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistItems.indexOf(prev) < checklistItems.indexOf(item));
+                  const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
                   return (
                     <button
                       key={item.key}
@@ -134,7 +135,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
                         <Circle className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />
                       )}
                       <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-semibold" : "font-medium"}`}>
-                        {item.label}
+                        {tHome(item.translationKey)}
                       </span>
                       {!done && <ArrowRight className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />}
                     </button>

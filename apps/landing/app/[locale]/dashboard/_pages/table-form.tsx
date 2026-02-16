@@ -25,6 +25,7 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormSwitch } from "../_ui/form-switch";
@@ -50,6 +51,7 @@ interface TableFormPageProps {
 export function TableFormPage({ id }: TableFormPageProps) {
   const t = useTranslations("reservations");
   const router = useRouter();
+  const locale = useLocale();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
 
@@ -157,7 +159,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
 
       if (res.ok) {
         toast.success(t("delete"));
-        router.back();
+        window.location.href = `/${locale}/dashboard/tables`;
       } else {
         const data = await res.json();
         toast.error(data.error || t("error"));
@@ -217,7 +219,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
 
       if (res.ok) {
         toast.success(isEdit ? t("save") : t("addTable"));
-        router.back();
+        window.location.href = `/${locale}/dashboard/tables`;
       } else {
         const data = await res.json();
         toast.error(data.error || t("error"));

@@ -22,6 +22,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
@@ -67,6 +68,7 @@ interface ItemFormPageProps {
 export function ItemFormPage({ id }: ItemFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
+  const locale = useLocale();
   const t = translations.items;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
@@ -211,7 +213,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        router.push("/dashboard/menu");
+        window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
         toast.error(data.error || t.deleteError);
@@ -281,7 +283,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
         if (!isEdit) {
           analytics.dashboard.itemCreated();
         }
-        router.push("/dashboard/menu");
+        window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
         toast.error(data.error || t.saveError);

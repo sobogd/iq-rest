@@ -1487,6 +1487,15 @@
         "other": "Ostalo"
       },
       "error": "Nešto je pošlo po krivu"
+    },
+    "home": {
+      "viewMenu": "Pogledaj svoj meni",
+      "getReady": "Pripremi svoj meni",
+      "checklistName": "Imenuj svoj lokal",
+      "checklistTemplate": "Odaberi predložak",
+      "checklistMenu": "Uredi meni",
+      "checklistContacts": "Dodaj kontakte",
+      "checklistBrand": "Prilagodi brend"
     }
   },
   "reservationSettings": {

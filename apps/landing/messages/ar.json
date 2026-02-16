@@ -1520,6 +1520,15 @@
         "other": "أخرى"
       },
       "error": "حدث خطأ"
+    },
+    "home": {
+      "viewMenu": "عرض القائمة",
+      "getReady": "جهّز قائمتك",
+      "checklistName": "سمِّ مكانك",
+      "checklistTemplate": "اختر قالبًا",
+      "checklistMenu": "حرّر القائمة",
+      "checklistContacts": "أضف جهات الاتصال",
+      "checklistBrand": "خصّص علامتك التجارية"
     }
   },
   "reservationSettings": {

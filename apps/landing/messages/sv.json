@@ -1487,6 +1487,15 @@
         "other": "Övrigt"
       },
       "error": "Något gick fel"
+    },
+    "home": {
+      "viewMenu": "Visa din meny",
+      "getReady": "Förbered din meny",
+      "checklistName": "Namnge din restaurang",
+      "checklistTemplate": "Välj en mall",
+      "checklistMenu": "Redigera menyn",
+      "checklistContacts": "Lägg till kontakter",
+      "checklistBrand": "Anpassa varumärket"
     }
   },
   "reservationSettings": {

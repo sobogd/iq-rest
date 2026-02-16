@@ -1487,6 +1487,15 @@
         "other": "Kita"
       },
       "error": "Kažkas nutiko"
+    },
+    "home": {
+      "viewMenu": "Peržiūrėti meniu",
+      "getReady": "Paruoškite meniu",
+      "checklistName": "Pavadinkite savo vietą",
+      "checklistTemplate": "Pasirinkite šabloną",
+      "checklistMenu": "Redaguokite meniu",
+      "checklistContacts": "Pridėkite kontaktus",
+      "checklistBrand": "Pritaikykite prekės ženklą"
     }
   },
   "reservationSettings": {

@@ -1487,6 +1487,15 @@
         "other": "Sonstiges"
       },
       "error": "Etwas ist schiefgelaufen"
+    },
+    "home": {
+      "viewMenu": "Dein Menü ansehen",
+      "getReady": "Menü vorbereiten",
+      "checklistName": "Benenne dein Lokal",
+      "checklistTemplate": "Vorlage wählen",
+      "checklistMenu": "Menü bearbeiten",
+      "checklistContacts": "Kontakte hinzufügen",
+      "checklistBrand": "Marke anpassen"
     }
   },
   "reservationSettings": {

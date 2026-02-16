@@ -1228,6 +1228,15 @@
       "account": "Account",
       "reservationSettings": "Configuration"
     },
+    "home": {
+      "viewMenu": "View Your Menu",
+      "getReady": "Get your menu ready",
+      "checklistName": "Name your place",
+      "checklistTemplate": "Choose menu template",
+      "checklistMenu": "Edit your menu",
+      "checklistContacts": "Add your contacts",
+      "checklistBrand": "Customize your brand"
+    },
     "logout": "Logout",
     "aiTranslate": {
       "title": "AI Translation",

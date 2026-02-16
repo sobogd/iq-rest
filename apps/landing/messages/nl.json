@@ -1487,6 +1487,15 @@
         "other": "Anders"
       },
       "error": "Er ging iets mis"
+    },
+    "home": {
+      "viewMenu": "Bekijk je menu",
+      "getReady": "Maak je menu klaar",
+      "checklistName": "Geef je zaak een naam",
+      "checklistTemplate": "Kies een sjabloon",
+      "checklistMenu": "Bewerk je menu",
+      "checklistContacts": "Voeg contacten toe",
+      "checklistBrand": "Pas je merk aan"
     }
   },
   "reservationSettings": {

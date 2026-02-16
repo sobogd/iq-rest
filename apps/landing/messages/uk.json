@@ -1487,6 +1487,15 @@
         "other": "Інше"
       },
       "error": "Щось пішло не так"
+    },
+    "home": {
+      "viewMenu": "Переглянути меню",
+      "getReady": "Підготуйте меню",
+      "checklistName": "Назвіть заклад",
+      "checklistTemplate": "Оберіть шаблон",
+      "checklistMenu": "Відредагуйте меню",
+      "checklistContacts": "Додайте контакти",
+      "checklistBrand": "Налаштуйте бренд"
     }
   },
   "reservationSettings": {

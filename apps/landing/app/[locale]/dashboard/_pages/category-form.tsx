@@ -21,6 +21,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
@@ -44,6 +45,7 @@ interface CategoryFormPageProps {
 export function CategoryFormPage({ id }: CategoryFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
+  const locale = useLocale();
   const t = translations.categories;
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
 
@@ -105,7 +107,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        router.push("/dashboard/menu");
+        window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
         toast.error(data.error || t.deleteError);
@@ -157,7 +159,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
         if (!isEdit) {
           analytics.dashboard.categoryCreated();
         }
-        router.push("/dashboard/menu");
+        window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
         toast.error(data.error || t.saveError);

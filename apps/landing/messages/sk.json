@@ -1487,6 +1487,15 @@
         "other": "Iné"
       },
       "error": "Niečo sa pokazilo"
+    },
+    "home": {
+      "viewMenu": "Zobraziť menu",
+      "getReady": "Pripravte si menu",
+      "checklistName": "Pomenujte podnik",
+      "checklistTemplate": "Vyberte šablónu",
+      "checklistMenu": "Upravte menu",
+      "checklistContacts": "Pridajte kontakty",
+      "checklistBrand": "Prispôsobte značku"
     }
   },
   "reservationSettings": {

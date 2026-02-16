@@ -1487,6 +1487,15 @@
         "other": "Altro"
       },
       "error": "Qualcosa è andato storto"
+    },
+    "home": {
+      "viewMenu": "Vedi il tuo menu",
+      "getReady": "Prepara il tuo menu",
+      "checklistName": "Dai un nome al locale",
+      "checklistTemplate": "Scegli un modello",
+      "checklistMenu": "Modifica il menu",
+      "checklistContacts": "Aggiungi i contatti",
+      "checklistBrand": "Personalizza il brand"
     }
   },
   "reservationSettings": {

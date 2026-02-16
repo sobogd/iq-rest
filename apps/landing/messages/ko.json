@@ -1520,6 +1520,15 @@
         "other": "기타"
       },
       "error": "문제가 발생했습니다"
+    },
+    "home": {
+      "viewMenu": "메뉴 보기",
+      "getReady": "메뉴를 준비하세요",
+      "checklistName": "매장 이름 입력",
+      "checklistTemplate": "템플릿 선택",
+      "checklistMenu": "메뉴 편집",
+      "checklistContacts": "연락처 추가",
+      "checklistBrand": "브랜드 맞춤 설정"
     }
   },
   "reservationSettings": {

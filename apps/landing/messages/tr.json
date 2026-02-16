@@ -1487,6 +1487,15 @@
         "other": "Diğer"
       },
       "error": "Bir şeyler ters gitti"
+    },
+    "home": {
+      "viewMenu": "Menünüzü görüntüleyin",
+      "getReady": "Menünüzü hazırlayın",
+      "checklistName": "Mekanınızı adlandırın",
+      "checklistTemplate": "Şablon seçin",
+      "checklistMenu": "Menüyü düzenleyin",
+      "checklistContacts": "İletişim ekleyin",
+      "checklistBrand": "Markayı özelleştirin"
     }
   },
   "reservationSettings": {

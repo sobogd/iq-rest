@@ -1487,6 +1487,15 @@
         "other": "Altre"
       },
       "error": "Alguna cosa ha anat malament"
+    },
+    "home": {
+      "viewMenu": "Veure el teu menú",
+      "getReady": "Prepara el teu menú",
+      "checklistName": "Posa nom al local",
+      "checklistTemplate": "Tria una plantilla",
+      "checklistMenu": "Edita el menú",
+      "checklistContacts": "Afegeix contactes",
+      "checklistBrand": "Personalitza la marca"
     }
   },
   "reservationSettings": {

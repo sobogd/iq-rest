@@ -1520,6 +1520,15 @@
         "other": "其他"
       },
       "error": "出了点问题"
+    },
+    "home": {
+      "viewMenu": "查看菜单",
+      "getReady": "准备您的菜单",
+      "checklistName": "为您的店铺命名",
+      "checklistTemplate": "选择模板",
+      "checklistMenu": "编辑菜单",
+      "checklistContacts": "添加联系方式",
+      "checklistBrand": "自定义品牌"
     }
   },
   "reservationSettings": {

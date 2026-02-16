@@ -1487,6 +1487,15 @@
         "other": "Altul"
       },
       "error": "Ceva nu a funcționat"
+    },
+    "home": {
+      "viewMenu": "Vezi meniul tău",
+      "getReady": "Pregătește-ți meniul",
+      "checklistName": "Denumește localul",
+      "checklistTemplate": "Alege un șablon",
+      "checklistMenu": "Editează meniul",
+      "checklistContacts": "Adaugă contacte",
+      "checklistBrand": "Personalizează brandul"
     }
   },
   "reservationSettings": {

@@ -1487,6 +1487,15 @@
         "other": "Egyéb"
       },
       "error": "Valami hiba történt"
+    },
+    "home": {
+      "viewMenu": "Menü megtekintése",
+      "getReady": "Készítse el a menüt",
+      "checklistName": "Adjon nevet a helyének",
+      "checklistTemplate": "Válasszon sablont",
+      "checklistMenu": "Szerkessze a menüt",
+      "checklistContacts": "Adja meg az elérhetőségeket",
+      "checklistBrand": "Szabja testre a márkát"
     }
   },
   "reservationSettings": {

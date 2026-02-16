@@ -1487,6 +1487,15 @@
         "other": "Annað"
       },
       "error": "Eitthvað fór úrskeiðis"
+    },
+    "home": {
+      "viewMenu": "Skoða matseðilinn",
+      "getReady": "Undirbúðu matseðilinn",
+      "checklistName": "Nefndu staðinn þinn",
+      "checklistTemplate": "Veldu sniðmát",
+      "checklistMenu": "Breyttu matseðlinum",
+      "checklistContacts": "Bættu við tengiliðum",
+      "checklistBrand": "Sérsníðið vörumerkið"
     }
   },
   "reservationSettings": {

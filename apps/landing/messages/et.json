@@ -1487,6 +1487,15 @@
         "other": "Muu"
       },
       "error": "Midagi läks valesti"
+    },
+    "home": {
+      "viewMenu": "Vaata oma menüüd",
+      "getReady": "Valmista menüü ette",
+      "checklistName": "Pange kohale nimi",
+      "checklistTemplate": "Valige mall",
+      "checklistMenu": "Muutke menüüd",
+      "checklistContacts": "Lisage kontaktid",
+      "checklistBrand": "Kohandage brändi"
     }
   },
   "reservationSettings": {

@@ -1487,6 +1487,15 @@
         "other": "Eile"
       },
       "error": "Chuaigh rud éigin mícheart"
+    },
+    "home": {
+      "viewMenu": "Féach ar do bhiachlár",
+      "getReady": "Ullmhaigh do bhiachlár",
+      "checklistName": "Ainmnigh d'áit",
+      "checklistTemplate": "Roghnaigh teimpléad",
+      "checklistMenu": "Cuir an biachlár in eagar",
+      "checklistContacts": "Cuir teagmhálacha leis",
+      "checklistBrand": "Saincheap do bhranda"
     }
   },
   "reservationSettings": {

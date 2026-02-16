@@ -1520,6 +1520,15 @@
         "other": "سایر"
       },
       "error": "مشکلی پیش آمد"
+    },
+    "home": {
+      "viewMenu": "مشاهده منو",
+      "getReady": "منوی خود را آماده کنید",
+      "checklistName": "نام مکان خود را وارد کنید",
+      "checklistTemplate": "قالب را انتخاب کنید",
+      "checklistMenu": "منو را ویرایش کنید",
+      "checklistContacts": "مخاطبین را اضافه کنید",
+      "checklistBrand": "برند خود را سفارشی کنید"
     }
   },
   "reservationSettings": {

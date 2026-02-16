@@ -1487,6 +1487,15 @@
         "other": "Άλλο"
       },
       "error": "Κάτι πήγε στραβά"
+    },
+    "home": {
+      "viewMenu": "Δείτε το μενού σας",
+      "getReady": "Ετοιμάστε το μενού",
+      "checklistName": "Ονομάστε το μαγαζί",
+      "checklistTemplate": "Επιλέξτε πρότυπο",
+      "checklistMenu": "Επεξεργαστείτε το μενού",
+      "checklistContacts": "Προσθέστε επαφές",
+      "checklistBrand": "Προσαρμόστε το brand"
     }
   },
   "reservationSettings": {

@@ -1487,6 +1487,15 @@
         "other": "Друго"
       },
       "error": "Нещо се обърка"
+    },
+    "home": {
+      "viewMenu": "Вижте менюто си",
+      "getReady": "Подгответе менюто",
+      "checklistName": "Наименувайте заведението",
+      "checklistTemplate": "Изберете шаблон",
+      "checklistMenu": "Редактирайте менюто",
+      "checklistContacts": "Добавете контакти",
+      "checklistBrand": "Персонализирайте марката"
     }
   },
   "reservationSettings": {

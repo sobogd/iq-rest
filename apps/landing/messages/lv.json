@@ -1487,6 +1487,15 @@
         "other": "Cits"
       },
       "error": "Kaut kas nogāja greizi"
+    },
+    "home": {
+      "viewMenu": "Skatīt ēdienkarti",
+      "getReady": "Sagatavojiet ēdienkarti",
+      "checklistName": "Nosauciet savu vietu",
+      "checklistTemplate": "Izvēlieties veidni",
+      "checklistMenu": "Rediģējiet ēdienkarti",
+      "checklistContacts": "Pievienojiet kontaktus",
+      "checklistBrand": "Pielāgojiet zīmolu"
     }
   },
   "reservationSettings": {

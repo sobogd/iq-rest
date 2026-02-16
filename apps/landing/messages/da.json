@@ -1487,6 +1487,15 @@
         "other": "Andet"
       },
       "error": "Noget gik galt"
+    },
+    "home": {
+      "viewMenu": "Se din menu",
+      "getReady": "Forbered din menu",
+      "checklistName": "Navngiv dit sted",
+      "checklistTemplate": "Vælg en skabelon",
+      "checklistMenu": "Rediger menuen",
+      "checklistContacts": "Tilføj kontakter",
+      "checklistBrand": "Tilpas dit brand"
     }
   },
   "reservationSettings": {
