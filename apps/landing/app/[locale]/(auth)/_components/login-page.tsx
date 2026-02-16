@@ -47,7 +47,7 @@ export function LoginPage() {
             analytics.disableTracking();
           }
           if (data.isNewUser) {
-            // signUp tracked via CLICKED_LOGIN_CONTINUE
+            track(DashboardEvent.AUTH_SIGNUP);
           }
           analytics.linkSession(data.userId);
 

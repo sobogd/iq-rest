@@ -44,10 +44,10 @@ const DASHBOARD_FUNNEL = [
   { event: "showed_support", label: "Support" },
 ];
 
-// Funnel 4: Conversion funnel (3 levels of onboarding)
+// Funnel 4: Conversion funnel (new users only)
 const CONVERSION_FUNNEL = [
   { event: "page_view_home", label: "Landing" },
-  { event: "clicked_login_continue", label: "Email Submitted" },
+  { event: "auth_signup", label: "New Signup" },
   { event: "clicked_onboarding_continue", label: "Name Entered" },
   { event: "clicked_onboarding_type", label: "Type Selected" },
 ];

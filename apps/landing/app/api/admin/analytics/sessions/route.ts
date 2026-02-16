@@ -126,16 +126,17 @@ export async function GET(request: NextRequest) {
         },
       });
 
-      // Determine source, type, and event count for each session
+      // Determine source, type, event count, and geo for each session
       const sessionSourceMap = new Map<string, { source: string; adValues?: string }>();
       const sessionTypeMap = new Map<string, "signup" | "dashboard" | null>();
       const sessionEventCount = new Map<string, number>();
+      const sessionGeoMap = new Map<string, { country?: string; city?: string }>();
       const adParams = ["ad", "kw", "mt"];
 
       for (const evt of allEventsForSessions) {
         sessionEventCount.set(evt.sessionId, (sessionEventCount.get(evt.sessionId) || 0) + 1);
         // Track ad source
-        const meta = evt.meta as { params?: Record<string, string> } | null;
+        const meta = evt.meta as { params?: Record<string, string>; geo?: { country?: string; city?: string } } | null;
         if (meta?.params) {
           const hasAdParam = adParams.some(p => p in meta.params!) || "gclid" in meta.params;
           if (hasAdParam && !sessionSourceMap.has(evt.sessionId)) {
@@ -149,6 +150,11 @@ export async function GET(request: NextRequest) {
           }
         }
 
+        // Track geo: use first event that has country data
+        if (meta?.geo?.country && !sessionGeoMap.has(evt.sessionId)) {
+          sessionGeoMap.set(evt.sessionId, meta.geo);
+        }
+
         // Track session type: signup takes priority over dashboard
         const currentType = sessionTypeMap.get(evt.sessionId);
         if (evt.event === "auth_signup") {
@@ -160,8 +166,13 @@ export async function GET(request: NextRequest) {
 
       let sessionsWithSource = sessions.map(s => {
         const sourceInfo = sessionSourceMap.get(s.sessionId);
+        const geo = sessionGeoMap.get(s.sessionId);
+        const currentMeta = s.meta as Record<string, unknown> | null;
+        // Enrich meta with geo from any event in the session if missing
+        const meta = currentMeta?.geo ? currentMeta : geo ? { ...currentMeta, geo } : currentMeta;
         return {
           ...s,
+          meta,
           source: sourceInfo?.source || "Direct",
           adValues: sourceInfo?.adValues,
           sessionType: sessionTypeMap.get(s.sessionId) || null,
