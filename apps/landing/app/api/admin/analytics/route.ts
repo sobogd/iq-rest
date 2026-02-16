@@ -46,6 +46,7 @@ const DASHBOARD_FUNNEL = [
 
 // Funnel 4: Conversion funnel (3 levels of onboarding)
 const CONVERSION_FUNNEL = [
+  { event: "page_view_home", label: "Landing" },
   { event: "clicked_login_continue", label: "Email Submitted" },
   { event: "clicked_onboarding_continue", label: "Name Entered" },
   { event: "clicked_onboarding_type", label: "Type Selected" },
