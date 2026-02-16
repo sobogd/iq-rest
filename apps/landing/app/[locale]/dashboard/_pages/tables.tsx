@@ -82,6 +82,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
   }
 
   function handleMoveTable(tableId: string, direction: "up" | "down") {
+    track(DashboardEvent.SORTED_TABLE);
     const currentIndex = tables.findIndex((t) => t.id === tableId);
     const swapIndex = direction === "up" ? currentIndex - 1 : currentIndex + 1;
 

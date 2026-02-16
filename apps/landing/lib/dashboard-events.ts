@@ -43,6 +43,8 @@ export enum DashboardEvent {
   CLICKED_ADD_ITEM = "clicked_add_item",
   CLICKED_ADD_CATEGORY = "clicked_add_category",
   CLICKED_SORT_MENU = "clicked_sort_menu",
+  SORTED_CATEGORY = "sorted_category",
+  SORTED_ITEM = "sorted_item",
   CLICKED_CATEGORY_ROW = "clicked_category_row",
   CLICKED_ITEM_ROW = "clicked_item_row",
   TOGGLED_MENU_ITEM_ACTIVE = "toggled_menu_item_active",
@@ -69,6 +71,7 @@ export enum DashboardEvent {
   SHOWED_TABLES = "showed_tables",
   CLICKED_ADD_TABLE = "clicked_add_table",
   CLICKED_SORT_TABLES = "clicked_sort_tables",
+  SORTED_TABLE = "sorted_table",
   CLICKED_TABLE_ROW = "clicked_table_row",
   TOGGLED_TABLES_LIST_ACTIVE = "toggled_tables_list_active",
 
@@ -196,6 +199,8 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_ADD_ITEM]: "Clicked Add Item",
   [DashboardEvent.CLICKED_ADD_CATEGORY]: "Clicked Add Category",
   [DashboardEvent.CLICKED_SORT_MENU]: "Clicked Sort Menu",
+  [DashboardEvent.SORTED_CATEGORY]: "Sorted Category",
+  [DashboardEvent.SORTED_ITEM]: "Sorted Item",
   [DashboardEvent.CLICKED_CATEGORY_ROW]: "Clicked Category Row",
   [DashboardEvent.CLICKED_ITEM_ROW]: "Clicked Item Row",
   [DashboardEvent.TOGGLED_MENU_ITEM_ACTIVE]: "Toggled Menu Item Active",
@@ -222,6 +227,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.SHOWED_TABLES]: "Showed Tables",
   [DashboardEvent.CLICKED_ADD_TABLE]: "Clicked Add Table",
   [DashboardEvent.CLICKED_SORT_TABLES]: "Clicked Sort Tables",
+  [DashboardEvent.SORTED_TABLE]: "Sorted Table",
   [DashboardEvent.CLICKED_TABLE_ROW]: "Clicked Table Row",
   [DashboardEvent.TOGGLED_TABLES_LIST_ACTIVE]: "Toggled Tables List Active",
 

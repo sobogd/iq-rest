@@ -90,6 +90,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
   }
 
   async function handleMoveCategory(categoryId: string, direction: "up" | "down") {
+    track(DashboardEvent.SORTED_CATEGORY);
     const sorted = [...categories].sort((a, b) => a.sortOrder - b.sortOrder);
     const currentIndex = sorted.findIndex((c) => c.id === categoryId);
     const swapIndex = direction === "up" ? currentIndex - 1 : currentIndex + 1;
@@ -138,6 +139,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
   }
 
   async function handleMoveItem(itemId: string, direction: "up" | "down") {
+    track(DashboardEvent.SORTED_ITEM);
     const item = items.find((i) => i.id === itemId);
     if (!item) return;
 
