@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { Fragment, useEffect, useState, useCallback } from "react";
 import {
   Users,
   MousePointerClick,
@@ -10,8 +10,11 @@ import {
   Globe,
   Monitor,
   Network,
+  Megaphone,
+  Info,
   RefreshCw,
   X,
+  ChevronLeft,
   ChevronRight,
   Trash2,
 } from "lucide-react";
@@ -85,6 +88,17 @@ interface ReturningIp {
   views: number;
 }
 
+interface AdClick {
+  gclid: string;
+  keyword: string | null;
+  match_type: string | null;
+  campaign: string | null;
+  country: string | null;
+  sessionId: string;
+  event_count: number;
+  hasUser: boolean;
+}
+
 interface AnalyticsData {
   funnels: {
     sections: FunnelStep[];
@@ -96,6 +110,7 @@ interface AnalyticsData {
   stats: Stats;
   geoStats: GeoStats;
   returningIps?: ReturningIp[];
+  adClicks?: AdClick[];
   dateRange: {
     from: string;
     to: string;
@@ -366,6 +381,22 @@ export function AdminAnalyticsPage() {
   const [error, setError] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<TimeRange>("today");
 
+  // Copy to clipboard (textarea method for HTTP compatibility)
+  const copyToClipboard = useCallback((text: string) => {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;left:-9999px;top:-9999px;opacity:0";
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+  }, []);
+
+  // Ad clicks pagination
+  const [adClicksPage, setAdClicksPage] = useState(0);
+
   // Sessions modal state
   const [sessionsModalOpen, setSessionsModalOpen] = useState(false);
   const [sessionsModalTitle, setSessionsModalTitle] = useState("");
@@ -402,6 +433,7 @@ export function AdminAnalyticsPage() {
       }
       const json = await res.json();
       setData(json);
+      setAdClicksPage(0);
       setError(null);
     } catch {
       setError("Failed to load data");
@@ -422,6 +454,16 @@ export function AdminAnalyticsPage() {
       minute: "2-digit",
       second: "2-digit",
     });
+  };
+
+  const formatDateUTCRaw = (dateString: string) => {
+    const d = new Date(dateString);
+    const pad = (n: number) => String(n).padStart(2, "0");
+    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
+  };
+
+  const formatDateUTC = (dateString: string) => {
+    return `${formatDateUTCRaw(dateString)} UTC`;
   };
 
   const handleBarClick = async (step: FunnelStep) => {
@@ -729,6 +771,93 @@ export function AdminAnalyticsPage() {
           </Card>
         )}
 
+        {/* Google Ads Clicks */}
+        {data.adClicks && data.adClicks.length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium flex items-center gap-2">
+                <Megaphone className="h-4 w-4" />
+                Google Ads Clicks ({data.adClicks.length})
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="px-0 pb-0">
+              {(() => {
+                const PAGE_SIZE = 10;
+                const totalPages = Math.ceil(data.adClicks!.length / PAGE_SIZE);
+                const paged = data.adClicks!.slice(adClicksPage * PAGE_SIZE, (adClicksPage + 1) * PAGE_SIZE);
+                return (
+                  <>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-xs">
+                        <thead>
+                          <tr className="border-b text-muted-foreground">
+                            <th className="text-left font-medium px-2 py-2">#</th>
+                            <th className="text-left font-medium px-2 py-2"></th>
+                            <th className="text-left font-medium px-2 py-2">kw</th>
+                            <th className="text-left font-medium px-2 py-2">mt</th>
+                            <th className="text-left font-medium px-2 py-2">ad</th>
+                            <th className="text-left font-medium px-4 py-2">gclid</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {paged.map((click) => (
+                            <tr
+                              key={click.gclid}
+                              className="border-b last:border-0 cursor-pointer hover:bg-muted/50 transition-colors"
+                              onClick={() => handleSessionClick(click.sessionId)}
+                            >
+                              <td className={`px-2 py-2 ${click.hasUser ? "text-red-500 font-medium" : "text-muted-foreground"}`}>{click.event_count}</td>
+                              <td className="px-2 py-2">
+                                {click.country ? countryToFlag(click.country) : ""}
+                              </td>
+                              <td className="px-2 py-2">{click.keyword || "—"}</td>
+                              <td className="px-2 py-2">{click.match_type || "—"}</td>
+                              <td className="px-2 py-2">{click.campaign || "—"}</td>
+                              <td
+                                className="px-4 py-2 font-mono whitespace-nowrap text-muted-foreground hover:text-foreground"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  copyToClipboard(click.gclid);
+                                }}
+                                title="Click to copy"
+                              >
+                                {click.gclid.slice(0, 8)}…{click.gclid.slice(-8)}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {totalPages > 1 && (
+                      <div className="flex items-center justify-between px-4 py-2 border-t">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setAdClicksPage((p) => p - 1)}
+                          disabled={adClicksPage === 0}
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </Button>
+                        <span className="text-xs text-muted-foreground">
+                          {adClicksPage + 1} / {totalPages}
+                        </span>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setAdClicksPage((p) => p + 1)}
+                          disabled={adClicksPage >= totalPages - 1}
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
+            </CardContent>
+          </Card>
+        )}
+
         {/* Recent Events */}
         <Card>
           <CardHeader>
@@ -847,18 +976,36 @@ export function AdminAnalyticsPage() {
                   const timeDiff = prevEvent ? formatTimeDiff(event.createdAt, prevEvent.createdAt) : null;
                   const hasDetails = (event.meta && Object.keys(event.meta).length > 0) || event.page;
 
+                  const dateDisplay = formatDateUTC(event.createdAt);
+                  const dateCopy = formatDateUTCRaw(event.createdAt);
+
                   return (
                     <div key={event.id}>
-                      <div
-                        className={`p-3 rounded-lg bg-muted/30 ${hasDetails ? "cursor-pointer hover:bg-muted/50" : ""}`}
-                        onClick={() => hasDetails && setDetailEvent(event)}
-                      >
-                        <p className="text-[10px] text-muted-foreground">
-                          {formatDate(event.createdAt)}
-                        </p>
-                        <p className="text-sm font-medium mt-0.5">
-                          {formatEventName(event.event)}
-                        </p>
+                      <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/30">
+                        <div className="flex-1 min-w-0">
+                          <p
+                            className="text-[10px] font-mono cursor-pointer w-fit text-muted-foreground hover:text-foreground select-none"
+                            onPointerDown={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              copyToClipboard(dateCopy);
+                            }}
+                            title="Click to copy"
+                          >
+                            {dateDisplay}
+                          </p>
+                          <p className="text-sm font-medium mt-0.5">
+                            {formatEventName(event.event)}
+                          </p>
+                        </div>
+                        {hasDetails && (
+                          <button
+                            className="shrink-0 p-1 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                            onClick={() => setDetailEvent(event)}
+                          >
+                            <Info className="h-4 w-4" />
+                          </button>
+                        )}
                       </div>
                       {timeDiff && (
                         <div className="flex justify-center py-1">
@@ -899,7 +1046,7 @@ export function AdminAnalyticsPage() {
             <div className="space-y-2 text-sm">
               <div className="flex gap-2">
                 <span className="text-muted-foreground">Time:</span>
-                <span>{formatDate(detailEvent.createdAt)}</span>
+                <span className="font-mono">{formatDateUTC(detailEvent.createdAt)}</span>
               </div>
               {detailEvent.page && (
                 <div className="flex gap-2">
