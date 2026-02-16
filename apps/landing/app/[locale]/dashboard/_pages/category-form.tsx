@@ -25,8 +25,8 @@ import { useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
-import { analytics } from "@/lib/analytics";
 import { useRouter } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormSwitch } from "../_ui/form-switch";
@@ -64,6 +64,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
   const isEdit = !!id;
 
   useEffect(() => {
+    track(DashboardEvent.SHOWED_CATEGORY_FORM);
     if (id) {
       fetchCategory(id);
     }
@@ -155,10 +156,8 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       });
 
       if (res.ok) {
+        track(DashboardEvent.CLICKED_SAVE_CATEGORY);
         toast.success(isEdit ? t.updated : t.created);
-        if (!isEdit) {
-          analytics.dashboard.categoryCreated();
-        }
         window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
@@ -181,7 +180,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
         {isEdit && (
           <button
             type="button"
-            onClick={() => setShowDeleteDialog(true)}
+            onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
             disabled={saving || deleting}
             className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
           >
@@ -198,6 +197,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
             label={`${t.name}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
             value={name}
             onChange={setName}
+            onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
             placeholder={t.namePlaceholder}
           />
 
@@ -220,7 +220,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
             id="isActive"
             label={`${t.status}:`}
             checked={isActive}
-            onCheckedChange={setIsActive}
+            onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_CATEGORY_ACTIVE); setIsActive(v); }}
             activeText={t.active}
             inactiveText={t.inactive}
           />

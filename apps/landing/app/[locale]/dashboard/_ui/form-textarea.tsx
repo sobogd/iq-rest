@@ -8,6 +8,7 @@ interface FormTextareaProps {
   label: string;
   value: string;
   onChange: (value: string) => void;
+  onFocus?: () => void;
   placeholder?: string;
   disabled?: boolean;
   rows?: number;
@@ -18,6 +19,7 @@ export function FormTextarea({
   label,
   value,
   onChange,
+  onFocus,
   placeholder,
   disabled,
   rows = 4,
@@ -31,6 +33,7 @@ export function FormTextarea({
         id={textareaId}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onFocus={onFocus}
         placeholder={placeholder}
         disabled={disabled}
         rows={rows}

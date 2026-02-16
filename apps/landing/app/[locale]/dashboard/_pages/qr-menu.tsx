@@ -11,6 +11,7 @@ import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 const PAPER_FORMATS = {
   a4: { width: 210, height: 297, name: "A4" },
@@ -48,6 +49,10 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
 
   const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
   const paper = PAPER_FORMATS[paperFormat];
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_QR_MENU);
+  }, []);
   const isSmallPaper = paperFormat === "a5" || paperFormat === "a6";
 
   useEffect(() => {
@@ -249,6 +254,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
           variant="destructive"
           className="w-full h-10 rounded-xl shadow-md"
           onClick={() => {
+            track(DashboardEvent.CLICKED_COPY_URL);
             navigator.clipboard.writeText(`https://${menuUrl}`);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
@@ -267,7 +273,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
 
           <div className="space-y-2">
             <Label>{t("paperFormat")}</Label>
-            <Select value={paperFormat} onValueChange={(v) => setPaperFormat(v as keyof typeof PAPER_FORMATS)}>
+            <Select value={paperFormat} onValueChange={(v) => { track(DashboardEvent.CHANGED_PAPER_FORMAT); setPaperFormat(v as keyof typeof PAPER_FORMATS); }}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
@@ -282,7 +288,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
 
           <div className="space-y-2">
             <Label>{t("qrPerPage")}</Label>
-            <Select value={qrPerPage} onValueChange={(v) => setQrPerPage(v as keyof typeof QR_PER_PAGE)}>
+            <Select value={qrPerPage} onValueChange={(v) => { track(DashboardEvent.CHANGED_QR_PER_PAGE); setQrPerPage(v as keyof typeof QR_PER_PAGE); }}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
@@ -306,6 +312,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
             <Textarea
               value={customText}
               onChange={(e) => setCustomText(e.target.value)}
+              onFocus={() => track(DashboardEvent.FOCUSED_CUSTOM_TEXT)}
               placeholder={t("customTextPlaceholder")}
               rows={2}
             />
@@ -313,7 +320,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
 
           <div className="space-y-2">
             <Label>{t("textSize")}</Label>
-            <Select value={textSize} onValueChange={setTextSize}>
+            <Select value={textSize} onValueChange={(v) => { track(DashboardEvent.CHANGED_TEXT_SIZE); setTextSize(v); }}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
@@ -327,11 +334,11 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
         </div>
 
         <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-          <Button onClick={handleDownload} variant="outline" className="h-10 rounded-xl shadow-md">
+          <Button onClick={() => { track(DashboardEvent.CLICKED_DOWNLOAD_QR); handleDownload(); }} variant="outline" className="h-10 rounded-xl shadow-md">
             <Download className="mr-2 h-4 w-4" />
             {t("download")}
           </Button>
-          <Button onClick={handlePrint} variant="destructive" className="h-10 rounded-xl shadow-md">
+          <Button onClick={() => { track(DashboardEvent.CLICKED_PRINT_QR); handlePrint(); }} variant="destructive" className="h-10 rounded-xl shadow-md">
             <Printer className="mr-2 h-4 w-4" />
             {t("print")}
           </Button>

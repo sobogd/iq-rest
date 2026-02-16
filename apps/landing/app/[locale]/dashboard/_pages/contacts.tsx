@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -9,6 +9,7 @@ import { MapPicker } from "@/components/map-picker";
 import { useTranslations, useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface ContactsPageProps {
   initialRestaurant: {
@@ -45,6 +46,10 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   const [originalLat, setOriginalLat] = useState<number | undefined>(initLat);
   const [originalLng, setOriginalLng] = useState<number | undefined>(initLng);
 
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_CONTACTS);
+  }, []);
+
   const hasChanges = useMemo(() => {
     return (
       phone !== originalPhone ||
@@ -56,6 +61,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   }, [phone, instagram, whatsapp, lat, lng, originalPhone, originalInstagram, originalWhatsapp, originalLat, originalLng]);
 
   const handleLocationSelect = useCallback((newLat: number, newLng: number) => {
+    track(DashboardEvent.CLICKED_MAP);
     setLat(newLat);
     setLng(newLng);
   }, []);
@@ -79,6 +85,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
       });
 
       if (res.ok) {
+        track(DashboardEvent.CLICKED_SAVE_CONTACTS);
         toast.success(t("saved"));
         window.location.href = `/${locale}/dashboard`;
         return;
@@ -106,6 +113,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
                 label={`${t("phone")}:`}
                 value={phone}
                 onChange={setPhone}
+                onFocus={() => track(DashboardEvent.FOCUSED_PHONE)}
                 placeholder={t("phonePlaceholder")}
               />
               <p className="text-xs text-muted-foreground px-1">
@@ -119,6 +127,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
                 label={`${t("instagram")}:`}
                 value={instagram}
                 onChange={setInstagram}
+                onFocus={() => track(DashboardEvent.FOCUSED_INSTAGRAM)}
                 placeholder={t("instagramPlaceholder")}
               />
               <p className="text-xs text-muted-foreground px-1">
@@ -132,6 +141,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
                 label={`${t("whatsapp")}:`}
                 value={whatsapp}
                 onChange={setWhatsapp}
+                onFocus={() => track(DashboardEvent.FOCUSED_WHATSAPP)}
                 placeholder={t("whatsappPlaceholder")}
               />
               <p className="text-xs text-muted-foreground px-1">

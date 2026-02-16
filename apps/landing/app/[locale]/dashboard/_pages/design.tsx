@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Loader2, Save, Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { FormSwitch } from "../_ui/form-switch";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -60,6 +61,10 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
   const [validationError, setValidationError] = useState<string | null>(null);
 
   const hasActiveSubscription = (initialSubscription?.subscriptionStatus === "ACTIVE") && (initialSubscription?.plan !== "FREE");
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_DESIGN);
+  }, []);
 
   const hasChanges = useMemo(() => {
     return source !== originalSource || accentColor !== originalAccentColor || hideTitle !== originalHideTitle;
@@ -142,6 +147,7 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
       });
 
       if (res.ok) {
+        track(DashboardEvent.CLICKED_SAVE_DESIGN);
         toast.success(t("saved"));
         window.location.href = `/${locale}/dashboard`;
         return;
@@ -166,7 +172,7 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
             id="hideTitle"
             label={t("hideTitleLabel")}
             checked={!hideTitle}
-            onCheckedChange={(checked) => setHideTitle(!checked)}
+            onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_HIDE_TITLE); setHideTitle(!checked); }}
             activeText={t("hideTitleVisible")}
             inactiveText={t("hideTitleHidden")}
           />
@@ -204,7 +210,7 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
                 variant="destructive"
                 size="icon"
                 className="absolute -top-2 left-36 h-6 w-6"
-                onClick={handleRemoveMedia}
+                onClick={() => { track(DashboardEvent.CLICKED_REMOVE_BACKGROUND); handleRemoveMedia(); }}
               >
                 <X className="h-4 w-4" />
               </Button>
@@ -212,7 +218,7 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
           ) : (
             <div
               className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
-              onClick={() => fileInputRef.current?.click()}
+              onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_BACKGROUND); fileInputRef.current?.click(); }}
             >
               {uploading ? (
                 <div className="flex flex-col items-center gap-2">
@@ -273,7 +279,7 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
                         accentColor === color ? "border-foreground scale-110" : "border-transparent"
                       }`}
                       style={{ backgroundColor: color }}
-                      onClick={() => setAccentColor(color)}
+                      onClick={() => { track(DashboardEvent.CLICKED_PRESET_COLOR); setAccentColor(color); }}
                     />
                   ))}
                 </div>
@@ -285,7 +291,7 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
                   <input
                     type="color"
                     value={accentColor}
-                    onChange={(e) => setAccentColor(e.target.value)}
+                    onChange={(e) => { track(DashboardEvent.CHANGED_CUSTOM_COLOR); setAccentColor(e.target.value); }}
                     className="w-10 h-10 rounded cursor-pointer border-0 p-0"
                   />
                   <input

@@ -32,6 +32,7 @@ import { FormSwitch } from "../_ui/form-switch";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import { useTranslations } from "next-intl";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface Table {
   id: string;
@@ -71,6 +72,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
   const isEdit = !!id;
 
   useEffect(() => {
+    track(DashboardEvent.SHOWED_TABLE_FORM);
     if (id) {
       fetchTable(id);
     }
@@ -218,6 +220,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
       });
 
       if (res.ok) {
+        track(DashboardEvent.CLICKED_SAVE_TABLE);
         toast.success(isEdit ? t("save") : t("addTable"));
         window.location.href = `/${locale}/dashboard/tables`;
       } else {
@@ -241,7 +244,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
         {isEdit && (
           <button
             type="button"
-            onClick={() => setShowDeleteDialog(true)}
+            onClick={() => { track(DashboardEvent.CLICKED_DELETE_TABLE); setShowDeleteDialog(true); }}
             disabled={saving || deleting}
             className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
           >
@@ -257,7 +260,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
             id="isActive"
             label={`${t("isActive")}:`}
             checked={isActive}
-            onCheckedChange={setIsActive}
+            onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_TABLE_ACTIVE); setIsActive(v); }}
             activeText={t("active")}
             inactiveText={t("inactive")}
           />
@@ -267,6 +270,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
             label={`${t("tableNumber")}:`}
             value={number}
             onChange={(value) => setNumber(value.replace(/[^0-9]/g, ""))}
+            onFocus={() => track(DashboardEvent.FOCUSED_TABLE_NUMBER)}
             placeholder={t("tableNumberPlaceholder")}
           />
 
@@ -275,6 +279,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
             label={`${t("capacity")}:`}
             value={capacity}
             onChange={(value) => setCapacity(value.replace(/[^0-9]/g, ""))}
+            onFocus={() => track(DashboardEvent.FOCUSED_TABLE_CAPACITY)}
             placeholder={t("capacityPlaceholder")}
           />
 
@@ -283,6 +288,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
             label={`${t("zone")}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
             value={zone}
             onChange={setZone}
+            onFocus={() => track(DashboardEvent.FOCUSED_TABLE_ZONE)}
             placeholder={t("zonePlaceholder")}
           />
 
@@ -327,7 +333,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
             ) : (
               <div
                 className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors"
-                onClick={() => fileInputRef.current?.click()}
+                onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_TABLE_IMAGE); fileInputRef.current?.click(); }}
               >
                 {uploading ? (
                   <div className="flex flex-col items-center gap-2">

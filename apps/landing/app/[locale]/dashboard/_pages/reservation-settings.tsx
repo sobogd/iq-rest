@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,7 @@ import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { toast } from "sonner";
 import { AlertCircle, Save, Loader2 } from "lucide-react";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -57,6 +58,10 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
 
   const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
   const currentPlan = initialSubscription?.plan ?? "FREE";
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_RESERVATION_SETTINGS);
+  }, []);
 
   const hasChanges =
     reservationsEnabled !== initialValues.reservationsEnabled ||
@@ -148,7 +153,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
             id="reservationsEnabled"
             label={`${t("reservationsEnabled")}:`}
             checked={reservationsEnabled}
-            onCheckedChange={hasActiveSubscription ? setReservationsEnabled : () => {}}
+            onCheckedChange={hasActiveSubscription ? (v) => { track(DashboardEvent.TOGGLED_RESERVATIONS_ENABLED); setReservationsEnabled(v); } : () => {}}
             activeText={t("enabled")}
             inactiveText={t("disabled")}
             disabled={!hasActiveSubscription}
@@ -159,7 +164,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
           <>
             <div className="space-y-2">
               <Label>{t("reservationMode")}:</Label>
-              <Select value={reservationMode} onValueChange={setReservationMode}>
+              <Select value={reservationMode} onValueChange={(v) => { track(DashboardEvent.CHANGED_RESERVATION_MODE); setReservationMode(v); }}>
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -177,7 +182,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
               <Label>{t("slotDuration")}:</Label>
               <Select
                 value={reservationSlotMinutes.toString()}
-                onValueChange={(v) => setReservationSlotMinutes(parseInt(v))}
+                onValueChange={(v) => { track(DashboardEvent.CHANGED_SLOT_DURATION); setReservationSlotMinutes(parseInt(v)); }}
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -193,7 +198,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
             <div className="space-y-2">
               <Label>{t("workingHours")}:</Label>
               <div className="flex items-center gap-2">
-                <Select value={workingHoursStart} onValueChange={setWorkingHoursStart}>
+                <Select value={workingHoursStart} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_START); setWorkingHoursStart(v); }}>
                   <SelectTrigger className="w-28">
                     <SelectValue />
                   </SelectTrigger>
@@ -209,7 +214,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
                   </SelectContent>
                 </Select>
                 <span className="text-muted-foreground">—</span>
-                <Select value={workingHoursEnd} onValueChange={setWorkingHoursEnd}>
+                <Select value={workingHoursEnd} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_END); setWorkingHoursEnd(v); }}>
                   <SelectTrigger className="w-28">
                     <SelectValue />
                   </SelectTrigger>
@@ -230,7 +235,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
         )}
 
         <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-          <Button onClick={handleSave} disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
+          <Button onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }} disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
             {saving ? (
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             ) : (

@@ -12,6 +12,7 @@ import { Link } from "@/i18n/routing";
 import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
 import { toast } from "sonner";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface SubscriptionStatusResponse {
   plan: PlanType;
@@ -47,6 +48,10 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
 
   const showSuccess = searchParams.get("success") === "true";
   const showCanceled = searchParams.get("canceled") === "true";
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_BILLING);
+  }, []);
 
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [isPolling, setIsPolling] = useState(false);
@@ -246,7 +251,7 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={handleManageSubscription}
+                      onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
                       disabled={!!actionLoading}
                     >
                       {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -255,7 +260,7 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
                   ) : (
                     <Button
                       size="sm"
-                      onClick={() => option.lookupKey && handleSubscribe(option.lookupKey)}
+                      onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE); option.lookupKey && handleSubscribe(option.lookupKey); }}
                       disabled={!!actionLoading}
                     >
                       {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

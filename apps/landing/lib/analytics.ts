@@ -127,31 +127,9 @@ export const marketing = {
   demoClose: () => trackEvent("demo_close"),
 };
 
-// Auth events
-export const auth = {
-  emailSubmit: () => trackEvent("auth_email_submit"),
-  codeVerify: () => trackEvent("auth_code_verify"),
-  signUp: () => trackEvent("auth_signup"),
-};
-
 // Section visibility events (landing page sections)
 export const section = {
   view: (name: string) => trackEvent(`section_view_${name.replace(/-/g, "_")}`),
-};
-
-// Dashboard events
-export const dashboard = {
-  pageView: (pageName: string) => trackEvent(`dashboard_${pageName}`),
-  categoryCreated: () => trackEvent("category_created"),
-  itemCreated: () => trackEvent("item_created"),
-  restaurantSaved: () => trackEvent("restaurant_saved"),
-};
-
-// Onboarding events
-export const onboarding = {
-  stepView: (step: number) => trackEvent("onboarding_step_view", { step }),
-  stepContinue: (step: number) => trackEvent("onboarding_step_continue", { step }),
-  complete: () => trackEvent("onboarding_complete"),
 };
 
 // Export all as analytics object for convenience
@@ -162,8 +140,5 @@ export const analytics = {
   linkSession,
   page,
   marketing,
-  auth,
   section,
-  dashboard,
-  onboarding,
 };

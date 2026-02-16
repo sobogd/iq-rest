@@ -5,6 +5,7 @@ import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { Label } from "@/components/ui/label";
 import { Eye, Calendar, CalendarDays, Users } from "lucide-react";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface AnalyticsData {
   plan: string;
@@ -78,6 +79,10 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
   const { translations } = useDashboard();
   const t = translations.analytics;
   const data = initialData;
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_ANALYTICS);
+  }, []);
 
   const maxDayViews = data ? Math.max(...data.viewsByDay.map((v) => v.count), 1) : 1;
 

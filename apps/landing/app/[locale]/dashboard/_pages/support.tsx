@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, Loader2, MessageCircle } from "lucide-react";
 import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface Message {
   id: string;
@@ -40,6 +41,10 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
     } catch (error) {
       console.error("Failed to fetch messages:", error);
     }
+  }, []);
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_SUPPORT);
   }, []);
 
   useEffect(() => {
@@ -152,12 +157,13 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
               onKeyDown={handleKeyDown}
+              onFocus={() => track(DashboardEvent.FOCUSED_SUPPORT_MESSAGE)}
               placeholder={t("placeholder")}
               className="min-h-[44px] max-h-[120px] resize-none flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
               rows={1}
             />
             <Button
-              onClick={handleSend}
+              onClick={() => { track(DashboardEvent.CLICKED_SEND_MESSAGE); handleSend(); }}
               disabled={!newMessage.trim() || isSending}
               variant="destructive"
               size="icon"

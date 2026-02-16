@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 export function OnboardingNamePage() {
   const locale = useLocale();
@@ -16,6 +17,7 @@ export function OnboardingNamePage() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    track(DashboardEvent.SHOWED_ONBOARDING_NAME);
     inputRef.current?.focus();
   }, []);
 
@@ -30,6 +32,7 @@ export function OnboardingNamePage() {
 
     setStatus("loading");
     setErrorMessage("");
+    track(DashboardEvent.CLICKED_ONBOARDING_CONTINUE);
 
     try {
       const currency = getCurrencyFromCookie();
@@ -78,6 +81,7 @@ export function OnboardingNamePage() {
                 placeholder={t("namePlaceholder")}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                onFocus={() => track(DashboardEvent.FOCUSED_ONBOARDING_NAME)}
                 disabled={status === "loading"}
               />
 

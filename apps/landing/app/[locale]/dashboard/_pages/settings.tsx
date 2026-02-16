@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Loader2, Save, Star, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -27,7 +27,7 @@ import {
 import { useTranslations, useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
-import { analytics } from "@/lib/analytics";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { CURRENCIES } from "@/lib/currencies";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRouter } from "@/i18n/routing";
@@ -107,6 +107,10 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
 
   const languageLimit = getLanguageLimit();
   const isAtLimit = languages.length >= languageLimit;
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_SETTINGS);
+  }, []);
 
   const hasChanges = useMemo(() => {
     const langsSorted = [...languages].sort().join(",");
@@ -202,8 +206,8 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
           )
         );
 
+        track(DashboardEvent.CLICKED_SAVE_SETTINGS);
         toast.success(t("saved"));
-        analytics.dashboard.restaurantSaved();
         window.location.href = `/${locale}/dashboard`;
         return;
       } else {
@@ -228,6 +232,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
             label={`${t("name")}:`}
             value={name}
             onChange={setName}
+            onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_NAME)}
             placeholder={t("namePlaceholder")}
           />
           <p className="text-xs text-muted-foreground px-1">
@@ -241,6 +246,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
             label={`${t("description")}:`}
             value={description}
             onChange={setDescription}
+            onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_DESCRIPTION)}
             placeholder={t("descriptionPlaceholder")}
           />
           <p className="text-xs text-muted-foreground px-1">
@@ -254,6 +260,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
             label={`${t("slug")}:`}
             value={slug}
             onChange={handleSlugChange}
+            onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_SLUG)}
             placeholder={t("slugPlaceholder")}
           />
           <p className="text-xs text-muted-foreground px-1">
@@ -265,7 +272,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
           id="currency"
           label={`${t("currency")}:`}
           value={currency}
-          onChange={setCurrency}
+          onChange={(v) => { track(DashboardEvent.CHANGED_CURRENCY); setCurrency(v); }}
           placeholder={t("currencyPlaceholder")}
           options={CURRENCIES.map((c) => ({
             value: c.code,
@@ -313,7 +320,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
                   <div className="flex items-center gap-3 flex-1 min-w-0">
                     <Switch
                       checked={isEnabled}
-                      onCheckedChange={(checked) => handleToggleLanguage(lang.code, checked)}
+                      onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
                       disabled={(isDefault && isEnabled) || isDisabledByLimit}
                     />
                     <span className="text-sm font-medium truncate">{lang.name}</span>
@@ -321,7 +328,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
 
                   <button
                     type="button"
-                    onClick={() => handleSetDefault(lang.code)}
+                    onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
                     disabled={!isEnabled}
                     className={`p-1.5 rounded-md transition-colors ${
                       isDefault

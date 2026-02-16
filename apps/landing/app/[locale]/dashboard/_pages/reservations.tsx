@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { useDashboard } from "../_context/dashboard-context";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
 
@@ -74,6 +75,10 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
       toast.error(t("error"));
     }
   }, [t]);
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_RESERVATIONS);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(fetchReservations, POLLING_INTERVAL);
@@ -188,7 +193,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
           <div className="flex items-center gap-2 pt-1">
             <Button
               size="sm"
-              onClick={() => handleUpdateStatus(reservation.id, "confirmed")}
+              onClick={() => { track(DashboardEvent.CLICKED_CONFIRM_RESERVATION); handleUpdateStatus(reservation.id, "confirmed"); }}
               disabled={isUpdating}
             >
               {isUpdating ? (
@@ -201,7 +206,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
             <Button
               size="sm"
               variant="outline"
-              onClick={() => handleUpdateStatus(reservation.id, "cancelled")}
+              onClick={() => { track(DashboardEvent.CLICKED_REJECT_RESERVATION); handleUpdateStatus(reservation.id, "cancelled"); }}
               disabled={isUpdating}
             >
               <X className="h-4 w-4 mr-1" />
@@ -250,7 +255,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.reservations}>
         <button
-          onClick={() => router.push("/dashboard/reservation-settings")}
+          onClick={() => { track(DashboardEvent.CLICKED_RESERVATION_SETTINGS); router.push("/dashboard/reservation-settings"); }}
           className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
         >
           <Settings className="h-5 w-5" />

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
@@ -25,6 +26,7 @@ import {
   Circle,
 } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "menu", page: "menu", icon: UtensilsCrossed },
@@ -70,6 +72,30 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
   const completedCount = Object.values(checklist).filter(Boolean).length;
   const allDone = completedCount === 5;
 
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_HOME);
+  }, []);
+
+  const checklistEventMap: Record<string, DashboardEvent> = {
+    nameSet: DashboardEvent.CLICKED_CHECKLIST_NAME,
+    templateChosen: DashboardEvent.CLICKED_CHECKLIST_TEMPLATE,
+    menuEdited: DashboardEvent.CLICKED_CHECKLIST_MENU,
+    contactsAdded: DashboardEvent.CLICKED_CHECKLIST_CONTACTS,
+    brandCustomized: DashboardEvent.CLICKED_CHECKLIST_BRAND,
+  };
+
+  const navEventMap: Record<string, DashboardEvent> = {
+    menu: DashboardEvent.CLICKED_NAV_MENU,
+    contacts: DashboardEvent.CLICKED_NAV_CONTACTS,
+    settings: DashboardEvent.CLICKED_NAV_SETTINGS,
+    design: DashboardEvent.CLICKED_NAV_DESIGN,
+    qrMenu: DashboardEvent.CLICKED_NAV_QR,
+    analytics: DashboardEvent.CLICKED_NAV_ANALYTICS,
+    tables: DashboardEvent.CLICKED_NAV_TABLES,
+    reservations: DashboardEvent.CLICKED_NAV_RESERVATIONS,
+    billing: DashboardEvent.CLICKED_NAV_BILLING,
+  };
+
   return (
     <div className="flex flex-col h-full">
       <header className="shrink-0 shadow-sm px-6">
@@ -79,7 +105,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
           </div>
           <h1 className="text-xl font-semibold flex-1 ml-3">{translations.pages.home}</h1>
           <button
-            onClick={() => router.push(PAGE_PATHS.support)}
+            onClick={() => { track(DashboardEvent.CLICKED_HELP); router.push(PAGE_PATHS.support); }}
             className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
           >
             <HelpCircle className="h-5 w-5" />
@@ -91,7 +117,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
           <div className="grid gap-6">
             {slug && (
               <MenuPreviewModal menuUrl={`/m/${slug}`}>
-                <Button variant="destructive" className="w-full h-10 rounded-xl shadow-md">
+                <Button variant="destructive" className="w-full h-10 rounded-xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
                   <Eye className="h-4 w-4" />
                   {tHome("viewMenu")}
                 </Button>
@@ -125,7 +151,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
                   return (
                     <button
                       key={item.key}
-                      onClick={() => !done && router.push(item.path)}
+                      onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
                       disabled={done}
                       className={`flex items-center gap-3 rounded-lg border p-3 text-left transition-colors ${
                         done
@@ -156,7 +182,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
               {allSections.map((item) => (
                 <button
                   key={item.key}
-                  onClick={() => router.push(PAGE_PATHS[item.page])}
+                  onClick={() => { track(navEventMap[item.key]); router.push(PAGE_PATHS[item.page]); }}
                   className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
                 >
                   <item.icon className="h-6 w-6 text-muted-foreground" />
@@ -165,7 +191,7 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
               ))}
             </div>
             <button
-              onClick={() => { window.location.href = "/api/auth/logout"; }}
+              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
               className="flex items-center justify-center gap-2 w-full p-3 rounded-lg border bg-card hover:bg-accent transition-colors"
             >
               <LogOut className="h-4 w-4 text-muted-foreground" />

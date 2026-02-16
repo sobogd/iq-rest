@@ -31,6 +31,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { EVENT_LABELS } from "@/lib/dashboard-events";
 
 interface FunnelStep {
   event: string;
@@ -524,8 +525,11 @@ export function AdminAnalyticsPage() {
   };
 
   const formatEventName = (event: string): string => {
-    const eventNames: Record<string, string> = {
-      // Page views
+    // Check new dashboard events first
+    if (EVENT_LABELS[event]) return EVENT_LABELS[event];
+
+    // Legacy marketing/section events
+    const legacyNames: Record<string, string> = {
       page_view_home: "Visited Home",
       page_view_pricing: "Visited Pricing",
       page_view_faq: "Visited FAQ",
@@ -534,33 +538,11 @@ export function AdminAnalyticsPage() {
       page_view_terms: "Visited Terms",
       page_view_privacy: "Visited Privacy",
       page_view_cookies: "Visited Cookies",
-      // Marketing
       demo_open: "Opened Demo",
       demo_close: "Closed Demo",
-      // Auth
-      auth_email_submit: "Submitted Email",
-      auth_code_verify: "Verified Code",
-      auth_signup: "Signed Up",
-      // Onboarding
-      onboarding_step_view: "Onboarding: Step View",
-      onboarding_step_continue: "Onboarding: Continue Click",
-      onboarding_complete: "Onboarding: Complete",
-      // Dashboard
-      dashboard_categories: "Dashboard: Categories",
-      dashboard_items: "Dashboard: Items",
-      dashboard_settings: "Dashboard: Settings",
-      dashboard_design: "Dashboard: Design",
-      dashboard_languages: "Dashboard: Languages",
-      dashboard_analytics: "Dashboard: Analytics",
-      dashboard_qrMenu: "Dashboard: QR Menu",
-      dashboard_billing: "Dashboard: Billing",
-      // Actions
-      category_created: "Created Category",
-      item_created: "Created Item",
-      restaurant_saved: "Saved Restaurant",
     };
 
-    if (eventNames[event]) return eventNames[event];
+    if (legacyNames[event]) return legacyNames[event];
 
     // Fallback: convert section_view_hero -> "Section: Hero"
     if (event.startsWith("section_view_")) {

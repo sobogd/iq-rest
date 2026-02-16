@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface OtpPageProps {
   email: string;
@@ -21,6 +22,7 @@ export function OtpPage({ email }: OtpPageProps) {
   const otpInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    track(DashboardEvent.SHOWED_OTP);
     otpInputRef.current?.focus();
   }, []);
 
@@ -44,7 +46,7 @@ export function OtpPage({ email }: OtpPageProps) {
         if (isAdminEmail(email)) {
           analytics.disableTracking();
         }
-        analytics.auth.codeVerify();
+        track(DashboardEvent.CLICKED_VERIFY_OTP);
         analytics.linkSession(data.userId);
 
         // Redirect based on onboarding step
@@ -102,6 +104,7 @@ export function OtpPage({ email }: OtpPageProps) {
                   const value = e.target.value.replace(/\D/g, "").slice(0, 4);
                   setOtp(value);
                 }}
+                onFocus={() => track(DashboardEvent.FOCUSED_OTP_INPUT)}
                 disabled={status === "loading"}
                 className="text-center tracking-widest"
               />
@@ -119,6 +122,7 @@ export function OtpPage({ email }: OtpPageProps) {
               <p
                 className="text-xs text-muted-foreground/70 cursor-pointer underline"
                 onClick={() => {
+                  track(DashboardEvent.CLICKED_CHANGE_EMAIL);
                   window.location.href = `/${locale}/login`;
                 }}
               >

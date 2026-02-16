@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Loader2, UtensilsCrossed, Pizza, Fish, Beef, Coffee, Beer, Croissant, Hotel, Sparkles } from "lucide-react";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { LucideIcon } from "lucide-react";
 
 interface RestaurantType {
@@ -29,7 +30,12 @@ export function OnboardingTypePage() {
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState(false);
 
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_ONBOARDING_TYPE);
+  }, []);
+
   const handleSelect = async (type: string) => {
+    track(DashboardEvent.CLICKED_ONBOARDING_TYPE);
     setLoading(type);
     setError(false);
 

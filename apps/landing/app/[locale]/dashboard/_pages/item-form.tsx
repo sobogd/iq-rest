@@ -26,8 +26,8 @@ import { useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
-import { analytics } from "@/lib/analytics";
 import { useRouter } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormTextarea } from "../_ui/form-textarea";
@@ -95,6 +95,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
   const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   useEffect(() => {
+    track(DashboardEvent.SHOWED_ITEM_FORM);
     fetchData();
   }, [id]);
 
@@ -279,10 +280,8 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
       });
 
       if (res.ok) {
+        track(DashboardEvent.CLICKED_SAVE_ITEM);
         toast.success(isEdit ? t.updated : t.created);
-        if (!isEdit) {
-          analytics.dashboard.itemCreated();
-        }
         window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
@@ -310,7 +309,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
         {isEdit && (
           <button
             type="button"
-            onClick={() => setShowDeleteDialog(true)}
+            onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
             disabled={saving || deleting}
             className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
           >
@@ -326,7 +325,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             id="category"
             label={`${t.category}:`}
             value={categoryId}
-            onChange={setCategoryId}
+            onChange={(v) => { track(DashboardEvent.CHANGED_ITEM_CATEGORY); setCategoryId(v); }}
             placeholder={t.categoryPlaceholder}
             options={categoryOptions}
           />
@@ -336,6 +335,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             label={`${t.name}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
             value={name}
             onChange={setName}
+            onFocus={() => track(DashboardEvent.FOCUSED_ITEM_NAME)}
             placeholder={t.namePlaceholder}
           />
 
@@ -359,6 +359,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             label={`${t.description}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
             value={description}
             onChange={setDescription}
+            onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
             placeholder={t.descriptionPlaceholder}
           />
 
@@ -381,6 +382,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             id="price"
             label={`${t.price}:`}
             value={price}
+            onFocus={() => track(DashboardEvent.FOCUSED_ITEM_PRICE)}
             onChange={(value) => {
               const cleanValue = value
                 .replace(",", ".")
@@ -395,7 +397,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             id="isActive"
             label={`${t.status}:`}
             checked={isActive}
-            onCheckedChange={setIsActive}
+            onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_ITEM_ACTIVE); setIsActive(v); }}
             activeText={t.active}
             inactiveText={t.inactive}
           />
@@ -426,7 +428,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             ) : (
               <div
                 className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
-                onClick={() => fileInputRef.current?.click()}
+                onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_ITEM_IMAGE); fileInputRef.current?.click(); }}
               >
                 {uploading ? (
                   <div className="flex flex-col items-center gap-2">

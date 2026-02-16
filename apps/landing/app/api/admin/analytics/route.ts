@@ -31,26 +31,24 @@ const MARKETING_FUNNEL = [
 
 // Funnel 3: Dashboard pages
 const DASHBOARD_FUNNEL = [
-  { event: "onboarding_step_view", label: "Onboarding View" },
-  { event: "onboarding_step_continue", label: "Onboarding Click" },
-  { event: "onboarding_complete", label: "Onboarding Done" },
-  { event: "dashboard_categories", label: "Categories" },
-  { event: "dashboard_items", label: "Items" },
-  { event: "dashboard_settings", label: "Settings" },
-  { event: "dashboard_design", label: "Design" },
-  { event: "dashboard_languages", label: "Languages" },
-  { event: "dashboard_analytics", label: "Analytics" },
-  { event: "dashboard_qrMenu", label: "QR Menu" },
-  { event: "dashboard_billing", label: "Billing" },
+  { event: "showed_home", label: "Home" },
+  { event: "showed_menu", label: "Menu" },
+  { event: "showed_contacts", label: "Contacts" },
+  { event: "showed_settings", label: "Settings" },
+  { event: "showed_design", label: "Design" },
+  { event: "showed_qr_menu", label: "QR Menu" },
+  { event: "showed_analytics", label: "Analytics" },
+  { event: "showed_tables", label: "Tables" },
+  { event: "showed_reservations", label: "Reservations" },
+  { event: "showed_billing", label: "Billing" },
+  { event: "showed_support", label: "Support" },
 ];
 
-// Funnel 4: Conversion funnel
+// Funnel 4: Conversion funnel (3 levels of onboarding)
 const CONVERSION_FUNNEL = [
-  { event: "page_view_home", label: "Landing" },
-  { event: "auth_signup", label: "Signup" },
-  { event: "restaurant_saved", label: "Settings" },
-  { event: "category_created", label: "Category" },
-  { event: "item_created", label: "Item" },
+  { event: "clicked_login_continue", label: "Email Submitted" },
+  { event: "clicked_onboarding_continue", label: "Name Entered" },
+  { event: "clicked_onboarding_type", label: "Type Selected" },
 ];
 
 async function getFunnelData(

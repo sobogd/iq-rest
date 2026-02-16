@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ArrowUp, ArrowDown, Plus, ArrowUpDown, ArrowLeft, Loader2, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -9,6 +9,7 @@ import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface ItemWithTranslations {
   id: string;
@@ -42,6 +43,10 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
   const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_MENU);
+  }, []);
 
   const sortedCategories = useMemo(
     () => [...categories].sort((a, b) => a.sortOrder - b.sortOrder),
@@ -204,7 +209,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
               </button>
             ) : (
               <button
-                onClick={() => setSortMode(true)}
+                onClick={() => { track(DashboardEvent.CLICKED_SORT_MENU); setSortMode(true); }}
                 className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
               >
                 <ArrowUpDown className="h-5 w-5" />
@@ -222,7 +227,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
             <p className="text-muted-foreground text-center">
               {tCategories.noCategories}
             </p>
-            <Button onClick={() => router.push("/dashboard/categories/add")}>
+            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}>
               <Plus className="h-4 w-4" />
               {tMenu.addCategory}
             </Button>
@@ -266,7 +271,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
                         </div>
                       )}
                       <div
-                        onClick={() => !sortMode && router.push(`/dashboard/categories/${category.id}`)}
+                        onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); router.push(`/dashboard/categories/${category.id}`); } }}
                         className={`flex items-center flex-1 min-w-0 h-10 px-3 rounded-xl transition-colors ${
                           sortMode ? "bg-muted/20" : "hover:bg-muted/30 cursor-pointer"
                         }`}
@@ -283,7 +288,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
                           className="flex items-center gap-2"
                         >
                           <div
-                            onClick={() => !sortMode && router.push(`/dashboard/items/${item.id}`)}
+                            onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_ITEM_ROW); router.push(`/dashboard/items/${item.id}`); } }}
                             className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-xl transition-colors ${
                               sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
                             }`}
@@ -293,9 +298,10 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
                                 <div onClick={(e) => e.stopPropagation()} className="flex items-center">
                                   <Switch
                                     checked={item.isActive}
-                                    onCheckedChange={() =>
-                                      handleToggleItemActive(item.id, item.isActive, item.name)
-                                    }
+                                    onCheckedChange={() => {
+                                      track(DashboardEvent.TOGGLED_MENU_ITEM_ACTIVE);
+                                      handleToggleItemActive(item.id, item.isActive, item.name);
+                                    }}
                                   />
                                 </div>
                               )}
@@ -347,7 +353,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
             {!sortMode && (
               <div className="sticky bottom-0 flex flex-col items-end gap-2 pt-4 pb-2">
                 <Button
-                  onClick={() => router.push("/dashboard/items/add")}
+                  onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push("/dashboard/items/add"); }}
                   variant="destructive"
                   className="h-10 rounded-xl shadow-md"
                 >
@@ -355,7 +361,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
                   {tMenu.addItem}
                 </Button>
                 <Button
-                  onClick={() => router.push("/dashboard/categories/add")}
+                  onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
                   variant="outline"
                   className="h-10 rounded-xl shadow-md"
                 >

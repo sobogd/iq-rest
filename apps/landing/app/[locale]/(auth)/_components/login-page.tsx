@@ -8,6 +8,7 @@ import { Loader2 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 export function LoginPage() {
   const locale = useLocale();
@@ -18,6 +19,7 @@ export function LoginPage() {
   const emailInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    track(DashboardEvent.SHOWED_LOGIN);
     emailInputRef.current?.focus();
   }, []);
 
@@ -38,14 +40,14 @@ export function LoginPage() {
       const data = await response.json();
 
       if (response.ok) {
-        analytics.auth.emailSubmit();
+        track(DashboardEvent.CLICKED_LOGIN_CONTINUE);
 
         if (data.autoLogin) {
           if (isAdminEmail(email)) {
             analytics.disableTracking();
           }
           if (data.isNewUser) {
-            analytics.auth.signUp();
+            // signUp tracked via CLICKED_LOGIN_CONTINUE
           }
           analytics.linkSession(data.userId);
 
@@ -98,6 +100,7 @@ export function LoginPage() {
                 placeholder={t("emailPlaceholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                onFocus={() => track(DashboardEvent.FOCUSED_LOGIN_EMAIL)}
                 disabled={status === "loading"}
               />
 

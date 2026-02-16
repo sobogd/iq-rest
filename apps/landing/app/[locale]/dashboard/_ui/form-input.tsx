@@ -8,6 +8,7 @@ interface FormInputProps {
   label: string;
   value: string;
   onChange: (value: string) => void;
+  onFocus?: () => void;
   placeholder?: string;
   type?: string;
   disabled?: boolean;
@@ -19,6 +20,7 @@ export function FormInput({
   label,
   value,
   onChange,
+  onFocus,
   placeholder,
   type = "text",
   disabled,
@@ -36,6 +38,7 @@ export function FormInput({
             type={type}
             value={value}
             onChange={(e) => onChange(e.target.value)}
+            onFocus={onFocus}
             placeholder={placeholder}
             disabled={disabled}
           />
@@ -47,6 +50,7 @@ export function FormInput({
           type={type}
           value={value}
           onChange={(e) => onChange(e.target.value)}
+          onFocus={onFocus}
           placeholder={placeholder}
           disabled={disabled}
         />

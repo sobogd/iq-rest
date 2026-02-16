@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, X, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface Table {
   id: string;
@@ -33,6 +34,10 @@ export function TablesPage({ initialTables }: TablesPageProps) {
   const [sortMode, setSortMode] = useState(false);
   const [originalOrder, setOriginalOrder] = useState<Table[]>([]);
   const [savingSort, setSavingSort] = useState(false);
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_TABLES);
+  }, []);
 
   async function handleToggleActive(tableId: string, currentActive: boolean, tableNumber: number) {
     const newActive = !currentActive;
@@ -152,7 +157,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
               <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
               {tables.length > 1 && (
                 <button
-                  onClick={handleStartSortMode}
+                  onClick={() => { track(DashboardEvent.CLICKED_SORT_TABLES); handleStartSortMode(); }}
                   className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
                 >
                   <ArrowUpDown className="h-5 w-5" />
@@ -169,7 +174,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
         {tables.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 gap-4">
             <p className="text-muted-foreground text-center">{t("noTables")}</p>
-            <Button onClick={() => router.push("/dashboard/tables/add")} variant="destructive" className="h-10 rounded-xl shadow-md">
+            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }} variant="destructive" className="h-10 rounded-xl shadow-md">
               <Plus className="h-4 w-4" />
               {t("addTable")}
             </Button>
@@ -183,7 +188,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
                   className="flex items-center gap-2"
                 >
                   <div
-                    onClick={() => !sortMode && router.push(`/dashboard/tables/${table.id}`)}
+                    onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_TABLE_ROW); router.push(`/dashboard/tables/${table.id}`); } }}
                     className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-xl transition-colors ${
                       sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
                     }`}
@@ -193,9 +198,10 @@ export function TablesPage({ initialTables }: TablesPageProps) {
                         <div onClick={(e) => e.stopPropagation()} className="flex items-center">
                           <Switch
                             checked={table.isActive}
-                            onCheckedChange={() =>
-                              handleToggleActive(table.id, table.isActive, table.number)
-                            }
+                            onCheckedChange={() => {
+                              track(DashboardEvent.TOGGLED_TABLES_LIST_ACTIVE);
+                              handleToggleActive(table.id, table.isActive, table.number);
+                            }}
                           />
                         </div>
                       )}
@@ -237,7 +243,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
         {/* Fixed add button */}
         {tables.length > 0 && !sortMode && (
           <div className="sticky bottom-0 flex justify-end pt-4 pb-2">
-            <Button onClick={() => router.push("/dashboard/tables/add")} variant="destructive" className="h-10 rounded-xl shadow-md">
+            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }} variant="destructive" className="h-10 rounded-xl shadow-md">
               <Plus className="h-4 w-4" />
               {t("addTable")}
             </Button>
