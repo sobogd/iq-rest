@@ -1235,7 +1235,8 @@
       "checklistTemplate": "Choose menu template",
       "checklistMenu": "Edit your menu",
       "checklistContacts": "Add your contacts",
-      "checklistBrand": "Customize your brand"
+      "checklistBrand": "Customize your brand",
+      "menuReady": "Your menu is ready! Share your QR code with customers."
     },
     "logout": "Logout",
     "aiTranslate": {

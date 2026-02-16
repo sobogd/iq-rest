@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Valige mall",
       "checklistMenu": "Muutke menüüd",
       "checklistContacts": "Lisage kontaktid",
-      "checklistBrand": "Kohandage brändi"
+      "checklistBrand": "Kohandage brändi",
+      "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega."
     }
   },
   "reservationSettings": {

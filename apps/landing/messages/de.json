@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Vorlage wählen",
       "checklistMenu": "Menü bearbeiten",
       "checklistContacts": "Kontakte hinzufügen",
-      "checklistBrand": "Marke anpassen"
+      "checklistBrand": "Marke anpassen",
+      "menuReady": "Dein Menü ist fertig! Teile deinen QR-Code mit Gästen."
     }
   },
   "reservationSettings": {

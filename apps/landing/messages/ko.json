@@ -1528,7 +1528,8 @@
       "checklistTemplate": "템플릿 선택",
       "checklistMenu": "메뉴 편집",
       "checklistContacts": "연락처 추가",
-      "checklistBrand": "브랜드 맞춤 설정"
+      "checklistBrand": "브랜드 맞춤 설정",
+      "menuReady": "메뉴가 준비되었습니다! QR 코드를 고객과 공유하세요."
     }
   },
   "reservationSettings": {

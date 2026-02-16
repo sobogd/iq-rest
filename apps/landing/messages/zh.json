@@ -1528,7 +1528,8 @@
       "checklistTemplate": "选择模板",
       "checklistMenu": "编辑菜单",
       "checklistContacts": "添加联系方式",
-      "checklistBrand": "自定义品牌"
+      "checklistBrand": "自定义品牌",
+      "menuReady": "您的菜单已准备就绪！将二维码分享给顾客吧。"
     }
   },
   "reservationSettings": {

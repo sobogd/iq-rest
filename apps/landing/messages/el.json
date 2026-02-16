@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Επιλέξτε πρότυπο",
       "checklistMenu": "Επεξεργαστείτε το μενού",
       "checklistContacts": "Προσθέστε επαφές",
-      "checklistBrand": "Προσαρμόστε το brand"
+      "checklistBrand": "Προσαρμόστε το brand",
+      "menuReady": "Το μενού σας είναι έτοιμο! Μοιραστείτε τον QR κωδικό με τους πελάτες."
     }
   },
   "reservationSettings": {

@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Veldu sniðmát",
       "checklistMenu": "Breyttu matseðlinum",
       "checklistContacts": "Bættu við tengiliðum",
-      "checklistBrand": "Sérsníðið vörumerkið"
+      "checklistBrand": "Sérsníðið vörumerkið",
+      "menuReady": "Matseðillinn þinn er tilbúinn! Deildu QR kóðanum með viðskiptavinum."
     }
   },
   "reservationSettings": {

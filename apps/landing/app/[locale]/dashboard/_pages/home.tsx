@@ -98,7 +98,13 @@ export function DashboardHome({ slug, isAdmin, checklist }: DashboardHomeProps) 
               </MenuPreviewModal>
             )}
 
-            {/* Setup checklist */}
+            {/* Success banner or setup checklist */}
+            {allDone && (
+              <div className="flex items-center gap-3 rounded-lg border border-green-500/30 bg-green-500/10 p-4">
+                <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
+                <p className="text-sm font-medium">{tHome("menuReady")}</p>
+              </div>
+            )}
             {!allDone && (
               <div className="grid gap-6">
                 <div>

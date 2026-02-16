@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Velg en mal",
       "checklistMenu": "Rediger menyen",
       "checklistContacts": "Legg til kontakter",
-      "checklistBrand": "Tilpass merkevaren"
+      "checklistBrand": "Tilpass merkevaren",
+      "menuReady": "Menyen din er klar! Del QR-koden med gjestene."
     }
   },
   "reservationSettings": {

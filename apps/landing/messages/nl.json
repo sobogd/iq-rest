@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Kies een sjabloon",
       "checklistMenu": "Bewerk je menu",
       "checklistContacts": "Voeg contacten toe",
-      "checklistBrand": "Pas je merk aan"
+      "checklistBrand": "Pas je merk aan",
+      "menuReady": "Je menu is klaar! Deel je QR-code met klanten."
     }
   },
   "reservationSettings": {

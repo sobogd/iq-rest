@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Alege un șablon",
       "checklistMenu": "Editează meniul",
       "checklistContacts": "Adaugă contacte",
-      "checklistBrand": "Personalizează brandul"
+      "checklistBrand": "Personalizează brandul",
+      "menuReady": "Meniul tău este gata! Distribuie codul QR clienților."
     }
   },
   "reservationSettings": {

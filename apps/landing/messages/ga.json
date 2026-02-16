@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Roghnaigh teimpléad",
       "checklistMenu": "Cuir an biachlár in eagar",
       "checklistContacts": "Cuir teagmhálacha leis",
-      "checklistBrand": "Saincheap do bhranda"
+      "checklistBrand": "Saincheap do bhranda",
+      "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí."
     }
   },
   "reservationSettings": {

@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Izberite predlogo",
       "checklistMenu": "Uredite meni",
       "checklistContacts": "Dodajte kontakte",
-      "checklistBrand": "Prilagodite blagovno znamko"
+      "checklistBrand": "Prilagodite blagovno znamko",
+      "menuReady": "Vaš meni je pripravljen! Delite QR kodo s strankami."
     }
   },
   "reservationSettings": {

@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Escolha um modelo",
       "checklistMenu": "Edite o menu",
       "checklistContacts": "Adicione contactos",
-      "checklistBrand": "Personalize a marca"
+      "checklistBrand": "Personalize a marca",
+      "menuReady": "O seu menu está pronto! Partilhe o QR code com os clientes."
     }
   },
   "reservationSettings": {

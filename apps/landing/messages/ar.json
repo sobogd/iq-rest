@@ -1528,7 +1528,8 @@
       "checklistTemplate": "اختر قالبًا",
       "checklistMenu": "حرّر القائمة",
       "checklistContacts": "أضف جهات الاتصال",
-      "checklistBrand": "خصّص علامتك التجارية"
+      "checklistBrand": "خصّص علامتك التجارية",
+      "menuReady": "قائمتك جاهزة! شارك رمز QR مع العملاء."
     }
   },
   "reservationSettings": {

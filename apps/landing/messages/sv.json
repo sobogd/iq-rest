@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Välj en mall",
       "checklistMenu": "Redigera menyn",
       "checklistContacts": "Lägg till kontakter",
-      "checklistBrand": "Anpassa varumärket"
+      "checklistBrand": "Anpassa varumärket",
+      "menuReady": "Din meny är klar! Dela din QR-kod med gästerna."
     }
   },
   "reservationSettings": {

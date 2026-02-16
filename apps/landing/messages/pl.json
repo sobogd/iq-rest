@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Wybierz szablon",
       "checklistMenu": "Edytuj menu",
       "checklistContacts": "Dodaj kontakty",
-      "checklistBrand": "Dostosuj markę"
+      "checklistBrand": "Dostosuj markę",
+      "menuReady": "Twoje menu jest gotowe! Udostępnij kod QR klientom."
     }
   },
   "reservationSettings": {

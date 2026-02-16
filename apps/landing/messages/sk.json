@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Vyberte šablónu",
       "checklistMenu": "Upravte menu",
       "checklistContacts": "Pridajte kontakty",
-      "checklistBrand": "Prispôsobte značku"
+      "checklistBrand": "Prispôsobte značku",
+      "menuReady": "Vaše menu je pripravené! Zdieľajte QR kód so zákazníkmi."
     }
   },
   "reservationSettings": {

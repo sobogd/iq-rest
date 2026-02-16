@@ -1528,7 +1528,8 @@
       "checklistTemplate": "テンプレートを選択",
       "checklistMenu": "メニューを編集",
       "checklistContacts": "連絡先を追加",
-      "checklistBrand": "ブランドをカスタマイズ"
+      "checklistBrand": "ブランドをカスタマイズ",
+      "menuReady": "メニューの準備ができました！QRコードをお客様に共有しましょう。"
     }
   },
   "reservationSettings": {

@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Izvēlieties veidni",
       "checklistMenu": "Rediģējiet ēdienkarti",
       "checklistContacts": "Pievienojiet kontaktus",
-      "checklistBrand": "Pielāgojiet zīmolu"
+      "checklistBrand": "Pielāgojiet zīmolu",
+      "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem."
     }
   },
   "reservationSettings": {

@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Şablon seçin",
       "checklistMenu": "Menüyü düzenleyin",
       "checklistContacts": "İletişim ekleyin",
-      "checklistBrand": "Markayı özelleştirin"
+      "checklistBrand": "Markayı özelleştirin",
+      "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın."
     }
   },
   "reservationSettings": {

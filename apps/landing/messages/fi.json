@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Valitse pohja",
       "checklistMenu": "Muokkaa menua",
       "checklistContacts": "Lisää yhteystiedot",
-      "checklistBrand": "Muokkaa brändiä"
+      "checklistBrand": "Muokkaa brändiä",
+      "menuReady": "Menusi on valmis! Jaa QR-koodi asiakkaillesi."
     }
   },
   "reservationSettings": {

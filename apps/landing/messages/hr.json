@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Odaberi predložak",
       "checklistMenu": "Uredi meni",
       "checklistContacts": "Dodaj kontakte",
-      "checklistBrand": "Prilagodi brend"
+      "checklistBrand": "Prilagodi brend",
+      "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima."
     }
   },
   "reservationSettings": {

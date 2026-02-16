@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Изберете шаблон",
       "checklistMenu": "Редактирайте менюто",
       "checklistContacts": "Добавете контакти",
-      "checklistBrand": "Персонализирайте марката"
+      "checklistBrand": "Персонализирайте марката",
+      "menuReady": "Менюто ви е готово! Споделете QR кода с клиентите."
     }
   },
   "reservationSettings": {

@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Tria una plantilla",
       "checklistMenu": "Edita el menú",
       "checklistContacts": "Afegeix contactes",
-      "checklistBrand": "Personalitza la marca"
+      "checklistBrand": "Personalitza la marca",
+      "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients."
     }
   },
   "reservationSettings": {

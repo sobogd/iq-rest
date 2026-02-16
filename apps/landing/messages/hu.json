@@ -1495,7 +1495,8 @@
       "checklistTemplate": "Válasszon sablont",
       "checklistMenu": "Szerkessze a menüt",
       "checklistContacts": "Adja meg az elérhetőségeket",
-      "checklistBrand": "Szabja testre a márkát"
+      "checklistBrand": "Szabja testre a márkát",
+      "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel."
     }
   },
   "reservationSettings": {
