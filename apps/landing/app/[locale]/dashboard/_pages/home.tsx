@@ -200,7 +200,7 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
             {/* Scan usage indicator */}
             {scanUsage && (
               <div className="rounded-lg border bg-card p-4">
-                <div className="flex items-center justify-between mb-2">
+                <div className={`flex items-center justify-between${scanUsage.limit ? " mb-2" : ""}`}>
                   <span className="text-sm font-medium">{tHome("scansTitle")}</span>
                   <span className="text-sm text-muted-foreground">
                     {scanUsage.limit
