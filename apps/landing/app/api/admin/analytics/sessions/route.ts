@@ -89,7 +89,13 @@ export async function GET(request: NextRequest) {
         }
       }
 
-      return NextResponse.json({ events, source, adValues });
+      // Get userAgent from PageView for this session
+      const pageView = await prisma.pageView.findFirst({
+        where: { sessionId, userAgent: { not: null } },
+        select: { userAgent: true },
+      });
+
+      return NextResponse.json({ events, source, adValues, userAgent: pageView?.userAgent || null });
     }
 
     // Get unique sessions (optionally filtered by event)

@@ -378,6 +378,7 @@ export function AdminAnalyticsPage() {
   const [eventsModalSessionId, setEventsModalSessionId] = useState<string | null>(null);
   const [eventsModalSource, setEventsModalSource] = useState<string>("Direct");
   const [eventsModalAdValues, setEventsModalAdValues] = useState<string | undefined>();
+  const [eventsModalUserAgent, setEventsModalUserAgent] = useState<string | null>(null);
   const [sessionEvents, setSessionEvents] = useState<AnalyticsEvent[]>([]);
   const [eventsLoading, setEventsLoading] = useState(false);
   const [deleting, setDeleting] = useState(false);
@@ -478,6 +479,7 @@ export function AdminAnalyticsPage() {
         setSessionEvents(data.events || []);
         setEventsModalSource(data.source || "Direct");
         setEventsModalAdValues(data.adValues);
+        setEventsModalUserAgent(data.userAgent || null);
       }
     } catch (err) {
       console.error("Failed to fetch session events:", err);
@@ -824,6 +826,11 @@ export function AdminAnalyticsPage() {
               <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
                 {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
               </span>
+              {eventsModalUserAgent && (
+                <span className="text-[10px] font-normal text-muted-foreground break-all">
+                  {eventsModalUserAgent}
+                </span>
+              )}
             </SheetTitle>
           </SheetHeader>
           <ScrollArea className="flex-1 px-6 pb-6">

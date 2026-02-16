@@ -13,6 +13,7 @@ const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 const GEO_COUNTRY_COOKIE = "geo_country";
 const GEO_CITY_COOKIE = "geo_city";
 const GEO_IP_COOKIE = "geo_ip";
+const GEO_UA_COOKIE = "geo_ua";
 const CURRENCY_COOKIE = "currency";
 
 /**
