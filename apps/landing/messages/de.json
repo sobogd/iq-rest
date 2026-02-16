@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Artikel hinzufügen",
-      "addCategory": "Kategorie hinzufügen"
+      "addCategory": "Kategorie hinzufügen",
+      "sampleBanner": "Dies sind Beispielartikel — tippe auf einen, um ihn zu bearbeiten oder zu löschen. Füge deine eigenen Gerichte hinzu, wenn du bereit bist."
     },
     "onboarding": {
       "nameTitle": "Wie heißt Ihr Lokal?",

@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Dodaj artikel",
-      "addCategory": "Dodaj kategorijo"
+      "addCategory": "Dodaj kategorijo",
+      "sampleBanner": "To so vzorčni artikli — tapnite na kateregakoli za urejanje ali brisanje. Dodajte svoje jedi, ko boste pripravljeni."
     },
     "onboarding": {
       "nameTitle": "Kako se imenuje vaš lokal?",

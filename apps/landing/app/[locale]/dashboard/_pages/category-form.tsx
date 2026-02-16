@@ -182,7 +182,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
             type="button"
             onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
             disabled={saving || deleting}
-            className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+            className="flex items-center justify-center h-10 w-10 disabled:opacity-30"
           >
             <Trash2 className="h-5 w-5" />
           </button>
@@ -224,8 +224,8 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
             activeText={t.active}
             inactiveText={t.inactive}
           />
-          <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting} variant="destructive" className="h-10 rounded-xl shadow-md">
+          <div className="pt-4 pb-2">
+            <Button type="submit" disabled={saving || deleting} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
               {saving ? (
                 <Loader2 className="h-4 w-4 animate-spin mr-2" />
               ) : (

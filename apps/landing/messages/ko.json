@@ -1504,7 +1504,8 @@
     },
     "menu": {
       "addItem": "항목 추가",
-      "addCategory": "카테고리 추가"
+      "addCategory": "카테고리 추가",
+      "sampleBanner": "이것들은 샘플 항목입니다. 아무거나 탭하여 편집하거나 삭제하세요. 준비가 되면 자신의 요리를 추가하세요."
     },
     "onboarding": {
       "nameTitle": "가게 이름이 무엇인가요?",

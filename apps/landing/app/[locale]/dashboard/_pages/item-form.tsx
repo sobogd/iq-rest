@@ -63,9 +63,10 @@ interface ItemWithTranslations {
 
 interface ItemFormPageProps {
   id?: string;
+  initialCategoryId?: string;
 }
 
-export function ItemFormPage({ id }: ItemFormPageProps) {
+export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const locale = useLocale();
@@ -78,7 +79,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [categoryId, setCategoryId] = useState("");
+  const [categoryId, setCategoryId] = useState(initialCategoryId || "");
   const [imageUrl, setImageUrl] = useState("");
   const [allergens, setAllergens] = useState<string[]>([]);
   const [isActive, setIsActive] = useState(true);
@@ -311,7 +312,7 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             type="button"
             onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
             disabled={saving || deleting}
-            className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+            className="flex items-center justify-center h-10 w-10 disabled:opacity-30"
           >
             <Trash2 className="h-5 w-5" />
           </button>
@@ -321,14 +322,16 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
       <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
         <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
           <div className="max-w-lg mx-auto space-y-4">
-          <FormSelect
-            id="category"
-            label={`${t.category}:`}
-            value={categoryId}
-            onChange={(v) => { track(DashboardEvent.CHANGED_ITEM_CATEGORY); setCategoryId(v); }}
-            placeholder={t.categoryPlaceholder}
-            options={categoryOptions}
-          />
+          {!initialCategoryId && (
+            <FormSelect
+              id="category"
+              label={`${t.category}:`}
+              value={categoryId}
+              onChange={(v) => { track(DashboardEvent.CHANGED_ITEM_CATEGORY); setCategoryId(v); }}
+              placeholder={t.categoryPlaceholder}
+              options={categoryOptions}
+            />
+          )}
 
           <FormInput
             id="name"
@@ -486,8 +489,8 @@ export function ItemFormPage({ id }: ItemFormPageProps) {
             )}
           </div>
 
-          <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="h-10 rounded-xl shadow-md">
+          <div className="pt-4 pb-2">
+            <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
               {saving ? (
                 <Loader2 className="h-4 w-4 animate-spin mr-2" />
               ) : (

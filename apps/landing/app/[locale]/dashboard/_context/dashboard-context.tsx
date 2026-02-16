@@ -167,6 +167,7 @@ export interface ItemsTranslations {
 export interface MenuTranslations {
   addItem: string;
   addCategory: string;
+  sampleBanner: string;
 }
 
 export interface SettingsTranslations {

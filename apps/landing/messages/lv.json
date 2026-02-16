@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Pievienot preci",
-      "addCategory": "Pievienot kategoriju"
+      "addCategory": "Pievienot kategoriju",
+      "sampleBanner": "Šie ir paraugu produkti — pieskarieties jebkuram, lai rediģētu vai dzēstu. Pievienojiet savus ēdienus, kad esat gatavs."
     },
     "onboarding": {
       "nameTitle": "Kāds ir jūsu vietas nosaukums?",

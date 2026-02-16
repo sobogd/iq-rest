@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Afegir article",
-      "addCategory": "Afegir categoria"
+      "addCategory": "Afegir categoria",
+      "sampleBanner": "Aquests són articles d'exemple — toca qualsevol per editar o eliminar. Afegeix els teus propis plats quan estiguis preparat."
     },
     "onboarding": {
       "nameTitle": "Com es diu el teu local?",

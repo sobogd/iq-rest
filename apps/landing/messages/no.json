@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Legg til vare",
-      "addCategory": "Legg til kategori"
+      "addCategory": "Legg til kategori",
+      "sampleBanner": "Dette er eksempelartikler — trykk på en for å redigere eller slette. Legg til dine egne retter når du er klar."
     },
     "onboarding": {
       "nameTitle": "Hva heter stedet ditt?",

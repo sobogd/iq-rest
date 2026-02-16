@@ -256,7 +256,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
       <PageHeader title={translations.pages.reservations}>
         <button
           onClick={() => { track(DashboardEvent.CLICKED_RESERVATION_SETTINGS); router.push("/dashboard/reservation-settings"); }}
-          className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+          className="flex items-center justify-center h-10 w-10"
         >
           <Settings className="h-5 w-5" />
         </button>

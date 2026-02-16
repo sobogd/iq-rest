@@ -333,7 +333,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
           </div>
         </div>
 
-        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
+        <div className="flex justify-end gap-2 pt-4 pb-2">
           <Button onClick={() => { track(DashboardEvent.CLICKED_DOWNLOAD_QR); handleDownload(); }} variant="outline" className="h-10 rounded-xl shadow-md">
             <Download className="mr-2 h-4 w-4" />
             {t("download")}

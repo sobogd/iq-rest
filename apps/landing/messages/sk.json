@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Pridať položku",
-      "addCategory": "Pridať kategóriu"
+      "addCategory": "Pridať kategóriu",
+      "sampleBanner": "Toto sú ukážkové položky — klepnite na ľubovoľnú pre úpravu alebo vymazanie. Pridajte vlastné jedlá, keď budete pripravení."
     },
     "onboarding": {
       "nameTitle": "Ako sa volá vaše miesto?",

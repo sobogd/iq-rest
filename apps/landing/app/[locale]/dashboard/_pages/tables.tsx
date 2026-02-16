@@ -127,14 +127,14 @@ export function TablesPage({ initialTables }: TablesPageProps) {
   return (
     <div className="flex flex-col h-full">
       {/* Custom header */}
-      <header className="shrink-0 shadow-sm px-6">
+      <header className="shrink-0 shadow-sm px-6 bg-muted/50">
         <div className="flex items-center py-3 max-w-lg mx-auto">
           {sortMode ? (
             <>
               <button
                 onClick={handleCancelSortMode}
                 disabled={savingSort}
-                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+                className="flex items-center justify-center h-10 w-10"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -142,7 +142,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
               <button
                 onClick={handleSaveSortOrder}
                 disabled={savingSort}
-                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors text-primary"
+                className="flex items-center justify-center h-10 w-10"
               >
                 {savingSort ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
               </button>
@@ -151,7 +151,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
             <>
               <button
                 onClick={() => router.push("/dashboard")}
-                className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+                className="flex items-center justify-center h-10 w-10"
               >
                 <ArrowLeft className="h-5 w-5" />
               </button>
@@ -159,7 +159,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
               {tables.length > 1 && (
                 <button
                   onClick={() => { track(DashboardEvent.CLICKED_SORT_TABLES); handleStartSortMode(); }}
-                  className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+                  className="flex items-center justify-center h-10 w-10"
                 >
                   <ArrowUpDown className="h-5 w-5" />
                 </button>

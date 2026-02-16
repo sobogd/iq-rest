@@ -234,8 +234,8 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
           </>
         )}
 
-        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-          <Button onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }} disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
+        <div className="pt-4 pb-2">
+          <Button onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }} disabled={saving || !hasChanges} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
             {saving ? (
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             ) : (

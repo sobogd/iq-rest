@@ -350,8 +350,8 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
           </p>
         </div>
 
-        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-          <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
+        <div className="pt-4 pb-2">
+          <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
             {saving ? (
               <Loader2 className="h-4 w-4 animate-spin mr-2" />
             ) : (

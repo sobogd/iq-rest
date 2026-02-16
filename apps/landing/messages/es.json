@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Añadir artículo",
-      "addCategory": "Añadir categoría"
+      "addCategory": "Añadir categoría",
+      "sampleBanner": "Estos son artículos de ejemplo — toca cualquiera para editar o eliminar. Agrega tus propios platos cuando estés listo."
     },
     "onboarding": {
       "nameTitle": "¿Cómo se llama tu local?",

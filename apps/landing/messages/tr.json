@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Ürün ekle",
-      "addCategory": "Kategori ekle"
+      "addCategory": "Kategori ekle",
+      "sampleBanner": "Bunlar örnek ürünlerdir — düzenlemek veya silmek için herhangi birine dokunun. Hazır olduğunuzda kendi yemeklerinizi ekleyin."
     },
     "onboarding": {
       "nameTitle": "Mekanınızın adı nedir?",

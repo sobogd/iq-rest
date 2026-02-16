@@ -1414,7 +1414,8 @@
     },
     "menu": {
       "addItem": "Add Item",
-      "addCategory": "Add Category"
+      "addCategory": "Add Category",
+      "sampleBanner": "These are sample items — tap any to edit or delete. Add your own dishes when ready."
     },
     "languages": {
       "translationProgress": "Translation Progress",

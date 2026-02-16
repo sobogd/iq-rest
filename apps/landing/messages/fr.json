@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Ajouter un article",
-      "addCategory": "Ajouter une catégorie"
+      "addCategory": "Ajouter une catégorie",
+      "sampleBanner": "Ce sont des articles d'exemple — appuyez sur l'un d'eux pour le modifier ou le supprimer. Ajoutez vos propres plats quand vous êtes prêt."
     },
     "onboarding": {
       "nameTitle": "Comment s'appelle votre établissement ?",

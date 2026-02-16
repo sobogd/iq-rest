@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Bæta við vöru",
-      "addCategory": "Bæta við flokki"
+      "addCategory": "Bæta við flokki",
+      "sampleBanner": "Þetta eru sýnishorn — ýttu á hvaða sem er til að breyta eða eyða. Bættu við þínum eigin réttum þegar þú ert tilbúinn."
     },
     "onboarding": {
       "nameTitle": "Hvað heitir staðurinn þinn?",

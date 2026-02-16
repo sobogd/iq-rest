@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Lisää tuote",
-      "addCategory": "Lisää kategoria"
+      "addCategory": "Lisää kategoria",
+      "sampleBanner": "Nämä ovat esimerkkituotteita — napauta mitä tahansa muokataksesi tai poistaaksesi. Lisää omat annoksesi, kun olet valmis."
     },
     "onboarding": {
       "nameTitle": "Mikä on paikkasi nimi?",

@@ -18,6 +18,7 @@ export default async function Page() {
       initialItems={items}
       initialCategories={categories}
       initialCurrency={restaurant?.currency ?? "EUR"}
+      checklistMenuEdited={restaurant?.checklistMenuEdited ?? false}
     />
   );
 }

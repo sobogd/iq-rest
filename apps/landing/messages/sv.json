@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Lägg till artikel",
-      "addCategory": "Lägg till kategori"
+      "addCategory": "Lägg till kategori",
+      "sampleBanner": "Det här är exempelartiklar — tryck på valfri för att redigera eller ta bort. Lägg till dina egna rätter när du är redo."
     },
     "onboarding": {
       "nameTitle": "Vad heter ditt ställe?",

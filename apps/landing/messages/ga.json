@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Cuir mír leis",
-      "addCategory": "Cuir catagóir leis"
+      "addCategory": "Cuir catagóir leis",
+      "sampleBanner": "Is míreanna samplacha iad seo — tapáil aon cheann chun eagarthóireacht nó scriosadh. Cuir do chuid miasa féin nuair a bheidh tú réidh."
     },
     "onboarding": {
       "nameTitle": "Cad is ainm do d'áit?",

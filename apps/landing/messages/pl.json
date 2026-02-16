@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Dodaj pozycję",
-      "addCategory": "Dodaj kategorię"
+      "addCategory": "Dodaj kategorię",
+      "sampleBanner": "To są przykładowe pozycje — dotknij dowolnej, aby edytować lub usunąć. Dodaj własne dania, gdy będziesz gotowy."
     },
     "onboarding": {
       "nameTitle": "Jak nazywa się Twoje miejsce?",

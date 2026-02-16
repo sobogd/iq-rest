@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Přidat položku",
-      "addCategory": "Přidat kategorii"
+      "addCategory": "Přidat kategorii",
+      "sampleBanner": "Toto jsou ukázkové položky — klepněte na kteroukoli pro úpravu nebo smazání. Přidejte vlastní jídla, až budete připraveni."
     },
     "onboarding": {
       "nameTitle": "Jak se jmenuje vaše místo?",

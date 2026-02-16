@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Dodaj stavku",
-      "addCategory": "Dodaj kategoriju"
+      "addCategory": "Dodaj kategoriju",
+      "sampleBanner": "Ovo su primjeri stavki — dodirnite bilo koju za uređivanje ili brisanje. Dodajte vlastita jela kada budete spremni."
     },
     "onboarding": {
       "nameTitle": "Kako se zove vaš lokal?",

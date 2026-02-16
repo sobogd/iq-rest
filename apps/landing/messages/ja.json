@@ -1504,7 +1504,8 @@
     },
     "menu": {
       "addItem": "商品を追加",
-      "addCategory": "カテゴリーを追加"
+      "addCategory": "カテゴリーを追加",
+      "sampleBanner": "これらはサンプルメニューです。タップして編集・削除できます。準備ができたら自分の料理を追加してください。"
     },
     "onboarding": {
       "nameTitle": "お店の名前は？",

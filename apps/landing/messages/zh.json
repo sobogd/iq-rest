@@ -1504,7 +1504,8 @@
     },
     "menu": {
       "addItem": "添加商品",
-      "addCategory": "添加分类"
+      "addCategory": "添加分类",
+      "sampleBanner": "这些是示例菜品——点击任意一项进行编辑或删除。准备好后添加您自己的菜品。"
     },
     "onboarding": {
       "nameTitle": "您的店铺叫什么名字？",

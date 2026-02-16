@@ -24,6 +24,7 @@ import {
   Activity,
   CheckCircle2,
   Circle,
+  ChevronRight,
 } from "lucide-react";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
@@ -104,23 +105,22 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
 
   return (
     <div className="flex flex-col h-full">
-      <header className="shrink-0 shadow-sm px-6">
+      <header className="shrink-0 shadow-sm px-6 bg-muted/50">
         <div className="flex items-center py-3 max-w-lg mx-auto">
-          <div className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl">
+          <div className="flex items-center justify-center h-10 w-10">
             <Home className="h-5 w-5" />
           </div>
           <h1 className="text-xl font-semibold flex-1 ml-3">{translations.pages.home}</h1>
           <button
             onClick={() => { track(DashboardEvent.CLICKED_HELP); router.push(PAGE_PATHS.support); }}
-            className="flex items-center justify-center h-10 w-10 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+            className="flex items-center justify-center h-10 w-10"
           >
             <HelpCircle className="h-5 w-5" />
           </button>
         </div>
       </header>
-      <div className="flex-1 overflow-auto px-6 pt-6 pb-6">
-        <div className="w-full max-w-lg mx-auto">
-          <div className="grid gap-6">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <div className="w-full max-w-lg mx-auto flex flex-col gap-4">
             {slug && (
               <MenuPreviewModal menuUrl={`/m/${slug}`}>
                 <Button variant="destructive" className="w-full h-10 rounded-xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
@@ -130,19 +130,24 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
               </MenuPreviewModal>
             )}
 
-            {/* Success banner or setup checklist */}
+            {/* Success banner */}
             {allDone && (
-              <div className="flex items-center gap-3 rounded-lg border border-green-500/30 bg-green-500/10 p-4">
+              <div className="flex items-center gap-3 rounded-2xl border border-green-500/30 bg-green-500/10 p-3">
                 <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
                 <p className="text-sm font-medium">{tHome("menuReady")}</p>
               </div>
             )}
+
+            {/* Setup checklist card */}
             {!allDone && (
-              <div className="grid gap-6">
-                <div>
-                  <p className="text-sm font-semibold mb-2">
-                    {tHome("getReady")} ({completedCount}/5)
-                  </p>
+              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+                <div className="px-4 py-3 bg-muted/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                      {tHome("getReady")}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{completedCount}/5</span>
+                  </div>
                   <div className="h-2 rounded-full bg-muted overflow-hidden">
                     <div
                       className="h-full rounded-full bg-green-500 transition-all duration-500"
@@ -150,7 +155,6 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
                     />
                   </div>
                 </div>
-                <div className="grid gap-2">
                 {checklistKeys.map((item) => {
                   const done = checklist[item.key];
                   const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
@@ -159,12 +163,12 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
                       key={item.key}
                       onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
                       disabled={done}
-                      className={`flex items-center gap-3 rounded-lg border p-3 text-left transition-colors ${
+                      className={`flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 text-left transition-colors ${
                         done
-                          ? "bg-card opacity-60"
+                          ? "opacity-60"
                           : isNext
-                            ? "bg-green-500/10 border-green-500/30 hover:bg-green-500/15"
-                            : "bg-card hover:bg-accent"
+                            ? "bg-green-500/5"
+                            : "hover:bg-muted/30"
                       }`}
                     >
                       {done ? (
@@ -179,27 +183,29 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
                     </button>
                   );
                 })}
-                </div>
               </div>
             )}
 
-            {/* All sections grid */}
-            <div className="grid grid-cols-3 gap-2">
-              {allSections.map((item) => (
+            {/* Navigation card */}
+            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              {allSections.map((item, index) => (
                 <button
                   key={item.key}
                   onClick={() => { track(navEventMap[item.key]); router.push(PAGE_PATHS[item.page]); }}
-                  className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+                  className={`flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors ${
+                    index > 0 ? "border-t border-foreground/5" : ""
+                  }`}
                 >
-                  <item.icon className="h-6 w-6 text-muted-foreground" />
-                  <span className="text-sm font-medium text-center leading-tight">{tPages(item.page)}</span>
+                  <item.icon className="h-5 w-5 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium flex-1 text-left">{tPages(item.page)}</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
                 </button>
               ))}
             </div>
 
             {/* Scan usage indicator */}
-            {scanUsage && (
-              <div className="rounded-lg border bg-card p-4">
+            {scanUsage && scanUsage.used >= 20 && (
+              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden px-4 py-3">
                 <div className={`flex items-center justify-between${scanUsage.limit ? " mb-2" : ""}`}>
                   <span className="text-sm font-medium">{tHome("scansTitle")}</span>
                   <span className="text-sm text-muted-foreground">
@@ -221,34 +227,38 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
               </div>
             )}
 
-            <button
-              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
-              className="flex items-center justify-center gap-2 w-full p-3 rounded-lg border bg-card hover:bg-accent transition-colors"
-            >
-              <LogOut className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">{tDashboard("logout")}</span>
-            </button>
+            {/* Logout */}
+            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <button
+                onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
+                className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
+              >
+                <LogOut className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium">{tDashboard("logout")}</span>
+              </button>
+            </div>
 
             {/* Admin shortcuts */}
             {isAdmin && (
-              <div className="grid grid-cols-2 gap-2">
+              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
                 <button
                   onClick={() => router.push("/dashboard/admin")}
-                  className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+                  className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
                 >
-                  <Shield className="h-6 w-6 text-muted-foreground" />
-                  <span className="text-sm font-medium text-center leading-tight">Companies</span>
+                  <Shield className="h-5 w-5 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium flex-1 text-left">Companies</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
                 </button>
                 <button
                   onClick={() => router.push("/dashboard/admin/analytics")}
-                  className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
                 >
-                  <Activity className="h-6 w-6 text-muted-foreground" />
-                  <span className="text-sm font-medium text-center leading-tight">Analytics</span>
+                  <Activity className="h-5 w-5 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium flex-1 text-left">Analytics</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
                 </button>
               </div>
             )}
-          </div>
         </div>
       </div>
     </div>

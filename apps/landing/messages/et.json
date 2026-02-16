@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Lisa toode",
-      "addCategory": "Lisa kategooria"
+      "addCategory": "Lisa kategooria",
+      "sampleBanner": "Need on näidistooted — puudutage mistahes, et muuta või kustutada. Lisage oma road, kui olete valmis."
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",

@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Pridėti prekę",
-      "addCategory": "Pridėti kategoriją"
+      "addCategory": "Pridėti kategoriją",
+      "sampleBanner": "Tai pavyzdiniai elementai — bakstelėkite bet kurį, norėdami redaguoti arba ištrinti. Pridėkite savo patiekalus, kai būsite pasiruošę."
     },
     "onboarding": {
       "nameTitle": "Koks jūsų vietos pavadinimas?",

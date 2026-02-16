@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Adaugă articol",
-      "addCategory": "Adaugă categorie"
+      "addCategory": "Adaugă categorie",
+      "sampleBanner": "Acestea sunt articole exemplu — atinge oricare pentru a edita sau șterge. Adaugă propriile tale preparate când ești pregătit."
     },
     "onboarding": {
       "nameTitle": "Cum se numește localul tău?",

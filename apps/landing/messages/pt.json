@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Adicionar item",
-      "addCategory": "Adicionar categoria"
+      "addCategory": "Adicionar categoria",
+      "sampleBanner": "Estes são itens de exemplo — toque em qualquer um para editar ou excluir. Adicione seus próprios pratos quando estiver pronto."
     },
     "onboarding": {
       "nameTitle": "Qual o nome do seu estabelecimento?",

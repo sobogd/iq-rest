@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Item toevoegen",
-      "addCategory": "Categorie toevoegen"
+      "addCategory": "Categorie toevoegen",
+      "sampleBanner": "Dit zijn voorbeelditems — tik op een item om te bewerken of te verwijderen. Voeg je eigen gerechten toe wanneer je klaar bent."
     },
     "onboarding": {
       "nameTitle": "Hoe heet je zaak?",

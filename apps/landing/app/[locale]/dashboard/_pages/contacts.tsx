@@ -18,6 +18,7 @@ interface ContactsPageProps {
     whatsapp: string | null;
     x: string | null;
     y: string | null;
+    checklistContactsSaved: boolean;
   } | null;
 }
 
@@ -28,9 +29,10 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
 
   const [saving, setSaving] = useState(false);
 
-  const initPhone = initialRestaurant?.phone || "";
-  const initInstagram = initialRestaurant?.instagram || "";
-  const initWhatsapp = initialRestaurant?.whatsapp || "";
+  const isSampleContacts = !initialRestaurant?.checklistContactsSaved;
+  const initPhone = isSampleContacts ? "" : (initialRestaurant?.phone || "");
+  const initInstagram = isSampleContacts ? "" : (initialRestaurant?.instagram || "");
+  const initWhatsapp = isSampleContacts ? "" : (initialRestaurant?.whatsapp || "");
   const initLat = initialRestaurant?.y ? parseFloat(initialRestaurant.y) : undefined;
   const initLng = initialRestaurant?.x ? parseFloat(initialRestaurant.x) : undefined;
 
@@ -165,8 +167,8 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
           </div>
         </div>
 
-        <div className="sticky bottom-0 flex justify-end gap-2 pt-4 pb-2">
-          <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="h-10 rounded-xl shadow-md">
+        <div className="pt-4 pb-2">
+          <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
             {saving ? (
               <Loader2 className="h-4 w-4 animate-spin mr-2" />
             ) : (

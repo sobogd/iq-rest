@@ -1471,7 +1471,8 @@
     },
     "menu": {
       "addItem": "Tétel hozzáadása",
-      "addCategory": "Kategória hozzáadása"
+      "addCategory": "Kategória hozzáadása",
+      "sampleBanner": "Ezek mintaelemek — érintsd meg bármelyiket szerkesztéshez vagy törléshez. Add hozzá saját ételeidet, amikor készen állsz."
     },
     "onboarding": {
       "nameTitle": "Mi a helye neve?",
