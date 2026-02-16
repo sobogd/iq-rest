@@ -45,6 +45,10 @@ model Company {
   // Onboarding
   onboardingStep Int @default(0) // 0 = not started, 1 = name done, 2 = type done (complete)
 
+  // Email campaigns
+  emailsSent       Json?    // e.g. { "welcome": "2026-02-16T...", "inactive_7d": "2026-02-20T..." }
+  emailUnsubscribed Boolean @default(false)
+
   // Admin
   reminderSentAt DateTime?
 
