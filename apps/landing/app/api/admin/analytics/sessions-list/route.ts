@@ -41,33 +41,62 @@ export async function GET(request: NextRequest) {
       select: { sessionId: true, event: true, userId: true, meta: true, createdAt: true },
     });
 
+    // Collect unique userIds to resolve company names
+    const userIds = new Set<string>();
+    for (const evt of allEvents) {
+      if (evt.userId) userIds.add(evt.userId);
+    }
+
+    // Fetch company names for users
+    const userCompanyMap = new Map<string, string>();
+    if (userIds.size > 0) {
+      const userCompanies = await prisma.userCompany.findMany({
+        where: { userId: { in: Array.from(userIds) } },
+        select: { userId: true, company: { select: { name: true } } },
+      });
+      for (const uc of userCompanies) {
+        userCompanyMap.set(uc.userId, uc.company.name);
+      }
+    }
+
     // Aggregate per session
     const sessionMap = new Map<
       string,
       {
         firstEvent: Date;
+        lastEvent: Date;
         eventCount: number;
         hasUser: boolean;
         country: string | null;
         source: string;
         adValues: string | null;
         sessionType: string | null;
+        companyName: string | null;
+        ip: string | null;
+        userAgent: string | null;
+        isBot: boolean;
       }
     >();
 
     for (const sid of sessionIds) {
       sessionMap.set(sid, {
         firstEvent: new Date(),
+        lastEvent: new Date(0),
         eventCount: 0,
         hasUser: false,
         country: null,
         source: "Direct",
         adValues: null,
         sessionType: null,
+        companyName: null,
+        ip: null,
+        userAgent: null,
+        isBot: false,
       });
     }
 
     const adParamKeys = ["kw", "mt"];
+    const botPatterns = /bot|crawl|spider|scraper|headless|phantom|selenium|puppeteer|lighthouse/i;
 
     for (const evt of allEvents) {
       const s = sessionMap.get(evt.sessionId);
@@ -75,19 +104,37 @@ export async function GET(request: NextRequest) {
 
       s.eventCount++;
       if (evt.createdAt < s.firstEvent) s.firstEvent = evt.createdAt;
-      if (evt.userId) s.hasUser = true;
+      if (evt.createdAt > s.lastEvent) s.lastEvent = evt.createdAt;
+
+      if (evt.userId) {
+        s.hasUser = true;
+        if (!s.companyName) {
+          s.companyName = userCompanyMap.get(evt.userId) || null;
+        }
+      }
 
       const meta = evt.meta as {
         geo?: { country?: string };
         params?: Record<string, string>;
+        ip?: string;
+        userAgent?: string;
       } | null;
 
-      // Country
       if (!s.country && meta?.geo?.country) {
         s.country = meta.geo.country;
       }
 
-      // Ads source
+      if (!s.ip && meta?.ip) {
+        s.ip = meta.ip;
+      }
+
+      if (!s.userAgent && meta?.userAgent) {
+        s.userAgent = meta.userAgent;
+        if (botPatterns.test(meta.userAgent)) {
+          s.isBot = true;
+        }
+      }
+
       if (s.source === "Direct" && meta?.params) {
         if ("gclid" in meta.params) {
           s.source = "Ads";
@@ -100,7 +147,6 @@ export async function GET(request: NextRequest) {
         }
       }
 
-      // Session type
       if (evt.event === "auth_signup") {
         s.sessionType = "signup";
       } else if (evt.event.startsWith("showed_") && s.sessionType !== "signup") {
@@ -110,15 +156,20 @@ export async function GET(request: NextRequest) {
 
     const sessions = sessionIds.map((sid) => {
       const s = sessionMap.get(sid)!;
+      const durationMs = s.lastEvent.getTime() - s.firstEvent.getTime();
       return {
         sessionId: sid,
         firstEvent: s.firstEvent.toISOString(),
+        duration: Math.round(durationMs / 1000),
         eventCount: s.eventCount,
         hasUser: s.hasUser,
         country: s.country,
         source: s.source,
         adValues: s.adValues,
         sessionType: s.sessionType,
+        companyName: s.companyName,
+        ip: s.ip,
+        isBot: s.isBot,
       };
     });
 

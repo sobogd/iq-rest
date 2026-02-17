@@ -14,16 +14,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Parse User-Agent for device info
+    // Parse User-Agent for device info (prefer client-sent, fallback to request header)
+    const ua = userAgent || request.headers.get("user-agent") || null;
     let device = null;
-    if (userAgent) {
-      const result = UAParser(userAgent);
+    if (ua) {
+      const result = UAParser(ua);
       device = {
         browser: result.browser.name,
         os: result.os.name,
-        device: result.device.type || "desktop", // mobile, tablet, or desktop
+        device: result.device.type || "desktop",
       };
     }
+
+    // Capture IP from request headers (Cloudflare / proxy)
+    const ip =
+      request.headers.get("cf-connecting-ip") ||
+      request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      null;
 
     await prisma.analyticsEvent.create({
       data: {
@@ -33,6 +40,8 @@ export async function POST(request: NextRequest) {
         meta: {
           ...meta,
           ...(device && { device }),
+          ...(ua && { userAgent: ua }),
+          ...(ip && { ip }),
         },
       },
     });

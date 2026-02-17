@@ -15,12 +15,16 @@ import { useRouter } from "@/i18n/routing";
 interface Session {
   sessionId: string;
   firstEvent: string;
+  duration: number;
   eventCount: number;
   hasUser: boolean;
   country: string | null;
   source: string;
   adValues: string | null;
   sessionType: string | null;
+  companyName: string | null;
+  ip: string | null;
+  isBot: boolean;
 }
 
 function countryToFlag(countryCode: string): string {
@@ -31,6 +35,42 @@ function countryToFlag(countryCode: string): string {
     code.charCodeAt(0) + offset,
     code.charCodeAt(1) + offset
   );
+}
+
+function formatDuration(seconds: number): string {
+  if (seconds < 60) return `${seconds}s`;
+  if (seconds < 3600) {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return s > 0 ? `${m}m ${s}s` : `${m}m`;
+  }
+  const h = Math.floor(seconds / 3600);
+  const m = Math.round((seconds % 3600) / 60);
+  return m > 0 ? `${h}h ${m}m` : `${h}h`;
+}
+
+function getSessionTags(session: Session): { label: string; color: string }[] {
+  const tags: { label: string; color: string }[] = [];
+
+  if (session.isBot) {
+    tags.push({ label: "Bot", color: "text-orange-500" });
+  }
+
+  if (session.sessionType === "signup") {
+    tags.push({ label: "Signed up", color: "text-green-500" });
+  } else if (session.hasUser) {
+    tags.push({ label: "Logged in", color: "text-green-500" });
+  }
+
+  if (session.sessionType === "dashboard") {
+    tags.push({ label: "Dashboard", color: "text-red-500" });
+  }
+
+  if (session.eventCount <= 2 && session.sessionType !== "signup" && session.sessionType !== "dashboard") {
+    tags.push({ label: "Bounce", color: "text-violet-500" });
+  }
+
+  return tags;
 }
 
 export function SessionsPage() {
@@ -120,62 +160,82 @@ export function SessionsPage() {
             <p className="text-sm text-muted-foreground text-center py-8">No sessions yet</p>
           ) : (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
-              {sessions.map((session, index) => (
-                <div
-                  key={session.sessionId}
-                  className={`flex items-center gap-3 w-full px-4 py-3 hover:bg-muted/30 transition-colors ${
-                    index > 0 ? "border-t border-foreground/5" : ""
-                  }`}
-                >
-                  {/* Type indicator */}
-                  {session.sessionType === "signup" ? (
-                    <span className="h-2.5 w-2.5 rounded-full bg-green-500 shrink-0" title="Signed up" />
-                  ) : session.sessionType === "dashboard" ? (
-                    <span className="h-2.5 w-2.5 rounded-full bg-red-500 shrink-0" title="Returning" />
-                  ) : session.eventCount <= 2 ? (
-                    <span className="h-2.5 w-2.5 rounded-full bg-violet-500 shrink-0" title="Bounce" />
-                  ) : (
-                    <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/30 shrink-0" />
-                  )}
-
-                  {/* Flag */}
-                  <span className="text-base shrink-0 w-6 text-center">
-                    {session.country ? countryToFlag(session.country) : ""}
-                  </span>
-
-                  {/* Info — clickable area */}
-                  <button
-                    onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
-                    className="flex-1 min-w-0 text-left"
+              {sessions.map((session, index) => {
+                const tags = getSessionTags(session);
+                return (
+                  <div
+                    key={session.sessionId}
+                    className={`flex items-start gap-3 w-full px-4 py-3 hover:bg-muted/30 transition-colors ${
+                      index > 0 ? "border-t border-foreground/5" : ""
+                    }`}
                   >
-                    <p className="text-sm font-medium truncate">
-                      {formatDate(session.firstEvent)}
-                    </p>
-                    <div className="flex items-center gap-2 mt-0.5">
-                      <span className="text-xs text-muted-foreground">
-                        {session.eventCount} events
-                      </span>
-                      {session.source === "Ads" && (
-                        <span className="text-[10px] text-blue-500">
-                          Ads{session.adValues ? `: ${session.adValues}` : ""}
+                    {/* Flag */}
+                    <span className="text-base shrink-0 w-6 text-center mt-0.5">
+                      {session.country ? countryToFlag(session.country) : ""}
+                    </span>
+
+                    {/* Info — clickable area */}
+                    <button
+                      onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
+                      className="flex-1 min-w-0 text-left"
+                    >
+                      {/* Line 1: Time · duration · events */}
+                      <p className="text-sm font-medium">
+                        {formatDate(session.firstEvent)}
+                        <span className="text-muted-foreground font-normal">
+                          {" · "}{formatDuration(session.duration)}{" · "}{session.eventCount} events
                         </span>
-                      )}
-                      {session.hasUser && (
-                        <span className="text-[10px] text-green-500">logged in</span>
-                      )}
-                    </div>
-                  </button>
+                      </p>
 
-                  {/* Delete */}
-                  <button
-                    className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
-                    onClick={() => handleDelete(session.sessionId)}
-                    disabled={deleting === session.sessionId}
-                  >
-                    <Trash2 className={`h-4 w-4 ${deleting === session.sessionId ? "animate-pulse" : ""}`} />
-                  </button>
-                </div>
-              ))}
+                      {/* Line 2: Source + company */}
+                      <div className="flex items-center gap-2 mt-0.5">
+                        <span className={`text-xs ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                          {session.source === "Ads"
+                            ? `Ads${session.adValues ? `: ${session.adValues}` : ""}`
+                            : "Direct"}
+                        </span>
+                        {session.companyName && (
+                          <span className="text-xs text-muted-foreground truncate">
+                            {session.companyName}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Line 3: Tags */}
+                      {tags.length > 0 && (
+                        <div className="flex items-center gap-2 mt-0.5">
+                          {tags.map((tag) => (
+                            <span key={tag.label} className={`text-[10px] font-medium ${tag.color}`}>
+                              {tag.label}
+                            </span>
+                          ))}
+                          {session.ip && (
+                            <span className="text-[10px] text-muted-foreground font-mono">
+                              {session.ip}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      {tags.length === 0 && session.ip && (
+                        <div className="mt-0.5">
+                          <span className="text-[10px] text-muted-foreground font-mono">
+                            {session.ip}
+                          </span>
+                        </div>
+                      )}
+                    </button>
+
+                    {/* Delete */}
+                    <button
+                      className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0 mt-0.5"
+                      onClick={() => handleDelete(session.sessionId)}
+                      disabled={deleting === session.sessionId}
+                    >
+                      <Trash2 className={`h-4 w-4 ${deleting === session.sessionId ? "animate-pulse" : ""}`} />
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           )}
 
