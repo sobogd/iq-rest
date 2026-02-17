@@ -47,15 +47,18 @@ export function SessionsPage() {
     try {
       const params = new URLSearchParams({ page: String(p) });
       const res = await fetch(`/api/admin/analytics/sessions-list?${params}`);
-      if (res.ok) {
-        const json = await res.json();
-        setSessions(json.sessions || []);
-        setTotal(json.total || 0);
-        setPage(json.page || 0);
-        setTotalPages(json.totalPages || 0);
+      if (!res.ok) {
+        const text = await res.text();
+        console.error("Sessions API error:", res.status, text);
+        return;
       }
-    } catch {
-      console.error("Failed to fetch sessions");
+      const json = await res.json();
+      setSessions(json.sessions || []);
+      setTotal(json.total || 0);
+      setPage(json.page || 0);
+      setTotalPages(json.totalPages || 0);
+    } catch (err) {
+      console.error("Failed to fetch sessions:", err);
     } finally {
       setLoading(false);
     }

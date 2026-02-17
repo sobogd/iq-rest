@@ -3,17 +3,6 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
-interface SessionRow {
-  session_id: string;
-  first_event: Date;
-  event_count: bigint;
-  has_user: boolean;
-  country: string | null;
-  source: string | null;
-  ad_values: string | null;
-  session_type: string | null;
-}
-
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
@@ -26,73 +15,115 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const page = Math.max(0, Number(searchParams.get("page") || 0));
     const limit = 5;
-    const offset = page * limit;
 
-    const [sessions, countResult] = await Promise.all([
-      prisma.$queryRaw<SessionRow[]>`
-        SELECT
-          s."sessionId" as session_id,
-          MIN(s."createdAt") as first_event,
-          COUNT(*) as event_count,
-          bool_or(s."userId" IS NOT NULL) as has_user,
-          (
-            SELECT e.meta->'geo'->>'country'
-            FROM analytics_events e
-            WHERE e."sessionId" = s."sessionId" AND e.meta->'geo'->>'country' IS NOT NULL
-            LIMIT 1
-          ) as country,
-          (
-            SELECT
-              CASE WHEN e.meta->'params'->>'gclid' IS NOT NULL THEN 'Ads' ELSE NULL END
-            FROM analytics_events e
-            WHERE e."sessionId" = s."sessionId" AND e.meta->'params'->>'gclid' IS NOT NULL
-            LIMIT 1
-          ) as source,
-          (
-            SELECT string_agg(
-              COALESCE(e.meta->'params'->>'kw', '') || CASE WHEN e.meta->'params'->>'mt' IS NOT NULL THEN ' (' || e.meta->'params'->>'mt' || ')' ELSE '' END,
-              ', '
-            )
-            FROM (
-              SELECT DISTINCT meta FROM analytics_events e
-              WHERE e."sessionId" = s."sessionId" AND e.meta->'params'->>'kw' IS NOT NULL
-              LIMIT 1
-            ) e
-          ) as ad_values,
-          (
-            SELECT
-              CASE
-                WHEN bool_or(e.event = 'auth_signup') THEN 'signup'
-                WHEN bool_or(e.event LIKE 'showed_%') THEN 'dashboard'
-                ELSE NULL
-              END
-            FROM analytics_events e
-            WHERE e."sessionId" = s."sessionId"
-          ) as session_type
-        FROM analytics_events s
-        GROUP BY s."sessionId"
-        ORDER BY first_event DESC
-        LIMIT ${limit} OFFSET ${offset}
-      `,
-      prisma.$queryRaw<{ count: bigint }[]>`
-        SELECT COUNT(DISTINCT "sessionId") as count
-        FROM analytics_events
-      `,
-    ]);
+    // Get distinct sessions ordered by most recent event
+    const distinctSessions = await prisma.analyticsEvent.findMany({
+      distinct: ["sessionId"],
+      orderBy: { createdAt: "desc" },
+      select: { sessionId: true, createdAt: true },
+      skip: page * limit,
+      take: limit,
+    });
 
-    const total = Number(countResult[0]?.count || 0);
+    const totalResult = await prisma.$queryRaw<{ count: bigint }[]>`
+      SELECT COUNT(DISTINCT "sessionId") as count FROM analytics_events
+    `;
+    const total = Number(totalResult[0]?.count || 0);
+
+    if (distinctSessions.length === 0) {
+      return NextResponse.json({ sessions: [], total, page, totalPages: Math.ceil(total / limit) });
+    }
+
+    // Get all events for these sessions to compute stats
+    const sessionIds = distinctSessions.map((s) => s.sessionId);
+    const allEvents = await prisma.analyticsEvent.findMany({
+      where: { sessionId: { in: sessionIds } },
+      select: { sessionId: true, event: true, userId: true, meta: true, createdAt: true },
+    });
+
+    // Aggregate per session
+    const sessionMap = new Map<
+      string,
+      {
+        firstEvent: Date;
+        eventCount: number;
+        hasUser: boolean;
+        country: string | null;
+        source: string;
+        adValues: string | null;
+        sessionType: string | null;
+      }
+    >();
+
+    for (const sid of sessionIds) {
+      sessionMap.set(sid, {
+        firstEvent: new Date(),
+        eventCount: 0,
+        hasUser: false,
+        country: null,
+        source: "Direct",
+        adValues: null,
+        sessionType: null,
+      });
+    }
+
+    const adParamKeys = ["kw", "mt"];
+
+    for (const evt of allEvents) {
+      const s = sessionMap.get(evt.sessionId);
+      if (!s) continue;
+
+      s.eventCount++;
+      if (evt.createdAt < s.firstEvent) s.firstEvent = evt.createdAt;
+      if (evt.userId) s.hasUser = true;
+
+      const meta = evt.meta as {
+        geo?: { country?: string };
+        params?: Record<string, string>;
+      } | null;
+
+      // Country
+      if (!s.country && meta?.geo?.country) {
+        s.country = meta.geo.country;
+      }
+
+      // Ads source
+      if (s.source === "Direct" && meta?.params) {
+        if ("gclid" in meta.params) {
+          s.source = "Ads";
+          const values = adParamKeys
+            .filter((p) => meta.params![p])
+            .map((p) => meta.params![p]);
+          if (values.length > 0) {
+            s.adValues = values.join(", ");
+          }
+        }
+      }
+
+      // Session type
+      if (evt.event === "auth_signup") {
+        s.sessionType = "signup";
+      } else if (evt.event.startsWith("showed_") && s.sessionType !== "signup") {
+        s.sessionType = "dashboard";
+      }
+    }
+
+    const sessions = sessionIds.map((sid) => {
+      const s = sessionMap.get(sid)!;
+      return {
+        sessionId: sid,
+        firstEvent: s.firstEvent.toISOString(),
+        eventCount: s.eventCount,
+        hasUser: s.hasUser,
+        country: s.country,
+        source: s.source,
+        adValues: s.adValues,
+        sessionType: s.sessionType,
+      };
+    });
 
     return NextResponse.json({
-      sessions: sessions.map((row) => ({
-        sessionId: row.session_id,
-        firstEvent: row.first_event,
-        eventCount: Number(row.event_count),
-        hasUser: row.has_user,
-        country: row.country,
-        source: row.source || "Direct",
-        adValues: row.ad_values,
-        sessionType: row.session_type,
-      })),
+      sessions,
       total,
       page,
       totalPages: Math.ceil(total / limit),
