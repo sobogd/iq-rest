@@ -82,6 +82,9 @@ export async function uploadClickConversion(
         Authorization: `Bearer ${accessToken}`,
         "developer-token": developerToken!,
         "Content-Type": "application/json",
+        ...(process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID && {
+          "login-customer-id": process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID,
+        }),
       },
       body: JSON.stringify({
         conversions: [
