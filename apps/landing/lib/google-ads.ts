@@ -1,6 +1,6 @@
 // Google Ads API - Offline Conversion Upload via gclid
 
-const GOOGLE_ADS_API_VERSION = "v18";
+const GOOGLE_ADS_API_VERSION = "v23";
 
 interface TokenResponse {
   access_token: string;
@@ -101,8 +101,15 @@ export async function uploadClickConversion(
 
     if (!res.ok) {
       const text = await res.text();
-      console.error("[Google Ads] Upload failed:", text);
-      return { success: false, error: text };
+      console.error("[Google Ads] Upload failed:", res.status, text);
+      // Parse JSON error if possible, otherwise show status
+      try {
+        const errJson = JSON.parse(text);
+        const msg = errJson?.error?.message || errJson?.error?.status || text;
+        return { success: false, error: `Google Ads ${res.status}: ${msg}` };
+      } catch {
+        return { success: false, error: `Google Ads API error ${res.status}` };
+      }
     }
 
     const data = await res.json();
