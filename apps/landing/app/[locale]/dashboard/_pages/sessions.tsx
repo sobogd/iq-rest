@@ -201,27 +201,22 @@ export function SessionsPage() {
                         )}
                       </div>
 
-                      {/* Line 3: Tags */}
-                      {tags.length > 0 && (
-                        <div className="flex items-center gap-2 mt-0.5">
-                          {tags.map((tag) => (
-                            <span key={tag.label} className={`text-[10px] font-medium ${tag.color}`}>
-                              {tag.label}
+                      {/* Line 3: IP / tags */}
+                      {(session.ip || tags.length > 0) && (
+                        <p className="text-[10px] mt-0.5">
+                          {session.ip && (
+                            <span className="text-muted-foreground font-mono">{session.ip}</span>
+                          )}
+                          {session.ip && tags.length > 0 && (
+                            <span className="text-muted-foreground"> / </span>
+                          )}
+                          {tags.map((tag, i) => (
+                            <span key={tag.label}>
+                              {i > 0 && <span className="text-muted-foreground">, </span>}
+                              <span className={`font-medium ${tag.color}`}>{tag.label}</span>
                             </span>
                           ))}
-                          {session.ip && (
-                            <span className="text-[10px] text-muted-foreground font-mono">
-                              {session.ip}
-                            </span>
-                          )}
-                        </div>
-                      )}
-                      {tags.length === 0 && session.ip && (
-                        <div className="mt-0.5">
-                          <span className="text-[10px] text-muted-foreground font-mono">
-                            {session.ip}
-                          </span>
-                        </div>
+                        </p>
                       )}
                     </button>
 
