@@ -86,7 +86,7 @@ export async function GET(request: NextRequest) {
           gs.session_id,
           gs.first_seen,
           u.email,
-          us2.signup_time,
+          COALESCE(us2.signup_time, u."createdAt") as signup_time,
           c."onboardingStep" as onboarding_step,
           r."checklistMenuEdited" as checklist_menu,
           r."checklistContactsSaved" as checklist_contacts,
