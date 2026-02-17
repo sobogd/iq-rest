@@ -10,54 +10,19 @@ import {
   Globe,
   Monitor,
   Network,
-  Info,
   RefreshCw,
-  Trash2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { useRouter } from "@/i18n/routing";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
 
 interface FunnelStep {
   event: string;
   label: string;
   count: number;
-}
-
-interface AnalyticsEvent {
-  id: string;
-  event: string;
-  sessionId: string;
-  userId: string | null;
-  page: string | null;
-  meta?: Record<string, unknown> | null;
-  createdAt: string;
-}
-
-interface SessionInfo {
-  sessionId: string;
-  userId: string | null;
-  createdAt: string;
-  meta?: Record<string, unknown> | null;
-  source?: string;
-  adValues?: string;
-  sessionType?: "signup" | "dashboard" | null;
-  eventCount?: number;
 }
 
 interface Stats {
@@ -91,7 +56,7 @@ interface AnalyticsData {
     dashboard: FunnelStep[];
     conversion: FunnelStep[];
   };
-  recentEvents: AnalyticsEvent[];
+  recentEvents: { id: string; event: string; sessionId: string; createdAt: string }[];
   stats: Stats;
   geoStats: GeoStats;
   returningIps?: ReturningIp[];
@@ -112,76 +77,16 @@ function countryToFlag(countryCode: string): string {
   );
 }
 
-// Format time difference between two dates
-function formatTimeDiff(date1: string, date2: string): string {
-  const diff = Math.abs(new Date(date1).getTime() - new Date(date2).getTime()) / 1000;
-
-  if (diff < 60) {
-    return `${Math.round(diff)}s`;
-  } else if (diff < 3600) {
-    const mins = Math.floor(diff / 60);
-    const secs = Math.round(diff % 60);
-    return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`;
-  } else if (diff < 86400) {
-    const hours = Math.floor(diff / 3600);
-    const mins = Math.round((diff % 3600) / 60);
-    return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
-  } else {
-    const days = Math.floor(diff / 86400);
-    const hours = Math.round((diff % 86400) / 3600);
-    return hours > 0 ? `${days}d ${hours}h` : `${days}d`;
-  }
-}
-
-// Format meta object into readable lines
-function formatMeta(meta: Record<string, unknown>): React.ReactNode[] {
-  const lines: React.ReactNode[] = [];
-
-  const formatValue = (prefix: string, obj: Record<string, unknown>) => {
-    for (const [key, value] of Object.entries(obj)) {
-      if (value && typeof value === "object" && !Array.isArray(value)) {
-        formatValue(`${prefix} ${key.charAt(0).toUpperCase() + key.slice(1)}`, value as Record<string, unknown>);
-      } else if (value !== null && value !== undefined) {
-        const label = `${prefix} ${key.charAt(0).toUpperCase() + key.slice(1)}`.trim();
-        lines.push(
-          <div key={label} className="flex gap-2">
-            <span className="text-muted-foreground">{label}:</span>
-            <span>{String(value)}</span>
-          </div>
-        );
-      }
-    }
-  };
-
-  for (const [key, value] of Object.entries(meta)) {
-    if (value && typeof value === "object" && !Array.isArray(value)) {
-      formatValue(key.charAt(0).toUpperCase() + key.slice(1), value as Record<string, unknown>);
-    } else if (value !== null && value !== undefined) {
-      const label = key.charAt(0).toUpperCase() + key.slice(1);
-      lines.push(
-        <div key={label} className="flex gap-2">
-          <span className="text-muted-foreground">{label}:</span>
-          <span>{String(value)}</span>
-        </div>
-      );
-    }
-  }
-
-  return lines;
-}
-
 function StatsListCard({
   title,
   items,
   icon: Icon,
   showFlag = false,
-  onItemClick,
 }: {
   title: string;
   items: GeoStatsItem[];
   icon: React.ElementType;
   showFlag?: boolean;
-  onItemClick?: (item: GeoStatsItem) => void;
 }) {
   const maxCount = Math.max(...items.map((i) => i.count), 1);
 
@@ -217,8 +122,7 @@ function StatsListCard({
             return (
               <div
                 key={item.name}
-                className={`space-y-1 ${onItemClick ? "cursor-pointer hover:opacity-70" : ""}`}
-                onClick={() => onItemClick?.(item)}
+                className="space-y-1"
               >
                 <div className="flex justify-between text-sm">
                   <span>{flag ? `${flag} ${item.name}` : item.name}</span>
@@ -242,11 +146,9 @@ function StatsListCard({
 function FunnelCard({
   title,
   steps,
-  onBarClick,
 }: {
   title: string;
   steps: FunnelStep[];
-  onBarClick?: (step: FunnelStep) => void;
 }) {
   const maxCount = Math.max(...steps.map((s) => s.count), 1);
 
@@ -269,10 +171,9 @@ function FunnelCard({
                 <div key={step.event} className="flex flex-col items-center w-16">
                   <div className="h-24 w-full flex items-end justify-center">
                     <div
-                      className="w-10 rounded-t cursor-pointer transition-all bg-primary/70 hover:bg-primary"
+                      className="w-10 rounded-t transition-all bg-primary/70"
                       style={{ height: `${Math.max(percentage, 4)}%` }}
                       title={tooltipText}
-                      onClick={() => step.count > 0 && onBarClick?.(step)}
                     />
                   </div>
                   <div className="mt-1 text-center">
@@ -360,43 +261,11 @@ function getDateRange(range: TimeRange): { from: string; to: string } {
 }
 
 export function AdminAnalyticsPage() {
+  const router = useRouter();
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<TimeRange>("today");
-
-  // Copy to clipboard (textarea method for HTTP compatibility)
-  const copyToClipboard = useCallback((text: string) => {
-    const ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.cssText = "position:fixed;left:-9999px;top:-9999px;opacity:0";
-    document.body.appendChild(ta);
-    ta.select();
-    ta.setSelectionRange(0, text.length);
-    document.execCommand("copy");
-    document.body.removeChild(ta);
-  }, []);
-
-  // Sessions modal state
-  const [sessionsModalOpen, setSessionsModalOpen] = useState(false);
-  const [sessionsModalTitle, setSessionsModalTitle] = useState("");
-  const [sessionsModalEvent, setSessionsModalEvent] = useState<string | null>(null);
-  const [sessions, setSessions] = useState<SessionInfo[]>([]);
-  const [sessionsLoading, setSessionsLoading] = useState(false);
-
-  // Session events modal state
-  const [eventsModalOpen, setEventsModalOpen] = useState(false);
-  const [eventsModalSessionId, setEventsModalSessionId] = useState<string | null>(null);
-  const [eventsModalSource, setEventsModalSource] = useState<string>("Direct");
-  const [eventsModalAdValues, setEventsModalAdValues] = useState<string | undefined>();
-  const [eventsModalUserAgent, setEventsModalUserAgent] = useState<string | null>(null);
-  const [sessionEvents, setSessionEvents] = useState<AnalyticsEvent[]>([]);
-  const [eventsLoading, setEventsLoading] = useState(false);
-  const [deleting, setDeleting] = useState(false);
-
-  // Event detail modal state
-  const [detailEvent, setDetailEvent] = useState<AnalyticsEvent | null>(null);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -434,126 +303,6 @@ export function AdminAnalyticsPage() {
       minute: "2-digit",
       second: "2-digit",
     });
-  };
-
-  const formatDateUTCRaw = (dateString: string) => {
-    const d = new Date(dateString);
-    const pad = (n: number) => String(n).padStart(2, "0");
-    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
-  };
-
-  const formatDateUTC = (dateString: string) => {
-    return `${formatDateUTCRaw(dateString)} UTC`;
-  };
-
-  const handleBarClick = async (step: FunnelStep) => {
-    setSessionsModalTitle(`${step.label} (${step.count})`);
-    setSessionsModalEvent(step.event);
-    setSessionsModalOpen(true);
-    setSessionsLoading(true);
-
-    try {
-      const { from, to } = getDateRange(timeRange);
-      const params = new URLSearchParams({ event: step.event, from, to });
-      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
-      if (res.ok) {
-        const data = await res.json();
-        setSessions(data.sessions || []);
-      }
-    } catch (err) {
-      console.error("Failed to fetch sessions:", err);
-    } finally {
-      setSessionsLoading(false);
-    }
-  };
-
-  const handleAllSessionsClick = async () => {
-    setSessionsModalTitle(`All Sessions (${data?.stats.uniqueSessions || 0})`);
-    setSessionsModalEvent(null);
-    setSessionsModalOpen(true);
-    setSessionsLoading(true);
-
-    try {
-      const { from, to } = getDateRange(timeRange);
-      const params = new URLSearchParams({ from, to });
-      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
-      if (res.ok) {
-        const json = await res.json();
-        setSessions(json.sessions || []);
-      }
-    } catch (err) {
-      console.error("Failed to fetch sessions:", err);
-    } finally {
-      setSessionsLoading(false);
-    }
-  };
-
-  const handleSessionClick = async (sessionId: string) => {
-    setEventsModalSessionId(sessionId);
-    setEventsModalOpen(true);
-    setEventsLoading(true);
-
-    try {
-      const params = new URLSearchParams({ sessionId });
-      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
-      if (res.ok) {
-        const data = await res.json();
-        setSessionEvents(data.events || []);
-        setEventsModalSource(data.source || "Direct");
-        setEventsModalAdValues(data.adValues);
-        setEventsModalUserAgent(data.userAgent || null);
-      }
-    } catch (err) {
-      console.error("Failed to fetch session events:", err);
-    } finally {
-      setEventsLoading(false);
-    }
-  };
-
-  const handleDeleteSession = async (sessionId: string) => {
-    if (!confirm("Delete this session and all its events?")) return;
-
-    setDeleting(true);
-    try {
-      const res = await fetch("/api/admin/analytics/sessions", {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sessionId }),
-      });
-
-      if (res.ok) {
-        // Close events modal and remove from sessions list
-        setEventsModalOpen(false);
-        setSessions((prev) => prev.filter((s) => s.sessionId !== sessionId));
-        // Refresh data
-        fetchData();
-      }
-    } catch (err) {
-      console.error("Failed to delete session:", err);
-    } finally {
-      setDeleting(false);
-    }
-  };
-
-  const handleCountryClick = async (item: GeoStatsItem) => {
-    setSessionsModalTitle(`${countryToFlag(item.name)} ${item.name} (${item.count})`);
-    setSessionsModalEvent(null);
-    setSessionsModalOpen(true);
-    setSessionsLoading(true);
-
-    try {
-      const { from, to } = getDateRange(timeRange);
-      const params = new URLSearchParams({ from, to, country: item.name });
-      const res = await fetch(`/api/admin/analytics/sessions?${params}`);
-      if (res.ok) {
-        const json = await res.json();
-        setSessions(json.sessions || []);
-      }
-    } catch (err) {
-      console.error("Failed to fetch sessions by country:", err);
-    } finally {
-      setSessionsLoading(false);
-    }
   };
 
   const formatEventName = (event: string): string => {
@@ -649,7 +398,7 @@ export function AdminAnalyticsPage() {
           </Card>
           <Card
             className="cursor-pointer hover:bg-muted/50 transition-colors"
-            onClick={handleAllSessionsClick}
+            onClick={() => router.push("/dashboard/sessions")}
           >
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
@@ -691,10 +440,10 @@ export function AdminAnalyticsPage() {
 
         {/* 4 Funnels */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FunnelCard title="Landing Sections" steps={data.funnels.sections} onBarClick={handleBarClick} />
-          <FunnelCard title="Marketing Pages" steps={data.funnels.marketing} onBarClick={handleBarClick} />
-          <FunnelCard title="Dashboard Pages" steps={data.funnels.dashboard} onBarClick={handleBarClick} />
-          <FunnelCard title="Conversion Funnel" steps={data.funnels.conversion} onBarClick={handleBarClick} />
+          <FunnelCard title="Landing Sections" steps={data.funnels.sections} />
+          <FunnelCard title="Marketing Pages" steps={data.funnels.marketing} />
+          <FunnelCard title="Dashboard Pages" steps={data.funnels.dashboard} />
+          <FunnelCard title="Conversion Funnel" steps={data.funnels.conversion} />
         </div>
 
         {/* Geo & Device Stats */}
@@ -704,7 +453,6 @@ export function AdminAnalyticsPage() {
             items={data.geoStats.countries}
             icon={Globe}
             showFlag
-            onItemClick={handleCountryClick}
           />
           <StatsListCard
             title="Devices"
@@ -762,7 +510,7 @@ export function AdminAnalyticsPage() {
                 <div
                   key={event.id}
                   className="flex items-center justify-between p-3 rounded-lg bg-muted/30 cursor-pointer hover:bg-muted/50"
-                  onClick={() => handleSessionClick(event.sessionId)}
+                  onClick={() => router.push(`/dashboard/sessions/${event.sessionId}`)}
                 >
                   <div className="flex flex-col gap-0.5">
                     <span className="text-sm font-medium">
@@ -782,189 +530,6 @@ export function AdminAnalyticsPage() {
         </Card>
         </div>
       </div>
-
-      {/* Sessions Sheet */}
-      <Sheet open={sessionsModalOpen} onOpenChange={setSessionsModalOpen}>
-        <SheetContent side="right" className="w-full sm:max-w-lg p-0 flex flex-col">
-          <SheetHeader className="p-6 pb-0 text-left">
-            <SheetTitle>{sessionsModalTitle}</SheetTitle>
-          </SheetHeader>
-          <ScrollArea className="flex-1 px-6 pb-6">
-            {sessionsLoading ? (
-              <div className="flex justify-center py-8">
-                <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
-              </div>
-            ) : sessions.length === 0 ? (
-              <p className="text-center text-muted-foreground py-8">No sessions found</p>
-            ) : (
-              <div className="space-y-2 pr-4">
-                {sessions.map((session) => {
-                  const meta = session.meta as { geo?: { country?: string } } | null;
-                  const country = meta?.geo?.country;
-                  return (
-                    <div
-                      key={session.sessionId}
-                      className="flex items-center justify-between p-3 rounded-lg bg-muted/30 cursor-pointer hover:bg-muted/50"
-                      onClick={() => handleSessionClick(session.sessionId)}
-                    >
-                      <div className="flex items-center gap-2.5">
-                        {session.sessionType === "signup" ? (
-                          <span className="h-2.5 w-2.5 rounded-full bg-green-500 shrink-0" title="Signed up" />
-                        ) : session.sessionType === "dashboard" ? (
-                          <span className="h-2.5 w-2.5 rounded-full bg-red-500 shrink-0" title="Returning user" />
-                        ) : (session.eventCount ?? 0) <= 2 ? (
-                          <span className="h-2.5 w-2.5 rounded-full bg-violet-500 shrink-0" title="Bounce" />
-                        ) : (
-                          <span className="h-2.5 w-2.5 rounded-full bg-muted shrink-0" />
-                        )}
-                        {country && (
-                          <span className="text-sm shrink-0">{countryToFlag(country)}</span>
-                        )}
-                        <div className="flex flex-col gap-0.5 min-w-0">
-                          <span className="text-sm">
-                            {formatDate(session.createdAt)}
-                          </span>
-                          <span className={`text-[9px] ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                            {session.source === "Ads" ? `Ads: ${session.adValues || "gclid"}` : "Direct"}
-                          </span>
-                        </div>
-                      </div>
-                      <button
-                        className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDeleteSession(session.sessionId);
-                        }}
-                        disabled={deleting}
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </ScrollArea>
-        </SheetContent>
-      </Sheet>
-
-      {/* Session Events Sheet (opens on top of sessions sheet) */}
-      <Sheet open={eventsModalOpen} onOpenChange={setEventsModalOpen}>
-        <SheetContent side="right" className="w-full sm:max-w-lg p-0 flex flex-col">
-          <SheetHeader className="p-6 pb-0 text-left">
-            <SheetTitle className="flex flex-col gap-0.5">
-              <span className="font-mono text-sm break-all">{eventsModalSessionId}</span>
-              <span className={`text-[10px] font-normal ${eventsModalSource === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                {eventsModalSource === "Ads" ? `Ads: ${eventsModalAdValues || "gclid"}` : "Direct"}
-              </span>
-              {eventsModalUserAgent && (
-                <span className="text-[10px] font-normal text-muted-foreground break-all">
-                  {eventsModalUserAgent}
-                </span>
-              )}
-            </SheetTitle>
-          </SheetHeader>
-          <ScrollArea className="flex-1 px-6 pb-6">
-            {eventsLoading ? (
-              <div className="flex justify-center py-8">
-                <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
-              </div>
-            ) : sessionEvents.length === 0 ? (
-              <p className="text-center text-muted-foreground py-8">No events found</p>
-            ) : (
-              <div className="space-y-1 pr-4">
-                {sessionEvents.map((event, index) => {
-                  const prevEvent = index < sessionEvents.length - 1 ? sessionEvents[index + 1] : null;
-                  const timeDiff = prevEvent ? formatTimeDiff(event.createdAt, prevEvent.createdAt) : null;
-                  const hasDetails = (event.meta && Object.keys(event.meta).length > 0) || event.page;
-
-                  const dateDisplay = formatDateUTC(event.createdAt);
-                  const dateCopy = formatDateUTCRaw(event.createdAt);
-
-                  return (
-                    <div key={event.id}>
-                      <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/30">
-                        <div className="flex-1 min-w-0">
-                          <p
-                            className="text-[10px] font-mono cursor-pointer w-fit text-muted-foreground hover:text-foreground select-none"
-                            onPointerDown={(e) => {
-                              e.stopPropagation();
-                              e.preventDefault();
-                              copyToClipboard(dateCopy);
-                            }}
-                            title="Click to copy"
-                          >
-                            {dateDisplay}
-                          </p>
-                          <p className="text-sm font-medium mt-0.5">
-                            {formatEventName(event.event)}
-                          </p>
-                        </div>
-                        {hasDetails && (
-                          <button
-                            className="shrink-0 p-1 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-                            onClick={() => setDetailEvent(event)}
-                          >
-                            <Info className="h-4 w-4" />
-                          </button>
-                        )}
-                      </div>
-                      {timeDiff && (
-                        <div className="flex justify-center py-1">
-                          <span className="text-[10px] text-muted-foreground">
-                            +{timeDiff}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </ScrollArea>
-          {!eventsLoading && sessionEvents.length > 0 && (
-            <div className="p-6 pt-0">
-              <Button
-                variant="destructive"
-                className="w-full"
-                onClick={() => eventsModalSessionId && handleDeleteSession(eventsModalSessionId)}
-                disabled={deleting}
-              >
-                <Trash2 className={`h-4 w-4 mr-2 ${deleting ? "animate-pulse" : ""}`} />
-                Delete session
-              </Button>
-            </div>
-          )}
-        </SheetContent>
-      </Sheet>
-
-      {/* Event Detail Modal */}
-      <Dialog open={!!detailEvent} onOpenChange={(open) => !open && setDetailEvent(null)}>
-        <DialogContent className="max-w-sm">
-          <DialogHeader>
-            <DialogTitle>{detailEvent && formatEventName(detailEvent.event)}</DialogTitle>
-          </DialogHeader>
-          {detailEvent && (
-            <div className="space-y-2 text-sm">
-              <div className="flex gap-2">
-                <span className="text-muted-foreground">Time:</span>
-                <span className="font-mono">{formatDateUTC(detailEvent.createdAt)}</span>
-              </div>
-              {detailEvent.page && (
-                <div className="flex gap-2">
-                  <span className="text-muted-foreground">Page:</span>
-                  <span className="break-all">{detailEvent.page}</span>
-                </div>
-              )}
-              {detailEvent.meta && Object.keys(detailEvent.meta).length > 0 && (
-                <div className="space-y-0.5 text-xs pt-1 border-t">
-                  {formatMeta(detailEvent.meta)}
-                </div>
-              )}
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
 
     </div>
   );
