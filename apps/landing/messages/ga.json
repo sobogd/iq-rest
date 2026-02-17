@@ -1234,7 +1234,10 @@
       "description": "Tá aistriúchán AI ar fáil le síntiús Basic nó Pro. Uasghrádaigh do phlean chun aistriúcháin uathoibríocha a úsáid.",
       "cancel": "Cealaigh",
       "subscribe": "Liostáil",
-      "translate": "Aistrigh"
+      "translate": "Aistrigh",
+      "limitReached": "Aistriúcháin saor in aisce ídithe",
+      "limitReachedDescription": "D'úsáid tú na 5 aistriúchán AI saor in aisce go léir. Uasghrádaigh go Basic nó Pro le haghaidh aistriúcháin gan teorainn.",
+      "upgrade": "Uasghrádaigh"
     },
     "auth": {
       "title": "Fáilte go IQ Rest",

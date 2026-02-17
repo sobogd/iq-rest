@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getUserCompanyId } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 export async function POST(request: NextRequest) {
   try {
+    const companyId = await getUserCompanyId();
+    if (!companyId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const { text, targetLanguage, sourceLanguage } = await request.json();
 
     if (!text || !targetLanguage) {
@@ -17,6 +24,32 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "OpenAI API key not configured" },
         { status: 500 }
+      );
+    }
+
+    // Check plan and free translations
+    const [company, restaurant] = await Promise.all([
+      prisma.company.findUnique({
+        where: { id: companyId },
+        select: { plan: true, subscriptionStatus: true },
+      }),
+      prisma.restaurant.findFirst({
+        where: { companyId },
+        select: { id: true, freeTranslationsLeft: true },
+      }),
+    ]);
+
+    if (!company || !restaurant) {
+      return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+
+    const isPaidSubscriber =
+      company.subscriptionStatus === "ACTIVE" && company.plan !== "FREE";
+
+    if (!isPaidSubscriber && restaurant.freeTranslationsLeft <= 0) {
+      return NextResponse.json(
+        { error: "limit_reached" },
+        { status: 403 }
       );
     }
 
@@ -103,7 +136,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    return NextResponse.json({ translatedText });
+    // Decrement counter for free users
+    let freeTranslationsLeft = restaurant.freeTranslationsLeft;
+    if (!isPaidSubscriber) {
+      const updated = await prisma.restaurant.update({
+        where: { id: restaurant.id },
+        data: { freeTranslationsLeft: { decrement: 1 } },
+        select: { freeTranslationsLeft: true },
+      });
+      freeTranslationsLeft = updated.freeTranslationsLeft;
+    }
+
+    return NextResponse.json({ translatedText, freeTranslationsLeft });
   } catch (error) {
     console.error("Translation error:", error);
     return NextResponse.json(

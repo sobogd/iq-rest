@@ -1234,7 +1234,10 @@
       "description": "La traduzione AI è disponibile con un abbonamento Basic o Pro. Aggiorna il tuo piano per utilizzare le traduzioni automatiche.",
       "cancel": "Annulla",
       "subscribe": "Abbonati",
-      "translate": "Traduci"
+      "translate": "Traduci",
+      "limitReached": "Traduzioni gratuite esaurite",
+      "limitReachedDescription": "Hai usato tutte le 5 traduzioni IA gratuite. Passa a Basic o Pro per traduzioni illimitate.",
+      "upgrade": "Aggiorna"
     },
     "auth": {
       "title": "Benvenuto su IQ Rest",

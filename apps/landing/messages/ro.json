@@ -1234,7 +1234,10 @@
       "description": "Traducerea AI este disponibilă cu un abonament Basic sau Pro. Actualizează-ți planul pentru a folosi traduceri automate.",
       "cancel": "Anulează",
       "subscribe": "Abonează-te",
-      "translate": "Traduce"
+      "translate": "Traduce",
+      "limitReached": "Traducerile gratuite epuizate",
+      "limitReachedDescription": "Ați folosit toate cele 5 traduceri AI gratuite. Treceți la Basic sau Pro pentru traduceri nelimitate.",
+      "upgrade": "Actualizare"
     },
     "auth": {
       "title": "Bine ați venit la IQ Rest",

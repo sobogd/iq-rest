@@ -1267,7 +1267,10 @@
       "description": "AI 번역은 Basic 또는 Pro 구독으로 이용 가능합니다. 자동 번역을 사용하려면 플랜을 업그레이드하세요.",
       "cancel": "취소",
       "subscribe": "구독하기",
-      "translate": "번역"
+      "translate": "번역",
+      "limitReached": "무료 번역 소진",
+      "limitReachedDescription": "5회 무료 AI 번역을 모두 사용했습니다. 무제한 번역을 위해 Basic 또는 Pro로 업그레이드하세요.",
+      "upgrade": "업그레이드"
     },
     "auth": {
       "title": "IQ Rest에 오신 것을 환영합니다",

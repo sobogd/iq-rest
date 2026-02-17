@@ -1234,7 +1234,10 @@
       "description": "AI-vertaling is beschikbaar met een Basic- of Pro-abonnement. Upgrade je plan om automatische vertalingen te gebruiken.",
       "cancel": "Annuleren",
       "subscribe": "Abonneren",
-      "translate": "Vertalen"
+      "translate": "Vertalen",
+      "limitReached": "Gratis vertalingen opgebruikt",
+      "limitReachedDescription": "Je hebt alle 5 gratis AI-vertalingen gebruikt. Upgrade naar Basic of Pro voor onbeperkte vertalingen.",
+      "upgrade": "Upgraden"
     },
     "auth": {
       "title": "Welkom bij IQ Rest",

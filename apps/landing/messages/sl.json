@@ -1234,7 +1234,10 @@
       "description": "AI prevod je na voljo z naročnino Basic ali Pro. Nadgradite svoj načrt za uporabo samodejnih prevodov.",
       "cancel": "Prekliči",
       "subscribe": "Naroči se",
-      "translate": "Prevedi"
+      "translate": "Prevedi",
+      "limitReached": "Brezplačni prevodi porabljeni",
+      "limitReachedDescription": "Uporabili ste vseh 5 brezplačnih AI prevodov. Nadgradite na Basic ali Pro za neomejene prevode.",
+      "upgrade": "Nadgradi"
     },
     "auth": {
       "title": "Dobrodošli v IQ Rest",

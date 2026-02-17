@@ -1234,7 +1234,10 @@
       "description": "AI þýðing er í boði með Basic eða Pro áskrift. Uppfærðu áætlun þína til að nota sjálfvirkar þýðingar.",
       "cancel": "Hætta við",
       "subscribe": "Gerast áskrifandi",
-      "translate": "Þýða"
+      "translate": "Þýða",
+      "limitReached": "Ókeypis þýðingar uppurðar",
+      "limitReachedDescription": "Þú hefur notað allar 5 ókeypis AI-þýðingarnar. Uppfærðu í Basic eða Pro fyrir ótakmarkaðar þýðingar.",
+      "upgrade": "Uppfæra"
     },
     "auth": {
       "title": "Velkomin í IQ Rest",

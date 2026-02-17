@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Loader2, Sparkles } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -17,8 +17,6 @@ import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import type { SubscriptionStatus } from "@prisma/client";
-import type { PlanType } from "@/lib/stripe-config";
 
 interface FormTextareaTranslateProps {
   id?: string;
@@ -49,37 +47,12 @@ export function FormTextareaTranslate({
 }: FormTextareaTranslateProps) {
   const t = useTranslations("dashboard.aiTranslate");
   const [translating, setTranslating] = useState(false);
-  const [showSubscriptionDialog, setShowSubscriptionDialog] = useState(false);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
+  const [showLimitDialog, setShowLimitDialog] = useState(false);
   const textareaId = id || label.toLowerCase().replace(/\s+/g, "-");
-
-  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
-
-  useEffect(() => {
-    async function fetchSubscriptionStatus() {
-      try {
-        const response = await fetch("/api/subscription/status");
-        if (response.ok) {
-          const data = await response.json();
-          setSubscriptionStatus(data.subscriptionStatus);
-          setCurrentPlan(data.plan);
-        }
-      } catch (error) {
-        console.error("Failed to fetch subscription status:", error);
-      }
-    }
-    fetchSubscriptionStatus();
-  }, []);
 
   async function handleTranslate() {
     if (!sourceText.trim()) return;
     track(DashboardEvent.CLICKED_AI_TRANSLATE);
-
-    if (!hasActiveSubscription) {
-      setShowSubscriptionDialog(true);
-      return;
-    }
 
     setTranslating(true);
 
@@ -97,6 +70,13 @@ export function FormTextareaTranslate({
       if (res.ok) {
         const data = await res.json();
         onChange(data.translatedText);
+      } else if (res.status === 403) {
+        const data = await res.json();
+        if (data.error === "limit_reached") {
+          setShowLimitDialog(true);
+        } else {
+          toast.error(translateErrorMessage);
+        }
       } else {
         toast.error(translateErrorMessage);
       }
@@ -139,18 +119,18 @@ export function FormTextareaTranslate({
         </div>
       </div>
 
-      <Dialog open={showSubscriptionDialog} onOpenChange={setShowSubscriptionDialog}>
+      <Dialog open={showLimitDialog} onOpenChange={setShowLimitDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>{t("title")}</DialogTitle>
-            <DialogDescription>{t("description")}</DialogDescription>
+            <DialogTitle>{t("limitReached")}</DialogTitle>
+            <DialogDescription>{t("limitReachedDescription")}</DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => { track(DashboardEvent.CLICKED_AI_CANCEL); setShowSubscriptionDialog(false); }}>
+            <Button variant="outline" onClick={() => setShowLimitDialog(false)}>
               {t("cancel")}
             </Button>
             <Button asChild onClick={() => track(DashboardEvent.CLICKED_AI_SUBSCRIBE)}>
-              <Link href="/dashboard?page=billing">{t("subscribe")}</Link>
+              <Link href="/dashboard?page=billing">{t("upgrade")}</Link>
             </Button>
           </DialogFooter>
         </DialogContent>

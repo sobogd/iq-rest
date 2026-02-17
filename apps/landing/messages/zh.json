@@ -1267,7 +1267,10 @@
       "description": "AI翻译需要Basic或Pro订阅。升级您的计划以使用自动翻译。",
       "cancel": "取消",
       "subscribe": "订阅",
-      "translate": "翻译"
+      "translate": "翻译",
+      "limitReached": "免费翻译已用完",
+      "limitReachedDescription": "您已使用完所有5次免费AI翻译。升级到Basic或Pro以获得无限翻译。",
+      "upgrade": "升级"
     },
     "auth": {
       "title": "欢迎使用 IQ Rest",

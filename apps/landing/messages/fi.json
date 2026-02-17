@@ -1234,7 +1234,10 @@
       "description": "Tekoälykäännös on saatavilla Basic- tai Pro-tilauksella. Päivitä tilaussi käyttääksesi automaattisia käännöksiä.",
       "cancel": "Peruuta",
       "subscribe": "Tilaa",
-      "translate": "Käännä"
+      "translate": "Käännä",
+      "limitReached": "Ilmaiset käännökset käytetty",
+      "limitReachedDescription": "Olet käyttänyt kaikki 5 ilmaista AI-käännöstä. Päivitä Basic- tai Pro-tilaukseen rajattomia käännöksiä varten.",
+      "upgrade": "Päivitä"
     },
     "auth": {
       "title": "Tervetuloa IQ Restiin",

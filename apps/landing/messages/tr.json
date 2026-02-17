@@ -1234,7 +1234,10 @@
       "description": "Yapay zeka çevirisi Basic veya Pro aboneliğiyle kullanılabilir. Otomatik çevirileri kullanmak için planınızı yükseltin.",
       "cancel": "İptal",
       "subscribe": "Abone Ol",
-      "translate": "Çevir"
+      "translate": "Çevir",
+      "limitReached": "Ücretsiz çeviriler tükendi",
+      "limitReachedDescription": "5 ücretsiz AI çevirinizin tamamını kullandınız. Sınırsız çeviri için Basic veya Pro'ya yükseltin.",
+      "upgrade": "Yükselt"
     },
     "auth": {
       "title": "IQ Rest'e hoş geldiniz",

@@ -1234,7 +1234,10 @@
       "description": "Az AI fordítás Basic vagy Pro előfizetéssel érhető el. Frissítse csomagját az automatikus fordítások használatához.",
       "cancel": "Mégse",
       "subscribe": "Feliratkozás",
-      "translate": "Fordítás"
+      "translate": "Fordítás",
+      "limitReached": "Ingyenes fordítások elfogytak",
+      "limitReachedDescription": "Felhasználta mind az 5 ingyenes AI-fordítást. Váltson Basic vagy Pro csomagra korlátlan fordításokért.",
+      "upgrade": "Frissítés"
     },
     "auth": {
       "title": "Üdvözöljük az IQ Rest-ben",

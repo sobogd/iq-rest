@@ -107,6 +107,9 @@ model Restaurant {
   checklistContactsSaved   Boolean @default(false)
   checklistBrandCustomized Boolean @default(false)
 
+  // Free AI translation trials
+  freeTranslationsLeft Int @default(5)
+
   // Reservation settings
   reservationsEnabled    Boolean @default(false)
   reservationMode        String  @default("manual") // "auto" | "manual"

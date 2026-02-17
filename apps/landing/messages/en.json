@@ -1247,7 +1247,10 @@
       "description": "AI translation is available with a Basic or Pro subscription. Upgrade your plan to use automatic translations.",
       "cancel": "Cancel",
       "subscribe": "Subscribe",
-      "translate": "Translate"
+      "translate": "Translate",
+      "limitReached": "Free translations used up",
+      "limitReachedDescription": "You've used all 5 free AI translations. Upgrade to Basic or Pro for unlimited translations.",
+      "upgrade": "Upgrade"
     },
     "auth": {
       "title": "Welcome to IQ Rest",

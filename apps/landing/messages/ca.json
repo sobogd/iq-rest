@@ -1234,7 +1234,10 @@
       "description": "La traducció IA està disponible amb una subscripció Basic o Pro. Actualitza el teu pla per utilitzar traduccions automàtiques.",
       "cancel": "Cancel·lar",
       "subscribe": "Subscriure's",
-      "translate": "Tradueix"
+      "translate": "Tradueix",
+      "limitReached": "Traduccions gratuïtes esgotades",
+      "limitReachedDescription": "Has utilitzat les 5 traduccions IA gratuïtes. Actualitza a Basic o Pro per traduccions il·limitades.",
+      "upgrade": "Actualitza"
     },
     "auth": {
       "title": "Benvingut a IQ Rest",

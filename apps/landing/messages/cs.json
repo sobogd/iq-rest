@@ -1234,7 +1234,10 @@
       "description": "AI překlad je k dispozici s předplatným Basic nebo Pro. Upgradujte svůj plán pro použití automatických překladů.",
       "cancel": "Zrušit",
       "subscribe": "Předplatit",
-      "translate": "Přeložit"
+      "translate": "Přeložit",
+      "limitReached": "Bezplatné překlady vyčerpány",
+      "limitReachedDescription": "Použili jste všech 5 bezplatných AI překladů. Přejděte na Basic nebo Pro pro neomezené překlady.",
+      "upgrade": "Upgradovat"
     },
     "auth": {
       "title": "Vítejte v IQ Rest",

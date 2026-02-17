@@ -67,6 +67,7 @@ export enum DashboardEvent {
   CLICKED_UPLOAD_ITEM_IMAGE = "clicked_upload_item_image",
   CLICKED_SAVE_ITEM = "clicked_save_item",
   CLICKED_DELETE_ITEM = "clicked_delete_item",
+  TOGGLED_ITEM_MORE_DETAILS = "toggled_item_more_details",
 
   // Tables
   SHOWED_TABLES = "showed_tables",
@@ -224,6 +225,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_UPLOAD_ITEM_IMAGE]: "Clicked Upload Item Image",
   [DashboardEvent.CLICKED_SAVE_ITEM]: "Clicked Save Item",
   [DashboardEvent.CLICKED_DELETE_ITEM]: "Clicked Delete Item",
+  [DashboardEvent.TOGGLED_ITEM_MORE_DETAILS]: "Toggled Item More Details",
 
   // Tables
   [DashboardEvent.SHOWED_TABLES]: "Showed Tables",

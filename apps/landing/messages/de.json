@@ -1234,7 +1234,10 @@
       "description": "KI-Übersetzung ist mit einem Basic- oder Pro-Abonnement verfügbar. Aktualisieren Sie Ihren Plan, um automatische Übersetzungen zu nutzen.",
       "cancel": "Abbrechen",
       "subscribe": "Abonnieren",
-      "translate": "Übersetzen"
+      "translate": "Übersetzen",
+      "limitReached": "Kostenlose Übersetzungen aufgebraucht",
+      "limitReachedDescription": "Sie haben alle 5 kostenlosen KI-Übersetzungen verbraucht. Upgraden Sie auf Basic oder Pro für unbegrenzte Übersetzungen.",
+      "upgrade": "Upgraden"
     },
     "auth": {
       "title": "Willkommen bei IQ Rest",

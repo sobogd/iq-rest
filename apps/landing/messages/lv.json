@@ -1234,7 +1234,10 @@
       "description": "AI tulkojums ir pieejams ar Basic vai Pro abonementu. Uzlabojiet savu plānu, lai izmantotu automātiskos tulkojumus.",
       "cancel": "Atcelt",
       "subscribe": "Abonēt",
-      "translate": "Tulkot"
+      "translate": "Tulkot",
+      "limitReached": "Bezmaksas tulkojumi iztērēti",
+      "limitReachedDescription": "Jūs esat izmantojis visus 5 bezmaksas AI tulkojumus. Jauniniet uz Basic vai Pro neierobežotiem tulkojumiem.",
+      "upgrade": "Jaunināt"
     },
     "auth": {
       "title": "Laipni lūdzam IQ Rest",

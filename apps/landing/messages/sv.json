@@ -1234,7 +1234,10 @@
       "description": "AI-översättning är tillgänglig med ett Basic- eller Pro-abonnemang. Uppgradera din plan för att använda automatiska översättningar.",
       "cancel": "Avbryt",
       "subscribe": "Prenumerera",
-      "translate": "Översätt"
+      "translate": "Översätt",
+      "limitReached": "Gratis översättningar slut",
+      "limitReachedDescription": "Du har använt alla 5 gratis AI-översättningar. Uppgradera till Basic eller Pro för obegränsade översättningar.",
+      "upgrade": "Uppgradera"
     },
     "auth": {
       "title": "Välkommen till IQ Rest",

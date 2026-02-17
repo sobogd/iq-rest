@@ -1234,7 +1234,10 @@
       "description": "AI prijevod je dostupan s Basic ili Pro pretplatom. Nadogradite svoj plan za korištenje automatskih prijevoda.",
       "cancel": "Odustani",
       "subscribe": "Pretplati se",
-      "translate": "Prevedi"
+      "translate": "Prevedi",
+      "limitReached": "Besplatni prijevodi potrošeni",
+      "limitReachedDescription": "Iskoristili ste svih 5 besplatnih AI prijevoda. Nadogradite na Basic ili Pro za neograničene prijevode.",
+      "upgrade": "Nadogradi"
     },
     "auth": {
       "title": "Dobrodošli u IQ Rest",

@@ -1234,7 +1234,10 @@
       "description": "Tłumaczenie AI jest dostępne z subskrypcją Basic lub Pro. Ulepsz swój plan, aby korzystać z automatycznych tłumaczeń.",
       "cancel": "Anuluj",
       "subscribe": "Subskrybuj",
-      "translate": "Przetłumacz"
+      "translate": "Przetłumacz",
+      "limitReached": "Darmowe tłumaczenia wykorzystane",
+      "limitReachedDescription": "Wykorzystałeś wszystkie 5 darmowych tłumaczeń AI. Przejdź na Basic lub Pro, aby uzyskać nieograniczone tłumaczenia.",
+      "upgrade": "Ulepsz"
     },
     "auth": {
       "title": "Witamy w IQ Rest",

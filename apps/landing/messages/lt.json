@@ -1234,7 +1234,10 @@
       "description": "AI vertimas galimas su Basic arba Pro prenumerata. Atnaujinkite savo planą, kad galėtumėte naudoti automatinius vertimus.",
       "cancel": "Atšaukti",
       "subscribe": "Prenumeruoti",
-      "translate": "Versti"
+      "translate": "Versti",
+      "limitReached": "Nemokamos vertimai panaudoti",
+      "limitReachedDescription": "Panaudojote visus 5 nemokamus AI vertimus. Atnaujinkite iki Basic arba Pro neribotiems vertimams.",
+      "upgrade": "Atnaujinti"
     },
     "auth": {
       "title": "Sveiki atvykę į IQ Rest",

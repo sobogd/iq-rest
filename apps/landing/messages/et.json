@@ -1234,7 +1234,10 @@
       "description": "AI tõlge on saadaval Basic või Pro tellimusega. Täiendage oma plaani automaatsete tõlgete kasutamiseks.",
       "cancel": "Tühista",
       "subscribe": "Telli",
-      "translate": "Tõlgi"
+      "translate": "Tõlgi",
+      "limitReached": "Tasuta tõlked on otsas",
+      "limitReachedDescription": "Olete kasutanud kõik 5 tasuta AI-tõlget. Minge üle Basic või Pro paketile piiramatute tõlgete jaoks.",
+      "upgrade": "Uuenda"
     },
     "auth": {
       "title": "Tere tulemast IQ Rest'i",

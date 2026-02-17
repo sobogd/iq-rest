@@ -1267,7 +1267,10 @@
       "description": "AI翻訳はBasicまたはProサブスクリプションでご利用いただけます。自動翻訳を使用するにはプランをアップグレードしてください。",
       "cancel": "キャンセル",
       "subscribe": "購読する",
-      "translate": "翻訳"
+      "translate": "翻訳",
+      "limitReached": "無料翻訳を使い切りました",
+      "limitReachedDescription": "5回の無料AI翻訳をすべて使用しました。無制限の翻訳にはBasicまたはProにアップグレードしてください。",
+      "upgrade": "アップグレード"
     },
     "auth": {
       "title": "IQ Restへようこそ",
