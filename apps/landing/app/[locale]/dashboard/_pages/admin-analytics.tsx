@@ -800,9 +800,9 @@ export function AdminAnalyticsPage() {
                           </tr>
                         </thead>
                         <tbody>
-                          {paged.map((click) => (
+                          {paged.map((click, idx) => (
                             <tr
-                              key={click.gclid}
+                              key={`${click.gclid}-${click.sessionId}-${idx}`}
                               className="border-b last:border-0 cursor-pointer hover:bg-muted/50 transition-colors"
                               onClick={() => handleSessionClick(click.sessionId)}
                             >
@@ -936,7 +936,16 @@ export function AdminAnalyticsPage() {
                           </span>
                         </div>
                       </div>
-                      <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
+                      <button
+                        className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDeleteSession(session.sessionId);
+                        }}
+                        disabled={deleting}
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </button>
                     </div>
                   );
                 })}
