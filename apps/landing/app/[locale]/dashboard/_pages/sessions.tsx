@@ -118,8 +118,7 @@ export function SessionsPage() {
         body: JSON.stringify({ sessionId }),
       });
       if (res.ok) {
-        setSessions((prev) => prev.filter((s) => s.sessionId !== sessionId));
-        setTotal((prev) => prev - 1);
+        fetchSessions(page);
       }
     } catch {
       console.error("Failed to delete session");
