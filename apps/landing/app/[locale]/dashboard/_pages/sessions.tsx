@@ -22,7 +22,7 @@ interface Session {
   source: string;
   adValues: string | null;
   sessionType: string | null;
-  companyName: string | null;
+  restaurantName: string | null;
   ip: string | null;
   isBot: boolean;
 }
@@ -179,45 +179,46 @@ export function SessionsPage() {
                       onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
                       className="flex-1 min-w-0 text-left"
                     >
-                      {/* Line 1: Time · duration · events */}
-                      <p className="text-sm font-medium">
-                        {formatDate(session.firstEvent)}
-                        <span className="text-muted-foreground font-normal">
-                          {" · "}{formatDuration(session.duration)}{" · "}{session.eventCount} events
+                      {/* Line 1: Date + duration · events */}
+                      <div className="flex items-baseline justify-between">
+                        <p className="text-sm font-medium">
+                          {formatDate(session.firstEvent)}
+                        </p>
+                        <span className="text-[10px] text-muted-foreground shrink-0 ml-2">
+                          {formatDuration(session.duration)} · {session.eventCount} ev.
                         </span>
-                      </p>
-
-                      {/* Line 2: Source + company */}
-                      <div className="flex items-center gap-2 mt-0.5">
-                        <span className={`text-xs ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                          {session.source === "Ads"
-                            ? `Ads${session.adValues ? `: ${session.adValues}` : ""}`
-                            : "Direct"}
-                        </span>
-                        {session.companyName && (
-                          <span className="text-xs text-muted-foreground truncate">
-                            {session.companyName}
-                          </span>
-                        )}
                       </div>
 
+                      {/* Line 2: Source */}
+                      <p className={`text-[10px] mt-0.5 ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                        {session.source === "Ads"
+                          ? `Ads${session.adValues ? `: ${session.adValues}` : ""}`
+                          : "Direct"}
+                      </p>
+
                       {/* Line 3: IP / tags */}
-                      {(session.ip || tags.length > 0) && (
-                        <p className="text-[10px] mt-0.5">
-                          {session.ip && (
-                            <span className="text-muted-foreground font-mono">{session.ip}</span>
-                          )}
-                          {session.ip && tags.length > 0 && (
-                            <span className="text-muted-foreground"> / </span>
-                          )}
-                          {tags.map((tag, i) => (
-                            <span key={tag.label}>
-                              {i > 0 && <span className="text-muted-foreground">, </span>}
-                              <span className={`font-medium ${tag.color}`}>{tag.label}</span>
-                            </span>
-                          ))}
-                        </p>
-                      )}
+                      <p className="text-[10px] mt-0.5">
+                        {session.ip && (
+                          <span className="text-muted-foreground font-mono">{session.ip}</span>
+                        )}
+                        {session.ip && tags.length > 0 && (
+                          <span className="text-muted-foreground"> / </span>
+                        )}
+                        {tags.map((tag, i) => (
+                          <span key={tag.label}>
+                            {i > 0 && <span className="text-muted-foreground">, </span>}
+                            <span className={`font-medium ${tag.color}`}>{tag.label}</span>
+                          </span>
+                        ))}
+                        {!session.ip && tags.length === 0 && (
+                          <span className="invisible">—</span>
+                        )}
+                      </p>
+
+                      {/* Line 4: Restaurant name */}
+                      <p className="text-[10px] text-muted-foreground truncate mt-0.5">
+                        {session.restaurantName || <span className="invisible">—</span>}
+                      </p>
                     </button>
 
                     {/* Delete */}

@@ -47,15 +47,16 @@ export async function GET(request: NextRequest) {
       if (evt.userId) userIds.add(evt.userId);
     }
 
-    // Fetch company names for users
-    const userCompanyMap = new Map<string, string>();
+    // Fetch restaurant names for users (user → company → restaurant)
+    const userRestaurantMap = new Map<string, string>();
     if (userIds.size > 0) {
       const userCompanies = await prisma.userCompany.findMany({
         where: { userId: { in: Array.from(userIds) } },
-        select: { userId: true, company: { select: { name: true } } },
+        select: { userId: true, company: { select: { restaurants: { select: { title: true }, take: 1 } } } },
       });
       for (const uc of userCompanies) {
-        userCompanyMap.set(uc.userId, uc.company.name);
+        const name = uc.company.restaurants[0]?.title;
+        if (name) userRestaurantMap.set(uc.userId, name);
       }
     }
 
@@ -71,7 +72,7 @@ export async function GET(request: NextRequest) {
         source: string;
         adValues: string | null;
         sessionType: string | null;
-        companyName: string | null;
+        restaurantName: string | null;
         ip: string | null;
         userAgent: string | null;
         isBot: boolean;
@@ -88,7 +89,7 @@ export async function GET(request: NextRequest) {
         source: "Direct",
         adValues: null,
         sessionType: null,
-        companyName: null,
+        restaurantName: null,
         ip: null,
         userAgent: null,
         isBot: false,
@@ -108,8 +109,8 @@ export async function GET(request: NextRequest) {
 
       if (evt.userId) {
         s.hasUser = true;
-        if (!s.companyName) {
-          s.companyName = userCompanyMap.get(evt.userId) || null;
+        if (!s.restaurantName) {
+          s.restaurantName = userRestaurantMap.get(evt.userId) || null;
         }
       }
 
@@ -167,7 +168,7 @@ export async function GET(request: NextRequest) {
         source: s.source,
         adValues: s.adValues,
         sessionType: s.sessionType,
-        companyName: s.companyName,
+        restaurantName: s.restaurantName,
         ip: s.ip,
         isBot: s.isBot,
       };
