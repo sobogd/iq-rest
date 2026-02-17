@@ -23,6 +23,7 @@ import {
   Shield,
   Activity,
   Megaphone,
+  MousePointerClick,
   CheckCircle2,
   Circle,
   ChevronRight,
@@ -256,6 +257,14 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
                 >
                   <Activity className="h-5 w-5 text-muted-foreground shrink-0" />
                   <span className="text-sm font-medium flex-1 text-left">Analytics</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+                </button>
+                <button
+                  onClick={() => router.push("/dashboard/sessions")}
+                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+                >
+                  <MousePointerClick className="h-5 w-5 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium flex-1 text-left">Sessions</span>
                   <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
                 </button>
                 <button
