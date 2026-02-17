@@ -1233,7 +1233,8 @@
       "title": "Traducere AI",
       "description": "Traducerea AI este disponibilă cu un abonament Basic sau Pro. Actualizează-ți planul pentru a folosi traduceri automate.",
       "cancel": "Anulează",
-      "subscribe": "Abonează-te"
+      "subscribe": "Abonează-te",
+      "translate": "Traduce"
     },
     "auth": {
       "title": "Bine ați venit la IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Moluște"
       },
       "subscribeForAllergens": "Abonați-vă pentru a adăuga etichete de alergeni",
-      "subscribe": "Abonează-te"
+      "subscribe": "Abonează-te",
+      "moreDetails": "Mai multe detalii"
     },
     "languages": {
       "translationProgress": "Progresul traducerii",

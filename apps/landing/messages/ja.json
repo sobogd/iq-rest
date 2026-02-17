@@ -1266,7 +1266,8 @@
       "title": "AI翻訳",
       "description": "AI翻訳はBasicまたはProサブスクリプションでご利用いただけます。自動翻訳を使用するにはプランをアップグレードしてください。",
       "cancel": "キャンセル",
-      "subscribe": "購読する"
+      "subscribe": "購読する",
+      "translate": "翻訳"
     },
     "auth": {
       "title": "IQ Restへようこそ",
@@ -1411,7 +1412,8 @@
         "molluscs": "軟体動物"
       },
       "subscribeForAllergens": "アレルゲンラベルを追加するには購読してください",
-      "subscribe": "購読する"
+      "subscribe": "購読する",
+      "moreDetails": "詳細"
     },
     "languages": {
       "translationProgress": "翻訳の進捗",

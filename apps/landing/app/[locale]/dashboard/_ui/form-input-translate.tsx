@@ -120,16 +120,17 @@ export function FormInputTranslate({
           <Button
             type="button"
             variant="ghost"
-            size="icon"
+            size="sm"
             onClick={handleTranslate}
             disabled={translating || !sourceText.trim() || disabled}
-            className="shrink-0 h-11 w-11 bg-muted/30 hover:bg-muted/50"
+            className="shrink-0 h-11 gap-1.5 px-3 bg-muted/30 hover:bg-muted/50"
           >
             {translating ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
               <Sparkles className="h-4 w-4" />
             )}
+            <span className="text-xs">{t("translate")}</span>
           </Button>
         </div>
       </div>

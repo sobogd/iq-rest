@@ -1233,7 +1233,8 @@
       "title": "Yapay Zeka Çevirisi",
       "description": "Yapay zeka çevirisi Basic veya Pro aboneliğiyle kullanılabilir. Otomatik çevirileri kullanmak için planınızı yükseltin.",
       "cancel": "İptal",
-      "subscribe": "Abone Ol"
+      "subscribe": "Abone Ol",
+      "translate": "Çevir"
     },
     "auth": {
       "title": "IQ Rest'e hoş geldiniz",
@@ -1378,7 +1379,8 @@
         "molluscs": "Yumuşakçalar"
       },
       "subscribeForAllergens": "Alerjen etiketleri eklemek için abone olun",
-      "subscribe": "Abone Ol"
+      "subscribe": "Abone Ol",
+      "moreDetails": "Daha fazla ayrıntı"
     },
     "languages": {
       "translationProgress": "Çeviri İlerlemesi",

@@ -1233,7 +1233,8 @@
       "title": "KI-Übersetzung",
       "description": "KI-Übersetzung ist mit einem Basic- oder Pro-Abonnement verfügbar. Aktualisieren Sie Ihren Plan, um automatische Übersetzungen zu nutzen.",
       "cancel": "Abbrechen",
-      "subscribe": "Abonnieren"
+      "subscribe": "Abonnieren",
+      "translate": "Übersetzen"
     },
     "auth": {
       "title": "Willkommen bei IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Weichtiere"
       },
       "subscribeForAllergens": "Abonnieren Sie, um Allergenkennzeichnungen hinzuzufügen",
-      "subscribe": "Abonnieren"
+      "subscribe": "Abonnieren",
+      "moreDetails": "Mehr Details"
     },
     "languages": {
       "translationProgress": "Übersetzungsfortschritt",

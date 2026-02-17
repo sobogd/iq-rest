@@ -162,6 +162,7 @@ export interface ItemsTranslations {
   allergenNames: Record<string, string>;
   subscribeForAllergens: string;
   subscribe: string;
+  moreDetails: string;
 }
 
 export interface MenuTranslations {

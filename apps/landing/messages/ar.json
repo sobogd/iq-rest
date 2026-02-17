@@ -1266,7 +1266,8 @@
       "title": "الترجمة بالذكاء الاصطناعي",
       "description": "الترجمة بالذكاء الاصطناعي متاحة مع اشتراك Basic أو Pro. قم بترقية خطتك لاستخدام الترجمات التلقائية.",
       "cancel": "إلغاء",
-      "subscribe": "اشترك"
+      "subscribe": "اشترك",
+      "translate": "ترجمة"
     },
     "auth": {
       "title": "مرحبًا بك في IQ Rest",
@@ -1411,7 +1412,8 @@
         "molluscs": "الرخويات"
       },
       "subscribeForAllergens": "اشترك لإضافة ملصقات مسببات الحساسية",
-      "subscribe": "اشترك"
+      "subscribe": "اشترك",
+      "moreDetails": "مزيد من التفاصيل"
     },
     "languages": {
       "translationProgress": "تقدم الترجمة",

@@ -1233,7 +1233,8 @@
       "title": "AI Tulkojums",
       "description": "AI tulkojums ir pieejams ar Basic vai Pro abonementu. Uzlabojiet savu plānu, lai izmantotu automātiskos tulkojumus.",
       "cancel": "Atcelt",
-      "subscribe": "Abonēt"
+      "subscribe": "Abonēt",
+      "translate": "Tulkot"
     },
     "auth": {
       "title": "Laipni lūdzam IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Molluski"
       },
       "subscribeForAllergens": "Abonējiet, lai pievienotu alergēnu etiķetes",
-      "subscribe": "Abonēt"
+      "subscribe": "Abonēt",
+      "moreDetails": "Vairāk informācijas"
     },
     "languages": {
       "translationProgress": "Tulkošanas progress",

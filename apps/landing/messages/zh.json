@@ -1266,7 +1266,8 @@
       "title": "AI翻译",
       "description": "AI翻译需要Basic或Pro订阅。升级您的计划以使用自动翻译。",
       "cancel": "取消",
-      "subscribe": "订阅"
+      "subscribe": "订阅",
+      "translate": "翻译"
     },
     "auth": {
       "title": "欢迎使用 IQ Rest",
@@ -1411,7 +1412,8 @@
         "molluscs": "软体动物"
       },
       "subscribeForAllergens": "订阅以添加过敏原标签",
-      "subscribe": "订阅"
+      "subscribe": "订阅",
+      "moreDetails": "更多详情"
     },
     "languages": {
       "translationProgress": "翻译进度",

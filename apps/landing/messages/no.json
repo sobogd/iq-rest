@@ -1233,7 +1233,8 @@
       "title": "AI Oversettelse",
       "description": "AI-oversettelse er tilgjengelig med et Basic- eller Pro-abonnement. Oppgrader planen din for å bruke automatiske oversettelser.",
       "cancel": "Avbryt",
-      "subscribe": "Abonner"
+      "subscribe": "Abonner",
+      "translate": "Oversett"
     },
     "auth": {
       "title": "Velkommen til IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Bløtdyr"
       },
       "subscribeForAllergens": "Abonner for å legge til allergenetiketter",
-      "subscribe": "Abonner"
+      "subscribe": "Abonner",
+      "moreDetails": "Flere detaljer"
     },
     "languages": {
       "translationProgress": "Oversettelsesprosess",

@@ -1246,7 +1246,8 @@
       "title": "AI Translation",
       "description": "AI translation is available with a Basic or Pro subscription. Upgrade your plan to use automatic translations.",
       "cancel": "Cancel",
-      "subscribe": "Subscribe"
+      "subscribe": "Subscribe",
+      "translate": "Translate"
     },
     "auth": {
       "title": "Welcome to IQ Rest",
@@ -1410,7 +1411,8 @@
         "molluscs": "Molluscs"
       },
       "subscribeForAllergens": "Subscribe to add allergen labels",
-      "subscribe": "Subscribe"
+      "subscribe": "Subscribe",
+      "moreDetails": "More details"
     },
     "menu": {
       "addItem": "Add Item",

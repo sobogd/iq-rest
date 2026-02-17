@@ -1233,7 +1233,8 @@
       "title": "Traduzione AI",
       "description": "La traduzione AI è disponibile con un abbonamento Basic o Pro. Aggiorna il tuo piano per utilizzare le traduzioni automatiche.",
       "cancel": "Annulla",
-      "subscribe": "Abbonati"
+      "subscribe": "Abbonati",
+      "translate": "Traduci"
     },
     "auth": {
       "title": "Benvenuto su IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Molluschi"
       },
       "subscribeForAllergens": "Abbonati per aggiungere etichette allergeni",
-      "subscribe": "Abbonati"
+      "subscribe": "Abbonati",
+      "moreDetails": "Più dettagli"
     },
     "languages": {
       "translationProgress": "Progresso della traduzione",

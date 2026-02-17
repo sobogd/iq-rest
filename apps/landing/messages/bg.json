@@ -1233,7 +1233,8 @@
       "title": "AI Превод",
       "description": "AI преводът е наличен с абонамент Basic или Pro. Надградете плана си, за да използвате автоматични преводи.",
       "cancel": "Отказ",
-      "subscribe": "Абонирай се"
+      "subscribe": "Абонирай се",
+      "translate": "Преведи"
     },
     "auth": {
       "title": "Добре дошли в IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Молуски"
       },
       "subscribeForAllergens": "Абонирайте се, за да добавите етикети за алергени",
-      "subscribe": "Абонирай се"
+      "subscribe": "Абонирай се",
+      "moreDetails": "Повече детайли"
     },
     "languages": {
       "translationProgress": "Напредък на превода",

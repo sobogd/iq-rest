@@ -1233,7 +1233,8 @@
       "title": "AI Перевод",
       "description": "AI перевод доступен с подпиской Basic или Pro. Оформите подписку для использования автоматических переводов.",
       "cancel": "Отмена",
-      "subscribe": "Подписаться"
+      "subscribe": "Подписаться",
+      "translate": "Перевести"
     },
     "auth": {
       "title": "Добро пожаловать в IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Моллюски"
       },
       "subscribeForAllergens": "Оформите подписку для добавления меток аллергенов",
-      "subscribe": "Подписаться"
+      "subscribe": "Подписаться",
+      "moreDetails": "Подробнее"
     },
     "languages": {
       "translationProgress": "Прогресс перевода",

@@ -1233,7 +1233,8 @@
       "title": "AI Vertimas",
       "description": "AI vertimas galimas su Basic arba Pro prenumerata. Atnaujinkite savo planą, kad galėtumėte naudoti automatinius vertimus.",
       "cancel": "Atšaukti",
-      "subscribe": "Prenumeruoti"
+      "subscribe": "Prenumeruoti",
+      "translate": "Versti"
     },
     "auth": {
       "title": "Sveiki atvykę į IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Moliuskai"
       },
       "subscribeForAllergens": "Prenumeruokite, kad pridėtumėte alergenų etiketes",
-      "subscribe": "Prenumeruoti"
+      "subscribe": "Prenumeruoti",
+      "moreDetails": "Daugiau informacijos"
     },
     "languages": {
       "translationProgress": "Vertimo pažanga",

@@ -167,6 +167,7 @@ export default async function DashboardLayout({
       allergenNames: t.raw("items.allergenNames") as Record<string, string>,
       subscribeForAllergens: t("items.subscribeForAllergens"),
       subscribe: t("items.subscribe"),
+      moreDetails: t("items.moreDetails"),
     },
     settings: {
       name: "",

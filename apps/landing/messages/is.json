@@ -1233,7 +1233,8 @@
       "title": "AI Þýðing",
       "description": "AI þýðing er í boði með Basic eða Pro áskrift. Uppfærðu áætlun þína til að nota sjálfvirkar þýðingar.",
       "cancel": "Hætta við",
-      "subscribe": "Gerast áskrifandi"
+      "subscribe": "Gerast áskrifandi",
+      "translate": "Þýða"
     },
     "auth": {
       "title": "Velkomin í IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Molluskur"
       },
       "subscribeForAllergens": "Gerast áskrifandi til að bæta við ofnæmisvaldamerki",
-      "subscribe": "Gerast áskrifandi"
+      "subscribe": "Gerast áskrifandi",
+      "moreDetails": "Nánari upplýsingar"
     },
     "languages": {
       "translationProgress": "Þýðingarframvinda",

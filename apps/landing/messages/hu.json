@@ -1233,7 +1233,8 @@
       "title": "AI Fordítás",
       "description": "Az AI fordítás Basic vagy Pro előfizetéssel érhető el. Frissítse csomagját az automatikus fordítások használatához.",
       "cancel": "Mégse",
-      "subscribe": "Feliratkozás"
+      "subscribe": "Feliratkozás",
+      "translate": "Fordítás"
     },
     "auth": {
       "title": "Üdvözöljük az IQ Rest-ben",
@@ -1378,7 +1379,8 @@
         "molluscs": "Puhatestűek"
       },
       "subscribeForAllergens": "Fizessen elő az allergéncímkék hozzáadásához",
-      "subscribe": "Feliratkozás"
+      "subscribe": "Feliratkozás",
+      "moreDetails": "További részletek"
     },
     "languages": {
       "translationProgress": "Fordítási előrehaladás",

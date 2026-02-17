@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { Loader2, Save, X, Trash2, Upload } from "lucide-react";
+import { Loader2, Save, X, Trash2, Upload, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -35,6 +35,11 @@ import { FormTextareaTranslate } from "../_ui/form-textarea-translate";
 import { FormSwitch } from "../_ui/form-switch";
 import { FormSelect } from "../_ui/form-select";
 import { FormAllergens } from "../_ui/form-allergens";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import type { AllergenCode } from "@/lib/allergens";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
@@ -91,6 +96,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [validationError, setValidationError] = useState<string | null>(null);
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
   const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
+  const [moreDetailsOpen, setMoreDetailsOpen] = useState(false);
 
   const isEdit = !!id;
   const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
@@ -322,7 +328,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
         <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
           <div className="max-w-lg mx-auto space-y-4">
-          {!initialCategoryId && (
+          {(!initialCategoryId || isEdit) && (
             <FormSelect
               id="category"
               label={`${t.category}:`}
@@ -342,7 +348,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             placeholder={t.namePlaceholder}
           />
 
-          {otherLanguages.map((lang) => (
+          {isEdit && otherLanguages.map((lang) => (
             <FormInputTranslate
               key={`name-${lang}`}
               id={`name-${lang}`}
@@ -351,30 +357,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
               onChange={(value) => handleTranslationChange(lang, "name", value)}
               placeholder={t.namePlaceholder}
               sourceText={name}
-              sourceLanguage={restaurant?.defaultLanguage || "en"}
-              targetLanguage={lang}
-              translateErrorMessage={t.translateError}
-            />
-          ))}
-
-          <FormTextarea
-            id="description"
-            label={`${t.description}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
-            value={description}
-            onChange={setDescription}
-            onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
-            placeholder={t.descriptionPlaceholder}
-          />
-
-          {otherLanguages.map((lang) => (
-            <FormTextareaTranslate
-              key={`desc-${lang}`}
-              id={`desc-${lang}`}
-              label={`${t.description} (${LANGUAGE_NAMES[lang] || lang}):`}
-              value={itemTranslations[lang]?.description || ""}
-              onChange={(value) => handleTranslationChange(lang, "description", value)}
-              placeholder={t.descriptionPlaceholder}
-              sourceText={description}
               sourceLanguage={restaurant?.defaultLanguage || "en"}
               targetLanguage={lang}
               translateErrorMessage={t.translateError}
@@ -394,15 +376,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
               setPrice(cleanValue);
             }}
             placeholder={t.pricePlaceholder}
-          />
-
-          <FormSwitch
-            id="isActive"
-            label={`${t.status}:`}
-            checked={isActive}
-            onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_ITEM_ACTIVE); setIsActive(v); }}
-            activeText={t.active}
-            inactiveText={t.inactive}
           />
 
           <div className="space-y-2">
@@ -460,34 +433,137 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             />
           </div>
 
-          <div>
-            <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
-              {t.allergens}:
-            </label>
-            {!hasActiveSubscription ? (
-              <div className="space-y-2 mt-2">
-                <p className="text-sm text-amber-500">
-                  {t.subscribeForAllergens}
-                </p>
-                <Button
-                  type="button"
-                  size="sm"
-                  variant="outline"
-                  className="border-amber-500/50 hover:bg-amber-500/10"
-                  onClick={() => router.push("/dashboard/billing")}
-                >
-                  {t.subscribe}
-                </Button>
-              </div>
-            ) : (
-              <FormAllergens
-                label=""
-                value={allergens}
-                onChange={setAllergens}
-                allergenNames={t.allergenNames as Record<AllergenCode, string>}
+          {isEdit ? (
+            <>
+              <FormTextarea
+                id="description"
+                label={`${t.description}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
+                value={description}
+                onChange={setDescription}
+                onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
+                placeholder={t.descriptionPlaceholder}
               />
-            )}
-          </div>
+
+              {otherLanguages.map((lang) => (
+                <FormTextareaTranslate
+                  key={`desc-${lang}`}
+                  id={`desc-${lang}`}
+                  label={`${t.description} (${LANGUAGE_NAMES[lang] || lang}):`}
+                  value={itemTranslations[lang]?.description || ""}
+                  onChange={(value) => handleTranslationChange(lang, "description", value)}
+                  placeholder={t.descriptionPlaceholder}
+                  sourceText={description}
+                  sourceLanguage={restaurant?.defaultLanguage || "en"}
+                  targetLanguage={lang}
+                  translateErrorMessage={t.translateError}
+                />
+              ))}
+
+              <FormSwitch
+                id="isActive"
+                label={`${t.status}:`}
+                checked={isActive}
+                onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_ITEM_ACTIVE); setIsActive(v); }}
+                activeText={t.active}
+                inactiveText={t.inactive}
+              />
+
+              <div>
+                <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
+                  {t.allergens}:
+                </label>
+                {!hasActiveSubscription ? (
+                  <div className="space-y-2 mt-2">
+                    <p className="text-sm text-amber-500">
+                      {t.subscribeForAllergens}
+                    </p>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      className="border-amber-500/50 hover:bg-amber-500/10"
+                      onClick={() => router.push("/dashboard/billing")}
+                    >
+                      {t.subscribe}
+                    </Button>
+                  </div>
+                ) : (
+                  <FormAllergens
+                    label=""
+                    value={allergens}
+                    onChange={setAllergens}
+                    allergenNames={t.allergenNames as Record<AllergenCode, string>}
+                  />
+                )}
+              </div>
+            </>
+          ) : (
+            otherLanguages.length > 0 && (
+              <Collapsible open={moreDetailsOpen} onOpenChange={setMoreDetailsOpen}>
+                <CollapsibleTrigger asChild>
+                  <button
+                    type="button"
+                    className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <ChevronDown className={`h-4 w-4 transition-transform ${moreDetailsOpen ? "rotate-180" : ""}`} />
+                    {t.moreDetails}
+                  </button>
+                </CollapsibleTrigger>
+                <CollapsibleContent className="space-y-4 pt-4">
+                  {otherLanguages.map((lang) => (
+                    <FormInputTranslate
+                      key={`name-${lang}`}
+                      id={`name-${lang}`}
+                      label={`${t.name} (${LANGUAGE_NAMES[lang] || lang}):`}
+                      value={itemTranslations[lang]?.name || ""}
+                      onChange={(value) => handleTranslationChange(lang, "name", value)}
+                      placeholder={t.namePlaceholder}
+                      sourceText={name}
+                      sourceLanguage={restaurant?.defaultLanguage || "en"}
+                      targetLanguage={lang}
+                      translateErrorMessage={t.translateError}
+                    />
+                  ))}
+
+                  <FormTextarea
+                    id="description"
+                    label={`${t.description}${` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})`}:`}
+                    value={description}
+                    onChange={setDescription}
+                    onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
+                    placeholder={t.descriptionPlaceholder}
+                  />
+
+                  {otherLanguages.map((lang) => (
+                    <FormTextareaTranslate
+                      key={`desc-${lang}`}
+                      id={`desc-${lang}`}
+                      label={`${t.description} (${LANGUAGE_NAMES[lang] || lang}):`}
+                      value={itemTranslations[lang]?.description || ""}
+                      onChange={(value) => handleTranslationChange(lang, "description", value)}
+                      placeholder={t.descriptionPlaceholder}
+                      sourceText={description}
+                      sourceLanguage={restaurant?.defaultLanguage || "en"}
+                      targetLanguage={lang}
+                      translateErrorMessage={t.translateError}
+                    />
+                  ))}
+                </CollapsibleContent>
+              </Collapsible>
+            )
+          )}
+
+          {/* Description field in add mode when single language (no collapsible needed) */}
+          {!isEdit && otherLanguages.length === 0 && (
+            <FormTextarea
+              id="description"
+              label={`${t.description}:`}
+              value={description}
+              onChange={setDescription}
+              onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
+              placeholder={t.descriptionPlaceholder}
+            />
+          )}
 
           <div className="pt-4 pb-2">
             <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="w-full h-10 rounded-xl shadow-md">

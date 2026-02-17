@@ -1233,7 +1233,8 @@
       "title": "Tradução IA",
       "description": "A tradução IA está disponível com uma assinatura Basic ou Pro. Atualize seu plano para usar traduções automáticas.",
       "cancel": "Cancelar",
-      "subscribe": "Assinar"
+      "subscribe": "Assinar",
+      "translate": "Traduzir"
     },
     "auth": {
       "title": "Bem-vindo ao IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Moluscos"
       },
       "subscribeForAllergens": "Assine para adicionar rótulos de alérgenos",
-      "subscribe": "Assinar"
+      "subscribe": "Assinar",
+      "moreDetails": "Mais detalhes"
     },
     "languages": {
       "translationProgress": "Progresso da Tradução",

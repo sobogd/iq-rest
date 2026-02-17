@@ -1233,7 +1233,8 @@
       "title": "Aistriúchán AI",
       "description": "Tá aistriúchán AI ar fáil le síntiús Basic nó Pro. Uasghrádaigh do phlean chun aistriúcháin uathoibríocha a úsáid.",
       "cancel": "Cealaigh",
-      "subscribe": "Liostáil"
+      "subscribe": "Liostáil",
+      "translate": "Aistrigh"
     },
     "auth": {
       "title": "Fáilte go IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Mollusc"
       },
       "subscribeForAllergens": "Liostáil chun lipéid ailléirginí a chur leis",
-      "subscribe": "Liostáil"
+      "subscribe": "Liostáil",
+      "moreDetails": "Tuilleadh sonraí"
     },
     "languages": {
       "translationProgress": "Dul chun cinn aistriúcháin",

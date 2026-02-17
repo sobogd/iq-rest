@@ -1233,7 +1233,8 @@
       "title": "Tłumaczenie AI",
       "description": "Tłumaczenie AI jest dostępne z subskrypcją Basic lub Pro. Ulepsz swój plan, aby korzystać z automatycznych tłumaczeń.",
       "cancel": "Anuluj",
-      "subscribe": "Subskrybuj"
+      "subscribe": "Subskrybuj",
+      "translate": "Przetłumacz"
     },
     "auth": {
       "title": "Witamy w IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Małże"
       },
       "subscribeForAllergens": "Subskrybuj, aby dodać etykiety alergenów",
-      "subscribe": "Subskrybuj"
+      "subscribe": "Subskrybuj",
+      "moreDetails": "Więcej szczegółów"
     },
     "languages": {
       "translationProgress": "Postęp tłumaczenia",

@@ -1233,7 +1233,8 @@
       "title": "AI Preklad",
       "description": "AI preklad je k dispozícii s predplatným Basic alebo Pro. Aktualizujte svoj plán na používanie automatických prekladov.",
       "cancel": "Zrušiť",
-      "subscribe": "Predplatiť"
+      "subscribe": "Predplatiť",
+      "translate": "Preložiť"
     },
     "auth": {
       "title": "Vitajte v IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Mollusky"
       },
       "subscribeForAllergens": "Predplaťte si pridávanie štítkov alergénov",
-      "subscribe": "Predplatiť"
+      "subscribe": "Predplatiť",
+      "moreDetails": "Viac podrobností"
     },
     "languages": {
       "translationProgress": "Pokrok prekladu",

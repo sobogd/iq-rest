@@ -1233,7 +1233,8 @@
       "title": "AI Prevod",
       "description": "AI prevod je dostupan sa Basic ili Pro pretplatom. Nadogradite svoj plan da biste koristili automatske prevode.",
       "cancel": "Otkaži",
-      "subscribe": "Pretplati se"
+      "subscribe": "Pretplati se",
+      "translate": "Преведи"
     },
     "auth": {
       "title": "Добродошли у IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Molušci"
       },
       "subscribeForAllergens": "Претплатите се за додавање ознака алергена",
-      "subscribe": "Претплати се"
+      "subscribe": "Претплати се",
+      "moreDetails": "Више детаља"
     },
     "languages": {
       "translationProgress": "Napredak prevođenja",

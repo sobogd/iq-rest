@@ -1233,7 +1233,8 @@
       "title": "AI Tõlge",
       "description": "AI tõlge on saadaval Basic või Pro tellimusega. Täiendage oma plaani automaatsete tõlgete kasutamiseks.",
       "cancel": "Tühista",
-      "subscribe": "Telli"
+      "subscribe": "Telli",
+      "translate": "Tõlgi"
     },
     "auth": {
       "title": "Tere tulemast IQ Rest'i",
@@ -1378,7 +1379,8 @@
         "molluscs": "Molluskid"
       },
       "subscribeForAllergens": "Telli allergeenide siltide lisamiseks",
-      "subscribe": "Telli"
+      "subscribe": "Telli",
+      "moreDetails": "Rohkem üksikasju"
     },
     "languages": {
       "translationProgress": "Tõlke edenemine",

@@ -1266,7 +1266,8 @@
       "title": "AI 번역",
       "description": "AI 번역은 Basic 또는 Pro 구독으로 이용 가능합니다. 자동 번역을 사용하려면 플랜을 업그레이드하세요.",
       "cancel": "취소",
-      "subscribe": "구독하기"
+      "subscribe": "구독하기",
+      "translate": "번역"
     },
     "auth": {
       "title": "IQ Rest에 오신 것을 환영합니다",
@@ -1411,7 +1412,8 @@
         "molluscs": "연체동물"
       },
       "subscribeForAllergens": "알레르기 라벨을 추가하려면 구독하세요",
-      "subscribe": "구독하기"
+      "subscribe": "구독하기",
+      "moreDetails": "더 보기"
     },
     "languages": {
       "translationProgress": "번역 진행률",

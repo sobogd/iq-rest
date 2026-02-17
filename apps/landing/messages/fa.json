@@ -1266,7 +1266,8 @@
       "title": "ترجمه هوش مصنوعی",
       "description": "ترجمه هوش مصنوعی با اشتراک Basic یا Pro در دسترس است. برای استفاده از ترجمه‌های خودکار، پلن خود را ارتقا دهید.",
       "cancel": "لغو",
-      "subscribe": "اشتراک"
+      "subscribe": "اشتراک",
+      "translate": "ترجمه"
     },
     "auth": {
       "title": "به IQ Rest خوش آمدید",
@@ -1411,7 +1412,8 @@
         "molluscs": "نرم‌تنان"
       },
       "subscribeForAllergens": "برای افزودن برچسب‌های حساسیت‌زا اشتراک بگیرید",
-      "subscribe": "اشتراک"
+      "subscribe": "اشتراک",
+      "moreDetails": "جزئیات بیشتر"
     },
     "languages": {
       "translationProgress": "پیشرفت ترجمه",

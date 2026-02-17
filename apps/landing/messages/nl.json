@@ -1233,7 +1233,8 @@
       "title": "AI Vertaling",
       "description": "AI-vertaling is beschikbaar met een Basic- of Pro-abonnement. Upgrade je plan om automatische vertalingen te gebruiken.",
       "cancel": "Annuleren",
-      "subscribe": "Abonneren"
+      "subscribe": "Abonneren",
+      "translate": "Vertalen"
     },
     "auth": {
       "title": "Welkom bij IQ Rest",
@@ -1378,7 +1379,8 @@
         "molluscs": "Weekdieren"
       },
       "subscribeForAllergens": "Abonneer om allergenlabels toe te voegen",
-      "subscribe": "Abonneren"
+      "subscribe": "Abonneren",
+      "moreDetails": "Meer details"
     },
     "languages": {
       "translationProgress": "Vertaalvoortgang",

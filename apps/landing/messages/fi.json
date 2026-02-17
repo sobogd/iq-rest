@@ -1233,7 +1233,8 @@
       "title": "Tekoälykäännös",
       "description": "Tekoälykäännös on saatavilla Basic- tai Pro-tilauksella. Päivitä tilaussi käyttääksesi automaattisia käännöksiä.",
       "cancel": "Peruuta",
-      "subscribe": "Tilaa"
+      "subscribe": "Tilaa",
+      "translate": "Käännä"
     },
     "auth": {
       "title": "Tervetuloa IQ Restiin",
@@ -1378,7 +1379,8 @@
         "molluscs": "Nilviäiset"
       },
       "subscribeForAllergens": "Tilaa lisätäksesi allergeenimerkinnät",
-      "subscribe": "Tilaa"
+      "subscribe": "Tilaa",
+      "moreDetails": "Lisätiedot"
     },
     "languages": {
       "translationProgress": "Käännösprosessin edistyminen",
