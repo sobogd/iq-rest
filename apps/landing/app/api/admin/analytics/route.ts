@@ -231,44 +231,6 @@ export async function GET(request: NextRequest) {
       LIMIT 20
     `;
 
-    // Get Google Ads clicks (first event with gclid per session)
-    const adClicksRaw = await prisma.$queryRaw<
-      { gclid: string; keyword: string | null; match_type: string | null; campaign: string | null; country: string | null; session_id: string; created_at: Date }[]
-    >`
-      SELECT DISTINCT ON ("sessionId")
-        meta->'params'->>'gclid' as gclid,
-        meta->'params'->>'kw' as keyword,
-        meta->'params'->>'mt' as match_type,
-        meta->'params'->>'ad' as campaign,
-        meta->'geo'->>'country' as country,
-        "sessionId" as session_id,
-        "createdAt" as created_at
-      FROM analytics_events
-      WHERE meta->'params'->>'gclid' IS NOT NULL
-        AND "createdAt" >= ${dateFrom} AND "createdAt" <= ${dateTo}
-      ORDER BY "sessionId", "createdAt" ASC
-    `;
-    // Re-sort by created_at DESC (DISTINCT ON requires ORDER BY sessionId first)
-    adClicksRaw.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-
-    // Get total event counts and linked user per session for ad clicks
-    const adSessionIds = [...new Set(adClicksRaw.map((r) => r.session_id))];
-    const sessionCountMap = new Map<string, number>();
-    const sessionLinkedMap = new Map<string, boolean>();
-    if (adSessionIds.length > 0) {
-      const sessionStats = await prisma.$queryRaw<{ session_id: string; cnt: bigint; has_user: boolean }[]>`
-        SELECT "sessionId" as session_id, COUNT(*) as cnt,
-          bool_or("userId" IS NOT NULL) as has_user
-        FROM analytics_events
-        WHERE "sessionId" = ANY(${adSessionIds})
-        GROUP BY "sessionId"
-      `;
-      for (const row of sessionStats) {
-        sessionCountMap.set(row.session_id, Number(row.cnt));
-        sessionLinkedMap.set(row.session_id, row.has_user);
-      }
-    }
-
     return NextResponse.json({
       funnels: {
         sections: sectionFunnel,
@@ -291,16 +253,6 @@ export async function GET(request: NextRequest) {
         ip: row.ip,
         sessions: Number(row.sessions),
         views: Number(row.views),
-      })),
-      adClicks: adClicksRaw.map((row) => ({
-        gclid: row.gclid,
-        keyword: row.keyword,
-        match_type: row.match_type,
-        campaign: row.campaign,
-        country: row.country,
-        sessionId: row.session_id,
-        event_count: sessionCountMap.get(row.session_id) || 0,
-        hasUser: sessionLinkedMap.get(row.session_id) || false,
       })),
       dateRange: {
         from: dateFrom.toISOString(),
