@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "IQ Rest matseðillinn þinn bíður þín",
+    "subject": "Matseðillinn þinn á IQ Rest er næstum tilbúinn",
     "greeting": "Halló,",
-    "body": "Þú skráðir þig nýlega á IQ Rest, en matseðillinn þinn er enn tómur. Engar áhyggjur — uppsetningin tekur aðeins nokkrar mínútur:",
-    "step1": "Bættu við flokki (t.d. \"Aðalréttir\")",
-    "step2": "Bættu við nokkrum vörum með verði",
+    "body": "Matseðillinn þinn á IQ Rest er næstum tilbúinn — við höfum þegar búið til sniðmát með sýnisréttum fyrir þig.",
+    "stepsIntro": "Allt sem þú þarft að gera:",
+    "step1": "Skiptu sýnisréttunum út fyrir þína eigin rétti og verð",
+    "step2": "Bættu við tengiliðum þínum og lógói",
     "step3": "Sæktu QR-kóðann þinn — búið!",
+    "timeNote": "Það tekur aðeins um 10 mínútur.",
     "helpOffer": "Ertu ekki með tíma? Sendu okkur bara matseðilinn þinn á hvaða formi sem er — PDF, mynd eða tengil á vefsíðuna þína — og við setjum allt upp fyrir þig, alveg ókeypis.",
     "helpAction": "Svaraðu bara þessum tölvupósti með matseðlinum þínum í viðhengi.",
     "cta": "Opna stjórnborð",
-    "signature": "Bestu kveðjur,<br>IQ Rest teymið"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "IQ Rest matseðillinn þinn bíður þín",
+    "bodyNotOnboarded": "Þú skráðir þig á IQ Rest en hefur ekki enn sett upp matseðilinn þinn. Það tekur minna en 2 mínútur — sláðu inn nafn veitingastaðarins, veldu sniðmát og þú færð tilbúinn matseðil til að aðlaga.",
+    "helpOfferNotOnboarded": "Ertu ekki með tíma? Sendu okkur bara matseðilinn þinn á hvaða formi sem er — PDF, mynd eða tengil — og við gerum það fyrir þig, alveg ókeypis."
+  },
+  "welcomeEmail": {
+    "subject": "Velkomin á IQ Rest — matseðillinn þinn er 2 mínútur í burtu",
+    "greeting": "Velkomin á IQ Rest!",
+    "intro": "Þú ert aðeins nokkur skref frá stafrænum matseðli sem viðskiptavinir þínir geta skannað og skoðað úr símanum sínum.",
+    "stepsIntro": "Hér er hvað gerist næst:",
+    "step1": "Nefndu veitingastaðinn þinn",
+    "step2": "Veldu sniðmát fyrir matseðil — við fyllum það með sýnisréttum",
+    "step3": "Aðlagaðu það með þínum eigin réttum og verðum",
+    "outro": "Það er allt. QR-matseðillinn þinn verður virkur og tilbúinn til deilingar.",
+    "cta": "Byrjaðu",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Þú hefur ný skilaboð frá IQ Rest þjónustuver",

@@ -40,6 +40,85 @@ async function getTranslations(locale: string): Promise<OtpEmailTranslations> {
   }
 }
 
+interface WelcomeEmailTranslations {
+  subject: string;
+  greeting: string;
+  intro: string;
+  stepsIntro: string;
+  step1: string;
+  step2: string;
+  step3: string;
+  outro: string;
+  cta: string;
+  signature: string;
+}
+
+async function getWelcomeTranslations(locale: string): Promise<WelcomeEmailTranslations> {
+  try {
+    const messages = await import(`@/messages/${locale}.json`);
+    return messages.welcomeEmail;
+  } catch {
+    const messages = await import(`@/messages/en.json`);
+    return messages.welcomeEmail;
+  }
+}
+
+async function sendWelcomeEmail(email: string, locale: string) {
+  const t = await getWelcomeTranslations(locale);
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT),
+    secure: false,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  await transporter.sendMail({
+    from: process.env.FROM_EMAIL,
+    to: email,
+    subject: t.subject,
+    html: `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+
+        <p style="font-size: 20px; font-weight: 600; line-height: 1.5; margin: 0 0 20px;">
+          ${t.greeting}
+        </p>
+
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+          ${t.intro}
+        </p>
+
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 8px; font-weight: 600;">
+          ${t.stepsIntro}
+        </p>
+
+        <ol style="font-size: 17px; line-height: 1.7; margin: 0 0 20px; padding-left: 24px;">
+          <li style="margin-bottom: 8px;">${t.step1}</li>
+          <li style="margin-bottom: 8px;">${t.step2}</li>
+          <li>${t.step3}</li>
+        </ol>
+
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+          ${t.outro}
+        </p>
+
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+          <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+        </p>
+
+        <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
+          ${t.signature}
+        </p>
+
+      </div>
+    `,
+    text: `${t.greeting}\n\n${t.intro}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.outro}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`,
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { email, locale = "en" } = await request.json();
@@ -183,6 +262,11 @@ export async function POST(request: NextRequest) {
         maxAge: 60 * 60 * 24 * 7,
         path: "/",
       });
+
+      // Send welcome email (fire-and-forget, don't block login)
+      sendWelcomeEmail(normalizedEmail, locale).catch((err) =>
+        console.error("Failed to send welcome email:", err)
+      );
 
       // Return auto-login response (skip OTP step)
       return NextResponse.json(

@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Tá do bhiachlár IQ Rest ag fanacht leat",
+    "subject": "Tá do bhiachlár ar IQ Rest beagnach réidh",
     "greeting": "Dia duit,",
-    "body": "Chláraigh tú le déanaí le IQ Rest, ach tá do bhiachlár fós folamh. Ná bí buartha — ní thógann an socrú ach cúpla nóiméad:",
-    "step1": "Cuir catagóir leis (m.sh. \"Príomhchúrsaí\")",
-    "step2": "Cuir roinnt earraí le praghsanna leis",
+    "body": "Tá do bhiachlár ar IQ Rest beagnach réidh — tá teimpléad le miasa samplacha ullmhaithe againn duit cheana féin.",
+    "stepsIntro": "Níl le déanamh agat ach:",
+    "step1": "Cuir do mhiasa agus praghsanna fíora in áit na samplaí",
+    "step2": "Cuir do shonraí teagmhála agus lógó leis",
     "step3": "Íoslódáil do chód QR — déanta!",
+    "timeNote": "Ní thógann sé ach thart ar 10 nóiméad.",
     "helpOffer": "Gan am agat? Seol chugainn do bhiachlár i bhformáid ar bith — PDF, grianghraf nó nasc chuig do shuíomh gréasáin — agus socróimid gach rud duit, saor in aisce go hiomlán.",
     "helpAction": "Freagair an ríomhphost seo le do bhiachlár ceangailte.",
     "cta": "Oscail an Deais",
-    "signature": "Le dea-mhéin,<br>Foireann IQ Rest"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Tá do bhiachlár IQ Rest ag fanacht leat",
+    "bodyNotOnboarded": "Chláraigh tú le IQ Rest ach níor shocraigh tú do bhiachlár fós. Ní thógann sé ach níos lú ná 2 nóiméad — cuir isteach ainm do bhialainne, roghnaigh teimpléad agus gheobhaidh tú biachlár réidh le saincheapadh.",
+    "helpOfferNotOnboarded": "Gan am agat? Seol chugainn do bhiachlár i bhformáid ar bith — PDF, grianghraf nó nasc — agus déanfaimid é duit, saor in aisce go hiomlán."
+  },
+  "welcomeEmail": {
+    "subject": "Fáilte go IQ Rest — tá do bhiachlár 2 nóiméad uait",
+    "greeting": "Fáilte go IQ Rest!",
+    "intro": "Níl tú ach cúpla céim ó bhiachlár digiteach ar féidir le do chustaiméirí é a scanadh agus a bhrabhsáil óna bhfóin.",
+    "stepsIntro": "Seo a tharlóidh ansin:",
+    "step1": "Ainmnigh do bhialann",
+    "step2": "Roghnaigh teimpléad biachlár — líonfaimid é le miasa samplacha",
+    "step3": "Saincheap é le do mhiasa agus praghsanna fíora",
+    "outro": "Sin é. Beidh do bhiachlár QR beo agus réidh le roinnt.",
+    "cta": "Tosaigh",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Tá teachtaireacht nua agat ó Thacaíocht IQ Rest",

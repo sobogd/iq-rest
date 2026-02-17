@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Din IQ Rest-meny venter på deg",
+    "subject": "Menyen din på IQ Rest er nesten klar",
     "greeting": "Hei,",
-    "body": "Du registrerte deg nylig på IQ Rest, men menyen din er fortsatt tom. Ikke bekymre deg — oppsettet tar bare noen få minutter:",
-    "step1": "Legg til en kategori (f.eks. \"Hovedretter\")",
-    "step2": "Legg til noen varer med priser",
+    "body": "Menyen din på IQ Rest er nesten klar — vi har allerede satt opp en mal med eksempelretter for deg.",
+    "stepsIntro": "Alt du trenger å gjøre:",
+    "step1": "Erstatt eksempelrettene med dine ekte retter og priser",
+    "step2": "Legg til kontaktinformasjon og logo",
     "step3": "Last ned QR-koden din — ferdig!",
+    "timeNote": "Det tar bare omtrent 10 minutter.",
     "helpOffer": "Har du ikke tid? Send oss bare menyen din i hvilket som helst format — PDF, bilde eller lenke til nettsiden din — så setter vi opp alt for deg, helt gratis.",
     "helpAction": "Bare svar på denne e-posten med menyen din vedlagt.",
     "cta": "Åpne Dashboard",
-    "signature": "Med vennlig hilsen,<br>IQ Rest-teamet"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Din IQ Rest-meny venter på deg",
+    "bodyNotOnboarded": "Du registrerte deg på IQ Rest, men har ikke satt opp menyen din ennå. Det tar mindre enn 2 minutter — skriv inn restaurantnavnet, velg en mal og du får en ferdig meny å tilpasse.",
+    "helpOfferNotOnboarded": "Har du ikke tid? Send oss bare menyen din i hvilket som helst format — PDF, bilde eller lenke — så gjør vi det for deg, helt gratis."
+  },
+  "welcomeEmail": {
+    "subject": "Velkommen til IQ Rest — menyen din er 2 minutter unna",
+    "greeting": "Velkommen til IQ Rest!",
+    "intro": "Du er bare noen få skritt unna en digital meny som kundene dine kan skanne og bla gjennom fra telefonene sine.",
+    "stepsIntro": "Her er hva som skjer videre:",
+    "step1": "Gi restauranten din et navn",
+    "step2": "Velg en menymal — vi fyller den med eksempelretter",
+    "step3": "Tilpass den med dine ekte retter og priser",
+    "outro": "Det er alt. QR-menyen din vil være live og klar til å dele.",
+    "cta": "Kom i gang",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Du har en ny melding fra IQ Rest Support",

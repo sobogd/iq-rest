@@ -1906,16 +1906,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "IQ Rest 메뉴가 기다리고 있습니다",
+    "subject": "IQ Rest의 메뉴가 거의 완성되었습니다",
     "greeting": "안녕하세요,",
-    "body": "최근 IQ Rest에 가입하셨지만 메뉴가 아직 비어 있습니다. 걱정 마세요 — 설정은 몇 분이면 됩니다:",
-    "step1": "카테고리 추가 (예: \"메인 요리\")",
-    "step2": "가격과 함께 몇 가지 항목 추가",
+    "body": "IQ Rest의 메뉴가 거의 완성되었습니다 — 이미 샘플 요리가 포함된 템플릿을 준비해 두었습니다.",
+    "stepsIntro": "해야 할 일은 이것뿐입니다:",
+    "step1": "샘플 요리를 실제 요리와 가격으로 교체하세요",
+    "step2": "연락처 정보와 로고를 추가하세요",
     "step3": "QR 코드 다운로드 — 완료!",
+    "timeNote": "약 10분이면 됩니다.",
     "helpOffer": "시간이 없으신가요? 메뉴를 PDF, 사진 또는 웹사이트 링크 등 원하는 형식으로 보내주시면 완전 무료로 설정해 드립니다.",
     "helpAction": "이 이메일에 메뉴를 첨부하여 답장해 주세요.",
     "cta": "대시보드 열기",
-    "signature": "감사합니다,<br>IQ Rest 팀"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "IQ Rest 메뉴가 기다리고 있습니다",
+    "bodyNotOnboarded": "IQ Rest에 가입하셨지만 아직 메뉴를 설정하지 않으셨습니다. 2분도 걸리지 않습니다 — 레스토랑 이름을 입력하고 템플릿을 선택하면 맞춤 설정할 수 있는 메뉴가 준비됩니다.",
+    "helpOfferNotOnboarded": "시간이 없으신가요? 메뉴를 PDF, 사진 또는 링크 등 원하는 형식으로 보내주시면 완전 무료로 대신 설정해 드립니다."
+  },
+  "welcomeEmail": {
+    "subject": "IQ Rest에 오신 것을 환영합니다 — 메뉴 완성까지 2분",
+    "greeting": "IQ Rest에 오신 것을 환영합니다!",
+    "intro": "고객이 스마트폰으로 스캔하고 열람할 수 있는 디지털 메뉴까지 몇 단계만 남았습니다.",
+    "stepsIntro": "다음 단계는 이렇습니다:",
+    "step1": "레스토랑 이름을 지정하세요",
+    "step2": "메뉴 템플릿을 선택하세요 — 샘플 요리로 채워드립니다",
+    "step3": "실제 요리와 가격으로 맞춤 설정하세요",
+    "outro": "그게 전부입니다. QR 메뉴가 활성화되어 공유할 준비가 됩니다.",
+    "cta": "시작하기",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "IQ Rest 지원팀에서 새 메시지가 있습니다",

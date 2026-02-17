@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Az IQ Rest menüje várja Önt",
+    "subject": "Az IQ Rest menüje szinte kész",
     "greeting": "Üdvözöljük!",
-    "body": "Nemrég regisztrált az IQ Rest-re, de a menüje még üres. Ne aggódjon — a beállítás csak néhány percet vesz igénybe:",
-    "step1": "Adjon hozzá egy kategóriát (pl. \"Főételek\")",
-    "step2": "Adjon hozzá néhány tételt árakkal",
+    "body": "Az IQ Rest menüje szinte kész — már elkészítettünk egy sablont példa ételekkel az Ön számára.",
+    "stepsIntro": "Mindössze ennyit kell tennie:",
+    "step1": "Cserélje le a példa ételeket a saját valódi ételeire és áraira",
+    "step2": "Adja hozzá elérhetőségeit és logóját",
     "step3": "Töltse le a QR-kódját — kész!",
+    "timeNote": "Mindössze körülbelül 10 percet vesz igénybe.",
     "helpOffer": "Nincs ideje? Csak küldje el nekünk a menüjét bármilyen formátumban — PDF, fotó vagy weboldal linkje — és mi mindent beállítunk Önnek, teljesen ingyen.",
     "helpAction": "Egyszerűen válaszoljon erre az e-mailre a menüjével csatolva.",
     "cta": "Irányítópult megnyitása",
-    "signature": "Üdvözlettel,<br>Az IQ Rest csapata"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Az IQ Rest menüje várja Önt",
+    "bodyNotOnboarded": "Regisztrált az IQ Rest-re, de még nem állította be a menüjét. Kevesebb mint 2 percet vesz igénybe — adja meg éttermének nevét, válasszon sablont, és kap egy kész menüt a testreszabáshoz.",
+    "helpOfferNotOnboarded": "Nincs ideje? Csak küldje el nekünk a menüjét bármilyen formátumban — PDF, fotó vagy link — és mi megcsináljuk Önnek, teljesen ingyen."
+  },
+  "welcomeEmail": {
+    "subject": "Üdvözöljük az IQ Rest-en — menüje 2 perc múlva kész",
+    "greeting": "Üdvözöljük az IQ Rest-en!",
+    "intro": "Már csak néhány lépésre van egy digitális menütől, amelyet vendégei beolvashatnak és böngészhetnek a telefonjukon.",
+    "stepsIntro": "Íme, mi következik:",
+    "step1": "Nevezze el éttermét",
+    "step2": "Válasszon egy menüsablont — feltöltjük példa ételekkel",
+    "step3": "Szabja testre a saját ételeivel és áraival",
+    "outro": "Ennyi az egész. QR-menüje élőben lesz és megosztásra kész.",
+    "cta": "Kezdés",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Új üzeneted van az IQ Rest ügyfélszolgálattól",

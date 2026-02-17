@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Teie IQ Rest menüü ootab teid",
+    "subject": "Teie menüü IQ Restis on peaaegu valmis",
     "greeting": "Tere,",
-    "body": "Registreerusite hiljuti IQ Resti, kuid teie menüü on endiselt tühi. Ärge muretsege — seadistamine võtab vaid mõne minuti:",
-    "step1": "Lisage kategooria (nt \"Põhiroad\")",
-    "step2": "Lisage mõned tooted hindadega",
+    "body": "Teie menüü IQ Restis on peaaegu valmis — oleme juba koostanud malli näidisroogadega teie jaoks.",
+    "stepsIntro": "Kõik, mida peate tegema:",
+    "step1": "Asendage näidisroad oma tegelike roogade ja hindadega",
+    "step2": "Lisage oma kontaktandmed ja logo",
     "step3": "Laadige alla oma QR-kood — valmis!",
+    "timeNote": "See võtab vaid umbes 10 minutit.",
     "helpOffer": "Pole aega? Saatke meile lihtsalt oma menüü mis tahes vormingus — PDF, foto või link veebilehele — ja me seadistame kõik teie eest, täiesti tasuta.",
     "helpAction": "Lihtsalt vastake sellele e-kirjale, lisades oma menüü manusena.",
     "cta": "Ava juhtpaneel",
-    "signature": "Parimate soovidega,<br>IQ Rest meeskond"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Teie IQ Rest menüü ootab teid",
+    "bodyNotOnboarded": "Registreerusite IQ Resti, kuid pole veel oma menüüd seadistanud. See võtab vähem kui 2 minutit — sisestage oma restorani nimi, valige mall ja saate valmis menüü kohandamiseks.",
+    "helpOfferNotOnboarded": "Pole aega? Saatke meile lihtsalt oma menüü mis tahes vormingus — PDF, foto või link — ja me teeme selle teie eest, täiesti tasuta."
+  },
+  "welcomeEmail": {
+    "subject": "Tere tulemast IQ Resti — teie menüü on 2 minuti kaugusel",
+    "greeting": "Tere tulemast IQ Resti!",
+    "intro": "Olete vaid mõne sammu kaugusel digitaalsest menüüst, mida teie kliendid saavad oma telefoniga skaneerida ja sirvida.",
+    "stepsIntro": "Järgmisena toimub järgmine:",
+    "step1": "Pange oma restoranile nimi",
+    "step2": "Valige menüümall — täidame selle näidisroogadega",
+    "step3": "Kohandage seda oma tegelike roogade ja hindadega",
+    "outro": "Ongi kõik. Teie QR-menüü on aktiivne ja jagamiseks valmis.",
+    "cta": "Alustage",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Teil on uus sõnum IQ Rest toelt",

@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "IQ Rest menünüz sizi bekliyor",
+    "subject": "IQ Rest'teki menünüz neredeyse hazır",
     "greeting": "Merhaba,",
-    "body": "Yakın zamanda IQ Rest'e kaydoldunuz, ancak menünüz hâlâ boş. Endişelenmeyin — kurulum sadece birkaç dakika sürer:",
-    "step1": "Bir kategori ekleyin (örn. \"Ana Yemekler\")",
-    "step2": "Fiyatlarıyla birlikte birkaç ürün ekleyin",
+    "body": "IQ Rest'teki menünüz neredeyse hazır — sizin için örnek yemeklerle dolu bir şablon hazırladık.",
+    "stepsIntro": "Yapmanız gereken tek şey:",
+    "step1": "Örnek yemekleri gerçek yemekleriniz ve fiyatlarınızla değiştirin",
+    "step2": "İletişim bilgilerinizi ve logonuzu ekleyin",
     "step3": "QR kodunuzu indirin — tamam!",
+    "timeNote": "Sadece yaklaşık 10 dakika sürer.",
     "helpOffer": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya web sitenizin linki — ve sizin için tamamen ücretsiz ayarlayalım.",
     "helpAction": "Bu e-postayı menünüzü ekleyerek yanıtlamanız yeterli.",
     "cta": "Paneli Aç",
-    "signature": "Saygılarımızla,<br>IQ Rest Ekibi"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "IQ Rest menünüz sizi bekliyor",
+    "bodyNotOnboarded": "IQ Rest'e kaydoldunuz ancak menünüzü henüz oluşturmadınız. 2 dakikadan az sürer — restoran adınızı girin, bir şablon seçin ve özelleştirmeye hazır bir menü elde edin.",
+    "helpOfferNotOnboarded": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya link — ve sizin için tamamen ücretsiz yapalım."
+  },
+  "welcomeEmail": {
+    "subject": "IQ Rest'e hoş geldiniz — menünüz 2 dakika uzakta",
+    "greeting": "IQ Rest'e hoş geldiniz!",
+    "intro": "Müşterilerinizin telefonlarından tarayıp göz atabileceği dijital bir menüye sadece birkaç adım uzaktasınız.",
+    "stepsIntro": "İşte bundan sonra ne olacak:",
+    "step1": "Restoranınıza bir isim verin",
+    "step2": "Bir menü şablonu seçin — örnek yemeklerle dolduralım",
+    "step3": "Gerçek yemekleriniz ve fiyatlarınızla özelleştirin",
+    "outro": "Hepsi bu. QR menünüz yayında ve paylaşıma hazır olacak.",
+    "cta": "Başlayın",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "IQ Rest Destek'ten yeni bir mesajınız var",

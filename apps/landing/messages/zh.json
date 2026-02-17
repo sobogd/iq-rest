@@ -1906,16 +1906,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "您的IQ Rest菜单正在等待您",
+    "subject": "您在IQ Rest的菜单即将完成",
     "greeting": "您好，",
-    "body": "您最近注册了IQ Rest，但您的菜单仍然是空的。别担心——设置只需几分钟：",
-    "step1": "添加一个分类（例如「主菜」）",
-    "step2": "添加几个带价格的菜品",
+    "body": "您在IQ Rest的菜单即将完成——我们已经为您准备了包含示例菜品的模板。",
+    "stepsIntro": "您只需要：",
+    "step1": "将示例菜品替换为您的真实菜品和价格",
+    "step2": "添加您的联系方式和Logo",
     "step3": "下载您的二维码——完成！",
+    "timeNote": "只需大约10分钟。",
     "helpOffer": "没有时间？只需将您的菜单以任何格式发送给我们——PDF、照片或网站链接——我们将免费为您设置一切。",
     "helpAction": "只需回复此邮件并附上您的菜单即可。",
     "cta": "打开控制面板",
-    "signature": "此致敬礼，<br>IQ Rest团队"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "您的IQ Rest菜单正在等待您",
+    "bodyNotOnboarded": "您注册了IQ Rest但尚未设置菜单。只需不到2分钟——输入餐厅名称、选择模板，即可获得一份可自定义的现成菜单。",
+    "helpOfferNotOnboarded": "没有时间？只需将您的菜单以任何格式发送给我们——PDF、照片或链接——我们将免费为您完成一切。"
+  },
+  "welcomeEmail": {
+    "subject": "欢迎来到IQ Rest——您的菜单只需2分钟",
+    "greeting": "欢迎来到IQ Rest！",
+    "intro": "您离一份客户可以扫描和浏览的数字菜单只有几步之遥。",
+    "stepsIntro": "接下来会发生：",
+    "step1": "为您的餐厅命名",
+    "step2": "选择菜单模板——我们会用示例菜品填充",
+    "step3": "用您的真实菜品和价格进行自定义",
+    "outro": "就这样。您的二维码菜单将上线并准备好分享。",
+    "cta": "开始使用",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "您收到了来自IQ Rest支持团队的新消息",

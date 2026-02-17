@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Vaš meni IQ Rest vas čaka",
+    "subject": "Vaš meni na IQ Rest je skoraj pripravljen",
     "greeting": "Pozdravljeni,",
-    "body": "Pred kratkim ste se registrirali na IQ Rest, vendar je vaš meni še vedno prazen. Brez skrbi — nastavitev traja le nekaj minut:",
-    "step1": "Dodajte kategorijo (npr. \"Glavne jedi\")",
-    "step2": "Dodajte nekaj artiklov s cenami",
+    "body": "Vaš meni na IQ Rest je skoraj pripravljen — že smo pripravili predlogo z vzorčnimi jedmi za vas.",
+    "stepsIntro": "Vse, kar morate storiti:",
+    "step1": "Zamenjajte vzorčne jedi s svojimi pravimi jedmi in cenami",
+    "step2": "Dodajte svoje kontaktne podatke in logotip",
     "step3": "Prenesite svojo QR kodo — končano!",
+    "timeNote": "Traja le približno 10 minut.",
     "helpOffer": "Nimate časa? Preprosto nam pošljite svoj meni v katerem koli formatu — PDF, fotografija ali povezava do spletne strani — in mi bomo vse nastavili namesto vas, popolnoma brezplačno.",
     "helpAction": "Preprosto odgovorite na to e-pošto s priloženim menijem.",
     "cta": "Odpri nadzorno ploščo",
-    "signature": "Lep pozdrav,<br>Ekipa IQ Rest"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Vaš meni IQ Rest vas čaka",
+    "bodyNotOnboarded": "Registrirali ste se na IQ Rest, vendar še niste nastavili svojega menija. Traja manj kot 2 minuti — vnesite ime restavracije, izberite predlogo in dobili boste pripravljen meni za prilagajanje.",
+    "helpOfferNotOnboarded": "Nimate časa? Preprosto nam pošljite svoj meni v katerem koli formatu — PDF, fotografija ali povezava — in mi bomo to naredili namesto vas, popolnoma brezplačno."
+  },
+  "welcomeEmail": {
+    "subject": "Dobrodošli na IQ Rest — vaš meni je oddaljen le 2 minuti",
+    "greeting": "Dobrodošli na IQ Rest!",
+    "intro": "Le nekaj korakov ste od digitalnega menija, ki ga vaše stranke lahko skenirajo in brskajo s svojega telefona.",
+    "stepsIntro": "Tukaj je, kaj sledi:",
+    "step1": "Poimenujte svojo restavracijo",
+    "step2": "Izberite predlogo menija — napolnili jo bomo z vzorčnimi jedmi",
+    "step3": "Prilagodite jo s svojimi pravimi jedmi in cenami",
+    "outro": "To je vse. Vaš QR meni bo v živo in pripravljen za deljenje.",
+    "cta": "Začnite",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Imate novo sporočilo od podpore IQ Rest",

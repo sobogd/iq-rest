@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Jūsu IQ Rest ēdienkarte gaida jūs",
+    "subject": "Jūsu ēdienkarte IQ Rest ir gandrīz gatava",
     "greeting": "Sveiki,",
-    "body": "Jūs nesen reģistrējāties IQ Rest, bet jūsu ēdienkarte joprojām ir tukša. Neuztraucieties — iestatīšana aizņem tikai dažas minūtes:",
-    "step1": "Pievienojiet kategoriju (piem., \"Pamatēdieni\")",
-    "step2": "Pievienojiet dažas preces ar cenām",
+    "body": "Jūsu ēdienkarte IQ Rest ir gandrīz gatava — mēs jau esam sagatavojuši veidni ar ēdienu paraugiem jums.",
+    "stepsIntro": "Viss, kas jums jādara:",
+    "step1": "Aizstājiet paraugu ēdienus ar saviem īstajiem ēdieniem un cenām",
+    "step2": "Pievienojiet savus kontaktus un logotipu",
     "step3": "Lejupielādējiet savu QR kodu — gatavs!",
+    "timeNote": "Tas aizņem tikai aptuveni 10 minūtes.",
     "helpOffer": "Nav laika? Vienkārši nosūtiet mums savu ēdienkarti jebkurā formātā — PDF, foto vai saite uz mājas lapu — un mēs visu iestatīsim jūsu vietā, pilnīgi bez maksas.",
     "helpAction": "Vienkārši atbildiet uz šo e-pastu, pievienojot savu ēdienkarti.",
     "cta": "Atvērt vadības paneli",
-    "signature": "Ar cieņu,<br>IQ Rest komanda"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Jūsu IQ Rest ēdienkarte gaida jūs",
+    "bodyNotOnboarded": "Jūs reģistrējāties IQ Rest, bet vēl neesat iestatījuši savu ēdienkarti. Tas aizņem mazāk nekā 2 minūtes — ievadiet sava restorāna nosaukumu, izvēlieties veidni un iegūsiet gatavu ēdienkarti pielāgošanai.",
+    "helpOfferNotOnboarded": "Nav laika? Vienkārši nosūtiet mums savu ēdienkarti jebkurā formātā — PDF, foto vai saite — un mēs to izdarīsim jūsu vietā, pilnīgi bez maksas."
+  },
+  "welcomeEmail": {
+    "subject": "Laipni lūgti IQ Rest — jūsu ēdienkarte ir 2 minūšu attālumā",
+    "greeting": "Laipni lūgti IQ Rest!",
+    "intro": "Jūs esat tikai dažu soļu attālumā no digitālās ēdienkartes, ko jūsu klienti var skenēt un pārlūkot savos tālruņos.",
+    "stepsIntro": "Lūk, kas notiks tālāk:",
+    "step1": "Nosauciet savu restorānu",
+    "step2": "Izvēlieties ēdienkartes veidni — mēs to aizpildīsim ar ēdienu paraugiem",
+    "step3": "Pielāgojiet to ar saviem īstajiem ēdieniem un cenām",
+    "outro": "Tas arī viss. Jūsu QR ēdienkarte būs aktīva un gatava dalīšanai.",
+    "cta": "Sākt",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Jums ir jauna ziņa no IQ Rest atbalsta",

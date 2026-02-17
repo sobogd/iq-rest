@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Tu menú de IQ Rest te está esperando",
+    "subject": "Tu menú en IQ Rest está casi listo",
     "greeting": "¡Hola!",
-    "body": "Te registraste recientemente en IQ Rest, pero tu menú aún está vacío. No te preocupes — solo te llevará unos minutos configurarlo:",
-    "step1": "Añade una categoría (ej. \"Platos principales\")",
-    "step2": "Añade algunos artículos con precios",
+    "body": "Tu menú en IQ Rest está casi listo — ya hemos configurado una plantilla con platos de ejemplo para ti.",
+    "stepsIntro": "Todo lo que necesitas hacer:",
+    "step1": "Reemplaza los platos de ejemplo con tus platos y precios reales",
+    "step2": "Añade tus contactos y logotipo",
     "step3": "Descarga tu código QR — ¡listo!",
+    "timeNote": "Solo te llevará unos 10 minutos.",
     "helpOffer": "¿No tienes tiempo? Simplemente envíanos tu menú en cualquier formato — PDF, foto o enlace a tu sitio web — y lo configuraremos por ti, completamente gratis.",
     "helpAction": "Simplemente responde a este correo con tu menú adjunto.",
     "cta": "Abrir panel de control",
-    "signature": "Saludos cordiales,<br>El equipo de IQ Rest"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Tu menú de IQ Rest te está esperando",
+    "bodyNotOnboarded": "Te registraste en IQ Rest pero aún no has configurado tu menú. Solo te llevará menos de 2 minutos — ingresa el nombre de tu restaurante, elige una plantilla y tendrás un menú listo para personalizar.",
+    "helpOfferNotOnboarded": "¿No tienes tiempo? Simplemente envíanos tu menú en cualquier formato — PDF, foto o enlace — y lo haremos por ti, completamente gratis."
+  },
+  "welcomeEmail": {
+    "subject": "Bienvenido a IQ Rest — tu menú está a 2 minutos",
+    "greeting": "¡Bienvenido a IQ Rest!",
+    "intro": "Estás a solo unos pasos de un menú digital que tus clientes pueden escanear y explorar desde sus teléfonos.",
+    "stepsIntro": "Esto es lo que sigue:",
+    "step1": "Pon el nombre de tu restaurante",
+    "step2": "Elige una plantilla de menú — la llenaremos con platos de ejemplo",
+    "step3": "Personalízalo con tus platos y precios reales",
+    "outro": "Eso es todo. Tu menú QR estará listo para compartir.",
+    "cta": "Comenzar",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Tienes un nuevo mensaje del soporte de IQ Rest",

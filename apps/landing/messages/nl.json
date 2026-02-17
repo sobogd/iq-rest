@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Je IQ Rest menu wacht op je",
+    "subject": "Je menu bij IQ Rest is bijna klaar",
     "greeting": "Hallo,",
-    "body": "Je hebt je onlangs aangemeld bij IQ Rest, maar je menu is nog leeg. Geen zorgen — het kost slechts een paar minuten om te starten:",
-    "step1": "Voeg een categorie toe (bijv. \"Hoofdgerechten\")",
-    "step2": "Voeg enkele items met prijzen toe",
+    "body": "Je menu bij IQ Rest is bijna klaar — we hebben al een sjabloon met voorbeeldgerechten voor je klaargezet.",
+    "stepsIntro": "Dit is alles wat je hoeft te doen:",
+    "step1": "Vervang de voorbeeldgerechten door je echte gerechten en prijzen",
+    "step2": "Voeg je contactgegevens en logo toe",
     "step3": "Download je QR-code — klaar!",
+    "timeNote": "Het kost slechts ongeveer 10 minuten.",
     "helpOffer": "Geen tijd? Stuur ons gewoon je menu in elk formaat — PDF, foto of een link naar je website — en wij zetten alles voor je op, helemaal gratis.",
     "helpAction": "Beantwoord deze e-mail gewoon met je menu als bijlage.",
     "cta": "Dashboard openen",
-    "signature": "Met vriendelijke groet,<br>Het IQ Rest Team"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Je IQ Rest menu wacht op je",
+    "bodyNotOnboarded": "Je hebt je aangemeld bij IQ Rest maar je menu nog niet ingesteld. Het duurt minder dan 2 minuten — voer je restaurantnaam in, kies een sjabloon en je hebt een kant-en-klaar menu om aan te passen.",
+    "helpOfferNotOnboarded": "Geen tijd? Stuur ons gewoon je menu in elk formaat — PDF, foto of een link — en wij doen het voor je, helemaal gratis."
+  },
+  "welcomeEmail": {
+    "subject": "Welkom bij IQ Rest — je menu is 2 minuten verwijderd",
+    "greeting": "Welkom bij IQ Rest!",
+    "intro": "Je bent slechts een paar stappen verwijderd van een digitaal menu dat je klanten kunnen scannen en bekijken op hun telefoon.",
+    "stepsIntro": "Dit is wat er nu gebeurt:",
+    "step1": "Geef je restaurant een naam",
+    "step2": "Kies een menusjabloon — we vullen het met voorbeeldgerechten",
+    "step3": "Pas het aan met je echte gerechten en prijzen",
+    "outro": "Dat is het. Je QR-menu is dan live en klaar om te delen.",
+    "cta": "Aan de slag",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Je hebt een nieuw bericht van IQ Rest Support",

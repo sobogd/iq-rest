@@ -1873,15 +1873,32 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Your IQ Rest menu is waiting for you",
+    "subject": "Your menu at IQ Rest is almost ready",
     "greeting": "Hi there,",
-    "body": "You recently signed up for IQ Rest, but your menu is still empty. No worries — it only takes a few minutes to get started:",
-    "step1": "Add a category (e.g. \"Main Courses\")",
-    "step2": "Add a few items with prices",
+    "body": "Your menu at IQ Rest is almost ready — we've already set up a template with sample dishes for you.",
+    "stepsIntro": "All you need to do:",
+    "step1": "Replace sample items with your real dishes and prices",
+    "step2": "Add your contacts and logo",
     "step3": "Download your QR code — done!",
+    "timeNote": "It only takes about 10 minutes.",
     "helpOffer": "Short on time? Just send us your menu in any format — PDF, photo, or a link to your website — and we'll set it up for you, completely free.",
     "helpAction": "Simply reply to this email with your menu attached.",
     "cta": "Open Dashboard",
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Your IQ Rest menu is waiting for you",
+    "bodyNotOnboarded": "You signed up for IQ Rest but haven't set up your menu yet. It takes less than 2 minutes — just enter your restaurant name, pick a template, and you'll get a ready-made menu to customize.",
+    "helpOfferNotOnboarded": "Short on time? Just send us your menu in any format — PDF, photo, or a link — and we'll do it for you, completely free."
+  },
+  "welcomeEmail": {
+    "subject": "Welcome to IQ Rest — your menu is 2 minutes away",
+    "greeting": "Welcome to IQ Rest!",
+    "intro": "You're just a few steps away from a digital menu your customers can scan and browse from their phones.",
+    "stepsIntro": "Here's what happens next:",
+    "step1": "Name your restaurant",
+    "step2": "Pick a menu template — we'll fill it with sample dishes",
+    "step3": "Customize it with your real items and prices",
+    "outro": "That's it. Your QR menu will be live and ready to share.",
+    "cta": "Get Started",
     "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {

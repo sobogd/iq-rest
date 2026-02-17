@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Ihr IQ Rest Menü wartet auf Sie",
+    "subject": "Ihr Menü bei IQ Rest ist fast fertig",
     "greeting": "Hallo,",
-    "body": "Sie haben sich kürzlich bei IQ Rest angemeldet, aber Ihr Menü ist noch leer. Keine Sorge — die Einrichtung dauert nur wenige Minuten:",
-    "step1": "Fügen Sie eine Kategorie hinzu (z.B. \"Hauptgerichte\")",
-    "step2": "Fügen Sie einige Artikel mit Preisen hinzu",
+    "body": "Ihr Menü bei IQ Rest ist fast fertig — wir haben bereits eine Vorlage mit Beispielgerichten für Sie eingerichtet.",
+    "stepsIntro": "Alles, was Sie tun müssen:",
+    "step1": "Ersetzen Sie die Beispielgerichte durch Ihre echten Gerichte und Preise",
+    "step2": "Fügen Sie Ihre Kontaktdaten und Ihr Logo hinzu",
     "step3": "Laden Sie Ihren QR-Code herunter — fertig!",
+    "timeNote": "Es dauert nur etwa 10 Minuten.",
     "helpOffer": "Keine Zeit? Senden Sie uns einfach Ihr Menü in beliebigem Format — PDF, Foto oder einen Link zu Ihrer Website — und wir richten alles für Sie ein, völlig kostenlos.",
     "helpAction": "Antworten Sie einfach auf diese E-Mail mit Ihrem Menü im Anhang.",
     "cta": "Dashboard öffnen",
-    "signature": "Mit freundlichen Grüßen,<br>Das IQ Rest Team"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Ihr IQ Rest Menü wartet auf Sie",
+    "bodyNotOnboarded": "Sie haben sich bei IQ Rest angemeldet, aber Ihr Menü noch nicht eingerichtet. Es dauert weniger als 2 Minuten — geben Sie einfach Ihren Restaurantnamen ein, wählen Sie eine Vorlage und Sie erhalten ein fertiges Menü zum Anpassen.",
+    "helpOfferNotOnboarded": "Keine Zeit? Senden Sie uns einfach Ihr Menü in beliebigem Format — PDF, Foto oder einen Link — und wir erledigen das für Sie, völlig kostenlos."
+  },
+  "welcomeEmail": {
+    "subject": "Willkommen bei IQ Rest — Ihr Menü ist nur 2 Minuten entfernt",
+    "greeting": "Willkommen bei IQ Rest!",
+    "intro": "Sie sind nur wenige Schritte von einem digitalen Menü entfernt, das Ihre Kunden scannen und auf ihren Handys durchstöbern können.",
+    "stepsIntro": "So geht es weiter:",
+    "step1": "Benennen Sie Ihr Restaurant",
+    "step2": "Wählen Sie eine Menüvorlage — wir füllen sie mit Beispielgerichten",
+    "step3": "Passen Sie es mit Ihren echten Gerichten und Preisen an",
+    "outro": "Das war's. Ihr QR-Menü ist dann live und bereit zum Teilen.",
+    "cta": "Jetzt starten",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Sie haben eine neue Nachricht vom IQ Rest Support",

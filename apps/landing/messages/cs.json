@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Vaše menu IQ Rest na vás čeká",
+    "subject": "Vaše menu na IQ Rest je skoro hotové",
     "greeting": "Dobrý den,",
-    "body": "Nedávno jste se zaregistrovali v IQ Rest, ale vaše menu je stále prázdné. Nebojte se — nastavení zabere jen pár minut:",
-    "step1": "Přidejte kategorii (např. \"Hlavní jídla\")",
-    "step2": "Přidejte několik položek s cenami",
+    "body": "Vaše menu na IQ Rest je skoro hotové — už jsme pro vás připravili šablonu s ukázkovými jídly.",
+    "stepsIntro": "Stačí udělat toto:",
+    "step1": "Nahraďte ukázková jídla svými skutečnými jídly a cenami",
+    "step2": "Přidejte své kontakty a logo",
     "step3": "Stáhněte si QR kód — hotovo!",
+    "timeNote": "Zabere to jen asi 10 minut.",
     "helpOffer": "Nemáte čas? Pošlete nám své menu v jakémkoli formátu — PDF, foto nebo odkaz na web — a my vše nastavíme za vás, zcela zdarma.",
     "helpAction": "Stačí odpovědět na tento email s přiloženým menu.",
     "cta": "Otevřít panel",
-    "signature": "S pozdravem,<br>Tým IQ Rest"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Vaše menu IQ Rest na vás čeká",
+    "bodyNotOnboarded": "Zaregistrovali jste se na IQ Rest, ale ještě jste si nenastavili menu. Zabere to méně než 2 minuty — zadejte název restaurace, vyberte šablonu a dostanete hotové menu k úpravě.",
+    "helpOfferNotOnboarded": "Nemáte čas? Pošlete nám své menu v jakémkoli formátu — PDF, foto nebo odkaz — a my to uděláme za vás, zcela zdarma."
+  },
+  "welcomeEmail": {
+    "subject": "Vítejte na IQ Rest — vaše menu je za 2 minuty",
+    "greeting": "Vítejte na IQ Rest!",
+    "intro": "Jste jen pár kroků od digitálního menu, které vaši zákazníci mohou naskenovat a prohlížet z telefonu.",
+    "stepsIntro": "Tady je, co bude následovat:",
+    "step1": "Pojmenujte svou restauraci",
+    "step2": "Vyberte šablonu menu — naplníme ji ukázkovými jídly",
+    "step3": "Upravte ji svými skutečnými jídly a cenami",
+    "outro": "To je vše. Vaše QR menu bude online a připravené ke sdílení.",
+    "cta": "Začít",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Máte novou zprávu od podpory IQ Rest",

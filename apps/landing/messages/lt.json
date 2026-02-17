@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Jūsų IQ Rest meniu laukia jūsų",
+    "subject": "Jūsų meniu IQ Rest beveik paruoštas",
     "greeting": "Sveiki,",
-    "body": "Neseniai užsiregistravote IQ Rest, bet jūsų meniu vis dar tuščias. Nesijaudinkite — nustatymas užtrunka tik kelias minutes:",
-    "step1": "Pridėkite kategoriją (pvz., \"Pagrindiniai patiekalai\")",
-    "step2": "Pridėkite kelis produktus su kainomis",
+    "body": "Jūsų meniu IQ Rest beveik paruoštas — jau parengėme šabloną su pavyzdiniais patiekalais jums.",
+    "stepsIntro": "Viskas, ką reikia padaryti:",
+    "step1": "Pakeiskite pavyzdinius patiekalus savo tikrais patiekalais ir kainomis",
+    "step2": "Pridėkite savo kontaktus ir logotipą",
     "step3": "Atsisiųskite savo QR kodą — baigta!",
+    "timeNote": "Tai užtrunka tik apie 10 minučių.",
     "helpOffer": "Neturite laiko? Tiesiog atsiųskite mums savo meniu bet kokiu formatu — PDF, nuotrauka ar nuoroda į svetainę — ir mes viską nustatysime už jus, visiškai nemokamai.",
     "helpAction": "Tiesiog atsakykite į šį el. laišką pridėję savo meniu.",
     "cta": "Atidaryti valdymo skydelį",
-    "signature": "Pagarbiai,<br>IQ Rest komanda"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Jūsų IQ Rest meniu laukia jūsų",
+    "bodyNotOnboarded": "Užsiregistravote IQ Rest, bet dar nesukūrėte savo meniu. Tai užtrunka mažiau nei 2 minutes — įveskite restorano pavadinimą, pasirinkite šabloną ir gausite paruoštą meniu pritaikymui.",
+    "helpOfferNotOnboarded": "Neturite laiko? Tiesiog atsiųskite mums savo meniu bet kokiu formatu — PDF, nuotrauka ar nuoroda — ir mes tai padarysime už jus, visiškai nemokamai."
+  },
+  "welcomeEmail": {
+    "subject": "Sveiki atvykę į IQ Rest — jūsų meniu per 2 minutes",
+    "greeting": "Sveiki atvykę į IQ Rest!",
+    "intro": "Jūs tik keliais žingsniais nuo skaitmeninio meniu, kurį jūsų klientai gali nuskenuoti ir naršyti savo telefonuose.",
+    "stepsIntro": "Štai kas bus toliau:",
+    "step1": "Pavadinkite savo restoraną",
+    "step2": "Pasirinkite meniu šabloną — užpildysime jį pavyzdiniais patiekalais",
+    "step3": "Pritaikykite jį savo tikrais patiekalais ir kainomis",
+    "outro": "Štai ir viskas. Jūsų QR meniu bus aktyvus ir paruoštas dalintis.",
+    "cta": "Pradėti",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Turite naują pranešimą iš IQ Rest palaikymo",

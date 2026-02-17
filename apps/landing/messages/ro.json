@@ -1873,16 +1873,33 @@
     ]
   },
   "reminderEmail": {
-    "subject": "Meniul tău IQ Rest te așteaptă",
+    "subject": "Meniul tău pe IQ Rest este aproape gata",
     "greeting": "Bună,",
-    "body": "Te-ai înregistrat recent pe IQ Rest, dar meniul tău este încă gol. Nu-ți face griji — configurarea durează doar câteva minute:",
-    "step1": "Adaugă o categorie (ex. \"Feluri principale\")",
-    "step2": "Adaugă câteva articole cu prețuri",
+    "body": "Meniul tău pe IQ Rest este aproape gata — am pregătit deja un șablon cu preparate exemplu pentru tine.",
+    "stepsIntro": "Tot ce trebuie să faci:",
+    "step1": "Înlocuiește preparatele exemplu cu preparatele și prețurile tale reale",
+    "step2": "Adaugă datele de contact și logo-ul",
     "step3": "Descarcă codul tău QR — gata!",
+    "timeNote": "Durează doar aproximativ 10 minute.",
     "helpOffer": "Nu ai timp? Trimite-ne pur și simplu meniul în orice format — PDF, poză sau link către site — și noi îl vom configura pentru tine, complet gratuit.",
     "helpAction": "Răspunde simplu la acest email cu meniul atașat.",
     "cta": "Deschide Panoul de Control",
-    "signature": "Cu stimă,<br>Echipa IQ Rest"
+    "signature": "Best regards,<br>IQ Rest Team",
+    "subjectNotOnboarded": "Meniul tău IQ Rest te așteaptă",
+    "bodyNotOnboarded": "Te-ai înregistrat pe IQ Rest, dar nu ți-ai configurat încă meniul. Durează mai puțin de 2 minute — introdu numele restaurantului, alege un șablon și vei avea un meniu gata de personalizat.",
+    "helpOfferNotOnboarded": "Nu ai timp? Trimite-ne pur și simplu meniul în orice format — PDF, poză sau link — și noi îl facem pentru tine, complet gratuit."
+  },
+  "welcomeEmail": {
+    "subject": "Bine ai venit pe IQ Rest — meniul tău este la 2 minute distanță",
+    "greeting": "Bine ai venit pe IQ Rest!",
+    "intro": "Ești la doar câțiva pași de un meniu digital pe care clienții tăi îl pot scana și consulta de pe telefon.",
+    "stepsIntro": "Iată ce urmează:",
+    "step1": "Dă un nume restaurantului tău",
+    "step2": "Alege un șablon de meniu — îl vom completa cu preparate exemplu",
+    "step3": "Personalizează-l cu preparatele și prețurile tale reale",
+    "outro": "Atât. Meniul tău QR va fi activ și gata de partajat.",
+    "cta": "Începe",
+    "signature": "Best regards,<br>IQ Rest Team"
   },
   "supportEmail": {
     "subject": "Aveți un mesaj nou de la suportul IQ Rest",
