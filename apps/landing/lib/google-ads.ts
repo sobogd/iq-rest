@@ -55,8 +55,13 @@ export async function uploadClickConversion(
   const developerToken = process.env.GOOGLE_ADS_DEVELOPER_TOKEN;
   const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID;
 
-  if (!customerId || !developerToken || !conversionActionId) {
-    return { success: false, error: "Missing Google Ads configuration" };
+  const missing = [
+    !customerId && "GOOGLE_ADS_CUSTOMER_ID",
+    !developerToken && "GOOGLE_ADS_DEVELOPER_TOKEN",
+    !conversionActionId && "GOOGLE_ADS_CONVERSION_ACTION_ID",
+  ].filter(Boolean);
+  if (missing.length > 0) {
+    return { success: false, error: `Missing: ${missing.join(", ")}` };
   }
 
   try {
@@ -75,7 +80,7 @@ export async function uploadClickConversion(
       method: "POST",
       headers: {
         Authorization: `Bearer ${accessToken}`,
-        "developer-token": developerToken,
+        "developer-token": developerToken!,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
