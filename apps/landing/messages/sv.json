@@ -1918,5 +1918,24 @@
     "signature": "Med vänliga hälsningar,<br>IQ Rest-teamet",
     "expiry": "Denna kod går ut om 10 minuter.",
     "ignore": "Om du inte begärde denna kod kan du ignorera detta mejl."
+  },
+  "reservationEmail": {
+    "guestSubject": "Din bokning på {restaurant}",
+    "guestGreeting": "Hej {name},",
+    "guestConfirmed": "Din bokning är bekräftad!",
+    "guestPending": "Din bokningsförfrågan har mottagits och väntar på bekräftelse.",
+    "details": "Bokningsdetaljer:",
+    "date": "Datum",
+    "time": "Tid",
+    "guests": "Gäster",
+    "table": "Bord",
+    "notes": "Anteckningar",
+    "guestOutro": "Om du behöver göra ändringar, vänligen kontakta restaurangen direkt.",
+    "signature": "Med vänliga hälsningar,<br>{restaurant}",
+    "ownerSubject": "Ny bokning från {name}",
+    "ownerGreeting": "Ny bokning!",
+    "ownerBody": "En ny bokning har gjorts på din restaurang.",
+    "ownerCta": "Visa bokningar",
+    "ownerSignature": "Med vänliga hälsningar,<br>IQ Rest Team"
   }
 }

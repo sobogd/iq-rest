@@ -1918,5 +1918,24 @@
     "signature": "S pozdravem,<br>Tým IQ Rest",
     "expiry": "Tento kód vyprší za 10 minut.",
     "ignore": "Pokud jste o tento kód nežádali, můžete tento email ignorovat."
+  },
+  "reservationEmail": {
+    "guestSubject": "Vaše rezervace v {restaurant}",
+    "guestGreeting": "Dobrý den {name},",
+    "guestConfirmed": "Vaše rezervace je potvrzena!",
+    "guestPending": "Váš požadavek na rezervaci byl přijat a čeká na potvrzení.",
+    "details": "Podrobnosti rezervace:",
+    "date": "Datum",
+    "time": "Čas",
+    "guests": "Hosté",
+    "table": "Stůl",
+    "notes": "Poznámky",
+    "guestOutro": "Pokud potřebujete provést změny, kontaktujte prosím přímo restauraci.",
+    "signature": "S pozdravem,<br>{restaurant}",
+    "ownerSubject": "Nová rezervace od {name}",
+    "ownerGreeting": "Nová rezervace!",
+    "ownerBody": "Ve vaší restauraci byla provedena nová rezervace.",
+    "ownerCta": "Zobrazit rezervace",
+    "ownerSignature": "S pozdravem,<br>Tým IQ Rest"
   }
 }

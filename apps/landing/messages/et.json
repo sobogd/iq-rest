@@ -1918,5 +1918,24 @@
     "signature": "Parimate soovidega,<br>IQ Rest meeskond",
     "expiry": "See kood aegub 10 minuti pärast.",
     "ignore": "Kui te seda koodi ei küsinud, võite selle e-kirja ignoreerida."
+  },
+  "reservationEmail": {
+    "guestSubject": "Teie broneering restoranis {restaurant}",
+    "guestGreeting": "Tere {name},",
+    "guestConfirmed": "Teie broneering on kinnitatud!",
+    "guestPending": "Teie broneeringutaotlus on vastu võetud ja ootab kinnitust.",
+    "details": "Broneeringu üksikasjad:",
+    "date": "Kuupäev",
+    "time": "Kellaaeg",
+    "guests": "Külalised",
+    "table": "Laud",
+    "notes": "Märkused",
+    "guestOutro": "Kui soovite muudatusi teha, võtke palun otse restoraniga ühendust.",
+    "signature": "Lugupidamisega,<br>{restaurant}",
+    "ownerSubject": "Uus broneering kasutajalt {name}",
+    "ownerGreeting": "Uus broneering!",
+    "ownerBody": "Teie restoranis on tehtud uus broneering.",
+    "ownerCta": "Vaata broneeringuid",
+    "ownerSignature": "Lugupidamisega,<br>IQ Rest meeskond"
   }
 }

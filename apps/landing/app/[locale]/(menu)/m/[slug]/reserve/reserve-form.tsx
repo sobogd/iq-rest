@@ -270,6 +270,7 @@ export function ReserveForm({
           guestEmail: email.trim(),
           guestsCount,
           notes: notes.trim() || null,
+          locale,
         }),
       });
 
