@@ -158,6 +158,11 @@ export enum DashboardEvent {
   CLICKED_AI_SUBSCRIBE = "clicked_ai_subscribe",
   CLICKED_AI_CANCEL = "clicked_ai_cancel",
 
+  // Landing — Pricing
+  PRICING_SWIPE_FREE = "pricing_swipe_free",
+  PRICING_SWIPE_BASIC = "pricing_swipe_basic",
+  PRICING_SWIPE_PRO = "pricing_swipe_pro",
+
   // Errors
   ERROR_VALIDATION = "error_validation",
   ERROR_SAVE = "error_save",
@@ -329,6 +334,11 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_AI_TRANSLATE]: "Clicked AI Translate",
   [DashboardEvent.CLICKED_AI_SUBSCRIBE]: "Clicked AI Subscribe",
   [DashboardEvent.CLICKED_AI_CANCEL]: "Clicked AI Cancel",
+
+  // Landing — Pricing
+  [DashboardEvent.PRICING_SWIPE_FREE]: "Pricing Swipe: Free",
+  [DashboardEvent.PRICING_SWIPE_BASIC]: "Pricing Swipe: Basic",
+  [DashboardEvent.PRICING_SWIPE_PRO]: "Pricing Swipe: Pro",
 
   // Errors
   [DashboardEvent.ERROR_VALIDATION]: "Error: Validation",

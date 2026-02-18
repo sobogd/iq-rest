@@ -56,7 +56,7 @@ interface AnalyticsData {
     dashboard: FunnelStep[];
     conversion: FunnelStep[];
   };
-  recentEvents: { id: string; event: string; sessionId: string; createdAt: string }[];
+  recentEvents: { id: string; event: string; sessionId: string; meta?: Record<string, string> | null; createdAt: string }[];
   stats: Stats;
   geoStats: GeoStats;
   returningIps?: ReturningIp[];
@@ -515,6 +515,11 @@ export function AdminAnalyticsPage() {
                   <div className="flex flex-col gap-0.5">
                     <span className="text-sm font-medium">
                       {formatEventName(event.event)}
+                      {event.meta && (
+                        <span className="text-muted-foreground font-normal ml-1">
+                          ({Object.values(event.meta as Record<string, string>).join(" / ")})
+                        </span>
+                      )}
                     </span>
                     <span className="text-[10px] text-muted-foreground">
                       {formatDate(event.createdAt)}

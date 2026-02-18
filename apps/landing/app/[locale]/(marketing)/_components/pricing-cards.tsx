@@ -20,6 +20,7 @@ import {
 import { Check, X } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { pricing, PlanId } from "@/lib/pricing";
 import { currencyInfo, SupportedCurrency } from "@/lib/country-currency-map";
 
@@ -104,7 +105,17 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
 
     setCurrent(api.selectedScrollSnap());
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
+      const idx = api.selectedScrollSnap();
+      setCurrent(idx);
+      const plan = PLANS[idx];
+      if (plan) {
+        const swipeEvents: Record<string, DashboardEvent> = {
+          free: DashboardEvent.PRICING_SWIPE_FREE,
+          basic: DashboardEvent.PRICING_SWIPE_BASIC,
+          pro: DashboardEvent.PRICING_SWIPE_PRO,
+        };
+        track(swipeEvents[plan.id]);
+      }
     });
   }, [api]);
 

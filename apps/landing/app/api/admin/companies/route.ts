@@ -17,11 +17,27 @@ export async function GET(request: NextRequest) {
     const { searchParams } = request.nextUrl;
     const page = Math.max(0, Number(searchParams.get("page") || 0));
     const email = searchParams.get("email") || null;
+    const minViews = searchParams.get("minViews") === "true";
 
-    // Build where clause for email filter (filter companies that have a user matching email)
-    const where = email
-      ? { users: { some: { user: { email: { contains: email, mode: "insensitive" as const } } } } }
-      : {};
+    // Build where clause
+    const where: Record<string, unknown> = {};
+    if (email) {
+      where.users = { some: { user: { email: { contains: email, mode: "insensitive" as const } } } };
+    }
+
+    // If minViews filter is on, find companyIds with 20+ page views this month
+    if (minViews) {
+      const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+      const companiesWithViews = await prisma.$queryRaw<{ companyId: string }[]>`
+        SELECT "companyId"
+        FROM page_views
+        WHERE "createdAt" >= ${startOfMonth}
+        GROUP BY "companyId"
+        HAVING COUNT(*) >= 20
+      `;
+      const ids = companiesWithViews.map((r) => r.companyId);
+      where.id = { in: ids };
+    }
 
     const [companies, total] = await Promise.all([
       prisma.company.findMany({

@@ -122,6 +122,7 @@ export async function GET(request: NextRequest) {
         id: true,
         event: true,
         sessionId: true,
+        meta: true,
         createdAt: true,
       },
     });

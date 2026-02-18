@@ -46,6 +46,7 @@ interface AnalyticsEvent {
   id: string;
   event: string;
   sessionId: string;
+  meta?: Record<string, string> | null;
   createdAt: string;
 }
 
@@ -348,7 +349,14 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                           index > 0 ? "border-t border-foreground/5" : ""
                         }`}
                       >
-                        <p className="text-sm truncate">{formatEventName(event.event)}</p>
+                        <p className="text-sm truncate">
+                          {formatEventName(event.event)}
+                          {event.meta && (
+                            <span className="text-muted-foreground ml-1">
+                              ({Object.values(event.meta as Record<string, string>).join(" / ")})
+                            </span>
+                          )}
+                        </p>
                         <div className="flex items-center justify-between mt-0.5">
                           <span className="text-[10px] text-muted-foreground">
                             {new Date(event.createdAt).toLocaleString("en-GB", {

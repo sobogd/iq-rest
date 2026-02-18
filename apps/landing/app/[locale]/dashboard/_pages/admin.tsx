@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo, useCallback, useRef } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import {
   FolderOpen,
   Package,
@@ -11,24 +11,56 @@ import {
   ChevronLeft,
   RefreshCw,
   MoreVertical,
-  Search,
+  SlidersHorizontal,
   X,
   Loader2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { useRouter } from "@/i18n/routing";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 
 const LS_ADMIN_PAGE = "admin_companies_page";
-const LS_ADMIN_EMAIL = "admin_companies_email";
+const LS_ADMIN_FILTERS = "admin_companies_filters";
+
+interface Filters {
+  email: string;
+  minViews: boolean;
+}
+
+const DEFAULT_FILTERS: Filters = { email: "", minViews: false };
+
+function hasActiveFilters(f: Filters): boolean {
+  return f.email !== "" || f.minViews;
+}
+
+function readFiltersFromStorage(): Filters {
+  try {
+    const raw = localStorage.getItem(LS_ADMIN_FILTERS);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      return {
+        email: parsed.email || "",
+        minViews: parsed.minViews === true,
+      };
+    }
+  } catch {}
+  return DEFAULT_FILTERS;
+}
 
 interface User {
   id: string;
@@ -66,8 +98,6 @@ export function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [showSearch, setShowSearch] = useState(false);
-  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const initialPage = useMemo(() => {
     try {
@@ -77,31 +107,28 @@ export function AdminPage() {
     return 0;
   }, []);
 
-  const initialEmail = useMemo(() => {
-    try {
-      return localStorage.getItem(LS_ADMIN_EMAIL) || "";
-    } catch {}
-    return "";
-  }, []);
+  const initialFilters = useMemo<Filters>(() => readFiltersFromStorage(), []);
 
   const [page, setPage] = useState(initialPage);
-  const [email, setEmail] = useState(initialEmail);
-  const [emailInput, setEmailInput] = useState(initialEmail);
+  const [filters, setFilters] = useState<Filters>(initialFilters);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [draftFilters, setDraftFilters] = useState<Filters>(initialFilters);
 
-  const saveToStorage = useCallback((p: number, e: string) => {
+  const saveToStorage = useCallback((p: number, f: Filters) => {
     try {
       localStorage.setItem(LS_ADMIN_PAGE, String(p));
-      localStorage.setItem(LS_ADMIN_EMAIL, e);
+      localStorage.setItem(LS_ADMIN_FILTERS, JSON.stringify(f));
     } catch {}
   }, []);
 
   const fetchCompanies = useCallback(
-    async (p: number, e: string, isRefresh = false) => {
+    async (p: number, f: Filters, isRefresh = false) => {
       if (isRefresh) setRefreshing(true);
       try {
         const params = new URLSearchParams();
         params.set("page", String(p));
-        if (e) params.set("email", e);
+        if (f.email) params.set("email", f.email);
+        if (f.minViews) params.set("minViews", "true");
         const res = await fetch(`/api/admin/companies?${params}`);
         if (!res.ok) {
           if (res.status === 403) setError("Access denied");
@@ -125,37 +152,30 @@ export function AdminPage() {
 
   const goToPage = (p: number) => {
     setPage(p);
-    saveToStorage(p, email);
-    fetchCompanies(p, email);
+    saveToStorage(p, filters);
+    fetchCompanies(p, filters);
   };
 
-  const applyEmailFilter = () => {
-    const trimmed = emailInput.trim();
-    setEmail(trimmed);
+  const applyFilters = () => {
+    setFilters(draftFilters);
+    setFilterOpen(false);
     setPage(0);
-    saveToStorage(0, trimmed);
-    fetchCompanies(0, trimmed);
+    saveToStorage(0, draftFilters);
+    fetchCompanies(0, draftFilters);
   };
 
-  const clearEmailFilter = () => {
-    setEmailInput("");
-    setEmail("");
-    setShowSearch(false);
+  const resetFilters = () => {
+    setDraftFilters(DEFAULT_FILTERS);
+    setFilters(DEFAULT_FILTERS);
+    setFilterOpen(false);
     setPage(0);
-    saveToStorage(0, "");
-    fetchCompanies(0, "");
+    saveToStorage(0, DEFAULT_FILTERS);
+    fetchCompanies(0, DEFAULT_FILTERS);
   };
 
   useEffect(() => {
-    if (initialEmail) setShowSearch(true);
-    fetchCompanies(initialPage, initialEmail);
-  }, [fetchCompanies, initialPage, initialEmail]);
-
-  useEffect(() => {
-    if (showSearch) {
-      setTimeout(() => searchInputRef.current?.focus(), 100);
-    }
-  }, [showSearch]);
+    fetchCompanies(initialPage, initialFilters);
+  }, [fetchCompanies, initialPage, initialFilters]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-GB", {
@@ -177,6 +197,8 @@ export function AdminPage() {
     );
   }
 
+  const active = hasActiveFilters(filters);
+
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Admin">
@@ -184,54 +206,78 @@ export function AdminPage() {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="relative">
               <MoreVertical className="h-4 w-4" />
-              {email && (
-                <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-red-500" />
+              {active && (
+                <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-primary" />
               )}
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
-            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => { setPage(0); saveToStorage(0, email); fetchCompanies(0, email, true); }}>
+            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => { setPage(0); saveToStorage(0, filters); fetchCompanies(0, filters, true); }}>
               <RefreshCw className="h-4 w-4" />
               Refresh
             </DropdownMenuItem>
             <DropdownMenuItem
               className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-              onClick={() => {
-                setShowSearch(true);
-              }}
+              onClick={() => { setFilterOpen(true); setDraftFilters(filters); }}
             >
-              <Search className="h-4 w-4" />
-              Filter by email
+              <SlidersHorizontal className="h-4 w-4" />
+              Filters
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </PageHeader>
+      <Dialog open={filterOpen} onOpenChange={(open) => { setFilterOpen(open); if (open) setDraftFilters(filters); }}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Filters</DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col gap-4 pt-2">
+            <div className="flex flex-col gap-1.5">
+              <Label htmlFor="filter-email">Email</Label>
+              <Input
+                id="filter-email"
+                placeholder="e.g. user@example.com"
+                value={draftFilters.email}
+                onChange={(e) => setDraftFilters({ ...draftFilters, email: e.target.value })}
+              />
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <Label>Menu views</Label>
+              <div className="flex gap-2">
+                {[
+                  { value: false, label: "All" },
+                  { value: true, label: "20+ views" },
+                ].map((opt) => (
+                  <button
+                    key={String(opt.value)}
+                    onClick={() => setDraftFilters({ ...draftFilters, minViews: opt.value })}
+                    className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                      draftFilters.minViews === opt.value
+                        ? "border-primary bg-primary/10 font-medium"
+                        : "border-border hover:bg-muted/30"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex gap-2 pt-2">
+              <Button variant="outline" className="flex-1" onClick={resetFilters}>
+                <X className="h-4 w-4" />
+                Reset
+              </Button>
+              <Button className="flex-1" onClick={applyFilters}>
+                Apply
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
-          {/* Email search */}
-          {showSearch && (
-            <div className="flex gap-2">
-              <Input
-                ref={searchInputRef}
-                value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") applyEmailFilter();
-                  if (e.key === "Escape") {
-                    if (emailInput) clearEmailFilter();
-                    else setShowSearch(false);
-                  }
-                }}
-                placeholder="Search by email..."
-                className="text-sm"
-              />
-              {email && (
-                <Button variant="ghost" size="icon" onClick={clearEmailFilter}>
-                  <X className="h-4 w-4" />
-                </Button>
-              )}
-            </div>
-          )}
 
           {/* Companies List */}
           {(loading || refreshing) && companies.length > 0 ? (
@@ -240,7 +286,7 @@ export function AdminPage() {
             </div>
           ) : companies.length === 0 && !loading ? (
             <p className="text-sm text-muted-foreground text-center py-8">
-              {email ? "No companies found" : "No companies yet"}
+              {active ? "No companies match filters" : "No companies yet"}
             </p>
           ) : companies.length === 0 ? null : (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
