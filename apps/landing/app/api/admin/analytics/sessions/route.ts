@@ -74,6 +74,16 @@ export async function GET(request: NextRequest) {
         },
       });
 
+      // Look up restaurant name via companyId
+      let restaurantName: string | null = null;
+      if (session?.companyId) {
+        const restaurant = await prisma.restaurant.findFirst({
+          where: { companyId: session.companyId },
+          select: { title: true },
+        });
+        restaurantName = restaurant?.title ?? null;
+      }
+
       return NextResponse.json({
         session: session ? {
           id: session.id,
@@ -84,8 +94,7 @@ export async function GET(request: NextRequest) {
           browser: session.browser,
           device: session.device,
           ip: session.ip,
-          userId: session.userId,
-          companyId: session.companyId,
+          restaurantName,
           wasRegistered: session.wasRegistered,
           namedRestaurant: session.namedRestaurant,
           selectedType: session.selectedType,
@@ -136,7 +145,7 @@ export async function GET(request: NextRequest) {
 
     const sessions = await prisma.session.findMany({
       where: sessionWhere,
-      orderBy: { createdAt: "desc" },
+      orderBy: { updatedAt: "desc" },
       take: 100,
       select: {
         id: true,
@@ -148,7 +157,19 @@ export async function GET(request: NextRequest) {
         ip: true,
         createdAt: true,
         _count: { select: { events: true } },
+        events: {
+          orderBy: { createdAt: "desc" },
+          take: 1,
+          select: { createdAt: true },
+        },
       },
+    });
+
+    // Sort by last event date descending
+    sessions.sort((a, b) => {
+      const aLast = a.events[0]?.createdAt ?? a.createdAt;
+      const bLast = b.events[0]?.createdAt ?? b.createdAt;
+      return new Date(bLast).getTime() - new Date(aLast).getTime();
     });
 
     // Determine session type by looking at events
@@ -172,6 +193,7 @@ export async function GET(request: NextRequest) {
       sessionId: s.id,
       userId: s.userId,
       createdAt: s.createdAt,
+      lastEventAt: s.events[0]?.createdAt ?? s.createdAt,
       meta: s.country ? { geo: { country: s.country } } : null,
       source: s.gclid ? "Ads" : "Direct",
       adValues: undefined,

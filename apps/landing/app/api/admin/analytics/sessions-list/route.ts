@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
     // Get sessions directly from Session table
     const [sessionsList, totalResult] = await Promise.all([
       prisma.session.findMany({
-        orderBy: { createdAt: "desc" },
+        orderBy: { updatedAt: "desc" },
         skip: page * limit,
         take: limit,
         select: {

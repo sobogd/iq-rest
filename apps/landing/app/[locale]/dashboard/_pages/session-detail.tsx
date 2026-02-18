@@ -7,6 +7,7 @@ import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
+import { toast } from "sonner";
 
 interface SessionData {
   id: string;
@@ -17,8 +18,7 @@ interface SessionData {
   browser: string | null;
   device: string | null;
   ip: string | null;
-  userId: string | null;
-  companyId: string | null;
+  restaurantName: string | null;
   wasRegistered: boolean;
   namedRestaurant: boolean;
   selectedType: boolean;
@@ -101,6 +101,31 @@ function formatDate(dateString: string) {
   });
 }
 
+const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
+
+function groupEventsByGap(events: AnalyticsEvent[]): AnalyticsEvent[][] {
+  // Reverse: newest first
+  const sorted = [...events].reverse();
+  const groups: AnalyticsEvent[][] = [];
+  let current: AnalyticsEvent[] = [];
+
+  for (let i = 0; i < sorted.length; i++) {
+    if (i === 0) {
+      current.push(sorted[i]);
+      continue;
+    }
+    // sorted is newest-first, so sorted[i] is older than sorted[i-1]
+    const gap = new Date(sorted[i - 1].createdAt).getTime() - new Date(sorted[i].createdAt).getTime();
+    if (gap > TWO_HOURS_MS) {
+      groups.push(current);
+      current = [];
+    }
+    current.push(sorted[i]);
+  }
+  if (current.length > 0) groups.push(current);
+  return groups;
+}
+
 const FLAG_LABELS: Record<string, string> = {
   wasRegistered: "Registered",
   namedRestaurant: "Named restaurant",
@@ -165,17 +190,16 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   }
 
   // Session info rows
-  const infoRows: { label: string; value: string }[] = [];
+  const infoRows: { label: string; value: string; copyable?: boolean }[] = [];
   if (session) {
     if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}` });
     if (session.ip) infoRows.push({ label: "IP", value: session.ip });
     if (session.browser) infoRows.push({ label: "Browser", value: session.browser });
     if (session.device) infoRows.push({ label: "Device", value: session.device });
     infoRows.push({ label: "Source", value: session.gclid ? "Google Ads" : "Direct" });
-    if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid });
-    if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword });
-    if (session.userId) infoRows.push({ label: "User ID", value: session.userId });
-    if (session.companyId) infoRows.push({ label: "Company ID", value: session.companyId });
+    if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid, copyable: true });
+    if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword, copyable: true });
+    if (session.restaurantName) infoRows.push({ label: "Restaurant", value: session.restaurantName });
     infoRows.push({ label: "Created", value: formatDate(session.createdAt) });
     infoRows.push({ label: "Updated", value: formatDate(session.updatedAt) });
   }
@@ -205,9 +229,15 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               {infoRows.map((row, i) => (
                 <div
                   key={row.label}
+                  role={row.copyable ? "button" : undefined}
+                  tabIndex={row.copyable ? 0 : undefined}
+                  onClick={row.copyable ? () => {
+                    navigator.clipboard.writeText(row.value);
+                    toast.success("Copied to clipboard");
+                  } : undefined}
                   className={`flex items-center justify-between px-4 py-2.5 ${
                     i > 0 ? "border-t border-foreground/5" : ""
-                  }`}
+                  }${row.copyable ? " cursor-pointer active:bg-muted/30" : ""}`}
                 >
                   <span className="text-xs text-muted-foreground">{row.label}</span>
                   <span className="text-xs font-mono text-right break-all max-w-[60%]">{row.value}</span>
@@ -217,7 +247,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               {/* Conversion flags */}
               {activeFlags.length > 0 && (
                 <div className="border-t border-foreground/5 px-4 py-2.5">
-                  <p className="text-xs text-muted-foreground mb-1.5">Flags</p>
                   <div className="flex flex-wrap gap-1.5">
                     {activeFlags.map(([, label]) => (
                       <span
@@ -244,39 +273,40 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
           {events.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-8">No events found</p>
           ) : (
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
-              {events.map((event, index) => {
-                const prevEvent = index > 0 ? events[index - 1] : null;
-                const timeDiff = prevEvent ? formatTimeDiff(prevEvent.createdAt, event.createdAt) : null;
+            <div className="space-y-3">
+              {groupEventsByGap(events).map((group, gi) => (
+                <div key={gi} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+                  {group.map((event, index) => {
+                    const nextEvent = index < group.length - 1 ? group[index + 1] : null;
+                    const timeDiff = nextEvent ? formatTimeDiff(nextEvent.createdAt, event.createdAt) : null;
 
-                return (
-                  <div
-                    key={event.id}
-                    className={`flex items-center gap-3 px-4 py-2.5 ${
-                      index > 0 ? "border-t border-foreground/5" : ""
-                    }`}
-                  >
-                    {/* Time diff badge */}
-                    <span className="text-[10px] font-mono text-muted-foreground w-16 shrink-0 text-right">
-                      {timeDiff ? `+${timeDiff}` : "start"}
-                    </span>
-
-                    {/* Event name */}
-                    <span className="text-sm flex-1 min-w-0 truncate">
-                      {formatEventName(event.event)}
-                    </span>
-
-                    {/* Time */}
-                    <span className="text-[10px] text-muted-foreground shrink-0">
-                      {new Date(event.createdAt).toLocaleTimeString("en-GB", {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                        second: "2-digit",
-                      })}
-                    </span>
-                  </div>
-                );
-              })}
+                    return (
+                      <div
+                        key={event.id}
+                        className={`px-4 py-2.5 ${
+                          index > 0 ? "border-t border-foreground/5" : ""
+                        }`}
+                      >
+                        <p className="text-sm truncate">{formatEventName(event.event)}</p>
+                        <div className="flex items-center justify-between mt-0.5">
+                          <span className="text-[10px] text-muted-foreground">
+                            {new Date(event.createdAt).toLocaleString("en-GB", {
+                              day: "numeric",
+                              month: "short",
+                              hour: "2-digit",
+                              minute: "2-digit",
+                              second: "2-digit",
+                            })}
+                          </span>
+                          <span className="text-[10px] font-mono text-muted-foreground">
+                            {timeDiff ? `+${timeDiff}` : ""}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           )}
 
