@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
@@ -31,6 +32,14 @@ export default async function DashboardLayout({
 
   if (!hasRestaurant) redirect("/onboarding/name");
   if (!hasMenu) redirect("/onboarding/type");
+
+  // Check if admin is impersonating
+  const cookieStore = await cookies();
+  const adminOriginalEmail = cookieStore.get("admin_original_email")?.value;
+  const currentEmail = cookieStore.get("user_email")?.value;
+  const impersonation = adminOriginalEmail
+    ? { originalEmail: adminOriginalEmail, currentEmail: currentEmail ?? "" }
+    : undefined;
 
   const t = await getTranslations("dashboard");
 
@@ -194,7 +203,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations}>
+    <DashboardShell translations={translations} impersonation={impersonation}>
       {children}
     </DashboardShell>
   );

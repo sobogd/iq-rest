@@ -11,6 +11,7 @@ import {
   Eye,
   MoreVertical,
   Copy,
+  LogIn,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -105,8 +106,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   const backHref = useMemo(() => {
     const from = searchParams.get("from");
     if (from) return from;
-    const p = searchParams.get("page");
-    return p ? `/dashboard/admin?page=${p}` : "/dashboard/admin";
+    return "/dashboard/admin";
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [company, setCompany] = useState<Company | null>(null);
@@ -116,6 +116,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [sendingReminder, setSendingReminder] = useState(false);
+  const [impersonating, setImpersonating] = useState(false);
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [loadingMessages, setLoadingMessages] = useState(false);
@@ -212,6 +213,32 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     } finally {
       setDeleting(false);
       setShowDeleteDialog(false);
+    }
+  }
+
+  async function handleImpersonate() {
+    if (!company || impersonating) return;
+    const user = company.users[0];
+    if (!user) return;
+
+    setImpersonating(true);
+    try {
+      const res = await fetch("/api/admin/impersonate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId: user.id }),
+      });
+
+      if (res.ok) {
+        window.location.href = "/dashboard";
+      } else {
+        const data = await res.json();
+        toast.error(data.error || "Failed to impersonate");
+        setImpersonating(false);
+      }
+    } catch {
+      toast.error("Failed to impersonate");
+      setImpersonating(false);
     }
   }
 
@@ -333,7 +360,8 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   if (restaurant?.phone) copyableItems.push({ label: "Copy Phone", value: restaurant.phone });
 
   // Current page URL for from param
-  const currentUrl = `/dashboard/admin/companies/${companyId}${searchParams.get("page") ? `?page=${searchParams.get("page")}` : searchParams.get("from") ? `?from=${encodeURIComponent(searchParams.get("from")!)}` : ""}`;
+  const fromParam = searchParams.get("from");
+  const currentUrl = `/dashboard/admin/companies/${companyId}${fromParam ? `?from=${encodeURIComponent(fromParam)}` : ""}`;
 
   return (
     <div className="flex flex-col h-full">
@@ -394,6 +422,16 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
               <Mail className="h-4 w-4" />
               {company.reminderSentAt ? "Send Reminder Again" : "Send Reminder"}
             </DropdownMenuItem>
+            {company.users[0] && (
+              <DropdownMenuItem
+                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
+                onClick={handleImpersonate}
+                disabled={impersonating}
+              >
+                <LogIn className="h-4 w-4" />
+                Login as {company.users[0].email.split("@")[0]}
+              </DropdownMenuItem>
+            )}
             <DropdownMenuItem
               onClick={() => setShowDeleteDialog(true)}
               className="px-4 py-2.5 rounded-none border-t border-foreground/5 text-destructive focus:text-destructive"
