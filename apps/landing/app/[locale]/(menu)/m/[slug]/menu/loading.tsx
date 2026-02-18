@@ -1,15 +1,10 @@
+import { SkeletonHeader } from "../_components";
+
 export default function MenuLoading() {
   return (
     <div className="h-dvh flex flex-col">
       {/* Header */}
-      <header className="shrink-0 h-14 bg-black flex items-center px-5">
-        <div className="max-w-[440px] w-full flex items-center relative mx-auto">
-          <div className="h-6 w-6 rounded bg-white/20" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="h-4 w-28 rounded bg-white/20" />
-          </div>
-        </div>
-      </header>
+      <SkeletonHeader />
 
       {/* Category tabs skeleton — matches: px-4 py-3 text-sm font-semibold */}
       <div className="shrink-0 flex justify-center relative bg-white">
