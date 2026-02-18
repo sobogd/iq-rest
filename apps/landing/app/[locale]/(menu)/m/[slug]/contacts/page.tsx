@@ -1,7 +1,14 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
-import { MapView } from "@/components/map-view";
+import dynamic from "next/dynamic";
+
+const MapView = dynamic(() => import("@/components/map-view").then((m) => m.MapView), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full bg-muted animate-pulse" />
+  ),
+});
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { getCountryCenter } from "@/lib/country-centers";
 import { trackPageView } from "../_lib/track";
@@ -46,10 +53,10 @@ export default async function ContactsPage({ params, searchParams }: ContactsPag
   const { slug, locale } = await params;
   const { preview } = await searchParams;
   const isPreview = preview === "1";
+  if (!isPreview) trackPageView(slug, "contacts", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
-    ...(!isPreview ? [trackPageView(slug, "contacts", locale)] : []),
   ]);
 
   if (!restaurant) {

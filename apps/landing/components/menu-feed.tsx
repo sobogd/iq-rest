@@ -219,7 +219,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                         <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
                           {item.allergens.map((code) => (
                             <span key={code} className="text-sm text-gray-500 inline-flex items-center gap-1">
-                              <span className="text-xs">{getAllergenIcon(code)}</span> {allergenTranslations.names[code] || code}
+                              <span className="text-xs" role="img" aria-label={allergenTranslations.names[code] || code}>{getAllergenIcon(code)}</span> {allergenTranslations.names[code] || code}
                             </span>
                           ))}
                         </div>
@@ -266,7 +266,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                     key={code}
                     className="flex items-center gap-3"
                   >
-                    <span className="text-xl">{allergen?.icon || "⚠️"}</span>
+                    <span className="text-xl" role="img" aria-label={allergenTranslations.names[code] || code}>{allergen?.icon || "⚠️"}</span>
                     <span className="text-sm text-black">
                       {allergenTranslations.names[code] || code}
                     </span>

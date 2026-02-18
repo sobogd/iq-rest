@@ -122,6 +122,7 @@ model Restaurant {
   reservations Reservation[]
 
   @@index([companyId])
+  @@index([slug])
   @@map("restaurants")
 }
 

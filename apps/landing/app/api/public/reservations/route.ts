@@ -1,5 +1,34 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { z } from "zod";
+
+// Simple in-memory rate limiter (per IP, 5 requests per minute)
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 60_000;
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT;
+}
+
+const reservationSchema = z.object({
+  restaurantId: z.string().min(1),
+  tableId: z.string().optional(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date format"),
+  startTime: z.string().regex(/^\d{2}:\d{2}$/, "Invalid time format"),
+  duration: z.number().int().min(15).max(480).optional(),
+  guestName: z.string().trim().min(1).max(100),
+  guestEmail: z.string().trim().email().max(200),
+  guestsCount: z.number().int().min(1).max(50),
+  notes: z.string().max(500).optional(),
+});
 
 // Convert time string "HH:MM" to minutes from midnight
 function timeToMinutes(time: string): number {
@@ -34,7 +63,26 @@ function isTableBooked(
 
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json();
+    // Rate limiting
+    const ip =
+      request.cookies.get("geo_ip")?.value ||
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      "unknown";
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
+    const body = await request.json();
+    const parsed = reservationSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: parsed.error.issues[0]?.message || "Invalid input" },
+        { status: 400 }
+      );
+    }
 
     const {
       restaurantId,
@@ -46,15 +94,7 @@ export async function POST(request: NextRequest) {
       guestEmail,
       guestsCount,
       notes,
-    } = data;
-
-    // Validate required fields
-    if (!restaurantId || !date || !startTime || !guestName || !guestEmail || !guestsCount) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
-    }
+    } = parsed.data;
 
     // Get restaurant and check if reservations are enabled
     const restaurant = await prisma.restaurant.findUnique({
@@ -83,6 +123,13 @@ export async function POST(request: NextRequest) {
 
     // Parse date
     const reservationDate = new Date(date);
+    if (isNaN(reservationDate.getTime())) {
+      return NextResponse.json(
+        { error: "Invalid date" },
+        { status: 400 }
+      );
+    }
+
     const slotDuration = duration || restaurant.reservationSlotMinutes;
 
     // Get all active tables that can accommodate the guests
@@ -170,9 +217,6 @@ export async function POST(request: NextRequest) {
         status,
       },
     });
-
-    // TODO: Send confirmation email to guest
-    // TODO: If manual mode, send notification email to restaurant owner
 
     return NextResponse.json(reservation, { status: 201 });
   } catch (error) {

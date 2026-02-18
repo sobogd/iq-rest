@@ -57,10 +57,10 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
   const { preview } = await searchParams;
   const isPreview = preview === "1";
   const previewParam = isPreview ? "?preview=1" : "";
+  if (!isPreview) trackPageView(slug, "home", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
-    ...(!isPreview ? [trackPageView(slug, "home", locale)] : []),
   ]);
 
   if (!restaurant) {
@@ -80,6 +80,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
               muted
               loop
               playsInline
+              preload="metadata"
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (

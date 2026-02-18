@@ -3,11 +3,10 @@ import { prisma } from "@/lib/prisma";
 
 export async function trackPageView(slug: string, page: string, language: string) {
   try {
-    const cookieStore = await cookies();
+    const [cookieStore, headerStore] = await Promise.all([cookies(), headers()]);
     const sessionId = cookieStore.get("sqr_session_id")?.value;
     if (!sessionId) return;
 
-    const headerStore = await headers();
     const userAgent = headerStore.get("user-agent") || null;
     const referer = headerStore.get("referer") || null;
     const ip = cookieStore.get("geo_ip")?.value || null;
@@ -30,7 +29,7 @@ export async function trackPageView(slug: string, page: string, language: string
         ip,
       },
     });
-  } catch (error) {
-    console.error("Track page view error:", error);
+  } catch {
+    // Silently fail - tracking should never break the page
   }
 }

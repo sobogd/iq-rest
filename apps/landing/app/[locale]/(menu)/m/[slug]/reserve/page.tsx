@@ -40,10 +40,10 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
   const { slug, locale } = await params;
   const { preview } = await searchParams;
   const isPreview = preview === "1";
+  if (!isPreview) trackPageView(slug, "reserve", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicReserve"),
-    ...(!isPreview ? [trackPageView(slug, "reserve", locale)] : []),
   ]);
 
   if (!restaurant) {

@@ -47,6 +47,10 @@ export function MenuImage({ src, alt, canLoad, onLoaded }: MenuImageProps) {
     onLoaded();
   };
 
+  const handleError = () => {
+    onLoaded(); // Advance queue even on error
+  };
+
   return (
     <div
       ref={containerRef}
@@ -72,6 +76,7 @@ export function MenuImage({ src, alt, canLoad, onLoaded }: MenuImageProps) {
           }`}
           sizes="(max-width: 440px) 100vw, 440px"
           onLoad={handleLoad}
+          onError={handleError}
         />
       )}
     </div>

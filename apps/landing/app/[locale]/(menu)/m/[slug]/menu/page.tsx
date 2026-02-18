@@ -68,10 +68,10 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
   const { slug, locale } = await params;
   const { preview } = await searchParams;
   const isPreview = preview === "1";
+  if (!isPreview) trackPageView(slug, "menu", locale).catch(() => {});
   const [data, t] = await Promise.all([
     getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),
-    ...(!isPreview ? [trackPageView(slug, "menu", locale)] : []),
   ]);
 
   if (!data) {

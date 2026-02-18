@@ -97,14 +97,19 @@ export function getCurrencySymbol(code: string): string {
  * @param currencyCode - ISO 4217 currency code (e.g., "EUR", "USD")
  * @returns Formatted price string (e.g., "€12.50", "$12.50")
  */
+// Currencies that don't use decimal places
+const ZERO_DECIMAL_CURRENCIES = ["JPY", "KRW", "VND", "CLP", "ISK", "HUF", "XOF", "XAF"];
+
 export function formatPrice(amount: number, currencyCode: string = "EUR"): string {
   const currency = getCurrency(currencyCode);
 
   // For currencies that typically show symbol after the number
   const symbolAfter = ["PLN", "CZK", "HUF", "SEK", "NOK", "DKK", "ISK"].includes(currencyCode);
 
-  // Format number with 2 decimal places
-  const formattedAmount = amount.toFixed(2);
+  // Zero-decimal currencies don't show decimals
+  const formattedAmount = ZERO_DECIMAL_CURRENCIES.includes(currencyCode)
+    ? Math.round(amount).toString()
+    : amount.toFixed(2);
 
   if (symbolAfter) {
     return `${formattedAmount} ${currency.symbol}`;

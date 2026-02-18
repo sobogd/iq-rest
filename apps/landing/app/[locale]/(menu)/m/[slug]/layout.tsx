@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
 
@@ -43,6 +44,32 @@ async function checkAdStatus(slug: string): Promise<boolean> {
   } catch {
     return false;
   }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const restaurant = await prisma.restaurant.findFirst({
+    where: { slug },
+    select: { title: true, description: true, source: true },
+  });
+
+  if (!restaurant) return {};
+
+  return {
+    title: restaurant.title,
+    description: restaurant.description || `${restaurant.title} — Menu`,
+    openGraph: {
+      title: restaurant.title,
+      description: restaurant.description || `${restaurant.title} — Menu`,
+      ...(restaurant.source && !restaurant.source.match(/\.(mp4|webm|mov)$/i)
+        ? { images: [{ url: restaurant.source }] }
+        : {}),
+    },
+  };
 }
 
 interface MenuLayoutProps {
