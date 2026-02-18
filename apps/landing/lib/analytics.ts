@@ -2,11 +2,6 @@
 
 const SESSION_ID_KEY = "analytics_session_id";
 
-interface GeoData {
-  country?: string;
-  city?: string;
-}
-
 function getSessionId(): string {
   if (typeof window === "undefined") return "";
 
@@ -24,37 +19,35 @@ function getSessionId(): string {
   return sessionId;
 }
 
+function setSessionId(id: string) {
+  if (typeof window !== "undefined") {
+    sessionStorage.setItem(SESSION_ID_KEY, id);
+  }
+}
+
 function isTrackingDisabled(): boolean {
   if (typeof window === "undefined") return true;
   return localStorage.getItem("analytics_disabled") === "true";
 }
 
-// Get geo data from Cloudflare cookies (set by middleware)
-function getGeoFromCookies(): GeoData | null {
-  if (typeof document === "undefined") return null;
-
-  const cookies = document.cookie.split("; ");
-  const geoData: GeoData = {};
-
-  for (const cookie of cookies) {
-    const [name, value] = cookie.split("=");
-    if (name === "geo_country" && value) {
-      geoData.country = decodeURIComponent(value);
-    } else if (name === "geo_city" && value) {
-      geoData.city = decodeURIComponent(value);
-    }
-  }
-
-  return geoData.country || geoData.city ? geoData : null;
+// Extract gclid and keyword from current URL params (if present)
+function getAdParams(): { gclid?: string; keyword?: string } | undefined {
+  if (typeof window === "undefined") return undefined;
+  const params = new URLSearchParams(window.location.search);
+  const gclid = params.get("gclid");
+  const keyword = params.get("kw");
+  if (!gclid && !keyword) return undefined;
+  return {
+    ...(gclid && { gclid }),
+    ...(keyword && { keyword }),
+  };
 }
 
-function trackEvent(event: string, meta?: Record<string, unknown>) {
+function trackEvent(event: string) {
   if (typeof window === "undefined" || isTrackingDisabled()) return;
 
   const sessionId = getSessionId();
-  const page = window.location.pathname;
-  const userAgent = navigator.userAgent;
-  const geoData = getGeoFromCookies();
+  const adParams = getAdParams();
 
   fetch("/api/analytics/event", {
     method: "POST",
@@ -62,12 +55,7 @@ function trackEvent(event: string, meta?: Record<string, unknown>) {
     body: JSON.stringify({
       event,
       sessionId,
-      page,
-      userAgent,
-      meta: {
-        ...meta,
-        ...(geoData && { geo: geoData }),
-      },
+      ...adParams,
     }),
   }).catch(() => {
     // Silently fail - analytics should never break the app
@@ -95,28 +83,22 @@ export function linkSession(userId: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sessionId, userId }),
-  }).catch(() => {
-    // Silently fail
-  });
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.sessionId && data.sessionId !== sessionId) {
+        setSessionId(data.sessionId);
+      }
+    })
+    .catch(() => {
+      // Silently fail
+    });
 }
 
 // Page view events
 export const page = {
   view: (pageName: string) => {
-    // Collect all query params
-    let queryParams: Record<string, string> | undefined;
-    if (typeof window !== "undefined" && window.location.search) {
-      const params = new URLSearchParams(window.location.search);
-      const paramsObj: Record<string, string> = {};
-      params.forEach((value, key) => {
-        paramsObj[key] = value;
-      });
-      if (Object.keys(paramsObj).length > 0) {
-        queryParams = paramsObj;
-      }
-    }
-
-    trackEvent(`page_view_${pageName.replace(/-/g, "_")}`, queryParams ? { params: queryParams } : undefined);
+    trackEvent(`page_view_${pageName.replace(/-/g, "_")}`);
   },
 };
 

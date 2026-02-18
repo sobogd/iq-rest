@@ -7,8 +7,6 @@ import { uploadClickConversion } from "@/lib/google-ads";
 interface AdUserRow {
   gclid: string;
   keyword: string | null;
-  match_type: string | null;
-  campaign: string | null;
   country: string | null;
   session_id: string;
   first_seen: Date;
@@ -37,81 +35,47 @@ export async function GET(request: NextRequest) {
 
     const [adUsers, countResult] = await Promise.all([
       prisma.$queryRaw<AdUserRow[]>`
-        WITH gclid_sessions AS (
-          SELECT DISTINCT ON ("sessionId")
-            "sessionId" as session_id,
-            meta->'params'->>'gclid' as gclid,
-            meta->'params'->>'kw' as keyword,
-            meta->'params'->>'mt' as match_type,
-            meta->'params'->>'ad' as campaign,
-            meta->'geo'->>'country' as country,
-            "createdAt" as first_seen
-          FROM analytics_events
-          WHERE meta->'params'->>'gclid' IS NOT NULL
-          ORDER BY "sessionId", "createdAt" ASC
-        ),
-        session_users AS (
-          SELECT DISTINCT ON ("sessionId")
-            "sessionId" as session_id,
-            "userId" as user_id
-          FROM analytics_events
-          WHERE "userId" IS NOT NULL
-          ORDER BY "sessionId", "createdAt" ASC
-        ),
-        user_signups AS (
-          SELECT DISTINCT ON ("userId")
-            "userId" as user_id,
-            "createdAt" as signup_time
-          FROM analytics_events
-          WHERE event = 'auth_signup' AND "userId" IS NOT NULL
-          ORDER BY "userId", "createdAt" ASC
-        ),
-        uploaded_sessions AS (
+        WITH uploaded_sessions AS (
           SELECT DISTINCT "sessionId" as session_id
           FROM analytics_events
           WHERE event = 'gads_conversion_uploaded'
         ),
         qr_users AS (
-          SELECT DISTINCT "userId" as user_id
-          FROM analytics_events
-          WHERE event IN ('clicked_print_qr', 'clicked_download_qr', 'clicked_copy_url')
-            AND "userId" IS NOT NULL
+          SELECT DISTINCT s."userId" as user_id
+          FROM analytics_events ae
+          JOIN sessions s ON s.id = ae."sessionId"
+          WHERE ae.event IN ('clicked_print_qr', 'clicked_download_qr', 'clicked_copy_url')
+            AND s."userId" IS NOT NULL
         )
         SELECT
-          gs.gclid,
-          gs.keyword,
-          gs.match_type,
-          gs.campaign,
-          gs.country,
-          gs.session_id,
-          gs.first_seen,
+          s.gclid,
+          s.keyword,
+          s.country,
+          s.id as session_id,
+          s."createdAt" as first_seen,
           u.email,
-          COALESCE(us2.signup_time, u."createdAt") as signup_time,
+          u."createdAt" as signup_time,
           c."onboardingStep" as onboarding_step,
           r."checklistMenuEdited" as checklist_menu,
           r."checklistContactsSaved" as checklist_contacts,
           CASE WHEN qr.user_id IS NOT NULL THEN true ELSE false END as used_qr,
           CASE WHEN us.session_id IS NOT NULL THEN true ELSE false END as uploaded
-        FROM gclid_sessions gs
-        JOIN session_users su ON su.session_id = gs.session_id
-        JOIN users u ON u.id = su.user_id
-        LEFT JOIN user_signups us2 ON us2.user_id = su.user_id
-        LEFT JOIN uploaded_sessions us ON us.session_id = gs.session_id
-        LEFT JOIN users_companies uc ON uc."userId" = su.user_id
+        FROM sessions s
+        JOIN users u ON u.id = s."userId"
+        LEFT JOIN uploaded_sessions us ON us.session_id = s.id
+        LEFT JOIN users_companies uc ON uc."userId" = s."userId"
         LEFT JOIN companies c ON c.id = uc."companyId"
         LEFT JOIN restaurants r ON r."companyId" = c.id
-        LEFT JOIN qr_users qr ON qr.user_id = su.user_id
-        ORDER BY gs.first_seen DESC
+        LEFT JOIN qr_users qr ON qr.user_id = s."userId"
+        WHERE s.gclid IS NOT NULL
+          AND s."userId" IS NOT NULL
+        ORDER BY s."createdAt" DESC
         LIMIT ${limit} OFFSET ${offset}
       `,
       prisma.$queryRaw<{ count: bigint }[]>`
-        SELECT COUNT(DISTINCT ae."sessionId") as count
-        FROM analytics_events ae
-        WHERE ae.meta->'params'->>'gclid' IS NOT NULL
-          AND EXISTS (
-            SELECT 1 FROM analytics_events ae2
-            WHERE ae2."sessionId" = ae."sessionId" AND ae2."userId" IS NOT NULL
-          )
+        SELECT COUNT(*) as count
+        FROM sessions
+        WHERE gclid IS NOT NULL AND "userId" IS NOT NULL
       `,
     ]);
 
@@ -121,8 +85,8 @@ export async function GET(request: NextRequest) {
       adUsers: adUsers.map((row) => ({
         gclid: row.gclid,
         keyword: row.keyword,
-        matchType: row.match_type,
-        campaign: row.campaign,
+        matchType: null,
+        campaign: null,
         country: row.country,
         sessionId: row.session_id,
         firstSeen: row.first_seen,
@@ -188,10 +152,6 @@ export async function POST(request: NextRequest) {
         data: {
           event: "gads_conversion_uploaded",
           sessionId,
-          meta: {
-            gclid,
-            ...(conversionValue && { value: conversionValue }),
-          },
         },
       });
     }

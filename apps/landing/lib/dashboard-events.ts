@@ -342,26 +342,9 @@ export function track(event: DashboardEvent) {
     sessionStorage.setItem(SESSION_ID_KEY, sessionId);
   }
 
-  const page = window.location.pathname;
-  const userAgent = navigator.userAgent;
-
-  // Read geo from cookies (set by middleware)
-  const geo: Record<string, string> = {};
-  for (const c of document.cookie.split("; ")) {
-    const [n, v] = c.split("=");
-    if (n === "geo_country" && v) geo.country = decodeURIComponent(v);
-    else if (n === "geo_city" && v) geo.city = decodeURIComponent(v);
-  }
-
   fetch("/api/analytics/event", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      event,
-      sessionId,
-      page,
-      userAgent,
-      meta: Object.keys(geo).length > 0 ? { geo } : undefined,
-    }),
+    body: JSON.stringify({ event, sessionId }),
   }).catch(() => {});
 }

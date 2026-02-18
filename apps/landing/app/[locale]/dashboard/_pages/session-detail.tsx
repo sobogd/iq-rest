@@ -1,14 +1,8 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { RefreshCw, Trash2, Info } from "lucide-react";
+import { RefreshCw, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
@@ -18,9 +12,6 @@ interface AnalyticsEvent {
   id: string;
   event: string;
   sessionId: string;
-  userId: string | null;
-  page: string | null;
-  meta?: Record<string, unknown> | null;
   createdAt: string;
 }
 
@@ -40,39 +31,6 @@ function formatTimeDiff(date1: string, date2: string): string {
   const days = Math.floor(diff / 86400);
   const hours = Math.round((diff % 86400) / 3600);
   return hours > 0 ? `${days}d ${hours}h` : `${days}d`;
-}
-
-function formatMeta(meta: Record<string, unknown>): React.ReactNode[] {
-  const lines: React.ReactNode[] = [];
-  const formatValue = (prefix: string, obj: Record<string, unknown>) => {
-    for (const [key, value] of Object.entries(obj)) {
-      if (value && typeof value === "object" && !Array.isArray(value)) {
-        formatValue(`${prefix} ${key.charAt(0).toUpperCase() + key.slice(1)}`, value as Record<string, unknown>);
-      } else if (value !== null && value !== undefined) {
-        const label = `${prefix} ${key.charAt(0).toUpperCase() + key.slice(1)}`.trim();
-        lines.push(
-          <div key={label} className="flex gap-2">
-            <span className="text-muted-foreground">{label}:</span>
-            <span>{String(value)}</span>
-          </div>
-        );
-      }
-    }
-  };
-  for (const [key, value] of Object.entries(meta)) {
-    if (value && typeof value === "object" && !Array.isArray(value)) {
-      formatValue(key.charAt(0).toUpperCase() + key.slice(1), value as Record<string, unknown>);
-    } else if (value !== null && value !== undefined) {
-      const label = key.charAt(0).toUpperCase() + key.slice(1);
-      lines.push(
-        <div key={label} className="flex gap-2">
-          <span className="text-muted-foreground">{label}:</span>
-          <span>{String(value)}</span>
-        </div>
-      );
-    }
-  }
-  return lines;
 }
 
 function formatEventName(event: string): string {
@@ -105,7 +63,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const [adValues, setAdValues] = useState<string | undefined>();
   const [userAgent, setUserAgent] = useState<string | null>(null);
   const [deleting, setDeleting] = useState(false);
-  const [detailEvent, setDetailEvent] = useState<AnalyticsEvent | null>(null);
 
   const copyToClipboard = useCallback((text: string) => {
     const ta = document.createElement("textarea");
@@ -212,7 +169,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               {events.map((event, index) => {
                 const prevEvent = index < events.length - 1 ? events[index + 1] : null;
                 const timeDiff = prevEvent ? formatTimeDiff(event.createdAt, prevEvent.createdAt) : null;
-                const hasDetails = (event.meta && Object.keys(event.meta).length > 0) || event.page;
 
                 return (
                   <div key={event.id}>
@@ -233,14 +189,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                           {formatEventName(event.event)}
                         </p>
                       </div>
-                      {hasDetails && (
-                        <button
-                          className="shrink-0 p-1 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-                          onClick={() => setDetailEvent(event)}
-                        >
-                          <Info className="h-4 w-4" />
-                        </button>
-                      )}
                     </div>
                     {timeDiff && (
                       <div className="flex justify-center py-1">
@@ -268,33 +216,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
         </div>
       </div>
 
-      {/* Event Detail Modal */}
-      <Dialog open={!!detailEvent} onOpenChange={(open) => !open && setDetailEvent(null)}>
-        <DialogContent className="max-w-sm">
-          <DialogHeader>
-            <DialogTitle>{detailEvent && formatEventName(detailEvent.event)}</DialogTitle>
-          </DialogHeader>
-          {detailEvent && (
-            <div className="space-y-2 text-sm">
-              <div className="flex gap-2">
-                <span className="text-muted-foreground">Time:</span>
-                <span className="font-mono">{formatDateUTC(detailEvent.createdAt)}</span>
-              </div>
-              {detailEvent.page && (
-                <div className="flex gap-2">
-                  <span className="text-muted-foreground">Page:</span>
-                  <span className="break-all">{detailEvent.page}</span>
-                </div>
-              )}
-              {detailEvent.meta && Object.keys(detailEvent.meta).length > 0 && (
-                <div className="space-y-0.5 text-xs pt-1 border-t">
-                  {formatMeta(detailEvent.meta)}
-                </div>
-              )}
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }

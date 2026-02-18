@@ -2,10 +2,17 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
 
+// Conversion event → Session flag mapping
+const CONVERSION_FLAGS: Record<string, string> = {
+  auth_signup: "wasRegistered",
+  clicked_onboarding_continue: "namedRestaurant",
+  clicked_onboarding_type: "selectedType",
+};
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { event, sessionId, page, userAgent, meta } = body;
+    const { event, sessionId, gclid, keyword } = body;
 
     if (!event || !sessionId) {
       return NextResponse.json(
@@ -14,36 +21,72 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Parse User-Agent for device info (prefer client-sent, fallback to request header)
-    const ua = userAgent || request.headers.get("user-agent") || null;
-    let device = null;
-    if (ua) {
-      const result = UAParser(ua);
-      device = {
-        browser: result.browser.name,
-        os: result.os.name,
-        device: result.device.type || "desktop",
-      };
-    }
-
-    // Capture IP from request headers (Cloudflare / proxy)
+    // Extract technical data from request
+    const ua = request.headers.get("user-agent") || null;
     const ip =
       request.headers.get("cf-connecting-ip") ||
       request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
       null;
+    const country = request.cookies.get("geo_country")?.value || null;
 
-    await prisma.analyticsEvent.create({
-      data: {
-        event,
-        sessionId,
-        page: page || null,
-        meta: {
-          ...meta,
-          ...(device && { device }),
-          ...(ua && { userAgent: ua }),
-          ...(ip && { ip }),
+    // Parse UA
+    let browser: string | null = null;
+    let device: string | null = null;
+    if (ua) {
+      const result = UAParser(ua);
+      browser = result.browser.name || null;
+      device = result.device.type || "desktop";
+    }
+
+    // Find-or-create Session
+    const existing = await prisma.session.findUnique({
+      where: { id: sessionId },
+      select: { id: true, country: true, gclid: true, keyword: true },
+    });
+
+    if (existing) {
+      // Update last-touch fields, preserve first-touch
+      await prisma.session.update({
+        where: { id: sessionId },
+        data: {
+          userAgent: ua,
+          browser,
+          device,
+          ip,
+          // First-touch: only set if currently null
+          ...(existing.country === null && country ? { country } : {}),
+          ...(existing.gclid === null && gclid ? { gclid } : {}),
+          ...(existing.keyword === null && keyword ? { keyword } : {}),
         },
-      },
+      });
+    } else {
+      // Create new session with all fields
+      await prisma.session.create({
+        data: {
+          id: sessionId,
+          country,
+          gclid: gclid || null,
+          keyword: keyword || null,
+          userAgent: ua,
+          browser,
+          device,
+          ip,
+        },
+      });
+    }
+
+    // Check conversion flags
+    const flagField = CONVERSION_FLAGS[event];
+    if (flagField) {
+      await prisma.session.update({
+        where: { id: sessionId },
+        data: { [flagField]: true },
+      });
+    }
+
+    // Create AnalyticsEvent
+    await prisma.analyticsEvent.create({
+      data: { event, sessionId },
     });
 
     return NextResponse.json({ success: true });

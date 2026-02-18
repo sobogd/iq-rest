@@ -123,6 +123,10 @@ export async function POST(request: NextRequest) {
       where: { companyId, checklistMenuEdited: false },
       data: { checklistMenuEdited: true },
     }).catch(() => {});
+    prisma.session.updateMany({
+      where: { companyId, modifiedMenu: false },
+      data: { modifiedMenu: true },
+    }).catch(() => {});
 
     return NextResponse.json(
       { ...item, price: Number(item.price) },

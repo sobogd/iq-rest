@@ -21,11 +21,17 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    const deleted = await prisma.analyticsEvent.deleteMany({
-      where: { sessionId },
+    // Cascade will delete all events
+    await prisma.session.delete({
+      where: { id: sessionId },
+    }).catch(() => {
+      // If session doesn't exist, delete orphaned events
+      return prisma.analyticsEvent.deleteMany({
+        where: { sessionId },
+      });
     });
 
-    return NextResponse.json({ success: true, deleted: deleted.count });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Admin delete session error:", error);
     return NextResponse.json(
@@ -53,149 +59,109 @@ export async function GET(request: NextRequest) {
 
     // Get events for a specific session
     if (sessionId) {
-      const events = await prisma.analyticsEvent.findMany({
-        where: { sessionId },
-        orderBy: { createdAt: "desc" },
-        select: {
-          id: true,
-          event: true,
-          sessionId: true,
-          userId: true,
-          page: true,
-          meta: true,
-          createdAt: true,
+      const session = await prisma.session.findUnique({
+        where: { id: sessionId },
+        include: {
+          events: {
+            orderBy: { createdAt: "desc" },
+            select: {
+              id: true,
+              event: true,
+              sessionId: true,
+              createdAt: true,
+            },
+          },
         },
       });
 
-      // Determine source for this session
-      const adParamKeys = ["ad", "kw", "mt"];
-      let source = "Direct";
-      let adValues: string | undefined;
+      const source = session?.gclid ? "Ads" : "Direct";
 
-      for (const evt of events) {
-        const meta = evt.meta as { params?: Record<string, string> } | null;
-        if (meta?.params) {
-          const hasAdParam = adParamKeys.some(p => p in meta.params!) || "gclid" in meta.params;
-          if (hasAdParam) {
-            source = "Ads";
-            const values = adParamKeys
-              .filter(p => meta.params![p])
-              .map(p => meta.params![p]);
-            if (values.length > 0) {
-              adValues = values.join(", ");
-            }
-            break;
-          }
-        }
-      }
-
-      // Get userAgent from PageView for this session
-      const pageView = await prisma.pageView.findFirst({
-        where: { sessionId, userAgent: { not: null } },
-        select: { userAgent: true },
+      return NextResponse.json({
+        events: session?.events || [],
+        source,
+        adValues: null,
+        userAgent: session?.userAgent || null,
       });
-
-      return NextResponse.json({ events, source, adValues, userAgent: pageView?.userAgent || null });
     }
 
     // Get unique sessions (optionally filtered by event)
     const dateFrom = from ? new Date(from) : new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     const dateTo = to ? new Date(to) : new Date();
 
-    {
-      const sessions = await prisma.analyticsEvent.findMany({
+    // Build session query conditions
+    const sessionWhere: Record<string, unknown> = {
+      createdAt: { gte: dateFrom, lte: dateTo },
+    };
+
+    if (country) {
+      sessionWhere.country = country;
+    }
+
+    // If filtering by event, get sessionIds that match first
+    let sessionIdFilter: string[] | undefined;
+    if (event) {
+      const matchingSessions = await prisma.analyticsEvent.findMany({
         where: {
-          ...(event && { event }),
+          event,
           createdAt: { gte: dateFrom, lte: dateTo },
         },
         distinct: ["sessionId"],
-        orderBy: { createdAt: "desc" },
+        select: { sessionId: true },
         take: 100,
-        select: {
-          sessionId: true,
-          userId: true,
-          createdAt: true,
-          meta: true,
-        },
       });
-
-      // Check source and session type for each session
-      const sessionIds = sessions.map(s => s.sessionId);
-      const allEventsForSessions = await prisma.analyticsEvent.findMany({
-        where: {
-          sessionId: { in: sessionIds },
-        },
-        select: {
-          sessionId: true,
-          event: true,
-          meta: true,
-        },
-      });
-
-      // Determine source, type, event count, and geo for each session
-      const sessionSourceMap = new Map<string, { source: string; adValues?: string }>();
-      const sessionTypeMap = new Map<string, "signup" | "dashboard" | null>();
-      const sessionEventCount = new Map<string, number>();
-      const sessionGeoMap = new Map<string, { country?: string; city?: string }>();
-      const adParams = ["ad", "kw", "mt"];
-
-      for (const evt of allEventsForSessions) {
-        sessionEventCount.set(evt.sessionId, (sessionEventCount.get(evt.sessionId) || 0) + 1);
-        // Track ad source
-        const meta = evt.meta as { params?: Record<string, string>; geo?: { country?: string; city?: string } } | null;
-        if (meta?.params) {
-          const hasAdParam = adParams.some(p => p in meta.params!) || "gclid" in meta.params;
-          if (hasAdParam && !sessionSourceMap.has(evt.sessionId)) {
-            const values = adParams
-              .filter(p => meta.params![p])
-              .map(p => meta.params![p]);
-            sessionSourceMap.set(evt.sessionId, {
-              source: "Ads",
-              adValues: values.length > 0 ? values.join(", ") : undefined,
-            });
-          }
-        }
-
-        // Track geo: use first event that has country data
-        if (meta?.geo?.country && !sessionGeoMap.has(evt.sessionId)) {
-          sessionGeoMap.set(evt.sessionId, meta.geo);
-        }
-
-        // Track session type: signup takes priority over dashboard
-        const currentType = sessionTypeMap.get(evt.sessionId);
-        if (evt.event === "auth_signup") {
-          sessionTypeMap.set(evt.sessionId, "signup");
-        } else if (evt.event.startsWith("dashboard_") && currentType !== "signup") {
-          sessionTypeMap.set(evt.sessionId, "dashboard");
-        }
+      sessionIdFilter = matchingSessions.map(s => s.sessionId);
+      if (sessionIdFilter.length === 0) {
+        return NextResponse.json({ sessions: [] });
       }
-
-      let sessionsWithSource = sessions.map(s => {
-        const sourceInfo = sessionSourceMap.get(s.sessionId);
-        const geo = sessionGeoMap.get(s.sessionId);
-        const currentMeta = s.meta as Record<string, unknown> | null;
-        // Enrich meta with geo from any event in the session if missing
-        const meta = currentMeta?.geo ? currentMeta : geo ? { ...currentMeta, geo } : currentMeta;
-        return {
-          ...s,
-          meta,
-          source: sourceInfo?.source || "Direct",
-          adValues: sourceInfo?.adValues,
-          sessionType: sessionTypeMap.get(s.sessionId) || null,
-          eventCount: sessionEventCount.get(s.sessionId) || 0,
-        };
-      });
-
-      // Filter by country if specified
-      if (country) {
-        sessionsWithSource = sessionsWithSource.filter(s => {
-          const meta = s.meta as { geo?: { country?: string } } | null;
-          return meta?.geo?.country === country;
-        });
-      }
-
-      return NextResponse.json({ sessions: sessionsWithSource });
+      sessionWhere.id = { in: sessionIdFilter };
     }
+
+    const sessions = await prisma.session.findMany({
+      where: sessionWhere,
+      orderBy: { createdAt: "desc" },
+      take: 100,
+      select: {
+        id: true,
+        userId: true,
+        country: true,
+        gclid: true,
+        browser: true,
+        device: true,
+        ip: true,
+        createdAt: true,
+        _count: { select: { events: true } },
+      },
+    });
+
+    // Determine session type by looking at events
+    const sessionIds = sessions.map(s => s.id);
+    const eventTypes = await prisma.analyticsEvent.findMany({
+      where: { sessionId: { in: sessionIds } },
+      select: { sessionId: true, event: true },
+    });
+
+    const sessionTypeMap = new Map<string, "signup" | "dashboard" | null>();
+    for (const evt of eventTypes) {
+      const currentType = sessionTypeMap.get(evt.sessionId);
+      if (evt.event === "auth_signup") {
+        sessionTypeMap.set(evt.sessionId, "signup");
+      } else if (evt.event.startsWith("showed_") && currentType !== "signup") {
+        sessionTypeMap.set(evt.sessionId, "dashboard");
+      }
+    }
+
+    const sessionsWithSource = sessions.map(s => ({
+      sessionId: s.id,
+      userId: s.userId,
+      createdAt: s.createdAt,
+      meta: s.country ? { geo: { country: s.country } } : null,
+      source: s.gclid ? "Ads" : "Direct",
+      adValues: undefined,
+      sessionType: sessionTypeMap.get(s.id) || null,
+      eventCount: s._count.events,
+    }));
+
+    return NextResponse.json({ sessions: sessionsWithSource });
   } catch (error) {
     console.error("Admin sessions error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

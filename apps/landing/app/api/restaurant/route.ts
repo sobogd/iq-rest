@@ -191,11 +191,19 @@ export async function POST(request: NextRequest) {
           where: { companyId, checklistContactsSaved: false },
           data: { checklistContactsSaved: true },
         }).catch(() => {});
+        prisma.session.updateMany({
+          where: { companyId, modifiedContacts: false },
+          data: { modifiedContacts: true },
+        }).catch(() => {});
       }
       if (isBrandSave) {
         prisma.restaurant.updateMany({
           where: { companyId, checklistBrandCustomized: false },
           data: { checklistBrandCustomized: true },
+        }).catch(() => {});
+        prisma.session.updateMany({
+          where: { companyId, modifiedDesign: false },
+          data: { modifiedDesign: true },
         }).catch(() => {});
       }
 

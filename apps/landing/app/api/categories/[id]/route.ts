@@ -76,6 +76,10 @@ export async function PUT(
       where: { companyId, checklistMenuEdited: false },
       data: { checklistMenuEdited: true },
     }).catch(() => {});
+    prisma.session.updateMany({
+      where: { companyId, modifiedMenu: false },
+      data: { modifiedMenu: true },
+    }).catch(() => {});
 
     return NextResponse.json(category);
   } catch (error) {
@@ -133,6 +137,10 @@ export async function PATCH(
     prisma.restaurant.updateMany({
       where: { companyId, checklistMenuEdited: false },
       data: { checklistMenuEdited: true },
+    }).catch(() => {});
+    prisma.session.updateMany({
+      where: { companyId, modifiedMenu: false },
+      data: { modifiedMenu: true },
     }).catch(() => {});
 
     return NextResponse.json({ success: true, ...category });

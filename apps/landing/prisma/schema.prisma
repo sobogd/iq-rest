@@ -263,18 +263,55 @@ model SupportMessage {
   @@map("support_messages")
 }
 
+model Session {
+  id        String   @id @default(cuid())
+
+  // Attribution (first-touch — written once, never overwritten)
+  country   String?
+  gclid     String?   // Google Click ID
+  keyword   String?   // Google Ads keyword
+
+  // Technical (last-touch — always updated to latest value)
+  userAgent String?
+  browser   String?
+  device    String?
+  ip        String?
+
+  // User binding (set on registration/login)
+  userId    String?
+  companyId String?
+
+  // Conversion flags (set once to true, never reset)
+  wasRegistered    Boolean @default(false)
+  namedRestaurant  Boolean @default(false)
+  selectedType     Boolean @default(false)
+  modifiedMenu     Boolean @default(false)
+  modifiedContacts Boolean @default(false)
+  modifiedDesign   Boolean @default(false)
+  reached50Views   Boolean @default(false)
+  paidSubscription Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  events AnalyticsEvent[]
+
+  @@index([userId])
+  @@index([companyId])
+  @@index([createdAt])
+  @@map("sessions")
+}
+
 model AnalyticsEvent {
   id        String   @id @default(cuid())
   event     String
   sessionId String
-  userId    String?
-  page      String?
-  meta      Json?
   createdAt DateTime @default(now())
+
+  session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 
   @@index([event, createdAt])
   @@index([sessionId])
-  @@index([userId])
   @@index([createdAt])
   @@map("analytics_events")
 }

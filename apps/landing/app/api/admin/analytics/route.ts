@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
-import { Prisma } from "@prisma/client";
 
 // Funnel 1: Landing page section views
 const SECTION_FUNNEL = [
@@ -93,11 +92,9 @@ export async function GET(request: NextRequest) {
     let dateTo: Date;
 
     if (fromParam && toParam) {
-      // Use exact timestamps from params (supports minute-level filtering)
       dateFrom = new Date(fromParam);
       dateTo = new Date(toParam);
     } else {
-      // Default: last 30 days
       dateTo = new Date();
       dateTo.setHours(23, 59, 59, 999);
 
@@ -114,7 +111,7 @@ export async function GET(request: NextRequest) {
       getFunnelData(CONVERSION_FUNNEL, dateFrom, dateTo),
     ]);
 
-    // Get recent events (last 100)
+    // Get recent events (last 20)
     const recentEvents = await prisma.analyticsEvent.findMany({
       where: {
         createdAt: { gte: dateFrom, lte: dateTo },
@@ -125,8 +122,6 @@ export async function GET(request: NextRequest) {
         id: true,
         event: true,
         sessionId: true,
-        userId: true,
-        page: true,
         createdAt: true,
       },
     });
@@ -136,13 +131,11 @@ export async function GET(request: NextRequest) {
       where: { createdAt: { gte: dateFrom, lte: dateTo } },
     });
 
-    const uniqueSessions = await prisma.analyticsEvent.groupBy({
-      by: ["sessionId"],
+    const uniqueSessions = await prisma.session.count({
       where: { createdAt: { gte: dateFrom, lte: dateTo } },
     });
 
-    const linkedSessions = await prisma.analyticsEvent.groupBy({
-      by: ["userId"],
+    const linkedSessions = await prisma.session.count({
       where: {
         userId: { not: null },
         createdAt: { gte: dateFrom, lte: dateTo },
@@ -161,62 +154,45 @@ export async function GET(request: NextRequest) {
       LIMIT 60
     `;
 
-    // Get country and device stats from meta field
-    const eventsWithMeta = await prisma.analyticsEvent.findMany({
+    // Get geo and device stats from Session table
+    const sessionsInRange = await prisma.session.findMany({
       where: {
         createdAt: { gte: dateFrom, lte: dateTo },
-        meta: { not: Prisma.JsonNull },
       },
       select: {
-        sessionId: true,
-        meta: true,
+        country: true,
+        device: true,
+        browser: true,
       },
-      distinct: ["sessionId"], // One entry per session
     });
 
-    // Aggregate by country
     const countryMap = new Map<string, number>();
     const deviceMap = new Map<string, number>();
     const browserMap = new Map<string, number>();
-    const osMap = new Map<string, number>();
 
-    for (const event of eventsWithMeta) {
-      const meta = event.meta as {
-        geo?: { country?: string };
-        device?: { device?: string; browser?: string; os?: string };
-      } | null;
-
-      if (meta?.geo?.country) {
-        const country = meta.geo.country;
-        countryMap.set(country, (countryMap.get(country) || 0) + 1);
+    for (const s of sessionsInRange) {
+      if (s.country) {
+        countryMap.set(s.country, (countryMap.get(s.country) || 0) + 1);
       }
-
-      if (meta?.device) {
-        const { device, browser, os } = meta.device;
-        if (device) {
-          deviceMap.set(device, (deviceMap.get(device) || 0) + 1);
-        }
-        if (browser) {
-          browserMap.set(browser, (browserMap.get(browser) || 0) + 1);
-        }
-        if (os) {
-          osMap.set(os, (osMap.get(os) || 0) + 1);
-        }
+      if (s.device) {
+        deviceMap.set(s.device, (deviceMap.get(s.device) || 0) + 1);
+      }
+      if (s.browser) {
+        browserMap.set(s.browser, (browserMap.get(s.browser) || 0) + 1);
       }
     }
 
-    // Convert to sorted arrays
     const sortByCount = (map: Map<string, number>) =>
       Array.from(map.entries())
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 10); // Top 10
+        .slice(0, 10);
 
     const geoStats = {
       countries: sortByCount(countryMap),
       devices: sortByCount(deviceMap),
       browsers: sortByCount(browserMap),
-      os: sortByCount(osMap),
+      os: [] as { name: string; count: number }[],
     };
 
     // Get IPs with multiple sessions from PageView
@@ -241,8 +217,8 @@ export async function GET(request: NextRequest) {
       recentEvents,
       stats: {
         totalEvents,
-        uniqueSessions: uniqueSessions.length,
-        linkedSessions: linkedSessions.length,
+        uniqueSessions,
+        linkedSessions,
       },
       eventsByDay: eventsByDay.map((row) => ({
         date: row.date,

@@ -86,6 +86,14 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    // Check if company reached 50 views → set reached50Views on Session
+    if (currentMonthViews + 1 >= 50) {
+      prisma.session.updateMany({
+        where: { companyId: company.id, reached50Views: false },
+        data: { reached50Views: true },
+      }).catch(() => {});
+    }
+
     const response = NextResponse.json({
       success: true,
       showAd,
