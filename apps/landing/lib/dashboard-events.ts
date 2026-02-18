@@ -157,6 +157,19 @@ export enum DashboardEvent {
   CLICKED_AI_TRANSLATE = "clicked_ai_translate",
   CLICKED_AI_SUBSCRIBE = "clicked_ai_subscribe",
   CLICKED_AI_CANCEL = "clicked_ai_cancel",
+
+  // Errors
+  ERROR_VALIDATION = "error_validation",
+  ERROR_SAVE = "error_save",
+  ERROR_DELETE = "error_delete",
+  ERROR_FETCH = "error_fetch",
+  ERROR_SORT = "error_sort",
+  ERROR_TOGGLE = "error_toggle",
+  ERROR_CHECKOUT = "error_checkout",
+  ERROR_PORTAL = "error_portal",
+  ERROR_UPLOAD = "error_upload",
+  ERROR_OTP_SEND = "error_otp_send",
+  ERROR_OTP_VERIFY = "error_otp_verify",
 }
 
 // Human-readable labels for admin analytics display
@@ -180,7 +193,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_ONBOARDING_SCRATCH]: "Started From Scratch",
 
   // Home
-  [DashboardEvent.SHOWED_HOME]: "Showed Home",
+  [DashboardEvent.SHOWED_HOME]: "Showed Dashboard",
   [DashboardEvent.CLICKED_VIEW_MENU]: "Clicked View Menu",
   [DashboardEvent.CLICKED_HELP]: "Clicked Help",
   [DashboardEvent.CLICKED_CHECKLIST_NAME]: "Checklist: Name",
@@ -316,20 +329,34 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_AI_TRANSLATE]: "Clicked AI Translate",
   [DashboardEvent.CLICKED_AI_SUBSCRIBE]: "Clicked AI Subscribe",
   [DashboardEvent.CLICKED_AI_CANCEL]: "Clicked AI Cancel",
+
+  // Errors
+  [DashboardEvent.ERROR_VALIDATION]: "Error: Validation",
+  [DashboardEvent.ERROR_SAVE]: "Error: Save",
+  [DashboardEvent.ERROR_DELETE]: "Error: Delete",
+  [DashboardEvent.ERROR_FETCH]: "Error: Fetch",
+  [DashboardEvent.ERROR_SORT]: "Error: Sort",
+  [DashboardEvent.ERROR_TOGGLE]: "Error: Toggle",
+  [DashboardEvent.ERROR_CHECKOUT]: "Error: Checkout",
+  [DashboardEvent.ERROR_PORTAL]: "Error: Portal",
+  [DashboardEvent.ERROR_UPLOAD]: "Error: Upload",
+  [DashboardEvent.ERROR_OTP_SEND]: "Error: OTP Send",
+  [DashboardEvent.ERROR_OTP_VERIFY]: "Error: OTP Verify",
 };
 
-// Deduplicate: skip if the same event fired less than 1s ago
+// Deduplicate: skip if the same event+meta fired less than 1s ago
 const lastFired = new Map<string, number>();
 
-// Thin wrapper — fire-and-forget, no meta
-export function track(event: DashboardEvent) {
+// Thin wrapper — fire-and-forget, optional meta
+export function track(event: DashboardEvent, meta?: Record<string, string>) {
   if (typeof window === "undefined") return;
   if (typeof localStorage !== "undefined" && localStorage.getItem("analytics_disabled") === "true") return;
 
   const now = Date.now();
-  const last = lastFired.get(event);
+  const dedupKey = meta ? event + JSON.stringify(meta) : event;
+  const last = lastFired.get(dedupKey);
   if (last && now - last < 1000) return;
-  lastFired.set(event, now);
+  lastFired.set(dedupKey, now);
 
   const SESSION_ID_KEY = "analytics_session_id";
   let sessionId = sessionStorage.getItem(SESSION_ID_KEY);
@@ -347,6 +374,6 @@ export function track(event: DashboardEvent) {
   fetch("/api/analytics/event", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event, sessionId }),
+    body: JSON.stringify({ event, sessionId, ...(meta ? { meta } : {}) }),
   }).catch(() => {});
 }

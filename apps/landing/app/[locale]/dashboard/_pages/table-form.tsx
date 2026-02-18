@@ -93,6 +93,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
       );
     } catch (error) {
       console.error("Failed to fetch table:", error);
+      track(DashboardEvent.ERROR_FETCH, { page: "table" });
       toast.error(t("error"));
       router.push("/dashboard/tables");
     } finally {
@@ -106,11 +107,13 @@ export function TableFormPage({ id }: TableFormPageProps) {
 
     const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
     if (!allowedTypes.includes(file.type)) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "table", field: "image_type" });
       setValidationError("Invalid file type. Allowed: JPEG, PNG, WebP");
       return;
     }
 
     if (file.size > 5 * 1024 * 1024) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "table", field: "image_size" });
       setValidationError("Image must be less than 5MB");
       return;
     }
@@ -131,9 +134,11 @@ export function TableFormPage({ id }: TableFormPageProps) {
         setImageUrl(data.url);
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_UPLOAD, { page: "table" });
         setValidationError(data.error || "Failed to upload");
       }
     } catch {
+      track(DashboardEvent.ERROR_UPLOAD, { page: "table" });
       setValidationError("Failed to upload");
     } finally {
       setUploading(false);
@@ -164,9 +169,11 @@ export function TableFormPage({ id }: TableFormPageProps) {
         window.location.href = `/${locale}/dashboard/tables`;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_DELETE, { page: "table" });
         toast.error(data.error || t("error"));
       }
     } catch {
+      track(DashboardEvent.ERROR_DELETE, { page: "table" });
       toast.error(t("error"));
     } finally {
       setDeleting(false);
@@ -181,11 +188,13 @@ export function TableFormPage({ id }: TableFormPageProps) {
     const capacityValue = parseInt(capacity) || 0;
 
     if (numberValue < 1) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "table", field: "number" });
       setValidationError(t("tableNumber") + " must be at least 1");
       return;
     }
 
     if (capacityValue < 1) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "table", field: "capacity" });
       setValidationError(t("capacity") + " must be at least 1");
       return;
     }
@@ -225,9 +234,11 @@ export function TableFormPage({ id }: TableFormPageProps) {
         window.location.href = `/${locale}/dashboard/tables`;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "table" });
         toast.error(data.error || t("error"));
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "table" });
       toast.error(t("error"));
     } finally {
       setSaving(false);

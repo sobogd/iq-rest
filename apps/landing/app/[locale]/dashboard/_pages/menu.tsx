@@ -82,6 +82,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
         setItems((prev) =>
           prev.map((i) => (i.id === itemId ? { ...i, isActive: currentActive } : i))
         );
+        track(DashboardEvent.ERROR_TOGGLE, { page: "menu", entity: "item" });
         toast.error(tItems.updateError);
       } else {
         toast.success(newActive ? `${itemName} ${tItems.enabled}` : `${itemName} ${tItems.disabled}`);
@@ -90,6 +91,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
       setItems((prev) =>
         prev.map((i) => (i.id === itemId ? { ...i, isActive: currentActive } : i))
       );
+      track(DashboardEvent.ERROR_TOGGLE, { page: "menu", entity: "item" });
       toast.error(tItems.updateError);
     }
   }
@@ -134,9 +136,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
           })
         );
       } else {
+        track(DashboardEvent.ERROR_SORT, { page: "menu", entity: "category" });
         toast.error(tItems.sortError);
       }
     } catch {
+      track(DashboardEvent.ERROR_SORT, { page: "menu", entity: "category" });
       toast.error(tItems.sortError);
     } finally {
       setMoving(null);
@@ -182,9 +186,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
       if (res.ok) {
         setItems(newItems);
       } else {
+        track(DashboardEvent.ERROR_SORT, { page: "menu", entity: "item" });
         toast.error(tItems.sortError);
       }
     } catch {
+      track(DashboardEvent.ERROR_SORT, { page: "menu", entity: "item" });
       toast.error(tItems.sortError);
     } finally {
       setMoving(null);

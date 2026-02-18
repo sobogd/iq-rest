@@ -59,6 +59,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
         setTables((prev) =>
           prev.map((table) => (table.id === tableId ? { ...table, isActive: currentActive } : table))
         );
+        track(DashboardEvent.ERROR_TOGGLE, { page: "tables" });
         toast.error(t("error"));
       } else {
         toast.success(newActive ? `${t("table")} ${tableNumber} ${t("active").toLowerCase()}` : `${t("table")} ${tableNumber} ${t("inactive").toLowerCase()}`);
@@ -67,6 +68,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
       setTables((prev) =>
         prev.map((table) => (table.id === tableId ? { ...table, isActive: currentActive } : table))
       );
+      track(DashboardEvent.ERROR_TOGGLE, { page: "tables" });
       toast.error(t("error"));
     }
   }
@@ -115,9 +117,11 @@ export function TablesPage({ initialTables }: TablesPageProps) {
         toast.success(t("save"));
         setSortMode(false);
       } else {
+        track(DashboardEvent.ERROR_SORT, { page: "tables" });
         toast.error(t("error"));
       }
     } catch {
+      track(DashboardEvent.ERROR_SORT, { page: "tables" });
       toast.error(t("error"));
     } finally {
       setSavingSort(false);

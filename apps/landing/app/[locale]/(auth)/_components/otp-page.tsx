@@ -59,12 +59,14 @@ export function OtpPage({ email }: OtpPageProps) {
           window.location.href = `/${locale}/dashboard`;
         }
       } else {
+        track(DashboardEvent.ERROR_OTP_VERIFY);
         setErrorMessage(data.error || t("errors.verifyFailed"));
         setStatus("error");
         setOtp("");
         otpInputRef.current?.focus();
       }
     } catch {
+      track(DashboardEvent.ERROR_OTP_VERIFY);
       setErrorMessage(t("errors.verifyFailed"));
       setStatus("error");
       setOtp("");

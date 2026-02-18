@@ -72,6 +72,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
       }
     } catch (error) {
       console.error("Failed to fetch reservations:", error);
+      track(DashboardEvent.ERROR_FETCH, { page: "reservations" });
       toast.error(t("error"));
     }
   }, [t]);
@@ -141,12 +142,14 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
 
       if (!res.ok) {
         setReservations(prevReservations);
+        track(DashboardEvent.ERROR_SAVE, { page: "reservations" });
         toast.error(t("error"));
       } else {
         toast.success(status === "confirmed" ? t("confirmed") : t("cancelled"));
       }
     } catch {
       setReservations(prevReservations);
+      track(DashboardEvent.ERROR_SAVE, { page: "reservations" });
       toast.error(t("error"));
     } finally {
       setUpdating(null);

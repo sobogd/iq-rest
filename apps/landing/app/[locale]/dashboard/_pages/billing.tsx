@@ -155,10 +155,12 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
       if (data.url) {
         window.location.href = data.url;
       } else {
+        track(DashboardEvent.ERROR_CHECKOUT, { page: "billing" });
         toast.error(data.error || t("checkoutError"));
         setActionLoading(null);
       }
     } catch {
+      track(DashboardEvent.ERROR_CHECKOUT, { page: "billing" });
       toast.error(t("checkoutError"));
       setActionLoading(null);
     }
@@ -179,10 +181,12 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
       if (data.url) {
         window.location.href = data.url;
       } else {
+        track(DashboardEvent.ERROR_PORTAL, { page: "billing" });
         toast.error(data.error || t("portalError"));
         setActionLoading(null);
       }
     } catch {
+      track(DashboardEvent.ERROR_PORTAL, { page: "billing" });
       toast.error(t("portalError"));
       setActionLoading(null);
     }
@@ -260,7 +264,7 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
                   ) : (
                     <Button
                       size="sm"
-                      onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE); option.lookupKey && handleSubscribe(option.lookupKey); }}
+                      onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: option.plan }); option.lookupKey && handleSubscribe(option.lookupKey); }}
                       disabled={!!actionLoading}
                     >
                       {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

@@ -89,6 +89,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       );
     } catch (error) {
       console.error("Failed to fetch category:", error);
+      track(DashboardEvent.ERROR_FETCH, { page: "category" });
       toast.error(t.fetchError);
       router.push("/dashboard/menu");
     } finally {
@@ -117,9 +118,11 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
         window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_DELETE, { page: "category" });
         toast.error(data.error || t.deleteError);
       }
     } catch {
+      track(DashboardEvent.ERROR_DELETE, { page: "category" });
       toast.error(t.deleteError);
     } finally {
       setDeleting(false);
@@ -131,6 +134,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
     e.preventDefault();
 
     if (!name.trim()) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "category", field: "name" });
       setValidationError(t.nameRequired);
       return;
     }
@@ -167,9 +171,11 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
         window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "category" });
         toast.error(data.error || t.saveError);
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "category" });
       toast.error(t.saveError);
     } finally {
       setSaving(false);

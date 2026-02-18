@@ -111,9 +111,11 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
         });
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "reservation-settings" });
         toast.error(data.error || t("saveError"));
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "reservation-settings" });
       toast.error(t("saveError"));
     } finally {
       setSaving(false);

@@ -92,7 +92,7 @@ export async function GET(request: NextRequest) {
       const currentType = sessionTypeMap.get(evt.sessionId);
       if (evt.event === "auth_signup") {
         sessionTypeMap.set(evt.sessionId, "signup");
-      } else if (evt.event.startsWith("showed_") && currentType !== "signup") {
+      } else if (evt.event.startsWith("showed_") && evt.event !== "showed_login" && evt.event !== "showed_otp" && evt.event !== "showed_onboarding_name" && evt.event !== "showed_onboarding_type" && currentType !== "signup") {
         sessionTypeMap.set(evt.sessionId, "dashboard");
       }
     }

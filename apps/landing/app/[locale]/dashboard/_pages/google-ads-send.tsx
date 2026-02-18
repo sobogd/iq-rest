@@ -5,8 +5,16 @@ import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Send, Loader2 } from "lucide-react";
-import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 
 const EVENT_TYPES = [
@@ -22,12 +30,50 @@ function getLocalDateTimeString(): string {
   return local.toISOString().slice(0, 16);
 }
 
+function parseGoogleError(error: string): string {
+  // Try to extract readable parts from Google Ads error messages
+  // Format: "0; ...: FIELD_ERROR, errorCode: ..., message: '...'"
+  const messages: string[] = [];
+
+  // Extract quoted messages
+  const msgMatches = error.match(/message:\s*'([^']+)'/g);
+  if (msgMatches) {
+    for (const m of msgMatches) {
+      const val = m.match(/message:\s*'([^']+)'/)?.[1];
+      if (val) messages.push(val);
+    }
+  }
+
+  // Extract error codes like INVALID_CONVERSION_ACTION, TOO_RECENT, etc.
+  const codeMatches = error.match(/[A-Z_]{5,}/g);
+  const codes = codeMatches?.filter(c =>
+    !["FIELD", "ERROR", "GOOGLE", "CONVERSION"].includes(c)
+  ) || [];
+
+  if (messages.length > 0) {
+    return messages.join("\n");
+  }
+
+  if (codes.length > 0) {
+    return codes.join(", ");
+  }
+
+  return error;
+}
+
 export function GoogleAdsSendPage() {
   const router = useRouter();
   const [gclid, setGclid] = useState("");
   const [eventType, setEventType] = useState("type_selected");
   const [dateTime, setDateTime] = useState(getLocalDateTimeString);
   const [loading, setLoading] = useState(false);
+  const [responseDialog, setResponseDialog] = useState<{
+    open: boolean;
+    success: boolean;
+    title: string;
+    message: string;
+    details: string;
+  }>({ open: false, success: false, title: "", message: "", details: "" });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,13 +94,32 @@ export function GoogleAdsSendPage() {
       const data = await res.json();
 
       if (data.success) {
-        toast.success("Conversion uploaded successfully");
+        setResponseDialog({
+          open: true,
+          success: true,
+          title: "Success",
+          message: "Conversion uploaded successfully",
+          details: data.details || "",
+        });
         setGclid("");
       } else {
-        toast.error(data.error || "Failed to upload conversion");
+        const errorText = data.error || "Unknown error";
+        setResponseDialog({
+          open: true,
+          success: false,
+          title: "Error",
+          message: parseGoogleError(errorText),
+          details: data.details || errorText,
+        });
       }
-    } catch {
-      toast.error("Network error");
+    } catch (err) {
+      setResponseDialog({
+        open: true,
+        success: false,
+        title: "Network Error",
+        message: "Failed to reach server",
+        details: err instanceof Error ? err.message : "Unknown error",
+      });
     } finally {
       setLoading(false);
     }
@@ -122,6 +187,29 @@ export function GoogleAdsSendPage() {
           </form>
         </div>
       </div>
+
+      <AlertDialog open={responseDialog.open} onOpenChange={(open) => setResponseDialog((prev) => ({ ...prev, open }))}>
+        <AlertDialogContent className="max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className={responseDialog.success ? "text-green-500" : "text-destructive"}>
+              {responseDialog.title}
+            </AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="space-y-3">
+                <p className="text-sm">{responseDialog.message}</p>
+                {responseDialog.details && (
+                  <pre className="text-xs bg-muted p-3 rounded-lg overflow-auto max-h-60 whitespace-pre-wrap break-all">
+                    {responseDialog.details}
+                  </pre>
+                )}
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction>OK</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

@@ -19,7 +19,7 @@ export async function uploadClickConversion(
   conversionDateTime: string,
   conversionValue?: number,
   customConversionActionId?: string
-): Promise<{ success: boolean; error?: string }> {
+): Promise<{ success: boolean; error?: string; details?: string }> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
   const conversionActionId = customConversionActionId || process.env.GOOGLE_ADS_CONVERSION_ACTION_ID;
@@ -73,17 +73,24 @@ export async function uploadClickConversion(
       const msg =
         typeof raw === "string" ? raw : JSON.stringify(response.partial_failure_error, null, 2);
       console.error("[Google Ads] Partial failure:", msg);
-      return { success: false, error: msg };
+      return {
+        success: false,
+        error: msg,
+        details: JSON.stringify(response, null, 2),
+      };
     }
 
     console.log(
       "[Google Ads] Conversion uploaded for gclid:",
       gclid.slice(0, 12) + "..."
     );
-    return { success: true };
+    return {
+      success: true,
+      details: JSON.stringify(response.results || response, null, 2),
+    };
   } catch (err) {
     const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
     console.error("[Google Ads] Error:", message);
-    return { success: false, error: message };
+    return { success: false, error: message, details: message };
   }
 }

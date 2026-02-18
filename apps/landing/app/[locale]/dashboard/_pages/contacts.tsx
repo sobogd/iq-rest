@@ -93,9 +93,11 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
         return;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "contacts" });
         toast.error(data.error || t("saveError"));
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "contacts" });
       toast.error(t("saveError"));
     } finally {
       setSaving(false);

@@ -15,7 +15,7 @@ const CONVERSION_FLAGS: Record<string, string> = {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { event, sessionId, gclid, keyword } = body;
+    const { event, sessionId, gclid, keyword, meta } = body;
 
     if (!event || !sessionId) {
       return NextResponse.json(
@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
 
     // Create AnalyticsEvent
     await prisma.analyticsEvent.create({
-      data: { event, sessionId },
+      data: { event, sessionId, ...(meta ? { meta } : {}) },
     });
 
     return NextResponse.json({ success: true });

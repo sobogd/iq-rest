@@ -88,12 +88,14 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
       "video/quicktime",
     ];
     if (!allowedTypes.includes(file.type)) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "design", field: "media_type" });
       setValidationError(t("invalidFileType"));
       return;
     }
 
     const maxSize = file.type.startsWith("video/") ? 50 * 1024 * 1024 : 5 * 1024 * 1024;
     if (file.size > maxSize) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "design", field: "media_size" });
       setValidationError(t("fileTooLarge"));
       return;
     }
@@ -114,9 +116,11 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
         setSource(data.url);
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_UPLOAD, { page: "design" });
         setValidationError(data.error || t("uploadError"));
       }
     } catch {
+      track(DashboardEvent.ERROR_UPLOAD, { page: "design" });
       setValidationError(t("uploadError"));
     } finally {
       setUploading(false);
@@ -153,9 +157,11 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
         return;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "design" });
         toast.error(data.error || t("saveError"));
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "design" });
       toast.error(t("saveError"));
     } finally {
       setSaving(false);

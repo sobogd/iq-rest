@@ -313,6 +313,7 @@ model AnalyticsEvent {
   id        String   @id @default(cuid())
   event     String
   sessionId String
+  meta      Json?
   createdAt DateTime @default(now())
 
   session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)

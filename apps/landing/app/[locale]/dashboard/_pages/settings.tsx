@@ -140,10 +140,12 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
       setLanguages((prev) => [...prev, langCode]);
     } else {
       if (langCode === defaultLanguage) {
+        track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "language_default" });
         toast.error(tLang("cannotDisableDefault"));
         return;
       }
       if (languages.length <= 1) {
+        track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "language_minimum" });
         toast.error(tLang("atLeastOneRequired"));
         return;
       }
@@ -162,6 +164,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   function handleSetDefault(langCode: string) {
     if (langCode === defaultLanguage) return;
     if (!languages.includes(langCode)) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "language_not_enabled" });
       toast.error(tLang("enableFirst"));
       return;
     }
@@ -172,11 +175,13 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
     e.preventDefault();
 
     if (!name.trim()) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "name" });
       setValidationError(t("nameRequired"));
       return;
     }
 
     if (!slug.trim()) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "slug" });
       setValidationError(t("slugRequired"));
       return;
     }
@@ -212,9 +217,11 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
         return;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "settings" });
         toast.error(data.error || t("saveError"));
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "settings" });
       toast.error(t("saveError"));
     } finally {
       setSaving(false);

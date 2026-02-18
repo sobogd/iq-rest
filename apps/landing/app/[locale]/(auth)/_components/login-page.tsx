@@ -65,10 +65,12 @@ export function LoginPage() {
 
         window.location.href = `/${locale}/otp?email=${encodeURIComponent(email)}`;
       } else {
+        track(DashboardEvent.ERROR_OTP_SEND);
         setErrorMessage(data.error || t("errors.sendFailed"));
         setStatus("error");
       }
     } catch {
+      track(DashboardEvent.ERROR_OTP_SEND);
       setErrorMessage(t("errors.sendFailed"));
       setStatus("error");
     }

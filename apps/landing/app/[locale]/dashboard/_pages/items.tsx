@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { useRouter } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
 
@@ -94,6 +95,7 @@ export function ItemsPage() {
       }
     } catch (error) {
       console.error("Failed to fetch data:", error);
+      track(DashboardEvent.ERROR_FETCH, { page: "items" });
       toast.error(t.fetchError);
     } finally {
       setLoading(false);
@@ -124,6 +126,7 @@ export function ItemsPage() {
         setItems((prev) =>
           prev.map((i) => (i.id === itemId ? { ...i, isActive: currentActive } : i))
         );
+        track(DashboardEvent.ERROR_TOGGLE, { page: "items" });
         toast.error(t.updateError);
       } else {
         toast.success(newActive ? `${itemName} ${t.enabled}` : `${itemName} ${t.disabled}`);
@@ -132,6 +135,7 @@ export function ItemsPage() {
       setItems((prev) =>
         prev.map((i) => (i.id === itemId ? { ...i, isActive: currentActive } : i))
       );
+      track(DashboardEvent.ERROR_TOGGLE, { page: "items" });
       toast.error(t.updateError);
     }
   }
@@ -212,9 +216,11 @@ export function ItemsPage() {
         setSortMode(false);
         fetchData();
       } else {
+        track(DashboardEvent.ERROR_SORT, { page: "items" });
         toast.error(t.sortError);
       }
     } catch {
+      track(DashboardEvent.ERROR_SORT, { page: "items" });
       toast.error(t.sortError);
     } finally {
       setSavingSort(false);

@@ -146,6 +146,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       }
     } catch (error) {
       console.error("Failed to fetch data:", error);
+      track(DashboardEvent.ERROR_FETCH, { page: "item" });
       toast.error(t.fetchError);
       if (id) router.push("/dashboard/menu");
     } finally {
@@ -169,11 +170,13 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
     const allowedTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"];
     if (!allowedTypes.includes(file.type)) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "item", field: "image_type" });
       setValidationError("Invalid file type. Allowed: JPEG, PNG, WebP, GIF");
       return;
     }
 
     if (file.size > 5 * 1024 * 1024) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "item", field: "image_size" });
       setValidationError("File size must be less than 5MB");
       return;
     }
@@ -194,9 +197,11 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
         setImageUrl(data.url);
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_UPLOAD, { page: "item" });
         setValidationError(data.error || "Failed to upload image");
       }
     } catch {
+      track(DashboardEvent.ERROR_UPLOAD, { page: "item" });
       setValidationError("Failed to upload image");
     } finally {
       setUploading(false);
@@ -224,9 +229,11 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
         window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_DELETE, { page: "item" });
         toast.error(data.error || t.deleteError);
       }
     } catch {
+      track(DashboardEvent.ERROR_DELETE, { page: "item" });
       toast.error(t.deleteError);
     } finally {
       setDeleting(false);
@@ -238,16 +245,19 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
     e.preventDefault();
 
     if (!name.trim()) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "item", field: "name" });
       setValidationError(t.nameRequired);
       return;
     }
 
     if (!categoryId) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "item", field: "category" });
       setValidationError(t.categoryRequired);
       return;
     }
 
     if (!price || isNaN(Number(price)) || Number(price) < 0) {
+      track(DashboardEvent.ERROR_VALIDATION, { page: "item", field: "price" });
       setValidationError(t.priceRequired);
       return;
     }
@@ -292,9 +302,11 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
         window.location.href = `/${locale}/dashboard/menu`;
       } else {
         const data = await res.json();
+        track(DashboardEvent.ERROR_SAVE, { page: "item" });
         toast.error(data.error || t.saveError);
       }
     } catch {
+      track(DashboardEvent.ERROR_SAVE, { page: "item" });
       toast.error(t.saveError);
     } finally {
       setSaving(false);

@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { useRouter } from "@/i18n/routing";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { Category } from "@/types";
 
 interface CategoryWithTranslations extends Category {
@@ -45,6 +46,7 @@ export function CategoriesPage() {
       setCategories(data);
     } catch (error) {
       console.error("Failed to fetch categories:", error);
+      track(DashboardEvent.ERROR_FETCH, { page: "categories" });
       toast.error(t.fetchError);
     } finally {
       setLoading(false);
@@ -75,6 +77,7 @@ export function CategoriesPage() {
         setCategories((prev) =>
           prev.map((c) => (c.id === categoryId ? { ...c, isActive: currentActive } : c))
         );
+        track(DashboardEvent.ERROR_TOGGLE, { page: "categories" });
         toast.error(t.updateError);
       } else {
         toast.success(newActive ? `${categoryName} ${t.enabled}` : `${categoryName} ${t.disabled}`);
@@ -83,6 +86,7 @@ export function CategoriesPage() {
       setCategories((prev) =>
         prev.map((c) => (c.id === categoryId ? { ...c, isActive: currentActive } : c))
       );
+      track(DashboardEvent.ERROR_TOGGLE, { page: "categories" });
       toast.error(t.updateError);
     }
   }
@@ -130,9 +134,11 @@ export function CategoriesPage() {
         toast.success(t.sortSaved);
         setSortMode(false);
       } else {
+        track(DashboardEvent.ERROR_SORT, { page: "categories" });
         toast.error(t.sortError);
       }
     } catch {
+      track(DashboardEvent.ERROR_SORT, { page: "categories" });
       toast.error(t.sortError);
     } finally {
       setSavingSort(false);
