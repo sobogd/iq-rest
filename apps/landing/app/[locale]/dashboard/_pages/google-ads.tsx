@@ -70,6 +70,9 @@ export function GoogleAdsPage() {
   const [convertValue, setConvertValue] = useState("");
   const [convertLoading, setConvertLoading] = useState(false);
 
+  const [errorDialogOpen, setErrorDialogOpen] = useState(false);
+  const [errorData, setErrorData] = useState<unknown>(null);
+
   const copyToClipboard = useCallback((text: string) => {
     const ta = document.createElement("textarea");
     ta.value = text;
@@ -128,10 +131,12 @@ export function GoogleAdsPage() {
         );
         setConvertDialogOpen(false);
       } else {
-        alert(data.error || "Upload failed");
+        setErrorData(data.error || data);
+        setErrorDialogOpen(true);
       }
-    } catch {
-      alert("Upload failed");
+    } catch (err) {
+      setErrorData(err instanceof Error ? err.message : "Upload failed");
+      setErrorDialogOpen(true);
     } finally {
       setConvertLoading(false);
     }
@@ -249,6 +254,20 @@ export function GoogleAdsPage() {
           )}
         </div>
       </div>
+
+      {/* Error Dialog */}
+      <Dialog open={errorDialogOpen} onOpenChange={setErrorDialogOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Error</DialogTitle>
+          </DialogHeader>
+          <pre className="text-xs bg-muted rounded-lg p-3 overflow-auto max-h-80 whitespace-pre-wrap break-all">
+            {typeof errorData === "string"
+              ? errorData
+              : JSON.stringify(errorData, null, 2)}
+          </pre>
+        </DialogContent>
+      </Dialog>
 
       {/* Conversion Upload Dialog */}
       <Dialog open={convertDialogOpen} onOpenChange={setConvertDialogOpen}>
