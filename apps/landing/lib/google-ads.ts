@@ -14,6 +14,30 @@ function getClient(): GoogleAdsApi {
   return client;
 }
 
+export async function listAccessibleCustomers(): Promise<{
+  success: boolean;
+  customers?: string[];
+  error?: string;
+  configuredCustomerId?: string;
+  configuredLoginCustomerId?: string;
+}> {
+  try {
+    const api = getClient();
+    const customers = await api.listAccessibleCustomers(
+      process.env.GOOGLE_ADS_REFRESH_TOKEN!
+    );
+    return {
+      success: true,
+      customers,
+      configuredCustomerId: process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, ""),
+      configuredLoginCustomerId: process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, ""),
+    };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
+    return { success: false, error: message };
+  }
+}
+
 export async function uploadClickConversion(
   gclid: string,
   conversionDateTime: string,

@@ -7,6 +7,7 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
+  Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -155,6 +156,23 @@ export function GoogleAdsPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Google Ads" backHref="/dashboard">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={async () => {
+            try {
+              const res = await fetch("/api/admin/analytics/ad-customers");
+              const data = await res.json();
+              setErrorData(data);
+              setErrorDialogOpen(true);
+            } catch {
+              setErrorData("Failed to fetch");
+              setErrorDialogOpen(true);
+            }
+          }}
+        >
+          <Settings className="h-4 w-4" />
+        </Button>
         <Button
           variant="ghost"
           size="icon"
