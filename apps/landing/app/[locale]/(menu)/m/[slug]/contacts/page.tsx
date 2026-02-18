@@ -1,15 +1,7 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
-import dynamic from "next/dynamic";
-
-const MapView = dynamic(() => import("@/components/map-view").then((m) => m.MapView), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full bg-muted animate-pulse" />
-  ),
-});
-import { MenuHeader, MenuPageWrapper } from "../_components";
+import { MenuHeader, MenuPageWrapper, LazyMapView } from "../_components";
 import { getCountryCenter } from "@/lib/country-centers";
 import { trackPageView } from "../_lib/track";
 
@@ -78,9 +70,9 @@ export default async function ContactsPage({ params, searchParams }: ContactsPag
       <div className="flex-1 relative">
         {/* Full screen map */}
         {lat && lng ? (
-          <MapView lat={lat} lng={lng} />
+          <LazyMapView lat={lat} lng={lng} />
         ) : (
-          <MapView lat={fallback.lat} lng={fallback.lng} zoom={fallback.zoom} showMarker={false} />
+          <LazyMapView lat={fallback.lat} lng={fallback.lng} zoom={fallback.zoom} showMarker={false} />
         )}
 
         {/* Header */}

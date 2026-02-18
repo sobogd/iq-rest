@@ -71,6 +71,10 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
     <div className="h-dvh flex flex-col">
       {/* Hero section with background - takes remaining space */}
       <div className="flex-1 relative overflow-hidden min-h-[50vh]">
+        {/* Background placeholder */}
+        <div className="absolute inset-0 bg-gray-200">
+          <div className="absolute inset-0 skeleton-shimmer" />
+        </div>
         {/* Background media */}
         {restaurant.source ? (
           isVideo(restaurant.source) ? (
