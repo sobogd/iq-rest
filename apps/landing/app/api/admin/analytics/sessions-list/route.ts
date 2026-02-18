@@ -18,12 +18,14 @@ export async function GET(request: NextRequest) {
 
     // Filters
     const filterCountry = searchParams.get("country") || null;
+    const filterKeyword = searchParams.get("keyword") || null;
     const filterBot = searchParams.get("bot"); // "true" | "false" | null
     const filterAds = searchParams.get("ads"); // "true" | "false" | null
 
     // Build where clause
     const where: Record<string, unknown> = {};
     if (filterCountry) where.country = filterCountry;
+    if (filterKeyword) where.keyword = { contains: filterKeyword, mode: "insensitive" };
     if (filterBot === "true") where.isBot = true;
     if (filterBot === "false") where.isBot = false;
     if (filterAds === "true") where.gclid = { not: null };

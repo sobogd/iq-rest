@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import {
   RefreshCw,
   ChevronLeft,
@@ -22,6 +22,7 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 
 interface Session {
   sessionId: string;
@@ -40,14 +41,15 @@ interface Session {
 
 interface Filters {
   country: string;
+  keyword: string;
   bot: "all" | "true" | "false";
   ads: "all" | "true" | "false";
 }
 
-const DEFAULT_FILTERS: Filters = { country: "", bot: "all", ads: "all" };
+const DEFAULT_FILTERS: Filters = { country: "", keyword: "", bot: "all", ads: "all" };
 
 function hasActiveFilters(filters: Filters): boolean {
-  return filters.country !== "" || filters.bot !== "all" || filters.ads !== "all";
+  return filters.country !== "" || filters.keyword !== "" || filters.bot !== "all" || filters.ads !== "all";
 }
 
 function countryToFlag(countryCode: string): string {
@@ -110,26 +112,58 @@ const ADS_OPTIONS: FilterOption[] = [
   { value: "false", label: "Direct only" },
 ];
 
+function filtersToParams(p: number, f: Filters): URLSearchParams {
+  const params = new URLSearchParams();
+  if (p > 0) params.set("page", String(p));
+  if (f.country) params.set("country", f.country.toUpperCase());
+  if (f.keyword) params.set("keyword", f.keyword);
+  if (f.bot !== "all") params.set("bot", f.bot);
+  if (f.ads !== "all") params.set("ads", f.ads);
+  return params;
+}
+
 export function SessionsPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Read initial state from URL
+  const initialFilters = useMemo<Filters>(() => ({
+    country: searchParams.get("country") || "",
+    keyword: searchParams.get("keyword") || "",
+    bot: (searchParams.get("bot") as Filters["bot"]) || "all",
+    ads: (searchParams.get("ads") as Filters["ads"]) || "all",
+  }), []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const initialPage = useMemo(() => {
+    return Math.max(0, Number(searchParams.get("page") || 0));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [deleting, setDeleting] = useState<string | null>(null);
-  const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
+  const [filters, setFilters] = useState<Filters>(initialFilters);
   const [filterOpen, setFilterOpen] = useState(false);
-  const [draftFilters, setDraftFilters] = useState<Filters>(DEFAULT_FILTERS);
+  const [draftFilters, setDraftFilters] = useState<Filters>(initialFilters);
+
+  const updateUrl = useCallback((p: number, f: Filters) => {
+    const params = filtersToParams(p, f);
+    const qs = params.toString();
+    const url = qs ? `/dashboard/sessions?${qs}` : "/dashboard/sessions";
+    router.replace(url, { scroll: false });
+  }, [router]);
 
   const fetchSessions = useCallback(async (p: number, f: Filters) => {
     setLoading(true);
     try {
-      const params = new URLSearchParams({ page: String(p) });
-      if (f.country) params.set("country", f.country.toUpperCase());
-      if (f.bot !== "all") params.set("bot", f.bot);
-      if (f.ads !== "all") params.set("ads", f.ads);
-      const res = await fetch(`/api/admin/analytics/sessions-list?${params}`);
+      const apiParams = new URLSearchParams({ page: String(p) });
+      if (f.country) apiParams.set("country", f.country.toUpperCase());
+      if (f.keyword) apiParams.set("keyword", f.keyword);
+      if (f.bot !== "all") apiParams.set("bot", f.bot);
+      if (f.ads !== "all") apiParams.set("ads", f.ads);
+      const res = await fetch(`/api/admin/analytics/sessions-list?${apiParams}`);
       if (!res.ok) {
         const text = await res.text();
         console.error("Sessions API error:", res.status, text);
@@ -148,8 +182,9 @@ export function SessionsPage() {
   }, []);
 
   useEffect(() => {
-    fetchSessions(0, filters);
-  }, [fetchSessions, filters]);
+    fetchSessions(initialPage, initialFilters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDelete = async (sessionId: string) => {
     if (!confirm("Delete this session and all its events?")) return;
@@ -173,12 +208,21 @@ export function SessionsPage() {
   const applyFilters = () => {
     setFilters(draftFilters);
     setFilterOpen(false);
+    fetchSessions(0, draftFilters);
+    updateUrl(0, draftFilters);
   };
 
   const resetFilters = () => {
     setDraftFilters(DEFAULT_FILTERS);
     setFilters(DEFAULT_FILTERS);
     setFilterOpen(false);
+    fetchSessions(0, DEFAULT_FILTERS);
+    updateUrl(0, DEFAULT_FILTERS);
+  };
+
+  const goToPage = (p: number) => {
+    fetchSessions(p, filters);
+    updateUrl(p, filters);
   };
 
   const formatDate = (dateString: string) => {
@@ -222,6 +266,16 @@ export function SessionsPage() {
                   value={draftFilters.country}
                   onChange={(e) => setDraftFilters({ ...draftFilters, country: e.target.value })}
                   maxLength={2}
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label htmlFor="filter-keyword">Keyword</Label>
+                <Input
+                  id="filter-keyword"
+                  placeholder="e.g. qr menu"
+                  value={draftFilters.keyword}
+                  onChange={(e) => setDraftFilters({ ...draftFilters, keyword: e.target.value })}
                 />
               </div>
 
@@ -278,7 +332,7 @@ export function SessionsPage() {
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => fetchSessions(page, filters)}
+          onClick={() => goToPage(page)}
           disabled={loading}
         >
           <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
@@ -373,7 +427,7 @@ export function SessionsPage() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => fetchSessions(page - 1, filters)}
+                onClick={() => goToPage(page - 1)}
                 disabled={page === 0 || loading}
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -384,7 +438,7 @@ export function SessionsPage() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => fetchSessions(page + 1, filters)}
+                onClick={() => goToPage(page + 1)}
                 disabled={page >= totalPages - 1 || loading}
               >
                 <ChevronRight className="h-4 w-4" />
