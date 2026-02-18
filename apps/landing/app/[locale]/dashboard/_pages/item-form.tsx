@@ -359,7 +359,8 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
       <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
         <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-          <div className="max-w-lg mx-auto space-y-4">
+          <div className="max-w-lg mx-auto flex flex-col min-h-full">
+          <div className="space-y-4 flex-1">
           {(!initialCategoryId || isEdit) && (
             <FormSelect
               id="category"
@@ -470,7 +471,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                 {t.moreDetails}
               </button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="space-y-4 pt-4">
+            <CollapsibleContent className="space-y-4 pt-6">
               {otherLanguages.map((lang) => (
                 <FormInputTranslate
                   key={`name-${lang}`}
@@ -503,21 +504,20 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
               {allergensSection}
 
-              {isEdit && (
-                <FormSwitch
-                  id="isActive"
-                  label={`${t.status}:`}
-                  checked={isActive}
-                  onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_ITEM_ACTIVE); setIsActive(v); }}
-                  activeText={t.active}
-                  inactiveText={t.inactive}
-                />
-              )}
+              <FormSwitch
+                id="isActive"
+                label={`${t.status}:`}
+                checked={isActive}
+                onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_ITEM_ACTIVE); setIsActive(v); }}
+                activeText={t.active}
+                inactiveText={t.inactive}
+              />
             </CollapsibleContent>
           </Collapsible>
 
+          </div>
           <div className="pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
+            <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
               {saving ? (
                 <Loader2 className="h-4 w-4 animate-spin mr-2" />
               ) : (

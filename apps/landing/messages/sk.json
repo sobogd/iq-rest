@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Pridať položku",
       "addCategory": "Pridať kategóriu",
-      "sampleBanner": "Toto sú ukážkové položky — klepnite na ľubovoľnú pre úpravu alebo vymazanie. Pridajte vlastné jedlá, keď budete pripravení."
+      "sampleBanner": "Toto sú ukážkové položky — klepnite na ľubovoľnú pre úpravu alebo vymazanie. Pridajte vlastné jedlá, keď budete pripravení.",
+      "scratchBanner": "Začnite vytvárať menu pridávaním kategórií a položiek.",
+      "noItemsBanner": "Skvelé! Teraz pridajte položky do svojich kategórií."
     },
     "onboarding": {
       "nameTitle": "Ako sa volá vaše miesto?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Pekáreň",
         "hotel": "Hotel",
-        "other": "Iné"
+        "other": "Iné",
+        "scratch": "Od Nuly"
       },
-      "error": "Niečo sa pokazilo"
+      "error": "Niečo sa pokazilo",
+      "or": "alebo",
+      "startFromScratch": "Začať od nuly"
     },
     "home": {
       "viewMenu": "Zobraziť menu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Pomenujte podnik",
       "checklistTemplate": "Vyberte šablónu",
       "checklistMenu": "Upravte menu",
+      "checklistMenuFill": "Vyplňte svoje menu",
       "checklistContacts": "Pridajte kontakty",
       "checklistBrand": "Prispôsobte značku",
       "menuReady": "Vaše menu je pripravené! Zdieľajte QR kód so zákazníkmi.",

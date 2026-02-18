@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Lisää tuote",
       "addCategory": "Lisää kategoria",
-      "sampleBanner": "Nämä ovat esimerkkituotteita — napauta mitä tahansa muokataksesi tai poistaaksesi. Lisää omat annoksesi, kun olet valmis."
+      "sampleBanner": "Nämä ovat esimerkkituotteita — napauta mitä tahansa muokataksesi tai poistaaksesi. Lisää omat annoksesi, kun olet valmis.",
+      "scratchBanner": "Aloita valikon rakentaminen lisäämällä kategorioita ja tuotteita.",
+      "noItemsBanner": "Hienoa! Lisää nyt tuotteita kategorioihisi."
     },
     "onboarding": {
       "nameTitle": "Mikä on paikkasi nimi?",
@@ -1494,9 +1496,12 @@
         "bar": "Baari",
         "bakery": "Leipomo",
         "hotel": "Hotelli",
-        "other": "Muu"
+        "other": "Muu",
+        "scratch": "Tyhjästä"
       },
-      "error": "Jokin meni pieleen"
+      "error": "Jokin meni pieleen",
+      "or": "tai",
+      "startFromScratch": "Aloita tyhjästä"
     },
     "home": {
       "viewMenu": "Katso menusi",
@@ -1504,6 +1509,7 @@
       "checklistName": "Nimeä paikkasi",
       "checklistTemplate": "Valitse pohja",
       "checklistMenu": "Muokkaa menua",
+      "checklistMenuFill": "Täytä valikko",
       "checklistContacts": "Lisää yhteystiedot",
       "checklistBrand": "Muokkaa brändiä",
       "menuReady": "Menusi on valmis! Jaa QR-koodi asiakkaillesi.",

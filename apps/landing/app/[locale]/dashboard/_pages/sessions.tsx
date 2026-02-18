@@ -29,7 +29,6 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
 
 interface Session {
   sessionId: string;
@@ -119,31 +118,38 @@ const ADS_OPTIONS: FilterOption[] = [
   { value: "false", label: "Direct only" },
 ];
 
-function filtersToParams(p: number, f: Filters): URLSearchParams {
-  const params = new URLSearchParams();
-  if (p > 0) params.set("page", String(p));
-  if (f.country) params.set("country", f.country.toUpperCase());
-  if (f.keyword) params.set("keyword", f.keyword);
-  if (f.bot !== "all") params.set("bot", f.bot);
-  if (f.ads !== "all") params.set("ads", f.ads);
-  return params;
+const LS_SESSIONS_FILTERS = "admin_sessions_filters";
+const LS_SESSIONS_PAGE = "admin_sessions_page";
+
+function readFiltersFromStorage(): Filters {
+  try {
+    const raw = localStorage.getItem(LS_SESSIONS_FILTERS);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      return {
+        country: parsed.country || "",
+        keyword: parsed.keyword || "",
+        bot: (["all", "true", "false"].includes(parsed.bot) ? parsed.bot : "all") as Filters["bot"],
+        ads: (["all", "true", "false"].includes(parsed.ads) ? parsed.ads : "all") as Filters["ads"],
+      };
+    }
+  } catch {}
+  return DEFAULT_FILTERS;
+}
+
+function readPageFromStorage(): number {
+  try {
+    const raw = localStorage.getItem(LS_SESSIONS_PAGE);
+    if (raw) return Math.max(0, Number(raw));
+  } catch {}
+  return 0;
 }
 
 export function SessionsPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
-  // Read initial state from URL
-  const initialFilters = useMemo<Filters>(() => ({
-    country: searchParams.get("country") || "",
-    keyword: searchParams.get("keyword") || "",
-    bot: (searchParams.get("bot") as Filters["bot"]) || "all",
-    ads: (searchParams.get("ads") as Filters["ads"]) || "all",
-  }), []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const initialPage = useMemo(() => {
-    return Math.max(0, Number(searchParams.get("page") || 0));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const initialFilters = useMemo<Filters>(() => readFiltersFromStorage(), []);
+  const initialPage = useMemo(() => readPageFromStorage(), []);
 
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
@@ -155,12 +161,12 @@ export function SessionsPage() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [draftFilters, setDraftFilters] = useState<Filters>(initialFilters);
 
-  const updateUrl = useCallback((p: number, f: Filters) => {
-    const params = filtersToParams(p, f);
-    const qs = params.toString();
-    const url = qs ? `/dashboard/sessions?${qs}` : "/dashboard/sessions";
-    router.replace(url, { scroll: false });
-  }, [router]);
+  const saveToStorage = useCallback((p: number, f: Filters) => {
+    try {
+      localStorage.setItem(LS_SESSIONS_PAGE, String(p));
+      localStorage.setItem(LS_SESSIONS_FILTERS, JSON.stringify(f));
+    } catch {}
+  }, []);
 
   const fetchSessions = useCallback(async (p: number, f: Filters) => {
     setLoading(true);
@@ -216,7 +222,7 @@ export function SessionsPage() {
     setFilters(draftFilters);
     setFilterOpen(false);
     fetchSessions(0, draftFilters);
-    updateUrl(0, draftFilters);
+    saveToStorage(0, draftFilters);
   };
 
   const resetFilters = () => {
@@ -224,12 +230,12 @@ export function SessionsPage() {
     setFilters(DEFAULT_FILTERS);
     setFilterOpen(false);
     fetchSessions(0, DEFAULT_FILTERS);
-    updateUrl(0, DEFAULT_FILTERS);
+    saveToStorage(0, DEFAULT_FILTERS);
   };
 
   const goToPage = (p: number) => {
     fetchSessions(p, filters);
-    updateUrl(p, filters);
+    saveToStorage(p, filters);
   };
 
   const formatDate = (dateString: string) => {
@@ -261,7 +267,7 @@ export function SessionsPage() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
-            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => goToPage(page)}>
+            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => { fetchSessions(0, filters); saveToStorage(0, filters); }}>
               <RefreshCw className="h-4 w-4" />
               Refresh
             </DropdownMenuItem>

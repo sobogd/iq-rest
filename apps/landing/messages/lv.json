@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Pievienot preci",
       "addCategory": "Pievienot kategoriju",
-      "sampleBanner": "Šie ir paraugu produkti — pieskarieties jebkuram, lai rediģētu vai dzēstu. Pievienojiet savus ēdienus, kad esat gatavs."
+      "sampleBanner": "Šie ir paraugu produkti — pieskarieties jebkuram, lai rediģētu vai dzēstu. Pievienojiet savus ēdienus, kad esat gatavs.",
+      "scratchBanner": "Sāciet veidot savu ēdienkarti, pievienojot kategorijas un preces.",
+      "noItemsBanner": "Lieliski! Tagad pievienojiet preces savām kategorijām."
     },
     "onboarding": {
       "nameTitle": "Kāds ir jūsu vietas nosaukums?",
@@ -1494,9 +1496,12 @@
         "bar": "Bārs",
         "bakery": "Maiznīca",
         "hotel": "Viesnīca",
-        "other": "Cits"
+        "other": "Cits",
+        "scratch": "No Nulles"
       },
-      "error": "Kaut kas nogāja greizi"
+      "error": "Kaut kas nogāja greizi",
+      "or": "vai",
+      "startFromScratch": "Sākt no nulles"
     },
     "home": {
       "viewMenu": "Skatīt ēdienkarti",
@@ -1504,6 +1509,7 @@
       "checklistName": "Nosauciet savu vietu",
       "checklistTemplate": "Izvēlieties veidni",
       "checklistMenu": "Rediģējiet ēdienkarti",
+      "checklistMenuFill": "Aizpildiet savu ēdienkarti",
       "checklistContacts": "Pievienojiet kontaktus",
       "checklistBrand": "Pielāgojiet zīmolu",
       "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem.",

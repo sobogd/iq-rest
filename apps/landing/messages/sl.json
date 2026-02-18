@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Dodaj artikel",
       "addCategory": "Dodaj kategorijo",
-      "sampleBanner": "To so vzorčni artikli — tapnite na kateregakoli za urejanje ali brisanje. Dodajte svoje jedi, ko boste pripravljeni."
+      "sampleBanner": "To so vzorčni artikli — tapnite na kateregakoli za urejanje ali brisanje. Dodajte svoje jedi, ko boste pripravljeni.",
+      "scratchBanner": "Začnite graditi svoj meni z dodajanjem kategorij in izdelkov.",
+      "noItemsBanner": "Odlično! Zdaj dodajte izdelke v svoje kategorije."
     },
     "onboarding": {
       "nameTitle": "Kako se imenuje vaš lokal?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Pekarna",
         "hotel": "Hotel",
-        "other": "Drugo"
+        "other": "Drugo",
+        "scratch": "Od Začetka"
       },
-      "error": "Nekaj je šlo narobe"
+      "error": "Nekaj je šlo narobe",
+      "or": "ali",
+      "startFromScratch": "Začnite od začetka"
     },
     "home": {
       "viewMenu": "Ogled menija",
@@ -1504,6 +1509,7 @@
       "checklistName": "Poimenujte lokal",
       "checklistTemplate": "Izberite predlogo",
       "checklistMenu": "Uredite meni",
+      "checklistMenuFill": "Izpolnite svoj meni",
       "checklistContacts": "Dodajte kontakte",
       "checklistBrand": "Prilagodite blagovno znamko",
       "menuReady": "Vaš meni je pripravljen! Delite QR kodo s strankami.",

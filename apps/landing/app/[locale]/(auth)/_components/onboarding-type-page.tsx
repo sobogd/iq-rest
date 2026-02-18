@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Loader2, UtensilsCrossed, Pizza, Fish, Beef, Coffee, Beer, Croissant, Hotel, Sparkles } from "lucide-react";
+import { Loader2, UtensilsCrossed, Pizza, Fish, Beef, Coffee, Beer, Croissant, Hotel, Sparkles, PenLine } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { LucideIcon } from "lucide-react";
 
@@ -35,7 +35,7 @@ export function OnboardingTypePage() {
   }, []);
 
   const handleSelect = async (type: string) => {
-    track(DashboardEvent.CLICKED_ONBOARDING_TYPE);
+    track(type === "scratch" ? DashboardEvent.CLICKED_ONBOARDING_SCRATCH : DashboardEvent.CLICKED_ONBOARDING_TYPE);
     setLoading(type);
     setError(false);
 
@@ -92,6 +92,25 @@ export function OnboardingTypePage() {
               </button>
             ))}
           </div>
+
+          <div className="flex items-center gap-3">
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-sm text-muted-foreground">{t("or")}</span>
+            <div className="h-px flex-1 bg-border" />
+          </div>
+
+          <button
+            onClick={() => handleSelect("scratch")}
+            disabled={loading !== null}
+            className="flex items-center justify-center gap-2 p-4 rounded-lg bg-accent/50 text-accent-foreground hover:bg-accent/70 transition-colors disabled:opacity-50 min-h-[48px]"
+          >
+            {loading === "scratch" ? (
+              <Loader2 className="h-5 w-5 shrink-0 animate-spin text-muted-foreground" />
+            ) : (
+              <PenLine className="h-5 w-5 shrink-0 text-muted-foreground" />
+            )}
+            <span className="text-sm font-medium">{t("startFromScratch")}</span>
+          </button>
         </div>
       </div>
     </div>

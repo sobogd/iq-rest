@@ -1510,7 +1510,9 @@
     "menu": {
       "addItem": "항목 추가",
       "addCategory": "카테고리 추가",
-      "sampleBanner": "이것들은 샘플 항목입니다. 아무거나 탭하여 편집하거나 삭제하세요. 준비가 되면 자신의 요리를 추가하세요."
+      "sampleBanner": "이것들은 샘플 항목입니다. 아무거나 탭하여 편집하거나 삭제하세요. 준비가 되면 자신의 요리를 추가하세요.",
+      "scratchBanner": "카테고리와 항목을 추가하여 메뉴 만들기를 시작하세요.",
+      "noItemsBanner": "좋아요! 이제 카테고리에 항목을 추가하세요."
     },
     "onboarding": {
       "nameTitle": "가게 이름이 무엇인가요?",
@@ -1527,9 +1529,12 @@
         "bar": "바",
         "bakery": "베이커리",
         "hotel": "호텔",
-        "other": "기타"
+        "other": "기타",
+        "scratch": "처음부터"
       },
-      "error": "문제가 발생했습니다"
+      "error": "문제가 발생했습니다",
+      "or": "또는",
+      "startFromScratch": "처음부터 시작"
     },
     "home": {
       "viewMenu": "메뉴 보기",
@@ -1537,6 +1542,7 @@
       "checklistName": "매장 이름 입력",
       "checklistTemplate": "템플릿 선택",
       "checklistMenu": "메뉴 편집",
+      "checklistMenuFill": "메뉴를 작성하세요",
       "checklistContacts": "연락처 추가",
       "checklistBrand": "브랜드 맞춤 설정",
       "menuReady": "메뉴가 준비되었습니다! QR 코드를 고객과 공유하세요.",

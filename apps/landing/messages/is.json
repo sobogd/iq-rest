@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Bæta við vöru",
       "addCategory": "Bæta við flokki",
-      "sampleBanner": "Þetta eru sýnishorn — ýttu á hvaða sem er til að breyta eða eyða. Bættu við þínum eigin réttum þegar þú ert tilbúinn."
+      "sampleBanner": "Þetta eru sýnishorn — ýttu á hvaða sem er til að breyta eða eyða. Bættu við þínum eigin réttum þegar þú ert tilbúinn.",
+      "scratchBanner": "Byrjaðu að byggja matseðilinn þinn með því að bæta við flokkum og vörum.",
+      "noItemsBanner": "Frábært! Bættu nú vörum við flokkana þína."
     },
     "onboarding": {
       "nameTitle": "Hvað heitir staðurinn þinn?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Bakarí",
         "hotel": "Hótel",
-        "other": "Annað"
+        "other": "Annað",
+        "scratch": "Frá Grunni"
       },
-      "error": "Eitthvað fór úrskeiðis"
+      "error": "Eitthvað fór úrskeiðis",
+      "or": "eða",
+      "startFromScratch": "Byrja frá grunni"
     },
     "home": {
       "viewMenu": "Skoða matseðilinn",
@@ -1504,6 +1509,7 @@
       "checklistName": "Nefndu staðinn þinn",
       "checklistTemplate": "Veldu sniðmát",
       "checklistMenu": "Breyttu matseðlinum",
+      "checklistMenuFill": "Fylltu út matseðilinn þinn",
       "checklistContacts": "Bættu við tengiliðum",
       "checklistBrand": "Sérsníðið vörumerkið",
       "menuReady": "Matseðillinn þinn er tilbúinn! Deildu QR kóðanum með viðskiptavinum.",

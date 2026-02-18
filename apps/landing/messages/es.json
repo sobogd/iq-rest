@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Añadir artículo",
       "addCategory": "Añadir categoría",
-      "sampleBanner": "Estos son artículos de ejemplo — toca cualquiera para editar o eliminar. Agrega tus propios platos cuando estés listo."
+      "sampleBanner": "Estos son artículos de ejemplo — toca cualquiera para editar o eliminar. Agrega tus propios platos cuando estés listo.",
+      "scratchBanner": "Comienza a crear tu menú añadiendo categorías y artículos.",
+      "noItemsBanner": "¡Genial! Ahora añade artículos a tus categorías."
     },
     "onboarding": {
       "nameTitle": "¿Cómo se llama tu local?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Panadería",
         "hotel": "Hotel",
-        "other": "Otro"
+        "other": "Otro",
+        "scratch": "Desde Cero"
       },
-      "error": "Algo salió mal"
+      "error": "Algo salió mal",
+      "or": "o",
+      "startFromScratch": "Empezar desde cero"
     },
     "home": {
       "viewMenu": "Ver tu menú",
@@ -1504,6 +1509,7 @@
       "checklistName": "Nombra tu local",
       "checklistTemplate": "Elige una plantilla",
       "checklistMenu": "Edita tu menú",
+      "checklistMenuFill": "Rellena tu menú",
       "checklistContacts": "Añade tus contactos",
       "checklistBrand": "Personaliza tu marca",
       "menuReady": "Tu menú está listo. Comparte tu código QR con los clientes.",

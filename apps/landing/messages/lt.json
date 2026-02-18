@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Pridėti prekę",
       "addCategory": "Pridėti kategoriją",
-      "sampleBanner": "Tai pavyzdiniai elementai — bakstelėkite bet kurį, norėdami redaguoti arba ištrinti. Pridėkite savo patiekalus, kai būsite pasiruošę."
+      "sampleBanner": "Tai pavyzdiniai elementai — bakstelėkite bet kurį, norėdami redaguoti arba ištrinti. Pridėkite savo patiekalus, kai būsite pasiruošę.",
+      "scratchBanner": "Pradėkite kurti meniu pridėdami kategorijas ir elementus.",
+      "noItemsBanner": "Puiku! Dabar pridėkite elementus į savo kategorijas."
     },
     "onboarding": {
       "nameTitle": "Koks jūsų vietos pavadinimas?",
@@ -1494,9 +1496,12 @@
         "bar": "Baras",
         "bakery": "Kepykla",
         "hotel": "Viešbutis",
-        "other": "Kita"
+        "other": "Kita",
+        "scratch": "Nuo Nulio"
       },
-      "error": "Kažkas nutiko"
+      "error": "Kažkas nutiko",
+      "or": "arba",
+      "startFromScratch": "Pradėti nuo nulio"
     },
     "home": {
       "viewMenu": "Peržiūrėti meniu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Pavadinkite savo vietą",
       "checklistTemplate": "Pasirinkite šabloną",
       "checklistMenu": "Redaguokite meniu",
+      "checklistMenuFill": "Užpildykite savo meniu",
       "checklistContacts": "Pridėkite kontaktus",
       "checklistBrand": "Pritaikykite prekės ženklą",
       "menuReady": "Jūsų meniu paruoštas! Pasidalykite QR kodu su klientais.",

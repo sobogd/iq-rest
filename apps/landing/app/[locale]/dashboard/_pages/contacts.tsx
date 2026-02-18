@@ -105,8 +105,10 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.contacts} />
-      <form id="contacts-form" onSubmit={handleSubmit} className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto">
+      <form id="contacts-form" onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
+        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
+          <div className="max-w-lg mx-auto flex flex-col min-h-full">
+          <div className="flex-1">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">
@@ -166,17 +168,18 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
             </p>
           </div>
         </div>
-
-        <div className="pt-4 pb-2">
-          <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
-            {saving ? (
-              <Loader2 className="h-4 w-4 animate-spin mr-2" />
-            ) : (
-              <Save className="h-4 w-4 mr-2" />
-            )}
-            {t("save")}
-          </Button>
         </div>
+          <div className="pt-4 pb-2">
+            <Button type="submit" disabled={saving || !hasChanges} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
+              {saving ? (
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+              ) : (
+                <Save className="h-4 w-4 mr-2" />
+              )}
+              {t("save")}
+            </Button>
+          </div>
+          </div>
         </div>
       </form>
     </div>

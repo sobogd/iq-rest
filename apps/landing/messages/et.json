@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Lisa toode",
       "addCategory": "Lisa kategooria",
-      "sampleBanner": "Need on näidistooted — puudutage mistahes, et muuta või kustutada. Lisage oma road, kui olete valmis."
+      "sampleBanner": "Need on näidistooted — puudutage mistahes, et muuta või kustutada. Lisage oma road, kui olete valmis.",
+      "scratchBanner": "Alustage menüü loomist kategooriate ja toodete lisamisega.",
+      "noItemsBanner": "Suurepärane! Lisage nüüd tooted oma kategooriatesse."
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",
@@ -1494,9 +1496,12 @@
         "bar": "Baar",
         "bakery": "Pagariäri",
         "hotel": "Hotell",
-        "other": "Muu"
+        "other": "Muu",
+        "scratch": "Nullist"
       },
-      "error": "Midagi läks valesti"
+      "error": "Midagi läks valesti",
+      "or": "või",
+      "startFromScratch": "Alusta nullist"
     },
     "home": {
       "viewMenu": "Vaata oma menüüd",
@@ -1504,6 +1509,7 @@
       "checklistName": "Pange kohale nimi",
       "checklistTemplate": "Valige mall",
       "checklistMenu": "Muutke menüüd",
+      "checklistMenuFill": "Täitke oma menüü",
       "checklistContacts": "Lisage kontaktid",
       "checklistBrand": "Kohandage brändi",
       "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega.",

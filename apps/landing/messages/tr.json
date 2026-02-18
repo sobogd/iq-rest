@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Ürün ekle",
       "addCategory": "Kategori ekle",
-      "sampleBanner": "Bunlar örnek ürünlerdir — düzenlemek veya silmek için herhangi birine dokunun. Hazır olduğunuzda kendi yemeklerinizi ekleyin."
+      "sampleBanner": "Bunlar örnek ürünlerdir — düzenlemek veya silmek için herhangi birine dokunun. Hazır olduğunuzda kendi yemeklerinizi ekleyin.",
+      "scratchBanner": "Kategoriler ve ürünler ekleyerek menünüzü oluşturmaya başlayın.",
+      "noItemsBanner": "Harika! Şimdi kategorilerinize ürünler ekleyin."
     },
     "onboarding": {
       "nameTitle": "Mekanınızın adı nedir?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Fırın",
         "hotel": "Otel",
-        "other": "Diğer"
+        "other": "Diğer",
+        "scratch": "Sıfırdan"
       },
-      "error": "Bir şeyler ters gitti"
+      "error": "Bir şeyler ters gitti",
+      "or": "veya",
+      "startFromScratch": "Sıfırdan başla"
     },
     "home": {
       "viewMenu": "Menünüzü görüntüleyin",
@@ -1504,6 +1509,7 @@
       "checklistName": "Mekanınızı adlandırın",
       "checklistTemplate": "Şablon seçin",
       "checklistMenu": "Menüyü düzenleyin",
+      "checklistMenuFill": "Menünüzü doldurun",
       "checklistContacts": "İletişim ekleyin",
       "checklistBrand": "Markayı özelleştirin",
       "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın.",

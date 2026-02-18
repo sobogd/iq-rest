@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Adaugă articol",
       "addCategory": "Adaugă categorie",
-      "sampleBanner": "Acestea sunt articole exemplu — atinge oricare pentru a edita sau șterge. Adaugă propriile tale preparate când ești pregătit."
+      "sampleBanner": "Acestea sunt articole exemplu — atinge oricare pentru a edita sau șterge. Adaugă propriile tale preparate când ești pregătit.",
+      "scratchBanner": "Începe să-ți construiești meniul adăugând categorii și articole.",
+      "noItemsBanner": "Excelent! Acum adaugă articole în categoriile tale."
     },
     "onboarding": {
       "nameTitle": "Cum se numește localul tău?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Brutărie",
         "hotel": "Hotel",
-        "other": "Altul"
+        "other": "Altul",
+        "scratch": "De la Zero"
       },
-      "error": "Ceva nu a funcționat"
+      "error": "Ceva nu a funcționat",
+      "or": "sau",
+      "startFromScratch": "Începe de la zero"
     },
     "home": {
       "viewMenu": "Vezi meniul tău",
@@ -1504,6 +1509,7 @@
       "checklistName": "Denumește localul",
       "checklistTemplate": "Alege un șablon",
       "checklistMenu": "Editează meniul",
+      "checklistMenuFill": "Completează-ți meniul",
       "checklistContacts": "Adaugă contacte",
       "checklistBrand": "Personalizează brandul",
       "menuReady": "Meniul tău este gata! Distribuie codul QR clienților.",

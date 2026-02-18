@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Ajouter un article",
       "addCategory": "Ajouter une catégorie",
-      "sampleBanner": "Ce sont des articles d'exemple — appuyez sur l'un d'eux pour le modifier ou le supprimer. Ajoutez vos propres plats quand vous êtes prêt."
+      "sampleBanner": "Ce sont des articles d'exemple — appuyez sur l'un d'eux pour le modifier ou le supprimer. Ajoutez vos propres plats quand vous êtes prêt.",
+      "scratchBanner": "Commencez à créer votre menu en ajoutant des catégories et des articles.",
+      "noItemsBanner": "Super ! Ajoutez maintenant des articles à vos catégories."
     },
     "onboarding": {
       "nameTitle": "Comment s'appelle votre établissement ?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Boulangerie",
         "hotel": "Hôtel",
-        "other": "Autre"
+        "other": "Autre",
+        "scratch": "De Zéro"
       },
-      "error": "Une erreur est survenue"
+      "error": "Une erreur est survenue",
+      "or": "ou",
+      "startFromScratch": "Commencer de zéro"
     },
     "home": {
       "viewMenu": "Voir votre menu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Nommez votre établissement",
       "checklistTemplate": "Choisissez un modèle",
       "checklistMenu": "Modifiez votre menu",
+      "checklistMenuFill": "Remplissez votre menu",
       "checklistContacts": "Ajoutez vos contacts",
       "checklistBrand": "Personnalisez votre marque",
       "menuReady": "Votre menu est prêt ! Partagez votre QR code avec vos clients.",

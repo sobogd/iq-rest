@@ -18,6 +18,7 @@ export enum DashboardEvent {
   CLICKED_ONBOARDING_CONTINUE = "clicked_onboarding_continue",
   SHOWED_ONBOARDING_TYPE = "showed_onboarding_type",
   CLICKED_ONBOARDING_TYPE = "clicked_onboarding_type",
+  CLICKED_ONBOARDING_SCRATCH = "clicked_onboarding_scratch",
 
   // Home
   SHOWED_HOME = "showed_home",
@@ -176,6 +177,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_ONBOARDING_CONTINUE]: "Clicked Continue",
   [DashboardEvent.SHOWED_ONBOARDING_TYPE]: "Showed Onboarding Type",
   [DashboardEvent.CLICKED_ONBOARDING_TYPE]: "Selected Restaurant Type",
+  [DashboardEvent.CLICKED_ONBOARDING_SCRATCH]: "Started From Scratch",
 
   // Home
   [DashboardEvent.SHOWED_HOME]: "Showed Home",

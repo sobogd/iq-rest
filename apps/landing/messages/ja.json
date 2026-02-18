@@ -1510,7 +1510,9 @@
     "menu": {
       "addItem": "商品を追加",
       "addCategory": "カテゴリーを追加",
-      "sampleBanner": "これらはサンプルメニューです。タップして編集・削除できます。準備ができたら自分の料理を追加してください。"
+      "sampleBanner": "これらはサンプルメニューです。タップして編集・削除できます。準備ができたら自分の料理を追加してください。",
+      "scratchBanner": "カテゴリーとアイテムを追加してメニューの作成を始めましょう。",
+      "noItemsBanner": "カテゴリーにアイテムを追加しましょう。"
     },
     "onboarding": {
       "nameTitle": "お店の名前は？",
@@ -1527,9 +1529,12 @@
         "bar": "バー",
         "bakery": "ベーカリー",
         "hotel": "ホテル",
-        "other": "その他"
+        "other": "その他",
+        "scratch": "ゼロから"
       },
-      "error": "エラーが発生しました"
+      "error": "エラーが発生しました",
+      "or": "または",
+      "startFromScratch": "ゼロから始める"
     },
     "home": {
       "viewMenu": "メニューを見る",
@@ -1537,6 +1542,7 @@
       "checklistName": "お店の名前を入力",
       "checklistTemplate": "テンプレートを選択",
       "checklistMenu": "メニューを編集",
+      "checklistMenuFill": "メニューを入力",
       "checklistContacts": "連絡先を追加",
       "checklistBrand": "ブランドをカスタマイズ",
       "menuReady": "メニューの準備ができました！QRコードをお客様に共有しましょう。",

@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Lägg till artikel",
       "addCategory": "Lägg till kategori",
-      "sampleBanner": "Det här är exempelartiklar — tryck på valfri för att redigera eller ta bort. Lägg till dina egna rätter när du är redo."
+      "sampleBanner": "Det här är exempelartiklar — tryck på valfri för att redigera eller ta bort. Lägg till dina egna rätter när du är redo.",
+      "scratchBanner": "Börja bygga din meny genom att lägga till kategorier och artiklar.",
+      "noItemsBanner": "Bra! Lägg nu till artiklar i dina kategorier."
     },
     "onboarding": {
       "nameTitle": "Vad heter ditt ställe?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Bageri",
         "hotel": "Hotell",
-        "other": "Övrigt"
+        "other": "Övrigt",
+        "scratch": "Från Grunden"
       },
-      "error": "Något gick fel"
+      "error": "Något gick fel",
+      "or": "eller",
+      "startFromScratch": "Börja från grunden"
     },
     "home": {
       "viewMenu": "Visa din meny",
@@ -1504,6 +1509,7 @@
       "checklistName": "Namnge din restaurang",
       "checklistTemplate": "Välj en mall",
       "checklistMenu": "Redigera menyn",
+      "checklistMenuFill": "Fyll i din meny",
       "checklistContacts": "Lägg till kontakter",
       "checklistBrand": "Anpassa varumärket",
       "menuReady": "Din meny är klar! Dela din QR-kod med gästerna.",

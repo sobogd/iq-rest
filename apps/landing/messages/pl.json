@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Dodaj pozycję",
       "addCategory": "Dodaj kategorię",
-      "sampleBanner": "To są przykładowe pozycje — dotknij dowolnej, aby edytować lub usunąć. Dodaj własne dania, gdy będziesz gotowy."
+      "sampleBanner": "To są przykładowe pozycje — dotknij dowolnej, aby edytować lub usunąć. Dodaj własne dania, gdy będziesz gotowy.",
+      "scratchBanner": "Zacznij tworzyć menu, dodając kategorie i pozycje.",
+      "noItemsBanner": "Świetnie! Teraz dodaj pozycje do swoich kategorii."
     },
     "onboarding": {
       "nameTitle": "Jak nazywa się Twoje miejsce?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Piekarnia",
         "hotel": "Hotel",
-        "other": "Inne"
+        "other": "Inne",
+        "scratch": "Od Zera"
       },
-      "error": "Coś poszło nie tak"
+      "error": "Coś poszło nie tak",
+      "or": "lub",
+      "startFromScratch": "Zacznij od zera"
     },
     "home": {
       "viewMenu": "Zobacz swoje menu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Nazwij swój lokal",
       "checklistTemplate": "Wybierz szablon",
       "checklistMenu": "Edytuj menu",
+      "checklistMenuFill": "Wypełnij swoje menu",
       "checklistContacts": "Dodaj kontakty",
       "checklistBrand": "Dostosuj markę",
       "menuReady": "Twoje menu jest gotowe! Udostępnij kod QR klientom.",

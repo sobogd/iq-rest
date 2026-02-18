@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Artikel hinzufügen",
       "addCategory": "Kategorie hinzufügen",
-      "sampleBanner": "Dies sind Beispielartikel — tippe auf einen, um ihn zu bearbeiten oder zu löschen. Füge deine eigenen Gerichte hinzu, wenn du bereit bist."
+      "sampleBanner": "Dies sind Beispielartikel — tippe auf einen, um ihn zu bearbeiten oder zu löschen. Füge deine eigenen Gerichte hinzu, wenn du bereit bist.",
+      "scratchBanner": "Beginnen Sie mit dem Aufbau Ihres Menüs, indem Sie Kategorien und Artikel hinzufügen.",
+      "noItemsBanner": "Super! Fügen Sie jetzt Artikel zu Ihren Kategorien hinzu."
     },
     "onboarding": {
       "nameTitle": "Wie heißt Ihr Lokal?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Bäckerei",
         "hotel": "Hotel",
-        "other": "Sonstiges"
+        "other": "Sonstiges",
+        "scratch": "Von Grund auf"
       },
-      "error": "Etwas ist schiefgelaufen"
+      "error": "Etwas ist schiefgelaufen",
+      "or": "oder",
+      "startFromScratch": "Von Grund auf starten"
     },
     "home": {
       "viewMenu": "Dein Menü ansehen",
@@ -1504,6 +1509,7 @@
       "checklistName": "Benenne dein Lokal",
       "checklistTemplate": "Vorlage wählen",
       "checklistMenu": "Menü bearbeiten",
+      "checklistMenuFill": "Füllen Sie Ihr Menü aus",
       "checklistContacts": "Kontakte hinzufügen",
       "checklistBrand": "Marke anpassen",
       "menuReady": "Dein Menü ist fertig! Teile deinen QR-Code mit Gästen.",

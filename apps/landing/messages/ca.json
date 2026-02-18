@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Afegir article",
       "addCategory": "Afegir categoria",
-      "sampleBanner": "Aquests són articles d'exemple — toca qualsevol per editar o eliminar. Afegeix els teus propis plats quan estiguis preparat."
+      "sampleBanner": "Aquests són articles d'exemple — toca qualsevol per editar o eliminar. Afegeix els teus propis plats quan estiguis preparat.",
+      "scratchBanner": "Comença a crear el teu menú afegint categories i articles.",
+      "noItemsBanner": "Genial! Ara afegeix articles a les teves categories."
     },
     "onboarding": {
       "nameTitle": "Com es diu el teu local?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Fleca",
         "hotel": "Hotel",
-        "other": "Altre"
+        "other": "Altre",
+        "scratch": "Des de Zero"
       },
-      "error": "Alguna cosa ha anat malament"
+      "error": "Alguna cosa ha anat malament",
+      "or": "o",
+      "startFromScratch": "Comença des de zero"
     },
     "home": {
       "viewMenu": "Veure el teu menú",
@@ -1504,6 +1509,7 @@
       "checklistName": "Posa nom al local",
       "checklistTemplate": "Tria una plantilla",
       "checklistMenu": "Edita el menú",
+      "checklistMenuFill": "Omple el teu menú",
       "checklistContacts": "Afegeix contactes",
       "checklistBrand": "Personalitza la marca",
       "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients.",

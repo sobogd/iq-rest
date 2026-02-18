@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Loader2, Save, Trash2, X } from "lucide-react";
+import { Loader2, Save, Trash2, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -30,6 +30,11 @@ import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { FormInput } from "../_ui/form-input";
 import { FormInputTranslate } from "../_ui/form-input-translate";
 import { FormSwitch } from "../_ui/form-switch";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
@@ -60,6 +65,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
     Record<string, { name?: string }>
   >({});
   const [validationError, setValidationError] = useState<string | null>(null);
+  const [moreDetailsOpen, setMoreDetailsOpen] = useState(false);
 
   const isEdit = !!id;
 
@@ -191,41 +197,56 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
         <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-          <div className="max-w-lg mx-auto space-y-4">
+          <div className="max-w-lg mx-auto flex flex-col min-h-full">
+          <div className="space-y-4 flex-1">
           <FormInput
             id="name"
-            label={`${t.name}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
+            label={`${t.name}:`}
             value={name}
             onChange={setName}
             onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
             placeholder={t.namePlaceholder}
           />
 
-          {otherLanguages.map((lang) => (
-            <FormInputTranslate
-              key={lang}
-              id={`name-${lang}`}
-              label={`${t.name} (${LANGUAGE_NAMES[lang] || lang}):`}
-              value={categoryTranslations[lang]?.name || ""}
-              onChange={(value) => handleTranslationChange(lang, value)}
-              placeholder={t.namePlaceholder}
-              sourceText={name}
-              sourceLanguage={restaurant?.defaultLanguage || "en"}
-              targetLanguage={lang}
-              translateErrorMessage={t.translateError}
-            />
-          ))}
+          <Collapsible open={moreDetailsOpen} onOpenChange={setMoreDetailsOpen} className="!mt-8">
+              <CollapsibleTrigger asChild>
+                <button
+                  type="button"
+                  className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <ChevronDown className={`h-4 w-4 transition-transform ${moreDetailsOpen ? "rotate-180" : ""}`} />
+                  {translations.items.moreDetails}
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="space-y-4 pt-6">
+                {otherLanguages.map((lang) => (
+                  <FormInputTranslate
+                    key={lang}
+                    id={`name-${lang}`}
+                    label={`${t.name} (${LANGUAGE_NAMES[lang] || lang}):`}
+                    value={categoryTranslations[lang]?.name || ""}
+                    onChange={(value) => handleTranslationChange(lang, value)}
+                    placeholder={t.namePlaceholder}
+                    sourceText={name}
+                    sourceLanguage={restaurant?.defaultLanguage || "en"}
+                    targetLanguage={lang}
+                    translateErrorMessage={t.translateError}
+                  />
+                ))}
 
-          <FormSwitch
-            id="isActive"
-            label={`${t.status}:`}
-            checked={isActive}
-            onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_CATEGORY_ACTIVE); setIsActive(v); }}
-            activeText={t.active}
-            inactiveText={t.inactive}
-          />
+                <FormSwitch
+                  id="isActive"
+                  label={`${t.status}:`}
+                  checked={isActive}
+                  onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_CATEGORY_ACTIVE); setIsActive(v); }}
+                  activeText={t.active}
+                  inactiveText={t.inactive}
+                />
+              </CollapsibleContent>
+          </Collapsible>
+          </div>
           <div className="pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
+            <Button type="submit" disabled={saving || deleting} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
               {saving ? (
                 <Loader2 className="h-4 w-4 animate-spin mr-2" />
               ) : (

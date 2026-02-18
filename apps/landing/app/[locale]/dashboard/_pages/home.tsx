@@ -50,15 +50,8 @@ interface ChecklistStatus {
   menuEdited: boolean;
   contactsAdded: boolean;
   brandCustomized: boolean;
+  startedFromScratch: boolean;
 }
-
-const checklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
-  { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
-  { key: "templateChosen", translationKey: "checklistTemplate", path: PAGE_PATHS.menu },
-  { key: "menuEdited", translationKey: "checklistMenu", path: PAGE_PATHS.menu },
-  { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
-  { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
-];
 
 interface ScanUsage {
   used: number;
@@ -79,7 +72,15 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
   const { translations } = useDashboard();
   const router = useRouter();
 
-  const completedCount = Object.values(checklist).filter(Boolean).length;
+  const checklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
+    { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
+    { key: "templateChosen", translationKey: "checklistTemplate", path: PAGE_PATHS.menu },
+    { key: "menuEdited", translationKey: checklist.startedFromScratch ? "checklistMenuFill" : "checklistMenu", path: PAGE_PATHS.menu },
+    { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
+    { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
+  ];
+
+  const completedCount = Object.entries(checklist).filter(([k, v]) => k !== "startedFromScratch" && v).length;
   const allDone = completedCount === 5;
 
   useEffect(() => {

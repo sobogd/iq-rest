@@ -12,6 +12,22 @@ export async function POST(request: NextRequest) {
     }
 
     const { type, locale } = await request.json();
+
+    // "Start from scratch" — skip template, just mark onboarding done
+    if (type === "scratch") {
+      await prisma.$transaction([
+        prisma.company.update({
+          where: { id: companyId },
+          data: { onboardingStep: 2 },
+        }),
+        prisma.restaurant.updateMany({
+          where: { companyId },
+          data: { startedFromScratch: true },
+        }),
+      ]);
+      return NextResponse.json({ success: true });
+    }
+
     const rawTemplate = getMenuTemplate(type);
     if (!rawTemplate) {
       return NextResponse.json({ error: "Invalid restaurant type" }, { status: 400 });

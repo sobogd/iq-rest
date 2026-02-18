@@ -19,19 +19,14 @@ export default async function DashboardLayout({
   }
 
   // Check onboarding state
-  const [restaurant, itemsCount] = await Promise.all([
-    prisma.restaurant.findFirst({
-      where: { companyId },
-      select: { title: true },
-    }),
-    prisma.item.count({ where: { companyId } }),
-  ]);
+  const restaurant = await prisma.restaurant.findFirst({
+    where: { companyId },
+    select: { title: true },
+  });
 
   const hasRestaurant = Boolean(restaurant?.title && restaurant.title.trim().length > 0);
-  const hasMenu = itemsCount > 0;
 
   if (!hasRestaurant) redirect("/onboarding/name");
-  if (!hasMenu) redirect("/onboarding/type");
 
   // Check if admin is impersonating
   const cookieStore = await cookies();
@@ -97,6 +92,8 @@ export default async function DashboardLayout({
       addItem: t("menu.addItem"),
       addCategory: t("menu.addCategory"),
       sampleBanner: t("menu.sampleBanner"),
+      scratchBanner: t("menu.scratchBanner"),
+      noItemsBanner: t("menu.noItemsBanner"),
     },
     categories: {
       noCategories: t("categories.noCategories"),

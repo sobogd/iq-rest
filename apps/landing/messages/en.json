@@ -1234,6 +1234,7 @@
       "checklistName": "Name your place",
       "checklistTemplate": "Choose menu template",
       "checklistMenu": "Edit your menu",
+      "checklistMenuFill": "Fill in your menu",
       "checklistContacts": "Add your contacts",
       "checklistBrand": "Customize your brand",
       "menuReady": "Your menu is ready! Share your QR code with customers.",
@@ -1287,9 +1288,12 @@
         "bar": "Bar",
         "bakery": "Bakery",
         "hotel": "Hotel",
-        "other": "Other"
+        "other": "Other",
+        "scratch": "From Scratch"
       },
-      "error": "Something went wrong"
+      "error": "Something went wrong",
+      "or": "or",
+      "startFromScratch": "Start from scratch"
     },
     "analytics": {
       "monthlyUsage": "Monthly Usage",
@@ -1420,7 +1424,9 @@
     "menu": {
       "addItem": "Add Item",
       "addCategory": "Add Category",
-      "sampleBanner": "These are sample items — tap any to edit or delete. Add your own dishes when ready."
+      "sampleBanner": "These are sample items — tap any to edit or delete. Add your own dishes when ready.",
+      "scratchBanner": "Start building your menu by adding categories and items.",
+      "noItemsBanner": "Great! Now add items to your categories."
     },
     "languages": {
       "translationProgress": "Translation Progress",

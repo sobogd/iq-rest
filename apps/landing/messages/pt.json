@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Adicionar item",
       "addCategory": "Adicionar categoria",
-      "sampleBanner": "Estes são itens de exemplo — toque em qualquer um para editar ou excluir. Adicione seus próprios pratos quando estiver pronto."
+      "sampleBanner": "Estes são itens de exemplo — toque em qualquer um para editar ou excluir. Adicione seus próprios pratos quando estiver pronto.",
+      "scratchBanner": "Comece a criar o seu menu adicionando categorias e itens.",
+      "noItemsBanner": "Ótimo! Agora adicione itens às suas categorias."
     },
     "onboarding": {
       "nameTitle": "Qual o nome do seu estabelecimento?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Padaria",
         "hotel": "Hotel",
-        "other": "Outro"
+        "other": "Outro",
+        "scratch": "Do Zero"
       },
-      "error": "Algo deu errado"
+      "error": "Algo deu errado",
+      "or": "ou",
+      "startFromScratch": "Começar do zero"
     },
     "home": {
       "viewMenu": "Ver o seu menu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Dê nome ao local",
       "checklistTemplate": "Escolha um modelo",
       "checklistMenu": "Edite o menu",
+      "checklistMenuFill": "Preencha o seu menu",
       "checklistContacts": "Adicione contactos",
       "checklistBrand": "Personalize a marca",
       "menuReady": "O seu menu está pronto! Partilhe o QR code com os clientes.",

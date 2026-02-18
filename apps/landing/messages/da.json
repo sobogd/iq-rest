@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Tilføj vare",
       "addCategory": "Tilføj kategori",
-      "sampleBanner": "Dette er eksempelvarer — tryk på en for at redigere eller slette. Tilføj dine egne retter, når du er klar."
+      "sampleBanner": "Dette er eksempelvarer — tryk på en for at redigere eller slette. Tilføj dine egne retter, når du er klar.",
+      "scratchBanner": "Begynd at opbygge din menu ved at tilføje kategorier og varer.",
+      "noItemsBanner": "Godt! Tilføj nu varer til dine kategorier."
     },
     "onboarding": {
       "nameTitle": "Hvad hedder dit sted?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Bageri",
         "hotel": "Hotel",
-        "other": "Andet"
+        "other": "Andet",
+        "scratch": "Fra Bunden"
       },
-      "error": "Noget gik galt"
+      "error": "Noget gik galt",
+      "or": "eller",
+      "startFromScratch": "Start fra bunden"
     },
     "home": {
       "viewMenu": "Se din menu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Navngiv dit sted",
       "checklistTemplate": "Vælg en skabelon",
       "checklistMenu": "Rediger menuen",
+      "checklistMenuFill": "Udfyld din menu",
       "checklistContacts": "Tilføj kontakter",
       "checklistBrand": "Tilpas dit brand",
       "menuReady": "Din menu er klar! Del din QR-kode med kunderne.",

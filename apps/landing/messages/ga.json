@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Cuir mír leis",
       "addCategory": "Cuir catagóir leis",
-      "sampleBanner": "Is míreanna samplacha iad seo — tapáil aon cheann chun eagarthóireacht nó scriosadh. Cuir do chuid miasa féin nuair a bheidh tú réidh."
+      "sampleBanner": "Is míreanna samplacha iad seo — tapáil aon cheann chun eagarthóireacht nó scriosadh. Cuir do chuid miasa féin nuair a bheidh tú réidh.",
+      "scratchBanner": "Tosaigh ag tógáil do bhiachlár trí chatagóirí agus míreanna a chur leis.",
+      "noItemsBanner": "Iontach! Cuir míreanna le do chuid catagóirí anois."
     },
     "onboarding": {
       "nameTitle": "Cad is ainm do d'áit?",
@@ -1494,9 +1496,12 @@
         "bar": "Bár",
         "bakery": "Bácús",
         "hotel": "Óstán",
-        "other": "Eile"
+        "other": "Eile",
+        "scratch": "Ón Tús"
       },
-      "error": "Chuaigh rud éigin mícheart"
+      "error": "Chuaigh rud éigin mícheart",
+      "or": "nó",
+      "startFromScratch": "Tosaigh ón tús"
     },
     "home": {
       "viewMenu": "Féach ar do bhiachlár",
@@ -1504,6 +1509,7 @@
       "checklistName": "Ainmnigh d'áit",
       "checklistTemplate": "Roghnaigh teimpléad",
       "checklistMenu": "Cuir an biachlár in eagar",
+      "checklistMenuFill": "Líon isteach do bhiachlár",
       "checklistContacts": "Cuir teagmhálacha leis",
       "checklistBrand": "Saincheap do bhranda",
       "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí.",

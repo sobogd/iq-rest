@@ -125,8 +125,10 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.reservations} backHref="/dashboard/reservations" />
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-6">
+      <div className="flex flex-col flex-1 overflow-hidden">
+        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
+          <div className="max-w-lg mx-auto flex flex-col min-h-full">
+          <div className="space-y-6 flex-1">
         {!hasActiveSubscription && (
           <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
             <div className="flex gap-3 md:gap-4 md:items-center">
@@ -233,17 +235,18 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
             </div>
           </>
         )}
-
-        <div className="pt-4 pb-2">
-          <Button onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }} disabled={saving || !hasChanges} variant="destructive" className="w-full h-10 rounded-xl shadow-md">
-            {saving ? (
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-            ) : (
-              <Save className="h-4 w-4 mr-2" />
-            )}
-            {t("save")}
-          </Button>
         </div>
+          <div className="pt-4 pb-2">
+            <Button onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }} disabled={saving || !hasChanges} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
+              {saving ? (
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              ) : (
+                <Save className="h-4 w-4 mr-2" />
+              )}
+              {t("save")}
+            </Button>
+          </div>
+          </div>
         </div>
       </div>
     </div>

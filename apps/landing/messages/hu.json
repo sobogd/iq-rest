@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Tétel hozzáadása",
       "addCategory": "Kategória hozzáadása",
-      "sampleBanner": "Ezek mintaelemek — érintsd meg bármelyiket szerkesztéshez vagy törléshez. Add hozzá saját ételeidet, amikor készen állsz."
+      "sampleBanner": "Ezek mintaelemek — érintsd meg bármelyiket szerkesztéshez vagy törléshez. Add hozzá saját ételeidet, amikor készen állsz.",
+      "scratchBanner": "Kezdd el az étlapod felépítését kategóriák és tételek hozzáadásával.",
+      "noItemsBanner": "Remek! Most adj hozzá tételeket a kategóriáidhoz."
     },
     "onboarding": {
       "nameTitle": "Mi a helye neve?",
@@ -1494,9 +1496,12 @@
         "bar": "Bár",
         "bakery": "Pékség",
         "hotel": "Hotel",
-        "other": "Egyéb"
+        "other": "Egyéb",
+        "scratch": "Az Alapoktól"
       },
-      "error": "Valami hiba történt"
+      "error": "Valami hiba történt",
+      "or": "vagy",
+      "startFromScratch": "Kezdd az alapoktól"
     },
     "home": {
       "viewMenu": "Menü megtekintése",
@@ -1504,6 +1509,7 @@
       "checklistName": "Adjon nevet a helyének",
       "checklistTemplate": "Válasszon sablont",
       "checklistMenu": "Szerkessze a menüt",
+      "checklistMenuFill": "Töltsd ki az étlapod",
       "checklistContacts": "Adja meg az elérhetőségeket",
       "checklistBrand": "Szabja testre a márkát",
       "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel.",

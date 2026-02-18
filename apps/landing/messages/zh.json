@@ -1510,7 +1510,9 @@
     "menu": {
       "addItem": "添加商品",
       "addCategory": "添加分类",
-      "sampleBanner": "这些是示例菜品——点击任意一项进行编辑或删除。准备好后添加您自己的菜品。"
+      "sampleBanner": "这些是示例菜品——点击任意一项进行编辑或删除。准备好后添加您自己的菜品。",
+      "scratchBanner": "通过添加分类和菜品来开始创建你的菜单。",
+      "noItemsBanner": "很好！现在给分类添加菜品吧。"
     },
     "onboarding": {
       "nameTitle": "您的店铺叫什么名字？",
@@ -1527,9 +1529,12 @@
         "bar": "酒吧",
         "bakery": "面包店",
         "hotel": "酒店",
-        "other": "其他"
+        "other": "其他",
+        "scratch": "从零开始"
       },
-      "error": "出了点问题"
+      "error": "出了点问题",
+      "or": "或",
+      "startFromScratch": "从零开始"
     },
     "home": {
       "viewMenu": "查看菜单",
@@ -1537,6 +1542,7 @@
       "checklistName": "为您的店铺命名",
       "checklistTemplate": "选择模板",
       "checklistMenu": "编辑菜单",
+      "checklistMenuFill": "填写你的菜单",
       "checklistContacts": "添加联系方式",
       "checklistBrand": "自定义品牌",
       "menuReady": "您的菜单已准备就绪！将二维码分享给顾客吧。",

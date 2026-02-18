@@ -29,9 +29,10 @@ interface MenuPageProps {
   initialCategories: Category[];
   initialCurrency: string;
   checklistMenuEdited: boolean;
+  startedFromScratch: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, checklistMenuEdited }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, checklistMenuEdited, startedFromScratch }: MenuPageProps) {
   const { translations } = useDashboard();
   const router = useRouter();
   const tItems = translations.items;
@@ -44,7 +45,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
   const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
-  const [showBanner, setShowBanner] = useState(!checklistMenuEdited);
+  const hasNoItems = initialItems.length === 0;
+  const [showBanner, setShowBanner] = useState(hasNoItems || !checklistMenuEdited);
   const isSampleMenu = !checklistMenuEdited;
 
   useEffect(() => {
@@ -225,25 +227,37 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-lg mx-auto h-full">
         {categories.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full gap-4">
-            <p className="text-muted-foreground text-center">
-              {tCategories.noCategories}
-            </p>
-            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}>
+          <div className="flex flex-col h-full">
+            <div className="flex items-start gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
+              <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
+              <p className="text-sm text-blue-700 dark:text-blue-300 flex-1">
+                {tMenu.scratchBanner}
+              </p>
+            </div>
+            <div className="flex items-center justify-center flex-1">
+              <p className="text-sm text-muted-foreground text-center">
+                {tCategories.noCategories}
+              </p>
+            </div>
+            <Button
+              variant="destructive"
+              onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
+              className="w-full h-12 rounded-2xl shadow-md shrink-0"
+            >
               <Plus className="h-4 w-4" />
               {tMenu.addCategory}
             </Button>
           </div>
         ) : (
-          <>
-            <div className="pb-4 flex flex-col gap-4">
+          <div className="flex flex-col min-h-full">
+            <div className="pb-4 flex flex-col gap-4 flex-1">
               {showBanner && (
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
                   <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
                   <p className="text-sm text-blue-700 dark:text-blue-300 flex-1">
-                    {tMenu.sampleBanner}
+                    {items.length === 0 ? tMenu.noItemsBanner : tMenu.sampleBanner}
                   </p>
                   <button
                     onClick={() => setShowBanner(false)}
@@ -261,9 +275,14 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
                 return (
                   <div key={category.id} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
                     {/* Category header */}
-                    <div className="flex items-center gap-2 px-4 h-12 bg-muted/30">
+                    <div
+                      onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); router.push(`/dashboard/categories/${category.id}`); } }}
+                      className={`flex items-center gap-2 px-4 h-12 bg-muted/30 transition-colors ${
+                        sortMode ? "" : "cursor-pointer hover:bg-muted/50"
+                      }`}
+                    >
                       {sortMode && (
-                        <div className="flex items-center gap-0.5 shrink-0">
+                        <div className="flex items-center gap-0.5 shrink-0" onClick={(e) => e.stopPropagation()}>
                           <button
                             onClick={() => handleMoveCategory(category.id, "up")}
                             disabled={catIndex === 0 || !!moving}
@@ -288,12 +307,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
                           </button>
                         </div>
                       )}
-                      <div
-                        onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); router.push(`/dashboard/categories/${category.id}`); } }}
-                        className={`flex items-center flex-1 min-w-0 transition-colors ${
-                          sortMode ? "ml-2" : "cursor-pointer"
-                        }`}
-                      >
+                      <div className={`flex items-center flex-1 min-w-0 ${sortMode ? "ml-2" : ""}`}>
                         <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground truncate">{category.name}</span>
                         {!sortMode && <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0 ml-1" />}
                       </div>
@@ -364,11 +378,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
                       ))}
                       {!sortMode && (
                         <div
-                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer hover:bg-muted/30 transition-colors"
+                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-green-500/5 hover:bg-green-500/10"
                           onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${category.id}`); }}
                         >
-                          <Plus className="h-4 w-4 text-muted-foreground mr-2" />
-                          <span className="text-sm text-muted-foreground">{tMenu.addItem}</span>
+                          <Plus className="h-4 w-4 mr-2 text-green-500" />
+                          <span className="text-sm font-medium text-green-700 dark:text-green-400">{tMenu.addItem}</span>
                         </div>
                       )}
                     </div>
@@ -379,15 +393,16 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
 
             {/* Add category button */}
             {!sortMode && (
-              <div
+              <Button
+                variant="destructive"
                 onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-                className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center h-12 cursor-pointer hover:bg-muted/70 transition-colors"
+                className="w-full h-12 rounded-2xl shadow-md"
               >
-                <Plus className="h-4 w-4 text-muted-foreground mr-2" />
-                <span className="text-sm font-medium text-muted-foreground">{tMenu.addCategory}</span>
-              </div>
+                <Plus className="h-4 w-4" />
+                {tMenu.addCategory}
+              </Button>
             )}
-          </>
+          </div>
         )}
         </div>
       </div>

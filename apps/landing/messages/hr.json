@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Dodaj stavku",
       "addCategory": "Dodaj kategoriju",
-      "sampleBanner": "Ovo su primjeri stavki — dodirnite bilo koju za uređivanje ili brisanje. Dodajte vlastita jela kada budete spremni."
+      "sampleBanner": "Ovo su primjeri stavki — dodirnite bilo koju za uređivanje ili brisanje. Dodajte vlastita jela kada budete spremni.",
+      "scratchBanner": "Počnite graditi svoj jelovnik dodavanjem kategorija i stavki.",
+      "noItemsBanner": "Odlično! Sada dodajte stavke u svoje kategorije."
     },
     "onboarding": {
       "nameTitle": "Kako se zove vaš lokal?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Pekara",
         "hotel": "Hotel",
-        "other": "Ostalo"
+        "other": "Ostalo",
+        "scratch": "Od Nule"
       },
-      "error": "Nešto je pošlo po krivu"
+      "error": "Nešto je pošlo po krivu",
+      "or": "ili",
+      "startFromScratch": "Počni od nule"
     },
     "home": {
       "viewMenu": "Pogledaj svoj meni",
@@ -1504,6 +1509,7 @@
       "checklistName": "Imenuj svoj lokal",
       "checklistTemplate": "Odaberi predložak",
       "checklistMenu": "Uredi meni",
+      "checklistMenuFill": "Ispunite svoj jelovnik",
       "checklistContacts": "Dodaj kontakte",
       "checklistBrand": "Prilagodi brend",
       "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima.",

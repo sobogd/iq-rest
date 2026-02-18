@@ -1477,7 +1477,9 @@
     "menu": {
       "addItem": "Item toevoegen",
       "addCategory": "Categorie toevoegen",
-      "sampleBanner": "Dit zijn voorbeelditems — tik op een item om te bewerken of te verwijderen. Voeg je eigen gerechten toe wanneer je klaar bent."
+      "sampleBanner": "Dit zijn voorbeelditems — tik op een item om te bewerken of te verwijderen. Voeg je eigen gerechten toe wanneer je klaar bent.",
+      "scratchBanner": "Begin je menu op te bouwen door categorieën en items toe te voegen.",
+      "noItemsBanner": "Geweldig! Voeg nu items toe aan je categorieën."
     },
     "onboarding": {
       "nameTitle": "Hoe heet je zaak?",
@@ -1494,9 +1496,12 @@
         "bar": "Bar",
         "bakery": "Bakkerij",
         "hotel": "Hotel",
-        "other": "Anders"
+        "other": "Anders",
+        "scratch": "Vanaf Nul"
       },
-      "error": "Er ging iets mis"
+      "error": "Er ging iets mis",
+      "or": "of",
+      "startFromScratch": "Helemaal opnieuw beginnen"
     },
     "home": {
       "viewMenu": "Bekijk je menu",
@@ -1504,6 +1509,7 @@
       "checklistName": "Geef je zaak een naam",
       "checklistTemplate": "Kies een sjabloon",
       "checklistMenu": "Bewerk je menu",
+      "checklistMenuFill": "Vul je menu in",
       "checklistContacts": "Voeg contacten toe",
       "checklistBrand": "Pas je merk aan",
       "menuReady": "Je menu is klaar! Deel je QR-code met klanten.",

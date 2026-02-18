@@ -24,9 +24,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+
+const LS_ADMIN_PAGE = "admin_companies_page";
+const LS_ADMIN_EMAIL = "admin_companies_email";
 
 interface User {
   id: string;
@@ -58,7 +60,6 @@ interface Company {
 
 export function AdminPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [companies, setCompanies] = useState<Company[]>([]);
   const [total, setTotal] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
@@ -69,28 +70,30 @@ export function AdminPage() {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   const initialPage = useMemo(() => {
-    return Math.max(0, Number(searchParams.get("page") || 0));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    try {
+      const raw = localStorage.getItem(LS_ADMIN_PAGE);
+      if (raw) return Math.max(0, Number(raw));
+    } catch {}
+    return 0;
+  }, []);
 
   const initialEmail = useMemo(() => {
-    return searchParams.get("email") || "";
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    try {
+      return localStorage.getItem(LS_ADMIN_EMAIL) || "";
+    } catch {}
+    return "";
+  }, []);
 
   const [page, setPage] = useState(initialPage);
   const [email, setEmail] = useState(initialEmail);
   const [emailInput, setEmailInput] = useState(initialEmail);
 
-  const updateUrl = useCallback(
-    (p: number, e: string) => {
-      const params = new URLSearchParams();
-      if (p > 0) params.set("page", String(p));
-      if (e) params.set("email", e);
-      const qs = params.toString();
-      const url = qs ? `/dashboard/admin?${qs}` : "/dashboard/admin";
-      router.replace(url, { scroll: false });
-    },
-    [router]
-  );
+  const saveToStorage = useCallback((p: number, e: string) => {
+    try {
+      localStorage.setItem(LS_ADMIN_PAGE, String(p));
+      localStorage.setItem(LS_ADMIN_EMAIL, e);
+    } catch {}
+  }, []);
 
   const fetchCompanies = useCallback(
     async (p: number, e: string, isRefresh = false) => {
@@ -122,7 +125,7 @@ export function AdminPage() {
 
   const goToPage = (p: number) => {
     setPage(p);
-    updateUrl(p, email);
+    saveToStorage(p, email);
     fetchCompanies(p, email);
   };
 
@@ -130,7 +133,7 @@ export function AdminPage() {
     const trimmed = emailInput.trim();
     setEmail(trimmed);
     setPage(0);
-    updateUrl(0, trimmed);
+    saveToStorage(0, trimmed);
     fetchCompanies(0, trimmed);
   };
 
@@ -139,7 +142,7 @@ export function AdminPage() {
     setEmail("");
     setShowSearch(false);
     setPage(0);
-    updateUrl(0, "");
+    saveToStorage(0, "");
     fetchCompanies(0, "");
   };
 
@@ -187,7 +190,7 @@ export function AdminPage() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
-            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => fetchCompanies(page, email, true)}>
+            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => { setPage(0); saveToStorage(0, email); fetchCompanies(0, email, true); }}>
               <RefreshCw className="h-4 w-4" />
               Refresh
             </DropdownMenuItem>
@@ -250,7 +253,7 @@ export function AdminPage() {
                     key={company.id}
                     onClick={() =>
                       router.push(
-                        `/dashboard/admin/companies/${company.id}${page > 0 ? `?page=${page}` : ""}`
+                        `/dashboard/admin/companies/${company.id}`
                       )
                     }
                     className={`flex items-center w-full gap-3 px-4 py-3 text-left hover:bg-muted/80 transition-colors ${
