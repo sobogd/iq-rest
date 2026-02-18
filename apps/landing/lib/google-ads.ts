@@ -1,63 +1,33 @@
 // Google Ads API - Offline Conversion Upload via gclid
+import { GoogleAdsApi } from "google-ads-api";
 
-const GOOGLE_ADS_API_VERSION = "v23";
+let client: GoogleAdsApi | null = null;
 
-interface TokenResponse {
-  access_token: string;
-  expires_in: number;
-}
-
-let cachedToken: { token: string; expiresAt: number } | null = null;
-
-async function getAccessToken(): Promise<string> {
-  // Return cached token if still valid (with 60s buffer)
-  if (cachedToken && Date.now() < cachedToken.expiresAt - 60_000) {
-    return cachedToken.token;
-  }
-
-  const res = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      grant_type: "refresh_token",
+function getClient(): GoogleAdsApi {
+  if (!client) {
+    client = new GoogleAdsApi({
       client_id: process.env.GOOGLE_ADS_CLIENT_ID!,
       client_secret: process.env.GOOGLE_ADS_CLIENT_SECRET!,
-      refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
-    }),
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Failed to get access token: ${text}`);
+      developer_token: process.env.GOOGLE_ADS_DEVELOPER_TOKEN!,
+    });
   }
-
-  const data: TokenResponse = await res.json();
-  cachedToken = {
-    token: data.access_token,
-    expiresAt: Date.now() + data.expires_in * 1000,
-  };
-
-  return data.access_token;
+  return client;
 }
 
-/**
- * Upload a click conversion to Google Ads
- * @param gclid - Google Click ID
- * @param conversionDateTime - ISO string of when the conversion happened
- * @param conversionAction - Conversion action resource name (customers/{id}/conversionActions/{id})
- */
 export async function uploadClickConversion(
   gclid: string,
   conversionDateTime: string,
   conversionValue?: number
 ): Promise<{ success: boolean; error?: string }> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID;
-  const developerToken = process.env.GOOGLE_ADS_DEVELOPER_TOKEN;
   const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID;
 
   const missing = [
+    !process.env.GOOGLE_ADS_CLIENT_ID && "GOOGLE_ADS_CLIENT_ID",
+    !process.env.GOOGLE_ADS_CLIENT_SECRET && "GOOGLE_ADS_CLIENT_SECRET",
+    !process.env.GOOGLE_ADS_REFRESH_TOKEN && "GOOGLE_ADS_REFRESH_TOKEN",
+    !process.env.GOOGLE_ADS_DEVELOPER_TOKEN && "GOOGLE_ADS_DEVELOPER_TOKEN",
     !customerId && "GOOGLE_ADS_CUSTOMER_ID",
-    !developerToken && "GOOGLE_ADS_DEVELOPER_TOKEN",
     !conversionActionId && "GOOGLE_ADS_CONVERSION_ACTION_ID",
   ].filter(Boolean);
   if (missing.length > 0) {
@@ -65,75 +35,54 @@ export async function uploadClickConversion(
   }
 
   try {
-    const accessToken = await getAccessToken();
+    const api = getClient();
+    const customer = api.Customer({
+      customer_id: customerId!,
+      refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+      login_customer_id: process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID || undefined,
+    });
 
-    // Format datetime as required by Google Ads: "yyyy-mm-dd hh:mm:ss+|-hh:mm"
+    // Format datetime: "yyyy-mm-dd hh:mm:ss+|-hh:mm"
     const dt = new Date(conversionDateTime);
     const formatted = dt
       .toISOString()
       .replace("T", " ")
       .replace(/\.\d{3}Z$/, "+00:00");
 
-    const url = `https://googleads.googleapis.com/${GOOGLE_ADS_API_VERSION}/customers/${customerId}:uploadClickConversions`;
+    const response = await customer.conversionUploads.uploadClickConversions({
+      customer_id: customerId!,
+      conversions: [
+        {
+          gclid,
+          conversion_action: `customers/${customerId}/conversionActions/${conversionActionId}`,
+          conversion_date_time: formatted,
+          ...(conversionValue !== undefined && {
+            conversion_value: conversionValue,
+            currency_code: "EUR",
+          }),
+        },
+      ],
+      partial_failure: true,
+      validate_only: false,
+    } as Parameters<typeof customer.conversionUploads.uploadClickConversions>[0]);
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "developer-token": developerToken!,
-        "Content-Type": "application/json",
-        ...(process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID && {
-          "login-customer-id": process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID,
-        }),
-      },
-      body: JSON.stringify({
-        conversions: [
-          {
-            gclid,
-            conversionAction: `customers/${customerId}/conversionActions/${conversionActionId}`,
-            conversionDateTime: formatted,
-            ...(conversionValue !== undefined && {
-              conversionValue,
-              currencyCode: "EUR",
-            }),
-          },
-        ],
-        partialFailure: true,
-      }),
-    });
-
-    if (!res.ok) {
-      const text = await res.text();
-      console.error("[Google Ads] Upload failed:", res.status, text);
-      // Parse JSON error if possible, otherwise show status
-      try {
-        const errJson = JSON.parse(text);
-        const msg = errJson?.error?.message || errJson?.error?.status || text;
-        return { success: false, error: `Google Ads ${res.status}: ${msg}` };
-      } catch {
-        return { success: false, error: `Google Ads API error ${res.status}` };
-      }
+    // Check partial failure
+    if (response.partial_failure_error) {
+      const msg =
+        response.partial_failure_error.message ||
+        JSON.stringify(response.partial_failure_error);
+      console.error("[Google Ads] Partial failure:", msg);
+      return { success: false, error: msg };
     }
 
-    const data = await res.json();
-
-    // Check for partial failure errors
-    if (data.partialFailureError) {
-      console.error(
-        "[Google Ads] Partial failure:",
-        JSON.stringify(data.partialFailureError)
-      );
-      return {
-        success: false,
-        error: data.partialFailureError.message || "Partial failure",
-      };
-    }
-
-    console.log("[Google Ads] Conversion uploaded for gclid:", gclid.slice(0, 12) + "...");
+    console.log(
+      "[Google Ads] Conversion uploaded for gclid:",
+      gclid.slice(0, 12) + "..."
+    );
     return { success: true };
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Unknown error";
-    console.error("[Google Ads] Error uploading conversion:", message);
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("[Google Ads] Error:", message);
     return { success: false, error: message };
   }
 }
