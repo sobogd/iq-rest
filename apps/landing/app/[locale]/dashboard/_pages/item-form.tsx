@@ -387,7 +387,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             onChange={setDescription}
             onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
             placeholder={t.descriptionPlaceholder}
-            rows={2}
+            rows={1}
           />
 
           <FormInput
@@ -460,7 +460,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             />
           </div>
 
-          <Collapsible open={moreDetailsOpen} onOpenChange={(open) => { track(DashboardEvent.TOGGLED_ITEM_MORE_DETAILS); setMoreDetailsOpen(open); }} className="mt-2">
+          <Collapsible open={moreDetailsOpen} onOpenChange={(open) => { track(DashboardEvent.TOGGLED_ITEM_MORE_DETAILS); setMoreDetailsOpen(open); }} className="!mt-8">
             <CollapsibleTrigger asChild>
               <button
                 type="button"
