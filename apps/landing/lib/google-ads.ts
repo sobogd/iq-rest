@@ -19,7 +19,8 @@ export async function uploadClickConversion(
   conversionDateTime: string,
   conversionValue?: number
 ): Promise<{ success: boolean; error?: string }> {
-  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID;
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
   const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID;
 
   const missing = [
@@ -39,7 +40,7 @@ export async function uploadClickConversion(
     const customer = api.Customer({
       customer_id: customerId!,
       refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
-      login_customer_id: process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID || undefined,
+      login_customer_id: loginCustomerId || undefined,
     });
 
     // Format datetime: "yyyy-mm-dd hh:mm:ss+|-hh:mm"
