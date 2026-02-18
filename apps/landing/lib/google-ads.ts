@@ -68,9 +68,9 @@ export async function uploadClickConversion(
 
     // Check partial failure
     if (response.partial_failure_error) {
+      const raw = response.partial_failure_error.message;
       const msg =
-        response.partial_failure_error.message ||
-        JSON.stringify(response.partial_failure_error);
+        typeof raw === "string" ? raw : JSON.stringify(response.partial_failure_error, null, 2);
       console.error("[Google Ads] Partial failure:", msg);
       return { success: false, error: msg };
     }
@@ -81,7 +81,7 @@ export async function uploadClickConversion(
     );
     return { success: true };
   } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
+    const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
     console.error("[Google Ads] Error:", message);
     return { success: false, error: message };
   }
