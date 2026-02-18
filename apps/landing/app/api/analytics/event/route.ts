@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
+import { uploadClickConversion } from "@/lib/google-ads";
 
 // Conversion event → Session flag mapping
 const CONVERSION_FLAGS: Record<string, string> = {
@@ -41,8 +42,10 @@ export async function POST(request: NextRequest) {
     // Find-or-create Session
     const existing = await prisma.session.findUnique({
       where: { id: sessionId },
-      select: { id: true, country: true, gclid: true, keyword: true },
+      select: { id: true, country: true, gclid: true, keyword: true, conversionSent: true },
     });
+
+    let sessionGclid = existing?.gclid ?? gclid ?? null;
 
     if (existing) {
       // Update last-touch fields, preserve first-touch
@@ -82,6 +85,20 @@ export async function POST(request: NextRequest) {
         where: { id: sessionId },
         data: { [flagField]: true },
       });
+    }
+
+    // Auto-send Google Ads conversion when type is selected and session has gclid
+    if (event === "clicked_onboarding_type" && sessionGclid && !existing?.conversionSent) {
+      uploadClickConversion(sessionGclid, new Date().toISOString(), 0.01)
+        .then(async (result) => {
+          if (result.success) {
+            await prisma.session.update({
+              where: { id: sessionId },
+              data: { conversionSent: true },
+            });
+          }
+        })
+        .catch(() => {});
     }
 
     // Create AnalyticsEvent

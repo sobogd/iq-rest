@@ -290,6 +290,7 @@ model Session {
   modifiedDesign   Boolean @default(false)
   reached50Views   Boolean @default(false)
   paidSubscription Boolean @default(false)
+  conversionSent   Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
