@@ -51,12 +51,12 @@ interface MenuLayoutProps {
 }
 
 export default async function MenuLayout({ children, params }: MenuLayoutProps) {
-  const { slug, locale } = await params;
+  const { slug } = await params;
   const showAd = await checkAdStatus(slug);
 
   return (
     <div className="min-h-dvh bg-background">
-      <MenuLayoutClient slug={slug} locale={locale} showAd={showAd}>
+      <MenuLayoutClient showAd={showAd}>
         {children}
       </MenuLayoutClient>
     </div>

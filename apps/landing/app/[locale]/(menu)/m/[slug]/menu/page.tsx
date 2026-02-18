@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MenuFeed } from "@/components/menu-feed";
 import { MenuHeader, MenuPageWrapper } from "../_components";
+import { trackPageView } from "../_lib/track";
 
 interface MenuListPageProps {
   params: Promise<{
@@ -70,6 +71,7 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
   const [data, t] = await Promise.all([
     getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),
+    ...(!isPreview ? [trackPageView(slug, "menu", locale)] : []),
   ]);
 
   if (!data) {

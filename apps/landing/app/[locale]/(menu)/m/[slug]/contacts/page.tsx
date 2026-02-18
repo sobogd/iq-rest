@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { MapView } from "@/components/map-view";
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { getCountryCenter } from "@/lib/country-centers";
+import { trackPageView } from "../_lib/track";
 
 function getInstagramUrl(instagram: string): string {
   // If already a full URL, use as is
@@ -48,6 +49,7 @@ export default async function ContactsPage({ params, searchParams }: ContactsPag
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
+    ...(!isPreview ? [trackPageView(slug, "contacts", locale)] : []),
   ]);
 
   if (!restaurant) {

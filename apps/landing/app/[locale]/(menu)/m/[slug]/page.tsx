@@ -4,6 +4,7 @@ import { ArrowRight, Phone, Globe, CalendarDays } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MenuNavLink } from "./_components";
+import { trackPageView } from "./_lib/track";
 
 function isVideo(url: string) {
   return /\.(mp4|webm|mov)$/i.test(url);
@@ -54,10 +55,12 @@ async function getRestaurant(slug: string) {
 export default async function MenuPage({ params, searchParams }: MenuPageProps) {
   const { slug, locale } = await params;
   const { preview } = await searchParams;
-  const previewParam = preview === "1" ? "?preview=1" : "";
+  const isPreview = preview === "1";
+  const previewParam = isPreview ? "?preview=1" : "";
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),
+    ...(!isPreview ? [trackPageView(slug, "home", locale)] : []),
   ]);
 
   if (!restaurant) {

@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { ReserveForm } from "./reserve-form";
 import { MenuHeader, MenuPageWrapper } from "../_components";
+import { trackPageView } from "../_lib/track";
 
 interface ReservePageProps {
   params: Promise<{
@@ -42,6 +43,7 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicReserve"),
+    ...(!isPreview ? [trackPageView(slug, "reserve", locale)] : []),
   ]);
 
   if (!restaurant) {

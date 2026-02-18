@@ -198,6 +198,18 @@ export default function middleware(request: NextRequest) {
   // Set geo cookies from Cloudflare headers
   setGeoCookies(request, response);
 
+  // Set session cookie for menu pages (no maxAge = session cookie, dies when browser closes)
+  if (pathname.match(new RegExp(`^/(${localePattern})/m/`))) {
+    if (!request.cookies.get("sqr_session_id")?.value) {
+      const sessionId = crypto.randomUUID();
+      response.cookies.set("sqr_session_id", sessionId, {
+        path: "/",
+        httpOnly: true,
+        sameSite: "lax",
+      });
+    }
+  }
+
   return response;
 }
 
