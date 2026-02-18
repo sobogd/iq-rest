@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
         where: { id: sessionId },
         include: {
           events: {
-            orderBy: { createdAt: "desc" },
+            orderBy: { createdAt: "asc" },
             select: {
               id: true,
               event: true,
@@ -74,13 +74,31 @@ export async function GET(request: NextRequest) {
         },
       });
 
-      const source = session?.gclid ? "Ads" : "Direct";
-
       return NextResponse.json({
+        session: session ? {
+          id: session.id,
+          country: session.country,
+          gclid: session.gclid,
+          keyword: session.keyword,
+          userAgent: session.userAgent,
+          browser: session.browser,
+          device: session.device,
+          ip: session.ip,
+          userId: session.userId,
+          companyId: session.companyId,
+          wasRegistered: session.wasRegistered,
+          namedRestaurant: session.namedRestaurant,
+          selectedType: session.selectedType,
+          modifiedMenu: session.modifiedMenu,
+          modifiedContacts: session.modifiedContacts,
+          modifiedDesign: session.modifiedDesign,
+          reached50Views: session.reached50Views,
+          paidSubscription: session.paidSubscription,
+          conversionSent: session.conversionSent,
+          createdAt: session.createdAt,
+          updatedAt: session.updatedAt,
+        } : null,
         events: session?.events || [],
-        source,
-        adValues: null,
-        userAgent: session?.userAgent || null,
       });
     }
 
