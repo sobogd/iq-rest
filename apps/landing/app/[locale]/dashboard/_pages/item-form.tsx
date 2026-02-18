@@ -312,12 +312,12 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
   // Allergens section — shared between add and edit modes
   const allergensSection = (
-    <div>
+    <div className="space-y-2">
       <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
         {t.allergens}:
       </label>
       {!hasActiveSubscription ? (
-        <div className="space-y-2 mt-2">
+        <div className="space-y-2">
           <p className="text-sm text-amber-500">
             {t.subscribeForAllergens}
           </p>
@@ -373,11 +373,21 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
           <FormInput
             id="name"
-            label={`${t.name}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
+            label={`${t.name}:`}
             value={name}
             onChange={setName}
             onFocus={() => track(DashboardEvent.FOCUSED_ITEM_NAME)}
             placeholder={t.namePlaceholder}
+          />
+
+          <FormTextarea
+            id="description"
+            label={`${t.description}:`}
+            value={description}
+            onChange={setDescription}
+            onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
+            placeholder={t.descriptionPlaceholder}
+            rows={2}
           />
 
           <FormInput
@@ -450,7 +460,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             />
           </div>
 
-          <Collapsible open={moreDetailsOpen} onOpenChange={(open) => { track(DashboardEvent.TOGGLED_ITEM_MORE_DETAILS); setMoreDetailsOpen(open); }}>
+          <Collapsible open={moreDetailsOpen} onOpenChange={(open) => { track(DashboardEvent.TOGGLED_ITEM_MORE_DETAILS); setMoreDetailsOpen(open); }} className="mt-2">
             <CollapsibleTrigger asChild>
               <button
                 type="button"
@@ -475,15 +485,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                   translateErrorMessage={t.translateError}
                 />
               ))}
-
-              <FormTextarea
-                id="description"
-                label={`${t.description}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
-                value={description}
-                onChange={setDescription}
-                onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
-                placeholder={t.descriptionPlaceholder}
-              />
 
               {otherLanguages.map((lang) => (
                 <FormTextareaTranslate
