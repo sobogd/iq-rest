@@ -23,9 +23,10 @@ export async function listAccessibleCustomers(): Promise<{
 }> {
   try {
     const api = getClient();
-    const customers = await api.listAccessibleCustomers(
+    const response = await api.listAccessibleCustomers(
       process.env.GOOGLE_ADS_REFRESH_TOKEN!
     );
+    const customers = (response as { resource_names?: string[] }).resource_names || [];
     return {
       success: true,
       customers,
