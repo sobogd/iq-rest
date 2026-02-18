@@ -6,18 +6,25 @@ import {
   ChevronLeft,
   ChevronRight,
   Trash2,
+  MoreVertical,
   SlidersHorizontal,
   X,
+  Loader2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
@@ -244,107 +251,118 @@ export function SessionsPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Sessions" backHref="/dashboard">
-        <Dialog open={filterOpen} onOpenChange={(open) => { setFilterOpen(open); if (open) setDraftFilters(filters); }}>
-          <DialogTrigger asChild>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="relative">
-              <SlidersHorizontal className="h-4 w-4" />
+              <MoreVertical className="h-4 w-4" />
               {active && (
-                <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary" />
+                <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-primary" />
               )}
             </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-sm">
-            <DialogHeader>
-              <DialogTitle>Filters</DialogTitle>
-            </DialogHeader>
-            <div className="flex flex-col gap-4 pt-2">
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor="filter-country">Country code</Label>
-                <Input
-                  id="filter-country"
-                  placeholder="e.g. US, DE, ES"
-                  value={draftFilters.country}
-                  onChange={(e) => setDraftFilters({ ...draftFilters, country: e.target.value })}
-                  maxLength={2}
-                />
-              </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
+            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={() => goToPage(page)}>
+              <RefreshCw className="h-4 w-4" />
+              Refresh
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              className="px-4 py-2.5 rounded-none border-t border-foreground/5"
+              onClick={() => { setFilterOpen(true); setDraftFilters(filters); }}
+            >
+              <SlidersHorizontal className="h-4 w-4" />
+              Filters
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </PageHeader>
+      <Dialog open={filterOpen} onOpenChange={(open) => { setFilterOpen(open); if (open) setDraftFilters(filters); }}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Filters</DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col gap-4 pt-2">
+            <div className="flex flex-col gap-1.5">
+              <Label htmlFor="filter-country">Country code</Label>
+              <Input
+                id="filter-country"
+                placeholder="e.g. US, DE, ES"
+                value={draftFilters.country}
+                onChange={(e) => setDraftFilters({ ...draftFilters, country: e.target.value })}
+                maxLength={2}
+              />
+            </div>
 
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor="filter-keyword">Keyword</Label>
-                <Input
-                  id="filter-keyword"
-                  placeholder="e.g. qr menu"
-                  value={draftFilters.keyword}
-                  onChange={(e) => setDraftFilters({ ...draftFilters, keyword: e.target.value })}
-                />
-              </div>
+            <div className="flex flex-col gap-1.5">
+              <Label htmlFor="filter-keyword">Keyword</Label>
+              <Input
+                id="filter-keyword"
+                placeholder="e.g. qr menu"
+                value={draftFilters.keyword}
+                onChange={(e) => setDraftFilters({ ...draftFilters, keyword: e.target.value })}
+              />
+            </div>
 
-              <div className="flex flex-col gap-1.5">
-                <Label>Bots</Label>
-                <div className="flex gap-2">
-                  {BOT_OPTIONS.map((opt) => (
-                    <button
-                      key={opt.value}
-                      onClick={() => setDraftFilters({ ...draftFilters, bot: opt.value as Filters["bot"] })}
-                      className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
-                        draftFilters.bot === opt.value
-                          ? "border-primary bg-primary/10 font-medium"
-                          : "border-border hover:bg-muted/30"
-                      }`}
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-1.5">
-                <Label>Source</Label>
-                <div className="flex gap-2">
-                  {ADS_OPTIONS.map((opt) => (
-                    <button
-                      key={opt.value}
-                      onClick={() => setDraftFilters({ ...draftFilters, ads: opt.value as Filters["ads"] })}
-                      className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
-                        draftFilters.ads === opt.value
-                          ? "border-primary bg-primary/10 font-medium"
-                          : "border-border hover:bg-muted/30"
-                      }`}
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex gap-2 pt-2">
-                <Button variant="outline" className="flex-1" onClick={resetFilters}>
-                  <X className="h-4 w-4" />
-                  Reset
-                </Button>
-                <Button className="flex-1" onClick={applyFilters}>
-                  Apply
-                </Button>
+            <div className="flex flex-col gap-1.5">
+              <Label>Bots</Label>
+              <div className="flex gap-2">
+                {BOT_OPTIONS.map((opt) => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setDraftFilters({ ...draftFilters, bot: opt.value as Filters["bot"] })}
+                    className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                      draftFilters.bot === opt.value
+                        ? "border-primary bg-primary/10 font-medium"
+                        : "border-border hover:bg-muted/30"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
               </div>
             </div>
-          </DialogContent>
-        </Dialog>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => goToPage(page)}
-          disabled={loading}
-        >
-          <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
-        </Button>
-      </PageHeader>
+
+            <div className="flex flex-col gap-1.5">
+              <Label>Source</Label>
+              <div className="flex gap-2">
+                {ADS_OPTIONS.map((opt) => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setDraftFilters({ ...draftFilters, ads: opt.value as Filters["ads"] })}
+                    className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                      draftFilters.ads === opt.value
+                        ? "border-primary bg-primary/10 font-medium"
+                        : "border-border hover:bg-muted/30"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex gap-2 pt-2">
+              <Button variant="outline" className="flex-1" onClick={resetFilters}>
+                <X className="h-4 w-4" />
+                Reset
+              </Button>
+              <Button className="flex-1" onClick={applyFilters}>
+                Apply
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
-          {sessions.length === 0 ? (
+          {loading && sessions.length > 0 ? (
+            <div className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: `${sessions.length * 82}px` }}>
+              <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+            </div>
+          ) : sessions.length === 0 && !loading ? (
             <p className="text-sm text-muted-foreground text-center py-8">
               {active ? "No sessions match filters" : "No sessions yet"}
             </p>
-          ) : (
+          ) : sessions.length === 0 ? null : (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
               {sessions.map((session, index) => {
                 const tags = getSessionTags(session);
@@ -354,6 +372,7 @@ export function SessionsPage() {
                     className={`flex items-start gap-3 w-full px-4 py-3 hover:bg-muted/30 transition-colors ${
                       index > 0 ? "border-t border-foreground/5" : ""
                     }`}
+                    style={{ minHeight: "82px" }}
                   >
                     {/* Flag */}
                     <span className="text-base shrink-0 w-6 text-center mt-0.5">

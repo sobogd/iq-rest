@@ -3,6 +3,12 @@ import { cookies } from "next/headers";
 import { isAdminEmail } from "@/lib/admin";
 import { uploadClickConversion } from "@/lib/google-ads";
 
+const CONVERSION_ACTIONS: Record<string, string | undefined> = {
+  type_selected: process.env.GOOGLE_ADS_CONVERSION_ACTION_ID,
+  views_reached: process.env.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS,
+  subscription: process.env.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION,
+};
+
 export async function POST(request: NextRequest) {
   try {
     const cookieStore = await cookies();
@@ -12,7 +18,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
 
-    const { gclid, value, conversionDateTime } = await request.json();
+    const { gclid, conversionDateTime, eventType } = await request.json();
 
     if (!gclid || !conversionDateTime) {
       return NextResponse.json(
@@ -21,7 +27,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const result = await uploadClickConversion(gclid, conversionDateTime, value);
+    const conversionActionId = eventType ? CONVERSION_ACTIONS[eventType] : undefined;
+
+    const result = await uploadClickConversion(gclid, conversionDateTime, undefined, conversionActionId);
 
     return NextResponse.json(result);
   } catch (error) {

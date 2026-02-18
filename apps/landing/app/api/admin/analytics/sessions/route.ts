@@ -87,6 +87,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         session: session ? {
           id: session.id,
+          companyId: session.companyId,
           country: session.country,
           gclid: session.gclid,
           keyword: session.keyword,
@@ -104,6 +105,8 @@ export async function GET(request: NextRequest) {
           reached50Views: session.reached50Views,
           paidSubscription: session.paidSubscription,
           conversionSent: session.conversionSent,
+          conversionViewsSent: session.conversionViewsSent,
+          conversionSubscriptionSent: session.conversionSubscriptionSent,
           createdAt: session.createdAt,
           updatedAt: session.updatedAt,
         } : null,

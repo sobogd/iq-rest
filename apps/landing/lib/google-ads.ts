@@ -17,11 +17,12 @@ function getClient(): GoogleAdsApi {
 export async function uploadClickConversion(
   gclid: string,
   conversionDateTime: string,
-  conversionValue?: number
+  conversionValue?: number,
+  customConversionActionId?: string
 ): Promise<{ success: boolean; error?: string }> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
-  const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID;
+  const conversionActionId = customConversionActionId || process.env.GOOGLE_ADS_CONVERSION_ACTION_ID;
 
   const missing = [
     !process.env.GOOGLE_ADS_CLIENT_ID && "GOOGLE_ADS_CLIENT_ID",
@@ -29,7 +30,7 @@ export async function uploadClickConversion(
     !process.env.GOOGLE_ADS_REFRESH_TOKEN && "GOOGLE_ADS_REFRESH_TOKEN",
     !process.env.GOOGLE_ADS_DEVELOPER_TOKEN && "GOOGLE_ADS_DEVELOPER_TOKEN",
     !customerId && "GOOGLE_ADS_CUSTOMER_ID",
-    !conversionActionId && "GOOGLE_ADS_CONVERSION_ACTION_ID",
+    !conversionActionId && "Conversion Action ID",
   ].filter(Boolean);
   if (missing.length > 0) {
     return { success: false, error: `Missing: ${missing.join(", ")}` };

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { stripe, PRICE_LOOKUP_KEYS } from "@/lib/stripe";
+import { uploadClickConversion } from "@/lib/google-ads";
 import type Stripe from "stripe";
 import { Plan, BillingCycle, SubscriptionStatus } from "@prisma/client";
 
@@ -129,6 +130,25 @@ export async function POST(request: NextRequest) {
               where: { companyId, paidSubscription: false },
               data: { paidSubscription: true },
             }).catch(() => {});
+
+            // Send Google Ads conversion for subscription
+            const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION;
+            if (conversionActionId) {
+              prisma.session.findFirst({
+                where: { companyId, gclid: { not: null }, conversionSubscriptionSent: false },
+                select: { id: true, gclid: true },
+              }).then(async (sess) => {
+                if (sess?.gclid) {
+                  const result = await uploadClickConversion(sess.gclid, new Date().toISOString(), undefined, conversionActionId);
+                  if (result.success) {
+                    await prisma.session.updateMany({
+                      where: { companyId },
+                      data: { conversionSubscriptionSent: true },
+                    });
+                  }
+                }
+              }).catch(() => {});
+            }
           }
         }
         break;

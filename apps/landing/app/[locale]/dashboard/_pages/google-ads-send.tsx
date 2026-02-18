@@ -5,8 +5,15 @@ import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ArrowLeft, Send, Loader2 } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { PageHeader } from "../_ui/page-header";
+
+const EVENT_TYPES = [
+  { value: "type_selected", label: "Type Selected" },
+  { value: "views_reached", label: "20 Views Reached" },
+  { value: "subscription", label: "Subscription" },
+];
 
 function getLocalDateTimeString(): string {
   const now = new Date();
@@ -18,7 +25,7 @@ function getLocalDateTimeString(): string {
 export function GoogleAdsSendPage() {
   const router = useRouter();
   const [gclid, setGclid] = useState("");
-  const [value, setValue] = useState("0.01");
+  const [eventType, setEventType] = useState("type_selected");
   const [dateTime, setDateTime] = useState(getLocalDateTimeString);
   const [loading, setLoading] = useState(false);
 
@@ -33,7 +40,7 @@ export function GoogleAdsSendPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           gclid: gclid.trim(),
-          value: parseFloat(value),
+          eventType,
           conversionDateTime: new Date(dateTime).toISOString(),
         }),
       });
@@ -55,21 +62,31 @@ export function GoogleAdsSendPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-        <div className="flex items-center py-3 max-w-lg mx-auto">
-          <button
-            onClick={() => router.push("/dashboard")}
-            className="flex items-center justify-center h-10 w-10"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </button>
-          <h1 className="text-xl font-semibold flex-1 ml-3">Google Ads Conversion</h1>
-        </div>
-      </header>
+      <PageHeader title="Google Ads Conversion" backHref="/dashboard" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="w-full max-w-lg mx-auto">
           <form onSubmit={handleSubmit}>
             <div className="rounded-2xl border border-border bg-muted/50 p-4 flex flex-col gap-4">
+              <div className="flex flex-col gap-1.5">
+                <Label>Event Type</Label>
+                <div className="flex gap-2">
+                  {EVENT_TYPES.map((opt) => (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => setEventType(opt.value)}
+                      className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                        eventType === opt.value
+                          ? "border-primary bg-primary/10 font-medium"
+                          : "border-border hover:bg-muted/30"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <div className="flex flex-col gap-1.5">
                 <Label htmlFor="gclid">GCLID</Label>
                 <Input
@@ -79,18 +96,6 @@ export function GoogleAdsSendPage() {
                   onChange={(e) => setGclid(e.target.value)}
                   placeholder="CjwKCAjw..."
                   required
-                />
-              </div>
-
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor="value">Value (EUR)</Label>
-                <Input
-                  id="value"
-                  type="number"
-                  step="0.01"
-                  min="0"
-                  value={value}
-                  onChange={(e) => setValue(e.target.value)}
                 />
               </div>
 

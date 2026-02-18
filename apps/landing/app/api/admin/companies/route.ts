@@ -1,10 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
-import { Prisma } from "@prisma/client";
 import { isAdminEmail } from "@/lib/admin";
 
-export async function GET() {
+const PAGE_SIZE = 7;
+
+export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
     const userEmail = cookieStore.get("user_email")?.value;
@@ -13,50 +14,65 @@ export async function GET() {
       return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
-    const companies = await prisma.company.findMany({
-      include: {
-        users: {
-          include: {
-            user: {
-              select: {
-                id: true,
-                email: true,
-                createdAt: true,
+    const { searchParams } = request.nextUrl;
+    const page = Math.max(0, Number(searchParams.get("page") || 0));
+    const email = searchParams.get("email") || null;
+
+    // Build where clause for email filter (filter companies that have a user matching email)
+    const where = email
+      ? { users: { some: { user: { email: { contains: email, mode: "insensitive" as const } } } } }
+      : {};
+
+    const [companies, total] = await Promise.all([
+      prisma.company.findMany({
+        where,
+        include: {
+          users: {
+            include: {
+              user: {
+                select: {
+                  id: true,
+                  email: true,
+                  createdAt: true,
+                },
               },
             },
           },
-        },
-        restaurants: {
-          select: {
-            id: true,
-            title: true,
-            description: true,
-            slug: true,
-            accentColor: true,
-            createdAt: true,
-            address: true,
-            phone: true,
-            instagram: true,
-            whatsapp: true,
-            reservationsEnabled: true,
-            defaultLanguage: true,
-            languages: true,
+          restaurants: {
+            select: {
+              id: true,
+              title: true,
+              description: true,
+              slug: true,
+              accentColor: true,
+              createdAt: true,
+              address: true,
+              phone: true,
+              instagram: true,
+              whatsapp: true,
+              reservationsEnabled: true,
+              defaultLanguage: true,
+              languages: true,
+            },
+          },
+          _count: {
+            select: {
+              categories: true,
+              items: true,
+              supportMessages: true,
+            },
           },
         },
-        _count: {
-          select: {
-            categories: true,
-            items: true,
-            supportMessages: true,
-          },
+        orderBy: {
+          createdAt: "desc",
         },
-      },
-      orderBy: {
-        createdAt: "desc",
-      },
-    });
+        skip: page * PAGE_SIZE,
+        take: PAGE_SIZE,
+      }),
+      prisma.company.count({ where }),
+    ]);
 
-    // Get monthly page views per company (same metric used for plan limits)
+    // Get monthly page views for this page of companies
     const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
     const companyIds = companies.map((c) => c.id);
     const monthlyViewCounts = await prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
@@ -68,7 +84,7 @@ export async function GET() {
     `;
     const viewsMap = new Map(monthlyViewCounts.map((r) => [r.companyId, Number(r.count)]));
 
-    const result = companies.map((company) => ({
+    const items = companies.map((company) => ({
       id: company.id,
       name: company.name,
       createdAt: company.createdAt,
@@ -107,7 +123,12 @@ export async function GET() {
       })),
     }));
 
-    return NextResponse.json(result);
+    return NextResponse.json({
+      companies: items,
+      total,
+      page,
+      totalPages: Math.ceil(total / PAGE_SIZE),
+    });
   } catch (error) {
     console.error("Error fetching companies:", error);
     return NextResponse.json(

@@ -1,16 +1,24 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
-import { RefreshCw, Trash2 } from "lucide-react";
+import { useEffect, useState, useCallback, useMemo } from "react";
+import { RefreshCw, Trash2, MoreVertical, Copy, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
 import { toast } from "sonner";
 
 interface SessionData {
   id: string;
+  companyId: string | null;
   country: string | null;
   gclid: string | null;
   keyword: string | null;
@@ -28,6 +36,8 @@ interface SessionData {
   reached50Views: boolean;
   paidSubscription: boolean;
   conversionSent: boolean;
+  conversionViewsSent: boolean;
+  conversionSubscriptionSent: boolean;
   createdAt: string;
   updatedAt: string;
 }
@@ -133,13 +143,23 @@ const FLAG_LABELS: Record<string, string> = {
   modifiedMenu: "Modified menu",
   modifiedContacts: "Modified contacts",
   modifiedDesign: "Modified design",
-  reached50Views: "Reached 50 views",
+  reached50Views: "Reached 20 views",
   paidSubscription: "Paid subscription",
-  conversionSent: "Conversion sent",
+  conversionSent: "Conv: type selected",
+  conversionViewsSent: "Conv: 20 views",
+  conversionSubscriptionSent: "Conv: subscription",
 };
 
 export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const backHref = useMemo(() => {
+    const from = searchParams.get("from");
+    if (from) return from;
+    return "/dashboard/sessions";
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const [session, setSession] = useState<SessionData | null>(null);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -176,7 +196,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
         body: JSON.stringify({ sessionId }),
       });
       if (res.ok) {
-        router.push("/dashboard/sessions");
+        router.push(backHref);
       }
     } catch {
       console.error("Failed to delete session");
@@ -190,15 +210,15 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   }
 
   // Session info rows
-  const infoRows: { label: string; value: string; copyable?: boolean }[] = [];
+  const infoRows: { label: string; value: string }[] = [];
   if (session) {
     if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}` });
     if (session.ip) infoRows.push({ label: "IP", value: session.ip });
     if (session.browser) infoRows.push({ label: "Browser", value: session.browser });
     if (session.device) infoRows.push({ label: "Device", value: session.device });
     infoRows.push({ label: "Source", value: session.gclid ? "Google Ads" : "Direct" });
-    if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid, copyable: true });
-    if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword, copyable: true });
+    if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid });
+    if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword });
     if (session.restaurantName) infoRows.push({ label: "Restaurant", value: session.restaurantName });
     infoRows.push({ label: "Created", value: formatDate(session.createdAt) });
     infoRows.push({ label: "Updated", value: formatDate(session.updatedAt) });
@@ -209,17 +229,64 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
     ? Object.entries(FLAG_LABELS).filter(([key]) => session[key as keyof SessionData] === true)
     : [];
 
+  // Copyable values for dropdown
+  const copyableItems: { label: string; value: string }[] = [];
+  if (session) {
+    if (session.ip) copyableItems.push({ label: "Copy IP", value: session.ip });
+    if (session.gclid) copyableItems.push({ label: "Copy GCLID", value: session.gclid });
+    if (session.keyword) copyableItems.push({ label: "Copy Keyword", value: session.keyword });
+  }
+
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Session" backHref="/dashboard/sessions">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={fetchData}
-          disabled={loading}
-        >
-          <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
-        </Button>
+      <PageHeader title="Session" backHref={backHref}>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <MoreVertical className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
+            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={fetchData}>
+              <RefreshCw className="h-4 w-4" />
+              Refresh
+            </DropdownMenuItem>
+            {session?.companyId && (
+              <DropdownMenuItem
+                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
+                onClick={() =>
+                  router.push(
+                    `/dashboard/admin/companies/${session.companyId}?from=${encodeURIComponent(`/dashboard/sessions/${sessionId}`)}`
+                  )
+                }
+              >
+                <ExternalLink className="h-4 w-4" />
+                View Company
+              </DropdownMenuItem>
+            )}
+            {copyableItems.map((item) => (
+              <DropdownMenuItem
+                key={item.label}
+                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
+                onClick={() => {
+                  navigator.clipboard.writeText(item.value);
+                  toast.success("Copied");
+                }}
+              >
+                <Copy className="h-4 w-4" />
+                {item.label}
+              </DropdownMenuItem>
+            ))}
+            <DropdownMenuItem
+              onClick={handleDelete}
+              disabled={deleting}
+              className="px-4 py-2.5 rounded-none border-t border-foreground/5 text-destructive focus:text-destructive"
+            >
+              <Trash2 className="h-4 w-4" />
+              Delete session
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
@@ -229,15 +296,9 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               {infoRows.map((row, i) => (
                 <div
                   key={row.label}
-                  role={row.copyable ? "button" : undefined}
-                  tabIndex={row.copyable ? 0 : undefined}
-                  onClick={row.copyable ? () => {
-                    navigator.clipboard.writeText(row.value);
-                    toast.success("Copied to clipboard");
-                  } : undefined}
                   className={`flex items-center justify-between px-4 py-2.5 ${
                     i > 0 ? "border-t border-foreground/5" : ""
-                  }${row.copyable ? " cursor-pointer active:bg-muted/30" : ""}`}
+                  }`}
                 >
                   <span className="text-xs text-muted-foreground">{row.label}</span>
                   <span className="text-xs font-mono text-right break-all max-w-[60%]">{row.value}</span>
@@ -309,17 +370,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               ))}
             </div>
           )}
-
-          {/* Delete button */}
-          <Button
-            variant="destructive"
-            className="w-full"
-            onClick={handleDelete}
-            disabled={deleting}
-          >
-            <Trash2 className={`h-4 w-4 mr-2 ${deleting ? "animate-pulse" : ""}`} />
-            Delete session
-          </Button>
         </div>
       </div>
     </div>
