@@ -3,8 +3,6 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
-const botPatterns = /bot|crawl|spider|scraper|headless|phantom|selenium|puppeteer|lighthouse/i;
-
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
@@ -18,9 +16,23 @@ export async function GET(request: NextRequest) {
     const page = Math.max(0, Number(searchParams.get("page") || 0));
     const limit = 5;
 
+    // Filters
+    const filterCountry = searchParams.get("country") || null;
+    const filterBot = searchParams.get("bot"); // "true" | "false" | null
+    const filterAds = searchParams.get("ads"); // "true" | "false" | null
+
+    // Build where clause
+    const where: Record<string, unknown> = {};
+    if (filterCountry) where.country = filterCountry;
+    if (filterBot === "true") where.isBot = true;
+    if (filterBot === "false") where.isBot = false;
+    if (filterAds === "true") where.gclid = { not: null };
+    if (filterAds === "false") where.gclid = null;
+
     // Get sessions directly from Session table
     const [sessionsList, totalResult] = await Promise.all([
       prisma.session.findMany({
+        where,
         orderBy: { updatedAt: "desc" },
         skip: page * limit,
         take: limit,
@@ -29,17 +41,17 @@ export async function GET(request: NextRequest) {
           country: true,
           gclid: true,
           keyword: true,
-          userAgent: true,
           browser: true,
           device: true,
           ip: true,
           userId: true,
+          isBot: true,
           createdAt: true,
           updatedAt: true,
           _count: { select: { events: true } },
         },
       }),
-      prisma.session.count(),
+      prisma.session.count({ where }),
     ]);
 
     // Collect userIds to resolve restaurant names
@@ -99,7 +111,7 @@ export async function GET(request: NextRequest) {
           ? userRestaurantMap.get(s.userId) || null
           : null,
         ip: s.ip,
-        isBot: s.userAgent ? botPatterns.test(s.userAgent) : false,
+        isBot: s.isBot,
       };
     });
 

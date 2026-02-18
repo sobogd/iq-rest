@@ -6,8 +6,19 @@ import {
   ChevronLeft,
   ChevronRight,
   Trash2,
+  SlidersHorizontal,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
@@ -25,6 +36,18 @@ interface Session {
   restaurantName: string | null;
   ip: string | null;
   isBot: boolean;
+}
+
+interface Filters {
+  country: string;
+  bot: "all" | "true" | "false";
+  ads: "all" | "true" | "false";
+}
+
+const DEFAULT_FILTERS: Filters = { country: "", bot: "all", ads: "all" };
+
+function hasActiveFilters(filters: Filters): boolean {
+  return filters.country !== "" || filters.bot !== "all" || filters.ads !== "all";
 }
 
 function countryToFlag(countryCode: string): string {
@@ -73,6 +96,20 @@ function getSessionTags(session: Session): { label: string; color: string }[] {
   return tags;
 }
 
+type FilterOption = { value: string; label: string };
+
+const BOT_OPTIONS: FilterOption[] = [
+  { value: "all", label: "All" },
+  { value: "false", label: "Not bots" },
+  { value: "true", label: "Bots only" },
+];
+
+const ADS_OPTIONS: FilterOption[] = [
+  { value: "all", label: "All" },
+  { value: "true", label: "Google Ads" },
+  { value: "false", label: "Direct only" },
+];
+
 export function SessionsPage() {
   const router = useRouter();
   const [sessions, setSessions] = useState<Session[]>([]);
@@ -81,11 +118,17 @@ export function SessionsPage() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [draftFilters, setDraftFilters] = useState<Filters>(DEFAULT_FILTERS);
 
-  const fetchSessions = useCallback(async (p: number) => {
+  const fetchSessions = useCallback(async (p: number, f: Filters) => {
     setLoading(true);
     try {
       const params = new URLSearchParams({ page: String(p) });
+      if (f.country) params.set("country", f.country.toUpperCase());
+      if (f.bot !== "all") params.set("bot", f.bot);
+      if (f.ads !== "all") params.set("ads", f.ads);
       const res = await fetch(`/api/admin/analytics/sessions-list?${params}`);
       if (!res.ok) {
         const text = await res.text();
@@ -105,8 +148,8 @@ export function SessionsPage() {
   }, []);
 
   useEffect(() => {
-    fetchSessions(0);
-  }, [fetchSessions]);
+    fetchSessions(0, filters);
+  }, [fetchSessions, filters]);
 
   const handleDelete = async (sessionId: string) => {
     if (!confirm("Delete this session and all its events?")) return;
@@ -118,13 +161,24 @@ export function SessionsPage() {
         body: JSON.stringify({ sessionId }),
       });
       if (res.ok) {
-        fetchSessions(page);
+        fetchSessions(page, filters);
       }
     } catch {
       console.error("Failed to delete session");
     } finally {
       setDeleting(null);
     }
+  };
+
+  const applyFilters = () => {
+    setFilters(draftFilters);
+    setFilterOpen(false);
+  };
+
+  const resetFilters = () => {
+    setDraftFilters(DEFAULT_FILTERS);
+    setFilters(DEFAULT_FILTERS);
+    setFilterOpen(false);
   };
 
   const formatDate = (dateString: string) => {
@@ -141,13 +195,90 @@ export function SessionsPage() {
     return <PageLoader />;
   }
 
+  const active = hasActiveFilters(filters);
+
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Sessions" backHref="/dashboard">
+        <Dialog open={filterOpen} onOpenChange={(open) => { setFilterOpen(open); if (open) setDraftFilters(filters); }}>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="icon" className="relative">
+              <SlidersHorizontal className="h-4 w-4" />
+              {active && (
+                <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary" />
+              )}
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="max-w-sm">
+            <DialogHeader>
+              <DialogTitle>Filters</DialogTitle>
+            </DialogHeader>
+            <div className="flex flex-col gap-4 pt-2">
+              <div className="flex flex-col gap-1.5">
+                <Label htmlFor="filter-country">Country code</Label>
+                <Input
+                  id="filter-country"
+                  placeholder="e.g. US, DE, ES"
+                  value={draftFilters.country}
+                  onChange={(e) => setDraftFilters({ ...draftFilters, country: e.target.value })}
+                  maxLength={2}
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Bots</Label>
+                <div className="flex gap-2">
+                  {BOT_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.value}
+                      onClick={() => setDraftFilters({ ...draftFilters, bot: opt.value as Filters["bot"] })}
+                      className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                        draftFilters.bot === opt.value
+                          ? "border-primary bg-primary/10 font-medium"
+                          : "border-border hover:bg-muted/30"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Source</Label>
+                <div className="flex gap-2">
+                  {ADS_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.value}
+                      onClick={() => setDraftFilters({ ...draftFilters, ads: opt.value as Filters["ads"] })}
+                      className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                        draftFilters.ads === opt.value
+                          ? "border-primary bg-primary/10 font-medium"
+                          : "border-border hover:bg-muted/30"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex gap-2 pt-2">
+                <Button variant="outline" className="flex-1" onClick={resetFilters}>
+                  <X className="h-4 w-4" />
+                  Reset
+                </Button>
+                <Button className="flex-1" onClick={applyFilters}>
+                  Apply
+                </Button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => fetchSessions(page)}
+          onClick={() => fetchSessions(page, filters)}
           disabled={loading}
         >
           <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
@@ -156,7 +287,9 @@ export function SessionsPage() {
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
           {sessions.length === 0 ? (
-            <p className="text-sm text-muted-foreground text-center py-8">No sessions yet</p>
+            <p className="text-sm text-muted-foreground text-center py-8">
+              {active ? "No sessions match filters" : "No sessions yet"}
+            </p>
           ) : (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
               {sessions.map((session, index) => {
@@ -210,13 +343,13 @@ export function SessionsPage() {
                           </span>
                         ))}
                         {!session.ip && tags.length === 0 && (
-                          <span className="invisible">—</span>
+                          <span className="invisible">-</span>
                         )}
                       </p>
 
                       {/* Line 4: Restaurant name */}
                       <p className="text-[10px] text-muted-foreground truncate mt-0.5">
-                        {session.restaurantName || <span className="invisible">—</span>}
+                        {session.restaurantName || <span className="invisible">-</span>}
                       </p>
                     </button>
 
@@ -240,7 +373,7 @@ export function SessionsPage() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => fetchSessions(page - 1)}
+                onClick={() => fetchSessions(page - 1, filters)}
                 disabled={page === 0 || loading}
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -251,7 +384,7 @@ export function SessionsPage() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => fetchSessions(page + 1)}
+                onClick={() => fetchSessions(page + 1, filters)}
                 disabled={page >= totalPages - 1 || loading}
               >
                 <ChevronRight className="h-4 w-4" />

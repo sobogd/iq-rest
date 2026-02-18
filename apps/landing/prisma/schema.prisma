@@ -281,6 +281,9 @@ model Session {
   userId    String?
   companyId String?
 
+  // Bot detection
+  isBot Boolean @default(false)
+
   // Conversion flags (set once to true, never reset)
   wasRegistered    Boolean @default(false)
   namedRestaurant  Boolean @default(false)

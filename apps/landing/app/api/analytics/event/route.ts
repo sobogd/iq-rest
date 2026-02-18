@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
 import { uploadClickConversion } from "@/lib/google-ads";
 
+const BOT_PATTERN = /bot|crawl|spider|scraper|headless|phantom|selenium|puppeteer|lighthouse/i;
+
 // Conversion event → Session flag mapping
 const CONVERSION_FLAGS: Record<string, string> = {
   auth_signup: "wasRegistered",
@@ -47,6 +49,8 @@ export async function POST(request: NextRequest) {
 
     let sessionGclid = existing?.gclid ?? gclid ?? null;
 
+    const isBot = ua ? BOT_PATTERN.test(ua) : false;
+
     if (existing) {
       // Update last-touch fields, preserve first-touch
       await prisma.session.update({
@@ -56,6 +60,7 @@ export async function POST(request: NextRequest) {
           browser,
           device,
           ip,
+          isBot,
           // First-touch: only set if currently null
           ...(existing.country === null && country ? { country } : {}),
           ...(existing.gclid === null && gclid ? { gclid } : {}),
@@ -74,6 +79,7 @@ export async function POST(request: NextRequest) {
           browser,
           device,
           ip,
+          isBot,
         },
       });
     }
