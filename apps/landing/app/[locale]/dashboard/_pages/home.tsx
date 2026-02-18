@@ -127,7 +127,7 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
         <div className="w-full max-w-lg mx-auto flex flex-col gap-4">
             {slug && (
               <MenuPreviewModal menuUrl={`/m/${slug}`}>
-                <Button variant="destructive" className="w-full h-10 rounded-xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
+                <Button variant="destructive" className="w-full h-12 rounded-2xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
                   <Eye className="h-4 w-4" />
                   {tHome("viewMenu")}
                 </Button>
