@@ -213,7 +213,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                         </span>
                       </div>
                       {item.description && (
-                        <p className="mt-2 text-sm text-gray-500">{item.description}</p>
+                        <p className="mt-2 text-sm text-gray-500 whitespace-pre-line">{item.description}</p>
                       )}
                       {item.allergens && item.allergens.length > 0 && (
                         <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
