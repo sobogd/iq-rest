@@ -15,6 +15,7 @@ function getClient(): GoogleAdsApi {
 }
 
 export interface KeywordBid {
+  resourceName: string;
   keyword: string;
   matchType: string;
   campaignName: string;
@@ -45,6 +46,7 @@ export async function getKeywordBids(): Promise<KeywordBid[]> {
 
   const results = await customer.query(`
     SELECT
+      ad_group_criterion.resource_name,
       ad_group_criterion.keyword.text,
       ad_group_criterion.keyword.match_type,
       ad_group_criterion.cpc_bid_micros,
@@ -83,6 +85,7 @@ export async function getKeywordBids(): Promise<KeywordBid[]> {
       existing.costMicros += costMicros;
     } else {
       map.set(key, {
+        resourceName: String(row.ad_group_criterion?.resource_name ?? ""),
         keyword,
         matchType,
         campaignName,
@@ -108,6 +111,44 @@ export async function getKeywordBids(): Promise<KeywordBid[]> {
   }
 
   return Array.from(map.values());
+}
+
+export async function updateKeywordBid(
+  resourceName: string,
+  cpcBidMicros: number
+): Promise<{ success: boolean; error?: string }> {
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+
+  if (!customerId) {
+    return { success: false, error: "Missing GOOGLE_ADS_CUSTOMER_ID" };
+  }
+
+  try {
+    const api = getClient();
+    const customer = api.Customer({
+      customer_id: customerId,
+      refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+      login_customer_id: loginCustomerId || undefined,
+    });
+
+    await customer.mutateResources([
+      {
+        entity: "ad_group_criterion",
+        operation: "update",
+        resource: {
+          resource_name: resourceName,
+          cpc_bid_micros: cpcBidMicros,
+        },
+      },
+    ]);
+
+    return { success: true };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
+    console.error("[Google Ads] Update bid error:", message);
+    return { success: false, error: message };
+  }
 }
 
 export async function uploadClickConversion(
