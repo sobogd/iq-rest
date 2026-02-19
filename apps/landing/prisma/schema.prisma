@@ -362,6 +362,26 @@ model BidChangeLog {
   @@map("bid_change_logs")
 }
 
+model KeywordBidSnapshot {
+  id             String   @id @default(cuid())
+  resourceName   String
+  keyword        String
+  campaignName   String
+  adGroupName    String
+  cpcBidMicros   Int
+  firstPageCpcMicros Int?
+  topOfPageCpcMicros Int?
+  clicks         Int      @default(0)
+  impressions    Int      @default(0)
+  costMicros     Int      @default(0)
+  hour           Int      // 0-23
+  createdAt      DateTime @default(now())
+
+  @@index([resourceName, createdAt])
+  @@index([createdAt])
+  @@map("keyword_bid_snapshots")
+}
+
 // Multi-currency pricing for Stripe
 model CurrencyPrice {
   id             String  @id @default(cuid())
