@@ -47,7 +47,7 @@ export function OtpPage({ email }: OtpPageProps) {
           analytics.disableTracking();
         }
         track(DashboardEvent.CLICKED_VERIFY_OTP);
-        analytics.linkSession(data.userId);
+        await analytics.linkSession(data.userId);
 
         // Redirect based on onboarding step
         const step = data.onboardingStep ?? 2;

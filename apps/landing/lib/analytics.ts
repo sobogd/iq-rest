@@ -57,6 +57,7 @@ function trackEvent(event: string) {
       sessionId,
       ...adParams,
     }),
+    keepalive: true,
   }).catch(() => {
     // Silently fail - analytics should never break the app
   });
@@ -74,15 +75,17 @@ export function enableTracking() {
   }
 }
 
-export function linkSession(userId: string) {
-  if (typeof window === "undefined" || isTrackingDisabled()) return;
+export function linkSession(userId: string): Promise<void> {
+  if (typeof window === "undefined" || isTrackingDisabled())
+    return Promise.resolve();
 
   const sessionId = getSessionId();
 
-  fetch("/api/analytics/link-session", {
+  return fetch("/api/analytics/link-session", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sessionId, userId }),
+    keepalive: true,
   })
     .then((res) => res.json())
     .then((data) => {

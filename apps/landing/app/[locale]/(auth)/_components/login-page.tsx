@@ -49,7 +49,7 @@ export function LoginPage() {
           if (data.isNewUser) {
             track(DashboardEvent.AUTH_SIGNUP);
           }
-          analytics.linkSession(data.userId);
+          await analytics.linkSession(data.userId);
 
           // Redirect based on onboarding step
           const step = data.onboardingStep ?? 0;
