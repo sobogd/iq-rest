@@ -6,7 +6,9 @@ import { X, Loader2 } from "lucide-react";
 
 interface MenuPreviewModalProps {
   menuUrl: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 function addPreviewParam(url: string): string {
@@ -14,8 +16,13 @@ function addPreviewParam(url: string): string {
   return `${url}${separator}preview=1`;
 }
 
-export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
-  const [open, setOpen] = useState(false);
+export function MenuPreviewModal({ menuUrl, children, open: controlledOpen, onOpenChange }: MenuPreviewModalProps) {
+  const [internalOpen, setInternalOpen] = useState(false);
+  const open = controlledOpen ?? internalOpen;
+  const setOpen = (v: boolean) => {
+    setInternalOpen(v);
+    onOpenChange?.(v);
+  };
   const [mounted, setMounted] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -25,6 +32,7 @@ export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
 
   useEffect(() => {
     if (open) {
+      setLoading(true);
       const scrollbarWidth =
         window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
@@ -118,9 +126,11 @@ export function MenuPreviewModal({ menuUrl, children }: MenuPreviewModalProps) {
     )
   ) : null;
 
+  if (!children) return modal;
+
   return (
     <>
-      <div onClick={() => { setOpen(true); setLoading(true); }}>{children}</div>
+      <div onClick={() => setOpen(true)}>{children}</div>
       {modal}
     </>
   );

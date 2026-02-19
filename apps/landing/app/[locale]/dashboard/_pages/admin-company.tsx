@@ -42,6 +42,7 @@ import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 
 interface User {
   id: string;
@@ -117,6 +118,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   const [deleting, setDeleting] = useState(false);
   const [sendingReminder, setSendingReminder] = useState(false);
   const [impersonating, setImpersonating] = useState(false);
+  const [showMenuPreview, setShowMenuPreview] = useState(false);
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [loadingMessages, setLoadingMessages] = useState(false);
@@ -393,9 +395,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
             {restaurant?.slug && (
               <DropdownMenuItem
                 className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={() =>
-                  window.open(`/m/${restaurant.slug}`, "_blank")
-                }
+                onClick={() => setShowMenuPreview(true)}
               >
                 <Eye className="h-4 w-4" />
                 View Menu
@@ -605,6 +605,14 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
           </Tabs>
         </div>
       </div>
+
+      {restaurant?.slug && (
+        <MenuPreviewModal
+          menuUrl={`/m/${restaurant.slug}`}
+          open={showMenuPreview}
+          onOpenChange={setShowMenuPreview}
+        />
+      )}
 
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
