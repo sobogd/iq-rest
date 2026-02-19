@@ -9,19 +9,11 @@ import {
   RefreshCw,
   ExternalLink,
   Eye,
-  MoreVertical,
-  Copy,
   LogIn,
   Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import {
   Tabs,
   TabsContent,
@@ -363,88 +355,12 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     if (restaurant.reservationsEnabled) restaurantRows.push({ label: "Reservations", value: "Enabled" });
   }
 
-  // Copyable items for dropdown
-  const copyableItems: { label: string; value: string }[] = [];
-  if (company.stripeCustomerId) copyableItems.push({ label: "Copy Stripe ID", value: company.stripeCustomerId });
-  if (restaurant?.url) copyableItems.push({ label: "Copy URL", value: restaurant.url });
-  if (restaurant?.phone) copyableItems.push({ label: "Copy Phone", value: restaurant.phone });
-
-
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={title} historyBack>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <MoreVertical className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
-            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={fetchCompany}>
-              <RefreshCw className="h-4 w-4" />
-              Refresh
-            </DropdownMenuItem>
-            {company.sessionId && (
-              <DropdownMenuItem
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={() =>
-                  router.push(
-                    `/dashboard/sessions/${company.sessionId}`
-                  )
-                }
-              >
-                <ExternalLink className="h-4 w-4" />
-                View Session
-              </DropdownMenuItem>
-            )}
-            {restaurant?.slug && (
-              <DropdownMenuItem
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={() => setShowMenuPreview(true)}
-              >
-                <Eye className="h-4 w-4" />
-                View Menu
-              </DropdownMenuItem>
-            )}
-            {copyableItems.map((item) => (
-              <DropdownMenuItem
-                key={item.label}
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={() => {
-                  navigator.clipboard.writeText(item.value);
-                  toast.success("Copied");
-                }}
-              >
-                <Copy className="h-4 w-4" />
-                {item.label}
-              </DropdownMenuItem>
-            ))}
-            <DropdownMenuItem
-              className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-              onClick={() => setShowEmailDialog(true)}
-            >
-              <Mail className="h-4 w-4" />
-              Send Email
-            </DropdownMenuItem>
-            {company.users[0] && (
-              <DropdownMenuItem
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={handleImpersonate}
-                disabled={impersonating}
-              >
-                <LogIn className="h-4 w-4" />
-                Login as {company.users[0].email.split("@")[0]}
-              </DropdownMenuItem>
-            )}
-            <DropdownMenuItem
-              onClick={() => setShowDeleteDialog(true)}
-              className="px-4 py-2.5 rounded-none border-t border-foreground/5 text-destructive focus:text-destructive"
-            >
-              <Trash2 className="h-4 w-4" />
-              Delete Company
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Button variant="ghost" size="icon" onClick={fetchCompany}>
+          <RefreshCw className="h-4 w-4" />
+        </Button>
       </PageHeader>
 
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
@@ -525,6 +441,56 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
                   ))}
                 </div>
               )}
+              {/* Action buttons */}
+              <div className="space-y-2">
+                {company.sessionId && (
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => router.push(`/dashboard/sessions/${company.sessionId}`)}
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Session
+                  </Button>
+                )}
+                {restaurant?.slug && (
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => setShowMenuPreview(true)}
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    View Menu
+                  </Button>
+                )}
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => setShowEmailDialog(true)}
+                >
+                  <Mail className="h-4 w-4 mr-2" />
+                  Send Email
+                </Button>
+                {company.users[0] && (
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={handleImpersonate}
+                    disabled={impersonating}
+                  >
+                    <LogIn className="h-4 w-4 mr-2" />
+                    Login as {company.users[0].email.split("@")[0]}
+                  </Button>
+                )}
+                <Button
+                  variant="destructive"
+                  className="w-full"
+                  onClick={() => setShowDeleteDialog(true)}
+                >
+                  <Trash2 className="h-4 w-4 mr-2" />
+                  Delete Company
+                </Button>
+              </div>
             </TabsContent>
 
             {/* Messages Tab */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Loader2, RefreshCw } from "lucide-react";
+import { Loader2, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
@@ -59,39 +59,24 @@ function formatDate(dateString: string): string {
   return `${day}.${month} ${hours}:${mins}`;
 }
 
-function buildUrl(period: Period, page?: number): string {
-  const params = new URLSearchParams();
-  if (period !== "today") params.set("period", period);
-  if (page) params.set("page", String(page));
-  const qs = params.toString();
-  return `/dashboard/sessions${qs ? `?${qs}` : ""}`;
-}
-
 export function SessionsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const periodParam = searchParams.get("period") as Period | null;
   const period: Period = periodParam && PERIODS.includes(periodParam) ? periodParam : "today";
-  const currentPage = Math.max(0, Number(searchParams.get("page") || 0));
 
   const [sessions, setSessions] = useState<Session[]>([]);
-  const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [refreshKey, setRefreshKey] = useState(0);
 
-  const fetchSessions = useCallback(async (p: Period, pg: number) => {
+  const fetchSessions = useCallback(async (p: Period) => {
     setLoading(true);
     try {
-      const params = new URLSearchParams({ period: p, page: String(pg) });
-      const res = await fetch(`/api/admin/analytics/sessions-list?${params}`);
+      const res = await fetch(`/api/admin/analytics/sessions-list?period=${p}`);
       if (!res.ok) return;
       const json = await res.json();
       setSessions(json.sessions || []);
-      setTotal(json.total);
-      setPage(json.page);
-      setTotalPages(json.totalPages);
     } catch (err) {
       console.error("Failed to fetch sessions:", err);
     } finally {
@@ -100,8 +85,8 @@ export function SessionsPage() {
   }, []);
 
   useEffect(() => {
-    fetchSessions(period, currentPage);
-  }, [period, currentPage, fetchSessions]);
+    fetchSessions(period);
+  }, [period, refreshKey, fetchSessions]);
 
   if (loading && sessions.length === 0) {
     return <PageLoader />;
@@ -109,8 +94,8 @@ export function SessionsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Sessions" historyBack>
-        <Button variant="ghost" size="icon" onClick={() => router.push(buildUrl(period))}>
+      <PageHeader title="Sessions" backHref="/dashboard">
+        <Button variant="ghost" size="icon" onClick={() => setRefreshKey((k) => k + 1)}>
           <RefreshCw className="h-4 w-4" />
         </Button>
       </PageHeader>
@@ -121,7 +106,12 @@ export function SessionsPage() {
             {TABS.map((tab) => (
               <button
                 key={tab.value}
-                onClick={() => router.push(buildUrl(tab.value))}
+                onClick={() => {
+                  const url = tab.value === "today"
+                    ? "/dashboard/sessions"
+                    : `/dashboard/sessions?period=${tab.value}`;
+                  router.push(url);
+                }}
                 className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
                   period === tab.value
                     ? "border-primary bg-primary/10 font-medium"
@@ -164,31 +154,6 @@ export function SessionsPage() {
                   )}
                 </button>
               ))}
-            </div>
-          )}
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-between">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => router.push(buildUrl(period, page - 1))}
-                disabled={page === 0 || loading}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <span className="text-xs text-muted-foreground">
-                {page + 1} / {totalPages} · {total} total
-              </span>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => router.push(buildUrl(period, page + 1))}
-                disabled={page >= totalPages - 1 || loading}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
             </div>
           )}
         </div>

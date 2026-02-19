@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Loader2, RefreshCw } from "lucide-react";
+import { ChevronLeft, ChevronRight, Loader2, RefreshCw, FolderOpen, Package, Eye, MessageSquare, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
@@ -13,6 +13,11 @@ interface Company {
   name: string | null;
   plan: string;
   subscriptionStatus: string;
+  categoriesCount: number;
+  itemsCount: number;
+  messagesCount: number;
+  monthlyViews: number;
+  emailsSent: Record<string, string> | null;
 }
 
 type Filter = "all" | "active" | "inactive";
@@ -46,6 +51,7 @@ export function AdminPage() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [refreshKey, setRefreshKey] = useState(0);
 
   const fetchCompanies = useCallback(async (f: Filter, pg: number) => {
     setLoading(true);
@@ -67,7 +73,7 @@ export function AdminPage() {
 
   useEffect(() => {
     fetchCompanies(filter, currentPage);
-  }, [filter, currentPage, fetchCompanies]);
+  }, [filter, currentPage, refreshKey, fetchCompanies]);
 
   if (loading && companies.length === 0) {
     return <PageLoader />;
@@ -75,8 +81,8 @@ export function AdminPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Companies" historyBack>
-        <Button variant="ghost" size="icon" onClick={() => router.push(buildUrl(filter))}>
+      <PageHeader title="Companies" backHref="/dashboard">
+        <Button variant="ghost" size="icon" onClick={() => setRefreshKey((k) => k + 1)}>
           <RefreshCw className="h-4 w-4" />
         </Button>
       </PageHeader>
@@ -120,16 +126,34 @@ export function AdminPage() {
                   <button
                     key={company.id}
                     onClick={() => router.push(`/dashboard/admin/companies/${company.id}`)}
-                    className={`flex items-center gap-2.5 w-full px-4 py-2.5 hover:bg-muted/30 transition-colors text-left ${
+                    className={`flex flex-col gap-1 w-full px-4 py-2.5 hover:bg-muted/30 transition-colors text-left ${
                       index > 0 ? "border-t border-foreground/5" : ""
                     }`}
                   >
-                    <span className={`text-sm truncate flex-1 ${nameColor || (company.name ? "" : "text-muted-foreground italic")}`}>
+                    <span className={`text-sm truncate w-full ${nameColor || (company.name ? "" : "text-muted-foreground italic")}`}>
                       {company.name || "No name"}
                     </span>
-                    <span className="text-xs text-muted-foreground shrink-0">
-                      {company.plan}
-                    </span>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-0.5"><FolderOpen className="h-3 w-3" />{company.categoriesCount}</span>
+                      <span className="flex items-center gap-0.5"><Package className="h-3 w-3" />{company.itemsCount}</span>
+                      {company.monthlyViews > 0 && (
+                        <span className={`flex items-center gap-0.5 ${
+                          company.plan === "FREE" && company.monthlyViews >= 400 ? "text-red-500" : "text-blue-500"
+                        }`}>
+                          <Eye className="h-3 w-3" />{company.monthlyViews}
+                        </span>
+                      )}
+                      {company.messagesCount > 0 && (
+                        <span className="flex items-center gap-0.5 text-red-500 font-medium">
+                          <MessageSquare className="h-3 w-3" />{company.messagesCount}
+                        </span>
+                      )}
+                      {company.emailsSent && Object.keys(company.emailsSent).length > 0 && (
+                        <span className="flex items-center gap-0.5 text-green-600">
+                          <Mail className="h-3 w-3" />
+                        </span>
+                      )}
+                    </div>
                   </button>
                 );
               })}

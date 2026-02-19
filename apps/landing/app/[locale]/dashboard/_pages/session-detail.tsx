@@ -1,14 +1,8 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { RefreshCw, Trash2, MoreVertical, Copy, ExternalLink, Search, Loader2 } from "lucide-react";
+import { RefreshCw, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
@@ -114,7 +108,6 @@ function formatDate(dateString: string) {
 const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
 
 function groupEventsByGap(events: AnalyticsEvent[]): AnalyticsEvent[][] {
-  // Reverse: newest first
   const sorted = [...events].reverse();
   const groups: AnalyticsEvent[][] = [];
   let current: AnalyticsEvent[] = [];
@@ -124,7 +117,6 @@ function groupEventsByGap(events: AnalyticsEvent[]): AnalyticsEvent[][] {
       current.push(sorted[i]);
       continue;
     }
-    // sorted is newest-first, so sorted[i] is older than sorted[i-1]
     const gap = new Date(sorted[i - 1].createdAt).getTime() - new Date(sorted[i].createdAt).getTime();
     if (gap > TWO_HOURS_MS) {
       groups.push(current);
@@ -156,7 +148,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
-  const [lookingUpClick, setLookingUpClick] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -198,39 +189,9 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
     }
   };
 
-  const handleLookupClick = async () => {
-    if (!session?.gclid || !session?.createdAt) return;
-    setLookingUpClick(true);
-    try {
-      const date = session.createdAt.slice(0, 10); // YYYY-MM-DD
-      const params = new URLSearchParams({ gclid: session.gclid, date });
-      const res = await fetch(`/api/admin/google-ads/click?${params}`);
-      const data = await res.json();
-
-      if (!res.ok) {
-        alert(`Error: ${data.error || "Unknown error"}`);
-        return;
-      }
-
-      const lines = [
-        `Campaign: ${data.campaignName} (${data.campaignId})`,
-        `Ad Group: ${data.adGroupName} (${data.adGroupId})`,
-        `Keyword: ${data.keyword}`,
-        `Match Type: ${data.matchType}`,
-        `Click Type: ${data.clickType}`,
-        `Device: ${data.device}`,
-        `Network: ${data.adNetworkType}`,
-        `Date: ${data.date}`,
-        data.areaOfInterest && `Area of Interest: ${data.areaOfInterest}`,
-        data.locationOfPresence && `Location: ${data.locationOfPresence}`,
-      ].filter(Boolean);
-
-      alert(lines.join("\n"));
-    } catch (err) {
-      alert(`Failed: ${err instanceof Error ? err.message : "Unknown error"}`);
-    } finally {
-      setLookingUpClick(false);
-    }
+  const handleCopy = (value: string) => {
+    navigator.clipboard.writeText(value);
+    toast.success("Copied");
   };
 
   if (loading) {
@@ -238,16 +199,20 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   }
 
   // Session info rows
-  const infoRows: { label: string; value: string }[] = [];
+  const infoRows: { label: string; value: string; copyable?: boolean; onClick?: () => void }[] = [];
   if (session) {
     if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}` });
-    if (session.ip) infoRows.push({ label: "IP", value: session.ip });
+    if (session.ip) infoRows.push({ label: "IP", value: session.ip, copyable: true });
     if (session.browser) infoRows.push({ label: "Browser", value: session.browser });
     if (session.device) infoRows.push({ label: "Device", value: session.device });
     infoRows.push({ label: "Source", value: session.gclid ? "Google Ads" : "Direct" });
-    if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid });
-    if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword });
-    if (session.restaurantName) infoRows.push({ label: "Restaurant", value: session.restaurantName });
+    if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid, copyable: true });
+    if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword, copyable: true });
+    if (session.restaurantName) infoRows.push({
+      label: "Restaurant",
+      value: session.restaurantName,
+      onClick: () => router.push(`/dashboard/admin/companies/${session.companyId}`),
+    });
     infoRows.push({ label: "Created", value: formatDate(session.createdAt) });
     infoRows.push({ label: "Updated", value: formatDate(session.updatedAt) });
   }
@@ -257,74 +222,12 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
     ? Object.entries(FLAG_LABELS).filter(([key]) => session[key as keyof SessionData] === true)
     : [];
 
-  // Copyable values for dropdown
-  const copyableItems: { label: string; value: string }[] = [];
-  if (session) {
-    if (session.ip) copyableItems.push({ label: "Copy IP", value: session.ip });
-    if (session.gclid) copyableItems.push({ label: "Copy GCLID", value: session.gclid });
-    if (session.keyword) copyableItems.push({ label: "Copy Keyword", value: session.keyword });
-  }
-
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Session" historyBack>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <MoreVertical className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="z-[60] rounded-2xl bg-background border-border p-0 overflow-hidden">
-            <DropdownMenuItem className="px-4 py-2.5 rounded-none" onClick={fetchData}>
-              <RefreshCw className="h-4 w-4" />
-              Refresh
-            </DropdownMenuItem>
-            {session?.companyId && (
-              <DropdownMenuItem
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={() =>
-                  router.push(
-                    `/dashboard/admin/companies/${session.companyId}?from=${encodeURIComponent(`/dashboard/sessions/${sessionId}`)}`
-                  )
-                }
-              >
-                <ExternalLink className="h-4 w-4" />
-                View Company
-              </DropdownMenuItem>
-            )}
-            {session?.gclid && (
-              <DropdownMenuItem
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={handleLookupClick}
-                disabled={lookingUpClick}
-              >
-                {lookingUpClick ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-                Lookup GCLID
-              </DropdownMenuItem>
-            )}
-            {copyableItems.map((item) => (
-              <DropdownMenuItem
-                key={item.label}
-                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-                onClick={() => {
-                  navigator.clipboard.writeText(item.value);
-                  toast.success("Copied");
-                }}
-              >
-                <Copy className="h-4 w-4" />
-                {item.label}
-              </DropdownMenuItem>
-            ))}
-            <DropdownMenuItem
-              onClick={handleDelete}
-              disabled={deleting}
-              className="px-4 py-2.5 rounded-none border-t border-foreground/5 text-destructive focus:text-destructive"
-            >
-              <Trash2 className="h-4 w-4" />
-              Delete session
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Button variant="ghost" size="icon" onClick={fetchData}>
+          <RefreshCw className="h-4 w-4" />
+        </Button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
@@ -332,15 +235,25 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
           {session && (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
               {infoRows.map((row, i) => (
-                <div
+                <button
                   key={row.label}
-                  className={`flex items-center justify-between px-4 py-2.5 ${
+                  type="button"
+                  disabled={!row.copyable && !row.onClick}
+                  onClick={() => {
+                    if (row.copyable) handleCopy(row.value);
+                    else if (row.onClick) row.onClick();
+                  }}
+                  className={`flex items-center justify-between w-full px-4 py-2.5 text-left ${
                     i > 0 ? "border-t border-foreground/5" : ""
-                  }`}
+                  } ${row.copyable || row.onClick ? "hover:bg-muted/30 active:bg-muted/50 transition-colors" : ""}`}
                 >
                   <span className="text-xs text-muted-foreground">{row.label}</span>
-                  <span className="text-xs font-mono text-right break-all max-w-[60%]">{row.value}</span>
-                </div>
+                  <span className={`text-xs font-mono text-right break-all max-w-[60%] ${
+                    row.onClick ? "text-blue-500" : ""
+                  }`}>
+                    {row.value}
+                  </span>
+                </button>
               ))}
 
               {/* Conversion flags */}
@@ -415,6 +328,16 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               ))}
             </div>
           )}
+
+          {/* Delete button */}
+          <Button
+            variant="destructive"
+            className="w-full"
+            onClick={handleDelete}
+            disabled={deleting}
+          >
+            {deleting ? "Deleting..." : "Delete session"}
+          </Button>
         </div>
       </div>
     </div>

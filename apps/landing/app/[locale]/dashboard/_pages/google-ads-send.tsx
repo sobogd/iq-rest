@@ -127,7 +127,7 @@ export function GoogleAdsSendPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Google Ads Conversion" historyBack />
+      <PageHeader title="Google Ads Conversion" backHref="/dashboard" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="w-full max-w-lg mx-auto">
           <form onSubmit={handleSubmit}>

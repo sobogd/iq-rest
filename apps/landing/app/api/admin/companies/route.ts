@@ -18,9 +18,9 @@ export async function GET(request: NextRequest) {
     const filter = searchParams.get("filter") || "all"; // all | active | inactive
 
     // For active/inactive we need to find companies with 20+ views this month
+    const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
     let activeCompanyIds: Set<string> | null = null;
     if (filter === "active" || filter === "inactive") {
-      const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
       const companiesWithViews = await prisma.$queryRaw<{ companyId: string }[]>`
         SELECT "companyId"
         FROM page_views
@@ -53,9 +53,17 @@ export async function GET(request: NextRequest) {
         id: true,
         plan: true,
         subscriptionStatus: true,
+        emailsSent: true,
         restaurants: {
           select: { title: true },
           take: 1,
+        },
+        _count: {
+          select: {
+            categories: true,
+            items: true,
+            supportMessages: true,
+          },
         },
       },
       orderBy: { createdAt: "desc" },
@@ -63,11 +71,29 @@ export async function GET(request: NextRequest) {
       take: PAGE_SIZE,
     });
 
+    // Get monthly page views for this page of companies
+    const companyIds = companies.map((c) => c.id);
+    const monthlyViewCounts = companyIds.length > 0
+      ? await prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
+          SELECT "companyId", COUNT(*) as count
+          FROM page_views
+          WHERE "companyId" = ANY(${companyIds}::text[])
+            AND "createdAt" >= ${startOfMonth}
+          GROUP BY "companyId"
+        `
+      : [];
+    const viewsMap = new Map(monthlyViewCounts.map((r) => [r.companyId, Number(r.count)]));
+
     const items = companies.map((c) => ({
       id: c.id,
       name: c.restaurants[0]?.title || null,
       plan: c.plan,
       subscriptionStatus: c.subscriptionStatus,
+      categoriesCount: c._count.categories,
+      itemsCount: c._count.items,
+      messagesCount: c._count.supportMessages,
+      monthlyViews: viewsMap.get(c.id) || 0,
+      emailsSent: c.emailsSent as Record<string, string> | null,
     }));
 
     return NextResponse.json({
