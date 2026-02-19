@@ -1,11 +1,16 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { RefreshCw, Loader2, Check } from "lucide-react";
+import { RefreshCw, Loader2, Check, ChevronRight } from "lucide-react";
+import { useRouter } from "@/i18n/routing";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 import type { KeywordBid } from "@/lib/google-ads";
+
+function encodeResourceName(resourceName: string): string {
+  return btoa(resourceName).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
 
 function formatMicros(micros: number | null): string {
   if (micros == null) return "—";
@@ -26,7 +31,7 @@ function matchTypeBadge(matchType: string) {
   );
 }
 
-function KeywordCard({ kw }: { kw: KeywordBid }) {
+function KeywordCard({ kw, onDetail }: { kw: KeywordBid; onDetail: () => void }) {
   const initialBid = kw.cpcBidMicros != null ? (kw.cpcBidMicros / 1_000_000).toFixed(2) : "";
   const [bidValue, setBidValue] = useState(initialBid);
   const [saving, setSaving] = useState(false);
@@ -110,7 +115,7 @@ function KeywordCard({ kw }: { kw: KeywordBid }) {
         </div>
       </div>
 
-      {/* Bid input */}
+      {/* Bid input + detail link */}
       <div className="flex items-center gap-2">
         <span className="text-xs text-muted-foreground shrink-0">Bid €</span>
         <Input
@@ -132,12 +137,19 @@ function KeywordCard({ kw }: { kw: KeywordBid }) {
             <Check className="h-3.5 w-3.5" />
           )}
         </button>
+        <button
+          onClick={onDetail}
+          className="flex items-center justify-center h-8 w-8 rounded-md bg-muted hover:bg-muted/80 shrink-0"
+        >
+          <ChevronRight className="h-3.5 w-3.5" />
+        </button>
       </div>
     </div>
   );
 }
 
 export function GoogleAdsKeywordsPage() {
+  const router = useRouter();
   const [keywords, setKeywords] = useState<KeywordBid[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -213,7 +225,13 @@ export function GoogleAdsKeywordsPage() {
               </h3>
               <div className="flex flex-col gap-2">
                 {kws.map((kw) => (
-                  <KeywordCard key={kw.resourceName} kw={kw} />
+                  <KeywordCard
+                    key={kw.resourceName}
+                    kw={kw}
+                    onDetail={() =>
+                      router.push(`/dashboard/google-ads/keywords/${encodeResourceName(kw.resourceName)}?kw=${encodeURIComponent(kw.keyword)}`)
+                    }
+                  />
                 ))}
               </div>
             </div>

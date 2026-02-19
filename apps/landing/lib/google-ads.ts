@@ -145,6 +145,57 @@ export async function getKeywordBids(
   return Array.from(map.values());
 }
 
+export interface KeywordDailyStats {
+  date: string;
+  clicks: number;
+  impressions: number;
+  averageCpcMicros: number | null;
+  costMicros: number;
+  conversions: number;
+}
+
+export async function getKeywordDailyStats(
+  resourceName: string,
+  dateRange: string = "LAST_7_DAYS"
+): Promise<KeywordDailyStats[]> {
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+
+  if (!customerId) {
+    throw new Error("Missing GOOGLE_ADS_CUSTOMER_ID");
+  }
+
+  const api = getClient();
+  const customer = api.Customer({
+    customer_id: customerId,
+    refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+    login_customer_id: loginCustomerId || undefined,
+  });
+
+  const results = await customer.query(`
+    SELECT
+      segments.date,
+      metrics.clicks,
+      metrics.impressions,
+      metrics.average_cpc,
+      metrics.cost_micros,
+      metrics.conversions
+    FROM keyword_view
+    WHERE ad_group_criterion.resource_name = '${resourceName}'
+      AND segments.date DURING ${dateRange}
+    ORDER BY segments.date DESC
+  `);
+
+  return results.map((row) => ({
+    date: String(row.segments?.date ?? ""),
+    clicks: Number(row.metrics?.clicks ?? 0),
+    impressions: Number(row.metrics?.impressions ?? 0),
+    averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
+    costMicros: Number(row.metrics?.cost_micros ?? 0),
+    conversions: Number(row.metrics?.conversions ?? 0),
+  }));
+}
+
 export async function updateKeywordBid(
   resourceName: string,
   cpcBidMicros: number
