@@ -109,19 +109,19 @@ function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
 
             return (
               <div key={step.event} className="flex flex-col items-center w-16">
-                <div className="h-24 w-full flex items-end justify-center">
+                <div className="text-center mb-1">
+                  {index > 0 && (
+                    <p className="text-[9px] text-muted-foreground">{conversionPct}%</p>
+                  )}
+                </div>
+                <div className="h-20 w-full flex items-end justify-center">
                   <div
                     className="w-10 rounded-t bg-primary/70"
                     style={{ height: `${Math.max(percentage, 4)}%` }}
                   />
                 </div>
                 <div className="mt-1 text-center">
-                  <p className="text-xs font-medium">
-                    {step.count}
-                    {index > 0 && (
-                      <span className="text-muted-foreground font-normal"> ({conversionPct}%)</span>
-                    )}
-                  </p>
+                  <p className="text-xs font-medium">{step.count}</p>
                   <p className="text-[9px] text-muted-foreground leading-tight h-6 overflow-hidden">
                     {step.label}
                   </p>

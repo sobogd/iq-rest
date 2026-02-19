@@ -5,7 +5,7 @@ import { isAdminEmail } from "@/lib/admin";
 
 // Funnel 1: Landing page section views
 const SECTION_FUNNEL = [
-  { event: "section_view_features", label: "Features" },
+  { event: "page_view_home", label: "Landing" },
   { event: "section_view_feature_color_scheme", label: "Color Scheme" },
   { event: "section_view_feature_mobile_management", label: "Mobile Mgmt" },
   { event: "section_view_feature_custom_design", label: "Custom Design" },
@@ -73,6 +73,43 @@ async function getFunnelData(
   );
 }
 
+// Conversion funnel: only count sessions that are genuinely new
+// (no company, or company created within the date range = new user)
+async function getConversionFunnelData(
+  steps: { event: string; label: string }[],
+  dateFrom: Date,
+  dateTo: Date
+) {
+  // Get "new" session IDs via raw query: no company, or company created in period, or company has no restaurants
+  const newSessions = await prisma.$queryRaw<{ id: string }[]>`
+    SELECT s.id FROM sessions s
+    LEFT JOIN companies c ON s."companyId" = c.id
+    LEFT JOIN restaurants r ON c.id = r."companyId"
+    WHERE s."createdAt" >= ${dateFrom} AND s."createdAt" <= ${dateTo}
+      AND (s."companyId" IS NULL OR c."createdAt" >= ${dateFrom} OR r.id IS NULL)
+    GROUP BY s.id
+  `;
+
+  const newSessionIds = new Set(newSessions.map((s) => s.id));
+
+  return Promise.all(
+    steps.map(async (step) => {
+      const sessions = await prisma.analyticsEvent.groupBy({
+        by: ["sessionId"],
+        where: {
+          event: step.event,
+          createdAt: { gte: dateFrom, lte: dateTo },
+        },
+      });
+      const count = sessions.filter((s) => newSessionIds.has(s.sessionId)).length;
+      return {
+        ...step,
+        count,
+      };
+    })
+  );
+}
+
 export async function GET(request: NextRequest) {
   try {
     // Check if user is admin
@@ -108,7 +145,7 @@ export async function GET(request: NextRequest) {
       getFunnelData(SECTION_FUNNEL, dateFrom, dateTo),
       getFunnelData(MARKETING_FUNNEL, dateFrom, dateTo),
       getFunnelData(DASHBOARD_FUNNEL, dateFrom, dateTo),
-      getFunnelData(CONVERSION_FUNNEL, dateFrom, dateTo),
+      getConversionFunnelData(CONVERSION_FUNNEL, dateFrom, dateTo),
     ]);
 
     // Get stats
