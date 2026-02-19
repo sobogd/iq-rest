@@ -27,9 +27,17 @@ export interface KeywordBid {
   clicks: number;
   impressions: number;
   costMicros: number;
+  conversions: number;
+  firstPageCpcMicros: number | null;
+  topOfPageCpcMicros: number | null;
+  firstPositionCpcMicros: number | null;
+  estimatedAddClicksAtFirstPosition: number | null;
+  estimatedAddCostAtFirstPosition: number | null;
 }
 
-export async function getKeywordBids(): Promise<KeywordBid[]> {
+export async function getKeywordBids(
+  dateRange: string = "LAST_30_DAYS"
+): Promise<KeywordBid[]> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
 
@@ -54,14 +62,20 @@ export async function getKeywordBids(): Promise<KeywordBid[]> {
       ad_group_criterion.status,
       campaign.name,
       ad_group.name,
+      ad_group_criterion.position_estimates.first_page_cpc_micros,
+      ad_group_criterion.position_estimates.top_of_page_cpc_micros,
+      ad_group_criterion.position_estimates.first_position_cpc_micros,
+      ad_group_criterion.position_estimates.estimated_add_clicks_at_first_position_cpc,
+      ad_group_criterion.position_estimates.estimated_add_cost_at_first_position_cpc,
       metrics.average_cpc,
       metrics.clicks,
       metrics.impressions,
-      metrics.cost_micros
+      metrics.cost_micros,
+      metrics.conversions
     FROM keyword_view
     WHERE campaign.status = 'ENABLED'
       AND ad_group_criterion.status != 'REMOVED'
-      AND segments.date DURING LAST_30_DAYS
+      AND segments.date DURING ${dateRange}
   `);
 
   // keyword_view returns one row per keyword per day — aggregate into totals
@@ -78,11 +92,13 @@ export async function getKeywordBids(): Promise<KeywordBid[]> {
     const clicks = Number(row.metrics?.clicks ?? 0);
     const impressions = Number(row.metrics?.impressions ?? 0);
     const costMicros = Number(row.metrics?.cost_micros ?? 0);
+    const conversions = Number(row.metrics?.conversions ?? 0);
 
     if (existing) {
       existing.clicks += clicks;
       existing.impressions += impressions;
       existing.costMicros += costMicros;
+      existing.conversions += conversions;
     } else {
       map.set(key, {
         resourceName: String(row.ad_group_criterion?.resource_name ?? ""),
@@ -101,6 +117,22 @@ export async function getKeywordBids(): Promise<KeywordBid[]> {
         clicks,
         impressions,
         costMicros,
+        conversions,
+        firstPageCpcMicros: row.ad_group_criterion?.position_estimates?.first_page_cpc_micros != null
+          ? Number(row.ad_group_criterion.position_estimates.first_page_cpc_micros)
+          : null,
+        topOfPageCpcMicros: row.ad_group_criterion?.position_estimates?.top_of_page_cpc_micros != null
+          ? Number(row.ad_group_criterion.position_estimates.top_of_page_cpc_micros)
+          : null,
+        firstPositionCpcMicros: row.ad_group_criterion?.position_estimates?.first_position_cpc_micros != null
+          ? Number(row.ad_group_criterion.position_estimates.first_position_cpc_micros)
+          : null,
+        estimatedAddClicksAtFirstPosition: row.ad_group_criterion?.position_estimates?.estimated_add_clicks_at_first_position_cpc != null
+          ? Number(row.ad_group_criterion.position_estimates.estimated_add_clicks_at_first_position_cpc)
+          : null,
+        estimatedAddCostAtFirstPosition: row.ad_group_criterion?.position_estimates?.estimated_add_cost_at_first_position_cpc != null
+          ? Number(row.ad_group_criterion.position_estimates.estimated_add_cost_at_first_position_cpc)
+          : null,
       });
     }
   }
@@ -147,6 +179,45 @@ export async function updateKeywordBid(
   } catch (err) {
     const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
     console.error("[Google Ads] Update bid error:", message);
+    return { success: false, error: message };
+  }
+}
+
+export async function batchUpdateKeywordBids(
+  updates: { resourceName: string; cpcBidMicros: number }[]
+): Promise<{ success: boolean; error?: string }> {
+  if (updates.length === 0) return { success: true };
+
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+
+  if (!customerId) {
+    return { success: false, error: "Missing GOOGLE_ADS_CUSTOMER_ID" };
+  }
+
+  try {
+    const api = getClient();
+    const customer = api.Customer({
+      customer_id: customerId,
+      refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+      login_customer_id: loginCustomerId || undefined,
+    });
+
+    await customer.mutateResources(
+      updates.map((u) => ({
+        entity: "ad_group_criterion" as const,
+        operation: "update" as const,
+        resource: {
+          resource_name: u.resourceName,
+          cpc_bid_micros: u.cpcBidMicros,
+        },
+      }))
+    );
+
+    return { success: true };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
+    console.error("[Google Ads] Batch update bids error:", message);
     return { success: false, error: message };
   }
 }
