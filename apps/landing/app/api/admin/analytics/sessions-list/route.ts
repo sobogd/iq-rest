@@ -44,8 +44,9 @@ export async function GET(request: NextRequest) {
         take: limit,
         select: {
           id: true,
+          country: true,
           gclid: true,
-          keyword: true,
+          userId: true,
           createdAt: true,
           updatedAt: true,
           _count: { select: { events: true } },
@@ -61,8 +62,9 @@ export async function GET(request: NextRequest) {
         firstEvent: s.createdAt.toISOString(),
         duration: Math.round(durationMs / 1000),
         eventCount: s._count.events,
+        country: s.country,
         source: s.gclid ? "Ads" : "Direct",
-        adValues: s.keyword,
+        hasUser: !!s.userId,
       };
     });
 

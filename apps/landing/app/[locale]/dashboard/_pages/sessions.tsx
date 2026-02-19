@@ -36,8 +36,9 @@ interface Session {
   firstEvent: string;
   duration: number;
   eventCount: number;
+  country: string | null;
   source: string;
-  adValues: string | null;
+  hasUser: boolean;
 }
 
 interface Filters {
@@ -53,6 +54,16 @@ const DEFAULT_FILTERS: Filters = { country: "", keyword: "", bot: "all", ads: "a
 
 function hasActiveFilters(filters: Filters): boolean {
   return filters.country !== "" || filters.keyword !== "" || filters.bot !== "all" || filters.ads !== "all" || filters.device !== "" || filters.browser !== "";
+}
+
+function countryToFlag(countryCode: string): string {
+  const code = countryCode.toUpperCase();
+  if (code.length !== 2) return "";
+  const offset = 0x1f1e6 - 65;
+  return String.fromCodePoint(
+    code.charCodeAt(0) + offset,
+    code.charCodeAt(1) + offset
+  );
 }
 
 function formatDuration(seconds: number): string {
@@ -224,13 +235,12 @@ export function SessionsPage() {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleString("en-GB", {
-      day: "numeric",
-      month: "short",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    });
+    const d = new Date(dateString);
+    const day = String(d.getDate()).padStart(2, "0");
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const hours = String(d.getHours()).padStart(2, "0");
+    const mins = String(d.getMinutes()).padStart(2, "0");
+    return `${day}.${month} ${hours}:${mins}`;
   };
 
   if (loading && sessions.length === 0) {
@@ -378,40 +388,39 @@ export function SessionsPage() {
               {sessions.map((session, index) => (
                 <div
                   key={session.sessionId}
-                  className={`flex items-center gap-3 w-full px-4 py-3 hover:bg-muted/30 transition-colors ${
+                  className={`flex items-center gap-2 w-full px-4 py-2.5 hover:bg-muted/30 transition-colors ${
                     index > 0 ? "border-t border-foreground/5" : ""
                   }`}
                 >
-                  {/* Info — clickable area */}
                   <button
                     onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
                     className="flex-1 min-w-0 text-left"
                   >
-                    {/* Line 1: Date/time + duration · events */}
-                    <div className="flex items-baseline justify-between">
-                      <p className="text-sm font-medium">
-                        {formatDate(session.firstEvent)}
-                      </p>
-                      <span className="text-xs text-muted-foreground shrink-0 ml-2">
-                        {formatDuration(session.duration)} · {session.eventCount} ev.
+                    {/* Line 1: Flag + Date + Source */}
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs shrink-0">{session.country ? countryToFlag(session.country) : "  "}</span>
+                      <span className="text-sm font-medium">{formatDate(session.firstEvent)}</span>
+                      <span className={`text-xs ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                        {session.source}
                       </span>
                     </div>
-
-                    {/* Line 2: Source */}
-                    <p className={`text-xs mt-0.5 ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                      {session.source === "Ads"
-                        ? `Ads${session.adValues ? `: ${session.adValues}` : ""}`
-                        : "Direct"}
-                    </p>
+                    {/* Line 2: Duration · Events + red dot if has user */}
+                    <div className="flex items-center gap-1 mt-0.5 ml-6">
+                      <span className="text-xs text-muted-foreground">
+                        {formatDuration(session.duration)} · {session.eventCount} ev.
+                      </span>
+                      {session.hasUser && (
+                        <span className="h-1.5 w-1.5 rounded-full bg-red-500 shrink-0" />
+                      )}
+                    </div>
                   </button>
 
-                  {/* Delete */}
                   <button
-                    className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
+                    className="p-1 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
                     onClick={() => handleDelete(session.sessionId)}
                     disabled={deleting === session.sessionId}
                   >
-                    <Trash2 className={`h-4 w-4 ${deleting === session.sessionId ? "animate-pulse" : ""}`} />
+                    <Trash2 className={`h-3.5 w-3.5 ${deleting === session.sessionId ? "animate-pulse" : ""}`} />
                   </button>
                 </div>
               ))}
