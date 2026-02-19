@@ -145,8 +145,9 @@ export async function getKeywordBids(
   return Array.from(map.values());
 }
 
-export interface KeywordDailyStats {
+export interface KeywordHourlyStats {
   date: string;
+  hour: number;
   clicks: number;
   impressions: number;
   averageCpcMicros: number | null;
@@ -154,10 +155,10 @@ export interface KeywordDailyStats {
   conversions: number;
 }
 
-export async function getKeywordDailyStats(
+export async function getKeywordHourlyStats(
   resourceName: string,
   dateRange: string = "LAST_7_DAYS"
-): Promise<KeywordDailyStats[]> {
+): Promise<KeywordHourlyStats[]> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
 
@@ -175,6 +176,7 @@ export async function getKeywordDailyStats(
   const results = await customer.query(`
     SELECT
       segments.date,
+      segments.hour,
       metrics.clicks,
       metrics.impressions,
       metrics.average_cpc,
@@ -183,11 +185,12 @@ export async function getKeywordDailyStats(
     FROM keyword_view
     WHERE ad_group_criterion.resource_name = '${resourceName}'
       AND segments.date DURING ${dateRange}
-    ORDER BY segments.date DESC
+    ORDER BY segments.date DESC, segments.hour ASC
   `);
 
   return results.map((row) => ({
     date: String(row.segments?.date ?? ""),
+    hour: Number(row.segments?.hour ?? 0),
     clicks: Number(row.metrics?.clicks ?? 0),
     impressions: Number(row.metrics?.impressions ?? 0),
     averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,

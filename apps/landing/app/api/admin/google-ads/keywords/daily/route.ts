@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { isAdminEmail } from "@/lib/admin";
-import { getKeywordDailyStats } from "@/lib/google-ads";
+import { getKeywordHourlyStats } from "@/lib/google-ads";
 
 export async function GET(request: NextRequest) {
   try {
@@ -17,8 +17,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Missing resourceName" }, { status: 400 });
     }
 
-    const days = await getKeywordDailyStats(resourceName, "LAST_7_DAYS");
-    return NextResponse.json({ days });
+    const hours = await getKeywordHourlyStats(resourceName, "LAST_7_DAYS");
+    return NextResponse.json({ hours });
   } catch (error) {
     console.error("Admin Google Ads keyword daily stats error:", error);
     return NextResponse.json(
