@@ -12,7 +12,7 @@ export async function GET() {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
 
-    const keywords = await getKeywordBids();
+    const keywords = await getKeywordBids("TODAY");
     return NextResponse.json({ keywords });
   } catch (error) {
     console.error("Admin Google Ads keywords error:", error);
