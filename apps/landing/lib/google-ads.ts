@@ -31,7 +31,7 @@ export interface AdGroupHourly {
   totalCostMicros: number;
 }
 
-export async function getAdGroupsYesterdayHourly(): Promise<AdGroupHourly[]> {
+export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
 
@@ -58,7 +58,7 @@ export async function getAdGroupsYesterdayHourly(): Promise<AdGroupHourly[]> {
     FROM ad_group
     WHERE campaign.status = 'ENABLED'
       AND ad_group.status != 'REMOVED'
-      AND segments.date DURING YESTERDAY
+      AND segments.date = '${date}'
   `);
 
   const map = new Map<string, { campaignName: string; adGroupName: string; hours: HourlyData[] }>();
@@ -87,6 +87,90 @@ export async function getAdGroupsYesterdayHourly(): Promise<AdGroupHourly[]> {
       totalClicks: sorted.reduce((s, h) => s + h.clicks, 0),
       totalImpressions: sorted.reduce((s, h) => s + h.impressions, 0),
       totalCostMicros: sorted.reduce((s, h) => s + h.costMicros, 0),
+    };
+  });
+}
+
+export interface DailyData {
+  date: string;
+  clicks: number;
+  impressions: number;
+  costMicros: number;
+  averageCpcMicros: number | null;
+}
+
+export interface AdGroupWeekly {
+  campaignName: string;
+  adGroupName: string;
+  days: DailyData[];
+  totalClicks: number;
+  totalImpressions: number;
+  totalCostMicros: number;
+  minAvgCpcMicros: number | null;
+  maxAvgCpcMicros: number | null;
+}
+
+export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+
+  if (!customerId) {
+    throw new Error("Missing GOOGLE_ADS_CUSTOMER_ID");
+  }
+
+  const api = getClient();
+  const customer = api.Customer({
+    customer_id: customerId,
+    refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+    login_customer_id: loginCustomerId || undefined,
+  });
+
+  const results = await customer.query(`
+    SELECT
+      campaign.name,
+      ad_group.name,
+      segments.date,
+      metrics.clicks,
+      metrics.impressions,
+      metrics.cost_micros,
+      metrics.average_cpc
+    FROM ad_group
+    WHERE campaign.status = 'ENABLED'
+      AND ad_group.status != 'REMOVED'
+      AND segments.date DURING LAST_7_DAYS
+  `);
+
+  const map = new Map<string, { campaignName: string; adGroupName: string; days: DailyData[] }>();
+
+  for (const row of results) {
+    const campaignName = String(row.campaign?.name ?? "");
+    const adGroupName = String(row.ad_group?.name ?? "");
+    const key = `${campaignName}|${adGroupName}`;
+
+    const entry = map.get(key) || { campaignName, adGroupName, days: [] };
+    entry.days.push({
+      date: String(row.segments?.date ?? ""),
+      clicks: Number(row.metrics?.clicks ?? 0),
+      impressions: Number(row.metrics?.impressions ?? 0),
+      costMicros: Number(row.metrics?.cost_micros ?? 0),
+      averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
+    });
+    map.set(key, entry);
+  }
+
+  return Array.from(map.values()).map((entry) => {
+    const sorted = entry.days.sort((a, b) => a.date.localeCompare(b.date));
+    const cpcs = sorted
+      .map((d) => d.averageCpcMicros)
+      .filter((v): v is number => v != null && v > 0);
+    return {
+      ...entry,
+      days: sorted,
+      totalClicks: sorted.reduce((s, d) => s + d.clicks, 0),
+      totalImpressions: sorted.reduce((s, d) => s + d.impressions, 0),
+      totalCostMicros: sorted.reduce((s, d) => s + d.costMicros, 0),
+      minAvgCpcMicros: cpcs.length > 0 ? Math.min(...cpcs) : null,
+      maxAvgCpcMicros: cpcs.length > 0 ? Math.max(...cpcs) : null,
     };
   });
 }
