@@ -39,7 +39,15 @@ const DATE_TABS: Tab[] = [
   })),
 ];
 
+const ALL_HOURS = Array.from({ length: 24 }, (_, i) => i);
+
 function AdGroupCard({ ag }: { ag: AdGroupHourly }) {
+  const hourMap = useMemo(() => {
+    const m = new Map<number, HourlyData>();
+    for (const h of ag.hours) m.set(h.hour, h);
+    return m;
+  }, [ag.hours]);
+
   return (
     <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
       <div className="flex items-center justify-between px-3 py-2 border-b border-foreground/5">
@@ -61,27 +69,30 @@ function AdGroupCard({ ag }: { ag: AdGroupHourly }) {
           </tr>
         </thead>
         <tbody className="divide-y divide-foreground/5">
-          {ag.hours.map((h: HourlyData) => (
-            <tr key={h.hour}>
-              <td className="px-3 py-1 tabular-nums text-muted-foreground">
-                {h.hour.toString().padStart(2, "0")}:00
-              </td>
-              <td className="px-3 py-1 text-right tabular-nums">
-                {h.clicks > 0 ? h.clicks : <span className="text-muted-foreground/30">0</span>}
-              </td>
-              <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
-                {h.impressions > 0 ? h.impressions : <span className="text-muted-foreground/30">0</span>}
-              </td>
-              <td className="px-3 py-1 text-right tabular-nums font-medium">
-                {h.costMicros > 0 ? formatMicros(h.costMicros) : <span className="text-muted-foreground/30">—</span>}
-              </td>
-              <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
-                {h.averageCpcMicros != null && h.averageCpcMicros > 0
-                  ? formatMicros(h.averageCpcMicros)
-                  : <span className="text-muted-foreground/30">—</span>}
-              </td>
-            </tr>
-          ))}
+          {ALL_HOURS.map((hour) => {
+            const h = hourMap.get(hour);
+            return (
+              <tr key={hour}>
+                <td className="px-3 py-1 tabular-nums text-muted-foreground">
+                  {hour.toString().padStart(2, "0")}:00
+                </td>
+                <td className="px-3 py-1 text-right tabular-nums">
+                  {h && h.clicks > 0 ? h.clicks : <span className="text-muted-foreground/30">—</span>}
+                </td>
+                <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
+                  {h && h.impressions > 0 ? h.impressions : <span className="text-muted-foreground/30">—</span>}
+                </td>
+                <td className="px-3 py-1 text-right tabular-nums font-medium">
+                  {h && h.costMicros > 0 ? formatMicros(h.costMicros) : <span className="text-muted-foreground/30">—</span>}
+                </td>
+                <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
+                  {h?.averageCpcMicros != null && h.averageCpcMicros > 0
+                    ? formatMicros(h.averageCpcMicros)
+                    : <span className="text-muted-foreground/30">—</span>}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
