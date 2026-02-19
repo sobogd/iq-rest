@@ -185,7 +185,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
       {/* Items feed - scrollable */}
       <div ref={containerRef} className="flex-1 overflow-auto min-h-0 hide-scrollbar" style={{ backgroundColor: "#fff" }}>
         <div className="flex justify-center px-0 min-[440px]:px-5">
-          <div className="max-w-[440px] w-full pt-0 min-[440px]:pt-5 pb-[60vh] space-y-5">
+          <div className={`max-w-[440px] w-full ${categories.length <= 1 ? "pt-5" : "pt-0 min-[440px]:pt-5"} pb-[60vh] space-y-5`}>
             {categories.map((category, index) => (
               <div
                 key={category.id}
