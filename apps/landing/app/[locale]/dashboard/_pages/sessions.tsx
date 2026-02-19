@@ -73,7 +73,8 @@ export function SessionsPage() {
   const fetchSessions = useCallback(async (p: Period) => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/admin/analytics/sessions-list?period=${p}`);
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const res = await fetch(`/api/admin/analytics/sessions-list?period=${p}&tz=${encodeURIComponent(tz)}`);
       if (!res.ok) return;
       const json = await res.json();
       setSessions(json.sessions || []);

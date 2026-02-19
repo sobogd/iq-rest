@@ -3,6 +3,40 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
+function getDateRange(period: string, tz: string): { dateFrom: Date; dateTo?: Date } {
+  // Get current date parts in the user's timezone
+  const now = new Date();
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: tz,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const parts = formatter.formatToParts(now);
+  const year = Number(parts.find((p) => p.type === "year")!.value);
+  const month = Number(parts.find((p) => p.type === "month")!.value) - 1;
+  const day = Number(parts.find((p) => p.type === "day")!.value);
+
+  // Build dates as midnight in user's timezone by computing UTC offset
+  const todayLocal = new Date(Date.UTC(year, month, day));
+  // Get the UTC offset for this timezone at this date
+  const utcStr = todayLocal.toLocaleString("en-US", { timeZone: "UTC" });
+  const tzStr = todayLocal.toLocaleString("en-US", { timeZone: tz });
+  const offsetMs = new Date(utcStr).getTime() - new Date(tzStr).getTime();
+
+  const todayStart = new Date(todayLocal.getTime() + offsetMs);
+
+  if (period === "yesterday") {
+    const yesterdayStart = new Date(todayStart.getTime() - 86400000);
+    return { dateFrom: yesterdayStart, dateTo: todayStart };
+  }
+  if (period === "7days") {
+    const weekAgo = new Date(todayStart.getTime() - 7 * 86400000);
+    return { dateFrom: weekAgo };
+  }
+  return { dateFrom: todayStart };
+}
+
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
@@ -13,19 +47,9 @@ export async function GET(request: NextRequest) {
     }
 
     const period = request.nextUrl.searchParams.get("period") || "today";
+    const tz = request.nextUrl.searchParams.get("tz") || "UTC";
 
-    const now = new Date();
-    let dateFrom: Date;
-    let dateTo: Date | undefined;
-
-    if (period === "yesterday") {
-      dateFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
-      dateTo = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    } else if (period === "7days") {
-      dateFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
-    } else {
-      dateFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    }
+    const { dateFrom, dateTo } = getDateRange(period, tz);
 
     const where = {
       createdAt: dateTo ? { gte: dateFrom, lt: dateTo } : { gte: dateFrom },
