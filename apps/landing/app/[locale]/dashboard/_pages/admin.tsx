@@ -81,7 +81,7 @@ interface Company {
   createdAt: string;
   plan: string;
   subscriptionStatus: string;
-  reminderSentAt: string | null;
+  emailsSent: Record<string, string> | null;
   categoriesCount: number;
   itemsCount: number;
   messagesCount: number;
@@ -367,10 +367,10 @@ export function AdminPage() {
                             {company.messagesCount}
                           </span>
                         )}
-                        {company.reminderSentAt && (
+                        {company.emailsSent && Object.keys(company.emailsSent).length > 0 && (
                           <span
                             className="flex items-center gap-0.5 text-green-600"
-                            title={`Reminder sent ${formatDate(company.reminderSentAt)}`}
+                            title={`Emails sent: ${Object.keys(company.emailsSent).join(", ")}`}
                           >
                             <Mail className="h-3 w-3" />
                           </span>

@@ -357,6 +357,32 @@ export const EVENT_LABELS: Record<string, string> = {
 // Deduplicate: skip if the same event+meta fired less than 1s ago
 const lastFired = new Map<string, number>();
 
+// Module-level userId — set once from DashboardShell
+let _userId: string | null = null;
+
+export function setDashboardUserId(userId: string) {
+  _userId = userId;
+}
+
+const SESSION_ID_KEY = "analytics_session_id";
+
+function getSessionId(): string {
+  // Match analytics.ts: check localStorage first (registered), then sessionStorage (anonymous)
+  let sessionId = localStorage.getItem(SESSION_ID_KEY)
+    || sessionStorage.getItem(SESSION_ID_KEY);
+  if (!sessionId) {
+    sessionId =
+      typeof crypto.randomUUID === "function"
+        ? crypto.randomUUID()
+        : Array.from(crypto.getRandomValues(new Uint8Array(16)))
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("")
+            .replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
+    sessionStorage.setItem(SESSION_ID_KEY, sessionId);
+  }
+  return sessionId;
+}
+
 // Thin wrapper — fire-and-forget, optional meta
 export function track(event: DashboardEvent, meta?: Record<string, string>) {
   if (typeof window === "undefined") return;
@@ -368,18 +394,7 @@ export function track(event: DashboardEvent, meta?: Record<string, string>) {
   if (last && now - last < 1000) return;
   lastFired.set(dedupKey, now);
 
-  const SESSION_ID_KEY = "analytics_session_id";
-  let sessionId = sessionStorage.getItem(SESSION_ID_KEY);
-  if (!sessionId) {
-    sessionId =
-      typeof crypto.randomUUID === "function"
-        ? crypto.randomUUID()
-        : Array.from(crypto.getRandomValues(new Uint8Array(16)))
-            .map((b) => b.toString(16).padStart(2, "0"))
-            .join("")
-            .replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
-    sessionStorage.setItem(SESSION_ID_KEY, sessionId);
-  }
+  const sessionId = getSessionId();
 
   fetch("/api/analytics/event", {
     method: "POST",
@@ -387,4 +402,22 @@ export function track(event: DashboardEvent, meta?: Record<string, string>) {
     body: JSON.stringify({ event, sessionId, ...(meta ? { meta } : {}) }),
     keepalive: true,
   }).catch(() => {});
+
+  // On page views (showed_*), also link session to ensure it stays connected
+  if (_userId && event.startsWith("showed_")) {
+    fetch("/api/analytics/link-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sessionId, userId: _userId }),
+      keepalive: true,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const finalId = data.sessionId || sessionId;
+        // Promote to localStorage (match analytics.ts behavior)
+        localStorage.setItem(SESSION_ID_KEY, finalId);
+        sessionStorage.removeItem(SESSION_ID_KEY);
+      })
+      .catch(() => {});
+  }
 }

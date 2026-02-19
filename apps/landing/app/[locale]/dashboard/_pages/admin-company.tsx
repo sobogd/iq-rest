@@ -12,6 +12,7 @@ import {
   MoreVertical,
   Copy,
   LogIn,
+  Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,6 +38,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
@@ -78,7 +85,7 @@ interface Company {
   currentPeriodEnd: string | null;
   stripeCustomerId: string | null;
   stripeSubscriptionId: string | null;
-  reminderSentAt: string | null;
+  emailsSent: Record<string, string> | null;
   categoriesCount: number;
   itemsCount: number;
   messagesCount: number;
@@ -116,7 +123,8 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [deleting, setDeleting] = useState(false);
-  const [sendingReminder, setSendingReminder] = useState(false);
+  const [showEmailDialog, setShowEmailDialog] = useState(false);
+  const [sendingEmailType, setSendingEmailType] = useState<string | null>(null);
   const [impersonating, setImpersonating] = useState(false);
   const [showMenuPreview, setShowMenuPreview] = useState(false);
 
@@ -169,30 +177,37 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  async function handleSendReminder() {
-    if (!company || sendingReminder) return;
+  async function handleSendEmail(type: string) {
+    if (!company || sendingEmailType) return;
 
-    setSendingReminder(true);
+    setSendingEmailType(type);
     try {
       const res = await fetch(`/api/admin/companies/${company.id}/remind`, {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type }),
       });
 
       if (res.ok) {
         const data = await res.json();
-        const now = new Date().toISOString();
-        setCompany({ ...company, reminderSentAt: now });
-        toast.success(`Reminder sent to ${data.sentTo}`);
+        const emailsSent = { ...(company.emailsSent || {}), [type]: new Date().toISOString() };
+        setCompany({ ...company, emailsSent });
+        toast.success(`Email sent to ${data.sentTo}`);
       } else {
         const data = await res.json();
-        toast.error(data.error || "Failed to send reminder");
+        toast.error(data.error || "Failed to send email");
       }
     } catch {
-      toast.error("Failed to send reminder");
+      toast.error("Failed to send email");
     } finally {
-      setSendingReminder(false);
+      setSendingEmailType(null);
     }
   }
+
+  const EMAIL_OPTIONS = [
+    { type: "reminder_onboarded", label: "Menu almost ready", description: "For users who completed onboarding — nudge to finish editing menu" },
+    { type: "reminder_not_onboarded", label: "Menu waiting for you", description: "For users who haven't started onboarding yet" },
+  ];
 
   async function handleDelete() {
     if (!company) return;
@@ -338,8 +353,10 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     if (company.stripeCustomerId) companyRows.push({ label: "Stripe Customer", value: company.stripeCustomerId });
   }
 
-  if (company.reminderSentAt) {
-    companyRows.push({ label: "Reminder Sent", value: formatDate(company.reminderSentAt, true) });
+  if (company.emailsSent) {
+    for (const [key, date] of Object.entries(company.emailsSent)) {
+      companyRows.push({ label: `Email: ${key}`, value: formatDate(date, true) });
+    }
   }
 
   // Restaurant rows
@@ -416,11 +433,10 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
             ))}
             <DropdownMenuItem
               className="px-4 py-2.5 rounded-none border-t border-foreground/5"
-              onClick={handleSendReminder}
-              disabled={sendingReminder}
+              onClick={() => setShowEmailDialog(true)}
             >
               <Mail className="h-4 w-4" />
-              {company.reminderSentAt ? "Send Reminder Again" : "Send Reminder"}
+              Send Email
             </DropdownMenuItem>
             {company.users[0] && (
               <DropdownMenuItem
@@ -613,6 +629,40 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
           onOpenChange={setShowMenuPreview}
         />
       )}
+
+      <Dialog open={showEmailDialog} onOpenChange={setShowEmailDialog}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle>Send Email</DialogTitle>
+          </DialogHeader>
+          <div className="flex flex-col gap-2 pt-2">
+            {EMAIL_OPTIONS.map((opt) => {
+              const sentAt = company.emailsSent?.[opt.type];
+              const isSending = sendingEmailType === opt.type;
+              return (
+                <button
+                  key={opt.type}
+                  onClick={() => handleSendEmail(opt.type)}
+                  disabled={!!sendingEmailType}
+                  className="flex items-start gap-3 rounded-xl border border-border p-3 text-left hover:bg-muted/50 transition-colors disabled:opacity-50"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium">{opt.label}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{opt.description}</p>
+                    {sentAt && (
+                      <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
+                        <Check className="h-3 w-3" />
+                        Sent {formatDate(sentAt, true)}
+                      </p>
+                    )}
+                  </div>
+                  {isSending && <Loader2 className="h-4 w-4 animate-spin shrink-0 mt-0.5" />}
+                </button>
+              );
+            })}
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>

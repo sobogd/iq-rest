@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Loader2, LogOut } from "lucide-react";
 import { SiteHeader } from "./header";
 import {
@@ -8,6 +8,7 @@ import {
   type DashboardTranslations,
 } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
+import { setDashboardUserId } from "@/lib/dashboard-events";
 
 interface ImpersonationBannerProps {
   currentEmail: string;
@@ -81,13 +82,11 @@ export function DashboardShell({
   userId: string;
   children?: React.ReactNode;
 }) {
-  const linked = useRef(false);
-
   useEffect(() => {
-    if (!linked.current) {
-      linked.current = true;
-      analytics.linkSession(userId);
-    }
+    // Set userId for dashboard-events so every showed_* event also calls linkSession
+    setDashboardUserId(userId);
+    // Initial link on mount
+    analytics.linkSession(userId);
   }, [userId]);
 
   return (

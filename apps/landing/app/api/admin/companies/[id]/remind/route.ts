@@ -8,30 +8,59 @@ interface RouteParams {
   params: Promise<{ id: string }>;
 }
 
-interface ReminderEmailTranslations {
-  subject: string;
-  greeting: string;
-  body: string;
-  stepsIntro: string;
-  step1: string;
-  step2: string;
-  step3: string;
-  timeNote: string;
-  helpOffer: string;
-  helpAction: string;
-  cta: string;
-  signature: string;
-  subjectNotOnboarded: string;
-  bodyNotOnboarded: string;
-  helpOfferNotOnboarded: string;
-}
+const EMAIL_TYPES = {
+  reminder_onboarded: {
 
-async function getTranslations(locale: string): Promise<ReminderEmailTranslations> {
+    getSubject: (t: Record<string, string>) => t.subject,
+    getHtml: (t: Record<string, string>) => `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">${t.body}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 8px; font-weight: 600;">${t.stepsIntro}</p>
+        <ol style="font-size: 17px; line-height: 1.7; margin: 0 0 16px; padding-left: 24px;">
+          <li style="margin-bottom: 8px;">${t.step1}</li>
+          <li style="margin-bottom: 8px;">${t.step2}</li>
+          <li>${t.step3}</li>
+        </ol>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.timeNote}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">${t.helpOffer}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpAction}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+          <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+        </p>
+        <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
+      </div>
+    `,
+    getText: (t: Record<string, string>) =>
+      `${t.greeting}\n\n${t.body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${t.helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`,
+  },
+  reminder_not_onboarded: {
+
+    getSubject: (t: Record<string, string>) => t.subjectNotOnboarded,
+    getHtml: (t: Record<string, string>) => `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyNotOnboarded}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">${t.helpOfferNotOnboarded}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpAction}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+          <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+        </p>
+        <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
+      </div>
+    `,
+    getText: (t: Record<string, string>) =>
+      `${t.greeting}\n\n${t.bodyNotOnboarded}\n\n${t.helpOfferNotOnboarded}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`,
+  },
+} as const;
+
+type EmailType = keyof typeof EMAIL_TYPES;
+
+async function getTranslations(locale: string): Promise<Record<string, string>> {
   try {
     const messages = await import(`@/messages/${locale}.json`);
     return messages.reminderEmail;
   } catch {
-    // Fallback to English
     const messages = await import(`@/messages/en.json`);
     return messages.reminderEmail;
   }
@@ -48,7 +77,15 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
     const { id: companyId } = await params;
 
-    // Get company with users, restaurant, and onboarding step
+    const body = await request.json().catch(() => ({}));
+    const emailType = body.type as EmailType;
+
+    if (!emailType || !EMAIL_TYPES[emailType]) {
+      return NextResponse.json({ error: "Invalid email type" }, { status: 400 });
+    }
+
+    const config = EMAIL_TYPES[emailType];
+
     const company = await prisma.company.findUnique({
       where: { id: companyId },
       include: {
@@ -77,17 +114,9 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
     const restaurant = company.restaurants[0];
     const locale = restaurant?.defaultLanguage || "en";
-    const isOnboarded = company.onboardingStep >= 2;
 
-    // Get translations for the user's language
     const t = await getTranslations(locale);
 
-    // Choose texts based on onboarding status
-    const subject = isOnboarded ? t.subject : t.subjectNotOnboarded;
-    const body = isOnboarded ? t.body : t.bodyNotOnboarded;
-    const helpOffer = isOnboarded ? t.helpOffer : t.helpOfferNotOnboarded;
-
-    // Create transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -98,106 +127,28 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       },
     });
 
-    // Build email based on onboarding status
-    const htmlContent = isOnboarded
-      ? `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.greeting}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">
-            ${body}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 8px; font-weight: 600;">
-            ${t.stepsIntro}
-          </p>
-
-          <ol style="font-size: 17px; line-height: 1.7; margin: 0 0 16px; padding-left: 24px;">
-            <li style="margin-bottom: 8px;">${t.step1}</li>
-            <li style="margin-bottom: 8px;">${t.step2}</li>
-            <li>${t.step3}</li>
-          </ol>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.timeNote}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">
-            ${helpOffer}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.helpAction}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-            <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
-          </p>
-
-          <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
-            ${t.signature}
-          </p>
-
-        </div>
-      `
-      : `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.greeting}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${body}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">
-            ${helpOffer}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.helpAction}
-          </p>
-
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-            <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
-          </p>
-
-          <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
-            ${t.signature}
-          </p>
-
-        </div>
-      `;
-
-    const textContent = isOnboarded
-      ? `${t.greeting}\n\n${body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`
-      : `${t.greeting}\n\n${body}\n\n${helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`;
-
-    const mailOptions = {
+    await transporter.sendMail({
       from: process.env.FROM_EMAIL,
       to: ownerEmail,
-      subject,
-      html: htmlContent,
-      text: textContent,
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    // Update reminderSentAt timestamp
-    await prisma.company.update({
-      where: { id: companyId },
-      data: { reminderSentAt: new Date() },
+      subject: config.getSubject(t),
+      html: config.getHtml(t),
+      text: config.getText(t).replace(/<br>/g, "\n"),
     });
 
-    return NextResponse.json({ success: true, sentTo: ownerEmail });
+    // Save to emailsSent JSON
+    const emailsSent = (company.emailsSent as Record<string, string>) || {};
+    emailsSent[emailType] = new Date().toISOString();
+
+    await prisma.company.update({
+      where: { id: companyId },
+      data: { emailsSent },
+    });
+
+    return NextResponse.json({ success: true, sentTo: ownerEmail, type: emailType });
   } catch (error) {
-    console.error("Error sending reminder:", error);
+    console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Failed to send reminder" },
+      { error: "Failed to send email" },
       { status: 500 }
     );
   }
