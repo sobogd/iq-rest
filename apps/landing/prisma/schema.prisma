@@ -324,64 +324,6 @@ model AnalyticsEvent {
   @@map("analytics_events")
 }
 
-model KeywordBidConfig {
-  id             String   @id @default(cuid())
-  resourceName   String   @unique
-  keyword        String
-  matchType      String
-  campaignName   String
-  adGroupName    String
-  maxBidMicros   Int
-  isActive       Boolean  @default(true)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  bidChangeLogs  BidChangeLog[]
-
-  @@index([isActive])
-  @@map("keyword_bid_configs")
-}
-
-model BidChangeLog {
-  id                 String   @id @default(cuid())
-  resourceName       String
-  keyword            String
-  effectiveCpcMicros Int
-  previousBidMicros  Int
-  newBidMicros       Int
-  maxBidMicros       Int
-  reason             String
-  success            Boolean  @default(true)
-  error              String?
-  createdAt          DateTime @default(now())
-
-  config KeywordBidConfig? @relation(fields: [resourceName], references: [resourceName], onDelete: SetNull)
-
-  @@index([resourceName, createdAt])
-  @@index([createdAt])
-  @@map("bid_change_logs")
-}
-
-model KeywordBidSnapshot {
-  id             String   @id @default(cuid())
-  resourceName   String
-  keyword        String
-  campaignName   String
-  adGroupName    String
-  cpcBidMicros   Int
-  firstPageCpcMicros Int?
-  topOfPageCpcMicros Int?
-  clicks         Int      @default(0)
-  impressions    Int      @default(0)
-  costMicros     Int      @default(0)
-  hour           Int      // 0-23
-  createdAt      DateTime @default(now())
-
-  @@index([resourceName, createdAt])
-  @@index([createdAt])
-  @@map("keyword_bid_snapshots")
-}
-
 // Multi-currency pricing for Stripe
 model CurrencyPrice {
   id             String  @id @default(cuid())

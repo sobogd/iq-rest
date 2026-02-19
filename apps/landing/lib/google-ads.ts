@@ -22,198 +22,16 @@ export interface HourlyData {
   averageCpcMicros: number | null;
 }
 
-export interface KeywordBid {
-  resourceName: string;
-  keyword: string;
-  matchType: string;
+export interface AdGroupHourly {
   campaignName: string;
   adGroupName: string;
-  status: string;
-  cpcBidMicros: number | null;
-  effectiveCpcBidMicros: number | null;
-  averageCpc: number | null;
-  clicks: number;
-  impressions: number;
-  costMicros: number;
-  conversions: number;
-  firstPageCpcMicros: number | null;
-  topOfPageCpcMicros: number | null;
-  firstPositionCpcMicros: number | null;
-  estimatedAddClicksAtFirstPosition: number | null;
-  estimatedAddCostAtFirstPosition: number | null;
-  yesterdayHours: HourlyData[];
+  hours: HourlyData[];
+  totalClicks: number;
+  totalImpressions: number;
+  totalCostMicros: number;
 }
 
-export async function getKeywordBids(
-  dateRange: string = "LAST_30_DAYS"
-): Promise<{ keywords: KeywordBid[]; yesterdayError: string | null }> {
-  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
-  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
-
-  if (!customerId) {
-    throw new Error("Missing GOOGLE_ADS_CUSTOMER_ID");
-  }
-
-  const api = getClient();
-  const customer = api.Customer({
-    customer_id: customerId,
-    refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
-    login_customer_id: loginCustomerId || undefined,
-  });
-
-  const mainQuery = customer.query(`
-    SELECT
-      ad_group_criterion.resource_name,
-      ad_group_criterion.keyword.text,
-      ad_group_criterion.keyword.match_type,
-      ad_group_criterion.cpc_bid_micros,
-      ad_group_criterion.effective_cpc_bid_micros,
-      ad_group_criterion.status,
-      campaign.name,
-      ad_group.name,
-      ad_group_criterion.position_estimates.first_page_cpc_micros,
-      ad_group_criterion.position_estimates.top_of_page_cpc_micros,
-      ad_group_criterion.position_estimates.first_position_cpc_micros,
-      ad_group_criterion.position_estimates.estimated_add_clicks_at_first_position_cpc,
-      ad_group_criterion.position_estimates.estimated_add_cost_at_first_position_cpc,
-      metrics.average_cpc,
-      metrics.clicks,
-      metrics.impressions,
-      metrics.cost_micros,
-      metrics.conversions
-    FROM keyword_view
-    WHERE campaign.status = 'ENABLED'
-      AND ad_group_criterion.status != 'REMOVED'
-      AND segments.date DURING ${dateRange}
-  `);
-
-  const results = await mainQuery;
-
-  // Yesterday hourly via ad_group (keyword_view does NOT support segments.hour)
-  // eslint-disable-next-line
-  let yesterdayResults: any[] = [];
-  let yesterdayError: string | null = null;
-  try {
-    yesterdayResults = await customer.query(`
-      SELECT
-        campaign.name,
-        ad_group.name,
-        segments.hour,
-        metrics.clicks,
-        metrics.impressions,
-        metrics.cost_micros,
-        metrics.average_cpc
-      FROM ad_group
-      WHERE campaign.status = 'ENABLED'
-        AND ad_group.status != 'REMOVED'
-        AND segments.date DURING YESTERDAY
-    `);
-  } catch (err) {
-    yesterdayError = err instanceof Error ? err.message : JSON.stringify(err);
-    console.error("[Google Ads] Yesterday hourly query failed:", yesterdayError);
-  }
-
-  // Build yesterday hourly map: "campaignName|adGroupName" -> HourlyData[]
-  const yesterdayMap = new Map<string, HourlyData[]>();
-  for (const row of yesterdayResults) {
-    const campaignName = String(row.campaign?.name ?? "");
-    const adGroupName = String(row.ad_group?.name ?? "");
-    const key = `${campaignName}|${adGroupName}`;
-    const list = yesterdayMap.get(key) || [];
-    list.push({
-      hour: Number(row.segments?.hour ?? 0),
-      clicks: Number(row.metrics?.clicks ?? 0),
-      impressions: Number(row.metrics?.impressions ?? 0),
-      costMicros: Number(row.metrics?.cost_micros ?? 0),
-      averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
-    });
-    yesterdayMap.set(key, list);
-  }
-
-  // keyword_view returns one row per keyword per day — aggregate into totals
-  const map = new Map<string, KeywordBid>();
-
-  for (const row of results) {
-    const keyword = String(row.ad_group_criterion?.keyword?.text ?? "");
-    const matchType = String(row.ad_group_criterion?.keyword?.match_type ?? "UNKNOWN");
-    const campaignName = String(row.campaign?.name ?? "");
-    const adGroupName = String(row.ad_group?.name ?? "");
-    const key = `${keyword}|${matchType}|${campaignName}|${adGroupName}`;
-
-    const existing = map.get(key);
-    const clicks = Number(row.metrics?.clicks ?? 0);
-    const impressions = Number(row.metrics?.impressions ?? 0);
-    const costMicros = Number(row.metrics?.cost_micros ?? 0);
-    const conversions = Number(row.metrics?.conversions ?? 0);
-
-    if (existing) {
-      existing.clicks += clicks;
-      existing.impressions += impressions;
-      existing.costMicros += costMicros;
-      existing.conversions += conversions;
-    } else {
-      const ydKey = `${campaignName}|${adGroupName}`;
-      const ydHours = (yesterdayMap.get(ydKey) || []).sort((a, b) => a.hour - b.hour);
-      map.set(key, {
-        resourceName: String(row.ad_group_criterion?.resource_name ?? ""),
-        keyword,
-        matchType,
-        campaignName,
-        adGroupName,
-        status: String(row.ad_group_criterion?.status ?? "UNKNOWN"),
-        cpcBidMicros: row.ad_group_criterion?.cpc_bid_micros != null
-          ? Number(row.ad_group_criterion.cpc_bid_micros)
-          : null,
-        effectiveCpcBidMicros: row.ad_group_criterion?.effective_cpc_bid_micros != null
-          ? Number(row.ad_group_criterion.effective_cpc_bid_micros)
-          : null,
-        averageCpc: null, // will compute below
-        clicks,
-        impressions,
-        costMicros,
-        conversions,
-        firstPageCpcMicros: row.ad_group_criterion?.position_estimates?.first_page_cpc_micros != null
-          ? Number(row.ad_group_criterion.position_estimates.first_page_cpc_micros)
-          : null,
-        topOfPageCpcMicros: row.ad_group_criterion?.position_estimates?.top_of_page_cpc_micros != null
-          ? Number(row.ad_group_criterion.position_estimates.top_of_page_cpc_micros)
-          : null,
-        firstPositionCpcMicros: row.ad_group_criterion?.position_estimates?.first_position_cpc_micros != null
-          ? Number(row.ad_group_criterion.position_estimates.first_position_cpc_micros)
-          : null,
-        estimatedAddClicksAtFirstPosition: row.ad_group_criterion?.position_estimates?.estimated_add_clicks_at_first_position_cpc != null
-          ? Number(row.ad_group_criterion.position_estimates.estimated_add_clicks_at_first_position_cpc)
-          : null,
-        estimatedAddCostAtFirstPosition: row.ad_group_criterion?.position_estimates?.estimated_add_cost_at_first_position_cpc != null
-          ? Number(row.ad_group_criterion.position_estimates.estimated_add_cost_at_first_position_cpc)
-          : null,
-        yesterdayHours: ydHours,
-      });
-    }
-  }
-
-  // Compute average CPC from total cost / total clicks
-  for (const kw of map.values()) {
-    kw.averageCpc = kw.clicks > 0 ? Math.round(kw.costMicros / kw.clicks) : null;
-  }
-
-  return { keywords: Array.from(map.values()), yesterdayError };
-}
-
-export interface KeywordHourlyStats {
-  date: string;
-  hour: number;
-  clicks: number;
-  impressions: number;
-  averageCpcMicros: number | null;
-  costMicros: number;
-  conversions: number;
-}
-
-export async function getKeywordHourlyStats(
-  resourceName: string,
-  dateRange: string = "LAST_7_DAYS"
-): Promise<KeywordHourlyStats[]> {
+export async function getAdGroupsYesterdayHourly(): Promise<AdGroupHourly[]> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
 
@@ -230,104 +48,47 @@ export async function getKeywordHourlyStats(
 
   const results = await customer.query(`
     SELECT
-      segments.date,
+      campaign.name,
+      ad_group.name,
       segments.hour,
       metrics.clicks,
       metrics.impressions,
-      metrics.average_cpc,
       metrics.cost_micros,
-      metrics.conversions
-    FROM keyword_view
-    WHERE ad_group_criterion.resource_name = '${resourceName}'
-      AND segments.date DURING ${dateRange}
+      metrics.average_cpc
+    FROM ad_group
+    WHERE campaign.status = 'ENABLED'
+      AND ad_group.status != 'REMOVED'
+      AND segments.date DURING YESTERDAY
   `);
 
-  return results.map((row) => ({
-    date: String(row.segments?.date ?? ""),
-    hour: Number(row.segments?.hour ?? 0),
-    clicks: Number(row.metrics?.clicks ?? 0),
-    impressions: Number(row.metrics?.impressions ?? 0),
-    averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
-    costMicros: Number(row.metrics?.cost_micros ?? 0),
-    conversions: Number(row.metrics?.conversions ?? 0),
-  }));
-}
+  const map = new Map<string, { campaignName: string; adGroupName: string; hours: HourlyData[] }>();
 
-export async function updateKeywordBid(
-  resourceName: string,
-  cpcBidMicros: number
-): Promise<{ success: boolean; error?: string }> {
-  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
-  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+  for (const row of results) {
+    const campaignName = String(row.campaign?.name ?? "");
+    const adGroupName = String(row.ad_group?.name ?? "");
+    const key = `${campaignName}|${adGroupName}`;
 
-  if (!customerId) {
-    return { success: false, error: "Missing GOOGLE_ADS_CUSTOMER_ID" };
-  }
-
-  try {
-    const api = getClient();
-    const customer = api.Customer({
-      customer_id: customerId,
-      refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
-      login_customer_id: loginCustomerId || undefined,
+    const entry = map.get(key) || { campaignName, adGroupName, hours: [] };
+    entry.hours.push({
+      hour: Number(row.segments?.hour ?? 0),
+      clicks: Number(row.metrics?.clicks ?? 0),
+      impressions: Number(row.metrics?.impressions ?? 0),
+      costMicros: Number(row.metrics?.cost_micros ?? 0),
+      averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
     });
-
-    await customer.mutateResources([
-      {
-        entity: "ad_group_criterion",
-        operation: "update",
-        resource: {
-          resource_name: resourceName,
-          cpc_bid_micros: cpcBidMicros,
-        },
-      },
-    ]);
-
-    return { success: true };
-  } catch (err) {
-    const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
-    console.error("[Google Ads] Update bid error:", message);
-    return { success: false, error: message };
-  }
-}
-
-export async function batchUpdateKeywordBids(
-  updates: { resourceName: string; cpcBidMicros: number }[]
-): Promise<{ success: boolean; error?: string }> {
-  if (updates.length === 0) return { success: true };
-
-  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
-  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
-
-  if (!customerId) {
-    return { success: false, error: "Missing GOOGLE_ADS_CUSTOMER_ID" };
+    map.set(key, entry);
   }
 
-  try {
-    const api = getClient();
-    const customer = api.Customer({
-      customer_id: customerId,
-      refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
-      login_customer_id: loginCustomerId || undefined,
-    });
-
-    await customer.mutateResources(
-      updates.map((u) => ({
-        entity: "ad_group_criterion" as const,
-        operation: "update" as const,
-        resource: {
-          resource_name: u.resourceName,
-          cpc_bid_micros: u.cpcBidMicros,
-        },
-      }))
-    );
-
-    return { success: true };
-  } catch (err) {
-    const message = err instanceof Error ? err.message : JSON.stringify(err, null, 2);
-    console.error("[Google Ads] Batch update bids error:", message);
-    return { success: false, error: message };
-  }
+  return Array.from(map.values()).map((entry) => {
+    const sorted = entry.hours.sort((a, b) => a.hour - b.hour);
+    return {
+      ...entry,
+      hours: sorted,
+      totalClicks: sorted.reduce((s, h) => s + h.clicks, 0),
+      totalImpressions: sorted.reduce((s, h) => s + h.impressions, 0),
+      totalCostMicros: sorted.reduce((s, h) => s + h.costMicros, 0),
+    };
+  });
 }
 
 export async function uploadClickConversion(
