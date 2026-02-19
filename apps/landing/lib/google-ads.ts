@@ -89,41 +89,36 @@ export async function getKeywordBids(
 
   const results = await mainQuery;
 
-  // Yesterday hourly via keyword_view with segments.hour
+  // Yesterday hourly via ad_group (keyword_view does NOT support segments.hour)
   // eslint-disable-next-line
   let yesterdayResults: any[] = [];
   let yesterdayError: string | null = null;
   try {
     yesterdayResults = await customer.query(`
       SELECT
-        ad_group_criterion.keyword.text,
-        ad_group_criterion.keyword.match_type,
         campaign.name,
         ad_group.name,
         segments.hour,
-        segments.date,
         metrics.clicks,
         metrics.impressions,
         metrics.cost_micros,
         metrics.average_cpc
-      FROM keyword_view
+      FROM ad_group
       WHERE campaign.status = 'ENABLED'
+        AND ad_group.status != 'REMOVED'
         AND segments.date DURING YESTERDAY
-        AND metrics.clicks > 0
     `);
   } catch (err) {
     yesterdayError = err instanceof Error ? err.message : JSON.stringify(err);
     console.error("[Google Ads] Yesterday hourly query failed:", yesterdayError);
   }
 
-  // Build yesterday hourly map: key -> HourlyData[]
+  // Build yesterday hourly map: "campaignName|adGroupName" -> HourlyData[]
   const yesterdayMap = new Map<string, HourlyData[]>();
   for (const row of yesterdayResults) {
-    const keyword = String(row.ad_group_criterion?.keyword?.text ?? "");
-    const matchType = String(row.ad_group_criterion?.keyword?.match_type ?? "UNKNOWN");
     const campaignName = String(row.campaign?.name ?? "");
     const adGroupName = String(row.ad_group?.name ?? "");
-    const key = `${keyword}|${matchType}|${campaignName}|${adGroupName}`;
+    const key = `${campaignName}|${adGroupName}`;
     const list = yesterdayMap.get(key) || [];
     list.push({
       hour: Number(row.segments?.hour ?? 0),
@@ -157,7 +152,8 @@ export async function getKeywordBids(
       existing.costMicros += costMicros;
       existing.conversions += conversions;
     } else {
-      const ydHours = (yesterdayMap.get(key) || []).sort((a, b) => a.hour - b.hour);
+      const ydKey = `${campaignName}|${adGroupName}`;
+      const ydHours = (yesterdayMap.get(ydKey) || []).sort((a, b) => a.hour - b.hour);
       map.set(key, {
         resourceName: String(row.ad_group_criterion?.resource_name ?? ""),
         keyword,
