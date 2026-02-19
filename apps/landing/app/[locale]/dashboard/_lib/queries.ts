@@ -134,7 +134,7 @@ export async function getScanUsage(companyId: string) {
   if (!company) return null;
 
   const PLAN_LIMITS: Record<string, number> = {
-    FREE: 500,
+    FREE: 400,
     BASIC: Infinity,
     PRO: Infinity,
   };
@@ -146,7 +146,7 @@ export async function getScanUsage(companyId: string) {
     where: { companyId, createdAt: { gte: startOfMonth } },
   });
 
-  const limit = PLAN_LIMITS[company.plan] || 500;
+  const limit = PLAN_LIMITS[company.plan] || 400;
 
   return {
     used: monthlyViews,
@@ -182,8 +182,8 @@ export async function getDashboardAnalytics(companyId: string) {
   if (!company) return null;
 
   const PLAN_LIMITS: Record<string, number> = {
-    FREE: 500,
-    BASIC: 2000,
+    FREE: 400,
+    BASIC: Infinity,
     PRO: Infinity,
   };
 
@@ -258,7 +258,7 @@ export async function getDashboardAnalytics(companyId: string) {
       .sort((a, b) => b.count - a.count)
       .slice(0, 10);
 
-  const limit = PLAN_LIMITS[company.plan] || 500;
+  const limit = PLAN_LIMITS[company.plan] || 400;
 
   return {
     plan: company.plan,

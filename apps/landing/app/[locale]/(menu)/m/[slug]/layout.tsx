@@ -3,8 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
 
 const PLAN_LIMITS = {
-  FREE: 500,
-  BASIC: 2000,
+  FREE: 400,
+  BASIC: Infinity,
   PRO: Infinity,
 };
 

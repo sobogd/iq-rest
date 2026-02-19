@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 const PLAN_LIMITS = {
-  FREE: 500,
-  BASIC: 2000,
+  FREE: 400,
+  BASIC: Infinity,
   PRO: Infinity,
 };
 

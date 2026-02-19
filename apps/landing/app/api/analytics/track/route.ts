@@ -4,8 +4,8 @@ import { uploadClickConversion } from "@/lib/google-ads";
 import crypto from "crypto";
 
 const PLAN_LIMITS = {
-  FREE: 500,
-  BASIC: 2000,
+  FREE: 400,
+  BASIC: Infinity,
   PRO: Infinity,
 };
 

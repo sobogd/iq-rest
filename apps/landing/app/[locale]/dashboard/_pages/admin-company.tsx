@@ -328,7 +328,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     { label: "Created", value: formatDate(company.createdAt, true) },
     { label: "Categories", value: String(company.categoriesCount) },
     { label: "Items", value: String(company.itemsCount) },
-    { label: "Monthly Views", value: `${company.monthlyViews} / ${company.plan === "PRO" ? "\u221e" : company.plan === "BASIC" ? "2000" : "500"}` },
+    { label: "Monthly Views", value: `${company.monthlyViews} / ${company.plan === "FREE" ? "400" : "\u221e"}` },
     { label: "Restaurants", value: String(company.restaurants.length) },
   ];
 

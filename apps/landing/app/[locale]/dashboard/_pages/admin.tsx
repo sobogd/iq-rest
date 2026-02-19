@@ -347,14 +347,12 @@ export function AdminPage() {
                         {company.monthlyViews > 0 && (
                           <span
                             className={`flex items-center gap-0.5 ${
-                              (company.plan === "FREE" &&
-                                company.monthlyViews >= 500) ||
-                              (company.plan === "BASIC" &&
-                                company.monthlyViews >= 2000)
+                              company.plan === "FREE" &&
+                                company.monthlyViews >= 400
                                 ? "text-red-500"
                                 : "text-blue-500"
                             }`}
-                            title={`Monthly views: ${company.monthlyViews} / ${company.plan === "PRO" ? "\u221e" : company.plan === "BASIC" ? "2000" : "500"}`}
+                            title={`Monthly views: ${company.monthlyViews} / ${company.plan === "FREE" ? "400" : "\u221e"}`}
                           >
                             <Eye className="h-3 w-3" />
                             {company.monthlyViews}

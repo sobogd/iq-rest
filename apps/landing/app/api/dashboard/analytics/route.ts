@@ -4,8 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
 
 const PLAN_LIMITS: Record<string, number> = {
-  FREE: 500,
-  BASIC: 2000,
+  FREE: 400,
+  BASIC: Infinity,
   PRO: Infinity,
 };
 
@@ -154,7 +154,7 @@ export async function GET() {
         .sort((a, b) => b.count - a.count)
         .slice(0, 10);
 
-    const limit = PLAN_LIMITS[company.plan] || 500;
+    const limit = PLAN_LIMITS[company.plan] || 400;
 
     return NextResponse.json({
       plan: company.plan,
