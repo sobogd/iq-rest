@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Užsiregistravote IQ Rest, bet dar nesukūrėte savo meniu. Tai užtrunka mažiau nei 2 minutes — įveskite restorano pavadinimą, pasirinkite šabloną ir gausite paruoštą meniu pritaikymui.",
     "helpOfferNotOnboarded": "Neturite laiko? Tiesiog atsiųskite mums savo meniu bet kokiu formatu — PDF, nuotrauka ar nuoroda — ir mes tai padarysime už jus, visiškai nemokamai."
   },
+  "limitWarningEmail": {
+    "subject": "Artėjate prie nemokamo nuskaitymo limito IQ Rest",
+    "greeting": "Sveiki,",
+    "body": "Jūsų meniu beveik pasiekė mėnesinį {limit} nuskaitymų limitą nemokamame plane. Pasiekus limitą, jūsų klientams bus rodomas reklamos baneris.",
+    "upgrade": "Pereikite prie mokamo plano, kad pašalintumėte visus apribojimus, atrakintumėte pažangias funkcijas ir išlaikytumėte savo meniu be reklamų.",
+    "cta": "Atnaujinti dabar",
+    "signature": "Pagarbiai,<br>IQ Rest komanda"
+  },
   "welcomeEmail": {
     "subject": "Sveiki atvykę į IQ Rest — jūsų meniu per 2 minutes",
     "greeting": "Sveiki atvykę į IQ Rest!",

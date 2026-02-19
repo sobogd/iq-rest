@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Registrirali ste se na IQ Rest, vendar še niste nastavili svojega menija. Traja manj kot 2 minuti — vnesite ime restavracije, izberite predlogo in dobili boste pripravljen meni za prilagajanje.",
     "helpOfferNotOnboarded": "Nimate časa? Preprosto nam pošljite svoj meni v katerem koli formatu — PDF, fotografija ali povezava — in mi bomo to naredili namesto vas, popolnoma brezplačno."
   },
+  "limitWarningEmail": {
+    "subject": "Približujete se brezplačni omejitvi skeniranj na IQ Rest",
+    "greeting": "Pozdravljeni,",
+    "body": "Vaš meni je skoraj dosegel mesečno omejitev {limit} skeniranj na brezplačnem načrtu. Ko bo omejitev dosežena, bo vašim strankam prikazan oglaševalski pasici.",
+    "upgrade": "Nadgradite na plačljiv načrt, da odstranite vse omejitve, odklenete napredne funkcije in ohranite svoj meni brez oglasov.",
+    "cta": "Nadgradi zdaj",
+    "signature": "Lep pozdrav,<br>Ekipa IQ Rest"
+  },
   "welcomeEmail": {
     "subject": "Dobrodošli na IQ Rest — vaš meni je oddaljen le 2 minuti",
     "greeting": "Dobrodošli na IQ Rest!",

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { uploadClickConversion } from "@/lib/google-ads";
+import nodemailer from "nodemailer";
 import crypto from "crypto";
 
 const PLAN_LIMITS = {
@@ -37,10 +38,17 @@ export async function POST(request: NextRequest) {
       where: { slug },
       select: {
         companyId: true,
+        defaultLanguage: true,
         company: {
           select: {
             id: true,
             plan: true,
+            emailsSent: true,
+            emailUnsubscribed: true,
+            users: {
+              select: { user: { select: { email: true } } },
+              take: 1,
+            },
           },
         },
       },
@@ -86,6 +94,75 @@ export async function POST(request: NextRequest) {
         ip,
       },
     });
+
+    // Send limit warning email when FREE plan approaches limit (within 20 views)
+    const WARNING_THRESHOLD = 20;
+    if (
+      company.plan === "FREE" &&
+      limit !== Infinity &&
+      currentMonthViews + 1 >= limit - WARNING_THRESHOLD &&
+      !company.emailUnsubscribed
+    ) {
+      const emailsSent = (company.emailsSent as Record<string, string>) || {};
+      const currentMonth = `${startOfMonth.getFullYear()}-${String(startOfMonth.getMonth() + 1).padStart(2, "0")}`;
+      const warningKey = `limit_warning_${currentMonth}`;
+
+      if (!emailsSent[warningKey]) {
+        const ownerEmail = company.users[0]?.user?.email;
+        if (ownerEmail) {
+          try {
+            const locale = restaurant.defaultLanguage || "en";
+            let t;
+            try {
+              const msgs = await import(`@/messages/${locale}.json`);
+              t = msgs.limitWarningEmail;
+            } catch {
+              const msgs = await import(`@/messages/en.json`);
+              t = msgs.limitWarningEmail;
+            }
+
+            const transporter = nodemailer.createTransport({
+              host: process.env.SMTP_HOST,
+              port: Number(process.env.SMTP_PORT),
+              secure: false,
+              auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+              },
+            });
+
+            const bodyText = (t.body as string).replace("{limit}", String(limit));
+
+            await transporter.sendMail({
+              from: process.env.FROM_EMAIL,
+              to: ownerEmail,
+              subject: t.subject,
+              html: `
+                <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+                  <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
+                  <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${bodyText}</p>
+                  <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">${t.upgrade}</p>
+                  <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+                    <a href="https://iq-rest.com/pricing" style="display: inline-block; background: #0066cc; color: #ffffff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">${t.cta}</a>
+                  </p>
+                  <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
+                </div>
+              `,
+              text: `${t.greeting}\n\n${bodyText}\n\n${t.upgrade}\n\n${t.cta}: https://iq-rest.com/pricing\n\n${t.signature.replace("<br>", "\n")}`,
+            });
+
+            await prisma.company.update({
+              where: { id: company.id },
+              data: {
+                emailsSent: { ...emailsSent, [warningKey]: new Date().toISOString() },
+              },
+            });
+          } catch (emailError) {
+            console.error("Failed to send limit warning email:", emailError);
+          }
+        }
+      }
+    }
 
     // Check if company reached 20 views → set reached50Views on Session + send conversion
     if (currentMonthViews + 1 >= 20) {

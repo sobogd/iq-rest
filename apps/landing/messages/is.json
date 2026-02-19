@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Þú skráðir þig á IQ Rest en hefur ekki enn sett upp matseðilinn þinn. Það tekur minna en 2 mínútur — sláðu inn nafn veitingastaðarins, veldu sniðmát og þú færð tilbúinn matseðil til að aðlaga.",
     "helpOfferNotOnboarded": "Ertu ekki með tíma? Sendu okkur bara matseðilinn þinn á hvaða formi sem er — PDF, mynd eða tengil — og við gerum það fyrir þig, alveg ókeypis."
   },
+  "limitWarningEmail": {
+    "subject": "Þú ert að nálgast ókeypis skönnunarmörk þín á IQ Rest",
+    "greeting": "Hæ,",
+    "body": "Matseðillinn þinn hefur næstum náð mánaðarlegu hámarki {limit} skannana á ókeypis áætluninni. Þegar hámarkinu er náð verður auglýsingaborði sýndur viðskiptavinum þínum.",
+    "upgrade": "Uppfærðu í greidda áætlun til að fjarlægja öll takmörk, opna háþróaða eiginleika og halda matseðlinum þínum auglýsingalausum.",
+    "cta": "Uppfæra núna",
+    "signature": "Bestu kveðjur,<br>IQ Rest teymið"
+  },
   "welcomeEmail": {
     "subject": "Velkomin á IQ Rest — matseðillinn þinn er 2 mínútur í burtu",
     "greeting": "Velkomin á IQ Rest!",

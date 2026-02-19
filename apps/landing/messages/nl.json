@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Je hebt je aangemeld bij IQ Rest maar je menu nog niet ingesteld. Het duurt minder dan 2 minuten — voer je restaurantnaam in, kies een sjabloon en je hebt een kant-en-klaar menu om aan te passen.",
     "helpOfferNotOnboarded": "Geen tijd? Stuur ons gewoon je menu in elk formaat — PDF, foto of een link — en wij doen het voor je, helemaal gratis."
   },
+  "limitWarningEmail": {
+    "subject": "Je nadert je gratis scanlimiet op IQ Rest",
+    "greeting": "Hallo,",
+    "body": "Je menu heeft bijna de maandelijkse limiet van {limit} scans op het gratis plan bereikt. Zodra de limiet is bereikt, wordt er een advertentiebanner getoond aan je klanten.",
+    "upgrade": "Upgrade naar een betaald plan om alle limieten te verwijderen, geavanceerde functies te ontgrendelen en je menu advertentievrij te houden.",
+    "cta": "Nu upgraden",
+    "signature": "Met vriendelijke groeten,<br>Het IQ Rest Team"
+  },
   "welcomeEmail": {
     "subject": "Welkom bij IQ Rest — je menu is 2 minuten verwijderd",
     "greeting": "Welkom bij IQ Rest!",

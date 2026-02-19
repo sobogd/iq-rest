@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Jūs reģistrējāties IQ Rest, bet vēl neesat iestatījuši savu ēdienkarti. Tas aizņem mazāk nekā 2 minūtes — ievadiet sava restorāna nosaukumu, izvēlieties veidni un iegūsiet gatavu ēdienkarti pielāgošanai.",
     "helpOfferNotOnboarded": "Nav laika? Vienkārši nosūtiet mums savu ēdienkarti jebkurā formātā — PDF, foto vai saite — un mēs to izdarīsim jūsu vietā, pilnīgi bez maksas."
   },
+  "limitWarningEmail": {
+    "subject": "Jūs tuvojaties bezmaksas skenēšanas limitam IQ Rest",
+    "greeting": "Sveiki,",
+    "body": "Jūsu ēdienkarte gandrīz ir sasniegusi ikmēneša {limit} skenēšanas limitu bezmaksas plānā. Kad limits tiks sasniegts, jūsu klientiem tiks rādīts reklāmas baneris.",
+    "upgrade": "Pārejiet uz maksas plānu, lai noņemtu visus ierobežojumus, atbloķētu papildu funkcijas un saglabātu ēdienkarti bez reklāmām.",
+    "cta": "Jaunināt tagad",
+    "signature": "Ar cieņu,<br>IQ Rest komanda"
+  },
   "welcomeEmail": {
     "subject": "Laipni lūgti IQ Rest — jūsu ēdienkarte ir 2 minūšu attālumā",
     "greeting": "Laipni lūgti IQ Rest!",

@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Zaregistrovali jste se na IQ Rest, ale ještě jste si nenastavili menu. Zabere to méně než 2 minuty — zadejte název restaurace, vyberte šablonu a dostanete hotové menu k úpravě.",
     "helpOfferNotOnboarded": "Nemáte čas? Pošlete nám své menu v jakémkoli formátu — PDF, foto nebo odkaz — a my to uděláme za vás, zcela zdarma."
   },
+  "limitWarningEmail": {
+    "subject": "Blížíte se k bezplatnému limitu skenování na IQ Rest",
+    "greeting": "Dobrý den,",
+    "body": "Vaše menu téměř dosáhlo měsíčního limitu {limit} skenování na bezplatném plánu. Po dosažení limitu se vašim zákazníkům zobrazí reklamní banner.",
+    "upgrade": "Přejděte na placený plán, abyste odstranili všechny limity, odemkli pokročilé funkce a udrželi své menu bez reklam.",
+    "cta": "Upgradovat nyní",
+    "signature": "S pozdravem,<br>Tým IQ Rest"
+  },
   "welcomeEmail": {
     "subject": "Vítejte na IQ Rest — vaše menu je za 2 minuty",
     "greeting": "Vítejte na IQ Rest!",

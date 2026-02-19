@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Rekisteröidyit IQ Restiin, mutta et ole vielä luonut menuasi. Se vie alle 2 minuuttia — syötä ravintolasi nimi, valitse pohja ja saat valmiin menun muokattavaksi.",
     "helpOfferNotOnboarded": "Eikö ole aikaa? Lähetä meille menusi missä tahansa muodossa — PDF, kuva tai linkki — ja me teemme sen puolestasi, täysin ilmaiseksi."
   },
+  "limitWarningEmail": {
+    "subject": "Lähestyt ilmaista skannausrajaasi IQ Restissä",
+    "greeting": "Hei,",
+    "body": "Menusi on lähes saavuttanut kuukausittaisen {limit} skannauksen rajan ilmaisella suunnitelmalla. Kun raja on saavutettu, asiakkaillesi näytetään mainosbanneri.",
+    "upgrade": "Päivitä maksulliseen suunnitelmaan poistaaksesi kaikki rajoitukset, avataksesi lisäominaisuudet ja pitääksesi menusi mainoksettomana.",
+    "cta": "Päivitä nyt",
+    "signature": "Ystävällisin terveisin,<br>IQ Rest -tiimi"
+  },
   "welcomeEmail": {
     "subject": "Tervetuloa IQ Restiin — menusi on 2 minuutin päässä",
     "greeting": "Tervetuloa IQ Restiin!",

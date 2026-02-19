@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Te-ai înregistrat pe IQ Rest, dar nu ți-ai configurat încă meniul. Durează mai puțin de 2 minute — introdu numele restaurantului, alege un șablon și vei avea un meniu gata de personalizat.",
     "helpOfferNotOnboarded": "Nu ai timp? Trimite-ne pur și simplu meniul în orice format — PDF, poză sau link — și noi îl facem pentru tine, complet gratuit."
   },
+  "limitWarningEmail": {
+    "subject": "Te apropii de limita gratuită de scanări pe IQ Rest",
+    "greeting": "Bună,",
+    "body": "Meniul tău a atins aproape limita lunară de {limit} scanări pe planul gratuit. Odată ce limita este atinsă, un banner publicitar va fi afișat clienților tăi.",
+    "upgrade": "Treci la un plan plătit pentru a elimina toate limitele, a debloca funcții avansate și a-ți menține meniul fără reclame.",
+    "cta": "Upgrade acum",
+    "signature": "Cu stimă,<br>Echipa IQ Rest"
+  },
   "welcomeEmail": {
     "subject": "Bine ai venit pe IQ Rest — meniul tău este la 2 minute distanță",
     "greeting": "Bine ai venit pe IQ Rest!",

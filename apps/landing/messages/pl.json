@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Zarejestrowałeś się w IQ Rest, ale jeszcze nie skonfigurowałeś swojego menu. Zajmie to mniej niż 2 minuty — wpisz nazwę restauracji, wybierz szablon i otrzymasz gotowe menu do dostosowania.",
     "helpOfferNotOnboarded": "Brak czasu? Po prostu wyślij nam swoje menu w dowolnym formacie — PDF, zdjęcie lub link — a my zrobimy to za Ciebie, całkowicie za darmo."
   },
+  "limitWarningEmail": {
+    "subject": "Zbliżasz się do darmowego limitu skanowań w IQ Rest",
+    "greeting": "Cześć,",
+    "body": "Twoje menu prawie osiągnęło miesięczny limit {limit} skanowań w darmowym planie. Po osiągnięciu limitu Twoim klientom będzie wyświetlany baner reklamowy.",
+    "upgrade": "Przejdź na plan płatny, aby usunąć wszystkie limity, odblokować zaawansowane funkcje i utrzymać swoje menu bez reklam.",
+    "cta": "Ulepsz teraz",
+    "signature": "Z poważaniem,<br>Zespół IQ Rest"
+  },
   "welcomeEmail": {
     "subject": "Witaj w IQ Rest — Twoje menu jest o 2 minuty stąd",
     "greeting": "Witaj w IQ Rest!",

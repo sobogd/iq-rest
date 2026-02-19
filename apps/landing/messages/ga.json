@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Chláraigh tú le IQ Rest ach níor shocraigh tú do bhiachlár fós. Ní thógann sé ach níos lú ná 2 nóiméad — cuir isteach ainm do bhialainne, roghnaigh teimpléad agus gheobhaidh tú biachlár réidh le saincheapadh.",
     "helpOfferNotOnboarded": "Gan am agat? Seol chugainn do bhiachlár i bhformáid ar bith — PDF, grianghraf nó nasc — agus déanfaimid é duit, saor in aisce go hiomlán."
   },
+  "limitWarningEmail": {
+    "subject": "Tá tú ag druidim le do theorainn saor in aisce scananna ar IQ Rest",
+    "greeting": "Dia duit,",
+    "body": "Tá do bhiachlár beagnach tar éis an teorainn mhíosúil de {limit} scanadh a bhaint amach ar an bplean saor in aisce. Nuair a shroichtear an teorainn, taispeánfar meirge fógraíochta do do chustaiméirí.",
+    "upgrade": "Uasghrádaigh go plean íoctha chun gach teorainn a bhaint, gnéithe ardleibhéil a dhíghlasáil agus do bhiachlár a choinneáil saor ó fhógraí.",
+    "cta": "Uasghrádaigh anois",
+    "signature": "Le meas,<br>Foireann IQ Rest"
+  },
   "welcomeEmail": {
     "subject": "Fáilte go IQ Rest — tá do bhiachlár 2 nóiméad uait",
     "greeting": "Fáilte go IQ Rest!",

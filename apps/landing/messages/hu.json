@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Regisztrált az IQ Rest-re, de még nem állította be a menüjét. Kevesebb mint 2 percet vesz igénybe — adja meg éttermének nevét, válasszon sablont, és kap egy kész menüt a testreszabáshoz.",
     "helpOfferNotOnboarded": "Nincs ideje? Csak küldje el nekünk a menüjét bármilyen formátumban — PDF, fotó vagy link — és mi megcsináljuk Önnek, teljesen ingyen."
   },
+  "limitWarningEmail": {
+    "subject": "Közeledik az ingyenes szkennelési korlátjához az IQ Rest-en",
+    "greeting": "Üdvözöljük,",
+    "body": "Az Ön menüje majdnem elérte a havi {limit} szkennelés korlátot az ingyenes csomagban. A korlát elérésekor egy hirdetési banner jelenik meg az Ön ügyfelei számára.",
+    "upgrade": "Váltson fizetős csomagra az összes korlát eltávolításához, a haladó funkciók feloldásához és a menü reklámmentes megtartásához.",
+    "cta": "Frissítés most",
+    "signature": "Üdvözlettel,<br>Az IQ Rest csapat"
+  },
   "welcomeEmail": {
     "subject": "Üdvözöljük az IQ Rest-en — menüje 2 perc múlva kész",
     "greeting": "Üdvözöljük az IQ Rest-en!",

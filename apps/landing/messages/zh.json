@@ -1928,6 +1928,14 @@
     "bodyNotOnboarded": "您注册了IQ Rest但尚未设置菜单。只需不到2分钟——输入餐厅名称、选择模板，即可获得一份可自定义的现成菜单。",
     "helpOfferNotOnboarded": "没有时间？只需将您的菜单以任何格式发送给我们——PDF、照片或链接——我们将免费为您完成一切。"
   },
+  "limitWarningEmail": {
+    "subject": "您即将达到IQ Rest的免费扫描限制",
+    "greeting": "您好，",
+    "body": "您的菜单即将达到免费计划的每月{limit}次扫描限制。达到限制后，您的客户将看到广告横幅。",
+    "upgrade": "升级到付费计划以移除所有限制、解锁高级功能并保持菜单无广告。",
+    "cta": "立即升级",
+    "signature": "此致敬礼，<br>IQ Rest团队"
+  },
   "welcomeEmail": {
     "subject": "欢迎来到IQ Rest——您的菜单只需2分钟",
     "greeting": "欢迎来到IQ Rest！",

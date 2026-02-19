@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "Registreerusite IQ Resti, kuid pole veel oma menüüd seadistanud. See võtab vähem kui 2 minutit — sisestage oma restorani nimi, valige mall ja saate valmis menüü kohandamiseks.",
     "helpOfferNotOnboarded": "Pole aega? Saatke meile lihtsalt oma menüü mis tahes vormingus — PDF, foto või link — ja me teeme selle teie eest, täiesti tasuta."
   },
+  "limitWarningEmail": {
+    "subject": "Lähenete oma tasuta skaneerimise piirmäärale IQ Restis",
+    "greeting": "Tere,",
+    "body": "Teie menüü on peaaegu saavutanud tasuta paketi igakuise {limit} skaneerimise piirmäära. Piirmäära saavutamisel kuvatakse teie klientidele reklaamibänner.",
+    "upgrade": "Minge üle tasulisele paketile, et eemaldada kõik piirangud, avada lisafunktsioonid ja hoida oma menüü reklaamivaba.",
+    "cta": "Uuenda kohe",
+    "signature": "Parimate soovidega,<br>IQ Resti meeskond"
+  },
   "welcomeEmail": {
     "subject": "Tere tulemast IQ Resti — teie menüü on 2 minuti kaugusel",
     "greeting": "Tere tulemast IQ Resti!",

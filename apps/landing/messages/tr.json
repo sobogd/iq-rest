@@ -1895,6 +1895,14 @@
     "bodyNotOnboarded": "IQ Rest'e kaydoldunuz ancak menünüzü henüz oluşturmadınız. 2 dakikadan az sürer — restoran adınızı girin, bir şablon seçin ve özelleştirmeye hazır bir menü elde edin.",
     "helpOfferNotOnboarded": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya link — ve sizin için tamamen ücretsiz yapalım."
   },
+  "limitWarningEmail": {
+    "subject": "IQ Rest'te ücretsiz tarama limitinize yaklaşıyorsunuz",
+    "greeting": "Merhaba,",
+    "body": "Menünüz ücretsiz planda aylık {limit} tarama limitine neredeyse ulaştı. Limite ulaşıldığında müşterilerinize bir reklam afişi gösterilecektir.",
+    "upgrade": "Tüm limitleri kaldırmak, gelişmiş özellikleri açmak ve menünüzü reklamsız tutmak için ücretli bir plana yükseltin.",
+    "cta": "Şimdi yükselt",
+    "signature": "Saygılarımızla,<br>IQ Rest Ekibi"
+  },
   "welcomeEmail": {
     "subject": "IQ Rest'e hoş geldiniz — menünüz 2 dakika uzakta",
     "greeting": "IQ Rest'e hoş geldiniz!",
