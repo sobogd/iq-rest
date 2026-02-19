@@ -135,15 +135,15 @@ export function GoogleAdsKeywordDetailPage({ resourceName, keyword }: { resource
                   </div>
                 </div>
 
-                {/* Hourly rows */}
+                {/* Hourly or daily rows */}
                 <div className="divide-y divide-foreground/5">
-                  {day.hours.map((h) => (
+                  {day.hours.map((h, i) => (
                     <div
-                      key={h.hour}
+                      key={h.hour >= 0 ? h.hour : i}
                       className="grid grid-cols-[45px_1fr_1fr_1fr_1fr] gap-1 px-3 py-1.5 text-xs"
                     >
                       <span className="font-medium tabular-nums text-muted-foreground">
-                        {formatHour(h.hour)}
+                        {h.hour >= 0 ? formatHour(h.hour) : "all"}
                       </span>
                       <span className="text-right tabular-nums">
                         {h.clicks > 0 ? h.clicks : <span className="text-muted-foreground/40">0</span>}
