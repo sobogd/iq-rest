@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { RefreshCw, Loader2 } from "lucide-react";
-import { useRouter } from "@/i18n/routing";
+import { RefreshCw, Loader2, Check } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 import type { KeywordBid } from "@/lib/google-ads";
 
@@ -25,12 +26,118 @@ function matchTypeBadge(matchType: string) {
   );
 }
 
-function encodeResourceName(resourceName: string): string {
-  return btoa(resourceName).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+function KeywordCard({ kw }: { kw: KeywordBid }) {
+  const initialBid = kw.cpcBidMicros != null ? (kw.cpcBidMicros / 1_000_000).toFixed(2) : "";
+  const [bidValue, setBidValue] = useState(initialBid);
+  const [saving, setSaving] = useState(false);
+
+  const isDirty = bidValue !== initialBid;
+
+  async function handleUpdateBid() {
+    const euros = parseFloat(bidValue);
+    if (isNaN(euros) || euros < 0) {
+      toast.error("Invalid bid");
+      return;
+    }
+    setSaving(true);
+    try {
+      const res = await fetch("/api/admin/google-ads/keywords", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          resourceName: kw.resourceName,
+          cpcBidMicros: Math.round(euros * 1_000_000),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to update");
+      toast.success(`${kw.keyword} → ${euros.toFixed(2)} €`);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Failed to update bid");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <div className="rounded-xl border border-border bg-muted/30 p-3">
+      {/* Header: keyword name + badges */}
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-sm font-medium truncate min-w-0 flex-1">
+          {kw.keyword}
+        </span>
+        {matchTypeBadge(kw.matchType)}
+        {kw.status === "PAUSED" && (
+          <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-yellow-500/15 text-yellow-600 dark:text-yellow-400">
+            Paused
+          </span>
+        )}
+      </div>
+
+      {/* Metrics row */}
+      <div className="grid grid-cols-4 gap-x-3 gap-y-1 mb-3">
+        <div>
+          <div className="text-[10px] text-muted-foreground">1st Page</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.firstPageCpcMicros)}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Top Page</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.topOfPageCpcMicros)}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Avg CPC</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.averageCpc)}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Cost</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.costMicros)}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Clicks</div>
+          <div className="text-xs font-medium tabular-nums">{kw.clicks.toLocaleString()}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Impr.</div>
+          <div className="text-xs font-medium tabular-nums">{kw.impressions.toLocaleString()}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">Conv.</div>
+          <div className="text-xs font-medium tabular-nums">{kw.conversions}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-muted-foreground">1st Pos.</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.firstPositionCpcMicros)}</div>
+        </div>
+      </div>
+
+      {/* Bid input */}
+      <div className="flex items-center gap-2">
+        <span className="text-xs text-muted-foreground shrink-0">Bid €</span>
+        <Input
+          type="number"
+          step="0.01"
+          min="0"
+          value={bidValue}
+          onChange={(e) => setBidValue(e.target.value)}
+          className="h-8 text-xs flex-1"
+        />
+        <button
+          onClick={handleUpdateBid}
+          disabled={saving || !isDirty}
+          className="flex items-center justify-center h-8 w-8 rounded-md bg-primary text-primary-foreground disabled:opacity-40 shrink-0"
+        >
+          {saving ? (
+            <Loader2 className="h-3.5 w-3.5 animate-spin" />
+          ) : (
+            <Check className="h-3.5 w-3.5" />
+          )}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export function GoogleAdsKeywordsPage() {
-  const router = useRouter();
   const [keywords, setKeywords] = useState<KeywordBid[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -86,9 +193,9 @@ export function GoogleAdsKeywordsPage() {
       </PageHeader>
 
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="w-full max-w-lg mx-auto flex flex-col gap-1">
+        <div className="w-full max-w-lg mx-auto flex flex-col gap-3">
           {error && (
-            <div className="rounded-2xl border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive mb-2">
+            <div className="rounded-2xl border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive">
               {error}
             </div>
           )}
@@ -101,39 +208,12 @@ export function GoogleAdsKeywordsPage() {
 
           {grouped.map(([campaignName, kws]) => (
             <div key={campaignName}>
-              <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mt-3 mb-1.5 px-1">
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mt-2 mb-2 px-1">
                 {campaignName}
               </h3>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-2">
                 {kws.map((kw) => (
-                  <button
-                    key={kw.resourceName}
-                    onClick={() =>
-                      router.push(
-                        `/dashboard/google-ads/keywords/${encodeResourceName(kw.resourceName)}`
-                      )
-                    }
-                    className="flex items-center h-12 bg-muted/30 rounded-xl px-3 gap-2 hover:bg-muted/60 transition-colors text-left w-full"
-                  >
-                    <span className="text-sm font-medium truncate min-w-0 flex-1">
-                      {kw.keyword}
-                    </span>
-                    {matchTypeBadge(kw.matchType)}
-                    {kw.status === "PAUSED" && (
-                      <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-yellow-500/15 text-yellow-600 dark:text-yellow-400">
-                        Paused
-                      </span>
-                    )}
-                    <span className="text-xs text-muted-foreground tabular-nums w-10 text-right">
-                      {kw.clicks}
-                    </span>
-                    <span className="text-xs text-muted-foreground tabular-nums w-14 text-right">
-                      {formatMicros(kw.firstPageCpcMicros)}
-                    </span>
-                    <span className="text-xs font-medium tabular-nums w-14 text-right">
-                      {formatMicros(kw.cpcBidMicros)}
-                    </span>
-                  </button>
+                  <KeywordCard key={kw.resourceName} kw={kw} />
                 ))}
               </div>
             </div>
