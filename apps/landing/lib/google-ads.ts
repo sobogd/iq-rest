@@ -87,24 +87,30 @@ export async function getKeywordBids(
       AND segments.date DURING ${dateRange}
   `);
 
-  const yesterdayQuery = customer.query(`
-    SELECT
-      ad_group_criterion.keyword.text,
-      ad_group_criterion.keyword.match_type,
-      campaign.name,
-      ad_group.name,
-      segments.hour,
-      metrics.clicks,
-      metrics.impressions,
-      metrics.cost_micros,
-      metrics.average_cpc
-    FROM keyword_view
-    WHERE campaign.status = 'ENABLED'
-      AND ad_group_criterion.status != 'REMOVED'
-      AND segments.date DURING YESTERDAY
-  `);
+  const results = await mainQuery;
 
-  const [results, yesterdayResults] = await Promise.all([mainQuery, yesterdayQuery]);
+  // Try yesterday hourly — segments.hour may not be supported for keyword_view
+  let yesterdayResults: typeof results = [];
+  try {
+    yesterdayResults = await customer.query(`
+      SELECT
+        ad_group_criterion.keyword.text,
+        ad_group_criterion.keyword.match_type,
+        campaign.name,
+        ad_group.name,
+        segments.hour,
+        metrics.clicks,
+        metrics.impressions,
+        metrics.cost_micros,
+        metrics.average_cpc
+      FROM keyword_view
+      WHERE campaign.status = 'ENABLED'
+        AND ad_group_criterion.status != 'REMOVED'
+        AND segments.date DURING YESTERDAY
+    `);
+  } catch (err) {
+    console.error("[Google Ads] Yesterday hourly query failed:", err instanceof Error ? err.message : err);
+  }
 
   // Build yesterday hourly map: key -> HourlyData[]
   const yesterdayMap = new Map<string, HourlyData[]>();
