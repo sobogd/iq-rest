@@ -14,6 +14,14 @@ function getClient(): GoogleAdsApi {
   return client;
 }
 
+export interface HourlyData {
+  hour: number;
+  clicks: number;
+  impressions: number;
+  costMicros: number;
+  averageCpcMicros: number | null;
+}
+
 export interface KeywordBid {
   resourceName: string;
   keyword: string;
@@ -33,6 +41,7 @@ export interface KeywordBid {
   firstPositionCpcMicros: number | null;
   estimatedAddClicksAtFirstPosition: number | null;
   estimatedAddCostAtFirstPosition: number | null;
+  yesterdayHours: HourlyData[];
 }
 
 export async function getKeywordBids(
@@ -52,7 +61,7 @@ export async function getKeywordBids(
     login_customer_id: loginCustomerId || undefined,
   });
 
-  const results = await customer.query(`
+  const mainQuery = customer.query(`
     SELECT
       ad_group_criterion.resource_name,
       ad_group_criterion.keyword.text,
@@ -78,6 +87,44 @@ export async function getKeywordBids(
       AND segments.date DURING ${dateRange}
   `);
 
+  const yesterdayQuery = customer.query(`
+    SELECT
+      ad_group_criterion.keyword.text,
+      ad_group_criterion.keyword.match_type,
+      campaign.name,
+      ad_group.name,
+      segments.hour,
+      metrics.clicks,
+      metrics.impressions,
+      metrics.cost_micros,
+      metrics.average_cpc
+    FROM keyword_view
+    WHERE campaign.status = 'ENABLED'
+      AND ad_group_criterion.status != 'REMOVED'
+      AND segments.date DURING YESTERDAY
+  `);
+
+  const [results, yesterdayResults] = await Promise.all([mainQuery, yesterdayQuery]);
+
+  // Build yesterday hourly map: key -> HourlyData[]
+  const yesterdayMap = new Map<string, HourlyData[]>();
+  for (const row of yesterdayResults) {
+    const keyword = String(row.ad_group_criterion?.keyword?.text ?? "");
+    const matchType = String(row.ad_group_criterion?.keyword?.match_type ?? "UNKNOWN");
+    const campaignName = String(row.campaign?.name ?? "");
+    const adGroupName = String(row.ad_group?.name ?? "");
+    const key = `${keyword}|${matchType}|${campaignName}|${adGroupName}`;
+    const list = yesterdayMap.get(key) || [];
+    list.push({
+      hour: Number(row.segments?.hour ?? 0),
+      clicks: Number(row.metrics?.clicks ?? 0),
+      impressions: Number(row.metrics?.impressions ?? 0),
+      costMicros: Number(row.metrics?.cost_micros ?? 0),
+      averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
+    });
+    yesterdayMap.set(key, list);
+  }
+
   // keyword_view returns one row per keyword per day — aggregate into totals
   const map = new Map<string, KeywordBid>();
 
@@ -100,6 +147,7 @@ export async function getKeywordBids(
       existing.costMicros += costMicros;
       existing.conversions += conversions;
     } else {
+      const ydHours = (yesterdayMap.get(key) || []).sort((a, b) => a.hour - b.hour);
       map.set(key, {
         resourceName: String(row.ad_group_criterion?.resource_name ?? ""),
         keyword,
@@ -133,6 +181,7 @@ export async function getKeywordBids(
         estimatedAddCostAtFirstPosition: row.ad_group_criterion?.position_estimates?.estimated_add_cost_at_first_position_cpc != null
           ? Number(row.ad_group_criterion.position_estimates.estimated_add_cost_at_first_position_cpc)
           : null,
+        yesterdayHours: ydHours,
       });
     }
   }

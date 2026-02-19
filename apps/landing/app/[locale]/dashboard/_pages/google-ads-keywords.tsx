@@ -6,7 +6,7 @@ import { useRouter } from "@/i18n/routing";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
-import type { KeywordBid } from "@/lib/google-ads";
+import type { KeywordBid, HourlyData } from "@/lib/google-ads";
 
 function encodeResourceName(resourceName: string): string {
   return btoa(resourceName).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
@@ -79,41 +79,44 @@ function KeywordCard({ kw, onDetail }: { kw: KeywordBid; onDetail: () => void })
         )}
       </div>
 
-      {/* Metrics row */}
-      <div className="grid grid-cols-4 gap-x-3 gap-y-1 mb-3">
+      {/* Today metrics */}
+      <div className="grid grid-cols-4 gap-x-3 gap-y-1 mb-2">
         <div>
-          <div className="text-[10px] text-muted-foreground">1st Page</div>
-          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.firstPageCpcMicros)}</div>
-        </div>
-        <div>
-          <div className="text-[10px] text-muted-foreground">Top Page</div>
-          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.topOfPageCpcMicros)}</div>
-        </div>
-        <div>
-          <div className="text-[10px] text-muted-foreground">Avg CPC</div>
-          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.averageCpc)}</div>
+          <div className="text-[10px] text-muted-foreground">Clicks</div>
+          <div className="text-xs font-medium tabular-nums">{kw.clicks}</div>
         </div>
         <div>
           <div className="text-[10px] text-muted-foreground">Cost</div>
           <div className="text-xs font-medium tabular-nums">{formatMicros(kw.costMicros)}</div>
         </div>
         <div>
-          <div className="text-[10px] text-muted-foreground">Clicks</div>
-          <div className="text-xs font-medium tabular-nums">{kw.clicks.toLocaleString()}</div>
+          <div className="text-[10px] text-muted-foreground">Avg CPC</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.averageCpc)}</div>
         </div>
         <div>
-          <div className="text-[10px] text-muted-foreground">Impr.</div>
-          <div className="text-xs font-medium tabular-nums">{kw.impressions.toLocaleString()}</div>
-        </div>
-        <div>
-          <div className="text-[10px] text-muted-foreground">Conv.</div>
-          <div className="text-xs font-medium tabular-nums">{kw.conversions}</div>
-        </div>
-        <div>
-          <div className="text-[10px] text-muted-foreground">1st Pos.</div>
-          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.firstPositionCpcMicros)}</div>
+          <div className="text-[10px] text-muted-foreground">1st Page</div>
+          <div className="text-xs font-medium tabular-nums">{formatMicros(kw.firstPageCpcMicros)}</div>
         </div>
       </div>
+
+      {/* Yesterday hourly table */}
+      {kw.yesterdayHours.length > 0 && (
+        <div className="mb-3 border border-foreground/5 rounded-lg overflow-hidden">
+          <div className="text-[10px] font-semibold text-muted-foreground uppercase px-2 py-1 bg-muted/40">
+            Yesterday by hour
+          </div>
+          <div className="divide-y divide-foreground/5">
+            {kw.yesterdayHours.map((h: HourlyData) => (
+              <div key={h.hour} className="grid grid-cols-[36px_1fr_1fr_1fr] gap-1 px-2 py-1 text-[11px]">
+                <span className="tabular-nums text-muted-foreground">{h.hour.toString().padStart(2, "0")}:00</span>
+                <span className="text-right tabular-nums">{h.clicks > 0 ? `${h.clicks} cl` : <span className="text-muted-foreground/30">—</span>}</span>
+                <span className="text-right tabular-nums text-muted-foreground">{h.impressions > 0 ? `${h.impressions} im` : <span className="text-muted-foreground/30">—</span>}</span>
+                <span className="text-right tabular-nums font-medium">{h.costMicros > 0 ? formatMicros(h.costMicros) : <span className="text-muted-foreground/30">—</span>}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Bid input + detail link */}
       <div className="flex items-center gap-2">
