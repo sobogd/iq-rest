@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
     }
 
     const page = Math.max(0, Number(request.nextUrl.searchParams.get("page") || 0));
-    const limit = 30;
+    const limit = 10;
 
     const [sessionsList, totalResult] = await Promise.all([
       prisma.session.findMany({

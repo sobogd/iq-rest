@@ -113,6 +113,7 @@ export function SessionsPage() {
                   <span className={`text-xs shrink-0 ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
                     {session.source}
                   </span>
+                  <span className="flex-1" />
                   <span className="text-xs text-muted-foreground shrink-0">
                     {formatDuration(session.duration)} · {session.eventCount} ev.
                   </span>
