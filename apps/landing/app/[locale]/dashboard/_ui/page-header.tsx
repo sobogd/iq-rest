@@ -9,22 +9,20 @@ interface PageHeaderProps {
   children?: React.ReactNode;
   onBack?: () => void;
   backHref?: string;
-  historyBack?: boolean;
 }
 
-export function PageHeader({ title, children, onBack, backHref = "/dashboard", historyBack }: PageHeaderProps) {
+export function PageHeader({ title, children, onBack, backHref = "/dashboard" }: PageHeaderProps) {
   const router = useRouter();
   const pushedRef = useRef(false);
 
   const handleBack = () => {
     if (onBack) return onBack();
-    if (historyBack) return router.back();
     router.push(backHref);
   };
 
-  // Intercept browser back button for pages with backHref (not historyBack)
+  // Intercept browser back button
   useEffect(() => {
-    if (historyBack || onBack) return;
+    if (onBack) return;
 
     if (!pushedRef.current) {
       window.history.pushState(null, "", window.location.href);
@@ -37,7 +35,7 @@ export function PageHeader({ title, children, onBack, backHref = "/dashboard", h
 
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
-  }, [historyBack, onBack, backHref, router]);
+  }, [onBack, backHref, router]);
 
   return (
     <header className="shrink-0 shadow-sm px-6 bg-muted/50">

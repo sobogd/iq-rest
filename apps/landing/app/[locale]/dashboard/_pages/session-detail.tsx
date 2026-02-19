@@ -180,7 +180,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
         body: JSON.stringify({ sessionId }),
       });
       if (res.ok) {
-        router.back();
+        router.push("/dashboard/sessions");
       }
     } catch {
       console.error("Failed to delete session");
@@ -224,7 +224,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Session" historyBack>
+      <PageHeader title="Session" backHref="/dashboard/sessions">
         <Button variant="ghost" size="icon" onClick={fetchData}>
           <RefreshCw className="h-4 w-4" />
         </Button>

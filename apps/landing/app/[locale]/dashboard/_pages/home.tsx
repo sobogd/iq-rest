@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
@@ -84,6 +85,8 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
 
   const completedCount = Object.entries(checklist).filter(([k, v]) => k !== "startedFromScratch" && v).length;
   const allDone = completedCount === 5;
+
+  useBlockBack();
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_HOME);

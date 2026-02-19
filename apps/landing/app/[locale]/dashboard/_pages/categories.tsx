@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useBackIntercept } from "../_hooks/use-back-intercept";
 import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, X, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -16,6 +17,7 @@ interface CategoryWithTranslations extends Category {
 }
 
 export function CategoriesPage() {
+  useBackIntercept("/dashboard/menu");
   const { translations } = useDashboard();
   const router = useRouter();
   const t = translations.categories;

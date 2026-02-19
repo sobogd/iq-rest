@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
+import { useBackIntercept } from "../_hooks/use-back-intercept";
 import { ArrowUp, ArrowDown, Plus, ArrowUpDown, ArrowLeft, Loader2, Check, X, Info, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -33,6 +34,7 @@ interface MenuPageProps {
 }
 
 export function MenuPage({ initialItems, initialCategories, initialCurrency, checklistMenuEdited, startedFromScratch }: MenuPageProps) {
+  useBackIntercept("/dashboard");
   const { translations } = useDashboard();
   const router = useRouter();
   const tItems = translations.items;

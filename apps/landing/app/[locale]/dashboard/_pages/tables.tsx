@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useBackIntercept } from "../_hooks/use-back-intercept";
 import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, X, ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -25,6 +26,7 @@ interface TablesPageProps {
 }
 
 export function TablesPage({ initialTables }: TablesPageProps) {
+  useBackIntercept("/dashboard");
   const t = useTranslations("reservations");
   const { translations } = useDashboard();
   const router = useRouter();

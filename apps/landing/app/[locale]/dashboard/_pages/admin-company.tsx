@@ -203,7 +203,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
       if (res.ok) {
         toast.success(`Company "${company.name}" deleted`);
-        router.back();
+        router.push("/dashboard/admin");
       } else {
         const data = await res.json();
         toast.error(data.error || "Failed to delete");
@@ -309,7 +309,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   if (error || !company) {
     return (
       <div className="flex flex-col h-full">
-        <PageHeader title="Company" historyBack />
+        <PageHeader title="Company" backHref="/dashboard/admin" />
         <div className="flex items-center justify-center h-full">
           <p className="text-muted-foreground">{error || "Not found"}</p>
         </div>
@@ -357,7 +357,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={title} historyBack>
+      <PageHeader title={title} backHref="/dashboard/admin">
         <Button variant="ghost" size="icon" onClick={fetchCompany}>
           <RefreshCw className="h-4 w-4" />
         </Button>
