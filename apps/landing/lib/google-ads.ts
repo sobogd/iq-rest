@@ -20,6 +20,7 @@ export interface HourlyData {
   impressions: number;
   costMicros: number;
   averageCpcMicros: number | null;
+  conversions: number;
 }
 
 export interface AdGroupHourly {
@@ -29,6 +30,7 @@ export interface AdGroupHourly {
   totalClicks: number;
   totalImpressions: number;
   totalCostMicros: number;
+  totalConversions: number;
 }
 
 export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> {
@@ -54,7 +56,8 @@ export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> 
       metrics.clicks,
       metrics.impressions,
       metrics.cost_micros,
-      metrics.average_cpc
+      metrics.average_cpc,
+      metrics.conversions
     FROM ad_group
     WHERE campaign.status = 'ENABLED'
       AND ad_group.status != 'REMOVED'
@@ -75,6 +78,7 @@ export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> 
       impressions: Number(row.metrics?.impressions ?? 0),
       costMicros: Number(row.metrics?.cost_micros ?? 0),
       averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
+      conversions: Number(row.metrics?.conversions ?? 0),
     });
     map.set(key, entry);
   }
@@ -87,6 +91,7 @@ export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> 
       totalClicks: sorted.reduce((s, h) => s + h.clicks, 0),
       totalImpressions: sorted.reduce((s, h) => s + h.impressions, 0),
       totalCostMicros: sorted.reduce((s, h) => s + h.costMicros, 0),
+      totalConversions: sorted.reduce((s, h) => s + h.conversions, 0),
     };
   });
 }
@@ -99,6 +104,7 @@ export interface WeeklyHourData {
   avgCpcMicros: number | null;
   minAvgCpcMicros: number | null;
   maxAvgCpcMicros: number | null;
+  avgConversions: number;
 }
 
 export interface AdGroupWeekly {
@@ -108,6 +114,7 @@ export interface AdGroupWeekly {
   totalClicks: number;
   totalImpressions: number;
   totalCostMicros: number;
+  totalConversions: number;
   minAvgCpcMicros: number | null;
   maxAvgCpcMicros: number | null;
 }
@@ -136,7 +143,8 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
       metrics.clicks,
       metrics.impressions,
       metrics.cost_micros,
-      metrics.average_cpc
+      metrics.average_cpc,
+      metrics.conversions
     FROM ad_group
     WHERE campaign.status = 'ENABLED'
       AND ad_group.status != 'REMOVED'
@@ -147,7 +155,7 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
   const map = new Map<string, {
     campaignName: string;
     adGroupName: string;
-    hourData: Map<number, { clicks: number; impressions: number; costMicros: number; cpc: number | null }[]>;
+    hourData: Map<number, { clicks: number; impressions: number; costMicros: number; cpc: number | null; conversions: number }[]>;
   }>();
 
   for (const row of results) {
@@ -163,6 +171,7 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
       impressions: Number(row.metrics?.impressions ?? 0),
       costMicros: Number(row.metrics?.cost_micros ?? 0),
       cpc: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
+      conversions: Number(row.metrics?.conversions ?? 0),
     });
     entry.hourData.set(hour, hourList);
     map.set(key, entry);
@@ -173,6 +182,7 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
     let totalClicks = 0;
     let totalImpressions = 0;
     let totalCostMicros = 0;
+    let totalConversions = 0;
     const allCpcs: number[] = [];
 
     for (let h = 0; h < 24; h++) {
@@ -181,11 +191,13 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
       const sumClicks = samples.reduce((s, d) => s + d.clicks, 0);
       const sumImpr = samples.reduce((s, d) => s + d.impressions, 0);
       const sumCost = samples.reduce((s, d) => s + d.costMicros, 0);
+      const sumConv = samples.reduce((s, d) => s + d.conversions, 0);
       const cpcs = samples.map((d) => d.cpc).filter((v): v is number => v != null && v > 0);
 
       totalClicks += sumClicks;
       totalImpressions += sumImpr;
       totalCostMicros += sumCost;
+      totalConversions += sumConv;
       allCpcs.push(...cpcs);
 
       const avgCpc = cpcs.length > 0
@@ -200,6 +212,7 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
         avgCpcMicros: avgCpc,
         minAvgCpcMicros: cpcs.length > 0 ? Math.min(...cpcs) : null,
         maxAvgCpcMicros: cpcs.length > 0 ? Math.max(...cpcs) : null,
+        avgConversions: Math.round((sumConv / n) * 100) / 100,
       });
     }
 
@@ -210,6 +223,7 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
       totalClicks,
       totalImpressions,
       totalCostMicros,
+      totalConversions,
       minAvgCpcMicros: allCpcs.length > 0 ? Math.min(...allCpcs) : null,
       maxAvgCpcMicros: allCpcs.length > 0 ? Math.max(...allCpcs) : null,
     };

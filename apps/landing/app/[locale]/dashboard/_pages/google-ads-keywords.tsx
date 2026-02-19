@@ -50,6 +50,7 @@ function AdGroupCard({ ag }: { ag: AdGroupHourly }) {
         <div className="flex gap-3 text-[10px] text-muted-foreground shrink-0">
           <span>{ag.totalClicks} clicks</span>
           <span>{ag.totalImpressions} impr</span>
+          <span>{ag.totalConversions} conv</span>
           <span>{formatMicros(ag.totalCostMicros)}</span>
         </div>
       </div>
@@ -59,6 +60,7 @@ function AdGroupCard({ ag }: { ag: AdGroupHourly }) {
             <th className="text-left font-medium px-3 py-1 w-[52px]">Hour</th>
             <th className="text-right font-medium px-3 py-1">Clicks</th>
             <th className="text-right font-medium px-3 py-1">Impr</th>
+            <th className="text-right font-medium px-3 py-1">Conv</th>
             <th className="text-right font-medium px-3 py-1">Cost</th>
             <th className="text-right font-medium px-3 py-1">Avg CPC</th>
           </tr>
@@ -76,6 +78,9 @@ function AdGroupCard({ ag }: { ag: AdGroupHourly }) {
                 </td>
                 <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
                   {h && h.impressions > 0 ? h.impressions : <span className="text-muted-foreground/30">—</span>}
+                </td>
+                <td className="px-3 py-1 text-right tabular-nums text-green-600">
+                  {h && h.conversions > 0 ? h.conversions : <span className="text-muted-foreground/30">—</span>}
                 </td>
                 <td className="px-3 py-1 text-right tabular-nums font-medium">
                   {h && h.costMicros > 0 ? formatMicros(h.costMicros) : <span className="text-muted-foreground/30">—</span>}
@@ -101,6 +106,7 @@ function AdGroupWeeklyCard({ ag }: { ag: AdGroupWeekly }) {
         <span className="text-sm font-medium truncate">{ag.adGroupName}</span>
         <div className="flex gap-3 text-[10px] text-muted-foreground shrink-0">
           <span>{ag.totalClicks} clicks</span>
+          <span>{ag.totalConversions} conv</span>
           <span>{formatMicros(ag.totalCostMicros)}</span>
         </div>
       </div>
@@ -114,6 +120,7 @@ function AdGroupWeeklyCard({ ag }: { ag: AdGroupWeekly }) {
             <th className="text-left font-medium px-3 py-1 w-[52px]">Hour</th>
             <th className="text-right font-medium px-3 py-1">Avg Cl</th>
             <th className="text-right font-medium px-3 py-1">Avg Impr</th>
+            <th className="text-right font-medium px-3 py-1">Avg Conv</th>
             <th className="text-right font-medium px-3 py-1">Avg Cost</th>
             <th className="text-right font-medium px-3 py-1">Avg CPC</th>
             <th className="text-right font-medium px-3 py-1">Min</th>
@@ -131,6 +138,9 @@ function AdGroupWeeklyCard({ ag }: { ag: AdGroupWeekly }) {
               </td>
               <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
                 {h.avgImpressions > 0 ? h.avgImpressions : <span className="text-muted-foreground/30">—</span>}
+              </td>
+              <td className="px-3 py-1 text-right tabular-nums text-green-600">
+                {h.avgConversions > 0 ? h.avgConversions : <span className="text-muted-foreground/30">—</span>}
               </td>
               <td className="px-3 py-1 text-right tabular-nums font-medium">
                 {h.avgCostMicros > 0 ? formatMicros(h.avgCostMicros) : <span className="text-muted-foreground/30">—</span>}
