@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useCallback } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "@/i18n/routing";
 
@@ -14,7 +15,23 @@ interface PageHeaderProps {
 export function PageHeader({ title, children, onBack, backHref = "/dashboard", historyBack }: PageHeaderProps) {
   const router = useRouter();
 
-  const handleBack = onBack || (historyBack ? () => router.back() : () => router.push(backHref));
+  const handleBack = useCallback(() => {
+    if (onBack) return onBack();
+    if (historyBack) return router.back();
+    router.push(backHref);
+  }, [onBack, historyBack, backHref, router]);
+
+  useEffect(() => {
+    // Push extra history entry so we can intercept browser back button
+    window.history.pushState(null, "", window.location.href);
+
+    const onPopState = () => {
+      handleBack();
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [handleBack]);
 
   return (
     <header className="shrink-0 shadow-sm px-6 bg-muted/50">

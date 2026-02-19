@@ -126,14 +126,14 @@ export function AdminPage() {
                   <button
                     key={company.id}
                     onClick={() => router.push(`/dashboard/admin/companies/${company.id}`)}
-                    className={`flex flex-col gap-1 w-full px-4 py-2.5 hover:bg-muted/30 transition-colors text-left ${
+                    className={`flex items-center gap-2.5 w-full px-4 py-2.5 hover:bg-muted/30 transition-colors text-left ${
                       index > 0 ? "border-t border-foreground/5" : ""
                     }`}
                   >
-                    <span className={`text-sm truncate w-full ${nameColor || (company.name ? "" : "text-muted-foreground italic")}`}>
+                    <span className={`text-sm truncate flex-1 min-w-0 ${nameColor || (company.name ? "" : "text-muted-foreground italic")}`}>
                       {company.name || "No name"}
                     </span>
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground shrink-0">
                       <span className="flex items-center gap-0.5"><FolderOpen className="h-3 w-3" />{company.categoriesCount}</span>
                       <span className="flex items-center gap-0.5"><Package className="h-3 w-3" />{company.itemsCount}</span>
                       {company.monthlyViews > 0 && (
