@@ -46,7 +46,7 @@ export interface KeywordBid {
 
 export async function getKeywordBids(
   dateRange: string = "LAST_30_DAYS"
-): Promise<KeywordBid[]> {
+): Promise<{ keywords: KeywordBid[]; yesterdayError: string | null }> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
 
@@ -91,6 +91,7 @@ export async function getKeywordBids(
 
   // Try yesterday hourly — segments.hour may not be supported for keyword_view
   let yesterdayResults: typeof results = [];
+  let yesterdayError: string | null = null;
   try {
     yesterdayResults = await customer.query(`
       SELECT
@@ -109,7 +110,8 @@ export async function getKeywordBids(
         AND segments.date DURING YESTERDAY
     `);
   } catch (err) {
-    console.error("[Google Ads] Yesterday hourly query failed:", err instanceof Error ? err.message : err);
+    yesterdayError = err instanceof Error ? err.message : JSON.stringify(err);
+    console.error("[Google Ads] Yesterday hourly query failed:", yesterdayError);
   }
 
   // Build yesterday hourly map: key -> HourlyData[]
@@ -197,7 +199,7 @@ export async function getKeywordBids(
     kw.averageCpc = kw.clicks > 0 ? Math.round(kw.costMicros / kw.clicks) : null;
   }
 
-  return Array.from(map.values());
+  return { keywords: Array.from(map.values()), yesterdayError };
 }
 
 export interface KeywordHourlyStats {

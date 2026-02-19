@@ -156,14 +156,17 @@ export function GoogleAdsKeywordsPage() {
   const [keywords, setKeywords] = useState<KeywordBid[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [yesterdayError, setYesterdayError] = useState<string | null>(null);
 
   const fetchKeywords = useCallback(async () => {
     setLoading(true);
     setError(null);
+    setYesterdayError(null);
     try {
       const res = await fetch("/api/admin/google-ads/keywords");
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to load");
+      if (data.yesterdayError) setYesterdayError(data.yesterdayError);
       const sorted = (data.keywords as KeywordBid[]).sort((a, b) => {
         const cmp = a.campaignName.localeCompare(b.campaignName);
         if (cmp !== 0) return cmp;
@@ -212,6 +215,12 @@ export function GoogleAdsKeywordsPage() {
           {error && (
             <div className="rounded-2xl border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive">
               {error}
+            </div>
+          )}
+
+          {yesterdayError && (
+            <div className="rounded-2xl border border-yellow-500/30 bg-yellow-500/10 p-4 text-xs text-yellow-700 dark:text-yellow-400 break-all">
+              Yesterday hourly failed: {yesterdayError}
             </div>
           )}
 
