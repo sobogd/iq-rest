@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   try {
     // 1. Fetch current keyword data from Google Ads (1 API operation)
     // dateRange doesn't matter for position_estimates (they're real-time, not historical)
-    const keywords = await getKeywordBids("LAST_30_DAYS");
+    const { keywords } = await getKeywordBids("LAST_30_DAYS");
 
     // 2. Load active bid configs from DB
     const configs = await prisma.keywordBidConfig.findMany({
