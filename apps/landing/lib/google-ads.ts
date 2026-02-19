@@ -91,18 +91,20 @@ export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> 
   });
 }
 
-export interface DailyData {
-  date: string;
-  clicks: number;
-  impressions: number;
-  costMicros: number;
-  averageCpcMicros: number | null;
+export interface WeeklyHourData {
+  hour: number;
+  avgClicks: number;
+  avgImpressions: number;
+  avgCostMicros: number;
+  avgCpcMicros: number | null;
+  minAvgCpcMicros: number | null;
+  maxAvgCpcMicros: number | null;
 }
 
 export interface AdGroupWeekly {
   campaignName: string;
   adGroupName: string;
-  days: DailyData[];
+  hours: WeeklyHourData[];
   totalClicks: number;
   totalImpressions: number;
   totalCostMicros: number;
@@ -130,6 +132,7 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
       campaign.name,
       ad_group.name,
       segments.date,
+      segments.hour,
       metrics.clicks,
       metrics.impressions,
       metrics.cost_micros,
@@ -140,37 +143,75 @@ export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
       AND segments.date DURING LAST_7_DAYS
   `);
 
-  const map = new Map<string, { campaignName: string; adGroupName: string; days: DailyData[] }>();
+  // Group: adGroup -> hour -> array of daily values
+  const map = new Map<string, {
+    campaignName: string;
+    adGroupName: string;
+    hourData: Map<number, { clicks: number; impressions: number; costMicros: number; cpc: number | null }[]>;
+  }>();
 
   for (const row of results) {
     const campaignName = String(row.campaign?.name ?? "");
     const adGroupName = String(row.ad_group?.name ?? "");
     const key = `${campaignName}|${adGroupName}`;
+    const hour = Number(row.segments?.hour ?? 0);
 
-    const entry = map.get(key) || { campaignName, adGroupName, days: [] };
-    entry.days.push({
-      date: String(row.segments?.date ?? ""),
+    const entry = map.get(key) || { campaignName, adGroupName, hourData: new Map() };
+    const hourList = entry.hourData.get(hour) || [];
+    hourList.push({
       clicks: Number(row.metrics?.clicks ?? 0),
       impressions: Number(row.metrics?.impressions ?? 0),
       costMicros: Number(row.metrics?.cost_micros ?? 0),
-      averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
+      cpc: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
     });
+    entry.hourData.set(hour, hourList);
     map.set(key, entry);
   }
 
   return Array.from(map.values()).map((entry) => {
-    const sorted = entry.days.sort((a, b) => a.date.localeCompare(b.date));
-    const cpcs = sorted
-      .map((d) => d.averageCpcMicros)
-      .filter((v): v is number => v != null && v > 0);
+    const hours: WeeklyHourData[] = [];
+    let totalClicks = 0;
+    let totalImpressions = 0;
+    let totalCostMicros = 0;
+    const allCpcs: number[] = [];
+
+    for (let h = 0; h < 24; h++) {
+      const samples = entry.hourData.get(h) || [];
+      const n = samples.length || 1;
+      const sumClicks = samples.reduce((s, d) => s + d.clicks, 0);
+      const sumImpr = samples.reduce((s, d) => s + d.impressions, 0);
+      const sumCost = samples.reduce((s, d) => s + d.costMicros, 0);
+      const cpcs = samples.map((d) => d.cpc).filter((v): v is number => v != null && v > 0);
+
+      totalClicks += sumClicks;
+      totalImpressions += sumImpr;
+      totalCostMicros += sumCost;
+      allCpcs.push(...cpcs);
+
+      const avgCpc = cpcs.length > 0
+        ? Math.round(cpcs.reduce((s, v) => s + v, 0) / cpcs.length)
+        : null;
+
+      hours.push({
+        hour: h,
+        avgClicks: Math.round((sumClicks / n) * 10) / 10,
+        avgImpressions: Math.round((sumImpr / n) * 10) / 10,
+        avgCostMicros: Math.round(sumCost / n),
+        avgCpcMicros: avgCpc,
+        minAvgCpcMicros: cpcs.length > 0 ? Math.min(...cpcs) : null,
+        maxAvgCpcMicros: cpcs.length > 0 ? Math.max(...cpcs) : null,
+      });
+    }
+
     return {
-      ...entry,
-      days: sorted,
-      totalClicks: sorted.reduce((s, d) => s + d.clicks, 0),
-      totalImpressions: sorted.reduce((s, d) => s + d.impressions, 0),
-      totalCostMicros: sorted.reduce((s, d) => s + d.costMicros, 0),
-      minAvgCpcMicros: cpcs.length > 0 ? Math.min(...cpcs) : null,
-      maxAvgCpcMicros: cpcs.length > 0 ? Math.max(...cpcs) : null,
+      campaignName: entry.campaignName,
+      adGroupName: entry.adGroupName,
+      hours,
+      totalClicks,
+      totalImpressions,
+      totalCostMicros,
+      minAvgCpcMicros: allCpcs.length > 0 ? Math.min(...allCpcs) : null,
+      maxAvgCpcMicros: allCpcs.length > 0 ? Math.max(...allCpcs) : null,
     };
   });
 }

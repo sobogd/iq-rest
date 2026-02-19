@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { RefreshCw, Loader2 } from "lucide-react";
 import { PageHeader } from "../_ui/page-header";
-import type { AdGroupHourly, AdGroupWeekly, HourlyData, DailyData } from "@/lib/google-ads";
+import type { AdGroupHourly, AdGroupWeekly, HourlyData, WeeklyHourData } from "@/lib/google-ads";
 
 function formatMicros(micros: number | null): string {
   if (micros == null) return "—";
@@ -22,11 +22,6 @@ function formatTabLabel(daysAgo: number): string {
   const d = new Date();
   d.setDate(d.getDate() - daysAgo);
   return d.toLocaleDateString("en-GB", { day: "2-digit", month: "short" });
-}
-
-function formatShortDate(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleDateString("en-GB", { weekday: "short", day: "2-digit", month: "short" });
 }
 
 type Tab = { key: string; label: string };
@@ -116,31 +111,43 @@ function AdGroupWeeklyCard({ ag }: { ag: AdGroupWeekly }) {
       <table className="w-full text-[11px]">
         <thead>
           <tr className="border-b border-foreground/5 text-[10px] text-muted-foreground">
-            <th className="text-left font-medium px-3 py-1">Day</th>
-            <th className="text-right font-medium px-3 py-1">Clicks</th>
-            <th className="text-right font-medium px-3 py-1">Impr</th>
-            <th className="text-right font-medium px-3 py-1">Cost</th>
+            <th className="text-left font-medium px-3 py-1 w-[52px]">Hour</th>
+            <th className="text-right font-medium px-3 py-1">Avg Cl</th>
+            <th className="text-right font-medium px-3 py-1">Avg Impr</th>
+            <th className="text-right font-medium px-3 py-1">Avg Cost</th>
             <th className="text-right font-medium px-3 py-1">Avg CPC</th>
+            <th className="text-right font-medium px-3 py-1">Min</th>
+            <th className="text-right font-medium px-3 py-1">Max</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-foreground/5">
-          {ag.days.map((d: DailyData) => (
-            <tr key={d.date}>
-              <td className="px-3 py-1 text-muted-foreground">
-                {formatShortDate(d.date)}
+          {ag.hours.map((h: WeeklyHourData) => (
+            <tr key={h.hour}>
+              <td className="px-3 py-1 tabular-nums text-muted-foreground">
+                {h.hour.toString().padStart(2, "0")}:00
               </td>
               <td className="px-3 py-1 text-right tabular-nums">
-                {d.clicks > 0 ? d.clicks : <span className="text-muted-foreground/30">0</span>}
+                {h.avgClicks > 0 ? h.avgClicks : <span className="text-muted-foreground/30">—</span>}
               </td>
               <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
-                {d.impressions > 0 ? d.impressions : <span className="text-muted-foreground/30">0</span>}
+                {h.avgImpressions > 0 ? h.avgImpressions : <span className="text-muted-foreground/30">—</span>}
               </td>
               <td className="px-3 py-1 text-right tabular-nums font-medium">
-                {d.costMicros > 0 ? formatMicros(d.costMicros) : <span className="text-muted-foreground/30">—</span>}
+                {h.avgCostMicros > 0 ? formatMicros(h.avgCostMicros) : <span className="text-muted-foreground/30">—</span>}
               </td>
               <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
-                {d.averageCpcMicros != null && d.averageCpcMicros > 0
-                  ? formatMicros(d.averageCpcMicros)
+                {h.avgCpcMicros != null && h.avgCpcMicros > 0
+                  ? formatMicros(h.avgCpcMicros)
+                  : <span className="text-muted-foreground/30">—</span>}
+              </td>
+              <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
+                {h.minAvgCpcMicros != null
+                  ? formatMicros(h.minAvgCpcMicros)
+                  : <span className="text-muted-foreground/30">—</span>}
+              </td>
+              <td className="px-3 py-1 text-right tabular-nums text-muted-foreground">
+                {h.maxAvgCpcMicros != null
+                  ? formatMicros(h.maxAvgCpcMicros)
                   : <span className="text-muted-foreground/30">—</span>}
               </td>
             </tr>
