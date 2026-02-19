@@ -14,6 +14,57 @@ function getClient(): GoogleAdsApi {
   return client;
 }
 
+export interface SearchTermData {
+  searchTerm: string;
+  campaignName: string;
+  adGroupName: string;
+  clicks: number;
+  impressions: number;
+  costMicros: number;
+  conversions: number;
+}
+
+export async function getSearchTerms(dateFilter: string): Promise<SearchTermData[]> {
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+
+  if (!customerId) {
+    throw new Error("Missing GOOGLE_ADS_CUSTOMER_ID");
+  }
+
+  const api = getClient();
+  const customer = api.Customer({
+    customer_id: customerId,
+    refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+    login_customer_id: loginCustomerId || undefined,
+  });
+
+  const results = await customer.query(`
+    SELECT
+      search_term_view.search_term,
+      campaign.name,
+      ad_group.name,
+      metrics.clicks,
+      metrics.impressions,
+      metrics.cost_micros,
+      metrics.conversions
+    FROM search_term_view
+    WHERE ${dateFilter}
+      AND campaign.status = 'ENABLED'
+    ORDER BY metrics.clicks DESC
+  `);
+
+  return results.map((row) => ({
+    searchTerm: String(row.search_term_view?.search_term ?? ""),
+    campaignName: String(row.campaign?.name ?? ""),
+    adGroupName: String(row.ad_group?.name ?? ""),
+    clicks: Number(row.metrics?.clicks ?? 0),
+    impressions: Number(row.metrics?.impressions ?? 0),
+    costMicros: Number(row.metrics?.cost_micros ?? 0),
+    conversions: Number(row.metrics?.conversions ?? 0),
+  }));
+}
+
 export interface ClickInfo {
   gclid: string;
   campaignName: string;
