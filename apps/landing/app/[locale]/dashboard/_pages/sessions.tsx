@@ -36,14 +36,8 @@ interface Session {
   firstEvent: string;
   duration: number;
   eventCount: number;
-  hasUser: boolean;
-  country: string | null;
   source: string;
   adValues: string | null;
-  sessionType: string | null;
-  restaurantName: string | null;
-  ip: string | null;
-  isBot: boolean;
 }
 
 interface Filters {
@@ -61,16 +55,6 @@ function hasActiveFilters(filters: Filters): boolean {
   return filters.country !== "" || filters.keyword !== "" || filters.bot !== "all" || filters.ads !== "all" || filters.device !== "" || filters.browser !== "";
 }
 
-function countryToFlag(countryCode: string): string {
-  const code = countryCode.toUpperCase();
-  if (code.length !== 2) return "";
-  const offset = 0x1f1e6 - 65;
-  return String.fromCodePoint(
-    code.charCodeAt(0) + offset,
-    code.charCodeAt(1) + offset
-  );
-}
-
 function formatDuration(seconds: number): string {
   if (seconds < 60) return `${seconds}s`;
   if (seconds < 3600) {
@@ -81,30 +65,6 @@ function formatDuration(seconds: number): string {
   const h = Math.floor(seconds / 3600);
   const m = Math.round((seconds % 3600) / 60);
   return m > 0 ? `${h}h ${m}m` : `${h}h`;
-}
-
-function getSessionTags(session: Session): { label: string; color: string }[] {
-  const tags: { label: string; color: string }[] = [];
-
-  if (session.isBot) {
-    tags.push({ label: "Bot", color: "text-orange-500" });
-  }
-
-  if (session.sessionType === "signup") {
-    tags.push({ label: "Signed up", color: "text-green-500" });
-  } else if (session.hasUser) {
-    tags.push({ label: "Logged in", color: "text-green-500" });
-  }
-
-  if (session.sessionType === "dashboard") {
-    tags.push({ label: "Dashboard", color: "text-red-500" });
-  }
-
-  if (session.eventCount <= 2 && session.sessionType !== "signup" && session.sessionType !== "dashboard") {
-    tags.push({ label: "Bounce", color: "text-violet-500" });
-  }
-
-  return tags;
 }
 
 type FilterOption = { value: string; label: string };
@@ -406,7 +366,7 @@ export function SessionsPage() {
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
           {loading && sessions.length > 0 ? (
-            <div className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: `${sessions.length * 82}px` }}>
+            <div className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: `${sessions.length * 60}px` }}>
               <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
             </div>
           ) : sessions.length === 0 && !loading ? (
@@ -415,79 +375,46 @@ export function SessionsPage() {
             </p>
           ) : sessions.length === 0 ? null : (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
-              {sessions.map((session, index) => {
-                const tags = getSessionTags(session);
-                return (
-                  <div
-                    key={session.sessionId}
-                    className={`flex items-start gap-3 w-full px-4 py-3 hover:bg-muted/30 transition-colors ${
-                      index > 0 ? "border-t border-foreground/5" : ""
-                    }`}
-                    style={{ minHeight: "82px" }}
+              {sessions.map((session, index) => (
+                <div
+                  key={session.sessionId}
+                  className={`flex items-center gap-3 w-full px-4 py-3 hover:bg-muted/30 transition-colors ${
+                    index > 0 ? "border-t border-foreground/5" : ""
+                  }`}
+                >
+                  {/* Info — clickable area */}
+                  <button
+                    onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
+                    className="flex-1 min-w-0 text-left"
                   >
-                    {/* Flag */}
-                    <span className="text-base shrink-0 w-6 text-center mt-0.5">
-                      {session.country ? countryToFlag(session.country) : ""}
-                    </span>
-
-                    {/* Info — clickable area */}
-                    <button
-                      onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
-                      className="flex-1 min-w-0 text-left"
-                    >
-                      {/* Line 1: Date + duration · events */}
-                      <div className="flex items-baseline justify-between">
-                        <p className="text-sm font-medium">
-                          {formatDate(session.firstEvent)}
-                        </p>
-                        <span className="text-[10px] text-muted-foreground shrink-0 ml-2">
-                          {formatDuration(session.duration)} · {session.eventCount} ev.
-                        </span>
-                      </div>
-
-                      {/* Line 2: Source */}
-                      <p className={`text-[10px] mt-0.5 ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
-                        {session.source === "Ads"
-                          ? `Ads${session.adValues ? `: ${session.adValues}` : ""}`
-                          : "Direct"}
+                    {/* Line 1: Date/time + duration · events */}
+                    <div className="flex items-baseline justify-between">
+                      <p className="text-sm font-medium">
+                        {formatDate(session.firstEvent)}
                       </p>
+                      <span className="text-xs text-muted-foreground shrink-0 ml-2">
+                        {formatDuration(session.duration)} · {session.eventCount} ev.
+                      </span>
+                    </div>
 
-                      {/* Line 3: IP / tags */}
-                      <p className="text-[10px] mt-0.5">
-                        {session.ip && (
-                          <span className="text-muted-foreground font-mono">{session.ip}</span>
-                        )}
-                        {session.ip && tags.length > 0 && (
-                          <span className="text-muted-foreground"> / </span>
-                        )}
-                        {tags.map((tag, i) => (
-                          <span key={tag.label}>
-                            {i > 0 && <span className="text-muted-foreground">, </span>}
-                            <span className={`font-medium ${tag.color}`}>{tag.label}</span>
-                          </span>
-                        ))}
-                        {!session.ip && tags.length === 0 && (
-                          <span className="invisible">-</span>
-                        )}
-                      </p>
+                    {/* Line 2: Source */}
+                    <p className={`text-xs mt-0.5 ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
+                      {session.source === "Ads"
+                        ? `Ads${session.adValues ? `: ${session.adValues}` : ""}`
+                        : "Direct"}
+                    </p>
+                  </button>
 
-                      {/* Line 4: Restaurant name */}
-                      <p className="text-[10px] text-muted-foreground truncate mt-0.5">
-                        {session.restaurantName || <span className="invisible">-</span>}
-                      </p>
-                    </button>
-
-                    {/* Delete */}
-                    <button
-                      className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0 mt-0.5"
-                      onClick={() => handleDelete(session.sessionId)}
-                      disabled={deleting === session.sessionId}
-                    >
-                      <Trash2 className={`h-4 w-4 ${deleting === session.sessionId ? "animate-pulse" : ""}`} />
-                    </button>
-                  </div>
-                );
-              })}
+                  {/* Delete */}
+                  <button
+                    className="p-1.5 rounded-md hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors shrink-0"
+                    onClick={() => handleDelete(session.sessionId)}
+                    disabled={deleting === session.sessionId}
+                  >
+                    <Trash2 className={`h-4 w-4 ${deleting === session.sessionId ? "animate-pulse" : ""}`} />
+                  </button>
+                </div>
+              ))}
             </div>
           )}
 

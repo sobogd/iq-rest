@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback, useMemo } from "react";
-import { RefreshCw, Trash2, MoreVertical, Copy, ExternalLink } from "lucide-react";
+import { RefreshCw, Trash2, MoreVertical, Copy, ExternalLink, Search, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -165,6 +165,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
+  const [lookingUpClick, setLookingUpClick] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -203,6 +204,41 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
       console.error("Failed to delete session");
     } finally {
       setDeleting(false);
+    }
+  };
+
+  const handleLookupClick = async () => {
+    if (!session?.gclid || !session?.createdAt) return;
+    setLookingUpClick(true);
+    try {
+      const date = session.createdAt.slice(0, 10); // YYYY-MM-DD
+      const params = new URLSearchParams({ gclid: session.gclid, date });
+      const res = await fetch(`/api/admin/google-ads/click?${params}`);
+      const data = await res.json();
+
+      if (!res.ok) {
+        alert(`Error: ${data.error || "Unknown error"}`);
+        return;
+      }
+
+      const lines = [
+        `Campaign: ${data.campaignName} (${data.campaignId})`,
+        `Ad Group: ${data.adGroupName} (${data.adGroupId})`,
+        `Keyword: ${data.keyword}`,
+        `Match Type: ${data.matchType}`,
+        `Click Type: ${data.clickType}`,
+        `Device: ${data.device}`,
+        `Network: ${data.adNetworkType}`,
+        `Date: ${data.date}`,
+        data.areaOfInterest && `Area of Interest: ${data.areaOfInterest}`,
+        data.locationOfPresence && `Location: ${data.locationOfPresence}`,
+      ].filter(Boolean);
+
+      alert(lines.join("\n"));
+    } catch (err) {
+      alert(`Failed: ${err instanceof Error ? err.message : "Unknown error"}`);
+    } finally {
+      setLookingUpClick(false);
     }
   };
 
@@ -263,6 +299,16 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
               >
                 <ExternalLink className="h-4 w-4" />
                 View Company
+              </DropdownMenuItem>
+            )}
+            {session?.gclid && (
+              <DropdownMenuItem
+                className="px-4 py-2.5 rounded-none border-t border-foreground/5"
+                onClick={handleLookupClick}
+                disabled={lookingUpClick}
+              >
+                {lookingUpClick ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
+                Lookup GCLID
               </DropdownMenuItem>
             )}
             {copyableItems.map((item) => (

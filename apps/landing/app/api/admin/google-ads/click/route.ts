@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { isAdminEmail } from "@/lib/admin";
-import { getAdGroupsHourly, getAdGroupsWeekly } from "@/lib/google-ads";
+import { getClickInfo } from "@/lib/google-ads";
 
 export async function GET(request: NextRequest) {
   try {
@@ -12,22 +12,25 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
 
-    const period = request.nextUrl.searchParams.get("period");
-
-    if (period === "week") {
-      const adGroups = await getAdGroupsWeekly();
-      return NextResponse.json({ adGroups });
-    }
-
+    const gclid = request.nextUrl.searchParams.get("gclid");
     const date = request.nextUrl.searchParams.get("date");
+
+    if (!gclid) {
+      return NextResponse.json({ error: "Missing gclid param" }, { status: 400 });
+    }
     if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-      return NextResponse.json({ error: "Invalid date param (YYYY-MM-DD)" }, { status: 400 });
+      return NextResponse.json({ error: "Missing or invalid date param (YYYY-MM-DD)" }, { status: 400 });
     }
 
-    const adGroups = await getAdGroupsHourly(date);
-    return NextResponse.json({ adGroups });
+    const clickInfo = await getClickInfo(gclid, date);
+
+    if (!clickInfo) {
+      return NextResponse.json({ error: "Click not found for this gclid/date" }, { status: 404 });
+    }
+
+    return NextResponse.json(clickInfo);
   } catch (error) {
-    console.error("Admin Google Ads error:", error);
+    console.error("Admin Google Ads click error:", error);
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "Internal server error" },
       { status: 500 }

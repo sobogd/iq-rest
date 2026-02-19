@@ -1,4 +1,4 @@
-// Google Ads API - Offline Conversion Upload via gclid + Keyword Bids
+// Google Ads API - Offline Conversion Upload via gclid + Click Lookup
 import { GoogleAdsApi } from "google-ads-api";
 
 let client: GoogleAdsApi | null = null;
@@ -14,26 +14,23 @@ function getClient(): GoogleAdsApi {
   return client;
 }
 
-export interface HourlyData {
-  hour: number;
-  clicks: number;
-  impressions: number;
-  costMicros: number;
-  averageCpcMicros: number | null;
-  conversions: number;
-}
-
-export interface AdGroupHourly {
+export interface ClickInfo {
+  gclid: string;
   campaignName: string;
+  campaignId: string;
   adGroupName: string;
-  hours: HourlyData[];
-  totalClicks: number;
-  totalImpressions: number;
-  totalCostMicros: number;
-  totalConversions: number;
+  adGroupId: string;
+  keyword: string;
+  matchType: string;
+  clickType: string;
+  device: string;
+  adNetworkType: string;
+  date: string;
+  areaOfInterest: string;
+  locationOfPresence: string;
 }
 
-export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> {
+export async function getClickInfo(gclid: string, date: string): Promise<ClickInfo | null> {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
   const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
 
@@ -50,184 +47,51 @@ export async function getAdGroupsHourly(date: string): Promise<AdGroupHourly[]> 
 
   const results = await customer.query(`
     SELECT
+      click_view.gclid,
       campaign.name,
+      campaign.id,
       ad_group.name,
-      segments.hour,
-      metrics.clicks,
-      metrics.impressions,
-      metrics.cost_micros,
-      metrics.average_cpc,
-      metrics.conversions
-    FROM ad_group
-    WHERE campaign.status = 'ENABLED'
-      AND ad_group.status != 'REMOVED'
-      AND segments.date = '${date}'
+      ad_group.id,
+      click_view.keyword,
+      click_view.keyword_info.text,
+      click_view.keyword_info.match_type,
+      click_view.area_of_interest.city,
+      click_view.area_of_interest.country,
+      click_view.area_of_interest.region,
+      click_view.location_of_presence.city,
+      click_view.location_of_presence.country,
+      click_view.location_of_presence.region,
+      segments.click_type,
+      segments.device,
+      segments.ad_network_type,
+      segments.date
+    FROM click_view
+    WHERE segments.date = '${date}'
+      AND click_view.gclid = '${gclid}'
   `);
 
-  const map = new Map<string, { campaignName: string; adGroupName: string; hours: HourlyData[] }>();
+  if (results.length === 0) return null;
 
-  for (const row of results) {
-    const campaignName = String(row.campaign?.name ?? "");
-    const adGroupName = String(row.ad_group?.name ?? "");
-    const key = `${campaignName}|${adGroupName}`;
+  const row = results[0];
 
-    const entry = map.get(key) || { campaignName, adGroupName, hours: [] };
-    entry.hours.push({
-      hour: Number(row.segments?.hour ?? 0),
-      clicks: Number(row.metrics?.clicks ?? 0),
-      impressions: Number(row.metrics?.impressions ?? 0),
-      costMicros: Number(row.metrics?.cost_micros ?? 0),
-      averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
-      conversions: Number(row.metrics?.conversions ?? 0),
-    });
-    map.set(key, entry);
-  }
+  const aoi = row.click_view?.area_of_interest;
+  const lop = row.click_view?.location_of_presence;
 
-  return Array.from(map.values()).map((entry) => {
-    const sorted = entry.hours.sort((a, b) => a.hour - b.hour);
-    return {
-      ...entry,
-      hours: sorted,
-      totalClicks: sorted.reduce((s, h) => s + h.clicks, 0),
-      totalImpressions: sorted.reduce((s, h) => s + h.impressions, 0),
-      totalCostMicros: sorted.reduce((s, h) => s + h.costMicros, 0),
-      totalConversions: sorted.reduce((s, h) => s + h.conversions, 0),
-    };
-  });
-}
-
-export interface WeeklyHourData {
-  hour: number;
-  avgClicks: number;
-  avgImpressions: number;
-  avgCostMicros: number;
-  avgCpcMicros: number | null;
-  minAvgCpcMicros: number | null;
-  maxAvgCpcMicros: number | null;
-  avgConversions: number;
-}
-
-export interface AdGroupWeekly {
-  campaignName: string;
-  adGroupName: string;
-  hours: WeeklyHourData[];
-  totalClicks: number;
-  totalImpressions: number;
-  totalCostMicros: number;
-  totalConversions: number;
-  minAvgCpcMicros: number | null;
-  maxAvgCpcMicros: number | null;
-}
-
-export async function getAdGroupsWeekly(): Promise<AdGroupWeekly[]> {
-  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
-  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
-
-  if (!customerId) {
-    throw new Error("Missing GOOGLE_ADS_CUSTOMER_ID");
-  }
-
-  const api = getClient();
-  const customer = api.Customer({
-    customer_id: customerId,
-    refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
-    login_customer_id: loginCustomerId || undefined,
-  });
-
-  const results = await customer.query(`
-    SELECT
-      campaign.name,
-      ad_group.name,
-      segments.date,
-      segments.hour,
-      metrics.clicks,
-      metrics.impressions,
-      metrics.cost_micros,
-      metrics.average_cpc,
-      metrics.conversions
-    FROM ad_group
-    WHERE campaign.status = 'ENABLED'
-      AND ad_group.status != 'REMOVED'
-      AND segments.date DURING LAST_7_DAYS
-  `);
-
-  // Group: adGroup -> hour -> array of daily values
-  const map = new Map<string, {
-    campaignName: string;
-    adGroupName: string;
-    hourData: Map<number, { clicks: number; impressions: number; costMicros: number; cpc: number | null; conversions: number }[]>;
-  }>();
-
-  for (const row of results) {
-    const campaignName = String(row.campaign?.name ?? "");
-    const adGroupName = String(row.ad_group?.name ?? "");
-    const key = `${campaignName}|${adGroupName}`;
-    const hour = Number(row.segments?.hour ?? 0);
-
-    const entry = map.get(key) || { campaignName, adGroupName, hourData: new Map() };
-    const hourList = entry.hourData.get(hour) || [];
-    hourList.push({
-      clicks: Number(row.metrics?.clicks ?? 0),
-      impressions: Number(row.metrics?.impressions ?? 0),
-      costMicros: Number(row.metrics?.cost_micros ?? 0),
-      cpc: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
-      conversions: Number(row.metrics?.conversions ?? 0),
-    });
-    entry.hourData.set(hour, hourList);
-    map.set(key, entry);
-  }
-
-  return Array.from(map.values()).map((entry) => {
-    const hours: WeeklyHourData[] = [];
-    let totalClicks = 0;
-    let totalImpressions = 0;
-    let totalCostMicros = 0;
-    let totalConversions = 0;
-    const allCpcs: number[] = [];
-
-    for (let h = 0; h < 24; h++) {
-      const samples = entry.hourData.get(h) || [];
-      const n = samples.length || 1;
-      const sumClicks = samples.reduce((s, d) => s + d.clicks, 0);
-      const sumImpr = samples.reduce((s, d) => s + d.impressions, 0);
-      const sumCost = samples.reduce((s, d) => s + d.costMicros, 0);
-      const sumConv = samples.reduce((s, d) => s + d.conversions, 0);
-      const cpcs = samples.map((d) => d.cpc).filter((v): v is number => v != null && v > 0);
-
-      totalClicks += sumClicks;
-      totalImpressions += sumImpr;
-      totalCostMicros += sumCost;
-      totalConversions += sumConv;
-      allCpcs.push(...cpcs);
-
-      const avgCpc = cpcs.length > 0
-        ? Math.round(cpcs.reduce((s, v) => s + v, 0) / cpcs.length)
-        : null;
-
-      hours.push({
-        hour: h,
-        avgClicks: Math.round((sumClicks / n) * 10) / 10,
-        avgImpressions: Math.round((sumImpr / n) * 10) / 10,
-        avgCostMicros: Math.round(sumCost / n),
-        avgCpcMicros: avgCpc,
-        minAvgCpcMicros: cpcs.length > 0 ? Math.min(...cpcs) : null,
-        maxAvgCpcMicros: cpcs.length > 0 ? Math.max(...cpcs) : null,
-        avgConversions: Math.round((sumConv / n) * 100) / 100,
-      });
-    }
-
-    return {
-      campaignName: entry.campaignName,
-      adGroupName: entry.adGroupName,
-      hours,
-      totalClicks,
-      totalImpressions,
-      totalCostMicros,
-      totalConversions,
-      minAvgCpcMicros: allCpcs.length > 0 ? Math.min(...allCpcs) : null,
-      maxAvgCpcMicros: allCpcs.length > 0 ? Math.max(...allCpcs) : null,
-    };
-  });
+  return {
+    gclid: String(row.click_view?.gclid ?? ""),
+    campaignName: String(row.campaign?.name ?? ""),
+    campaignId: String(row.campaign?.id ?? ""),
+    adGroupName: String(row.ad_group?.name ?? ""),
+    adGroupId: String(row.ad_group?.id ?? ""),
+    keyword: String(row.click_view?.keyword_info?.text ?? row.click_view?.keyword ?? ""),
+    matchType: String(row.click_view?.keyword_info?.match_type ?? ""),
+    clickType: String(row.segments?.click_type ?? ""),
+    device: String(row.segments?.device ?? ""),
+    adNetworkType: String(row.segments?.ad_network_type ?? ""),
+    date: String(row.segments?.date ?? ""),
+    areaOfInterest: [aoi?.city, aoi?.region, aoi?.country].filter(Boolean).join(", "),
+    locationOfPresence: [lop?.city, lop?.region, lop?.country].filter(Boolean).join(", "),
+  };
 }
 
 export async function uploadClickConversion(
