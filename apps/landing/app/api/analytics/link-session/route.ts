@@ -25,9 +25,10 @@ export async function POST(request: NextRequest) {
       where: { id: sessionId },
     });
 
-    // Find existing session for this userId
+    // Find existing session for this userId (oldest = canonical)
     const existingSession = await prisma.session.findFirst({
       where: { userId },
+      orderBy: { createdAt: "asc" },
     });
 
     if (existingSession && anonSession && existingSession.id !== sessionId) {

@@ -5,7 +5,11 @@ const SESSION_ID_KEY = "analytics_session_id";
 function getSessionId(): string {
   if (typeof window === "undefined") return "";
 
-  let sessionId = sessionStorage.getItem(SESSION_ID_KEY);
+  // Registered users: localStorage (persistent, user accepted privacy policy)
+  // Anonymous users: sessionStorage (per-tab, no consent needed)
+  let sessionId = localStorage.getItem(SESSION_ID_KEY)
+    || sessionStorage.getItem(SESSION_ID_KEY);
+
   if (!sessionId) {
     sessionId =
       typeof crypto.randomUUID === "function"
@@ -14,15 +18,17 @@ function getSessionId(): string {
             .map((b) => b.toString(16).padStart(2, "0"))
             .join("")
             .replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
+    // Anonymous by default → sessionStorage only
     sessionStorage.setItem(SESSION_ID_KEY, sessionId);
   }
   return sessionId;
 }
 
-function setSessionId(id: string) {
-  if (typeof window !== "undefined") {
-    sessionStorage.setItem(SESSION_ID_KEY, id);
-  }
+function promoteToLocalStorage(id: string) {
+  if (typeof window === "undefined") return;
+  // User is now authenticated — persist session across browser restarts
+  localStorage.setItem(SESSION_ID_KEY, id);
+  sessionStorage.removeItem(SESSION_ID_KEY);
 }
 
 function isTrackingDisabled(): boolean {
@@ -89,9 +95,9 @@ export function linkSession(userId: string): Promise<void> {
   })
     .then((res) => res.json())
     .then((data) => {
-      if (data.sessionId && data.sessionId !== sessionId) {
-        setSessionId(data.sessionId);
-      }
+      const finalId = data.sessionId || sessionId;
+      // User authenticated → promote to localStorage
+      promoteToLocalStorage(finalId);
     })
     .catch(() => {
       // Silently fail
