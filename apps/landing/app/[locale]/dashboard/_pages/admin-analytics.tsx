@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { useRouter } from "@/i18n/routing";
 
 interface FunnelStep {
   event: string;
@@ -110,9 +111,7 @@ function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
             return (
               <div key={step.event} className="flex flex-col items-center w-16">
                 <div className="text-center mb-1">
-                  {index > 0 && (
-                    <p className="text-[9px] text-muted-foreground">{conversionPct}%</p>
-                  )}
+                  <p className="text-[9px] text-muted-foreground">{index === 0 ? "100%" : `${conversionPct}%`}</p>
                 </div>
                 <div className="h-20 w-full flex items-end justify-center">
                   <div
@@ -140,11 +139,13 @@ function StatsListCard({
   items,
   icon: Icon,
   showFlag = false,
+  onItemClick,
 }: {
   title: string;
   items: GeoStatsItem[];
   icon: React.ElementType;
   showFlag?: boolean;
+  onItemClick?: (name: string) => void;
 }) {
   const total = items.reduce((sum, i) => sum + i.count, 0);
 
@@ -165,7 +166,11 @@ function StatsListCard({
             const barPct = total > 0 ? (item.count / items[0].count) * 100 : 0;
             const flag = showFlag ? countryToFlag(item.name) : "";
             return (
-              <div key={item.name} className="px-4 py-2.5">
+              <button
+                key={item.name}
+                className="w-full px-4 py-2.5 text-left hover:bg-muted/30 transition-colors"
+                onClick={() => onItemClick?.(item.name)}
+              >
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xs">
                     {flag ? `${flag} ${item.name}` : item.name}
@@ -180,7 +185,7 @@ function StatsListCard({
                     style={{ width: `${barPct}%` }}
                   />
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
@@ -190,10 +195,16 @@ function StatsListCard({
 }
 
 export function AdminAnalyticsPage() {
+  const router = useRouter();
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<TimeRange>("today");
+
+  const navigateToSessions = (params: Record<string, string>) => {
+    const sp = new URLSearchParams({ from: "analytics", ...params });
+    router.push(`/dashboard/sessions?${sp.toString()}`);
+  };
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -249,16 +260,16 @@ export function AdminAnalyticsPage() {
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
           {/* Time Range */}
-          <div className="flex gap-2">
+          <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden flex">
             {TIME_RANGES.map((range) => (
               <button
                 key={range.value}
                 onClick={() => setTimeRange(range.value)}
                 disabled={loading}
-                className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                className={`flex-1 text-xs py-2.5 transition-colors ${
                   timeRange === range.value
-                    ? "border-primary bg-primary/10 font-medium"
-                    : "border-border hover:bg-muted/30"
+                    ? "bg-primary/10 font-medium"
+                    : "hover:bg-muted/30"
                 }`}
               >
                 {range.label}
@@ -278,6 +289,7 @@ export function AdminAnalyticsPage() {
             items={data.geoStats.countries}
             icon={Globe}
             showFlag
+            onItemClick={(name) => navigateToSessions({ country: name })}
           />
 
           {/* Devices & Browsers */}
@@ -285,11 +297,13 @@ export function AdminAnalyticsPage() {
             title="Devices"
             items={data.geoStats.devices}
             icon={Monitor}
+            onItemClick={(name) => navigateToSessions({ device: name })}
           />
           <StatsListCard
             title="Browsers"
             items={data.geoStats.browsers}
             icon={Globe}
+            onItemClick={(name) => navigateToSessions({ browser: name })}
           />
         </div>
       </div>

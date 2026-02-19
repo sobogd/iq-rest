@@ -29,6 +29,7 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 
 interface Session {
   sessionId: string;
@@ -50,12 +51,14 @@ interface Filters {
   keyword: string;
   bot: "all" | "true" | "false";
   ads: "all" | "true" | "false";
+  device: string;
+  browser: string;
 }
 
-const DEFAULT_FILTERS: Filters = { country: "", keyword: "", bot: "all", ads: "all" };
+const DEFAULT_FILTERS: Filters = { country: "", keyword: "", bot: "all", ads: "all", device: "", browser: "" };
 
 function hasActiveFilters(filters: Filters): boolean {
-  return filters.country !== "" || filters.keyword !== "" || filters.bot !== "all" || filters.ads !== "all";
+  return filters.country !== "" || filters.keyword !== "" || filters.bot !== "all" || filters.ads !== "all" || filters.device !== "" || filters.browser !== "";
 }
 
 function countryToFlag(countryCode: string): string {
@@ -131,6 +134,8 @@ function readFiltersFromStorage(): Filters {
         keyword: parsed.keyword || "",
         bot: (["all", "true", "false"].includes(parsed.bot) ? parsed.bot : "all") as Filters["bot"],
         ads: (["all", "true", "false"].includes(parsed.ads) ? parsed.ads : "all") as Filters["ads"],
+        device: parsed.device || "",
+        browser: parsed.browser || "",
       };
     }
   } catch {}
@@ -147,9 +152,26 @@ function readPageFromStorage(): number {
 
 export function SessionsPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const initialFilters = useMemo<Filters>(() => readFiltersFromStorage(), []);
-  const initialPage = useMemo(() => readPageFromStorage(), []);
+  // If coming from analytics page, use URL params as filters (don't persist to localStorage)
+  const fromAnalytics = searchParams.get("from") === "analytics";
+
+  const initialFilters = useMemo<Filters>(() => {
+    if (fromAnalytics) {
+      const f: Filters = { ...DEFAULT_FILTERS };
+      const country = searchParams.get("country");
+      const device = searchParams.get("device");
+      const browser = searchParams.get("browser");
+      if (country) f.country = country;
+      if (device) f.device = device;
+      if (browser) f.browser = browser;
+      return f;
+    }
+    return readFiltersFromStorage();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const initialPage = useMemo(() => fromAnalytics ? 0 : readPageFromStorage(), [fromAnalytics]);
 
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
@@ -162,11 +184,12 @@ export function SessionsPage() {
   const [draftFilters, setDraftFilters] = useState<Filters>(initialFilters);
 
   const saveToStorage = useCallback((p: number, f: Filters) => {
+    if (fromAnalytics) return;
     try {
       localStorage.setItem(LS_SESSIONS_PAGE, String(p));
       localStorage.setItem(LS_SESSIONS_FILTERS, JSON.stringify(f));
     } catch {}
-  }, []);
+  }, [fromAnalytics]);
 
   const fetchSessions = useCallback(async (p: number, f: Filters) => {
     setLoading(true);
@@ -176,6 +199,8 @@ export function SessionsPage() {
       if (f.keyword) apiParams.set("keyword", f.keyword);
       if (f.bot !== "all") apiParams.set("bot", f.bot);
       if (f.ads !== "all") apiParams.set("ads", f.ads);
+      if (f.device) apiParams.set("device", f.device);
+      if (f.browser) apiParams.set("browser", f.browser);
       const res = await fetch(`/api/admin/analytics/sessions-list?${apiParams}`);
       if (!res.ok) {
         const text = await res.text();
@@ -256,7 +281,7 @@ export function SessionsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Sessions" backHref="/dashboard">
+      <PageHeader title="Sessions" backHref={fromAnalytics ? "/dashboard/admin/analytics" : "/dashboard"}>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="relative">
@@ -305,6 +330,26 @@ export function SessionsPage() {
                 placeholder="e.g. qr menu"
                 value={draftFilters.keyword}
                 onChange={(e) => setDraftFilters({ ...draftFilters, keyword: e.target.value })}
+              />
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <Label htmlFor="filter-device">Device</Label>
+              <Input
+                id="filter-device"
+                placeholder="e.g. mobile, desktop"
+                value={draftFilters.device}
+                onChange={(e) => setDraftFilters({ ...draftFilters, device: e.target.value })}
+              />
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <Label htmlFor="filter-browser">Browser</Label>
+              <Input
+                id="filter-browser"
+                placeholder="e.g. Chrome, Safari"
+                value={draftFilters.browser}
+                onChange={(e) => setDraftFilters({ ...draftFilters, browser: e.target.value })}
               />
             </div>
 

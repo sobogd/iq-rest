@@ -21,6 +21,8 @@ export async function GET(request: NextRequest) {
     const filterKeyword = searchParams.get("keyword") || null;
     const filterBot = searchParams.get("bot"); // "true" | "false" | null
     const filterAds = searchParams.get("ads"); // "true" | "false" | null
+    const filterDevice = searchParams.get("device") || null;
+    const filterBrowser = searchParams.get("browser") || null;
 
     // Build where clause
     const where: Record<string, unknown> = {};
@@ -30,6 +32,8 @@ export async function GET(request: NextRequest) {
     if (filterBot === "false") where.isBot = false;
     if (filterAds === "true") where.gclid = { not: null };
     if (filterAds === "false") where.gclid = null;
+    if (filterDevice) where.device = filterDevice;
+    if (filterBrowser) where.browser = filterBrowser;
 
     // Get sessions directly from Session table
     const [sessionsList, totalResult] = await Promise.all([
