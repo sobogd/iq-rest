@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Loader2, LogOut } from "lucide-react";
 import { SiteHeader } from "./header";
 import {
   DashboardProvider,
   type DashboardTranslations,
 } from "../_context/dashboard-context";
+import { analytics } from "@/lib/analytics";
 
 interface ImpersonationBannerProps {
   currentEmail: string;
@@ -72,12 +73,23 @@ function DashboardLayout({
 export function DashboardShell({
   translations,
   impersonation,
+  userId,
   children,
 }: {
   translations: DashboardTranslations;
   impersonation?: { originalEmail: string; currentEmail: string };
+  userId: string;
   children?: React.ReactNode;
 }) {
+  const linked = useRef(false);
+
+  useEffect(() => {
+    if (!linked.current) {
+      linked.current = true;
+      analytics.linkSession(userId);
+    }
+  }, [userId]);
+
   return (
     <DashboardProvider translations={translations}>
       <DashboardLayout impersonation={impersonation}>

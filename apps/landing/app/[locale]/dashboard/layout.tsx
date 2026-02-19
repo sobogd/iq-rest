@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
-import { getUserCompanyId } from "@/lib/auth";
+import { getUserWithCompany } from "@/lib/auth";
 import { DashboardShell } from "./_components/shell";
 import type { DashboardTranslations } from "./_context/dashboard-context";
 
@@ -12,11 +12,13 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   // Uses React.cache() — same query is reused by page.tsx via getUserCompanyId()
-  const companyId = await getUserCompanyId();
+  const auth = await getUserWithCompany();
 
-  if (!companyId) {
+  if (!auth) {
     redirect("/login");
   }
+
+  const companyId = auth.companyId;
 
   // Check onboarding state
   const restaurant = await prisma.restaurant.findFirst({
@@ -200,7 +202,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations} impersonation={impersonation}>
+    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId}>
       {children}
     </DashboardShell>
   );
