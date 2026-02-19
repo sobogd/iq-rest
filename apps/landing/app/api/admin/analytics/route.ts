@@ -111,49 +111,21 @@ export async function GET(request: NextRequest) {
       getFunnelData(CONVERSION_FUNNEL, dateFrom, dateTo),
     ]);
 
-    // Get recent events (last 20)
-    const recentEvents = await prisma.analyticsEvent.findMany({
-      where: {
-        createdAt: { gte: dateFrom, lte: dateTo },
-      },
-      orderBy: { createdAt: "desc" },
-      take: 20,
-      select: {
-        id: true,
-        event: true,
-        sessionId: true,
-        meta: true,
-        createdAt: true,
-      },
-    });
-
-    // Get total stats
-    const totalEvents = await prisma.analyticsEvent.count({
-      where: { createdAt: { gte: dateFrom, lte: dateTo } },
-    });
-
-    const uniqueSessions = await prisma.session.count({
-      where: { createdAt: { gte: dateFrom, lte: dateTo } },
-    });
-
-    const linkedSessions = await prisma.session.count({
-      where: {
-        userId: { not: null },
-        createdAt: { gte: dateFrom, lte: dateTo },
-      },
-    });
-
-    // Get events by day for chart
-    const eventsByDay = await prisma.$queryRaw<{ date: string; count: bigint }[]>`
-      SELECT
-        DATE("createdAt") as date,
-        COUNT(*) as count
-      FROM analytics_events
-      WHERE "createdAt" >= ${dateFrom} AND "createdAt" <= ${dateTo}
-      GROUP BY DATE("createdAt")
-      ORDER BY date DESC
-      LIMIT 60
-    `;
+    // Get stats
+    const [totalEvents, uniqueSessions, linkedSessions] = await Promise.all([
+      prisma.analyticsEvent.count({
+        where: { createdAt: { gte: dateFrom, lte: dateTo } },
+      }),
+      prisma.session.count({
+        where: { createdAt: { gte: dateFrom, lte: dateTo } },
+      }),
+      prisma.session.count({
+        where: {
+          userId: { not: null },
+          createdAt: { gte: dateFrom, lte: dateTo },
+        },
+      }),
+    ]);
 
     // Get geo and device stats from Session table
     const sessionsInRange = await prisma.session.findMany({
@@ -193,20 +165,7 @@ export async function GET(request: NextRequest) {
       countries: sortByCount(countryMap),
       devices: sortByCount(deviceMap),
       browsers: sortByCount(browserMap),
-      os: [] as { name: string; count: number }[],
     };
-
-    // Get IPs with multiple sessions from PageView
-    const returningIps = await prisma.$queryRaw<{ ip: string; sessions: bigint; views: bigint }[]>`
-      SELECT ip, COUNT(DISTINCT "sessionId") as sessions, COUNT(*) as views
-      FROM page_views
-      WHERE ip IS NOT NULL
-        AND "createdAt" >= ${dateFrom} AND "createdAt" <= ${dateTo}
-      GROUP BY ip
-      HAVING COUNT(DISTINCT "sessionId") > 1
-      ORDER BY sessions DESC
-      LIMIT 20
-    `;
 
     return NextResponse.json({
       funnels: {
@@ -215,22 +174,12 @@ export async function GET(request: NextRequest) {
         dashboard: dashboardFunnel,
         conversion: conversionFunnel,
       },
-      recentEvents,
       stats: {
         totalEvents,
         uniqueSessions,
         linkedSessions,
       },
-      eventsByDay: eventsByDay.map((row) => ({
-        date: row.date,
-        count: Number(row.count),
-      })),
       geoStats,
-      returningIps: returningIps.map((row) => ({
-        ip: row.ip,
-        sessions: Number(row.sessions),
-        views: Number(row.views),
-      })),
       dateRange: {
         from: dateFrom.toISOString(),
         to: dateTo.toISOString(),
