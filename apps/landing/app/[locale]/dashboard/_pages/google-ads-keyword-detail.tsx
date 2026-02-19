@@ -139,11 +139,11 @@ export function GoogleAdsKeywordDetailPage({ resourceName, keyword }: { resource
                 <div className="divide-y divide-foreground/5">
                   {day.hours.map((h, i) => (
                     <div
-                      key={h.hour >= 0 ? h.hour : i}
+                      key={h.hour}
                       className="grid grid-cols-[45px_1fr_1fr_1fr_1fr] gap-1 px-3 py-1.5 text-xs"
                     >
                       <span className="font-medium tabular-nums text-muted-foreground">
-                        {h.hour >= 0 ? formatHour(h.hour) : "all"}
+                        {formatHour(h.hour)}
                       </span>
                       <span className="text-right tabular-nums">
                         {h.clicks > 0 ? h.clicks : <span className="text-muted-foreground/40">0</span>}

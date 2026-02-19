@@ -173,44 +173,23 @@ export async function getKeywordHourlyStats(
     login_customer_id: loginCustomerId || undefined,
   });
 
-  // Try hourly breakdown first, fall back to daily if segments.hour not supported
-  let results;
-  let hasHour = true;
-
-  try {
-    results = await customer.query(`
-      SELECT
-        segments.date,
-        segments.hour,
-        metrics.clicks,
-        metrics.impressions,
-        metrics.average_cpc,
-        metrics.cost_micros,
-        metrics.conversions
-      FROM keyword_view
-      WHERE ad_group_criterion.resource_name = '${resourceName}'
-        AND segments.date DURING ${dateRange}
-    `);
-  } catch (err) {
-    console.error("[Google Ads] Hourly query failed, falling back to daily:", err instanceof Error ? err.message : err);
-    hasHour = false;
-    results = await customer.query(`
-      SELECT
-        segments.date,
-        metrics.clicks,
-        metrics.impressions,
-        metrics.average_cpc,
-        metrics.cost_micros,
-        metrics.conversions
-      FROM keyword_view
-      WHERE ad_group_criterion.resource_name = '${resourceName}'
-        AND segments.date DURING ${dateRange}
-    `);
-  }
+  const results = await customer.query(`
+    SELECT
+      segments.date,
+      segments.hour,
+      metrics.clicks,
+      metrics.impressions,
+      metrics.average_cpc,
+      metrics.cost_micros,
+      metrics.conversions
+    FROM keyword_view
+    WHERE ad_group_criterion.resource_name = '${resourceName}'
+      AND segments.date DURING ${dateRange}
+  `);
 
   return results.map((row) => ({
     date: String(row.segments?.date ?? ""),
-    hour: hasHour ? Number(row.segments?.hour ?? 0) : -1,
+    hour: Number(row.segments?.hour ?? 0),
     clicks: Number(row.metrics?.clicks ?? 0),
     impressions: Number(row.metrics?.impressions ?? 0),
     averageCpcMicros: row.metrics?.average_cpc != null ? Number(row.metrics.average_cpc) : null,
