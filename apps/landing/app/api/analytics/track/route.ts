@@ -89,28 +89,27 @@ export async function POST(request: NextRequest) {
 
     // Check if company reached 20 views → set reached50Views on Session + send conversion
     if (currentMonthViews + 1 >= 20) {
-      prisma.session.updateMany({
+      await prisma.session.updateMany({
         where: { companyId: company.id, reached50Views: false },
         data: { reached50Views: true },
-      }).catch(() => {});
+      });
 
       // Send Google Ads conversion for views milestone
       const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS;
       if (conversionActionId) {
-        prisma.session.findFirst({
+        const sess = await prisma.session.findFirst({
           where: { companyId: company.id, gclid: { not: null }, conversionViewsSent: false },
           select: { id: true, gclid: true },
-        }).then(async (sess) => {
-          if (sess?.gclid) {
-            const result = await uploadClickConversion(sess.gclid, new Date().toISOString(), undefined, conversionActionId);
-            if (result.success) {
-              await prisma.session.updateMany({
-                where: { companyId: company.id },
-                data: { conversionViewsSent: true },
-              });
-            }
+        });
+        if (sess?.gclid) {
+          const result = await uploadClickConversion(sess.gclid, new Date().toISOString(), undefined, conversionActionId);
+          if (result.success) {
+            await prisma.session.updateMany({
+              where: { companyId: company.id },
+              data: { conversionViewsSent: true },
+            });
           }
-        }).catch(() => {});
+        }
       }
     }
 

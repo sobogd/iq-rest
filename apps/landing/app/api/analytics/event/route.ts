@@ -95,16 +95,13 @@ export async function POST(request: NextRequest) {
 
     // Auto-send Google Ads conversion when type is selected and session has gclid
     if (event === "clicked_onboarding_type" && sessionGclid && !existing?.conversionSent) {
-      uploadClickConversion(sessionGclid, new Date().toISOString())
-        .then(async (result) => {
-          if (result.success) {
-            await prisma.session.update({
-              where: { id: sessionId },
-              data: { conversionSent: true },
-            });
-          }
-        })
-        .catch(() => {});
+      const result = await uploadClickConversion(sessionGclid, new Date().toISOString());
+      if (result.success) {
+        await prisma.session.update({
+          where: { id: sessionId },
+          data: { conversionSent: true },
+        });
+      }
     }
 
     // Create AnalyticsEvent
