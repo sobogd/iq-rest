@@ -90,7 +90,7 @@ export async function getKeywordBids(
   const results = await mainQuery;
 
   // Yesterday hourly via keyword_view with segments.hour
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line
   let yesterdayResults: any[] = [];
   let yesterdayError: string | null = null;
   try {
