@@ -3,6 +3,8 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
+const PAGE_SIZE = 10;
+
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
@@ -12,7 +14,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
 
-    const period = request.nextUrl.searchParams.get("period") || "today";
+    const { searchParams } = request.nextUrl;
+    const period = searchParams.get("period") || "today";
 
     const now = new Date();
     let dateFrom: Date;
@@ -31,9 +34,19 @@ export async function GET(request: NextRequest) {
       createdAt: dateTo ? { gte: dateFrom, lt: dateTo } : { gte: dateFrom },
     };
 
+    const total = await prisma.session.count({ where });
+    const totalPages = Math.ceil(total / PAGE_SIZE);
+
+    const pageParam = searchParams.get("page");
+    const page = pageParam !== null
+      ? Math.max(0, Math.min(Number(pageParam), totalPages - 1))
+      : 0;
+
     const sessionsList = await prisma.session.findMany({
       where,
       orderBy: { createdAt: "desc" },
+      skip: page * PAGE_SIZE,
+      take: PAGE_SIZE,
       select: {
         id: true,
         country: true,
@@ -58,7 +71,7 @@ export async function GET(request: NextRequest) {
       };
     });
 
-    return NextResponse.json({ sessions });
+    return NextResponse.json({ sessions, total, page, totalPages });
   } catch (error) {
     console.error("Sessions list API error:", error);
     return NextResponse.json(

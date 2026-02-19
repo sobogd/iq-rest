@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { RefreshCw, Trash2, MoreVertical, Copy, ExternalLink, Search, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +12,6 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
 import { toast } from "sonner";
 
@@ -153,14 +152,6 @@ const FLAG_LABELS: Record<string, string> = {
 
 export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const backHref = useMemo(() => {
-    const from = searchParams.get("from");
-    if (from) return from;
-    return "/dashboard/sessions";
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
   const [session, setSession] = useState<SessionData | null>(null);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -198,7 +189,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
         body: JSON.stringify({ sessionId }),
       });
       if (res.ok) {
-        router.push(backHref);
+        router.back();
       }
     } catch {
       console.error("Failed to delete session");
@@ -276,7 +267,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Session" backHref={backHref}>
+      <PageHeader title="Session" historyBack>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon">

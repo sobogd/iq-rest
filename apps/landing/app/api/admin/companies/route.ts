@@ -41,11 +41,11 @@ export async function GET(request: NextRequest) {
     const total = await prisma.company.count({ where });
     const totalPages = Math.ceil(total / PAGE_SIZE);
 
-    // Default to last page if no page param
+    // Default to first page if no page param
     const pageParam = searchParams.get("page");
     const page = pageParam !== null
       ? Math.max(0, Math.min(Number(pageParam), totalPages - 1))
-      : Math.max(0, totalPages - 1);
+      : 0;
 
     const companies = await prisma.company.findMany({
       where,
@@ -58,7 +58,7 @@ export async function GET(request: NextRequest) {
           take: 1,
         },
       },
-      orderBy: { createdAt: "asc" },
+      orderBy: { createdAt: "desc" },
       skip: page * PAGE_SIZE,
       take: PAGE_SIZE,
     });

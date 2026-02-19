@@ -143,42 +143,44 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
 
   return (
     <>
-      {/* Category tabs - fixed */}
-      <div
-        className="shrink-0 flex justify-center relative"
-        style={{ backgroundColor: "#fff" }}
-      >
-        {/* Gray border line */}
+      {/* Category tabs - fixed (hidden when single category) */}
+      {categories.length > 1 && (
         <div
-          className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ backgroundColor: "#e5e7eb" }}
-        />
-        <div
-          ref={tabsRef}
-          className="flex gap-2 px-5 overflow-x-auto hide-scrollbar max-w-[440px] w-full"
+          className="shrink-0 flex justify-center relative"
+          style={{ backgroundColor: "#fff" }}
         >
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              data-category={category.id}
-              onClick={() => scrollToCategory(category.id)}
-              className="relative px-4 py-3 text-sm font-semibold whitespace-nowrap transition-colors shrink-0"
-              style={{
-                backgroundColor: "transparent",
-                color: activeCategory === category.id ? "#000" : "#9ca3af",
-              }}
-            >
-              {category.name}
-              {activeCategory === category.id && (
-                <span
-                  className="absolute left-0 right-0 h-1"
-                  style={{ backgroundColor: accentColor || "#000", bottom: "0" }}
-                />
-              )}
-            </button>
-          ))}
+          {/* Gray border line */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-px"
+            style={{ backgroundColor: "#e5e7eb" }}
+          />
+          <div
+            ref={tabsRef}
+            className="flex gap-2 px-5 overflow-x-auto hide-scrollbar max-w-[440px] w-full"
+          >
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                data-category={category.id}
+                onClick={() => scrollToCategory(category.id)}
+                className="relative px-4 py-3 text-sm font-semibold whitespace-nowrap transition-colors shrink-0"
+                style={{
+                  backgroundColor: "transparent",
+                  color: activeCategory === category.id ? "#000" : "#9ca3af",
+                }}
+              >
+                {category.name}
+                {activeCategory === category.id && (
+                  <span
+                    className="absolute left-0 right-0 h-1"
+                    style={{ backgroundColor: accentColor || "#000", bottom: "0" }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Items feed - scrollable */}
       <div ref={containerRef} className="flex-1 overflow-auto min-h-0 hide-scrollbar" style={{ backgroundColor: "#fff" }}>
@@ -190,11 +192,13 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                 ref={(el) => { categoryRefs.current[category.id] = el; }}
                 className="space-y-5"
               >
-                <h2 className="px-5 pt-8 pb-3">
-                  <span className="text-sm font-bold text-gray-400 uppercase tracking-wide border-b-2 border-gray-400 pb-1">
-                    {category.name}
-                  </span>
-                </h2>
+                {categories.length > 1 && (
+                  <h2 className="px-5 pt-8 pb-3">
+                    <span className="text-sm font-bold text-gray-400 uppercase tracking-wide border-b-2 border-gray-400 pb-1">
+                      {category.name}
+                    </span>
+                  </h2>
+                )}
                 {category.items.map((item) => (
                   <article key={item.id}>
                     {item.imageUrl && (

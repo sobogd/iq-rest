@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback, useMemo } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import {
   Trash2,
   Loader2,
@@ -46,7 +46,6 @@ import {
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
@@ -109,14 +108,6 @@ interface AdminCompanyPageProps {
 
 export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const backHref = useMemo(() => {
-    const from = searchParams.get("from");
-    if (from) return from;
-    return "/dashboard/admin";
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
   const [company, setCompany] = useState<Company | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -220,7 +211,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
       if (res.ok) {
         toast.success(`Company "${company.name}" deleted`);
-        router.push(backHref);
+        router.back();
       } else {
         const data = await res.json();
         toast.error(data.error || "Failed to delete");
@@ -326,7 +317,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   if (error || !company) {
     return (
       <div className="flex flex-col h-full">
-        <PageHeader title="Company" backHref={backHref} />
+        <PageHeader title="Company" historyBack />
         <div className="flex items-center justify-center h-full">
           <p className="text-muted-foreground">{error || "Not found"}</p>
         </div>
@@ -378,13 +369,10 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   if (restaurant?.url) copyableItems.push({ label: "Copy URL", value: restaurant.url });
   if (restaurant?.phone) copyableItems.push({ label: "Copy Phone", value: restaurant.phone });
 
-  // Current page URL for from param
-  const fromParam = searchParams.get("from");
-  const currentUrl = `/dashboard/admin/companies/${companyId}${fromParam ? `?from=${encodeURIComponent(fromParam)}` : ""}`;
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={title} backHref={backHref}>
+      <PageHeader title={title} historyBack>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon">
@@ -401,7 +389,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
                 className="px-4 py-2.5 rounded-none border-t border-foreground/5"
                 onClick={() =>
                   router.push(
-                    `/dashboard/sessions/${company.sessionId}?from=${encodeURIComponent(currentUrl)}`
+                    `/dashboard/sessions/${company.sessionId}`
                   )
                 }
               >
