@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
-import { useSearchParams } from "next/navigation";
 
 interface Session {
   sessionId: string;
@@ -17,6 +15,14 @@ interface Session {
   source: string;
   hasUser: boolean;
 }
+
+type Period = "today" | "yesterday" | "7days";
+
+const TABS: { value: Period; label: string }[] = [
+  { value: "today", label: "Today" },
+  { value: "yesterday", label: "Yesterday" },
+  { value: "7days", label: "7 days" },
+];
 
 function countryToFlag(countryCode: string): string {
   const code = countryCode.toUpperCase();
@@ -51,23 +57,17 @@ function formatDate(dateString: string): string {
 
 export function SessionsPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const currentPage = Math.max(0, Number(searchParams.get("page") || 0));
-
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
-  const [total, setTotal] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
+  const [period, setPeriod] = useState<Period>("today");
 
-  const fetchSessions = useCallback(async (p: number) => {
+  const fetchSessions = useCallback(async (p: Period) => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/admin/analytics/sessions-list?page=${p}`);
+      const res = await fetch(`/api/admin/analytics/sessions-list?period=${p}`);
       if (!res.ok) return;
       const json = await res.json();
       setSessions(json.sessions || []);
-      setTotal(json.total || 0);
-      setTotalPages(json.totalPages || 0);
     } catch (err) {
       console.error("Failed to fetch sessions:", err);
     } finally {
@@ -76,12 +76,8 @@ export function SessionsPage() {
   }, []);
 
   useEffect(() => {
-    fetchSessions(currentPage);
-  }, [currentPage, fetchSessions]);
-
-  const goToPage = (p: number) => {
-    router.push(`/dashboard/sessions?page=${p}`);
-  };
+    fetchSessions(period);
+  }, [period, fetchSessions]);
 
   if (loading && sessions.length === 0) {
     return <PageLoader />;
@@ -92,12 +88,30 @@ export function SessionsPage() {
       <PageHeader title="Sessions" backHref="/dashboard" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
+          {/* Period tabs */}
+          <div className="flex gap-2">
+            {TABS.map((tab) => (
+              <button
+                key={tab.value}
+                onClick={() => setPeriod(tab.value)}
+                className={`flex-1 text-xs py-2 rounded-lg border transition-colors ${
+                  period === tab.value
+                    ? "border-primary bg-primary/10 font-medium"
+                    : "border-border hover:bg-muted/30"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* List */}
           {loading && sessions.length > 0 ? (
             <div className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: "200px" }}>
               <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
             </div>
           ) : sessions.length === 0 && !loading ? (
-            <p className="text-sm text-muted-foreground text-center py-8">No sessions yet</p>
+            <p className="text-sm text-muted-foreground text-center py-8">No sessions</p>
           ) : sessions.length === 0 ? null : (
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
               {sessions.map((session, index) => (
@@ -122,31 +136,6 @@ export function SessionsPage() {
                   )}
                 </button>
               ))}
-            </div>
-          )}
-
-          {/* Pagination */}
-          {total > 0 && (
-            <div className="flex items-center justify-between">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => goToPage(currentPage - 1)}
-                disabled={currentPage === 0 || loading}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <span className="text-xs text-muted-foreground">
-                {currentPage + 1} / {totalPages} · {total} total
-              </span>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => goToPage(currentPage + 1)}
-                disabled={currentPage >= totalPages - 1 || loading}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
             </div>
           )}
         </div>

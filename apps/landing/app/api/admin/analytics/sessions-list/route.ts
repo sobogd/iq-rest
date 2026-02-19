@@ -12,26 +12,38 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Access denied" }, { status: 403 });
     }
 
-    const page = Math.max(0, Number(request.nextUrl.searchParams.get("page") || 0));
-    const limit = 10;
+    const period = request.nextUrl.searchParams.get("period") || "today";
 
-    const [sessionsList, totalResult] = await Promise.all([
-      prisma.session.findMany({
-        orderBy: { updatedAt: "desc" },
-        skip: page * limit,
-        take: limit,
-        select: {
-          id: true,
-          country: true,
-          gclid: true,
-          userId: true,
-          createdAt: true,
-          updatedAt: true,
-          _count: { select: { events: true } },
-        },
-      }),
-      prisma.session.count(),
-    ]);
+    const now = new Date();
+    let dateFrom: Date;
+    let dateTo: Date | undefined;
+
+    if (period === "yesterday") {
+      dateFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+      dateTo = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    } else if (period === "7days") {
+      dateFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
+    } else {
+      dateFrom = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    }
+
+    const where = {
+      createdAt: dateTo ? { gte: dateFrom, lt: dateTo } : { gte: dateFrom },
+    };
+
+    const sessionsList = await prisma.session.findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+      select: {
+        id: true,
+        country: true,
+        gclid: true,
+        userId: true,
+        createdAt: true,
+        updatedAt: true,
+        _count: { select: { events: true } },
+      },
+    });
 
     const sessions = sessionsList.map((s) => {
       const durationMs = s.updatedAt.getTime() - s.createdAt.getTime();
@@ -46,12 +58,7 @@ export async function GET(request: NextRequest) {
       };
     });
 
-    return NextResponse.json({
-      sessions,
-      total: totalResult,
-      page,
-      totalPages: Math.ceil(totalResult / limit),
-    });
+    return NextResponse.json({ sessions });
   } catch (error) {
     console.error("Sessions list API error:", error);
     return NextResponse.json(
