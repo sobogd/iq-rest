@@ -8,11 +8,12 @@ const PLAN_LIMITS = {
   PRO: Infinity,
 };
 
-async function checkAdStatus(slug: string): Promise<boolean> {
+async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accentColor: string }> {
   try {
     const restaurant = await prisma.restaurant.findFirst({
       where: { slug },
       select: {
+        accentColor: true,
         company: {
           select: {
             id: true,
@@ -22,12 +23,13 @@ async function checkAdStatus(slug: string): Promise<boolean> {
       },
     });
 
-    if (!restaurant) return false;
+    if (!restaurant) return { showAd: false, accentColor: "#000000" };
 
     const { company } = restaurant;
     const limit = PLAN_LIMITS[company.plan];
+    const accentColor = restaurant.accentColor || "#000000";
 
-    if (limit === Infinity) return false;
+    if (limit === Infinity) return { showAd: false, accentColor };
 
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
@@ -40,9 +42,9 @@ async function checkAdStatus(slug: string): Promise<boolean> {
       },
     });
 
-    return currentMonthViews >= limit;
+    return { showAd: currentMonthViews >= limit, accentColor };
   } catch {
-    return false;
+    return { showAd: false, accentColor: "#000000" };
   }
 }
 
@@ -79,10 +81,13 @@ interface MenuLayoutProps {
 
 export default async function MenuLayout({ children, params }: MenuLayoutProps) {
   const { slug } = await params;
-  const showAd = await checkAdStatus(slug);
+  const { showAd, accentColor } = await getMenuLayoutData(slug);
 
   return (
-    <div className="min-h-dvh bg-background">
+    <div
+      className="min-h-dvh bg-background"
+      style={{ "--menu-accent": accentColor } as React.CSSProperties}
+    >
       <MenuLayoutClient showAd={showAd}>
         {children}
       </MenuLayoutClient>

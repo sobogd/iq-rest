@@ -12,10 +12,11 @@ export function SkeletonHeader({ absolute }: SkeletonHeaderProps) {
 
   return (
     <header
-      className={`shrink-0 flex flex-col justify-end px-5 bg-black z-10 ${absolute ? "absolute top-0 inset-x-0" : ""}`}
+      className={`shrink-0 flex flex-col justify-end px-5 z-10 ${absolute ? "absolute top-0 inset-x-0" : ""}`}
       style={{
         height: isPreview ? 81 : 56,
         paddingTop: isPreview ? 25 : 0,
+        backgroundColor: "var(--menu-accent, #000000)",
       }}
     >
       <div className="h-14 max-w-[440px] w-full flex items-center relative mx-auto">
