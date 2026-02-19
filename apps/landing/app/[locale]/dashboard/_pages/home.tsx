@@ -25,6 +25,7 @@ import {
 
   MousePointerClick,
   Send,
+  DollarSign,
   CheckCircle2,
   Circle,
   ChevronRight,
@@ -275,6 +276,14 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
                 >
                   <Send className="h-5 w-5 text-muted-foreground shrink-0" />
                   <span className="text-sm font-medium flex-1 text-left">Google Ads</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+                </button>
+                <button
+                  onClick={() => router.push("/dashboard/google-ads/keywords")}
+                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+                >
+                  <DollarSign className="h-5 w-5 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium flex-1 text-left">Ads Bids</span>
                   <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
                 </button>
               </div>

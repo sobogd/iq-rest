@@ -1,4 +1,4 @@
-// Google Ads API - Offline Conversion Upload via gclid
+// Google Ads API - Offline Conversion Upload via gclid + Keyword Bids
 import { GoogleAdsApi } from "google-ads-api";
 
 let client: GoogleAdsApi | null = null;
@@ -12,6 +12,102 @@ function getClient(): GoogleAdsApi {
     });
   }
   return client;
+}
+
+export interface KeywordBid {
+  keyword: string;
+  matchType: string;
+  campaignName: string;
+  adGroupName: string;
+  status: string;
+  cpcBidMicros: number | null;
+  effectiveCpcBidMicros: number | null;
+  averageCpc: number | null;
+  clicks: number;
+  impressions: number;
+  costMicros: number;
+}
+
+export async function getKeywordBids(): Promise<KeywordBid[]> {
+  const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID?.replace(/-/g, "");
+  const loginCustomerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, "");
+
+  if (!customerId) {
+    throw new Error("Missing GOOGLE_ADS_CUSTOMER_ID");
+  }
+
+  const api = getClient();
+  const customer = api.Customer({
+    customer_id: customerId,
+    refresh_token: process.env.GOOGLE_ADS_REFRESH_TOKEN!,
+    login_customer_id: loginCustomerId || undefined,
+  });
+
+  const results = await customer.query(`
+    SELECT
+      ad_group_criterion.keyword.text,
+      ad_group_criterion.keyword.match_type,
+      ad_group_criterion.cpc_bid_micros,
+      ad_group_criterion.effective_cpc_bid_micros,
+      ad_group_criterion.status,
+      campaign.name,
+      ad_group.name,
+      metrics.average_cpc,
+      metrics.clicks,
+      metrics.impressions,
+      metrics.cost_micros
+    FROM keyword_view
+    WHERE campaign.status = 'ENABLED'
+      AND ad_group_criterion.status != 'REMOVED'
+      AND segments.date DURING LAST_30_DAYS
+  `);
+
+  // keyword_view returns one row per keyword per day — aggregate into totals
+  const map = new Map<string, KeywordBid>();
+
+  for (const row of results) {
+    const keyword = String(row.ad_group_criterion?.keyword?.text ?? "");
+    const matchType = String(row.ad_group_criterion?.keyword?.match_type ?? "UNKNOWN");
+    const campaignName = String(row.campaign?.name ?? "");
+    const adGroupName = String(row.ad_group?.name ?? "");
+    const key = `${keyword}|${matchType}|${campaignName}|${adGroupName}`;
+
+    const existing = map.get(key);
+    const clicks = Number(row.metrics?.clicks ?? 0);
+    const impressions = Number(row.metrics?.impressions ?? 0);
+    const costMicros = Number(row.metrics?.cost_micros ?? 0);
+
+    if (existing) {
+      existing.clicks += clicks;
+      existing.impressions += impressions;
+      existing.costMicros += costMicros;
+    } else {
+      map.set(key, {
+        keyword,
+        matchType,
+        campaignName,
+        adGroupName,
+        status: String(row.ad_group_criterion?.status ?? "UNKNOWN"),
+        cpcBidMicros: row.ad_group_criterion?.cpc_bid_micros != null
+          ? Number(row.ad_group_criterion.cpc_bid_micros)
+          : null,
+        effectiveCpcBidMicros: row.ad_group_criterion?.effective_cpc_bid_micros != null
+          ? Number(row.ad_group_criterion.effective_cpc_bid_micros)
+          : null,
+        averageCpc: null, // will compute below
+        clicks,
+        impressions,
+        costMicros,
+      });
+    }
+  }
+
+  // Compute average CPC from total cost / total clicks
+  for (const kw of map.values()) {
+    kw.averageCpc = kw.clicks > 0 ? Math.round(kw.costMicros / kw.clicks) : null;
+  }
+
+  return Array.from(map.values());
 }
 
 export async function uploadClickConversion(
