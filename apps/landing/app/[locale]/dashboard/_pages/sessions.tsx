@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
@@ -85,7 +86,11 @@ export function SessionsPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Sessions" backHref="/dashboard" />
+      <PageHeader title="Sessions" backHref="/dashboard">
+        <Button variant="ghost" size="icon" onClick={() => fetchSessions(period)}>
+          <RefreshCw className="h-4 w-4" />
+        </Button>
+      </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
           {/* Period tabs */}
