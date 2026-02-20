@@ -90,8 +90,8 @@ export function MenuScanner() {
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
-      // Verify the menu still exists
-      fetch(`/m/${saved}`, { method: "HEAD" }).then((res) => {
+      // Verify the menu still exists (use API check to avoid triggering page view tracking)
+      fetch(`/api/public/menu-check?slug=${encodeURIComponent(saved)}`).then((res) => {
         if (res.ok) {
           setSlug(saved);
           setState("preview");

@@ -51,8 +51,9 @@ export async function GET(request: NextRequest) {
 
     const { dateFrom, dateTo } = getDateRange(period, tz);
 
+    // Show sessions that had activity in the period (not just created)
     const where = {
-      createdAt: dateTo ? { gte: dateFrom, lt: dateTo } : { gte: dateFrom },
+      updatedAt: dateTo ? { gte: dateFrom, lt: dateTo } : { gte: dateFrom },
     };
 
     const sessionsList = await prisma.session.findMany({
