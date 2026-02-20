@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
 
     const sessionsList = await prisma.session.findMany({
       where,
-      orderBy: { createdAt: "desc" },
+      orderBy: { updatedAt: "desc" },
       select: {
         id: true,
         country: true,
@@ -73,7 +73,7 @@ export async function GET(request: NextRequest) {
       const durationMs = s.updatedAt.getTime() - s.createdAt.getTime();
       return {
         sessionId: s.id,
-        firstEvent: s.createdAt.toISOString(),
+        lastEvent: s.updatedAt.toISOString(),
         duration: Math.round(durationMs / 1000),
         eventCount: s._count.events,
         country: s.country,

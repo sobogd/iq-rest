@@ -10,7 +10,7 @@ import { useSearchParams } from "next/navigation";
 
 interface Session {
   sessionId: string;
-  firstEvent: string;
+  lastEvent: string;
   duration: number;
   eventCount: number;
   country: string | null;
@@ -142,7 +142,7 @@ export function SessionsPage() {
                   }`}
                 >
                   <span className="text-base shrink-0">{session.country ? countryToFlag(session.country) : "🌐"}</span>
-                  <span className="text-xs font-medium shrink-0">{formatDate(session.firstEvent)}</span>
+                  <span className="text-xs font-medium shrink-0">{formatDate(session.lastEvent)}</span>
                   <span className={`text-xs shrink-0 ${session.source === "Ads" ? "text-blue-500" : "text-muted-foreground"}`}>
                     {session.source}
                   </span>
