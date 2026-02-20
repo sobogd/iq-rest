@@ -1235,6 +1235,7 @@
       "cancel": "Скасувати",
       "subscribe": "Підписатися",
       "translate": "Перекласти",
+      "translating": "Переклад...",
       "limitReached": "Безкоштовні переклади вичерпано",
       "limitReachedDescription": "Ви використали всі 5 безкоштовних AI-перекладів. Перейдіть на Basic або Pro для необмежених перекладів.",
       "upgrade": "Покращити"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Оформіть підписку для додавання міток алергенів",
       "subscribe": "Підписатися",
-      "moreDetails": "Більше деталей"
+      "moreDetails": "Більше деталей",
+      "generateImage": "Згенерувати з ШІ",
+      "generatingImage": "Генерація...",
+      "generateImageError": "Не вдалося згенерувати зображення",
+      "unifyStyle": "Застосувати єдиний стиль",
+      "regenerateImage": "Згенерувати заново",
+      "generateLimitReached": "Безкоштовні генерації вичерпано",
+      "generateLimitDescription": "Ви використали 2 безкоштовні генерації зображень ШІ. Перейдіть на Basic або Pro для безлімітних генерацій."
     },
     "languages": {
       "translationProgress": "Прогрес перекладу",

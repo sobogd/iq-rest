@@ -1268,6 +1268,7 @@
       "cancel": "إلغاء",
       "subscribe": "اشترك",
       "translate": "ترجمة",
+      "translating": "...جاري الترجمة",
       "limitReached": "نفدت الترجمات المجانية",
       "limitReachedDescription": "لقد استخدمت جميع الترجمات المجانية الخمس بالذكاء الاصطناعي. قم بالترقية إلى Basic أو Pro للحصول على ترجمات غير محدودة.",
       "upgrade": "ترقية"
@@ -1416,7 +1417,14 @@
       },
       "subscribeForAllergens": "اشترك لإضافة ملصقات مسببات الحساسية",
       "subscribe": "اشترك",
-      "moreDetails": "مزيد من التفاصيل"
+      "moreDetails": "مزيد من التفاصيل",
+      "generateImage": "إنشاء بالذكاء الاصطناعي",
+      "generatingImage": "جارٍ الإنشاء...",
+      "generateImageError": "فشل إنشاء الصورة",
+      "unifyStyle": "تطبيق النمط الموحد",
+      "regenerateImage": "إعادة الإنشاء",
+      "generateLimitReached": "نفدت عمليات الإنشاء المجانية بالذكاء الاصطناعي",
+      "generateLimitDescription": "لقد استخدمت عمليتي الإنشاء المجانيتين للصور بالذكاء الاصطناعي. قم بالترقية إلى Basic أو Pro لعمليات إنشاء غير محدودة."
     },
     "languages": {
       "translationProgress": "تقدم الترجمة",

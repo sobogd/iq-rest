@@ -1235,6 +1235,7 @@
       "cancel": "Annuleren",
       "subscribe": "Abonneren",
       "translate": "Vertalen",
+      "translating": "Vertalen...",
       "limitReached": "Gratis vertalingen opgebruikt",
       "limitReachedDescription": "Je hebt alle 5 gratis AI-vertalingen gebruikt. Upgrade naar Basic of Pro voor onbeperkte vertalingen.",
       "upgrade": "Upgraden"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Abonneer om allergenlabels toe te voegen",
       "subscribe": "Abonneren",
-      "moreDetails": "Meer details"
+      "moreDetails": "Meer details",
+      "generateImage": "Genereren met AI",
+      "generatingImage": "Genereren...",
+      "generateImageError": "Afbeelding genereren mislukt",
+      "unifyStyle": "Uniforme stijl toepassen",
+      "regenerateImage": "Opnieuw genereren",
+      "generateLimitReached": "Gratis AI-generaties opgebruikt",
+      "generateLimitDescription": "Je hebt alle 2 gratis AI-beeldgeneraties gebruikt. Upgrade naar Basic of Pro voor onbeperkte generaties."
     },
     "languages": {
       "translationProgress": "Vertaalvoortgang",

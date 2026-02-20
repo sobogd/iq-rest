@@ -1235,6 +1235,7 @@
       "cancel": "Abbrechen",
       "subscribe": "Abonnieren",
       "translate": "Übersetzen",
+      "translating": "Übersetze...",
       "limitReached": "Kostenlose Übersetzungen aufgebraucht",
       "limitReachedDescription": "Sie haben alle 5 kostenlosen KI-Übersetzungen verbraucht. Upgraden Sie auf Basic oder Pro für unbegrenzte Übersetzungen.",
       "upgrade": "Upgraden"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Abonnieren Sie, um Allergenkennzeichnungen hinzuzufügen",
       "subscribe": "Abonnieren",
-      "moreDetails": "Mehr Details"
+      "moreDetails": "Mehr Details",
+      "generateImage": "Mit KI generieren",
+      "generatingImage": "Wird generiert...",
+      "generateImageError": "Bildgenerierung fehlgeschlagen",
+      "unifyStyle": "Einheitlichen Stil anwenden",
+      "regenerateImage": "Neu generieren",
+      "generateLimitReached": "Kostenlose KI-Generierungen aufgebraucht",
+      "generateLimitDescription": "Sie haben alle 2 kostenlosen KI-Bildgenerierungen verbraucht. Upgraden Sie auf Basic oder Pro für unbegrenzte Generierungen."
     },
     "languages": {
       "translationProgress": "Übersetzungsfortschritt",

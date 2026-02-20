@@ -1235,6 +1235,7 @@
       "cancel": "Tühista",
       "subscribe": "Telli",
       "translate": "Tõlgi",
+      "translating": "Tõlkimine...",
       "limitReached": "Tasuta tõlked on otsas",
       "limitReachedDescription": "Olete kasutanud kõik 5 tasuta AI-tõlget. Minge üle Basic või Pro paketile piiramatute tõlgete jaoks.",
       "upgrade": "Uuenda"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Telli allergeenide siltide lisamiseks",
       "subscribe": "Telli",
-      "moreDetails": "Rohkem üksikasju"
+      "moreDetails": "Rohkem üksikasju",
+      "generateImage": "Genereeri tehisaruga",
+      "generatingImage": "Genereerimine...",
+      "generateImageError": "Pildi genereerimine ebaõnnestus",
+      "unifyStyle": "Rakenda ühtne stiil",
+      "regenerateImage": "Genereeri uuesti",
+      "generateLimitReached": "Tasuta AI-genereerimised kasutatud",
+      "generateLimitDescription": "Olete kasutanud kõik 2 tasuta AI-pildi genereerimist. Uuendage Basic- või Pro-paketile piiramatute genereerimiste jaoks."
     },
     "languages": {
       "translationProgress": "Tõlke edenemine",

@@ -1235,6 +1235,7 @@
       "cancel": "Atcelt",
       "subscribe": "Abonēt",
       "translate": "Tulkot",
+      "translating": "Tulkošana...",
       "limitReached": "Bezmaksas tulkojumi iztērēti",
       "limitReachedDescription": "Jūs esat izmantojis visus 5 bezmaksas AI tulkojumus. Jauniniet uz Basic vai Pro neierobežotiem tulkojumiem.",
       "upgrade": "Jaunināt"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Abonējiet, lai pievienotu alergēnu etiķetes",
       "subscribe": "Abonēt",
-      "moreDetails": "Vairāk informācijas"
+      "moreDetails": "Vairāk informācijas",
+      "generateImage": "Ģenerēt ar MI",
+      "generatingImage": "Ģenerēšana...",
+      "generateImageError": "Neizdevās ģenerēt attēlu",
+      "unifyStyle": "Lietot vienotu stilu",
+      "regenerateImage": "Pārģenerēt",
+      "generateLimitReached": "Bezmaksas AI ģenerēšanas iztērētas",
+      "generateLimitDescription": "Esat izmantojis 2 bezmaksas AI attēlu ģenerēšanas. Jauniniet uz Basic vai Pro neierobežotām ģenerēšanām."
     },
     "languages": {
       "translationProgress": "Tulkošanas progress",

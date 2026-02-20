@@ -1235,6 +1235,7 @@
       "cancel": "Отмена",
       "subscribe": "Подписаться",
       "translate": "Перевести",
+      "translating": "Перевод...",
       "limitReached": "Бесплатные переводы исчерпаны",
       "limitReachedDescription": "Вы использовали все 5 бесплатных AI-переводов. Перейдите на Basic или Pro для неограниченных переводов.",
       "upgrade": "Улучшить"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Оформите подписку для добавления меток аллергенов",
       "subscribe": "Подписаться",
-      "moreDetails": "Подробнее"
+      "moreDetails": "Подробнее",
+      "generateImage": "Сгенерировать с ИИ",
+      "generatingImage": "Генерация...",
+      "generateImageError": "Не удалось сгенерировать изображение",
+      "unifyStyle": "Привести к единому стилю",
+      "regenerateImage": "Сгенерировать заново",
+      "generateLimitReached": "Бесплатные генерации исчерпаны",
+      "generateLimitDescription": "Вы использовали 2 бесплатные генерации изображений ИИ. Перейдите на Basic или Pro для безлимитных генераций."
     },
     "languages": {
       "translationProgress": "Прогресс перевода",

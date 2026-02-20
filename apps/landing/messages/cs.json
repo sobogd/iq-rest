@@ -1235,6 +1235,7 @@
       "cancel": "Zrušit",
       "subscribe": "Předplatit",
       "translate": "Přeložit",
+      "translating": "Překládání...",
       "limitReached": "Bezplatné překlady vyčerpány",
       "limitReachedDescription": "Použili jste všech 5 bezplatných AI překladů. Přejděte na Basic nebo Pro pro neomezené překlady.",
       "upgrade": "Upgradovat"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Předplaťte si přidávání štítků alergenů",
       "subscribe": "Předplatit",
-      "moreDetails": "Více podrobností"
+      "moreDetails": "Více podrobností",
+      "generateImage": "Generovat pomocí AI",
+      "generatingImage": "Generování...",
+      "generateImageError": "Generování obrázku se nezdařilo",
+      "unifyStyle": "Použít jednotný styl",
+      "regenerateImage": "Přegenerovat",
+      "generateLimitReached": "Bezplatné AI generace vyčerpány",
+      "generateLimitDescription": "Využili jste 2 bezplatné generace AI obrázků. Přejděte na Basic nebo Pro pro neomezené generace."
     },
     "languages": {
       "translationProgress": "Pokrok v překladu",

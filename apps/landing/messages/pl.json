@@ -1235,6 +1235,7 @@
       "cancel": "Anuluj",
       "subscribe": "Subskrybuj",
       "translate": "Przetłumacz",
+      "translating": "Tłumaczenie...",
       "limitReached": "Darmowe tłumaczenia wykorzystane",
       "limitReachedDescription": "Wykorzystałeś wszystkie 5 darmowych tłumaczeń AI. Przejdź na Basic lub Pro, aby uzyskać nieograniczone tłumaczenia.",
       "upgrade": "Ulepsz"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Subskrybuj, aby dodać etykiety alergenów",
       "subscribe": "Subskrybuj",
-      "moreDetails": "Więcej szczegółów"
+      "moreDetails": "Więcej szczegółów",
+      "generateImage": "Generuj z AI",
+      "generatingImage": "Generowanie...",
+      "generateImageError": "Nie udało się wygenerować obrazu",
+      "unifyStyle": "Zastosuj jednolity styl",
+      "regenerateImage": "Wygeneruj ponownie",
+      "generateLimitReached": "Darmowe generacje AI wyczerpane",
+      "generateLimitDescription": "Wykorzystałeś 2 darmowe generacje obrazów AI. Przejdź na Basic lub Pro, aby generować bez limitu."
     },
     "languages": {
       "translationProgress": "Postęp tłumaczenia",

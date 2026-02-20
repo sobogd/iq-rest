@@ -1235,6 +1235,7 @@
       "cancel": "Mégse",
       "subscribe": "Feliratkozás",
       "translate": "Fordítás",
+      "translating": "Fordítás...",
       "limitReached": "Ingyenes fordítások elfogytak",
       "limitReachedDescription": "Felhasználta mind az 5 ingyenes AI-fordítást. Váltson Basic vagy Pro csomagra korlátlan fordításokért.",
       "upgrade": "Frissítés"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Fizessen elő az allergéncímkék hozzáadásához",
       "subscribe": "Feliratkozás",
-      "moreDetails": "További részletek"
+      "moreDetails": "További részletek",
+      "generateImage": "Generálás AI-val",
+      "generatingImage": "Generálás...",
+      "generateImageError": "Kép generálása sikertelen",
+      "unifyStyle": "Egységes stílus alkalmazása",
+      "regenerateImage": "Újragenerálás",
+      "generateLimitReached": "Ingyenes AI generálások elfogytak",
+      "generateLimitDescription": "Felhasználta mind a 2 ingyenes AI képgenerálást. Frissítsen Basic vagy Pro csomagra korlátlan generálásokért."
     },
     "languages": {
       "translationProgress": "Fordítási előrehaladás",

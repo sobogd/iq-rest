@@ -1235,6 +1235,7 @@
       "cancel": "Hætta við",
       "subscribe": "Gerast áskrifandi",
       "translate": "Þýða",
+      "translating": "Þýði...",
       "limitReached": "Ókeypis þýðingar uppurðar",
       "limitReachedDescription": "Þú hefur notað allar 5 ókeypis AI-þýðingarnar. Uppfærðu í Basic eða Pro fyrir ótakmarkaðar þýðingar.",
       "upgrade": "Uppfæra"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Gerast áskrifandi til að bæta við ofnæmisvaldamerki",
       "subscribe": "Gerast áskrifandi",
-      "moreDetails": "Nánari upplýsingar"
+      "moreDetails": "Nánari upplýsingar",
+      "generateImage": "Búa til með AI",
+      "generatingImage": "Býr til...",
+      "generateImageError": "Ekki tókst að búa til mynd",
+      "unifyStyle": "Beita samræmdum stíl",
+      "regenerateImage": "Endurbúa til",
+      "generateLimitReached": "Ókeypis AI-myndir uppurnar",
+      "generateLimitDescription": "Þú hefur notað allar 2 ókeypis AI-myndagerðir. Uppfærðu í Basic eða Pro fyrir ótakmarkaðar myndagerðir."
     },
     "languages": {
       "translationProgress": "Þýðingarframvinda",

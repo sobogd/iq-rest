@@ -28,8 +28,8 @@ export function MenuHeader({
     <header
       className={`shrink-0 flex flex-col justify-end px-5 z-10 ${positionClass}`}
       style={{
-        height: isPreview ? 81 : 56,
-        paddingTop: isPreview ? 25 : 0,
+        height: isPreview ? 93 : 56,
+        paddingTop: isPreview ? 37 : 0,
         backgroundColor: accentColor || "#000000",
       }}
     >

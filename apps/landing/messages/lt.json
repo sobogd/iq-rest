@@ -1235,6 +1235,7 @@
       "cancel": "Atšaukti",
       "subscribe": "Prenumeruoti",
       "translate": "Versti",
+      "translating": "Vertimas...",
       "limitReached": "Nemokamos vertimai panaudoti",
       "limitReachedDescription": "Panaudojote visus 5 nemokamus AI vertimus. Atnaujinkite iki Basic arba Pro neribotiems vertimams.",
       "upgrade": "Atnaujinti"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Prenumeruokite, kad pridėtumėte alergenų etiketes",
       "subscribe": "Prenumeruoti",
-      "moreDetails": "Daugiau informacijos"
+      "moreDetails": "Daugiau informacijos",
+      "generateImage": "Generuoti su DI",
+      "generatingImage": "Generuojama...",
+      "generateImageError": "Nepavyko sugeneruoti vaizdo",
+      "unifyStyle": "Taikyti vieningą stilių",
+      "regenerateImage": "Pergeneruoti",
+      "generateLimitReached": "Nemokamos AI generacijos išnaudotos",
+      "generateLimitDescription": "Išnaudojote 2 nemokamas AI vaizdų generacijas. Atnaujinkite iki Basic arba Pro neribotoms generacijoms."
     },
     "languages": {
       "translationProgress": "Vertimo pažanga",

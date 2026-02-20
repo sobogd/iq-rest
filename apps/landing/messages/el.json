@@ -1235,6 +1235,7 @@
       "cancel": "Ακύρωση",
       "subscribe": "Εγγραφή",
       "translate": "Μετάφραση",
+      "translating": "Μετάφραση...",
       "limitReached": "Οι δωρεάν μεταφράσεις εξαντλήθηκαν",
       "limitReachedDescription": "Χρησιμοποιήσατε και τις 5 δωρεάν μεταφράσεις AI. Αναβαθμίστε σε Basic ή Pro για απεριόριστες μεταφράσεις.",
       "upgrade": "Αναβάθμιση"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Εγγραφείτε για να προσθέσετε ετικέτες αλλεργιογόνων",
       "subscribe": "Εγγραφή",
-      "moreDetails": "Περισσότερες λεπτομέρειες"
+      "moreDetails": "Περισσότερες λεπτομέρειες",
+      "generateImage": "Δημιουργία με AI",
+      "generatingImage": "Δημιουργία...",
+      "generateImageError": "Αποτυχία δημιουργίας εικόνας",
+      "unifyStyle": "Εφαρμογή ενιαίου στυλ",
+      "regenerateImage": "Αναδημιουργία",
+      "generateLimitReached": "Δωρεάν δημιουργίες AI εξαντλήθηκαν",
+      "generateLimitDescription": "Χρησιμοποιήσατε και τις 2 δωρεάν δημιουργίες εικόνων AI. Αναβαθμίστε σε Basic ή Pro για απεριόριστες δημιουργίες."
     },
     "languages": {
       "translationProgress": "Πρόοδος Μετάφρασης",

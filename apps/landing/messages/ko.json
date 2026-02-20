@@ -1268,6 +1268,7 @@
       "cancel": "취소",
       "subscribe": "구독하기",
       "translate": "번역",
+      "translating": "번역 중...",
       "limitReached": "무료 번역 소진",
       "limitReachedDescription": "5회 무료 AI 번역을 모두 사용했습니다. 무제한 번역을 위해 Basic 또는 Pro로 업그레이드하세요.",
       "upgrade": "업그레이드"
@@ -1416,7 +1417,14 @@
       },
       "subscribeForAllergens": "알레르기 라벨을 추가하려면 구독하세요",
       "subscribe": "구독하기",
-      "moreDetails": "더 보기"
+      "moreDetails": "더 보기",
+      "generateImage": "AI로 생성",
+      "generatingImage": "생성 중...",
+      "generateImageError": "이미지 생성 실패",
+      "unifyStyle": "통일 스타일 적용",
+      "regenerateImage": "재생성",
+      "generateLimitReached": "무료 AI 생성 횟수 소진",
+      "generateLimitDescription": "2회의 무료 AI 이미지 생성을 모두 사용했습니다. Basic 또는 Pro로 업그레이드하여 무제한으로 생성하세요."
     },
     "languages": {
       "translationProgress": "번역 진행률",

@@ -1235,6 +1235,7 @@
       "cancel": "Peruuta",
       "subscribe": "Tilaa",
       "translate": "Käännä",
+      "translating": "Käännetään...",
       "limitReached": "Ilmaiset käännökset käytetty",
       "limitReachedDescription": "Olet käyttänyt kaikki 5 ilmaista AI-käännöstä. Päivitä Basic- tai Pro-tilaukseen rajattomia käännöksiä varten.",
       "upgrade": "Päivitä"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Tilaa lisätäksesi allergeenimerkinnät",
       "subscribe": "Tilaa",
-      "moreDetails": "Lisätiedot"
+      "moreDetails": "Lisätiedot",
+      "generateImage": "Luo tekoälyllä",
+      "generatingImage": "Luodaan...",
+      "generateImageError": "Kuvan luonti epäonnistui",
+      "unifyStyle": "Käytä yhtenäistä tyyliä",
+      "regenerateImage": "Luo uudelleen",
+      "generateLimitReached": "Ilmaiset AI-generoinnit käytetty",
+      "generateLimitDescription": "Olet käyttänyt kaikki 2 ilmaista AI-kuvagenerointia. Päivitä Basic- tai Pro-tilaukseen rajattomia generointeja varten."
     },
     "languages": {
       "translationProgress": "Käännösprosessin edistyminen",

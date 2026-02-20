@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 interface RestaurantLanguages {
   languages: string[];
   defaultLanguage: string;
+  accentColor: string | null;
 }
 
 export function useRestaurantLanguages() {
@@ -20,6 +21,7 @@ export function useRestaurantLanguages() {
           setRestaurant({
             languages: data.languages || ["en"],
             defaultLanguage: data.defaultLanguage || "en",
+            accentColor: data.accentColor || null,
           });
         }
       } catch (error) {

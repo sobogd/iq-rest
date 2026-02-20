@@ -1235,6 +1235,7 @@
       "cancel": "Avbryt",
       "subscribe": "Abonner",
       "translate": "Oversett",
+      "translating": "Oversetter...",
       "limitReached": "Gratis oversettelser brukt opp",
       "limitReachedDescription": "Du har brukt alle 5 gratis AI-oversettelser. Oppgrader til Basic eller Pro for ubegrensede oversettelser.",
       "upgrade": "Oppgrader"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Abonner for å legge til allergenetiketter",
       "subscribe": "Abonner",
-      "moreDetails": "Flere detaljer"
+      "moreDetails": "Flere detaljer",
+      "generateImage": "Generer med AI",
+      "generatingImage": "Genererer...",
+      "generateImageError": "Kunne ikke generere bilde",
+      "unifyStyle": "Bruk enhetlig stil",
+      "regenerateImage": "Generer på nytt",
+      "generateLimitReached": "Gratis AI-genereringer brukt opp",
+      "generateLimitDescription": "Du har brukt alle 2 gratis AI-bildgenereringer. Oppgrader til Basic eller Pro for ubegrensede genereringer."
     },
     "languages": {
       "translationProgress": "Oversettelsesprosess",

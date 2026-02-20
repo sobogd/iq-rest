@@ -163,6 +163,13 @@ export interface ItemsTranslations {
   subscribeForAllergens: string;
   subscribe: string;
   moreDetails: string;
+  generateImage: string;
+  generatingImage: string;
+  generateImageError: string;
+  unifyStyle: string;
+  regenerateImage: string;
+  generateLimitReached: string;
+  generateLimitDescription: string;
 }
 
 export interface MenuTranslations {

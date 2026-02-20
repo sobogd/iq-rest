@@ -1235,6 +1235,7 @@
       "cancel": "Otkaži",
       "subscribe": "Pretplati se",
       "translate": "Преведи",
+      "translating": "Превођење...",
       "limitReached": "Бесплатни преводи потрошени",
       "limitReachedDescription": "Искористили сте свих 5 бесплатних AI превода. Надоградите на Basic или Pro за неограничене преводе.",
       "upgrade": "Надогради"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Претплатите се за додавање ознака алергена",
       "subscribe": "Претплати се",
-      "moreDetails": "Више детаља"
+      "moreDetails": "Више детаља",
+      "generateImage": "Генериши помоћу АИ",
+      "generatingImage": "Генерисање...",
+      "generateImageError": "Генерисање слике није успело",
+      "unifyStyle": "Примени јединствени стил",
+      "regenerateImage": "Регенериши",
+      "generateLimitReached": "Бесплатна АИ генерисања потрошена",
+      "generateLimitDescription": "Искористили сте 2 бесплатна АИ генерисања слика. Надоградите на Basic или Pro за неограничена генерисања."
     },
     "languages": {
       "translationProgress": "Napredak prevođenja",

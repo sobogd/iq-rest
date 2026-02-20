@@ -1235,6 +1235,7 @@
       "cancel": "Annuller",
       "subscribe": "Abonner",
       "translate": "Oversæt",
+      "translating": "Oversætter...",
       "limitReached": "Gratis oversættelser opbrugt",
       "limitReachedDescription": "Du har brugt alle 5 gratis AI-oversættelser. Opgrader til Basic eller Pro for ubegrænsede oversættelser.",
       "upgrade": "Opgrader"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Abonner for at tilføje allergenetiketter",
       "subscribe": "Abonner",
-      "moreDetails": "Flere detaljer"
+      "moreDetails": "Flere detaljer",
+      "generateImage": "Generer med AI",
+      "generatingImage": "Genererer...",
+      "generateImageError": "Kunne ikke generere billede",
+      "unifyStyle": "Anvend ensartet stil",
+      "regenerateImage": "Generer igen",
+      "generateLimitReached": "Gratis AI-genereringer opbrugt",
+      "generateLimitDescription": "Du har brugt alle 2 gratis AI-billedgenereringer. Opgrader til Basic eller Pro for ubegrænsede genereringer."
     },
     "languages": {
       "translationProgress": "Oversættelsesfremskridt",

@@ -1,16 +1,13 @@
 import { redirect } from "next/navigation";
 import { getUserCompanyId } from "@/lib/auth";
-import { getRestaurant, getSubscriptionStatus } from "../_lib/queries";
+import { getRestaurant } from "../_lib/queries";
 import { DesignPage } from "../_pages/design";
 
 export default async function Page() {
   const companyId = await getUserCompanyId();
   if (!companyId) redirect("/");
 
-  const [restaurant, subscription] = await Promise.all([
-    getRestaurant(companyId),
-    getSubscriptionStatus(companyId),
-  ]);
+  const restaurant = await getRestaurant(companyId);
 
-  return <DesignPage initialRestaurant={restaurant} initialSubscription={subscription} />;
+  return <DesignPage initialRestaurant={restaurant} />;
 }

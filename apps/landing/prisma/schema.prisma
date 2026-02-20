@@ -108,8 +108,9 @@ model Restaurant {
   checklistBrandCustomized Boolean @default(false)
   startedFromScratch       Boolean @default(false)
 
-  // Free AI translation trials
-  freeTranslationsLeft Int @default(5)
+  // Free AI trials
+  freeTranslationsLeft      Int @default(5)
+  freeImageGenerationsLeft  Int @default(2)
 
   // Reservation settings
   reservationsEnabled    Boolean @default(false)

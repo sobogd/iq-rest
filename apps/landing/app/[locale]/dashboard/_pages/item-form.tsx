@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { Loader2, Save, X, Trash2, Upload, ChevronDown } from "lucide-react";
+import { Loader2, Save, X, Trash2, Upload, ChevronDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -90,8 +90,10 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [isActive, setIsActive] = useState(true);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [generating, setGenerating] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [showGenerateLimitDialog, setShowGenerateLimitDialog] = useState(false);
   const [itemTranslations, setItemTranslations] = useState<Record<string, TranslationData>>({});
   const [validationError, setValidationError] = useState<string | null>(null);
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
@@ -213,6 +215,46 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
   function handleRemoveImage() {
     setImageUrl("");
+  }
+
+  function isAiImage(url: string) {
+    const filename = url.split("/").pop() || "";
+    return filename.startsWith("ai-");
+  }
+
+  async function handleGenerateImage(sourceImageUrl?: string) {
+    track(DashboardEvent.CLICKED_GENERATE_ITEM_IMAGE);
+    setGenerating(true);
+    try {
+      const res = await fetch("/api/items/generate-image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          description: description.trim() || undefined,
+          categoryName: categories.find((c) => c.id === categoryId)?.name || undefined,
+          accentColor: restaurant?.accentColor || undefined,
+          sourceImageUrl: sourceImageUrl || undefined,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setImageUrl(data.url);
+      } else if (res.status === 403) {
+        const data = await res.json().catch(() => ({}));
+        if (data.error === "limit_reached") {
+          setShowGenerateLimitDialog(true);
+        } else {
+          toast.error(t.generateImageError);
+        }
+      } else {
+        toast.error(t.generateImageError);
+      }
+    } catch {
+      toast.error(t.generateImageError);
+    } finally {
+      setGenerating(false);
+    }
   }
 
   async function handleDelete() {
@@ -419,7 +461,22 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
           />
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">{t.image}:</label>
+            <div className="flex items-center justify-between">
+              <label className="text-sm font-medium">{t.image}:</label>
+              <button
+                type="button"
+                onClick={() => imageUrl ? (isAiImage(imageUrl) ? handleGenerateImage() : handleGenerateImage(imageUrl)) : handleGenerateImage()}
+                disabled={generating || !name.trim()}
+                className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+              >
+                {generating ? t.generatingImage : imageUrl ? (isAiImage(imageUrl) ? t.regenerateImage : t.unifyStyle) : t.generateImage}
+                {generating ? (
+                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                ) : (
+                  <Sparkles className="h-3.5 w-3.5" />
+                )}
+              </button>
+            </div>
             {imageUrl ? (
               <div className="relative">
                 <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
@@ -529,7 +586,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
           </div>
           <div className="pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
+            <Button type="submit" disabled={saving || deleting || uploading || generating} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
               {saving ? (
                 <Loader2 className="h-4 w-4 animate-spin mr-2" />
               ) : (
@@ -576,6 +633,23 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <Dialog open={showGenerateLimitDialog} onOpenChange={setShowGenerateLimitDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t.generateLimitReached}</DialogTitle>
+            <DialogDescription>{t.generateLimitDescription}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowGenerateLimitDialog(false)}>
+              {t.cancel}
+            </Button>
+            <Button onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowGenerateLimitDialog(false); router.push("/dashboard/billing"); }}>
+              {t.subscribe}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

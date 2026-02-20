@@ -1268,6 +1268,7 @@
       "cancel": "取消",
       "subscribe": "订阅",
       "translate": "翻译",
+      "translating": "翻译中...",
       "limitReached": "免费翻译已用完",
       "limitReachedDescription": "您已使用完所有5次免费AI翻译。升级到Basic或Pro以获得无限翻译。",
       "upgrade": "升级"
@@ -1416,7 +1417,14 @@
       },
       "subscribeForAllergens": "订阅以添加过敏原标签",
       "subscribe": "订阅",
-      "moreDetails": "更多详情"
+      "moreDetails": "更多详情",
+      "generateImage": "AI生成",
+      "generatingImage": "生成中...",
+      "generateImageError": "图片生成失败",
+      "unifyStyle": "应用统一风格",
+      "regenerateImage": "重新生成",
+      "generateLimitReached": "免费AI生成次数已用完",
+      "generateLimitDescription": "您已使用完2次免费AI图片生成。升级到Basic或Pro享受无限生成。"
     },
     "languages": {
       "translationProgress": "翻译进度",

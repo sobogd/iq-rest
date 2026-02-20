@@ -18,11 +18,8 @@ import { useTranslations, useLocale } from "next-intl";
 import { ACCENT_COLORS } from "../_lib/constants";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
-import { useRouter } from "@/i18n/routing";
 import { FormSwitch } from "../_ui/form-switch";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import type { SubscriptionStatus } from "@prisma/client";
-import type { PlanType } from "@/lib/stripe-config";
 
 interface DesignPageProps {
   initialRestaurant: {
@@ -30,17 +27,12 @@ interface DesignPageProps {
     accentColor: string;
     hideTitle: boolean;
   } | null;
-  initialSubscription: {
-    plan: PlanType;
-    subscriptionStatus: SubscriptionStatus;
-  } | null;
 }
 
-export function DesignPage({ initialRestaurant, initialSubscription }: DesignPageProps) {
+export function DesignPage({ initialRestaurant }: DesignPageProps) {
   const t = useTranslations("dashboard.design");
   const locale = useLocale();
   const { translations } = useDashboard();
-  const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [saving, setSaving] = useState(false);
@@ -59,8 +51,6 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
   const [originalHideTitle, setOriginalHideTitle] = useState(initHideTitle);
 
   const [validationError, setValidationError] = useState<string | null>(null);
-
-  const hasActiveSubscription = (initialSubscription?.subscriptionStatus === "ACTIVE") && (initialSubscription?.plan !== "FREE");
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_DESIGN);
@@ -255,73 +245,54 @@ export function DesignPage({ initialRestaurant, initialSubscription }: DesignPag
         </div>
 
         <div className="space-y-2">
-          <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
+          <label className="text-sm font-medium">
             {t("accentColor")}:
           </label>
 
-          {!hasActiveSubscription ? (
-            <div className="space-y-2">
-              <p className="text-sm text-amber-500">
-                {t("subscribeForAccentColor")}
-              </p>
-              <Button
-                type="button"
-                size="sm"
-                variant="outline"
-                className="border-amber-500/50 hover:bg-amber-500/10"
-                onClick={() => router.push("/dashboard/billing")}
-              >
-                {t("subscribe")}
-              </Button>
+          <div className="space-y-2">
+            <p className="text-xs text-muted-foreground">{t("presetColors")}</p>
+            <div className="flex flex-wrap gap-2">
+              {ACCENT_COLORS.map((color) => (
+                <button
+                  key={color}
+                  type="button"
+                  className={`w-8 h-8 rounded-full border-2 transition-all ${
+                    accentColor === color ? "border-foreground scale-110" : "border-transparent"
+                  }`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => { track(DashboardEvent.CLICKED_PRESET_COLOR); setAccentColor(color); }}
+                />
+              ))}
             </div>
-          ) : (
-            <>
-              <div className="space-y-2">
-                <p className="text-xs text-muted-foreground">{t("presetColors")}</p>
-                <div className="flex flex-wrap gap-2">
-                  {ACCENT_COLORS.map((color) => (
-                    <button
-                      key={color}
-                      type="button"
-                      className={`w-8 h-8 rounded-full border-2 transition-all ${
-                        accentColor === color ? "border-foreground scale-110" : "border-transparent"
-                      }`}
-                      style={{ backgroundColor: color }}
-                      onClick={() => { track(DashboardEvent.CLICKED_PRESET_COLOR); setAccentColor(color); }}
-                    />
-                  ))}
-                </div>
-              </div>
+          </div>
 
-              <div className="space-y-2">
-                <p className="text-xs text-muted-foreground">{t("customColor")}</p>
-                <div className="flex items-center gap-3">
-                  <input
-                    type="color"
-                    value={accentColor}
-                    onChange={(e) => { track(DashboardEvent.CHANGED_CUSTOM_COLOR); setAccentColor(e.target.value); }}
-                    className="w-10 h-10 rounded cursor-pointer border-0 p-0"
-                  />
-                  <input
-                    type="text"
-                    value={accentColor}
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      if (/^#[0-9A-Fa-f]{0,6}$/.test(value)) {
-                        setAccentColor(value);
-                      }
-                    }}
-                    className="w-24 h-10 px-3 rounded-md border border-input bg-background text-sm font-mono uppercase"
-                    placeholder="#E11D48"
-                  />
-                </div>
-              </div>
+          <div className="space-y-2">
+            <p className="text-xs text-muted-foreground">{t("customColor")}</p>
+            <div className="flex items-center gap-3">
+              <input
+                type="color"
+                value={accentColor}
+                onChange={(e) => { track(DashboardEvent.CHANGED_CUSTOM_COLOR); setAccentColor(e.target.value); }}
+                className="w-10 h-10 rounded cursor-pointer border-0 p-0"
+              />
+              <input
+                type="text"
+                value={accentColor}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (/^#[0-9A-Fa-f]{0,6}$/.test(value)) {
+                    setAccentColor(value);
+                  }
+                }}
+                className="w-24 h-10 px-3 rounded-md border border-input bg-background text-sm font-mono uppercase"
+                placeholder="#E11D48"
+              />
+            </div>
+          </div>
 
-              <p className="text-xs text-muted-foreground px-1">
-                {t("accentColorHint")}
-              </p>
-            </>
-          )}
+          <p className="text-xs text-muted-foreground px-1">
+            {t("accentColorHint")}
+          </p>
         </div>
         </div>
           <div className="pt-4 pb-2">

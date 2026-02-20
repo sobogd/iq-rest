@@ -1235,6 +1235,7 @@
       "cancel": "Anulează",
       "subscribe": "Abonează-te",
       "translate": "Traduce",
+      "translating": "Traducere...",
       "limitReached": "Traducerile gratuite epuizate",
       "limitReachedDescription": "Ați folosit toate cele 5 traduceri AI gratuite. Treceți la Basic sau Pro pentru traduceri nelimitate.",
       "upgrade": "Actualizare"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Abonați-vă pentru a adăuga etichete de alergeni",
       "subscribe": "Abonează-te",
-      "moreDetails": "Mai multe detalii"
+      "moreDetails": "Mai multe detalii",
+      "generateImage": "Generează cu AI",
+      "generatingImage": "Se generează...",
+      "generateImageError": "Generarea imaginii a eșuat",
+      "unifyStyle": "Aplică stil unificat",
+      "regenerateImage": "Regenerează",
+      "generateLimitReached": "Generări AI gratuite epuizate",
+      "generateLimitDescription": "Ați folosit toate cele 2 generări gratuite de imagini AI. Treceți la Basic sau Pro pentru generări nelimitate."
     },
     "languages": {
       "translationProgress": "Progresul traducerii",

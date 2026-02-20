@@ -176,6 +176,13 @@ export default async function DashboardLayout({
       subscribeForAllergens: t("items.subscribeForAllergens"),
       subscribe: t("items.subscribe"),
       moreDetails: t("items.moreDetails"),
+      generateImage: t("items.generateImage"),
+      generatingImage: t("items.generatingImage"),
+      generateImageError: t("items.generateImageError"),
+      unifyStyle: t("items.unifyStyle"),
+      regenerateImage: t("items.regenerateImage"),
+      generateLimitReached: t("items.generateLimitReached"),
+      generateLimitDescription: t("items.generateLimitDescription"),
     },
     settings: {
       name: "",

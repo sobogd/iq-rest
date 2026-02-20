@@ -1235,6 +1235,7 @@
       "cancel": "Cealaigh",
       "subscribe": "Liostáil",
       "translate": "Aistrigh",
+      "translating": "Ag aistriú...",
       "limitReached": "Aistriúcháin saor in aisce ídithe",
       "limitReachedDescription": "D'úsáid tú na 5 aistriúchán AI saor in aisce go léir. Uasghrádaigh go Basic nó Pro le haghaidh aistriúcháin gan teorainn.",
       "upgrade": "Uasghrádaigh"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Liostáil chun lipéid ailléirginí a chur leis",
       "subscribe": "Liostáil",
-      "moreDetails": "Tuilleadh sonraí"
+      "moreDetails": "Tuilleadh sonraí",
+      "generateImage": "Gin le AI",
+      "generatingImage": "Ag giniúint...",
+      "generateImageError": "Theip ar ghiniúint íomhá",
+      "unifyStyle": "Cuir stíl aontaithe i bhfeidhm",
+      "regenerateImage": "Athghin",
+      "generateLimitReached": "Giniúintí AI saor in aisce úsáidte",
+      "generateLimitDescription": "D'úsáid tú na 2 ghiniúint íomhá AI saor in aisce. Uasghrádaigh go Basic nó Pro le haghaidh giniúintí gan teorainn."
     },
     "languages": {
       "translationProgress": "Dul chun cinn aistriúcháin",

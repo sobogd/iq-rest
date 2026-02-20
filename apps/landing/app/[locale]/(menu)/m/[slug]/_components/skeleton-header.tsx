@@ -14,8 +14,8 @@ export function SkeletonHeader({ absolute }: SkeletonHeaderProps) {
     <header
       className={`shrink-0 flex flex-col justify-end px-5 z-10 ${absolute ? "absolute top-0 inset-x-0" : ""}`}
       style={{
-        height: isPreview ? 81 : 56,
-        paddingTop: isPreview ? 25 : 0,
+        height: isPreview ? 93 : 56,
+        paddingTop: isPreview ? 37 : 0,
         backgroundColor: "var(--menu-accent, #000000)",
       }}
     >

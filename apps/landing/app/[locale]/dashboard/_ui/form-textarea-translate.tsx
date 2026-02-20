@@ -90,33 +90,31 @@ export function FormTextareaTranslate({
   return (
     <>
       <div className="space-y-2">
-        <Label htmlFor={textareaId}>{label}</Label>
-        <div className="flex gap-2">
-          <Textarea
-            id={textareaId}
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={placeholder}
-            disabled={disabled}
-            rows={rows}
-            className="resize-none overflow-hidden flex-1"
-          />
-          <Button
+        <div className="flex items-center justify-between">
+          <Label htmlFor={textareaId}>{label}</Label>
+          <button
             type="button"
-            variant="ghost"
-            size="sm"
             onClick={handleTranslate}
             disabled={translating || !sourceText.trim() || disabled}
-            className="shrink-0 h-11 gap-1.5 px-3 bg-muted/30 hover:bg-muted/50 self-start"
+            className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
           >
+            {translating ? t("translating") : t("translate")}
             {translating ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
             ) : (
-              <Sparkles className="h-4 w-4" />
+              <Sparkles className="h-3.5 w-3.5" />
             )}
-            <span className="text-xs">{t("translate")}</span>
-          </Button>
+          </button>
         </div>
+        <Textarea
+          id={textareaId}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+          disabled={disabled}
+          rows={rows}
+          className="resize-none overflow-hidden"
+        />
       </div>
 
       <Dialog open={showLimitDialog} onOpenChange={setShowLimitDialog}>

@@ -1249,6 +1249,7 @@
       "cancel": "Cancel",
       "subscribe": "Subscribe",
       "translate": "Translate",
+      "translating": "Translating...",
       "limitReached": "Free translations used up",
       "limitReachedDescription": "You've used all 5 free AI translations. Upgrade to Basic or Pro for unlimited translations.",
       "upgrade": "Upgrade"
@@ -1419,7 +1420,14 @@
       },
       "subscribeForAllergens": "Subscribe to add allergen labels",
       "subscribe": "Subscribe",
-      "moreDetails": "More details"
+      "moreDetails": "More details",
+      "generateImage": "Generate with AI",
+      "generatingImage": "Generating...",
+      "generateImageError": "Failed to generate image",
+      "unifyStyle": "Apply unified style",
+      "regenerateImage": "Regenerate",
+      "generateLimitReached": "Free AI generations used up",
+      "generateLimitDescription": "You've used all 2 free AI image generations. Upgrade to Basic or Pro for unlimited generations."
     },
     "menu": {
       "addItem": "Add Item",

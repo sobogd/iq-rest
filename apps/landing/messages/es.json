@@ -1235,6 +1235,7 @@
       "cancel": "Cancelar",
       "subscribe": "Suscribirse",
       "translate": "Traducir",
+      "translating": "Traduciendo...",
       "limitReached": "Traducciones gratuitas agotadas",
       "limitReachedDescription": "Has usado las 5 traducciones gratuitas. Actualiza a Basic o Pro para traducciones ilimitadas.",
       "upgrade": "Actualizar"
@@ -1383,7 +1384,14 @@
       },
       "subscribeForAllergens": "Suscríbete para añadir etiquetas de alérgenos",
       "subscribe": "Suscribirse",
-      "moreDetails": "Más detalles"
+      "moreDetails": "Más detalles",
+      "generateImage": "Generar con IA",
+      "generatingImage": "Generando...",
+      "generateImageError": "Error al generar imagen",
+      "unifyStyle": "Aplicar estilo unificado",
+      "regenerateImage": "Regenerar",
+      "generateLimitReached": "Generaciones AI gratuitas agotadas",
+      "generateLimitDescription": "Has usado las 2 generaciones de imágenes AI gratuitas. Actualiza a Basic o Pro para generaciones ilimitadas."
     },
     "languages": {
       "translationProgress": "Progreso de traducción",
