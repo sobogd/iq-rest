@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Teie IQ Rest menüü ootab teid",
     "bodyNotOnboarded": "Registreerusite IQ Resti, kuid pole veel oma menüüd seadistanud. See võtab vähem kui 2 minutit — sisestage oma restorani nimi, valige mall ja saate valmis menüü kohandamiseks.",
-    "helpOfferNotOnboarded": "Pole aega? Saatke meile lihtsalt oma menüü mis tahes vormingus — PDF, foto või link — ja me teeme selle teie eest, täiesti tasuta."
+    "helpOfferNotOnboarded": "Pole aega? Saatke meile lihtsalt oma menüü mis tahes vormingus — PDF, foto või link — ja me teeme selle teie eest, täiesti tasuta.",
+    "subjectScanner": "Kas vajate abi menüüga?",
+    "bodyScanner": "Alustasite oma restorani menüü loomist IQ Restis, kuid pole seda veel lõpetanud — ärge muretsege, saame aidata.",
+    "helpOfferScanner": "Vastake lihtsalt sellele e-kirjale oma menüüga mis tahes vormingus — foto, PDF või link oma veebilehele. Seadistame kõik teie eest, täiesti tasuta.",
+    "selfServiceScanner": "Või kui eelistate seda ise teha, kulub selleks vaid mõni minut:",
+    "ctaScanner": "Ava menüüredaktor"
   },
   "limitWarningEmail": {
     "subject": "Lähenete oma tasuta skaneerimise piirmäärale IQ Restis",

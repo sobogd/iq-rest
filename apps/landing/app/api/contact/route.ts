@@ -79,6 +79,8 @@ This email was sent from the IQ Rest contact form.
     // Send email
     await transporter.sendMail(mailOptions);
 
+    console.log("Contact form submitted:", { email, subject });
+
     return NextResponse.json(
       { message: "Email sent successfully" },
       { status: 200 }

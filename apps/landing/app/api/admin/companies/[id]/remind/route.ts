@@ -12,7 +12,7 @@ const EMAIL_TYPES = {
   reminder_onboarded: {
 
     getSubject: (t: Record<string, string>) => t.subject,
-    getHtml: (t: Record<string, string>) => `
+    getHtml: (t: Record<string, string>, locale: string) => `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">${t.body}</p>
@@ -26,31 +26,48 @@ const EMAIL_TYPES = {
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">${t.helpOffer}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpAction}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
+          <a href="https://iq-rest.com/${locale}/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
-    getText: (t: Record<string, string>) =>
-      `${t.greeting}\n\n${t.body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${t.helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard?from=email\n\n${t.signature}`,
+    getText: (t: Record<string, string>, locale: string) =>
+      `${t.greeting}\n\n${t.body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${t.helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
   },
   reminder_not_onboarded: {
 
     getSubject: (t: Record<string, string>) => t.subjectNotOnboarded,
-    getHtml: (t: Record<string, string>) => `
+    getHtml: (t: Record<string, string>, locale: string) => `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyNotOnboarded}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">${t.helpOfferNotOnboarded}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpAction}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
+          <a href="https://iq-rest.com/${locale}/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
-    getText: (t: Record<string, string>) =>
-      `${t.greeting}\n\n${t.bodyNotOnboarded}\n\n${t.helpOfferNotOnboarded}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard?from=email\n\n${t.signature}`,
+    getText: (t: Record<string, string>, locale: string) =>
+      `${t.greeting}\n\n${t.bodyNotOnboarded}\n\n${t.helpOfferNotOnboarded}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
+  },
+  reminder_scanner: {
+    getSubject: (t: Record<string, string>) => t.subjectScanner,
+    getHtml: (t: Record<string, string>, locale: string) => `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyScanner}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpOfferScanner}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.selfServiceScanner}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+          <a href="https://iq-rest.com/${locale}/dashboard?from=email" style="color: #0066cc;">${t.ctaScanner}</a>
+        </p>
+        <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
+      </div>
+    `,
+    getText: (t: Record<string, string>, locale: string) =>
+      `${t.greeting}\n\n${t.bodyScanner}\n\n${t.helpOfferScanner}\n\n${t.selfServiceScanner}\n\n${t.ctaScanner}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
   },
 } as const;
 
@@ -131,8 +148,8 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       from: process.env.FROM_EMAIL,
       to: ownerEmail,
       subject: config.getSubject(t),
-      html: config.getHtml(t),
-      text: config.getText(t).replace(/<br>/g, "\n"),
+      html: config.getHtml(t, locale),
+      text: config.getText(t, locale).replace(/<br>/g, "\n"),
     });
 
     // Save to emailsSent JSON

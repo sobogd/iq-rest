@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "IQ Rest menünüz sizi bekliyor",
     "bodyNotOnboarded": "IQ Rest'e kaydoldunuz ancak menünüzü henüz oluşturmadınız. 2 dakikadan az sürer — restoran adınızı girin, bir şablon seçin ve özelleştirmeye hazır bir menü elde edin.",
-    "helpOfferNotOnboarded": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya link — ve sizin için tamamen ücretsiz yapalım."
+    "helpOfferNotOnboarded": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya link — ve sizin için tamamen ücretsiz yapalım.",
+    "subjectScanner": "Menünüzle ilgili yardıma mı ihtiyacınız var?",
+    "bodyScanner": "IQ Rest üzerinde restoran menünüzü oluşturmaya başladınız ama henüz tamamlamadınız — merak etmeyin, yardımcı olabiliriz.",
+    "helpOfferScanner": "Bu e-postaya menünüzü herhangi bir formatta ekleyerek yanıt verin — bir fotoğraf, PDF veya web sitenizin linki. Her şeyi sizin için ayarlayalım, tamamen ücretsiz.",
+    "selfServiceScanner": "Veya kendiniz yapmayı tercih ederseniz, sadece birkaç dakika sürer:",
+    "ctaScanner": "Menü düzenleyiciyi aç"
   },
   "limitWarningEmail": {
     "subject": "IQ Rest'te ücretsiz tarama limitinize yaklaşıyorsunuz",

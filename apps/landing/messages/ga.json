@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Tá do bhiachlár IQ Rest ag fanacht leat",
     "bodyNotOnboarded": "Chláraigh tú le IQ Rest ach níor shocraigh tú do bhiachlár fós. Ní thógann sé ach níos lú ná 2 nóiméad — cuir isteach ainm do bhialainne, roghnaigh teimpléad agus gheobhaidh tú biachlár réidh le saincheapadh.",
-    "helpOfferNotOnboarded": "Gan am agat? Seol chugainn do bhiachlár i bhformáid ar bith — PDF, grianghraf nó nasc — agus déanfaimid é duit, saor in aisce go hiomlán."
+    "helpOfferNotOnboarded": "Gan am agat? Seol chugainn do bhiachlár i bhformáid ar bith — PDF, grianghraf nó nasc — agus déanfaimid é duit, saor in aisce go hiomlán.",
+    "subjectScanner": "An bhfuil cabhair uait le do bhiachlár?",
+    "bodyScanner": "Thosaigh tú ag cruthú biachlár do bhialainne ar IQ Rest ach níor chríochnaigh tú fós é — ná bí buartha, is féidir linn cabhrú.",
+    "helpOfferScanner": "Freagair an ríomhphost seo le do bhiachlár i bhformáid ar bith — grianghraf, PDF nó nasc chuig do shuíomh gréasáin. Socróimid gach rud duit, saor in aisce go hiomlán.",
+    "selfServiceScanner": "Nó más fearr leat é a dhéanamh tú féin, ní thógann sé ach cúpla nóiméad:",
+    "ctaScanner": "Oscail eagarthóir an bhiachlár"
   },
   "limitWarningEmail": {
     "subject": "Tá tú ag druidim le do theorainn saor in aisce scananna ar IQ Rest",

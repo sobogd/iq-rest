@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Your IQ Rest menu is waiting for you",
     "bodyNotOnboarded": "You signed up for IQ Rest but haven't set up your menu yet. It takes less than 2 minutes — just enter your restaurant name, pick a template, and you'll get a ready-made menu to customize.",
-    "helpOfferNotOnboarded": "Short on time? Just send us your menu in any format — PDF, photo, or a link — and we'll do it for you, completely free."
+    "helpOfferNotOnboarded": "Short on time? Just send us your menu in any format — PDF, photo, or a link — and we'll do it for you, completely free.",
+    "subjectScanner": "Need a hand with your menu?",
+    "bodyScanner": "You started creating your restaurant menu on IQ Rest but haven't finished yet — no worries, we can help.",
+    "helpOfferScanner": "Just reply to this email with your menu in any format — a photo, PDF, or a link to your website. We'll set everything up for you, completely free.",
+    "selfServiceScanner": "Or if you'd rather do it yourself, it only takes a few minutes:",
+    "ctaScanner": "Open Menu Editor"
   },
   "limitWarningEmail": {
     "subject": "You're approaching your free scan limit on IQ Rest",

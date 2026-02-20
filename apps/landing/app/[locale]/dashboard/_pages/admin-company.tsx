@@ -190,6 +190,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   const EMAIL_OPTIONS = [
     { type: "reminder_onboarded", label: "Menu almost ready", description: "For users who completed onboarding — nudge to finish editing menu" },
     { type: "reminder_not_onboarded", label: "Menu waiting for you", description: "For users who haven't started onboarding yet" },
+    { type: "reminder_scanner", label: "Need help with menu?", description: "For scanner users — offer to set up menu from photo/PDF" },
   ];
 
   async function handleDelete() {

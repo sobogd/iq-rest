@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Jūsų IQ Rest meniu laukia jūsų",
     "bodyNotOnboarded": "Užsiregistravote IQ Rest, bet dar nesukūrėte savo meniu. Tai užtrunka mažiau nei 2 minutes — įveskite restorano pavadinimą, pasirinkite šabloną ir gausite paruoštą meniu pritaikymui.",
-    "helpOfferNotOnboarded": "Neturite laiko? Tiesiog atsiųskite mums savo meniu bet kokiu formatu — PDF, nuotrauka ar nuoroda — ir mes tai padarysime už jus, visiškai nemokamai."
+    "helpOfferNotOnboarded": "Neturite laiko? Tiesiog atsiųskite mums savo meniu bet kokiu formatu — PDF, nuotrauka ar nuoroda — ir mes tai padarysime už jus, visiškai nemokamai.",
+    "subjectScanner": "Reikia pagalbos su meniu?",
+    "bodyScanner": "Pradėjote kurti savo restorano meniu IQ Rest, bet dar jo nebaigėte — nesijaudinkite, galime padėti.",
+    "helpOfferScanner": "Tiesiog atsakykite į šį el. laišką su savo meniu bet kokiu formatu — nuotrauka, PDF ar nuoroda į savo svetainę. Viską sukonfigūruosime už jus, visiškai nemokamai.",
+    "selfServiceScanner": "Arba jei norite tai padaryti patys, tai užtruks tik kelias minutes:",
+    "ctaScanner": "Atidaryti meniu redaktorių"
   },
   "limitWarningEmail": {
     "subject": "Artėjate prie nemokamo nuskaitymo limito IQ Rest",

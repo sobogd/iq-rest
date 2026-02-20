@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Jūsu IQ Rest ēdienkarte gaida jūs",
     "bodyNotOnboarded": "Jūs reģistrējāties IQ Rest, bet vēl neesat iestatījuši savu ēdienkarti. Tas aizņem mazāk nekā 2 minūtes — ievadiet sava restorāna nosaukumu, izvēlieties veidni un iegūsiet gatavu ēdienkarti pielāgošanai.",
-    "helpOfferNotOnboarded": "Nav laika? Vienkārši nosūtiet mums savu ēdienkarti jebkurā formātā — PDF, foto vai saite — un mēs to izdarīsim jūsu vietā, pilnīgi bez maksas."
+    "helpOfferNotOnboarded": "Nav laika? Vienkārši nosūtiet mums savu ēdienkarti jebkurā formātā — PDF, foto vai saite — un mēs to izdarīsim jūsu vietā, pilnīgi bez maksas.",
+    "subjectScanner": "Vai jums nepieciešama palīdzība ar ēdienkarti?",
+    "bodyScanner": "Jūs sākāt veidot sava restorāna ēdienkarti IQ Rest, bet vēl neesat to pabeidzis — neuztraucieties, mēs varam palīdzēt.",
+    "helpOfferScanner": "Vienkārši atbildiet uz šo e-pastu ar savu ēdienkarti jebkurā formātā — fotoattēls, PDF vai saite uz jūsu mājaslapu. Mēs visu iestatīsim jūsu vietā, pilnīgi bez maksas.",
+    "selfServiceScanner": "Vai ja vēlaties to izdarīt pats, tas aizņems tikai dažas minūtes:",
+    "ctaScanner": "Atvērt ēdienkartes redaktoru"
   },
   "limitWarningEmail": {
     "subject": "Jūs tuvojaties bezmaksas skenēšanas limitam IQ Rest",

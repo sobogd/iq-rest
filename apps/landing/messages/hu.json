@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Az IQ Rest menüje várja Önt",
     "bodyNotOnboarded": "Regisztrált az IQ Rest-re, de még nem állította be a menüjét. Kevesebb mint 2 percet vesz igénybe — adja meg éttermének nevét, válasszon sablont, és kap egy kész menüt a testreszabáshoz.",
-    "helpOfferNotOnboarded": "Nincs ideje? Csak küldje el nekünk a menüjét bármilyen formátumban — PDF, fotó vagy link — és mi megcsináljuk Önnek, teljesen ingyen."
+    "helpOfferNotOnboarded": "Nincs ideje? Csak küldje el nekünk a menüjét bármilyen formátumban — PDF, fotó vagy link — és mi megcsináljuk Önnek, teljesen ingyen.",
+    "subjectScanner": "Segítségre van szüksége a menüjével?",
+    "bodyScanner": "Elkezdtétek létrehozni az éttermi menüt az IQ Rest oldalon, de még nem fejeztétek be — semmi gond, tudunk segíteni.",
+    "helpOfferScanner": "Egyszerűen válaszoljon erre az e-mailre a menüjével bármilyen formátumban — fotó, PDF vagy egy link a weboldalára. Mindent beállítunk Önnek, teljesen ingyen.",
+    "selfServiceScanner": "Vagy ha inkább saját maga szeretné megcsinálni, csak néhány percet vesz igénybe:",
+    "ctaScanner": "Menüszerkesztő megnyitása"
   },
   "limitWarningEmail": {
     "subject": "Közeledik az ingyenes szkennelési korlátjához az IQ Rest-en",

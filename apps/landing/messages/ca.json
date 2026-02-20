@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "El teu menú d'IQ Rest t'està esperant",
     "bodyNotOnboarded": "T'has registrat a IQ Rest però encara no has configurat el teu menú. Només et portarà menys de 2 minuts — introdueix el nom del teu restaurant, tria una plantilla i tindràs un menú a punt per personalitzar.",
-    "helpOfferNotOnboarded": "No tens temps? Simplement envia'ns el teu menú en qualsevol format — PDF, foto o enllaç — i ho farem per tu, completament gratis."
+    "helpOfferNotOnboarded": "No tens temps? Simplement envia'ns el teu menú en qualsevol format — PDF, foto o enllaç — i ho farem per tu, completament gratis.",
+    "subjectScanner": "Necessites ajuda amb el teu menú?",
+    "bodyScanner": "Has començat a crear el menú del teu restaurant a IQ Rest però encara no l'has acabat — no et preocupis, podem ajudar-te.",
+    "helpOfferScanner": "Simplement respon aquest correu amb el teu menú en qualsevol format — una foto, PDF o un enllaç al teu lloc web. Ho configurarem tot per tu, completament gratis.",
+    "selfServiceScanner": "O si prefereixes fer-ho tu mateix, només trigues uns minuts:",
+    "ctaScanner": "Obrir editor de menú"
   },
   "limitWarningEmail": {
     "subject": "T'estàs acostant al límit gratuït d'escanejos a IQ Rest",

@@ -1952,7 +1952,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "IQ Restのメニューがお待ちしています",
     "bodyNotOnboarded": "IQ Restにご登録いただきましたが、まだメニューを設定されていません。2分もかかりません — レストラン名を入力し、テンプレートを選ぶだけで、カスタマイズ可能なメニューが完成します。",
-    "helpOfferNotOnboarded": "お時間がありませんか？メニューをPDF、写真、またはリンクなど、お好きな形式でお送りください。完全無料で設定いたします。"
+    "helpOfferNotOnboarded": "お時間がありませんか？メニューをPDF、写真、またはリンクなど、お好きな形式でお送りください。完全無料で設定いたします。",
+    "subjectScanner": "メニュー作成のお手伝いが必要ですか？",
+    "bodyScanner": "IQ Restでレストランのメニュー作成を開始されましたが、まだ完了していません。ご心配なく、お手伝いいたします。",
+    "helpOfferScanner": "このメールに返信して、メニューをお好きな形式でお送りください。写真、PDF、またはウェブサイトのリンクで構いません。すべて無料で設定いたします。",
+    "selfServiceScanner": "ご自身で作成される場合も、わずか数分で完了します：",
+    "ctaScanner": "メニューエディターを開く"
   },
   "limitWarningEmail": {
     "subject": "IQ Restの無料スキャン上限に近づいています",

@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Vaš IQ Rest meni vas čeka",
     "bodyNotOnboarded": "Registrirali ste se na IQ Rest, ali još niste postavili svoj meni. Treba manje od 2 minute — unesite naziv restorana, odaberite predložak i dobit ćete gotov meni za prilagodbu.",
-    "helpOfferNotOnboarded": "Nemate vremena? Samo nam pošaljite svoj meni u bilo kojem formatu — PDF, fotografija ili link — i mi ćemo to napraviti za vas, potpuno besplatno."
+    "helpOfferNotOnboarded": "Nemate vremena? Samo nam pošaljite svoj meni u bilo kojem formatu — PDF, fotografija ili link — i mi ćemo to napraviti za vas, potpuno besplatno.",
+    "subjectScanner": "Trebate li pomoć s jelovnikom?",
+    "bodyScanner": "Započeli ste izradu jelovnika vašeg restorana na IQ Rest, ali ga još niste dovršili — ne brinite, možemo vam pomoći.",
+    "helpOfferScanner": "Jednostavno odgovorite na ovaj email sa svojim jelovnikom u bilo kojem formatu — fotografija, PDF ili link na vašu web stranicu. Sve ćemo postaviti za vas, potpuno besplatno.",
+    "selfServiceScanner": "Ili ako to radije želite napraviti sami, treba samo nekoliko minuta:",
+    "ctaScanner": "Otvori uređivač jelovnika"
   },
   "limitWarningEmail": {
     "subject": "Približavate se besplatnom ograničenju skeniranja na IQ Rest",

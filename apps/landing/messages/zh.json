@@ -1952,7 +1952,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "您的IQ Rest菜单正在等待您",
     "bodyNotOnboarded": "您注册了IQ Rest但尚未设置菜单。只需不到2分钟——输入餐厅名称、选择模板，即可获得一份可自定义的现成菜单。",
-    "helpOfferNotOnboarded": "没有时间？只需将您的菜单以任何格式发送给我们——PDF、照片或链接——我们将免费为您完成一切。"
+    "helpOfferNotOnboarded": "没有时间？只需将您的菜单以任何格式发送给我们——PDF、照片或链接——我们将免费为您完成一切。",
+    "subjectScanner": "需要帮助创建菜单吗？",
+    "bodyScanner": "您已在 IQ Rest 上开始创建餐厅菜单，但尚未完成——别担心，我们可以帮忙。",
+    "helpOfferScanner": "只需回复此邮件并附上您的菜单，格式不限——照片、PDF 或网站链接均可。我们将为您免费设置一切。",
+    "selfServiceScanner": "或者如果您想自己完成，只需几分钟：",
+    "ctaScanner": "打开菜单编辑器"
   },
   "limitWarningEmail": {
     "subject": "您即将达到IQ Rest的免费扫描限制",

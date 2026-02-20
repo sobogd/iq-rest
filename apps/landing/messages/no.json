@@ -1919,7 +1919,12 @@
     "signature": "Best regards,<br>IQ Rest Team",
     "subjectNotOnboarded": "Din IQ Rest-meny venter på deg",
     "bodyNotOnboarded": "Du registrerte deg på IQ Rest, men har ikke satt opp menyen din ennå. Det tar mindre enn 2 minutter — skriv inn restaurantnavnet, velg en mal og du får en ferdig meny å tilpasse.",
-    "helpOfferNotOnboarded": "Har du ikke tid? Send oss bare menyen din i hvilket som helst format — PDF, bilde eller lenke — så gjør vi det for deg, helt gratis."
+    "helpOfferNotOnboarded": "Har du ikke tid? Send oss bare menyen din i hvilket som helst format — PDF, bilde eller lenke — så gjør vi det for deg, helt gratis.",
+    "subjectScanner": "Trenger du hjelp med menyen din?",
+    "bodyScanner": "Du begynte å lage restaurantmenyen din på IQ Rest, men har ikke fullført den ennå — ingen grunn til bekymring, vi kan hjelpe.",
+    "helpOfferScanner": "Bare svar på denne e-posten med menyen din i hvilket som helst format — et bilde, PDF eller en lenke til nettsiden din. Vi setter opp alt for deg, helt gratis.",
+    "selfServiceScanner": "Eller hvis du heller vil gjøre det selv, tar det bare noen få minutter:",
+    "ctaScanner": "Åpne menyredigerer"
   },
   "limitWarningEmail": {
     "subject": "Du nærmer deg din gratis skannegrense på IQ Rest",
