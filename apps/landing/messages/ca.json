@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Si us plau, completa primer les dades del teu restaurant per gestionar els idiomes.",
       "goToSettings": "Anar a Configuració",
       "limitReached": "Has arribat al límit de {limit} idiomes per al teu pla.",
-      "upgrade": "Millorar pla"
+      "upgrade": "Millorar pla",
+      "showAll": "Mostra tots els idiomes",
+      "showLess": "Mostra menys"
     },
     "contacts": {
       "phone": "Telèfon",

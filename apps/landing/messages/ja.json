@@ -1449,7 +1449,9 @@
       "createRestaurantFirst": "言語を管理するには、まずレストランの詳細を入力してください。",
       "goToSettings": "設定へ移動",
       "limitReached": "お使いのプランでは{limit}言語の上限に達しました。",
-      "upgrade": "アップグレード"
+      "upgrade": "アップグレード",
+      "showAll": "すべての言語を表示",
+      "showLess": "表示を減らす"
     },
     "contacts": {
       "phone": "電話番号",

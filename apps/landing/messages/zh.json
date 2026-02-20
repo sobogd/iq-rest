@@ -1449,7 +1449,9 @@
       "createRestaurantFirst": "请先填写您的餐厅信息以管理语言。",
       "goToSettings": "前往设置",
       "limitReached": "您已达到您的计划的{limit}种语言限制。",
-      "upgrade": "升级"
+      "upgrade": "升级",
+      "showAll": "显示所有语言",
+      "showLess": "显示更少"
     },
     "contacts": {
       "phone": "电话",

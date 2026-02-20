@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Dilleri yönetmek için lütfen önce restoran bilgilerinizi doldurun.",
       "goToSettings": "Ayarlara Git",
       "limitReached": "Planınız için {limit} dil sınırına ulaştınız.",
-      "upgrade": "Yükselt"
+      "upgrade": "Yükselt",
+      "showAll": "Tüm dilleri göster",
+      "showLess": "Daha az göster"
     },
     "contacts": {
       "phone": "Telefon",

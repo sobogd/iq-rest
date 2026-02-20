@@ -1459,7 +1459,9 @@
       "createRestaurantFirst": "Please fill in your restaurant details first to manage languages.",
       "goToSettings": "Go to Settings",
       "limitReached": "You've reached the limit of {limit} languages for your plan.",
-      "upgrade": "Upgrade"
+      "upgrade": "Upgrade",
+      "showAll": "Show all languages",
+      "showLess": "Show less"
     },
     "contacts": {
       "phone": "Phone",

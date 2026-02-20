@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Täytä ensin ravintolasi tiedot hallitaksesi kieliä.",
       "goToSettings": "Siirry Asetuksiin",
       "limitReached": "Olet saavuttanut {limit} kielen rajan suunnitelmassasi.",
-      "upgrade": "Päivitä"
+      "upgrade": "Päivitä",
+      "showAll": "Näytä kaikki kielet",
+      "showLess": "Näytä vähemmän"
     },
     "contacts": {
       "phone": "Puhelin",

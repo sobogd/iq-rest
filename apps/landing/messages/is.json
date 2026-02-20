@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Vinsamlegast fylltu út upplýsingar um veitingastaðinn þinn fyrst til að stjórna tungumálum.",
       "goToSettings": "Fara í Stillingar",
       "limitReached": "Þú hefur náð hámarki {limit} tungumála fyrir áskriftina þína.",
-      "upgrade": "Uppfæra"
+      "upgrade": "Uppfæra",
+      "showAll": "Sýna öll tungumál",
+      "showLess": "Sýna minna"
     },
     "contacts": {
       "phone": "Sími",

@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Molimo prvo ispunite podatke o restoranu za upravljanje jezicima.",
       "goToSettings": "Idi na Postavke",
       "limitReached": "Dosegli ste ograničenje od {limit} jezika za vaš plan.",
-      "upgrade": "Nadogradi"
+      "upgrade": "Nadogradi",
+      "showAll": "Prikaži sve jezike",
+      "showLess": "Prikaži manje"
     },
     "contacts": {
       "phone": "Telefon",

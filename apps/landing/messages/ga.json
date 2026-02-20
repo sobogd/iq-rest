@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Líon isteach sonraí do bhialainne ar dtús le teangacha a bhainistiú.",
       "goToSettings": "Téigh go Socruithe",
       "limitReached": "Tá teorainn {limit} teanga do do phlean bainte amach agat.",
-      "upgrade": "Uasghrádú"
+      "upgrade": "Uasghrádú",
+      "showAll": "Taispeáin gach teanga",
+      "showLess": "Taispeáin níos lú"
     },
     "contacts": {
       "phone": "Guthán",

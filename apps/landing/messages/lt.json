@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Norėdami valdyti kalbas, pirmiausia užpildykite savo restorano duomenis.",
       "goToSettings": "Eiti į Nustatymus",
       "limitReached": "Pasiekėte savo plano {limit} kalbų limitą.",
-      "upgrade": "Atnaujinti"
+      "upgrade": "Atnaujinti",
+      "showAll": "Rodyti visas kalbas",
+      "showLess": "Rodyti mažiau"
     },
     "contacts": {
       "phone": "Telefonas",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Loader2, Save, Star, AlertCircle } from "lucide-react";
+import { Loader2, Save, Star, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import {
@@ -37,11 +37,14 @@ import type { PlanType } from "@/lib/stripe-config";
 const ALL_LANGUAGES = [
   "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
   "sv", "da", "no", "fi", "cs", "el", "tr", "ro", "hu", "bg",
-  "hr", "sk", "sl", "et", "lv", "lt",
+  "hr", "sk", "sl", "et", "lv", "lt", "sr", "ca", "ga", "is",
+  "fa", "ar", "ja", "ko", "zh",
 ].map((code) => ({
   code,
   name: LANGUAGE_NAMES[code] || code,
 }));
+
+const POPULAR_LANGUAGES = ["en", "es", "de", "fr"];
 
 interface SettingsPageProps {
   initialRestaurant: {
@@ -94,6 +97,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   const [originalLanguages, setOriginalLanguages] = useState<string[]>(initLangs);
   const [originalDefaultLanguage, setOriginalDefaultLanguage] = useState(initDefLang);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [languagesExpanded, setLanguagesExpanded] = useState(false);
   const [pendingDisable, setPendingDisable] = useState<string | null>(null);
   const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
   const currentPlan = initialSubscription?.plan ?? "FREE";
@@ -316,42 +320,76 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
           )}
 
           <div className="space-y-2">
-            {ALL_LANGUAGES.map((lang) => {
-              const isEnabled = languages.includes(lang.code);
-              const isDefault = defaultLanguage === lang.code;
-              const isDisabledByLimit = !isEnabled && isAtLimit;
+            {(() => {
+              const enabledLangs = ALL_LANGUAGES.filter((l) => languages.includes(l.code));
+              const remainingLangs = ALL_LANGUAGES.filter((l) => !languages.includes(l.code));
+              const popularRemaining = remainingLangs.filter((l) => POPULAR_LANGUAGES.includes(l.code));
+              const otherRemaining = remainingLangs.filter((l) => !POPULAR_LANGUAGES.includes(l.code));
+              const sortedAll = [...enabledLangs, ...popularRemaining, ...otherRemaining];
+              const minVisible = Math.max(enabledLangs.length + popularRemaining.length, 4);
+              const visibleLangs = languagesExpanded ? sortedAll : sortedAll.slice(0, minVisible);
+              const hasMore = sortedAll.length > minVisible;
 
               return (
-                <div
-                  key={lang.code}
-                  className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl ${isDisabledByLimit ? "opacity-50" : ""}`}
-                >
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <Switch
-                      checked={isEnabled}
-                      onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
-                      disabled={(isDefault && isEnabled) || isDisabledByLimit}
-                    />
-                    <span className="text-sm font-medium truncate">{lang.name}</span>
-                  </div>
+                <>
+                  {visibleLangs.map((lang) => {
+                    const isEnabled = languages.includes(lang.code);
+                    const isDefault = defaultLanguage === lang.code;
+                    const isDisabledByLimit = !isEnabled && isAtLimit;
 
-                  <button
-                    type="button"
-                    onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
-                    disabled={!isEnabled}
-                    className={`p-1.5 rounded-md transition-colors ${
-                      isDefault
-                        ? "text-yellow-500"
-                        : isEnabled
-                          ? "text-muted-foreground hover:text-yellow-500"
-                          : "text-muted-foreground/30 cursor-not-allowed"
-                    }`}
-                  >
-                    <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
-                  </button>
-                </div>
+                    return (
+                      <div
+                        key={lang.code}
+                        className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl ${isDisabledByLimit ? "opacity-50" : ""}`}
+                      >
+                        <div className="flex items-center gap-3 flex-1 min-w-0">
+                          <Switch
+                            checked={isEnabled}
+                            onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
+                            disabled={(isDefault && isEnabled) || isDisabledByLimit}
+                          />
+                          <span className="text-sm font-medium truncate">{lang.name}</span>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
+                          disabled={!isEnabled}
+                          className={`p-1.5 rounded-md transition-colors ${
+                            isDefault
+                              ? "text-yellow-500"
+                              : isEnabled
+                                ? "text-muted-foreground hover:text-yellow-500"
+                                : "text-muted-foreground/30 cursor-not-allowed"
+                          }`}
+                        >
+                          <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
+                        </button>
+                      </div>
+                    );
+                  })}
+                  {hasMore && (
+                    <button
+                      type="button"
+                      onClick={() => setLanguagesExpanded((prev) => !prev)}
+                      className="flex items-center justify-center gap-1.5 w-full py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {languagesExpanded ? (
+                        <>
+                          {tLang("showLess")}
+                          <ChevronUp className="h-4 w-4" />
+                        </>
+                      ) : (
+                        <>
+                          {tLang("showAll")}
+                          <ChevronDown className="h-4 w-4" />
+                        </>
+                      )}
+                    </button>
+                  )}
+                </>
               );
-            })}
+            })()}
           </div>
 
           <p className="text-xs text-muted-foreground">

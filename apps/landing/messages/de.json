@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Bitte füllen Sie zuerst Ihre Restaurantdaten aus, um Sprachen zu verwalten.",
       "goToSettings": "Zu den Einstellungen",
       "limitReached": "Sie haben das Limit von {limit} Sprachen für Ihren Plan erreicht.",
-      "upgrade": "Upgrade"
+      "upgrade": "Upgrade",
+      "showAll": "Alle Sprachen anzeigen",
+      "showLess": "Weniger anzeigen"
     },
     "contacts": {
       "phone": "Telefon",

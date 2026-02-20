@@ -1449,7 +1449,9 @@
       "createRestaurantFirst": "언어를 관리하려면 먼저 레스토랑 정보를 입력해 주세요.",
       "goToSettings": "설정으로 이동",
       "limitReached": "플랜의 {limit}개 언어 제한에 도달했습니다.",
-      "upgrade": "업그레이드"
+      "upgrade": "업그레이드",
+      "showAll": "모든 언어 표시",
+      "showLess": "간략히 보기"
     },
     "contacts": {
       "phone": "전화",

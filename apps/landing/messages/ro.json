@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Vă rugăm să completați mai întâi detaliile restaurantului pentru a gestiona limbile.",
       "goToSettings": "Mergi la Setări",
       "limitReached": "Ai atins limita de {limit} limbi pentru planul tău.",
-      "upgrade": "Actualizează"
+      "upgrade": "Actualizează",
+      "showAll": "Afișează toate limbile",
+      "showLess": "Afișează mai puțin"
     },
     "contacts": {
       "phone": "Telefon",

@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Vennligst fyll ut restaurantopplysningene dine først for å administrere språk.",
       "goToSettings": "Gå til Innstillinger",
       "limitReached": "Du har nådd grensen på {limit} språk for planen din.",
-      "upgrade": "Oppgrader"
+      "upgrade": "Oppgrader",
+      "showAll": "Vis alle språk",
+      "showLess": "Vis færre"
     },
     "contacts": {
       "phone": "Telefon",

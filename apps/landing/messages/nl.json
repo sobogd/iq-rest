@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Vul eerst uw restaurantgegevens in om talen te beheren.",
       "goToSettings": "Ga naar Instellingen",
       "limitReached": "U heeft de limiet van {limit} talen voor uw abonnement bereikt.",
-      "upgrade": "Upgraden"
+      "upgrade": "Upgraden",
+      "showAll": "Alle talen tonen",
+      "showLess": "Minder tonen"
     },
     "contacts": {
       "phone": "Telefoon",

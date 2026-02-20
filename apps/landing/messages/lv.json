@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Lūdzu, vispirms aizpildiet sava restorāna datus, lai pārvaldītu valodas.",
       "goToSettings": "Doties uz Iestatījumiem",
       "limitReached": "Esat sasnieguši sava plāna {limit} valodu ierobežojumu.",
-      "upgrade": "Jaunināt"
+      "upgrade": "Jaunināt",
+      "showAll": "Rādīt visas valodas",
+      "showLess": "Rādīt mazāk"
     },
     "contacts": {
       "phone": "Tālrunis",

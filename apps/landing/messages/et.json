@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Keelte haldamiseks täitke palun esmalt oma restorani andmed.",
       "goToSettings": "Mine Seadetesse",
       "limitReached": "Olete saavutanud oma plaani {limit} keele piiri.",
-      "upgrade": "Uuenda"
+      "upgrade": "Uuenda",
+      "showAll": "Näita kõiki keeli",
+      "showLess": "Näita vähem"
     },
     "contacts": {
       "phone": "Telefon",

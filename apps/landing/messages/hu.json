@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Kérjük, először töltse ki az étterem adatait a nyelvek kezeléséhez.",
       "goToSettings": "Beállítások",
       "limitReached": "Elérte a(z) {limit} nyelv korlátot a csomagjában.",
-      "upgrade": "Frissítés"
+      "upgrade": "Frissítés",
+      "showAll": "Összes nyelv megjelenítése",
+      "showLess": "Kevesebb megjelenítése"
     },
     "contacts": {
       "phone": "Telefon",

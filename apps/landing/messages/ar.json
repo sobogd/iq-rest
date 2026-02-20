@@ -1449,7 +1449,9 @@
       "createRestaurantFirst": "يرجى ملء بيانات مطعمك أولاً لإدارة اللغات.",
       "goToSettings": "الذهاب إلى الإعدادات",
       "limitReached": "لقد وصلت إلى الحد الأقصى وهو {limit} لغة لخطتك.",
-      "upgrade": "ترقية"
+      "upgrade": "ترقية",
+      "showAll": "عرض جميع اللغات",
+      "showLess": "عرض أقل"
     },
     "contacts": {
       "phone": "الهاتف",

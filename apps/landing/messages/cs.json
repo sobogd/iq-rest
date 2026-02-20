@@ -1416,7 +1416,9 @@
       "createRestaurantFirst": "Nejprve prosím vyplňte údaje o restauraci pro správu jazyků.",
       "goToSettings": "Přejít do Nastavení",
       "limitReached": "Dosáhli jste limitu {limit} jazyků pro váš plán.",
-      "upgrade": "Upgradovat"
+      "upgrade": "Upgradovat",
+      "showAll": "Zobrazit všechny jazyky",
+      "showLess": "Zobrazit méně"
     },
     "contacts": {
       "phone": "Telefon",
