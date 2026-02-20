@@ -93,6 +93,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
               alt={restaurant.title}
               fill
               className="object-cover"
+              style={{ objectFit: "cover" }}
               sizes="100vw"
               priority
             />

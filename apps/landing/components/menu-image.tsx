@@ -74,6 +74,7 @@ export function MenuImage({ src, alt, canLoad, onLoaded }: MenuImageProps) {
           className={`object-cover transition-opacity duration-500 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
+          style={{ objectFit: "cover" }}
           sizes="(max-width: 440px) 100vw, 440px"
           onLoad={handleLoad}
           onError={handleError}
