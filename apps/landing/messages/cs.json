@@ -1388,7 +1388,7 @@
       "generateImage": "Generovat pomocí AI",
       "generatingImage": "Generování...",
       "generateImageError": "Generování obrázku se nezdařilo",
-      "unifyStyle": "Použít jednotný styl",
+      "changeBackground": "Změnit pozadí",
       "regenerateImage": "Přegenerovat",
       "generateLimitReached": "Bezplatné AI generace vyčerpány",
       "generateLimitDescription": "Využili jste 2 bezplatné generace AI obrázků. Přejděte na Basic nebo Pro pro neomezené generace."

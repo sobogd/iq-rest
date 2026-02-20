@@ -166,7 +166,7 @@ export interface ItemsTranslations {
   generateImage: string;
   generatingImage: string;
   generateImageError: string;
-  unifyStyle: string;
+  changeBackground: string;
   regenerateImage: string;
   generateLimitReached: string;
   generateLimitDescription: string;

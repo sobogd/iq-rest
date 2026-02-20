@@ -1388,7 +1388,7 @@
       "generateImage": "AI ile oluştur",
       "generatingImage": "Oluşturuluyor...",
       "generateImageError": "Görsel oluşturulamadı",
-      "unifyStyle": "Birleşik stil uygula",
+      "changeBackground": "Arka planı değiştir",
       "regenerateImage": "Yeniden oluştur",
       "generateLimitReached": "Ücretsiz AI oluşturmalar tükendi",
       "generateLimitDescription": "2 ücretsiz AI görsel oluşturma hakkınızı kullandınız. Sınırsız oluşturmalar için Basic veya Pro'ya yükseltin."

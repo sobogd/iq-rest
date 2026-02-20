@@ -469,7 +469,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                 disabled={generating || !name.trim()}
                 className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
               >
-                {generating ? t.generatingImage : imageUrl ? (isAiImage(imageUrl) ? t.regenerateImage : t.unifyStyle) : t.generateImage}
+                {generating ? t.generatingImage : imageUrl ? (isAiImage(imageUrl) ? t.regenerateImage : t.changeBackground) : t.generateImage}
                 {generating ? (
                   <Loader2 className="h-3.5 w-3.5 animate-spin" />
                 ) : (

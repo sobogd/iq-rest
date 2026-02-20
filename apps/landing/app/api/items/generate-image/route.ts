@@ -58,7 +58,6 @@ export async function POST(request: NextRequest) {
 
     const categoryLine = categoryName?.trim() ? `Category: ${categoryName.trim()}.` : "";
     const descLine = description?.trim() ? `${description.trim()}.` : "";
-    const colorLine = accentColor ? `Accent color ${accentColor} subtly in plate rim or garnish.` : "";
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 55_000);
@@ -66,7 +65,7 @@ export async function POST(request: NextRequest) {
     let b64: string | undefined;
 
     if (sourceImageUrl) {
-      // Restyle existing image via /v1/images/edits
+      // Change background: keep food exactly as-is, replace only the background
       const imgRes = await fetch(sourceImageUrl, { cache: "no-store" });
       if (!imgRes.ok) {
         clearTimeout(timeout);
@@ -75,18 +74,22 @@ export async function POST(request: NextRequest) {
       const imgBuffer = Buffer.from(await imgRes.arrayBuffer());
       // Convert to PNG for OpenAI edits endpoint
       const pngBuffer = await sharp(imgBuffer)
-        .resize(1024, 1024, { fit: "cover" })
+        .resize(1024, 1024, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 0 } })
         .png()
         .toBuffer();
 
+      const bgColorLine = accentColor
+        ? `Use accent color ${accentColor} subtly in the surface or surroundings (napkin, surface tint, decorative element).`
+        : "";
+
       const prompt = [
-        "Keep the exact same dish, food, and plating from the photo — do NOT change or replace the food.",
-        "Only change the background and lighting:",
-        "- Place on a clean minimalist surface.",
-        "- Apply soft diffused studio lighting.",
-        colorLine,
-        "- Leave generous padding around the dish and plate — neither the food nor the plate should touch or be cropped by the edges of the image.",
-        "- No text, no watermarks, no hands.",
+        "CRITICAL: Do NOT alter, redraw, or modify the food, dish, plate, or bowl in ANY way. Preserve every pixel of the food exactly as it appears.",
+        "ONLY replace the background behind and around the dish:",
+        "- Place on a clean, elegant minimalist surface (marble, light wood, or ceramic).",
+        "- Apply soft diffused studio lighting with gentle shadows under the plate.",
+        bgColorLine,
+        "- Leave generous padding around the dish — nothing should touch or be cropped by the edges.",
+        "- No text, no watermarks, no hands, no extra objects.",
         "- High-end restaurant menu photo style.",
       ]
         .filter(Boolean)
@@ -97,7 +100,7 @@ export async function POST(request: NextRequest) {
       formData.append("image[]", new Blob([new Uint8Array(pngBuffer)], { type: "image/png" }), "image.png");
       formData.append("prompt", prompt);
       formData.append("size", "1024x1024");
-      formData.append("quality", "medium");
+      formData.append("quality", "high");
 
       const openaiRes = await fetch("https://api.openai.com/v1/images/edits", {
         method: "POST",
@@ -120,6 +123,8 @@ export async function POST(request: NextRequest) {
       b64 = openaiData.data?.[0]?.b64_json;
     } else {
       // Generate from scratch via /v1/images/generations
+      const colorLine = accentColor ? `Accent color ${accentColor} subtly in plate rim or garnish.` : "";
+
       const prompt = [
         `Professional food photograph of "${name.trim()}".`,
         categoryLine,

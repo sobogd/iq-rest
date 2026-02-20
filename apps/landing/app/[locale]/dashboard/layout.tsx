@@ -179,7 +179,7 @@ export default async function DashboardLayout({
       generateImage: t("items.generateImage"),
       generatingImage: t("items.generatingImage"),
       generateImageError: t("items.generateImageError"),
-      unifyStyle: t("items.unifyStyle"),
+      changeBackground: t("items.changeBackground"),
       regenerateImage: t("items.regenerateImage"),
       generateLimitReached: t("items.generateLimitReached"),
       generateLimitDescription: t("items.generateLimitDescription"),

@@ -1388,7 +1388,7 @@
       "generateImage": "Сгенерировать с ИИ",
       "generatingImage": "Генерация...",
       "generateImageError": "Не удалось сгенерировать изображение",
-      "unifyStyle": "Привести к единому стилю",
+      "changeBackground": "Изменить фон",
       "regenerateImage": "Сгенерировать заново",
       "generateLimitReached": "Бесплатные генерации исчерпаны",
       "generateLimitDescription": "Вы использовали 2 бесплатные генерации изображений ИИ. Перейдите на Basic или Pro для безлимитных генераций."

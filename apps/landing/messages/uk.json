@@ -1388,7 +1388,7 @@
       "generateImage": "Згенерувати з ШІ",
       "generatingImage": "Генерація...",
       "generateImageError": "Не вдалося згенерувати зображення",
-      "unifyStyle": "Застосувати єдиний стиль",
+      "changeBackground": "Змінити фон",
       "regenerateImage": "Згенерувати заново",
       "generateLimitReached": "Безкоштовні генерації вичерпано",
       "generateLimitDescription": "Ви використали 2 безкоштовні генерації зображень ШІ. Перейдіть на Basic або Pro для безлімітних генерацій."

@@ -1388,7 +1388,7 @@
       "generateImage": "Generează cu AI",
       "generatingImage": "Se generează...",
       "generateImageError": "Generarea imaginii a eșuat",
-      "unifyStyle": "Aplică stil unificat",
+      "changeBackground": "Schimbă fundalul",
       "regenerateImage": "Regenerează",
       "generateLimitReached": "Generări AI gratuite epuizate",
       "generateLimitDescription": "Ați folosit toate cele 2 generări gratuite de imagini AI. Treceți la Basic sau Pro pentru generări nelimitate."

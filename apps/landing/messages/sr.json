@@ -1388,7 +1388,7 @@
       "generateImage": "Генериши помоћу АИ",
       "generatingImage": "Генерисање...",
       "generateImageError": "Генерисање слике није успело",
-      "unifyStyle": "Примени јединствени стил",
+      "changeBackground": "Промени позадину",
       "regenerateImage": "Регенериши",
       "generateLimitReached": "Бесплатна АИ генерисања потрошена",
       "generateLimitDescription": "Искористили сте 2 бесплатна АИ генерисања слика. Надоградите на Basic или Pro за неограничена генерисања."

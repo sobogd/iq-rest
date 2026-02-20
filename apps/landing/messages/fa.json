@@ -1421,7 +1421,7 @@
       "generateImage": "تولید با هوش مصنوعی",
       "generatingImage": "در حال تولید...",
       "generateImageError": "تولید تصویر ناموفق بود",
-      "unifyStyle": "اعمال سبک یکپارچه",
+      "changeBackground": "تغییر پس‌زمینه",
       "regenerateImage": "تولید مجدد",
       "generateLimitReached": "تولیدات رایگان هوش مصنوعی تمام شد",
       "generateLimitDescription": "شما از ۲ تولید رایگان تصویر هوش مصنوعی استفاده کرده‌اید. برای تولید نامحدود به Basic یا Pro ارتقا دهید."

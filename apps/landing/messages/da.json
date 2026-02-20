@@ -1388,7 +1388,7 @@
       "generateImage": "Generer med AI",
       "generatingImage": "Genererer...",
       "generateImageError": "Kunne ikke generere billede",
-      "unifyStyle": "Anvend ensartet stil",
+      "changeBackground": "Skift baggrund",
       "regenerateImage": "Generer igen",
       "generateLimitReached": "Gratis AI-genereringer opbrugt",
       "generateLimitDescription": "Du har brugt alle 2 gratis AI-billedgenereringer. Opgrader til Basic eller Pro for ubegrænsede genereringer."

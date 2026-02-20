@@ -1424,7 +1424,7 @@
       "generateImage": "Generate with AI",
       "generatingImage": "Generating...",
       "generateImageError": "Failed to generate image",
-      "unifyStyle": "Apply unified style",
+      "changeBackground": "Change background",
       "regenerateImage": "Regenerate",
       "generateLimitReached": "Free AI generations used up",
       "generateLimitDescription": "You've used all 2 free AI image generations. Upgrade to Basic or Pro for unlimited generations."

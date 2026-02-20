@@ -1388,7 +1388,7 @@
       "generateImage": "Generálás AI-val",
       "generatingImage": "Generálás...",
       "generateImageError": "Kép generálása sikertelen",
-      "unifyStyle": "Egységes stílus alkalmazása",
+      "changeBackground": "Háttér módosítása",
       "regenerateImage": "Újragenerálás",
       "generateLimitReached": "Ingyenes AI generálások elfogytak",
       "generateLimitDescription": "Felhasználta mind a 2 ingyenes AI képgenerálást. Frissítsen Basic vagy Pro csomagra korlátlan generálásokért."

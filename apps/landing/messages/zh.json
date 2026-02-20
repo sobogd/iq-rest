@@ -1421,7 +1421,7 @@
       "generateImage": "AI生成",
       "generatingImage": "生成中...",
       "generateImageError": "图片生成失败",
-      "unifyStyle": "应用统一风格",
+      "changeBackground": "更换背景",
       "regenerateImage": "重新生成",
       "generateLimitReached": "免费AI生成次数已用完",
       "generateLimitDescription": "您已使用完2次免费AI图片生成。升级到Basic或Pro享受无限生成。"

@@ -1388,7 +1388,7 @@
       "generateImage": "Generuoti su DI",
       "generatingImage": "Generuojama...",
       "generateImageError": "Nepavyko sugeneruoti vaizdo",
-      "unifyStyle": "Taikyti vieningą stilių",
+      "changeBackground": "Keisti foną",
       "regenerateImage": "Pergeneruoti",
       "generateLimitReached": "Nemokamos AI generacijos išnaudotos",
       "generateLimitDescription": "Išnaudojote 2 nemokamas AI vaizdų generacijas. Atnaujinkite iki Basic arba Pro neribotoms generacijoms."

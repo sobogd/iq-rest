@@ -1388,7 +1388,7 @@
       "generateImage": "Genereren met AI",
       "generatingImage": "Genereren...",
       "generateImageError": "Afbeelding genereren mislukt",
-      "unifyStyle": "Uniforme stijl toepassen",
+      "changeBackground": "Achtergrond wijzigen",
       "regenerateImage": "Opnieuw genereren",
       "generateLimitReached": "Gratis AI-generaties opgebruikt",
       "generateLimitDescription": "Je hebt alle 2 gratis AI-beeldgeneraties gebruikt. Upgrade naar Basic of Pro voor onbeperkte generaties."

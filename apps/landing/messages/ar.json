@@ -1421,7 +1421,7 @@
       "generateImage": "إنشاء بالذكاء الاصطناعي",
       "generatingImage": "جارٍ الإنشاء...",
       "generateImageError": "فشل إنشاء الصورة",
-      "unifyStyle": "تطبيق النمط الموحد",
+      "changeBackground": "تغيير الخلفية",
       "regenerateImage": "إعادة الإنشاء",
       "generateLimitReached": "نفدت عمليات الإنشاء المجانية بالذكاء الاصطناعي",
       "generateLimitDescription": "لقد استخدمت عمليتي الإنشاء المجانيتين للصور بالذكاء الاصطناعي. قم بالترقية إلى Basic أو Pro لعمليات إنشاء غير محدودة."

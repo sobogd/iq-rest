@@ -1388,7 +1388,7 @@
       "generateImage": "Gin le AI",
       "generatingImage": "Ag giniúint...",
       "generateImageError": "Theip ar ghiniúint íomhá",
-      "unifyStyle": "Cuir stíl aontaithe i bhfeidhm",
+      "changeBackground": "Athraigh cúlra",
       "regenerateImage": "Athghin",
       "generateLimitReached": "Giniúintí AI saor in aisce úsáidte",
       "generateLimitDescription": "D'úsáid tú na 2 ghiniúint íomhá AI saor in aisce. Uasghrádaigh go Basic nó Pro le haghaidh giniúintí gan teorainn."

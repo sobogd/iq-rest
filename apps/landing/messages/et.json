@@ -1388,7 +1388,7 @@
       "generateImage": "Genereeri tehisaruga",
       "generatingImage": "Genereerimine...",
       "generateImageError": "Pildi genereerimine ebaõnnestus",
-      "unifyStyle": "Rakenda ühtne stiil",
+      "changeBackground": "Muuda tausta",
       "regenerateImage": "Genereeri uuesti",
       "generateLimitReached": "Tasuta AI-genereerimised kasutatud",
       "generateLimitDescription": "Olete kasutanud kõik 2 tasuta AI-pildi genereerimist. Uuendage Basic- või Pro-paketile piiramatute genereerimiste jaoks."

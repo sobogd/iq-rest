@@ -1388,7 +1388,7 @@
       "generateImage": "Búa til með AI",
       "generatingImage": "Býr til...",
       "generateImageError": "Ekki tókst að búa til mynd",
-      "unifyStyle": "Beita samræmdum stíl",
+      "changeBackground": "Breyta bakgrunni",
       "regenerateImage": "Endurbúa til",
       "generateLimitReached": "Ókeypis AI-myndir uppurnar",
       "generateLimitDescription": "Þú hefur notað allar 2 ókeypis AI-myndagerðir. Uppfærðu í Basic eða Pro fyrir ótakmarkaðar myndagerðir."

@@ -1388,7 +1388,7 @@
       "generateImage": "Ustvari z UI",
       "generatingImage": "Ustvarjanje...",
       "generateImageError": "Ustvarjanje slike ni uspelo",
-      "unifyStyle": "Uporabi enoten slog",
+      "changeBackground": "Spremeni ozadje",
       "regenerateImage": "Ustvari znova",
       "generateLimitReached": "Brezplačna AI ustvarjanja porabljena",
       "generateLimitDescription": "Porabili ste 2 brezplačni AI ustvarjanji slik. Nadgradite na Basic ali Pro za neomejeno ustvarjanje."

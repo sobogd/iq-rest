@@ -1388,7 +1388,7 @@
       "generateImage": "Ģenerēt ar MI",
       "generatingImage": "Ģenerēšana...",
       "generateImageError": "Neizdevās ģenerēt attēlu",
-      "unifyStyle": "Lietot vienotu stilu",
+      "changeBackground": "Mainīt fonu",
       "regenerateImage": "Pārģenerēt",
       "generateLimitReached": "Bezmaksas AI ģenerēšanas iztērētas",
       "generateLimitDescription": "Esat izmantojis 2 bezmaksas AI attēlu ģenerēšanas. Jauniniet uz Basic vai Pro neierobežotām ģenerēšanām."

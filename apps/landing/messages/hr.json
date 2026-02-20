@@ -1388,7 +1388,7 @@
       "generateImage": "Generiraj s AI",
       "generatingImage": "Generiranje...",
       "generateImageError": "Generiranje slike nije uspjelo",
-      "unifyStyle": "Primijeni jedinstveni stil",
+      "changeBackground": "Promijeni pozadinu",
       "regenerateImage": "Regeneriraj",
       "generateLimitReached": "Besplatna AI generiranja iskorištena",
       "generateLimitDescription": "Iskoristili ste sva 2 besplatna AI generiranja slika. Nadogradite na Basic ili Pro za neograničena generiranja."

@@ -1388,7 +1388,7 @@
       "generateImage": "Генериране с ИИ",
       "generatingImage": "Генериране...",
       "generateImageError": "Неуспешно генериране на изображение",
-      "unifyStyle": "Приложи единен стил",
+      "changeBackground": "Промяна на фона",
       "regenerateImage": "Регенериране",
       "generateLimitReached": "Безплатните AI генерации са изчерпани",
       "generateLimitDescription": "Използвахте 2-те безплатни AI генерации на изображения. Преминете на Basic или Pro за неограничени генерации."

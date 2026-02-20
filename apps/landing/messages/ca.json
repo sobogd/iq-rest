@@ -1388,7 +1388,7 @@
       "generateImage": "Genera amb IA",
       "generatingImage": "Generant...",
       "generateImageError": "Error en generar la imatge",
-      "unifyStyle": "Aplicar estil unificat",
+      "changeBackground": "Canviar fons",
       "regenerateImage": "Regenerar",
       "generateLimitReached": "Generacions AI gratuïtes esgotades",
       "generateLimitDescription": "Heu utilitzat les 2 generacions d'imatges AI gratuïtes. Actualitzeu a Basic o Pro per a generacions il·limitades."

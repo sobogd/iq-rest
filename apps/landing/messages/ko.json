@@ -1421,7 +1421,7 @@
       "generateImage": "AI로 생성",
       "generatingImage": "생성 중...",
       "generateImageError": "이미지 생성 실패",
-      "unifyStyle": "통일 스타일 적용",
+      "changeBackground": "배경 변경",
       "regenerateImage": "재생성",
       "generateLimitReached": "무료 AI 생성 횟수 소진",
       "generateLimitDescription": "2회의 무료 AI 이미지 생성을 모두 사용했습니다. Basic 또는 Pro로 업그레이드하여 무제한으로 생성하세요."

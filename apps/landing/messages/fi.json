@@ -1388,7 +1388,7 @@
       "generateImage": "Luo tekoälyllä",
       "generatingImage": "Luodaan...",
       "generateImageError": "Kuvan luonti epäonnistui",
-      "unifyStyle": "Käytä yhtenäistä tyyliä",
+      "changeBackground": "Vaihda tausta",
       "regenerateImage": "Luo uudelleen",
       "generateLimitReached": "Ilmaiset AI-generoinnit käytetty",
       "generateLimitDescription": "Olet käyttänyt kaikki 2 ilmaista AI-kuvagenerointia. Päivitä Basic- tai Pro-tilaukseen rajattomia generointeja varten."

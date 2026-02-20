@@ -1421,7 +1421,7 @@
       "generateImage": "AIで生成",
       "generatingImage": "生成中...",
       "generateImageError": "画像の生成に失敗しました",
-      "unifyStyle": "統一スタイルを適用",
+      "changeBackground": "背景を変更",
       "regenerateImage": "再生成",
       "generateLimitReached": "無料AI生成回数を使い切りました",
       "generateLimitDescription": "2回の無料AI画像生成をすべて使用しました。BasicまたはProにアップグレードして無制限に生成しましょう。"
