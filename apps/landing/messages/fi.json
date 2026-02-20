@@ -64,6 +64,22 @@
       "viewAll": "Näytä kaikki ominaisuudet"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Onko sinulla jo paperinen ruokalista?",
+    "subtitle": "Lataa kuva — tekoäly poimii kaikki ruoat, hinnat ja luo käyttövalmiin digitaalisen ruokalistan sekunneissa.",
+    "uploadButton": "Lataa Ruokalistakuvia",
+    "loadingTitle": "Luodaan digitaalista ruokalistaasi...",
+    "loadingSubtitle": "Skannataan ruokia ja luodaan ulkoasu",
+    "readyTitle": "Ruokalistasi on valmis!",
+    "readySubtitle": "Rekisteröidy lunastaaksesi se ja ala jakaa asiakkaillesi.",
+    "ctaButton": "Haluan tämän ruokalistan",
+    "errorTooLarge": "Jokaisen kuvan on oltava alle 20MB.",
+    "errorTooMany": "Enintään {count} kuvaa kerralla.",
+    "errorNotMenu": "Tämä ei näytä ravintolan ruokalistalta. Lataa kuva ruokalistasta.",
+    "errorRateLimit": "Liian monta pyyntöä. Odota hetki ja yritä uudelleen.",
+    "errorGeneric": "Jokin meni pieleen. Yritä uudelleen."
+  },
   "features": {
     "title": "Tehokkaat ominaisuudet ravintolasi QR-valikolle ja verkkosivustolle",
     "subtitle": "Kaikki, mitä tarvitset luodaksesi ammattimaisen digitaalisen läsnäolon ravintolallesi tai kahvilallesi",

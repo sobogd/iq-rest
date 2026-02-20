@@ -71,6 +71,7 @@ export function FormInputTranslate({
       } else if (res.status === 403) {
         const data = await res.json();
         if (data.error === "limit_reached") {
+          track(DashboardEvent.SHOWED_TRANSLATE_LIMIT_MODAL);
           setShowLimitDialog(true);
         } else {
           toast.error(translateErrorMessage);

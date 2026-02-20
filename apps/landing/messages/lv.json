@@ -64,6 +64,22 @@
       "viewAll": "Skatīt visas funkcijas"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Jums jau ir papīra ēdienkarte?",
+    "subtitle": "Augšupielādējiet fotoattēlu — AI izvilks visus ēdienus, cenas un dažu sekunžu laikā izveidos gatavu digitālo ēdienkarti.",
+    "uploadButton": "Augšupielādēt Ēdienkartes Fotoattēlus",
+    "loadingTitle": "Jūsu digitālā ēdienkarte tiek veidota...",
+    "loadingSubtitle": "Ēdienu skenēšana un dizaina ģenerēšana",
+    "readyTitle": "Jūsu ēdienkarte ir gatava!",
+    "readySubtitle": "Reģistrējieties, lai to pieprasītu, un sāciet dalīties ar saviem klientiem.",
+    "ctaButton": "Es vēlos šo ēdienkarti",
+    "errorTooLarge": "Katra attēla izmērs nedrīkst pārsniegt 20MB.",
+    "errorTooMany": "Maksimāli {count} fotoattēli vienlaikus.",
+    "errorNotMenu": "Tas neizskatās pēc restorāna ēdienkartes. Lūdzu, augšupielādējiet ēdienkartes fotoattēlu.",
+    "errorRateLimit": "Pārāk daudz pieprasījumu. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz.",
+    "errorGeneric": "Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz."
+  },
   "features": {
     "title": "Jaudīgas funkcijas jūsu restorāna QR izvēlnei un tīmekļa vietnei",
     "subtitle": "Viss, kas jums nepieciešams, lai izveidotu profesionālu digitālo klātbūtni jūsu restorānam vai kafejnīcai",

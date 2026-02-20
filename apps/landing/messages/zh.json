@@ -64,6 +64,22 @@
       "viewAll": "查看所有功能"
     }
   },
+  "menuScanner": {
+    "badge": "AI驱动",
+    "title": "已经有纸质菜单了？",
+    "subtitle": "上传一张照片 — AI 将提取所有菜品、价格，并在几秒内创建一个即用的数字菜单。",
+    "uploadButton": "上传菜单照片",
+    "loadingTitle": "正在创建您的数字菜单...",
+    "loadingSubtitle": "正在扫描菜品并生成设计",
+    "readyTitle": "您的菜单已准备就绪！",
+    "readySubtitle": "注册以领取菜单，并开始与客户分享。",
+    "ctaButton": "我想要这个菜单",
+    "errorTooLarge": "每张图片必须小于20MB。",
+    "errorTooMany": "一次最多 {count} 张照片。",
+    "errorNotMenu": "这看起来不像是餐厅菜单。请上传一张菜单照片。",
+    "errorRateLimit": "请求过多。请稍候再试。",
+    "errorGeneric": "出了点问题。请重试。"
+  },
   "features": {
     "title": "餐厅QR菜单和网站的强大功能",
     "subtitle": "为您的餐厅或咖啡厅创建专业数字形象所需的一切",

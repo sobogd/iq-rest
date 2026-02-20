@@ -64,6 +64,22 @@
       "viewAll": "Zobacz Wszystkie Funkcje"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Masz już menu w wersji papierowej?",
+    "subtitle": "Prześlij zdjęcie — AI wyodrębni wszystkie dania, ceny i stworzy gotowe menu cyfrowe w kilka sekund.",
+    "uploadButton": "Prześlij Zdjęcia Menu",
+    "loadingTitle": "Tworzenie Twojego menu cyfrowego...",
+    "loadingSubtitle": "Skanowanie dań i generowanie designu",
+    "readyTitle": "Twoje menu jest gotowe!",
+    "readySubtitle": "Zarejestruj się, aby je odebrać i zacznij udostępniać swoim klientom.",
+    "ctaButton": "Chcę to menu",
+    "errorTooLarge": "Każdy obraz musi mieć mniej niż 20MB.",
+    "errorTooMany": "Maksymalnie {count} zdjęć naraz.",
+    "errorNotMenu": "To nie wygląda jak menu restauracji. Prześlij zdjęcie menu.",
+    "errorRateLimit": "Zbyt wiele zapytań. Poczekaj chwilę i spróbuj ponownie.",
+    "errorGeneric": "Coś poszło nie tak. Spróbuj ponownie."
+  },
   "features": {
     "title": "Potężne funkcje dla Twojego menu QR w restauracji i strony internetowej",
     "subtitle": "Wszystko, czego potrzebujesz, aby stworzyć profesjonalną obecność w sieci dla swojej restauracji lub kawiarni",

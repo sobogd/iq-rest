@@ -64,6 +64,22 @@
       "viewAll": "Alle Funktionen anzeigen"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Haben Sie bereits eine Speisekarte auf Papier?",
+    "subtitle": "Laden Sie ein Foto hoch — die KI extrahiert alle Gerichte, Preise und erstellt in Sekunden eine einsatzbereite digitale Speisekarte.",
+    "uploadButton": "Menüfotos hochladen",
+    "loadingTitle": "Erstelle Ihre digitale Speisekarte...",
+    "loadingSubtitle": "Gerichte werden gescannt und Design wird erstellt",
+    "readyTitle": "Ihre Speisekarte ist fertig!",
+    "readySubtitle": "Registrieren Sie sich, um sie zu beanspruchen und mit Ihren Gästen zu teilen.",
+    "ctaButton": "Ich möchte diese Speisekarte",
+    "errorTooLarge": "Jedes Bild darf maximal 20MB groß sein.",
+    "errorTooMany": "Maximal {count} Fotos gleichzeitig.",
+    "errorNotMenu": "Das sieht nicht nach einer Speisekarte aus. Bitte laden Sie ein Foto einer Speisekarte hoch.",
+    "errorRateLimit": "Zu viele Anfragen. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
+    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
   "features": {
     "title": "Leistungsstarke Funktionen für Ihr Restaurant-QR-Menü & Ihre Website",
     "subtitle": "Alles, was Sie benötigen, um eine professionelle digitale Präsenz für Ihr Restaurant oder Café zu schaffen",

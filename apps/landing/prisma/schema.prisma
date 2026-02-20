@@ -107,6 +107,7 @@ model Restaurant {
   checklistContactsSaved   Boolean @default(false)
   checklistBrandCustomized Boolean @default(false)
   startedFromScratch       Boolean @default(false)
+  fromScanner              Boolean @default(false)
 
   // Free AI trials
   freeTranslationsLeft      Int @default(5)

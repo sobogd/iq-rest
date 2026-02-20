@@ -64,6 +64,22 @@
       "viewAll": "Tüm Özellikleri Gör"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Zaten kağıt menünüz var mı?",
+    "subtitle": "Bir fotoğraf yükleyin — AI tüm yemekleri, fiyatları çıkaracak ve saniyeler içinde kullanıma hazır dijital bir menü oluşturacak.",
+    "uploadButton": "Menü Fotoğrafları Yükle",
+    "loadingTitle": "Dijital menünüz oluşturuluyor...",
+    "loadingSubtitle": "Yemekler taranıyor ve tasarım oluşturuluyor",
+    "readyTitle": "Menünüz hazır!",
+    "readySubtitle": "Sahiplenmek için kaydolun ve müşterilerinizle paylaşmaya başlayın.",
+    "ctaButton": "Bu menüyü istiyorum",
+    "errorTooLarge": "Her görsel 20MB'den küçük olmalıdır.",
+    "errorTooMany": "Bir seferde en fazla {count} fotoğraf.",
+    "errorNotMenu": "Bu bir restoran menüsüne benzemiyor. Lütfen bir menü fotoğrafı yükleyin.",
+    "errorRateLimit": "Çok fazla istek. Lütfen bir süre bekleyin ve tekrar deneyin.",
+    "errorGeneric": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+  },
   "features": {
     "title": "Restoranınızın QR Menüsü ve Web Sitesi için Güçlü Özellikler",
     "subtitle": "Restoranınız veya kafeniz için profesyonel bir dijital varlık oluşturmak için ihtiyaç duyduğunuz her şey",

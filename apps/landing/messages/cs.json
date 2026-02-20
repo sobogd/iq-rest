@@ -64,6 +64,22 @@
       "viewAll": "Zobrazit Všechny Funkce"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Už máte papírové menu?",
+    "subtitle": "Nahrajte fotku — AI extrahuje všechna jídla, ceny a vytvoří hotové digitální menu během pár sekund.",
+    "uploadButton": "Nahrát Fotky Menu",
+    "loadingTitle": "Vytváření vašeho digitálního menu...",
+    "loadingSubtitle": "Skenování jídel a generování designu",
+    "readyTitle": "Vaše menu je připraveno!",
+    "readySubtitle": "Zaregistrujte se, abyste si jej nárokovali, a začněte sdílet se svými zákazníky.",
+    "ctaButton": "Chci toto menu",
+    "errorTooLarge": "Každý obrázek musí mít méně než 20MB.",
+    "errorTooMany": "Maximálně {count} fotek najednou.",
+    "errorNotMenu": "Tohle nevypadá jako menu restaurace. Nahrajte prosím fotku menu.",
+    "errorRateLimit": "Příliš mnoho požadavků. Počkejte chvíli a zkuste to znovu.",
+    "errorGeneric": "Něco se pokazilo. Zkuste to prosím znovu."
+  },
   "features": {
     "title": "Silné funkce pro vaše restaurace QR menu a webové stránky",
     "subtitle": "Vše, co potřebujete k vytvoření profesionální digitální přítomnosti pro vaši restauraci nebo kavárnu",

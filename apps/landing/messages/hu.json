@@ -64,6 +64,22 @@
       "viewAll": "Összes Funkció Megtekintése"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Már van papír étlapod?",
+    "subtitle": "Tölts fel egy fotót — az AI kivonja az összes ételt, árat, és másodpercek alatt létrehoz egy használatra kész digitális étlapot.",
+    "uploadButton": "Étlap Fotók Feltöltése",
+    "loadingTitle": "Digitális étlapod készítése...",
+    "loadingSubtitle": "Ételek szkennelése és dizájn generálása",
+    "readyTitle": "Az étlapod kész!",
+    "readySubtitle": "Regisztrálj, hogy igényelhesd, és kezdd el megosztani vendégeiddel.",
+    "ctaButton": "Ezt az étlapot akarom",
+    "errorTooLarge": "Minden kép legfeljebb 20MB lehet.",
+    "errorTooMany": "Egyszerre legfeljebb {count} fotó.",
+    "errorNotMenu": "Ez nem tűnik éttermi étlapnak. Kérjük, tölts fel egy étlap fotót.",
+    "errorRateLimit": "Túl sok kérés. Kérjük, várj egy pillanatot, és próbáld újra.",
+    "errorGeneric": "Valami hiba történt. Kérjük, próbáld újra."
+  },
   "features": {
     "title": "Erőteljes funkciók az Ön étterem QR menüjéhez és weboldalához",
     "subtitle": "Minden, amire szüksége van, hogy professzionális digitális jelenlétet hozzon létre étterméhez vagy kávézójához",

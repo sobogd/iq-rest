@@ -64,6 +64,22 @@
       "viewAll": "Skoða Alla Eiginleika"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Ertu nú þegar með pappírsmatseðil?",
+    "subtitle": "Hladdu upp mynd — gervigreind mun draga út öll rétti, verð og búa til tilbúinn stafrænan matseðil á nokkrum sekúndum.",
+    "uploadButton": "Hlaða upp Matseðilsmyndum",
+    "loadingTitle": "Stafrænn matseðillinn þinn er að verða til...",
+    "loadingSubtitle": "Réttir skannaðir og hönnun búin til",
+    "readyTitle": "Matseðillinn þinn er tilbúinn!",
+    "readySubtitle": "Skráðu þig til að sækja hann og byrjaðu að deila með viðskiptavinum þínum.",
+    "ctaButton": "Ég vil fá þennan matseðil",
+    "errorTooLarge": "Hver mynd verður að vera undir 20MB.",
+    "errorTooMany": "Mest {count} myndir í einu.",
+    "errorNotMenu": "Þetta lítur ekki út eins og veitingastaðarmatseðill. Vinsamlegast hladdu upp mynd af matseðli.",
+    "errorRateLimit": "Of margar beiðnir. Vinsamlegast bíddu augnablik og reyndu aftur.",
+    "errorGeneric": "Eitthvað fór úrskeiðis. Vinsamlegast reyndu aftur."
+  },
   "features": {
     "title": "Miklar eiginleikar fyrir QR matseðilinn þinn og vefsíðu",
     "subtitle": "Allt sem þú þarft til að búa til faglega stafræna nærveru fyrir veitingastaðinn eða kaffihúsið þitt",

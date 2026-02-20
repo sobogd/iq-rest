@@ -64,6 +64,22 @@
       "viewAll": "Visa alla funktioner"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Har du redan en pappersmeny?",
+    "subtitle": "Ladda upp ett foto — AI extraherar alla rätter, priser och skapar en färdig digital meny på några sekunder.",
+    "uploadButton": "Ladda upp Menyfoton",
+    "loadingTitle": "Skapar din digitala meny...",
+    "loadingSubtitle": "Skannar rätter och genererar design",
+    "readyTitle": "Din meny är klar!",
+    "readySubtitle": "Registrera dig för att hämta den och börja dela med dina kunder.",
+    "ctaButton": "Jag vill ha denna meny",
+    "errorTooLarge": "Varje bild måste vara under 20MB.",
+    "errorTooMany": "Maximalt {count} foton åt gången.",
+    "errorNotMenu": "Det här ser inte ut som en restaurangmeny. Ladda upp ett foto av en meny.",
+    "errorRateLimit": "För många förfrågningar. Vänta en stund och försök igen.",
+    "errorGeneric": "Något gick fel. Försök igen."
+  },
   "features": {
     "title": "Mäktiga funktioner för din restaurangs QR-meny och webbplats",
     "subtitle": "Allt du behöver för att skapa en professionell digital närvaro för din restaurang eller kafé",

@@ -64,6 +64,22 @@
       "viewAll": "Oglejte si Vse Funkcije"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Že imate papirnati jedilnik?",
+    "subtitle": "Naložite fotografijo — AI bo izluščil vse jedi, cene in v nekaj sekundah ustvaril pripravljen digitalni jedilnik.",
+    "uploadButton": "Naloži Fotografije Jedilnika",
+    "loadingTitle": "Ustvarjanje vašega digitalnega jedilnika...",
+    "loadingSubtitle": "Skeniranje jedi in ustvarjanje oblikovanja",
+    "readyTitle": "Vaš jedilnik je pripravljen!",
+    "readySubtitle": "Registrirajte se, da ga prevzamete, in ga začnite deliti s svojimi gosti.",
+    "ctaButton": "Želim ta jedilnik",
+    "errorTooLarge": "Vsaka slika mora biti manjša od 20MB.",
+    "errorTooMany": "Največ {count} fotografij naenkrat.",
+    "errorNotMenu": "To ne izgleda kot jedilnik restavracije. Prosimo, naložite fotografijo jedilnika.",
+    "errorRateLimit": "Preveč zahtev. Prosimo, počakajte trenutek in poskusite znova.",
+    "errorGeneric": "Nekaj je šlo narobe. Prosimo, poskusite znova."
+  },
   "features": {
     "title": "Močne funkcije za vaš QR meni in spletno stran restavracije",
     "subtitle": "Vse, kar potrebujete za ustvarjanje profesionalne digitalne prisotnosti za vašo restavracijo ali kavarno",

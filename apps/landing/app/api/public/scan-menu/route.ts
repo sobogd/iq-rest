@@ -6,6 +6,7 @@ import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
 import sharp from "sharp";
 
 export const maxDuration = 60;
+export const config = { api: { bodyParser: { sizeLimit: "30mb" } } };
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
@@ -19,6 +20,12 @@ function isRateLimited(ip: string): boolean {
   const entry = rateLimitMap.get(ip);
   if (!entry || now > entry.resetAt) {
     rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    // Cleanup expired entries periodically
+    if (rateLimitMap.size > 1000) {
+      for (const [key, val] of rateLimitMap) {
+        if (now > val.resetAt) rateLimitMap.delete(key);
+      }
+    }
     return false;
   }
   entry.count++;
@@ -46,7 +53,7 @@ function generateSlugFromTitle(title: string): string {
 }
 
 function generateHash(): string {
-  return Math.random().toString(36).substring(2, 7);
+  return Math.random().toString(36).substring(2, 8);
 }
 
 async function generateUniqueSlug(title: string): Promise<string> {
@@ -279,54 +286,70 @@ Rules:
     // Detect venue type from category names and items
     const venueType = detectVenueType(scanResult.categories);
 
-    // Create Company + generate slug (needed before parallel work)
-    const [company, slug] = await Promise.all([
-      prisma.company.create({
-        data: {
-          name: scanResult.restaurantName || `${scanResult.cuisineType} Restaurant`,
-          onboardingStep: 2,
-        },
-      }),
-      generateUniqueSlug(
-        scanResult.restaurantName || `${scanResult.cuisineType}-restaurant`
-      ),
-    ]);
+    // Generate slug first (no side effects)
+    const slug = await generateUniqueSlug(
+      scanResult.restaurantName || `${scanResult.cuisineType}-restaurant`
+    );
+
+    // Create Company
+    const company = await prisma.company.create({
+      data: {
+        name: scanResult.restaurantName || `${scanResult.cuisineType} Restaurant`,
+        onboardingStep: 2,
+      },
+    });
 
     const detectedLanguage = scanResult.language || "en";
 
-    // Run background generation AND DB creation in parallel
-    const [backgroundUrl, totalItems] = await Promise.all([
-      // Generate AI background
-      generateBackground(venueType, scanResult.cuisineType, scanResult.categories, company.id),
-      // Create Restaurant + Categories + Items
-      createMenuRecords(company.id, scanResult, slug, detectedLanguage),
-    ]);
+    // Save original uploads to S3 (fire-and-forget)
+    saveOriginalImages(rawImages, company.id).catch((err) =>
+      console.error("Failed to save scan originals:", err)
+    );
 
-    // Update restaurant background if AI generated one
-    if (backgroundUrl) {
-      await prisma.restaurant.updateMany({
-        where: { companyId: company.id },
-        data: { source: backgroundUrl },
+    try {
+      // Run background generation AND DB creation in parallel
+      const [backgroundUrl, totalItems] = await Promise.all([
+        generateBackground(venueType, scanResult.cuisineType, scanResult.categories, company.id),
+        createMenuRecords(company.id, scanResult, slug, detectedLanguage),
+      ]);
+
+      // Update restaurant background if AI generated one
+      if (backgroundUrl) {
+        await prisma.restaurant.updateMany({
+          where: { companyId: company.id },
+          data: { source: backgroundUrl },
+        });
+      }
+
+      // Set pending_company_id cookie (24h TTL)
+      const cookieStore = await cookies();
+      cookieStore.set("pending_company_id", company.id, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 60 * 60 * 24, // 24 hours
+        path: "/",
       });
+
+      return NextResponse.json({
+        slug,
+        companyId: company.id,
+        cuisineType: scanResult.cuisineType,
+        restaurantName: scanResult.restaurantName,
+        totalItems,
+      });
+    } catch (error) {
+      // Cleanup orphan company on failure
+      console.error("Scan menu error (cleaning up company):", error);
+      await prisma.item.deleteMany({ where: { companyId: company.id } }).catch(() => {});
+      await prisma.category.deleteMany({ where: { companyId: company.id } }).catch(() => {});
+      await prisma.restaurant.deleteMany({ where: { companyId: company.id } }).catch(() => {});
+      await prisma.company.delete({ where: { id: company.id } }).catch(() => {});
+      return NextResponse.json(
+        { error: "Failed to scan menu" },
+        { status: 500 }
+      );
     }
-
-    // Set pending_company_id cookie (24h TTL)
-    const cookieStore = await cookies();
-    cookieStore.set("pending_company_id", company.id, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24, // 24 hours
-      path: "/",
-    });
-
-    return NextResponse.json({
-      slug,
-      companyId: company.id,
-      cuisineType: scanResult.cuisineType,
-      restaurantName: scanResult.restaurantName,
-      totalItems,
-    });
   } catch (error) {
     console.error("Scan menu error:", error);
     return NextResponse.json(
@@ -334,6 +357,30 @@ Rules:
       { status: 500 }
     );
   }
+}
+
+/**
+ * Save original uploaded images to S3 for reference.
+ */
+async function saveOriginalImages(images: string[], companyId: string): Promise<void> {
+  const timestamp = Date.now();
+  await Promise.all(
+    images.map(async (image, i) => {
+      const base64Data = image.split(",")[1];
+      if (!base64Data) return;
+      const buffer = Buffer.from(base64Data, "base64");
+      const key = s3Key("scans", companyId, `${timestamp}-${i}.jpg`);
+      await s3Client.send(
+        new PutObjectCommand({
+          Bucket: process.env.S3_NAME!,
+          Key: key,
+          Body: buffer,
+          ContentType: "image/jpeg",
+          ACL: "public-read",
+        })
+      );
+    })
+  );
 }
 
 /**
@@ -383,6 +430,7 @@ async function createMenuRecords(
       defaultLanguage: detectedLanguage,
       companyId,
       checklistMenuEdited: true,
+      fromScanner: true,
     },
   });
 
@@ -405,7 +453,7 @@ async function createMenuRecords(
       .map((item, j) => ({
         name: item.name,
         description: item.description || null,
-        price: item.price || 0,
+        price: Math.max(0, Number(item.price) || 0),
         sortOrder: j,
         isActive: true,
         categoryId: category.id,
@@ -453,7 +501,7 @@ async function generateBackground(
     "Soft, warm, slightly dim lighting. Rich but muted tones.",
     "Dark moody atmosphere — the table surface should be dark so white text is readable on top.",
     "Do NOT add any items that are not in the list above. No extra food, no desserts, no drinks unless listed.",
-    "No people, no hands, no text, no logos, no watermarks.",
+    "No people, no hands, no text, no words, no letters, no numbers, no logos, no watermarks, no labels, no signs.",
     "Professional food photography. Vertical portrait (9:16).",
   ].join("\n");
 

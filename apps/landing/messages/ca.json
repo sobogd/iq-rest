@@ -64,6 +64,22 @@
       "viewAll": "Veure Totes les Funcions"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Ja tens un menú en paper?",
+    "subtitle": "Puja una foto — la IA extraurà tots els plats, preus i crearà un menú digital llest per usar en segons.",
+    "uploadButton": "Pujar Fotos del Menú",
+    "loadingTitle": "Creant el teu menú digital...",
+    "loadingSubtitle": "Escanejant plats i generant disseny",
+    "readyTitle": "El teu menú està llest!",
+    "readySubtitle": "Registra't per reclamar-lo i comença a compartir-lo amb els teus clients.",
+    "ctaButton": "Vull aquest menú",
+    "errorTooLarge": "Cada imatge ha de ser inferior a 20MB.",
+    "errorTooMany": "Màxim {count} fotos alhora.",
+    "errorNotMenu": "Això no sembla un menú de restaurant. Si us plau, puja una foto d'un menú.",
+    "errorRateLimit": "Massa sol·licituds. Si us plau, espera un moment i torna-ho a provar.",
+    "errorGeneric": "Alguna cosa ha anat malament. Si us plau, torna-ho a provar."
+  },
   "features": {
     "title": "Funcions Potents per al Menú QR del Teu Restaurant i Lloc Web",
     "subtitle": "Tot el que necessites per crear una presència digital professional per al teu restaurant o cafè",

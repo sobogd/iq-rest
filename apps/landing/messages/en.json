@@ -64,6 +64,22 @@
       "viewAll": "View All Features"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Already have a paper menu?",
+    "subtitle": "Upload a photo — AI will extract all items, prices, and create a ready-to-use digital menu in seconds.",
+    "uploadButton": "Upload Menu Photos",
+    "loadingTitle": "Creating your digital menu...",
+    "loadingSubtitle": "Scanning items and generating design",
+    "readyTitle": "Your menu is ready!",
+    "readySubtitle": "Sign up to claim it and start sharing with customers.",
+    "ctaButton": "I want this menu",
+    "errorTooLarge": "Each image must be under 20MB.",
+    "errorTooMany": "Maximum {count} photos at once.",
+    "errorNotMenu": "This doesn't look like a restaurant menu. Please upload a photo of a menu.",
+    "errorRateLimit": "Too many requests. Please wait a moment and try again.",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
   "features": {
     "title": "Powerful Features for Your Restaurant QR Menu & Website",
     "subtitle": "Everything you need to create a professional digital presence for your restaurant or cafe",

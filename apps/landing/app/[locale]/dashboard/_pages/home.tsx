@@ -54,6 +54,7 @@ interface ChecklistStatus {
   contactsAdded: boolean;
   brandCustomized: boolean;
   startedFromScratch: boolean;
+  fromScanner: boolean;
 }
 
 interface ScanUsage {
@@ -75,7 +76,7 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
   const { translations } = useDashboard();
   const router = useRouter();
 
-  const checklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
+  const allChecklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
     { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
     { key: "templateChosen", translationKey: "checklistTemplate", path: PAGE_PATHS.menu },
     { key: "menuEdited", translationKey: checklist.startedFromScratch ? "checklistMenuFill" : "checklistMenu", path: PAGE_PATHS.menu },
@@ -83,8 +84,13 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
     { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
   ];
 
-  const completedCount = Object.entries(checklist).filter(([k, v]) => k !== "startedFromScratch" && v).length;
-  const allDone = completedCount === 5;
+  // Scanner restaurants: only show contacts + design (first 3 are already done)
+  const checklistKeys = checklist.fromScanner
+    ? allChecklistKeys.filter((item) => item.key === "contactsAdded" || item.key === "brandCustomized")
+    : allChecklistKeys;
+
+  const completedCount = checklistKeys.filter((item) => checklist[item.key]).length;
+  const allDone = completedCount === checklistKeys.length;
 
   useBlockBack();
 
@@ -155,12 +161,12 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
                     <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                       {tHome("getReady")}
                     </span>
-                    <span className="text-sm text-muted-foreground">{completedCount}/5</span>
+                    <span className="text-sm text-muted-foreground">{completedCount}/{checklistKeys.length}</span>
                   </div>
                   <div className="h-2 rounded-full bg-muted overflow-hidden">
                     <div
                       className="h-full rounded-full bg-green-500 transition-all duration-500"
-                      style={{ width: `${(completedCount / 5) * 100}%` }}
+                      style={{ width: `${(completedCount / checklistKeys.length) * 100}%` }}
                     />
                   </div>
                 </div>

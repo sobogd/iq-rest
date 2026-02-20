@@ -64,6 +64,22 @@
       "viewAll": "Vaata Kõiki Funktsioone"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Teil on juba pabermenüü?",
+    "subtitle": "Laadige üles foto — AI eraldab kõik toidud, hinnad ja loob mõne sekundiga kasutusvalmis digitaalse menüü.",
+    "uploadButton": "Laadi üles Menüü Fotod",
+    "loadingTitle": "Teie digitaalse menüü loomine...",
+    "loadingSubtitle": "Toitude skaneerimine ja disaini genereerimine",
+    "readyTitle": "Teie menüü on valmis!",
+    "readySubtitle": "Registreeruge, et see endale saada, ja hakake jagama oma klientidega.",
+    "ctaButton": "Tahan seda menüüd",
+    "errorTooLarge": "Iga pilt peab olema alla 20MB.",
+    "errorTooMany": "Maksimaalselt {count} fotot korraga.",
+    "errorNotMenu": "See ei tundu restorani menüüna. Palun laadige üles menüü foto.",
+    "errorRateLimit": "Liiga palju päringuid. Palun oodake hetk ja proovige uuesti.",
+    "errorGeneric": "Midagi läks valesti. Palun proovige uuesti."
+  },
   "features": {
     "title": "Tugevad funktsioonid teie restorani QR menüü ja veebisaidi jaoks",
     "subtitle": "Kõik, mida vajate, et luua oma restorani või kohviku jaoks professionaalne digitaalne kohalolek",

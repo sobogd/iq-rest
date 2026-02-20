@@ -243,6 +243,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       } else if (res.status === 403) {
         const data = await res.json().catch(() => ({}));
         if (data.error === "limit_reached") {
+          track(DashboardEvent.SHOWED_GENERATE_LIMIT_MODAL);
           setShowGenerateLimitDialog(true);
         } else {
           toast.error(t.generateImageError);

@@ -64,6 +64,22 @@
       "viewAll": "Féach ar Gach Gné"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "An bhfuil biachlár páipéir agat cheana?",
+    "subtitle": "Uaslódáil grianghraf — bainfidh AI na mireanna, praghsanna go léir amach agus cruthóidh sé biachlár digiteach réidh le húsáid i soicindí.",
+    "uploadButton": "Uaslódáil Grianghraif Bhiachlár",
+    "loadingTitle": "Do bhiachlár digiteach á chruthú...",
+    "loadingSubtitle": "Mireanna á scanadh agus dearadh á ghiniúint",
+    "readyTitle": "Tá do bhiachlár réidh!",
+    "readySubtitle": "Cláraigh chun é a éileamh agus tosaigh ag roinnt le do chustaiméirí.",
+    "ctaButton": "Ba mhaith liom an biachlár seo",
+    "errorTooLarge": "Ní mór do gach íomhá a bheith faoi bhun 20MB.",
+    "errorTooMany": "{count} grianghraf ar a mhéad ag aon am amháin.",
+    "errorNotMenu": "Ní cosúil le biachlár bialainne é seo. Uaslódáil grianghraf de bhiachlár le do thoil.",
+    "errorRateLimit": "An iomarca iarratas. Fan nóiméad le do thoil agus bain triail eile as.",
+    "errorGeneric": "Chuaigh rud éigin mícheart. Bain triail eile as le do thoil."
+  },
   "features": {
     "title": "Gnéithe Cumhachtacha do do Mhuinín QR & Suíomh Gréasáin",
     "subtitle": "Gach rud a theastaíonn uait chun láithreacht dhigiteach ghréasáin ghréasáin ghairmiúil a chruthú do do bialann nó do chaifé",

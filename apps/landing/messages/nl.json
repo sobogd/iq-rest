@@ -64,6 +64,22 @@
       "viewAll": "Bekijk Alle Functies"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Heeft u al een papieren menu?",
+    "subtitle": "Upload een foto — AI haalt alle gerechten, prijzen op en maakt in enkele seconden een gebruiksklaar digitaal menu.",
+    "uploadButton": "Menufoto's uploaden",
+    "loadingTitle": "Uw digitale menu wordt aangemaakt...",
+    "loadingSubtitle": "Gerechten scannen en design genereren",
+    "readyTitle": "Uw menu is klaar!",
+    "readySubtitle": "Registreer u om het te claimen en begin met delen met uw klanten.",
+    "ctaButton": "Ik wil dit menu",
+    "errorTooLarge": "Elk bestand mag maximaal 20MB zijn.",
+    "errorTooMany": "Maximaal {count} foto's tegelijk.",
+    "errorNotMenu": "Dit lijkt niet op een restaurantmenu. Upload alstublieft een foto van een menu.",
+    "errorRateLimit": "Te veel verzoeken. Wacht even en probeer het opnieuw.",
+    "errorGeneric": "Er is iets misgegaan. Probeer het opnieuw."
+  },
   "features": {
     "title": "Krachtige functies voor uw restaurant QR-menu en website",
     "subtitle": "Alles wat u nodig heeft om een professionele digitale aanwezigheid voor uw restaurant of café te creëren",

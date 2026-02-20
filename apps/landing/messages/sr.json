@@ -64,6 +64,22 @@
       "viewAll": "Pogledajte Sve Funkcije"
     }
   },
+  "menuScanner": {
+    "badge": "ВИ технологија",
+    "title": "Већ имате папирни мени?",
+    "subtitle": "Отпремите фотографију — ВИ ће извући сва јела, цене и креирати готов дигитални мени за неколико секунди.",
+    "uploadButton": "Отпремите Фотографије Менија",
+    "loadingTitle": "Креирање вашег дигиталног менија...",
+    "loadingSubtitle": "Скенирање јела и генерисање дизајна",
+    "readyTitle": "Ваш мени је спреман!",
+    "readySubtitle": "Региструјте се да га преузмете и почните да делите са својим гостима.",
+    "ctaButton": "Желим овај мени",
+    "errorTooLarge": "Свака слика мора бити мања од 20MB.",
+    "errorTooMany": "Максимално {count} фотографија одједном.",
+    "errorNotMenu": "Ово не изгледа као мени ресторана. Молимо отпремите фотографију менија.",
+    "errorRateLimit": "Превише захтева. Молимо сачекајте тренутак и покушајте поново.",
+    "errorGeneric": "Нешто је пошло наопако. Молимо покушајте поново."
+  },
   "features": {
     "title": "Moćne funkcije za vaš restoran QR meni i veb sajt",
     "subtitle": "Sve što vam je potrebno da kreirate profesionalnu digitalnu prisutnost za vaš restoran ili kafić",

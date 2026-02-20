@@ -64,6 +64,22 @@
       "viewAll": "Pogledajte Sve Funkcije"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Već imate papirnati jelovnik?",
+    "subtitle": "Prenesite fotografiju — AI će izvući sva jela, cijene i stvoriti gotov digitalni jelovnik u nekoliko sekundi.",
+    "uploadButton": "Prenesite Fotografije Jelovnika",
+    "loadingTitle": "Izrada vašeg digitalnog jelovnika...",
+    "loadingSubtitle": "Skeniranje jela i generiranje dizajna",
+    "readyTitle": "Vaš jelovnik je spreman!",
+    "readySubtitle": "Registrirajte se da ga preuzmete i počnite dijeliti s vašim gostima.",
+    "ctaButton": "Želim ovaj jelovnik",
+    "errorTooLarge": "Svaka slika mora biti manja od 20MB.",
+    "errorTooMany": "Maksimalno {count} fotografija odjednom.",
+    "errorNotMenu": "Ovo ne izgleda kao jelovnik restorana. Molimo prenesite fotografiju jelovnika.",
+    "errorRateLimit": "Previše zahtjeva. Molimo pričekajte trenutak i pokušajte ponovo.",
+    "errorGeneric": "Nešto je pošlo po krivu. Molimo pokušajte ponovo."
+  },
   "features": {
     "title": "Moćne značajke za vaš restoran QR jelovnik i web stranicu",
     "subtitle": "Sve što vam je potrebno za stvaranje profesionalne digitalne prisutnosti za vaš restoran ili kafić",

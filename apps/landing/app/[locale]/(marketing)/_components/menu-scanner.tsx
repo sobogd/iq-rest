@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, Loader2, ArrowRight, AlertCircle, Sparkles } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 type State = "idle" | "loading" | "preview" | "error";
 
@@ -40,19 +41,67 @@ function fileToJpegBase64(file: File): Promise<string> {
 const STORAGE_KEY = "scanner_slug";
 
 export function MenuScanner() {
+  const t = useTranslations("menuScanner");
   const [state, setState] = useState<State>("idle");
   const [slug, setSlug] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [iframeLoading, setIframeLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const progressRef = useRef({ startTime: 0, done: false });
+  const rafRef = useRef<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
+
+  // Animated progress bar
+  useEffect(() => {
+    if (state !== "loading") {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      return;
+    }
+
+    progressRef.current = { startTime: Date.now(), done: false };
+    setProgress(0);
+
+    // 0-90% in 2 minutes, last 10% stretches over another 2 minutes
+    const phase1Duration = 120_000;
+    const phase2Duration = 120_000;
+
+    function tick() {
+      if (progressRef.current.done) return;
+      const elapsed = Date.now() - progressRef.current.startTime;
+
+      let pct: number;
+      if (elapsed < phase1Duration) {
+        pct = (elapsed / phase1Duration) * 90;
+      } else {
+        const phase2Elapsed = elapsed - phase1Duration;
+        pct = 90 + (phase2Elapsed / phase2Duration) * 10;
+      }
+
+      setProgress(Math.min(pct, 99.5));
+      rafRef.current = requestAnimationFrame(tick);
+    }
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [state]);
 
   // On mount: check if this user already generated a menu
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
-      setSlug(saved);
-      setState("preview");
+      // Verify the menu still exists
+      fetch(`/m/${saved}`, { method: "HEAD" }).then((res) => {
+        if (res.ok) {
+          setSlug(saved);
+          setState("preview");
+          analytics.marketing.scannerPreviewReturning();
+        } else {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      }).catch(() => {
+        localStorage.removeItem(STORAGE_KEY);
+      });
     }
   }, []);
 
@@ -71,18 +120,19 @@ export function MenuScanner() {
       // Validate file sizes
       for (const file of files) {
         if (file.size > MAX_SIZE) {
-          handleError("Each image must be under 20MB.", "too_large");
+          handleError(t("errorTooLarge"), "too_large");
           return;
         }
       }
 
       if (files.length > MAX_FILES) {
-        handleError(`Maximum ${MAX_FILES} photos at once.`, "too_many");
+        handleError(t("errorTooMany", { count: MAX_FILES }), "too_many");
         return;
       }
 
+      const uploadStartTime = Date.now();
       setState("loading");
-      analytics.marketing.scannerUpload();
+      analytics.marketing.scannerUpload(String(files.length));
 
       try {
         // Convert all files to base64 in parallel
@@ -98,35 +148,35 @@ export function MenuScanner() {
           const data = await res.json().catch(() => ({}));
           console.error("Scan menu error:", res.status, data);
           if (data.error === "not_a_menu") {
-            handleError(
-              "This doesn't look like a restaurant menu. Please upload a photo of a menu.",
-              "not_a_menu"
-            );
+            handleError(t("errorNotMenu"), "not_a_menu");
             return;
           }
           if (data.error === "rate_limit") {
-            handleError(
-              "Too many requests. Please wait a moment and try again.",
-              "rate_limit"
-            );
+            handleError(t("errorRateLimit"), "rate_limit");
             return;
           }
-          handleError("Something went wrong. Please try again.", "api_error");
+          handleError(t("errorGeneric"), "api_error");
           return;
         }
 
         const data = await res.json();
+        // Stop progress animation, jump to 100%
+        progressRef.current.done = true;
+        setProgress(100);
+        // Brief pause at 100% before showing preview
+        await new Promise((r) => setTimeout(r, 400));
         setSlug(data.slug);
         localStorage.setItem(STORAGE_KEY, data.slug);
         setIframeLoading(true);
         setState("preview");
-        analytics.marketing.scannerSuccess();
+        const duration = ((Date.now() - uploadStartTime) / 1000).toFixed(1);
+        analytics.marketing.scannerSuccess(duration);
       } catch (err) {
         console.error("Scan menu network error:", err);
-        handleError("Something went wrong. Please try again.", "network_error");
+        handleError(t("errorGeneric"), "network_error");
       }
     },
-    [handleError]
+    [handleError, t]
   );
 
   const handleFileSelect = useCallback(
@@ -152,20 +202,20 @@ export function MenuScanner() {
     return (
       <section
         ref={previewRef}
-        className="h-[calc(100dvh-64px)] flex flex-col items-center px-4 pt-2 pb-4 lg:justify-center lg:pt-4 scroll-mt-[81px]"
+        className="h-[calc(100svh-64px)] flex flex-col items-center px-4 pt-8 pb-4 lg:justify-center lg:pt-4 scroll-mt-[81px]"
       >
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-1 shrink-0">
-          Your menu is ready!
+          {t("readyTitle")}
         </h2>
         <p className="text-sm text-muted-foreground text-center mb-6 max-w-md shrink-0">
-          Sign up to claim it and start sharing with customers.
+          {t("readySubtitle")}
         </p>
 
         {/* iPhone frame — height-driven, fits between text and button */}
         <div
           className="relative shrink mb-6"
           style={{
-            height: "min(calc(100dvh - 264px), 700px)",
+            height: "min(calc(100svh - 264px), 700px)",
             aspectRatio: "1 / 2",
             maxWidth: "min(80vw, 320px)",
           }}
@@ -189,9 +239,9 @@ export function MenuScanner() {
                 src={`/m/${slug}?preview=1`}
                 className="absolute border-0 origin-top-left"
                 style={{
-                  width: "143%",
-                  height: "143%",
-                  transform: "scale(0.7)",
+                  width: "154%",
+                  height: "154%",
+                  transform: "scale(0.65)",
                 }}
                 title="Menu Preview"
                 onLoad={() => setTimeout(() => setIframeLoading(false), 500)}
@@ -223,7 +273,7 @@ export function MenuScanner() {
           onClick={() => analytics.marketing.scannerCtaClick()}
         >
           <Link href="/dashboard">
-            I want this menu
+            {t("ctaButton")}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </Button>
@@ -238,14 +288,14 @@ export function MenuScanner() {
             {/* Badge */}
             <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4">
               <Sparkles className="w-3.5 h-3.5" />
-              AI-Powered
+              {t("badge")}
             </div>
 
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">
-              Already have a paper menu?
+              {state === "loading" ? t("loadingTitle") : t("title")}
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-md mx-auto">
-              Upload a photo — AI will extract all items, prices, and create a ready-to-use digital menu in seconds.
+              {state === "loading" ? t("loadingSubtitle") : t("subtitle")}
             </p>
 
             {state === "idle" && (
@@ -254,19 +304,21 @@ export function MenuScanner() {
                 onClick={() => fileInputRef.current?.click()}
               >
                 <Upload className="w-5 h-5 mr-2" />
-                Upload Menu Photos
+                {t("uploadButton")}
               </Button>
             )}
 
             {state === "loading" && (
-              <div className="flex flex-col items-center gap-4 py-2">
-                <Loader2 className="w-10 h-10 animate-spin text-primary" />
-                <div>
-                  <p className="font-medium">Creating your digital menu...</p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Scanning items and generating design
-                  </p>
+              <div className="w-full max-w-xs mx-auto">
+                <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-primary rounded-full transition-[width] duration-300 ease-linear"
+                    style={{ width: `${progress}%` }}
+                  />
                 </div>
+                <p className="text-xs text-muted-foreground mt-2 text-center">
+                  {Math.round(progress)}%
+                </p>
               </div>
             )}
 

@@ -64,6 +64,22 @@
       "viewAll": "Se Alle Funktioner"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Har du allerede en papirmenu?",
+    "subtitle": "Upload et foto — AI udtrækker alle retter, priser og opretter en klar-til-brug digital menu på få sekunder.",
+    "uploadButton": "Upload Menufotos",
+    "loadingTitle": "Opretter din digitale menu...",
+    "loadingSubtitle": "Scanner retter og genererer design",
+    "readyTitle": "Din menu er klar!",
+    "readySubtitle": "Tilmeld dig for at gøre krav på den og begynd at dele den med dine kunder.",
+    "ctaButton": "Jeg vil have denne menu",
+    "errorTooLarge": "Hvert billede skal være under 20MB.",
+    "errorTooMany": "Maksimalt {count} fotos ad gangen.",
+    "errorNotMenu": "Dette ligner ikke en restaurantmenu. Upload venligst et foto af en menu.",
+    "errorRateLimit": "For mange forespørgsler. Vent venligst et øjeblik og prøv igen.",
+    "errorGeneric": "Noget gik galt. Prøv venligst igen."
+  },
   "features": {
     "title": "Kraftfulde funktioner til din restaurant QR-menu og hjemmeside",
     "subtitle": "Alt hvad du behøver for at skabe en professionel digital tilstedeværelse for din restaurant eller café",

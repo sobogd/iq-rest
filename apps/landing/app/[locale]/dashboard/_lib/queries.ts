@@ -294,6 +294,7 @@ export async function getChecklistStatus(companyId: string) {
       checklistContactsSaved: true,
       checklistBrandCustomized: true,
       startedFromScratch: true,
+      fromScanner: true,
     },
   });
 
@@ -304,6 +305,7 @@ export async function getChecklistStatus(companyId: string) {
     contactsAdded: restaurant?.checklistContactsSaved ?? false,
     brandCustomized: restaurant?.checklistBrandCustomized ?? false,
     startedFromScratch: restaurant?.startedFromScratch ?? false,
+    fromScanner: restaurant?.fromScanner ?? false,
   };
 }
 

@@ -136,10 +136,12 @@ export const marketing = {
   demoOpen: () => trackEvent("demo_open"),
   demoClose: () => trackEvent("demo_close"),
   // AI Menu Scanner
-  scannerUpload: () => trackEvent("scanner_upload"),
-  scannerSuccess: () => trackEvent("scanner_success"),
+  scannerUpload: (fileCount: string) => trackEvent("scanner_upload", { fileCount }),
+  scannerSuccess: (duration: string) => trackEvent("scanner_success", { duration }),
   scannerError: (reason: string) => trackEvent("scanner_error", { reason }),
   scannerCtaClick: () => trackEvent("scanner_cta_click"),
+  scannerPreviewShown: () => trackEvent("scanner_preview_shown"),
+  scannerPreviewReturning: () => trackEvent("scanner_preview_returning"),
 };
 
 // Section visibility events (landing page sections)

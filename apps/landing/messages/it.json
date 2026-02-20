@@ -64,6 +64,22 @@
       "viewAll": "Visualizza Tutte le Funzionalità"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Hai già un menu cartaceo?",
+    "subtitle": "Carica una foto — l'IA estrarrà tutti i piatti, i prezzi e creerà un menu digitale pronto all'uso in pochi secondi.",
+    "uploadButton": "Carica Foto del Menu",
+    "loadingTitle": "Creazione del tuo menu digitale...",
+    "loadingSubtitle": "Scansione dei piatti e generazione del design",
+    "readyTitle": "Il tuo menu è pronto!",
+    "readySubtitle": "Registrati per rivendicarlo e inizia a condividerlo con i tuoi clienti.",
+    "ctaButton": "Voglio questo menu",
+    "errorTooLarge": "Ogni immagine deve essere inferiore a 20MB.",
+    "errorTooMany": "Massimo {count} foto alla volta.",
+    "errorNotMenu": "Questo non sembra un menu di ristorante. Per favore, carica una foto di un menu.",
+    "errorRateLimit": "Troppe richieste. Per favore, attendi un momento e riprova.",
+    "errorGeneric": "Qualcosa è andato storto. Per favore, riprova."
+  },
   "features": {
     "title": "Funzionalità Potenti per il Menu QR del Tuo Ristorante e Sito Web",
     "subtitle": "Tutto ciò di cui hai bisogno per creare una presenza digitale professionale per il tuo ristorante o caffè",

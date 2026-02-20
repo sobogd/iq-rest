@@ -64,6 +64,22 @@
       "viewAll": "Vezi Toate Funcțiile"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Ai deja un meniu tipărit?",
+    "subtitle": "Încarcă o fotografie — AI va extrage toate preparatele, prețurile și va crea un meniu digital gata de utilizare în câteva secunde.",
+    "uploadButton": "Încarcă Fotografii Meniu",
+    "loadingTitle": "Se creează meniul tău digital...",
+    "loadingSubtitle": "Scanarea preparatelor și generarea designului",
+    "readyTitle": "Meniul tău este gata!",
+    "readySubtitle": "Înregistrează-te pentru a-l revendica și începe să-l distribui clienților tăi.",
+    "ctaButton": "Vreau acest meniu",
+    "errorTooLarge": "Fiecare imagine trebuie să fie sub 20MB.",
+    "errorTooMany": "Maximum {count} fotografii odată.",
+    "errorNotMenu": "Aceasta nu pare a fi un meniu de restaurant. Te rugăm să încarci o fotografie a unui meniu.",
+    "errorRateLimit": "Prea multe cereri. Te rugăm să aștepți un moment și să încerci din nou.",
+    "errorGeneric": "Ceva nu a funcționat corect. Te rugăm să încerci din nou."
+  },
   "features": {
     "title": "Funcții Puternice pentru Meniul QR al Restaurantului și Website-ul Tău",
     "subtitle": "Tot ce ai nevoie pentru a crea o prezență digitală profesională pentru restaurantul sau cafeneaua ta",

@@ -64,6 +64,22 @@
       "viewAll": "Peržiūrėti Visas Funkcijas"
     }
   },
+  "menuScanner": {
+    "badge": "AI-Powered",
+    "title": "Jau turite popierinį meniu?",
+    "subtitle": "Įkelkite nuotrauką — AI ištrauks visus patiekalus, kainas ir per kelias sekundes sukurs paruoštą skaitmeninį meniu.",
+    "uploadButton": "Įkelti Meniu Nuotraukas",
+    "loadingTitle": "Kuriamas jūsų skaitmeninis meniu...",
+    "loadingSubtitle": "Nuskaitomi patiekalai ir generuojamas dizainas",
+    "readyTitle": "Jūsų meniu paruoštas!",
+    "readySubtitle": "Užsiregistruokite, kad jį atsiimtumėte, ir pradėkite dalintis su savo klientais.",
+    "ctaButton": "Noriu šį meniu",
+    "errorTooLarge": "Kiekvienas vaizdas turi būti mažesnis nei 20MB.",
+    "errorTooMany": "Daugiausiai {count} nuotraukų vienu metu.",
+    "errorNotMenu": "Tai neatrodo kaip restorano meniu. Prašome įkelti meniu nuotrauką.",
+    "errorRateLimit": "Per daug užklausų. Palaukite akimirką ir bandykite dar kartą.",
+    "errorGeneric": "Kažkas nutiko. Bandykite dar kartą."
+  },
   "features": {
     "title": "Galingos funkcijos jūsų restorano QR meniu ir svetainei",
     "subtitle": "Viskas, ko reikia, kad sukurtumėte profesionalią skaitmeninę buvimo vietą savo restoranui ar kavinėms",
