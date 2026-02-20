@@ -135,6 +135,11 @@ export const marketing = {
   // Demo modal
   demoOpen: () => trackEvent("demo_open"),
   demoClose: () => trackEvent("demo_close"),
+  // AI Menu Scanner
+  scannerUpload: () => trackEvent("scanner_upload"),
+  scannerSuccess: () => trackEvent("scanner_success"),
+  scannerError: (reason: string) => trackEvent("scanner_error", { reason }),
+  scannerCtaClick: () => trackEvent("scanner_cta_click"),
 };
 
 // Section visibility events (landing page sections)

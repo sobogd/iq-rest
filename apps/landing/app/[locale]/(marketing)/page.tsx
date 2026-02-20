@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { MenuPreviewModal, HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures } from "./_components";
+import { MenuPreviewModal, HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -134,8 +134,8 @@ export default async function HomePage({
           </div>
         </section>
       ) : (
-        <section className="min-h-[calc(100dvh-64px)] flex flex-col relative">
-          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pb-16">
+        <section className="flex flex-col relative">
+          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pt-10 pb-2 lg:pt-16 lg:pb-8">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 lg:gap-12 items-center w-full">
               {/* Left side - Text content */}
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
@@ -192,10 +192,11 @@ export default async function HomePage({
             </div>
           </div>
 
-          {/* Scroll to features indicator - fixed at bottom */}
-          <ScrollToFeatures label={tHero("scrollToFeatures")} />
         </section>
       )}
+
+      {/* AI Menu Scanner */}
+      <MenuScanner />
 
       {/* Features Preview Section */}
       <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20" threshold={0.2}>

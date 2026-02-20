@@ -210,14 +210,36 @@ export async function POST(request: NextRequest) {
       });
     } else {
       // NEW USER - auto-login without OTP verification
-      const companyName = defaultCompanyNames[locale] || defaultCompanyNames.en;
+      const cookieStore = await cookies();
+      const pendingCompanyId = cookieStore.get("pending_company_id")?.value;
 
-      // Create company first
-      const company = await prisma.company.create({
-        data: {
-          name: companyName,
-        },
-      });
+      let company;
+      let onboardingStep = 0;
+      let fromScanner = false;
+
+      if (pendingCompanyId) {
+        // Check if a scanned company exists with no users (orphan from AI scanner)
+        const pendingCompany = await prisma.company.findFirst({
+          where: { id: pendingCompanyId, users: { none: {} } },
+        });
+
+        if (pendingCompany) {
+          company = pendingCompany;
+          onboardingStep = pendingCompany.onboardingStep;
+          fromScanner = true;
+          cookieStore.delete("pending_company_id");
+        }
+      }
+
+      if (!company) {
+        // Normal flow: create new company
+        const companyName = defaultCompanyNames[locale] || defaultCompanyNames.en;
+        company = await prisma.company.create({
+          data: {
+            name: companyName,
+          },
+        });
+      }
 
       // Create user WITHOUT OTP (no verification needed for new users)
       user = await prisma.user.create({
@@ -237,7 +259,6 @@ export async function POST(request: NextRequest) {
 
       // Auto-login: set session cookies
       const sessionToken = generateSessionToken();
-      const cookieStore = await cookies();
 
       cookieStore.set("session", sessionToken, {
         httpOnly: true,
@@ -273,7 +294,8 @@ export async function POST(request: NextRequest) {
         {
           autoLogin: true,
           isNewUser: true,
-          onboardingStep: 0,
+          onboardingStep,
+          fromScanner,
           userId: user.id,
           email: normalizedEmail,
         },

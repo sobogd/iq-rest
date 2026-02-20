@@ -12,3 +12,4 @@ export { MenuPreviewModal } from "./menu-preview-modal";
 export { HeroImages } from "./hero-images";
 export { ImageComposition } from "./image-composition";
 export { CtaSection } from "./cta-section";
+export { MenuScanner } from "./menu-scanner";
