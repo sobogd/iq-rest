@@ -214,14 +214,14 @@ async function sendOwnerEmail(params: {
           ${rows}
         </table>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard/reservations" style="color: #0066cc;">${t.ownerCta}</a>
+          <a href="https://iq-rest.com/dashboard/reservations?from=email" style="color: #0066cc;">${t.ownerCta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
           ${t.ownerSignature}
         </p>
       </div>
     `,
-    text: `${t.ownerGreeting}\n\n${t.ownerBody}\n\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}\n${t.table}: ${params.tableNumber}\nEmail: ${params.guestEmail}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.ownerCta}: https://iq-rest.com/dashboard/reservations\n\n${t.ownerSignature.replace("<br>", "\n")}`,
+    text: `${t.ownerGreeting}\n\n${t.ownerBody}\n\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}\n${t.table}: ${params.tableNumber}\nEmail: ${params.guestEmail}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.ownerCta}: https://iq-rest.com/dashboard/reservations?from=email\n\n${t.ownerSignature.replace("<br>", "\n")}`,
   });
 }
 

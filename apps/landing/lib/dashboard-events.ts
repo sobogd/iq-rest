@@ -384,6 +384,29 @@ function getSessionId(): string {
 }
 
 // Thin wrapper — fire-and-forget, optional meta
+function trackReferral() {
+  if (typeof window === "undefined") return;
+  if (sessionStorage.getItem("referral_sent")) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const from = params.get("from");
+  if (!from) return;
+
+  sessionStorage.setItem("referral_sent", "1");
+
+  const sessionId = getSessionId();
+  const refMeta: Record<string, string> = { from };
+  const slug = params.get("slug");
+  if (slug) refMeta.slug = slug;
+
+  fetch("/api/analytics/event", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ event: `referral_${from}`, sessionId, meta: refMeta }),
+    keepalive: true,
+  }).catch(() => {});
+}
+
 export function track(event: DashboardEvent, meta?: Record<string, string>) {
   if (typeof window === "undefined") return;
   if (typeof localStorage !== "undefined" && localStorage.getItem("analytics_disabled") === "true") return;
@@ -402,6 +425,11 @@ export function track(event: DashboardEvent, meta?: Record<string, string>) {
     body: JSON.stringify({ event, sessionId, ...(meta ? { meta } : {}) }),
     keepalive: true,
   }).catch(() => {});
+
+  // Check referral params on first page view
+  if (event.startsWith("showed_")) {
+    trackReferral();
+  }
 
   // On page views (showed_*), also link session to ensure it stays connected
   if (_userId && event.startsWith("showed_")) {

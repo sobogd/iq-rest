@@ -26,13 +26,13 @@ const EMAIL_TYPES = {
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">${t.helpOffer}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpAction}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+          <a href="https://iq-rest.com/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
     getText: (t: Record<string, string>) =>
-      `${t.greeting}\n\n${t.body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${t.helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`,
+      `${t.greeting}\n\n${t.body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${t.helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard?from=email\n\n${t.signature}`,
   },
   reminder_not_onboarded: {
 
@@ -44,13 +44,13 @@ const EMAIL_TYPES = {
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 12px;">${t.helpOfferNotOnboarded}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpAction}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard" style="color: #0066cc;">${t.cta}</a>
+          <a href="https://iq-rest.com/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
     getText: (t: Record<string, string>) =>
-      `${t.greeting}\n\n${t.bodyNotOnboarded}\n\n${t.helpOfferNotOnboarded}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard\n\n${t.signature}`,
+      `${t.greeting}\n\n${t.bodyNotOnboarded}\n\n${t.helpOfferNotOnboarded}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/dashboard?from=email\n\n${t.signature}`,
   },
 } as const;
 

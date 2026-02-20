@@ -48,7 +48,7 @@ async function sendNewMessageEmail(toEmail: string, locale: string) {
           ${t.body}
         </p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-          <a href="https://iq-rest.com/dashboard?page=support" style="color: #0066cc;">${t.cta}</a>
+          <a href="https://iq-rest.com/dashboard?page=support&from=email" style="color: #0066cc;">${t.cta}</a>
         </p>
         <p style="font-size: 15px; margin: 20px 0 0; color: #1a1a1a;">
           ${t.signature}
@@ -59,7 +59,7 @@ async function sendNewMessageEmail(toEmail: string, locale: string) {
 
 ${t.body}
 
-${t.cta}: https://iq-rest.com/dashboard?page=support
+${t.cta}: https://iq-rest.com/dashboard?page=support&from=email
 
 ${t.signature}`,
   };

@@ -49,7 +49,7 @@ function getAdParams(): { gclid?: string; keyword?: string } | undefined {
   };
 }
 
-function trackEvent(event: string) {
+function trackEvent(event: string, meta?: Record<string, string>) {
   if (typeof window === "undefined" || isTrackingDisabled()) return;
 
   const sessionId = getSessionId();
@@ -62,11 +62,29 @@ function trackEvent(event: string) {
       event,
       sessionId,
       ...adParams,
+      ...(meta && { meta }),
     }),
     keepalive: true,
   }).catch(() => {
     // Silently fail - analytics should never break the app
   });
+}
+
+function trackReferral() {
+  if (typeof window === "undefined" || isTrackingDisabled()) return;
+  if (sessionStorage.getItem("referral_sent")) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const from = params.get("from");
+  if (!from) return;
+
+  sessionStorage.setItem("referral_sent", "1");
+
+  const meta: Record<string, string> = { from };
+  const slug = params.get("slug");
+  if (slug) meta.slug = slug;
+
+  trackEvent(`referral_${from}`, meta);
 }
 
 export function disableTracking() {
@@ -108,6 +126,7 @@ export function linkSession(userId: string): Promise<void> {
 export const page = {
   view: (pageName: string) => {
     trackEvent(`page_view_${pageName.replace(/-/g, "_")}`);
+    trackReferral();
   },
 };
 

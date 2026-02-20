@@ -103,7 +103,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
         {/* Powered by IQ Rest - only for free plan */}
         {restaurant.company.plan === "FREE" && (
           <a
-            href="https://iq-rest.com?from=qrmenu"
+            href={`https://iq-rest.com?from=qrmenu&slug=${slug}`}
             target="_blank"
             rel="noopener noreferrer"
             className="absolute bottom-4 left-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors"

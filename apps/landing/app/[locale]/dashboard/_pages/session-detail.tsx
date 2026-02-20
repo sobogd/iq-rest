@@ -94,7 +94,47 @@ function countryToFlag(countryCode: string): string {
   );
 }
 
-function formatDate(dateString: string) {
+const COUNTRY_TZ: Record<string, string> = {
+  US: "America/New_York", CA: "America/Toronto", MX: "America/Mexico_City",
+  BR: "America/Sao_Paulo", AR: "America/Buenos_Aires", CO: "America/Bogota",
+  CL: "America/Santiago", PE: "America/Lima", VE: "America/Caracas",
+  GB: "Europe/London", IE: "Europe/Dublin", IS: "Atlantic/Reykjavik",
+  DE: "Europe/Berlin", FR: "Europe/Paris", ES: "Europe/Madrid",
+  IT: "Europe/Rome", PT: "Europe/Lisbon", NL: "Europe/Amsterdam",
+  BE: "Europe/Brussels", AT: "Europe/Vienna", CH: "Europe/Zurich",
+  PL: "Europe/Warsaw", CZ: "Europe/Prague", SK: "Europe/Bratislava",
+  HU: "Europe/Budapest", RO: "Europe/Bucharest", BG: "Europe/Sofia",
+  HR: "Europe/Zagreb", SI: "Europe/Ljubljana", RS: "Europe/Belgrade",
+  UA: "Europe/Kyiv", RU: "Europe/Moscow", BY: "Europe/Minsk",
+  SE: "Europe/Stockholm", NO: "Europe/Oslo", DK: "Europe/Copenhagen",
+  FI: "Europe/Helsinki", EE: "Europe/Tallinn", LV: "Europe/Riga",
+  LT: "Europe/Vilnius", GR: "Europe/Athens", TR: "Europe/Istanbul",
+  GE: "Asia/Tbilisi", AM: "Asia/Yerevan", AZ: "Asia/Baku",
+  KZ: "Asia/Almaty", UZ: "Asia/Tashkent",
+  IL: "Asia/Jerusalem", SA: "Asia/Riyadh", AE: "Asia/Dubai",
+  IR: "Asia/Tehran", IQ: "Asia/Baghdad", JO: "Asia/Amman",
+  IN: "Asia/Kolkata", PK: "Asia/Karachi", BD: "Asia/Dhaka",
+  JP: "Asia/Tokyo", KR: "Asia/Seoul", CN: "Asia/Shanghai",
+  TW: "Asia/Taipei", HK: "Asia/Hong_Kong", SG: "Asia/Singapore",
+  MY: "Asia/Kuala_Lumpur", TH: "Asia/Bangkok", VN: "Asia/Ho_Chi_Minh",
+  ID: "Asia/Jakarta", PH: "Asia/Manila",
+  AU: "Australia/Sydney", NZ: "Pacific/Auckland",
+  EG: "Africa/Cairo", ZA: "Africa/Johannesburg", NG: "Africa/Lagos",
+  KE: "Africa/Nairobi", MA: "Africa/Casablanca",
+};
+
+function formatTime(dateString: string, tz?: string) {
+  return new Date(dateString).toLocaleString("en-GB", {
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    ...(tz && { timeZone: tz }),
+  });
+}
+
+function formatDateFull(dateString: string) {
   return new Date(dateString).toLocaleString("en-GB", {
     day: "numeric",
     month: "short",
@@ -227,7 +267,8 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   }
 
   // Session info rows
-  const infoRows: { label: string; value: string; copyable?: boolean; onClick?: () => void }[] = [];
+  const countryTz = session?.country ? COUNTRY_TZ[session.country] : undefined;
+  const infoRows: { label: string; value: string; subValue?: string; copyable?: boolean; onClick?: () => void }[] = [];
   if (session) {
     if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}` });
     if (session.ip) infoRows.push({ label: "IP", value: session.ip, copyable: true });
@@ -241,8 +282,16 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
       value: session.restaurantName,
       onClick: () => router.push(`/dashboard/admin/companies/${session.companyId}`),
     });
-    infoRows.push({ label: "Created", value: formatDate(session.createdAt) });
-    infoRows.push({ label: "Updated", value: formatDate(session.updatedAt) });
+    infoRows.push({
+      label: "Created",
+      value: formatDateFull(session.createdAt),
+      subValue: countryTz ? formatTime(session.createdAt, countryTz) : undefined,
+    });
+    infoRows.push({
+      label: "Updated",
+      value: formatDateFull(session.updatedAt),
+      subValue: countryTz ? formatTime(session.updatedAt, countryTz) : undefined,
+    });
   }
 
   // Active flags
@@ -280,6 +329,9 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                     row.onClick ? "text-blue-500" : ""
                   }`}>
                     {row.value}
+                    {row.subValue && (
+                      <span className="block text-muted-foreground">{row.subValue} {session?.country && countryToFlag(session.country)}</span>
+                    )}
                   </span>
                 </button>
               ))}
@@ -365,13 +417,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                         </p>
                         <div className="flex items-center justify-between mt-0.5">
                           <span className="text-[10px] text-muted-foreground">
-                            {new Date(event.createdAt).toLocaleString("en-GB", {
-                              day: "numeric",
-                              month: "short",
-                              hour: "2-digit",
-                              minute: "2-digit",
-                              second: "2-digit",
-                            })}
+                            {formatTime(event.createdAt)}
                           </span>
                           <span className="text-[10px] font-mono text-muted-foreground">
                             {timeDiff ? `+${timeDiff}` : ""}
