@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { RefreshCw, Trash2 } from "lucide-react";
+import { RefreshCw, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
@@ -148,6 +148,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
+  const [sendingConversion, setSendingConversion] = useState<string | null>(null);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -186,6 +187,33 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
       console.error("Failed to delete session");
     } finally {
       setDeleting(false);
+    }
+  };
+
+  const handleSendConversion = async (eventType: string) => {
+    if (!session?.gclid) return;
+    setSendingConversion(eventType);
+    try {
+      const res = await fetch("/api/admin/analytics/send-conversion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          gclid: session.gclid,
+          conversionDateTime: new Date().toISOString(),
+          eventType,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        toast.success(`Conversion "${eventType}" sent`);
+        fetchData();
+      } else {
+        toast.error(data.error || "Failed to send conversion");
+      }
+    } catch {
+      toast.error("Failed to send conversion");
+    } finally {
+      setSendingConversion(null);
     }
   };
 
@@ -277,6 +305,34 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                 <div className="border-t border-foreground/5 px-4 py-2.5">
                   <p className="text-[10px] text-muted-foreground break-all">{session.userAgent}</p>
                 </div>
+              )}
+            </div>
+          )}
+
+          {/* Manual conversion buttons */}
+          {session?.gclid && (
+            <div className="space-y-2">
+              {!session.conversionViewsSent && (
+                <Button
+                  variant="outline"
+                  className="w-full justify-start gap-2"
+                  onClick={() => handleSendConversion("views_reached")}
+                  disabled={sendingConversion !== null}
+                >
+                  <Send className="h-4 w-4" />
+                  {sendingConversion === "views_reached" ? "Sending..." : "Send conversion: 20 views"}
+                </Button>
+              )}
+              {!session.conversionSubscriptionSent && (
+                <Button
+                  variant="outline"
+                  className="w-full justify-start gap-2"
+                  onClick={() => handleSendConversion("subscription")}
+                  disabled={sendingConversion !== null}
+                >
+                  <Send className="h-4 w-4" />
+                  {sendingConversion === "subscription" ? "Sending..." : "Send conversion: subscription"}
+                </Button>
               )}
             </div>
           )}

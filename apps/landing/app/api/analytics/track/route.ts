@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { uploadClickConversion } from "@/lib/google-ads";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 
@@ -164,30 +163,12 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Check if company reached 20 views → set reached50Views on Session + send conversion
+    // Mark sessions when company reaches 20 views
     if (currentMonthViews + 1 >= 20) {
       await prisma.session.updateMany({
         where: { companyId: company.id, reached50Views: false },
         data: { reached50Views: true },
       });
-
-      // Send Google Ads conversion for views milestone
-      const conversionActionId = process.env.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS;
-      if (conversionActionId) {
-        const sess = await prisma.session.findFirst({
-          where: { companyId: company.id, gclid: { not: null }, conversionViewsSent: false },
-          select: { id: true, gclid: true },
-        });
-        if (sess?.gclid) {
-          const result = await uploadClickConversion(sess.gclid, new Date().toISOString(), undefined, conversionActionId);
-          if (result.success) {
-            await prisma.session.updateMany({
-              where: { companyId: company.id },
-              data: { conversionViewsSent: true },
-            });
-          }
-        }
-      }
     }
 
     const response = NextResponse.json({
