@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight, Loader2, RefreshCw, FolderOpen, Package, Eye, MessageSquare, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/i18n/routing";
@@ -45,6 +45,8 @@ export function AdminPage() {
   const filterParam = searchParams.get("filter") as Filter | null;
   const filter: Filter = filterParam && FILTERS.includes(filterParam) ? filterParam : "all";
   const currentPage = Math.max(0, Number(searchParams.get("page") || 0));
+  const scrollParam = searchParams.get("scroll");
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const [companies, setCompanies] = useState<Company[]>([]);
   const [total, setTotal] = useState(0);
@@ -75,6 +77,12 @@ export function AdminPage() {
     fetchCompanies(filter, currentPage);
   }, [filter, currentPage, refreshKey, fetchCompanies]);
 
+  useEffect(() => {
+    if (!loading && scrollParam && scrollRef.current) {
+      scrollRef.current.scrollTop = Number(scrollParam);
+    }
+  }, [loading, scrollParam]);
+
   if (loading && companies.length === 0) {
     return <PageLoader />;
   }
@@ -82,11 +90,20 @@ export function AdminPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Companies" backHref="/dashboard">
-        <Button variant="ghost" size="icon" onClick={() => setRefreshKey((k) => k + 1)}>
+        <Button variant="ghost" size="icon" onClick={() => {
+          const scroll = Math.round(scrollRef.current?.scrollTop || 0);
+          const params = new URLSearchParams();
+          if (filter !== "all") params.set("filter", filter);
+          if (currentPage > 0) params.set("page", String(currentPage));
+          if (scroll > 0) params.set("scroll", String(scroll));
+          const url = "/dashboard/admin" + (params.toString() ? `?${params}` : "");
+          router.replace(url);
+          setRefreshKey((k) => k + 1);
+        }}>
           <RefreshCw className="h-4 w-4" />
         </Button>
       </PageHeader>
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+      <div ref={scrollRef} className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
           {/* Filter tabs */}
           <div className="flex gap-2">
@@ -125,7 +142,15 @@ export function AdminPage() {
                 return (
                   <button
                     key={company.id}
-                    onClick={() => router.push(`/dashboard/admin/companies/${company.id}`)}
+                    onClick={() => {
+                      const scroll = scrollRef.current?.scrollTop || 0;
+                      const params = new URLSearchParams();
+                      if (filter !== "all") params.set("filter", filter);
+                      if (currentPage > 0) params.set("page", String(currentPage));
+                      if (scroll > 0) params.set("scroll", String(Math.round(scroll)));
+                      const backUrl = "/dashboard/admin" + (params.toString() ? `?${params}` : "");
+                      router.push(`/dashboard/admin/companies/${company.id}?back=${encodeURIComponent(backUrl)}`);
+                    }}
                     className={`flex items-center gap-2.5 w-full px-4 py-2.5 hover:bg-muted/30 transition-colors text-left ${
                       index > 0 ? "border-t border-foreground/5" : ""
                     }`}

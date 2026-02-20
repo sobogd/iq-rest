@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { Loader2, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoader } from "../_ui/page-loader";
@@ -66,6 +66,9 @@ export function SessionsPage() {
   const periodParam = searchParams.get("period") as Period | null;
   const period: Period = periodParam && PERIODS.includes(periodParam) ? periodParam : "today";
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollParam = searchParams.get("scroll");
+
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
@@ -89,6 +92,13 @@ export function SessionsPage() {
     fetchSessions(period);
   }, [period, refreshKey, fetchSessions]);
 
+  // Restore scroll position after data loads
+  useEffect(() => {
+    if (!loading && scrollParam && scrollRef.current) {
+      scrollRef.current.scrollTop = Number(scrollParam);
+    }
+  }, [loading, scrollParam]);
+
   if (loading && sessions.length === 0) {
     return <PageLoader />;
   }
@@ -96,11 +106,19 @@ export function SessionsPage() {
   return (
     <div className="flex flex-col h-full">
       <PageHeader title="Sessions" backHref="/dashboard">
-        <Button variant="ghost" size="icon" onClick={() => setRefreshKey((k) => k + 1)}>
+        <Button variant="ghost" size="icon" onClick={() => {
+          const scroll = Math.round(scrollRef.current?.scrollTop || 0);
+          const params = new URLSearchParams();
+          if (period !== "today") params.set("period", period);
+          if (scroll > 0) params.set("scroll", String(scroll));
+          const url = "/dashboard/sessions" + (params.toString() ? `?${params}` : "");
+          router.replace(url);
+          setRefreshKey((k) => k + 1);
+        }}>
           <RefreshCw className="h-4 w-4" />
         </Button>
       </PageHeader>
-      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+      <div ref={scrollRef} className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto space-y-4">
           {/* Period tabs */}
           <div className="flex gap-2">
@@ -136,7 +154,14 @@ export function SessionsPage() {
               {sessions.map((session, index) => (
                 <button
                   key={session.sessionId}
-                  onClick={() => router.push(`/dashboard/sessions/${session.sessionId}`)}
+                  onClick={() => {
+                    const scroll = scrollRef.current?.scrollTop || 0;
+                    const params = new URLSearchParams();
+                    if (period !== "today") params.set("period", period);
+                    if (scroll > 0) params.set("scroll", String(Math.round(scroll)));
+                    const backUrl = "/dashboard/sessions" + (params.toString() ? `?${params}` : "");
+                    router.push(`/dashboard/sessions/${session.sessionId}?back=${encodeURIComponent(backUrl)}`);
+                  }}
                   className={`flex items-center gap-2.5 w-full px-3 py-2 hover:bg-muted/30 transition-colors text-left ${
                     index > 0 ? "border-t border-foreground/5" : ""
                   }`}

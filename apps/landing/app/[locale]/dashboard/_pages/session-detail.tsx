@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
 import { toast } from "sonner";
 
@@ -184,6 +185,8 @@ const FLAG_LABELS: Record<string, string> = {
 
 export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const backHref = searchParams.get("back") || "/dashboard/sessions";
   const [session, setSession] = useState<SessionData | null>(null);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -221,7 +224,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
         body: JSON.stringify({ sessionId }),
       });
       if (res.ok) {
-        router.push("/dashboard/sessions");
+        router.push(backHref);
       }
     } catch {
       console.error("Failed to delete session");
@@ -280,7 +283,20 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
     if (session.restaurantName) infoRows.push({
       label: "Restaurant",
       value: session.restaurantName,
-      onClick: () => router.push(`/dashboard/admin/companies/${session.companyId}`),
+      onClick: () => {
+        const isFromCompany = backHref.startsWith("/dashboard/admin/companies/");
+        if (isFromCompany) {
+          // Came from company (which came from company list) → extract company list URL
+          const qIndex = backHref.indexOf("?");
+          const nestedParams = qIndex >= 0 ? new URLSearchParams(backHref.slice(qIndex + 1)) : null;
+          const companyListUrl = nestedParams?.get("back") || "/dashboard/admin";
+          router.push(`/dashboard/admin/companies/${session.companyId}?back=${encodeURIComponent(companyListUrl)}`);
+        } else {
+          // Came from sessions list → company back should return to this session
+          const currentUrl = `/dashboard/sessions/${sessionId}${backHref !== "/dashboard/sessions" ? `?back=${encodeURIComponent(backHref)}` : ""}`;
+          router.push(`/dashboard/admin/companies/${session.companyId}?back=${encodeURIComponent(currentUrl)}`);
+        }
+      },
     });
     infoRows.push({
       label: "Created",
@@ -301,7 +317,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title="Session" backHref="/dashboard/sessions">
+      <PageHeader title="Session" backHref={backHref}>
         <Button variant="ghost" size="icon" onClick={fetchData}>
           <RefreshCw className="h-4 w-4" />
         </Button>

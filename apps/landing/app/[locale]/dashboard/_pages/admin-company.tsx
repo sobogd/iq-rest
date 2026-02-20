@@ -38,6 +38,7 @@ import {
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
@@ -100,6 +101,8 @@ interface AdminCompanyPageProps {
 
 export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const backHref = searchParams.get("back") || "/dashboard/admin";
   const [company, setCompany] = useState<Company | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -204,7 +207,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
       if (res.ok) {
         toast.success(`Company "${company.name}" deleted`);
-        router.push("/dashboard/admin");
+        router.push(backHref);
       } else {
         const data = await res.json();
         toast.error(data.error || "Failed to delete");
@@ -310,7 +313,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
   if (error || !company) {
     return (
       <div className="flex flex-col h-full">
-        <PageHeader title="Company" backHref="/dashboard/admin" />
+        <PageHeader title="Company" backHref={backHref} />
         <div className="flex items-center justify-center h-full">
           <p className="text-muted-foreground">{error || "Not found"}</p>
         </div>
@@ -358,7 +361,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={title} backHref="/dashboard/admin">
+      <PageHeader title={title} backHref={backHref}>
         <Button variant="ghost" size="icon" onClick={fetchCompany}>
           <RefreshCw className="h-4 w-4" />
         </Button>
@@ -448,7 +451,27 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
                   <Button
                     variant="outline"
                     className="w-full"
-                    onClick={() => router.push(`/dashboard/sessions/${company.sessionId}`)}
+                    onClick={() => {
+                      // Build current company URL with its back param so the chain is preserved:
+                      // company list → company (back=list) → session (back=company?back=list) → back → company → back → list
+                      // sessions list → session (back=list) → company (back=session?back=list) → View Session:
+                      //   extract nested back to skip company: session (back=list) → back → list
+                      const isFromSession = backHref.startsWith("/dashboard/sessions/");
+                      if (isFromSession) {
+                        // Came from session → extract sessions list URL to avoid loop
+                        const qIndex = backHref.indexOf("?");
+                        const nestedParams = qIndex >= 0 ? new URLSearchParams(backHref.slice(qIndex + 1)) : null;
+                        const sessionsListUrl = nestedParams?.get("back");
+                        const url = sessionsListUrl
+                          ? `/dashboard/sessions/${company.sessionId}?back=${encodeURIComponent(sessionsListUrl)}`
+                          : `/dashboard/sessions/${company.sessionId}`;
+                        router.push(url);
+                      } else {
+                        // Came from company list → session should return here
+                        const currentUrl = `/dashboard/admin/companies/${companyId}${backHref !== "/dashboard/admin" ? `?back=${encodeURIComponent(backHref)}` : ""}`;
+                        router.push(`/dashboard/sessions/${company.sessionId}?back=${encodeURIComponent(currentUrl)}`);
+                      }
+                    }}
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     View Session
