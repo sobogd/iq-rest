@@ -142,6 +142,7 @@ export const marketing = {
   scannerCtaClick: () => trackEvent("scanner_cta_click"),
   scannerPreviewShown: () => trackEvent("scanner_preview_shown"),
   scannerPreviewReturning: () => trackEvent("scanner_preview_returning"),
+  scannerConversion: () => trackEvent("scanner_conversion"),
 };
 
 // Section visibility events (landing page sections)

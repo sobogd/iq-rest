@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
+import { getTimezoneForCountry } from "@/lib/country-timezone-map";
 
 const PLAN_LIMITS: Record<string, number> = {
   FREE: 400,
@@ -9,16 +10,38 @@ const PLAN_LIMITS: Record<string, number> = {
   PRO: Infinity,
 };
 
-function getLast7Days(viewsByDay: { date: Date; count: bigint }[]) {
+function nowInTimezone(tz: string) {
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: tz,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const parts = fmt.formatToParts(new Date());
+  const year = Number(parts.find((p) => p.type === "year")!.value);
+  const month = Number(parts.find((p) => p.type === "month")!.value) - 1;
+  const day = Number(parts.find((p) => p.type === "day")!.value);
+  return { year, month, day };
+}
+
+function localToUtc(year: number, month: number, day: number, tz: string): Date {
+  const local = new Date(Date.UTC(year, month, day));
+  const utcStr = local.toLocaleString("en-US", { timeZone: "UTC" });
+  const tzStr = local.toLocaleString("en-US", { timeZone: tz });
+  const offsetMs = new Date(utcStr).getTime() - new Date(tzStr).getTime();
+  return new Date(local.getTime() + offsetMs);
+}
+
+function getLast7Days(viewsByDay: { date: string; count: bigint }[], tz: string) {
   const result: { date: string; count: number }[] = [];
   const dataMap = new Map(
-    viewsByDay.map((v) => [v.date.toISOString().split("T")[0], Number(v.count)])
+    viewsByDay.map((v) => [v.date, Number(v.count)])
   );
 
+  const { year, month, day } = nowInTimezone(tz);
   for (let i = 6; i >= 0; i--) {
-    const date = new Date();
-    date.setDate(date.getDate() - i);
-    const dateStr = date.toISOString().split("T")[0];
+    const d = new Date(Date.UTC(year, month, day - i));
+    const dateStr = d.toISOString().split("T")[0];
     result.push({
       date: dateStr,
       count: dataMap.get(dateStr) || 0,
@@ -52,73 +75,46 @@ export async function GET() {
       return NextResponse.json({ error: "Company not found" }, { status: 404 });
     }
 
-    // Get date ranges
-    const now = new Date();
-    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const startOfWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const country = cookieStore.get("geo_country")?.value || "";
+    const tz = getTimezoneForCountry(country);
 
-    // Get stats
+    const { year, month, day } = nowInTimezone(tz);
+    const startOfToday = localToUtc(year, month, day, tz);
+    const startOfWeek = localToUtc(year, month, day - 7, tz);
+    const startOfMonth = localToUtc(year, month, 1, tz);
+
     const [monthlyViews, weeklyViews, todayViews, uniqueSessions, viewsByPage, viewsByLanguage, viewsByDay] = await Promise.all([
-      // Monthly views
       prisma.pageView.count({
-        where: {
-          companyId: company.id,
-          createdAt: { gte: startOfMonth },
-        },
+        where: { companyId: company.id, createdAt: { gte: startOfMonth } },
       }),
-      // Weekly views
       prisma.pageView.count({
-        where: {
-          companyId: company.id,
-          createdAt: { gte: startOfWeek },
-        },
+        where: { companyId: company.id, createdAt: { gte: startOfWeek } },
       }),
-      // Today views
       prisma.pageView.count({
-        where: {
-          companyId: company.id,
-          createdAt: { gte: startOfToday },
-        },
+        where: { companyId: company.id, createdAt: { gte: startOfToday } },
       }),
-      // Unique sessions this week
       prisma.pageView.groupBy({
         by: ["sessionId"],
-        where: {
-          companyId: company.id,
-          createdAt: { gte: startOfWeek },
-        },
+        where: { companyId: company.id, createdAt: { gte: startOfWeek } },
       }),
-      // Views by page this week
       prisma.pageView.groupBy({
         by: ["page"],
-        where: {
-          companyId: company.id,
-          createdAt: { gte: startOfWeek },
-        },
-        _count: {
-          page: true,
-        },
+        where: { companyId: company.id, createdAt: { gte: startOfWeek } },
+        _count: { page: true },
       }),
-      // Views by language this week
       prisma.pageView.groupBy({
         by: ["language"],
-        where: {
-          companyId: company.id,
-          createdAt: { gte: startOfWeek },
-        },
-        _count: {
-          language: true,
-        },
+        where: { companyId: company.id, createdAt: { gte: startOfWeek } },
+        _count: { language: true },
       }),
-      // Views by day (last 7 days)
-      prisma.$queryRaw<{ date: Date; count: bigint }[]>`
-        SELECT DATE("createdAt") as date, COUNT(*) as count
+      prisma.$queryRaw<{ date: string; count: bigint }[]>`
+        SELECT to_char(DATE("createdAt" AT TIME ZONE ${tz}), 'YYYY-MM-DD') as date,
+               COUNT(*) as count
         FROM page_views
         WHERE "companyId" = ${company.id}
           AND "createdAt" >= ${startOfWeek}
-        GROUP BY DATE("createdAt")
-        ORDER BY date ASC
+        GROUP BY DATE("createdAt" AT TIME ZONE ${tz})
+        ORDER BY DATE("createdAt" AT TIME ZONE ${tz}) ASC
       `,
     ]);
 
@@ -171,7 +167,7 @@ export async function GET() {
         language: v.language,
         count: v._count.language,
       })),
-      viewsByDay: getLast7Days(viewsByDay),
+      viewsByDay: getLast7Days(viewsByDay, tz),
       deviceStats: {
         devices: sortByCount(deviceMap),
         browsers: sortByCount(browserMap),

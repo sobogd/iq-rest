@@ -155,16 +155,42 @@ export async function getScanUsage(companyId: string) {
 }
 
 // ---- Dashboard Analytics ----
-function getLast7Days(viewsByDay: { date: Date; count: bigint }[]) {
+
+/** Compute "now" parts in the given IANA timezone */
+function nowInTimezone(tz: string) {
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: tz,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const parts = fmt.formatToParts(new Date());
+  const year = Number(parts.find((p) => p.type === "year")!.value);
+  const month = Number(parts.find((p) => p.type === "month")!.value) - 1;
+  const day = Number(parts.find((p) => p.type === "day")!.value);
+  return { year, month, day };
+}
+
+/** Convert a local date in a timezone to a UTC Date */
+function localToUtc(year: number, month: number, day: number, tz: string): Date {
+  // Build an ISO string for midnight local, then compute the UTC offset
+  const local = new Date(Date.UTC(year, month, day));
+  const utcStr = local.toLocaleString("en-US", { timeZone: "UTC" });
+  const tzStr = local.toLocaleString("en-US", { timeZone: tz });
+  const offsetMs = new Date(utcStr).getTime() - new Date(tzStr).getTime();
+  return new Date(local.getTime() + offsetMs);
+}
+
+function getLast7Days(viewsByDay: { date: string; count: bigint }[], tz: string) {
   const result: { date: string; count: number }[] = [];
   const dataMap = new Map(
-    viewsByDay.map((v) => [v.date.toISOString().split("T")[0], Number(v.count)])
+    viewsByDay.map((v) => [v.date, Number(v.count)])
   );
 
+  const { year, month, day } = nowInTimezone(tz);
   for (let i = 6; i >= 0; i--) {
-    const date = new Date();
-    date.setDate(date.getDate() - i);
-    const dateStr = date.toISOString().split("T")[0];
+    const d = new Date(Date.UTC(year, month, day - i));
+    const dateStr = d.toISOString().split("T")[0];
     result.push({
       date: dateStr,
       count: dataMap.get(dateStr) || 0,
@@ -174,7 +200,7 @@ function getLast7Days(viewsByDay: { date: Date; count: bigint }[]) {
   return result;
 }
 
-export async function getDashboardAnalytics(companyId: string) {
+export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   const company = await prisma.company.findUnique({
     where: { id: companyId },
     select: { plan: true },
@@ -187,10 +213,10 @@ export async function getDashboardAnalytics(companyId: string) {
     PRO: Infinity,
   };
 
-  const now = new Date();
-  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-  const startOfWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const { year, month, day } = nowInTimezone(tz);
+  const startOfToday = localToUtc(year, month, day, tz);
+  const startOfWeek = localToUtc(year, month, day - 7, tz);
+  const startOfMonth = localToUtc(year, month, 1, tz);
 
   const [monthlyViews, weeklyViews, todayViews, uniqueSessions, viewsByPage, viewsByLanguage, viewsByDay] = await Promise.all([
     prisma.pageView.count({
@@ -216,13 +242,14 @@ export async function getDashboardAnalytics(companyId: string) {
       where: { companyId, createdAt: { gte: startOfWeek } },
       _count: { language: true },
     }),
-    prisma.$queryRaw<{ date: Date; count: bigint }[]>`
-      SELECT DATE("createdAt") as date, COUNT(*) as count
+    prisma.$queryRaw<{ date: string; count: bigint }[]>`
+      SELECT to_char(DATE("createdAt" AT TIME ZONE ${tz}), 'YYYY-MM-DD') as date,
+             COUNT(*) as count
       FROM page_views
       WHERE "companyId" = ${companyId}
         AND "createdAt" >= ${startOfWeek}
-      GROUP BY DATE("createdAt")
-      ORDER BY date ASC
+      GROUP BY DATE("createdAt" AT TIME ZONE ${tz})
+      ORDER BY DATE("createdAt" AT TIME ZONE ${tz}) ASC
     `,
   ]);
 
@@ -275,7 +302,7 @@ export async function getDashboardAnalytics(companyId: string) {
       language: v.language,
       count: v._count.language,
     })),
-    viewsByDay: getLast7Days(viewsByDay),
+    viewsByDay: getLast7Days(viewsByDay, tz),
     deviceStats: {
       devices: sortByCount(deviceMap),
       browsers: sortByCount(browserMap),

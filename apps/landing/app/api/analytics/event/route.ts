@@ -10,6 +10,7 @@ const CONVERSION_FLAGS: Record<string, string> = {
   auth_signup: "wasRegistered",
   clicked_onboarding_continue: "namedRestaurant",
   clicked_onboarding_type: "selectedType",
+  scanner_conversion: "selectedType",
 };
 
 export async function POST(request: NextRequest) {
@@ -93,8 +94,8 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Auto-send Google Ads conversion when type is selected and session has gclid
-    if (event === "clicked_onboarding_type" && sessionGclid && !existing?.conversionSent) {
+    // Auto-send Google Ads conversion when type is selected (or scanner user signs up) and session has gclid
+    if ((event === "clicked_onboarding_type" || event === "scanner_conversion") && sessionGclid && !existing?.conversionSent) {
       const result = await uploadClickConversion(sessionGclid, new Date().toISOString());
       if (result.success) {
         await prisma.session.update({

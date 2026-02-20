@@ -49,6 +49,9 @@ export function LoginPage() {
           if (data.isNewUser) {
             track(DashboardEvent.AUTH_SIGNUP);
           }
+          if (data.fromScanner) {
+            analytics.marketing.scannerConversion();
+          }
           await analytics.linkSession(data.userId);
 
           // Redirect based on onboarding step

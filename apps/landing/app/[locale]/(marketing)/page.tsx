@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
@@ -62,6 +63,9 @@ export default async function HomePage({
 }) {
   const { v: variant } = await searchParams;
   const isVariantB = variant === "b";
+
+  const cookieStore = await cookies();
+  const isLoggedIn = !!cookieStore.get("user_email")?.value;
 
   const tHero = await getTranslations("home.hero");
   const tFeatures = await getTranslations("features");
@@ -196,7 +200,7 @@ export default async function HomePage({
       )}
 
       {/* AI Menu Scanner */}
-      <MenuScanner />
+      {!isLoggedIn && <MenuScanner />}
 
       {/* Features Preview Section */}
       <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20" threshold={0.2}>

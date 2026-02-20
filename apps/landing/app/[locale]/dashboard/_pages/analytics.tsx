@@ -202,7 +202,7 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
         >
           {(data.viewsByDay || []).map((item, index) => {
             const height = dayHeights[index];
-            const dayLabel = new Date(item.date).toLocaleDateString("en", { weekday: "short" });
+            const dayLabel = new Date(item.date + "T12:00:00").toLocaleDateString(undefined, { weekday: "short" });
 
             return (
               <div
