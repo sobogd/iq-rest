@@ -16,6 +16,10 @@
     "noLanguagesFound": "Aucune langue trouvée"
   },
   "home": {
+    "meta": {
+      "title": "Menu QR & Site Web Restaurant en 5 Minutes | Créateur de Menu Digital Gratuit - IQ Rest",
+      "description": "Créez un menu QR et un site web de restaurant avec juste votre email. Configuration instantanée, gestion mobile, traductions IA, analyses quotidiennes. Parfait pour restaurants et cafés. Commencez gratuitement aujourd'hui."
+    },
     "hero": {
       "title": "Lancez votre menu QR'{mbr}' et site web en 1 minute",
       "subtitle": "Il vous suffit d'entrer votre email et d'obtenir un site web complet pour votre restaurant avec menu QR, page de contact, support multilingue et design moderne. Configurez tout depuis votre téléphone.",
@@ -89,6 +93,52 @@
     "readyTitle": "Prêt à commencer ?",
     "readyDescription": "Créez votre menu QR professionnel et votre site Web de restaurant en quelques minutes. Toutes les fonctionnalités incluses.",
     "keyBenefits": "Avantages clés",
+    "seo": {
+      "instant-setup": {
+        "title": "Configuration Instantanée du Menu QR & Site Web Restaurant | Créer en 5 Minutes - IQ Rest",
+        "description": "Créez votre site web de restaurant et menu QR avec juste un email. Prêt en 5 minutes, aucune compétence technique requise. Configuration instantanée pour restaurants et cafés."
+      },
+      "mobile-management": {
+        "title": "Gestion Mobile du Menu Restaurant | Gérer le Menu QR depuis le Téléphone - IQ Rest",
+        "description": "Gérez tout le menu de votre restaurant depuis votre smartphone. Ajoutez des plats, mettez à jour les prix, téléchargez des photos — tout depuis votre appareil mobile. Tableau de bord 100% mobile."
+      },
+      "ai-translation": {
+        "title": "Traduction de Menu par AI pour Restaurants | Menu QR Multilingue - IQ Rest",
+        "description": "Traduisez le menu de votre restaurant dans plus de 10 langues avec l'AI. Traduction contextuelle qui comprend la gastronomie et les termes culinaires. Servez les clients internationaux."
+      },
+      "multilingual": {
+        "title": "Site Web Restaurant Multilingue | Menu QR Multi-Langues - IQ Rest",
+        "description": "Créez un site web multilingue pour votre restaurant. Les clients changent de langue d'un simple toucher. Parfait pour les zones touristiques et les villes internationales."
+      },
+      "ai-images": {
+        "title": "Optimisation d'Images par AI pour Menu Restaurant | Photos à Chargement Rapide - IQ Rest",
+        "description": "Optimisation automatique des images pour le menu de votre restaurant. L'AI améliore et compresse les photos pour un chargement rapide tout en maintenant la qualité. Belles photos de plats."
+      },
+      "easy-menu": {
+        "title": "Gestion Facile du Menu Restaurant | Éditeur de Menu Drag & Drop - IQ Rest",
+        "description": "Gérez facilement le menu de votre restaurant avec le Drag & Drop intuitif. Ajoutez des catégories, créez des plats, fixez les prix — les changements apparaissent instantanément sur votre menu QR."
+      },
+      "analytics": {
+        "title": "Analytique du Menu Restaurant | Statistiques & Insights du Menu QR - IQ Rest",
+        "description": "Suivez les performances du menu de votre restaurant avec des analyses détaillées. Vues quotidiennes, préférences linguistiques, pages populaires — prenez des décisions basées sur les données."
+      },
+      "reservations": {
+        "title": "Réservations de Tables en Ligne pour Restaurants | Système de Réservation - IQ Rest",
+        "description": "Acceptez les réservations de tables en ligne directement depuis votre site web de restaurant. Confirmation automatique ou manuelle, notifications par email, gestion des tables."
+      },
+      "custom-design": {
+        "title": "Arrière-plans Vidéo & Photo pour Site Web Restaurant - IQ Rest",
+        "description": "Créez des premières impressions saisissantes avec des arrière-plans vidéo ou photo sur votre site web de restaurant. Téléchargez des vidéos d'ambiance ou de belles photos culinaires."
+      },
+      "color-scheme": {
+        "title": "Palette de Couleurs Personnalisée pour Site Web Restaurant | Couleurs de Marque - IQ Rest",
+        "description": "Harmonisez la marque de votre restaurant avec des palettes de couleurs personnalisées. Choisissez les couleurs d'accent, support automatique du thème clair/sombre. Menu de marque professionnel."
+      },
+      "personal-support": {
+        "title": "Support Personnel pour Menu QR Restaurant | Aide Humaine Réelle - IQ Rest",
+        "description": "Obtenez un support en ligne individuel pour votre restaurant. De vraies personnes, pas des chatbots, vous aident avec la configuration, l'optimisation et toutes vos questions."
+      }
+    },
     "faqTitle": "Questions Fréquemment Posées",
     "faq": {
       "instant-setup": [
@@ -436,6 +486,10 @@
     ]
   },
   "pricing": {
+    "meta": {
+      "title": "Menu QR & Site Web pour Restaurant ou Café | Tarifs à partir de €0 - IQ Rest",
+      "description": "Créez un menu QR et un site web pour votre restaurant ou café. Plan gratuit avec 500 scans/mois. Menu digital avec traductions IA, analyses et mises à jour instantanées. Commencez gratuitement aujourd'hui !"
+    },
     "title": "Tarification du Menu QR & du Site Web de Restaurant",
     "subtitle": "Pas de frais cachés, pas de surprises. Lancez le site web de votre restaurant gratuitement aujourd'hui — passez à la version supérieure seulement lorsque vous êtes prêt à grandir.",
     "seo": {
@@ -533,6 +587,10 @@
     ]
   },
   "contacts": {
+    "meta": {
+      "title": "Contactez-nous - Aide pour votre Menu QR Restaurant | IQ Rest",
+      "description": "Contactez l'équipe IQ Rest. Nous sommes là pour vous aider avec votre menu QR digital pour restaurant ou café. Support personnalisé par de vraies personnes."
+    },
     "title": "Besoin d'aide ? Discutons",
     "subtitle": "Bonjour, je suis Bogdan — fondateur d'IQ Rest. J'ai créé cette plateforme pour mon propre café et maintenant elle aide des centaines de restaurants dans le monde entier. Vous avez une question ou une idée ? Écrivez-moi directement. Pas de bots, pas d'attente — juste une vraie conversation.",
     "story": {
@@ -934,6 +992,126 @@
           "conclusionText": "Avec nos nouveaux plans d'abonnement, créer un menu QR professionnel et un site web de restaurant n'a jamais été aussi accessible. Commencez avec notre plan Gratuit pour découvrir la plateforme, puis mettez à niveau à mesure que votre restaurant grandit. Nos options de facturation flexibles, nos prix transparents et notre activation instantanée signifient que vous pouvez avoir votre menu numérique opérationnel en quelques minutes. Rejoignez des milliers de restaurants utilisant déjà IQ Rest pour se connecter avec leurs clients grâce à des menus QR modernes et adaptés aux mobiles.",
           "ctaText": "Prêt à choisir votre plan pour le menu QR et le site web de restaurant ?",
           "ctaButton": "Voir les Plans de Tarification"
+        }
+      },
+      "ai-menu-scanner-create-digital-qr-menu": {
+        "title": "Scanner de Menu IA : Créez un Menu QR Numérique à Partir d'une Photo",
+        "description": "Téléchargez une photo de votre menu papier et l'IA crée instantanément un menu QR numérique complet pour votre restaurant. Extraction de plats, génération d'arrière-plans et mise en ligne en minutes.",
+        "meta": {
+          "title": "Scanner de Menu IA - Créer Menu QR Numérique depuis Photo | IQ Rest",
+          "description": "Téléchargez une photo de votre menu papier et l'IA crée instantanément un menu QR numérique pour votre restaurant. Extraction automatique, génération d'arrière-plans IA et aperçu instantané."
+        },
+        "content": {
+          "intro": "IQ Rest présente le Scanner de Menu IA — le moyen le plus rapide de créer un menu QR numérique pour votre restaurant. Prenez simplement une photo de votre menu papier existant et notre technologie IA extrait tous les plats avec noms, descriptions et prix.",
+          "image1Alt": "Scanner de menu IA créant un menu QR numérique à partir d'une photo",
+          "image1Caption": "Téléchargez une photo de votre menu papier et l'IA crée un menu QR numérique complet",
+          "section1Title": "Comment le Scanner IA Crée Votre Menu QR Numérique",
+          "section1Text": "Le processus est simple : ouvrez IQ Rest, appuyez sur le scanner sur la page d'accueil et prenez une photo de votre menu papier. Notre IA analyse l'image, reconnaît les noms de plats, descriptions et prix, et crée automatiquement des catégories avec tous les articles.",
+          "section2Title": "Arrière-Plans Générés par IA pour le Site Web de Votre Restaurant",
+          "section2Text": "En plus d'extraire les articles du menu, le Scanner IA génère une image d'arrière-plan professionnelle pour le site web de votre restaurant. Basé sur votre type de restaurant et cuisine, il crée une image visuellement attrayante.",
+          "section3Title": "Du Menu Papier au Menu QR Numérique en Minutes",
+          "section3Text": "Le Scanner de Menu IA transforme l'expérience d'intégration pour les nouveaux restaurants. Au lieu de saisir manuellement chaque plat, photographiez simplement votre menu existant.",
+          "benefitsTitle": "Avantages du Scanner de Menu IA pour les Restaurants",
+          "benefit1": "Photographiez n'importe quel menu papier — l'IA extrait automatiquement tous les plats, prix et descriptions",
+          "benefit2": "L'IA génère des images d'arrière-plan professionnelles pour le site web de votre restaurant",
+          "benefit3": "Prend en charge les menus dans n'importe quelle langue avec reconnaissance automatique",
+          "benefit4": "Menu QR numérique complet prêt en minutes au lieu d'heures",
+          "benefit5": "Essais gratuits de traduction IA inclus — traduisez votre menu dans plus de 10 langues",
+          "benefit6": "Flux d'intégration intelligent vous guidant de la photo au menu QR publié",
+          "conclusionTitle": "Créez Votre Menu QR Numérique à Partir d'une Photo Aujourd'hui",
+          "conclusionText": "Arrêtez de taper votre menu à la main. Avec le Scanner de Menu IA d'IQ Rest, créer un menu QR numérique pour votre restaurant n'a jamais été aussi facile.",
+          "ctaText": "Prêt à créer votre menu QR numérique à partir d'une photo ?",
+          "ctaButton": "Essayer le Scanner IA Gratuitement"
+        }
+      },
+      "redesigned-dashboard-qr-menu-management": {
+        "title": "Tableau de Bord Redessiné pour la Gestion du Menu QR de Restaurant",
+        "description": "Un tableau de bord entièrement reconstruit avec des chargements de page plus rapides, un rendu côté serveur et une navigation moderne.",
+        "meta": {
+          "title": "Nouveau Tableau de Bord pour Gestion Menu QR Restaurant | IQ Rest",
+          "description": "Tableau de bord restaurant entièrement redessiné avec rendu côté serveur, chargements instantanés et navigation moderne."
+        },
+        "content": {
+          "intro": "IQ Rest a entièrement reconstruit le tableau de bord du restaurant. Le nouveau tableau de bord utilise le rendu côté serveur, offrant des chargements instantanés et une expérience plus fluide pour gérer votre menu QR numérique.",
+          "image1Alt": "Tableau de bord redessiné pour menu QR de restaurant",
+          "image1Caption": "Le nouveau tableau de bord IQ Rest avec navigation plus rapide et design moderne",
+          "section1Title": "Rendu Côté Serveur pour Gestion Instantanée du Menu QR",
+          "section1Text": "Le précédent tableau de bord chargeait tout côté client, causant des retards. La nouvelle architecture précharge vos données restaurant sur le serveur avant que la page atteigne votre navigateur.",
+          "section2Title": "Navigation Moderne et Design Unifié",
+          "section2Text": "Le tableau de bord présente maintenant des en-têtes de page unifiés avec un style cohérent. Les modes de tri pour les catégories, articles et tables ont été redessinés avec une interface intuitive.",
+          "section3Title": "Gestion Mobile-First du Menu QR",
+          "section3Text": "Chaque aspect du nouveau tableau de bord est optimisé pour la gestion mobile. Les boutons d'action restent accessibles en défilant. Gérer le menu QR de votre restaurant depuis votre téléphone est fluide.",
+          "benefitsTitle": "Avantages du Nouveau Tableau de Bord",
+          "benefit1": "Préchargement des données côté serveur — le menu se charge instantanément",
+          "benefit2": "Squelettes de chargement professionnels sur chaque page",
+          "benefit3": "En-têtes de page unifiés et langage de design cohérent",
+          "benefit4": "Modes de tri améliorés pour catégories, articles et tables",
+          "benefit5": "Bannière de checklist montrant la progression de configuration",
+          "benefit6": "Le bouton retour du navigateur fonctionne correctement sur toutes les pages",
+          "conclusionTitle": "Découvrez le Nouveau Tableau de Bord",
+          "conclusionText": "Le tableau de bord IQ Rest redessiné rend la gestion du menu QR numérique de votre restaurant plus rapide et agréable.",
+          "ctaText": "Prêt à essayer le nouveau tableau de bord ?",
+          "ctaButton": "Ouvrir le Tableau de Bord"
+        }
+      },
+      "multi-currency-geo-pricing-qr-menu": {
+        "title": "Tarification Multi-Devises pour Menu QR de Restaurant dans le Monde Entier",
+        "description": "IQ Rest détecte maintenant automatiquement votre pays et affiche les prix dans votre devise locale. Créez un menu QR numérique avec des prix en EUR, USD, GBP et plus.",
+        "meta": {
+          "title": "Tarification Multi-Devises pour Menu QR Restaurant Mondial | IQ Rest",
+          "description": "IQ Rest prend maintenant en charge la tarification multi-devises basée sur votre localisation. Créez un menu QR numérique avec des plans en EUR, USD, GBP, PLN et plus."
+        },
+        "content": {
+          "intro": "IQ Rest prend maintenant en charge la tarification multi-devises pour les restaurants du monde entier. Quand vous visitez la page de tarification, votre pays est détecté automatiquement et les prix sont affichés dans votre devise locale.",
+          "image1Alt": "Tarification multi-devises pour menu QR de restaurant",
+          "image1Caption": "Les prix s'adaptent automatiquement à votre devise locale",
+          "section1Title": "Détection Automatique du Pays et de la Devise",
+          "section1Text": "Quand vous ouvrez IQ Rest, le réseau mondial de Cloudflare identifie instantanément votre pays. Cette information sert à sélectionner la devise la plus appropriée pour votre région.",
+          "section2Title": "Tarification Locale pour Chaque Région",
+          "section2Text": "Les plans sont tarifiés de manière compétitive dans chaque devise. Le plan Gratuit reste gratuit partout — créez un menu QR numérique avec jusqu'à 500 scans par mois sans frais.",
+          "section3Title": "Paiement Stripe Fluide en Devise Locale",
+          "section3Text": "Tout le flux de paiement fonctionne dans votre devise locale. De la page de tarification au checkout Stripe, factures et portail client — tout affiche des prix cohérents.",
+          "benefitsTitle": "Avantages de la Tarification Multi-Devises",
+          "benefit1": "Détection automatique du pays — pas de sélection manuelle de devise",
+          "benefit2": "Tarification localisée en EUR, USD, GBP, PLN et plus de devises",
+          "benefit3": "Plan gratuit disponible dans le monde entier — créez un menu QR sans frais",
+          "benefit4": "Prix arrondis et propres optimisés pour chaque devise",
+          "benefit5": "Détection automatique de la langue basée sur votre pays",
+          "benefit6": "Devise cohérente dans tout le processus de paiement et portail de facturation",
+          "conclusionTitle": "Créez Votre Menu QR Numérique dans Votre Devise",
+          "conclusionText": "Avec le support multi-devises, IQ Rest rend la création d'un menu QR numérique accessible aux restaurants du monde entier.",
+          "ctaText": "Prêt à voir les prix dans votre devise locale ?",
+          "ctaButton": "Voir les Tarifs"
+        }
+      },
+      "reservation-emails-analytics-digital-qr-menu": {
+        "title": "E-mails de Réservation et Analyses Avancées pour Menu QR Numérique",
+        "description": "Notifications par e-mail de réservation de tables, e-mails de bienvenue, analyses d'appareils et suivi d'utilisation des scans. Votre menu QR numérique est plus intelligent que jamais.",
+        "meta": {
+          "title": "E-mails de Réservation et Analyses pour Menu QR Numérique | IQ Rest",
+          "description": "Nouvelles fonctionnalités pour votre menu QR numérique : notifications de réservation par e-mail, e-mails de bienvenue, analyses d'appareils et suivi d'utilisation des scans."
+        },
+        "content": {
+          "intro": "IQ Rest continue d'améliorer l'expérience du menu QR numérique pour les restaurants avec une vague de nouvelles fonctionnalités. Les réservations de tables envoient maintenant des confirmations par e-mail aux clients et aux restaurateurs.",
+          "image1Alt": "Notifications par e-mail de réservation pour menu QR numérique de restaurant",
+          "image1Caption": "Les notifications par e-mail tiennent les clients et restaurateurs informés des réservations",
+          "section1Title": "Notifications par E-mail de Réservation de Tables",
+          "section1Text": "Quand un client réserve une table via le menu QR numérique de votre restaurant, le client et le restaurateur reçoivent des notifications par e-mail avec date, heure, nombre de convives et détails du restaurant.",
+          "section2Title": "E-mails de Bienvenue et Guide d'Intégration",
+          "section2Text": "Les nouveaux restaurants qui s'inscrivent sur IQ Rest reçoivent maintenant un e-mail de bienvenue les guidant dans la configuration de leur menu QR numérique.",
+          "section3Title": "Analyses d'Appareils et Suivi d'Utilisation des Scans",
+          "section3Text": "Le tableau de bord analytique montre maintenant des ventilations détaillées des types d'appareils, navigateurs et systèmes d'exploitation des visiteurs de votre menu QR numérique.",
+          "benefitsTitle": "Nouvelles Fonctionnalités pour Votre Menu QR Numérique",
+          "benefit1": "Confirmations par e-mail envoyées aux clients et restaurateurs pour les réservations",
+          "benefit2": "E-mails de bienvenue guidant les nouveaux restaurants dans la configuration",
+          "benefit3": "E-mails de rappel intelligents basés sur la progression de l'intégration",
+          "benefit4": "Analyses d'appareils, navigateurs et systèmes d'exploitation pour les visiteurs du menu QR",
+          "benefit5": "Indicateur d'utilisation mensuelle des scans avec suivi des limites du plan",
+          "benefit6": "5 essais gratuits de traduction IA pour chaque restaurant",
+          "conclusionTitle": "Un Menu QR Numérique Plus Intelligent pour Votre Restaurant",
+          "conclusionText": "Ces mises à jour rendent votre menu QR numérique plus professionnel que jamais. Les notifications par e-mail tiennent tout le monde informé, les analyses vous aident à comprendre vos clients.",
+          "ctaText": "Prêt à explorer les nouvelles fonctionnalités ?",
+          "ctaButton": "Ouvrir le Tableau de Bord"
         }
       }
     }
@@ -1566,6 +1744,10 @@
     "saveError": "Échec de l'enregistrement des paramètres"
   },
   "terms": {
+    "meta": {
+      "title": "Conditions Générales - IQ Rest",
+      "description": "Conditions Générales d'IQ Rest - plateforme de menu QR pour restaurants et cafés. Lisez nos conditions d'utilisation et nos politiques."
+    },
     "title": "Conditions Générales",
     "lastUpdated": "Dernière mise à jour : 17 décembre 2025",
     "contact": {
@@ -1686,6 +1868,10 @@
     ]
   },
   "privacy": {
+    "meta": {
+      "title": "Politique de Confidentialité - IQ Rest",
+      "description": "Politique de Confidentialité d'IQ Rest - solution de menu QR pour restaurants et cafés. Découvrez comment nous collectons, utilisons et protégeons vos données."
+    },
     "title": "Politique de Confidentialité",
     "lastUpdated": "Dernière mise à jour : 17 décembre 2025",
     "contact": {
@@ -1798,6 +1984,10 @@
     ]
   },
   "cookies": {
+    "meta": {
+      "title": "Politique de Cookies - IQ Rest",
+      "description": "Politique de Cookies d'IQ Rest - Découvrez comment nous utilisons les cookies pour améliorer votre expérience avec notre plateforme de menu QR pour restaurants et cafés."
+    },
     "title": "Politique de Cookies",
     "lastUpdated": "Dernière mise à jour : 17 décembre 2025",
     "yes": "Oui",

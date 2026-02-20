@@ -9,46 +9,30 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "terms" });
 
-  const titles = {
-    en: "Terms and Conditions - IQ Rest",
-    es: "Términos y Condiciones - IQ Rest",
-  };
-
-  const descriptions = {
-    en: "Terms and Conditions for using IQ Rest - QR menu solution for restaurants and cafes.",
-    es: "Términos y Condiciones de uso de IQ Rest - solución de menú QR para restaurantes y cafeterías.",
-  };
+  const title = t("meta.title");
+  const description = t("meta.description");
 
   return {
-    title: titles[locale as keyof typeof titles] || titles.en,
-    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    robots: {
-      index: false,
-      follow: true,
-    },
+    title,
+    description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/terms`,
       languages: buildAlternates("/terms"),
     },
     openGraph: {
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       url: `https://iq-rest.com/${locale}/terms`,
       type: "website",
-      images: [
-        {
-          url: "https://iq-rest.com/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: "IQ Rest - Terms and Conditions",
-        },
-      ],
+      images: [{ url: "https://iq-rest.com/og-image.png", width: 1200, height: 630, alt: "IQ Rest - Terms and Conditions" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       images: ["https://iq-rest.com/og-image.png"],
     },
   };

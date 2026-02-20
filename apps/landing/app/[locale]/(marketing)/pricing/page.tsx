@@ -10,55 +10,30 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pricing" });
 
-  const titles = {
-    en: "QR Menu & Website for Restaurant or Cafe | Pricing from €0 - IQ Rest",
-    es: "Menú QR y Sitio Web para Restaurante o Cafetería | Precios desde €0 - IQ Rest",
-  };
-
-  const descriptions = {
-    en: "Create a QR menu and website for your restaurant or cafe. Free plan with 150 scans/month. Digital menu with AI translations, analytics, and instant updates. Start free today!",
-    es: "Crea un menú QR y sitio web para tu restaurante o cafetería. Plan gratuito con 150 escaneos/mes. Menú digital con traducciones IA, analíticas y actualizaciones instantáneas. ¡Comienza gratis hoy!",
-  };
-
-  const keywords = {
-    en: "QR menu, restaurant website, cafe website, digital menu, QR code menu, restaurant QR menu, cafe QR menu, menu website, free QR menu, restaurant menu online",
-    es: "menú QR, sitio web restaurante, sitio web cafetería, menú digital, menú código QR, menú QR restaurante, menú QR cafetería, sitio web menú, menú QR gratis, menú restaurante online",
-  };
+  const title = t("meta.title");
+  const description = t("meta.description");
 
   return {
-    title: titles[locale as keyof typeof titles] || titles.en,
-    description:
-      descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    keywords: keywords[locale as keyof typeof keywords] || keywords.en,
-    robots: {
-      index: true,
-      follow: true,
-    },
+    title,
+    description,
+    robots: { index: true, follow: true },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/pricing`,
       languages: buildAlternates("/pricing"),
     },
     openGraph: {
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description:
-        descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       type: "website",
       url: `https://iq-rest.com/${locale}/pricing`,
-      images: [
-        {
-          url: "https://iq-rest.com/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: "IQ Rest - QR Menu for Restaurants",
-        },
-      ],
+      images: [{ url: "https://iq-rest.com/og-image.png", width: 1200, height: 630, alt: "IQ Rest - QR Menu for Restaurants" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description:
-        descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       images: ["https://iq-rest.com/og-image.png"],
     },
   };
@@ -108,7 +83,7 @@ const createOffer = (name: string, price: string) => ({
   price,
   priceCurrency: "EUR",
   availability: "https://schema.org/InStock",
-  priceValidUntil: "2026-12-31",
+  priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split("T")[0],
   url: "https://iq-rest.com/pricing",
   hasMerchantReturnPolicy: merchantReturnPolicy,
   shippingDetails,

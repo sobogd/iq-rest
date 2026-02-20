@@ -7,7 +7,6 @@ import { CtaSection } from "../_components";
 import { PageView } from "@/components/PageView";
 import Image from "next/image";
 import { FEATURE_IMAGES, VALID_FEATURE_IDS, type FeatureId } from "../_lib/feature-data";
-import { getFeatureMetadata } from "../_lib/feature-metadata";
 
 export async function generateMetadata({
   params,
@@ -20,11 +19,13 @@ export async function generateMetadata({
     return {};
   }
 
-  const metadata = getFeatureMetadata(locale, featureId as FeatureId);
+  const t = await getTranslations({ locale, namespace: "features" });
+  const title = t(`seo.${featureId}.title`);
+  const description = t(`seo.${featureId}.description`);
 
   return {
-    title: metadata.title,
-    description: metadata.description,
+    title,
+    description,
     robots: {
       index: true,
       follow: true,
@@ -34,8 +35,8 @@ export async function generateMetadata({
       languages: buildAlternates(`/${featureId}`),
     },
     openGraph: {
-      title: metadata.title,
-      description: metadata.description,
+      title,
+      description,
       url: `https://iq-rest.com/${locale}/${featureId}`,
       siteName: "IQ Rest",
       locale,
@@ -51,8 +52,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: metadata.title,
-      description: metadata.description,
+      title,
+      description,
       images: ["https://iq-rest.com/og-image.png"],
     },
   };

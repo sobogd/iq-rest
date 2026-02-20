@@ -9,46 +9,30 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
 
-  const titles = {
-    en: "Privacy Policy - IQ Rest",
-    es: "Política de Privacidad - IQ Rest",
-  };
-
-  const descriptions = {
-    en: "Privacy Policy for IQ Rest - QR menu solution for restaurants and cafes. Learn how we collect, use, and protect your data.",
-    es: "Política de Privacidad de IQ Rest - solución de menú QR para restaurantes y cafeterías. Aprende cómo recopilamos, usamos y protegemos tus datos.",
-  };
+  const title = t("meta.title");
+  const description = t("meta.description");
 
   return {
-    title: titles[locale as keyof typeof titles] || titles.en,
-    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    robots: {
-      index: false,
-      follow: true,
-    },
+    title,
+    description,
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/privacy`,
       languages: buildAlternates("/privacy"),
     },
     openGraph: {
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       url: `https://iq-rest.com/${locale}/privacy`,
       type: "website",
-      images: [
-        {
-          url: "https://iq-rest.com/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: "IQ Rest - Privacy Policy",
-        },
-      ],
+      images: [{ url: "https://iq-rest.com/og-image.png", width: 1200, height: 630, alt: "IQ Rest - Privacy Policy" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       images: ["https://iq-rest.com/og-image.png"],
     },
   };

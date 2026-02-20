@@ -47,7 +47,7 @@ export const productSchema = {
   name: "IQ Rest - QR Menu Solution for Restaurants",
   description:
     "Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics",
-  image: [`${BASE_URL}/logo.svg`, `${BASE_URL}/og-image.svg`],
+  image: [`${BASE_URL}/logo.svg`, `${BASE_URL}/og-image.png`],
   brand: {
     "@type": "Brand",
     name: "IQ Rest",
@@ -151,12 +151,12 @@ export const productSchema = {
 };
 
 // Contact Page Schema
-export const contactPageSchema = {
+export const createContactPageSchema = (locale: string) => ({
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Contact IQ Rest",
   description: "Get in touch with the IQ Rest team for support with your restaurant QR menu",
-  url: `${BASE_URL}/en/contacts`,
+  url: `${BASE_URL}/${locale}/contacts`,
   mainEntity: {
     "@type": "Organization",
     name: "IQ Rest",
@@ -166,17 +166,17 @@ export const contactPageSchema = {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: "support@iq-rest.com",
-      availableLanguage: ["English", "Spanish"],
+      availableLanguage: ["English", "Spanish", "German", "French", "Italian", "Portuguese", "Russian", "Japanese", "Korean", "Chinese", "Arabic"],
     },
   },
-};
+});
 
 // WebPage Schema for legal pages
 export const createWebPageSchema = (
   name: string,
   description: string,
   url: string,
-  dateModified: string = "2025-12-17"
+  dateModified: string = "2026-02-20"
 ) => ({
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -193,7 +193,7 @@ export const createWebPageSchema = (
       url: `${BASE_URL}/logo.svg`,
     },
   },
-  inLanguage: ["en", "es"],
+  inLanguage: ["en", "es", "de", "fr", "it", "pt", "ru", "ja", "ko", "zh", "ar"],
 });
 
 // Breadcrumb Schema helper

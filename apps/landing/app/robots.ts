@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "*/dashboard/", "*/m/"],
+      disallow: ["/api/", "/*/dashboard/", "/*/m/"],
     },
     sitemap: "https://iq-rest.com/sitemap.xml",
   };

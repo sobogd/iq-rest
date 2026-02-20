@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { ContactForm, CtaSection } from "../_components";
-import { JsonLd, contactPageSchema, createBreadcrumbSchema, buildAlternates } from "../_lib";
+import { JsonLd, createContactPageSchema, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -11,46 +11,30 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contacts" });
 
-  const titles = {
-    en: "Contact Us - Get Help with Your Restaurant QR Menu | IQ Rest",
-    es: "Contáctanos - Obtén Ayuda con tu Menú QR de Restaurante | IQ Rest",
-  };
-
-  const descriptions = {
-    en: "Get in touch with the IQ Rest team. We're here to help with your digital QR menu for restaurant or cafe. Personal support from real people.",
-    es: "Ponte en contacto con el equipo de IQ Rest. Estamos aquí para ayudarte con tu menú QR digital para restaurante o cafetería. Soporte personal de personas reales.",
-  };
+  const title = t("meta.title");
+  const description = t("meta.description");
 
   return {
-    title: titles[locale as keyof typeof titles] || titles.en,
-    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    robots: {
-      index: true,
-      follow: true,
-    },
+    title,
+    description,
+    robots: { index: true, follow: true },
     alternates: {
       canonical: `https://iq-rest.com/${locale}/contacts`,
       languages: buildAlternates("/contacts"),
     },
     openGraph: {
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       url: `https://iq-rest.com/${locale}/contacts`,
       type: "website",
-      images: [
-        {
-          url: "https://iq-rest.com/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: "IQ Rest - QR Menu for Restaurants",
-        },
-      ],
+      images: [{ url: "https://iq-rest.com/og-image.png", width: 1200, height: 630, alt: "IQ Rest - QR Menu for Restaurants" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale as keyof typeof titles] || titles.en,
-      description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+      title,
+      description,
       images: ["https://iq-rest.com/og-image.png"],
     },
   };
@@ -72,7 +56,7 @@ export default async function ContactsPage({
   return (
     <>
       <PageView slug="contacts" />
-      <JsonLd data={contactPageSchema} />
+      <JsonLd data={createContactPageSchema(locale)} />
       <JsonLd data={breadcrumbSchema} />
       <div className="text-center mb-16 px-4 pt-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("title")}</h1>

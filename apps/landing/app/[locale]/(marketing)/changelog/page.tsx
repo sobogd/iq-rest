@@ -55,6 +55,30 @@ export async function generateMetadata({
 
 const CHANGELOG_ENTRIES = [
   {
+    id: "ai-menu-scanner-create-digital-qr-menu",
+    date: "2026-02-18",
+    titleKey: "entries.ai-menu-scanner-create-digital-qr-menu.title",
+    descriptionKey: "entries.ai-menu-scanner-create-digital-qr-menu.description",
+  },
+  {
+    id: "redesigned-dashboard-qr-menu-management",
+    date: "2026-02-14",
+    titleKey: "entries.redesigned-dashboard-qr-menu-management.title",
+    descriptionKey: "entries.redesigned-dashboard-qr-menu-management.description",
+  },
+  {
+    id: "multi-currency-geo-pricing-qr-menu",
+    date: "2026-02-10",
+    titleKey: "entries.multi-currency-geo-pricing-qr-menu.title",
+    descriptionKey: "entries.multi-currency-geo-pricing-qr-menu.description",
+  },
+  {
+    id: "reservation-emails-analytics-digital-qr-menu",
+    date: "2026-02-12",
+    titleKey: "entries.reservation-emails-analytics-digital-qr-menu.title",
+    descriptionKey: "entries.reservation-emails-analytics-digital-qr-menu.description",
+  },
+  {
     id: "support-qr-menu-restaurant-cafe",
     date: "2025-12-02",
     titleKey: "entries.support-qr-menu-restaurant-cafe.title",
@@ -144,7 +168,7 @@ export default async function ChangelogPage({
     name: "IQ Rest Changelog",
     description:
       "Latest updates and new features for IQ Rest - digital QR menu solution for restaurants",
-    url: "https://iq-rest.com/changelog",
+    url: `https://iq-rest.com/${locale}/changelog`,
     publisher: {
       "@type": "Organization",
       name: "IQ Rest",
@@ -158,7 +182,7 @@ export default async function ChangelogPage({
       headline: t(entry.titleKey),
       description: t(entry.descriptionKey),
       datePublished: entry.date,
-      url: `https://iq-rest.com/changelog/${entry.id}`,
+      url: `https://iq-rest.com/${locale}/changelog/${entry.id}`,
       author: {
         "@type": "Organization",
         name: "IQ Rest",

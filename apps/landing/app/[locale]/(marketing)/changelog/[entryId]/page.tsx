@@ -13,6 +13,26 @@ const changelogEntries: Record<string, {
   image2?: string;
   image3?: string;
 }> = {
+  "ai-menu-scanner-create-digital-qr-menu": {
+    date: "2026-02-18",
+    translationKey: "ai-menu-scanner-create-digital-qr-menu",
+    image: "/og-image.png",
+  },
+  "redesigned-dashboard-qr-menu-management": {
+    date: "2026-02-14",
+    translationKey: "redesigned-dashboard-qr-menu-management",
+    image: "/og-image.png",
+  },
+  "multi-currency-geo-pricing-qr-menu": {
+    date: "2026-02-10",
+    translationKey: "multi-currency-geo-pricing-qr-menu",
+    image: "/og-image.png",
+  },
+  "reservation-emails-analytics-digital-qr-menu": {
+    date: "2026-02-12",
+    translationKey: "reservation-emails-analytics-digital-qr-menu",
+    image: "/og-image.png",
+  },
   "support-qr-menu-restaurant-cafe": {
     date: "2025-12-02",
     translationKey: "support-qr-menu-restaurant-cafe",
@@ -138,7 +158,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator" || key === "detailed-analytics-restaurant-qr-menu-website" || key === "support-qr-menu-restaurant-cafe";
+  const hasSixBenefits = key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator" || key === "detailed-analytics-restaurant-qr-menu-website" || key === "support-qr-menu-restaurant-cafe" || key === "ai-menu-scanner-create-digital-qr-menu" || key === "redesigned-dashboard-qr-menu-management" || key === "multi-currency-geo-pricing-qr-menu" || key === "reservation-emails-analytics-digital-qr-menu";
 
   return (
     <>
