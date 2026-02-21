@@ -28,6 +28,8 @@ export async function POST(request: NextRequest) {
       request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
       null;
     const country = request.cookies.get("geo_country")?.value || null;
+    const city = request.cookies.get("geo_city")?.value || null;
+    const landingPage = meta?.page || null;
 
     // Parse UA
     let browser: string | null = null;
@@ -41,7 +43,7 @@ export async function POST(request: NextRequest) {
     // Find-or-create Session
     const existing = await prisma.session.findUnique({
       where: { id: sessionId },
-      select: { id: true, country: true, gclid: true, keyword: true },
+      select: { id: true, country: true, city: true, landingPage: true, gclid: true, keyword: true },
     });
 
     const isBot = ua ? BOT_PATTERN.test(ua) : false;
@@ -58,6 +60,8 @@ export async function POST(request: NextRequest) {
           isBot,
           // First-touch: only set if currently null
           ...(existing.country === null && country ? { country } : {}),
+          ...(existing.city === null && city ? { city } : {}),
+          ...(existing.landingPage === null && landingPage ? { landingPage } : {}),
           ...(existing.gclid === null && gclid ? { gclid } : {}),
           ...(existing.keyword === null && keyword ? { keyword } : {}),
         },
@@ -68,6 +72,8 @@ export async function POST(request: NextRequest) {
         data: {
           id: sessionId,
           country,
+          city,
+          landingPage,
           gclid: gclid || null,
           keyword: keyword || null,
           userAgent: ua,

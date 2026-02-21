@@ -90,6 +90,8 @@ export async function GET(request: NextRequest) {
           id: session.id,
           companyId: session.companyId,
           country: session.country,
+          city: session.city,
+          landingPage: session.landingPage,
           gclid: session.gclid,
           keyword: session.keyword,
           userAgent: session.userAgent,

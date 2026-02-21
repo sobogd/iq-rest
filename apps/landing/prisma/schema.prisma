@@ -281,9 +281,11 @@ model Session {
   id        String   @id @default(cuid())
 
   // Attribution (first-touch — written once, never overwritten)
-  country   String?
-  gclid     String?   // Google Click ID
-  keyword   String?   // Google Ads keyword
+  country     String?
+  city        String?
+  landingPage String?
+  gclid       String?   // Google Click ID
+  keyword     String?   // Google Ads keyword
 
   // Technical (last-touch — always updated to latest value)
   userAgent String?

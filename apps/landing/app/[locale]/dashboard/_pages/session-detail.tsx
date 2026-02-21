@@ -14,6 +14,8 @@ interface SessionData {
   id: string;
   companyId: string | null;
   country: string | null;
+  city: string | null;
+  landingPage: string | null;
   gclid: string | null;
   keyword: string | null;
   userAgent: string | null;
@@ -273,7 +275,8 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
   const countryTz = session?.country ? COUNTRY_TZ[session.country] : undefined;
   const infoRows: { label: string; value: string; subValue?: string; copyable?: boolean; onClick?: () => void }[] = [];
   if (session) {
-    if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}` });
+    if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}${session.city ? `, ${session.city}` : ""}` });
+    if (session.landingPage) infoRows.push({ label: "Landing", value: session.landingPage });
     if (session.ip) infoRows.push({ label: "IP", value: session.ip, copyable: true });
     if (session.browser) infoRows.push({ label: "Browser", value: session.browser });
     if (session.device) infoRows.push({ label: "Device", value: session.device });
