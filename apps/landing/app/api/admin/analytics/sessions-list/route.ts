@@ -51,30 +51,43 @@ export async function GET(request: NextRequest) {
 
     const { dateFrom, dateTo } = getDateRange(period, tz);
 
-    // Show sessions that had activity in the period (not just created)
-    const where = {
-      updatedAt: dateTo ? { gte: dateFrom, lt: dateTo } : { gte: dateFrom },
-    };
+    // Find sessions that had events in the period, sorted by last event desc
+    const dateFilter = dateTo
+      ? { gte: dateFrom, lt: dateTo }
+      : { gte: dateFrom };
 
     const sessionsList = await prisma.session.findMany({
-      where,
-      orderBy: { updatedAt: "desc" },
+      where: {
+        events: { some: { createdAt: dateFilter } },
+      },
       select: {
         id: true,
         country: true,
         gclid: true,
         userId: true,
         createdAt: true,
-        updatedAt: true,
         _count: { select: { events: true } },
+        events: {
+          orderBy: { createdAt: "desc" },
+          take: 1,
+          select: { createdAt: true },
+        },
       },
     });
 
+    // Sort by last event date descending
+    sessionsList.sort((a, b) => {
+      const aLast = a.events[0]?.createdAt ?? a.createdAt;
+      const bLast = b.events[0]?.createdAt ?? b.createdAt;
+      return bLast.getTime() - aLast.getTime();
+    });
+
     const sessions = sessionsList.map((s) => {
-      const durationMs = s.updatedAt.getTime() - s.createdAt.getTime();
+      const lastEventDate = s.events[0]?.createdAt ?? s.createdAt;
+      const durationMs = lastEventDate.getTime() - s.createdAt.getTime();
       return {
         sessionId: s.id,
-        lastEvent: s.updatedAt.toISOString(),
+        lastEvent: lastEventDate.toISOString(),
         duration: Math.round(durationMs / 1000),
         eventCount: s._count.events,
         country: s.country,
