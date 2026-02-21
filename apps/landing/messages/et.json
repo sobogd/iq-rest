@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Piiramatu",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / kuu",
+        "aiImages": "35 / kuus"
       },
       "pro": {
         "scans": "Piiramatu",
-        "languages": "Piiramatu"
+        "languages": "Piiramatu",
+        "aiTranslation": "Piiramatu",
+        "aiImages": "Piiramatu"
       }
     },
     "socialProof": "Üle 500 restorani usaldab meid",

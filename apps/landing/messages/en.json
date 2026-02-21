@@ -524,15 +524,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Unlimited",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / month",
+        "aiImages": "35 / month"
       },
       "pro": {
         "scans": "Unlimited",
-        "languages": "Unlimited"
+        "languages": "Unlimited",
+        "aiTranslation": "Unlimited",
+        "aiImages": "Unlimited"
       }
     }
   },

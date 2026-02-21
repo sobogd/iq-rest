@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Korlátlan",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / hónap",
+        "aiImages": "35 / hó"
       },
       "pro": {
         "scans": "Korlátlan",
-        "languages": "Korlátlan"
+        "languages": "Korlátlan",
+        "aiTranslation": "Korlátlan",
+        "aiImages": "Korlátlan"
       }
     },
     "socialProof": "Több mint 500 étterem bízik bennünk",

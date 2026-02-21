@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Sınırsız",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / ay",
+        "aiImages": "35 / ay"
       },
       "pro": {
         "scans": "Sınırsız",
-        "languages": "Sınırsız"
+        "languages": "Sınırsız",
+        "aiTranslation": "Sınırsız",
+        "aiImages": "Sınırsız"
       }
     },
     "socialProof": "500'den fazla restoran bize güveniyor",

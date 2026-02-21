@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Απεριόριστα",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / μήνα",
+        "aiImages": "35 / μήνα"
       },
       "pro": {
         "scans": "Απεριόριστα",
-        "languages": "Απεριόριστα"
+        "languages": "Απεριόριστα",
+        "aiTranslation": "Απεριόριστα",
+        "aiImages": "Απεριόριστα"
       }
     },
     "socialProof": "Πάνω από 500 εστιατόρια μας εμπιστεύονται",

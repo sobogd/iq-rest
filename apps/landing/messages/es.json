@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Ilimitado",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mes",
+        "aiImages": "35 / mes"
       },
       "pro": {
         "scans": "Ilimitados",
-        "languages": "Ilimitados"
+        "languages": "Ilimitados",
+        "aiTranslation": "Ilimitado",
+        "aiImages": "Ilimitados"
       }
     },
     "socialProof": "Más de 500 restaurantes confían en nosotros",

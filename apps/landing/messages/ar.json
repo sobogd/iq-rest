@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "غير محدود",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "١٠٠ / شهر",
+        "aiImages": "35 / شهر"
       },
       "pro": {
         "scans": "غير محدود",
-        "languages": "غير محدود"
+        "languages": "غير محدود",
+        "aiTranslation": "غير محدود",
+        "aiImages": "غير محدود"
       }
     },
     "socialProof": "أكثر من 500 مطعم يثقون بنا",

@@ -113,6 +113,11 @@ model Restaurant {
   freeTranslationsLeft      Int @default(5)
   freeImageGenerationsLeft  Int @default(2)
 
+  // Monthly AI usage counters (reset manually or via cron)
+  translationsUsed      Int @default(0)
+  imageGenerationsUsed  Int @default(0)
+  imageStylizationsUsed Int @default(0)
+
   // Reservation settings
   reservationsEnabled    Boolean @default(false)
   reservationMode        String  @default("manual") // "auto" | "manual"

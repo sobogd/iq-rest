@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Obegränsade",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / månad",
+        "aiImages": "35 / mån"
       },
       "pro": {
         "scans": "Obegränsade",
-        "languages": "Obegränsade"
+        "languages": "Obegränsade",
+        "aiTranslation": "Obegränsat",
+        "aiImages": "Obegränsade"
       }
     },
     "socialProof": "Över 500 restauranger litar på oss",

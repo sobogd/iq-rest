@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Ubegrænsede",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / måned",
+        "aiImages": "35 / md."
       },
       "pro": {
         "scans": "Ubegrænsede",
-        "languages": "Ubegrænsede"
+        "languages": "Ubegrænsede",
+        "aiTranslation": "Ubegrænset",
+        "aiImages": "Ubegrænsede"
       }
     },
     "socialProof": "Over 500 restauranter stoler på os",

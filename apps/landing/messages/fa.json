@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "۲"
+        "languages": "۲",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "نامحدود",
-        "languages": "۶"
+        "languages": "۶",
+        "aiTranslation": "۱۰۰ / ماه",
+        "aiImages": "35 / ماه"
       },
       "pro": {
         "scans": "نامحدود",
-        "languages": "نامحدود"
+        "languages": "نامحدود",
+        "aiTranslation": "نامحدود",
+        "aiImages": "نامحدود"
       }
     },
     "socialProof": "بیش از ۵۰۰ رستوران به ما اعتماد دارند",

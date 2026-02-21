@@ -317,7 +317,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   }
 
   async function handleGenerateImage(sourceImageUrl?: string) {
-    track(DashboardEvent.CLICKED_GENERATE_ITEM_IMAGE);
+    track(sourceImageUrl ? DashboardEvent.CLICKED_STYLIZE_ITEM_IMAGE : DashboardEvent.CLICKED_GENERATE_ITEM_IMAGE);
     setGenerating(true);
     try {
       const res = await fetch("/api/items/generate-image", {

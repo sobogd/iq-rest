@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { Loader2, Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PRICE_LOOKUP_KEYS, type PlanType } from "@/lib/stripe-config";
 import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
@@ -29,6 +29,35 @@ const SUBSCRIPTION_OPTIONS = [
   { id: "PRO_YEARLY", plan: "PRO" as PlanType, cycle: "YEARLY" as BillingCycle, price: 20.75, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
 ] as const;
 
+type FeatureValue = boolean | "value";
+
+interface FeatureRow {
+  key: string;
+  free: FeatureValue;
+  basic: FeatureValue;
+  pro: FeatureValue;
+}
+
+const COMPARISON_FEATURES: FeatureRow[] = [
+  { key: "website", free: true, basic: true, pro: true },
+  { key: "qrMenu", free: true, basic: true, pro: true },
+  { key: "scans", free: "value", basic: "value", pro: "value" },
+  { key: "languages", free: "value", basic: "value", pro: "value" },
+  { key: "aiTranslation", free: false, basic: "value", pro: "value" },
+  { key: "aiImages", free: false, basic: "value", pro: "value" },
+  { key: "allergens", free: false, basic: true, pro: true },
+  { key: "analytics", free: true, basic: true, pro: true },
+  { key: "customTheme", free: true, basic: true, pro: true },
+  { key: "background", free: true, basic: true, pro: true },
+  { key: "support", free: true, basic: true, pro: true },
+  { key: "reservations", free: false, basic: true, pro: true },
+  { key: "noBranding", free: false, basic: true, pro: true },
+  { key: "multiRestaurant", free: false, basic: false, pro: true },
+  { key: "customDomain", free: false, basic: false, pro: true },
+];
+
+const PLAN_IDS = ["free", "basic", "pro"] as const;
+
 interface BillingPageProps {
   initialSubscription: {
     plan: PlanType;
@@ -41,6 +70,7 @@ interface BillingPageProps {
 
 export function BillingPage({ initialSubscription }: BillingPageProps) {
   const t = useTranslations("billing");
+  const tp = useTranslations("pricing");
   const { translations } = useDashboard();
   const locale = useLocale();
   const router = useRouter();
@@ -287,6 +317,46 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
               })}
             </div>
           ))}
+        </div>
+
+        {/* Feature Comparison */}
+        <div className="max-w-2xl mx-auto pt-8">
+          <h2 className="text-lg font-semibold text-center mb-4">{tp("comparison.title")}</h2>
+          <div className="overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-muted/30">
+                  <th className="text-left py-3 px-3 text-xs font-medium text-muted-foreground w-2/5">&nbsp;</th>
+                  {PLAN_IDS.map((planId) => (
+                    <th key={planId} className="py-3 px-2 text-center text-xs font-semibold uppercase tracking-wide">
+                      {tp(`plans.${planId}.name`)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON_FEATURES.map((feature, index) => (
+                  <tr key={feature.key} className={cn("border-t border-foreground/5", index % 2 === 0 && "bg-muted/20")}>
+                    <td className="py-2.5 px-3 text-xs font-medium">{tp(`features.${feature.key}`)}</td>
+                    {PLAN_IDS.map((planId) => {
+                      const value = feature[planId];
+                      return (
+                        <td key={planId} className="py-2.5 px-2 text-center">
+                          {value === "value" ? (
+                            <span className="text-xs font-medium">{tp(`values.${planId}.${feature.key}`)}</span>
+                          ) : value === true ? (
+                            <Check className="h-4 w-4 text-green-500 mx-auto" />
+                          ) : (
+                            <X className="h-4 w-4 text-muted-foreground/40 mx-auto" />
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <p className="text-sm text-muted-foreground text-center pt-6">

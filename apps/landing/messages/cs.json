@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Neomezené",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / měsíc",
+        "aiImages": "35 / měs."
       },
       "pro": {
         "scans": "Neomezené",
-        "languages": "Neomezené"
+        "languages": "Neomezené",
+        "aiTranslation": "Neomezeně",
+        "aiImages": "Neomezené"
       }
     },
     "socialProof": "Důvěřuje nám více než 500 restaurací",

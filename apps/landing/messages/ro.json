@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Nelimitat",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / lună",
+        "aiImages": "35 / lună"
       },
       "pro": {
         "scans": "Nelimitat",
-        "languages": "Nelimitat"
+        "languages": "Nelimitat",
+        "aiTranslation": "Nelimitat",
+        "aiImages": "Nelimitat"
       }
     },
     "socialProof": "Peste 500 de restaurante au încredere în noi",

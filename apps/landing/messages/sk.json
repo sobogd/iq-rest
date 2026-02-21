@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Neobmedzené",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mesiac",
+        "aiImages": "35 / mes."
       },
       "pro": {
         "scans": "Neobmedzené",
-        "languages": "Neobmedzené"
+        "languages": "Neobmedzené",
+        "aiTranslation": "Neobmedzene",
+        "aiImages": "Neobmedzené"
       }
     },
     "socialProof": "Dôveruje nám viac ako 500 reštaurácií",

@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Rajattomat",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / kk",
+        "aiImages": "35 / kk"
       },
       "pro": {
         "scans": "Rajattomat",
-        "languages": "Rajattomat"
+        "languages": "Rajattomat",
+        "aiTranslation": "Rajaton",
+        "aiImages": "Rajattomat"
       }
     },
     "socialProof": "Yli 500 ravintolaa luottaa meihin",

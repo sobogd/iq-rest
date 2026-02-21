@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "무제한",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / 월",
+        "aiImages": "35 / 월"
       },
       "pro": {
         "scans": "무제한",
-        "languages": "무제한"
+        "languages": "무제한",
+        "aiTranslation": "무제한",
+        "aiImages": "무제한"
       }
     },
     "socialProof": "500개 이상의 레스토랑이 신뢰합니다",

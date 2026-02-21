@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Brez omejitev",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mesec",
+        "aiImages": "35 / mes."
       },
       "pro": {
         "scans": "Brez omejitev",
-        "languages": "Brez omejitev"
+        "languages": "Brez omejitev",
+        "aiTranslation": "Neomejeno",
+        "aiImages": "Brez omejitev"
       }
     },
     "socialProof": "Več kot 500 restavracij nam zaupa",

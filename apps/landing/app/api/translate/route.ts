@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { getUserCompanyId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { isAdminEmail } from "@/lib/admin";
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
@@ -28,6 +30,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Check plan and free translations
+    const cookieStore = await cookies();
+    const userEmail = cookieStore.get("user_email")?.value;
+    const isUnlimited = isAdminEmail(userEmail);
+
     const [company, restaurant] = await Promise.all([
       prisma.company.findUnique({
         where: { id: companyId },
@@ -35,7 +41,7 @@ export async function POST(request: NextRequest) {
       }),
       prisma.restaurant.findFirst({
         where: { companyId },
-        select: { id: true, freeTranslationsLeft: true },
+        select: { id: true, freeTranslationsLeft: true, translationsUsed: true },
       }),
     ]);
 
@@ -43,14 +49,26 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
-    const isPaidSubscriber =
-      company.subscriptionStatus === "ACTIVE" && company.plan !== "FREE";
+    const isActive = company.subscriptionStatus === "ACTIVE";
+    const isPro = isUnlimited || (isActive && company.plan === "PRO");
+    const isBasic = isActive && company.plan === "BASIC";
+    const isPaidSubscriber = isPro || isBasic;
 
     if (!isPaidSubscriber && restaurant.freeTranslationsLeft <= 0) {
       return NextResponse.json(
         { error: "limit_reached" },
         { status: 403 }
       );
+    }
+
+    const BASIC_TRANSLATION_LIMIT = 100;
+    if (isBasic) {
+      if (restaurant.translationsUsed >= BASIC_TRANSLATION_LIMIT) {
+        return NextResponse.json(
+          { error: "limit_reached" },
+          { status: 403 }
+        );
+      }
     }
 
     const languageNames: Record<string, string> = {
@@ -136,15 +154,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Decrement counter for free users
+    // Track usage
     let freeTranslationsLeft = restaurant.freeTranslationsLeft;
     if (!isPaidSubscriber) {
+      // Free user: decrement trial counter
       const updated = await prisma.restaurant.update({
         where: { id: restaurant.id },
         data: { freeTranslationsLeft: { decrement: 1 } },
         select: { freeTranslationsLeft: true },
       });
       freeTranslationsLeft = updated.freeTranslationsLeft;
+    } else if (!isPro) {
+      // BASIC subscriber: increment monthly counter
+      await prisma.restaurant.update({
+        where: { id: restaurant.id },
+        data: { translationsUsed: { increment: 1 } },
+      });
     }
 
     return NextResponse.json({ translatedText, freeTranslationsLeft });

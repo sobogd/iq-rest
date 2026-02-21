@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Neograničeno",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mjesec",
+        "aiImages": "35 / mj."
       },
       "pro": {
         "scans": "Neograničeno",
-        "languages": "Neograničeno"
+        "languages": "Neograničeno",
+        "aiTranslation": "Neograničeno",
+        "aiImages": "Neograničeno"
       }
     },
     "socialProof": "Više od 500 restorana nam vjeruje",

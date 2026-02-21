@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Neamhtheoranta",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mí",
+        "aiImages": "35 / mí"
       },
       "pro": {
         "scans": "Neamhtheoranta",
-        "languages": "Neamhtheoranta"
+        "languages": "Neamhtheoranta",
+        "aiTranslation": "Gan teorainn",
+        "aiImages": "Neamhtheoranta"
       }
     },
     "socialProof": "Tá muinín ag breis is 500 bialann asainn",

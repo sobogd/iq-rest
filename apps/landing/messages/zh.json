@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "无限",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / 月",
+        "aiImages": "35 / 月"
       },
       "pro": {
         "scans": "无限",
-        "languages": "无限"
+        "languages": "无限",
+        "aiTranslation": "无限",
+        "aiImages": "无限"
       }
     },
     "socialProof": "超过500家餐厅信赖我们",

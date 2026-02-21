@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Neierobežoti",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mēnesī",
+        "aiImages": "35 / mēn."
       },
       "pro": {
         "scans": "Neierobežoti",
-        "languages": "Neierobežoti"
+        "languages": "Neierobežoti",
+        "aiTranslation": "Neierobežoti",
+        "aiImages": "Neierobežoti"
       }
     },
     "socialProof": "Vairāk nekā 500 restorāni mums uzticas",

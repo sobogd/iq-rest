@@ -66,6 +66,7 @@ export enum DashboardEvent {
   CLICKED_DELETE_ITEM = "clicked_delete_item",
   TOGGLED_ITEM_MORE_DETAILS = "toggled_item_more_details",
   CLICKED_GENERATE_ITEM_IMAGE = "clicked_generate_item_image",
+  CLICKED_STYLIZE_ITEM_IMAGE = "clicked_stylize_item_image",
   SHOWED_GENERATE_LIMIT_MODAL = "showed_generate_limit_modal",
   SHOWED_TRANSLATE_LIMIT_MODAL = "showed_translate_limit_modal",
 
@@ -243,6 +244,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_DELETE_ITEM]: "Clicked Delete Item",
   [DashboardEvent.TOGGLED_ITEM_MORE_DETAILS]: "Toggled Item More Details",
   [DashboardEvent.CLICKED_GENERATE_ITEM_IMAGE]: "Clicked Generate Item Image",
+  [DashboardEvent.CLICKED_STYLIZE_ITEM_IMAGE]: "Clicked Stylize Item Image",
   [DashboardEvent.SHOWED_GENERATE_LIMIT_MODAL]: "Showed Generate Limit Modal",
   [DashboardEvent.SHOWED_TRANSLATE_LIMIT_MODAL]: "Showed Translate Limit Modal",
 

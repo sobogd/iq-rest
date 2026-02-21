@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Onbeperkt",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / maand",
+        "aiImages": "35 / maand"
       },
       "pro": {
         "scans": "Onbeperkt",
-        "languages": "Onbeperkt"
+        "languages": "Onbeperkt",
+        "aiTranslation": "Onbeperkt",
+        "aiImages": "Onbeperkt"
       }
     },
     "socialProof": "Meer dan 500 restaurants vertrouwen ons",

@@ -21,13 +21,35 @@ export async function POST() {
     const userEmail = cookieStore.get("user_email")?.value;
     const admin = isAdminEmail(userEmail);
 
-    const company = await prisma.company.findUnique({
-      where: { id: companyId },
-      select: { plan: true },
-    });
+    const [company, restaurant] = await Promise.all([
+      prisma.company.findUnique({
+        where: { id: companyId },
+        select: { plan: true, subscriptionStatus: true },
+      }),
+      prisma.restaurant.findFirst({
+        where: { companyId },
+        select: { id: true, imageGenerationsUsed: true, imageStylizationsUsed: true },
+      }),
+    ]);
 
-    if (!admin && company?.plan === "FREE") {
+    if (!company || !restaurant) {
+      return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+
+    const isActive = company.subscriptionStatus === "ACTIVE";
+    const isPro = admin || (isActive && company.plan === "PRO");
+    const isBasic = isActive && company.plan === "BASIC";
+
+    if (!isPro && !isBasic) {
       return NextResponse.json({ error: "Subscription required" }, { status: 403 });
+    }
+
+    const BASIC_MONTHLY_LIMIT = 35;
+    if (isBasic) {
+      const totalUsed = restaurant.imageGenerationsUsed + restaurant.imageStylizationsUsed;
+      if (totalUsed >= BASIC_MONTHLY_LIMIT) {
+        return NextResponse.json({ error: "limit_reached" }, { status: 403 });
+      }
     }
 
     if (!OPENAI_API_KEY) {
@@ -115,6 +137,14 @@ export async function POST() {
     );
 
     const url = getPublicUrl(key);
+
+    // Track usage for BASIC subscribers
+    if (isBasic) {
+      await prisma.restaurant.update({
+        where: { id: restaurant.id },
+        data: { imageGenerationsUsed: { increment: 1 } },
+      });
+    }
 
     return NextResponse.json({ url });
   } catch (error) {

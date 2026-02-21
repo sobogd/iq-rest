@@ -567,15 +567,21 @@
     "values": {
       "free": {
         "scans": "400",
-        "languages": "2"
+        "languages": "2",
+        "aiTranslation": "—",
+        "aiImages": "—"
       },
       "basic": {
         "scans": "Ótakmarkað",
-        "languages": "6"
+        "languages": "6",
+        "aiTranslation": "100 / mánuð",
+        "aiImages": "35 / mán."
       },
       "pro": {
         "scans": "Ótakmarkað",
-        "languages": "Ótakmarkað"
+        "languages": "Ótakmarkað",
+        "aiTranslation": "Ótakmarkað",
+        "aiImages": "Ótakmarkað"
       }
     },
     "socialProof": "Yfir 500 veitingastaðir treysta okkur",
