@@ -1671,6 +1671,9 @@
       "slugRequired": "Адреса сайту обов'язкова",
       "validationErrorTitle": "Будь ласка, виправте наступні помилки",
       "copyUrl": "Копіювати URL",
+      "generateBackground": "Згенерувати",
+      "generating": "Генерація...",
+      "generateError": "Не вдалося згенерувати фон",
       "previewButton": "Забронювати",
       "preview": "Приклад"
     },

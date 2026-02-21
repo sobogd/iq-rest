@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Kopioi URL",
+      "generateBackground": "Luo",
+      "generating": "Luodaan...",
+      "generateError": "Taustan luominen epäonnistui",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

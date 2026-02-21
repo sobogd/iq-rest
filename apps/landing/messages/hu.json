@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "URL másolása",
+      "generateBackground": "Generálás",
+      "generating": "Generálás...",
+      "generateError": "A háttér generálása sikertelen",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

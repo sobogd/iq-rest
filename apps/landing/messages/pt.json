@@ -1671,6 +1671,9 @@
       "slugRequired": "O endereço web é obrigatório",
       "validationErrorTitle": "Por favor, corrija os seguintes erros",
       "copyUrl": "Copiar URL",
+      "generateBackground": "Gerar",
+      "generating": "Gerando...",
+      "generateError": "Falha ao gerar o fundo",
       "previewButton": "Reservar mesa",
       "preview": "Pré-visualização"
     },

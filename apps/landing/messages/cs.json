@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Kopírovat URL",
+      "generateBackground": "Vygenerovat",
+      "generating": "Generování...",
+      "generateError": "Nepodařilo se vygenerovat pozadí",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

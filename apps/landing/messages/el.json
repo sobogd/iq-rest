@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Αντιγραφή URL",
+      "generateBackground": "Δημιουργία",
+      "generating": "Δημιουργία...",
+      "generateError": "Αποτυχία δημιουργίας φόντου",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

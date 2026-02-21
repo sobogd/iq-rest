@@ -1671,6 +1671,9 @@
       "slugRequired": "Адрес сайта обязателен",
       "validationErrorTitle": "Пожалуйста, исправьте следующие ошибки",
       "copyUrl": "Копировать URL",
+      "generateBackground": "Сгенерировать",
+      "generating": "Генерация...",
+      "generateError": "Не удалось сгенерировать фон",
       "previewButton": "Забронировать",
       "preview": "Пример"
     },

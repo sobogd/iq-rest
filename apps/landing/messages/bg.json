@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Копиране на URL",
+      "generateBackground": "Генериране",
+      "generating": "Генериране...",
+      "generateError": "Неуспешно генериране на фон",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

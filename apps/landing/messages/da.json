@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Kopiér URL",
+      "generateBackground": "Generér",
+      "generating": "Genererer...",
+      "generateError": "Kunne ikke generere baggrund",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

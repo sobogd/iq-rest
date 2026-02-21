@@ -1671,6 +1671,9 @@
       "slugRequired": "L'indirizzo web è obbligatorio",
       "validationErrorTitle": "Si prega di correggere i seguenti errori",
       "copyUrl": "Copia URL",
+      "generateBackground": "Genera",
+      "generating": "Generazione...",
+      "generateError": "Impossibile generare lo sfondo",
       "previewButton": "Prenota un tavolo",
       "preview": "Anteprima"
     },

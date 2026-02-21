@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Kopiraj URL",
+      "generateBackground": "Generiraj",
+      "generating": "Generiranje...",
+      "generateError": "Generiranje ozadja ni uspelo",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

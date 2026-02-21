@@ -1671,6 +1671,9 @@
       "slugRequired": "L'adresse web est requise",
       "validationErrorTitle": "Veuillez corriger les erreurs suivantes",
       "copyUrl": "Copier l'URL",
+      "generateBackground": "Générer",
+      "generating": "Génération...",
+      "generateError": "Échec de la génération du fond",
       "previewButton": "Réserver une table",
       "preview": "Aperçu"
     },

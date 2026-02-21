@@ -1643,7 +1643,10 @@
       "nameRequired": "Restaurant name is required",
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
-      "copyUrl": "Copy URL"
+      "copyUrl": "Copy URL",
+      "generateBackground": "Generate",
+      "generating": "Generating...",
+      "generateError": "Failed to generate background"
     },
     "general": {
       "save": "Save",

@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Loader2, Upload, X, Copy, Check } from "lucide-react";
+import { Loader2, Upload, X, Copy, Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -34,9 +34,11 @@ interface DesignPageProps {
     accentColor: string;
     hideTitle: boolean;
   } | null;
+  plan: string;
+  isAdmin: boolean;
 }
 
-export function DesignPage({ initialRestaurant }: DesignPageProps) {
+export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps) {
   const t = useTranslations("dashboard.design");
   const locale = useLocale();
   const { translations } = useDashboard();
@@ -44,6 +46,8 @@ export function DesignPage({ initialRestaurant }: DesignPageProps) {
 
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [generating, setGenerating] = useState(false);
+  const canGenerate = isAdmin || plan !== "FREE";
 
   // General fields
   const initName = initialRestaurant?.title || "";
@@ -164,6 +168,24 @@ export function DesignPage({ initialRestaurant }: DesignPageProps) {
 
   function handleRemoveMedia() {
     setSource(null);
+  }
+
+  async function handleGenerateBackground() {
+    setGenerating(true);
+    try {
+      const res = await fetch("/api/restaurant/generate-background", { method: "POST" });
+      if (res.ok) {
+        const data = await res.json();
+        setSource(data.url);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        toast.error(data.error || t("generateError"));
+      }
+    } catch {
+      toast.error(t("generateError"));
+    } finally {
+      setGenerating(false);
+    }
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -287,7 +309,22 @@ export function DesignPage({ initialRestaurant }: DesignPageProps) {
             <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider pt-6">{t("sectionDesign")}:</h2>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium">{t("background")}:</label>
+              <div className="flex items-center justify-between">
+                <label className="text-sm font-medium">{t("background")}:</label>
+                {canGenerate && (
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    className="h-7 text-xs gap-1.5"
+                    onClick={() => { track(DashboardEvent.CLICKED_GENERATE_BACKGROUND); handleGenerateBackground(); }}
+                    disabled={generating || uploading}
+                  >
+                    {generating ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
+                    {generating ? t("generating") : t("generateBackground")}
+                  </Button>
+                )}
+              </div>
               {source ? (
                 <div className="relative">
                   <div className="relative h-40 w-40 rounded-lg overflow-hidden border">

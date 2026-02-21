@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Kopijuoti URL",
+      "generateBackground": "Generuoti",
+      "generating": "Generuojama...",
+      "generateError": "Nepavyko sugeneruoti fono",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

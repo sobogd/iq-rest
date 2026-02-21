@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Копирај URL",
+      "generateBackground": "Генериши",
+      "generating": "Генерисање...",
+      "generateError": "Генерисање позадине није успело",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

@@ -1704,6 +1704,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "复制URL",
+      "generateBackground": "生成",
+      "generating": "生成中...",
+      "generateError": "生成背景失败",
       "previewButton": "预订餐桌",
       "preview": "预览"
     },

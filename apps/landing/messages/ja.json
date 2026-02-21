@@ -1704,6 +1704,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "URLをコピー",
+      "generateBackground": "生成",
+      "generating": "生成中...",
+      "generateError": "背景の生成に失敗しました",
       "previewButton": "予約する",
       "preview": "プレビュー"
     },

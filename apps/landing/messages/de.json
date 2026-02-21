@@ -1671,6 +1671,9 @@
       "slugRequired": "Webadresse ist erforderlich",
       "validationErrorTitle": "Bitte beheben Sie die folgenden Fehler",
       "copyUrl": "URL kopieren",
+      "generateBackground": "Generieren",
+      "generating": "Wird generiert...",
+      "generateError": "Hintergrund konnte nicht generiert werden",
       "previewButton": "Tisch reservieren",
       "preview": "Vorschau"
     },

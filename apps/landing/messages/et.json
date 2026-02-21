@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Kopeeri URL",
+      "generateBackground": "Genereeri",
+      "generating": "Genereerimine...",
+      "generateError": "Tausta genereerimine ebaõnnestus",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

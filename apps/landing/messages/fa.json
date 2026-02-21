@@ -1704,6 +1704,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "کپی URL",
+      "generateBackground": "تولید",
+      "generating": "در حال تولید...",
+      "generateError": "تولید پس‌زمینه ناموفق بود",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

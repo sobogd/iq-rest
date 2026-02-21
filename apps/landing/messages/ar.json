@@ -1704,6 +1704,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "نسخ URL",
+      "generateBackground": "توليد",
+      "generating": "جارٍ التوليد...",
+      "generateError": "فشل في توليد الخلفية",
       "previewButton": "احجز طاولة",
       "preview": "معاينة"
     },

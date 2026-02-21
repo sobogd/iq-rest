@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Copiază URL",
+      "generateBackground": "Generează",
+      "generating": "Se generează...",
+      "generateError": "Nu s-a putut genera fundalul",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

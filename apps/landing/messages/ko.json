@@ -1704,6 +1704,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "URL 복사",
+      "generateBackground": "생성",
+      "generating": "생성 중...",
+      "generateError": "배경 생성에 실패했습니다",
       "previewButton": "예약하기",
       "preview": "미리보기"
     },

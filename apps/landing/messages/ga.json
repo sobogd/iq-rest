@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Cóipeáil URL",
+      "generateBackground": "Gin",
+      "generating": "Ag giniúint...",
+      "generateError": "Theip ar chúlra a ghiniúint",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },

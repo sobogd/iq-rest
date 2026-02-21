@@ -1671,6 +1671,9 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Copiar URL",
+      "generateBackground": "Generar",
+      "generating": "Generant...",
+      "generateError": "No s'ha pogut generar el fons",
       "previewButton": "Book a Table",
       "preview": "Preview"
     },
