@@ -71,18 +71,38 @@ export async function GET(request: NextRequest) {
       take: PAGE_SIZE,
     });
 
-    // Get monthly page views for this page of companies
+    // Get monthly + today page views for this page of companies
     const companyIds = companies.map((c) => c.id);
-    const monthlyViewCounts = companyIds.length > 0
-      ? await prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
-          SELECT "companyId", COUNT(*) as count
-          FROM page_views
-          WHERE "companyId" = ANY(${companyIds}::text[])
-            AND "createdAt" >= ${startOfMonth}
-          GROUP BY "companyId"
-        `
-      : [];
+
+    const tz = searchParams.get("tz") || "UTC";
+    const nowTz = new Date().toLocaleString("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" });
+    const [y, m, d] = nowTz.split("-").map(Number);
+    const todayLocal = new Date(Date.UTC(y, m - 1, d));
+    const utcStr = todayLocal.toLocaleString("en-US", { timeZone: "UTC" });
+    const tzStr = todayLocal.toLocaleString("en-US", { timeZone: tz });
+    const offsetMs = new Date(utcStr).getTime() - new Date(tzStr).getTime();
+    const todayStart = new Date(todayLocal.getTime() + offsetMs);
+
+    const [monthlyViewCounts, todayViewCounts] = companyIds.length > 0
+      ? await Promise.all([
+          prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
+            SELECT "companyId", COUNT(*) as count
+            FROM page_views
+            WHERE "companyId" = ANY(${companyIds}::text[])
+              AND "createdAt" >= ${startOfMonth}
+            GROUP BY "companyId"
+          `,
+          prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
+            SELECT "companyId", COUNT(*) as count
+            FROM page_views
+            WHERE "companyId" = ANY(${companyIds}::text[])
+              AND "createdAt" >= ${todayStart}
+            GROUP BY "companyId"
+          `,
+        ])
+      : [[], []];
     const viewsMap = new Map(monthlyViewCounts.map((r) => [r.companyId, Number(r.count)]));
+    const todayViewsMap = new Map(todayViewCounts.map((r) => [r.companyId, Number(r.count)]));
 
     const items = companies.map((c) => ({
       id: c.id,
@@ -93,6 +113,7 @@ export async function GET(request: NextRequest) {
       itemsCount: c._count.items,
       messagesCount: c._count.supportMessages,
       monthlyViews: viewsMap.get(c.id) || 0,
+      todayViews: todayViewsMap.get(c.id) || 0,
       emailsSent: c.emailsSent as Record<string, string> | null,
     }));
 

@@ -17,6 +17,7 @@ interface Company {
   itemsCount: number;
   messagesCount: number;
   monthlyViews: number;
+  todayViews: number;
   emailsSent: Record<string, string> | null;
 }
 
@@ -58,7 +59,8 @@ export function AdminPage() {
   const fetchCompanies = useCallback(async (f: Filter, pg: number) => {
     setLoading(true);
     try {
-      const params = new URLSearchParams({ filter: f, page: String(pg) });
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const params = new URLSearchParams({ filter: f, page: String(pg), tz });
       const res = await fetch(`/api/admin/companies?${params}`);
       if (!res.ok) return;
       const data = await res.json();
@@ -165,7 +167,7 @@ export function AdminPage() {
                         <span className={`flex items-center gap-0.5 ${
                           company.plan === "FREE" && company.monthlyViews >= 400 ? "text-red-500" : "text-blue-500"
                         }`}>
-                          <Eye className="h-3 w-3" />{company.monthlyViews}
+                          <Eye className="h-3 w-3" />{company.monthlyViews}{company.todayViews > 0 && <span className="text-muted-foreground">({company.todayViews})</span>}
                         </span>
                       )}
                       {company.messagesCount > 0 && (
