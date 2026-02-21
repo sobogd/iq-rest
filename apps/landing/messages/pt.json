@@ -1429,6 +1429,42 @@
       "reservationSettings": "Configuração"
     },
     "logout": "Sair",
+    "upsell": {
+      "title": "Faça Seu Restaurante Crescer Online",
+      "subtitle": "Traduções IA, leituras ilimitadas, reservas e mais",
+      "featuresTitle": "Tudo o que você recebe",
+      "features": {
+        "aiTranslations": {
+          "title": "Traduções IA do Menu",
+          "description": "Traduza seu menu para mais de 25 idiomas com um clique"
+        },
+        "aiImages": {
+          "title": "Melhoria de Imagens com IA",
+          "description": "Deixe as fotos dos seus pratos com aparência profissional instantaneamente"
+        },
+        "reservations": {
+          "title": "Reservas de Mesas",
+          "description": "Permita que os clientes reservem mesas diretamente do seu menu"
+        },
+        "unlimitedScans": {
+          "title": "Leituras QR Ilimitadas",
+          "description": "Sem limites de quantos clientes veem seu menu"
+        },
+        "noBranding": {
+          "title": "Sem Marca IQ Rest",
+          "description": "Seu menu, sua marca — limpo e profissional"
+        }
+      },
+      "comparePlans": "Comparar todos os planos",
+      "hideComparison": "Ocultar comparação",
+      "ctaBasic": "Começar com Basic",
+      "ctaPro": "Começar com Pro",
+      "billedMonthly": "Cobrado mensalmente",
+      "ctaSub": "Cancele a qualquer momento · Sem taxas de configuração",
+      "skip": "Continuar com o plano Grátis",
+      "guarantee": "Pagamento seguro · Garantia de reembolso de 7 dias",
+      "checkoutError": "Falha ao iniciar o pagamento. Tente novamente."
+    },
     "aiTranslate": {
       "title": "Tradução IA",
       "description": "A tradução IA está disponível com uma assinatura Basic ou Pro. Atualize seu plano para usar traduções automáticas.",

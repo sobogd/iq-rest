@@ -1429,6 +1429,27 @@
       "reservationSettings": "Skilgreining"
     },
     "logout": "Útskráning",
+    "upsell": {
+      "title": "Stækkaðu Veitingastaðinn Þinn á Netinu",
+      "subtitle": "AI þýðingar, ótakmörkuð skönnun, borðapantanir og meira",
+      "featuresTitle": "Allt sem þú færð",
+      "features": {
+        "aiTranslations": { "title": "AI Matseðilsþýðingar", "description": "Þýddu matseðilinn þinn á 25+ tungumál með einum smelli" },
+        "aiImages": { "title": "AI Myndaúrbætur", "description": "Gerðu réttamyndirnar þínar faglegar samstundis" },
+        "reservations": { "title": "Borðapantanir", "description": "Leyfðu viðskiptavinum að panta borð beint af matseðlinum þínum" },
+        "unlimitedScans": { "title": "Ótakmörkuð QR Skönnun", "description": "Engin takmörk á hversu margir viðskiptavinir sjá matseðilinn þinn" },
+        "noBranding": { "title": "Engin IQ Rest Vörumerki", "description": "Þinn matseðill, þitt vörumerki — hreint og faglegt" }
+      },
+      "comparePlans": "Bera saman öll áskriftarform",
+      "hideComparison": "Fela samanburð",
+      "ctaBasic": "Byrjaðu með Basic",
+      "ctaPro": "Byrjaðu með Pro",
+      "billedMonthly": "Rukkað mánaðarlega",
+      "ctaSub": "Segðu upp hvenær sem er · Engin uppsetningargjöld",
+      "skip": "Halda áfram með ókeypis áskrift",
+      "guarantee": "Örugg greiðsla · 7 daga peningaábyrgð",
+      "checkoutError": "Ekki tókst að hefja greiðslu. Reyndu aftur."
+    },
     "aiTranslate": {
       "title": "AI Þýðing",
       "description": "AI þýðing er í boði með Basic eða Pro áskrift. Uppfærðu áætlun þína til að nota sjálfvirkar þýðingar.",

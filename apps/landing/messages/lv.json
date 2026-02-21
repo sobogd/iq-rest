@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfigurācija"
     },
     "logout": "Iziet",
+    "upsell": {
+      "title": "Audzējiet Savu Restorānu Tiešsaistē",
+      "subtitle": "AI tulkojumi, neierobežota skenēšana, rezervācijas un vēl",
+      "featuresTitle": "Viss ko jūs saņemat",
+      "features": {
+        "aiTranslations": { "title": "AI Ēdienkartes Tulkojumi", "description": "Iztulkojiet ēdienkarti 25+ valodās ar vienu klikšķi" },
+        "aiImages": { "title": "AI Attēlu Uzlabošana", "description": "Padariet ēdienu fotogrāfijas profesionālas acumirklī" },
+        "reservations": { "title": "Galdu Rezervēšana", "description": "Ļaujiet klientiem rezervēt galdus tieši no ēdienkartes" },
+        "unlimitedScans": { "title": "Neierobežota QR Skenēšana", "description": "Nav ierobežojumu, cik klientu redz jūsu ēdienkarti" },
+        "noBranding": { "title": "Bez IQ Rest Zīmola", "description": "Jūsu ēdienkarte, jūsu zīmols — tīrs un profesionāls" }
+      },
+      "comparePlans": "Salīdzināt visus plānus",
+      "hideComparison": "Slēpt salīdzinājumu",
+      "ctaBasic": "Sākt ar Basic",
+      "ctaPro": "Sākt ar Pro",
+      "billedMonthly": "Rēķins katru mēnesi",
+      "ctaSub": "Atceliet jebkurā laikā · Bez iestatīšanas maksām",
+      "skip": "Turpināt ar bezmaksas plānu",
+      "guarantee": "Drošs maksājums · 7 dienu naudas atgriešanas garantija",
+      "checkoutError": "Neizdevās sākt maksājumu. Lūdzu, mēģiniet vēlreiz."
+    },
     "aiTranslate": {
       "title": "AI Tulkojums",
       "description": "AI tulkojums ir pieejams ar Basic vai Pro abonementu. Uzlabojiet savu plānu, lai izmantotu automātiskos tulkojumus.",

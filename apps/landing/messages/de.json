@@ -1429,6 +1429,42 @@
       "reservationSettings": "Konfiguration"
     },
     "logout": "Abmelden",
+    "upsell": {
+      "title": "Lass Dein Restaurant Online Wachsen",
+      "subtitle": "KI-Übersetzungen, unbegrenzte Scans, Reservierungen und mehr",
+      "featuresTitle": "Alles was du bekommst",
+      "features": {
+        "aiTranslations": {
+          "title": "KI-Menüübersetzungen",
+          "description": "Übersetze dein Menü in über 25 Sprachen mit einem Klick"
+        },
+        "aiImages": {
+          "title": "KI-Bildverbesserung",
+          "description": "Lass deine Gerichtfotos sofort professionell aussehen"
+        },
+        "reservations": {
+          "title": "Tischreservierungen",
+          "description": "Lass Kunden direkt über dein Menü Tische reservieren"
+        },
+        "unlimitedScans": {
+          "title": "Unbegrenzte QR-Scans",
+          "description": "Keine Limits, wie viele Kunden dein Menü sehen"
+        },
+        "noBranding": {
+          "title": "Kein IQ Rest Branding",
+          "description": "Dein Menü, deine Marke — sauber und professionell"
+        }
+      },
+      "comparePlans": "Alle Pläne vergleichen",
+      "hideComparison": "Vergleich ausblenden",
+      "ctaBasic": "Mit Basic starten",
+      "ctaPro": "Mit Pro starten",
+      "billedMonthly": "Monatlich abgerechnet",
+      "ctaSub": "Jederzeit kündbar · Keine Einrichtungsgebühren",
+      "skip": "Mit dem kostenlosen Plan fortfahren",
+      "guarantee": "Sichere Zahlung · 7 Tage Geld-zurück-Garantie",
+      "checkoutError": "Fehler beim Starten des Checkouts. Bitte versuche es erneut."
+    },
     "aiTranslate": {
       "title": "KI-Übersetzung",
       "description": "KI-Übersetzung ist mit einem Basic- oder Pro-Abonnement verfügbar. Aktualisieren Sie Ihren Plan, um automatische Übersetzungen zu nutzen.",

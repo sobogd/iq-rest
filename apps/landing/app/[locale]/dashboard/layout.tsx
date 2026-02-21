@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
@@ -20,11 +20,17 @@ export default async function DashboardLayout({
 
   const companyId = auth.companyId;
 
-  // Check onboarding state
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { companyId },
-    select: { title: true },
-  });
+  // Check onboarding state + upsell data
+  const [restaurant, company] = await Promise.all([
+    prisma.restaurant.findFirst({
+      where: { companyId },
+      select: { title: true },
+    }),
+    prisma.company.findUnique({
+      where: { id: companyId },
+      select: { plan: true, createdAt: true, upsellShownAt: true },
+    }),
+  ]);
 
   const hasRestaurant = Boolean(restaurant?.title && restaurant.title.trim().length > 0);
 
@@ -37,6 +43,29 @@ export default async function DashboardLayout({
   const impersonation = adminOriginalEmail
     ? { originalEmail: adminOriginalEmail, currentEmail: currentEmail ?? "" }
     : undefined;
+
+  // Upsell redirect for FREE users
+  if (company && company.plan === "FREE" && !impersonation) {
+    const headerStore = await headers();
+    const pathname = headerStore.get("x-pathname") || "";
+    const isUpgradePage = pathname.includes("/dashboard/upgrade");
+
+    if (!isUpgradePage) {
+      const now = Date.now();
+      const fiveDaysMs = 5 * 24 * 60 * 60 * 1000;
+      const twoDaysMs = 2 * 24 * 60 * 60 * 1000;
+      const accountAge = now - company.createdAt.getTime();
+
+      if (accountAge > fiveDaysMs) {
+        const shouldShowUpsell = !company.upsellShownAt
+          || (now - company.upsellShownAt.getTime() > twoDaysMs);
+
+        if (shouldShowUpsell) {
+          redirect("/dashboard/upgrade");
+        }
+      }
+    }
+  }
 
   const t = await getTranslations("dashboard");
 

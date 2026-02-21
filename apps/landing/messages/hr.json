@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguracija"
     },
     "logout": "Odjava",
+    "upsell": {
+      "title": "Razvijte Svoj Restoran Online",
+      "subtitle": "AI prijevodi, neograničena skeniranja, rezervacije i više",
+      "featuresTitle": "Sve što dobivate",
+      "features": {
+        "aiTranslations": { "title": "AI Prijevodi Jelovnika", "description": "Prevedite jelovnik na 25+ jezika jednim klikom" },
+        "aiImages": { "title": "AI Poboljšanje Slika", "description": "Učinite fotografije jela profesionalnima odmah" },
+        "reservations": { "title": "Rezervacije Stolova", "description": "Dopustite gostima da rezerviraju stolove izravno iz jelovnika" },
+        "unlimitedScans": { "title": "Neograničena QR Skeniranja", "description": "Bez ograničenja koliko gostiju vidi vaš jelovnik" },
+        "noBranding": { "title": "Bez IQ Rest Brendiranja", "description": "Vaš jelovnik, vaš brand — čisto i profesionalno" }
+      },
+      "comparePlans": "Usporedi sve planove",
+      "hideComparison": "Sakrij usporedbu",
+      "ctaBasic": "Započni s Basic",
+      "ctaPro": "Započni s Pro",
+      "billedMonthly": "Naplaćuje se mjesečno",
+      "ctaSub": "Otkaži bilo kada · Bez naknada za postavljanje",
+      "skip": "Nastavi s besplatnim planom",
+      "guarantee": "Sigurno plaćanje · 7 dana jamstvo povrata novca",
+      "checkoutError": "Neuspjelo pokretanje plaćanja. Pokušajte ponovno."
+    },
     "aiTranslate": {
       "title": "AI Prijevod",
       "description": "AI prijevod je dostupan s Basic ili Pro pretplatom. Nadogradite svoj plan za korištenje automatskih prijevoda.",

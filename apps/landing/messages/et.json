@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguratsioon"
     },
     "logout": "Logi välja",
+    "upsell": {
+      "title": "Kasvata Oma Restorani Veebis",
+      "subtitle": "AI tõlked, piiramatud skaneeringud, broneeringud ja palju muud",
+      "featuresTitle": "Kõik mida saad",
+      "features": {
+        "aiTranslations": { "title": "AI Menüütõlked", "description": "Tõlgi oma menüü 25+ keelde ühe klikiga" },
+        "aiImages": { "title": "AI Pilditöötlus", "description": "Muuda oma toidufotod professionaalseks hetkega" },
+        "reservations": { "title": "Laudade Broneerimine", "description": "Lase klientidel broneerida laudu otse menüüst" },
+        "unlimitedScans": { "title": "Piiramatud QR Skaneeringud", "description": "Pole piiranguid, kui palju kliente su menüüd vaatab" },
+        "noBranding": { "title": "Ilma IQ Rest Brändinguta", "description": "Sinu menüü, sinu bränd — puhas ja professionaalne" }
+      },
+      "comparePlans": "Võrdle kõiki pakette",
+      "hideComparison": "Peida võrdlus",
+      "ctaBasic": "Alusta Basic paketiga",
+      "ctaPro": "Alusta Pro paketiga",
+      "billedMonthly": "Arve esitatakse igakuiselt",
+      "ctaSub": "Tühista igal ajal · Ilma seadistustasudeta",
+      "skip": "Jätka tasuta paketiga",
+      "guarantee": "Turvaline makse · 7-päevane raha tagasi garantii",
+      "checkoutError": "Makset ei õnnestunud alustada. Palun proovi uuesti."
+    },
     "aiTranslate": {
       "title": "AI Tõlge",
       "description": "AI tõlge on saadaval Basic või Pro tellimusega. Täiendage oma plaani automaatsete tõlgete kasutamiseks.",

@@ -144,6 +144,11 @@ export enum DashboardEvent {
   // Analytics
   SHOWED_ANALYTICS = "showed_analytics",
 
+  // Upsell
+  SHOWED_UPSELL_PAGE = "showed_upsell_page",
+  CLICKED_UPSELL_UPGRADE = "clicked_upsell_upgrade",
+  CLICKED_UPSELL_SKIP = "clicked_upsell_skip",
+
   // Billing
   SHOWED_BILLING = "showed_billing",
   CLICKED_PLAN_UPGRADE = "clicked_plan_upgrade",
@@ -321,6 +326,11 @@ export const EVENT_LABELS: Record<string, string> = {
 
   // Analytics
   [DashboardEvent.SHOWED_ANALYTICS]: "Showed Analytics",
+
+  // Upsell
+  [DashboardEvent.SHOWED_UPSELL_PAGE]: "Showed Upsell Page",
+  [DashboardEvent.CLICKED_UPSELL_UPGRADE]: "Clicked Upsell Upgrade",
+  [DashboardEvent.CLICKED_UPSELL_SKIP]: "Clicked Upsell Skip",
 
   // Billing
   [DashboardEvent.SHOWED_BILLING]: "Showed Billing",

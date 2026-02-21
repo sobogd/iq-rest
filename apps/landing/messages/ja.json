@@ -1462,6 +1462,27 @@
       "reservationSettings": "設定"
     },
     "logout": "ログアウト",
+    "upsell": {
+      "title": "レストランをオンラインで成長させましょう",
+      "subtitle": "AI翻訳、無制限スキャン、予約など",
+      "featuresTitle": "すべての特典",
+      "features": {
+        "aiTranslations": { "title": "AIメニュー翻訳", "description": "ワンクリックでメニューを25以上の言語に翻訳" },
+        "aiImages": { "title": "AI画像強化", "description": "料理の写真を瞬時にプロフェッショナルに" },
+        "reservations": { "title": "テーブル予約", "description": "お客様がメニューから直接テーブルを予約可能" },
+        "unlimitedScans": { "title": "無制限QRスキャン", "description": "メニューを閲覧するお客様の数に制限なし" },
+        "noBranding": { "title": "IQ Restブランディングなし", "description": "あなたのメニュー、あなたのブランド — クリーンでプロフェッショナル" }
+      },
+      "comparePlans": "すべてのプランを比較",
+      "hideComparison": "比較を非表示",
+      "ctaBasic": "Basicで始める",
+      "ctaPro": "Proで始める",
+      "billedMonthly": "月額請求",
+      "ctaSub": "いつでもキャンセル可能 · 設定費用なし",
+      "skip": "無料プランで続ける",
+      "guarantee": "安全な決済 · 7日間返金保証",
+      "checkoutError": "決済の開始に失敗しました。もう一度お試しください。"
+    },
     "aiTranslate": {
       "title": "AI翻訳",
       "description": "AI翻訳はBasicまたはProサブスクリプションでご利用いただけます。自動翻訳を使用するにはプランをアップグレードしてください。",

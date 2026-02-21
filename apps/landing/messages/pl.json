@@ -1429,6 +1429,42 @@
       "reservationSettings": "Konfiguracja"
     },
     "logout": "Wyloguj się",
+    "upsell": {
+      "title": "Rozwijaj Swoją Restaurację Online",
+      "subtitle": "Tłumaczenia AI, nieograniczone skany, rezerwacje i więcej",
+      "featuresTitle": "Wszystko co otrzymujesz",
+      "features": {
+        "aiTranslations": {
+          "title": "Tłumaczenia Menu przez AI",
+          "description": "Przetłumacz swoje menu na ponad 25 języków jednym kliknięciem"
+        },
+        "aiImages": {
+          "title": "Ulepszanie Zdjęć przez AI",
+          "description": "Spraw, by zdjęcia Twoich dań wyglądały profesjonalnie natychmiast"
+        },
+        "reservations": {
+          "title": "Rezerwacje Stolików",
+          "description": "Pozwól klientom rezerwować stoliki bezpośrednio z Twojego menu"
+        },
+        "unlimitedScans": {
+          "title": "Nieograniczone Skany QR",
+          "description": "Bez limitów na liczbę klientów przeglądających Twoje menu"
+        },
+        "noBranding": {
+          "title": "Bez Brandingu IQ Rest",
+          "description": "Twoje menu, Twoja marka — czyste i profesjonalne"
+        }
+      },
+      "comparePlans": "Porównaj wszystkie plany",
+      "hideComparison": "Ukryj porównanie",
+      "ctaBasic": "Zacznij z Basic",
+      "ctaPro": "Zacznij z Pro",
+      "billedMonthly": "Rozliczane miesięcznie",
+      "ctaSub": "Anuluj w dowolnym momencie · Bez opłat za konfigurację",
+      "skip": "Kontynuuj z darmowym planem",
+      "guarantee": "Bezpieczna płatność · 7-dniowa gwarancja zwrotu pieniędzy",
+      "checkoutError": "Nie udało się rozpocząć płatności. Spróbuj ponownie."
+    },
     "aiTranslate": {
       "title": "Tłumaczenie AI",
       "description": "Tłumaczenie AI jest dostępne z subskrypcją Basic lub Pro. Ulepsz swój plan, aby korzystać z automatycznych tłumaczeń.",

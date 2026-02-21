@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguráció"
     },
     "logout": "Kijelentkezés",
+    "upsell": {
+      "title": "Növeld Éttermед Online Jelenlétét",
+      "subtitle": "AI fordítások, korlátlan szkennelés, foglalások és még több",
+      "featuresTitle": "Mindent megkapsz",
+      "features": {
+        "aiTranslations": { "title": "AI Étlap Fordítások", "description": "Fordítsd le étlapodat 25+ nyelvre egyetlen kattintással" },
+        "aiImages": { "title": "AI Képjavítás", "description": "Tedd profivá az ételfotóidat azonnal" },
+        "reservations": { "title": "Asztalfoglalások", "description": "Engedd, hogy vendégeid közvetlenül az étlapról foglaljanak asztalt" },
+        "unlimitedScans": { "title": "Korlátlan QR Szkennelés", "description": "Nincs korlát, hány vendég nézheti meg az étlapodat" },
+        "noBranding": { "title": "IQ Rest Márkajelzés Nélkül", "description": "A te étlapod, a te márkád — letisztult és professzionális" }
+      },
+      "comparePlans": "Összes csomag összehasonlítása",
+      "hideComparison": "Összehasonlítás elrejtése",
+      "ctaBasic": "Kezdd a Basic csomaggal",
+      "ctaPro": "Kezdd a Pro csomaggal",
+      "billedMonthly": "Havonta számlázva",
+      "ctaSub": "Bármikor lemondható · Nincsenek beállítási díjak",
+      "skip": "Folytatás az ingyenes csomaggal",
+      "guarantee": "Biztonságos fizetés · 7 napos pénzvisszafizetési garancia",
+      "checkoutError": "Nem sikerült elindítani a fizetést. Kérjük, próbáld újra."
+    },
     "aiTranslate": {
       "title": "AI Fordítás",
       "description": "Az AI fordítás Basic vagy Pro előfizetéssel érhető el. Frissítse csomagját az automatikus fordítások használatához.",

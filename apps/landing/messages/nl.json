@@ -1429,6 +1429,42 @@
       "reservationSettings": "Configuratie"
     },
     "logout": "Uitloggen",
+    "upsell": {
+      "title": "Laat Je Restaurant Online Groeien",
+      "subtitle": "AI-vertalingen, onbeperkte scans, reserveringen en meer",
+      "featuresTitle": "Alles wat je krijgt",
+      "features": {
+        "aiTranslations": {
+          "title": "AI Menuvertalingen",
+          "description": "Vertaal je menu naar 25+ talen met één klik"
+        },
+        "aiImages": {
+          "title": "AI Beeldverbetering",
+          "description": "Laat je gerechten er direct professioneel uitzien"
+        },
+        "reservations": {
+          "title": "Tafelreserveringen",
+          "description": "Laat klanten tafels reserveren rechtstreeks vanuit je menu"
+        },
+        "unlimitedScans": {
+          "title": "Onbeperkte QR Scans",
+          "description": "Geen limieten op hoeveel klanten je menu bekijken"
+        },
+        "noBranding": {
+          "title": "Geen IQ Rest Branding",
+          "description": "Jouw menu, jouw merk — schoon en professioneel"
+        }
+      },
+      "comparePlans": "Alle plannen vergelijken",
+      "hideComparison": "Vergelijking verbergen",
+      "ctaBasic": "Start met Basic",
+      "ctaPro": "Start met Pro",
+      "billedMonthly": "Maandelijks gefactureerd",
+      "ctaSub": "Op elk moment opzegbaar · Geen installatiekosten",
+      "skip": "Doorgaan met het gratis plan",
+      "guarantee": "Veilige betaling · 7 dagen geld-terug-garantie",
+      "checkoutError": "Kan het afrekenen niet starten. Probeer het opnieuw."
+    },
     "aiTranslate": {
       "title": "AI Vertaling",
       "description": "AI-vertaling is beschikbaar met een Basic- of Pro-abonnement. Upgrade je plan om automatische vertalingen te gebruiken.",

@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfigūracija"
     },
     "logout": "Atsijungti",
+    "upsell": {
+      "title": "Auginkite Savo Restoraną Internete",
+      "subtitle": "AI vertimai, neriboti nuskaitymai, rezervacijos ir daugiau",
+      "featuresTitle": "Viskas ką gausite",
+      "features": {
+        "aiTranslations": { "title": "AI Meniu Vertimai", "description": "Išverskite meniu į 25+ kalbų vienu paspaudimu" },
+        "aiImages": { "title": "AI Vaizdų Pagerinimas", "description": "Padarykite patiekalų nuotraukas profesionalias akimirksniu" },
+        "reservations": { "title": "Stalų Rezervacijos", "description": "Leiskite klientams rezervuoti stalus tiesiai iš meniu" },
+        "unlimitedScans": { "title": "Neriboti QR Nuskaitymai", "description": "Jokių apribojimų kiek klientų mato jūsų meniu" },
+        "noBranding": { "title": "Be IQ Rest Prekės Ženklo", "description": "Jūsų meniu, jūsų prekės ženklas — švarus ir profesionalus" }
+      },
+      "comparePlans": "Palyginti visus planus",
+      "hideComparison": "Slėpti palyginimą",
+      "ctaBasic": "Pradėti su Basic",
+      "ctaPro": "Pradėti su Pro",
+      "billedMonthly": "Mokama kas mėnesį",
+      "ctaSub": "Atšaukite bet kada · Be nustatymo mokesčių",
+      "skip": "Tęsti su nemokamu planu",
+      "guarantee": "Saugus mokėjimas · 7 dienų pinigų grąžinimo garantija",
+      "checkoutError": "Nepavyko pradėti mokėjimo. Bandykite dar kartą."
+    },
     "aiTranslate": {
       "title": "AI Vertimas",
       "description": "AI vertimas galimas su Basic arba Pro prenumerata. Atnaujinkite savo planą, kad galėtumėte naudoti automatinius vertimus.",

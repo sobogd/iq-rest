@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfigurace"
     },
     "logout": "Odhlásit se",
+    "upsell": {
+      "title": "Rozviňte Svou Restauraci Online",
+      "subtitle": "AI překlady, neomezené skenování, rezervace a další",
+      "featuresTitle": "Vše co získáte",
+      "features": {
+        "aiTranslations": { "title": "AI Překlady Jídelního Lístku", "description": "Přeložte jídelní lístek do 25+ jazyků jedním kliknutím" },
+        "aiImages": { "title": "AI Vylepšení Obrázků", "description": "Udělejte z fotek jídel profesionální fotky okamžitě" },
+        "reservations": { "title": "Rezervace Stolů", "description": "Umožněte zákazníkům rezervovat stoly přímo z jídelního lístku" },
+        "unlimitedScans": { "title": "Neomezené QR Skenování", "description": "Žádné limity na počet zákazníků prohlížejících váš jídelní lístek" },
+        "noBranding": { "title": "Bez Značky IQ Rest", "description": "Váš jídelní lístek, vaše značka — čisté a profesionální" }
+      },
+      "comparePlans": "Porovnat všechny plány",
+      "hideComparison": "Skrýt porovnání",
+      "ctaBasic": "Začít s Basic",
+      "ctaPro": "Začít s Pro",
+      "billedMonthly": "Měsíční fakturace",
+      "ctaSub": "Zrušení kdykoli · Bez poplatků za nastavení",
+      "skip": "Pokračovat s bezplatným plánem",
+      "guarantee": "Bezpečná platba · 7denní záruka vrácení peněz",
+      "checkoutError": "Nepodařilo se spustit platbu. Zkuste to prosím znovu."
+    },
     "aiTranslate": {
       "title": "AI Překlad",
       "description": "AI překlad je k dispozici s předplatným Basic nebo Pro. Upgradujte svůj plán pro použití automatických překladů.",

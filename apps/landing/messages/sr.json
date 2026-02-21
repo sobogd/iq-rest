@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguracija"
     },
     "logout": "Odjavi se",
+    "upsell": {
+      "title": "Развијте Свој Ресторан Онлајн",
+      "subtitle": "AI преводи, неограничено скенирање, резервације и више",
+      "featuresTitle": "Све што добијате",
+      "features": {
+        "aiTranslations": { "title": "AI Преводи Менија", "description": "Преведите мени на 25+ језика једним кликом" },
+        "aiImages": { "title": "AI Побољшање Слика", "description": "Учините фотографије јела професионалним одмах" },
+        "reservations": { "title": "Резервације Столова", "description": "Дозволите гостима да резервишу столове директно из менија" },
+        "unlimitedScans": { "title": "Неограничена QR Скенирања", "description": "Без ограничења колико гостију види ваш мени" },
+        "noBranding": { "title": "Без IQ Rest Брендирања", "description": "Ваш мени, ваш бренд — чисто и професионално" }
+      },
+      "comparePlans": "Упоредите све планове",
+      "hideComparison": "Сакриј поређење",
+      "ctaBasic": "Почните са Basic",
+      "ctaPro": "Почните са Pro",
+      "billedMonthly": "Месечна наплата",
+      "ctaSub": "Откажите у било ком тренутку · Без накнада за подешавање",
+      "skip": "Наставите са бесплатним планом",
+      "guarantee": "Безбедно плаћање · 7 дана гаранција поврата новца",
+      "checkoutError": "Није успело покретање плаћања. Покушајте поново."
+    },
     "aiTranslate": {
       "title": "AI Prevod",
       "description": "AI prevod je dostupan sa Basic ili Pro pretplatom. Nadogradite svoj plan da biste koristili automatske prevode.",

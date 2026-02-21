@@ -1429,6 +1429,27 @@
       "reservationSettings": "Yapılandırma"
     },
     "logout": "Çıkış Yap",
+    "upsell": {
+      "title": "Restoranınızı Online Büyütün",
+      "subtitle": "AI çeviriler, sınırsız taramalar, rezervasyonlar ve daha fazlası",
+      "featuresTitle": "Elde ettiğiniz her şey",
+      "features": {
+        "aiTranslations": { "title": "AI Menü Çevirileri", "description": "Menünüzü tek tıkla 25+ dile çevirin" },
+        "aiImages": { "title": "AI Görüntü İyileştirme", "description": "Yemek fotoğraflarınızı anında profesyonel gösterin" },
+        "reservations": { "title": "Masa Rezervasyonları", "description": "Müşterilerin doğrudan menünüzden masa ayırtmasına izin verin" },
+        "unlimitedScans": { "title": "Sınırsız QR Taramaları", "description": "Menünüzü kaç müşterinin görüntüleyeceğine dair sınır yok" },
+        "noBranding": { "title": "IQ Rest Markası Yok", "description": "Sizin menünüz, sizin markanız — temiz ve profesyonel" }
+      },
+      "comparePlans": "Tüm planları karşılaştır",
+      "hideComparison": "Karşılaştırmayı gizle",
+      "ctaBasic": "Basic ile başla",
+      "ctaPro": "Pro ile başla",
+      "billedMonthly": "Aylık faturalandırılır",
+      "ctaSub": "İstediğiniz zaman iptal edin · Kurulum ücreti yok",
+      "skip": "Ücretsiz plan ile devam et",
+      "guarantee": "Güvenli ödeme · 7 gün para iade garantisi",
+      "checkoutError": "Ödeme başlatılamadı. Lütfen tekrar deneyin."
+    },
     "aiTranslate": {
       "title": "Yapay Zeka Çevirisi",
       "description": "Yapay zeka çevirisi Basic veya Pro aboneliğiyle kullanılabilir. Otomatik çevirileri kullanmak için planınızı yükseltin.",

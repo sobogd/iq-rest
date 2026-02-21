@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfigurasjon"
     },
     "logout": "Logg ut",
+    "upsell": {
+      "title": "Voks Din Restaurant på Nett",
+      "subtitle": "AI-oversettelser, ubegrensede skanninger, reservasjoner og mer",
+      "featuresTitle": "Alt du får",
+      "features": {
+        "aiTranslations": { "title": "AI-Menyoversettelser", "description": "Oversett menyen din til 25+ språk med ett klikk" },
+        "aiImages": { "title": "AI-Bildeforbedring", "description": "Gjør matbildene dine profesjonelle umiddelbart" },
+        "reservations": { "title": "Bordreservasjoner", "description": "La kunder bestille bord direkte fra menyen din" },
+        "unlimitedScans": { "title": "Ubegrensede QR-Skanninger", "description": "Ingen begrensninger på hvor mange kunder som ser menyen din" },
+        "noBranding": { "title": "Ingen IQ Rest-Branding", "description": "Din meny, ditt merke — rent og profesjonelt" }
+      },
+      "comparePlans": "Sammenlign alle planer",
+      "hideComparison": "Skjul sammenligning",
+      "ctaBasic": "Start med Basic",
+      "ctaPro": "Start med Pro",
+      "billedMonthly": "Faktureres månedlig",
+      "ctaSub": "Avbryt når som helst · Ingen oppstartsgebyrer",
+      "skip": "Fortsett med gratisplanen",
+      "guarantee": "Sikker betaling · 7 dagers pengene-tilbake-garanti",
+      "checkoutError": "Kunne ikke starte betalingen. Prøv igjen."
+    },
     "aiTranslate": {
       "title": "AI Oversettelse",
       "description": "AI-oversettelse er tilgjengelig med et Basic- eller Pro-abonnement. Oppgrader planen din for å bruke automatiske oversettelser.",

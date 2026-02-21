@@ -1429,6 +1429,27 @@
       "reservationSettings": "Configuració"
     },
     "logout": "Tancar sessió",
+    "upsell": {
+      "title": "Fes Créixer el Teu Restaurant Online",
+      "subtitle": "Traduccions IA, escanejos il·limitats, reserves i més",
+      "featuresTitle": "Tot el que obtens",
+      "features": {
+        "aiTranslations": { "title": "Traduccions IA del Menú", "description": "Tradueix el teu menú a més de 25 idiomes amb un clic" },
+        "aiImages": { "title": "Millora d'Imatges amb IA", "description": "Fes que les fotos dels teus plats semblin professionals a l'instant" },
+        "reservations": { "title": "Reserves de Taules", "description": "Deixa que els clients reservin taules directament des del teu menú" },
+        "unlimitedScans": { "title": "Escanejos QR Il·limitats", "description": "Sense límits de quants clients veuen el teu menú" },
+        "noBranding": { "title": "Sense Marca IQ Rest", "description": "El teu menú, la teva marca — net i professional" }
+      },
+      "comparePlans": "Compara tots els plans",
+      "hideComparison": "Amaga la comparació",
+      "ctaBasic": "Comença amb Basic",
+      "ctaPro": "Comença amb Pro",
+      "billedMonthly": "Facturat mensualment",
+      "ctaSub": "Cancel·la en qualsevol moment · Sense costos d'instal·lació",
+      "skip": "Continua amb el pla Gratuït",
+      "guarantee": "Pagament segur · Garantia de devolució de 7 dies",
+      "checkoutError": "Error en iniciar el pagament. Si us plau, torna-ho a provar."
+    },
     "aiTranslate": {
       "title": "Traducció IA",
       "description": "La traducció IA està disponible amb una subscripció Basic o Pro. Actualitza el teu pla per utilitzar traduccions automàtiques.",

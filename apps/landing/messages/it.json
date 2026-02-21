@@ -1429,6 +1429,42 @@
       "reservationSettings": "Configurazione"
     },
     "logout": "Disconnetti",
+    "upsell": {
+      "title": "Fai Crescere il Tuo Ristorante Online",
+      "subtitle": "Traduzioni IA, scansioni illimitate, prenotazioni e altro",
+      "featuresTitle": "Tutto quello che ottieni",
+      "features": {
+        "aiTranslations": {
+          "title": "Traduzioni IA del Menu",
+          "description": "Traduci il tuo menu in oltre 25 lingue con un clic"
+        },
+        "aiImages": {
+          "title": "Miglioramento Immagini con IA",
+          "description": "Rendi le foto dei tuoi piatti professionali all'istante"
+        },
+        "reservations": {
+          "title": "Prenotazioni Tavoli",
+          "description": "Lascia che i clienti prenotino tavoli direttamente dal tuo menu"
+        },
+        "unlimitedScans": {
+          "title": "Scansioni QR Illimitate",
+          "description": "Nessun limite a quanti clienti vedono il tuo menu"
+        },
+        "noBranding": {
+          "title": "Senza Marchio IQ Rest",
+          "description": "Il tuo menu, il tuo brand — pulito e professionale"
+        }
+      },
+      "comparePlans": "Confronta tutti i piani",
+      "hideComparison": "Nascondi confronto",
+      "ctaBasic": "Inizia con Basic",
+      "ctaPro": "Inizia con Pro",
+      "billedMonthly": "Fatturato mensilmente",
+      "ctaSub": "Cancella in qualsiasi momento · Nessun costo di attivazione",
+      "skip": "Continua con il piano Gratuito",
+      "guarantee": "Pagamento sicuro · Garanzia di rimborso di 7 giorni",
+      "checkoutError": "Errore nell'avvio del pagamento. Riprova."
+    },
     "aiTranslate": {
       "title": "Traduzione AI",
       "description": "La traduzione AI è disponibile con un abbonamento Basic o Pro. Aggiorna il tuo piano per utilizzare le traduzioni automatiche.",

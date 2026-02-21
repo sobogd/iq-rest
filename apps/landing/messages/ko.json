@@ -1462,6 +1462,27 @@
       "reservationSettings": "설정"
     },
     "logout": "로그아웃",
+    "upsell": {
+      "title": "레스토랑을 온라인으로 성장시키세요",
+      "subtitle": "AI 번역, 무제한 스캔, 예약 등",
+      "featuresTitle": "받을 수 있는 모든 것",
+      "features": {
+        "aiTranslations": { "title": "AI 메뉴 번역", "description": "한 번의 클릭으로 메뉴를 25개 이상의 언어로 번역" },
+        "aiImages": { "title": "AI 이미지 향상", "description": "요리 사진을 즉시 전문적으로 만들기" },
+        "reservations": { "title": "테이블 예약", "description": "고객이 메뉴에서 직접 테이블을 예약할 수 있도록" },
+        "unlimitedScans": { "title": "무제한 QR 스캔", "description": "메뉴를 보는 고객 수에 제한 없음" },
+        "noBranding": { "title": "IQ Rest 브랜딩 없음", "description": "당신의 메뉴, 당신의 브랜드 — 깔끔하고 전문적" }
+      },
+      "comparePlans": "모든 플랜 비교",
+      "hideComparison": "비교 숨기기",
+      "ctaBasic": "Basic으로 시작",
+      "ctaPro": "Pro로 시작",
+      "billedMonthly": "월별 청구",
+      "ctaSub": "언제든 취소 가능 · 설정 비용 없음",
+      "skip": "무료 플랜으로 계속",
+      "guarantee": "안전한 결제 · 7일 환불 보장",
+      "checkoutError": "결제를 시작할 수 없습니다. 다시 시도해 주세요."
+    },
     "aiTranslate": {
       "title": "AI 번역",
       "description": "AI 번역은 Basic 또는 Pro 구독으로 이용 가능합니다. 자동 번역을 사용하려면 플랜을 업그레이드하세요.",

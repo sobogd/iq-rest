@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguracija"
     },
     "logout": "Odjava",
+    "upsell": {
+      "title": "Razvijte Svojo Restavracijo na Spletu",
+      "subtitle": "AI prevodi, neomejeno skeniranje, rezervacije in več",
+      "featuresTitle": "Vse kar dobite",
+      "features": {
+        "aiTranslations": { "title": "AI Prevodi Jedilnika", "description": "Prevedite jedilnik v 25+ jezikov z enim klikom" },
+        "aiImages": { "title": "AI Izboljšava Slik", "description": "Naredite fotografije jedi profesionalne v trenutku" },
+        "reservations": { "title": "Rezervacije Miz", "description": "Omogočite gostom rezervacijo miz neposredno iz jedilnika" },
+        "unlimitedScans": { "title": "Neomejeno QR Skeniranje", "description": "Brez omejitev koliko gostov vidi vaš jedilnik" },
+        "noBranding": { "title": "Brez Blagovne Znamke IQ Rest", "description": "Vaš jedilnik, vaša blagovna znamka — čisto in profesionalno" }
+      },
+      "comparePlans": "Primerjaj vse načrte",
+      "hideComparison": "Skrij primerjavo",
+      "ctaBasic": "Začni z Basic",
+      "ctaPro": "Začni z Pro",
+      "billedMonthly": "Mesečno zaračunano",
+      "ctaSub": "Prekliči kadarkoli · Brez stroškov nastavitve",
+      "skip": "Nadaljuj z brezplačnim načrtom",
+      "guarantee": "Varno plačilo · 7-dnevna garancija vračila denarja",
+      "checkoutError": "Plačila ni bilo mogoče začeti. Poskusite znova."
+    },
     "aiTranslate": {
       "title": "AI Prevod",
       "description": "AI prevod je na voljo z naročnino Basic ali Pro. Nadgradite svoj načrt za uporabo samodejnih prevodov.",

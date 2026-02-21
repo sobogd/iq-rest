@@ -1429,6 +1429,27 @@
       "reservationSettings": "Configurare"
     },
     "logout": "Deconectare",
+    "upsell": {
+      "title": "Crește-ți Restaurantul Online",
+      "subtitle": "Traduceri AI, scanări nelimitate, rezervări și mai mult",
+      "featuresTitle": "Tot ce primești",
+      "features": {
+        "aiTranslations": { "title": "Traduceri AI ale Meniului", "description": "Traduce-ți meniul în peste 25 de limbi cu un singur clic" },
+        "aiImages": { "title": "Îmbunătățire Imagini cu AI", "description": "Fă fotografiile preparatelor să arate profesional instantaneu" },
+        "reservations": { "title": "Rezervări Mese", "description": "Permite clienților să rezerve mese direct din meniul tău" },
+        "unlimitedScans": { "title": "Scanări QR Nelimitate", "description": "Fără limite la câți clienți văd meniul tău" },
+        "noBranding": { "title": "Fără Branding IQ Rest", "description": "Meniul tău, brandul tău — curat și profesional" }
+      },
+      "comparePlans": "Compară toate planurile",
+      "hideComparison": "Ascunde comparația",
+      "ctaBasic": "Începe cu Basic",
+      "ctaPro": "Începe cu Pro",
+      "billedMonthly": "Facturat lunar",
+      "ctaSub": "Anulează oricând · Fără taxe de configurare",
+      "skip": "Continuă cu planul Gratuit",
+      "guarantee": "Plată securizată · Garanție de rambursare de 7 zile",
+      "checkoutError": "Nu s-a putut iniția plata. Te rugăm să încerci din nou."
+    },
     "aiTranslate": {
       "title": "Traducere AI",
       "description": "Traducerea AI este disponibilă cu un abonament Basic sau Pro. Actualizează-ți planul pentru a folosi traduceri automate.",

@@ -1387,6 +1387,42 @@
       "scansUnlimited": "{used} scans"
     },
     "logout": "Logout",
+    "upsell": {
+      "title": "Grow Your Restaurant Online",
+      "subtitle": "AI translations, unlimited scans, reservations, and more",
+      "featuresTitle": "Everything you get",
+      "features": {
+        "aiTranslations": {
+          "title": "AI Menu Translations",
+          "description": "Translate your menu to 25+ languages in one click"
+        },
+        "aiImages": {
+          "title": "AI Image Enhancement",
+          "description": "Make your dish photos look professional instantly"
+        },
+        "reservations": {
+          "title": "Table Reservations",
+          "description": "Let customers book tables directly from your menu"
+        },
+        "unlimitedScans": {
+          "title": "Unlimited QR Scans",
+          "description": "No limits on how many customers view your menu"
+        },
+        "noBranding": {
+          "title": "No IQ Rest Branding",
+          "description": "Your menu, your brand — clean and professional"
+        }
+      },
+      "comparePlans": "Compare all plans",
+      "hideComparison": "Hide comparison",
+      "ctaBasic": "Start with Basic",
+      "ctaPro": "Start with Pro",
+      "billedMonthly": "Billed monthly",
+      "ctaSub": "Cancel anytime · No setup fees",
+      "skip": "Continue with Free plan",
+      "guarantee": "Secure payment · 7-day money back guarantee",
+      "checkoutError": "Failed to start checkout. Please try again."
+    },
     "aiTranslate": {
       "title": "AI Translation",
       "description": "AI translation is available with a Basic or Pro subscription. Upgrade your plan to use automatic translations.",

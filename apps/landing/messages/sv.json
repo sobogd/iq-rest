@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguration"
     },
     "logout": "Logga ut",
+    "upsell": {
+      "title": "Väx Ditt Restaurang Online",
+      "subtitle": "AI-översättningar, obegränsade skanningar, reservationer och mer",
+      "featuresTitle": "Allt du får",
+      "features": {
+        "aiTranslations": { "title": "AI-Menyöversättningar", "description": "Översätt din meny till 25+ språk med ett klick" },
+        "aiImages": { "title": "AI-Bildförbättring", "description": "Gör dina rättfoton professionella direkt" },
+        "reservations": { "title": "Bordsreservationer", "description": "Låt kunder boka bord direkt från din meny" },
+        "unlimitedScans": { "title": "Obegränsade QR-Skanningar", "description": "Inga begränsningar på hur många kunder som ser din meny" },
+        "noBranding": { "title": "Ingen IQ Rest-Branding", "description": "Din meny, ditt varumärke — rent och professionellt" }
+      },
+      "comparePlans": "Jämför alla planer",
+      "hideComparison": "Dölj jämförelse",
+      "ctaBasic": "Börja med Basic",
+      "ctaPro": "Börja med Pro",
+      "billedMonthly": "Faktureras månadsvis",
+      "ctaSub": "Avbryt när som helst · Inga installationsavgifter",
+      "skip": "Fortsätt med gratisplanen",
+      "guarantee": "Säker betalning · 7 dagars pengarna-tillbaka-garanti",
+      "checkoutError": "Kunde inte starta betalningen. Försök igen."
+    },
     "aiTranslate": {
       "title": "AI Översättning",
       "description": "AI-översättning är tillgänglig med ett Basic- eller Pro-abonnemang. Uppgradera din plan för att använda automatiska översättningar.",

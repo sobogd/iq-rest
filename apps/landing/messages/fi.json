@@ -1429,6 +1429,27 @@
       "reservationSettings": "Konfiguraatio"
     },
     "logout": "Kirjaudu ulos",
+    "upsell": {
+      "title": "Kasvata Ravintolaasi Verkossa",
+      "subtitle": "AI-käännökset, rajattomat skannaukset, varaukset ja paljon muuta",
+      "featuresTitle": "Kaikki mitä saat",
+      "features": {
+        "aiTranslations": { "title": "AI-Menukäännökset", "description": "Käännä menusi yli 25 kielelle yhdellä klikkauksella" },
+        "aiImages": { "title": "AI-Kuvanparannus", "description": "Tee ruokakuvistasi ammattimaisia hetkessä" },
+        "reservations": { "title": "Pöytävaraukset", "description": "Anna asiakkaiden varata pöytiä suoraan menustasi" },
+        "unlimitedScans": { "title": "Rajattomat QR-Skannaukset", "description": "Ei rajoituksia sille, kuinka moni asiakas näkee menusi" },
+        "noBranding": { "title": "Ei IQ Rest -Brändiä", "description": "Sinun menusi, sinun brändisi — siisti ja ammattimainen" }
+      },
+      "comparePlans": "Vertaa kaikkia paketteja",
+      "hideComparison": "Piilota vertailu",
+      "ctaBasic": "Aloita Basic-paketilla",
+      "ctaPro": "Aloita Pro-paketilla",
+      "billedMonthly": "Laskutetaan kuukausittain",
+      "ctaSub": "Peruuta milloin tahansa · Ei asennusmaksuja",
+      "skip": "Jatka ilmaisella paketilla",
+      "guarantee": "Turvallinen maksu · 7 päivän rahat takaisin -takuu",
+      "checkoutError": "Maksun aloittaminen epäonnistui. Yritä uudelleen."
+    },
     "aiTranslate": {
       "title": "Tekoälykäännös",
       "description": "Tekoälykäännös on saatavilla Basic- tai Pro-tilauksella. Päivitä tilaussi käyttääksesi automaattisia käännöksiä.",

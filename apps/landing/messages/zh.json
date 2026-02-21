@@ -1462,6 +1462,27 @@
       "reservationSettings": "配置"
     },
     "logout": "退出",
+    "upsell": {
+      "title": "让您的餐厅在线成长",
+      "subtitle": "AI翻译、无限扫描、预订等",
+      "featuresTitle": "您将获得的一切",
+      "features": {
+        "aiTranslations": { "title": "AI菜单翻译", "description": "一键将菜单翻译成25+种语言" },
+        "aiImages": { "title": "AI图像增强", "description": "让您的菜品照片瞬间变得专业" },
+        "reservations": { "title": "餐桌预订", "description": "让顾客直接从菜单预订餐桌" },
+        "unlimitedScans": { "title": "无限QR扫描", "description": "没有限制多少顾客查看您的菜单" },
+        "noBranding": { "title": "无IQ Rest品牌标识", "description": "您的菜单，您的品牌——干净专业" }
+      },
+      "comparePlans": "比较所有方案",
+      "hideComparison": "隐藏比较",
+      "ctaBasic": "开始使用Basic",
+      "ctaPro": "开始使用Pro",
+      "billedMonthly": "按月计费",
+      "ctaSub": "随时取消 · 无设置费用",
+      "skip": "继续使用免费方案",
+      "guarantee": "安全支付 · 7天退款保证",
+      "checkoutError": "无法开始结账。请重试。"
+    },
     "aiTranslate": {
       "title": "AI翻译",
       "description": "AI翻译需要Basic或Pro订阅。升级您的计划以使用自动翻译。",

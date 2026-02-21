@@ -1429,6 +1429,27 @@
       "reservationSettings": "Confighuration"
     },
     "logout": "Logáil Amach",
+    "upsell": {
+      "title": "Fáisc Do Bhialann Ar Líne",
+      "subtitle": "Aistriúcháin AI, scanadh neamhtheoranta, áirithintí agus tuilleadh",
+      "featuresTitle": "Gach rud a fhaigheann tú",
+      "features": {
+        "aiTranslations": { "title": "Aistriúcháin AI Roghchlár", "description": "Aistrigh do roghchlár go 25+ teanga le clic amháin" },
+        "aiImages": { "title": "Feabhsú Íomhánna le AI", "description": "Déan do ghrianghraif bia proifisiúnta láithreach" },
+        "reservations": { "title": "Áirithintí Bord", "description": "Lig do chustaiméirí boird a chur in áirithe go díreach ón roghchlár" },
+        "unlimitedScans": { "title": "Scanadh QR Neamhtheoranta", "description": "Gan teorainneacha ar cé mhéad custaiméir a fheiceann do roghchlár" },
+        "noBranding": { "title": "Gan Brandáil IQ Rest", "description": "Do roghchlár, do bhrand — glan agus proifisiúnta" }
+      },
+      "comparePlans": "Déan comparáid idir gach plean",
+      "hideComparison": "Folaigh comparáid",
+      "ctaBasic": "Tosaigh le Basic",
+      "ctaPro": "Tosaigh le Pro",
+      "billedMonthly": "Billeáilte go míosúil",
+      "ctaSub": "Cealaigh am ar bith · Gan táillí socraithe",
+      "skip": "Lean ar aghaidh leis an bplean Saor in Aisce",
+      "guarantee": "Íocaíocht shlán · Ráthaíocht airgid ar ais 7 lá",
+      "checkoutError": "Theip ar thosú na híocaíochta. Bain triail as arís."
+    },
     "aiTranslate": {
       "title": "Aistriúchán AI",
       "description": "Tá aistriúchán AI ar fáil le síntiús Basic nó Pro. Uasghrádaigh do phlean chun aistriúcháin uathoibríocha a úsáid.",
