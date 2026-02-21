@@ -3,11 +3,6 @@ import { prisma } from "@/lib/prisma";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 
-const PLAN_LIMITS = {
-  FREE: 400,
-  BASIC: Infinity,
-  PRO: Infinity,
-};
 
 function getOrCreateSessionId(request: NextRequest): {
   sessionId: string;
@@ -42,6 +37,7 @@ export async function POST(request: NextRequest) {
           select: {
             id: true,
             plan: true,
+            scanLimit: true,
             emailsSent: true,
             emailUnsubscribed: true,
             users: {
@@ -61,7 +57,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { company } = restaurant;
-    const limit = PLAN_LIMITS[company.plan];
+    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
     // Get current month's view count
     const startOfMonth = new Date();

@@ -92,6 +92,7 @@ export async function GET(
       itemsCount: company._count.items,
       messagesCount: company._count.supportMessages,
       monthlyViews: monthlyViewCount,
+      scanLimit: company.scanLimit,
       sessionId: session?.id || null,
       users: company.users.map((uc) => ({
         id: uc.user.id,

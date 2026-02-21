@@ -2,12 +2,6 @@ import { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
 
-const PLAN_LIMITS = {
-  FREE: 400,
-  BASIC: Infinity,
-  PRO: Infinity,
-};
-
 async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accentColor: string }> {
   try {
     const restaurant = await prisma.restaurant.findFirst({
@@ -18,6 +12,7 @@ async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accen
           select: {
             id: true,
             plan: true,
+            scanLimit: true,
           },
         },
       },
@@ -26,7 +21,7 @@ async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accen
     if (!restaurant) return { showAd: false, accentColor: "#000000" };
 
     const { company } = restaurant;
-    const limit = PLAN_LIMITS[company.plan];
+    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
     const accentColor = restaurant.accentColor || "#000000";
 
     if (limit === Infinity) return { showAd: false, accentColor };

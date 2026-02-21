@@ -18,6 +18,7 @@ interface Company {
   messagesCount: number;
   monthlyViews: number;
   todayViews: number;
+  scanLimit: number | null;
   emailsSent: Record<string, string> | null;
 }
 
@@ -165,7 +166,7 @@ export function AdminPage() {
                       <span className="flex items-center gap-0.5"><Package className="h-3 w-3" />{company.itemsCount}</span>
                       {company.monthlyViews > 0 && (
                         <span className={`flex items-center gap-0.5 ${
-                          company.plan === "FREE" && company.monthlyViews >= 400 ? "text-red-500" : "text-blue-500"
+                          company.scanLimit && company.monthlyViews >= company.scanLimit ? "text-red-500" : "text-blue-500"
                         }`}>
                           <Eye className="h-3 w-3" />{company.monthlyViews}{company.todayViews > 0 && <span className="text-muted-foreground">({company.todayViews})</span>}
                         </span>

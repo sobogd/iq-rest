@@ -82,6 +82,7 @@ interface Company {
   itemsCount: number;
   messagesCount: number;
   monthlyViews: number;
+  scanLimit: number;
   sessionId: string | null;
   users: User[];
   restaurants: Restaurant[];
@@ -330,7 +331,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     { label: "Created", value: formatDate(company.createdAt, true) },
     { label: "Categories", value: String(company.categoriesCount) },
     { label: "Items", value: String(company.itemsCount) },
-    { label: "Monthly Views", value: `${company.monthlyViews} / ${company.plan === "FREE" ? "400" : "\u221e"}` },
+    { label: "Monthly Views", value: `${company.monthlyViews} / ${company.plan === "FREE" ? String(company.scanLimit) : "\u221e"}` },
     { label: "Restaurants", value: String(company.restaurants.length) },
   ];
 

@@ -4,11 +4,6 @@ import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
 import { getTimezoneForCountry } from "@/lib/country-timezone-map";
 
-const PLAN_LIMITS: Record<string, number> = {
-  FREE: 400,
-  BASIC: Infinity,
-  PRO: Infinity,
-};
 
 function nowInTimezone(tz: string) {
   const fmt = new Intl.DateTimeFormat("en-CA", {
@@ -152,7 +147,7 @@ export async function GET() {
         .sort((a, b) => b.count - a.count)
         .slice(0, 10);
 
-    const limit = PLAN_LIMITS[company.plan] || 400;
+    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
     return NextResponse.json({
       plan: company.plan,

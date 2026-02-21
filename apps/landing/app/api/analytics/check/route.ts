@@ -1,12 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-const PLAN_LIMITS = {
-  FREE: 400,
-  BASIC: Infinity,
-  PRO: Infinity,
-};
-
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
@@ -28,6 +22,7 @@ export async function GET(request: NextRequest) {
           select: {
             id: true,
             plan: true,
+            scanLimit: true,
           },
         },
       },
@@ -41,7 +36,7 @@ export async function GET(request: NextRequest) {
     }
 
     const { company } = restaurant;
-    const limit = PLAN_LIMITS[company.plan];
+    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
     // Get current month's view count
     const startOfMonth = new Date();

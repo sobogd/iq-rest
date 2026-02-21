@@ -52,6 +52,7 @@ export async function GET(request: NextRequest) {
       select: {
         id: true,
         plan: true,
+        scanLimit: true,
         subscriptionStatus: true,
         emailsSent: true,
         restaurants: {
@@ -114,6 +115,7 @@ export async function GET(request: NextRequest) {
       messagesCount: c._count.supportMessages,
       monthlyViews: viewsMap.get(c.id) || 0,
       todayViews: todayViewsMap.get(c.id) || 0,
+      scanLimit: c.plan === "FREE" ? c.scanLimit : null,
       emailsSent: c.emailsSent as Record<string, string> | null,
     }));
 

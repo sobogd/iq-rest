@@ -129,15 +129,9 @@ export async function getSupportMessages(companyId: string) {
 export async function getScanUsage(companyId: string) {
   const company = await prisma.company.findUnique({
     where: { id: companyId },
-    select: { plan: true },
+    select: { plan: true, scanLimit: true },
   });
   if (!company) return null;
-
-  const PLAN_LIMITS: Record<string, number> = {
-    FREE: 400,
-    BASIC: Infinity,
-    PRO: Infinity,
-  };
 
   const now = new Date();
   const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
@@ -146,7 +140,7 @@ export async function getScanUsage(companyId: string) {
     where: { companyId, createdAt: { gte: startOfMonth } },
   });
 
-  const limit = PLAN_LIMITS[company.plan] || 400;
+  const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
   return {
     used: monthlyViews,
@@ -203,15 +197,9 @@ function getLast7Days(viewsByDay: { date: string; count: bigint }[], tz: string)
 export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   const company = await prisma.company.findUnique({
     where: { id: companyId },
-    select: { plan: true },
+    select: { plan: true, scanLimit: true },
   });
   if (!company) return null;
-
-  const PLAN_LIMITS: Record<string, number> = {
-    FREE: 400,
-    BASIC: Infinity,
-    PRO: Infinity,
-  };
 
   const { year, month, day } = nowInTimezone(tz);
   const startOfToday = localToUtc(year, month, day, tz);
@@ -287,7 +275,7 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
       .sort((a, b) => b.count - a.count)
       .slice(0, 10);
 
-  const limit = PLAN_LIMITS[company.plan] || 400;
+  const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
   return {
     plan: company.plan,
