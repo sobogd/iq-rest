@@ -195,6 +195,12 @@ export default function middleware(request: NextRequest) {
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
 
+  // Disable Google Translate prompt
+  const localeMatch = pathname.match(localeRegex);
+  if (localeMatch) {
+    response.headers.set("Content-Language", localeMatch[1]);
+  }
+
   // Set geo cookies from Cloudflare headers
   setGeoCookies(request, response);
 
