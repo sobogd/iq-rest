@@ -208,7 +208,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
         <div className="flex items-center py-3 max-w-lg mx-auto">
           <button
             onClick={() => router.push("/dashboard")}
-            className="flex items-center justify-center h-10 w-10 -webkit-tap-highlight-color-transparent"
+            className="flex items-center justify-center h-10 w-10 -ml-2"
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
@@ -217,14 +217,14 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
             sortMode ? (
               <button
                 onClick={() => setSortMode(false)}
-                className="flex items-center justify-center h-10 w-10"
+                className="flex items-center justify-center h-10 w-10 -mr-2"
               >
                 <Check className="h-5 w-5" />
               </button>
             ) : (
               <button
                 onClick={() => { track(DashboardEvent.CLICKED_SORT_MENU); setSortMode(true); }}
-                className="flex items-center justify-center h-10 w-10"
+                className="flex items-center justify-center h-10 w-10 -mr-2"
               >
                 <ArrowUpDown className="h-5 w-5" />
               </button>

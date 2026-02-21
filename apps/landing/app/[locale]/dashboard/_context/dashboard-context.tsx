@@ -162,6 +162,8 @@ export interface ItemsTranslations {
   allergenNames: Record<string, string>;
   subscribeForAllergens: string;
   subscribe: string;
+  stylize: string;
+  sectionMain: string;
   moreDetails: string;
   generateImage: string;
   generatingImage: string;

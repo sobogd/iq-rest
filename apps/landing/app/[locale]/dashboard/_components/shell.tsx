@@ -59,7 +59,7 @@ function DashboardLayout({
 }) {
   return (
     <div
-      className="flex flex-col h-dvh overflow-hidden"
+      className="flex flex-col h-dvh overflow-hidden overscroll-contain"
       style={{ "--header-height": "3.5rem" } as React.CSSProperties}
     >
       {impersonation && (

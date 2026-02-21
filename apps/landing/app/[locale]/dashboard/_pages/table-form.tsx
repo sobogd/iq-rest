@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import Image from "next/image";
-import { Loader2, Save, X, Trash2, Upload } from "lucide-react";
+import { Loader2, X, Trash2, Upload, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -25,13 +25,10 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FormInput } from "../_ui/form-input";
-import { FormInputTranslate } from "../_ui/form-input-translate";
-import { FormSwitch } from "../_ui/form-switch";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
-import { useTranslations } from "next-intl";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface Table {
@@ -51,6 +48,7 @@ interface TableFormPageProps {
 
 export function TableFormPage({ id }: TableFormPageProps) {
   const t = useTranslations("reservations");
+  const tAi = useTranslations("dashboard.aiTranslate");
   const router = useRouter();
   const locale = useLocale();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -68,8 +66,30 @@ export function TableFormPage({ id }: TableFormPageProps) {
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [tableTranslations, setTableTranslations] = useState<Record<string, { zone?: string }>>({});
   const [validationError, setValidationError] = useState<string | null>(null);
+  const [translatingLangs, setTranslatingLangs] = useState<Set<string>>(new Set());
+  const [showTranslateLimitDialog, setShowTranslateLimitDialog] = useState(false);
+
+  // Original values for change detection
+  const [originalNumber, setOriginalNumber] = useState("1");
+  const [originalCapacity, setOriginalCapacity] = useState("4");
+  const [originalZone, setOriginalZone] = useState("");
+  const [originalImageUrl, setOriginalImageUrl] = useState("");
+  const [originalTranslations, setOriginalTranslations] = useState<Record<string, { zone?: string }>>({});
 
   const isEdit = !!id;
+
+  const hasChanges = useMemo(() => {
+    if (!isEdit) {
+      return true;
+    }
+    return (
+      number !== originalNumber ||
+      capacity !== originalCapacity ||
+      zone !== originalZone ||
+      imageUrl !== originalImageUrl ||
+      JSON.stringify(tableTranslations) !== JSON.stringify(originalTranslations)
+    );
+  }, [isEdit, number, capacity, zone, imageUrl, tableTranslations, originalNumber, originalCapacity, originalZone, originalImageUrl, originalTranslations]);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_TABLE_FORM);
@@ -83,14 +103,24 @@ export function TableFormPage({ id }: TableFormPageProps) {
       const response = await fetch(`/api/tables/${tableId}`);
       if (!response.ok) throw new Error("Failed to fetch");
       const data: Table = await response.json();
-      setNumber(data.number?.toString() || "1");
-      setCapacity(data.capacity?.toString() || "4");
-      setZone(data.zone || "");
-      setImageUrl(data.imageUrl || "");
+      const tNum = data.number?.toString() || "1";
+      const tCap = data.capacity?.toString() || "4";
+      const tZone = data.zone || "";
+      const tImage = data.imageUrl || "";
+      const tTrans = (data.translations as Record<string, { zone?: string }>) || {};
+
+      setNumber(tNum);
+      setCapacity(tCap);
+      setZone(tZone);
+      setImageUrl(tImage);
       setIsActive(data.isActive);
-      setTableTranslations(
-        (data.translations as Record<string, { zone?: string }>) || {}
-      );
+      setTableTranslations(tTrans);
+
+      setOriginalNumber(tNum);
+      setOriginalCapacity(tCap);
+      setOriginalZone(tZone);
+      setOriginalImageUrl(tImage);
+      setOriginalTranslations(tTrans);
     } catch (error) {
       console.error("Failed to fetch table:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "table" });
@@ -153,6 +183,41 @@ export function TableFormPage({ id }: TableFormPageProps) {
       ...prev,
       [lang]: { ...prev[lang], zone: value },
     }));
+  }
+
+  async function handleTranslateSection(lang: string) {
+    const srcLang = restaurant?.defaultLanguage || "en";
+    if (!zone.trim()) return;
+
+    track(DashboardEvent.CLICKED_AI_TRANSLATE);
+    setTranslatingLangs((prev) => new Set(prev).add(lang));
+
+    try {
+      const res = await fetch("/api/translate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: zone.trim(), targetLanguage: lang, sourceLanguage: srcLang }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        handleTranslationChange(lang, data.translatedText);
+      } else if (res.status === 403) {
+        const data = await res.json().catch(() => ({}));
+        if (data.error === "limit_reached") setShowTranslateLimitDialog(true);
+        else toast.error(t("error"));
+      } else {
+        toast.error(t("error"));
+      }
+    } catch {
+      toast.error(t("error"));
+    } finally {
+      setTranslatingLangs((prev) => {
+        const next = new Set(prev);
+        next.delete(lang);
+        return next;
+      });
+    }
   }
 
   async function handleDelete() {
@@ -250,136 +315,151 @@ export function TableFormPage({ id }: TableFormPageProps) {
   }
 
   return (
-    <div className="flex flex-col h-full">
-      <PageHeader title={isEdit ? t("editTable") : t("newTable")} backHref="/dashboard/tables">
-        {isEdit && (
-          <button
-            type="button"
-            onClick={() => { track(DashboardEvent.CLICKED_DELETE_TABLE); setShowDeleteDialog(true); }}
-            disabled={saving || deleting}
-            className="flex items-center justify-center h-10 w-10 disabled:opacity-30"
+    <div className="flex flex-col h-full overflow-y-auto">
+      <div className="sticky top-0 z-10 bg-background">
+        <PageHeader title={isEdit ? t("editTable") : t("newTable")} backHref="/dashboard/tables">
+          <Button
+            type="submit"
+            form="table-form"
+            disabled={saving || deleting || uploading || !hasChanges}
+            variant="default"
+            size="sm"
+            className={!hasChanges ? "opacity-40" : ""}
           >
-            <Trash2 className="h-5 w-5" />
-          </button>
-        )}
-      </PageHeader>
+            {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
+          </Button>
+        </PageHeader>
+      </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
-        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-          <div className="max-w-lg mx-auto flex flex-col min-h-full">
-          <div className="space-y-4 flex-1">
-          <FormSwitch
-            id="isActive"
-            label={`${t("isActive")}:`}
-            checked={isActive}
-            onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_TABLE_ACTIVE); setIsActive(v); }}
-            activeText={t("active")}
-            inactiveText={t("inactive")}
-          />
+      <form id="table-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-6">
 
-          <FormInput
-            id="number"
-            label={`${t("tableNumber")}:`}
-            value={number}
-            onChange={(value) => setNumber(value.replace(/[^0-9]/g, ""))}
-            onFocus={() => track(DashboardEvent.FOCUSED_TABLE_NUMBER)}
-            placeholder={t("tableNumberPlaceholder")}
-          />
+          <div className="space-y-4">
+            <FormInput
+              id="number"
+              label={`${t("tableNumber")}:`}
+              value={number}
+              onChange={(value) => setNumber(value.replace(/[^0-9]/g, ""))}
+              onFocus={() => track(DashboardEvent.FOCUSED_TABLE_NUMBER)}
+              placeholder={t("tableNumberPlaceholder")}
+            />
 
-          <FormInput
-            id="capacity"
-            label={`${t("capacity")}:`}
-            value={capacity}
-            onChange={(value) => setCapacity(value.replace(/[^0-9]/g, ""))}
-            onFocus={() => track(DashboardEvent.FOCUSED_TABLE_CAPACITY)}
-            placeholder={t("capacityPlaceholder")}
-          />
+            <FormInput
+              id="capacity"
+              label={`${t("capacity")}:`}
+              value={capacity}
+              onChange={(value) => setCapacity(value.replace(/[^0-9]/g, ""))}
+              onFocus={() => track(DashboardEvent.FOCUSED_TABLE_CAPACITY)}
+              placeholder={t("capacityPlaceholder")}
+            />
 
-          <FormInput
-            id="zone"
-            label={`${t("zone")}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
-            value={zone}
-            onChange={setZone}
-            onFocus={() => track(DashboardEvent.FOCUSED_TABLE_ZONE)}
-            placeholder={t("zonePlaceholder")}
-          />
-
-          {otherLanguages.map((lang) => (
-            <FormInputTranslate
-              key={lang}
-              id={`zone-${lang}`}
-              label={`${t("zone")} (${LANGUAGE_NAMES[lang] || lang}):`}
-              value={tableTranslations[lang]?.zone || ""}
-              onChange={(value) => handleTranslationChange(lang, value)}
+            <FormInput
+              id="zone"
+              label={`${t("zone")}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
+              value={zone}
+              onChange={setZone}
+              onFocus={() => track(DashboardEvent.FOCUSED_TABLE_ZONE)}
               placeholder={t("zonePlaceholder")}
-              sourceText={zone}
-              sourceLanguage={restaurant?.defaultLanguage || "en"}
-              targetLanguage={lang}
-              translateErrorMessage={t("error")}
             />
-          ))}
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">{t("image")}:</label>
-            {imageUrl ? (
-              <div className="relative">
-                <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
-                  <Image
-                    src={imageUrl}
-                    alt="Table"
-                    fill
-                    className="object-cover"
-                    sizes="160px"
-                  />
+            <div className="space-y-2">
+              <label className="text-sm font-medium">{t("image")}:</label>
+              {imageUrl ? (
+                <div className="relative">
+                  <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
+                    <Image
+                      src={imageUrl}
+                      alt="Table"
+                      fill
+                      className="object-cover"
+                      sizes="160px"
+                    />
+                  </div>
+                  <Button
+                    type="button"
+                    variant="destructive"
+                    size="icon"
+                    className="absolute -top-2 left-36 h-6 w-6"
+                    onClick={() => setImageUrl("")}
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
                 </div>
-                <Button
-                  type="button"
-                  variant="destructive"
-                  size="icon"
-                  className="absolute -top-2 left-36 h-6 w-6"
-                  onClick={() => setImageUrl("")}
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-            ) : (
-              <div
-                className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors"
-                onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_TABLE_IMAGE); fileInputRef.current?.click(); }}
-              >
-                {uploading ? (
-                  <div className="flex flex-col items-center gap-2">
-                    <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center gap-2">
-                    <Upload className="h-8 w-8 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">{t("uploadImage")}</span>
-                  </div>
-                )}
-              </div>
-            )}
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/jpeg,image/png,image/webp"
-              className="hidden"
-              onChange={handleImageUpload}
-              disabled={uploading}
-            />
-          </div>
-          </div>
-          <div className="pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting || uploading} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
-              {saving ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
               ) : (
-                <Save className="h-4 w-4 mr-2" />
+                <div
+                  className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
+                  onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_TABLE_IMAGE); fileInputRef.current?.click(); }}
+                >
+                  {uploading ? (
+                    <div className="flex flex-col items-center gap-2">
+                      <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center gap-2">
+                      <Upload className="h-8 w-8 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">{t("uploadImage")}</span>
+                    </div>
+                  )}
+                </div>
               )}
-              {t("save")}
-            </Button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                className="hidden"
+                onChange={handleImageUpload}
+                disabled={uploading}
+              />
+            </div>
           </div>
-          </div>
+
+          {/* Translation sections — one per language */}
+          {otherLanguages.map((lang) => {
+            const isTranslating = translatingLangs.has(lang);
+            return (
+              <div key={lang} className="space-y-4">
+                <div className="flex items-center justify-between pt-6">
+                  <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                    {LANGUAGE_NAMES[lang] || lang}:
+                  </h2>
+                  <button
+                    type="button"
+                    onClick={() => handleTranslateSection(lang)}
+                    disabled={isTranslating || !zone.trim()}
+                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+                  >
+                    {isTranslating ? tAi("translating") : tAi("translate")}
+                    {isTranslating ? (
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                    ) : (
+                      <Sparkles className="h-3.5 w-3.5" />
+                    )}
+                  </button>
+                </div>
+
+                <FormInput
+                  id={`zone-${lang}`}
+                  label={`${t("zone")}:`}
+                  value={tableTranslations[lang]?.zone || ""}
+                  onChange={(value) => handleTranslationChange(lang, value)}
+                  placeholder={t("zonePlaceholder")}
+                />
+              </div>
+            );
+          })}
+
+          {isEdit && (
+            <button
+              type="button"
+              onClick={() => { track(DashboardEvent.CLICKED_DELETE_TABLE); setShowDeleteDialog(true); }}
+              disabled={saving || deleting}
+              className="flex items-center gap-2 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors pt-8"
+            >
+              <Trash2 className="h-4 w-4" />
+              {t("delete")}
+            </button>
+          )}
+
         </div>
       </form>
 
@@ -417,6 +497,23 @@ export function TableFormPage({ id }: TableFormPageProps) {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{tAi("limitReached")}</DialogTitle>
+            <DialogDescription>{tAi("limitReachedDescription")}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowTranslateLimitDialog(false)}>
+              {tAi("cancel")}
+            </Button>
+            <Button onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowTranslateLimitDialog(false); router.push("/dashboard/billing"); }}>
+              {tAi("upgrade")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

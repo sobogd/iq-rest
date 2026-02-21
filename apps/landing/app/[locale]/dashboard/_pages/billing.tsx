@@ -220,66 +220,78 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
     );
   }
 
+  const planGroups = [
+    { plan: "FREE" as PlanType, options: SUBSCRIPTION_OPTIONS.filter((o) => o.plan === "FREE") },
+    { plan: "BASIC" as PlanType, options: SUBSCRIPTION_OPTIONS.filter((o) => o.plan === "BASIC") },
+    { plan: "PRO" as PlanType, options: SUBSCRIPTION_OPTIONS.filter((o) => o.plan === "PRO") },
+  ];
+
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.billing} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-2">
-          {SUBSCRIPTION_OPTIONS.map((option) => {
-            const isCurrent = isCurrentOption(option);
-            const isLoading = actionLoading === option.lookupKey || (isCurrent && actionLoading === "manage");
-
-            return (
-              <div
-                key={option.id}
-                className={cn(
-                  "flex items-center justify-between px-4 h-16 bg-muted/30 rounded-xl transition-colors",
-                  isCurrent && "ring-2 ring-primary"
-                )}
-              >
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <div className="flex flex-col min-w-0">
-                    <span className="text-sm font-medium">{t(`plans.${option.id}.name`)}</span>
-                    <span className="text-sm text-muted-foreground">
-                      €{option.price}{t("perMonth")}
-                    </span>
-                  </div>
-                </div>
-
-                <div onClick={(e) => e.stopPropagation()}>
-                  {option.plan === "FREE" ? (
-                    isCurrent ? (
-                      <span className="text-sm text-muted-foreground px-3 py-1.5">{t("currentPlan")}</span>
-                    ) : null
-                  ) : isCurrent ? (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
-                      disabled={!!actionLoading}
-                    >
-                      {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                      {t("manage")}
-                    </Button>
-                  ) : (
-                    <Button
-                      size="sm"
-                      onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: option.plan }); option.lookupKey && handleSubscribe(option.lookupKey); }}
-                      disabled={!!actionLoading}
-                    >
-                      {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                      {t("upgrade")}
-                    </Button>
-                  )}
-                </div>
+        <div className="max-w-lg mx-auto space-y-4">
+          {planGroups.map((group) => (
+            <div key={group.plan} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <div className="flex items-center px-4 h-12 bg-muted/30">
+                <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{group.plan}</span>
               </div>
-            );
-          })}
+              {group.options.map((option) => {
+                const isCurrent = isCurrentOption(option);
+                const isLoading = actionLoading === option.lookupKey || (isCurrent && actionLoading === "manage");
+
+                return (
+                  <div
+                    key={option.id}
+                    className={cn(
+                      "flex items-center justify-between px-4 h-12 border-t border-foreground/5 transition-colors",
+                      isCurrent && "bg-green-500/5"
+                    )}
+                  >
+                    <div className="flex items-center gap-2 flex-1 min-w-0">
+                      <span className={cn("text-sm font-medium", isCurrent && "text-green-700 dark:text-green-400")}>{t(`plans.${option.id}.name`)}</span>
+                      <span className={cn("text-sm", isCurrent ? "text-green-600/70 dark:text-green-500/70" : "text-muted-foreground")}>
+                        €{option.price}{t("perMonth")}
+                      </span>
+                    </div>
+
+                    <div>
+                      {option.plan === "FREE" ? (
+                        isCurrent ? (
+                          <span className="text-xs text-muted-foreground">{t("currentPlan")}</span>
+                        ) : null
+                      ) : isCurrent ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+                          onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
+                          disabled={!!actionLoading}
+                        >
+                          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                          {t("manage")}
+                        </Button>
+                      ) : (
+                        <Button
+                          size="sm"
+                          onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: option.plan }); option.lookupKey && handleSubscribe(option.lookupKey); }}
+                          disabled={!!actionLoading}
+                        >
+                          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                          {t("upgrade")}
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
         </div>
 
         <p className="text-sm text-muted-foreground text-center pt-6">
           {t("detailsNote")}{" "}
-          <Link href="/pricing" className="text-primary hover:underline">
+          <Link href="/pricing" className="underline">
             {t("pricingPage")}
           </Link>
         </p>

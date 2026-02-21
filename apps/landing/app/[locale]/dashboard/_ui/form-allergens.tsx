@@ -1,7 +1,5 @@
 "use client";
 
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { ALLERGENS, type AllergenCode } from "@/lib/allergens";
 
 interface FormAllergensProps {
@@ -30,28 +28,27 @@ export function FormAllergens({
 
   return (
     <div className="space-y-2">
-      {label && <Label>{label}</Label>}
-      <div className={`flex flex-col gap-2 ${disabled ? "pointer-events-none" : ""}`}>
-        {ALLERGENS.map((allergen) => (
-          <label
-            key={allergen.code}
-            className={`flex items-center justify-between h-11 px-3 rounded-md bg-muted/30 transition-colors ${
-              disabled ? "cursor-not-allowed" : "cursor-pointer hover:bg-muted/50"
-            }`}
-          >
-            <span className="flex items-center gap-2">
-              <span className="text-lg">{allergen.icon}</span>
-              <span className="text-sm">
-                {allergenNames[allergen.code] || allergen.code}
-              </span>
-            </span>
-            <Switch
-              checked={value.includes(allergen.code)}
-              onCheckedChange={() => handleToggle(allergen.code)}
+      {label && <label className="text-sm font-medium">{label}</label>}
+      <div className="flex flex-wrap gap-2">
+        {ALLERGENS.map((allergen) => {
+          const isSelected = value.includes(allergen.code);
+          return (
+            <button
+              key={allergen.code}
+              type="button"
+              onClick={() => handleToggle(allergen.code)}
               disabled={disabled}
-            />
-          </label>
-        ))}
+              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm border transition-colors ${
+                isSelected
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-muted/30 text-muted-foreground border-border hover:bg-muted/50"
+              } ${disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}
+            >
+              <span className="text-base leading-none">{allergen.icon}</span>
+              <span>{allergenNames[allergen.code] || allergen.code}</span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

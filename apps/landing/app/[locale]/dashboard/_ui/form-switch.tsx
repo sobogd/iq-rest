@@ -29,7 +29,7 @@ export function FormSwitch({
       <Label htmlFor={switchId}>{label}</Label>
       <label
         htmlFor={switchId}
-        className="flex items-center justify-between h-11 px-3 rounded-md bg-muted/30 cursor-pointer"
+        className="flex items-center justify-between h-12 px-4 rounded-xl border border-border bg-muted/30 cursor-pointer"
       >
         <span className="text-base md:text-sm">{checked ? activeText : inactiveText}</span>
         <Switch

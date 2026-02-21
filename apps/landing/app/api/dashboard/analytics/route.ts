@@ -108,13 +108,15 @@ export async function GET() {
         _count: { language: true },
       }),
       prisma.$queryRaw<{ date: string; count: bigint }[]>`
-        SELECT to_char(DATE("createdAt" AT TIME ZONE ${tz}), 'YYYY-MM-DD') as date,
-               COUNT(*) as count
-        FROM page_views
-        WHERE "companyId" = ${company.id}
-          AND "createdAt" >= ${startOfWeek}
-        GROUP BY DATE("createdAt" AT TIME ZONE ${tz})
-        ORDER BY DATE("createdAt" AT TIME ZONE ${tz}) ASC
+        SELECT date, COUNT(*) as count
+        FROM (
+          SELECT to_char(("createdAt" AT TIME ZONE ${tz})::date, 'YYYY-MM-DD') as date
+          FROM page_views
+          WHERE "companyId" = ${company.id}
+            AND "createdAt" >= ${startOfWeek}
+        ) sub
+        GROUP BY date
+        ORDER BY date ASC
       `,
     ]);
 

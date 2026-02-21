@@ -161,7 +161,7 @@ export function CategoriesPage() {
               <button
                 onClick={handleCancelSortMode}
                 disabled={savingSort}
-                className="flex items-center justify-center h-10 w-10"
+                className="flex items-center justify-center h-10 w-10 -ml-2"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -178,7 +178,7 @@ export function CategoriesPage() {
             <>
               <button
                 onClick={() => router.push("/dashboard/menu")}
-                className="flex items-center justify-center h-10 w-10"
+                className="flex items-center justify-center h-10 w-10 -ml-2"
               >
                 <ArrowLeft className="h-5 w-5" />
               </button>

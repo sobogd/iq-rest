@@ -175,6 +175,8 @@ export default async function DashboardLayout({
       allergenNames: t.raw("items.allergenNames") as Record<string, string>,
       subscribeForAllergens: t("items.subscribeForAllergens"),
       subscribe: t("items.subscribe"),
+      stylize: t("items.stylize"),
+      sectionMain: t("items.sectionMain"),
       moreDetails: t("items.moreDetails"),
       generateImage: t("items.generateImage"),
       generatingImage: t("items.generatingImage"),

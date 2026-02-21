@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { Label } from "@/components/ui/label";
-import { Eye, Calendar, CalendarDays, Users, Monitor, Globe, Smartphone } from "lucide-react";
+import { Eye, Calendar, CalendarDays, Users, Monitor, Globe, Smartphone, RefreshCw } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 interface DeviceStatsItem {
@@ -128,7 +128,23 @@ interface AnalyticsPageProps {
 export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
   const { translations } = useDashboard();
   const t = translations.analytics;
-  const data = initialData;
+  const [data, setData] = useState<AnalyticsData | null>(initialData);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const handleRefresh = useCallback(async () => {
+    setRefreshing(true);
+    try {
+      const res = await fetch("/api/dashboard/analytics");
+      if (res.ok) {
+        const json = await res.json();
+        setData(json);
+      }
+    } catch {
+      // silently fail
+    } finally {
+      setRefreshing(false);
+    }
+  }, []);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_ANALYTICS);
@@ -172,7 +188,16 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={translations.pages.analytics} />
+      <PageHeader title={translations.pages.analytics}>
+        <button
+          type="button"
+          onClick={handleRefresh}
+          disabled={refreshing}
+          className="p-2 rounded-lg hover:bg-muted/50 transition-colors disabled:opacity-50"
+        >
+          <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
+        </button>
+      </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
       <div className="max-w-lg mx-auto space-y-8">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

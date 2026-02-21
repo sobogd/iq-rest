@@ -59,16 +59,26 @@ export const AVAILABLE_EUROPEAN_LANGUAGES = EUROPEAN_LANGUAGES.map((code) => ({
 }));
 
 export const ACCENT_COLORS = [
-  "#ef4444",
-  "#f97316",
-  "#f59e0b",
-  "#84cc16",
-  "#22c55e",
-  "#14b8a6",
-  "#06b6d4",
-  "#3b82f6",
-  "#6366f1",
-  "#8b5cf6",
-  "#ec4899",
-  "#000000",
+  "#8B2252",  // burgundy
+  "#9B1B30",  // crimson
+  "#A0522D",  // sienna
+  "#6B4C3B",  // terracotta
+  "#7B3F00",  // chocolate
+  "#B8860B",  // dark goldenrod
+  "#C9A96E",  // warm gold
+  "#D4A574",  // camel
+  "#6B7B3A",  // olive
+  "#556B2F",  // dark olive
+  "#3B6B4F",  // forest green
+  "#2F4F4F",  // dark slate
+  "#1B3A4B",  // deep navy
+  "#2C3E6B",  // royal blue
+  "#4A5568",  // slate gray
+  "#6B5B73",  // mauve
+  "#5C4033",  // espresso
+  "#8B7355",  // tan
+  "#C45B28",  // rust
+  "#333333",  // dark gray
+  "#1A1A1A",  // near black
+  "#000000",  // black
 ];

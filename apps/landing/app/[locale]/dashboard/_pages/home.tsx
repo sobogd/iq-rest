@@ -15,7 +15,7 @@ import {
   Home,
   LogOut,
   UtensilsCrossed,
-  Cog,
+  Languages,
   BarChart3,
   CalendarDays,
   Armchair,
@@ -37,9 +37,9 @@ import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "menu", page: "menu", icon: UtensilsCrossed },
-  { key: "contacts", page: "contacts", icon: Phone },
-  { key: "settings", page: "settings", icon: Cog },
   { key: "design", page: "design", icon: Palette },
+  { key: "contacts", page: "contacts", icon: Phone },
+  { key: "settings", page: "settings", icon: Languages },
   { key: "qrMenu", page: "qrMenu", icon: QrCode },
   { key: "analytics", page: "analytics", icon: BarChart3 },
   { key: "tables", page: "tables", icon: Armchair },
@@ -122,13 +122,13 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
     <div className="flex flex-col h-full">
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
         <div className="flex items-center py-3 max-w-lg mx-auto">
-          <div className="flex items-center justify-center h-10 w-10">
+          <div className="flex items-center justify-center h-10 w-10 -ml-2">
             <Home className="h-5 w-5" />
           </div>
           <h1 className="text-xl font-semibold flex-1 ml-3">{translations.pages.home}</h1>
           <button
             onClick={() => { track(DashboardEvent.CLICKED_HELP); router.push(PAGE_PATHS.support); }}
-            className="flex items-center justify-center h-10 w-10"
+            className="flex items-center justify-center h-10 w-10 -mr-2"
           >
             <HelpCircle className="h-5 w-5" />
           </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Loader2, Star, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { Loader2, Star, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import {
@@ -13,8 +13,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { FormInput } from "../_ui/form-input";
-import { FormSelect } from "../_ui/form-select";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -28,7 +26,6 @@ import { useTranslations, useLocale } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import { CURRENCIES } from "@/lib/currencies";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
@@ -44,15 +41,10 @@ const ALL_LANGUAGES = [
   name: LANGUAGE_NAMES[code] || code,
 }));
 
-const POPULAR_LANGUAGES = ["en", "es", "de", "fr"];
 
 interface SettingsPageProps {
   initialRestaurant: {
     id: string;
-    title: string;
-    description: string | null;
-    slug: string | null;
-    currency: string;
     languages: string[];
     defaultLanguage: string;
   } | null;
@@ -65,29 +57,14 @@ interface SettingsPageProps {
 export function SettingsPage({ initialRestaurant, initialSubscription }: SettingsPageProps) {
   const t = useTranslations("dashboard.general");
   const tLang = useTranslations("dashboard.languages");
-  const tPages = useTranslations("dashboard.pages");
   const locale = useLocale();
   const { translations } = useDashboard();
   const router = useRouter();
 
   const [saving, setSaving] = useState(false);
 
-  const initName = initialRestaurant?.title || "";
-  const initDescription = initialRestaurant?.description || "";
-  const initSlug = initialRestaurant?.slug || "";
-  const initCurrency = initialRestaurant?.currency || "EUR";
   const initLangs = initialRestaurant?.languages || ["en"];
   const initDefLang = initialRestaurant?.defaultLanguage || "en";
-
-  const [name, setName] = useState(initName);
-  const [description, setDescription] = useState(initDescription);
-  const [slug, setSlug] = useState(initSlug);
-  const [currency, setCurrency] = useState(initCurrency);
-
-  const [originalName, setOriginalName] = useState(initName);
-  const [originalDescription, setOriginalDescription] = useState(initDescription);
-  const [originalSlug, setOriginalSlug] = useState(initSlug);
-  const [originalCurrency, setOriginalCurrency] = useState(initCurrency);
 
   const [validationError, setValidationError] = useState<string | null>(null);
 
@@ -97,7 +74,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   const [originalLanguages, setOriginalLanguages] = useState<string[]>(initLangs);
   const [originalDefaultLanguage, setOriginalDefaultLanguage] = useState(initDefLang);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
-  const [languagesExpanded, setLanguagesExpanded] = useState(false);
   const [pendingDisable, setPendingDisable] = useState<string | null>(null);
   const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
   const currentPlan = initialSubscription?.plan ?? "FREE";
@@ -120,23 +96,10 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
     const langsSorted = [...languages].sort().join(",");
     const origLangsSorted = [...originalLanguages].sort().join(",");
     return (
-      name !== originalName ||
-      description !== originalDescription ||
-      slug !== originalSlug ||
-      currency !== originalCurrency ||
       langsSorted !== origLangsSorted ||
       defaultLanguage !== originalDefaultLanguage
     );
-  }, [name, description, slug, currency, languages, defaultLanguage, originalName, originalDescription, originalSlug, originalCurrency, originalLanguages, originalDefaultLanguage]);
-
-  function handleSlugChange(value: string) {
-    const cleanSlug = value
-      .toLowerCase()
-      .replace(/[^a-z0-9-]/g, "-")
-      .replace(/-+/g, "-")
-      .replace(/^-|-$/g, "");
-    setSlug(cleanSlug);
-  }
+  }, [languages, defaultLanguage, originalLanguages, originalDefaultLanguage]);
 
   // Languages handlers (local state only, saved on form submit)
   function handleToggleLanguage(langCode: string, enabled: boolean) {
@@ -178,18 +141,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    if (!name.trim()) {
-      track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "name" });
-      setValidationError(t("nameRequired"));
-      return;
-    }
-
-    if (!slug.trim()) {
-      track(DashboardEvent.ERROR_VALIDATION, { page: "settings", field: "slug" });
-      setValidationError(t("slugRequired"));
-      return;
-    }
-
     setSaving(true);
 
     try {
@@ -197,10 +148,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          title: name.trim(),
-          description: description.trim() || null,
-          slug: slug.trim(),
-          currency,
           languages,
           defaultLanguage,
         }),
@@ -233,81 +180,27 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   }
 
   return (
-    <div className="flex flex-col h-full">
-      <PageHeader title={translations.pages.settings}>
-        <Button
-          type="submit"
-          form="settings-form"
-          disabled={saving || !hasChanges}
-          variant="default"
-          size="sm"
-          className={!hasChanges ? "opacity-40" : ""}
-        >
-          {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
-        </Button>
-      </PageHeader>
-      <form id="settings-form" onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
-        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-          <div className="max-w-lg mx-auto flex flex-col min-h-full">
-          <div className="space-y-4 flex-1">
-        <div className="space-y-2">
-          <FormInput
-            id="name"
-            label={`${t("name")}:`}
-            value={name}
-            onChange={setName}
-            onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_NAME)}
-            placeholder={t("namePlaceholder")}
-          />
-          <p className="text-xs text-muted-foreground px-1">
-            {t("nameHint")}
-          </p>
-        </div>
-
-        <div className="space-y-2">
-          <FormInput
-            id="description"
-            label={`${t("description")}:`}
-            value={description}
-            onChange={setDescription}
-            onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_DESCRIPTION)}
-            placeholder={t("descriptionPlaceholder")}
-          />
-          <p className="text-xs text-muted-foreground px-1">
-            {t("descriptionHint")}
-          </p>
-        </div>
-
-        <div className="space-y-2">
-          <FormInput
-            id="slug"
-            label={`${t("slug")}:`}
-            value={slug}
-            onChange={handleSlugChange}
-            onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_SLUG)}
-            placeholder={t("slugPlaceholder")}
-          />
-          <p className="text-xs text-muted-foreground px-1">
-            {t("slugHint", { slug: slug || t("slugPlaceholder") })}
-          </p>
-        </div>
-
-        <FormSelect
-          id="currency"
-          label={`${t("currency")}:`}
-          value={currency}
-          onChange={(v) => { track(DashboardEvent.CHANGED_CURRENCY); setCurrency(v); }}
-          placeholder={t("currencyPlaceholder")}
-          options={CURRENCIES.map((c) => ({
-            value: c.code,
-            label: `${c.code} (${c.symbol}) - ${c.name}`,
-          }))}
-        />
+    <div className="flex flex-col h-full overflow-y-auto">
+      <div className="sticky top-0 z-10 bg-background">
+        <PageHeader title={translations.pages.settings}>
+          <Button
+            type="submit"
+            form="settings-form"
+            disabled={saving || !hasChanges}
+            variant="default"
+            size="sm"
+            className={!hasChanges ? "opacity-40" : ""}
+          >
+            {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
+          </Button>
+        </PageHeader>
+      </div>
+      <form id="settings-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto">
+          <div className="space-y-4">
 
         {/* Languages section */}
-        <div className="space-y-4 pt-2">
-          <label className="text-sm font-medium">{tPages("languages")}:</label>
-
+        <div className="space-y-4">
           {isAtLimit && languageLimit !== Infinity && (
             <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
               <div className="flex gap-3 md:gap-4 md:items-center">
@@ -332,18 +225,9 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
 
           <div className="space-y-2">
             {(() => {
-              const enabledLangs = ALL_LANGUAGES.filter((l) => languages.includes(l.code));
-              const remainingLangs = ALL_LANGUAGES.filter((l) => !languages.includes(l.code));
-              const popularRemaining = remainingLangs.filter((l) => POPULAR_LANGUAGES.includes(l.code));
-              const otherRemaining = remainingLangs.filter((l) => !POPULAR_LANGUAGES.includes(l.code));
-              const sortedAll = [...enabledLangs, ...popularRemaining, ...otherRemaining];
-              const minVisible = Math.max(enabledLangs.length + popularRemaining.length, 4);
-              const visibleLangs = languagesExpanded ? sortedAll : sortedAll.slice(0, minVisible);
-              const hasMore = sortedAll.length > minVisible;
-
               return (
                 <>
-                  {visibleLangs.map((lang) => {
+                  {ALL_LANGUAGES.map((lang) => {
                     const isEnabled = languages.includes(lang.code);
                     const isDefault = defaultLanguage === lang.code;
                     const isDisabledByLimit = !isEnabled && isAtLimit;
@@ -379,25 +263,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
                       </div>
                     );
                   })}
-                  {hasMore && (
-                    <button
-                      type="button"
-                      onClick={() => setLanguagesExpanded((prev) => !prev)}
-                      className="flex items-center justify-center gap-1.5 w-full py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {languagesExpanded ? (
-                        <>
-                          {tLang("showLess")}
-                          <ChevronUp className="h-4 w-4" />
-                        </>
-                      ) : (
-                        <>
-                          {tLang("showAll")}
-                          <ChevronDown className="h-4 w-4" />
-                        </>
-                      )}
-                    </button>
-                  )}
                 </>
               );
             })()}
@@ -406,7 +271,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
           <p className="text-xs text-muted-foreground">
             {tLang("hint")}
           </p>
-        </div>
         </div>
           </div>
         </div>

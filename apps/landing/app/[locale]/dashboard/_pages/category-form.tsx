@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Loader2, Save, Trash2, X, ChevronDown } from "lucide-react";
+import { useEffect, useState, useMemo } from "react";
+import { Loader2, Trash2, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -21,20 +21,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { FormInput } from "../_ui/form-input";
-import { FormInputTranslate } from "../_ui/form-input-translate";
-import { FormSwitch } from "../_ui/form-switch";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
@@ -52,6 +45,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
   const router = useRouter();
   const locale = useLocale();
   const t = translations.categories;
+  const tAi = useTranslations("dashboard.aiTranslate");
   const { restaurant, loading: loadingRestaurant, otherLanguages } = useRestaurantLanguages();
 
   const [loading, setLoading] = useState(!!id);
@@ -65,9 +59,24 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
     Record<string, { name?: string }>
   >({});
   const [validationError, setValidationError] = useState<string | null>(null);
-  const [moreDetailsOpen, setMoreDetailsOpen] = useState(false);
+  const [translatingLangs, setTranslatingLangs] = useState<Set<string>>(new Set());
+  const [showTranslateLimitDialog, setShowTranslateLimitDialog] = useState(false);
+
+  // Original values for change detection
+  const [originalName, setOriginalName] = useState("");
+  const [originalTranslations, setOriginalTranslations] = useState<Record<string, { name?: string }>>({});
 
   const isEdit = !!id;
+
+  const hasChanges = useMemo(() => {
+    if (!isEdit) {
+      return !!name.trim();
+    }
+    return (
+      name !== originalName ||
+      JSON.stringify(categoryTranslations) !== JSON.stringify(originalTranslations)
+    );
+  }, [isEdit, name, categoryTranslations, originalName, originalTranslations]);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_CATEGORY_FORM);
@@ -82,11 +91,15 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       if (!response.ok) throw new Error("Failed to fetch");
       const data: CategoryWithTranslations = await response.json();
       setCategory(data);
-      setName(data.name);
+      const catName = data.name;
+      const catTrans = (data.translations as Record<string, { name?: string }>) || {};
+
+      setName(catName);
       setIsActive(data.isActive);
-      setCategoryTranslations(
-        (data.translations as Record<string, { name?: string }>) || {}
-      );
+      setCategoryTranslations(catTrans);
+
+      setOriginalName(catName);
+      setOriginalTranslations(catTrans);
     } catch (error) {
       console.error("Failed to fetch category:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "category" });
@@ -102,6 +115,41 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       ...prev,
       [lang]: { ...prev[lang], name: value },
     }));
+  }
+
+  async function handleTranslateSection(lang: string) {
+    const srcLang = restaurant?.defaultLanguage || "en";
+    if (!name.trim()) return;
+
+    track(DashboardEvent.CLICKED_AI_TRANSLATE);
+    setTranslatingLangs((prev) => new Set(prev).add(lang));
+
+    try {
+      const res = await fetch("/api/translate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: name.trim(), targetLanguage: lang, sourceLanguage: srcLang }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        handleTranslationChange(lang, data.translatedText);
+      } else if (res.status === 403) {
+        const data = await res.json().catch(() => ({}));
+        if (data.error === "limit_reached") setShowTranslateLimitDialog(true);
+        else toast.error(t.translateError);
+      } else {
+        toast.error(t.translateError);
+      }
+    } catch {
+      toast.error(t.translateError);
+    } finally {
+      setTranslatingLangs((prev) => {
+        const next = new Set(prev);
+        next.delete(lang);
+        return next;
+      });
+    }
   }
 
   async function handleDelete() {
@@ -187,81 +235,83 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
   }
 
   return (
-    <div className="flex flex-col h-full">
-      <PageHeader title={isEdit ? t.editCategory : t.addCategory} backHref="/dashboard/menu">
-        {isEdit && (
-          <button
-            type="button"
-            onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
-            disabled={saving || deleting}
-            className="flex items-center justify-center h-10 w-10 disabled:opacity-30"
+    <div className="flex flex-col h-full overflow-y-auto">
+      <div className="sticky top-0 z-10 bg-background">
+        <PageHeader title={isEdit ? t.editCategory : t.addCategory} backHref="/dashboard/menu">
+          <Button
+            type="submit"
+            form="category-form"
+            disabled={saving || deleting || !hasChanges}
+            variant="default"
+            size="sm"
+            className={!hasChanges ? "opacity-40" : ""}
           >
-            <Trash2 className="h-5 w-5" />
-          </button>
-        )}
-      </PageHeader>
+            {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t.save}
+          </Button>
+        </PageHeader>
+      </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
-        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-          <div className="max-w-lg mx-auto flex flex-col min-h-full">
-          <div className="space-y-4 flex-1">
-          <FormInput
-            id="name"
-            label={`${t.name}:`}
-            value={name}
-            onChange={setName}
-            onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
-            placeholder={t.namePlaceholder}
-          />
+      <form id="category-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
+        <div className="max-w-lg mx-auto space-y-6">
 
-          <Collapsible open={moreDetailsOpen} onOpenChange={setMoreDetailsOpen} className="!mt-8">
-              <CollapsibleTrigger asChild>
-                <button
-                  type="button"
-                  className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <ChevronDown className={`h-4 w-4 transition-transform ${moreDetailsOpen ? "rotate-180" : ""}`} />
-                  {translations.items.moreDetails}
-                </button>
-              </CollapsibleTrigger>
-              <CollapsibleContent className="space-y-4 pt-6">
-                {otherLanguages.map((lang) => (
-                  <FormInputTranslate
-                    key={lang}
-                    id={`name-${lang}`}
-                    label={`${t.name} (${LANGUAGE_NAMES[lang] || lang}):`}
-                    value={categoryTranslations[lang]?.name || ""}
-                    onChange={(value) => handleTranslationChange(lang, value)}
-                    placeholder={t.namePlaceholder}
-                    sourceText={name}
-                    sourceLanguage={restaurant?.defaultLanguage || "en"}
-                    targetLanguage={lang}
-                    translateErrorMessage={t.translateError}
-                  />
-                ))}
+          <div className="space-y-4">
+            <FormInput
+              id="name"
+              label={`${t.name}:`}
+              value={name}
+              onChange={setName}
+              onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
+              placeholder={t.namePlaceholder}
+            />
+          </div>
 
-                <FormSwitch
-                  id="isActive"
-                  label={`${t.status}:`}
-                  checked={isActive}
-                  onCheckedChange={(v) => { track(DashboardEvent.TOGGLED_CATEGORY_ACTIVE); setIsActive(v); }}
-                  activeText={t.active}
-                  inactiveText={t.inactive}
+          {/* Translation sections — one per language */}
+          {otherLanguages.map((lang) => {
+            const isTranslating = translatingLangs.has(lang);
+            return (
+              <div key={lang} className="space-y-4">
+                <div className="flex items-center justify-between pt-6">
+                  <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                    {LANGUAGE_NAMES[lang] || lang}:
+                  </h2>
+                  <button
+                    type="button"
+                    onClick={() => handleTranslateSection(lang)}
+                    disabled={isTranslating || !name.trim()}
+                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+                  >
+                    {isTranslating ? tAi("translating") : tAi("translate")}
+                    {isTranslating ? (
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                    ) : (
+                      <Sparkles className="h-3.5 w-3.5" />
+                    )}
+                  </button>
+                </div>
+
+                <FormInput
+                  id={`name-${lang}`}
+                  label={`${t.name}:`}
+                  value={categoryTranslations[lang]?.name || ""}
+                  onChange={(value) => handleTranslationChange(lang, value)}
+                  placeholder={t.namePlaceholder}
                 />
-              </CollapsibleContent>
-          </Collapsible>
-          </div>
-          <div className="pt-4 pb-2">
-            <Button type="submit" disabled={saving || deleting} variant="destructive" className="w-full h-12 rounded-2xl shadow-md">
-              {saving ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              ) : (
-                <Save className="h-4 w-4 mr-2" />
-              )}
-              {t.save}
-            </Button>
-          </div>
-          </div>
+              </div>
+            );
+          })}
+
+          {isEdit && (
+            <button
+              type="button"
+              onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
+              disabled={saving || deleting}
+              className="flex items-center gap-2 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors pt-8"
+            >
+              <Trash2 className="h-4 w-4" />
+              {t.delete}
+            </button>
+          )}
+
         </div>
       </form>
 
@@ -299,6 +349,23 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <Dialog open={showTranslateLimitDialog} onOpenChange={setShowTranslateLimitDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{tAi("limitReached")}</DialogTitle>
+            <DialogDescription>{tAi("limitReachedDescription")}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowTranslateLimitDialog(false)}>
+              {tAi("cancel")}
+            </Button>
+            <Button onClick={() => { track(DashboardEvent.CLICKED_AI_SUBSCRIBE); setShowTranslateLimitDialog(false); router.push("/dashboard/billing"); }}>
+              {tAi("upgrade")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

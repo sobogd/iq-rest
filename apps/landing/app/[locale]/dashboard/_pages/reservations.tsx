@@ -156,14 +156,14 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
     }
   }
 
-  function renderReservationCard(reservation: Reservation) {
+  function renderReservationRow(reservation: Reservation, isFirst: boolean) {
     const date = getDateFromReservation(reservation.date);
     const isUpdating = updating === reservation.id;
 
     return (
       <div
         key={reservation.id}
-        className="bg-muted/30 rounded-xl p-4 space-y-2"
+        className={`px-4 py-3 space-y-2 ${isFirst ? "" : "border-t border-foreground/5"}`}
       >
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0">
@@ -221,6 +221,18 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
     );
   }
 
+  function renderGroup(title: string, items: Reservation[]) {
+    if (items.length === 0) return null;
+    return (
+      <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+        <div className="flex items-center px-4 h-12 bg-muted/30">
+          <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{title}</span>
+        </div>
+        {items.map((r, i) => renderReservationRow(r, i === 0))}
+      </div>
+    );
+  }
+
   // No active subscription — show only the amber banner
   if (!hasActiveSubscription) {
     return (
@@ -259,7 +271,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
       <PageHeader title={translations.pages.reservations}>
         <button
           onClick={() => { track(DashboardEvent.CLICKED_RESERVATION_SETTINGS); router.push("/dashboard/reservation-settings"); }}
-          className="flex items-center justify-center h-10 w-10"
+          className="flex items-center justify-center h-10 w-10 -mr-2"
         >
           <Settings className="h-5 w-5" />
         </button>
@@ -272,42 +284,11 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
             <p className="text-muted-foreground">{t("noReservations")}</p>
           </div>
         ) : (
-          <div className="space-y-6">
-            {groupedReservations.pending.length > 0 && (
-              <div>
-                <h3 className="text-base font-semibold px-1 mb-3">{t("awaitingResponse")}</h3>
-                <div className="space-y-2">
-                  {groupedReservations.pending.map(renderReservationCard)}
-                </div>
-              </div>
-            )}
-
-            {groupedReservations.today.length > 0 && (
-              <div>
-                <h3 className="text-base font-semibold px-1 mb-3">{t("today")}</h3>
-                <div className="space-y-2">
-                  {groupedReservations.today.map(renderReservationCard)}
-                </div>
-              </div>
-            )}
-
-            {groupedReservations.tomorrow.length > 0 && (
-              <div>
-                <h3 className="text-base font-semibold px-1 mb-3">{t("tomorrow")}</h3>
-                <div className="space-y-2">
-                  {groupedReservations.tomorrow.map(renderReservationCard)}
-                </div>
-              </div>
-            )}
-
-            {groupedReservations.other.length > 0 && (
-              <div>
-                <h3 className="text-base font-semibold px-1 mb-3">{t("otherReservations")}</h3>
-                <div className="space-y-2">
-                  {groupedReservations.other.map(renderReservationCard)}
-                </div>
-              </div>
-            )}
+          <div className="space-y-4">
+            {renderGroup(t("awaitingResponse"), groupedReservations.pending)}
+            {renderGroup(t("today"), groupedReservations.today)}
+            {renderGroup(t("tomorrow"), groupedReservations.tomorrow)}
+            {renderGroup(t("otherReservations"), groupedReservations.other)}
           </div>
         )}
         </div>

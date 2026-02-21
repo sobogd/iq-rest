@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Printer, Download, Copy, Check } from "lucide-react";
+import { Printer, Download } from "lucide-react";
 import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
@@ -44,7 +44,6 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
   const [customText, setCustomText] = useState<string>("QR Menu\nScan Me");
   const [textSize, setTextSize] = useState<string>("medium");
   const [qrSvg, setQrSvg] = useState<string>("");
-  const [copied, setCopied] = useState(false);
   const printRef = useRef<HTMLDivElement>(null);
 
   const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
@@ -249,28 +248,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
           />
         </div>
 
-        <Button
-          type="button"
-          variant="destructive"
-          className="w-full h-10 rounded-xl shadow-md"
-          onClick={() => {
-            track(DashboardEvent.CLICKED_COPY_URL);
-            navigator.clipboard.writeText(`https://${menuUrl}`);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-          }}
-        >
-          {copied ? (
-            <Check className="h-4 w-4 text-green-500" />
-          ) : (
-            <Copy className="h-4 w-4" />
-          )}
-          {t("copyUrl")}
-        </Button>
-
         <div className="space-y-4">
-          <h2 className="text-base font-semibold text-muted-foreground">{t("printSection")}</h2>
-
           <div className="space-y-2">
             <Label>{t("paperFormat")}</Label>
             <Select value={paperFormat} onValueChange={(v) => { track(DashboardEvent.CHANGED_PAPER_FORMAT); setPaperFormat(v as keyof typeof PAPER_FORMATS); }}>
