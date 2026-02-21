@@ -29,10 +29,9 @@ interface MenuPageProps {
   initialItems: ItemWithTranslations[];
   initialCategories: Category[];
   initialCurrency: string;
-  checklistMenuEdited: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, checklistMenuEdited }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency }: MenuPageProps) {
   useBackIntercept("/dashboard");
   const { translations } = useDashboard();
   const router = useRouter();
@@ -46,8 +45,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
   const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
-  const hasNoItems = initialItems.length === 0;
-  const [showBanner, setShowBanner] = useState(hasNoItems && !checklistMenuEdited);
+  const [showBanner, setShowBanner] = useState(initialItems.length === 0);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_MENU);
