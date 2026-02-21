@@ -11,8 +11,7 @@ export default async function Page({
   const { isAuthenticated, onboardingStep } = await getOnboardingState();
 
   if (isAuthenticated) {
-    if (onboardingStep === 0) redirect("/onboarding/name");
-    if (onboardingStep === 1) redirect("/onboarding/type");
+    if (onboardingStep < 2) redirect("/onboarding/name");
     redirect("/dashboard");
   }
 

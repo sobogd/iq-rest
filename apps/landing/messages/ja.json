@@ -1519,7 +1519,7 @@
       }
     },
     "categories": {
-      "noCategories": "まだカテゴリがありません。最初のカテゴリを作成してください。",
+      "noCategories": "カテゴリーはまだありません",
       "addCategory": "カテゴリーを追加",
       "editCategory": "カテゴリを編集",
       "name": "名前",
@@ -1717,38 +1717,20 @@
     "menu": {
       "addItem": "商品を追加",
       "addCategory": "カテゴリーを追加",
-      "sampleBanner": "これらはサンプルメニューです。タップして編集・削除できます。準備ができたら自分の料理を追加してください。",
-      "scratchBanner": "カテゴリーとアイテムを追加してメニューの作成を始めましょう。",
-      "noItemsBanner": "カテゴリーにアイテムを追加しましょう。"
+      "scratchBanner": "まずメニューのカテゴリーを作成し、それぞれにアイテムを追加しましょう。例えば：",
+      "exampleCategories": "前菜, メインコース, デザート, ドリンク, サラダ",
+      "noItemsBanner": "カテゴリーにアイテムを追加しましょう — 各カテゴリー内の緑のボタンをタップしてください。"
     },
     "onboarding": {
       "nameTitle": "お店の名前は？",
       "nameSubtitle": "後から変更できます",
       "namePlaceholder": "例：マリオのピッツェリア",
-      "typeTitle": "どのようなお店ですか？",
-      "typeSubtitle": "メニューのテンプレートをご用意します",
-      "types": {
-        "restaurant": "レストラン",
-        "pizzeria": "ピッツェリア",
-        "sushi-bar": "寿司バー",
-        "burger-joint": "バーガーショップ",
-        "cafe": "カフェ",
-        "bar": "バー",
-        "bakery": "ベーカリー",
-        "hotel": "ホテル",
-        "other": "その他",
-        "scratch": "ゼロから"
-      },
-      "error": "エラーが発生しました",
-      "or": "または",
-      "startFromScratch": "ゼロから始める"
+      "error": "エラーが発生しました"
     },
     "home": {
       "viewMenu": "メニューを見る",
       "getReady": "メニューを準備する",
       "checklistName": "お店の名前を入力",
-      "checklistTemplate": "テンプレートを選択",
-      "checklistMenu": "メニューを編集",
       "checklistMenuFill": "メニューを入力",
       "checklistContacts": "連絡先を追加",
       "checklistBrand": "ブランドをカスタマイズ",

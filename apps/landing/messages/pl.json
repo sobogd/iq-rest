@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Brak kategorii. Utwórz swoją pierwszą kategorię, aby rozpocząć.",
+      "noCategories": "Brak kategorii",
       "addCategory": "Dodaj kategorię",
       "editCategory": "Edytuj kategorię",
       "name": "Nazwa",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Dodaj pozycję",
       "addCategory": "Dodaj kategorię",
-      "sampleBanner": "To są przykładowe pozycje — dotknij dowolnej, aby edytować lub usunąć. Dodaj własne dania, gdy będziesz gotowy.",
-      "scratchBanner": "Zacznij tworzyć menu, dodając kategorie i pozycje.",
-      "noItemsBanner": "Świetnie! Teraz dodaj pozycje do swoich kategorii."
+      "scratchBanner": "Zacznij od stworzenia kategorii dla swojego menu, a potem dodaj pozycje do każdej z nich. Na przykład:",
+      "exampleCategories": "Przystawki, Dania główne, Desery, Napoje, Sałatki",
+      "noItemsBanner": "Teraz dodaj pozycje do kategorii — naciśnij zielony przycisk w każdej z nich."
     },
     "onboarding": {
       "nameTitle": "Jak nazywa się Twoje miejsce?",
       "nameSubtitle": "Możesz to zmienić później",
       "namePlaceholder": "np. Pizzeria Mario",
-      "typeTitle": "Jaki typ lokalu prowadzisz?",
-      "typeSubtitle": "Przygotujemy dla Ciebie menu",
-      "types": {
-        "restaurant": "Restauracja",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burger bar",
-        "cafe": "Kawiarnia",
-        "bar": "Bar",
-        "bakery": "Piekarnia",
-        "hotel": "Hotel",
-        "other": "Inne",
-        "scratch": "Od Zera"
-      },
-      "error": "Coś poszło nie tak",
-      "or": "lub",
-      "startFromScratch": "Zacznij od zera"
+      "error": "Coś poszło nie tak"
     },
     "home": {
       "viewMenu": "Zobacz swoje menu",
       "getReady": "Przygotuj swoje menu",
       "checklistName": "Nazwij swój lokal",
-      "checklistTemplate": "Wybierz szablon",
-      "checklistMenu": "Edytuj menu",
       "checklistMenuFill": "Wypełnij swoje menu",
       "checklistContacts": "Dodaj kontakty",
       "checklistBrand": "Dostosuj markę",

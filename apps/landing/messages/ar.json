@@ -1519,7 +1519,7 @@
       }
     },
     "categories": {
-      "noCategories": "لا فئات بعد. أنشئ فئتك الأولى للبدء.",
+      "noCategories": "لا توجد فئات بعد",
       "addCategory": "إضافة فئة",
       "editCategory": "تعديل الفئة",
       "name": "الاسم",
@@ -1717,38 +1717,20 @@
     "menu": {
       "addItem": "إضافة صنف",
       "addCategory": "إضافة فئة",
-      "sampleBanner": "هذه عناصر تجريبية — انقر على أي منها للتعديل أو الحذف. أضف أطباقك الخاصة عندما تكون جاهزًا.",
-      "scratchBanner": "ابدأ ببناء قائمتك عن طريق إضافة الفئات والعناصر.",
-      "noItemsBanner": "رائع! الآن أضف عناصر إلى فئاتك."
+      "scratchBanner": "ابدأ بإنشاء فئات لقائمتك، ثم أضف عناصر إلى كل واحدة. على سبيل المثال:",
+      "exampleCategories": "مقبلات, أطباق رئيسية, حلويات, مشروبات, سلطات",
+      "noItemsBanner": "الآن أضف عناصر إلى فئاتك — اضغط على الزر الأخضر داخل كل فئة."
     },
     "onboarding": {
       "nameTitle": "ما اسم مكانك؟",
       "nameSubtitle": "يمكنك تغييره لاحقًا",
       "namePlaceholder": "مثال: بيتزا ماريو",
-      "typeTitle": "ما نوع مكانك؟",
-      "typeSubtitle": "سنُعدّ لك قائمة جاهزة",
-      "types": {
-        "restaurant": "مطعم",
-        "pizzeria": "بيتزيريا",
-        "sushi-bar": "سوشي بار",
-        "burger-joint": "مطعم برجر",
-        "cafe": "مقهى",
-        "bar": "بار",
-        "bakery": "مخبز",
-        "hotel": "فندق",
-        "other": "أخرى",
-        "scratch": "من الصفر"
-      },
-      "error": "حدث خطأ",
-      "or": "أو",
-      "startFromScratch": "ابدأ من الصفر"
+      "error": "حدث خطأ"
     },
     "home": {
       "viewMenu": "عرض القائمة",
       "getReady": "جهّز قائمتك",
       "checklistName": "سمِّ مكانك",
-      "checklistTemplate": "اختر قالبًا",
-      "checklistMenu": "حرّر القائمة",
       "checklistMenuFill": "املأ قائمتك",
       "checklistContacts": "أضف جهات الاتصال",
       "checklistBrand": "خصّص علامتك التجارية",

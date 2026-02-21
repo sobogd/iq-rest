@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Još nema kategorija. Kreirajte svoju prvu kategoriju da biste započeli.",
+      "noCategories": "Još nema kategorija",
       "addCategory": "Dodaj kategoriju",
       "editCategory": "Uredi kategoriju",
       "name": "Ime",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Dodaj stavku",
       "addCategory": "Dodaj kategoriju",
-      "sampleBanner": "Ovo su primjeri stavki — dodirnite bilo koju za uređivanje ili brisanje. Dodajte vlastita jela kada budete spremni.",
-      "scratchBanner": "Počnite graditi svoj jelovnik dodavanjem kategorija i stavki.",
-      "noItemsBanner": "Odlično! Sada dodajte stavke u svoje kategorije."
+      "scratchBanner": "Započnite izradom kategorija za svoj jelovnik, a zatim dodajte stavke u svaku od njih. Na primjer:",
+      "exampleCategories": "Predjela, Glavna jela, Deserti, Pića, Salate",
+      "noItemsBanner": "Sada dodajte stavke u svoje kategorije — dodirnite zeleni gumb unutar svake."
     },
     "onboarding": {
       "nameTitle": "Kako se zove vaš lokal?",
       "nameSubtitle": "Možete to promijeniti kasnije",
       "namePlaceholder": "npr. Pizzeria Mario",
-      "typeTitle": "Kakvu vrstu lokala vodite?",
-      "typeSubtitle": "Pripremit ćemo jelovnik za vas",
-      "types": {
-        "restaurant": "Restoran",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi bar",
-        "burger-joint": "Burger restoran",
-        "cafe": "Kafić",
-        "bar": "Bar",
-        "bakery": "Pekara",
-        "hotel": "Hotel",
-        "other": "Ostalo",
-        "scratch": "Od Nule"
-      },
-      "error": "Nešto je pošlo po krivu",
-      "or": "ili",
-      "startFromScratch": "Počni od nule"
+      "error": "Nešto je pošlo po krivu"
     },
     "home": {
       "viewMenu": "Pogledaj svoj meni",
       "getReady": "Pripremi svoj meni",
       "checklistName": "Imenuj svoj lokal",
-      "checklistTemplate": "Odaberi predložak",
-      "checklistMenu": "Uredi meni",
       "checklistMenuFill": "Ispunite svoj jelovnik",
       "checklistContacts": "Dodaj kontakte",
       "checklistBrand": "Prilagodi brend",

@@ -322,18 +322,15 @@ export async function getChecklistStatus(companyId: string) {
       checklistMenuEdited: true,
       checklistContactsSaved: true,
       checklistBrandCustomized: true,
-      startedFromScratch: true,
       fromScanner: true,
     },
   });
 
   return {
     nameSet: Boolean(restaurant?.title),
-    templateChosen: true, // guaranteed by onboarding
     menuEdited: restaurant?.checklistMenuEdited ?? false,
     contactsAdded: restaurant?.checklistContactsSaved ?? false,
     brandCustomized: restaurant?.checklistBrandCustomized ?? false,
-    startedFromScratch: restaurant?.startedFromScratch ?? false,
     fromScanner: restaurant?.fromScanner ?? false,
   };
 }

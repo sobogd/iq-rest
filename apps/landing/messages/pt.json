@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Nenhuma categoria ainda. Crie sua primeira categoria para começar.",
+      "noCategories": "Ainda sem categorias",
       "addCategory": "Adicionar categoria",
       "editCategory": "Editar Categoria",
       "name": "Nome",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Adicionar item",
       "addCategory": "Adicionar categoria",
-      "sampleBanner": "Estes são itens de exemplo — toque em qualquer um para editar ou excluir. Adicione seus próprios pratos quando estiver pronto.",
-      "scratchBanner": "Comece a criar o seu menu adicionando categorias e itens.",
-      "noItemsBanner": "Ótimo! Agora adicione itens às suas categorias."
+      "scratchBanner": "Comece criando categorias para o seu menu e depois adicione itens a cada uma. Por exemplo:",
+      "exampleCategories": "Entradas, Pratos principais, Sobremesas, Bebidas, Saladas",
+      "noItemsBanner": "Agora adicione itens às suas categorias — toque no botão verde dentro de cada uma."
     },
     "onboarding": {
       "nameTitle": "Qual o nome do seu estabelecimento?",
       "nameSubtitle": "Você pode alterar depois",
       "namePlaceholder": "ex. Pizzaria Mario",
-      "typeTitle": "Que tipo de estabelecimento você tem?",
-      "typeSubtitle": "Vamos preparar um cardápio para você",
-      "types": {
-        "restaurant": "Restaurante",
-        "pizzeria": "Pizzaria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Hamburgueria",
-        "cafe": "Cafeteria",
-        "bar": "Bar",
-        "bakery": "Padaria",
-        "hotel": "Hotel",
-        "other": "Outro",
-        "scratch": "Do Zero"
-      },
-      "error": "Algo deu errado",
-      "or": "ou",
-      "startFromScratch": "Começar do zero"
+      "error": "Algo deu errado"
     },
     "home": {
       "viewMenu": "Ver o seu menu",
       "getReady": "Prepare o seu menu",
       "checklistName": "Dê nome ao local",
-      "checklistTemplate": "Escolha um modelo",
-      "checklistMenu": "Edite o menu",
       "checklistMenuFill": "Preencha o seu menu",
       "checklistContacts": "Adicione contactos",
       "checklistBrand": "Personalize a marca",

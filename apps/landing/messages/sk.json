@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Zatiaľ žiadne kategórie. Vytvorte svoju prvú kategóriu, aby ste mohli začať.",
+      "noCategories": "Zatiaľ žiadne kategórie",
       "addCategory": "Pridať kategóriu",
       "editCategory": "Upraviť kategóriu",
       "name": "Názov",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Pridať položku",
       "addCategory": "Pridať kategóriu",
-      "sampleBanner": "Toto sú ukážkové položky — klepnite na ľubovoľnú pre úpravu alebo vymazanie. Pridajte vlastné jedlá, keď budete pripravení.",
-      "scratchBanner": "Začnite vytvárať menu pridávaním kategórií a položiek.",
-      "noItemsBanner": "Skvelé! Teraz pridajte položky do svojich kategórií."
+      "scratchBanner": "Začnite vytvorením kategórií pre vaše menu a potom do každej pridajte položky. Napríklad:",
+      "exampleCategories": "Predjedlá, Hlavné jedlá, Dezerty, Nápoje, Šaláty",
+      "noItemsBanner": "Teraz pridajte položky do svojich kategórií — klepnite na zelené tlačidlo v každej z nich."
     },
     "onboarding": {
       "nameTitle": "Ako sa volá vaše miesto?",
       "nameSubtitle": "Neskôr to môžete zmeniť",
       "namePlaceholder": "napr. Pizzéria Mario",
-      "typeTitle": "Aký typ podniku prevádzkujete?",
-      "typeSubtitle": "Pripravíme pre vás menu",
-      "types": {
-        "restaurant": "Reštaurácia",
-        "pizzeria": "Pizzéria",
-        "sushi-bar": "Sushi bar",
-        "burger-joint": "Burger bar",
-        "cafe": "Kaviareň",
-        "bar": "Bar",
-        "bakery": "Pekáreň",
-        "hotel": "Hotel",
-        "other": "Iné",
-        "scratch": "Od Nuly"
-      },
-      "error": "Niečo sa pokazilo",
-      "or": "alebo",
-      "startFromScratch": "Začať od nuly"
+      "error": "Niečo sa pokazilo"
     },
     "home": {
       "viewMenu": "Zobraziť menu",
       "getReady": "Pripravte si menu",
       "checklistName": "Pomenujte podnik",
-      "checklistTemplate": "Vyberte šablónu",
-      "checklistMenu": "Upravte menu",
       "checklistMenuFill": "Vyplňte svoje menu",
       "checklistContacts": "Pridajte kontakty",
       "checklistBrand": "Prispôsobte značku",

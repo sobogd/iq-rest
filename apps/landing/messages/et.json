@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Kategooriaid pole veel. Looge oma esimene kategooria, et alustada.",
+      "noCategories": "Kategooriaid pole veel",
       "addCategory": "Lisa kategooria",
       "editCategory": "Muuda kategooriat",
       "name": "Nimi",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Lisa toode",
       "addCategory": "Lisa kategooria",
-      "sampleBanner": "Need on näidistooted — puudutage mistahes, et muuta või kustutada. Lisage oma road, kui olete valmis.",
-      "scratchBanner": "Alustage menüü loomist kategooriate ja toodete lisamisega.",
-      "noItemsBanner": "Suurepärane! Lisage nüüd tooted oma kategooriatesse."
+      "scratchBanner": "Alustage oma menüüle kategooriate loomisega ja lisage seejärel igasse tooteid. Näiteks:",
+      "exampleCategories": "Eelroad, Praad, Magustoidud, Joogid, Salatid",
+      "noItemsBanner": "Nüüd lisage tooteid oma kategooriatesse — puudutage rohelist nuppu igas kategoorias."
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",
       "nameSubtitle": "Saate seda hiljem muuta",
       "namePlaceholder": "nt Mario Pitsakoht",
-      "typeTitle": "Millist tüüpi kohta te juhite?",
-      "typeSubtitle": "Koostame teile valmis menüü",
-      "types": {
-        "restaurant": "Restoran",
-        "pizzeria": "Pitseria",
-        "sushi-bar": "Sushi baar",
-        "burger-joint": "Burgerikohvik",
-        "cafe": "Kohvik",
-        "bar": "Baar",
-        "bakery": "Pagariäri",
-        "hotel": "Hotell",
-        "other": "Muu",
-        "scratch": "Nullist"
-      },
-      "error": "Midagi läks valesti",
-      "or": "või",
-      "startFromScratch": "Alusta nullist"
+      "error": "Midagi läks valesti"
     },
     "home": {
       "viewMenu": "Vaata oma menüüd",
       "getReady": "Valmista menüü ette",
       "checklistName": "Pange kohale nimi",
-      "checklistTemplate": "Valige mall",
-      "checklistMenu": "Muutke menüüd",
       "checklistMenuFill": "Täitke oma menüü",
       "checklistContacts": "Lisage kontaktid",
       "checklistBrand": "Kohandage brändi",

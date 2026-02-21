@@ -177,8 +177,8 @@ export interface ItemsTranslations {
 export interface MenuTranslations {
   addItem: string;
   addCategory: string;
-  sampleBanner: string;
   scratchBanner: string;
+  exampleCategories: string;
   noItemsBanner: string;
 }
 

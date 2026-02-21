@@ -1519,7 +1519,7 @@
       }
     },
     "categories": {
-      "noCategories": "아직 카테고리가 없습니다. 첫 번째 카테고리를 만들어 시작하세요.",
+      "noCategories": "아직 카테고리가 없습니다",
       "addCategory": "카테고리 추가",
       "editCategory": "카테고리 편집",
       "name": "이름",
@@ -1717,38 +1717,20 @@
     "menu": {
       "addItem": "항목 추가",
       "addCategory": "카테고리 추가",
-      "sampleBanner": "이것들은 샘플 항목입니다. 아무거나 탭하여 편집하거나 삭제하세요. 준비가 되면 자신의 요리를 추가하세요.",
-      "scratchBanner": "카테고리와 항목을 추가하여 메뉴 만들기를 시작하세요.",
-      "noItemsBanner": "좋아요! 이제 카테고리에 항목을 추가하세요."
+      "scratchBanner": "먼저 메뉴의 카테고리를 만든 다음 각 카테고리에 항목을 추가하세요. 예를 들어:",
+      "exampleCategories": "에피타이저, 메인 요리, 디저트, 음료, 샐러드",
+      "noItemsBanner": "이제 카테고리에 항목을 추가하세요 — 각 카테고리 안의 초록색 버튼을 탭하세요."
     },
     "onboarding": {
       "nameTitle": "가게 이름이 무엇인가요?",
       "nameSubtitle": "나중에 변경할 수 있습니다",
       "namePlaceholder": "예: 마리오 피자",
-      "typeTitle": "어떤 종류의 가게인가요?",
-      "typeSubtitle": "맞춤 메뉴를 준비해 드리겠습니다",
-      "types": {
-        "restaurant": "레스토랑",
-        "pizzeria": "피자 전문점",
-        "sushi-bar": "스시바",
-        "burger-joint": "버거 전문점",
-        "cafe": "카페",
-        "bar": "바",
-        "bakery": "베이커리",
-        "hotel": "호텔",
-        "other": "기타",
-        "scratch": "처음부터"
-      },
-      "error": "문제가 발생했습니다",
-      "or": "또는",
-      "startFromScratch": "처음부터 시작"
+      "error": "문제가 발생했습니다"
     },
     "home": {
       "viewMenu": "메뉴 보기",
       "getReady": "메뉴를 준비하세요",
       "checklistName": "매장 이름 입력",
-      "checklistTemplate": "템플릿 선택",
-      "checklistMenu": "메뉴 편집",
       "checklistMenuFill": "메뉴를 작성하세요",
       "checklistContacts": "연락처 추가",
       "checklistBrand": "브랜드 맞춤 설정",

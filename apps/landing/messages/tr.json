@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Henüz kategori yok. Başlamak için ilk kategorinizi oluşturun.",
+      "noCategories": "Henüz kategori yok",
       "addCategory": "Kategori ekle",
       "editCategory": "Kategoriyi Düzenle",
       "name": "İsim",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Ürün ekle",
       "addCategory": "Kategori ekle",
-      "sampleBanner": "Bunlar örnek ürünlerdir — düzenlemek veya silmek için herhangi birine dokunun. Hazır olduğunuzda kendi yemeklerinizi ekleyin.",
-      "scratchBanner": "Kategoriler ve ürünler ekleyerek menünüzü oluşturmaya başlayın.",
-      "noItemsBanner": "Harika! Şimdi kategorilerinize ürünler ekleyin."
+      "scratchBanner": "Menünüz için kategoriler oluşturarak başlayın, ardından her birine ürünler ekleyin. Örneğin:",
+      "exampleCategories": "Başlangıçlar, Ana Yemekler, Tatlılar, İçecekler, Salatalar",
+      "noItemsBanner": "Şimdi kategorilerinize ürünler ekleyin — her birinin içindeki yeşil butona dokunun."
     },
     "onboarding": {
       "nameTitle": "Mekanınızın adı nedir?",
       "nameSubtitle": "Daha sonra değiştirebilirsiniz",
       "namePlaceholder": "örn. Mario'nun Pizzacısı",
-      "typeTitle": "Ne tür bir mekan işletiyorsunuz?",
-      "typeSubtitle": "Sizin için hazır bir menü oluşturacağız",
-      "types": {
-        "restaurant": "Restoran",
-        "pizzeria": "Pizzacı",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burger Mekanı",
-        "cafe": "Kafe",
-        "bar": "Bar",
-        "bakery": "Fırın",
-        "hotel": "Otel",
-        "other": "Diğer",
-        "scratch": "Sıfırdan"
-      },
-      "error": "Bir şeyler ters gitti",
-      "or": "veya",
-      "startFromScratch": "Sıfırdan başla"
+      "error": "Bir şeyler ters gitti"
     },
     "home": {
       "viewMenu": "Menünüzü görüntüleyin",
       "getReady": "Menünüzü hazırlayın",
       "checklistName": "Mekanınızı adlandırın",
-      "checklistTemplate": "Şablon seçin",
-      "checklistMenu": "Menüyü düzenleyin",
       "checklistMenuFill": "Menünüzü doldurun",
       "checklistContacts": "İletişim ekleyin",
       "checklistBrand": "Markayı özelleştirin",

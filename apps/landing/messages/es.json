@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "No hay categorías aún. Crea tu primera categoría para comenzar.",
+      "noCategories": "Aún no hay categorías",
       "addCategory": "Añadir categoría",
       "editCategory": "Editar Categoría",
       "name": "Nombre",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Añadir artículo",
       "addCategory": "Añadir categoría",
-      "sampleBanner": "Estos son artículos de ejemplo — toca cualquiera para editar o eliminar. Agrega tus propios platos cuando estés listo.",
-      "scratchBanner": "Comienza a crear tu menú añadiendo categorías y artículos.",
-      "noItemsBanner": "¡Genial! Ahora añade artículos a tus categorías."
+      "scratchBanner": "Empieza creando categorías para tu menú y luego añade artículos a cada una. Por ejemplo:",
+      "exampleCategories": "Entrantes, Platos principales, Postres, Bebidas, Ensaladas",
+      "noItemsBanner": "Ahora añade artículos a tus categorías — toca el botón verde dentro de cada una."
     },
     "onboarding": {
       "nameTitle": "¿Cómo se llama tu local?",
       "nameSubtitle": "Puedes cambiarlo después",
       "namePlaceholder": "ej. Pizzería Mario",
-      "typeTitle": "¿Qué tipo de local tienes?",
-      "typeSubtitle": "Prepararemos un menú para ti",
-      "types": {
-        "restaurant": "Restaurante",
-        "pizzeria": "Pizzería",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Hamburguesería",
-        "cafe": "Cafetería",
-        "bar": "Bar",
-        "bakery": "Panadería",
-        "hotel": "Hotel",
-        "other": "Otro",
-        "scratch": "Desde Cero"
-      },
-      "error": "Algo salió mal",
-      "or": "o",
-      "startFromScratch": "Empezar desde cero"
+      "error": "Algo salió mal"
     },
     "home": {
       "viewMenu": "Ver tu menú",
       "getReady": "Prepara tu menú",
       "checklistName": "Nombra tu local",
-      "checklistTemplate": "Elige una plantilla",
-      "checklistMenu": "Edita tu menú",
       "checklistMenuFill": "Rellena tu menú",
       "checklistContacts": "Añade tus contactos",
       "checklistBrand": "Personaliza tu marca",

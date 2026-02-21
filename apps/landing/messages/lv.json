@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Vēl nav kategoriju. Izveidojiet savu pirmo kategoriju, lai sāktu.",
+      "noCategories": "Vēl nav kategoriju",
       "addCategory": "Pievienot kategoriju",
       "editCategory": "Rediģēt kategoriju",
       "name": "Nosaukums",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Pievienot preci",
       "addCategory": "Pievienot kategoriju",
-      "sampleBanner": "Šie ir paraugu produkti — pieskarieties jebkuram, lai rediģētu vai dzēstu. Pievienojiet savus ēdienus, kad esat gatavs.",
-      "scratchBanner": "Sāciet veidot savu ēdienkarti, pievienojot kategorijas un preces.",
-      "noItemsBanner": "Lieliski! Tagad pievienojiet preces savām kategorijām."
+      "scratchBanner": "Sāciet ar kategoriju izveidi savai ēdienkartei, pēc tam pievienojiet preces katrai no tām. Piemēram:",
+      "exampleCategories": "Uzkodas, Pamatēdieni, Deserti, Dzērieni, Salāti",
+      "noItemsBanner": "Tagad pievienojiet preces savām kategorijām — nospiediet zaļo pogu katrā kategorijā."
     },
     "onboarding": {
       "nameTitle": "Kāds ir jūsu vietas nosaukums?",
       "nameSubtitle": "Vēlāk varat to mainīt",
       "namePlaceholder": "piem. Mario Picērija",
-      "typeTitle": "Kāda veida vietu jūs vadāt?",
-      "typeSubtitle": "Sagatavosim jums ēdienkarti",
-      "types": {
-        "restaurant": "Restorāns",
-        "pizzeria": "Picērija",
-        "sushi-bar": "Suši bārs",
-        "burger-joint": "Burgeru bārs",
-        "cafe": "Kafejnīca",
-        "bar": "Bārs",
-        "bakery": "Maiznīca",
-        "hotel": "Viesnīca",
-        "other": "Cits",
-        "scratch": "No Nulles"
-      },
-      "error": "Kaut kas nogāja greizi",
-      "or": "vai",
-      "startFromScratch": "Sākt no nulles"
+      "error": "Kaut kas nogāja greizi"
     },
     "home": {
       "viewMenu": "Skatīt ēdienkarti",
       "getReady": "Sagatavojiet ēdienkarti",
       "checklistName": "Nosauciet savu vietu",
-      "checklistTemplate": "Izvēlieties veidni",
-      "checklistMenu": "Rediģējiet ēdienkarti",
       "checklistMenuFill": "Aizpildiet savu ēdienkarti",
       "checklistContacts": "Pievienojiet kontaktus",
       "checklistBrand": "Pielāgojiet zīmolu",

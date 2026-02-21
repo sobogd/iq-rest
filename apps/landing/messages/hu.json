@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Még nincsenek kategóriák. Hozd létre az első kategóriádat a kezdéshez.",
+      "noCategories": "Még nincsenek kategóriák",
       "addCategory": "Kategória hozzáadása",
       "editCategory": "Kategória szerkesztése",
       "name": "Név",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Tétel hozzáadása",
       "addCategory": "Kategória hozzáadása",
-      "sampleBanner": "Ezek mintaelemek — érintsd meg bármelyiket szerkesztéshez vagy törléshez. Add hozzá saját ételeidet, amikor készen állsz.",
-      "scratchBanner": "Kezdd el az étlapod felépítését kategóriák és tételek hozzáadásával.",
-      "noItemsBanner": "Remek! Most adj hozzá tételeket a kategóriáidhoz."
+      "scratchBanner": "Kezdd azzal, hogy kategóriákat hozol létre az étlapodhoz, majd adj hozzá tételeket mindegyikhez. Például:",
+      "exampleCategories": "Előételek, Főételek, Desszertek, Italok, Saláták",
+      "noItemsBanner": "Most adj hozzá tételeket a kategóriáidhoz — érintsd meg a zöld gombot mindegyikben."
     },
     "onboarding": {
       "nameTitle": "Mi a helye neve?",
       "nameSubtitle": "Később módosíthatja",
       "namePlaceholder": "pl. Mario Pizzéria",
-      "typeTitle": "Milyen típusú helyet vezet?",
-      "typeSubtitle": "Előkészítünk egy menüt az Ön számára",
-      "types": {
-        "restaurant": "Étterem",
-        "pizzeria": "Pizzéria",
-        "sushi-bar": "Sushi bár",
-        "burger-joint": "Hamburgerezô",
-        "cafe": "Kávézó",
-        "bar": "Bár",
-        "bakery": "Pékség",
-        "hotel": "Hotel",
-        "other": "Egyéb",
-        "scratch": "Az Alapoktól"
-      },
-      "error": "Valami hiba történt",
-      "or": "vagy",
-      "startFromScratch": "Kezdd az alapoktól"
+      "error": "Valami hiba történt"
     },
     "home": {
       "viewMenu": "Menü megtekintése",
       "getReady": "Készítse el a menüt",
       "checklistName": "Adjon nevet a helyének",
-      "checklistTemplate": "Válasszon sablont",
-      "checklistMenu": "Szerkessze a menüt",
       "checklistMenuFill": "Töltsd ki az étlapod",
       "checklistContacts": "Adja meg az elérhetőségeket",
       "checklistBrand": "Szabja testre a márkát",

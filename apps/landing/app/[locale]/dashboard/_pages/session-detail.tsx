@@ -380,6 +380,17 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
           {/* Manual conversion buttons */}
           {session?.gclid && (
             <div className="space-y-2">
+              {!session.conversionSent && (
+                <Button
+                  variant="outline"
+                  className="w-full justify-start gap-2"
+                  onClick={() => handleSendConversion("type_selected")}
+                  disabled={sendingConversion !== null}
+                >
+                  <Send className="h-4 w-4" />
+                  {sendingConversion === "type_selected" ? "Sending..." : "Send conversion: type selected"}
+                </Button>
+              )}
               {!session.conversionViewsSent && (
                 <Button
                   variant="outline"

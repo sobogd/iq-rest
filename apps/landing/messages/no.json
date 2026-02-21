@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Ingen kategorier ennå. Opprett din første kategori for å komme i gang.",
+      "noCategories": "Ingen kategorier ennå",
       "addCategory": "Legg til kategori",
       "editCategory": "Rediger kategori",
       "name": "Navn",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Legg til vare",
       "addCategory": "Legg til kategori",
-      "sampleBanner": "Dette er eksempelartikler — trykk på en for å redigere eller slette. Legg til dine egne retter når du er klar.",
-      "scratchBanner": "Begynn å bygge menyen din ved å legge til kategorier og varer.",
-      "noItemsBanner": "Flott! Legg nå til varer i kategoriene dine."
+      "scratchBanner": "Start med å opprette kategorier for menyen din, og legg deretter til varer i hver enkelt. For eksempel:",
+      "exampleCategories": "Forretter, Hovedretter, Desserter, Drikker, Salater",
+      "noItemsBanner": "Legg nå til varer i kategoriene dine — trykk på den grønne knappen i hver kategori."
     },
     "onboarding": {
       "nameTitle": "Hva heter stedet ditt?",
       "nameSubtitle": "Du kan endre det senere",
       "namePlaceholder": "f.eks. Marios Pizzeria",
-      "typeTitle": "Hva slags sted driver du?",
-      "typeSubtitle": "Vi lager en meny for deg",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burgersted",
-        "cafe": "Kafé",
-        "bar": "Bar",
-        "bakery": "Bakeri",
-        "hotel": "Hotell",
-        "other": "Annet",
-        "scratch": "Fra Bunnen"
-      },
-      "error": "Noe gikk galt",
-      "or": "eller",
-      "startFromScratch": "Start fra bunnen av"
+      "error": "Noe gikk galt"
     },
     "home": {
       "viewMenu": "Se menyen din",
       "getReady": "Klargjør menyen",
       "checklistName": "Gi stedet ditt et navn",
-      "checklistTemplate": "Velg en mal",
-      "checklistMenu": "Rediger menyen",
       "checklistMenuFill": "Fyll ut menyen din",
       "checklistContacts": "Legg til kontakter",
       "checklistBrand": "Tilpass merkevaren",

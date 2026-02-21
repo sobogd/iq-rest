@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Ei vielä kategorioita. Luo ensimmäinen kategoriasi aloittaaksesi.",
+      "noCategories": "Ei vielä kategorioita",
       "addCategory": "Lisää kategoria",
       "editCategory": "Muokkaa kategoriaa",
       "name": "Nimi",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Lisää tuote",
       "addCategory": "Lisää kategoria",
-      "sampleBanner": "Nämä ovat esimerkkituotteita — napauta mitä tahansa muokataksesi tai poistaaksesi. Lisää omat annoksesi, kun olet valmis.",
-      "scratchBanner": "Aloita valikon rakentaminen lisäämällä kategorioita ja tuotteita.",
-      "noItemsBanner": "Hienoa! Lisää nyt tuotteita kategorioihisi."
+      "scratchBanner": "Aloita luomalla kategorioita menuusi ja lisää sitten tuotteita jokaiseen. Esimerkiksi:",
+      "exampleCategories": "Alkupalat, Pääruoat, Jälkiruoat, Juomat, Salaatit",
+      "noItemsBanner": "Lisää nyt tuotteita kategorioihisi — napauta vihreää painiketta kunkin kategorian sisällä."
     },
     "onboarding": {
       "nameTitle": "Mikä on paikkasi nimi?",
       "nameSubtitle": "Voit muuttaa sen myöhemmin",
       "namePlaceholder": "esim. Marion Pizzeria",
-      "typeTitle": "Millaista paikkaa pidät?",
-      "typeSubtitle": "Luomme sinulle valmiin menun",
-      "types": {
-        "restaurant": "Ravintola",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi-baari",
-        "burger-joint": "Hampurilaisravintola",
-        "cafe": "Kahvila",
-        "bar": "Baari",
-        "bakery": "Leipomo",
-        "hotel": "Hotelli",
-        "other": "Muu",
-        "scratch": "Tyhjästä"
-      },
-      "error": "Jokin meni pieleen",
-      "or": "tai",
-      "startFromScratch": "Aloita tyhjästä"
+      "error": "Jokin meni pieleen"
     },
     "home": {
       "viewMenu": "Katso menusi",
       "getReady": "Valmistele menu",
       "checklistName": "Nimeä paikkasi",
-      "checklistTemplate": "Valitse pohja",
-      "checklistMenu": "Muokkaa menua",
       "checklistMenuFill": "Täytä valikko",
       "checklistContacts": "Lisää yhteystiedot",
       "checklistBrand": "Muokkaa brändiä",

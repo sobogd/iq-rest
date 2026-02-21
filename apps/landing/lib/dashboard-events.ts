@@ -16,16 +16,12 @@ export enum DashboardEvent {
   SHOWED_ONBOARDING_NAME = "showed_onboarding_name",
   FOCUSED_ONBOARDING_NAME = "focused_onboarding_name",
   CLICKED_ONBOARDING_CONTINUE = "clicked_onboarding_continue",
-  SHOWED_ONBOARDING_TYPE = "showed_onboarding_type",
-  CLICKED_ONBOARDING_TYPE = "clicked_onboarding_type",
-  CLICKED_ONBOARDING_SCRATCH = "clicked_onboarding_scratch",
 
   // Home
   SHOWED_HOME = "showed_home",
   CLICKED_VIEW_MENU = "clicked_view_menu",
   CLICKED_HELP = "clicked_help",
   CLICKED_CHECKLIST_NAME = "clicked_checklist_name",
-  CLICKED_CHECKLIST_TEMPLATE = "clicked_checklist_template",
   CLICKED_CHECKLIST_MENU = "clicked_checklist_menu",
   CLICKED_CHECKLIST_CONTACTS = "clicked_checklist_contacts",
   CLICKED_CHECKLIST_BRAND = "clicked_checklist_brand",
@@ -196,16 +192,12 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.SHOWED_ONBOARDING_NAME]: "Showed Onboarding Name",
   [DashboardEvent.FOCUSED_ONBOARDING_NAME]: "Focused Restaurant Name",
   [DashboardEvent.CLICKED_ONBOARDING_CONTINUE]: "Clicked Continue",
-  [DashboardEvent.SHOWED_ONBOARDING_TYPE]: "Showed Onboarding Type",
-  [DashboardEvent.CLICKED_ONBOARDING_TYPE]: "Selected Restaurant Type",
-  [DashboardEvent.CLICKED_ONBOARDING_SCRATCH]: "Started From Scratch",
 
   // Home
   [DashboardEvent.SHOWED_HOME]: "Showed Dashboard",
   [DashboardEvent.CLICKED_VIEW_MENU]: "Clicked View Menu",
   [DashboardEvent.CLICKED_HELP]: "Clicked Help",
   [DashboardEvent.CLICKED_CHECKLIST_NAME]: "Checklist: Name",
-  [DashboardEvent.CLICKED_CHECKLIST_TEMPLATE]: "Checklist: Template",
   [DashboardEvent.CLICKED_CHECKLIST_MENU]: "Checklist: Menu",
   [DashboardEvent.CLICKED_CHECKLIST_CONTACTS]: "Checklist: Contacts",
   [DashboardEvent.CLICKED_CHECKLIST_BRAND]: "Checklist: Brand",

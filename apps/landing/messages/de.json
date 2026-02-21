@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Noch keine Kategorien. Erstellen Sie Ihre erste Kategorie, um zu beginnen.",
+      "noCategories": "Noch keine Kategorien",
       "addCategory": "Kategorie hinzufügen",
       "editCategory": "Kategorie bearbeiten",
       "name": "Name",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Artikel hinzufügen",
       "addCategory": "Kategorie hinzufügen",
-      "sampleBanner": "Dies sind Beispielartikel — tippe auf einen, um ihn zu bearbeiten oder zu löschen. Füge deine eigenen Gerichte hinzu, wenn du bereit bist.",
-      "scratchBanner": "Beginnen Sie mit dem Aufbau Ihres Menüs, indem Sie Kategorien und Artikel hinzufügen.",
-      "noItemsBanner": "Super! Fügen Sie jetzt Artikel zu Ihren Kategorien hinzu."
+      "scratchBanner": "Erstellen Sie zunächst Kategorien für Ihr Menü und fügen Sie dann Artikel hinzu. Zum Beispiel:",
+      "exampleCategories": "Vorspeisen, Hauptgerichte, Desserts, Getränke, Salate",
+      "noItemsBanner": "Fügen Sie jetzt Artikel zu Ihren Kategorien hinzu — tippen Sie auf den grünen Button in jeder Kategorie."
     },
     "onboarding": {
       "nameTitle": "Wie heißt Ihr Lokal?",
       "nameSubtitle": "Sie können es später ändern",
       "namePlaceholder": "z.B. Marios Pizzeria",
-      "typeTitle": "Was für ein Lokal betreiben Sie?",
-      "typeSubtitle": "Wir erstellen ein fertiges Menü für Sie",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burger-Restaurant",
-        "cafe": "Café",
-        "bar": "Bar",
-        "bakery": "Bäckerei",
-        "hotel": "Hotel",
-        "other": "Sonstiges",
-        "scratch": "Von Grund auf"
-      },
-      "error": "Etwas ist schiefgelaufen",
-      "or": "oder",
-      "startFromScratch": "Von Grund auf starten"
+      "error": "Etwas ist schiefgelaufen"
     },
     "home": {
       "viewMenu": "Dein Menü ansehen",
       "getReady": "Menü vorbereiten",
       "checklistName": "Benenne dein Lokal",
-      "checklistTemplate": "Vorlage wählen",
-      "checklistMenu": "Menü bearbeiten",
       "checklistMenuFill": "Füllen Sie Ihr Menü aus",
       "checklistContacts": "Kontakte hinzufügen",
       "checklistBrand": "Marke anpassen",

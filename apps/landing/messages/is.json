@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Engar flokka enn. Búðu til þinn fyrsta flokk til að byrja.",
+      "noCategories": "Engir flokkar enn",
       "addCategory": "Bæta við flokki",
       "editCategory": "Breyta flokki",
       "name": "Nafn",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Bæta við vöru",
       "addCategory": "Bæta við flokki",
-      "sampleBanner": "Þetta eru sýnishorn — ýttu á hvaða sem er til að breyta eða eyða. Bættu við þínum eigin réttum þegar þú ert tilbúinn.",
-      "scratchBanner": "Byrjaðu að byggja matseðilinn þinn með því að bæta við flokkum og vörum.",
-      "noItemsBanner": "Frábært! Bættu nú vörum við flokkana þína."
+      "scratchBanner": "Byrjaðu á að búa til flokka fyrir matseðilinn þinn og bættu síðan vörum við hvern og einn. Til dæmis:",
+      "exampleCategories": "Forréttir, Aðalréttir, Eftiréttir, Drykkir, Salöt",
+      "noItemsBanner": "Bættu nú vörum við flokkana þína — ýttu á græna hnappinn inni í hverjum flokki."
     },
     "onboarding": {
       "nameTitle": "Hvað heitir staðurinn þinn?",
       "nameSubtitle": "Þú getur breytt því seinna",
       "namePlaceholder": "t.d. Pizzeria Mario",
-      "typeTitle": "Hvers konar stað rekur þú?",
-      "typeSubtitle": "Við útbúum matseðil fyrir þig",
-      "types": {
-        "restaurant": "Veitingahús",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Hamborgarastaður",
-        "cafe": "Kaffihús",
-        "bar": "Bar",
-        "bakery": "Bakarí",
-        "hotel": "Hótel",
-        "other": "Annað",
-        "scratch": "Frá Grunni"
-      },
-      "error": "Eitthvað fór úrskeiðis",
-      "or": "eða",
-      "startFromScratch": "Byrja frá grunni"
+      "error": "Eitthvað fór úrskeiðis"
     },
     "home": {
       "viewMenu": "Skoða matseðilinn",
       "getReady": "Undirbúðu matseðilinn",
       "checklistName": "Nefndu staðinn þinn",
-      "checklistTemplate": "Veldu sniðmát",
-      "checklistMenu": "Breyttu matseðlinum",
       "checklistMenuFill": "Fylltu út matseðilinn þinn",
       "checklistContacts": "Bættu við tengiliðum",
       "checklistBrand": "Sérsníðið vörumerkið",

@@ -7,7 +7,6 @@ export default async function Page() {
 
   if (!isAuthenticated) redirect("/login");
   if (onboardingStep >= 2) redirect("/dashboard");
-  if (onboardingStep === 1) redirect("/onboarding/type");
 
   return <OnboardingNamePage />;
 }

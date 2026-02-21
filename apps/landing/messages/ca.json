@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Encara no hi ha categories. Creeu la vostra primera categoria per començar.",
+      "noCategories": "Encara no hi ha categories",
       "addCategory": "Afegir categoria",
       "editCategory": "Editar categoria",
       "name": "Nom",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Afegir article",
       "addCategory": "Afegir categoria",
-      "sampleBanner": "Aquests són articles d'exemple — toca qualsevol per editar o eliminar. Afegeix els teus propis plats quan estiguis preparat.",
-      "scratchBanner": "Comença a crear el teu menú afegint categories i articles.",
-      "noItemsBanner": "Genial! Ara afegeix articles a les teves categories."
+      "scratchBanner": "Comença creant categories per al teu menú i després afegeix articles a cadascuna. Per exemple:",
+      "exampleCategories": "Entrants, Plats principals, Postres, Begudes, Amanides",
+      "noItemsBanner": "Ara afegeix articles a les teves categories — toca el botó verd dins de cadascuna."
     },
     "onboarding": {
       "nameTitle": "Com es diu el teu local?",
       "nameSubtitle": "Pots canviar-ho més tard",
       "namePlaceholder": "p. ex. Pizzeria Mario",
-      "typeTitle": "Quin tipus de local tens?",
-      "typeSubtitle": "Prepararem un menú per a tu",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Hamburgueseria",
-        "cafe": "Cafeteria",
-        "bar": "Bar",
-        "bakery": "Fleca",
-        "hotel": "Hotel",
-        "other": "Altre",
-        "scratch": "Des de Zero"
-      },
-      "error": "Alguna cosa ha anat malament",
-      "or": "o",
-      "startFromScratch": "Comença des de zero"
+      "error": "Alguna cosa ha anat malament"
     },
     "home": {
       "viewMenu": "Veure el teu menú",
       "getReady": "Prepara el teu menú",
       "checklistName": "Posa nom al local",
-      "checklistTemplate": "Tria una plantilla",
-      "checklistMenu": "Edita el menú",
       "checklistMenuFill": "Omple el teu menú",
       "checklistContacts": "Afegeix contactes",
       "checklistBrand": "Personalitza la marca",

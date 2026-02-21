@@ -1,16 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { UAParser } from "ua-parser-js";
-import { uploadClickConversion } from "@/lib/google-ads";
-
 const BOT_PATTERN = /bot|crawl|spider|scraper|headless|phantom|selenium|puppeteer|lighthouse/i;
 
 // Conversion event → Session flag mapping
 const CONVERSION_FLAGS: Record<string, string> = {
   auth_signup: "wasRegistered",
   clicked_onboarding_continue: "namedRestaurant",
-  clicked_onboarding_type: "selectedType",
-  scanner_conversion: "selectedType",
 };
 
 export async function POST(request: NextRequest) {
@@ -45,10 +41,8 @@ export async function POST(request: NextRequest) {
     // Find-or-create Session
     const existing = await prisma.session.findUnique({
       where: { id: sessionId },
-      select: { id: true, country: true, gclid: true, keyword: true, conversionSent: true },
+      select: { id: true, country: true, gclid: true, keyword: true },
     });
-
-    let sessionGclid = existing?.gclid ?? gclid ?? null;
 
     const isBot = ua ? BOT_PATTERN.test(ua) : false;
 
@@ -92,17 +86,6 @@ export async function POST(request: NextRequest) {
         where: { id: sessionId },
         data: { [flagField]: true },
       });
-    }
-
-    // Auto-send Google Ads conversion when type is selected (or scanner user signs up) and session has gclid
-    if ((event === "clicked_onboarding_type" || event === "scanner_conversion") && sessionGclid && !existing?.conversionSent) {
-      const result = await uploadClickConversion(sessionGclid, new Date().toISOString());
-      if (result.success) {
-        await prisma.session.update({
-          where: { id: sessionId },
-          data: { conversionSent: true },
-        });
-      }
     }
 
     // Create AnalyticsEvent

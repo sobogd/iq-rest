@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Nog geen categorieën. Maak je eerste categorie om te beginnen.",
+      "noCategories": "Nog geen categorieën",
       "addCategory": "Categorie toevoegen",
       "editCategory": "Categorie Bewerken",
       "name": "Naam",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Item toevoegen",
       "addCategory": "Categorie toevoegen",
-      "sampleBanner": "Dit zijn voorbeelditems — tik op een item om te bewerken of te verwijderen. Voeg je eigen gerechten toe wanneer je klaar bent.",
-      "scratchBanner": "Begin je menu op te bouwen door categorieën en items toe te voegen.",
-      "noItemsBanner": "Geweldig! Voeg nu items toe aan je categorieën."
+      "scratchBanner": "Begin met het aanmaken van categorieën voor je menu en voeg daarna items toe aan elke categorie. Bijvoorbeeld:",
+      "exampleCategories": "Voorgerechten, Hoofdgerechten, Desserts, Dranken, Salades",
+      "noItemsBanner": "Voeg nu items toe aan je categorieën — tik op de groene knop in elke categorie."
     },
     "onboarding": {
       "nameTitle": "Hoe heet je zaak?",
       "nameSubtitle": "Je kunt het later wijzigen",
       "namePlaceholder": "bijv. Pizzeria Mario",
-      "typeTitle": "Wat voor soort zaak heb je?",
-      "typeSubtitle": "We maken een menu voor je klaar",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burgerrestaurant",
-        "cafe": "Café",
-        "bar": "Bar",
-        "bakery": "Bakkerij",
-        "hotel": "Hotel",
-        "other": "Anders",
-        "scratch": "Vanaf Nul"
-      },
-      "error": "Er ging iets mis",
-      "or": "of",
-      "startFromScratch": "Helemaal opnieuw beginnen"
+      "error": "Er ging iets mis"
     },
     "home": {
       "viewMenu": "Bekijk je menu",
       "getReady": "Maak je menu klaar",
       "checklistName": "Geef je zaak een naam",
-      "checklistTemplate": "Kies een sjabloon",
-      "checklistMenu": "Bewerk je menu",
       "checklistMenuFill": "Vul je menu in",
       "checklistContacts": "Voeg contacten toe",
       "checklistBrand": "Pas je merk aan",

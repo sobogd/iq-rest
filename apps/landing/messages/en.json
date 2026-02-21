@@ -1372,8 +1372,6 @@
       "viewMenu": "View Your Menu",
       "getReady": "Get your menu ready",
       "checklistName": "Name your place",
-      "checklistTemplate": "Choose menu template",
-      "checklistMenu": "Edit your menu",
       "checklistMenuFill": "Fill in your menu",
       "checklistContacts": "Add your contacts",
       "checklistBrand": "Customize your brand",
@@ -1418,23 +1416,7 @@
       "nameTitle": "What's the name of your place?",
       "nameSubtitle": "You can always change it later",
       "namePlaceholder": "e.g. Mario's Pizzeria",
-      "typeTitle": "What type of place do you run?",
-      "typeSubtitle": "We'll set up a ready-made menu for you",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burger Joint",
-        "cafe": "Cafe",
-        "bar": "Bar",
-        "bakery": "Bakery",
-        "hotel": "Hotel",
-        "other": "Other",
-        "scratch": "From Scratch"
-      },
-      "error": "Something went wrong",
-      "or": "or",
-      "startFromScratch": "Start from scratch"
+      "error": "Something went wrong"
     },
     "analytics": {
       "monthlyUsage": "Monthly Usage",
@@ -1468,7 +1450,7 @@
       }
     },
     "categories": {
-      "noCategories": "No categories yet. Create your first category to get started.",
+      "noCategories": "No categories yet",
       "addCategory": "Add Category",
       "editCategory": "Edit Category",
       "name": "Name",
@@ -1574,9 +1556,9 @@
     "menu": {
       "addItem": "Add Item",
       "addCategory": "Add Category",
-      "sampleBanner": "These are sample items — tap any to edit or delete. Add your own dishes when ready.",
-      "scratchBanner": "Start building your menu by adding categories and items.",
-      "noItemsBanner": "Great! Now add items to your categories."
+      "scratchBanner": "Start by creating categories for your menu, then add items to each one. For example:",
+      "exampleCategories": "Starters, Main Courses, Desserts, Drinks, Salads",
+      "noItemsBanner": "Now add items to your categories — tap the green button inside each one."
     },
     "languages": {
       "translationProgress": "Translation Progress",

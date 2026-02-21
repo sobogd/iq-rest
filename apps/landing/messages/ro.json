@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Încă nu sunt categorii. Creează prima ta categorie pentru a începe.",
+      "noCategories": "Încă nu sunt categorii",
       "addCategory": "Adaugă categorie",
       "editCategory": "Editează categoria",
       "name": "Nume",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Adaugă articol",
       "addCategory": "Adaugă categorie",
-      "sampleBanner": "Acestea sunt articole exemplu — atinge oricare pentru a edita sau șterge. Adaugă propriile tale preparate când ești pregătit.",
-      "scratchBanner": "Începe să-ți construiești meniul adăugând categorii și articole.",
-      "noItemsBanner": "Excelent! Acum adaugă articole în categoriile tale."
+      "scratchBanner": "Începe prin a crea categorii pentru meniul tău, apoi adaugă articole în fiecare. De exemplu:",
+      "exampleCategories": "Aperitive, Feluri principale, Deserturi, Băuturi, Salate",
+      "noItemsBanner": "Acum adaugă articole în categoriile tale — apasă butonul verde din interiorul fiecăreia."
     },
     "onboarding": {
       "nameTitle": "Cum se numește localul tău?",
       "nameSubtitle": "Poți schimba mai târziu",
       "namePlaceholder": "ex. Pizzeria Mario",
-      "typeTitle": "Ce tip de local ai?",
-      "typeSubtitle": "Vom pregăti un meniu pentru tine",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzerie",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burger",
-        "cafe": "Cafenea",
-        "bar": "Bar",
-        "bakery": "Brutărie",
-        "hotel": "Hotel",
-        "other": "Altul",
-        "scratch": "De la Zero"
-      },
-      "error": "Ceva nu a funcționat",
-      "or": "sau",
-      "startFromScratch": "Începe de la zero"
+      "error": "Ceva nu a funcționat"
     },
     "home": {
       "viewMenu": "Vezi meniul tău",
       "getReady": "Pregătește-ți meniul",
       "checklistName": "Denumește localul",
-      "checklistTemplate": "Alege un șablon",
-      "checklistMenu": "Editează meniul",
       "checklistMenuFill": "Completează-ți meniul",
       "checklistContacts": "Adaugă contacte",
       "checklistBrand": "Personalizează brandul",

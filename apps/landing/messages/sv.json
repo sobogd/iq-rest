@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Inga kategorier ännu. Skapa din första kategori för att komma igång.",
+      "noCategories": "Inga kategorier ännu",
       "addCategory": "Lägg till kategori",
       "editCategory": "Redigera kategori",
       "name": "Namn",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Lägg till artikel",
       "addCategory": "Lägg till kategori",
-      "sampleBanner": "Det här är exempelartiklar — tryck på valfri för att redigera eller ta bort. Lägg till dina egna rätter när du är redo.",
-      "scratchBanner": "Börja bygga din meny genom att lägga till kategorier och artiklar.",
-      "noItemsBanner": "Bra! Lägg nu till artiklar i dina kategorier."
+      "scratchBanner": "Börja med att skapa kategorier för din meny och lägg sedan till artiklar i varje kategori. Till exempel:",
+      "exampleCategories": "Förrätter, Huvudrätter, Desserter, Drycker, Sallader",
+      "noItemsBanner": "Lägg nu till artiklar i dina kategorier — tryck på den gröna knappen i varje kategori."
     },
     "onboarding": {
       "nameTitle": "Vad heter ditt ställe?",
       "nameSubtitle": "Du kan ändra det senare",
       "namePlaceholder": "t.ex. Marios Pizzeria",
-      "typeTitle": "Vilken typ av ställe driver du?",
-      "typeSubtitle": "Vi skapar en meny åt dig",
-      "types": {
-        "restaurant": "Restaurang",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burgerställe",
-        "cafe": "Kafé",
-        "bar": "Bar",
-        "bakery": "Bageri",
-        "hotel": "Hotell",
-        "other": "Övrigt",
-        "scratch": "Från Grunden"
-      },
-      "error": "Något gick fel",
-      "or": "eller",
-      "startFromScratch": "Börja från grunden"
+      "error": "Något gick fel"
     },
     "home": {
       "viewMenu": "Visa din meny",
       "getReady": "Förbered din meny",
       "checklistName": "Namnge din restaurang",
-      "checklistTemplate": "Välj en mall",
-      "checklistMenu": "Redigera menyn",
       "checklistMenuFill": "Fyll i din meny",
       "checklistContacts": "Lägg till kontakter",
       "checklistBrand": "Anpassa varumärket",

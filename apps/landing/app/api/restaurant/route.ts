@@ -7,17 +7,6 @@ import { Prisma } from "@prisma/client";
 import { locales, Locale } from "@/i18n/routing";
 import { COUNTRY_CENTERS, getCoordinatesByCountry } from "@/lib/country-centers";
 
-// Locale → phone country code mapping
-const LOCALE_PHONE_CODES: Record<string, string> = {
-  en: "+44", es: "+34", de: "+49", fr: "+33", it: "+39",
-  pt: "+351", nl: "+31", pl: "+48", ru: "+7", uk: "+380",
-  sv: "+46", da: "+45", no: "+47", fi: "+358", cs: "+420",
-  el: "+30", tr: "+90", ro: "+40", hu: "+36", bg: "+359",
-  hr: "+385", sk: "+421", sl: "+386", et: "+372", lv: "+371",
-  lt: "+370", sr: "+381", ca: "+34", ga: "+353", is: "+354",
-  fa: "+98", ar: "+966", ja: "+81", ko: "+82", zh: "+86",
-};
-
 type TranslationData = {
   name?: string;
   description?: string;
@@ -176,10 +165,10 @@ export async function POST(request: NextRequest) {
         },
       });
 
-      // Ensure onboarding step is at least 1 (name done)
+      // Ensure onboarding step is at least 2 (name done, skip type)
       await prisma.company.updateMany({
-        where: { id: companyId, onboardingStep: 0 },
-        data: { onboardingStep: 1 },
+        where: { id: companyId, onboardingStep: { lt: 2 } },
+        data: { onboardingStep: 2 },
       });
 
       // Mark checklist flags (fire-and-forget, no-op if already set)
@@ -228,10 +217,6 @@ export async function POST(request: NextRequest) {
       // Set initial background image for new restaurants
       const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
 
-      // Generate test contact data based on locale
-      const phoneCode = LOCALE_PHONE_CODES[userLocale] || "+1";
-      const testPhone = `${phoneCode} 12345`;
-
       // Get coordinates: prefer country-specific (from geo_country cookie), fallback to locale-based
       const cookieStore = await cookies();
       const geoCountry = cookieStore.get("geo_country")?.value || null;
@@ -249,10 +234,10 @@ export async function POST(request: NextRequest) {
           address: data.address || null,
           x: data.x || center?.lng?.toString() || null,
           y: data.y || center?.lat?.toString() || null,
-          phone: data.phone || testPhone,
-          instagram: data.instagram || "instagram",
-          whatsapp: data.whatsapp || testPhone,
-          languages: data.languages || (userLocale === "en" ? ["en", "es"] : [userLocale, "en"]),
+          phone: data.phone || null,
+          instagram: data.instagram || null,
+          whatsapp: data.whatsapp || null,
+          languages: data.languages || [userLocale],
           defaultLanguage: data.defaultLanguage || userLocale,
           hideTitle: data.hideTitle ?? false,
           // Reservation settings
@@ -262,13 +247,14 @@ export async function POST(request: NextRequest) {
           workingHoursStart: data.workingHoursStart ?? "10:00",
           workingHoursEnd: data.workingHoursEnd ?? "22:00",
           companyId,
+          startedFromScratch: true,
         },
       });
 
-      // Mark onboarding step 1 complete (name done)
+      // Mark onboarding step 2 complete (name done, skip type)
       await prisma.company.update({
         where: { id: companyId },
-        data: { onboardingStep: 1 },
+        data: { onboardingStep: 2 },
       });
 
       return NextResponse.json(restaurant, { status: 201 });

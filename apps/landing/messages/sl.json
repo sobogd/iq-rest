@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Še ni kategorij. Ustvarite svojo prvo kategorijo, da začnete.",
+      "noCategories": "Še ni kategorij",
       "addCategory": "Dodaj kategorijo",
       "editCategory": "Uredi kategorijo",
       "name": "Ime",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Dodaj artikel",
       "addCategory": "Dodaj kategorijo",
-      "sampleBanner": "To so vzorčni artikli — tapnite na kateregakoli za urejanje ali brisanje. Dodajte svoje jedi, ko boste pripravljeni.",
-      "scratchBanner": "Začnite graditi svoj meni z dodajanjem kategorij in izdelkov.",
-      "noItemsBanner": "Odlično! Zdaj dodajte izdelke v svoje kategorije."
+      "scratchBanner": "Začnite z ustvarjanjem kategorij za vaš meni, nato pa dodajte izdelke v vsako od njih. Na primer:",
+      "exampleCategories": "Predjedi, Glavne jedi, Sladice, Pijače, Solate",
+      "noItemsBanner": "Zdaj dodajte izdelke v svoje kategorije — tapnite zeleni gumb znotraj vsake."
     },
     "onboarding": {
       "nameTitle": "Kako se imenuje vaš lokal?",
       "nameSubtitle": "Lahko spremenite pozneje",
       "namePlaceholder": "npr. Pizzerija Mario",
-      "typeTitle": "Kakšen tip lokala vodite?",
-      "typeSubtitle": "Pripravili bomo meni za vas",
-      "types": {
-        "restaurant": "Restavracija",
-        "pizzeria": "Pizzerija",
-        "sushi-bar": "Sushi bar",
-        "burger-joint": "Burger lokal",
-        "cafe": "Kavarna",
-        "bar": "Bar",
-        "bakery": "Pekarna",
-        "hotel": "Hotel",
-        "other": "Drugo",
-        "scratch": "Od Začetka"
-      },
-      "error": "Nekaj je šlo narobe",
-      "or": "ali",
-      "startFromScratch": "Začnite od začetka"
+      "error": "Nekaj je šlo narobe"
     },
     "home": {
       "viewMenu": "Ogled menija",
       "getReady": "Pripravite meni",
       "checklistName": "Poimenujte lokal",
-      "checklistTemplate": "Izberite predlogo",
-      "checklistMenu": "Uredite meni",
       "checklistMenuFill": "Izpolnite svoj meni",
       "checklistContacts": "Dodajte kontakte",
       "checklistBrand": "Prilagodite blagovno znamko",

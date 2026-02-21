@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Još nema kategorija. Kreirajte svoju prvu kategoriju da biste započeli.",
+      "noCategories": "Још нема категорија",
       "addCategory": "Додај категорију",
       "editCategory": "Izmeni kategoriju",
       "name": "Ime",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Додај ставку",
       "addCategory": "Додај категорију",
-      "sampleBanner": "Ово су примери ставки — додирните било коју за уређивање или брисање. Додајте сопствена јела када будете спремни.",
-      "scratchBanner": "Почните да правите свој мени додавањем категорија и ставки.",
-      "noItemsBanner": "Одлично! Сада додајте ставке у своје категорије."
+      "scratchBanner": "Почните тако што ћете направити категорије за свој мени, а затим додајте ставке у сваку од њих. На пример:",
+      "exampleCategories": "Предјела, Главна јела, Десерти, Пића, Салате",
+      "noItemsBanner": "Сада додајте ставке у своје категорије — додирните зелено дугме унутар сваке."
     },
     "onboarding": {
       "nameTitle": "Како се зове ваш локал?",
       "nameSubtitle": "Можете то променити касније",
       "namePlaceholder": "нпр. Пицерија Марио",
-      "typeTitle": "Какву врсту локала водите?",
-      "typeSubtitle": "Припремићемо мени за вас",
-      "types": {
-        "restaurant": "Ресторан",
-        "pizzeria": "Пицерија",
-        "sushi-bar": "Суши бар",
-        "burger-joint": "Бургер ресторан",
-        "cafe": "Кафић",
-        "bar": "Бар",
-        "bakery": "Пекара",
-        "hotel": "Хотел",
-        "other": "Остало",
-        "scratch": "Од Нуле"
-      },
-      "error": "Нешто није у реду",
-      "or": "или",
-      "startFromScratch": "Почните од нуле"
+      "error": "Нешто није у реду"
     },
     "home": {
       "viewMenu": "Погледајте мени",
       "getReady": "Припремите мени",
       "checklistName": "Именујте локал",
-      "checklistTemplate": "Изаберите шаблон",
-      "checklistMenu": "Уредите мени",
       "checklistMenuFill": "Попуните свој мени",
       "checklistContacts": "Додајте контакте",
       "checklistBrand": "Прилагодите бренд",

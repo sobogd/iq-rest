@@ -49,11 +49,9 @@ const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ cla
 
 interface ChecklistStatus {
   nameSet: boolean;
-  templateChosen: boolean;
   menuEdited: boolean;
   contactsAdded: boolean;
   brandCustomized: boolean;
-  startedFromScratch: boolean;
   fromScanner: boolean;
 }
 
@@ -78,10 +76,9 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
 
   const allChecklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
     { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
-    { key: "templateChosen", translationKey: "checklistTemplate", path: PAGE_PATHS.menu },
-    { key: "menuEdited", translationKey: checklist.startedFromScratch ? "checklistMenuFill" : "checklistMenu", path: PAGE_PATHS.menu },
-    { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
+    { key: "menuEdited", translationKey: "checklistMenuFill", path: PAGE_PATHS.menu },
     { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
+    { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
   ];
 
   // Scanner restaurants: only show contacts + design (first 3 are already done)
@@ -100,7 +97,6 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
 
   const checklistEventMap: Record<string, DashboardEvent> = {
     nameSet: DashboardEvent.CLICKED_CHECKLIST_NAME,
-    templateChosen: DashboardEvent.CLICKED_CHECKLIST_TEMPLATE,
     menuEdited: DashboardEvent.CLICKED_CHECKLIST_MENU,
     contactsAdded: DashboardEvent.CLICKED_CHECKLIST_CONTACTS,
     brandCustomized: DashboardEvent.CLICKED_CHECKLIST_BRAND,

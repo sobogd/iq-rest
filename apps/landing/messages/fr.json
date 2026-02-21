@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Pas encore de catégories. Créez votre première catégorie pour commencer.",
+      "noCategories": "Pas encore de catégories",
       "addCategory": "Ajouter une catégorie",
       "editCategory": "Modifier la Catégorie",
       "name": "Nom",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Ajouter un article",
       "addCategory": "Ajouter une catégorie",
-      "sampleBanner": "Ce sont des articles d'exemple — appuyez sur l'un d'eux pour le modifier ou le supprimer. Ajoutez vos propres plats quand vous êtes prêt.",
-      "scratchBanner": "Commencez à créer votre menu en ajoutant des catégories et des articles.",
-      "noItemsBanner": "Super ! Ajoutez maintenant des articles à vos catégories."
+      "scratchBanner": "Commencez par créer des catégories pour votre menu, puis ajoutez des articles à chacune. Par exemple :",
+      "exampleCategories": "Entrées, Plats principaux, Desserts, Boissons, Salades",
+      "noItemsBanner": "Ajoutez maintenant des articles à vos catégories — appuyez sur le bouton vert dans chacune."
     },
     "onboarding": {
       "nameTitle": "Comment s'appelle votre établissement ?",
       "nameSubtitle": "Vous pourrez le modifier plus tard",
       "namePlaceholder": "ex. Pizzeria Mario",
-      "typeTitle": "Quel type d'établissement avez-vous ?",
-      "typeSubtitle": "Nous préparerons un menu pour vous",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burger",
-        "cafe": "Café",
-        "bar": "Bar",
-        "bakery": "Boulangerie",
-        "hotel": "Hôtel",
-        "other": "Autre",
-        "scratch": "De Zéro"
-      },
-      "error": "Une erreur est survenue",
-      "or": "ou",
-      "startFromScratch": "Commencer de zéro"
+      "error": "Une erreur est survenue"
     },
     "home": {
       "viewMenu": "Voir votre menu",
       "getReady": "Préparez votre menu",
       "checklistName": "Nommez votre établissement",
-      "checklistTemplate": "Choisissez un modèle",
-      "checklistMenu": "Modifiez votre menu",
       "checklistMenuFill": "Remplissez votre menu",
       "checklistContacts": "Ajoutez vos contacts",
       "checklistBrand": "Personnalisez votre marque",

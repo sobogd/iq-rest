@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Ingen kategorier endnu. Opret din første kategori for at komme i gang.",
+      "noCategories": "Ingen kategorier endnu",
       "addCategory": "Tilføj kategori",
       "editCategory": "Rediger kategori",
       "name": "Navn",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Tilføj vare",
       "addCategory": "Tilføj kategori",
-      "sampleBanner": "Dette er eksempelvarer — tryk på en for at redigere eller slette. Tilføj dine egne retter, når du er klar.",
-      "scratchBanner": "Begynd at opbygge din menu ved at tilføje kategorier og varer.",
-      "noItemsBanner": "Godt! Tilføj nu varer til dine kategorier."
+      "scratchBanner": "Begynd med at oprette kategorier til din menu og tilføj derefter varer til hver enkelt. For eksempel:",
+      "exampleCategories": "Forretter, Hovedretter, Desserter, Drikkevarer, Salater",
+      "noItemsBanner": "Tilføj nu varer til dine kategorier — tryk på den grønne knap i hver kategori."
     },
     "onboarding": {
       "nameTitle": "Hvad hedder dit sted?",
       "nameSubtitle": "Du kan altid ændre det senere",
       "namePlaceholder": "f.eks. Marios Pizzeria",
-      "typeTitle": "Hvilken type sted driver du?",
-      "typeSubtitle": "Vi opretter en menu til dig",
-      "types": {
-        "restaurant": "Restaurant",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burgerbar",
-        "cafe": "Café",
-        "bar": "Bar",
-        "bakery": "Bageri",
-        "hotel": "Hotel",
-        "other": "Andet",
-        "scratch": "Fra Bunden"
-      },
-      "error": "Noget gik galt",
-      "or": "eller",
-      "startFromScratch": "Start fra bunden"
+      "error": "Noget gik galt"
     },
     "home": {
       "viewMenu": "Se din menu",
       "getReady": "Forbered din menu",
       "checklistName": "Navngiv dit sted",
-      "checklistTemplate": "Vælg en skabelon",
-      "checklistMenu": "Rediger menuen",
       "checklistMenuFill": "Udfyld din menu",
       "checklistContacts": "Tilføj kontakter",
       "checklistBrand": "Tilpas dit brand",

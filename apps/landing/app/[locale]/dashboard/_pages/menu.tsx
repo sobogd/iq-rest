@@ -30,10 +30,9 @@ interface MenuPageProps {
   initialCategories: Category[];
   initialCurrency: string;
   checklistMenuEdited: boolean;
-  startedFromScratch: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, checklistMenuEdited, startedFromScratch }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, checklistMenuEdited }: MenuPageProps) {
   useBackIntercept("/dashboard");
   const { translations } = useDashboard();
   const router = useRouter();
@@ -48,8 +47,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
   const hasNoItems = initialItems.length === 0;
-  const [showBanner, setShowBanner] = useState(hasNoItems || !checklistMenuEdited);
-  const isSampleMenu = !checklistMenuEdited;
+  const [showBanner, setShowBanner] = useState(hasNoItems && !checklistMenuEdited);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_MENU);
@@ -241,7 +239,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
             <div className="flex items-start gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
               <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
               <p className="text-sm text-blue-700 dark:text-blue-300 flex-1">
-                {tMenu.scratchBanner}
+                {tMenu.scratchBanner} {tMenu.exampleCategories}.
               </p>
             </div>
             <div className="flex items-center justify-center flex-1">
@@ -265,7 +263,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
                   <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
                   <p className="text-sm text-blue-700 dark:text-blue-300 flex-1">
-                    {items.length === 0 ? tMenu.noItemsBanner : tMenu.sampleBanner}
+                    {tMenu.noItemsBanner}
                   </p>
                   <button
                     onClick={() => setShowBanner(false)}
@@ -335,7 +333,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, che
                             }`}
                           >
                             <div className="flex items-center gap-3 flex-1 min-w-0">
-                              {!sortMode && !isSampleMenu && (
+                              {!sortMode && (
                                 <div onClick={(e) => e.stopPropagation()} className="flex items-center">
                                   <Switch
                                     checked={item.isActive}

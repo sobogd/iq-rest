@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Dar nėra kategorijų. Sukurkite savo pirmąją kategoriją, kad pradėtumėte.",
+      "noCategories": "Dar nėra kategorijų",
       "addCategory": "Pridėti kategoriją",
       "editCategory": "Redaguoti kategoriją",
       "name": "Pavadinimas",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Pridėti prekę",
       "addCategory": "Pridėti kategoriją",
-      "sampleBanner": "Tai pavyzdiniai elementai — bakstelėkite bet kurį, norėdami redaguoti arba ištrinti. Pridėkite savo patiekalus, kai būsite pasiruošę.",
-      "scratchBanner": "Pradėkite kurti meniu pridėdami kategorijas ir elementus.",
-      "noItemsBanner": "Puiku! Dabar pridėkite elementus į savo kategorijas."
+      "scratchBanner": "Pradėkite kurdami kategorijas savo meniu, tada pridėkite elementus į kiekvieną iš jų. Pavyzdžiui:",
+      "exampleCategories": "Užkandžiai, Pagrindiniai patiekalai, Desertai, Gėrimai, Salotos",
+      "noItemsBanner": "Dabar pridėkite elementus į savo kategorijas — bakstelėkite žalią mygtuką kiekvienoje."
     },
     "onboarding": {
       "nameTitle": "Koks jūsų vietos pavadinimas?",
       "nameSubtitle": "Galėsite pakeisti vėliau",
       "namePlaceholder": "pvz. Mario Picerija",
-      "typeTitle": "Kokio tipo vietą valdote?",
-      "typeSubtitle": "Paruošime jums meniu",
-      "types": {
-        "restaurant": "Restoranas",
-        "pizzeria": "Picerija",
-        "sushi-bar": "Sushi baras",
-        "burger-joint": "Burgerių baras",
-        "cafe": "Kavinė",
-        "bar": "Baras",
-        "bakery": "Kepykla",
-        "hotel": "Viešbutis",
-        "other": "Kita",
-        "scratch": "Nuo Nulio"
-      },
-      "error": "Kažkas nutiko",
-      "or": "arba",
-      "startFromScratch": "Pradėti nuo nulio"
+      "error": "Kažkas nutiko"
     },
     "home": {
       "viewMenu": "Peržiūrėti meniu",
       "getReady": "Paruoškite meniu",
       "checklistName": "Pavadinkite savo vietą",
-      "checklistTemplate": "Pasirinkite šabloną",
-      "checklistMenu": "Redaguokite meniu",
       "checklistMenuFill": "Užpildykite savo meniu",
       "checklistContacts": "Pridėkite kontaktus",
       "checklistBrand": "Pritaikykite prekės ženklą",

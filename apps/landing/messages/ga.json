@@ -1486,7 +1486,7 @@
       }
     },
     "categories": {
-      "noCategories": "Níl aon chatagóirí ann fós. Cruthaigh do chatagóir chéad chun tús a chur.",
+      "noCategories": "Níl aon chatagóirí ann fós",
       "addCategory": "Cuir catagóir leis",
       "editCategory": "Cuir in eagar Catagóir",
       "name": "Ainm",
@@ -1684,38 +1684,20 @@
     "menu": {
       "addItem": "Cuir mír leis",
       "addCategory": "Cuir catagóir leis",
-      "sampleBanner": "Is míreanna samplacha iad seo — tapáil aon cheann chun eagarthóireacht nó scriosadh. Cuir do chuid miasa féin nuair a bheidh tú réidh.",
-      "scratchBanner": "Tosaigh ag tógáil do bhiachlár trí chatagóirí agus míreanna a chur leis.",
-      "noItemsBanner": "Iontach! Cuir míreanna le do chuid catagóirí anois."
+      "scratchBanner": "Tosaigh trí chatagóirí a chruthú do do bhiachlár, ansin cuir míreanna le gach ceann. Mar shampla:",
+      "exampleCategories": "Tosaithe, Príomhchúrsaí, Milseoga, Deochanna, Sailéid",
+      "noItemsBanner": "Anois cuir míreanna le do chuid catagóirí — tapáil an cnaipe glas taobh istigh de gach ceann."
     },
     "onboarding": {
       "nameTitle": "Cad is ainm do d'áit?",
       "nameSubtitle": "Is féidir leat é a athrú níos déanaí",
       "namePlaceholder": "m.sh. Pizzeria Mario",
-      "typeTitle": "Cén cineál áite a bhfuil agat?",
-      "typeSubtitle": "Ullmhóimid biachlár duit",
-      "types": {
-        "restaurant": "Bialann",
-        "pizzeria": "Pizzeria",
-        "sushi-bar": "Sushi Bar",
-        "burger-joint": "Burgair",
-        "cafe": "Caife",
-        "bar": "Bár",
-        "bakery": "Bácús",
-        "hotel": "Óstán",
-        "other": "Eile",
-        "scratch": "Ón Tús"
-      },
-      "error": "Chuaigh rud éigin mícheart",
-      "or": "nó",
-      "startFromScratch": "Tosaigh ón tús"
+      "error": "Chuaigh rud éigin mícheart"
     },
     "home": {
       "viewMenu": "Féach ar do bhiachlár",
       "getReady": "Ullmhaigh do bhiachlár",
       "checklistName": "Ainmnigh d'áit",
-      "checklistTemplate": "Roghnaigh teimpléad",
-      "checklistMenu": "Cuir an biachlár in eagar",
       "checklistMenuFill": "Líon isteach do bhiachlár",
       "checklistContacts": "Cuir teagmhálacha leis",
       "checklistBrand": "Saincheap do bhranda",

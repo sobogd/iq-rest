@@ -1519,7 +1519,7 @@
       }
     },
     "categories": {
-      "noCategories": "还没有类别。创建您的第一个类别开始。",
+      "noCategories": "还没有分类",
       "addCategory": "添加分类",
       "editCategory": "编辑类别",
       "name": "名称",
@@ -1717,38 +1717,20 @@
     "menu": {
       "addItem": "添加商品",
       "addCategory": "添加分类",
-      "sampleBanner": "这些是示例菜品——点击任意一项进行编辑或删除。准备好后添加您自己的菜品。",
-      "scratchBanner": "通过添加分类和菜品来开始创建你的菜单。",
-      "noItemsBanner": "很好！现在给分类添加菜品吧。"
+      "scratchBanner": "先为菜单创建分类，然后在每个分类中添加菜品。例如：",
+      "exampleCategories": "开胃菜, 主菜, 甜点, 饮品, 沙拉",
+      "noItemsBanner": "现在为分类添加菜品吧——点击每个分类中的绿色按钮。"
     },
     "onboarding": {
       "nameTitle": "您的店铺叫什么名字？",
       "nameSubtitle": "您可以稍后更改",
       "namePlaceholder": "例如：马里奥披萨店",
-      "typeTitle": "您经营什么类型的店铺？",
-      "typeSubtitle": "我们将为您准备一份菜单",
-      "types": {
-        "restaurant": "餐厅",
-        "pizzeria": "披萨店",
-        "sushi-bar": "寿司吧",
-        "burger-joint": "汉堡店",
-        "cafe": "咖啡馆",
-        "bar": "酒吧",
-        "bakery": "面包店",
-        "hotel": "酒店",
-        "other": "其他",
-        "scratch": "从零开始"
-      },
-      "error": "出了点问题",
-      "or": "或",
-      "startFromScratch": "从零开始"
+      "error": "出了点问题"
     },
     "home": {
       "viewMenu": "查看菜单",
       "getReady": "准备您的菜单",
       "checklistName": "为您的店铺命名",
-      "checklistTemplate": "选择模板",
-      "checklistMenu": "编辑菜单",
       "checklistMenuFill": "填写你的菜单",
       "checklistContacts": "添加联系方式",
       "checklistBrand": "自定义品牌",

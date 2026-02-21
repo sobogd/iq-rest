@@ -43,7 +43,7 @@ export function OnboardingNamePage() {
       });
 
       if (response.ok) {
-        window.location.href = `/${locale}/onboarding/type`;
+        window.location.href = `/${locale}/dashboard`;
       } else {
         const data = await response.json();
         setErrorMessage(data.error || t("error"));

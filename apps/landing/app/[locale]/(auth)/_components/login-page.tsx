@@ -56,10 +56,8 @@ export function LoginPage() {
 
           // Redirect based on onboarding step
           const step = data.onboardingStep ?? 0;
-          if (step === 0) {
+          if (step < 2) {
             window.location.href = `/${locale}/onboarding/name`;
-          } else if (step === 1) {
-            window.location.href = `/${locale}/onboarding/type`;
           } else {
             window.location.href = `/${locale}/dashboard`;
           }
