@@ -13,7 +13,7 @@ export default async function Page() {
     checkIsAdmin(),
     getChecklistStatus(companyId),
     getScanUsage(companyId),
-    prisma.item.count({ where: { companyId }, take: 1 }),
+    prisma.item.count({ where: { companyId } }),
   ]);
 
   return <DashboardHome slug={restaurant?.slug ?? null} isAdmin={isAdmin} checklist={checklist} scanUsage={scanUsage} hasItems={itemsCount > 0} />;
