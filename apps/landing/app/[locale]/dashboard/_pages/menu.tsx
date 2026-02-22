@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { useBackIntercept } from "../_hooks/use-back-intercept";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, ArrowLeft, Loader2, Check, X, Info, ChevronRight } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, ArrowLeft, Loader2, Check, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
@@ -45,7 +45,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
   const [currency] = useState(initialCurrency);
   const [sortMode, setSortMode] = useState(false);
   const [moving, setMoving] = useState<{ id: string; direction: "up" | "down" } | null>(null);
-  const [showBanner, setShowBanner] = useState(initialItems.length === 0);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_MENU);
@@ -233,44 +232,22 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg mx-auto h-full">
         {categories.length === 0 ? (
-          <div className="flex flex-col h-full">
-            <div className="flex items-start gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
-              <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
-              <p className="text-sm text-blue-700 dark:text-blue-300 flex-1">
-                {tMenu.scratchBanner} {tMenu.exampleCategories}.
-              </p>
+          <div className="flex items-center justify-center h-full">
+            <div className="flex flex-col items-center text-center rounded-2xl border border-border bg-muted/50 px-6 py-6 max-w-sm w-full">
+              <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
+              <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
+              <Button
+                className="w-full"
+                onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
+              >
+                <Plus className="h-4 w-4" />
+                {tMenu.addCategory}
+              </Button>
             </div>
-            <div className="flex items-center justify-center flex-1">
-              <p className="text-sm text-muted-foreground text-center">
-                {tCategories.noCategories}
-              </p>
-            </div>
-            <Button
-              variant="destructive"
-              onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-              className="w-full h-12 rounded-2xl shadow-md shrink-0"
-            >
-              <Plus className="h-4 w-4" />
-              {tMenu.addCategory}
-            </Button>
           </div>
         ) : (
           <div className="flex flex-col min-h-full">
             <div className="pb-4 flex flex-col gap-4 flex-1">
-              {showBanner && (
-                <div className="flex items-start gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
-                  <Info className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
-                  <p className="text-sm text-blue-700 dark:text-blue-300 flex-1">
-                    {tMenu.noItemsBanner}
-                  </p>
-                  <button
-                    onClick={() => setShowBanner(false)}
-                    className="shrink-0 text-blue-400 hover:text-blue-600 dark:hover:text-blue-200 transition-colors"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                </div>
-              )}
               {sortedCategories.map((category, catIndex) => {
                 const categoryItems = items
                   .filter((i) => i.categoryId === category.id)

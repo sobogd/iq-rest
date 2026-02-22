@@ -25,7 +25,20 @@ export function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+
+    const trimmed = email.trim();
+    if (!trimmed) {
+      setErrorMessage(t("errors.emailRequired"));
+      setStatus("error");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmed)) {
+      setErrorMessage(t("errors.emailInvalid"));
+      setStatus("error");
+      return;
+    }
 
     setStatus("loading");
     setErrorMessage("");

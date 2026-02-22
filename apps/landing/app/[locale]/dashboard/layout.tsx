@@ -122,9 +122,8 @@ export default async function DashboardLayout({
     menu: {
       addItem: t("menu.addItem"),
       addCategory: t("menu.addCategory"),
-      scratchBanner: t("menu.scratchBanner"),
-      exampleCategories: t("menu.exampleCategories"),
-      noItemsBanner: t("menu.noItemsBanner"),
+      emptyTitle: t("menu.emptyTitle"),
+      emptySubtitle: t("menu.emptySubtitle"),
     },
     categories: {
       noCategories: t("categories.noCategories"),

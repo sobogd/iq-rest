@@ -36,8 +36,7 @@ export default async function LocaleLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>

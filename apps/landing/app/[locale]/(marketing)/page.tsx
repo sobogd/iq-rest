@@ -168,7 +168,7 @@ export default async function HomePage({
         </section>
       ) : (
         <section className="flex flex-col relative">
-          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pt-10 pb-2 lg:pt-16 lg:pb-8">
+          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pt-10 pb-10 lg:pt-16 lg:pb-16">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 lg:gap-12 items-center w-full">
               {/* Left side - Text content */}
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
@@ -229,7 +229,7 @@ export default async function HomePage({
       )}
 
       {/* AI Menu Scanner */}
-      {!isLoggedIn && <MenuScanner />}
+      {/* {!isLoggedIn && <MenuScanner />} */}
 
       {/* Features Preview Section */}
       <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
