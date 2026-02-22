@@ -67,22 +67,36 @@ export async function POST(request: NextRequest) {
         },
       });
     } else {
-      // Create new session with all fields
-      await prisma.session.create({
-        data: {
-          id: sessionId,
-          country,
-          city,
-          landingPage,
-          gclid: gclid || null,
-          keyword: keyword || null,
-          userAgent: ua,
-          browser,
-          device,
-          ip,
-          isBot,
-        },
-      });
+      // Create new session — use try/catch to handle race condition
+      // where another request creates the same session between findUnique and create
+      try {
+        await prisma.session.create({
+          data: {
+            id: sessionId,
+            country,
+            city,
+            landingPage,
+            gclid: gclid || null,
+            keyword: keyword || null,
+            userAgent: ua,
+            browser,
+            device,
+            ip,
+            isBot,
+          },
+        });
+      } catch (e: unknown) {
+        // P2002 = unique constraint violation — session was created by concurrent request
+        if (e && typeof e === "object" && "code" in e && e.code === "P2002") {
+          // Session exists now, just update it
+          await prisma.session.update({
+            where: { id: sessionId },
+            data: { userAgent: ua, browser, device, ip, isBot },
+          });
+        } else {
+          throw e;
+        }
+      }
     }
 
     // Check conversion flags

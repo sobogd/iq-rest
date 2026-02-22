@@ -93,6 +93,52 @@
     "readyTitle": "Ready to Get Started?",
     "readyDescription": "Create your professional QR menu and restaurant website in minutes. All features included.",
     "keyBenefits": "Key Benefits",
+    "seo": {
+      "instant-setup": {
+        "title": "Instant QR Menu & Website Setup — IQ Rest",
+        "description": "Create your restaurant website and QR menu with just an email. Ready in 5 minutes, no technical skills needed."
+      },
+      "mobile-management": {
+        "title": "Mobile-Friendly Restaurant Management — IQ Rest",
+        "description": "Manage your restaurant menu, photos, and website directly from your phone. No app needed."
+      },
+      "ai-translation": {
+        "title": "AI-Powered Menu Translation — IQ Rest",
+        "description": "Translate your restaurant menu instantly with AI that understands culinary context. 25+ languages supported."
+      },
+      "multilingual": {
+        "title": "Multilingual Restaurant Website — IQ Rest",
+        "description": "Serve international customers with your menu in 25+ languages. One-tap language switching."
+      },
+      "ai-images": {
+        "title": "AI Image Optimization for Menus — IQ Rest",
+        "description": "Automatic image enhancement for your restaurant menu. Fast loading, stunning quality on any device."
+      },
+      "easy-menu": {
+        "title": "Simple Restaurant Menu Editor — IQ Rest",
+        "description": "Add categories, dishes, and photos with drag-and-drop simplicity. Changes appear instantly."
+      },
+      "analytics": {
+        "title": "Restaurant Analytics & Insights — IQ Rest",
+        "description": "Track daily page views, language preferences, and customer behavior. Make data-driven decisions."
+      },
+      "reservations": {
+        "title": "Online Table Reservations — IQ Rest",
+        "description": "Accept table bookings 24/7 directly from your restaurant website. Automatic or manual confirmation."
+      },
+      "custom-design": {
+        "title": "Video & Photo Backgrounds — IQ Rest",
+        "description": "Create stunning first impressions with custom video or photo backgrounds on your restaurant website."
+      },
+      "color-scheme": {
+        "title": "Custom Color Scheme — IQ Rest",
+        "description": "Match your restaurant brand with custom accent colors. Automatic light and dark theme support."
+      },
+      "personal-support": {
+        "title": "Personal Support — IQ Rest",
+        "description": "Get help from real people, not chatbots. Quick response times for all plans including free."
+      }
+    },
     "faqTitle": "Frequently Asked Questions",
     "faq": {
       "instant-setup": [
@@ -547,6 +593,10 @@
     }
   },
   "contacts": {
+    "meta": {
+      "title": "Contact Us — IQ Rest Support",
+      "description": "Get in touch with IQ Rest. Personal support from real people for your restaurant QR menu and website questions."
+    },
     "title": "Need help? Let's chat",
     "subtitle": "Hi, I'm Bogdan — founder of IQ Rest. I built this platform for my own cafe and now it helps hundreds of restaurants worldwide. Have a question or idea? Write to me directly. No bots, no waiting — just a real conversation.",
     "story": {
@@ -1813,6 +1863,10 @@
     "saveError": "Failed to save settings"
   },
   "terms": {
+    "meta": {
+      "title": "Terms and Conditions — IQ Rest",
+      "description": "Read the terms and conditions for using IQ Rest QR menu and restaurant website platform."
+    },
     "title": "Terms and Conditions",
     "lastUpdated": "Last updated: December 17, 2025",
     "contact": {
@@ -1933,6 +1987,10 @@
     ]
   },
   "privacy": {
+    "meta": {
+      "title": "Privacy Policy — IQ Rest",
+      "description": "Learn how IQ Rest collects, uses, and protects your personal data. Our privacy policy for restaurant QR menu platform."
+    },
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: December 17, 2025",
     "contact": {
@@ -2045,6 +2103,10 @@
     ]
   },
   "cookies": {
+    "meta": {
+      "title": "Cookies Policy — IQ Rest",
+      "description": "Learn about how IQ Rest uses cookies on our restaurant QR menu platform."
+    },
     "title": "Cookies Policy",
     "lastUpdated": "Last updated: December 17, 2025",
     "yes": "Yes",
