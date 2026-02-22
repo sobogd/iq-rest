@@ -65,9 +65,10 @@ interface DashboardHomeProps {
   isAdmin: boolean;
   checklist: ChecklistStatus;
   scanUsage: ScanUsage | null;
+  hasItems: boolean;
 }
 
-export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: DashboardHomeProps) {
+export function DashboardHome({ slug, isAdmin, checklist, scanUsage, hasItems }: DashboardHomeProps) {
   const tPages = useTranslations("dashboard.pages");
   const tDashboard = useTranslations("dashboard");
   const tHome = useTranslations("dashboard.home");
@@ -132,7 +133,7 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage }: Dashboard
       </header>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="w-full max-w-lg mx-auto flex flex-col gap-4">
-            {slug && (
+            {slug && hasItems && (
               <MenuPreviewModal menuUrl={`/m/${slug}`}>
                 <Button variant="destructive" className="w-full h-12 rounded-2xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
                   <Eye className="h-4 w-4" />
