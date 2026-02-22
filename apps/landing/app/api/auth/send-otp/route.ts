@@ -139,7 +139,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const normalizedEmail = email.toLowerCase();
+    const normalizedEmail = email.trim().toLowerCase();
 
     // Generate 4-digit OTP code
     const otpCode = Math.floor(1000 + Math.random() * 9000).toString();

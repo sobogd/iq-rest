@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const normalizedEmail = email.toLowerCase();
+    const normalizedEmail = email.trim().toLowerCase();
 
     // Find user with OTP
     const user = await prisma.user.findUnique({

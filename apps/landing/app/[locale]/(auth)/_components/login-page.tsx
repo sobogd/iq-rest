@@ -47,7 +47,7 @@ export function LoginPage() {
       const response = await fetch("/api/auth/send-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, locale }),
+        body: JSON.stringify({ email: trimmed, locale }),
       });
 
       const data = await response.json();
@@ -77,7 +77,7 @@ export function LoginPage() {
           return;
         }
 
-        window.location.href = `/${locale}/otp?email=${encodeURIComponent(email)}`;
+        window.location.href = `/${locale}/otp?email=${encodeURIComponent(trimmed)}`;
       } else {
         track(DashboardEvent.ERROR_OTP_SEND);
         setErrorMessage(data.error || t("errors.sendFailed"));
