@@ -5,9 +5,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
-import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 
-export function OnboardingNamePage() {
+export function OnboardingNamePage({ userId }: { userId: string }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
   const tAuth = useTranslations("dashboard.auth");
@@ -17,9 +18,11 @@ export function OnboardingNamePage() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    setDashboardUserId(userId);
+    analytics.linkSession(userId);
     track(DashboardEvent.SHOWED_ONBOARDING_NAME);
     inputRef.current?.focus();
-  }, []);
+  }, [userId]);
 
   function getCurrencyFromCookie(): string {
     const match = document.cookie.match(/(?:^|; )currency=([^;]*)/);

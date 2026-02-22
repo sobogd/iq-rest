@@ -8,12 +8,13 @@ export async function getOnboardingState() {
 
   const isAuthenticated = !!(session?.value && userEmail?.value);
   if (!isAuthenticated) {
-    return { isAuthenticated: false, onboardingStep: 0 };
+    return { isAuthenticated: false, onboardingStep: 0, userId: null };
   }
 
   const user = await prisma.user.findUnique({
     where: { email: userEmail!.value },
-    include: {
+    select: {
+      id: true,
       companies: {
         include: { company: { select: { onboardingStep: true } } },
         take: 1,
@@ -23,5 +24,5 @@ export async function getOnboardingState() {
 
   const onboardingStep = user?.companies[0]?.company.onboardingStep ?? 0;
 
-  return { isAuthenticated: true, onboardingStep };
+  return { isAuthenticated: true, onboardingStep, userId: user?.id ?? null };
 }

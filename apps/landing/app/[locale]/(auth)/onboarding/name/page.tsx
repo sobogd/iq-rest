@@ -3,10 +3,10 @@ import { getOnboardingState } from "../../_lib/auth-check";
 import { OnboardingNamePage } from "../../_components/onboarding-name-page";
 
 export default async function Page() {
-  const { isAuthenticated, onboardingStep } = await getOnboardingState();
+  const { isAuthenticated, onboardingStep, userId } = await getOnboardingState();
 
   if (!isAuthenticated) redirect("/login");
   if (onboardingStep >= 2) redirect("/dashboard");
 
-  return <OnboardingNamePage />;
+  return <OnboardingNamePage userId={userId!} />;
 }

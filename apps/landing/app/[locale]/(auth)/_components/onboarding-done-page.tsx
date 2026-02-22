@@ -3,21 +3,26 @@
 import { useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Plus, Check } from "lucide-react";
-import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 
 export function OnboardingDonePage({
   restaurantName,
   categoryId,
+  userId,
 }: {
   restaurantName: string;
   categoryId?: string;
+  userId: string;
 }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
 
   useEffect(() => {
+    setDashboardUserId(userId);
+    analytics.linkSession(userId);
     track(DashboardEvent.SHOWED_ONBOARDING_DONE);
-  }, []);
+  }, [userId]);
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center px-4 py-6 md:p-10">

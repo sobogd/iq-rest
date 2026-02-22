@@ -80,6 +80,13 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
     basic: { monthly: 349, yearly: 249, yearlyTotal: 2988 },
     pro: { monthly: 990, yearly: 690, yearlyTotal: 8280 },
   },
+
+  // Турция
+  TRY: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 349, yearly: 249, yearlyTotal: 2988 },
+    pro: { monthly: 999, yearly: 669, yearlyTotal: 8028 },
+  },
 };
 
 export type PlanId = "free" | "basic" | "pro";

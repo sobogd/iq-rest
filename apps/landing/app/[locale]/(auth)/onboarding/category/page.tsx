@@ -9,7 +9,7 @@ export default async function Page({
 }: {
   searchParams: Promise<{ from?: string }>;
 }) {
-  const { isAuthenticated, onboardingStep } = await getOnboardingState();
+  const { isAuthenticated, onboardingStep, userId } = await getOnboardingState();
 
   if (!isAuthenticated) redirect("/login");
   if (onboardingStep < 2) redirect("/onboarding/name");
@@ -37,5 +37,5 @@ export default async function Page({
   const params = await searchParams;
   const fromDone = params.from === "done";
 
-  return <OnboardingCategoryPage restaurantName={restaurantName} fromDone={fromDone} />;
+  return <OnboardingCategoryPage restaurantName={restaurantName} fromDone={fromDone} userId={userId!} />;
 }

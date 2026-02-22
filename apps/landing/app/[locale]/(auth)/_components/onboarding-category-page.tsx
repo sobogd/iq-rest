@@ -5,14 +5,17 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, ArrowLeft } from "lucide-react";
-import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 
 export function OnboardingCategoryPage({
   restaurantName,
   fromDone,
+  userId,
 }: {
   restaurantName: string;
   fromDone?: boolean;
+  userId: string;
 }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
@@ -23,9 +26,11 @@ export function OnboardingCategoryPage({
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    setDashboardUserId(userId);
+    analytics.linkSession(userId);
     track(DashboardEvent.SHOWED_ONBOARDING_CATEGORY);
     inputRef.current?.focus();
-  }, []);
+  }, [userId]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

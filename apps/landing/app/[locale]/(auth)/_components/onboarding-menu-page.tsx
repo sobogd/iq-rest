@@ -3,15 +3,18 @@
 import { useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Camera, Wand2, LayoutTemplate, Pencil } from "lucide-react";
-import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 
-export function OnboardingMenuPage({ restaurantName }: { restaurantName: string }) {
+export function OnboardingMenuPage({ restaurantName, userId }: { restaurantName: string; userId: string }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
 
   useEffect(() => {
+    setDashboardUserId(userId);
+    analytics.linkSession(userId);
     track(DashboardEvent.SHOWED_ONBOARDING_MENU);
-  }, []);
+  }, [userId]);
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center px-4 py-6 md:p-10">

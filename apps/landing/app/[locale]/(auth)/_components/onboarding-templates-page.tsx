@@ -4,7 +4,8 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { UtensilsCrossed, Coffee, Beer, AlertCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 
 type TemplateId = "restaurant" | "cafe" | "bar";
 type PageState = "idle" | "applying" | "error";
@@ -35,7 +36,7 @@ const TEMPLATES: TemplateShape = {
   },
 };
 
-export function OnboardingTemplatesPage({ restaurantName }: { restaurantName: string }) {
+export function OnboardingTemplatesPage({ restaurantName, userId }: { restaurantName: string; userId: string }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
 
@@ -46,8 +47,10 @@ export function OnboardingTemplatesPage({ restaurantName }: { restaurantName: st
   const errorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    setDashboardUserId(userId);
+    analytics.linkSession(userId);
     track(DashboardEvent.SHOWED_ONBOARDING_TEMPLATES);
-  }, []);
+  }, [userId]);
 
   // Animated progress bar
   useEffect(() => {

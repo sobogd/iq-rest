@@ -5,7 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { Camera, Plus, Loader2, AlertCircle, X, FileText, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 
 const MAX_SIZE = 20 * 1024 * 1024;
 const MAX_FILES = 5;
@@ -44,7 +45,7 @@ interface PoolPhoto {
   preview: string;
 }
 
-export function OnboardingScanPage({ restaurantName }: { restaurantName: string }) {
+export function OnboardingScanPage({ restaurantName, userId }: { restaurantName: string; userId: string }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
   const tMenu = useTranslations("dashboard.menu");
@@ -59,8 +60,10 @@ export function OnboardingScanPage({ restaurantName }: { restaurantName: string 
   const errorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    setDashboardUserId(userId);
+    analytics.linkSession(userId);
     track(DashboardEvent.SHOWED_ONBOARDING_SCAN);
-  }, []);
+  }, [userId]);
 
   // Cleanup object URLs on unmount
   useEffect(() => {

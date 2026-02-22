@@ -11,6 +11,7 @@ export const supportedCurrencies = [
   "CLP", // Чили (zero-decimal!)
   "PEN", // Перу
   "UYU", // Уругвай
+  "TRY", // Турция
 ] as const;
 
 export type SupportedCurrency = (typeof supportedCurrencies)[number];
@@ -31,6 +32,9 @@ export const countryToCurrency: Record<string, SupportedCurrency> = {
   CL: "CLP", // Чили
   PE: "PEN", // Перу
   UY: "UYU", // Уругвай
+
+  // Турция
+  TR: "TRY",
 
   // Еврозона → EUR
   ES: "EUR", // Испания
@@ -73,6 +77,7 @@ export const currencyInfo: Record<SupportedCurrency, {
   CLP: { symbol: "$", name: "Chilean Peso", symbolPosition: "before", zeroDecimal: true },
   PEN: { symbol: "S/", name: "Peruvian Sol", symbolPosition: "before", zeroDecimal: false },
   UYU: { symbol: "$", name: "Uruguayan Peso", symbolPosition: "before", zeroDecimal: false },
+  TRY: { symbol: "₺", name: "Turkish Lira", symbolPosition: "after", zeroDecimal: false },
 };
 
 /**

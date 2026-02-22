@@ -5,7 +5,7 @@ import { getOnboardingState } from "../../_lib/auth-check";
 import { OnboardingScanPage } from "../../_components/onboarding-scan-page";
 
 export default async function Page() {
-  const { isAuthenticated, onboardingStep } = await getOnboardingState();
+  const { isAuthenticated, onboardingStep, userId } = await getOnboardingState();
 
   if (!isAuthenticated) redirect("/login");
   if (onboardingStep < 2) redirect("/onboarding/name");
@@ -30,5 +30,5 @@ export default async function Page() {
     restaurantName = user?.companies[0]?.company.restaurants[0]?.title || "";
   }
 
-  return <OnboardingScanPage restaurantName={restaurantName} />;
+  return <OnboardingScanPage restaurantName={restaurantName} userId={userId!} />;
 }
