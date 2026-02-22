@@ -20,6 +20,21 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
+  // Disable nginx response buffering (fixes 502 on SSR pages)
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Accel-Buffering",
+            value: "no",
+          },
+        ],
+      },
+    ];
+  },
+
 };
 
 export default withNextIntl(nextConfig);
