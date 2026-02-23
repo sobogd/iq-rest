@@ -21,7 +21,7 @@
       "description": "Sadece e-postanızla QR menü ve restoran web sitesi oluşturun. Anında kurulum, mobil yönetim, AI çeviriler, günlük analizler. Restoranlar ve kafeler için mükemmel. Bugün ücretsiz başlayın."
     },
     "hero": {
-      "title": "Profesyonel Bir QR Menu & Web Sitesi Dakikalar İçinde Oluşturun",
+      "title": "Profesyonel Bir QR Menü & Web Sitesi Dakikalar İçinde Oluşturun",
       "subtitle": "Sadece e-posta adresinizi girin ve QR menü, iletişim sayfası, çok dilli destek ve modern tasarıma sahip tam bir restoran web sitesi edinin. Her şeyi telefonunuzdan ayarlayın.",
       "cta": {
         "create": "Menü Oluştur",
@@ -74,7 +74,7 @@
     }
   },
   "menuScanner": {
-    "badge": "AI-Powered",
+    "badge": "Yapay Zeka Destekli",
     "title": "Zaten kağıt menünüz var mı?",
     "subtitle": "Bir fotoğraf yükleyin — AI tüm yemekleri, fiyatları çıkaracak ve saniyeler içinde kullanıma hazır dijital bir menü oluşturacak.",
     "uploadButton": "Menü Fotoğrafları Yükle",
@@ -100,48 +100,48 @@
     "keyBenefits": "Ana Faydalar",
     "seo": {
       "instant-setup": {
-        "title": "Instant QR Menu & Restaurant Website Setup | Create in 5 Minutes - IQ Rest",
-        "description": "Create your restaurant website and QR menu with just an email. Ready in 5 minutes, no technical skills needed. Instant setup for restaurants and cafes."
+        "title": "Anında QR Menü ve Restoran Web Sitesi Kurulumu | 5 Dakikada Oluşturun - IQ Rest",
+        "description": "Sadece bir e-posta ile restoran web sitenizi ve QR menünüzü oluşturun. 5 dakikada hazır, teknik bilgi gerektirmez. Restoranlar ve kafeler için anında kurulum."
       },
       "mobile-management": {
-        "title": "Mobile Restaurant Menu Management | Manage QR Menu from Phone - IQ Rest",
-        "description": "Manage your entire restaurant menu from your smartphone. Add dishes, update prices, upload photos - all from your mobile device. 100% mobile-friendly dashboard."
+        "title": "Mobil Restoran Menü Yönetimi | Telefondan QR Menü Yönetimi - IQ Rest",
+        "description": "Tüm restoran menünüzü akıllı telefonunuzdan yönetin. Yemek ekleyin, fiyatları güncelleyin, fotoğraf yükleyin - hepsi mobil cihazınızdan. %100 mobil uyumlu kontrol paneli."
       },
       "ai-translation": {
-        "title": "AI Menu Translation for Restaurants | Multilingual QR Menu - IQ Rest",
-        "description": "Translate your restaurant menu into 10+ languages with AI. Context-aware translation that understands food and culinary terms. Serve international customers."
+        "title": "Restoranlar İçin Yapay Zeka Menü Çevirisi | Çok Dilli QR Menü - IQ Rest",
+        "description": "Restoran menünüzü yapay zeka ile 10+ dile çevirin. Yemek ve mutfak terimlerini anlayan bağlam odaklı çeviri. Uluslararası müşterilere hizmet verin."
       },
       "multilingual": {
-        "title": "Multilingual Restaurant Website | Multi-Language QR Menu - IQ Rest",
-        "description": "Create a multilingual website for your restaurant. Customers can switch languages with one tap. Perfect for tourist areas and international cities."
+        "title": "Çok Dilli Restoran Web Sitesi | Çok Dilli QR Menü - IQ Rest",
+        "description": "Restoranınız için çok dilli bir web sitesi oluşturun. Müşteriler tek dokunuşla dil değiştirebilir. Turistik bölgeler ve uluslararası şehirler için mükemmel."
       },
       "ai-images": {
-        "title": "AI Image Optimization for Restaurant Menu | Fast Loading Photos - IQ Rest",
-        "description": "Automatic image optimization for your restaurant menu. AI enhances and compresses photos for fast loading while maintaining quality. Beautiful dish photos."
+        "title": "Restoran Menüsü İçin Yapay Zeka Görsel Optimizasyonu | Hızlı Yüklenen Fotoğraflar - IQ Rest",
+        "description": "Restoran menünüz için otomatik görsel optimizasyonu. Yapay zeka, kaliteyi korurken fotoğrafları hızlı yükleme için geliştirir ve sıkıştırır. Güzel yemek fotoğrafları."
       },
       "easy-menu": {
-        "title": "Easy Restaurant Menu Management | Drag & Drop Menu Editor - IQ Rest",
-        "description": "Easily manage your restaurant menu with intuitive drag-and-drop. Add categories, create dishes, set prices - changes appear instantly on your QR menu."
+        "title": "Kolay Restoran Menü Yönetimi | Sürükle Bırak Menü Editörü - IQ Rest",
+        "description": "Sezgisel sürükle-bırak ile restoran menünüzü kolayca yönetin. Kategoriler ekleyin, yemekler oluşturun, fiyatları belirleyin - değişiklikler QR menünüzde anında görünür."
       },
       "analytics": {
-        "title": "Restaurant Menu Analytics | QR Menu Statistics & Insights - IQ Rest",
-        "description": "Track your restaurant menu performance with detailed analytics. Daily views, language preferences, popular pages - make data-driven decisions."
+        "title": "Restoran Menü Analitiği | QR Menü İstatistikleri ve İçgörüler - IQ Rest",
+        "description": "Detaylı analizlerle restoran menünüzün performansını takip edin. Günlük görüntülemeler, dil tercihleri, popüler sayfalar - veri odaklı kararlar alın."
       },
       "reservations": {
-        "title": "Online Table Reservations for Restaurants | Booking System - IQ Rest",
-        "description": "Accept online table bookings directly from your restaurant website. Automatic or manual confirmation, email notifications, table management."
+        "title": "Restoranlar İçin Çevrimiçi Masa Rezervasyonu | Rezervasyon Sistemi - IQ Rest",
+        "description": "Restoran web sitenizden doğrudan çevrimiçi masa rezervasyonu kabul edin. Otomatik veya manuel onay, e-posta bildirimleri, masa yönetimi."
       },
       "custom-design": {
-        "title": "Video & Photo Backgrounds for Restaurant Website - IQ Rest",
-        "description": "Create stunning first impressions with video or photo backgrounds on your restaurant website. Upload ambiance videos or beautiful food photography."
+        "title": "Restoran Web Sitesi İçin Video ve Fotoğraf Arka Planları - IQ Rest",
+        "description": "Restoran web sitenizde video veya fotoğraf arka planlarıyla etkileyici ilk izlenimler yaratın. Ambiyans videoları veya güzel yemek fotoğrafları yükleyin."
       },
       "color-scheme": {
-        "title": "Custom Color Scheme for Restaurant Website | Brand Colors - IQ Rest",
-        "description": "Match your restaurant brand with custom color schemes. Choose accent colors, automatic light/dark theme support. Professional branded menu."
+        "title": "Restoran Web Sitesi İçin Özel Renk Şeması | Marka Renkleri - IQ Rest",
+        "description": "Özel renk şemalarıyla restoran markanızı eşleştirin. Vurgu renkleri seçin, otomatik açık/koyu tema desteği. Profesyonel markalı menü."
       },
       "personal-support": {
-        "title": "Personal Support for Restaurant QR Menu | Real Human Help - IQ Rest",
-        "description": "Get individual online support for your restaurant. Real people, not chatbots, help you with setup, optimization, and any questions."
+        "title": "Restoran QR Menüsü İçin Kişisel Destek | Gerçek İnsan Yardımı - IQ Rest",
+        "description": "Restoranınız için bireysel çevrimiçi destek alın. Chatbot değil gerçek insanlar, kurulum, optimizasyon ve tüm sorularınızda yardımcı olur."
       }
     },
     "faqTitle": "Sıkça Sorulan Sorular",
@@ -334,7 +334,7 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restoran menüsü yönetimi akıllı telefonda",
-        "cta": "See how"
+        "cta": "Nasıl çalışır"
       },
       {
         "id": "ai-translation",
@@ -351,7 +351,7 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Yapay zeka destekli restoran menüsü çeviri arayüzü",
-        "cta": "one-click AI"
+        "cta": "Tek tıkla yapay zeka"
       },
       {
         "id": "multilingual",
@@ -368,7 +368,7 @@
         ],
         "image": "/images/features/multilingual.jpg",
         "imageAlt": "Çok dilli restoran web sitesi dil seçici",
-        "cta": "25+ languages"
+        "cta": "25+ dil"
       },
       {
         "id": "ai-images",
@@ -402,7 +402,7 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Kolay restoran menüsü yönetim paneli",
-        "cta": "Manage your menu"
+        "cta": "Menünüzü yönetin"
       },
       {
         "id": "analytics",
@@ -425,7 +425,7 @@
         "id": "reservations",
         "title": "Masa Rezervasyon Sistemi",
         "shortDescription": "7/24 rezervasyon kabul edin.{br}{link}Rezervasyonlar{/link} doğrudan web sitenizden.",
-        "description": "Yerleşik rezervasyon sistemi, müşterilerin doğrudan web sitenizden masa ayırtmalarını sağlar. Mevcutlığa göre otomatik onay seçin veya her rezervasyonu manuel olarak gözden geçirin. Tüm rezervasyonları kontrol panelinizden yönetin.",
+        "description": "Yerleşik rezervasyon sistemi, müşterilerin doğrudan web sitenizden masa ayırtmalarını sağlar. Müsaitliğe göre otomatik onay seçin veya her rezervasyonu manuel olarak gözden geçirin. Tüm rezervasyonları kontrol panelinizden yönetin.",
         "fullDescription": "Telefonla rezervasyon almak zaman alıcıdır ve kolayca gözden kaçabilir. IQ Rest'in rezervasyon sistemi 7/24 çalışır. Müşteriler tarih, saat ve grup büyüklüğünü seçer ve anında rezervasyon yaparlar. Masa mevcutlığına göre otomatik onay ayarlayabilir veya her talebi manuel olarak gözden geçirebilirsiniz. E-posta onayları ile no-show'ları azaltın.",
         "benefits": [
           "7/24 çevrimiçi rezervasyon imkanı",
@@ -453,7 +453,7 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Video arka planına sahip restoran web sitesi",
-        "cta": "video or photo backgrounds"
+        "cta": "Video veya fotoğraf arka planları"
       },
       {
         "id": "color-scheme",
@@ -565,8 +565,8 @@
       "background": "Arka plan resmi & video",
       "support": "Destek",
       "reservations": "Rezervasyonlar",
-      "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain",
+      "multiRestaurant": "Birden fazla restoran",
+      "customDomain": "Özel alan adı",
       "noBranding": "IQ Rest markası olmadan"
     },
     "values": {
@@ -1007,123 +1007,123 @@
         }
       },
       "ai-menu-scanner-create-digital-qr-menu": {
-        "title": "AI Menu Scanner: Create Digital QR Menu from a Photo",
-        "description": "Upload a photo of your paper menu and AI creates a complete digital QR menu for your restaurant instantly. Extract dishes, generate backgrounds, and go live in minutes.",
+        "title": "Yapay Zeka Menü Tarayıcı: Fotoğraftan Dijital QR Menü Oluşturun",
+        "description": "Kağıt menünüzün fotoğrafını yükleyin, yapay zeka restoranınız için anında eksiksiz bir dijital QR menü oluştursun. Yemekleri çıkarın, arka planlar oluşturun ve dakikalar içinde yayına geçin.",
         "meta": {
-          "title": "AI Menu Scanner - Create Digital QR Menu from Photo | IQ Rest",
-          "description": "Upload a photo of your paper menu and AI instantly creates a digital QR menu for your restaurant. Automatic dish extraction, AI background generation, and instant preview. The fastest way to create a QR menu."
+          "title": "Yapay Zeka Menü Tarayıcı - Fotoğraftan Dijital QR Menü Oluşturun | IQ Rest",
+          "description": "Kağıt menünüzün fotoğrafını yükleyin, yapay zeka restoranınız için anında dijital QR menü oluştursun. Otomatik yemek çıkarma, yapay zeka arka plan oluşturma ve anında önizleme. QR menü oluşturmanın en hızlı yolu."
         },
         "content": {
-          "intro": "IQ Rest introduces the AI Menu Scanner — the fastest way to create a digital QR menu for your restaurant. Simply take a photo of your existing paper menu, and our AI technology extracts all dishes with names, descriptions, and prices. It even generates a professional background image for your restaurant website. What used to take hours of manual data entry now takes just minutes.",
-          "image1Alt": "AI menu scanner creating digital QR menu from photo",
-          "image1Caption": "Upload a photo of your paper menu and AI creates a complete digital QR menu",
-          "section1Title": "How the AI Menu Scanner Creates Your Digital QR Menu",
-          "section1Text": "The process is simple: open IQ Rest, tap the scanner on the homepage, and take a photo of your paper menu. Our AI analyzes the image, recognizes dish names, descriptions, and prices, and automatically creates categories with all items. The scanner supports menus in any language and handles various formats — from simple printed menus to handwritten chalkboards. Within minutes, your complete digital QR menu is ready to customize and publish.",
-          "section2Title": "AI-Generated Backgrounds for Your Restaurant Website",
-          "section2Text": "Along with extracting menu items, the AI Scanner generates a professional background image for your restaurant website. Based on your restaurant type and cuisine, it creates a visually appealing hero image that sets the right atmosphere. Combined with AI image optimization that automatically enhances and compresses dish photos, your digital QR menu looks professional from day one — no graphic designer needed.",
-          "section3Title": "From Paper Menu to Digital QR Menu in Minutes",
-          "section3Text": "The AI Menu Scanner transforms the onboarding experience for new restaurants. Instead of manually typing every dish, simply photograph your existing menu. The scanner handles the tedious data entry while you focus on customizing colors, adding translations, and sharing your QR code. We also send helpful reminder emails to guide you through the process, ensuring every restaurant gets the most out of their digital QR menu.",
-          "benefitsTitle": "Benefits of AI Menu Scanner for Restaurants",
-          "benefit1": "Photograph any paper menu — AI extracts all dishes, prices, and descriptions automatically",
-          "benefit2": "AI generates professional background images for your restaurant website",
-          "benefit3": "Supports menus in any language with automatic recognition",
-          "benefit4": "Complete digital QR menu ready in minutes instead of hours",
-          "benefit5": "Free AI translation trials included — translate your menu into 10+ languages",
-          "benefit6": "Smart onboarding flow guides you from photo to published QR menu",
-          "conclusionTitle": "Create Your Digital QR Menu from a Photo Today",
-          "conclusionText": "Stop typing your menu by hand. With IQ Rest's AI Menu Scanner, creating a digital QR menu for your restaurant has never been easier. Take a photo, let AI do the work, customize your design, and share your QR code with customers. Join hundreds of restaurants that have already gone digital with IQ Rest.",
-          "ctaText": "Ready to create your digital QR menu from a photo?",
-          "ctaButton": "Try AI Scanner Free"
+          "intro": "IQ Rest, restoranınız için dijital QR menü oluşturmanın en hızlı yolu olan Yapay Zeka Menü Tarayıcıyı sunar. Mevcut kağıt menünüzün bir fotoğrafını çekmeniz yeterli, yapay zeka teknolojimiz tüm yemekleri isimler, açıklamalar ve fiyatlarıyla çıkarır. Hatta restoran web siteniz için profesyonel bir arka plan görseli bile oluşturur. Eskiden saatler süren manuel veri girişi artık yalnızca birkaç dakika alır.",
+          "image1Alt": "Fotoğraftan dijital QR menü oluşturan yapay zeka menü tarayıcı",
+          "image1Caption": "Kağıt menünüzün fotoğrafını yükleyin, yapay zeka eksiksiz bir dijital QR menü oluştursun",
+          "section1Title": "Yapay Zeka Menü Tarayıcı Dijital QR Menünüzü Nasıl Oluşturur",
+          "section1Text": "Süreç basittir: IQ Rest'i açın, ana sayfadaki tarayıcıya dokunun ve kağıt menünüzün fotoğrafını çekin. Yapay zekamız görüntüyü analiz eder, yemek isimlerini, açıklamaları ve fiyatları tanır ve tüm öğelerle otomatik olarak kategoriler oluşturur. Tarayıcı, herhangi bir dildeki menüleri destekler ve basit basılı menülerden el yazısı tahtalarına kadar çeşitli formatları işler. Birkaç dakika içinde, tam dijital QR menünüz özelleştirmeye ve yayınlamaya hazırdır.",
+          "section2Title": "Restoran Web Siteniz İçin Yapay Zeka ile Oluşturulan Arka Planlar",
+          "section2Text": "Menü öğelerini çıkarmanın yanı sıra, Yapay Zeka Tarayıcı restoran web siteniz için profesyonel bir arka plan görseli oluşturur. Restoran türünüze ve mutfağınıza göre, doğru atmosferi yakalayan görsel açıdan çekici bir ana görsel oluşturur. Yemek fotoğraflarını otomatik olarak geliştiren ve sıkıştıran yapay zeka görsel optimizasyonuyla birleştiğinde, dijital QR menünüz ilk günden profesyonel görünür — grafik tasarımcıya gerek yok.",
+          "section3Title": "Kağıt Menüden Dijital QR Menüye Dakikalar İçinde",
+          "section3Text": "Yapay Zeka Menü Tarayıcı, yeni restoranlar için karşılama deneyimini dönüştürür. Her yemeği manuel olarak yazmak yerine, mevcut menünüzü fotoğraflamanız yeterli. Tarayıcı, sıkıcı veri girişini hallederken siz renkleri özelleştirmeye, çeviriler eklemeye ve QR kodunuzu paylaşmaya odaklanırsınız. Ayrıca süreç boyunca size rehberlik etmek için faydalı hatırlatma e-postaları göndeririz, böylece her restoran dijital QR menüsünden en iyi şekilde yararlanır.",
+          "benefitsTitle": "Restoranlar İçin Yapay Zeka Menü Tarayıcının Faydaları",
+          "benefit1": "Herhangi bir kağıt menüyü fotoğraflayın — yapay zeka tüm yemekleri, fiyatları ve açıklamaları otomatik olarak çıkarır",
+          "benefit2": "Yapay zeka restoran web siteniz için profesyonel arka plan görselleri oluşturur",
+          "benefit3": "Otomatik tanıma ile herhangi bir dildeki menüleri destekler",
+          "benefit4": "Eksiksiz dijital QR menü saatler yerine dakikalar içinde hazır",
+          "benefit5": "Ücretsiz yapay zeka çeviri denemeleri dahil — menünüzü 10+ dile çevirin",
+          "benefit6": "Akıllı karşılama akışı sizi fotoğraftan yayınlanmış QR menüye yönlendirir",
+          "conclusionTitle": "Bugün Bir Fotoğraftan Dijital QR Menünüzü Oluşturun",
+          "conclusionText": "Menünüzü elle yazmayı bırakın. IQ Rest'in Yapay Zeka Menü Tarayıcısı ile restoranınız için dijital QR menü oluşturmak hiç bu kadar kolay olmamıştı. Bir fotoğraf çekin, yapay zekanın işini yapmasına izin verin, tasarımınızı özelleştirin ve QR kodunuzu müşterilerinizle paylaşın. IQ Rest ile dijitale geçen yüzlerce restorana katılın.",
+          "ctaText": "Bir fotoğraftan dijital QR menünüzü oluşturmaya hazır mısınız?",
+          "ctaButton": "Yapay Zeka Tarayıcıyı Ücretsiz Deneyin"
         }
       },
       "redesigned-dashboard-qr-menu-management": {
-        "title": "Redesigned Dashboard for Restaurant QR Menu Management",
-        "description": "A completely rebuilt dashboard with faster page loads, server-side rendering, and modern navigation. Manage your restaurant's digital QR menu more efficiently than ever.",
+        "title": "Restoran QR Menü Yönetimi İçin Yeniden Tasarlanan Kontrol Paneli",
+        "description": "Daha hızlı sayfa yüklemeleri, sunucu tarafı oluşturma ve modern navigasyon ile tamamen yeniden inşa edilmiş kontrol paneli. Restoranınızın dijital QR menüsünü her zamankinden daha verimli yönetin.",
         "meta": {
-          "title": "New Dashboard for Restaurant QR Menu Management | IQ Rest",
-          "description": "Completely redesigned restaurant dashboard with server-side rendering, instant page loads, and modern navigation. Manage your digital QR menu faster with the new IQ Rest control panel."
+          "title": "Restoran QR Menü Yönetimi İçin Yeni Kontrol Paneli | IQ Rest",
+          "description": "Sunucu tarafı oluşturma, anlık sayfa yüklemeleri ve modern navigasyon ile tamamen yeniden tasarlanan restoran kontrol paneli. Yeni IQ Rest kontrol paneli ile dijital QR menünüzü daha hızlı yönetin."
         },
         "content": {
-          "intro": "IQ Rest has completely rebuilt the restaurant dashboard from the ground up. The new dashboard uses server-side rendering with Next.js file-based routing, delivering instant page loads and a smoother experience for managing your digital QR menu. Every page now loads with professional skeleton animations, and your menu data is prefetched on the server — so you see your categories, items, and settings immediately.",
-          "image1Alt": "Redesigned restaurant QR menu dashboard",
-          "image1Caption": "The new IQ Rest dashboard with faster navigation and modern design",
-          "section1Title": "Server-Side Rendering for Instant QR Menu Management",
-          "section1Text": "The previous dashboard loaded everything on the client side, causing delays. The new architecture prefetches your restaurant data on the server before the page even reaches your browser. Categories, menu items, tables, reservations, and analytics all load instantly. Each page has a dedicated loading skeleton so you never see a blank screen. This means managing your digital QR menu feels fast and responsive, even on slower connections.",
-          "section2Title": "Modern Navigation and Unified Design",
-          "section2Text": "The dashboard now features unified page headers with consistent styling across all sections. Sort modes for categories, items, and tables have been redesigned with an intuitive interface. The sidebar navigation is cleaner, with Languages merged into Settings and Design renamed to Appearance. A new checklist banner on the home page shows your setup progress, helping new restaurants complete their digital QR menu configuration quickly.",
-          "section3Title": "Mobile-First QR Menu Management",
-          "section3Text": "Every aspect of the new dashboard is optimized for mobile management. Sticky action buttons stay accessible as you scroll. Headers cast subtle shadows when scrolled to help with orientation. Browser back button navigation works reliably across all pages. Whether you're adding dishes between service or checking analytics on the go, managing your restaurant's digital QR menu from your phone is seamless.",
-          "benefitsTitle": "Benefits of the New Dashboard",
-          "benefit1": "Server-side data prefetching — menu loads instantly without waiting",
-          "benefit2": "Professional loading skeletons on every page for smooth transitions",
-          "benefit3": "Unified page headers and consistent design language throughout",
-          "benefit4": "Improved sort modes for categories, items, and tables",
-          "benefit5": "Checklist banner showing setup progress for new restaurants",
-          "benefit6": "Browser back button works correctly across all dashboard pages",
-          "conclusionTitle": "Experience the New Dashboard",
-          "conclusionText": "The redesigned IQ Rest dashboard makes managing your restaurant's digital QR menu faster and more enjoyable. With server-side rendering, modern navigation, and mobile-first design, you can focus on what matters — creating a great menu for your customers. Log in now and experience the difference.",
-          "ctaText": "Ready to try the new dashboard?",
-          "ctaButton": "Open Dashboard"
+          "intro": "IQ Rest, restoran kontrol panelini sıfırdan tamamen yeniden inşa etti. Yeni kontrol paneli, Next.js dosya tabanlı yönlendirme ile sunucu tarafı oluşturma kullanarak, dijital QR menünüzü yönetmek için anlık sayfa yüklemeleri ve daha akıcı bir deneyim sunar. Her sayfa artık profesyonel iskelet animasyonlarıyla yüklenir ve menü verileriniz sunucuda önceden alınır — böylece kategorilerinizi, öğelerinizi ve ayarlarınızı anında görürsünüz.",
+          "image1Alt": "Yeniden tasarlanan restoran QR menü kontrol paneli",
+          "image1Caption": "Daha hızlı navigasyon ve modern tasarıma sahip yeni IQ Rest kontrol paneli",
+          "section1Title": "Anında QR Menü Yönetimi İçin Sunucu Tarafı Oluşturma",
+          "section1Text": "Önceki kontrol paneli her şeyi istemci tarafında yüklüyordu ve gecikmelere neden oluyordu. Yeni mimari, sayfa tarayıcınıza ulaşmadan önce restoran verilerinizi sunucuda önceden alır. Kategoriler, menü öğeleri, masalar, rezervasyonlar ve analizler anında yüklenir. Her sayfanın özel bir yükleme iskeleti vardır, böylece asla boş bir ekran görmezsiniz. Bu, dijital QR menünüzü yönetmenin, yavaş bağlantılarda bile hızlı ve duyarlı hissetmesini sağlar.",
+          "section2Title": "Modern Navigasyon ve Birleşik Tasarım",
+          "section2Text": "Kontrol paneli artık tüm bölümlerde tutarlı stil ile birleşik sayfa başlıkları sunar. Kategoriler, öğeler ve masalar için sıralama modları sezgisel bir arayüzle yeniden tasarlandı. Kenar çubuğu navigasyonu daha temiz, Diller Ayarlar ile birleştirildi ve Tasarım Görünüm olarak yeniden adlandırıldı. Ana sayfadaki yeni kontrol listesi afişi kurulum ilerlemenizi göstererek yeni restoranların dijital QR menü yapılandırmasını hızla tamamlamasına yardımcı olur.",
+          "section3Title": "Mobil Öncelikli QR Menü Yönetimi",
+          "section3Text": "Yeni kontrol panelinin her yönü mobil yönetim için optimize edilmiştir. Yapışkan eylem düğmeleri, kaydırdıkça erişilebilir kalır. Başlıklar, yön bulmaya yardımcı olmak için kaydırıldığında hafif gölgeler oluşturur. Tarayıcı geri düğmesi navigasyonu tüm sayfalarda güvenilir şekilde çalışır. İster servis arası yemek ekliyor olun, ister hareket halindeyken analizleri kontrol ediyor olun, restoranınızın dijital QR menüsünü telefonunuzdan yönetmek sorunsuzdur.",
+          "benefitsTitle": "Yeni Kontrol Panelinin Faydaları",
+          "benefit1": "Sunucu tarafı veri önceden alma — menü bekleme olmadan anında yüklenir",
+          "benefit2": "Akıcı geçişler için her sayfada profesyonel yükleme iskeletleri",
+          "benefit3": "Tüm bölümlerde birleşik sayfa başlıkları ve tutarlı tasarım dili",
+          "benefit4": "Kategoriler, öğeler ve masalar için geliştirilmiş sıralama modları",
+          "benefit5": "Yeni restoranlar için kurulum ilerlemesini gösteren kontrol listesi afişi",
+          "benefit6": "Tarayıcı geri düğmesi tüm kontrol paneli sayfalarında doğru çalışır",
+          "conclusionTitle": "Yeni Kontrol Panelini Deneyimleyin",
+          "conclusionText": "Yeniden tasarlanan IQ Rest kontrol paneli, restoranınızın dijital QR menüsünü yönetmeyi daha hızlı ve keyifli hale getirir. Sunucu tarafı oluşturma, modern navigasyon ve mobil öncelikli tasarım ile önemli olan şeye odaklanabilirsiniz — müşterileriniz için harika bir menü oluşturmak. Şimdi giriş yapın ve farkı deneyimleyin.",
+          "ctaText": "Yeni kontrol panelini denemeye hazır mısınız?",
+          "ctaButton": "Kontrol Panelini Aç"
         }
       },
       "multi-currency-geo-pricing-qr-menu": {
-        "title": "Multi-Currency Pricing for Restaurant QR Menu Worldwide",
-        "description": "IQ Rest now automatically detects your country and shows pricing in your local currency. Create a digital QR menu for your restaurant with pricing in EUR, USD, GBP, and more.",
+        "title": "Dünya Genelinde Restoran QR Menüsü İçin Çoklu Para Birimi Fiyatlandırması",
+        "description": "IQ Rest artık ülkenizi otomatik olarak algılıyor ve yerel para biriminizde fiyatları gösteriyor. EUR, USD, GBP ve daha fazlasıyla restoranınız için dijital QR menü oluşturun.",
         "meta": {
-          "title": "Multi-Currency Pricing for Restaurant QR Menu Worldwide | IQ Rest",
-          "description": "IQ Rest now supports multi-currency pricing based on your location. Create a digital QR menu with plans priced in EUR, USD, GBP, PLN, and more. Automatic geo-detection for restaurants worldwide."
+          "title": "Dünya Genelinde Restoran QR Menüsü İçin Çoklu Para Birimi Fiyatlandırması | IQ Rest",
+          "description": "IQ Rest artık konumunuza göre çoklu para birimi fiyatlandırmasını destekliyor. EUR, USD, GBP, PLN ve daha fazla para biriminde fiyatlandırılmış planlarla dijital QR menü oluşturun. Dünya genelindeki restoranlar için otomatik coğrafi algılama."
         },
         "content": {
-          "intro": "IQ Rest now supports multi-currency pricing for restaurants worldwide. When you visit the pricing page, your country is automatically detected via Cloudflare geo-location, and prices are displayed in your local currency. Whether you're in Europe, the Americas, or Asia — you'll see plan prices in a currency that makes sense for your business. Creating a digital QR menu for your restaurant is now truly accessible globally.",
-          "image1Alt": "Multi-currency pricing for restaurant QR menu",
-          "image1Caption": "Pricing automatically adapts to your local currency based on geo-detection",
-          "section1Title": "Automatic Country and Currency Detection",
-          "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
-          "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
-          "section3Title": "Seamless Stripe Checkout in Local Currency",
-          "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
-          "benefitsTitle": "Benefits of Multi-Currency Pricing",
-          "benefit1": "Automatic country detection — no manual currency selection needed",
-          "benefit2": "Localized pricing in EUR, USD, GBP, PLN, and more currencies",
-          "benefit3": "Free plan available worldwide — create a QR menu at no cost",
-          "benefit4": "Clean rounded prices optimized for each currency",
-          "benefit5": "Automatic language detection based on your country",
-          "benefit6": "Consistent currency throughout checkout and billing portal",
-          "conclusionTitle": "Create Your Digital QR Menu in Your Currency",
-          "conclusionText": "With multi-currency support, IQ Rest makes creating a digital QR menu accessible to restaurants worldwide. No matter where your restaurant is located, you'll see pricing that feels right for your market. Visit the pricing page now and see plans in your local currency.",
-          "ctaText": "Ready to see pricing in your local currency?",
-          "ctaButton": "View Pricing"
+          "intro": "IQ Rest artık dünya genelindeki restoranlar için çoklu para birimi fiyatlandırmasını destekliyor. Fiyatlandırma sayfasını ziyaret ettiğinizde, ülkeniz Cloudflare coğrafi konum aracılığıyla otomatik olarak algılanır ve fiyatlar yerel para biriminizde görüntülenir. İster Avrupa'da, ister Amerika'da veya Asya'da olun — plan fiyatlarını işletmeniz için anlamlı bir para biriminde göreceksiniz. Restoranınız için dijital QR menü oluşturmak artık gerçekten küresel olarak erişilebilir.",
+          "image1Alt": "Restoran QR menüsü için çoklu para birimi fiyatlandırması",
+          "image1Caption": "Fiyatlandırma, coğrafi algılamaya göre otomatik olarak yerel para biriminize uyum sağlar",
+          "section1Title": "Otomatik Ülke ve Para Birimi Algılama",
+          "section1Text": "IQ Rest'i açtığınızda, Cloudflare'in küresel ağı ülkenizi anında tanımlar. Bu bilgi, bölgeniz için en uygun para birimini seçmek için kullanılır — Avrupa için EUR, Amerika için USD, İngiltere için GBP, Polonya için PLN ve çok daha fazlası. Sistem ayrıca tercih ettiğiniz dili algılar ve sizi sitenin yerelleştirilmiş sürümüne yönlendirir. Manuel para birimi değişikliğine gerek yok — dijital QR menünüzü oluşturmaya odaklanabilmeniz için her şey otomatik olarak uyum sağlar.",
+          "section2Title": "Her Bölge İçin Yerel Fiyatlandırma",
+          "section2Text": "Planlar, bölgeye uygun fiyatlandırma ile her para biriminde rekabetçi olarak fiyatlandırılmıştır. Ücretsiz plan her yerde ücretsiz kalır — ayda 500 taramaya kadar ücretsiz dijital QR menü oluşturun. Temel ve Pro planlar, yerel para biriminizde temiz, yuvarlak fiyatlar gösterir. Yıllık planlar, güzel yuvarlak aylık eşdeğerleriyle önemli tasarruflar sunar. Tüm fiyatlar, para biriminden bağımsız olarak aynı özellikleri içerir — bölgesel özellik kısıtlaması yoktur.",
+          "section3Title": "Yerel Para Biriminde Sorunsuz Stripe Ödeme",
+          "section3Text": "Tüm ödeme akışı yerel para biriminizde çalışır. Fiyatlandırma sayfasından Stripe ödemesine, faturalara ve müşteri portalına kadar — her şey tutarlı fiyatlandırma gösterir. Aylık ve yıllık faturalama arasında geçiş, akıcı bir karusel arayüzüyle fiyatları gerçek zamanlı olarak günceller. Dünya genelindeki restoranlar artık dijital QR menülerini oluşturabilir ve en rahat oldukları para biriminde ödeme yapabilir.",
+          "benefitsTitle": "Çoklu Para Birimi Fiyatlandırmasının Faydaları",
+          "benefit1": "Otomatik ülke algılama — manuel para birimi seçimi gerekmez",
+          "benefit2": "EUR, USD, GBP, PLN ve daha fazla para biriminde yerelleştirilmiş fiyatlandırma",
+          "benefit3": "Dünya genelinde ücretsiz plan mevcut — ücretsiz QR menü oluşturun",
+          "benefit4": "Her para birimi için optimize edilmiş temiz yuvarlak fiyatlar",
+          "benefit5": "Ülkenize göre otomatik dil algılama",
+          "benefit6": "Ödeme ve faturalama portalı boyunca tutarlı para birimi",
+          "conclusionTitle": "Dijital QR Menünüzü Kendi Para Biriminizde Oluşturun",
+          "conclusionText": "Çoklu para birimi desteğiyle IQ Rest, dijital QR menü oluşturmayı dünya genelindeki restoranlar için erişilebilir hale getirir. Restoranınız nerede olursa olsun, pazarınıza uygun fiyatlandırma göreceksiniz. Şimdi fiyatlandırma sayfasını ziyaret edin ve planları yerel para biriminizde görün.",
+          "ctaText": "Yerel para biriminizde fiyatlandırmayı görmeye hazır mısınız?",
+          "ctaButton": "Fiyatlandırmayı Görüntüle"
         }
       },
       "reservation-emails-analytics-digital-qr-menu": {
-        "title": "Reservation Emails and Advanced Analytics for Digital QR Menu",
-        "description": "Table reservation email notifications, welcome emails for new restaurants, device analytics, and scan usage tracking. Your digital QR menu is smarter than ever.",
+        "title": "Dijital QR Menü İçin Rezervasyon E-postaları ve Gelişmiş Analizler",
+        "description": "Masa rezervasyonu e-posta bildirimleri, yeni restoranlar için hoş geldin e-postaları, cihaz analizleri ve tarama kullanım takibi. Dijital QR menünüz her zamankinden daha akıllı.",
         "meta": {
-          "title": "Reservation Emails & Analytics for Digital QR Menu | IQ Rest",
-          "description": "New features for your digital QR menu: table reservation email notifications to guests and owners, welcome emails, device and browser analytics, scan usage tracking, and free AI translation trials."
+          "title": "Dijital QR Menü İçin Rezervasyon E-postaları ve Analizler | IQ Rest",
+          "description": "Dijital QR menünüz için yeni özellikler: misafirlere ve sahiplere masa rezervasyonu e-posta bildirimleri, hoş geldin e-postaları, cihaz ve tarayıcı analizleri, tarama kullanım takibi ve ücretsiz yapay zeka çeviri denemeleri."
         },
         "content": {
-          "intro": "IQ Rest continues to enhance the digital QR menu experience for restaurants with a wave of new features. Table reservations now send email confirmations to both guests and restaurant owners. New restaurants receive welcome emails with onboarding guidance. The analytics dashboard shows device, browser, and OS breakdowns. And scan usage tracking helps you monitor your digital QR menu's reach with clear visual indicators.",
-          "image1Alt": "Reservation email notifications for restaurant digital QR menu",
-          "image1Caption": "Email notifications keep guests and restaurant owners informed about reservations",
-          "section1Title": "Table Reservation Email Notifications",
-          "section1Text": "When a guest books a table through your restaurant's digital QR menu, both the guest and the restaurant owner now receive email notifications. The guest gets a confirmation with date, time, party size, and restaurant details. The owner receives an alert with the booking information so they can prepare. All emails are localized — sent in the language the guest used when making the reservation. This ensures a professional experience from the moment someone interacts with your digital QR menu.",
-          "section2Title": "Welcome Emails and Onboarding Guidance",
-          "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
-          "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
-          "benefitsTitle": "New Features for Your Digital QR Menu",
-          "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
-          "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
-          "benefit3": "Smart reminder emails based on onboarding progress",
-          "benefit4": "Device, browser, and OS analytics for QR menu visitors",
-          "benefit5": "Monthly scan usage indicator with plan limit tracking",
-          "benefit6": "5 free AI translation trials for every restaurant",
-          "conclusionTitle": "A Smarter Digital QR Menu for Your Restaurant",
-          "conclusionText": "These updates make your digital QR menu more professional and insightful than ever. Email notifications keep everyone informed about reservations, analytics help you understand your customers, and usage tracking ensures you're getting the most from your plan. Log in to your dashboard and explore the new features.",
-          "ctaText": "Ready to explore the new features?",
-          "ctaButton": "Open Dashboard"
+          "intro": "IQ Rest, bir dizi yeni özellikle restoranlar için dijital QR menü deneyimini geliştirmeye devam ediyor. Masa rezervasyonları artık hem misafirlere hem de restoran sahiplerine e-posta onayları gönderiyor. Yeni restoranlar, karşılama rehberliği içeren hoş geldin e-postaları alıyor. Analiz kontrol paneli cihaz, tarayıcı ve işletim sistemi dağılımlarını gösteriyor. Tarama kullanım takibi ise dijital QR menünüzün erişimini net görsel göstergelerle izlemenize yardımcı oluyor.",
+          "image1Alt": "Restoran dijital QR menüsü için rezervasyon e-posta bildirimleri",
+          "image1Caption": "E-posta bildirimleri, misafirleri ve restoran sahiplerini rezervasyonlar hakkında bilgilendirir",
+          "section1Title": "Masa Rezervasyonu E-posta Bildirimleri",
+          "section1Text": "Bir misafir restoranınızın dijital QR menüsü üzerinden masa ayırttığında, artık hem misafir hem de restoran sahibi e-posta bildirimi alır. Misafir, tarih, saat, grup büyüklüğü ve restoran detaylarını içeren bir onay alır. Sahip, hazırlık yapabilmesi için rezervasyon bilgileriyle bir uyarı alır. Tüm e-postalar yerelleştirilmiştir — misafirin rezervasyon yaparken kullandığı dilde gönderilir. Bu, birisi dijital QR menünüzle etkileşime girdiği andan itibaren profesyonel bir deneyim sağlar.",
+          "section2Title": "Hoş Geldin E-postaları ve Karşılama Rehberliği",
+          "section2Text": "IQ Rest'e kaydolan yeni restoranlar artık dijital QR menülerini kurmalarında rehberlik eden bir hoş geldin e-postası alıyor. E-posta, kategori ekleme, yemek fotoğrafları yükleme ve QR kodlarını paylaşma hakkında ipuçları içerir. Kurulumu tamamlamamış restoranlar için, karşılama ilerlemelerine göre kişiselleştirilmiş rehberlik içeren akıllı hatırlatma e-postaları gönderilir. Bu e-postalar, zaten menü öğeleriniz, kategorileriniz veya arka plan görselleriniz olup olmadığını tanır ve bir sonraki adımı önerir.",
+          "section3Title": "Cihaz Analizleri ve Tarama Kullanım Takibi",
+          "section3Text": "Analiz kontrol paneli artık dijital QR menü ziyaretçileriniz tarafından kullanılan cihaz türleri, tarayıcılar ve işletim sistemlerinin detaylı dağılımlarını gösteriyor. Müşterilerin QR kodunuzu iPhone veya Android, Chrome veya Safari'de tarayıp taramadığını görün. Kontrol paneli ana sayfasındaki yeni tarama kullanım göstergesi, aylık taramalarınızı plan limitinizle net bir ilerleme çubuğuyla karşılaştırarak gösterir. Ücretsiz plan restoranları ayda 500 tarama alırken, Temel ve Pro planlar sınırsız taramanın keyfini çıkarır.",
+          "benefitsTitle": "Dijital QR Menünüz İçin Yeni Özellikler",
+          "benefit1": "Rezervasyonlar için hem misafirlere hem de restoran sahiplerine e-posta onayları gönderilir",
+          "benefit2": "Hoş geldin e-postaları yeni restoranları dijital QR menü kurulumunda yönlendirir",
+          "benefit3": "Karşılama ilerlemesine dayalı akıllı hatırlatma e-postaları",
+          "benefit4": "QR menü ziyaretçileri için cihaz, tarayıcı ve işletim sistemi analizleri",
+          "benefit5": "Plan limiti takibi ile aylık tarama kullanım göstergesi",
+          "benefit6": "Her restoran için 5 ücretsiz yapay zeka çeviri denemesi",
+          "conclusionTitle": "Restoranınız İçin Daha Akıllı Bir Dijital QR Menü",
+          "conclusionText": "Bu güncellemeler, dijital QR menünüzü her zamankinden daha profesyonel ve içgörüsel hale getirir. E-posta bildirimleri herkesi rezervasyonlar hakkında bilgilendirir, analizler müşterilerinizi anlamanıza yardımcı olur ve kullanım takibi planınızdan en iyi şekilde yararlanmanızı sağlar. Kontrol panelinize giriş yapın ve yeni özellikleri keşfedin.",
+          "ctaText": "Yeni özellikleri keşfetmeye hazır mısınız?",
+          "ctaButton": "Kontrol Panelini Aç"
         }
       }
     }
@@ -1684,27 +1684,27 @@
       "fileTooLarge": "Dosya çok büyük. Maksimum boyut: Videolar için 50MB, Resimler için 5MB",
       "subscribeForAccentColor": "Vurgu rengini özelleştirmek için abone olun",
       "subscribe": "Abone ol",
-      "hideTitleLabel": "Show title on homepage",
-      "hideTitleHint": "When off, only the background image or video is shown",
-      "sectionContent": "Content",
-      "sectionDesign": "Design",
-      "sectionSettings": "Settings",
-      "name": "Title",
-      "namePlaceholder": "Enter restaurant name",
-      "nameHint": "Displayed on the homepage of your public website",
-      "description": "Subtitle",
-      "descriptionPlaceholder": "Brief description (optional)",
-      "descriptionHint": "Displayed below the title on the homepage",
-      "hideTitleOn": "Visible",
-      "hideTitleOff": "Hidden",
-      "slug": "Website Address",
+      "hideTitleLabel": "Ana sayfada başlığı göster",
+      "hideTitleHint": "Kapalıyken yalnızca arka plan resmi veya videosu gösterilir",
+      "sectionContent": "İçerik",
+      "sectionDesign": "Tasarım",
+      "sectionSettings": "Ayarlar",
+      "name": "Başlık",
+      "namePlaceholder": "Restoran adını girin",
+      "nameHint": "Herkese açık web sitenizin ana sayfasında görüntülenir",
+      "description": "Alt başlık",
+      "descriptionPlaceholder": "Kısa açıklama (isteğe bağlı)",
+      "descriptionHint": "Ana sayfada başlığın altında görüntülenir",
+      "hideTitleOn": "Görünür",
+      "hideTitleOff": "Gizli",
+      "slug": "Web Sitesi Adresi",
       "slugPrefix": "iq-rest.com/m/",
-      "slugPlaceholder": "my-restaurant",
-      "currency": "Currency",
-      "currencyPlaceholder": "Select currency",
-      "nameRequired": "Restaurant name is required",
-      "slugRequired": "Website address is required",
-      "validationErrorTitle": "Please fix the following errors",
+      "slugPlaceholder": "benim-restoranim",
+      "currency": "Para Birimi",
+      "currencyPlaceholder": "Para birimi seçin",
+      "nameRequired": "Restoran adı gereklidir",
+      "slugRequired": "Web sitesi adresi gereklidir",
+      "validationErrorTitle": "Lütfen aşağıdaki hataları düzeltin",
       "copyUrl": "URL Kopyala",
       "generateBackground": "Oluştur",
       "generating": "Oluşturuluyor...",
@@ -1737,7 +1737,9 @@
       "scanAddMore": "Daha fazla ekle",
       "scanStart": "Tara",
       "scanPoolTitle": "Menü sayfaları",
-      "scanPoolSubtitle": "Kağıt menünüzün fotoğraflarını veya PDF dosyalarını ekleyin. En fazla 5 dosya."
+      "scanPoolSubtitle": "Kağıt menünüzün fotoğraflarını veya PDF dosyalarını ekleyin. En fazla 5 dosya.",
+      "demoButton": "Örnek menü ile doldur",
+      "demoDescription": "Henüz hazır değil misiniz? Nasıl çalıştığını görmek için örnek bir menü ile deneyin."
     },
     "onboarding": {
       "nameTitle": "Mekanınızın adı nedir?",
@@ -2214,7 +2216,7 @@
     "helpOffer": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya web sitenizin linki — ve sizin için tamamen ücretsiz ayarlayalım.",
     "helpAction": "Bu e-postayı menünüzü ekleyerek yanıtlamanız yeterli.",
     "cta": "Paneli Aç",
-    "signature": "Best regards,<br>IQ Rest Team",
+    "signature": "Saygılarımızla,<br>IQ Rest Ekibi",
     "subjectNotOnboarded": "IQ Rest menünüz sizi bekliyor",
     "bodyNotOnboarded": "IQ Rest'e kaydoldunuz ancak menünüzü henüz oluşturmadınız. 2 dakikadan az sürer — restoran adınızı girin, bir şablon seçin ve özelleştirmeye hazır bir menü elde edin.",
     "helpOfferNotOnboarded": "Zamanınız mı yok? Menünüzü herhangi bir formatta bize gönderin — PDF, fotoğraf veya link — ve sizin için tamamen ücretsiz yapalım.",
@@ -2242,7 +2244,7 @@
     "step3": "Gerçek yemekleriniz ve fiyatlarınızla özelleştirin",
     "outro": "Hepsi bu. QR menünüz yayında ve paylaşıma hazır olacak.",
     "cta": "Başlayın",
-    "signature": "Best regards,<br>IQ Rest Team"
+    "signature": "Saygılarımızla,<br>IQ Rest Ekibi"
   },
   "supportEmail": {
     "subject": "IQ Rest Destek'ten yeni bir mesajınız var",

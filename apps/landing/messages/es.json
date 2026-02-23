@@ -21,13 +21,13 @@
       "description": "Crea un menú QR y sitio web para restaurante solo con tu email. Configuración instantánea, gestión desde el móvil, traducciones IA, analíticas diarias. Perfecto para restaurantes y cafeterías. Empieza gratis hoy."
     },
     "hero": {
-      "title": "Crea un QR Menu Profesional y Sitio Web en Minutos",
+      "title": "Crea un Menú QR Profesional y Sitio Web en Minutos",
       "subtitle": "Solo ingresa tu email y obtén un sitio web completo para tu restaurante con menú QR, página de contactos, soporte multilingüe y diseño moderno. Configura todo desde tu teléfono.",
       "cta": {
         "create": "Crear Menú",
         "view": "Ver Precios",
         "noCreditCard": "Gratis hasta 320 escaneos/mes. No se requiere tarjeta de crédito.",
-        "trusted": "Confiado por más de 500 restaurantes en todo el mundo",
+        "trusted": "Más de 500 restaurantes confían en nosotros en todo el mundo",
         "title": "¿Listo para digitalizarte?",
         "subtitle": "Crea tu menú QR profesional y sitio web de restaurante en minutos. Gratis para siempre, sin necesidad de tarjeta de crédito."
       },
@@ -59,7 +59,7 @@
       }
     },
     "demo": {
-      "title": "Experiméntalo Como Tus Invitados",
+      "title": "Experiméntalo Como Tus Clientes",
       "subtitle": "Toca la pantalla para explorar un menú QR rápido, bonito e interactivo en acción."
     },
     "intro": {
@@ -74,7 +74,7 @@
     }
   },
   "menuScanner": {
-    "badge": "AI-Powered",
+    "badge": "Con IA",
     "title": "¿Ya tienes un menú en papel?",
     "subtitle": "Sube una foto — la IA extraerá todos los platos, precios y creará un menú digital listo para usar en segundos.",
     "uploadButton": "Subir Fotos del Menú",
@@ -293,7 +293,7 @@
         },
         {
           "q": "¿Cuál es el tiempo de respuesta?",
-          "a": "Típicamente respondemos en unas pocas horas durante días hábiles."
+          "a": "Normalmente respondemos en unas pocas horas durante días hábiles."
         },
         {
           "q": "¿El soporte está disponible para planes gratuitos?",
@@ -565,8 +565,8 @@
       "background": "Imagen y video de fondo",
       "support": "Soporte",
       "reservations": "Reservaciones",
-      "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain",
+      "multiRestaurant": "Múltiples restaurantes",
+      "customDomain": "Dominio personalizado",
       "noBranding": "Sin marca IQ Rest"
     },
     "values": {
@@ -585,8 +585,8 @@
       "pro": {
         "scans": "Ilimitados",
         "languages": "Ilimitados",
-        "aiTranslation": "Ilimitado",
-        "aiImages": "Ilimitados"
+        "aiTranslation": "Ilimitadas",
+        "aiImages": "Ilimitadas"
       }
     },
     "socialProof": "Más de 500 restaurantes confían en nosotros",
@@ -1597,7 +1597,7 @@
       "translateError": "Error en la traducción",
       "nameRequired": "El nombre es requerido",
       "categoryRequired": "La categoría es requerida",
-      "priceRequired": "El precio válido es requerido",
+      "priceRequired": "Se requiere un precio válido",
       "enabled": "activado",
       "disabled": "desactivado",
       "created": "Artículo creado",
@@ -1636,8 +1636,8 @@
       "stylize": "Estilizar",
       "changeBackground": "Cambiar fondo",
       "regenerateImage": "Regenerar",
-      "generateLimitReached": "Generaciones AI gratuitas agotadas",
-      "generateLimitDescription": "Has usado las 2 generaciones de imágenes AI gratuitas. Actualiza a Basic o Pro para generaciones ilimitadas."
+      "generateLimitReached": "Generaciones IA gratuitas agotadas",
+      "generateLimitDescription": "Has usado las 2 generaciones de imágenes IA gratuitas. Actualiza a Basic o Pro para generaciones ilimitadas."
     },
     "languages": {
       "translationProgress": "Progreso de traducción",
@@ -1659,7 +1659,7 @@
       "deleteConfirm": "Deshabilitar este idioma eliminará todas sus traducciones. Esta acción no se puede deshacer.",
       "cancel": "Cancelar",
       "confirm": "Deshabilitar",
-      "createRestaurantFirst": "Por favor, complete los datos de su restaurante primero para gestionar los idiomas.",
+      "createRestaurantFirst": "Por favor, completa los datos de tu restaurante primero para gestionar los idiomas.",
       "goToSettings": "Ir a Configuración",
       "limitReached": "Has alcanzado el límite de {limit} idiomas para tu plan.",
       "upgrade": "Mejorar plan",
@@ -1752,7 +1752,9 @@
       "scanAddMore": "Añadir más",
       "scanStart": "Escanear",
       "scanPoolTitle": "Páginas del menú",
-      "scanPoolSubtitle": "Añade fotos o archivos PDF de tu menú en papel. Hasta 5 archivos."
+      "scanPoolSubtitle": "Añade fotos o archivos PDF de tu menú en papel. Hasta 5 archivos.",
+      "demoButton": "Rellenar con menú de ejemplo",
+      "demoDescription": "¿Aún no estás listo? Prueba con un menú de ejemplo para ver cómo funciona."
     },
     "onboarding": {
       "nameTitle": "¿Cómo se llama tu local?",
@@ -1859,7 +1861,7 @@
     "modeManualDescription": "Deberás confirmar manualmente cada reservación",
     "slotDuration": "Duración de Reservación",
     "minutes": "minutos",
-    "workingHours": "Horario de Trabajo",
+    "workingHours": "Horario de Apertura",
     "save": "Guardar",
     "saving": "Guardando...",
     "saved": "Configuración guardada",
@@ -2229,7 +2231,7 @@
     "helpOffer": "¿No tienes tiempo? Simplemente envíanos tu menú en cualquier formato — PDF, foto o enlace a tu sitio web — y lo configuraremos por ti, completamente gratis.",
     "helpAction": "Simplemente responde a este correo con tu menú adjunto.",
     "cta": "Abrir panel de control",
-    "signature": "Best regards,<br>IQ Rest Team",
+    "signature": "Saludos cordiales,<br>Equipo IQ Rest",
     "subjectNotOnboarded": "Tu menú de IQ Rest te está esperando",
     "bodyNotOnboarded": "Te registraste en IQ Rest pero aún no has configurado tu menú. Solo te llevará menos de 2 minutos — ingresa el nombre de tu restaurante, elige una plantilla y tendrás un menú listo para personalizar.",
     "helpOfferNotOnboarded": "¿No tienes tiempo? Simplemente envíanos tu menú en cualquier formato — PDF, foto o enlace — y lo haremos por ti, completamente gratis.",
@@ -2257,7 +2259,7 @@
     "step3": "Personalízalo con tus platos y precios reales",
     "outro": "Eso es todo. Tu menú QR estará listo para compartir.",
     "cta": "Comenzar",
-    "signature": "Best regards,<br>IQ Rest Team"
+    "signature": "Saludos cordiales,<br>Equipo IQ Rest"
   },
   "supportEmail": {
     "subject": "Tienes un nuevo mensaje del soporte de IQ Rest",

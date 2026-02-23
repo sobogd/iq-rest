@@ -249,6 +249,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
 
   const handleSendConversion = async (eventType: string) => {
     if (!session?.gclid) return;
+    if (!confirm(`Send conversion "${eventType}" for gclid ${session.gclid}?`)) return;
     setSendingConversion(eventType);
     try {
       const res = await fetch("/api/admin/analytics/send-conversion", {

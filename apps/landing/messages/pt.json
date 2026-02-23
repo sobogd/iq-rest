@@ -74,7 +74,7 @@
     }
   },
   "menuScanner": {
-    "badge": "AI-Powered",
+    "badge": "Com IA",
     "title": "Já tem um menu em papel?",
     "subtitle": "Envie uma foto — a IA extrairá todos os pratos, preços e criará um menu digital pronto para uso em segundos.",
     "uploadButton": "Enviar Fotos do Menu",
@@ -269,7 +269,7 @@
         },
         {
           "q": "O vídeo desacelera o menu?",
-          "a": "Não, os vídeos são comprimidos e carregados de forma preguiçosa para garantir um desempenho rápido da página."
+          "a": "Não, os vídeos são comprimidos e carregados apenas quando necessário para garantir um desempenho rápido da página."
         }
       ],
       "color-scheme": [
@@ -565,8 +565,8 @@
       "background": "Imagem e vídeo de fundo",
       "support": "Suporte",
       "reservations": "Reservas",
-      "multiRestaurant": "Multiple restaurants",
-      "customDomain": "Custom domain",
+      "multiRestaurant": "Múltiplos restaurantes",
+      "customDomain": "Domínio personalizado",
       "noBranding": "Sem marca IQ Rest"
     },
     "values": {
@@ -599,8 +599,8 @@
   },
   "contacts": {
     "meta": {
-      "title": "Contacte-nos - Ajuda com o seu Menu QR de Restaurante | IQ Rest",
-      "description": "Entre em contacto com a equipa IQ Rest. Estamos aqui para ajudar com o seu menu QR digital para restaurante ou café. Suporte pessoal de pessoas reais."
+      "title": "Fale Conosco - Ajuda com o seu Menu QR de Restaurante | IQ Rest",
+      "description": "Entre em contato com a equipe IQ Rest. Estamos aqui para ajudar com o seu menu QR digital para restaurante ou café. Suporte pessoal de pessoas reais."
     },
     "title": "Precisa de ajuda? Vamos conversar",
     "subtitle": "Olá, eu sou Bogdan — fundador do IQ Rest. Eu criei esta plataforma para o meu próprio café e agora ela ajuda centenas de restaurantes em todo o mundo. Tem uma pergunta ou ideia? Escreva para mim diretamente. Sem bots, sem espera — apenas uma conversa real.",
@@ -1271,8 +1271,8 @@
     "noLocation": "Nenhuma localização disponível",
     "english": "Inglês",
     "spanish": "Espanhol",
-    "allergens": "Alergênicos",
-    "allergensInfo": "Este prato contém os seguintes alergênicos:",
+    "allergens": "Alérgenos",
+    "allergensInfo": "Este prato contém os seguintes alérgenos:",
     "allergenNames": {
       "gluten": "Glúten",
       "crustaceans": "Crustáceos",
@@ -1569,7 +1569,7 @@
     "items": {
       "noItems": "Nenhum item ainda. Crie seu primeiro item para começar.",
       "noCategoriesHint": "Adicione uma categoria primeiro para criar itens.",
-      "addItem": "Adicionar artigo",
+      "addItem": "Adicionar item",
       "editItem": "Editar Item",
       "name": "Nome",
       "namePlaceholder": "Digite o nome do item",
@@ -1608,8 +1608,8 @@
       "saveSort": "Salvar",
       "sortSaved": "Ordem de classificação salva",
       "sortError": "Falha ao salvar a ordem de classificação",
-      "allergens": "Alergênicos",
-      "allergensHint": "Selecione os alergênicos presentes neste prato",
+      "allergens": "Alérgenos",
+      "allergensHint": "Selecione os alérgenos presentes neste prato",
       "allergenNames": {
         "gluten": "Glúten",
         "crustaceans": "Crustáceos",
@@ -1737,22 +1737,24 @@
     "menu": {
       "addItem": "Adicionar item",
       "addCategory": "Adicionar categoria",
-      "emptyTitle": "O seu menu está vazio",
+      "emptyTitle": "Seu menu está vazio",
       "emptySubtitle": "Adicione a sua primeira categoria para começar",
       "orDivider": "ou",
       "scanButton": "Digitalizar menu a partir de foto",
       "scanDescription": "Carregue uma foto do seu menu em papel e a IA criará o seu menu digital automaticamente",
-      "scanLoading": "A digitalizar o seu menu...",
-      "scanLoadingSubtitle": "A IA está a ler o seu menu e a criar categorias",
-      "scanError": "Algo correu mal. Tente novamente.",
-      "scanErrorNotMenu": "Isto não parece um menu de restaurante. Tente outra foto.",
-      "scanErrorTooLarge": "A imagem é demasiado grande. Tamanho máximo é 20MB.",
-      "scanErrorTooMany": "Demasiadas imagens. Máximo de 5 fotos.",
+      "scanLoading": "Digitalizando seu menu...",
+      "scanLoadingSubtitle": "A IA está lendo seu menu e criando categorias",
+      "scanError": "Algo deu errado. Tente novamente.",
+      "scanErrorNotMenu": "Isso não parece um menu de restaurante. Tente outra foto.",
+      "scanErrorTooLarge": "A imagem é grande demais. Tamanho máximo é 20MB.",
+      "scanErrorTooMany": "Imagens demais. Máximo de 5 fotos.",
       "scanSuccess": "Menu digitalizado com sucesso!",
       "scanAddMore": "Adicionar mais",
       "scanStart": "Digitalizar",
       "scanPoolTitle": "Páginas do menu",
-      "scanPoolSubtitle": "Adicione fotos ou ficheiros PDF do seu menu em papel. Até 5 ficheiros."
+      "scanPoolSubtitle": "Adicione fotos ou arquivos PDF do seu menu em papel. Até 5 arquivos.",
+      "demoButton": "Preencher com menu de exemplo",
+      "demoDescription": "Ainda não está pronto? Experimente com um menu de exemplo para ver como funciona."
     },
     "onboarding": {
       "nameTitle": "Qual o nome do seu estabelecimento?",
@@ -1794,16 +1796,16 @@
       "templateRestaurantTitle": "Restaurante",
       "templateRestaurantDescription": "Menu completo com saladas, pratos principais e acompanhamentos.",
       "templateCafeTitle": "Café",
-      "templateCafeDescription": "Pequenos-almoços, café e sobremesas.",
+      "templateCafeDescription": "Cafés da manhã, café e sobremesas.",
       "templateBarTitle": "Bar",
       "templateBarDescription": "Cocktails, cerveja e petiscos.",
       "templateUseButton": "Usar Modelo",
-      "templateApplying": "A criar o seu menu...",
-      "templateApplyingSubtitle": "A adicionar categorias e artigos.",
+      "templateApplying": "Criando seu menu...",
+      "templateApplyingSubtitle": "Adicionando categorias e itens.",
       "tplCatSalads": "Saladas",
       "tplCatMainDishes": "Pratos Principais",
       "tplCatSideDishes": "Acompanhamentos",
-      "tplCatBreakfasts": "Pequenos-Almoços",
+      "tplCatBreakfasts": "Cafés da Manhã",
       "tplCatCoffeeTea": "Café e Chá",
       "tplCatDesserts": "Sobremesas",
       "tplCatCocktails": "Cocktails",
@@ -1837,9 +1839,9 @@
       "getReady": "Prepare o seu menu",
       "checklistName": "Dê nome ao local",
       "checklistMenuFill": "Preencha o seu menu",
-      "checklistContacts": "Adicione contactos",
+      "checklistContacts": "Adicione contatos",
       "checklistBrand": "Personalize a marca",
-      "menuReady": "O seu menu está pronto! Partilhe o QR code com os clientes.",
+      "menuReady": "Seu menu está pronto! Compartilhe o QR code com os clientes.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} leituras"
@@ -2220,16 +2222,16 @@
   "reminderEmail": {
     "subject": "O seu menu no IQ Rest está quase pronto",
     "greeting": "Olá,",
-    "body": "O seu menu no IQ Rest está quase pronto — já preparámos um modelo com pratos de exemplo para si.",
-    "stepsIntro": "Tudo o que precisa de fazer:",
+    "body": "O seu menu no IQ Rest está quase pronto — já preparamos um modelo com pratos de exemplo para você.",
+    "stepsIntro": "Tudo o que precisa fazer:",
     "step1": "Substitua os pratos de exemplo pelos seus pratos e preços reais",
-    "step2": "Adicione os seus contactos e logótipo",
-    "step3": "Descarregue o seu código QR — pronto!",
+    "step2": "Adicione seus contatos e logotipo",
+    "step3": "Baixe seu código QR — pronto!",
     "timeNote": "Demora apenas cerca de 10 minutos.",
     "helpOffer": "Sem tempo? Envie-nos simplesmente o seu menu em qualquer formato — PDF, foto ou link para o seu site — e nós configuramos tudo por si, totalmente grátis.",
     "helpAction": "Basta responder a este email com o seu menu em anexo.",
     "cta": "Abrir Painel",
-    "signature": "Best regards,<br>IQ Rest Team",
+    "signature": "Atenciosamente,<br>Equipe IQ Rest",
     "subjectNotOnboarded": "O seu menu IQ Rest está à sua espera",
     "bodyNotOnboarded": "Registou-se no IQ Rest mas ainda não configurou o seu menu. Demora menos de 2 minutos — insira o nome do seu restaurante, escolha um modelo e terá um menu pronto para personalizar.",
     "helpOfferNotOnboarded": "Sem tempo? Envie-nos simplesmente o seu menu em qualquer formato — PDF, foto ou link — e nós fazemos tudo por si, totalmente grátis.",
@@ -2245,19 +2247,19 @@
     "body": "O seu menu quase atingiu o limite mensal de {limit} digitalizações no plano gratuito. Assim que o limite for atingido, será apresentado um banner publicitário aos seus clientes.",
     "upgrade": "Atualize para um plano pago para remover todos os limites, desbloquear funcionalidades avançadas e manter o seu menu sem publicidade.",
     "cta": "Atualizar agora",
-    "signature": "Com os melhores cumprimentos,<br>Equipa IQ Rest"
+    "signature": "Com os melhores cumprimentos,<br>Equipe IQ Rest"
   },
   "welcomeEmail": {
     "subject": "Bem-vindo ao IQ Rest — o seu menu está a 2 minutos",
     "greeting": "Bem-vindo ao IQ Rest!",
-    "intro": "Está a poucos passos de um menu digital que os seus clientes podem digitalizar e consultar nos seus telemóveis.",
+    "intro": "Está a poucos passos de um menu digital que seus clientes podem digitalizar e consultar nos seus celulares.",
     "stepsIntro": "Eis o que acontece a seguir:",
     "step1": "Dê nome ao seu restaurante",
     "step2": "Escolha um modelo de menu — preenchemo-lo com pratos de exemplo",
     "step3": "Personalize-o com os seus pratos e preços reais",
     "outro": "É tudo. O seu menu QR ficará ativo e pronto para partilhar.",
     "cta": "Começar",
-    "signature": "Best regards,<br>IQ Rest Team"
+    "signature": "Atenciosamente,<br>Equipe IQ Rest"
   },
   "supportEmail": {
     "subject": "Você tem uma nova mensagem do suporte IQ Rest",
@@ -2270,10 +2272,10 @@
     "subject": "O seu código de verificação IQ Rest: {code}",
     "greeting": "Olá,",
     "welcome": "Bem-vindo ao IQ Rest! O seu código de verificação é:",
-    "instructions": "Após iniciar sessão, poderá criar o seu menu digital em apenas alguns minutos — adicione categorias, artigos com preços e descarregue um código QR pronto a usar para as suas mesas.",
+    "instructions": "Após iniciar sessão, poderá criar o seu menu digital em apenas alguns minutos — adicione categorias, itens com preços e baixe um código QR pronto a usar para as suas mesas.",
     "helpOffer": "Precisa de ajuda? Basta responder a este email — teremos todo o gosto em ajudar.",
     "cta": "Abrir Painel",
-    "signature": "Com os melhores cumprimentos,<br>Equipa IQ Rest",
+    "signature": "Com os melhores cumprimentos,<br>Equipe IQ Rest",
     "expiry": "Este código expira em 10 minutos.",
     "ignore": "Se não solicitou este código, pode ignorar este email."
   },
@@ -2294,7 +2296,7 @@
     "ownerGreeting": "Nova reserva!",
     "ownerBody": "Uma nova reserva foi feita no seu restaurante.",
     "ownerCta": "Ver reservas",
-    "ownerSignature": "Com os melhores cumprimentos,<br>Equipa IQ Rest"
+    "ownerSignature": "Com os melhores cumprimentos,<br>Equipe IQ Rest"
   },
   "languages": {
     "meta": {
