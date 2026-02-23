@@ -81,6 +81,7 @@ function formatEventName(event: string): string {
     demo_close: "Closed Demo",
     demo_scroll_arrow: "Scrolled to Demo",
     demo_interact: "Touched Demo",
+    header_cta_click: "Clicked Header CTA",
     hero_images_click: "Clicked Hero Images",
     pricing_cta_click: "Clicked Pricing CTA",
     scanner_upload: "Scanner: Upload",

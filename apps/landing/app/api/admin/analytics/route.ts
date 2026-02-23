@@ -19,6 +19,7 @@ const SECTION_FUNNEL = [
 // Funnel 2: Marketing pages
 const MARKETING_FUNNEL = [
   { event: "page_view_home", label: "Home" },
+  { event: "header_cta_click", label: "Header CTA" },
   { event: "hero_images_click", label: "Hero Click" },
   { event: "demo_scroll_arrow", label: "Scroll→Demo" },
   { event: "demo_interact", label: "Demo Touch" },
