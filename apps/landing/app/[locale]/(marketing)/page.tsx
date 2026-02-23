@@ -220,7 +220,7 @@ export default async function HomePage({
       )}
 
       {/* Demo Section */}
-      <SectionTracker id="demo" section="demo" className="py-16 lg:py-24 scroll-mt-20" threshold={0.2}>
+      <SectionTracker id="demo" section="demo" className="py-16 lg:py-24 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
@@ -236,7 +236,7 @@ export default async function HomePage({
       </SectionTracker>
 
       {/* Features Preview Section */}
-      <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
+      <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 lg:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">

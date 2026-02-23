@@ -7,7 +7,6 @@ interface SectionTrackerProps {
   section: string;
   children: ReactNode;
   className?: string;
-  threshold?: number;
   id?: string;
 }
 
@@ -15,7 +14,6 @@ export function SectionTracker({
   section,
   children,
   className,
-  threshold = 0.5,
   id
 }: SectionTrackerProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,24 +23,21 @@ export function SectionTracker({
     const element = ref.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasViewed.current) {
-            hasViewed.current = true;
-            analytics.section.view(section);
-          }
-        });
-      },
-      { threshold }
-    );
-
-    observer.observe(element);
-
-    return () => {
-      observer.disconnect();
+    const check = () => {
+      if (hasViewed.current) return;
+      const rect = element.getBoundingClientRect();
+      const sectionCenter = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
+      if (sectionCenter <= viewportCenter) {
+        hasViewed.current = true;
+        analytics.section.view(section);
+      }
     };
-  }, [section, threshold]);
+
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    return () => window.removeEventListener("scroll", check);
+  }, [section]);
 
   return (
     <div ref={ref} id={id} className={className}>
