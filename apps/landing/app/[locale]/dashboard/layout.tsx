@@ -94,6 +94,7 @@ export default async function DashboardLayout({
       support: t("pages.support"),
       admin: "Admin",
       adminAnalytics: "Analytics",
+      adminOnboarding: "Onboarding",
     },
     logout: t("logout"),
     analytics: {
