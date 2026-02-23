@@ -21,12 +21,12 @@
       "description": "Crea un menú QR i lloc web de restaurant només amb el teu correu electrònic. Configuració instantània, gestió mòbil, traduccions IA, analítiques diàries. Perfecte per a restaurants i cafeteries. Comença gratis avui."
     },
     "hero": {
-      "title": "Llança el teu menú QR i web'{mbr}' en 1 minut",
+      "title": "Crea un QR Menu Professional i un Lloc Web en Minuts",
       "subtitle": "Només has d'introduir el teu correu electrònic i obtenir un lloc web complet per al restaurant amb menú QR, pàgina de contacte, suport multilingüe i disseny modern. Configura-ho tot des del teu telèfon.",
       "cta": {
-        "create": "Crea gratis",
-        "view": "Veure demo",
-        "noCreditCard": "No cal targeta de crèdit",
+        "create": "Crear menú",
+        "view": "Veure preus",
+        "noCreditCard": "Gratuït fins a 320 escanejos/mes. No cal targeta de crèdit.",
         "trusted": "Confiat per més de 500 restaurants a tot el món",
         "title": "Preparat per fer el pas al digital?",
         "subtitle": "Crea el teu menú QR professional i el lloc web del teu restaurant en minuts. Gratuït per sempre, sense necessitat de targeta de crèdit."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Veure funcions",
+      "scrollToDemo": "Veure demo",
       "perfectFor": {
         "restaurants": "Restaurants",
         "cafes": "Cafeteries",
         "bars": "Bars",
         "hotels": "Hotels"
       }
+    },
+    "demo": {
+      "title": "Experimenta-ho com ho veuen els teus clients",
+      "subtitle": "Toca la pantalla per explorar un menú QR ràpid, bonic i interactiu en acció."
     },
     "intro": {
       "socialProof": "Confiat per més de 500 restaurants a tot el món",
@@ -511,7 +516,7 @@
         "highlights": [
           "Lloc web del restaurant",
           "Menú QR",
-          "400 escaneigs/mes",
+          "320 escaneigs/mes",
           "2 idiomes",
           "Amb filigrana IQ Rest",
           "Analítica"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

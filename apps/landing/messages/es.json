@@ -21,12 +21,12 @@
       "description": "Crea un menú QR y sitio web para restaurante solo con tu email. Configuración instantánea, gestión desde el móvil, traducciones IA, analíticas diarias. Perfecto para restaurantes y cafeterías. Empieza gratis hoy."
     },
     "hero": {
-      "title": "Lanza tu menú QR y sitio web'{mbr}' en 1 minuto",
+      "title": "Crea un QR Menu Profesional y Sitio Web en Minutos",
       "subtitle": "Solo ingresa tu email y obtén un sitio web completo para tu restaurante con menú QR, página de contactos, soporte multilingüe y diseño moderno. Configura todo desde tu teléfono.",
       "cta": {
-        "create": "Crear Gratis",
-        "view": "Ver Demo",
-        "noCreditCard": "No se requiere tarjeta de crédito",
+        "create": "Crear Menú",
+        "view": "Ver Precios",
+        "noCreditCard": "Gratis hasta 320 escaneos/mes. No se requiere tarjeta de crédito.",
         "trusted": "Confiado por más de 500 restaurantes en todo el mundo",
         "title": "¿Listo para digitalizarte?",
         "subtitle": "Crea tu menú QR profesional y sitio web de restaurante en minutos. Gratis para siempre, sin necesidad de tarjeta de crédito."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Ver Funciones",
+      "scrollToDemo": "Ver Demo",
       "perfectFor": {
         "restaurants": "Restaurantes",
         "cafes": "Cafeterías",
         "bars": "Bares",
         "hotels": "Hoteles"
       }
+    },
+    "demo": {
+      "title": "Experiméntalo Como Tus Invitados",
+      "subtitle": "Toca la pantalla para explorar un menú QR rápido, bonito e interactivo en acción."
     },
     "intro": {
       "socialProof": "Más de 500 restaurantes confían en nosotros",
@@ -511,7 +516,7 @@
         "highlights": [
           "Sitio web del restaurante",
           "Menú QR",
-          "400 escaneos/mes",
+          "320 escaneos/mes",
           "2 idiomas",
           "Con marca de agua IQ Rest",
           "Analíticas"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

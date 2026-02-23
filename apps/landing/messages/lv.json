@@ -21,12 +21,12 @@
       "description": "Izveidojiet QR ēdienkarti un restorāna tīmekļa vietni tikai ar savu e-pastu. Tūlītēja iestatīšana, mobilā pārvaldība, AI tulkojumi, ikdienas analītika. Ideāli restorāniem un kafejnīcām. Sāciet bez maksas jau šodien."
     },
     "hero": {
-      "title": "Palaidiet QR ēdienkarti un vietni'{mbr}' 1 minūtē",
+      "title": "Izveidojiet Profesionālu QR Menu un Mājaslapu Dažu Minūšu Laikā",
       "subtitle": "Vienkārši ievadiet savu e-pastu un iegūstiet pilnīgu restorāna mājaslapu ar QR ēdienkarti, kontaktu lapu, daudzvalodu atbalstu un modernu dizainu. Iestatiet visu no sava telefona.",
       "cta": {
-        "create": "Izveidot bezmaksas",
-        "view": "Skatīt demo",
-        "noCreditCard": "Kredītkarte nav nepieciešama",
+        "create": "Izveidot ēdienkarti",
+        "view": "Skatīt cenas",
+        "noCreditCard": "Bezmaksas līdz 320 skenējumiem/mēn. Kredītkarte nav nepieciešama.",
         "trusted": "Uzticams 500+ restorāniem visā pasaulē",
         "title": "Gatavs pāriet uz digitālo formātu?",
         "subtitle": "Izveidojiet savu profesionālo QR ēdienkarti un restorāna tīmekļa vietni dažu minūšu laikā. Bezmaksas uz visiem laikiem, nav nepieciešama kredītkarte."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Skatīt funkcijas",
+      "scrollToDemo": "Skatīt demo",
       "perfectFor": {
         "restaurants": "Restorāni",
         "cafes": "Kafejnīcas",
         "bars": "Bāri",
         "hotels": "Viesnīcas"
       }
+    },
+    "demo": {
+      "title": "Izjūtiet to tā, kā to redz jūsu viesi",
+      "subtitle": "Pieskarieties ekrānam, lai izpētītu ātru, skaistu un interaktīvu QR ēdienkarti darbībā."
     },
     "intro": {
       "socialProof": "Uzticējušies 500+ restorāni visā pasaulē",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restorāna tīmekļa vietne",
           "QR ēdienkarte",
-          "400 skenējumi/mēnesī",
+          "320 skenējumi/mēnesī",
           "2 valodas",
           "Ar IQ Rest ūdenszīmi",
           "Analītika"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

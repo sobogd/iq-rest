@@ -21,12 +21,12 @@
       "description": "Cruthaigh roghchlár QR agus suíomh gréasáin bialainne le do ríomhphost amháin. Suiteáil láithreach, bainistíocht soghluaiste, aistriúcháin AI, anailísíocht laethúil. Foirfe do bhialanna agus caiféanna. Tosaigh saor in aisce inniu."
     },
     "hero": {
-      "title": "Seol do roghchlár QR'{mbr}' agus suíomh i 1 nóiméad",
+      "title": "Cruthaigh QR Menu Gairmiúil agus Suíomh Gréasáin i gCúpla Nóiméad",
       "subtitle": "Ní gá ach do ríomhphost a chur isteach agus faigh suíomh gréasáin iomlán do restaurant le menú QR, leathanach teagmhála, tacaíocht ilteangach, agus dearadh nua-aimseartha. Socraigh gach rud ó do guthán.",
       "cta": {
-        "create": "Cruthaigh saor in aisce",
-        "view": "Féach ar thaispeántas",
-        "noCreditCard": "Níl cárta creidmheasa ag teastáil",
+        "create": "Cruthaigh biachlár",
+        "view": "Féach ar phraghsáil",
+        "noCreditCard": "Saor in aisce suas le 320 scanadh/mí. Níl cárta creidmheasa ag teastáil.",
         "trusted": "Muinín ag 500+ bialann ar fud an domhain",
         "title": "Réidh le dul digiteach?",
         "subtitle": "Cruthaigh do QR menu gairmiúil agus suíomh gréasáin bialann i nóiméid. Saor go deo, níl gá le cárta creidmheasa."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Féach ar ghnéithe",
+      "scrollToDemo": "Féach ar an taispeántas",
       "perfectFor": {
         "restaurants": "Bialanna",
         "cafes": "Caifí",
         "bars": "Beáir",
         "hotels": "Óstáin"
       }
+    },
+    "demo": {
+      "title": "Bain triail as mar a fheiceann do chustaiméirí é",
+      "subtitle": "Tapáil an scáileán chun roghchlár QR tapa, álainn agus idirghníomhach a iniúchadh i mbun oibre."
     },
     "intro": {
       "socialProof": "Iontaofa ag 500+ bialann ar fud an domhain",
@@ -511,7 +516,7 @@
         "highlights": [
           "Suíomh gréasáin bialann",
           "QR Menu",
-          "400 scans/mí",
+          "320 scans/mí",
           "2 teangacha",
           "Le watermark IQ Rest",
           "Anailísíocht"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

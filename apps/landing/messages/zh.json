@@ -21,12 +21,12 @@
       "description": "仅需邮箱即可创建QR菜单和餐厅网站。即时设置、移动端管理、AI翻译、每日分析。适合餐厅和咖啡馆。今天免费开始。"
     },
     "hero": {
-      "title": "启动您的QR菜单和网站'{mbr}'只需1分钟",
+      "title": "几分钟内创建专业的QR Menu和网站",
       "subtitle": "只需输入您的电子邮件，即可获得完整的餐厅网站，包括QR菜单、联系页面、多语言支持和现代设计。在手机上完成所有设置。",
       "cta": {
-        "create": "免费创建",
-        "view": "查看演示",
-        "noCreditCard": "无需信用卡",
+        "create": "创建菜单",
+        "view": "查看价格",
+        "noCreditCard": "每月320次扫描以内免费。无需信用卡。",
         "trusted": "全球500多家餐厅信赖",
         "title": "准备好数字化了吗？",
         "subtitle": "在几分钟内创建您的专业QR菜单和餐厅网站。永久免费，无需信用卡。"
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "查看功能",
+      "scrollToDemo": "查看演示",
       "perfectFor": {
         "restaurants": "餐厅",
         "cafes": "咖啡馆",
         "bars": "酒吧",
         "hotels": "酒店"
       }
+    },
+    "demo": {
+      "title": "像您的客人一样体验它",
+      "subtitle": "点击屏幕，探索快速、精美且互动的QR菜单实际效果。"
     },
     "intro": {
       "socialProof": "全球500多家餐厅信赖",
@@ -511,7 +516,7 @@
         "highlights": [
           "餐厅网站",
           "QR菜单",
-          "每月150次扫描",
+          "每月320次扫描",
           "2种语言",
           "带有IQ Rest水印",
           "分析"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

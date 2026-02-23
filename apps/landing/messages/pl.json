@@ -21,12 +21,12 @@
       "description": "Stwórz menu QR i stronę restauracji tylko za pomocą e-maila. Natychmiastowa konfiguracja, zarządzanie mobilne, tłumaczenia AI, codzienne analizy. Idealne dla restauracji i kawiarni. Zacznij za darmo już dziś."
     },
     "hero": {
-      "title": "Uruchom menu QR i stronę'{mbr}' w 1 minutę",
+      "title": "Stwórz Profesjonalne QR Menu i Stronę w Kilka Minut",
       "subtitle": "Wystarczy wpisać swój adres e-mail i uzyskać kompletną stronę internetową restauracji z menu QR, stroną kontaktową, wsparciem wielojęzycznym i nowoczesnym designem. Skonfiguruj wszystko z telefonu.",
       "cta": {
-        "create": "Zacznij teraz",
-        "view": "Demo",
-        "noCreditCard": "Karta kredytowa nie jest wymagana",
+        "create": "Stwórz Menu",
+        "view": "Zobacz Cennik",
+        "noCreditCard": "Bezpłatnie do 320 skanów/mies. Karta kredytowa nie jest wymagana.",
         "trusted": "Zaufane przez ponad 500 restauracji na całym świecie",
         "title": "Gotowy na cyfryzację?",
         "subtitle": "Stwórz swoje profesjonalne menu QR i stronę internetową restauracji w kilka minut. Zawsze za darmo, bez potrzeby podawania karty kredytowej."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Zobacz Funkcje",
+      "scrollToDemo": "Zobacz Demo",
       "perfectFor": {
         "restaurants": "Restauracje",
         "cafes": "Kawiarnie",
         "bars": "Bary",
         "hotels": "Hotele"
       }
+    },
+    "demo": {
+      "title": "Poczuj To Jak Twoi Goście",
+      "subtitle": "Dotknij ekranu, aby odkryć szybkie, piękne i interaktywne menu QR w akcji."
     },
     "intro": {
       "socialProof": "Zaufane przez ponad 500 restauracji na całym świecie",
@@ -511,7 +516,7 @@
         "highlights": [
           "Strona internetowa restauracji",
           "Menu QR",
-          "400 skanów/miesiąc",
+          "320 skanów/miesiąc",
           "2 języki",
           "Ze znakiem wodnym IQ Rest",
           "Analityka"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

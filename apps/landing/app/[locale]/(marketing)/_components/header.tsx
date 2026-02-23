@@ -11,6 +11,7 @@ const NAV_LINKS = [
 
 export async function Header() {
   const t = await getTranslations("header");
+  const tHero = await getTranslations("home.hero");
 
   return (
     <header className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -35,7 +36,7 @@ export async function Header() {
 
           <div className="flex items-center gap-3">
             <LanguageSelector />
-            <HeaderCreateButton>{t("getStarted")}</HeaderCreateButton>
+            <HeaderCreateButton>{tHero("cta.create")}</HeaderCreateButton>
           </div>
         </div>
       </div>

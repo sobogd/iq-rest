@@ -21,12 +21,12 @@
       "description": "Sukurkite QR meniu ir restorano svetainę tik su savo el. paštu. Momentinis nustatymas, mobilusis valdymas, AI vertimai, kasdienė analitika. Puikiai tinka restoranams ir kavinėms. Pradėkite nemokamai šiandien."
     },
     "hero": {
-      "title": "Paleiskite QR meniu ir svetainę'{mbr}' per 1 minutę",
+      "title": "Sukurkite Profesionalų QR Menu ir Svetainę per Kelias Minutes",
       "subtitle": "Tiesiog įveskite savo el. paštą ir gauti pilną restorano svetainę su QR menu, kontaktų puslapiu, daugiakalbe parama ir moderniu dizainu. Viską nustatykite iš savo telefono.",
       "cta": {
-        "create": "Sukurti nemokamai",
-        "view": "Žiūrėti demo",
-        "noCreditCard": "Kreditinė kortelė nereikalinga",
+        "create": "Sukurti meniu",
+        "view": "Žiūrėti kainas",
+        "noCreditCard": "Nemokama iki 320 nuskaitymų/mėn. Kreditinė kortelė nereikalinga.",
         "trusted": "Pasitikėjo daugiau nei 500 restoranų visame pasaulyje",
         "title": "Pasiruošę pereiti prie skaitmeninių sprendimų?",
         "subtitle": "Sukurkite savo profesionalų QR meniu ir restorano svetainę per kelias minutes. Visam laikui nemokamai, nereikia kreditinės kortelės."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Žiūrėti funkcijas",
+      "scrollToDemo": "Žiūrėti demo",
       "perfectFor": {
         "restaurants": "Restoranai",
         "cafes": "Kavinės",
         "bars": "Barai",
         "hotels": "Viešbučiai"
       }
+    },
+    "demo": {
+      "title": "Patirkite tai taip, kaip mato jūsų svečiai",
+      "subtitle": "Bakstelėkite ekraną ir išbandykite greitą, gražų ir interaktyvų QR meniu veikime."
     },
     "intro": {
       "socialProof": "Pasitikėjo 500+ restoranų visame pasaulyje",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restorano svetainė",
           "QR Meniu",
-          "400 nuskenavimų/mėn",
+          "320 nuskenavimų/mėn",
           "2 kalbos",
           "Su IQ Rest vandenženklis",
           "Analitika"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

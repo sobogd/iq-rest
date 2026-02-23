@@ -21,12 +21,12 @@
       "description": "Lag QR-meny og restaurantnettside med bare e-posten din. Umiddelbar oppsett, mobilvennlig administrasjon, AI-oversettelser, daglig analyse. Perfekt for restauranter og kafeer. Start gratis i dag."
     },
     "hero": {
-      "title": "Start QR-meny og nettsted'{mbr}' på 1 minutt",
+      "title": "Lag en Profesjonell QR Menu & Nettside på Få Minutter",
       "subtitle": "Bare skriv inn e-posten din og få en komplett restaurantnettside med QR-meny, kontaktside, flerspråklig støtte og moderne design. Sett opp alt fra telefonen din.",
       "cta": {
-        "create": "Opprett gratis",
-        "view": "Se demo",
-        "noCreditCard": "Ingen kredittkort nødvendig",
+        "create": "Opprett meny",
+        "view": "Se priser",
+        "noCreditCard": "Gratis opptil 320 skanninger/mnd. Ingen kredittkort nødvendig.",
         "trusted": "Stolt brukt av over 500 restauranter verden over",
         "title": "Klar for å gå digitalt?",
         "subtitle": "Lag din profesjonelle QR-meny og restaurantnettsted på minutter. Gratis for alltid, ingen kredittkort nødvendig."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Se funksjoner",
+      "scrollToDemo": "Se Demo",
       "perfectFor": {
         "restaurants": "Restauranter",
         "cafes": "Kaféer",
         "bars": "Barer",
         "hotels": "Hoteller"
       }
+    },
+    "demo": {
+      "title": "Opplev Det Som Gjestene Dine",
+      "subtitle": "Trykk på skjermen for å utforske en rask, vakker og interaktiv QR-meny i aksjon."
     },
     "intro": {
       "socialProof": "Stolt brukt av over 500 restauranter verden over",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restaurantnettsted",
           "QR Meny",
-          "400 skanninger/måned",
+          "320 skanninger/måned",
           "2 språk",
           "Med IQ Rest vannmerke",
           "Analyse"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

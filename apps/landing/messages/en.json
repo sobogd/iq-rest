@@ -21,17 +21,18 @@
       "description": "Create QR menu and restaurant website with just your email. Instant setup, mobile-friendly management, AI translations, daily analytics. Perfect for restaurants and cafes. Start free today."
     },
     "hero": {
-      "title": "Launch Your QR Menu'{mbr}' & Website in 1 Minute",
+      "title": "Create a Professional QR Menu & Website in Minutes",
       "subtitle": "Just enter your email and get a complete restaurant website with QR menu, contact page, multilingual support, and modern design. Setup everything from your phone.",
       "cta": {
-        "create": "Create Free",
-        "view": "See Demo",
-        "noCreditCard": "No credit card required",
+        "create": "Create Menu",
+        "view": "See Pricing",
+        "noCreditCard": "Free up to 320 scans/mo. No credit card required.",
         "trusted": "Trusted by 500+ restaurants worldwide",
         "title": "Ready to Go Digital?",
         "subtitle": "Create your professional QR menu and restaurant website in minutes. Free forever, no credit card required."
       },
       "scrollToFeatures": "See Features",
+      "scrollToDemo": "View Demo",
       "perfectFor": {
         "restaurants": "Restaurants",
         "cafes": "Cafés",
@@ -56,6 +57,10 @@
           "description": "Track visits and popular dishes every day"
         }
       ]
+    },
+    "demo": {
+      "title": "Experience It Like Your Guests Do",
+      "subtitle": "Tap the screen to explore a fast, beautiful, and interactive QR menu in action."
     },
     "intro": {
       "socialProof": "Trusted by 500+ restaurants worldwide",
@@ -518,7 +523,7 @@
         "highlights": [
           "Restaurant website",
           "QR Menu",
-          "400 scans/month",
+          "320 scans/month",
           "2 languages",
           "With IQ Rest watermark",
           "Analytics"
@@ -573,7 +578,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

@@ -21,12 +21,12 @@
       "description": "Vytvorte QR menu a web reštaurácie len s vaším emailom. Okamžité nastavenie, mobilná správa, AI preklady, denné analýzy. Ideálne pre reštaurácie a kaviarne. Začnite zadarmo ešte dnes."
     },
     "hero": {
-      "title": "Spustite QR menu a web'{mbr}' za 1 minútu",
+      "title": "Vytvorte Profesionálne QR Menu a Web za Pár Minút",
       "subtitle": "Jednoducho zadajte svoj e-mail a získajte kompletnú webstránku reštaurácie s QR menom, kontaktnou stránkou, viacjazyčnou podporou a moderným dizajnom. Nastavte všetko z vášho telefónu.",
       "cta": {
-        "create": "Vytvoriť zadarmo",
-        "view": "Zobraziť demo",
-        "noCreditCard": "Kreditná karta nie je potrebná",
+        "create": "Vytvoriť menu",
+        "view": "Zobraziť ceny",
+        "noCreditCard": "Zadarmo až do 320 skenov/mes. Kreditná karta nie je potrebná.",
         "trusted": "Dôveryhodné viac ako 500 reštauráciami po celom svete",
         "title": "Pripravení prejsť na digitálnu formu?",
         "subtitle": "Vytvorte si profesionálne QR menu a webovú stránku reštaurácie za pár minút. Navždy zadarmo, bez potreby kreditnej karty."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Zobraziť funkcie",
+      "scrollToDemo": "Zobraziť demo",
       "perfectFor": {
         "restaurants": "Reštaurácie",
         "cafes": "Kaviarne",
         "bars": "Bary",
         "hotels": "Hotely"
       }
+    },
+    "demo": {
+      "title": "Zažite to ako vaši hostia",
+      "subtitle": "Ťuknite na obrazovku a preskúmajte rýchle, krásne a interaktívne QR menu v akcii."
     },
     "intro": {
       "socialProof": "Dôveryhodné 500+ reštauráciami po celom svete",
@@ -511,7 +516,7 @@
         "highlights": [
           "Webová stránka reštaurácie",
           "QR Menu",
-          "400 skenovaní/mesečne",
+          "320 skenovaní/mesečne",
           "2 jazyky",
           "S vodoznakom IQ Rest",
           "Analytika"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

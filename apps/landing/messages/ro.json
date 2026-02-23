@@ -21,12 +21,12 @@
       "description": "Creează meniu QR și site de restaurant doar cu emailul tău. Configurare instantanee, gestionare mobilă, traduceri AI, analize zilnice. Perfect pentru restaurante și cafenele. Începe gratuit astăzi."
     },
     "hero": {
-      "title": "Lansați meniul QR și site-ul'{mbr}' în 1 minut",
+      "title": "Creează un QR Menu Profesional și un Site Web în Câteva Minute",
       "subtitle": "Introduceti doar emailul dvs. și obțineți un website complet pentru restaurant cu meniu QR, pagină de contact, suport multilingv și design modern. Configurați totul de pe telefonul dvs.",
       "cta": {
-        "create": "Creează gratuit",
-        "view": "Vezi demo",
-        "noCreditCard": "Nu este necesar cardul de credit",
+        "create": "Creează meniu",
+        "view": "Vezi prețuri",
+        "noCreditCard": "Gratuit până la 320 scanări/lună. Nu este necesar cardul de credit.",
         "trusted": "Apreciat de peste 500 de restaurante din întreaga lume",
         "title": "Ești pregătit să devii digital?",
         "subtitle": "Creează-ți meniul QR profesional și site-ul restaurantului în câteva minute. Gratuit pentru totdeauna, fără card de credit necesar."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Vezi funcțiile",
+      "scrollToDemo": "Vezi demo",
       "perfectFor": {
         "restaurants": "Restaurante",
         "cafes": "Cafenele",
         "bars": "Baruri",
         "hotels": "Hoteluri"
       }
+    },
+    "demo": {
+      "title": "Experimentați-l ca oaspeții dvs.",
+      "subtitle": "Atingeți ecranul pentru a explora un meniu QR rapid, frumos și interactiv în acțiune."
     },
     "intro": {
       "socialProof": "Apreciat de peste 500 de restaurante din întreaga lume",
@@ -511,7 +516,7 @@
         "highlights": [
           "Website pentru restaurant",
           "Meniu QR",
-          "400 scanări/lună",
+          "320 scanări/lună",
           "2 limbi",
           "Cu filigran IQ Rest",
           "Analize"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

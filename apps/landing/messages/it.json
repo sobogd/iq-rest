@@ -21,12 +21,12 @@
       "description": "Crea un menu QR e un sito web per ristorante solo con la tua email. Configurazione istantanea, gestione mobile, traduzioni IA, analisi giornaliere. Perfetto per ristoranti e caffè. Inizia gratis oggi."
     },
     "hero": {
-      "title": "Lancia il tuo menu QR'{mbr}' e sito web in 1 minuto",
+      "title": "Crea un QR Menu Professionale e un Sito Web in Pochi Minuti",
       "subtitle": "Basta inserire la tua email e ottenere un sito web completo per ristoranti con menu QR, pagina di contatto, supporto multilingue e design moderno. Configura tutto dal tuo telefono.",
       "cta": {
-        "create": "Crea Gratis",
-        "view": "Vedi Demo",
-        "noCreditCard": "Nessuna carta di credito richiesta",
+        "create": "Crea Menu",
+        "view": "Vedi Prezzi",
+        "noCreditCard": "Gratis fino a 320 scansioni/mese. Nessuna carta di credito richiesta.",
         "trusted": "Fidato da oltre 500 ristoranti in tutto il mondo",
         "title": "Pronto per il Digitale?",
         "subtitle": "Crea il tuo menu QR professionale e il sito web del ristorante in pochi minuti. Gratis per sempre, senza carta di credito richiesta."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Vedi Funzionalità",
+      "scrollToDemo": "Vedi Demo",
       "perfectFor": {
         "restaurants": "Ristoranti",
         "cafes": "Caffè",
         "bars": "Bar",
         "hotels": "Hotel"
       }
+    },
+    "demo": {
+      "title": "Provalo Come i Tuoi Ospiti",
+      "subtitle": "Tocca lo schermo per esplorare un menu QR veloce, bello e interattivo in azione."
     },
     "intro": {
       "socialProof": "Affidato da oltre 500 ristoranti in tutto il mondo",
@@ -511,7 +516,7 @@
         "highlights": [
           "Sito web del ristorante",
           "Menu QR",
-          "400 scansioni/mese",
+          "320 scansioni/mese",
           "2 lingue",
           "Con filigrana IQ Rest",
           "Analisi"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

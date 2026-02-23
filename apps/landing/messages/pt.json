@@ -21,12 +21,12 @@
       "description": "Crie um menu QR e site de restaurante apenas com seu email. Configuração instantânea, gestão mobile, traduções IA, análises diárias. Perfeito para restaurantes e cafés. Comece grátis hoje."
     },
     "hero": {
-      "title": "Lance seu menu QR e site'{mbr}' em 1 minuto",
+      "title": "Crie um QR Menu Profissional e um Site em Minutos",
       "subtitle": "Basta inserir seu e-mail e obter um site completo para restaurante com menu QR, página de contato, suporte multilíngue e design moderno. Configure tudo a partir do seu telefone.",
       "cta": {
-        "create": "Criar Grátis",
-        "view": "Ver Demo",
-        "noCreditCard": "Não é necessário cartão de crédito",
+        "create": "Criar Menu",
+        "view": "Ver Preços",
+        "noCreditCard": "Grátis até 320 leituras/mês. Não é necessário cartão de crédito.",
         "trusted": "Confiado por mais de 500 restaurantes em todo o mundo",
         "title": "Pronto para Ir Digital?",
         "subtitle": "Crie seu menu QR profissional e site de restaurante em minutos. Gratuito para sempre, sem necessidade de cartão de crédito."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Ver Recursos",
+      "scrollToDemo": "Ver Demo",
       "perfectFor": {
         "restaurants": "Restaurantes",
         "cafes": "Cafés",
         "bars": "Bares",
         "hotels": "Hotéis"
       }
+    },
+    "demo": {
+      "title": "Experimente Como Seus Clientes",
+      "subtitle": "Toque na tela para explorar um menu QR rápido, bonito e interativo em ação."
     },
     "intro": {
       "socialProof": "Confiado por mais de 500 restaurantes em todo o mundo",
@@ -511,7 +516,7 @@
         "highlights": [
           "Site do restaurante",
           "Menu QR",
-          "400 escaneamentos/mês",
+          "320 escaneamentos/mês",
           "2 idiomas",
           "Com marca d'água IQ Rest",
           "Análises"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

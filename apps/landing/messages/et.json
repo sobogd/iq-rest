@@ -21,12 +21,12 @@
       "description": "Looge QR menüü ja restorani veebileht ainult oma e-postiga. Kohene seadistamine, mobiilne haldamine, AI tõlked, igapäevane analüütika. Ideaalne restoranidele ja kohvikutele. Alustage tasuta juba täna."
     },
     "hero": {
-      "title": "Käivitage QR-menüü ja veebisait'{mbr}' 1 minutiga",
+      "title": "Looge Professionaalne QR Menu ja Veebisait Mõne Minutiga",
       "subtitle": "Lihtsalt sisestage oma e-post ja saate täieliku restoraniveebilehe QR menüü, kontaktlehe, mitmekeelse toe ja modernse disainiga. Seadistage kõik oma telefonist.",
       "cta": {
-        "create": "Loo tasuta",
-        "view": "Vaata demot",
-        "noCreditCard": "Krediitkaarti pole vaja",
+        "create": "Loo menüü",
+        "view": "Vaata hindu",
+        "noCreditCard": "Tasuta kuni 320 skannimist/kuus. Krediitkaarti pole vaja.",
         "trusted": "Usaldavad 500+ restorani üle kogu maailma",
         "title": "Kas oled valmis digitaalseks muutuma?",
         "subtitle": "Loo oma professionaalne QR menüü ja restorani veebisait minutitega. Igavesti tasuta, krediitkaarti ei ole vaja."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Vaata funktsioone",
+      "scrollToDemo": "Vaata demot",
       "perfectFor": {
         "restaurants": "Restoranid",
         "cafes": "Kohvikud",
         "bars": "Baarid",
         "hotels": "Hotellid"
       }
+    },
+    "demo": {
+      "title": "Kogege seda nagu teie külalised",
+      "subtitle": "Puudutage ekraani, et avastada kiire, ilus ja interaktiivne QR-menüü toimimas."
     },
     "intro": {
       "socialProof": "Usaldavad 500+ restorani üle kogu maailma",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restorani veebisait",
           "QR Menüü",
-          "400 skaneerimist/kuu",
+          "320 skaneerimist/kuu",
           "2 keelt",
           "IQ Rest vesimärgiga",
           "Analüütika"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

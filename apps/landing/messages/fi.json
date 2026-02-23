@@ -21,12 +21,12 @@
       "description": "Luo QR-menu ja ravintolan verkkosivut pelkällä sähköpostillasi. Välitön asennus, mobiilihallinta, AI-käännökset, päivittäiset analyysit. Täydellinen ravintoloille ja kahviloille. Aloita ilmaiseksi tänään."
     },
     "hero": {
-      "title": "Käynnistä QR-menu ja sivusto'{mbr}' 1 minuutissa",
+      "title": "Luo Ammattimainen QR Menu & Verkkosivusto Muutamassa Minuutissa",
       "subtitle": "Syötä vain sähköpostiosoitteesi ja saat täydellisen ravintolaverkkosivuston QR-menuineen, yhteyssivun, monikielisen tuen ja modernin muotoilun. Aseta kaikki puhelimestasi.",
       "cta": {
-        "create": "Luo ilmaiseksi",
-        "view": "Katso demo",
-        "noCreditCard": "Luottokorttia ei tarvita",
+        "create": "Luo menu",
+        "view": "Katso hinnat",
+        "noCreditCard": "Ilmainen 320 skannaukseen/kk asti. Luottokorttia ei tarvita.",
         "trusted": "Luotettu yli 500 ravintolan toimesta ympäri maailmaa",
         "title": "Valmiina siirtymään digitaaliseen maailmaan?",
         "subtitle": "Luo ammattimainen QR-menu ja ravintolan verkkosivusto minuuteissa. Ilmainen ikuisesti, ei vaadita luottokorttia."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Katso ominaisuudet",
+      "scrollToDemo": "Katso demo",
       "perfectFor": {
         "restaurants": "Ravintolat",
         "cafes": "Kahvilat",
         "bars": "Baarit",
         "hotels": "Hotellit"
       }
+    },
+    "demo": {
+      "title": "Koe se kuten vieraasi",
+      "subtitle": "Napauta näyttöä ja tutustu nopeaan, kauniiseen ja interaktiiviseen QR-menuun toiminnassa."
     },
     "intro": {
       "socialProof": "Luotettu yli 500 ravintolassa ympäri maailmaa",
@@ -511,7 +516,7 @@
         "highlights": [
           "Ravintolasivusto",
           "QR-menu",
-          "400 skannausta/kuukausi",
+          "320 skannausta/kuukausi",
           "2 kieltä",
           "IQ Rest vesileimalla",
           "Analytiikka"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

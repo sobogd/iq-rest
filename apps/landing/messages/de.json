@@ -21,12 +21,12 @@
       "description": "Erstellen Sie eine QR-Speisekarte und Restaurant-Website nur mit Ihrer E-Mail. Sofortige Einrichtung, mobilfreundliche Verwaltung, KI-Übersetzungen, tägliche Analysen. Perfekt für Restaurants und Cafés. Heute kostenlos starten."
     },
     "hero": {
-      "title": "Starten Sie Ihr QR-Menü'{mbr}' und Website in 1 Minute",
+      "title": "Erstellen Sie ein professionelles QR Menu & eine Website in Minuten",
       "subtitle": "Geben Sie einfach Ihre E-Mail-Adresse ein und erhalten Sie eine vollständige Restaurant-Website mit QR-Menü, Kontaktseite, mehrsprachiger Unterstützung und modernem Design. Richten Sie alles von Ihrem Handy aus ein.",
       "cta": {
-        "create": "Jetzt starten",
-        "view": "Demo",
-        "noCreditCard": "Keine Kreditkarte erforderlich",
+        "create": "Menü erstellen",
+        "view": "Preise ansehen",
+        "noCreditCard": "Kostenlos bis 320 Scans/Monat. Keine Kreditkarte erforderlich.",
         "trusted": "Vertraut von über 500 Restaurants weltweit",
         "title": "Bereit für die digitale Transformation?",
         "subtitle": "Erstellen Sie in wenigen Minuten Ihr professionelles QR-Menü und Ihre Restaurant-Website. Für immer kostenlos, keine Kreditkarte erforderlich."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Funktionen ansehen",
+      "scrollToDemo": "Demo ansehen",
       "perfectFor": {
         "restaurants": "Restaurants",
         "cafes": "Cafés",
         "bars": "Bars",
         "hotels": "Hotels"
       }
+    },
+    "demo": {
+      "title": "Erleben Sie es wie Ihre Gäste",
+      "subtitle": "Tippen Sie auf den Bildschirm, um ein schnelles, schönes und interaktives QR-Menü in Aktion zu entdecken."
     },
     "intro": {
       "socialProof": "Vertraut von über 500 Restaurants weltweit",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restaurant-Website",
           "QR Menü",
-          "400 Scans/Monat",
+          "320 Scans/Monat",
           "2 Sprachen",
           "Mit IQ Rest Wasserzeichen",
           "Analytik"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { MenuPreviewModal, HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner } from "./_components";
+import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner, DemoPhone } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -30,6 +30,7 @@ import {
   Coffee,
   Wine,
   Hotel,
+  ChevronDown,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -97,6 +98,8 @@ export default async function HomePage({
   const isLoggedIn = !!cookieStore.get("user_email")?.value;
 
   const tHero = await getTranslations("home.hero");
+  const tDemo = await getTranslations("home.demo");
+  const tFeaturesPreview = await getTranslations("home.featuresPreview");
   const tFeatures = await getTranslations("features");
 
   const features = tFeatures.raw("list") as Array<{
@@ -130,18 +133,13 @@ export default async function HomePage({
 
       {/* Hero Section - Variant B: compact, no benefits inside */}
       {isVariantB ? (
-        <section className="pt-8 pb-12 md:pt-12 md:pb-16">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <section className="min-h-[calc(100svh-73px)] flex flex-col relative">
+          <div className="container mx-auto px-4 flex-1 flex items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
               {/* Left side - Text content */}
               <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-                  {tHero("title").split("{mbr}").map((part, i, arr) => (
-                    <span key={i}>
-                      {part}
-                      {i < arr.length - 1 && <br className="md:hidden" />}
-                    </span>
-                  ))}
+                  {tHero("title")}
                 </h1>
                 <p className="text-base sm:text-lg md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
                   {tHero("subtitle")}
@@ -149,10 +147,9 @@ export default async function HomePage({
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                   <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
-                  <MenuPreviewModal
-                    buttonText={tHero("cta.view")}
-                    menuUrl="/m/love-eatery"
-                  />
+                  <Button variant="outline" size="lg" asChild>
+                    <a href="#pricing">{tHero("cta.view")}</a>
+                  </Button>
                 </div>
                 <p className="text-[10px] md:text-sm text-muted-foreground text-center lg:text-left mt-3 md:mt-4">
                   {tHero("cta.noCreditCard")}
@@ -165,10 +162,17 @@ export default async function HomePage({
               </div>
             </div>
           </div>
+          <a
+            href="#demo"
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+          >
+            <span className="text-sm">{tHero("scrollToDemo")}</span>
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </a>
         </section>
       ) : (
-        <section className="flex flex-col relative">
-          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pt-10 pb-10 lg:pt-16 lg:pb-16">
+        <section className="min-h-[calc(100svh-73px)] flex flex-col relative">
+          <div className="container mx-auto px-4 flex-1 flex items-center justify-center pt-4 pb-20 lg:pt-8 lg:pb-24">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8 lg:gap-12 items-center w-full">
               {/* Left side - Text content */}
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
@@ -179,12 +183,7 @@ export default async function HomePage({
 
                 {/* Title */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight lg:leading-tight mb-6">
-                  {tHero("title").split("{mbr}").map((part, i, arr) => (
-                    <span key={i}>
-                      {part}
-                      {i < arr.length - 1 && <br className="lg:hidden" />}
-                    </span>
-                  ))}
+                  {tHero("title")}
                 </h1>
 
                 {/* Perfect for badges */}
@@ -208,10 +207,9 @@ export default async function HomePage({
                 {/* CTA Buttons */}
                 <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3">
                   <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
-                  <MenuPreviewModal
-                    buttonText={tHero("cta.view")}
-                    menuUrl="/m/love-eatery"
-                  />
+                  <Button variant="outline" size="lg" asChild>
+                    <a href="#pricing">{tHero("cta.view")}</a>
+                  </Button>
                 </div>
                 <p className="text-[10px] md:text-sm text-muted-foreground text-center lg:text-left mt-3 md:mt-4">
                   {tHero("cta.noCreditCard")}
@@ -224,16 +222,43 @@ export default async function HomePage({
               </div>
             </div>
           </div>
-
+          <a
+            href="#demo"
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+          >
+            <span className="text-sm">{tHero("scrollToDemo")}</span>
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </a>
         </section>
       )}
 
-      {/* AI Menu Scanner */}
-      {/* {!isLoggedIn && <MenuScanner />} */}
+      {/* Demo Section */}
+      <SectionTracker id="demo" section="demo" className="py-16 lg:py-24 scroll-mt-20" threshold={0.2}>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              {tDemo("title")}
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-xl mb-10">
+              {tDemo("subtitle")}
+            </p>
+
+            <DemoPhone />
+          </div>
+        </div>
+      </SectionTracker>
 
       {/* Features Preview Section */}
       <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20" threshold={0.2}>
         <div className="container mx-auto px-4">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              {tFeaturesPreview("title")}
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
+              {tFeaturesPreview("subtitle")}
+            </p>
+          </div>
           <div className="space-y-0">
               {previewFeatures.map((feature, index) => {
                 const featureImages: Record<string, { layout: "trio" | "duo" | "horizontal"; images: { left: { src: string; alt: string }; center: { src: string; alt: string }; right: { src: string; alt: string } } }> = {

@@ -21,12 +21,12 @@
       "description": "Búðu til QR matseðil og veitingastaðavef með bara netfanginu þínu. Samstundis uppsetning, farsímavæn stjórnun, AI þýðingar, dagleg greining. Fullkomið fyrir veitingastaði og kaffihús. Byrjaðu ókeypis í dag."
     },
     "hero": {
-      "title": "Settu QR-valmynd og vefsíðu'{mbr}' af stað á 1 mínútu",
+      "title": "Búðu til Faglegt QR Menu og Vefsíðu á Nokkrum Mínútum",
       "subtitle": "Sláðu inn tölvupóstinn þinn og fáðu fullkomna veitingastaðavefsíðu með QR matseðli, tengiliðasíðu, fjöltyngda stuðning og nútímalegt útlit. Stilltu allt frá símanum þínum.",
       "cta": {
-        "create": "Búa til ókeypis",
-        "view": "Sjá sýnishorn",
-        "noCreditCard": "Ekki þarf kreditkort",
+        "create": "Búa til matseðil",
+        "view": "Sjá verð",
+        "noCreditCard": "Ókeypis allt að 320 skannanir/mán. Ekki þarf kreditkort.",
         "trusted": "Treyst á 500+ veitingastöðum um allan heim",
         "title": "Ertu tilbúinn að fara í stafræna heim?",
         "subtitle": "Búðu til þinn faglega QR matseðil og veitingastaðavef á nokkrum mínútum. Ókeypis að eilífu, engin kreditkort krafist."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Sjá eiginleika",
+      "scrollToDemo": "Sjá kynningu",
       "perfectFor": {
         "restaurants": "Veitingastaðir",
         "cafes": "Kaffihús",
         "bars": "Barir",
         "hotels": "Hótel"
       }
+    },
+    "demo": {
+      "title": "Upplifðu það eins og gestir þínir",
+      "subtitle": "Snertu skjáinn til að skoða hraðvirkan, fallegan og gagnvirkan QR matseðil í notkun."
     },
     "intro": {
       "socialProof": "Treyst af 500+ veitingastöðum um allan heim",
@@ -511,7 +516,7 @@
         "highlights": [
           "Veitingahús vefsíða",
           "QR Matseðill",
-          "400 skannanir/mánuði",
+          "320 skannanir/mánuði",
           "2 tungumál",
           "Með IQ Rest vatnsmerki",
           "Greiningar"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

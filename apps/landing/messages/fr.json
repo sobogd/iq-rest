@@ -21,12 +21,12 @@
       "description": "Créez un menu QR et un site web de restaurant avec juste votre email. Configuration instantanée, gestion mobile, traductions IA, analyses quotidiennes. Parfait pour restaurants et cafés. Commencez gratuitement aujourd'hui."
     },
     "hero": {
-      "title": "Lancez votre menu QR'{mbr}' et site web en 1 minute",
+      "title": "Créez un QR Menu Professionnel & un Site Web en Quelques Minutes",
       "subtitle": "Il vous suffit d'entrer votre email et d'obtenir un site web complet pour votre restaurant avec menu QR, page de contact, support multilingue et design moderne. Configurez tout depuis votre téléphone.",
       "cta": {
-        "create": "Créer Gratuit",
-        "view": "Voir la Démo",
-        "noCreditCard": "Aucune carte de crédit requise",
+        "create": "Créer le Menu",
+        "view": "Voir les Tarifs",
+        "noCreditCard": "Gratuit jusqu'à 320 scans/mois. Aucune carte de crédit requise.",
         "trusted": "Fidèle à plus de 500 restaurants dans le monde",
         "title": "Prêt à passer au numérique ?",
         "subtitle": "Créez votre menu QR professionnel et votre site web de restaurant en quelques minutes. Gratuit pour toujours, sans carte de crédit requise."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Voir les Fonctionnalités",
+      "scrollToDemo": "Voir la Démo",
       "perfectFor": {
         "restaurants": "Restaurants",
         "cafes": "Cafés",
         "bars": "Bars",
         "hotels": "Hôtels"
       }
+    },
+    "demo": {
+      "title": "Vivez l'Expérience Comme Vos Clients",
+      "subtitle": "Appuyez sur l'écran pour explorer un menu QR rapide, élégant et interactif en action."
     },
     "intro": {
       "socialProof": "Fiable par plus de 500 restaurants dans le monde",
@@ -511,7 +516,7 @@
         "highlights": [
           "Site web de restaurant",
           "Menu QR",
-          "400 scans/mois",
+          "320 scans/mois",
           "2 langues",
           "Avec filigrane IQ Rest",
           "Analytique"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

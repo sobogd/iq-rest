@@ -21,12 +21,12 @@
       "description": "Izradite QR jelovnik i web stranicu restorana samo s vašim emailom. Trenutna postavka, mobilno upravljanje, AI prijevodi, dnevne analize. Savršeno za restorane i kafiće. Počnite besplatno danas."
     },
     "hero": {
-      "title": "Pokrenite QR izbornik i stranicu'{mbr}' za 1 minutu",
+      "title": "Izradite Profesionalni QR Menu i Web Stranicu u Nekoliko Minuta",
       "subtitle": "Samo unesite svoju e-poštu i dobijte kompletnu web stranicu restorana s QR menijem, stranicom za kontakt, višelingvalnom podrškom i modernim dizajnom. Postavite sve s vašeg telefona.",
       "cta": {
-        "create": "Stvori besplatno",
-        "view": "Pogledaj demo",
-        "noCreditCard": "Nije potrebna kreditna kartica",
+        "create": "Stvori meni",
+        "view": "Pogledaj cijene",
+        "noCreditCard": "Besplatno do 320 skeniranja/mj. Nije potrebna kreditna kartica.",
         "trusted": "Povjerenje više od 500 restorana širom svijeta",
         "title": "Spremni za digitalizaciju?",
         "subtitle": "Izradite svoj profesionalni QR meni i web stranicu restorana u nekoliko minuta. Besplatno zauvijek, bez potrebe za kreditnom karticom."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Pogledaj značajke",
+      "scrollToDemo": "Pogledaj demo",
       "perfectFor": {
         "restaurants": "Restorani",
         "cafes": "Kafići",
         "bars": "Barovi",
         "hotels": "Hoteli"
       }
+    },
+    "demo": {
+      "title": "Doživite to kao vaši gosti",
+      "subtitle": "Dodirnite zaslon i istražite brz, lijep i interaktivan QR meni u akciji."
     },
     "intro": {
       "socialProof": "Povjerenje više od 500 restorana širom svijeta",
@@ -511,7 +516,7 @@
         "highlights": [
           "Web stranica restorana",
           "QR Meni",
-          "400 skeniranja/mjesečno",
+          "320 skeniranja/mjesečno",
           "2 jezika",
           "S IQ Rest vodenim žigom",
           "Analitika"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

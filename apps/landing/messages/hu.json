@@ -21,12 +21,12 @@
       "description": "Hozzon létre QR menüt és éttermi weboldalt csak az email címével. Azonnali beállítás, mobilbarát kezelés, AI fordítások, napi elemzések. Tökéletes éttermek és kávézók számára. Kezdje ingyen még ma."
     },
     "hero": {
-      "title": "Indítsd el QR menüd'{mbr}' és weboldalad 1 perc alatt",
+      "title": "Hozz Létre Professzionális QR Menu-t és Weboldalt Percek Alatt",
       "subtitle": "Csak add meg az email címed, és kapj egy teljes étterem weboldalt QR menüvel, kapcsolati oldallal, többnyelvű támogatással és modern dizájnnal. Minden beállítható a telefonodról.",
       "cta": {
-        "create": "Ingyenes létrehozás",
-        "view": "Demo megtekintése",
-        "noCreditCard": "Nincs szükség bankkártyára",
+        "create": "Menü létrehozása",
+        "view": "Árak megtekintése",
+        "noCreditCard": "Ingyenes 320 beolvasásig/hó. Nincs szükség bankkártyára.",
         "trusted": "Több mint 500 étterem bízik bennünket világszerte",
         "title": "Készen áll a digitális átállásra?",
         "subtitle": "Hozza létre professzionális QR menüjét és étterem weboldalát percek alatt. Örökre ingyenes, nincs szükség bankkártyára."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Funkciók megtekintése",
+      "scrollToDemo": "Demó megtekintése",
       "perfectFor": {
         "restaurants": "Éttermek",
         "cafes": "Kávézók",
         "bars": "Bárok",
         "hotels": "Szállodák"
       }
+    },
+    "demo": {
+      "title": "Tapasztalja meg úgy, mint vendégei",
+      "subtitle": "Érintse meg a képernyőt, és fedezzen fel egy gyors, gyönyörű és interaktív QR-menüt működés közben."
     },
     "intro": {
       "socialProof": "Több mint 500 étterem bízik bennünk világszerte",
@@ -511,7 +516,7 @@
         "highlights": [
           "Éttermek weboldala",
           "QR Menü",
-          "400 beolvasás/hónap",
+          "320 beolvasás/hónap",
           "2 nyelv",
           "IQ Rest vízjellel",
           "Analitika"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

@@ -21,12 +21,12 @@
       "description": "Sadece e-postanızla QR menü ve restoran web sitesi oluşturun. Anında kurulum, mobil yönetim, AI çeviriler, günlük analizler. Restoranlar ve kafeler için mükemmel. Bugün ücretsiz başlayın."
     },
     "hero": {
-      "title": "QR menü ve web sitenizi'{mbr}' 1 dakikada başlatın",
+      "title": "Profesyonel Bir QR Menu & Web Sitesi Dakikalar İçinde Oluşturun",
       "subtitle": "Sadece e-posta adresinizi girin ve QR menü, iletişim sayfası, çok dilli destek ve modern tasarıma sahip tam bir restoran web sitesi edinin. Her şeyi telefonunuzdan ayarlayın.",
       "cta": {
-        "create": "Ücretsiz oluştur",
-        "view": "Demo gör",
-        "noCreditCard": "Kredi kartı gerekmez",
+        "create": "Menü Oluştur",
+        "view": "Fiyatları Gör",
+        "noCreditCard": "320 taramaya/ay kadar ücretsiz. Kredi kartı gerekmez.",
         "trusted": "Dünyada 500'den fazla restoran tarafından güvenilir",
         "title": "Dijitale Geçmeye Hazır Mısınız?",
         "subtitle": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. Sonsuza dek ücretsiz, kredi kartı gerektirmez."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Özellikleri gör",
+      "scrollToDemo": "Demoyu gör",
       "perfectFor": {
         "restaurants": "Restoranlar",
         "cafes": "Kafeler",
         "bars": "Barlar",
         "hotels": "Oteller"
       }
+    },
+    "demo": {
+      "title": "Misafirleriniz gibi deneyimleyin",
+      "subtitle": "Hızlı, güzel ve etkileşimli bir QR menüyü çalışırken keşfetmek için ekrana dokunun."
     },
     "intro": {
       "socialProof": "Dünya genelinde 500+ restoran tarafından güvenilir",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restoran web sitesi",
           "QR Menü",
-          "400 tarama/ay",
+          "320 tarama/ay",
           "2 dil",
           "IQ Rest filigranı ile",
           "Analiz"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"

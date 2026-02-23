@@ -21,12 +21,12 @@
       "description": "Maak een QR-menu en restaurantwebsite met alleen je e-mail. Directe setup, mobiel beheer, AI-vertalingen, dagelijkse analyses. Perfect voor restaurants en cafés. Begin vandaag gratis."
     },
     "hero": {
-      "title": "Start je QR-menu en website'{mbr}' in 1 minuut",
+      "title": "Maak een Professioneel QR Menu & Website in Enkele Minuten",
       "subtitle": "Voer gewoon je e-mailadres in en krijg een complete restaurantwebsite met QR-menu, contactpagina, meertalige ondersteuning en modern ontwerp. Stel alles in vanaf je telefoon.",
       "cta": {
-        "create": "Nu starten",
-        "view": "Demo",
-        "noCreditCard": "Geen creditcard vereist",
+        "create": "Menu Maken",
+        "view": "Prijzen Bekijken",
+        "noCreditCard": "Gratis tot 320 scans/maand. Geen creditcard vereist.",
         "trusted": "Vertrouwd door meer dan 500 restaurants wereldwijd",
         "title": "Klaar om Digitaal te Gaan?",
         "subtitle": "Maak binnen enkele minuten je professionele QR-menu en restaurantwebsite. Altijd gratis, geen creditcard vereist."
@@ -50,12 +50,17 @@
         }
       ],
       "scrollToFeatures": "Bekijk functies",
+      "scrollToDemo": "Bekijk Demo",
       "perfectFor": {
         "restaurants": "Restaurants",
         "cafes": "Cafés",
         "bars": "Bars",
         "hotels": "Hotels"
       }
+    },
+    "demo": {
+      "title": "Beleef Het Zoals Uw Gasten",
+      "subtitle": "Tik op het scherm om een snel, mooi en interactief QR-menu in actie te verkennen."
     },
     "intro": {
       "socialProof": "Vertrouwd door 500+ restaurants wereldwijd",
@@ -511,7 +516,7 @@
         "highlights": [
           "Restaurantwebsite",
           "QR Menu",
-          "400 scans/maand",
+          "320 scans/maand",
           "2 talen",
           "Met IQ Rest watermerk",
           "Analyses"
@@ -566,7 +571,7 @@
     },
     "values": {
       "free": {
-        "scans": "400",
+        "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"
