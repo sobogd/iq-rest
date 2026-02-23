@@ -59,6 +59,8 @@ export enum DashboardEvent {
   CLICKED_NAV_TABLES = "clicked_nav_tables",
   CLICKED_NAV_RESERVATIONS = "clicked_nav_reservations",
   CLICKED_NAV_BILLING = "clicked_nav_billing",
+  CLICKED_NAV_SUPPORT = "clicked_nav_support",
+  CLICKED_NAV_SCANS = "clicked_nav_scans",
   CLICKED_LOGOUT = "clicked_logout",
 
   // Menu
@@ -71,6 +73,7 @@ export enum DashboardEvent {
   CLICKED_CATEGORY_ROW = "clicked_category_row",
   CLICKED_ITEM_ROW = "clicked_item_row",
   TOGGLED_MENU_ITEM_ACTIVE = "toggled_menu_item_active",
+  CLICKED_HAMBURGER_MENU = "clicked_hamburger_menu",
   CLICKED_SCAN_MENU = "clicked_scan_menu",
   SCAN_MENU_UPLOAD = "scan_menu_upload",
   SCAN_MENU_SUCCESS = "scan_menu_success",
@@ -271,6 +274,8 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_NAV_TABLES]: "Nav: Tables",
   [DashboardEvent.CLICKED_NAV_RESERVATIONS]: "Nav: Reservations",
   [DashboardEvent.CLICKED_NAV_BILLING]: "Nav: Billing",
+  [DashboardEvent.CLICKED_NAV_SUPPORT]: "Nav: Support",
+  [DashboardEvent.CLICKED_NAV_SCANS]: "Nav: Scans",
   [DashboardEvent.CLICKED_LOGOUT]: "Clicked Logout",
 
   // Menu
@@ -283,6 +288,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_CATEGORY_ROW]: "Clicked Category Row",
   [DashboardEvent.CLICKED_ITEM_ROW]: "Clicked Item Row",
   [DashboardEvent.TOGGLED_MENU_ITEM_ACTIVE]: "Toggled Menu Item Active",
+  [DashboardEvent.CLICKED_HAMBURGER_MENU]: "Clicked Hamburger Menu",
   [DashboardEvent.CLICKED_SCAN_MENU]: "Clicked Scan Menu",
   [DashboardEvent.SCAN_MENU_UPLOAD]: "Scan Menu Upload",
   [DashboardEvent.SCAN_MENU_SUCCESS]: "Scan Menu Success",

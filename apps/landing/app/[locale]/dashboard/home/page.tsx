@@ -1,20 +1,16 @@
 import { redirect } from "next/navigation";
 import { getUserCompanyId } from "@/lib/auth";
-import { prisma } from "@/lib/prisma";
-import { getRestaurant, checkIsAdmin, getChecklistStatus, getScanUsage } from "../_lib/queries";
+import { checkIsAdmin, getScanUsage } from "../_lib/queries";
 import { DashboardHome } from "../_pages/home";
 
 export default async function Page() {
   const companyId = await getUserCompanyId();
   if (!companyId) redirect("/");
 
-  const [restaurant, isAdmin, checklist, scanUsage, itemCount] = await Promise.all([
-    getRestaurant(companyId),
+  const [isAdmin, scanUsage] = await Promise.all([
     checkIsAdmin(),
-    getChecklistStatus(companyId),
     getScanUsage(companyId),
-    prisma.item.count({ where: { companyId } }),
   ]);
 
-  return <DashboardHome slug={restaurant?.slug ?? null} isAdmin={isAdmin} checklist={checklist} scanUsage={scanUsage} hasItems={itemCount > 0} />;
+  return <DashboardHome isAdmin={isAdmin} scanUsage={scanUsage} />;
 }

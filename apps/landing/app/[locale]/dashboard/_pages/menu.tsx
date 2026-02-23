@@ -2,11 +2,14 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { useBackIntercept } from "../_hooks/use-back-intercept";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, ArrowLeft, Loader2, Check, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Home, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
-import { useDashboard } from "../_context/dashboard-context";
+import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
@@ -25,20 +28,71 @@ interface ItemWithTranslations {
   category: Pick<Category, "id" | "name" | "sortOrder">;
 }
 
+interface ChecklistStatus {
+  nameSet: boolean;
+  menuEdited: boolean;
+  contactsAdded: boolean;
+  brandCustomized: boolean;
+  fromScanner: boolean;
+}
+
+interface ScanUsage {
+  used: number;
+  limit: number | null;
+}
+
 interface MenuPageProps {
   initialItems: ItemWithTranslations[];
   initialCategories: Category[];
   initialCurrency: string;
+  restaurantName: string;
+  slug: string | null;
+  checklist: ChecklistStatus;
+  scanUsage: ScanUsage | null;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, scanUsage }: MenuPageProps) {
   useBackIntercept("/dashboard");
   const { translations } = useDashboard();
+  const tHome = useTranslations("dashboard.home");
   const router = useRouter();
   const tItems = translations.items;
   const tCategories = translations.categories;
   const tMenu = translations.menu;
   const pageTitle = translations.pages.menu;
+
+  const allChecklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
+    { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
+    { key: "menuEdited", translationKey: "checklistMenuFill", path: PAGE_PATHS.menu },
+    { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
+    { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
+  ];
+
+  const checklistKeys = checklist.fromScanner
+    ? allChecklistKeys.filter((item) => item.key === "contactsAdded" || item.key === "brandCustomized")
+    : allChecklistKeys;
+
+  const completedCount = checklistKeys.filter((item) => checklist[item.key]).length;
+  const allDone = completedCount === checklistKeys.length;
+
+  const navEventMap: Record<string, DashboardEvent> = {
+    design: DashboardEvent.CLICKED_NAV_DESIGN,
+    contacts: DashboardEvent.CLICKED_NAV_CONTACTS,
+    settings: DashboardEvent.CLICKED_NAV_SETTINGS,
+    qrMenu: DashboardEvent.CLICKED_NAV_QR,
+    analytics: DashboardEvent.CLICKED_NAV_ANALYTICS,
+    tables: DashboardEvent.CLICKED_NAV_TABLES,
+    reservations: DashboardEvent.CLICKED_NAV_RESERVATIONS,
+    billing: DashboardEvent.CLICKED_NAV_BILLING,
+    support: DashboardEvent.CLICKED_NAV_SUPPORT,
+  };
+
+  const checklistEventMap: Record<string, DashboardEvent> = {
+    nameSet: DashboardEvent.CLICKED_CHECKLIST_NAME,
+    menuEdited: DashboardEvent.CLICKED_CHECKLIST_MENU,
+    contactsAdded: DashboardEvent.CLICKED_CHECKLIST_CONTACTS,
+    brandCustomized: DashboardEvent.CLICKED_CHECKLIST_BRAND,
+  };
 
   const [items, setItems] = useState<ItemWithTranslations[]>(initialItems);
   const [categories, setCategories] = useState<Category[]>(initialCategories);
@@ -201,13 +255,58 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
       {/* Custom header */}
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
         <div className="flex items-center py-3 max-w-lg mx-auto">
-          <button
-            onClick={() => router.push("/dashboard")}
-            className="flex items-center justify-center h-10 w-10 -ml-2"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </button>
-          <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+          <Popover modal>
+            <PopoverTrigger asChild>
+              <button
+                onClick={() => track(DashboardEvent.CLICKED_HAMBURGER_MENU)}
+                className="flex items-center justify-center h-10 w-10 -ml-2"
+              >
+                <MenuIcon className="h-5 w-5" />
+              </button>
+            </PopoverTrigger>
+            <PopoverContent align="start" className="p-0 w-56 rounded-2xl border border-border bg-background overflow-hidden">
+              {([
+                { page: "design" as PageKey, icon: Palette },
+                { page: "contacts" as PageKey, icon: Phone },
+                { page: "settings" as PageKey, icon: Languages },
+                { page: "qrMenu" as PageKey, icon: QrCode },
+                { page: "analytics" as PageKey, icon: BarChart3 },
+                { page: "tables" as PageKey, icon: Armchair },
+                { page: "reservations" as PageKey, icon: CalendarDays },
+                { page: "billing" as PageKey, icon: CreditCard },
+                { page: "support" as PageKey, icon: HelpCircle },
+              ]).map(({ page, icon: Icon }, index) => (
+                <div
+                  key={page}
+                  onClick={() => { if (navEventMap[page]) track(navEventMap[page]); router.push(PAGE_PATHS[page]); }}
+                  className={`flex items-center gap-3 h-12 px-6 cursor-pointer transition-colors hover:bg-muted/30 ${
+                    index > 0 ? "border-t border-foreground/5" : ""
+                  }`}
+                >
+                  <Icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium">{translations.pages[page]}</span>
+                </div>
+              ))}
+              {scanUsage && (
+                <div onClick={() => { track(DashboardEvent.CLICKED_NAV_SCANS); router.push(PAGE_PATHS.billing); }} className="flex items-center justify-between h-12 px-6 border-t border-foreground/5 cursor-pointer transition-colors hover:bg-muted/30">
+                  <span className="text-sm font-medium">{tHome("scansTitle")}:</span>
+                  <span className="text-sm text-muted-foreground">
+                    {scanUsage.limit
+                      ? tHome("scansUsed", { used: scanUsage.used.toLocaleString(), limit: scanUsage.limit.toLocaleString() })
+                      : tHome("scansUnlimited", { used: scanUsage.used.toLocaleString() })}
+                  </span>
+                </div>
+              )}
+              <div
+                onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
+                className="flex items-center gap-3 h-12 px-6 cursor-pointer transition-colors hover:bg-muted/30 border-t border-foreground/5"
+              >
+                <LogOut className="h-4 w-4 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium">{translations.logout}</span>
+              </div>
+            </PopoverContent>
+          </Popover>
+          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{restaurantName || pageTitle}</h1>
           {showSortButton && (
             sortMode ? (
               <button
@@ -230,9 +329,75 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto h-full">
+        <div className="max-w-lg mx-auto flex flex-col gap-4 min-h-full">
+          {/* View menu button */}
+          {!sortMode && slug && categories.length > 0 && (
+            <MenuPreviewModal menuUrl={`/m/${slug}`}>
+              <Button variant="destructive" className="w-full h-12 rounded-2xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
+                <Eye className="h-4 w-4" />
+                {tHome("viewMenu")}
+              </Button>
+            </MenuPreviewModal>
+          )}
+
+          {/* Success banner */}
+          {!sortMode && allDone && (
+            <div className="flex items-center gap-3 rounded-2xl border border-green-500/30 bg-green-500/10 p-3">
+              <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
+              <p className="text-sm font-medium">{tHome("menuReady")}</p>
+            </div>
+          )}
+
+          {/* Setup checklist */}
+          {!sortMode && !allDone && (
+            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <div className="px-4 py-3 bg-muted/30">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                    {tHome("getReady")}
+                  </span>
+                  <span className="text-sm text-muted-foreground">{completedCount}/{checklistKeys.length}</span>
+                </div>
+                <div className="h-2 rounded-full bg-muted overflow-hidden">
+                  <div
+                    className="h-full rounded-full bg-green-500 transition-all duration-500"
+                    style={{ width: `${(completedCount / checklistKeys.length) * 100}%` }}
+                  />
+                </div>
+              </div>
+              {checklistKeys.map((item) => {
+                const done = checklist[item.key];
+                const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
+                return (
+                  <button
+                    key={item.key}
+                    onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
+                    disabled={done}
+                    className={`flex items-center gap-3 w-full h-12 px-4 text-left transition-colors ${
+                      done
+                        ? "opacity-60"
+                        : isNext
+                          ? "bg-green-500/5"
+                          : "hover:bg-muted/30"
+                    }`}
+                  >
+                    {done ? (
+                      <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
+                    ) : (
+                      <Circle className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />
+                    )}
+                    <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-semibold" : "font-medium"}`}>
+                      {tHome(item.translationKey)}
+                    </span>
+                    {!done && <ArrowRight className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
         {categories.length === 0 ? (
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center flex-1">
             <div className="flex flex-col items-center text-center rounded-2xl border border-border bg-muted/50 px-6 py-6 max-w-sm w-full">
               <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
               <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
@@ -246,8 +411,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency }: M
             </div>
           </div>
         ) : (
-          <div className="flex flex-col min-h-full">
-            <div className="pb-4 flex flex-col gap-4 flex-1">
+          <div className="flex flex-col">
+            <div className="pb-4 flex flex-col gap-4">
               {sortedCategories.map((category, catIndex) => {
                 const categoryItems = items
                   .filter((i) => i.categoryId === category.id)

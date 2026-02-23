@@ -247,7 +247,7 @@ export function ItemsPage() {
               >
                 <X className="h-5 w-5" />
               </button>
-              <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+              <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
               <button
                 onClick={handleSaveSortOrder}
                 disabled={savingSort}
@@ -264,7 +264,7 @@ export function ItemsPage() {
               >
                 <ArrowLeft className="h-5 w-5" />
               </button>
-              <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+              <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
               {items.length > 1 && (
                 <button
                   onClick={handleStartSortMode}

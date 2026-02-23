@@ -3,12 +3,9 @@
 import { useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import {
-  Eye,
-  ArrowRight,
   QrCode,
   Palette,
   Phone,
@@ -28,11 +25,8 @@ import {
   Send,
   Search,
   KeyRound,
-  CheckCircle2,
-  Circle,
   ChevronRight,
 } from "lucide-react";
-import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ className?: string }> }[] = [
@@ -47,61 +41,22 @@ const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ cla
   { key: "billing", page: "billing", icon: CreditCard },
 ];
 
-interface ChecklistStatus {
-  nameSet: boolean;
-  menuEdited: boolean;
-  contactsAdded: boolean;
-  brandCustomized: boolean;
-  fromScanner: boolean;
-}
-
 interface ScanUsage {
   used: number;
   limit: number | null;
 }
 
 interface DashboardHomeProps {
-  slug: string | null;
   isAdmin: boolean;
-  checklist: ChecklistStatus;
   scanUsage: ScanUsage | null;
-  hasItems: boolean;
 }
 
-export function DashboardHome({ slug, isAdmin, checklist, scanUsage, hasItems }: DashboardHomeProps) {
+export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
   const tPages = useTranslations("dashboard.pages");
   const tDashboard = useTranslations("dashboard");
   const tHome = useTranslations("dashboard.home");
   const { translations } = useDashboard();
   const router = useRouter();
-
-  const allChecklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
-    { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
-    { key: "menuEdited", translationKey: "checklistMenuFill", path: PAGE_PATHS.menu },
-    { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
-    { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
-  ];
-
-  // Scanner restaurants: only show contacts + design (first 3 are already done)
-  const checklistKeys = checklist.fromScanner
-    ? allChecklistKeys.filter((item) => item.key === "contactsAdded" || item.key === "brandCustomized")
-    : allChecklistKeys;
-
-  const completedCount = checklistKeys.filter((item) => checklist[item.key]).length;
-  const allDone = completedCount === checklistKeys.length;
-
-  useBlockBack();
-
-  useEffect(() => {
-    track(DashboardEvent.SHOWED_HOME);
-  }, []);
-
-  const checklistEventMap: Record<string, DashboardEvent> = {
-    nameSet: DashboardEvent.CLICKED_CHECKLIST_NAME,
-    menuEdited: DashboardEvent.CLICKED_CHECKLIST_MENU,
-    contactsAdded: DashboardEvent.CLICKED_CHECKLIST_CONTACTS,
-    brandCustomized: DashboardEvent.CLICKED_CHECKLIST_BRAND,
-  };
 
   const navEventMap: Record<string, DashboardEvent> = {
     menu: DashboardEvent.CLICKED_NAV_MENU,
@@ -115,6 +70,12 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage, hasItems }:
     billing: DashboardEvent.CLICKED_NAV_BILLING,
   };
 
+  useBlockBack();
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_HOME);
+  }, []);
+
   return (
     <div className="flex flex-col h-full">
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
@@ -122,7 +83,7 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage, hasItems }:
           <div className="flex items-center justify-center h-10 w-10 -ml-2">
             <Home className="h-5 w-5" />
           </div>
-          <h1 className="text-xl font-semibold flex-1 ml-3">{translations.pages.home}</h1>
+          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{translations.pages.home}</h1>
           <button
             onClick={() => { track(DashboardEvent.CLICKED_HELP); router.push(PAGE_PATHS.support); }}
             className="flex items-center justify-center h-10 w-10 -mr-2"
@@ -133,71 +94,6 @@ export function DashboardHome({ slug, isAdmin, checklist, scanUsage, hasItems }:
       </header>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="w-full max-w-lg mx-auto flex flex-col gap-4">
-            {slug && hasItems && (
-              <MenuPreviewModal menuUrl={`/m/${slug}`}>
-                <Button variant="destructive" className="w-full h-12 rounded-2xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
-                  <Eye className="h-4 w-4" />
-                  {tHome("viewMenu")}
-                </Button>
-              </MenuPreviewModal>
-            )}
-
-            {/* Success banner */}
-            {allDone && (
-              <div className="flex items-center gap-3 rounded-2xl border border-green-500/30 bg-green-500/10 p-3">
-                <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
-                <p className="text-sm font-medium">{tHome("menuReady")}</p>
-              </div>
-            )}
-
-            {/* Setup checklist card */}
-            {!allDone && (
-              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
-                <div className="px-4 py-3 bg-muted/30">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                      {tHome("getReady")}
-                    </span>
-                    <span className="text-sm text-muted-foreground">{completedCount}/{checklistKeys.length}</span>
-                  </div>
-                  <div className="h-2 rounded-full bg-muted overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-green-500 transition-all duration-500"
-                      style={{ width: `${(completedCount / checklistKeys.length) * 100}%` }}
-                    />
-                  </div>
-                </div>
-                {checklistKeys.map((item) => {
-                  const done = checklist[item.key];
-                  const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
-                  return (
-                    <button
-                      key={item.key}
-                      onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
-                      disabled={done}
-                      className={`flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 text-left transition-colors ${
-                        done
-                          ? "opacity-60"
-                          : isNext
-                            ? "bg-green-500/5"
-                            : "hover:bg-muted/30"
-                      }`}
-                    >
-                      {done ? (
-                        <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
-                      ) : (
-                        <Circle className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />
-                      )}
-                      <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-semibold" : "font-medium"}`}>
-                        {tHome(item.translationKey)}
-                      </span>
-                      {!done && <ArrowRight className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />}
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-
             {/* Navigation card */}
             <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
               {allSections.map((item, index) => (

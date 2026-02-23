@@ -46,7 +46,7 @@ export function PageHeader({ title, children, onBack, backHref = "/dashboard" }:
         >
           <ArrowLeft className="h-5 w-5" />
         </button>
-        <h1 className="text-xl font-semibold flex-1 ml-3">{title}</h1>
+        <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{title}</h1>
         {children}
       </div>
     </header>

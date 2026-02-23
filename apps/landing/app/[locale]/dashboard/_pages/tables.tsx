@@ -141,7 +141,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
-          <h1 className="text-xl font-semibold flex-1 ml-3">{pageTitle}</h1>
+          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
           {tables.length > 1 && (
             sortMode ? (
               <button
