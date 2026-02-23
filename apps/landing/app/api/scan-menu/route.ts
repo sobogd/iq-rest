@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
+import { s3Client, s3Key } from "@/lib/s3";
 import sharp from "sharp";
 
 export const maxDuration = 60;
@@ -93,6 +95,32 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Save originals to S3 (fire-and-forget, don't block scan)
+    const timestamp = Date.now();
+    Promise.all(
+      rawFiles.map(async (file, i) => {
+        try {
+          const mimeMatch = file.match(/^data:([^;]+);base64,/);
+          if (!mimeMatch) return;
+          const mime = mimeMatch[1];
+          const base64Data = file.split(",")[1];
+          const buffer = Buffer.from(base64Data, "base64");
+          const ext = mime === "application/pdf" ? "pdf" : mime.split("/")[1] || "bin";
+          const key = s3Key("scan_onboarding", companyId, `${timestamp}-${i}.${ext}`);
+          await s3Client.send(
+            new PutObjectCommand({
+              Bucket: process.env.S3_NAME!,
+              Key: key,
+              Body: buffer,
+              ContentType: mime,
+            })
+          );
+        } catch (err) {
+          console.error("Failed to save scan file to S3:", err);
+        }
+      })
+    ).catch(() => {});
 
     // Process all files: images get compressed, PDFs get converted to images
     const optimizedImages: string[] = [];

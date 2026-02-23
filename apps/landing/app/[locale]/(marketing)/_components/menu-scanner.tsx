@@ -333,7 +333,7 @@ export function MenuScanner() {
           <input
             ref={fileInputRef}
             type="file"
-            accept="image/*"
+            accept="image/*,.heic,.heif,image/heic,image/heif"
             multiple
             className="hidden"
             onChange={handleFileSelect}

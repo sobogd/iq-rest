@@ -189,6 +189,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
+        const detail = `${res.status} ${JSON.stringify(data)}`;
         if (data.error === "not_a_menu") {
           setScanError(tMenu("scanErrorNotMenu"));
         } else if (data.error === "too_large") {
@@ -199,18 +200,19 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
           setScanError(tMenu("scanError"));
         }
         setPageState("error");
-        track(DashboardEvent.SCAN_MENU_ERROR, { reason: data.error || "unknown" });
+        track(DashboardEvent.SCAN_MENU_ERROR, { reason: data.error || "unknown", detail });
         return;
       }
 
       track(DashboardEvent.SCAN_MENU_SUCCESS);
       toast.success(tMenu("scanSuccess"));
       window.location.href = `/${locale}/dashboard`;
-    } catch {
+    } catch (err) {
+      const detail = err instanceof Error ? `${err.name}: ${err.message}` : String(err);
       progressRef.current.done = true;
       setScanError(tMenu("scanError"));
       setPageState("error");
-      track(DashboardEvent.SCAN_MENU_ERROR, { reason: "network" });
+      track(DashboardEvent.SCAN_MENU_ERROR, { reason: "exception", detail });
     }
   }, [photoPool, tMenu, locale]);
 
@@ -221,7 +223,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
         <input
           ref={fileInputRef}
           type="file"
-          accept="image/*,.pdf,application/pdf"
+          accept="image/*,.heic,.heif,image/heic,image/heif,.pdf,application/pdf"
           multiple
           className="hidden"
           onChange={(e) => addFilesToPool(e.target.files)}
