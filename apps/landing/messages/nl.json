@@ -640,7 +640,8 @@
       "features": "Kenmerken",
       "contacts": "Contacten",
       "faq": "Vragen",
-      "changelog": "Wijzigingslog"
+      "changelog": "Wijzigingslog",
+      "languages": "Talen"
     },
     "legal": {
       "title": "Juridisch",
@@ -1839,7 +1840,7 @@
       "checklistContacts": "Voeg contacten toe",
       "checklistBrand": "Pas je merk aan",
       "menuReady": "Je menu is klaar! Deel je QR-code met klanten.",
-      "scansTitle": "Maandelijkse scans",
+      "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scans"
     }
@@ -2294,5 +2295,13 @@
     "ownerBody": "Er is een nieuwe reservering gemaakt in uw restaurant.",
     "ownerCta": "Reserveringen bekijken",
     "ownerSignature": "Met vriendelijke groet,<br>IQ Rest Team"
+  },
+  "languages": {
+    "meta": {
+      "title": "Taal kiezen - IQ Rest QR Menu",
+      "description": "Bekijk IQ Rest in uw voorkeurstaal. Beschikbaar in 35 talen."
+    },
+    "title": "Taal kiezen",
+    "subtitle": "Bekijk IQ Rest in uw voorkeurstaal"
   }
 }

@@ -76,8 +76,20 @@ function formatEventName(event: string): string {
     page_view_terms: "Visited Terms",
     page_view_privacy: "Visited Privacy",
     page_view_cookies: "Visited Cookies",
+    page_view_languages: "Visited Languages",
     demo_open: "Opened Demo",
     demo_close: "Closed Demo",
+    demo_scroll_arrow: "Scrolled to Demo",
+    demo_interact: "Touched Demo",
+    hero_images_click: "Clicked Hero Images",
+    pricing_cta_click: "Clicked Pricing CTA",
+    scanner_upload: "Scanner: Upload",
+    scanner_success: "Scanner: Success",
+    scanner_error: "Scanner: Error",
+    scanner_cta_click: "Scanner: CTA Click",
+    scanner_preview_shown: "Scanner: Preview Shown",
+    scanner_preview_returning: "Scanner: Preview Returning",
+    scanner_conversion: "Scanner: Conversion",
   };
   if (legacyNames[event]) return legacyNames[event];
   if (event.startsWith("section_view_")) {

@@ -181,7 +181,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       console.error("Failed to fetch data:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "item" });
       toast.error(t.fetchError);
-      if (id) router.push("/dashboard/menu");
+      if (id) router.push("/dashboard");
     } finally {
       setLoading(false);
     }
@@ -363,7 +363,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        window.location.href = `/${locale}/dashboard/menu`;
+        window.location.href = `/${locale}/dashboard`;
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "item" });
@@ -436,7 +436,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_ITEM);
         toast.success(isEdit ? t.updated : t.created);
-        window.location.href = `/${locale}/dashboard/menu`;
+        window.location.href = `/${locale}/dashboard`;
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "item" });
@@ -462,7 +462,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   return (
     <div className="flex flex-col h-full overflow-y-auto">
       <div className="sticky top-0 z-10 bg-background">
-        <PageHeader title={isEdit ? t.editItem : t.addItem} backHref="/dashboard/menu">
+        <PageHeader title={isEdit ? t.editItem : t.addItem} backHref="/dashboard">
           <Button
             type="submit"
             form="item-form"

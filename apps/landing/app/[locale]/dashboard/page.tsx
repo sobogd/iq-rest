@@ -1,16 +1,31 @@
 import { redirect } from "next/navigation";
 import { getUserCompanyId } from "@/lib/auth";
-import { checkIsAdmin, getScanUsage } from "./_lib/queries";
-import { DashboardHome } from "./_pages/home";
+import { getItems, getCategories, getRestaurant, getChecklistStatus, getScanUsage, checkIsAdmin } from "./_lib/queries";
+import { MenuPage } from "./_pages/menu";
 
 export default async function Page() {
   const companyId = await getUserCompanyId();
   if (!companyId) redirect("/");
 
-  const [isAdmin, scanUsage] = await Promise.all([
-    checkIsAdmin(),
+  const [items, categories, restaurant, checklist, scanUsage, isAdmin] = await Promise.all([
+    getItems(companyId),
+    getCategories(companyId),
+    getRestaurant(companyId),
+    getChecklistStatus(companyId),
     getScanUsage(companyId),
+    checkIsAdmin(),
   ]);
 
-  return <DashboardHome isAdmin={isAdmin} scanUsage={scanUsage} />;
+  return (
+    <MenuPage
+      initialItems={items}
+      initialCategories={categories}
+      initialCurrency={restaurant?.currency ?? "EUR"}
+      restaurantName={restaurant?.title ?? ""}
+      slug={restaurant?.slug ?? null}
+      checklist={checklist}
+      scanUsage={scanUsage}
+      isAdmin={isAdmin}
+    />
+  );
 }

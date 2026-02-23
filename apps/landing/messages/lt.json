@@ -640,7 +640,8 @@
       "features": "Funkcijos",
       "contacts": "Kontaktai",
       "faq": "Dažnai užduodami klausimai",
-      "changelog": "Pakeitimų žurnalas"
+      "changelog": "Pakeitimų žurnalas",
+      "languages": "Kalbos"
     },
     "legal": {
       "title": "Teisiniai",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Pridėkite kontaktus",
       "checklistBrand": "Pritaikykite prekės ženklą",
       "menuReady": "Jūsų meniu paruoštas! Pasidalykite QR kodu su klientais.",
-      "scansTitle": "Mėnesio nuskaitymai",
+      "scansTitle": "Nuskaitymai",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} nuskaitymų"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Jūsų restorane atlikta nauja rezervacija.",
     "ownerCta": "Peržiūrėti rezervacijas",
     "ownerSignature": "Pagarbiai,<br>IQ Rest komanda"
+  },
+  "languages": {
+    "meta": {
+      "title": "Pasirinkite kalbą - IQ Rest QR meniu",
+      "description": "Naršykite IQ Rest pageidaujama kalba. Prieinama 35 kalbomis."
+    },
+    "title": "Pasirinkite kalbą",
+    "subtitle": "Naršykite IQ Rest pageidaujama kalba"
   }
 }

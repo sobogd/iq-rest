@@ -1,6 +1,5 @@
 export { Header } from "./header";
 export { Footer } from "./footer";
-export { LanguageSelector } from "./language-selector";
 export { PricingCards } from "./pricing-cards";
 export { PricingSection } from "./pricing-section";
 export { HeroCreateButton } from "./hero-create-button";

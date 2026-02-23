@@ -1,10 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 
 export function DemoPhone() {
   const tracked = useRef(false);
+  const [loading, setLoading] = useState(true);
 
   const handleInteract = () => {
     if (!tracked.current) {
@@ -15,6 +17,7 @@ export function DemoPhone() {
 
   return (
     <div
+      id="demo-phone"
       className="relative"
       onClick={handleInteract}
       style={{
@@ -22,10 +25,17 @@ export function DemoPhone() {
         height: "min(70svh, calc(min(80dvw, 350px) * 16 / 8))",
       }}
     >
-      <div className="absolute inset-0 bg-[#1a1a1a] rounded-[40px] p-2 shadow-2xl">
+      <div className="absolute inset-0 bg-[#1a1a1a] rounded-[40px] p-2" style={{ boxShadow: "0 25px 80px -10px rgba(0,0,0,0.5), 0 10px 30px -5px rgba(0,0,0,0.3)" }}>
         <div className="relative w-full h-full bg-[#1a1a1a] rounded-[32px] overflow-hidden">
           {/* Dynamic Island */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-full z-10" />
+
+          {/* Loading spinner */}
+          {loading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black z-5">
+              <Loader2 className="w-8 h-8 animate-spin text-white/50" />
+            </div>
+          )}
 
           {/* Screen — scrolling disabled so page scroll works over iframe */}
           <iframe
@@ -40,6 +50,7 @@ export function DemoPhone() {
             }}
             title="Menu Preview"
             loading="lazy"
+            onLoad={() => setTimeout(() => setLoading(false), 500)}
           />
         </div>
       </div>

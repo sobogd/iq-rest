@@ -17,7 +17,7 @@ interface CategoryWithTranslations extends Category {
 }
 
 export function CategoriesPage() {
-  useBackIntercept("/dashboard/menu");
+  useBackIntercept("/dashboard");
   const { translations } = useDashboard();
   const router = useRouter();
   const t = translations.categories;
@@ -177,7 +177,7 @@ export function CategoriesPage() {
           ) : (
             <>
               <button
-                onClick={() => router.push("/dashboard/menu")}
+                onClick={() => router.push("/dashboard")}
                 className="flex items-center justify-center h-10 w-10 -ml-2"
               >
                 <ArrowLeft className="h-5 w-5" />

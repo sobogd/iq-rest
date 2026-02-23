@@ -640,7 +640,8 @@
       "features": "Funkce",
       "contacts": "Kontakty",
       "faq": "Často kladené otázky",
-      "changelog": "Záznam změn"
+      "changelog": "Záznam změn",
+      "languages": "Jazyky"
     },
     "legal": {
       "title": "Právní",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Přidejte kontakty",
       "checklistBrand": "Přizpůsobte značku",
       "menuReady": "Vaše menu je připraveno! Sdílejte QR kód se zákazníky.",
-      "scansTitle": "Měsíční skeny",
+      "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skenů"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Ve vaší restauraci byla provedena nová rezervace.",
     "ownerCta": "Zobrazit rezervace",
     "ownerSignature": "S pozdravem,<br>Tým IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Vybrat jazyk - IQ Rest QR menu",
+      "description": "Prohlížejte IQ Rest ve vašem preferovaném jazyce. K dispozici ve 35 jazycích."
+    },
+    "title": "Vybrat jazyk",
+    "subtitle": "Prohlížejte IQ Rest ve vašem preferovaném jazyce"
   }
 }

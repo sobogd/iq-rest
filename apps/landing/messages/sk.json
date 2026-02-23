@@ -640,7 +640,8 @@
       "features": "Funkcie",
       "contacts": "Kontakty",
       "faq": "Otázky",
-      "changelog": "Záznam zmien"
+      "changelog": "Záznam zmien",
+      "languages": "Jazyky"
     },
     "legal": {
       "title": "Právne",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Pridajte kontakty",
       "checklistBrand": "Prispôsobte značku",
       "menuReady": "Vaše menu je pripravené! Zdieľajte QR kód so zákazníkmi.",
-      "scansTitle": "Mesačné skeny",
+      "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skenov"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Vo vašej reštaurácii bola vykonaná nová rezervácia.",
     "ownerCta": "Zobraziť rezervácie",
     "ownerSignature": "S pozdravom,<br>Tím IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Vybrať jazyk - IQ Rest QR Menu",
+      "description": "Prehliadajte IQ Rest vo vašom preferovanom jazyku. K dispozícii v 35 jazykoch."
+    },
+    "title": "Vybrať jazyk",
+    "subtitle": "Prehliadajte IQ Rest vo vašom preferovanom jazyku"
   }
 }

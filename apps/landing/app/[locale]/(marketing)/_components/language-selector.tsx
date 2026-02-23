@@ -115,7 +115,6 @@ export function LanguageSelector() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="pl-9"
-            autoFocus
           />
         </div>
         <ScrollArea className="h-[300px] pr-4">

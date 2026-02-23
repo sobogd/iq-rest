@@ -640,7 +640,8 @@
       "features": "Особливості",
       "contacts": "Контакти",
       "faq": "Питання",
-      "changelog": "Журнал змін"
+      "changelog": "Журнал змін",
+      "languages": "Мови"
     },
     "legal": {
       "title": "Правова інформація",
@@ -1839,7 +1840,7 @@
       "checklistContacts": "Додайте контакти",
       "checklistBrand": "Налаштуйте бренд",
       "menuReady": "Ваше меню готове! Поділіться QR-кодом з клієнтами.",
-      "scansTitle": "Сканування за місяць",
+      "scansTitle": "Скани",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} сканувань"
     }
@@ -2294,5 +2295,13 @@
     "ownerBody": "У вашому ресторані зроблено нове бронювання.",
     "ownerCta": "Переглянути бронювання",
     "ownerSignature": "З повагою,<br>Команда IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Обрати мову - IQ Rest QR-меню",
+      "description": "Переглядайте IQ Rest бажаною мовою. Доступно 35 мовами."
+    },
+    "title": "Обрати мову",
+    "subtitle": "Переглядайте IQ Rest бажаною мовою"
   }
 }

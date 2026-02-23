@@ -21,8 +21,8 @@ export type PageKey =
   | "adminOnboarding";
 
 export const PAGE_PATHS: Record<PageKey, string> = {
-  home: "/dashboard/home",
-  menu: "/dashboard/menu",
+  home: "/dashboard",
+  menu: "/dashboard",
   categories: "/dashboard/categories",
   items: "/dashboard/items",
   tables: "/dashboard/tables",
@@ -40,7 +40,8 @@ export const PAGE_PATHS: Record<PageKey, string> = {
 };
 
 const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
-  "home": "home",
+  "": "menu",
+  "home": "menu",
   "menu": "menu",
   "categories": "categories",
   "items": "items",
@@ -61,9 +62,13 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
 export function getPageKeyFromPathname(pathname: string): PageKey {
   const dashboardPrefix = "/dashboard/";
   const idx = pathname.indexOf(dashboardPrefix);
-  if (idx === -1) return "home";
+  if (idx === -1) {
+    // Check if it ends with "/dashboard" exactly
+    if (pathname.endsWith("/dashboard") || pathname === "/dashboard") return "menu";
+    return "menu";
+  }
   const subPath = pathname.slice(idx + dashboardPrefix.length);
-  return PATH_TO_PAGE_MAP[subPath] || "home";
+  return PATH_TO_PAGE_MAP[subPath] || "menu";
 }
 
 export interface AnalyticsTranslations {

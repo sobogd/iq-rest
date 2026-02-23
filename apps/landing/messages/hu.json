@@ -640,7 +640,8 @@
       "features": "Funkciók",
       "contacts": "Kapcsolatok",
       "faq": "Kérdések",
-      "changelog": "Változásnapló"
+      "changelog": "Változásnapló",
+      "languages": "Nyelvek"
     },
     "legal": {
       "title": "Jogi",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Adja meg az elérhetőségeket",
       "checklistBrand": "Szabja testre a márkát",
       "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel.",
-      "scansTitle": "Havi szkennelések",
+      "scansTitle": "Szkennek",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} szkennelés"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Új foglalás érkezett az éttermedbe.",
     "ownerCta": "Foglalások megtekintése",
     "ownerSignature": "Üdvözlettel,<br>IQ Rest csapat"
+  },
+  "languages": {
+    "meta": {
+      "title": "Nyelv kiválasztása - IQ Rest QR Menü",
+      "description": "Böngéssze az IQ Rest-et az Ön által preferált nyelven. 35 nyelven elérhető."
+    },
+    "title": "Nyelv kiválasztása",
+    "subtitle": "Böngéssze az IQ Rest-et az Ön által preferált nyelven"
   }
 }

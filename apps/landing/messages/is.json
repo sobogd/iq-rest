@@ -640,7 +640,8 @@
       "features": "Eiginleikar",
       "contacts": "Samskipti",
       "faq": "Spurningar",
-      "changelog": "Breytingaskrá"
+      "changelog": "Breytingaskrá",
+      "languages": "Tungumál"
     },
     "legal": {
       "title": "Lögfræði",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Bættu við tengiliðum",
       "checklistBrand": "Sérsníðið vörumerkið",
       "menuReady": "Matseðillinn þinn er tilbúinn! Deildu QR kóðanum með viðskiptavinum.",
-      "scansTitle": "Mánaðarlegar skannanir",
+      "scansTitle": "Skannanir",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skannanir"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Ný bókun hefur verið gerð á veitingastaðnum þínum.",
     "ownerCta": "Skoða bókanir",
     "ownerSignature": "Bestu kveðjur,<br>IQ Rest teymið"
+  },
+  "languages": {
+    "meta": {
+      "title": "Velja tungumál - IQ Rest QR Matseðill",
+      "description": "Skoðaðu IQ Rest á þínu tungumáli. Fáanlegt á 35 tungumálum."
+    },
+    "title": "Velja tungumál",
+    "subtitle": "Skoðaðu IQ Rest á þínu tungumáli"
   }
 }

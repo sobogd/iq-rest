@@ -21,6 +21,7 @@ import { Check, X } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { analytics } from "@/lib/analytics";
 import { pricing, PlanId } from "@/lib/pricing";
 import { currencyInfo, SupportedCurrency } from "@/lib/country-currency-map";
 
@@ -259,7 +260,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false }: Pr
                         variant="default"
                         size="lg"
                       >
-                        <Link href="/dashboard">{t(`plans.${plan.id}.cta`)}</Link>
+                        <Link href="/dashboard" onClick={() => analytics.marketing.pricingCtaClick(plan.id)}>{t(`plans.${plan.id}.cta`)}</Link>
                       </Button>
                     </CardFooter>
                   )}

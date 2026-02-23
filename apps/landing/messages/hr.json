@@ -640,7 +640,8 @@
       "features": "Značajke",
       "contacts": "Kontakti",
       "faq": "Pitanja",
-      "changelog": "Povijest promjena"
+      "changelog": "Povijest promjena",
+      "languages": "Jezici"
     },
     "legal": {
       "title": "Pravno",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Dodaj kontakte",
       "checklistBrand": "Prilagodi brend",
       "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima.",
-      "scansTitle": "Mjesečna skeniranja",
+      "scansTitle": "Skenovi",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skeniranja"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Nova rezervacija je napravljena u vašem restoranu.",
     "ownerCta": "Pregledaj rezervacije",
     "ownerSignature": "S poštovanjem,<br>IQ Rest Tim"
+  },
+  "languages": {
+    "meta": {
+      "title": "Odaberite jezik - IQ Rest QR Izbornik",
+      "description": "Pregledajte IQ Rest na željenom jeziku. Dostupno na 35 jezika."
+    },
+    "title": "Odaberite jezik",
+    "subtitle": "Pregledajte IQ Rest na željenom jeziku"
   }
 }

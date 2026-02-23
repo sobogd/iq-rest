@@ -640,7 +640,8 @@
       "features": "Funcționalități",
       "contacts": "Contacte",
       "faq": "Întrebări frecvente",
-      "changelog": "Istoricul modificărilor"
+      "changelog": "Istoricul modificărilor",
+      "languages": "Limbi"
     },
     "legal": {
       "title": "Legal",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Adaugă contacte",
       "checklistBrand": "Personalizează brandul",
       "menuReady": "Meniul tău este gata! Distribuie codul QR clienților.",
-      "scansTitle": "Scanări lunare",
+      "scansTitle": "Scanări",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scanări"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "O nouă rezervare a fost făcută la restaurantul dumneavoastră.",
     "ownerCta": "Vezi rezervările",
     "ownerSignature": "Cu stimă,<br>Echipa IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Alegeți limba - IQ Rest QR Meniu",
+      "description": "Răsfoiți IQ Rest în limba dvs. preferată. Disponibil în 35 de limbi."
+    },
+    "title": "Alegeți limba",
+    "subtitle": "Răsfoiți IQ Rest în limba dvs. preferată"
   }
 }

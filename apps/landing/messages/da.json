@@ -640,7 +640,8 @@
       "features": "Funktioner",
       "contacts": "Kontakter",
       "faq": "Spørgsmål",
-      "changelog": "Ændringslog"
+      "changelog": "Ændringslog",
+      "languages": "Sprog"
     },
     "legal": {
       "title": "Juridisk",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Tilføj kontakter",
       "checklistBrand": "Tilpas dit brand",
       "menuReady": "Din menu er klar! Del din QR-kode med kunderne.",
-      "scansTitle": "Månedlige scanninger",
+      "scansTitle": "Scanninger",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scanninger"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "En ny reservation er foretaget på din restaurant.",
     "ownerCta": "Se reservationer",
     "ownerSignature": "Med venlig hilsen,<br>IQ Rest Team"
+  },
+  "languages": {
+    "meta": {
+      "title": "Vælg sprog - IQ Rest QR-menu",
+      "description": "Gennemse IQ Rest på dit foretrukne sprog. Tilgængelig på 35 sprog."
+    },
+    "title": "Vælg sprog",
+    "subtitle": "Gennemse IQ Rest på dit foretrukne sprog"
   }
 }

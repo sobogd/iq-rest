@@ -640,7 +640,8 @@
       "features": "Özellikler",
       "contacts": "İletişim",
       "faq": "Sıkça Sorulan Sorular",
-      "changelog": "Değişiklik Günlüğü"
+      "changelog": "Değişiklik Günlüğü",
+      "languages": "Diller"
     },
     "legal": {
       "title": "Hukuki",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "İletişim ekleyin",
       "checklistBrand": "Markayı özelleştirin",
       "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın.",
-      "scansTitle": "Aylık taramalar",
+      "scansTitle": "Taramalar",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} tarama"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Restoranınızda yeni bir rezervasyon yapıldı.",
     "ownerCta": "Rezervasyonları görüntüle",
     "ownerSignature": "Saygılarımızla,<br>IQ Rest Ekibi"
+  },
+  "languages": {
+    "meta": {
+      "title": "Dil seçin - IQ Rest QR Menü",
+      "description": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin. 35 dilde mevcuttur."
+    },
+    "title": "Dil seçin",
+    "subtitle": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin"
   }
 }

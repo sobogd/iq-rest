@@ -640,7 +640,8 @@
       "features": "Iespējas",
       "contacts": "Kontakti",
       "faq": "Jautājumi",
-      "changelog": "Izmaiņu žurnāls"
+      "changelog": "Izmaiņu žurnāls",
+      "languages": "Valodas"
     },
     "legal": {
       "title": "Juridiskā informācija",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Pievienojiet kontaktus",
       "checklistBrand": "Pielāgojiet zīmolu",
       "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem.",
-      "scansTitle": "Mēneša skenējumi",
+      "scansTitle": "Skenējumi",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skenējumi"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Jūsu restorānā ir veikta jauna rezervācija.",
     "ownerCta": "Skatīt rezervācijas",
     "ownerSignature": "Ar cieņu,<br>IQ Rest komanda"
+  },
+  "languages": {
+    "meta": {
+      "title": "Izvēlēties valodu - IQ Rest QR ēdienkarte",
+      "description": "Pārlūkojiet IQ Rest savā vēlamajā valodā. Pieejams 35 valodās."
+    },
+    "title": "Izvēlēties valodu",
+    "subtitle": "Pārlūkojiet IQ Rest savā vēlamajā valodā"
   }
 }

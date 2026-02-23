@@ -5,6 +5,14 @@ import { RefreshCw, Loader2 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 
+interface ScanFile {
+  url: string;
+  name: string;
+  size: number;
+  lastModified: string;
+  companyId: string;
+}
+
 interface OnboardingData {
   counts: Record<string, number>;
   scanMeta: { totalFiles: number; errorBreakdown: Record<string, number> };
@@ -190,6 +198,7 @@ function StatCard({
 
 export function AdminOnboardingPage() {
   const [data, setData] = useState<OnboardingData | null>(null);
+  const [scanFiles, setScanFiles] = useState<ScanFile[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<TimeRange>("7d");
@@ -214,9 +223,25 @@ export function AdminOnboardingPage() {
     }
   }, [timeRange]);
 
+  const fetchScanFiles = useCallback(async () => {
+    try {
+      const res = await fetch("/api/admin/analytics/onboarding/scans");
+      if (res.ok) {
+        const json = await res.json();
+        setScanFiles(json.files || []);
+      }
+    } catch {
+      // silently fail
+    }
+  }, []);
+
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  useEffect(() => {
+    fetchScanFiles();
+  }, [fetchScanFiles]);
 
   if (loading && !data) return <PageLoader />;
 
@@ -559,6 +584,36 @@ export function AdminOnboardingPage() {
               />
             ))}
           </Card>
+
+          {/* Scan Files */}
+          {scanFiles.length > 0 && (
+            <Card title={`Uploaded Scans (${scanFiles.length})`}>
+              <div className="space-y-1.5 max-h-96 overflow-auto -mx-1 px-1">
+                {scanFiles.map((file) => (
+                  <a
+                    key={file.url}
+                    href={file.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-muted/30 transition-colors"
+                  >
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs font-medium truncate">{file.name}</p>
+                      <p className="text-[10px] text-muted-foreground">{file.companyId.slice(0, 8)}...</p>
+                    </div>
+                    <div className="text-right shrink-0 ml-3">
+                      <p className="text-[10px] text-muted-foreground">
+                        {(file.size / 1024).toFixed(0)} KB
+                      </p>
+                      <p className="text-[10px] text-muted-foreground">
+                        {new Date(file.lastModified).toLocaleDateString("en-GB", { day: "2-digit", month: "short" })}
+                      </p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </Card>
+          )}
         </div>
       </div>
     </div>

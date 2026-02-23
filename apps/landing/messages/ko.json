@@ -673,7 +673,8 @@
       "features": "기능",
       "contacts": "연락처",
       "faq": "질문",
-      "changelog": "변경 로그"
+      "changelog": "변경 로그",
+      "languages": "언어"
     },
     "legal": {
       "title": "법적 고지",
@@ -1857,7 +1858,7 @@
       "checklistContacts": "연락처 추가",
       "checklistBrand": "브랜드 맞춤 설정",
       "menuReady": "메뉴가 준비되었습니다! QR 코드를 고객과 공유하세요.",
-      "scansTitle": "월간 스캔",
+      "scansTitle": "스캔",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} 스캔"
     }
@@ -2312,5 +2313,13 @@
     "ownerBody": "레스토랑에 새로운 예약이 접수되었습니다.",
     "ownerCta": "예약 확인하기",
     "ownerSignature": "감사합니다,<br>IQ Rest 팀"
+  },
+  "languages": {
+    "meta": {
+      "title": "언어 선택 - IQ Rest QR 메뉴",
+      "description": "원하는 언어로 IQ Rest를 둘러보세요. 35개 언어로 제공됩니다."
+    },
+    "title": "언어 선택",
+    "subtitle": "원하는 언어로 IQ Rest를 둘러보세요"
   }
 }

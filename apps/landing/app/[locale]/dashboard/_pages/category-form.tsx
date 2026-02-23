@@ -104,7 +104,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       console.error("Failed to fetch category:", error);
       track(DashboardEvent.ERROR_FETCH, { page: "category" });
       toast.error(t.fetchError);
-      router.push("/dashboard/menu");
+      router.push("/dashboard");
     } finally {
       setLoading(false);
     }
@@ -163,7 +163,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        window.location.href = `/${locale}/dashboard/menu`;
+        window.location.href = `/${locale}/dashboard`;
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "category" });
@@ -216,7 +216,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_CATEGORY);
         toast.success(isEdit ? t.updated : t.created);
-        window.location.href = `/${locale}/dashboard/menu`;
+        window.location.href = `/${locale}/dashboard`;
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "category" });
@@ -237,7 +237,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
   return (
     <div className="flex flex-col h-full overflow-y-auto">
       <div className="sticky top-0 z-10 bg-background">
-        <PageHeader title={isEdit ? t.editCategory : t.addCategory} backHref="/dashboard/menu">
+        <PageHeader title={isEdit ? t.editCategory : t.addCategory} backHref="/dashboard">
           <Button
             type="submit"
             form="category-form"

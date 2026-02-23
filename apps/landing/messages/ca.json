@@ -640,7 +640,8 @@
       "features": "Funcions",
       "contacts": "Contactes",
       "faq": "Preguntes",
-      "changelog": "Registre de canvis"
+      "changelog": "Registre de canvis",
+      "languages": "Idiomes"
     },
     "legal": {
       "title": "Legal",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Afegeix contactes",
       "checklistBrand": "Personalitza la marca",
       "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients.",
-      "scansTitle": "Escanejos mensuals",
+      "scansTitle": "Escanejos",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} escanejos"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "S'ha fet una nova reserva al teu restaurant.",
     "ownerCta": "Veure reserves",
     "ownerSignature": "Salutacions,<br>Equip IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Trieu l'idioma - IQ Rest QR Menú",
+      "description": "Navegueu per IQ Rest en el vostre idioma preferit. Disponible en 35 idiomes."
+    },
+    "title": "Trieu l'idioma",
+    "subtitle": "Navegueu per IQ Rest en el vostre idioma preferit"
   }
 }

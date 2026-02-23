@@ -6,6 +6,7 @@ import { isAdminEmail } from "@/lib/admin";
 // Funnel 1: Landing page section views
 const SECTION_FUNNEL = [
   { event: "page_view_home", label: "Landing" },
+  { event: "section_view_demo", label: "Demo" },
   { event: "section_view_feature_color_scheme", label: "Color Scheme" },
   { event: "section_view_feature_mobile_management", label: "Mobile Mgmt" },
   { event: "section_view_feature_custom_design", label: "Custom Design" },
@@ -18,14 +19,14 @@ const SECTION_FUNNEL = [
 // Funnel 2: Marketing pages
 const MARKETING_FUNNEL = [
   { event: "page_view_home", label: "Home" },
-  { event: "demo_open", label: "Demo" },
-  { event: "page_view_pricing", label: "Pricing" },
+  { event: "hero_images_click", label: "Hero Click" },
+  { event: "demo_scroll_arrow", label: "Scroll→Demo" },
+  { event: "demo_interact", label: "Demo Touch" },
+  { event: "pricing_cta_click", label: "Pricing CTA" },
+  { event: "page_view_pricing", label: "Pricing Page" },
   { event: "page_view_faq", label: "FAQ" },
   { event: "page_view_contacts", label: "Contacts" },
   { event: "page_view_changelog", label: "Changelog" },
-  { event: "page_view_terms", label: "Terms" },
-  { event: "page_view_privacy", label: "Privacy" },
-  { event: "page_view_cookies", label: "Cookies" },
 ];
 
 // Funnel 3: Dashboard pages

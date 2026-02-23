@@ -640,7 +640,8 @@
       "features": "Особенности",
       "contacts": "Контакты",
       "faq": "Вопросы",
-      "changelog": "История изменений"
+      "changelog": "История изменений",
+      "languages": "Языки"
     },
     "legal": {
       "title": "Правовая информация",
@@ -1839,7 +1840,7 @@
       "checklistContacts": "Добавьте контакты",
       "checklistBrand": "Настройте бренд",
       "menuReady": "Ваше меню готово! Поделитесь QR-кодом с клиентами.",
-      "scansTitle": "Сканирования за месяц",
+      "scansTitle": "Сканы",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} сканирований"
     }
@@ -2294,5 +2295,13 @@
     "ownerBody": "В вашем ресторане сделана новая бронь.",
     "ownerCta": "Посмотреть брони",
     "ownerSignature": "С уважением,<br>Команда IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Выбрать язык - IQ Rest QR-меню",
+      "description": "Просматривайте IQ Rest на предпочитаемом языке. Доступно на 35 языках."
+    },
+    "title": "Выбрать язык",
+    "subtitle": "Просматривайте IQ Rest на предпочитаемом языке"
   }
 }

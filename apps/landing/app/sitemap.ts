@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/personal-support', lastModified: '2026-02-20', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/faq', lastModified: '2026-02-20', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contacts', lastModified: '2026-02-20', changeFrequency: 'yearly', priority: 0.5 },
+    { path: '/languages', lastModified: '2026-02-23', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/changelog', lastModified: '2026-02-20', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/changelog/ai-menu-scanner-create-digital-qr-menu', lastModified: '2026-02-18', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/changelog/redesigned-dashboard-qr-menu-management', lastModified: '2026-02-14', changeFrequency: 'monthly', priority: 0.6 },

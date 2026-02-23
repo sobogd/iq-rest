@@ -640,7 +640,8 @@
       "features": "Funktioner",
       "contacts": "Kontakter",
       "faq": "Frågor",
-      "changelog": "Ändringslogg"
+      "changelog": "Ändringslogg",
+      "languages": "Språk"
     },
     "legal": {
       "title": "Juridiskt",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Lägg till kontakter",
       "checklistBrand": "Anpassa varumärket",
       "menuReady": "Din meny är klar! Dela din QR-kod med gästerna.",
-      "scansTitle": "Månatliga skanningar",
+      "scansTitle": "Skanningar",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skanningar"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "En ny bokning har gjorts på din restaurang.",
     "ownerCta": "Visa bokningar",
     "ownerSignature": "Med vänliga hälsningar,<br>IQ Rest Team"
+  },
+  "languages": {
+    "meta": {
+      "title": "Välj språk - IQ Rest QR-meny",
+      "description": "Bläddra i IQ Rest på ditt föredragna språk. Tillgängligt på 35 språk."
+    },
+    "title": "Välj språk",
+    "subtitle": "Bläddra i IQ Rest på ditt föredragna språk"
   }
 }

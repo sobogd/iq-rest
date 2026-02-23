@@ -673,7 +673,8 @@
       "features": "ویژگی‌ها",
       "contacts": "تماس",
       "faq": "سوالات",
-      "changelog": "تغییرات"
+      "changelog": "تغییرات",
+      "languages": "زبان‌ها"
     },
     "legal": {
       "title": "قانونی",
@@ -1857,7 +1858,7 @@
       "checklistContacts": "مخاطبین را اضافه کنید",
       "checklistBrand": "برند خود را سفارشی کنید",
       "menuReady": "منوی شما آماده است! کد QR را با مشتریان به اشتراک بگذارید.",
-      "scansTitle": "اسکن‌های ماهانه",
+      "scansTitle": "اسکن‌ها",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} اسکن"
     }
@@ -2312,5 +2313,13 @@
     "ownerBody": "رزرو جدیدی در رستوران شما انجام شده است.",
     "ownerCta": "مشاهده رزروها",
     "ownerSignature": "با احترام،<br>تیم IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "انتخاب زبان - IQ Rest منوی QR",
+      "description": "IQ Rest را به زبان دلخواه خود مرور کنید. در ۳۵ زبان موجود است."
+    },
+    "title": "انتخاب زبان",
+    "subtitle": "IQ Rest را به زبان دلخواه خود مرور کنید"
   }
 }

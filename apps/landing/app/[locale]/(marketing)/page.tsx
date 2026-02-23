@@ -146,7 +146,7 @@ export default async function HomePage({
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                   <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
-                  <Button variant="outline" size="lg" asChild>
+                  <Button variant="outline" asChild className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg">
                     <a href="#pricing">{tHero("cta.view")}</a>
                   </Button>
                 </div>
@@ -200,7 +200,7 @@ export default async function HomePage({
                 {/* CTA Buttons */}
                 <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3">
                   <HeroCreateButton>{tHero("cta.create")}</HeroCreateButton>
-                  <Button variant="outline" size="lg" asChild>
+                  <Button variant="outline" asChild className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg">
                     <a href="#pricing">{tHero("cta.view")}</a>
                   </Button>
                 </div>
@@ -220,32 +220,52 @@ export default async function HomePage({
       )}
 
       {/* Demo Section */}
-      <SectionTracker id="demo" section="demo" className="py-16 lg:py-24 scroll-mt-20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+      <SectionTracker id="demo" section="demo" className="relative pt-16 pb-28 lg:py-0 bg-muted/50 min-h-svh">
+        <div className="container mx-auto px-4 lg:h-svh">
+          {/* Mobile: stacked */}
+          <div className="flex flex-col items-center text-center lg:hidden">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4">
               {tDemo("title")}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-xl mb-10">
               {tDemo("subtitle")}
             </p>
-
             <DemoPhone />
           </div>
+
+          {/* Desktop: side by side */}
+          <div className="hidden lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:h-full">
+            <div className="flex justify-center">
+              <DemoPhone />
+            </div>
+            <div className="flex flex-col items-start text-left">
+              <h2 className="text-4xl font-bold tracking-tight mb-4">
+                {tDemo("title")}
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                {tDemo("subtitle")}
+              </p>
+            </div>
+          </div>
         </div>
+        <ScrollToFeatures label={tHero("scrollToFeatures")} />
       </SectionTracker>
 
+      {/* Features Header */}
+      <section className="py-8 lg:py-12 bg-black text-white scroll-mt-20" id="features">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            {tFeaturesPreview("title")}
+          </h2>
+          <p className="text-base sm:text-lg text-white/60 max-w-xl mx-auto">
+            {tFeaturesPreview("subtitle")}
+          </p>
+        </div>
+      </section>
+
       {/* Features Preview Section */}
-      <SectionTracker id="features" section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50 scroll-mt-20">
+      <SectionTracker section="features" className="pt-8 pb-8 lg:pt-16 lg:pb-16 bg-muted/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              {tFeaturesPreview("title")}
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
-              {tFeaturesPreview("subtitle")}
-            </p>
-          </div>
           <div className="space-y-0">
               {previewFeatures.map((feature, index) => {
                 const featureImages: Record<string, { layout: "trio" | "duo" | "horizontal"; images: { left: { src: string; alt: string }; center: { src: string; alt: string }; right: { src: string; alt: string } } }> = {

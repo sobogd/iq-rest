@@ -640,7 +640,8 @@
       "features": "Funktsioonid",
       "contacts": "Kontaktid",
       "faq": "Küsimused",
-      "changelog": "Muudatuste ajalugu"
+      "changelog": "Muudatuste ajalugu",
+      "languages": "Keeled"
     },
     "legal": {
       "title": "Õiguslik",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Lisage kontaktid",
       "checklistBrand": "Kohandage brändi",
       "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega.",
-      "scansTitle": "Igakuised skannimised",
+      "scansTitle": "Skaneeringud",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skannimist"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Teie restoranis on tehtud uus broneering.",
     "ownerCta": "Vaata broneeringuid",
     "ownerSignature": "Lugupidamisega,<br>IQ Rest meeskond"
+  },
+  "languages": {
+    "meta": {
+      "title": "Valige keel - IQ Rest QR-menüü",
+      "description": "Sirvige IQ Resti oma eelistatud keeles. Saadaval 35 keeles."
+    },
+    "title": "Valige keel",
+    "subtitle": "Sirvige IQ Resti oma eelistatud keeles"
   }
 }

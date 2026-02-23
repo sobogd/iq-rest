@@ -673,7 +673,8 @@
       "features": "الميزات",
       "contacts": "اتصل بنا",
       "faq": "الأسئلة",
-      "changelog": "التحديثات"
+      "changelog": "التحديثات",
+      "languages": "اللغات"
     },
     "legal": {
       "title": "قانوني",
@@ -1857,7 +1858,7 @@
       "checklistContacts": "أضف جهات الاتصال",
       "checklistBrand": "خصّص علامتك التجارية",
       "menuReady": "قائمتك جاهزة! شارك رمز QR مع العملاء.",
-      "scansTitle": "المسح الشهري",
+      "scansTitle": "المسح",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} مسح"
     }
@@ -2312,5 +2313,13 @@
     "ownerBody": "تم إجراء حجز جديد في مطعمك.",
     "ownerCta": "عرض الحجوزات",
     "ownerSignature": "مع أطيب التحيات،<br>فريق IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "اختر اللغة - IQ Rest قائمة QR",
+      "description": "تصفح IQ Rest بلغتك المفضلة. متاح بـ 35 لغة."
+    },
+    "title": "اختر اللغة",
+    "subtitle": "تصفح IQ Rest بلغتك المفضلة"
   }
 }

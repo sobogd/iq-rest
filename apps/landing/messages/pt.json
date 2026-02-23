@@ -640,7 +640,8 @@
       "features": "Recursos",
       "contacts": "Contatos",
       "faq": "Perguntas",
-      "changelog": "Registro de Alterações"
+      "changelog": "Registro de Alterações",
+      "languages": "Idiomas"
     },
     "legal": {
       "title": "Legal",
@@ -1839,7 +1840,7 @@
       "checklistContacts": "Adicione contactos",
       "checklistBrand": "Personalize a marca",
       "menuReady": "O seu menu está pronto! Partilhe o QR code com os clientes.",
-      "scansTitle": "Leituras mensais",
+      "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} leituras"
     }
@@ -2294,5 +2295,13 @@
     "ownerBody": "Uma nova reserva foi feita no seu restaurante.",
     "ownerCta": "Ver reservas",
     "ownerSignature": "Com os melhores cumprimentos,<br>Equipa IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Escolher idioma - IQ Rest QR Menu",
+      "description": "Navegue no IQ Rest no seu idioma preferido. Disponível em 35 idiomas."
+    },
+    "title": "Escolher idioma",
+    "subtitle": "Navegue no IQ Rest no seu idioma preferido"
   }
 }

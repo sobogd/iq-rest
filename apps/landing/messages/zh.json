@@ -673,7 +673,8 @@
       "features": "功能",
       "contacts": "联系我们",
       "faq": "问题",
-      "changelog": "更新日志"
+      "changelog": "更新日志",
+      "languages": "语言"
     },
     "legal": {
       "title": "法律",
@@ -1857,7 +1858,7 @@
       "checklistContacts": "添加联系方式",
       "checklistBrand": "自定义品牌",
       "menuReady": "您的菜单已准备就绪！将二维码分享给顾客吧。",
-      "scansTitle": "每月扫描",
+      "scansTitle": "扫描",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} 次扫描"
     }
@@ -2312,5 +2313,13 @@
     "ownerBody": "您的餐厅收到了一个新预约。",
     "ownerCta": "查看预约",
     "ownerSignature": "此致敬礼，<br>IQ Rest 团队"
+  },
+  "languages": {
+    "meta": {
+      "title": "选择语言 - IQ Rest QR 菜单",
+      "description": "用您偏好的语言浏览 IQ Rest。支持35种语言。"
+    },
+    "title": "选择语言",
+    "subtitle": "用您偏好的语言浏览 IQ Rest"
   }
 }

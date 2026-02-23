@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { href: "/faq", key: "navigation.faq" },
   { href: "/contacts", key: "navigation.contacts" },
   { href: "/changelog", key: "navigation.changelog" },
+  { href: "/languages", key: "navigation.languages" },
 ] as const;
 
 const LEGAL_LINKS = [

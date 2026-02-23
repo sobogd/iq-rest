@@ -640,7 +640,8 @@
       "features": "Ominaisuudet",
       "contacts": "Yhteystiedot",
       "faq": "Kysymykset",
-      "changelog": "Muutospäiväkirja"
+      "changelog": "Muutospäiväkirja",
+      "languages": "Kielet"
     },
     "legal": {
       "title": "Lailliset asiat",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Lisää yhteystiedot",
       "checklistBrand": "Muokkaa brändiä",
       "menuReady": "Menusi on valmis! Jaa QR-koodi asiakkaillesi.",
-      "scansTitle": "Kuukausittaiset skannaukset",
+      "scansTitle": "Skannaukset",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skannausta"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Ravintolaasi on tehty uusi varaus.",
     "ownerCta": "Näytä varaukset",
     "ownerSignature": "Ystävällisin terveisin,<br>IQ Rest Team"
+  },
+  "languages": {
+    "meta": {
+      "title": "Valitse kieli - IQ Rest QR-menu",
+      "description": "Selaa IQ Restiä haluamallasi kielellä. Saatavilla 35 kielellä."
+    },
+    "title": "Valitse kieli",
+    "subtitle": "Selaa IQ Restiä haluamallasi kielellä"
   }
 }

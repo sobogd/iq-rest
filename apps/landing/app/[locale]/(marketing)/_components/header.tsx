@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
-import { LanguageSelector } from "./language-selector";
 import { HeaderCreateButton } from "./header-create-button";
 import { Logo } from "@/components/Logo";
 
@@ -35,7 +34,6 @@ export async function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <LanguageSelector />
             <HeaderCreateButton>{tHero("cta.create")}</HeaderCreateButton>
           </div>
         </div>

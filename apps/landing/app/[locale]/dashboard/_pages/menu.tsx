@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { useBackIntercept } from "../_hooks/use-back-intercept";
+import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Home, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Home, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -49,10 +49,11 @@ interface MenuPageProps {
   slug: string | null;
   checklist: ChecklistStatus;
   scanUsage: ScanUsage | null;
+  isAdmin?: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, scanUsage }: MenuPageProps) {
-  useBackIntercept("/dashboard");
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, scanUsage, isAdmin }: MenuPageProps) {
+  useBlockBack();
   const { translations } = useDashboard();
   const tHome = useTranslations("dashboard.home");
   const router = useRouter();
@@ -292,8 +293,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   <span className="text-sm font-medium">{tHome("scansTitle")}:</span>
                   <span className="text-sm text-muted-foreground">
                     {scanUsage.limit
-                      ? tHome("scansUsed", { used: scanUsage.used.toLocaleString(), limit: scanUsage.limit.toLocaleString() })
-                      : tHome("scansUnlimited", { used: scanUsage.used.toLocaleString() })}
+                      ? `${scanUsage.used.toLocaleString()} / ${scanUsage.limit.toLocaleString()}`
+                      : scanUsage.used.toLocaleString()}
                   </span>
                 </div>
               )}
@@ -338,14 +339,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 {tHome("viewMenu")}
               </Button>
             </MenuPreviewModal>
-          )}
-
-          {/* Success banner */}
-          {!sortMode && allDone && (
-            <div className="flex items-center gap-3 rounded-2xl border border-green-500/30 bg-green-500/10 p-3">
-              <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
-              <p className="text-sm font-medium">{tHome("menuReady")}</p>
-            </div>
           )}
 
           {/* Setup checklist */}
@@ -393,6 +386,68 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   </button>
                 );
               })}
+            </div>
+          )}
+
+          {/* Admin shortcuts */}
+          {!sortMode && isAdmin && (
+            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <button
+                onClick={() => router.push("/dashboard/admin")}
+                className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
+              >
+                <Shield className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Companies</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
+              <button
+                onClick={() => router.push("/dashboard/admin/analytics")}
+                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+              >
+                <Activity className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Analytics</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
+              <button
+                onClick={() => router.push("/dashboard/admin/onboarding")}
+                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+              >
+                <UserPlus className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Onboarding</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
+              <button
+                onClick={() => router.push("/dashboard/sessions")}
+                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+              >
+                <MousePointerClick className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Sessions</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
+              <button
+                onClick={() => router.push("/dashboard/keywords")}
+                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+              >
+                <KeyRound className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Keywords</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
+              <button
+                onClick={() => router.push("/dashboard/search-terms")}
+                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+              >
+                <Search className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Search Terms</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
+              <button
+                onClick={() => router.push("/dashboard/google-ads")}
+                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
+              >
+                <Send className="h-5 w-5 text-muted-foreground shrink-0" />
+                <span className="text-sm font-medium flex-1 text-left">Google Ads</span>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
+              </button>
             </div>
           )}
 

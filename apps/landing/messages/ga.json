@@ -640,7 +640,8 @@
       "features": "Gnéithe",
       "contacts": "Teagmhálacha",
       "faq": "Ceisteanna",
-      "changelog": "Clár Athruithe"
+      "changelog": "Clár Athruithe",
+      "languages": "Teangacha"
     },
     "legal": {
       "title": "Dlí",
@@ -1824,7 +1825,7 @@
       "checklistContacts": "Cuir teagmhálacha leis",
       "checklistBrand": "Saincheap do bhranda",
       "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí.",
-      "scansTitle": "Scanadh míosúil",
+      "scansTitle": "Scanadh",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scanadh"
     }
@@ -2279,5 +2280,13 @@
     "ownerBody": "Rinneadh áirithint nua i do bhialann.",
     "ownerCta": "Féach ar áirithintí",
     "ownerSignature": "Le meas,<br>Foireann IQ Rest"
+  },
+  "languages": {
+    "meta": {
+      "title": "Roghnaigh teanga - IQ Rest QR Biachlár",
+      "description": "Brabhsáil IQ Rest i do theanga roghnaithe. Ar fáil i 35 teanga."
+    },
+    "title": "Roghnaigh teanga",
+    "subtitle": "Brabhsáil IQ Rest i do theanga roghnaithe"
   }
 }
