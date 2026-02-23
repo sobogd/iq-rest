@@ -78,8 +78,9 @@ export async function GET() {
     const startOfWeek = localToUtc(year, month, day - 7, tz);
     const startOfMonth = localToUtc(year, month, 1, tz);
 
-    const [monthlyViews, weeklyViews, todayViews, uniqueSessions, viewsByPage, viewsByLanguage, viewsByDay] = await Promise.all([
-      prisma.pageView.count({
+    const [monthlyScans, weeklyViews, todayViews, uniqueSessions, viewsByPage, viewsByLanguage, viewsByDay] = await Promise.all([
+      prisma.pageView.groupBy({
+        by: ["sessionId"],
         where: { companyId: company.id, createdAt: { gte: startOfMonth } },
       }),
       prisma.pageView.count({
@@ -152,7 +153,7 @@ export async function GET() {
     return NextResponse.json({
       plan: company.plan,
       limit: limit === Infinity ? null : limit,
-      monthlyViews,
+      monthlyViews: monthlyScans.length,
       weeklyViews,
       todayViews,
       uniqueSessions: uniqueSessions.length,

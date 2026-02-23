@@ -59,20 +59,22 @@ export async function POST(request: NextRequest) {
     const { company } = restaurant;
     const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
-    // Get current month's view count
+    // Get current month's unique session count (scans)
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-    const currentMonthViews = await prisma.pageView.count({
+    const currentMonthScans = await prisma.pageView.groupBy({
+      by: ["sessionId"],
       where: {
         companyId: company.id,
         createdAt: { gte: startOfMonth },
       },
     });
+    const scanCount = currentMonthScans.length;
 
-    const showAd = currentMonthViews >= limit;
-    const remaining = Math.max(0, limit - currentMonthViews);
+    const showAd = scanCount >= limit;
+    const remaining = Math.max(0, limit - scanCount);
 
     // Always record the view (even if limit exceeded)
     const userAgent = request.headers.get("user-agent") || null;
@@ -95,7 +97,7 @@ export async function POST(request: NextRequest) {
     if (
       company.plan === "FREE" &&
       limit !== Infinity &&
-      currentMonthViews + 1 >= limit - WARNING_THRESHOLD &&
+      scanCount >= limit - WARNING_THRESHOLD &&
       !company.emailUnsubscribed
     ) {
       const emailsSent = (company.emailsSent as Record<string, string>) || {};
@@ -159,8 +161,8 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Mark sessions when company reaches 20 views
-    if (currentMonthViews + 1 >= 20) {
+    // Mark sessions when company reaches 20 scans
+    if (scanCount >= 20) {
       await prisma.session.updateMany({
         where: { companyId: company.id, reached50Views: false },
         data: { reached50Views: true },

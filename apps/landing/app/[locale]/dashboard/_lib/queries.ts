@@ -136,14 +136,15 @@ export async function getScanUsage(companyId: string) {
   const now = new Date();
   const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
 
-  const monthlyViews = await prisma.pageView.count({
+  const monthlyScans = await prisma.pageView.groupBy({
+    by: ["sessionId"],
     where: { companyId, createdAt: { gte: startOfMonth } },
   });
 
   const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
   return {
-    used: monthlyViews,
+    used: monthlyScans.length,
     limit: limit === Infinity ? null : limit,
   };
 }
@@ -206,8 +207,9 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   const startOfWeek = localToUtc(year, month, day - 7, tz);
   const startOfMonth = localToUtc(year, month, 1, tz);
 
-  const [monthlyViews, weeklyViews, todayViews, uniqueSessions, viewsByPage, viewsByLanguage, viewsByDay] = await Promise.all([
-    prisma.pageView.count({
+  const [monthlyScans, weeklyViews, todayViews, uniqueSessions, viewsByPage, viewsByLanguage, viewsByDay] = await Promise.all([
+    prisma.pageView.groupBy({
+      by: ["sessionId"],
       where: { companyId, createdAt: { gte: startOfMonth } },
     }),
     prisma.pageView.count({
@@ -280,7 +282,7 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   return {
     plan: company.plan,
     limit: limit === Infinity ? null : limit,
-    monthlyViews,
+    monthlyViews: monthlyScans.length,
     weeklyViews,
     todayViews,
     uniqueSessions: uniqueSessions.length,

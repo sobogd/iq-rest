@@ -30,14 +30,15 @@ async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accen
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-    const currentMonthViews = await prisma.pageView.count({
+    const currentMonthScans = await prisma.pageView.groupBy({
+      by: ["sessionId"],
       where: {
         companyId: company.id,
         createdAt: { gte: startOfMonth },
       },
     });
 
-    return { showAd: currentMonthViews >= limit, accentColor };
+    return { showAd: currentMonthScans.length >= limit, accentColor };
   } catch {
     return { showAd: false, accentColor: "#000000" };
   }

@@ -119,14 +119,16 @@ export async function GET(request: NextRequest) {
       ORDER BY date ASC
     `;
 
-    // Get current month usage for limit display
+    // Get current month usage for limit display (unique sessions = scans)
     const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const monthlyViews = await prisma.pageView.count({
+    const monthlyScans = await prisma.pageView.groupBy({
+      by: ["sessionId"],
       where: {
         companyId,
         createdAt: { gte: startOfMonth },
       },
     });
+    const monthlyViews = monthlyScans.length;
 
     return NextResponse.json({
       totalViews,

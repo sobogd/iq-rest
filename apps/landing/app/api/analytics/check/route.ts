@@ -38,19 +38,20 @@ export async function GET(request: NextRequest) {
     const { company } = restaurant;
     const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
 
-    // Get current month's view count
+    // Get current month's unique session count (scans)
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-    const currentMonthViews = await prisma.pageView.count({
+    const currentMonthScans = await prisma.pageView.groupBy({
+      by: ["sessionId"],
       where: {
         companyId: company.id,
         createdAt: { gte: startOfMonth },
       },
     });
 
-    const showAd = currentMonthViews >= limit;
+    const showAd = currentMonthScans.length >= limit;
 
     return NextResponse.json({
       showAd,

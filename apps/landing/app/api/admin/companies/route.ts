@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = request.nextUrl;
     const filter = searchParams.get("filter") || "all"; // all | active | inactive
 
-    // For active/inactive we need to find companies with 20+ views this month
+    // For active/inactive we need to find companies with 20+ unique sessions this month
     const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
     let activeCompanyIds: Set<string> | null = null;
     if (filter === "active" || filter === "inactive") {
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
         FROM page_views
         WHERE "createdAt" >= ${startOfMonth}
         GROUP BY "companyId"
-        HAVING COUNT(*) >= 20
+        HAVING COUNT(DISTINCT "sessionId") >= 20
       `;
       activeCompanyIds = new Set(companiesWithViews.map((r) => r.companyId));
     }
@@ -87,14 +87,14 @@ export async function GET(request: NextRequest) {
     const [monthlyViewCounts, todayViewCounts] = companyIds.length > 0
       ? await Promise.all([
           prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
-            SELECT "companyId", COUNT(*) as count
+            SELECT "companyId", COUNT(DISTINCT "sessionId") as count
             FROM page_views
             WHERE "companyId" = ANY(${companyIds}::text[])
               AND "createdAt" >= ${startOfMonth}
             GROUP BY "companyId"
           `,
           prisma.$queryRaw<{ companyId: string; count: bigint }[]>`
-            SELECT "companyId", COUNT(*) as count
+            SELECT "companyId", COUNT(DISTINCT "sessionId") as count
             FROM page_views
             WHERE "companyId" = ANY(${companyIds}::text[])
               AND "createdAt" >= ${todayStart}
