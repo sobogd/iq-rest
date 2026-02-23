@@ -28,13 +28,21 @@ export default async function DashboardLayout({
     }),
     prisma.company.findUnique({
       where: { id: companyId },
-      select: { plan: true, createdAt: true, upsellShownAt: true },
+      select: { plan: true, createdAt: true, upsellShownAt: true, onboardingStep: true },
     }),
   ]);
 
   const hasRestaurant = Boolean(restaurant?.title && restaurant.title.trim().length > 0);
 
   if (!hasRestaurant) redirect("/onboarding/name");
+
+  // Mark onboarding as complete on first dashboard visit
+  if (company && company.onboardingStep < 3) {
+    await prisma.company.update({
+      where: { id: companyId },
+      data: { onboardingStep: 3 },
+    });
+  }
 
   // Check if admin is impersonating
   const cookieStore = await cookies();

@@ -8,6 +8,7 @@ export default async function Page() {
   const { isAuthenticated, onboardingStep, userId } = await getOnboardingState();
 
   if (!isAuthenticated) redirect("/login");
+  if (onboardingStep >= 3) redirect("/dashboard");
   if (onboardingStep < 2) redirect("/onboarding/name");
 
   // Fetch restaurant name for personalized title
