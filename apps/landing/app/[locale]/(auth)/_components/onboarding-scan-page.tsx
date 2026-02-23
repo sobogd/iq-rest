@@ -230,13 +230,13 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
         />
 
         {pageState === "idle" && (
-          <div className="grid gap-3">
+          <div className="grid gap-3 overflow-hidden">
             <div className="mb-3">
               <h1 className="text-[28px] leading-tight font-bold">{restaurantName}</h1>
               <p className="text-lg text-muted-foreground mt-1">{t("aiImportDescription")}</p>
             </div>
 
-            <div className="rounded-xl border border-border bg-muted/30 p-4 flex flex-col gap-4">
+            <div className="rounded-xl border border-border bg-muted/30 p-4 flex flex-col gap-4 overflow-hidden min-w-0">
               <div>
                 <h2 className="text-base font-semibold">{tMenu("scanPoolTitle")}</h2>
                 <p className="text-sm text-muted-foreground mt-1">{tMenu("scanPoolSubtitle")}</p>
@@ -244,7 +244,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
 
               <div className="flex flex-col gap-2 w-full overflow-hidden">
                 {photoPool.map((photo) => (
-                  <div key={photo.id} className="flex items-center gap-2 rounded-xl border border-border bg-background px-2.5 py-2 overflow-hidden">
+                  <div key={photo.id} className="flex items-center gap-2 rounded-xl border border-border bg-background px-2.5 py-2 overflow-hidden min-w-0">
                     {photo.preview === "pdf" || photo.preview === "heic" ? (
                       <div className="w-8 h-8 shrink-0 rounded-lg bg-muted flex items-center justify-center">
                         {photo.preview === "pdf" ? (
