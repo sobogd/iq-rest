@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
 import sharp from "sharp";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 export const config = { api: { bodyParser: { sizeLimit: "30mb" } } };
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;

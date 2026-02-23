@@ -5,7 +5,7 @@ import { getUserCompanyId } from "@/lib/auth";
 import { s3Client, s3Key } from "@/lib/s3";
 import sharp from "sharp";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
