@@ -63,17 +63,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Guard against double-scan: only allow if menu is empty
-    const existingCount = await prisma.category.count({
-      where: { companyId },
-    });
-    if (existingCount > 0) {
-      return NextResponse.json(
-        { error: "Menu already has categories" },
-        { status: 409 }
-      );
-    }
-
     const body = await request.json();
 
     const rawFiles: string[] = Array.isArray(body.images)
