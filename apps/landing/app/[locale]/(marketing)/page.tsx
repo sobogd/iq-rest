@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner, DemoPhone } from "./_components";
+import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner, DemoPhone, ScrollToDemo } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -30,7 +30,6 @@ import {
   Coffee,
   Wine,
   Hotel,
-  ChevronDown,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -162,13 +161,7 @@ export default async function HomePage({
               </div>
             </div>
           </div>
-          <a
-            href="#demo"
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-          >
-            <span className="text-sm">{tHero("scrollToDemo")}</span>
-            <ChevronDown className="w-5 h-5 animate-bounce" />
-          </a>
+          <ScrollToDemo label={tHero("scrollToDemo")} />
         </section>
       ) : (
         <section className="min-h-[calc(100svh-73px)] flex flex-col relative">
@@ -222,13 +215,7 @@ export default async function HomePage({
               </div>
             </div>
           </div>
-          <a
-            href="#demo"
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-          >
-            <span className="text-sm">{tHero("scrollToDemo")}</span>
-            <ChevronDown className="w-5 h-5 animate-bounce" />
-          </a>
+          <ScrollToDemo label={tHero("scrollToDemo")} />
         </section>
       )}
 

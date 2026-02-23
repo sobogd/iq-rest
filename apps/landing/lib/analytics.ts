@@ -132,9 +132,11 @@ export const page = {
 
 // Marketing events (landing page)
 export const marketing = {
-  // Demo modal
+  // Demo
   demoOpen: () => trackEvent("demo_open"),
   demoClose: () => trackEvent("demo_close"),
+  demoScrollArrow: () => trackEvent("demo_scroll_arrow"),
+  demoInteract: () => trackEvent("demo_interact"),
   // AI Menu Scanner
   scannerUpload: (fileCount: string) => trackEvent("scanner_upload", { fileCount }),
   scannerSuccess: (duration: string) => trackEvent("scanner_success", { duration }),

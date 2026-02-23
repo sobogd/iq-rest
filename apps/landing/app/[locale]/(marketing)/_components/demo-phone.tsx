@@ -1,9 +1,22 @@
 "use client";
 
+import { useRef } from "react";
+import { analytics } from "@/lib/analytics";
+
 export function DemoPhone() {
+  const tracked = useRef(false);
+
+  const handleInteract = () => {
+    if (!tracked.current) {
+      tracked.current = true;
+      analytics.marketing.demoInteract();
+    }
+  };
+
   return (
     <div
       className="relative"
+      onClick={handleInteract}
       style={{
         width: "clamp(0px, min(calc(70svh * 8 / 16), 80dvw), 350px)",
         height: "min(70svh, calc(min(80dvw, 350px) * 16 / 8))",
