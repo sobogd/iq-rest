@@ -68,27 +68,33 @@ export async function GET(request: NextRequest) {
         createdAt: true,
         _count: { select: { events: true } },
         events: {
-          orderBy: { createdAt: "desc" },
-          take: 1,
+          orderBy: { createdAt: "asc" },
           select: { createdAt: true },
         },
       },
     });
 
+    const MAX_GAP_MS = 10 * 60 * 1000; // 10 minutes
+
     // Sort by last event date descending
     sessionsList.sort((a, b) => {
-      const aLast = a.events[0]?.createdAt ?? a.createdAt;
-      const bLast = b.events[0]?.createdAt ?? b.createdAt;
+      const aLast = a.events[a.events.length - 1]?.createdAt ?? a.createdAt;
+      const bLast = b.events[b.events.length - 1]?.createdAt ?? b.createdAt;
       return bLast.getTime() - aLast.getTime();
     });
 
     const sessions = sessionsList.map((s) => {
-      const lastEventDate = s.events[0]?.createdAt ?? s.createdAt;
-      const durationMs = lastEventDate.getTime() - s.createdAt.getTime();
+      const lastEventDate = s.events[s.events.length - 1]?.createdAt ?? s.createdAt;
+      // Calculate active duration: sum gaps between consecutive events, capping each at 10 min
+      let activeDurationMs = 0;
+      for (let i = 1; i < s.events.length; i++) {
+        const gap = s.events[i].createdAt.getTime() - s.events[i - 1].createdAt.getTime();
+        activeDurationMs += Math.min(gap, MAX_GAP_MS);
+      }
       return {
         sessionId: s.id,
         lastEvent: lastEventDate.toISOString(),
-        duration: Math.round(durationMs / 1000),
+        duration: Math.round(activeDurationMs / 1000),
         eventCount: s._count.events,
         country: s.country,
         source: s.gclid ? "Ads" : "Direct",
