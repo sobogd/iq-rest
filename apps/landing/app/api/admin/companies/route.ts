@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = request.nextUrl;
     const filter = searchParams.get("filter") || "all"; // all | active | inactive
 
-    // For active/inactive we need to find companies with 20+ unique sessions this month
+    // For active/inactive we need to find companies with 3+ unique sessions this month
     const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
     let activeCompanyIds: Set<string> | null = null;
     if (filter === "active" || filter === "inactive") {
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
         FROM page_views
         WHERE "createdAt" >= ${startOfMonth}
         GROUP BY "companyId"
-        HAVING COUNT(DISTINCT "sessionId") >= 20
+        HAVING COUNT(DISTINCT "sessionId") >= 3
       `;
       activeCompanyIds = new Set(companiesWithViews.map((r) => r.companyId));
     }
