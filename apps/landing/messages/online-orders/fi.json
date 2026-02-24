@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Nettitilaukset ravintoloille — QR-menu | IQ Rest",
+    "description": "Anna asiakkaiden tilata suoraan QR-menustasi. Ei provisioita, reaaliaikaiset hinnat ja välitön tilausten hallinta hallintapaneelissasi."
+  },
+  "hero": {
+    "badge": "Nettitilaukset",
+    "title": "Muuta QR-menusi nettitilausjärjestelmäksi",
+    "subtitle": "Asiakkaat skannaavat, selaavat menua ja tekevät tilauksensa sekunneissa. Ei sovelluslatauksia, ei provisioita, ei monimutkaisuutta.",
+    "cta": "Luo menusi",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "benefits": {
+    "title": "Miksi ravintolat valitsevat QR-menutilaukset",
+    "subtitle": "Suora tilauskanava, joka pitää asiat yksinkertaisina sinulle ja vieraillesi.",
+    "items": [
+      {
+        "title": "Ei sovellusta tarvita",
+        "description": "Vieraat vain skannaavat QR-koodin — ei latauksia, ei rekisteröitymistä. Toimii välittömästi missä tahansa puhelimen selaimessa."
+      },
+      {
+        "title": "Reaaliaikaiset hinnat",
+        "description": "Päivitä hinnat ja saatavuus välittömästi. Muutokset näkyvät heti QR-menussasi."
+      },
+      {
+        "title": "Tilaaminen pöydässä",
+        "description": "Jokaisella pöydällä on oma QR-koodinsa. Vieraat skannaavat, tilaavat ja sinä näet pöytänumeron hallintapaneelissasi."
+      },
+      {
+        "title": "Mukautettu ulkoasu",
+        "description": "Sovita menusi brändiisi omilla väreillä, taustoilla ja logolla."
+      }
+    ]
+  },
+  "features": {
+    "title": "Miten nettitilaaminen toimii",
+    "subtitle": "Kaksi yksinkertaista askelta yhdistää menusi keittiöösi.",
+    "items": [
+      {
+        "title": "Vieraat selaavat ja valitsevat annoksia",
+        "description": "Asiakkaat skannaavat QR-koodisi ja näkevät koko menun valokuvineen, kuvauksineen ja hintoineen. He lisäävät annoksia tilaukseensa yhdellä napautuksella — rekisteröitymistä ei tarvita."
+      },
+      {
+        "title": "Tilaukset näkyvät hallintapaneelissasi",
+        "description": "Kun vieraat ovat valmiita, he napauttavat tilausnappia. Tilaus ilmestyy välittömästi hallintapaneeliisi tuotetiedoilla, pöytänumerolla ja mahdollisilla huomautuksilla. Hyväksy, aloita valmistus ja merkitse valmiiksi."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mitä sinun tarvitsee tietää nettitilaamisesta.",
+    "items": [
+      {
+        "question": "Tarvitsenko ylimääräisiä laitteita tai sovelluksia?",
+        "answer": "Ei. Kaikki toimii selaimen kautta. Vieraat skannaavat QR-koodin puhelimen kameralla, ja sinä hallitset tilauksia IQ Rest -hallintapaneelista millä tahansa laitteella."
+      },
+      {
+        "question": "Onko provisioita tai tilauskohtaisia maksuja?",
+        "answer": "Ei lainkaan. IQ Rest ei koskaan veloita provisioita tilauksistasi. Maksat vain tilaussuunnitelmasi, ja kaikki tilaustulot jäävät sinulle."
+      },
+      {
+        "question": "Voivatko asiakkaat muokata tilaustaan tai lisätä huomautuksia?",
+        "answer": "Kyllä. Vieraat voivat valita annoksia, määrittää määriä ja lisätä erikoistoiveita tai huomautuksia. Voit myös vaatia asiakkaan nimen, puhelinnumeron tai toimitusosoitteen."
+      },
+      {
+        "question": "Toimiiko se paikan päällä syömiseen, noutoihin ja toimituksiin?",
+        "answer": "Kyllä. Paikan päällä vieraat skannaavat QR-koodin pöydässään. Noutoihin tai toimituksiin jaat suoran linkin menuusi. Voit ottaa käyttöön nimi-, puhelin- ja osoitekentät tarpeen mukaan."
+      }
+    ]
+  }
+}

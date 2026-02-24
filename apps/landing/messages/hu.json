@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Személyes online támogatás csevegés az éttermek számára",
         "cta": "Tudd meg többet"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online Rendelés a QR Menüből",
+        "shortDescription": "A vendégek beolvassák, kiválasztják és megrendelik — közvetlenül a menüből.{br}{link}Tudjon meg többet az online rendelésről{/link}.",
+        "description": "Engedje meg vendégeinek, hogy közvetlenül a QR menüből rendeljenek. Nincs alkalmazás, nincs jutalék. A rendelések azonnal megjelennek a vezérlőpulton az asztalszámmal és a tételek részleteivel.",
+        "fullDescription": "Alakítsa QR menüjét közvetlen rendelési csatornává. A vendégek beolvassák a kódot az asztaluknál, böngészik a menüt, és másodpercek alatt leadják rendelésüket — nincs alkalmazásletöltés, nincs regisztráció. A rendeléseket valós időben kapja meg a vezérlőpulton az asztalszámmal, tételekkel és vendégmegjegyzésekkel. Nincs jutalék, nincs rendelésenkénti díj.",
+        "benefits": [
+          "Nem szükséges alkalmazás letöltése a vendégeknek",
+          "Nulla jutalék minden rendelésnél",
+          "Valós idejű rendelések a vezérlőpulton",
+          "Asztalszám automatikusan hozzáadva",
+          "Működik helyben fogyasztásra, elvitelre és házhozszállításra"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online rendelés éttermi QR menüből",
+        "cta": "Tudjon meg többet az online rendelésről"
       }
     ]
   },

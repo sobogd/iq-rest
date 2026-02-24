@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Personlig online supportchatt för restauranger",
         "cta": "Läs Mer"
+      },
+      {
+        "id": "online-orders",
+        "title": "Onlinebeställning från QR-meny",
+        "shortDescription": "Kunder skannar, väljer och beställer — direkt från din meny.{br}{link}Läs mer om onlinebeställningar{/link}.",
+        "description": "Låt gäster beställa direkt från din QR-meny. Inga appar, inga provisioner. Beställningar visas omedelbart i din instrumentpanel med bordsnummer och artikeldetaljer.",
+        "fullDescription": "Förvandla din QR-meny till en direkt beställningskanal. Gäster skannar koden vid sitt bord, bläddrar i menyn och lägger sin beställning på sekunder — inga appnedladdningar, inga registreringar. Du tar emot beställningar i realtid i din instrumentpanel med bordsnummer, artiklar och kundanteckningar. Inga provisioner, inga avgifter per beställning.",
+        "benefits": [
+          "Inga appnedladdningar krävs för kunder",
+          "Inga provisioner på någon beställning",
+          "Realtidsbeställningar i din instrumentpanel",
+          "Bordsnummer inkluderas automatiskt",
+          "Fungerar för servering på plats, avhämtning och leverans"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Onlinebeställning från restaurangens QR-meny",
+        "cta": "Läs mer om onlinebeställningar"
       }
     ]
   },

@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Lična online podrška za restorane",
         "cta": "Saznajte više"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online naručivanje putem QR menija",
+        "shortDescription": "Gosti skeniraju, biraju i naručuju — direktno iz vašeg menija.{br}{link}Saznajte više o online narudžbinama{/link}.",
+        "description": "Omogućite gostima da naručuju direktno iz QR menija. Bez aplikacija, bez provizija. Narudžbine se odmah pojavljuju na vašoj kontrolnoj tabli sa brojem stola i detaljima jela.",
+        "fullDescription": "Pretvorite QR meni u direktan kanal naručivanja. Gosti skeniraju kod za svojim stolom, pregledaju meni i naruče za nekoliko sekundi — bez preuzimanja aplikacija, bez registracije. Primate narudžbine u realnom vremenu na kontrolnoj tabli sa brojem stola, jelima i napomenama gostiju. Bez provizija, bez naknade po narudžbini.",
+        "benefits": [
+          "Gostima nije potrebno preuzimanje aplikacija",
+          "Nula provizija na svaku narudžbinu",
+          "Narudžbine u realnom vremenu na kontrolnoj tabli",
+          "Broj stola se automatski uključuje",
+          "Funkcioniše za jelo u restoranu, poneti i dostavu"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online naručivanje iz restoranskog QR menija",
+        "cta": "Saznajte više o online narudžbinama"
       }
     ]
   },

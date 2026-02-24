@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Comandes en línia per a restaurants — Menú QR | IQ Rest",
+    "description": "Permet als clients fer comandes directament des del teu menú QR. Sense comissions, preus en temps real i gestió instantània de comandes al teu panell de control."
+  },
+  "hero": {
+    "badge": "Comandes en Línia",
+    "title": "Converteix el teu menú QR en un sistema de comandes en línia",
+    "subtitle": "Els clients escanegen, naveguen pel menú i fan la seva comanda en segons. Sense descarregar aplicacions, sense comissions, sense complicacions.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demostració",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "benefits": {
+    "title": "Per què els restaurants trien les comandes per menú QR",
+    "subtitle": "Un canal de comandes directe que simplifica les coses per a tu i els teus clients.",
+    "items": [
+      {
+        "title": "Sense aplicació",
+        "description": "Els clients simplement escanegen el codi QR — sense descàrregues, sense registres. Funciona a l'instant en qualsevol navegador del telèfon."
+      },
+      {
+        "title": "Preus en temps real",
+        "description": "Actualitza preus i disponibilitat a l'instant. Els canvis es reflecteixen immediatament al teu menú QR."
+      },
+      {
+        "title": "Comandes des de la taula",
+        "description": "Cada taula rep el seu propi codi QR. Els clients escanegen, comanen i tu veus el número de taula al teu panell de control."
+      },
+      {
+        "title": "Disseny personalitzat",
+        "description": "Adapta el teu menú a la teva marca amb colors, fons i logotip personalitzats."
+      }
+    ]
+  },
+  "features": {
+    "title": "Com funcionen les comandes en línia",
+    "subtitle": "Dos passos senzills connecten el teu menú amb la cuina.",
+    "items": [
+      {
+        "title": "Els clients naveguen i trien plats",
+        "description": "Els clients escanegen el teu codi QR i veuen el menú complet amb fotos, descripcions i preus. Afegeixen plats a la comanda amb un sol toc — sense registre."
+      },
+      {
+        "title": "Les comandes apareixen al teu panell de control",
+        "description": "Quan estan preparats, els clients toquen el botó de comanda. La comanda apareix a l'instant al teu panell amb els detalls dels plats, el número de taula i les notes. Accepta, comença a preparar i marca com a completada."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre les comandes en línia.",
+    "items": [
+      {
+        "question": "Necessito algun maquinari o aplicació addicional?",
+        "answer": "No. Tot funciona a través del navegador web. Els clients escanegen el codi QR amb la càmera del telèfon i tu gestiones les comandes des del panell d'IQ Rest en qualsevol dispositiu."
+      },
+      {
+        "question": "Hi ha comissions o tarifes per comanda?",
+        "answer": "En absolut. IQ Rest mai cobra comissions sobre les teves comandes. Només pagues el teu pla de subscripció i tots els ingressos de les comandes es queden amb tu."
+      },
+      {
+        "question": "Els clients poden personalitzar la seva comanda o afegir notes?",
+        "answer": "Sí. Els clients poden seleccionar plats, especificar quantitats i afegir notes o sol·licituds especials. També pots requerir el nom, telèfon o adreça de lliurament del client."
+      },
+      {
+        "question": "Funciona per menjar al local, per emportar i per a lliurament?",
+        "answer": "Sí. Per menjar al local, els clients escanegen el codi QR a la seva taula. Per emportar o per a lliurament, comparteix un enllaç directe al teu menú. Pots activar els camps de nom, telèfon i adreça segons sigui necessari."
+      }
+    ]
+  }
+}

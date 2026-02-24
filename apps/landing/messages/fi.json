@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Henkilökohtainen online-tukikeskustelu ravintoloille",
         "cta": "Lue lisää"
+      },
+      {
+        "id": "online-orders",
+        "title": "Nettitilaukset QR-menusta",
+        "shortDescription": "Asiakkaat skannaavat, valitsevat ja tilaavat — suoraan menustasi.{br}{link}Lue lisää nettitilauksista{/link}.",
+        "description": "Anna vieraiden tilata suoraan QR-menustasi. Ei sovelluksia, ei provisioita. Tilaukset ilmestyvät välittömästi hallintapaneeliin pöytänumerolla ja tuotetiedoilla.",
+        "fullDescription": "Muuta QR-menusi suoraksi tilauskanavaksi. Vieraat skannaavat koodin pöydässään, selaavat menua ja tekevät tilauksensa sekunneissa — ei sovelluslatauksia, ei rekisteröitymistä. Saat tilaukset reaaliajassa hallintapaneeliisi pöytänumerolla, tuotteilla ja asiakkaiden huomautuksilla. Ei provisioita, ei tilauskohtaisia maksuja.",
+        "benefits": [
+          "Asiakkaiden ei tarvitse ladata sovellusta",
+          "Ei provisioita yhdestäkään tilauksesta",
+          "Reaaliaikaiset tilaukset hallintapaneelissasi",
+          "Pöytänumero mukana automaattisesti",
+          "Toimii paikan päällä, noutona ja toimituksena"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Nettitilaaminen ravintolan QR-menusta",
+        "cta": "Lue lisää nettitilauksista"
       }
     ]
   },

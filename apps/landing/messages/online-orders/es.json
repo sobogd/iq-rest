@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Pedidos Online para Restaurantes — Menú QR | IQ Rest",
+    "description": "Permite a los clientes hacer pedidos directamente desde tu menú QR. Sin comisiones, precios en tiempo real y gestión instantánea de pedidos en tu panel de control."
+  },
+  "hero": {
+    "badge": "Pedidos Online",
+    "title": "Convierte tu Menú QR en un Sistema de Pedidos Online",
+    "subtitle": "Los clientes escanean, exploran tu menú y hacen su pedido en segundos. Sin descargar apps, sin comisiones, sin complicaciones.",
+    "cta": "Crear tu Menú",
+    "ctaDemo": "Ver Demo",
+    "noCreditCard": "Sin tarjeta de crédito. Plan gratuito disponible."
+  },
+  "benefits": {
+    "title": "Por qué los restaurantes eligen pedidos por menú QR",
+    "subtitle": "Un canal de pedidos directo que simplifica todo para ti y tus comensales.",
+    "items": [
+      {
+        "title": "Sin App Necesaria",
+        "description": "Los clientes solo escanean un código QR — sin descargas, sin registros. Funciona al instante en cualquier navegador del teléfono."
+      },
+      {
+        "title": "Precios en Tiempo Real",
+        "description": "Actualiza precios y disponibilidad al instante. Los cambios se reflejan inmediatamente en tu menú QR."
+      },
+      {
+        "title": "Pedidos desde la Mesa",
+        "description": "Cada mesa tiene su propio código QR. Los clientes escanean, piden y tú ves el número de mesa en tu panel de control."
+      },
+      {
+        "title": "Diseño Personalizado",
+        "description": "Adapta tu menú a tu marca con colores, fondos y logotipo personalizados."
+      }
+    ]
+  },
+  "features": {
+    "title": "Cómo Funcionan los Pedidos Online",
+    "subtitle": "Dos simples pasos conectan tu menú con tu cocina.",
+    "items": [
+      {
+        "title": "Los clientes exploran y seleccionan platos",
+        "description": "Los clientes escanean tu código QR y ven el menú completo con fotos, descripciones y precios. Añaden platos a su pedido con un solo toque — sin necesidad de registrarse."
+      },
+      {
+        "title": "Los pedidos aparecen en tu panel de control",
+        "description": "Cuando están listos, los clientes pulsan el botón de pedido. El pedido aparece al instante en tu panel con los detalles de los platos, número de mesa y notas. Acepta, comienza a preparar y marca como completado."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre los pedidos online.",
+    "items": [
+      {
+        "question": "¿Necesito algún equipo o aplicación adicional?",
+        "answer": "No. Todo funciona a través del navegador web. Los clientes escanean el código QR con la cámara de su teléfono, y tú gestionas los pedidos desde el panel de IQ Rest en cualquier dispositivo."
+      },
+      {
+        "question": "¿Hay comisiones o cargos por pedido?",
+        "answer": "En absoluto. IQ Rest nunca cobra comisiones sobre tus pedidos. Solo pagas tu plan de suscripción, y todos los ingresos de los pedidos son tuyos."
+      },
+      {
+        "question": "¿Pueden los clientes personalizar su pedido o añadir notas?",
+        "answer": "Sí. Los clientes pueden seleccionar platos, especificar cantidades y añadir notas o solicitudes especiales. También puedes requerir nombre, teléfono o dirección de entrega."
+      },
+      {
+        "question": "¿Funciona para comer en el local, para llevar y a domicilio?",
+        "answer": "Sí. Para comer en el local, los clientes escanean el código QR en su mesa. Para llevar o a domicilio, comparte un enlace directo a tu menú. Puedes activar campos de nombre, teléfono y dirección según sea necesario."
+      }
+    ]
+  }
+}

@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Asmeninė internetinė paramos pokalbių sistema restoranams",
         "cta": "Sužinokite daugiau"
+      },
+      {
+        "id": "online-orders",
+        "title": "Internetinis užsakymas iš QR meniu",
+        "shortDescription": "Klientai nuskenuoja, pasirenka ir užsisako — tiesiai iš jūsų meniu.{br}{link}Sužinokite daugiau apie internetinius užsakymus{/link}.",
+        "description": "Leiskite svečiams pateikti užsakymus tiesiai iš QR meniu. Be programėlių, be komisinių. Užsakymai akimirksniu pasirodo jūsų valdymo skydelyje su staliuko numeriu ir patiekalų detalėmis.",
+        "fullDescription": "Paverskite QR meniu tiesioginiu užsakymų kanalu. Svečiai nuskenuoja kodą prie savo staliuko, naršo meniu ir pateikia užsakymą per kelias sekundes — be programėlių atsisiuntimo, be registracijos. Gaunate užsakymus realiuoju laiku savo valdymo skydelyje su staliuko numeriu, patiekalais ir klientų pastabomis. Be komisinių, be mokesčio už užsakymą.",
+        "benefits": [
+          "Klientams nereikia siųstis programėlių",
+          "Jokių komisinių nuo kiekvieno užsakymo",
+          "Užsakymai realiuoju laiku jūsų valdymo skydelyje",
+          "Staliuko numeris įtraukiamas automatiškai",
+          "Veikia valgymui vietoje, išsinešimui ir pristatymui"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Internetinis užsakymas iš restorano QR meniu",
+        "cta": "Sužinokite daugiau apie internetinius užsakymus"
       }
     ]
   },

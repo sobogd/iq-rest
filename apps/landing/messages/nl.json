@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Persoonlijke online ondersteuning chat voor restaurants",
         "cta": "Meer Informatie"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online Bestellen via het QR-menu",
+        "shortDescription": "Klanten scannen, kiezen en bestellen — rechtstreeks vanuit uw menu.{br}{link}Meer over online bestellen{/link}.",
+        "description": "Laat gasten rechtstreeks bestellen via uw QR-menu. Geen apps, geen commissies. Bestellingen verschijnen direct in uw dashboard met tafelnummer en gerechtendetails.",
+        "fullDescription": "Maak van uw QR-menu een direct bestelkanaal. Gasten scannen de code aan hun tafel, bekijken het menu en bestellen binnen seconden — geen app nodig, geen registratie. U ontvangt bestellingen in realtime in uw dashboard met tafelnummer, gerechten en klantopmerkingen. Geen commissies, geen kosten per bestelling.",
+        "benefits": [
+          "Geen app-download nodig voor klanten",
+          "Nul commissie op elke bestelling",
+          "Realtime bestellingen in uw dashboard",
+          "Tafelnummer automatisch inbegrepen",
+          "Werkt voor ter plaatse, afhaal en bezorging"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online bestellen via het QR-menu van het restaurant",
+        "cta": "Meer over online bestellen"
       }
     ]
   },

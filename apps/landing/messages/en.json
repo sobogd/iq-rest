@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Personal online support chat for restaurants",
         "cta": "Learn More"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online Ordering from QR Menu",
+        "shortDescription": "Customers scan, choose, and order — right from your menu.{br}{link}Learn more about online orders{/link}.",
+        "description": "Let guests place orders directly from your QR menu. No apps, no commissions. Orders appear instantly in your dashboard with table number and item details.",
+        "fullDescription": "Turn your QR menu into a direct ordering channel. Guests scan the code at their table, browse the menu, and place their order in seconds — no app downloads, no sign-ups. You receive orders in real time in your dashboard with table number, items, and customer notes. No commissions, no per-order fees.",
+        "benefits": [
+          "No app downloads required for customers",
+          "Zero commissions on every order",
+          "Real-time orders in your dashboard",
+          "Table number automatically included",
+          "Works for dine-in, takeaway, and delivery"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online ordering from restaurant QR menu",
+        "cta": "Learn more about online orders"
       }
     ]
   },

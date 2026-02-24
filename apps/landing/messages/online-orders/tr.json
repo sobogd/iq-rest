@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Restoranlar için Online Sipariş — QR Menü | IQ Rest",
+    "description": "Müşterileriniz QR menünüzden doğrudan sipariş versin. Sıfır komisyon, anlık fiyatlar ve panelinizdeki anında sipariş yönetimi."
+  },
+  "hero": {
+    "badge": "Online Sipariş",
+    "title": "QR Menünüzü Online Sipariş Sistemine Dönüştürün",
+    "subtitle": "Müşteriler tarar, menünüze göz atar ve saniyeler içinde sipariş verir. Uygulama indirme yok, komisyon yok, karmaşıklık yok.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demoyu Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "benefits": {
+    "title": "Restoranlar Neden QR Menü Siparişini Tercih Ediyor",
+    "subtitle": "Siz ve misafirleriniz için işleri basit tutan doğrudan bir sipariş kanalı.",
+    "items": [
+      {
+        "title": "Uygulama Gerekmez",
+        "description": "Misafirler sadece QR kodu tarar — indirme yok, kayıt yok. Herhangi bir telefon tarayıcısında anında çalışır."
+      },
+      {
+        "title": "Anlık Fiyatlar",
+        "description": "Fiyatları ve ürün durumunu anında güncelleyin. Değişiklikler QR menünüze hemen yansır."
+      },
+      {
+        "title": "Masa Başı Sipariş",
+        "description": "Her masa kendi QR koduna sahiptir. Misafirler tarar, sipariş verir ve siz panelinizde masa numarasını görürsünüz."
+      },
+      {
+        "title": "Özel Tasarım",
+        "description": "Özel renkler, arka planlar ve logo ile menünüzü markanıza uyumlu hale getirin."
+      }
+    ]
+  },
+  "features": {
+    "title": "Online Sipariş Nasıl Çalışır",
+    "subtitle": "İki basit adımla menünüz mutfağınıza bağlanır.",
+    "items": [
+      {
+        "title": "Misafirler Ürünlere Göz Atar ve Seçer",
+        "description": "Müşteriler QR kodunuzu tarar ve fotoğraflar, açıklamalar ve fiyatlarla tüm menünüzü görür. Tek dokunuşla sipariş listesine ürün eklerler — kayıt gerekmez."
+      },
+      {
+        "title": "Siparişler Panelinizde Görünür",
+        "description": "Hazır olduğunda misafirler sipariş butonuna dokunur. Sipariş anında panelinizde ürün detayları, masa numarası ve notlarla birlikte görünür. Kabul edin, hazırlamaya başlayın ve tamamlandı olarak işaretleyin."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Online sipariş hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Ekstra donanım veya uygulamaya ihtiyacım var mı?",
+        "answer": "Hayır. Her şey web tarayıcısı üzerinden çalışır. Misafirler telefon kameralarıyla QR kodu tarar, siz de herhangi bir cihazdan IQ Rest panelinde siparişleri yönetirsiniz."
+      },
+      {
+        "question": "Komisyon veya sipariş başı ücret var mı?",
+        "answer": "Kesinlikle hayır. IQ Rest siparişlerinizden asla komisyon almaz. Sadece abonelik planınızı ödersiniz ve siparişlerden elde edilen tüm gelir sizde kalır."
+      },
+      {
+        "question": "Müşteriler siparişlerini özelleştirebilir veya not ekleyebilir mi?",
+        "answer": "Evet. Misafirler ürünleri seçebilir, miktarları belirleyebilir ve özel notlar veya istekler ekleyebilir. Ayrıca müşteri adı, telefon veya teslimat adresi gibi bilgileri zorunlu kılabilirsiniz."
+      },
+      {
+        "question": "Restoranda yemek, paket servis ve teslimat için çalışır mı?",
+        "answer": "Evet. Restoranda yemek için misafirler masalarındaki QR kodu tarar. Paket servis veya teslimat için menünüze doğrudan bir bağlantı paylaşın. İhtiyaca göre ad, telefon ve adres alanlarını etkinleştirebilirsiniz."
+      }
+    ]
+  }
+}

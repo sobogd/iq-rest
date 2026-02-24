@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Comenzi Online pentru Restaurante — Meniu QR | IQ Rest",
+    "description": "Permiteți clienților să plaseze comenzi direct din meniul QR. Zero comisioane, prețuri în timp real și gestionare instantanee a comenzilor din panoul de control."
+  },
+  "hero": {
+    "badge": "Comenzi Online",
+    "title": "Transformați Meniul QR într-un Sistem de Comenzi Online",
+    "subtitle": "Clienții scanează, navighează prin meniu și plasează comanda în câteva secunde. Fără descărcări de aplicații, fără comisioane, fără complicații.",
+    "cta": "Creați Meniul",
+    "ctaDemo": "Vedeți Demo",
+    "noCreditCard": "Nu este necesar cardul de credit. Plan gratuit disponibil."
+  },
+  "benefits": {
+    "title": "De Ce Restaurantele Aleg Comenzile prin Meniu QR",
+    "subtitle": "Un canal direct de comenzi care menține lucrurile simple pentru dumneavoastră și oaspeții dumneavoastră.",
+    "items": [
+      {
+        "title": "Fără Aplicație Necesară",
+        "description": "Oaspeții scanează doar un cod QR — fără descărcări, fără înregistrări. Funcționează instant în orice browser de telefon."
+      },
+      {
+        "title": "Prețuri în Timp Real",
+        "description": "Actualizați prețurile și disponibilitatea instantaneu. Modificările se reflectă imediat în meniul QR."
+      },
+      {
+        "title": "Comenzi la Masă",
+        "description": "Fiecare masă primește propriul cod QR. Oaspeții scanează, comandă, iar dumneavoastră vedeți numărul mesei în panoul de control."
+      },
+      {
+        "title": "Design Personalizat",
+        "description": "Adaptați meniul la brandul dumneavoastră cu culori, fundaluri și logo personalizate."
+      }
+    ]
+  },
+  "features": {
+    "title": "Cum Funcționează Comenzile Online",
+    "subtitle": "Doi pași simpli conectează meniul la bucătăria dumneavoastră.",
+    "items": [
+      {
+        "title": "Oaspeții Navighează și Selectează Produse",
+        "description": "Clienții scanează codul QR și văd meniul complet cu fotografii, descrieri și prețuri. Adaugă produse în comandă cu o singură atingere — fără înregistrare necesară."
+      },
+      {
+        "title": "Comenzile Apar în Panoul de Control",
+        "description": "Când sunt gata, oaspeții apasă butonul de comandă. Comanda apare instantaneu în panoul de control cu detaliile produselor, numărul mesei și eventualele note. Acceptați, începeți prepararea și marcați ca finalizată."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre comenzile online.",
+    "items": [
+      {
+        "question": "Am nevoie de echipament sau aplicații suplimentare?",
+        "answer": "Nu. Totul funcționează prin browser web. Oaspeții scanează codul QR cu camera telefonului, iar dumneavoastră gestionați comenzile din panoul IQ Rest de pe orice dispozitiv."
+      },
+      {
+        "question": "Există comisioane sau taxe per comandă?",
+        "answer": "Absolut nu. IQ Rest nu percepe niciodată comisioane pentru comenzile dumneavoastră. Plătiți doar planul de abonament, iar toate veniturile din comenzi rămân la dumneavoastră."
+      },
+      {
+        "question": "Pot clienții să-și personalizeze comanda sau să adauge note?",
+        "answer": "Da. Oaspeții pot selecta produse, specifica cantități și adăuga note sau solicitări speciale. Puteți solicita și numele, telefonul sau adresa de livrare ale clientului."
+      },
+      {
+        "question": "Funcționează pentru servire la masă, la pachet și livrare?",
+        "answer": "Da. Pentru servire la masă, oaspeții scanează codul QR de la masă. Pentru comenzi la pachet sau livrare, partajați un link direct către meniu. Puteți activa câmpurile de nume, telefon și adresă după necesitate."
+      }
+    ]
+  }
+}

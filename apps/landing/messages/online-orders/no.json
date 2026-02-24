@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Nettbestilling for restauranter — QR-meny | IQ Rest",
+    "description": "La kundene bestille direkte fra QR-menyen din. Ingen provisjoner, sanntidspriser og umiddelbar ordrehåndtering i dashbordet ditt."
+  },
+  "hero": {
+    "badge": "Nettbestilling",
+    "title": "Gjør QR-menyen din om til et nettbestillingssystem",
+    "subtitle": "Kunder skanner, blar gjennom menyen og legger inn bestillingen sin på sekunder. Ingen app-nedlastinger, ingen provisjoner, ingen kompleksitet.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort nødvendig. Gratis plan tilgjengelig."
+  },
+  "benefits": {
+    "title": "Hvorfor restauranter velger QR-menybestillinger",
+    "subtitle": "En direkte bestillingskanal som gjør det enkelt for deg og gjestene dine.",
+    "items": [
+      {
+        "title": "Ingen app nødvendig",
+        "description": "Gjester skanner bare en QR-kode — ingen nedlastinger, ingen registreringer. Fungerer umiddelbart i hvilken som helst telefonleser."
+      },
+      {
+        "title": "Sanntidspriser",
+        "description": "Oppdater priser og tilgjengelighet umiddelbart. Endringer vises med en gang i QR-menyen din."
+      },
+      {
+        "title": "Bestilling ved bordet",
+        "description": "Hvert bord får sin egen QR-kode. Gjester skanner, bestiller, og du ser bordnummeret i dashbordet ditt."
+      },
+      {
+        "title": "Tilpasset design",
+        "description": "Match menyen din til merkevaren din med egne farger, bakgrunner og logo."
+      }
+    ]
+  },
+  "features": {
+    "title": "Slik fungerer nettbestilling",
+    "subtitle": "To enkle trinn kobler menyen din til kjøkkenet ditt.",
+    "items": [
+      {
+        "title": "Gjester blar og velger retter",
+        "description": "Kunder skanner QR-koden din og ser hele menyen med bilder, beskrivelser og priser. De legger til retter i bestillingen med et enkelt trykk — ingen registrering nødvendig."
+      },
+      {
+        "title": "Bestillinger vises i dashbordet ditt",
+        "description": "Når gjestene er klare, trykker de på bestillingsknappen. Bestillingen vises umiddelbart i dashbordet ditt med varedetaljer, bordnummer og eventuelle notater. Godta, begynn tilberedning og merk som ferdig."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "subtitle": "Alt du trenger å vite om nettbestilling.",
+    "items": [
+      {
+        "question": "Trenger jeg ekstra utstyr eller apper?",
+        "answer": "Nei. Alt fungerer via en nettleser. Gjester skanner QR-koden med telefonkameraet, og du håndterer bestillinger fra IQ Rest-dashbordet på hvilken som helst enhet."
+      },
+      {
+        "question": "Er det noen provisjoner eller gebyrer per bestilling?",
+        "answer": "Absolutt ikke. IQ Rest tar aldri provisjon på bestillingene dine. Du betaler bare abonnementet ditt, og alle inntekter fra bestillinger forblir hos deg."
+      },
+      {
+        "question": "Kan kunder tilpasse bestillingen sin eller legge til notater?",
+        "answer": "Ja. Gjester kan velge retter, angi antall og legge til spesielle notater eller ønsker. Du kan også kreve kundenavn, telefon eller leveringsadresse."
+      },
+      {
+        "question": "Fungerer det for spising på stedet, takeaway og levering?",
+        "answer": "Ja. For spising på stedet skanner gjester QR-koden ved bordet sitt. For takeaway eller levering deler du en direktelenke til menyen din. Du kan aktivere felt for navn, telefon og adresse etter behov."
+      }
+    ]
+  }
+}

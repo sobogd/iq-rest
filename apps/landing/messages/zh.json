@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "餐厅个人在线支持聊天",
         "cta": "了解更多"
+      },
+      {
+        "id": "online-orders",
+        "title": "QR菜单在线点餐",
+        "shortDescription": "顾客扫码、选择、下单——直接从您的菜单完成。{br}{link}了解更多关于在线点餐{/link}。",
+        "description": "让顾客直接从您的QR菜单下单。无需应用、无佣金。订单会立即出现在您的仪表板中，包含桌号和菜品详情。",
+        "fullDescription": "将您的QR菜单变成直接点餐渠道。顾客扫描桌上的二维码，浏览菜单，几秒内完成下单——无需下载应用、无需注册。您可以在仪表板中实时收到包含桌号、菜品和顾客备注的订单。零佣金，无按单收费。",
+        "benefits": [
+          "顾客无需下载任何应用",
+          "每笔订单零佣金",
+          "仪表板中实时显示订单",
+          "自动包含桌号",
+          "支持堂食、外带和外送"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "餐厅QR菜单在线点餐",
+        "cta": "了解更多关于在线点餐"
       }
     ]
   },

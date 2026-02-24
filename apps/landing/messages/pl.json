@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Osobista pomoc online dla restauracji",
         "cta": "Dowiedz się więcej"
+      },
+      {
+        "id": "online-orders",
+        "title": "Zamówienia online z menu QR",
+        "shortDescription": "Klienci skanują, wybierają i zamawiają — bezpośrednio z Twojego menu.{br}{link}Dowiedz się więcej o zamówieniach online{/link}.",
+        "description": "Pozwól gościom składać zamówienia bezpośrednio z menu QR. Bez aplikacji, bez prowizji. Zamówienia pojawiają się natychmiast w panelu z numerem stolika i szczegółami pozycji.",
+        "fullDescription": "Zamień swoje menu QR w bezpośredni kanał zamówień. Goście skanują kod przy stoliku, przeglądają menu i składają zamówienie w kilka sekund — bez pobierania aplikacji, bez rejestracji. Otrzymujesz zamówienia w czasie rzeczywistym w panelu z numerem stolika, pozycjami i notatkami klientów. Bez prowizji, bez opłat za zamówienie.",
+        "benefits": [
+          "Klienci nie muszą pobierać aplikacji",
+          "Zero prowizji od każdego zamówienia",
+          "Zamówienia w czasie rzeczywistym w Twoim panelu",
+          "Numer stolika automatycznie dołączony",
+          "Działa na miejscu, na wynos i z dostawą"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Zamówienia online z menu QR restauracji",
+        "cta": "Dowiedz się więcej o zamówieniach online"
       }
     ]
   },

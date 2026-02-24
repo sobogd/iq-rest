@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Osebna spletna podpora za restavracije",
         "cta": "Izvedite več"
+      },
+      {
+        "id": "online-orders",
+        "title": "Spletno Naročanje iz QR Menija",
+        "shortDescription": "Gostje skenirajo, izberejo in naročijo — neposredno iz vašega menija.{br}{link}Izveste več o spletnem naročanju{/link}.",
+        "description": "Omogočite gostom, da naročajo neposredno iz vašega QR menija. Brez aplikacij, brez provizij. Naročila se takoj prikažejo na nadzorni plošči s številko mize in podrobnostmi jedi.",
+        "fullDescription": "Spremenite svoj QR meni v neposreden kanal za naročanje. Gostje skenirajo kodo ob mizi, pregledajo meni in oddajo naročilo v nekaj sekundah — brez prenosa aplikacij, brez registracij. Naročila prejemate v realnem času na nadzorni plošči s številko mize, jedmi in opombami gostov. Brez provizij, brez stroškov na naročilo.",
+        "benefits": [
+          "Gostom ni treba prenašati aplikacije",
+          "Nič provizij za vsako naročilo",
+          "Naročila v realnem času na nadzorni plošči",
+          "Številka mize samodejno vključena",
+          "Deluje za obedovanje v restavraciji, za s seboj in dostavo"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Spletno naročanje iz QR menija restavracije",
+        "cta": "Izveste več o spletnem naročanju"
       }
     ]
   },

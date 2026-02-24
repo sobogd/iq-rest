@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Personīgais tiešsaistes atbalsta čats restorāniem",
         "cta": "Uzzināt vairāk"
+      },
+      {
+        "id": "online-orders",
+        "title": "Tiešsaistes pasūtīšana no QR ēdienkartes",
+        "shortDescription": "Klienti skenē, izvēlas un pasūta — tieši no jūsu ēdienkartes.{br}{link}Uzziniet vairāk par tiešsaistes pasūtījumiem{/link}.",
+        "description": "Ļaujiet viesiem veikt pasūtījumus tieši no QR ēdienkartes. Bez lietotnēm, bez komisijām. Pasūtījumi parādās uzreiz jūsu vadības panelī ar galda numuru un ēdienu informāciju.",
+        "fullDescription": "Pārvērtiet savu QR ēdienkarti par tiešo pasūtīšanas kanālu. Viesi skenē kodu pie sava galda, pārlūko ēdienkarti un veic pasūtījumu dažās sekundēs — bez lietotņu lejupielādes, bez reģistrācijas. Jūs saņemat pasūtījumus reāllaikā savā vadības panelī ar galda numuru, ēdieniem un klientu piezīmēm. Bez komisijām, bez maksas par pasūtījumu.",
+        "benefits": [
+          "Klientiem nav jālejupielādē lietotnes",
+          "Nulles komisijas par katru pasūtījumu",
+          "Reāllaika pasūtījumi jūsu vadības panelī",
+          "Galda numurs tiek iekļauts automātiski",
+          "Darbojas ēšanai uz vietas, līdzņemšanai un piegādei"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Tiešsaistes pasūtīšana no restorāna QR ēdienkartes",
+        "cta": "Uzziniet vairāk par tiešsaistes pasūtījumiem"
       }
     ]
   },

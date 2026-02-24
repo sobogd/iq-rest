@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Chat de suport online personal pentru restaurante",
         "cta": "Află mai multe"
+      },
+      {
+        "id": "online-orders",
+        "title": "Comenzi Online din Meniul QR",
+        "shortDescription": "Clienții scanează, aleg și comandă — direct din meniul dumneavoastră.{br}{link}Aflați mai multe despre comenzile online{/link}.",
+        "description": "Permiteți oaspeților să plaseze comenzi direct din meniul QR. Fără aplicații, fără comisioane. Comenzile apar instantaneu în panoul de control cu numărul mesei și detaliile produselor.",
+        "fullDescription": "Transformați meniul QR într-un canal direct de comenzi. Oaspeții scanează codul de la masă, navighează prin meniu și plasează comanda în câteva secunde — fără descărcări de aplicații, fără înregistrări. Primiți comenzile în timp real în panoul de control cu numărul mesei, produsele și notele clienților. Fără comisioane, fără taxe per comandă.",
+        "benefits": [
+          "Nu este necesară descărcarea unei aplicații",
+          "Zero comisioane pentru fiecare comandă",
+          "Comenzi în timp real în panoul de control",
+          "Numărul mesei inclus automat",
+          "Funcționează pentru servire la masă, la pachet și livrare"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Comenzi online din meniul QR al restaurantului",
+        "cta": "Aflați mai multe despre comenzile online"
       }
     ]
   },

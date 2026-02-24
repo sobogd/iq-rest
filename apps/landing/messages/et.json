@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Isiklik veebitugi restoranidele",
         "cta": "Loe lähemalt"
+      },
+      {
+        "id": "online-orders",
+        "title": "Veebipõhine tellimine QR-menüüst",
+        "shortDescription": "Kliendid skaneerivad, valivad ja tellivad — otse teie menüüst.{br}{link}Loe lähemalt veebipõhistest tellimustest{/link}.",
+        "description": "Laske külalistel teha tellimusi otse QR-menüüst. Ilma rakendusteta, ilma komisjonitasudeta. Tellimused ilmuvad koheselt teie juhtpaneelile koos laua numbri ja roa detailidega.",
+        "fullDescription": "Muutke QR-menüü otseseks tellimiskanaliks. Külalised skaneerivad koodi oma lauas, sirvivad menüüd ja esitavad tellimuse sekunditega — ilma rakenduste allalaadimiseta, ilma registreerimiseta. Saate tellimused reaalajas oma juhtpaneelile koos laua numbri, roogade ja kliendi märkustega. Komisjonitasusid ega tellimuspõhiseid tasusid pole.",
+        "benefits": [
+          "Klientidel pole vaja rakendusi alla laadida",
+          "Null komisjonitasu iga tellimuse eest",
+          "Reaalajas tellimused teie juhtpaneelil",
+          "Laua number lisatakse automaatselt",
+          "Töötab kohapeal söömiseks, kaasavõtmiseks ja kohaletoimetamiseks"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Veebipõhine tellimine restorani QR-menüüst",
+        "cta": "Loe lähemalt veebipõhistest tellimustest"
       }
     ]
   },

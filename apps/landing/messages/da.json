@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Personlig online support chat for restauranter",
         "cta": "Lær Mere"
+      },
+      {
+        "id": "online-orders",
+        "title": "Onlinebestilling fra QR-menu",
+        "shortDescription": "Kunder scanner, vælger og bestiller — direkte fra din menu.{br}{link}Lær mere om onlinebestillinger{/link}.",
+        "description": "Lad gæster bestille direkte fra din QR-menu. Ingen apps, ingen kommission. Bestillinger vises øjeblikkeligt i dit dashboard med bordnummer og varedetaljer.",
+        "fullDescription": "Forvandl din QR-menu til en direkte bestillingskanal. Gæster scanner koden ved deres bord, gennemser menuen og afgiver deres bestilling på sekunder — ingen app-downloads, ingen tilmeldinger. Du modtager bestillinger i realtid i dit dashboard med bordnummer, varer og kundenoter. Ingen kommission, ingen gebyrer pr. bestilling.",
+        "benefits": [
+          "Ingen app-downloads nødvendige for kunder",
+          "Nul kommission på enhver bestilling",
+          "Realtidsbestillinger i dit dashboard",
+          "Bordnummer inkluderet automatisk",
+          "Fungerer til spisning på stedet, takeaway og levering"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Onlinebestilling fra restaurantens QR-menu",
+        "cta": "Lær mere om onlinebestillinger"
       }
     ]
   },

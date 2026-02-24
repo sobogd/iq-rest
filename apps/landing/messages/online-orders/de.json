@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Online-Bestellungen für Restaurants — QR-Menü | IQ Rest",
+    "description": "Lassen Sie Kunden direkt über Ihr QR-Menü bestellen. Keine Provisionen, Echtzeit-Preise und sofortige Bestellverwaltung in Ihrem Dashboard."
+  },
+  "hero": {
+    "badge": "Online-Bestellungen",
+    "title": "Verwandeln Sie Ihr QR-Menü in ein Online-Bestellsystem",
+    "subtitle": "Gäste scannen, durchstöbern Ihr Menü und bestellen in Sekunden. Kein App-Download, keine Provisionen, kein Aufwand.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "benefits": {
+    "title": "Warum Restaurants QR-Menü-Bestellungen wählen",
+    "subtitle": "Ein direkter Bestellkanal, der es für Sie und Ihre Gäste einfach macht.",
+    "items": [
+      {
+        "title": "Keine App erforderlich",
+        "description": "Gäste scannen einfach einen QR-Code — kein Download, keine Registrierung. Funktioniert sofort in jedem Handy-Browser."
+      },
+      {
+        "title": "Echtzeit-Preise",
+        "description": "Aktualisieren Sie Preise und Verfügbarkeit sofort. Änderungen werden umgehend in Ihrem QR-Menü angezeigt."
+      },
+      {
+        "title": "Bestellung am Tisch",
+        "description": "Jeder Tisch bekommt seinen eigenen QR-Code. Gäste scannen, bestellen und Sie sehen die Tischnummer in Ihrem Dashboard."
+      },
+      {
+        "title": "Individuelles Design",
+        "description": "Passen Sie Ihr Menü mit Ihren Markenfarben, Hintergründen und Logo an."
+      }
+    ]
+  },
+  "features": {
+    "title": "So funktionieren Online-Bestellungen",
+    "subtitle": "Zwei einfache Schritte verbinden Ihr Menü mit Ihrer Küche.",
+    "items": [
+      {
+        "title": "Gäste durchstöbern und wählen Gerichte",
+        "description": "Kunden scannen Ihren QR-Code und sehen das vollständige Menü mit Fotos, Beschreibungen und Preisen. Gerichte werden mit einem einzigen Tippen zur Bestellung hinzugefügt — keine Registrierung nötig."
+      },
+      {
+        "title": "Bestellungen erscheinen in Ihrem Dashboard",
+        "description": "Wenn die Gäste bereit sind, tippen sie auf die Bestell-Taste. Die Bestellung erscheint sofort in Ihrem Dashboard mit Gerichtdetails, Tischnummer und Anmerkungen. Annehmen, zubereiten und als erledigt markieren."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Online-Bestellungen wissen müssen.",
+    "items": [
+      {
+        "question": "Brauche ich zusätzliche Hardware oder Apps?",
+        "answer": "Nein. Alles funktioniert über den Webbrowser. Gäste scannen den QR-Code mit ihrer Handykamera, und Sie verwalten Bestellungen über das IQ Rest Dashboard auf jedem Gerät."
+      },
+      {
+        "question": "Gibt es Provisionen oder Gebühren pro Bestellung?",
+        "answer": "Nein. IQ Rest erhebt niemals Provisionen auf Ihre Bestellungen. Sie zahlen nur Ihr Abo, und alle Einnahmen aus Bestellungen gehören Ihnen."
+      },
+      {
+        "question": "Können Kunden ihre Bestellung anpassen oder Anmerkungen hinzufügen?",
+        "answer": "Ja. Gäste können Gerichte auswählen, Mengen angeben und besondere Wünsche hinzufügen. Sie können auch Name, Telefon oder Lieferadresse als Pflichtfeld festlegen."
+      },
+      {
+        "question": "Funktioniert es für Vor-Ort-Essen, Abholung und Lieferung?",
+        "answer": "Ja. Für den Verzehr vor Ort scannen Gäste den QR-Code an ihrem Tisch. Für Abholung oder Lieferung teilen Sie einen direkten Link zu Ihrem Menü. Name-, Telefon- und Adressfelder können nach Bedarf aktiviert werden."
+      }
+    ]
+  }
+}

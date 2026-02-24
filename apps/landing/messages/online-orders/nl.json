@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Online Bestellen voor Restaurants — QR Menu | IQ Rest",
+    "description": "Laat klanten rechtstreeks bestellen via uw QR-menu. Geen commissies, realtime prijzen en direct orderbeheer in uw dashboard."
+  },
+  "hero": {
+    "badge": "Online Bestellen",
+    "title": "Maak van uw QR-menu een Online Bestelsysteem",
+    "subtitle": "Gasten scannen, bekijken uw menu en plaatsen hun bestelling in seconden. Geen app nodig, geen commissies, geen gedoe.",
+    "cta": "Maak uw Menu",
+    "ctaDemo": "Demo Bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "benefits": {
+    "title": "Waarom restaurants kiezen voor QR-menu bestellingen",
+    "subtitle": "Een direct bestelkanaal dat het eenvoudig maakt voor u en uw gasten.",
+    "items": [
+      {
+        "title": "Geen App Nodig",
+        "description": "Gasten scannen gewoon een QR-code — geen downloads, geen registratie. Werkt direct in elke telefoonbrowser."
+      },
+      {
+        "title": "Realtime Prijzen",
+        "description": "Werk prijzen en beschikbaarheid direct bij. Wijzigingen zijn onmiddellijk zichtbaar op uw QR-menu."
+      },
+      {
+        "title": "Bestellen aan Tafel",
+        "description": "Elke tafel krijgt zijn eigen QR-code. Gasten scannen, bestellen en u ziet het tafelnummer in uw dashboard."
+      },
+      {
+        "title": "Eigen Design",
+        "description": "Pas uw menu aan uw merk aan met eigen kleuren, achtergronden en logo."
+      }
+    ]
+  },
+  "features": {
+    "title": "Hoe Online Bestellen Werkt",
+    "subtitle": "Twee eenvoudige stappen verbinden uw menu met uw keuken.",
+    "items": [
+      {
+        "title": "Gasten bekijken en selecteren gerechten",
+        "description": "Klanten scannen uw QR-code en zien uw volledige menu met foto's, beschrijvingen en prijzen. Ze voegen gerechten toe aan hun bestelling met een enkele tik — geen registratie nodig."
+      },
+      {
+        "title": "Bestellingen verschijnen in uw dashboard",
+        "description": "Wanneer gasten klaar zijn, tikken ze op de bestelknop. De bestelling verschijnt direct in uw dashboard met gerechtendetails, tafelnummer en opmerkingen. Accepteer, begin met bereiden en markeer als voltooid."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Alles wat u moet weten over online bestellen.",
+    "items": [
+      {
+        "question": "Heb ik extra hardware of apps nodig?",
+        "answer": "Nee. Alles werkt via de webbrowser. Gasten scannen de QR-code met hun telefooncamera, en u beheert bestellingen vanuit het IQ Rest dashboard op elk apparaat."
+      },
+      {
+        "question": "Zijn er commissies of kosten per bestelling?",
+        "answer": "Absoluut niet. IQ Rest rekent nooit commissie op uw bestellingen. U betaalt alleen uw abonnement, en alle opbrengsten van bestellingen zijn voor u."
+      },
+      {
+        "question": "Kunnen klanten hun bestelling aanpassen of opmerkingen toevoegen?",
+        "answer": "Ja. Gasten kunnen gerechten selecteren, aantallen opgeven en speciale wensen toevoegen. U kunt ook naam, telefoonnummer of bezorgadres verplicht stellen."
+      },
+      {
+        "question": "Werkt het voor in het restaurant, afhaal en bezorging?",
+        "answer": "Ja. Voor ter plaatse eten scannen gasten de QR-code aan hun tafel. Voor afhaal of bezorging deelt u een directe link naar uw menu. U kunt naam-, telefoon- en adresvelden naar behoefte inschakelen."
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Netpantanir fyrir veitingastaði — QR Matseðill | IQ Rest",
+    "description": "Leyfðu viðskiptavinum að leggja inn pantanir beint úr QR matseðlinum þínum. Engin þóknun, verð í rauntíma og tafarlaus pantanastjórnun á stjórnborðinu þínu."
+  },
+  "hero": {
+    "badge": "Netpantanir",
+    "title": "Breyttu QR matseðlinum í netpantanakerfi",
+    "subtitle": "Viðskiptavinir skanna kóðann, skoða matseðilinn og leggja inn pöntun á nokkrum sekúndum. Engra forrita þörf, engin þóknun, ekkert flókið.",
+    "cta": "Búðu til matseðilinn þinn",
+    "ctaDemo": "Skoða sýnishorn",
+    "noCreditCard": "Engin kreditkort þörf. Ókeypis áætlun í boði."
+  },
+  "benefits": {
+    "title": "Af hverju veitingastaðir velja QR matseðilspantanir",
+    "subtitle": "Bein pantanaleið sem einfaldar hlutina fyrir þig og gesti þína.",
+    "items": [
+      {
+        "title": "Ekkert forrit þarf",
+        "description": "Gestir skanna einfaldlega QR kóðann — engar niðurhleðslur, engin nýskráning. Virkar strax í hvaða símasvafara sem er."
+      },
+      {
+        "title": "Verð í rauntíma",
+        "description": "Uppfærðu verð og framboð samstundis. Breytingar endurspeglast strax á QR matseðlinum."
+      },
+      {
+        "title": "Pöntun við borðið",
+        "description": "Hvert borð fær sinn eigin QR kóða. Gestir skanna, panta og þú sérð borðnúmerið á stjórnborðinu þínu."
+      },
+      {
+        "title": "Sérsniðin hönnun",
+        "description": "Samræmdu matseðilinn við vörumerkið þitt með sérsniðnum litum, bakgrunni og lógói."
+      }
+    ]
+  },
+  "features": {
+    "title": "Hvernig netpantanir virka",
+    "subtitle": "Tvö einföld skref tengja matseðilinn þinn við eldhúsið.",
+    "items": [
+      {
+        "title": "Gestir skoða og velja rétti",
+        "description": "Viðskiptavinir skanna QR kóðann þinn og sjá allan matseðilinn með myndum, lýsingum og verðum. Þeir bæta réttum við pöntunina með einu snertingu — engin nýskráning þörf."
+      },
+      {
+        "title": "Pantanir birtast á stjórnborðinu þínu",
+        "description": "Þegar gestir eru tilbúnir, ýta þeir á pantanahnappinn. Pöntunin birtist strax á stjórnborðinu þínu með upplýsingum um rétti, borðnúmer og athugasemdir. Samþykktu, byrjaðu að útbúa og merktu sem lokið."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Algengar spurningar",
+    "subtitle": "Allt sem þú þarft að vita um netpantanir.",
+    "items": [
+      {
+        "question": "Þarf ég aukabúnað eða forrit?",
+        "answer": "Nei. Allt virkar í gegnum vafra. Gestir skanna QR kóðann með myndavél símans og þú stjórnar pöntunum frá IQ Rest stjórnborðinu á hvaða tæki sem er."
+      },
+      {
+        "question": "Er einhver þóknun eða gjald á hverja pöntun?",
+        "answer": "Alls ekki. IQ Rest tekur aldrei þóknun af pöntunum þínum. Þú borgar aðeins áskriftaráætlunina þína og allar tekjur af pöntunum verða hjá þér."
+      },
+      {
+        "question": "Geta viðskiptavinir sérsniðið pöntunina eða bætt við athugasemdum?",
+        "answer": "Já. Gestir geta valið rétti, tilgreint magn og bætt við sérstökum athugasemdum eða óskum. Þú getur einnig krafist nafns, símanúmers eða afhendingaraðseturs viðskiptavinar."
+      },
+      {
+        "question": "Virkar þetta fyrir borðhald, take-away og heimsendingu?",
+        "answer": "Já. Fyrir borðhald skanna gestir QR kóðann við borðið sitt. Fyrir take-away eða heimsendingu deilirðu beinum hlekk á matseðilinn þinn. Þú getur virkjað reitina fyrir nafn, símanúmer og heimilisfang eftir þörfum."
+      }
+    ]
+  }
+}

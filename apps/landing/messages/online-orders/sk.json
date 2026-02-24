@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Online Objednávky pre Reštaurácie — QR Menu | IQ Rest",
+    "description": "Umožnite zákazníkom objednávať priamo z vášho QR menu. Nulové provízie, ceny v reálnom čase a okamžitá správa objednávok v ovládacom paneli."
+  },
+  "hero": {
+    "badge": "Online Objednávky",
+    "title": "Premeňte Svoje QR Menu na Systém Online Objednávok",
+    "subtitle": "Zákazníci naskenujú, prezerajú menu a zadajú objednávku za pár sekúnd. Žiadne sťahovanie aplikácií, žiadne provízie, žiadne komplikácie.",
+    "cta": "Vytvorte Si Menu",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "benefits": {
+    "title": "Prečo Si Reštaurácie Vyberajú Objednávky cez QR Menu",
+    "subtitle": "Priamy objednávkový kanál, ktorý udržiava veci jednoduché pre vás aj vašich hostí.",
+    "items": [
+      {
+        "title": "Žiadna Aplikácia Nie Je Potrebná",
+        "description": "Hostia jednoducho naskenujú QR kód — žiadne sťahovanie, žiadna registrácia. Funguje okamžite v akomkoľvek prehliadači telefónu."
+      },
+      {
+        "title": "Ceny v Reálnom Čase",
+        "description": "Aktualizujte ceny a dostupnosť okamžite. Zmeny sa okamžite prejavia vo vašom QR menu."
+      },
+      {
+        "title": "Objednávky pri Stole",
+        "description": "Každý stôl dostane vlastný QR kód. Hostia naskenujú, objednajú a vy vidíte číslo stola v ovládacom paneli."
+      },
+      {
+        "title": "Vlastný Dizajn",
+        "description": "Prispôsobte menu svojej značke s vlastnými farbami, pozadím a logom."
+      }
+    ]
+  },
+  "features": {
+    "title": "Ako Fungujú Online Objednávky",
+    "subtitle": "Dva jednoduché kroky prepoja vaše menu s kuchyňou.",
+    "items": [
+      {
+        "title": "Hostia Prezerajú a Vyberajú Položky",
+        "description": "Zákazníci naskenujú QR kód a vidia celé menu s fotografiami, popismi a cenami. Jedným dotykom pridajú položky do objednávky — bez registrácie."
+      },
+      {
+        "title": "Objednávky Sa Objavia v Ovládacom Paneli",
+        "description": "Keď sú pripravení, hostia stlačia tlačidlo objednávky. Objednávka sa okamžite objaví vo vašom ovládacom paneli s podrobnosťami položiek, číslom stola a poznámkami. Prijmite, začnite pripravovať a označte ako dokončenú."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o online objednávkach.",
+    "items": [
+      {
+        "question": "Potrebujem nejaký extra hardvér alebo aplikácie?",
+        "answer": "Nie. Všetko funguje cez webový prehliadač. Hostia naskenujú QR kód fotoaparátom telefónu a vy spravujete objednávky z ovládacieho panela IQ Rest na akomkoľvek zariadení."
+      },
+      {
+        "question": "Sú nejaké provízie alebo poplatky za objednávku?",
+        "answer": "Absolútne nie. IQ Rest nikdy neúčtuje provízie z vašich objednávok. Platíte len svoj predplatený plán a všetky príjmy z objednávok zostávajú u vás."
+      },
+      {
+        "question": "Môžu zákazníci prispôsobiť svoju objednávku alebo pridať poznámky?",
+        "answer": "Áno. Hostia môžu vybrať položky, zadať množstvá a pridať špeciálne poznámky alebo požiadavky. Môžete tiež vyžadovať meno, telefón alebo adresu doručenia zákazníka."
+      },
+      {
+        "question": "Funguje to pre stolovanie v reštaurácii, so sebou a donášku?",
+        "answer": "Áno. Pri stolovaní hostia naskenujú QR kód pri stole. Na objednávky so sebou alebo donášku zdieľajte priamy odkaz na menu. Podľa potreby môžete zapnúť polia pre meno, telefón a adresu."
+      }
+    ]
+  }
+}

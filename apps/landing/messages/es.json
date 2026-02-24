@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Chat de soporte online personal para restaurantes",
         "cta": "Más Información"
+      },
+      {
+        "id": "online-orders",
+        "title": "Pedidos Online desde el Menú QR",
+        "shortDescription": "Los clientes escanean, eligen y piden — directamente desde tu menú.{br}{link}Más información sobre pedidos online{/link}.",
+        "description": "Permite a los comensales hacer pedidos directamente desde tu menú QR. Sin apps, sin comisiones. Los pedidos aparecen al instante en tu panel de control con el número de mesa y los detalles de los platos.",
+        "fullDescription": "Convierte tu menú QR en un canal de pedidos directo. Los clientes escanean el código en su mesa, exploran el menú y hacen su pedido en segundos — sin descargar apps, sin registrarse. Recibes los pedidos en tiempo real en tu panel de control con número de mesa, platos y notas del cliente. Sin comisiones, sin cargos por pedido.",
+        "benefits": [
+          "Sin necesidad de descargar aplicaciones",
+          "Cero comisiones en cada pedido",
+          "Pedidos en tiempo real en tu panel",
+          "Número de mesa incluido automáticamente",
+          "Funciona para local, para llevar y a domicilio"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Pedidos online desde el menú QR del restaurante",
+        "cta": "Más información sobre pedidos online"
       }
     ]
   },

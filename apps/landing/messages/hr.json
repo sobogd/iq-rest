@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Osobna online podrška za restorane",
         "cta": "Saznajte više"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online Narudžbe iz QR Jelovnika",
+        "shortDescription": "Gosti skeniraju, biraju i naručuju — izravno iz vašeg jelovnika.{br}{link}Saznajte više o online narudžbama{/link}.",
+        "description": "Omogućite gostima da naručuju izravno iz vašeg QR jelovnika. Bez aplikacija, bez provizija. Narudžbe se odmah pojavljuju na kontrolnoj ploči s brojem stola i detaljima stavki.",
+        "fullDescription": "Pretvorite svoj QR jelovnik u izravan kanal za narudžbe. Gosti skeniraju kod za stolom, pregledavaju jelovnik i naručuju u nekoliko sekundi — bez preuzimanja aplikacija, bez registracije. Narudžbe primate u stvarnom vremenu na kontrolnoj ploči s brojem stola, stavkama i bilješkama gostiju. Bez provizija, bez naknada po narudžbi.",
+        "benefits": [
+          "Gostima nije potrebno preuzimanje aplikacije",
+          "Nula provizija na svaku narudžbu",
+          "Narudžbe u stvarnom vremenu na kontrolnoj ploči",
+          "Broj stola automatski uključen",
+          "Funkcionira za konzumaciju u restoranu, za ponijeti i dostavu"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online narudžbe iz QR jelovnika restorana",
+        "cta": "Saznajte više o online narudžbama"
       }
     ]
   },

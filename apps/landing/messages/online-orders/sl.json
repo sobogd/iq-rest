@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Spletno Naročanje za Restavracije — QR Meni | IQ Rest",
+    "description": "Omogočite gostom, da naročajo neposredno iz vašega QR menija. Brez provizij, cene v realnem času in takojšnje upravljanje naročil na nadzorni plošči."
+  },
+  "hero": {
+    "badge": "Spletno Naročanje",
+    "title": "Spremenite Svoj QR Meni v Sistem za Spletno Naročanje",
+    "subtitle": "Gostje skenirajo, pregledajo meni in oddajo naročilo v nekaj sekundah. Brez prenosa aplikacij, brez provizij, brez zapletov.",
+    "cta": "Ustvarite Svoj Meni",
+    "ctaDemo": "Oglejte si Demo",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačen načrt."
+  },
+  "benefits": {
+    "title": "Zakaj Restavracije Izberejo Naročanje prek QR Menija",
+    "subtitle": "Neposreden kanal za naročanje, ki ohranja stvari preproste za vas in vaše goste.",
+    "items": [
+      {
+        "title": "Aplikacija Ni Potrebna",
+        "description": "Gostje preprosto skenirajo QR kodo — brez prenosov, brez registracij. Deluje takoj v katerem koli brskalniku na telefonu."
+      },
+      {
+        "title": "Cene v Realnem Času",
+        "description": "Takoj posodobite cene in razpoložljivost. Spremembe se takoj odrazijo na vašem QR meniju."
+      },
+      {
+        "title": "Naročanje ob Mizi",
+        "description": "Vsaka miza dobi svojo QR kodo. Gostje skenirajo, naročijo, vi pa na nadzorni plošči vidite številko mize."
+      },
+      {
+        "title": "Prilagojen Dizajn",
+        "description": "Prilagodite meni svoji blagovni znamki z barvami, ozadji in logotipom po meri."
+      }
+    ]
+  },
+  "features": {
+    "title": "Kako Deluje Spletno Naročanje",
+    "subtitle": "Dva preprosta koraka povežeta vaš meni z vašo kuhinjo.",
+    "items": [
+      {
+        "title": "Gostje Pregledajo in Izberejo Jedi",
+        "description": "Gostje skenirajo QR kodo in vidijo celoten meni s fotografijami, opisi in cenami. Z enim dotikom dodajo jedi v naročilo — brez registracije."
+      },
+      {
+        "title": "Naročila Se Prikažejo na Nadzorni Plošči",
+        "description": "Ko so pripravljeni, gostje pritisnejo gumb za naročilo. Naročilo se takoj prikaže na nadzorni plošči s podrobnostmi jedi, številko mize in morebitnimi opombami. Sprejmite, začnite pripravljati in označite kot zaključeno."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta Vprašanja",
+    "subtitle": "Vse, kar morate vedeti o spletnem naročanju.",
+    "items": [
+      {
+        "question": "Ali potrebujem dodatno opremo ali aplikacije?",
+        "answer": "Ne. Vse deluje prek spletnega brskalnika. Gostje skenirajo QR kodo s kamero telefona, vi pa upravljate naročila z nadzorne plošče IQ Rest na kateri koli napravi."
+      },
+      {
+        "question": "Ali obstajajo provizije ali stroški na naročilo?",
+        "answer": "Nikakor. IQ Rest nikoli ne zaračunava provizij na vaša naročila. Plačate samo svoj naročniški načrt, ves prihodek od naročil pa ostane vam."
+      },
+      {
+        "question": "Ali lahko gostje prilagodijo naročilo ali dodajo opombe?",
+        "answer": "Da. Gostje lahko izberejo jedi, določijo količine in dodajo posebne opombe ali zahteve. Zahtevate lahko tudi ime, telefon ali naslov za dostavo gosta."
+      },
+      {
+        "question": "Ali deluje za obedovanje v restavraciji, za s seboj in dostavo?",
+        "answer": "Da. Za obedovanje v restavraciji gostje skenirajo QR kodo ob mizi. Za naročila za s seboj ali dostavo delite neposredno povezavo do menija. Po potrebi lahko omogočite polja za ime, telefon in naslov."
+      }
+    ]
+  }
+}

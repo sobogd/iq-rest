@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Chat de support en ligne personnel pour restaurants",
         "cta": "En savoir plus"
+      },
+      {
+        "id": "online-orders",
+        "title": "Commandes en Ligne depuis le Menu QR",
+        "shortDescription": "Les clients scannent, choisissent et commandent — directement depuis votre menu.{br}{link}En savoir plus sur les commandes en ligne{/link}.",
+        "description": "Permettez aux clients de passer commande directement depuis votre menu QR. Sans application, sans commission. Les commandes apparaissent instantanément dans votre tableau de bord avec le numéro de table et les détails des plats.",
+        "fullDescription": "Transformez votre menu QR en canal de commande direct. Les clients scannent le code à leur table, parcourent le menu et passent commande en quelques secondes — sans téléchargement, sans inscription. Vous recevez les commandes en temps réel dans votre tableau de bord avec le numéro de table, les plats et les notes du client. Sans commission, sans frais par commande.",
+        "benefits": [
+          "Aucun téléchargement d'application requis",
+          "Zéro commission sur chaque commande",
+          "Commandes en temps réel dans votre tableau de bord",
+          "Numéro de table inclus automatiquement",
+          "Fonctionne sur place, à emporter et en livraison"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Commandes en ligne depuis le menu QR du restaurant",
+        "cta": "En savoir plus sur les commandes en ligne"
       }
     ]
   },

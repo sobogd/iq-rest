@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Persönlicher Online-Support-Chat für Restaurants",
         "cta": "Mehr erfahren"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online-Bestellungen über das QR-Menü",
+        "shortDescription": "Gäste scannen, wählen und bestellen — direkt aus Ihrem Menü.{br}{link}Mehr über Online-Bestellungen erfahren{/link}.",
+        "description": "Lassen Sie Gäste direkt über Ihr QR-Menü bestellen. Keine Apps, keine Provisionen. Bestellungen erscheinen sofort in Ihrem Dashboard mit Tischnummer und Gerichtdetails.",
+        "fullDescription": "Verwandeln Sie Ihr QR-Menü in einen direkten Bestellkanal. Gäste scannen den Code an ihrem Tisch, durchstöbern das Menü und bestellen in Sekunden — kein App-Download, keine Registrierung. Sie erhalten Bestellungen in Echtzeit in Ihrem Dashboard mit Tischnummer, Gerichten und Kundennotizen. Keine Provisionen, keine Gebühren pro Bestellung.",
+        "benefits": [
+          "Kein App-Download für Kunden nötig",
+          "Null Provisionen auf jede Bestellung",
+          "Echtzeit-Bestellungen in Ihrem Dashboard",
+          "Tischnummer automatisch enthalten",
+          "Funktioniert für Vor-Ort, Abholung und Lieferung"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online-Bestellungen über das QR-Menü des Restaurants",
+        "cta": "Mehr über Online-Bestellungen erfahren"
       }
     ]
   },

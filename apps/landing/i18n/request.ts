@@ -37,15 +37,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? deepMerge(fallbackMessages, userMessages)
     : userMessages;
 
-  // Load whatsapp-orders sublanding translations
-  const waMessages = await import(`../messages/whatsapp-orders/${locale}.json`).catch(() => null);
-  const waFallback = locale !== "en"
-    ? await import(`../messages/whatsapp-orders/en.json`).catch(() => null)
+  // Load online-orders sublanding translations
+  const ooMessages = await import(`../messages/online-orders/${locale}.json`).catch(() => null);
+  const ooFallback = locale !== "en"
+    ? await import(`../messages/online-orders/en.json`).catch(() => null)
     : null;
 
-  messages.whatsappOrders = waFallback
-    ? deepMerge(waFallback.default, waMessages?.default || {})
-    : (waMessages?.default || {});
+  messages.onlineOrders = ooFallback
+    ? deepMerge(ooFallback.default, ooMessages?.default || {})
+    : (ooMessages?.default || {});
 
   return {
     locale,

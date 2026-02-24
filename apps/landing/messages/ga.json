@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Comhoibriú tacaíochta ar líne do bhialanna",
         "cta": "Foghlaim Tuilleadh"
+      },
+      {
+        "id": "online-orders",
+        "title": "Ordú Ar Líne ó Roghchlár QR",
+        "shortDescription": "Scannaíonn custaiméirí, roghnaíonn siad agus ordaíonn siad — go díreach ó do roghchlár.{br}{link}Foghlaim tuilleadh faoi orduithe ar líne{/link}.",
+        "description": "Lig d'aíonna orduithe a chur isteach go díreach ó do roghchlár QR. Gan aipeanna, gan coimisiúin. Feictear orduithe láithreach ar do phainéal rialaithe le huimhir an bhoird agus sonraí na mias.",
+        "fullDescription": "Athraigh do roghchlár QR ina chainéal ordaithe díreach. Scannaíonn aíonna an cód ag a mbord, brabhsáileann siad an roghchlár agus cuireann siad a n-ordú isteach i soicindí — gan aipeanna a íoslódáil, gan clárú. Faigheann tú orduithe i bhfíor-am ar do phainéal rialaithe le huimhir an bhoird, miasa agus nótaí custaiméirí. Gan coimisiúin, gan táillí in aghaidh an ordaithe.",
+        "benefits": [
+          "Níl gá do chustaiméirí aipeanna a íoslódáil",
+          "Nialas coimisiúin ar gach ordú",
+          "Orduithe fíor-ama ar do phainéal rialaithe",
+          "Cuirtear uimhir an bhoird san áireamh go huathoibríoch",
+          "Oibríonn sé do dhinnéar istigh, beir leat agus seachadadh"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Ordú ar líne ó roghchlár QR bialainne",
+        "cta": "Foghlaim tuilleadh faoi orduithe ar líne"
       }
     ]
   },

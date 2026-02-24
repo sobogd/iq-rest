@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Xat de suport en línia personal per a restaurants",
         "cta": "Més Informació"
+      },
+      {
+        "id": "online-orders",
+        "title": "Comandes en línia des del menú QR",
+        "shortDescription": "Els clients escanegen, trien i comanen — directament des del teu menú.{br}{link}Més informació sobre les comandes en línia{/link}.",
+        "description": "Permet als clients fer comandes directament des del teu menú QR. Sense aplicacions, sense comissions. Les comandes apareixen a l'instant al teu panell de control amb el número de taula i els detalls dels plats.",
+        "fullDescription": "Converteix el teu menú QR en un canal de comandes directe. Els clients escanegen el codi a la seva taula, naveguen pel menú i fan la seva comanda en segons — sense descarregar aplicacions, sense registres. Reps les comandes en temps real al teu panell amb el número de taula, els plats i les notes dels clients. Sense comissions, sense tarifes per comanda.",
+        "benefits": [
+          "Els clients no necessiten descarregar aplicacions",
+          "Zero comissions en cada comanda",
+          "Comandes en temps real al teu panell de control",
+          "Número de taula inclòs automàticament",
+          "Funciona per menjar al local, per emportar i per a lliurament"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Comandes en línia des del menú QR del restaurant",
+        "cta": "Més informació sobre les comandes en línia"
       }
     ]
   },

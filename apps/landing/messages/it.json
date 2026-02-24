@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Chat di supporto online personale per ristoranti",
         "cta": "Scopri di più"
+      },
+      {
+        "id": "online-orders",
+        "title": "Ordini Online dal Menu QR",
+        "shortDescription": "I clienti scansionano, scelgono e ordinano — direttamente dal tuo menu.{br}{link}Scopri di più sugli ordini online{/link}.",
+        "description": "Permetti agli ospiti di ordinare direttamente dal tuo menu QR. Nessuna app, nessuna commissione. Gli ordini appaiono istantaneamente nella tua dashboard con numero del tavolo e dettagli dei piatti.",
+        "fullDescription": "Trasforma il tuo menu QR in un canale di ordinazione diretto. Gli ospiti scansionano il codice al tavolo, esplorano il menu e ordinano in pochi secondi — senza scaricare app, senza registrazione. Ricevi gli ordini in tempo reale nella tua dashboard con numero del tavolo, piatti e note del cliente. Nessuna commissione, nessun costo per ordine.",
+        "benefits": [
+          "Nessuna app da scaricare per i clienti",
+          "Zero commissioni su ogni ordine",
+          "Ordini in tempo reale nella tua dashboard",
+          "Numero del tavolo incluso automaticamente",
+          "Funziona per servizio al tavolo, asporto e consegna"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Ordini online dal menu QR del ristorante",
+        "cta": "Scopri di più sugli ordini online"
       }
     ]
   },

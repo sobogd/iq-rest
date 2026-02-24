@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Online Rendelés Éttermeknek — QR Menü | IQ Rest",
+    "description": "Engedje meg vendégeinek, hogy közvetlenül a QR menüből rendeljenek. Nulla jutalék, valós idejű árak és azonnali rendeléskezelés a vezérlőpulton."
+  },
+  "hero": {
+    "badge": "Online Rendelés",
+    "title": "Alakítsa QR Menüjét Online Rendelési Rendszerré",
+    "subtitle": "A vendégek beolvassák, böngészik a menüt, és másodpercek alatt leadják rendelésüket. Nincs alkalmazásletöltés, nincs jutalék, nincs bonyodalom.",
+    "cta": "Menü Létrehozása",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+  },
+  "benefits": {
+    "title": "Miért Választják az Éttermek a QR Menü Rendelést",
+    "subtitle": "Közvetlen rendelési csatorna, amely egyszerű marad Önnek és vendégeinek egyaránt.",
+    "items": [
+      {
+        "title": "Nem Szükséges Alkalmazás",
+        "description": "A vendégek egyszerűen beolvassák a QR kódot — nincs letöltés, nincs regisztráció. Azonnal működik bármely telefon böngészőjében."
+      },
+      {
+        "title": "Valós Idejű Árak",
+        "description": "Azonnal frissítse az árakat és az elérhetőséget. A változtatások azonnal megjelennek a QR menüben."
+      },
+      {
+        "title": "Asztali Rendelés",
+        "description": "Minden asztal saját QR kódot kap. A vendégek beolvassák, rendelnek, és Ön a vezérlőpulton látja az asztal számát."
+      },
+      {
+        "title": "Egyedi Design",
+        "description": "Igazítsa a menüt márkájához egyedi színekkel, háttérképekkel és logóval."
+      }
+    ]
+  },
+  "features": {
+    "title": "Hogyan Működik az Online Rendelés",
+    "subtitle": "Két egyszerű lépés összeköti a menüt a konyhájával.",
+    "items": [
+      {
+        "title": "A Vendégek Böngészik és Kiválasztják a Tételeket",
+        "description": "A vendégek beolvassák a QR kódot, és megtekintik a teljes menüt fotókkal, leírásokkal és árakkal. Egyetlen érintéssel adják hozzá a tételeket a rendelésükhöz — regisztráció nem szükséges."
+      },
+      {
+        "title": "A Rendelések Megjelennek a Vezérlőpulton",
+        "description": "Amikor a vendég kész, megnyomja a rendelés gombot. A rendelés azonnal megjelenik a vezérlőpulton a tételek részleteivel, asztalszámmal és megjegyzésekkel. Fogadja el, kezdje el az elkészítést, és jelölje késznek."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit az online rendelésről tudni kell.",
+    "items": [
+      {
+        "question": "Szükségem van extra hardverre vagy alkalmazásra?",
+        "answer": "Nem. Minden a böngészőn keresztül működik. A vendégek a telefon kamerájukkal olvassák be a QR kódot, Ön pedig bármilyen eszközről kezeli a rendeléseket az IQ Rest vezérlőpulton."
+      },
+      {
+        "question": "Vannak jutalékok vagy rendelésenkénti díjak?",
+        "answer": "Egyáltalán nem. Az IQ Rest soha nem számít fel jutalékot a rendelésekre. Csak az előfizetési csomagját fizeti, és a rendelésekből származó összes bevétel Önnél marad."
+      },
+      {
+        "question": "Testreszabhatják a vendégek a rendelésüket vagy megjegyzést fűzhetnek hozzá?",
+        "answer": "Igen. A vendégek kiválaszthatják a tételeket, megadhatják a mennyiségeket, és különleges megjegyzéseket vagy kéréseket adhatnak hozzá. Kötelezővé teheti a vendég nevét, telefonszámát vagy szállítási címét is."
+      },
+      {
+        "question": "Működik helyben fogyasztásra, elvitelre és házhozszállításra is?",
+        "answer": "Igen. Helyben fogyasztásnál a vendégek az asztalnál olvassák be a QR kódot. Elvitelre vagy házhozszállításra osszon meg egy közvetlen linket a menühöz. Szükség szerint engedélyezheti a név, telefon és cím mezőket."
+      }
+    ]
+  }
+}

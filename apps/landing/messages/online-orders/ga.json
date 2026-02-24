@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Orduithe Ar Líne do Bhialanna — Roghchlár QR | IQ Rest",
+    "description": "Lig do chustaiméirí orduithe a chur isteach go díreach ó do roghchlár QR. Gan coimisiúin, praghsanna fíor-ama agus bainistíocht orduithe láithreach ar do phainéal rialaithe."
+  },
+  "hero": {
+    "badge": "Orduithe Ar Líne",
+    "title": "Athraigh do Roghchlár QR ina Chóras Ordaithe Ar Líne",
+    "subtitle": "Scannaíonn custaiméirí, brabhsáileann siad an roghchlár agus cuireann siad a n-ordú isteach i soicindí. Gan aipeanna a íoslódáil, gan coimisiúin, gan castacht.",
+    "cta": "Cruthaigh do Roghchlár",
+    "ctaDemo": "Féach ar an taispeántas",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "benefits": {
+    "title": "Cén fáth a roghnaíonn bialanna orduithe trí roghchlár QR",
+    "subtitle": "Cainéal ordaithe díreach a choimeádann rudaí simplí duit féin agus do d'aíonna.",
+    "items": [
+      {
+        "title": "Gan aip ag teastáil",
+        "description": "Ní gá d'aíonna ach an cód QR a scanadh — gan íoslódálacha, gan clárú. Oibríonn sé láithreach in aon bhrabhsálaí fóin."
+      },
+      {
+        "title": "Praghsanna fíor-ama",
+        "description": "Nuashonraigh praghsanna agus infhaighteacht láithreach. Léirítear athruithe ar an bpointe ar do roghchlár QR."
+      },
+      {
+        "title": "Ordú ag an mbord",
+        "description": "Faigheann gach bord a chód QR féin. Scannaíonn aíonna, ordaíonn siad, agus feiceann tú uimhir an bhoird ar do phainéal rialaithe."
+      },
+      {
+        "title": "Dearadh saincheaptha",
+        "description": "Cuir do roghchlár in oiriúint do do bhranda le dathanna, cúlraí agus lógó saincheaptha."
+      }
+    ]
+  },
+  "features": {
+    "title": "Conas a oibríonn ordú ar líne",
+    "subtitle": "Dhá chéim shimplí a nascann do roghchlár le do chistin.",
+    "items": [
+      {
+        "title": "Brabhsáileann aíonna agus roghnaíonn siad miasa",
+        "description": "Scannaíonn custaiméirí do chód QR agus feiceann siad an roghchlár iomlán le grianghraif, cur síos agus praghsanna. Cuireann siad miasa lena n-ordú le tapáil amháin — gan clárú ag teastáil."
+      },
+      {
+        "title": "Feictear orduithe ar do phainéal rialaithe",
+        "description": "Nuair atá aíonna réidh, tapálann siad an cnaipe ordaithe. Feictear an t-ordú láithreach ar do phainéal rialaithe le sonraí na mias, uimhir an bhoird agus nótaí. Glac leis, tosaigh ag ullmhú agus marcáil mar chríochnaithe."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna Coitianta",
+    "subtitle": "Gach rud a theastaíonn uait a fháil amach faoi ordú ar líne.",
+    "items": [
+      {
+        "question": "An bhfuil crua-earraí nó aipeanna breise ag teastáil uaim?",
+        "answer": "Níl. Oibríonn gach rud trí bhrabhsálaí gréasáin. Scannaíonn aíonna an cód QR le ceamara a bhfón agus bainistíonn tú orduithe ó phainéal rialaithe IQ Rest ar aon ghléas."
+      },
+      {
+        "question": "An bhfuil coimisiúin nó táillí in aghaidh an ordaithe ann?",
+        "answer": "Ar chor ar bith. Ní ghearrann IQ Rest coimisiúin riamh ar d'orduithe. Ní íocann tú ach do phlean síntiúis agus fanann an t-ioncam go léir ó orduithe leat féin."
+      },
+      {
+        "question": "An féidir le custaiméirí a n-ordú a shaincheapadh nó nótaí a chur leis?",
+        "answer": "Is féidir. Is féidir le haíonna miasa a roghnú, méideanna a shonrú agus nótaí nó iarratais speisialta a chur leis. Is féidir leat ainm, fón nó seoladh seachadta an chustaiméara a éileamh freisin."
+      },
+      {
+        "question": "An n-oibríonn sé do dhinnéar istigh, beir leat agus seachadadh?",
+        "answer": "Oibríonn. Le haghaidh dinnéar istigh, scannaíonn aíonna an cód QR ag a mbord. Le haghaidh beir leat nó seachadadh, roinn nasc díreach chuig do roghchlár. Is féidir leat réimsí ainm, fón agus seolaidh a chumasú de réir mar is gá."
+      }
+    ]
+  }
+}

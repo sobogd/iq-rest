@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Restoranlar için kişisel çevrimiçi destek sohbeti",
         "cta": "Daha Fazla Bilgi"
+      },
+      {
+        "id": "online-orders",
+        "title": "QR Menüden Online Sipariş",
+        "shortDescription": "Müşteriler tarar, seçer ve sipariş verir — doğrudan menünüzden.{br}{link}Online siparişler hakkında daha fazla bilgi edinin{/link}.",
+        "description": "Misafirleriniz QR menünüzden doğrudan sipariş versin. Uygulama yok, komisyon yok. Siparişler anında masa numarası ve ürün detaylarıyla panelinizde görünür.",
+        "fullDescription": "QR menünüzü doğrudan bir sipariş kanalına dönüştürün. Misafirler masadaki kodu tarar, menüye göz atar ve saniyeler içinde sipariş verir — uygulama indirme yok, kayıt yok. Siparişleri masa numarası, ürünler ve müşteri notlarıyla birlikte panelinizde anlık olarak alırsınız. Komisyon yok, sipariş başı ücret yok.",
+        "benefits": [
+          "Müşteriler için uygulama indirme gerekmez",
+          "Her siparişte sıfır komisyon",
+          "Panelinizde anlık siparişler",
+          "Masa numarası otomatik olarak dahil edilir",
+          "Restoranda yemek, paket servis ve teslimat için çalışır"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Restoran QR menüsünden online sipariş",
+        "cta": "Online siparişler hakkında bilgi edinin"
       }
     ]
   },

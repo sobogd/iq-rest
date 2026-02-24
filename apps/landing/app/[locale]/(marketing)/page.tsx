@@ -27,6 +27,7 @@ import {
   Video,
   Palette,
   HeadphonesIcon,
+  ShoppingBag,
   UtensilsCrossed,
   Coffee,
   Wine,
@@ -84,6 +85,7 @@ const FEATURE_ICONS = {
   "custom-design": Video,
   "color-scheme": Palette,
   "personal-support": HeadphonesIcon,
+  "online-orders": ShoppingBag,
 } as const;
 
 export default async function HomePage({
@@ -114,6 +116,7 @@ export default async function HomePage({
 
   // Show selected features on homepage in specific order
   const homeFeatureIds = [
+    "online-orders",
     "color-scheme",
     "mobile-management",
     "custom-design",
@@ -317,6 +320,14 @@ export default async function HomePage({
                       left: { src: "/samples/sample-reservation-1.webp", alt: "Table reservation form" },
                       center: { src: "/samples/sample-reservation-2.webp", alt: "Reservation management" },
                       right: { src: "/samples/sample-reservation-3.webp", alt: "Booking confirmation" },
+                    },
+                  },
+                  "online-orders": {
+                    layout: "duo",
+                    images: {
+                      left: { src: "/samples/order_2.webp", alt: "Order details in restaurant dashboard" },
+                      center: { src: "/samples/order_2.webp", alt: "" },
+                      right: { src: "/samples/order_public_2.webp", alt: "Customer placing order from QR menu" },
                     },
                   },
                 };

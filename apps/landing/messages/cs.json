@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Osobní online podpora pro restaurace",
         "cta": "Zjistit více"
+      },
+      {
+        "id": "online-orders",
+        "title": "Online objednávky z QR menu",
+        "shortDescription": "Zákazníci naskenují, vyberou a objednají — přímo z vašeho menu.{br}{link}Zjistěte více o online objednávkách{/link}.",
+        "description": "Nechte hosty objednávat přímo z vašeho QR menu. Žádné aplikace, žádné provize. Objednávky se okamžitě zobrazí v panelu s číslem stolu a detaily položek.",
+        "fullDescription": "Proměňte své QR menu v přímý objednávkový kanál. Hosté naskenují kód u svého stolu, prohlédnou si menu a objednají během sekund — žádné stahování aplikací, žádná registrace. Objednávky přijímáte v reálném čase ve svém panelu s číslem stolu, položkami a poznámkami zákazníků. Žádné provize, žádné poplatky za objednávku.",
+        "benefits": [
+          "Zákazníci nemusí stahovat žádnou aplikaci",
+          "Nulové provize z každé objednávky",
+          "Objednávky v reálném čase ve vašem panelu",
+          "Číslo stolu automaticky zahrnuto",
+          "Funguje na místě, s sebou i jako rozvoz"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Online objednávky z QR menu restaurace",
+        "cta": "Zjistěte více o online objednávkách"
       }
     ]
   },

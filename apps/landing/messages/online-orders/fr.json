@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "Commandes en Ligne pour Restaurants — Menu QR | IQ Rest",
+    "description": "Permettez aux clients de passer commande directement depuis votre menu QR. Zéro commission, prix en temps réel et gestion instantanée des commandes dans votre tableau de bord."
+  },
+  "hero": {
+    "badge": "Commandes en Ligne",
+    "title": "Transformez votre Menu QR en Système de Commande en Ligne",
+    "subtitle": "Les clients scannent, parcourent votre menu et passent commande en quelques secondes. Sans application, sans commission, sans complication.",
+    "cta": "Créer votre Menu",
+    "ctaDemo": "Voir la Démo",
+    "noCreditCard": "Sans carte bancaire. Plan gratuit disponible."
+  },
+  "benefits": {
+    "title": "Pourquoi les restaurants choisissent les commandes par menu QR",
+    "subtitle": "Un canal de commande direct qui simplifie la vie pour vous et vos clients.",
+    "items": [
+      {
+        "title": "Aucune Application Requise",
+        "description": "Les clients scannent simplement un code QR — pas de téléchargement, pas d'inscription. Fonctionne instantanément dans n'importe quel navigateur mobile."
+      },
+      {
+        "title": "Prix en Temps Réel",
+        "description": "Mettez à jour les prix et la disponibilité instantanément. Les modifications sont immédiatement visibles sur votre menu QR."
+      },
+      {
+        "title": "Commande à Table",
+        "description": "Chaque table a son propre code QR. Les clients scannent, commandent et vous voyez le numéro de table dans votre tableau de bord."
+      },
+      {
+        "title": "Design Personnalisé",
+        "description": "Adaptez votre menu à votre marque avec des couleurs, arrière-plans et logo personnalisés."
+      }
+    ]
+  },
+  "features": {
+    "title": "Comment Fonctionnent les Commandes en Ligne",
+    "subtitle": "Deux étapes simples relient votre menu à votre cuisine.",
+    "items": [
+      {
+        "title": "Les clients parcourent et sélectionnent les plats",
+        "description": "Les clients scannent votre code QR et voient votre menu complet avec photos, descriptions et prix. Ils ajoutent des plats à leur commande d'un simple toucher — sans inscription."
+      },
+      {
+        "title": "Les commandes apparaissent dans votre tableau de bord",
+        "description": "Quand ils sont prêts, les clients appuient sur le bouton de commande. La commande apparaît instantanément dans votre tableau de bord avec les détails des plats, le numéro de table et les notes. Acceptez, commencez la préparation et marquez comme terminé."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que vous devez savoir sur les commandes en ligne.",
+    "items": [
+      {
+        "question": "Ai-je besoin de matériel ou d'applications supplémentaires ?",
+        "answer": "Non. Tout fonctionne via un navigateur web. Les clients scannent le code QR avec leur appareil photo, et vous gérez les commandes depuis le tableau de bord IQ Rest sur n'importe quel appareil."
+      },
+      {
+        "question": "Y a-t-il des commissions ou des frais par commande ?",
+        "answer": "Absolument pas. IQ Rest ne prélève jamais de commission sur vos commandes. Vous ne payez que votre abonnement, et tous les revenus des commandes vous reviennent."
+      },
+      {
+        "question": "Les clients peuvent-ils personnaliser leur commande ou ajouter des notes ?",
+        "answer": "Oui. Les clients peuvent sélectionner des plats, préciser les quantités et ajouter des notes ou demandes spéciales. Vous pouvez également exiger le nom, le téléphone ou l'adresse de livraison."
+      },
+      {
+        "question": "Cela fonctionne-t-il pour la restauration sur place, à emporter et en livraison ?",
+        "answer": "Oui. Sur place, les clients scannent le code QR à leur table. Pour la vente à emporter ou la livraison, partagez un lien direct vers votre menu. Vous pouvez activer les champs nom, téléphone et adresse selon vos besoins."
+      }
+    ]
+  }
+}

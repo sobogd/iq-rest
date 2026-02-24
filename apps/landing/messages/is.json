@@ -487,6 +487,23 @@
         "image": "/images/features/personal-support.jpg",
         "imageAlt": "Persónulegur netstuðningur fyrir veitingastaði",
         "cta": "Lærðu meira"
+      },
+      {
+        "id": "online-orders",
+        "title": "Netpantanir úr QR matseðli",
+        "shortDescription": "Viðskiptavinir skanna, velja og panta — beint úr matseðlinum þínum.{br}{link}Frekari upplýsingar um netpantanir{/link}.",
+        "description": "Leyfðu gestum að leggja inn pantanir beint úr QR matseðlinum. Engin forrit, engin þóknun. Pantanir birtast strax á stjórnborðinu þínu með borðnúmeri og upplýsingum um rétti.",
+        "fullDescription": "Breyttu QR matseðlinum þínum í beina pantanaleið. Gestir skanna kóðann við borðið sitt, skoða matseðilinn og leggja inn pöntun á nokkrum sekúndum — engra forrita þörf, engin nýskráning. Þú færð pantanir í rauntíma á stjórnborðinu þínu með borðnúmeri, réttum og athugasemdum viðskiptavina. Engin þóknun, engin gjöld á hverja pöntun.",
+        "benefits": [
+          "Viðskiptavinir þurfa ekki að hlaða niður forritum",
+          "Engin þóknun á hverja pöntun",
+          "Pantanir í rauntíma á stjórnborðinu þínu",
+          "Borðnúmer er sjálfkrafa innifalið",
+          "Virkar fyrir borðhald, take-away og heimsendingu"
+        ],
+        "image": "/images/features/online-orders.jpg",
+        "imageAlt": "Netpantanir úr QR matseðli veitingastaðar",
+        "cta": "Frekari upplýsingar um netpantanir"
       }
     ]
   },
