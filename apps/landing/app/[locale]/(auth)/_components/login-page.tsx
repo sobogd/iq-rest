@@ -92,6 +92,8 @@ export function LoginPage() {
         client_id: GOOGLE_CLIENT_ID,
         callback: handleGoogleResponse,
         ux_mode: "popup",
+        prompt_parent_id: undefined,
+        auto_select: false,
       });
 
       window.google.accounts.id.renderButton(googleButtonRef.current, {
