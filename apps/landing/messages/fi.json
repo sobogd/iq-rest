@@ -517,7 +517,7 @@
           "Ravintolan verkkosivusto",
           "QR Menu",
           "320 skannausta/kuukausi",
-          "30 WhatsApp-tilausta/kuukausi",
+          "10 WhatsApp-tilausta/kuukausi",
           "2 kieltä",
           "IQ Rest -vesileimalla",
           "Analytiikka"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Ilman IQ Rest -brändiä",
-      "whatsappOrders": "WhatsApp-tilaukset"
+      "orders": "tilaukset"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / kuukausi"
+        "orders": "10 / kuukausi"
       },
       "basic": {
         "scans": "Rajattomat",
         "languages": "6",
         "aiTranslation": "100 / kk",
         "aiImages": "35 / kk",
-        "whatsappOrders": "Rajoittamaton"
+        "orders": "Rajoittamaton"
       },
       "pro": {
         "scans": "Rajattomat",
         "languages": "Rajattomat",
         "aiTranslation": "Rajaton",
         "aiImages": "Rajattomat",
-        "whatsappOrders": "Rajoittamaton"
+        "orders": "Rajoittamaton"
       }
     },
     "socialProof": "Yli 500 ravintolaa luottaa meihin",
@@ -1177,7 +1177,10 @@
       "medium": "Keskikokoinen",
       "large": "Iso"
     },
-    "copyUrl": "Kopioi URL"
+    "copyUrl": "Kopioi URL",
+    "tableQr": "Pöytä",
+    "tableNumber": "Pöytä {number}",
+    "downloadTableQr": "Lataa QR pöydälle {number}"
   },
   "support": {
     "title": "Viestit",
@@ -1313,6 +1316,11 @@
       "comment": "Kommentti",
       "commentPlaceholder": "Onko erityisiä pyyntöjä?",
       "sendWhatsApp": "Lähetä WhatsAppin kautta",
+      "sendOrder": "Lähetä tilaus",
+      "orderReceived": "Tilaus vastaanotettu!",
+      "tableLabel": "Pöytä",
+      "selectTable": "Valitse pöytä",
+      "continue": "Jatka",
       "clearCart": "Tyhjennä ostoskori",
       "orderLimitReached": "Kuukausittainen tilausten raja on saavutettu. Yritä uudelleen ensi kuussa."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategoriat",
       "items": "Tuotteet",
       "settings": "Kielet",
-      "design": "Verkkosivusto",
+      "design": "Asetukset",
       "contacts": "Yhteystiedot",
       "languages": "Kielet",
       "reservations": "Varaukset",
@@ -1451,7 +1459,8 @@
       "tables": "Pöydät",
       "billing": "Laskutus",
       "support": "Tuki",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Tilaukset"
     },
     "sidebar": {
       "qrMenu": "Tulosta QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Taustan luominen epäonnistui",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp-tilaukset",
+      "ordersSection": "tilaukset",
       "ordersRequireWhatsApp": "Lisää WhatsApp-numero Osoitteet-sivulle, jotta tilaukset voidaan aktivoida",
       "ordersEnabled": "Ota tilaukset käyttöön",
-      "ordersOn": "Asiakkaat voivat tilata WhatsAppin kautta",
+      "ordersOn": "Asiakkaat voivat tilatain kautta",
       "ordersOff": "Tilaaminen pois päältä",
+      "orderMode": "Tilaustapa",
+      "orderModeWhatsapp": "Vain WhatsApp",
+      "orderModeInternal": "Vain sisäinen",
+      "orderModeBoth": "WhatsApp + Sisäinen",
+      "orderModeWhatsappHint": "Tilaukset lähetetään suoraan WhatsAppiin",
+      "orderModeInternalHint": "Tilaukset tallennetaan hallintapaneeliin",
+      "orderModeBothHint": "Tilaukset tallennetaan ja lähetetään myös WhatsAppiin",
       "ordersFieldsHint": "Käytössä olevat kentät ovat pakollisia asiakkaalle täytettäväksi",
       "ordersName": "Nimi",
       "ordersNameOn": "Asiakkaan on annettava nimensä",
@@ -1886,7 +1902,8 @@
       "menuReady": "Menusi on valmis! Jaa QR-koodi asiakkaillesi.",
       "scansTitle": "Skannaukset",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skannausta"
+      "scansUnlimited": "{used} skannausta",
+      "myOrders": "Omat tilaukset"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Asetukset tallennettu",
     "fetchError": "Asetusten lataaminen epäonnistui",
     "saveError": "Asetusten tallentaminen epäonnistui"
+  },
+  "orders": {
+    "noOrders": "Ei vielä tilauksia",
+    "new": "Uudet",
+    "inProgress": "Käsittelyssä",
+    "completed": "Valmiit",
+    "all": "Kaikki",
+    "cancelled": "Peruutettu",
+    "startOrder": "Aloita käsittely",
+    "complete": "Valmis",
+    "total": "Yhteensä",
+    "table": "Pöytä",
+    "items": "tuotetta",
+    "error": "Jotain meni pieleen",
+    "statusUpdated": "Tilauksen tila päivitetty"
   },
   "terms": {
     "meta": {

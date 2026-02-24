@@ -517,7 +517,7 @@
           "Strona internetowa restauracji",
           "Menu QR",
           "320 skanów/miesiąc",
-          "30 zamówień przez WhatsApp/miesiąc",
+          "10 zamówień przez/miesiąc",
           "2 języki",
           "Z watermarkiem IQ Rest",
           "Analiza"
@@ -530,7 +530,7 @@
         "highlights": [
           "Wszystko w wersji Free, plus:",
           "Nieograniczone skany",
-          "Nieograniczone zamówienia przez WhatsApp",
+          "Nieograniczone zamówienia przez",
           "6 języków",
           "Tłumaczenia AI",
           "Niestandardowy motyw kolorystyczny",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Bez brandingu IQ Rest",
-      "whatsappOrders": "Zamówienia przez WhatsApp"
+      "orders": "Zamówienia przez"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / miesiąc"
+        "orders": "10 / miesiąc"
       },
       "basic": {
         "scans": "Nieograniczone",
         "languages": "6",
         "aiTranslation": "100 / miesiąc",
         "aiImages": "35 / mies.",
-        "whatsappOrders": "Nieograniczone"
+        "orders": "Nieograniczone"
       },
       "pro": {
         "scans": "Nieograniczone",
         "languages": "Nieograniczone",
         "aiTranslation": "Bez limitu",
         "aiImages": "Nieograniczone",
-        "whatsappOrders": "Nieograniczone"
+        "orders": "Nieograniczone"
       }
     },
     "socialProof": "Ponad 500 restauracji nam ufa",
@@ -1177,7 +1177,10 @@
       "medium": "Średni",
       "large": "Duży"
     },
-    "copyUrl": "Kopiuj URL"
+    "copyUrl": "Kopiuj URL",
+    "tableQr": "Stolik",
+    "tableNumber": "Stolik {number}",
+    "downloadTableQr": "Pobierz QR dla stolika {number}"
   },
   "support": {
     "title": "Wiadomości",
@@ -1313,6 +1316,11 @@
       "comment": "Komentarz",
       "commentPlaceholder": "Jakieś specjalne prośby?",
       "sendWhatsApp": "Wyślij przez WhatsApp",
+      "sendOrder": "Wyślij zamówienie",
+      "orderReceived": "Zamówienie przyjęte!",
+      "tableLabel": "Stolik",
+      "selectTable": "Wybierz stolik",
+      "continue": "Kontynuuj",
       "clearCart": "Wyczyść koszyk",
       "orderLimitReached": "Osiągnięto miesięczny limit zamówień. Proszę spróbować ponownie w przyszłym miesiącu."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorie",
       "items": "Pozycje",
       "settings": "Języki",
-      "design": "Strona",
+      "design": "Ustawienia",
       "contacts": "Kontakty",
       "languages": "Języki",
       "reservations": "Rezerwacje",
@@ -1451,7 +1459,8 @@
       "tables": "Stoły",
       "billing": "Fakturowanie",
       "support": "Wsparcie",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Zamówienia"
     },
     "sidebar": {
       "qrMenu": "Drukuj QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Nie udało się wygenerować tła",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Zamówienia przez WhatsApp",
+      "ordersSection": "Zamówienia przez",
       "ordersRequireWhatsApp": "Dodaj numer WhatsApp na stronie Kontakt, aby włączyć zamówienia",
       "ordersEnabled": "Włącz zamówienia",
-      "ordersOn": "Klienci mogą zamawiać przez WhatsApp",
+      "ordersOn": "Klienci mogą zamawiać przez",
       "ordersOff": "Zamawianie wyłączone",
+      "orderMode": "Tryb zamówień",
+      "orderModeWhatsapp": "Tylko WhatsApp",
+      "orderModeInternal": "Tylko wewnętrzne",
+      "orderModeBoth": "WhatsApp + Wewnętrzne",
+      "orderModeWhatsappHint": "Zamówienia wysyłane bezpośrednio na WhatsApp",
+      "orderModeInternalHint": "Zamówienia zapisywane w panelu",
+      "orderModeBothHint": "Zamówienia zapisywane i wysyłane przez WhatsApp",
       "ordersFieldsHint": "Włączone pola są wymagane do wypełnienia przez klienta",
       "ordersName": "Imię",
       "ordersNameOn": "Klient musi podać swoje imię",
@@ -1886,7 +1902,8 @@
       "menuReady": "Twoje menu jest gotowe! Udostępnij kod QR klientom.",
       "scansTitle": "Skany",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skanów"
+      "scansUnlimited": "{used} skanów",
+      "myOrders": "Moje zamówienia"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Ustawienia zapisane",
     "fetchError": "Nie udało się załadować ustawień",
     "saveError": "Nie udało się zapisać ustawień"
+  },
+  "orders": {
+    "noOrders": "Brak zamówień",
+    "new": "Nowe",
+    "inProgress": "W trakcie",
+    "completed": "Zrealizowane",
+    "all": "Wszystkie",
+    "cancelled": "Anulowane",
+    "startOrder": "Rozpocznij realizację",
+    "complete": "Zrealizuj",
+    "total": "Razem",
+    "table": "Stolik",
+    "items": "pozycji",
+    "error": "Coś poszło nie tak",
+    "statusUpdated": "Status zamówienia zaktualizowany"
   },
   "terms": {
     "meta": {

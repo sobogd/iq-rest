@@ -254,6 +254,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
         )}
         </div>
       </div>
+
     </div>
   );
 }

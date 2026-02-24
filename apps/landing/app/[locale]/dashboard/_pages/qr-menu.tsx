@@ -31,9 +31,10 @@ const QR_PER_PAGE = {
 
 interface QrMenuPageProps {
   initialSlug: string | null;
+  tableNumbers: number[];
 }
 
-export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
+export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
   const t = useTranslations("qrCode");
   const { translations } = useDashboard();
   const router = useRouter();
@@ -44,9 +45,14 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
   const [customText, setCustomText] = useState<string>("QR Menu\nScan Me");
   const [textSize, setTextSize] = useState<string>("medium");
   const [qrSvg, setQrSvg] = useState<string>("");
+  const [selectedTable, setSelectedTable] = useState<string>("none");
   const printRef = useRef<HTMLDivElement>(null);
 
-  const menuUrl = slug ? `iq-rest.com/m/${slug}` : "";
+  const menuUrl = slug
+    ? selectedTable !== "none"
+      ? `iq-rest.com/m/${slug}?table=${selectedTable}`
+      : `iq-rest.com/m/${slug}`
+    : "";
   const paper = PAPER_FORMATS[paperFormat];
 
   useEffect(() => {
@@ -170,7 +176,7 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
       setQrSvg(svg);
     }, 100);
     return () => clearTimeout(timer);
-  }, [menuUrl]);
+  }, [menuUrl, selectedTable]);
 
   const handlePrint = () => {
     if (!qrSvg) return;
@@ -309,6 +315,23 @@ export function QrMenuPage({ initialSlug }: QrMenuPageProps) {
               </SelectContent>
             </Select>
           </div>
+
+          {tableNumbers.length > 0 && (
+            <div className="space-y-2">
+              <Label>{t("tableQr")}</Label>
+              <Select value={selectedTable} onValueChange={(v) => { track(DashboardEvent.CLICKED_TABLE_QR); setSelectedTable(v); }}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="none">—</SelectItem>
+                  {tableNumbers.map((num) => (
+                    <SelectItem key={num} value={String(num)}>{t("tableNumber", { number: num })}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
         </div>
 
         <div className="flex justify-end gap-2 pt-4 pb-2">

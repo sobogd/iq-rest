@@ -517,7 +517,7 @@
           "Spletna stran restavracije",
           "QR meni",
           "320 skeniranj/mesec",
-          "30 naročil preko WhatsApp/mesec",
+          "10 naročil preko WhatsApp/mesec",
           "2 jezika",
           "Z vodnim žigom IQ Rest",
           "Analitika"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Brez blagovne znamke IQ Rest",
-      "whatsappOrders": "Naročila preko WhatsApp-a"
+      "orders": "Naročila prekoa"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mesec"
+        "orders": "10 / mesec"
       },
       "basic": {
         "scans": "Brez omejitev",
         "languages": "6",
         "aiTranslation": "100 / mesec",
         "aiImages": "35 / mes.",
-        "whatsappOrders": "Brez omejitev"
+        "orders": "Brez omejitev"
       },
       "pro": {
         "scans": "Brez omejitev",
         "languages": "Brez omejitev",
         "aiTranslation": "Neomejeno",
         "aiImages": "Brez omejitev",
-        "whatsappOrders": "Brez omejitev"
+        "orders": "Brez omejitev"
       }
     },
     "socialProof": "Več kot 500 restavracij nam zaupa",
@@ -1177,7 +1177,10 @@
       "medium": "Srednja",
       "large": "Velika"
     },
-    "copyUrl": "Kopiraj URL"
+    "copyUrl": "Kopiraj URL",
+    "tableQr": "Miza",
+    "tableNumber": "Miza {number}",
+    "downloadTableQr": "Prenesi QR za mizo {number}"
   },
   "support": {
     "title": "Sporočila",
@@ -1313,6 +1316,11 @@
       "comment": "Komentar",
       "commentPlaceholder": "Imate kakšne posebne želje?",
       "sendWhatsApp": "Pošlji preko WhatsApp",
+      "sendOrder": "Pošlji naročilo",
+      "orderReceived": "Naročilo prejeto!",
+      "tableLabel": "Miza",
+      "selectTable": "Izberite mizo",
+      "continue": "Nadaljuj",
       "clearCart": "Počisti košarico",
       "orderLimitReached": "Dosežen mesečni limit naročil. Poskusite znova naslednji mesec."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorije",
       "items": "Postavke",
       "settings": "Jeziki",
-      "design": "Spletna stran",
+      "design": "Nastavitve",
       "contacts": "Stiki",
       "languages": "Jeziki",
       "reservations": "Rezervacije",
@@ -1451,7 +1459,8 @@
       "tables": "Mize",
       "billing": "Zaračunavanje",
       "support": "Podpora",
-      "menu": "Meni"
+      "menu": "Meni",
+      "orders": "Naročila"
     },
     "sidebar": {
       "qrMenu": "Tisk QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Generiranje ozadja ni uspelo",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp naročila",
+      "ordersSection": "naročila",
       "ordersRequireWhatsApp": "Dodajte WhatsApp številko na strani Kontakti, da omogočite naročila",
       "ordersEnabled": "Omogoči naročila",
-      "ordersOn": "Stranke lahko naročajo preko WhatsApp",
+      "ordersOn": "Stranke lahko naročajo preko",
       "ordersOff": "Naročanje onemogočeno",
+      "orderMode": "Način naročila",
+      "orderModeWhatsapp": "Samo WhatsApp",
+      "orderModeInternal": "Samo interno",
+      "orderModeBoth": "WhatsApp + Interno",
+      "orderModeWhatsappHint": "Naročila se pošljejo neposredno na WhatsApp",
+      "orderModeInternalHint": "Naročila se shranijo na nadzorni plošči",
+      "orderModeBothHint": "Naročila se shranijo in pošljejo tudi prek WhatsAppa",
       "ordersFieldsHint": "Omogočena polja so obvezna za izpolnitev s strani stranke",
       "ordersName": "Ime",
       "ordersNameOn": "Stranka mora vnesti svoje ime",
@@ -1886,7 +1902,8 @@
       "menuReady": "Vaš meni je pripravljen! Delite QR kodo s strankami.",
       "scansTitle": "Skeniranja",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skeniranj"
+      "scansUnlimited": "{used} skeniranj",
+      "myOrders": "Moja naročila"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Nastavitve shranjene",
     "fetchError": "Nalaganje nastavitev ni uspelo",
     "saveError": "Shranjevanje nastavitev ni uspelo"
+  },
+  "orders": {
+    "noOrders": "Še ni naročil",
+    "new": "Novi",
+    "inProgress": "V obdelavi",
+    "completed": "Zaključeni",
+    "all": "Vsi",
+    "cancelled": "Preklicano",
+    "startOrder": "Začni pripravo",
+    "complete": "Zaključi",
+    "total": "Skupaj",
+    "table": "Miza",
+    "items": "artiklov",
+    "error": "Nekaj je šlo narobe",
+    "statusUpdated": "Stanje naročila posodobljeno"
   },
   "terms": {
     "meta": {

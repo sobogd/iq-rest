@@ -1,16 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { randomUUID } from "crypto";
+
+interface OrderItemPayload {
+  id: string;
+  name: string;
+  qty: number;
+  price: number;
+}
 
 /**
  * POST /api/public/orders
  * Records an order and checks if the monthly limit is reached.
- * Body: { slug: string }
- * Returns: { ok: true } or { error: "limit_reached", limit: number }
+ * Body: { slug, items?, total?, customerName?, customerPhone?, customerAddress?, comment?, tableNumber? }
+ * Returns: { ok: true, mode } or { error: "limit_reached", limit: number }
  */
 export async function POST(request: NextRequest) {
   try {
-    const { slug } = await request.json();
+    const body = await request.json();
+    const { slug, items, total, customerName, customerPhone, customerAddress, comment, tableNumber } = body;
 
     if (!slug) {
       return NextResponse.json({ error: "slug required" }, { status: 400 });
@@ -22,6 +29,8 @@ export async function POST(request: NextRequest) {
         id: true,
         companyId: true,
         ordersEnabled: true,
+        orderMode: true,
+        currency: true,
         company: {
           select: { plan: true, orderLimit: true },
         },
@@ -33,42 +42,57 @@ export async function POST(request: NextRequest) {
     }
 
     const { plan, orderLimit } = restaurant.company;
+    const mode = restaurant.orderMode;
 
-    // Free plan: check monthly limit
-    if (plan === "FREE") {
-      const now = new Date();
-      const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    // Save to DB only for internal/both modes
+    if (mode === "internal" || mode === "both") {
+      // Free plan: check monthly limit
+      if (plan === "FREE") {
+        const now = new Date();
+        const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
 
-      const monthlyOrders = await prisma.analyticsEvent.count({
-        where: {
-          event: "order_sent",
-          meta: { path: ["slug"], equals: slug },
-          createdAt: { gte: startOfMonth },
-        },
-      });
+        const monthlyOrders = await prisma.order.count({
+          where: {
+            companyId: restaurant.companyId,
+            createdAt: { gte: startOfMonth },
+          },
+        });
 
-      if (monthlyOrders >= orderLimit) {
-        return NextResponse.json(
-          { error: "limit_reached", limit: orderLimit },
-          { status: 429 }
-        );
+        if (monthlyOrders >= orderLimit) {
+          return NextResponse.json(
+            { error: "limit_reached", limit: orderLimit },
+            { status: 429 }
+          );
+        }
+      }
+
+      if (items && Array.isArray(items) && items.length > 0) {
+        const orderItems = items.map((item: OrderItemPayload) => ({
+          id: item.id,
+          name: item.name,
+          qty: item.qty,
+          price: item.price,
+        }));
+
+        await prisma.order.create({
+          data: {
+            restaurantId: restaurant.id,
+            companyId: restaurant.companyId,
+            items: orderItems,
+            total: total || 0,
+            currency: restaurant.currency,
+            customerName: customerName || null,
+            customerPhone: customerPhone || null,
+            customerAddress: customerAddress || null,
+            comment: comment || null,
+            tableNumber: tableNumber != null ? Number(tableNumber) || null : null,
+            status: "new",
+          },
+        });
       }
     }
 
-    // Record the order event with a one-off session
-    const sessionId = `order_${randomUUID()}`;
-    await prisma.session.create({
-      data: { id: sessionId },
-    });
-    await prisma.analyticsEvent.create({
-      data: {
-        event: "order_sent",
-        sessionId,
-        meta: { slug },
-      },
-    });
-
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, mode });
   } catch (error) {
     console.error("Error recording order:", error);
     return NextResponse.json({ error: "internal" }, { status: 500 });

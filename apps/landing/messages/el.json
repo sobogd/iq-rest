@@ -517,7 +517,7 @@
           "Ιστοσελίδα εστιατορίου",
           "QR Μενού",
           "320 σκαναρίσματα/μήνα",
-          "30 παραγγελίες WhatsApp/μήνα",
+          "10 παραγγελίες WhatsApp/μήνα",
           "2 γλώσσες",
           "Με υδατογράφημα IQ Rest",
           "Αναλύσεις"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Χωρίς επωνυμία IQ Rest",
-      "whatsappOrders": "Παραγγελίες μέσω WhatsApp"
+      "orders": "Παραγγελίες μέσω"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / μήνα"
+        "orders": "10 / μήνα"
       },
       "basic": {
         "scans": "Απεριόριστα",
         "languages": "6",
         "aiTranslation": "100 / μήνα",
         "aiImages": "35 / μήνα",
-        "whatsappOrders": "Απεριόριστες"
+        "orders": "Απεριόριστες"
       },
       "pro": {
         "scans": "Απεριόριστα",
         "languages": "Απεριόριστα",
         "aiTranslation": "Απεριόριστα",
         "aiImages": "Απεριόριστα",
-        "whatsappOrders": "Απεριόριστες"
+        "orders": "Απεριόριστες"
       }
     },
     "socialProof": "Πάνω από 500 εστιατόρια μας εμπιστεύονται",
@@ -1177,7 +1177,10 @@
       "medium": "Μεσαίο",
       "large": "Μεγάλο"
     },
-    "copyUrl": "Αντιγραφή URL"
+    "copyUrl": "Αντιγραφή URL",
+    "tableQr": "Τραπέζι",
+    "tableNumber": "Τραπέζι {number}",
+    "downloadTableQr": "Λήψη QR για τραπέζι {number}"
   },
   "support": {
     "title": "Μηνύματα",
@@ -1313,6 +1316,11 @@
       "comment": "Σχόλιο",
       "commentPlaceholder": "Οποιεσδήποτε ειδικές αιτήσεις;",
       "sendWhatsApp": "Αποστολή μέσω WhatsApp",
+      "sendOrder": "Αποστολή παραγγελίας",
+      "orderReceived": "Η παραγγελία ελήφθη!",
+      "tableLabel": "Τραπέζι",
+      "selectTable": "Επιλέξτε τραπέζι",
+      "continue": "Συνέχεια",
       "clearCart": "Καθαρισμός καλαθιού",
       "orderLimitReached": "Έχει επιτευχθεί το μηνιαίο όριο παραγγελιών. Παρακαλώ δοκιμάστε ξανά τον επόμενο μήνα."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Κατηγορίες",
       "items": "Είδη",
       "settings": "Γλώσσες",
-      "design": "Ιστοσελίδα",
+      "design": "Ρυθμίσεις",
       "contacts": "Επαφές",
       "languages": "Γλώσσες",
       "reservations": "Κρατήσεις",
@@ -1451,7 +1459,8 @@
       "tables": "Τραπέζια",
       "billing": "Χρέωση",
       "support": "Υποστήριξη",
-      "menu": "Μενού"
+      "menu": "Μενού",
+      "orders": "Παραγγελίες"
     },
     "sidebar": {
       "qrMenu": "Εκτύπωση QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Αποτυχία δημιουργίας φόντου",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Παραγγελίες μέσω WhatsApp",
+      "ordersSection": "Παραγγελίες μέσω",
       "ordersRequireWhatsApp": "Προσθέστε έναν αριθμό WhatsApp στη σελίδα Επαφές για να ενεργοποιήσετε τις παραγγελίες",
       "ordersEnabled": "Ενεργοποίηση Παραγγελιών",
-      "ordersOn": "Οι πελάτες μπορούν να παραγγείλουν μέσω WhatsApp",
+      "ordersOn": "Οι πελάτες μπορούν να παραγγείλουν μέσω",
       "ordersOff": "Η παραγγελία είναι απενεργοποιημένη",
+      "orderMode": "Λειτουργία παραγγελίας",
+      "orderModeWhatsapp": "Μόνο WhatsApp",
+      "orderModeInternal": "Μόνο εσωτερικές",
+      "orderModeBoth": "WhatsApp + Εσωτερικές",
+      "orderModeWhatsappHint": "Οι παραγγελίες αποστέλλονται απευθείας στο WhatsApp",
+      "orderModeInternalHint": "Οι παραγγελίες αποθηκεύονται στον πίνακα ελέγχου",
+      "orderModeBothHint": "Οι παραγγελίες αποθηκεύονται και αποστέλλονται μέσω WhatsApp",
       "ordersFieldsHint": "Τα ενεργοποιημένα πεδία είναι υποχρεωτικά για να τα συμπληρώσει ο πελάτης",
       "ordersName": "Όνομα",
       "ordersNameOn": "Ο πελάτης πρέπει να εισάγει το όνομά του",
@@ -1886,7 +1902,8 @@
       "menuReady": "Το μενού σας είναι έτοιμο! Μοιραστείτε τον QR κωδικό με τους πελάτες.",
       "scansTitle": "Σαρώσεις",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} σαρώσεις"
+      "scansUnlimited": "{used} σαρώσεις",
+      "myOrders": "Οι παραγγελίες μου"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Οι ρυθμίσεις αποθηκεύτηκαν",
     "fetchError": "Αποτυχία φόρτωσης ρυθμίσεων",
     "saveError": "Αποτυχία αποθήκευσης ρυθμίσεων"
+  },
+  "orders": {
+    "noOrders": "Δεν υπάρχουν παραγγελίες ακόμη",
+    "new": "Νέες",
+    "inProgress": "Σε εξέλιξη",
+    "completed": "Ολοκληρωμένες",
+    "all": "Όλες",
+    "cancelled": "Ακυρώθηκε",
+    "startOrder": "Έναρξη επεξεργασίας",
+    "complete": "Ολοκλήρωση",
+    "total": "Σύνολο",
+    "table": "Τραπέζι",
+    "items": "είδη",
+    "error": "Κάτι πήγε στραβά",
+    "statusUpdated": "Η κατάσταση παραγγελίας ενημερώθηκε"
   },
   "terms": {
     "meta": {

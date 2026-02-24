@@ -517,7 +517,7 @@
           "Website-ul restaurantului",
           "Meniu QR",
           "320 scanări/lună",
-          "30 comenzi WhatsApp/lună",
+          "10 comenzi WhatsApp/lună",
           "2 limbi",
           "Cu watermark IQ Rest",
           "Analitice"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Fără branding IQ Rest",
-      "whatsappOrders": "Comenzi pe WhatsApp"
+      "orders": "Comenzi pe"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / lună"
+        "orders": "10 / lună"
       },
       "basic": {
         "scans": "Nelimitat",
         "languages": "6",
         "aiTranslation": "100 / lună",
         "aiImages": "35 / lună",
-        "whatsappOrders": "Nelimitat"
+        "orders": "Nelimitat"
       },
       "pro": {
         "scans": "Nelimitat",
         "languages": "Nelimitat",
         "aiTranslation": "Nelimitat",
         "aiImages": "Nelimitat",
-        "whatsappOrders": "Nelimitat"
+        "orders": "Nelimitat"
       }
     },
     "socialProof": "Peste 500 de restaurante au încredere în noi",
@@ -1177,7 +1177,10 @@
       "medium": "Mediu",
       "large": " mare"
     },
-    "copyUrl": "Copiază URL"
+    "copyUrl": "Copiază URL",
+    "tableQr": "Masă",
+    "tableNumber": "Masă {number}",
+    "downloadTableQr": "Descarcă QR pentru masa {number}"
   },
   "support": {
     "title": "Mesaje",
@@ -1313,6 +1316,11 @@
       "comment": "Comentariu",
       "commentPlaceholder": "Orice cereri speciale?",
       "sendWhatsApp": "Trimite prin WhatsApp",
+      "sendOrder": "Trimite comanda",
+      "orderReceived": "Comandă primită!",
+      "tableLabel": "Masă",
+      "selectTable": "Selectează masa",
+      "continue": "Continuă",
       "clearCart": "Șterge coșul",
       "orderLimitReached": "Limita lunară de comenzi a fost atinsă. Vă rugăm să încercați din nou luna viitoare."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Categorii",
       "items": "Articole",
       "settings": "Limbi",
-      "design": "Site web",
+      "design": "Setări",
       "contacts": "Contacte",
       "languages": "Limbi",
       "reservations": "Rezerve",
@@ -1451,7 +1459,8 @@
       "tables": "Mese",
       "billing": "Facturare",
       "support": "Asistență",
-      "menu": "Meniu"
+      "menu": "Meniu",
+      "orders": "Comenzi"
     },
     "sidebar": {
       "qrMenu": "Tipărire QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Nu s-a putut genera fundalul",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Comenzi WhatsApp",
+      "ordersSection": "Comenzi",
       "ordersRequireWhatsApp": "Adaugă un număr WhatsApp pe pagina de Contacte pentru a activa comenzile",
       "ordersEnabled": "Activează comenzile",
-      "ordersOn": "Clienții pot comanda prin WhatsApp",
+      "ordersOn": "Clienții pot comanda prin",
       "ordersOff": "Comenzile sunt dezactivate",
+      "orderMode": "Mod comandă",
+      "orderModeWhatsapp": "Doar WhatsApp",
+      "orderModeInternal": "Doar intern",
+      "orderModeBoth": "WhatsApp + Intern",
+      "orderModeWhatsappHint": "Comenzile sunt trimise direct pe WhatsApp",
+      "orderModeInternalHint": "Comenzile sunt salvate în panou",
+      "orderModeBothHint": "Comenzile sunt salvate și trimise și prin WhatsApp",
       "ordersFieldsHint": "Câmpurile activate sunt necesare pentru a fi completate de client",
       "ordersName": "Nume",
       "ordersNameOn": "Clientul trebuie să introducă numele său",
@@ -1886,7 +1902,8 @@
       "menuReady": "Meniul tău este gata! Distribuie codul QR clienților.",
       "scansTitle": "Scanări",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scanări"
+      "scansUnlimited": "{used} scanări",
+      "myOrders": "Comenzile mele"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Setările au fost salvate",
     "fetchError": "Nu s-a reușit încărcarea setărilor",
     "saveError": "Nu s-a reușit salvarea setărilor"
+  },
+  "orders": {
+    "noOrders": "Nicio comandă încă",
+    "new": "Noi",
+    "inProgress": "În curs",
+    "completed": "Finalizate",
+    "all": "Toate",
+    "cancelled": "Anulată",
+    "startOrder": "Începe pregătirea",
+    "complete": "Finalizează",
+    "total": "Total",
+    "table": "Masă",
+    "items": "articole",
+    "error": "Ceva a mers prost",
+    "statusUpdated": "Starea comenzii a fost actualizată"
   },
   "terms": {
     "meta": {

@@ -517,7 +517,7 @@
           "Étterem weboldal",
           "QR Menü",
           "320 beolvasás/hónap",
-          "30 WhatsApp rendelés/hónap",
+          "10 rendelés/hónap",
           "2 nyelv",
           "IQ Rest vízjellel",
           "Elemzések"
@@ -530,7 +530,7 @@
         "highlights": [
           "Minden a Free-ben, plusz:",
           "Korlátlan beolvasás",
-          "Korlátlan WhatsApp rendelés",
+          "Korlátlanrendelés",
           "6 nyelv",
           "AI fordítások",
           "Egyedi színséma",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "IQ Rest márkajelzés nélkül",
-      "whatsappOrders": "WhatsApp rendelések"
+      "orders": "rendelések"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / hónap"
+        "orders": "10 / hónap"
       },
       "basic": {
         "scans": "Korlátlan",
         "languages": "6",
         "aiTranslation": "100 / hónap",
         "aiImages": "35 / hó",
-        "whatsappOrders": "Korlátlan"
+        "orders": "Korlátlan"
       },
       "pro": {
         "scans": "Korlátlan",
         "languages": "Korlátlan",
         "aiTranslation": "Korlátlan",
         "aiImages": "Korlátlan",
-        "whatsappOrders": "Korlátlan"
+        "orders": "Korlátlan"
       }
     },
     "socialProof": "Több mint 500 étterem bízik bennünk",
@@ -1177,7 +1177,10 @@
       "medium": "Közepes",
       "large": "Nagy"
     },
-    "copyUrl": "URL másolása"
+    "copyUrl": "URL másolása",
+    "tableQr": "Asztal",
+    "tableNumber": "Asztal {number}",
+    "downloadTableQr": "QR letöltése az {number}. asztalhoz"
   },
   "support": {
     "title": "Üzenetek",
@@ -1313,6 +1316,11 @@
       "comment": "Megjegyzés",
       "commentPlaceholder": "Van valami különleges kérésed?",
       "sendWhatsApp": "Küldés WhatsApp-on",
+      "sendOrder": "Rendelés küldése",
+      "orderReceived": "Rendelés fogadva!",
+      "tableLabel": "Asztal",
+      "selectTable": "Válasszon asztalt",
+      "continue": "Tovább",
       "clearCart": "Kosár ürítése",
       "orderLimitReached": "A havi rendelési limit elérve. Kérjük, próbálja meg a következő hónapban."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategóriák",
       "items": "Tételek",
       "settings": "Nyelvek",
-      "design": "Weboldal",
+      "design": "Beállítások",
       "contacts": "Kapcsolatok",
       "languages": "Nyelvek",
       "reservations": "Foglalások",
@@ -1451,7 +1459,8 @@
       "tables": "Asztalok",
       "billing": "Számlázás",
       "support": "Támogatás",
-      "menu": "Menü"
+      "menu": "Menü",
+      "orders": "Rendelések"
     },
     "sidebar": {
       "qrMenu": "QR nyomtatás",
@@ -1753,11 +1762,18 @@
       "generateError": "A háttér generálása sikertelen",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp Rendelések",
+      "ordersSection": "Rendelések",
       "ordersRequireWhatsApp": "Add meg a WhatsApp számot a Kapcsolatok oldalon a rendelések engedélyezéséhez",
       "ordersEnabled": "Rendelések engedélyezése",
-      "ordersOn": "Az ügyfelek rendelhetnek WhatsApp-on",
+      "ordersOn": "Az ügyfelek rendelhetnekon",
       "ordersOff": "Rendelés letiltva",
+      "orderMode": "Rendelési mód",
+      "orderModeWhatsapp": "Csak WhatsApp",
+      "orderModeInternal": "Csak belső",
+      "orderModeBoth": "WhatsApp + Belső",
+      "orderModeWhatsappHint": "A rendelések közvetlenül a WhatsApp-ra kerülnek",
+      "orderModeInternalHint": "A rendelések az irányítópultra mentődnek",
+      "orderModeBothHint": "A rendelések mentődnek és WhatsApp-on is elküldődnek",
       "ordersFieldsHint": "Az engedélyezett mezők kitöltése kötelező az ügyfél számára",
       "ordersName": "Név",
       "ordersNameOn": "Az ügyfélnek meg kell adnia a nevét",
@@ -1886,7 +1902,8 @@
       "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel.",
       "scansTitle": "Szkennek",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} szkennelés"
+      "scansUnlimited": "{used} szkennelés",
+      "myOrders": "Rendeléseim"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Beállítások mentve",
     "fetchError": "A beállítások betöltése nem sikerült",
     "saveError": "A beállítások mentése nem sikerült"
+  },
+  "orders": {
+    "noOrders": "Még nincsenek rendelések",
+    "new": "Új",
+    "inProgress": "Folyamatban",
+    "completed": "Teljesített",
+    "all": "Összes",
+    "cancelled": "Törölve",
+    "startOrder": "Feldolgozás indítása",
+    "complete": "Teljesít",
+    "total": "Összesen",
+    "table": "Asztal",
+    "items": "tétel",
+    "error": "Valami hiba történt",
+    "statusUpdated": "Rendelés állapota frissítve"
   },
   "terms": {
     "meta": {

@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "title": "WhatsApp Orders for Restaurants — QR Menu | IQ Rest",
+    "description": "Let customers order directly via WhatsApp from your QR menu. Zero commissions, real-time prices, and instant order notifications for your restaurant."
+  },
+  "hero": {
+    "badge": "WhatsApp Ordering",
+    "title": "Turn Your QR Menu into a WhatsApp Order System",
+    "subtitle": "Customers scan, browse your menu, and send their order straight to your WhatsApp. No app downloads, no commissions, no complexity.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "benefits": {
+    "title": "Why Restaurants Choose WhatsApp Orders",
+    "subtitle": "A direct ordering channel that keeps things simple for you and your guests.",
+    "items": [
+      {
+        "title": "Zero Commissions",
+        "description": "No per-order fees or platform commissions. Every sale is 100% yours."
+      },
+      {
+        "title": "Real-time Prices",
+        "description": "Update prices and availability instantly. Changes reflect immediately on your QR menu."
+      },
+      {
+        "title": "WhatsApp Orders",
+        "description": "Guests tap \"Order via WhatsApp\" and send a pre-filled message with their selections."
+      },
+      {
+        "title": "Custom Design",
+        "description": "Match your menu to your brand with custom colors, backgrounds, and logo."
+      }
+    ]
+  },
+  "features": {
+    "title": "How WhatsApp Ordering Works",
+    "subtitle": "Two simple steps connect your menu to WhatsApp.",
+    "items": [
+      {
+        "title": "Guests Browse & Select Items",
+        "description": "Customers scan your QR code and see your full menu with photos, descriptions, and prices. They add items to their order with a single tap — no sign-up needed."
+      },
+      {
+        "title": "Order Sent to Your WhatsApp",
+        "description": "When ready, guests tap the order button. A pre-formatted WhatsApp message is generated with their full order, table number, and any notes. You receive it instantly."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about WhatsApp ordering.",
+    "items": [
+      {
+        "question": "Do I need a special WhatsApp account?",
+        "answer": "No. WhatsApp orders work with any WhatsApp number — personal or WhatsApp Business. Just add your phone number in the dashboard, and you're ready to receive orders."
+      },
+      {
+        "question": "Are there any commissions or per-order fees?",
+        "answer": "Absolutely not. IQ Rest never charges commissions on your orders. You pay only your subscription plan, and all revenue from orders stays with you."
+      },
+      {
+        "question": "Can customers customize their order or add notes?",
+        "answer": "Yes. Guests can select items, specify quantities, and add special notes or requests. Everything is included in the WhatsApp message you receive."
+      },
+      {
+        "question": "Does it work for dine-in, takeaway, and delivery?",
+        "answer": "Yes. WhatsApp ordering works for all scenarios. For dine-in, guests scan the QR code at their table. For takeaway or delivery, you can share a direct link to your menu."
+      }
+    ]
+  }
+}

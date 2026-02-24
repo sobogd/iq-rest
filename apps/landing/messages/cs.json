@@ -517,7 +517,7 @@
           "Webová stránka restaurace",
           "QR Menu",
           "320 skenování/měsíc",
-          "30 objednávek přes WhatsApp/měsíc",
+          "10 objednávek/měsíc",
           "2 jazyky",
           "S vodotiskem IQ Rest",
           "Analytika"
@@ -530,7 +530,7 @@
         "highlights": [
           "Vše v bezplatné verzi, navíc:",
           "Neomezené skenování",
-          "Neomezené objednávky přes WhatsApp",
+          "Neomezené objednávky",
           "6 jazyků",
           "AI překlady",
           "Vlastní barevné téma",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Bez brandingu IQ Rest",
-      "whatsappOrders": "Objednávky přes WhatsApp"
+      "orders": "Objednávky"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / měsíc"
+        "orders": "10 / měsíc"
       },
       "basic": {
         "scans": "Neomezené",
         "languages": "6",
         "aiTranslation": "100 / měsíc",
         "aiImages": "35 / měs.",
-        "whatsappOrders": "Neomezeně"
+        "orders": "Neomezeně"
       },
       "pro": {
         "scans": "Neomezené",
         "languages": "Neomezené",
         "aiTranslation": "Neomezeně",
         "aiImages": "Neomezené",
-        "whatsappOrders": "Neomezeně"
+        "orders": "Neomezeně"
       }
     },
     "socialProof": "Důvěřuje nám více než 500 restaurací",
@@ -1177,7 +1177,10 @@
       "medium": "Střední",
       "large": "Velký"
     },
-    "copyUrl": "Kopírovat URL"
+    "copyUrl": "Kopírovat URL",
+    "tableQr": "Stůl",
+    "tableNumber": "Stůl {number}",
+    "downloadTableQr": "Stáhnout QR pro stůl {number}"
   },
   "support": {
     "title": "Zprávy",
@@ -1313,6 +1316,11 @@
       "comment": "Komentář",
       "commentPlaceholder": "Máte nějaké zvláštní požadavky?",
       "sendWhatsApp": "Odeslat přes WhatsApp",
+      "sendOrder": "Odeslat objednávku",
+      "orderReceived": "Objednávka přijata!",
+      "tableLabel": "Stůl",
+      "selectTable": "Vyberte stůl",
+      "continue": "Pokračovat",
       "clearCart": "Vymazat košík",
       "orderLimitReached": "Měsíční limit objednávek byl dosažen. Zkuste to prosím znovu příští měsíc."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorie",
       "items": "Položky",
       "settings": "Jazyky",
-      "design": "Web",
+      "design": "Nastavení",
       "contacts": "Kontakty",
       "languages": "Jazyky",
       "reservations": "Rezervace",
@@ -1451,7 +1459,8 @@
       "tables": "Stoly",
       "billing": "Fakturace",
       "support": "Podpora",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Objednávky"
     },
     "sidebar": {
       "qrMenu": "Tisk QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Nepodařilo se vygenerovat pozadí",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Objednávky přes WhatsApp",
+      "ordersSection": "Objednávky",
       "ordersRequireWhatsApp": "Přidejte číslo WhatsApp na stránce Kontakty, abyste povolili objednávky",
       "ordersEnabled": "Povolit objednávky",
-      "ordersOn": "Zákazníci mohou objednávat přes WhatsApp",
+      "ordersOn": "Zákazníci mohou objednávat",
       "ordersOff": "Objednávání zakázáno",
+      "orderMode": "Režim objednávek",
+      "orderModeWhatsapp": "Pouze WhatsApp",
+      "orderModeInternal": "Pouze interní",
+      "orderModeBoth": "WhatsApp + Interní",
+      "orderModeWhatsappHint": "Objednávky jsou odesílány přímo na WhatsApp",
+      "orderModeInternalHint": "Objednávky se ukládají na nástěnku",
+      "orderModeBothHint": "Objednávky se ukládají a odesílají přes WhatsApp",
       "ordersFieldsHint": "Povolená pole jsou povinná pro zákazníka k vyplnění",
       "ordersName": "Jméno",
       "ordersNameOn": "Zákazník musí zadat své jméno",
@@ -1886,7 +1902,8 @@
       "menuReady": "Vaše menu je připraveno! Sdílejte QR kód se zákazníky.",
       "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skenů"
+      "scansUnlimited": "{used} skenů",
+      "myOrders": "Moje objednávky"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Nastavení uloženo",
     "fetchError": "Nepodařilo se načíst nastavení",
     "saveError": "Nepodařilo se uložit nastavení"
+  },
+  "orders": {
+    "noOrders": "Zatím žádné objednávky",
+    "new": "Nové",
+    "inProgress": "Probíhá",
+    "completed": "Dokončené",
+    "all": "Všechny",
+    "cancelled": "Zrušeno",
+    "startOrder": "Zahájit přípravu",
+    "complete": "Dokončit",
+    "total": "Celkem",
+    "table": "Stůl",
+    "items": "položek",
+    "error": "Něco se pokazilo",
+    "statusUpdated": "Stav objednávky aktualizován"
   },
   "terms": {
     "meta": {

@@ -15,7 +15,7 @@ interface MenuPageProps {
     locale: string;
     slug: string;
   }>;
-  searchParams: Promise<{ preview?: string }>;
+  searchParams: Promise<{ preview?: string; table?: string }>;
 }
 
 async function getRestaurant(slug: string) {
@@ -54,9 +54,13 @@ async function getRestaurant(slug: string) {
 
 export default async function MenuPage({ params, searchParams }: MenuPageProps) {
   const { slug, locale } = await params;
-  const { preview } = await searchParams;
+  const { preview, table } = await searchParams;
   const isPreview = preview === "1";
-  const previewParam = isPreview ? "?preview=1" : "";
+  const queryParams = new URLSearchParams();
+  if (isPreview) queryParams.set("preview", "1");
+  if (table) queryParams.set("table", table);
+  const queryString = queryParams.toString();
+  const previewParam = queryString ? `?${queryString}` : "";
   if (!isPreview) trackPageView(slug, "home", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),

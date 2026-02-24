@@ -33,11 +33,23 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? (await import(`../messages/en.json`)).default
     : undefined;
 
+  const messages = fallbackMessages
+    ? deepMerge(fallbackMessages, userMessages)
+    : userMessages;
+
+  // Load whatsapp-orders sublanding translations
+  const waMessages = await import(`../messages/whatsapp-orders/${locale}.json`).catch(() => null);
+  const waFallback = locale !== "en"
+    ? await import(`../messages/whatsapp-orders/en.json`).catch(() => null)
+    : null;
+
+  messages.whatsappOrders = waFallback
+    ? deepMerge(waFallback.default, waMessages?.default || {})
+    : (waMessages?.default || {});
+
   return {
     locale,
-    messages: fallbackMessages
-      ? deepMerge(fallbackMessages, userMessages)
-      : userMessages,
+    messages,
     getMessageFallback({ namespace, key }) {
       return [namespace, key].filter(Boolean).join(".");
     },

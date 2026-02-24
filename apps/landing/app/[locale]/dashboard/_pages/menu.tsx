@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Home, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Home, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -50,9 +50,10 @@ interface MenuPageProps {
   checklist: ChecklistStatus;
   scanUsage: ScanUsage | null;
   isAdmin?: boolean;
+  showOrders?: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, scanUsage, isAdmin }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, scanUsage, isAdmin, showOrders }: MenuPageProps) {
   useBlockBack();
   const { translations } = useDashboard();
   const tHome = useTranslations("dashboard.home");
@@ -339,6 +340,18 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 {tHome("viewMenu")}
               </Button>
             </MenuPreviewModal>
+          )}
+
+          {/* Orders button */}
+          {!sortMode && showOrders && (
+            <Button
+              variant="outline"
+              className="w-full h-12 rounded-2xl border-border bg-muted/50 text-muted-foreground hover:bg-muted/80"
+              onClick={() => { track(DashboardEvent.CLICKED_NAV_ORDERS); router.push(PAGE_PATHS.orders); }}
+            >
+              <ClipboardList className="h-4 w-4" />
+              {tHome("myOrders")}
+            </Button>
           )}
 
           {/* Setup checklist */}

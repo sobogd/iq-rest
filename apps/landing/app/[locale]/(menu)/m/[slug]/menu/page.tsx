@@ -4,13 +4,14 @@ import { getTranslations } from "next-intl/server";
 import { MenuFeed } from "@/components/menu-feed";
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { trackPageView } from "../_lib/track";
+import { getCartFromCookies } from "@/lib/cart-server";
 
 interface MenuListPageProps {
   params: Promise<{
     locale: string;
     slug: string;
   }>;
-  searchParams: Promise<{ preview?: string }>;
+  searchParams: Promise<{ preview?: string; table?: string }>;
 }
 
 type TranslationData = {
@@ -32,6 +33,10 @@ async function getRestaurantWithMenu(slug: string) {
       currency: true,
       whatsapp: true,
       ordersEnabled: true,
+      orderMode: true,
+      company: {
+        select: { plan: true, orderLimit: true },
+      },
     },
   });
 
@@ -68,12 +73,13 @@ async function getRestaurantWithMenu(slug: string) {
 
 export default async function MenuListPage({ params, searchParams }: MenuListPageProps) {
   const { slug, locale } = await params;
-  const { preview } = await searchParams;
+  const { preview, table } = await searchParams;
   const isPreview = preview === "1";
   if (!isPreview) trackPageView(slug, "menu", locale).catch(() => {});
-  const [data, t] = await Promise.all([
+  const [data, t, cartMap] = await Promise.all([
     getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),
+    getCartFromCookies(),
   ]);
 
   if (!data) {
@@ -82,6 +88,20 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
 
   const { restaurant, categories } = data;
   const defaultLanguage = restaurant.defaultLanguage || "en";
+
+  // Check order limit for internal/both on FREE plan
+  let ordersAvailable = restaurant.ordersEnabled;
+  const mode = restaurant.orderMode || "whatsapp";
+  if (ordersAvailable && (mode === "internal" || mode === "both") && restaurant.company.plan === "FREE") {
+    const now = new Date();
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const monthlyOrders = await prisma.order.count({
+      where: { companyId: restaurant.companyId, createdAt: { gte: startOfMonth } },
+    });
+    if (monthlyOrders >= restaurant.company.orderLimit) {
+      ordersAvailable = false;
+    }
+  }
 
   // Helper to get translated value
   const getTranslatedValue = (
@@ -134,9 +154,11 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
             names: t.raw("allergenNames") as Record<string, string>,
           }}
           slug={slug}
-          ordersEnabled={!!(restaurant.ordersEnabled && restaurant.whatsapp)}
+          ordersEnabled={ordersAvailable}
           addLabel={t("order.add")}
           isPreview={isPreview}
+          tableNumber={table}
+          initialCart={Object.fromEntries(cartMap)}
         />
       )}
     </MenuPageWrapper>

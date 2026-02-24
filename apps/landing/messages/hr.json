@@ -517,7 +517,7 @@
           "Web stranica restorana",
           "QR Meni",
           "320 skeniranja/mjesec",
-          "30 WhatsApp narudžbi/mjesec",
+          "10 narudžbi/mjesec",
           "2 jezika",
           "S IQ Rest oznakom",
           "Analitika"
@@ -530,7 +530,7 @@
         "highlights": [
           "Sve u Besplatnom, plus:",
           "Neograničena skeniranja",
-          "Neograničene WhatsApp narudžbe",
+          "Neograničenenarudžbe",
           "6 jezika",
           "AI prijevodi",
           "Prilagođena boja teme",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Bez IQ Rest brandinga",
-      "whatsappOrders": "WhatsApp narudžbe"
+      "orders": "narudžbe"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mjesec"
+        "orders": "10 / mjesec"
       },
       "basic": {
         "scans": "Neograničeno",
         "languages": "6",
         "aiTranslation": "100 / mjesec",
         "aiImages": "35 / mj.",
-        "whatsappOrders": "Neograničeno"
+        "orders": "Neograničeno"
       },
       "pro": {
         "scans": "Neograničeno",
         "languages": "Neograničeno",
         "aiTranslation": "Neograničeno",
         "aiImages": "Neograničeno",
-        "whatsappOrders": "Neograničeno"
+        "orders": "Neograničeno"
       }
     },
     "socialProof": "Više od 500 restorana nam vjeruje",
@@ -1177,7 +1177,10 @@
       "medium": "Srednja",
       "large": "Velika"
     },
-    "copyUrl": "Kopiraj URL"
+    "copyUrl": "Kopiraj URL",
+    "tableQr": "Stol",
+    "tableNumber": "Stol {number}",
+    "downloadTableQr": "Preuzmi QR za stol {number}"
   },
   "support": {
     "title": "Poruke",
@@ -1313,6 +1316,11 @@
       "comment": "Komentar",
       "commentPlaceholder": "Imate li posebne zahtjeve?",
       "sendWhatsApp": "Pošaljite putem WhatsApp-a",
+      "sendOrder": "Pošalji narudžbu",
+      "orderReceived": "Narudžba primljena!",
+      "tableLabel": "Stol",
+      "selectTable": "Odaberi stol",
+      "continue": "Nastavi",
       "clearCart": "Isprazni košaricu",
       "orderLimitReached": "Mjesecni limit narudžbi je dostignut. Pokušajte ponovno sljedeći mjesec."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorije",
       "items": "Stavke",
       "settings": "Jezici",
-      "design": "Web stranica",
+      "design": "Postavke",
       "contacts": "Kontakti",
       "languages": "Jezici",
       "reservations": "Rezervacije",
@@ -1451,7 +1459,8 @@
       "tables": "Stolovi",
       "billing": "Naplate",
       "support": "Podrška",
-      "menu": "Jelovnik"
+      "menu": "Jelovnik",
+      "orders": "Narudžbe"
     },
     "sidebar": {
       "qrMenu": "Ispis QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Generiranje pozadine nije uspjelo",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp Narudžbe",
+      "ordersSection": "Narudžbe",
       "ordersRequireWhatsApp": "Dodajte WhatsApp broj na stranici Kontakti da omogućite narudžbe",
       "ordersEnabled": "Omogući narudžbe",
-      "ordersOn": "Kupci mogu naručivati putem WhatsApp-a",
+      "ordersOn": "Kupci mogu naručivati-a",
       "ordersOff": "Naručivanje onemogućeno",
+      "orderMode": "Način narudžbe",
+      "orderModeWhatsapp": "Samo WhatsApp",
+      "orderModeInternal": "Samo interno",
+      "orderModeBoth": "WhatsApp + Interno",
+      "orderModeWhatsappHint": "Narudžbe se šalju izravno na WhatsApp",
+      "orderModeInternalHint": "Narudžbe se spremaju na nadzornu ploču",
+      "orderModeBothHint": "Narudžbe se spremaju i šalju putem WhatsAppa",
       "ordersFieldsHint": "Omogućena polja su obavezna za ispuniti",
       "ordersName": "Ime",
       "ordersNameOn": "Kupac mora unijeti svoje ime",
@@ -1886,7 +1902,8 @@
       "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima.",
       "scansTitle": "Skenovi",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skeniranja"
+      "scansUnlimited": "{used} skeniranja",
+      "myOrders": "Moje narudžbe"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Postavke spremljene",
     "fetchError": "Nije uspjelo učitati postavke",
     "saveError": "Nije uspjelo spremiti postavke"
+  },
+  "orders": {
+    "noOrders": "Još nema narudžbi",
+    "new": "Nove",
+    "inProgress": "U tijeku",
+    "completed": "Dovršene",
+    "all": "Sve",
+    "cancelled": "Otkazano",
+    "startOrder": "Započni pripremu",
+    "complete": "Dovrši",
+    "total": "Ukupno",
+    "table": "Stol",
+    "items": "stavki",
+    "error": "Nešto je pošlo po krivu",
+    "statusUpdated": "Status narudžbe ažuriran"
   },
   "terms": {
     "meta": {

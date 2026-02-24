@@ -517,7 +517,7 @@
           "موقع المطعم",
           "قائمة QR",
           "320 مسح/شهر",
-          "30 طلبات عبر WhatsApp/شهر",
+          "10 طلبات عبر WhatsApp/شهر",
           "2 لغات",
           "مع علامة مائية من IQ Rest",
           "تحليلات"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "بدون علامة IQ Rest",
-      "whatsappOrders": "طلبات عبر WhatsApp"
+      "orders": "طلبات"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / شهر"
+        "orders": "10 / شهر"
       },
       "basic": {
         "scans": "غير محدود",
         "languages": "6",
         "aiTranslation": "١٠٠ / شهر",
         "aiImages": "35 / شهر",
-        "whatsappOrders": "غير محدود"
+        "orders": "غير محدود"
       },
       "pro": {
         "scans": "غير محدود",
         "languages": "غير محدود",
         "aiTranslation": "غير محدود",
         "aiImages": "غير محدود",
-        "whatsappOrders": "غير محدود"
+        "orders": "غير محدود"
       }
     },
     "socialProof": "أكثر من 500 مطعم يثقون بنا",
@@ -1177,7 +1177,10 @@
       "medium": "متوسط",
       "large": "كبير"
     },
-    "copyUrl": "نسخ الرابط"
+    "copyUrl": "نسخ الرابط",
+    "tableQr": "طاولة",
+    "tableNumber": "طاولة {number}",
+    "downloadTableQr": "تحميل QR للطاولة {number}"
   },
   "support": {
     "title": "الرسائل",
@@ -1313,6 +1316,11 @@
       "comment": "تعليق",
       "commentPlaceholder": "هل لديك طلبات خاصة؟",
       "sendWhatsApp": "إرسال عبر WhatsApp",
+      "sendOrder": "إرسال الطلب",
+      "orderReceived": "تم استلام الطلب!",
+      "tableLabel": "طاولة",
+      "selectTable": "اختر طاولة",
+      "continue": "متابعة",
       "clearCart": "مسح السلة",
       "orderLimitReached": "تم الوصول إلى حد الطلبات الشهري. يرجى المحاولة مرة أخرى الشهر المقبل."
     }
@@ -1443,7 +1451,7 @@
       "categories": "الفئات",
       "items": "العناصر",
       "settings": "اللغات",
-      "design": "الموقع",
+      "design": "الإعدادات",
       "contacts": "جهات الاتصال",
       "languages": "اللغات",
       "reservations": "الحجوزات",
@@ -1451,7 +1459,8 @@
       "tables": "الطاولات",
       "billing": "الفوترة",
       "support": "الدعم",
-      "menu": "القائمة"
+      "menu": "القائمة",
+      "orders": "طلبات"
     },
     "sidebar": {
       "qrMenu": "طباعة QR",
@@ -1753,11 +1762,18 @@
       "generateError": "فشل في توليد الخلفية",
       "previewButton": "احجز طاولة",
       "preview": "معاينة",
-      "ordersSection": "طلبات WhatsApp",
+      "ordersSection": "طلبات",
       "ordersRequireWhatsApp": "أضف رقم WhatsApp في صفحة جهات الاتصال لتمكين الطلبات",
       "ordersEnabled": "تمكين الطلبات",
-      "ordersOn": "يمكن للعملاء الطلب عبر WhatsApp",
+      "ordersOn": "يمكن للعملاء الطلب",
       "ordersOff": "تم تعطيل الطلب",
+      "orderMode": "وضع الطلب",
+      "orderModeWhatsapp": "WhatsApp فقط",
+      "orderModeInternal": "داخلي فقط",
+      "orderModeBoth": "WhatsApp + داخلي",
+      "orderModeWhatsappHint": "يتم إرسال الطلبات مباشرة إلى WhatsApp",
+      "orderModeInternalHint": "يتم حفظ الطلبات في لوحة التحكم",
+      "orderModeBothHint": "يتم حفظ الطلبات وإرسالها عبر WhatsApp",
       "ordersFieldsHint": "الحقول المفعلة مطلوبة ليقوم العميل بملئها",
       "ordersName": "الاسم",
       "ordersNameOn": "يجب على العميل إدخال اسمه",
@@ -1886,7 +1902,8 @@
       "menuReady": "قائمتك جاهزة! شارك رمز QR مع العملاء.",
       "scansTitle": "المسح",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} مسح"
+      "scansUnlimited": "{used} مسح",
+      "myOrders": "طلباتي"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "تم حفظ الإعدادات",
     "fetchError": "فشل تحميل الإعدادات",
     "saveError": "فشل حفظ الإعدادات"
+  },
+  "orders": {
+    "noOrders": "لا توجد طلبات بعد",
+    "new": "جديد",
+    "inProgress": "قيد التنفيذ",
+    "completed": "مكتمل",
+    "all": "الكل",
+    "cancelled": "ملغي",
+    "startOrder": "بدء التحضير",
+    "complete": "إكمال",
+    "total": "المجموع",
+    "table": "طاولة",
+    "items": "عناصر",
+    "error": "حدث خطأ",
+    "statusUpdated": "تم تحديث حالة الطلب"
   },
   "terms": {
     "meta": {

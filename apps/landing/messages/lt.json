@@ -517,7 +517,7 @@
           "Restorano svetainė",
           "QR Meniu",
           "320 nuskaitymų/mėnesį",
-          "30 WhatsApp užsakymų/mėnesį",
+          "10 WhatsApp užsakymų/mėnesį",
           "2 kalbos",
           "Su IQ Rest vandens ženklu",
           "Analitika"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Be IQ Rest prekės ženklo",
-      "whatsappOrders": "WhatsApp užsakymai"
+      "orders": "užsakymai"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mėn."
+        "orders": "10 / mėn."
       },
       "basic": {
         "scans": "Neriboti",
         "languages": "6",
         "aiTranslation": "100 / mėn.",
         "aiImages": "35 / mėn.",
-        "whatsappOrders": "Neribota"
+        "orders": "Neribota"
       },
       "pro": {
         "scans": "Neriboti",
         "languages": "Neriboti",
         "aiTranslation": "Neribota",
         "aiImages": "Neriboti",
-        "whatsappOrders": "Neribota"
+        "orders": "Neribota"
       }
     },
     "socialProof": "Daugiau nei 500 restoranų mumis pasitiki",
@@ -1177,7 +1177,10 @@
       "medium": "Vidutinis",
       "large": "Didelis"
     },
-    "copyUrl": "Kopijuoti URL"
+    "copyUrl": "Kopijuoti URL",
+    "tableQr": "Stalas",
+    "tableNumber": "Stalas {number}",
+    "downloadTableQr": "Atsisiųsti QR stalui {number}"
   },
   "support": {
     "title": "Žinutės",
@@ -1313,6 +1316,11 @@
       "comment": "Komentaras",
       "commentPlaceholder": "Ar turite specialių pageidavimų?",
       "sendWhatsApp": "Siųsti per WhatsApp",
+      "sendOrder": "Siųsti užsakymą",
+      "orderReceived": "Užsakymas gautas!",
+      "tableLabel": "Stalas",
+      "selectTable": "Pasirinkite stalą",
+      "continue": "Tęsti",
       "clearCart": "Išvalyti krepšelį",
       "orderLimitReached": "Mėnesio užsakymų limitas pasiektas. Prašome bandyti vėl kitą mėnesį."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorijos",
       "items": "Patiekalai",
       "settings": "Kalbos",
-      "design": "Svetainė",
+      "design": "Nustatymai",
       "contacts": "Kontaktai",
       "languages": "Kalbos",
       "reservations": "Rezervacijos",
@@ -1451,7 +1459,8 @@
       "tables": "Stalai",
       "billing": "Apmokėjimas",
       "support": "Pagalba",
-      "menu": "Meniu"
+      "menu": "Meniu",
+      "orders": "Užsakymai"
     },
     "sidebar": {
       "qrMenu": "Spausdinti QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Nepavyko sugeneruoti fono",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp užsakymai",
+      "ordersSection": "užsakymai",
       "ordersRequireWhatsApp": "Pridėkite WhatsApp numerį Kontaktų puslapyje, kad įgalintumėte užsakymus",
       "ordersEnabled": "Įgalinti užsakymus",
-      "ordersOn": "Klientai gali užsisakyti per WhatsApp",
+      "ordersOn": "Klientai gali užsisakyti",
       "ordersOff": "Užsakymas išjungtas",
+      "orderMode": "Užsakymo režimas",
+      "orderModeWhatsapp": "Tik WhatsApp",
+      "orderModeInternal": "Tik vidiniai",
+      "orderModeBoth": "WhatsApp + Vidiniai",
+      "orderModeWhatsappHint": "Užsakymai siunčiami tiesiai į WhatsApp",
+      "orderModeInternalHint": "Užsakymai saugomi valdymo skydelyje",
+      "orderModeBothHint": "Užsakymai saugomi ir siunčiami per WhatsApp",
       "ordersFieldsHint": "Įgalinti laukai yra privalomi klientui užpildyti",
       "ordersName": "Vardas",
       "ordersNameOn": "Klientas privalo įvesti savo vardą",
@@ -1886,7 +1902,8 @@
       "menuReady": "Jūsų meniu paruoštas! Pasidalykite QR kodu su klientais.",
       "scansTitle": "Nuskaitymai",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} nuskaitymų"
+      "scansUnlimited": "{used} nuskaitymų",
+      "myOrders": "Mano užsakymai"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Nustatymai išsaugoti",
     "fetchError": "Nepavyko įkelti nustatymų",
     "saveError": "Nepavyko išsaugoti nustatymų"
+  },
+  "orders": {
+    "noOrders": "Užsakymų dar nėra",
+    "new": "Nauji",
+    "inProgress": "Vykdoma",
+    "completed": "Įvykdyti",
+    "all": "Visi",
+    "cancelled": "Atšaukta",
+    "startOrder": "Pradėti vykdymą",
+    "complete": "Įvykdyti",
+    "total": "Viso",
+    "table": "Stalas",
+    "items": "prekės",
+    "error": "Kažkas nutiko",
+    "statusUpdated": "Užsakymo būsena atnaujinta"
   },
   "terms": {
     "meta": {

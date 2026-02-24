@@ -517,7 +517,7 @@
           "餐厅网站",
           "QR菜单",
           "320次扫描/月",
-          "30个WhatsApp订单/月",
+          "10个WhatsApp订单/月",
           "2种语言",
           "带有IQ Rest水印",
           "分析"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "无IQ Rest品牌标识",
-      "whatsappOrders": "WhatsApp 订单"
+      "orders": "订单"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "每月 30 个"
+        "orders": "每月 10 个"
       },
       "basic": {
         "scans": "无限",
         "languages": "6",
         "aiTranslation": "100 / 月",
         "aiImages": "35 / 月",
-        "whatsappOrders": "无限制"
+        "orders": "无限制"
       },
       "pro": {
         "scans": "无限",
         "languages": "无限",
         "aiTranslation": "无限",
         "aiImages": "无限",
-        "whatsappOrders": "无限制"
+        "orders": "无限制"
       }
     },
     "socialProof": "超过500家餐厅信赖我们",
@@ -1177,7 +1177,10 @@
       "medium": "中",
       "large": "大"
     },
-    "copyUrl": "复制链接"
+    "copyUrl": "复制链接",
+    "tableQr": "桌号",
+    "tableNumber": "桌号 {number}",
+    "downloadTableQr": "下载桌号{number}的QR码"
   },
   "support": {
     "title": "消息",
@@ -1313,6 +1316,11 @@
       "comment": "备注",
       "commentPlaceholder": "有什么特别要求吗？",
       "sendWhatsApp": "通过WhatsApp发送",
+      "sendOrder": "发送订单",
+      "orderReceived": "订单已收到！",
+      "tableLabel": "桌号",
+      "selectTable": "选择桌号",
+      "continue": "继续",
       "clearCart": "清空购物车",
       "orderLimitReached": "每月订单限制已达到。请下个月再试。"
     }
@@ -1443,7 +1451,7 @@
       "categories": "类别",
       "items": "项目",
       "settings": "语言",
-      "design": "网站",
+      "design": "设置",
       "contacts": "联系方式",
       "languages": "语言",
       "reservations": "预订",
@@ -1451,7 +1459,8 @@
       "tables": "餐桌",
       "billing": "账单",
       "support": "支持",
-      "menu": "菜单"
+      "menu": "菜单",
+      "orders": "订单"
     },
     "sidebar": {
       "qrMenu": "打印QR",
@@ -1753,11 +1762,18 @@
       "generateError": "生成背景失败",
       "previewButton": "预订餐桌",
       "preview": "预览",
-      "ordersSection": "WhatsApp 订单",
+      "ordersSection": "订单",
       "ordersRequireWhatsApp": "在联系人页面添加WhatsApp号码以启用订单",
       "ordersEnabled": "启用订单",
-      "ordersOn": "顾客可以通过WhatsApp下单",
+      "ordersOn": "顾客可以下单",
       "ordersOff": "下单已禁用",
+      "orderMode": "订单模式",
+      "orderModeWhatsapp": "仅WhatsApp",
+      "orderModeInternal": "仅内部",
+      "orderModeBoth": "WhatsApp + 内部",
+      "orderModeWhatsappHint": "订单直接发送到WhatsApp",
+      "orderModeInternalHint": "订单保存在控制面板中",
+      "orderModeBothHint": "订单保存并通过WhatsApp发送",
       "ordersFieldsHint": "启用的字段是顾客必须填写的",
       "ordersName": "姓名",
       "ordersNameOn": "顾客必须输入他们的姓名",
@@ -1886,7 +1902,8 @@
       "menuReady": "您的菜单已准备就绪！将二维码分享给顾客吧。",
       "scansTitle": "扫描",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} 次扫描"
+      "scansUnlimited": "{used} 次扫描",
+      "myOrders": "我的订单"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "设置已保存",
     "fetchError": "加载设置失败",
     "saveError": "保存设置失败"
+  },
+  "orders": {
+    "noOrders": "暂无订单",
+    "new": "新订单",
+    "inProgress": "进行中",
+    "completed": "已完成",
+    "all": "全部",
+    "cancelled": "已取消",
+    "startOrder": "开始处理",
+    "complete": "完成",
+    "total": "合计",
+    "table": "桌号",
+    "items": "项",
+    "error": "出了点问题",
+    "statusUpdated": "订单状态已更新"
   },
   "terms": {
     "meta": {

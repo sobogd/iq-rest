@@ -90,6 +90,7 @@ export default async function DashboardLayout({
       contacts: t("pages.contacts"),
       reservations: t("pages.reservations"),
       tables: t("pages.tables"),
+      orders: t("pages.orders"),
       billing: t("pages.billing"),
       support: t("pages.support"),
       admin: "Admin",

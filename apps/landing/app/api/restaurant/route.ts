@@ -167,6 +167,7 @@ export async function POST(request: NextRequest) {
           orderNameEnabled: data.orderNameEnabled ?? existing.orderNameEnabled,
           orderPhoneEnabled: data.orderPhoneEnabled ?? existing.orderPhoneEnabled,
           orderAddressEnabled: data.orderAddressEnabled ?? existing.orderAddressEnabled,
+          orderMode: data.orderMode ?? existing.orderMode,
         },
       });
 
@@ -256,6 +257,7 @@ export async function POST(request: NextRequest) {
           orderNameEnabled: data.orderNameEnabled ?? true,
           orderPhoneEnabled: data.orderPhoneEnabled ?? false,
           orderAddressEnabled: data.orderAddressEnabled ?? false,
+          orderMode: data.orderMode ?? "whatsapp",
           companyId,
           startedFromScratch: true,
         },

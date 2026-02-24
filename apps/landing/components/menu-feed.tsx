@@ -37,28 +37,13 @@ interface MenuFeedProps {
   ordersEnabled?: boolean;
   addLabel?: string;
   isPreview?: boolean;
+  tableNumber?: string;
+  initialCart?: Record<string, number>;
 }
 
-const CART_STORAGE_KEY = "iqrest_cart";
+import { loadCartClient, saveCartClient } from "@/lib/cart";
 
-function loadCart(): Map<string, number> {
-  if (typeof window === "undefined") return new Map();
-  try {
-    const raw = sessionStorage.getItem(CART_STORAGE_KEY);
-    if (!raw) return new Map();
-    return new Map(JSON.parse(raw));
-  } catch {
-    return new Map();
-  }
-}
-
-function saveCart(cart: Map<string, number>) {
-  try {
-    sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify([...cart]));
-  } catch {}
-}
-
-export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTranslations, slug, ordersEnabled, addLabel, isPreview }: MenuFeedProps) {
+export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTranslations, slug, ordersEnabled, addLabel, isPreview, tableNumber, initialCart }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
   const [selectedAllergens, setSelectedAllergens] = useState<string[] | null>(null);
   const [loadedImageIndex, setLoadedImageIndex] = useState(0);
@@ -67,12 +52,14 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
   const containerRef = useRef<HTMLDivElement>(null);
   const isScrollingToCategory = useRef(false);
 
-  // Cart state (persisted in sessionStorage)
-  const [cart, setCart] = useState<Map<string, number>>(new Map());
+  // Cart state (persisted in cookie, SSR-preloaded via initialCart)
+  const [cart, setCart] = useState<Map<string, number>>(() =>
+    initialCart ? new Map(Object.entries(initialCart).map(([k, v]) => [k, v])) : new Map()
+  );
 
-  // Load cart from sessionStorage on mount
   useEffect(() => {
-    setCart(loadCart());
+    const fresh = loadCartClient();
+    if (fresh.size > 0) setCart(fresh);
   }, []);
 
   const totalItems = useMemo(() => {
@@ -85,7 +72,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
     setCart((prev) => {
       const next = new Map(prev);
       next.set(id, (next.get(id) || 0) + 1);
-      saveCart(next);
+      saveCartClient(next);
       return next;
     });
   }, []);
@@ -99,7 +86,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
       } else {
         next.set(id, qty - 1);
       }
-      saveCart(next);
+      saveCartClient(next);
       return next;
     });
   }, []);
@@ -202,7 +189,11 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
     }
   }, [activeCategory]);
 
-  const previewParam = isPreview ? "?preview=1" : "";
+  const queryParams = new URLSearchParams();
+  if (isPreview) queryParams.set("preview", "1");
+  if (tableNumber) queryParams.set("table", tableNumber);
+  const queryString = queryParams.toString();
+  const previewParam = queryString ? `?${queryString}` : "";
 
   return (
     <>

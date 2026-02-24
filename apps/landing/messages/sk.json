@@ -517,7 +517,7 @@
           "Webová stránka reštaurácie",
           "QR Menu",
           "320 skenovaní/mesiac",
-          "30 objednávok cez WhatsApp/mesiac",
+          "10 objednávok/mesiac",
           "2 jazyky",
           "S vodotlačou IQ Rest",
           "Analytika"
@@ -530,7 +530,7 @@
         "highlights": [
           "Všetko v bezplatnej verzii, plus:",
           "Neobmedzené skenovania",
-          "Neobmedzené objednávky cez WhatsApp",
+          "Neobmedzené objednávky",
           "6 jazykov",
           "Preklady AI",
           "Vlastná farebná téma",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Bez brandingu IQ Rest",
-      "whatsappOrders": "Objednávky cez WhatsApp"
+      "orders": "Objednávky"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mesiac"
+        "orders": "10 / mesiac"
       },
       "basic": {
         "scans": "Neobmedzené",
         "languages": "6",
         "aiTranslation": "100 / mesiac",
         "aiImages": "35 / mes.",
-        "whatsappOrders": "Neobmedzené"
+        "orders": "Neobmedzené"
       },
       "pro": {
         "scans": "Neobmedzené",
         "languages": "Neobmedzené",
         "aiTranslation": "Neobmedzene",
         "aiImages": "Neobmedzené",
-        "whatsappOrders": "Neobmedzené"
+        "orders": "Neobmedzené"
       }
     },
     "socialProof": "Dôveruje nám viac ako 500 reštaurácií",
@@ -1177,7 +1177,10 @@
       "medium": "Stredný",
       "large": "Veľký"
     },
-    "copyUrl": "Kopírovať URL"
+    "copyUrl": "Kopírovať URL",
+    "tableQr": "Stôl",
+    "tableNumber": "Stôl {number}",
+    "downloadTableQr": "Stiahnuť QR pre stôl {number}"
   },
   "support": {
     "title": "Správy",
@@ -1313,6 +1316,11 @@
       "comment": "Komentár",
       "commentPlaceholder": "Máte nejaké špeciálne požiadavky?",
       "sendWhatsApp": "Poslať cez WhatsApp",
+      "sendOrder": "Odoslať objednávku",
+      "orderReceived": "Objednávka prijatá!",
+      "tableLabel": "Stôl",
+      "selectTable": "Vyberte stôl",
+      "continue": "Pokračovať",
       "clearCart": "Vymazať košík",
       "orderLimitReached": "Mesačný limit objednávok bol dosiahnutý. Skúste to prosím znova nabudúce."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategórie",
       "items": "Položky",
       "settings": "Jazyky",
-      "design": "Web",
+      "design": "Nastavenia",
       "contacts": "Kontakty",
       "languages": "Jazyky",
       "reservations": "Rezervácie",
@@ -1451,7 +1459,8 @@
       "tables": "Stoly",
       "billing": "Fakturácia",
       "support": "Podpora",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Objednávky"
     },
     "sidebar": {
       "qrMenu": "Tlač QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Nepodarilo sa vygenerovať pozadie",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Objednávky cez WhatsApp",
+      "ordersSection": "Objednávky",
       "ordersRequireWhatsApp": "Pridajte číslo WhatsApp na stránke Kontakty, aby ste povolili objednávky",
       "ordersEnabled": "Povoliť objednávky",
-      "ordersOn": "Zákazníci môžu objednávať cez WhatsApp",
+      "ordersOn": "Zákazníci môžu objednávať",
       "ordersOff": "Objednávanie zakázané",
+      "orderMode": "Režim objednávok",
+      "orderModeWhatsapp": "Iba WhatsApp",
+      "orderModeInternal": "Iba interné",
+      "orderModeBoth": "WhatsApp + Interné",
+      "orderModeWhatsappHint": "Objednávky sa odosielajú priamo na WhatsApp",
+      "orderModeInternalHint": "Objednávky sa ukladajú na panel",
+      "orderModeBothHint": "Objednávky sa ukladajú a odosielajú aj cez WhatsApp",
       "ordersFieldsHint": "Povolené polia sú povinné na vyplnenie zákazníkom",
       "ordersName": "Meno",
       "ordersNameOn": "Zákazník musí zadať svoje meno",
@@ -1886,7 +1902,8 @@
       "menuReady": "Vaše menu je pripravené! Zdieľajte QR kód so zákazníkmi.",
       "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skenov"
+      "scansUnlimited": "{used} skenov",
+      "myOrders": "Moje objednávky"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Nastavenia uložené",
     "fetchError": "Nepodarilo sa načítať nastavenia",
     "saveError": "Nepodarilo sa uložiť nastavenia"
+  },
+  "orders": {
+    "noOrders": "Zatiaľ žiadne objednávky",
+    "new": "Nové",
+    "inProgress": "Prebieha",
+    "completed": "Dokončené",
+    "all": "Všetky",
+    "cancelled": "Zrušená",
+    "startOrder": "Začať prípravu",
+    "complete": "Dokončiť",
+    "total": "Celkom",
+    "table": "Stôl",
+    "items": "položiek",
+    "error": "Niečo sa pokazilo",
+    "statusUpdated": "Stav objednávky aktualizovaný"
   },
   "terms": {
     "meta": {

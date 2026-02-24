@@ -517,7 +517,7 @@
           "Láithreán gréasáin na bialainne",
           "QR Menu",
           "320 scans/month",
-          "30 ordú WhatsApp in aghaidh na míosa",
+          "10 ordú WhatsApp in aghaidh na míosa",
           "2 teangacha",
           "Le marc uisce IQ Rest",
           "Anailísíocht"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Gan brandáil IQ Rest",
-      "whatsappOrders": "Orduithe WhatsApp"
+      "orders": "Orduithe"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mí"
+        "orders": "10 / mí"
       },
       "basic": {
         "scans": "Neamhtheoranta",
         "languages": "6",
         "aiTranslation": "100 / mí",
         "aiImages": "35 / mí",
-        "whatsappOrders": "Neamhtheoranta"
+        "orders": "Neamhtheoranta"
       },
       "pro": {
         "scans": "Neamhtheoranta",
         "languages": "Neamhtheoranta",
         "aiTranslation": "Gan teorainn",
         "aiImages": "Neamhtheoranta",
-        "whatsappOrders": "Neamhtheoranta"
+        "orders": "Neamhtheoranta"
       }
     },
     "socialProof": "Tá muinín ag breis is 500 bialann asainn",
@@ -1177,7 +1177,10 @@
       "medium": "Meán",
       "large": "Mór"
     },
-    "copyUrl": "Cóipeáil URL"
+    "copyUrl": "Cóipeáil URL",
+    "tableQr": "Bord",
+    "tableNumber": "Bord {number}",
+    "downloadTableQr": "Íoslódáil QR do bhord {number}"
   },
   "support": {
     "title": "Teachtaireachtaí",
@@ -1313,6 +1316,11 @@
       "comment": "Tuairim",
       "commentPlaceholder": "Aon iarratais speisialta?",
       "sendWhatsApp": "Seol trí WhatsApp",
+      "sendOrder": "Seol ordú",
+      "orderReceived": "Ordú faighte!",
+      "tableLabel": "Bord",
+      "selectTable": "Roghnaigh bord",
+      "continue": "Lean ar aghaidh",
       "clearCart": "Glan an chiseal",
       "orderLimitReached": "Teorainn ordaithe míosúil bainte amach. Bain triail as arís an mhí seo chugainn."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Catagóirí",
       "items": "Míreanna",
       "settings": "Teangacha",
-      "design": "Suíomh gréasáin",
+      "design": "Socruithe",
       "contacts": "Teagmhálacha",
       "languages": "Teangacha",
       "reservations": "Conradh",
@@ -1451,7 +1459,8 @@
       "tables": "Táblaí",
       "billing": "Billeáil",
       "support": "Tacaíocht",
-      "menu": "Biachlár"
+      "menu": "Biachlár",
+      "orders": "Orduithe"
     },
     "sidebar": {
       "qrMenu": "Priontáil QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Theip ar chúlra a ghiniúint",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Orduithe WhatsApp",
+      "ordersSection": "Orduithe",
       "ordersRequireWhatsApp": "Cuir uimhir WhatsApp ar leathanach na gContae chun orduithe a chumasú",
       "ordersEnabled": "Cumasú Orduithe",
-      "ordersOn": "Is féidir le custaiméirí ordú a dhéanamh trí WhatsApp",
+      "ordersOn": "Is féidir le custaiméirí ordú a dhéanamh trí",
       "ordersOff": "Níl orduithe ar fáil",
+      "orderMode": "Mód ordaithe",
+      "orderModeWhatsapp": "WhatsApp amháin",
+      "orderModeInternal": "Inmheánach amháin",
+      "orderModeBoth": "WhatsApp + Inmheánach",
+      "orderModeWhatsappHint": "Seoltar orduithe go díreach chuig WhatsApp",
+      "orderModeInternalHint": "Sábháiltear orduithe sa deais",
+      "orderModeBothHint": "Sábháiltear orduithe agus seoltar trí WhatsApp freisin",
       "ordersFieldsHint": "Teastaíonn na réimsí atá cumasaithe ó na custaiméirí a líonadh",
       "ordersName": "Ainm",
       "ordersNameOn": "Caithfidh an custaiméir a ainm a chur isteach",
@@ -1886,7 +1902,8 @@
       "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí.",
       "scansTitle": "Scanadh",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scanadh"
+      "scansUnlimited": "{used} scanadh",
+      "myOrders": "Mo chuid orduithe"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Socruithe sábháilte",
     "fetchError": "Theip ar na socruithe a lódáil",
     "saveError": "Theip ar na socruithe a shábháil"
+  },
+  "orders": {
+    "noOrders": "Níl aon orduithe fós",
+    "new": "Nua",
+    "inProgress": "Ar siúl",
+    "completed": "Críochnaithe",
+    "all": "Gach ceann",
+    "cancelled": "Curtha ar ceal",
+    "startOrder": "Tosaigh ag próiseáil",
+    "complete": "Críochnaigh",
+    "total": "Iomlán",
+    "table": "Bord",
+    "items": "míreanna",
+    "error": "Chuaigh rud éigin mícheart",
+    "statusUpdated": "Stádas an ordaithe nuashonraithe"
   },
   "terms": {
     "meta": {

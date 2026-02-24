@@ -26,6 +26,7 @@ import {
   Search,
   KeyRound,
   ChevronRight,
+  ClipboardList,
 } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
@@ -38,6 +39,7 @@ const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ cla
   { key: "analytics", page: "analytics", icon: BarChart3 },
   { key: "tables", page: "tables", icon: Armchair },
   { key: "reservations", page: "reservations", icon: CalendarDays },
+  { key: "orders", page: "orders", icon: ClipboardList },
   { key: "billing", page: "billing", icon: CreditCard },
 ];
 
@@ -67,6 +69,7 @@ export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
     analytics: DashboardEvent.CLICKED_NAV_ANALYTICS,
     tables: DashboardEvent.CLICKED_NAV_TABLES,
     reservations: DashboardEvent.CLICKED_NAV_RESERVATIONS,
+    orders: DashboardEvent.CLICKED_NAV_ORDERS,
     billing: DashboardEvent.CLICKED_NAV_BILLING,
   };
 

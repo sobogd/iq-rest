@@ -25,6 +25,13 @@ export const pricing: Record<SupportedCurrency, CurrencyPricing> = {
     pro: { monthly: 29.9, yearly: 19.9, yearlyTotal: 238.8 },
   },
 
+  // США
+  USD: {
+    free: { monthly: 0, yearly: 0, yearlyTotal: 0 },
+    basic: { monthly: 14.9, yearly: 9.9, yearlyTotal: 118.8 },
+    pro: { monthly: 44.9, yearly: 29.9, yearlyTotal: 358.8 },
+  },
+
   // Польша
   PLN: {
     free: { monthly: 0, yearly: 0, yearlyTotal: 0 },

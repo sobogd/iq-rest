@@ -51,7 +51,7 @@ model Company {
 
   // Limits
   scanLimit  Int @default(320)
-  orderLimit Int @default(30)
+  orderLimit Int @default(10)
 
   // Upsell
   upsellShownAt DateTime?
@@ -137,10 +137,12 @@ model Restaurant {
   orderNameEnabled       Boolean @default(true)
   orderPhoneEnabled      Boolean @default(false)
   orderAddressEnabled    Boolean @default(false)
+  orderMode              String  @default("whatsapp") // "whatsapp" | "internal" | "both"
 
   company      Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
   tables       Table[]
   reservations Reservation[]
+  orders       Order[]
 
   @@index([companyId])
   @@index([slug])
@@ -344,6 +346,30 @@ model AnalyticsEvent {
   @@index([sessionId])
   @@index([createdAt])
   @@map("analytics_events")
+}
+
+model Order {
+  id              String   @id @default(cuid())
+  restaurantId    String
+  companyId       String
+  items           Json     // [{ id, name, qty, price }]
+  total           Decimal  @db.Decimal(10, 2)
+  currency        String   @default("EUR")
+  customerName    String?
+  customerPhone   String?
+  customerAddress String?
+  comment         String?
+  tableNumber     Int?
+  status          String   @default("new") // new | in_progress | completed | cancelled
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, status])
+  @@index([companyId, createdAt])
+  @@index([restaurantId, createdAt])
+  @@map("orders")
 }
 
 // Multi-currency pricing for Stripe

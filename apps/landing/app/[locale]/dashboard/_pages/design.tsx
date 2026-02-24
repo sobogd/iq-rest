@@ -38,6 +38,7 @@ interface DesignPageProps {
     orderNameEnabled: boolean;
     orderPhoneEnabled: boolean;
     orderAddressEnabled: boolean;
+    orderMode: string;
   } | null;
   plan: string;
   isAdmin: boolean;
@@ -89,16 +90,19 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
   const initOrderName = initialRestaurant?.orderNameEnabled ?? true;
   const initOrderPhone = initialRestaurant?.orderPhoneEnabled ?? false;
   const initOrderAddress = initialRestaurant?.orderAddressEnabled ?? false;
+  const initOrderMode = initialRestaurant?.orderMode ?? "whatsapp";
 
   const [ordersEnabled, setOrdersEnabled] = useState(initOrdersEnabled);
   const [orderName, setOrderName] = useState(initOrderName);
   const [orderPhone, setOrderPhone] = useState(initOrderPhone);
   const [orderAddress, setOrderAddress] = useState(initOrderAddress);
+  const [orderMode, setOrderMode] = useState(initOrderMode);
 
   const [originalOrdersEnabled] = useState(initOrdersEnabled);
   const [originalOrderName] = useState(initOrderName);
   const [originalOrderPhone] = useState(initOrderPhone);
   const [originalOrderAddress] = useState(initOrderAddress);
+  const [originalOrderMode] = useState(initOrderMode);
 
   const [validationError, setValidationError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
@@ -119,9 +123,10 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
       ordersEnabled !== originalOrdersEnabled ||
       orderName !== originalOrderName ||
       orderPhone !== originalOrderPhone ||
-      orderAddress !== originalOrderAddress
+      orderAddress !== originalOrderAddress ||
+      orderMode !== originalOrderMode
     );
-  }, [name, description, slug, currency, source, accentColor, hideTitle, ordersEnabled, orderName, orderPhone, orderAddress, originalName, originalDescription, originalSlug, originalCurrency, originalSource, originalAccentColor, originalHideTitle, originalOrdersEnabled, originalOrderName, originalOrderPhone, originalOrderAddress]);
+  }, [name, description, slug, currency, source, accentColor, hideTitle, ordersEnabled, orderName, orderPhone, orderAddress, orderMode, originalName, originalDescription, originalSlug, originalCurrency, originalSource, originalAccentColor, originalHideTitle, originalOrdersEnabled, originalOrderName, originalOrderPhone, originalOrderAddress, originalOrderMode]);
 
   function handleSlugChange(value: string) {
     const cleanSlug = value
@@ -247,6 +252,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
           orderNameEnabled: orderName,
           orderPhoneEnabled: orderPhone,
           orderAddressEnabled: orderAddress,
+          orderMode,
         }),
       });
 
@@ -506,30 +512,68 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
             />
           </div>
 
-          {/* WhatsApp Orders */}
+          {/* Orders */}
           <div className="space-y-4">
             <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider pt-6">{t("ordersSection")}:</h2>
 
-            {!hasWhatsApp && (
-              <p className="text-xs text-muted-foreground">{t("ordersRequireWhatsApp")}</p>
-            )}
+            <FormSwitch
+              id="orders-enabled"
+              label=""
+              checked={ordersEnabled}
+              onCheckedChange={(v) => {
+                setOrdersEnabled(v);
+                track(DashboardEvent.TOGGLED_ORDERS_ENABLED);
+              }}
+              activeText={t("ordersOn")}
+              inactiveText={t("ordersOff")}
+            />
 
-            <div className={!hasWhatsApp ? "opacity-50" : ""}>
-              <FormSwitch
-                id="orders-enabled"
-                label={`${t("ordersEnabled")}:`}
-                checked={ordersEnabled}
-                onCheckedChange={hasWhatsApp ? (v) => {
-                  setOrdersEnabled(v);
-                  track(DashboardEvent.TOGGLED_ORDERS_ENABLED);
-                } : () => {}}
-                activeText={t("ordersOn")}
-                inactiveText={t("ordersOff")}
-                disabled={!hasWhatsApp}
-              />
-            </div>
+            <div className={`space-y-4 ${!ordersEnabled ? "opacity-50" : ""}`}>
+              {/* Order mode selector */}
+              <div className="space-y-2">
+                <label className="text-sm font-medium">{t("orderMode")}:</label>
+                <div className="space-y-2">
+                  {(["whatsapp", "internal", "both"] as const).map((mode) => {
+                    const needsWhatsApp = mode === "whatsapp" || mode === "both";
+                    const isDisabled = !ordersEnabled || (needsWhatsApp && !hasWhatsApp);
+                    return (
+                      <label
+                        key={mode}
+                        className={`flex items-start gap-3 p-3 rounded-xl border cursor-pointer transition-colors ${
+                          orderMode === mode ? "border-primary bg-primary/5" : "border-border"
+                        } ${isDisabled ? "opacity-50 cursor-not-allowed" : ""}`}
+                      >
+                        <input
+                          type="radio"
+                          name="orderMode"
+                          value={mode}
+                          checked={orderMode === mode}
+                          onChange={() => {
+                            if (!isDisabled) {
+                              setOrderMode(mode);
+                              track(DashboardEvent.CHANGED_ORDER_MODE);
+                            }
+                          }}
+                          disabled={isDisabled}
+                          className="mt-0.5"
+                        />
+                        <div>
+                          <div className="text-sm font-medium">
+                            {t(`orderMode${mode.charAt(0).toUpperCase() + mode.slice(1)}` as "orderModeWhatsapp" | "orderModeInternal" | "orderModeBoth")}
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            {t(`orderMode${mode.charAt(0).toUpperCase() + mode.slice(1)}Hint` as "orderModeWhatsappHint" | "orderModeInternalHint" | "orderModeBothHint")}
+                          </div>
+                          {needsWhatsApp && !hasWhatsApp && (
+                            <div className="text-xs text-amber-600 mt-1">{t("ordersRequireWhatsApp")}</div>
+                          )}
+                        </div>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
 
-            <div className={`space-y-4 ${!ordersEnabled || !hasWhatsApp ? "opacity-50" : ""}`}>
               <div className="space-y-1">
                 <p className="text-xs text-muted-foreground">{t("ordersFieldsHint")}</p>
               </div>
@@ -541,7 +585,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 onCheckedChange={(v) => { setOrderName(v); track(DashboardEvent.TOGGLED_ORDER_NAME); }}
                 activeText={t("ordersNameOn")}
                 inactiveText={t("ordersNameOff")}
-                disabled={!ordersEnabled || !hasWhatsApp}
+                disabled={!ordersEnabled}
               />
 
               <FormSwitch
@@ -551,7 +595,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 onCheckedChange={(v) => { setOrderPhone(v); track(DashboardEvent.TOGGLED_ORDER_PHONE); }}
                 activeText={t("ordersPhoneOn")}
                 inactiveText={t("ordersPhoneOff")}
-                disabled={!ordersEnabled || !hasWhatsApp}
+                disabled={!ordersEnabled}
               />
 
               <FormSwitch
@@ -561,7 +605,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 onCheckedChange={(v) => { setOrderAddress(v); track(DashboardEvent.TOGGLED_ORDER_ADDRESS); }}
                 activeText={t("ordersAddressOn")}
                 inactiveText={t("ordersAddressOff")}
-                disabled={!ordersEnabled || !hasWhatsApp}
+                disabled={!ordersEnabled}
               />
             </div>
           </div>

@@ -135,6 +135,12 @@ export enum DashboardEvent {
   TOGGLED_ORDER_PHONE = "toggled_order_phone",
   TOGGLED_ORDER_ADDRESS = "toggled_order_address",
   CLICKED_SAVE_ORDERS = "clicked_save_orders",
+  CLICKED_NAV_ORDERS = "clicked_nav_orders",
+  CLICKED_START_ORDER = "clicked_start_order",
+  CLICKED_COMPLETE_ORDER = "clicked_complete_order",
+  CLICKED_CANCEL_ORDER = "clicked_cancel_order",
+  CHANGED_ORDER_MODE = "changed_order_mode",
+  CLICKED_TABLE_QR = "clicked_table_qr",
 
   // Settings
   SHOWED_SETTINGS = "showed_settings",
@@ -358,6 +364,12 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.TOGGLED_ORDER_PHONE]: "Toggled Order Phone",
   [DashboardEvent.TOGGLED_ORDER_ADDRESS]: "Toggled Order Address",
   [DashboardEvent.CLICKED_SAVE_ORDERS]: "Clicked Save Orders",
+  [DashboardEvent.CLICKED_NAV_ORDERS]: "Nav: Orders",
+  [DashboardEvent.CLICKED_START_ORDER]: "Clicked Start Order",
+  [DashboardEvent.CLICKED_COMPLETE_ORDER]: "Clicked Complete Order",
+  [DashboardEvent.CLICKED_CANCEL_ORDER]: "Clicked Cancel Order",
+  [DashboardEvent.CHANGED_ORDER_MODE]: "Changed Order Mode",
+  [DashboardEvent.CLICKED_TABLE_QR]: "Clicked Table QR",
 
   // Settings
   [DashboardEvent.SHOWED_SETTINGS]: "Showed Settings",

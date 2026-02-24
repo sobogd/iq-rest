@@ -125,6 +125,21 @@ export async function getSupportMessages(companyId: string) {
   }));
 }
 
+// ---- Orders ----
+export async function getOrders(companyId: string) {
+  const orders = await prisma.order.findMany({
+    where: { companyId },
+    orderBy: { createdAt: "desc" },
+    take: 100,
+  });
+  return orders.map((o) => ({
+    ...o,
+    total: Number(o.total),
+    createdAt: o.createdAt.toISOString(),
+    updatedAt: o.updatedAt.toISOString(),
+  }));
+}
+
 // ---- Scan Usage (lightweight) ----
 export async function getScanUsage(companyId: string) {
   const company = await prisma.company.findUnique({

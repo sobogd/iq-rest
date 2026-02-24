@@ -517,7 +517,7 @@
           "Veitingastaður vefsíða",
           "QR Matseðill",
           "320 skönnun/mánuði",
-          "30 WhatsApp pöntun/mánuði",
+          "10 WhatsApp pöntun/mánuði",
           "2 tungumál",
           "Með IQ Rest vatnamerki",
           "Greiningar"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Án IQ Rest vörumerki",
-      "whatsappOrders": "WhatsApp pöntun"
+      "orders": "pöntun"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mánuði"
+        "orders": "10 / mánuði"
       },
       "basic": {
         "scans": "Ótakmarkað",
         "languages": "6",
         "aiTranslation": "100 / mánuð",
         "aiImages": "35 / mán.",
-        "whatsappOrders": "Ótakmarkað"
+        "orders": "Ótakmarkað"
       },
       "pro": {
         "scans": "Ótakmarkað",
         "languages": "Ótakmarkað",
         "aiTranslation": "Ótakmarkað",
         "aiImages": "Ótakmarkað",
-        "whatsappOrders": "Ótakmarkað"
+        "orders": "Ótakmarkað"
       }
     },
     "socialProof": "Yfir 500 veitingastaðir treysta okkur",
@@ -1177,7 +1177,10 @@
       "medium": "Meðal",
       "large": "Stór"
     },
-    "copyUrl": "Afrita URL"
+    "copyUrl": "Afrita URL",
+    "tableQr": "Borð",
+    "tableNumber": "Borð {number}",
+    "downloadTableQr": "Hlaða niður QR fyrir borð {number}"
   },
   "support": {
     "title": "Skilaboð",
@@ -1313,6 +1316,11 @@
       "comment": "Athugasemd",
       "commentPlaceholder": "Eru einhverjar séróskir?",
       "sendWhatsApp": "Senda í gegnum WhatsApp",
+      "sendOrder": "Senda pöntun",
+      "orderReceived": "Pöntun móttekin!",
+      "tableLabel": "Borð",
+      "selectTable": "Veldu borð",
+      "continue": "Halda áfram",
       "clearCart": "Tæma verslun",
       "orderLimitReached": "Mánaðarlegri pöntunarmörkum er náð. Vinsamlegast reyndu aftur næsta mánuð."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Flokkar",
       "items": "Vörur",
       "settings": "Tungumál",
-      "design": "Vefsíða",
+      "design": "Stillingar",
       "contacts": "Samskipti",
       "languages": "Tungumál",
       "reservations": "Bókanir",
@@ -1451,7 +1459,8 @@
       "tables": "Borð",
       "billing": "Reikningur",
       "support": "Stuðningur",
-      "menu": "Matseðill"
+      "menu": "Matseðill",
+      "orders": "Pantanir"
     },
     "sidebar": {
       "qrMenu": "Prenta QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Ekki tókst að búa til bakgrunn",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp pantanir",
+      "ordersSection": "pantanir",
       "ordersRequireWhatsApp": "Bættu við WhatsApp númeri á tengsíðunni til að virkja pantanir",
       "ordersEnabled": "Virkja pantanir",
-      "ordersOn": "Kúnnar geta pantað í gegnum WhatsApp",
+      "ordersOn": "Kúnnar geta pantað í gegnum",
       "ordersOff": "Pantanir óvirkar",
+      "orderMode": "Pöntunarstilling",
+      "orderModeWhatsapp": "Aðeins WhatsApp",
+      "orderModeInternal": "Aðeins innra",
+      "orderModeBoth": "WhatsApp + Innra",
+      "orderModeWhatsappHint": "Pantanir eru sendar beint á WhatsApp",
+      "orderModeInternalHint": "Pantanir eru vistaðar á stjórnborðinu",
+      "orderModeBothHint": "Pantanir eru vistaðar og sendar í gegnum WhatsApp",
       "ordersFieldsHint": "Virkir reitir eru nauðsynlegir fyrir kúnnann að fylla út",
       "ordersName": "Nafn",
       "ordersNameOn": "Kúnninn verður að slá inn sitt nafn",
@@ -1886,7 +1902,8 @@
       "menuReady": "Matseðillinn þinn er tilbúinn! Deildu QR kóðanum með viðskiptavinum.",
       "scansTitle": "Skannanir",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skannanir"
+      "scansUnlimited": "{used} skannanir",
+      "myOrders": "Pantanir mínar"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Stillingar vistaðar",
     "fetchError": "Mistókst að hlaða stillingum",
     "saveError": "Mistókst að vista stillingar"
+  },
+  "orders": {
+    "noOrders": "Engar pantanir enn",
+    "new": "Nýjar",
+    "inProgress": "Í vinnslu",
+    "completed": "Kláraðar",
+    "all": "Allar",
+    "cancelled": "Afturkölluð",
+    "startOrder": "Hefja vinnslu",
+    "complete": "Klára",
+    "total": "Samtals",
+    "table": "Borð",
+    "items": "vörur",
+    "error": "Eitthvað fór úrskeiðis",
+    "statusUpdated": "Staða pöntunar uppfærð"
   },
   "terms": {
     "meta": {

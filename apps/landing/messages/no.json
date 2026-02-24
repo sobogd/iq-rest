@@ -517,7 +517,7 @@
           "Restaurantnettsted",
           "QR-meny",
           "320 skanninger/måned",
-          "30 WhatsApp-bestillinger/måned",
+          "10 bestillinger/måned",
           "2 språk",
           "Med IQ Rest vannmerke",
           "Analyse"
@@ -530,7 +530,7 @@
         "highlights": [
           "Alt i Gratis, pluss:",
           "Ubegrensede skanninger",
-          "Ubegrensede WhatsApp-bestillinger",
+          "Ubegrensedebestillinger",
           "6 språk",
           "AI-oversettelser",
           "Egendefinert fargevalg",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Uten IQ Rest-merking",
-      "whatsappOrders": "WhatsApp-bestillinger"
+      "orders": "bestillinger"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / måned"
+        "orders": "10 / måned"
       },
       "basic": {
         "scans": "Ubegrenset",
         "languages": "6",
         "aiTranslation": "100 / måned",
         "aiImages": "35 / mnd",
-        "whatsappOrders": "Ubegrenset"
+        "orders": "Ubegrenset"
       },
       "pro": {
         "scans": "Ubegrenset",
         "languages": "Ubegrenset",
         "aiTranslation": "Ubegrenset",
         "aiImages": "Ubegrenset",
-        "whatsappOrders": "Ubegrenset"
+        "orders": "Ubegrenset"
       }
     },
     "socialProof": "Over 500 restauranter stoler på oss",
@@ -1177,7 +1177,10 @@
       "medium": "Middels",
       "large": "Stor"
     },
-    "copyUrl": "Kopier URL"
+    "copyUrl": "Kopier URL",
+    "tableQr": "Bord",
+    "tableNumber": "Bord {number}",
+    "downloadTableQr": "Last ned QR for bord {number}"
   },
   "support": {
     "title": "Meldinger",
@@ -1313,6 +1316,11 @@
       "comment": "Kommentar",
       "commentPlaceholder": "Eventuelle spesielle forespørsel?",
       "sendWhatsApp": "Send via WhatsApp",
+      "sendOrder": "Send bestilling",
+      "orderReceived": "Bestilling mottatt!",
+      "tableLabel": "Bord",
+      "selectTable": "Velg bord",
+      "continue": "Fortsett",
       "clearCart": "Tøm handlekurv",
       "orderLimitReached": "Månedlig bestillingsgrense nådd. Vennligst prøv igjen neste måned."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorier",
       "items": "Elementer",
       "settings": "Språk",
-      "design": "Nettsted",
+      "design": "Innstillinger",
       "contacts": "Kontakter",
       "languages": "Språk",
       "reservations": "Reservasjoner",
@@ -1451,7 +1459,8 @@
       "tables": "Bord",
       "billing": "Fakturering",
       "support": "Support",
-      "menu": "Meny"
+      "menu": "Meny",
+      "orders": "Bestillinger"
     },
     "sidebar": {
       "qrMenu": "Skriv ut QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Kunne ikke generere bakgrunn",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp-bestillinger",
+      "ordersSection": "bestillinger",
       "ordersRequireWhatsApp": "Legg til et WhatsApp-nummer på kontaktsiden for å aktivere bestillinger",
       "ordersEnabled": "Aktiver bestillinger",
-      "ordersOn": "Kunder kan bestille via WhatsApp",
+      "ordersOn": "Kunder kan bestille",
       "ordersOff": "Bestilling deaktivert",
+      "orderMode": "Bestillingsmodus",
+      "orderModeWhatsapp": "Kun WhatsApp",
+      "orderModeInternal": "Kun intern",
+      "orderModeBoth": "WhatsApp + Intern",
+      "orderModeWhatsappHint": "Bestillinger sendes direkte til WhatsApp",
+      "orderModeInternalHint": "Bestillinger lagres i kontrollpanelet",
+      "orderModeBothHint": "Bestillinger lagres og sendes også via WhatsApp",
       "ordersFieldsHint": "Aktiverte felt er påkrevd for kunden å fylle ut",
       "ordersName": "Navn",
       "ordersNameOn": "Kunden må oppgi sitt navn",
@@ -1886,7 +1902,8 @@
       "menuReady": "Menyen din er klar! Del QR-koden med gjestene.",
       "scansTitle": "Skanninger",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skanninger"
+      "scansUnlimited": "{used} skanninger",
+      "myOrders": "Mine bestillinger"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Innstillinger lagret",
     "fetchError": "Kunne ikke laste innstillinger",
     "saveError": "Kunne ikke lagre innstillinger"
+  },
+  "orders": {
+    "noOrders": "Ingen bestillinger ennå",
+    "new": "Nye",
+    "inProgress": "Pågår",
+    "completed": "Fullført",
+    "all": "Alle",
+    "cancelled": "Kansellert",
+    "startOrder": "Start behandling",
+    "complete": "Fullfør",
+    "total": "Totalt",
+    "table": "Bord",
+    "items": "varer",
+    "error": "Noe gikk galt",
+    "statusUpdated": "Bestillingsstatus oppdatert"
   },
   "terms": {
     "meta": {

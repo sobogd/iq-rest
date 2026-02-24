@@ -517,7 +517,7 @@
           "레스토랑 웹사이트",
           "QR 메뉴",
           "320 스캔/월",
-          "30 WhatsApp 주문/월",
+          "10 WhatsApp 주문/월",
           "2 언어",
           "IQ Rest 워터마크 포함",
           "분석"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "IQ Rest 브랜딩 없음",
-      "whatsappOrders": "WhatsApp 주문"
+      "orders": "주문"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / 월"
+        "orders": "10 / 월"
       },
       "basic": {
         "scans": "무제한",
         "languages": "6",
         "aiTranslation": "100 / 월",
         "aiImages": "35 / 월",
-        "whatsappOrders": "무제한"
+        "orders": "무제한"
       },
       "pro": {
         "scans": "무제한",
         "languages": "무제한",
         "aiTranslation": "무제한",
         "aiImages": "무제한",
-        "whatsappOrders": "무제한"
+        "orders": "무제한"
       }
     },
     "socialProof": "500개 이상의 레스토랑이 신뢰합니다",
@@ -1177,7 +1177,10 @@
       "medium": "보통",
       "large": "크게"
     },
-    "copyUrl": "URL 복사"
+    "copyUrl": "URL 복사",
+    "tableQr": "테이블",
+    "tableNumber": "테이블 {number}",
+    "downloadTableQr": "테이블 {number} QR 다운로드"
   },
   "support": {
     "title": "메시지",
@@ -1313,6 +1316,11 @@
       "comment": "댓글",
       "commentPlaceholder": "특별 요청 사항이 있나요?",
       "sendWhatsApp": "WhatsApp으로 전송",
+      "sendOrder": "주문 보내기",
+      "orderReceived": "주문이 접수되었습니다!",
+      "tableLabel": "테이블",
+      "selectTable": "테이블 선택",
+      "continue": "계속",
       "clearCart": "장바구니 비우기",
       "orderLimitReached": "월 주문 한도에 도달했습니다. 다음 달에 다시 시도해 주세요."
     }
@@ -1443,7 +1451,7 @@
       "categories": "카테고리",
       "items": "항목",
       "settings": "언어",
-      "design": "웹사이트",
+      "design": "설정",
       "contacts": "연락처",
       "languages": "언어",
       "reservations": "예약",
@@ -1451,7 +1459,8 @@
       "tables": "테이블",
       "billing": "결제",
       "support": "지원",
-      "menu": "메뉴"
+      "menu": "메뉴",
+      "orders": "주문"
     },
     "sidebar": {
       "qrMenu": "QR 인쇄",
@@ -1753,11 +1762,18 @@
       "generateError": "배경 생성에 실패했습니다",
       "previewButton": "예약하기",
       "preview": "미리보기",
-      "ordersSection": "WhatsApp 주문",
+      "ordersSection": "주문",
       "ordersRequireWhatsApp": "주문을 활성화하려면 연락처 페이지에 WhatsApp 번호를 추가하세요",
       "ordersEnabled": "주문 활성화",
-      "ordersOn": "고객이 WhatsApp을 통해 주문할 수 있습니다",
+      "ordersOn": "고객이을 통해 주문할 수 있습니다",
       "ordersOff": "주문 비활성화",
+      "orderMode": "주문 모드",
+      "orderModeWhatsapp": "WhatsApp만",
+      "orderModeInternal": "내부만",
+      "orderModeBoth": "WhatsApp + 내부",
+      "orderModeWhatsappHint": "주문이 WhatsApp으로 직접 전송됩니다",
+      "orderModeInternalHint": "주문이 대시보드에 저장됩니다",
+      "orderModeBothHint": "주문이 저장되고 WhatsApp으로도 전송됩니다",
       "ordersFieldsHint": "활성화된 필드는 고객이 입력해야 하는 필수 항목입니다",
       "ordersName": "이름",
       "ordersNameOn": "고객은 이름을 입력해야 합니다",
@@ -1886,7 +1902,8 @@
       "menuReady": "메뉴가 준비되었습니다! QR 코드를 고객과 공유하세요.",
       "scansTitle": "스캔",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} 스캔"
+      "scansUnlimited": "{used} 스캔",
+      "myOrders": "내 주문"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "설정이 저장되었습니다",
     "fetchError": "설정 로드에 실패했습니다",
     "saveError": "설정 저장에 실패했습니다"
+  },
+  "orders": {
+    "noOrders": "아직 주문이 없습니다",
+    "new": "신규",
+    "inProgress": "진행 중",
+    "completed": "완료됨",
+    "all": "전체",
+    "cancelled": "취소됨",
+    "startOrder": "조리 시작",
+    "complete": "완료",
+    "total": "합계",
+    "table": "테이블",
+    "items": "개",
+    "error": "문제가 발생했습니다",
+    "statusUpdated": "주문 상태가 업데이트되었습니다"
   },
   "terms": {
     "meta": {

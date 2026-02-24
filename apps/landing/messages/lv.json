@@ -517,7 +517,7 @@
           "Restorāna mājaslapa",
           "QR ēdienkarte",
           "320 skenējumi/mēnesī",
-          "30 WhatsApp pasūtījumi/mēnesī",
+          "10 WhatsApp pasūtījumi/mēnesī",
           "2 valodas",
           "Ar IQ Rest ūdenszīmi",
           "Analītika"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Bez IQ Rest zīmola",
-      "whatsappOrders": "WhatsApp pasūtījumi"
+      "orders": "pasūtījumi"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mēnesī"
+        "orders": "10 / mēnesī"
       },
       "basic": {
         "scans": "Neierobežoti",
         "languages": "6",
         "aiTranslation": "100 / mēnesī",
         "aiImages": "35 / mēn.",
-        "whatsappOrders": "Neierobežoti"
+        "orders": "Neierobežoti"
       },
       "pro": {
         "scans": "Neierobežoti",
         "languages": "Neierobežoti",
         "aiTranslation": "Neierobežoti",
         "aiImages": "Neierobežoti",
-        "whatsappOrders": "Neierobežoti"
+        "orders": "Neierobežoti"
       }
     },
     "socialProof": "Vairāk nekā 500 restorāni mums uzticas",
@@ -1177,7 +1177,10 @@
       "medium": "Vidējs",
       "large": "Liels"
     },
-    "copyUrl": "Kopēt URL"
+    "copyUrl": "Kopēt URL",
+    "tableQr": "Galds",
+    "tableNumber": "Galds {number}",
+    "downloadTableQr": "Lejupielādēt QR galdam {number}"
   },
   "support": {
     "title": "Ziņojumi",
@@ -1313,6 +1316,11 @@
       "comment": "Komentārs",
       "commentPlaceholder": "Jebkādas īpašas prasības?",
       "sendWhatsApp": "Sūtīt caur WhatsApp",
+      "sendOrder": "Nosūtīt pasūtījumu",
+      "orderReceived": "Pasūtījums saņemts!",
+      "tableLabel": "Galds",
+      "selectTable": "Izvēlieties galdu",
+      "continue": "Turpināt",
       "clearCart": "Notīrīt grozu",
       "orderLimitReached": "Mēneša pasūtījumu limits ir sasniegts. Lūdzu, mēģiniet vēlreiz nākamajā mēnesī."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorijas",
       "items": "Preces",
       "settings": "Valodas",
-      "design": "Vietne",
+      "design": "Iestatījumi",
       "contacts": "Kontakti",
       "languages": "Valodas",
       "reservations": "Rezervācijas",
@@ -1451,7 +1459,8 @@
       "tables": "Galdi",
       "billing": "Rēķini",
       "support": "Atbalsts",
-      "menu": "Ēdienkarte"
+      "menu": "Ēdienkarte",
+      "orders": "Pasūtījumi"
     },
     "sidebar": {
       "qrMenu": "Drukāt QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Neizdevās ģenerēt fonu",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp pasūtījumi",
+      "ordersSection": "pasūtījumi",
       "ordersRequireWhatsApp": "Pievienojiet WhatsApp numuru kontaktu lapā, lai aktivizētu pasūtījumus",
       "ordersEnabled": "Aktivizēt pasūtījumus",
-      "ordersOn": "Klienti var pasūtīt caur WhatsApp",
+      "ordersOn": "Klienti var pasūtīt",
       "ordersOff": "Pasūtīšana atslēgta",
+      "orderMode": "Pasūtījumu režīms",
+      "orderModeWhatsapp": "Tikai WhatsApp",
+      "orderModeInternal": "Tikai iekšējie",
+      "orderModeBoth": "WhatsApp + Iekšējie",
+      "orderModeWhatsappHint": "Pasūtījumi tiek sūtīti tieši uz WhatsApp",
+      "orderModeInternalHint": "Pasūtījumi tiek saglabāti pārvaldības panelī",
+      "orderModeBothHint": "Pasūtījumi tiek saglabāti un nosūtīti arī caur WhatsApp",
       "ordersFieldsHint": "Aktivizētie lauki ir obligāti klientam jāaizpilda",
       "ordersName": "Vārds",
       "ordersNameOn": "Klientam jāievada savs vārds",
@@ -1886,7 +1902,8 @@
       "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem.",
       "scansTitle": "Skenējumi",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skenējumi"
+      "scansUnlimited": "{used} skenējumi",
+      "myOrders": "Mani pasūtījumi"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Iestatījumi saglabāti",
     "fetchError": "Neizdevās ielādēt iestatījumus",
     "saveError": "Neizdevās saglabāt iestatījumus"
+  },
+  "orders": {
+    "noOrders": "Pasūtījumu vēl nav",
+    "new": "Jauni",
+    "inProgress": "Procesā",
+    "completed": "Izpildīti",
+    "all": "Visi",
+    "cancelled": "Atcelts",
+    "startOrder": "Sākt apstrādi",
+    "complete": "Izpildīt",
+    "total": "Kopā",
+    "table": "Galds",
+    "items": "preces",
+    "error": "Kaut kas nogāja greizi",
+    "statusUpdated": "Pasūtījuma statuss atjaunināts"
   },
   "terms": {
     "meta": {

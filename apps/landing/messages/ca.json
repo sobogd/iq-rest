@@ -517,7 +517,7 @@
           "Lloc web del restaurant",
           "Menú QR",
           "320 escanejos/mes",
-          "30 comandes per WhatsApp/mes",
+          "10 comandes per WhatsApp/mes",
           "2 idiomes",
           "Amb marca d'aigua IQ Rest",
           "Analítiques"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Sense marca IQ Rest",
-      "whatsappOrders": "Comandes per WhatsApp"
+      "orders": "Comandes"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mes"
+        "orders": "10 / mes"
       },
       "basic": {
         "scans": "Il·limitat",
         "languages": "6",
         "aiTranslation": "100 / mes",
         "aiImages": "35 / mes",
-        "whatsappOrders": "Il·limitades"
+        "orders": "Il·limitades"
       },
       "pro": {
         "scans": "Il·limitat",
         "languages": "Il·limitat",
         "aiTranslation": "Il·limitat",
         "aiImages": "Il·limitat",
-        "whatsappOrders": "Il·limitades"
+        "orders": "Il·limitades"
       }
     },
     "socialProof": "Més de 500 restaurants confien en nosaltres",
@@ -1177,7 +1177,10 @@
       "medium": "Mitjà",
       "large": "Gran"
     },
-    "copyUrl": "Copiar URL"
+    "copyUrl": "Copiar URL",
+    "tableQr": "Taula",
+    "tableNumber": "Taula {number}",
+    "downloadTableQr": "Descarregar QR per a la taula {number}"
   },
   "support": {
     "title": "Missatges",
@@ -1313,6 +1316,11 @@
       "comment": "Comentari",
       "commentPlaceholder": "Tens alguna petició especial?",
       "sendWhatsApp": "Enviar per WhatsApp",
+      "sendOrder": "Enviar comanda",
+      "orderReceived": "Comanda rebuda!",
+      "tableLabel": "Taula",
+      "selectTable": "Selecciona taula",
+      "continue": "Continuar",
       "clearCart": "Netejar el carret",
       "orderLimitReached": "S'ha assolit el límit de comandes mensual. Si us plau, torneu-ho a provar el proper mes."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Categories",
       "items": "Articles",
       "settings": "Idiomes",
-      "design": "Lloc web",
+      "design": "Configuració",
       "contacts": "Contactes",
       "languages": "Idiomes",
       "reservations": "Reserves",
@@ -1451,7 +1459,8 @@
       "tables": "Taules",
       "billing": "Facturació",
       "support": "Suport",
-      "menu": "Menú"
+      "menu": "Menú",
+      "orders": "Comandes"
     },
     "sidebar": {
       "qrMenu": "Imprimir QR",
@@ -1753,11 +1762,18 @@
       "generateError": "No s'ha pogut generar el fons",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Comandes per WhatsApp",
+      "ordersSection": "Comandes",
       "ordersRequireWhatsApp": "Afegeix un número de WhatsApp a la pàgina de Contactes per habilitar les comandes",
       "ordersEnabled": "Habilitar comandes",
-      "ordersOn": "Els clients poden demanar per WhatsApp",
+      "ordersOn": "Els clients poden demanar",
       "ordersOff": "Comandes deshabilitades",
+      "orderMode": "Mode de comanda",
+      "orderModeWhatsapp": "Només WhatsApp",
+      "orderModeInternal": "Només intern",
+      "orderModeBoth": "WhatsApp + Intern",
+      "orderModeWhatsappHint": "Les comandes s'envien directament a WhatsApp",
+      "orderModeInternalHint": "Les comandes es guarden al tauler",
+      "orderModeBothHint": "Les comandes es guarden i també s'envien per WhatsApp",
       "ordersFieldsHint": "Els camps habilitats són necessaris perquè el client els ompli",
       "ordersName": "Nom",
       "ordersNameOn": "El client ha d'introduir el seu nom",
@@ -1886,7 +1902,8 @@
       "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients.",
       "scansTitle": "Escanejos",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} escanejos"
+      "scansUnlimited": "{used} escanejos",
+      "myOrders": "Les meves comandes"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Configuracions desades",
     "fetchError": "No s'ha pogut carregar les configuracions",
     "saveError": "No s'ha pogut desar les configuracions"
+  },
+  "orders": {
+    "noOrders": "Encara no hi ha comandes",
+    "new": "Nous",
+    "inProgress": "En curs",
+    "completed": "Completades",
+    "all": "Totes",
+    "cancelled": "Cancel·lada",
+    "startOrder": "Iniciar preparació",
+    "complete": "Completar",
+    "total": "Total",
+    "table": "Taula",
+    "items": "articles",
+    "error": "Alguna cosa ha anat malament",
+    "statusUpdated": "Estat de la comanda actualitzat"
   },
   "terms": {
     "meta": {

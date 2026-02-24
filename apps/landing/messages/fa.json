@@ -517,7 +517,7 @@
           "وب‌سایت رستوران",
           "منوی QR",
           "320 اسکن در ماه",
-          "30 سفارش WhatsApp در ماه",
+          "10 سفارش WhatsApp در ماه",
           "2 زبان",
           "با واترمارک IQ Rest",
           "تحلیل‌ها"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "بدون برند IQ Rest",
-      "whatsappOrders": "سفارشات WhatsApp"
+      "orders": "سفارشات"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "۲",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / ماه"
+        "orders": "10 / ماه"
       },
       "basic": {
         "scans": "نامحدود",
         "languages": "۶",
         "aiTranslation": "۱۰۰ / ماه",
         "aiImages": "35 / ماه",
-        "whatsappOrders": "نامحدود"
+        "orders": "نامحدود"
       },
       "pro": {
         "scans": "نامحدود",
         "languages": "نامحدود",
         "aiTranslation": "نامحدود",
         "aiImages": "نامحدود",
-        "whatsappOrders": "نامحدود"
+        "orders": "نامحدود"
       }
     },
     "socialProof": "بیش از ۵۰۰ رستوران به ما اعتماد دارند",
@@ -1177,7 +1177,10 @@
       "medium": "متوسط",
       "large": "بزرگ"
     },
-    "copyUrl": "کپی URL"
+    "copyUrl": "کپی URL",
+    "tableQr": "میز",
+    "tableNumber": "میز {number}",
+    "downloadTableQr": "دانلود QR برای میز {number}"
   },
   "support": {
     "title": "پیام‌ها",
@@ -1313,6 +1316,11 @@
       "comment": "نظر",
       "commentPlaceholder": "درخواست خاصی دارید؟",
       "sendWhatsApp": "ارسال از طریق WhatsApp",
+      "sendOrder": "ارسال سفارش",
+      "orderReceived": "سفارش دریافت شد!",
+      "tableLabel": "میز",
+      "selectTable": "انتخاب میز",
+      "continue": "ادامه",
       "clearCart": "پاک کردن سبد خرید",
       "orderLimitReached": "حداکثر سفارش ماهانه به پایان رسیده است. لطفاً ماه آینده دوباره تلاش کنید."
     }
@@ -1443,7 +1451,7 @@
       "categories": "دسته‌بندی‌ها",
       "items": "آیتم‌ها",
       "settings": "زبان‌ها",
-      "design": "وبسایت",
+      "design": "تنظیمات",
       "contacts": "تماس‌ها",
       "languages": "زبان‌ها",
       "reservations": "رزروها",
@@ -1451,7 +1459,8 @@
       "tables": "میزها",
       "billing": "صورتحساب",
       "support": "پشتیبانی",
-      "menu": "منو"
+      "menu": "منو",
+      "orders": "سفارشات"
     },
     "sidebar": {
       "qrMenu": "چاپ QR",
@@ -1753,11 +1762,18 @@
       "generateError": "تولید پس‌زمینه ناموفق بود",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "سفارشات WhatsApp",
+      "ordersSection": "سفارشات",
       "ordersRequireWhatsApp": "برای فعال‌سازی سفارشات، یک شماره WhatsApp در صفحه مخاطبین اضافه کنید",
       "ordersEnabled": "فعال‌سازی سفارشات",
-      "ordersOn": "مشتریان می‌توانند از طریق WhatsApp سفارش دهند",
+      "ordersOn": "مشتریان می‌توانند از طریقسفارش دهند",
       "ordersOff": "سفارش‌گذاری غیرفعال است",
+      "orderMode": "حالت سفارش",
+      "orderModeWhatsapp": "فقط واتساپ",
+      "orderModeInternal": "فقط داخلی",
+      "orderModeBoth": "واتساپ + داخلی",
+      "orderModeWhatsappHint": "سفارشات مستقیماً به واتساپ ارسال می‌شوند",
+      "orderModeInternalHint": "سفارشات در داشبورد ذخیره می‌شوند",
+      "orderModeBothHint": "سفارشات ذخیره و از طریق واتساپ ارسال می‌شوند",
       "ordersFieldsHint": "فیلدهای فعال شده برای پر کردن مشتری الزامی است",
       "ordersName": "نام",
       "ordersNameOn": "مشتری باید نام خود را وارد کند",
@@ -1886,7 +1902,8 @@
       "menuReady": "منوی شما آماده است! کد QR را با مشتریان به اشتراک بگذارید.",
       "scansTitle": "اسکن‌ها",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} اسکن"
+      "scansUnlimited": "{used} اسکن",
+      "myOrders": "سفارش‌های من"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "تنظیمات ذخیره شد",
     "fetchError": "بارگذاری تنظیمات ناموفق بود",
     "saveError": "ذخیره تنظیمات ناموفق بود"
+  },
+  "orders": {
+    "noOrders": "هنوز سفارشی نیست",
+    "new": "جدید",
+    "inProgress": "در حال انجام",
+    "completed": "تکمیل شده",
+    "all": "همه",
+    "cancelled": "لغو شده",
+    "startOrder": "شروع آماده‌سازی",
+    "complete": "تکمیل",
+    "total": "مجموع",
+    "table": "میز",
+    "items": "آیتم",
+    "error": "مشکلی پیش آمد",
+    "statusUpdated": "وضعیت سفارش بروزرسانی شد"
   },
   "terms": {
     "meta": {

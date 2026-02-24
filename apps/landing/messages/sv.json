@@ -517,7 +517,7 @@
           "Restaurangwebbplats",
           "QR Meny",
           "320 skanningar/månad",
-          "30 WhatsApp-beställningar/månad",
+          "10 WhatsApp-beställningar/månad",
           "2 språk",
           "Med IQ Rest vattenstämpel",
           "Analys"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Utan IQ Rest-märkning",
-      "whatsappOrders": "WhatsApp-beställningar"
+      "orders": "beställningar"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / månad"
+        "orders": "10 / månad"
       },
       "basic": {
         "scans": "Obegränsade",
         "languages": "6",
         "aiTranslation": "100 / månad",
         "aiImages": "35 / mån",
-        "whatsappOrders": "Obegränsat"
+        "orders": "Obegränsat"
       },
       "pro": {
         "scans": "Obegränsade",
         "languages": "Obegränsade",
         "aiTranslation": "Obegränsat",
         "aiImages": "Obegränsade",
-        "whatsappOrders": "Obegränsat"
+        "orders": "Obegränsat"
       }
     },
     "socialProof": "Över 500 restauranger litar på oss",
@@ -1177,7 +1177,10 @@
       "medium": "Medium",
       "large": "Stor"
     },
-    "copyUrl": "Kopiera URL"
+    "copyUrl": "Kopiera URL",
+    "tableQr": "Bord",
+    "tableNumber": "Bord {number}",
+    "downloadTableQr": "Ladda ner QR för bord {number}"
   },
   "support": {
     "title": "Meddelanden",
@@ -1313,6 +1316,11 @@
       "comment": "Kommentar",
       "commentPlaceholder": "Några särskilda önskemål?",
       "sendWhatsApp": "Skicka via WhatsApp",
+      "sendOrder": "Skicka beställning",
+      "orderReceived": "Beställning mottagen!",
+      "tableLabel": "Bord",
+      "selectTable": "Välj bord",
+      "continue": "Fortsätt",
       "clearCart": "Rensa kundvagn",
       "orderLimitReached": "Månatlig beställningsgräns nådd. Vänligen försök igen nästa månad."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorier",
       "items": "Objekt",
       "settings": "Språk",
-      "design": "Webbplats",
+      "design": "Inställningar",
       "contacts": "Kontakter",
       "languages": "Språk",
       "reservations": "Bokningar",
@@ -1451,7 +1459,8 @@
       "tables": "Bord",
       "billing": "Fakturering",
       "support": "Support",
-      "menu": "Meny"
+      "menu": "Meny",
+      "orders": "Beställningar"
     },
     "sidebar": {
       "qrMenu": "Skriv ut QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Kunde inte generera bakgrund",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp-beställningar",
+      "ordersSection": "beställningar",
       "ordersRequireWhatsApp": "Lägg till ett WhatsApp-nummer på kontaktsidan för att aktivera beställningar",
       "ordersEnabled": "Aktivera beställningar",
-      "ordersOn": "Kunder kan beställa via WhatsApp",
+      "ordersOn": "Kunder kan beställa",
       "ordersOff": "Beställning inaktiverad",
+      "orderMode": "Beställningsläge",
+      "orderModeWhatsapp": "Bara WhatsApp",
+      "orderModeInternal": "Bara internt",
+      "orderModeBoth": "WhatsApp + Internt",
+      "orderModeWhatsappHint": "Beställningar skickas direkt till WhatsApp",
+      "orderModeInternalHint": "Beställningar sparas i instrumentpanelen",
+      "orderModeBothHint": "Beställningar sparas och skickas även via WhatsApp",
       "ordersFieldsHint": "Aktiverade fält är obligatoriska för kunden att fylla i",
       "ordersName": "Namn",
       "ordersNameOn": "Kunden måste ange sitt namn",
@@ -1886,7 +1902,8 @@
       "menuReady": "Din meny är klar! Dela din QR-kod med gästerna.",
       "scansTitle": "Skanningar",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skanningar"
+      "scansUnlimited": "{used} skanningar",
+      "myOrders": "Mina beställningar"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Inställningar sparade",
     "fetchError": "Misslyckades med att ladda inställningar",
     "saveError": "Misslyckades med att spara inställningar"
+  },
+  "orders": {
+    "noOrders": "Inga beställningar ännu",
+    "new": "Nya",
+    "inProgress": "Pågående",
+    "completed": "Slutförda",
+    "all": "Alla",
+    "cancelled": "Avbeställd",
+    "startOrder": "Börja behandla",
+    "complete": "Slutför",
+    "total": "Totalt",
+    "table": "Bord",
+    "items": "artiklar",
+    "error": "Något gick fel",
+    "statusUpdated": "Beställningsstatus uppdaterad"
   },
   "terms": {
     "meta": {

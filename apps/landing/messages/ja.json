@@ -517,7 +517,7 @@
           "レストランのウェブサイト",
           "QRメニュー",
           "320スキャン/月",
-          "30WhatsApp注文/月",
+          "10 WhatsApp注文/月",
           "2言語",
           "IQ Restのウォーターマーク付き",
           "分析"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "IQ Restブランドなし",
-      "whatsappOrders": "WhatsApp注文"
+      "orders": "注文"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30件 / 月"
+        "orders": "10件 / 月"
       },
       "basic": {
         "scans": "無制限",
         "languages": "6",
         "aiTranslation": "100 / 月",
         "aiImages": "35 / 月",
-        "whatsappOrders": "無制限"
+        "orders": "無制限"
       },
       "pro": {
         "scans": "無制限",
         "languages": "無制限",
         "aiTranslation": "無制限",
         "aiImages": "無制限",
-        "whatsappOrders": "無制限"
+        "orders": "無制限"
       }
     },
     "socialProof": "500以上のレストランに信頼されています",
@@ -1177,7 +1177,10 @@
       "medium": "中",
       "large": "大"
     },
-    "copyUrl": "URLをコピー"
+    "copyUrl": "URLをコピー",
+    "tableQr": "テーブル",
+    "tableNumber": "テーブル {number}",
+    "downloadTableQr": "テーブル{number}のQRをダウンロード"
   },
   "support": {
     "title": "メッセージ",
@@ -1313,6 +1316,11 @@
       "comment": "コメント",
       "commentPlaceholder": "特別なリクエストはありますか？",
       "sendWhatsApp": "WhatsAppで送信",
+      "sendOrder": "注文を送信",
+      "orderReceived": "注文を受け付けました！",
+      "tableLabel": "テーブル",
+      "selectTable": "テーブルを選択",
+      "continue": "続ける",
       "clearCart": "カートをクリア",
       "orderLimitReached": "月間注文上限に達しました。来月再度お試しください。"
     }
@@ -1443,7 +1451,7 @@
       "categories": "カテゴリ",
       "items": "アイテム",
       "settings": "言語",
-      "design": "ウェブサイト",
+      "design": "設定",
       "contacts": "連絡先",
       "languages": "言語",
       "reservations": "予約",
@@ -1451,7 +1459,8 @@
       "tables": "テーブル",
       "billing": "請求",
       "support": "サポート",
-      "menu": "メニュー"
+      "menu": "メニュー",
+      "orders": "注文"
     },
     "sidebar": {
       "qrMenu": "QR印刷",
@@ -1753,11 +1762,18 @@
       "generateError": "背景の生成に失敗しました",
       "previewButton": "予約する",
       "preview": "プレビュー",
-      "ordersSection": "WhatsApp注文",
+      "ordersSection": "注文",
       "ordersRequireWhatsApp": "注文を有効にするには、連絡先ページにWhatsApp番号を追加してください",
       "ordersEnabled": "注文を有効にする",
-      "ordersOn": "顧客はWhatsAppで注文できます",
+      "ordersOn": "顧客はで注文できます",
       "ordersOff": "注文は無効です",
+      "orderMode": "注文モード",
+      "orderModeWhatsapp": "WhatsAppのみ",
+      "orderModeInternal": "内部のみ",
+      "orderModeBoth": "WhatsApp + 内部",
+      "orderModeWhatsappHint": "注文はWhatsAppに直接送信されます",
+      "orderModeInternalHint": "注文はダッシュボードに保存されます",
+      "orderModeBothHint": "注文は保存され、WhatsAppでも送信されます",
       "ordersFieldsHint": "有効なフィールドは顧客が入力する必要があります",
       "ordersName": "名前",
       "ordersNameOn": "顧客は名前を入力する必要があります",
@@ -1886,7 +1902,8 @@
       "menuReady": "メニューの準備ができました！QRコードをお客様に共有しましょう。",
       "scansTitle": "スキャン",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} スキャン"
+      "scansUnlimited": "{used} スキャン",
+      "myOrders": "マイオーダー"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "設定が保存されました",
     "fetchError": "設定の読み込みに失敗しました",
     "saveError": "設定の保存に失敗しました"
+  },
+  "orders": {
+    "noOrders": "注文はまだありません",
+    "new": "新規",
+    "inProgress": "進行中",
+    "completed": "完了",
+    "all": "すべて",
+    "cancelled": "キャンセル済み",
+    "startOrder": "調理開始",
+    "complete": "完了",
+    "total": "合計",
+    "table": "テーブル",
+    "items": "品",
+    "error": "エラーが発生しました",
+    "statusUpdated": "注文ステータスが更新されました"
   },
   "terms": {
     "meta": {

@@ -517,7 +517,7 @@
           "Restorani veebisait",
           "QR Menü",
           "320 skanni/kuu",
-          "30 WhatsApp tellimust/kuu",
+          "10 tellimust/kuu",
           "2 keelt",
           "IQ Rest veepildi olemasolu",
           "Analüütika"
@@ -530,7 +530,7 @@
         "highlights": [
           "Kõik tasuta, pluss:",
           "Piiramatu skannimine",
-          "Piiramatu WhatsApp tellimused",
+          "Piiramatutellimused",
           "6 keelt",
           "AI tõlked",
           "Kohandatud värviteema",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Ilma IQ Rest brändinguta",
-      "whatsappOrders": "WhatsApp tellimused"
+      "orders": "tellimused"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / kuu"
+        "orders": "10 / kuu"
       },
       "basic": {
         "scans": "Piiramatu",
         "languages": "6",
         "aiTranslation": "100 / kuu",
         "aiImages": "35 / kuus",
-        "whatsappOrders": "Piiramatu"
+        "orders": "Piiramatu"
       },
       "pro": {
         "scans": "Piiramatu",
         "languages": "Piiramatu",
         "aiTranslation": "Piiramatu",
         "aiImages": "Piiramatu",
-        "whatsappOrders": "Piiramatu"
+        "orders": "Piiramatu"
       }
     },
     "socialProof": "Üle 500 restorani usaldab meid",
@@ -1177,7 +1177,10 @@
       "medium": "Keskmine",
       "large": "Suur"
     },
-    "copyUrl": "Kopeeri URL"
+    "copyUrl": "Kopeeri URL",
+    "tableQr": "Laud",
+    "tableNumber": "Laud {number}",
+    "downloadTableQr": "Laadi alla QR lauale {number}"
   },
   "support": {
     "title": "Sõnumid",
@@ -1313,6 +1316,11 @@
       "comment": "Kommentaar",
       "commentPlaceholder": "Kas on mingeid erilisi soove?",
       "sendWhatsApp": "Saada WhatsAppi kaudu",
+      "sendOrder": "Saada tellimus",
+      "orderReceived": "Tellimus vastu võetud!",
+      "tableLabel": "Laud",
+      "selectTable": "Vali laud",
+      "continue": "Jätka",
       "clearCart": "Tühjenda ostukorv",
       "orderLimitReached": "Kuu tellimuste piir on saavutatud. Palun proovige uuesti järgmisel kuul."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategooriad",
       "items": "Tooted",
       "settings": "Keeled",
-      "design": "Veebisait",
+      "design": "Seaded",
       "contacts": "Kontaktid",
       "languages": "Keeled",
       "reservations": "Broneeringud",
@@ -1451,7 +1459,8 @@
       "tables": "Lauad",
       "billing": "Arveldamine",
       "support": "Tugi",
-      "menu": "Menüü"
+      "menu": "Menüü",
+      "orders": "Tellimused"
     },
     "sidebar": {
       "qrMenu": "Prindi QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Tausta genereerimine ebaõnnestus",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp tellimused",
+      "ordersSection": "tellimused",
       "ordersRequireWhatsApp": "Lisage kontaktide lehele WhatsAppi number, et tellimused lubada",
       "ordersEnabled": "Luba tellimused",
-      "ordersOn": "Kliendid saavad tellida WhatsAppi kaudu",
+      "ordersOn": "Kliendid saavad tellidai kaudu",
       "ordersOff": "Tellimine keelatud",
+      "orderMode": "Tellimisrežiim",
+      "orderModeWhatsapp": "Ainult WhatsApp",
+      "orderModeInternal": "Ainult sisemine",
+      "orderModeBoth": "WhatsApp + Sisemine",
+      "orderModeWhatsappHint": "Tellimused saadetakse otse WhatsAppi",
+      "orderModeInternalHint": "Tellimused salvestatakse juhtpaneelile",
+      "orderModeBothHint": "Tellimused salvestatakse ja saadetakse ka WhatsAppi",
       "ordersFieldsHint": "Lubatud väljad on kliendi täitmiseks kohustuslikud",
       "ordersName": "Nimi",
       "ordersNameOn": "Klient peab sisestama oma nime",
@@ -1886,7 +1902,8 @@
       "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega.",
       "scansTitle": "Skaneeringud",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} skannimist"
+      "scansUnlimited": "{used} skannimist",
+      "myOrders": "Minu tellimused"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Seaded salvestatud",
     "fetchError": "Seadete laadimine ebaõnnestus",
     "saveError": "Seadete salvestamine ebaõnnestus"
+  },
+  "orders": {
+    "noOrders": "Tellimusi pole veel",
+    "new": "Uued",
+    "inProgress": "Pooleli",
+    "completed": "Täidetud",
+    "all": "Kõik",
+    "cancelled": "Tühistatud",
+    "startOrder": "Alusta täitmist",
+    "complete": "Täida",
+    "total": "Kokku",
+    "table": "Laud",
+    "items": "toodet",
+    "error": "Midagi läks valesti",
+    "statusUpdated": "Tellimuse olek uuendatud"
   },
   "terms": {
     "meta": {

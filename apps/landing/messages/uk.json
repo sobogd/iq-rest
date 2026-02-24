@@ -517,7 +517,7 @@
           "Вебсайт ресторану",
           "QR Меню",
           "320 сканувань/місяць",
-          "30 замовлень через WhatsApp/місяць",
+          "10 замовлень через WhatsApp/місяць",
           "2 мови",
           "З водяним знаком IQ Rest",
           "Аналітика"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Без брендингу IQ Rest",
-      "whatsappOrders": "Замовлення через WhatsApp"
+      "orders": "Замовлення"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / місяць"
+        "orders": "10 / місяць"
       },
       "basic": {
         "scans": "Необмежено",
         "languages": "6",
         "aiTranslation": "100 / міс.",
         "aiImages": "35 / міс.",
-        "whatsappOrders": "Без обмежень"
+        "orders": "Без обмежень"
       },
       "pro": {
         "scans": "Необмежено",
         "languages": "Необмежено",
         "aiTranslation": "Безлімітно",
         "aiImages": "Необмежено",
-        "whatsappOrders": "Без обмежень"
+        "orders": "Без обмежень"
       }
     },
     "socialProof": "Нам довіряють понад 500 ресторанів",
@@ -1177,7 +1177,10 @@
       "medium": "Середній",
       "large": "Великий"
     },
-    "copyUrl": "Копіювати URL"
+    "copyUrl": "Копіювати URL",
+    "tableQr": "Столик",
+    "tableNumber": "Столик {number}",
+    "downloadTableQr": "Завантажити QR для столика {number}"
   },
   "support": {
     "title": "Повідомлення",
@@ -1313,6 +1316,11 @@
       "comment": "Коментар",
       "commentPlaceholder": "Будь-які спеціальні запити?",
       "sendWhatsApp": "Відправити через WhatsApp",
+      "sendOrder": "Надіслати замовлення",
+      "orderReceived": "Замовлення прийнято!",
+      "tableLabel": "Столик",
+      "selectTable": "Оберіть столик",
+      "continue": "Продовжити",
       "clearCart": "Очистити кошик",
       "orderLimitReached": "Досягнуто місячного ліміту замовлень. Будь ласка, спробуйте знову наступного місяця."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Категорії",
       "items": "Пункти",
       "settings": "Мови",
-      "design": "Сайт",
+      "design": "Налаштування",
       "contacts": "Контакти",
       "languages": "Мови",
       "reservations": "Резервування",
@@ -1451,7 +1459,8 @@
       "tables": "Стіли",
       "billing": "Білінг",
       "support": "Підтримка",
-      "menu": "Меню"
+      "menu": "Меню",
+      "orders": "Замовлення"
     },
     "sidebar": {
       "qrMenu": "Друк QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Не вдалося згенерувати фон",
       "previewButton": "Забронювати",
       "preview": "Приклад",
-      "ordersSection": "Замовлення через WhatsApp",
+      "ordersSection": "Замовлення",
       "ordersRequireWhatsApp": "Додайте номер WhatsApp на сторінці Контакти, щоб активувати замовлення",
       "ordersEnabled": "Увімкнути замовлення",
-      "ordersOn": "Клієнти можуть замовляти через WhatsApp",
+      "ordersOn": "Клієнти можуть замовляти",
       "ordersOff": "Замовлення вимкнені",
+      "orderMode": "Режим замовлень",
+      "orderModeWhatsapp": "Тільки WhatsApp",
+      "orderModeInternal": "Тільки внутрішні",
+      "orderModeBoth": "WhatsApp + Внутрішні",
+      "orderModeWhatsappHint": "Замовлення надсилаються безпосередньо у WhatsApp",
+      "orderModeInternalHint": "Замовлення зберігаються у панелі керування",
+      "orderModeBothHint": "Замовлення зберігаються і надсилаються через WhatsApp",
       "ordersFieldsHint": "Увімкнені поля є обов'язковими для заповнення клієнтом",
       "ordersName": "Ім'я",
       "ordersNameOn": "Клієнт повинен ввести своє ім'я",
@@ -1886,7 +1902,8 @@
       "menuReady": "Ваше меню готове! Поділіться QR-кодом з клієнтами.",
       "scansTitle": "Скани",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} сканувань"
+      "scansUnlimited": "{used} сканувань",
+      "myOrders": "Мої замовлення"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Налаштування збережено",
     "fetchError": "Не вдалося завантажити налаштування",
     "saveError": "Не вдалося зберегти налаштування"
+  },
+  "orders": {
+    "noOrders": "Замовлень ще немає",
+    "new": "Нові",
+    "inProgress": "В роботі",
+    "completed": "Виконані",
+    "all": "Усі",
+    "cancelled": "Скасовано",
+    "startOrder": "Передати в роботу",
+    "complete": "Виконати",
+    "total": "Разом",
+    "table": "Столик",
+    "items": "позицій",
+    "error": "Щось пішло не так",
+    "statusUpdated": "Статус замовлення оновлено"
   },
   "terms": {
     "meta": {

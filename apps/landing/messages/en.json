@@ -524,7 +524,7 @@
           "Restaurant website",
           "QR Menu",
           "320 scans/month",
-          "30 WhatsApp orders/month",
+          "10 orders/month",
           "2 languages",
           "With IQ Rest watermark",
           "Analytics"
@@ -537,7 +537,7 @@
         "highlights": [
           "Everything in Free, plus:",
           "Unlimited scans",
-          "Unlimited WhatsApp orders",
+          "Unlimited orders",
           "6 languages",
           "AI translations",
           "Custom color theme",
@@ -565,7 +565,7 @@
       "website": "Restaurant website",
       "qrMenu": "QR Menu",
       "scans": "Monthly scans",
-      "whatsappOrders": "WhatsApp orders",
+      "orders": "Orders",
       "languages": "Supported languages",
       "aiTranslation": "AI translations",
       "aiImages": "AI image enhancement",
@@ -582,21 +582,21 @@
     "values": {
       "free": {
         "scans": "320",
-        "whatsappOrders": "30 / month",
+        "orders": "10 / month",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"
       },
       "basic": {
         "scans": "Unlimited",
-        "whatsappOrders": "Unlimited",
+        "orders": "Unlimited",
         "languages": "6",
         "aiTranslation": "100 / month",
         "aiImages": "35 / month"
       },
       "pro": {
         "scans": "Unlimited",
-        "whatsappOrders": "Unlimited",
+        "orders": "Unlimited",
         "languages": "Unlimited",
         "aiTranslation": "Unlimited",
         "aiImages": "Unlimited"
@@ -1173,7 +1173,10 @@
       "small": "Small",
       "medium": "Medium",
       "large": "Large"
-    }
+    },
+    "tableQr": "Table",
+    "tableNumber": "Table {number}",
+    "downloadTableQr": "Download QR for Table {number}"
   },
   "support": {
     "title": "Messages",
@@ -1309,6 +1312,11 @@
       "comment": "Comment",
       "commentPlaceholder": "Any special requests?",
       "sendWhatsApp": "Send via WhatsApp",
+      "sendOrder": "Send Order",
+      "orderReceived": "Order received!",
+      "tableLabel": "Table",
+      "selectTable": "Select table",
+      "continue": "Continue",
       "clearCart": "Clear cart",
       "orderLimitReached": "Monthly order limit reached. Please try again next month."
     }
@@ -1439,7 +1447,7 @@
       "categories": "Categories",
       "items": "Items",
       "settings": "Languages",
-      "design": "Website",
+      "design": "Settings",
       "contacts": "Contacts",
       "languages": "Languages",
       "reservations": "Reservations",
@@ -1447,7 +1455,8 @@
       "tables": "Tables",
       "billing": "Billing",
       "support": "Support",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Orders"
     },
     "sidebar": {
       "qrMenu": "Print QR",
@@ -1467,7 +1476,8 @@
       "menuReady": "Your menu is ready! Share your QR code with customers.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scans"
+      "scansUnlimited": "{used} scans",
+      "myOrders": "My Orders"
     },
     "logout": "Logout",
     "upsell": {
@@ -1861,10 +1871,17 @@
       "generateBackground": "Generate",
       "generating": "Generating...",
       "generateError": "Failed to generate background",
-      "ordersSection": "WhatsApp Orders",
-      "ordersRequireWhatsApp": "Add a WhatsApp number on the Contacts page to enable orders",
+      "ordersSection": "Orders",
+      "ordersRequireWhatsApp": "Add a WhatsApp number on the Contacts page to enable WhatsApp orders",
+      "orderMode": "Order Mode",
+      "orderModeWhatsapp": "WhatsApp only",
+      "orderModeInternal": "Internal only",
+      "orderModeBoth": "WhatsApp + Internal",
+      "orderModeWhatsappHint": "Orders are sent directly to WhatsApp",
+      "orderModeInternalHint": "Orders are saved in the dashboard",
+      "orderModeBothHint": "Orders are saved and also sent via WhatsApp",
       "ordersEnabled": "Enable Orders",
-      "ordersOn": "Customers can order via WhatsApp",
+      "ordersOn": "Customers can place orders",
       "ordersOff": "Orders disabled",
       "ordersFieldsHint": "Enabled fields are required for the customer to fill in",
       "ordersName": "Name",
@@ -1905,6 +1922,21 @@
     "saved": "Settings saved",
     "fetchError": "Failed to load settings",
     "saveError": "Failed to save settings"
+  },
+  "orders": {
+    "noOrders": "No orders yet",
+    "new": "New",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "all": "All",
+    "cancelled": "Cancelled",
+    "startOrder": "Start Processing",
+    "complete": "Complete",
+    "total": "Total",
+    "table": "Table",
+    "items": "items",
+    "error": "Something went wrong",
+    "statusUpdated": "Order status updated"
   },
   "terms": {
     "meta": {

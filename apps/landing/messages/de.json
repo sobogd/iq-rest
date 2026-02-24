@@ -517,7 +517,7 @@
           "Restaurant-Website",
           "QR-Menü",
           "320 Scans/Monat",
-          "30 WhatsApp-Bestellungen/Monat",
+          "10 Bestellungen/Monat",
           "2 Sprachen",
           "Mit IQ Rest Wasserzeichen",
           "Analytik"
@@ -530,7 +530,7 @@
         "highlights": [
           "Alles in Free, plus:",
           "Unbegrenzte Scans",
-          "Unbegrenzte WhatsApp-Bestellungen",
+          "UnbegrenzteBestellungen",
           "6 Sprachen",
           "KI-Übersetzungen",
           "Benutzerdefiniertes Farbschema",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Ohne IQ Rest Branding",
-      "whatsappOrders": "WhatsApp-Bestellungen"
+      "orders": "Bestellungen"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / Monat"
+        "orders": "10 / Monat"
       },
       "basic": {
         "scans": "Unbegrenzt",
         "languages": "6",
         "aiTranslation": "100 / Monat",
         "aiImages": "35 / Monat",
-        "whatsappOrders": "Unbegrenzt"
+        "orders": "Unbegrenzt"
       },
       "pro": {
         "scans": "Unbegrenzt",
         "languages": "Unbegrenzt",
         "aiTranslation": "Unbegrenzt",
         "aiImages": "Unbegrenzt",
-        "whatsappOrders": "Unbegrenzt"
+        "orders": "Unbegrenzt"
       }
     },
     "socialProof": "Über 500 Restaurants vertrauen uns",
@@ -1177,7 +1177,10 @@
       "medium": "Mittel",
       "large": "Groß"
     },
-    "copyUrl": "URL kopieren"
+    "copyUrl": "URL kopieren",
+    "tableQr": "Tisch",
+    "tableNumber": "Tisch {number}",
+    "downloadTableQr": "QR für Tisch {number} herunterladen"
   },
   "support": {
     "title": "Nachrichten",
@@ -1313,6 +1316,11 @@
       "comment": "Kommentar",
       "commentPlaceholder": "Besondere Wünsche?",
       "sendWhatsApp": "Über WhatsApp senden",
+      "sendOrder": "Bestellung senden",
+      "orderReceived": "Bestellung eingegangen!",
+      "tableLabel": "Tisch",
+      "selectTable": "Tisch wählen",
+      "continue": "Weiter",
       "clearCart": "Warenkorb leeren",
       "orderLimitReached": "Monatliches Bestelllimit erreicht. Bitte versuchen Sie es nächsten Monat erneut."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorien",
       "items": "Artikel",
       "settings": "Sprachen",
-      "design": "Webseite",
+      "design": "Einstellungen",
       "contacts": "Kontakte",
       "languages": "Sprachen",
       "reservations": "Reservierungen",
@@ -1451,7 +1459,8 @@
       "tables": "Tische",
       "billing": "Abrechnung",
       "support": "Unterstützung",
-      "menu": "Menü"
+      "menu": "Menü",
+      "orders": "Bestellungen"
     },
     "sidebar": {
       "qrMenu": "QR drucken",
@@ -1753,11 +1762,18 @@
       "generateError": "Hintergrund konnte nicht generiert werden",
       "previewButton": "Tisch reservieren",
       "preview": "Vorschau",
-      "ordersSection": "WhatsApp-Bestellungen",
+      "ordersSection": "Bestellungen",
       "ordersRequireWhatsApp": "Fügen Sie eine WhatsApp-Nummer auf der Kontaktseite hinzu, um Bestellungen zu aktivieren",
       "ordersEnabled": "Bestellungen aktivieren",
-      "ordersOn": "Kunden können über WhatsApp bestellen",
+      "ordersOn": "Kunden können bestellen",
       "ordersOff": "Bestellungen deaktiviert",
+      "orderMode": "Bestellmodus",
+      "orderModeWhatsapp": "Nur WhatsApp",
+      "orderModeInternal": "Nur intern",
+      "orderModeBoth": "WhatsApp + Intern",
+      "orderModeWhatsappHint": "Bestellungen werden direkt an WhatsApp gesendet",
+      "orderModeInternalHint": "Bestellungen werden im Dashboard gespeichert",
+      "orderModeBothHint": "Bestellungen werden gespeichert und über WhatsApp gesendet",
       "ordersFieldsHint": "Aktivierte Felder sind erforderlich, damit der Kunde sie ausfüllen kann",
       "ordersName": "Name",
       "ordersNameOn": "Kunde muss seinen Namen eingeben",
@@ -1886,7 +1902,8 @@
       "menuReady": "Dein Menü ist fertig! Teile deinen QR-Code mit Gästen.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} Scans"
+      "scansUnlimited": "{used} Scans",
+      "myOrders": "Meine Bestellungen"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Einstellungen gespeichert",
     "fetchError": "Fehler beim Laden der Einstellungen",
     "saveError": "Fehler beim Speichern der Einstellungen"
+  },
+  "orders": {
+    "noOrders": "Noch keine Bestellungen",
+    "new": "Neu",
+    "inProgress": "In Bearbeitung",
+    "completed": "Abgeschlossen",
+    "all": "Alle",
+    "cancelled": "Storniert",
+    "startOrder": "In Bearbeitung nehmen",
+    "complete": "Abschließen",
+    "total": "Gesamt",
+    "table": "Tisch",
+    "items": "Artikel",
+    "error": "Etwas ist schiefgelaufen",
+    "statusUpdated": "Bestellstatus aktualisiert"
   },
   "terms": {
     "meta": {

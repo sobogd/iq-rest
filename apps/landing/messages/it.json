@@ -517,7 +517,7 @@
           "Sito web del ristorante",
           "QR Menu",
           "320 scans/mese",
-          "30 ordini WhatsApp/mese",
+          "10 ordini WhatsApp/mese",
           "2 lingue",
           "Con watermark IQ Rest",
           "Analisi"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Senza marchio IQ Rest",
-      "whatsappOrders": "Ordini WhatsApp"
+      "orders": "Ordini"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / mese"
+        "orders": "10 / mese"
       },
       "basic": {
         "scans": "Illimitato",
         "languages": "6",
         "aiTranslation": "100 / mese",
         "aiImages": "35 / mese",
-        "whatsappOrders": "Illimitato"
+        "orders": "Illimitato"
       },
       "pro": {
         "scans": "Illimitate",
         "languages": "Illimitate",
         "aiTranslation": "Illimitato",
         "aiImages": "Illimitate",
-        "whatsappOrders": "Illimitato"
+        "orders": "Illimitato"
       }
     },
     "socialProof": "Oltre 500 ristoranti si fidano di noi",
@@ -1177,7 +1177,10 @@
       "medium": "Medio",
       "large": "Grande"
     },
-    "copyUrl": "Copia URL"
+    "copyUrl": "Copia URL",
+    "tableQr": "Tavolo",
+    "tableNumber": "Tavolo {number}",
+    "downloadTableQr": "Scarica QR per tavolo {number}"
   },
   "support": {
     "title": "Messaggi",
@@ -1313,6 +1316,11 @@
       "comment": "Commento",
       "commentPlaceholder": "Richieste speciali?",
       "sendWhatsApp": "Invia tramite WhatsApp",
+      "sendOrder": "Invia ordine",
+      "orderReceived": "Ordine ricevuto!",
+      "tableLabel": "Tavolo",
+      "selectTable": "Seleziona tavolo",
+      "continue": "Continua",
       "clearCart": "Svuota carrello",
       "orderLimitReached": "Limite mensile degli ordini raggiunto. Per favore riprova il mese prossimo."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Categorie",
       "items": "Articoli",
       "settings": "Lingue",
-      "design": "Sito web",
+      "design": "Impostazioni",
       "contacts": "Contatti",
       "languages": "Lingue",
       "reservations": "Prenotazioni",
@@ -1451,7 +1459,8 @@
       "tables": "Tavoli",
       "billing": "Fatturazione",
       "support": "Supporto",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Ordini"
     },
     "sidebar": {
       "qrMenu": "Stampa QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Impossibile generare lo sfondo",
       "previewButton": "Prenota un tavolo",
       "preview": "Anteprima",
-      "ordersSection": "Ordini WhatsApp",
+      "ordersSection": "Ordini",
       "ordersRequireWhatsApp": "Aggiungi un numero WhatsApp nella pagina Contatti per abilitare gli ordini",
       "ordersEnabled": "Abilita Ordini",
-      "ordersOn": "I clienti possono ordinare tramite WhatsApp",
+      "ordersOn": "I clienti possono ordinare tramite",
       "ordersOff": "Ordinazione disabilitata",
+      "orderMode": "Modalità ordine",
+      "orderModeWhatsapp": "Solo WhatsApp",
+      "orderModeInternal": "Solo interno",
+      "orderModeBoth": "WhatsApp + Interno",
+      "orderModeWhatsappHint": "Gli ordini vengono inviati direttamente su WhatsApp",
+      "orderModeInternalHint": "Gli ordini vengono salvati nella dashboard",
+      "orderModeBothHint": "Gli ordini vengono salvati e inviati anche tramite WhatsApp",
       "ordersFieldsHint": "I campi abilitati sono obbligatori per il cliente",
       "ordersName": "Nome",
       "ordersNameOn": "Il cliente deve inserire il proprio nome",
@@ -1886,7 +1902,8 @@
       "menuReady": "Il tuo menu è pronto! Condividi il QR code con i clienti.",
       "scansTitle": "Scansioni",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scansioni"
+      "scansUnlimited": "{used} scansioni",
+      "myOrders": "I miei ordini"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Impostazioni salvate",
     "fetchError": "Impossibile caricare le impostazioni",
     "saveError": "Impossibile salvare le impostazioni"
+  },
+  "orders": {
+    "noOrders": "Nessun ordine ancora",
+    "new": "Nuovi",
+    "inProgress": "In corso",
+    "completed": "Completati",
+    "all": "Tutti",
+    "cancelled": "Annullato",
+    "startOrder": "Avvia elaborazione",
+    "complete": "Completa",
+    "total": "Totale",
+    "table": "Tavolo",
+    "items": "articoli",
+    "error": "Qualcosa è andato storto",
+    "statusUpdated": "Stato dell'ordine aggiornato"
   },
   "terms": {
     "meta": {

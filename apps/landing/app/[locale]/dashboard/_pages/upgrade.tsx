@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "website", free: true, basic: true, pro: true },
   { key: "qrMenu", free: true, basic: true, pro: true },
   { key: "scans", free: "value", basic: "value", pro: "value" },
-  { key: "whatsappOrders", free: "value", basic: "value", pro: "value" },
+  { key: "orders", free: "value", basic: "value", pro: "value" },
   { key: "languages", free: "value", basic: "value", pro: "value" },
   { key: "aiTranslation", free: false, basic: "value", pro: "value" },
   { key: "aiImages", free: false, basic: "value", pro: "value" },
@@ -104,6 +105,8 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
   const tp = useTranslations("pricing");
   const locale = useLocale();
   const router = useRouter();
+
+  useBlockBack();
 
   const [selectedPlan, setSelectedPlan] = useState<SelectedPlan>("yearly");
   const [showComparison, setShowComparison] = useState(false);

@@ -3,6 +3,7 @@
  */
 export const supportedCurrencies = [
   "EUR", // Европа (fallback)
+  "USD", // США
   "PLN", // Польша
   "MXN", // Мексика
   "BRL", // Бразилия
@@ -35,6 +36,9 @@ export const countryToCurrency: Record<string, SupportedCurrency> = {
 
   // Турция
   TR: "TRY",
+
+  // США
+  US: "USD",
 
   // Еврозона → EUR
   ES: "EUR", // Испания
@@ -69,6 +73,7 @@ export const currencyInfo: Record<SupportedCurrency, {
   zeroDecimal: boolean;
 }> = {
   EUR: { symbol: "€", name: "Euro", symbolPosition: "before", zeroDecimal: false },
+  USD: { symbol: "$", name: "US Dollar", symbolPosition: "before", zeroDecimal: false },
   PLN: { symbol: "zł", name: "Polish Zloty", symbolPosition: "after", zeroDecimal: false },
   MXN: { symbol: "$", name: "Mexican Peso", symbolPosition: "before", zeroDecimal: false },
   BRL: { symbol: "R$", name: "Brazilian Real", symbolPosition: "before", zeroDecimal: false },

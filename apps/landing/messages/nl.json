@@ -517,7 +517,7 @@
           "Restaurantwebsite",
           "QR Menu",
           "320 scans/maand",
-          "30 WhatsApp-bestellingen/maand",
+          "10 bestellingen/maand",
           "2 talen",
           "Met IQ Rest-watermerk",
           "Analytics"
@@ -530,7 +530,7 @@
         "highlights": [
           "Alles in Gratis, plus:",
           "Onbeperkte scans",
-          "Onbeperkte WhatsApp-bestellingen",
+          "Onbeperktebestellingen",
           "6 talen",
           "AI-vertalingen",
           "Aangepast kleurthema",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Geen IQ Rest branding",
-      "whatsappOrders": "WhatsApp-bestellingen"
+      "orders": "bestellingen"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / maand"
+        "orders": "10 / maand"
       },
       "basic": {
         "scans": "Onbeperkt",
         "languages": "6",
         "aiTranslation": "100 / maand",
         "aiImages": "35 / maand",
-        "whatsappOrders": "Onbeperkt"
+        "orders": "Onbeperkt"
       },
       "pro": {
         "scans": "Onbeperkt",
         "languages": "Onbeperkt",
         "aiTranslation": "Onbeperkt",
         "aiImages": "Onbeperkt",
-        "whatsappOrders": "Onbeperkt"
+        "orders": "Onbeperkt"
       }
     },
     "socialProof": "Meer dan 500 restaurants vertrouwen ons",
@@ -1177,7 +1177,10 @@
       "medium": "Gemiddeld",
       "large": "Groot"
     },
-    "copyUrl": "URL kopiëren"
+    "copyUrl": "URL kopiëren",
+    "tableQr": "Tafel",
+    "tableNumber": "Tafel {number}",
+    "downloadTableQr": "Download QR voor tafel {number}"
   },
   "support": {
     "title": "Berichten",
@@ -1313,6 +1316,11 @@
       "comment": "Opmerking",
       "commentPlaceholder": "Bijzondere verzoeken?",
       "sendWhatsApp": "Verstuur via WhatsApp",
+      "sendOrder": "Bestelling verzenden",
+      "orderReceived": "Bestelling ontvangen!",
+      "tableLabel": "Tafel",
+      "selectTable": "Kies tafel",
+      "continue": "Doorgaan",
       "clearCart": "Winkelwagentje leegmaken",
       "orderLimitReached": "Maandelijkse bestelgrens bereikt. Probeer het volgende maand opnieuw."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Categorieën",
       "items": "Items",
       "settings": "Talen",
-      "design": "Website",
+      "design": "Instellingen",
       "contacts": "Contacten",
       "languages": "Talen",
       "reservations": "Reserveringen",
@@ -1451,7 +1459,8 @@
       "tables": "Tafels",
       "billing": "Facturering",
       "support": "Ondersteuning",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Bestellingen"
     },
     "sidebar": {
       "qrMenu": "QR afdrukken",
@@ -1753,11 +1762,18 @@
       "generateError": "Achtergrond genereren mislukt",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp Bestellingen",
+      "ordersSection": "Bestellingen",
       "ordersRequireWhatsApp": "Voeg een WhatsApp-nummer toe op de Contactenpagina om bestellingen mogelijk te maken",
       "ordersEnabled": "Bestellingen Inschakelen",
-      "ordersOn": "Klanten kunnen bestellen via WhatsApp",
+      "ordersOn": "Klanten kunnen bestellen",
       "ordersOff": "Bestellen uitgeschakeld",
+      "orderMode": "Bestelmodus",
+      "orderModeWhatsapp": "Alleen WhatsApp",
+      "orderModeInternal": "Alleen intern",
+      "orderModeBoth": "WhatsApp + Intern",
+      "orderModeWhatsappHint": "Bestellingen worden direct naar WhatsApp gestuurd",
+      "orderModeInternalHint": "Bestellingen worden opgeslagen in het dashboard",
+      "orderModeBothHint": "Bestellingen worden opgeslagen en ook via WhatsApp verzonden",
       "ordersFieldsHint": "Ingeschakelde velden zijn verplicht voor de klant om in te vullen",
       "ordersName": "Naam",
       "ordersNameOn": "Klant moet hun naam invoeren",
@@ -1886,7 +1902,8 @@
       "menuReady": "Je menu is klaar! Deel je QR-code met klanten.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scans"
+      "scansUnlimited": "{used} scans",
+      "myOrders": "Mijn bestellingen"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Instellingen opgeslagen",
     "fetchError": "Kon instellingen niet laden",
     "saveError": "Kon instellingen niet opslaan"
+  },
+  "orders": {
+    "noOrders": "Nog geen bestellingen",
+    "new": "Nieuw",
+    "inProgress": "In behandeling",
+    "completed": "Voltooid",
+    "all": "Alle",
+    "cancelled": "Geannuleerd",
+    "startOrder": "In behandeling nemen",
+    "complete": "Voltooien",
+    "total": "Totaal",
+    "table": "Tafel",
+    "items": "artikelen",
+    "error": "Er ging iets mis",
+    "statusUpdated": "Bestelstatus bijgewerkt"
   },
   "terms": {
     "meta": {

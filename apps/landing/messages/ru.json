@@ -517,7 +517,7 @@
           "Вебсайт ресторана",
           "QR Меню",
           "320 сканирований/месяц",
-          "30 заказов через WhatsApp/месяц",
+          "10 заказов/месяц",
           "2 языка",
           "С водяным знаком IQ Rest",
           "Аналитика"
@@ -530,7 +530,7 @@
         "highlights": [
           "Все в Бесплатном, плюс:",
           "Неограниченные сканирования",
-          "Неограниченные заказы через WhatsApp",
+          "Неограниченные заказы",
           "6 языков",
           "AI переводы",
           "Пользовательская цветовая тема",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Несколько ресторанов",
       "customDomain": "Собственный домен",
       "noBranding": "Без брендинга IQ Rest",
-      "whatsappOrders": "Заказы через WhatsApp"
+      "orders": "Заказы"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / месяц"
+        "orders": "10 / месяц"
       },
       "basic": {
         "scans": "Безлимит",
         "languages": "6",
         "aiTranslation": "100 / мес.",
         "aiImages": "35 / мес.",
-        "whatsappOrders": "Безлимитно"
+        "orders": "Безлимитно"
       },
       "pro": {
         "scans": "Неограниченно",
         "languages": "Неограниченно",
         "aiTranslation": "Безлимитно",
         "aiImages": "Неограниченно",
-        "whatsappOrders": "Безлимитно"
+        "orders": "Безлимитно"
       }
     },
     "socialProof": "Нам доверяют более 500 ресторанов",
@@ -1177,7 +1177,10 @@
       "medium": "Средний",
       "large": "Большой"
     },
-    "copyUrl": "Копировать URL"
+    "copyUrl": "Копировать URL",
+    "tableQr": "Столик",
+    "tableNumber": "Столик {number}",
+    "downloadTableQr": "Скачать QR для столика {number}"
   },
   "support": {
     "title": "Сообщения",
@@ -1313,6 +1316,11 @@
       "comment": "Комментарий",
       "commentPlaceholder": "Есть специальные пожелания?",
       "sendWhatsApp": "Отправить через WhatsApp",
+      "sendOrder": "Отправить заказ",
+      "orderReceived": "Заказ принят!",
+      "tableLabel": "Столик",
+      "selectTable": "Выберите столик",
+      "continue": "Продолжить",
       "clearCart": "Очистить корзину",
       "orderLimitReached": "Достигнут месячный лимит заказов. Пожалуйста, попробуйте снова в следующем месяце."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Категории",
       "items": "Блюда",
       "settings": "Языки",
-      "design": "Сайт",
+      "design": "Настройки",
       "contacts": "Контакты",
       "languages": "Языки",
       "reservations": "Бронирования",
@@ -1451,7 +1459,8 @@
       "tables": "Столы",
       "billing": "Выставление счетов",
       "support": "Поддержка",
-      "menu": "Меню"
+      "menu": "Меню",
+      "orders": "Заказы"
     },
     "sidebar": {
       "qrMenu": "Печать QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Не удалось сгенерировать фон",
       "previewButton": "Забронировать",
       "preview": "Пример",
-      "ordersSection": "Заказы через WhatsApp",
+      "ordersSection": "Заказы",
       "ordersRequireWhatsApp": "Добавьте номер WhatsApp на странице Контакты, чтобы включить заказы",
       "ordersEnabled": "Включить Заказы",
-      "ordersOn": "Клиенты могут заказывать через WhatsApp",
+      "ordersOn": "Клиенты могут заказывать",
       "ordersOff": "Заказ отключен",
+      "orderMode": "Режим заказов",
+      "orderModeWhatsapp": "Только WhatsApp",
+      "orderModeInternal": "Только внутренние",
+      "orderModeBoth": "WhatsApp + Внутренние",
+      "orderModeWhatsappHint": "Заказы отправляются напрямую в WhatsApp",
+      "orderModeInternalHint": "Заказы сохраняются в панели управления",
+      "orderModeBothHint": "Заказы сохраняются и отправляются через WhatsApp",
       "ordersFieldsHint": "Включенные поля обязательны для заполнения клиентом",
       "ordersName": "Имя",
       "ordersNameOn": "Клиент должен ввести свое имя",
@@ -1886,7 +1902,8 @@
       "menuReady": "Ваше меню готово! Поделитесь QR-кодом с клиентами.",
       "scansTitle": "Сканы",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} сканирований"
+      "scansUnlimited": "{used} сканирований",
+      "myOrders": "Мои заказы"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Настройки сохранены",
     "fetchError": "Не удалось загрузить настройки",
     "saveError": "Не удалось сохранить настройки"
+  },
+  "orders": {
+    "noOrders": "Заказов пока нет",
+    "new": "Новые",
+    "inProgress": "В работе",
+    "completed": "Выполненные",
+    "all": "Все",
+    "cancelled": "Отменён",
+    "startOrder": "Передать в работу",
+    "complete": "Выполнить",
+    "total": "Итого",
+    "table": "Столик",
+    "items": "позиций",
+    "error": "Что-то пошло не так",
+    "statusUpdated": "Статус заказа обновлён"
   },
   "terms": {
     "meta": {

@@ -517,7 +517,7 @@
           "Restaurant hjemmeside",
           "QR Menu",
           "320 scanninger/måned",
-          "30 WhatsApp ordrer/måned",
+          "10 WhatsApp ordrer/måned",
           "2 sprog",
           "Med IQ Rest vandmærke",
           "Analyse"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Uden IQ Rest branding",
-      "whatsappOrders": "WhatsApp-bestillinger"
+      "orders": "bestillinger"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / måned"
+        "orders": "10 / måned"
       },
       "basic": {
         "scans": "Ubegrænsede",
         "languages": "6",
         "aiTranslation": "100 / måned",
         "aiImages": "35 / md.",
-        "whatsappOrders": "Ubegrænset"
+        "orders": "Ubegrænset"
       },
       "pro": {
         "scans": "Ubegrænsede",
         "languages": "Ubegrænsede",
         "aiTranslation": "Ubegrænset",
         "aiImages": "Ubegrænsede",
-        "whatsappOrders": "Ubegrænset"
+        "orders": "Ubegrænset"
       }
     },
     "socialProof": "Over 500 restauranter stoler på os",
@@ -1177,7 +1177,10 @@
       "medium": "Medium",
       "large": "Stor"
     },
-    "copyUrl": "Kopiér URL"
+    "copyUrl": "Kopiér URL",
+    "tableQr": "Bord",
+    "tableNumber": "Bord {number}",
+    "downloadTableQr": "Download QR til bord {number}"
   },
   "support": {
     "title": "Beskeder",
@@ -1313,6 +1316,11 @@
       "comment": "Kommentar",
       "commentPlaceholder": "Eventuelle særlige ønsker?",
       "sendWhatsApp": "Send via WhatsApp",
+      "sendOrder": "Send ordre",
+      "orderReceived": "Ordre modtaget!",
+      "tableLabel": "Bord",
+      "selectTable": "Vælg bord",
+      "continue": "Fortsæt",
       "clearCart": "Tøm kurv",
       "orderLimitReached": "Månedlig bestillingsgrænse nået. Prøv venligst igen næste måned."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategorier",
       "items": "Elementer",
       "settings": "Sprog",
-      "design": "Hjemmeside",
+      "design": "Indstillinger",
       "contacts": "Kontakter",
       "languages": "Sprog",
       "reservations": "Reservationer",
@@ -1451,7 +1459,8 @@
       "tables": "Borde",
       "billing": "Fakturering",
       "support": "Support",
-      "menu": "Menu"
+      "menu": "Menu",
+      "orders": "Ordrer"
     },
     "sidebar": {
       "qrMenu": "Udskriv QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Kunne ikke generere baggrund",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "WhatsApp Bestillinger",
+      "ordersSection": "Bestillinger",
       "ordersRequireWhatsApp": "Tilføj et WhatsApp-nummer på Kontaktsiden for at aktivere bestillinger",
       "ordersEnabled": "Aktiver Bestillinger",
-      "ordersOn": "Kunder kan bestille via WhatsApp",
+      "ordersOn": "Kunder kan bestille",
       "ordersOff": "Bestilling deaktiveret",
+      "orderMode": "Bestillingstilstand",
+      "orderModeWhatsapp": "Kun WhatsApp",
+      "orderModeInternal": "Kun intern",
+      "orderModeBoth": "WhatsApp + Intern",
+      "orderModeWhatsappHint": "Ordrer sendes direkte til WhatsApp",
+      "orderModeInternalHint": "Ordrer gemmes i kontrolpanelet",
+      "orderModeBothHint": "Ordrer gemmes og sendes også via WhatsApp",
       "ordersFieldsHint": "Aktiverede felter er nødvendige for kunden at udfylde",
       "ordersName": "Navn",
       "ordersNameOn": "Kunden skal indtaste deres navn",
@@ -1886,7 +1902,8 @@
       "menuReady": "Din menu er klar! Del din QR-kode med kunderne.",
       "scansTitle": "Scanninger",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} scanninger"
+      "scansUnlimited": "{used} scanninger",
+      "myOrders": "Mine ordrer"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Indstillinger gemt",
     "fetchError": "Kunne ikke indlæse indstillinger",
     "saveError": "Kunne ikke gemme indstillinger"
+  },
+  "orders": {
+    "noOrders": "Ingen ordrer endnu",
+    "new": "Nye",
+    "inProgress": "I gang",
+    "completed": "Fuldførte",
+    "all": "Alle",
+    "cancelled": "Annulleret",
+    "startOrder": "Start behandling",
+    "complete": "Fuldfør",
+    "total": "Total",
+    "table": "Bord",
+    "items": "varer",
+    "error": "Noget gik galt",
+    "statusUpdated": "Ordrestatus opdateret"
   },
   "terms": {
     "meta": {

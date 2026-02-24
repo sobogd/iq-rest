@@ -517,7 +517,7 @@
           "Уебсайт на ресторанта",
           "QR Меню",
           "320 сканирания/месец",
-          "30 поръчки по WhatsApp/месец",
+          "10 поръчки по WhatsApp/месец",
           "2 езика",
           "С воден знак на IQ Rest",
           "Анализи"
@@ -570,7 +570,7 @@
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
       "noBranding": "Без брандинг IQ Rest",
-      "whatsappOrders": "Поръчки по WhatsApp"
+      "orders": "Поръчки по"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / месец"
+        "orders": "10 / месец"
       },
       "basic": {
         "scans": "Неограничени",
         "languages": "6",
         "aiTranslation": "100 / месец",
         "aiImages": "35 / мес.",
-        "whatsappOrders": "Неограничено"
+        "orders": "Неограничено"
       },
       "pro": {
         "scans": "Неограничени",
         "languages": "Неограничени",
         "aiTranslation": "Неограничено",
         "aiImages": "Неограничени",
-        "whatsappOrders": "Неограничено"
+        "orders": "Неограничено"
       }
     },
     "socialProof": "Над 500 ресторанта ни се доверяват",
@@ -1177,7 +1177,10 @@
       "medium": "Среден",
       "large": "Голям"
     },
-    "copyUrl": "Копирай URL"
+    "copyUrl": "Копирай URL",
+    "tableQr": "Маса",
+    "tableNumber": "Маса {number}",
+    "downloadTableQr": "Изтегли QR за маса {number}"
   },
   "support": {
     "title": "Съобщения",
@@ -1313,6 +1316,11 @@
       "comment": "Коментар",
       "commentPlaceholder": "Имате ли специални изисквания?",
       "sendWhatsApp": "Изпрати чрез WhatsApp",
+      "sendOrder": "Изпрати поръчка",
+      "orderReceived": "Поръчката е приета!",
+      "tableLabel": "Маса",
+      "selectTable": "Изберете маса",
+      "continue": "Продължи",
       "clearCart": "Изчисти количката",
       "orderLimitReached": "Достигнат е месечният лимит на поръчките. Моля, опитайте отново следващия месец."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Категории",
       "items": "Артикули",
       "settings": "Езици",
-      "design": "Уебсайт",
+      "design": "Настройки",
       "contacts": "Контакти",
       "languages": "Езици",
       "reservations": "Резервации",
@@ -1451,7 +1459,8 @@
       "tables": "Масички",
       "billing": "Фактуриране",
       "support": "Поддръжка",
-      "menu": "Меню"
+      "menu": "Меню",
+      "orders": "Поръчки"
     },
     "sidebar": {
       "qrMenu": "Печат QR",
@@ -1753,11 +1762,18 @@
       "generateError": "Неуспешно генериране на фон",
       "previewButton": "Book a Table",
       "preview": "Preview",
-      "ordersSection": "Поръчки по WhatsApp",
+      "ordersSection": "Поръчки по",
       "ordersRequireWhatsApp": "Добавете WhatsApp номер на страницата с контакти, за да активирате поръчките",
       "ordersEnabled": "Активирайте поръчките",
-      "ordersOn": "Клиентите могат да поръчват чрез WhatsApp",
+      "ordersOn": "Клиентите могат да поръчват чрез",
       "ordersOff": "Поръчването е деактивирано",
+      "orderMode": "Режим на поръчки",
+      "orderModeWhatsapp": "Само WhatsApp",
+      "orderModeInternal": "Само вътрешни",
+      "orderModeBoth": "WhatsApp + Вътрешни",
+      "orderModeWhatsappHint": "Поръчките се изпращат директно в WhatsApp",
+      "orderModeInternalHint": "Поръчките се записват в таблото",
+      "orderModeBothHint": "Поръчките се записват и изпращат чрез WhatsApp",
       "ordersFieldsHint": "Активираните полета са задължителни за попълване от клиента",
       "ordersName": "Име",
       "ordersNameOn": "Клиентът трябва да въведе своето име",
@@ -1886,7 +1902,8 @@
       "menuReady": "Менюто ви е готово! Споделете QR кода с клиентите.",
       "scansTitle": "Сканирания",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} сканирания"
+      "scansUnlimited": "{used} сканирания",
+      "myOrders": "Моите поръчки"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Настройките са запазени",
     "fetchError": "Неуспешно зареждане на настройките",
     "saveError": "Неуспешно запазване на настройките"
+  },
+  "orders": {
+    "noOrders": "Все още няма поръчки",
+    "new": "Нови",
+    "inProgress": "В процес",
+    "completed": "Завършени",
+    "all": "Всички",
+    "cancelled": "Отменена",
+    "startOrder": "Приеми поръчката",
+    "complete": "Завърши",
+    "total": "Общо",
+    "table": "Маса",
+    "items": "артикула",
+    "error": "Нещо се обърка",
+    "statusUpdated": "Статусът на поръчката е обновен"
   },
   "terms": {
     "meta": {

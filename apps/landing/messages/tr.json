@@ -517,7 +517,7 @@
           "Restoran web sitesi",
           "QR Menü",
           "320 tarama/ay",
-          "30 WhatsApp siparişi/ay",
+          "10 siparişi/ay",
           "2 dil",
           "IQ Rest filigranı ile",
           "Analitik"
@@ -530,7 +530,7 @@
         "highlights": [
           "Ücretsizdeki her şey, artı:",
           "Sınırsız tarama",
-          "Sınırsız WhatsApp siparişleri",
+          "Sınırsızsiparişleri",
           "6 dil",
           "Yapay zeka çevirileri",
           "Özel renk teması",
@@ -570,7 +570,7 @@
       "multiRestaurant": "Birden fazla restoran",
       "customDomain": "Özel alan adı",
       "noBranding": "IQ Rest markası olmadan",
-      "whatsappOrders": "WhatsApp siparişleri"
+      "orders": "siparişleri"
     },
     "values": {
       "free": {
@@ -578,21 +578,21 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "whatsappOrders": "30 / ay"
+        "orders": "10 / ay"
       },
       "basic": {
         "scans": "Sınırsız",
         "languages": "6",
         "aiTranslation": "100 / ay",
         "aiImages": "35 / ay",
-        "whatsappOrders": "Sınırsız"
+        "orders": "Sınırsız"
       },
       "pro": {
         "scans": "Sınırsız",
         "languages": "Sınırsız",
         "aiTranslation": "Sınırsız",
         "aiImages": "Sınırsız",
-        "whatsappOrders": "Sınırsız"
+        "orders": "Sınırsız"
       }
     },
     "socialProof": "500'den fazla restoran bize güveniyor",
@@ -1177,7 +1177,10 @@
       "medium": "Orta",
       "large": "Büyük"
     },
-    "copyUrl": "URL Kopyala"
+    "copyUrl": "URL Kopyala",
+    "tableQr": "Masa",
+    "tableNumber": "Masa {number}",
+    "downloadTableQr": "Masa {number} için QR indir"
   },
   "support": {
     "title": "Mesajlar",
@@ -1313,6 +1316,11 @@
       "comment": "Yorum",
       "commentPlaceholder": "Herhangi bir özel isteğiniz var mı?",
       "sendWhatsApp": "WhatsApp ile gönder",
+      "sendOrder": "Siparişi gönder",
+      "orderReceived": "Sipariş alındı!",
+      "tableLabel": "Masa",
+      "selectTable": "Masa seçin",
+      "continue": "Devam et",
       "clearCart": "Sepeti temizle",
       "orderLimitReached": "Aylık sipariş limiti aşıldı. Lütfen gelecek ay tekrar deneyin."
     }
@@ -1443,7 +1451,7 @@
       "categories": "Kategoriler",
       "items": "Ürünler",
       "settings": "Diller",
-      "design": "Web sitesi",
+      "design": "Ayarlar",
       "contacts": "İletişim",
       "languages": "Diller",
       "reservations": "Rezervasyonlar",
@@ -1451,7 +1459,8 @@
       "tables": "Masalar",
       "billing": "Faturalama",
       "support": "Destek",
-      "menu": "Menü"
+      "menu": "Menü",
+      "orders": "Siparişler"
     },
     "sidebar": {
       "qrMenu": "QR Yazdır",
@@ -1753,11 +1762,18 @@
       "generateError": "Arka plan oluşturulamadı",
       "previewButton": "Masa ayırt",
       "preview": "Önizleme",
-      "ordersSection": "WhatsApp Siparişleri",
+      "ordersSection": "Siparişleri",
       "ordersRequireWhatsApp": "Siparişleri etkinleştirmek için İletişimlar sayfasına bir WhatsApp numarası ekleyin",
       "ordersEnabled": "Siparişleri Etkinleştir",
-      "ordersOn": "Müşteriler WhatsApp üzerinden sipariş verebilir",
+      "ordersOn": "Müşterilerüzerinden sipariş verebilir",
       "ordersOff": "Sipariş verme devre dışı",
+      "orderMode": "Sipariş modu",
+      "orderModeWhatsapp": "Sadece WhatsApp",
+      "orderModeInternal": "Sadece dahili",
+      "orderModeBoth": "WhatsApp + Dahili",
+      "orderModeWhatsappHint": "Siparişler doğrudan WhatsApp'a gönderilir",
+      "orderModeInternalHint": "Siparişler panelde kaydedilir",
+      "orderModeBothHint": "Siparişler kaydedilir ve WhatsApp üzerinden de gönderilir",
       "ordersFieldsHint": "Etkin alanlar müşterinin doldurması için gereklidir",
       "ordersName": "Ad",
       "ordersNameOn": "Müşteri adını girmelidir",
@@ -1886,7 +1902,8 @@
       "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın.",
       "scansTitle": "Taramalar",
       "scansUsed": "{used} / {limit}",
-      "scansUnlimited": "{used} tarama"
+      "scansUnlimited": "{used} tarama",
+      "myOrders": "Siparişlerim"
     }
   },
   "reservationSettings": {
@@ -1909,6 +1926,21 @@
     "saved": "Ayarlar kaydedildi",
     "fetchError": "Ayarlar yüklenemedi",
     "saveError": "Ayarlar kaydedilemedi"
+  },
+  "orders": {
+    "noOrders": "Henüz sipariş yok",
+    "new": "Yeni",
+    "inProgress": "İşlemde",
+    "completed": "Tamamlandı",
+    "all": "Tümü",
+    "cancelled": "İptal edildi",
+    "startOrder": "İşleme al",
+    "complete": "Tamamla",
+    "total": "Toplam",
+    "table": "Masa",
+    "items": "ürün",
+    "error": "Bir şeyler ters gitti",
+    "statusUpdated": "Sipariş durumu güncellendi"
   },
   "terms": {
     "meta": {

@@ -66,7 +66,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "website", free: true, basic: true, pro: true },
   { key: "qrMenu", free: true, basic: true, pro: true },
   { key: "scans", free: "value", basic: "value", pro: "value" },
-  { key: "whatsappOrders", free: "value", basic: "value", pro: "value" },
+  { key: "orders", free: "value", basic: "value", pro: "value" },
   { key: "languages", free: "value", basic: "value", pro: "value" },
   { key: "aiTranslation", free: false, basic: "value", pro: "value" },
   { key: "aiImages", free: false, basic: "value", pro: "value" },
