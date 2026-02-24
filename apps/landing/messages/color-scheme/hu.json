@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Egyedi QR Menü Dizájn és Márka Színek — Étterem Arculat | IQ Rest",
-    "description": "Illessze a QR menüt az étterme arculatához. Válasszon kiemelő színeket, világos/sötét témákat, és hozzon létre egységes megjelenést a teljes digitális menüben."
+    "description": "Illessze a QR menüt az étterme arculatához. Válasszon kiemelő színeket, és hozzon létre egységes megjelenést a teljes digitális menüben."
   },
   "hero": {
     "badge": "Egyedi Dizájn",
     "title": "Illessze a QR Menüt az Étterme Arculatához",
-    "subtitle": "Válassza ki a márka színét, és az egész menü — gombok, kiemelések, linkek — azonnal frissül. Világos és sötét témák mellékelve.",
+    "subtitle": "Válassza ki a márka színét, és az egész menü — gombok, kiemelések, linkek — azonnal frissül.",
     "cta": "Hozza Létre Étlapját",
     "ctaDemo": "Demó Megtekintése",
     "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
@@ -18,10 +18,6 @@
       {
         "title": "Válassza Ki a Kiemelő Színt",
         "description": "Válasszon 12 gondosan összeállított előbeállítás közül, vagy adja meg pontos márka színét hex kóddal. Minden gomb, link és kiemelés a menüben azonnal alkalmazkodik — nincs szükség dizájn tudásra."
-      },
-      {
-        "title": "Automatikus Világos és Sötét Témák",
-        "description": "Menüje automatikusan támogatja a világos és a sötét módot. A rendszer biztosítja, hogy a márka színe mindkét témában kiválóan nézzen ki, optimalizált kontraszttal és olvashatósággal."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Használhatom a pontos márka színemet?",
         "answer": "Igen. Adjon meg bármilyen hex színkódot, vagy válasszon a 12 gondosan kiválasztott előbeállítás közül. A kiemelő szín a menü összes oldalára érvényes."
-      },
-      {
-        "question": "Működik sötét módban?",
-        "answer": "Igen. A színséma automatikusan alkalmazkodik a világos és sötét témákhoz. A rendszer beállítja a kontrasztot, hogy a menü minden módban olvasható és szép maradjon."
       },
       {
         "question": "Megváltoztathatom a színeket a közzététel után?",

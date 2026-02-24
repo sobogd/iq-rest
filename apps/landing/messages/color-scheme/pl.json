@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Niestandardowy design menu QR i kolory marki — Branding restauracji | IQ Rest",
-    "description": "Dopasuj swoje menu QR do marki restauracji. Wybierz kolory akcentowe, jasne/ciemne motywy i stwórz spójny wygląd całego cyfrowego menu."
+    "description": "Dopasuj swoje menu QR do marki restauracji. Wybierz kolory akcentowe i stwórz spójny wygląd całego cyfrowego menu."
   },
   "hero": {
     "badge": "Niestandardowy design",
     "title": "Dopasuj swoje menu QR do marki restauracji",
-    "subtitle": "Wybierz kolor marki, a całe menu — przyciski, wyróżnienia, linki — zaktualizuje się natychmiast. Jasny i ciemny motyw w zestawie.",
+    "subtitle": "Wybierz kolor marki, a całe menu — przyciski, wyróżnienia, linki — zaktualizuje się natychmiast.",
     "cta": "Stwórz swoje menu",
     "ctaDemo": "Zobacz demo",
     "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
@@ -18,10 +18,6 @@
       {
         "title": "Wybierz swój kolor akcentowy",
         "description": "Wybierz spośród 12 gotowych presetów lub wpisz dokładny kolor marki kodem hex. Każdy przycisk, link i wyróżnienie w menu dostosowuje się natychmiast — nie potrzebujesz umiejętności projektowych."
-      },
-      {
-        "title": "Automatyczne jasne i ciemne motywy",
-        "description": "Twoje menu automatycznie obsługuje zarówno jasny, jak i ciemny tryb. System zapewnia, że kolor marki wygląda świetnie w obu motywach z zoptymalizowanym kontrastem i czytelnością."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Czy mogę użyć dokładnego koloru mojej marki?",
         "answer": "Tak. Wpisz dowolny kod koloru hex lub wybierz spośród 12 starannie dobranych presetów. Twój kolor akcentowy stosuje się na wszystkich stronach menu."
-      },
-      {
-        "question": "Czy działa z trybem ciemnym?",
-        "answer": "Tak. Twój schemat kolorów automatycznie dostosowuje się do jasnego i ciemnego motywu. System reguluje kontrast, aby menu było czytelne i piękne w każdym trybie."
       },
       {
         "question": "Czy mogę zmienić kolory po opublikowaniu?",

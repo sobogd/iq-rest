@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Diseño personalizado de menú QR y colores de marca — Branding de restaurante | IQ Rest",
-    "description": "Adapta tu menú QR a la marca de tu restaurante. Elige colores de acento, temas claro/oscuro y crea un aspecto coherente en todo tu menú digital."
+    "description": "Adapta tu menú QR a la marca de tu restaurante. Elige colores de acento y crea un aspecto coherente en todo tu menú digital."
   },
   "hero": {
     "badge": "Diseño personalizado",
     "title": "Haz que tu menú QR refleje la marca de tu restaurante",
-    "subtitle": "Elige tu color de marca y todo tu menú — botones, resaltados, enlaces — se actualiza al instante. Temas claro y oscuro incluidos.",
+    "subtitle": "Elige tu color de marca y todo tu menú — botones, resaltados, enlaces — se actualiza al instante.",
     "cta": "Crear tu menú",
     "ctaDemo": "Ver demo",
     "noCreditCard": "No se requiere tarjeta de crédito. Plan gratuito disponible."
@@ -18,10 +18,6 @@
       {
         "title": "Elige tu color de acento",
         "description": "Selecciona entre 12 opciones prediseñadas o introduce el color exacto de tu marca con un código hex. Cada botón, enlace y resaltado de tu menú se adapta al instante — sin necesidad de habilidades de diseño."
-      },
-      {
-        "title": "Temas claro y oscuro automáticos",
-        "description": "Tu menú soporta automáticamente los modos claro y oscuro. El sistema garantiza que tu color de marca se vea perfecto en ambos temas con contraste y legibilidad optimizados."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "¿Puedo usar el color exacto de mi marca?",
         "answer": "Sí. Introduce cualquier código de color hex, o elige entre 12 opciones cuidadosamente seleccionadas. Tu color de acento se aplica en todas las páginas de tu menú."
-      },
-      {
-        "question": "¿Funciona con el modo oscuro?",
-        "answer": "Sí. Tu esquema de colores se adapta automáticamente a los temas claro y oscuro. El sistema ajusta el contraste para mantener tu menú legible y atractivo en cualquier modo."
       },
       {
         "question": "¿Puedo cambiar los colores después de publicar?",

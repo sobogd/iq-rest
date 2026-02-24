@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Aangepast QR-menuontwerp & merkkleuren — Restaurantbranding | IQ Rest",
-    "description": "Pas uw QR-menu aan op uw restaurantmerk. Kies accentkleuren, lichte/donkere thema's en creëer een consistent uiterlijk voor uw gehele digitale menu."
+    "description": "Pas uw QR-menu aan op uw restaurantmerk. Kies accentkleuren en creëer een consistent uiterlijk voor uw gehele digitale menu."
   },
   "hero": {
     "badge": "Aangepast ontwerp",
     "title": "Laat uw QR-menu passen bij uw restaurantmerk",
-    "subtitle": "Kies uw merkkleur — en uw hele menu — knoppen, accenten, links — wordt direct bijgewerkt. Lichte en donkere thema's inbegrepen.",
+    "subtitle": "Kies uw merkkleur — en uw hele menu — knoppen, accenten, links — wordt direct bijgewerkt.",
     "cta": "Menu aanmaken",
     "ctaDemo": "Demo bekijken",
     "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
@@ -18,10 +18,6 @@
       {
         "title": "Kies uw accentkleur",
         "description": "Kies uit 12 zorgvuldig samengestelde presets of voer uw exacte merkkleur in als hex-code. Elke knop, link en accent in uw menu past zich direct aan — geen designvaardigheden nodig."
-      },
-      {
-        "title": "Automatische lichte & donkere thema's",
-        "description": "Uw menu ondersteunt automatisch zowel de lichte als de donkere modus. Het systeem zorgt ervoor dat uw merkkleur er in beide thema's geweldig uitziet met geoptimaliseerd contrast en leesbaarheid."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Kan ik mijn exacte merkkleur gebruiken?",
         "answer": "Ja. Voer een willekeurige hex-kleurcode in, of kies uit 12 zorgvuldig geselecteerde presets. Uw accentkleur wordt toegepast op alle pagina's van uw menu."
-      },
-      {
-        "question": "Werkt het met de donkere modus?",
-        "answer": "Ja. Uw kleurenschema past zich automatisch aan aan lichte en donkere thema's. Het systeem past het contrast aan om uw menu leesbaar en mooi te houden in elke modus."
       },
       {
         "question": "Kan ik kleuren wijzigen na publicatie?",

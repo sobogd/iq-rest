@@ -336,6 +336,7 @@ export function OrderForm({
             placeholder={t.namePlaceholder}
             required
             readOnly={isPreview}
+            autoComplete="off"
             className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
             style={{ borderColor: name ? accentColor : undefined }}
           />
@@ -356,6 +357,7 @@ export function OrderForm({
             placeholder={t.phonePlaceholder}
             required
             readOnly={isPreview}
+            autoComplete="off"
             className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
             style={{ borderColor: phone ? accentColor : undefined }}
           />
@@ -375,6 +377,7 @@ export function OrderForm({
             placeholder={t.addressPlaceholder}
             required
             readOnly={isPreview}
+            autoComplete="off"
             className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
             style={{ borderColor: address ? accentColor : undefined }}
           />
@@ -393,6 +396,7 @@ export function OrderForm({
           placeholder={t.commentPlaceholder}
           rows={3}
           readOnly={isPreview}
+          autoComplete="off"
           className="border-2 border-gray-200 resize-none text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
           style={{ borderColor: comment ? accentColor : undefined }}
         />

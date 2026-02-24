@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Disseny personalitzat de menú QR i colors de marca — Branding de restaurant | IQ Rest",
-    "description": "Adapta el teu menú QR a la marca del teu restaurant. Tria colors d'accent, temes clar/fosc i crea un aspecte coherent a tot el teu menú digital."
+    "description": "Adapta el teu menú QR a la marca del teu restaurant. Tria colors d'accent i crea un aspecte coherent a tot el teu menú digital."
   },
   "hero": {
     "badge": "Disseny personalitzat",
     "title": "Fes que el teu menú QR reflecteixi la marca del teu restaurant",
-    "subtitle": "Tria el color de la teva marca i tot el menú — botons, ressaltats, enllaços — s'actualitza a l'instant. Temes clar i fosc inclosos.",
+    "subtitle": "Tria el color de la teva marca i tot el menú — botons, ressaltats, enllaços — s'actualitza a l'instant.",
     "cta": "Crea el teu menú",
     "ctaDemo": "Veure demo",
     "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
@@ -18,10 +18,6 @@
       {
         "title": "Tria el teu color d'accent",
         "description": "Selecciona entre 12 presets o introdueix el color exacte de la teva marca amb un codi hex. Cada botó, enllaç i ressaltat del teu menú s'adapta a l'instant — no calen habilitats de disseny."
-      },
-      {
-        "title": "Temes clar i fosc automàtics",
-        "description": "El teu menú admet automàticament els modes clar i fosc. El sistema assegura que el color de la teva marca es vegi genial en ambdós temes amb contrast i llegibilitat optimitzats."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Puc utilitzar el color exacte de la meva marca?",
         "answer": "Sí. Introdueix qualsevol codi de color hex o tria entre 12 presets seleccionats amb cura. El color d'accent s'aplica a totes les pàgines del teu menú."
-      },
-      {
-        "question": "Funciona amb el mode fosc?",
-        "answer": "Sí. L'esquema de colors s'adapta automàticament als temes clar i fosc. El sistema ajusta el contrast per mantenir el menú llegible i bonic en qualsevol mode."
       },
       {
         "question": "Puc canviar els colors després de publicar?",

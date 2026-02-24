@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Custom QR Menu Design & Brand Colors — Restaurant Branding | IQ Rest",
-    "description": "Match your QR menu to your restaurant brand. Choose accent colors, light/dark themes, and create a consistent look across your entire digital menu."
+    "description": "Match your QR menu to your restaurant brand. Choose accent colors and create a consistent look across your entire digital menu."
   },
   "hero": {
     "badge": "Custom Design",
     "title": "Make Your QR Menu Match Your Restaurant Brand",
-    "subtitle": "Pick your brand color, and your entire menu — buttons, highlights, links — updates instantly. Light and dark themes included.",
+    "subtitle": "Pick your brand color, and your entire menu — buttons, highlights, links — updates instantly.",
     "cta": "Create Your Menu",
     "ctaDemo": "View Demo",
     "noCreditCard": "No credit card required. Free plan available."
@@ -18,10 +18,6 @@
       {
         "title": "Choose Your Accent Color",
         "description": "Select from 12 curated presets or enter your exact brand color with a hex code. Every button, link, and highlight on your menu adapts instantly — no design skills needed."
-      },
-      {
-        "title": "Automatic Light & Dark Themes",
-        "description": "Your menu automatically supports both light and dark mode. The system ensures your brand color looks great in both themes with optimized contrast and readability."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Can I use my exact brand color?",
         "answer": "Yes. Enter any hex color code, or choose from 12 carefully selected presets. Your accent color applies across all pages of your menu."
-      },
-      {
-        "question": "Does it work with dark mode?",
-        "answer": "Yes. Your color scheme automatically adapts to both light and dark themes. The system adjusts contrast to keep your menu readable and beautiful in any mode."
       },
       {
         "question": "Can I change colors after publishing?",

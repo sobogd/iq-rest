@@ -348,17 +348,15 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium">{t("background")}:</label>
                 {canGenerate && (
-                  <Button
+                  <button
                     type="button"
-                    variant="ghost"
-                    size="sm"
-                    className="h-7 text-xs gap-1.5"
+                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
                     onClick={() => { track(DashboardEvent.CLICKED_GENERATE_BACKGROUND); handleGenerateBackground(); }}
                     disabled={generating || uploading}
                   >
-                    {generating ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
                     {generating ? t("generating") : t("generateBackground")}
-                  </Button>
+                    {generating ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
+                  </button>
                 )}
               </div>
               {source ? (
@@ -470,7 +468,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 {slug && (
                   <button
                     type="button"
-                    className="text-xs text-muted-foreground underline hover:text-foreground transition-colors flex items-center gap-1"
+                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
                     onClick={() => {
                       track(DashboardEvent.CLICKED_COPY_URL);
                       navigator.clipboard.writeText(`https://iq-rest.com/m/${slug}`);

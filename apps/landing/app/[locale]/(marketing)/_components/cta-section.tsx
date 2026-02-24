@@ -1,6 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/routing";
 import { HeroCreateButton } from "./hero-create-button";
 
 export async function CtaSection() {
@@ -16,16 +14,8 @@ export async function CtaSection() {
               {t("readyDescription")}
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex justify-center pt-4">
             <HeroCreateButton>{t("getStarted")}</HeroCreateButton>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6"
-            >
-              <Link href="/pricing">{t("viewPricing")}</Link>
-            </Button>
           </div>
         </div>
       </div>

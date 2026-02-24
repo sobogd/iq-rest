@@ -514,6 +514,7 @@ export function ReserveForm({
               onChange={(e) => setName(e.target.value)}
               placeholder={t.namePlaceholder}
               required
+              autoComplete="off"
               className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
               style={{ borderColor: name ? accentColor : undefined }}
             />
@@ -530,6 +531,7 @@ export function ReserveForm({
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t.emailPlaceholder}
               required
+              autoComplete="off"
               className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
               style={{ borderColor: email ? accentColor : undefined }}
             />
@@ -545,6 +547,7 @@ export function ReserveForm({
               onChange={(e) => setNotes(e.target.value)}
               placeholder={t.notesPlaceholder}
               rows={3}
+              autoComplete="off"
               className="border-2 border-gray-200 resize-none text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
               style={{ borderColor: notes ? accentColor : undefined }}
             />

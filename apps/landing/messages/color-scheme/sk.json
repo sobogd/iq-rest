@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Vlastný Dizajn QR Menu a Firemné Farby — Branding Reštaurácie | IQ Rest",
-    "description": "Prispôsobte QR menu značke vašej reštaurácie. Vyberte farby zvýraznenia, svetlé/tmavé témy a vytvorte jednotný vzhľad celého digitálneho menu."
+    "description": "Prispôsobte QR menu značke vašej reštaurácie. Vyberte farby zvýraznenia a vytvorte jednotný vzhľad celého digitálneho menu."
   },
   "hero": {
     "badge": "Vlastný Dizajn",
     "title": "Prispôsobte QR Menu Značke Vašej Reštaurácie",
-    "subtitle": "Vyberte si farbu značky a celé menu — tlačidlá, zvýraznenia, odkazy — sa okamžite aktualizuje. Svetlé a tmavé témy sú zahrnuté.",
+    "subtitle": "Vyberte si farbu značky a celé menu — tlačidlá, zvýraznenia, odkazy — sa okamžite aktualizuje.",
     "cta": "Vytvorte Svoj Jedálny Lístok",
     "ctaDemo": "Zobraziť Demo",
     "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
@@ -18,10 +18,6 @@
       {
         "title": "Vyberte Svoju Farbu Zvýraznenia",
         "description": "Vyberte si z 12 starostlivo vybraných predvolieb alebo zadajte presnú farbu značky pomocou hex kódu. Každé tlačidlo, odkaz a zvýraznenie v menu sa okamžite prispôsobí — žiadne dizajnérske zručnosti nie sú potrebné."
-      },
-      {
-        "title": "Automatické Svetlé a Tmavé Témy",
-        "description": "Vaše menu automaticky podporuje svetlý aj tmavý režim. Systém zabezpečí, aby farba vašej značky vyzerala skvele v oboch témach s optimalizovaným kontrastom a čitateľnosťou."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Môžem použiť presnú farbu svojej značky?",
         "answer": "Áno. Zadajte akýkoľvek hex kód farby alebo si vyberte z 12 starostlivo vybraných predvolieb. Farba zvýraznenia sa aplikuje na všetky stránky menu."
-      },
-      {
-        "question": "Funguje to s tmavým režimom?",
-        "answer": "Áno. Farebná schéma sa automaticky prispôsobí svetlým a tmavým témam. Systém upraví kontrast, aby menu zostalo čitateľné a pekné v akomkoľvek režime."
       },
       {
         "question": "Môžem zmeniť farby po zverejnení?",

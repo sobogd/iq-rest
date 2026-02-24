@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Mukautettu QR-ruokalistasuunnittelu ja brandivarit — Ravintolan brandi | IQ Rest",
-    "description": "Sovita QR-ruokalistasi ravintolasi brandiin. Valitse korostusvarit, vaaleat/tummat teemat ja luo yhtenaainen ulkoasu koko digitaaliseen ruokalistaasi."
+    "description": "Sovita QR-ruokalistasi ravintolasi brandiin. Valitse korostusvarit ja luo yhtenaainen ulkoasu koko digitaaliseen ruokalistaasi."
   },
   "hero": {
     "badge": "Mukautettu design",
     "title": "Sovita QR-ruokalistasi ravintolasi brandiin",
-    "subtitle": "Valitse brandivari, ja koko ruokalista — painikkeet, korostukset, linkit — paivittyy heti. Vaalea ja tumma teema mukana.",
+    "subtitle": "Valitse brandivari, ja koko ruokalista — painikkeet, korostukset, linkit — paivittyy heti.",
     "cta": "Luo ruokalista",
     "ctaDemo": "Katso demo",
     "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
@@ -18,10 +18,6 @@
       {
         "title": "Valitse korostusvari",
         "description": "Valitse 12 valmiista esiasetuksesta tai syota tarkka brandivari heksakoodilla. Jokainen painike, linkki ja korostus ruokalistassa mukautuu heti — suunnittelutaitoja ei tarvita."
-      },
-      {
-        "title": "Automaattiset vaaleat ja tummat teemat",
-        "description": "Ruokalistasi tukee automaattisesti seka vaaleaa etta tummaa tilaa. Jarjestelma varmistaa, etta brandivari nayttaa hyvalta molemmissa teemoissa optimoidulla kontrastilla ja luettavuudella."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Voinko kayttaa tarkkaa brandivaria?",
         "answer": "Kylla. Syota mika tahansa heksavaarikoodi tai valitse 12 huolellisesti valitusta esiasetuksesta. Korostusvari kayttoon kaikilla ruokalistan sivuilla."
-      },
-      {
-        "question": "Toimiiko se tummassa tilassa?",
-        "answer": "Kylla. Variskeemasi mukautuu automaattisesti seka vaaleaan etta tummaan teemaan. Jarjestelma saataa kontrastia pitaakseen ruokalistan luettavana ja kauniina kaikissa tiloissa."
       },
       {
         "question": "Voinko vaihtaa vareja julkaisun jalkeen?",

@@ -15,6 +15,7 @@ import {
   PricingSection,
   CtaSection,
   MenuPreviewModal,
+  FeatureLinks,
 } from "../_components";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
@@ -138,9 +139,9 @@ export default async function FeaturePage({
   const featureData = featuresList.find((f) => f.id === featureId);
   const benefits = featureData?.benefits || [];
 
-  // Images
-  const featureImages = FEATURE_IMAGES[featureId] || [];
-  const imageComposition = buildImageComposition(featureImages);
+  // Images — one composition per feature section
+  const featureImageSets = FEATURE_IMAGES[featureId] || [];
+  const imageCompositions = featureImageSets.map(buildImageComposition);
 
   // JSON-LD
   const softwareAppSchema = {
@@ -217,8 +218,7 @@ export default async function FeaturePage({
           <div className="max-w-5xl mx-auto space-y-16 lg:space-y-36">
             {features.map((feature, index) => {
               const isEven = index % 2 === 0;
-              // First feature gets imageComposition, second gets none (or vice versa if only 1 feature)
-              const showImage = index === 0 && imageComposition;
+              const imageComposition = imageCompositions[index] ?? null;
 
               return (
                 <div key={index}>
@@ -226,7 +226,7 @@ export default async function FeaturePage({
                   <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
                     <div
                       className={`flex flex-col ${
-                        showImage
+                        imageComposition
                           ? isEven ? "lg:order-1 items-end text-right" : "lg:order-2 items-start text-left"
                           : "lg:col-span-2 items-center text-center max-w-2xl mx-auto"
                       }`}
@@ -238,7 +238,7 @@ export default async function FeaturePage({
                         {feature.description}
                       </p>
                     </div>
-                    {showImage && (
+                    {imageComposition && (
                       <div className={`flex justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
                         <ImageComposition
                           layout={imageComposition.layout}
@@ -251,7 +251,7 @@ export default async function FeaturePage({
                   {/* Mobile */}
                   <div className="flex flex-col items-center text-center lg:hidden">
                     <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                    {showImage && (
+                    {imageComposition && (
                       <div className={`w-full max-w-[280px] ${imageComposition.layout === "trio" ? "my-[47px]" : "my-[70px]"}`}>
                         <ImageComposition
                           layout={imageComposition.layout}
@@ -278,11 +278,11 @@ export default async function FeaturePage({
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-8">
                 {tFeatures("keyBenefits")}
               </h2>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-col gap-3 md:flex-row md:flex-wrap md:justify-center">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-2 px-4 py-2.5 bg-background rounded-full border">
-                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="text-sm md:text-base">{benefit}</span>
+                  <div key={index} className="flex items-start md:items-center gap-2 px-0 py-1 md:px-4 md:py-2.5 md:bg-background md:rounded-full md:border w-full md:w-auto">
+                    <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5 md:mt-0" />
+                    <span className="text-sm md:text-base text-left">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -325,6 +325,9 @@ export default async function FeaturePage({
       <section id="pricing" className="scroll-mt-20">
         <PricingSection currency={currency} hideComparison />
       </section>
+
+      {/* Feature Links */}
+      <FeatureLinks excludeFeatureId={featureId} />
 
       {/* CTA Section */}
       <CtaSection />

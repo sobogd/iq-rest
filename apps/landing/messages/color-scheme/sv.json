@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Anpassad QR-menydesign och varumarkesfarger — Restaurangbranding | IQ Rest",
-    "description": "Matcha din QR-meny med ditt restaurangvarumarke. Valj accentfarger, ljusa/morka teman och skapa ett enhetligt utseende over hela din digitala meny."
+    "description": "Matcha din QR-meny med ditt restaurangvarumarke. Valj accentfarger och skapa ett enhetligt utseende over hela din digitala meny."
   },
   "hero": {
     "badge": "Anpassad design",
     "title": "Lat din QR-meny matcha ditt restaurangvarumarke",
-    "subtitle": "Valj din varummarkesfarg, och hela din meny — knappar, markeringar, lankar — uppdateras direkt. Ljusa och morka teman inkluderade.",
+    "subtitle": "Valj din varummarkesfarg, och hela din meny — knappar, markeringar, lankar — uppdateras direkt.",
     "cta": "Skapa din meny",
     "ctaDemo": "Visa demo",
     "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
@@ -18,10 +18,6 @@
       {
         "title": "Valj din accentfarg",
         "description": "Valj bland 12 kurerade forval eller ange din exakta varumarkesfarg med en hexkod. Varje knapp, lank och markering pa din meny anpassas direkt — inga designkunskaper behovs."
-      },
-      {
-        "title": "Automatiska ljusa och morka teman",
-        "description": "Din meny stodjer automatiskt bade ljust och morkt lage. Systemet ser till att din varumarkesfarg ser bra ut i bada temana med optimerad kontrast och lasbarhet."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Kan jag anvanda min exakta varumarkesfarg?",
         "answer": "Ja. Ange vilken hexfargkod som helst, eller valj bland 12 noggrant utvalda forval. Din accentfarg tillampas pa alla sidor i din meny."
-      },
-      {
-        "question": "Fungerar det med morkt lage?",
-        "answer": "Ja. Ditt fargschema anpassas automatiskt till bade ljusa och morka teman. Systemet justerar kontrasten for att halla din meny lasbar och snygg i alla lagen."
       },
       {
         "question": "Kan jag andra farger efter publicering?",

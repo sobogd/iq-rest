@@ -1885,7 +1885,7 @@
       "slugRequired": "Website address is required",
       "validationErrorTitle": "Please fix the following errors",
       "copyUrl": "Copy URL",
-      "generateBackground": "Generate",
+      "generateBackground": "Generate with AI",
       "generating": "Generating...",
       "generateError": "Failed to generate background",
       "ordersSection": "Orders",

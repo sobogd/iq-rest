@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Prilagođeni Dizajn QR Jelovnika i Boje Branda — Brendiranje Restorana | IQ Rest",
-    "description": "Uskladite QR jelovnik s brendom svog restorana. Odaberite boje naglaska, svijetle/tamne teme i stvorite dosljedan izgled na cijelom digitalnom jelovniku."
+    "description": "Uskladite QR jelovnik s brendom svog restorana. Odaberite boje naglaska i stvorite dosljedan izgled na cijelom digitalnom jelovniku."
   },
   "hero": {
     "badge": "Prilagođeni Dizajn",
     "title": "Uskladite QR Jelovnik s Brendom Svog Restorana",
-    "subtitle": "Odaberite boju branda i cijeli jelovnik — gumbi, naglasci, linkovi — ažurira se odmah. Svijetle i tamne teme uključene.",
+    "subtitle": "Odaberite boju branda i cijeli jelovnik — gumbi, naglasci, linkovi — ažurira se odmah.",
     "cta": "Kreirajte Svoj Jelovnik",
     "ctaDemo": "Pogledajte Demo",
     "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
@@ -18,10 +18,6 @@
       {
         "title": "Odaberite Boju Naglaska",
         "description": "Odaberite iz 12 pažljivo odabranih postavki ili unesite točnu boju branda hex kodom. Svaki gumb, link i naglasak na jelovniku prilagodi se odmah — bez potrebe za dizajnerskim vještinama."
-      },
-      {
-        "title": "Automatske Svijetle i Tamne Teme",
-        "description": "Vaš jelovnik automatski podržava svijetli i tamni način. Sustav osigurava da boja vašeg branda izvrsno izgleda u obje teme s optimiziranim kontrastom i čitljivošću."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Mogu li koristiti točnu boju svog branda?",
         "answer": "Da. Unesite bilo koji hex kod boje ili odaberite iz 12 pažljivo odabranih postavki. Boja naglaska primjenjuje se na sve stranice jelovnika."
-      },
-      {
-        "question": "Funkcionira li s tamnim načinom?",
-        "answer": "Da. Shema boja automatski se prilagođava svijetlim i tamnim temama. Sustav podešava kontrast kako bi jelovnik ostao čitljiv i lijep u svakom načinu."
       },
       {
         "question": "Mogu li promijeniti boje nakon objave?",

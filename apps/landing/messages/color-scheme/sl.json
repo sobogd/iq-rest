@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Prilagojeno Oblikovanje QR Menija in Barve Blagovne Znamke — Znamčenje Restavracije | IQ Rest",
-    "description": "Uskladite QR meni z blagovno znamko vaše restavracije. Izberite poudarjene barve, svetle/temne teme in ustvarite dosleden videz celotnega digitalnega menija."
+    "description": "Uskladite QR meni z blagovno znamko vaše restavracije. Izberite poudarjene barve in ustvarite dosleden videz celotnega digitalnega menija."
   },
   "hero": {
     "badge": "Prilagojeno Oblikovanje",
     "title": "Uskladite QR Meni z Blagovno Znamko Vaše Restavracije",
-    "subtitle": "Izberite barvo blagovne znamke in celoten meni — gumbi, poudarki, povezave — se takoj posodobi. Svetle in temne teme vključene.",
+    "subtitle": "Izberite barvo blagovne znamke in celoten meni — gumbi, poudarki, povezave — se takoj posodobi.",
     "cta": "Ustvarite Svoj Jedilnik",
     "ctaDemo": "Ogled Predstavitve",
     "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
@@ -18,10 +18,6 @@
       {
         "title": "Izberite Poudarjeno Barvo",
         "description": "Izbirajte med 12 skrbno izbranimi prednastavitvami ali vnesite natančno barvo blagovne znamke s hex kodo. Vsak gumb, povezava in poudarek v meniju se takoj prilagodi — oblikovalske veščine niso potrebne."
-      },
-      {
-        "title": "Samodejne Svetle in Temne Teme",
-        "description": "Vaš meni samodejno podpira svetli in temni način. Sistem zagotavlja, da barva vaše blagovne znamke odlično izgleda v obeh temah z optimiziranim kontrastom in berljivostjo."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Ali lahko uporabim natančno barvo svoje blagovne znamke?",
         "answer": "Da. Vnesite katero koli hex barvno kodo ali izberite med 12 skrbno izbranimi prednastavitvami. Poudarjena barva se uporabi na vseh straneh menija."
-      },
-      {
-        "question": "Ali deluje s temnim načinom?",
-        "answer": "Da. Barvna shema se samodejno prilagodi svetlim in temnim temam. Sistem prilagodi kontrast, da meni ostane berljiv in lep v vsakem načinu."
       },
       {
         "question": "Ali lahko spremenim barve po objavi?",

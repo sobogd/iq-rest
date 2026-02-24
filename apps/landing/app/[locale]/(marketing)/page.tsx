@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import type { SupportedCurrency } from "@/lib/country-currency-map";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner, DemoPhone, ScrollToDemo } from "./_components";
+import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner, DemoPhone, ScrollToDemo, FeatureLinks } from "./_components";
 import { PageView } from "@/components/PageView";
 import { SectionTracker } from "@/components/SectionTracker";
 import {
@@ -424,6 +424,8 @@ export default async function HomePage({
       <SectionTracker id="pricing" section="pricing" className="scroll-mt-20">
         <PricingSection noIndex hideComparison currency={currency} />
       </SectionTracker>
+
+      <FeatureLinks />
     </>
   );
 }

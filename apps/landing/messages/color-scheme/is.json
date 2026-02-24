@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Sérsniðinn QR matseðilshönnun og vörumerkjalitir — Vörumerki veitingastaðar | IQ Rest",
-    "description": "Samræmdu QR matseðilinn þinn við vörumerki veitingastaðarins. Veldu áhersluliti, ljós/dökk þemu og búðu til samræmt útlit á öllu stafræna matseðlinum þínum."
+    "description": "Samræmdu QR matseðilinn þinn við vörumerki veitingastaðarins. Veldu áhersluliti og búðu til samræmt útlit á öllu stafræna matseðlinum þínum."
   },
   "hero": {
     "badge": "Sérsniðin hönnun",
     "title": "Láttu QR matseðilinn þinn endurspegla vörumerki veitingastaðarins",
-    "subtitle": "Veldu vörumerkjalit og allur matseðillinn — hnappar, áherslur, tenglar — uppfærist samstundis. Ljós og dökk þemu innifalin.",
+    "subtitle": "Veldu vörumerkjalit og allur matseðillinn — hnappar, áherslur, tenglar — uppfærist samstundis.",
     "cta": "Búðu til matseðilinn þinn",
     "ctaDemo": "Skoða demo",
     "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
@@ -18,10 +18,6 @@
       {
         "title": "Veldu áherslulit",
         "description": "Veldu úr 12 fyrirfram völdum litum eða sláðu inn nákvæman vörumerkjalit með hex kóða. Sérhver hnappur, tengill og áhersla á matseðlinum þínum aðlagast samstundis — engin hönnunarþekking nauðsynleg."
-      },
-      {
-        "title": "Sjálfvirk ljós og dökk þemu",
-        "description": "Matseðillinn þinn styður sjálfkrafa bæði ljósa og dökka stillingu. Kerfið tryggir að vörumerkjaliturinn þinn lítur vel út í báðum þemum með hámarksandstæðu og læsileika."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Get ég notað nákvæman vörumerkjalit minn?",
         "answer": "Já. Sláðu inn hvaða hex litakóða sem er, eða veldu úr 12 vandlega völdum fyrirfram stillingum. Áhersluliturinn þinn gildir á öllum síðum matseðilsins."
-      },
-      {
-        "question": "Virkar þetta með dökkri stillingu?",
-        "answer": "Já. Litasamsetningin þín aðlagast sjálfkrafa bæði ljósu og dökku þemunum. Kerfið stillir andstæðuna til að halda matseðlinum þínum læsilegum og fallegum í hvaða stillingu sem er."
       },
       {
         "question": "Get ég breytt litum eftir birtingu?",

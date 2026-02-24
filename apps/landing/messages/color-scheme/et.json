@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Kohandatud QR-menüü disain ja brändivarvid — Restorani bränding | IQ Rest",
-    "description": "Sobituge oma QR-menüü restorani brändiga. Valige aktsentvärve, heledaid/tumedaid teemasid ja looge ühtne välimus kogu digitaalse menüü ulatuses."
+    "description": "Sobituge oma QR-menüü restorani brändiga. Valige aktsentvärve ja looge ühtne välimus kogu digitaalse menüü ulatuses."
   },
   "hero": {
     "badge": "Kohandatud disain",
     "title": "Sobituge oma QR-menüü restorani brändiga",
-    "subtitle": "Valige oma brändivärv ja kogu menüü — nupud, esiletõstud, lingid — uueneb koheselt. Heledad ja tumedad teemad kaasas.",
+    "subtitle": "Valige oma brändivärv ja kogu menüü — nupud, esiletõstud, lingid — uueneb koheselt.",
     "cta": "Looge oma menüü",
     "ctaDemo": "Vaata demo",
     "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
@@ -18,10 +18,6 @@
       {
         "title": "Valige oma aktsentvärv",
         "description": "Valige 12 hoolikalt valitud eelseadistuse hulgast või sisestage oma täpne brändivärv hex-koodiga. Iga nupp, link ja esiletõste teie menüüs kohandub koheselt — disainioskusi pole vaja."
-      },
-      {
-        "title": "Automaatsed heledad ja tumedad teemad",
-        "description": "Teie menüü toetab automaatselt nii heledat kui tumedat režiimi. Süsteem tagab, et teie brändivärv näeb mõlemas teemas suurepärane välja optimeeritud kontrasti ja loetavusega."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Kas ma saan kasutada oma täpset brändivärvi?",
         "answer": "Jah. Sisestage mis tahes hex-värvikood või valige 12 hoolikalt valitud eelseadistuse hulgast. Teie aktsentvärv rakendub kõigil teie menüü lehtedel."
-      },
-      {
-        "question": "Kas see töötab tumeda režiimiga?",
-        "answer": "Jah. Teie värviskeeem kohandub automaatselt nii heleda kui tumeda teemaga. Süsteem reguleerib kontrasti, et teie menüü oleks loetav ja kaunis igas režiimis."
       },
       {
         "question": "Kas ma saan värve pärast avaldamist muuta?",

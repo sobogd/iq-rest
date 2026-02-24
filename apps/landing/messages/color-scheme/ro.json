@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Design Personalizat Meniu QR și Culori de Brand — Branding Restaurant | IQ Rest",
-    "description": "Potriviți meniul QR cu brandul restaurantului dvs. Alegeți culori de accent, teme deschise/închise și creați un aspect consistent pe întregul meniu digital."
+    "description": "Potriviți meniul QR cu brandul restaurantului dvs. Alegeți culori de accent și creați un aspect consistent pe întregul meniu digital."
   },
   "hero": {
     "badge": "Design Personalizat",
     "title": "Faceți Meniul QR să Se Potrivească cu Brandul Restaurantului",
-    "subtitle": "Alegeți culoarea brandului, iar întregul meniu — butoane, evidențieri, linkuri — se actualizează instant. Teme deschise și închise incluse.",
+    "subtitle": "Alegeți culoarea brandului, iar întregul meniu — butoane, evidențieri, linkuri — se actualizează instant.",
     "cta": "Creați Meniul",
     "ctaDemo": "Vezi Demo",
     "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
@@ -18,10 +18,6 @@
       {
         "title": "Alegeți Culoarea de Accent",
         "description": "Selectați din 12 presetări atent alese sau introduceți culoarea exactă a brandului cu un cod hex. Fiecare buton, link și evidențiere din meniu se adaptează instant — fără abilități de design necesare."
-      },
-      {
-        "title": "Teme Automate Deschise și Închise",
-        "description": "Meniul dvs. suportă automat atât modul deschis, cât și cel închis. Sistemul asigură că culoarea brandului arată excelent în ambele teme cu contrast și lizibilitate optimizate."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Pot folosi culoarea exactă a brandului meu?",
         "answer": "Da. Introduceți orice cod de culoare hex sau alegeți din 12 presetări atent selectate. Culoarea de accent se aplică pe toate paginile meniului."
-      },
-      {
-        "question": "Funcționează cu modul închis?",
-        "answer": "Da. Schema de culori se adaptează automat la temele deschise și închise. Sistemul ajustează contrastul pentru a menține meniul lizibil și frumos în orice mod."
       },
       {
         "question": "Pot schimba culorile după publicare?",

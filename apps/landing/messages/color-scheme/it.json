@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Design personalizzato del menu QR e colori del brand — Branding ristorante | IQ Rest",
-    "description": "Adatta il tuo menu QR al brand del tuo ristorante. Scegli i colori di accento, temi chiari/scuri e crea un aspetto coerente in tutto il tuo menu digitale."
+    "description": "Adatta il tuo menu QR al brand del tuo ristorante. Scegli i colori di accento e crea un aspetto coerente in tutto il tuo menu digitale."
   },
   "hero": {
     "badge": "Design personalizzato",
     "title": "Fai corrispondere il tuo menu QR al brand del ristorante",
-    "subtitle": "Scegli il tuo colore di brand — e l'intero menu — pulsanti, evidenziazioni, link — si aggiorna all'istante. Temi chiaro e scuro inclusi.",
+    "subtitle": "Scegli il tuo colore di brand — e l'intero menu — pulsanti, evidenziazioni, link — si aggiorna all'istante.",
     "cta": "Crea il tuo menu",
     "ctaDemo": "Vedi demo",
     "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
@@ -18,10 +18,6 @@
       {
         "title": "Scegli il tuo colore di accento",
         "description": "Seleziona tra 12 preset curati o inserisci il colore esatto del tuo brand con un codice esadecimale. Ogni pulsante, link ed evidenziazione del tuo menu si adatta istantaneamente — nessuna competenza di design necessaria."
-      },
-      {
-        "title": "Temi chiaro e scuro automatici",
-        "description": "Il tuo menu supporta automaticamente sia la modalità chiara che quella scura. Il sistema garantisce che il tuo colore di brand sia perfetto in entrambi i temi con contrasto e leggibilità ottimizzati."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Posso usare il colore esatto del mio brand?",
         "answer": "Sì. Inserisci qualsiasi codice colore esadecimale, o scegli tra 12 preset accuratamente selezionati. Il tuo colore di accento si applica a tutte le pagine del menu."
-      },
-      {
-        "question": "Funziona con la modalità scura?",
-        "answer": "Sì. La tua combinazione di colori si adatta automaticamente ai temi chiaro e scuro. Il sistema regola il contrasto per mantenere il menu leggibile e bello in qualsiasi modalità."
       },
       {
         "question": "Posso cambiare i colori dopo la pubblicazione?",

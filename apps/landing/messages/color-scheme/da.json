@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Tilpasset QR-menudesign og brandfarver — Restaurantbranding | IQ Rest",
-    "description": "Match din QR-menu med dit restaurantbrand. Vaelg accentfarver, lyse/moerke temaer og skab et ensartet udseende paa tvaers af hele din digitale menu."
+    "description": "Match din QR-menu med dit restaurantbrand. Vaelg accentfarver og skab et ensartet udseende paa tvaers af hele din digitale menu."
   },
   "hero": {
     "badge": "Tilpasset design",
     "title": "Faa din QR-menu til at matche dit restaurantbrand",
-    "subtitle": "Vaelg din brandfarve, og hele din menu — knapper, fremhaevninger, links — opdateres med det samme. Lyse og moerke temaer inkluderet.",
+    "subtitle": "Vaelg din brandfarve, og hele din menu — knapper, fremhaevninger, links — opdateres med det samme.",
     "cta": "Opret din menu",
     "ctaDemo": "Se demo",
     "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
@@ -18,10 +18,6 @@
       {
         "title": "Vaelg din accentfarve",
         "description": "Vaelg mellem 12 udvalgte forudindstillinger eller indtast din praecise brandfarve med en hex-kode. Hver knap, link og fremhaevning paa din menu tilpasser sig med det samme — ingen designkunskaber noedvendige."
-      },
-      {
-        "title": "Automatiske lyse og moerke temaer",
-        "description": "Din menu understotter automatisk baade lys og moerk tilstand. Systemet sikrer, at din brandfarve ser godt ud i begge temaer med optimeret kontrast og laeselighed."
       }
     ]
   },
@@ -32,10 +28,6 @@
       {
         "question": "Kan jeg bruge min praecise brandfarve?",
         "answer": "Ja. Indtast en vilkaarlig hex-farvekode, eller vaelg mellem 12 omhyggeligt udvalgte forudindstillinger. Din accentfarve anvendes paa alle sider i din menu."
-      },
-      {
-        "question": "Virker det med moerk tilstand?",
-        "answer": "Ja. Dit farveskema tilpasser sig automatisk til baade lyse og moerke temaer. Systemet justerer kontrasten for at holde din menu laeselig og smuk i enhver tilstand."
       },
       {
         "question": "Kan jeg aendre farver efter publicering?",
