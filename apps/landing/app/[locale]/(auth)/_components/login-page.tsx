@@ -99,7 +99,7 @@ export function LoginPage() {
       window.google.accounts.id.renderButton(googleButtonRef.current, {
         type: "standard",
         shape: "rectangular",
-        theme: "filled_black",
+        theme: "outline",
         size: "large",
         width: 280,
         text: "continue_with",
