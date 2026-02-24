@@ -118,11 +118,11 @@ export default async function HomePage({
   const homeFeatureIds = [
     "online-orders",
     "color-scheme",
+    "reservations",
     "mobile-management",
     "custom-design",
     "easy-menu",
     "ai-translation",
-    "reservations",
   ];
   const previewFeatures = homeFeatureIds
     .map((id) => features.find((f) => f.id === id))
