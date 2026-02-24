@@ -235,7 +235,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
       });
 
       if (res.ok) {
-        window.location.href = "/dashboard";
+        router.push("/dashboard");
       } else {
         const data = await res.json();
         toast.error(data.error || "Failed to impersonate");

@@ -6,6 +6,27 @@ import { getCurrencyByCountry } from "./lib/country-currency-map";
 
 const intlMiddleware = createMiddleware(routing);
 
+// Last-Modified dates for marketing pages (shared source of truth with sitemap.ts)
+const PAGE_LAST_MODIFIED: Record<string, string> = {
+  "/": "2026-02-24",
+  "/pricing": "2026-02-24",
+  "/instant-setup": "2026-02-24",
+  "/mobile-management": "2026-02-24",
+  "/ai-translation": "2026-02-24",
+  "/multilingual": "2026-02-24",
+  "/ai-images": "2026-02-24",
+  "/easy-menu": "2026-02-24",
+  "/analytics": "2026-02-24",
+  "/reservations": "2026-02-24",
+  "/custom-design": "2026-02-24",
+  "/color-scheme": "2026-02-24",
+  "/personal-support": "2026-02-24",
+  "/online-orders": "2026-02-24",
+  "/faq": "2026-02-20",
+  "/contacts": "2026-02-20",
+  "/changelog": "2026-02-20",
+};
+
 // Create regex pattern for all locales
 const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
@@ -194,6 +215,13 @@ export default function middleware(request: NextRequest) {
 
   // Add pathname to headers for SSR components
   response.headers.set("x-pathname", request.nextUrl.pathname);
+
+  // Set Last-Modified for marketing pages
+  const pagePath = pathname.replace(localeRegex, "/");
+  const lastModified = PAGE_LAST_MODIFIED[pagePath];
+  if (lastModified) {
+    response.headers.set("Last-Modified", new Date(lastModified).toUTCString());
+  }
 
   // Disable Google Translate prompt
   const localeMatch = pathname.match(localeRegex);

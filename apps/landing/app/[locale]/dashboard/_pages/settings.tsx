@@ -164,7 +164,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
 
         track(DashboardEvent.CLICKED_SAVE_SETTINGS);
         toast.success(t("saved"));
-        window.location.href = `/${locale}/dashboard`;
+        router.push("/dashboard");
         return;
       } else {
         const data = await res.json();

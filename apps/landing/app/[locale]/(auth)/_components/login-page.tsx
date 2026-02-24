@@ -5,13 +5,14 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
-import { Link } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 export function LoginPage() {
   const locale = useLocale();
+  const router = useRouter();
   const t = useTranslations("dashboard.auth");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -70,9 +71,9 @@ export function LoginPage() {
           // Redirect based on onboarding step
           const step = data.onboardingStep ?? 0;
           if (step < 2) {
-            window.location.href = `/${locale}/onboarding/name`;
+            router.replace("/onboarding/name");
           } else {
-            window.location.href = `/${locale}/dashboard`;
+            router.replace("/dashboard");
           }
           return;
         }

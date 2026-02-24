@@ -363,7 +363,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        window.location.href = `/${locale}/dashboard`;
+        router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "item" });
@@ -436,7 +436,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_ITEM);
         toast.success(isEdit ? t.updated : t.created);
-        window.location.href = `/${locale}/dashboard`;
+        router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "item" });

@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
 import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "@/i18n/routing";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
@@ -25,6 +26,7 @@ interface ContactsPageProps {
 export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   const t = useTranslations("dashboard.contacts");
   const locale = useLocale();
+  const router = useRouter();
   const { translations } = useDashboard();
 
   const [saving, setSaving] = useState(false);
@@ -88,7 +90,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_CONTACTS);
         toast.success(t("saved"));
-        window.location.href = `/${locale}/dashboard`;
+        router.push("/dashboard");
         return;
       } else {
         const data = await res.json();

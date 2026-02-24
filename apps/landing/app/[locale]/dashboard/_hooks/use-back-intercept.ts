@@ -25,15 +25,9 @@ export function useBackIntercept(backHref: string) {
 }
 
 /**
- * Blocks browser back button entirely (for dashboard home).
+ * No-op: kept for backward compatibility.
+ * Previously blocked browser back button, but that caused users to get stuck.
  */
 export function useBlockBack() {
-  useEffect(() => {
-    window.history.pushState(null, "", window.location.href);
-    const onPopState = () => {
-      window.history.pushState(null, "", window.location.href);
-    };
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
-  }, []);
+  // intentionally empty — let browser history work naturally
 }

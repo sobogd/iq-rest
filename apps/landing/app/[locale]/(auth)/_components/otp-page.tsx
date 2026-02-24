@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
@@ -15,6 +16,7 @@ interface OtpPageProps {
 
 export function OtpPage({ email }: OtpPageProps) {
   const locale = useLocale();
+  const router = useRouter();
   const t = useTranslations("dashboard.auth");
   const [otp, setOtp] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -52,9 +54,9 @@ export function OtpPage({ email }: OtpPageProps) {
         // Redirect based on onboarding step
         const step = data.onboardingStep ?? 2;
         if (step < 2) {
-          window.location.href = `/${locale}/onboarding/name`;
+          router.replace("/onboarding/name");
         } else {
-          window.location.href = `/${locale}/dashboard`;
+          router.replace("/dashboard");
         }
       } else {
         track(DashboardEvent.ERROR_OTP_VERIFY);

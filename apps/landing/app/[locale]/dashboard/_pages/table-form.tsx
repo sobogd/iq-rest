@@ -231,7 +231,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
 
       if (res.ok) {
         toast.success(t("delete"));
-        window.location.href = `/${locale}/dashboard/tables`;
+        router.push("/dashboard/tables");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "table" });
@@ -296,7 +296,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_TABLE);
         toast.success(isEdit ? t("save") : t("addTable"));
-        window.location.href = `/${locale}/dashboard/tables`;
+        router.push("/dashboard/tables");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "table" });

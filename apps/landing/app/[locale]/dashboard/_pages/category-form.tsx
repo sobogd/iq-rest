@@ -163,7 +163,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
 
       if (res.ok) {
         toast.success(t.deleted);
-        window.location.href = `/${locale}/dashboard`;
+        router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_DELETE, { page: "category" });
@@ -216,7 +216,7 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       if (res.ok) {
         track(DashboardEvent.CLICKED_SAVE_CATEGORY);
         toast.success(isEdit ? t.updated : t.created);
-        window.location.href = `/${locale}/dashboard`;
+        router.push("/dashboard");
       } else {
         const data = await res.json();
         track(DashboardEvent.ERROR_SAVE, { page: "category" });
