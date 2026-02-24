@@ -524,6 +524,7 @@
           "Restaurant website",
           "QR Menu",
           "320 scans/month",
+          "30 WhatsApp orders/month",
           "2 languages",
           "With IQ Rest watermark",
           "Analytics"
@@ -536,6 +537,7 @@
         "highlights": [
           "Everything in Free, plus:",
           "Unlimited scans",
+          "Unlimited WhatsApp orders",
           "6 languages",
           "AI translations",
           "Custom color theme",
@@ -563,6 +565,7 @@
       "website": "Restaurant website",
       "qrMenu": "QR Menu",
       "scans": "Monthly scans",
+      "whatsappOrders": "WhatsApp orders",
       "languages": "Supported languages",
       "aiTranslation": "AI translations",
       "aiImages": "AI image enhancement",
@@ -579,18 +582,21 @@
     "values": {
       "free": {
         "scans": "320",
+        "whatsappOrders": "30 / month",
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—"
       },
       "basic": {
         "scans": "Unlimited",
+        "whatsappOrders": "Unlimited",
         "languages": "6",
         "aiTranslation": "100 / month",
         "aiImages": "35 / month"
       },
       "pro": {
         "scans": "Unlimited",
+        "whatsappOrders": "Unlimited",
         "languages": "Unlimited",
         "aiTranslation": "Unlimited",
         "aiImages": "Unlimited"
@@ -1288,6 +1294,23 @@
       "sulphites": "Sulphites",
       "lupin": "Lupin",
       "molluscs": "Molluscs"
+    },
+    "order": {
+      "add": "Add",
+      "yourOrder": "Your Order",
+      "emptyCart": "Your cart is empty",
+      "total": "Total",
+      "yourName": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "yourPhone": "Phone",
+      "phonePlaceholder": "Your phone number",
+      "yourAddress": "Address",
+      "addressPlaceholder": "Delivery address",
+      "comment": "Comment",
+      "commentPlaceholder": "Any special requests?",
+      "sendWhatsApp": "Send via WhatsApp",
+      "clearCart": "Clear cart",
+      "orderLimitReached": "Monthly order limit reached. Please try again next month."
     }
   },
   "faq": {
@@ -1837,7 +1860,22 @@
       "copyUrl": "Copy URL",
       "generateBackground": "Generate",
       "generating": "Generating...",
-      "generateError": "Failed to generate background"
+      "generateError": "Failed to generate background",
+      "ordersSection": "WhatsApp Orders",
+      "ordersRequireWhatsApp": "Add a WhatsApp number on the Contacts page to enable orders",
+      "ordersEnabled": "Enable Orders",
+      "ordersOn": "Customers can order via WhatsApp",
+      "ordersOff": "Orders disabled",
+      "ordersFieldsHint": "Enabled fields are required for the customer to fill in",
+      "ordersName": "Name",
+      "ordersNameOn": "Customer must enter their name",
+      "ordersNameOff": "Name field hidden",
+      "ordersPhone": "Phone",
+      "ordersPhoneOn": "Customer must enter their phone",
+      "ordersPhoneOff": "Phone field hidden",
+      "ordersAddress": "Delivery Address",
+      "ordersAddressOn": "Customer must enter delivery address",
+      "ordersAddressOff": "Address field hidden"
     },
     "general": {
       "save": "Save",
