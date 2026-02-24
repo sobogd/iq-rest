@@ -99,7 +99,7 @@ export function LoginPage() {
       window.google.accounts.id.renderButton(googleButtonRef.current, {
         type: "standard",
         shape: "rectangular",
-        theme: "outline",
+        theme: "filled_black",
         size: "large",
         width: 280,
         text: "continue_with",
@@ -245,7 +245,7 @@ export function LoginPage() {
                     </span>
                   </div>
 
-                  <div ref={googleButtonRef} className="flex justify-center" />
+                  <div ref={googleButtonRef} className="flex justify-center overflow-hidden rounded-md" />
                 </>
               )}
 
