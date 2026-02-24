@@ -68,5 +68,31 @@
         "answer": "Sí. Para comer en el local, los clientes escanean el código QR en su mesa. Para llevar o a domicilio, comparte un enlace directo a tu menú. Puedes activar campos de nombre, teléfono y dirección según sea necesario."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Desde la configuración hasta recibir tu primer pedido en cinco pasos simples.",
+    "steps": [
+      {
+        "title": "Habilitar Pedidos en Línea",
+        "description": "Activa los pedidos en tu configuración de Diseño. Elige tu modo preferido: los pedidos aparecen en tu panel, se envían a WhatsApp, o ambos simultáneamente."
+      },
+      {
+        "title": "Configurar el Formulario de Pedido",
+        "description": "Selecciona qué campos deben completar los clientes al realizar un pedido. El nombre siempre es obligatorio, y opcionalmente puedes pedir el número de teléfono y la dirección de entrega."
+      },
+      {
+        "title": "Imprimir Códigos QR para Mesas",
+        "description": "Cada mesa en tu restaurante recibe su propio código QR único. Cuando los invitados lo escanean, su pedido llega automáticamente con el número de mesa correcto adjunto."
+      },
+      {
+        "title": "Los Clientes Realizan Pedidos",
+        "description": "Los invitados escanean el código QR, navegan por tu menú con fotos y precios, seleccionan artículos, añaden notas y envían su pedido. No se necesita descargar ninguna aplicación ni crear una cuenta."
+      },
+      {
+        "title": "Gestionar Pedidos en Tu Panel",
+        "description": "Los pedidos aparecen instantáneamente en tu panel. Actualiza el estado de cada pedido de nuevo a en progreso a completado. Tú mantienes el 100% de los ingresos — cero comisiones."
+      }
+    ]
   }
 }

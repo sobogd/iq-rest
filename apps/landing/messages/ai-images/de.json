@@ -46,5 +46,27 @@
         "answer": "Ja. Jedes Bild wird einzigartig für Ihr spezielles Gericht generiert. Keine Stockfotos — jedes Bild wird frisch basierend auf Ihrem Menüeintrag erstellt."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Erhalten Sie professionelle Food-Fotos für Ihr Menü in vier einfachen Schritten.",
+    "steps": [
+      {
+        "title": "Öffnen Sie ein beliebiges Menüelement",
+        "description": "Navigieren Sie zu dem Element, für das Sie ein Foto in Ihrem Dashboard möchten. Sie können Bilder für neue Gerichte generieren oder vorhandene Fotos für jedes Menüelement ersetzen."
+      },
+      {
+        "title": "Klicken Sie auf Bild generieren",
+        "description": "Die KI erstellt ein professionelles Food-Foto basierend auf dem Gerichtsnamen und der Beschreibung. Je mehr Details Sie in der Beschreibung angeben, desto genauer ist das Ergebnis."
+      },
+      {
+        "title": "Überprüfen Sie das Ergebnis",
+        "description": "Vorschau des generierten Bildes, bevor Sie es anwenden. Wenn Sie einen anderen Look wünschen, regenerieren Sie, um eine neue Variante zu erhalten. Jede Generierung produziert ein einzigartiges Bild."
+      },
+      {
+        "title": "Verwenden Sie es in Ihrem Menü",
+        "description": "Das Bild wird automatisch optimiert, auf WebP-Format komprimiert und erscheint sofort in Ihrem Live-Menü. Gäste sehen professionelle Food-Fotos zu jedem Gericht."
+      }
+    ]
   }
 }

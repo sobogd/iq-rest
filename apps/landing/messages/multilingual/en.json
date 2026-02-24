@@ -25,13 +25,35 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Make your menu available in multiple languages in four steps.",
+    "steps": [
+      {
+        "title": "Go to Language Settings",
+        "description": "Open the Languages page in your dashboard. You'll see all available languages and which ones are currently active on your menu."
+      },
+      {
+        "title": "Add Languages",
+        "description": "Select from 35 available languages. The free plan includes up to 2 languages, while Basic and Pro plans offer unlimited languages for your menu."
+      },
+      {
+        "title": "Translate Your Content",
+        "description": "Use one-click AI translation to translate your entire menu instantly, or enter translations manually for full control. You can also combine both approaches."
+      },
+      {
+        "title": "Guests Switch Languages",
+        "description": "A language selector appears on your menu page. When guests choose their language, the entire menu switches instantly. Their preference is saved for return visits."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about multilingual menus.",
     "items": [
       {
         "question": "How many languages can I add to my menu?",
-        "answer": "Up to 25+ languages including all major European languages, Chinese, Japanese, Korean, Arabic, Farsi, and more. Add as many as your guests need."
+        "answer": "Up to 35 languages including all major European languages, Chinese, Japanese, Korean, Arabic, Farsi, and more. Add as many as your guests need."
       },
       {
         "question": "Do I need to translate everything manually?",
@@ -44,6 +66,18 @@
       {
         "question": "Is multilingual support available on the free plan?",
         "answer": "The free plan includes up to 2 languages. Basic and Pro plans offer unlimited languages with AI translation included."
+      },
+      {
+        "question": "Which languages support right-to-left text?",
+        "answer": "Arabic and Farsi are fully supported with right-to-left (RTL) layout. The entire menu — text, navigation, and layout — automatically adjusts for RTL languages."
+      },
+      {
+        "question": "Can I translate table zones and reservation pages too?",
+        "answer": "Yes. Translations apply to your entire restaurant website — menu items, categories, table zone names, and all public-facing pages. Everything your guests see is translatable."
+      },
+      {
+        "question": "How does the language selector work for guests?",
+        "answer": "Guests see a language icon on your menu page. Tapping it shows all available languages. They select one and the entire menu switches immediately — no page reload needed."
       }
     ]
   }

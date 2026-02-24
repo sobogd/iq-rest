@@ -46,5 +46,27 @@
         "answer": "Het gratis plan bevat maximaal 2 talen. De Basic- en Pro-plannen bieden onbeperkte talen met AI-vertaling inbegrepen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Maak uw menu beschikbaar in meerdere talen in vier stappen.",
+    "steps": [
+      {
+        "title": "Ga naar Taalinstellingen",
+        "description": "Open de Talenpagina in uw dashboard. U ziet alle beschikbare talen en welke momenteel actief zijn op uw menu."
+      },
+      {
+        "title": "Voeg Talen Toe",
+        "description": "Kies uit 35 beschikbare talen. Het gratis plan omvat tot 2 talen, terwijl de Basis- en Pro-plannen onbeperkte talen voor uw menu aanbieden."
+      },
+      {
+        "title": "Vertaal Uw Inhoud",
+        "description": "Gebruik één-klik AI-vertaling om uw gehele menu onmiddellijk te vertalen, of voer vertalingen handmatig in voor volledige controle. U kunt ook beide benaderingen combineren."
+      },
+      {
+        "title": "Gasten Wisselen van Taal",
+        "description": "Een taalkeuzemenu verschijnt op uw menupagina. Wanneer gasten hun taal kiezen, schakelt het gehele menu onmiddellijk over. Hun voorkeur wordt opgeslagen voor terugkerende bezoeken."
+      }
+    ]
   }
 }

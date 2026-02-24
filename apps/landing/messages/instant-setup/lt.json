@@ -46,5 +46,27 @@
         "answer": "Nemokamame ir Basic planuose jūsų svetainė talpinama adresu iq-rest.com/m/jūsų-pavadinimas. Pro planas palaiko individualius domenų vardus pilnai prekės ženklo kontrolei."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Nuo nulio iki gyvos restorano svetainės keturiais žingsniais.",
+    "steps": [
+      {
+        "title": "Įveskite savo el. paštą",
+        "description": "Slaptažodis nereikalingas. Tiesiog įrašykite savo el. pašto adresą ir spustelėkite Tęsti. Nėra ilgo registracijos proceso, nereikia kredito kortelės ir jokių įsipareigojimų."
+      },
+      {
+        "title": "Patvirtinkite su kodu",
+        "description": "Patikrinkite savo gautuosius, ar yra 4 skaitmenų patvirtinimo kodas. Įveskite jį, kad saugiai prisijungtumėte. Šis be slaptažodžio metodas reiškia, kad reikia mažiau dalykų atsiminti."
+      },
+      {
+        "title": "Pavadinkite savo restoraną",
+        "description": "Duokite savo restoranui pavadinimą. Jis taps jūsų svetainės URL ir meniu pavadinimu. Visada galite jį pakeisti vėliau savo valdymo skydelyje."
+      },
+      {
+        "title": "Jūsų svetainė paruošta",
+        "description": "Pilna restorano svetainė su QR meniu, kontaktų puslapiu su žemėlapiu ir reaguojančiu dizainu yra gyva iš karto adresu iq-rest.com/m/jūsų-pavadinimas. Pridėkite savo patiekalus ir pradėkite dalintis."
+      }
+    ]
   }
 }

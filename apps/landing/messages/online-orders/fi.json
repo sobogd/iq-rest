@@ -68,5 +68,31 @@
         "answer": "Kyllä. Paikan päällä vieraat skannaavat QR-koodin pöydässään. Noutoihin tai toimituksiin jaat suoran linkin menuusi. Voit ottaa käyttöön nimi-, puhelin- ja osoitekentät tarpeen mukaan."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Asennuksesta ensimmäisen tilauksen vastaanottamiseen viidessä yksinkertaisessa vaiheessa.",
+    "steps": [
+      {
+        "title": "Ota verkkotilaus käyttöön",
+        "description": "Ota tilaukset käyttöön Design-asetuksissasi. Valitse haluamasi tilaustila: tilaukset näkyvät hallintapaneelissasi, lähetetään WhatsAppiin tai molemmat samanaikaisesti."
+      },
+      {
+        "title": "Määritä tilauslomake",
+        "description": "Valitse, mitkä kentät asiakkaiden on täytettävä tilauksen tekemisen yhteydessä. Nimi on aina pakollinen, ja voit halutessasi kysyä puhelinnumeroa ja toimitusosoitetta."
+      },
+      {
+        "title": "Tulosta QR-koodit pöydille",
+        "description": "Jokaiselle pöydälle ravintolassasi annetaan oma ainutlaatuinen QR-koodi. Kun vieraat skannaavat sen, heidän tilauksensa saapuu automaattisesti oikean pöydän numeron kanssa."
+      },
+      {
+        "title": "Asiakkaat tekevät tilauksia",
+        "description": "Vieraat skannaavat QR-koodin, selaavat valikkoasi kuvien ja hintojen kanssa, valitsevat tuotteita, lisäävät huomautuksia ja lähettävät tilauksensa. Sovelluksen lataamista tai tilin luomista ei tarvita."
+      },
+      {
+        "title": "Hallinnoi tilauksia hallintapaneelissasi",
+        "description": "Tilaukset näkyvät heti hallintapaneelissasi. Päivitä jokaisen tilauksen tila uudesta meneillään olevaan ja valmiiseen. Säilytät 100 % tuloista — nollakomissioita."
+      }
+    ]
   }
 }

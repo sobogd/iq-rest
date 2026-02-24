@@ -46,5 +46,27 @@
         "answer": "Ja. Elke afbeelding wordt uniek gegenereerd voor uw specifieke gerecht. Geen stockfoto's — elke afbeelding wordt vers gemaakt op basis van uw menu-item."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Ontvang professionele voedselfoto's voor je menu in vier eenvoudige stappen.",
+    "steps": [
+      {
+        "title": "Open Een Menu-item",
+        "description": "Navigeer naar het item waarvoor je een foto wilt in je dashboard. Je kunt afbeeldingen genereren voor nieuwe gerechten of bestaande foto's op elk menu-item vervangen."
+      },
+      {
+        "title": "Klik op Afbeelding Genereren",
+        "description": "AI creëert een professionele voedselfoto op basis van de naam en beschrijving van het gerecht. Hoe meer details je in de beschrijving geeft, hoe nauwkeuriger het resultaat."
+      },
+      {
+        "title": "Beoordeel het Resultaat",
+        "description": "Bekijk de gegenereerde afbeelding voordat je deze toepast. Als je een andere uitstraling wilt, genereer dan opnieuw om een nieuwe variatie te krijgen. Elke generatie produceert een unieke afbeelding."
+      },
+      {
+        "title": "Gebruik in Je Menu",
+        "description": "De afbeelding wordt automatisch geoptimaliseerd, gecomprimeerd naar WebP-formaat, en verschijnt onmiddellijk op je live menu. Gasten zien professionele voedselfoto's bij elk gerecht."
+      }
+    ]
   }
 }

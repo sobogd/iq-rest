@@ -68,5 +68,31 @@
         "answer": "Sí. Per menjar al local, els clients escanegen el codi QR a la seva taula. Per emportar o per a lliurament, comparteix un enllaç directe al teu menú. Pots activar els camps de nom, telèfon i adreça segons sigui necessari."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Des de la configuració fins a rebre la vostra primera comanda en cinc passos senzills.",
+    "steps": [
+      {
+        "title": "Habilita la Comanda en Línia",
+        "description": "Activa les comandes a la configuració de Disseny. Tria el teu mode preferit: les comandes apareixen al teu tauler, es reenvien a WhatsApp, o ambdós simultàniament."
+      },
+      {
+        "title": "Configura el Formulari de Comanda",
+        "description": "Selecciona quins camps han de completar els clients quan fan una comanda. El nom sempre és obligatori, i opcionalment pots demanar el número de telèfon i l'adreça de lliurament."
+      },
+      {
+        "title": "Imprimeix Codis QR per a les Taules",
+        "description": "Cada taula del teu restaurant té el seu propi codi QR únic. Quan els convidats el scanegen, la seva comanda arriba automàticament amb el número de taula correcte adjunt."
+      },
+      {
+        "title": "Els Clients Fan Comandes",
+        "description": "Els convidats scanegen el codi QR, naveguen pel teu menú amb fotos i preus, seleccionen articles, afegeixen notes i envien la seva comanda. No cal descarregar cap aplicació ni crear un compte."
+      },
+      {
+        "title": "Gestiona les Comandes al Teu Tauler",
+        "description": "Les comandes apareixen instantàniament al teu tauler. Actualitza l'estat de cada comanda de nova a en curs i completada. Tu mantens el 100% dels ingressos — zero comissions."
+      }
+    ]
   }
 }

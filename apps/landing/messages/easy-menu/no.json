@@ -46,5 +46,31 @@
         "answer": "Ja. Slaa av et element med ett trykk. Det forsvinner fra den offentlige menyen, men forblir i kontrollpanelet — slaa det paa igjen naar du er klar."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvordan det fungerer",
+    "subtitle": "Bygg og publiser menyen til restauranten din i fem enkle trinn.",
+    "steps": [
+      {
+        "title": "Opprett Kategorier",
+        "description": "Legg til kategorier som Forretter, Hovedretter, Desserter og Drikkevarer for å organisere menyen din. Du kan opprette så mange kategorier du trenger og omorganisere dem med dra og slipp."
+      },
+      {
+        "title": "Legg til Menyelementer",
+        "description": "Skriv inn navnet på retten, beskrivelsen og prisen for hvert element. Merk allergener hvis aktuelt — gjestene vil automatisk se allergenikoner på menyen."
+      },
+      {
+        "title": "Last opp eller Generer Bilder",
+        "description": "Last opp dine egne matbilder fra telefonen eller datamaskinen, eller bruk AI til å generere et profesjonelt matbilde fra rettenavnet. Bilder optimaliseres automatisk."
+      },
+      {
+        "title": "Organiser med Dra og Slipp",
+        "description": "Omorganiser kategorier og elementer ved å dra dem på plass. Slå av eller på ethvert element uten å slette det — perfekt for dagens spesialiteter eller utsolgte retter."
+      },
+      {
+        "title": "Publiser Menyen Din",
+        "description": "Endringer vises umiddelbart på din live QR-meny. Det finnes ingen 'publiser'-knapp — hver redigering går live i sanntid. Skriv ut QR-koden din og plasser den på bordene dine."
+      }
+    ]
   }
 }

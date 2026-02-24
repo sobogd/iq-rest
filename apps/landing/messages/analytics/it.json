@@ -46,5 +46,27 @@
         "answer": "I dati delle analisi vengono archiviati dal giorno in cui crei il tuo ristorante. Puoi visualizzare le tendenze giornaliere, settimanali e mensili per tutta la tua cronologia."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Inizia a monitorare le performance del tuo ristorante in quattro passaggi.",
+    "steps": [
+      {
+        "title": "Crea Il Tuo Ristorante",
+        "description": "Le analisi iniziano a essere tracciate dal momento in cui il tuo menu è online. Non c'è nulla da configurare: ogni visualizzazione di pagina, scansione QR e visitatore viene registrato automaticamente."
+      },
+      {
+        "title": "Condividi Il Tuo Codice QR",
+        "description": "Stampa il tuo codice QR e posizionalo sui tavoli, all'ingresso o sulle confezioni da asporto. Ogni scansione viene registrata con data e ora, lingua, dispositivo e pagina visitata."
+      },
+      {
+        "title": "Apri Il Dashboard Analitico",
+        "description": "Visualizza statistiche giornaliere, settimanali e mensili con grafici chiari. Monitora le visualizzazioni totali, i visitatori unici e le tendenze nel tempo da un'unica schermata del dashboard."
+      },
+      {
+        "title": "Esplora Analisi Dettagliate",
+        "description": "Visualizza le statistiche suddivise per pagina (menu, contatti, prenotazioni), lingua preferita, tipo di dispositivo e browser. Utilizza questi dati per ottimizzare il tuo menu e dare priorità alle traduzioni."
+      }
+    ]
   }
 }

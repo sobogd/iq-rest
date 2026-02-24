@@ -46,5 +46,27 @@
         "answer": "Taip, ir mes tai mylime! Daugelis mūsų funkcijų prasidėjo kaip vartotojų pasiūlymai. Parašykite mums savo idėją ir mes apsvarstysime ją būsimiems atnaujinimams."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Gaukite pagalbą iš tikro žmogaus keturiais paprastais žingsniais.",
+    "steps": [
+      {
+        "title": "Atidarykite pagalbos pokalbį",
+        "description": "Eikite į Pagalbos puslapį savo valdymo skydelyje. Pamatysite paprastą pokalbių sąsają, kur galite tiesiogiai įvesti savo žinutę — jokių bilietų formų ar kategorijų pasirinkimui."
+      },
+      {
+        "title": "Apibūdinkite savo klausimą",
+        "description": "Įveskite savo žinutę. Klauskite apie nustatymus, funkcijas, meniu optimizavimą, apmokėjimą ar bet ką kitą. Nėra kvailų klausimų — mes džiaugiamės galėdami padėti su viskuo."
+      },
+      {
+        "title": "Gaukite asmeninį atsakymą",
+        "description": "Tikras žmogus (ne chatbotas) perskaito jūsų žinutę ir atsako per kelias valandas. Mes suprantame restoranų darbo procesus ir teikiame praktiškus, veiksmingus atsakymus."
+      },
+      {
+        "title": "Nuolatinė pagalba",
+        "description": "Prašykite funkcijų pasiūlymų, gaukite meniu optimizavimo patarimų arba bet kada klauskite pagalbos nustatymuose. Jūsų pokalbių istorija yra išsaugota, todėl visada turime kontekstą iš ankstesnių klausimų."
+      }
+    ]
   }
 }

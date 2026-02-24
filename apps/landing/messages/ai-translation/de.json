@@ -46,5 +46,31 @@
         "answer": "Die KI-Übersetzung ist in den Plänen Basic und Pro mit großzügigen monatlichen Kontingenten enthalten. Keine Kosten pro Wort oder pro Gericht — übersetzen Sie so viel Sie möchten."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Übersetzen Sie Ihr gesamtes Menü in Minuten, nicht in Stunden.",
+    "steps": [
+      {
+        "title": "Fügen Sie Sprachen zu Ihrem Menü hinzu",
+        "description": "Gehen Sie zur Seite Sprachen in Ihrem Dashboard und wählen Sie aus, welche Sprachen Ihr Menü unterstützen soll. Wählen Sie aus 35 verfügbaren Sprachen, einschließlich aller wichtigen europäischen, asiatischen und nahöstlichen Sprachen."
+      },
+      {
+        "title": "Klicken Sie auf Übersetzen",
+        "description": "Ein Knopfdruck übersetzt alle Ihre Kategorien, Artikelnamen und Beschreibungen auf einmal. Das gesamte Menü wird in Sekunden verarbeitet, unabhängig davon, wie viele Artikel Sie haben."
+      },
+      {
+        "title": "KI versteht den kulinarischen Kontext",
+        "description": "Die KI kennt die kulinarische Terminologie über Kulturen hinweg. Sie bewahrt Gerichtsnamen wie 'Tiramisu' oder 'Pad Thai', während sie Beschreibungen, Zutatenlisten und Kategorienamen natürlich anpasst."
+      },
+      {
+        "title": "Überprüfen und Bearbeiten",
+        "description": "Jede Übersetzung ist vollständig bearbeitbar. Passen Sie die Formulierungen an Ihren Stil an. Ihre manuellen Änderungen werden auch dann beibehalten, wenn Sie später andere Teile des Menüs erneut übersetzen."
+      },
+      {
+        "title": "Veröffentlichen Sie Ihr mehrsprachiges Menü",
+        "description": "Gäste sehen einen Sprachumschalter in Ihrem Menü und können in ihrer bevorzugten Sprache stöbern. Jede Sprache kann unabhängig von Ihrem Dashboard ein- oder ausgeschaltet werden."
+      }
+    ]
   }
 }

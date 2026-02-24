@@ -46,5 +46,27 @@
         "answer": "Jelenleg egy fiók kezeli az éttermet. Egyszerre több eszközről is bejelentkezhet — telefonjáról, táblagépéről vagy számítógépéről."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan Működik",
+    "subtitle": "Kezelje éttermét bármilyen eszközről négy lépésben.",
+    "steps": [
+      {
+        "title": "Nyissa Meg a Munkafelületet a Telefonján",
+        "description": "Lépjen a iq-rest.com oldalra, és jelentkezzen be a telefonja böngészőjéből. A munkafelület automatikusan alkalmazkodik a képernyőméretéhez — nincs szükség alkalmazás letöltésére vagy telepítésére."
+      },
+      {
+        "title": "Szerkessze a Menüt Bárhol",
+        "description": "Adjon hozzá új tételeket, frissítse az árakat, változtassa meg a leírásokat, és töltsön fel fényképeket közvetlenül a telefonja kamerájából. Minden funkció, amely elérhető asztali gépen, ugyanolyan jól működik mobilon is."
+      },
+      {
+        "title": "Ellenőrizze a Rendelések és Foglalások Állapotát",
+        "description": "Nézze meg a beérkező rendeléseket, kezelje az asztalfoglalásokat, és válaszoljon a támogatási üzenetekre — mindezt a telefonjáról. Maradjon naprakész éttermével, még akkor is, ha távol van."
+      },
+      {
+        "title": "A Változtatások Azonnal Érvénybe lépnek",
+        "description": "Minden szerkesztés, amelyet a telefonján végez, valós időben megjelenik a QR menüjén. Nincs szükség szinkronizálásra, közzétételre vagy várakozásra — vendégei mindig a legfrissebb verziót látják."
+      }
+    ]
   }
 }

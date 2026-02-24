@@ -46,5 +46,27 @@
         "answer": "Il piano gratuito include fino a 2 lingue. I piani Basic e Pro offrono lingue illimitate con traduzione IA inclusa."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Rendi il tuo menu disponibile in più lingue in quattro passaggi.",
+    "steps": [
+      {
+        "title": "Vai alle Impostazioni della Lingua",
+        "description": "Apri la pagina Lingue nel tuo pannello di controllo. Vedrai tutte le lingue disponibili e quali sono attualmente attive sul tuo menu."
+      },
+      {
+        "title": "Aggiungi Lingue",
+        "description": "Seleziona tra 35 lingue disponibili. Il piano gratuito include fino a 2 lingue, mentre i piani Basic e Pro offrono lingue illimitate per il tuo menu."
+      },
+      {
+        "title": "Traduci i Tuoi Contenuti",
+        "description": "Utilizza la traduzione AI con un clic per tradurre istantaneamente l'intero menu, oppure inserisci le traduzioni manualmente per avere il pieno controllo. Puoi anche combinare entrambi gli approcci."
+      },
+      {
+        "title": "Gli Ospiti Cambiano Lingua",
+        "description": "Un selettore di lingua appare sulla pagina del tuo menu. Quando gli ospiti scelgono la loro lingua, l'intero menu cambia istantaneamente. La loro preferenza viene salvata per le visite future."
+      }
+    ]
   }
 }

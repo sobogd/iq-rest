@@ -46,5 +46,27 @@
         "answer": "Den gratis plan inkluderer op til 2 sprog. Basic- og Pro-planer tilbyder ubegraeensede sprog med AI-oversaettelse inkluderet."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Sådan fungerer det",
+    "subtitle": "Gør din menu tilgængelig på flere sprog i fire trin.",
+    "steps": [
+      {
+        "title": "Gå til Sprogindstillinger",
+        "description": "Åbn siden Sprog i dit dashboard. Du vil se alle tilgængelige sprog og hvilke der i øjeblikket er aktive på din menu."
+      },
+      {
+        "title": "Tilføj Sprog",
+        "description": "Vælg blandt 35 tilgængelige sprog. Den gratis plan inkluderer op til 2 sprog, mens Basic og Pro planer tilbyder ubegrænsede sprog til din menu."
+      },
+      {
+        "title": "Oversæt Dit Indhold",
+        "description": "Brug AI-oversættelse med ét klik for straks at oversætte din hele menu, eller indtast oversættelser manuelt for fuld kontrol. Du kan også kombinere begge tilgange."
+      },
+      {
+        "title": "Gæster Skifter Sprog",
+        "description": "En sprogvælger vises på din menupage. Når gæster vælger deres sprog, skifter hele menuen straks. Deres præference gemmes til fremtidige besøg."
+      }
+    ]
   }
 }

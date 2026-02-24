@@ -46,5 +46,27 @@
         "answer": "Con i piani gratuito e Basic, il tuo sito è ospitato su iq-rest.com/m/il-tuo-nome. Il piano Pro supporta nomi di dominio personalizzati per il pieno controllo del brand."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Da zero a un sito web di ristorante attivo in quattro passaggi.",
+    "steps": [
+      {
+        "title": "Inserisci la Tua Email",
+        "description": "Nessuna password necessaria. Basta digitare il tuo indirizzo email e cliccare su Continua. Non ci sono moduli di registrazione lunghi, nessuna carta di credito richiesta e nessun impegno."
+      },
+      {
+        "title": "Verifica con un Codice",
+        "description": "Controlla la tua casella di posta per un codice di verifica di 4 cifre. Inseriscilo per accedere in modo sicuro. Questo approccio senza password significa una cosa in meno da ricordare."
+      },
+      {
+        "title": "Dai un Nome al Tuo Ristorante",
+        "description": "Dai un nome al tuo ristorante. Diventerà il tuo URL del sito web e il titolo del menu. Puoi sempre cambiarlo in seguito dalle impostazioni della tua dashboard."
+      },
+      {
+        "title": "Il Tuo Sito Web È Pronto",
+        "description": "Un sito web completo per ristorante con menu QR, pagina di contatto con mappa e design reattivo è attivo immediatamente su iq-rest.com/m/tuo-nome. Aggiungi i tuoi piatti e inizia a condividere."
+      }
+    ]
   }
 }

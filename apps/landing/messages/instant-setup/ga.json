@@ -46,5 +46,27 @@
         "answer": "Ar na pleananna saor in aisce agus Basic, tá do shuíomh á óstáil ag iq-rest.com/m/d'ainm. Tacaíonn an plean Pro le hainmneacha fearainn saincheaptha le haghaidh smachta iomláin ar an mbranda."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Ó nialas go suíomh gréasáin bialainne beo i gceithre chéim.",
+    "steps": [
+      {
+        "title": "Cuir do Ríomhphost isteach",
+        "description": "Níl pasfhocal ag teastáil. Scríobh do sheoladh ríomhphoist agus cliceáil ar Lean ar aghaidh. Níl foirmeacha clárúcháin fada, níl cárta creidmheasa ag teastáil, agus níl aon gheallúintí."
+      },
+      {
+        "title": "Deimhnigh le Cód",
+        "description": "Seiceáil do bhosca isteach le haghaidh cód deimhniúcháin 4 dhigit. Cuir isteach é chun logáil isteach go sábháilte. Ciallaíonn an cur chuige gan phasfhocal go bhfuil rud amháin níos lú le cuimhneamh."
+      },
+      {
+        "title": "Ainmnigh do Bialann",
+        "description": "Tabhair ainm do do bialann. Éiríonn sé mar do URL suíomh gréasáin agus teideal an mhéara. Is féidir leat é a athrú níos déanaí ó do shocruithe painéil ghréasáin."
+      },
+      {
+        "title": "Tá do Shuíomh Gréasáin Réidh",
+        "description": "Tá suíomh gréasáin bialainne iomlán le méara QR, leathanach teagmhála le mapa, agus dearadh freagartha beo láithreach ag iq-rest.com/m/do-ainm. Cuir do mhiasa leis agus tús a chur le roinnt."
+      }
+    ]
   }
 }

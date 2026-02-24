@@ -46,5 +46,27 @@
         "answer": "Nee. Upload gewoon uw video of foto vanuit het dashboard. Het systeem regelt automatisch de afmetingen, compressie en lay-out. Uw website ziet er professioneel uit zonder designvaardigheden."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Pas de visuele identiteit van je restaurant aan in vier stappen.",
+    "steps": [
+      {
+        "title": "Open Ontwerpinstellingen",
+        "description": "Navigeer naar de Ontwerp-pagina in je dashboard. Hier kun je de visuele uitstraling van je restaurant beheersen — achtergrond, accentkleur en lay-out van de homepage."
+      },
+      {
+        "title": "Upload een Achtergrond",
+        "description": "Kies een video (MP4, WebM) of foto voor de achtergrond van je restauranthomepage. Video's worden automatisch herhaald, waardoor een meeslepende eerste indruk voor elke bezoeker ontstaat."
+      },
+      {
+        "title": "AI Achtergrond Generatie",
+        "description": "Heb je geen video of foto klaar? Laat AI automatisch een achtergrondafbeelding maken van je menu-items. Het genereert een professionele visual die past bij de stijl van je restaurant."
+      },
+      {
+        "title": "Voorbeeld en Opslaan",
+        "description": "Bekijk je wijzigingen in realtime voordat je opslaat. Video's worden automatisch gecomprimeerd en lazy-loaded, wat zorgt voor snelle prestaties op mobiele apparaten zonder in te boeten op visuele kwaliteit."
+      }
+    ]
   }
 }

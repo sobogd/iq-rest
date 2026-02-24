@@ -157,6 +157,57 @@ async function main() {
   }
 
   console.log(`\nDone! Translated ${totalMissing} missing keys across ${targetLangs.length} languages.`);
+
+  // Process feature subdirectories
+  const featureDirs = fs.readdirSync(messagesDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name);
+
+  let totalFeatureMissing = 0;
+
+  for (const featureDir of featureDirs) {
+    const featureEnPath = path.join(messagesDir, featureDir, "en.json");
+    if (!fs.existsSync(featureEnPath)) continue;
+
+    console.log(`\nProcessing feature: ${featureDir}`);
+    const featureEn = JSON.parse(fs.readFileSync(featureEnPath, "utf-8"));
+
+    for (const lang of targetLangs) {
+      const filePath = path.join(messagesDir, featureDir, `${lang}.json`);
+      if (!fs.existsSync(filePath)) {
+        console.log(`  ${lang}.json not found, skipping`);
+        continue;
+      }
+
+      const target = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      const missing = findMissing(featureEn, target);
+
+      if (!missing) {
+        console.log(`  ${lang}: up to date`);
+        continue;
+      }
+
+      const missingCount = JSON.stringify(missing).split('":"').length - 1;
+      totalFeatureMissing += missingCount;
+      console.log(`  ${lang}: ${missingCount} missing keys, translating...`);
+
+      try {
+        const translated = await translateChunk(missing, LANGUAGES[lang]);
+        deepSet(target, translated);
+        fs.writeFileSync(filePath, JSON.stringify(target, null, 2) + "\n", "utf-8");
+        console.log(`  ${lang}: done`);
+      } catch (error) {
+        console.error(`  ${lang}: ERROR`, error);
+        deepSet(target, missing);
+        fs.writeFileSync(filePath, JSON.stringify(target, null, 2) + "\n", "utf-8");
+        console.log(`  ${lang}: fallback to English`);
+      }
+
+      await new Promise((r) => setTimeout(r, 1000));
+    }
+  }
+
+  console.log(`\nFeature translations: ${totalFeatureMissing} missing keys across ${featureDirs.length} features.`);
 }
 
 main().catch(console.error);

@@ -46,5 +46,27 @@
         "answer": "Le plan gratuit inclut jusqu'à 2 langues. Les plans Basic et Pro offrent des langues illimitées avec traduction IA incluse."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Rendez votre menu disponible en plusieurs langues en quatre étapes.",
+    "steps": [
+      {
+        "title": "Allez dans les paramètres de langue",
+        "description": "Ouvrez la page Langues dans votre tableau de bord. Vous verrez toutes les langues disponibles et celles qui sont actuellement actives sur votre menu."
+      },
+      {
+        "title": "Ajouter des langues",
+        "description": "Sélectionnez parmi 35 langues disponibles. Le plan gratuit inclut jusqu'à 2 langues, tandis que les plans Basic et Pro offrent des langues illimitées pour votre menu."
+      },
+      {
+        "title": "Traduisez votre contenu",
+        "description": "Utilisez la traduction AI en un clic pour traduire instantanément l'ensemble de votre menu, ou saisissez les traductions manuellement pour un contrôle total. Vous pouvez également combiner les deux approches."
+      },
+      {
+        "title": "Les invités changent de langue",
+        "description": "Un sélecteur de langue apparaît sur votre page de menu. Lorsque les invités choisissent leur langue, l'ensemble du menu change instantanément. Leur préférence est enregistrée pour les visites suivantes."
+      }
+    ]
   }
 }

@@ -46,5 +46,31 @@
         "answer": "Já. Veldu sjálfvirka stillingu til að staðfesta pantanir samstundis miðað við framboð, eða handvirka stillingu til að yfirfara og samþykkja hverja beiðni sjálf/ur."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Settu upp netpantanir og byrjaðu að taka við bókunum í fimm skrefum.",
+    "steps": [
+      {
+        "title": "Virkja Pantanir",
+        "description": "Virkjaðu pantanir í stillingum veitingastaðarins þíns. Veldu á milli sjálfvirkrar staðfestingar, þar sem bókanir eru samþykktar strax miðað við framboð, eða handvirks mód þar sem þú skoðar hverja beiðni."
+      },
+      {
+        "title": "Bæta Við Borðum",
+        "description": "Búðu til borð með upplýsingum um getu og svæði — til dæmis, 'Borð 5, 4 gestir, Verönd'. Hvert borð verður bókanlegt, og kerfið kemur í veg fyrir tvöfaldar bókanir sjálfkrafa."
+      },
+      {
+        "title": "Setja Vinnustundir",
+        "description": "Skilgreindu tilboðnar stundir fyrir pantanir og veldu lengd tímabils — frá 15 mínútum til 8 klukkustunda. Aðeins tímabil innan vinnustunda þinna eru sýnd gestum."
+      },
+      {
+        "title": "Gestir Bóka á Netinu",
+        "description": "Kúnnar heimsækja síðu veitingastaðarins þíns, velja dagsetningu, tíma og fjölda fólks, slá inn nafn og símanúmer, og senda. Engin skráning eða app niðurhal nauðsynlegt — virkar í hvaða vafra sem er."
+      },
+      {
+        "title": "Stjórna Bókunum í Stjórnborði Þínu",
+        "description": "Skoðaðu allar pantanir í stjórnborði þínu. Staðfestu, aflýstu eða merktu bókanir sem lokið. Bæði þú og gesturinn fái tölvupóstsviðvaranir fyrir hverja uppfærslu á bókun."
+      }
+    ]
   }
 }

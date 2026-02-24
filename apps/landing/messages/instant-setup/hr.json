@@ -46,5 +46,27 @@
         "answer": "Na besplatnom i Basic planu vaša stranica je na adresi iq-rest.com/m/vaše-ime. Pro plan podržava prilagođene domene za potpunu kontrolu brenda."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Od nule do aktivne web stranice restorana u četiri koraka.",
+    "steps": [
+      {
+        "title": "Unesite svoju e-poštu",
+        "description": "Nema potrebe za lozinkom. Samo upišite svoju adresu e-pošte i kliknite Nastavi. Nema dugih obrazaca za registraciju, nema potrebe za kreditnom karticom i nema obaveza."
+      },
+      {
+        "title": "Verificirajte s kodom",
+        "description": "Provjerite svoju pristiglu poštu za 4-znamenkasti verifikacijski kod. Unesite ga kako biste se sigurno prijavili. Ovaj pristup bez lozinke znači da imate jednu stvar manje za zapamtiti."
+      },
+      {
+        "title": "Imenujte svoj restoran",
+        "description": "Dajte svom restoranu ime. To postaje vaša URL adresa web stranice i naslov jelovnika. Uvijek ga možete promijeniti kasnije iz postavki nadzorne ploče."
+      },
+      {
+        "title": "Vaša web stranica je spremna",
+        "description": "Potpuna web stranica restorana s QR jelovnikom, kontakt stranicom s kartom i responzivnim dizajnom odmah je aktivna na iq-rest.com/m/vaše-ime. Dodajte svoja jela i počnite dijeliti."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Trenutno en račun upravlja restavracijo. Prijavite se lahko z več naprav hkrati — telefon, tablica ali računalnik."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Upravljajte svojo restavracijo z katere koli naprave v štirih korakih.",
+    "steps": [
+      {
+        "title": "Odprite nadzorno ploščo na svojem telefonu",
+        "description": "Pojdite na iq-rest.com in se prijavite preko brskalnika na vašem telefonu. Nadzorna plošča se samodejno prilagodi velikosti vašega zaslona — ni potrebe po prenosu ali namestitvi aplikacije."
+      },
+      {
+        "title": "Uredite meni kjerkoli",
+        "description": "Dodajte nove postavke, posodobite cene, spremenite opise in naložite fotografije neposredno iz kamere vašega telefona. Vsaka funkcija, ki je na voljo na namizju, deluje prav tako dobro na mobilnih napravah."
+      },
+      {
+        "title": "Preverite naročila in rezervacije",
+        "description": "Oglejte si prihajajoča naročila, upravljajte s rezervacijami miz in odgovarjajte na sporočila za podporo — vse to iz svojega telefona. Bodite na tekočem s svojo restavracijo, tudi ko ste odsotni."
+      },
+      {
+        "title": "Spremembe se takoj aktivirajo",
+        "description": "Vsaka sprememba, ki jo naredite s svojega telefona, se na vašem QR meniju prikaže v realnem času. Ni potrebe po sinhronizaciji, objavi ali čakanju — vaši gostje vedno vidijo najnovejšo različico."
+      }
+    ]
   }
 }

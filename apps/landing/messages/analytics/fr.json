@@ -46,5 +46,27 @@
         "answer": "Les données d'analyse sont stockées depuis le jour de la création de votre restaurant. Vous pouvez consulter les tendances quotidiennes, hebdomadaires et mensuelles sur tout votre historique."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Commencez à suivre la performance de votre restaurant en quatre étapes.",
+    "steps": [
+      {
+        "title": "Créez Votre Restaurant",
+        "description": "Les analyses commencent à suivre dès que votre menu est en ligne. Il n'y a rien à configurer — chaque vue de page, scan QR et visiteur est enregistré automatiquement."
+      },
+      {
+        "title": "Partagez Votre Code QR",
+        "description": "Imprimez votre code QR et placez-le sur les tables, à l'entrée ou sur les emballages à emporter. Chaque scan est enregistré avec un horodatage, la langue, le dispositif et la page visitée."
+      },
+      {
+        "title": "Ouvrez le Tableau de Bord d'Analyse",
+        "description": "Consultez les statistiques quotidiennes, hebdomadaires et mensuelles avec des graphiques clairs. Suivez le nombre total de vues, les visiteurs uniques et les tendances au fil du temps depuis un seul écran de tableau de bord."
+      },
+      {
+        "title": "Explorez les Détails Détaillés",
+        "description": "Consultez les statistiques décomposées par page (menu, contacts, réservations), langue préférée, type de dispositif et navigateur. Utilisez ces données pour optimiser votre menu et prioriser les traductions."
+      }
+    ]
   }
 }

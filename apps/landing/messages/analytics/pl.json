@@ -46,5 +46,27 @@
         "answer": "Dane analityczne są przechowywane od dnia utworzenia restauracji. Możesz przeglądać dzienne, tygodniowe i miesięczne trendy za całą historię."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Rozpocznij śledzenie wydajności swojej restauracji w czterech krokach.",
+    "steps": [
+      {
+        "title": "Utwórz swoją restaurację",
+        "description": "Analiza zaczyna śledzenie od momentu, gdy Twoje menu staje się dostępne. Nie ma nic do skonfigurowania — każdy widok strony, skan QR i odwiedzający są automatycznie rejestrowani."
+      },
+      {
+        "title": "Udostępnij swój kod QR",
+        "description": "Wydrukuj swój kod QR i umieść go na stołach, przy wejściu lub na opakowaniach na wynos. Każdy skan jest rejestrowany z datą i godziną, językiem, urządzeniem i odwiedzoną stroną."
+      },
+      {
+        "title": "Otwórz pulpit analityczny",
+        "description": "Zobacz codzienne, tygodniowe i miesięczne statystyki w przejrzystych wykresach. Śledź łączną liczbę wyświetleń, unikalnych odwiedzających i trendy w czasie z jednego ekranu pulpitu."
+      },
+      {
+        "title": "Zbadaj szczegółowe analizy",
+        "description": "Zobacz statystyki podzielone według strony (menu, kontakty, rezerwacje), preferowanego języka, typu urządzenia i przeglądarki. Wykorzystaj te dane, aby zoptymalizować swoje menu i priorytetyzować tłumaczenia."
+      }
+    ]
   }
 }

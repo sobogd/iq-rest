@@ -46,5 +46,27 @@
         "answer": "Ní theastaíonn. Uaslódáil do fhíseán nó do ghrianghraf ón bpainéal rialaithe. Láimhseálann an córas méid, comhbhrú agus leagan amach go huathoibríoch. Beidh cuma ghairmiúil ar do shuíomh gréasáin gan aon scileanna deartha."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Saincheap do shainmhíniú amhairc bialainne i gceithre chéim.",
+    "steps": [
+      {
+        "title": "Oscail Socruithe Dearaidh",
+        "description": "Téigh chuig an leathanach Dearaidh i do dhíseán. Anseo is féidir leat smacht a fháil ar chuma amhairc do bhialann — cúlra, dath béim, agus leagan amach an leathanach baile."
+      },
+      {
+        "title": "Uaslódáil Cúlra",
+        "description": "Roghnaigh físeán (MP4, WebM) nó grianghraf do chúlra leathanach baile do bhialann. Casann físeáin go huathoibríoch, ag cruthú tuairim chéad imprisean do gach cuairteoir."
+      },
+      {
+        "title": "Giniúint Cúlra AI",
+        "description": "Níl físeán nó grianghraf agat réidh? Lig do AI íomhá cúlra a chruthú go huathoibríoch ó do chuid míreanna gasta. Cruthaíonn sé amhairc ghairmiúil a comhoibríonn le stíl do bhialann."
+      },
+      {
+        "title": "Réamhamharc agus Sábháil",
+        "description": "Féach ar do chuid athruithe i bhfíor-am sula sábhálann tú. Comhoibríonn físeáin go huathoibríoch agus luchtú le moill, ag cinntiú go bhfuil feidhmíocht tapa ar ghléasanna soghluaiste gan cáilíocht amhairc a chailleadh."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Kylla. Jokainen kuva generoidaan ainutlaatuisesti juuri sinun annoksellesi. Ei kuvapankkikuvia — jokainen kuva luodaan alusta alkaen ruokalistakohteesi perusteella."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Hanki ammattimaisia ruokakuvia valikkoosi neljässä yksinkertaisessa vaiheessa.",
+    "steps": [
+      {
+        "title": "Avaa mikä tahansa valikkokohta",
+        "description": "Siirry hallintapaneelissasi kohtaan, josta haluat kuvan. Voit luoda kuvia uusista ruoista tai korvata olemassa olevia kuvia missä tahansa valikkokohdassa."
+      },
+      {
+        "title": "Napsauta Luo kuva",
+        "description": "AI luo ammattimaisen ruokakuvan ruoan nimen ja kuvauksen perusteella. Mitä enemmän yksityiskohtia annat kuvauksessa, sitä tarkempi tulos on."
+      },
+      {
+        "title": "Tarkista tulos",
+        "description": "Esikatsele luotua kuvaa ennen sen käyttämistä. Jos haluat erilaisen ilmeen, luo kuva uudelleen saadaksesi uuden variaation. Jokainen luonti tuottaa ainutlaatuisen kuvan."
+      },
+      {
+        "title": "Käytä valikossasi",
+        "description": "Kuva optimoidaan automaattisesti, pakataan WebP-muotoon ja näkyy heti live-valikossasi. Vieraasi näkevät ammattimaisia ruokakuvia jokaisesta ruoasta."
+      }
+    ]
   }
 }

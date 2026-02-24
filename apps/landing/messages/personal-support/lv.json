@@ -46,5 +46,27 @@
         "answer": "Jā, un mums tas ļoti patīk! Daudzas mūsu funkcijas sākās kā lietotāju ieteikumi. Rakstiet mums ar savu ideju, un mēs to apsvērsim turpmākajos atjauninājumos."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "subtitle": "Saņemiet palīdzību no īstas personas četros vienkāršos soļos.",
+    "steps": [
+      {
+        "title": "Atveriet atbalsta čatu",
+        "description": "Dodieties uz atbalsta lapu savā panelī. Jūs redzēsiet vienkāršu čata saskarni, kur varat tieši ierakstīt savu ziņu — nav nepieciešami biļešu veidlapas vai kategorijas izvēlei."
+      },
+      {
+        "title": "Aprakstiet savu jautājumu",
+        "description": "Ierakstiet savu ziņu. Jautājiet par iestatīšanu, funkcijām, ēdienkartes optimizāciju, rēķiniem vai jebko citu. Nav muļķīgu jautājumu — mēs labprāt palīdzēsim ar visu."
+      },
+      {
+        "title": "Saņemiet personīgu atbildi",
+        "description": "Īsta persona (nevis čatbots) izlasīs jūsu ziņu un atbildēs dažu stundu laikā. Mēs saprotam restorānu darba plūsmas un sniedzam praktiskas, rīcībspējīgas atbildes."
+      },
+      {
+        "title": "Nepārtraukta palīdzība",
+        "description": "Lūdziet funkciju ieteikumus, saņemiet ēdienkartes optimizācijas padomus vai jautājiet par iestatīšanas palīdzību jebkurā laikā. Jūsu sarunu vēsture tiek saglabāta, tāpēc mums vienmēr ir konteksts no iepriekšējiem jautājumiem."
+      }
+    ]
   }
 }

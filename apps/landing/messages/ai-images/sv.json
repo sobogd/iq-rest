@@ -46,5 +46,27 @@
         "answer": "Ja. Varje bild genereras unikt for din specifika ratt. Inga stockfoton — varje bild skapas fran grunden baserat pa din menyartikel."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Så här fungerar det",
+    "subtitle": "Få professionella matbilder till din meny i fyra enkla steg.",
+    "steps": [
+      {
+        "title": "Öppna valfri menyartikel",
+        "description": "Navigera till den artikel du vill ha en bild på i din instrumentpanel. Du kan generera bilder för nya rätter eller ersätta befintliga foton på valfri menyartikel."
+      },
+      {
+        "title": "Klicka på Generera bild",
+        "description": "AI skapar en professionell matbild baserat på rätten namn och beskrivning. Ju mer detaljer du anger i beskrivningen, desto mer exakt blir resultatet."
+      },
+      {
+        "title": "Granska resultatet",
+        "description": "Förhandsgranska den genererade bilden innan du tillämpar den. Om du vill ha ett annat utseende, regenerera för att få en ny variation. Varje generation producerar en unik bild."
+      },
+      {
+        "title": "Använd i din meny",
+        "description": "Bilden optimeras automatiskt, komprimeras till WebP-format och visas på din live-meny omedelbart. Gästerna ser professionella matbilder på varje rätt."
+      }
+    ]
   }
 }

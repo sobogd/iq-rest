@@ -1560,7 +1560,8 @@
         "invalidCode": "Ogiltig kod. Försök igen.",
         "emailRequired": "Ange din e-post.",
         "emailInvalid": "Ange en giltig e-post."
-      }
+      },
+      "or": "eller"
     },
     "analytics": {
       "monthlyUsage": "Månatlig användning",

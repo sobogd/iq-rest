@@ -21,6 +21,24 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Match your menu to your brand in three simple steps.",
+    "steps": [
+      {
+        "title": "Open Design Settings",
+        "description": "Navigate to the Design page in your dashboard. The accent color picker is front and center — you'll see all available options immediately."
+      },
+      {
+        "title": "Pick Your Brand Color",
+        "description": "Choose from 12 curated color presets designed for readability and accessibility, or enter your exact hex code for a perfect brand match."
+      },
+      {
+        "title": "Instant Preview",
+        "description": "Your accent color applies to buttons, links, and highlights across the entire menu. It works in both light and dark themes, and changes appear instantly on your live menu."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about menu customization.",
@@ -36,6 +54,18 @@
       {
         "question": "Will my QR code match the brand colors too?",
         "answer": "Your QR code is generated separately and can be customized independently. The accent color applies to your digital menu pages, navigation, and interactive elements."
+      },
+      {
+        "question": "Does the accent color work with dark mode?",
+        "answer": "Yes. Your chosen accent color is applied in both light and dark themes. The system automatically adjusts brightness and contrast to ensure readability in either mode."
+      },
+      {
+        "question": "Is custom color available on the free plan?",
+        "answer": "Yes. The accent color feature is available on every plan, including free. All restaurants can match their menu to their brand at no cost."
+      },
+      {
+        "question": "Which elements use the accent color?",
+        "answer": "The accent color is applied to buttons, links, active states, highlights, and navigation elements across your entire menu — homepage, menu page, contacts, and reservation page."
       }
     ]
   }

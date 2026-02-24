@@ -46,5 +46,27 @@
         "answer": "Jā. Katrs attēls tiek unikāli ģenerēts jūsu konkrētajam ēdienam. Nav akciju fotogrāfiju — katrs attēls tiek izveidots no jauna, pamatojoties uz jūsu ēdienkartes vienumu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "subtitle": "Iegūstiet profesionālas ēdienu fotogrāfijas savam ēdienkartei četros vienkāršos soļos.",
+    "steps": [
+      {
+        "title": "Atveriet jebkuru ēdiena vienumu",
+        "description": "Pārejiet uz vienumu, kuram vēlaties iegūt fotogrāfiju savā vadības panelī. Jūs varat ģenerēt attēlus jauniem ēdieniem vai aizstāt esošās fotogrāfijas jebkuram ēdiena vienumam."
+      },
+      {
+        "title": "Noklikšķiniet uz Ģenerēt attēlu",
+        "description": "AI izveido profesionālu ēdiena fotogrāfiju, pamatojoties uz ēdiena nosaukumu un aprakstu. Jo vairāk detaļu jūs sniegsiet aprakstā, jo precīzāks būs rezultāts."
+      },
+      {
+        "title": "Pārskatiet rezultātu",
+        "description": "Apskatiet ģenerēto attēlu pirms tā pielietošanas. Ja vēlaties citu izskatu, ģenerējiet vēlreiz, lai iegūtu jaunu variāciju. Katrs ģenerēšanas process rada unikālu attēlu."
+      },
+      {
+        "title": "Izmantojiet savā ēdienkartē",
+        "description": "Attēls tiek automātiski optimizēts, saspiests uz WebP formātu un tūlīt parādās jūsu tiešajā ēdienkartē. Viesi redz profesionālas ēdienu fotogrāfijas katram ēdienam."
+      }
+    ]
   }
 }

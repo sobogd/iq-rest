@@ -46,5 +46,31 @@
         "answer": "Ja. Wählen Sie den automatischen Modus, um Buchungen sofort basierend auf Verfügbarkeit zu bestätigen, oder den manuellen Modus, um jede Anfrage selbst zu prüfen und zu genehmigen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Richten Sie Online-Reservierungen ein und beginnen Sie, Buchungen in fünf Schritten zu akzeptieren.",
+    "steps": [
+      {
+        "title": "Reservierungen aktivieren",
+        "description": "Aktivieren Sie Reservierungen in Ihren Restaurant-Einstellungen. Wählen Sie zwischen automatischer Bestätigung, bei der Buchungen sofort basierend auf der Verfügbarkeit genehmigt werden, oder dem manuellen Modus, in dem Sie jede Anfrage überprüfen."
+      },
+      {
+        "title": "Fügen Sie Ihre Tische hinzu",
+        "description": "Erstellen Sie Tische mit Kapazitäts- und Zoneninformationen – zum Beispiel 'Tisch 5, 4 Gäste, Terrasse'. Jeder Tisch wird buchbar, und das System verhindert automatisch Doppelbuchungen."
+      },
+      {
+        "title": "Arbeitszeiten festlegen",
+        "description": "Definieren Sie Ihre verfügbaren Stunden für Reservierungen und wählen Sie die Dauer der Zeitfenster – von 15 Minuten bis 8 Stunden. Nur Zeitfenster innerhalb Ihrer Arbeitszeiten werden den Gästen angezeigt."
+      },
+      {
+        "title": "Gäste buchen online",
+        "description": "Kunden besuchen Ihre Restaurantseite, wählen ihr Datum, ihre Uhrzeit und die Größe der Gruppe, geben ihren Namen und ihre Telefonnummer ein und senden ab. Kein Konto oder App-Download erforderlich – funktioniert in jedem Browser."
+      },
+      {
+        "title": "Buchungen in Ihrem Dashboard verwalten",
+        "description": "Sehen Sie alle Reservierungen in Ihrem Dashboard. Bestätigen, stornieren oder markieren Sie Buchungen als abgeschlossen. Sowohl Sie als auch der Gast erhalten E-Mail-Benachrichtigungen für jedes Update zur Buchung."
+      }
+    ]
   }
 }

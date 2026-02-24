@@ -46,5 +46,27 @@
         "answer": "Tallae hetkellae yksi tili hallitsee ravintolaa. Voit kirjautua sisaan usealta laitteelta samanaikaisesti — puhelimesta, tabletista tai tietokoneesta."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Hallitse ravintolaasi mistä tahansa laitteesta neljässä vaiheessa.",
+    "steps": [
+      {
+        "title": "Avaa hallintapaneeli puhelimessasi",
+        "description": "Siirry osoitteeseen iq-rest.com ja kirjaudu sisään puhelimesi selaimesta. Hallintapaneeli mukautuu automaattisesti näyttökokoosi — ei tarvitse ladata tai asentaa sovellusta."
+      },
+      {
+        "title": "Muokkaa valikkoa missä tahansa",
+        "description": "Lisää uusia tuotteita, päivitä hintoja, muuta kuvastoja ja lataa valokuvia suoraan puhelimesi kamerasta. Kaikki työpöydällä saatavilla olevat ominaisuudet toimivat yhtä hyvin mobiilissa."
+      },
+      {
+        "title": "Tarkista tilaukset ja varaukset",
+        "description": "Näe saapuvat tilaukset, hallitse pöytävarauksia ja vastaa tukiviesteihin — kaikki puhelimestasi. Pysy ajan tasalla ravintolasi kanssa, vaikka olisit poissa."
+      },
+      {
+        "title": "Muutokset tulevat voimaan heti",
+        "description": "Jokainen muokkaus, jonka teet puhelimestasi, näkyy QR-valikossasi reaaliajassa. Ei tarvitse synkronoida, julkaista tai odottaa — vieraasi näkevät aina viimeisimmän version."
+      }
+    ]
   }
 }

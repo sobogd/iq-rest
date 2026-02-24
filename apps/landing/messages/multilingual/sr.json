@@ -46,5 +46,27 @@
         "answer": "Besplatan plan uključuje do 2 jezika. Basic i Pro planovi nude neograničen broj jezika sa uključenim AI prevodom."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcioniše",
+    "subtitle": "Učinite svoj meni dostupnim na više jezika u četiri koraka.",
+    "steps": [
+      {
+        "title": "Idite na Podešavanja jezika",
+        "description": "Otvorite stranicu Jezici na vašem kontrolnom panelu. Videćete sve dostupne jezike i koji su trenutno aktivni na vašem meniju."
+      },
+      {
+        "title": "Dodajte jezike",
+        "description": "Izaberite između 35 dostupnih jezika. Besplatan plan uključuje do 2 jezika, dok Basic i Pro planovi nude neograničene jezike za vaš meni."
+      },
+      {
+        "title": "Prevedite svoj sadržaj",
+        "description": "Koristite AI prevod jednim klikom da odmah prevedete ceo svoj meni, ili unesite prevode ručno za potpunu kontrolu. Takođe možete kombinovati oba pristupa."
+      },
+      {
+        "title": "Gosti menjaju jezike",
+        "description": "Selector jezika se pojavljuje na stranici vašeg menija. Kada gosti izaberu svoj jezik, ceo meni se odmah menja. Njihova preferencija se čuva za povratne posete."
+      }
+    ]
   }
 }

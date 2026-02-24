@@ -68,5 +68,31 @@
         "answer": "Ja. Für den Verzehr vor Ort scannen Gäste den QR-Code an ihrem Tisch. Für Abholung oder Lieferung teilen Sie einen direkten Link zu Ihrem Menü. Name-, Telefon- und Adressfelder können nach Bedarf aktiviert werden."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Von der Einrichtung bis zum Erhalt Ihrer ersten Bestellung in fünf einfachen Schritten.",
+    "steps": [
+      {
+        "title": "Online-Bestellungen aktivieren",
+        "description": "Aktivieren Sie Bestellungen in Ihren Designeinstellungen. Wählen Sie Ihren bevorzugten Modus: Bestellungen erscheinen in Ihrem Dashboard, werden an WhatsApp weitergeleitet oder beides gleichzeitig."
+      },
+      {
+        "title": "Das Bestellformular konfigurieren",
+        "description": "Wählen Sie aus, welche Felder Kunden beim Aufgeben einer Bestellung ausfüllen müssen. Der Name ist immer erforderlich, und Sie können optional nach der Telefonnummer und der Lieferadresse fragen."
+      },
+      {
+        "title": "QR-Codes für Tische drucken",
+        "description": "Jeder Tisch in Ihrem Restaurant erhält seinen eigenen einzigartigen QR-Code. Wenn Gäste ihn scannen, wird ihre Bestellung automatisch mit der richtigen Tischnummer übermittelt."
+      },
+      {
+        "title": "Kunden geben Bestellungen auf",
+        "description": "Gäste scannen den QR-Code, durchstöbern Ihr Menü mit Fotos und Preisen, wählen Artikel aus, fügen Notizen hinzu und reichen ihre Bestellung ein. Kein Herunterladen einer App oder Erstellen eines Kontos erforderlich."
+      },
+      {
+        "title": "Bestellungen in Ihrem Dashboard verwalten",
+        "description": "Bestellungen erscheinen sofort in Ihrem Dashboard. Aktualisieren Sie den Status jeder Bestellung von neu über in Bearbeitung bis abgeschlossen. Sie behalten 100 % des Umsatzes — null Provisionen."
+      }
+    ]
   }
 }

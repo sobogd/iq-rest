@@ -46,5 +46,27 @@
         "answer": "Tasuta plaan sisaldab kuni 2 keelt. Basic ja Pro plaanid pakuvad piiramatut arvu keeli koos kaasatud tehisintellekti tõlkega."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Tehke oma menüü kättesaadavaks mitmes keeles neljas sammus.",
+    "steps": [
+      {
+        "title": "Mine Keelesätetesse",
+        "description": "Avage oma juhtpaneelil Keeled leht. Näete kõiki saadaval olevaid keeli ja millised neist on teie menüüs hetkel aktiivsed."
+      },
+      {
+        "title": "Lisa Keeled",
+        "description": "Valige 35 saadaval olevast keelest. Tasuta plaan sisaldab kuni 2 keelt, samas kui Basic ja Pro plaanid pakuvad teie menüü jaoks piiramatult keeli."
+      },
+      {
+        "title": "Tõlgi Oma Sisu",
+        "description": "Kasutage ühe klõpsuga AI tõlget, et tõlkida oma kogu menüü koheselt, või sisestage tõlked käsitsi täieliku kontrolli jaoks. Samuti saate kombineerida mõlemat lähenemist."
+      },
+      {
+        "title": "Külastajad Vahetavad Keeled",
+        "description": "Menüü lehel ilmub keelevalija. Kui külastajad valivad oma keele, vahetub kogu menüü koheselt. Nende eelistus salvestatakse tagasituleku külastuste jaoks."
+      }
+    ]
   }
 }

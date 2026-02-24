@@ -38,5 +38,23 @@
         "answer": "QR kóðinn er búinn til sérstaklega og hægt er að sérsníða hann óháð öðru. Áhersluliturinn gildir um síður stafræna matseðilsins, leiðsögn og gagnvirka þætti."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Samsvaraðu matseðlinum þínum við vörumerkið þitt í þremur einföldum skrefum.",
+    "steps": [
+      {
+        "title": "Opnaðu hönnunarstillingar",
+        "description": "Fara á hönnunarsíðuna í stjórnborðinu þínu. Akcent litaval er í miðjunni — þú sérð allar tiltækar valkostir strax."
+      },
+      {
+        "title": "Veldu lit vörumerkisins þíns",
+        "description": "Veldu úr 12 sérvaldum litapresettingum sem eru hannaðar fyrir læsileika og aðgengi, eða sláðu inn nákvæma hex kóðann þinn fyrir fullkomna samsvörun við vörumerkið."
+      },
+      {
+        "title": "Sofandi forsýning",
+        "description": "Akcent liturinn þinn fer á hnappana, tenglana og áherslurnar um alla matseðilinn. Það virkar bæði í ljósum og dökkum þemum, og breytingar koma strax fram á lifandi matseðlinum þínum."
+      }
+    ]
   }
 }

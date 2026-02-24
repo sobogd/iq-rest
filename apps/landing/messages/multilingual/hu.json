@@ -46,5 +46,27 @@
         "answer": "Az ingyenes csomag legfeljebb 2 nyelvet tartalmaz. A Basic és Pro csomagok korlátlan nyelvet kínálnak AI fordítással együtt."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan működik",
+    "subtitle": "Tedd elérhetővé az étlapodat több nyelven négy lépésben.",
+    "steps": [
+      {
+        "title": "Menj a Nyelvi Beállításokhoz",
+        "description": "Nyisd meg a Nyelvek oldalt a műszerfaladon. Látni fogod az összes elérhető nyelvet, és hogy melyek aktívak jelenleg az étlapodon."
+      },
+      {
+        "title": "Nyelvek hozzáadása",
+        "description": "Válassz az elérhető 35 nyelvből. A ingyenes csomag legfeljebb 2 nyelvet tartalmaz, míg az Alap és Prémium csomagok korlátlan nyelvet kínálnak az étlapodhoz."
+      },
+      {
+        "title": "Tartalom Fordítása",
+        "description": "Használj egygombos AI fordítást az egész étlapod azonnali lefordításához, vagy írd be a fordításokat manuálisan a teljes ellenőrzés érdekében. A két megközelítést is kombinálhatod."
+      },
+      {
+        "title": "A Vendégek Nyelvet Válthatnak",
+        "description": "Egy nyelvválasztó jelenik meg az étlapodon. Amikor a vendégek kiválasztják a nyelvüket, az egész étlap azonnal átvált. Az ő preferenciájuk elmentésre kerül a visszatérő látogatásokhoz."
+      }
+    ]
   }
 }

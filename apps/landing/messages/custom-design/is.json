@@ -46,5 +46,27 @@
         "answer": "Nei. Hladdu bara upp myndbandinu eða myndinni úr stjórnborðinu. Kerfið sér um stærðir, þjöppun og uppsetningu sjálfkrafa. Vefsíðan þín lítur fagleg út án nokkurrar hönnunarþekkingar."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Sérsníddu sjónræna auðkenni veitingastaðarins þíns í fjórum skrefum.",
+    "steps": [
+      {
+        "title": "Opna hönnunarstillingar",
+        "description": "Fara á hönnunarvefinn í stjórnborðinu þínu. Hér geturðu stjórnað sjónrænu útliti veitingastaðarins þíns — bakgrunni, áhersluflötum og uppsetningu heimasíðu."
+      },
+      {
+        "title": "Hlaða upp bakgrunni",
+        "description": "Veldu myndband (MP4, WebM) eða ljósmynd fyrir bakgrunn heimasíðu veitingastaðarins þíns. Myndbönd endurtaka sig sjálfkrafa, sem skapar áhrifamikla fyrstu skynjun fyrir hvern gest."
+      },
+      {
+        "title": "AI bakgrunnsgenerering",
+        "description": "Ertu ekki með myndband eða ljósmynd tilbúið? Leyfðu AI að búa til bakgrunnsmynd úr matseðlinum þínum sjálfkrafa. Það býr til faglegt útlit sem passar við stíl veitingastaðarins þíns."
+      },
+      {
+        "title": "Forskoða og vista",
+        "description": "Sjáðu breytingarnar í rauntíma áður en þú vistir. Myndbönd eru sjálfkrafa þjöppuð og hlaðin á skynsamlegan hátt, sem tryggir hraða frammistöðu á farsímum án þess að fórna sjónrænum gæðum."
+      }
+    ]
   }
 }

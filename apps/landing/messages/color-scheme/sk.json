@@ -38,5 +38,23 @@
         "answer": "QR kód sa generuje samostatne a dá sa prispôsobiť nezávisle. Farba zvýraznenia sa aplikuje na stránky digitálneho menu, navigáciu a interaktívne prvky."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Prispôsobte svoje menu svojej značke v troch jednoduchých krokoch.",
+    "steps": [
+      {
+        "title": "Otvorenie nastavení dizajnu",
+        "description": "Prejdite na stránku Dizajn vo vašej administrácii. Výber farby akcentu je na prvom mieste — všetky dostupné možnosti uvidíte okamžite."
+      },
+      {
+        "title": "Vyberte si farbu svojej značky",
+        "description": "Vyberte si z 12 starostlivo vybraných farebných predvolieb navrhnutých pre čitateľnosť a prístupnosť, alebo zadajte svoj presný hex kód pre dokonalé zladenie so značkou."
+      },
+      {
+        "title": "Okamžitý náhľad",
+        "description": "Vaša farba akcentu sa aplikuje na tlačidlá, odkazy a zvýraznenia v celom menu. Funguje v svetlých aj tmavých témach a zmeny sa okamžite zobrazia na vašom živom menu."
+      }
+    ]
   }
 }

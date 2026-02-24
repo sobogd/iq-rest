@@ -46,5 +46,31 @@
         "answer": "Da. Alegeți modul automat pentru a confirma rezervările instant în funcție de disponibilitate, sau modul manual pentru a revizui și aproba fiecare cerere personal."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Configurează rezervările online și începe să accepți rezervări în cinci pași.",
+    "steps": [
+      {
+        "title": "Activează Rezervările",
+        "description": "Activează rezervările în setările restaurantului tău. Alege între confirmarea automată, unde rezervările sunt aprobate instantaneu în funcție de disponibilitate, sau modul manual în care revizuiești fiecare cerere."
+      },
+      {
+        "title": "Adaugă Mesele Tale",
+        "description": "Creează mese cu informații despre capacitate și zonă — de exemplu, 'Masa 5, 4 oaspeți, Terasă'. Fiecare masă devine rezervabilă, iar sistemul previne automat suprapunerile de rezervări."
+      },
+      {
+        "title": "Stabilește Orele de Lucru",
+        "description": "Defineste orele tale disponibile pentru rezervări și alege durata slotului — de la 15 minute la 8 ore. Numai sloturile de timp din orele tale de lucru sunt afișate oaspeților."
+      },
+      {
+        "title": "Oaspeții Rezervă Online",
+        "description": "Clienții vizitează pagina restaurantului tău, aleg data, ora și dimensiunea grupului, introduc numele și numărul de telefon și trimit. Nu este necesar un cont sau descărcarea unei aplicații — funcționează în orice browser."
+      },
+      {
+        "title": "Gestionează Rezervările în Panoul Tău de Control",
+        "description": "Vizualizează toate rezervările în panoul tău de control. Confirmă, anulează sau marchează rezervările ca fiind finalizate. Atât tu, cât și oaspetele primiți notificări prin email pentru fiecare actualizare a rezervării."
+      }
+    ]
   }
 }

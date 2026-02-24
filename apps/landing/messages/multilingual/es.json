@@ -46,5 +46,27 @@
         "answer": "El plan gratuito incluye hasta 2 idiomas. Los planes Basic y Pro ofrecen idiomas ilimitados con traducción IA incluida."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Haz que tu menú esté disponible en múltiples idiomas en cuatro pasos.",
+    "steps": [
+      {
+        "title": "Ve a Configuración de Idiomas",
+        "description": "Abre la página de Idiomas en tu panel de control. Verás todos los idiomas disponibles y cuáles están actualmente activos en tu menú."
+      },
+      {
+        "title": "Agregar Idiomas",
+        "description": "Selecciona entre 35 idiomas disponibles. El plan gratuito incluye hasta 2 idiomas, mientras que los planes Básico y Pro ofrecen idiomas ilimitados para tu menú."
+      },
+      {
+        "title": "Traduce Tu Contenido",
+        "description": "Utiliza la traducción AI con un solo clic para traducir todo tu menú al instante, o ingresa las traducciones manualmente para tener un control total. También puedes combinar ambos enfoques."
+      },
+      {
+        "title": "Los Huéspedes Cambian de Idioma",
+        "description": "Un selector de idioma aparece en la página de tu menú. Cuando los huéspedes eligen su idioma, todo el menú cambia al instante. Su preferencia se guarda para visitas futuras."
+      }
+    ]
   }
 }

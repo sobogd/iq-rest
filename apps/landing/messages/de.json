@@ -1560,7 +1560,8 @@
         "invalidCode": "Ungültiger Code. Bitte versuchen Sie es erneut.",
         "emailRequired": "Bitte gib deine E-Mail ein.",
         "emailInvalid": "Bitte gib eine gültige E-Mail ein."
-      }
+      },
+      "or": "oder"
     },
     "analytics": {
       "monthlyUsage": "Monatliche Nutzung",

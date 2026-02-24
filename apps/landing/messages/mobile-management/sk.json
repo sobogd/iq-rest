@@ -46,5 +46,27 @@
         "answer": "V súčasnosti jeden účet spravuje reštauráciu. Môžete sa prihlásiť z viacerých zariadení súčasne — telefón, tablet alebo počítač."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Spravujte svoju reštauráciu z akéhokoľvek zariadenia v štyroch krokoch.",
+    "steps": [
+      {
+        "title": "Otvorenie panela na vašom telefóne",
+        "description": "Prejdite na iq-rest.com a prihláste sa z prehliadača vášho telefónu. Panel sa automaticky prispôsobí veľkosti vašej obrazovky — žiadna aplikácia na stiahnutie alebo inštaláciu."
+      },
+      {
+        "title": "Upravte menu kdekoľvek",
+        "description": "Pridajte nové položky, aktualizujte ceny, zmeňte popisy a nahrávajte fotografie priamo z fotoaparátu vášho telefónu. Každá funkcia dostupná na desktopovej verzii funguje rovnako dobre aj na mobile."
+      },
+      {
+        "title": "Skontrolujte objednávky a rezervácie",
+        "description": "Zobrazte si prichádzajúce objednávky, spravujte rezervácie stolov a odpovedajte na správy podpory — všetko z vášho telefónu. Buďte v obraze o svojej reštaurácii aj keď ste preč."
+      },
+      {
+        "title": "Zmeny sa okamžite prejavia",
+        "description": "Každá úprava, ktorú vykonáte z vášho telefónu, sa na vašom QR menu zobrazuje v reálnom čase. Nie je potrebné synchronizovať, publikovať alebo čakať — vaši hostia vždy vidia najnovšiu verziu."
+      }
+    ]
   }
 }

@@ -68,5 +68,31 @@
         "answer": "Oibríonn. Le haghaidh dinnéar istigh, scannaíonn aíonna an cód QR ag a mbord. Le haghaidh beir leat nó seachadadh, roinn nasc díreach chuig do roghchlár. Is féidir leat réimsí ainm, fón agus seolaidh a chumasú de réir mar is gá."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Ó shocrú go dtí go bhfaighidh tú do chéad ordú i cúig céim shimplí.",
+    "steps": [
+      {
+        "title": "Cuir Ordú Ar Líne Ar Siúl",
+        "description": "Cuir ordú ar siúl i do shocruithe Dearaidh. Roghnaigh do mhód is fearr: taispeánann ordú i do dhashboard, seoltar chuig WhatsApp, nó araon ag an am céanna."
+      },
+      {
+        "title": "Configuraigh an Foirm Ordaithe",
+        "description": "Roghnaigh na réimsí a chaithfidh custaiméirí a líonadh nuair a chuirtear ordú. Tá ainm riachtanach i gcónaí, agus is féidir leat uimhir gutháin agus seoladh seachadta a iarraidh go roghnach."
+      },
+      {
+        "title": "Clóigh Códanna QR do Táblaí",
+        "description": "Faigheann gach tábla i do bhialann a chód QR uathúil féin. Nuair a scannaíonn aíonna é, tagann a n-ordú go huathoibríoch le huimhir an tábla ceart ceangailte."
+      },
+      {
+        "title": "Cuireann Custaiméirí Ordú",
+        "description": "Scannaíonn aíonna an cód QR, brabhsáil a gcuid roghchlár le grianghraif agus praghsanna, roghnaigh earraí, cuir nótaí leis, agus seol a n-ordú. Ní gá aon aip a íoslódáil ná cuntas a chruthú."
+      },
+      {
+        "title": "Bain Ordú i do Dhashboard",
+        "description": "Taispeántar ordú go huathoibríoch i do dhashboard. Nuashonraigh stádas gach ordú ó nua go bhfuil sé ar siúl go críochnaithe. Coinníonn tú 100% den ioncam — gan coimisiúin."
+      }
+    ]
   }
 }

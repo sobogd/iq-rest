@@ -46,5 +46,27 @@
         "answer": "For oeyeblikket styrer en konto restauranten. Du kan logge inn fra flere enheter samtidig — telefonen, nettbrettet eller datamaskinen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik Fungerer Det",
+    "subtitle": "Administrer restauranten din fra hvilken som helst enhet i fire trinn.",
+    "steps": [
+      {
+        "title": "Åpne Dashboard på Telefonen Din",
+        "description": "Gå til iq-rest.com og logg inn fra nettleseren på telefonen din. Dashboardet tilpasser seg automatisk skjermstørrelsen din — ingen app å laste ned eller installere."
+      },
+      {
+        "title": "Rediger Meny Hvor Som Helst",
+        "description": "Legg til nye elementer, oppdater priser, endre beskrivelser, og last opp bilder direkte fra telefonkameraet ditt. Hver funksjon som er tilgjengelig på desktop fungerer like godt på mobil."
+      },
+      {
+        "title": "Sjekk Bestillinger og Reservasjoner",
+        "description": "Se innkommende bestillinger, administrer bordbestillinger, og svar på støttehenvendelser — alt fra telefonen din. Hold deg oppdatert på restauranten din selv når du er borte."
+      },
+      {
+        "title": "Endringer Blir Umiddelbart Aktivert",
+        "description": "Hver redigering du gjør fra telefonen din vises på QR-menyen din i sanntid. Ingen behov for å synkronisere, publisere eller vente — gjestene dine ser alltid den nyeste versjonen."
+      }
+    ]
   }
 }

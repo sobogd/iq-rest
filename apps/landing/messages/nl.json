@@ -1560,7 +1560,8 @@
         "invalidCode": "Ongeldige code. Probeer het opnieuw.",
         "emailRequired": "Voer je e-mailadres in.",
         "emailInvalid": "Voer een geldig e-mailadres in."
-      }
+      },
+      "or": "of"
     },
     "analytics": {
       "monthlyUsage": "Maandelijks Gebruik",

@@ -46,5 +46,27 @@
         "answer": "Da. Vsaka slika je edinstveno generirana za vašo specifično jed. Brez stock fotografij — vsaka slika je sveže ustvarjena na podlagi vašega elementa menija."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Pridobite profesionalne fotografije hrane za vaš meni v štirih preprostih korakih.",
+    "steps": [
+      {
+        "title": "Odprite katero koli jed",
+        "description": "Pojdite do postavke, za katero želite fotografijo, na svojem nadzorni plošči. Lahko ustvarite slike za nove jedi ali zamenjate obstoječe fotografije na katerikoli postavki v meniju."
+      },
+      {
+        "title": "Kliknite Ustvari sliko",
+        "description": "AI ustvari profesionalno fotografijo hrane na podlagi imena jedi in opisa. Več podrobnosti navedete v opisu, bolj natančen bo rezultat."
+      },
+      {
+        "title": "Preglejte rezultat",
+        "description": "Pred uporabo si oglejte ustvarjeno sliko. Če želite drugačen videz, ponovno ustvarite, da dobite novo različico. Vsaka generacija ustvari edinstveno sliko."
+      },
+      {
+        "title": "Uporabite v vašem meniju",
+        "description": "Slika je samodejno optimizirana, stisnjena v format WebP in se takoj prikaže na vašem aktivnem meniju. Gosti vidijo profesionalne fotografije hrane pri vsaki jedi."
+      }
+    ]
   }
 }

@@ -25,6 +25,28 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Customize your restaurant's visual identity in four steps.",
+    "steps": [
+      {
+        "title": "Open Design Settings",
+        "description": "Navigate to the Design page in your dashboard. Here you can control your restaurant's visual appearance — background, accent color, and homepage layout."
+      },
+      {
+        "title": "Upload a Background",
+        "description": "Choose a video (MP4, WebM) or photo for your restaurant's homepage background. Videos loop automatically, creating an immersive first impression for every visitor."
+      },
+      {
+        "title": "AI Background Generation",
+        "description": "Don't have a video or photo ready? Let AI create a background image from your menu items automatically. It generates a professional visual that matches your restaurant's style."
+      },
+      {
+        "title": "Preview and Save",
+        "description": "See your changes in real time before saving. Videos are automatically compressed and lazy-loaded, ensuring fast performance on mobile devices without sacrificing visual quality."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about restaurant website design.",
@@ -44,6 +66,18 @@
       {
         "question": "Do I need a designer to set this up?",
         "answer": "No. Just upload your video or photo from the dashboard. The system handles sizing, compression, and layout automatically. Your website looks professional with zero design skills."
+      },
+      {
+        "question": "Can AI generate a background for me?",
+        "answer": "Yes. If you don't have your own video or photo, AI can generate a background image based on your restaurant's menu and style. It's available directly from the Design settings."
+      },
+      {
+        "question": "Is custom background available on the free plan?",
+        "answer": "Background customization is available on Basic and Pro plans. The free plan includes your accent color and a clean default design."
+      },
+      {
+        "question": "Can I hide the restaurant title on the homepage?",
+        "answer": "Yes. If your background video or photo already shows your restaurant name, you can toggle off the title overlay from the Design settings for a cleaner look."
       }
     ]
   }

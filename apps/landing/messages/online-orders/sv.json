@@ -68,5 +68,31 @@
         "answer": "Ja. För servering på plats skannar gäster QR-koden vid sitt bord. För avhämtning eller leverans delar du en direktlänk till din meny. Du kan aktivera fält för namn, telefon och adress efter behov."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Från installation till att ta emot din första beställning i fem enkla steg.",
+    "steps": [
+      {
+        "title": "Aktivera Onlinebeställningar",
+        "description": "Slå på beställningar i dina Designinställningar. Välj din föredragna metod: beställningar visas i din instrumentpanel, vidarebefordras till WhatsApp, eller båda samtidigt."
+      },
+      {
+        "title": "Konfigurera Beställningsformuläret",
+        "description": "Välj vilka fält kunderna måste fylla i när de gör en beställning. Namn är alltid obligatoriskt, och du kan valfritt be om telefonnummer och leveransadress."
+      },
+      {
+        "title": "Skriv Ut QR-koder för Bord",
+        "description": "Varje bord i din restaurang får sin egen unika QR-kod. När gästerna skannar den, kommer deras beställning automatiskt med rätt bordsnummer kopplat."
+      },
+      {
+        "title": "Kunder Lägger Beställningar",
+        "description": "Gästerna skannar QR-koden, bläddrar i din meny med bilder och priser, väljer rätter, lägger till anteckningar och skickar sin beställning. Ingen appnedladdning eller kontoskapande behövs."
+      },
+      {
+        "title": "Hantera Beställningar i Din Instrumentpanel",
+        "description": "Beställningar visas omedelbart i din instrumentpanel. Uppdatera varje beställningsstatus från ny till pågående till slutförd. Du behåller 100% av intäkterna — noll provisioner."
+      }
+    ]
   }
 }

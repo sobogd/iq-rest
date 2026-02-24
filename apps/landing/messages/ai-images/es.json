@@ -46,5 +46,27 @@
         "answer": "Sí. Cada imagen se genera de forma única para tu plato específico. Sin fotos de stock — cada imagen se crea desde cero basándose en tu plato del menú."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Obtén fotos profesionales de comida para tu menú en cuatro simples pasos.",
+    "steps": [
+      {
+        "title": "Abre Cualquier Elemento del Menú",
+        "description": "Navega hasta el elemento para el que deseas una foto en tu panel de control. Puedes generar imágenes para nuevos platos o reemplazar fotos existentes en cualquier elemento del menú."
+      },
+      {
+        "title": "Haz Clic en Generar Imagen",
+        "description": "La IA crea una foto profesional de comida basada en el nombre y la descripción del plato. Cuanto más detalle proporciones en la descripción, más preciso será el resultado."
+      },
+      {
+        "title": "Revisa el Resultado",
+        "description": "Previsualiza la imagen generada antes de aplicarla. Si deseas un aspecto diferente, regenera para obtener una nueva variación. Cada generación produce una imagen única."
+      },
+      {
+        "title": "Usa en Tu Menú",
+        "description": "La imagen se optimiza automáticamente, se comprime en formato WebP y aparece en tu menú en vivo de inmediato. Los invitados ven fotos profesionales de comida en cada plato."
+      }
+    ]
   }
 }

@@ -1560,7 +1560,8 @@
         "invalidCode": "Virheellinen koodi. Yritä uudelleen.",
         "emailRequired": "Syötä sähköpostiosoitteesi.",
         "emailInvalid": "Syötä kelvollinen sähköpostiosoite."
-      }
+      },
+      "or": "tai"
     },
     "analytics": {
       "monthlyUsage": "Kuukausittainen käyttö",

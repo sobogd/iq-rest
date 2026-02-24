@@ -46,5 +46,27 @@
         "answer": "Atualmente, uma conta gerencia o restaurante. Você pode fazer login em vários dispositivos simultaneamente — celular, tablet ou computador."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Gerencie seu restaurante de qualquer dispositivo em quatro etapas.",
+    "steps": [
+      {
+        "title": "Abra o Painel no Seu Telefone",
+        "description": "Acesse iq-rest.com e faça login pelo navegador do seu telefone. O painel se adapta automaticamente ao tamanho da sua tela — sem aplicativo para baixar ou instalar."
+      },
+      {
+        "title": "Edite o Menu em Qualquer Lugar",
+        "description": "Adicione novos itens, atualize preços, mude descrições e envie fotos diretamente da câmera do seu telefone. Todos os recursos disponíveis no desktop funcionam tão bem no mobile."
+      },
+      {
+        "title": "Verifique Pedidos e Reservas",
+        "description": "Visualize pedidos recebidos, gerencie reservas de mesas e responda a mensagens de suporte — tudo pelo seu telefone. Fique por dentro do seu restaurante mesmo quando estiver longe."
+      },
+      {
+        "title": "Mudanças Entram em Vigor Imediatamente",
+        "description": "Cada edição que você faz pelo seu telefone aparece no seu menu QR em tempo real. Não há necessidade de sincronizar, publicar ou esperar — seus convidados sempre veem a versão mais recente."
+      }
+    ]
   }
 }

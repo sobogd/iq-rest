@@ -46,5 +46,27 @@
         "answer": "W darmowym i Basic planie Twoja strona jest hostowana pod iq-rest.com/m/twoja-nazwa. Plan Pro obsługuje własne nazwy domen dla pełnej kontroli nad marką."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Od zera do działającej strony internetowej restauracji w czterech krokach.",
+    "steps": [
+      {
+        "title": "Wprowadź swój adres e-mail",
+        "description": "Nie potrzebujesz hasła. Po prostu wpisz swój adres e-mail i kliknij Kontynuuj. Nie ma długich formularzy rejestracyjnych, nie jest wymagana karta kredytowa ani żadne zobowiązania."
+      },
+      {
+        "title": "Zweryfikuj za pomocą kodu",
+        "description": "Sprawdź swoją skrzynkę odbiorczą, aby znaleźć 4-cyfrowy kod weryfikacyjny. Wprowadź go, aby zalogować się bezpiecznie. To podejście bezhasłowe oznacza jedną rzecz mniej do zapamiętania."
+      },
+      {
+        "title": "Nazwij swoją restaurację",
+        "description": "Nadaj swojej restauracji nazwę. Stanie się ona adresem URL Twojej strony internetowej oraz tytułem menu. Możesz zawsze zmienić to później w ustawieniach swojego panelu."
+      },
+      {
+        "title": "Twoja strona internetowa jest gotowa",
+        "description": "Kompletna strona internetowa restauracji z menu QR, stroną kontaktową z mapą i responsywnym designem jest natychmiast dostępna pod adresem iq-rest.com/m/twoja-nazwa. Dodaj swoje dania i zacznij dzielić się."
+      }
+    ]
   }
 }

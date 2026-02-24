@@ -46,5 +46,27 @@
         "answer": "Da, in to obožujemo! Mnoge naše funkcije so se začele kot predlogi uporabnikov. Pošljite nam svojo idejo in jo bomo upoštevali pri prihodnjih posodobitvah."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Pridobite pomoč od prave osebe v štirih preprostih korakih.",
+    "steps": [
+      {
+        "title": "Odprite podporni klepet",
+        "description": "Pojdite na stran za podporo v svojem nadzornem pultu. Videli boste preprost klepetalni vmesnik, kjer lahko neposredno vpišete svojo sporočilo — brez obrazcev za vstopnice ali kategorij za izbiro."
+      },
+      {
+        "title": "Opis vaše vprašanje",
+        "description": "Vpišite svoje sporočilo. Vprašajte o nastavitvah, funkcijah, optimizaciji menija, obračunavanju ali čemerkoli drugem. Ni neumnih vprašanj — z veseljem vam bomo pomagali pri vsem."
+      },
+      {
+        "title": "Prejmite osebni odgovor",
+        "description": "Prava oseba (ne chatbot) prebere vaše sporočilo in odgovori v nekaj urah. Razumemo delovne tokove v restavracijah in dajemo praktične, izvedljive odgovore."
+      },
+      {
+        "title": "Neprekinjena pomoč",
+        "description": "Zahtevajte predloge za funkcije, pridobite nasvete za optimizacijo menija ali prosite za pomoč pri nastavitvah kadarkoli. Vaša zgodovina pogovorov je shranjena, tako da vedno imamo kontekst prejšnjih vprašanj."
+      }
+    ]
   }
 }

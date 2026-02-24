@@ -38,5 +38,23 @@
         "answer": "Il tuo QR code viene generato separatamente e può essere personalizzato in modo indipendente. Il colore di accento si applica alle pagine del menu digitale, alla navigazione e agli elementi interattivi."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Abbina il tuo menu al tuo marchio in tre semplici passaggi.",
+    "steps": [
+      {
+        "title": "Apri le Impostazioni di Design",
+        "description": "Naviga alla pagina Design nel tuo dashboard. Il selettore del colore di accento è al centro — vedrai immediatamente tutte le opzioni disponibili."
+      },
+      {
+        "title": "Scegli il Colore del Tuo Marchio",
+        "description": "Scegli tra 12 preset di colori curati progettati per leggibilità e accessibilità, oppure inserisci il tuo codice esadecimale esatto per una corrispondenza perfetta con il tuo marchio."
+      },
+      {
+        "title": "Anteprima Istantanea",
+        "description": "Il tuo colore di accento si applica a pulsanti, link e evidenziazioni in tutto il menu. Funziona sia con temi chiari che scuri, e le modifiche appaiono istantaneamente nel tuo menu live."
+      }
+    ]
   }
 }

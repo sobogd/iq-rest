@@ -46,5 +46,27 @@
         "answer": "Ne. Tiesiog įkelkite savo video ar nuotrauką iš valdymo skydelio. Sistema automatiškai tvarko dydžio keitimą, glaudinimą ir išdėstymą. Jūsų svetainė atrodo profesionaliai be jokių dizaino įgūdžių."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Pritaikykite savo restorano vizualinę tapatybę keturiais žingsniais.",
+    "steps": [
+      {
+        "title": "Atidaryti dizaino nustatymus",
+        "description": "Eikite į dizaino puslapį savo valdymo skydelyje. Čia galite kontroliuoti savo restorano vizualinį vaizdą — foną, akcento spalvą ir pagrindinio puslapio išdėstymą."
+      },
+      {
+        "title": "Įkelti foną",
+        "description": "Pasirinkite vaizdo įrašą (MP4, WebM) arba nuotrauką savo restorano pagrindinio puslapio fonui. Vaizdo įrašai automatiškai kartojasi, sukurdami įtraukiančią pirmąją įspūdį kiekvienam lankytojui."
+      },
+      {
+        "title": "AI fono generavimas",
+        "description": "Neturite paruošto vaizdo įrašo ar nuotraukos? Leiskite AI automatiškai sukurti fono vaizdą iš jūsų meniu elementų. Jis generuoja profesionalų vaizdą, kuris atitinka jūsų restorano stilių."
+      },
+      {
+        "title": "Peržiūrėti ir išsaugoti",
+        "description": "Pamatykite savo pakeitimus realiu laiku prieš išsaugodami. Vaizdo įrašai automatiškai kompresuojami ir įkeliami tingiai, užtikrinant greitą našumą mobiliuosiuose įrenginiuose, neaukodami vizualinės kokybės."
+      }
+    ]
   }
 }

@@ -1560,7 +1560,8 @@
         "invalidCode": "Невірний код. Спробуйте ще раз.",
         "emailRequired": "Введіть ваш email.",
         "emailInvalid": "Введіть коректний email."
-      }
+      },
+      "or": "або"
     },
     "analytics": {
       "monthlyUsage": "Щомісячне використання",

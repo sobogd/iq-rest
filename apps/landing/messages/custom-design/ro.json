@@ -46,5 +46,27 @@
         "answer": "Nu. Încărcați videoclipul sau fotografia din panoul de control. Sistemul gestionează dimensionarea, compresia și aspectul automat. Site-ul arată profesional fără abilități de design."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Personalizează identitatea vizuală a restaurantului tău în patru pași.",
+    "steps": [
+      {
+        "title": "Deschide Setările de Design",
+        "description": "Navighează la pagina de Design din tabloul de bord. Aici poți controla aspectul vizual al restaurantului tău — fundal, culoare de accent și layout-ul paginii de start."
+      },
+      {
+        "title": "Încarcă un Fundal",
+        "description": "Alege un videoclip (MP4, WebM) sau o fotografie pentru fundalul paginii de start a restaurantului tău. Videoclipurile se redau în buclă automat, creând o impresie inițială captivantă pentru fiecare vizitator."
+      },
+      {
+        "title": "Generare Fundal AI",
+        "description": "Nu ai un videoclip sau o fotografie pregătită? Lasă AI-ul să creeze automat o imagine de fundal din elementele tale de meniu. Acesta generează un vizual profesional care se potrivește stilului restaurantului tău."
+      },
+      {
+        "title": "Previzualizează și Salvează",
+        "description": "Vezi modificările tale în timp real înainte de a salva. Videoclipurile sunt comprimate automat și se încarcă lazy, asigurând o performanță rapidă pe dispozitivele mobile fără a compromite calitatea vizuală."
+      }
+    ]
   }
 }

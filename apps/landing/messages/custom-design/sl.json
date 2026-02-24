@@ -46,5 +46,27 @@
         "answer": "Ne. Preprosto naložite video ali fotografijo z nadzorne plošče. Sistem samodejno poskrbi za velikost, stiskanje in postavitev. Vaša spletna stran izgleda profesionalno brez oblikovalskih veščin."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Prilagodite vizualno identiteto svoje restavracije v štirih korakih.",
+    "steps": [
+      {
+        "title": "Odprite nastavitve oblikovanja",
+        "description": "Pojdite na stran Oblikovanje na svojem nadzornem plošči. Tukaj lahko nadzorujete vizualni videz svoje restavracije — ozadje, barvo akcenta in postavitev domače strani."
+      },
+      {
+        "title": "Naložite ozadje",
+        "description": "Izberite video (MP4, WebM) ali fotografijo za ozadje domače strani vaše restavracije. Videi se samodejno ponavljajo, kar ustvarja potopno prvo vtis za vsakega obiskovalca."
+      },
+      {
+        "title": "Generiranje ozadja z AI",
+        "description": "Nimate pripravljenega videa ali fotografije? Pustite, da AI samodejno ustvari sliko ozadja iz vaših jedilnikov. Ustvari profesionalno vizualo, ki ustreza slogu vaše restavracije."
+      },
+      {
+        "title": "Predogled in shranjevanje",
+        "description": "Oglejte si svoje spremembe v realnem času, preden shranite. Videi so samodejno stisnjeni in nalagani leno, kar zagotavlja hitro delovanje na mobilnih napravah brez žrtvovanja vizualne kakovosti."
+      }
+    ]
   }
 }

@@ -68,5 +68,31 @@
         "answer": "Ano. Na místě hosté naskenují QR kód u svého stolu. Pro objednávky s sebou nebo rozvoz sdílíte přímý odkaz na své menu. Pole pro jméno, telefon a adresu můžete aktivovat podle potřeby."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Od nastavení po přijetí vaší první objednávky ve pěti jednoduchých krocích.",
+    "steps": [
+      {
+        "title": "Povolte online objednávání",
+        "description": "Přepněte objednávky ve svých nastaveních designu. Vyberte si preferovaný režim: objednávky se zobrazují na vašem panelu, přeposílají se na WhatsApp, nebo obojí současně."
+      },
+      {
+        "title": "Nastavte objednávkový formulář",
+        "description": "Vyberte, které údaje musí zákazníci vyplnit při zadávání objednávky. Jméno je vždy povinné a můžete volitelně požadovat telefonní číslo a adresu doručení."
+      },
+      {
+        "title": "Vytiskněte QR kódy pro stoly",
+        "description": "Každý stůl ve vaší restauraci dostane svůj vlastní unikátní QR kód. Když hosté kód naskenují, jejich objednávka se automaticky doručí s připojeným správným číslem stolu."
+      },
+      {
+        "title": "Zákazníci zadávají objednávky",
+        "description": "Hosté naskenují QR kód, procházejí vaše menu s fotografiemi a cenami, vybírají položky, přidávají poznámky a odesílají svou objednávku. Není potřeba stahovat aplikaci ani vytvářet účet."
+      },
+      {
+        "title": "Spravujte objednávky ve svém panelu",
+        "description": "Objednávky se okamžitě zobrazují na vašem panelu. Aktualizujte stav každé objednávky od nové po probíhající až po dokončenou. Udržujete 100 % příjmů — žádné provize."
+      }
+    ]
   }
 }

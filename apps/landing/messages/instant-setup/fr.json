@@ -46,5 +46,27 @@
         "answer": "Sur les plans gratuit et Basic, votre site est hébergé à iq-rest.com/m/votre-nom. Le plan Pro prend en charge les noms de domaine personnalisés pour un contrôle total de la marque."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "De zéro à un site web de restaurant en quatre étapes.",
+    "steps": [
+      {
+        "title": "Entrez Votre Email",
+        "description": "Aucun mot de passe requis. Il suffit de taper votre adresse email et de cliquer sur Continuer. Il n'y a pas de formulaires d'inscription longs, pas de carte de crédit requise, et pas d'engagements."
+      },
+      {
+        "title": "Vérifiez avec un Code",
+        "description": "Vérifiez votre boîte de réception pour un code de vérification à 4 chiffres. Entrez-le pour vous connecter en toute sécurité. Cette approche sans mot de passe signifie une chose de moins à retenir."
+      },
+      {
+        "title": "Nommez Votre Restaurant",
+        "description": "Donnez un nom à votre restaurant. Cela devient votre URL de site web et le titre de votre menu. Vous pouvez toujours le changer plus tard dans les paramètres de votre tableau de bord."
+      },
+      {
+        "title": "Votre Site Web Est Prêt",
+        "description": "Un site web complet de restaurant avec un menu QR, une page de contact avec carte, et un design réactif est en ligne instantanément à iq-rest.com/m/votre-nom. Ajoutez vos plats et commencez à partager."
+      }
+    ]
   }
 }

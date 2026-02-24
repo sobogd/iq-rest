@@ -38,5 +38,23 @@
         "answer": "Teie QR-kood genereeritakse eraldi ja seda saab iseseisvalt kohandada. Aktsentvärv rakendub teie digitaalse menüü lehtedele, navigatsioonile ja interaktiivsetele elementidele."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas see töötab",
+    "subtitle": "Seosta oma menüü oma brändiga kolme lihtsa sammuga.",
+    "steps": [
+      {
+        "title": "Ava Disaini Seaded",
+        "description": "Liigu oma juhtpaneelil Disaini lehele. Aktsentvärvi valija on esiplaanil — näed kõiki saadaval olevaid valikuid kohe."
+      },
+      {
+        "title": "Vali Oma Brändi Värv",
+        "description": "Vali 12 hoolikalt valitud värvi eelmäärangust, mis on loodud loetavuse ja ligipääsetavuse jaoks, või sisesta oma täpne hex-kood, et saavutada ideaalne brändi vastavus."
+      },
+      {
+        "title": "Kohene Eelvaade",
+        "description": "Sinu aktsentvärv rakendub nuppudele, linkidele ja esiletõstmistele kogu menüüs. See töötab nii heledates kui ka tumedates teemades ning muudatused ilmuvad kohe sinu aktiivses menüüs."
+      }
+    ]
   }
 }

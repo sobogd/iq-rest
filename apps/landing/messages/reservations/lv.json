@@ -46,5 +46,31 @@
         "answer": "Ja. Izvelieties automatisku režimu, lai apstiprinātu rezervacijas uzreiz, pamatojoties uz pieejamību, vai manuālo režimu, lai parskatitu un apstiprinātu katru pieprasijumu pats."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā Tas Strādā",
+    "subtitle": "Iestatiet tiešsaistes rezervācijas un sāciet pieņemt rezervācijas piecos soļos.",
+    "steps": [
+      {
+        "title": "Iespējot Rezervācijas",
+        "description": "Ieslēdziet rezervācijas savā restorāna iestatījumos. Izvēlieties starp automātisko apstiprinājumu, kur rezervācijas tiek apstiprinātas nekavējoties, pamatojoties uz pieejamību, vai manuālo režīmu, kurā jūs pārskatāt katru pieprasījumu."
+      },
+      {
+        "title": "Pievienojiet Savus Galdiņus",
+        "description": "Izveidojiet galdus ar kapacitātes un zonas informāciju — piemēram, 'Galds 5, 4 viesi, Terase'. Katrs galds kļūst rezervējams, un sistēma automātiski novērš dubultrezervācijas."
+      },
+      {
+        "title": "Iestatiet Darba Laiku",
+        "description": "Definējiet savas pieejamās stundas rezervācijām un izvēlieties laika intervāla ilgumu — no 15 minūtēm līdz 8 stundām. Viesiem tiek rādīti tikai laika intervāli jūsu darba laikā."
+      },
+      {
+        "title": "Viesi Rezervē Tiešsaistē",
+        "description": "Klienti apmeklē jūsu restorāna lapu, izvēlas datumu, laiku un viesu skaitu, ievada savu vārdu un tālruni, un nosūta. Nav nepieciešama konta izveide vai lietotnes lejupielāde — darbojas jebkurā pārlūkprogrammā."
+      },
+      {
+        "title": "Pārvaldiet Rezervācijas Savā Vadības Panelī",
+        "description": "Skatiet visas rezervācijas savā vadības panelī. Apstipriniet, atcelt vai atzīmējiet rezervācijas kā pabeigtas. Gan jūs, gan viesis saņemat e-pasta paziņojumus par katru rezervācijas atjauninājumu."
+      }
+    ]
   }
 }

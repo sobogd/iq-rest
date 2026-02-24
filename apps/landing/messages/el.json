@@ -1560,7 +1560,8 @@
         "invalidCode": "Μη έγκυρος κωδικός. Παρακαλώ δοκιμάστε ξανά.",
         "emailRequired": "Εισάγετε το email σας.",
         "emailInvalid": "Εισάγετε ένα έγκυρο email."
-      }
+      },
+      "or": "ή"
     },
     "analytics": {
       "monthlyUsage": "Μηνιαία Χρήση",

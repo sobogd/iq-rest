@@ -46,5 +46,31 @@
         "answer": "Da. Isključite bilo koju stavku jednim tapom. Nestaje sa javnog menija ali ostaje u vašem kontrolnom panelu — uključite je nazad kada budete spremni."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako funkcioniše",
+    "subtitle": "Kreirajte i objavite meni vašeg restorana u pet jednostavnih koraka.",
+    "steps": [
+      {
+        "title": "Kreirajte kategorije",
+        "description": "Dodajte kategorije kao što su Predjela, Glavna jela, Dezerti i Pića kako biste organizovali vaš meni. Možete kreirati onoliko kategorija koliko vam je potrebno i preurediti ih prevlačenjem."
+      },
+      {
+        "title": "Dodajte stavke menija",
+        "description": "Unesite naziv jela, opis i cenu za svaku stavku. Označite alergene ako je primenljivo — gosti će automatski videti ikone alergena na meniju."
+      },
+      {
+        "title": "Otpremite ili generišite fotografije",
+        "description": "Otpremite svoje fotografije hrane sa telefona ili računara, ili koristite AI za generisanje profesionalne slike hrane na osnovu naziva jela. Slike se automatski optimizuju."
+      },
+      {
+        "title": "Organizujte prevlačenjem",
+        "description": "Preuređujte kategorije i stavke prevlačenjem na željeno mesto. Uključite ili isključite bilo koju stavku bez brisanja — savršeno za dnevne specijalitete ili jela koja su rasprodata."
+      },
+      {
+        "title": "Objavite svoj meni",
+        "description": "Izmene se odmah pojavljuju na vašem aktivnom QR meniju. Nema dugmeta 'objavi' — svaka izmena se odmah prikazuje u realnom vremenu. Ispišite svoj QR kod i postavite ga na stolove."
+      }
+    ]
   }
 }

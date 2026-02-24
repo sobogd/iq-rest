@@ -68,5 +68,31 @@
         "answer": "Igen. Helyben fogyasztásnál a vendégek az asztalnál olvassák be a QR kódot. Elvitelre vagy házhozszállításra osszon meg egy közvetlen linket a menühöz. Szükség szerint engedélyezheti a név, telefon és cím mezőket."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan Működik",
+    "subtitle": "Öt egyszerű lépésben a beállítástól az első rendelésed megérkezéséig.",
+    "steps": [
+      {
+        "title": "Engedélyezd az Online Rendelést",
+        "description": "Kapcsold be a rendeléseket a Tervezési beállításaidban. Válaszd ki a preferált módot: a rendelések megjelennek a vezérlőpultodon, továbbítódnak a WhatsApp-ra, vagy mindkettő egyszerre."
+      },
+      {
+        "title": "Állítsd Be a Rendelési Űrlapot",
+        "description": "Válaszd ki, hogy mely mezőket kell kitölteniük a vásárlóknak a rendelés leadásakor. A név mindig kötelező, és opcionálisan kérheted a telefonszámot és a szállítási címet."
+      },
+      {
+        "title": "Nyomtasd Ki a QR Kódokat az Asztalokhoz",
+        "description": "Minden asztal a vendéglődből egyedi QR kódot kap. Amikor a vendégek beolvassák, a rendelésük automatikusan megérkezik a megfelelő asztalszámmal."
+      },
+      {
+        "title": "A Vásárlók Rendeléseket Adnak Le",
+        "description": "A vendégek beolvassák a QR kódot, böngészik a menüdet fényképekkel és árakkal, kiválasztják a tételeket, hozzáadnak megjegyzéseket, és leadják a rendelésüket. Nincs szükség alkalmazás letöltésére vagy fiók létrehozására."
+      },
+      {
+        "title": "Kezeled a Rendeléseket a Vezérlőpultról",
+        "description": "A rendelések azonnal megjelennek a vezérlőpultodon. Frissítsd minden rendelés státuszát újról folyamatban lévőre, majd teljesítettre. Te megtartod a bevétel 100%-át — nulla jutalék."
+      }
+    ]
   }
 }

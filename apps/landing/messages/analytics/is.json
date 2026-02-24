@@ -46,5 +46,27 @@
         "answer": "Greiningargögn eru geymd frá þeim degi sem þú stofnar veitingastaðinn þinn. Þú getur skoðað daglega, vikulega og mánaðarlega þróun fyrir alla sögu þína."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Byrjaðu að fylgjast með frammistöðu veitingastaðarins þíns í fjórum skrefum.",
+    "steps": [
+      {
+        "title": "Búðu til veitingastaðinn þinn",
+        "description": "Greiningar byrja að fylgjast með frá því augnabliki sem matseðillinn þinn fer í loftið. Það er ekkert að stilla — hver skoðun á síðu, QR skönnun og gestur er skráð sjálfkrafa."
+      },
+      {
+        "title": "Deildu QR kóðanum þínum",
+        "description": "Prentaðu QR kóðann þinn og settu hann á borð, við innganginn eða á umbúðir fyrir meðferð. Hver skönnun er skráð með tímastimpil, tungumáli, tæki og heimsóttri síðu."
+      },
+      {
+        "title": "Opnaðu greiningar stjórnborðið",
+        "description": "Sjáðu daglegar, vikulegar og mánaðarlegar tölfræði með skýrum grafík. Fylgdu heildarskoðunum, einstökum gestum og þróun yfir tíma frá einu stjórnborði."
+      },
+      {
+        "title": "Kannaðu ítarlegar sundurliðanir",
+        "description": "Skoðaðu tölfræði sundurliðaða eftir síðu (matseðill, tengiliðir, bókanir), valdu tungumál, tegund tækis og vafra. Notaðu þessar upplýsingar til að hámarka matseðilinn þinn og forgangsraða þýðingum."
+      }
+    ]
   }
 }

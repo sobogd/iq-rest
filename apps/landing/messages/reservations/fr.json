@@ -46,5 +46,31 @@
         "answer": "Oui. Choisissez le mode automatique pour confirmer les réservations instantanément selon la disponibilité, ou le mode manuel pour examiner et approuver chaque demande vous-même."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Configurez les réservations en ligne et commencez à accepter des réservations en cinq étapes.",
+    "steps": [
+      {
+        "title": "Activer les réservations",
+        "description": "Activez les réservations dans les paramètres de votre restaurant. Choisissez entre la confirmation automatique, où les réservations sont approuvées instantanément en fonction de la disponibilité, ou le mode manuel où vous examinez chaque demande."
+      },
+      {
+        "title": "Ajoutez vos tables",
+        "description": "Créez des tables avec des informations sur la capacité et la zone — par exemple, 'Table 5, 4 invités, Terrasse'. Chaque table devient réservable, et le système empêche automatiquement les doubles réservations."
+      },
+      {
+        "title": "Définissez les heures d'ouverture",
+        "description": "Définissez vos heures disponibles pour les réservations et choisissez la durée des créneaux — de 15 minutes à 8 heures. Seuls les créneaux horaires dans vos heures d'ouverture sont affichés aux invités."
+      },
+      {
+        "title": "Les invités réservent en ligne",
+        "description": "Les clients visitent la page de votre restaurant, choisissent leur date, leur heure et la taille de leur groupe, saisissent leur nom et leur téléphone, puis soumettent. Aucun compte ou téléchargement d'application requis — fonctionne dans n'importe quel navigateur."
+      },
+      {
+        "title": "Gérez les réservations dans votre tableau de bord",
+        "description": "Consultez toutes les réservations dans votre tableau de bord. Confirmez, annulez ou marquez les réservations comme complètes. Vous et l'invité recevez des notifications par e-mail pour chaque mise à jour de réservation."
+      }
+    ]
   }
 }

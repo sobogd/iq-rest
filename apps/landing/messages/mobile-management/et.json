@@ -46,5 +46,27 @@
         "answer": "Praegu haldab üks konto restorani. Saate sisse logida mitmest seadmest korraga — telefonist, tahvelarvutist või arvutist."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Halda oma restorani igast seadmest neljas sammus.",
+    "steps": [
+      {
+        "title": "Ava Armatuurlaud Oma Telefonis",
+        "description": "Mine aadressile iq-rest.com ja logi sisse oma telefoni brauserist. Armatuurlaud kohandub automaatselt sinu ekraani suurusele — ei ole vaja rakendust alla laadida ega installida."
+      },
+      {
+        "title": "Muuda Menüü Igas Kohas",
+        "description": "Lisa uusi tooteid, uuenda hindu, muuda kirjeldusi ja laadi fotosid otse oma telefoni kaamerast. Iga funktsioon, mis on saadaval lauaarvutis, töötab mobiilis sama hästi."
+      },
+      {
+        "title": "Kontrolli Tellimusi ja Broneeringuid",
+        "description": "Vaata saabunud tellimusi, halda laua broneeringuid ja vasta tugiteateid — kõik oma telefonist. Ole oma restorani üle kursis isegi siis, kui oled eemal."
+      },
+      {
+        "title": "Muutused Jõuavad Koheselt Jõusse",
+        "description": "Iga muudatus, mille teed oma telefonist, ilmub sinu QR menüüsse reaalajas. Pole vaja sünkroonida, avaldada ega oodata — sinu külalised näevad alati uusimat versiooni."
+      }
+    ]
   }
 }

@@ -46,5 +46,31 @@
         "answer": "Ano. Jedním klepnutím položku vypněte. Zmizí z veřejného menu, ale zůstane ve vašem panelu — zapněte ji zpět, kdykoli budete chtít."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Vytvořte a publikujte menu vaší restaurace v pěti jednoduchých krocích.",
+    "steps": [
+      {
+        "title": "Vytvořte kategorie",
+        "description": "Přidejte kategorie jako Předkrmy, Hlavní jídla, Dezerty a Nápoje pro uspořádání vašeho menu. Můžete vytvořit tolik kategorií, kolik potřebujete, a přeuspořádat je pomocí přetahování."
+      },
+      {
+        "title": "Přidejte položky menu",
+        "description": "Zadejte název jídla, popis a cenu pro každou položku. Označte alergeny, pokud je to relevantní — hosté uvidí ikony alergenů na menu automaticky."
+      },
+      {
+        "title": "Nahrát nebo vygenerovat fotografie",
+        "description": "Nahrajte své vlastní fotografie jídel z telefonu nebo počítače, nebo použijte AI k vygenerování profesionálního obrázku jídla podle názvu pokrmu. Obrázky jsou automaticky optimalizovány."
+      },
+      {
+        "title": "Uspořádejte pomocí přetahování",
+        "description": "Přeuspořádejte kategorie a položky přetažením na správné místo. Přepněte jakoukoli položku na zapnuto nebo vypnuto, aniž byste ji smazali — ideální pro denní speciality nebo vyprodaná jídla."
+      },
+      {
+        "title": "Publikujte své menu",
+        "description": "Změny se okamžitě zobrazí na vašem živém QR menu. Neexistuje žádné tlačítko 'publikovat' — každá úprava se okamžitě projeví v reálném čase. Vytiskněte svůj QR kód a umístěte ho na stoly."
+      }
+    ]
   }
 }

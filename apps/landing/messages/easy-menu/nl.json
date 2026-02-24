@@ -46,5 +46,31 @@
         "answer": "Ja. Schakel elk item uit met één tik. Het verdwijnt uit het openbare menu maar blijft in uw dashboard — schakel het weer in wanneer u klaar bent."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Bouw en publiceer je restaurantmenu in vijf eenvoudige stappen.",
+    "steps": [
+      {
+        "title": "Categorieën Aanmaken",
+        "description": "Voeg categorieën toe zoals Voorgerechten, Hoofdgerechten, Nagerechten en Dranken om je menu te organiseren. Je kunt zoveel categorieën aanmaken als je nodig hebt en ze opnieuw ordenen met slepen en neerzetten."
+      },
+      {
+        "title": "Menu-items Toevoegen",
+        "description": "Voer de naam van het gerecht, de beschrijving en de prijs voor elk item in. Geef allergenen aan indien van toepassing — gasten zien automatisch allergeneniconen op het menu."
+      },
+      {
+        "title": "Foto's Uploaden of Genereren",
+        "description": "Upload je eigen voedsel foto's vanaf je telefoon of computer, of gebruik AI om een professionele voedselafbeelding te genereren op basis van de gerechtnaam. Afbeeldingen worden automatisch geoptimaliseerd."
+      },
+      {
+        "title": "Organiseren met Slepen en Neerzetten",
+        "description": "Herschik categorieën en items door ze op de juiste plek te slepen. Zet elk item aan of uit zonder het te verwijderen — perfect voor dagelijkse specials of uitverkochte gerechten."
+      },
+      {
+        "title": "Publiceer Je Menu",
+        "description": "Wijzigingen verschijnen onmiddellijk op je live QR-menu. Er is geen 'publiceer'-knop — elke bewerking gaat in real-time live. Print je QR-code en plaats deze op je tafels."
+      }
+    ]
   }
 }

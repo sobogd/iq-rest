@@ -68,5 +68,31 @@
         "answer": "Da. Za obedovanje v restavraciji gostje skenirajo QR kodo ob mizi. Za naročila za s seboj ali dostavo delite neposredno povezavo do menija. Po potrebi lahko omogočite polja za ime, telefon in naslov."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Od nastavitve do prejetja prvega naročila v petih preprostih korakih.",
+    "steps": [
+      {
+        "title": "Omogočite spletno naročanje",
+        "description": "V nastavitvah oblikovanja omogočite naročila. Izberite svoj želeni način: naročila se prikažejo na vašem nadzorni plošči, posredujejo se na WhatsApp ali oboje hkrati."
+      },
+      {
+        "title": "Konfigurirajte obrazec za naročilo",
+        "description": "Izberite, katera polja morajo stranke izpolniti pri oddaji naročila. Ime je vedno obvezno, po želji pa lahko zahtevate tudi telefonsko številko in naslov za dostavo."
+      },
+      {
+        "title": "Natisnite QR kode za mize",
+        "description": "Vsaka miza v vašem restavraciji dobi svojo edinstveno QR kodo. Ko jo gostje skenirajo, njihovo naročilo samodejno prispe s pripisano pravilno številko mize."
+      },
+      {
+        "title": "Stranke oddajo naročila",
+        "description": "Gostje skenirajo QR kodo, pregledujejo vaš meni s fotografijami in cenami, izberejo artikle, dodajo opombe in oddajo svoje naročilo. Prenos aplikacije ali ustvarjanje računa ni potrebno."
+      },
+      {
+        "title": "Upravljajte naročila na svoji nadzorni plošči",
+        "description": "Naročila se takoj prikažejo na vaši nadzorni plošči. Posodobite status vsakega naročila od novega do v obdelavi do končanega. Obdržite 100 % prihodkov — brez provizij."
+      }
+    ]
   }
 }

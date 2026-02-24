@@ -38,5 +38,23 @@
         "answer": "El codi QR es genera per separat i es pot personalitzar de manera independent. El color d'accent s'aplica a les pàgines del teu menú digital, la navegació i els elements interactius."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Adapta el teu menú a la teva marca en tres passos senzills.",
+    "steps": [
+      {
+        "title": "Obre la Configuració de Disseny",
+        "description": "Navega a la pàgina de Disseny al teu tauler de control. El selector de color d'accent està al centre — veuràs totes les opcions disponibles immediatament."
+      },
+      {
+        "title": "Tria el Color de la Teva Marca",
+        "description": "Tria entre 12 presets de color seleccionats dissenyats per a la llegibilitat i l'accessibilitat, o introdueix el teu codi hex exacte per a una coincidència perfecta amb la teva marca."
+      },
+      {
+        "title": "Previsualització Instantània",
+        "description": "El teu color d'accent s'aplica a botons, enllaços i destacats a tot el menú. Funciona tant en temes clars com foscos, i els canvis apareixen instantàniament al teu menú en viu."
+      }
+    ]
   }
 }

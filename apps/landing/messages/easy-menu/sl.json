@@ -46,5 +46,31 @@
         "answer": "Da. Z enim dotikom izklopite katero koli postavko. Izgine z javnega menija, vendar ostane na vaši nadzorni plošči — ponovno jo vklopite, kadar koli ste pripravljeni."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Ustvarite in objavite meni vašega restavracije v petih preprostih korakih.",
+    "steps": [
+      {
+        "title": "Ustvarite kategorije",
+        "description": "Dodajte kategorije, kot so Predjedi, Glavne jedi, Sladice in Pijače, da organizirate svoj meni. Ustvarite lahko toliko kategorij, kolikor jih potrebujete, in jih preuredite s funkcijo povleci in spusti."
+      },
+      {
+        "title": "Dodajte jedi",
+        "description": "Vnesite ime jedi, opis in ceno za vsak izdelek. Označite alergene, če je to primerno — gostje bodo na meniju avtomatsko videli ikone alergenov."
+      },
+      {
+        "title": "Naložite ali ustvarite fotografije",
+        "description": "Naložite svoje fotografije hrane s telefona ali računalnika ali uporabite AI za ustvarjanje profesionalne slike hrane iz imena jedi. Slike so avtomatsko optimizirane."
+      },
+      {
+        "title": "Organizirajte s funkcijo povleci in spusti",
+        "description": "Preuredite kategorije in jedi tako, da jih povlečete na pravo mesto. Preklopite katero koli jed vklop ali izklop brez brisanja — popolno za dnevne posebne ponudbe ali razprodane jedi."
+      },
+      {
+        "title": "Objavite svoj meni",
+        "description": "Spremembe se takoj prikažejo na vašem aktivnem QR meniju. Ni gumba 'objavi' — vsaka sprememba se takoj prikaže v realnem času. Natisnite svoj QR kodo in jo postavite na mize."
+      }
+    ]
   }
 }

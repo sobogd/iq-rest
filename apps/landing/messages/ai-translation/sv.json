@@ -46,5 +46,31 @@
         "answer": "AI-oversattning ingar i Basic- och Pro-planer med generosa manadsgrannser. Inga per-ord- eller per-artikel-avgifter — oversatt sa mycket du behover."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Översätt hela din meny på minuter, inte timmar.",
+    "steps": [
+      {
+        "title": "Lägg till Språk till Din Meny",
+        "description": "Gå till sidan Språk i din instrumentpanel och välj vilka språk din meny ska stödja. Välj bland 35 tillgängliga språk inklusive alla större europeiska, asiatiska och mellanösternspråk."
+      },
+      {
+        "title": "Klicka på Översätt",
+        "description": "En knapp översätter alla dina kategorier, artikelnamn och beskrivningar på en gång. Hela menyn bearbetas på sekunder, oavsett hur många artiklar du har."
+      },
+      {
+        "title": "AI Förstår Matkontext",
+        "description": "AI:n känner till kulinarisk terminologi över kulturer. Den bevarar rätter som 'Tiramisu' eller 'Pad Thai' samtidigt som den naturligt anpassar beskrivningar, ingredienslistor och kategorinamn."
+      },
+      {
+        "title": "Granska och Redigera",
+        "description": "Varje översättning är helt redigerbar. Justera vilken formulering som helst för att matcha din stil. Dina manuella ändringar bevaras även när du översätter andra delar av menyn senare."
+      },
+      {
+        "title": "Publicera Din Flerspråkiga Meny",
+        "description": "Gäster ser en språkväxlare på din meny och kan bläddra på sitt föredragna språk. Varje språk kan slås på eller av oberoende från din instrumentpanel."
+      }
+    ]
   }
 }

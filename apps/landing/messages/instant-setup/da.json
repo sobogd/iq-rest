@@ -46,5 +46,27 @@
         "answer": "Paa gratis- og Basic-planer er din hjemmeside hostet paa iq-rest.com/m/dit-navn. Pro-planen understoetter egne domaeenenavne for fuld brandkontrol."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Sådan Fungerer Det",
+    "subtitle": "Fra nul til en live restaurant hjemmeside i fire trin.",
+    "steps": [
+      {
+        "title": "Indtast Din E-mail",
+        "description": "Ingen adgangskode nødvendig. Bare skriv din e-mailadresse og klik på Fortsæt. Der er ingen lange registreringsformularer, ingen kreditkort nødvendig, og ingen forpligtelser."
+      },
+      {
+        "title": "Verificer med en Kode",
+        "description": "Tjek din indbakke for en 4-cifret verificeringskode. Indtast den for at logge ind sikkert. Denne adgangskodefrie tilgang betyder én mindre ting at huske."
+      },
+      {
+        "title": "Navngiv Din Restaurant",
+        "description": "Giv din restaurant et navn. Det bliver din hjemmeside URL og menutitel. Du kan altid ændre det senere fra dine dashboardindstillinger."
+      },
+      {
+        "title": "Din Hjemmeside Er Klar",
+        "description": "En komplet restaurant hjemmeside med QR-menu, kontaktside med kort og responsivt design er straks live på iq-rest.com/m/dit-navn. Tilføj dine retter og begynd at dele."
+      }
+    ]
   }
 }

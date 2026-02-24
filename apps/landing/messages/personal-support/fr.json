@@ -46,5 +46,27 @@
         "answer": "Oui, et nous adorons ça ! Beaucoup de nos fonctionnalités sont nées de suggestions d'utilisateurs. Envoyez-nous votre idée et nous la considérerons pour les prochaines mises à jour."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Obtenez de l'aide d'une personne réelle en quatre étapes simples.",
+    "steps": [
+      {
+        "title": "Ouvrir le chat d'assistance",
+        "description": "Allez sur la page d'assistance dans votre tableau de bord. Vous verrez une interface de chat simple où vous pouvez taper votre message directement — pas de formulaires de ticket ni de catégories à choisir."
+      },
+      {
+        "title": "Décrivez votre question",
+        "description": "Tapez votre message. Posez des questions sur la configuration, les fonctionnalités, l'optimisation du menu, la facturation ou tout autre sujet. Il n'y a pas de questions idiotes — nous sommes heureux de vous aider avec tout."
+      },
+      {
+        "title": "Recevez une réponse personnelle",
+        "description": "Une personne réelle (pas un chatbot) lit votre message et répond dans les heures qui suivent. Nous comprenons les flux de travail des restaurants et fournissons des réponses pratiques et exploitables."
+      },
+      {
+        "title": "Aide continue",
+        "description": "Demandez des suggestions de fonctionnalités, obtenez des conseils d'optimisation du menu ou demandez de l'aide pour la configuration à tout moment. Votre historique de conversation est sauvegardé, donc nous avons toujours le contexte des questions précédentes."
+      }
+    ]
   }
 }

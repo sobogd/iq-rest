@@ -46,5 +46,31 @@
         "answer": "DI vertimas įtrauktas į Basic ir Pro planus su dosniais mėnesiniais limitais. Nėra mokesčių už žodį ar elementą — verskite tiek, kiek reikia."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Išverskite visą savo meniu per kelias minutes, o ne valandas.",
+    "steps": [
+      {
+        "title": "Pridėti kalbas prie savo meniu",
+        "description": "Eikite į kalbų puslapį savo valdymo skydelyje ir pasirinkite, kurias kalbas turėtų palaikyti jūsų meniu. Pasirinkite iš 35 prieinamų kalbų, įskaitant visas pagrindines Europos, Azijos ir Viduriniųjų Rytų kalbas."
+      },
+      {
+        "title": "Paspauskite Išversti",
+        "description": "Vienas mygtukas išverčia visas jūsų kategorijas, prekių pavadinimus ir aprašymus vienu metu. Visas meniu apdorojamas per kelias sekundes, nesvarbu, kiek prekių turite."
+      },
+      {
+        "title": "AI supranta maisto kontekstą",
+        "description": "AI žino kulinarinę terminologiją įvairiose kultūrose. Ji išsaugo patiekalų pavadinimus, tokius kaip 'Tiramisu' ar 'Pad Thai', tuo pačiu natūraliai pritaikydama aprašymus, ingredientų sąrašus ir kategorijų pavadinimus."
+      },
+      {
+        "title": "Peržiūrėti ir redaguoti",
+        "description": "Kiekvienas vertimas yra visiškai redaguojamas. Pakeiskite bet kokį žodyną, kad atitiktų jūsų stilių. Jūsų rankiniai pakeitimai išlieka net ir tada, kai vėl verčiate kitas meniu dalis vėliau."
+      },
+      {
+        "title": "Paskelbkite savo daugiakalbį meniu",
+        "description": "Svečiams jūsų meniu matomas kalbų keitiklis, leidžiantis naršyti pageidaujama kalba. Kiekvieną kalbą galima įjungti arba išjungti nepriklausomai nuo jūsų valdymo skydelio."
+      }
+    ]
   }
 }

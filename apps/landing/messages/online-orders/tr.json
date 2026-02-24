@@ -68,5 +68,31 @@
         "answer": "Evet. Restoranda yemek için misafirler masalarındaki QR kodu tarar. Paket servis veya teslimat için menünüze doğrudan bir bağlantı paylaşın. İhtiyaca göre ad, telefon ve adres alanlarını etkinleştirebilirsiniz."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Kurulumdan ilk siparişinizi almanıza kadar beş basit adımda.",
+    "steps": [
+      {
+        "title": "Çevrimiçi Siparişleri Etkinleştir",
+        "description": "Siparişleri Tasarım ayarlarınızda açın. Tercih ettiğiniz modu seçin: siparişleriniz panonuzda görünebilir, WhatsApp'a yönlendirilebilir veya her ikisi aynı anda yapılabilir."
+      },
+      {
+        "title": "Sipariş Formunu Yapılandır",
+        "description": "Müşterilerin sipariş verirken doldurması gereken alanları seçin. İsim her zaman gereklidir ve isteğe bağlı olarak telefon numarası ve teslimat adresi isteyebilirsiniz."
+      },
+      {
+        "title": "Masalar için QR Kodları Yazdır",
+        "description": "Restoranınızdaki her masa kendine ait benzersiz bir QR kodu alır. Misafirler bunu taradığında, siparişleri otomatik olarak doğru masa numarası ile birlikte gelir."
+      },
+      {
+        "title": "Müşteriler Sipariş Verir",
+        "description": "Misafirler QR kodunu tarar, menünüzü fotoğraflar ve fiyatlarla gözden geçirir, ürünleri seçer, not ekler ve siparişlerini gönderir. Uygulama indirmeye veya hesap oluşturmaya gerek yok."
+      },
+      {
+        "title": "Siparişleri Panonuzda Yönetin",
+        "description": "Siparişler anında panonuzda görünür. Her siparişin durumunu yeni, devam eden veya tamamlanan olarak güncelleyebilirsiniz. Gelirin %100'ünü siz alırsınız — sıfır komisyon."
+      }
+    ]
   }
 }

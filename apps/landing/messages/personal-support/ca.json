@@ -46,5 +46,27 @@
         "answer": "Sí, i ens encanta! Moltes de les nostres funcionalitats van començar com a suggeriments d'usuaris. Envia'ns la teva idea i la considerarem per a futures actualitzacions."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Obten ajuda d'una persona real en quatre passos senzills.",
+    "steps": [
+      {
+        "title": "Obre el Xat d'Assistència",
+        "description": "Vés a la pàgina d'Assistència al teu tauler de control. Veuràs una interfície de xat senzilla on pots escriure el teu missatge directament — sense formularis de tiquet ni categories a triar."
+      },
+      {
+        "title": "Descriu la Teva Pregunta",
+        "description": "Escriu el teu missatge. Pregunta sobre la configuració, les funcions, l'optimització del menú, la facturació o qualsevol altra cosa. No hi ha preguntes estúpides — estem encantats d'ajudar amb tot."
+      },
+      {
+        "title": "Obté una Resposta Personalitzada",
+        "description": "Una persona real (no un chatbot) llegeix el teu missatge i respon en hores. Entenem els fluxos de treball dels restaurants i donem respostes pràctiques i aplicables."
+      },
+      {
+        "title": "Ajuda Continuada",
+        "description": "Demana suggeriments de funcions, obtén consells per a l'optimització del menú o demana ajuda per a la configuració en qualsevol moment. El teu historial de converses es guarda, així que sempre tenim context de preguntes anteriors."
+      }
+    ]
   }
 }

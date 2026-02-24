@@ -46,5 +46,27 @@
         "answer": "Tak, i uwielbiamy to! Wiele naszych funkcji powstało z sugestii użytkowników. Napisz nam ze swoim pomysłem, a rozważymy go w przyszłych aktualizacjach."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Uzyskaj pomoc od prawdziwej osoby w czterech prostych krokach.",
+    "steps": [
+      {
+        "title": "Otwórz czat wsparcia",
+        "description": "Przejdź do strony wsparcia w swoim panelu. Zobaczysz prosty interfejs czatu, w którym możesz bezpośrednio wpisać swoją wiadomość — bez formularzy zgłoszeniowych czy kategorii do wyboru."
+      },
+      {
+        "title": "Opisz swoje pytanie",
+        "description": "Wpisz swoją wiadomość. Zapytaj o konfigurację, funkcje, optymalizację menu, rozliczenia lub cokolwiek innego. Nie ma głupich pytań — chętnie pomożemy we wszystkim."
+      },
+      {
+        "title": "Otrzymaj osobistą odpowiedź",
+        "description": "Prawdziwa osoba (nie chatbot) przeczyta Twoją wiadomość i odpowie w ciągu kilku godzin. Rozumiemy procesy w restauracjach i udzielamy praktycznych, konkretnych odpowiedzi."
+      },
+      {
+        "title": "Ciągła pomoc",
+        "description": "Poproś o sugestie dotyczące funkcji, uzyskaj wskazówki dotyczące optymalizacji menu lub zapytaj o pomoc w konfiguracji w dowolnym momencie. Historia Twojej rozmowy jest zapisywana, więc zawsze mamy kontekst z poprzednich pytań."
+      }
+    ]
   }
 }

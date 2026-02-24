@@ -46,5 +46,27 @@
         "answer": "Faoi láthair bainistíonn cuntas amháin an bhialann. Is féidir leat logáil isteach ó ghléasanna iolracha ag an am céanna — do ghuthán, táibléad nó ríomhaire."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Bainistigh do bialann ó aon ghléas i gceithre chéim.",
+    "steps": [
+      {
+        "title": "Oscail an Painéal ar do gCéad",
+        "description": "Téigh go iq-rest.com agus sínigh isteach ó bhrabhsálaí do gCéad. Oireann an painéal go huathoibríoch do mhéid do scáileáin — níl aon aip le híoslódáil nó a shuiteáil."
+      },
+      {
+        "title": "Cuir Menú in Athbhreithniú áit ar bith",
+        "description": "Cuir earraí nua leis, nuashonraigh praghsanna, athraigh cur síos, agus uaslódáil grianghraif go díreach ó cheamara do gCéad. Oibríonn gach gné atá ar fáil ar an deasc go hiontach ar ghléasanna soghluaiste freisin."
+      },
+      {
+        "title": "Seiceáil Orduithe agus Áirithintí",
+        "description": "Féach ar orduithe atá ag teacht isteach, bainistigh áirithintí tábla, agus freagair teachtaireachtaí tacaíochta — go léir ó do gCéad. Fan ar bharr do bialainne fiú nuair a bhíonn tú i bhfad uait."
+      },
+      {
+        "title": "Téann na hAthruithe i gCónaí i gCónaí",
+        "description": "Taispeánann gach eagarthóireacht a dhéanann tú ó do gCéad ar do QR menu i bhfíor-am. Níl gá le comhoiriúnú, foilsiú, nó fanacht — feiceann do chuairteoirí an leagan is déanaí i gcónaí."
+      }
+    ]
   }
 }

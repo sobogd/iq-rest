@@ -46,5 +46,27 @@
         "answer": "Evet, ve bunu çok seviyoruz! Özelliklerimizin çoğu kullanıcı önerilerinden doğdu. Bize fikrinizi yazın, gelecek güncellemeler için değerlendireceğiz."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Gerçek bir kişiden dört basit adımda yardım alın.",
+    "steps": [
+      {
+        "title": "Destek Sohbetini Aç",
+        "description": "Kontrol panelinizdeki Destek sayfasına gidin. Mesajınızı doğrudan yazabileceğiniz basit bir sohbet arayüzü göreceksiniz - bilet formları veya seçim yapmanız gereken kategoriler yok."
+      },
+      {
+        "title": "Sorunuzu Tanımlayın",
+        "description": "Mesajınızı yazın. Kurulum, özellikler, menü optimizasyonu, faturalama veya başka bir şey hakkında soru sorun. Aptalca soru yoktur - her konuda yardımcı olmaktan mutluluk duyarız."
+      },
+      {
+        "title": "Kişisel Yanıt Alın",
+        "description": "Gerçek bir kişi (chatbot değil) mesajınızı okur ve saatler içinde yanıt verir. Restoran iş akışlarını anlıyoruz ve pratik, uygulanabilir yanıtlar veriyoruz."
+      },
+      {
+        "title": "Sürekli Yardım",
+        "description": "Özellik önerileri isteyin, menü optimizasyon ipuçları alın veya her zaman kurulum yardımı isteyin. Sohbet geçmişiniz kaydedilir, böylece önceki sorulardan her zaman bağlamımız olur."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Nie. Stačí nahrať video alebo fotografiu z ovládacieho panela. Systém automaticky rieši veľkosť, kompresiu a rozloženie. Vaša webstránka vyzerá profesionálne s nulovými dizajnérskymi zručnosťami."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Prispôsobte vizuálnu identitu vašej reštaurácie v štyroch krokoch.",
+    "steps": [
+      {
+        "title": "Otvorenie nastavení dizajnu",
+        "description": "Prejdite na stránku Dizajn vo vašej administrácii. Tu môžete ovládať vizuálny vzhľad vašej reštaurácie — pozadie, akcentovú farbu a rozloženie domovskej stránky."
+      },
+      {
+        "title": "Nahrajte pozadie",
+        "description": "Vyberte video (MP4, WebM) alebo fotografiu ako pozadie domovskej stránky vašej reštaurácie. Videá sa automaticky opakujú, čím vytvárajú pohlcujúci prvý dojem pre každého návštevníka."
+      },
+      {
+        "title": "Generovanie pozadia pomocou AI",
+        "description": "Nemáte pripravené video alebo fotografiu? Nechajte AI automaticky vytvoriť pozadie z vašich položiek v menu. Vytvára profesionálny vizuál, ktorý zodpovedá štýlu vašej reštaurácie."
+      },
+      {
+        "title": "Náhľad a uloženie",
+        "description": "Zobrazte si svoje zmeny v reálnom čase pred uložením. Videá sú automaticky komprimované a načítavané len pri potrebe, čo zabezpečuje rýchly výkon na mobilných zariadeniach bez obetovania vizuálnej kvality."
+      }
+    ]
   }
 }

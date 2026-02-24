@@ -38,5 +38,23 @@
         "answer": "Uw QR-code wordt apart gegenereerd en kan onafhankelijk worden aangepast. De accentkleur is van toepassing op uw digitale menupagina's, navigatie en interactieve elementen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Stem je menu af op je merk in drie eenvoudige stappen.",
+    "steps": [
+      {
+        "title": "Open Ontwerpinstellingen",
+        "description": "Navigeer naar de Ontwerp pagina in je dashboard. De accentkleurkiezer staat centraal — je ziet alle beschikbare opties direct."
+      },
+      {
+        "title": "Kies Je Merkkleur",
+        "description": "Kies uit 12 zorgvuldig samengestelde kleurpresets die zijn ontworpen voor leesbaarheid en toegankelijkheid, of voer je exacte hex-code in voor een perfecte merkafstemming."
+      },
+      {
+        "title": "Directe Voorvertoning",
+        "description": "Je accentkleur wordt toegepast op knoppen, links en markeringen in het hele menu. Het werkt in zowel lichte als donkere thema's, en wijzigingen verschijnen onmiddellijk op je live menu."
+      }
+    ]
   }
 }

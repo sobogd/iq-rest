@@ -68,5 +68,31 @@
         "answer": "Jah. Kohapeal söömiseks skaneerivad külalised QR-koodi oma lauas. Kaasavõtmiseks või kohaletoimetamiseks jagage otselinki oma menüüle. Vastavalt vajadusele saate lubada nime, telefoni ja aadressi välju."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Alates seadistamisest kuni oma esimese tellimuse saamiseni viies lihtsas sammus.",
+    "steps": [
+      {
+        "title": "Luba Veebitellimine",
+        "description": "Lülita tellimused sisse oma Disaini seadetes. Vali oma eelistatud režiim: tellimused ilmuvad sinu armatuurlauda, edastatakse WhatsAppi või mõlemad korraga."
+      },
+      {
+        "title": "Konfigureeri Tellimuse Vorm",
+        "description": "Vali, millised väljad peavad kliendid täitma tellimuse esitamisel. Nimi on alati kohustuslik ning võid valikuliselt küsida telefoninumbrit ja kohaletoimetamise aadressi."
+      },
+      {
+        "title": "Prindi Laua QR Koodid",
+        "description": "Igal laual sinu restoranis on oma ainulaadne QR kood. Kui külalised selle skaneerivad, jõuab nende tellimus automaatselt õige lauanumbriga."
+      },
+      {
+        "title": "Kliendid Esitavad Tellimusi",
+        "description": "Külalised skaneerivad QR koodi, sirvivad sinu menüüd koos piltide ja hindadega, valivad tooteid, lisavad märkusi ja esitavad oma tellimuse. Rakenduse allalaadimist või konto loomist ei ole vaja."
+      },
+      {
+        "title": "Halda Tellimusi Oma Armatuurlaud",
+        "description": "Tellimused ilmuvad kohe sinu armatuurlauda. Uuenda iga tellimuse staatust alates uuest kuni töös ja lõpetatud. Sa hoiad 100% tuludest — null komisjonitasud."
+      }
+    ]
   }
 }

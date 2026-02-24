@@ -46,5 +46,31 @@
         "answer": "Da. Dezactivați orice element cu o singură apăsare. Dispare din meniul public dar rămâne în panoul dvs. de control — reactivați-l oricând sunteți pregătit."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Construiește și publică meniul restaurantului tău în cinci pași simpli.",
+    "steps": [
+      {
+        "title": "Creează Categorii",
+        "description": "Adaugă categorii precum Aperitive, Feluri principale, Deserturi și Băuturi pentru a organiza meniul tău. Poți crea câte categorii ai nevoie și le poți reordona prin drag and drop."
+      },
+      {
+        "title": "Adaugă Elemente în Meniu",
+        "description": "Introdu numele felului de mâncare, descrierea și prețul pentru fiecare element. Marchează alergenii, dacă este cazul — oaspeții vor vedea automat pictogramele alergenilor pe meniu."
+      },
+      {
+        "title": "Încarcă sau Generează Fotografii",
+        "description": "Încarcă propriile fotografii cu mâncare de pe telefonul sau computerul tău, sau folosește AI pentru a genera o imagine profesională a mâncării din numele felului. Imaginile sunt optimizate automat."
+      },
+      {
+        "title": "Organizează cu Drag and Drop",
+        "description": "Reordonează categoriile și elementele prin tragerea lor în locul dorit. Activează sau dezactivează orice element fără a-l șterge — perfect pentru ofertele zilnice sau felurile de mâncare epuizate."
+      },
+      {
+        "title": "Publică Meniul Tău",
+        "description": "Modificările apar instantaneu pe meniul tău QR live. Nu există un buton 'publicare' — fiecare editare devine activă în timp real. Tipărește codul tău QR și plasează-l pe mesele tale."
+      }
+    ]
   }
 }

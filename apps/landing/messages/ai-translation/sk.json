@@ -46,5 +46,31 @@
         "answer": "AI preklad je zahrnutý v plánoch Basic a Pro so štedrými mesačnými limitmi. Žiadne poplatky za slovo alebo za položku — prekladajte, koľko potrebujete."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Preložte celé svoje menu za minúty, nie hodiny.",
+    "steps": [
+      {
+        "title": "Pridajte jazyky do svojho menu",
+        "description": "Prejdite na stránku Jazyky vo vašej administrácii a vyberte, ktoré jazyky by malo vaše menu podporovať. Vyberte si z 35 dostupných jazykov vrátane všetkých hlavných európskych, ázijských a blízkovýchodných jazykov."
+      },
+      {
+        "title": "Kliknite na Preložiť",
+        "description": "Jedno tlačidlo preloží všetky vaše kategórie, názvy položiek a popisy naraz. Celé menu je spracované za sekundy, bez ohľadu na to, koľko položiek máte."
+      },
+      {
+        "title": "AI rozumie kontextu jedla",
+        "description": "AI pozná kulinársku terminológiu naprieč kultúrami. Zachováva názvy jedál ako 'Tiramisu' alebo 'Pad Thai' a prirodzene prispôsobuje popisy, zoznamy ingrediencií a názvy kategórií."
+      },
+      {
+        "title": "Skontrolujte a upravte",
+        "description": "Každý preklad je plne editovateľný. Upravte akékoľvek formulácie, aby zodpovedali vášmu štýlu. Vaše manuálne zmeny sú zachované aj v prípade, že neskôr preložíte iné časti menu."
+      },
+      {
+        "title": "Publikujte svoje viacjazyčné menu",
+        "description": "Hostia vidia prepínač jazykov vo vašom menu a môžu prehliadať v preferovanom jazyku. Každý jazyk môže byť nezávisle zapnutý alebo vypnutý z vašej administrácie."
+      }
+    ]
   }
 }

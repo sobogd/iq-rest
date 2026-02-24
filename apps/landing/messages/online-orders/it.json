@@ -68,5 +68,31 @@
         "answer": "Sì. Per il servizio al tavolo, gli ospiti scansionano il codice QR al loro tavolo. Per asporto o consegna, condividi un link diretto al tuo menu. Puoi attivare i campi nome, telefono e indirizzo in base alle necessità."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Dall'impostazione alla ricezione del tuo primo ordine in cinque semplici passaggi.",
+    "steps": [
+      {
+        "title": "Abilita gli Ordini Online",
+        "description": "Attiva gli ordini nelle tue impostazioni di Design. Scegli la modalità preferita: gli ordini appaiono nel tuo dashboard, vengono inoltrati a WhatsApp, o entrambi contemporaneamente."
+      },
+      {
+        "title": "Configura il Modulo d'Ordine",
+        "description": "Seleziona quali campi i clienti devono compilare quando effettuano un ordine. Il nome è sempre richiesto e puoi opzionalmente richiedere il numero di telefono e l'indirizzo di consegna."
+      },
+      {
+        "title": "Stampa i Codici QR per i Tavoli",
+        "description": "Ogni tavolo nel tuo ristorante riceve il proprio codice QR unico. Quando gli ospiti lo scansionano, il loro ordine arriva automaticamente con il numero del tavolo corretto allegato."
+      },
+      {
+        "title": "I Clienti Effettuano Ordini",
+        "description": "Gli ospiti scansionano il codice QR, sfogliano il tuo menu con foto e prezzi, selezionano gli articoli, aggiungono note e inviano il loro ordine. Non è necessaria alcuna app da scaricare o creazione di un account."
+      },
+      {
+        "title": "Gestisci gli Ordini nel Tuo Dashboard",
+        "description": "Gli ordini appaiono istantaneamente nel tuo dashboard. Aggiorna lo stato di ogni ordine da nuovo a in corso a completato. Tieni il 100% delle entrate — zero commissioni."
+      }
+    ]
   }
 }

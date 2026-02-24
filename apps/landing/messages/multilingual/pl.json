@@ -46,5 +46,27 @@
         "answer": "Darmowy plan obejmuje do 2 języków. Plany Basic i Pro oferują nieograniczoną liczbę języków z tłumaczeniem AI w zestawie."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Udostępnij swoje menu w wielu językach w czterech krokach.",
+    "steps": [
+      {
+        "title": "Przejdź do ustawień języka",
+        "description": "Otwórz stronę Języki w swoim panelu. Zobaczysz wszystkie dostępne języki oraz te, które są aktualnie aktywne w Twoim menu."
+      },
+      {
+        "title": "Dodaj języki",
+        "description": "Wybierz spośród 35 dostępnych języków. Plan darmowy obejmuje do 2 języków, podczas gdy plany Basic i Pro oferują nieograniczoną liczbę języków dla Twojego menu."
+      },
+      {
+        "title": "Przetłumacz swoją treść",
+        "description": "Skorzystaj z jednego kliknięcia, aby natychmiast przetłumaczyć całe menu za pomocą AI, lub wprowadź tłumaczenia ręcznie dla pełnej kontroli. Możesz również połączyć oba podejścia."
+      },
+      {
+        "title": "Goście zmieniają języki",
+        "description": "Na stronie menu pojawia się selektor języka. Gdy goście wybiorą swój język, całe menu zmienia się natychmiast. Ich preferencje są zapisywane na przyszłe wizyty."
+      }
+    ]
   }
 }

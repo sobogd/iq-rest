@@ -46,5 +46,27 @@
         "answer": "Da, și ne place asta! Multe dintre funcțiile noastre au început ca sugestii ale utilizatorilor. Trimite-ne ideea ta și o vom lua în considerare pentru actualizările viitoare."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Obține ajutor de la o persoană reală în patru pași simpli.",
+    "steps": [
+      {
+        "title": "Deschide Chat-ul de Suport",
+        "description": "Accesează pagina de Suport din tabloul de bord. Vei vedea o interfață simplă de chat unde poți scrie mesajul tău direct — fără formulare de ticket sau categorii de ales."
+      },
+      {
+        "title": "Descrie Întrebarea Ta",
+        "description": "Scrie mesajul tău. Întreabă despre configurare, funcționalități, optimizarea meniului, facturare sau orice altceva. Nu există întrebări stupide — suntem bucuroși să te ajutăm cu tot ce ai nevoie."
+      },
+      {
+        "title": "Primește un Răspuns Personalizat",
+        "description": "O persoană reală (nu un chatbot) citește mesajul tău și răspunde în câteva ore. Înțelegem fluxurile de lucru din restaurante și oferim răspunsuri practice și aplicabile."
+      },
+      {
+        "title": "Ajutor Continu",
+        "description": "Solicită sugestii de funcționalități, obține sfaturi pentru optimizarea meniului sau cere asistență pentru configurare oricând. Istoricul conversației tale este salvat, așa că avem întotdeauna context din întrebările anterioare."
+      }
+    ]
   }
 }

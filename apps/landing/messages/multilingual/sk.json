@@ -46,5 +46,27 @@
         "answer": "Bezplatný plán zahŕňa až 2 jazyky. Plány Basic a Pro ponúkajú neobmedzený počet jazykov s AI prekladom v cene."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Sprístupnite svoje menu v niekoľkých jazykoch v štyroch krokoch.",
+    "steps": [
+      {
+        "title": "Prejdite na nastavenia jazyka",
+        "description": "Otvoríte stránku Jazyky vo vašej administrácii. Uvidíte všetky dostupné jazyky a ktoré sú aktuálne aktívne vo vašom menu."
+      },
+      {
+        "title": "Pridajte jazyky",
+        "description": "Vyberte si z 35 dostupných jazykov. Bezplatný plán zahŕňa až 2 jazyky, zatiaľ čo plány Basic a Pro ponúkajú neobmedzené jazyky pre vaše menu."
+      },
+      {
+        "title": "Preložte svoj obsah",
+        "description": "Použite preklad AI jedným kliknutím na okamžité preloženie celého menu, alebo zadajte preklady manuálne pre úplnú kontrolu. Môžete tiež kombinovať oba prístupy."
+      },
+      {
+        "title": "Hostia prepínajú jazyky",
+        "description": "Na stránke vášho menu sa objaví výber jazyka. Keď si hostia vyberú svoj jazyk, celé menu sa okamžite prepne. Ich preferencia sa uloží pre budúce návštevy."
+      }
+    ]
   }
 }

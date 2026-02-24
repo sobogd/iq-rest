@@ -46,5 +46,27 @@
         "answer": "Sim, e adoramos isso! Muitas das nossas funcionalidades começaram como sugestões de usuários. Envie sua ideia e a consideraremos para futuras atualizações."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Obtenha ajuda de uma pessoa real em quatro passos simples.",
+    "steps": [
+      {
+        "title": "Abrir Chat de Suporte",
+        "description": "Vá para a página de Suporte no seu painel. Você verá uma interface de chat simples onde pode digitar sua mensagem diretamente — sem formulários de ticket ou categorias para escolher."
+      },
+      {
+        "title": "Descreva Sua Pergunta",
+        "description": "Digite sua mensagem. Pergunte sobre configuração, recursos, otimização de menu, faturamento ou qualquer outra coisa. Não há perguntas estúpidas — estamos felizes em ajudar com tudo."
+      },
+      {
+        "title": "Receba uma Resposta Pessoal",
+        "description": "Uma pessoa real (não um chatbot) lê sua mensagem e responde em poucas horas. Nós entendemos os fluxos de trabalho de restaurantes e damos respostas práticas e acionáveis."
+      },
+      {
+        "title": "Ajuda Contínua",
+        "description": "Solicite sugestões de recursos, obtenha dicas de otimização de menu ou peça assistência na configuração a qualquer momento. Seu histórico de conversas é salvo, então sempre temos contexto das perguntas anteriores."
+      }
+    ]
   }
 }

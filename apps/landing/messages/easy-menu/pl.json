@@ -46,5 +46,31 @@
         "answer": "Tak. Wyłącz dowolną pozycję jednym kliknięciem. Znika z publicznego menu, ale pozostaje w panelu — włącz ją z powrotem, gdy będziesz gotowy."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Stwórz i opublikuj menu swojej restauracji w pięciu prostych krokach.",
+    "steps": [
+      {
+        "title": "Utwórz kategorie",
+        "description": "Dodaj kategorie takie jak Przystawki, Dania główne, Desery i Napoje, aby zorganizować swoje menu. Możesz stworzyć tyle kategorii, ile potrzebujesz, i zmieniać ich kolejność przeciągając je."
+      },
+      {
+        "title": "Dodaj pozycje do menu",
+        "description": "Wprowadź nazwę dania, opis i cenę dla każdej pozycji. Zaznacz alergeny, jeśli to konieczne — goście zobaczą ikony alergenów w menu automatycznie."
+      },
+      {
+        "title": "Prześlij lub wygeneruj zdjęcia",
+        "description": "Prześlij swoje zdjęcia potraw z telefonu lub komputera, lub użyj AI, aby wygenerować profesjonalny obraz jedzenia na podstawie nazwy dania. Obrazy są automatycznie optymalizowane."
+      },
+      {
+        "title": "Organizuj przeciągając i upuszczając",
+        "description": "Zmień kolejność kategorii i pozycji, przeciągając je w odpowiednie miejsce. Włącz lub wyłącz dowolną pozycję bez jej usuwania — idealne na codzienne promocje lub dania wyprzedane."
+      },
+      {
+        "title": "Opublikuj swoje menu",
+        "description": "Zmiany pojawiają się natychmiast na Twoim aktywnym menu QR. Nie ma przycisku 'opublikuj' — każda edycja jest na żywo w czasie rzeczywistym. Wydrukuj swój kod QR i umieść go na stołach."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Actualmente una cuenta gestiona el restaurante. Puedes iniciar sesión desde varios dispositivos simultáneamente — tu teléfono, tableta u ordenador."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Administra tu restaurante desde cualquier dispositivo en cuatro pasos.",
+    "steps": [
+      {
+        "title": "Abre el Panel en Tu Teléfono",
+        "description": "Ve a iq-rest.com e inicia sesión desde el navegador de tu teléfono. El panel se adapta automáticamente al tamaño de tu pantalla — no hay aplicación que descargar o instalar."
+      },
+      {
+        "title": "Edita el Menú Desde Cualquier Lugar",
+        "description": "Agrega nuevos artículos, actualiza precios, cambia descripciones y sube fotos directamente desde la cámara de tu teléfono. Cada función disponible en el escritorio funciona igual de bien en móvil."
+      },
+      {
+        "title": "Revisa Pedidos y Reservas",
+        "description": "Ve los pedidos entrantes, gestiona las reservas de mesas y responde a mensajes de soporte — todo desde tu teléfono. Mantente al tanto de tu restaurante incluso cuando estés fuera."
+      },
+      {
+        "title": "Los Cambios Se Publican al Instante",
+        "description": "Cada edición que hagas desde tu teléfono aparece en tu menú QR en tiempo real. No es necesario sincronizar, publicar o esperar — tus invitados siempre ven la versión más reciente."
+      }
+    ]
   }
 }

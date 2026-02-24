@@ -1560,7 +1560,8 @@
         "invalidCode": "Érvénytelen kód. Próbálja újra.",
         "emailRequired": "Adja meg az email címét.",
         "emailInvalid": "Adjon meg egy érvényes email címet."
-      }
+      },
+      "or": "vagy"
     },
     "analytics": {
       "monthlyUsage": "Havi Használat",

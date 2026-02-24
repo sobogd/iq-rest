@@ -68,5 +68,31 @@
         "answer": "Ja. Voor ter plaatse eten scannen gasten de QR-code aan hun tafel. Voor afhaal of bezorging deelt u een directe link naar uw menu. U kunt naam-, telefoon- en adresvelden naar behoefte inschakelen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Van installatie tot het ontvangen van uw eerste bestelling in vijf eenvoudige stappen.",
+    "steps": [
+      {
+        "title": "Schakel Online Bestellen In",
+        "description": "Schakel bestellingen in via uw Ontwerpinstellingen. Kies uw voorkeurmodus: bestellingen verschijnen in uw dashboard, worden doorgestuurd naar WhatsApp, of beide tegelijkertijd."
+      },
+      {
+        "title": "Configureer het Bestelformulier",
+        "description": "Selecteer welke velden klanten moeten invullen bij het plaatsen van een bestelling. Naam is altijd verplicht, en u kunt optioneel om een telefoonnummer en afleveradres vragen."
+      },
+      {
+        "title": "Print QR Codes voor Tafels",
+        "description": "Elke tafel in uw restaurant krijgt zijn eigen unieke QR-code. Wanneer gasten deze scannen, komt hun bestelling automatisch binnen met het juiste tafelnummer erbij."
+      },
+      {
+        "title": "Klanten Plaatsen Bestellingen",
+        "description": "Gasten scannen de QR-code, bladeren door uw menu met foto's en prijzen, selecteren items, voegen notities toe en dienen hun bestelling in. Geen app-download of accountcreatie nodig."
+      },
+      {
+        "title": "Beheer Bestellingen in Uw Dashboard",
+        "description": "Bestellingen verschijnen onmiddellijk in uw dashboard. Werk de status van elke bestelling bij van nieuw naar in behandeling naar voltooid. U behoudt 100% van de omzet — nul commissies."
+      }
+    ]
   }
 }

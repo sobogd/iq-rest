@@ -25,6 +25,28 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Get help from a real person in four simple steps.",
+    "steps": [
+      {
+        "title": "Open Support Chat",
+        "description": "Go to the Support page in your dashboard. You'll see a simple chat interface where you can type your message directly — no ticket forms or categories to choose from."
+      },
+      {
+        "title": "Describe Your Question",
+        "description": "Type your message. Ask about setup, features, menu optimization, billing, or anything else. There are no stupid questions — we're happy to help with everything."
+      },
+      {
+        "title": "Get a Personal Response",
+        "description": "A real person (not a chatbot) reads your message and responds within hours. We understand restaurant workflows and give practical, actionable answers."
+      },
+      {
+        "title": "Ongoing Help",
+        "description": "Request feature suggestions, get menu optimization tips, or ask for setup assistance anytime. Your conversation history is saved, so we always have context from previous questions."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about our support.",
@@ -44,6 +66,18 @@
       {
         "question": "Can I suggest new features?",
         "answer": "Yes, and we love it! Many of our features started as user suggestions. Message us with your idea and we'll consider it for future updates."
+      },
+      {
+        "question": "Is support automated or human?",
+        "answer": "100% human. Every message is read and answered by a real person who understands the platform and restaurant industry. No chatbots, no canned responses."
+      },
+      {
+        "question": "Can I contact support by email?",
+        "answer": "Yes. You can message us through the dashboard chat or send an email to support@iq-rest.com. Both channels reach the same team and get the same fast response."
+      },
+      {
+        "question": "What languages does support work in?",
+        "answer": "We primarily respond in English, but we can assist in several other languages. If you write in your language, we'll do our best to respond in the same language."
       }
     ]
   }

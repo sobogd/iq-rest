@@ -38,5 +38,23 @@
         "answer": "Gintear do chód QR ar leithligh agus is féidir é a shaincheapadh go neamhspleách. Baineann an dath béime le leathanaigh do roghchláir dhigitigh, nascleanúint agus gnéithe idirghníomhacha."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Comhoiriúnigh do mhenu le do bhrandáil i dtrí chéim shimplí.",
+    "steps": [
+      {
+        "title": "Oscail Socruithe Dearaidh",
+        "description": "Téigh chuig leathanach Dearaidh i do dhíseán. Tá an rogha dath accent os comhair agus i lár — feicfidh tú na roghanna ar fad ar fáil láithreach."
+      },
+      {
+        "title": "Roghnaigh Do Dath Branda",
+        "description": "Roghnaigh ó 12 réamhshocraithe dathanna a dearadh le haghaidh léitheachta agus inrochtana, nó cuir isteach do chód hex cruinn le haghaidh comhoiriúnachta foirfe le do bhrand."
+      },
+      {
+        "title": "Réamhamharc Láithreach",
+        "description": "Téann do dhath accent i bhfeidhm ar na cnaipí, na naisc, agus na gcuimhneacháin ar fud an mhéara. Oibríonn sé i dteimpléid éadroma agus dorcha, agus feictear na hathruithe láithreach ar do mhéara beo."
+      }
+    ]
   }
 }

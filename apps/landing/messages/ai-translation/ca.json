@@ -46,5 +46,31 @@
         "answer": "La traducció IA està inclosa als plans Basic i Pro amb generosos límits mensuals. Sense càrrecs per paraula ni per element — tradueix tant com necessitis."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Traduïu tot el vostre menú en minuts, no en hores.",
+    "steps": [
+      {
+        "title": "Afegiu Idiomes al vostre Menú",
+        "description": "Vés a la pàgina d'Idiomes al teu tauler de control i selecciona quins idiomes ha de suportar el teu menú. Tria entre 35 idiomes disponibles, incloent tots els principals idiomes europeus, asiàtics i del Pròxim Orient."
+      },
+      {
+        "title": "Feu clic a Traduir",
+        "description": "Un botó tradueix totes les teves categories, noms d'articles i descripcions alhora. Tot el menú es processa en segons, independentment de quants articles tinguis."
+      },
+      {
+        "title": "L'IA Entén el Context Culinari",
+        "description": "L'IA coneix la terminologia culinària a través de les cultures. Preserva noms de plats com 'Tiramisu' o 'Pad Thai' mentre adapta naturalment les descripcions, llistes d'ingredients i noms de categories."
+      },
+      {
+        "title": "Revisar i Editar",
+        "description": "Cada traducció és completament editable. Ajusta qualsevol redacció per coincidir amb el teu estil. Els teus canvis manuals es conserven fins i tot quan tornis a traduir altres parts del menú més tard."
+      },
+      {
+        "title": "Publica el Teu Menú Multilingüe",
+        "description": "Els convidats veuen un commutador d'idioma al teu menú i poden navegar en el seu idioma preferit. Cada idioma es pot activar o desactivar de manera independent des del teu tauler de control."
+      }
+    ]
   }
 }

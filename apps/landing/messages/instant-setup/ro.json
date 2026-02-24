@@ -46,5 +46,27 @@
         "answer": "Pe planurile gratuit și Basic, site-ul este găzduit la iq-rest.com/m/numele-dvs. Planul Pro acceptă domenii personalizate pentru control complet al brandului."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "De la zero la un site web de restaurant activ în patru pași.",
+    "steps": [
+      {
+        "title": "Introduceti Email-ul Dvs.",
+        "description": "Nu este nevoie de parolă. Introduceți adresa dvs. de email și faceți clic pe Continuare. Nu există formulare de înregistrare lungi, nu este necesară o carte de credit și nu există angajamente."
+      },
+      {
+        "title": "Verificati cu un Cod",
+        "description": "Verificați-vă inboxul pentru un cod de verificare de 4 cifre. Introduceți-l pentru a vă conecta în siguranță. Această abordare fără parolă înseamnă un lucru mai puțin de reținut."
+      },
+      {
+        "title": "Numește-ți Restaurantul",
+        "description": "Oferiți restaurantului dvs. un nume. Acesta devine URL-ul site-ului dvs. web și titlul meniului. Îl puteți schimba oricând mai târziu din setările tabloului de bord."
+      },
+      {
+        "title": "Site-ul Dvs. Este Gata",
+        "description": "Un site web complet de restaurant cu meniu QR, pagină de contact cu hartă și design responsive este activ instantaneu la iq-rest.com/m/numele-dvs. Adăugați preparatele dvs. și începeți să le împărtășiți."
+      }
+    ]
   }
 }

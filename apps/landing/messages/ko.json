@@ -1560,7 +1560,8 @@
         "invalidCode": "잘못된 코드입니다. 다시 시도해 주세요.",
         "emailRequired": "이메일을 입력해 주세요.",
         "emailInvalid": "유효한 이메일을 입력해 주세요."
-      }
+      },
+      "or": "또는"
     },
     "analytics": {
       "monthlyUsage": "월간 사용량",

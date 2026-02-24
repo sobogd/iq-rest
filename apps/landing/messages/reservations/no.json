@@ -46,5 +46,31 @@
         "answer": "Ja. Velg automatisk modus for aa bekrefte bestillinger umiddelbart basert paa tilgjengelighet, eller manuell modus for aa gjennomgaa og godkjenne hver foresoersel selv."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik fungerer det",
+    "subtitle": "Sett opp online reservasjoner og begynn å ta imot bestillinger i fem trinn.",
+    "steps": [
+      {
+        "title": "Aktiver Reservasjoner",
+        "description": "Aktiver reservasjoner i restaurantinnstillingene dine. Velg mellom automatisk bekreftelse, der bestillinger godkjennes umiddelbart basert på tilgjengelighet, eller manuell modus der du gjennomgår hver forespørsel."
+      },
+      {
+        "title": "Legg til Bordene Dine",
+        "description": "Opprett bord med kapasitet og soneinformasjon — for eksempel, 'Bord 5, 4 gjester, Terrasse'. Hvert bord blir tilgjengelig for bestilling, og systemet forhindrer automatisk dobbeltbestillinger."
+      },
+      {
+        "title": "Sett Arbeidstider",
+        "description": "Definer dine tilgjengelige timer for reservasjoner og velg varigheten på tidspunktene — fra 15 minutter til 8 timer. Bare tidspunkter innenfor arbeidstimene dine vises for gjestene."
+      },
+      {
+        "title": "Gjestene Bestiller Online",
+        "description": "Kunder besøker restaurantsiden din, velger dato, tid og antall personer, oppgir navnet sitt og telefonnummeret, og sender inn. Ingen konto eller app-nedlasting nødvendig — fungerer i enhver nettleser."
+      },
+      {
+        "title": "Administrer Bestillinger i Dashbordet Ditt",
+        "description": "Se alle reservasjoner i dashbordet ditt. Bekreft, avbestill eller merk bestillinger som fullført. Både du og gjesten mottar e-postvarsler for hver oppdatering av bestillingen."
+      }
+    ]
   }
 }

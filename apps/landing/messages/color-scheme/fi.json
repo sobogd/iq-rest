@@ -38,5 +38,23 @@
         "answer": "QR-koodi luodaan erikseen ja sita voidaan mukauttaa itsenaisesti. Korostusvari koskee digitaalisia ruokalistasivuja, navigointia ja interaktiivisia elementteja."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Sovita valikkosi brändiisi kolmessa yksinkertaisessa vaiheessa.",
+    "steps": [
+      {
+        "title": "Avaa Suunnitteluasetukset",
+        "description": "Siirry hallintapaneelisi Suunnittelu-sivulle. Korostusvärin valitsin on keskellä — näet kaikki saatavilla olevat vaihtoehdot heti."
+      },
+      {
+        "title": "Valitse Brändivärisi",
+        "description": "Valitse 12 huolellisesti valittua väriasetusta, jotka on suunniteltu luettavuuden ja saavutettavuuden parantamiseksi, tai syötä tarkka heksakoodi täydellistä brändiyhteensopivuutta varten."
+      },
+      {
+        "title": "Välitön Esikatselu",
+        "description": "Korostusvärisi vaikuttaa painikkeisiin, linkkeihin ja korostuksiin koko valikossa. Se toimii sekä vaaleissa että tummissa teemoissa, ja muutokset näkyvät heti live-valikossasi."
+      }
+    ]
   }
 }

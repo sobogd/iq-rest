@@ -46,5 +46,27 @@
         "answer": "V bezplatném a Basic tarifu je váš web hostován na iq-rest.com/m/vaše-jméno. Tarif Pro podporuje vlastní doménová jména pro plnou kontrolu nad značkou."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Od nuly k živé webové stránce restaurace ve čtyřech krocích.",
+    "steps": [
+      {
+        "title": "Zadejte svůj e-mail",
+        "description": "Žádné heslo není potřeba. Stačí napsat svou e-mailovou adresu a kliknout na Pokračovat. Žádné zdlouhavé registrační formuláře, žádná kreditní karta není vyžadována a žádné závazky."
+      },
+      {
+        "title": "Ověřte pomocí kódu",
+        "description": "Zkontrolujte svou schránku na 4místný ověřovací kód. Zadejte ho pro bezpečné přihlášení. Tento bezheslový přístup znamená jednu věc méně, na kterou si musíte pamatovat."
+      },
+      {
+        "title": "Pojmenujte svou restauraci",
+        "description": "Dejte své restauraci název. Stane se vaším URL webové stránky a názvem menu. Můžete ho kdykoli později změnit v nastavení vašeho řídicího panelu."
+      },
+      {
+        "title": "Vaše webová stránka je připravena",
+        "description": "Kompletní webová stránka restaurace s QR menu, kontaktní stránkou s mapou a responzivním designem je okamžitě aktivní na iq-rest.com/m/vaše-jméno. Přidejte svá jídla a začněte sdílet."
+      }
+    ]
   }
 }

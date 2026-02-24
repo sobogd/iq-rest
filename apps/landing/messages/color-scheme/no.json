@@ -38,5 +38,23 @@
         "answer": "QR-koden din genereres separat og kan tilpasses uavhengig. Aksentfargen brukes paa de digitale menysidene, navigasjonen og interaktive elementer."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvordan det fungerer",
+    "subtitle": "Tilpass menyen din til merkevaren din i tre enkle trinn.",
+    "steps": [
+      {
+        "title": "Åpne designinnstillinger",
+        "description": "Naviger til design-siden i dashbordet ditt. Fargevelgeren for aksentfarge er midtpunktet — du vil se alle tilgjengelige alternativer umiddelbart."
+      },
+      {
+        "title": "Velg merkevaren din farge",
+        "description": "Velg mellom 12 kuraterte fargepresets designet for lesbarhet og tilgjengelighet, eller skriv inn din nøyaktige hex-kode for en perfekt merkevarematch."
+      },
+      {
+        "title": "Umiddelbar forhåndsvisning",
+        "description": "Aksentfargen din brukes på knapper, lenker og uthevinger over hele menyen. Den fungerer i både lyse og mørke temaer, og endringer vises umiddelbart på den live menyen din."
+      }
+    ]
   }
 }

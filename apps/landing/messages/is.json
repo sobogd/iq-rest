@@ -1560,7 +1560,8 @@
         "invalidCode": "Ógildur kóði. Vinsamlegast reyndu aftur.",
         "emailRequired": "Sláðu inn netfangið þitt.",
         "emailInvalid": "Sláðu inn gilt netfang."
-      }
+      },
+      "or": "eða"
     },
     "analytics": {
       "monthlyUsage": "Mánaðarleg notkun",

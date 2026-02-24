@@ -46,5 +46,27 @@
         "answer": "No. Només cal pujar el vídeo o la foto des del panell. El sistema gestiona les dimensions, la compressió i la disposició automàticament. El teu web tindrà un aspecte professional sense necessitat de cap habilitat de disseny."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Personalitza la identitat visual del teu restaurant en quatre passos.",
+    "steps": [
+      {
+        "title": "Obre la Configuració de Disseny",
+        "description": "Navega a la pàgina de Disseny al teu tauler de control. Aquí pots controlar l'aparença visual del teu restaurant: fons, color d'accent i disseny de la pàgina d'inici."
+      },
+      {
+        "title": "Puja un Fons",
+        "description": "Tria un vídeo (MP4, WebM) o una foto per al fons de la pàgina d'inici del teu restaurant. Els vídeos es reprodueixen automàticament, creant una impressió inicial immersiva per a cada visitant."
+      },
+      {
+        "title": "Generació de Fons amb IA",
+        "description": "No tens un vídeo o una foto preparats? Deixa que la IA creï automàticament una imatge de fons a partir dels teus articles del menú. Genera una imatge professional que s'adapta a l'estil del teu restaurant."
+      },
+      {
+        "title": "Previsualitza i Desa",
+        "description": "Veu els teus canvis en temps real abans de desar. Els vídeos es comprimeixen automàticament i es carreguen de manera lazy, assegurant un rendiment ràpid en dispositius mòbils sense sacrificar la qualitat visual."
+      }
+    ]
   }
 }

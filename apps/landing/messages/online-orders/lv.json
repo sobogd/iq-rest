@@ -68,5 +68,31 @@
         "answer": "Jā. Ēšanai uz vietas viesi skenē QR kodu pie sava galda. Līdzņemšanai vai piegādei kopīgojiet tiešo saiti uz savu ēdienkarti. Pēc nepieciešamības varat iespējot vārda, tālruņa un adreses laukus."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas strādā",
+    "subtitle": "No iestatīšanas līdz jūsu pirmajam pasūtījumam piecos vienkāršos soļos.",
+    "steps": [
+      {
+        "title": "Iespējot tiešsaistes pasūtīšanu",
+        "description": "Ieslēdziet pasūtījumus savos Dizaina iestatījumos. Izvēlieties savu vēlamo režīmu: pasūtījumi parādās jūsu vadības panelī, tiek pārsūtīti uz WhatsApp vai abi vienlaicīgi."
+      },
+      {
+        "title": "Konfigurēt pasūtījuma veidlapu",
+        "description": "Izvēlieties, kuri lauki klientiem jāaizpilda, veicot pasūtījumu. Vārds vienmēr ir obligāts, un jūs varat izvēles kārtībā lūgt tālruņa numuru un piegādes adresi."
+      },
+      {
+        "title": "Izdrukājiet QR kodus galdiem",
+        "description": "Katram galdam jūsu restorānā ir savs unikālais QR kods. Kad viesi to noskenē, viņu pasūtījums automātiski ierodas ar pievienoto pareizo galda numuru."
+      },
+      {
+        "title": "Klienti veic pasūtījumus",
+        "description": "Viesi noskenē QR kodu, pārlūko jūsu ēdienkarti ar fotogrāfijām un cenām, izvēlas ēdienus, pievieno piezīmes un iesniedz savu pasūtījumu. Nav nepieciešama lietotnes lejupielāde vai konta izveide."
+      },
+      {
+        "title": "Pārvaldiet pasūtījumus savā vadības panelī",
+        "description": "Pasūtījumi parādās nekavējoties jūsu vadības panelī. Atjauniniet katra pasūtījuma statusu no jauna uz izpildē līdz pabeigtam. Jūs saglabājat 100% no ieņēmumiem — nulles komisijas."
+      }
+    ]
   }
 }

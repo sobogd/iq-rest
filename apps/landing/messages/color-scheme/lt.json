@@ -38,5 +38,23 @@
         "answer": "Jūsų QR kodas generuojamas atskirai ir gali būti pritaikytas nepriklausomai. Akcentinė spalva taikoma skaitmeninio meniu puslapiams, navigacijai ir interaktyviems elementams."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Suderinkite savo meniu su savo prekės ženklu trimis paprastais žingsniais.",
+    "steps": [
+      {
+        "title": "Atidarykite Dizaino Nustatymus",
+        "description": "Eikite į Dizaino puslapį savo valdymo skydelyje. Akcento spalvos pasirinkimo įrankis yra centre — iškart pamatysite visas galimas parinktis."
+      },
+      {
+        "title": "Pasirinkite Savo Prekės Ženklo Spalvą",
+        "description": "Pasirinkite iš 12 parinktų spalvų presetų, sukurtų skaitymui ir prieinamumui, arba įveskite savo tikslią hex kodą, kad puikiai atitiktų jūsų prekės ženklą."
+      },
+      {
+        "title": "Momentinė Peržiūra",
+        "description": "Jūsų akcento spalva taikoma mygtukams, nuorodoms ir akcentams visame meniu. Ji veikia tiek šviesiame, tiek tamsiame temose, o pakeitimai iškart atsispindi jūsų gyvame meniu."
+      }
+    ]
   }
 }

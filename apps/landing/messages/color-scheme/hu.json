@@ -38,5 +38,23 @@
         "answer": "A QR kód külön generálódik és önállóan testreszabható. A kiemelő szín a digitális menü oldalaira, a navigációra és az interaktív elemekre vonatkozik."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan működik",
+    "subtitle": "Illeszd a menüdet a márkádhoz három egyszerű lépésben.",
+    "steps": [
+      {
+        "title": "Nyisd meg a Tervezési Beállításokat",
+        "description": "Navigálj a Tervezés oldalra a műszerfaladon. A hangsúlyos színválasztó középen található — azonnal látni fogod az összes elérhető lehetőséget."
+      },
+      {
+        "title": "Válaszd ki a Márkád Színét",
+        "description": "Válassz 12 előre összeállított színbeállítás közül, amelyek az olvashatóságra és hozzáférhetőségre lettek tervezve, vagy írd be a pontos hex kódodat a tökéletes márkakép érdekében."
+      },
+      {
+        "title": "Azonnali Előnézet",
+        "description": "A hangsúlyos színed a gombokra, linkekre és kiemelésekre vonatkozik az egész menüben. Mind világos, mind sötét témákban működik, és a változások azonnal megjelennek az élő menüden."
+      }
+    ]
   }
 }

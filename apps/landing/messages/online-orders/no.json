@@ -68,5 +68,31 @@
         "answer": "Ja. For spising på stedet skanner gjester QR-koden ved bordet sitt. For takeaway eller levering deler du en direktelenke til menyen din. Du kan aktivere felt for navn, telefon og adresse etter behov."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik fungerer det",
+    "subtitle": "Fra oppsett til å motta din første bestilling i fem enkle trinn.",
+    "steps": [
+      {
+        "title": "Aktiver Netthandel",
+        "description": "Aktiver bestillinger i innstillingene for design. Velg din foretrukne modus: bestillingene vises i dashbordet ditt, videresendes til WhatsApp, eller begge deler samtidig."
+      },
+      {
+        "title": "Konfigurer Bestillingsskjemaet",
+        "description": "Velg hvilke felt kundene må fylle ut når de legger inn en bestilling. Navn er alltid påkrevd, og du kan valgfritt be om telefonnummer og leveringsadresse."
+      },
+      {
+        "title": "Skriv Ut QR-koder for Bord",
+        "description": "Hvert bord i restauranten din får sin egen unike QR-kode. Når gjestene skanner den, kommer bestillingen deres automatisk med det riktige bordnummeret vedlagt."
+      },
+      {
+        "title": "Kunder Legger Inn Bestillinger",
+        "description": "Gjestene skanner QR-koden, blar gjennom menyen din med bilder og priser, velger varer, legger til notater og sender inn bestillingen sin. Ingen app-nedlasting eller kontoopprettelse nødvendig."
+      },
+      {
+        "title": "Administrer Bestillinger i Dashbordet Ditt",
+        "description": "Bestillingene vises umiddelbart i dashbordet ditt. Oppdater statusen for hver bestilling fra ny til under behandling til fullført. Du beholder 100% av inntektene — null provisjoner."
+      }
+    ]
   }
 }

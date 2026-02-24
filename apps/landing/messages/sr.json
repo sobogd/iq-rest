@@ -1560,7 +1560,8 @@
         "invalidCode": "Неважећи код. Покушајте поново.",
         "emailRequired": "Унесите ваш имејл.",
         "emailInvalid": "Унесите исправан имејл."
-      }
+      },
+      "or": "ili"
     },
     "analytics": {
       "monthlyUsage": "Mesečna upotreba",

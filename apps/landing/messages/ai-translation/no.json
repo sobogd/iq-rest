@@ -46,5 +46,31 @@
         "answer": "AI-oversettelse er inkludert i Basic- og Pro-planer med generoeuse maanedlige grenser. Ingen per-ord- eller per-element-avgifter — oversett saa mye du trenger."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvordan Det Fungerer",
+    "subtitle": "Oversett hele menyen din på minutter, ikke timer.",
+    "steps": [
+      {
+        "title": "Legg til Språk i Menyen Din",
+        "description": "Gå til Språk-siden i dashbordet ditt og velg hvilke språk menyen din skal støtte. Velg blant 35 tilgjengelige språk, inkludert alle store europeiske, asiatiske og midtøsten språk."
+      },
+      {
+        "title": "Klikk på Oversett",
+        "description": "Én knapp oversetter alle kategoriene, varenavnene og beskrivelsene dine på en gang. Hele menyen behandles på sekunder, uansett hvor mange varer du har."
+      },
+      {
+        "title": "AI Forstår Matkonteksten",
+        "description": "AI-en kjenner kulinarisk terminologi på tvers av kulturer. Den bevarer rettenavn som 'Tiramisu' eller 'Pad Thai' samtidig som den naturlig tilpasser beskrivelser, ingredienslister og kategorinavn."
+      },
+      {
+        "title": "Gjennomgå og Rediger",
+        "description": "Hver oversettelse er fullt redigerbar. Juster ordlyden for å matche stilen din. Dine manuelle endringer bevares selv når du oversetter andre deler av menyen senere."
+      },
+      {
+        "title": "Publiser Din Flerspråklige Meny",
+        "description": "Gjestene ser en språkvelger på menyen din og kan bla gjennom på sitt foretrukne språk. Hvert språk kan slås av eller på uavhengig fra dashbordet ditt."
+      }
+    ]
   }
 }

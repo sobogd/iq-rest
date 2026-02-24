@@ -46,5 +46,27 @@
         "answer": "Ilmainen paketti sisaltaa enintaan 2 kielta. Basic- ja Pro-paketit tarjoavat rajoittamattomasti kielia AI-kaannos mukaan lukien."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Saat menuusi saataville useilla kielillä neljässä vaiheessa.",
+    "steps": [
+      {
+        "title": "Siirry kieliasetuksiin",
+        "description": "Avaa Kielisivut hallintapaneelissasi. Näet kaikki saatavilla olevat kielet ja mitkä niistä ovat tällä hetkellä aktiivisia valikossasi."
+      },
+      {
+        "title": "Lisää kieliä",
+        "description": "Valitse 35 saatavilla olevasta kielestä. Ilmainen suunnitelma sisältää enintään 2 kieltä, kun taas Basic- ja Pro-suunnitelmat tarjoavat rajattomasti kieliä valikkoosi."
+      },
+      {
+        "title": "Käännä sisältösi",
+        "description": "Käytä yhdellä napsautuksella tapahtuvaa tekoälykäännöstä kääntääksesi koko valikkosi heti, tai syötä käännökset manuaalisesti täydellisen hallinnan saamiseksi. Voit myös yhdistää molemmat lähestymistavat."
+      },
+      {
+        "title": "Vieraiden kielivalinta",
+        "description": "Kielivalitsin ilmestyy valikkosivullesi. Kun vieraat valitsevat kielensä, koko valikko vaihtuu heti. Heidän mieltymyksensä tallennetaan seuraavia vierailuja varten."
+      }
+    ]
   }
 }

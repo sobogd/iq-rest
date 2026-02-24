@@ -46,5 +46,31 @@
         "answer": "Sim. Escolha o modo automático para confirmar reservas instantaneamente com base na disponibilidade, ou o modo manual para revisar e aprovar cada pedido pessoalmente."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Configure reservas online e comece a aceitar reservas em cinco etapas.",
+    "steps": [
+      {
+        "title": "Ativar Reservas",
+        "description": "Ative as reservas nas configurações do seu restaurante. Escolha entre confirmação automática, onde as reservas são aprovadas instantaneamente com base na disponibilidade, ou modo manual, onde você revisa cada solicitação."
+      },
+      {
+        "title": "Adicione Suas Mesas",
+        "description": "Crie mesas com informações de capacidade e zona — por exemplo, 'Mesa 5, 4 convidados, Terraço'. Cada mesa se torna reservável, e o sistema evita automaticamente reservas duplicadas."
+      },
+      {
+        "title": "Defina o Horário de Funcionamento",
+        "description": "Defina suas horas disponíveis para reservas e escolha a duração do intervalo — de 15 minutos a 8 horas. Apenas os horários dentro do seu horário de funcionamento são mostrados aos convidados."
+      },
+      {
+        "title": "Convidados Reservam Online",
+        "description": "Os clientes visitam a página do seu restaurante, escolhem a data, hora e tamanho do grupo, inserem seu nome e telefone, e enviam. Nenhuma conta ou download de aplicativo é necessário — funciona em qualquer navegador."
+      },
+      {
+        "title": "Gerencie Reservas no Seu Painel",
+        "description": "Veja todas as reservas no seu painel. Confirme, cancele ou marque reservas como concluídas. Tanto você quanto o convidado recebem notificações por e-mail para cada atualização de reserva."
+      }
+    ]
   }
 }

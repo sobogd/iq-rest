@@ -46,5 +46,27 @@
         "answer": "Taip. Kiekvienas vaizdas generuojamas unikaliai jūsų konkrečiam patiekalui. Jokių sandėlio nuotraukų — kiekvienas vaizdas kuriamas iš naujo pagal jūsų meniu elementą."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Gaukite profesionalių maisto nuotraukų savo meniu keturiais paprastais žingsniais.",
+    "steps": [
+      {
+        "title": "Atidarykite bet kurį meniu elementą",
+        "description": "Eikite į elementą, kurio nuotrauką norite gauti savo valdymo skydelyje. Galite generuoti vaizdus naujiems patiekalams arba pakeisti esamas nuotraukas bet kuriame meniu elemente."
+      },
+      {
+        "title": "Paspauskite Generuoti vaizdą",
+        "description": "AI sukuria profesionalią maisto nuotrauką remdamasi patiekalo pavadinimu ir aprašymu. Kuo daugiau detalių pateiksite aprašyme, tuo tikslesnis bus rezultatas."
+      },
+      {
+        "title": "Peržiūrėkite rezultatą",
+        "description": "Peržiūrėkite sugeneruotą vaizdą prieš jį taikydami. Jei norite kitokio vaizdo, regeneruokite, kad gautumėte naują variantą. Kiekviena generacija sukuria unikalų vaizdą."
+      },
+      {
+        "title": "Naudokite savo meniu",
+        "description": "Vaizdas automatiškai optimizuojamas, kompresuojamas į WebP formatą ir iš karto pasirodo jūsų gyvame meniu. Svečiai mato profesionalias maisto nuotraukas kiekvienam patiekalui."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Stóráiltear sonraí anailísíochta ón lá a chruthaíonn tú do bhialann. Is féidir leat treochtaí laethúla, seachtainiúla agus míosúla a fheiceáil do do stair iomlán."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Tosaigh ag rianú feidhmíocht do bhialann i gceithre chéim.",
+    "steps": [
+      {
+        "title": "Cruthaigh Do Bhialann",
+        "description": "Tosaíonn anailís ag rianú ón nóiméad a théann do mhenu beo. Níl aon rud le cumrú — taifeadtar gach amharc ar leathanach, scan QR, agus cuairteoir go huathoibríoch."
+      },
+      {
+        "title": "Comhoibrigh Do Chód QR",
+        "description": "Priontáil do chód QR agus cuir é ar na táblaí, ag an doras, nó ar phacáistí le haghaidh leasa. Taifeadtar gach scan le huair, teanga, gléas, agus leathanach a cuireadh cuairt air."
+      },
+      {
+        "title": "Oscail an Painéal Anailíse",
+        "description": "Féach ar staitisticí laethúla, seachtainiúla, agus míosúla le graif shoiléire. Rianaigh amharcanna iomlána, cuairteoirí uathúla, agus treochtaí thar am ó scáileán amháin den phainéal."
+      },
+      {
+        "title": "Féach ar Dhícheangail Mionsonraithe",
+        "description": "Féach ar staitisticí briste síos de réir leathanach (menu, teagmhálacha, áirithintí), teanga is fearr leat, cineál gléas, agus brabhsálaí. Úsáid an t-eolas seo chun do mhenu a bharrfheabhsú agus chun aistriúcháin a chur ar thús cadhnaíochta."
+      }
+    ]
   }
 }

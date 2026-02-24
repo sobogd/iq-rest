@@ -46,5 +46,31 @@
         "answer": "Tak. Wybierz tryb automatyczny, aby potwierdzać rezerwacje natychmiast na podstawie dostępności, lub tryb ręczny, aby przeglądać i zatwierdzać każde zapytanie samodzielnie."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Skonfiguruj rezerwacje online i zacznij przyjmować rezerwacje w pięciu krokach.",
+    "steps": [
+      {
+        "title": "Włącz Rezerwacje",
+        "description": "Włącz rezerwacje w ustawieniach swojego restauracji. Wybierz między automatycznym potwierdzeniem, gdzie rezerwacje są zatwierdzane natychmiast na podstawie dostępności, a trybem ręcznym, w którym przeglądasz każdą prośbę."
+      },
+      {
+        "title": "Dodaj Swoje Stoły",
+        "description": "Utwórz stoły z informacjami o pojemności i strefie — na przykład, 'Stół 5, 4 gości, Taras'. Każdy stół staje się rezerwowany, a system automatycznie zapobiega podwójnym rezerwacjom."
+      },
+      {
+        "title": "Ustal Godziny Pracy",
+        "description": "Zdefiniuj dostępne godziny na rezerwacje i wybierz czas trwania slotu — od 15 minut do 8 godzin. Tylko sloty czasowe w ramach twoich godzin pracy są wyświetlane gościom."
+      },
+      {
+        "title": "Goście Rezerwują Online",
+        "description": "Klienci odwiedzają stronę twojej restauracji, wybierają datę, godzinę i liczbę osób, wpisują swoje imię i telefon, a następnie przesyłają. Nie jest wymagana rejestracja ani pobieranie aplikacji — działa w każdej przeglądarce."
+      },
+      {
+        "title": "Zarządzaj Rezerwacjami w Swoim Panelu",
+        "description": "Zobacz wszystkie rezerwacje w swoim panelu. Potwierdzaj, anuluj lub oznaczaj rezerwacje jako zakończone. Zarówno ty, jak i gość otrzymujecie powiadomienia e-mail o każdej aktualizacji rezerwacji."
+      }
+    ]
   }
 }

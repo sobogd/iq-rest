@@ -46,5 +46,27 @@
         "answer": "Já, og okkur finnst það frábært! Margir eiginleikar okkar byrjuðu sem tillögur notenda. Sendu okkur hugmyndina þína og við munum íhuga hana fyrir framtíðaruppfærslur."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Fáðu aðstoð frá raunverulegum manni í fjórum einföldum skrefum.",
+    "steps": [
+      {
+        "title": "Opna stuðningsspjall",
+        "description": "Farðu á stuðningssíðuna í stjórnborðinu þínu. Þú munt sjá einfalt spjallviðmót þar sem þú getur slegið inn skilaboðin þín beint — engin miðaform eða flokka til að velja úr."
+      },
+      {
+        "title": "Lýstu spurningunni þinni",
+        "description": "Slegðu inn skilaboðin þín. Spurðu um uppsetningu, eiginleika, matseðilshagræðingu, reikninga eða eitthvað annað. Það eru engar heimskulegar spurningar — við erum ánægð með að aðstoða við allt."
+      },
+      {
+        "title": "Fáðu persónulega svör",
+        "description": "Raunverulegur maður (ekki spjallbotn) les skilaboðin þín og svarar innan klukkustunda. Við skiljum ferla veitingastaða og veitum raunveruleg, framkvæmanleg svör."
+      },
+      {
+        "title": "Stöðug aðstoð",
+        "description": "Beindu aðstoð við eiginleika, fáðu ráð um matseðilshagræðingu, eða spurðu um uppsetningu hvenær sem er. Samtals saga þín er vistuð, svo við höfum alltaf samhengi frá fyrri spurningum."
+      }
+    ]
   }
 }

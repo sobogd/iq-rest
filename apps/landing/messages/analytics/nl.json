@@ -46,5 +46,27 @@
         "answer": "Analysegegevens worden opgeslagen vanaf de dag dat u uw restaurant aanmaakt. U kunt dagelijkse, wekelijkse en maandelijkse trends voor uw hele geschiedenis bekijken."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Begin met het volgen van de prestaties van uw restaurant in vier stappen.",
+    "steps": [
+      {
+        "title": "Creëer Uw Restaurant",
+        "description": "Analytics beginnen met volgen vanaf het moment dat uw menu live gaat. Er is niets te configureren — elke paginaweergave, QR-scan en bezoeker wordt automatisch geregistreerd."
+      },
+      {
+        "title": "Deel Uw QR-code",
+        "description": "Print uw QR-code en plaats deze op tafels, bij de ingang of op afhaalverpakkingen. Elke scan wordt geregistreerd met tijdstempel, taal, apparaat en bezochte pagina."
+      },
+      {
+        "title": "Open het Analytics Dashboard",
+        "description": "Bekijk dagelijkse, wekelijkse en maandelijkse statistieken met duidelijke grafieken. Volg totale weergaven, unieke bezoekers en trends in de loop van de tijd vanaf één dashboardscherm."
+      },
+      {
+        "title": "Verken Gedetailleerde Uitsplitsingen",
+        "description": "Bekijk statistieken uitgesplitst per pagina (menu, contacten, reserveringen), voorkeurstaal, apparaattype en browser. Gebruik deze gegevens om uw menu te optimaliseren en vertalingen te prioriteren."
+      }
+    ]
   }
 }

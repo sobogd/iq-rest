@@ -46,5 +46,31 @@
         "answer": "Jah. Valige automaatne režiim, et kinnitada broneeringud koheselt saadavuse alusel, või käsitsi režiim, et vaadata iga päring üle ja kinnitada ise."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas see töötab",
+    "subtitle": "Seadistage veebipõhised broneeringud ja alustage broneeringute vastuvõtmist viies sammus.",
+    "steps": [
+      {
+        "title": "Luba Broneeringud",
+        "description": "Lülitage broneeringud sisse oma restorani seadetes. Valige automaatse kinnituse vahel, kus broneeringud kinnitatakse koheselt saadavuse alusel, või käsitsi režiim, kus vaatate iga taotlust üle."
+      },
+      {
+        "title": "Lisage Oma Lauad",
+        "description": "Looge lauad koos mahutavuse ja tsooni teabega — näiteks 'Laud 5, 4 külalist, Terrass'. Iga laud muutub broneeritavaks ja süsteem takistab automaatselt kahekordseid broneeringuid."
+      },
+      {
+        "title": "Seadke Tööaeg",
+        "description": "Määrake oma saadaval olevad tunnid broneeringuteks ja valige ajavahemiku kestus — alates 15 minutist kuni 8 tunnini. Ainult teie tööaegade jooksul olevad ajavahemikud kuvatakse külalistele."
+      },
+      {
+        "title": "Külalised Broneerivad Veebis",
+        "description": "Kliendid külastavad teie restorani lehte, valivad oma kuupäeva, kellaaja ja seltskonna suuruse, sisestavad oma nime ja telefoni ning esitavad. Konto või rakenduse allalaadimist ei nõuta — töötab igas brauseris."
+      },
+      {
+        "title": "Halda Broneeringuid Oma Armatuurlaud",
+        "description": "Vaadake kõiki broneeringuid oma armatuurlaud. Kinnitage, tühistage või märkige broneeringud lõpetatuks. Nii teie kui ka külaline saavad iga broneeringu uuenduse kohta e-kirja teate."
+      }
+    ]
   }
 }

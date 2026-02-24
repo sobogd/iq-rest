@@ -68,5 +68,31 @@
         "answer": "Da. Za jelo u restoranu gosti skeniraju QR kod za svojim stolom. Za poneti ili dostavu podelite direktan link ka vašem meniju. Po potrebi možete omogućiti polja za ime, telefon i adresu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako funkcioniše",
+    "subtitle": "Od postavljanja do primanja vaše prve narudžbine u pet jednostavnih koraka.",
+    "steps": [
+      {
+        "title": "Omogućite online naručivanje",
+        "description": "Uključite narudžbine u vašim postavkama dizajna. Izaberite svoj omiljeni način: narudžbine se pojavljuju na vašem kontrolnom panelu, prosleđuju se na WhatsApp, ili oboje istovremeno."
+      },
+      {
+        "title": "Konfigurišite obrazac za narudžbinu",
+        "description": "Izaberite koja polja kupci moraju popuniti prilikom naručivanja. Ime je uvek obavezno, a opcionalno možete tražiti broj telefona i adresu za dostavu."
+      },
+      {
+        "title": "Odštampajte QR kodove za stolove",
+        "description": "Svaki sto u vašem restoranu dobija svoj jedinstveni QR kod. Kada gosti skeniraju kod, njihova narudžbina automatski dolazi sa pravim brojem stola."
+      },
+      {
+        "title": "Kupci postavljaju narudžbine",
+        "description": "Gosti skeniraju QR kod, pregledaju vaš meni sa fotografijama i cenama, biraju stavke, dodaju beleške i šalju svoju narudžbinu. Nema potrebe za preuzimanjem aplikacije ili kreiranjem naloga."
+      },
+      {
+        "title": "Upravljajte narudžbinama na vašem kontrolnom panelu",
+        "description": "Narudžbine se odmah pojavljuju na vašem kontrolnom panelu. Ažurirajte status svake narudžbine od nove do u obradi do završene. Zadržavate 100% prihoda — nula provizija."
+      }
+    ]
   }
 }

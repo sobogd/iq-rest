@@ -46,5 +46,27 @@
         "answer": "Podatki analitike se hranijo od dneva, ko ustvarite svojo restavracijo. Ogledate si lahko dnevne, tedenske in mesečne trende za celotno svojo zgodovino."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Začnite spremljati uspešnost vašega restavracije v štirih korakih.",
+    "steps": [
+      {
+        "title": "Ustvarite svojo restavracijo",
+        "description": "Analitika začne spremljati od trenutka, ko vaš meni postane aktiven. Ničesar ni treba nastaviti — vsak ogled strani, skeniranje QR kode in obiskovalec se samodejno zabeležijo."
+      },
+      {
+        "title": "Delite svojo QR kodo",
+        "description": "Natisnite svojo QR kodo in jo postavite na mize, pri vhodu ali na embalažo za odnašanje. Vsako skeniranje je zabeleženo z oznako časa, jezikom, napravo in obiskano stranjo."
+      },
+      {
+        "title": "Odprite nadzorno ploščo analitike",
+        "description": "Oglejte si dnevne, tedenske in mesečne statistike s jasnimi grafikoni. Spremljajte skupne oglede, edinstvene obiskovalce in trende skozi čas iz enega zaslona nadzorne plošče."
+      },
+      {
+        "title": "Raziskujte podrobne razčlenitve",
+        "description": "Oglejte si statistiko razčlenjeno po straneh (meni, kontakti, rezervacije), želenem jeziku, vrsti naprave in brskalniku. Uporabite te podatke za optimizacijo vašega menija in prioritizacijo prevodov."
+      }
+    ]
   }
 }

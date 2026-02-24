@@ -1560,7 +1560,8 @@
         "invalidCode": "Ugyldig kode. Prøv venligst igen.",
         "emailRequired": "Indtast din e-mail.",
         "emailInvalid": "Indtast en gyldig e-mail."
-      }
+      },
+      "or": "eller"
     },
     "analytics": {
       "monthlyUsage": "Månedligt forbrug",

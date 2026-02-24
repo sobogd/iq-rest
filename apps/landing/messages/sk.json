@@ -1560,7 +1560,8 @@
         "invalidCode": "Neplatný kód. Skúste to znova.",
         "emailRequired": "Zadajte svoj email.",
         "emailInvalid": "Zadajte platný email."
-      }
+      },
+      "or": "alebo"
     },
     "analytics": {
       "monthlyUsage": "Mesačné používanie",

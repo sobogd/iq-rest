@@ -38,5 +38,23 @@
         "answer": "Jūsu QR kods tiek ģenerēts atsevišķi un to var pielāgot neatkarīgi. Akcentkrāsa attiecas uz jūsu digitālās ēdienkārtes lapām, navigāciju un interaktīvajiem elementiem."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "subtitle": "Saskaņojiet savu ēdienkarti ar savu zīmolu trīs vienkāršos soļos.",
+    "steps": [
+      {
+        "title": "Atveriet dizaina iestatījumus",
+        "description": "Dodieties uz dizaina lapu savā vadības panelī. Akcenta krāsas izvēles rīks ir priekšplānā — jūs tūlīt redzēsiet visas pieejamās opcijas."
+      },
+      {
+        "title": "Izvēlieties savu zīmola krāsu",
+        "description": "Izvēlieties no 12 izstrādātām krāsu iestatījumiem, kas paredzēti lasāmībai un pieejamībai, vai ievadiet savu precīzo heksadecimālo kodu, lai sasniegtu ideālu zīmola saskaņošanu."
+      },
+      {
+        "title": "Tūlītēja priekšskatīšana",
+        "description": "Jūsu akcenta krāsa tiek piemērota pogām, saitēm un izcelšanai visā ēdienkartē. Tā darbojas gan gaišajos, gan tumšajos tēmos, un izmaiņas parādās nekavējoties jūsu tiešsaistes ēdienkartē."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Da, i to volimo! Mnoge naše funkcije su počele kao predlozi korisnika. Pišite nam sa svojom idejom i razmotriićemo je za buduća ažuriranja."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcioniše",
+    "subtitle": "Dobijte pomoć od stvarne osobe u četiri jednostavna koraka.",
+    "steps": [
+      {
+        "title": "Otvorite Chat za Podršku",
+        "description": "Idite na stranicu za podršku na vašem kontrolnom panelu. Videćete jednostavno chat sučelje gde možete direktno napisati svoju poruku — bez obrazaca za tikete ili kategorija za izbor."
+      },
+      {
+        "title": "Opišite Vaše Pitanje",
+        "description": "Napišite svoju poruku. Pitajte o postavljanju, funkcijama, optimizaciji menija, naplatama ili bilo čemu drugom. Nema glupih pitanja — rado ćemo pomoći sa svime."
+      },
+      {
+        "title": "Dobijte Lični Odgovor",
+        "description": "Stvarna osoba (ne chatbot) čita vašu poruku i odgovara u roku od nekoliko sati. Razumemo radne tokove restorana i dajemo praktične, primenljive odgovore."
+      },
+      {
+        "title": "Kontinuirana Pomoć",
+        "description": "Zatražite predloge za funkcije, dobijte savete za optimizaciju menija ili tražite pomoć pri postavljanju u bilo kojem trenutku. Vaša istorija razgovora se čuva, tako da uvek imamo kontekst iz prethodnih pitanja."
+      }
+    ]
   }
 }

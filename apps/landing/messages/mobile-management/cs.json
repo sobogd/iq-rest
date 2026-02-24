@@ -46,5 +46,27 @@
         "answer": "Momentálně restauraci spravuje jeden účet. Můžete se přihlásit z více zařízení současně — telefonu, tabletu nebo počítače."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Spravujte svou restauraci z jakéhokoli zařízení ve čtyřech krocích.",
+    "steps": [
+      {
+        "title": "Otevřete řídicí panel na svém telefonu",
+        "description": "Přejděte na iq-rest.com a přihlaste se z prohlížeče svého telefonu. Řídicí panel se automaticky přizpůsobí velikosti vaší obrazovky — žádná aplikace ke stažení nebo instalaci."
+      },
+      {
+        "title": "Upravte menu kdekoli",
+        "description": "Přidejte nové položky, aktualizujte ceny, změňte popisy a nahrávejte fotografie přímo z fotoaparátu vašeho telefonu. Každá funkce dostupná na desktopu funguje stejně dobře na mobilu."
+      },
+      {
+        "title": "Kontrolujte objednávky a rezervace",
+        "description": "Sledujte příchozí objednávky, spravujte rezervace stolů a odpovídejte na zprávy podpory — vše z vašeho telefonu. Mějte přehled o své restauraci i když jste pryč."
+      },
+      {
+        "title": "Změny se okamžitě projeví",
+        "description": "Každá úprava, kterou provedete ze svého telefonu, se na vašem QR menu zobrazuje v reálném čase. Není potřeba synchronizovat, publikovat nebo čekat — vaši hosté vždy vidí nejnovější verzi."
+      }
+    ]
   }
 }

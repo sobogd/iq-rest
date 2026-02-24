@@ -46,5 +46,27 @@
         "answer": "Da. Fiecare imagine este generată în mod unic pentru preparatul dumneavoastră specific. Fără fotografii de stoc — fiecare imagine este creată proaspăt pe baza elementului din meniu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Obțineți fotografii profesionale cu mâncare pentru meniul dumneavoastră în patru pași simpli.",
+    "steps": [
+      {
+        "title": "Deschideți Orice Element de Meniu",
+        "description": "Navigați la elementul pentru care doriți o fotografie în tabloul de bord. Puteți genera imagini pentru preparate noi sau înlocui fotografiile existente pentru orice element de meniu."
+      },
+      {
+        "title": "Faceți Clic pe Generați Imagine",
+        "description": "AI creează o fotografie profesională cu mâncare pe baza numelui și descrierii preparatului. Cu cât oferiți mai multe detalii în descriere, cu atât rezultatul va fi mai precis."
+      },
+      {
+        "title": "Revizuiți Rezultatul",
+        "description": "Previzualizați imaginea generată înainte de a o aplica. Dacă doriți un aspect diferit, regenerați pentru a obține o nouă variație. Fiecare generație produce o imagine unică."
+      },
+      {
+        "title": "Utilizați în Meniul Dumneavoastră",
+        "description": "Imaginea este optimizată automat, comprimată în format WebP și apare imediat pe meniul dumneavoastră activ. Oaspeții văd fotografii profesionale cu mâncare pentru fiecare preparat."
+      }
+    ]
   }
 }

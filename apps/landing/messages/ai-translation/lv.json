@@ -46,5 +46,31 @@
         "answer": "MI tulkošana ir iekļauta Basic un Pro plānos ar dāsniem mēneša limitiem. Nav maksu par vārdu vai vienumu — tulkojiet tik, cik nepieciešams."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas strādā",
+    "subtitle": "Pārvērtiet savu visu ēdienkarti minūtēs, nevis stundās.",
+    "steps": [
+      {
+        "title": "Pievienojiet valodas savai ēdienkartei",
+        "description": "Dodieties uz valodu lapu savā vadības panelī un izvēlieties, kuras valodas jūsu ēdienkarte atbalstīs. Izvēlieties no 35 pieejamām valodām, tostarp visām galvenajām Eiropas, Āzijas un Tuvo Austrumu valodām."
+      },
+      {
+        "title": "Noklikšķiniet uz Pārvērst",
+        "description": "Viena poga pārvērš visas jūsu kategorijas, ēdienu nosaukumus un aprakstus vienlaikus. Visa ēdienkarte tiek apstrādāta sekundēs, neatkarīgi no tā, cik daudz ēdienu jums ir."
+      },
+      {
+        "title": "AI saprot ēdiena kontekstu",
+        "description": "AI zina kulinārijas terminoloģiju dažādās kultūrās. Tas saglabā ēdienu nosaukumus, piemēram, 'Tiramisu' vai 'Pad Thai', vienlaikus dabiski pielāgojot aprakstus, sastāvdaļu sarakstus un kategoriju nosaukumus."
+      },
+      {
+        "title": "Pārskatiet un rediģējiet",
+        "description": "Katrs tulkojums ir pilnībā rediģējams. Pielāgojiet jebkuru formulējumu, lai tas atbilstu jūsu stilam. Jūsu manuālās izmaiņas tiek saglabātas pat tad, ja vēlāk atkārtoti tulkojat citas ēdienkartes daļas."
+      },
+      {
+        "title": "Publicējiet savu daudzvalodu ēdienkarti",
+        "description": "Viesi redz valodas maiņas pogu jūsu ēdienkartē un var pārlūkot savā izvēlētajā valodā. Katru valodu var ieslēgt vai izslēgt neatkarīgi no jūsu vadības paneļa."
+      }
+    ]
   }
 }

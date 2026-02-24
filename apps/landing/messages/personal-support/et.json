@@ -46,5 +46,27 @@
         "answer": "Jah, ja me armastame seda! Paljud meie funktsioonid said alguse kasutajate ettepanekutest. Kirjutage meile oma ideega ja me kaalume seda tulevaste uuenduste jaoks."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Saage abi tõeliselt inimeselt neljas lihtsas sammus.",
+    "steps": [
+      {
+        "title": "Avage Tugivestlus",
+        "description": "Minge oma juhtpaneeli tugilehe juurde. Näete lihtsat vestlusliidest, kuhu saate oma sõnumi otse kirjutada — ei mingeid piletivorme ega kategooriaid valida."
+      },
+      {
+        "title": "Kirjeldage Oma Küsimust",
+        "description": "Kirjutage oma sõnum. Küsige seadistamise, funktsioonide, menüü optimeerimise, arveldamise või muu kohta. Ei ole rumalaid küsimusi — me oleme valmis aitama kõiges."
+      },
+      {
+        "title": "Saage Isiklik Vastus",
+        "description": "Tõeline inimene (mitte juturobot) loeb teie sõnumi ja vastab mõne tunni jooksul. Me mõistame restoranide töövooge ja anname praktilisi, teostatavaid vastuseid."
+      },
+      {
+        "title": "Jätkuv Abi",
+        "description": "Küsi funktsioonide soovitusi, saa menüü optimeerimise näpunäiteid või palu seadistamise abi igal ajal. Teie vestlusajalugu salvestatakse, nii et meil on alati kontekst eelmistest küsimustest."
+      }
+    ]
   }
 }

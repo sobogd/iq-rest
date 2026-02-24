@@ -46,5 +46,27 @@
         "answer": "Ücretsiz plan 2 dile kadar içerir. Basic ve Pro planlar, yapay zeka çevirisi dahil sınırsız dil sunar."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Menünüzü dört adımda birden fazla dilde erişilebilir hale getirin.",
+    "steps": [
+      {
+        "title": "Dil Ayarlarına Git",
+        "description": "Gösterge panelinizdeki Diller sayfasını açın. Tüm mevcut dilleri ve hangilerinin menünüzde şu anda aktif olduğunu göreceksiniz."
+      },
+      {
+        "title": "Diller Ekleyin",
+        "description": "Mevcut 35 dilden seçim yapın. Ücretsiz plan, en fazla 2 dili içerirken, Basic ve Pro planları menünüz için sınırsız dil sunar."
+      },
+      {
+        "title": "İçeriğinizi Çevirin",
+        "description": "Tüm menünüzü anında çevirmek için tek tıklamayla AI çevirisini kullanın veya tam kontrol için çevirileri manuel olarak girin. Her iki yaklaşımı da birleştirebilirsiniz."
+      },
+      {
+        "title": "Misafirler Dilleri Değiştirir",
+        "description": "Menü sayfanızda bir dil seçici görünür. Misafirler dillerini seçtiğinde, tüm menü anında değişir. Tercihleri, geri dönüş ziyaretleri için kaydedilir."
+      }
+    ]
   }
 }

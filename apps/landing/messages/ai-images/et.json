@@ -46,5 +46,27 @@
         "answer": "Jah. Iga pilt genereeritakse unikaalselt teie konkreetse roa jaoks. Pole stockfotosid — iga pilt luuakse värskelt teie menüüelemendi põhjal."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Saage professionaalsed toidufotod oma menüü jaoks neljas lihtsas sammus.",
+    "steps": [
+      {
+        "title": "Avage Iga Menüü Ese",
+        "description": "Liikuge oma juhtpaneelil selle eseme juurde, mille jaoks soovite fotot. Saate genereerida pilte uute roogade jaoks või asendada olemasolevaid fotosid igas menüü esemes."
+      },
+      {
+        "title": "Klõpsake Pildi Genereerimist",
+        "description": "AI loob professionaalse toidufoto rooga nime ja kirjelduse põhjal. Mida rohkem detaile te kirjelduse juurde lisate, seda täpsem on tulemus."
+      },
+      {
+        "title": "Vaadake Tulemusi",
+        "description": "Eelvaadake genereeritud pilti enne selle rakendamist. Kui soovite erinevat välimust, genereerige uuesti, et saada uus variatsioon. Iga genereerimine toodab ainulaadse pildi."
+      },
+      {
+        "title": "Kasutage Oma Menüüdes",
+        "description": "Pilt optimeeritakse automaatselt, kompressitakse WebP formaati ja ilmub teie reaalajas menüüs kohe. Külalised näevad igas roas professionaalseid toidufotosid."
+      }
+    ]
   }
 }

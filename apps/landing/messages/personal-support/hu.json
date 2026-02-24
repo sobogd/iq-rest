@@ -46,5 +46,27 @@
         "answer": "Igen, és imádjuk! Sok funkciónk felhasználói javaslatokból indult el. Írd meg nekünk az ötletedet, és figyelembe vesszük a jövőbeli frissítéseknél."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan Működik",
+    "subtitle": "Segítséget kérhetsz egy valós személytől négy egyszerű lépésben.",
+    "steps": [
+      {
+        "title": "Nyisd meg a Támogatási Csevegést",
+        "description": "Lépj a Támogatás oldalra a vezérlőpultodon. Egy egyszerű csevegőfelületet látsz, ahol közvetlenül beírhatod az üzenetedet — nincsenek jegyformák vagy kategóriák, amik közül választhatsz."
+      },
+      {
+        "title": "Írd le a Kérdésed",
+        "description": "Írd be az üzenetedet. Kérdezz a beállításról, funkciókról, menüoptimalizálásról, számlázásról vagy bármi másról. Nincsenek buta kérdések — szívesen segítünk mindenben."
+      },
+      {
+        "title": "Kapj Személyre Szabott Választ",
+        "description": "Egy valós személy (nem chatbot) elolvassa az üzenetedet és órákon belül válaszol. Értjük az étterem munkafolyamatait, és gyakorlati, végrehajtható válaszokat adunk."
+      },
+      {
+        "title": "Folyamatos Segítség",
+        "description": "Kérj funkciójavaslatokat, szerezz menüoptimalizálási tippeket, vagy kérj segítséget a beállításokhoz bármikor. A beszélgetésed története el van mentve, így mindig van kontextus a korábbi kérdésekből."
+      }
+    ]
   }
 }

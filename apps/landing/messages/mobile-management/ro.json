@@ -46,5 +46,27 @@
         "answer": "În prezent, un cont gestionează restaurantul. Vă puteți conecta simultan de pe mai multe dispozitive — telefon, tabletă sau computer."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Gestionează-ți restaurantul de pe orice dispozitiv în patru pași.",
+    "steps": [
+      {
+        "title": "Deschide Dashboard-ul pe Telefonul Tău",
+        "description": "Accesează iq-rest.com și conectează-te din browserul telefonului tău. Dashboard-ul se adaptează automat la dimensiunea ecranului tău — nu este necesară descărcarea sau instalarea unei aplicații."
+      },
+      {
+        "title": "Editează Meniul De Oriunde",
+        "description": "Adaugă articole noi, actualizează prețuri, schimbă descrieri și încarcă fotografii direct din camera telefonului tău. Fiecare funcție disponibilă pe desktop funcționează la fel de bine și pe mobil."
+      },
+      {
+        "title": "Verifică Comenzile și Rezervările",
+        "description": "Vizualizează comenzile primite, gestionează rezervările de mese și răspunde la mesajele de suport — toate de pe telefonul tău. Fii la curent cu restaurantul tău chiar și atunci când ești departe."
+      },
+      {
+        "title": "Modificările Devind Active Instantaneu",
+        "description": "Fiecare editare pe care o faci de pe telefonul tău apare pe meniul tău QR în timp real. Nu este nevoie să sincronizezi, publici sau aștepți — oaspeții tăi văd întotdeauna cea mai recentă versiune."
+      }
+    ]
   }
 }

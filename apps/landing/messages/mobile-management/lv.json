@@ -46,5 +46,27 @@
         "answer": "Pašlaik viens konts pārvalda restorānu. Jūs varat pierakstīties no vairākām ierīcēm vienlaicīgi — no tālruņa, planšetdatora vai datora."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas strādā",
+    "subtitle": "Pārvaldiet savu restorānu no jebkuras ierīces četros soļos.",
+    "steps": [
+      {
+        "title": "Atveriet informācijas paneli savā telefonā",
+        "description": "Dodieties uz iq-rest.com un piesakieties no sava telefona pārlūkprogrammas. Informācijas panelis automātiski pielāgojas jūsu ekrāna izmēram — nav nepieciešams lejupielādēt vai instalēt lietotni."
+      },
+      {
+        "title": "Rediģējiet ēdienkarti jebkur",
+        "description": "Pievienojiet jaunus ēdienus, atjauniniet cenas, mainiet aprakstus un augšupielādējiet fotoattēlus tieši no sava telefona kameras. Katrs rīks, kas pieejams darbvirsmā, darbojas tikpat labi arī mobilajā versijā."
+      },
+      {
+        "title": "Pārbaudiet pasūtījumus un rezervācijas",
+        "description": "Skatiet ienākošos pasūtījumus, pārvaldiet galdu rezervācijas un atbildiet uz atbalsta ziņojumiem — visu no sava telefona. Esiet informēts par savu restorānu pat tad, kad esat prom."
+      },
+      {
+        "title": "Izmaiņas tiek publicētas nekavējoties",
+        "description": "Katrs labojums, ko veicat no sava telefona, parādās jūsu QR ēdienkartē reāllaikā. Nav nepieciešams sinhronizēt, publicēt vai gaidīt — jūsu viesi vienmēr redz jaunāko versiju."
+      }
+    ]
   }
 }

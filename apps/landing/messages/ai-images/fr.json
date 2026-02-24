@@ -46,5 +46,27 @@
         "answer": "Oui. Chaque image est générée de manière unique pour votre plat spécifique. Pas de photos de banque d'images — chaque image est créée sur mesure à partir de votre plat du menu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Obtenez des photos professionnelles de plats pour votre menu en quatre étapes simples.",
+    "steps": [
+      {
+        "title": "Ouvrir un élément de menu",
+        "description": "Naviguez vers l'élément pour lequel vous souhaitez une photo dans votre tableau de bord. Vous pouvez générer des images pour de nouveaux plats ou remplacer des photos existantes sur n'importe quel élément de menu."
+      },
+      {
+        "title": "Cliquez sur Générer l'image",
+        "description": "L'IA crée une photo professionnelle de plat basée sur le nom et la description du plat. Plus vous fournissez de détails dans la description, plus le résultat sera précis."
+      },
+      {
+        "title": "Examinez le résultat",
+        "description": "Aperçu de l'image générée avant de l'appliquer. Si vous souhaitez un aspect différent, régénérez pour obtenir une nouvelle variation. Chaque génération produit une image unique."
+      },
+      {
+        "title": "Utilisez dans votre menu",
+        "description": "L'image est automatiquement optimisée, compressée au format WebP, et apparaît immédiatement sur votre menu en direct. Les invités voient des photos professionnelles de plats sur chaque plat."
+      }
+    ]
   }
 }

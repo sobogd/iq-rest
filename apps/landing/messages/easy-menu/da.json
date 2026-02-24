@@ -46,5 +46,31 @@
         "answer": "Ja. Slaa et element fra med et tryk. Det forsvinder fra den offentlige menu, men forbliver i dit kontrolpanel — slaa det til igen naar du er klar."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Sådan fungerer det",
+    "subtitle": "Opret og offentliggør din restaurantmenu i fem enkle trin.",
+    "steps": [
+      {
+        "title": "Opret Kategorier",
+        "description": "Tilføj kategorier som Forretter, Hovedretter, Desserter og Drikkevarer for at organisere din menu. Du kan oprette så mange kategorier, som du har brug for, og ændre rækkefølgen ved at trække og slippe."
+      },
+      {
+        "title": "Tilføj Menuvarer",
+        "description": "Indtast retternes navn, beskrivelse og pris for hver vare. Marker allergener, hvis det er relevant — gæsterne vil automatisk se allergenikoner på menuen."
+      },
+      {
+        "title": "Upload eller Generer Fotos",
+        "description": "Upload dine egne madbilleder fra din telefon eller computer, eller brug AI til at generere et professionelt madbillede ud fra rettens navn. Billeder optimeres automatisk."
+      },
+      {
+        "title": "Organiser med Træk og Slip",
+        "description": "Ændr rækkefølgen af kategorier og varer ved at trække dem på plads. Tænd eller sluk for enhver vare uden at slette den — perfekt til dagens retter eller udsolgte retter."
+      },
+      {
+        "title": "Offentliggør Din Menu",
+        "description": "Ændringer vises straks på din live QR-menu. Der er ingen 'offentliggør'-knap — hver redigering går live i realtid. Print din QR-kode og placér den på dine borde."
+      }
+    ]
   }
 }

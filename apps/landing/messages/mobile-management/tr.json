@@ -46,5 +46,27 @@
         "answer": "Şu anda bir hesap restoranı yönetir. Aynı anda birden fazla cihazdan giriş yapabilirsiniz — telefonunuz, tabletiniz veya bilgisayarınız."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Restoranınızı dört adımda herhangi bir cihazdan yönetin.",
+    "steps": [
+      {
+        "title": "Telefonunuzda Kontrol Panelini Açın",
+        "description": "iq-rest.com adresine gidin ve telefonunuzun tarayıcısından giriş yapın. Kontrol paneli otomatik olarak ekran boyutunuza uyum sağlar — indirilecek veya kurulacak bir uygulama yok."
+      },
+      {
+        "title": "Her Yerden Menü Düzenleyin",
+        "description": "Yeni ürünler ekleyin, fiyatları güncelleyin, açıklamaları değiştirin ve fotoğrafları doğrudan telefon kameranızdan yükleyin. Masaüstünde mevcut olan her özellik mobilde de aynı şekilde çalışır."
+      },
+      {
+        "title": "Siparişleri ve Rezervasyonları Kontrol Edin",
+        "description": "Gelen siparişleri görüntüleyin, masa rezervasyonlarını yönetin ve destek mesajlarına yanıt verin — bunların hepsini telefonunuzdan yapın. Uzakta olsanız bile restoranınızın kontrolünü elinizde tutun."
+      },
+      {
+        "title": "Değişiklikler Anında Yayınlanır",
+        "description": "Telefonunuzdan yaptığınız her düzenleme, QR menünüzde gerçek zamanlı olarak görünür. Senkronize etmenize, yayınlamanıza veya beklemenize gerek yok — misafirleriniz her zaman en son sürümü görür."
+      }
+    ]
   }
 }

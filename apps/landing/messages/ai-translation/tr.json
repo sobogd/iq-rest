@@ -46,5 +46,31 @@
         "answer": "Yapay zeka çevirisi, cömert aylık limitlerle Basic ve Pro planlara dahildir. Kelime başına veya öğe başına ücret yoktur — ihtiyacınız kadar çevirin."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Menünüzü dakikalar içinde, saatler değil.",
+    "steps": [
+      {
+        "title": "Menünüze Diller Ekleyin",
+        "description": "Kontrol panelinizdeki Diller sayfasına gidin ve menünüzün desteklemesi gereken dilleri seçin. Tüm büyük Avrupa, Asya ve Orta Doğu dilleri dahil olmak üzere 35 mevcut dilden birini seçin."
+      },
+      {
+        "title": "Çevir'e Tıklayın",
+        "description": "Tek bir buton, tüm kategorilerinizi, ürün adlarınızı ve açıklamalarınızı bir anda çevirir. Menünün tamamı, kaç ürününüz olursa olsun, saniyeler içinde işlenir."
+      },
+      {
+        "title": "Yapay Zeka Yiyecek Bağlamını Anlar",
+        "description": "Yapay zeka, kültürler arasında mutfak terminolojisini bilir. 'Tiramisu' veya 'Pad Thai' gibi yemek adlarını korurken, açıklamaları, malzeme listelerini ve kategori adlarını doğal bir şekilde uyumlu hale getirir."
+      },
+      {
+        "title": "Gözden Geçirin ve Düzenleyin",
+        "description": "Her çeviri tamamen düzenlenebilir. Herhangi bir ifadeyi tarzınıza uyacak şekilde ayarlayın. Manuel değişiklikleriniz, menünün diğer kısımlarını daha sonra yeniden çevirdiğinizde bile korunur."
+      },
+      {
+        "title": "Çok Dilli Menünüzü Yayınlayın",
+        "description": "Misafirler menünüzde bir dil değiştirme aracı görür ve tercih ettikleri dilde gezinebilirler. Her dil, kontrol panelinizden bağımsız olarak açılıp kapatılabilir."
+      }
+    ]
   }
 }

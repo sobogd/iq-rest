@@ -46,5 +46,31 @@
         "answer": "AI þýðing er innifalin í Basic og Pro áskriftum með rausnarlegum mánaðarlegum mörkum. Engin gjöld á orð eða á hlut — þýddu eins mikið og þú þarft."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Þýddu allt matseðilinn á mínútum, ekki klukkustundum.",
+    "steps": [
+      {
+        "title": "Bættu tungumálum við matseðilinn þinn",
+        "description": "Farðu á tungumálasíðuna í stjórnborðinu þínu og veldu hvaða tungumál matseðillinn þinn á að styðja. Veldu úr 35 tiltækum tungumálum, þar á meðal öllum helstu evrópskum, asískum og mið-austurlenskum tungumálum."
+      },
+      {
+        "title": "Smelltu á Þýða",
+        "description": "Einn takki þýðir allar flokkana þína, nafn á réttum og lýsingar í einu. Allur matseðillinn er unnin á sekúndum, sama hversu marga rétti þú hefur."
+      },
+      {
+        "title": "AI Skilur Matarsamhengi",
+        "description": "AI-ið þekkir matargerðarorðaforða á milli menningar. Það varðveitir nöfn rétta eins og 'Tiramisu' eða 'Pad Thai' á meðan það aðlagar lýsingar, innihaldslýsingar og flokkana náttúrulega."
+      },
+      {
+        "title": "Skoðaðu og Breyttu",
+        "description": "Hver þýðing er fullkomlega breytanleg. Breyttu hvaða orðalagi sem er til að passa við þinn stíl. Handvirkar breytingar þínar eru varðveittar jafnvel þegar þú þýðir aftur aðra hluta matseðilsins síðar."
+      },
+      {
+        "title": "Birta fjöltyngdan matseðil þinn",
+        "description": "Gestir sjá tungumálaskiptara á matseðlinum þínum og geta flett í sínu uppáhalds tungumáli. Hvert tungumál má kveikja eða slökkva á sjálfstætt frá stjórnborðinu þínu."
+      }
+    ]
   }
 }

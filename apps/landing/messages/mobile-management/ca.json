@@ -46,5 +46,27 @@
         "answer": "Actualment, un compte gestiona el restaurant. Pots iniciar sessió des de diversos dispositius simultàniament — mòbil, tauleta o ordinador."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Gestiona el teu restaurant des de qualsevol dispositiu en quatre passos.",
+    "steps": [
+      {
+        "title": "Obre el Tauler al Teu Telèfon",
+        "description": "Vés a iq-rest.com i inicia sessió des del navegador del teu telèfon. El tauler s'adapta automàticament a la mida de la teva pantalla — no cal descarregar ni instal·lar cap aplicació."
+      },
+      {
+        "title": "Edita el Menú Des de Qualsevol Lloc",
+        "description": "Afegeix nous articles, actualitza preus, canvia descripcions i puja fotos directament des de la càmera del teu telèfon. Cada funció disponible a l'escriptori funciona igual de bé en mòbil."
+      },
+      {
+        "title": "Comprova Comandes i Reserves",
+        "description": "Veu les comandes entrants, gestiona les reserves de taules i respon a missatges de suport — tot des del teu telèfon. Mantingues el control del teu restaurant fins i tot quan estàs lluny."
+      },
+      {
+        "title": "Els Canvis Es Fan Efectius Instantàniament",
+        "description": "Cada edició que facis des del teu telèfon apareix al teu menú QR en temps real. No cal sincronitzar, publicar ni esperar — els teus convidats sempre veuen l'última versió."
+      }
+    ]
   }
 }

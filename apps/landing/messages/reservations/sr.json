@@ -46,5 +46,31 @@
         "answer": "Da. Izaberite automatski režim za trenutnu potvrdu rezervacija na osnovu dostupnosti, ili ručni režim za pregled i odobravanje svakog zahteva lično."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako funkcioniše",
+    "subtitle": "Postavite online rezervacije i počnite da prihvatate rezervacije u pet koraka.",
+    "steps": [
+      {
+        "title": "Omogućite rezervacije",
+        "description": "Uključite rezervacije u podešavanjima vašeg restorana. Izaberite između automatske potvrde, gde se rezervacije odmah odobravaju na osnovu dostupnosti, ili ručnog režima gde pregledate svaku zahtev."
+      },
+      {
+        "title": "Dodajte svoje stolove",
+        "description": "Kreirajte stolove sa informacijama o kapacitetu i zoni — na primer, 'Sto 5, 4 gosta, Terasa'. Svaki sto postaje rezervabilan, a sistem automatski sprečava dvostruke rezervacije."
+      },
+      {
+        "title": "Postavite radno vreme",
+        "description": "Definišite svoje dostupne sate za rezervacije i izaberite trajanje termina — od 15 minuta do 8 sati. Samo vremenski termini unutar vašeg radnog vremena se prikazuju gostima."
+      },
+      {
+        "title": "Gosti rezervišu online",
+        "description": "Kupci posete vašu stranicu restorana, izaberu datum, vreme i broj osoba, unesu svoje ime i telefon, i pošalju. Nije potrebna registracija ili preuzimanje aplikacije — funkcioniše u bilo kom pretraživaču."
+      },
+      {
+        "title": "Upravljajte rezervacijama na vašem kontrolnom panelu",
+        "description": "Pregledajte sve rezervacije na vašem kontrolnom panelu. Potvrdite, otkažite ili označite rezervacije kao završene. I vi i gost dobijate email obaveštenja za svaku promenu rezervacije."
+      }
+    ]
   }
 }

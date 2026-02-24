@@ -46,5 +46,27 @@
         "answer": "Igen. Minden kép egyedileg generálódik az adott ételéhez. Nincsenek stock fotók — minden kép frissen készül a menüelem alapján."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan működik",
+    "subtitle": "Szerezz professzionális ételfotókat az étlapodhoz négy egyszerű lépésben.",
+    "steps": [
+      {
+        "title": "Nyisd meg bármelyik étlap elemet",
+        "description": "Navigálj ahhoz az elemhez, amelyhez fotót szeretnél a műszerfaladon. Képes vagy új ételekhez képeket generálni, vagy meglévő fotókat cserélni bármelyik étlap elemen."
+      },
+      {
+        "title": "Kattints a Kép Generálása gombra",
+        "description": "Az AI egy professzionális ételfotót készít az étel neve és leírása alapján. Minél részletesebb információt adsz meg a leírásban, annál pontosabb lesz az eredmény."
+      },
+      {
+        "title": "Ellenőrizd az eredményt",
+        "description": "Tekintsd meg a generált képet, mielőtt alkalmaznád. Ha más megjelenést szeretnél, regenerálj, hogy új változatot kapj. Minden generálás egyedi képet eredményez."
+      },
+      {
+        "title": "Használj az étlapodon",
+        "description": "A kép automatikusan optimalizálva van, WebP formátumba tömörítve, és azonnal megjelenik az élő étlapodon. A vendégek professzionális ételfotókat látnak minden ételen."
+      }
+    ]
   }
 }

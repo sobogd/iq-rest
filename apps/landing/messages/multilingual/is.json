@@ -46,5 +46,27 @@
         "answer": "Ókeypis áskriftin inniheldur allt að 2 tungumál. Basic og Pro áskriftir bjóða ótakmörkuð tungumál með AI þýðingu innifalinni."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Gerðu matseðilinn þinn aðgengilegan á mörgum tungumálum í fjórum skrefum.",
+    "steps": [
+      {
+        "title": "Farðu í Tungumálastillingar",
+        "description": "Opnaðu Tungumálasíðuna í stjórnborðinu þínu. Þú munt sjá öll tiltæk tungumál og hvaða tungumál eru virk á matseðlinum þínum."
+      },
+      {
+        "title": "Bættu Tungumálum Við",
+        "description": "Veldu úr 35 tiltækum tungumálum. Ókeypis áætlunin inniheldur allt að 2 tungumál, á meðan Basic og Pro áætlanir bjóða upp á ótakmörkuð tungumál fyrir matseðilinn þinn."
+      },
+      {
+        "title": "Þýddu Efnið Þitt",
+        "description": "Notaðu AI-þýðingu með einu smelli til að þýða allan matseðilinn þinn strax, eða sláðu inn þýðingar handvirkt fyrir fulla stjórn. Þú getur líka sameinað báðar aðferðirnar."
+      },
+      {
+        "title": "Gestir Skipta Um Tungumál",
+        "description": "Tungumálaval kemur fram á matseðilsíðunni þinni. Þegar gestir velja tungumál sitt, skiptist allur matseðillinn strax. Val þeirra er vistað fyrir endurkomu."
+      }
+    ]
   }
 }

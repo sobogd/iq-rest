@@ -47,6 +47,32 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "From setup to receiving your first order in five simple steps.",
+    "steps": [
+      {
+        "title": "Enable Online Ordering",
+        "description": "Toggle orders on in your Design settings. Choose your preferred mode: orders appear in your dashboard, get forwarded to WhatsApp, or both simultaneously."
+      },
+      {
+        "title": "Configure the Order Form",
+        "description": "Select which fields customers must fill in when placing an order. Name is always required, and you can optionally ask for phone number and delivery address."
+      },
+      {
+        "title": "Print QR Codes for Tables",
+        "description": "Each table in your restaurant gets its own unique QR code. When guests scan it, their order automatically arrives with the correct table number attached."
+      },
+      {
+        "title": "Customers Place Orders",
+        "description": "Guests scan the QR code, browse your menu with photos and prices, select items, add notes, and submit their order. No app download or account creation needed."
+      },
+      {
+        "title": "Manage Orders in Your Dashboard",
+        "description": "Orders appear instantly in your dashboard. Update each order's status from new to in progress to completed. You keep 100% of the revenue — zero commissions."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about online ordering.",
@@ -66,6 +92,22 @@
       {
         "question": "Does it work for dine-in, takeaway, and delivery?",
         "answer": "Yes. For dine-in, guests scan the QR code at their table. For takeaway or delivery, share a direct link to your menu. You can enable name, phone, and address fields as needed."
+      },
+      {
+        "question": "Can I send orders to WhatsApp instead of the dashboard?",
+        "answer": "Yes. In your order settings, you can choose WhatsApp mode, dashboard mode, or both. WhatsApp orders are sent directly to your phone with all item details and customer info."
+      },
+      {
+        "question": "Do customers need to create an account to order?",
+        "answer": "No. Guests scan the QR code and order immediately — no account, no app download, no sign-up. It works instantly in any phone browser."
+      },
+      {
+        "question": "Can I see which table placed the order?",
+        "answer": "Yes. Each table has its own QR code, so every order arrives with the table number automatically attached. You always know exactly where the order came from."
+      },
+      {
+        "question": "Is online ordering available on the free plan?",
+        "answer": "Online ordering is available on the Basic and Pro plans. The free plan includes your full QR menu, contact page, and analytics — upgrade anytime to enable orders."
       }
     ]
   }

@@ -46,5 +46,27 @@
         "answer": "Gratisplanen inkluderer opptil 2 spraak. Basic- og Pro-planer tilbyr ubegrenset antall spraak med AI-oversettelse inkludert."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik fungerer det",
+    "subtitle": "Gjør menyen din tilgjengelig på flere språk i fire trinn.",
+    "steps": [
+      {
+        "title": "Gå til Språkinnstillinger",
+        "description": "Åpne Språk-siden i dashbordet ditt. Du vil se alle tilgjengelige språk og hvilke som for øyeblikket er aktive på menyen din."
+      },
+      {
+        "title": "Legg til Språk",
+        "description": "Velg fra 35 tilgjengelige språk. Den gratis planen inkluderer opptil 2 språk, mens Basic- og Pro-planene tilbyr ubegrensede språk for menyen din."
+      },
+      {
+        "title": "Oversett Innholdet Ditt",
+        "description": "Bruk AI-oversettelse med ett klikk for å oversette hele menyen din umiddelbart, eller skriv inn oversettelser manuelt for full kontroll. Du kan også kombinere begge tilnærmingene."
+      },
+      {
+        "title": "Gjestene Bytter Språk",
+        "description": "En språkvelger vises på meny-siden din. Når gjestene velger sitt språk, bytter hele menyen umiddelbart. Deres preferanse lagres for fremtidige besøk."
+      }
+    ]
   }
 }

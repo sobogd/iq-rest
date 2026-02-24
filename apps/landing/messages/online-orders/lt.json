@@ -68,5 +68,31 @@
         "answer": "Taip. Valgymui vietoje svečiai nuskenuoja QR kodą prie savo staliuko. Išsinešimui ar pristatymui pasidalinkite tiesiogine nuoroda į savo meniu. Pagal poreikį galite įjungti vardo, telefono ir adreso laukus."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Nuo nustatymo iki pirmo užsakymo gavimo penkiais paprastais žingsniais.",
+    "steps": [
+      {
+        "title": "Įgalinti internetinius užsakymus",
+        "description": "Įjunkite užsakymus savo Dizaino nustatymuose. Pasirinkite pageidaujamą režimą: užsakymai rodomi jūsų valdymo skydelyje, siunčiami į WhatsApp, arba abu tuo pačiu metu."
+      },
+      {
+        "title": "Konfigūruoti užsakymo formą",
+        "description": "Pasirinkite, kuriuos laukus klientai privalo užpildyti pateikdami užsakymą. Vardas visada yra privalomas, o jūs galite pasirinktinai paprašyti telefono numerio ir pristatymo adreso."
+      },
+      {
+        "title": "Atspausdinti QR kodus stalams",
+        "description": "Kiekvienas stalas jūsų restorane gauna savo unikalų QR kodą. Kai svečiai jį nuskenuoja, jų užsakymas automatiškai atkeliauja su teisingu stalo numeriu."
+      },
+      {
+        "title": "Klientai pateikia užsakymus",
+        "description": "Svečiai nuskenuoja QR kodą, naršo jūsų meniu su nuotraukomis ir kainomis, pasirenka prekes, prideda pastabas ir pateikia savo užsakymą. Programėlės atsisiuntimas ar paskyros kūrimas nėra reikalingas."
+      },
+      {
+        "title": "Valdyti užsakymus savo valdymo skydelyje",
+        "description": "Užsakymai iš karto pasirodo jūsų valdymo skydelyje. Atnaujinkite kiekvieno užsakymo būseną nuo naujo iki vykdomo ir baigto. Jūs išlaikote 100% pajamų — nulis komisinių."
+      }
+    ]
   }
 }

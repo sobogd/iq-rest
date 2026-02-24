@@ -46,5 +46,27 @@
         "answer": "Da, i to volimo! Mnoge naše značajke nastale su iz korisničkih prijedloga. Pošaljite nam svoju ideju i razmotrit ćemo je za buduća ažuriranja."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Dobijte pomoć od stvarne osobe u četiri jednostavna koraka.",
+    "steps": [
+      {
+        "title": "Otvorite podršku za chat",
+        "description": "Idite na stranicu podrške u vašem nadzornom panelu. Vidjet ćete jednostavno sučelje za chat gdje možete izravno napisati svoju poruku — bez obrazaca za ulaznice ili kategorija za odabir."
+      },
+      {
+        "title": "Opišite svoje pitanje",
+        "description": "Napišite svoju poruku. Pitajte o postavljanju, značajkama, optimizaciji jelovnika, naplatama ili bilo čemu drugome. Nema glupih pitanja — rado ćemo pomoći u svemu."
+      },
+      {
+        "title": "Dobijte osobni odgovor",
+        "description": "Stvarna osoba (ne chatbot) čita vašu poruku i odgovara unutar nekoliko sati. Razumijemo radne procese u restoranima i dajemo praktične, konkretne odgovore."
+      },
+      {
+        "title": "Kontinuirana pomoć",
+        "description": "Zatražite prijedloge za značajke, dobijte savjete za optimizaciju jelovnika ili zatražite pomoć pri postavljanju u bilo kojem trenutku. Vaša povijest razgovora se sprema, tako da uvijek imamo kontekst iz prethodnih pitanja."
+      }
+    ]
   }
 }

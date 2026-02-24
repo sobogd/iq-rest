@@ -46,5 +46,27 @@
         "answer": "Da. Svaka slika generira se jedinstveno za vaše specifično jelo. Nema stock fotografija — svaka slika stvara se iznova na temelju vaše stavke jelovnika."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Dobijte profesionalne fotografije hrane za svoj jelovnik u četiri jednostavna koraka.",
+    "steps": [
+      {
+        "title": "Otvorite bilo koju stavku jelovnika",
+        "description": "Navigirajte do stavke za koju želite fotografiju na svom nadzornoj ploči. Možete generirati slike za nova jela ili zamijeniti postojeće fotografije na bilo kojoj stavci jelovnika."
+      },
+      {
+        "title": "Kliknite na Generiraj sliku",
+        "description": "AI stvara profesionalnu fotografiju hrane na temelju imena jela i opisa. Što više detalja pružite u opisu, to će rezultat biti točniji."
+      },
+      {
+        "title": "Pregledajte rezultat",
+        "description": "Pregledajte generiranu sliku prije nego što je primijenite. Ako želite drugačiji izgled, regenerirajte da dobijete novu varijaciju. Svaka generacija proizvodi jedinstvenu sliku."
+      },
+      {
+        "title": "Koristite u svom jelovniku",
+        "description": "Slika je automatski optimizirana, komprimirana u WebP format i odmah se pojavljuje na vašem aktivnom jelovniku. Gosti vide profesionalne fotografije hrane za svako jelo."
+      }
+    ]
   }
 }

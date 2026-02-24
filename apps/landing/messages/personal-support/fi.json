@@ -46,5 +46,27 @@
         "answer": "Kylla, ja rakastamme sita! Monet ominaisuuksistamme saivat alkunsa kayttajaehdotuksista. Laheta meille ideasi, niin harkitsemme sita tulevissa paivityksissa."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Saat apua oikealta henkilöltä neljässä yksinkertaisessa vaiheessa.",
+    "steps": [
+      {
+        "title": "Avaa Tuki-chat",
+        "description": "Siirry hallintapaneelisi Tuki-sivulle. Näet yksinkertaisen chat-käyttöliittymän, johon voit kirjoittaa viestisi suoraan — ei lippulomakkeita tai valittavia kategorioita."
+      },
+      {
+        "title": "Kuvaile Kysymyksesi",
+        "description": "Kirjoita viestisi. Kysy asetuksesta, ominaisuuksista, ruokalistan optimoinnista, laskutuksesta tai mistä tahansa muusta. Tyhmiä kysymyksiä ei ole — autamme mielellämme kaikessa."
+      },
+      {
+        "title": "Saat Henkilökohtaisen Vastauksen",
+        "description": "Oikea henkilö (ei chatbot) lukee viestisi ja vastaa muutamassa tunnissa. Ymmärrämme ravintolatyöskentelytavat ja annamme käytännönläheisiä, toteuttamiskelpoisia vastauksia."
+      },
+      {
+        "title": "Jatkuva Apua",
+        "description": "Pyydä ominaisuusvinkkejä, saa ruokalistan optimointivinkkejä tai kysy asennusapua milloin tahansa. Keskusteluhistoriasi tallennetaan, joten meillä on aina konteksti aiemmista kysymyksistä."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Hayır. Kontrol panelinden videonuzu veya fotoğrafınızı yüklemeniz yeterli. Sistem boyutlandırma, sıkıştırma ve düzeni otomatik olarak halleder. Web siteniz sıfır tasarım becerisiyle profesyonel görünür."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Restoranınızın görsel kimliğini dört adımda özelleştirin.",
+    "steps": [
+      {
+        "title": "Tasarım Ayarlarını Aç",
+        "description": "Kontrol panelinizdeki Tasarım sayfasına gidin. Burada restoranınızın görsel görünümünü — arka plan, vurgulu renk ve ana sayfa düzenini kontrol edebilirsiniz."
+      },
+      {
+        "title": "Bir Arka Plan Yükle",
+        "description": "Restoranınızın ana sayfa arka planı için bir video (MP4, WebM) veya fotoğraf seçin. Videolar otomatik olarak döngüye alınır ve her ziyaretçi için etkileyici bir ilk izlenim yaratır."
+      },
+      {
+        "title": "Yapay Zeka Arka Plan Oluşturma",
+        "description": "Hazır bir video veya fotoğrafınız yok mu? Yapay zekanın menü öğelerinizden otomatik olarak bir arka plan resmi oluşturmasına izin verin. Restoranınızın tarzına uygun profesyonel bir görsel üretir."
+      },
+      {
+        "title": "Önizleme ve Kaydet",
+        "description": "Değişikliklerinizi kaydetmeden önce gerçek zamanlı olarak görün. Videolar otomatik olarak sıkıştırılır ve tembel yüklenir, bu da mobil cihazlarda hızlı performans sağlarken görsel kaliteden ödün vermez."
+      }
+    ]
   }
 }

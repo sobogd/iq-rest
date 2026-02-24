@@ -38,5 +38,23 @@
         "answer": "Vaš QR kod se generiše zasebno i može se prilagoditi nezavisno. Akcentna boja se primenjuje na stranice digitalnog menija, navigaciju i interaktivne elemente."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcioniše",
+    "subtitle": "Usaglasite svoj meni sa svojom markom u tri jednostavna koraka.",
+    "steps": [
+      {
+        "title": "Otvorite Podešavanja Dizajna",
+        "description": "Idite na stranicu Dizajn u vašem kontrolnom panelu. Biranje akcentne boje je na sredini — odmah ćete videti sve dostupne opcije."
+      },
+      {
+        "title": "Izaberite Boju Vaše Marke",
+        "description": "Izaberite između 12 unapred odabranih boja koje su dizajnirane za čitljivost i pristupačnost, ili unesite tačan hex kod za savršeno usklađivanje sa vašom markom."
+      },
+      {
+        "title": "Instant Pregled",
+        "description": "Vaša akcentna boja se primenjuje na dugmadi, linkovima i naglascima širom celog menija. Radi u svetlim i tamnim temama, a promene se odmah pojavljuju na vašem aktivnom meniju."
+      }
+    ]
   }
 }

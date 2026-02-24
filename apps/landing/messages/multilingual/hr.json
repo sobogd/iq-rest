@@ -46,5 +46,27 @@
         "answer": "Besplatni plan uključuje do 2 jezika. Basic i Pro planovi nude neograničen broj jezika s uključenim AI prijevodom."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Učinite svoj jelovnik dostupnim na više jezika u četiri koraka.",
+    "steps": [
+      {
+        "title": "Idite na Postavke jezika",
+        "description": "Otvorite stranicu Jezici na svom nadzornoj ploči. Vidjet ćete sve dostupne jezike i koji su trenutno aktivni na vašem jelovniku."
+      },
+      {
+        "title": "Dodajte jezike",
+        "description": "Odaberite između 35 dostupnih jezika. Besplatni plan uključuje do 2 jezika, dok Basic i Pro planovi nude neograničene jezike za vaš jelovnik."
+      },
+      {
+        "title": "Prevedite svoj sadržaj",
+        "description": "Koristite AI prijevod jednim klikom za trenutni prijevod cijelog jelovnika, ili unesite prijevode ručno za potpunu kontrolu. Također možete kombinirati oba pristupa."
+      },
+      {
+        "title": "Gosti mijenjaju jezike",
+        "description": "Odabir jezika pojavljuje se na vašoj stranici jelovnika. Kada gosti odaberu svoj jezik, cijeli jelovnik se odmah mijenja. Njihova preferencija se sprema za povratne posjete."
+      }
+    ]
   }
 }

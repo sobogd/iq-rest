@@ -46,5 +46,31 @@
         "answer": "Is féidir. Roghnaigh an mód uathoibríoch chun áirithintí a dheimhniú láithreach bunaithe ar infhaighteacht, nó an mód láimhe chun gach iarratas a athbhreithniú agus a cheadú tú féin."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Socraigh áirithintí ar líne agus tús a chur le h-áirithintí i gcuig céim.",
+    "steps": [
+      {
+        "title": "Cuir Áirithintí Ar Siúl",
+        "description": "Cuir áirithintí ar siúl i do shocruithe bialainne. Roghnaigh idir deimhnithe uathoibríocha, áit a ndéantar áirithintí a cheadú go huathoibríoch bunaithe ar infhaighteacht, nó modh láimhe áit a bhreathnaíonn tú ar gach iarratas."
+      },
+      {
+        "title": "Cuir do Táblaí Le Chéile",
+        "description": "Cruthaigh táblaí le faisnéis faoi chumas agus limistéar — mar shampla, 'Tábla 5, 4 aoibhinn, Teach Tábhairne'. Éiríonn gach tábla le h-áirithint, agus cuireann an córas cosc ar dhúbailt áirithintí go huathoibríoch."
+      },
+      {
+        "title": "Socraigh Uaireanta Oibre",
+        "description": "Sainigh do chuid uaireanta atá ar fáil do na h-áirithintí agus roghnaigh an fad ama — ó 15 nóiméad go 8 uair an chloig. Ní thaispeántar ach na slotanna ama laistigh de do chuid uaireanta oibre do na haíonna."
+      },
+      {
+        "title": "Áirithintí Ar Líne ag Aíonna",
+        "description": "Téann custaiméirí chuig do leathanach bialainne, roghnaíonn a dáta, a am, agus méid an ghrúpa, cuireann siad a n-ainm agus a guthán isteach, agus seolann siad. Ní gá cuntas nó íoslódáil aipe — oibríonn sé i ngach brabhsálaí."
+      },
+      {
+        "title": "Bain Sceideal na hÁirithintí i do Dhasboard",
+        "description": "Féach ar gach áirithint i do dhasboard. Deimhnigh, cealaigh, nó marcáil áirithintí mar críochnaithe. Faigheann tú féin agus an t-aoi rabhadh ríomhphoist do gach nuashonrú áirithint."
+      }
+    ]
   }
 }

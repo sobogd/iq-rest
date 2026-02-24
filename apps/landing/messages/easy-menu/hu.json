@@ -46,5 +46,31 @@
         "answer": "Igen. Egyetlen érintéssel kapcsoljon ki bármely tételt. Eltűnik a nyilvános menüből, de megmarad a vezérlőpulton — kapcsolja vissza, amikor kész."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan működik",
+    "subtitle": "Építsd fel és publikáld éttermed menüjét öt egyszerű lépésben.",
+    "steps": [
+      {
+        "title": "Kategóriák létrehozása",
+        "description": "Adj hozzá kategóriákat, mint például Előételek, Főételek, Desszertek és Italok, hogy rendszerezd a menüdet. Annyi kategóriát hozhatsz létre, amennyire szükséged van, és átrendezheted őket húzással és ejtéssel."
+      },
+      {
+        "title": "Menüelemek hozzáadása",
+        "description": "Add meg az étel nevét, leírását és árát minden egyes tételhez. Jelöld meg az allergéneket, ha szükséges — a vendégek automatikusan látni fogják az allergén ikonokat a menüben."
+      },
+      {
+        "title": "Fotók feltöltése vagy generálása",
+        "description": "Töltsd fel saját ételfotóidat a telefonodról vagy számítógépedről, vagy használd az AI-t, hogy professzionális ételfotót generálj az étel nevéből. A képek automatikusan optimalizálva vannak."
+      },
+      {
+        "title": "Rendezés húzással és ejtéssel",
+        "description": "Rendezd át a kategóriákat és tételeket úgy, hogy a helyükre húzod őket. Bármely tételt ki- vagy bekapcsolhatsz anélkül, hogy törölnéd — tökéletes napi ajánlatokhoz vagy elfogyott ételekhez."
+      },
+      {
+        "title": "Publikáld a menüdet",
+        "description": "A változások azonnal megjelennek az élő QR menüden. Nincs 'publikálás' gomb — minden szerkesztés valós időben élővé válik. Nyomtasd ki a QR kódodat, és helyezd el az asztalaidon."
+      }
+    ]
   }
 }

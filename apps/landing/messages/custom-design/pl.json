@@ -46,5 +46,27 @@
         "answer": "Nie. Po prostu prześlij swoje wideo lub zdjęcie z panelu. System automatycznie zajmuje się rozmiarem, kompresją i układem. Twoja strona wygląda profesjonalnie bez żadnych umiejętności projektowych."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Dostosuj wizualną tożsamość swojej restauracji w czterech krokach.",
+    "steps": [
+      {
+        "title": "Otwórz ustawienia projektu",
+        "description": "Przejdź do strony Projekt w swoim panelu. Tutaj możesz kontrolować wizualny wygląd swojej restauracji — tło, kolor akcentu i układ strony głównej."
+      },
+      {
+        "title": "Prześlij tło",
+        "description": "Wybierz wideo (MP4, WebM) lub zdjęcie jako tło strony głównej swojej restauracji. Wideo odtwarzane jest w pętli, tworząc immersyjne pierwsze wrażenie dla każdego odwiedzającego."
+      },
+      {
+        "title": "Generowanie tła AI",
+        "description": "Nie masz gotowego wideo ani zdjęcia? Pozwól AI automatycznie stworzyć obraz tła z Twoich pozycji w menu. Generuje profesjonalny wizual, który pasuje do stylu Twojej restauracji."
+      },
+      {
+        "title": "Podgląd i zapisz",
+        "description": "Zobacz swoje zmiany w czasie rzeczywistym przed zapisaniem. Wideo jest automatycznie kompresowane i ładowane leniwie, co zapewnia szybkie działanie na urządzeniach mobilnych bez utraty jakości wizualnej."
+      }
+    ]
   }
 }

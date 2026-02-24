@@ -46,5 +46,31 @@
         "answer": "Áno. Vyberte automatický režim na okamžité potvrdenie rezervácií podľa dostupnosti, alebo manuálny režim na osobné preskúmanie a schválenie každej požiadavky."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Nastavte online rezervácie a začnite prijímať rezervácie v piatich krokoch.",
+    "steps": [
+      {
+        "title": "Povoliť rezervácie",
+        "description": "Aktivujte rezervácie vo svojich nastaveniach reštaurácie. Vyberte si medzi automatickým potvrdením, kde sú rezervácie schválené okamžite na základe dostupnosti, alebo manuálnym režimom, kde si prezeráte každú žiadosť."
+      },
+      {
+        "title": "Pridajte svoje stoly",
+        "description": "Vytvorte stoly s informáciami o kapacite a zóne — napríklad 'Stôl 5, 4 hostia, Terasa'. Každý stôl sa stáva rezervovateľným a systém automaticky zabraňuje dvojitým rezerváciám."
+      },
+      {
+        "title": "Nastavte pracovné hodiny",
+        "description": "Definujte svoje dostupné hodiny pre rezervácie a vyberte trvanie slotu — od 15 minút do 8 hodín. Hostia vidia iba časové sloty vo vašich pracovných hodinách."
+      },
+      {
+        "title": "Hostia rezervujú online",
+        "description": "Zákazníci navštívia vašu stránku reštaurácie, vyberú si dátum, čas a počet osôb, zadajú svoje meno a telefón a odošlú. Nie je potrebný účet ani sťahovanie aplikácie — funguje v akomkoľvek prehliadači."
+      },
+      {
+        "title": "Spravujte rezervácie vo svojom paneli",
+        "description": "Zobrazte všetky rezervácie vo svojom paneli. Potvrďte, zrušte alebo označte rezervácie ako dokončené. Vy aj hosť dostanete e-mailové oznámenia o každej aktualizácii rezervácie."
+      }
+    ]
   }
 }

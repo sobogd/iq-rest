@@ -46,5 +46,27 @@
         "answer": "Nei. Bare last opp videoen eller bildet ditt fra kontrollpanelet. Systemet haandterer stoerrelse, komprimering og layout automatisk. Nettsiden ser profesjonell ut uten designferdigheter."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik fungerer det",
+    "subtitle": "Tilpass restaurantens visuelle identitet i fire trinn.",
+    "steps": [
+      {
+        "title": "Åpne designinnstillinger",
+        "description": "Naviger til Design-siden i dashbordet ditt. Her kan du kontrollere restaurantens visuelle utseende — bakgrunn, aksentfarge og layout på hjemmesiden."
+      },
+      {
+        "title": "Last opp en bakgrunn",
+        "description": "Velg en video (MP4, WebM) eller bilde til restaurantens hjemmesiden bakgrunn. Videoer spilles av i sløyfe automatisk, og gir et imponerende førsteinntrykk for hver besøkende."
+      },
+      {
+        "title": "AI-generering av bakgrunn",
+        "description": "Har du ikke en video eller et bilde klart? La AI lage et bakgrunnsbilde fra menyvarene dine automatisk. Det genererer et profesjonelt visuelt uttrykk som passer til restaurantens stil."
+      },
+      {
+        "title": "Forhåndsvisning og lagring",
+        "description": "Se endringene dine i sanntid før du lagrer. Videoer komprimeres automatisk og lastes inn etter behov, noe som sikrer rask ytelse på mobile enheter uten å gå på bekostning av visuell kvalitet."
+      }
+    ]
   }
 }

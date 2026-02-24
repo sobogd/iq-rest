@@ -25,6 +25,32 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Translate your entire menu in minutes, not hours.",
+    "steps": [
+      {
+        "title": "Add Languages to Your Menu",
+        "description": "Go to the Languages page in your dashboard and select which languages your menu should support. Choose from 35 available languages including all major European, Asian, and Middle Eastern languages."
+      },
+      {
+        "title": "Click Translate",
+        "description": "One button translates all your categories, item names, and descriptions at once. The entire menu is processed in seconds, no matter how many items you have."
+      },
+      {
+        "title": "AI Understands Food Context",
+        "description": "The AI knows culinary terminology across cultures. It preserves dish names like 'Tiramisu' or 'Pad Thai' while naturally adapting descriptions, ingredient lists, and category names."
+      },
+      {
+        "title": "Review and Edit",
+        "description": "Every translation is fully editable. Adjust any wording to match your style. Your manual changes are preserved even when you re-translate other parts of the menu later."
+      },
+      {
+        "title": "Publish Your Multilingual Menu",
+        "description": "Guests see a language switcher on your menu and can browse in their preferred language. Each language can be toggled on or off independently from your dashboard."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about menu translation.",
@@ -35,7 +61,7 @@
       },
       {
         "question": "Which languages are supported?",
-        "answer": "25+ languages including English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, Russian, and many more European and Asian languages."
+        "answer": "35 languages including English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, Russian, and many more European and Asian languages."
       },
       {
         "question": "Can I translate just some items, not the whole menu?",
@@ -44,6 +70,18 @@
       {
         "question": "Does it cost extra per translation?",
         "answer": "AI translation is included in Basic and Pro plans with generous monthly limits. No per-word or per-item charges — translate as much as you need."
+      },
+      {
+        "question": "What happens if I add new menu items after translating?",
+        "answer": "New items are added in your default language. Simply click translate again — only the untranslated items are processed, and your existing translations remain untouched."
+      },
+      {
+        "question": "Can I manually enter translations instead of using AI?",
+        "answer": "Yes. Every translation field is editable. You can type translations manually, use AI as a starting point and refine, or combine both approaches for different items."
+      },
+      {
+        "question": "Does the AI translate category names and descriptions too?",
+        "answer": "Yes. One-click translation covers everything — category names, item names, item descriptions, and table zone names. Your entire menu is translated consistently."
       }
     ]
   }

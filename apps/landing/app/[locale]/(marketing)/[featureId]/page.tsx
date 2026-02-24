@@ -17,7 +17,7 @@ import {
   MenuPreviewModal,
   FeatureLinks,
 } from "../_components";
-import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
+import { JsonLd, createBreadcrumbSchema, createHowToSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
 import { FEATURE_IMAGES, FEATURE_NAMESPACE, VALID_FEATURE_IDS, type FeatureId } from "../_lib/feature-data";
 import type { SupportedCurrency } from "@/lib/country-currency-map";
@@ -131,6 +131,19 @@ export default async function FeaturePage({
     answer: string;
   }>;
 
+  // HowItWorks data (optional — graceful fallback)
+  type HowItWorksData = {
+    title: string;
+    subtitle: string;
+    steps: Array<{ title: string; description: string }>;
+  };
+  let howItWorks: HowItWorksData | null = null;
+  try {
+    howItWorks = t.raw("howItWorks") as HowItWorksData;
+  } catch {
+    // Key not present yet — section will be hidden
+  }
+
   // Get benefits from main features list
   const featuresList = tFeatures.raw("list") as Array<{
     id: string;
@@ -164,6 +177,16 @@ export default async function FeaturePage({
     })),
   } : null;
 
+  const howToSchema = howItWorks?.steps?.length
+    ? createHowToSchema(
+        howItWorks.title,
+        howItWorks.subtitle,
+        howItWorks.steps,
+        featureId,
+        locale
+      )
+    : null;
+
   const breadcrumbSchema = createBreadcrumbSchema(locale, [
     { name: "Home", path: "" },
     { name: t("hero.badge") },
@@ -174,6 +197,7 @@ export default async function FeaturePage({
       <PageView slug={featureId} />
       <JsonLd data={softwareAppSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
+      {howToSchema && <JsonLd data={howToSchema} />}
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero Section */}
@@ -286,6 +310,35 @@ export default async function FeaturePage({
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* How It Works Section */}
+      {howItWorks?.steps?.length && (
+        <section id="how-it-works" className="py-16 lg:py-24 bg-muted/50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                {howItWorks.title}
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground">
+                {howItWorks.subtitle}
+              </p>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {howItWorks.steps.map((step, index) => (
+                <div key={index} className="flex items-start gap-4 p-6 border rounded-lg bg-card">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+                    {index + 1}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

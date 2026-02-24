@@ -38,5 +38,23 @@
         "answer": "QR kod se generira zasebno i može se prilagoditi neovisno. Boja naglaska primjenjuje se na stranice digitalnog jelovnika, navigaciju i interaktivne elemente."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Uskladite svoj jelovnik s vašim brendom u tri jednostavna koraka.",
+    "steps": [
+      {
+        "title": "Otvorite postavke dizajna",
+        "description": "Idite na stranicu Dizajn u vašoj nadzornoj ploči. Odabir boje naglaska je na sredini — odmah ćete vidjeti sve dostupne opcije."
+      },
+      {
+        "title": "Odaberite boju svog brenda",
+        "description": "Odaberite između 12 unaprijed odabranih boja dizajniranih za čitljivost i pristupačnost, ili unesite svoj točan hex kod za savršeno usklađivanje s brendom."
+      },
+      {
+        "title": "Trenutni pregled",
+        "description": "Vaša boja naglaska primjenjuje se na gumbe, linkove i istaknute dijelove kroz cijeli jelovnik. Funkcionira u svijetlim i tamnim temama, a promjene se odmah pojavljuju na vašem aktivnom jelovniku."
+      }
+    ]
   }
 }

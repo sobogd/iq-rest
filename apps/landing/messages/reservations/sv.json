@@ -46,5 +46,31 @@
         "answer": "Ja. Valj automatiskt lage for att bekrafta bokningar direkt baserat pa tillganglighet, eller manuellt lage for att granska och godkanna varje forfragan sjalv."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Ställ in onlinebokningar och börja ta emot bokningar i fem steg.",
+    "steps": [
+      {
+        "title": "Aktivera Bokningar",
+        "description": "Aktivera bokningar i dina restauranginställningar. Välj mellan automatisk bekräftelse, där bokningar godkänns omedelbart baserat på tillgänglighet, eller manuell läge där du granskar varje förfrågan."
+      },
+      {
+        "title": "Lägg Till Dina Bord",
+        "description": "Skapa bord med kapacitets- och zoninformation — till exempel, 'Bord 5, 4 gäster, Terrass'. Varje bord blir bokningsbart, och systemet förhindrar automatiskt dubbelbokningar."
+      },
+      {
+        "title": "Ställ In Arbetstider",
+        "description": "Definiera dina tillgängliga timmar för bokningar och välj tidslängd — från 15 minuter till 8 timmar. Endast tidsluckor inom dina arbetstider visas för gästerna."
+      },
+      {
+        "title": "Gäster Bokar Online",
+        "description": "Kunder besöker din restaurangsida, väljer datum, tid och antal personer, anger sitt namn och telefonnummer, och skickar in. Inget konto eller appnedladdning krävs — fungerar i alla webbläsare."
+      },
+      {
+        "title": "Hantera Bokningar i Din Instrumentpanel",
+        "description": "Se alla reservationer i din instrumentpanel. Bekräfta, avboka eller markera bokningar som slutförda. Både du och gästen får e-postmeddelanden för varje bokningsuppdatering."
+      }
+    ]
   }
 }

@@ -46,5 +46,31 @@
         "answer": "Kylla. Kytke mika tahansa kohde pois yhdella napautuksella. Se katoaa julkisesta ruokalistasta mutta pysyy hallintapaneelissa — kytke se takaisin paalle kun olet valmis."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Rakenna ja julkaise ravintolasi menu viidessä yksinkertaisessa vaiheessa.",
+    "steps": [
+      {
+        "title": "Luo Kategoriat",
+        "description": "Lisää kategorioita kuten Alkuruoat, Pääruoat, Jälkiruoat ja Juomat järjestääksesi menuasi. Voit luoda niin monta kategoriaa kuin tarvitset ja järjestää niitä uudelleen raahaamalla."
+      },
+      {
+        "title": "Lisää Ruokalajit",
+        "description": "Syötä jokaisen ruokalajin nimi, kuvaus ja hinta. Merkitse allergeenit, jos tarpeen — vieraat näkevät allergeeni-ikonit valikossa automaattisesti."
+      },
+      {
+        "title": "Lataa tai Generoi Valokuvia",
+        "description": "Lataa omia ruokakuviasi puhelimeltasi tai tietokoneeltasi, tai käytä tekoälyä luodaksesi ammattimaisen ruokakuvan ruokalajin nimen perusteella. Kuvia optimoidaan automaattisesti."
+      },
+      {
+        "title": "Järjestä Raahaamalla",
+        "description": "Järjestä kategoriat ja ruokalajit uudelleen raahaamalla ne paikoilleen. Voit kytkeä minkä tahansa kohteen päälle tai pois ilman, että poistat sen — täydellinen päivittäisille erikoistarjouksille tai loppuunmyydyille ruokalajeille."
+      },
+      {
+        "title": "Julkaise Menuasi",
+        "description": "Muutokset näkyvät heti live QR -menussasi. Ei ole 'julkaise' painiketta — jokainen muutos tulee voimaan reaaliajassa. Tulosta QR-koodisi ja aseta se pöydillesi."
+      }
+    ]
   }
 }

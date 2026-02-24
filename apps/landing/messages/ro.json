@@ -1560,7 +1560,8 @@
         "invalidCode": "Cod invalid. Vă rugăm să încercați din nou.",
         "emailRequired": "Introduceți adresa de email.",
         "emailInvalid": "Introduceți o adresă de email validă."
-      }
+      },
+      "or": "sau"
     },
     "analytics": {
       "monthlyUsage": "Utilizare lunar",

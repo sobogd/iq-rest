@@ -46,5 +46,31 @@
         "answer": "Ja. Deaktivieren Sie jedes Gericht mit einem Tippen. Es verschwindet aus dem öffentlichen Menü, bleibt aber in Ihrem Dashboard — aktivieren Sie es wieder, wann immer Sie bereit sind."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Erstellen und veröffentlichen Sie Ihr Restaurantmenü in fünf einfachen Schritten.",
+    "steps": [
+      {
+        "title": "Kategorien erstellen",
+        "description": "Fügen Sie Kategorien wie Vorspeisen, Hauptgerichte, Desserts und Getränke hinzu, um Ihr Menü zu organisieren. Sie können so viele Kategorien erstellen, wie Sie benötigen, und diese per Drag-and-Drop neu anordnen."
+      },
+      {
+        "title": "Menüelemente hinzufügen",
+        "description": "Geben Sie den Namen des Gerichts, die Beschreibung und den Preis für jedes Element ein. Kennzeichnen Sie Allergene, falls zutreffend — die Gäste sehen automatisch Allergensymbole im Menü."
+      },
+      {
+        "title": "Fotos hochladen oder generieren",
+        "description": "Laden Sie Ihre eigenen Lebensmittelbilder von Ihrem Telefon oder Computer hoch oder verwenden Sie KI, um ein professionelles Lebensmittelbild aus dem Gerichtsnamen zu generieren. Bilder werden automatisch optimiert."
+      },
+      {
+        "title": "Organisieren mit Drag-and-Drop",
+        "description": "Ordnen Sie Kategorien und Elemente neu an, indem Sie sie an die gewünschte Stelle ziehen. Schalten Sie jedes Element ein oder aus, ohne es zu löschen — perfekt für Tagesgerichte oder ausverkaufte Gerichte."
+      },
+      {
+        "title": "Veröffentlichen Sie Ihr Menü",
+        "description": "Änderungen erscheinen sofort auf Ihrem aktiven QR-Menü. Es gibt keinen 'Veröffentlichen'-Button — jede Bearbeitung wird in Echtzeit live geschaltet. Drucken Sie Ihren QR-Code aus und platzieren Sie ihn auf Ihren Tischen."
+      }
+    ]
   }
 }

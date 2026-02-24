@@ -46,5 +46,31 @@
         "answer": "Sí. Desactiva cualquier plato con un solo toque. Desaparece del menú público pero se mantiene en tu panel de control — actívalo cuando estés listo."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Crea y publica el menú de tu restaurante en cinco pasos sencillos.",
+    "steps": [
+      {
+        "title": "Crear Categorías",
+        "description": "Agrega categorías como Entrantes, Platos Principales, Postres y Bebidas para organizar tu menú. Puedes crear tantas categorías como necesites y reorganizarlas con arrastrar y soltar."
+      },
+      {
+        "title": "Agregar Elementos del Menú",
+        "description": "Ingresa el nombre del plato, la descripción y el precio de cada elemento. Marca los alérgenos si es necesario; los invitados verán los íconos de alérgenos en el menú automáticamente."
+      },
+      {
+        "title": "Subir o Generar Fotos",
+        "description": "Sube tus propias fotos de comida desde tu teléfono o computadora, o utiliza IA para generar una imagen profesional de comida a partir del nombre del plato. Las imágenes se optimizan automáticamente."
+      },
+      {
+        "title": "Organizar con Arrastrar y Soltar",
+        "description": "Reorganiza categorías y elementos arrastrándolos a su lugar. Activa o desactiva cualquier elemento sin eliminarlo; perfecto para especiales del día o platos agotados."
+      },
+      {
+        "title": "Publica Tu Menú",
+        "description": "Los cambios aparecen instantáneamente en tu menú QR en vivo. No hay botón de 'publicar'; cada edición se hace efectiva en tiempo real. Imprime tu código QR y colócalo en tus mesas."
+      }
+    ]
   }
 }

@@ -38,5 +38,23 @@
         "answer": "Tu código QR se genera por separado y puede personalizarse de forma independiente. El color de acento se aplica a las páginas de tu menú digital, la navegación y los elementos interactivos."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Ajusta tu menú a tu marca en tres simples pasos.",
+    "steps": [
+      {
+        "title": "Abrir Configuración de Diseño",
+        "description": "Navega a la página de Diseño en tu panel de control. El selector de color de acento está en el centro — verás todas las opciones disponibles de inmediato."
+      },
+      {
+        "title": "Elige el Color de Tu Marca",
+        "description": "Elige entre 12 presets de color seleccionados diseñados para legibilidad y accesibilidad, o ingresa tu código hex exacto para una coincidencia perfecta con tu marca."
+      },
+      {
+        "title": "Vista Previa Instantánea",
+        "description": "Tu color de acento se aplica a botones, enlaces y resaltados en todo el menú. Funciona tanto en temas claros como oscuros, y los cambios aparecen instantáneamente en tu menú en vivo."
+      }
+    ]
   }
 }

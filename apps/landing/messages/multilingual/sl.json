@@ -46,5 +46,27 @@
         "answer": "Brezplačni paket vključuje do 2 jezikov. Paketa Basic in Pro ponujata neomejeno jezikov z vključenim AI prevodom."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Naredite svoj meni dostopen v več jezikih v štirih korakih.",
+    "steps": [
+      {
+        "title": "Pojdite na nastavitve jezika",
+        "description": "Odprite stran Jeziki v svoji nadzorni plošči. Videli boste vse razpoložljive jezike in katere so trenutno aktivne na vašem meniju."
+      },
+      {
+        "title": "Dodajte jezike",
+        "description": "Izberite med 35 razpoložljivimi jeziki. Brezplačni načrt vključuje do 2 jezika, medtem ko osnovni in profesionalni načrti ponujajo neomejeno število jezikov za vaš meni."
+      },
+      {
+        "title": "Prevedite svojo vsebino",
+        "description": "Uporabite enostavno AI prevajanje za takojšnje prevajanje celotnega menija ali vnesite prevode ročno za popoln nadzor. Prav tako lahko kombinirate oba pristopa."
+      },
+      {
+        "title": "Gosti preklapljajo jezike",
+        "description": "Na strani vašega menija se prikaže izbira jezika. Ko gosti izberejo svoj jezik, se celoten meni takoj preklopi. Njihova izbira se shrani za ponovne obiske."
+      }
+    ]
   }
 }

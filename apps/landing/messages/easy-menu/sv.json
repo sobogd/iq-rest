@@ -46,5 +46,31 @@
         "answer": "Ja. Sla av vilken artikel som helst med ett tryck. Den forsvinner fran den publika menyn men finns kvar i din kontrollpanel — sla pa den igen nar du ar redo."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Bygg och publicera din restaurangmeny i fem enkla steg.",
+    "steps": [
+      {
+        "title": "Skapa Kategorier",
+        "description": "Lägg till kategorier som Förrätter, Huvudrätter, Desserter och Drycker för att organisera din meny. Du kan skapa så många kategorier du behöver och omordna dem med drag och släpp."
+      },
+      {
+        "title": "Lägg Till Menyobjekt",
+        "description": "Ange rätten namn, beskrivning och pris för varje objekt. Markera allergener om tillämpligt — gästerna kommer automatiskt att se allergenikoner på menyn."
+      },
+      {
+        "title": "Ladda Upp eller Generera Bilder",
+        "description": "Ladda upp dina egna matbilder från din telefon eller dator, eller använd AI för att generera en professionell matbild från rätten namn. Bilder optimeras automatiskt."
+      },
+      {
+        "title": "Organisera med Drag och Släpp",
+        "description": "Omordna kategorier och objekt genom att dra dem på plats. Växla vilket objekt som helst på eller av utan att ta bort det — perfekt för dagens specialiteter eller slutsålda rätter."
+      },
+      {
+        "title": "Publicera Din Meny",
+        "description": "Ändringar visas omedelbart på din aktiva QR-meny. Det finns ingen 'publicera'-knapp — varje redigering går live i realtid. Skriv ut din QR-kod och placera den på dina bord."
+      }
+    ]
   }
 }

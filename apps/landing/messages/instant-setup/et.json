@@ -46,5 +46,27 @@
         "answer": "Tasuta ja Basic plaanidel on teie leht majutatud aadressil iq-rest.com/m/teie-nimi. Pro plaan toetab kohandatud domeeninimesid täieliku brändikontrolli jaoks."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Nullist elava restorani veebisaidini neljas sammus.",
+    "steps": [
+      {
+        "title": "Sisesta Oma E-post",
+        "description": "Parooli pole vaja. Lihtsalt kirjuta oma e-posti aadress ja kliki Jätka. Pole pikki registreerimisvorme, krediitkaarti ei nõuta ja pole kohustusi."
+      },
+      {
+        "title": "Kinnita Koodiga",
+        "description": "Kontrolli oma postkasti 4-kohalise kinnituskoodi jaoks. Sisesta see, et sisse logida turvaliselt. See paroolita lähenemine tähendab, et sul on vähem asju meeles pidada."
+      },
+      {
+        "title": "Nimeta Oma Restoran",
+        "description": "Anna oma restoranile nimi. See muutub sinu veebisaidi URL-iks ja menüü pealkirjaks. Sa saad seda alati hiljem oma juhtpaneeli seadetes muuta."
+      },
+      {
+        "title": "Sinu Veebisait On Valmis",
+        "description": "Täielik restoraniveebisait koos QR menüü, kontaktlehe ja kaardiga ning reageeriva disainiga on kohe saadaval aadressil iq-rest.com/m/your-name. Lisa oma toidud ja alusta jagamist."
+      }
+    ]
   }
 }

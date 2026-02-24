@@ -46,5 +46,27 @@
         "answer": "Sí. Cada imatge es genera de manera única per al vostre plat específic. Sense fotografies d'estoc — cada imatge es crea de nou basant-se en l'element del vostre menú."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Obteniu fotos professionals de menjar per al vostre menú en quatre passos senzills.",
+    "steps": [
+      {
+        "title": "Obriu qualsevol element del menú",
+        "description": "Navegueu fins a l'element per al qual voleu una foto al vostre tauler de control. Podeu generar imatges per a nous plats o substituir fotos existents de qualsevol element del menú."
+      },
+      {
+        "title": "Feu clic a Generar Imatge",
+        "description": "La IA crea una foto professional de menjar basada en el nom i la descripció del plat. Com més detalls proporcioneu a la descripció, més precisa serà la imatge."
+      },
+      {
+        "title": "Revisar el resultat",
+        "description": "Previsualitzeu la imatge generada abans d'aplicar-la. Si voleu un aspecte diferent, regenereu per obtenir una nova variació. Cada generació produeix una imatge única."
+      },
+      {
+        "title": "Utilitzeu al vostre menú",
+        "description": "La imatge es optimitza automàticament, es comprimeix en format WebP i apareix al vostre menú en directe immediatament. Els convidats veuen fotos professionals de menjar en cada plat."
+      }
+    ]
   }
 }

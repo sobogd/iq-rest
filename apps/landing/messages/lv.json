@@ -1560,7 +1560,8 @@
         "invalidCode": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
         "emailRequired": "Ievadiet savu e-pastu.",
         "emailInvalid": "Ievadiet derīgu e-pasta adresi."
-      }
+      },
+      "or": "vai"
     },
     "analytics": {
       "monthlyUsage": "Mēneša lietojums",

@@ -46,5 +46,27 @@
         "answer": "Áiríonn an plean saor in aisce suas le 2 theanga. Tairgeann pleananna Basic agus Pro teangacha gan teorainn le haistriúchán AI san áireamh."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Déanaigh do mhenu ar fáil i mionteangacha i gceithre chéim.",
+    "steps": [
+      {
+        "title": "Téigh chuig Socruithe Teanga",
+        "description": "Oscail leathanach na dTeangacha i do dhianchláir. Feicfidh tú na teangacha ar fad atá ar fáil agus cé na teangacha atá gníomhach ar do mhenu faoi láthair."
+      },
+      {
+        "title": "Cuir Teangacha leis",
+        "description": "Roghnaigh ó 35 teanga atá ar fáil. Cuimsíonn an plean saor in aisce suas le 2 theanga, agus tairgeann pleananna Bunúsach agus Pro teangacha neamhtheoranta do do mhenu."
+      },
+      {
+        "title": "Aistrigh Do Chomhoibrithe",
+        "description": "Úsáid aistriúchán AI le cliceáil amháin chun do mhenu iomlán a aistriú go tobann, nó cuir aistriúcháin isteach go láimhe le haghaidh rialú iomlán. Is féidir leat freisin an dá chur chuige a chomhcheangal."
+      },
+      {
+        "title": "Athraíonn Aoicháirithe Teangacha",
+        "description": "Taispeántar rogha teanga ar do leathanach mhenú. Nuair a roghnaíonn aoicháirithe a dteanga, athraíonn an mhenú iomlán go tobann. Sábhálfar a rogha do chuairteanna ar ais."
+      }
+    ]
   }
 }

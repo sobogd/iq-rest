@@ -46,5 +46,27 @@
         "answer": "Áno. Každý obrázok je vygenerovaný jedinečne pre vaše konkrétne jedlo. Žiadne stock fotografie — každý obrázok je vytvorený nanovo na základe vašej položky menu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Získajte profesionálne fotografie jedál pre vaše menu v štyroch jednoduchých krokoch.",
+    "steps": [
+      {
+        "title": "Otvorte akúkoľvek položku v menu",
+        "description": "Prejdite na položku, pre ktorú chcete fotografiu vo vašej administrácii. Môžete generovať obrázky pre nové jedlá alebo nahradiť existujúce fotografie na akejkoľvek položke v menu."
+      },
+      {
+        "title": "Kliknite na Generovať obrázok",
+        "description": "AI vytvorí profesionálnu fotografiu jedla na základe názvu jedla a popisu. Čím viac detailov poskytnete v popise, tým presnejší bude výsledok."
+      },
+      {
+        "title": "Skontrolujte výsledok",
+        "description": "Náhľad vygenerovaného obrázka pred jeho aplikovaním. Ak by ste chceli iný vzhľad, regenerujte, aby ste získali novú variáciu. Každá generácia produkuje jedinečný obrázok."
+      },
+      {
+        "title": "Použite vo vašom menu",
+        "description": "Obrázok je automaticky optimalizovaný, komprimovaný do formátu WebP a okamžite sa zobrazuje vo vašom živom menu. Hostia vidia profesionálne fotografie jedál pri každom jedle."
+      }
+    ]
   }
 }

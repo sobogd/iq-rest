@@ -46,5 +46,27 @@
         "answer": "Et. Lataa vain videosi tai kuvasi hallintapaneelista. Jarjestelma hoitaa koon, pakkauksen ja asettelun automaattisesti. Verkkosivustosi nayttaa ammattimaiselta ilman suunnittelutaitoja."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Mukauta ravintolasi visuaalista identiteettiä neljässä vaiheessa.",
+    "steps": [
+      {
+        "title": "Avaa Suunnitteluasetukset",
+        "description": "Siirry hallintapaneelisi Suunnittelu-sivulle. Täällä voit hallita ravintolasi visuaalista ilmettä — taustaa, korostusväriä ja etusivun asettelua."
+      },
+      {
+        "title": "Lataa Tausta",
+        "description": "Valitse video (MP4, WebM) tai kuva ravintolasi etusivun taustaksi. Videot toistuvat automaattisesti, luoden mukaansatempaavan ensivaikutelman jokaiselle kävijälle."
+      },
+      {
+        "title": "AI-taustan Generointi",
+        "description": "Eikö sinulla ole valmista videota tai kuvaa? Anna AI:n luoda taustakuva automaattisesti ruokalistasi kohteista. Se tuottaa ammattimaisen visuaalin, joka vastaa ravintolasi tyyliä."
+      },
+      {
+        "title": "Esikatsele ja Tallenna",
+        "description": "Näe muutoksesi reaaliajassa ennen tallentamista. Videot pakataan automaattisesti ja ladataan laiskasti, mikä takaa nopean suorituskyvyn mobiililaitteilla ilman visuaalisen laadun heikentämistä."
+      }
+    ]
   }
 }

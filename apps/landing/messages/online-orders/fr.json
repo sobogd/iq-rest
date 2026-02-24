@@ -68,5 +68,31 @@
         "answer": "Oui. Sur place, les clients scannent le code QR à leur table. Pour la vente à emporter ou la livraison, partagez un lien direct vers votre menu. Vous pouvez activer les champs nom, téléphone et adresse selon vos besoins."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "De la configuration à la réception de votre première commande en cinq étapes simples.",
+    "steps": [
+      {
+        "title": "Activer la commande en ligne",
+        "description": "Activez les commandes dans vos paramètres de conception. Choisissez votre mode préféré : les commandes apparaissent dans votre tableau de bord, sont transférées sur WhatsApp, ou les deux simultanément."
+      },
+      {
+        "title": "Configurer le formulaire de commande",
+        "description": "Sélectionnez les champs que les clients doivent remplir lors de la passation d'une commande. Le nom est toujours requis, et vous pouvez demander en option le numéro de téléphone et l'adresse de livraison."
+      },
+      {
+        "title": "Imprimer des codes QR pour les tables",
+        "description": "Chaque table de votre restaurant reçoit son propre code QR unique. Lorsque les invités le scannent, leur commande arrive automatiquement avec le numéro de table correct attaché."
+      },
+      {
+        "title": "Les clients passent des commandes",
+        "description": "Les invités scannent le code QR, parcourent votre menu avec des photos et des prix, sélectionnent des articles, ajoutent des notes et soumettent leur commande. Aucun téléchargement d'application ni création de compte nécessaire."
+      },
+      {
+        "title": "Gérer les commandes dans votre tableau de bord",
+        "description": "Les commandes apparaissent instantanément dans votre tableau de bord. Mettez à jour le statut de chaque commande de nouveau à en cours à terminé. Vous conservez 100 % des revenus — zéro commission."
+      }
+    ]
   }
 }

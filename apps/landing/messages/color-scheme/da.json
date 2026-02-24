@@ -38,5 +38,23 @@
         "answer": "Din QR-kode genereres separat og kan tilpasses uafhaengigt. Accentfarven anvendes paa dine digitale menusider, navigation og interaktive elementer."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Sådan fungerer det",
+    "subtitle": "Match din menu med dit brand i tre enkle trin.",
+    "steps": [
+      {
+        "title": "Åbn designindstillinger",
+        "description": "Naviger til design-siden i dit dashboard. Accentfarvevælgeren er i centrum — du vil straks se alle tilgængelige muligheder."
+      },
+      {
+        "title": "Vælg din brandfarve",
+        "description": "Vælg blandt 12 kuraterede farvepræferencer designet til læsbarhed og tilgængelighed, eller indtast din præcise hex-kode for en perfekt match med dit brand."
+      },
+      {
+        "title": "Øjeblikkelig forhåndsvisning",
+        "description": "Din accentfarve anvendes på knapper, links og fremhævelser på hele menuen. Det fungerer i både lyse og mørke temaer, og ændringer vises straks på din live menu."
+      }
+    ]
   }
 }

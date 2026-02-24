@@ -46,5 +46,31 @@
         "answer": "Tá aistriúchán AI san áireamh i bpleananna Basic agus Pro le teorainneacha flaithiúla míosúla. Gan táillí in aghaidh an fhocail ná in aghaidh na míre — aistrigh oiread agus atá uait."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Aistrigh do mhenu iomlán i nóiméid, ní i n-uaireanta.",
+    "steps": [
+      {
+        "title": "Cuir Teangacha le do Mhenú",
+        "description": "Téigh chuig leathanach na dTeangacha i do dhianchláir agus roghnaigh na teangacha a chaithfidh do mhenu a thacaigh. Roghnaigh ó 35 teanga atá ar fáil, lena n-áirítear na teangacha móra Eorpacha, Áiseacha, agus na Meán-Oirthearacha."
+      },
+      {
+        "title": "Cliceáil Aistrigh",
+        "description": "Cliceáil ar an gcnaipe a aistríonn do chatagóirí, ainmneacha earraí, agus tuairiscí go léir ag an am céanna. Déantar an mhenú iomlán a phróiseáil i soicind, beag beann ar an líon earraí atá agat."
+      },
+      {
+        "title": "Tuigeann an tAI Conradh Bia",
+        "description": "Tuigeann an tAI téarmaíocht chulinártha trasna cultúir. Coimeádann sé ainmneacha miasa cosúil le 'Tiramisu' nó 'Pad Thai' agus oireann sé go nádúrtha tuairiscí, liostaí comhábhar, agus ainmneacha catagóire."
+      },
+      {
+        "title": "Athbhreithniú agus Eagarthóireacht",
+        "description": "Tá gach aistriúchán inathraithe go hiomlán. Déan aon athrú ar fhocail chun freastal ar do stíl. Coinnítear do chuid athruithe láimhe fiú nuair a aistríonn tú codanna eile den mhenu níos déanaí."
+      },
+      {
+        "title": "Foilsigh do Mhenú Ilteangach",
+        "description": "Feiceann aíonna comhoiriúnóir teanga ar do mhenu agus is féidir leo brabhsáil i dteanga a rogha. Is féidir gach teanga a chasadh ar nó as go neamhspleách ó do dhianchláir."
+      }
+    ]
   }
 }

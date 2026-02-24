@@ -46,5 +46,27 @@
         "answer": "Ja, en we vinden het geweldig! Veel van onze functies zijn begonnen als gebruikerssuggesties. Stuur ons uw idee en we nemen het mee voor toekomstige updates."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Krijg hulp van een echte persoon in vier eenvoudige stappen.",
+    "steps": [
+      {
+        "title": "Open Ondersteuningschat",
+        "description": "Ga naar de ondersteuningspagina in je dashboard. Je ziet een eenvoudige chatinterface waar je je bericht direct kunt typen — geen ticketformulieren of categorieën om uit te kiezen."
+      },
+      {
+        "title": "Beschrijf Je Vraag",
+        "description": "Typ je bericht. Vraag naar installatie, functies, menu-optimalisatie, facturering of iets anders. Er zijn geen domme vragen — we helpen je graag met alles."
+      },
+      {
+        "title": "Krijg een Persoonlijk Antwoord",
+        "description": "Een echte persoon (geen chatbot) leest je bericht en reageert binnen enkele uren. We begrijpen de workflows in restaurants en geven praktische, uitvoerbare antwoorden."
+      },
+      {
+        "title": "Doorlopende Hulp",
+        "description": "Vraag om functievoorstellen, krijg tips voor menu-optimalisatie of vraag op elk moment om hulp bij de installatie. Je gespreksgeschiedenis wordt opgeslagen, zodat we altijd context hebben van eerdere vragen."
+      }
+    ]
   }
 }

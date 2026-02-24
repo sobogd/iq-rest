@@ -46,5 +46,27 @@
         "answer": "Pri brezplačnem in Basic paketu je vaša stran na naslovu iq-rest.com/m/vaše-ime. Pro paket podpira lastne domene za popoln nadzor blagovne znamke."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Od nič do delujoče spletne strani restavracije v štirih korakih.",
+    "steps": [
+      {
+        "title": "Vnesite svoj e-poštni naslov",
+        "description": "Brez gesla. Preprosto vpišite svoj e-poštni naslov in kliknite Nadaljuj. Ni dolgotrajnih registracijskih obrazcev, ni potrebne kreditne kartice in ni obveznosti."
+      },
+      {
+        "title": "Potrdite s kodo",
+        "description": "Preverite svoj nabiralnik za 4-mestno potrditveno kodo. Vnesite jo za varno prijavo. Ta pristop brez gesla pomeni, da si ne morate zapomniti še ene stvari."
+      },
+      {
+        "title": "Poimenujte svojo restavracijo",
+        "description": "Dajte svoji restavraciji ime. To postane vaš URL spletne strani in naslov menija. Kasneje ga lahko vedno spremenite v nastavitvah nadzorne plošče."
+      },
+      {
+        "title": "Vaša spletna stran je pripravljena",
+        "description": "Popolna spletna stran restavracije z QR menijem, kontaktnim obrazcem s zemljevidom in odzivnim dizajnom je takoj aktivna na iq-rest.com/m/vaše-ime. Dodajte svoje jedi in začnite deliti."
+      }
+    ]
   }
 }

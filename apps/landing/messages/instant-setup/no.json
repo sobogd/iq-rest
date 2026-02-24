@@ -46,5 +46,27 @@
         "answer": "Paa gratis- og Basic-planer er nettsiden hostet paa iq-rest.com/m/ditt-navn. Pro-planen stoetter egne domenenavn for full merkekontroll."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik fungerer det",
+    "subtitle": "Fra null til en aktiv restaurantnettsted på fire trinn.",
+    "steps": [
+      {
+        "title": "Skriv inn e-posten din",
+        "description": "Ingen passord nødvendig. Bare skriv inn e-postadressen din og klikk Fortsett. Det er ingen lange registreringsskjemaer, ingen kredittkort nødvendig, og ingen forpliktelser."
+      },
+      {
+        "title": "Verifiser med en kode",
+        "description": "Sjekk innboksen din for en 4-sifret verifiseringskode. Skriv den inn for å logge inn sikkert. Denne passordfrie tilnærmingen betyr én mindre ting å huske."
+      },
+      {
+        "title": "Navngi restauranten din",
+        "description": "Gi restauranten din et navn. Det blir URL-en til nettstedet ditt og menyens tittel. Du kan alltid endre det senere fra innstillingene på dashbordet ditt."
+      },
+      {
+        "title": "Nettstedet ditt er klart",
+        "description": "Et komplett restaurantnettsted med QR-meny, kontaktside med kart, og responsiv design er umiddelbart aktivt på iq-rest.com/m/ditt-navn. Legg til rettene dine og begynn å dele."
+      }
+    ]
   }
 }

@@ -211,6 +211,27 @@ export const createBreadcrumbSchema = (
   })),
 });
 
+// HowTo Schema for feature pages
+export const createHowToSchema = (
+  name: string,
+  description: string,
+  steps: Array<{ title: string; description: string }>,
+  featureId: string,
+  locale: string
+) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name,
+  description,
+  step: steps.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.title,
+    text: step.description,
+    url: `https://iq-rest.com/${locale}/${featureId}#how-it-works`,
+  })),
+});
+
 export function JsonLd({ data }: { data: object }) {
   return (
     <script

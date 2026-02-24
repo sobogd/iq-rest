@@ -68,5 +68,31 @@
         "answer": "Da. Pentru servire la masă, oaspeții scanează codul QR de la masă. Pentru comenzi la pachet sau livrare, partajați un link direct către meniu. Puteți activa câmpurile de nume, telefon și adresă după necesitate."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "De la configurare până la primirea primei comenzi în cinci pași simpli.",
+    "steps": [
+      {
+        "title": "Activează Comenzile Online",
+        "description": "Activează comenzile în setările tale de Design. Alege modul preferat: comenzile apar în tabloul tău de bord, sunt trimise pe WhatsApp sau ambele simultan."
+      },
+      {
+        "title": "Configurează Formularul de Comandă",
+        "description": "Selectează ce câmpuri trebuie să completeze clienții atunci când plasează o comandă. Numele este întotdeauna necesar, iar opțional poți solicita numărul de telefon și adresa de livrare."
+      },
+      {
+        "title": "Imprimă Coduri QR pentru Mese",
+        "description": "Fiecare masă din restaurantul tău primește propriul cod QR unic. Când oaspeții îl scanează, comanda lor ajunge automat cu numărul mesei corect atașat."
+      },
+      {
+        "title": "Clienții Plasează Comenzi",
+        "description": "Oaspeții scanează codul QR, răsfoiesc meniul tău cu fotografii și prețuri, selectează articole, adaugă note și trimit comanda. Nu este necesară descărcarea unei aplicații sau crearea unui cont."
+      },
+      {
+        "title": "Gestionează Comenzile în Tabloul Tău de Bord",
+        "description": "Comenzile apar instantaneu în tabloul tău de bord. Actualizează starea fiecărei comenzi de la nouă la în curs de desfășurare până la finalizată. Păstrezi 100% din venit — zero comisioane."
+      }
+    ]
   }
 }

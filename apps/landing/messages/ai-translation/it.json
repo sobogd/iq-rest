@@ -46,5 +46,31 @@
         "answer": "La traduzione IA è inclusa nei piani Basic e Pro con generosi limiti mensili. Nessun costo per parola o per piatto — traduci quanto vuoi."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Traduci l'intero menu in pochi minuti, non ore.",
+    "steps": [
+      {
+        "title": "Aggiungi Lingue al Tuo Menu",
+        "description": "Vai alla pagina Lingue nel tuo dashboard e seleziona quali lingue il tuo menu dovrebbe supportare. Scegli tra 35 lingue disponibili, comprese tutte le principali lingue europee, asiatiche e del Medio Oriente."
+      },
+      {
+        "title": "Clicca su Traduci",
+        "description": "Un pulsante traduce tutte le tue categorie, nomi degli articoli e descrizioni in una sola volta. L'intero menu viene elaborato in pochi secondi, indipendentemente dal numero di articoli che hai."
+      },
+      {
+        "title": "L'IA Comprende il Contesto Alimentare",
+        "description": "L'IA conosce la terminologia culinaria attraverso le culture. Preserva i nomi dei piatti come 'Tiramisu' o 'Pad Thai' mentre adatta naturalmente le descrizioni, le liste degli ingredienti e i nomi delle categorie."
+      },
+      {
+        "title": "Rivedi e Modifica",
+        "description": "Ogni traduzione è completamente modificabile. Regola qualsiasi formulazione per adattarla al tuo stile. Le tue modifiche manuali vengono conservate anche quando traduci nuovamente altre parti del menu in seguito."
+      },
+      {
+        "title": "Pubblica il Tuo Menu Multilingue",
+        "description": "Gli ospiti vedono un selettore di lingua nel tuo menu e possono navigare nella loro lingua preferita. Ogni lingua può essere attivata o disattivata indipendentemente dal tuo dashboard."
+      }
+    ]
   }
 }

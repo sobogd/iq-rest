@@ -46,5 +46,27 @@
         "answer": "Analitikos duomenys saugomi nuo restorano sukūrimo dienos. Galite peržiūrėti kasdienes, kassavaitines ir kasmėnesines tendencijas visoje istorijoje."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Pradėkite stebėti savo restorano veiklą keturiais žingsniais.",
+    "steps": [
+      {
+        "title": "Sukurkite savo restoraną",
+        "description": "Analitika pradeda stebėti nuo momento, kai jūsų meniu tampa aktyvus. Nereikia nieko konfigūruoti — kiekvienas puslapio peržiūra, QR nuskaitymas ir lankytojas fiksuojami automatiškai."
+      },
+      {
+        "title": "Pasidalykite savo QR kodu",
+        "description": "Išspausdinkite savo QR kodą ir padėkite jį ant stalų, prie įėjimo arba ant išsinešimo pakuočių. Kiekvienas nuskaitymas fiksuojamas su laiko žyma, kalba, įrenginio tipu ir aplankytu puslapiu."
+      },
+      {
+        "title": "Atidarykite analitikos skydelį",
+        "description": "Peržiūrėkite kasdienes, savaitines ir mėnesines statistiką su aiškiais grafika. Sekite bendrą peržiūrų skaičių, unikalius lankytojus ir tendencijas laikui bėgant iš vieno skydelio ekrano."
+      },
+      {
+        "title": "Išnagrinėkite išsamius duomenis",
+        "description": "Peržiūrėkite statistiką, suskirstytą pagal puslapį (meniu, kontaktai, rezervacijos), pageidaujamą kalbą, įrenginio tipą ir naršyklę. Naudokite šiuos duomenis, kad optimizuotumėte savo meniu ir prioritetizuotumėte vertimus."
+      }
+    ]
   }
 }

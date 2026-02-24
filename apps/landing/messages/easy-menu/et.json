@@ -46,5 +46,31 @@
         "answer": "Jah. Lülitage mis tahes üksus ühe puudutusega välja. See kaob avalikust menüüst, kuid jääb teie juhtpaneelile alles — lülitage see tagasi sisse, kui olete valmis."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas See Toimib",
+    "subtitle": "Koosta ja avalda oma restorani menüü viies lihtsas sammus.",
+    "steps": [
+      {
+        "title": "Loo Kategooriad",
+        "description": "Lisa kategooriad nagu Eelroad, Pearoad, Magustoidud ja Joogid, et korraldada oma menüüd. Sa saad luua nii palju kategooriaid kui vajad ja neid lohistamisega ümber korraldada."
+      },
+      {
+        "title": "Lisa Menüü Tooteid",
+        "description": "Sisesta iga toote nimi, kirjeldus ja hind. Märgi allergeenid, kui need on olemas — külalised näevad menüüs automaatselt allergeeni ikoone."
+      },
+      {
+        "title": "Laadi Üles või Generaadi Fotosid",
+        "description": "Laadi oma toidufotod üles oma telefonist või arvutist, või kasuta AI-d, et genereerida professionaalne toidu pilt toote nimest. Pildid optimeeritakse automaatselt."
+      },
+      {
+        "title": "Korralda Lohistamisega",
+        "description": "Kategooriaid ja tooteid saab ümber korraldada, lohistades neid oma kohale. Lülita ükskõik milline toode sisse või välja ilma seda kustutamata — ideaalne igapäevaste eripakkumiste või välja müüdud roogade jaoks."
+      },
+      {
+        "title": "Avalda Oma Menüü",
+        "description": "Muutused ilmuvad kohe sinu aktiivsele QR menüüle. 'Avalda' nuppu ei ole — iga muudatus läheb reaalajas aktiivseks. Prindi oma QR kood ja pane see oma laudadele."
+      }
+    ]
   }
 }

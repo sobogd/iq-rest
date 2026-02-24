@@ -46,5 +46,27 @@
         "answer": "Ne. Samo učitajte video ili fotografiju iz kontrolne ploče. Sustav automatski upravlja veličinom, kompresijom i rasporedom. Vaša web stranica izgleda profesionalno bez ikakvih dizajnerskih vještina."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Prilagodite vizualni identitet svog restorana u četiri koraka.",
+    "steps": [
+      {
+        "title": "Otvorite postavke dizajna",
+        "description": "Idite na stranicu dizajna u svom nadzornoj ploči. Ovdje možete kontrolirati vizualni izgled svog restorana — pozadinu, akcentnu boju i raspored početne stranice."
+      },
+      {
+        "title": "Otpremite pozadinu",
+        "description": "Odaberite video (MP4, WebM) ili fotografiju za pozadinu početne stranice vašeg restorana. Videozapisi se automatski ponavljaju, stvarajući impresivan prvi dojam za svakog posjetitelja."
+      },
+      {
+        "title": "Generiranje pozadine pomoću AI",
+        "description": "Nemate spreman video ili fotografiju? Neka AI automatski stvori pozadinsku sliku iz vaših stavki iz jelovnika. Generira profesionalni vizual koji odgovara stilu vašeg restorana."
+      },
+      {
+        "title": "Pregled i spremi",
+        "description": "Pogledajte svoje promjene u stvarnom vremenu prije spremanja. Videozapisi se automatski komprimiraju i učitavaju na zahtjev, osiguravajući brzu izvedbu na mobilnim uređajima bez žrtvovanja vizualne kvalitete."
+      }
+    ]
   }
 }

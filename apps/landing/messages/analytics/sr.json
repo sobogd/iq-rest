@@ -46,5 +46,27 @@
         "answer": "Podaci analitike se čuvaju od dana kreiranja restorana. Možete pregledati dnevne, nedeljne i mesečne trendove za celokupnu istoriju."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcioniše",
+    "subtitle": "Počnite da pratite performanse vašeg restorana u četiri koraka.",
+    "steps": [
+      {
+        "title": "Kreirajte svoj restoran",
+        "description": "Analitika počinje da prati od trenutka kada vaš meni postane aktivan. Nema potrebe za konfiguracijom — svaki pregled stranice, QR skeniranje i posetilac se automatski beleže."
+      },
+      {
+        "title": "Podelite svoj QR kod",
+        "description": "Ispišite svoj QR kod i postavite ga na stolove, na ulazu ili na ambalažu za hranu za poneti. Svako skeniranje se beleži sa vremenskim pečatom, jezikom, uređajem i posetjenom stranicom."
+      },
+      {
+        "title": "Otvorite analitičku kontrolnu tablu",
+        "description": "Pogledajte dnevne, nedeljne i mesečne statistike sa jasnim grafikonima. Pratite ukupne preglede, jedinstvene posetioce i trendove tokom vremena sa jedne kontrolne table."
+      },
+      {
+        "title": "Istražite detaljne analize",
+        "description": "Pogledajte statistiku razdvojenu po stranicama (meni, kontakti, rezervacije), preferiranom jeziku, tipu uređaja i pretraživaču. Iskoristite ove podatke da optimizujete svoj meni i prioritizujete prevode."
+      }
+    ]
   }
 }

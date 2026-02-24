@@ -46,5 +46,31 @@
         "answer": "Taip. Pasirinkite automatinį režimą, kad rezervacijos būtų patvirtintos iškart pagal prieinamumą, arba rankinį režimą, kad peržiūrėtumėte ir patvirtintumėte kiekvieną užklausą patys."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Nustatykite internetines rezervacijas ir pradėkite priimti užsakymus penkiais žingsniais.",
+    "steps": [
+      {
+        "title": "Įgalinti rezervacijas",
+        "description": "Įjunkite rezervacijas savo restorano nustatymuose. Pasirinkite tarp automatinio patvirtinimo, kai užsakymai patvirtinami iš karto, atsižvelgiant į prieinamumą, arba rankinio režimo, kuriame peržiūrite kiekvieną užklausą."
+      },
+      {
+        "title": "Pridėti savo stalus",
+        "description": "Sukurkite stalus su talpos ir zonos informacija — pavyzdžiui, 'Stalas 5, 4 svečiai, Terasa'. Kiekvienas stalas tampa rezervuojamas, o sistema automatiškai užkerta kelią dvigubiems užsakymams."
+      },
+      {
+        "title": "Nustatyti darbo valandas",
+        "description": "Apibrėžkite savo prieinamas valandas rezervacijoms ir pasirinkite laiko trukmę — nuo 15 minučių iki 8 valandų. Tik laiko intervalai, esantys jūsų darbo valandomis, rodomi svečiams."
+      },
+      {
+        "title": "Svečiai užsako internetu",
+        "description": "Klientai apsilanko jūsų restorano puslapyje, pasirenka datą, laiką ir svečių skaičių, įveda savo vardą ir telefoną, ir pateikia užsakymą. Nereikia jokios paskyros ar programėlės — veikia bet kuriame naršyklėje."
+      },
+      {
+        "title": "Tvarkykite užsakymus savo valdymo pultelyje",
+        "description": "Peržiūrėkite visas rezervacijas savo valdymo pultelyje. Patvirtinkite, atšaukite arba pažymėkite užsakymus kaip įvykdytus. Ir jūs, ir svečias gausite el. pašto pranešimus apie kiekvieną užsakymo atnaujinimą."
+      }
+    ]
   }
 }

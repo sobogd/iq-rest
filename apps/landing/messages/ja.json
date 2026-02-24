@@ -1560,7 +1560,8 @@
         "invalidCode": "無効なコードです。もう一度お試しください。",
         "emailRequired": "メールアドレスを入力してください。",
         "emailInvalid": "有効なメールアドレスを入力してください。"
-      }
+      },
+      "or": "または"
     },
     "analytics": {
       "monthlyUsage": "月間使用量",

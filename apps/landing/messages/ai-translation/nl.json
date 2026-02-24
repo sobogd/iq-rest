@@ -46,5 +46,31 @@
         "answer": "AI-vertaling is inbegrepen in de Basic- en Pro-plannen met ruime maandelijkse limieten. Geen kosten per woord of per gerecht — vertaal zoveel als u nodig heeft."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Vertaal uw volledige menu in enkele minuten, niet in uren.",
+    "steps": [
+      {
+        "title": "Voeg Talen Toe Aan Uw Menu",
+        "description": "Ga naar de Talenpagina in uw dashboard en selecteer welke talen uw menu moet ondersteunen. Kies uit 35 beschikbare talen, waaronder alle belangrijke Europese, Aziatische en Midden-Oosterse talen."
+      },
+      {
+        "title": "Klik op Vertalen",
+        "description": "Één knop vertaalt al uw categorieën, itemnamen en beschrijvingen in één keer. Het volledige menu wordt in seconden verwerkt, ongeacht hoeveel items u heeft."
+      },
+      {
+        "title": "AI Begrijpt Voedselcontext",
+        "description": "De AI kent culinaire terminologieën uit verschillende culturen. Het behoudt gerecht namen zoals 'Tiramisu' of 'Pad Thai' terwijl het beschrijvingen, ingrediëntenlijsten en categorienamen natuurlijk aanpast."
+      },
+      {
+        "title": "Beoordeel en Bewerk",
+        "description": "Elke vertaling is volledig bewerkbaar. Pas elke formulering aan om bij uw stijl te passen. Uw handmatige wijzigingen worden bewaard, zelfs wanneer u later andere delen van het menu opnieuw vertaalt."
+      },
+      {
+        "title": "Publiceer Uw Meertalige Menu",
+        "description": "Gasten zien een taalwisselaar op uw menu en kunnen bladeren in hun voorkeurstaal. Elke taal kan onafhankelijk van uw dashboard aan of uit worden gezet."
+      }
+    ]
   }
 }

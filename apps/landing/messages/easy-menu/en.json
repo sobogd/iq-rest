@@ -25,6 +25,32 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Build and publish your restaurant menu in five simple steps.",
+    "steps": [
+      {
+        "title": "Create Categories",
+        "description": "Add categories like Starters, Mains, Desserts, and Drinks to organize your menu. You can create as many categories as you need and reorder them with drag and drop."
+      },
+      {
+        "title": "Add Menu Items",
+        "description": "Enter the dish name, description, and price for each item. Mark allergens if applicable — guests will see allergen icons on the menu automatically."
+      },
+      {
+        "title": "Upload or Generate Photos",
+        "description": "Upload your own food photos from your phone or computer, or use AI to generate a professional food image from the dish name. Images are optimized automatically."
+      },
+      {
+        "title": "Organize with Drag and Drop",
+        "description": "Reorder categories and items by dragging them into place. Toggle any item on or off without deleting it — perfect for daily specials or sold-out dishes."
+      },
+      {
+        "title": "Publish Your Menu",
+        "description": "Changes appear instantly on your live QR menu. There's no 'publish' button — every edit goes live in real time. Print your QR code and place it on your tables."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about creating your QR menu.",
@@ -44,6 +70,22 @@
       {
         "question": "Can I temporarily hide a dish that's sold out?",
         "answer": "Yes. Toggle any item off with one tap. It disappears from the public menu but stays in your dashboard — toggle it back on whenever you're ready."
+      },
+      {
+        "question": "Can I add allergen information to dishes?",
+        "answer": "Yes. Each menu item has an allergens field where you can select from common allergens like gluten, nuts, dairy, and more. Allergen icons appear automatically on the public menu."
+      },
+      {
+        "question": "Can I set different prices for different sizes?",
+        "answer": "Each menu item has one price field. For items with size variations, you can create separate items (e.g., 'Pizza Small' and 'Pizza Large') or mention sizes in the description."
+      },
+      {
+        "question": "Do I need to reprint QR codes when I change the menu?",
+        "answer": "No. Your QR code always points to your live menu. Any changes you make — new items, updated prices, hidden dishes — appear instantly without reprinting."
+      },
+      {
+        "question": "Can I organize items into subcategories?",
+        "answer": "The menu uses a flat category structure for simplicity. You can create as many categories as needed — for example, 'Red Wine', 'White Wine', and 'Sparkling' instead of a single 'Wine' category."
       }
     ]
   }

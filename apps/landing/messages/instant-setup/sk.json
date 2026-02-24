@@ -46,5 +46,27 @@
         "answer": "Na bezplatnom a Basic pláne je vaša stránka na adrese iq-rest.com/m/vaše-meno. Pro plán podporuje vlastné domény pre plnú kontrolu značky."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Od nuly k živému webu reštaurácie v štyroch krokoch.",
+    "steps": [
+      {
+        "title": "Zadajte svoj e-mail",
+        "description": "Žiadne heslo nie je potrebné. Stačí zadať svoju e-mailovú adresu a kliknúť na Pokračovať. Žiadne dlhé registračné formuláre, žiadna kreditná karta nie je potrebná a žiadne záväzky."
+      },
+      {
+        "title": "Overte sa pomocou kódu",
+        "description": "Skontrolujte svoju doručenú poštu na 4-ciferný overovací kód. Zadajte ho na bezpečné prihlásenie. Tento prístup bez hesla znamená jednu vec menej na zapamätanie."
+      },
+      {
+        "title": "Pomenujte svoju reštauráciu",
+        "description": "Dajte svojej reštaurácii názov. Stane sa vašou URL adresou webu a názvom menu. Môžete ho kedykoľvek neskôr zmeniť v nastaveniach vášho ovládacieho panela."
+      },
+      {
+        "title": "Váš web je pripravený",
+        "description": "Kompletný web reštaurácie s QR menu, kontaktnou stránkou s mapou a responzívnym dizajnom je okamžite aktívny na iq-rest.com/m/your-name. Pridajte svoje jedlá a začnite zdieľať."
+      }
+    ]
   }
 }

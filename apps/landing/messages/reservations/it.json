@@ -46,5 +46,31 @@
         "answer": "Sì. Scegli la modalità automatica per confermare le prenotazioni istantaneamente in base alla disponibilità, o la modalità manuale per esaminare e approvare ogni richiesta personalmente."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Imposta le prenotazioni online e inizia ad accettare prenotazioni in cinque passaggi.",
+    "steps": [
+      {
+        "title": "Abilita le Prenotazioni",
+        "description": "Attiva le prenotazioni nelle impostazioni del tuo ristorante. Scegli tra conferma automatica, dove le prenotazioni vengono approvate istantaneamente in base alla disponibilità, o modalità manuale in cui rivedi ogni richiesta."
+      },
+      {
+        "title": "Aggiungi i Tuoi Tavoli",
+        "description": "Crea tavoli con informazioni sulla capacità e sulla zona — ad esempio, 'Tavolo 5, 4 ospiti, Terrazza'. Ogni tavolo diventa prenotabile e il sistema previene automaticamente le doppie prenotazioni."
+      },
+      {
+        "title": "Imposta gli Orari di Lavoro",
+        "description": "Definisci le tue ore disponibili per le prenotazioni e scegli la durata dei slot — da 15 minuti a 8 ore. Solo gli slot di tempo all'interno dei tuoi orari di lavoro vengono mostrati agli ospiti."
+      },
+      {
+        "title": "Gli Ospiti Prenotano Online",
+        "description": "I clienti visitano la pagina del tuo ristorante, scelgono la data, l'ora e la dimensione del gruppo, inseriscono il loro nome e numero di telefono, e inviano. Non è necessario alcun account o download dell'app — funziona in qualsiasi browser."
+      },
+      {
+        "title": "Gestisci le Prenotazioni nel Tuo Dashboard",
+        "description": "Visualizza tutte le prenotazioni nel tuo dashboard. Conferma, annulla o segna le prenotazioni come completate. Sia tu che l'ospite ricevete notifiche via email per ogni aggiornamento della prenotazione."
+      }
+    ]
   }
 }

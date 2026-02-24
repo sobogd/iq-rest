@@ -46,5 +46,27 @@
         "answer": "Ja, och vi alskar det! Manga av vara funktioner borjade som anvandarforslag. Skriv till oss med din ide sa overrager vi den for framtida uppdateringar."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Få hjälp av en riktig person i fyra enkla steg.",
+    "steps": [
+      {
+        "title": "Öppna Supportchatt",
+        "description": "Gå till supportsidan i din instrumentpanel. Du kommer att se ett enkelt chattgränssnitt där du kan skriva ditt meddelande direkt — inga biljettformulär eller kategorier att välja mellan."
+      },
+      {
+        "title": "Beskriv Din Fråga",
+        "description": "Skriv ditt meddelande. Fråga om installation, funktioner, menyoptimering, fakturering eller något annat. Det finns inga dumma frågor — vi hjälper gärna till med allt."
+      },
+      {
+        "title": "Få Ett Personligt Svar",
+        "description": "En riktig person (inte en chatbot) läser ditt meddelande och svarar inom några timmar. Vi förstår restaurangarbetsflöden och ger praktiska, handlingsbara svar."
+      },
+      {
+        "title": "Löpande Hjälp",
+        "description": "Begär funktionsförslag, få tips om menyoptimering, eller be om installationshjälp när som helst. Din konversationshistorik sparas, så vi har alltid kontext från tidigare frågor."
+      }
+    ]
   }
 }

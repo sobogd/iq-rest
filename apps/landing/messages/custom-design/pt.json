@@ -46,5 +46,27 @@
         "answer": "Não. Basta enviar seu vídeo ou foto pelo painel de controle. O sistema cuida automaticamente do dimensionamento, compressão e layout. Seu site fica profissional sem habilidades de design."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Personalize a identidade visual do seu restaurante em quatro etapas.",
+    "steps": [
+      {
+        "title": "Abrir Configurações de Design",
+        "description": "Navegue até a página de Design no seu painel. Aqui você pode controlar a aparência visual do seu restaurante — fundo, cor de destaque e layout da página inicial."
+      },
+      {
+        "title": "Carregar um Fundo",
+        "description": "Escolha um vídeo (MP4, WebM) ou foto para o fundo da página inicial do seu restaurante. Os vídeos são reproduzidos em loop automaticamente, criando uma primeira impressão imersiva para cada visitante."
+      },
+      {
+        "title": "Geração de Fundo com IA",
+        "description": "Não tem um vídeo ou foto prontos? Deixe a IA criar uma imagem de fundo a partir dos itens do seu menu automaticamente. Ela gera um visual profissional que combina com o estilo do seu restaurante."
+      },
+      {
+        "title": "Visualizar e Salvar",
+        "description": "Veja suas alterações em tempo real antes de salvar. Os vídeos são automaticamente comprimidos e carregados de forma preguiçosa, garantindo um desempenho rápido em dispositivos móveis sem sacrificar a qualidade visual."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Nos planos gratuito e Basic, seu site é hospedado em iq-rest.com/m/seu-nome. O plano Pro suporta nomes de domínio próprios para controle total da marca."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "De zero a um site de restaurante ao vivo em quatro etapas.",
+    "steps": [
+      {
+        "title": "Digite Seu Email",
+        "description": "Sem necessidade de senha. Basta digitar seu endereço de email e clicar em Continuar. Não há formulários de registro longos, não é necessário cartão de crédito e não há compromissos."
+      },
+      {
+        "title": "Verifique com um Código",
+        "description": "Verifique sua caixa de entrada para um código de verificação de 4 dígitos. Insira-o para fazer login de forma segura. Essa abordagem sem senha significa uma coisa a menos para lembrar."
+      },
+      {
+        "title": "Nomeie Seu Restaurante",
+        "description": "Dê um nome ao seu restaurante. Ele se torna sua URL do site e título do menu. Você pode sempre alterá-lo mais tarde nas configurações do seu painel."
+      },
+      {
+        "title": "Seu Site Está Pronto",
+        "description": "Um site completo de restaurante com menu QR, página de contato com mapa e design responsivo está ao vivo instantaneamente em iq-rest.com/m/seu-nome. Adicione seus pratos e comece a compartilhar."
+      }
+    ]
   }
 }

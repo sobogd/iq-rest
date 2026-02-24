@@ -1560,7 +1560,8 @@
         "invalidCode": "Cód neamhbhailí. Bain triail eile as le do thoil.",
         "emailRequired": "Cuir isteach do ríomhphost.",
         "emailInvalid": "Cuir isteach ríomhphost bailí."
-      }
+      },
+      "or": "nó"
     },
     "analytics": {
       "monthlyUsage": "Úsáid Mhíosúil",

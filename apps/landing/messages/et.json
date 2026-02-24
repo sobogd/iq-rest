@@ -1560,7 +1560,8 @@
         "invalidCode": "Vigane kood. Palun proovi uuesti.",
         "emailRequired": "Sisestage oma e-post.",
         "emailInvalid": "Sisestage kehtiv e-posti aadress."
-      }
+      },
+      "or": "või"
     },
     "analytics": {
       "monthlyUsage": "Kuu kasutus",

@@ -46,5 +46,31 @@
         "answer": "Já. Slökktu á hvaða hlut sem er með einu ýti. Hann hverfur af opinbera matseðlinum en helst í stjórnborðinu þínu — kveiktu á honum aftur þegar þú ert tilbúin/n."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Byggðu og birtu matseðilinn þinn í fimm einföldum skrefum.",
+    "steps": [
+      {
+        "title": "Búa til flokka",
+        "description": "Bættu við flokkum eins og Forréttir, Aðalréttir, Eftirréttir og Drykki til að skipuleggja matseðilinn þinn. Þú getur búið til eins marga flokka og þú þarft og raðað þeim aftur með draga og sleppa."
+      },
+      {
+        "title": "Bæta við matseðilsatriðum",
+        "description": "Sláðu inn nafn réttarins, lýsingu og verð fyrir hvert atriði. Merktu ofnæmisvalda ef við á — gestir munu sjá ofnæmis tákn á matseðlinum sjálfkrafa."
+      },
+      {
+        "title": "Hlaða upp eða búa til myndir",
+        "description": "Hlaða upp eigin matarmyndum frá símanum þínum eða tölvunni, eða nota AI til að búa til faglega matarmynd úr nafninu á réttinum. Myndir eru sjálfkrafa hámarkaðar."
+      },
+      {
+        "title": "Skipuleggja með draga og sleppa",
+        "description": "Raðaðu flokkum og atriðum aftur með því að draga þau á sinn stað. Kveiktu á hvaða atriði sem er eða slökktu á því án þess að eyða því — fullkomið fyrir dagleg tilboð eða rétti sem eru uppseldir."
+      },
+      {
+        "title": "Birta matseðilinn þinn",
+        "description": "Breytingar birtast strax á lifandi QR matseðlinum þínum. Það er engin 'birta' takki — hver breyting fer í loftið í rauntíma. Prentaðu QR kóðann þinn og settu hann á borðin þín."
+      }
+    ]
   }
 }

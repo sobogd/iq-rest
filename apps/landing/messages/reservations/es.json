@@ -46,5 +46,31 @@
         "answer": "Sí. Elige el modo automático para confirmar reservas al instante según disponibilidad, o el modo manual para revisar y aprobar cada solicitud tú mismo."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Configura reservas en línea y comienza a aceptar reservas en cinco pasos.",
+    "steps": [
+      {
+        "title": "Habilitar Reservas",
+        "description": "Activa las reservas en la configuración de tu restaurante. Elige entre la confirmación automática, donde las reservas se aprueban al instante según disponibilidad, o el modo manual donde revisas cada solicitud."
+      },
+      {
+        "title": "Añadir Tus Mesas",
+        "description": "Crea mesas con información de capacidad y zona — por ejemplo, 'Mesa 5, 4 invitados, Terraza'. Cada mesa se vuelve reservable, y el sistema evita automáticamente las reservas duplicadas."
+      },
+      {
+        "title": "Establecer Horarios de Trabajo",
+        "description": "Define tus horas disponibles para reservas y elige la duración de los intervalos — de 15 minutos a 8 horas. Solo se muestran a los invitados los intervalos de tiempo dentro de tus horas de trabajo."
+      },
+      {
+        "title": "Los Invitados Reservan en Línea",
+        "description": "Los clientes visitan la página de tu restaurante, eligen su fecha, hora y tamaño del grupo, ingresan su nombre y teléfono, y envían. No se requiere cuenta ni descarga de aplicación — funciona en cualquier navegador."
+      },
+      {
+        "title": "Gestionar Reservas en Tu Panel",
+        "description": "Ve todas las reservas en tu panel. Confirma, cancela o marca las reservas como completadas. Tanto tú como el invitado reciben notificaciones por correo electrónico por cada actualización de reserva."
+      }
+    ]
   }
 }

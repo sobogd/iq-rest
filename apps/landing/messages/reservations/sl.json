@@ -46,5 +46,31 @@
         "answer": "Da. Izberite avtomatski način za takojšnjo potrditev rezervacij glede na razpoložljivost ali ročni način za osebni pregled in odobritev vsake zahteve."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Nastavite spletne rezervacije in začnite sprejemati rezervacije v petih korakih.",
+    "steps": [
+      {
+        "title": "Omogočite rezervacije",
+        "description": "V nastavitvah vašega restavracije omogočite rezervacije. Izberite med samodejno potrditev, kjer se rezervacije takoj odobrijo na podlagi razpoložljivosti, ali ročnim načinom, kjer pregledate vsako zahtevo."
+      },
+      {
+        "title": "Dodajte svoje mize",
+        "description": "Ustvarite mize z informacijami o kapaciteti in območju — na primer, 'Miza 5, 4 gostje, Terasa'. Vsaka miza postane rezervabilna, sistem pa samodejno preprečuje dvojne rezervacije."
+      },
+      {
+        "title": "Določite delovni čas",
+        "description": "Določite svoje razpoložljive ure za rezervacije in izberite trajanje termina — od 15 minut do 8 ur. Gosti vidijo le časovne termine, ki so v vašem delovnem času."
+      },
+      {
+        "title": "Gosti rezervirajo prek spleta",
+        "description": "Stranke obiščejo vašo stran restavracije, izberejo datum, čas in velikost skupine, vnesejo svoje ime in telefon ter oddajo. Ni potrebna registracija ali prenos aplikacije — deluje v vsakem brskalniku."
+      },
+      {
+        "title": "Upravljajte rezervacije na svojem nadzorni plošči",
+        "description": "Oglejte si vse rezervacije na svoji nadzorni plošči. Potrdite, prekličite ali označite rezervacije kot zaključene. Tako vi kot gost prejmeta e-poštna obvestila o vsaki posodobitvi rezervacije."
+      }
+    ]
   }
 }

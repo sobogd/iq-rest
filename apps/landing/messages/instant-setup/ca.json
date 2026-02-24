@@ -46,5 +46,27 @@
         "answer": "Amb els plans gratuït i Basic, el teu web s'allotja a iq-rest.com/m/el-teu-nom. El pla Pro admet noms de domini personalitzats per a un control total de la marca."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "De zero a un lloc web de restaurant en viu en quatre passos.",
+    "steps": [
+      {
+        "title": "Introdueix el Teu Correu Electrònic",
+        "description": "No es necessita contrasenya. Només escriu la teva adreça de correu electrònic i fes clic a Continuar. No hi ha formularis de registre llargs, no es requereix targeta de crèdit i no hi ha compromisos."
+      },
+      {
+        "title": "Verifica amb un Codi",
+        "description": "Comprova la teva safata d'entrada per un codi de verificació de 4 dígits. Introdueix-lo per iniciar sessió de manera segura. Aquest enfocament sense contrasenya significa una cosa menys a recordar."
+      },
+      {
+        "title": "Dóna Nom al Teu Restaurant",
+        "description": "Dóna un nom al teu restaurant. Es convertirà en la teva URL del lloc web i el títol del menú. Sempre pots canviar-lo més tard des de la configuració del teu tauler de control."
+      },
+      {
+        "title": "El Teu Lloc Web Està Lliure",
+        "description": "Un lloc web de restaurant complet amb menú QR, pàgina de contacte amb mapa i disseny adaptable està en línia instantàniament a iq-rest.com/m/your-name. Afegeix els teus plats i comença a compartir."
+      }
+    ]
   }
 }

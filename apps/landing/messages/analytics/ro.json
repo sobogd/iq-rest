@@ -46,5 +46,27 @@
         "answer": "Datele de analiză sunt stocate din ziua în care vă creați restaurantul. Puteți vizualiza tendințe zilnice, săptămânale și lunare pentru întregul dumneavoastră istoric."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Începeți să urmăriți performanța restaurantului dvs. în patru pași.",
+    "steps": [
+      {
+        "title": "Creează-ți Restaurantul",
+        "description": "Analizele încep să urmărească din momentul în care meniul tău devine activ. Nu este nimic de configurat — fiecare vizualizare de pagină, scanare QR și vizitator sunt înregistrate automat."
+      },
+      {
+        "title": "Partajează Codul Tău QR",
+        "description": "Tipărește codul tău QR și plasează-l pe mese, la intrare sau pe ambalajele de livrare. Fiecare scanare este înregistrată cu marcaj de timp, limbă, dispozitiv și pagină vizitată."
+      },
+      {
+        "title": "Deschide Panoul de Analiză",
+        "description": "Vezi statistici zilnice, săptămânale și lunare cu grafice clare. Urmărește vizualizările totale, vizitatorii unici și tendințele în timp dintr-un singur ecran al panoului."
+      },
+      {
+        "title": "Explorează Detaliile Statistice",
+        "description": "Vizualizează statistici detaliate pe pagină (meniu, contacte, rezervări), limbă preferată, tip de dispozitiv și browser. Folosește aceste date pentru a-ți optimiza meniul și a prioritiza traducerile."
+      }
+    ]
   }
 }

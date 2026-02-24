@@ -38,5 +38,23 @@
         "answer": "Twój kod QR jest generowany osobno i może być dostosowany niezależnie. Kolor akcentowy dotyczy stron cyfrowego menu, nawigacji i elementów interaktywnych."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Dopasuj swoje menu do swojej marki w trzech prostych krokach.",
+    "steps": [
+      {
+        "title": "Otwórz ustawienia projektu",
+        "description": "Przejdź do strony Projekt w swoim panelu. Wybór koloru akcentu jest na pierwszym planie — od razu zobaczysz wszystkie dostępne opcje."
+      },
+      {
+        "title": "Wybierz kolor swojej marki",
+        "description": "Wybierz spośród 12 starannie dobranych presetów kolorów zaprojektowanych z myślą o czytelności i dostępności, lub wpisz swój dokładny kod hex, aby idealnie dopasować kolor do marki."
+      },
+      {
+        "title": "Natychmiastowy podgląd",
+        "description": "Twój kolor akcentu stosuje się do przycisków, linków i wyróżnień w całym menu. Działa zarówno w jasnych, jak i ciemnych motywach, a zmiany pojawiają się natychmiast na Twoim aktywnym menu."
+      }
+    ]
   }
 }

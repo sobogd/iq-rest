@@ -46,5 +46,27 @@
         "answer": "Á ókeypis og Basic áskriftum er vefsíðan þín hýst á iq-rest.com/m/þitt-nafn. Pro áskriftin styður sérsniðin lén fyrir fulla vörumerkjastjórn."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Frá engu til lifandi veitingastaðarvefsíðu í fjórum skrefum.",
+    "steps": [
+      {
+        "title": "Sláðu inn tölvupóstinn þinn",
+        "description": "Engin lykilorð nauðsynleg. Bara sláðu inn tölvupóstfangið þitt og smelltu á Halda áfram. Engar langar skráningarform, engin kreditkort nauðsynleg, og engar skuldbindingar."
+      },
+      {
+        "title": "Staðfestu með kóða",
+        "description": "Athugaðu pósthólfið þitt fyrir 4-stafa staðfestingarkóða. Sláðu hann inn til að skrá þig inn á öruggan hátt. Þessi lykilorðslaus aðferð þýðir eitt minna að muna."
+      },
+      {
+        "title": "Nefndu veitingastaðinn þinn",
+        "description": "Gefðu veitingastaðnum þínum nafn. Það verður vefsíðu URL-ið þitt og titill matseðilsins. Þú getur alltaf breytt því síðar frá stillingum stjórnborðsins þíns."
+      },
+      {
+        "title": "Vefsíðan þín er tilbúin",
+        "description": "Fullkomin veitingastaðarvefsíða með QR matseðli, tengiliðasíðu með korti, og viðbragðsformi er lifandi strax á iq-rest.com/m/your-name. Bættu réttum þínum við og byrjaðu að deila."
+      }
+    ]
   }
 }

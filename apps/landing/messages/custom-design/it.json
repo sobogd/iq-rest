@@ -46,5 +46,27 @@
         "answer": "No. Carica semplicemente il tuo video o foto dalla dashboard. Il sistema gestisce automaticamente dimensioni, compressione e layout. Il tuo sito appare professionale senza competenze di design."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Personalizza l'identità visiva del tuo ristorante in quattro passaggi.",
+    "steps": [
+      {
+        "title": "Apri le Impostazioni di Design",
+        "description": "Naviga alla pagina Design nel tuo pannello di controllo. Qui puoi controllare l'aspetto visivo del tuo ristorante: sfondo, colore di accento e layout della homepage."
+      },
+      {
+        "title": "Carica uno Sfondo",
+        "description": "Scegli un video (MP4, WebM) o una foto per lo sfondo della homepage del tuo ristorante. I video si ripetono automaticamente, creando una prima impressione coinvolgente per ogni visitatore."
+      },
+      {
+        "title": "Generazione di Sfondo con AI",
+        "description": "Non hai un video o una foto pronti? Lascia che l'AI crei automaticamente un'immagine di sfondo dai tuoi piatti del menu. Genera un'immagine professionale che si adatta allo stile del tuo ristorante."
+      },
+      {
+        "title": "Anteprima e Salva",
+        "description": "Visualizza le tue modifiche in tempo reale prima di salvare. I video vengono automaticamente compressi e caricati in modo lazy, garantendo prestazioni rapide sui dispositivi mobili senza compromettere la qualità visiva."
+      }
+    ]
   }
 }

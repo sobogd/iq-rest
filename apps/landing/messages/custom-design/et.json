@@ -46,5 +46,27 @@
         "answer": "Ei. Laadige lihtsalt oma video või foto juhtpaneelilt üles. Süsteem käsitleb suuruse muutmist, tihendamist ja paigutust automaatselt. Teie veebileht näeb professionaalne välja ilma disainioskusteta."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuidas see toimib",
+    "subtitle": "Kohanda oma restorani visuaalset identiteeti neljas etapis.",
+    "steps": [
+      {
+        "title": "Ava Disaini Seaded",
+        "description": "Liigu oma juhtpaneelil Disaini lehele. Siin saad kontrollida oma restorani visuaalset välimust — taust, aktsentvärv ja avalehe paigutus."
+      },
+      {
+        "title": "Laadi Üles Taust",
+        "description": "Vali video (MP4, WebM) või foto oma restorani avalehe taustaks. Videod korduvad automaatselt, luues igale külastajale kaasahaarava esmamulje."
+      },
+      {
+        "title": "AI Tausta Loomine",
+        "description": "Ei ole videot või fotot valmis? Lase AI-l automaatselt luua taustapilt sinu menüüelementidest. See genereerib professionaalse visuaali, mis sobib sinu restorani stiiliga."
+      },
+      {
+        "title": "Eelvaade ja Salvestamine",
+        "description": "Vaata oma muudatusi reaalajas enne salvestamist. Videod kompressitakse automaatselt ja laaditakse aeglaselt, tagades kiire jõudluse mobiilseadmetes ilma visuaalset kvaliteeti ohverdamata."
+      }
+    ]
   }
 }

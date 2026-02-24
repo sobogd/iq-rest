@@ -46,5 +46,27 @@
         "answer": "Az analitikai adatok az étterme létrehozásának napjától vannak tárolva. Napi, heti és havi trendeket tekinthet meg a teljes előzményeire vonatkozóan."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan Működik",
+    "subtitle": "Kezdje el nyomon követni étterme teljesítményét négy lépésben.",
+    "steps": [
+      {
+        "title": "Hozza Létre Éttermét",
+        "description": "Az elemzések attól a pillanattól kezdve nyomon követik a teljesítményt, amikor az étlapja élővé válik. Nincs mit konfigurálni — minden oldalmegtekintés, QR-szkennelés és látogató automatikusan rögzítésre kerül."
+      },
+      {
+        "title": "Ossza Meg QR Kódját",
+        "description": "Nyomtassa ki QR kódját, és helyezze el az asztalokon, a bejáratnál vagy a házhoz szállító csomagoláson. Minden szkennelés rögzítésre kerül időbélyeggel, nyelvvel, eszközzel és meglátogatott oldallal."
+      },
+      {
+        "title": "Nyissa Meg az Elemzési Műszerfalat",
+        "description": "Nézze meg a napi, heti és havi statisztikákat világos diagramokkal. Kövesse nyomon a teljes megtekintéseket, egyedi látogatókat és az időbeli trendeket egyetlen műszerfal képernyőről."
+      },
+      {
+        "title": "Fedezze Fel a Részletes Elemzéseket",
+        "description": "Tekintse meg a statisztikákat oldalonként (étlap, kapcsolatok, foglalások), preferált nyelv, eszköztípus és böngésző szerint. Használja ezeket az adatokat az étlap optimalizálására és a fordítások priorizálására."
+      }
+    ]
   }
 }

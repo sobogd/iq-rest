@@ -46,5 +46,27 @@
         "answer": "Analysedaten werden ab dem Tag gespeichert, an dem Sie Ihr Restaurant erstellen. Sie können tägliche, wöchentliche und monatliche Trends für Ihre gesamte Historie anzeigen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Beginnen Sie mit der Verfolgung der Leistung Ihres Restaurants in vier Schritten.",
+    "steps": [
+      {
+        "title": "Erstellen Sie Ihr Restaurant",
+        "description": "Die Analysen beginnen mit der Verfolgung, sobald Ihr Menü live geht. Es gibt nichts zu konfigurieren – jede Seitenansicht, jeder QR-Scan und jeder Besucher wird automatisch erfasst."
+      },
+      {
+        "title": "Teilen Sie Ihren QR-Code",
+        "description": "Drucken Sie Ihren QR-Code aus und platzieren Sie ihn auf Tischen, am Eingang oder auf Takeaway-Verpackungen. Jeder Scan wird mit Zeitstempel, Sprache, Gerät und besuchter Seite erfasst."
+      },
+      {
+        "title": "Öffnen Sie das Analyse-Dashboard",
+        "description": "Sehen Sie tägliche, wöchentliche und monatliche Statistiken mit klaren Diagrammen. Verfolgen Sie die Gesamtansichten, einzigartigen Besucher und Trends über die Zeit von einem einzigen Dashboard-Bildschirm."
+      },
+      {
+        "title": "Erforschen Sie detaillierte Aufschlüsselungen",
+        "description": "Sehen Sie Statistiken, aufgeschlüsselt nach Seite (Menü, Kontakte, Reservierungen), bevorzugter Sprache, Gerätetyp und Browser. Nutzen Sie diese Daten, um Ihr Menü zu optimieren und Übersetzungen zu priorisieren."
+      }
+    ]
   }
 }

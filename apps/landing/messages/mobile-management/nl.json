@@ -46,5 +46,27 @@
         "answer": "Momenteel beheert één account het restaurant. U kunt inloggen vanaf meerdere apparaten tegelijk — uw telefoon, tablet of computer."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Beheer uw restaurant vanaf elk apparaat in vier stappen.",
+    "steps": [
+      {
+        "title": "Open Dashboard op Uw Telefoon",
+        "description": "Ga naar iq-rest.com en log in via de browser van uw telefoon. Het dashboard past zich automatisch aan uw schermgrootte aan — geen app om te downloaden of te installeren."
+      },
+      {
+        "title": "Bewerk Menu Waar U Ook Bent",
+        "description": "Voeg nieuwe items toe, werk prijzen bij, wijzig beschrijvingen en upload foto's rechtstreeks vanaf de camera van uw telefoon. Elke functie die beschikbaar is op desktop werkt net zo goed op mobiel."
+      },
+      {
+        "title": "Controleer Bestellingen en Reserveringen",
+        "description": "Bekijk binnenkomende bestellingen, beheer tafelreserveringen en reageer op ondersteuningsberichten — allemaal vanaf uw telefoon. Blijf op de hoogte van uw restaurant, zelfs als u weg bent."
+      },
+      {
+        "title": "Wijzigingen Gaan Direct Live",
+        "description": "Elke wijziging die u vanaf uw telefoon aanbrengt, verschijnt in real-time op uw QR-menu. Geen behoefte om te synchroniseren, publiceren of te wachten — uw gasten zien altijd de nieuwste versie."
+      }
+    ]
   }
 }

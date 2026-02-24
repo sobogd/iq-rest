@@ -46,5 +46,27 @@
         "answer": "Ja. Hvert billede genereres unikt til din specifikke ret. Ingen stockfotos — hvert billede oprettes fra bunden baseret paa dit menupunkt."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Sådan fungerer det",
+    "subtitle": "Få professionelle madbilleder til din menu i fire enkle trin.",
+    "steps": [
+      {
+        "title": "Åbn ethvert menupunkt",
+        "description": "Naviger til det punkt, du ønsker et billede af i dit dashboard. Du kan generere billeder til nye retter eller erstatte eksisterende fotos på ethvert menupunkt."
+      },
+      {
+        "title": "Klik på Generer billede",
+        "description": "AI skaber et professionelt madbillede baseret på rettens navn og beskrivelse. Jo mere detaljeret du er i beskrivelsen, desto mere præcist bliver resultatet."
+      },
+      {
+        "title": "Gennemgå resultatet",
+        "description": "Forhåndsvis det genererede billede, før du anvender det. Hvis du ønsker et andet udseende, kan du regenerere for at få en ny variation. Hver generation producerer et unikt billede."
+      },
+      {
+        "title": "Brug i din menu",
+        "description": "Billedet er automatisk optimeret, komprimeret til WebP-format, og vises straks på din live menu. Gæsterne ser professionelle madbilleder på hver ret."
+      }
+    ]
   }
 }

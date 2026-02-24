@@ -46,5 +46,27 @@
         "answer": "Eins og er stjórnar einn reikningur veitingastaðnum. Þú getur skráð þig inn úr mörgum tækjum samtímis — símanum, spjaldtölvu eða tölvu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Stjórnaðu veitingastaðnum þínum frá hvaða tæki sem er í fjórum skrefum.",
+    "steps": [
+      {
+        "title": "Opnaðu stjórnborð á símanum þínum",
+        "description": "Farðu á iq-rest.com og skráðu þig inn í vafranum á símanum þínum. Stjórnborðið aðlagast sjálfkrafa að skjástærð þinni — engin app til að hlaða niður eða setja upp."
+      },
+      {
+        "title": "Breyta matseðli hvar sem er",
+        "description": "Bættu við nýjum atriðum, uppfærðu verð, breyttu lýsingum og hlaðið upp myndum beint úr myndavél símans þíns. Allar aðgerðir sem eru í boði á skrifborði virka eins vel á farsíma."
+      },
+      {
+        "title": "Athugaðu pöntun og bókanir",
+        "description": "Skoðaðu innkomandi pöntun, stjórnaðu borðabókunum og svaraðu stuðningsskilaboðum — allt frá símanum þínum. Vertu á toppnum á veitingastaðnum þínum jafnvel þegar þú ert fjarverandi."
+      },
+      {
+        "title": "Breytingar fara strax í loftið",
+        "description": "Allar breytingar sem þú gerir frá símanum þínum birtast á QR matseðlinum þínum í rauntíma. Engin þörf á að samstilla, birta eða bíða — gestir þínir sjá alltaf nýjustu útgáfuna."
+      }
+    ]
   }
 }

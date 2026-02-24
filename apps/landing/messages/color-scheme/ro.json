@@ -38,5 +38,23 @@
         "answer": "Codul QR este generat separat și poate fi personalizat independent. Culoarea de accent se aplică paginilor meniului digital, navigării și elementelor interactive."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Potriviți meniul cu marca dvs. în trei pași simpli.",
+    "steps": [
+      {
+        "title": "Deschideți Setările de Design",
+        "description": "Navigați la pagina de Design din tabloul de bord. Selectorul de culoare accent este în centrul atenției — veți vedea toate opțiunile disponibile imediat."
+      },
+      {
+        "title": "Alegeți Culoarea Mărcii Dvs.",
+        "description": "Alegeți din 12 presetări de culoare curate, concepute pentru lizibilitate și accesibilitate, sau introduceți codul hex exact pentru o potrivire perfectă cu marca."
+      },
+      {
+        "title": "Previzualizare Instantanee",
+        "description": "Culoarea dvs. accent se aplică butoanelor, linkurilor și evidențierilor din întregul meniu. Funcționează atât în teme deschise, cât și în teme întunecate, iar modificările apar instantaneu pe meniul dvs. live."
+      }
+    ]
   }
 }

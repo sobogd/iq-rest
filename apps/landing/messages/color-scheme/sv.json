@@ -38,5 +38,23 @@
         "answer": "Din QR-kod genereras separat och kan anpassas oberoende. Accentfargen tillampas pa dina digitala menysidor, navigation och interaktiva element."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Anpassa din meny till ditt varumärke i tre enkla steg.",
+    "steps": [
+      {
+        "title": "Öppna Designinställningar",
+        "description": "Navigera till Design-sidan i din instrumentpanel. Färgvalet för accentfärgen är i centrum — du ser alla tillgängliga alternativ direkt."
+      },
+      {
+        "title": "Välj Din Varumärkesfärg",
+        "description": "Välj bland 12 utvalda färginställningar som är designade för läsbarhet och tillgänglighet, eller ange din exakta hex-kod för en perfekt matchning med ditt varumärke."
+      },
+      {
+        "title": "Omedelbar Förhandsvisning",
+        "description": "Din accentfärg tillämpas på knappar, länkar och markeringar över hela menyn. Det fungerar i både ljusa och mörka teman, och ändringar visas omedelbart på din live-meny."
+      }
+    ]
   }
 }

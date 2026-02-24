@@ -1560,7 +1560,8 @@
         "invalidCode": "Neveljavna koda. Prosimo, poskusite znova.",
         "emailRequired": "Vnesite svoj email.",
         "emailInvalid": "Vnesite veljaven email."
-      }
+      },
+      "or": "ali"
     },
     "analytics": {
       "monthlyUsage": "Mesečna uporaba",

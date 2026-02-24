@@ -46,5 +46,31 @@
         "answer": "Sí. Desactiva qualsevol element amb un sol toc. Desapareix del menú públic però es manté al teu panell — torna a activar-lo quan vulguis."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Crea i publica el menú del teu restaurant en cinc passos senzills.",
+    "steps": [
+      {
+        "title": "Crea Categories",
+        "description": "Afegeix categories com Entrants, Plats Principals, Postres i Begudes per organitzar el teu menú. Pots crear tantes categories com necessitis i reorganitzar-les amb arrossegar i deixar anar."
+      },
+      {
+        "title": "Afegeix Articles al Menú",
+        "description": "Introdueix el nom del plat, la descripció i el preu per a cada article. Marca els al·lergògens si escau — els convidats veuran icones d'al·lergògens al menú automàticament."
+      },
+      {
+        "title": "Puja o Genera Fotos",
+        "description": "Puja les teves pròpies fotos de menjar des del teu telèfon o ordinador, o utilitza la IA per generar una imatge professional del plat a partir del nom del plat. Les imatges s'optimitzen automàticament."
+      },
+      {
+        "title": "Organitza amb Arrossegar i Deixar Anar",
+        "description": "Reorganitza categories i articles arrossegant-los al seu lloc. Activa o desactiva qualsevol article sense esborrar-lo — perfecte per a ofertes diàries o plats exhaurits."
+      },
+      {
+        "title": "Publica el Teu Menú",
+        "description": "Els canvis apareixen instantàniament al teu menú QR en directe. No hi ha cap botó de 'publicar' — cada edició es fa en temps real. Imprimeix el teu codi QR i col·loca'l a les teves taules."
+      }
+    ]
   }
 }

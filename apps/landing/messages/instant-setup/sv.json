@@ -46,5 +46,27 @@
         "answer": "Pa gratis- och Basic-planer hostas din webbplats pa iq-rest.com/m/ditt-namn. Pro-planen stodjer egna domannamn for full varumarkeskontroll."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Från noll till en levande restaurangwebbplats i fyra steg.",
+    "steps": [
+      {
+        "title": "Ange Din E-post",
+        "description": "Inget lösenord behövs. Skriv bara din e-postadress och klicka på Fortsätt. Det finns inga långa registreringsformulär, inget kreditkort krävs och inga åtaganden."
+      },
+      {
+        "title": "Verifiera med en Kod",
+        "description": "Kontrollera din inkorg för en 4-siffrig verifieringskod. Ange den för att logga in säkert. Denna lösenordsfria metod innebär en sak mindre att komma ihåg."
+      },
+      {
+        "title": "Namnge Din Restaurang",
+        "description": "Ge din restaurang ett namn. Det blir din webbplats URL och menytitel. Du kan alltid ändra det senare från dina inställningar på instrumentpanelen."
+      },
+      {
+        "title": "Din Webbplats Är Klar",
+        "description": "En komplett restaurangwebbplats med QR-meny, kontaktsida med karta och responsiv design är live omedelbart på iq-rest.com/m/ditt-namn. Lägg till dina rätter och börja dela."
+      }
+    ]
   }
 }

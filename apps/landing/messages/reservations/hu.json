@@ -46,5 +46,31 @@
         "answer": "Igen. Válassza az automatikus módot a foglalások azonnali visszaigazolásához az elérhetőség alapján, vagy a manuális módot, hogy minden kérést személyesen tekintsen át és hagyjon jóvá."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan Működik",
+    "subtitle": "Állítson be online foglalásokat, és kezdje el a foglalások elfogadását öt lépésben.",
+    "steps": [
+      {
+        "title": "Foglalások Engedélyezése",
+        "description": "Kapcsolja be a foglalásokat az étterem beállításaiban. Válasszon az automatikus megerősítés, ahol a foglalások azonnal jóváhagyásra kerülnek a rendelkezésre állás alapján, vagy a manuális mód között, ahol minden kérést áttekint."
+      },
+      {
+        "title": "Asztalok Hozzáadása",
+        "description": "Hozzon létre asztalokat kapacitás és zóna információkkal — például: '5. asztal, 4 vendég, Terasz'. Minden asztal foglalhatóvá válik, és a rendszer automatikusan megakadályozza a túlfoglalásokat."
+      },
+      {
+        "title": "Munkaidő Beállítása",
+        "description": "Határozza meg a foglalásokhoz elérhető órákat, és válassza ki az időtartamot — 15 perctől 8 óráig. Csak a munkaidőn belüli időpontok jelennek meg a vendégek számára."
+      },
+      {
+        "title": "Vendégek Online Foglalnak",
+        "description": "Az ügyfelek meglátogatják az étterem oldalát, kiválasztják a dátumot, időpontot és a létszámot, megadják a nevüket és telefonszámukat, majd elküldik. Nincs szükség fiókra vagy alkalmazás letöltésére — bármely böngészőben működik."
+      },
+      {
+        "title": "Foglalások Kezelése a Vezérlőpultján",
+        "description": "Tekintse meg az összes foglalást a vezérlőpultján. Erősítse meg, törölje, vagy jelölje meg a foglalásokat teljesítettnek. Ön és a vendég is e-mail értesítéseket kap minden foglalás frissítéséről."
+      }
+    ]
   }
 }

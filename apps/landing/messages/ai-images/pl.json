@@ -46,5 +46,27 @@
         "answer": "Tak. Każde zdjęcie jest generowane specjalnie dla Twojego konkretnego dania. Bez zdjęć stockowych — każde zdjęcie jest tworzone od nowa na podstawie Twojej pozycji menu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak To Działa",
+    "subtitle": "Uzyskaj profesjonalne zdjęcia potraw do swojego menu w czterech prostych krokach.",
+    "steps": [
+      {
+        "title": "Otwórz Dowolny Element Menu",
+        "description": "Przejdź do elementu, dla którego chcesz uzyskać zdjęcie w swoim panelu. Możesz generować obrazy dla nowych dań lub zastępować istniejące zdjęcia w dowolnym elemencie menu."
+      },
+      {
+        "title": "Kliknij Generuj Obraz",
+        "description": "AI tworzy profesjonalne zdjęcie potrawy na podstawie nazwy dania i opisu. Im więcej szczegółów podasz w opisie, tym dokładniejszy będzie wynik."
+      },
+      {
+        "title": "Przejrzyj Wynik",
+        "description": "Podglądaj wygenerowany obraz przed jego zastosowaniem. Jeśli chcesz inny wygląd, regeneruj, aby uzyskać nową wersję. Każda generacja produkuje unikalny obraz."
+      },
+      {
+        "title": "Użyj W Swoim Menu",
+        "description": "Obraz jest automatycznie optymalizowany, skompresowany do formatu WebP i natychmiast pojawia się w twoim aktywnym menu. Goście widzą profesjonalne zdjęcia potraw przy każdym daniu."
+      }
+    ]
   }
 }

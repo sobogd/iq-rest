@@ -46,5 +46,31 @@
         "answer": "Da. Isključite bilo koju stavku jednim dodirom. Nestaje s javnog jelovnika, ali ostaje u kontrolnoj ploči — uključite je kad god ste spremni."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Izradite i objavite jelovnik vašeg restorana u pet jednostavnih koraka.",
+    "steps": [
+      {
+        "title": "Kreirajte Kategorije",
+        "description": "Dodajte kategorije poput Predjela, Glavnih jela, Deserta i Pića kako biste organizirali svoj jelovnik. Možete kreirati onoliko kategorija koliko vam je potrebno i promijeniti njihov redoslijed povlačenjem."
+      },
+      {
+        "title": "Dodajte Stavke Jelovnika",
+        "description": "Unesite naziv jela, opis i cijenu za svaku stavku. Označite alergene ako je primjenjivo — gosti će automatski vidjeti ikone alergena na jelovniku."
+      },
+      {
+        "title": "Učitajte ili Generirajte Fotografije",
+        "description": "Učitajte vlastite fotografije hrane s telefona ili računala, ili upotrijebite AI za generiranje profesionalne slike hrane prema nazivu jela. Slike se automatski optimiziraju."
+      },
+      {
+        "title": "Organizirajte Povlačenjem",
+        "description": "Promijenite redoslijed kategorija i stavki povlačenjem na željeno mjesto. Prebacite bilo koju stavku on ili off bez brisanja — savršeno za dnevne specijalitete ili jela koja su rasprodana."
+      },
+      {
+        "title": "Objavite Svoj Jelovnik",
+        "description": "Promjene se odmah pojavljuju na vašem aktivnom QR jelovniku. Nema gumba 'objavi' — svaka izmjena postaje aktivna u stvarnom vremenu. Ispišite svoj QR kod i stavite ga na stolove."
+      }
+    ]
   }
 }

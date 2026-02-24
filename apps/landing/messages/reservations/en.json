@@ -25,6 +25,32 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Set up online reservations and start accepting bookings in five steps.",
+    "steps": [
+      {
+        "title": "Enable Reservations",
+        "description": "Toggle reservations on in your restaurant settings. Choose between automatic confirmation, where bookings are approved instantly based on availability, or manual mode where you review each request."
+      },
+      {
+        "title": "Add Your Tables",
+        "description": "Create tables with capacity and zone information — for example, 'Table 5, 4 guests, Terrace'. Each table becomes bookable, and the system prevents double-bookings automatically."
+      },
+      {
+        "title": "Set Working Hours",
+        "description": "Define your available hours for reservations and choose the slot duration — from 15 minutes to 8 hours. Only time slots within your working hours are shown to guests."
+      },
+      {
+        "title": "Guests Book Online",
+        "description": "Customers visit your restaurant page, pick their date, time, and party size, enter their name and phone, and submit. No account or app download required — works in any browser."
+      },
+      {
+        "title": "Manage Bookings in Your Dashboard",
+        "description": "View all reservations in your dashboard. Confirm, cancel, or mark bookings as completed. Both you and the guest receive email notifications for every booking update."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about table reservations.",
@@ -44,6 +70,22 @@
       {
         "question": "Can I use both automatic and manual confirmation?",
         "answer": "Yes. Choose automatic mode to confirm bookings instantly based on availability, or manual mode to review and approve each request yourself."
+      },
+      {
+        "question": "How does the system prevent double bookings?",
+        "answer": "Each table has a defined capacity and time slots. Once a table is booked for a specific time, it's no longer shown as available. The system handles all conflict detection automatically."
+      },
+      {
+        "question": "Can guests add special requests or notes?",
+        "answer": "Yes. The reservation form includes a notes field where guests can mention dietary needs, celebrations, seating preferences, or any other requests."
+      },
+      {
+        "question": "Is the reservation feature available on the free plan?",
+        "answer": "Table reservations are available on the Basic and Pro plans. The free plan includes your full QR menu, contact page, and analytics — upgrade anytime to enable reservations."
+      },
+      {
+        "question": "Can I see reservation history?",
+        "answer": "Yes. All reservations — past and upcoming — are stored in your dashboard. You can filter by date, status, and table to review your booking history at any time."
       }
     ]
   }

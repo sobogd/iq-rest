@@ -46,5 +46,27 @@
         "answer": "Nej. Ladda bara upp din video eller ditt foto fran kontrollpanelen. Systemet hanterar storlek, komprimering och layout automatiskt. Din webbplats ser professionell ut utan nagra designkunskaper."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Anpassa din restaurangs visuella identitet i fyra steg.",
+    "steps": [
+      {
+        "title": "Öppna Designinställningar",
+        "description": "Navigera till Design-sidan i din instrumentpanel. Här kan du kontrollera din restaurangs visuella utseende — bakgrund, accentfärg och layout på startsidan."
+      },
+      {
+        "title": "Ladda upp en Bakgrund",
+        "description": "Välj en video (MP4, WebM) eller foto för din restaurangs startsidesbakgrund. Videor loopas automatiskt, vilket skapar ett imponerande första intryck för varje besökare."
+      },
+      {
+        "title": "AI Bakgrundsgenerering",
+        "description": "Har du ingen video eller foto redo? Låt AI skapa en bakgrundsbild från dina menyobjekt automatiskt. Den genererar en professionell visuell som matchar din restaurangs stil."
+      },
+      {
+        "title": "Förhandsgranska och Spara",
+        "description": "Se dina ändringar i realtid innan du sparar. Videor komprimeras automatiskt och laddas in vid behov, vilket säkerställer snabb prestanda på mobila enheter utan att kompromissa med den visuella kvaliteten."
+      }
+    ]
   }
 }

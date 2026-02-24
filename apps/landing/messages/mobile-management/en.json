@@ -25,6 +25,28 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Manage your restaurant from any device in four steps.",
+    "steps": [
+      {
+        "title": "Open Dashboard on Your Phone",
+        "description": "Go to iq-rest.com and sign in from your phone's browser. The dashboard automatically adapts to your screen size — no app to download or install."
+      },
+      {
+        "title": "Edit Menu Anywhere",
+        "description": "Add new items, update prices, change descriptions, and upload photos directly from your phone camera. Every feature available on desktop works just as well on mobile."
+      },
+      {
+        "title": "Check Orders and Reservations",
+        "description": "View incoming orders, manage table bookings, and respond to support messages — all from your phone. Stay on top of your restaurant even when you're away."
+      },
+      {
+        "title": "Changes Go Live Instantly",
+        "description": "Every edit you make from your phone appears on your QR menu in real time. No need to sync, publish, or wait — your guests always see the latest version."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about mobile menu management.",
@@ -44,6 +66,18 @@
       {
         "question": "Can multiple people manage the menu?",
         "answer": "Currently one account manages the restaurant. You can log in from multiple devices simultaneously — your phone, tablet, or computer."
+      },
+      {
+        "question": "Can I upload photos taken with my phone camera?",
+        "answer": "Yes. Tap the upload button on any menu item and your phone's camera or gallery opens. Take a photo of the dish and it's on your menu in seconds, automatically optimized."
+      },
+      {
+        "question": "Is the mobile dashboard slower than the desktop version?",
+        "answer": "No. The dashboard is built mobile-first, so it's optimized for phone screens and mobile connections. It loads fast and responds instantly to every action."
+      },
+      {
+        "question": "Can I manage analytics from my phone?",
+        "answer": "Yes. The analytics dashboard is fully responsive. View daily views, language breakdowns, page stats, and visitor trends — all formatted for your phone screen."
       }
     ]
   }

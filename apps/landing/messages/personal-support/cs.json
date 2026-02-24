@@ -46,5 +46,27 @@
         "answer": "Ano, a jsme za to rádi! Mnoho našich funkcí vzniklo z návrhů uživatelů. Napište nám svůj nápad a zvážíme ho pro budoucí aktualizace."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Získejte pomoc od skutečné osoby ve čtyřech jednoduchých krocích.",
+    "steps": [
+      {
+        "title": "Otevřít chat s podporou",
+        "description": "Přejděte na stránku podpory ve vašem panelu. Uvidíte jednoduché chatovací rozhraní, kde můžete přímo napsat svou zprávu — žádné formuláře nebo kategorie k výběru."
+      },
+      {
+        "title": "Popište svou otázku",
+        "description": "Napište svou zprávu. Zeptejte se na nastavení, funkce, optimalizaci menu, fakturaci nebo cokoliv jiného. Neexistují žádné hloupé otázky — rádi vám pomůžeme se vším."
+      },
+      {
+        "title": "Získejte osobní odpověď",
+        "description": "Skutečná osoba (ne chatbot) si přečte vaši zprávu a odpoví během několika hodin. Rozumíme pracovním postupům v restauracích a poskytujeme praktické, použitelné odpovědi."
+      },
+      {
+        "title": "Průběžná pomoc",
+        "description": "Požádejte o návrhy funkcí, získejte tipy na optimalizaci menu nebo požádejte o pomoc s nastavením kdykoliv. Vaše historie konverzací je uložena, takže vždy máme kontext z předchozích otázek."
+      }
+    ]
   }
 }

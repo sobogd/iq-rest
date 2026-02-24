@@ -46,5 +46,27 @@
         "answer": "Nē. Vienkārši augšupielādējiet savu video vai fotogrāfiju no vadības paneļa. Sistēma automātiski apstrādā izmēru maiņu, saspiešanu un izkārtojumu. Jūsu mājaslapa izskatās profesionāli bez jebkādām dizaina prasmēm."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas strādā",
+    "subtitle": "Pielāgojiet sava restorāna vizuālo identitāti četros soļos.",
+    "steps": [
+      {
+        "title": "Atveriet Dizaina Iestatījumus",
+        "description": "Pārejiet uz Dizaina lapu savā paneļa. Šeit jūs varat kontrolēt sava restorāna vizuālo izskatu — fons, akcenta krāsa un sākumlapas izkārtojums."
+      },
+      {
+        "title": "Augšupielādējiet Fonu",
+        "description": "Izvēlieties video (MP4, WebM) vai fotoattēlu sava restorāna sākumlapas fonam. Video automātiski atkārtojas, radot iespaidīgu pirmo iespaidu katram apmeklētājam."
+      },
+      {
+        "title": "AI Fona Ģenerēšana",
+        "description": "Nav gatava video vai foto? Ļaujiet AI automātiski izveidot fona attēlu no jūsu ēdienkartes vienībām. Tas ģenerē profesionālu vizuālu, kas atbilst jūsu restorāna stilam."
+      },
+      {
+        "title": "Priekšskatījums un Saglabāšana",
+        "description": "Redziet savas izmaiņas reālajā laikā pirms saglabāšanas. Video tiek automātiski saspiesti un slinkoti ielādēti, nodrošinot ātru veiktspēju mobilajās ierīcēs, nesamazinot vizuālo kvalitāti."
+      }
+    ]
   }
 }

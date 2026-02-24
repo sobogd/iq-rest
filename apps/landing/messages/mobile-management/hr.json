@@ -46,5 +46,27 @@
         "answer": "Trenutačno jedan račun upravlja restoranom. Možete se prijaviti s više uređaja istovremeno — telefon, tablet ili računalo."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Upravljajte svojim restoranom s bilo kojeg uređaja u četiri koraka.",
+    "steps": [
+      {
+        "title": "Otvorite nadzornu ploču na svom telefonu",
+        "description": "Idite na iq-rest.com i prijavite se putem preglednika na svom telefonu. Nadzorna ploča se automatski prilagođava veličini vašeg ekrana — nema aplikacije za preuzimanje ili instalaciju."
+      },
+      {
+        "title": "Uredite izbornik bilo gdje",
+        "description": "Dodajte nove stavke, ažurirajte cijene, promijenite opise i učitajte fotografije izravno s kamere svog telefona. Sve funkcije dostupne na računalu rade jednako dobro i na mobilnom uređaju."
+      },
+      {
+        "title": "Provjerite narudžbe i rezervacije",
+        "description": "Pogledajte dolazne narudžbe, upravljajte rezervacijama stolova i odgovarajte na poruke podrške — sve s vašeg telefona. Budite u toku s vašim restoranom čak i kada niste prisutni."
+      },
+      {
+        "title": "Promjene se odmah aktiviraju",
+        "description": "Svaka izmjena koju napravite s vašeg telefona pojavljuje se na vašem QR izborniku u stvarnom vremenu. Nema potrebe za sinkronizacijom, objavljivanjem ili čekanjem — vaši gosti uvijek vide najnoviju verziju."
+      }
+    ]
   }
 }

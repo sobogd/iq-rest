@@ -46,5 +46,27 @@
         "answer": "Ja. Hvert bilde genereres unikt for din spesifikke rett. Ingen stockbilder — hvert bilde lages fra bunnen basert paa menyelementet ditt."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik Fungerer Det",
+    "subtitle": "Få profesjonelle matbilder til menyen din i fire enkle trinn.",
+    "steps": [
+      {
+        "title": "Åpne Ethvert Menyobjekt",
+        "description": "Naviger til objektet du ønsker et bilde av i dashbordet ditt. Du kan generere bilder for nye retter eller erstatte eksisterende bilder på ethvert menyobjekt."
+      },
+      {
+        "title": "Klikk på Generer Bilde",
+        "description": "AI lager et profesjonelt matbilde basert på rettens navn og beskrivelse. Jo mer detaljert du er i beskrivelsen, jo mer nøyaktig blir resultatet."
+      },
+      {
+        "title": "Se Gjennom Resultatet",
+        "description": "Forhåndsvis det genererte bildet før du bruker det. Hvis du ønsker et annet utseende, kan du regenerere for å få en ny variasjon. Hver generering produserer et unikt bilde."
+      },
+      {
+        "title": "Bruk i Menyen Din",
+        "description": "Bildet blir automatisk optimalisert, komprimert til WebP-format, og vises på den live menyen din umiddelbart. Gjester ser profesjonelle matbilder på hver rett."
+      }
+    ]
   }
 }

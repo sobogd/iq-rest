@@ -46,5 +46,27 @@
         "answer": "Ne. Stačí nahrát video nebo fotografii z panelu. Systém se postará o rozměry, kompresi a rozvržení automaticky. Váš web bude vypadat profesionálně i bez designérských dovedností."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Přizpůsobte vizuální identitu své restaurace ve čtyřech krocích.",
+    "steps": [
+      {
+        "title": "Otevřít nastavení designu",
+        "description": "Přejděte na stránku Design ve svém řídicím panelu. Zde můžete ovládat vizuální vzhled své restaurace — pozadí, akcentní barvu a rozložení domovské stránky."
+      },
+      {
+        "title": "Nahrát pozadí",
+        "description": "Vyberte video (MP4, WebM) nebo fotografii pro pozadí domovské stránky vaší restaurace. Videoklipy se automaticky opakují, což vytváří pohlcující první dojem pro každého návštěvníka."
+      },
+      {
+        "title": "Generování pozadí pomocí AI",
+        "description": "Nemáte připravené video nebo fotografii? Nechte AI automaticky vytvořit pozadí z vašich položek menu. Generuje profesionální vizuál, který odpovídá stylu vaší restaurace."
+      },
+      {
+        "title": "Náhled a uložení",
+        "description": "Zobrazte si své změny v reálném čase před uložením. Videoklipy jsou automaticky komprimovány a načítány na pozadí, což zajišťuje rychlý výkon na mobilních zařízeních bez obětování vizuální kvality."
+      }
+    ]
   }
 }

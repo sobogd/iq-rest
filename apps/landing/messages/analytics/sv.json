@@ -46,5 +46,27 @@
         "answer": "Analysdata lagras fran den dag du skapar din restaurang. Du kan visa dagliga, veckovisa och manadsvisa trender for hela din historik."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hur Det Fungerar",
+    "subtitle": "Börja spåra din restaurangs prestation i fyra steg.",
+    "steps": [
+      {
+        "title": "Skapa Din Restaurang",
+        "description": "Analys börjar spåra från det ögonblick din meny går live. Det finns inget att konfigurera — varje sidvisning, QR-skanning och besökare registreras automatiskt."
+      },
+      {
+        "title": "Dela Din QR-kod",
+        "description": "Skriv ut din QR-kod och placera den på borden, vid ingången eller på take-away förpackningar. Varje skanning registreras med tidsstämpel, språk, enhet och besökt sida."
+      },
+      {
+        "title": "Öppna Analysdashboarden",
+        "description": "Se dagliga, veckovisa och månatliga statistik med tydliga diagram. Spåra totala visningar, unika besökare och trender över tid från en enda dashboardskärm."
+      },
+      {
+        "title": "Utforska Detaljerade Uppdelningar",
+        "description": "Visa statistik uppdelad efter sida (meny, kontakter, reservationer), föredraget språk, enhetstyp och webbläsare. Använd dessa data för att optimera din meny och prioritera översättningar."
+      }
+    ]
   }
 }

@@ -46,5 +46,31 @@
         "answer": "Traducerea AI este inclusă în planurile Basic și Pro cu limite lunare generoase. Fără taxe per cuvânt sau per element — traduceți cât aveți nevoie."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Traduceti întregul meniu în câteva minute, nu ore.",
+    "steps": [
+      {
+        "title": "Adăugați Limbi la Meniul Dvs.",
+        "description": "Accesați pagina Limbi din tabloul de bord și selectați ce limbi ar trebui să suporte meniul dvs. Alegeți din 35 de limbi disponibile, inclusiv toate limbile majore europene, asiatice și din Orientul Mijlociu."
+      },
+      {
+        "title": "Faceți Clic pe Traducere",
+        "description": "Un singur buton traduce toate categoriile, numele articolelor și descrierile simultan. Întregul meniu este procesat în câteva secunde, indiferent de câte articole aveți."
+      },
+      {
+        "title": "AI Înțelege Contextul Culinar",
+        "description": "AI-ul cunoaște terminologia culinară din diferite culturi. Păstrează numele preparatelor precum 'Tiramisu' sau 'Pad Thai' în timp ce adaptează natural descrierile, listele de ingrediente și numele categoriilor."
+      },
+      {
+        "title": "Revizuiți și Editați",
+        "description": "Fiecare traducere este complet editabilă. Ajustați orice formulare pentru a se potrivi stilului dvs. Modificările manuale sunt păstrate chiar și atunci când retraduceți alte părți ale meniului ulterior."
+      },
+      {
+        "title": "Publicați Meniul Dvs. Multilingv",
+        "description": "Oaspeții văd un comutator de limbă pe meniul dvs. și pot naviga în limba preferată. Fiecare limbă poate fi activată sau dezactivată independent din tabloul de bord."
+      }
+    ]
   }
 }

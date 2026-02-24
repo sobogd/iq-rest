@@ -46,5 +46,27 @@
         "answer": "Der kostenlose Plan umfasst bis zu 2 Sprachen. Die Basic- und Pro-Pläne bieten unbegrenzte Sprachen mit integrierter KI-Übersetzung."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Stellen Sie Ihr Menü in vier Schritten in mehreren Sprachen zur Verfügung.",
+    "steps": [
+      {
+        "title": "Gehen Sie zu den Spracheinstellungen",
+        "description": "Öffnen Sie die Sprachseite in Ihrem Dashboard. Sie sehen alle verfügbaren Sprachen und welche derzeit aktiv in Ihrem Menü sind."
+      },
+      {
+        "title": "Sprachen hinzufügen",
+        "description": "Wählen Sie aus 35 verfügbaren Sprachen. Der kostenlose Plan umfasst bis zu 2 Sprachen, während die Basic- und Pro-Pläne unbegrenzte Sprachen für Ihr Menü bieten."
+      },
+      {
+        "title": "Übersetzen Sie Ihren Inhalt",
+        "description": "Verwenden Sie die KI-Übersetzung mit einem Klick, um Ihr gesamtes Menü sofort zu übersetzen, oder geben Sie die Übersetzungen manuell ein, um die volle Kontrolle zu haben. Sie können auch beide Ansätze kombinieren."
+      },
+      {
+        "title": "Gäste wechseln die Sprache",
+        "description": "Ein Sprachwähler erscheint auf Ihrer Menüseite. Wenn Gäste ihre Sprache auswählen, wechselt das gesamte Menü sofort. Ihre Präferenz wird für zukünftige Besuche gespeichert."
+      }
+    ]
   }
 }

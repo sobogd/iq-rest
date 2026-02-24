@@ -46,5 +46,27 @@
         "answer": "Ilmaisessa ja Basic-paketissa sivustosi on osoitteessa iq-rest.com/m/sinun-nimesi. Pro-paketti tukee omia verkkotunnuksia taysimaaraaista brandihallintaa varten."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kuinka se toimii",
+    "subtitle": "Nollasta toimivaksi ravintolasivustoksi neljässä vaiheessa.",
+    "steps": [
+      {
+        "title": "Syötä sähköpostiosoitteesi",
+        "description": "Salasanaa ei tarvita. Kirjoita vain sähköpostiosoitteesi ja napsauta Jatka. Pitkiä rekisteröitymislomakkeita ei ole, luottokorttia ei vaadita, eikä sitoumuksia ole."
+      },
+      {
+        "title": "Vahvista koodilla",
+        "description": "Tarkista postilaatikkosi 4-numeroinen vahvistuskoodi. Syötä se kirjautuaksesi turvallisesti. Tämä salasana ilman lähestymistapa tarkoittaa, että yksi asia on vähemmän muistettavana."
+      },
+      {
+        "title": "Nimeä ravintolasi",
+        "description": "Anna ravintolallesi nimi. Siitä tulee verkkosivustosi URL-osoite ja ruokalistan otsikko. Voit aina muuttaa sitä myöhemmin hallintapaneelin asetuksista."
+      },
+      {
+        "title": "Verkkosivustosi on valmis",
+        "description": "Täydellinen ravintolasivusto QR-ruokalistalla, yhteystietosivulla kartan kanssa ja responsiivisella suunnittelulla on heti käytettävissä osoitteessa iq-rest.com/m/your-name. Lisää annoksesi ja ala jakaa."
+      }
+    ]
   }
 }

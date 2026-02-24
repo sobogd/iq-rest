@@ -46,5 +46,27 @@
         "answer": "Analysedata lagres fra dagen du oppretter restauranten. Du kan se daglige, ukentlige og maanedlige trender for hele historikken."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Slik Fungerer Det",
+    "subtitle": "Begynn å spore restaurantens ytelse i fire trinn.",
+    "steps": [
+      {
+        "title": "Opprett Din Restaurant",
+        "description": "Analyse begynner å spore fra det øyeblikket menyen din blir aktiv. Det er ingenting å konfigurere — hver sidevisning, QR-skanning og besøkende blir automatisk registrert."
+      },
+      {
+        "title": "Del Din QR-kode",
+        "description": "Skriv ut QR-koden din og plasser den på bord, ved inngangen eller på takeaway-emballasje. Hver skanning blir registrert med tidsstempel, språk, enhet og besøkt side."
+      },
+      {
+        "title": "Åpne Analyse Dashboardet",
+        "description": "Se daglige, ukentlige og månedlige statistikker med klare diagrammer. Spor totale visninger, unike besøkende og trender over tid fra en enkelt dashbordskjerm."
+      },
+      {
+        "title": "Utforsk Detaljerte Oppdelinger",
+        "description": "Se statistikk delt opp etter side (meny, kontakter, reservasjoner), foretrukket språk, enhetstype og nettleser. Bruk disse dataene til å optimalisere menyen din og prioritere oversettelser."
+      }
+    ]
   }
 }

@@ -46,5 +46,31 @@
         "answer": "Evet. Rezervasyonları müsaitliğe göre anında onaylamak için otomatik modu seçin veya her talebi kendiniz inceleyip onaylamak için manuel modu tercih edin."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Çevrimiçi rezervasyonları ayarlayın ve beş adımda rezervasyon almaya başlayın.",
+    "steps": [
+      {
+        "title": "Rezervasyonları Aktif Et",
+        "description": "Restoran ayarlarınızda rezervasyonları açın. Anında onaylanan otomatik onay ile her talebi gözden geçirdiğiniz manuel mod arasında seçim yapın."
+      },
+      {
+        "title": "Masalarınızı Ekleyin",
+        "description": "Kapasite ve alan bilgisi ile masalar oluşturun — örneğin, 'Masa 5, 4 misafir, Teras'. Her masa rezerve edilebilir hale gelir ve sistem otomatik olarak çift rezervasyonları engeller."
+      },
+      {
+        "title": "Çalışma Saatlerinizi Belirleyin",
+        "description": "Rezervasyonlar için mevcut saatlerinizi tanımlayın ve zaman dilimi süresini seçin — 15 dakikadan 8 saate kadar. Sadece çalışma saatleriniz içindeki zaman dilimleri misafirlere gösterilir."
+      },
+      {
+        "title": "Misafirler Çevrimiçi Rezervasyon Yapar",
+        "description": "Müşteriler restoran sayfanızı ziyaret eder, tarih, saat ve grup büyüklüğünü seçer, adlarını ve telefon numaralarını girer ve gönderir. Hesap veya uygulama indirme gerektirmez — her tarayıcıda çalışır."
+      },
+      {
+        "title": "Rezervasyonları Kontrol Panelinizde Yönetin",
+        "description": "Tüm rezervasyonları kontrol panelinizde görüntüleyin. Rezervasyonları onaylayın, iptal edin veya tamamlandı olarak işaretleyin. Hem siz hem de misafir her rezervasyon güncellemesi için e-posta bildirimleri alırsınız."
+      }
+    ]
   }
 }

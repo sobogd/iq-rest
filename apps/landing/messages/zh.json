@@ -1560,7 +1560,8 @@
         "invalidCode": "验证码无效。请重试。",
         "emailRequired": "请输入您的邮箱。",
         "emailInvalid": "请输入有效的邮箱。"
-      }
+      },
+      "or": "或者"
     },
     "analytics": {
       "monthlyUsage": "每月使用量",

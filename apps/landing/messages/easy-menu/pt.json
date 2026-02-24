@@ -46,5 +46,31 @@
         "answer": "Sim. Desative qualquer item com um toque. Ele desaparece do menu público mas permanece no seu painel — ative-o novamente quando estiver pronto."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Crie e publique o menu do seu restaurante em cinco etapas simples.",
+    "steps": [
+      {
+        "title": "Criar Categorias",
+        "description": "Adicione categorias como Entradas, Pratos Principais, Sobremesas e Bebidas para organizar seu menu. Você pode criar quantas categorias precisar e reordená-las com arrastar e soltar."
+      },
+      {
+        "title": "Adicionar Itens ao Menu",
+        "description": "Insira o nome do prato, descrição e preço para cada item. Marque os alérgenos, se aplicável — os convidados verão ícones de alérgenos no menu automaticamente."
+      },
+      {
+        "title": "Carregar ou Gerar Fotos",
+        "description": "Carregue suas próprias fotos de comida do seu telefone ou computador, ou use IA para gerar uma imagem profissional do prato a partir do nome. As imagens são otimizadas automaticamente."
+      },
+      {
+        "title": "Organizar com Arrastar e Soltar",
+        "description": "Reordene categorias e itens arrastando-os para o lugar. Ative ou desative qualquer item sem excluí-lo — perfeito para especiais do dia ou pratos esgotados."
+      },
+      {
+        "title": "Publique Seu Menu",
+        "description": "As mudanças aparecem instantaneamente no seu menu QR ao vivo. Não há botão de 'publicar' — cada edição vai ao ar em tempo real. Imprima seu código QR e coloque-o em suas mesas."
+      }
+    ]
   }
 }

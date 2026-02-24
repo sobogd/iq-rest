@@ -46,5 +46,27 @@
         "answer": "Já. Hver mynd er búin til einstaklega fyrir þinn tiltekna rétt. Engar birgðamyndir — hver mynd er búin til frá grunni út frá matseðilsatriðinu þínu."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hvernig það virkar",
+    "subtitle": "Fáðu faglegar matmyndir fyrir matseðilinn þinn í fjórum einföldum skrefum.",
+    "steps": [
+      {
+        "title": "Opnaðu hvaða matseðilspunkt sem er",
+        "description": "Fara í þann punkt sem þú vilt fá mynd af í stjórnborðinu þínu. Þú getur búið til myndir fyrir nýja rétti eða skipt út núverandi myndum á hvaða matseðilspunkt sem er."
+      },
+      {
+        "title": "Smelltu á Búa til mynd",
+        "description": "AI býr til faglega matmynd byggða á nafni réttarins og lýsingu. Ju meira sem þú veitir í lýsingunni, því nákvæmari verður niðurstaðan."
+      },
+      {
+        "title": "Skoðaðu niðurstöðuna",
+        "description": "Forskoðaðu myndina sem búin var til áður en þú beitir henni. Ef þú vilt að útlitið sé öðruvísi, endurgerðu til að fá nýja útgáfu. Hver gerð framleiðir einstaka mynd."
+      },
+      {
+        "title": "Notaðu í matseðilinn þinn",
+        "description": "Myndin er sjálfkrafa hámarkuð, þjappað í WebP sniði, og birtist strax á lifandi matseðli þínu. Gestir sjá faglegar matmyndir á hverjum rétti."
+      }
+    ]
   }
 }

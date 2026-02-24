@@ -46,5 +46,27 @@
         "answer": "Os dados de análise são armazenados desde o dia em que você cria seu restaurante. Você pode ver tendências diárias, semanais e mensais de todo o seu histórico."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Comece a acompanhar o desempenho do seu restaurante em quatro etapas.",
+    "steps": [
+      {
+        "title": "Crie Seu Restaurante",
+        "description": "As análises começam a ser rastreadas a partir do momento em que seu menu é publicado. Não há nada para configurar — cada visualização de página, escaneamento de QR e visitante é registrado automaticamente."
+      },
+      {
+        "title": "Compartilhe Seu Código QR",
+        "description": "Imprima seu código QR e coloque-o nas mesas, na entrada ou na embalagem para viagem. Cada escaneamento é registrado com data e hora, idioma, dispositivo e página visitada."
+      },
+      {
+        "title": "Abra o Painel de Análises",
+        "description": "Veja estatísticas diárias, semanais e mensais com gráficos claros. Acompanhe visualizações totais, visitantes únicos e tendências ao longo do tempo a partir de uma única tela do painel."
+      },
+      {
+        "title": "Explore Detalhamentos Detalhados",
+        "description": "Veja estatísticas detalhadas por página (menu, contatos, reservas), idioma preferido, tipo de dispositivo e navegador. Use esses dados para otimizar seu menu e priorizar traduções."
+      }
+    ]
   }
 }

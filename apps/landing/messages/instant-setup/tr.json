@@ -46,5 +46,27 @@
         "answer": "Ücretsiz ve Basic planlarda siteniz iq-rest.com/m/isminiz adresinde barındırılır. Pro plan, tam marka kontrolü için özel alan adlarını destekler."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Sıfırdan canlı bir restoran web sitesine dört adımda.",
+    "steps": [
+      {
+        "title": "E-posta Adresinizi Girin",
+        "description": "Şifreye gerek yok. Sadece e-posta adresinizi yazın ve Devam'a tıklayın. Uzun kayıt formları yok, kredi kartı gerekmiyor ve taahhüt yok."
+      },
+      {
+        "title": "Bir Kod ile Doğrulayın",
+        "description": "Gelen kutunuzu 4 haneli doğrulama kodu için kontrol edin. Güvenli bir şekilde oturum açmak için kodu girin. Bu şifresiz yaklaşım, hatırlamanız gereken bir şeyin daha az olması anlamına geliyor."
+      },
+      {
+        "title": "Restoranınıza Bir İsim Verin",
+        "description": "Restoranınıza bir isim verin. Bu, web sitenizin URL'si ve menü başlığı olacaktır. İsterseniz bunu daha sonra kontrol paneli ayarlarınızdan değiştirebilirsiniz."
+      },
+      {
+        "title": "Web Siteniz Hazır",
+        "description": "QR menü, harita ile iletişim sayfası ve duyarlı tasarım içeren tam bir restoran web sitesi, iq-rest.com/m/your-name adresinde anında yayındadır. Yemeklerinizi ekleyin ve paylaşmaya başlayın."
+      }
+    ]
   }
 }

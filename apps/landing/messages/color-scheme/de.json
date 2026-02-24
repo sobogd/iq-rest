@@ -38,5 +38,23 @@
         "answer": "Ihr QR-Code wird separat generiert und kann unabhängig angepasst werden. Die Akzentfarbe gilt für Ihre digitalen Menüseiten, Navigation und interaktive Elemente."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Passen Sie Ihr Menü in drei einfachen Schritten an Ihre Marke an.",
+    "steps": [
+      {
+        "title": "Design-Einstellungen öffnen",
+        "description": "Navigieren Sie zur Design-Seite in Ihrem Dashboard. Der Farbwähler für die Akzentfarbe steht im Vordergrund – Sie sehen sofort alle verfügbaren Optionen."
+      },
+      {
+        "title": "Wählen Sie Ihre Markenfarbe",
+        "description": "Wählen Sie aus 12 kuratierten Farb-Presets, die für Lesbarkeit und Zugänglichkeit entworfen wurden, oder geben Sie Ihren genauen Hex-Code ein, um eine perfekte Übereinstimmung mit Ihrer Marke zu erzielen."
+      },
+      {
+        "title": "Sofortige Vorschau",
+        "description": "Ihre Akzentfarbe wird auf Schaltflächen, Links und Hervorhebungen im gesamten Menü angewendet. Sie funktioniert sowohl in hellen als auch in dunklen Themen, und Änderungen erscheinen sofort in Ihrem Live-Menü."
+      }
+    ]
   }
 }

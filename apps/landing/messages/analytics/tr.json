@@ -46,5 +46,27 @@
         "answer": "Analitik verileri, restoranınızı oluşturduğunuz günden itibaren saklanır. Tüm geçmişiniz için günlük, haftalık ve aylık trendleri görüntüleyebilirsiniz."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Restoranınızın performansını dört adımda takip etmeye başlayın.",
+    "steps": [
+      {
+        "title": "Restoranınızı Oluşturun",
+        "description": "Analitikler, menünüz yayına girdiği andan itibaren takip etmeye başlar. Yapılandırılacak hiçbir şey yok — her sayfa görüntülemesi, QR taraması ve ziyaretçi otomatik olarak kaydedilir."
+      },
+      {
+        "title": "QR Kodunuzu Paylaşın",
+        "description": "QR kodunuzu yazdırın ve masalara, girişte veya paket servis ambalajlarına yerleştirin. Her tarama, zaman damgası, dil, cihaz ve ziyaret edilen sayfa ile kaydedilir."
+      },
+      {
+        "title": "Analitik Gösterge Tablosunu Açın",
+        "description": "Günlük, haftalık ve aylık istatistikleri net grafiklerle görün. Toplam görüntüleme, benzersiz ziyaretçi ve zaman içindeki trendleri tek bir gösterge tablosu ekranından takip edin."
+      },
+      {
+        "title": "Ayrıntılı Dağılımları Keşfedin",
+        "description": "İstatistikleri sayfa (menü, iletişim, rezervasyonlar), tercih edilen dil, cihaz türü ve tarayıcıya göre ayrıntılı olarak görüntüleyin. Bu verileri menünüzü optimize etmek ve çevirileri önceliklendirmek için kullanın."
+      }
+    ]
   }
 }

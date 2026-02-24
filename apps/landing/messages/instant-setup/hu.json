@@ -46,5 +46,27 @@
         "answer": "Az ingyenes és Basic csomagon az oldala az iq-rest.com/m/az-on-neve címen van. A Pro csomag egyedi domain neveket támogat a teljes márka kontroll érdekében."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan Működik",
+    "subtitle": "Négy lépésben egy élő étterem weboldalához.",
+    "steps": [
+      {
+        "title": "Add meg az Email címed",
+        "description": "Nincs szükség jelszóra. Csak írd be az email címed és kattints a Tovább gombra. Nincsenek hosszú regisztrációs űrlapok, nincs szükség bankkártyára, és nincsenek kötelezettségek."
+      },
+      {
+        "title": "Ellenőrizd a Kódot",
+        "description": "Nézd meg a beérkező leveleid között a 4 számjegyű ellenőrző kódot. Írd be, hogy biztonságosan bejelentkezhess. Ez a jelszó nélküli megközelítés egy dologgal kevesebb, amire emlékezned kell."
+      },
+      {
+        "title": "Nevezd el az Éttermed",
+        "description": "Adj nevet az éttermednek. Ez lesz a weboldalad URL-je és a menü címe. Később bármikor megváltoztathatod a vezérlőpult beállításaiból."
+      },
+      {
+        "title": "A Weboldalad Készen Áll",
+        "description": "Egy teljes étterem weboldal QR menüvel, térképes kapcsolat oldallal és reszponzív dizájnnal azonnal elérhető az iq-rest.com/m/your-name címen. Add hozzá az ételeidet és kezdd el megosztani."
+      }
+    ]
   }
 }

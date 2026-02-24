@@ -46,5 +46,27 @@
         "answer": "Šiuo metu viena paskyra valdo restoraną. Galite prisijungti iš kelių įrenginių vienu metu — telefono, planšetės ar kompiuterio."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Valdykite savo restoraną iš bet kurio įrenginio keturiais žingsniais.",
+    "steps": [
+      {
+        "title": "Atidarykite valdymo skydelį savo telefone",
+        "description": "Eikite į iq-rest.com ir prisijunkite per savo telefono naršyklę. Valdymo skydelis automatiškai prisitaiko prie jūsų ekrano dydžio — nereikia nieko atsisiųsti ar įdiegti."
+      },
+      {
+        "title": "Redaguokite meniu bet kur",
+        "description": "Pridėkite naujų patiekalų, atnaujinkite kainas, keiskite aprašymus ir įkelkite nuotraukas tiesiai iš savo telefono kameros. Kiekviena funkcija, kuri yra prieinama kompiuteryje, veikia taip pat gerai ir mobiliajame."
+      },
+      {
+        "title": "Patikrinkite užsakymus ir rezervacijas",
+        "description": "Peržiūrėkite gaunamus užsakymus, valdykite stalų rezervacijas ir atsakykite į palaikymo žinutes — viską iš savo telefono. Būkite informuoti apie savo restoraną net kai esate toli."
+      },
+      {
+        "title": "Pakeitimai įsigalioja iškart",
+        "description": "Kiekvienas redagavimas, kurį atliekate savo telefone, pasirodo jūsų QR meniu realiuoju laiku. Nereikia sinchronizuoti, skelbti ar laukti — jūsų svečiai visada mato naujausią versiją."
+      }
+    ]
   }
 }

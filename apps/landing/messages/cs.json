@@ -1560,7 +1560,8 @@
         "invalidCode": "Neplatný kód. Zkuste to prosím znovu.",
         "emailRequired": "Zadejte svůj email.",
         "emailInvalid": "Zadejte platný email."
-      }
+      },
+      "or": "nebo"
     },
     "analytics": {
       "monthlyUsage": "Měsíční použití",

@@ -46,5 +46,27 @@
         "answer": "Na besplatnom i Basic planu, vaš sajt je hostovan na iq-rest.com/m/vaše-ime. Pro plan podržava prilagođene nazive domena za potpunu kontrolu brenda."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcioniše",
+    "subtitle": "Od nule do aktivnog restoranskog veb sajta u četiri koraka.",
+    "steps": [
+      {
+        "title": "Unesite svoju email adresu",
+        "description": "Nema potrebe za lozinkom. Samo unesite svoju email adresu i kliknite na Nastavi. Nema dugih obrazaca za registraciju, nema potrebe za kreditnom karticom i nema obaveza."
+      },
+      {
+        "title": "Verifikujte sa kodom",
+        "description": "Proverite svoj inbox za 4-cifreni verifikacioni kod. Unesite ga da se prijavite bezbedno. Ovaj pristup bez lozinke znači da imate jednu stvar manje da pamtite."
+      },
+      {
+        "title": "Imenujte svoj restoran",
+        "description": "Dajte svom restoranu ime. To postaje vaša URL adresa veb sajta i naslov menija. Uvek ga možete promeniti kasnije iz podešavanja na svom kontrolnom panelu."
+      },
+      {
+        "title": "Vaš veb sajt je spreman",
+        "description": "Potpuno restoranski veb sajt sa QR menijem, stranicom za kontakt sa mapom i responzivnim dizajnom je odmah aktivan na iq-rest.com/m/vaše-ime. Dodajte svoja jela i počnite da delite."
+      }
+    ]
   }
 }

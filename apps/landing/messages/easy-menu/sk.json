@@ -46,5 +46,31 @@
         "answer": "Áno. Jedným ťuknutím vypnite akúkoľvek položku. Zmizne z verejného menu, ale zostane vo vašom ovládacom paneli — zapnite ju späť, keď budete pripravení."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Ako to funguje",
+    "subtitle": "Vytvorte a publikujte menu vašej reštaurácie v piatich jednoduchých krokoch.",
+    "steps": [
+      {
+        "title": "Vytvorte kategórie",
+        "description": "Pridajte kategórie ako Predjedlá, Hlavné jedlá, Dezerty a Nápoje na usporiadanie vášho menu. Môžete vytvoriť toľko kategórií, koľko potrebujete, a preusporiadať ich pomocou drag and drop."
+      },
+      {
+        "title": "Pridajte položky menu",
+        "description": "Zadajte názov jedla, popis a cenu pre každú položku. Označte alergény, ak je to potrebné — hostia uvidia ikony alergénov na menu automaticky."
+      },
+      {
+        "title": "Nahrajte alebo vygenerujte fotografie",
+        "description": "Nahrajte svoje vlastné fotografie jedál z vášho telefónu alebo počítača, alebo použite AI na vygenerovanie profesionálnej fotografie jedla z názvu jedla. Obrázky sú automaticky optimalizované."
+      },
+      {
+        "title": "Usporiadajte pomocou drag and drop",
+        "description": "Preusporiadajte kategórie a položky ťahaním na správne miesto. Prepnite akúkoľvek položku zapnúť alebo vypnúť bez jej odstránenia — ideálne pre denné špeciály alebo vypredané jedlá."
+      },
+      {
+        "title": "Publikujte vaše menu",
+        "description": "Zmeny sa okamžite zobrazia na vašom živom QR menu. Neexistuje tlačidlo 'publikovať' — každá úprava sa zverejní v reálnom čase. Vytlačte svoj QR kód a umiestnite ho na vaše stoly."
+      }
+    ]
   }
 }

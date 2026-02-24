@@ -46,5 +46,31 @@
         "answer": "Is féidir. Cas aon mhír as le brú amháin. Imíonn sé den roghchlár poiblí ach fanann sé i do phainéal rialaithe — cas ar ais é nuair atá tú réidh."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Tóg agus foilsiú do mhenu bialainne i cúig chéim shimplí.",
+    "steps": [
+      {
+        "title": "Cruthaigh Catagóirí",
+        "description": "Cuir catagóirí cosúil le Toirtíní, Príomhchúrsaí, Milseoga, agus Deochanna le chéile chun do mhenu a eagrú. Is féidir leat a lán catagóirí a chruthú de réir mar is gá duit agus iad a athordú le tarraingt agus a thógáil."
+      },
+      {
+        "title": "Cuir Míreanna Mena",
+        "description": "Iontráil ainm an miasa, cur síos, agus praghas do gach mír. Marcáil allrgaí más cuí — feicfidh aíonna íconna allrgaí ar an mhenú go huathoibríoch."
+      },
+      {
+        "title": "Uaslódáil nó Gineadóirí Grianghraif",
+        "description": "Uaslódáil do chuid grianghraf bia ó do guthán nó ríomhaire, nó bain úsáid as AI chun íomhá bia gairmiúil a ghiniúint ó ainm an miasa. Déantar íomhánna a bharrfheabhsú go huathoibríoch."
+      },
+      {
+        "title": "Eagraigh le Tarraingt agus Tógáil",
+        "description": "Athordú catagóirí agus míreanna trí iad a tharraingt isteach san áit. Athraigh aon mhír ar nó as gan í a scriosadh — foirfe do speisialtachtaí laethúla nó do miasa atá díolta amach."
+      },
+      {
+        "title": "Foilsigh Do Mhenú",
+        "description": "Téann na hathruithe i bhfeidhm láithreach ar do mhenu QR beo. Níl aon 'cnaipe foilsithe' ann — téann gach eagarthóireacht beo i ndáiríre. Priontáil do chód QR agus cuir é ar do táblaí."
+      }
+    ]
   }
 }

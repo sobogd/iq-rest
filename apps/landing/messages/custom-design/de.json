@@ -46,5 +46,27 @@
         "answer": "Nein. Laden Sie einfach Ihr Video oder Foto über das Dashboard hoch. Das System kümmert sich automatisch um Größe, Komprimierung und Layout. Ihre Website sieht professionell aus — ohne Designkenntnisse."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Passen Sie die visuelle Identität Ihres Restaurants in vier Schritten an.",
+    "steps": [
+      {
+        "title": "Design-Einstellungen öffnen",
+        "description": "Navigieren Sie zur Design-Seite in Ihrem Dashboard. Hier können Sie das visuelle Erscheinungsbild Ihres Restaurants steuern – Hintergrund, Akzentfarbe und Layout der Startseite."
+      },
+      {
+        "title": "Hintergrund hochladen",
+        "description": "Wählen Sie ein Video (MP4, WebM) oder ein Foto für den Hintergrund der Startseite Ihres Restaurants aus. Videos werden automatisch in Schleife abgespielt und schaffen einen eindrucksvollen ersten Eindruck für jeden Besucher."
+      },
+      {
+        "title": "AI-Hintergrundgenerierung",
+        "description": "Haben Sie kein Video oder Foto bereit? Lassen Sie die KI automatisch ein Hintergrundbild aus Ihren Menüelementen erstellen. Es generiert ein professionelles Bild, das zum Stil Ihres Restaurants passt."
+      },
+      {
+        "title": "Vorschau und speichern",
+        "description": "Sehen Sie Ihre Änderungen in Echtzeit, bevor Sie speichern. Videos werden automatisch komprimiert und lazy-loaded, um eine schnelle Leistung auf mobilen Geräten zu gewährleisten, ohne die visuelle Qualität zu beeinträchtigen."
+      }
+    ]
   }
 }

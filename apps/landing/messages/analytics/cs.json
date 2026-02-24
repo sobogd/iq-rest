@@ -46,5 +46,27 @@
         "answer": "Analytická data se uchovávají ode dne, kdy si vytvoříte restauraci. Můžete si prohlížet denní, týdenní a měsíční trendy za celou vaši historii."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Začněte sledovat výkon vaší restaurace ve čtyřech krocích.",
+    "steps": [
+      {
+        "title": "Vytvořte svou restauraci",
+        "description": "Analytika začne sledovat od okamžiku, kdy se vaše menu zveřejní. Není potřeba nic konfigurovat — každé zobrazení stránky, sken QR kódu a návštěvník je automaticky zaznamenán."
+      },
+      {
+        "title": "Sdílejte svůj QR kód",
+        "description": "Vytiskněte svůj QR kód a umístěte ho na stoly, u vchodu nebo na obaly s jídlem. Každé skenování je zaznamenáno s časovým razítkem, jazykem, zařízením a navštívenou stránkou."
+      },
+      {
+        "title": "Otevřete analytický panel",
+        "description": "Zobrazte denní, týdenní a měsíční statistiky s přehlednými grafy. Sledujte celkový počet zobrazení, unikátních návštěvníků a trendy v čase z jediné obrazovky panelu."
+      },
+      {
+        "title": "Prozkoumejte podrobné rozbory",
+        "description": "Zobrazte statistiky rozdělené podle stránky (menu, kontakty, rezervace), preferovaného jazyka, typu zařízení a prohlížeče. Využijte tato data k optimalizaci vašeho menu a prioritizaci překladů."
+      }
+    ]
   }
 }

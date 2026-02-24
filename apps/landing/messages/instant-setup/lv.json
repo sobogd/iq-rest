@@ -46,5 +46,27 @@
         "answer": "Bezmaksas un Basic plānos jūsu lapa ir mitināta iq-rest.com/m/jūsu-nosaukums. Pro plāns atbalsta pielāgotus domēna nosaukumus pilnai zīmola kontrolei."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "subtitle": "No nulles līdz dzīvam restorāna tīmekļa vietnei četros soļos.",
+    "steps": [
+      {
+        "title": "Ievadiet savu e-pastu",
+        "description": "Parole nav nepieciešama. Vienkārši ierakstiet savu e-pasta adresi un noklikšķiniet uz Turpināt. Nav garu reģistrācijas formu, nav nepieciešama kredītkarte un nav saistību."
+      },
+      {
+        "title": "Verificējiet ar kodu",
+        "description": "Pārbaudiet savu iesūtni, lai atrastu 4 ciparu verifikācijas kodu. Ievadiet to, lai droši pieteiktos. Šī bezparoles pieeja nozīmē, ka ir jāatceras mazāk lietu."
+      },
+      {
+        "title": "Nosauciet savu restorānu",
+        "description": "Dodiet savam restorānam nosaukumu. Tas kļūst par jūsu tīmekļa vietnes URL un ēdienkartes nosaukumu. Jūs vienmēr varat to mainīt vēlāk no sava vadības paneļa iestatījumiem."
+      },
+      {
+        "title": "Jūsu tīmekļa vietne ir gatava",
+        "description": "Pilnīga restorāna tīmekļa vietne ar QR ēdienkarti, kontaktu lapu ar karti un responsīvu dizainu ir nekavējoties pieejama iq-rest.com/m/your-name. Pievienojiet savus ēdienus un sāciet dalīties."
+      }
+    ]
   }
 }

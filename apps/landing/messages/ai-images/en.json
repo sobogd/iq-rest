@@ -25,6 +25,28 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Get professional food photos for your menu in four simple steps.",
+    "steps": [
+      {
+        "title": "Open Any Menu Item",
+        "description": "Navigate to the item you want a photo for in your dashboard. You can generate images for new dishes or replace existing photos on any menu item."
+      },
+      {
+        "title": "Click Generate Image",
+        "description": "AI creates a professional food photo based on the dish name and description. The more detail you provide in the description, the more accurate the result."
+      },
+      {
+        "title": "Review the Result",
+        "description": "Preview the generated image before applying it. If you'd like a different look, regenerate to get a new variation. Each generation produces a unique image."
+      },
+      {
+        "title": "Use in Your Menu",
+        "description": "The image is automatically optimized, compressed to WebP format, and appears on your live menu immediately. Guests see professional food photos on every dish."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about AI menu images.",
@@ -44,6 +66,18 @@
       {
         "question": "Are generated images unique to my restaurant?",
         "answer": "Yes. Each image is generated uniquely for your specific dish. No stock photos — every image is created fresh based on your menu item."
+      },
+      {
+        "question": "What image formats are supported for upload?",
+        "answer": "Upload JPG, PNG, or WebP images up to 10MB. All uploaded images are automatically compressed and converted to WebP for optimal loading speed on any device."
+      },
+      {
+        "question": "Can I generate images for all items at once?",
+        "answer": "Images are generated per item to ensure the best quality for each dish. Open any item, click generate, and the photo is ready in seconds."
+      },
+      {
+        "question": "Do AI-generated images look realistic?",
+        "answer": "Yes. The AI produces high-quality, realistic food photography. Results are best when the dish name and description are detailed — for example, 'Grilled salmon fillet with lemon butter sauce and asparagus' produces a more accurate image than just 'salmon'."
       }
     ]
   }

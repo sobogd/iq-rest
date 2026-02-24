@@ -25,6 +25,28 @@
       }
     ]
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Start tracking your restaurant's performance in four steps.",
+    "steps": [
+      {
+        "title": "Create Your Restaurant",
+        "description": "Analytics start tracking from the moment your menu goes live. There's nothing to configure — every page view, QR scan, and visitor is recorded automatically."
+      },
+      {
+        "title": "Share Your QR Code",
+        "description": "Print your QR code and place it on tables, at the entrance, or on takeaway packaging. Every scan is recorded with timestamp, language, device, and page visited."
+      },
+      {
+        "title": "Open the Analytics Dashboard",
+        "description": "See daily, weekly, and monthly statistics with clear charts. Track total views, unique visitors, and trends over time from a single dashboard screen."
+      },
+      {
+        "title": "Explore Detailed Breakdowns",
+        "description": "View stats broken down by page (menu, contacts, reservations), preferred language, device type, and browser. Use this data to optimize your menu and prioritize translations."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know about restaurant analytics.",
@@ -44,6 +66,18 @@
       {
         "question": "How far back does the data go?",
         "answer": "Analytics data is stored from the day you create your restaurant. You can view daily, weekly, and monthly trends for your entire history."
+      },
+      {
+        "question": "Do I need to add any tracking code?",
+        "answer": "No. Analytics are built into your restaurant website automatically. Every page view and QR scan is tracked without any setup or code changes on your part."
+      },
+      {
+        "question": "Can I see which languages my guests prefer?",
+        "answer": "Yes. The analytics dashboard shows a breakdown of languages used by your visitors. This helps you decide which translations to prioritize for your menu."
+      },
+      {
+        "question": "Does analytics affect my website's loading speed?",
+        "answer": "No. Analytics tracking is lightweight and runs in the background. It has no noticeable impact on your menu's loading speed or guest experience."
       }
     ]
   }

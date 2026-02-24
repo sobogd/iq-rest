@@ -46,5 +46,27 @@
         "answer": "Nem. Csak töltse fel a videóját vagy fotóját a vezérlőpultról. A rendszer automatikusan kezeli a méretezést, tömörítést és elrendezést. Weboldala nulla dizájn tudással is professzionálisan néz ki."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hogyan működik",
+    "subtitle": "Testreszabhatja étterme vizuális identitását négy lépésben.",
+    "steps": [
+      {
+        "title": "Nyissa meg a Tervezési Beállításokat",
+        "description": "Navigáljon a Tervezés oldalra a vezérlőpultján. Itt irányíthatja étterme vizuális megjelenését — háttér, kiemelő szín és kezdőlap elrendezés."
+      },
+      {
+        "title": "Töltsön fel egy Háttérképet",
+        "description": "Válasszon egy videót (MP4, WebM) vagy fényképet étterme kezdőlapjának háttérképeként. A videók automatikusan ismétlődnek, így lenyűgöző első benyomást keltenek minden látogató számára."
+      },
+      {
+        "title": "AI Háttérgenerálás",
+        "description": "Nincs kész videója vagy fényképe? Hagyja, hogy az AI automatikusan készítsen háttérképet az étlapján található ételekből. Professzionális vizuális megjelenést generál, amely illeszkedik étterme stílusához."
+      },
+      {
+        "title": "Előnézet és Mentés",
+        "description": "Nézze meg a változtatásait valós időben a mentés előtt. A videók automatikusan tömörítve vannak és késleltetve töltődnek be, biztosítva a gyors teljesítményt mobil eszközökön anélkül, hogy feláldoznák a vizuális minőséget."
+      }
+    ]
   }
 }

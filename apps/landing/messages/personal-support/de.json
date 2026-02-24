@@ -46,5 +46,27 @@
         "answer": "Ja, und wir freuen uns darüber! Viele unserer Funktionen begannen als Vorschläge von Nutzern. Schreiben Sie uns Ihre Idee und wir werden sie für zukünftige Updates berücksichtigen."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Erhalten Sie Hilfe von einer echten Person in vier einfachen Schritten.",
+    "steps": [
+      {
+        "title": "Support-Chat öffnen",
+        "description": "Gehen Sie zur Support-Seite in Ihrem Dashboard. Sie sehen eine einfache Chat-Oberfläche, in der Sie Ihre Nachricht direkt eingeben können – keine Ticketformulare oder Kategorien zur Auswahl."
+      },
+      {
+        "title": "Beschreiben Sie Ihre Frage",
+        "description": "Tippen Sie Ihre Nachricht. Fragen Sie nach Einrichtung, Funktionen, Menüoptimierung, Abrechnung oder allem anderen. Es gibt keine dummen Fragen – wir helfen Ihnen gerne bei allem."
+      },
+      {
+        "title": "Erhalten Sie eine persönliche Antwort",
+        "description": "Eine echte Person (kein Chatbot) liest Ihre Nachricht und antwortet innerhalb von Stunden. Wir verstehen die Arbeitsabläufe in Restaurants und geben praktische, umsetzbare Antworten."
+      },
+      {
+        "title": "Fortlaufende Hilfe",
+        "description": "Fordern Sie Vorschläge für Funktionen an, erhalten Sie Tipps zur Menüoptimierung oder bitten Sie jederzeit um Unterstützung bei der Einrichtung. Ihre Gesprächshistorie wird gespeichert, sodass wir immer den Kontext vorheriger Fragen haben."
+      }
+    ]
   }
 }

@@ -46,5 +46,27 @@
         "answer": "Attualmente un account gestisce il ristorante. Puoi accedere da più dispositivi contemporaneamente — telefono, tablet o computer."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Gestisci il tuo ristorante da qualsiasi dispositivo in quattro passaggi.",
+    "steps": [
+      {
+        "title": "Apri il Dashboard sul Tuo Telefono",
+        "description": "Vai su iq-rest.com e accedi dal browser del tuo telefono. Il dashboard si adatta automaticamente alla dimensione dello schermo — nessuna app da scaricare o installare."
+      },
+      {
+        "title": "Modifica il Menu Ovunque",
+        "description": "Aggiungi nuovi elementi, aggiorna i prezzi, cambia le descrizioni e carica foto direttamente dalla fotocamera del tuo telefono. Ogni funzione disponibile su desktop funziona altrettanto bene su mobile."
+      },
+      {
+        "title": "Controlla Ordini e Prenotazioni",
+        "description": "Visualizza gli ordini in arrivo, gestisci le prenotazioni dei tavoli e rispondi ai messaggi di supporto — tutto dal tuo telefono. Rimani aggiornato sul tuo ristorante anche quando sei lontano."
+      },
+      {
+        "title": "Le Modifiche Vanno Live Istantaneamente",
+        "description": "Ogni modifica che fai dal tuo telefono appare sul tuo menu QR in tempo reale. Non è necessario sincronizzare, pubblicare o aspettare — i tuoi ospiti vedono sempre l'ultima versione."
+      }
+    ]
   }
 }

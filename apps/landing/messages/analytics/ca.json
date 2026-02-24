@@ -46,5 +46,27 @@
         "answer": "Les dades d'analítica s'emmagatzemen des del dia que creeu el vostre restaurant. Podeu veure tendències diàries, setmanals i mensuals per a tot el vostre historial."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Comença a fer un seguiment del rendiment del teu restaurant en quatre passos.",
+    "steps": [
+      {
+        "title": "Crea el Teu Restaurant",
+        "description": "L'analítica comença a fer seguiment des del moment en què el teu menú es fa públic. No hi ha res a configurar: cada visualització de pàgina, escaneig de QR i visitant es registra automàticament."
+      },
+      {
+        "title": "Comparteix el Teu Codi QR",
+        "description": "Imprimeix el teu codi QR i col·loca'l a les taules, a l'entrada o en l'embalatge per emportar. Cada escaneig es registra amb la data i hora, idioma, dispositiu i pàgina visitada."
+      },
+      {
+        "title": "Obre el Tauler d'Analítica",
+        "description": "Veu estadístiques diàries, setmanals i mensuals amb gràfics clars. Fes un seguiment de les visualitzacions totals, visitants únics i tendències al llarg del temps des d'una sola pantalla del tauler."
+      },
+      {
+        "title": "Explora Desglossaments Detallats",
+        "description": "Veu les estadístiques desglossades per pàgina (menú, contactes, reserves), idioma preferit, tipus de dispositiu i navegador. Utilitza aquestes dades per optimitzar el teu menú i prioritzar traduccions."
+      }
+    ]
   }
 }

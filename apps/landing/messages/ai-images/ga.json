@@ -46,5 +46,27 @@
         "answer": "Tá. Gintear gach íomhá go uathúil do do mhias ar leith. Gan grianghraif stoc — cruthaítear gach íomhá úr bunaithe ar mhír do roghchláir."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Conas a Oibríonn sé",
+    "subtitle": "Faigh grianghraif ghrád proifisiúnta de do bhéile i gceithre chéime shimplí.",
+    "steps": [
+      {
+        "title": "Oscail Aon Mír Mhéala",
+        "description": "Déan nascleanúint chuig an mír ar mhaith leat grianghraf a fháil di i do dhashboard. Is féidir leat íomhánna a ghiniúint do bhéilí nua nó grianghraif atá ann a athsholáthar ar aon mhír mhéala."
+      },
+      {
+        "title": "Cliceáil Ar Ghiniúint Íomhá",
+        "description": "Cruthaíonn AI grianghraf ghrád proifisiúnta bunaithe ar ainm agus cur síos an bhéile. An níos mó sonraí a sholáthraíonn tú sa chur síos, is mó a bheidh an toradh cruinn."
+      },
+      {
+        "title": "Athbhreithnigh An Toradh",
+        "description": "Déanaigh réamhamharc ar an íomhá ghinte sula gcuirfidh tú i bhfeidhm í. Má tá tú ag iarraidh cuma difriúil, athghin í chun leagan nua a fháil. Gineann gach giniúint íomhá uathúil."
+      },
+      {
+        "title": "Úsáid I Do Mhenu",
+        "description": "Tá an íomhá optamaithe go huathoibríoch, comhoibrithe go formáid WebP, agus tagann sí ar do mhenu beo láithreach. Feiceann aíonna grianghraif ghrád proifisiúnta ar gach béile."
+      }
+    ]
   }
 }

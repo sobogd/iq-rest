@@ -46,5 +46,27 @@
         "answer": "Non. Téléchargez simplement votre vidéo ou photo depuis le tableau de bord. Le système gère automatiquement le dimensionnement, la compression et la mise en page. Votre site a l'air professionnel sans aucune compétence en design."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne",
+    "subtitle": "Personnalisez l'identité visuelle de votre restaurant en quatre étapes.",
+    "steps": [
+      {
+        "title": "Ouvrir les paramètres de conception",
+        "description": "Naviguez vers la page Design dans votre tableau de bord. Ici, vous pouvez contrôler l'apparence visuelle de votre restaurant — arrière-plan, couleur d'accent et mise en page de la page d'accueil."
+      },
+      {
+        "title": "Télécharger un arrière-plan",
+        "description": "Choisissez une vidéo (MP4, WebM) ou une photo pour l'arrière-plan de la page d'accueil de votre restaurant. Les vidéos se répètent automatiquement, créant une première impression immersive pour chaque visiteur."
+      },
+      {
+        "title": "Génération d'arrière-plan par IA",
+        "description": "Vous n'avez pas de vidéo ou de photo prête ? Laissez l'IA créer automatiquement une image d'arrière-plan à partir de vos éléments de menu. Elle génère un visuel professionnel qui correspond au style de votre restaurant."
+      },
+      {
+        "title": "Aperçu et sauvegarde",
+        "description": "Voyez vos modifications en temps réel avant de sauvegarder. Les vidéos sont automatiquement compressées et chargées de manière paresseuse, garantissant des performances rapides sur les appareils mobiles sans sacrifier la qualité visuelle."
+      }
+    ]
   }
 }

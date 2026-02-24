@@ -46,5 +46,27 @@
         "answer": "El pla gratuït inclou fins a 2 idiomes. Els plans Basic i Pro ofereixen idiomes il·limitats amb traducció IA inclosa."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Fes que el teu menú estigui disponible en múltiples idiomes en quatre passos.",
+    "steps": [
+      {
+        "title": "Vés a Configuració d'Idiomes",
+        "description": "Obre la pàgina d'Idiomes al teu tauler de control. Veureu tots els idiomes disponibles i quins són actualment actius al vostre menú."
+      },
+      {
+        "title": "Afegeix Idiomes",
+        "description": "Selecciona entre 35 idiomes disponibles. El pla gratuït inclou fins a 2 idiomes, mentre que els plans Basic i Pro ofereixen idiomes il·limitats per al teu menú."
+      },
+      {
+        "title": "Traduïu el vostre Contingut",
+        "description": "Utilitza la traducció AI amb un clic per traduir tot el teu menú instantàniament, o introdueix les traduccions manualment per tenir un control total. També pots combinar ambdues aproximacions."
+      },
+      {
+        "title": "Els Clients Canvien d'Idioma",
+        "description": "Un selector d'idioma apareix a la pàgina del teu menú. Quan els clients escullen el seu idioma, tot el menú canvia instantàniament. La seva preferència es guarda per a futures visites."
+      }
+    ]
   }
 }

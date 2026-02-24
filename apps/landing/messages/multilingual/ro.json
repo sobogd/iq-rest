@@ -46,5 +46,27 @@
         "answer": "Planul gratuit include până la 2 limbi. Planurile Basic și Pro oferă limbi nelimitate cu traducere AI inclusă."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Cum Funcționează",
+    "subtitle": "Fă-ți meniul disponibil în mai multe limbi în patru pași.",
+    "steps": [
+      {
+        "title": "Accesează Setările de Limbă",
+        "description": "Deschide pagina Limbilor în tabloul de bord. Vei vedea toate limbile disponibile și care dintre ele sunt active în prezent pe meniul tău."
+      },
+      {
+        "title": "Adaugă Limbile",
+        "description": "Selectează din 35 de limbi disponibile. Planul gratuit include până la 2 limbi, în timp ce planurile Basic și Pro oferă limbi nelimitate pentru meniul tău."
+      },
+      {
+        "title": "Traducerea Conținutului Tău",
+        "description": "Folosește traducerea AI cu un singur clic pentru a traduce întregul tău meniu instantaneu, sau introdu traducerile manual pentru un control total. Poți combina ambele abordări."
+      },
+      {
+        "title": "Oaspeții Schimbă Limbile",
+        "description": "Un selector de limbă apare pe pagina meniului tău. Când oaspeții aleg limba lor, întregul meniu se schimbă instantaneu. Preferința lor este salvată pentru vizite viitoare."
+      }
+    ]
   }
 }

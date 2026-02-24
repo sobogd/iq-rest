@@ -1560,7 +1560,8 @@
         "invalidCode": "Codi no vàlid. Si us plau, torneu-ho a provar.",
         "emailRequired": "Introduïu el vostre email.",
         "emailInvalid": "Introduïu un email vàlid."
-      }
+      },
+      "or": "o"
     },
     "analytics": {
       "monthlyUsage": "Ús mensual",

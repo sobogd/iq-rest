@@ -46,5 +46,31 @@
         "answer": "Taip. Išjunkite bet kurį elementą vienu paspaudimu. Jis dingsta iš viešo meniu, bet lieka valdymo skydelyje — įjunkite atgal, kai būsite pasiruošę."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kaip tai veikia",
+    "subtitle": "Sukurkite ir paskelbkite savo restorano meniu penkiais paprastais žingsniais.",
+    "steps": [
+      {
+        "title": "Sukurkite kategorijas",
+        "description": "Pridėkite kategorijas, tokias kaip Užkandžiai, Pagrindiniai patiekalai, Desertai ir Gėrimai, kad organizuotumėte savo meniu. Galite sukurti tiek kategorijų, kiek reikia, ir perkelti jas vilkdami ir mesti."
+      },
+      {
+        "title": "Pridėkite meniu elementus",
+        "description": "Įveskite patiekalo pavadinimą, aprašymą ir kainą kiekvienam elementui. Pažymėkite alergenus, jei taikoma — svečiai automatiškai matys alergenų ikonėles meniu."
+      },
+      {
+        "title": "Įkelkite arba sugeneruokite nuotraukas",
+        "description": "Įkelkite savo maisto nuotraukas iš telefono ar kompiuterio arba naudokite AI, kad sugeneruotumėte profesionalią maisto nuotrauką iš patiekalo pavadinimo. Nuotraukos automatiškai optimizuojamos."
+      },
+      {
+        "title": "Organizuokite vilkdami ir mesti",
+        "description": "Perkelkite kategorijas ir elementus vilkdami juos į vietą. Įjunkite arba išjunkite bet kurį elementą be jo ištrynimo — puikiai tinka kasdieniams pasiūlymams ar išparduotiems patiekalams."
+      },
+      {
+        "title": "Paskelbkite savo meniu",
+        "description": "Pakeitimai iš karto pasirodo jūsų gyvame QR meniu. Nėra 'paskelbimo' mygtuko — kiekvienas redagavimas tampa matomas realiu laiku. Atspausdinkite savo QR kodą ir padėkite jį ant savo stalų."
+      }
+    ]
   }
 }

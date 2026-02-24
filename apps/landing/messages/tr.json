@@ -1560,7 +1560,8 @@
         "invalidCode": "Geçersiz kod. Lütfen tekrar deneyin.",
         "emailRequired": "E-postanızı girin.",
         "emailInvalid": "Geçerli bir e-posta girin."
-      }
+      },
+      "or": "veya"
     },
     "analytics": {
       "monthlyUsage": "Aylık Kullanım",

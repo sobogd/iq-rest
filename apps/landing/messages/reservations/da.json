@@ -46,5 +46,31 @@
         "answer": "Ja. Vaelg automatisk tilstand for at bekraefte bookinger med det samme baseret paa tilgaengelighed, eller manuel tilstand for at gennemgaa og godkende hver foresoergsel selv."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Sådan fungerer det",
+    "subtitle": "Opsæt online reservationer og begynd at acceptere bookinger i fem trin.",
+    "steps": [
+      {
+        "title": "Aktivér Reservationer",
+        "description": "Tænd for reservationer i dine restaurantindstillinger. Vælg mellem automatisk bekræftelse, hvor bookinger godkendes med det samme baseret på tilgængelighed, eller manuel tilstand, hvor du gennemgår hver anmodning."
+      },
+      {
+        "title": "Tilføj Dine Tabel",
+        "description": "Opret borde med kapacitet og zoneinformation — for eksempel, 'Tabel 5, 4 gæster, Terrasse'. Hvert bord bliver bookbart, og systemet forhindrer automatisk dobbeltbookinger."
+      },
+      {
+        "title": "Indstil Arbejdstider",
+        "description": "Definér dine tilgængelige timer for reservationer og vælg varigheden af tidslottet — fra 15 minutter til 8 timer. Kun tidslister inden for dine arbejdstider vises for gæsterne."
+      },
+      {
+        "title": "Gæster Book Online",
+        "description": "Kunder besøger din restaurantside, vælger deres dato, tid og antal personer, indtaster deres navn og telefonnummer, og sender. Ingen konto eller app-download kræves — fungerer i enhver browser."
+      },
+      {
+        "title": "Administrer Bookinger i Dit Dashboard",
+        "description": "Se alle reservationer i dit dashboard. Bekræft, annuller eller marker bookinger som afsluttet. Både du og gæsten modtager e-mail-notifikationer for hver bookingopdatering."
+      }
+    ]
   }
 }

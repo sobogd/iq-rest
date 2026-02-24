@@ -46,5 +46,27 @@
         "answer": "Analītikas dati tiek glabāti no dienas, kad izveidojāt restorānu. Jūs varat skatīt ikdienas, iknedēļas un ikmēneša tendences par visu vēsturi."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "subtitle": "Sāciet sekot sava restorāna sniegumam četros soļos.",
+    "steps": [
+      {
+        "title": "Izveidojiet savu restorānu",
+        "description": "Analītika sāk sekot no brīža, kad jūsu ēdienkarte kļūst pieejama. Nav nepieciešama konfigurācija — katra lapas apskate, QR skenēšana un apmeklētājs tiek automātiski reģistrēts."
+      },
+      {
+        "title": "Kopīgojiet savu QR kodu",
+        "description": "Izdrukājiet savu QR kodu un novietojiet to uz galdiem, pie ieejas vai uz līdzņemšanas iepakojuma. Katrs skenējums tiek reģistrēts ar laika zīmogu, valodu, ierīces tipu un apmeklēto lapu."
+      },
+      {
+        "title": "Atveriet analītikas paneli",
+        "description": "Skatiet ikdienas, iknedēļas un ikmēneša statistiku ar skaidriem grafikiem. Sekojiet kopējām apskatēm, unikālajiem apmeklētājiem un tendencēm laika gaitā no viena paneļa ekrāna."
+      },
+      {
+        "title": "Izpētiet detalizētus pārskatus",
+        "description": "Skatiet statistiku, kas sadalīta pa lapām (ēdienkarte, kontakti, rezervācijas), izvēlēto valodu, ierīces tipu un pārlūkprogrammu. Izmantojiet šos datus, lai optimizētu savu ēdienkarti un prioritizētu tulkojumus."
+      }
+    ]
   }
 }

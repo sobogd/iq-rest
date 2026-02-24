@@ -38,5 +38,23 @@
         "answer": "QR koda se ustvari ločeno in jo je mogoče prilagoditi neodvisno. Poudarjena barva se uporabi za strani digitalnega menija, navigacijo in interaktivne elemente."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako deluje",
+    "subtitle": "Prilagodite svoj meni svoji blagovni znamki v treh preprostih korakih.",
+    "steps": [
+      {
+        "title": "Odprite nastavitve oblikovanja",
+        "description": "Pojdite na stran Oblikovanje v svoji nadzorni plošči. Izbirnik barvnega akcenta je na sredini — takoj boste videli vse razpoložljive možnosti."
+      },
+      {
+        "title": "Izberite barvo svoje blagovne znamke",
+        "description": "Izberite med 12 skrbno izbranimi barvnimi prednastavitvami, zasnovanimi za berljivost in dostopnost, ali vnesite svoj natančen hex kodo za popolno ujemanje blagovne znamke."
+      },
+      {
+        "title": "Takojšnji predogled",
+        "description": "Vaša barva akcenta se uporablja za gumbe, povezave in poudarke po celotnem meniju. Deluje tako v svetlih kot temnih temah, spremembe pa se takoj prikažejo na vašem aktivnem meniju."
+      }
+    ]
   }
 }

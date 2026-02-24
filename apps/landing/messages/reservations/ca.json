@@ -46,5 +46,31 @@
         "answer": "Sí. Tria el mode automàtic per confirmar reserves al moment segons la disponibilitat, o el mode manual per revisar i aprovar cada sol·licitud personalment."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Com Funciona",
+    "subtitle": "Configura reserves en línia i comença a acceptar reserves en cinc passos.",
+    "steps": [
+      {
+        "title": "Habilita les Reserves",
+        "description": "Activa les reserves a la configuració del teu restaurant. Tria entre confirmació automàtica, on les reserves s'aproven instantàniament segons la disponibilitat, o mode manual on revises cada sol·licitud."
+      },
+      {
+        "title": "Afegeix les Teves Taules",
+        "description": "Crea taules amb informació de capacitat i zona — per exemple, 'Taula 5, 4 convidats, Terrassa'. Cada taula esdevé reservable, i el sistema evita automàticament les dobles reserves."
+      },
+      {
+        "title": "Defineix les Teves Horàries",
+        "description": "Defineix les teves hores disponibles per a reserves i tria la durada del temps — de 15 minuts a 8 hores. Només es mostren als convidats els horaris dins de les teves hores laborals."
+      },
+      {
+        "title": "Els Convidats Reserven en Línia",
+        "description": "Els clients visiten la pàgina del teu restaurant, escullen la seva data, hora i nombre de persones, introdueixen el seu nom i telèfon, i envien. No es requereix cap compte ni descàrrega d'aplicació — funciona en qualsevol navegador."
+      },
+      {
+        "title": "Gestiona les Reserves al Teu Tauler de Control",
+        "description": "Veu totes les reserves al teu tauler de control. Confirma, cancel·la o marca les reserves com a completades. Tant tu com el convidat rebeu notificacions per correu electrònic per a cada actualització de reserva."
+      }
+    ]
   }
 }

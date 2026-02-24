@@ -38,5 +38,23 @@
         "answer": "QR kodunuz ayrı olarak oluşturulur ve bağımsız olarak özelleştirilebilir. Vurgu rengi dijital menü sayfalarınıza, gezintinize ve etkileşimli öğelerinize uygulanır."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Menünüzü markanızla üç basit adımda eşleştirin.",
+    "steps": [
+      {
+        "title": "Tasarım Ayarlarını Açın",
+        "description": "Kontrol panelinizdeki Tasarım sayfasına gidin. Vurgu rengi seçici ön planda — tüm mevcut seçenekleri hemen göreceksiniz."
+      },
+      {
+        "title": "Marka Renginizi Seçin",
+        "description": "Okunabilirlik ve erişilebilirlik için tasarlanmış 12 önceden belirlenmiş renk arasından seçim yapın veya mükemmel bir marka uyumu için tam hex kodunuzu girin."
+      },
+      {
+        "title": "Anlık Önizleme",
+        "description": "Vurgu renginiz, menünün tamamında butonlar, bağlantılar ve vurgular için uygulanır. Hem açık hem de koyu temalarda çalışır ve değişiklikler canlı menünüzde anında görünür."
+      }
+    ]
   }
 }

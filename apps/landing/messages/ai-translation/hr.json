@@ -46,5 +46,31 @@
         "answer": "AI prijevod je uključen u Basic i Pro planove s izdašnim mjesečnim limitima. Bez naknada po riječi ili po stavci — prevodite koliko god trebate."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Kako to funkcionira",
+    "subtitle": "Prevedite cijeli svoj meni u minutama, ne satima.",
+    "steps": [
+      {
+        "title": "Dodajte jezike u svoj meni",
+        "description": "Idite na stranicu Jezici u svom nadzornoj ploči i odaberite koje jezike vaš meni treba podržavati. Birajte između 35 dostupnih jezika, uključujući sve glavne europske, azijske i bliskoistočne jezike."
+      },
+      {
+        "title": "Kliknite na Prevedi",
+        "description": "Jedan gumb prevodi sve vaše kategorije, nazive jela i opise odjednom. Cijeli meni se obrađuje u sekundama, bez obzira na to koliko stavki imate."
+      },
+      {
+        "title": "AI razumije kontekst hrane",
+        "description": "AI poznaje kulinarsku terminologiju kroz kulture. Održava nazive jela poput 'Tiramisu' ili 'Pad Thai' dok prirodno prilagođava opise, popise sastojaka i nazive kategorija."
+      },
+      {
+        "title": "Pregledajte i uredite",
+        "description": "Svaki prijevod je potpuno uređiv. Prilagodite bilo koju formulaciju kako bi odgovarala vašem stilu. Vaše ručne promjene se čuvaju čak i kada kasnije ponovno prevedete druge dijelove menija."
+      },
+      {
+        "title": "Objavite svoj višejezični meni",
+        "description": "Gosti vide prekidač jezika na vašem meniju i mogu pregledavati na svom preferiranom jeziku. Svaki jezik se može neovisno uključiti ili isključiti iz vaše nadzorne ploče."
+      }
+    ]
   }
 }

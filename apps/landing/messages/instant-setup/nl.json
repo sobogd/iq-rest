@@ -46,5 +46,27 @@
         "answer": "Op de gratis en Basic plannen wordt uw site gehost op iq-rest.com/m/uw-naam. Het Pro-plan ondersteunt aangepaste domeinnamen voor volledige merkcontrole."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Hoe Het Werkt",
+    "subtitle": "Van nul naar een live restaurantwebsite in vier stappen.",
+    "steps": [
+      {
+        "title": "Voer Uw E-mailadres In",
+        "description": "Geen wachtwoord nodig. Typ gewoon uw e-mailadres en klik op Doorgaan. Er zijn geen lange registratieformulieren, geen creditcard vereist en geen verplichtingen."
+      },
+      {
+        "title": "Verifieer met een Code",
+        "description": "Controleer uw inbox voor een 4-cijferige verificatiecode. Voer deze in om veilig in te loggen. Deze wachtwoordloze aanpak betekent één ding minder om te onthouden."
+      },
+      {
+        "title": "Geef Uw Restaurant Een Naam",
+        "description": "Geef uw restaurant een naam. Het wordt uw website-URL en menutitel. U kunt het later altijd wijzigen via uw dashboardinstellingen."
+      },
+      {
+        "title": "Uw Website Is Klaar",
+        "description": "Een complete restaurantwebsite met QR-menu, contactpagina met kaart en responsief ontwerp is direct live op iq-rest.com/m/uw-naam. Voeg uw gerechten toe en begin te delen."
+      }
+    ]
   }
 }

@@ -46,5 +46,31 @@
         "answer": "Tłumaczenie AI jest zawarte w planach Basic i Pro z hojnymi limitami miesięcznymi. Bez opłat za słowo czy pozycję — tłumacz tyle, ile potrzebujesz."
       }
     ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Przetłumacz całe swoje menu w kilka minut, a nie godzin.",
+    "steps": [
+      {
+        "title": "Dodaj języki do swojego menu",
+        "description": "Przejdź do strony Języki w swoim panelu i wybierz, które języki powinno obsługiwać twoje menu. Wybierz spośród 35 dostępnych języków, w tym wszystkie główne języki europejskie, azjatyckie i bliskowschodnie."
+      },
+      {
+        "title": "Kliknij Tłumacz",
+        "description": "Jedno kliknięcie tłumaczy wszystkie twoje kategorie, nazwy potraw i opisy jednocześnie. Całe menu jest przetwarzane w kilka sekund, niezależnie od liczby pozycji."
+      },
+      {
+        "title": "AI rozumie kontekst kulinarny",
+        "description": "AI zna terminologię kulinarną w różnych kulturach. Zachowuje nazwy potraw, takie jak 'Tiramisu' czy 'Pad Thai', jednocześnie naturalnie dostosowując opisy, listy składników i nazwy kategorii."
+      },
+      {
+        "title": "Przeglądaj i edytuj",
+        "description": "Każde tłumaczenie jest w pełni edytowalne. Dostosuj jakiekolwiek sformułowania, aby pasowały do twojego stylu. Twoje ręczne zmiany są zachowywane, nawet gdy później przetłumaczysz inne części menu."
+      },
+      {
+        "title": "Opublikuj swoje wielojęzyczne menu",
+        "description": "Goście widzą przełącznik języków w twoim menu i mogą przeglądać w preferowanym języku. Każdy język można włączać lub wyłączać niezależnie z twojego panelu."
+      }
+    ]
   }
 }
