@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Spletna Stran Restavracije z Video in Foto Ozadjem — Ustvarjalec Spletnih Strani | IQ Rest",
+    "description": "Ustvarite osupljivo spletno stran restavracije s prilagojenim video ali foto ozadjem. Naložite video vzdušja ali kulinarsko fotografijo — navdušite goste od prvega skeniranja."
+  },
+  "hero": {
+    "badge": "Oblikovanje Spletne Strani",
+    "title": "Ustvarite Osupljivo Spletno Stran Restavracije z Video Ozadji",
+    "subtitle": "Naložite video vzdušja vaše restavracije ali čudovito kulinarsko fotografijo kot ozadje. Gostje vidijo profesionalno, znamčeno izkušnjo takoj, ko skenirajo vašo QR kodo.",
+    "cta": "Ustvarite Svoj Jedilnik",
+    "ctaDemo": "Ogled Predstavitve",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
+  },
+  "features": {
+    "title": "Kako Delujejo Prilagojena Ozadja",
+    "subtitle": "Naredite trajen prvi vtis z vizualnimi elementi, ki ustrezajo vaši blagovni znamki.",
+    "items": [
+      {
+        "title": "Naložite Video ali Foto Ozadja",
+        "description": "Dodajte ponavljajoči se video vzdušja restavracije, time-lapse kuhinje ali visokokakovostno kulinarsko fotografijo. Ozadje se prikaže na domači strani — ustvari potopljeno izkušnjo za goste."
+      },
+      {
+        "title": "Optimizirano za Hitrost na Vsaki Napravi",
+        "description": "Videi in slike se samodejno stiskajo in nalagajo z zamikom. Vaša spletna stran ostane hitra tudi na počasnih mobilnih povezavah — brez medpomnjenja, brez zamud, samo gladka izkušnja."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta Vprašanja",
+    "subtitle": "Vse, kar morate vedeti o oblikovanju spletne strani restavracije.",
+    "items": [
+      {
+        "question": "Kateri video formati so podprti?",
+        "answer": "Formata MP4 in WebM delujeta najbolje. Videi se samodejno stiskajo za hitro nalaganje. Za najboljšo mobilno izkušnjo imejte videe krajše od 30 sekund."
+      },
+      {
+        "question": "Ali bo video ozadje upočasnilo mojo spletno stran?",
+        "answer": "Ne. Videi so stisnjeni, nalagajo se z zamikom in so samodejno optimizirani. Na počasnih povezavah sistem preklopi na statično sliko, da izkušnja ostane gladka."
+      },
+      {
+        "question": "Ali lahko uporabim fotografijo namesto videa?",
+        "answer": "Da. Naložite katero koli fotografijo — optimizirana bo in prikazana kot celozaslonsko ozadje. Med videom in fotografijo lahko kadar koli preklopite."
+      },
+      {
+        "question": "Ali potrebujem oblikovalca za nastavitev?",
+        "answer": "Ne. Preprosto naložite video ali fotografijo z nadzorne plošče. Sistem samodejno poskrbi za velikost, stiskanje in postavitev. Vaša spletna stran izgleda profesionalno brez oblikovalskih veščin."
+      }
+    ]
+  }
+}

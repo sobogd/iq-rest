@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tischreservierungssystem für Restaurants — Online-Buchung | IQ Rest",
+    "description": "Lassen Sie Gäste direkt über Ihre Website Tische reservieren. Automatische oder manuelle Bestätigung, E-Mail-Benachrichtigungen und vollständige Kalenderverwaltung — alles inklusive."
+  },
+  "hero": {
+    "badge": "Tischreservierungen",
+    "title": "Akzeptieren Sie Tischbuchungen rund um die Uhr über Ihre Website",
+    "subtitle": "Gäste wählen Datum, Uhrzeit und Personenanzahl — und buchen sofort. Sie verwalten alles über Ihr Dashboard, ohne Telefonanrufe.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "So funktionieren Tischreservierungen",
+    "subtitle": "Zwei Schritte von der Gästeanfrage zur bestätigten Buchung.",
+    "items": [
+      {
+        "title": "Gäste buchen über Ihre Website",
+        "description": "Kunden besuchen Ihre Restaurantseite, tippen auf «Tisch reservieren», wählen Datum und Uhrzeit, geben ihre Daten ein und senden die Anfrage ab. Keine App nötig — funktioniert in jedem Browser auf jedem Gerät."
+      },
+      {
+        "title": "Sie verwalten Buchungen in Ihrem Dashboard",
+        "description": "Jede Reservierung erscheint in Ihrem Dashboard mit Gastname, Telefon, Personenanzahl, Datum und Notizen. Bestätigen oder ablehnen mit einem Tippen. Richten Sie automatische Bestätigung ein oder prüfen Sie jede Buchung manuell."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Tischreservierungen wissen müssen.",
+    "items": [
+      {
+        "question": "Müssen Kunden ein Konto erstellen, um zu buchen?",
+        "answer": "Nein. Gäste geben einfach ihren Namen, ihre Telefonnummer, die Personenanzahl und die gewünschte Uhrzeit ein. Kein Konto oder App-Download erforderlich."
+      },
+      {
+        "question": "Kann ich verfügbare Zeitfenster und Kapazitäten festlegen?",
+        "answer": "Ja. Definieren Sie Ihre Öffnungszeiten, die Dauer der Reservierungszeitfenster und die Tischkapazität. Das System zeigt Gästen nur verfügbare Zeitfenster an."
+      },
+      {
+        "question": "Werde ich benachrichtigt, wenn jemand bucht?",
+        "answer": "Ja. Sie erhalten eine E-Mail für jede neue Reservierung. Gäste erhalten ebenfalls eine Bestätigungs-E-Mail, sobald Sie die Buchung genehmigen."
+      },
+      {
+        "question": "Kann ich sowohl automatische als auch manuelle Bestätigung nutzen?",
+        "answer": "Ja. Wählen Sie den automatischen Modus, um Buchungen sofort basierend auf Verfügbarkeit zu bestätigen, oder den manuellen Modus, um jede Anfrage selbst zu prüfen und zu genehmigen."
+      }
+    ]
+  }
+}

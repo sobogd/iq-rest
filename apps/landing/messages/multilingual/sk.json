@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Viacjazyčná Webstránka Reštaurácie — Menu v 25+ Jazykoch | IQ Rest",
+    "description": "Webstránka reštaurácie a QR menu v 25+ jazykoch. Hostia prepínajú jazyk jedným ťuknutím — menu, kontakty a rezervácie sa prispôsobia okamžite."
+  },
+  "hero": {
+    "badge": "Viacjazyčné",
+    "title": "Webstránka Vašej Reštaurácie v 25+ Jazykoch",
+    "subtitle": "Turisti a medzinárodní hostia vidia menu vo vlastnom jazyku. Jedno ťuknutie na prepnutie — všetko sa okamžite prispôsobí: jedlá, popisy, kontakty, navigácia.",
+    "cta": "Vytvorte Svoj Jedálny Lístok",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako Funguje Viacjazyčná Podpora",
+    "subtitle": "Hovorte jazykom zákazníka bez dodatnej práce.",
+    "items": [
+      {
+        "title": "Hostia Si Vyberú Svoj Jazyk",
+        "description": "Na menu sa zobrazí výber jazykov. Hostia ťuknú na preferovaný jazyk a celá webstránka — menu, popisy, kontaktné informácie, navigácia — sa okamžite prepne. Nie je potrebné znovu načítať stránku."
+      },
+      {
+        "title": "Pridajte Jazyky z Ovládacieho Panela",
+        "description": "Aktivujte nové jazyky jedným kliknutím. Použite AI preklad na vyplnenie obsahu alebo zadajte preklady manuálne. Každý jazyk sa dá nezávisle zapnúť a vypnúť."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o viacjazyčných menu.",
+    "items": [
+      {
+        "question": "Koľko jazykov môžem pridať do menu?",
+        "answer": "Až 25+ jazykov vrátane všetkých hlavných európskych jazykov, čínštiny, japončiny, kórejčiny, arabčiny, perzštiny a ďalších. Pridajte toľko, koľko vaši hostia potrebujú."
+      },
+      {
+        "question": "Musím všetko prekladať manuálne?",
+        "answer": "Nie. Použite vstavaný AI preklad na preloženie celého menu jedným kliknutím. Akýkoľvek preklad môžete aj manuálne upraviť pre plnú kontrolu."
+      },
+      {
+        "question": "Uloží sa jazyková preferencia?",
+        "answer": "Áno. Keď si hosť vyberie jazyk, zapamätá sa na ďalšiu návštevu. Nemusí si vyberať znova, keď sa vrátia."
+      },
+      {
+        "question": "Je viacjazyčná podpora dostupná na bezplatnom pláne?",
+        "answer": "Bezplatný plán zahŕňa až 2 jazyky. Plány Basic a Pro ponúkajú neobmedzený počet jazykov s AI prekladom v cene."
+      }
+    ]
+  }
+}

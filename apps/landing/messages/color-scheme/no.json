@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tilpasset QR-menydesign og merkefarger — Restaurantbranding | IQ Rest",
+    "description": "Match QR-menyen din med restaurantmerket ditt. Velg aksentfarger, lyse/moerke temaer og skap et enhetlig utseende paa tvers av hele den digitale menyen din."
+  },
+  "hero": {
+    "badge": "Tilpasset design",
+    "title": "Faa QR-menyen din til aa matche restaurantmerket ditt",
+    "subtitle": "Velg merkefargen din, og hele menyen — knapper, uthevinger, lenker — oppdateres umiddelbart. Lyse og moerke temaer inkludert.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort noedvendig. Gratis plan tilgjengelig."
+  },
+  "features": {
+    "title": "Hvordan tilpasset branding fungerer",
+    "subtitle": "Din meny, dine farger — enhetlig paa hver side.",
+    "items": [
+      {
+        "title": "Velg aksentfargen din",
+        "description": "Velg blant 12 kuraterte forhaaandsinnstillinger eller skriv inn den noyaktige merkefargen din med en hekskode. Hver knapp, lenke og utheving paa menyen tilpasser seg umiddelbart — ingen designferdigheter noedvendig."
+      },
+      {
+        "title": "Automatiske lyse og moerke temaer",
+        "description": "Menyen din stoetter automatisk baade lys og moerk modus. Systemet soerger for at merkefargen din ser bra ut i begge temaer med optimert kontrast og lesbarhet."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spoersmaal",
+    "subtitle": "Alt du trenger aa vite om menytilpasning.",
+    "items": [
+      {
+        "question": "Kan jeg bruke den noyaktige merkefargen min?",
+        "answer": "Ja. Skriv inn hvilken som helst heksfargekode, eller velg blant 12 noeye utvalgte forhaaandsinnstillinger. Aksentfargen din brukes paa alle sider i menyen."
+      },
+      {
+        "question": "Fungerer det med moerk modus?",
+        "answer": "Ja. Fargeskjemaet ditt tilpasser seg automatisk til baade lyse og moerke temaer. Systemet justerer kontrasten for aa holde menyen lesbar og pen i alle moduser."
+      },
+      {
+        "question": "Kan jeg endre farger etter publisering?",
+        "answer": "Absolutt. Endre aksentfargen naar som helst fra kontrollpanelet. Endringene vises umiddelbart paa den aktive menyen — ingen ny publisering noedvendig."
+      },
+      {
+        "question": "Vil QR-koden min ogsaa matche merkefargene?",
+        "answer": "QR-koden din genereres separat og kan tilpasses uavhengig. Aksentfargen brukes paa de digitale menysidene, navigasjonen og interaktive elementer."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI-menyoversattning for restauranger — Oversatt QR-meny | IQ Rest",
+    "description": "Oversatt din restaurangmeny till over 25 sprak med ett klick. AI forstar kulinarisk kontext — rattnamn, beskrivningar och kategorier oversatts korrekt."
+  },
+  "hero": {
+    "badge": "AI-oversattning",
+    "title": "Oversatt din meny till over 25 sprak med ett klick",
+    "subtitle": "Var AI forstar matkontext — den oversatter rattnamn, beskrivningar och kategorier naturligt, inte ord for ord. Na varje turist och internationell gast.",
+    "cta": "Skapa din meny",
+    "ctaDemo": "Visa demo",
+    "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+  },
+  "features": {
+    "title": "Hur AI-oversattning fungerar",
+    "subtitle": "Fran ditt sprak till hela varlden pa sekunder.",
+    "items": [
+      {
+        "title": "Oversatt hela menyn med ett klick",
+        "description": "Valj malsprak, tryck oversatt, och hela din meny — kategorier, rattnamn, beskrivningar — oversatts direkt. AI bevarar kulinariska termer och anpassar sig naturligt for varje sprak."
+      },
+      {
+        "title": "Redigera och finjustera alla oversattningar",
+        "description": "Varje AI-oversattning ar fullt redigerbar. Granska resultatet, justera valfri formulering och spara. Dina andringar bevaras aven om du aterigen oversatter andra delar av menyn senare."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vanliga fragor",
+    "subtitle": "Allt du behover veta om menyoversattning.",
+    "items": [
+      {
+        "question": "Hur exakt ar AI-oversattningen for matmenyer?",
+        "answer": "Var AI ar optimerad for restauranginnehall. Den forstar att 'Beef Wellington' eller 'Tiramisu' inte ska oversattas bokstavligt, och anpassar beskrivningar sa de later naturliga pa varje sprak."
+      },
+      {
+        "question": "Vilka sprak stods?",
+        "answer": "Over 25 sprak inklusive engelska, spanska, franska, tyska, italienska, portugisiska, kinesiska, japanska, koreanska, arabiska, ryska och manga fler europeiska och asiatiska sprak."
+      },
+      {
+        "question": "Kan jag oversatta bara vissa artiklar, inte hela menyn?",
+        "answer": "Ja. Du kan oversatta enskilda artiklar, hela kategorier eller hela menyn pa en gang. Du har full kontroll over vad som oversatts."
+      },
+      {
+        "question": "Kostar det extra per oversattning?",
+        "answer": "AI-oversattning ingar i Basic- och Pro-planer med generosa manadsgrannser. Inga per-ord- eller per-artikel-avgifter — oversatt sa mycket du behover."
+      }
+    ]
+  }
+}

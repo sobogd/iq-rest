@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Vytvorte QR Menu pre Vašu Reštauráciu — Bezplatný Tvorca Menu | IQ Rest",
+    "description": "Vytvorte digitálne QR menu vašej reštaurácie za pár minút. Pridajte kategórie, jedlá, fotky, ceny — a zdieľajte skenovateľný QR kód. Zadarmo na začiatok."
+  },
+  "hero": {
+    "badge": "Tvorca Menu",
+    "title": "Vytvorte Digitálne QR Menu pre Reštauráciu za Pár Minút",
+    "subtitle": "Pridajte kategórie a jedlá, nastavte ceny, nahrajte fotky — vaše QR menu je pripravené na zdieľanie. Upravujte kedykoľvek, zmeny sa zobrazia okamžite.",
+    "cta": "Vytvorte Svoj Jedálny Lístok",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako Funguje Editor Menu",
+    "subtitle": "Jednoduché nástroje, ktoré rýchlo dostanú vaše menu online.",
+    "items": [
+      {
+        "title": "Pridajte Kategórie a Jedlá",
+        "description": "Vytvorte kategórie ako Predjedlá, Hlavné Jedlá, Nápoje — potom pridajte jedlá s názvami, popismi, cenami a fotkami. Presuňte ich na zmenu poradia. Zapínajte a vypínajte položky bez ich vymazania."
+      },
+      {
+        "title": "Zmeny Sa Prejavia Okamžite",
+        "description": "Každá úprava, ktorú urobíte, sa zobrazí v živom QR menu v priebehu sekúnd. Aktualizujte cenu, pridajte denné špeciály alebo skryte vypredané jedlo — vaši zákazníci vždy vidia najnovšiu verziu."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o vytváraní QR menu.",
+    "items": [
+      {
+        "question": "Ako vytvorím QR menu pre svoju reštauráciu?",
+        "answer": "Zaregistrujte sa pomocou e-mailu, pomenujte reštauráciu a začnite pridávať kategórie a jedlá. QR menu sa vygeneruje automaticky — vytlačte QR kód a umiestnite ho na stoly."
+      },
+      {
+        "question": "Môžem k položkám menu pridať fotky?",
+        "answer": "Áno. Nahrajte fotky priamo z telefónu alebo počítača. Obrázky sa automaticky optimalizujú pre rýchle načítanie na akomkoľvek zariadení."
+      },
+      {
+        "question": "Koľko položiek môžem pridať?",
+        "answer": "Na kategórie ani položky menu nie je žiadny limit. Pridajte toľko jedál, koľko potrebujete — menu zostane rýchle a prehľadné."
+      },
+      {
+        "question": "Môžem dočasne skryť vypredané jedlo?",
+        "answer": "Áno. Jedným ťuknutím vypnite akúkoľvek položku. Zmizne z verejného menu, ale zostane vo vašom ovládacom paneli — zapnite ju späť, keď budete pripravení."
+      }
+    ]
+  }
+}

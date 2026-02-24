@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Kohandatud QR-menüü disain ja brändivarvid — Restorani bränding | IQ Rest",
+    "description": "Sobituge oma QR-menüü restorani brändiga. Valige aktsentvärve, heledaid/tumedaid teemasid ja looge ühtne välimus kogu digitaalse menüü ulatuses."
+  },
+  "hero": {
+    "badge": "Kohandatud disain",
+    "title": "Sobituge oma QR-menüü restorani brändiga",
+    "subtitle": "Valige oma brändivärv ja kogu menüü — nupud, esiletõstud, lingid — uueneb koheselt. Heledad ja tumedad teemad kaasas.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Kuidas kohandatud bränding toimib",
+    "subtitle": "Teie menüü, teie värvid — ühtlane igal lehel.",
+    "items": [
+      {
+        "title": "Valige oma aktsentvärv",
+        "description": "Valige 12 hoolikalt valitud eelseadistuse hulgast või sisestage oma täpne brändivärv hex-koodiga. Iga nupp, link ja esiletõste teie menüüs kohandub koheselt — disainioskusi pole vaja."
+      },
+      {
+        "title": "Automaatsed heledad ja tumedad teemad",
+        "description": "Teie menüü toetab automaatselt nii heledat kui tumedat režiimi. Süsteem tagab, et teie brändivärv näeb mõlemas teemas suurepärane välja optimeeritud kontrasti ja loetavusega."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma menüü kohandamise kohta.",
+    "items": [
+      {
+        "question": "Kas ma saan kasutada oma täpset brändivärvi?",
+        "answer": "Jah. Sisestage mis tahes hex-värvikood või valige 12 hoolikalt valitud eelseadistuse hulgast. Teie aktsentvärv rakendub kõigil teie menüü lehtedel."
+      },
+      {
+        "question": "Kas see töötab tumeda režiimiga?",
+        "answer": "Jah. Teie värviskeeem kohandub automaatselt nii heleda kui tumeda teemaga. Süsteem reguleerib kontrasti, et teie menüü oleks loetav ja kaunis igas režiimis."
+      },
+      {
+        "question": "Kas ma saan värve pärast avaldamist muuta?",
+        "answer": "Kindlasti. Muutke oma aktsentvärvi igal ajal juhtpaneelilt. Uuendused ilmuvad koheselt teie avalikul menüül — uuesti avaldamist pole vaja."
+      },
+      {
+        "question": "Kas minu QR-kood sobib samuti brändivärvidega?",
+        "answer": "Teie QR-kood genereeritakse eraldi ja seda saab iseseisvalt kohandada. Aktsentvärv rakendub teie digitaalse menüü lehtedele, navigatsioonile ja interaktiivsetele elementidele."
+      }
+    ]
+  }
+}

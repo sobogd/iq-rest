@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Traduzione del menu con IA per ristoranti — Traduci il menu QR | IQ Rest",
+    "description": "Traduci il menu del tuo ristorante in oltre 25 lingue con un clic. L'IA comprende il contesto culinario — nomi dei piatti, descrizioni e categorie tradotti con precisione."
+  },
+  "hero": {
+    "badge": "Traduzione IA",
+    "title": "Traduci il tuo menu in oltre 25 lingue con un clic",
+    "subtitle": "La nostra IA comprende il contesto gastronomico — traduce nomi dei piatti, descrizioni e categorie in modo naturale, non parola per parola. Raggiungi ogni turista e ospite internazionale.",
+    "cta": "Crea il tuo menu",
+    "ctaDemo": "Vedi demo",
+    "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+  },
+  "features": {
+    "title": "Come funziona la traduzione con IA",
+    "subtitle": "Dalla tua lingua al mondo intero in pochi secondi.",
+    "items": [
+      {
+        "title": "Traduzione di tutto il menu con un clic",
+        "description": "Seleziona una lingua di destinazione, tocca traduci — e tutto il tuo menu — categorie, nomi dei piatti, descrizioni — viene tradotto istantaneamente. L'IA preserva i termini culinari e adatta naturalmente il contenuto per ogni lingua."
+      },
+      {
+        "title": "Modifica e perfeziona qualsiasi traduzione",
+        "description": "Ogni traduzione IA è completamente modificabile. Controlla il risultato, correggi qualsiasi formulazione e salva. Le tue modifiche vengono conservate anche se ritradurrai altre parti del menu in seguito."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto ciò che devi sapere sulla traduzione del menu.",
+    "items": [
+      {
+        "question": "Quanto è precisa la traduzione IA per i menu dei ristoranti?",
+        "answer": "La nostra IA è ottimizzata per contenuti di ristorazione. Comprende che «Beef Wellington» o «Tiramisù» non vanno tradotti letteralmente, e adatta le descrizioni per farle suonare naturali in ogni lingua."
+      },
+      {
+        "question": "Quali lingue sono supportate?",
+        "answer": "Oltre 25 lingue tra cui inglese, spagnolo, francese, tedesco, italiano, portoghese, cinese, giapponese, coreano, arabo, russo e molte altre lingue europee e asiatiche."
+      },
+      {
+        "question": "Posso tradurre solo alcuni piatti, non tutto il menu?",
+        "answer": "Sì. Puoi tradurre singoli piatti, intere categorie o tutto il menu in una volta. Hai il pieno controllo su ciò che viene tradotto."
+      },
+      {
+        "question": "C'è un costo aggiuntivo per traduzione?",
+        "answer": "La traduzione IA è inclusa nei piani Basic e Pro con generosi limiti mensili. Nessun costo per parola o per piatto — traduci quanto vuoi."
+      }
+    ]
+  }
+}

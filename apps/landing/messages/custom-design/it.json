@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sito web del ristorante con sfondo video e foto — Creatore di siti web | IQ Rest",
+    "description": "Crea un sito web del ristorante mozzafiato con sfondi video o foto personalizzati. Carica il tuo video di atmosfera o fotografia culinaria — impressiona gli ospiti dal primo scan."
+  },
+  "hero": {
+    "badge": "Design del sito",
+    "title": "Crea un sito web del ristorante mozzafiato con sfondi video",
+    "subtitle": "Carica un video dell'atmosfera del tuo ristorante o una bella foto gastronomica come sfondo. Gli ospiti vedranno un'esperienza professionale e di marca dal momento in cui scannerizzano il tuo QR code.",
+    "cta": "Crea il tuo menu",
+    "ctaDemo": "Vedi demo",
+    "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+  },
+  "features": {
+    "title": "Come funzionano gli sfondi personalizzati",
+    "subtitle": "Fai una prima impressione duratura con immagini che rispecchiano il tuo brand.",
+    "items": [
+      {
+        "title": "Carica sfondi video o foto",
+        "description": "Aggiungi un video in loop dell'atmosfera del ristorante, un timelapse della cucina o una foto gastronomica di alta qualità. Lo sfondo appare sulla tua homepage — creando un'esperienza immersiva per gli ospiti."
+      },
+      {
+        "title": "Ottimizzato per la velocità su qualsiasi dispositivo",
+        "description": "Video e immagini vengono automaticamente compressi e caricati in modo lazy. Il tuo sito resta veloce anche con connessioni mobili lente — nessun buffering, nessun ritardo, solo un'esperienza fluida."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto ciò che devi sapere sul design del sito web del ristorante.",
+    "items": [
+      {
+        "question": "Quali formati video sono supportati?",
+        "answer": "I formati MP4 e WebM funzionano meglio. I video vengono compressi automaticamente per un caricamento veloce. Mantieni i video sotto i 30 secondi per la migliore esperienza mobile."
+      },
+      {
+        "question": "Uno sfondo video rallenterà il mio sito?",
+        "answer": "No. I video vengono compressi, caricati in modo lazy e ottimizzati automaticamente. Con connessioni lente, il sistema passa a un'immagine statica per mantenere l'esperienza fluida."
+      },
+      {
+        "question": "Posso usare una foto invece di un video?",
+        "answer": "Sì. Carica qualsiasi foto — verrà ottimizzata e mostrata come sfondo a schermo intero. Puoi alternare tra video e foto in qualsiasi momento."
+      },
+      {
+        "question": "Ho bisogno di un designer per configurare tutto?",
+        "answer": "No. Carica semplicemente il tuo video o foto dalla dashboard. Il sistema gestisce automaticamente dimensioni, compressione e layout. Il tuo sito appare professionale senza competenze di design."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sukurkite QR meniu savo restoranui — Nemokamas meniu kūrėjas | IQ Rest",
+    "description": "Sukurkite savo restorano skaitmeninį QR meniu per kelias minutes. Pridėkite kategorijas, patiekalus, nuotraukas, kainas — ir dalinkitės nuskaitomu QR kodu. Pradėti nemokamai."
+  },
+  "hero": {
+    "badge": "Meniu kūrėjas",
+    "title": "Sukurkite skaitmeninį QR meniu savo restoranui per kelias minutes",
+    "subtitle": "Pridėkite kategorijas ir patiekalus, nustatykite kainas, įkelkite nuotraukas — jūsų QR meniu paruoštas dalintis. Redaguokite bet kada, pakeitimai rodomi iškart.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia meniu redaktorius",
+    "subtitle": "Paprasti įrankiai, kurie greitai perkelia meniu į internetą.",
+    "items": [
+      {
+        "title": "Pridėkite kategorijas ir patiekalus",
+        "description": "Sukurkite kategorijas kaip Užkandžiai, Pagrindiniai, Gėrimai — tada pridėkite patiekalus su pavadinimais, aprašymais, kainomis ir nuotraukomis. Vilkite ir numeskite, kad pertvarkytumet. Įjunkite arba išjunkite elementus jų netrindami."
+      },
+      {
+        "title": "Pakeitimai įsigalioja iškart",
+        "description": "Kiekvienas pakeitimas pasirodo jūsų viešame QR meniu per kelias sekundes. Atnaujinkite kainą, pridėkite dienos pasiūlymą arba paslėpkite pasibaigusį patiekalą — klientai visada mato naujausią versiją."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie QR meniu kūrimą.",
+    "items": [
+      {
+        "question": "Kaip sukurti QR meniu savo restoranui?",
+        "answer": "Užsiregistruokite su el. paštu, pavadinkite savo restoraną ir pradėkite pridėti kategorijas ir patiekalus. Jūsų QR meniu sugeneruojamas automatiškai — atspausdinkite QR kodą ir padėkite ant stalų."
+      },
+      {
+        "question": "Ar galiu pridėti nuotraukas prie meniu elementų?",
+        "answer": "Taip. Įkelkite nuotraukas tiesiogiai iš telefono ar kompiuterio. Vaizdai automatiškai optimizuojami greitam įkėlimui bet kuriame įrenginyje."
+      },
+      {
+        "question": "Kiek elementų galiu pridėti?",
+        "answer": "Kategorijų ar meniu elementų skaičius neribojamas. Pridėkite tiek patiekalų, kiek reikia — jūsų meniu lieka greitas ir tvarkinga."
+      },
+      {
+        "question": "Ar galiu laikinai paslėpti pasibaigusį patiekalą?",
+        "answer": "Taip. Išjunkite bet kurį elementą vienu paspaudimu. Jis dingsta iš viešo meniu, bet lieka valdymo skydelyje — įjunkite atgal, kai būsite pasiruošę."
+      }
+    ]
+  }
+}

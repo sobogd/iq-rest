@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Bezmaksas restorāna mājas lapas ģenerators — Izveidojiet 5 minūtēs | IQ Rest",
+    "description": "Iegūstiet profesionālu restorāna mājaslapu ar QR ēdienkarti, kontaktu lapu un karti — vienkārši ievadiet savu e-pastu. Gatavs 5 minūtēs, tehniskās prasmes nav nepieciešamas."
+  },
+  "hero": {
+    "badge": "Bezmaksas mājaslapa",
+    "title": "Iegūstiet profesionālu restorāna mājaslapu 5 minūtēs",
+    "subtitle": "Ievadiet savu e-pastu, nosauciet restorānu, un uzreiz iegūstat pilnu mājaslapu ar QR ēdienkarti, kontaktu lapu ar karti un modernu adaptīvu dizainu. Nav kodēšanas, nav dizaineru.",
+    "cta": "Izveidojiet savu ēdienkarti",
+    "ctaDemo": "Skatīt demo",
+    "noCreditCard": "Kredītkarte nav nepieciešama. Pieejams bezmaksas plāns."
+  },
+  "features": {
+    "title": "Kā tas darbojas",
+    "subtitle": "No nulles līdz aktīvai restorāna mājas lapai trīs soļos.",
+    "items": [
+      {
+        "title": "Reģistrējieties tikai ar e-pastu",
+        "description": "Nav sarežģītu reģistrācijas formu. Ievadiet savu e-pastu, apstipriniet ar kodu, un jūsu restorāna vadības panelis ir gatavs. Nosauciet savu restorānu, un mājaslapa uzreiz kļūst aktīva."
+      },
+      {
+        "title": "Viss iekļauts no paša sākuma",
+        "description": "Jūsu mājaslapa ietver QR ēdienkarti, kontaktu lapu ar Google Maps, valodu atbalstu, mobilajām ierīcēm adaptīvu dizainu un jūsu unikālo URL. Vienkārši pievienojiet ēdienus un sāciet dalīties."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "subtitle": "Viss, kas jums jāzina par restorāna mājaslapas izveidi.",
+    "items": [
+      {
+        "question": "Kā izveidot bezmaksas restorāna mājaslapu?",
+        "answer": "Ievadiet e-pastu IQ Rest, apstipriniet ar kodu, nosauciet restorānu — gatavs. Jūsu mājaslapa ar QR ēdienkarti ir aktīva mazāk nekā 5 minūtēs. Kredītkarte nav nepieciešama."
+      },
+      {
+        "question": "Vai man nepieciešamas tehniskās prasmes?",
+        "answer": "Nē. Viss ir veidots restorānu īpašniekiem, nevis izstrādātājiem. Pievienojiet ēdienus, augšupielādējiet fotogrāfijas un pārvaldiet savu lapu pilnībā no tālruņa."
+      },
+      {
+        "question": "Kas iekļauts bezmaksas plānā?",
+        "answer": "Pilna restorāna mājaslapa, QR ēdienkārte, kontaktu lapa ar karti, analītika, pielāgota krāsu shēma un līdz 2 valodām. Nav izmēģinājuma perioda — tas ir bezmaksas uz visiem laikiem."
+      },
+      {
+        "question": "Vai es varu izmantot savu domēna nosaukumu?",
+        "answer": "Bezmaksas un Basic plānos jūsu lapa ir mitināta iq-rest.com/m/jūsu-nosaukums. Pro plāns atbalsta pielāgotus domēna nosaukumus pilnai zīmola kontrolei."
+      }
+    ]
+  }
+}

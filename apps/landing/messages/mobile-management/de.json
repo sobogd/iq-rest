@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restaurantmenü vom Handy verwalten — Mobiles Dashboard | IQ Rest",
+    "description": "Verwalten Sie das QR-Menü Ihres Restaurants komplett vom Handy aus. Gerichte hinzufügen, Preise aktualisieren, Fotos hochladen, Analysen prüfen — kein Computer nötig."
+  },
+  "hero": {
+    "badge": "Mobiles Dashboard",
+    "title": "Verwalten Sie Ihr gesamtes Restaurantmenü vom Handy aus",
+    "subtitle": "Gerichte hinzufügen, Preise ändern, Fotos hochladen, Bestellungen prüfen — alles von Ihrem Smartphone. Das Dashboard ist Mobile-First entwickelt, ein Computer ist nie nötig.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "So funktioniert die mobile Verwaltung",
+    "subtitle": "Ihr Restaurant-Dashboard, immer in der Tasche.",
+    "items": [
+      {
+        "title": "Vollständiges Dashboard auf dem Smartphone",
+        "description": "Alle Funktionen funktionieren perfekt auf dem Handybildschirm — Gerichte hinzufügen, Kategorien bearbeiten, Bestellungen verwalten, Analysen prüfen. Die Oberfläche ist für Touch-Bedienung konzipiert, nicht einfach vom Desktop verkleinert."
+      },
+      {
+        "title": "Fotos direkt von der Kamera hochladen",
+        "description": "Fotografieren Sie ein neues Gericht und laden Sie es in Sekunden in Ihr Menü hoch. Bilder werden automatisch optimiert. Aktualisieren Sie Ihr Tagesgericht direkt aus der Küche."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über die mobile Menüverwaltung wissen müssen.",
+    "items": [
+      {
+        "question": "Muss ich eine App installieren?",
+        "answer": "Nein. Das Dashboard funktioniert im Webbrowser Ihres Handys — Safari, Chrome oder einem anderen. Melden Sie sich einfach an und verwalten Sie Ihr Menü."
+      },
+      {
+        "question": "Kann ich vom Handy aus alles machen, was am Computer geht?",
+        "answer": "Ja. Alle Funktionen sind auf dem Handy verfügbar — Gerichte hinzufügen, Fotos hochladen, Kategorien verwalten, Analysen prüfen, Bestellungen und Reservierungen bearbeiten."
+      },
+      {
+        "question": "Funktioniert es auch auf Tablets?",
+        "answer": "Ja. Das Dashboard passt sich an jede Bildschirmgröße an — Handys, Tablets und Desktop-Computer. Nutzen Sie das Gerät, das am bequemsten ist."
+      },
+      {
+        "question": "Können mehrere Personen das Menü verwalten?",
+        "answer": "Derzeit verwaltet ein Konto das Restaurant. Sie können sich von mehreren Geräten gleichzeitig anmelden — Handy, Tablet oder Computer."
+      }
+    ]
+  }
+}

@@ -1,12 +1,49 @@
 import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
 import { Check } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { JsonLd, buildAlternates } from "../_lib";
-import { CtaSection } from "../_components";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  HeroCreateButton,
+  ImageComposition,
+  PricingSection,
+  CtaSection,
+  MenuPreviewModal,
+} from "../_components";
+import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
-import Image from "next/image";
-import { FEATURE_IMAGES, VALID_FEATURE_IDS, type FeatureId } from "../_lib/feature-data";
+import { FEATURE_IMAGES, FEATURE_NAMESPACE, VALID_FEATURE_IDS, type FeatureId } from "../_lib/feature-data";
+import type { SupportedCurrency } from "@/lib/country-currency-map";
+
+function buildImageComposition(images: { src: string; alt: string }[]) {
+  if (images.length >= 3) {
+    return {
+      layout: "trio" as const,
+      images: {
+        left: { src: images[0].src, alt: images[0].alt },
+        center: { src: images[1].src, alt: images[1].alt },
+        right: { src: images[2].src, alt: images[2].alt },
+      },
+    };
+  }
+  if (images.length === 2) {
+    return {
+      layout: "duo" as const,
+      images: {
+        left: { src: images[0].src, alt: images[0].alt },
+        center: { src: images[0].src, alt: "" },
+        right: { src: images[1].src, alt: images[1].alt },
+      },
+    };
+  }
+  return null;
+}
 
 export async function generateMetadata({
   params,
@@ -15,29 +52,28 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, featureId } = await params;
 
-  if (!VALID_FEATURE_IDS.includes(featureId as FeatureId)) {
-    return {};
-  }
+  if (!VALID_FEATURE_IDS.includes(featureId as FeatureId)) return {};
 
-  const t = await getTranslations({ locale, namespace: "features" });
-  const title = t(`seo.${featureId}.title`);
-  const description = t(`seo.${featureId}.description`);
+  const ns = FEATURE_NAMESPACE[featureId];
+  if (!ns) return {};
+
+  const t = await getTranslations({ locale, namespace: ns });
+  const title = t("seo.title");
+  const description = t("seo.description");
+  const url = `https://iq-rest.com/${locale}/${featureId}`;
 
   return {
     title,
     description,
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://iq-rest.com/${locale}/${featureId}`,
+      canonical: url,
       languages: buildAlternates(`/${featureId}`),
     },
     openGraph: {
       title,
       description,
-      url: `https://iq-rest.com/${locale}/${featureId}`,
+      url,
       siteName: "IQ Rest",
       locale,
       type: "website",
@@ -70,176 +106,227 @@ export default async function FeaturePage({
 }) {
   const { locale, featureId } = await params;
 
-  if (!VALID_FEATURE_IDS.includes(featureId as FeatureId)) {
-    notFound();
-  }
+  if (!VALID_FEATURE_IDS.includes(featureId as FeatureId)) notFound();
 
-  const t = await getTranslations("features");
-  const features = t.raw("list") as Array<{
-    id: string;
+  const ns = FEATURE_NAMESPACE[featureId];
+  if (!ns) notFound();
+
+  const [t, tFeatures, cookieStore] = await Promise.all([
+    getTranslations(ns),
+    getTranslations("features"),
+    cookies(),
+  ]);
+
+  const currency =
+    (cookieStore.get("currency")?.value as SupportedCurrency) || "EUR";
+
+  const features = t.raw("features.items") as Array<{
     title: string;
     description: string;
-    fullDescription: string;
-    shortDescription: string;
-    benefits: string[];
-    image: string;
-    imageAlt: string;
-    cta: string;
   }>;
 
-  const feature = features.find((f) => f.id === featureId);
+  const faqItems = t.raw("faq.items") as Array<{
+    question: string;
+    answer: string;
+  }>;
 
-  if (!feature) {
-    notFound();
-  }
+  // Get benefits from main features list
+  const featuresList = tFeatures.raw("list") as Array<{
+    id: string;
+    benefits: string[];
+  }>;
+  const featureData = featuresList.find((f) => f.id === featureId);
+  const benefits = featureData?.benefits || [];
 
+  // Images
   const featureImages = FEATURE_IMAGES[featureId] || [];
-  const faqData = t.raw("faq") as Record<string, { q: string; a: string }[]>;
-  const faq = faqData[featureId] || [];
+  const imageComposition = buildImageComposition(featureImages);
 
-  // JSON-LD structured data
-  const featureJsonLd = {
+  // JSON-LD
+  const softwareAppSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: feature.title,
-    description: feature.description,
+    name: t("seo.title"),
+    description: t("seo.description"),
     applicationCategory: "BusinessApplication",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
+    operatingSystem: "Web Browser",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
-  const faqJsonLd = faq.length > 0 ? {
+  const faqSchema = faqItems.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faq.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       "@type": "Question",
-      name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.a,
-      },
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
     })),
   } : null;
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: `https://iq-rest.com/${locale}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: feature.title,
-        item: `https://iq-rest.com/${locale}/${featureId}`,
-      },
-    ],
-  };
+  const breadcrumbSchema = createBreadcrumbSchema(locale, [
+    { name: "Home", path: "" },
+    { name: t("hero.badge") },
+  ]);
 
   return (
     <>
       <PageView slug={featureId} />
-      <JsonLd data={featureJsonLd} />
-      {faqJsonLd && <JsonLd data={faqJsonLd} />}
-      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={softwareAppSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
+      <JsonLd data={breadcrumbSchema} />
 
-      <div className="container mx-auto px-4 pt-16">
-        <div className="max-w-4xl mx-auto">
-          {/* Hero section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {feature.title}
+      {/* Hero Section */}
+      <section className="pt-16 pb-12 lg:pt-24 lg:pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              {t("hero.badge")}
+            </span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+              {t("hero.title")}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              {feature.description}
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              {t("hero.subtitle")}
+            </p>
+            <div className="flex flex-row flex-wrap gap-4 justify-center pt-2">
+              <HeroCreateButton>{t("hero.cta")}</HeroCreateButton>
+              <MenuPreviewModal buttonText={t("hero.ctaDemo")} menuUrl="/m/love-eatery" />
+            </div>
+            <p className="text-xs md:text-sm text-muted-foreground">
+              {t("hero.noCreditCard")}
             </p>
           </div>
+        </div>
+      </section>
 
-          {/* Feature images - vertical phone screenshots */}
-          {featureImages.length > 0 && (
-            <div className="mb-12">
-              <div className={`grid gap-6 ${
-                featureImages.length === 2
-                  ? "grid-cols-2 max-w-md mx-auto"
-                  : featureImages.length === 3
-                    ? "grid-cols-3 max-w-2xl mx-auto"
-                    : "grid-cols-1 max-w-xs mx-auto"
-              }`}>
-                {featureImages.map((img, index) => (
-                  <div
-                    key={index}
-                    className="relative rounded-2xl overflow-hidden shadow-xl"
-                    style={{
-                      filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.15))",
-                    }}
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      width={280}
-                      height={560}
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 280px"
-                      className="w-full h-auto"
-                      priority={index === 0}
-                      loading={index === 0 ? undefined : "lazy"}
-                    />
+      {/* Features Header */}
+      <section className="py-8 lg:py-12 bg-muted/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            {t("features.title")}
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
+            {t("features.subtitle")}
+          </p>
+        </div>
+      </section>
+
+      {/* Feature Showcase Section */}
+      <section className="pt-12 pb-12 lg:pt-24 lg:pb-36 bg-black text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto space-y-16 lg:space-y-36">
+            {features.map((feature, index) => {
+              const isEven = index % 2 === 0;
+              // First feature gets imageComposition, second gets none (or vice versa if only 1 feature)
+              const showImage = index === 0 && imageComposition;
+
+              return (
+                <div key={index}>
+                  {/* Desktop */}
+                  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    <div
+                      className={`flex flex-col ${
+                        showImage
+                          ? isEven ? "lg:order-1 items-end text-right" : "lg:order-2 items-start text-left"
+                          : "lg:col-span-2 items-center text-center max-w-2xl mx-auto"
+                      }`}
+                    >
+                      <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                        {feature.title}
+                      </h3>
+                      <p className="text-lg text-white/60">
+                        {feature.description}
+                      </p>
+                    </div>
+                    {showImage && (
+                      <div className={`flex justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                        <ImageComposition
+                          layout={imageComposition.layout}
+                          images={imageComposition.images}
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Mobile */}
+                  <div className="flex flex-col items-center text-center lg:hidden">
+                    <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                    {showImage && (
+                      <div className={`w-full max-w-[280px] ${imageComposition.layout === "trio" ? "my-[47px]" : "my-[70px]"}`}>
+                        <ImageComposition
+                          layout={imageComposition.layout}
+                          images={imageComposition.images}
+                        />
+                      </div>
+                    )}
+                    <p className="text-base text-white/60">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      {benefits.length > 0 && (
+        <section className="py-12 lg:py-16 bg-muted/50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-8">
+                {tFeatures("keyBenefits")}
+              </h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center gap-2 px-4 py-2.5 bg-background rounded-full border">
+                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="text-sm md:text-base">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
-          )}
+          </div>
+        </section>
+      )}
 
-          {/* Full description */}
-          <article className="p-6 md:p-8 border rounded-lg bg-card mb-16">
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              {feature.fullDescription}
-            </p>
-          </article>
-
-          {/* Benefits */}
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              {t("keyBenefits")}
-            </h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {feature.benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-full">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span className="text-sm md:text-base">{benefit}</span>
-                </div>
-              ))}
+      {/* FAQ Section */}
+      {faqItems.length > 0 && (
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-6 sm:px-10 lg:px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                {t("faq.title")}
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground">
+                {t("faq.subtitle")}
+              </p>
+            </div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqItems.map((item, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left text-base font-semibold">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
+        </section>
+      )}
 
-          {/* FAQ Section */}
-          {faq.length > 0 && (
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                {t("faqTitle")}
-              </h2>
-              <div className="space-y-4">
-                {faq.map((item, index) => (
-                  <article key={index} className="p-6 border rounded-lg bg-card">
-                    <h3 className="text-lg font-semibold mb-3">{item.q}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.a}
-                    </p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          )}
+      {/* Pricing Section */}
+      <section id="pricing" className="scroll-mt-20">
+        <PricingSection currency={currency} hideComparison />
+      </section>
 
-        </div>
-      </div>
-
+      {/* CTA Section */}
       <CtaSection />
     </>
   );

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restorani analüütika ja QR-menüü statistika — Jälgige külastajaid | IQ Rest",
+    "description": "Jälgige oma QR-menüü skaneerimisi, lehekülgede vaatamisi, populaarseid keeli ja külastajate trende. Reaalajas analüütika juhtpaneel teie restorani veebilehe jaoks."
+  },
+  "hero": {
+    "badge": "Analüütika",
+    "title": "Vaadake täpselt, kuidas külalised teie QR-menüüd kasutavad",
+    "subtitle": "Jälgige igapäevaseid skaneerimisi, lehekülgede vaatamisi, populaarseid keeli, seadmestatistikat ja trende aja jooksul. Tehke andmepõhiseid otsuseid oma menüü optimeerimiseks ja äri kasvatamiseks.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Mida saate jälgida",
+    "subtitle": "Reaalajas ülevaated teie restorani veebipresentatsiooni kohta.",
+    "items": [
+      {
+        "title": "Igapäevased vaatamised, skaneerimised ja külastajatrendid",
+        "description": "Vaadake, kui palju inimesi skaneerivad teie QR-koodi ja külastavad teie menüüd iga päev, nädal ja kuu. Jälgige trende aja jooksul, et mõista hooajalisi mustreid ja mõõta kampaaniate mõju."
+      },
+      {
+        "title": "Keele- ja seadmejaotus",
+        "description": "Teadke, milliseid keeli teie külalised eelistavad ja milliseid seadmeid kasutavad. Need andmed aitavad teil prioriseerida tõlkeid ja tagada, et teie menüü näeb suurepärane välja kõige populaarsemates seadmetes."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma restorani analüütika kohta.",
+    "items": [
+      {
+        "question": "Milliseid mõõdikuid saan jälgida?",
+        "answer": "Igapäevased, iganädalased ja igakuised lehekülgede vaatamised. Unikaalsed külastajad. Enim vaadatud lehed. Keele-eelistused. Seadme ja brauseri jaotus. Kõik uuendatakse reaalajas."
+      },
+      {
+        "question": "Kas analüütika sisaldub tasuta plaanis?",
+        "answer": "Jah. Põhianalüütika on saadaval igas plaanis, kaasa arvatud tasuta. Näete vaatamisi, külastajaid ja keelestatistikat esimesest päevast."
+      },
+      {
+        "question": "Kas ma näen, millised lehed on kõige populaarsemad?",
+        "answer": "Jah. Juhtpaneel näitab vaatamisi lehtede kaupa — avaleht, menüü, kontaktid, broneeringud ja keelevalik. Vaadake täpselt, kus külalised oma aega veedavad."
+      },
+      {
+        "question": "Kui kaugele andmed ulatuvad?",
+        "answer": "Analüütikaandmed salvestatakse alates päevast, mil oma restorani loote. Saate vaadata igapäevaseid, iganädalasi ja igakuiseid trende kogu oma ajaloo ulatuses."
+      }
+    ]
+  }
+}

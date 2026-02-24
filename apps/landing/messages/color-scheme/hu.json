@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Egyedi QR Menü Dizájn és Márka Színek — Étterem Arculat | IQ Rest",
+    "description": "Illessze a QR menüt az étterme arculatához. Válasszon kiemelő színeket, világos/sötét témákat, és hozzon létre egységes megjelenést a teljes digitális menüben."
+  },
+  "hero": {
+    "badge": "Egyedi Dizájn",
+    "title": "Illessze a QR Menüt az Étterme Arculatához",
+    "subtitle": "Válassza ki a márka színét, és az egész menü — gombok, kiemelések, linkek — azonnal frissül. Világos és sötét témák mellékelve.",
+    "cta": "Hozza Létre Étlapját",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Hogyan Működik az Egyedi Arculat",
+    "subtitle": "Az Ön menüje, az Ön színei — következetesen minden oldalon.",
+    "items": [
+      {
+        "title": "Válassza Ki a Kiemelő Színt",
+        "description": "Válasszon 12 gondosan összeállított előbeállítás közül, vagy adja meg pontos márka színét hex kóddal. Minden gomb, link és kiemelés a menüben azonnal alkalmazkodik — nincs szükség dizájn tudásra."
+      },
+      {
+        "title": "Automatikus Világos és Sötét Témák",
+        "description": "Menüje automatikusan támogatja a világos és a sötét módot. A rendszer biztosítja, hogy a márka színe mindkét témában kiválóan nézzen ki, optimalizált kontraszttal és olvashatósággal."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit a menü testreszabásáról tudni kell.",
+    "items": [
+      {
+        "question": "Használhatom a pontos márka színemet?",
+        "answer": "Igen. Adjon meg bármilyen hex színkódot, vagy válasszon a 12 gondosan kiválasztott előbeállítás közül. A kiemelő szín a menü összes oldalára érvényes."
+      },
+      {
+        "question": "Működik sötét módban?",
+        "answer": "Igen. A színséma automatikusan alkalmazkodik a világos és sötét témákhoz. A rendszer beállítja a kontrasztot, hogy a menü minden módban olvasható és szép maradjon."
+      },
+      {
+        "question": "Megváltoztathatom a színeket a közzététel után?",
+        "answer": "Természetesen. Bármikor módosítsa a kiemelő színt a vezérlőpulton. A frissítések azonnal megjelennek az élő menüben — nincs szükség újrapublikálásra."
+      },
+      {
+        "question": "A QR kódom is a márka színekhez igazodik?",
+        "answer": "A QR kód külön generálódik és önállóan testreszabható. A kiemelő szín a digitális menü oldalaira, a navigációra és az interaktív elemekre vonatkozik."
+      }
+    ]
+  }
+}

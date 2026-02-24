@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Özel QR Menü Tasarımı ve Marka Renkleri — Restoran Markalaşma | IQ Rest",
+    "description": "QR menünüzü restoran markanıza uyarlayın. Vurgu renkleri, açık/koyu temalar seçin ve tüm dijital menünüzde tutarlı bir görünüm oluşturun."
+  },
+  "hero": {
+    "badge": "Özel Tasarım",
+    "title": "QR Menünüzü Restoran Markanıza Uyarlayın",
+    "subtitle": "Marka renginizi seçin, tüm menünüz — butonlar, vurgular, bağlantılar — anında güncellenir. Açık ve koyu temalar dahildir.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Özel Markalaşma Nasıl Çalışır",
+    "subtitle": "Menünüz, renkleriniz — her sayfada tutarlı.",
+    "items": [
+      {
+        "title": "Vurgu Renginizi Seçin",
+        "description": "12 özenle seçilmiş hazır renk arasından seçim yapın veya hex koduyla tam marka renginizi girin. Menünüzdeki her buton, bağlantı ve vurgu anında uyarlanır — tasarım becerisi gerekmez."
+      },
+      {
+        "title": "Otomatik Açık ve Koyu Temalar",
+        "description": "Menünüz hem açık hem de koyu modu otomatik olarak destekler. Sistem, marka renginizin her iki temada da optimize edilmiş kontrast ve okunabilirlikle harika görünmesini sağlar."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Menü özelleştirme hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Tam marka rengimi kullanabilir miyim?",
+        "answer": "Evet. Herhangi bir hex renk kodu girin veya 12 özenle seçilmiş hazır renkten birini seçin. Vurgu renginiz menünüzün tüm sayfalarına uygulanır."
+      },
+      {
+        "question": "Koyu modda çalışır mı?",
+        "answer": "Evet. Renk şemanız hem açık hem de koyu temalara otomatik olarak uyum sağlar. Sistem, menünüzü her modda okunabilir ve güzel tutmak için kontrastı ayarlar."
+      },
+      {
+        "question": "Yayınladıktan sonra renkleri değiştirebilir miyim?",
+        "answer": "Kesinlikle. Kontrol panelinizden istediğiniz zaman vurgu renginizi değiştirin. Güncellemeler canlı menünüzde anında görünür — yeniden yayınlama gerekmez."
+      },
+      {
+        "question": "QR kodum da marka renklerine uyar mı?",
+        "answer": "QR kodunuz ayrı olarak oluşturulur ve bağımsız olarak özelleştirilebilir. Vurgu rengi dijital menü sayfalarınıza, gezintinize ve etkileşimli öğelerinize uygulanır."
+      }
+    ]
+  }
+}

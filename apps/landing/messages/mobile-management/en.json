@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Manage Your Restaurant Menu from Phone — Mobile Dashboard | IQ Rest",
+    "description": "Run your restaurant's QR menu entirely from your phone. Add dishes, update prices, upload photos, check analytics — no computer needed."
+  },
+  "hero": {
+    "badge": "Mobile Dashboard",
+    "title": "Manage Your Entire Restaurant Menu from Your Phone",
+    "subtitle": "Add dishes, change prices, upload photos, check orders — all from your smartphone. The dashboard is built mobile-first, so you never need a computer.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How Mobile Management Works",
+    "subtitle": "Your restaurant dashboard, always in your pocket.",
+    "items": [
+      {
+        "title": "Full Dashboard on Your Smartphone",
+        "description": "Every feature works perfectly on your phone screen — add items, edit categories, manage orders, check analytics. The interface is designed for touch, not just resized from desktop."
+      },
+      {
+        "title": "Upload Photos Directly from Camera",
+        "description": "Take a photo of a new dish and upload it to your menu in seconds. Images are optimized automatically. Update your daily special while standing in the kitchen."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about mobile menu management.",
+    "items": [
+      {
+        "question": "Do I need to install an app?",
+        "answer": "No. The dashboard works in your phone's web browser — Safari, Chrome, or any other. Just log in and start managing your menu."
+      },
+      {
+        "question": "Can I do everything from my phone that I can on a computer?",
+        "answer": "Yes. Every feature is available on mobile — adding items, uploading photos, managing categories, checking analytics, handling orders and reservations."
+      },
+      {
+        "question": "Does it work on tablets too?",
+        "answer": "Yes. The dashboard adapts to any screen size — phones, tablets, and desktop computers. Use whichever device is most convenient."
+      },
+      {
+        "question": "Can multiple people manage the menu?",
+        "answer": "Currently one account manages the restaurant. You can log in from multiple devices simultaneously — your phone, tablet, or computer."
+      }
+    ]
+  }
+}

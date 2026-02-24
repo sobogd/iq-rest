@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Gratis restaurantnettside-generator — Lag paa 5 minutter | IQ Rest",
+    "description": "Faa en profesjonell restaurantnettside med QR-meny, kontaktside og kart — bare skriv inn e-posten din. Klar paa 5 minutter, ingen tekniske ferdigheter noedvendig."
+  },
+  "hero": {
+    "badge": "Gratis nettside",
+    "title": "Faa en profesjonell restaurantnettside paa 5 minutter",
+    "subtitle": "Skriv inn e-posten din, gi restauranten et navn, og du faar umiddelbart en komplett nettside med QR-meny, kontaktside med kart og moderne responsivt design. Ingen koding, ingen designere.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort noedvendig. Gratis plan tilgjengelig."
+  },
+  "features": {
+    "title": "Hvordan det fungerer",
+    "subtitle": "Fra null til en aktiv restaurantnettside i tre steg.",
+    "items": [
+      {
+        "title": "Registrer deg med bare e-posten din",
+        "description": "Ingen kompliserte registreringsskjemaer. Skriv inn e-posten din, bekreft med en kode, og kontrollpanelet er klart. Gi restauranten et navn, og nettsiden gaar live umiddelbart."
+      },
+      {
+        "title": "Alt inkludert fra start",
+        "description": "Nettsiden leveres med QR-meny, kontaktside med Google Maps, spraakstoette, mobilresponsivt design og din egen unike URL. Bare legg til rettene dine og begynn aa dele."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spoersmaal",
+    "subtitle": "Alt du trenger aa vite om aa lage restaurantnettsiden din.",
+    "items": [
+      {
+        "question": "Hvordan lager jeg en gratis restaurantnettside?",
+        "answer": "Skriv inn e-posten paa IQ Rest, bekreft med en kode, gi restauranten et navn — ferdig. Nettsiden med QR-meny er aktiv paa under 5 minutter. Ingen kredittkort noedvendig."
+      },
+      {
+        "question": "Trenger jeg tekniske ferdigheter?",
+        "answer": "Nei. Alt er designet for restauranteiere, ikke utviklere. Legg til retter, last opp bilder og styr nettsiden helt fra telefonen."
+      },
+      {
+        "question": "Hva er inkludert i gratisplanen?",
+        "answer": "En komplett restaurantnettside, QR-meny, kontaktside med kart, statistikk, tilpasset fargeskjema og opptil 2 spraak. Ingen prooveperiode — det er gratis for alltid."
+      },
+      {
+        "question": "Kan jeg bruke mitt eget domenenavn?",
+        "answer": "Paa gratis- og Basic-planer er nettsiden hostet paa iq-rest.com/m/ditt-navn. Pro-planen stoetter egne domenenavn for full merkekontroll."
+      }
+    ]
+  }
+}

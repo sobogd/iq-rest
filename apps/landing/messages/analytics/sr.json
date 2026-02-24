@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Analitika restorana i statistika QR menija — Pratite posetioce | IQ Rest",
+    "description": "Pratite skeniranja QR menija, preglede stranica, popularne jezike i trendove posetilaca. Kontrolni panel analitike u realnom vremenu za sajt vašeg restorana."
+  },
+  "hero": {
+    "badge": "Analitika",
+    "title": "Vidite tačno kako gosti koriste vaš QR meni",
+    "subtitle": "Pratite dnevna skeniranja, preglede stranica, popularne jezike, statistiku uređaja i trendove tokom vremena. Donosite odluke zasnovane na podacima za optimizaciju menija i rast poslovanja.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Šta možete pratiti",
+    "subtitle": "Uvidi u realnom vremenu o prisustvu vašeg restorana na internetu.",
+    "items": [
+      {
+        "title": "Dnevni pregledi, skeniranja i trendovi posetilaca",
+        "description": "Vidite koliko ljudi skenira vaš QR kod i posećuje meni svaki dan, svake nedelje i svakog meseca. Pratite trendove tokom vremena da razumete sezonske obrasce i merite uticaj promocija."
+      },
+      {
+        "title": "Raspodela po jezicima i uređajima",
+        "description": "Znate koje jezike vaši gosti preferiraju i koje uređaje koriste. Ovi podaci pomažu da prioritizujete prevode i osigurate da vaš meni izgleda savršeno na najpopularnijim uređajima."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o analitici restorana.",
+    "items": [
+      {
+        "question": "Koje metrike mogu da pratim?",
+        "answer": "Dnevne, nedeljne i mesečne preglede stranica. Jedinstvene posetioce. Najgledanije stranice. Jezičke preferencije. Raspodelu po uređajima i pretraživačima. Sve se ažurira u realnom vremenu."
+      },
+      {
+        "question": "Da li je analitika uključena u besplatan plan?",
+        "answer": "Da. Osnovna analitika je dostupna na svakom planu, uključujući besplatan. Možete videti preglede, posetioce i jezičku statistiku od prvog dana."
+      },
+      {
+        "question": "Mogu li da vidim koje stranice su najpopularnije?",
+        "answer": "Da. Kontrolni panel prikazuje preglede po stranicama — početna, meni, kontakti, rezervacije i izbor jezika. Vidite tačno gde gosti provode vreme."
+      },
+      {
+        "question": "Koliko daleko u prošlost sežu podaci?",
+        "answer": "Podaci analitike se čuvaju od dana kreiranja restorana. Možete pregledati dnevne, nedeljne i mesečne trendove za celokupnu istoriju."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Gestionați Meniul Restaurantului de pe Telefon — Panou de Control Mobil | IQ Rest",
+    "description": "Administrați meniul QR al restaurantului în întregime de pe telefon. Adăugați feluri, actualizați prețuri, încărcați fotografii, verificați analizele — fără calculator necesar."
+  },
+  "hero": {
+    "badge": "Panou Mobil",
+    "title": "Gestionați Întregul Meniu al Restaurantului de pe Telefon",
+    "subtitle": "Adăugați feluri, schimbați prețuri, încărcați fotografii, verificați comenzile — totul de pe smartphone. Panoul este construit mobile-first, așa că nu aveți niciodată nevoie de computer.",
+    "cta": "Creați Meniul",
+    "ctaDemo": "Vezi Demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Cum Funcționează Gestionarea Mobilă",
+    "subtitle": "Panoul restaurantului dvs., mereu în buzunar.",
+    "items": [
+      {
+        "title": "Panou Complet pe Smartphone",
+        "description": "Fiecare funcție funcționează perfect pe ecranul telefonului — adăugați elemente, editați categorii, gestionați comenzi, verificați analize. Interfața este proiectată pentru atingere, nu doar redimensionată de pe desktop."
+      },
+      {
+        "title": "Încărcați Fotografii Direct din Cameră",
+        "description": "Fotografiați un fel nou și încărcați-l în meniu în câteva secunde. Imaginile sunt optimizate automat. Actualizați meniul zilei stând în bucătărie."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre gestionarea mobilă a meniului.",
+    "items": [
+      {
+        "question": "Trebuie să instalez o aplicație?",
+        "answer": "Nu. Panoul funcționează în browserul telefonului — Safari, Chrome sau oricare altul. Conectați-vă și începeți să gestionați meniul."
+      },
+      {
+        "question": "Pot face de pe telefon tot ce pot face pe computer?",
+        "answer": "Da. Fiecare funcție este disponibilă pe mobil — adăugare elemente, încărcare fotografii, gestionare categorii, verificare analize, gestionare comenzi și rezervări."
+      },
+      {
+        "question": "Funcționează și pe tabletă?",
+        "answer": "Da. Panoul se adaptează la orice dimensiune de ecran — telefoane, tablete și computere desktop. Folosiți dispozitivul care vă este cel mai convenabil."
+      },
+      {
+        "question": "Pot mai multe persoane să gestioneze meniul?",
+        "answer": "În prezent, un cont gestionează restaurantul. Vă puteți conecta simultan de pe mai multe dispozitive — telefon, tabletă sau computer."
+      }
+    ]
+  }
+}

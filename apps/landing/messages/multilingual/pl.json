@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Wielojęzyczna strona restauracji — Menu w ponad 25 językach | IQ Rest",
+    "description": "Twoja strona restauracji i menu QR w ponad 25 językach. Goście przełączają język jednym kliknięciem — menu, kontakty i rezerwacje dostosowują się natychmiast."
+  },
+  "hero": {
+    "badge": "Wielojęzyczność",
+    "title": "Twoja strona restauracji w ponad 25 językach",
+    "subtitle": "Turyści i goście międzynarodowi widzą Twoje menu w swoim języku. Jedno kliknięcie, aby przełączyć — wszystko dostosowuje się natychmiast: dania, opisy, kontakty, nawigacja.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Jak działa obsługa wielojęzyczna",
+    "subtitle": "Mów językiem klienta bez dodatkowej pracy.",
+    "items": [
+      {
+        "title": "Goście wybierają swój język",
+        "description": "Na menu pojawia się selektor języka. Goście klikają preferowany język, a cała strona — menu, opisy, kontakty, nawigacja — przełącza się natychmiast. Bez przeładowywania strony."
+      },
+      {
+        "title": "Dodaj języki z panelu",
+        "description": "Włączaj nowe języki jednym kliknięciem. Użyj tłumaczenia AI, aby wypełnić treść, lub wprowadź tłumaczenia ręcznie. Każdy język można włączać i wyłączać niezależnie."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o wielojęzycznych menu.",
+    "items": [
+      {
+        "question": "Ile języków mogę dodać do mojego menu?",
+        "answer": "Ponad 25 języków, w tym wszystkie główne języki europejskie, chiński, japoński, koreański, arabski, perski i więcej. Dodaj tyle, ile potrzebują Twoi goście."
+      },
+      {
+        "question": "Czy muszę tłumaczyć wszystko ręcznie?",
+        "answer": "Nie. Użyj wbudowanego tłumaczenia AI, aby przetłumaczyć całe menu jednym kliknięciem. Możesz też edytować każde tłumaczenie ręcznie, aby mieć pełną kontrolę."
+      },
+      {
+        "question": "Czy preferencja językowa jest zapisywana?",
+        "answer": "Tak. Gdy gość wybierze język, jest on zapamiętywany na kolejną wizytę. Nie musi wybierać ponownie, gdy wraca."
+      },
+      {
+        "question": "Czy obsługa wielojęzyczna jest dostępna w darmowym planie?",
+        "answer": "Darmowy plan obejmuje do 2 języków. Plany Basic i Pro oferują nieograniczoną liczbę języków z tłumaczeniem AI w zestawie."
+      }
+    ]
+  }
+}

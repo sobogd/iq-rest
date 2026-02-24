@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restoranınız için QR Menü Oluşturun — Ücretsiz Menü Yapıcı | IQ Rest",
+    "description": "Restoranınızın dijital QR menüsünü dakikalar içinde oluşturun. Kategoriler, yemekler, fotoğraflar, fiyatlar ekleyin — ve taranabilir bir QR kod paylaşın. Ücretsiz başlayın."
+  },
+  "hero": {
+    "badge": "Menü Oluşturucu",
+    "title": "Restoranınız için Dakikalar İçinde Dijital QR Menü Oluşturun",
+    "subtitle": "Kategorilerinizi ve yemeklerinizi ekleyin, fiyatları belirleyin, fotoğrafları yükleyin — QR menünüz paylaşıma hazır. İstediğiniz zaman düzenleyin, değişiklikler anında görünür.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Menü Editörü Nasıl Çalışır",
+    "subtitle": "Menünüzü hızla çevrimiçi yapan basit araçlar.",
+    "items": [
+      {
+        "title": "Kategoriler ve Yemekler Ekleyin",
+        "description": "Başlangıçlar, Ana Yemekler, İçecekler gibi kategoriler oluşturun — ardından isimler, açıklamalar, fiyatlar ve fotoğraflarla yemekler ekleyin. Sürükle bırak ile sıralayın. Öğeleri silmeden açıp kapatın."
+      },
+      {
+        "title": "Değişiklikler Anında Yayına Girer",
+        "description": "Yaptığınız her düzenleme, canlı QR menünüzde saniyeler içinde görünür. Bir fiyatı güncelleyin, günlük özel ekleyin veya tükenen bir yemeği gizleyin — müşterileriniz her zaman en güncel versiyonu görür."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "QR menü oluşturma hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Restoranım için nasıl QR menü oluştururum?",
+        "answer": "E-postanızla kaydolun, restoranınızı adlandırın ve kategoriler ile yemekler eklemeye başlayın. QR menünüz otomatik olarak oluşturulur — QR kodu yazdırın ve masalarınıza yerleştirin."
+      },
+      {
+        "question": "Menü öğelerime fotoğraf ekleyebilir miyim?",
+        "answer": "Evet. Telefonunuzdan veya bilgisayarınızdan doğrudan fotoğraf yükleyin. Görseller her cihazda hızlı yükleme için otomatik olarak optimize edilir."
+      },
+      {
+        "question": "Kaç öğe ekleyebilirim?",
+        "answer": "Kategori veya menü öğesi sayısında sınır yoktur. İhtiyacınız kadar yemek ekleyin — menünüz hızlı ve düzenli kalır."
+      },
+      {
+        "question": "Tükenen bir yemeği geçici olarak gizleyebilir miyim?",
+        "answer": "Evet. Herhangi bir öğeyi tek dokunuşla kapatın. Herkese açık menüden kaybolur ancak kontrol panelinizde kalır — hazır olduğunuzda tekrar açın."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI-genererede madfotos til menuer — Restaurantmenubilleder | IQ Rest",
+    "description": "Generer smukke madfotos til din menu med AI. Ingen fotograf noedvendig — faa professionelle retbilleder paa sekunder, optimeret til din QR-menu."
+  },
+  "hero": {
+    "badge": "AI-billeder",
+    "title": "Professionelle menufotos uden fotograf",
+    "subtitle": "Generer fantastiske madbilleder til dine retter med AI. Indtast blot retnavnet og faa et smukt, optimeret foto klar til din QR-menu — paa sekunder.",
+    "cta": "Opret din menu",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
+  },
+  "features": {
+    "title": "Hvordan AI-billedgenerering fungerer",
+    "subtitle": "Fra retnavn til professionelt foto med et klik.",
+    "items": [
+      {
+        "title": "Generer billeder fra retnavne",
+        "description": "Indtast retnavnet — 'Grillet laks med citron', 'Margherita-pizza', 'Chokoladelavakage' — og AI genererer et professionelt madfoto. Vaelg mellem flere stilarter og baggrunde."
+      },
+      {
+        "title": "Optimeret til hurtig indlaesning",
+        "description": "Hvert genereret billede komprimeres automatisk og konverteres til moderne formater. Din menu forbliver lynhurtig paa alle enheder, selv med fotos paa hver ret."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spoergsmaal",
+    "subtitle": "Alt du behoever at vide om AI-menubilleder.",
+    "items": [
+      {
+        "question": "Hvordan genererer jeg et madfoto?",
+        "answer": "Aabn et vilkaarligt menupunkt i dit kontrolpanel, tryk 'Generer billede', og AI opretter et professionelt madfoto baseret paa rettens navn og beskrivelse. Vaelg det du kan lide."
+      },
+      {
+        "question": "Kan jeg bruge mine egne fotos i stedet?",
+        "answer": "Absolut. Upload dine egne fotos fra din telefon eller computer. AI-generering er valgfrit — brug det naar du ikke har et foto klar."
+      },
+      {
+        "question": "Hvor mange billeder kan jeg generere?",
+        "answer": "Billedgenereringsgraenser afhaenger af din plan. Basic inkluderer en maanedlig kvote, og Pro tilbyder en hoejere graense. Du kan altid uploade egne fotos uden begraensninger."
+      },
+      {
+        "question": "Er genererede billeder unikke for min restaurant?",
+        "answer": "Ja. Hvert billede genereres unikt til din specifikke ret. Ingen stockfotos — hvert billede oprettes fra bunden baseret paa dit menupunkt."
+      }
+    ]
+  }
+}

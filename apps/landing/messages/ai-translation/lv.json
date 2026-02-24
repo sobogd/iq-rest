@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "MI ēdienkartes tulkošana restorāniem — QR ēdienkartes tulkošana | IQ Rest",
+    "description": "Iztulkojiet sava restorāna ēdienkarti 25+ valodās ar vienu klikšķi. MI izprot kulinārijas kontekstu — ēdienu nosaukumi, apraksti un kategorijas tiek tulkoti precīzi."
+  },
+  "hero": {
+    "badge": "MI tulkošana",
+    "title": "Iztulkojiet savu ēdienkarti 25+ valodās ar vienu klikšķi",
+    "subtitle": "Mūsu MI izprot ēdiena kontekstu — tas tulko ēdienu nosaukumus, aprakstus un kategorijas dabiski, nevis vārdu pa vārdam. Sasniedziet katru tūristu un starptautisku viesi.",
+    "cta": "Izveidojiet savu ēdienkarti",
+    "ctaDemo": "Skatīt demo",
+    "noCreditCard": "Kredītkarte nav nepieciešama. Pieejams bezmaksas plāns."
+  },
+  "features": {
+    "title": "Kā darbojas MI tulkošana",
+    "subtitle": "No jūsu valodas uz pasauli dažās sekundēs.",
+    "items": [
+      {
+        "title": "Visas ēdienkartes tulkošana ar vienu klikšķi",
+        "description": "Izvēlieties mērķa valodu, nospiediet tulkot, un visa jūsu ēdienkārte — kategorijas, ēdienu nosaukumi, apraksti — tiek iztulkota uzreiz. MI saglabā kulinārijas terminus un dabiski pielāgojas katrai valodai."
+      },
+      {
+        "title": "Rediģējiet un precizējiet jebkuru tulkojumu",
+        "description": "Katrs MI tulkojums ir pilnībā rediģējams. Pārskatiet rezultātu, pielāgojiet formulējumu un saglabājiet. Jūsu izmaiņas tiek saglabātas pat tad, ja vēlāk atkārtoti tulkojat citas ēdienkartes daļas."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "subtitle": "Viss, kas jums jāzina par ēdienkartes tulkošanu.",
+    "items": [
+      {
+        "question": "Cik precīzs ir MI tulkojums ēdienu ēdienkārtēm?",
+        "answer": "Mūsu MI ir optimizēts restorānu saturam. Tas saprot, ka 'Beef Wellington' vai 'Tiramisu' nevajadzētu tulkot burtiski, un pielāgo aprakstus, lai tie skanētos dabiski katrā valodā."
+      },
+      {
+        "question": "Kādas valodas tiek atbalstītas?",
+        "answer": "25+ valodas, ieskaitot angļu, spāņu, franču, vācu, itāļu, portugāļu, ķīniešu, japāņu, korejiešu, arābu, krievu un daudzas citas Eiropas un Āzijas valodas."
+      },
+      {
+        "question": "Vai es varu iztulkot tikai dažus vienumus, nevis visu ēdienkarti?",
+        "answer": "Jā. Jūs varat tulkot atsevišķus vienumus, veselas kategorijas vai visu ēdienkarti uzreiz. Jums ir pilna kontrole pār to, kas tiek tulkots."
+      },
+      {
+        "question": "Vai tulkošana maksā papildus?",
+        "answer": "MI tulkošana ir iekļauta Basic un Pro plānos ar dāsniem mēneša limitiem. Nav maksu par vārdu vai vienumu — tulkojiet tik, cik nepieciešams."
+      }
+    ]
+  }
+}

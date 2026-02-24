@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restauranganalys och QR-menystatistik — Spara besokare | IQ Rest",
+    "description": "Spara dina QR-menyskanningar, sidvisningar, populara sprak och besokstrender. Analysverktyg i realtid for din restaurangwebbplats."
+  },
+  "hero": {
+    "badge": "Analys",
+    "title": "Se exakt hur gaster anvander din QR-meny",
+    "subtitle": "Spara dagliga skanningar, sidvisningar, populara sprak, enhetsstatistik och trender over tid. Fatta datadrivna beslut for att optimera din meny och vaxa din verksamhet.",
+    "cta": "Skapa din meny",
+    "ctaDemo": "Visa demo",
+    "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+  },
+  "features": {
+    "title": "Vad du kan spara",
+    "subtitle": "Insikter i realtid om din restaurangs onlinenarvaro.",
+    "items": [
+      {
+        "title": "Dagliga visningar, skanningar och besokstrender",
+        "description": "Se hur manga som skannar din QR-kod och besoker din meny varje dag, vecka och manad. Folj trender over tid for att forsta sasongmonster och mata effekten av kampanjer."
+      },
+      {
+        "title": "Sprak- och enhetsfordelning",
+        "description": "Vet vilka sprak dina gaster foredrar och vilka enheter de anvander. Dessa data hjalper dig att prioritera oversattningar och sakerstalla att din meny ser perfekt ut pa de mest populara enheterna."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vanliga fragor",
+    "subtitle": "Allt du behover veta om restauranganalys.",
+    "items": [
+      {
+        "question": "Vilka matetal kan jag spara?",
+        "answer": "Dagliga, veckovisa och manadsvisa sidvisningar. Unika besokare. Mest visade sidor. Sprakinstaallningar. Enhets- och webblasarfordelning. Allt uppdaterat i realtid."
+      },
+      {
+        "question": "Ingar analys i gratisplanen?",
+        "answer": "Ja. Grundlaggande analys ar tillganglig pa alla planer, inklusive gratis. Du kan se visningar, besokare och sprakstatistik fran dag ett."
+      },
+      {
+        "question": "Kan jag se vilka sidor som ar mest populara?",
+        "answer": "Ja. Kontrollpanelen visar visningar uppdelade per sida — startsida, meny, kontakter, reservationer och sprakval. Se exakt var gasterna tillbringar sin tid."
+      },
+      {
+        "question": "Hur langt tillbaka gar datan?",
+        "answer": "Analysdata lagras fran den dag du skapar din restaurang. Du kan visa dagliga, veckovisa och manadsvisa trender for hela din historik."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Daugiakalbė restorano svetainė — Meniu 25+ kalbomis | IQ Rest",
+    "description": "Jūsų restorano svetainė ir QR meniu 25+ kalbomis. Svečiai perjungia kalbą vienu paspaudimu — meniu, kontaktai ir rezervacijos prisitaiko iškart."
+  },
+  "hero": {
+    "badge": "Daugiakalbis",
+    "title": "Jūsų restorano svetainė 25+ kalbomis",
+    "subtitle": "Turistai ir tarptautiniai svečiai mato jūsų meniu savo kalba. Vienas paspaudimas perjungti — viskas prisitaiko iškart: patiekalai, aprašymai, kontaktai, navigacija.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia daugiakalbė palaikymas",
+    "subtitle": "Kalbėkite savo kliento kalba be jokio papildomo darbo.",
+    "items": [
+      {
+        "title": "Svečiai pasirenka savo kalbą",
+        "description": "Jūsų meniu rodomas kalbos parinkiklis. Svečiai paspaudžia pageidaujamą kalbą ir visa svetainė — meniu, aprašymai, kontaktinė informacija, navigacija — perjungiama iškart. Puslapio perkrovimo nereikia."
+      },
+      {
+        "title": "Pridėkite kalbas iš valdymo skydelio",
+        "description": "Įjunkite naujas kalbas vienu paspaudimu. Naudokite DI vertimą turiniui užpildyti arba įveskite vertimus rankiniu būdu. Kiekviena kalba gali būti įjungta ar išjungta nepriklausomai."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie daugiakalbius meniu.",
+    "items": [
+      {
+        "question": "Kiek kalbų galiu pridėti prie meniu?",
+        "answer": "Iki 25+ kalbų, įskaitant visas pagrindines Europos kalbas, kinų, japonų, korėjiečių, arabų, persų ir daugiau. Pridėkite tiek, kiek jūsų svečiams reikia."
+      },
+      {
+        "question": "Ar turiu viską versti rankiniu būdu?",
+        "answer": "Ne. Naudokite integruotą DI vertimą, kad išverstumėte visą meniu vienu paspaudimu. Taip pat galite rankiniu būdu redaguoti bet kurį vertimą pilnai kontrolei."
+      },
+      {
+        "question": "Ar kalbos pasirinkimas išsaugomas?",
+        "answer": "Taip. Kai svečias pasirenka kalbą, ji įsimenama kitam apsilankymui. Grįžtant nereikia rinktis iš naujo."
+      },
+      {
+        "question": "Ar daugiakalbė palaikymas prieinamas nemokamame plane?",
+        "answer": "Nemokamas planas apima iki 2 kalbų. Basic ir Pro planai siūlo neribotą kalbų skaičių su įtrauktu DI vertimu."
+      }
+    ]
+  }
+}

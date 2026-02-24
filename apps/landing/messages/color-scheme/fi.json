@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Mukautettu QR-ruokalistasuunnittelu ja brandivarit — Ravintolan brandi | IQ Rest",
+    "description": "Sovita QR-ruokalistasi ravintolasi brandiin. Valitse korostusvarit, vaaleat/tummat teemat ja luo yhtenaainen ulkoasu koko digitaaliseen ruokalistaasi."
+  },
+  "hero": {
+    "badge": "Mukautettu design",
+    "title": "Sovita QR-ruokalistasi ravintolasi brandiin",
+    "subtitle": "Valitse brandivari, ja koko ruokalista — painikkeet, korostukset, linkit — paivittyy heti. Vaalea ja tumma teema mukana.",
+    "cta": "Luo ruokalista",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "features": {
+    "title": "Miten mukautettu brandi toimii",
+    "subtitle": "Sinun ruokalistasi, sinun varisi — yhtenainen jokaisella sivulla.",
+    "items": [
+      {
+        "title": "Valitse korostusvari",
+        "description": "Valitse 12 valmiista esiasetuksesta tai syota tarkka brandivari heksakoodilla. Jokainen painike, linkki ja korostus ruokalistassa mukautuu heti — suunnittelutaitoja ei tarvita."
+      },
+      {
+        "title": "Automaattiset vaaleat ja tummat teemat",
+        "description": "Ruokalistasi tukee automaattisesti seka vaaleaa etta tummaa tilaa. Jarjestelma varmistaa, etta brandivari nayttaa hyvalta molemmissa teemoissa optimoidulla kontrastilla ja luettavuudella."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mita sinun taytyy tietaa ruokalistan mukauttamisesta.",
+    "items": [
+      {
+        "question": "Voinko kayttaa tarkkaa brandivaria?",
+        "answer": "Kylla. Syota mika tahansa heksavaarikoodi tai valitse 12 huolellisesti valitusta esiasetuksesta. Korostusvari kayttoon kaikilla ruokalistan sivuilla."
+      },
+      {
+        "question": "Toimiiko se tummassa tilassa?",
+        "answer": "Kylla. Variskeemasi mukautuu automaattisesti seka vaaleaan etta tummaan teemaan. Jarjestelma saataa kontrastia pitaakseen ruokalistan luettavana ja kauniina kaikissa tiloissa."
+      },
+      {
+        "question": "Voinko vaihtaa vareja julkaisun jalkeen?",
+        "answer": "Ehdottomasti. Vaihda korostusvari milloin tahansa hallintapaneelista. Muutokset nakyvan heti aktiivisessa ruokalistassa — uudelleenjulkaisua ei tarvita."
+      },
+      {
+        "question": "Sopiiko QR-koodini myos brandivareihin?",
+        "answer": "QR-koodi luodaan erikseen ja sita voidaan mukauttaa itsenaisesti. Korostusvari koskee digitaalisia ruokalistasivuja, navigointia ja interaktiivisia elementteja."
+      }
+    ]
+  }
+}

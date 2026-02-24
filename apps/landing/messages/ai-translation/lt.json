@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "DI meniu vertimas restoranams — QR meniu vertimas | IQ Rest",
+    "description": "Išverskite savo restorano meniu į 25+ kalbų vienu paspaudimu. DI supranta kulinarijos kontekstą — patiekalų pavadinimai, aprašymai ir kategorijos verčiami tiksliai."
+  },
+  "hero": {
+    "badge": "DI vertimas",
+    "title": "Išverskite savo meniu į 25+ kalbų vienu paspaudimu",
+    "subtitle": "Mūsų DI supranta maisto kontekstą — verčia patiekalų pavadinimus, aprašymus ir kategorijas natūraliai, ne žodis po žodžio. Pasiekite kiekvieną turistą ir tarptautinį svečią.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia DI vertimas",
+    "subtitle": "Nuo jūsų kalbos iki pasaulio per kelias sekundes.",
+    "items": [
+      {
+        "title": "Viso meniu vertimas vienu paspaudimu",
+        "description": "Pasirinkite tikslinę kalbą, paspauskite versti, ir visas meniu — kategorijos, patiekalų pavadinimai, aprašymai — išverčiamas iškart. DI išsaugo kulinarinius terminus ir natūraliai prisitaiko kiekvienai kalbai."
+      },
+      {
+        "title": "Redaguokite ir patikslinkite bet kurį vertimą",
+        "description": "Kiekvienas DI vertimas yra pilnai redaguojamas. Peržiūrėkite rezultatą, pakoreguokite formuluotę ir išsaugokite. Jūsų pakeitimai išsaugomi net jei vėliau iš naujo versite kitas meniu dalis."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie meniu vertimą.",
+    "items": [
+      {
+        "question": "Kiek tikslus DI vertimas maisto meniu?",
+        "answer": "Mūsų DI optimizuotas restoranų turiniui. Jis supranta, kad 'Beef Wellington' ar 'Tiramisu' neturėtų būti verčiami pažodžiui, ir pritaiko aprašymus, kad skambėtų natūraliai kiekvienoje kalboje."
+      },
+      {
+        "question": "Kokios kalbos palaikomos?",
+        "answer": "25+ kalbų, įskaitant anglų, ispanų, prancūzų, vokiečių, italų, portugališkų, kinų, japonų, korėjiečių, arabų, rusų ir daug kitų Europos bei Azijos kalbų."
+      },
+      {
+        "question": "Ar galiu išversti tik kai kuriuos elementus, ne visą meniu?",
+        "answer": "Taip. Galite versti atskirus elementus, ištisas kategorijas arba visą meniu iš karto. Turite visišką kontrolę, kas verčiama."
+      },
+      {
+        "question": "Ar vertimas kainuoja papildomai?",
+        "answer": "DI vertimas įtrauktas į Basic ir Pro planus su dosniais mėnesiniais limitais. Nėra mokesčių už žodį ar elementą — verskite tiek, kiek reikia."
+      }
+    ]
+  }
+}

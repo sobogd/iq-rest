@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Site web de restaurant multilingue — Menu en 25+ langues | IQ Rest",
+    "description": "Votre site web de restaurant et menu QR en plus de 25 langues. Les clients changent de langue en un geste — menu, contacts et réservations s'adaptent instantanément."
+  },
+  "hero": {
+    "badge": "Multilingue",
+    "title": "Votre site web de restaurant en plus de 25 langues",
+    "subtitle": "Les touristes et clients internationaux voient votre menu dans leur langue. Un geste pour changer — tout s'adapte instantanément : plats, descriptions, contacts, navigation.",
+    "cta": "Créer votre menu",
+    "ctaDemo": "Voir la démo",
+    "noCreditCard": "Aucune carte de crédit requise. Plan gratuit disponible."
+  },
+  "features": {
+    "title": "Comment fonctionne le support multilingue",
+    "subtitle": "Parlez la langue de vos clients sans effort supplémentaire.",
+    "items": [
+      {
+        "title": "Les clients choisissent leur langue",
+        "description": "Un sélecteur de langue apparaît sur votre menu. Les clients appuient sur leur langue préférée et tout le site — menu, descriptions, coordonnées, navigation — change instantanément. Aucun rechargement de page nécessaire."
+      },
+      {
+        "title": "Ajoutez des langues depuis votre tableau de bord",
+        "description": "Activez de nouvelles langues en un clic. Utilisez la traduction IA pour remplir le contenu, ou saisissez les traductions manuellement. Chaque langue peut être activée ou désactivée indépendamment."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur les menus multilingues.",
+    "items": [
+      {
+        "question": "Combien de langues puis-je ajouter à mon menu ?",
+        "answer": "Plus de 25 langues incluant toutes les principales langues européennes, le chinois, le japonais, le coréen, l'arabe, le farsi et plus. Ajoutez autant de langues que vos clients en ont besoin."
+      },
+      {
+        "question": "Dois-je tout traduire manuellement ?",
+        "answer": "Non. Utilisez la traduction IA intégrée pour traduire tout votre menu en un clic. Vous pouvez aussi modifier n'importe quelle traduction manuellement pour un contrôle total."
+      },
+      {
+        "question": "La préférence de langue est-elle sauvegardée ?",
+        "answer": "Oui. Quand un client sélectionne une langue, elle est mémorisée pour sa prochaine visite. Il n'a pas besoin de choisir à nouveau lors de son retour."
+      },
+      {
+        "question": "Le support multilingue est-il disponible sur le plan gratuit ?",
+        "answer": "Le plan gratuit inclut jusqu'à 2 langues. Les plans Basic et Pro offrent des langues illimitées avec traduction IA incluse."
+      }
+    ]
+  }
+}

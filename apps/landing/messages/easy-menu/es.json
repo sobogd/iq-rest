@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Crea un menú QR para tu restaurante — Creador de menús gratis | IQ Rest",
+    "description": "Crea el menú QR digital de tu restaurante en minutos. Añade categorías, platos, fotos, precios — y comparte un código QR escaneable. Empieza gratis."
+  },
+  "hero": {
+    "badge": "Creador de menús",
+    "title": "Crea un menú QR digital para tu restaurante en minutos",
+    "subtitle": "Añade tus categorías y platos, fija precios, sube fotos — tu menú QR está listo para compartir. Edita en cualquier momento, los cambios aparecen al instante.",
+    "cta": "Crear tu menú",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "No se requiere tarjeta de crédito. Plan gratuito disponible."
+  },
+  "features": {
+    "title": "Cómo funciona el editor de menú",
+    "subtitle": "Herramientas sencillas para publicar tu menú rápidamente.",
+    "items": [
+      {
+        "title": "Añade categorías y platos",
+        "description": "Crea categorías como Entrantes, Principales, Bebidas — luego añade platos con nombres, descripciones, precios y fotos. Arrastra y suelta para reordenar. Activa o desactiva platos sin eliminarlos."
+      },
+      {
+        "title": "Los cambios se publican al instante",
+        "description": "Cada edición que hagas aparece en tu menú QR en segundos. Actualiza un precio, añade una especialidad del día o esconde un plato agotado — tus clientes siempre ven la última versión."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre la creación de tu menú QR.",
+    "items": [
+      {
+        "question": "¿Cómo creo un menú QR para mi restaurante?",
+        "answer": "Regístrate con tu email, nombra tu restaurante y empieza a añadir categorías y platos. Tu menú QR se genera automáticamente — imprime el código QR y colócalo en tus mesas."
+      },
+      {
+        "question": "¿Puedo añadir fotos a los platos?",
+        "answer": "Sí. Sube fotos directamente desde tu teléfono u ordenador. Las imágenes se optimizan automáticamente para una carga rápida en cualquier dispositivo."
+      },
+      {
+        "question": "¿Cuántos platos puedo añadir?",
+        "answer": "No hay límite de categorías ni de platos. Añade tantos como necesites — tu menú se mantiene rápido y organizado."
+      },
+      {
+        "question": "¿Puedo ocultar temporalmente un plato agotado?",
+        "answer": "Sí. Desactiva cualquier plato con un solo toque. Desaparece del menú público pero se mantiene en tu panel de control — actívalo cuando estés listo."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sistem za rezervaciju stolova za restorane — Online rezervacija | IQ Rest",
+    "description": "Omogućite gostima da rezervišu stolove direktno sa vašeg sajta. Automatska ili ručna potvrda, obaveštenja putem e-pošte i potpuno upravljanje kalendarom — sve uključeno."
+  },
+  "hero": {
+    "badge": "Rezervacije stolova",
+    "title": "Primajte rezervacije stolova 24/7 sa svog sajta",
+    "subtitle": "Gosti biraju datum, vreme i broj osoba — i rezervišu odmah. Vi upravljate svime iz svog kontrolnog panela, telefonski pozivi nisu potrebni.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Kako funkcionišu rezervacije stolova",
+    "subtitle": "Dva koraka od zahteva gosta do potvrđene rezervacije.",
+    "items": [
+      {
+        "title": "Gosti rezervišu sa vašeg sajta",
+        "description": "Klijenti posećuju stranicu vašeg restorana, tapnu 'Rezerviši sto', biraju datum i vreme, unose svoje podatke i šalju zahtev. Aplikacija nije potrebna — radi u svakom pretraživaču na svakom uređaju."
+      },
+      {
+        "title": "Upravljate rezervacijama u svom kontrolnom panelu",
+        "description": "Svaka rezervacija se pojavljuje u vašem kontrolnom panelu sa imenom gosta, telefonom, brojem osoba, datumom i napomenama. Potvrdite ili odbijte jednim tapom. Podesite automatsku potvrdu ili pregledajte svaku rezervaciju ručno."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o rezervacijama stolova.",
+    "items": [
+      {
+        "question": "Da li klijenti treba da naprave nalog za rezervaciju?",
+        "answer": "Ne. Gosti jednostavno popune svoje ime, broj telefona, broj osoba i željeno vreme. Nalog ili preuzimanje aplikacije nisu potrebni."
+      },
+      {
+        "question": "Mogu li da podesim dostupne vremenske termine i kapacitet?",
+        "answer": "Da. Definišite radno vreme, trajanje termina za rezervaciju i kapacitet stola. Sistem gostima prikazuje samo dostupne termine."
+      },
+      {
+        "question": "Hoću li dobiti obaveštenje kada neko rezerviše?",
+        "answer": "Da. Dobijate e-poruku za svaku novu rezervaciju. Gosti takođe dobijaju e-poruku sa potvrdom kada odobrite rezervaciju."
+      },
+      {
+        "question": "Mogu li da koristim i automatsku i ručnu potvrdu?",
+        "answer": "Da. Izaberite automatski režim za trenutnu potvrdu rezervacija na osnovu dostupnosti, ili ručni režim za pregled i odobravanje svakog zahteva lično."
+      }
+    ]
+  }
+}

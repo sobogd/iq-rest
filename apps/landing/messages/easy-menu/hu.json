@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "QR Menü Készítése Éttermének — Ingyenes Menü Készítő | IQ Rest",
+    "description": "Készítse el étterme digitális QR menüjét percek alatt. Adjon hozzá kategóriákat, ételeket, fényképeket, árakat — és osszon meg egy beolvasható QR kódot. Ingyenesen indulhat."
+  },
+  "hero": {
+    "badge": "Menü Készítő",
+    "title": "Készítsen Digitális QR Menüt Éttermének Percek Alatt",
+    "subtitle": "Adja hozzá a kategóriáit és ételeit, állítsa be az árakat, töltsön fel fényképeket — a QR menüje kész a megosztásra. Bármikor szerkeszthető, a változások azonnal megjelennek.",
+    "cta": "Hozza Létre Étlapját",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Hogyan Működik a Menüszerkesztő",
+    "subtitle": "Egyszerű eszközök, amelyekkel gyorsan online lesz a menüje.",
+    "items": [
+      {
+        "title": "Kategóriák és Ételek Hozzáadása",
+        "description": "Hozzon létre kategóriákat, mint Előételek, Főételek, Italok — majd adjon hozzá ételeket névvel, leírással, árakkal és fényképekkel. Húzza és ejtse az átrendezéshez. Kapcsoljon ki vagy be tételeket törlés nélkül."
+      },
+      {
+        "title": "A Változások Azonnal Érvénybe Lépnek",
+        "description": "Minden szerkesztés másodperceken belül megjelenik az élő QR menüben. Frissítsen egy árat, adjon hozzá napi ajánlatot, vagy rejtsen el egy elfogyott ételt — vendégei mindig a legfrissebb verziót látják."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit a QR menü készítéséről tudni kell.",
+    "items": [
+      {
+        "question": "Hogyan készítek QR menüt az éttermemnek?",
+        "answer": "Regisztráljon e-mail címével, nevezze el éttermét, és kezdje el hozzáadni a kategóriákat és ételeket. A QR menü automatikusan létrejön — nyomtassa ki a QR kódot és helyezze el az asztalokon."
+      },
+      {
+        "question": "Hozzáadhatok fényképeket az étlaphoz?",
+        "answer": "Igen. Töltsön fel fényképeket közvetlenül telefonjáról vagy számítógépéről. A képek automatikusan optimalizálódnak a gyors betöltéshez bármely eszközön."
+      },
+      {
+        "question": "Hány tételt adhatok hozzá?",
+        "answer": "Nincs korlát a kategóriák vagy menütételek számában. Adjon hozzá annyi ételt, amennyire szüksége van — a menü gyors és rendezett marad."
+      },
+      {
+        "question": "Ideiglenesen elrejthetek egy elfogyott ételt?",
+        "answer": "Igen. Egyetlen érintéssel kapcsoljon ki bármely tételt. Eltűnik a nyilvános menüből, de megmarad a vezérlőpulton — kapcsolja vissza, amikor kész."
+      }
+    ]
+  }
+}

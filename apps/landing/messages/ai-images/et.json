@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tehisintellekti toidufotode genereerimine menüüdele — Restorani menüüpildid | IQ Rest",
+    "description": "Genereerige tehisintellektiga ilusaid toidufotosid oma menüü jaoks. Fotograafi pole vaja — saage professionaalsed roapildid sekunditega, optimeeritud teie QR-menüü jaoks."
+  },
+  "hero": {
+    "badge": "Tehisintellekti pildid",
+    "title": "Professionaalsed menüüfotod ilma fotograafita",
+    "subtitle": "Genereerige tehisintellektiga vapustavaid toidupilte oma roogade jaoks. Sisestage lihtsalt roa nimi ja saate ilusa, optimeeritud foto, mis on valmis teie QR-menüü jaoks — sekunditega.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Kuidas tehisintellekti piltide genereerimine töötab",
+    "subtitle": "Roa nimest professionaalse fotoni ühe klõpsuga.",
+    "items": [
+      {
+        "title": "Genereerige pilte roanmede põhjal",
+        "description": "Sisestage oma roa nimi — 'Grillitud lõhe sidruniga', 'Margherita pitsa', 'Šokolaadi laavakook' — ja tehisintellekt genereerib professionaalse toidufoto. Valige erinevate stiilide ja taustade vahel."
+      },
+      {
+        "title": "Optimeeritud kiireks laadimiseks",
+        "description": "Iga genereeritud pilt tihendatakse automaatselt ja teisendatakse kaasaegsetesse vormingutesse. Teie menüü jääb välkkiireks mis tahes seadmes, isegi kui igal roal on foto."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma tehisintellekti menüüpiltide kohta.",
+    "items": [
+      {
+        "question": "Kuidas genereerida toidufoto?",
+        "answer": "Avage mis tahes menüüelement oma juhtpaneelil, puudutage 'Genereeri pilt' ja tehisintellekt loob professionaalse toidufoto roa nime ja kirjelduse põhjal. Valige endale meelepärane."
+      },
+      {
+        "question": "Kas ma saan selle asemel kasutada oma fotosid?",
+        "answer": "Kindlasti. Laadige oma fotod üles telefonist või arvutist. Tehisintellekti genereerimine on valikuline — kasutage seda, kui teil pole fotot käepärast."
+      },
+      {
+        "question": "Mitu pilti saan genereerida?",
+        "answer": "Piltide genereerimise limiidid sõltuvad teie plaanist. Basic sisaldab igakuist arvu ja Pro pakub kõrgemat limiiti. Oma fotosid saate alati piiramatult üles laadida."
+      },
+      {
+        "question": "Kas genereeritud pildid on minu restoranile ainulaadsed?",
+        "answer": "Jah. Iga pilt genereeritakse unikaalselt teie konkreetse roa jaoks. Pole stockfotosid — iga pilt luuakse värskelt teie menüüelemendi põhjal."
+      }
+    ]
+  }
+}

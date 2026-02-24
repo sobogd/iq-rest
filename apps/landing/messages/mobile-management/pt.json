@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Gerencie o menu do restaurante pelo celular — Painel mobile | IQ Rest",
+    "description": "Gerencie o menu QR do seu restaurante inteiramente pelo celular. Adicione pratos, atualize preços, envie fotos, confira análises — sem necessidade de computador."
+  },
+  "hero": {
+    "badge": "Painel mobile",
+    "title": "Gerencie todo o menu do restaurante pelo seu celular",
+    "subtitle": "Adicione pratos, mude preços, envie fotos, confira pedidos — tudo pelo smartphone. O painel foi criado com foco em mobile, você nunca vai precisar de um computador.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "Como funciona o gerenciamento mobile",
+    "subtitle": "O painel do seu restaurante, sempre no seu bolso.",
+    "items": [
+      {
+        "title": "Painel completo no seu smartphone",
+        "description": "Todas as funcionalidades funcionam perfeitamente na tela do celular — adicionar itens, editar categorias, gerenciar pedidos, ver análises. A interface foi projetada para toque, não apenas redimensionada do desktop."
+      },
+      {
+        "title": "Envie fotos diretamente da câmera",
+        "description": "Tire uma foto de um novo prato e envie para o seu menu em segundos. As imagens são otimizadas automaticamente. Atualize o prato especial do dia direto da cozinha."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre o gerenciamento mobile do menu.",
+    "items": [
+      {
+        "question": "Preciso instalar um aplicativo?",
+        "answer": "Não. O painel funciona no navegador do seu celular — Safari, Chrome ou qualquer outro. Basta fazer login e começar a gerenciar seu menu."
+      },
+      {
+        "question": "Posso fazer tudo pelo celular que faria no computador?",
+        "answer": "Sim. Todas as funcionalidades estão disponíveis no mobile — adicionar itens, enviar fotos, gerenciar categorias, ver análises, gerenciar pedidos e reservas."
+      },
+      {
+        "question": "Funciona em tablets também?",
+        "answer": "Sim. O painel se adapta a qualquer tamanho de tela — celulares, tablets e computadores. Use o dispositivo que for mais conveniente."
+      },
+      {
+        "question": "Várias pessoas podem gerenciar o menu?",
+        "answer": "Atualmente, uma conta gerencia o restaurante. Você pode fazer login em vários dispositivos simultaneamente — celular, tablet ou computador."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Isiklik tugi teie restorani veebilehele — Päris inimeste abi | IQ Rest",
+    "description": "Saage isiklikku abi päris inimestelt, mitte vestlusrobotitelt. Seadistamise abi, menüü optimeerimise nõuanded ja kiired vastused — saadaval igas plaanis, kaasa arvatud tasuta."
+  },
+  "hero": {
+    "badge": "Isiklik tugi",
+    "title": "Päris inimesed, päris abi — mitte vestlusrobotid",
+    "subtitle": "Kas teil on küsimus? Vajate abi menüü seadistamisel? Soovite funktsiooni soovitada? Kirjutage meile otse ja saage isiklik vastus kelleltki, kes mõistab restorane.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Kuidas tugi töötab",
+    "subtitle": "Abi, kui seda vajate, inimestelt, kellele läheb korda.",
+    "items": [
+      {
+        "title": "Kirjutage meile otse oma juhtpaneelilt",
+        "description": "Avage tugivestlus oma juhtpaneelil ja kirjeldage oma küsimust. Päris inimene loeb teie sõnumi ja vastab — tavaliselt mõne tunni jooksul tööpäevadel."
+      },
+      {
+        "title": "Abi seadistamise, optimeerimise ja muuga",
+        "description": "Kas vajate abi esimese roa lisamisel, nõu menüü korraldamisel või soovite uut funktsiooni soovitada — me oleme siin. Iga küsimus on oluline, olenemata selle suurusest."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma meie toe kohta.",
+    "items": [
+      {
+        "question": "Kas tugi on saadaval tasuta plaanis?",
+        "answer": "Jah. Isiklik tugi on saadaval igas plaanis, kaasa arvatud tasuta. Usume, et iga restoran väärib päris abi, olenemata nende tellimusest."
+      },
+      {
+        "question": "Kui kiiresti te vastate?",
+        "answer": "Tavaliselt mõne tunni jooksul tööpäevadel. Loeme iga sõnumi isiklikult ja püüame teie küsimuse lahendada ühe vastusega."
+      },
+      {
+        "question": "Kas saate aidata mul menüüd seadistada?",
+        "answer": "Kindlasti. Kui vajate abi roogade lisamisel, kategooriate korraldamisel, tõlgete seadistamisel või broneeringute konfigureerimisrl — lihtsalt küsige. Aitame teid hea meelega samm-sammult."
+      },
+      {
+        "question": "Kas ma saan uusi funktsioone soovitada?",
+        "answer": "Jah, ja me armastame seda! Paljud meie funktsioonid said alguse kasutajate ettepanekutest. Kirjutage meile oma ideega ja me kaalume seda tulevaste uuenduste jaoks."
+      }
+    ]
+  }
+}

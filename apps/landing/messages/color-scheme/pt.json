@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Design personalizado de menu QR e cores da marca — Branding de restaurante | IQ Rest",
+    "description": "Adapte seu menu QR à marca do seu restaurante. Escolha cores de destaque, temas claro/escuro e crie um visual consistente em todo o seu menu digital."
+  },
+  "hero": {
+    "badge": "Design personalizado",
+    "title": "Faça seu menu QR combinar com a marca do seu restaurante",
+    "subtitle": "Escolha a cor da sua marca — e todo o menu — botões, destaques, links — é atualizado instantaneamente. Temas claro e escuro incluídos.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "Como funciona o branding personalizado",
+    "subtitle": "Seu menu, suas cores — consistente em cada página.",
+    "items": [
+      {
+        "title": "Escolha sua cor de destaque",
+        "description": "Selecione entre 12 predefinições ou insira a cor exata da sua marca com um código hexadecimal. Cada botão, link e destaque do seu menu se adapta instantaneamente — sem necessidade de habilidades de design."
+      },
+      {
+        "title": "Temas claro e escuro automáticos",
+        "description": "Seu menu suporta automaticamente os modos claro e escuro. O sistema garante que a cor da sua marca fique ótima em ambos os temas com contraste e legibilidade otimizados."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre personalização do menu.",
+    "items": [
+      {
+        "question": "Posso usar a cor exata da minha marca?",
+        "answer": "Sim. Insira qualquer código de cor hexadecimal, ou escolha entre 12 predefinições cuidadosamente selecionadas. Sua cor de destaque é aplicada em todas as páginas do menu."
+      },
+      {
+        "question": "Funciona com o modo escuro?",
+        "answer": "Sim. Seu esquema de cores se adapta automaticamente aos temas claro e escuro. O sistema ajusta o contraste para manter seu menu legível e bonito em qualquer modo."
+      },
+      {
+        "question": "Posso mudar as cores depois de publicar?",
+        "answer": "Com certeza. Mude sua cor de destaque a qualquer momento pelo painel de controle. As alterações aparecem instantaneamente no menu publicado — sem necessidade de republicar."
+      },
+      {
+        "question": "Meu QR code também terá as cores da marca?",
+        "answer": "Seu QR code é gerado separadamente e pode ser personalizado de forma independente. A cor de destaque se aplica às páginas do menu digital, navegação e elementos interativos."
+      }
+    ]
+  }
+}

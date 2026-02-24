@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Individualus QR meniu dizainas ir prekės ženklo spalvos — Restorano prekės ženklas | IQ Rest",
+    "description": "Pritaikykite savo QR meniu restorano prekės ženklui. Pasirinkite akcentines spalvas, šviesią/tamsią temą ir sukurkite vientisą vaizdą visame skaitmeniniame meniu."
+  },
+  "hero": {
+    "badge": "Individualus dizainas",
+    "title": "Pritaikykite QR meniu savo restorano prekės ženklui",
+    "subtitle": "Pasirinkite savo prekės ženklo spalvą, ir visas meniu — mygtukai, akcentai, nuorodos — atnaujinamas iškart. Šviesi ir tamsi temos įtrauktos.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia individualus prekės ženklas",
+    "subtitle": "Jūsų meniu, jūsų spalvos — vientisa kiekviename puslapyje.",
+    "items": [
+      {
+        "title": "Pasirinkite savo akcentinę spalvą",
+        "description": "Pasirinkite iš 12 kruopščiai atrinktų nustatymų arba įveskite tikslią prekės ženklo spalvą hex kodu. Kiekvienas mygtukas, nuoroda ir akcentas meniu prisitaiko iškart — dizaino įgūdžių nereikia."
+      },
+      {
+        "title": "Automatinės šviesios ir tamsios temos",
+        "description": "Jūsų meniu automatiškai palaiko ir šviesų, ir tamsų režimą. Sistema užtikrina, kad jūsų prekės ženklo spalva puikiai atrodo abiejose temose su optimizuotu kontrastu ir skaitomumu."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie meniu pritaikymą.",
+    "items": [
+      {
+        "question": "Ar galiu naudoti tikslią savo prekės ženklo spalvą?",
+        "answer": "Taip. Įveskite bet kokį hex spalvos kodą arba pasirinkite iš 12 kruopščiai atrinktų nustatymų. Jūsų akcentinė spalva taikoma visuose meniu puslapiuose."
+      },
+      {
+        "question": "Ar tai veikia su tamsiuoju režimu?",
+        "answer": "Taip. Jūsų spalvų schema automatiškai prisitaiko ir prie šviesios, ir prie tamsios temos. Sistema reguliuoja kontrastą, kad meniu būtų skaitomas ir gražus bet kuriuo režimu."
+      },
+      {
+        "question": "Ar galiu pakeisti spalvas po paskelbimo?",
+        "answer": "Žinoma. Pakeiskite akcentinę spalvą bet kuriuo metu iš valdymo skydelio. Atnaujinimai iškart pasirodo jūsų viešame meniu — pakartotino paskelbimo nereikia."
+      },
+      {
+        "question": "Ar mano QR kodas taip pat atitiks prekės ženklo spalvas?",
+        "answer": "Jūsų QR kodas generuojamas atskirai ir gali būti pritaikytas nepriklausomai. Akcentinė spalva taikoma skaitmeninio meniu puslapiams, navigacijai ir interaktyviems elementams."
+      }
+    ]
+  }
+}

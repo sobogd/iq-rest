@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Site de restaurante com fundo de vídeo e foto — Criador de sites | IQ Rest",
+    "description": "Crie um site de restaurante impressionante com fundos de vídeo ou foto personalizados. Envie seu vídeo de ambiente ou fotografia gastronômica — impressione os clientes desde o primeiro scan."
+  },
+  "hero": {
+    "badge": "Design do site",
+    "title": "Crie um site de restaurante impressionante com fundos de vídeo",
+    "subtitle": "Envie um vídeo do ambiente do seu restaurante ou uma bela foto gastronômica como fundo. Os clientes veem uma experiência profissional e de marca no momento em que escaneiam seu QR code.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "Como funcionam os fundos personalizados",
+    "subtitle": "Cause uma primeira impressão duradoura com visuais que combinam com sua marca.",
+    "items": [
+      {
+        "title": "Envie fundos de vídeo ou foto",
+        "description": "Adicione um vídeo em loop do ambiente do restaurante, um timelapse da cozinha ou uma foto gastronômica de alta qualidade. O fundo aparece na sua página inicial — criando uma experiência imersiva para os clientes."
+      },
+      {
+        "title": "Otimizado para velocidade em qualquer dispositivo",
+        "description": "Vídeos e imagens são automaticamente comprimidos e carregados de forma lazy. Seu site continua rápido mesmo com conexões móveis lentas — sem buffering, sem atrasos, apenas uma experiência fluida."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre o design do site do restaurante.",
+    "items": [
+      {
+        "question": "Quais formatos de vídeo são suportados?",
+        "answer": "Os formatos MP4 e WebM funcionam melhor. Os vídeos são comprimidos automaticamente para carregamento rápido. Mantenha os vídeos com menos de 30 segundos para a melhor experiência mobile."
+      },
+      {
+        "question": "Um fundo de vídeo vai deixar meu site lento?",
+        "answer": "Não. Os vídeos são comprimidos, carregados de forma lazy e otimizados automaticamente. Em conexões lentas, o sistema usa uma imagem estática para manter a experiência fluida."
+      },
+      {
+        "question": "Posso usar uma foto em vez de vídeo?",
+        "answer": "Sim. Envie qualquer foto — ela será otimizada e exibida como fundo em tela cheia. Você pode alternar entre vídeo e foto a qualquer momento."
+      },
+      {
+        "question": "Preciso de um designer para configurar isso?",
+        "answer": "Não. Basta enviar seu vídeo ou foto pelo painel de controle. O sistema cuida automaticamente do dimensionamento, compressão e layout. Seu site fica profissional sem habilidades de design."
+      }
+    ]
+  }
+}

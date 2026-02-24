@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Besplatan generator sajta za restorane — Kreirajte za 5 minuta | IQ Rest",
+    "description": "Dobijte profesionalan sajt restorana sa QR menijem, stranicom kontakata i mapom — samo unesite e-poštu. Spreman za 5 minuta, tehničke veštine nisu potrebne."
+  },
+  "hero": {
+    "badge": "Besplatan sajt",
+    "title": "Dobijte profesionalan sajt restorana za 5 minuta",
+    "subtitle": "Unesite e-poštu, imenujte restoran i odmah dobijate kompletan sajt sa QR menijem, stranicom kontakata sa mapom i modernim responzivnim dizajnom. Bez kodiranja, bez dizajnera.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Kako funkcioniše",
+    "subtitle": "Od nule do aktivnog sajta restorana u tri koraka.",
+    "items": [
+      {
+        "title": "Registrujte se samo sa e-poštom",
+        "description": "Bez komplikovanih formulara za registraciju. Unesite e-poštu, potvrdite kodom i vaš kontrolni panel restorana je spreman. Imenujte restoran i sajt odmah postaje aktivan."
+      },
+      {
+        "title": "Sve uključeno od samog početka",
+        "description": "Vaš sajt dolazi sa QR menijem, stranicom kontakata sa Google Mapama, jezičkom podrškom, responzivnim dizajnom za mobilne uređaje i vašim jedinstvenim URL-om. Samo dodajte jela i počnite da delite."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o kreiranju sajta restorana.",
+    "items": [
+      {
+        "question": "Kako da kreiram besplatan sajt restorana?",
+        "answer": "Unesite e-poštu na IQ Rest, potvrdite kodom, imenujte restoran — gotovo. Vaš sajt sa QR menijem je aktivan za manje od 5 minuta. Kreditna kartica nije potrebna."
+      },
+      {
+        "question": "Da li su mi potrebne tehničke veštine?",
+        "answer": "Ne. Sve je dizajnirano za vlasnike restorana, ne za programere. Dodajte jela, otpremite fotografije i upravljajte sajtom potpuno sa telefona."
+      },
+      {
+        "question": "Šta je uključeno u besplatan plan?",
+        "answer": "Kompletan sajt restorana, QR meni, stranica kontakata sa mapom, analitika, prilagođena šema boja i do 2 jezika. Bez probnog perioda — besplatno je zauvek."
+      },
+      {
+        "question": "Mogu li da koristim sopstveni naziv domena?",
+        "answer": "Na besplatnom i Basic planu, vaš sajt je hostovan na iq-rest.com/m/vaše-ime. Pro plan podržava prilagođene nazive domena za potpunu kontrolu brenda."
+      }
+    ]
+  }
+}

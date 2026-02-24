@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restaurantwebsite met video- & foto-achtergrond — Websitebouwer | IQ Rest",
+    "description": "Maak een prachtige restaurantwebsite met aangepaste video- of foto-achtergronden. Upload uw sfeer video of food fotografie — maak indruk op gasten vanaf de eerste scan."
+  },
+  "hero": {
+    "badge": "Website-ontwerp",
+    "title": "Maak een prachtige restaurantwebsite met video-achtergronden",
+    "subtitle": "Upload een sfeervideo van uw restaurant of een mooie foodfoto als achtergrond. Gasten zien een professionele, merkgebonden ervaring zodra ze uw QR-code scannen.",
+    "cta": "Menu aanmaken",
+    "ctaDemo": "Demo bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "features": {
+    "title": "Hoe aangepaste achtergronden werken",
+    "subtitle": "Maak een blijvende eerste indruk met beelden die bij uw merk passen.",
+    "items": [
+      {
+        "title": "Upload video- of foto-achtergronden",
+        "description": "Voeg een loopvideo toe van uw restaurantsfeer, een timelapse van uw keuken of een hoogwaardige foodfoto. De achtergrond verschijnt op uw homepage — voor een meeslepende ervaring voor gasten."
+      },
+      {
+        "title": "Geoptimaliseerd voor snelheid op elk apparaat",
+        "description": "Video's en afbeeldingen worden automatisch gecomprimeerd en lazy geladen. Uw website blijft snel, zelfs bij trage mobiele verbindingen — geen buffering, geen vertragingen, alleen een soepele ervaring."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over het ontwerp van uw restaurantwebsite.",
+    "items": [
+      {
+        "question": "Welke videoformaten worden ondersteund?",
+        "answer": "MP4- en WebM-formaten werken het beste. Video's worden automatisch gecomprimeerd voor snel laden. Houd video's onder 30 seconden voor de beste mobiele ervaring."
+      },
+      {
+        "question": "Zal een video-achtergrond mijn website vertragen?",
+        "answer": "Nee. Video's worden gecomprimeerd, lazy geladen en automatisch geoptimaliseerd. Bij trage verbindingen schakelt het systeem over naar een statisch beeld om de ervaring soepel te houden."
+      },
+      {
+        "question": "Kan ik een foto gebruiken in plaats van video?",
+        "answer": "Ja. Upload elke foto — deze wordt geoptimaliseerd en weergegeven als achtergrond op volledig scherm. U kunt op elk moment wisselen tussen video en foto."
+      },
+      {
+        "question": "Heb ik een designer nodig om dit in te stellen?",
+        "answer": "Nee. Upload gewoon uw video of foto vanuit het dashboard. Het systeem regelt automatisch de afmetingen, compressie en lay-out. Uw website ziet er professioneel uit zonder designvaardigheden."
+      }
+    ]
+  }
+}

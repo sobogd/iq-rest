@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Hallitse ravintolasi ruokalistaa puhelimesta — Mobiilihallintapaneeli | IQ Rest",
+    "description": "Pyorita ravintolasi QR-ruokalistaa kokonaan puhelimestasi. Lisaa annoksia, paivita hintoja, lataa kuvia, tarkista analytiikkaa — tietokonetta ei tarvita."
+  },
+  "hero": {
+    "badge": "Mobiilihallintapaneeli",
+    "title": "Hallitse koko ravintolasi ruokalistaa puhelimestasi",
+    "subtitle": "Lisaa annoksia, muuta hintoja, lataa kuvia, tarkista tilauksia — kaikki alypuhelimestasi. Hallintapaneeli on rakennettu mobiili ensin, joten et tarvitse koskaan tietokonetta.",
+    "cta": "Luo ruokalista",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "features": {
+    "title": "Miten mobiilihallinta toimii",
+    "subtitle": "Ravintolasi hallintapaneeli aina taskussasi.",
+    "items": [
+      {
+        "title": "Taysi hallintapaneeli alypuhelimessasi",
+        "description": "Jokainen ominaisuus toimii taydellisesti puhelimen naytolla — kohteiden lisays, kategorioiden muokkaus, tilausten hallinta, analytiikan tarkistus. Kayttoliittyma on suunniteltu kosketukselle, ei vain pienennetty tyopoydalta."
+      },
+      {
+        "title": "Lataa kuvia suoraan kamerasta",
+        "description": "Ota kuva uudesta annoksesta ja lataa se ruokalistaan sekunneissa. Kuvat optimoidaan automaattisesti. Paivita paivan erikoisuus seistessasi keittiossa."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mita sinun taytyy tietaa mobiiliruokalistahallinnasta.",
+    "items": [
+      {
+        "question": "Tarvitseeko minun asentaa sovellus?",
+        "answer": "Ei. Hallintapaneeli toimii puhelimesi verkkoselaimessa — Safari, Chrome tai muussa. Kirjaudu sisaan ja ala hallita ruokalistaasi."
+      },
+      {
+        "question": "Voinko tehda puhelimella kaiken mita tietokoneella?",
+        "answer": "Kylla. Jokainen ominaisuus on kaytettavissa mobiilissa — kohteiden lisays, kuvien lataus, kategorioiden hallinta, analytiikan tarkistus, tilausten ja varausten kasittely."
+      },
+      {
+        "question": "Toimiiko se myos tableteilla?",
+        "answer": "Kylla. Hallintapaneeli mukautuu kaikkiin nayttokokoihin — puhelimet, tabletit ja poytakoneet. Kayta mika tahansa laite on katevin."
+      },
+      {
+        "question": "Voiko useampi henkilo hallita ruokalistaa?",
+        "answer": "Tallae hetkellae yksi tili hallitsee ravintolaa. Voit kirjautua sisaan usealta laitteelta samanaikaisesti — puhelimesta, tabletista tai tietokoneesta."
+      }
+    ]
+  }
+}

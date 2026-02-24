@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Pārvaldiet restorāna ēdienkarti no tālruņa — Mobilais vadības panelis | IQ Rest",
+    "description": "Pārvaldiet sava restorāna QR ēdienkarti pilnībā no tālruņa. Pievienojiet ēdienus, atjauniniet cenas, augšupielādējiet fotogrāfijas, pārbaudiet analītiku — dators nav nepieciešams."
+  },
+  "hero": {
+    "badge": "Mobilais vadības panelis",
+    "title": "Pārvaldiet visu restorāna ēdienkarti no tālruņa",
+    "subtitle": "Pievienojiet ēdienus, mainiet cenas, augšupielādējiet fotogrāfijas, pārbaudiet pasūtījumus — visu no sava viedtālruņa. Vadības panelis ir veidots mobilajam — dators nekad nav nepieciešams.",
+    "cta": "Izveidojiet savu ēdienkarti",
+    "ctaDemo": "Skatīt demo",
+    "noCreditCard": "Kredītkarte nav nepieciešama. Pieejams bezmaksas plāns."
+  },
+  "features": {
+    "title": "Kā darbojas mobilā pārvaldība",
+    "subtitle": "Jūsu restorāna vadības panelis vienmēr kabatā.",
+    "items": [
+      {
+        "title": "Pilns vadības panelis jūsu viedtālrunī",
+        "description": "Katra funkcija lieliski darbojas jūsu tālruņa ekrānā — pievienojiet vienumus, rediģējiet kategorijas, pārvaldiet pasūtījumus, pārbaudiet analītiku. Saskarne ir veidota pieskārieniem, nevis vienkārši samazināta no darbvirsmas."
+      },
+      {
+        "title": "Augšupielādējiet fotogrāfijas tieši no kameras",
+        "description": "Nofotografējiet jaunu ēdienu un augšupielādējiet to savā ēdienkārtē dažās sekundēs. Attēli tiek automātiski optimizēti. Atjauniniet dienas piedāvājumu, stāvot virtuvē."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "subtitle": "Viss, kas jums jāzina par mobilo ēdienkartes pārvaldību.",
+    "items": [
+      {
+        "question": "Vai man jāinstalē lietotne?",
+        "answer": "Nē. Vadības panelis darbojas jūsu tālruņa tīmekļa pārlūkprogrammā — Safari, Chrome vai jebkurā citā. Vienkārši piesakieties un sāciet pārvaldīt savu ēdienkarti."
+      },
+      {
+        "question": "Vai es varu no tālruņa darīt visu, ko varu no datora?",
+        "answer": "Jā. Katra funkcija ir pieejama mobilajā ierīcē — vienumu pievienošana, fotogrāfiju augšupielāde, kategoriju pārvaldīšana, analītikas pārbaude, pasūtījumu un rezervāciju apstrāde."
+      },
+      {
+        "question": "Vai tas darbojas arī planšetdatoros?",
+        "answer": "Jā. Vadības panelis pielāgojas jebkuram ekrāna izmēram — tālruņi, planšetdatori un galddatori. Izmantojiet ierīci, kas ir visērtākā."
+      },
+      {
+        "question": "Vai vairāki cilvēki var pārvaldīt ēdienkarti?",
+        "answer": "Pašlaik viens konts pārvalda restorānu. Jūs varat pierakstīties no vairākām ierīcēm vienlaicīgi — no tālruņa, planšetdatora vai datora."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Poytavarausjarjestelma ravintoloille — Varaukset verkossa | IQ Rest",
+    "description": "Anna vieraiden varata poytia suoraan verkkosivultasi. Automaattinen tai manuaalinen vahvistus, sahkopostivahvistukset ja taysimaarainen kalenterinhallinta — kaikki mukana."
+  },
+  "hero": {
+    "badge": "Poytavaraukset",
+    "title": "Vastaanota poytavarauksia ympaari vuorokauden verkkosivultasi",
+    "subtitle": "Vieraat valitsevat paivamaaran, ajan ja seurueen koon — ja varaavat heti. Hallitset kaiken hallintapaneelista, puheluita ei tarvita.",
+    "cta": "Luo ruokalista",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "features": {
+    "title": "Miten poytavaraukset toimivat",
+    "subtitle": "Kaksi askelta vieraan pyynnosta vahvistettuun varaukseen.",
+    "items": [
+      {
+        "title": "Vieraat varaavat verkkosivultasi",
+        "description": "Asiakkaat vierailevat ravintolasi sivulla, napauttavat 'Varaa poyta', valitsevat paivamaaran ja ajan, syottavat tietonsa ja lahettavat. Sovellusta ei tarvita — toimii kaikissa selaimissa kaikilla laitteilla."
+      },
+      {
+        "title": "Hallitset varauksia hallintapaneelissa",
+        "description": "Jokainen varaus nakyy hallintapaneelissa vieraan nimen, puhelinnumeron, seurueen koon, paivamaaran ja muistiinpanojen kanssa. Vahvista tai hylkaa yhdella napautuksella. Aseta automaattinen vahvistus tai tarkista jokainen varaus manuaalisesti."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mita sinun taytyy tietaa poytavarauksista.",
+    "items": [
+      {
+        "question": "Tarvitsevatko asiakkaat tilin varatakseen?",
+        "answer": "Eivat. Vieraat tayttavat yksinkertaisesti nimenssa, puhelinnumeronsa, seurueen koon ja toivotun ajankohdan. Tilia tai sovelluksen latausta ei tarvita."
+      },
+      {
+        "question": "Voinko asettaa saatavilla olevat ajat ja kapasiteetin?",
+        "answer": "Kylla. Maarita aukioloajat, varausaikavalien kesto ja poytakapasiteetti. Jarjestelma nayttaa vieraille vain saatavilla olevat ajat."
+      },
+      {
+        "question": "Saanko ilmoituksen kun joku varaa?",
+        "answer": "Kylla. Saat sahkopostin jokaisesta uudesta varauksesta. Vieraat saavat myos vahvistussahkopostin kun hyvaksyt varauksen."
+      },
+      {
+        "question": "Voinko kayttaa seka automaattista etta manuaalista vahvistusta?",
+        "answer": "Kylla. Valitse automaattinen tila vahvistaaksesi varaukset heti saatavuuden perusteella, tai manuaalinen tila tarkastaaksesi ja hyvaksyaksesi jokaisen pyynno itse."
+      }
+    ]
+  }
+}

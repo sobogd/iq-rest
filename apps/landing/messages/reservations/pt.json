@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sistema de reserva de mesas para restaurantes — Reservas online | IQ Rest",
+    "description": "Permita que os clientes reservem mesas diretamente do seu site. Confirmação automática ou manual, notificações por e-mail e gestão completa do calendário — tudo incluído."
+  },
+  "hero": {
+    "badge": "Reservas de mesas",
+    "title": "Aceite reservas de mesas 24/7 a partir do seu site",
+    "subtitle": "Os clientes escolhem data, hora e número de pessoas — e reservam instantaneamente. Você gerencia tudo pelo painel de controle, sem ligações telefônicas.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "Como funcionam as reservas de mesas",
+    "subtitle": "Dois passos do pedido do cliente até a reserva confirmada.",
+    "items": [
+      {
+        "title": "Os clientes reservam pelo seu site",
+        "description": "Os clientes visitam a página do seu restaurante, tocam em «Reservar mesa», escolhem data e hora, inserem seus dados e enviam o pedido. Não é necessário aplicativo — funciona em qualquer navegador em qualquer dispositivo."
+      },
+      {
+        "title": "Você gerencia as reservas no seu painel",
+        "description": "Cada reserva aparece no seu painel com nome do cliente, telefone, número de pessoas, data e observações. Confirme ou recuse com um toque. Configure confirmação automática ou revise cada reserva manualmente."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre reservas de mesas.",
+    "items": [
+      {
+        "question": "Os clientes precisam criar uma conta para reservar?",
+        "answer": "Não. Os clientes simplesmente preenchem o nome, número de telefone, número de pessoas e horário preferido. Não é necessário criar conta ou baixar aplicativo."
+      },
+      {
+        "question": "Posso definir os horários disponíveis e a capacidade?",
+        "answer": "Sim. Defina seu horário de funcionamento, a duração dos intervalos de reserva e a capacidade das mesas. O sistema mostra aos clientes apenas os horários disponíveis."
+      },
+      {
+        "question": "Serei notificado quando alguém reservar?",
+        "answer": "Sim. Você recebe um e-mail para cada nova reserva. Os clientes também recebem um e-mail de confirmação quando você aprova a reserva."
+      },
+      {
+        "question": "Posso usar confirmação automática e manual?",
+        "answer": "Sim. Escolha o modo automático para confirmar reservas instantaneamente com base na disponibilidade, ou o modo manual para revisar e aprovar cada pedido pessoalmente."
+      }
+    ]
+  }
+}

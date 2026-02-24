@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Bordreservationssystem til restauranter — Online booking | IQ Rest",
+    "description": "Lad gaester booke borde direkte fra din hjemmeside. Automatisk eller manuel bekraeftelse, e-mail-notifikationer og fuld kalenderstyring — alt inkluderet."
+  },
+  "hero": {
+    "badge": "Bordreservationer",
+    "title": "Modtag bordreservationer doegnet rundt fra din hjemmeside",
+    "subtitle": "Gaester vaelger dato, tidspunkt og antal personer — og booker med det samme. Du styrer alt fra dit kontrolpanel, ingen telefonopkald noedvendige.",
+    "cta": "Opret din menu",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
+  },
+  "features": {
+    "title": "Hvordan bordreservationer fungerer",
+    "subtitle": "To trin fra gaestens foresoergsel til bekraeftet booking.",
+    "items": [
+      {
+        "title": "Gaester booker fra din hjemmeside",
+        "description": "Kunder besoeger din restaurantside, trykker 'Reserver et bord', vaelger dato og tid, indtaster deres oplysninger og sender. Ingen app noedvendig — virker i alle browsere paa alle enheder."
+      },
+      {
+        "title": "Du styrer bookinger i dit kontrolpanel",
+        "description": "Hver reservation vises i dit kontrolpanel med gaestens navn, telefon, antal personer, dato og noter. Bekraeft eller afvis med et tryk. Indstil automatisk bekraeftelse eller gennemgaa hver booking manuelt."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spoergsmaal",
+    "subtitle": "Alt du behoever at vide om bordreservationer.",
+    "items": [
+      {
+        "question": "Skal kunder oprette en konto for at booke?",
+        "answer": "Nej. Gaester udfylder blot deres navn, telefonnummer, antal personer og foretrukne tidspunkt. Ingen konto eller app-download paakraevet."
+      },
+      {
+        "question": "Kan jeg indstille tilgaengelige tidspunkter og kapacitet?",
+        "answer": "Ja. Definer dine aabningstider, reservationsinterval og bordskapacitet. Systemet viser kun tilgaengelige tider til gaesterne."
+      },
+      {
+        "question": "Faar jeg besked, naar nogen booker?",
+        "answer": "Ja. Du modtager en e-mail for hver ny reservation. Gaester faar ogsaa en bekraeftelses-e-mail, naar du godkender bookingen."
+      },
+      {
+        "question": "Kan jeg bruge baade automatisk og manuel bekraeftelse?",
+        "answer": "Ja. Vaelg automatisk tilstand for at bekraefte bookinger med det samme baseret paa tilgaengelighed, eller manuel tilstand for at gennemgaa og godkende hver foresoergsel selv."
+      }
+    ]
+  }
+}

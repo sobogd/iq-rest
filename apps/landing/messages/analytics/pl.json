@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Analityka restauracji i statystyki menu QR — Śledź odwiedzających | IQ Rest",
+    "description": "Śledź skanowania menu QR, wyświetlenia stron, popularne języki i trendy odwiedzających. Panel analityki w czasie rzeczywistym dla strony Twojej restauracji."
+  },
+  "hero": {
+    "badge": "Analityka",
+    "title": "Zobacz dokładnie, jak goście korzystają z Twojego menu QR",
+    "subtitle": "Śledź dzienne skanowania, wyświetlenia stron, popularne języki, statystyki urządzeń i trendy w czasie. Podejmuj decyzje oparte na danych, aby zoptymalizować menu i rozwinąć biznes.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Co możesz śledzić",
+    "subtitle": "Wgląd w czasie rzeczywistym w obecność Twojej restauracji online.",
+    "items": [
+      {
+        "title": "Dzienne wyświetlenia, skanowania i trendy odwiedzin",
+        "description": "Zobacz, ile osób skanuje Twój kod QR i odwiedza menu każdego dnia, tygodnia i miesiąca. Śledź trendy w czasie, aby zrozumieć wzorce sezonowe i mierzyć wpływ promocji."
+      },
+      {
+        "title": "Podział według języków i urządzeń",
+        "description": "Dowiedz się, jakie języki preferują Twoi goście i jakich urządzeń używają. Te dane pomagają priorytetyzować tłumaczenia i upewnić się, że menu wygląda idealnie na najpopularniejszych urządzeniach."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o analityce restauracji.",
+    "items": [
+      {
+        "question": "Jakie metryki mogę śledzić?",
+        "answer": "Dzienne, tygodniowe i miesięczne wyświetlenia stron. Unikalni odwiedzający. Najczęściej przeglądane strony. Preferencje językowe. Podział według urządzeń i przeglądarek. Wszystko aktualizowane w czasie rzeczywistym."
+      },
+      {
+        "question": "Czy analityka jest zawarta w darmowym planie?",
+        "answer": "Tak. Podstawowa analityka jest dostępna w każdym planie, w tym darmowym. Możesz widzieć wyświetlenia, odwiedzających i statystyki językowe od pierwszego dnia."
+      },
+      {
+        "question": "Czy mogę zobaczyć, które strony są najpopularniejsze?",
+        "answer": "Tak. Panel pokazuje wyświetlenia w podziale na strony — strona główna, menu, kontakty, rezerwacje i wybór języka. Zobacz dokładnie, gdzie goście spędzają czas."
+      },
+      {
+        "question": "Jak daleko wstecz sięgają dane?",
+        "answer": "Dane analityczne są przechowywane od dnia utworzenia restauracji. Możesz przeglądać dzienne, tygodniowe i miesięczne trendy za całą historię."
+      }
+    ]
+  }
+}

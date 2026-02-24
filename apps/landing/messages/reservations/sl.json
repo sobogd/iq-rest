@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sistem Rezervacije Miz za Restavracije — Spletna Rezervacija | IQ Rest",
+    "description": "Omogočite gostom, da rezervirajo mize neposredno z vaše spletne strani. Avtomatska ali ročna potrditev, e-poštna obvestila in popolno upravljanje koledarja — vse vključeno."
+  },
+  "hero": {
+    "badge": "Rezervacije Miz",
+    "title": "Sprejemajte Rezervacije Miz 24/7 z Vaše Spletne Strani",
+    "subtitle": "Gostje izberejo datum, uro in število oseb — in rezervirajo takoj. Vse upravljate z nadzorne plošče, brez telefonskih klicev.",
+    "cta": "Ustvarite Svoj Jedilnik",
+    "ctaDemo": "Ogled Predstavitve",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
+  },
+  "features": {
+    "title": "Kako Delujejo Rezervacije Miz",
+    "subtitle": "Dva koraka od zahteve gosta do potrjene rezervacije.",
+    "items": [
+      {
+        "title": "Gostje Rezervirajo z Vaše Spletne Strani",
+        "description": "Stranke obiščejo stran vaše restavracije, tapnejo 'Rezerviraj Mizo', izberejo datum in uro, vnesejo svoje podatke in pošljejo. Aplikacija ni potrebna — deluje v katerem koli brskalniku na kateri koli napravi."
+      },
+      {
+        "title": "Upravljajte Rezervacije z Nadzorne Plošče",
+        "description": "Vsaka rezervacija se prikaže na vaši nadzorni plošči z imenom gosta, telefonom, številom oseb, datumom in opombami. Potrdite ali zavrnite z enim dotikom. Nastavite avtomatsko potrditev ali preglejte vsako rezervacijo ročno."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta Vprašanja",
+    "subtitle": "Vse, kar morate vedeti o rezervacijah miz.",
+    "items": [
+      {
+        "question": "Ali morajo stranke ustvariti račun za rezervacijo?",
+        "answer": "Ne. Gostje preprosto izpolnijo ime, telefonsko številko, število oseb in želeno uro. Račun ali prenos aplikacije ni potreben."
+      },
+      {
+        "question": "Ali lahko nastavim razpoložljive časovne termine in kapaciteto?",
+        "answer": "Da. Določite delovni čas, trajanje rezervacijskega termina in kapaciteto miz. Sistem gostom prikazuje samo razpoložljive termine."
+      },
+      {
+        "question": "Ali bom obveščen, ko nekdo rezervira?",
+        "answer": "Da. Za vsako novo rezervacijo prejmete e-pošto. Gostje prav tako prejmejo potrditveno e-pošto, ko odobrite rezervacijo."
+      },
+      {
+        "question": "Ali lahko uporabljam avtomatsko in ročno potrditev?",
+        "answer": "Da. Izberite avtomatski način za takojšnjo potrditev rezervacij glede na razpoložljivost ali ročni način za osebni pregled in odobritev vsake zahteve."
+      }
+    ]
+  }
+}

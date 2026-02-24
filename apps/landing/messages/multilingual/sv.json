@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Flersprakig restaurangwebbplats — Meny pa over 25 sprak | IQ Rest",
+    "description": "Din restaurangwebbplats och QR-meny pa over 25 sprak. Gaster byter sprak med ett tryck — meny, kontakter och reservationer anpassas direkt."
+  },
+  "hero": {
+    "badge": "Flersprakig",
+    "title": "Din restaurangwebbplats pa over 25 sprak",
+    "subtitle": "Turister och internationella gaster ser din meny pa sitt eget sprak. Ett tryck for att byta — allt anpassas direkt: ratter, beskrivningar, kontakter, navigation.",
+    "cta": "Skapa din meny",
+    "ctaDemo": "Visa demo",
+    "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+  },
+  "features": {
+    "title": "Hur flersprakigt stod fungerar",
+    "subtitle": "Tala dina kunders sprak utan extra arbete.",
+    "items": [
+      {
+        "title": "Gaster valjer sitt sprak",
+        "description": "En sprakvaljare visas pa din meny. Gaster trycker pa sitt foredagna sprak, och hela webbplatsen — meny, beskrivningar, kontaktinfo, navigation — byter direkt. Ingen omladdning behovs."
+      },
+      {
+        "title": "Lagg till sprak fran din kontrollpanel",
+        "description": "Aktivera nya sprak med ett klick. Anvand AI-oversattning for att fylla i innehallet, eller ange oversattningar manuellt. Varje sprak kan slas pa eller av oberoende."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vanliga fragor",
+    "subtitle": "Allt du behover veta om flersprakiga menyer.",
+    "items": [
+      {
+        "question": "Hur manga sprak kan jag lagga till i min meny?",
+        "answer": "Upp till over 25 sprak inklusive alla stora europeiska sprak, kinesiska, japanska, koreanska, arabiska, farsi och fler. Lagg till sa manga som dina gaster behover."
+      },
+      {
+        "question": "Behover jag oversatta allt manuellt?",
+        "answer": "Nej. Anvand den inbyggda AI-oversattningen for att oversatta hela din meny med ett klick. Du kan ocksa redigera vilken oversattning som helst manuellt for full kontroll."
+      },
+      {
+        "question": "Sparas sprakinstaIlningen?",
+        "answer": "Ja. Nar en gast valjer ett sprak sparas det till nasta besok. De behover inte valja igen nar de aterkomrner."
+      },
+      {
+        "question": "Ar flersprakigt stod tillgangligt pa gratisplanen?",
+        "answer": "Gratisplanen inkluderar upp till 2 sprak. Basic- och Pro-planer erbjuder obegransat antal sprak med AI-oversattning inkluderad."
+      }
+    ]
+  }
+}

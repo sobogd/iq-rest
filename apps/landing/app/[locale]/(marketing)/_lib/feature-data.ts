@@ -32,6 +32,15 @@ export const FEATURE_IMAGES: Record<string, { src: string; alt: string }[]> = {
     { src: "/samples/sample-design-settings.webp", alt: "Mobile-friendly menu design settings" },
     { src: "/samples/sample-qr-settings.webp", alt: "QR code customization from smartphone" },
   ],
+  "online-orders": [
+    { src: "/samples/order_public_3.webp", alt: "Order confirmation screen" },
+    { src: "/samples/order_public_2.webp", alt: "Selecting items from restaurant menu" },
+    { src: "/samples/order_public_1.webp", alt: "Customer browsing QR menu to place order" },
+  ],
+  analytics: [
+    { src: "/samples/sample-analytics-1.webp", alt: "Restaurant analytics dashboard" },
+    { src: "/samples/sample-analytics-2.webp", alt: "QR menu scan statistics" },
+  ],
 };
 
 // FAQ data for each feature
@@ -183,6 +192,23 @@ export const VALID_FEATURE_IDS = [
   "custom-design",
   "color-scheme",
   "personal-support",
+  "online-orders",
 ] as const;
 
 export type FeatureId = (typeof VALID_FEATURE_IDS)[number];
+
+// Map feature ID to its translation namespace
+export const FEATURE_NAMESPACE: Record<string, string> = {
+  "instant-setup": "instantSetupPage",
+  "mobile-management": "mobileManagementPage",
+  "ai-translation": "aiTranslationPage",
+  "multilingual": "multilingualPage",
+  "ai-images": "aiImagesPage",
+  "easy-menu": "easyMenuPage",
+  "analytics": "analyticsPage",
+  "reservations": "reservationsPage",
+  "custom-design": "customDesignPage",
+  "color-scheme": "colorSchemePage",
+  "personal-support": "personalSupportPage",
+  "online-orders": "onlineOrders",
+};

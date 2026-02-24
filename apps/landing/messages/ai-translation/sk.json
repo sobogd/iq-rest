@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI Preklad Menu pre Reštaurácie — Preklad QR Menu | IQ Rest",
+    "description": "Preložte menu vašej reštaurácie do 25+ jazykov jedným kliknutím. AI rozumie kulinárskemu kontextu — názvy jedál, popisy a kategórie sú preložené presne."
+  },
+  "hero": {
+    "badge": "AI Preklad",
+    "title": "Preložte Svoje Menu do 25+ Jazykov Jedným Kliknutím",
+    "subtitle": "Naša AI rozumie kontextu jedla — prekladá názvy jedál, popisy a kategórie prirodzene, nie doslovne. Oslovte každého turistu a medzinárodného hosťa.",
+    "cta": "Vytvorte Svoj Jedálny Lístok",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako Funguje AI Preklad",
+    "subtitle": "Z vášho jazyka do celého sveta za sekundy.",
+    "items": [
+      {
+        "title": "Preklad Jedným Kliknutím pre Celé Menu",
+        "description": "Vyberte cieľový jazyk, ťuknite na preložiť a celé menu — kategórie, názvy jedál, popisy — sa preloží okamžite. AI zachováva kulinárske výrazy a prirodzene sa prispôsobuje každému jazyku."
+      },
+      {
+        "title": "Upravte a Dolaďte Akýkoľvek Preklad",
+        "description": "Každý AI preklad je plne editovateľný. Skontrolujte výsledok, upravte akékoľvek znenie a uložte. Vaše zmeny sa zachovajú, aj keď neskôr znova preložíte iné časti menu."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o preklade menu.",
+    "items": [
+      {
+        "question": "Aký presný je AI preklad pre jedálne lístky reštaurácií?",
+        "answer": "Naša AI je optimalizovaná pre reštauračný obsah. Rozumie, že 'Beef Wellington' alebo 'Tiramisu' sa nemajú prekladať doslovne, a prispôsobuje popisy tak, aby zneli prirodzene v každom jazyku."
+      },
+      {
+        "question": "Aké jazyky sú podporované?",
+        "answer": "25+ jazykov vrátane angličtiny, španielčiny, francúzštiny, nemčiny, taliančiny, portugalčiny, čínštiny, japončiny, kórejčiny, arabčiny, ruštiny a mnohých ďalších európskych a ázijských jazykov."
+      },
+      {
+        "question": "Môžem preložiť len niektoré položky, nie celé menu?",
+        "answer": "Áno. Môžete prekladať jednotlivé položky, celé kategórie alebo celé menu naraz. Máte plnú kontrolu nad tým, čo sa preloží."
+      },
+      {
+        "question": "Stojí to niečo navyše za každý preklad?",
+        "answer": "AI preklad je zahrnutý v plánoch Basic a Pro so štedrými mesačnými limitmi. Žiadne poplatky za slovo alebo za položku — prekladajte, koľko potrebujete."
+      }
+    ]
+  }
+}

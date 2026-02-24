@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI Menu Translation for Restaurants — Translate QR Menu | IQ Rest",
+    "description": "Translate your restaurant menu into 25+ languages with one click. AI understands culinary context — dish names, descriptions, and categories translated accurately."
+  },
+  "hero": {
+    "badge": "AI Translation",
+    "title": "Translate Your Menu into 25+ Languages with One Click",
+    "subtitle": "Our AI understands food context — it translates dish names, descriptions, and categories naturally, not word-by-word. Reach every tourist and international guest.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How AI Translation Works",
+    "subtitle": "From your language to the world in seconds.",
+    "items": [
+      {
+        "title": "One-Click Translation for Your Entire Menu",
+        "description": "Select a target language, tap translate, and your entire menu — categories, dish names, descriptions — is translated instantly. The AI preserves culinary terms and adapts naturally for each language."
+      },
+      {
+        "title": "Edit and Fine-Tune Any Translation",
+        "description": "Every AI translation is fully editable. Review the result, adjust any wording, and save. Your changes are preserved even if you re-translate other parts of the menu later."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about menu translation.",
+    "items": [
+      {
+        "question": "How accurate is the AI translation for food menus?",
+        "answer": "Our AI is optimized for restaurant content. It understands that 'Beef Wellington' or 'Tiramisu' shouldn't be translated literally, and adapts descriptions to sound natural in each language."
+      },
+      {
+        "question": "Which languages are supported?",
+        "answer": "25+ languages including English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Arabic, Russian, and many more European and Asian languages."
+      },
+      {
+        "question": "Can I translate just some items, not the whole menu?",
+        "answer": "Yes. You can translate individual items, entire categories, or the whole menu at once. You have full control over what gets translated."
+      },
+      {
+        "question": "Does it cost extra per translation?",
+        "answer": "AI translation is included in Basic and Pro plans with generous monthly limits. No per-word or per-item charges — translate as much as you need."
+      }
+    ]
+  }
+}

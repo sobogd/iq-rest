@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Stwórz menu QR dla restauracji — Darmowy kreator menu | IQ Rest",
+    "description": "Stwórz cyfrowe menu QR restauracji w kilka minut. Dodaj kategorie, dania, zdjęcia, ceny — i udostępnij skanowalny kod QR. Start za darmo."
+  },
+  "hero": {
+    "badge": "Kreator menu",
+    "title": "Stwórz cyfrowe menu QR dla restauracji w kilka minut",
+    "subtitle": "Dodaj swoje kategorie i dania, ustaw ceny, prześlij zdjęcia — Twoje menu QR jest gotowe do udostępnienia. Edytuj w dowolnym momencie, zmiany pojawiają się natychmiast.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Jak działa edytor menu",
+    "subtitle": "Proste narzędzia, które szybko umieszczą Twoje menu online.",
+    "items": [
+      {
+        "title": "Dodaj kategorie i dania",
+        "description": "Twórz kategorie takie jak Przystawki, Dania główne, Napoje — następnie dodawaj dania z nazwami, opisami, cenami i zdjęciami. Przeciągnij i upuść, aby zmienić kolejność. Włączaj i wyłączaj pozycje bez ich usuwania."
+      },
+      {
+        "title": "Zmiany widoczne natychmiast",
+        "description": "Każda edycja pojawia się w Twoim menu QR w ciągu kilku sekund. Zaktualizuj cenę, dodaj danie dnia lub ukryj wyprzedane danie — Twoi klienci zawsze widzą najnowszą wersję."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o tworzeniu menu QR.",
+    "items": [
+      {
+        "question": "Jak stworzyć menu QR dla mojej restauracji?",
+        "answer": "Zarejestruj się za pomocą e-maila, nazwij swoją restaurację i zacznij dodawać kategorie i dania. Twoje menu QR jest generowane automatycznie — wydrukuj kod QR i umieść go na stolikach."
+      },
+      {
+        "question": "Czy mogę dodać zdjęcia do pozycji menu?",
+        "answer": "Tak. Przesyłaj zdjęcia bezpośrednio z telefonu lub komputera. Zdjęcia są automatycznie optymalizowane do szybkiego ładowania na każdym urządzeniu."
+      },
+      {
+        "question": "Ile pozycji mogę dodać?",
+        "answer": "Nie ma limitu kategorii ani pozycji menu. Dodaj tyle dań, ile potrzebujesz — Twoje menu pozostaje szybkie i uporządkowane."
+      },
+      {
+        "question": "Czy mogę tymczasowo ukryć danie, które się skończyło?",
+        "answer": "Tak. Wyłącz dowolną pozycję jednym kliknięciem. Znika z publicznego menu, ale pozostaje w panelu — włącz ją z powrotem, gdy będziesz gotowy."
+      }
+    ]
+  }
+}

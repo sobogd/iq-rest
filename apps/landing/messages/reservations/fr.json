@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Système de réservation de tables pour restaurants — Réservation en ligne | IQ Rest",
+    "description": "Permettez à vos clients de réserver une table directement depuis votre site web. Confirmation automatique ou manuelle, notifications par e-mail et gestion complète du calendrier — tout inclus."
+  },
+  "hero": {
+    "badge": "Réservation de tables",
+    "title": "Acceptez les réservations de tables 24h/24 depuis votre site web",
+    "subtitle": "Les clients choisissent la date, l'heure et le nombre de convives — et réservent instantanément. Vous gérez tout depuis votre tableau de bord, sans appels téléphoniques.",
+    "cta": "Créer votre menu",
+    "ctaDemo": "Voir la démo",
+    "noCreditCard": "Aucune carte de crédit requise. Plan gratuit disponible."
+  },
+  "features": {
+    "title": "Comment fonctionnent les réservations de tables",
+    "subtitle": "Deux étapes de la demande du client à la réservation confirmée.",
+    "items": [
+      {
+        "title": "Les clients réservent depuis votre site web",
+        "description": "Les clients visitent la page de votre restaurant, appuient sur « Réserver une table », choisissent une date et une heure, saisissent leurs coordonnées et envoient la demande. Aucune application nécessaire — fonctionne dans n'importe quel navigateur sur n'importe quel appareil."
+      },
+      {
+        "title": "Vous gérez les réservations depuis votre tableau de bord",
+        "description": "Chaque réservation apparaît dans votre tableau de bord avec le nom du client, le téléphone, le nombre de convives, la date et les notes. Confirmez ou refusez d'un simple geste. Configurez la confirmation automatique ou examinez chaque réservation manuellement."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur les réservations de tables.",
+    "items": [
+      {
+        "question": "Les clients doivent-ils créer un compte pour réserver ?",
+        "answer": "Non. Les clients remplissent simplement leur nom, numéro de téléphone, nombre de convives et horaire préféré. Aucun compte ni téléchargement d'application requis."
+      },
+      {
+        "question": "Puis-je définir les créneaux horaires et la capacité disponibles ?",
+        "answer": "Oui. Définissez vos heures d'ouverture, la durée des créneaux de réservation et la capacité des tables. Le système n'affiche aux clients que les créneaux disponibles."
+      },
+      {
+        "question": "Serai-je notifié quand quelqu'un réserve ?",
+        "answer": "Oui. Vous recevez un e-mail pour chaque nouvelle réservation. Les clients reçoivent également un e-mail de confirmation une fois que vous approuvez la réservation."
+      },
+      {
+        "question": "Puis-je utiliser la confirmation automatique et manuelle ?",
+        "answer": "Oui. Choisissez le mode automatique pour confirmer les réservations instantanément selon la disponibilité, ou le mode manuel pour examiner et approuver chaque demande vous-même."
+      }
+    ]
+  }
+}

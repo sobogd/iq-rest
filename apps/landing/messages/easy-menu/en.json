@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Create a QR Menu for Your Restaurant — Free Menu Maker | IQ Rest",
+    "description": "Build your restaurant's digital QR menu in minutes. Add categories, dishes, photos, prices — and share a scannable QR code. Free to start."
+  },
+  "hero": {
+    "badge": "Menu Creator",
+    "title": "Create a Digital QR Menu for Your Restaurant in Minutes",
+    "subtitle": "Add your categories and dishes, set prices, upload photos — your QR menu is ready to share. Edit anytime, changes appear instantly.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How the Menu Editor Works",
+    "subtitle": "Simple tools that get your menu online fast.",
+    "items": [
+      {
+        "title": "Add Categories & Dishes",
+        "description": "Create categories like Starters, Mains, Drinks — then add dishes with names, descriptions, prices, and photos. Drag and drop to reorder. Toggle items on or off without deleting them."
+      },
+      {
+        "title": "Changes Go Live Instantly",
+        "description": "Every edit you make appears on your live QR menu within seconds. Update a price, add a daily special, or hide a sold-out dish — your customers always see the latest version."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about creating your QR menu.",
+    "items": [
+      {
+        "question": "How do I create a QR menu for my restaurant?",
+        "answer": "Sign up with your email, name your restaurant, and start adding categories and dishes. Your QR menu is generated automatically — print the QR code and place it on your tables."
+      },
+      {
+        "question": "Can I add photos to my menu items?",
+        "answer": "Yes. Upload photos directly from your phone or computer. Images are automatically optimized for fast loading on any device."
+      },
+      {
+        "question": "How many items can I add?",
+        "answer": "There is no limit on categories or menu items. Add as many dishes as you need — your menu stays fast and organized."
+      },
+      {
+        "question": "Can I temporarily hide a dish that's sold out?",
+        "answer": "Yes. Toggle any item off with one tap. It disappears from the public menu but stays in your dashboard — toggle it back on whenever you're ready."
+      }
+    ]
+  }
+}

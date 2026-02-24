@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Prilagojeno Oblikovanje QR Menija in Barve Blagovne Znamke — Znamčenje Restavracije | IQ Rest",
+    "description": "Uskladite QR meni z blagovno znamko vaše restavracije. Izberite poudarjene barve, svetle/temne teme in ustvarite dosleden videz celotnega digitalnega menija."
+  },
+  "hero": {
+    "badge": "Prilagojeno Oblikovanje",
+    "title": "Uskladite QR Meni z Blagovno Znamko Vaše Restavracije",
+    "subtitle": "Izberite barvo blagovne znamke in celoten meni — gumbi, poudarki, povezave — se takoj posodobi. Svetle in temne teme vključene.",
+    "cta": "Ustvarite Svoj Jedilnik",
+    "ctaDemo": "Ogled Predstavitve",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
+  },
+  "features": {
+    "title": "Kako Deluje Prilagojeno Znamčenje",
+    "subtitle": "Vaš meni, vaše barve — dosledno na vsaki strani.",
+    "items": [
+      {
+        "title": "Izberite Poudarjeno Barvo",
+        "description": "Izbirajte med 12 skrbno izbranimi prednastavitvami ali vnesite natančno barvo blagovne znamke s hex kodo. Vsak gumb, povezava in poudarek v meniju se takoj prilagodi — oblikovalske veščine niso potrebne."
+      },
+      {
+        "title": "Samodejne Svetle in Temne Teme",
+        "description": "Vaš meni samodejno podpira svetli in temni način. Sistem zagotavlja, da barva vaše blagovne znamke odlično izgleda v obeh temah z optimiziranim kontrastom in berljivostjo."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta Vprašanja",
+    "subtitle": "Vse, kar morate vedeti o prilagajanju menija.",
+    "items": [
+      {
+        "question": "Ali lahko uporabim natančno barvo svoje blagovne znamke?",
+        "answer": "Da. Vnesite katero koli hex barvno kodo ali izberite med 12 skrbno izbranimi prednastavitvami. Poudarjena barva se uporabi na vseh straneh menija."
+      },
+      {
+        "question": "Ali deluje s temnim načinom?",
+        "answer": "Da. Barvna shema se samodejno prilagodi svetlim in temnim temam. Sistem prilagodi kontrast, da meni ostane berljiv in lep v vsakem načinu."
+      },
+      {
+        "question": "Ali lahko spremenim barve po objavi?",
+        "answer": "Seveda. Spremenite poudarjeno barvo kadar koli z nadzorne plošče. Posodobitve se takoj prikažejo v aktivnem meniju — ponovna objava ni potrebna."
+      },
+      {
+        "question": "Ali bo moja QR koda ustrezala barvam blagovne znamke?",
+        "answer": "QR koda se ustvari ločeno in jo je mogoče prilagoditi neodvisno. Poudarjena barva se uporabi za strani digitalnega menija, navigacijo in interaktivne elemente."
+      }
+    ]
+  }
+}

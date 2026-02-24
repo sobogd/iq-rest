@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Valdykite restorano meniu iš telefono — Mobilus valdymo skydelis | IQ Rest",
+    "description": "Valdykite savo restorano QR meniu visiškai iš telefono. Pridėkite patiekalus, atnaujinkite kainas, įkelkite nuotraukas, tikrinkite analitiką — kompiuterio nereikia."
+  },
+  "hero": {
+    "badge": "Mobilus valdymo skydelis",
+    "title": "Valdykite visą restorano meniu iš savo telefono",
+    "subtitle": "Pridėkite patiekalus, keiskite kainas, įkelkite nuotraukas, tikrinkite užsakymus — viską iš savo išmaniojo telefono. Valdymo skydelis sukurtas mobiliajam — kompiuterio niekada nereikia.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia mobilus valdymas",
+    "subtitle": "Jūsų restorano valdymo skydelis visada kišenėje.",
+    "items": [
+      {
+        "title": "Pilnas valdymo skydelis jūsų išmaniajame telefone",
+        "description": "Kiekviena funkcija puikiai veikia telefono ekrane — pridėkite elementus, redaguokite kategorijas, valdykite užsakymus, tikrinkite analitiką. Sąsaja sukurta lietimui, o ne tiesiog sumažinta nuo darbalaukio."
+      },
+      {
+        "title": "Įkelkite nuotraukas tiesiai iš kameros",
+        "description": "Nufotografuokite naują patiekalą ir įkelkite jį į meniu per kelias sekundes. Vaizdai optimizuojami automatiškai. Atnaujinkite dienos pasiūlymą stovėdami virtuvėje."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie mobilų meniu valdymą.",
+    "items": [
+      {
+        "question": "Ar man reikia įsidiegti programėlę?",
+        "answer": "Ne. Valdymo skydelis veikia jūsų telefono naršyklėje — Safari, Chrome ar bet kurioje kitoje. Tiesiog prisijunkite ir pradėkite valdyti savo meniu."
+      },
+      {
+        "question": "Ar galiu iš telefono daryti viską, ką galiu iš kompiuterio?",
+        "answer": "Taip. Kiekviena funkcija prieinama mobiliajame — elementų pridėjimas, nuotraukų įkėlimas, kategorijų valdymas, analitikos tikrinimas, užsakymų ir rezervacijų tvarkymas."
+      },
+      {
+        "question": "Ar tai veikia ir planšetėse?",
+        "answer": "Taip. Valdymo skydelis prisitaiko prie bet kokio ekrano dydžio — telefonai, planšetės ir staliniai kompiuteriai. Naudokite tą įrenginį, kuris patogiausias."
+      },
+      {
+        "question": "Ar keli žmonės gali valdyti meniu?",
+        "answer": "Šiuo metu viena paskyra valdo restoraną. Galite prisijungti iš kelių įrenginių vienu metu — telefono, planšetės ar kompiuterio."
+      }
+    ]
+  }
+}

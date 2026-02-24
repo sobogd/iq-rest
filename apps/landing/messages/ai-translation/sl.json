@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI Prevod Menija za Restavracije — Prevod QR Menija | IQ Rest",
+    "description": "Prevedite meni restavracije v 25+ jezikov z enim klikom. AI razume kulinarski kontekst — imena jedi, opisi in kategorije so natančno prevedeni."
+  },
+  "hero": {
+    "badge": "AI Prevod",
+    "title": "Prevedite Svoj Meni v 25+ Jezikov z Enim Klikom",
+    "subtitle": "Naš AI razume kontekst hrane — prevaja imena jedi, opise in kategorije naravno, ne besedo za besedo. Dosezite vsakega turista in mednarodnega gosta.",
+    "cta": "Ustvarite Svoj Jedilnik",
+    "ctaDemo": "Ogled Predstavitve",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
+  },
+  "features": {
+    "title": "Kako Deluje AI Prevod",
+    "subtitle": "Iz vašega jezika v svet v sekundah.",
+    "items": [
+      {
+        "title": "Prevod z Enim Klikom za Celoten Meni",
+        "description": "Izberite ciljni jezik, tapnite prevedi in celoten meni — kategorije, imena jedi, opisi — je takoj preveden. AI ohranja kulinarsko izrazoslovje in se naravno prilagaja vsakemu jeziku."
+      },
+      {
+        "title": "Uredite in Prilagodite Vsak Prevod",
+        "description": "Vsak AI prevod je v celoti uredljiv. Preglejte rezultat, prilagodite katero koli besedilo in shranite. Vaše spremembe so ohranjene, tudi če pozneje znova prevedete druge dele menija."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta Vprašanja",
+    "subtitle": "Vse, kar morate vedeti o prevodu menija.",
+    "items": [
+      {
+        "question": "Kako natančen je AI prevod za jedilnike restavracij?",
+        "answer": "Naš AI je optimiziran za restavracijske vsebine. Razume, da se 'Beef Wellington' ali 'Tiramisu' ne smeta prevajati dobesedno, in prilagodi opise, da zvenijo naravno v vsakem jeziku."
+      },
+      {
+        "question": "Kateri jeziki so podprti?",
+        "answer": "25+ jezikov, vključno z angleščino, španščino, francoščino, nemščino, italijanščino, portugalščino, kitajščino, japonščino, korejščino, arabščino, ruščino in številnimi drugimi evropskimi in azijskimi jeziki."
+      },
+      {
+        "question": "Ali lahko prevedem samo nekatere postavke, ne celotnega menija?",
+        "answer": "Da. Prevajate lahko posamezne postavke, celotne kategorije ali celoten meni naenkrat. Imate popoln nadzor nad tem, kaj se prevede."
+      },
+      {
+        "question": "Ali stane dodatno za vsak prevod?",
+        "answer": "AI prevod je vključen v paketa Basic in Pro z velikodušnimi mesečnimi omejitvami. Brez pristojbin na besedo ali na postavko — prevajajte, kolikor potrebujete."
+      }
+    ]
+  }
+}

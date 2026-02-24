@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Asmeninis palaikymas jūsų restorano svetainei — Tikra žmonių pagalba | IQ Rest",
+    "description": "Gaukite asmeninę pagalbą iš tikrų žmonių, ne pokalbių robotų. Pagalba nustatant, meniu optimizavimo patarimai ir greiti atsakymai — prieinama kiekviename plane, įskaitant nemokamą."
+  },
+  "hero": {
+    "badge": "Asmeninis palaikymas",
+    "title": "Tikri žmonės, tikra pagalba — ne pokalbių robotai",
+    "subtitle": "Turite klausimą? Reikia pagalbos nustatant meniu? Norite pasiūlyti funkciją? Parašykite mums tiesiogiai ir gaukite asmeninį atsakymą nuo žmogaus, kuris supranta restoranus.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia palaikymas",
+    "subtitle": "Pagalba, kai jos reikia, nuo žmonių, kuriems rūpi.",
+    "items": [
+      {
+        "title": "Parašykite mums tiesiogiai iš valdymo skydelio",
+        "description": "Atidarykite palaikymo pokalbį valdymo skydelyje ir aprašykite savo klausimą. Tikras žmogus perskaito jūsų žinutę ir atsako — paprastai per kelias valandas darbo dienomis."
+      },
+      {
+        "title": "Pagalba nustatant, optimizuojant ir ne tik",
+        "description": "Ar reikia pagalbos pridedant pirmą patiekalą, patarimo dėl meniu organizavimo ar norite pasiūlyti naują funkciją — mes čia. Kiekvienas klausimas svarbus, nesvarbu koks mažas."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie mūsų palaikymą.",
+    "items": [
+      {
+        "question": "Ar palaikymas prieinamas nemokamame plane?",
+        "answer": "Taip. Asmeninis palaikymas prieinamas kiekviename plane, įskaitant nemokamą. Tikime, kad kiekvienas restoranas nusipelno tikros pagalbos, nepriklausomai nuo prenumeratos."
+      },
+      {
+        "question": "Kaip greitai atsakote?",
+        "answer": "Paprastai per kelias valandas darbo dienomis. Skaitome kiekvieną žinutę asmeniškai ir siekiame išspręsti klausimą vienu atsakymu."
+      },
+      {
+        "question": "Ar galite padėti man nustatyti meniu?",
+        "answer": "Žinoma. Jei reikia pagalbos pridedant patiekalus, organizuojant kategorijas, nustatant vertimus ar konfigūruojant rezervacijas — tiesiog paklauskite. Mielai padėsime žingsnis po žingsnio."
+      },
+      {
+        "question": "Ar galiu pasiūlyti naujas funkcijas?",
+        "answer": "Taip, ir mes tai mylime! Daugelis mūsų funkcijų prasidėjo kaip vartotojų pasiūlymai. Parašykite mums savo idėją ir mes apsvarstysime ją būsimiems atnaujinimams."
+      }
+    ]
+  }
+}

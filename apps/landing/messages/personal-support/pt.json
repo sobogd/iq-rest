@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Suporte pessoal para o site do seu restaurante — Ajuda real de pessoas | IQ Rest",
+    "description": "Receba ajuda pessoal de pessoas reais, não de chatbots. Assistência na configuração, dicas de otimização do menu e respostas rápidas — disponível em todos os planos, incluindo o gratuito."
+  },
+  "hero": {
+    "badge": "Suporte pessoal",
+    "title": "Pessoas reais, ajuda real — não chatbots",
+    "subtitle": "Tem uma dúvida? Precisa de ajuda para configurar seu menu? Quer sugerir uma funcionalidade? Envie uma mensagem e receba uma resposta pessoal de alguém que entende de restaurantes.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "Como funciona o suporte",
+    "subtitle": "Ajuda quando você precisa, de pessoas que se importam.",
+    "items": [
+      {
+        "title": "Envie mensagem diretamente do seu painel",
+        "description": "Abra o chat de suporte no seu painel e descreva sua dúvida. Uma pessoa real lê sua mensagem e responde — normalmente em poucas horas em dias úteis."
+      },
+      {
+        "title": "Ajuda com configuração, otimização e muito mais",
+        "description": "Precisa de ajuda para adicionar seu primeiro prato, conselhos sobre como organizar o menu ou quer sugerir uma nova funcionalidade — estamos aqui. Cada pergunta importa, por menor que seja."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre nosso suporte.",
+    "items": [
+      {
+        "question": "O suporte está disponível no plano gratuito?",
+        "answer": "Sim. O suporte pessoal está disponível em todos os planos, incluindo o gratuito. Acreditamos que todo restaurante merece ajuda real, independentemente da assinatura."
+      },
+      {
+        "question": "Qual o tempo de resposta?",
+        "answer": "Normalmente em poucas horas durante dias úteis. Lemos cada mensagem pessoalmente e buscamos resolver sua dúvida em uma única resposta."
+      },
+      {
+        "question": "Vocês podem me ajudar a configurar meu menu?",
+        "answer": "Com certeza. Se precisar de ajuda para adicionar pratos, organizar categorias, configurar traduções ou definir reservas — é só perguntar. Teremos prazer em orientá-lo."
+      },
+      {
+        "question": "Posso sugerir novas funcionalidades?",
+        "answer": "Sim, e adoramos isso! Muitas das nossas funcionalidades começaram como sugestões de usuários. Envie sua ideia e a consideraremos para futuras atualizações."
+      }
+    ]
+  }
+}

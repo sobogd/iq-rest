@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restauranthjemmeside med video- og fotobaggrund — Hjemmesidebygger | IQ Rest",
+    "description": "Opret en fantastisk restauranthjemmeside med tilpassede video- eller fotobaggrunde. Upload din atmosfaerevideo eller madfotografering — imponerer gaester fra foerste skanning."
+  },
+  "hero": {
+    "badge": "Hjemmesidedesign",
+    "title": "Opret en fantastisk restauranthjemmeside med videobaggrunde",
+    "subtitle": "Upload din restaurants atmosfaerevideo eller et smukt madfoto som baggrund. Gaester ser en professionel, brandtilpasset oplevelse i det oejeblik de skanner din QR-kode.",
+    "cta": "Opret din menu",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
+  },
+  "features": {
+    "title": "Hvordan tilpassede baggrunde fungerer",
+    "subtitle": "Goer et varigt foersteindtryk med visuelle elementer der matcher dit brand.",
+    "items": [
+      {
+        "title": "Upload video- eller fotobaggrunde",
+        "description": "Tilfoej en loopende video af din restaurantatmosfaere, en timelapse fra kokkenet eller et hoejkvalitets madfoto. Baggrunden vises paa din startside — og skaber en fordybende oplevelse for gaesterne."
+      },
+      {
+        "title": "Optimeret til hastighed paa alle enheder",
+        "description": "Videoer og billeder komprimeres og lazy-loades automatisk. Din hjemmeside forbliver hurtig selv paa langsomme mobilforbindelser — ingen buffering, ingen forsinkelser, bare en glat oplevelse."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spoergsmaal",
+    "subtitle": "Alt du behoever at vide om restauranthjemmesidedesign.",
+    "items": [
+      {
+        "question": "Hvilke videoformater understoettes?",
+        "answer": "MP4- og WebM-formater fungerer bedst. Videoer komprimeres automatisk til hurtig indlaesning. Hold videoer under 30 sekunder for den bedste mobiloplevelse."
+      },
+      {
+        "question": "Vil en videobaggrund goere min hjemmeside langsommere?",
+        "answer": "Nej. Videoer komprimeres, lazy-loades og optimeres automatisk. Ved langsomme forbindelser falder systemet tilbage til et statisk billede for at holde oplevelsen glat."
+      },
+      {
+        "question": "Kan jeg bruge et foto i stedet for video?",
+        "answer": "Ja. Upload et vilkaarligt foto — det optimeres og vises som fuldskarmsbaggrund. Du kan skifte mellem video og foto naar som helst."
+      },
+      {
+        "question": "Har jeg brug for en designer til at saette dette op?",
+        "answer": "Nej. Upload bare din video eller dit foto fra kontrolpanelet. Systemet haandterer stoerrelse, komprimering og layout automatisk. Din hjemmeside ser professionel ud uden designkunskaber."
+      }
+    ]
+  }
+}

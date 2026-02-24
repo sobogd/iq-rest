@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Styr din restaurantmenu fra telefonen — Mobilt kontrolpanel | IQ Rest",
+    "description": "Koer din restaurants QR-menu helt fra din telefon. Tilfoej retter, opdater priser, upload fotos, tjek statistik — ingen computer noedvendig."
+  },
+  "hero": {
+    "badge": "Mobilt kontrolpanel",
+    "title": "Styr hele din restaurantmenu fra din telefon",
+    "subtitle": "Tilfoej retter, aendr priser, upload fotos, tjek ordrer — alt fra din smartphone. Kontrolpanelet er bygget mobil-foerst, saa du behoever aldrig en computer.",
+    "cta": "Opret din menu",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
+  },
+  "features": {
+    "title": "Hvordan mobilstyring fungerer",
+    "subtitle": "Dit restaurantkontrolpanel, altid i lommen.",
+    "items": [
+      {
+        "title": "Fuldt kontrolpanel paa din smartphone",
+        "description": "Enhver funktion fungerer perfekt paa din telefonskarm — tilfoej elementer, rediger kategorier, styr ordrer, tjek statistik. Graeensefladen er designet til berorering, ikke blot nedskaleret fra desktop."
+      },
+      {
+        "title": "Upload fotos direkte fra kameraet",
+        "description": "Tag et foto af en ny ret og upload det til din menu paa sekunder. Billeder optimeres automatisk. Opdater din daglige special mens du staar i kokkenet."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spoergsmaal",
+    "subtitle": "Alt du behoever at vide om mobil menustyring.",
+    "items": [
+      {
+        "question": "Skal jeg installere en app?",
+        "answer": "Nej. Kontrolpanelet fungerer i din telefons browser — Safari, Chrome eller enhver anden. Log bare ind og begynd at styre din menu."
+      },
+      {
+        "question": "Kan jeg goere alt fra telefonen, som jeg kan paa en computer?",
+        "answer": "Ja. Enhver funktion er tilgaengelig paa mobil — tilfoeje elementer, uploade fotos, styre kategorier, tjekke statistik, haandtere ordrer og reservationer."
+      },
+      {
+        "question": "Virker det ogsaa paa tablets?",
+        "answer": "Ja. Kontrolpanelet tilpasser sig alle skaermstoerrelser — telefoner, tablets og stationaere computere. Brug den enhed der er mest bekvem."
+      },
+      {
+        "question": "Kan flere personer styre menuen?",
+        "answer": "I oeejeblikket styrer en konto restauranten. Du kan logge ind fra flere enheder samtidigt — din telefon, tablet eller computer."
+      }
+    ]
+  }
+}

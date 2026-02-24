@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Design personnalisé de menu QR et couleurs de marque — Branding restaurant | IQ Rest",
+    "description": "Adaptez votre menu QR à l'image de votre restaurant. Choisissez les couleurs d'accentuation, les thèmes clair/sombre et créez un design cohérent pour l'ensemble de votre menu numérique."
+  },
+  "hero": {
+    "badge": "Design personnalisé",
+    "title": "Faites correspondre votre menu QR à l'image de votre restaurant",
+    "subtitle": "Choisissez votre couleur de marque, et tout votre menu — boutons, mises en valeur, liens — se met à jour instantanément. Thèmes clair et sombre inclus.",
+    "cta": "Créer votre menu",
+    "ctaDemo": "Voir la démo",
+    "noCreditCard": "Aucune carte de crédit requise. Plan gratuit disponible."
+  },
+  "features": {
+    "title": "Comment fonctionne le branding personnalisé",
+    "subtitle": "Votre menu, vos couleurs — cohérent sur chaque page.",
+    "items": [
+      {
+        "title": "Choisissez votre couleur d'accentuation",
+        "description": "Sélectionnez parmi 12 préréglages ou entrez la couleur exacte de votre marque avec un code hexadécimal. Chaque bouton, lien et mise en valeur de votre menu s'adapte instantanément — aucune compétence en design requise."
+      },
+      {
+        "title": "Thèmes clair et sombre automatiques",
+        "description": "Votre menu prend automatiquement en charge les modes clair et sombre. Le système garantit que votre couleur de marque est parfaite dans les deux thèmes avec un contraste et une lisibilité optimisés."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur la personnalisation du menu.",
+    "items": [
+      {
+        "question": "Puis-je utiliser la couleur exacte de ma marque ?",
+        "answer": "Oui. Entrez n'importe quel code couleur hexadécimal, ou choisissez parmi 12 préréglages soigneusement sélectionnés. Votre couleur d'accentuation s'applique à toutes les pages de votre menu."
+      },
+      {
+        "question": "Est-ce compatible avec le mode sombre ?",
+        "answer": "Oui. Votre palette de couleurs s'adapte automatiquement aux thèmes clair et sombre. Le système ajuste le contraste pour garder votre menu lisible et élégant dans tous les modes."
+      },
+      {
+        "question": "Puis-je changer les couleurs après publication ?",
+        "answer": "Absolument. Changez votre couleur d'accentuation à tout moment depuis le tableau de bord. Les modifications apparaissent instantanément sur votre menu en ligne — aucune republication nécessaire."
+      },
+      {
+        "question": "Mon QR code aura-t-il aussi les couleurs de ma marque ?",
+        "answer": "Votre QR code est généré séparément et peut être personnalisé indépendamment. La couleur d'accentuation s'applique aux pages de votre menu numérique, à la navigation et aux éléments interactifs."
+      }
+    ]
+  }
+}

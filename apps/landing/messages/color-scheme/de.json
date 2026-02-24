@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Individuelles QR-Menü-Design & Markenfarben — Restaurant-Branding | IQ Rest",
+    "description": "Passen Sie Ihr QR-Menü an Ihre Restaurantmarke an. Wählen Sie Akzentfarben, helle/dunkle Themes und schaffen Sie ein einheitliches Erscheinungsbild für Ihr gesamtes digitales Menü."
+  },
+  "hero": {
+    "badge": "Individuelles Design",
+    "title": "Gestalten Sie Ihr QR-Menü passend zu Ihrer Restaurantmarke",
+    "subtitle": "Wählen Sie Ihre Markenfarbe — und Ihr gesamtes Menü — Buttons, Hervorhebungen, Links — aktualisiert sich sofort. Helle und dunkle Themes inklusive.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "So funktioniert individuelles Branding",
+    "subtitle": "Ihr Menü, Ihre Farben — einheitlich auf jeder Seite.",
+    "items": [
+      {
+        "title": "Wählen Sie Ihre Akzentfarbe",
+        "description": "Wählen Sie aus 12 kuratierten Voreinstellungen oder geben Sie Ihre exakte Markenfarbe als Hex-Code ein. Jeder Button, Link und jede Hervorhebung in Ihrem Menü passt sich sofort an — keine Designkenntnisse erforderlich."
+      },
+      {
+        "title": "Automatische helle & dunkle Themes",
+        "description": "Ihr Menü unterstützt automatisch sowohl den hellen als auch den dunklen Modus. Das System stellt sicher, dass Ihre Markenfarbe in beiden Themes mit optimiertem Kontrast und Lesbarkeit großartig aussieht."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über die Menü-Anpassung wissen müssen.",
+    "items": [
+      {
+        "question": "Kann ich meine exakte Markenfarbe verwenden?",
+        "answer": "Ja. Geben Sie einen beliebigen Hex-Farbcode ein oder wählen Sie aus 12 sorgfältig ausgewählten Voreinstellungen. Ihre Akzentfarbe wird auf alle Seiten Ihres Menüs angewendet."
+      },
+      {
+        "question": "Funktioniert es mit dem Dark Mode?",
+        "answer": "Ja. Ihr Farbschema passt sich automatisch an helle und dunkle Themes an. Das System justiert den Kontrast, damit Ihr Menü in jedem Modus gut lesbar und ansprechend bleibt."
+      },
+      {
+        "question": "Kann ich die Farben nach der Veröffentlichung ändern?",
+        "answer": "Selbstverständlich. Ändern Sie Ihre Akzentfarbe jederzeit über das Dashboard. Änderungen erscheinen sofort in Ihrem veröffentlichten Menü — keine erneute Veröffentlichung nötig."
+      },
+      {
+        "question": "Wird mein QR-Code auch die Markenfarben haben?",
+        "answer": "Ihr QR-Code wird separat generiert und kann unabhängig angepasst werden. Die Akzentfarbe gilt für Ihre digitalen Menüseiten, Navigation und interaktive Elemente."
+      }
+    ]
+  }
+}

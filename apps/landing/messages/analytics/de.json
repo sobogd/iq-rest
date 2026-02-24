@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restaurant-Analysen & QR-Menü-Statistiken — Besuchertracking | IQ Rest",
+    "description": "Verfolgen Sie QR-Menü-Scans, Seitenaufrufe, beliebte Sprachen und Besuchertrends. Echtzeit-Analyse-Dashboard für Ihre Restaurant-Website."
+  },
+  "hero": {
+    "badge": "Analysen",
+    "title": "Erfahren Sie, wie Gäste Ihr QR-Menü nutzen",
+    "subtitle": "Verfolgen Sie tägliche Scans, Seitenaufrufe, beliebte Sprachen, Gerätestatistiken und Trends. Treffen Sie datenbasierte Entscheidungen zur Optimierung Ihres Menüs und zum Wachstum Ihres Geschäfts.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "Was Sie verfolgen können",
+    "subtitle": "Echtzeit-Einblicke in die Online-Präsenz Ihres Restaurants.",
+    "items": [
+      {
+        "title": "Tägliche Aufrufe, Scans & Besuchertrends",
+        "description": "Sehen Sie, wie viele Personen Ihren QR-Code scannen und Ihr Menü täglich, wöchentlich und monatlich besuchen. Verfolgen Sie Trends, um saisonale Muster zu verstehen und den Erfolg von Aktionen zu messen."
+      },
+      {
+        "title": "Aufschlüsselung nach Sprache & Gerät",
+        "description": "Erfahren Sie, welche Sprachen Ihre Gäste bevorzugen und welche Geräte sie nutzen. Diese Daten helfen Ihnen, Übersetzungen zu priorisieren und sicherzustellen, dass Ihr Menü auf den beliebtesten Geräten perfekt aussieht."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Restaurant-Analysen wissen müssen.",
+    "items": [
+      {
+        "question": "Welche Metriken kann ich verfolgen?",
+        "answer": "Tägliche, wöchentliche und monatliche Seitenaufrufe. Einzigartige Besucher. Meistbesuchte Seiten. Sprachpräferenzen. Geräte- und Browser-Aufschlüsselung. Alles in Echtzeit aktualisiert."
+      },
+      {
+        "question": "Sind Analysen im kostenlosen Plan enthalten?",
+        "answer": "Ja. Grundlegende Analysen sind in jedem Plan verfügbar, einschließlich des kostenlosen. Sie können Aufrufe, Besucher und Sprachstatistiken ab dem ersten Tag einsehen."
+      },
+      {
+        "question": "Kann ich sehen, welche Seiten am beliebtesten sind?",
+        "answer": "Ja. Das Dashboard zeigt Aufrufe aufgeschlüsselt nach Seite — Startseite, Menü, Kontakte, Reservierungen und Sprachauswahl. Sehen Sie genau, wo Gäste ihre Zeit verbringen."
+      },
+      {
+        "question": "Wie weit reichen die Daten zurück?",
+        "answer": "Analysedaten werden ab dem Tag gespeichert, an dem Sie Ihr Restaurant erstellen. Sie können tägliche, wöchentliche und monatliche Trends für Ihre gesamte Historie anzeigen."
+      }
+    ]
+  }
+}

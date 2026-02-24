@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sistema di prenotazione tavoli per ristoranti — Prenotazione online | IQ Rest",
+    "description": "Permetti ai clienti di prenotare un tavolo direttamente dal tuo sito web. Conferma automatica o manuale, notifiche via email e gestione completa del calendario — tutto incluso."
+  },
+  "hero": {
+    "badge": "Prenotazione tavoli",
+    "title": "Accetta prenotazioni di tavoli 24/7 dal tuo sito web",
+    "subtitle": "I clienti scelgono data, ora e numero di persone — e prenotano all'istante. Gestisci tutto dalla tua dashboard, senza telefonate.",
+    "cta": "Crea il tuo menu",
+    "ctaDemo": "Vedi demo",
+    "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+  },
+  "features": {
+    "title": "Come funzionano le prenotazioni dei tavoli",
+    "subtitle": "Due passaggi dalla richiesta del cliente alla prenotazione confermata.",
+    "items": [
+      {
+        "title": "I clienti prenotano dal tuo sito web",
+        "description": "I clienti visitano la pagina del tuo ristorante, toccano «Prenota un tavolo», scelgono data e ora, inseriscono i loro dati e inviano la richiesta. Nessuna app necessaria — funziona in qualsiasi browser su qualsiasi dispositivo."
+      },
+      {
+        "title": "Gestisci le prenotazioni dalla tua dashboard",
+        "description": "Ogni prenotazione appare nella tua dashboard con nome del cliente, telefono, numero di persone, data e note. Conferma o rifiuta con un tocco. Imposta la conferma automatica o esamina ogni prenotazione manualmente."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto ciò che devi sapere sulle prenotazioni dei tavoli.",
+    "items": [
+      {
+        "question": "I clienti devono creare un account per prenotare?",
+        "answer": "No. I clienti inseriscono semplicemente il nome, il numero di telefono, il numero di persone e l'orario preferito. Non è necessario un account né scaricare un'app."
+      },
+      {
+        "question": "Posso impostare le fasce orarie e la capacità disponibili?",
+        "answer": "Sì. Definisci i tuoi orari di apertura, la durata degli slot di prenotazione e la capienza dei tavoli. Il sistema mostra ai clienti solo gli slot disponibili."
+      },
+      {
+        "question": "Riceverò una notifica quando qualcuno prenota?",
+        "answer": "Sì. Ricevi un'email per ogni nuova prenotazione. Anche i clienti ricevono un'email di conferma una volta che approvi la prenotazione."
+      },
+      {
+        "question": "Posso usare sia la conferma automatica che manuale?",
+        "answer": "Sì. Scegli la modalità automatica per confermare le prenotazioni istantaneamente in base alla disponibilità, o la modalità manuale per esaminare e approvare ogni richiesta personalmente."
+      }
+    ]
+  }
+}

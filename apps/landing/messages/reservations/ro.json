@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sistem de Rezervare Mese pentru Restaurante — Rezervare Online | IQ Rest",
+    "description": "Permiteți oaspeților să rezerve mese direct de pe site-ul dvs. Confirmare automată sau manuală, notificări prin e-mail și gestionare completă a calendarului — totul inclus."
+  },
+  "hero": {
+    "badge": "Rezervări Mese",
+    "title": "Acceptați Rezervări de Mese 24/7 de pe Site-ul Dvs.",
+    "subtitle": "Oaspeții aleg data, ora și numărul de persoane — și rezervă instant. Gestionați totul din panoul de control, fără apeluri telefonice.",
+    "cta": "Creați Meniul",
+    "ctaDemo": "Vezi Demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Cum Funcționează Rezervările de Mese",
+    "subtitle": "Doi pași de la cererea oaspetelui la rezervarea confirmată.",
+    "items": [
+      {
+        "title": "Oaspeții Rezervă de pe Site-ul Dvs.",
+        "description": "Clienții vizitează pagina restaurantului dvs., apasă 'Rezervă o Masă', aleg data și ora, introduc detaliile lor și trimit. Nu este nevoie de aplicație — funcționează în orice browser pe orice dispozitiv."
+      },
+      {
+        "title": "Gestionați Rezervările din Panoul de Control",
+        "description": "Fiecare rezervare apare în panoul dvs. de control cu numele oaspetelui, telefonul, numărul de persoane, data și notele. Confirmați sau refuzați cu o singură apăsare. Setați confirmarea automată sau revizuiți manual fiecare rezervare."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre rezervările de mese.",
+    "items": [
+      {
+        "question": "Trebuie clienții să își creeze un cont pentru a rezerva?",
+        "answer": "Nu. Oaspeții completează doar numele, numărul de telefon, numărul de persoane și ora preferată. Nu este necesar cont sau descărcarea unei aplicații."
+      },
+      {
+        "question": "Pot seta intervalele orare și capacitatea disponibilă?",
+        "answer": "Da. Definiți programul de lucru, durata intervalului de rezervare și capacitatea mesei. Sistemul afișează oaspeților doar intervalele disponibile."
+      },
+      {
+        "question": "Voi fi notificat când cineva face o rezervare?",
+        "answer": "Da. Primiți un e-mail pentru fiecare rezervare nouă. Oaspeții primesc, de asemenea, un e-mail de confirmare odată ce aprobați rezervarea."
+      },
+      {
+        "question": "Pot folosi atât confirmarea automată, cât și cea manuală?",
+        "answer": "Da. Alegeți modul automat pentru a confirma rezervările instant în funcție de disponibilitate, sau modul manual pentru a revizui și aproba fiecare cerere personal."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Gratis restaurangwebbplatsgenerator — Skapa pa 5 minuter | IQ Rest",
+    "description": "Fa en professionell restaurangwebbplats med QR-meny, kontaktsida och karta — ange bara din e-post. Redo pa 5 minuter, inga tekniska kunskaper behovs."
+  },
+  "hero": {
+    "badge": "Gratis webbplats",
+    "title": "Fa en professionell restaurangwebbplats pa 5 minuter",
+    "subtitle": "Ange din e-post, namnge din restaurang, och du far direkt en komplett webbplats med QR-meny, kontaktsida med karta och modern responsiv design. Ingen kodning, inga designers.",
+    "cta": "Skapa din meny",
+    "ctaDemo": "Visa demo",
+    "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+  },
+  "features": {
+    "title": "Hur det fungerar",
+    "subtitle": "Fran noll till en aktiv restaurangwebbplats i tre steg.",
+    "items": [
+      {
+        "title": "Registrera dig med bara din e-post",
+        "description": "Inga komplicerade registreringsformular. Ange din e-post, verifiera med en kod, och din restaurangs kontrollpanel ar redo. Namnge din restaurang och din webbplats gar live direkt."
+      },
+      {
+        "title": "Allt inkluderat fran start",
+        "description": "Din webbplats levereras med QR-meny, kontaktsida med Google Maps, sprakstod, mobilresponsiv design och din egen unika URL. Lagg bara till dina ratter och borja dela."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vanliga fragor",
+    "subtitle": "Allt du behover veta om att skapa din restaurangwebbplats.",
+    "items": [
+      {
+        "question": "Hur skapar jag en gratis restaurangwebbplats?",
+        "answer": "Ange din e-post pa IQ Rest, verifiera med en kod, namnge din restaurang — klart. Din webbplats med QR-meny ar live pa under 5 minuter. Inget kreditkort kravs."
+      },
+      {
+        "question": "Behover jag nagra tekniska kunskaper?",
+        "answer": "Nej. Allt ar designat for restaurangagare, inte utvecklare. Lagg till ratter, ladda upp foton och hantera din webbplats helt fran din telefon."
+      },
+      {
+        "question": "Vad ingar i gratisplanen?",
+        "answer": "En komplett restaurangwebbplats, QR-meny, kontaktsida med karta, statistik, anpassat fargschema och upp till 2 sprak. Ingen provperiod — det ar gratis for alltid."
+      },
+      {
+        "question": "Kan jag anvanda mitt eget domannamn?",
+        "answer": "Pa gratis- och Basic-planer hostas din webbplats pa iq-rest.com/m/ditt-namn. Pro-planen stodjer egna domannamn for full varumarkeskontroll."
+      }
+    ]
+  }
+}

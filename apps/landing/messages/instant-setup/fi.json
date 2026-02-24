@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Ilmainen ravintolan verkkosivustogeneraattori — Luo 5 minuutissa | IQ Rest",
+    "description": "Saa ammattimainen ravintolan verkkosivusto QR-ruokalistalla, yhteystietosivulla ja kartalla — syota vain sahkopostisi. Valmis 5 minuutissa, teknisia taitoja ei tarvita."
+  },
+  "hero": {
+    "badge": "Ilmainen sivusto",
+    "title": "Saa ammattimainen ravintolan verkkosivusto 5 minuutissa",
+    "subtitle": "Syota sahkopostisi, anna ravintolallesi nimi, ja saat heti tayden verkkosivuston QR-ruokalistalla, yhteystietosivulla karttoineen ja modernilla responsiivisella designilla. Ei koodausta, ei suunnittelijoita.",
+    "cta": "Luo ruokalista",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "features": {
+    "title": "Nain se toimii",
+    "subtitle": "Nollasta toimivaan ravintolan verkkosivustoon kolmessa vaiheessa.",
+    "items": [
+      {
+        "title": "Rekisteroidy vain sahkopostilla",
+        "description": "Ei monimutkaisia rekisterointilomakkeita. Syota sahkopostisi, vahvista koodilla, ja hallintapaneelisi on valmis. Anna ravintolallesi nimi, ja verkkosivustosi julkaistaan heti."
+      },
+      {
+        "title": "Kaikki mukana alusta alkaen",
+        "description": "Verkkosivustosi sisaltaa QR-ruokalistan, yhteystietosivun Google Mapsilla, kielituen, mobiilin responsiivisen designin ja oman ainutlaatuisen URL-osoitteen. Lisaa vain annokset ja ala jakaa."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mita sinun taytyy tietaa ravintolan verkkosivuston luomisesta.",
+    "items": [
+      {
+        "question": "Miten luon ilmaisen ravintolan verkkosivuston?",
+        "answer": "Syota sahkoposti IQ Restissa, vahvista koodilla, anna ravintolallesi nimi — valmis. Verkkosivustosi QR-ruokalistalla on toiminnassa alle 5 minuutissa. Luottokorttia ei tarvita."
+      },
+      {
+        "question": "Tarvitsenko teknisia taitoja?",
+        "answer": "Et. Kaikki on suunniteltu ravintoloitsijoille, ei kehittajille. Lisaa annoksia, lataa kuvia ja hallitse sivustoasi kokonaan puhelimestasi."
+      },
+      {
+        "question": "Mita ilmaiseen pakettiin kuuluu?",
+        "answer": "Taysi ravintolan verkkosivusto, QR-ruokalista, yhteystietosivu karttoineen, analytiikka, mukautettu varimaailma ja enintaan 2 kielta. Ei koekjaksoa — se on ilmainen ikuisesti."
+      },
+      {
+        "question": "Voinko kayttaa omaa verkkotunnustani?",
+        "answer": "Ilmaisessa ja Basic-paketissa sivustosi on osoitteessa iq-rest.com/m/sinun-nimesi. Pro-paketti tukee omia verkkotunnuksia taysimaaraaista brandihallintaa varten."
+      }
+    ]
+  }
+}

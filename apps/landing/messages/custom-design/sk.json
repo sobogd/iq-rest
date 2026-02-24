@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Webstránka Reštaurácie s Video a Foto Pozadím — Tvorca Webstránok | IQ Rest",
+    "description": "Vytvorte úžasnú webstránku reštaurácie s vlastným video alebo foto pozadím. Nahrajte video atmosféry alebo kulinársku fotografiu — ohúrte hostí od prvého skenovania."
+  },
+  "hero": {
+    "badge": "Dizajn Webstránky",
+    "title": "Vytvorte Úžasnú Webstránku Reštaurácie s Video Pozadím",
+    "subtitle": "Nahrajte video atmosféry vašej reštaurácie alebo krásnu kulinársku fotografiu ako pozadie. Hostia uvidia profesionálny, značkový zážitok hneď pri naskenovaní QR kódu.",
+    "cta": "Vytvorte Svoj Jedálny Lístok",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako Fungujú Vlastné Pozadia",
+    "subtitle": "Urobte trvalý prvý dojem vizuálmi, ktoré zodpovedajú vašej značke.",
+    "items": [
+      {
+        "title": "Nahrajte Video alebo Foto Pozadia",
+        "description": "Pridajte video v slučke atmosféry reštaurácie, time-lapse kuchyne alebo kvalitnú kulinársku fotografiu. Pozadie sa zobrazí na hlavnej stránke — vytvárajúc pohlcujúci zážitok pre hostí."
+      },
+      {
+        "title": "Optimalizované pre Rýchlosť na Akomkoľvek Zariadení",
+        "description": "Videá a obrázky sa automaticky komprimujú a načítavajú s oneskorením. Vaša webstránka zostane rýchla aj na pomalých mobilných pripojeniach — žiadne ukladanie do vyrovnávacej pamäte, žiadne oneskorenia, len plynulý zážitok."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o dizajne webstránky reštaurácie.",
+    "items": [
+      {
+        "question": "Aké video formáty sú podporované?",
+        "answer": "Formáty MP4 a WebM fungujú najlepšie. Videá sa automaticky komprimujú pre rýchle načítanie. Pre najlepší mobilný zážitok udržiavajte videá pod 30 sekúnd."
+      },
+      {
+        "question": "Spomalí video pozadie moju webstránku?",
+        "answer": "Nie. Videá sú komprimované, načítavajú sa s oneskorením a automaticky sa optimalizujú. Pri pomalých pripojeniach systém prejde na statický obrázok, aby zážitok zostal plynulý."
+      },
+      {
+        "question": "Môžem použiť fotografiu namiesto videa?",
+        "answer": "Áno. Nahrajte akúkoľvek fotografiu — bude optimalizovaná a zobrazená ako pozadie na celú obrazovku. Medzi videom a fotografiou môžete kedykoľvek prepínať."
+      },
+      {
+        "question": "Potrebujem na nastavenie dizajnéra?",
+        "answer": "Nie. Stačí nahrať video alebo fotografiu z ovládacieho panela. Systém automaticky rieši veľkosť, kompresiu a rozloženie. Vaša webstránka vyzerá profesionálne s nulovými dizajnérskymi zručnosťami."
+      }
+    ]
+  }
+}

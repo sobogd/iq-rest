@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restaurantanalyse og QR-menystatistikk — Spoer besoekende | IQ Rest",
+    "description": "Spoer QR-menyskanninger, sidevisninger, populaere spraak og besoeakstrender. Analyseverktoy i sanntid for restaurantnettsiden din."
+  },
+  "hero": {
+    "badge": "Analyse",
+    "title": "Se noyaktig hvordan gjester bruker QR-menyen din",
+    "subtitle": "Spoer daglige skanninger, sidevisninger, populaere spraak, enhetsstatistikk og trender over tid. Ta datadrevne beslutninger for aa optimere menyen og vokse virksomheten.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort noedvendig. Gratis plan tilgjengelig."
+  },
+  "features": {
+    "title": "Hva du kan spoere",
+    "subtitle": "Sanntidsinnsikt om restaurantens tilstedevaerelse paa nett.",
+    "items": [
+      {
+        "title": "Daglige visninger, skanninger og besoeakstrender",
+        "description": "Se hvor mange som skanner QR-koden og besoeker menyen hver dag, uke og maaned. Foelg trender over tid for aa forstaa sesongmonstre og maale effekten av kampanjer."
+      },
+      {
+        "title": "Spraak- og enhetsfordeling",
+        "description": "Vet hvilke spraak gjestene foretrekker og hvilke enheter de bruker. Disse dataene hjelper deg med aa prioritere oversettelser og sikre at menyen ser perfekt ut paa de mest populaere enhetene."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spoersmaal",
+    "subtitle": "Alt du trenger aa vite om restaurantanalyse.",
+    "items": [
+      {
+        "question": "Hvilke metrikker kan jeg spoere?",
+        "answer": "Daglige, ukentlige og maanedlige sidevisninger. Unike besoekende. Mest viste sider. Spraakpreferanser. Enhets- og nettleserfordeling. Alt oppdatert i sanntid."
+      },
+      {
+        "question": "Er analyse inkludert i gratisplanen?",
+        "answer": "Ja. Grunnleggende analyse er tilgjengelig paa alle planer, inkludert gratis. Du kan se visninger, besoekende og spraakstatistikk fra dag en."
+      },
+      {
+        "question": "Kan jeg se hvilke sider som er mest populaere?",
+        "answer": "Ja. Kontrollpanelet viser visninger fordelt per side — hjemmeside, meny, kontakter, reservasjoner og spraakvalg. Se noyaktig hvor gjestene tilbringer tiden sin."
+      },
+      {
+        "question": "Hvor langt tilbake gaar dataene?",
+        "answer": "Analysedata lagres fra dagen du oppretter restauranten. Du kan se daglige, ukentlige og maanedlige trender for hele historikken."
+      }
+    ]
+  }
+}

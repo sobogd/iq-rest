@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Multilingual Restaurant Website — Menu in 25+ Languages | IQ Rest",
+    "description": "Your restaurant website and QR menu in 25+ languages. Guests switch languages with one tap — menu, contacts, and reservations adapt instantly."
+  },
+  "hero": {
+    "badge": "Multilingual",
+    "title": "Your Restaurant Website in 25+ Languages",
+    "subtitle": "Tourists and international guests see your menu in their own language. One tap to switch — everything adapts instantly: dishes, descriptions, contacts, navigation.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How Multilingual Support Works",
+    "subtitle": "Speak your customer's language without any extra work.",
+    "items": [
+      {
+        "title": "Guests Choose Their Language",
+        "description": "A language selector appears on your menu. Guests tap their preferred language, and the entire website — menu, descriptions, contact info, navigation — switches instantly. No page reload needed."
+      },
+      {
+        "title": "Add Languages from Your Dashboard",
+        "description": "Enable new languages with one click. Use AI translation to fill in the content, or enter translations manually. Each language can be toggled on or off independently."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about multilingual menus.",
+    "items": [
+      {
+        "question": "How many languages can I add to my menu?",
+        "answer": "Up to 25+ languages including all major European languages, Chinese, Japanese, Korean, Arabic, Farsi, and more. Add as many as your guests need."
+      },
+      {
+        "question": "Do I need to translate everything manually?",
+        "answer": "No. Use the built-in AI translation to translate your entire menu with one click. You can also edit any translation manually for full control."
+      },
+      {
+        "question": "Does the language preference get saved?",
+        "answer": "Yes. When a guest selects a language, it's remembered for their next visit. They don't need to choose again when they return."
+      },
+      {
+        "question": "Is multilingual support available on the free plan?",
+        "answer": "The free plan includes up to 2 languages. Basic and Pro plans offer unlimited languages with AI translation included."
+      }
+    ]
+  }
+}

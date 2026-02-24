@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Generación de fotos de comida con IA — Imágenes para menú de restaurante | IQ Rest",
+    "description": "Genera fotos de comida profesionales para tu menú con IA. Sin fotógrafo — obtén imágenes profesionales de platos en segundos, optimizadas para tu menú QR."
+  },
+  "hero": {
+    "badge": "Imágenes IA",
+    "title": "Fotos profesionales para el menú sin fotógrafo",
+    "subtitle": "Genera impresionantes imágenes de platos con IA. Solo introduce el nombre del plato y obtén una foto profesional y optimizada para tu menú QR — en segundos.",
+    "cta": "Crear tu menú",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "No se requiere tarjeta de crédito. Plan gratuito disponible."
+  },
+  "features": {
+    "title": "Cómo funciona la generación de imágenes con IA",
+    "subtitle": "Del nombre del plato a una foto profesional con un clic.",
+    "items": [
+      {
+        "title": "Genera imágenes a partir del nombre del plato",
+        "description": "Escribe el nombre del plato — «Salmón a la parrilla con limón», «Pizza Margarita», «Tarta de chocolate» — y la IA genera una foto profesional de comida. Elige entre varios estilos y fondos."
+      },
+      {
+        "title": "Optimizadas para carga rápida",
+        "description": "Cada imagen generada se comprime automáticamente y se convierte a formatos modernos. Tu menú sigue siendo ultrarrápido en cualquier dispositivo, incluso con fotos en todos los platos."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre las imágenes IA para el menú.",
+    "items": [
+      {
+        "question": "¿Cómo genero una foto de un plato?",
+        "answer": "Abre cualquier plato en tu panel de control, pulsa «Generar imagen» y la IA crea una foto profesional basada en el nombre y descripción del plato. Elige la que más te guste."
+      },
+      {
+        "question": "¿Puedo usar mis propias fotos?",
+        "answer": "Por supuesto. Sube tus propias fotos desde el móvil o el ordenador. La generación con IA es opcional — úsala cuando no tengas una foto disponible."
+      },
+      {
+        "question": "¿Cuántas imágenes puedo generar?",
+        "answer": "Los límites de generación dependen de tu plan. Basic incluye una asignación mensual, y Pro ofrece un límite mayor. Siempre puedes subir tus propias fotos sin límites."
+      },
+      {
+        "question": "¿Las imágenes generadas son únicas para mi restaurante?",
+        "answer": "Sí. Cada imagen se genera de forma única para tu plato específico. Sin fotos de stock — cada imagen se crea desde cero basándose en tu plato del menú."
+      }
+    ]
+  }
+}

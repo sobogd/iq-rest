@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Crie um menu QR para seu restaurante — Criador de menu grátis | IQ Rest",
+    "description": "Crie o menu QR digital do seu restaurante em minutos. Adicione categorias, pratos, fotos, preços — e compartilhe um código QR. Comece gratuitamente."
+  },
+  "hero": {
+    "badge": "Criador de menu",
+    "title": "Crie um menu QR digital para seu restaurante em minutos",
+    "subtitle": "Adicione suas categorias e pratos, defina preços, envie fotos — seu menu QR está pronto para compartilhar. Edite a qualquer momento, as alterações aparecem instantaneamente.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "Como funciona o editor de menu",
+    "subtitle": "Ferramentas simples para colocar seu menu online rapidamente.",
+    "items": [
+      {
+        "title": "Adicione categorias e pratos",
+        "description": "Crie categorias como Entradas, Pratos Principais, Bebidas — depois adicione pratos com nomes, descrições, preços e fotos. Arraste e solte para reordenar. Ative ou desative itens sem excluí-los."
+      },
+      {
+        "title": "As alterações são publicadas instantaneamente",
+        "description": "Cada edição aparece no seu menu QR em segundos. Atualize um preço, adicione um prato especial do dia ou esconda um prato esgotado — seus clientes sempre veem a versão mais recente."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre a criação do seu menu QR.",
+    "items": [
+      {
+        "question": "Como crio um menu QR para meu restaurante?",
+        "answer": "Cadastre-se com seu e-mail, dê um nome ao seu restaurante e comece a adicionar categorias e pratos. Seu menu QR é gerado automaticamente — imprima o código QR e coloque nas mesas."
+      },
+      {
+        "question": "Posso adicionar fotos aos pratos?",
+        "answer": "Sim. Envie fotos diretamente do seu celular ou computador. As imagens são otimizadas automaticamente para carregamento rápido em qualquer dispositivo."
+      },
+      {
+        "question": "Quantos itens posso adicionar?",
+        "answer": "Não há limite de categorias ou itens do menu. Adicione quantos pratos precisar — seu menu continua rápido e organizado."
+      },
+      {
+        "question": "Posso esconder temporariamente um prato esgotado?",
+        "answer": "Sim. Desative qualquer item com um toque. Ele desaparece do menu público mas permanece no seu painel — ative-o novamente quando estiver pronto."
+      }
+    ]
+  }
+}

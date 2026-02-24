@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restorani lauabroneerimissusteem — Veebibroneeerimine | IQ Rest",
+    "description": "Laske külalistel broneerida laudu otse oma veebilehelt. Automaatne või käsitsi kinnitamine, e-posti teavitused ja täielik kalendrihaldus — kõik kaasas."
+  },
+  "hero": {
+    "badge": "Lauabroneeringud",
+    "title": "Võtke vastu lauabroneeringuid 24/7 oma veebilehelt",
+    "subtitle": "Külalised valivad kuupäeva, kellaaja ja seltskonna suuruse — ning broneerivad koheselt. Haldate kõike oma juhtpaneelilt, telefonikõnesid pole vaja.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Kuidas lauabroneeringud toimivad",
+    "subtitle": "Kaks sammu külalise päringust kinnitatud broneeringuni.",
+    "items": [
+      {
+        "title": "Külalised broneerivad teie veebilehelt",
+        "description": "Kliendid külastavad teie restorani lehte, puudutavad 'Broneeri laud', valivad kuupäeva ja kellaaja, sisestavad oma andmed ja saadavad päringu. Rakendust pole vaja — töötab mis tahes brauseris mis tahes seadmes."
+      },
+      {
+        "title": "Haldate broneeringuid oma juhtpaneelilt",
+        "description": "Iga broneering ilmub teie juhtpaneelile koos külalise nime, telefoni, seltskonna suuruse, kuupäeva ja märkmetega. Kinnitage või keelduge ühe puudutusega. Seadistage automaatne kinnitamine või vaadake iga broneeringut käsitsi üle."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma lauabroneeringute kohta.",
+    "items": [
+      {
+        "question": "Kas kliendid peavad broneerimiseks konto looma?",
+        "answer": "Ei. Külalised täidavad lihtsalt oma nime, telefoninumbri, seltskonna suuruse ja eelistatud aja. Kontot ega rakenduse allalaadimist pole vaja."
+      },
+      {
+        "question": "Kas ma saan määrata saadaolevaid ajavahemikke ja mahutavust?",
+        "answer": "Jah. Määrake oma tööajad, broneeringu ajavahemiku kestus ja laua mahutavus. Süsteem näitab külalistele ainult saadaolevaid ajavahemikke."
+      },
+      {
+        "question": "Kas ma saan teavituse, kui keegi broneerib?",
+        "answer": "Jah. Saate e-kirja iga uue broneeringu kohta. Külalised saavad samuti kinnituskirja, kui broneering heaks kiidetakse."
+      },
+      {
+        "question": "Kas ma saan kasutada nii automaatset kui ka käsitsi kinnitamist?",
+        "answer": "Jah. Valige automaatne režiim, et kinnitada broneeringud koheselt saadavuse alusel, või käsitsi režiim, et vaadata iga päring üle ja kinnitada ise."
+      }
+    ]
+  }
+}

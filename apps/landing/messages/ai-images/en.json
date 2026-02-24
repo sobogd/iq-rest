@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI Food Photo Generation for Menus — Restaurant Menu Images | IQ Rest",
+    "description": "Generate beautiful food photos for your menu with AI. No photographer needed — get professional dish images in seconds, optimized for your QR menu."
+  },
+  "hero": {
+    "badge": "AI Images",
+    "title": "Professional Menu Photos Without a Photographer",
+    "subtitle": "Generate stunning food images for your dishes with AI. Just enter the dish name, and get a beautiful, optimized photo ready for your QR menu — in seconds.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How AI Image Generation Works",
+    "subtitle": "From dish name to professional photo in one click.",
+    "items": [
+      {
+        "title": "Generate Images from Dish Names",
+        "description": "Type your dish name — 'Grilled Salmon with Lemon', 'Margherita Pizza', 'Chocolate Lava Cake' — and AI generates a professional food photo. Choose from multiple styles and backgrounds."
+      },
+      {
+        "title": "Optimized for Fast Loading",
+        "description": "Every generated image is automatically compressed and converted to modern formats. Your menu stays lightning-fast on any device, even with photos on every dish."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about AI menu images.",
+    "items": [
+      {
+        "question": "How do I generate a food photo?",
+        "answer": "Open any menu item in your dashboard, tap 'Generate Image', and AI creates a professional food photo based on the dish name and description. Pick the one you like."
+      },
+      {
+        "question": "Can I use my own photos instead?",
+        "answer": "Absolutely. Upload your own photos from your phone or computer. AI generation is optional — use it when you don't have a photo ready."
+      },
+      {
+        "question": "How many images can I generate?",
+        "answer": "Image generation limits depend on your plan. Basic includes a monthly allowance, and Pro offers a higher limit. You can always upload your own photos without limits."
+      },
+      {
+        "question": "Are generated images unique to my restaurant?",
+        "answer": "Yes. Each image is generated uniquely for your specific dish. No stock photos — every image is created fresh based on your menu item."
+      }
+    ]
+  }
+}

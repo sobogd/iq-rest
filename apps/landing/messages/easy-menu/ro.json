@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Creați un Meniu QR pentru Restaurantul Dvs. — Creator Gratuit de Meniu | IQ Rest",
+    "description": "Construiți meniul QR digital al restaurantului în câteva minute. Adăugați categorii, feluri de mâncare, fotografii, prețuri — și partajați un cod QR scanabil. Gratuit la început."
+  },
+  "hero": {
+    "badge": "Creator de Meniu",
+    "title": "Creați un Meniu QR Digital pentru Restaurant în Câteva Minute",
+    "subtitle": "Adăugați categoriile și felurile de mâncare, setați prețurile, încărcați fotografii — meniul QR este gata de partajat. Editați oricând, modificările apar instant.",
+    "cta": "Creați Meniul",
+    "ctaDemo": "Vezi Demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Cum Funcționează Editorul de Meniu",
+    "subtitle": "Instrumente simple care vă pun meniul online rapid.",
+    "items": [
+      {
+        "title": "Adăugați Categorii și Feluri de Mâncare",
+        "description": "Creați categorii precum Aperitive, Feluri Principale, Băuturi — apoi adăugați feluri cu nume, descrieri, prețuri și fotografii. Trageți și plasați pentru a reordona. Activați sau dezactivați elementele fără a le șterge."
+      },
+      {
+        "title": "Modificările Devin Active Instant",
+        "description": "Fiecare editare pe care o faceți apare pe meniul QR live în câteva secunde. Actualizați un preț, adăugați un meniu zilnic special sau ascundeți un fel epuizat — clienții dvs. văd mereu versiunea cea mai recentă."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre crearea meniului QR.",
+    "items": [
+      {
+        "question": "Cum creez un meniu QR pentru restaurantul meu?",
+        "answer": "Înregistrați-vă cu e-mailul, numiți restaurantul și începeți să adăugați categorii și feluri de mâncare. Meniul QR se generează automat — tipăriți codul QR și plasați-l pe mese."
+      },
+      {
+        "question": "Pot adăuga fotografii la elementele meniului?",
+        "answer": "Da. Încărcați fotografii direct de pe telefon sau computer. Imaginile sunt optimizate automat pentru încărcare rapidă pe orice dispozitiv."
+      },
+      {
+        "question": "Câte elemente pot adăuga?",
+        "answer": "Nu există limită de categorii sau elemente de meniu. Adăugați câte feluri aveți nevoie — meniul rămâne rapid și organizat."
+      },
+      {
+        "question": "Pot ascunde temporar un fel care s-a epuizat?",
+        "answer": "Da. Dezactivați orice element cu o singură apăsare. Dispare din meniul public dar rămâne în panoul dvs. de control — reactivați-l oricând sunteți pregătit."
+      }
+    ]
+  }
+}

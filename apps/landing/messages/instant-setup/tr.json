@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Ücretsiz Restoran Web Sitesi Oluşturucu — 5 Dakikada Oluşturun | IQ Rest",
+    "description": "QR menü, iletişim sayfası ve harita ile profesyonel bir restoran web sitesi edinin — sadece e-postanızı girin. 5 dakikada hazır, teknik bilgi gerekmez."
+  },
+  "hero": {
+    "badge": "Ücretsiz Web Sitesi",
+    "title": "5 Dakikada Profesyonel Bir Restoran Web Sitesi Edinin",
+    "subtitle": "E-postanızı girin, restoranınızı adlandırın ve anında QR menü, haritalı iletişim sayfası ve modern duyarlı tasarıma sahip eksiksiz bir web sitesi alın. Kodlama yok, tasarımcı yok.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "Sıfırdan canlı restoran web sitesine üç adımda.",
+    "items": [
+      {
+        "title": "Sadece E-postanızla Kaydolun",
+        "description": "Karmaşık kayıt formları yok. E-postanızı girin, bir kodla doğrulayın ve restoran kontrol paneliniz hazır. Restoranınızı adlandırın ve web siteniz anında yayına girer."
+      },
+      {
+        "title": "Her Şey Kutudan Çıkar Çıkmaz Dahil",
+        "description": "Web siteniz QR menü, Google Haritalar'lı iletişim sayfası, dil desteği, mobil uyumlu tasarım ve size özel benzersiz URL ile gelir. Sadece yemeklerinizi ekleyin ve paylaşmaya başlayın."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Restoran web sitenizi oluşturma hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Ücretsiz restoran web sitesi nasıl oluştururum?",
+        "answer": "IQ Rest'te e-postanızı girin, bir kodla doğrulayın, restoranınızı adlandırın — bitti. QR menülü web siteniz 5 dakikadan kısa sürede yayında. Kredi kartı gerekmez."
+      },
+      {
+        "question": "Teknik beceriye ihtiyacım var mı?",
+        "answer": "Hayır. Her şey geliştiriciler için değil, restoran sahipleri için tasarlanmıştır. Yemek ekleyin, fotoğraf yükleyin ve sitenizi tamamen telefonunuzdan yönetin."
+      },
+      {
+        "question": "Ücretsiz plana neler dahil?",
+        "answer": "Tam restoran web sitesi, QR menü, haritalı iletişim sayfası, analitik, özel renk şeması ve 2 dile kadar. Deneme süresi yok — sonsuza kadar ücretsiz."
+      },
+      {
+        "question": "Kendi alan adımı kullanabilir miyim?",
+        "answer": "Ücretsiz ve Basic planlarda siteniz iq-rest.com/m/isminiz adresinde barındırılır. Pro plan, tam marka kontrolü için özel alan adlarını destekler."
+      }
+    ]
+  }
+}

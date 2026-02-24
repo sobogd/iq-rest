@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "MI ēdienu fotogrāfiju ģenerēšana ēdienkārtēm — Restorāna ēdienkartes attēli | IQ Rest",
+    "description": "Ģenerējiet skaistas ēdienu fotogrāfijas savai ēdienkārtei ar MI. Fotogrāfs nav nepieciešams — iegūstiet profesionālus ēdienu attēlus sekundēs, optimizētus jūsu QR ēdienkārtei."
+  },
+  "hero": {
+    "badge": "MI attēli",
+    "title": "Profesionālas ēdienkartes fotogrāfijas bez fotogrāfa",
+    "subtitle": "Ģenerējiet pārsteidzošus ēdienu attēlus saviem ēdieniem ar MI. Vienkārši ievadiet ēdiena nosaukumu un iegūstiet skaistu, optimizētu fotogrāfiju, kas gatava jūsu QR ēdienkārtei — sekundēs.",
+    "cta": "Izveidojiet savu ēdienkarti",
+    "ctaDemo": "Skatīt demo",
+    "noCreditCard": "Kredītkarte nav nepieciešama. Pieejams bezmaksas plāns."
+  },
+  "features": {
+    "title": "Kā darbojas MI attēlu ģenerēšana",
+    "subtitle": "No ēdiena nosaukuma līdz profesionālai fotogrāfijai ar vienu klikšķi.",
+    "items": [
+      {
+        "title": "Ģenerējiet attēlus no ēdienu nosaukumiem",
+        "description": "Ievadiet ēdiena nosaukumu — 'Grilēts lasis ar citronu', 'Margherita pica', 'Šokolādes lavas kūka' — un MI ģenerē profesionālu ēdiena fotogrāfiju. Izvēlieties no vairākiem stiliem un foniem."
+      },
+      {
+        "title": "Optimizēts ātrai ielādei",
+        "description": "Katrs ģenerētais attēls tiek automātiski saspiests un konvertēts modernos formātos. Jūsu ēdienkārte paliek ļoti ātra jebkurā ierīcē, pat ar fotogrāfijām pie katra ēdiena."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "subtitle": "Viss, kas jums jāzina par MI ēdienkartes attēliem.",
+    "items": [
+      {
+        "question": "Kā ģenerēt ēdiena fotogrāfiju?",
+        "answer": "Atveriet jebkuru ēdienkartes vienumu vadības panelī, nospiediet 'Ģenerēt attēlu', un MI izveido profesionālu ēdiena fotogrāfiju, pamatojoties uz ēdiena nosaukumu un aprakstu. Izvēlieties to, kas patīk."
+      },
+      {
+        "question": "Vai tā vietā varu izmantot savas fotogrāfijas?",
+        "answer": "Noteikti. Augšupielādējiet savas fotogrāfijas no tālruņa vai datora. MI ģenerēšana ir neobligāta — izmantojiet to, kad fotogrāfija nav gatava."
+      },
+      {
+        "question": "Cik attēlu es varu ģenerēt?",
+        "answer": "Attēlu ģenerēšanas limiti ir atkarīgi no jūsu plāna. Basic ietver ikmēneša apjomu, un Pro piedāvā augstāku limitu. Savas fotogrāfijas vienmēr varat augšupielādēt bez ierobežojumiem."
+      },
+      {
+        "question": "Vai ģenerētie attēli ir unikāli manam restorānam?",
+        "answer": "Jā. Katrs attēls tiek unikāli ģenerēts jūsu konkrētajam ēdienam. Nav akciju fotogrāfiju — katrs attēls tiek izveidots no jauna, pamatojoties uz jūsu ēdienkartes vienumu."
+      }
+    ]
+  }
+}

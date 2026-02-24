@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Éttermi Weboldal Videó és Fotó Háttérrel — Weboldal Készítő | IQ Rest",
+    "description": "Készítsen lenyűgöző éttermi weboldalt egyedi videó vagy fotó háttérrel. Töltse fel a hangulatos videóját vagy ételfotóját — lenyűgözi a vendégeket az első beolvasástól."
+  },
+  "hero": {
+    "badge": "Weboldal Dizájn",
+    "title": "Készítsen Lenyűgöző Éttermi Weboldalt Videó Háttérrel",
+    "subtitle": "Töltse fel az étterme hangulatos videóját vagy egy gyönyörű ételfotót háttérként. A vendégek professzionális, márkás élményt látnak, amint beolvassák a QR kódját.",
+    "cta": "Hozza Létre Étlapját",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Hogyan Működnek az Egyedi Hátterek",
+    "subtitle": "Maradandó első benyomás a márkájához illő vizuális elemekkel.",
+    "items": [
+      {
+        "title": "Videó vagy Fotó Hátterek Feltöltése",
+        "description": "Adjon hozzá egy ismétlődő videót az étterme hangulatáról, egy time-lapse-t a konyhájáról, vagy egy kiváló minőségű ételfotót. A háttér a főoldalon jelenik meg — magával ragadó élményt teremtve a vendégeknek."
+      },
+      {
+        "title": "Sebességre Optimalizálva Minden Eszközön",
+        "description": "A videók és képek automatikusan tömörítődnek és késleltetetten töltődnek. Weboldala még lassú mobil kapcsolatokon is gyors marad — nincs pufferelés, nincs késés, csak zökkenőmentes élmény."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit az éttermi weboldal dizájnról tudni kell.",
+    "items": [
+      {
+        "question": "Milyen videóformátumok támogatottak?",
+        "answer": "Az MP4 és WebM formátumok működnek a legjobban. A videók automatikusan tömörítődnek a gyors betöltéshez. A legjobb mobil élmény érdekében tartsa a videókat 30 másodperc alatt."
+      },
+      {
+        "question": "A videó háttér lelassítja a weboldalamat?",
+        "answer": "Nem. A videók tömörítettek, késleltetetten töltődnek és automatikusan optimalizáltak. Lassú kapcsolatokon a rendszer statikus képre vált a zökkenőmentes élmény érdekében."
+      },
+      {
+        "question": "Használhatok fotót videó helyett?",
+        "answer": "Igen. Töltsön fel bármilyen fotót — optimalizálódik és teljes képernyős háttérként jelenik meg. Bármikor válthat videó és fotó között."
+      },
+      {
+        "question": "Szükségem van dizájnerre a beállításhoz?",
+        "answer": "Nem. Csak töltse fel a videóját vagy fotóját a vezérlőpultról. A rendszer automatikusan kezeli a méretezést, tömörítést és elrendezést. Weboldala nulla dizájn tudással is professzionálisan néz ki."
+      }
+    ]
+  }
+}

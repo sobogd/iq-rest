@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Meertalige restaurantwebsite — Menu in 25+ talen | IQ Rest",
+    "description": "Uw restaurantwebsite en QR-menu in meer dan 25 talen. Gasten wisselen van taal met één tik — menu, contactgegevens en reserveringen passen zich direct aan."
+  },
+  "hero": {
+    "badge": "Meertalig",
+    "title": "Uw restaurantwebsite in meer dan 25 talen",
+    "subtitle": "Toeristen en internationale gasten zien uw menu in hun eigen taal. Eén tik om te wisselen — alles past zich direct aan: gerechten, beschrijvingen, contactgegevens, navigatie.",
+    "cta": "Menu aanmaken",
+    "ctaDemo": "Demo bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "features": {
+    "title": "Hoe meertalige ondersteuning werkt",
+    "subtitle": "Spreek de taal van uw klant zonder extra moeite.",
+    "items": [
+      {
+        "title": "Gasten kiezen hun taal",
+        "description": "Een taalkeuze verschijnt in uw menu. Gasten tikken op hun voorkeurstaal en de hele website — menu, beschrijvingen, contactgegevens, navigatie — schakelt direct om. Geen pagina herladen nodig."
+      },
+      {
+        "title": "Voeg talen toe vanuit uw dashboard",
+        "description": "Activeer nieuwe talen met één klik. Gebruik AI-vertaling om de content te vullen, of voer vertalingen handmatig in. Elke taal kan onafhankelijk worden in- of uitgeschakeld."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over meertalige menu's.",
+    "items": [
+      {
+        "question": "Hoeveel talen kan ik toevoegen aan mijn menu?",
+        "answer": "Meer dan 25 talen waaronder alle belangrijke Europese talen, Chinees, Japans, Koreaans, Arabisch, Farsi en meer. Voeg zoveel talen toe als uw gasten nodig hebben."
+      },
+      {
+        "question": "Moet ik alles handmatig vertalen?",
+        "answer": "Nee. Gebruik de ingebouwde AI-vertaling om uw hele menu met één klik te vertalen. U kunt ook elke vertaling handmatig bewerken voor volledige controle."
+      },
+      {
+        "question": "Wordt de taalvoorkeur opgeslagen?",
+        "answer": "Ja. Wanneer een gast een taal selecteert, wordt deze onthouden voor het volgende bezoek. Ze hoeven niet opnieuw te kiezen wanneer ze terugkomen."
+      },
+      {
+        "question": "Is meertalige ondersteuning beschikbaar in het gratis plan?",
+        "answer": "Het gratis plan bevat maximaal 2 talen. De Basic- en Pro-plannen bieden onbeperkte talen met AI-vertaling inbegrepen."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restoranlar için Yapay Zeka Menü Çevirisi — QR Menü Çevirisi | IQ Rest",
+    "description": "Restoran menünüzü tek tıkla 25'ten fazla dile çevirin. Yapay zeka yemek bağlamını anlar — yemek adları, açıklamalar ve kategoriler doğru şekilde çevrilir."
+  },
+  "hero": {
+    "badge": "Yapay Zeka Çevirisi",
+    "title": "Menünüzü Tek Tıkla 25'ten Fazla Dile Çevirin",
+    "subtitle": "Yapay zekamız yemek bağlamını anlar — yemek adlarını, açıklamaları ve kategorileri kelime kelime değil, doğal olarak çevirir. Her turiste ve uluslararası misafire ulaşın.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Yapay Zeka Çevirisi Nasıl Çalışır",
+    "subtitle": "Kendi dilinizden dünyaya saniyeler içinde.",
+    "items": [
+      {
+        "title": "Tüm Menünüz İçin Tek Tıkla Çeviri",
+        "description": "Hedef dili seçin, çevir'e dokunun ve tüm menünüz — kategoriler, yemek adları, açıklamalar — anında çevrilir. Yapay zeka mutfak terimlerini korur ve her dile doğal şekilde uyarlar."
+      },
+      {
+        "title": "Her Çeviriyi Düzenleyin ve İnce Ayar Yapın",
+        "description": "Her yapay zeka çevirisi tamamen düzenlenebilir. Sonucu inceleyin, herhangi bir ifadeyi ayarlayın ve kaydedin. Menünün diğer bölümlerini yeniden çevirseniz bile değişiklikleriniz korunur."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Menü çevirisi hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Yapay zeka çevirisi yemek menüleri için ne kadar doğru?",
+        "answer": "Yapay zekamız restoran içeriği için optimize edilmiştir. 'Beef Wellington' veya 'Tiramisu' gibi isimlerin kelimesi kelimesine çevrilmemesi gerektiğini anlar ve açıklamaları her dilde doğal olacak şekilde uyarlar."
+      },
+      {
+        "question": "Hangi diller destekleniyor?",
+        "answer": "İngilizce, İspanyolca, Fransızca, Almanca, İtalyanca, Portekizce, Çince, Japonca, Korece, Arapça, Rusça ve daha birçok Avrupa ve Asya dili dahil 25'ten fazla dil."
+      },
+      {
+        "question": "Tüm menü yerine sadece bazı öğeleri çevirebilir miyim?",
+        "answer": "Evet. Tek tek öğeleri, tüm kategorileri veya menünün tamamını tek seferde çevirebilirsiniz. Neyin çevrileceği üzerinde tam kontrol sizde."
+      },
+      {
+        "question": "Her çeviri için ek ücret var mı?",
+        "answer": "Yapay zeka çevirisi, cömert aylık limitlerle Basic ve Pro planlara dahildir. Kelime başına veya öğe başına ücret yoktur — ihtiyacınız kadar çevirin."
+      }
+    ]
+  }
+}

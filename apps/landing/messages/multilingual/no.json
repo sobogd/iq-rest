@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Flerspraklig restaurantnettside — Meny paa over 25 spraak | IQ Rest",
+    "description": "Restaurantnettsiden og QR-menyen din paa over 25 spraak. Gjester bytter spraak med ett trykk — meny, kontakter og reservasjoner tilpasser seg umiddelbart."
+  },
+  "hero": {
+    "badge": "Flerspraklig",
+    "title": "Restaurantnettsiden din paa over 25 spraak",
+    "subtitle": "Turister og internasjonale gjester ser menyen din paa sitt eget spraak. Ett trykk for aa bytte — alt tilpasser seg umiddelbart: retter, beskrivelser, kontakter, navigasjon.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort noedvendig. Gratis plan tilgjengelig."
+  },
+  "features": {
+    "title": "Hvordan flerspraklig stoette fungerer",
+    "subtitle": "Snakk kundenes spraak uten ekstra arbeid.",
+    "items": [
+      {
+        "title": "Gjester velger spraak",
+        "description": "En spraakvelger vises paa menyen. Gjester trykker paa foretrukket spraak, og hele nettsiden — meny, beskrivelser, kontaktinfo, navigasjon — bytter umiddelbart. Ingen sideinnlasting noedvendig."
+      },
+      {
+        "title": "Legg til spraak fra kontrollpanelet",
+        "description": "Aktiver nye spraak med ett klikk. Bruk AI-oversettelse for aa fylle inn innholdet, eller skriv inn oversettelser manuelt. Hvert spraak kan slaaes paa eller av uavhengig."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spoersmaal",
+    "subtitle": "Alt du trenger aa vite om flerspraklige menyer.",
+    "items": [
+      {
+        "question": "Hvor mange spraak kan jeg legge til i menyen?",
+        "answer": "Opptil over 25 spraak inkludert alle store europeiske spraak, kinesisk, japansk, koreansk, arabisk, farsi og flere. Legg til saa mange som gjestene dine trenger."
+      },
+      {
+        "question": "Maa jeg oversette alt manuelt?",
+        "answer": "Nei. Bruk den innebygde AI-oversettelsen for aa oversette hele menyen med ett klikk. Du kan ogsaa redigere enhver oversettelse manuelt for full kontroll."
+      },
+      {
+        "question": "Lagres spraakpreferansen?",
+        "answer": "Ja. Naar en gjest velger et spraak, huskes det til neste besoek. De trenger ikke velge paa nytt naar de kommer tilbake."
+      },
+      {
+        "question": "Er flerspraklig stoette tilgjengelig paa gratisplanen?",
+        "answer": "Gratisplanen inkluderer opptil 2 spraak. Basic- og Pro-planer tilbyr ubegrenset antall spraak med AI-oversettelse inkludert."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Aangepast QR-menuontwerp & merkkleuren — Restaurantbranding | IQ Rest",
+    "description": "Pas uw QR-menu aan op uw restaurantmerk. Kies accentkleuren, lichte/donkere thema's en creëer een consistent uiterlijk voor uw gehele digitale menu."
+  },
+  "hero": {
+    "badge": "Aangepast ontwerp",
+    "title": "Laat uw QR-menu passen bij uw restaurantmerk",
+    "subtitle": "Kies uw merkkleur — en uw hele menu — knoppen, accenten, links — wordt direct bijgewerkt. Lichte en donkere thema's inbegrepen.",
+    "cta": "Menu aanmaken",
+    "ctaDemo": "Demo bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "features": {
+    "title": "Hoe aangepaste branding werkt",
+    "subtitle": "Uw menu, uw kleuren — consistent op elke pagina.",
+    "items": [
+      {
+        "title": "Kies uw accentkleur",
+        "description": "Kies uit 12 zorgvuldig samengestelde presets of voer uw exacte merkkleur in als hex-code. Elke knop, link en accent in uw menu past zich direct aan — geen designvaardigheden nodig."
+      },
+      {
+        "title": "Automatische lichte & donkere thema's",
+        "description": "Uw menu ondersteunt automatisch zowel de lichte als de donkere modus. Het systeem zorgt ervoor dat uw merkkleur er in beide thema's geweldig uitziet met geoptimaliseerd contrast en leesbaarheid."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over menu-aanpassing.",
+    "items": [
+      {
+        "question": "Kan ik mijn exacte merkkleur gebruiken?",
+        "answer": "Ja. Voer een willekeurige hex-kleurcode in, of kies uit 12 zorgvuldig geselecteerde presets. Uw accentkleur wordt toegepast op alle pagina's van uw menu."
+      },
+      {
+        "question": "Werkt het met de donkere modus?",
+        "answer": "Ja. Uw kleurenschema past zich automatisch aan aan lichte en donkere thema's. Het systeem past het contrast aan om uw menu leesbaar en mooi te houden in elke modus."
+      },
+      {
+        "question": "Kan ik kleuren wijzigen na publicatie?",
+        "answer": "Absoluut. Wijzig uw accentkleur op elk moment vanuit het dashboard. Wijzigingen verschijnen direct in uw gepubliceerde menu — geen herpublicatie nodig."
+      },
+      {
+        "question": "Krijgt mijn QR-code ook de merkkleuren?",
+        "answer": "Uw QR-code wordt apart gegenereerd en kan onafhankelijk worden aangepast. De accentkleur is van toepassing op uw digitale menupagina's, navigatie en interactieve elementen."
+      }
+    ]
+  }
+}

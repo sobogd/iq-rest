@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Traducere AI a Meniului pentru Restaurante — Traducere Meniu QR | IQ Rest",
+    "description": "Traduceți meniul restaurantului în peste 25 de limbi cu un singur clic. AI-ul înțelege contextul culinar — numele felurilor, descrierile și categoriile sunt traduse cu acuratețe."
+  },
+  "hero": {
+    "badge": "Traducere AI",
+    "title": "Traduceți Meniul în Peste 25 de Limbi cu Un Singur Clic",
+    "subtitle": "AI-ul nostru înțelege contextul culinar — traduce numele felurilor, descrierile și categoriile natural, nu cuvânt cu cuvânt. Ajungeți la fiecare turist și oaspete internațional.",
+    "cta": "Creați Meniul",
+    "ctaDemo": "Vezi Demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Cum Funcționează Traducerea AI",
+    "subtitle": "Din limba dvs. în lumea întreagă în câteva secunde.",
+    "items": [
+      {
+        "title": "Traducere cu Un Singur Clic pentru Întregul Meniu",
+        "description": "Selectați limba țintă, apăsați traducere, iar întregul meniu — categorii, nume de feluri, descrieri — este tradus instant. AI-ul păstrează termenii culinari și se adaptează natural pentru fiecare limbă."
+      },
+      {
+        "title": "Editați și Ajustați Orice Traducere",
+        "description": "Fiecare traducere AI este complet editabilă. Revizuiți rezultatul, ajustați orice formulare și salvați. Modificările dvs. sunt păstrate chiar dacă retraduceți alte părți ale meniului ulterior."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre traducerea meniului.",
+    "items": [
+      {
+        "question": "Cât de precisă este traducerea AI pentru meniuri de restaurante?",
+        "answer": "AI-ul nostru este optimizat pentru conținut de restaurant. Înțelege că 'Beef Wellington' sau 'Tiramisu' nu trebuie traduse literal și adaptează descrierile să sune natural în fiecare limbă."
+      },
+      {
+        "question": "Ce limbi sunt acceptate?",
+        "answer": "Peste 25 de limbi, inclusiv engleză, spaniolă, franceză, germană, italiană, portugheză, chineză, japoneză, coreeană, arabă, rusă și multe alte limbi europene și asiatice."
+      },
+      {
+        "question": "Pot traduce doar anumite elemente, nu tot meniul?",
+        "answer": "Da. Puteți traduce elemente individuale, categorii întregi sau tot meniul deodată. Aveți control total asupra a ceea ce se traduce."
+      },
+      {
+        "question": "Costă în plus per traducere?",
+        "answer": "Traducerea AI este inclusă în planurile Basic și Pro cu limite lunare generoase. Fără taxe per cuvânt sau per element — traduceți cât aveți nevoie."
+      }
+    ]
+  }
+}

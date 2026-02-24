@@ -37,15 +37,31 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? deepMerge(fallbackMessages, userMessages)
     : userMessages;
 
-  // Load online-orders sublanding translations
-  const ooMessages = await import(`../messages/online-orders/${locale}.json`).catch(() => null);
-  const ooFallback = locale !== "en"
-    ? await import(`../messages/online-orders/en.json`).catch(() => null)
-    : null;
+  // Load sublanding translations for feature pages
+  const sublandings = [
+    { dir: "online-orders", key: "onlineOrders" },
+    { dir: "reservations", key: "reservationsPage" },
+    { dir: "color-scheme", key: "colorSchemePage" },
+    { dir: "easy-menu", key: "easyMenuPage" },
+    { dir: "ai-translation", key: "aiTranslationPage" },
+    { dir: "mobile-management", key: "mobileManagementPage" },
+    { dir: "custom-design", key: "customDesignPage" },
+    { dir: "multilingual", key: "multilingualPage" },
+    { dir: "instant-setup", key: "instantSetupPage" },
+    { dir: "analytics", key: "analyticsPage" },
+    { dir: "ai-images", key: "aiImagesPage" },
+    { dir: "personal-support", key: "personalSupportPage" },
+  ];
 
-  messages.onlineOrders = ooFallback
-    ? deepMerge(ooFallback.default, ooMessages?.default || {})
-    : (ooMessages?.default || {});
+  await Promise.all(sublandings.map(async ({ dir, key }) => {
+    const sub = await import(`../messages/${dir}/${locale}.json`).catch(() => null);
+    const fallback = locale !== "en"
+      ? await import(`../messages/${dir}/en.json`).catch(() => null)
+      : null;
+    messages[key] = fallback
+      ? deepMerge(fallback.default, sub?.default || {})
+      : (sub?.default || {});
+  }));
 
   return {
     locale,

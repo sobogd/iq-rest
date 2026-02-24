@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Personlig support for din restaurangwebbplats — Riktig manniskohjalp | IQ Rest",
+    "description": "Fa personlig hjalp fran riktiga manniskor, inte chatbotar. Installationshjalp, menyoptimeringstips och snabba svar — tillgangligt pa alla planer inklusive gratis."
+  },
+  "hero": {
+    "badge": "Personlig support",
+    "title": "Riktiga manniskor, riktig hjalp — inte chatbotar",
+    "subtitle": "Har du en fraga? Behover hjalp med att stalla in din meny? Vill foresla en funktion? Skriv till oss direkt och fa ett personligt svar fran nagon som forstar restauranger.",
+    "cta": "Skapa din meny",
+    "ctaDemo": "Visa demo",
+    "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+  },
+  "features": {
+    "title": "Hur support fungerar",
+    "subtitle": "Hjalp nar du behover det, fran manniskor som bryr sig.",
+    "items": [
+      {
+        "title": "Skriv till oss direkt fran din kontrollpanel",
+        "description": "Oppna supportchatten i din kontrollpanel och beskriv din fraga. En riktig manniska laser ditt meddelande och svarar — vanligtvis inom nagra timmar pa vardagar."
+      },
+      {
+        "title": "Hjalp med installation, optimering och mer",
+        "description": "Oavsett om du behover hjalp med att lagga till din forsta ratt, rad om att organisera din meny eller vill foresla en ny funktion — vi finns har. Varje fraga spelar roll, oavsett hur liten."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vanliga fragor",
+    "subtitle": "Allt du behover veta om var support.",
+    "items": [
+      {
+        "question": "Ar support tillganglig pa gratisplanen?",
+        "answer": "Ja. Personlig support ar tillganglig for alla planer, inklusive gratis. Vi tror att varje restaurang fortjanar riktig hjalp, oavsett prenumeration."
+      },
+      {
+        "question": "Hur snabbt svarar ni?",
+        "answer": "Vanligtvis inom nagra timmar pa vardagar. Vi laser varje meddelande personligen och siktar pa att losa din fraga i ett svar."
+      },
+      {
+        "question": "Kan ni hjalpa mig stalla in min meny?",
+        "answer": "Absolut. Om du behover hjalp med att lagga till ratter, organisera kategorier, stalla in oversattningar eller konfigurera reservationer — fraga bara. Vi hjalper garma dig genom det."
+      },
+      {
+        "question": "Kan jag foresla nya funktioner?",
+        "answer": "Ja, och vi alskar det! Manga av vara funktioner borjade som anvandarforslag. Skriv till oss med din ide sa overrager vi den for framtida uppdateringar."
+      }
+    ]
+  }
+}

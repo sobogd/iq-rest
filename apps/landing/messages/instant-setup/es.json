@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Generador gratuito de webs para restaurantes — Crea en 5 minutos | IQ Rest",
+    "description": "Obtén una web profesional para tu restaurante con menú QR, página de contacto y mapa — solo introduce tu email. Lista en 5 minutos, sin conocimientos técnicos."
+  },
+  "hero": {
+    "badge": "Web gratuita",
+    "title": "Obtén una web profesional para tu restaurante en 5 minutos",
+    "subtitle": "Introduce tu email, nombra tu restaurante — y al instante obtienes una web completa con menú QR, página de contacto con mapa y diseño responsive moderno. Sin programar, sin diseñadores.",
+    "cta": "Crear tu menú",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "No se requiere tarjeta de crédito. Plan gratuito disponible."
+  },
+  "features": {
+    "title": "Cómo funciona",
+    "subtitle": "De cero a una web de restaurante publicada en tres pasos.",
+    "items": [
+      {
+        "title": "Regístrate solo con tu email",
+        "description": "Sin formularios de registro complicados. Introduce tu email, verifica con un código y el panel de tu restaurante está listo. Nombra tu restaurante y tu web se publica inmediatamente."
+      },
+      {
+        "title": "Todo incluido desde el primer momento",
+        "description": "Tu web incluye menú QR, página de contacto con Google Maps, soporte de idiomas, diseño adaptable a móviles y tu propia URL única. Solo añade tus platos y empieza a compartir."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre la creación de tu web de restaurante.",
+    "items": [
+      {
+        "question": "¿Cómo creo una web gratuita para mi restaurante?",
+        "answer": "Introduce tu email en IQ Rest, verifica con un código, nombra tu restaurante — listo. Tu web con menú QR está publicada en menos de 5 minutos. Sin tarjeta de crédito."
+      },
+      {
+        "question": "¿Necesito conocimientos técnicos?",
+        "answer": "No. Todo está diseñado para dueños de restaurantes, no para desarrolladores. Añade platos, sube fotos y gestiona tu sitio completamente desde el móvil."
+      },
+      {
+        "question": "¿Qué incluye el plan gratuito?",
+        "answer": "Una web completa de restaurante, menú QR, página de contacto con mapa, analíticas, esquema de colores personalizado y hasta 2 idiomas. Sin periodo de prueba — es gratis para siempre."
+      },
+      {
+        "question": "¿Puedo usar mi propio dominio?",
+        "answer": "En los planes gratuito y Basic, tu web se aloja en iq-rest.com/m/tu-nombre. El plan Pro admite nombres de dominio propios para un control total de la marca."
+      }
+    ]
+  }
+}

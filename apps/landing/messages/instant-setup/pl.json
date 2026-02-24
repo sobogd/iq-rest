@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Darmowy generator strony restauracji — Stwórz w 5 minut | IQ Rest",
+    "description": "Otrzymaj profesjonalną stronę restauracji z menu QR, stroną kontaktową i mapą — wystarczy podać e-mail. Gotowe w 5 minut, bez umiejętności technicznych."
+  },
+  "hero": {
+    "badge": "Darmowa strona",
+    "title": "Otrzymaj profesjonalną stronę restauracji w 5 minut",
+    "subtitle": "Wpisz e-mail, nazwij restaurację i natychmiast otrzymasz kompletną stronę z menu QR, stroną kontaktową z mapą i nowoczesnym responsywnym designem. Bez kodowania, bez projektantów.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Jak to działa",
+    "subtitle": "Od zera do działającej strony restauracji w trzech krokach.",
+    "items": [
+      {
+        "title": "Zarejestruj się tylko za pomocą e-maila",
+        "description": "Bez skomplikowanych formularzy rejestracyjnych. Wpisz e-mail, potwierdź kodem i Twój panel restauracji jest gotowy. Nazwij restaurację, a Twoja strona natychmiast staje się aktywna."
+      },
+      {
+        "title": "Wszystko zawarte od razu",
+        "description": "Twoja strona zawiera menu QR, stronę kontaktową z Google Maps, obsługę języków, responsywny design mobilny i unikalny adres URL. Po prostu dodaj dania i zacznij udostępniać."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o tworzeniu strony restauracji.",
+    "items": [
+      {
+        "question": "Jak stworzyć darmową stronę restauracji?",
+        "answer": "Wpisz e-mail na IQ Rest, potwierdź kodem, nazwij restaurację — gotowe. Twoja strona z menu QR działa w mniej niż 5 minut. Karta kredytowa nie jest wymagana."
+      },
+      {
+        "question": "Czy potrzebuję umiejętności technicznych?",
+        "answer": "Nie. Wszystko jest zaprojektowane dla właścicieli restauracji, nie deweloperów. Dodawaj dania, przesyłaj zdjęcia i zarządzaj stroną całkowicie z telefonu."
+      },
+      {
+        "question": "Co zawiera darmowy plan?",
+        "answer": "Pełna strona restauracji, menu QR, strona kontaktowa z mapą, analityka, niestandardowy schemat kolorów i do 2 języków. Bez okresu próbnego — jest darmowy na zawsze."
+      },
+      {
+        "question": "Czy mogę użyć własnej domeny?",
+        "answer": "W darmowym i Basic planie Twoja strona jest hostowana pod iq-rest.com/m/twoja-nazwa. Plan Pro obsługuje własne nazwy domen dla pełnej kontroli nad marką."
+      }
+    ]
+  }
+}

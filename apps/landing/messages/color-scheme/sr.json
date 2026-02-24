@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Prilagođen dizajn QR menija i boje brenda — Brendiranje restorana | IQ Rest",
+    "description": "Uskladite QR meni sa brendom vašeg restorana. Izaberite akcentne boje, svetle/tamne teme i stvorite konzistentan izgled celokupnog digitalnog menija."
+  },
+  "hero": {
+    "badge": "Prilagođen dizajn",
+    "title": "Uskladite QR meni sa brendom vašeg restorana",
+    "subtitle": "Izaberite boju vašeg brenda i ceo meni — dugmad, isticanja, linkovi — se ažurira odmah. Svetla i tamna tema uključene.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Kako funkcioniše prilagođeno brendiranje",
+    "subtitle": "Vaš meni, vaše boje — konzistentno na svakoj stranici.",
+    "items": [
+      {
+        "title": "Izaberite svoju akcentnu boju",
+        "description": "Izaberite iz 12 pažljivo odabranih predefinisanih opcija ili unesite tačnu boju brenda sa hex kodom. Svako dugme, link i isticanje na vašem meniju se prilagođava odmah — dizajnerske veštine nisu potrebne."
+      },
+      {
+        "title": "Automatske svetle i tamne teme",
+        "description": "Vaš meni automatski podržava i svetli i tamni režim. Sistem obezbeđuje da boja vašeg brenda izgleda odlično u obe teme sa optimizovanim kontrastom i čitljivošću."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o prilagođavanju menija.",
+    "items": [
+      {
+        "question": "Mogu li da koristim tačnu boju svog brenda?",
+        "answer": "Da. Unesite bilo koji hex kod boje ili izaberite iz 12 pažljivo odabranih predefinisanih opcija. Vaša akcentna boja se primenjuje na svim stranicama menija."
+      },
+      {
+        "question": "Da li funkcioniše sa tamnim režimom?",
+        "answer": "Da. Vaša šema boja se automatski prilagođava i svetloj i tamnoj temi. Sistem prilagođava kontrast kako bi vaš meni bio čitljiv i lep u svakom režimu."
+      },
+      {
+        "question": "Mogu li da promenim boje nakon objavljivanja?",
+        "answer": "Naravno. Promenite akcentnu boju u bilo kom trenutku iz kontrolnog panela. Ažuriranja se odmah pojavljuju na vašem javnom meniju — ponovno objavljivanje nije potrebno."
+      },
+      {
+        "question": "Da li će moj QR kod takođe odgovarati bojama brenda?",
+        "answer": "Vaš QR kod se generiše zasebno i može se prilagoditi nezavisno. Akcentna boja se primenjuje na stranice digitalnog menija, navigaciju i interaktivne elemente."
+      }
+    ]
+  }
+}

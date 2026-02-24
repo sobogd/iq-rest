@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restorāna mājaslapa ar video un foto fonu — Mājas lapu veidotājs | IQ Rest",
+    "description": "Izveidojiet iespaidīgu restorāna mājaslapu ar pielāgotiem video vai foto foniem. Augšupielādējiet atmosfēras video vai ēdienu fotogrāfiju — pārsteidziet viesus jau no pirmā skenējuma."
+  },
+  "hero": {
+    "badge": "Tīmekļa dizains",
+    "title": "Izveidojiet iespaidīgu restorāna mājaslapu ar video foniem",
+    "subtitle": "Augšupielādējiet sava restorāna atmosfēras video vai skaistu ēdiena fotogrāfiju kā fonu. Viesi redz profesionālu, zīmolotu pieredzi brīdī, kad noskenē jūsu QR kodu.",
+    "cta": "Izveidojiet savu ēdienkarti",
+    "ctaDemo": "Skatīt demo",
+    "noCreditCard": "Kredītkarte nav nepieciešama. Pieejams bezmaksas plāns."
+  },
+  "features": {
+    "title": "Kā darbojas pielāgotie foni",
+    "subtitle": "Radiet paliekošu pirmo iespaidu ar vizuāliem materiāliem, kas atbilst jūsu zīmolam.",
+    "items": [
+      {
+        "title": "Augšupielādējiet video vai foto fonus",
+        "description": "Pievienojiet cilpotu video par restorāna atmosfēru, virtuves laika intervāla uzņēmumu vai augstas kvalitātes ēdiena fotogrāfiju. Fons parādās jūsu sākumlapā — radot aizraujošu pieredzi viesiem."
+      },
+      {
+        "title": "Optimizēts ātrumam jebkurā ierīcē",
+        "description": "Video un attēli tiek automātiski saspiesti un ielādēti ar aizkavētu ielādi. Jūsu mājaslapa paliek ātra pat ar lēniem mobilajiem savienojumiem — nav buferizācijas, nav aizkaves, tikai gluda pieredze."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "subtitle": "Viss, kas jums jāzina par restorāna tīmekļa dizainu.",
+    "items": [
+      {
+        "question": "Kādi video formāti tiek atbalstīti?",
+        "answer": "MP4 un WebM formāti darbojas vislabāk. Video tiek automātiski saspiesti ātrai ielādei. Turiet video zem 30 sekundēm labākai mobilajai pieredzei."
+      },
+      {
+        "question": "Vai video fons palēninās manu mājaslapu?",
+        "answer": "Nē. Video tiek saspiesti, ielādēti ar aizkavētu ielādi un automātiski optimizēti. Ar lēniem savienojumiem sistēma pārslēdzas uz statisku attēlu, lai pieredze būtu gluda."
+      },
+      {
+        "question": "Vai es varu izmantot fotogrāfiju video vietā?",
+        "answer": "Jā. Augšupielādējiet jebkuru fotogrāfiju — tā tiks optimizēta un parādīta kā pilnekrāna fons. Jūs varat jebkurā laikā pārslēgties starp video un fotogrāfiju."
+      },
+      {
+        "question": "Vai man ir nepieciešams dizainers, lai to iestatītu?",
+        "answer": "Nē. Vienkārši augšupielādējiet savu video vai fotogrāfiju no vadības paneļa. Sistēma automātiski apstrādā izmēru maiņu, saspiešanu un izkārtojumu. Jūsu mājaslapa izskatās profesionāli bez jebkādām dizaina prasmēm."
+      }
+    ]
+  }
+}

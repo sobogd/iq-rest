@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Kezelje Étterme Menüjét Telefonról — Mobil Vezérlőpult | IQ Rest",
+    "description": "Kezelje étterme QR menüjét teljes egészében telefonjáról. Adjon hozzá ételeket, frissítse az árakat, töltsön fel fényképeket, ellenőrizze az elemzéseket — számítógép nem szükséges."
+  },
+  "hero": {
+    "badge": "Mobil Vezérlőpult",
+    "title": "Kezelje Teljes Éttermi Menüjét a Telefonjáról",
+    "subtitle": "Adjon hozzá ételeket, változtasson árakat, töltsön fel fényképeket, ellenőrizze a rendeléseket — mindezt okostelefonjáról. A vezérlőpult mobil-első szemlélettel készült, soha nem kell számítógép.",
+    "cta": "Hozza Létre Étlapját",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Hogyan Működik a Mobil Kezelés",
+    "subtitle": "Az étterme vezérlőpultja mindig a zsebében.",
+    "items": [
+      {
+        "title": "Teljes Vezérlőpult az Okostelefonon",
+        "description": "Minden funkció tökéletesen működik a telefon képernyőjén — tételek hozzáadása, kategóriák szerkesztése, rendelések kezelése, elemzések ellenőrzése. A felület érintésre tervezett, nem csak átméretezve az asztalról."
+      },
+      {
+        "title": "Fényképek Feltöltése Közvetlenül a Kameráról",
+        "description": "Fényképezzen egy új ételt és töltse fel a menübe másodpercek alatt. A képek automatikusan optimalizálódnak. Frissítse a napi ajánlatot a konyhában állva."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit a mobil menükezelésről tudni kell.",
+    "items": [
+      {
+        "question": "Kell alkalmazást telepítenem?",
+        "answer": "Nem. A vezérlőpult a telefon böngészőjében működik — Safari, Chrome vagy bármely más. Jelentkezzen be és kezdje el a menü kezelését."
+      },
+      {
+        "question": "Mindent meg tudok csinálni a telefonomról, amit számítógépen?",
+        "answer": "Igen. Minden funkció elérhető mobilon — tételek hozzáadása, fényképek feltöltése, kategóriák kezelése, elemzések ellenőrzése, rendelések és foglalások kezelése."
+      },
+      {
+        "question": "Táblagépen is működik?",
+        "answer": "Igen. A vezérlőpult minden képernyőmérethez alkalmazkodik — telefonok, táblagépek és asztali számítógépek. Használja azt az eszközt, amelyik a legkényelmesebb."
+      },
+      {
+        "question": "Többen is kezelhetik a menüt?",
+        "answer": "Jelenleg egy fiók kezeli az éttermet. Egyszerre több eszközről is bejelentkezhet — telefonjáról, táblagépéről vagy számítógépéről."
+      }
+    ]
+  }
+}

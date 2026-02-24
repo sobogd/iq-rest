@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Styr restaurantmenyen fra telefonen — Mobilt kontrollpanel | IQ Rest",
+    "description": "Kjoer restaurantens QR-meny helt fra telefonen. Legg til retter, oppdater priser, last opp bilder, sjekk statistikk — ingen datamaskin noedvendig."
+  },
+  "hero": {
+    "badge": "Mobilt kontrollpanel",
+    "title": "Styr hele restaurantmenyen fra telefonen din",
+    "subtitle": "Legg til retter, endre priser, laste opp bilder, sjekke bestillinger — alt fra smarttelefonen din. Kontrollpanelet er bygget mobil-foerst, saa du trenger aldri en datamaskin.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort noedvendig. Gratis plan tilgjengelig."
+  },
+  "features": {
+    "title": "Hvordan mobilstyring fungerer",
+    "subtitle": "Restaurantens kontrollpanel, alltid i lommen din.",
+    "items": [
+      {
+        "title": "Fullt kontrollpanel paa smarttelefonen",
+        "description": "Enhver funksjon fungerer perfekt paa telefonskjermen — legge til elementer, redigere kategorier, styre bestillinger, sjekke statistikk. Grensesnittet er designet for beroeringsskjerm, ikke bare nedskalert fra desktop."
+      },
+      {
+        "title": "Last opp bilder direkte fra kameraet",
+        "description": "Ta et bilde av en ny rett og last det opp til menyen paa sekunder. Bilder optimeres automatisk. Oppdater dagsmenyen mens du staar paa kjokkenet."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spoersmaal",
+    "subtitle": "Alt du trenger aa vite om mobil menystyring.",
+    "items": [
+      {
+        "question": "Maa jeg installere en app?",
+        "answer": "Nei. Kontrollpanelet fungerer i telefonens nettleser — Safari, Chrome eller andre. Bare logg inn og begynn aa styre menyen."
+      },
+      {
+        "question": "Kan jeg gjoere alt fra telefonen som jeg kan paa en datamaskin?",
+        "answer": "Ja. Enhver funksjon er tilgjengelig paa mobil — legge til elementer, laste opp bilder, styre kategorier, sjekke statistikk, haandtere bestillinger og reservasjoner."
+      },
+      {
+        "question": "Fungerer det ogsaa paa nettbrett?",
+        "answer": "Ja. Kontrollpanelet tilpasser seg alle skjermstoerrelser — telefoner, nettbrett og datamaskiner. Bruk den enheten som er mest praktisk."
+      },
+      {
+        "question": "Kan flere personer styre menyen?",
+        "answer": "For oeyeblikket styrer en konto restauranten. Du kan logge inn fra flere enheter samtidig — telefonen, nettbrettet eller datamaskinen."
+      }
+    ]
+  }
+}

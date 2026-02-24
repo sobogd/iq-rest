@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restaurantanalyses & QR-menustatistieken — Bezoekers volgen | IQ Rest",
+    "description": "Volg uw QR-menuscans, paginaweergaven, populaire talen en bezoektrends. Realtime analysedashboard voor uw restaurantwebsite."
+  },
+  "hero": {
+    "badge": "Analyses",
+    "title": "Zie precies hoe gasten uw QR-menu gebruiken",
+    "subtitle": "Volg dagelijkse scans, paginaweergaven, populaire talen, apparaatstatistieken en trends. Neem datagedreven beslissingen om uw menu te optimaliseren en uw bedrijf te laten groeien.",
+    "cta": "Menu aanmaken",
+    "ctaDemo": "Demo bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "features": {
+    "title": "Wat u kunt volgen",
+    "subtitle": "Realtime inzichten over de online aanwezigheid van uw restaurant.",
+    "items": [
+      {
+        "title": "Dagelijkse weergaven, scans & bezoektrends",
+        "description": "Zie hoeveel mensen uw QR-code scannen en uw menu bezoeken per dag, week en maand. Volg trends om seizoenspatronen te begrijpen en het effect van promoties te meten."
+      },
+      {
+        "title": "Verdeling per taal & apparaat",
+        "description": "Ontdek welke talen uw gasten verkiezen en welke apparaten ze gebruiken. Deze data helpen u vertalingen te prioriteren en ervoor te zorgen dat uw menu er perfect uitziet op de populairste apparaten."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over restaurantanalyses.",
+    "items": [
+      {
+        "question": "Welke statistieken kan ik volgen?",
+        "answer": "Dagelijkse, wekelijkse en maandelijkse paginaweergaven. Unieke bezoekers. Meest bekeken pagina's. Taalvoorkeuren. Apparaat- en browserverdeling. Alles realtime bijgewerkt."
+      },
+      {
+        "question": "Zijn analyses inbegrepen in het gratis plan?",
+        "answer": "Ja. Basisanalyses zijn beschikbaar op elk plan, inclusief gratis. U kunt weergaven, bezoekers en taalstatistieken vanaf dag één bekijken."
+      },
+      {
+        "question": "Kan ik zien welke pagina's het populairst zijn?",
+        "answer": "Ja. Het dashboard toont weergaven per pagina — home, menu, contacten, reserveringen en taalkeuze. Zie precies waar gasten hun tijd doorbrengen."
+      },
+      {
+        "question": "Hoe ver gaan de gegevens terug?",
+        "answer": "Analysegegevens worden opgeslagen vanaf de dag dat u uw restaurant aanmaakt. U kunt dagelijkse, wekelijkse en maandelijkse trends voor uw hele geschiedenis bekijken."
+      }
+    ]
+  }
+}

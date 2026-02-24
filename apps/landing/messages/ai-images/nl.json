@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI-foodfoto-generatie voor menu's — Restaurantmenu-afbeeldingen | IQ Rest",
+    "description": "Genereer prachtige foodfoto's voor uw menu met AI. Geen fotograaf nodig — krijg professionele gerechtenafbeeldingen in seconden, geoptimaliseerd voor uw QR-menu."
+  },
+  "hero": {
+    "badge": "AI-afbeeldingen",
+    "title": "Professionele menufoto's zonder fotograaf",
+    "subtitle": "Genereer prachtige foodafbeeldingen voor uw gerechten met AI. Voer gewoon de gerechtnaam in en krijg een mooie, geoptimaliseerde foto voor uw QR-menu — in seconden.",
+    "cta": "Menu aanmaken",
+    "ctaDemo": "Demo bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "features": {
+    "title": "Hoe AI-beeldgeneratie werkt",
+    "subtitle": "Van gerechtnaam naar professionele foto met één klik.",
+    "items": [
+      {
+        "title": "Afbeeldingen genereren uit gerechtnamen",
+        "description": "Typ uw gerechtnaam — «Gegrilde zalm met citroen», «Pizza Margherita», «Chocolade lava cake» — en AI genereert een professionele foodfoto. Kies uit meerdere stijlen en achtergronden."
+      },
+      {
+        "title": "Geoptimaliseerd voor snel laden",
+        "description": "Elke gegenereerde afbeelding wordt automatisch gecomprimeerd en geconverteerd naar moderne formaten. Uw menu blijft razendsnell op elk apparaat, zelfs met foto's bij elk gerecht."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over AI-menu-afbeeldingen.",
+    "items": [
+      {
+        "question": "Hoe genereer ik een foodfoto?",
+        "answer": "Open een willekeurig gerecht in uw dashboard, tik op «Afbeelding genereren» — en AI maakt een professionele foodfoto op basis van de gerechtnaam en beschrijving. Kies degene die u het mooist vindt."
+      },
+      {
+        "question": "Kan ik mijn eigen foto's gebruiken?",
+        "answer": "Absoluut. Upload uw eigen foto's vanaf uw telefoon of computer. AI-generatie is optioneel — gebruik het wanneer u geen foto bij de hand heeft."
+      },
+      {
+        "question": "Hoeveel afbeeldingen kan ik genereren?",
+        "answer": "De generatielimieten hangen af van uw plan. Basic bevat een maandelijks tegoed en Pro biedt een hogere limiet. U kunt altijd onbeperkt uw eigen foto's uploaden."
+      },
+      {
+        "question": "Zijn de gegenereerde afbeeldingen uniek voor mijn restaurant?",
+        "answer": "Ja. Elke afbeelding wordt uniek gegenereerd voor uw specifieke gerecht. Geen stockfoto's — elke afbeelding wordt vers gemaakt op basis van uw menu-item."
+      }
+    ]
+  }
+}

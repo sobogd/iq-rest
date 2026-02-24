@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Rezervačný Systém Stolov pre Reštaurácie — Online Rezervácia | IQ Rest",
+    "description": "Umožnite hosťom rezervovať stoly priamo z vášho webu. Automatické alebo manuálne potvrdenie, e-mailové notifikácie a kompletná správa kalendára — všetko v cene."
+  },
+  "hero": {
+    "badge": "Rezervácie Stolov",
+    "title": "Prijímajte Rezervácie Stolov 24/7 z Vášho Webu",
+    "subtitle": "Hostia si vyberú dátum, čas a počet osôb — a rezervujú okamžite. Všetko spravujete z ovládacieho panela, bez telefonátov.",
+    "cta": "Vytvorte Svoj Jedálny Lístok",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako Fungujú Rezervácie Stolov",
+    "subtitle": "Dva kroky od požiadavky hosťa po potvrdenú rezerváciu.",
+    "items": [
+      {
+        "title": "Hostia Rezervujú z Vášho Webu",
+        "description": "Zákazníci navštívia stránku vašej reštaurácie, ťuknú na 'Rezervovať Stôl', vyberú dátum a čas, zadajú svoje údaje a odošlú. Nie je potrebná žiadna aplikácia — funguje v akomkoľvek prehliadači na akomkoľvek zariadení."
+      },
+      {
+        "title": "Spravujte Rezervácie z Ovládacieho Panela",
+        "description": "Každá rezervácia sa zobrazí vo vašom paneli s menom hosťa, telefónom, počtom osôb, dátumom a poznámkami. Potvrďte alebo odmietnite jedným ťuknutím. Nastavte automatické potvrdenie alebo skontrolujte každú rezerváciu manuálne."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o rezerváciách stolov.",
+    "items": [
+      {
+        "question": "Musia si zákazníci vytvoriť účet na rezerváciu?",
+        "answer": "Nie. Hostia jednoducho vyplnia meno, telefónne číslo, počet osôb a preferovaný čas. Nie je potrebný účet ani sťahovanie aplikácie."
+      },
+      {
+        "question": "Môžem nastaviť dostupné časové sloty a kapacitu?",
+        "answer": "Áno. Definujte pracovnú dobu, trvanie rezervačného slotu a kapacitu stolov. Systém hosťom zobrazí iba dostupné sloty."
+      },
+      {
+        "question": "Dostanem upozornenie, keď si niekto zarezervuje?",
+        "answer": "Áno. Za každú novú rezerváciu dostanete e-mail. Hostia tiež dostanú potvrdzujúci e-mail po vašom schválení rezervácie."
+      },
+      {
+        "question": "Môžem používať automatické aj manuálne potvrdenie?",
+        "answer": "Áno. Vyberte automatický režim na okamžité potvrdenie rezervácií podľa dostupnosti, alebo manuálny režim na osobné preskúmanie a schválenie každej požiadavky."
+      }
+    ]
+  }
+}

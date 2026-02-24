@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI generisanje fotografija hrane za menije — Slike za meni restorana | IQ Rest",
+    "description": "Generišite lepe fotografije hrane za svoj meni pomoću AI. Fotograf nije potreban — dobijte profesionalne slike jela za nekoliko sekundi, optimizovane za vaš QR meni."
+  },
+  "hero": {
+    "badge": "AI slike",
+    "title": "Profesionalne fotografije za meni bez fotografa",
+    "subtitle": "Generišite zapanjujuće slike hrane za svoja jela pomoću AI. Samo unesite naziv jela i dobijte lepu, optimizovanu fotografiju spremnu za vaš QR meni — za nekoliko sekundi.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Kako funkcioniše AI generisanje slika",
+    "subtitle": "Od naziva jela do profesionalne fotografije jednim klikom.",
+    "items": [
+      {
+        "title": "Generišite slike iz naziva jela",
+        "description": "Unesite naziv jela — 'Grilovani losos sa limunom', 'Margherita pica', 'Čokoladni lava kolač' — i AI generiše profesionalnu fotografiju hrane. Birajte između različitih stilova i pozadina."
+      },
+      {
+        "title": "Optimizovano za brzo učitavanje",
+        "description": "Svaka generisana slika se automatski kompresuje i konvertuje u moderne formate. Vaš meni ostaje munjevito brz na svakom uređaju, čak i sa fotografijama uz svako jelo."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o AI slikama za meni.",
+    "items": [
+      {
+        "question": "Kako da generišem fotografiju hrane?",
+        "answer": "Otvorite bilo koju stavku menija u kontrolnom panelu, tapnite 'Generiši sliku' i AI kreira profesionalnu fotografiju hrane na osnovu naziva jela i opisa. Izaberite onu koja vam se sviđa."
+      },
+      {
+        "question": "Mogu li umesto toga da koristim sopstvene fotografije?",
+        "answer": "Naravno. Otpremite sopstvene fotografije sa telefona ili računara. AI generisanje je opciono — koristite ga kada nemate fotografiju pri ruci."
+      },
+      {
+        "question": "Koliko slika mogu da generišem?",
+        "answer": "Limiti generisanja slika zavise od vašeg plana. Basic uključuje mesečnu kvotu, a Pro nudi veći limit. Sopstvene fotografije uvek možete otpremiti bez ograničenja."
+      },
+      {
+        "question": "Da li su generisane slike jedinstvene za moj restoran?",
+        "answer": "Da. Svaka slika se jedinstveno generiše za vaše konkretno jelo. Nema stock fotografija — svaka slika se kreira ispočetka na osnovu vaše stavke menija."
+      }
+    ]
+  }
+}

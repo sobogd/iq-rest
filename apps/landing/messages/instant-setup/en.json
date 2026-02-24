@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Free Restaurant Website Generator — Create in 5 Minutes | IQ Rest",
+    "description": "Get a professional restaurant website with QR menu, contact page, and map — just enter your email. Ready in 5 minutes, no technical skills needed."
+  },
+  "hero": {
+    "badge": "Free Website",
+    "title": "Get a Professional Restaurant Website in 5 Minutes",
+    "subtitle": "Enter your email, name your restaurant, and you instantly get a complete website with QR menu, contact page with map, and modern responsive design. No coding, no designers.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How It Works",
+    "subtitle": "From zero to a live restaurant website in three steps.",
+    "items": [
+      {
+        "title": "Sign Up with Just Your Email",
+        "description": "No complex registration forms. Enter your email, verify with a code, and your restaurant dashboard is ready. Name your restaurant and your website goes live immediately."
+      },
+      {
+        "title": "Everything Included Out of the Box",
+        "description": "Your website comes with a QR menu, contact page with Google Maps, language support, mobile-responsive design, and your own unique URL. Just add your dishes and start sharing."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about creating your restaurant website.",
+    "items": [
+      {
+        "question": "How do I create a free restaurant website?",
+        "answer": "Enter your email on IQ Rest, verify with a code, name your restaurant — done. Your website with QR menu is live in under 5 minutes. No credit card required."
+      },
+      {
+        "question": "Do I need any technical skills?",
+        "answer": "No. Everything is designed for restaurant owners, not developers. Add dishes, upload photos, and manage your site entirely from your phone."
+      },
+      {
+        "question": "What's included in the free plan?",
+        "answer": "A full restaurant website, QR menu, contact page with map, analytics, custom color scheme, and up to 2 languages. No trial period — it's free forever."
+      },
+      {
+        "question": "Can I use my own domain name?",
+        "answer": "On the free and Basic plans, your site is hosted at iq-rest.com/m/your-name. The Pro plan supports custom domain names for full brand control."
+      }
+    ]
+  }
+}

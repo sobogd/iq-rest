@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tehisintellekti menüütõlge restoranidele — QR-menüü tõlkimine | IQ Rest",
+    "description": "Tõlkige oma restorani menüü 25+ keelde ühe klõpsuga. Tehisintellekt mõistab kulinaariat — roanimed, kirjeldused ja kategooriad tõlgitakse täpselt."
+  },
+  "hero": {
+    "badge": "Tehisintellekti tõlge",
+    "title": "Tõlkige oma menüü 25+ keelde ühe klõpsuga",
+    "subtitle": "Meie tehisintellekt mõistab toidukonteksti — see tõlgib roanimed, kirjeldused ja kategooriad loomulikult, mitte sõna-sõnalt. Jõudke iga turisti ja rahvusvahelise külaliseni.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Kuidas tehisintellekti tõlge töötab",
+    "subtitle": "Teie keelest maailma sekunditega.",
+    "items": [
+      {
+        "title": "Kogu menüü tõlkimine ühe klõpsuga",
+        "description": "Valige sihtkeel, puudutage tõlgi ja kogu teie menüü — kategooriad, roanimed, kirjeldused — tõlgitakse koheselt. Tehisintellekt säilitab kulinaariaterminid ja kohandub loomulikult iga keele jaoks."
+      },
+      {
+        "title": "Muutke ja täpsustage mis tahes tõlget",
+        "description": "Iga tehisintellekti tõlge on täielikult redigeeritav. Vaadake tulemus üle, kohandage sõnastust ja salvestage. Teie muudatused säilivad isegi siis, kui tõlgite hiljem menüü muid osi uuesti."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma menüü tõlkimise kohta.",
+    "items": [
+      {
+        "question": "Kui täpne on tehisintellekti tõlge toidumenüüde jaoks?",
+        "answer": "Meie tehisintellekt on optimeeritud restoranide sisu jaoks. See mõistab, et 'Beef Wellington' või 'Tiramisu' ei tohiks sõna-sõnalt tõlkida, ja kohandab kirjeldused igas keeles loomulikult kõlama."
+      },
+      {
+        "question": "Milliseid keeli toetatakse?",
+        "answer": "25+ keelt, sealhulgas inglise, hispaania, prantsuse, saksa, itaalia, portugali, hiina, jaapani, korea, araabia, vene ja palju teisi Euroopa ja Aasia keeli."
+      },
+      {
+        "question": "Kas ma saan tõlkida ainult mõned üksused, mitte kogu menüüd?",
+        "answer": "Jah. Saate tõlkida üksikuid üksusi, terveid kategooriaid või kogu menüüd korraga. Teil on täielik kontroll selle üle, mis tõlgitakse."
+      },
+      {
+        "question": "Kas tõlkimine maksab lisatasu?",
+        "answer": "Tehisintellekti tõlge on kaasatud Basic ja Pro plaanides heldete kuulimiitidega. Pole sõna- ega üksusepõhiseid tasusid — tõlkige nii palju kui vaja."
+      }
+    ]
+  }
+}

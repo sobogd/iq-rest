@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Ingyenes Éttermi Weboldal Készítő — Készítse El 5 Perc Alatt | IQ Rest",
+    "description": "Szerezzen professzionális éttermi weboldalt QR menüvel, kapcsolat oldallal és térképpel — csak adja meg e-mail címét. 5 perc alatt kész, technikai tudás nem szükséges."
+  },
+  "hero": {
+    "badge": "Ingyenes Weboldal",
+    "title": "Szerezzen Professzionális Éttermi Weboldalt 5 Perc Alatt",
+    "subtitle": "Adja meg e-mail címét, nevezze el éttermét, és azonnal kap egy komplett weboldalt QR menüvel, térképes kapcsolat oldallal és modern reszponzív dizájnnal. Kódolás és dizájner nélkül.",
+    "cta": "Hozza Létre Étlapját",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nem szükséges bankkártya. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Hogyan Működik",
+    "subtitle": "A nulláról az élő éttermi weboldalig három lépésben.",
+    "items": [
+      {
+        "title": "Regisztráljon Csak E-mail Címével",
+        "description": "Nincs bonyolult regisztrációs űrlap. Adja meg e-mail címét, igazolja kóddal, és az étterme vezérlőpultja kész. Nevezze el éttermét, és weboldala azonnal elindul."
+      },
+      {
+        "title": "Minden Benne Van Alapból",
+        "description": "Weboldala tartalmazza a QR menüt, Google Térképes kapcsolat oldalt, nyelvi támogatást, mobilra optimalizált dizájnt és saját egyedi URL-t. Csak adja hozzá az ételeit és kezdje el a megosztást."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit az éttermi weboldal készítéséről tudni kell.",
+    "items": [
+      {
+        "question": "Hogyan hozzak létre ingyenes éttermi weboldalt?",
+        "answer": "Adja meg e-mail címét az IQ Rest-en, igazolja kóddal, nevezze el éttermét — kész. QR menüs weboldala 5 percen belül él. Bankkártya nem szükséges."
+      },
+      {
+        "question": "Szükségem van technikai tudásra?",
+        "answer": "Nem. Minden étteremtulajdonosoknak készült, nem fejlesztőknek. Adjon hozzá ételeket, töltsön fel fényképeket, és kezelje oldalát teljesen a telefonjáról."
+      },
+      {
+        "question": "Mit tartalmaz az ingyenes csomag?",
+        "answer": "Teljes éttermi weboldal, QR menü, térképes kapcsolat oldal, elemzések, egyedi színséma és legfeljebb 2 nyelv. Nincs próbaidőszak — örökre ingyenes."
+      },
+      {
+        "question": "Használhatok saját domain nevet?",
+        "answer": "Az ingyenes és Basic csomagon az oldala az iq-rest.com/m/az-on-neve címen van. A Pro csomag egyedi domain neveket támogat a teljes márka kontroll érdekében."
+      }
+    ]
+  }
+}

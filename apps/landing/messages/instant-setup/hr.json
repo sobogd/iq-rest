@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Besplatni Generator Web Stranice Restorana — Kreirajte za 5 Minuta | IQ Rest",
+    "description": "Dobijte profesionalnu web stranicu restorana s QR jelovnikom, stranicom za kontakt i kartom — samo unesite e-poštu. Gotovo za 5 minuta, bez tehničkih vještina."
+  },
+  "hero": {
+    "badge": "Besplatna Web Stranica",
+    "title": "Dobijte Profesionalnu Web Stranicu Restorana za 5 Minuta",
+    "subtitle": "Unesite e-poštu, imenujte restoran i odmah dobivate kompletnu web stranicu s QR jelovnikom, stranicom za kontakt s kartom i modernim prilagodljivim dizajnom. Bez kodiranja, bez dizajnera.",
+    "cta": "Kreirajte Svoj Jelovnik",
+    "ctaDemo": "Pogledajte Demo",
+    "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+  },
+  "features": {
+    "title": "Kako Funkcionira",
+    "subtitle": "Od nule do aktivne web stranice restorana u tri koraka.",
+    "items": [
+      {
+        "title": "Registrirajte Se Samo s E-poštom",
+        "description": "Bez složenih obrazaca za registraciju. Unesite e-poštu, potvrdite kodom i kontrolna ploča restorana je spremna. Imenujte restoran i web stranica odmah postaje aktivna."
+      },
+      {
+        "title": "Sve Uključeno od Početka",
+        "description": "Vaša web stranica dolazi s QR jelovnikom, stranicom za kontakt s Google kartama, jezičnom podrškom, prilagodljivim mobilnim dizajnom i vašim jedinstvenim URL-om. Samo dodajte jela i počnite dijeliti."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često Postavljana Pitanja",
+    "subtitle": "Sve što trebate znati o kreiranju web stranice restorana.",
+    "items": [
+      {
+        "question": "Kako kreirati besplatnu web stranicu restorana?",
+        "answer": "Unesite e-poštu na IQ Rest, potvrdite kodom, imenujte restoran — gotovo. Web stranica s QR jelovnikom aktivna je za manje od 5 minuta. Kreditna kartica nije potrebna."
+      },
+      {
+        "question": "Trebam li tehničke vještine?",
+        "answer": "Ne. Sve je dizajnirano za vlasnike restorana, ne za programere. Dodajte jela, učitajte fotografije i upravljajte stranicom u potpunosti s telefona."
+      },
+      {
+        "question": "Što uključuje besplatni plan?",
+        "answer": "Kompletna web stranica restorana, QR jelovnik, stranica za kontakt s kartom, analitika, prilagođena shema boja i do 2 jezika. Bez probnog razdoblja — besplatno zauvijek."
+      },
+      {
+        "question": "Mogu li koristiti vlastitu domenu?",
+        "answer": "Na besplatnom i Basic planu vaša stranica je na adresi iq-rest.com/m/vaše-ime. Pro plan podržava prilagođene domene za potpunu kontrolu brenda."
+      }
+    ]
+  }
+}

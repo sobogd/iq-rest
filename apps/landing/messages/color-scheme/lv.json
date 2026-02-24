@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Pielāgots QR edienkkartes dizains un zīmola krāsas — Restorāna brending | IQ Rest",
+    "description": "Pieskaņojiet savu QR edienkārti restorāna zīmolam. Izvēlieties akcentkrāsas, gaišas/tumšas tēmas un radiet vienotu izskatu visai digitālajai ēdienkārtei."
+  },
+  "hero": {
+    "badge": "Pielāgots dizains",
+    "title": "Pieskaņojiet QR ēdienkarti sava restorāna zīmolam",
+    "subtitle": "Izvēlieties savu zīmola krāsu, un visa ēdienkārte — pogas, izcēlumi, saites — atjaunināsies uzreiz. Gaišas un tumšas tēmas iekļautas.",
+    "cta": "Izveidojiet savu ēdienkarti",
+    "ctaDemo": "Skatīt demo",
+    "noCreditCard": "Kredītkarte nav nepieciešama. Pieejams bezmaksas plāns."
+  },
+  "features": {
+    "title": "Kā darbojas pielāgotais brendings",
+    "subtitle": "Jūsu ēdienkārte, jūsu krāsas — konsekventas katrā lapā.",
+    "items": [
+      {
+        "title": "Izvēlieties savu akcentkrāsu",
+        "description": "Izvēlieties no 12 rūpīgi atlasītiem iepriekš iestatījumiem vai ievadiet precīzu zīmola krāsu ar hex kodu. Katra poga, saite un izcēlums jūsu ēdienkārtē pielāgojas uzreiz — dizaina prasmes nav nepieciešamas."
+      },
+      {
+        "title": "Automātiskas gaišās un tumšās tēmas",
+        "description": "Jūsu ēdienkārte automātiski atbalsta gan gaišo, gan tumšo režīmu. Sistēma nodrošina, ka jūsu zīmola krāsa izskatās lieliski abās tēmās ar optimizētu kontrastu un lasāmību."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Bieži uzdotie jautājumi",
+    "subtitle": "Viss, kas jums jāzina par ēdienkārtes pielāgošanu.",
+    "items": [
+      {
+        "question": "Vai es varu izmantot precīzu zīmola krāsu?",
+        "answer": "Jā. Ievadiet jebkuru hex krāsas kodu vai izvēlieties no 12 rūpīgi atlasītiem iepriekš iestatījumiem. Jūsu akcentkrāsa tiek piemērota visās ēdienkārtes lapās."
+      },
+      {
+        "question": "Vai tas darbojas ar tumšo režīmu?",
+        "answer": "Jā. Jūsu krāsu shēma automātiski pielāgojas gan gaišajai, gan tumšajai tēmai. Sistēma pielāgo kontrastu, lai jūsu ēdienkārte būtu lasāma un skaista jebkurā režīmā."
+      },
+      {
+        "question": "Vai es varu mainīt krāsas pēc publicēšanas?",
+        "answer": "Noteikti. Mainiet akcentkrāsu jebkurā laikā no vadības paneļa. Atjauninājumi parādās uzreiz jūsu publiskajā ēdienkārtē — atkārtota publicēšana nav nepieciešama."
+      },
+      {
+        "question": "Vai mans QR kods arī atbildīs zīmola krāsām?",
+        "answer": "Jūsu QR kods tiek ģenerēts atsevišķi un to var pielāgot neatkarīgi. Akcentkrāsa attiecas uz jūsu digitālās ēdienkārtes lapām, navigāciju un interaktīvajiem elementiem."
+      }
+    ]
+  }
+}

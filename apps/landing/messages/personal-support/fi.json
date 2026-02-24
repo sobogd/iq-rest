@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Henkilokohtainen tuki ravintolasi verkkosivustolle — Aitoa ihmisapua | IQ Rest",
+    "description": "Saa henkilokohtaista apua oikeilta ihmisiltae, ei chatboteilta. Asennusapu, ruokalistan optimointivinkit ja nopeat vastaukset — saatavilla kaikissa paketeissa mukaan lukien ilmainen."
+  },
+  "hero": {
+    "badge": "Henkilokohtainen tuki",
+    "title": "Oikeita ihmisia, oikeaa apua — ei chatbotteja",
+    "subtitle": "Onko sinulla kysymys? Tarvitsetko apua ruokalistan asentamisessa? Haluatko ehdottaa ominaisuutta? Laheta meille viesti suoraan ja saa henkilokohtainen vastaus joltakulta, joka ymmartaa ravintoloita.",
+    "cta": "Luo ruokalista",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "features": {
+    "title": "Miten tuki toimii",
+    "subtitle": "Apua kun sita tarvitset, ihmisiltae jotka valittavat.",
+    "items": [
+      {
+        "title": "Laheta meille viesti suoraan hallintapaneelista",
+        "description": "Avaa tukichatti hallintapaneelissa ja kuvaile kysymyksesi. Oikea ihminen lukee viestisi ja vastaa — yleensa muutamassa tunnissa arkipaiviina."
+      },
+      {
+        "title": "Apua asennuksessa, optimoinnissa ja muussa",
+        "description": "Tarvitsetpa apua ensimmaisen annoksen lisaamisessa, neuvoja ruokalistan jarjestamisessa tai haluat ehdottaa uutta ominaisuutta — olemme taalla. Jokainen kysymys on tarkeae, olipa se kuinka pieni tahansa."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mita sinun taytyy tietaa tuestamme.",
+    "items": [
+      {
+        "question": "Onko tuki saatavilla ilmaisessa paketissa?",
+        "answer": "Kylla. Henkilokohtainen tuki on saatavilla kaikissa paketeissa, mukaan lukien ilmainen. Uskomme, etta jokainen ravintola ansaitsee oikeaa apua tilauksesta riippumatta."
+      },
+      {
+        "question": "Kuinka nopeasti vastaatte?",
+        "answer": "Yleensa muutamassa tunnissa arkipaiviina. Luemme jokaisen viestin henkilokohtaisesti ja pyrimme ratkaisemaan kysymyksesi yhdella vastauksella."
+      },
+      {
+        "question": "Voitteko auttaa minua ruokalistan asentamisessa?",
+        "answer": "Ehdottomasti. Jos tarvitset apua annosten lisaamisessa, kategorioiden jarjestamisessa, kaannosten asentamisessa tai varausten maarittamisessa — kysy vain. Opastamme sinua mielellaamme."
+      },
+      {
+        "question": "Voinko ehdottaa uusia ominaisuuksia?",
+        "answer": "Kylla, ja rakastamme sita! Monet ominaisuuksistamme saivat alkunsa kayttajaehdotuksista. Laheta meille ideasi, niin harkitsemme sita tulevissa paivityksissa."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Gestisci il menu del ristorante dal telefono — Dashboard mobile | IQ Rest",
+    "description": "Gestisci il menu QR del tuo ristorante interamente dal telefono. Aggiungi piatti, aggiorna i prezzi, carica foto, controlla le analisi — senza bisogno del computer."
+  },
+  "hero": {
+    "badge": "Dashboard mobile",
+    "title": "Gestisci l'intero menu del ristorante dal tuo telefono",
+    "subtitle": "Aggiungi piatti, cambia i prezzi, carica foto, controlla gli ordini — tutto dal tuo smartphone. La dashboard è progettata mobile-first, non avrai mai bisogno di un computer.",
+    "cta": "Crea il tuo menu",
+    "ctaDemo": "Vedi demo",
+    "noCreditCard": "Nessuna carta di credito richiesta. Piano gratuito disponibile."
+  },
+  "features": {
+    "title": "Come funziona la gestione mobile",
+    "subtitle": "La dashboard del tuo ristorante, sempre in tasca.",
+    "items": [
+      {
+        "title": "Dashboard completa sul tuo smartphone",
+        "description": "Tutte le funzionalità funzionano perfettamente sullo schermo del telefono — aggiungere piatti, modificare categorie, gestire ordini, consultare le analisi. L'interfaccia è progettata per il touch, non semplicemente ridimensionata dal desktop."
+      },
+      {
+        "title": "Carica foto direttamente dalla fotocamera",
+        "description": "Scatta una foto di un nuovo piatto e caricala nel tuo menu in pochi secondi. Le immagini vengono ottimizzate automaticamente. Aggiorna il piatto del giorno dalla cucina."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto ciò che devi sapere sulla gestione mobile del menu.",
+    "items": [
+      {
+        "question": "Devo installare un'app?",
+        "answer": "No. La dashboard funziona nel browser del tuo telefono — Safari, Chrome o qualsiasi altro. Accedi e inizia a gestire il tuo menu."
+      },
+      {
+        "question": "Posso fare dal telefono tutto quello che posso fare dal computer?",
+        "answer": "Sì. Tutte le funzionalità sono disponibili su mobile — aggiungere piatti, caricare foto, gestire categorie, consultare analisi, gestire ordini e prenotazioni."
+      },
+      {
+        "question": "Funziona anche sui tablet?",
+        "answer": "Sì. La dashboard si adatta a qualsiasi dimensione dello schermo — telefoni, tablet e computer desktop. Usa il dispositivo più comodo per te."
+      },
+      {
+        "question": "Più persone possono gestire il menu?",
+        "answer": "Attualmente un account gestisce il ristorante. Puoi accedere da più dispositivi contemporaneamente — telefono, tablet o computer."
+      }
+    ]
+  }
+}

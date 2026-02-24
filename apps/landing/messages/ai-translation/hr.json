@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI Prijevod Jelovnika za Restorane — Prijevod QR Jelovnika | IQ Rest",
+    "description": "Prevedite jelovnik svog restorana na 25+ jezika jednim klikom. AI razumije kulinarski kontekst — nazivi jela, opisi i kategorije prevedeni su točno."
+  },
+  "hero": {
+    "badge": "AI Prijevod",
+    "title": "Prevedite Svoj Jelovnik na 25+ Jezika Jednim Klikom",
+    "subtitle": "Naš AI razumije kontekst hrane — prevodi nazive jela, opise i kategorije prirodno, a ne riječ po riječ. Dosegnite svakog turista i međunarodnog gosta.",
+    "cta": "Kreirajte Svoj Jelovnik",
+    "ctaDemo": "Pogledajte Demo",
+    "noCreditCard": "Nije potrebna kreditna kartica. Besplatni plan dostupan."
+  },
+  "features": {
+    "title": "Kako Funkcionira AI Prijevod",
+    "subtitle": "Od vašeg jezika do cijelog svijeta u sekundama.",
+    "items": [
+      {
+        "title": "Prijevod Jednim Klikom za Cijeli Jelovnik",
+        "description": "Odaberite ciljni jezik, dodirnite prevedi i cijeli jelovnik — kategorije, nazivi jela, opisi — preveden je odmah. AI čuva kulinarske termine i prilagođava se prirodno za svaki jezik."
+      },
+      {
+        "title": "Uredite i Prilagodite Svaki Prijevod",
+        "description": "Svaki AI prijevod je u potpunosti uređivačiv. Pregledajte rezultat, prilagodite bilo koji izraz i spremite. Vaše izmjene su sačuvane čak i ako kasnije ponovno prevedete druge dijelove jelovnika."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često Postavljana Pitanja",
+    "subtitle": "Sve što trebate znati o prijevodu jelovnika.",
+    "items": [
+      {
+        "question": "Koliko je točan AI prijevod za jelovnike restorana?",
+        "answer": "Naš AI je optimiziran za sadržaj restorana. Razumije da se 'Beef Wellington' ili 'Tiramisu' ne smiju prevoditi doslovno i prilagođava opise da zvuče prirodno na svakom jeziku."
+      },
+      {
+        "question": "Koji jezici su podržani?",
+        "answer": "25+ jezika uključujući engleski, španjolski, francuski, njemački, talijanski, portugalski, kineski, japanski, korejski, arapski, ruski i mnoge druge europske i azijske jezike."
+      },
+      {
+        "question": "Mogu li prevesti samo neke stavke, a ne cijeli jelovnik?",
+        "answer": "Da. Možete prevoditi pojedinačne stavke, cijele kategorije ili cijeli jelovnik odjednom. Imate potpunu kontrolu nad time što se prevodi."
+      },
+      {
+        "question": "Košta li dodatno po prijevodu?",
+        "answer": "AI prijevod je uključen u Basic i Pro planove s izdašnim mjesečnim limitima. Bez naknada po riječi ili po stavci — prevodite koliko god trebate."
+      }
+    ]
+  }
+}

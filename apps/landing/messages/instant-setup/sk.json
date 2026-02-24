@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Bezplatný Generátor Webstránky Reštaurácie — Vytvorte za 5 Minút | IQ Rest",
+    "description": "Získajte profesionálnu webstránku reštaurácie s QR menu, kontaktnou stránkou a mapou — stačí zadať e-mail. Hotové za 5 minút, bez technických zručností."
+  },
+  "hero": {
+    "badge": "Bezplatná Webstránka",
+    "title": "Získajte Profesionálnu Webstránku Reštaurácie za 5 Minút",
+    "subtitle": "Zadajte e-mail, pomenujte reštauráciu a okamžite získate kompletnú webstránku s QR menu, kontaktnou stránkou s mapou a moderným responzívnym dizajnom. Bez kódovania, bez dizajnérov.",
+    "cta": "Vytvorte Svoj Jedálny Lístok",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako To Funguje",
+    "subtitle": "Od nuly po živú webstránku reštaurácie v troch krokoch.",
+    "items": [
+      {
+        "title": "Zaregistrujte Sa Len Pomocou E-mailu",
+        "description": "Žiadne zložité registračné formuláre. Zadajte e-mail, overte kódom a ovládací panel reštaurácie je pripravený. Pomenujte reštauráciu a webstránka okamžite začne fungovať."
+      },
+      {
+        "title": "Všetko Zahrnuté Hneď od Začiatku",
+        "description": "Vaša webstránka obsahuje QR menu, kontaktnú stránku s Google Mapami, jazykovú podporu, mobilne prispôsobený dizajn a váš unikátny URL. Stačí pridať jedlá a začať zdieľať."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o vytvorení webstránky reštaurácie.",
+    "items": [
+      {
+        "question": "Ako vytvorím bezplatnú webstránku reštaurácie?",
+        "answer": "Zadajte e-mail na IQ Rest, overte kódom, pomenujte reštauráciu — hotovo. Webstránka s QR menu je aktívna za menej ako 5 minút. Kreditná karta nie je potrebná."
+      },
+      {
+        "question": "Potrebujem technické zručnosti?",
+        "answer": "Nie. Všetko je navrhnuté pre majiteľov reštaurácií, nie pre vývojárov. Pridávajte jedlá, nahrávajte fotky a spravujte stránku úplne z telefónu."
+      },
+      {
+        "question": "Čo zahŕňa bezplatný plán?",
+        "answer": "Kompletná webstránka reštaurácie, QR menu, kontaktná stránka s mapou, analytika, vlastná farebná schéma a až 2 jazyky. Bez skúšobného obdobia — zadarmo navždy."
+      },
+      {
+        "question": "Môžem použiť vlastný doménový názov?",
+        "answer": "Na bezplatnom a Basic pláne je vaša stránka na adrese iq-rest.com/m/vaše-meno. Pro plán podporuje vlastné domény pre plnú kontrolu značky."
+      }
+    ]
+  }
+}

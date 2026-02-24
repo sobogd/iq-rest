@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Monikielinen ravintolan verkkosivusto — Ruokalista yli 25 kielella | IQ Rest",
+    "description": "Ravintolasi verkkosivusto ja QR-ruokalista yli 25 kielella. Vieraat vaihtavat kielta yhdella napautuksella — ruokalista, yhteystiedot ja varaukset mukautuvat heti."
+  },
+  "hero": {
+    "badge": "Monikielinen",
+    "title": "Ravintolasi verkkosivusto yli 25 kielella",
+    "subtitle": "Turistit ja kansainvaliset vieraat nakvat ruokalistasi omalla kielellaan. Yksi napautus vaihtamiseksi — kaikki mukautuu heti: annokset, kuvaukset, yhteystiedot, navigointi.",
+    "cta": "Luo ruokalista",
+    "ctaDemo": "Katso demo",
+    "noCreditCard": "Luottokorttia ei tarvita. Ilmainen paketti saatavilla."
+  },
+  "features": {
+    "title": "Miten monikielituki toimii",
+    "subtitle": "Puhu asiakkaidesi kielta ilman ylimaaraista tyota.",
+    "items": [
+      {
+        "title": "Vieraat valitsevat kielensa",
+        "description": "Ruokalistaan ilmestyy kielivalitsin. Vieraat napauttavat haluamaansa kielta, ja koko sivusto — ruokalista, kuvaukset, yhteystiedot, navigointi — vaihtuu heti. Sivun uudelleenlatausta ei tarvita."
+      },
+      {
+        "title": "Lisaa kielia hallintapaneelista",
+        "description": "Ota uusia kielia kayttoon yhdella napsautuksella. Kayta AI-kaannosta sisallon tayttamiseen tai syota kaannokset manuaalisesti. Jokainen kieli voidaan kytkeae paalle tai pois itsenaisesti."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "subtitle": "Kaikki mita sinun taytyy tietaa monikielisista ruokalistoista.",
+    "items": [
+      {
+        "question": "Kuinka monta kielta voin lisata ruokalistaani?",
+        "answer": "Yli 25 kielta mukaan lukien kaikki suuret eurooppalaiset kielet, kiina, japani, korea, arabia, farsi ja muita. Lisaa niin monta kuin vieraasi tarvitsevat."
+      },
+      {
+        "question": "Pitaako minun kaantaa kaikki manuaalisesti?",
+        "answer": "Ei. Kayta sisaanrakennettua AI-kaannosta kaantaaksesi koko ruokalistan yhdella napsautuksella. Voit myos muokata mitae tahansa kaannosta manuaalisesti taytta hallintaa varten."
+      },
+      {
+        "question": "Tallentuuko kieliasetus?",
+        "answer": "Kylla. Kun vieras valitsee kielen, se muistetaan seuraavalle kerralle. Heidaen ei tarvitse valita uudelleen palatessaan."
+      },
+      {
+        "question": "Onko monikielituki saatavilla ilmaisessa paketissa?",
+        "answer": "Ilmainen paketti sisaltaa enintaan 2 kielta. Basic- ja Pro-paketit tarjoavat rajoittamattomasti kielia AI-kaannos mukaan lukien."
+      }
+    ]
+  }
+}

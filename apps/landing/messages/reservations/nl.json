@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tafelreserveringssysteem voor restaurants — Online boeken | IQ Rest",
+    "description": "Laat gasten tafels direct via uw website reserveren. Automatische of handmatige bevestiging, e-mailnotificaties en volledig agendabeheer — alles inbegrepen."
+  },
+  "hero": {
+    "badge": "Tafelreserveringen",
+    "title": "Accepteer tafelreserveringen 24/7 via uw website",
+    "subtitle": "Gasten kiezen datum, tijd en aantal personen — en boeken direct. U beheert alles vanuit uw dashboard, zonder telefoontjes.",
+    "cta": "Menu aanmaken",
+    "ctaDemo": "Demo bekijken",
+    "noCreditCard": "Geen creditcard nodig. Gratis plan beschikbaar."
+  },
+  "features": {
+    "title": "Hoe tafelreserveringen werken",
+    "subtitle": "Twee stappen van gastverzoek tot bevestigde boeking.",
+    "items": [
+      {
+        "title": "Gasten boeken via uw website",
+        "description": "Klanten bezoeken uw restaurantpagina, tikken op «Tafel reserveren», kiezen datum en tijd, voeren hun gegevens in en versturen het verzoek. Geen app nodig — werkt in elke browser op elk apparaat."
+      },
+      {
+        "title": "U beheert boekingen in uw dashboard",
+        "description": "Elke reservering verschijnt in uw dashboard met gastnaam, telefoonnummer, aantal personen, datum en opmerkingen. Bevestig of weiger met één tik. Stel automatische bevestiging in of beoordeel elke boeking handmatig."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over tafelreserveringen.",
+    "items": [
+      {
+        "question": "Moeten klanten een account aanmaken om te boeken?",
+        "answer": "Nee. Gasten vullen simpelweg hun naam, telefoonnummer, aantal personen en gewenste tijd in. Geen account of app-download nodig."
+      },
+      {
+        "question": "Kan ik beschikbare tijdslots en capaciteit instellen?",
+        "answer": "Ja. Stel uw openingstijden, de duur van reserveringsslots en tafelcapaciteit in. Het systeem toont gasten alleen beschikbare slots."
+      },
+      {
+        "question": "Word ik op de hoogte gebracht wanneer iemand boekt?",
+        "answer": "Ja. U ontvangt een e-mail voor elke nieuwe reservering. Gasten ontvangen ook een bevestigingsmail zodra u de boeking goedkeurt."
+      },
+      {
+        "question": "Kan ik zowel automatische als handmatige bevestiging gebruiken?",
+        "answer": "Ja. Kies de automatische modus om boekingen direct te bevestigen op basis van beschikbaarheid, of de handmatige modus om elk verzoek zelf te beoordelen en goed te keuren."
+      }
+    ]
+  }
+}

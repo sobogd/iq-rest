@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tłumaczenie menu AI dla restauracji — Przetłumacz menu QR | IQ Rest",
+    "description": "Przetłumacz menu restauracji na ponad 25 języków jednym kliknięciem. AI rozumie kontekst kulinarny — nazwy dań, opisy i kategorie tłumaczone dokładnie."
+  },
+  "hero": {
+    "badge": "Tłumaczenie AI",
+    "title": "Przetłumacz swoje menu na ponad 25 języków jednym kliknięciem",
+    "subtitle": "Nasza sztuczna inteligencja rozumie kontekst gastronomiczny — tłumaczy nazwy dań, opisy i kategorie naturalnie, a nie słowo po słowie. Dotrzesz do każdego turysty i gościa międzynarodowego.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Jak działa tłumaczenie AI",
+    "subtitle": "Z Twojego języka na cały świat w kilka sekund.",
+    "items": [
+      {
+        "title": "Tłumaczenie całego menu jednym kliknięciem",
+        "description": "Wybierz język docelowy, kliknij tłumacz i całe menu — kategorie, nazwy dań, opisy — jest przetłumaczone natychmiast. AI zachowuje terminy kulinarne i dostosowuje się naturalnie do każdego języka."
+      },
+      {
+        "title": "Edytuj i dopracuj każde tłumaczenie",
+        "description": "Każde tłumaczenie AI jest w pełni edytowalne. Przejrzyj wynik, dostosuj dowolne sformułowanie i zapisz. Twoje zmiany są zachowane, nawet jeśli później przetłumaczysz ponownie inne części menu."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o tłumaczeniu menu.",
+    "items": [
+      {
+        "question": "Jak dokładne jest tłumaczenie AI dla menu restauracji?",
+        "answer": "Nasza AI jest zoptymalizowana pod kątem treści restauracyjnych. Rozumie, że 'Beef Wellington' czy 'Tiramisu' nie powinny być tłumaczone dosłownie, i dostosowuje opisy, aby brzmiały naturalnie w każdym języku."
+      },
+      {
+        "question": "Które języki są obsługiwane?",
+        "answer": "Ponad 25 języków, w tym angielski, hiszpański, francuski, niemiecki, włoski, portugalski, chiński, japoński, koreański, arabski, rosyjski i wiele innych języków europejskich i azjatyckich."
+      },
+      {
+        "question": "Czy mogę przetłumaczyć tylko niektóre pozycje, a nie całe menu?",
+        "answer": "Tak. Możesz tłumaczyć pojedyncze pozycje, całe kategorie lub całe menu naraz. Masz pełną kontrolę nad tym, co jest tłumaczone."
+      },
+      {
+        "question": "Czy tłumaczenie kosztuje dodatkowo?",
+        "answer": "Tłumaczenie AI jest zawarte w planach Basic i Pro z hojnymi limitami miesięcznymi. Bez opłat za słowo czy pozycję — tłumacz tyle, ile potrzebujesz."
+      }
+    ]
+  }
+}

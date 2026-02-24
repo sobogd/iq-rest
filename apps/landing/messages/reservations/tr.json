@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restoranlar için Masa Rezervasyon Sistemi — Online Rezervasyon | IQ Rest",
+    "description": "Misafirlerinizin doğrudan web sitenizden masa ayırtmasını sağlayın. Otomatik veya manuel onay, e-posta bildirimleri ve tam takvim yönetimi — hepsi dahil."
+  },
+  "hero": {
+    "badge": "Masa Rezervasyonu",
+    "title": "Web Sitenizden 7/24 Masa Rezervasyonu Alın",
+    "subtitle": "Misafirler tarih, saat ve kişi sayısı seçerek anında rezervasyon yapar. Her şeyi kontrol panelinizden yönetin, telefon görüşmesine gerek yok.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Masa Rezervasyonu Nasıl Çalışır",
+    "subtitle": "Misafir talebinden onaylı rezervasyona iki adım.",
+    "items": [
+      {
+        "title": "Misafirler Web Sitenizden Rezervasyon Yapar",
+        "description": "Müşteriler restoran sayfanızı ziyaret eder, 'Masa Ayırt' butonuna dokunur, tarih ve saat seçer, bilgilerini girer ve gönderir. Uygulama gerekmez — herhangi bir cihazda herhangi bir tarayıcıda çalışır."
+      },
+      {
+        "title": "Rezervasyonları Kontrol Panelinizden Yönetin",
+        "description": "Her rezervasyon kontrol panelinizde misafir adı, telefonu, kişi sayısı, tarih ve notlarla birlikte görünür. Tek dokunuşla onaylayın veya reddedin. Otomatik onay ayarlayın ya da her rezervasyonu manuel olarak inceleyin."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Masa rezervasyonu hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Müşterilerin rezervasyon için hesap oluşturması gerekiyor mu?",
+        "answer": "Hayır. Misafirler sadece adını, telefon numarasını, kişi sayısını ve tercih ettiği saati doldurur. Hesap veya uygulama indirmesi gerekmez."
+      },
+      {
+        "question": "Mevcut zaman dilimlerini ve kapasiteyi ayarlayabilir miyim?",
+        "answer": "Evet. Çalışma saatlerinizi, rezervasyon aralığı süresini ve masa kapasitesini belirleyin. Sistem misafirlere yalnızca uygun zaman dilimlerini gösterir."
+      },
+      {
+        "question": "Biri rezervasyon yaptığında bildirim alır mıyım?",
+        "answer": "Evet. Her yeni rezervasyon için bir e-posta alırsınız. Rezervasyonu onayladığınızda misafirler de bir onay e-postası alır."
+      },
+      {
+        "question": "Hem otomatik hem de manuel onay kullanabilir miyim?",
+        "answer": "Evet. Rezervasyonları müsaitliğe göre anında onaylamak için otomatik modu seçin veya her talebi kendiniz inceleyip onaylamak için manuel modu tercih edin."
+      }
+    ]
+  }
+}

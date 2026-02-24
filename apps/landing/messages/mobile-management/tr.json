@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restoran Menünüzü Telefondan Yönetin — Mobil Kontrol Paneli | IQ Rest",
+    "description": "Restoranınızın QR menüsünü tamamen telefonunuzdan yönetin. Yemek ekleyin, fiyatları güncelleyin, fotoğraf yükleyin, analizleri kontrol edin — bilgisayar gerekmez."
+  },
+  "hero": {
+    "badge": "Mobil Kontrol Paneli",
+    "title": "Tüm Restoran Menünüzü Telefonunuzdan Yönetin",
+    "subtitle": "Yemek ekleyin, fiyat değiştirin, fotoğraf yükleyin, siparişleri kontrol edin — hepsi akıllı telefonunuzdan. Kontrol paneli mobil öncelikli tasarlandı, asla bilgisayara ihtiyaç duymazsınız.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Mobil Yönetim Nasıl Çalışır",
+    "subtitle": "Restoran kontrol paneliniz her zaman cebinizde.",
+    "items": [
+      {
+        "title": "Akıllı Telefonunuzda Tam Kontrol Paneli",
+        "description": "Her özellik telefon ekranınızda mükemmel çalışır — öğe ekleyin, kategorileri düzenleyin, siparişleri yönetin, analizleri kontrol edin. Arayüz dokunmatik için tasarlanmıştır, masaüstünden küçültülmüş değildir."
+      },
+      {
+        "title": "Fotoğrafları Doğrudan Kameradan Yükleyin",
+        "description": "Yeni bir yemeğin fotoğrafını çekin ve saniyeler içinde menünüze yükleyin. Görseller otomatik olarak optimize edilir. Mutfakta ayakta günlük özelinizi güncelleyin."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Mobil menü yönetimi hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Bir uygulama yüklemem gerekiyor mu?",
+        "answer": "Hayır. Kontrol paneli telefonunuzun web tarayıcısında çalışır — Safari, Chrome veya diğerleri. Giriş yapın ve menünüzü yönetmeye başlayın."
+      },
+      {
+        "question": "Telefonumdan bilgisayarda yapabildiğim her şeyi yapabilir miyim?",
+        "answer": "Evet. Her özellik mobilde mevcuttur — öğe ekleme, fotoğraf yükleme, kategori yönetimi, analiz kontrolü, sipariş ve rezervasyon yönetimi."
+      },
+      {
+        "question": "Tabletlerde de çalışır mı?",
+        "answer": "Evet. Kontrol paneli her ekran boyutuna uyum sağlar — telefonlar, tabletler ve masaüstü bilgisayarlar. En uygun cihazı kullanın."
+      },
+      {
+        "question": "Birden fazla kişi menüyü yönetebilir mi?",
+        "answer": "Şu anda bir hesap restoranı yönetir. Aynı anda birden fazla cihazdan giriş yapabilirsiniz — telefonunuz, tabletiniz veya bilgisayarınız."
+      }
+    ]
+  }
+}

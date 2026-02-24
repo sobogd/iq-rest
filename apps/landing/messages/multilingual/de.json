@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Mehrsprachige Restaurant-Website — Menü in 25+ Sprachen | IQ Rest",
+    "description": "Ihre Restaurant-Website und Ihr QR-Menü in über 25 Sprachen. Gäste wechseln die Sprache mit einem Tippen — Menü, Kontakte und Reservierungen passen sich sofort an."
+  },
+  "hero": {
+    "badge": "Mehrsprachig",
+    "title": "Ihre Restaurant-Website in über 25 Sprachen",
+    "subtitle": "Touristen und internationale Gäste sehen Ihr Menü in ihrer eigenen Sprache. Ein Tippen zum Wechseln — alles passt sich sofort an: Gerichte, Beschreibungen, Kontakte, Navigation.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "So funktioniert die Mehrsprachigkeit",
+    "subtitle": "Sprechen Sie die Sprache Ihrer Kunden — ohne zusätzlichen Aufwand.",
+    "items": [
+      {
+        "title": "Gäste wählen ihre Sprache",
+        "description": "Ein Sprachauswahl erscheint in Ihrem Menü. Gäste tippen auf ihre bevorzugte Sprache, und die gesamte Website — Menü, Beschreibungen, Kontaktinformationen, Navigation — wechselt sofort. Kein Neuladen der Seite nötig."
+      },
+      {
+        "title": "Sprachen über Ihr Dashboard hinzufügen",
+        "description": "Aktivieren Sie neue Sprachen mit einem Klick. Nutzen Sie die KI-Übersetzung, um den Inhalt zu füllen, oder geben Sie Übersetzungen manuell ein. Jede Sprache kann unabhängig ein- oder ausgeschaltet werden."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über mehrsprachige Menüs wissen müssen.",
+    "items": [
+      {
+        "question": "Wie viele Sprachen kann ich zu meinem Menü hinzufügen?",
+        "answer": "Über 25 Sprachen, darunter alle wichtigen europäischen Sprachen, Chinesisch, Japanisch, Koreanisch, Arabisch, Farsi und mehr. Fügen Sie so viele hinzu, wie Ihre Gäste brauchen."
+      },
+      {
+        "question": "Muss ich alles manuell übersetzen?",
+        "answer": "Nein. Nutzen Sie die integrierte KI-Übersetzung, um Ihr gesamtes Menü mit einem Klick zu übersetzen. Sie können auch jede Übersetzung manuell bearbeiten, um volle Kontrolle zu behalten."
+      },
+      {
+        "question": "Wird die Sprachpräferenz gespeichert?",
+        "answer": "Ja. Wenn ein Gast eine Sprache auswählt, wird diese für den nächsten Besuch gespeichert. Beim nächsten Mal muss nicht erneut gewählt werden."
+      },
+      {
+        "question": "Ist Mehrsprachigkeit im kostenlosen Plan verfügbar?",
+        "answer": "Der kostenlose Plan umfasst bis zu 2 Sprachen. Die Basic- und Pro-Pläne bieten unbegrenzte Sprachen mit integrierter KI-Übersetzung."
+      }
+    ]
+  }
+}

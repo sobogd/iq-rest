@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Persönlicher Support für Ihre Restaurant-Website — Echte menschliche Hilfe | IQ Rest",
+    "description": "Erhalten Sie persönliche Hilfe von echten Menschen, nicht von Chatbots. Einrichtungshilfe, Tipps zur Menüoptimierung und schnelle Antworten — in jedem Plan verfügbar, auch im kostenlosen."
+  },
+  "hero": {
+    "badge": "Persönlicher Support",
+    "title": "Echte Menschen, echte Hilfe — keine Chatbots",
+    "subtitle": "Haben Sie eine Frage? Brauchen Sie Hilfe bei der Einrichtung Ihres Menüs? Möchten Sie eine Funktion vorschlagen? Schreiben Sie uns direkt und erhalten Sie eine persönliche Antwort von jemandem, der Restaurants versteht.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "So funktioniert der Support",
+    "subtitle": "Hilfe, wenn Sie sie brauchen, von Menschen, denen es wichtig ist.",
+    "items": [
+      {
+        "title": "Schreiben Sie uns direkt aus Ihrem Dashboard",
+        "description": "Öffnen Sie den Support-Chat in Ihrem Dashboard und beschreiben Sie Ihre Frage. Ein echter Mensch liest Ihre Nachricht und antwortet — in der Regel innerhalb weniger Stunden an Werktagen."
+      },
+      {
+        "title": "Hilfe bei Einrichtung, Optimierung & mehr",
+        "description": "Ob Sie Hilfe beim Hinzufügen Ihres ersten Gerichts brauchen, Ratschläge zur Menüorganisation wünschen oder eine neue Funktion vorschlagen möchten — wir sind hier. Jede Frage zählt, egal wie klein."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über unseren Support wissen müssen.",
+    "items": [
+      {
+        "question": "Ist Support im kostenlosen Plan verfügbar?",
+        "answer": "Ja. Persönlicher Support ist für jeden Plan verfügbar, einschließlich des kostenlosen. Wir glauben, dass jedes Restaurant echte Hilfe verdient, unabhängig vom Abonnement."
+      },
+      {
+        "question": "Wie schnell antworten Sie?",
+        "answer": "In der Regel innerhalb weniger Stunden an Werktagen. Wir lesen jede Nachricht persönlich und versuchen, Ihre Frage in einer Antwort zu klären."
+      },
+      {
+        "question": "Können Sie mir bei der Einrichtung meines Menüs helfen?",
+        "answer": "Selbstverständlich. Wenn Sie Hilfe beim Hinzufügen von Gerichten, Organisieren von Kategorien, Einrichten von Übersetzungen oder Konfigurieren von Reservierungen brauchen — fragen Sie einfach. Wir führen Sie gerne durch alles."
+      },
+      {
+        "question": "Kann ich neue Funktionen vorschlagen?",
+        "answer": "Ja, und wir freuen uns darüber! Viele unserer Funktionen begannen als Vorschläge von Nutzern. Schreiben Sie uns Ihre Idee und wir werden sie für zukünftige Updates berücksichtigen."
+      }
+    ]
+  }
+}

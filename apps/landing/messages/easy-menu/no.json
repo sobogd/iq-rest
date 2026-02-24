@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Lag en QR-meny for restauranten din — Gratis menybygger | IQ Rest",
+    "description": "Bygg restaurantens digitale QR-meny paa faa minutter. Legg til kategorier, retter, bilder, priser — og del en skannbar QR-kode. Gratis aa starte."
+  },
+  "hero": {
+    "badge": "Menybygger",
+    "title": "Lag en digital QR-meny for restauranten din paa faa minutter",
+    "subtitle": "Legg til kategorier og retter, sett priser, last opp bilder — QR-menyen din er klar til aa dele. Rediger naar som helst, endringer vises umiddelbart.",
+    "cta": "Lag din meny",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Ingen kredittkort noedvendig. Gratis plan tilgjengelig."
+  },
+  "features": {
+    "title": "Hvordan menyredigeringen fungerer",
+    "subtitle": "Enkle verktoy som faar menyen din paa nett raskt.",
+    "items": [
+      {
+        "title": "Legg til kategorier og retter",
+        "description": "Lag kategorier som Forretter, Hovedretter, Drikke — legg deretter til retter med navn, beskrivelser, priser og bilder. Dra og slipp for aa endre rekkefoelge. Slaa elementer paa eller av uten aa slette dem."
+      },
+      {
+        "title": "Endringer publiseres umiddelbart",
+        "description": "Hver redigering du gjor vises paa den aktive QR-menyen innen sekunder. Oppdater en pris, legg til en dagsmeny eller skjul en utsolgt rett — kundene ser alltid den nyeste versjonen."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stilte spoersmaal",
+    "subtitle": "Alt du trenger aa vite om aa lage QR-menyen din.",
+    "items": [
+      {
+        "question": "Hvordan lager jeg en QR-meny for restauranten min?",
+        "answer": "Registrer deg med e-posten din, gi restauranten et navn og begynn aa legge til kategorier og retter. QR-menyen genereres automatisk — skriv ut QR-koden og plasser den paa bordene."
+      },
+      {
+        "question": "Kan jeg legge til bilder paa menyelementene?",
+        "answer": "Ja. Last opp bilder direkte fra telefonen eller datamaskinen. Bilder optimeres automatisk for rask lasting paa alle enheter."
+      },
+      {
+        "question": "Hvor mange elementer kan jeg legge til?",
+        "answer": "Det er ingen grense for kategorier eller menyelementer. Legg til saa mange retter du trenger — menyen forblir rask og organisert."
+      },
+      {
+        "question": "Kan jeg midlertidig skjule en rett som er utsolgt?",
+        "answer": "Ja. Slaa av et element med ett trykk. Det forsvinner fra den offentlige menyen, men forblir i kontrollpanelet — slaa det paa igjen naar du er klar."
+      }
+    ]
+  }
+}

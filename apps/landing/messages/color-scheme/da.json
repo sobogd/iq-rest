@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tilpasset QR-menudesign og brandfarver — Restaurantbranding | IQ Rest",
+    "description": "Match din QR-menu med dit restaurantbrand. Vaelg accentfarver, lyse/moerke temaer og skab et ensartet udseende paa tvaers af hele din digitale menu."
+  },
+  "hero": {
+    "badge": "Tilpasset design",
+    "title": "Faa din QR-menu til at matche dit restaurantbrand",
+    "subtitle": "Vaelg din brandfarve, og hele din menu — knapper, fremhaevninger, links — opdateres med det samme. Lyse og moerke temaer inkluderet.",
+    "cta": "Opret din menu",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
+  },
+  "features": {
+    "title": "Hvordan tilpasset branding fungerer",
+    "subtitle": "Din menu, dine farver — ensartet paa hver side.",
+    "items": [
+      {
+        "title": "Vaelg din accentfarve",
+        "description": "Vaelg mellem 12 udvalgte forudindstillinger eller indtast din praecise brandfarve med en hex-kode. Hver knap, link og fremhaevning paa din menu tilpasser sig med det samme — ingen designkunskaber noedvendige."
+      },
+      {
+        "title": "Automatiske lyse og moerke temaer",
+        "description": "Din menu understotter automatisk baade lys og moerk tilstand. Systemet sikrer, at din brandfarve ser godt ud i begge temaer med optimeret kontrast og laeselighed."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spoergsmaal",
+    "subtitle": "Alt du behoever at vide om menutilpasning.",
+    "items": [
+      {
+        "question": "Kan jeg bruge min praecise brandfarve?",
+        "answer": "Ja. Indtast en vilkaarlig hex-farvekode, eller vaelg mellem 12 omhyggeligt udvalgte forudindstillinger. Din accentfarve anvendes paa alle sider i din menu."
+      },
+      {
+        "question": "Virker det med moerk tilstand?",
+        "answer": "Ja. Dit farveskema tilpasser sig automatisk til baade lyse og moerke temaer. Systemet justerer kontrasten for at holde din menu laeselig og smuk i enhver tilstand."
+      },
+      {
+        "question": "Kan jeg aendre farver efter publicering?",
+        "answer": "Absolut. Aendr din accentfarve naar som helst fra kontrolpanelet. Aendringerne vises med det samme paa din aktive menu — ingen genpublicering noedvendig."
+      },
+      {
+        "question": "Vil min QR-kode ogsaa matche brandfarverne?",
+        "answer": "Din QR-kode genereres separat og kan tilpasses uafhaengigt. Accentfarven anvendes paa dine digitale menusider, navigation og interaktive elementer."
+      }
+    ]
+  }
+}

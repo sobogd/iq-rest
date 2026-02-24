@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Table Reservation System for Restaurants — Online Booking | IQ Rest",
+    "description": "Let guests book tables directly from your website. Automatic or manual confirmation, email notifications, and full calendar management — all included."
+  },
+  "hero": {
+    "badge": "Table Reservations",
+    "title": "Accept Table Bookings 24/7 from Your Website",
+    "subtitle": "Guests pick a date, time, and party size — and book instantly. You manage everything from your dashboard, no phone calls needed.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "How Table Reservations Work",
+    "subtitle": "Two steps from guest request to confirmed booking.",
+    "items": [
+      {
+        "title": "Guests Book from Your Website",
+        "description": "Customers visit your restaurant page, tap 'Reserve a Table', choose a date and time, enter their details, and submit. No app needed — works in any browser on any device."
+      },
+      {
+        "title": "You Manage Bookings in Your Dashboard",
+        "description": "Every reservation appears in your dashboard with guest name, phone, party size, date, and notes. Confirm or decline with one tap. Set automatic confirmation or review each booking manually."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about table reservations.",
+    "items": [
+      {
+        "question": "Do customers need to create an account to book?",
+        "answer": "No. Guests simply fill in their name, phone number, party size, and preferred time. No account or app download required."
+      },
+      {
+        "question": "Can I set available time slots and capacity?",
+        "answer": "Yes. Define your working hours, reservation slot duration, and table capacity. The system only shows available slots to guests."
+      },
+      {
+        "question": "Will I get notified when someone books?",
+        "answer": "Yes. You receive an email for every new reservation. Guests also get a confirmation email once you approve the booking."
+      },
+      {
+        "question": "Can I use both automatic and manual confirmation?",
+        "answer": "Yes. Choose automatic mode to confirm bookings instantly based on availability, or manual mode to review and approve each request yourself."
+      }
+    ]
+  }
+}

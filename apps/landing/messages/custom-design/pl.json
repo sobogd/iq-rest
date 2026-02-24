@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Strona restauracji z wideo i zdjęciem w tle — Kreator stron | IQ Rest",
+    "description": "Stwórz oszałamiającą stronę restauracji z niestandardowym wideo lub zdjęciem w tle. Prześlij wideo z klimatem restauracji lub zdjęcie jedzenia — zrób wrażenie na gościach od pierwszego skanowania."
+  },
+  "hero": {
+    "badge": "Design strony",
+    "title": "Stwórz oszałamiającą stronę restauracji z wideo w tle",
+    "subtitle": "Prześlij wideo z klimatem restauracji lub piękne zdjęcie jedzenia jako tło. Goście widzą profesjonalne, markowe doświadczenie w momencie skanowania kodu QR.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Jak działają niestandardowe tła",
+    "subtitle": "Zrób trwałe pierwsze wrażenie wizualami pasującymi do Twojej marki.",
+    "items": [
+      {
+        "title": "Prześlij wideo lub zdjęcie w tle",
+        "description": "Dodaj zapętlone wideo z klimatem restauracji, timelapse z kuchni lub wysokiej jakości zdjęcie jedzenia. Tło pojawia się na stronie głównej — tworząc immersyjne doświadczenie dla gości."
+      },
+      {
+        "title": "Zoptymalizowane pod szybkość na każdym urządzeniu",
+        "description": "Wideo i zdjęcia są automatycznie kompresowane i ładowane leniwie. Twoja strona pozostaje szybka nawet przy wolnych połączeniach mobilnych — bez buforowania, bez opóźnień, po prostu płynne doświadczenie."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o designie strony restauracji.",
+    "items": [
+      {
+        "question": "Jakie formaty wideo są obsługiwane?",
+        "answer": "Formaty MP4 i WebM działają najlepiej. Wideo jest kompresowane automatycznie dla szybkiego ładowania. Utrzymuj wideo poniżej 30 sekund dla najlepszego doświadczenia mobilnego."
+      },
+      {
+        "question": "Czy wideo w tle spowolni moją stronę?",
+        "answer": "Nie. Wideo jest kompresowane, ładowane leniwie i optymalizowane automatycznie. Przy wolnych połączeniach system przełącza się na statyczne zdjęcie, aby zachować płynność."
+      },
+      {
+        "question": "Czy mogę użyć zdjęcia zamiast wideo?",
+        "answer": "Tak. Prześlij dowolne zdjęcie — zostanie zoptymalizowane i wyświetlone jako pełnoekranowe tło. Możesz przełączać się między wideo a zdjęciem w dowolnym momencie."
+      },
+      {
+        "question": "Czy potrzebuję projektanta, żeby to ustawić?",
+        "answer": "Nie. Po prostu prześlij swoje wideo lub zdjęcie z panelu. System automatycznie zajmuje się rozmiarem, kompresją i układem. Twoja strona wygląda profesjonalnie bez żadnych umiejętności projektowych."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Çok Dilli Restoran Web Sitesi — 25'ten Fazla Dilde Menü | IQ Rest",
+    "description": "Restoran web siteniz ve QR menünüz 25'ten fazla dilde. Misafirler tek dokunuşla dil değiştirir — menü, iletişim ve rezervasyonlar anında uyarlanır."
+  },
+  "hero": {
+    "badge": "Çok Dilli",
+    "title": "Restoran Web Siteniz 25'ten Fazla Dilde",
+    "subtitle": "Turistler ve uluslararası misafirler menünüzü kendi dillerinde görür. Tek dokunuşla geçiş yapın — her şey anında uyarlanır: yemekler, açıklamalar, iletişim, gezinme.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demo Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Çok Dil Desteği Nasıl Çalışır",
+    "subtitle": "Ekstra iş yapmadan müşterinizin dilini konuşun.",
+    "items": [
+      {
+        "title": "Misafirler Dillerini Seçer",
+        "description": "Menünüzde bir dil seçici görünür. Misafirler tercih ettikleri dile dokunur ve tüm web sitesi — menü, açıklamalar, iletişim bilgileri, gezinme — anında değişir. Sayfa yenileme gerekmez."
+      },
+      {
+        "title": "Kontrol Panelinizden Dil Ekleyin",
+        "description": "Tek tıkla yeni dilleri etkinleştirin. İçeriği doldurmak için yapay zeka çevirisini kullanın veya çevirileri manuel girin. Her dil bağımsız olarak açılıp kapatılabilir."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Çok dilli menüler hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Menüme kaç dil ekleyebilirim?",
+        "answer": "Tüm büyük Avrupa dilleri, Çince, Japonca, Korece, Arapça, Farsça ve daha fazlası dahil 25'ten fazla dil. Misafirlerinizin ihtiyaç duyduğu kadar ekleyin."
+      },
+      {
+        "question": "Her şeyi manuel olarak çevirmem mi gerekiyor?",
+        "answer": "Hayır. Yerleşik yapay zeka çevirisini kullanarak tüm menünüzü tek tıkla çevirin. Tam kontrol için herhangi bir çeviriyi manuel olarak da düzenleyebilirsiniz."
+      },
+      {
+        "question": "Dil tercihi kaydedilir mi?",
+        "answer": "Evet. Bir misafir dil seçtiğinde, bir sonraki ziyaretinde hatırlanır. Geri döndüklerinde tekrar seçim yapmaları gerekmez."
+      },
+      {
+        "question": "Çok dil desteği ücretsiz planda mevcut mu?",
+        "answer": "Ücretsiz plan 2 dile kadar içerir. Basic ve Pro planlar, yapay zeka çevirisi dahil sınırsız dil sunar."
+      }
+    ]
+  }
+}

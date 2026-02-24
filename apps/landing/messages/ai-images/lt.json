@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "DI maisto nuotraukų generavimas meniu — Restorano meniu vaizdai | IQ Rest",
+    "description": "Generuokite gražias maisto nuotraukas savo meniu su DI. Fotografo nereikia — gaukite profesionalius patiekalų vaizdus per sekundes, optimizuotus jūsų QR meniu."
+  },
+  "hero": {
+    "badge": "DI vaizdai",
+    "title": "Profesionalios meniu nuotraukos be fotografo",
+    "subtitle": "Generuokite nuostabius maisto vaizdus savo patiekalams su DI. Tiesiog įveskite patiekalo pavadinimą ir gaukite gražią, optimizuotą nuotrauką, paruoštą jūsų QR meniu — per sekundes.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia DI vaizdų generavimas",
+    "subtitle": "Nuo patiekalo pavadinimo iki profesionalios nuotraukos vienu paspaudimu.",
+    "items": [
+      {
+        "title": "Generuokite vaizdus iš patiekalų pavadinimų",
+        "description": "Įveskite patiekalo pavadinimą — 'Keptas lašišas su citrina', 'Margherita pica', 'Šokoladinis lavos pyragas' — ir DI sugeneruoja profesionalią maisto nuotrauką. Rinkitės iš kelių stilių ir fonų."
+      },
+      {
+        "title": "Optimizuota greitam įkėlimui",
+        "description": "Kiekvienas sugeneruotas vaizdas automatiškai suglaudinamas ir konvertuojamas į šiuolaikinius formatus. Jūsų meniu lieka žaibiškai greitas bet kuriame įrenginyje, net su nuotraukomis prie kiekvieno patiekalo."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie DI meniu vaizdus.",
+    "items": [
+      {
+        "question": "Kaip sugeneruoti maisto nuotrauką?",
+        "answer": "Atidarykite bet kurį meniu elementą valdymo skydelyje, paspauskite 'Generuoti vaizdą' ir DI sukuria profesionalią maisto nuotrauką pagal patiekalo pavadinimą ir aprašymą. Pasirinkite tą, kuri patinka."
+      },
+      {
+        "question": "Ar galiu naudoti savo nuotraukas?",
+        "answer": "Žinoma. Įkelkite savo nuotraukas iš telefono ar kompiuterio. DI generavimas yra neprivalomas — naudokite jį, kai nuotraukos neturite po ranka."
+      },
+      {
+        "question": "Kiek vaizdų galiu sugeneruoti?",
+        "answer": "Vaizdų generavimo limitai priklauso nuo jūsų plano. Basic apima mėnesinį kiekį, o Pro siūlo didesnį limitą. Savo nuotraukas visada galite įkelti be apribojimų."
+      },
+      {
+        "question": "Ar sugeneruoti vaizdai yra unikalūs mano restoranui?",
+        "answer": "Taip. Kiekvienas vaizdas generuojamas unikaliai jūsų konkrečiam patiekalui. Jokių sandėlio nuotraukų — kiekvienas vaizdas kuriamas iš naujo pagal jūsų meniu elementą."
+      }
+    ]
+  }
+}

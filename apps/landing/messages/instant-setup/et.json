@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Tasuta restorani veebilehe generaator — Looge 5 minutiga | IQ Rest",
+    "description": "Saage professionaalne restorani veebileht koos QR-menüü, kontaktlehe ja kaardiga — sisestage lihtsalt oma e-post. Valmis 5 minutiga, tehnilisi oskusi pole vaja."
+  },
+  "hero": {
+    "badge": "Tasuta veebileht",
+    "title": "Saage professionaalne restorani veebileht 5 minutiga",
+    "subtitle": "Sisestage oma e-post, nimetage restoran ja saate koheselt täieliku veebilehe koos QR-menüü, kontaktlehe kaardiga ja kaasaegse kohanduva disainiga. Pole kodeerimist ega disainereid.",
+    "cta": "Looge oma menüü",
+    "ctaDemo": "Vaata demo",
+    "noCreditCard": "Krediitkaarti pole vaja. Tasuta plaan saadaval."
+  },
+  "features": {
+    "title": "Kuidas see töötab",
+    "subtitle": "Nullist reaalajas restorani veebileheni kolme sammuga.",
+    "items": [
+      {
+        "title": "Registreeruge ainult oma e-postiga",
+        "description": "Pole keerulisi registreerimisvorme. Sisestage oma e-post, kinnitage koodiga ja teie restorani juhtpaneel on valmis. Nimetage oma restoran ja teie veebileht läheb kohe avalikuks."
+      },
+      {
+        "title": "Kõik kaasas kohe algusest",
+        "description": "Teie veebilehega tuleb kaasa QR-menüü, kontaktleht Google Mapsiga, keeletugi, mobiilile kohanduv disain ja teie oma unikaalne URL. Lisage lihtsalt oma road ja hakake jagama."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused",
+    "subtitle": "Kõik, mida peate teadma oma restorani veebilehe loomise kohta.",
+    "items": [
+      {
+        "question": "Kuidas luua tasuta restorani veebileht?",
+        "answer": "Sisestage oma e-post IQ Restis, kinnitage koodiga, nimetage oma restoran — valmis. Teie veebileht koos QR-menüüga on reaalajas alla 5 minuti. Krediitkaarti pole vaja."
+      },
+      {
+        "question": "Kas mul on vaja tehnilisi oskusi?",
+        "answer": "Ei. Kõik on loodud restoranipidajatele, mitte arendajatele. Lisage roogi, laadige üles fotosid ja hallake oma lehte täielikult telefonist."
+      },
+      {
+        "question": "Mis sisaldub tasuta plaanis?",
+        "answer": "Täielik restorani veebileht, QR-menüü, kontaktleht kaardiga, analüütika, kohandatud värviskeem ja kuni 2 keelt. Pole prooviperioodi — see on igavesti tasuta."
+      },
+      {
+        "question": "Kas ma saan kasutada oma domeeninime?",
+        "answer": "Tasuta ja Basic plaanidel on teie leht majutatud aadressil iq-rest.com/m/teie-nimi. Pro plaan toetab kohandatud domeeninimesid täieliku brändikontrolli jaoks."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Kreirajte QR meni za vaš restoran — Besplatan kreator menija | IQ Rest",
+    "description": "Napravite digitalni QR meni za vaš restoran za nekoliko minuta. Dodajte kategorije, jela, fotografije, cene — i podelite QR kod koji se skenira. Besplatno za početak."
+  },
+  "hero": {
+    "badge": "Kreator menija",
+    "title": "Kreirajte digitalni QR meni za vaš restoran za nekoliko minuta",
+    "subtitle": "Dodajte kategorije i jela, postavite cene, otpremite fotografije — vaš QR meni je spreman za deljenje. Menjajte kad god želite, promene se pojavljuju odmah.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Kako funkcioniše editor menija",
+    "subtitle": "Jednostavni alati koji brzo stavljaju vaš meni na internet.",
+    "items": [
+      {
+        "title": "Dodajte kategorije i jela",
+        "description": "Kreirajte kategorije poput Predjela, Glavna jela, Pića — zatim dodajte jela sa nazivima, opisima, cenama i fotografijama. Prevucite i otpustite za preuređivanje. Uključite ili isključite stavke bez brisanja."
+      },
+      {
+        "title": "Promene stupaju na snagu odmah",
+        "description": "Svaka promena koju napravite pojavljuje se na vašem javnom QR meniju za nekoliko sekundi. Ažurirajte cenu, dodajte dnevnu ponudu ili sakrijte rasprodato jelo — vaši klijenti uvek vide najnoviju verziju."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o kreiranju QR menija.",
+    "items": [
+      {
+        "question": "Kako da kreiram QR meni za svoj restoran?",
+        "answer": "Registrujte se sa e-poštom, imenujte restoran i počnite da dodajete kategorije i jela. Vaš QR meni se generiše automatski — odštampajte QR kod i postavite ga na stolove."
+      },
+      {
+        "question": "Mogu li da dodam fotografije stavkama menija?",
+        "answer": "Da. Otpremite fotografije direktno sa telefona ili računara. Slike se automatski optimizuju za brzo učitavanje na svakom uređaju."
+      },
+      {
+        "question": "Koliko stavki mogu da dodam?",
+        "answer": "Nema ograničenja na kategorije ili stavke menija. Dodajte onoliko jela koliko vam treba — vaš meni ostaje brz i organizovan."
+      },
+      {
+        "question": "Mogu li privremeno da sakrijem rasprodato jelo?",
+        "answer": "Da. Isključite bilo koju stavku jednim tapom. Nestaje sa javnog menija ali ostaje u vašem kontrolnom panelu — uključite je nazad kada budete spremni."
+      }
+    ]
+  }
+}

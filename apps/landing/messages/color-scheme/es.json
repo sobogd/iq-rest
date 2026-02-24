@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Diseño personalizado de menú QR y colores de marca — Branding de restaurante | IQ Rest",
+    "description": "Adapta tu menú QR a la marca de tu restaurante. Elige colores de acento, temas claro/oscuro y crea un aspecto coherente en todo tu menú digital."
+  },
+  "hero": {
+    "badge": "Diseño personalizado",
+    "title": "Haz que tu menú QR refleje la marca de tu restaurante",
+    "subtitle": "Elige tu color de marca y todo tu menú — botones, resaltados, enlaces — se actualiza al instante. Temas claro y oscuro incluidos.",
+    "cta": "Crear tu menú",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "No se requiere tarjeta de crédito. Plan gratuito disponible."
+  },
+  "features": {
+    "title": "Cómo funciona el branding personalizado",
+    "subtitle": "Tu menú, tus colores — coherente en cada página.",
+    "items": [
+      {
+        "title": "Elige tu color de acento",
+        "description": "Selecciona entre 12 opciones prediseñadas o introduce el color exacto de tu marca con un código hex. Cada botón, enlace y resaltado de tu menú se adapta al instante — sin necesidad de habilidades de diseño."
+      },
+      {
+        "title": "Temas claro y oscuro automáticos",
+        "description": "Tu menú soporta automáticamente los modos claro y oscuro. El sistema garantiza que tu color de marca se vea perfecto en ambos temas con contraste y legibilidad optimizados."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre la personalización del menú.",
+    "items": [
+      {
+        "question": "¿Puedo usar el color exacto de mi marca?",
+        "answer": "Sí. Introduce cualquier código de color hex, o elige entre 12 opciones cuidadosamente seleccionadas. Tu color de acento se aplica en todas las páginas de tu menú."
+      },
+      {
+        "question": "¿Funciona con el modo oscuro?",
+        "answer": "Sí. Tu esquema de colores se adapta automáticamente a los temas claro y oscuro. El sistema ajusta el contraste para mantener tu menú legible y atractivo en cualquier modo."
+      },
+      {
+        "question": "¿Puedo cambiar los colores después de publicar?",
+        "answer": "Por supuesto. Cambia tu color de acento en cualquier momento desde el panel de control. Los cambios aparecen al instante en tu menú publicado — no es necesario volver a publicar."
+      },
+      {
+        "question": "¿El código QR también tendrá los colores de mi marca?",
+        "answer": "Tu código QR se genera por separado y puede personalizarse de forma independiente. El color de acento se aplica a las páginas de tu menú digital, la navegación y los elementos interactivos."
+      }
+    ]
+  }
+}

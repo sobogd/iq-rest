@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Hantera din restaurangmeny fran telefonen — Mobil kontrollpanel | IQ Rest",
+    "description": "Kor din restaurangs QR-meny helt fran din telefon. Lagg till ratter, uppdatera priser, ladda upp foton, kolla statistik — ingen dator behovs."
+  },
+  "hero": {
+    "badge": "Mobil kontrollpanel",
+    "title": "Hantera hela din restaurangmeny fran telefonen",
+    "subtitle": "Lagg till ratter, andra priser, ladda upp foton, kolla ordrar — allt fran din smartphone. Kontrollpanelen ar byggd mobil-forst, sa du behover aldrig en dator.",
+    "cta": "Skapa din meny",
+    "ctaDemo": "Visa demo",
+    "noCreditCard": "Inget kreditkort kravs. Gratis plan tillganglig."
+  },
+  "features": {
+    "title": "Hur mobilhantering fungerar",
+    "subtitle": "Din restaurangs kontrollpanel, alltid i fickan.",
+    "items": [
+      {
+        "title": "Full kontrollpanel pa din smartphone",
+        "description": "Varje funktion fungerar perfekt pa din telefonskarm — lagga till artiklar, redigera kategorier, hantera ordrar, kolla statistik. Granssnittet ar designat for pekskarm, inte bara nedskalat fran dator."
+      },
+      {
+        "title": "Ladda upp foton direkt fran kameran",
+        "description": "Ta ett foto pa en ny ratt och ladda upp det till din meny pa sekunder. Bilder optimeras automatiskt. Uppdatera din dagspecial medan du star i koket."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vanliga fragor",
+    "subtitle": "Allt du behover veta om mobil menyhantering.",
+    "items": [
+      {
+        "question": "Behover jag installera en app?",
+        "answer": "Nej. Kontrollpanelen fungerar i din telefons webblasare — Safari, Chrome eller nagon annan. Logga bara in och borja hantera din meny."
+      },
+      {
+        "question": "Kan jag gora allt fran telefonen som jag kan pa en dator?",
+        "answer": "Ja. Varje funktion ar tillganglig pa mobil — lagga till artiklar, ladda upp foton, hantera kategorier, kolla statistik, hantera ordrar och reservationer."
+      },
+      {
+        "question": "Fungerar det pa surfplattor ocksa?",
+        "answer": "Ja. Kontrollpanelen anpassar sig till alla skarmstorlekar — telefoner, surfplattor och datorer. Anvand vilken enhet som ar bekvamast."
+      },
+      {
+        "question": "Kan flera personer hantera menyn?",
+        "answer": "For narvarande hanterar ett konto restaurangen. Du kan logga in fran flera enheter samtidigt — din telefon, surfplatta eller dator."
+      }
+    ]
+  }
+}

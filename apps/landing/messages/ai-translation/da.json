@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI-menuoversaettelse til restauranter — Oversaet QR-menu | IQ Rest",
+    "description": "Oversaet din restaurantmenu til over 25 sprog med et klik. AI forstaar kulinarisk kontekst — retnavne, beskrivelser og kategorier oversaettes praecist."
+  },
+  "hero": {
+    "badge": "AI-oversaettelse",
+    "title": "Oversaet din menu til over 25 sprog med et klik",
+    "subtitle": "Vores AI forstaar madkontekst — den oversaetter retnavne, beskrivelser og kategorier naturligt, ikke ord for ord. Naa enhver turist og international gaest.",
+    "cta": "Opret din menu",
+    "ctaDemo": "Se demo",
+    "noCreditCard": "Intet kreditkort paakraevet. Gratis plan tilgaengelig."
+  },
+  "features": {
+    "title": "Hvordan AI-oversaettelse fungerer",
+    "subtitle": "Fra dit sprog til hele verden paa sekunder.",
+    "items": [
+      {
+        "title": "Oversaet hele menuen med et klik",
+        "description": "Vaelg et maalsprog, tryk oversaet, og hele din menu — kategorier, retnavne, beskrivelser — oversaettes med det samme. AI bevarer kulinariske udtryk og tilpasser sig naturligt til hvert sprog."
+      },
+      {
+        "title": "Rediger og finjuster enhver oversaettelse",
+        "description": "Enhver AI-oversaettelse er fuldt redigerbar. Gennemgaa resultatet, juster enhver formulering og gem. Dine aendringer bevares, selvom du genoversaetter andre dele af menuen senere."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spoergsmaal",
+    "subtitle": "Alt du behoever at vide om menuoversaettelse.",
+    "items": [
+      {
+        "question": "Hvor praecis er AI-oversaettelsen for madmenuer?",
+        "answer": "Vores AI er optimeret til restaurantindhold. Den forstaar, at 'Beef Wellington' eller 'Tiramisu' ikke skal oversaettes bogstaveligt, og tilpasser beskrivelser saa de lyder naturlige paa hvert sprog."
+      },
+      {
+        "question": "Hvilke sprog understiottes?",
+        "answer": "Over 25 sprog inklusive engelsk, spansk, fransk, tysk, italiensk, portugisisk, kinesisk, japansk, koreansk, arabisk, russisk og mange flere europaeiske og asiatiske sprog."
+      },
+      {
+        "question": "Kan jeg kun oversaette nogle elementer, ikke hele menuen?",
+        "answer": "Ja. Du kan oversaette enkelte elementer, hele kategorier eller hele menuen paa en gang. Du har fuld kontrol over, hvad der bliver oversat."
+      },
+      {
+        "question": "Koster det ekstra per oversaettelse?",
+        "answer": "AI-oversaettelse er inkluderet i Basic- og Pro-planer med generaoese maanedlige graenser. Ingen per-ord- eller per-element-afgifter — oversaet saa meget du har brug for."
+      }
+    ]
+  }
+}

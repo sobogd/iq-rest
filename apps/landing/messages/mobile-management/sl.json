@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Upravljajte Meni Restavracije s Telefona — Mobilna Nadzorna Plošča | IQ Rest",
+    "description": "Upravljajte QR meni restavracije v celoti s telefona. Dodajajte jedi, posodabljajte cene, nalagajte fotografije, preverjajte analitiko — računalnik ni potreben."
+  },
+  "hero": {
+    "badge": "Mobilna Nadzorna Plošča",
+    "title": "Upravljajte Celoten Meni Restavracije s Telefona",
+    "subtitle": "Dodajajte jedi, spreminjajte cene, nalagajte fotografije, preverjajte naročila — vse s vašega pametnega telefona. Nadzorna plošča je zasnovana za mobilne naprave, nikoli ne potrebujete računalnika.",
+    "cta": "Ustvarite Svoj Jedilnik",
+    "ctaDemo": "Ogled Predstavitve",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
+  },
+  "features": {
+    "title": "Kako Deluje Mobilno Upravljanje",
+    "subtitle": "Nadzorna plošča vaše restavracije, vedno v žepu.",
+    "items": [
+      {
+        "title": "Polna Nadzorna Plošča na Pametnem Telefonu",
+        "description": "Vsaka funkcija deluje odlično na zaslonu telefona — dodajanje postavk, urejanje kategorij, upravljanje naročil, preverjanje analitike. Vmesnik je zasnovan za dotik, ne le pomanjšan z namizja."
+      },
+      {
+        "title": "Nalaganje Fotografij Neposredno s Kamere",
+        "description": "Fotografirajte novo jed in jo naložite v meni v sekundah. Slike se samodejno optimizirajo. Posodobite dnevno ponudbo, medtem ko stojite v kuhinji."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta Vprašanja",
+    "subtitle": "Vse, kar morate vedeti o mobilnem upravljanju menija.",
+    "items": [
+      {
+        "question": "Ali moram namestiti aplikacijo?",
+        "answer": "Ne. Nadzorna plošča deluje v spletnem brskalniku telefona — Safari, Chrome ali katerem koli drugem. Preprosto se prijavite in začnite upravljati meni."
+      },
+      {
+        "question": "Ali lahko s telefonom naredim vse, kar lahko na računalniku?",
+        "answer": "Da. Vsaka funkcija je na voljo na mobilni napravi — dodajanje postavk, nalaganje fotografij, upravljanje kategorij, preverjanje analitike, upravljanje naročil in rezervacij."
+      },
+      {
+        "question": "Ali deluje tudi na tablicah?",
+        "answer": "Da. Nadzorna plošča se prilagodi vsaki velikosti zaslona — telefoni, tablice in namizni računalniki. Uporabite napravo, ki vam najbolj ustreza."
+      },
+      {
+        "question": "Ali lahko več ljudi upravlja meni?",
+        "answer": "Trenutno en račun upravlja restavracijo. Prijavite se lahko z več naprav hkrati — telefon, tablica ali računalnik."
+      }
+    ]
+  }
+}

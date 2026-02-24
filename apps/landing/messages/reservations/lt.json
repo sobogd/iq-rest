@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Staliuku rezervacijos sistema restoranams — Rezervavimas internetu | IQ Rest",
+    "description": "Leiskite svečiams rezervuoti stalus tiesiogiai iš jūsų svetainės. Automatinis arba rankinis patvirtinimas, el. pašto pranešimai ir pilnas kalendoriaus valdymas — viskas įtraukta."
+  },
+  "hero": {
+    "badge": "Staliukų rezervacijos",
+    "title": "Priimkite staliukų rezervacijas 24/7 iš savo svetainės",
+    "subtitle": "Svečiai pasirenka datą, laiką ir žmonių skaičių — ir rezervuoja iškart. Viską valdote iš savo valdymo skydelio, telefono skambučių nereikia.",
+    "cta": "Sukurkite savo meniu",
+    "ctaDemo": "Peržiūrėti demo",
+    "noCreditCard": "Kreditinės kortelės nereikia. Nemokamas planas prieinamas."
+  },
+  "features": {
+    "title": "Kaip veikia staliukų rezervacijos",
+    "subtitle": "Du žingsniai nuo svečio užklausos iki patvirtintos rezervacijos.",
+    "items": [
+      {
+        "title": "Svečiai rezervuoja iš jūsų svetainės",
+        "description": "Klientai aplanko jūsų restorano puslapį, paspaudžia 'Rezervuoti stalą', pasirenka datą ir laiką, įveda savo duomenis ir pateikia. Programėlės nereikia — veikia bet kurioje naršyklėje bet kuriame įrenginyje."
+      },
+      {
+        "title": "Valdote rezervacijas savo valdymo skydelyje",
+        "description": "Kiekviena rezervacija rodoma valdymo skydelyje su svečio vardu, telefonu, žmonių skaičiumi, data ir pastabomis. Patvirtinkite arba atmeskite vienu paspaudimu. Nustatykite automatinį patvirtinimą arba peržiūrėkite kiekvieną rezervaciją rankiniu būdu."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dažnai užduodami klausimai",
+    "subtitle": "Viskas, ką reikia žinoti apie staliukų rezervacijas.",
+    "items": [
+      {
+        "question": "Ar klientams reikia sukurti paskyrą, kad rezervuotų?",
+        "answer": "Ne. Svečiai tiesiog užpildo savo vardą, telefono numerį, žmonių skaičių ir pageidaujamą laiką. Paskyros ar programėlės atsisiuntimo nereikia."
+      },
+      {
+        "question": "Ar galiu nustatyti prieinamus laiko tarpus ir talpą?",
+        "answer": "Taip. Nustatykite savo darbo valandas, rezervacijos laiko tarpo trukmę ir stalo talpą. Sistema svečiams rodo tik prieinamus laiko tarpus."
+      },
+      {
+        "question": "Ar gausiu pranešimą, kai kas nors rezervuoja?",
+        "answer": "Taip. Gausite el. laišką apie kiekvieną naują rezervaciją. Svečiai taip pat gauna patvirtinimo el. laišką, kai patvirtinate rezervaciją."
+      },
+      {
+        "question": "Ar galiu naudoti ir automatinį, ir rankinį patvirtinimą?",
+        "answer": "Taip. Pasirinkite automatinį režimą, kad rezervacijos būtų patvirtintos iškart pagal prieinamumą, arba rankinį režimą, kad peržiūrėtumėte ir patvirtintumėte kiekvieną užklausą patys."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "KI-Menüübersetzung für Restaurants — QR-Menü übersetzen | IQ Rest",
+    "description": "Übersetzen Sie Ihr Restaurantmenü in über 25 Sprachen mit einem Klick. Die KI versteht den kulinarischen Kontext — Gerichtnamen, Beschreibungen und Kategorien werden präzise übersetzt."
+  },
+  "hero": {
+    "badge": "KI-Übersetzung",
+    "title": "Übersetzen Sie Ihr Menü in 25+ Sprachen mit einem Klick",
+    "subtitle": "Unsere KI versteht den kulinarischen Kontext — sie übersetzt Gerichtnamen, Beschreibungen und Kategorien natürlich, nicht wörtlich. Erreichen Sie jeden Touristen und internationalen Gast.",
+    "cta": "Menü erstellen",
+    "ctaDemo": "Demo ansehen",
+    "noCreditCard": "Keine Kreditkarte erforderlich. Kostenloser Plan verfügbar."
+  },
+  "features": {
+    "title": "So funktioniert die KI-Übersetzung",
+    "subtitle": "Von Ihrer Sprache in die Welt — in Sekunden.",
+    "items": [
+      {
+        "title": "Übersetzung Ihres gesamten Menüs mit einem Klick",
+        "description": "Wählen Sie eine Zielsprache, tippen Sie auf Übersetzen — und Ihr gesamtes Menü — Kategorien, Gerichtnamen, Beschreibungen — wird sofort übersetzt. Die KI bewahrt kulinarische Begriffe und passt den Text für jede Sprache natürlich an."
+      },
+      {
+        "title": "Jede Übersetzung bearbeiten und anpassen",
+        "description": "Jede KI-Übersetzung ist vollständig bearbeitbar. Überprüfen Sie das Ergebnis, passen Sie Formulierungen an und speichern Sie. Ihre Änderungen bleiben erhalten, auch wenn Sie später andere Teile des Menüs neu übersetzen."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über die Menüübersetzung wissen müssen.",
+    "items": [
+      {
+        "question": "Wie genau ist die KI-Übersetzung für Speisekarten?",
+        "answer": "Unsere KI ist für Restaurantinhalte optimiert. Sie versteht, dass «Beef Wellington» oder «Tiramisu» nicht wörtlich übersetzt werden sollten, und passt Beschreibungen an, damit sie in jeder Sprache natürlich klingen."
+      },
+      {
+        "question": "Welche Sprachen werden unterstützt?",
+        "answer": "Über 25 Sprachen, darunter Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Chinesisch, Japanisch, Koreanisch, Arabisch, Russisch und viele weitere europäische und asiatische Sprachen."
+      },
+      {
+        "question": "Kann ich nur einzelne Gerichte übersetzen, nicht das ganze Menü?",
+        "answer": "Ja. Sie können einzelne Gerichte, ganze Kategorien oder das gesamte Menü auf einmal übersetzen. Sie haben die volle Kontrolle darüber, was übersetzt wird."
+      },
+      {
+        "question": "Kostet die Übersetzung extra?",
+        "answer": "Die KI-Übersetzung ist in den Plänen Basic und Pro mit großzügigen monatlichen Kontingenten enthalten. Keine Kosten pro Wort oder pro Gericht — übersetzen Sie so viel Sie möchten."
+      }
+    ]
+  }
+}

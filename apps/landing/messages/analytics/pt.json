@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Análises do restaurante e estatísticas do menu QR — Rastreamento de visitantes | IQ Rest",
+    "description": "Acompanhe as leituras do menu QR, visualizações de página, idiomas populares e tendências de visitantes. Painel de análises em tempo real para o site do seu restaurante."
+  },
+  "hero": {
+    "badge": "Análises",
+    "title": "Veja exatamente como os clientes usam seu menu QR",
+    "subtitle": "Acompanhe leituras diárias, visualizações de página, idiomas populares, estatísticas de dispositivos e tendências. Tome decisões baseadas em dados para otimizar seu menu e crescer seu negócio.",
+    "cta": "Criar seu menu",
+    "ctaDemo": "Ver demo",
+    "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
+  },
+  "features": {
+    "title": "O que você pode acompanhar",
+    "subtitle": "Insights em tempo real sobre a presença online do seu restaurante.",
+    "items": [
+      {
+        "title": "Visualizações diárias, leituras e tendências de visitantes",
+        "description": "Veja quantas pessoas leem seu código QR e visitam seu menu a cada dia, semana e mês. Acompanhe tendências para entender padrões sazonais e medir o impacto das promoções."
+      },
+      {
+        "title": "Distribuição por idioma e dispositivo",
+        "description": "Saiba quais idiomas seus clientes preferem e quais dispositivos usam. Esses dados ajudam a priorizar traduções e garantir que seu menu fique perfeito nos dispositivos mais populares."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre análises do restaurante.",
+    "items": [
+      {
+        "question": "Quais métricas posso acompanhar?",
+        "answer": "Visualizações de página diárias, semanais e mensais. Visitantes únicos. Páginas mais visitadas. Preferências de idioma. Distribuição por dispositivo e navegador. Tudo atualizado em tempo real."
+      },
+      {
+        "question": "As análises estão incluídas no plano gratuito?",
+        "answer": "Sim. Análises básicas estão disponíveis em todos os planos, incluindo o gratuito. Você pode ver visualizações, visitantes e estatísticas de idiomas desde o primeiro dia."
+      },
+      {
+        "question": "Posso ver quais páginas são mais populares?",
+        "answer": "Sim. O painel mostra visualizações por página — início, menu, contatos, reservas e seleção de idioma. Veja exatamente onde os clientes passam mais tempo."
+      },
+      {
+        "question": "Até onde os dados históricos vão?",
+        "answer": "Os dados de análise são armazenados desde o dia em que você cria seu restaurante. Você pode ver tendências diárias, semanais e mensais de todo o seu histórico."
+      }
+    ]
+  }
+}

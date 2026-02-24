@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "System rezerwacji stolików dla restauracji — Rezerwacje online | IQ Rest",
+    "description": "Pozwól gościom rezerwować stoliki bezpośrednio na Twojej stronie. Automatyczne lub ręczne potwierdzanie, powiadomienia e-mail i pełne zarządzanie kalendarzem — wszystko w zestawie."
+  },
+  "hero": {
+    "badge": "Rezerwacje stolików",
+    "title": "Przyjmuj rezerwacje stolików 24/7 ze swojej strony internetowej",
+    "subtitle": "Goście wybierają datę, godzinę i liczbę osób — i rezerwują natychmiast. Zarządzasz wszystkim z panelu, bez odbierania telefonów.",
+    "cta": "Stwórz swoje menu",
+    "ctaDemo": "Zobacz demo",
+    "noCreditCard": "Karta kredytowa nie jest wymagana. Dostępny darmowy plan."
+  },
+  "features": {
+    "title": "Jak działają rezerwacje stolików",
+    "subtitle": "Dwa kroki od zapytania gościa do potwierdzonej rezerwacji.",
+    "items": [
+      {
+        "title": "Goście rezerwują z Twojej strony",
+        "description": "Klienci odwiedzają stronę Twojej restauracji, klikają 'Zarezerwuj stolik', wybierają datę i godzinę, wpisują swoje dane i wysyłają. Nie trzeba instalować aplikacji — działa w każdej przeglądarce na każdym urządzeniu."
+      },
+      {
+        "title": "Zarządzasz rezerwacjami w swoim panelu",
+        "description": "Każda rezerwacja pojawia się w panelu z imieniem gościa, telefonem, liczbą osób, datą i notatkami. Potwierdź lub odrzuć jednym kliknięciem. Ustaw automatyczne potwierdzanie lub przeglądaj każdą rezerwację ręcznie."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć o rezerwacjach stolików.",
+    "items": [
+      {
+        "question": "Czy klienci muszą zakładać konto, aby zarezerwować?",
+        "answer": "Nie. Goście po prostu wpisują swoje imię, numer telefonu, liczbę osób i preferowaną godzinę. Nie trzeba zakładać konta ani pobierać aplikacji."
+      },
+      {
+        "question": "Czy mogę ustawić dostępne przedziały czasowe i pojemność?",
+        "answer": "Tak. Określ godziny pracy, czas trwania slotu rezerwacyjnego i pojemność stolików. System pokazuje gościom tylko dostępne terminy."
+      },
+      {
+        "question": "Czy otrzymam powiadomienie, gdy ktoś zarezerwuje?",
+        "answer": "Tak. Otrzymujesz e-mail przy każdej nowej rezerwacji. Goście również otrzymują e-mail z potwierdzeniem po zaakceptowaniu rezerwacji."
+      },
+      {
+        "question": "Czy mogę korzystać zarówno z automatycznego, jak i ręcznego potwierdzania?",
+        "answer": "Tak. Wybierz tryb automatyczny, aby potwierdzać rezerwacje natychmiast na podstawie dostępności, lub tryb ręczny, aby przeglądać i zatwierdzać każde zapytanie samodzielnie."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Restaurant Analytics & QR Menu Statistics — Track Visitors | IQ Rest",
+    "description": "Track your QR menu scans, page views, popular languages, and visitor trends. Real-time analytics dashboard for your restaurant website."
+  },
+  "hero": {
+    "badge": "Analytics",
+    "title": "See Exactly How Guests Use Your QR Menu",
+    "subtitle": "Track daily scans, page views, popular languages, device stats, and trends over time. Make data-driven decisions to optimize your menu and grow your business.",
+    "cta": "Create Your Menu",
+    "ctaDemo": "View Demo",
+    "noCreditCard": "No credit card required. Free plan available."
+  },
+  "features": {
+    "title": "What You Can Track",
+    "subtitle": "Real-time insights about your restaurant's online presence.",
+    "items": [
+      {
+        "title": "Daily Views, Scans & Visitor Trends",
+        "description": "See how many people scan your QR code and visit your menu every day, week, and month. Track trends over time to understand seasonal patterns and measure the impact of promotions."
+      },
+      {
+        "title": "Language & Device Breakdown",
+        "description": "Know which languages your guests prefer and which devices they use. This data helps you prioritize translations and ensure your menu looks perfect on the most popular devices."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about restaurant analytics.",
+    "items": [
+      {
+        "question": "What metrics can I track?",
+        "answer": "Daily, weekly, and monthly page views. Unique visitors. Most viewed pages. Language preferences. Device and browser breakdown. All updated in real time."
+      },
+      {
+        "question": "Is analytics included in the free plan?",
+        "answer": "Yes. Basic analytics are available on every plan, including free. You can see views, visitors, and language stats from day one."
+      },
+      {
+        "question": "Can I see which pages are most popular?",
+        "answer": "Yes. The dashboard shows views broken down by page — home, menu, contacts, reservations, and language selection. See exactly where guests spend their time."
+      },
+      {
+        "question": "How far back does the data go?",
+        "answer": "Analytics data is stored from the day you create your restaurant. You can view daily, weekly, and monthly trends for your entire history."
+      }
+    ]
+  }
+}

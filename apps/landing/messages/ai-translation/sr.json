@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI prevod menija za restorane — Prevedite QR meni | IQ Rest",
+    "description": "Prevedite meni vašeg restorana na 25+ jezika jednim klikom. AI razume kulinarski kontekst — nazivi jela, opisi i kategorije se prevode precizno."
+  },
+  "hero": {
+    "badge": "AI prevod",
+    "title": "Prevedite svoj meni na 25+ jezika jednim klikom",
+    "subtitle": "Naš AI razume kontekst hrane — prevodi nazive jela, opise i kategorije prirodno, ne reč po reč. Doseite svakog turistu i međunarodnog gosta.",
+    "cta": "Kreirajte svoj meni",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Besplatan plan dostupan."
+  },
+  "features": {
+    "title": "Kako funkcioniše AI prevod",
+    "subtitle": "Od vašeg jezika do sveta za nekoliko sekundi.",
+    "items": [
+      {
+        "title": "Prevod celog menija jednim klikom",
+        "description": "Izaberite ciljni jezik, tapnite prevedi i ceo meni — kategorije, nazivi jela, opisi — se prevodi odmah. AI čuva kulinarske termine i prirodno se prilagođava za svaki jezik."
+      },
+      {
+        "title": "Izmenite i fino podesite svaki prevod",
+        "description": "Svaki AI prevod je potpuno izmenjiv. Pregledajte rezultat, prilagodite formulaciju i sačuvajte. Vaše izmene se čuvaju čak i ako kasnije ponovo prevedete druge delove menija."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o prevodu menija.",
+    "items": [
+      {
+        "question": "Koliko je precizan AI prevod za menije hrane?",
+        "answer": "Naš AI je optimizovan za sadržaj restorana. Razume da 'Beef Wellington' ili 'Tiramisu' ne treba bukvalno prevoditi i prilagođava opise da zvuče prirodno na svakom jeziku."
+      },
+      {
+        "question": "Koji jezici su podržani?",
+        "answer": "25+ jezika uključujući engleski, španski, francuski, nemački, italijanski, portugalski, kineski, japanski, korejski, arapski, ruski i mnoge druge evropske i azijske jezike."
+      },
+      {
+        "question": "Mogu li da prevedem samo neke stavke, ne ceo meni?",
+        "answer": "Da. Možete prevoditi pojedinačne stavke, cele kategorije ili ceo meni odjednom. Imate potpunu kontrolu nad time šta se prevodi."
+      },
+      {
+        "question": "Da li prevod košta dodatno?",
+        "answer": "AI prevod je uključen u Basic i Pro planove sa velikodušnim mesečnim limitima. Nema naplate po reči ili stavci — prevodite koliko god vam treba."
+      }
+    ]
+  }
+}
