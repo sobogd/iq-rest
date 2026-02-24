@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Sheol muid cód chuig {email}",
       "verify": "Deimhnigh",
       "changeEmail": "Úsáid ríomhphost eile",
+      "resendCode": "Seol arís",
+      "resendSent": "Cód seolta!",
       "errors": {
         "sendFailed": "Theip ar sheoladh an chóid. Bain triail eile as.",
         "verifyFailed": "Cód neamhbhailí. Bain triail eile as.",
+        "codeExpired": "Tá an cód imithe in éag. Iarr ceann nua le do thoil.",
+        "noCode": "Níor aimsíodh aon chód fíoraithe. Iarr ceann nua le do thoil.",
+        "invalidCode": "Cód neamhbhailí. Bain triail eile as le do thoil.",
         "emailRequired": "Cuir isteach do ríomhphost.",
         "emailInvalid": "Cuir isteach ríomhphost bailí."
       }

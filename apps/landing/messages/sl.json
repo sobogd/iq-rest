@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Kodo smo poslali na {email}",
       "verify": "Potrdi",
       "changeEmail": "Uporabi drug e-mail",
+      "resendCode": "Pošlji znova",
+      "resendSent": "Koda poslana!",
       "errors": {
         "sendFailed": "Pošiljanje kode ni uspelo. Poskusite znova.",
         "verifyFailed": "Neveljavna koda. Poskusite znova.",
+        "codeExpired": "Koda je potekla. Prosimo, zahtevajte novo.",
+        "noCode": "Potrditvena koda ni bila najdena. Prosimo, zahtevajte novo.",
+        "invalidCode": "Neveljavna koda. Prosimo, poskusite znova.",
         "emailRequired": "Vnesite svoj email.",
         "emailInvalid": "Vnesite veljaven email."
       }

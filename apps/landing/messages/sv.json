@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Vi skickade en kod till {email}",
       "verify": "Verifiera",
       "changeEmail": "Använd en annan e-post",
+      "resendCode": "Skicka igen",
+      "resendSent": "Kod skickad!",
       "errors": {
         "sendFailed": "Kunde inte skicka koden. Försök igen.",
         "verifyFailed": "Ogiltig kod. Försök igen.",
+        "codeExpired": "Koden har gått ut. Begär en ny.",
+        "noCode": "Ingen verifieringskod hittades. Begär en ny.",
+        "invalidCode": "Ogiltig kod. Försök igen.",
         "emailRequired": "Ange din e-post.",
         "emailInvalid": "Ange en giltig e-post."
       }

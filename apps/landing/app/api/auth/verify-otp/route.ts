@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     // Check if OTP exists
     if (!user.otp || !user.otpExpiresAt) {
       return NextResponse.json(
-        { error: "No verification code found. Please request a new one." },
+        { error: "NO_CODE" },
         { status: 400 }
       );
     }
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       });
 
       return NextResponse.json(
-        { error: "Code has expired. Please request a new one." },
+        { error: "CODE_EXPIRED" },
         { status: 400 }
       );
     }
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     // Verify OTP
     if (user.otp !== code) {
       return NextResponse.json(
-        { error: "Invalid code" },
+        { error: "INVALID_CODE" },
         { status: 400 }
       );
     }

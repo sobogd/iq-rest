@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Poslali sme kód na {email}",
       "verify": "Overiť",
       "changeEmail": "Použiť iný e-mail",
+      "resendCode": "Odoslať znova",
+      "resendSent": "Kód odoslaný!",
       "errors": {
         "sendFailed": "Nepodarilo sa odoslať kód. Skúste to znova.",
         "verifyFailed": "Neplatný kód. Skúste to znova.",
+        "codeExpired": "Platnosť kódu vypršala. Vyžiadajte si nový.",
+        "noCode": "Overovací kód nebol nájdený. Vyžiadajte si nový.",
+        "invalidCode": "Neplatný kód. Skúste to znova.",
         "emailRequired": "Zadajte svoj email.",
         "emailInvalid": "Zadajte platný email."
       }

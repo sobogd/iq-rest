@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Mēs nosūtījām kodu uz {email}",
       "verify": "Apstiprināt",
       "changeEmail": "Izmantot citu e-pastu",
+      "resendCode": "Sūtīt vēlreiz",
+      "resendSent": "Kods nosūtīts!",
       "errors": {
         "sendFailed": "Neizdevās nosūtīt kodu. Lūdzu, mēģiniet vēlreiz.",
         "verifyFailed": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
+        "codeExpired": "Kods ir beidzies. Lūdzu, pieprasiet jaunu.",
+        "noCode": "Verifikācijas kods nav atrasts. Lūdzu, pieprasiet jaunu.",
+        "invalidCode": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
         "emailRequired": "Ievadiet savu e-pastu.",
         "emailInvalid": "Ievadiet derīgu e-pasta adresi."
       }

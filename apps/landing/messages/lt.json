@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Išsiuntėme kodą adresu {email}",
       "verify": "Patvirtinti",
       "changeEmail": "Naudoti kitą el. paštą",
+      "resendCode": "Siųsti iš naujo",
+      "resendSent": "Kodas išsiųstas!",
       "errors": {
         "sendFailed": "Nepavyko išsiųsti kodo. Bandykite dar kartą.",
         "verifyFailed": "Neteisingas kodas. Bandykite dar kartą.",
+        "codeExpired": "Kodo galiojimas baigėsi. Prašome užsisakyti naują.",
+        "noCode": "Patvirtinimo kodas nerastas. Prašome užsisakyti naują.",
+        "invalidCode": "Neteisingas kodas. Bandykite dar kartą.",
         "emailRequired": "Įveskite savo el. paštą.",
         "emailInvalid": "Įveskite galiojantį el. paštą."
       }

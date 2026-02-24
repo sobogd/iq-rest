@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Vi har sendt en kode til {email}",
       "verify": "Bekræft",
       "changeEmail": "Brug en anden e-mail",
+      "resendCode": "Send igen",
+      "resendSent": "Kode sendt!",
       "errors": {
         "sendFailed": "Kunne ikke sende koden. Prøv igen.",
         "verifyFailed": "Ugyldig kode. Prøv igen.",
+        "codeExpired": "Koden er udløbet. Anmod venligst om en ny.",
+        "noCode": "Ingen bekræftelseskode fundet. Anmod venligst om en ny.",
+        "invalidCode": "Ugyldig kode. Prøv venligst igen.",
         "emailRequired": "Indtast din e-mail.",
         "emailInvalid": "Indtast en gyldig e-mail."
       }

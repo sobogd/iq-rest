@@ -1560,9 +1560,14 @@
       "verifySubtitle": "We sent a code to {email}",
       "verify": "Verify",
       "changeEmail": "Use a different email",
+      "resendCode": "Resend code",
+      "resendSent": "Code sent!",
       "errors": {
         "sendFailed": "Failed to send code. Please try again.",
         "verifyFailed": "Invalid code. Please try again.",
+        "codeExpired": "Code has expired. Please request a new one.",
+        "noCode": "No verification code found. Please request a new one.",
+        "invalidCode": "Invalid code. Please try again.",
         "emailRequired": "Please enter your email.",
         "emailInvalid": "Please enter a valid email."
       }

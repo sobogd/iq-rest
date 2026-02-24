@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Saatsime koodi aadressile {email}",
       "verify": "Kinnita",
       "changeEmail": "Kasuta teist e-posti",
+      "resendCode": "Saada uuesti",
+      "resendSent": "Kood saadetud!",
       "errors": {
         "sendFailed": "Koodi saatmine ebaõnnestus. Proovige uuesti.",
         "verifyFailed": "Vale kood. Proovige uuesti.",
+        "codeExpired": "Kood on aegunud. Palun küsi uus.",
+        "noCode": "Kinnituskoodi ei leitud. Palun küsi uus.",
+        "invalidCode": "Vigane kood. Palun proovi uuesti.",
         "emailRequired": "Sisestage oma e-post.",
         "emailInvalid": "Sisestage kehtiv e-posti aadress."
       }

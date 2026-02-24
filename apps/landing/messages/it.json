@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Abbiamo inviato un codice a {email}",
       "verify": "Verifica",
       "changeEmail": "Usa un'altra email",
+      "resendCode": "Invia di nuovo",
+      "resendSent": "Codice inviato!",
       "errors": {
         "sendFailed": "Invio del codice fallito. Riprova.",
         "verifyFailed": "Codice non valido. Riprova.",
+        "codeExpired": "Il codice è scaduto. Richiedine uno nuovo.",
+        "noCode": "Nessun codice di verifica trovato. Richiedine uno nuovo.",
+        "invalidCode": "Codice non valido. Riprova.",
         "emailRequired": "Inserisci la tua email.",
         "emailInvalid": "Inserisci un'email valida."
       }

@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Hem enviat un codi a {email}",
       "verify": "Verificar",
       "changeEmail": "Utilitza un altre correu",
+      "resendCode": "Reenviar codi",
+      "resendSent": "Codi enviat!",
       "errors": {
         "sendFailed": "Error en enviar el codi. Torna-ho a provar.",
         "verifyFailed": "Codi no vàlid. Torna-ho a provar.",
+        "codeExpired": "El codi ha caducat. Si us plau, sol·liciteu-ne un de nou.",
+        "noCode": "No s'ha trobat cap codi de verificació. Si us plau, sol·liciteu-ne un de nou.",
+        "invalidCode": "Codi no vàlid. Si us plau, torneu-ho a provar.",
         "emailRequired": "Introduïu el vostre email.",
         "emailInvalid": "Introduïu un email vàlid."
       }

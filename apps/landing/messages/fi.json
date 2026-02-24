@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Lähetimme koodin osoitteeseen {email}",
       "verify": "Vahvista",
       "changeEmail": "Käytä toista sähköpostia",
+      "resendCode": "Lähetä uudelleen",
+      "resendSent": "Koodi lähetetty!",
       "errors": {
         "sendFailed": "Koodin lähetys epäonnistui. Yritä uudelleen.",
         "verifyFailed": "Virheellinen koodi. Yritä uudelleen.",
+        "codeExpired": "Koodi on vanhentunut. Pyydä uusi.",
+        "noCode": "Vahvistuskoodia ei löytynyt. Pyydä uusi.",
+        "invalidCode": "Virheellinen koodi. Yritä uudelleen.",
         "emailRequired": "Syötä sähköpostiosoitteesi.",
         "emailInvalid": "Syötä kelvollinen sähköpostiosoite."
       }

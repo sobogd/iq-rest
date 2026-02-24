@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Kódot küldtünk a {email} címre",
       "verify": "Megerősítés",
       "changeEmail": "Másik e-mail használata",
+      "resendCode": "Újraküldés",
+      "resendSent": "Kód elküldve!",
       "errors": {
         "sendFailed": "A kód küldése sikertelen. Próbálja újra.",
         "verifyFailed": "Érvénytelen kód. Próbálja újra.",
+        "codeExpired": "A kód lejárt. Kérjen újat.",
+        "noCode": "Nem található ellenőrző kód. Kérjen újat.",
+        "invalidCode": "Érvénytelen kód. Próbálja újra.",
         "emailRequired": "Adja meg az email címét.",
         "emailInvalid": "Adjon meg egy érvényes email címet."
       }

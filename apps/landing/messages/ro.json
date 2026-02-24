@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Am trimis un cod la {email}",
       "verify": "Verifică",
       "changeEmail": "Folosește alt e-mail",
+      "resendCode": "Retrimite codul",
+      "resendSent": "Cod trimis!",
       "errors": {
         "sendFailed": "Trimiterea codului a eșuat. Încercați din nou.",
         "verifyFailed": "Cod invalid. Încercați din nou.",
+        "codeExpired": "Codul a expirat. Vă rugăm să solicitați unul nou.",
+        "noCode": "Nu a fost găsit niciun cod de verificare. Vă rugăm să solicitați unul nou.",
+        "invalidCode": "Cod invalid. Vă rugăm să încercați din nou.",
         "emailRequired": "Introduceți adresa de email.",
         "emailInvalid": "Introduceți o adresă de email validă."
       }

@@ -1550,9 +1550,14 @@
       "verifySubtitle": "We hebben een code gestuurd naar {email}",
       "verify": "Verifiëren",
       "changeEmail": "Ander e-mailadres gebruiken",
+      "resendCode": "Opnieuw verzenden",
+      "resendSent": "Code verzonden!",
       "errors": {
         "sendFailed": "Kon de code niet verzenden. Probeer het opnieuw.",
         "verifyFailed": "Ongeldige code. Probeer het opnieuw.",
+        "codeExpired": "De code is verlopen. Vraag een nieuwe aan.",
+        "noCode": "Geen verificatiecode gevonden. Vraag een nieuwe aan.",
+        "invalidCode": "Ongeldige code. Probeer het opnieuw.",
         "emailRequired": "Voer je e-mailadres in.",
         "emailInvalid": "Voer een geldig e-mailadres in."
       }

@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Wir haben einen Code an {email} gesendet",
       "verify": "Bestätigen",
       "changeEmail": "Andere E-Mail verwenden",
+      "resendCode": "Erneut senden",
+      "resendSent": "Code gesendet!",
       "errors": {
         "sendFailed": "Code konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
         "verifyFailed": "Ungültiger Code. Bitte versuchen Sie es erneut.",
+        "codeExpired": "Der Code ist abgelaufen. Bitte fordern Sie einen neuen an.",
+        "noCode": "Kein Bestätigungscode gefunden. Bitte fordern Sie einen neuen an.",
+        "invalidCode": "Ungültiger Code. Bitte versuchen Sie es erneut.",
         "emailRequired": "Bitte gib deine E-Mail ein.",
         "emailInvalid": "Bitte gib eine gültige E-Mail ein."
       }

@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Við sendum kóða á {email}",
       "verify": "Staðfesta",
       "changeEmail": "Nota annað netfang",
+      "resendCode": "Endursenda",
+      "resendSent": "Kóði sendur!",
       "errors": {
         "sendFailed": "Ekki tókst að senda kóða. Reyndu aftur.",
         "verifyFailed": "Ógildur kóði. Reyndu aftur.",
+        "codeExpired": "Kóðinn er útrunninn. Vinsamlegast biðjið um nýjan.",
+        "noCode": "Enginn staðfestingarkóði fannst. Vinsamlegast biðjið um nýjan.",
+        "invalidCode": "Ógildur kóði. Vinsamlegast reyndu aftur.",
         "emailRequired": "Sláðu inn netfangið þitt.",
         "emailInvalid": "Sláðu inn gilt netfang."
       }

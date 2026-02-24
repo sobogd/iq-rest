@@ -1550,9 +1550,14 @@
       "verifySubtitle": "Poslali smo kod na {email}",
       "verify": "Potvrdi",
       "changeEmail": "Koristi drugi e-mail",
+      "resendCode": "Pošalji ponovo",
+      "resendSent": "Kod poslan!",
       "errors": {
         "sendFailed": "Slanje koda nije uspjelo. Pokušajte ponovo.",
         "verifyFailed": "Nevažeći kod. Pokušajte ponovo.",
+        "codeExpired": "Kod je istekao. Zatražite novi.",
+        "noCode": "Verifikacijski kod nije pronađen. Zatražite novi.",
+        "invalidCode": "Nevažeći kod. Pokušajte ponovo.",
         "emailRequired": "Unesite svoju e-mail adresu.",
         "emailInvalid": "Unesite valjanu e-mail adresu."
       }

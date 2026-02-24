@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,14 @@ import { Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+
+const ERROR_MAP: Record<string, string> = {
+  CODE_EXPIRED: "errors.codeExpired",
+  NO_CODE: "errors.noCode",
+  INVALID_CODE: "errors.invalidCode",
+};
+
+const RESEND_COOLDOWN = 60;
 
 interface OtpPageProps {
   email: string;
@@ -23,10 +31,50 @@ export function OtpPage({ email }: OtpPageProps) {
   const [errorMessage, setErrorMessage] = useState("");
   const otpInputRef = useRef<HTMLInputElement>(null);
 
+  const [resendStatus, setResendStatus] = useState<
+    "idle" | "loading" | "sent"
+  >("idle");
+  const [cooldown, setCooldown] = useState(0);
+
   useEffect(() => {
     track(DashboardEvent.SHOWED_OTP);
     otpInputRef.current?.focus();
   }, []);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setTimeout(() => setCooldown((c) => c - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [cooldown]);
+
+  const handleResend = useCallback(async () => {
+    if (cooldown > 0 || resendStatus === "loading") return;
+
+    setResendStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/auth/send-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, locale }),
+      });
+
+      if (response.ok) {
+        setResendStatus("sent");
+        setCooldown(RESEND_COOLDOWN);
+        setTimeout(() => setResendStatus("idle"), 3000);
+      } else {
+        setResendStatus("idle");
+        setErrorMessage(t("errors.sendFailed"));
+        setStatus("error");
+      }
+    } catch {
+      setResendStatus("idle");
+      setErrorMessage(t("errors.sendFailed"));
+      setStatus("error");
+    }
+  }, [cooldown, resendStatus, email, locale, t]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,7 +108,8 @@ export function OtpPage({ email }: OtpPageProps) {
         }
       } else {
         track(DashboardEvent.ERROR_OTP_VERIFY);
-        setErrorMessage(data.error || t("errors.verifyFailed"));
+        const translationKey = ERROR_MAP[data.error];
+        setErrorMessage(translationKey ? t(translationKey) : t("errors.verifyFailed"));
         setStatus("error");
         setOtp("");
         otpInputRef.current?.focus();
@@ -121,15 +170,34 @@ export function OtpPage({ email }: OtpPageProps) {
                 {t("verify")}
               </Button>
 
-              <p
-                className="text-xs text-muted-foreground/70 cursor-pointer underline"
-                onClick={() => {
-                  track(DashboardEvent.CLICKED_CHANGE_EMAIL);
-                  window.location.href = `/${locale}/login`;
-                }}
-              >
-                {t("changeEmail")}
-              </p>
+              <div className="flex items-center justify-between">
+                <p
+                  className="text-xs text-muted-foreground/70 cursor-pointer underline"
+                  onClick={() => {
+                    track(DashboardEvent.CLICKED_CHANGE_EMAIL);
+                    window.location.href = `/${locale}/login`;
+                  }}
+                >
+                  {t("changeEmail")}
+                </p>
+
+                <button
+                  type="button"
+                  onClick={handleResend}
+                  disabled={cooldown > 0 || resendStatus === "loading"}
+                  className="text-xs text-muted-foreground/70 underline disabled:opacity-50 disabled:no-underline disabled:cursor-default cursor-pointer"
+                >
+                  {resendStatus === "loading" ? (
+                    <Loader2 className="h-3 w-3 animate-spin" />
+                  ) : resendStatus === "sent" ? (
+                    t("resendSent")
+                  ) : cooldown > 0 ? (
+                    `${t("resendCode")} (${cooldown}s)`
+                  ) : (
+                    t("resendCode")
+                  )}
+                </button>
+              </div>
             </div>
           </form>
         </div>
