@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Sistema de reserva de taules per a restaurants — Reserva en línia | IQ Rest",
+    "description": "Permet que els clients reservin taula directament des del teu web. Confirmació automàtica o manual, notificacions per correu i gestió completa del calendari — tot inclòs."
+  },
+  "hero": {
+    "badge": "Reserves de taules",
+    "title": "Accepta reserves de taules 24/7 des del teu web",
+    "subtitle": "Els clients trien data, hora i nombre de comensals — i reserven a l'instant. Tu ho gestiones tot des del teu panell, sense trucades telefòniques.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com funcionen les reserves de taules",
+    "subtitle": "Dos passos des de la sol·licitud del client fins a la reserva confirmada.",
+    "items": [
+      {
+        "title": "Els clients reserven des del teu web",
+        "description": "Els clients visiten la pàgina del teu restaurant, toquen \"Reservar taula\", trien data i hora, introdueixen les seves dades i envien. No cal cap aplicació — funciona a qualsevol navegador i dispositiu."
+      },
+      {
+        "title": "Gestiona les reserves des del teu panell",
+        "description": "Cada reserva apareix al teu panell amb el nom del client, telèfon, nombre de comensals, data i notes. Confirma o rebutja amb un sol toc. Configura la confirmació automàtica o revisa cada reserva manualment."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre les reserves de taules.",
+    "items": [
+      {
+        "question": "Els clients han de crear un compte per reservar?",
+        "answer": "No. Els clients simplement omplen el nom, número de telèfon, nombre de comensals i hora preferida. No cal cap compte ni descarregar cap aplicació."
+      },
+      {
+        "question": "Puc definir franges horàries i capacitat disponibles?",
+        "answer": "Sí. Defineix el teu horari de treball, la durada de les franges de reserva i la capacitat de les taules. El sistema només mostra les franges disponibles als clients."
+      },
+      {
+        "question": "Rebré una notificació quan algú reservi?",
+        "answer": "Sí. Reps un correu electrònic per cada nova reserva. Els clients també reben un correu de confirmació quan aproves la reserva."
+      },
+      {
+        "question": "Puc utilitzar confirmació automàtica i manual alhora?",
+        "answer": "Sí. Tria el mode automàtic per confirmar reserves al moment segons la disponibilitat, o el mode manual per revisar i aprovar cada sol·licitud personalment."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Traducció IA del menú per a restaurants — Tradueix el menú QR | IQ Rest",
+    "description": "Tradueix el menú del teu restaurant a més de 25 idiomes amb un sol clic. La IA entén el context culinari — noms de plats, descripcions i categories traduïts amb precisió."
+  },
+  "hero": {
+    "badge": "Traducció IA",
+    "title": "Tradueix el teu menú a més de 25 idiomes amb un sol clic",
+    "subtitle": "La nostra IA entén el context gastronòmic — tradueix noms de plats, descripcions i categories de manera natural, no paraula per paraula. Arriba a cada turista i client internacional.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com funciona la traducció IA",
+    "subtitle": "Del teu idioma al món sencer en segons.",
+    "items": [
+      {
+        "title": "Traducció de tot el menú amb un sol clic",
+        "description": "Selecciona un idioma de destí, toca traduir i tot el menú — categories, noms de plats, descripcions — es tradueix a l'instant. La IA conserva els termes culinaris i s'adapta de manera natural a cada idioma."
+      },
+      {
+        "title": "Edita i ajusta qualsevol traducció",
+        "description": "Cada traducció IA és totalment editable. Revisa el resultat, ajusta la redacció i desa. Els teus canvis es conserven encara que més tard tornis a traduir altres parts del menú."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre la traducció del menú.",
+    "items": [
+      {
+        "question": "Com de precisa és la traducció IA per a menús de restaurants?",
+        "answer": "La nostra IA està optimitzada per a contingut de restauració. Entén que \"Beef Wellington\" o \"Tiramisu\" no s'han de traduir literalment, i adapta les descripcions perquè sonin naturals en cada idioma."
+      },
+      {
+        "question": "Quins idiomes estan disponibles?",
+        "answer": "Més de 25 idiomes incloent anglès, castellà, francès, alemany, italià, portuguès, xinès, japonès, coreà, àrab, rus i molts més idiomes europeus i asiàtics."
+      },
+      {
+        "question": "Puc traduir només alguns elements i no tot el menú?",
+        "answer": "Sí. Pots traduir elements individuals, categories senceres o tot el menú alhora. Tens control total sobre què es tradueix."
+      },
+      {
+        "question": "Té un cost addicional per traducció?",
+        "answer": "La traducció IA està inclosa als plans Basic i Pro amb generosos límits mensuals. Sense càrrecs per paraula ni per element — tradueix tant com necessitis."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Vlastní design QR menu a barvy značky — Branding restaurace | IQ Rest",
+    "description": "Přizpůsobte QR menu své značce. Vyberte si akcentové barvy, světlé/tmavé motivy a vytvořte jednotný vzhled celého digitálního menu."
+  },
+  "hero": {
+    "badge": "Vlastní design",
+    "title": "Slaďte QR menu se značkou vaší restaurace",
+    "subtitle": "Vyberte barvu své značky a celé menu — tlačítka, zvýraznění, odkazy — se okamžitě aktualizuje. Světlý a tmavý motiv v ceně.",
+    "cta": "Vytvořte si menu",
+    "ctaDemo": "Zobrazit demo",
+    "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+  },
+  "features": {
+    "title": "Jak funguje vlastní branding",
+    "subtitle": "Vaše menu, vaše barvy — jednotné na každé stránce.",
+    "items": [
+      {
+        "title": "Vyberte si akcentovou barvu",
+        "description": "Vybírejte z 12 předvoleb nebo zadejte přesnou barvu značky pomocí hex kódu. Každé tlačítko, odkaz a zvýraznění na vašem menu se okamžitě přizpůsobí — žádné designérské dovednosti nejsou potřeba."
+      },
+      {
+        "title": "Automatický světlý a tmavý motiv",
+        "description": "Vaše menu automaticky podporuje světlý i tmavý režim. Systém zajistí, že barva vaší značky vypadá skvěle v obou motivech s optimalizovaným kontrastem a čitelností."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebujete vědět o přizpůsobení menu.",
+    "items": [
+      {
+        "question": "Mohu použít přesnou barvu své značky?",
+        "answer": "Ano. Zadejte libovolný hex kód barvy, nebo vyberte z 12 pečlivě vybraných předvoleb. Akcentová barva se použije na všech stránkách vašeho menu."
+      },
+      {
+        "question": "Funguje to s tmavým režimem?",
+        "answer": "Ano. Vaše barevné schéma se automaticky přizpůsobí světlému i tmavému motivu. Systém upraví kontrast, aby menu zůstalo čitelné a krásné v jakémkoli režimu."
+      },
+      {
+        "question": "Mohu změnit barvy po zveřejnění?",
+        "answer": "Samozřejmě. Změňte akcentovou barvu kdykoli z přehledného panelu. Změny se na živém menu projeví okamžitě — bez nutnosti opětovného zveřejnění."
+      },
+      {
+        "question": "Bude QR kód také odpovídat barvám značky?",
+        "answer": "QR kód se generuje samostatně a lze ho upravit nezávisle. Akcentová barva se vztahuje na stránky vašeho digitálního menu, navigaci a interaktivní prvky."
+      }
+    ]
+  }
+}

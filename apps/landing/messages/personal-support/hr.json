@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Osobna podrška za web stranicu vašeg restorana — Prava ljudska pomoć | IQ Rest",
+    "description": "Dobijte osobnu pomoć od pravih ljudi, ne chatbotova. Pomoć pri postavljanju, savjeti za optimizaciju jelovnika i brzi odgovori — dostupno na svakom planu, uključujući besplatni."
+  },
+  "hero": {
+    "badge": "Osobna podrška",
+    "title": "Pravi ljudi, prava pomoć — Nisu chatbotovi",
+    "subtitle": "Imate pitanje? Trebate pomoć pri postavljanju jelovnika? Želite predložiti novu značajku? Javite nam se izravno i dobijte osoban odgovor od nekoga tko razumije restorane.",
+    "cta": "Kreirajte svoj jelovnik",
+    "ctaDemo": "Pogledajte demo",
+    "noCreditCard": "Kreditna kartica nije potrebna. Dostupan besplatni plan."
+  },
+  "features": {
+    "title": "Kako podrška funkcionira",
+    "subtitle": "Pomoć kad vam treba, od ljudi kojima je stalo.",
+    "items": [
+      {
+        "title": "Javite nam se izravno s vaše nadzorne ploče",
+        "description": "Otvorite chat za podršku na svojoj nadzornoj ploči i opišite svoje pitanje. Prava osoba čita vašu poruku i odgovara — obično unutar nekoliko sati radnim danima."
+      },
+      {
+        "title": "Pomoć pri postavljanju, optimizaciji i više",
+        "description": "Trebate li pomoć pri dodavanju prvog jela, savjet o organizaciji jelovnika ili želite predložiti novu značajku — tu smo. Svako pitanje je važno, koliko god malo bilo."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što trebate znati o našoj podršci.",
+    "items": [
+      {
+        "question": "Je li podrška dostupna na besplatnom planu?",
+        "answer": "Da. Osobna podrška dostupna je za svaki plan, uključujući besplatni. Vjerujemo da svaki restoran zaslužuje pravu pomoć, bez obzira na pretplatu."
+      },
+      {
+        "question": "Koliko brzo odgovarate?",
+        "answer": "Obično unutar nekoliko sati radnim danima. Svaku poruku čitamo osobno i nastojimo riješiti vaše pitanje u jednom odgovoru."
+      },
+      {
+        "question": "Možete li mi pomoći postaviti jelovnik?",
+        "answer": "Naravno. Ako trebate pomoć pri dodavanju jela, organizaciji kategorija, postavljanju prijevoda ili konfiguraciji rezervacija — samo pitajte. Rado ćemo vas provesti kroz sve."
+      },
+      {
+        "question": "Mogu li predložiti nove značajke?",
+        "answer": "Da, i to volimo! Mnoge naše značajke nastale su iz korisničkih prijedloga. Pošaljite nam svoju ideju i razmotrit ćemo je za buduća ažuriranja."
+      }
+    ]
+  }
+}

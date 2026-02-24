@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Córas áirithinte bord do bhialanna — Áirithint ar líne | IQ Rest",
+    "description": "Lig d'aíonna bord a chur in áirithe go díreach ó do shuíomh gréasáin. Deimhniú uathoibríoch nó láimhe, fógraí ríomhphoist, agus bainistíocht iomlán féilire — gach rud san áireamh."
+  },
+  "hero": {
+    "badge": "Áirithintí bord",
+    "title": "Glac le háirithintí bord 24/7 ó do shuíomh gréasáin",
+    "subtitle": "Roghnaíonn aíonna dáta, am agus líon na ndaoine — agus cuireann siad in áirithe láithreach. Bainistíonn tú gach rud ó do phainéal rialaithe, gan glaonna gutháin.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn áirithintí bord",
+    "subtitle": "Dhá chéim ó iarratas an aoi go háirithint dheimhnithe.",
+    "items": [
+      {
+        "title": "Cuireann aíonna in áirithe ó do shuíomh gréasáin",
+        "description": "Tugann custaiméirí cuairt ar leathanach do bhialainne, brúnn siad 'Cuir bord in áirithe', roghnaíonn siad dáta agus am, cuireann siad a gcuid sonraí isteach agus seolann siad. Níl aip ag teastáil — oibríonn sé in aon bhrabhsálaí ar aon ghléas."
+      },
+      {
+        "title": "Bainistigh áirithintí i do phainéal rialaithe",
+        "description": "Taispeántar gach áirithint i do phainéal rialaithe le hainm an aoi, fón, líon na ndaoine, dáta agus nótaí. Deimhnigh nó diúltaigh le brú amháin. Socraigh deimhniú uathoibríoch nó athbhreithnigh gach áirithint de láimh."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi áirithintí bord.",
+    "items": [
+      {
+        "question": "An gá do chustaiméirí cuntas a chruthú chun áirithint a dhéanamh?",
+        "answer": "Ní gá. Líonann aíonna isteach a n-ainm, uimhir ghutháin, líon na ndaoine agus an t-am is fearr leo. Níl cuntas ná íoslódáil aipe ag teastáil."
+      },
+      {
+        "question": "An féidir liom sliotáin ama agus toilleadh a shocrú?",
+        "answer": "Is féidir. Sainmhínigh d'uaireanta oibre, fad sliotán áirithinte agus toilleadh na mbord. Ní thaispeánann an córas ach na sliotáin atá ar fáil do na haíonna."
+      },
+      {
+        "question": "An bhfaighidh mé fógra nuair a chuireann duine in áirithe?",
+        "answer": "Gheobhaidh. Faigheann tú ríomhphost do gach áirithint nua. Faigheann aíonna ríomhphost deimhnithe freisin nuair a cheadaíonn tú an áirithint."
+      },
+      {
+        "question": "An féidir liom deimhniú uathoibríoch agus láimhe a úsáid?",
+        "answer": "Is féidir. Roghnaigh an mód uathoibríoch chun áirithintí a dheimhniú láithreach bunaithe ar infhaighteacht, nó an mód láimhe chun gach iarratas a athbhreithniú agus a cheadú tú féin."
+      }
+    ]
+  }
+}

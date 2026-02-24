@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Analítica de Restaurant i Estadístiques del Menú QR — Feu Seguiment dels Visitants | IQ Rest",
+    "description": "Feu seguiment dels escaneigs del menú QR, visualitzacions de pàgines, idiomes populars i tendències de visitants. Tauler d'analítica en temps real per al lloc web del vostre restaurant."
+  },
+  "hero": {
+    "badge": "Analítica",
+    "title": "Veieu Exactament Com els Clients Utilitzen el Vostre Menú QR",
+    "subtitle": "Feu seguiment dels escaneigs diaris, visualitzacions de pàgines, idiomes populars, estadístiques de dispositius i tendències al llarg del temps. Preneu decisions basades en dades per optimitzar el vostre menú i fer créixer el vostre negoci.",
+    "cta": "Creeu el Vostre Menú",
+    "ctaDemo": "Veure Demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Què Podeu Fer Seguiment",
+    "subtitle": "Informació en temps real sobre la presència en línia del vostre restaurant.",
+    "items": [
+      {
+        "title": "Visualitzacions Diàries, Escaneigs i Tendències de Visitants",
+        "description": "Veieu quantes persones escanegen el vostre codi QR i visiten el vostre menú cada dia, setmana i mes. Feu seguiment de les tendències al llarg del temps per entendre els patrons estacionals i mesurar l'impacte de les promocions."
+      },
+      {
+        "title": "Desglossament per Idioma i Dispositiu",
+        "description": "Sabeu quins idiomes prefereixen els vostres clients i quins dispositius utilitzen. Aquestes dades us ajuden a prioritzar les traduccions i assegurar-vos que el vostre menú es veu perfecte als dispositius més populars."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes Freqüents",
+    "subtitle": "Tot el que necessiteu saber sobre l'analítica de restaurants.",
+    "items": [
+      {
+        "question": "Quines mètriques puc fer seguiment?",
+        "answer": "Visualitzacions de pàgines diàries, setmanals i mensuals. Visitants únics. Pàgines més visualitzades. Preferències d'idioma. Desglossament per dispositius i navegadors. Tot actualitzat en temps real."
+      },
+      {
+        "question": "L'analítica està inclosa al pla gratuït?",
+        "answer": "Sí. L'analítica bàsica està disponible a tots els plans, inclòs el gratuït. Podeu veure visualitzacions, visitants i estadístiques d'idiomes des del primer dia."
+      },
+      {
+        "question": "Puc veure quines pàgines són més populars?",
+        "answer": "Sí. El tauler mostra les visualitzacions desglossades per pàgina — inici, menú, contactes, reserves i selecció d'idioma. Veieu exactament on els clients passen el seu temps."
+      },
+      {
+        "question": "Fins quan enrere arriben les dades?",
+        "answer": "Les dades d'analítica s'emmagatzemen des del dia que creeu el vostre restaurant. Podeu veure tendències diàries, setmanals i mensuals per a tot el vostre historial."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Suport Personal pentru Site-ul Restaurantului Tău — Ajutor Real de la Oameni Reali | IQ Rest",
+    "description": "Primește ajutor personal de la oameni reali, nu de la chatbot-uri. Asistență la configurare, sfaturi de optimizare a meniului și răspunsuri rapide — disponibile pe fiecare plan, inclusiv cel gratuit."
+  },
+  "hero": {
+    "badge": "Suport Personal",
+    "title": "Oameni reali, ajutor real — Nu chatbot-uri",
+    "subtitle": "Ai o întrebare? Ai nevoie de ajutor cu configurarea meniului? Vrei să sugerezi o funcție? Scrie-ne direct și primește un răspuns personal de la cineva care înțelege restaurantele.",
+    "cta": "Creează-ți meniul",
+    "ctaDemo": "Vezi demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Cum funcționează suportul",
+    "subtitle": "Ajutor când ai nevoie, de la oameni cărora le pasă.",
+    "items": [
+      {
+        "title": "Scrie-ne direct din panoul tău de control",
+        "description": "Deschide chat-ul de suport din panoul tău de control și descrie întrebarea ta. O persoană reală îți citește mesajul și răspunde — de obicei în câteva ore în zilele lucrătoare."
+      },
+      {
+        "title": "Ajutor cu configurarea, optimizarea și nu numai",
+        "description": "Fie că ai nevoie de ajutor cu adăugarea primului fel de mâncare, sfaturi despre organizarea meniului, sau vrei să sugerezi o funcție nouă — suntem aici. Fiecare întrebare contează, oricât de mică."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știi despre suportul nostru.",
+    "items": [
+      {
+        "question": "Suportul este disponibil pe planul gratuit?",
+        "answer": "Da. Suportul personal este disponibil pentru fiecare plan, inclusiv cel gratuit. Credem că fiecare restaurant merită ajutor real, indiferent de abonament."
+      },
+      {
+        "question": "Cât de repede răspundeți?",
+        "answer": "De obicei în câteva ore în zilele lucrătoare. Citim fiecare mesaj personal și ne propunem să rezolvăm întrebarea ta dintr-un singur răspuns."
+      },
+      {
+        "question": "Mă puteți ajuta să îmi configurez meniul?",
+        "answer": "Absolut. Dacă ai nevoie de ajutor cu adăugarea felurilor de mâncare, organizarea categoriilor, configurarea traducerilor sau setarea rezervărilor — doar întreabă. Suntem bucuroși să te ghidăm pas cu pas."
+      },
+      {
+        "question": "Pot sugera funcții noi?",
+        "answer": "Da, și ne place asta! Multe dintre funcțiile noastre au început ca sugestii ale utilizatorilor. Trimite-ne ideea ta și o vom lua în considerare pentru actualizările viitoare."
+      }
+    ]
+  }
+}

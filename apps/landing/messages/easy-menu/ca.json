@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Crea un menú QR per al teu restaurant — Creador de menú gratuït | IQ Rest",
+    "description": "Crea el menú QR digital del teu restaurant en minuts. Afegeix categories, plats, fotos, preus — i comparteix un codi QR escanejable. Gratuït per començar."
+  },
+  "hero": {
+    "badge": "Creador de menú",
+    "title": "Crea un menú QR digital per al teu restaurant en minuts",
+    "subtitle": "Afegeix les teves categories i plats, estableix preus, puja fotos — el teu menú QR està llest per compartir. Edita en qualsevol moment, els canvis apareixen a l'instant.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com funciona l'editor de menú",
+    "subtitle": "Eines senzilles per posar el teu menú en línia ràpidament.",
+    "items": [
+      {
+        "title": "Afegeix categories i plats",
+        "description": "Crea categories com Entrants, Principals, Begudes — i afegeix plats amb noms, descripcions, preus i fotos. Arrossega i deixa anar per reordenar. Activa o desactiva elements sense eliminar-los."
+      },
+      {
+        "title": "Els canvis es publiquen a l'instant",
+        "description": "Cada edició que fas apareix al teu menú QR en viu en segons. Actualitza un preu, afegeix una oferta del dia o amaga un plat esgotat — els teus clients sempre veuen la versió més recent."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre la creació del teu menú QR.",
+    "items": [
+      {
+        "question": "Com creo un menú QR per al meu restaurant?",
+        "answer": "Registra't amb el teu correu electrònic, posa nom al teu restaurant i comença a afegir categories i plats. El menú QR es genera automàticament — imprimeix el codi QR i col·loca'l a les taules."
+      },
+      {
+        "question": "Puc afegir fotos als elements del menú?",
+        "answer": "Sí. Puja fotos directament des del teu mòbil o ordinador. Les imatges s'optimitzen automàticament per a una càrrega ràpida en qualsevol dispositiu."
+      },
+      {
+        "question": "Quants elements puc afegir?",
+        "answer": "No hi ha límit de categories ni d'elements del menú. Afegeix tants plats com necessitis — el teu menú es manté ràpid i organitzat."
+      },
+      {
+        "question": "Puc amagar temporalment un plat esgotat?",
+        "answer": "Sí. Desactiva qualsevol element amb un sol toc. Desapareix del menú públic però es manté al teu panell — torna a activar-lo quan vulguis."
+      }
+    ]
+  }
+}

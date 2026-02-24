@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "AI Generování Fotografií Jídel pro Jídelní Lístky — Obrázky do Menu Restaurace | IQ Rest",
+    "description": "Generujte krásné fotografie jídel pro vaše menu pomocí AI. Bez fotografa — získejte profesionální obrázky pokrmů za sekundy, optimalizované pro váš QR jídelní lístek."
+  },
+  "hero": {
+    "badge": "AI Obrázky",
+    "title": "Profesionální Fotografie Menu Bez Fotografa",
+    "subtitle": "Generujte úžasné obrázky pokrmů pomocí AI. Stačí zadat název jídla a získáte krásnou, optimalizovanou fotografii připravenou pro váš QR jídelní lístek — za sekundy.",
+    "cta": "Vytvořte Si Menu",
+    "ctaDemo": "Zobrazit Demo",
+    "noCreditCard": "Není vyžadována kreditní karta. K dispozici je bezplatný plán."
+  },
+  "features": {
+    "title": "Jak Funguje AI Generování Obrázků",
+    "subtitle": "Od názvu jídla k profesionální fotografii jedním kliknutím.",
+    "items": [
+      {
+        "title": "Generujte Obrázky z Názvů Jídel",
+        "description": "Zadejte název jídla — 'Grilovaný Losos s Citronem', 'Pizza Margherita', 'Čokoládový Lávový Dort' — a AI vygeneruje profesionální fotografii jídla. Vyberte si z více stylů a pozadí."
+      },
+      {
+        "title": "Optimalizováno pro Rychlé Načítání",
+        "description": "Každý vygenerovaný obrázek je automaticky komprimován a převeden do moderních formátů. Vaše menu zůstává bleskově rychlé na jakémkoli zařízení, i s fotografiemi u každého jídla."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Vše, co potřebujete vědět o AI obrázcích menu.",
+    "items": [
+      {
+        "question": "Jak vygeneruji fotografii jídla?",
+        "answer": "Otevřete jakoukoli položku menu v panelu, klepněte na 'Generovat Obrázek' a AI vytvoří profesionální fotografii jídla na základě názvu a popisu pokrmu. Vyberte si tu, která se vám líbí."
+      },
+      {
+        "question": "Mohu místo toho použít vlastní fotografie?",
+        "answer": "Samozřejmě. Nahrajte vlastní fotografie z telefonu nebo počítače. AI generování je volitelné — použijte ho, když nemáte připravenou fotografii."
+      },
+      {
+        "question": "Kolik obrázků mohu vygenerovat?",
+        "answer": "Limity generování obrázků závisí na vašem plánu. Basic zahrnuje měsíční kvótu a Pro nabízí vyšší limit. Vlastní fotografie můžete vždy nahrávat bez omezení."
+      },
+      {
+        "question": "Jsou generované obrázky jedinečné pro mou restauraci?",
+        "answer": "Ano. Každý obrázek je vygenerován jedinečně pro vaše konkrétní jídlo. Žádné stock fotografie — každý obrázek je vytvořen nově na základě vaší položky menu."
+      }
+    ]
+  }
+}

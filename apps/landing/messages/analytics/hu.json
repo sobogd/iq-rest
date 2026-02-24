@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Éttermi Analitika és QR Menü Statisztikák — Kövesse Nyomon a Látogatókat | IQ Rest",
+    "description": "Kövesse nyomon QR menüje beolvasásait, oldalmegtekintéseit, népszerű nyelveit és látogatói trendjeit. Valós idejű analitikai vezérlőpult éttermi weboldalához."
+  },
+  "hero": {
+    "badge": "Analitika",
+    "title": "Pontosan Lássa, Hogyan Használják Vendégei a QR Menüt",
+    "subtitle": "Kövesse nyomon a napi beolvasásokat, oldalmegtekintéseket, népszerű nyelveket, eszközstatisztikákat és trendeket az idő múlásával. Hozzon adatvezérelt döntéseket menüje optimalizálásához és vállalkozása növeléséhez.",
+    "cta": "Készítse El Menüjét",
+    "ctaDemo": "Demó Megtekintése",
+    "noCreditCard": "Nincs szükség bankkártyára. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Mit Követhet Nyomon",
+    "subtitle": "Valós idejű betekintés étterme online jelenlétébe.",
+    "items": [
+      {
+        "title": "Napi Megtekintések, Beolvasások és Látogatói Trendek",
+        "description": "Lássa, hány ember olvassa be QR kódját és látogatja meg menüjét minden nap, héten és hónapban. Kövesse nyomon a trendeket az idő múlásával, hogy megértse a szezonális mintákat és mérje a promóciók hatását."
+      },
+      {
+        "title": "Nyelvi és Eszköz Bontás",
+        "description": "Tudja meg, milyen nyelveket preferálnak vendégei és milyen eszközöket használnak. Ezek az adatok segítenek prioritást adni a fordításoknak, és biztosítani, hogy menüje tökéletesen nézzen ki a legnépszerűbb eszközökön."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit az éttermi analitikáról tudni kell.",
+    "items": [
+      {
+        "question": "Milyen mutatókat követhetek nyomon?",
+        "answer": "Napi, heti és havi oldalmegtekintések. Egyedi látogatók. Legtöbbet megtekintett oldalak. Nyelvi preferenciák. Eszköz- és böngészőbontás. Minden valós időben frissül."
+      },
+      {
+        "question": "Az analitika benne van az ingyenes csomagban?",
+        "answer": "Igen. Az alapvető analitika minden csomagban elérhető, beleértve az ingyenest is. Az első naptól láthatja a megtekintéseket, látogatókat és nyelvi statisztikákat."
+      },
+      {
+        "question": "Láthatom, melyek a legnépszerűbb oldalak?",
+        "answer": "Igen. A vezérlőpult oldalankénti bontásban mutatja a megtekintéseket — főoldal, menü, kapcsolat, foglalások és nyelvválasztás. Pontosan lássa, hol töltik vendégei az idejüket."
+      },
+      {
+        "question": "Milyen messzire nyúlnak vissza az adatok?",
+        "answer": "Az analitikai adatok az étterme létrehozásának napjától vannak tárolva. Napi, heti és havi trendeket tekinthet meg a teljes előzményeire vonatkozóan."
+      }
+    ]
+  }
+}

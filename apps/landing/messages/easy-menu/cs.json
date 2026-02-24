@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Vytvořte QR menu pro restauraci — Bezplatný tvůrce menu | IQ Rest",
+    "description": "Vytvořte digitální QR menu pro svou restauraci během několika minut. Přidejte kategorie, jídla, fotky, ceny — a sdílejte naskenovalný QR kód. Zdarma na začátek."
+  },
+  "hero": {
+    "badge": "Tvůrce menu",
+    "title": "Vytvořte digitální QR menu pro restauraci během několika minut",
+    "subtitle": "Přidejte kategorie a jídla, nastavte ceny, nahrajte fotky — vaše QR menu je připraveno ke sdílení. Upravujte kdykoli, změny se projeví okamžitě.",
+    "cta": "Vytvořte si menu",
+    "ctaDemo": "Zobrazit demo",
+    "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+  },
+  "features": {
+    "title": "Jak editor menu funguje",
+    "subtitle": "Jednoduché nástroje pro rychlé spuštění menu online.",
+    "items": [
+      {
+        "title": "Přidejte kategorie a jídla",
+        "description": "Vytvořte kategorie jako Předkrmy, Hlavní jídla, Nápoje — a přidejte jídla s názvy, popisky, cenami a fotkami. Přetáhněte pro změnu pořadí. Zapínejte a vypínejte položky bez mazání."
+      },
+      {
+        "title": "Změny se projeví okamžitě",
+        "description": "Každá úprava se na živém QR menu projeví během sekund. Aktualizujte cenu, přidejte denní nabídku nebo skryjte vyprodané jídlo — zákazníci vždy vidí nejnovější verzi."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebujete vědět o vytváření QR menu.",
+    "items": [
+      {
+        "question": "Jak vytvořím QR menu pro svou restauraci?",
+        "answer": "Zaregistrujte se e-mailem, pojmenujte restauraci a začněte přidávat kategorie a jídla. QR menu se vygeneruje automaticky — vytiskněte QR kód a umístěte ho na stoly."
+      },
+      {
+        "question": "Mohu přidat fotky k položkám menu?",
+        "answer": "Ano. Nahrajte fotky přímo z telefonu nebo počítače. Obrázky se automaticky optimalizují pro rychlé načítání na jakémkoli zařízení."
+      },
+      {
+        "question": "Kolik položek mohu přidat?",
+        "answer": "Počet kategorií ani položek menu není omezen. Přidejte tolik jídel, kolik potřebujete — menu zůstane rychlé a přehledné."
+      },
+      {
+        "question": "Mohu dočasně skrýt jídlo, které je vyprodané?",
+        "answer": "Ano. Jedním klepnutím položku vypněte. Zmizí z veřejného menu, ale zůstane ve vašem panelu — zapněte ji zpět, kdykoli budete chtít."
+      }
+    ]
+  }
+}

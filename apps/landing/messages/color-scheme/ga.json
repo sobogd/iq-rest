@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Dearadh saincheaptha roghchlár QR & dathanna branda — Brandáil bialainne | IQ Rest",
+    "description": "Cuir do roghchlár QR in oiriúint do bhranda na bialainne. Roghnaigh dathanna béime, téamaí geal/dorcha, agus cruthaigh cuma chomhsheasmhach ar fud do roghchlár digiteach ar fad."
+  },
+  "hero": {
+    "badge": "Dearadh saincheaptha",
+    "title": "Cuir do roghchlár QR ag teacht le branda do bhialainne",
+    "subtitle": "Roghnaigh dath do bhranda, agus nuashonraítear do roghchlár ar fad — cnaipí, buaicphointí, naisc — láithreach. Téamaí geal agus dorcha san áireamh.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn brandáil shaincheaptha",
+    "subtitle": "Do roghchlár, do dhathanna — comhsheasmhach ar gach leathanach.",
+    "items": [
+      {
+        "title": "Roghnaigh do dhath béime",
+        "description": "Roghnaigh ó 12 réamhshocrú nó cuir isteach dath beacht do bhranda le cód hex. Oiriúnaítear gach cnaipe, nasc agus buaicphointe ar do roghchlár láithreach — ní theastaíonn scileanna deartha."
+      },
+      {
+        "title": "Téamaí uathoibríocha geal & dorcha",
+        "description": "Tacaíonn do roghchlár go huathoibríoch le modh geal agus dorcha araon. Cinntíonn an córas go bhféachann dath do bhranda go hiontach sa dá théama le codarsnacht agus inléiteacht bharrmhaith."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi shaincheapadh roghchláir.",
+    "items": [
+      {
+        "question": "An féidir liom dath beacht mo bhranda a úsáid?",
+        "answer": "Is féidir. Cuir isteach aon chód datha hex, nó roghnaigh ó 12 réamhshocrú roghnaithe go cúramach. Cuirtear do dhath béime i bhfeidhm ar gach leathanach de do roghchlár."
+      },
+      {
+        "question": "An n-oibríonn sé le modh dorcha?",
+        "answer": "Oibríonn. Oiriúnaítear do scéim dathanna go huathoibríoch do théamaí geala agus dorcha araon. Coigeartaíonn an córas an chodarsnacht chun do roghchlár a choinneáil inléite agus álainn in aon mhód."
+      },
+      {
+        "question": "An féidir liom dathanna a athrú tar éis foilsithe?",
+        "answer": "Cinnte. Athraigh do dhath béime am ar bith ó do phainéal rialaithe. Bíonn nuashonruithe le feiceáil láithreach ar do roghchlár beo — ní gá athfhoilsiú."
+      },
+      {
+        "question": "An mbeidh mo chód QR ag teacht le dathanna an bhranda freisin?",
+        "answer": "Gintear do chód QR ar leithligh agus is féidir é a shaincheapadh go neamhspleách. Baineann an dath béime le leathanaigh do roghchláir dhigitigh, nascleanúint agus gnéithe idirghníomhacha."
+      }
+    ]
+  }
+}

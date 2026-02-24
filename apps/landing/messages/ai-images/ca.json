@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Generació de Fotografies de Menjar amb IA per a Menús — Imatges de Menú de Restaurant | IQ Rest",
+    "description": "Genereu fotografies de menjar precioses per al vostre menú amb IA. Sense fotògraf — obteniu imatges professionals de plats en segons, optimitzades per al vostre menú QR."
+  },
+  "hero": {
+    "badge": "Imatges IA",
+    "title": "Fotografies Professionals de Menú Sense Fotògraf",
+    "subtitle": "Genereu imatges impressionants dels vostres plats amb IA. Introduïu el nom del plat i obteniu una fotografia bonica i optimitzada preparada per al vostre menú QR — en segons.",
+    "cta": "Creeu el Vostre Menú",
+    "ctaDemo": "Veure Demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com Funciona la Generació d'Imatges amb IA",
+    "subtitle": "Del nom del plat a la fotografia professional amb un sol clic.",
+    "items": [
+      {
+        "title": "Genereu Imatges a partir de Noms de Plats",
+        "description": "Escriviu el nom del plat — 'Salmó a la Graella amb Llimona', 'Pizza Margherita', 'Pastís de Lava de Xocolata' — i la IA genera una fotografia professional de menjar. Trieu entre diversos estils i fons."
+      },
+      {
+        "title": "Optimitzades per a una Càrrega Ràpida",
+        "description": "Cada imatge generada es comprimeix automàticament i es converteix a formats moderns. El vostre menú es manté ultraràpid en qualsevol dispositiu, fins i tot amb fotografies a cada plat."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes Freqüents",
+    "subtitle": "Tot el que necessiteu saber sobre les imatges de menú amb IA.",
+    "items": [
+      {
+        "question": "Com genero una fotografia de menjar?",
+        "answer": "Obriu qualsevol element del menú al tauler, toqueu 'Generar Imatge' i la IA crea una fotografia professional de menjar basada en el nom i la descripció del plat. Trieu la que us agradi."
+      },
+      {
+        "question": "Puc fer servir les meves pròpies fotografies?",
+        "answer": "Per descomptat. Pugeu les vostres pròpies fotografies des del telèfon o l'ordinador. La generació amb IA és opcional — feu-la servir quan no tingueu una fotografia preparada."
+      },
+      {
+        "question": "Quantes imatges puc generar?",
+        "answer": "Els límits de generació d'imatges depenen del vostre pla. Basic inclou una quota mensual i Pro ofereix un límit més alt. Sempre podeu pujar les vostres pròpies fotografies sense límits."
+      },
+      {
+        "question": "Les imatges generades són úniques per al meu restaurant?",
+        "answer": "Sí. Cada imatge es genera de manera única per al vostre plat específic. Sense fotografies d'estoc — cada imatge es crea de nou basant-se en l'element del vostre menú."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Menüler İçin Yapay Zeka Yemek Fotoğrafı Oluşturma — Restoran Menü Görselleri | IQ Rest",
+    "description": "Yapay zeka ile menünüz için güzel yemek fotoğrafları oluşturun. Fotoğrafçıya gerek yok — saniyeler içinde QR menünüz için optimize edilmiş profesyonel yemek görselleri elde edin."
+  },
+  "hero": {
+    "badge": "Yapay Zeka Görselleri",
+    "title": "Fotoğrafçı Olmadan Profesyonel Menü Fotoğrafları",
+    "subtitle": "Yapay zeka ile yemekleriniz için etkileyici görseller oluşturun. Yemek adını girin ve QR menünüz için hazır, güzel ve optimize edilmiş bir fotoğraf alın — saniyeler içinde.",
+    "cta": "Menünüzü Oluşturun",
+    "ctaDemo": "Demoyu Görüntüle",
+    "noCreditCard": "Kredi kartı gerekmez. Ücretsiz plan mevcuttur."
+  },
+  "features": {
+    "title": "Yapay Zeka Görsel Oluşturma Nasıl Çalışır",
+    "subtitle": "Yemek adından profesyonel fotoğrafa tek tıkla.",
+    "items": [
+      {
+        "title": "Yemek Adlarından Görseller Oluşturun",
+        "description": "Yemek adını yazın — 'Limonlu Izgara Somon', 'Margherita Pizza', 'Çikolatalı Lav Kek' — ve yapay zeka profesyonel bir yemek fotoğrafı oluşturur. Birden fazla stil ve arka plan arasından seçim yapın."
+      },
+      {
+        "title": "Hızlı Yükleme İçin Optimize Edilmiş",
+        "description": "Oluşturulan her görsel otomatik olarak sıkıştırılır ve modern formatlara dönüştürülür. Her yemekte fotoğraf olsa bile menünüz her cihazda yıldırım hızında kalır."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Yapay zeka menü görselleri hakkında bilmeniz gereken her şey.",
+    "items": [
+      {
+        "question": "Yemek fotoğrafını nasıl oluştururum?",
+        "answer": "Panelinizdeki herhangi bir menü öğesini açın, 'Görsel Oluştur'a dokunun ve yapay zeka yemek adı ve açıklamasına dayanarak profesyonel bir yemek fotoğrafı oluşturur. Beğendiğinizi seçin."
+      },
+      {
+        "question": "Bunun yerine kendi fotoğraflarımı kullanabilir miyim?",
+        "answer": "Kesinlikle. Telefonunuzdan veya bilgisayarınızdan kendi fotoğraflarınızı yükleyin. Yapay zeka oluşturma isteğe bağlıdır — hazır fotoğrafınız olmadığında kullanın."
+      },
+      {
+        "question": "Kaç görsel oluşturabilirim?",
+        "answer": "Görsel oluşturma limitleri planınıza bağlıdır. Basic aylık bir kota içerir ve Pro daha yüksek bir limit sunar. Kendi fotoğraflarınızı her zaman limitsiz yükleyebilirsiniz."
+      },
+      {
+        "question": "Oluşturulan görseller restoranıma özel mi?",
+        "answer": "Evet. Her görsel, belirli yemeğiniz için benzersiz olarak oluşturulur. Stok fotoğraf yok — her görsel menü öğenize göre sıfırdan oluşturulur."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Generare Fotografii Culinare cu IA pentru Meniuri — Imagini Meniu Restaurant | IQ Rest",
+    "description": "Generați fotografii culinare frumoase pentru meniul dumneavoastră cu ajutorul IA. Nu aveți nevoie de fotograf — obțineți imagini profesionale ale preparatelor în câteva secunde, optimizate pentru meniul QR."
+  },
+  "hero": {
+    "badge": "Imagini IA",
+    "title": "Fotografii Profesionale de Meniu Fără Fotograf",
+    "subtitle": "Generați imagini impresionante ale preparatelor cu ajutorul IA. Introduceți doar numele preparatului și obțineți o fotografie frumoasă, optimizată, pregătită pentru meniul QR — în câteva secunde.",
+    "cta": "Creați-vă Meniul",
+    "ctaDemo": "Vedeți Demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Cum Funcționează Generarea de Imagini cu IA",
+    "subtitle": "De la numele preparatului la fotografia profesională cu un singur clic.",
+    "items": [
+      {
+        "title": "Generați Imagini din Numele Preparatelor",
+        "description": "Tastați numele preparatului — 'Somon la Grătar cu Lămâie', 'Pizza Margherita', 'Tort cu Ciocolată Lichidă' — iar IA generează o fotografie culinară profesională. Alegeți din mai multe stiluri și fundaturi."
+      },
+      {
+        "title": "Optimizate pentru Încărcare Rapidă",
+        "description": "Fiecare imagine generată este comprimată automat și convertită în formate moderne. Meniul dumneavoastră rămâne rapid pe orice dispozitiv, chiar și cu fotografii la fiecare preparat."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre imaginile de meniu generate cu IA.",
+    "items": [
+      {
+        "question": "Cum generez o fotografie culinară?",
+        "answer": "Deschideți orice element din meniu în panoul de control, atingeți 'Generează Imagine', iar IA creează o fotografie culinară profesională bazată pe numele și descrierea preparatului. Alegeți-o pe cea care vă place."
+      },
+      {
+        "question": "Pot folosi propriile mele fotografii?",
+        "answer": "Absolut. Încărcați propriile fotografii de pe telefon sau computer. Generarea cu IA este opțională — folosiți-o când nu aveți o fotografie pregătită."
+      },
+      {
+        "question": "Câte imagini pot genera?",
+        "answer": "Limitele de generare a imaginilor depind de planul dumneavoastră. Basic include o cotă lunară, iar Pro oferă o limită mai mare. Puteți încărca oricând propriile fotografii fără limite."
+      },
+      {
+        "question": "Imaginile generate sunt unice pentru restaurantul meu?",
+        "answer": "Da. Fiecare imagine este generată în mod unic pentru preparatul dumneavoastră specific. Fără fotografii de stoc — fiecare imagine este creată proaspăt pe baza elementului din meniu."
+      }
+    ]
+  }
+}

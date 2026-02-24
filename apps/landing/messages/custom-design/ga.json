@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Suíomh gréasáin bialainne le físeán & grianghraf cúlra — Tógálaí suíomh gréasáin | IQ Rest",
+    "description": "Cruthaigh suíomh gréasáin bialainne den scoth le cúlraí físeáin nó grianghraif saincheaptha. Uaslódáil d'fhíseán atmaisféir nó do ghrianghrafadóireacht bia — déan iontas d'aíonna ón gcéad scanadh."
+  },
+  "hero": {
+    "badge": "Dearadh suímh gréasáin",
+    "title": "Cruthaigh suíomh gréasáin bialainne den scoth le cúlraí físeáin",
+    "subtitle": "Uaslódáil físeán d'atmaisféar bialainne nó grianghraf bia álainn mar chúlra. Feiceann aíonna taithí ghairmiúil, brandáilte an nóiméad a scanann siad do chód QR.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn cúlraí saincheaptha",
+    "subtitle": "Déan céad-iarracht bhuan le hamhairc a mheaitseálann do bhranda.",
+    "items": [
+      {
+        "title": "Uaslódáil cúlraí físeáin nó grianghraif",
+        "description": "Cuir físeán lúbtha d'atmaisféar na bialainne, am-lapse de do chistin, nó grianghraf bia ardchaighdeáin leis. Taispeántar an cúlra ar do leathanach baile — ag cruthú taithí tumtha d'aíonna."
+      },
+      {
+        "title": "Optamaithe le haghaidh luais ar aon ghléas",
+        "description": "Déantar físeáin agus íomhánna a chomhbhrú agus a luchtú go huathoibríoch de réir a chéile. Fanann do shuíomh gréasáin tapa fiú ar naisc shoghluaiste mhalla — gan maolánú, gan moilleanna, taithí réidh amháin."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi dhearadh suímh gréasáin bialainne.",
+    "items": [
+      {
+        "question": "Cé na formáidí físeáin a dtacaítear leo?",
+        "answer": "Oibríonn formáidí MP4 agus WebM is fearr. Déantar físeáin a chomhbhrú go huathoibríoch le haghaidh luchtú tapa. Coinnigh físeáin faoi 30 soicind don taithí soghluaiste is fearr."
+      },
+      {
+        "question": "An moilleoidh cúlra físeáin mo shuíomh gréasáin?",
+        "answer": "Ní mhoilleoidh. Déantar físeáin a chomhbhrú, a luchtú de réir a chéile agus a bharrfheabhsú go huathoibríoch. Ar naisc mhalla, athraíonn an córas go híomhá stataiceach chun an taithí a choinneáil réidh."
+      },
+      {
+        "question": "An féidir liom grianghraf a úsáid in ionad físeáin?",
+        "answer": "Is féidir. Uaslódáil aon ghrianghraf — déanfar é a bharrfheabhsú agus a thaispeáint mar chúlra lánscáileáin. Is féidir leat athrú idir físeán agus grianghraf am ar bith."
+      },
+      {
+        "question": "An dteastaíonn dearthóir uaim chun é seo a shocrú?",
+        "answer": "Ní theastaíonn. Uaslódáil do fhíseán nó do ghrianghraf ón bpainéal rialaithe. Láimhseálann an córas méid, comhbhrú agus leagan amach go huathoibríoch. Beidh cuma ghairmiúil ar do shuíomh gréasáin gan aon scileanna deartha."
+      }
+    ]
+  }
+}

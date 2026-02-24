@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Személyes Támogatás az Éttermi Weboldaladhoz — Valódi Emberi Segítség | IQ Rest",
+    "description": "Kapj személyes segítséget valódi emberektől, nem chatbotoktól. Beállítási segítség, menü optimalizálási tippek és gyors válaszok — minden csomagban elérhető, beleértve az ingyenest is."
+  },
+  "hero": {
+    "badge": "Személyes Támogatás",
+    "title": "Valódi emberek, valódi segítség — nem chatbotok",
+    "subtitle": "Van kérdésed? Segítségre van szükséged a menü beállításához? Szeretnél egy új funkciót javasolni? Írj nekünk közvetlenül, és kapj személyes választ valakitől, aki érti az éttermeket.",
+    "cta": "Hozd létre a menüdet",
+    "ctaDemo": "Demó megtekintése",
+    "noCreditCard": "Bankkártya nem szükséges. Ingyenes csomag elérhető."
+  },
+  "features": {
+    "title": "Hogyan működik a támogatás",
+    "subtitle": "Segítség, amikor szükséged van rá, emberektől, akik törődnek.",
+    "items": [
+      {
+        "title": "Írj nekünk közvetlenül a vezérlőpultodból",
+        "description": "Nyisd meg a támogatási csevegést a vezérlőpultodon, és írd le a kérdésedet. Egy valódi ember olvassa el az üzenetedet és válaszol — általában néhány órán belül munkanapokon."
+      },
+      {
+        "title": "Segítség a beállításhoz, optimalizáláshoz és még tovább",
+        "description": "Akár az első étel hozzáadásához kell segítség, akár tanácsot szeretnél a menü szervezéséhez, akár egy új funkciót szeretnél javasolni — itt vagyunk. Minden kérdés számít, bármilyen kicsi is."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran Ismételt Kérdések",
+    "subtitle": "Minden, amit a támogatásunkról tudnod kell.",
+    "items": [
+      {
+        "question": "Elérhető a támogatás az ingyenes csomagban?",
+        "answer": "Igen. A személyes támogatás minden csomagban elérhető, beleértve az ingyenest is. Hisszük, hogy minden étterem megérdemli a valódi segítséget, előfizetéstől függetlenül."
+      },
+      {
+        "question": "Milyen gyorsan válaszoltok?",
+        "answer": "Általában néhány órán belül munkanapokon. Minden üzenetet személyesen olvasunk el, és arra törekszünk, hogy a kérdésedet egyetlen válaszban megoldjuk."
+      },
+      {
+        "question": "Tudtok segíteni a menüm beállításában?",
+        "answer": "Természetesen. Ha segítségre van szükséged ételek hozzáadásához, kategóriák szervezéséhez, fordítások beállításához vagy foglalások konfigurálásához — csak kérdezz. Szívesen végigvezetünk mindenen."
+      },
+      {
+        "question": "Javasolhatok új funkciókat?",
+        "answer": "Igen, és imádjuk! Sok funkciónk felhasználói javaslatokból indult el. Írd meg nekünk az ötletedet, és figyelembe vesszük a jövőbeli frissítéseknél."
+      }
+    ]
+  }
+}

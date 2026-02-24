@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Web de restaurant amb vídeo i foto de fons — Creador de webs | IQ Rest",
+    "description": "Crea un web de restaurant impressionant amb vídeo o foto de fons personalitzats. Puja el vídeo de l'ambient o fotografies gastronòmiques — impressiona els clients des del primer escaneig."
+  },
+  "hero": {
+    "badge": "Disseny web",
+    "title": "Crea un web de restaurant impressionant amb fons de vídeo",
+    "subtitle": "Puja un vídeo de l'ambient del teu restaurant o una foto gastronòmica com a fons. Els clients veuran una experiència professional i de marca en el moment d'escanejar el codi QR.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com funcionen els fons personalitzats",
+    "subtitle": "Causa una primera impressió duradora amb visuals que representen la teva marca.",
+    "items": [
+      {
+        "title": "Puja fons de vídeo o foto",
+        "description": "Afegeix un vídeo en bucle de l'ambient del restaurant, un time-lapse de la cuina o una foto gastronòmica d'alta qualitat. El fons apareix a la pàgina principal — creant una experiència immersiva per als clients."
+      },
+      {
+        "title": "Optimitzat per a la velocitat en qualsevol dispositiu",
+        "description": "Els vídeos i les imatges es comprimeixen i carreguen progressivament de manera automàtica. El teu web es manté ràpid fins i tot amb connexions mòbils lentes — sense buffering, sense retards, només una experiència fluida."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre el disseny web de restaurants.",
+    "items": [
+      {
+        "question": "Quins formats de vídeo s'admeten?",
+        "answer": "Els formats MP4 i WebM funcionen millor. Els vídeos es comprimeixen automàticament per a una càrrega ràpida. Mantingues els vídeos per sota de 30 segons per a la millor experiència mòbil."
+      },
+      {
+        "question": "El fons de vídeo alentirà el meu web?",
+        "answer": "No. Els vídeos es comprimeixen, es carreguen progressivament i s'optimitzen automàticament. En connexions lentes, el sistema canvia a una imatge estàtica per mantenir l'experiència fluida."
+      },
+      {
+        "question": "Puc utilitzar una foto en lloc de vídeo?",
+        "answer": "Sí. Puja qualsevol foto — s'optimitzarà i es mostrarà com a fons a pantalla completa. Pots alternar entre vídeo i foto en qualsevol moment."
+      },
+      {
+        "question": "Necessito un dissenyador per configurar-ho?",
+        "answer": "No. Només cal pujar el vídeo o la foto des del panell. El sistema gestiona les dimensions, la compressió i la disposició automàticament. El teu web tindrà un aspecte professional sense necessitat de cap habilitat de disseny."
+      }
+    ]
+  }
+}

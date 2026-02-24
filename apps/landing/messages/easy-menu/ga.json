@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Cruthaigh roghchlár QR do do bhialann — Cruthaitheoir roghchláir saor in aisce | IQ Rest",
+    "description": "Tóg roghchlár QR digiteach do bhialainne i nóiméid. Cuir catagóirí, miasa, grianghraif, praghsanna leis — agus roinn cód QR inscanta. Saor in aisce le tosú."
+  },
+  "hero": {
+    "badge": "Cruthaitheoir roghchláir",
+    "title": "Cruthaigh roghchlár QR digiteach do do bhialann i nóiméid",
+    "subtitle": "Cuir do chuid catagóirí agus miasa leis, socraigh praghsanna, uaslódáil grianghraif — tá do roghchlár QR réidh le roinnt. Cuir in eagar am ar bith, bíonn athruithe le feiceáil láithreach.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn an t-eagarthóir roghchláir",
+    "subtitle": "Uirlisí simplí a chuireann do roghchlár ar líne go tapa.",
+    "items": [
+      {
+        "title": "Cuir catagóirí agus miasa leis",
+        "description": "Cruthaigh catagóirí mar Tosaitheoirí, Príomhmhiasa, Deochanna — ansin cuir miasa leis le hainmneacha, cur síos, praghsanna agus grianghraif. Tarraing agus scaoil chun athordú. Cas míreanna air nó as gan iad a scriosadh."
+      },
+      {
+        "title": "Bíonn athruithe beo láithreach",
+        "description": "Bíonn gach eagarthóireacht le feiceáil ar do roghchlár QR beo laistigh de shoicindí. Nuashonraigh praghas, cuir speisialtacht laethúil leis, nó folaigh mias atá díolta amach — feiceann do chustaiméirí an leagan is deireanaí i gcónaí."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi do roghchlár QR a chruthú.",
+    "items": [
+      {
+        "question": "Conas a chruthaím roghchlár QR do mo bhialann?",
+        "answer": "Cláraigh le do ríomhphost, ainmnigh do bhialann agus tosaigh ag cur catagóirí agus miasa leis. Gintear do roghchlár QR go huathoibríoch — priontáil an cód QR agus cuir ar do bhoird é."
+      },
+      {
+        "question": "An féidir liom grianghraif a chur le míreanna an roghchláir?",
+        "answer": "Is féidir. Uaslódáil grianghraif go díreach ó do ghuthán nó ríomhaire. Déantar íomhánna a bharrfheabhsú go huathoibríoch le haghaidh luchtú tapa ar aon ghléas."
+      },
+      {
+        "question": "Cé mhéad míre is féidir liom a chur leis?",
+        "answer": "Níl aon teorainn ar chatagóirí ná ar mhíreanna roghchláir. Cuir oiread miasa leis agus atá uait — fanann do roghchlár tapa agus eagraithe."
+      },
+      {
+        "question": "An féidir liom mias atá díolta amach a cheilt go sealadach?",
+        "answer": "Is féidir. Cas aon mhír as le brú amháin. Imíonn sé den roghchlár poiblí ach fanann sé i do phainéal rialaithe — cas ar ais é nuair atá tú réidh."
+      }
+    ]
+  }
+}

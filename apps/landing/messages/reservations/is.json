@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Borðapöntunarkerfi fyrir veitingastaði — Bókun á netinu | IQ Rest",
+    "description": "Leyfðu gestum að panta borð beint af vefsíðunni þinni. Sjálfvirk eða handvirk staðfesting, tilkynningar í tölvupósti og full dagatalsstjórnun — allt innifalið."
+  },
+  "hero": {
+    "badge": "Borðapantanir",
+    "title": "Taktu á móti borðapöntunum allan sólarhringinn af vefsíðunni þinni",
+    "subtitle": "Gestir velja dagsetningu, tíma og fjölda í hóp — og bóka samstundis. Þú stjórnar öllu úr stjórnborðinu þínu, engin símtöl nauðsynleg.",
+    "cta": "Búðu til matseðilinn þinn",
+    "ctaDemo": "Skoða demo",
+    "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+  },
+  "features": {
+    "title": "Hvernig borðapantanir virka",
+    "subtitle": "Tvö skref frá beiðni gests til staðfestrar pöntunar.",
+    "items": [
+      {
+        "title": "Gestir panta af vefsíðunni þinni",
+        "description": "Viðskiptavinir heimsækja síðu veitingastaðarins þíns, ýta á \\\"Panta borð\\\", velja dagsetningu og tíma, slá inn upplýsingarnar sínar og senda. Engin app nauðsynleg — virkar í hvaða vafra sem er á hvaða tæki sem er."
+      },
+      {
+        "title": "Þú stjórnar pöntunum í stjórnborðinu þínu",
+        "description": "Sérhver pöntun birtist í stjórnborðinu þínu með nafni gests, símanúmeri, fjölda í hóp, dagsetningu og athugasemdum. Staðfestu eða hafnaðu með einu ýti. Stilltu sjálfvirka staðfestingu eða yfirfarðu hverja pöntun handvirkt."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Algengar spurningar",
+    "subtitle": "Allt sem þú þarft að vita um borðapantanir.",
+    "items": [
+      {
+        "question": "Þurfa viðskiptavinir að búa til reikning til að panta?",
+        "answer": "Nei. Gestir fylla einfaldlega út nafn, símanúmer, fjölda í hóp og æskilegan tíma. Enginn reikningur eða niðurhal á appi nauðsynlegt."
+      },
+      {
+        "question": "Get ég stillt tiltæk tímahólf og rými?",
+        "answer": "Já. Skilgreindu opnunartíma, lengd pöntunartímahólfa og borðarými. Kerfið sýnir gestum aðeins tiltæk tímahólf."
+      },
+      {
+        "question": "Fæ ég tilkynningu þegar einhver pantar?",
+        "answer": "Já. Þú færð tölvupóst fyrir hverja nýja pöntun. Gestir fá einnig staðfestingarpóst þegar þú samþykkir pöntunina."
+      },
+      {
+        "question": "Get ég notað bæði sjálfvirka og handvirka staðfestingu?",
+        "answer": "Já. Veldu sjálfvirka stillingu til að staðfesta pantanir samstundis miðað við framboð, eða handvirka stillingu til að yfirfara og samþykkja hverja beiðni sjálf/ur."
+      }
+    ]
+  }
+}

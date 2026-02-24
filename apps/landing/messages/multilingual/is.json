@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Fjöltyngd vefsíða veitingastaðar — Matseðill á 25+ tungumálum | IQ Rest",
+    "description": "Vefsíða veitingastaðarins og QR matseðill á 25+ tungumálum. Gestir skipta um tungumál með einu ýti — matseðill, tengiliðir og bókanir aðlagast samstundis."
+  },
+  "hero": {
+    "badge": "Fjöltyngt",
+    "title": "Vefsíða veitingastaðarins á 25+ tungumálum",
+    "subtitle": "Ferðamenn og alþjóðlegir gestir sjá matseðilinn þinn á sínu tungumáli. Eitt ýti til að skipta — allt aðlagast samstundis: réttir, lýsingar, tengiliðir, leiðsögn.",
+    "cta": "Búðu til matseðilinn þinn",
+    "ctaDemo": "Skoða demo",
+    "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+  },
+  "features": {
+    "title": "Hvernig fjöltyngd stuðningur virkar",
+    "subtitle": "Talaðu tungumál viðskiptavinarins án aukavinnu.",
+    "items": [
+      {
+        "title": "Gestir velja tungumálið sitt",
+        "description": "Tungumálaval birtist á matseðlinum þínum. Gestir ýta á valið tungumál og öll vefsíðan — matseðill, lýsingar, tengiliðaupplýsingar, leiðsögn — breytist samstundis. Engin enduruppfærsla síðu nauðsynleg."
+      },
+      {
+        "title": "Bættu við tungumálum úr stjórnborðinu",
+        "description": "Virkjaðu ný tungumál með einum smelli. Notaðu AI þýðingu til að fylla inn efnið, eða sláðu inn þýðingar handvirkt. Hvert tungumál er hægt að kveikja eða slökkva á óháð öðrum."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Algengar spurningar",
+    "subtitle": "Allt sem þú þarft að vita um fjöltyngda matseðla.",
+    "items": [
+      {
+        "question": "Hversu mörgum tungumálum get ég bætt á matseðilinn minn?",
+        "answer": "Allt að 25+ tungumálum þar á meðal öll helstu evrópsk tungumál, kínverska, japanska, kóreska, arabíska, persneska og fleira. Bættu við eins mörgum og gestirnir þurfa."
+      },
+      {
+        "question": "Þarf ég að þýða allt handvirkt?",
+        "answer": "Nei. Notaðu innbyggðu AI þýðinguna til að þýða allan matseðilinn með einum smelli. Þú getur líka breytt hvaða þýðingu sem er handvirkt fyrir fulla stjórn."
+      },
+      {
+        "question": "Vistast tungumálavalið?",
+        "answer": "Já. Þegar gestur velur tungumál er það munað fyrir næstu heimsókn. Hann þarf ekki að velja aftur þegar hann kemur aftur."
+      },
+      {
+        "question": "Er fjöltyngdur stuðningur í boði á ókeypis áskriftinni?",
+        "answer": "Ókeypis áskriftin inniheldur allt að 2 tungumál. Basic og Pro áskriftir bjóða ótakmörkuð tungumál með AI þýðingu innifalinni."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Web de restaurant multilingüe — Menú en 25+ idiomes | IQ Rest",
+    "description": "El web del teu restaurant i el menú QR en 25+ idiomes. Els clients canvien d'idioma amb un toc — menú, contactes i reserves s'adapten a l'instant."
+  },
+  "hero": {
+    "badge": "Multilingüe",
+    "title": "El web del teu restaurant en 25+ idiomes",
+    "subtitle": "Turistes i clients internacionals veuen el teu menú en el seu propi idioma. Un toc per canviar — tot s'adapta a l'instant: plats, descripcions, contactes, navegació.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com funciona el suport multilingüe",
+    "subtitle": "Parla l'idioma dels teus clients sense cap esforç addicional.",
+    "items": [
+      {
+        "title": "Els clients trien el seu idioma",
+        "description": "Un selector d'idioma apareix al teu menú. Els clients toquen l'idioma preferit i tot el web — menú, descripcions, informació de contacte, navegació — canvia a l'instant. Sense necessitat de recarregar la pàgina."
+      },
+      {
+        "title": "Afegeix idiomes des del teu panell",
+        "description": "Activa nous idiomes amb un sol clic. Utilitza la traducció IA per omplir el contingut o introdueix les traduccions manualment. Cada idioma es pot activar o desactivar de manera independent."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre els menús multilingües.",
+    "items": [
+      {
+        "question": "Quants idiomes puc afegir al meu menú?",
+        "answer": "Fins a 25+ idiomes incloent tots els principals idiomes europeus, xinès, japonès, coreà, àrab, persa i més. Afegeix tants com els teus clients necessiten."
+      },
+      {
+        "question": "He de traduir-ho tot manualment?",
+        "answer": "No. Utilitza la traducció IA integrada per traduir tot el menú amb un sol clic. També pots editar qualsevol traducció manualment per tenir control total."
+      },
+      {
+        "question": "Es guarda la preferència d'idioma?",
+        "answer": "Sí. Quan un client selecciona un idioma, es recorda per a la seva pròxima visita. No caldrà que torni a triar quan torni."
+      },
+      {
+        "question": "El suport multilingüe està disponible al pla gratuït?",
+        "answer": "El pla gratuït inclou fins a 2 idiomes. Els plans Basic i Pro ofereixen idiomes il·limitats amb traducció IA inclosa."
+      }
+    ]
+  }
+}

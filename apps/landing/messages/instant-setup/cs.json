@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Bezplatný generátor webu pro restauraci — Vytvořte za 5 minut | IQ Rest",
+    "description": "Získejte profesionální web restaurace s QR menu, kontaktní stránkou a mapou — stačí zadat e-mail. Hotovo za 5 minut, žádné technické dovednosti nejsou potřeba."
+  },
+  "hero": {
+    "badge": "Bezplatný web",
+    "title": "Profesionální web restaurace za 5 minut",
+    "subtitle": "Zadejte e-mail, pojmenujte restauraci a okamžitě získáte kompletní web s QR menu, kontaktní stránkou s mapou a moderním responzivním designem. Bez kódování, bez designérů.",
+    "cta": "Vytvořte si menu",
+    "ctaDemo": "Zobrazit demo",
+    "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+  },
+  "features": {
+    "title": "Jak to funguje",
+    "subtitle": "Od nuly k živému webu restaurace ve třech krocích.",
+    "items": [
+      {
+        "title": "Registrace pouze s e-mailem",
+        "description": "Žádné složité registrační formuláře. Zadejte e-mail, ověřte kódem a panel restaurace je připraven. Pojmenujte restauraci a web je okamžitě online."
+      },
+      {
+        "title": "Vše zahrnuto od začátku",
+        "description": "Váš web obsahuje QR menu, kontaktní stránku s Google Maps, jazykovou podporu, mobilně responzivní design a vlastní unikátní URL. Stačí přidat jídla a začít sdílet."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebujete vědět o vytvoření webu restaurace.",
+    "items": [
+      {
+        "question": "Jak vytvořím bezplatný web restaurace?",
+        "answer": "Zadejte e-mail na IQ Rest, ověřte kódem, pojmenujte restauraci — hotovo. Váš web s QR menu je online za méně než 5 minut. Bez platební karty."
+      },
+      {
+        "question": "Potřebuji nějaké technické dovednosti?",
+        "answer": "Ne. Vše je navrženo pro majitele restaurací, ne pro vývojáře. Přidávejte jídla, nahrávejte fotky a spravujte web kompletně z telefonu."
+      },
+      {
+        "question": "Co je zahrnuto v bezplatném tarifu?",
+        "answer": "Kompletní web restaurace, QR menu, kontaktní stránka s mapou, analytika, vlastní barevné schéma a až 2 jazyky. Žádné zkušební období — je to zdarma navždy."
+      },
+      {
+        "question": "Mohu použít vlastní doménové jméno?",
+        "answer": "V bezplatném a Basic tarifu je váš web hostován na iq-rest.com/m/vaše-jméno. Tarif Pro podporuje vlastní doménová jména pro plnou kontrolu nad značkou."
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Suíomh gréasáin ilteangach bialainne — Roghchlár i 25+ teanga | IQ Rest",
+    "description": "Suíomh gréasáin do bhialainne agus roghchlár QR i 25+ teanga. Athraíonn aíonna teanga le brú amháin — oiriúnaíonn roghchlár, teagmhálaithe agus áirithintí láithreach."
+  },
+  "hero": {
+    "badge": "Ilteangach",
+    "title": "Suíomh gréasáin do bhialainne i 25+ teanga",
+    "subtitle": "Feiceann turasóirí agus aíonna idirnáisiúnta do roghchlár ina dteanga féin. Brú amháin le hathrú — oiriúnaíonn gach rud láithreach: miasa, cur síos, teagmhálaithe, nascleanúint.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn tacaíocht ilteangach",
+    "subtitle": "Labhair teanga do chustaiméara gan aon obair bhreise.",
+    "items": [
+      {
+        "title": "Roghnaíonn aíonna a dteanga féin",
+        "description": "Taispeántar roghnóir teanga ar do roghchlár. Brúnn aíonna ar an teanga is fearr leo, agus athraíonn an suíomh gréasáin ar fad — roghchlár, cur síos, eolas teagmhála, nascleanúint — láithreach. Gan gá an leathanach a athlódáil."
+      },
+      {
+        "title": "Cuir teangacha leis ó do phainéal rialaithe",
+        "description": "Cumasaigh teangacha nua le clic amháin. Úsáid aistriúchán AI chun an t-ábhar a líonadh isteach, nó cuir aistriúcháin isteach de láimh. Is féidir gach teanga a chasadh air nó as go neamhspleách."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi roghchláir ilteangacha.",
+    "items": [
+      {
+        "question": "Cé mhéad teanga is féidir liom a chur le mo roghchlár?",
+        "answer": "Suas le 25+ teanga lena n-áirítear gach mórtheanga Eorpach, Sínis, Seapáinis, Cóiréis, Araibis, Peirsis agus tuilleadh. Cuir oiread leis agus a theastaíonn ó d'aíonna."
+      },
+      {
+        "question": "An gá dom gach rud a aistriú de láimh?",
+        "answer": "Ní gá. Úsáid an t-aistriúchán AI ionsuite chun do roghchlár ar fad a aistriú le clic amháin. Is féidir leat freisin aon aistriúchán a chur in eagar de láimh le haghaidh smachta iomláin."
+      },
+      {
+        "question": "An sábháiltear an rogha teanga?",
+        "answer": "Sábháiltear. Nuair a roghnaíonn aoi teanga, cuimhnítear uirthi dá chéad chuairt eile. Ní gá dóibh roghnú arís nuair a fhilleann siad."
+      },
+      {
+        "question": "An bhfuil tacaíocht ilteangach ar fáil ar an bplean saor in aisce?",
+        "answer": "Áiríonn an plean saor in aisce suas le 2 theanga. Tairgeann pleananna Basic agus Pro teangacha gan teorainn le haistriúchán AI san áireamh."
+      }
+    ]
+  }
+}

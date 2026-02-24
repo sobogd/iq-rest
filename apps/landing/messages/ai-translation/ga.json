@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Aistriúchán AI roghchláir do bhialanna — Aistrigh do roghchlár QR | IQ Rest",
+    "description": "Aistrigh roghchlár do bhialainne go 25+ teanga le clic amháin. Tuigeann an AI comhthéacs cócaireachta — ainmneacha mias, cur síos agus catagóirí aistrithe go cruinn."
+  },
+  "hero": {
+    "badge": "Aistriúchán AI",
+    "title": "Aistrigh do roghchlár go 25+ teanga le clic amháin",
+    "subtitle": "Tuigeann ár AI comhthéacs bia — aistrítear ainmneacha mias, cur síos agus catagóirí go nádúrtha, ní focal ar fhocal. Sroich gach turasóir agus aoi idirnáisiúnta.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn aistriúchán AI",
+    "subtitle": "Ó do theanga féin go dtí an domhan i soicindí.",
+    "items": [
+      {
+        "title": "Aistriúchán an roghchláir iomláin le clic amháin",
+        "description": "Roghnaigh sprioctheanga, brúigh aistrigh, agus aistrítear do roghchlár ar fad — catagóirí, ainmneacha mias, cur síos — láithreach. Caomhnaíonn an AI téarmaí cócaireachta agus oiriúnaíonn sé go nádúrtha do gach teanga."
+      },
+      {
+        "title": "Cuir in eagar agus mínchóirigh aon aistriúchán",
+        "description": "Is féidir gach aistriúchán AI a chur in eagar go hiomlán. Athbhreithnigh an toradh, coigeartaigh aon fhoclaíocht, agus sábháil. Caomhnaítear d'athruithe fiú má aistrítear codanna eile den roghchlár níos déanaí."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi aistriúchán roghchláir.",
+    "items": [
+      {
+        "question": "Cé chomh cruinn is atá an t-aistriúchán AI do roghchláir bhia?",
+        "answer": "Tá ár AI optamaithe d'ábhar bialainne. Tuigeann sé nach ceart 'Beef Wellington' nó 'Tiramisu' a aistriú go litriúil, agus oiriúnaíonn sé cur síos le go mbeidh siad nádúrtha i ngach teanga."
+      },
+      {
+        "question": "Cé na teangacha a dtacaítear leo?",
+        "answer": "25+ teanga lena n-áirítear Béarla, Spáinnis, Fraincis, Gearmáinis, Iodáilis, Portaingéilis, Sínis, Seapáinis, Cóiréis, Araibis, Rúisis agus go leor teangacha Eorpacha agus Áiseacha eile."
+      },
+      {
+        "question": "An féidir liom roinnt míreanna amháin a aistriú, ní an roghchlár ar fad?",
+        "answer": "Is féidir. Is féidir leat míreanna aonair, catagóirí iomlána nó an roghchlár ar fad a aistriú ag an am céanna. Tá smacht iomlán agat ar cad a aistrítear."
+      },
+      {
+        "question": "An gcosnaíonn sé breise in aghaidh an aistriúcháin?",
+        "answer": "Tá aistriúchán AI san áireamh i bpleananna Basic agus Pro le teorainneacha flaithiúla míosúla. Gan táillí in aghaidh an fhocail ná in aghaidh na míre — aistrigh oiread agus atá uait."
+      }
+    ]
+  }
+}

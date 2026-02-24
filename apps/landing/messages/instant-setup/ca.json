@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Generador gratuït de web per a restaurants — Crea en 5 minuts | IQ Rest",
+    "description": "Obtingues un web professional per al teu restaurant amb menú QR, pàgina de contacte i mapa — només cal el teu correu. Llest en 5 minuts, sense coneixements tècnics."
+  },
+  "hero": {
+    "badge": "Web gratuït",
+    "title": "Obtingues un web professional per al teu restaurant en 5 minuts",
+    "subtitle": "Introdueix el teu correu, posa nom al restaurant i obtindràs a l'instant un web complet amb menú QR, pàgina de contacte amb mapa i disseny responsiu modern. Sense programació, sense dissenyadors.",
+    "cta": "Crea el teu menú",
+    "ctaDemo": "Veure demo",
+    "noCreditCard": "No cal targeta de crèdit. Pla gratuït disponible."
+  },
+  "features": {
+    "title": "Com funciona",
+    "subtitle": "De zero a un web de restaurant en viu en tres passos.",
+    "items": [
+      {
+        "title": "Registra't només amb el correu electrònic",
+        "description": "Sense formularis de registre complicats. Introdueix el teu correu, verifica amb un codi i el panell del teu restaurant està llest. Posa nom al restaurant i el web es publica immediatament."
+      },
+      {
+        "title": "Tot inclòs des del primer moment",
+        "description": "El teu web inclou menú QR, pàgina de contacte amb Google Maps, suport d'idiomes, disseny responsiu per a mòbils i la teva pròpia URL única. Només afegeix els plats i comença a compartir."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntes freqüents",
+    "subtitle": "Tot el que necessites saber sobre la creació del web del teu restaurant.",
+    "items": [
+      {
+        "question": "Com creo un web gratuït per al meu restaurant?",
+        "answer": "Introdueix el teu correu a IQ Rest, verifica amb un codi, posa nom al restaurant — fet. El teu web amb menú QR és en línia en menys de 5 minuts. Sense targeta de crèdit."
+      },
+      {
+        "question": "Necessito coneixements tècnics?",
+        "answer": "No. Tot està dissenyat per a propietaris de restaurants, no per a desenvolupadors. Afegeix plats, puja fotos i gestiona el teu web completament des del mòbil."
+      },
+      {
+        "question": "Què inclou el pla gratuït?",
+        "answer": "Un web de restaurant complet, menú QR, pàgina de contacte amb mapa, analítiques, esquema de colors personalitzat i fins a 2 idiomes. Sense període de prova — és gratuït per sempre."
+      },
+      {
+        "question": "Puc utilitzar el meu propi nom de domini?",
+        "answer": "Amb els plans gratuït i Basic, el teu web s'allotja a iq-rest.com/m/el-teu-nom. El pla Pro admet noms de domini personalitzats per a un control total de la marca."
+      }
+    ]
+  }
+}

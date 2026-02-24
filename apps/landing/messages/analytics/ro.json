@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Analiză Restaurant și Statistici Meniu QR — Urmăriți Vizitatorii | IQ Rest",
+    "description": "Urmăriți scanările meniului QR, vizualizările paginilor, limbile populare și tendințele vizitatorilor. Panou de analiză în timp real pentru site-ul restaurantului dumneavoastră."
+  },
+  "hero": {
+    "badge": "Analiză",
+    "title": "Vedeți Exact Cum Folosesc Oaspeții Meniul QR",
+    "subtitle": "Urmăriți scanările zilnice, vizualizările paginilor, limbile populare, statisticile dispozitivelor și tendințele în timp. Luați decizii bazate pe date pentru a optimiza meniul și a vă dezvolta afacerea.",
+    "cta": "Creați-vă Meniul",
+    "ctaDemo": "Vedeți Demo",
+    "noCreditCard": "Nu este necesar card de credit. Plan gratuit disponibil."
+  },
+  "features": {
+    "title": "Ce Puteți Urmări",
+    "subtitle": "Informații în timp real despre prezența online a restaurantului dumneavoastră.",
+    "items": [
+      {
+        "title": "Vizualizări Zilnice, Scanări și Tendințe ale Vizitatorilor",
+        "description": "Vedeți câte persoane vă scanează codul QR și vă vizitează meniul în fiecare zi, săptămână și lună. Urmăriți tendințele în timp pentru a înțelege tiparele sezoniere și a măsura impactul promoțiilor."
+      },
+      {
+        "title": "Detalii despre Limbă și Dispozitiv",
+        "description": "Aflați ce limbi preferă oaspeții dumneavoastră și ce dispozitive folosesc. Aceste date vă ajută să prioritizați traducerile și să vă asigurați că meniul arată perfect pe cele mai populare dispozitive."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Tot ce trebuie să știți despre analiza restaurantului.",
+    "items": [
+      {
+        "question": "Ce indicatori pot urmări?",
+        "answer": "Vizualizări zilnice, săptămânale și lunare ale paginilor. Vizitatori unici. Cele mai vizualizate pagini. Preferințe lingvistice. Detalii despre dispozitive și browsere. Toate actualizate în timp real."
+      },
+      {
+        "question": "Analiza este inclusă în planul gratuit?",
+        "answer": "Da. Analiza de bază este disponibilă în toate planurile, inclusiv cel gratuit. Puteți vedea vizualizări, vizitatori și statistici lingvistice din prima zi."
+      },
+      {
+        "question": "Pot vedea care pagini sunt cele mai populare?",
+        "answer": "Da. Panoul de control afișează vizualizările detaliate pe pagină — acasă, meniu, contacte, rezervări și selecția limbii. Vedeți exact unde își petrec oaspeții timpul."
+      },
+      {
+        "question": "Cât de departe în timp merg datele?",
+        "answer": "Datele de analiză sunt stocate din ziua în care vă creați restaurantul. Puteți vizualiza tendințe zilnice, săptămânale și lunare pentru întregul dumneavoastră istoric."
+      }
+    ]
+  }
+}

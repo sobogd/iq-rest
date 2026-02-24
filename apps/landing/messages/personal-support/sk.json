@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Osobná podpora pre webovú stránku vašej reštaurácie — Skutočná ľudská pomoc | IQ Rest",
+    "description": "Získajte osobnú pomoc od skutočných ľudí, nie chatbotov. Pomoc s nastavením, tipy na optimalizáciu menu a rýchle odpovede — dostupné na každom pláne vrátane bezplatného."
+  },
+  "hero": {
+    "badge": "Osobná podpora",
+    "title": "Skutoční ľudia, skutočná pomoc — Žiadne chatboty",
+    "subtitle": "Máte otázku? Potrebujete pomoc s nastavením menu? Chcete navrhnúť novú funkciu? Napíšte nám priamo a získajte osobnú odpoveď od niekoho, kto rozumie reštauráciám.",
+    "cta": "Vytvorte si menu",
+    "ctaDemo": "Zobraziť demo",
+    "noCreditCard": "Kreditná karta nie je potrebná. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Ako podpora funguje",
+    "subtitle": "Pomoc, keď ju potrebujete, od ľudí, ktorým záleží.",
+    "items": [
+      {
+        "title": "Napíšte nám priamo z vášho ovládacieho panela",
+        "description": "Otvorte chat podpory vo svojom ovládacom paneli a opíšte svoju otázku. Skutočný človek si prečíta vašu správu a odpovie — zvyčajne do niekoľkých hodín v pracovných dňoch."
+      },
+      {
+        "title": "Pomoc s nastavením, optimalizáciou a viac",
+        "description": "Či už potrebujete pomoc s pridaním prvého jedla, radu ohľadom organizácie menu, alebo chcete navrhnúť novú funkciu — sme tu. Každá otázka je dôležitá, nech je akokoľvek malá."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o našej podpore.",
+    "items": [
+      {
+        "question": "Je podpora dostupná na bezplatnom pláne?",
+        "answer": "Áno. Osobná podpora je dostupná pre každý plán, vrátane bezplatného. Veríme, že každá reštaurácia si zaslúži skutočnú pomoc, bez ohľadu na predplatné."
+      },
+      {
+        "question": "Ako rýchlo odpovedáte?",
+        "answer": "Zvyčajne do niekoľkých hodín v pracovných dňoch. Každú správu čítame osobne a snažíme sa vašu otázku vyriešiť jednou odpoveďou."
+      },
+      {
+        "question": "Môžete mi pomôcť s nastavením menu?",
+        "answer": "Samozrejme. Ak potrebujete pomoc s pridaním jedál, organizáciou kategórií, nastavením prekladov alebo konfiguráciou rezervácií — stačí sa opýtať. Radi vás všetkým prevedieme."
+      },
+      {
+        "question": "Môžem navrhnúť nové funkcie?",
+        "answer": "Áno, a tešíme sa z toho! Mnohé naše funkcie vznikli z návrhov používateľov. Napíšte nám svoj nápad a zvážime ho pre budúce aktualizácie."
+      }
+    ]
+  }
+}

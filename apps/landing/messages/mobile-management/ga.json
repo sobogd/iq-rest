@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Bainistigh roghchlár do bhialainne ó do ghuthán — Painéal soghluaiste | IQ Rest",
+    "description": "Bainistigh roghchlár QR do bhialainne go hiomlán ó do ghuthán. Cuir miasa leis, nuashonraigh praghsanna, uaslódáil grianghraif, seiceáil anailísíocht — gan ríomhaire."
+  },
+  "hero": {
+    "badge": "Painéal soghluaiste",
+    "title": "Bainistigh roghchlár iomlán do bhialainne ó do ghuthán",
+    "subtitle": "Cuir miasa leis, athraigh praghsanna, uaslódáil grianghraif, seiceáil orduithe — gach rud ó do ghuthán cliste. Tá an painéal tógtha le soghluaisteacht ar dtús, mar sin ní bheidh ríomhaire ag teastáil uait riamh.",
+    "cta": "Cruthaigh do bhiachlár",
+    "ctaDemo": "Féach ar an demo",
+    "noCreditCard": "Níl cárta creidmheasa ag teastáil. Plean saor in aisce ar fáil."
+  },
+  "features": {
+    "title": "Conas a oibríonn bainistíocht shoghluaiste",
+    "subtitle": "Painéal do bhialainne, i gcónaí i do phóca.",
+    "items": [
+      {
+        "title": "Painéal iomlán ar do ghuthán cliste",
+        "description": "Oibríonn gach gné go foirfe ar scáileán do ghutháin — míreanna a chur leis, catagóirí a chur in eagar, orduithe a bhainistiú, anailísíocht a sheiceáil. Tá an comhéadan deartha do thadhall, ní díreach athraithe méide ón deasc."
+      },
+      {
+        "title": "Uaslódáil grianghraif go díreach ón gceamara",
+        "description": "Tóg grianghraf de mhias nua agus uaslódáil chuig do roghchlár é i soicindí. Déantar íomhánna a bharrfheabhsú go huathoibríoch. Nuashonraigh do speisialtacht laethúil agus tú i do sheasamh sa chistin."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ceisteanna coitianta",
+    "subtitle": "Gach rud atá le fios agat faoi bhainistíocht roghchláir ar ghuthán.",
+    "items": [
+      {
+        "question": "An gá dom aip a shuiteáil?",
+        "answer": "Ní gá. Oibríonn an painéal i mbrabhsálaí gréasáin do ghutháin — Safari, Chrome nó aon cheann eile. Logáil isteach agus tosaigh ag bainistiú do roghchláir."
+      },
+      {
+        "question": "An féidir liom gach rud a dhéanamh ó mo ghuthán a dhéanfainn ar ríomhaire?",
+        "answer": "Is féidir. Tá gach gné ar fáil ar ghuthán — míreanna a chur leis, grianghraif a uaslódáil, catagóirí a bhainistiú, anailísíocht a sheiceáil, orduithe agus áirithintí a láimhseáil."
+      },
+      {
+        "question": "An n-oibríonn sé ar tháibléid freisin?",
+        "answer": "Oibríonn. Oiriúnaíonn an painéal d'aon mhéid scáileáin — gutháin, táibléid agus ríomhairí deisce. Úsáid cibé gléas is áisiúla duit."
+      },
+      {
+        "question": "An féidir le daoine iolracha an roghchlár a bhainistiú?",
+        "answer": "Faoi láthair bainistíonn cuntas amháin an bhialann. Is féidir leat logáil isteach ó ghléasanna iolracha ag an am céanna — do ghuthán, táibléad nó ríomhaire."
+      }
+    ]
+  }
+}

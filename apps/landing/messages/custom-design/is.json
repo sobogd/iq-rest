@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Vefsíða veitingastaðar með myndbands- og ljósmyndabakgrunni — Vefsíðugerð | IQ Rest",
+    "description": "Búðu til glæsilega vefsíðu veitingastaðar með sérsniðnum myndbands- eða ljósmyndabakgrunni. Hladdu upp stemningarmyndbandi eða matarljósmyndum — heillaðu gesti frá fyrstu skönnun."
+  },
+  "hero": {
+    "badge": "Vefsíðuhönnun",
+    "title": "Búðu til glæsilega vefsíðu veitingastaðar með myndbandsbakgrunni",
+    "subtitle": "Hladdu upp stemningarmyndbandi veitingastaðarins eða fallegri matarmynd sem bakgrunni. Gestir sjá faglega, vörumerkta upplifun um leið og þeir skanna QR kóðann þinn.",
+    "cta": "Búðu til matseðilinn þinn",
+    "ctaDemo": "Skoða demo",
+    "noCreditCard": "Ekkert kreditkort nauðsynlegt. Ókeypis áskrift í boði."
+  },
+  "features": {
+    "title": "Hvernig sérsniðnir bakgrunnar virka",
+    "subtitle": "Skapaðu varanlegt fyrsta áhrif með myndefni sem passar vörumerkinu þínu.",
+    "items": [
+      {
+        "title": "Hladdu upp myndbands- eða ljósmyndabakgrunni",
+        "description": "Bættu við endurteknu myndbandi af stemningunni í veitingastaðnum, tímahraða úr eldhúsinu eða hágæða matarmynd. Bakgrunnurinn birtist á forsíðunni þinni — og skapar yfirgripsmikla upplifun fyrir gesti."
+      },
+      {
+        "title": "Fínstillt fyrir hraða á hvaða tæki sem er",
+        "description": "Myndbönd og myndir eru sjálfkrafa þjöppuð og hlaðin smám saman. Vefsíðan þín helst hröð jafnvel á hægum farsímatengingum — engin biðminni, engar tafir, bara slétt upplifun."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Algengar spurningar",
+    "subtitle": "Allt sem þú þarft að vita um hönnun vefsíðu veitingastaðar.",
+    "items": [
+      {
+        "question": "Hvaða myndbandssnið eru studd?",
+        "answer": "MP4 og WebM snið virka best. Myndbönd eru sjálfkrafa þjöppuð fyrir hraðvirka hleðslu. Haltu myndböndum undir 30 sekúndum fyrir bestu farsímaupplifun."
+      },
+      {
+        "question": "Mun myndbandsbakgrunnur hægja á vefsíðunni minni?",
+        "answer": "Nei. Myndbönd eru þjöppuð, hlaðin smám saman og fínstillt sjálfkrafa. Á hægum tengingum víkur kerfið yfir í kyrrmynd til að halda upplifuninni sléttu."
+      },
+      {
+        "question": "Get ég notað ljósmynd í staðinn fyrir myndband?",
+        "answer": "Já. Hladdu upp hvaða mynd sem er — hún verður fínstillt og sýnd sem heilskjásbakgrunnur. Þú getur skipt á milli myndbands og ljósmyndar hvenær sem er."
+      },
+      {
+        "question": "Þarf ég hönnuð til að setja þetta upp?",
+        "answer": "Nei. Hladdu bara upp myndbandinu eða myndinni úr stjórnborðinu. Kerfið sér um stærðir, þjöppun og uppsetningu sjálfkrafa. Vefsíðan þín lítur fagleg út án nokkurrar hönnunarþekkingar."
+      }
+    ]
+  }
+}

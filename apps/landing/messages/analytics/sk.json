@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Analytika Reštaurácie a Štatistiky QR Menu — Sledujte Návštevníkov | IQ Rest",
+    "description": "Sledujte skenovania QR menu, zobrazenia stránok, populárne jazyky a trendy návštevníkov. Analytický panel v reálnom čase pre webovú stránku vašej reštaurácie."
+  },
+  "hero": {
+    "badge": "Analytika",
+    "title": "Pozrite Sa, Ako Presne Hostia Používajú Vaše QR Menu",
+    "subtitle": "Sledujte denné skenovania, zobrazenia stránok, populárne jazyky, štatistiky zariadení a trendy v čase. Robte rozhodnutia založené na dátach na optimalizáciu menu a rast vášho podnikania.",
+    "cta": "Vytvorte Si Menu",
+    "ctaDemo": "Zobraziť Demo",
+    "noCreditCard": "Nevyžaduje sa kreditná karta. K dispozícii je bezplatný plán."
+  },
+  "features": {
+    "title": "Čo Môžete Sledovať",
+    "subtitle": "Prehľady v reálnom čase o online prítomnosti vašej reštaurácie.",
+    "items": [
+      {
+        "title": "Denné Zobrazenia, Skenovania a Trendy Návštevníkov",
+        "description": "Pozrite sa, koľko ľudí skenuje váš QR kód a navštevuje vaše menu každý deň, týždeň a mesiac. Sledujte trendy v čase, aby ste pochopili sezónne vzorce a merali vplyv propagácií."
+      },
+      {
+        "title": "Rozdelenie podľa Jazyka a Zariadenia",
+        "description": "Zistite, aké jazyky vaši hostia preferujú a aké zariadenia používajú. Tieto údaje vám pomôžu prioritizovať preklady a zabezpečiť, aby vaše menu vyzeralo perfektne na najobľúbenejších zariadeniach."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často Kladené Otázky",
+    "subtitle": "Všetko, čo potrebujete vedieť o analytike reštaurácie.",
+    "items": [
+      {
+        "question": "Aké metriky môžem sledovať?",
+        "answer": "Denné, týždenné a mesačné zobrazenia stránok. Unikátni návštevníci. Najzobrazovanejšie stránky. Jazykové preferencie. Rozdelenie podľa zariadení a prehliadačov. Všetko sa aktualizuje v reálnom čase."
+      },
+      {
+        "question": "Je analytika zahrnutá v bezplatnom pláne?",
+        "answer": "Áno. Základná analytika je dostupná v každom pláne, vrátane bezplatného. Zobrazenia, návštevníkov a jazykové štatistiky môžete vidieť od prvého dňa."
+      },
+      {
+        "question": "Môžem vidieť, ktoré stránky sú najpopulárnejšie?",
+        "answer": "Áno. Panel zobrazuje zobrazenia rozdelené podľa stránok — domov, menu, kontakty, rezervácie a výber jazyka. Pozrite sa presne, kde hostia trávia svoj čas."
+      },
+      {
+        "question": "Ako ďaleko do minulosti siahajú údaje?",
+        "answer": "Analytické údaje sa uchovávajú od dňa, kedy si vytvoríte reštauráciu. Môžete si prezerať denné, týždenné a mesačné trendy za celú vašu históriu."
+      }
+    ]
+  }
+}

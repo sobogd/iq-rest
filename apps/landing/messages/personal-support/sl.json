@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Osebna podpora za spletno stran vaše restavracije — Prava človeška pomoč | IQ Rest",
+    "description": "Prejmite osebno pomoč od pravih ljudi, ne chatbotov. Pomoč pri nastavitvi, nasveti za optimizacijo menija in hitri odgovori — na voljo pri vsakem paketu, vključno z brezplačnim."
+  },
+  "hero": {
+    "badge": "Osebna podpora",
+    "title": "Pravi ljudje, prava pomoč — Ne chatboti",
+    "subtitle": "Imate vprašanje? Potrebujete pomoč pri nastavitvi menija? Želite predlagati novo funkcijo? Pišite nam neposredno in prejmite oseben odgovor od nekoga, ki razume restavracije.",
+    "cta": "Ustvarite svoj meni",
+    "ctaDemo": "Oglejte si demo",
+    "noCreditCard": "Kreditna kartica ni potrebna. Na voljo je brezplačni paket."
+  },
+  "features": {
+    "title": "Kako podpora deluje",
+    "subtitle": "Pomoč, ko jo potrebujete, od ljudi, ki jim je mar.",
+    "items": [
+      {
+        "title": "Pišite nam neposredno z vaše nadzorne plošče",
+        "description": "Odprite klepet za podporo na svoji nadzorni plošči in opišite svoje vprašanje. Prava oseba prebere vaše sporočilo in odgovori — običajno v nekaj urah na delovne dni."
+      },
+      {
+        "title": "Pomoč pri nastavitvi, optimizaciji in še več",
+        "description": "Potrebujete pomoč pri dodajanju prve jedi, nasvet o organizaciji menija ali želite predlagati novo funkcijo — tu smo. Vsako vprašanje šteje, ne glede na to, kako majhno je."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pogosta vprašanja",
+    "subtitle": "Vse, kar morate vedeti o naši podpori.",
+    "items": [
+      {
+        "question": "Je podpora na voljo pri brezplačnem paketu?",
+        "answer": "Da. Osebna podpora je na voljo za vsak paket, vključno z brezplačnim. Verjamemo, da si vsaka restavracija zasluži pravo pomoč, ne glede na naročnino."
+      },
+      {
+        "question": "Kako hitro odgovorite?",
+        "answer": "Običajno v nekaj urah na delovne dni. Vsako sporočilo preberemo osebno in si prizadevamo rešiti vaše vprašanje z enim odgovorom."
+      },
+      {
+        "question": "Mi lahko pomagate pri nastavitvi menija?",
+        "answer": "Seveda. Če potrebujete pomoč pri dodajanju jedi, organizaciji kategorij, nastavitvi prevodov ali konfiguraciji rezervacij — samo vprašajte. Z veseljem vas bomo vodili skozi vse."
+      },
+      {
+        "question": "Lahko predlagam nove funkcije?",
+        "answer": "Da, in to obožujemo! Mnoge naše funkcije so se začele kot predlogi uporabnikov. Pošljite nam svojo idejo in jo bomo upoštevali pri prihodnjih posodobitvah."
+      }
+    ]
+  }
+}

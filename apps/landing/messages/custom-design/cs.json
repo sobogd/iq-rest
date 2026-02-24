@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Web restaurace s video a foto pozadím — Tvůrce webu | IQ Rest",
+    "description": "Vytvořte ohromující web restaurace s vlastním video nebo foto pozadím. Nahrajte video atmosféry nebo fotografie jídel — zapůsobte na hosty od prvního skenu."
+  },
+  "hero": {
+    "badge": "Design webu",
+    "title": "Vytvořte ohromující web restaurace s video pozadím",
+    "subtitle": "Nahrajte video atmosféry restaurace nebo krásnou fotografii jídla jako pozadí. Hosté uvidí profesionální, značkový zážitek hned při naskenování QR kódu.",
+    "cta": "Vytvořte si menu",
+    "ctaDemo": "Zobrazit demo",
+    "noCreditCard": "Bez platební karty. K dispozici je bezplatný tarif."
+  },
+  "features": {
+    "title": "Jak fungují vlastní pozadí",
+    "subtitle": "Zanechte trvalý první dojem vizuály, které odpovídají vaší značce.",
+    "items": [
+      {
+        "title": "Nahrajte video nebo foto pozadí",
+        "description": "Přidejte smyčkové video atmosféry restaurace, timelapse z kuchyně nebo kvalitní fotografii jídla. Pozadí se zobrazí na vaší úvodní stránce — vytváří pohlcující zážitek pro hosty."
+      },
+      {
+        "title": "Optimalizováno pro rychlost na jakémkoli zařízení",
+        "description": "Videa a obrázky se automaticky komprimují a načítají postupně. Web zůstává rychlý i na pomalém mobilním připojení — žádné ukládání do vyrovnávací paměti, žádné prodlevy, jen plynulý zážitek."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Vše, co potřebujete vědět o designu webu restaurace.",
+    "items": [
+      {
+        "question": "Jaké formáty videa jsou podporovány?",
+        "answer": "Nejlépe fungují formáty MP4 a WebM. Videa se automaticky komprimují pro rychlé načítání. Udržujte videa pod 30 sekund pro nejlepší mobilní zážitek."
+      },
+      {
+        "question": "Zpomalí video pozadí můj web?",
+        "answer": "Ne. Videa se komprimují, načítají postupně a optimalizují automaticky. Na pomalém připojení systém přepne na statický obrázek, aby zážitek zůstal plynulý."
+      },
+      {
+        "question": "Mohu místo videa použít fotografii?",
+        "answer": "Ano. Nahrajte jakoukoli fotografii — bude optimalizována a zobrazena jako pozadí na celou obrazovku. Mezi videem a fotografií můžete kdykoli přepínat."
+      },
+      {
+        "question": "Potřebuji designéra pro nastavení?",
+        "answer": "Ne. Stačí nahrát video nebo fotografii z panelu. Systém se postará o rozměry, kompresi a rozvržení automaticky. Váš web bude vypadat profesionálně i bez designérských dovedností."
+      }
+    ]
+  }
+}
