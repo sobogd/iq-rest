@@ -50,6 +50,7 @@ export function LoginPage() {
         const data = await res.json();
 
         if (res.ok) {
+          track(DashboardEvent.AUTH_GOOGLE_LOGIN);
           if (isAdminEmail(data.email)) {
             analytics.disableTracking();
           }
