@@ -69,6 +69,29 @@ const EMAIL_TYPES = {
     getText: (t: Record<string, string>, locale: string) =>
       `${t.greeting}\n\n${t.bodyScanner}\n\n${t.helpOfferScanner}\n\n${t.selfServiceScanner}\n\n${t.ctaScanner}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
   },
+  reminder_orders: {
+    getSubject: (t: Record<string, string>) => t.subjectOrders,
+    getHtml: (t: Record<string, string>, locale: string) => `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyOrders}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 8px; font-weight: 600;">${t.ordersHowItWorks}</p>
+        <ol style="font-size: 17px; line-height: 1.7; margin: 0 0 16px; padding-left: 24px;">
+          <li style="margin-bottom: 8px;">${t.ordersStep1}</li>
+          <li style="margin-bottom: 8px;">${t.ordersStep2}</li>
+          <li>${t.ordersStep3}</li>
+        </ol>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.ordersSetup}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.ordersHelp}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+          <a href="https://iq-rest.com/${locale}/dashboard?from=email" style="color: #0066cc;">${t.ordersCtA}</a>
+        </p>
+        <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
+      </div>
+    `,
+    getText: (t: Record<string, string>, locale: string) =>
+      `${t.greeting}\n\n${t.bodyOrders}\n\n${t.ordersHowItWorks}\n1. ${t.ordersStep1}\n2. ${t.ordersStep2}\n3. ${t.ordersStep3}\n\n${t.ordersSetup}\n\n${t.ordersHelp}\n\n${t.ordersCtA}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
+  },
 } as const;
 
 type EmailType = keyof typeof EMAIL_TYPES;

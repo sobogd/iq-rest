@@ -2330,7 +2330,16 @@
     "bodyScanner": "Alustasite oma restorani menüü loomist IQ Restis, kuid pole seda veel lõpetanud — ärge muretsege, saame aidata.",
     "helpOfferScanner": "Vastake lihtsalt sellele e-kirjale oma menüüga mis tahes vormingus — foto, PDF või link oma veebilehele. Seadistame kõik teie eest, täiesti tasuta.",
     "selfServiceScanner": "Või kui eelistate seda ise teha, kulub selleks vaid mõni minut:",
-    "ctaScanner": "Ava menüüredaktor"
+    "ctaScanner": "Ava menüüredaktor",
+    "subjectOrders": "Uus funktsioon: teie kliendid saavad nüüd otse menüüst tellida",
+    "bodyOrders": "Suurepärased uudised! Oleme lisanud IQ Resti veebitellimused. Teie kliendid saavad nüüd esitada tellimusi otse teie digitaalsest menüüst — WhatsAppi kaudu või sisseehitatud tellimissüsteemi abil.",
+    "ordersHowItWorks": "Kuidas see toimib:",
+    "ordersStep1": "Klient skaneerib QR-koodi, sirvib teie menüüd ja lisab tooteid ostukorvi",
+    "ordersStep2": "Esitab tellimuse — see saadetakse teie WhatsAppi või salvestatakse teie juhtpaneelile",
+    "ordersStep3": "Teie kinnitate ja valmistate tellimuse — ongi kõik!",
+    "ordersSetup": "Tellimuste lubamiseks minge oma juhtpaneelile → Kujunduse seaded ja lülitage tellimise funktsioon sisse. Saate valida WhatsAppi, sisseehitatud tellimused või mõlemad.",
+    "ordersHelp": "Vajate abi seadistamisel? Vastake lihtsalt sellele e-kirjale — aitame teil kiiresti alustada.",
+    "ordersCtA": "Luba tellimused kohe"
   },
   "limitWarningEmail": {
     "subject": "Lähenete oma tasuta skaneerimise piirmäärale IQ Restis",

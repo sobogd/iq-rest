@@ -2330,7 +2330,16 @@
     "bodyScanner": "Pradėjote kurti savo restorano meniu IQ Rest, bet dar jo nebaigėte — nesijaudinkite, galime padėti.",
     "helpOfferScanner": "Tiesiog atsakykite į šį el. laišką su savo meniu bet kokiu formatu — nuotrauka, PDF ar nuoroda į savo svetainę. Viską sukonfigūruosime už jus, visiškai nemokamai.",
     "selfServiceScanner": "Arba jei norite tai padaryti patys, tai užtruks tik kelias minutes:",
-    "ctaScanner": "Atidaryti meniu redaktorių"
+    "ctaScanner": "Atidaryti meniu redaktorių",
+    "subjectOrders": "Nauja funkcija: jūsų klientai dabar gali užsakyti tiesiogiai iš meniu",
+    "bodyOrders": "Puikios naujienos! Į IQ Rest pridėjome internetinius užsakymus. Jūsų klientai dabar gali pateikti užsakymus tiesiogiai iš jūsų skaitmeninio meniu — per WhatsApp arba naudodami integruotą užsakymų sistemą.",
+    "ordersHowItWorks": "Kaip tai veikia:",
+    "ordersStep1": "Klientas nuskenuoja QR kodą, peržiūri jūsų meniu ir prideda prekes į krepšelį",
+    "ordersStep2": "Pateikia užsakymą — jis siunčiamas į jūsų WhatsApp arba išsaugomas jūsų valdymo skydelyje",
+    "ordersStep3": "Jūs patvirtinate ir paruošiate užsakymą — štai ir viskas!",
+    "ordersSetup": "Norėdami įjungti užsakymus, eikite į savo valdymo skydelį → Dizaino nustatymai ir įjunkite užsakymų funkciją. Galite pasirinkti WhatsApp, integruotus užsakymus arba abu.",
+    "ordersHelp": "Reikia pagalbos nustatant? Tiesiog atsakykite į šį el. laišką — padėsime jums pradėti akimirksniu.",
+    "ordersCtA": "Įjungti užsakymus dabar"
   },
   "limitWarningEmail": {
     "subject": "Artėjate prie nemokamo nuskaitymo limito IQ Rest",

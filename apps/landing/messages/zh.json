@@ -2330,7 +2330,16 @@
     "bodyScanner": "您已在 IQ Rest 上开始创建餐厅菜单，但尚未完成——别担心，我们可以帮忙。",
     "helpOfferScanner": "只需回复此邮件并附上您的菜单，格式不限——照片、PDF 或网站链接均可。我们将为您免费设置一切。",
     "selfServiceScanner": "或者如果您想自己完成，只需几分钟：",
-    "ctaScanner": "打开菜单编辑器"
+    "ctaScanner": "打开菜单编辑器",
+    "subjectOrders": "新功能：您的顾客现在可以直接从菜单下单",
+    "bodyOrders": "好消息！我们为 IQ Rest 添加了在线点餐功能。您的顾客现在可以直接从您的数字菜单下单——通过 WhatsApp 或内置点餐系统。",
+    "ordersHowItWorks": "工作原理：",
+    "ordersStep1": "顾客扫描 QR 码，浏览您的菜单并将商品添加到购物车",
+    "ordersStep2": "提交订单——订单将发送到您的 WhatsApp 或保存在您的管理面板中",
+    "ordersStep3": "您确认并准备订单——就这么简单！",
+    "ordersSetup": "要启用点餐功能，请前往管理面板 → 设计设置并开启点餐功能。您可以选择 WhatsApp、内置订单或两者兼用。",
+    "ordersHelp": "需要帮助设置吗？只需回复此邮件——我们将立即帮您开始。",
+    "ordersCtA": "立即启用点餐"
   },
   "limitWarningEmail": {
     "subject": "您即将达到IQ Rest的免费扫描限制",

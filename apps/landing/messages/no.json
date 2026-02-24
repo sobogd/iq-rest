@@ -2330,7 +2330,16 @@
     "bodyScanner": "Du begynte å lage restaurantmenyen din på IQ Rest, men har ikke fullført den ennå — ingen grunn til bekymring, vi kan hjelpe.",
     "helpOfferScanner": "Bare svar på denne e-posten med menyen din i hvilket som helst format — et bilde, PDF eller en lenke til nettsiden din. Vi setter opp alt for deg, helt gratis.",
     "selfServiceScanner": "Eller hvis du heller vil gjøre det selv, tar det bare noen få minutter:",
-    "ctaScanner": "Åpne menyredigerer"
+    "ctaScanner": "Åpne menyredigerer",
+    "subjectOrders": "Ny funksjon: kundene dine kan nå bestille direkte fra menyen",
+    "bodyOrders": "Gode nyheter! Vi har lagt til nettbestilling i IQ Rest. Kundene dine kan nå legge inn bestillinger direkte fra din digitale meny — via WhatsApp eller gjennom det innebygde bestillingssystemet.",
+    "ordersHowItWorks": "Slik fungerer det:",
+    "ordersStep1": "En kunde skanner QR-koden, blar gjennom menyen din og legger varer i handlekurven",
+    "ordersStep2": "De sender bestillingen — den sendes til din WhatsApp eller lagres i dashboardet ditt",
+    "ordersStep3": "Du bekrefter og forbereder bestillingen — det er alt!",
+    "ordersSetup": "For å aktivere bestilling, gå til dashboardet ditt → Designinnstillinger og slå på bestillingsfunksjonen. Du kan velge WhatsApp, innebygde bestillinger eller begge deler.",
+    "ordersHelp": "Trenger du hjelp med å sette det opp? Bare svar på denne e-posten — vi hjelper deg i gang på et øyeblikk.",
+    "ordersCtA": "Aktiver bestillinger nå"
   },
   "limitWarningEmail": {
     "subject": "Du nærmer deg din gratis skannegrense på IQ Rest",

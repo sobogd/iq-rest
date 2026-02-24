@@ -2330,7 +2330,16 @@
     "bodyScanner": "IQ Rest üzerinde restoran menünüzü oluşturmaya başladınız ama henüz tamamlamadınız — merak etmeyin, yardımcı olabiliriz.",
     "helpOfferScanner": "Bu e-postaya menünüzü herhangi bir formatta ekleyerek yanıt verin — bir fotoğraf, PDF veya web sitenizin linki. Her şeyi sizin için ayarlayalım, tamamen ücretsiz.",
     "selfServiceScanner": "Veya kendiniz yapmayı tercih ederseniz, sadece birkaç dakika sürer:",
-    "ctaScanner": "Menü düzenleyiciyi aç"
+    "ctaScanner": "Menü düzenleyiciyi aç",
+    "subjectOrders": "Yeni özellik: müşterileriniz artık doğrudan menüden sipariş verebilir",
+    "bodyOrders": "Harika haberler! IQ Rest'e çevrimiçi sipariş özelliğini ekledik. Müşterileriniz artık dijital menünüzden doğrudan sipariş verebilir — WhatsApp üzerinden veya yerleşik sipariş sistemi aracılığıyla.",
+    "ordersHowItWorks": "Nasıl çalışır:",
+    "ordersStep1": "Bir müşteri QR kodunu tarar, menünüze göz atar ve ürünleri sepete ekler",
+    "ordersStep2": "Siparişi gönderir — WhatsApp'ınıza iletilir veya kontrol panelinize kaydedilir",
+    "ordersStep3": "Siz onaylayıp siparişi hazırlarsınız — hepsi bu kadar!",
+    "ordersSetup": "Siparişleri etkinleştirmek için kontrol panelinize gidin → Tasarım ayarları ve sipariş özelliğini açın. WhatsApp, yerleşik siparişler veya her ikisini birden seçebilirsiniz.",
+    "ordersHelp": "Kurulumda yardıma mı ihtiyacınız var? Bu e-postaya yanıt verin — sizi hemen başlatırız.",
+    "ordersCtA": "Siparişleri şimdi etkinleştir"
   },
   "limitWarningEmail": {
     "subject": "IQ Rest'te ücretsiz tarama limitinize yaklaşıyorsunuz",

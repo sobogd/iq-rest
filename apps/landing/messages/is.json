@@ -2330,7 +2330,16 @@
     "bodyScanner": "Þú byrjaðir að búa til matseðil veitingastaðarins þíns á IQ Rest en hefur ekki klárað hann ennþá — engar áhyggjur, við getum hjálpað.",
     "helpOfferScanner": "Svaraðu bara þessum tölvupósti með matseðlinum þínum á hvaða formi sem er — mynd, PDF eða tengil á vefsíðuna þína. Við setjum allt upp fyrir þig, alveg ókeypis.",
     "selfServiceScanner": "Eða ef þú vilt frekar gera þetta sjálf/ur, tekur það bara nokkrar mínútur:",
-    "ctaScanner": "Opna matseðilsritil"
+    "ctaScanner": "Opna matseðilsritil",
+    "subjectOrders": "Nýr eiginleiki: viðskiptavinir þínir geta nú pantað beint af matseðlinum",
+    "bodyOrders": "Frábærar fréttir! Við höfum bætt netpöntunum við IQ Rest. Viðskiptavinir þínir geta nú lagt inn pantanir beint af stafræna matseðlinum þínum — í gegnum WhatsApp eða innbyggða pöntunarkerfi.",
+    "ordersHowItWorks": "Svona virkar það:",
+    "ordersStep1": "Viðskiptavinur skannar QR kóðann, skoðar matseðilinn þinn og bætir vörum í körfuna",
+    "ordersStep2": "Hann sendir pöntunina — hún berst á WhatsApp þitt eða vistast á stjórnborðinu þínu",
+    "ordersStep3": "Þú staðfestir og undirbýrð pöntunina — það er allt!",
+    "ordersSetup": "Til að virkja pantanir, farðu á stjórnborðið þitt → Hönnunarstillingar og kveiktu á pöntunareiginleikanum. Þú getur valið WhatsApp, innbyggðar pantanir eða hvort tveggja.",
+    "ordersHelp": "Þarftu aðstoð við uppsetningu? Svaraðu bara þessum tölvupósti — við hjálpum þér að byrja á skömmum tíma.",
+    "ordersCtA": "Virkja pantanir núna"
   },
   "limitWarningEmail": {
     "subject": "Þú ert að nálgast ókeypis skönnunarmörk þín á IQ Rest",

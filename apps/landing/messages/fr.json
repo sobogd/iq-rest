@@ -2330,7 +2330,16 @@
     "bodyScanner": "Vous avez commencé à créer le menu de votre restaurant sur IQ Rest mais ne l'avez pas encore terminé — pas de souci, nous pouvons vous aider.",
     "helpOfferScanner": "Répondez simplement à cet e-mail avec votre menu dans n'importe quel format — une photo, un PDF ou un lien vers votre site web. Nous configurerons tout pour vous, entièrement gratuitement.",
     "selfServiceScanner": "Ou si vous préférez le faire vous-même, cela ne prend que quelques minutes :",
-    "ctaScanner": "Ouvrir l'éditeur de menu"
+    "ctaScanner": "Ouvrir l'éditeur de menu",
+    "subjectOrders": "Nouvelle fonctionnalité : vos clients peuvent maintenant commander directement depuis le menu",
+    "bodyOrders": "Bonne nouvelle ! Nous avons ajouté la commande en ligne à IQ Rest. Vos clients peuvent maintenant passer des commandes directement depuis votre menu digital — via WhatsApp ou via le système de commande intégré.",
+    "ordersHowItWorks": "Comment ça marche :",
+    "ordersStep1": "Un client scanne le code QR, parcourt votre menu et ajoute des articles au panier",
+    "ordersStep2": "Il soumet la commande — elle est envoyée sur votre WhatsApp ou enregistrée dans votre tableau de bord",
+    "ordersStep3": "Vous confirmez et préparez la commande — c'est tout !",
+    "ordersSetup": "Pour activer les commandes, rendez-vous dans votre tableau de bord → Paramètres de design et activez la fonctionnalité de commande. Vous pouvez choisir WhatsApp, les commandes intégrées ou les deux.",
+    "ordersHelp": "Besoin d'aide pour la configuration ? Répondez simplement à cet e-mail — nous vous aiderons à démarrer en un rien de temps.",
+    "ordersCtA": "Activer les commandes maintenant"
   },
   "limitWarningEmail": {
     "subject": "Vous approchez de votre limite gratuite de scans sur IQ Rest",

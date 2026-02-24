@@ -2330,7 +2330,16 @@
     "bodyScanner": "Začali ste vytvárať menu svojej reštaurácie na IQ Rest, ale ešte ste ho nedokončili — žiadny problém, môžeme vám pomôcť.",
     "helpOfferScanner": "Stačí odpovedať na tento e-mail s vaším menu v akomkoľvek formáte — fotka, PDF alebo odkaz na vašu webovú stránku. Všetko pre vás nastavíme, úplne zadarmo.",
     "selfServiceScanner": "Alebo ak to chcete urobiť sami, zaberie to len pár minút:",
-    "ctaScanner": "Otvoriť editor menu"
+    "ctaScanner": "Otvoriť editor menu",
+    "subjectOrders": "Nová funkcia: vaši zákazníci si teraz môžu objednať priamo z menu",
+    "bodyOrders": "Skvelá správa! Do IQ Rest sme pridali online objednávky. Vaši zákazníci si teraz môžu objednať priamo z vášho digitálneho menu — cez WhatsApp alebo prostredníctvom vstavaného objednávkového systému.",
+    "ordersHowItWorks": "Ako to funguje:",
+    "ordersStep1": "Zákazník naskenuje QR kód, prelistuje vaše menu a pridá položky do košíka",
+    "ordersStep2": "Odošle objednávku — tá sa odošle na váš WhatsApp alebo sa uloží vo vašom paneli",
+    "ordersStep3": "Vy potvrdíte a pripravíte objednávku — to je všetko!",
+    "ordersSetup": "Na zapnutie objednávok prejdite do svojho panelu → Nastavenia dizajnu a aktivujte funkciu objednávok. Môžete si vybrať WhatsApp, vstavané objednávky alebo oboje.",
+    "ordersHelp": "Potrebujete pomoc s nastavením? Stačí odpovedať na tento e-mail — pomôžeme vám začať v okamihu.",
+    "ordersCtA": "Zapnúť objednávky teraz"
   },
   "limitWarningEmail": {
     "subject": "Blížite sa k bezplatnému limitu skenovania na IQ Rest",

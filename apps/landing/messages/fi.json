@@ -2330,7 +2330,16 @@
     "bodyScanner": "Aloitit ravintolasi menun luomisen IQ Restissä, mutta et ole vielä viimeistellyt sitä — ei hätää, voimme auttaa.",
     "helpOfferScanner": "Vastaa vain tähän sähköpostiin ja liitä menusi missä tahansa muodossa — valokuva, PDF tai linkki verkkosivustollesi. Me hoidamme kaiken puolestasi, täysin ilmaiseksi.",
     "selfServiceScanner": "Tai jos haluat tehdä sen itse, se vie vain muutaman minuutin:",
-    "ctaScanner": "Avaa menueditori"
+    "ctaScanner": "Avaa menueditori",
+    "subjectOrders": "Uusi ominaisuus: asiakkaasi voivat nyt tilata suoraan menusta",
+    "bodyOrders": "Hyviä uutisia! Olemme lisänneet verkkotilaukset IQ Restiin. Asiakkaasi voivat nyt tehdä tilauksia suoraan digitaalisesta menustasi — WhatsAppin kautta tai sisäänrakennetun tilausjärjestelmän avulla.",
+    "ordersHowItWorks": "Näin se toimii:",
+    "ordersStep1": "Asiakas skannaa QR-koodin, selaa menuasi ja lisää tuotteita ostoskoriin",
+    "ordersStep2": "Hän lähettää tilauksen — se lähetetään WhatsAppiisi tai tallennetaan hallintapaneeliisi",
+    "ordersStep3": "Vahvistat ja valmistat tilauksen — siinä kaikki!",
+    "ordersSetup": "Tilausten käyttöönottamiseksi siirry hallintapaneeliin → Ulkoasuasetukset ja ota tilaustoiminto käyttöön. Voit valita WhatsAppin, sisäänrakennetut tilaukset tai molemmat.",
+    "ordersHelp": "Tarvitsetko apua käyttöönotossa? Vastaa vain tähän sähköpostiin — autamme sinut alkuun hetkessä.",
+    "ordersCtA": "Ota tilaukset käyttöön nyt"
   },
   "limitWarningEmail": {
     "subject": "Lähestyt ilmaista skannausrajaasi IQ Restissä",

@@ -2330,7 +2330,16 @@
     "bodyScanner": "Začeli ste ustvarjati meni svoje restavracije na IQ Rest, vendar ga še niste dokončali — brez skrbi, lahko vam pomagamo.",
     "helpOfferScanner": "Preprosto odgovorite na to e-pošto s svojim menijem v katerem koli formatu — fotografija, PDF ali povezava do vaše spletne strani. Vse bomo nastavili namesto vas, popolnoma brezplačno.",
     "selfServiceScanner": "Ali če to raje naredite sami, traja le nekaj minut:",
-    "ctaScanner": "Odpri urejevalnik menija"
+    "ctaScanner": "Odpri urejevalnik menija",
+    "subjectOrders": "Nova funkcija: vaše stranke lahko zdaj naročajo neposredno iz menija",
+    "bodyOrders": "Odlične novice! V IQ Rest smo dodali spletno naročanje. Vaše stranke lahko zdaj oddajo naročila neposredno iz vašega digitalnega menija — prek WhatsAppa ali vgrajenega sistema za naročila.",
+    "ordersHowItWorks": "Kako deluje:",
+    "ordersStep1": "Stranka skenira QR kodo, pregleda vaš meni in doda izdelke v košarico",
+    "ordersStep2": "Odda naročilo — to se pošlje na vaš WhatsApp ali shrani na vašo nadzorno ploščo",
+    "ordersStep3": "Vi potrdite in pripravite naročilo — to je vse!",
+    "ordersSetup": "Za aktivacijo naročanja pojdite na svojo nadzorno ploščo → Nastavitve oblikovanja in vklopite funkcijo naročanja. Izberete lahko WhatsApp, vgrajena naročila ali oboje.",
+    "ordersHelp": "Potrebujete pomoč pri nastavitvi? Preprosto odgovorite na to e-pošto — pomagali vam bomo začeti v hipu.",
+    "ordersCtA": "Aktiviraj naročila zdaj"
   },
   "limitWarningEmail": {
     "subject": "Približujete se brezplačni omejitvi skeniranj na IQ Rest",

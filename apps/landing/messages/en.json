@@ -2327,7 +2327,16 @@
     "bodyScanner": "You started creating your restaurant menu on IQ Rest but haven't finished yet — no worries, we can help.",
     "helpOfferScanner": "Just reply to this email with your menu in any format — a photo, PDF, or a link to your website. We'll set everything up for you, completely free.",
     "selfServiceScanner": "Or if you'd rather do it yourself, it only takes a few minutes:",
-    "ctaScanner": "Open Menu Editor"
+    "ctaScanner": "Open Menu Editor",
+    "subjectOrders": "New feature: your customers can now order directly from the menu",
+    "bodyOrders": "Great news! We've added online ordering to IQ Rest. Your customers can now place orders directly from your digital menu — via WhatsApp or through the built-in ordering system.",
+    "ordersHowItWorks": "How it works:",
+    "ordersStep1": "A customer scans the QR code, browses your menu, and adds items to the cart",
+    "ordersStep2": "They submit the order — it's sent to your WhatsApp or saved in your dashboard",
+    "ordersStep3": "You confirm and prepare the order — that's it!",
+    "ordersSetup": "To enable ordering, go to your dashboard → Design settings and turn on the ordering feature. You can choose WhatsApp, built-in orders, or both.",
+    "ordersHelp": "Need help setting it up? Just reply to this email — we'll get you started in no time.",
+    "ordersCtA": "Enable Orders Now"
   },
   "limitWarningEmail": {
     "subject": "You're approaching your free scan limit on IQ Rest",

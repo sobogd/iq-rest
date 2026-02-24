@@ -2330,7 +2330,16 @@
     "bodyScanner": "Has començat a crear el menú del teu restaurant a IQ Rest però encara no l'has acabat — no et preocupis, podem ajudar-te.",
     "helpOfferScanner": "Simplement respon aquest correu amb el teu menú en qualsevol format — una foto, PDF o un enllaç al teu lloc web. Ho configurarem tot per tu, completament gratis.",
     "selfServiceScanner": "O si prefereixes fer-ho tu mateix, només trigues uns minuts:",
-    "ctaScanner": "Obrir editor de menú"
+    "ctaScanner": "Obrir editor de menú",
+    "subjectOrders": "Nova funció: els teus clients ara poden demanar directament des del menú",
+    "bodyOrders": "Bones notícies! Hem afegit comandes en línia a IQ Rest. Els teus clients ara poden fer comandes directament des del teu menú digital — via WhatsApp o a través del sistema de comandes integrat.",
+    "ordersHowItWorks": "Com funciona:",
+    "ordersStep1": "Un client escaneja el codi QR, navega pel teu menú i afegeix articles al carret",
+    "ordersStep2": "Envia la comanda — s'envia al teu WhatsApp o es desa al teu tauler de control",
+    "ordersStep3": "Tu confirmes i prepares la comanda — ja està!",
+    "ordersSetup": "Per activar les comandes, vés al teu tauler de control → Configuració de disseny i activa la funció de comandes. Pots triar WhatsApp, comandes integrades o ambdós.",
+    "ordersHelp": "Necessites ajuda per configurar-ho? Simplement respon a aquest correu — t'ajudarem a començar en un instant.",
+    "ordersCtA": "Activa les comandes ara"
   },
   "limitWarningEmail": {
     "subject": "T'estàs acostant al límit gratuït d'escanejos a IQ Rest",

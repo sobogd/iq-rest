@@ -2330,7 +2330,16 @@
     "bodyScanner": "Ai început să creezi meniul restaurantului tău pe IQ Rest, dar nu l-ai finalizat încă — nu-ți face griji, te putem ajuta.",
     "helpOfferScanner": "Răspunde pur și simplu la acest email cu meniul tău în orice format — o poză, PDF sau un link către site-ul tău. Vom configura totul pentru tine, complet gratuit.",
     "selfServiceScanner": "Sau dacă preferi să o faci singur, durează doar câteva minute:",
-    "ctaScanner": "Deschide editorul de meniu"
+    "ctaScanner": "Deschide editorul de meniu",
+    "subjectOrders": "Funcție nouă: clienții tăi pot acum comanda direct din meniu",
+    "bodyOrders": "Vești grozave! Am adăugat comenzi online în IQ Rest. Clienții tăi pot acum plasa comenzi direct din meniul tău digital — prin WhatsApp sau prin sistemul de comenzi integrat.",
+    "ordersHowItWorks": "Cum funcționează:",
+    "ordersStep1": "Un client scanează codul QR, răsfoiește meniul tău și adaugă produse în coș",
+    "ordersStep2": "Trimite comanda — aceasta este trimisă pe WhatsApp-ul tău sau salvată în panoul de control",
+    "ordersStep3": "Tu confirmi și pregătești comanda — atât!",
+    "ordersSetup": "Pentru a activa comenzile, accesează panoul de control → Setări de design și activează funcția de comenzi. Poți alege WhatsApp, comenzi integrate sau ambele.",
+    "ordersHelp": "Ai nevoie de ajutor la configurare? Răspunde pur și simplu la acest email — te ajutăm să începi într-o clipă.",
+    "ordersCtA": "Activează comenzile acum"
   },
   "limitWarningEmail": {
     "subject": "Te apropii de limita gratuită de scanări pe IQ Rest",

@@ -2330,7 +2330,16 @@
     "bodyScanner": "Sie haben begonnen, Ihr Restaurantmenü auf IQ Rest zu erstellen, es aber noch nicht fertiggestellt — kein Problem, wir können helfen.",
     "helpOfferScanner": "Antworten Sie einfach auf diese E-Mail mit Ihrem Menü in beliebigem Format — ein Foto, PDF oder ein Link zu Ihrer Website. Wir richten alles für Sie ein, völlig kostenlos.",
     "selfServiceScanner": "Oder wenn Sie es lieber selbst machen möchten, dauert es nur wenige Minuten:",
-    "ctaScanner": "Menü-Editor öffnen"
+    "ctaScanner": "Menü-Editor öffnen",
+    "subjectOrders": "Neue Funktion: Ihre Kunden können jetzt direkt über das Menü bestellen",
+    "bodyOrders": "Tolle Neuigkeiten! Wir haben Online-Bestellungen zu IQ Rest hinzugefügt. Ihre Kunden können jetzt direkt über Ihr digitales Menü bestellen — per WhatsApp oder über das integrierte Bestellsystem.",
+    "ordersHowItWorks": "So funktioniert es:",
+    "ordersStep1": "Ein Kunde scannt den QR-Code, durchstöbert Ihr Menü und legt Artikel in den Warenkorb",
+    "ordersStep2": "Die Bestellung wird abgeschickt — sie wird an Ihr WhatsApp gesendet oder in Ihrem Dashboard gespeichert",
+    "ordersStep3": "Sie bestätigen und bereiten die Bestellung vor — das war's!",
+    "ordersSetup": "Um Bestellungen zu aktivieren, gehen Sie zu Ihrem Dashboard → Design-Einstellungen und schalten Sie die Bestellfunktion ein. Sie können WhatsApp, integrierte Bestellungen oder beides wählen.",
+    "ordersHelp": "Brauchen Sie Hilfe bei der Einrichtung? Antworten Sie einfach auf diese E-Mail — wir helfen Ihnen im Handumdrehen.",
+    "ordersCtA": "Bestellungen jetzt aktivieren"
   },
   "limitWarningEmail": {
     "subject": "Sie nähern sich dem kostenlosen Scan-Limit bei IQ Rest",

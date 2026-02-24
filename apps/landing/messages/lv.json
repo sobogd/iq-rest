@@ -2330,7 +2330,16 @@
     "bodyScanner": "Jūs sākāt veidot sava restorāna ēdienkarti IQ Rest, bet vēl neesat to pabeidzis — neuztraucieties, mēs varam palīdzēt.",
     "helpOfferScanner": "Vienkārši atbildiet uz šo e-pastu ar savu ēdienkarti jebkurā formātā — fotoattēls, PDF vai saite uz jūsu mājaslapu. Mēs visu iestatīsim jūsu vietā, pilnīgi bez maksas.",
     "selfServiceScanner": "Vai ja vēlaties to izdarīt pats, tas aizņems tikai dažas minūtes:",
-    "ctaScanner": "Atvērt ēdienkartes redaktoru"
+    "ctaScanner": "Atvērt ēdienkartes redaktoru",
+    "subjectOrders": "Jauna funkcija: jūsu klienti tagad var pasūtīt tieši no ēdienkartes",
+    "bodyOrders": "Lieliskas ziņas! Mēs esam pievienojuši tiešsaistes pasūtīšanu IQ Rest. Jūsu klienti tagad var veikt pasūtījumus tieši no jūsu digitālās ēdienkartes — caur WhatsApp vai iebūvēto pasūtījumu sistēmu.",
+    "ordersHowItWorks": "Kā tas darbojas:",
+    "ordersStep1": "Klients noskenē QR kodu, pārlūko jūsu ēdienkarti un pievieno preces grozam",
+    "ordersStep2": "Iesniedz pasūtījumu — tas tiek nosūtīts uz jūsu WhatsApp vai saglabāts jūsu vadības panelī",
+    "ordersStep3": "Jūs apstiprināt un sagatavojat pasūtījumu — tas ir viss!",
+    "ordersSetup": "Lai iespējotu pasūtīšanu, dodieties uz savu vadības paneli → Dizaina iestatījumi un ieslēdziet pasūtīšanas funkciju. Varat izvēlēties WhatsApp, iebūvētos pasūtījumus vai abus.",
+    "ordersHelp": "Nepieciešama palīdzība iestatīšanā? Vienkārši atbildiet uz šo e-pastu — mēs palīdzēsim jums sākt darbu īsā laikā.",
+    "ordersCtA": "Iespējot pasūtījumus tagad"
   },
   "limitWarningEmail": {
     "subject": "Jūs tuvojaties bezmaksas skenēšanas limitam IQ Rest",

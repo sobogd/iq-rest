@@ -2330,7 +2330,16 @@
     "bodyScanner": "Započeli ste izradu jelovnika vašeg restorana na IQ Rest, ali ga još niste dovršili — ne brinite, možemo vam pomoći.",
     "helpOfferScanner": "Jednostavno odgovorite na ovaj email sa svojim jelovnikom u bilo kojem formatu — fotografija, PDF ili link na vašu web stranicu. Sve ćemo postaviti za vas, potpuno besplatno.",
     "selfServiceScanner": "Ili ako to radije želite napraviti sami, treba samo nekoliko minuta:",
-    "ctaScanner": "Otvori uređivač jelovnika"
+    "ctaScanner": "Otvori uređivač jelovnika",
+    "subjectOrders": "Nova značajka: vaši gosti sada mogu naručivati izravno iz jelovnika",
+    "bodyOrders": "Sjajne vijesti! Dodali smo online naručivanje u IQ Rest. Vaši gosti sada mogu naručivati izravno iz vašeg digitalnog jelovnika — putem WhatsAppa ili ugrađenog sustava za narudžbe.",
+    "ordersHowItWorks": "Kako funkcionira:",
+    "ordersStep1": "Gost skenira QR kod, pregledava vaš jelovnik i dodaje stavke u košaricu",
+    "ordersStep2": "Šalje narudžbu — ona stiže na vaš WhatsApp ili se sprema u vašu upravljačku ploču",
+    "ordersStep3": "Vi potvrdite i pripremite narudžbu — to je sve!",
+    "ordersSetup": "Za aktivaciju naručivanja, idite na svoju upravljačku ploču → Postavke dizajna i uključite značajku naručivanja. Možete odabrati WhatsApp, ugrađene narudžbe ili oboje.",
+    "ordersHelp": "Trebate pomoć pri postavljanju? Jednostavno odgovorite na ovaj email — pomoći ćemo vam da počnete u tren oka.",
+    "ordersCtA": "Aktiviraj narudžbe sada"
   },
   "limitWarningEmail": {
     "subject": "Približavate se besplatnom ograničenju skeniranja na IQ Rest",

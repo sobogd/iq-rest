@@ -2330,7 +2330,16 @@
     "bodyScanner": "Elkezdtétek létrehozni az éttermi menüt az IQ Rest oldalon, de még nem fejeztétek be — semmi gond, tudunk segíteni.",
     "helpOfferScanner": "Egyszerűen válaszoljon erre az e-mailre a menüjével bármilyen formátumban — fotó, PDF vagy egy link a weboldalára. Mindent beállítunk Önnek, teljesen ingyen.",
     "selfServiceScanner": "Vagy ha inkább saját maga szeretné megcsinálni, csak néhány percet vesz igénybe:",
-    "ctaScanner": "Menüszerkesztő megnyitása"
+    "ctaScanner": "Menüszerkesztő megnyitása",
+    "subjectOrders": "Új funkció: ügyfelei most közvetlenül a menüből rendelhetnek",
+    "bodyOrders": "Nagyszerű hír! Online rendelést adtunk hozzá az IQ Rest-hez. Ügyfelei most közvetlenül a digitális menüjéből rendelhetnek — WhatsApp-on vagy a beépített rendelési rendszeren keresztül.",
+    "ordersHowItWorks": "Hogyan működik:",
+    "ordersStep1": "Egy ügyfél beolvassa a QR-kódot, böngészi a menüjét és termékeket ad a kosárhoz",
+    "ordersStep2": "Elküldi a rendelést — az eljut a WhatsApp-jára vagy mentésre kerül az irányítópultjában",
+    "ordersStep3": "Ön jóváhagyja és elkészíti a rendelést — ennyi az egész!",
+    "ordersSetup": "A rendelések bekapcsolásához lépjen az irányítópultjába → Design beállítások és kapcsolja be a rendelési funkciót. Választhat WhatsApp-ot, beépített rendeléseket vagy mindkettőt.",
+    "ordersHelp": "Segítségre van szüksége a beállításhoz? Egyszerűen válaszoljon erre az e-mailre — pillanatok alatt segítünk az indulásban.",
+    "ordersCtA": "Rendelések bekapcsolása most"
   },
   "limitWarningEmail": {
     "subject": "Közeledik az ingyenes szkennelési korlátjához az IQ Rest-en",

@@ -2330,7 +2330,16 @@
     "bodyScanner": "Je bent begonnen met het maken van je restaurantmenu op IQ Rest maar hebt het nog niet afgerond — geen zorgen, wij kunnen helpen.",
     "helpOfferScanner": "Antwoord gewoon op deze e-mail met je menu in elk formaat — een foto, PDF of een link naar je website. Wij regelen alles voor je, helemaal gratis.",
     "selfServiceScanner": "Of als je het liever zelf doet, het kost maar een paar minuten:",
-    "ctaScanner": "Menu-editor openen"
+    "ctaScanner": "Menu-editor openen",
+    "subjectOrders": "Nieuwe functie: je klanten kunnen nu rechtstreeks vanuit het menu bestellen",
+    "bodyOrders": "Goed nieuws! We hebben online bestellen toegevoegd aan IQ Rest. Je klanten kunnen nu rechtstreeks vanuit je digitale menu bestellen — via WhatsApp of via het ingebouwde bestelsysteem.",
+    "ordersHowItWorks": "Hoe het werkt:",
+    "ordersStep1": "Een klant scant de QR-code, bekijkt je menu en voegt items toe aan het winkelmandje",
+    "ordersStep2": "De bestelling wordt verzonden — deze wordt naar je WhatsApp gestuurd of opgeslagen in je dashboard",
+    "ordersStep3": "Je bevestigt en bereidt de bestelling voor — dat is alles!",
+    "ordersSetup": "Om bestellen te activeren, ga naar je dashboard → Designinstellingen en schakel de bestelfunctie in. Je kunt kiezen voor WhatsApp, ingebouwde bestellingen of beide.",
+    "ordersHelp": "Hulp nodig bij het instellen? Antwoord gewoon op deze e-mail — we helpen je in een mum van tijd op weg.",
+    "ordersCtA": "Bestellingen nu activeren"
   },
   "limitWarningEmail": {
     "subject": "Je nadert je gratis scanlimiet op IQ Rest",

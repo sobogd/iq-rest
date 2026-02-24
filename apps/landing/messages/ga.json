@@ -2330,7 +2330,16 @@
     "bodyScanner": "Thosaigh tú ag cruthú biachlár do bhialainne ar IQ Rest ach níor chríochnaigh tú fós é — ná bí buartha, is féidir linn cabhrú.",
     "helpOfferScanner": "Freagair an ríomhphost seo le do bhiachlár i bhformáid ar bith — grianghraf, PDF nó nasc chuig do shuíomh gréasáin. Socróimid gach rud duit, saor in aisce go hiomlán.",
     "selfServiceScanner": "Nó más fearr leat é a dhéanamh tú féin, ní thógann sé ach cúpla nóiméad:",
-    "ctaScanner": "Oscail eagarthóir an bhiachlár"
+    "ctaScanner": "Oscail eagarthóir an bhiachlár",
+    "subjectOrders": "Gné nua: is féidir le do chustaiméirí ordú a chur isteach go díreach ón mbiachlár anois",
+    "bodyOrders": "Dea-scéal! Chuireamar orduithe ar líne le IQ Rest. Is féidir le do chustaiméirí orduithe a chur isteach go díreach ó do bhiachlár digiteach anois — trí WhatsApp nó tríd an gcóras ordaithe ionsuite.",
+    "ordersHowItWorks": "Conas a oibríonn sé:",
+    "ordersStep1": "Scanann custaiméir an cód QR, brabhsálann sé do bhiachlár agus cuireann sé earraí leis an gcairt",
+    "ordersStep2": "Cuireann sé an t-ordú isteach — seoltar é chuig do WhatsApp nó sábháiltear ar do dheais é",
+    "ordersStep3": "Deimhníonn tú agus ullmhaíonn tú an t-ordú — sin é!",
+    "ordersSetup": "Chun orduithe a chumasú, téigh chuig do dheais → Socruithe dearaidh agus cuir an ghné ordaithe ar siúl. Is féidir leat WhatsApp, orduithe ionsuite nó an dá cheann a roghnú.",
+    "ordersHelp": "An bhfuil cabhair uait chun é a shocrú? Freagair an ríomhphost seo — cuirfimid tús leat gan mhoill.",
+    "ordersCtA": "Cumasaigh orduithe anois"
   },
   "limitWarningEmail": {
     "subject": "Tá tú ag druidim le do theorainn saor in aisce scananna ar IQ Rest",
