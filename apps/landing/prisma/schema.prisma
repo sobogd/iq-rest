@@ -137,7 +137,7 @@ model Restaurant {
   orderNameEnabled       Boolean @default(true)
   orderPhoneEnabled      Boolean @default(false)
   orderAddressEnabled    Boolean @default(false)
-  orderMode              String  @default("whatsapp") // "whatsapp" | "internal" | "both"
+  orderMode              String  @default("internal") // "internal" | "whatsapp" | "both"
 
   company      Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
   tables       Table[]

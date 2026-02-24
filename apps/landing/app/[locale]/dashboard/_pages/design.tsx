@@ -92,7 +92,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
   const initOrderName = initialRestaurant?.orderNameEnabled ?? true;
   const initOrderPhone = initialRestaurant?.orderPhoneEnabled ?? false;
   const initOrderAddress = initialRestaurant?.orderAddressEnabled ?? false;
-  const initOrderMode = initialRestaurant?.orderMode ?? "whatsapp";
+  const initOrderMode = initialRestaurant?.orderMode ?? "internal";
 
   const [ordersEnabled, setOrdersEnabled] = useState(initOrdersEnabled);
   const [orderName, setOrderName] = useState(initOrderName);
@@ -533,7 +533,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
               <div className="space-y-2">
                 <label className="text-sm font-medium">{t("orderMode")}:</label>
                 <div className="space-y-2">
-                  {(["whatsapp", "internal", "both"] as const).map((mode) => {
+                  {(["internal", "whatsapp", "both"] as const).map((mode) => {
                     const needsWhatsApp = mode === "whatsapp" || mode === "both";
                     const isDisabled = !ordersEnabled || (needsWhatsApp && !hasWhatsApp);
                     return (
