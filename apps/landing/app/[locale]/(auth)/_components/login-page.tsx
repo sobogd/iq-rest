@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,21 @@ import { analytics } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
+declare global {
+  interface Window {
+    google?: {
+      accounts: {
+        id: {
+          initialize: (config: Record<string, unknown>) => void;
+          renderButton: (element: HTMLElement, config: Record<string, unknown>) => void;
+        };
+      };
+    };
+  }
+}
+
+const GOOGLE_CLIENT_ID = "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
+
 export function LoginPage() {
   const locale = useLocale();
   const router = useRouter();
@@ -18,11 +33,97 @@ export function LoginPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const googleButtonRef = useRef<HTMLDivElement>(null);
+
+  const handleGoogleResponse = useCallback(
+    async (response: { credential: string }) => {
+      setStatus("loading");
+      setErrorMessage("");
+
+      try {
+        const res = await fetch("/api/auth/google", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ credential: response.credential }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          if (isAdminEmail(data.email)) {
+            analytics.disableTracking();
+          }
+          if (data.isNewUser) {
+            track(DashboardEvent.AUTH_SIGNUP);
+          }
+          await analytics.linkSession(data.userId);
+
+          const step = data.onboardingStep ?? 0;
+          if (step < 2) {
+            router.replace("/onboarding/name");
+          } else {
+            router.replace("/dashboard");
+          }
+        } else {
+          setErrorMessage(data.error || t("errors.sendFailed"));
+          setStatus("error");
+        }
+      } catch {
+        setErrorMessage(t("errors.sendFailed"));
+        setStatus("error");
+      }
+    },
+    [router, t]
+  );
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_LOGIN);
     emailInputRef.current?.focus();
   }, []);
+
+  // Load Google Identity Services
+  useEffect(() => {
+    if (!GOOGLE_CLIENT_ID) return;
+
+    const initGoogle = () => {
+      if (!window.google || !googleButtonRef.current) return;
+
+      window.google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID,
+        callback: handleGoogleResponse,
+        ux_mode: "popup",
+      });
+
+      window.google.accounts.id.renderButton(googleButtonRef.current, {
+        type: "standard",
+        shape: "rectangular",
+        theme: "outline",
+        size: "large",
+        width: 280,
+        text: "continue_with",
+        logo_alignment: "left",
+      });
+    };
+
+    if (window.google) {
+      initGoogle();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://accounts.google.com/gsi/client";
+    script.async = true;
+    script.defer = true;
+    script.onload = initGoogle;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup only if we added it
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, [handleGoogleResponse]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -130,6 +231,21 @@ export function LoginPage() {
                 )}
                 {t("continue")}
               </Button>
+
+              {GOOGLE_CLIENT_ID && (
+                <>
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-border" />
+                    </div>
+                    <span className="relative bg-background px-3 text-xs text-muted-foreground">
+                      {t("or")}
+                    </span>
+                  </div>
+
+                  <div ref={googleButtonRef} className="flex justify-center" />
+                </>
+              )}
 
               <p className="text-xs text-muted-foreground/70">
                 {t("consent.text")}{" "}
