@@ -1,8 +1,10 @@
 import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
 import { PricingSection, CtaSection } from "../_components";
 import { JsonLd, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
 import type { Metadata } from "next";
+import type { SupportedCurrency } from "@/lib/country-currency-map";
 
 export async function generateMetadata({
   params,
@@ -139,7 +141,12 @@ export default async function PricingPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations("pricing");
+  const [t, cookieStore] = await Promise.all([
+    getTranslations("pricing"),
+    cookies(),
+  ]);
+
+  const currency = (cookieStore.get("currency")?.value as SupportedCurrency) || "EUR";
 
   const breadcrumbSchema = createBreadcrumbSchema(locale, [
     { name: "Home", path: "" },
@@ -151,7 +158,7 @@ export default async function PricingPage({
       <PageView slug="pricing" />
       <JsonLd data={pricingProductSchema} />
       <JsonLd data={breadcrumbSchema} />
-      <PricingSection />
+      <PricingSection currency={currency} />
       <CtaSection />
     </>
   );

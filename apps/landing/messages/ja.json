@@ -514,11 +514,12 @@
         "description": "IQ Restを試すのに最適",
         "cta": "無料で作成",
         "highlights": [
-          "レストランウェブサイト",
+          "レストランのウェブサイト",
           "QRメニュー",
-          "月320スキャン",
+          "320スキャン/月",
+          "30WhatsApp注文/月",
           "2言語",
-          "IQ Restの透かし入り",
+          "IQ Restのウォーターマーク付き",
           "分析"
         ]
       },
@@ -527,8 +528,9 @@
         "description": "小規模レストランに最適",
         "cta": "始める",
         "highlights": [
-          "無料のすべて、さらに：",
-          "無制限スキャン",
+          "無料のすべてに加えて:",
+          "無制限のスキャン",
+          "無制限のWhatsApp注文",
           "6言語",
           "AI翻訳",
           "カスタムカラーテーマ",
@@ -540,7 +542,7 @@
         "description": "成長中のレストランチェーン向け",
         "cta": "始める",
         "highlights": [
-          "ベーシックのすべて、さらに：",
+          "基本のすべてに加えて:",
           "無制限の言語",
           "複数のレストラン",
           "カスタムドメイン",
@@ -567,26 +569,30 @@
       "reservations": "予約",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "IQ Restブランドなし"
+      "noBranding": "IQ Restブランドなし",
+      "whatsappOrders": "WhatsApp注文"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30件 / 月"
       },
       "basic": {
         "scans": "無制限",
         "languages": "6",
         "aiTranslation": "100 / 月",
-        "aiImages": "35 / 月"
+        "aiImages": "35 / 月",
+        "whatsappOrders": "無制限"
       },
       "pro": {
         "scans": "無制限",
         "languages": "無制限",
         "aiTranslation": "無制限",
-        "aiImages": "無制限"
+        "aiImages": "無制限",
+        "whatsappOrders": "無制限"
       }
     },
     "socialProof": "500以上のレストランに信頼されています",
@@ -622,41 +628,12 @@
     }
   },
   "languages": {
-    "en": "英語",
-    "es": "スペイン語",
-    "de": "ドイツ語",
-    "fr": "フランス語",
-    "it": "イタリア語",
-    "pt": "ポルトガル語",
-    "nl": "オランダ語",
-    "pl": "ポーランド語",
-    "ru": "ロシア語",
-    "uk": "ウクライナ語",
-    "sv": "スウェーデン語",
-    "da": "デンマーク語",
-    "no": "ノルウェー語",
-    "fi": "フィンランド語",
-    "cs": "チェコ語",
-    "el": "ギリシャ語",
-    "tr": "トルコ語",
-    "ro": "ルーマニア語",
-    "hu": "ハンガリー語",
-    "bg": "ブルガリア語",
-    "hr": "クロアチア語",
-    "sk": "スロバキア語",
-    "sl": "スロベニア語",
-    "et": "エストニア語",
-    "lv": "ラトビア語",
-    "lt": "リトアニア語",
-    "sr": "セルビア語",
-    "ca": "カタルーニャ語",
-    "ga": "アイルランド語",
-    "is": "アイスランド語",
-    "fa": "ペルシア語",
-    "ar": "アラビア語",
-    "ja": "日本語",
-    "ko": "韓国語",
-    "zh": "中国語"
+    "meta": {
+      "title": "言語を選択 - IQ Rest QRメニュー",
+      "description": "お好みの言語でIQ Restをご覧ください。35言語に対応。"
+    },
+    "title": "言語を選択",
+    "subtitle": "お好みの言語でIQ Restをご覧ください"
   },
   "cookieConsent": {
     "title": "Cookieを使用しています",
@@ -1321,6 +1298,23 @@
       "sulphites": "亜硫酸塩",
       "lupin": "ルピナス",
       "molluscs": "軟体動物"
+    },
+    "order": {
+      "add": "追加",
+      "yourOrder": "あなたの注文",
+      "emptyCart": "カートは空です",
+      "total": "合計",
+      "yourName": "あなたの名前",
+      "namePlaceholder": "名前を入力してください",
+      "yourPhone": "電話",
+      "phonePlaceholder": "あなたの電話番号",
+      "yourAddress": "住所",
+      "addressPlaceholder": "配達先住所",
+      "comment": "コメント",
+      "commentPlaceholder": "特別なリクエストはありますか？",
+      "sendWhatsApp": "WhatsAppで送信",
+      "clearCart": "カートをクリア",
+      "orderLimitReached": "月間注文上限に達しました。来月再度お試しください。"
     }
   },
   "faq": {
@@ -1473,11 +1467,26 @@
       "subtitle": "AI翻訳、無制限スキャン、予約など",
       "featuresTitle": "すべての特典",
       "features": {
-        "aiTranslations": { "title": "AIメニュー翻訳", "description": "ワンクリックでメニューを25以上の言語に翻訳" },
-        "aiImages": { "title": "AI画像強化", "description": "料理の写真を瞬時にプロフェッショナルに" },
-        "reservations": { "title": "テーブル予約", "description": "お客様がメニューから直接テーブルを予約可能" },
-        "unlimitedScans": { "title": "無制限QRスキャン", "description": "メニューを閲覧するお客様の数に制限なし" },
-        "noBranding": { "title": "IQ Restブランディングなし", "description": "あなたのメニュー、あなたのブランド — クリーンでプロフェッショナル" }
+        "aiTranslations": {
+          "title": "AIメニュー翻訳",
+          "description": "ワンクリックでメニューを25以上の言語に翻訳"
+        },
+        "aiImages": {
+          "title": "AI画像強化",
+          "description": "料理の写真を瞬時にプロフェッショナルに"
+        },
+        "reservations": {
+          "title": "テーブル予約",
+          "description": "お客様がメニューから直接テーブルを予約可能"
+        },
+        "unlimitedScans": {
+          "title": "無制限QRスキャン",
+          "description": "メニューを閲覧するお客様の数に制限なし"
+        },
+        "noBranding": {
+          "title": "IQ Restブランディングなし",
+          "description": "あなたのメニュー、あなたのブランド — クリーンでプロフェッショナル"
+        }
       },
       "comparePlans": "すべてのプランを比較",
       "hideComparison": "比較を非表示",
@@ -1743,7 +1752,22 @@
       "generating": "生成中...",
       "generateError": "背景の生成に失敗しました",
       "previewButton": "予約する",
-      "preview": "プレビュー"
+      "preview": "プレビュー",
+      "ordersSection": "WhatsApp注文",
+      "ordersRequireWhatsApp": "注文を有効にするには、連絡先ページにWhatsApp番号を追加してください",
+      "ordersEnabled": "注文を有効にする",
+      "ordersOn": "顧客はWhatsAppで注文できます",
+      "ordersOff": "注文は無効です",
+      "ordersFieldsHint": "有効なフィールドは顧客が入力する必要があります",
+      "ordersName": "名前",
+      "ordersNameOn": "顧客は名前を入力する必要があります",
+      "ordersNameOff": "名前フィールドは非表示",
+      "ordersPhone": "電話",
+      "ordersPhoneOn": "顧客は電話番号を入力する必要があります",
+      "ordersPhoneOff": "電話フィールドは非表示",
+      "ordersAddress": "配達先住所",
+      "ordersAddressOn": "顧客は配達先住所を入力する必要があります",
+      "ordersAddressOff": "住所フィールドは非表示"
     },
     "general": {
       "save": "保存",
@@ -1770,7 +1794,9 @@
       "scanAddMore": "追加する",
       "scanStart": "スキャン",
       "scanPoolTitle": "メニューページ",
-      "scanPoolSubtitle": "紙のメニューの写真またはPDFファイルを追加してください。最大5ファイル。"
+      "scanPoolSubtitle": "紙のメニューの写真またはPDFファイルを追加してください。最大5ファイル。",
+      "demoButton": "サンプルメニューを入力",
+      "demoDescription": "まだ準備ができていませんか？サンプルメニューでどのように機能するか試してみてください。"
     },
     "onboarding": {
       "nameTitle": "お店の名前は？",
@@ -2313,13 +2339,5 @@
     "ownerBody": "レストランに新しい予約が入りました。",
     "ownerCta": "予約を確認",
     "ownerSignature": "敬具<br>IQ Rest チーム"
-  },
-  "languages": {
-    "meta": {
-      "title": "言語を選択 - IQ Rest QRメニュー",
-      "description": "お好みの言語でIQ Restをご覧ください。35言語に対応。"
-    },
-    "title": "言語を選択",
-    "subtitle": "お好みの言語でIQ Restをご覧ください"
   }
 }

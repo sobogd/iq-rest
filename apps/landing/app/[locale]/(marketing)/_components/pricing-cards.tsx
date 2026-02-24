@@ -49,6 +49,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "website", free: true, basic: true, pro: true },
   { key: "qrMenu", free: true, basic: true, pro: true },
   { key: "scans", free: "value", basic: "value", pro: "value" },
+  { key: "whatsappOrders", free: "value", basic: "value", pro: "value" },
   { key: "languages", free: "value", basic: "value", pro: "value" },
   { key: "aiTranslation", free: false, basic: "value", pro: "value" },
   { key: "aiImages", free: false, basic: "value", pro: "value" },
@@ -66,12 +67,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
 interface PricingCardsProps {
   hideComparison?: boolean;
   hideButtons?: boolean;
-}
-
-function getCurrencyFromCookie(): SupportedCurrency {
-  if (typeof document === "undefined") return "EUR";
-  const match = document.cookie.match(/currency=([^;]+)/);
-  return (match?.[1] as SupportedCurrency) || "EUR";
+  currency: SupportedCurrency;
 }
 
 function formatPrice(amount: number, currency: SupportedCurrency): string {
@@ -89,17 +85,11 @@ function formatPrice(amount: number, currency: SupportedCurrency): string {
   return `${formatted} ${info.symbol}`;
 }
 
-export function PricingCards({ hideComparison = false, hideButtons = false }: PricingCardsProps) {
+export function PricingCards({ hideComparison = false, hideButtons = false, currency }: PricingCardsProps) {
   const t = useTranslations("pricing");
   const [isYearly, setIsYearly] = useState(true);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const [currency, setCurrency] = useState<SupportedCurrency>("EUR");
-
-  // Читаем валюту из куки при монтировании
-  useEffect(() => {
-    setCurrency(getCurrencyFromCookie());
-  }, []);
 
   useEffect(() => {
     if (!api) return;

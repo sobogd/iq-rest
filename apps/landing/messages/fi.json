@@ -514,11 +514,12 @@
         "description": "Täydellinen IQ Restin kokeilemiseen",
         "cta": "Luo ilmaiseksi",
         "highlights": [
-          "Ravintolasivusto",
-          "QR-menu",
+          "Ravintolan verkkosivusto",
+          "QR Menu",
           "320 skannausta/kuukausi",
+          "30 WhatsApp-tilausta/kuukausi",
           "2 kieltä",
-          "IQ Rest vesileimalla",
+          "IQ Rest -vesileimalla",
           "Analytiikka"
         ]
       },
@@ -527,12 +528,13 @@
         "description": "Loistava pienille ravintoloille",
         "cta": "Aloita",
         "highlights": [
-          "Kaikki Ilmaisessa, lisäksi:",
+          "Kaikki ilmaisessa, lisäksi:",
           "Rajattomat skannaukset",
+          "Rajattomat WhatsApp-tilaukset",
           "6 kieltä",
           "AI-käännökset",
           "Mukautettu väriteema",
-          "Varausmahdollisuus"
+          "Varaus"
         ]
       },
       "pro": {
@@ -540,11 +542,11 @@
         "description": "Kasvaville ravintolaketjuille",
         "cta": "Aloita",
         "highlights": [
-          "Kaikki Peruspaketissa, lisäksi:",
+          "Kaikki perusversiossa, lisäksi:",
           "Rajattomat kielet",
           "Useita ravintoloita",
-          "Oma domain",
-          "Prioriteettituki"
+          "Mukautettu verkkotunnus",
+          "Etusijatuettu tuki"
         ]
       }
     },
@@ -567,26 +569,30 @@
       "reservations": "Varausmahdollisuus",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Ilman IQ Rest -brändiä"
+      "noBranding": "Ilman IQ Rest -brändiä",
+      "whatsappOrders": "WhatsApp-tilaukset"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / kuukausi"
       },
       "basic": {
         "scans": "Rajattomat",
         "languages": "6",
         "aiTranslation": "100 / kk",
-        "aiImages": "35 / kk"
+        "aiImages": "35 / kk",
+        "whatsappOrders": "Rajoittamaton"
       },
       "pro": {
         "scans": "Rajattomat",
         "languages": "Rajattomat",
         "aiTranslation": "Rajaton",
-        "aiImages": "Rajattomat"
+        "aiImages": "Rajattomat",
+        "whatsappOrders": "Rajoittamaton"
       }
     },
     "socialProof": "Yli 500 ravintolaa luottaa meihin",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Englanti",
-    "es": "Espanja"
+    "meta": {
+      "title": "Valitse kieli - IQ Rest QR-menu",
+      "description": "Selaa IQ Restiä haluamallasi kielellä. Saatavilla 35 kielellä."
+    },
+    "title": "Valitse kieli",
+    "subtitle": "Selaa IQ Restiä haluamallasi kielellä"
   },
   "cookieConsent": {
     "title": "Käytämme evästeitä",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfiitit",
       "lupin": "Lupiini",
       "molluscs": "Nilviäiset"
+    },
+    "order": {
+      "add": "Lisää",
+      "yourOrder": "Tilauksesi",
+      "emptyCart": "Ostoskorisi on tyhjä",
+      "total": "Yhteensä",
+      "yourName": "Nimesi",
+      "namePlaceholder": "Syötä nimesi",
+      "yourPhone": "Puhelin",
+      "phonePlaceholder": "Puhelinnumerosi",
+      "yourAddress": "Osoite",
+      "addressPlaceholder": "Toimitusosoite",
+      "comment": "Kommentti",
+      "commentPlaceholder": "Onko erityisiä pyyntöjä?",
+      "sendWhatsApp": "Lähetä WhatsAppin kautta",
+      "clearCart": "Tyhjennä ostoskori",
+      "orderLimitReached": "Kuukausittainen tilausten raja on saavutettu. Yritä uudelleen ensi kuussa."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI-käännökset, rajattomat skannaukset, varaukset ja paljon muuta",
       "featuresTitle": "Kaikki mitä saat",
       "features": {
-        "aiTranslations": { "title": "AI-Menukäännökset", "description": "Käännä menusi yli 25 kielelle yhdellä klikkauksella" },
-        "aiImages": { "title": "AI-Kuvanparannus", "description": "Tee ruokakuvistasi ammattimaisia hetkessä" },
-        "reservations": { "title": "Pöytävaraukset", "description": "Anna asiakkaiden varata pöytiä suoraan menustasi" },
-        "unlimitedScans": { "title": "Rajattomat QR-Skannaukset", "description": "Ei rajoituksia sille, kuinka moni asiakas näkee menusi" },
-        "noBranding": { "title": "Ei IQ Rest -Brändiä", "description": "Sinun menusi, sinun brändisi — siisti ja ammattimainen" }
+        "aiTranslations": {
+          "title": "AI-Menukäännökset",
+          "description": "Käännä menusi yli 25 kielelle yhdellä klikkauksella"
+        },
+        "aiImages": {
+          "title": "AI-Kuvanparannus",
+          "description": "Tee ruokakuvistasi ammattimaisia hetkessä"
+        },
+        "reservations": {
+          "title": "Pöytävaraukset",
+          "description": "Anna asiakkaiden varata pöytiä suoraan menustasi"
+        },
+        "unlimitedScans": {
+          "title": "Rajattomat QR-Skannaukset",
+          "description": "Ei rajoituksia sille, kuinka moni asiakas näkee menusi"
+        },
+        "noBranding": {
+          "title": "Ei IQ Rest -Brändiä",
+          "description": "Sinun menusi, sinun brändisi — siisti ja ammattimainen"
+        }
       },
       "comparePlans": "Vertaa kaikkia paketteja",
       "hideComparison": "Piilota vertailu",
@@ -1710,7 +1752,22 @@
       "generating": "Luodaan...",
       "generateError": "Taustan luominen epäonnistui",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp-tilaukset",
+      "ordersRequireWhatsApp": "Lisää WhatsApp-numero Osoitteet-sivulle, jotta tilaukset voidaan aktivoida",
+      "ordersEnabled": "Ota tilaukset käyttöön",
+      "ordersOn": "Asiakkaat voivat tilata WhatsAppin kautta",
+      "ordersOff": "Tilaaminen pois päältä",
+      "ordersFieldsHint": "Käytössä olevat kentät ovat pakollisia asiakkaalle täytettäväksi",
+      "ordersName": "Nimi",
+      "ordersNameOn": "Asiakkaan on annettava nimensä",
+      "ordersNameOff": "Nimikenttä piilotettu",
+      "ordersPhone": "Puhelin",
+      "ordersPhoneOn": "Asiakkaan on annettava puhelinnumeronsa",
+      "ordersPhoneOff": "Puhelinkenttä piilotettu",
+      "ordersAddress": "Toimitusosoite",
+      "ordersAddressOn": "Asiakkaan on annettava toimitusosoite",
+      "ordersAddressOff": "Osoitekenttä piilotettu"
     },
     "general": {
       "save": "Tallenna",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Lisää lisää",
       "scanStart": "Skannaa",
       "scanPoolTitle": "Menusivut",
-      "scanPoolSubtitle": "Lisää kuvia tai PDF-tiedostoja paperimenustasi. Enintään 5 tiedostoa."
+      "scanPoolSubtitle": "Lisää kuvia tai PDF-tiedostoja paperimenustasi. Enintään 5 tiedostoa.",
+      "demoButton": "Täytä esimerkkimenulla",
+      "demoDescription": "Eikö ole vielä valmis? Kokeile esimerkkimenulla nähdäksesi, miten se toimii."
     },
     "onboarding": {
       "nameTitle": "Mikä on paikkasi nimi?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Ravintolaasi on tehty uusi varaus.",
     "ownerCta": "Näytä varaukset",
     "ownerSignature": "Ystävällisin terveisin,<br>IQ Rest Team"
-  },
-  "languages": {
-    "meta": {
-      "title": "Valitse kieli - IQ Rest QR-menu",
-      "description": "Selaa IQ Restiä haluamallasi kielellä. Saatavilla 35 kielellä."
-    },
-    "title": "Valitse kieli",
-    "subtitle": "Selaa IQ Restiä haluamallasi kielellä"
   }
 }

@@ -50,7 +50,8 @@ model Company {
   emailUnsubscribed Boolean @default(false)
 
   // Limits
-  scanLimit Int @default(320)
+  scanLimit  Int @default(320)
+  orderLimit Int @default(30)
 
   // Upsell
   upsellShownAt DateTime?
@@ -130,6 +131,12 @@ model Restaurant {
   reservationSlotMinutes Int     @default(90)
   workingHoursStart      String  @default("10:00")
   workingHoursEnd        String  @default("22:00")
+
+  // WhatsApp orders
+  ordersEnabled          Boolean @default(false)
+  orderNameEnabled       Boolean @default(true)
+  orderPhoneEnabled      Boolean @default(false)
+  orderAddressEnabled    Boolean @default(false)
 
   company      Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
   tables       Table[]

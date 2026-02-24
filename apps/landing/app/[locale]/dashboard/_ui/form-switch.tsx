@@ -25,13 +25,13 @@ export function FormSwitch({
   const switchId = id || label.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <div className="space-y-2">
-      <Label htmlFor={switchId}>{label}</Label>
+    <div className={label ? "space-y-2" : ""}>
+      {label && <Label htmlFor={switchId}>{label}</Label>}
       <label
         htmlFor={switchId}
-        className="flex items-center justify-between h-12 px-4 rounded-xl border border-border bg-muted/30 cursor-pointer"
+        className="flex items-center justify-between min-h-12 py-2 px-4 rounded-xl border border-border bg-muted/30 cursor-pointer gap-3"
       >
-        <span className="text-base md:text-sm">{checked ? activeText : inactiveText}</span>
+        <span className="text-base md:text-sm leading-tight">{checked ? activeText : inactiveText}</span>
         <Switch
           id={switchId}
           checked={checked}

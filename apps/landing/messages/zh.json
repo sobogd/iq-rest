@@ -516,7 +516,8 @@
         "highlights": [
           "餐厅网站",
           "QR菜单",
-          "每月320次扫描",
+          "320次扫描/月",
+          "30个WhatsApp订单/月",
           "2种语言",
           "带有IQ Rest水印",
           "分析"
@@ -527,8 +528,9 @@
         "description": "适合小型餐厅",
         "cta": "开始使用",
         "highlights": [
-          "免费版所有功能，加上：",
+          "免费版中的所有内容，另外：",
           "无限扫描",
+          "无限WhatsApp订单",
           "6种语言",
           "AI翻译",
           "自定义颜色主题",
@@ -540,9 +542,9 @@
         "description": "适合成长中的连锁餐厅",
         "cta": "开始使用",
         "highlights": [
-          "基础版所有功能，加上：",
+          "基础版中的所有内容，另外：",
           "无限语言",
-          "多家餐厅",
+          "多个餐厅",
           "自定义域名",
           "优先支持"
         ]
@@ -567,26 +569,30 @@
       "reservations": "预订",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "无IQ Rest品牌标识"
+      "noBranding": "无IQ Rest品牌标识",
+      "whatsappOrders": "WhatsApp 订单"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "每月 30 个"
       },
       "basic": {
         "scans": "无限",
         "languages": "6",
         "aiTranslation": "100 / 月",
-        "aiImages": "35 / 月"
+        "aiImages": "35 / 月",
+        "whatsappOrders": "无限制"
       },
       "pro": {
         "scans": "无限",
         "languages": "无限",
         "aiTranslation": "无限",
-        "aiImages": "无限"
+        "aiImages": "无限",
+        "whatsappOrders": "无限制"
       }
     },
     "socialProof": "超过500家餐厅信赖我们",
@@ -622,41 +628,12 @@
     }
   },
   "languages": {
-    "en": "英语",
-    "es": "西班牙语",
-    "de": "德语",
-    "fr": "法语",
-    "it": "意大利语",
-    "pt": "葡萄牙语",
-    "nl": "荷兰语",
-    "pl": "波兰语",
-    "ru": "俄语",
-    "uk": "乌克兰语",
-    "sv": "瑞典语",
-    "da": "丹麦语",
-    "no": "挪威语",
-    "fi": "芬兰语",
-    "cs": "捷克语",
-    "el": "希腊语",
-    "tr": "土耳其语",
-    "ro": "罗马尼亚语",
-    "hu": "匈牙利语",
-    "bg": "保加利亚语",
-    "hr": "克罗地亚语",
-    "sk": "斯洛伐克语",
-    "sl": "斯洛文尼亚语",
-    "et": "爱沙尼亚语",
-    "lv": "拉脱维亚语",
-    "lt": "立陶宛语",
-    "sr": "塞尔维亚语",
-    "ca": "加泰罗尼亚语",
-    "ga": "爱尔兰语",
-    "is": "冰岛语",
-    "fa": "波斯语",
-    "ar": "阿拉伯语",
-    "ja": "日语",
-    "ko": "韩语",
-    "zh": "中文"
+    "meta": {
+      "title": "选择语言 - IQ Rest QR 菜单",
+      "description": "用您偏好的语言浏览 IQ Rest。支持35种语言。"
+    },
+    "title": "选择语言",
+    "subtitle": "用您偏好的语言浏览 IQ Rest"
   },
   "cookieConsent": {
     "title": "我们使用Cookie",
@@ -1321,6 +1298,23 @@
       "sulphites": "亚硫酸盐",
       "lupin": "羽扇豆",
       "molluscs": "软体动物"
+    },
+    "order": {
+      "add": "添加",
+      "yourOrder": "您的订单",
+      "emptyCart": "您的购物车是空的",
+      "total": "总计",
+      "yourName": "您的姓名",
+      "namePlaceholder": "输入您的姓名",
+      "yourPhone": "电话",
+      "phonePlaceholder": "您的电话号码",
+      "yourAddress": "地址",
+      "addressPlaceholder": "送货地址",
+      "comment": "备注",
+      "commentPlaceholder": "有什么特别要求吗？",
+      "sendWhatsApp": "通过WhatsApp发送",
+      "clearCart": "清空购物车",
+      "orderLimitReached": "每月订单限制已达到。请下个月再试。"
     }
   },
   "faq": {
@@ -1473,11 +1467,26 @@
       "subtitle": "AI翻译、无限扫描、预订等",
       "featuresTitle": "您将获得的一切",
       "features": {
-        "aiTranslations": { "title": "AI菜单翻译", "description": "一键将菜单翻译成25+种语言" },
-        "aiImages": { "title": "AI图像增强", "description": "让您的菜品照片瞬间变得专业" },
-        "reservations": { "title": "餐桌预订", "description": "让顾客直接从菜单预订餐桌" },
-        "unlimitedScans": { "title": "无限QR扫描", "description": "没有限制多少顾客查看您的菜单" },
-        "noBranding": { "title": "无IQ Rest品牌标识", "description": "您的菜单，您的品牌——干净专业" }
+        "aiTranslations": {
+          "title": "AI菜单翻译",
+          "description": "一键将菜单翻译成25+种语言"
+        },
+        "aiImages": {
+          "title": "AI图像增强",
+          "description": "让您的菜品照片瞬间变得专业"
+        },
+        "reservations": {
+          "title": "餐桌预订",
+          "description": "让顾客直接从菜单预订餐桌"
+        },
+        "unlimitedScans": {
+          "title": "无限QR扫描",
+          "description": "没有限制多少顾客查看您的菜单"
+        },
+        "noBranding": {
+          "title": "无IQ Rest品牌标识",
+          "description": "您的菜单，您的品牌——干净专业"
+        }
       },
       "comparePlans": "比较所有方案",
       "hideComparison": "隐藏比较",
@@ -1743,7 +1752,22 @@
       "generating": "生成中...",
       "generateError": "生成背景失败",
       "previewButton": "预订餐桌",
-      "preview": "预览"
+      "preview": "预览",
+      "ordersSection": "WhatsApp 订单",
+      "ordersRequireWhatsApp": "在联系人页面添加WhatsApp号码以启用订单",
+      "ordersEnabled": "启用订单",
+      "ordersOn": "顾客可以通过WhatsApp下单",
+      "ordersOff": "下单已禁用",
+      "ordersFieldsHint": "启用的字段是顾客必须填写的",
+      "ordersName": "姓名",
+      "ordersNameOn": "顾客必须输入他们的姓名",
+      "ordersNameOff": "姓名字段隐藏",
+      "ordersPhone": "电话",
+      "ordersPhoneOn": "顾客必须输入他们的电话",
+      "ordersPhoneOff": "电话字段隐藏",
+      "ordersAddress": "送货地址",
+      "ordersAddressOn": "顾客必须输入送货地址",
+      "ordersAddressOff": "地址字段隐藏"
     },
     "general": {
       "save": "保存",
@@ -1770,7 +1794,9 @@
       "scanAddMore": "添加更多",
       "scanStart": "扫描",
       "scanPoolTitle": "菜单页面",
-      "scanPoolSubtitle": "添加纸质菜单的照片或PDF文件。最多5个文件。"
+      "scanPoolSubtitle": "添加纸质菜单的照片或PDF文件。最多5个文件。",
+      "demoButton": "填充示例菜单",
+      "demoDescription": "还没准备好？试试示例菜单，看看它是如何工作的。"
     },
     "onboarding": {
       "nameTitle": "您的店铺叫什么名字？",
@@ -2313,13 +2339,5 @@
     "ownerBody": "您的餐厅收到了一个新预约。",
     "ownerCta": "查看预约",
     "ownerSignature": "此致敬礼，<br>IQ Rest 团队"
-  },
-  "languages": {
-    "meta": {
-      "title": "选择语言 - IQ Rest QR 菜单",
-      "description": "用您偏好的语言浏览 IQ Rest。支持35种语言。"
-    },
-    "title": "选择语言",
-    "subtitle": "用您偏好的语言浏览 IQ Rest"
   }
 }

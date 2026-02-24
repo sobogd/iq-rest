@@ -517,8 +517,9 @@
           "Sitio web del restaurante",
           "Menú QR",
           "320 escaneos/mes",
+          "30 pedidos por WhatsApp/mes",
           "2 idiomas",
-          "Con marca de agua IQ Rest",
+          "Con marca de agua de IQ Rest",
           "Analíticas"
         ]
       },
@@ -529,10 +530,11 @@
         "highlights": [
           "Todo en Gratis, más:",
           "Escaneos ilimitados",
+          "Pedidos por WhatsApp ilimitados",
           "6 idiomas",
-          "Traducciones IA",
+          "Traducciones de IA",
           "Tema de color personalizado",
-          "Reservaciones"
+          "Reservas"
         ]
       },
       "pro": {
@@ -567,26 +569,30 @@
       "reservations": "Reservaciones",
       "multiRestaurant": "Múltiples restaurantes",
       "customDomain": "Dominio personalizado",
-      "noBranding": "Sin marca IQ Rest"
+      "noBranding": "Sin marca IQ Rest",
+      "whatsappOrders": "Pedidos por WhatsApp"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mes"
       },
       "basic": {
         "scans": "Ilimitado",
         "languages": "6",
         "aiTranslation": "100 / mes",
-        "aiImages": "35 / mes"
+        "aiImages": "35 / mes",
+        "whatsappOrders": "Ilimitado"
       },
       "pro": {
         "scans": "Ilimitados",
         "languages": "Ilimitados",
         "aiTranslation": "Ilimitadas",
-        "aiImages": "Ilimitadas"
+        "aiImages": "Ilimitadas",
+        "whatsappOrders": "Ilimitado"
       }
     },
     "socialProof": "Más de 500 restaurantes confían en nosotros",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Inglés",
-    "es": "Español"
+    "meta": {
+      "title": "Elegir idioma - IQ Rest QR Menú",
+      "description": "Navega IQ Rest en tu idioma preferido. Disponible en 35 idiomas."
+    },
+    "title": "Elegir idioma",
+    "subtitle": "Navega IQ Rest en tu idioma preferido"
   },
   "cookieConsent": {
     "title": "Usamos cookies",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfitos",
       "lupin": "Altramuces",
       "molluscs": "Moluscos"
+    },
+    "order": {
+      "add": "Agregar",
+      "yourOrder": "Tu Pedido",
+      "emptyCart": "Tu carrito está vacío",
+      "total": "Total",
+      "yourName": "Tu Nombre",
+      "namePlaceholder": "Ingresa tu nombre",
+      "yourPhone": "Teléfono",
+      "phonePlaceholder": "Tu número de teléfono",
+      "yourAddress": "Dirección",
+      "addressPlaceholder": "Dirección de entrega",
+      "comment": "Comentario",
+      "commentPlaceholder": "¿Alguna solicitud especial?",
+      "sendWhatsApp": "Enviar por WhatsApp",
+      "clearCart": "Vaciar carrito",
+      "orderLimitReached": "Límite mensual de pedidos alcanzado. Por favor, inténtelo de nuevo el próximo mes."
     }
   },
   "faq": {
@@ -1725,7 +1752,22 @@
       "generating": "Generando...",
       "generateError": "Error al generar el fondo",
       "previewButton": "Reservar mesa",
-      "preview": "Vista previa"
+      "preview": "Vista previa",
+      "ordersSection": "Pedidos por WhatsApp",
+      "ordersRequireWhatsApp": "Agrega un número de WhatsApp en la página de Contactos para habilitar los pedidos",
+      "ordersEnabled": "Habilitar Pedidos",
+      "ordersOn": "Los clientes pueden pedir por WhatsApp",
+      "ordersOff": "Pedidos deshabilitados",
+      "ordersFieldsHint": "Los campos habilitados son obligatorios para que el cliente los complete",
+      "ordersName": "Nombre",
+      "ordersNameOn": "El cliente debe ingresar su nombre",
+      "ordersNameOff": "Campo de nombre oculto",
+      "ordersPhone": "Teléfono",
+      "ordersPhoneOn": "El cliente debe ingresar su teléfono",
+      "ordersPhoneOff": "Campo de teléfono oculto",
+      "ordersAddress": "Dirección de Entrega",
+      "ordersAddressOn": "El cliente debe ingresar la dirección de entrega",
+      "ordersAddressOff": "Campo de dirección oculto"
     },
     "general": {
       "save": "Guardar",
@@ -2297,13 +2339,5 @@
     "ownerBody": "Se ha realizado una nueva reserva en tu restaurante.",
     "ownerCta": "Ver reservas",
     "ownerSignature": "Un saludo,<br>Equipo IQ Rest"
-  },
-  "languages": {
-    "meta": {
-      "title": "Elegir idioma - IQ Rest QR Menú",
-      "description": "Navega IQ Rest en tu idioma preferido. Disponible en 35 idiomas."
-    },
-    "title": "Elegir idioma",
-    "subtitle": "Navega IQ Rest en tu idioma preferido"
   }
 }

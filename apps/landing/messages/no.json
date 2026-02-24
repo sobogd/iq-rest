@@ -515,8 +515,9 @@
         "cta": "Opprett gratis",
         "highlights": [
           "Restaurantnettsted",
-          "QR Meny",
+          "QR-meny",
           "320 skanninger/måned",
+          "30 WhatsApp-bestillinger/måned",
           "2 språk",
           "Med IQ Rest vannmerke",
           "Analyse"
@@ -529,9 +530,10 @@
         "highlights": [
           "Alt i Gratis, pluss:",
           "Ubegrensede skanninger",
+          "Ubegrensede WhatsApp-bestillinger",
           "6 språk",
-          "AI oversettelser",
-          "Egendefinert fargetema",
+          "AI-oversettelser",
+          "Egendefinert fargevalg",
           "Reservasjoner"
         ]
       },
@@ -543,7 +545,7 @@
           "Alt i Grunnleggende, pluss:",
           "Ubegrensede språk",
           "Flere restauranter",
-          "Eget domene",
+          "Egendefinert domene",
           "Prioritert støtte"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Reservasjoner",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Uten IQ Rest-merking"
+      "noBranding": "Uten IQ Rest-merking",
+      "whatsappOrders": "WhatsApp-bestillinger"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / måned"
       },
       "basic": {
         "scans": "Ubegrenset",
         "languages": "6",
         "aiTranslation": "100 / måned",
-        "aiImages": "35 / mnd"
+        "aiImages": "35 / mnd",
+        "whatsappOrders": "Ubegrenset"
       },
       "pro": {
         "scans": "Ubegrenset",
         "languages": "Ubegrenset",
         "aiTranslation": "Ubegrenset",
-        "aiImages": "Ubegrenset"
+        "aiImages": "Ubegrenset",
+        "whatsappOrders": "Ubegrenset"
       }
     },
     "socialProof": "Over 500 restauranter stoler på oss",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Engelsk",
-    "es": "Spansk"
+    "meta": {
+      "title": "Velg språk - IQ Rest QR-meny",
+      "description": "Se IQ Rest på ditt foretrukne språk. Tilgjengelig på 35 språk."
+    },
+    "title": "Velg språk",
+    "subtitle": "Se IQ Rest på ditt foretrukne språk"
   },
   "cookieConsent": {
     "title": "Vi bruker informasjonskapsler",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfitter",
       "lupin": "Lupin",
       "molluscs": "Bløtdyr"
+    },
+    "order": {
+      "add": "Legg til",
+      "yourOrder": "Din bestilling",
+      "emptyCart": "Handlekurven din er tom",
+      "total": "Total",
+      "yourName": "Ditt navn",
+      "namePlaceholder": "Skriv inn ditt navn",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Ditt telefonnummer",
+      "yourAddress": "Adresse",
+      "addressPlaceholder": "Leveringsadresse",
+      "comment": "Kommentar",
+      "commentPlaceholder": "Eventuelle spesielle forespørsel?",
+      "sendWhatsApp": "Send via WhatsApp",
+      "clearCart": "Tøm handlekurv",
+      "orderLimitReached": "Månedlig bestillingsgrense nådd. Vennligst prøv igjen neste måned."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI-oversettelser, ubegrensede skanninger, reservasjoner og mer",
       "featuresTitle": "Alt du får",
       "features": {
-        "aiTranslations": { "title": "AI-Menyoversettelser", "description": "Oversett menyen din til 25+ språk med ett klikk" },
-        "aiImages": { "title": "AI-Bildeforbedring", "description": "Gjør matbildene dine profesjonelle umiddelbart" },
-        "reservations": { "title": "Bordreservasjoner", "description": "La kunder bestille bord direkte fra menyen din" },
-        "unlimitedScans": { "title": "Ubegrensede QR-Skanninger", "description": "Ingen begrensninger på hvor mange kunder som ser menyen din" },
-        "noBranding": { "title": "Ingen IQ Rest-Branding", "description": "Din meny, ditt merke — rent og profesjonelt" }
+        "aiTranslations": {
+          "title": "AI-Menyoversettelser",
+          "description": "Oversett menyen din til 25+ språk med ett klikk"
+        },
+        "aiImages": {
+          "title": "AI-Bildeforbedring",
+          "description": "Gjør matbildene dine profesjonelle umiddelbart"
+        },
+        "reservations": {
+          "title": "Bordreservasjoner",
+          "description": "La kunder bestille bord direkte fra menyen din"
+        },
+        "unlimitedScans": {
+          "title": "Ubegrensede QR-Skanninger",
+          "description": "Ingen begrensninger på hvor mange kunder som ser menyen din"
+        },
+        "noBranding": {
+          "title": "Ingen IQ Rest-Branding",
+          "description": "Din meny, ditt merke — rent og profesjonelt"
+        }
       },
       "comparePlans": "Sammenlign alle planer",
       "hideComparison": "Skjul sammenligning",
@@ -1710,7 +1752,22 @@
       "generating": "Genererer...",
       "generateError": "Kunne ikke generere bakgrunn",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp-bestillinger",
+      "ordersRequireWhatsApp": "Legg til et WhatsApp-nummer på kontaktsiden for å aktivere bestillinger",
+      "ordersEnabled": "Aktiver bestillinger",
+      "ordersOn": "Kunder kan bestille via WhatsApp",
+      "ordersOff": "Bestilling deaktivert",
+      "ordersFieldsHint": "Aktiverte felt er påkrevd for kunden å fylle ut",
+      "ordersName": "Navn",
+      "ordersNameOn": "Kunden må oppgi sitt navn",
+      "ordersNameOff": "Navn felt skjult",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Kunden må oppgi sitt telefonnummer",
+      "ordersPhoneOff": "Telefonfelt skjult",
+      "ordersAddress": "Leveringsadresse",
+      "ordersAddressOn": "Kunden må oppgi leveringsadresse",
+      "ordersAddressOff": "Adressefelt skjult"
     },
     "general": {
       "save": "Lagre",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Legg til flere",
       "scanStart": "Skann",
       "scanPoolTitle": "Menysider",
-      "scanPoolSubtitle": "Legg til bilder eller PDF-filer av papirmenyen din. Opptil 5 filer."
+      "scanPoolSubtitle": "Legg til bilder eller PDF-filer av papirmenyen din. Opptil 5 filer.",
+      "demoButton": "Fyll med eksempelmeny",
+      "demoDescription": "Ikke klar ennå? Prøv med en eksempelmeny for å se hvordan det fungerer."
     },
     "onboarding": {
       "nameTitle": "Hva heter stedet ditt?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "En ny reservasjon er gjort på din restaurant.",
     "ownerCta": "Se reservasjoner",
     "ownerSignature": "Med vennlig hilsen,<br>IQ Rest Team"
-  },
-  "languages": {
-    "meta": {
-      "title": "Velg språk - IQ Rest QR-meny",
-      "description": "Se IQ Rest på ditt foretrukne språk. Tilgjengelig på 35 språk."
-    },
-    "title": "Velg språk",
-    "subtitle": "Se IQ Rest på ditt foretrukne språk"
   }
 }

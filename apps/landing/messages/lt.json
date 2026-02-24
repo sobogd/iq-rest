@@ -516,9 +516,10 @@
         "highlights": [
           "Restorano svetainė",
           "QR Meniu",
-          "320 nuskenavimų/mėn",
+          "320 nuskaitymų/mėnesį",
+          "30 WhatsApp užsakymų/mėnesį",
           "2 kalbos",
-          "Su IQ Rest vandenženklis",
+          "Su IQ Rest vandens ženklu",
           "Analitika"
         ]
       },
@@ -527,11 +528,12 @@
         "description": "Puikiai tinka mažiems restoranams",
         "cta": "Pradėti",
         "highlights": [
-          "Viskas, kas yra Nemokamai, plius:",
-          "Neriboti nuskenavimai",
+          "Viskas nemokamai, plius:",
+          "Neriboti nuskaitymai",
+          "Neriboti WhatsApp užsakymai",
           "6 kalbos",
           "AI vertimai",
-          "Individuali spalvų tema",
+          "Pasirinktinis spalvų tema",
           "Rezervacijos"
         ]
       },
@@ -540,10 +542,10 @@
         "description": "Augančioms restoranų grandinėms",
         "cta": "Pradėti",
         "highlights": [
-          "Viskas, kas yra Pagrindiniame, plius:",
+          "Viskas pagrindiniame, plius:",
           "Neribotos kalbos",
-          "Keli restoranai",
-          "Nuosavas domenas",
+          "Daugelis restoranų",
+          "Pasirinktinis domenas",
           "Prioritetinė pagalba"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Rezervacijos",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Be IQ Rest prekės ženklo"
+      "noBranding": "Be IQ Rest prekės ženklo",
+      "whatsappOrders": "WhatsApp užsakymai"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mėn."
       },
       "basic": {
         "scans": "Neriboti",
         "languages": "6",
         "aiTranslation": "100 / mėn.",
-        "aiImages": "35 / mėn."
+        "aiImages": "35 / mėn.",
+        "whatsappOrders": "Neribota"
       },
       "pro": {
         "scans": "Neriboti",
         "languages": "Neriboti",
         "aiTranslation": "Neribota",
-        "aiImages": "Neriboti"
+        "aiImages": "Neriboti",
+        "whatsappOrders": "Neribota"
       }
     },
     "socialProof": "Daugiau nei 500 restoranų mumis pasitiki",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Anglų",
-    "es": "Ispanų"
+    "meta": {
+      "title": "Pasirinkite kalbą - IQ Rest QR meniu",
+      "description": "Naršykite IQ Rest pageidaujama kalba. Prieinama 35 kalbomis."
+    },
+    "title": "Pasirinkite kalbą",
+    "subtitle": "Naršykite IQ Rest pageidaujama kalba"
   },
   "cookieConsent": {
     "title": "Mes naudojame slapukus",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfitai",
       "lupin": "Lupinas",
       "molluscs": "Moliuskai"
+    },
+    "order": {
+      "add": "Pridėti",
+      "yourOrder": "Jūsų užsakymas",
+      "emptyCart": "Jūsų krepšelis tuščias",
+      "total": "Iš viso",
+      "yourName": "Jūsų vardas",
+      "namePlaceholder": "Įveskite savo vardą",
+      "yourPhone": "Telefonas",
+      "phonePlaceholder": "Jūsų telefono numeris",
+      "yourAddress": "Adresas",
+      "addressPlaceholder": "Pristatymo adresas",
+      "comment": "Komentaras",
+      "commentPlaceholder": "Ar turite specialių pageidavimų?",
+      "sendWhatsApp": "Siųsti per WhatsApp",
+      "clearCart": "Išvalyti krepšelį",
+      "orderLimitReached": "Mėnesio užsakymų limitas pasiektas. Prašome bandyti vėl kitą mėnesį."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI vertimai, neriboti nuskaitymai, rezervacijos ir daugiau",
       "featuresTitle": "Viskas ką gausite",
       "features": {
-        "aiTranslations": { "title": "AI Meniu Vertimai", "description": "Išverskite meniu į 25+ kalbų vienu paspaudimu" },
-        "aiImages": { "title": "AI Vaizdų Pagerinimas", "description": "Padarykite patiekalų nuotraukas profesionalias akimirksniu" },
-        "reservations": { "title": "Stalų Rezervacijos", "description": "Leiskite klientams rezervuoti stalus tiesiai iš meniu" },
-        "unlimitedScans": { "title": "Neriboti QR Nuskaitymai", "description": "Jokių apribojimų kiek klientų mato jūsų meniu" },
-        "noBranding": { "title": "Be IQ Rest Prekės Ženklo", "description": "Jūsų meniu, jūsų prekės ženklas — švarus ir profesionalus" }
+        "aiTranslations": {
+          "title": "AI Meniu Vertimai",
+          "description": "Išverskite meniu į 25+ kalbų vienu paspaudimu"
+        },
+        "aiImages": {
+          "title": "AI Vaizdų Pagerinimas",
+          "description": "Padarykite patiekalų nuotraukas profesionalias akimirksniu"
+        },
+        "reservations": {
+          "title": "Stalų Rezervacijos",
+          "description": "Leiskite klientams rezervuoti stalus tiesiai iš meniu"
+        },
+        "unlimitedScans": {
+          "title": "Neriboti QR Nuskaitymai",
+          "description": "Jokių apribojimų kiek klientų mato jūsų meniu"
+        },
+        "noBranding": {
+          "title": "Be IQ Rest Prekės Ženklo",
+          "description": "Jūsų meniu, jūsų prekės ženklas — švarus ir profesionalus"
+        }
       },
       "comparePlans": "Palyginti visus planus",
       "hideComparison": "Slėpti palyginimą",
@@ -1710,7 +1752,22 @@
       "generating": "Generuojama...",
       "generateError": "Nepavyko sugeneruoti fono",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp užsakymai",
+      "ordersRequireWhatsApp": "Pridėkite WhatsApp numerį Kontaktų puslapyje, kad įgalintumėte užsakymus",
+      "ordersEnabled": "Įgalinti užsakymus",
+      "ordersOn": "Klientai gali užsisakyti per WhatsApp",
+      "ordersOff": "Užsakymas išjungtas",
+      "ordersFieldsHint": "Įgalinti laukai yra privalomi klientui užpildyti",
+      "ordersName": "Vardas",
+      "ordersNameOn": "Klientas privalo įvesti savo vardą",
+      "ordersNameOff": "Vardo laukas paslėptas",
+      "ordersPhone": "Telefonas",
+      "ordersPhoneOn": "Klientas privalo įvesti savo telefoną",
+      "ordersPhoneOff": "Telefono laukas paslėptas",
+      "ordersAddress": "Pristatymo adresas",
+      "ordersAddressOn": "Klientas privalo įvesti pristatymo adresą",
+      "ordersAddressOff": "Adreso laukas paslėptas"
     },
     "general": {
       "save": "Išsaugoti",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Pridėti daugiau",
       "scanStart": "Skenuoti",
       "scanPoolTitle": "Meniu puslapiai",
-      "scanPoolSubtitle": "Pridėkite nuotraukas arba PDF failus savo popierinio meniu. Iki 5 failų."
+      "scanPoolSubtitle": "Pridėkite nuotraukas arba PDF failus savo popierinio meniu. Iki 5 failų.",
+      "demoButton": "Užpildyti pavyzdiniu menu",
+      "demoDescription": "Dar nesate pasiruošę? Išbandykite su pavyzdiniu menu, kad pamatytumėte, kaip tai veikia."
     },
     "onboarding": {
       "nameTitle": "Koks jūsų vietos pavadinimas?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Jūsų restorane atlikta nauja rezervacija.",
     "ownerCta": "Peržiūrėti rezervacijas",
     "ownerSignature": "Pagarbiai,<br>IQ Rest komanda"
-  },
-  "languages": {
-    "meta": {
-      "title": "Pasirinkite kalbą - IQ Rest QR meniu",
-      "description": "Naršykite IQ Rest pageidaujama kalba. Prieinama 35 kalbomis."
-    },
-    "title": "Pasirinkite kalbą",
-    "subtitle": "Naršykite IQ Rest pageidaujama kalba"
   }
 }

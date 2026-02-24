@@ -514,11 +514,12 @@
         "description": "Parfait pour essayer IQ Rest",
         "cta": "Créer Gratuit",
         "highlights": [
-          "Site web de restaurant",
+          "Site web du restaurant",
           "Menu QR",
           "320 scans/mois",
+          "30 commandes WhatsApp/mois",
           "2 langues",
-          "Avec filigrane IQ Rest",
+          "Avec le filigrane IQ Rest",
           "Analytique"
         ]
       },
@@ -529,8 +530,9 @@
         "highlights": [
           "Tout dans Gratuit, plus :",
           "Scans illimités",
+          "Commandes WhatsApp illimitées",
           "6 langues",
-          "Traductions par IA",
+          "Traductions AI",
           "Thème de couleur personnalisé",
           "Réservations"
         ]
@@ -542,7 +544,7 @@
         "highlights": [
           "Tout dans Basique, plus :",
           "Langues illimitées",
-          "Plusieurs restaurants",
+          "Restaurants multiples",
           "Domaine personnalisé",
           "Support prioritaire"
         ]
@@ -567,26 +569,30 @@
       "reservations": "Réservations",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Sans marque IQ Rest"
+      "noBranding": "Sans marque IQ Rest",
+      "whatsappOrders": "Commandes WhatsApp"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mois"
       },
       "basic": {
         "scans": "Illimité",
         "languages": "6",
         "aiTranslation": "100 / mois",
-        "aiImages": "35 / mois"
+        "aiImages": "35 / mois",
+        "whatsappOrders": "Illimité"
       },
       "pro": {
         "scans": "Illimité",
         "languages": "Illimité",
         "aiTranslation": "Illimité",
-        "aiImages": "Illimité"
+        "aiImages": "Illimité",
+        "whatsappOrders": "Illimité"
       }
     },
     "socialProof": "Plus de 500 restaurants nous font confiance",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Anglais",
-    "es": "Espagnol"
+    "meta": {
+      "title": "Choisir la langue - IQ Rest QR Menu",
+      "description": "Parcourez IQ Rest dans votre langue préférée. Disponible en 35 langues."
+    },
+    "title": "Choisir la langue",
+    "subtitle": "Parcourez IQ Rest dans votre langue préférée"
   },
   "cookieConsent": {
     "title": "Nous utilisons des cookies",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfites",
       "lupin": "Lupin",
       "molluscs": "Mollusques"
+    },
+    "order": {
+      "add": "Ajouter",
+      "yourOrder": "Votre commande",
+      "emptyCart": "Votre panier est vide",
+      "total": "Total",
+      "yourName": "Votre nom",
+      "namePlaceholder": "Entrez votre nom",
+      "yourPhone": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "yourAddress": "Adresse",
+      "addressPlaceholder": "Adresse de livraison",
+      "comment": "Commentaire",
+      "commentPlaceholder": "Des demandes spéciales ?",
+      "sendWhatsApp": "Envoyer via WhatsApp",
+      "clearCart": "Vider le panier",
+      "orderLimitReached": "Limite de commandes mensuelles atteinte. Veuillez réessayer le mois prochain."
     }
   },
   "faq": {
@@ -1725,7 +1752,22 @@
       "generating": "Génération...",
       "generateError": "Échec de la génération du fond",
       "previewButton": "Réserver une table",
-      "preview": "Aperçu"
+      "preview": "Aperçu",
+      "ordersSection": "Commandes WhatsApp",
+      "ordersRequireWhatsApp": "Ajoutez un numéro WhatsApp sur la page Contacts pour activer les commandes",
+      "ordersEnabled": "Activer les commandes",
+      "ordersOn": "Les clients peuvent commander via WhatsApp",
+      "ordersOff": "Commande désactivée",
+      "ordersFieldsHint": "Les champs activés sont requis pour que le client les remplisse",
+      "ordersName": "Nom",
+      "ordersNameOn": "Le client doit entrer son nom",
+      "ordersNameOff": "Champ nom caché",
+      "ordersPhone": "Téléphone",
+      "ordersPhoneOn": "Le client doit entrer son téléphone",
+      "ordersPhoneOff": "Champ téléphone caché",
+      "ordersAddress": "Adresse de livraison",
+      "ordersAddressOn": "Le client doit entrer l'adresse de livraison",
+      "ordersAddressOff": "Champ adresse caché"
     },
     "general": {
       "save": "Enregistrer",
@@ -1752,7 +1794,9 @@
       "scanAddMore": "Ajouter plus",
       "scanStart": "Scanner",
       "scanPoolTitle": "Pages du menu",
-      "scanPoolSubtitle": "Ajoutez des photos ou fichiers PDF de votre menu papier. Jusqu'à 5 fichiers."
+      "scanPoolSubtitle": "Ajoutez des photos ou fichiers PDF de votre menu papier. Jusqu'à 5 fichiers.",
+      "demoButton": "Remplir avec un menu d'exemple",
+      "demoDescription": "Pas encore prêt ? Essayez avec un menu d'exemple pour voir comment cela fonctionne."
     },
     "onboarding": {
       "nameTitle": "Comment s'appelle votre établissement ?",
@@ -2295,13 +2339,5 @@
     "ownerBody": "Une nouvelle réservation a été effectuée dans votre restaurant.",
     "ownerCta": "Voir les réservations",
     "ownerSignature": "Cordialement,<br>L'équipe IQ Rest"
-  },
-  "languages": {
-    "meta": {
-      "title": "Choisir la langue - IQ Rest QR Menu",
-      "description": "Parcourez IQ Rest dans votre langue préférée. Disponible en 35 langues."
-    },
-    "title": "Choisir la langue",
-    "subtitle": "Parcourez IQ Rest dans votre langue préférée"
   }
 }

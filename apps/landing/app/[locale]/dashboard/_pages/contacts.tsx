@@ -35,7 +35,6 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   const initWhatsapp = isSampleContacts ? "" : (initialRestaurant?.whatsapp || "");
   const initLat = initialRestaurant?.y ? parseFloat(initialRestaurant.y) : undefined;
   const initLng = initialRestaurant?.x ? parseFloat(initialRestaurant.x) : undefined;
-
   const [phone, setPhone] = useState(initPhone);
   const [instagram, setInstagram] = useState(initInstagram);
   const [whatsapp, setWhatsapp] = useState(initWhatsapp);

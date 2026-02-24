@@ -514,11 +514,12 @@
         "description": "Ideální pro vyzkoušení IQ Rest",
         "cta": "Vytvořit zdarma",
         "highlights": [
-          "Webové stránky restaurace",
+          "Webová stránka restaurace",
           "QR Menu",
-          "320 skenů/měsíc",
+          "320 skenování/měsíc",
+          "30 objednávek přes WhatsApp/měsíc",
           "2 jazyky",
-          "S vodoznakem IQ Rest",
+          "S vodotiskem IQ Rest",
           "Analytika"
         ]
       },
@@ -528,9 +529,10 @@
         "cta": "Začněte",
         "highlights": [
           "Vše v bezplatné verzi, navíc:",
-          "Neomezené skeny",
+          "Neomezené skenování",
+          "Neomezené objednávky přes WhatsApp",
           "6 jazyků",
-          "Překlady pomocí AI",
+          "AI překlady",
           "Vlastní barevné téma",
           "Rezervace"
         ]
@@ -567,26 +569,30 @@
       "reservations": "Rezervace",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Bez brandingu IQ Rest"
+      "noBranding": "Bez brandingu IQ Rest",
+      "whatsappOrders": "Objednávky přes WhatsApp"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / měsíc"
       },
       "basic": {
         "scans": "Neomezené",
         "languages": "6",
         "aiTranslation": "100 / měsíc",
-        "aiImages": "35 / měs."
+        "aiImages": "35 / měs.",
+        "whatsappOrders": "Neomezeně"
       },
       "pro": {
         "scans": "Neomezené",
         "languages": "Neomezené",
         "aiTranslation": "Neomezeně",
-        "aiImages": "Neomezené"
+        "aiImages": "Neomezené",
+        "whatsappOrders": "Neomezeně"
       }
     },
     "socialProof": "Důvěřuje nám více než 500 restaurací",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Angličtina",
-    "es": "Španělština"
+    "meta": {
+      "title": "Vybrat jazyk - IQ Rest QR menu",
+      "description": "Prohlížejte IQ Rest ve vašem preferovaném jazyce. K dispozici ve 35 jazycích."
+    },
+    "title": "Vybrat jazyk",
+    "subtitle": "Prohlížejte IQ Rest ve vašem preferovaném jazyce"
   },
   "cookieConsent": {
     "title": "Používáme cookies",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfity",
       "lupin": "Lupina",
       "molluscs": "Měkkýši"
+    },
+    "order": {
+      "add": "Přidat",
+      "yourOrder": "Vaše objednávka",
+      "emptyCart": "Váš košík je prázdný",
+      "total": "Celkem",
+      "yourName": "Vaše jméno",
+      "namePlaceholder": "Zadejte své jméno",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Vaše telefonní číslo",
+      "yourAddress": "Adresa",
+      "addressPlaceholder": "Doručovací adresa",
+      "comment": "Komentář",
+      "commentPlaceholder": "Máte nějaké zvláštní požadavky?",
+      "sendWhatsApp": "Odeslat přes WhatsApp",
+      "clearCart": "Vymazat košík",
+      "orderLimitReached": "Měsíční limit objednávek byl dosažen. Zkuste to prosím znovu příští měsíc."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI překlady, neomezené skenování, rezervace a další",
       "featuresTitle": "Vše co získáte",
       "features": {
-        "aiTranslations": { "title": "AI Překlady Jídelního Lístku", "description": "Přeložte jídelní lístek do 25+ jazyků jedním kliknutím" },
-        "aiImages": { "title": "AI Vylepšení Obrázků", "description": "Udělejte z fotek jídel profesionální fotky okamžitě" },
-        "reservations": { "title": "Rezervace Stolů", "description": "Umožněte zákazníkům rezervovat stoly přímo z jídelního lístku" },
-        "unlimitedScans": { "title": "Neomezené QR Skenování", "description": "Žádné limity na počet zákazníků prohlížejících váš jídelní lístek" },
-        "noBranding": { "title": "Bez Značky IQ Rest", "description": "Váš jídelní lístek, vaše značka — čisté a profesionální" }
+        "aiTranslations": {
+          "title": "AI Překlady Jídelního Lístku",
+          "description": "Přeložte jídelní lístek do 25+ jazyků jedním kliknutím"
+        },
+        "aiImages": {
+          "title": "AI Vylepšení Obrázků",
+          "description": "Udělejte z fotek jídel profesionální fotky okamžitě"
+        },
+        "reservations": {
+          "title": "Rezervace Stolů",
+          "description": "Umožněte zákazníkům rezervovat stoly přímo z jídelního lístku"
+        },
+        "unlimitedScans": {
+          "title": "Neomezené QR Skenování",
+          "description": "Žádné limity na počet zákazníků prohlížejících váš jídelní lístek"
+        },
+        "noBranding": {
+          "title": "Bez Značky IQ Rest",
+          "description": "Váš jídelní lístek, vaše značka — čisté a profesionální"
+        }
       },
       "comparePlans": "Porovnat všechny plány",
       "hideComparison": "Skrýt porovnání",
@@ -1710,7 +1752,22 @@
       "generating": "Generování...",
       "generateError": "Nepodařilo se vygenerovat pozadí",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "Objednávky přes WhatsApp",
+      "ordersRequireWhatsApp": "Přidejte číslo WhatsApp na stránce Kontakty, abyste povolili objednávky",
+      "ordersEnabled": "Povolit objednávky",
+      "ordersOn": "Zákazníci mohou objednávat přes WhatsApp",
+      "ordersOff": "Objednávání zakázáno",
+      "ordersFieldsHint": "Povolená pole jsou povinná pro zákazníka k vyplnění",
+      "ordersName": "Jméno",
+      "ordersNameOn": "Zákazník musí zadat své jméno",
+      "ordersNameOff": "Pole pro jméno skryto",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Zákazník musí zadat svůj telefon",
+      "ordersPhoneOff": "Pole pro telefon skryto",
+      "ordersAddress": "Doručovací adresa",
+      "ordersAddressOn": "Zákazník musí zadat doručovací adresu",
+      "ordersAddressOff": "Pole pro adresu skryto"
     },
     "general": {
       "save": "Uložit",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Přidat další",
       "scanStart": "Skenovat",
       "scanPoolTitle": "Stránky menu",
-      "scanPoolSubtitle": "Přidejte fotky nebo PDF soubory vašeho papírového menu. Až 5 souborů."
+      "scanPoolSubtitle": "Přidejte fotky nebo PDF soubory vašeho papírového menu. Až 5 souborů.",
+      "demoButton": "Vyplnit ukázkovým menu",
+      "demoDescription": "Ještě není připraveno? Vyzkoušejte ukázkové menu, abyste viděli, jak to funguje."
     },
     "onboarding": {
       "nameTitle": "Jak se jmenuje vaše místo?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Ve vaší restauraci byla provedena nová rezervace.",
     "ownerCta": "Zobrazit rezervace",
     "ownerSignature": "S pozdravem,<br>Tým IQ Rest"
-  },
-  "languages": {
-    "meta": {
-      "title": "Vybrat jazyk - IQ Rest QR menu",
-      "description": "Prohlížejte IQ Rest ve vašem preferovaném jazyce. K dispozici ve 35 jazycích."
-    },
-    "title": "Vybrat jazyk",
-    "subtitle": "Prohlížejte IQ Rest ve vašem preferovaném jazyce"
   }
 }

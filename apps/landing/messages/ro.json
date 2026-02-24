@@ -514,12 +514,13 @@
         "description": "Perfect pentru a încerca IQ Rest",
         "cta": "Creează gratuit",
         "highlights": [
-          "Website pentru restaurant",
+          "Website-ul restaurantului",
           "Meniu QR",
           "320 scanări/lună",
+          "30 comenzi WhatsApp/lună",
           "2 limbi",
-          "Cu filigran IQ Rest",
-          "Analize"
+          "Cu watermark IQ Rest",
+          "Analitice"
         ]
       },
       "basic": {
@@ -527,8 +528,9 @@
         "description": "Excelent pentru restaurante mici",
         "cta": "Începeți",
         "highlights": [
-          "Tot ce este în Gratuit, plus:",
+          "Totul în Free, plus:",
           "Scanări nelimitate",
+          "Comenzi WhatsApp nelimitate",
           "6 limbi",
           "Traduceri AI",
           "Temă de culoare personalizată",
@@ -540,9 +542,9 @@
         "description": "Pentru rețele de restaurante în expansiune",
         "cta": "Începeți",
         "highlights": [
-          "Tot ce este în Basic, plus:",
+          "Totul în Basic, plus:",
           "Limbi nelimitate",
-          "Restaurante multiple",
+          "Multiple restaurante",
           "Domeniu personalizat",
           "Asistență prioritară"
         ]
@@ -567,26 +569,30 @@
       "reservations": "Rezerve",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Fără branding IQ Rest"
+      "noBranding": "Fără branding IQ Rest",
+      "whatsappOrders": "Comenzi pe WhatsApp"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / lună"
       },
       "basic": {
         "scans": "Nelimitat",
         "languages": "6",
         "aiTranslation": "100 / lună",
-        "aiImages": "35 / lună"
+        "aiImages": "35 / lună",
+        "whatsappOrders": "Nelimitat"
       },
       "pro": {
         "scans": "Nelimitat",
         "languages": "Nelimitat",
         "aiTranslation": "Nelimitat",
-        "aiImages": "Nelimitat"
+        "aiImages": "Nelimitat",
+        "whatsappOrders": "Nelimitat"
       }
     },
     "socialProof": "Peste 500 de restaurante au încredere în noi",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Engleză",
-    "es": "Spaniolă"
+    "meta": {
+      "title": "Alegeți limba - IQ Rest QR Meniu",
+      "description": "Răsfoiți IQ Rest în limba dvs. preferată. Disponibil în 35 de limbi."
+    },
+    "title": "Alegeți limba",
+    "subtitle": "Răsfoiți IQ Rest în limba dvs. preferată"
   },
   "cookieConsent": {
     "title": "Folosim cookie-uri",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfite",
       "lupin": "Lupin",
       "molluscs": "Moluște"
+    },
+    "order": {
+      "add": "Adaugă",
+      "yourOrder": "Comanda ta",
+      "emptyCart": "Coșul tău este gol",
+      "total": "Total",
+      "yourName": "Numele tău",
+      "namePlaceholder": "Introdu numele tău",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Numărul tău de telefon",
+      "yourAddress": "Adresă",
+      "addressPlaceholder": "Adresă de livrare",
+      "comment": "Comentariu",
+      "commentPlaceholder": "Orice cereri speciale?",
+      "sendWhatsApp": "Trimite prin WhatsApp",
+      "clearCart": "Șterge coșul",
+      "orderLimitReached": "Limita lunară de comenzi a fost atinsă. Vă rugăm să încercați din nou luna viitoare."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "Traduceri AI, scanări nelimitate, rezervări și mai mult",
       "featuresTitle": "Tot ce primești",
       "features": {
-        "aiTranslations": { "title": "Traduceri AI ale Meniului", "description": "Traduce-ți meniul în peste 25 de limbi cu un singur clic" },
-        "aiImages": { "title": "Îmbunătățire Imagini cu AI", "description": "Fă fotografiile preparatelor să arate profesional instantaneu" },
-        "reservations": { "title": "Rezervări Mese", "description": "Permite clienților să rezerve mese direct din meniul tău" },
-        "unlimitedScans": { "title": "Scanări QR Nelimitate", "description": "Fără limite la câți clienți văd meniul tău" },
-        "noBranding": { "title": "Fără Branding IQ Rest", "description": "Meniul tău, brandul tău — curat și profesional" }
+        "aiTranslations": {
+          "title": "Traduceri AI ale Meniului",
+          "description": "Traduce-ți meniul în peste 25 de limbi cu un singur clic"
+        },
+        "aiImages": {
+          "title": "Îmbunătățire Imagini cu AI",
+          "description": "Fă fotografiile preparatelor să arate profesional instantaneu"
+        },
+        "reservations": {
+          "title": "Rezervări Mese",
+          "description": "Permite clienților să rezerve mese direct din meniul tău"
+        },
+        "unlimitedScans": {
+          "title": "Scanări QR Nelimitate",
+          "description": "Fără limite la câți clienți văd meniul tău"
+        },
+        "noBranding": {
+          "title": "Fără Branding IQ Rest",
+          "description": "Meniul tău, brandul tău — curat și profesional"
+        }
       },
       "comparePlans": "Compară toate planurile",
       "hideComparison": "Ascunde comparația",
@@ -1710,7 +1752,22 @@
       "generating": "Se generează...",
       "generateError": "Nu s-a putut genera fundalul",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "Comenzi WhatsApp",
+      "ordersRequireWhatsApp": "Adaugă un număr WhatsApp pe pagina de Contacte pentru a activa comenzile",
+      "ordersEnabled": "Activează comenzile",
+      "ordersOn": "Clienții pot comanda prin WhatsApp",
+      "ordersOff": "Comenzile sunt dezactivate",
+      "ordersFieldsHint": "Câmpurile activate sunt necesare pentru a fi completate de client",
+      "ordersName": "Nume",
+      "ordersNameOn": "Clientul trebuie să introducă numele său",
+      "ordersNameOff": "Câmpul pentru nume este ascuns",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Clientul trebuie să introducă telefonul",
+      "ordersPhoneOff": "Câmpul pentru telefon este ascuns",
+      "ordersAddress": "Adresă de livrare",
+      "ordersAddressOn": "Clientul trebuie să introducă adresa de livrare",
+      "ordersAddressOff": "Câmpul pentru adresă este ascuns"
     },
     "general": {
       "save": "Salvează",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Adaugă mai multe",
       "scanStart": "Scanează",
       "scanPoolTitle": "Pagini meniu",
-      "scanPoolSubtitle": "Adăugați fotografii sau fișiere PDF ale meniului dvs. pe hârtie. Până la 5 fișiere."
+      "scanPoolSubtitle": "Adăugați fotografii sau fișiere PDF ale meniului dvs. pe hârtie. Până la 5 fișiere.",
+      "demoButton": "Umple cu un meniu de probă",
+      "demoDescription": "Nu ești pregătit încă? Încearcă cu un meniu de probă pentru a vedea cum funcționează."
     },
     "onboarding": {
       "nameTitle": "Cum se numește localul tău?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "O nouă rezervare a fost făcută la restaurantul dumneavoastră.",
     "ownerCta": "Vezi rezervările",
     "ownerSignature": "Cu stimă,<br>Echipa IQ Rest"
-  },
-  "languages": {
-    "meta": {
-      "title": "Alegeți limba - IQ Rest QR Meniu",
-      "description": "Răsfoiți IQ Rest în limba dvs. preferată. Disponibil în 35 de limbi."
-    },
-    "title": "Alegeți limba",
-    "subtitle": "Răsfoiți IQ Rest în limba dvs. preferată"
   }
 }

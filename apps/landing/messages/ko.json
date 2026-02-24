@@ -516,8 +516,9 @@
         "highlights": [
           "레스토랑 웹사이트",
           "QR 메뉴",
-          "월 320회 스캔",
-          "2개 언어",
+          "320 스캔/월",
+          "30 WhatsApp 주문/월",
+          "2 언어",
           "IQ Rest 워터마크 포함",
           "분석"
         ]
@@ -527,9 +528,10 @@
         "description": "소규모 레스토랑에 적합",
         "cta": "시작하기",
         "highlights": [
-          "무료의 모든 것, 플러스:",
+          "무료의 모든 것, 추가:",
           "무제한 스캔",
-          "6개 언어",
+          "무제한 WhatsApp 주문",
+          "6 언어",
           "AI 번역",
           "맞춤 색상 테마",
           "예약"
@@ -540,7 +542,7 @@
         "description": "성장하는 레스토랑 체인용",
         "cta": "시작하기",
         "highlights": [
-          "베이직의 모든 것, 플러스:",
+          "기본의 모든 것, 추가:",
           "무제한 언어",
           "여러 레스토랑",
           "맞춤 도메인",
@@ -567,26 +569,30 @@
       "reservations": "예약",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "IQ Rest 브랜딩 없음"
+      "noBranding": "IQ Rest 브랜딩 없음",
+      "whatsappOrders": "WhatsApp 주문"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / 월"
       },
       "basic": {
         "scans": "무제한",
         "languages": "6",
         "aiTranslation": "100 / 월",
-        "aiImages": "35 / 월"
+        "aiImages": "35 / 월",
+        "whatsappOrders": "무제한"
       },
       "pro": {
         "scans": "무제한",
         "languages": "무제한",
         "aiTranslation": "무제한",
-        "aiImages": "무제한"
+        "aiImages": "무제한",
+        "whatsappOrders": "무제한"
       }
     },
     "socialProof": "500개 이상의 레스토랑이 신뢰합니다",
@@ -622,41 +628,12 @@
     }
   },
   "languages": {
-    "en": "영어",
-    "es": "스페인어",
-    "de": "독일어",
-    "fr": "프랑스어",
-    "it": "이탈리아어",
-    "pt": "포르투갈어",
-    "nl": "네덜란드어",
-    "pl": "폴란드어",
-    "ru": "러시아어",
-    "uk": "우크라이나어",
-    "sv": "스웨덴어",
-    "da": "덴마크어",
-    "no": "노르웨이어",
-    "fi": "핀란드어",
-    "cs": "체코어",
-    "el": "그리스어",
-    "tr": "터키어",
-    "ro": "루마니아어",
-    "hu": "헝가리어",
-    "bg": "불가리아어",
-    "hr": "크로아티아어",
-    "sk": "슬로바키아어",
-    "sl": "슬로베니아어",
-    "et": "에스토니아어",
-    "lv": "라트비아어",
-    "lt": "리투아니아어",
-    "sr": "세르비아어",
-    "ca": "카탈루냐어",
-    "ga": "아일랜드어",
-    "is": "아이슬란드어",
-    "fa": "페르시아어",
-    "ar": "아랍어",
-    "ja": "일본어",
-    "ko": "한국어",
-    "zh": "중국어"
+    "meta": {
+      "title": "언어 선택 - IQ Rest QR 메뉴",
+      "description": "원하는 언어로 IQ Rest를 둘러보세요. 35개 언어로 제공됩니다."
+    },
+    "title": "언어 선택",
+    "subtitle": "원하는 언어로 IQ Rest를 둘러보세요"
   },
   "cookieConsent": {
     "title": "쿠키를 사용합니다",
@@ -1321,6 +1298,23 @@
       "sulphites": "아황산염",
       "lupin": "루핀",
       "molluscs": "연체동물"
+    },
+    "order": {
+      "add": "추가",
+      "yourOrder": "주문 내역",
+      "emptyCart": "장바구니가 비어 있습니다",
+      "total": "총합",
+      "yourName": "이름",
+      "namePlaceholder": "이름을 입력하세요",
+      "yourPhone": "전화번호",
+      "phonePlaceholder": "전화번호를 입력하세요",
+      "yourAddress": "주소",
+      "addressPlaceholder": "배달 주소",
+      "comment": "댓글",
+      "commentPlaceholder": "특별 요청 사항이 있나요?",
+      "sendWhatsApp": "WhatsApp으로 전송",
+      "clearCart": "장바구니 비우기",
+      "orderLimitReached": "월 주문 한도에 도달했습니다. 다음 달에 다시 시도해 주세요."
     }
   },
   "faq": {
@@ -1473,11 +1467,26 @@
       "subtitle": "AI 번역, 무제한 스캔, 예약 등",
       "featuresTitle": "받을 수 있는 모든 것",
       "features": {
-        "aiTranslations": { "title": "AI 메뉴 번역", "description": "한 번의 클릭으로 메뉴를 25개 이상의 언어로 번역" },
-        "aiImages": { "title": "AI 이미지 향상", "description": "요리 사진을 즉시 전문적으로 만들기" },
-        "reservations": { "title": "테이블 예약", "description": "고객이 메뉴에서 직접 테이블을 예약할 수 있도록" },
-        "unlimitedScans": { "title": "무제한 QR 스캔", "description": "메뉴를 보는 고객 수에 제한 없음" },
-        "noBranding": { "title": "IQ Rest 브랜딩 없음", "description": "당신의 메뉴, 당신의 브랜드 — 깔끔하고 전문적" }
+        "aiTranslations": {
+          "title": "AI 메뉴 번역",
+          "description": "한 번의 클릭으로 메뉴를 25개 이상의 언어로 번역"
+        },
+        "aiImages": {
+          "title": "AI 이미지 향상",
+          "description": "요리 사진을 즉시 전문적으로 만들기"
+        },
+        "reservations": {
+          "title": "테이블 예약",
+          "description": "고객이 메뉴에서 직접 테이블을 예약할 수 있도록"
+        },
+        "unlimitedScans": {
+          "title": "무제한 QR 스캔",
+          "description": "메뉴를 보는 고객 수에 제한 없음"
+        },
+        "noBranding": {
+          "title": "IQ Rest 브랜딩 없음",
+          "description": "당신의 메뉴, 당신의 브랜드 — 깔끔하고 전문적"
+        }
       },
       "comparePlans": "모든 플랜 비교",
       "hideComparison": "비교 숨기기",
@@ -1743,7 +1752,22 @@
       "generating": "생성 중...",
       "generateError": "배경 생성에 실패했습니다",
       "previewButton": "예약하기",
-      "preview": "미리보기"
+      "preview": "미리보기",
+      "ordersSection": "WhatsApp 주문",
+      "ordersRequireWhatsApp": "주문을 활성화하려면 연락처 페이지에 WhatsApp 번호를 추가하세요",
+      "ordersEnabled": "주문 활성화",
+      "ordersOn": "고객이 WhatsApp을 통해 주문할 수 있습니다",
+      "ordersOff": "주문 비활성화",
+      "ordersFieldsHint": "활성화된 필드는 고객이 입력해야 하는 필수 항목입니다",
+      "ordersName": "이름",
+      "ordersNameOn": "고객은 이름을 입력해야 합니다",
+      "ordersNameOff": "이름 필드 숨김",
+      "ordersPhone": "전화번호",
+      "ordersPhoneOn": "고객은 전화번호를 입력해야 합니다",
+      "ordersPhoneOff": "전화번호 필드 숨김",
+      "ordersAddress": "배달 주소",
+      "ordersAddressOn": "고객은 배달 주소를 입력해야 합니다",
+      "ordersAddressOff": "주소 필드 숨김"
     },
     "general": {
       "save": "저장",
@@ -1770,7 +1794,9 @@
       "scanAddMore": "더 추가",
       "scanStart": "스캔",
       "scanPoolTitle": "메뉴 페이지",
-      "scanPoolSubtitle": "종이 메뉴의 사진 또는 PDF 파일을 추가하세요. 최대 5개 파일."
+      "scanPoolSubtitle": "종이 메뉴의 사진 또는 PDF 파일을 추가하세요. 최대 5개 파일.",
+      "demoButton": "샘플 메뉴로 채우기",
+      "demoDescription": "아직 준비되지 않으셨나요? 샘플 메뉴로 어떻게 작동하는지 확인해 보세요."
     },
     "onboarding": {
       "nameTitle": "가게 이름이 무엇인가요?",
@@ -2313,13 +2339,5 @@
     "ownerBody": "레스토랑에 새로운 예약이 접수되었습니다.",
     "ownerCta": "예약 확인하기",
     "ownerSignature": "감사합니다,<br>IQ Rest 팀"
-  },
-  "languages": {
-    "meta": {
-      "title": "언어 선택 - IQ Rest QR 메뉴",
-      "description": "원하는 언어로 IQ Rest를 둘러보세요. 35개 언어로 제공됩니다."
-    },
-    "title": "언어 선택",
-    "subtitle": "원하는 언어로 IQ Rest를 둘러보세요"
   }
 }

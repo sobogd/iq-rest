@@ -517,9 +517,10 @@
           "Restaurantwebsite",
           "QR Menu",
           "320 scans/maand",
+          "30 WhatsApp-bestellingen/maand",
           "2 talen",
-          "Met IQ Rest watermerk",
-          "Analyses"
+          "Met IQ Rest-watermerk",
+          "Analytics"
         ]
       },
       "basic": {
@@ -529,8 +530,9 @@
         "highlights": [
           "Alles in Gratis, plus:",
           "Onbeperkte scans",
+          "Onbeperkte WhatsApp-bestellingen",
           "6 talen",
-          "AI vertalingen",
+          "AI-vertalingen",
           "Aangepast kleurthema",
           "Reserveringen"
         ]
@@ -543,8 +545,8 @@
           "Alles in Basis, plus:",
           "Onbeperkte talen",
           "Meerdere restaurants",
-          "Eigen domein",
-          "Prioriteit ondersteuning"
+          "Aangepaste domeinnaam",
+          "Prioriteitsondersteuning"
         ]
       }
     },
@@ -567,26 +569,30 @@
       "reservations": "Reserveringen",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Geen IQ Rest branding"
+      "noBranding": "Geen IQ Rest branding",
+      "whatsappOrders": "WhatsApp-bestellingen"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / maand"
       },
       "basic": {
         "scans": "Onbeperkt",
         "languages": "6",
         "aiTranslation": "100 / maand",
-        "aiImages": "35 / maand"
+        "aiImages": "35 / maand",
+        "whatsappOrders": "Onbeperkt"
       },
       "pro": {
         "scans": "Onbeperkt",
         "languages": "Onbeperkt",
         "aiTranslation": "Onbeperkt",
-        "aiImages": "Onbeperkt"
+        "aiImages": "Onbeperkt",
+        "whatsappOrders": "Onbeperkt"
       }
     },
     "socialProof": "Meer dan 500 restaurants vertrouwen ons",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Engels",
-    "es": "Spaans"
+    "meta": {
+      "title": "Taal kiezen - IQ Rest QR Menu",
+      "description": "Bekijk IQ Rest in uw voorkeurstaal. Beschikbaar in 35 talen."
+    },
+    "title": "Taal kiezen",
+    "subtitle": "Bekijk IQ Rest in uw voorkeurstaal"
   },
   "cookieConsent": {
     "title": "Wij gebruiken cookies",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfieten",
       "lupin": "Lupine",
       "molluscs": "Weekdieren"
+    },
+    "order": {
+      "add": "Toevoegen",
+      "yourOrder": "Uw Bestelling",
+      "emptyCart": "Uw winkelwagentje is leeg",
+      "total": "Totaal",
+      "yourName": "Uw Naam",
+      "namePlaceholder": "Voer uw naam in",
+      "yourPhone": "Telefoon",
+      "phonePlaceholder": "Uw telefoonnummer",
+      "yourAddress": "Adres",
+      "addressPlaceholder": "Leveringsadres",
+      "comment": "Opmerking",
+      "commentPlaceholder": "Bijzondere verzoeken?",
+      "sendWhatsApp": "Verstuur via WhatsApp",
+      "clearCart": "Winkelwagentje leegmaken",
+      "orderLimitReached": "Maandelijkse bestelgrens bereikt. Probeer het volgende maand opnieuw."
     }
   },
   "faq": {
@@ -1725,7 +1752,22 @@
       "generating": "Genereren...",
       "generateError": "Achtergrond genereren mislukt",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp Bestellingen",
+      "ordersRequireWhatsApp": "Voeg een WhatsApp-nummer toe op de Contactenpagina om bestellingen mogelijk te maken",
+      "ordersEnabled": "Bestellingen Inschakelen",
+      "ordersOn": "Klanten kunnen bestellen via WhatsApp",
+      "ordersOff": "Bestellen uitgeschakeld",
+      "ordersFieldsHint": "Ingeschakelde velden zijn verplicht voor de klant om in te vullen",
+      "ordersName": "Naam",
+      "ordersNameOn": "Klant moet hun naam invoeren",
+      "ordersNameOff": "Naamveld verborgen",
+      "ordersPhone": "Telefoon",
+      "ordersPhoneOn": "Klant moet hun telefoon invoeren",
+      "ordersPhoneOff": "Telefoonveld verborgen",
+      "ordersAddress": "Leveringsadres",
+      "ordersAddressOn": "Klant moet het leveringsadres invoeren",
+      "ordersAddressOff": "Adresveld verborgen"
     },
     "general": {
       "save": "Opslaan",
@@ -1752,7 +1794,9 @@
       "scanAddMore": "Meer toevoegen",
       "scanStart": "Scannen",
       "scanPoolTitle": "Menupagina's",
-      "scanPoolSubtitle": "Voeg foto's of PDF-bestanden van je papieren menu toe. Maximaal 5 bestanden."
+      "scanPoolSubtitle": "Voeg foto's of PDF-bestanden van je papieren menu toe. Maximaal 5 bestanden.",
+      "demoButton": "Vul met voorbeeldmenu",
+      "demoDescription": "Nog niet klaar? Probeer een voorbeeldmenu om te zien hoe het werkt."
     },
     "onboarding": {
       "nameTitle": "Hoe heet je zaak?",
@@ -2295,13 +2339,5 @@
     "ownerBody": "Er is een nieuwe reservering gemaakt in uw restaurant.",
     "ownerCta": "Reserveringen bekijken",
     "ownerSignature": "Met vriendelijke groet,<br>IQ Rest Team"
-  },
-  "languages": {
-    "meta": {
-      "title": "Taal kiezen - IQ Rest QR Menu",
-      "description": "Bekijk IQ Rest in uw voorkeurstaal. Beschikbaar in 35 talen."
-    },
-    "title": "Taal kiezen",
-    "subtitle": "Bekijk IQ Rest in uw voorkeurstaal"
   }
 }

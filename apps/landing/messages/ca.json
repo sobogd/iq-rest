@@ -516,10 +516,11 @@
         "highlights": [
           "Lloc web del restaurant",
           "Menú QR",
-          "320 escaneigs/mes",
+          "320 escanejos/mes",
+          "30 comandes per WhatsApp/mes",
           "2 idiomes",
-          "Amb filigrana IQ Rest",
-          "Analítica"
+          "Amb marca d'aigua IQ Rest",
+          "Analítiques"
         ]
       },
       "basic": {
@@ -527,12 +528,13 @@
         "description": "Ideal per a petits restaurants",
         "cta": "Comença ara",
         "highlights": [
-          "Tot el que hi ha a Gratuït, més:",
-          "Escaneigs il·limitats",
+          "Tot en gratuït, més:",
+          "Escanejos il·limitats",
+          "Comandes il·limitades per WhatsApp",
           "6 idiomes",
-          "Traduccions amb IA",
+          "Traduccions d'IA",
           "Tema de color personalitzat",
-          "Reservacions"
+          "Reserves"
         ]
       },
       "pro": {
@@ -540,10 +542,10 @@
         "description": "Per a cadenes de restaurants en creixement",
         "cta": "Comença ara",
         "highlights": [
-          "Tot el que hi ha a Bàsic, més:",
+          "Tot en bàsic, més:",
           "Idiomes il·limitats",
           "Múltiples restaurants",
-          "Domini personalitzat",
+          "Dominis personalitzats",
           "Suport prioritari"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Reservacions",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Sense marca IQ Rest"
+      "noBranding": "Sense marca IQ Rest",
+      "whatsappOrders": "Comandes per WhatsApp"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mes"
       },
       "basic": {
         "scans": "Il·limitat",
         "languages": "6",
         "aiTranslation": "100 / mes",
-        "aiImages": "35 / mes"
+        "aiImages": "35 / mes",
+        "whatsappOrders": "Il·limitades"
       },
       "pro": {
         "scans": "Il·limitat",
         "languages": "Il·limitat",
         "aiTranslation": "Il·limitat",
-        "aiImages": "Il·limitat"
+        "aiImages": "Il·limitat",
+        "whatsappOrders": "Il·limitades"
       }
     },
     "socialProof": "Més de 500 restaurants confien en nosaltres",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Anglès",
-    "es": "Espanyol"
+    "meta": {
+      "title": "Trieu l'idioma - IQ Rest QR Menú",
+      "description": "Navegueu per IQ Rest en el vostre idioma preferit. Disponible en 35 idiomes."
+    },
+    "title": "Trieu l'idioma",
+    "subtitle": "Navegueu per IQ Rest en el vostre idioma preferit"
   },
   "cookieConsent": {
     "title": "Fem servir galetes",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfits",
       "lupin": "Llúpol",
       "molluscs": "Molluscs"
+    },
+    "order": {
+      "add": "Afegir",
+      "yourOrder": "La teva comanda",
+      "emptyCart": "El teu carret està buit",
+      "total": "Total",
+      "yourName": "El teu nom",
+      "namePlaceholder": "Introdueix el teu nom",
+      "yourPhone": "Telèfon",
+      "phonePlaceholder": "El teu número de telèfon",
+      "yourAddress": "Adreça",
+      "addressPlaceholder": "Adreça de lliurament",
+      "comment": "Comentari",
+      "commentPlaceholder": "Tens alguna petició especial?",
+      "sendWhatsApp": "Enviar per WhatsApp",
+      "clearCart": "Netejar el carret",
+      "orderLimitReached": "S'ha assolit el límit de comandes mensual. Si us plau, torneu-ho a provar el proper mes."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "Traduccions IA, escanejos il·limitats, reserves i més",
       "featuresTitle": "Tot el que obtens",
       "features": {
-        "aiTranslations": { "title": "Traduccions IA del Menú", "description": "Tradueix el teu menú a més de 25 idiomes amb un clic" },
-        "aiImages": { "title": "Millora d'Imatges amb IA", "description": "Fes que les fotos dels teus plats semblin professionals a l'instant" },
-        "reservations": { "title": "Reserves de Taules", "description": "Deixa que els clients reservin taules directament des del teu menú" },
-        "unlimitedScans": { "title": "Escanejos QR Il·limitats", "description": "Sense límits de quants clients veuen el teu menú" },
-        "noBranding": { "title": "Sense Marca IQ Rest", "description": "El teu menú, la teva marca — net i professional" }
+        "aiTranslations": {
+          "title": "Traduccions IA del Menú",
+          "description": "Tradueix el teu menú a més de 25 idiomes amb un clic"
+        },
+        "aiImages": {
+          "title": "Millora d'Imatges amb IA",
+          "description": "Fes que les fotos dels teus plats semblin professionals a l'instant"
+        },
+        "reservations": {
+          "title": "Reserves de Taules",
+          "description": "Deixa que els clients reservin taules directament des del teu menú"
+        },
+        "unlimitedScans": {
+          "title": "Escanejos QR Il·limitats",
+          "description": "Sense límits de quants clients veuen el teu menú"
+        },
+        "noBranding": {
+          "title": "Sense Marca IQ Rest",
+          "description": "El teu menú, la teva marca — net i professional"
+        }
       },
       "comparePlans": "Compara tots els plans",
       "hideComparison": "Amaga la comparació",
@@ -1710,7 +1752,22 @@
       "generating": "Generant...",
       "generateError": "No s'ha pogut generar el fons",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "Comandes per WhatsApp",
+      "ordersRequireWhatsApp": "Afegeix un número de WhatsApp a la pàgina de Contactes per habilitar les comandes",
+      "ordersEnabled": "Habilitar comandes",
+      "ordersOn": "Els clients poden demanar per WhatsApp",
+      "ordersOff": "Comandes deshabilitades",
+      "ordersFieldsHint": "Els camps habilitats són necessaris perquè el client els ompli",
+      "ordersName": "Nom",
+      "ordersNameOn": "El client ha d'introduir el seu nom",
+      "ordersNameOff": "Camp de nom amagat",
+      "ordersPhone": "Telèfon",
+      "ordersPhoneOn": "El client ha d'introduir el seu telèfon",
+      "ordersPhoneOff": "Camp de telèfon amagat",
+      "ordersAddress": "Adreça de lliurament",
+      "ordersAddressOn": "El client ha d'introduir l'adreça de lliurament",
+      "ordersAddressOff": "Camp d'adreça amagat"
     },
     "general": {
       "save": "Desa",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Afegir més",
       "scanStart": "Escanejar",
       "scanPoolTitle": "Pàgines del menú",
-      "scanPoolSubtitle": "Afegiu fotos o fitxers PDF del vostre menú en paper. Fins a 5 fitxers."
+      "scanPoolSubtitle": "Afegiu fotos o fitxers PDF del vostre menú en paper. Fins a 5 fitxers.",
+      "demoButton": "Omple amb un menú de mostra",
+      "demoDescription": "Encara no està llest? Prova amb un menú de mostra per veure com funciona."
     },
     "onboarding": {
       "nameTitle": "Com es diu el teu local?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "S'ha fet una nova reserva al teu restaurant.",
     "ownerCta": "Veure reserves",
     "ownerSignature": "Salutacions,<br>Equip IQ Rest"
-  },
-  "languages": {
-    "meta": {
-      "title": "Trieu l'idioma - IQ Rest QR Menú",
-      "description": "Navegueu per IQ Rest en el vostre idioma preferit. Disponible en 35 idiomes."
-    },
-    "title": "Trieu l'idioma",
-    "subtitle": "Navegueu per IQ Rest en el vostre idioma preferit"
   }
 }

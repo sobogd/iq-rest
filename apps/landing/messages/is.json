@@ -514,11 +514,12 @@
         "description": "Fullkomið til að prófa IQ Rest",
         "cta": "Búa til ókeypis",
         "highlights": [
-          "Veitingahús vefsíða",
+          "Veitingastaður vefsíða",
           "QR Matseðill",
-          "320 skannanir/mánuði",
+          "320 skönnun/mánuði",
+          "30 WhatsApp pöntun/mánuði",
           "2 tungumál",
-          "Með IQ Rest vatnsmerki",
+          "Með IQ Rest vatnamerki",
           "Greiningar"
         ]
       },
@@ -527,8 +528,9 @@
         "description": "Frábært fyrir smá veitingahús",
         "cta": "Byrjaðu",
         "highlights": [
-          "Allt í Ókeypis, auk:",
-          "Ótakmarkaðar skannanir",
+          "Allt í Frjálsu, auk:",
+          "Ótakmarkaðar skönnanir",
+          "Ótakmarkaðar WhatsApp pantanir",
           "6 tungumál",
           "AI þýðingar",
           "Sérsniðin litapalletta",
@@ -541,9 +543,9 @@
         "cta": "Byrjaðu",
         "highlights": [
           "Allt í Grunn, auk:",
-          "Ótakmörkuð tungumál",
-          "Mörg veitingahús",
-          "Sérsniðið lén",
+          "Ótakmarkað tungumál",
+          "Fjölmargir veitingastaðir",
+          "Sérsniðin lén",
           "Forgangs stuðningur"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Bókanir",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Án IQ Rest vörumerki"
+      "noBranding": "Án IQ Rest vörumerki",
+      "whatsappOrders": "WhatsApp pöntun"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mánuði"
       },
       "basic": {
         "scans": "Ótakmarkað",
         "languages": "6",
         "aiTranslation": "100 / mánuð",
-        "aiImages": "35 / mán."
+        "aiImages": "35 / mán.",
+        "whatsappOrders": "Ótakmarkað"
       },
       "pro": {
         "scans": "Ótakmarkað",
         "languages": "Ótakmarkað",
         "aiTranslation": "Ótakmarkað",
-        "aiImages": "Ótakmarkað"
+        "aiImages": "Ótakmarkað",
+        "whatsappOrders": "Ótakmarkað"
       }
     },
     "socialProof": "Yfir 500 veitingastaðir treysta okkur",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Enska",
-    "es": "Spænska"
+    "meta": {
+      "title": "Velja tungumál - IQ Rest QR Matseðill",
+      "description": "Skoðaðu IQ Rest á þínu tungumáli. Fáanlegt á 35 tungumálum."
+    },
+    "title": "Velja tungumál",
+    "subtitle": "Skoðaðu IQ Rest á þínu tungumáli"
   },
   "cookieConsent": {
     "title": "Við notum vefkökurnar",
@@ -1288,6 +1298,23 @@
       "sulphites": "Súlfít",
       "lupin": "Lúpín",
       "molluscs": "Molluskur"
+    },
+    "order": {
+      "add": "Bæta við",
+      "yourOrder": "Þín pöntun",
+      "emptyCart": "Verslunin þín er tóm",
+      "total": "Heildarverð",
+      "yourName": "Þitt nafn",
+      "namePlaceholder": "Sláðu inn þitt nafn",
+      "yourPhone": "Sími",
+      "phonePlaceholder": "Símanúmerið þitt",
+      "yourAddress": "Heimilisfang",
+      "addressPlaceholder": "Afhendingarheimilisfang",
+      "comment": "Athugasemd",
+      "commentPlaceholder": "Eru einhverjar séróskir?",
+      "sendWhatsApp": "Senda í gegnum WhatsApp",
+      "clearCart": "Tæma verslun",
+      "orderLimitReached": "Mánaðarlegri pöntunarmörkum er náð. Vinsamlegast reyndu aftur næsta mánuð."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI þýðingar, ótakmörkuð skönnun, borðapantanir og meira",
       "featuresTitle": "Allt sem þú færð",
       "features": {
-        "aiTranslations": { "title": "AI Matseðilsþýðingar", "description": "Þýddu matseðilinn þinn á 25+ tungumál með einum smelli" },
-        "aiImages": { "title": "AI Myndaúrbætur", "description": "Gerðu réttamyndirnar þínar faglegar samstundis" },
-        "reservations": { "title": "Borðapantanir", "description": "Leyfðu viðskiptavinum að panta borð beint af matseðlinum þínum" },
-        "unlimitedScans": { "title": "Ótakmörkuð QR Skönnun", "description": "Engin takmörk á hversu margir viðskiptavinir sjá matseðilinn þinn" },
-        "noBranding": { "title": "Engin IQ Rest Vörumerki", "description": "Þinn matseðill, þitt vörumerki — hreint og faglegt" }
+        "aiTranslations": {
+          "title": "AI Matseðilsþýðingar",
+          "description": "Þýddu matseðilinn þinn á 25+ tungumál með einum smelli"
+        },
+        "aiImages": {
+          "title": "AI Myndaúrbætur",
+          "description": "Gerðu réttamyndirnar þínar faglegar samstundis"
+        },
+        "reservations": {
+          "title": "Borðapantanir",
+          "description": "Leyfðu viðskiptavinum að panta borð beint af matseðlinum þínum"
+        },
+        "unlimitedScans": {
+          "title": "Ótakmörkuð QR Skönnun",
+          "description": "Engin takmörk á hversu margir viðskiptavinir sjá matseðilinn þinn"
+        },
+        "noBranding": {
+          "title": "Engin IQ Rest Vörumerki",
+          "description": "Þinn matseðill, þitt vörumerki — hreint og faglegt"
+        }
       },
       "comparePlans": "Bera saman öll áskriftarform",
       "hideComparison": "Fela samanburð",
@@ -1710,7 +1752,22 @@
       "generating": "Býr til...",
       "generateError": "Ekki tókst að búa til bakgrunn",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp pantanir",
+      "ordersRequireWhatsApp": "Bættu við WhatsApp númeri á tengsíðunni til að virkja pantanir",
+      "ordersEnabled": "Virkja pantanir",
+      "ordersOn": "Kúnnar geta pantað í gegnum WhatsApp",
+      "ordersOff": "Pantanir óvirkar",
+      "ordersFieldsHint": "Virkir reitir eru nauðsynlegir fyrir kúnnann að fylla út",
+      "ordersName": "Nafn",
+      "ordersNameOn": "Kúnninn verður að slá inn sitt nafn",
+      "ordersNameOff": "Nafn reitur falinn",
+      "ordersPhone": "Sími",
+      "ordersPhoneOn": "Kúnninn verður að slá inn símanúmer",
+      "ordersPhoneOff": "Síma reitur falinn",
+      "ordersAddress": "Afhendingarheimilisfang",
+      "ordersAddressOn": "Kúnninn verður að slá inn afhendingarheimilisfang",
+      "ordersAddressOff": "Heimilisfang reitur falinn"
     },
     "general": {
       "save": "Vista",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Bæta við fleiru",
       "scanStart": "Skanna",
       "scanPoolTitle": "Matseðilssíður",
-      "scanPoolSubtitle": "Bættu við myndum eða PDF skrám af pappírsmatseðlinum þínum. Allt að 5 skrár."
+      "scanPoolSubtitle": "Bættu við myndum eða PDF skrám af pappírsmatseðlinum þínum. Allt að 5 skrár.",
+      "demoButton": "Fylltu með sýnimenú",
+      "demoDescription": "Ekki tilbúið enn? Prófaðu með sýnimenú til að sjá hvernig það virkar."
     },
     "onboarding": {
       "nameTitle": "Hvað heitir staðurinn þinn?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Ný bókun hefur verið gerð á veitingastaðnum þínum.",
     "ownerCta": "Skoða bókanir",
     "ownerSignature": "Bestu kveðjur,<br>IQ Rest teymið"
-  },
-  "languages": {
-    "meta": {
-      "title": "Velja tungumál - IQ Rest QR Matseðill",
-      "description": "Skoðaðu IQ Rest á þínu tungumáli. Fáanlegt á 35 tungumálum."
-    },
-    "title": "Velja tungumál",
-    "subtitle": "Skoðaðu IQ Rest á þínu tungumáli"
   }
 }

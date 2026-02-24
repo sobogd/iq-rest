@@ -514,9 +514,10 @@
         "description": "Savršeno za isprobavanje IQ Rest-a",
         "cta": "Направи бесплатно",
         "highlights": [
-          "Vebsajt restorana",
-          "QR Meni",
-          "320 skeniranja/mjesečno",
+          "Web sajt restorana",
+          "QR meni",
+          "320 skeniranja/mesečno",
+          "30 WhatsApp narudžbina/mesečno",
           "2 jezika",
           "Sa IQ Rest vodenim žigom",
           "Analitika"
@@ -527,11 +528,12 @@
         "description": "Odlično za male restorane",
         "cta": "Započnite",
         "highlights": [
-          "Sve u Besplatnom, plus:",
+          "Sve u besplatnom, plus:",
           "Neograničena skeniranja",
+          "Neograničene WhatsApp narudžbine",
           "6 jezika",
           "AI prevodi",
-          "Prilagođena tema boja",
+          "Prilagođena boja teme",
           "Rezervacije"
         ]
       },
@@ -540,7 +542,7 @@
         "description": "Za rastuće lance restorana",
         "cta": "Započnite",
         "highlights": [
-          "Sve u Osnovnom, plus:",
+          "Sve u osnovnom, plus:",
           "Neograničeni jezici",
           "Više restorana",
           "Prilagođeni domen",
@@ -567,26 +569,30 @@
       "reservations": "Rezervacije",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Без IQ Rest брендирања"
+      "noBranding": "Без IQ Rest брендирања",
+      "whatsappOrders": "WhatsApp narudžbine"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mesec"
       },
       "basic": {
         "scans": "Neograničeno",
         "languages": "6",
         "aiTranslation": "100 / месец",
-        "aiImages": "35 / mes."
+        "aiImages": "35 / mes.",
+        "whatsappOrders": "Neograničeno"
       },
       "pro": {
         "scans": "Neograničeno",
         "languages": "Neograničeno",
         "aiTranslation": "Неограничено",
-        "aiImages": "Neograničeno"
+        "aiImages": "Neograničeno",
+        "whatsappOrders": "Neograničeno"
       }
     },
     "socialProof": "Више од 500 ресторана нам верује",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Engleski",
-    "es": "Španski"
+    "meta": {
+      "title": "Изаберите језик - IQ Rest QR Мени",
+      "description": "Прегледајте IQ Rest на жељеном језику. Доступно на 35 језика."
+    },
+    "title": "Изаберите језик",
+    "subtitle": "Прегледајте IQ Rest на жељеном језику"
   },
   "cookieConsent": {
     "title": "Koristimo kolačiće",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfiti",
       "lupin": "Lupin",
       "molluscs": "Molušci"
+    },
+    "order": {
+      "add": "Dodaj",
+      "yourOrder": "Vaša Porudžbina",
+      "emptyCart": "Vaša korpa je prazna",
+      "total": "Ukupno",
+      "yourName": "Vaše Ime",
+      "namePlaceholder": "Unesite vaše ime",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Vaš broj telefona",
+      "yourAddress": "Adresa",
+      "addressPlaceholder": "Adresa za dostavu",
+      "comment": "Komentar",
+      "commentPlaceholder": "Imate li posebne zahteve?",
+      "sendWhatsApp": "Pošaljite putem WhatsApp-a",
+      "clearCart": "Očistite korpu",
+      "orderLimitReached": "Mesečni limit narudžbina je dostignut. Molimo pokušajte ponovo sledećeg meseca."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI преводи, неограничено скенирање, резервације и више",
       "featuresTitle": "Све што добијате",
       "features": {
-        "aiTranslations": { "title": "AI Преводи Менија", "description": "Преведите мени на 25+ језика једним кликом" },
-        "aiImages": { "title": "AI Побољшање Слика", "description": "Учините фотографије јела професионалним одмах" },
-        "reservations": { "title": "Резервације Столова", "description": "Дозволите гостима да резервишу столове директно из менија" },
-        "unlimitedScans": { "title": "Неограничена QR Скенирања", "description": "Без ограничења колико гостију види ваш мени" },
-        "noBranding": { "title": "Без IQ Rest Брендирања", "description": "Ваш мени, ваш бренд — чисто и професионално" }
+        "aiTranslations": {
+          "title": "AI Преводи Менија",
+          "description": "Преведите мени на 25+ језика једним кликом"
+        },
+        "aiImages": {
+          "title": "AI Побољшање Слика",
+          "description": "Учините фотографије јела професионалним одмах"
+        },
+        "reservations": {
+          "title": "Резервације Столова",
+          "description": "Дозволите гостима да резервишу столове директно из менија"
+        },
+        "unlimitedScans": {
+          "title": "Неограничена QR Скенирања",
+          "description": "Без ограничења колико гостију види ваш мени"
+        },
+        "noBranding": {
+          "title": "Без IQ Rest Брендирања",
+          "description": "Ваш мени, ваш бренд — чисто и професионално"
+        }
       },
       "comparePlans": "Упоредите све планове",
       "hideComparison": "Сакриј поређење",
@@ -1710,7 +1752,22 @@
       "generating": "Генерисање...",
       "generateError": "Генерисање позадине није успело",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp Porudžbine",
+      "ordersRequireWhatsApp": "Dodajte WhatsApp broj na stranici Kontakti da omogućite porudžbine",
+      "ordersEnabled": "Omogući Porudžbine",
+      "ordersOn": "Kupci mogu da poručuju putem WhatsApp-a",
+      "ordersOff": "Poručivanje onemogućeno",
+      "ordersFieldsHint": "Omogućena polja su obavezna za popunjavanje od strane kupca",
+      "ordersName": "Ime",
+      "ordersNameOn": "Kupac mora uneti svoje ime",
+      "ordersNameOff": "Polje za ime skriveno",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Kupac mora uneti svoj telefon",
+      "ordersPhoneOff": "Polje za telefon skriveno",
+      "ordersAddress": "Adresa za dostavu",
+      "ordersAddressOn": "Kupac mora uneti adresu za dostavu",
+      "ordersAddressOff": "Polje za adresu skriveno"
     },
     "general": {
       "save": "Sačuvaj",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Додај још",
       "scanStart": "Скенирај",
       "scanPoolTitle": "Странице менија",
-      "scanPoolSubtitle": "Додајте фотографије или PDF фајлове вашег папирног менија. До 5 фајлова."
+      "scanPoolSubtitle": "Додајте фотографије или PDF фајлове вашег папирног менија. До 5 фајлова.",
+      "demoButton": "Popunite uzorkom menija",
+      "demoDescription": "Niste spremni još? Pokušajte sa uzorkom menija da vidite kako funkcioniše."
     },
     "onboarding": {
       "nameTitle": "Како се зове ваш локал?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Нова резервација је направљена у вашем ресторану.",
     "ownerCta": "Погледај резервације",
     "ownerSignature": "С поштовањем,<br>IQ Rest тим"
-  },
-  "languages": {
-    "meta": {
-      "title": "Изаберите језик - IQ Rest QR Мени",
-      "description": "Прегледајте IQ Rest на жељеном језику. Доступно на 35 језика."
-    },
-    "title": "Изаберите језик",
-    "subtitle": "Прегледајте IQ Rest на жељеном језику"
   }
 }

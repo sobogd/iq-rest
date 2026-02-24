@@ -514,9 +514,10 @@
         "description": "Ideāli, lai izmēģinātu IQ Rest",
         "cta": "Izveidot bezmaksas",
         "highlights": [
-          "Restorāna tīmekļa vietne",
+          "Restorāna mājaslapa",
           "QR ēdienkarte",
           "320 skenējumi/mēnesī",
+          "30 WhatsApp pasūtījumi/mēnesī",
           "2 valodas",
           "Ar IQ Rest ūdenszīmi",
           "Analītika"
@@ -527,8 +528,9 @@
         "description": "Lieliski piemērots mazām restorāniem",
         "cta": "Sākt",
         "highlights": [
-          "Viss Bezmaksas plānā, plus:",
+          "Viss, kas ir Bezmaksas, plus:",
           "Neierobežoti skenējumi",
+          "Neierobežoti WhatsApp pasūtījumi",
           "6 valodas",
           "AI tulkojumi",
           "Pielāgota krāsu tēma",
@@ -540,7 +542,7 @@
         "description": "Augošām restorānu ķēdēm",
         "cta": "Sākt",
         "highlights": [
-          "Viss Pamatplānā, plus:",
+          "Viss, kas ir Pamata, plus:",
           "Neierobežotas valodas",
           "Vairāki restorāni",
           "Pielāgots domēns",
@@ -567,26 +569,30 @@
       "reservations": "Rezervācijas",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Bez IQ Rest zīmola"
+      "noBranding": "Bez IQ Rest zīmola",
+      "whatsappOrders": "WhatsApp pasūtījumi"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mēnesī"
       },
       "basic": {
         "scans": "Neierobežoti",
         "languages": "6",
         "aiTranslation": "100 / mēnesī",
-        "aiImages": "35 / mēn."
+        "aiImages": "35 / mēn.",
+        "whatsappOrders": "Neierobežoti"
       },
       "pro": {
         "scans": "Neierobežoti",
         "languages": "Neierobežoti",
         "aiTranslation": "Neierobežoti",
-        "aiImages": "Neierobežoti"
+        "aiImages": "Neierobežoti",
+        "whatsappOrders": "Neierobežoti"
       }
     },
     "socialProof": "Vairāk nekā 500 restorāni mums uzticas",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Angļu",
-    "es": "Spāņu"
+    "meta": {
+      "title": "Izvēlēties valodu - IQ Rest QR ēdienkarte",
+      "description": "Pārlūkojiet IQ Rest savā vēlamajā valodā. Pieejams 35 valodās."
+    },
+    "title": "Izvēlēties valodu",
+    "subtitle": "Pārlūkojiet IQ Rest savā vēlamajā valodā"
   },
   "cookieConsent": {
     "title": "Mēs izmantojam sīkdatnes",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfīti",
       "lupin": "Lupīns",
       "molluscs": "Molluski"
+    },
+    "order": {
+      "add": "Pievienot",
+      "yourOrder": "Jūsu pasūtījums",
+      "emptyCart": "Jūsu grozs ir tukšs",
+      "total": "Kopā",
+      "yourName": "Jūsu vārds",
+      "namePlaceholder": "Ievadiet savu vārdu",
+      "yourPhone": "Tālrunis",
+      "phonePlaceholder": "Jūsu tālruņa numurs",
+      "yourAddress": "Adrese",
+      "addressPlaceholder": "Piegādes adrese",
+      "comment": "Komentārs",
+      "commentPlaceholder": "Jebkādas īpašas prasības?",
+      "sendWhatsApp": "Sūtīt caur WhatsApp",
+      "clearCart": "Notīrīt grozu",
+      "orderLimitReached": "Mēneša pasūtījumu limits ir sasniegts. Lūdzu, mēģiniet vēlreiz nākamajā mēnesī."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI tulkojumi, neierobežota skenēšana, rezervācijas un vēl",
       "featuresTitle": "Viss ko jūs saņemat",
       "features": {
-        "aiTranslations": { "title": "AI Ēdienkartes Tulkojumi", "description": "Iztulkojiet ēdienkarti 25+ valodās ar vienu klikšķi" },
-        "aiImages": { "title": "AI Attēlu Uzlabošana", "description": "Padariet ēdienu fotogrāfijas profesionālas acumirklī" },
-        "reservations": { "title": "Galdu Rezervēšana", "description": "Ļaujiet klientiem rezervēt galdus tieši no ēdienkartes" },
-        "unlimitedScans": { "title": "Neierobežota QR Skenēšana", "description": "Nav ierobežojumu, cik klientu redz jūsu ēdienkarti" },
-        "noBranding": { "title": "Bez IQ Rest Zīmola", "description": "Jūsu ēdienkarte, jūsu zīmols — tīrs un profesionāls" }
+        "aiTranslations": {
+          "title": "AI Ēdienkartes Tulkojumi",
+          "description": "Iztulkojiet ēdienkarti 25+ valodās ar vienu klikšķi"
+        },
+        "aiImages": {
+          "title": "AI Attēlu Uzlabošana",
+          "description": "Padariet ēdienu fotogrāfijas profesionālas acumirklī"
+        },
+        "reservations": {
+          "title": "Galdu Rezervēšana",
+          "description": "Ļaujiet klientiem rezervēt galdus tieši no ēdienkartes"
+        },
+        "unlimitedScans": {
+          "title": "Neierobežota QR Skenēšana",
+          "description": "Nav ierobežojumu, cik klientu redz jūsu ēdienkarti"
+        },
+        "noBranding": {
+          "title": "Bez IQ Rest Zīmola",
+          "description": "Jūsu ēdienkarte, jūsu zīmols — tīrs un profesionāls"
+        }
       },
       "comparePlans": "Salīdzināt visus plānus",
       "hideComparison": "Slēpt salīdzinājumu",
@@ -1710,7 +1752,22 @@
       "generating": "Ģenerē...",
       "generateError": "Neizdevās ģenerēt fonu",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp pasūtījumi",
+      "ordersRequireWhatsApp": "Pievienojiet WhatsApp numuru kontaktu lapā, lai aktivizētu pasūtījumus",
+      "ordersEnabled": "Aktivizēt pasūtījumus",
+      "ordersOn": "Klienti var pasūtīt caur WhatsApp",
+      "ordersOff": "Pasūtīšana atslēgta",
+      "ordersFieldsHint": "Aktivizētie lauki ir obligāti klientam jāaizpilda",
+      "ordersName": "Vārds",
+      "ordersNameOn": "Klientam jāievada savs vārds",
+      "ordersNameOff": "Vārda lauks slēpts",
+      "ordersPhone": "Tālrunis",
+      "ordersPhoneOn": "Klientam jāievada savs tālrunis",
+      "ordersPhoneOff": "Tālruņa lauks slēpts",
+      "ordersAddress": "Piegādes adrese",
+      "ordersAddressOn": "Klientam jāievada piegādes adrese",
+      "ordersAddressOff": "Adreses lauks slēpts"
     },
     "general": {
       "save": "Saglabāt",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Pievienot vēl",
       "scanStart": "Skenēt",
       "scanPoolTitle": "Ēdienkartes lapas",
-      "scanPoolSubtitle": "Pievienojiet savas papīra ēdienkartes fotoattēlus vai PDF failus. Līdz 5 failiem."
+      "scanPoolSubtitle": "Pievienojiet savas papīra ēdienkartes fotoattēlus vai PDF failus. Līdz 5 failiem.",
+      "demoButton": "Aizpildīt ar paraugu ēdienkarti",
+      "demoDescription": "Vēl nav gatavs? Mēģiniet ar paraugu ēdienkarti, lai redzētu, kā tas darbojas."
     },
     "onboarding": {
       "nameTitle": "Kāds ir jūsu vietas nosaukums?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Jūsu restorānā ir veikta jauna rezervācija.",
     "ownerCta": "Skatīt rezervācijas",
     "ownerSignature": "Ar cieņu,<br>IQ Rest komanda"
-  },
-  "languages": {
-    "meta": {
-      "title": "Izvēlēties valodu - IQ Rest QR ēdienkarte",
-      "description": "Pārlūkojiet IQ Rest savā vēlamajā valodā. Pieejams 35 valodās."
-    },
-    "title": "Izvēlēties valodu",
-    "subtitle": "Pārlūkojiet IQ Rest savā vēlamajā valodā"
   }
 }

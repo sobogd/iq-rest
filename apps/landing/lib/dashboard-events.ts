@@ -127,6 +127,14 @@ export enum DashboardEvent {
   FOCUSED_WHATSAPP = "focused_whatsapp",
   CLICKED_MAP = "clicked_map",
   CLICKED_SAVE_CONTACTS = "clicked_save_contacts",
+  TOGGLED_ORDERS_ENABLED = "toggled_orders_enabled",
+
+  // Orders
+  SHOWED_ORDERS = "showed_orders",
+  TOGGLED_ORDER_NAME = "toggled_order_name",
+  TOGGLED_ORDER_PHONE = "toggled_order_phone",
+  TOGGLED_ORDER_ADDRESS = "toggled_order_address",
+  CLICKED_SAVE_ORDERS = "clicked_save_orders",
 
   // Settings
   SHOWED_SETTINGS = "showed_settings",
@@ -342,6 +350,14 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.FOCUSED_WHATSAPP]: "Focused WhatsApp",
   [DashboardEvent.CLICKED_MAP]: "Clicked Map",
   [DashboardEvent.CLICKED_SAVE_CONTACTS]: "Clicked Save Contacts",
+  [DashboardEvent.TOGGLED_ORDERS_ENABLED]: "Toggled Orders Enabled",
+
+  // Orders
+  [DashboardEvent.SHOWED_ORDERS]: "Showed Orders",
+  [DashboardEvent.TOGGLED_ORDER_NAME]: "Toggled Order Name",
+  [DashboardEvent.TOGGLED_ORDER_PHONE]: "Toggled Order Phone",
+  [DashboardEvent.TOGGLED_ORDER_ADDRESS]: "Toggled Order Address",
+  [DashboardEvent.CLICKED_SAVE_ORDERS]: "Clicked Save Orders",
 
   // Settings
   [DashboardEvent.SHOWED_SETTINGS]: "Showed Settings",

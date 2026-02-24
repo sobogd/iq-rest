@@ -516,9 +516,10 @@
         "highlights": [
           "Web stranica restorana",
           "QR Meni",
-          "320 skeniranja/mjesečno",
+          "320 skeniranja/mjesec",
+          "30 WhatsApp narudžbi/mjesec",
           "2 jezika",
-          "S IQ Rest vodenim žigom",
+          "S IQ Rest oznakom",
           "Analitika"
         ]
       },
@@ -529,9 +530,10 @@
         "highlights": [
           "Sve u Besplatnom, plus:",
           "Neograničena skeniranja",
+          "Neograničene WhatsApp narudžbe",
           "6 jezika",
           "AI prijevodi",
-          "Prilagođena shema boja",
+          "Prilagođena boja teme",
           "Rezervacije"
         ]
       },
@@ -543,7 +545,7 @@
           "Sve u Osnovnom, plus:",
           "Neograničeni jezici",
           "Više restorana",
-          "Vlastita domena",
+          "Prilagođena domena",
           "Prioritetna podrška"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Rezervacije",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Bez IQ Rest brandinga"
+      "noBranding": "Bez IQ Rest brandinga",
+      "whatsappOrders": "WhatsApp narudžbe"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mjesec"
       },
       "basic": {
         "scans": "Neograničeno",
         "languages": "6",
         "aiTranslation": "100 / mjesec",
-        "aiImages": "35 / mj."
+        "aiImages": "35 / mj.",
+        "whatsappOrders": "Neograničeno"
       },
       "pro": {
         "scans": "Neograničeno",
         "languages": "Neograničeno",
         "aiTranslation": "Neograničeno",
-        "aiImages": "Neograničeno"
+        "aiImages": "Neograničeno",
+        "whatsappOrders": "Neograničeno"
       }
     },
     "socialProof": "Više od 500 restorana nam vjeruje",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Engleski",
-    "es": "Španjolski"
+    "meta": {
+      "title": "Odaberite jezik - IQ Rest QR Izbornik",
+      "description": "Pregledajte IQ Rest na željenom jeziku. Dostupno na 35 jezika."
+    },
+    "title": "Odaberite jezik",
+    "subtitle": "Pregledajte IQ Rest na željenom jeziku"
   },
   "cookieConsent": {
     "title": "Koristimo kolačiće",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfiti",
       "lupin": "Lupin",
       "molluscs": "Molušci"
+    },
+    "order": {
+      "add": "Dodaj",
+      "yourOrder": "Vaša narudžba",
+      "emptyCart": "Vaša košarica je prazna",
+      "total": "Ukupno",
+      "yourName": "Vaše ime",
+      "namePlaceholder": "Unesite svoje ime",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Vaš broj telefona",
+      "yourAddress": "Adresa",
+      "addressPlaceholder": "Adresa za dostavu",
+      "comment": "Komentar",
+      "commentPlaceholder": "Imate li posebne zahtjeve?",
+      "sendWhatsApp": "Pošaljite putem WhatsApp-a",
+      "clearCart": "Isprazni košaricu",
+      "orderLimitReached": "Mjesecni limit narudžbi je dostignut. Pokušajte ponovno sljedeći mjesec."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI prijevodi, neograničena skeniranja, rezervacije i više",
       "featuresTitle": "Sve što dobivate",
       "features": {
-        "aiTranslations": { "title": "AI Prijevodi Jelovnika", "description": "Prevedite jelovnik na 25+ jezika jednim klikom" },
-        "aiImages": { "title": "AI Poboljšanje Slika", "description": "Učinite fotografije jela profesionalnima odmah" },
-        "reservations": { "title": "Rezervacije Stolova", "description": "Dopustite gostima da rezerviraju stolove izravno iz jelovnika" },
-        "unlimitedScans": { "title": "Neograničena QR Skeniranja", "description": "Bez ograničenja koliko gostiju vidi vaš jelovnik" },
-        "noBranding": { "title": "Bez IQ Rest Brendiranja", "description": "Vaš jelovnik, vaš brand — čisto i profesionalno" }
+        "aiTranslations": {
+          "title": "AI Prijevodi Jelovnika",
+          "description": "Prevedite jelovnik na 25+ jezika jednim klikom"
+        },
+        "aiImages": {
+          "title": "AI Poboljšanje Slika",
+          "description": "Učinite fotografije jela profesionalnima odmah"
+        },
+        "reservations": {
+          "title": "Rezervacije Stolova",
+          "description": "Dopustite gostima da rezerviraju stolove izravno iz jelovnika"
+        },
+        "unlimitedScans": {
+          "title": "Neograničena QR Skeniranja",
+          "description": "Bez ograničenja koliko gostiju vidi vaš jelovnik"
+        },
+        "noBranding": {
+          "title": "Bez IQ Rest Brendiranja",
+          "description": "Vaš jelovnik, vaš brand — čisto i profesionalno"
+        }
       },
       "comparePlans": "Usporedi sve planove",
       "hideComparison": "Sakrij usporedbu",
@@ -1710,7 +1752,22 @@
       "generating": "Generiranje...",
       "generateError": "Generiranje pozadine nije uspjelo",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp Narudžbe",
+      "ordersRequireWhatsApp": "Dodajte WhatsApp broj na stranici Kontakti da omogućite narudžbe",
+      "ordersEnabled": "Omogući narudžbe",
+      "ordersOn": "Kupci mogu naručivati putem WhatsApp-a",
+      "ordersOff": "Naručivanje onemogućeno",
+      "ordersFieldsHint": "Omogućena polja su obavezna za ispuniti",
+      "ordersName": "Ime",
+      "ordersNameOn": "Kupac mora unijeti svoje ime",
+      "ordersNameOff": "Polje za ime skriveno",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Kupac mora unijeti svoj telefon",
+      "ordersPhoneOff": "Polje za telefon skriveno",
+      "ordersAddress": "Adresa za dostavu",
+      "ordersAddressOn": "Kupac mora unijeti adresu za dostavu",
+      "ordersAddressOff": "Polje za adresu skriveno"
     },
     "general": {
       "save": "Spremi",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Dodaj više",
       "scanStart": "Skeniraj",
       "scanPoolTitle": "Stranice jelovnika",
-      "scanPoolSubtitle": "Dodajte fotografije ili PDF datoteke vašeg papirnatog jelovnika. Do 5 datoteka."
+      "scanPoolSubtitle": "Dodajte fotografije ili PDF datoteke vašeg papirnatog jelovnika. Do 5 datoteka.",
+      "demoButton": "Ispuni uzorak jelovnika",
+      "demoDescription": "Još nije spremno? Isprobajte uzorak jelovnika da vidite kako funkcionira."
     },
     "onboarding": {
       "nameTitle": "Kako se zove vaš lokal?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Nova rezervacija je napravljena u vašem restoranu.",
     "ownerCta": "Pregledaj rezervacije",
     "ownerSignature": "S poštovanjem,<br>IQ Rest Tim"
-  },
-  "languages": {
-    "meta": {
-      "title": "Odaberite jezik - IQ Rest QR Izbornik",
-      "description": "Pregledajte IQ Rest na željenom jeziku. Dostupno na 35 jezika."
-    },
-    "title": "Odaberite jezik",
-    "subtitle": "Pregledajte IQ Rest na željenom jeziku"
   }
 }

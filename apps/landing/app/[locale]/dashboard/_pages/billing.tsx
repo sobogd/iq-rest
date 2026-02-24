@@ -13,6 +13,8 @@ import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
 import { toast } from "sonner";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { pricing, type PlanId } from "@/lib/pricing";
+import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 
 interface SubscriptionStatusResponse {
   plan: PlanType;
@@ -21,13 +23,35 @@ interface SubscriptionStatusResponse {
   paymentProcessing: boolean;
 }
 
-const SUBSCRIPTION_OPTIONS = [
-  { id: "FREE", plan: "FREE" as PlanType, cycle: null, price: 0, lookupKey: null },
-  { id: "BASIC_MONTHLY", plan: "BASIC" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 9.9, lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
-  { id: "BASIC_YEARLY", plan: "BASIC" as PlanType, cycle: "YEARLY" as BillingCycle, price: 7.4, lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY },
-  { id: "PRO_MONTHLY", plan: "PRO" as PlanType, cycle: "MONTHLY" as BillingCycle, price: 29.9, lookupKey: PRICE_LOOKUP_KEYS.PRO_MONTHLY },
-  { id: "PRO_YEARLY", plan: "PRO" as PlanType, cycle: "YEARLY" as BillingCycle, price: 20.75, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
-] as const;
+interface SubscriptionOption {
+  id: string;
+  plan: PlanType;
+  cycle: BillingCycle | null;
+  planId: PlanId;
+  isYearly: boolean;
+  lookupKey: string | null;
+}
+
+const SUBSCRIPTION_OPTIONS: SubscriptionOption[] = [
+  { id: "FREE", plan: "FREE", cycle: null, planId: "free", isYearly: false, lookupKey: null },
+  { id: "BASIC_MONTHLY", plan: "BASIC", cycle: "MONTHLY", planId: "basic", isYearly: false, lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
+  { id: "BASIC_YEARLY", plan: "BASIC", cycle: "YEARLY", planId: "basic", isYearly: true, lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY },
+  { id: "PRO_MONTHLY", plan: "PRO", cycle: "MONTHLY", planId: "pro", isYearly: false, lookupKey: PRICE_LOOKUP_KEYS.PRO_MONTHLY },
+  { id: "PRO_YEARLY", plan: "PRO", cycle: "YEARLY", planId: "pro", isYearly: true, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
+];
+
+function formatPrice(amount: number, currency: SupportedCurrency): string {
+  const info = currencyInfo[currency];
+  const formatted = amount.toLocaleString("en-US", {
+    minimumFractionDigits: info.zeroDecimal ? 0 : (Number.isInteger(amount) ? 0 : 2),
+    maximumFractionDigits: info.zeroDecimal ? 0 : 2,
+  }).replace(/,/g, " ");
+
+  if (info.symbolPosition === "before") {
+    return `${info.symbol}${formatted}`;
+  }
+  return `${formatted} ${info.symbol}`;
+}
 
 type FeatureValue = boolean | "value";
 
@@ -42,6 +66,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "website", free: true, basic: true, pro: true },
   { key: "qrMenu", free: true, basic: true, pro: true },
   { key: "scans", free: "value", basic: "value", pro: "value" },
+  { key: "whatsappOrders", free: "value", basic: "value", pro: "value" },
   { key: "languages", free: "value", basic: "value", pro: "value" },
   { key: "aiTranslation", free: false, basic: "value", pro: "value" },
   { key: "aiImages", free: false, basic: "value", pro: "value" },
@@ -66,9 +91,10 @@ interface BillingPageProps {
     currentPeriodEnd: string | null;
     paymentProcessing: boolean;
   } | null;
+  currency: SupportedCurrency;
 }
 
-export function BillingPage({ initialSubscription }: BillingPageProps) {
+export function BillingPage({ initialSubscription, currency }: BillingPageProps) {
   const t = useTranslations("billing");
   const tp = useTranslations("pricing");
   const { translations } = useDashboard();
@@ -224,7 +250,7 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
 
   const isActive = subscriptionStatus === "ACTIVE";
 
-  const isCurrentOption = (option: typeof SUBSCRIPTION_OPTIONS[number]) => {
+  const isCurrentOption = (option: SubscriptionOption) => {
     if (option.plan === "FREE") {
       return currentPlan === "FREE" || !isActive;
     }
@@ -281,7 +307,7 @@ export function BillingPage({ initialSubscription }: BillingPageProps) {
                     <div className="flex items-center gap-2 flex-1 min-w-0">
                       <span className={cn("text-sm font-medium", isCurrent && "text-green-700 dark:text-green-400")}>{t(`plans.${option.id}.name`)}</span>
                       <span className={cn("text-sm", isCurrent ? "text-green-600/70 dark:text-green-500/70" : "text-muted-foreground")}>
-                        €{option.price}{t("perMonth")}
+                        {formatPrice(pricing[currency][option.planId][option.isYearly ? "yearly" : "monthly"], currency)}{t("perMonth")}
                       </span>
                     </div>
 

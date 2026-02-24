@@ -517,6 +517,7 @@
           "Restaurangwebbplats",
           "QR Meny",
           "320 skanningar/månad",
+          "30 WhatsApp-beställningar/månad",
           "2 språk",
           "Med IQ Rest vattenstämpel",
           "Analys"
@@ -529,8 +530,9 @@
         "highlights": [
           "Allt i Gratis, plus:",
           "Obegränsade skanningar",
+          "Obegränsade WhatsApp-beställningar",
           "6 språk",
-          "AI översättningar",
+          "AI-översättningar",
           "Anpassad färgtema",
           "Bokningar"
         ]
@@ -543,7 +545,7 @@
           "Allt i Grundläggande, plus:",
           "Obegränsade språk",
           "Flera restauranger",
-          "Egen domän",
+          "Anpassad domän",
           "Prioriterad support"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Bokningar",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Utan IQ Rest-märkning"
+      "noBranding": "Utan IQ Rest-märkning",
+      "whatsappOrders": "WhatsApp-beställningar"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / månad"
       },
       "basic": {
         "scans": "Obegränsade",
         "languages": "6",
         "aiTranslation": "100 / månad",
-        "aiImages": "35 / mån"
+        "aiImages": "35 / mån",
+        "whatsappOrders": "Obegränsat"
       },
       "pro": {
         "scans": "Obegränsade",
         "languages": "Obegränsade",
         "aiTranslation": "Obegränsat",
-        "aiImages": "Obegränsade"
+        "aiImages": "Obegränsade",
+        "whatsappOrders": "Obegränsat"
       }
     },
     "socialProof": "Över 500 restauranger litar på oss",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Engelska",
-    "es": "Spanska"
+    "meta": {
+      "title": "Välj språk - IQ Rest QR-meny",
+      "description": "Bläddra i IQ Rest på ditt föredragna språk. Tillgängligt på 35 språk."
+    },
+    "title": "Välj språk",
+    "subtitle": "Bläddra i IQ Rest på ditt föredragna språk"
   },
   "cookieConsent": {
     "title": "Vi använder cookies",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfiter",
       "lupin": "Lupin",
       "molluscs": "Mollusker"
+    },
+    "order": {
+      "add": "Lägg till",
+      "yourOrder": "Din beställning",
+      "emptyCart": "Din kundvagn är tom",
+      "total": "Totalt",
+      "yourName": "Ditt namn",
+      "namePlaceholder": "Ange ditt namn",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Ditt telefonnummer",
+      "yourAddress": "Adress",
+      "addressPlaceholder": "Leveransadress",
+      "comment": "Kommentar",
+      "commentPlaceholder": "Några särskilda önskemål?",
+      "sendWhatsApp": "Skicka via WhatsApp",
+      "clearCart": "Rensa kundvagn",
+      "orderLimitReached": "Månatlig beställningsgräns nådd. Vänligen försök igen nästa månad."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI-översättningar, obegränsade skanningar, reservationer och mer",
       "featuresTitle": "Allt du får",
       "features": {
-        "aiTranslations": { "title": "AI-Menyöversättningar", "description": "Översätt din meny till 25+ språk med ett klick" },
-        "aiImages": { "title": "AI-Bildförbättring", "description": "Gör dina rättfoton professionella direkt" },
-        "reservations": { "title": "Bordsreservationer", "description": "Låt kunder boka bord direkt från din meny" },
-        "unlimitedScans": { "title": "Obegränsade QR-Skanningar", "description": "Inga begränsningar på hur många kunder som ser din meny" },
-        "noBranding": { "title": "Ingen IQ Rest-Branding", "description": "Din meny, ditt varumärke — rent och professionellt" }
+        "aiTranslations": {
+          "title": "AI-Menyöversättningar",
+          "description": "Översätt din meny till 25+ språk med ett klick"
+        },
+        "aiImages": {
+          "title": "AI-Bildförbättring",
+          "description": "Gör dina rättfoton professionella direkt"
+        },
+        "reservations": {
+          "title": "Bordsreservationer",
+          "description": "Låt kunder boka bord direkt från din meny"
+        },
+        "unlimitedScans": {
+          "title": "Obegränsade QR-Skanningar",
+          "description": "Inga begränsningar på hur många kunder som ser din meny"
+        },
+        "noBranding": {
+          "title": "Ingen IQ Rest-Branding",
+          "description": "Din meny, ditt varumärke — rent och professionellt"
+        }
       },
       "comparePlans": "Jämför alla planer",
       "hideComparison": "Dölj jämförelse",
@@ -1710,7 +1752,22 @@
       "generating": "Genererar...",
       "generateError": "Kunde inte generera bakgrund",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp-beställningar",
+      "ordersRequireWhatsApp": "Lägg till ett WhatsApp-nummer på kontaktsidan för att aktivera beställningar",
+      "ordersEnabled": "Aktivera beställningar",
+      "ordersOn": "Kunder kan beställa via WhatsApp",
+      "ordersOff": "Beställning inaktiverad",
+      "ordersFieldsHint": "Aktiverade fält är obligatoriska för kunden att fylla i",
+      "ordersName": "Namn",
+      "ordersNameOn": "Kunden måste ange sitt namn",
+      "ordersNameOff": "Namnfält dolt",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Kunden måste ange sin telefon",
+      "ordersPhoneOff": "Telefonfält dolt",
+      "ordersAddress": "Leveransadress",
+      "ordersAddressOn": "Kunden måste ange leveransadress",
+      "ordersAddressOff": "Adressfält dolt"
     },
     "general": {
       "save": "Spara",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Lägg till fler",
       "scanStart": "Skanna",
       "scanPoolTitle": "Menysidor",
-      "scanPoolSubtitle": "Lägg till foton eller PDF-filer av din pappersmeny. Upp till 5 filer."
+      "scanPoolSubtitle": "Lägg till foton eller PDF-filer av din pappersmeny. Upp till 5 filer.",
+      "demoButton": "Fyll med exempelmeny",
+      "demoDescription": "Inte redo än? Prova med en exempelmeny för att se hur det fungerar."
     },
     "onboarding": {
       "nameTitle": "Vad heter ditt ställe?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "En ny bokning har gjorts på din restaurang.",
     "ownerCta": "Visa bokningar",
     "ownerSignature": "Med vänliga hälsningar,<br>IQ Rest Team"
-  },
-  "languages": {
-    "meta": {
-      "title": "Välj språk - IQ Rest QR-meny",
-      "description": "Bläddra i IQ Rest på ditt föredragna språk. Tillgängligt på 35 språk."
-    },
-    "title": "Välj språk",
-    "subtitle": "Bläddra i IQ Rest på ditt föredragna språk"
   }
 }

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
 import { Button } from "@/components/ui/button";
+import type { SupportedCurrency } from "@/lib/country-currency-map";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
 import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, ScrollToFeatures, MenuScanner, DemoPhone, ScrollToDemo } from "./_components";
@@ -95,6 +96,7 @@ export default async function HomePage({
 
   const cookieStore = await cookies();
   const isLoggedIn = !!cookieStore.get("user_email")?.value;
+  const currency = (cookieStore.get("currency")?.value as SupportedCurrency) || "EUR";
 
   const tHero = await getTranslations("home.hero");
   const tDemo = await getTranslations("home.demo");
@@ -409,7 +411,7 @@ export default async function HomePage({
       </SectionTracker>
 
       <SectionTracker id="pricing" section="pricing" className="scroll-mt-20">
-        <PricingSection noIndex hideComparison />
+        <PricingSection noIndex hideComparison currency={currency} />
       </SectionTracker>
     </>
   );

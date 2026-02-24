@@ -162,6 +162,11 @@ export async function POST(request: NextRequest) {
           reservationSlotMinutes: data.reservationSlotMinutes ?? existing.reservationSlotMinutes,
           workingHoursStart: data.workingHoursStart ?? existing.workingHoursStart,
           workingHoursEnd: data.workingHoursEnd ?? existing.workingHoursEnd,
+          // WhatsApp orders
+          ordersEnabled: data.ordersEnabled ?? existing.ordersEnabled,
+          orderNameEnabled: data.orderNameEnabled ?? existing.orderNameEnabled,
+          orderPhoneEnabled: data.orderPhoneEnabled ?? existing.orderPhoneEnabled,
+          orderAddressEnabled: data.orderAddressEnabled ?? existing.orderAddressEnabled,
         },
       });
 
@@ -246,6 +251,11 @@ export async function POST(request: NextRequest) {
           reservationSlotMinutes: data.reservationSlotMinutes ?? 90,
           workingHoursStart: data.workingHoursStart ?? "10:00",
           workingHoursEnd: data.workingHoursEnd ?? "22:00",
+          // WhatsApp orders
+          ordersEnabled: data.ordersEnabled ?? false,
+          orderNameEnabled: data.orderNameEnabled ?? true,
+          orderPhoneEnabled: data.orderPhoneEnabled ?? false,
+          orderAddressEnabled: data.orderAddressEnabled ?? false,
           companyId,
           startedFromScratch: true,
         },

@@ -517,9 +517,10 @@
           "Restoran web sitesi",
           "QR Menü",
           "320 tarama/ay",
+          "30 WhatsApp siparişi/ay",
           "2 dil",
           "IQ Rest filigranı ile",
-          "Analiz"
+          "Analitik"
         ]
       },
       "basic": {
@@ -529,8 +530,9 @@
         "highlights": [
           "Ücretsizdeki her şey, artı:",
           "Sınırsız tarama",
+          "Sınırsız WhatsApp siparişleri",
           "6 dil",
-          "AI çeviriler",
+          "Yapay zeka çevirileri",
           "Özel renk teması",
           "Rezervasyonlar"
         ]
@@ -540,8 +542,8 @@
         "description": "Büyüyen restoran zincirleri için",
         "cta": "Başlayın",
         "highlights": [
-          "Temeldeki her şey, artı:",
-          "Sınırsız dil",
+          "Temel'deki her şey, artı:",
+          "Sınırsız diller",
           "Birden fazla restoran",
           "Özel alan adı",
           "Öncelikli destek"
@@ -567,26 +569,30 @@
       "reservations": "Rezervasyonlar",
       "multiRestaurant": "Birden fazla restoran",
       "customDomain": "Özel alan adı",
-      "noBranding": "IQ Rest markası olmadan"
+      "noBranding": "IQ Rest markası olmadan",
+      "whatsappOrders": "WhatsApp siparişleri"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / ay"
       },
       "basic": {
         "scans": "Sınırsız",
         "languages": "6",
         "aiTranslation": "100 / ay",
-        "aiImages": "35 / ay"
+        "aiImages": "35 / ay",
+        "whatsappOrders": "Sınırsız"
       },
       "pro": {
         "scans": "Sınırsız",
         "languages": "Sınırsız",
         "aiTranslation": "Sınırsız",
-        "aiImages": "Sınırsız"
+        "aiImages": "Sınırsız",
+        "whatsappOrders": "Sınırsız"
       }
     },
     "socialProof": "500'den fazla restoran bize güveniyor",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "İngilizce",
-    "es": "İspanyolca"
+    "meta": {
+      "title": "Dil seçin - IQ Rest QR Menü",
+      "description": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin. 35 dilde mevcuttur."
+    },
+    "title": "Dil seçin",
+    "subtitle": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin"
   },
   "cookieConsent": {
     "title": "Çerezleri Kullanıyoruz",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sülfür Dioksit",
       "lupin": "Lupin",
       "molluscs": "Yumuşakçalar"
+    },
+    "order": {
+      "add": "Ekle",
+      "yourOrder": "Siparişiniz",
+      "emptyCart": "Sepetiniz boş",
+      "total": "Toplam",
+      "yourName": "Adınız",
+      "namePlaceholder": "Adınızı girin",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Telefon numaranız",
+      "yourAddress": "Adres",
+      "addressPlaceholder": "Teslimat adresi",
+      "comment": "Yorum",
+      "commentPlaceholder": "Herhangi bir özel isteğiniz var mı?",
+      "sendWhatsApp": "WhatsApp ile gönder",
+      "clearCart": "Sepeti temizle",
+      "orderLimitReached": "Aylık sipariş limiti aşıldı. Lütfen gelecek ay tekrar deneyin."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI çeviriler, sınırsız taramalar, rezervasyonlar ve daha fazlası",
       "featuresTitle": "Elde ettiğiniz her şey",
       "features": {
-        "aiTranslations": { "title": "AI Menü Çevirileri", "description": "Menünüzü tek tıkla 25+ dile çevirin" },
-        "aiImages": { "title": "AI Görüntü İyileştirme", "description": "Yemek fotoğraflarınızı anında profesyonel gösterin" },
-        "reservations": { "title": "Masa Rezervasyonları", "description": "Müşterilerin doğrudan menünüzden masa ayırtmasına izin verin" },
-        "unlimitedScans": { "title": "Sınırsız QR Taramaları", "description": "Menünüzü kaç müşterinin görüntüleyeceğine dair sınır yok" },
-        "noBranding": { "title": "IQ Rest Markası Yok", "description": "Sizin menünüz, sizin markanız — temiz ve profesyonel" }
+        "aiTranslations": {
+          "title": "AI Menü Çevirileri",
+          "description": "Menünüzü tek tıkla 25+ dile çevirin"
+        },
+        "aiImages": {
+          "title": "AI Görüntü İyileştirme",
+          "description": "Yemek fotoğraflarınızı anında profesyonel gösterin"
+        },
+        "reservations": {
+          "title": "Masa Rezervasyonları",
+          "description": "Müşterilerin doğrudan menünüzden masa ayırtmasına izin verin"
+        },
+        "unlimitedScans": {
+          "title": "Sınırsız QR Taramaları",
+          "description": "Menünüzü kaç müşterinin görüntüleyeceğine dair sınır yok"
+        },
+        "noBranding": {
+          "title": "IQ Rest Markası Yok",
+          "description": "Sizin menünüz, sizin markanız — temiz ve profesyonel"
+        }
       },
       "comparePlans": "Tüm planları karşılaştır",
       "hideComparison": "Karşılaştırmayı gizle",
@@ -1710,7 +1752,22 @@
       "generating": "Oluşturuluyor...",
       "generateError": "Arka plan oluşturulamadı",
       "previewButton": "Masa ayırt",
-      "preview": "Önizleme"
+      "preview": "Önizleme",
+      "ordersSection": "WhatsApp Siparişleri",
+      "ordersRequireWhatsApp": "Siparişleri etkinleştirmek için İletişimlar sayfasına bir WhatsApp numarası ekleyin",
+      "ordersEnabled": "Siparişleri Etkinleştir",
+      "ordersOn": "Müşteriler WhatsApp üzerinden sipariş verebilir",
+      "ordersOff": "Sipariş verme devre dışı",
+      "ordersFieldsHint": "Etkin alanlar müşterinin doldurması için gereklidir",
+      "ordersName": "Ad",
+      "ordersNameOn": "Müşteri adını girmelidir",
+      "ordersNameOff": "Ad alanı gizli",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Müşteri telefonunu girmelidir",
+      "ordersPhoneOff": "Telefon alanı gizli",
+      "ordersAddress": "Teslimat Adresi",
+      "ordersAddressOn": "Müşteri teslimat adresini girmelidir",
+      "ordersAddressOff": "Adres alanı gizli"
     },
     "general": {
       "save": "Kaydet",
@@ -2282,13 +2339,5 @@
     "ownerBody": "Restoranınızda yeni bir rezervasyon yapıldı.",
     "ownerCta": "Rezervasyonları görüntüle",
     "ownerSignature": "Saygılarımızla,<br>IQ Rest Ekibi"
-  },
-  "languages": {
-    "meta": {
-      "title": "Dil seçin - IQ Rest QR Menü",
-      "description": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin. 35 dilde mevcuttur."
-    },
-    "title": "Dil seçin",
-    "subtitle": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin"
   }
 }

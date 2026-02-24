@@ -8,6 +8,7 @@ interface MenuHeaderProps {
   absolute?: boolean;
   accentColor?: string;
   isPreview?: boolean;
+  backHref?: string;
 }
 
 export function MenuHeader({
@@ -17,6 +18,7 @@ export function MenuHeader({
   absolute,
   accentColor,
   isPreview,
+  backHref,
 }: MenuHeaderProps) {
   const positionClass = absolute
     ? "absolute top-0 inset-x-0"
@@ -34,7 +36,7 @@ export function MenuHeader({
       }}
     >
       <div className="h-14 max-w-[440px] w-full flex items-center relative mx-auto">
-        <Link href={`/m/${slug}${isPreview ? "?preview=1" : ""}`} className="p-2 -ml-2 text-white z-10">
+        <Link href={backHref || `/m/${slug}${isPreview ? "?preview=1" : ""}`} className="p-2 -ml-2 text-white z-10">
           <ArrowLeft className="h-6 w-6" />
         </Link>
         <h1 className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">

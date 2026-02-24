@@ -2,14 +2,16 @@
 
 import { useTranslations } from "next-intl";
 import { PricingCards } from "./pricing-cards";
+import type { SupportedCurrency } from "@/lib/country-currency-map";
 
 interface PricingSectionProps {
   noIndex?: boolean;
   hideComparison?: boolean;
   hideButtons?: boolean;
+  currency: SupportedCurrency;
 }
 
-export function PricingSection({ noIndex = false, hideComparison = false, hideButtons = false }: PricingSectionProps) {
+export function PricingSection({ noIndex = false, hideComparison = false, hideButtons = false, currency }: PricingSectionProps) {
   const t = useTranslations("pricing");
 
   const content = (
@@ -21,7 +23,7 @@ export function PricingSection({ noIndex = false, hideComparison = false, hideBu
         <p className="text-sm md:text-base font-medium text-primary text-center mb-12">
           {t("socialProof")}
         </p>
-        <PricingCards hideComparison={hideComparison} hideButtons={hideButtons} />
+        <PricingCards hideComparison={hideComparison} hideButtons={hideButtons} currency={currency} />
       </div>
     </div>
   );

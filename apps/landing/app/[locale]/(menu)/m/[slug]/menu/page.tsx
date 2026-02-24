@@ -30,6 +30,8 @@ async function getRestaurantWithMenu(slug: string) {
       defaultLanguage: true,
       accentColor: true,
       currency: true,
+      whatsapp: true,
+      ordersEnabled: true,
     },
   });
 
@@ -131,6 +133,10 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
             info: t("allergensInfo"),
             names: t.raw("allergenNames") as Record<string, string>,
           }}
+          slug={slug}
+          ordersEnabled={!!(restaurant.ordersEnabled && restaurant.whatsapp)}
+          addLabel={t("order.add")}
+          isPreview={isPreview}
         />
       )}
     </MenuPageWrapper>

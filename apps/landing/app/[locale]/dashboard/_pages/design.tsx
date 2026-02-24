@@ -33,6 +33,11 @@ interface DesignPageProps {
     source: string | null;
     accentColor: string;
     hideTitle: boolean;
+    whatsapp: string | null;
+    ordersEnabled: boolean;
+    orderNameEnabled: boolean;
+    orderPhoneEnabled: boolean;
+    orderAddressEnabled: boolean;
   } | null;
   plan: string;
   isAdmin: boolean;
@@ -78,6 +83,23 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
   const [originalAccentColor] = useState(initAccent);
   const [originalHideTitle] = useState(initHideTitle);
 
+  // Orders fields
+  const hasWhatsApp = Boolean(initialRestaurant?.whatsapp?.trim());
+  const initOrdersEnabled = initialRestaurant?.ordersEnabled ?? false;
+  const initOrderName = initialRestaurant?.orderNameEnabled ?? true;
+  const initOrderPhone = initialRestaurant?.orderPhoneEnabled ?? false;
+  const initOrderAddress = initialRestaurant?.orderAddressEnabled ?? false;
+
+  const [ordersEnabled, setOrdersEnabled] = useState(initOrdersEnabled);
+  const [orderName, setOrderName] = useState(initOrderName);
+  const [orderPhone, setOrderPhone] = useState(initOrderPhone);
+  const [orderAddress, setOrderAddress] = useState(initOrderAddress);
+
+  const [originalOrdersEnabled] = useState(initOrdersEnabled);
+  const [originalOrderName] = useState(initOrderName);
+  const [originalOrderPhone] = useState(initOrderPhone);
+  const [originalOrderAddress] = useState(initOrderAddress);
+
   const [validationError, setValidationError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
@@ -93,9 +115,13 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
       currency !== originalCurrency ||
       source !== originalSource ||
       accentColor !== originalAccentColor ||
-      hideTitle !== originalHideTitle
+      hideTitle !== originalHideTitle ||
+      ordersEnabled !== originalOrdersEnabled ||
+      orderName !== originalOrderName ||
+      orderPhone !== originalOrderPhone ||
+      orderAddress !== originalOrderAddress
     );
-  }, [name, description, slug, currency, source, accentColor, hideTitle, originalName, originalDescription, originalSlug, originalCurrency, originalSource, originalAccentColor, originalHideTitle]);
+  }, [name, description, slug, currency, source, accentColor, hideTitle, ordersEnabled, orderName, orderPhone, orderAddress, originalName, originalDescription, originalSlug, originalCurrency, originalSource, originalAccentColor, originalHideTitle, originalOrdersEnabled, originalOrderName, originalOrderPhone, originalOrderAddress]);
 
   function handleSlugChange(value: string) {
     const cleanSlug = value
@@ -217,6 +243,10 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
           source,
           accentColor,
           hideTitle,
+          ordersEnabled,
+          orderNameEnabled: orderName,
+          orderPhoneEnabled: orderPhone,
+          orderAddressEnabled: orderAddress,
         }),
       });
 
@@ -474,6 +504,66 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 label: `${c.code} (${c.symbol}) - ${c.name}`,
               }))}
             />
+          </div>
+
+          {/* WhatsApp Orders */}
+          <div className="space-y-4">
+            <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider pt-6">{t("ordersSection")}:</h2>
+
+            {!hasWhatsApp && (
+              <p className="text-xs text-muted-foreground">{t("ordersRequireWhatsApp")}</p>
+            )}
+
+            <div className={!hasWhatsApp ? "opacity-50" : ""}>
+              <FormSwitch
+                id="orders-enabled"
+                label={`${t("ordersEnabled")}:`}
+                checked={ordersEnabled}
+                onCheckedChange={hasWhatsApp ? (v) => {
+                  setOrdersEnabled(v);
+                  track(DashboardEvent.TOGGLED_ORDERS_ENABLED);
+                } : () => {}}
+                activeText={t("ordersOn")}
+                inactiveText={t("ordersOff")}
+                disabled={!hasWhatsApp}
+              />
+            </div>
+
+            <div className={`space-y-4 ${!ordersEnabled || !hasWhatsApp ? "opacity-50" : ""}`}>
+              <div className="space-y-1">
+                <p className="text-xs text-muted-foreground">{t("ordersFieldsHint")}</p>
+              </div>
+
+              <FormSwitch
+                id="order-name"
+                label=""
+                checked={orderName}
+                onCheckedChange={(v) => { setOrderName(v); track(DashboardEvent.TOGGLED_ORDER_NAME); }}
+                activeText={t("ordersNameOn")}
+                inactiveText={t("ordersNameOff")}
+                disabled={!ordersEnabled || !hasWhatsApp}
+              />
+
+              <FormSwitch
+                id="order-phone"
+                label=""
+                checked={orderPhone}
+                onCheckedChange={(v) => { setOrderPhone(v); track(DashboardEvent.TOGGLED_ORDER_PHONE); }}
+                activeText={t("ordersPhoneOn")}
+                inactiveText={t("ordersPhoneOff")}
+                disabled={!ordersEnabled || !hasWhatsApp}
+              />
+
+              <FormSwitch
+                id="order-address"
+                label=""
+                checked={orderAddress}
+                onCheckedChange={(v) => { setOrderAddress(v); track(DashboardEvent.TOGGLED_ORDER_ADDRESS); }}
+                activeText={t("ordersAddressOn")}
+                inactiveText={t("ordersAddressOff")}
+                disabled={!ordersEnabled || !hasWhatsApp}
+              />
+            </div>
           </div>
 
         </div>

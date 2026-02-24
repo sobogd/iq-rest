@@ -19,11 +19,13 @@ import {
   Loader2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { PRICE_LOOKUP_KEYS, PLANS } from "@/lib/stripe-config";
+import { PRICE_LOOKUP_KEYS } from "@/lib/stripe-config";
 import type { PlanType } from "@/lib/stripe-config";
 import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { toast } from "sonner";
+import { pricing } from "@/lib/pricing";
+import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 
 type FeatureValue = boolean | "value";
 
@@ -38,6 +40,7 @@ const COMPARISON_FEATURES: FeatureRow[] = [
   { key: "website", free: true, basic: true, pro: true },
   { key: "qrMenu", free: true, basic: true, pro: true },
   { key: "scans", free: "value", basic: "value", pro: "value" },
+  { key: "whatsappOrders", free: "value", basic: "value", pro: "value" },
   { key: "languages", free: "value", basic: "value", pro: "value" },
   { key: "aiTranslation", free: false, basic: "value", pro: "value" },
   { key: "aiImages", free: false, basic: "value", pro: "value" },
@@ -64,22 +67,25 @@ const FEATURES = [
 
 type SelectedPlan = "yearly" | "monthly";
 
-const PLAN_OPTIONS: { id: SelectedPlan; pricePerMonth: string; lookupKey: string; subtextKey: string }[] = [
-  {
-    id: "yearly",
-    pricePerMonth: (PLANS.BASIC.price.yearly / 12).toFixed(2).replace(/\.?0+$/, ""),
-    lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY,
-    subtextKey: "billedYearly",
-  },
-  {
-    id: "monthly",
-    pricePerMonth: PLANS.BASIC.price.monthly.toFixed(2).replace(/\.?0+$/, ""),
-    lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY,
-    subtextKey: "billedMonthly",
-  },
+interface PlanOption {
+  id: SelectedPlan;
+  lookupKey: string;
+  subtextKey: string;
+}
+
+const PLAN_OPTIONS: PlanOption[] = [
+  { id: "yearly", lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY, subtextKey: "billedYearly" },
+  { id: "monthly", lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY, subtextKey: "billedMonthly" },
 ];
 
-const YEARLY_TOTAL = PLANS.BASIC.price.yearly.toFixed(0);
+function formatPrice(amount: number, cur: SupportedCurrency): string {
+  const info = currencyInfo[cur];
+  const formatted = amount.toLocaleString("en-US", {
+    minimumFractionDigits: info.zeroDecimal ? 0 : (Number.isInteger(amount) ? 0 : 2),
+    maximumFractionDigits: info.zeroDecimal ? 0 : 2,
+  }).replace(/,/g, " ");
+  return info.symbolPosition === "before" ? `${info.symbol}${formatted}` : `${formatted} ${info.symbol}`;
+}
 
 interface UpgradePageProps {
   initialSubscription: {
@@ -90,9 +96,10 @@ interface UpgradePageProps {
     paymentProcessing: boolean;
   } | null;
   isAdmin?: boolean;
+  currency: SupportedCurrency;
 }
 
-export function UpgradePage({ initialSubscription, isAdmin }: UpgradePageProps) {
+export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradePageProps) {
   const t = useTranslations("dashboard.upsell");
   const tp = useTranslations("pricing");
   const locale = useLocale();
@@ -191,14 +198,14 @@ export function UpgradePage({ initialSubscription, isAdmin }: UpgradePageProps) 
                   {tp(option.id === "yearly" ? "yearly" : "monthly")}
                 </div>
                 <div className="text-2xl font-bold">
-                  €{option.pricePerMonth}
+                  {formatPrice(option.id === "yearly" ? pricing[currency].basic.yearly : pricing[currency].basic.monthly, currency)}
                   <span className="text-sm font-normal text-muted-foreground">
                     {tp("perMonth")}
                   </span>
                 </div>
                 <div className="text-xs text-muted-foreground mt-0.5">
                   {option.id === "yearly"
-                    ? tp("billedYearly", { total: `€${YEARLY_TOTAL}` })
+                    ? tp("billedYearly", { total: formatPrice(pricing[currency].basic.yearlyTotal, currency) })
                     : t("billedMonthly")}
                 </div>
               </button>

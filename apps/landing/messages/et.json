@@ -515,10 +515,11 @@
         "cta": "Loo tasuta",
         "highlights": [
           "Restorani veebisait",
-          "QR Menüü",
-          "320 skaneerimist/kuu",
+          "QR Menü",
+          "320 skanni/kuu",
+          "30 WhatsApp tellimust/kuu",
           "2 keelt",
-          "IQ Rest vesimärgiga",
+          "IQ Rest veepildi olemasolu",
           "Analüütika"
         ]
       },
@@ -527,8 +528,9 @@
         "description": "Suurepärane väikestele restoranidele",
         "cta": "Alusta",
         "highlights": [
-          "Kõik Tasuta plaanis, pluss:",
-          "Piiramatu skaneerimine",
+          "Kõik tasuta, pluss:",
+          "Piiramatu skannimine",
+          "Piiramatu WhatsApp tellimused",
           "6 keelt",
           "AI tõlked",
           "Kohandatud värviteema",
@@ -540,10 +542,10 @@
         "description": "Kasvavatele restoranikettidele",
         "cta": "Alusta",
         "highlights": [
-          "Kõik Põhi plaanis, pluss:",
-          "Piiramatult keeli",
-          "Mitu restorani",
-          "Oma domeen",
+          "Kõik põhitasemes, pluss:",
+          "Piiramatu keeled",
+          "Mitmed restoranid",
+          "Kohandatud domeen",
           "Prioriteetne tugi"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Broneeringud",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Ilma IQ Rest brändinguta"
+      "noBranding": "Ilma IQ Rest brändinguta",
+      "whatsappOrders": "WhatsApp tellimused"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / kuu"
       },
       "basic": {
         "scans": "Piiramatu",
         "languages": "6",
         "aiTranslation": "100 / kuu",
-        "aiImages": "35 / kuus"
+        "aiImages": "35 / kuus",
+        "whatsappOrders": "Piiramatu"
       },
       "pro": {
         "scans": "Piiramatu",
         "languages": "Piiramatu",
         "aiTranslation": "Piiramatu",
-        "aiImages": "Piiramatu"
+        "aiImages": "Piiramatu",
+        "whatsappOrders": "Piiramatu"
       }
     },
     "socialProof": "Üle 500 restorani usaldab meid",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Inglise",
-    "es": "Hispaania"
+    "meta": {
+      "title": "Valige keel - IQ Rest QR-menüü",
+      "description": "Sirvige IQ Resti oma eelistatud keeles. Saadaval 35 keeles."
+    },
+    "title": "Valige keel",
+    "subtitle": "Sirvige IQ Resti oma eelistatud keeles"
   },
   "cookieConsent": {
     "title": "Kasutame küpsiseid",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfiidid",
       "lupin": "Lupiin",
       "molluscs": "Molluskid"
+    },
+    "order": {
+      "add": "Lisa",
+      "yourOrder": "Teie tellimus",
+      "emptyCart": "Teie ostukorv on tühi",
+      "total": "Kokku",
+      "yourName": "Teie nimi",
+      "namePlaceholder": "Sisestage oma nimi",
+      "yourPhone": "Telefon",
+      "phonePlaceholder": "Teie telefoninumber",
+      "yourAddress": "Aadress",
+      "addressPlaceholder": "Kohaletoimetamise aadress",
+      "comment": "Kommentaar",
+      "commentPlaceholder": "Kas on mingeid erilisi soove?",
+      "sendWhatsApp": "Saada WhatsAppi kaudu",
+      "clearCart": "Tühjenda ostukorv",
+      "orderLimitReached": "Kuu tellimuste piir on saavutatud. Palun proovige uuesti järgmisel kuul."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "AI tõlked, piiramatud skaneeringud, broneeringud ja palju muud",
       "featuresTitle": "Kõik mida saad",
       "features": {
-        "aiTranslations": { "title": "AI Menüütõlked", "description": "Tõlgi oma menüü 25+ keelde ühe klikiga" },
-        "aiImages": { "title": "AI Pilditöötlus", "description": "Muuda oma toidufotod professionaalseks hetkega" },
-        "reservations": { "title": "Laudade Broneerimine", "description": "Lase klientidel broneerida laudu otse menüüst" },
-        "unlimitedScans": { "title": "Piiramatud QR Skaneeringud", "description": "Pole piiranguid, kui palju kliente su menüüd vaatab" },
-        "noBranding": { "title": "Ilma IQ Rest Brändinguta", "description": "Sinu menüü, sinu bränd — puhas ja professionaalne" }
+        "aiTranslations": {
+          "title": "AI Menüütõlked",
+          "description": "Tõlgi oma menüü 25+ keelde ühe klikiga"
+        },
+        "aiImages": {
+          "title": "AI Pilditöötlus",
+          "description": "Muuda oma toidufotod professionaalseks hetkega"
+        },
+        "reservations": {
+          "title": "Laudade Broneerimine",
+          "description": "Lase klientidel broneerida laudu otse menüüst"
+        },
+        "unlimitedScans": {
+          "title": "Piiramatud QR Skaneeringud",
+          "description": "Pole piiranguid, kui palju kliente su menüüd vaatab"
+        },
+        "noBranding": {
+          "title": "Ilma IQ Rest Brändinguta",
+          "description": "Sinu menüü, sinu bränd — puhas ja professionaalne"
+        }
       },
       "comparePlans": "Võrdle kõiki pakette",
       "hideComparison": "Peida võrdlus",
@@ -1710,7 +1752,22 @@
       "generating": "Genereerimine...",
       "generateError": "Tausta genereerimine ebaõnnestus",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "WhatsApp tellimused",
+      "ordersRequireWhatsApp": "Lisage kontaktide lehele WhatsAppi number, et tellimused lubada",
+      "ordersEnabled": "Luba tellimused",
+      "ordersOn": "Kliendid saavad tellida WhatsAppi kaudu",
+      "ordersOff": "Tellimine keelatud",
+      "ordersFieldsHint": "Lubatud väljad on kliendi täitmiseks kohustuslikud",
+      "ordersName": "Nimi",
+      "ordersNameOn": "Klient peab sisestama oma nime",
+      "ordersNameOff": "Nime väli peidetud",
+      "ordersPhone": "Telefon",
+      "ordersPhoneOn": "Klient peab sisestama oma telefoni",
+      "ordersPhoneOff": "Telefoni väli peidetud",
+      "ordersAddress": "Kohaletoimetamise aadress",
+      "ordersAddressOn": "Klient peab sisestama kohaletoimetamise aadressi",
+      "ordersAddressOff": "Aadressi väli peidetud"
     },
     "general": {
       "save": "Salvesta",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Lisa veel",
       "scanStart": "Skaneeri",
       "scanPoolTitle": "Menüü lehed",
-      "scanPoolSubtitle": "Lisage oma pabermenüü fotod või PDF-failid. Kuni 5 faili."
+      "scanPoolSubtitle": "Lisage oma pabermenüü fotod või PDF-failid. Kuni 5 faili.",
+      "demoButton": "Täida näidismenüüga",
+      "demoDescription": "Ei ole veel valmis? Proovige näidismenüüd, et näha, kuidas see töötab."
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Teie restoranis on tehtud uus broneering.",
     "ownerCta": "Vaata broneeringuid",
     "ownerSignature": "Lugupidamisega,<br>IQ Rest meeskond"
-  },
-  "languages": {
-    "meta": {
-      "title": "Valige keel - IQ Rest QR-menüü",
-      "description": "Sirvige IQ Resti oma eelistatud keeles. Saadaval 35 keeles."
-    },
-    "title": "Valige keel",
-    "subtitle": "Sirvige IQ Resti oma eelistatud keeles"
   }
 }

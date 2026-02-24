@@ -514,11 +514,12 @@
         "description": "Foirmiúil chun IQ Rest a thriail",
         "cta": "Cruthaigh saor in aisce",
         "highlights": [
-          "Suíomh gréasáin bialann",
+          "Láithreán gréasáin na bialainne",
           "QR Menu",
-          "320 scans/mí",
+          "320 scans/month",
+          "30 ordú WhatsApp in aghaidh na míosa",
           "2 teangacha",
-          "Le watermark IQ Rest",
+          "Le marc uisce IQ Rest",
           "Anailísíocht"
         ]
       },
@@ -529,6 +530,7 @@
         "highlights": [
           "Gach rud atá sa Saor, chomh maith le:",
           "Scans neamhtheoranta",
+          "Ordú WhatsApp neamhtheoranta",
           "6 teangacha",
           "Aistriúcháin AI",
           "Téama dath saincheaptha",
@@ -540,10 +542,10 @@
         "description": "Do shlabhra bialann atá ag fás",
         "cta": "Tosaigh",
         "highlights": [
-          "Gach rud atá sa Básic, chomh maith le:",
+          "Gach rud atá sa Bunús, chomh maith le:",
           "Teangacha neamhtheoranta",
-          "Bialanna iolracha",
-          "Fearann saincheaptha",
+          "Il-bialanna",
+          "Dómhain shaincheaptha",
           "Tacaíocht tosaíochta"
         ]
       }
@@ -567,26 +569,30 @@
       "reservations": "Conradh",
       "multiRestaurant": "Multiple restaurants",
       "customDomain": "Custom domain",
-      "noBranding": "Gan brandáil IQ Rest"
+      "noBranding": "Gan brandáil IQ Rest",
+      "whatsappOrders": "Orduithe WhatsApp"
     },
     "values": {
       "free": {
         "scans": "320",
         "languages": "2",
         "aiTranslation": "—",
-        "aiImages": "—"
+        "aiImages": "—",
+        "whatsappOrders": "30 / mí"
       },
       "basic": {
         "scans": "Neamhtheoranta",
         "languages": "6",
         "aiTranslation": "100 / mí",
-        "aiImages": "35 / mí"
+        "aiImages": "35 / mí",
+        "whatsappOrders": "Neamhtheoranta"
       },
       "pro": {
         "scans": "Neamhtheoranta",
         "languages": "Neamhtheoranta",
         "aiTranslation": "Gan teorainn",
-        "aiImages": "Neamhtheoranta"
+        "aiImages": "Neamhtheoranta",
+        "whatsappOrders": "Neamhtheoranta"
       }
     },
     "socialProof": "Tá muinín ag breis is 500 bialann asainn",
@@ -622,8 +628,12 @@
     }
   },
   "languages": {
-    "en": "Béarla",
-    "es": "Spáinnis"
+    "meta": {
+      "title": "Roghnaigh teanga - IQ Rest QR Biachlár",
+      "description": "Brabhsáil IQ Rest i do theanga roghnaithe. Ar fáil i 35 teanga."
+    },
+    "title": "Roghnaigh teanga",
+    "subtitle": "Brabhsáil IQ Rest i do theanga roghnaithe"
   },
   "cookieConsent": {
     "title": "Úsáidimid fianáin",
@@ -1288,6 +1298,23 @@
       "sulphites": "Sulfithe",
       "lupin": "Lupin",
       "molluscs": "Mollusc"
+    },
+    "order": {
+      "add": "Cuir leis",
+      "yourOrder": "Do Ordú",
+      "emptyCart": "Tá do chiseal folamh",
+      "total": "Iomlán",
+      "yourName": "Do Ainm",
+      "namePlaceholder": "Cuir isteach do ainm",
+      "yourPhone": "Guthán",
+      "phonePlaceholder": "Do número gutháin",
+      "yourAddress": "Seoladh",
+      "addressPlaceholder": "Seoladh seachadta",
+      "comment": "Tuairim",
+      "commentPlaceholder": "Aon iarratais speisialta?",
+      "sendWhatsApp": "Seol trí WhatsApp",
+      "clearCart": "Glan an chiseal",
+      "orderLimitReached": "Teorainn ordaithe míosúil bainte amach. Bain triail as arís an mhí seo chugainn."
     }
   },
   "faq": {
@@ -1440,11 +1467,26 @@
       "subtitle": "Aistriúcháin AI, scanadh neamhtheoranta, áirithintí agus tuilleadh",
       "featuresTitle": "Gach rud a fhaigheann tú",
       "features": {
-        "aiTranslations": { "title": "Aistriúcháin AI Roghchlár", "description": "Aistrigh do roghchlár go 25+ teanga le clic amháin" },
-        "aiImages": { "title": "Feabhsú Íomhánna le AI", "description": "Déan do ghrianghraif bia proifisiúnta láithreach" },
-        "reservations": { "title": "Áirithintí Bord", "description": "Lig do chustaiméirí boird a chur in áirithe go díreach ón roghchlár" },
-        "unlimitedScans": { "title": "Scanadh QR Neamhtheoranta", "description": "Gan teorainneacha ar cé mhéad custaiméir a fheiceann do roghchlár" },
-        "noBranding": { "title": "Gan Brandáil IQ Rest", "description": "Do roghchlár, do bhrand — glan agus proifisiúnta" }
+        "aiTranslations": {
+          "title": "Aistriúcháin AI Roghchlár",
+          "description": "Aistrigh do roghchlár go 25+ teanga le clic amháin"
+        },
+        "aiImages": {
+          "title": "Feabhsú Íomhánna le AI",
+          "description": "Déan do ghrianghraif bia proifisiúnta láithreach"
+        },
+        "reservations": {
+          "title": "Áirithintí Bord",
+          "description": "Lig do chustaiméirí boird a chur in áirithe go díreach ón roghchlár"
+        },
+        "unlimitedScans": {
+          "title": "Scanadh QR Neamhtheoranta",
+          "description": "Gan teorainneacha ar cé mhéad custaiméir a fheiceann do roghchlár"
+        },
+        "noBranding": {
+          "title": "Gan Brandáil IQ Rest",
+          "description": "Do roghchlár, do bhrand — glan agus proifisiúnta"
+        }
       },
       "comparePlans": "Déan comparáid idir gach plean",
       "hideComparison": "Folaigh comparáid",
@@ -1710,7 +1752,22 @@
       "generating": "Ag giniúint...",
       "generateError": "Theip ar chúlra a ghiniúint",
       "previewButton": "Book a Table",
-      "preview": "Preview"
+      "preview": "Preview",
+      "ordersSection": "Orduithe WhatsApp",
+      "ordersRequireWhatsApp": "Cuir uimhir WhatsApp ar leathanach na gContae chun orduithe a chumasú",
+      "ordersEnabled": "Cumasú Orduithe",
+      "ordersOn": "Is féidir le custaiméirí ordú a dhéanamh trí WhatsApp",
+      "ordersOff": "Níl orduithe ar fáil",
+      "ordersFieldsHint": "Teastaíonn na réimsí atá cumasaithe ó na custaiméirí a líonadh",
+      "ordersName": "Ainm",
+      "ordersNameOn": "Caithfidh an custaiméir a ainm a chur isteach",
+      "ordersNameOff": "Réimse ainm folaithe",
+      "ordersPhone": "Guthán",
+      "ordersPhoneOn": "Caithfidh an custaiméir a guthán a chur isteach",
+      "ordersPhoneOff": "Réimse gutháin folaithe",
+      "ordersAddress": "Seoladh Seachadta",
+      "ordersAddressOn": "Caithfidh an custaiméir seoladh seachadta a chur isteach",
+      "ordersAddressOff": "Réimse seolta folaithe"
     },
     "general": {
       "save": "Sábháil",
@@ -1737,7 +1794,9 @@
       "scanAddMore": "Cuir tuilleadh leis",
       "scanStart": "Scan",
       "scanPoolTitle": "Leathanaigh bhiachlár",
-      "scanPoolSubtitle": "Cuir grianghraif nó comhaid PDF de do bhiachlár páipéir leis. Suas le 5 chomhad."
+      "scanPoolSubtitle": "Cuir grianghraif nó comhaid PDF de do bhiachlár páipéir leis. Suas le 5 chomhad.",
+      "demoButton": "Líon le múnla miasa",
+      "demoDescription": "Níl sé réidh fós? Bain triail as le múnla miasa chun a fheiceáil conas a oibríonn sé."
     },
     "onboarding": {
       "nameTitle": "Cad is ainm do d'áit?",
@@ -2280,13 +2339,5 @@
     "ownerBody": "Rinneadh áirithint nua i do bhialann.",
     "ownerCta": "Féach ar áirithintí",
     "ownerSignature": "Le meas,<br>Foireann IQ Rest"
-  },
-  "languages": {
-    "meta": {
-      "title": "Roghnaigh teanga - IQ Rest QR Biachlár",
-      "description": "Brabhsáil IQ Rest i do theanga roghnaithe. Ar fáil i 35 teanga."
-    },
-    "title": "Roghnaigh teanga",
-    "subtitle": "Brabhsáil IQ Rest i do theanga roghnaithe"
   }
 }
