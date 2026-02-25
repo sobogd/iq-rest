@@ -139,6 +139,7 @@ export const marketing = {
   demoInteract: () => trackEvent("demo_interact"),
   heroImagesClick: () => trackEvent("hero_images_click"),
   headerCtaClick: () => trackEvent("header_cta_click"),
+  heroCtaClick: () => trackEvent("hero_cta_click"),
   pricingCtaClick: (plan: string) => trackEvent("pricing_cta_click", { plan }),
   // AI Menu Scanner
   scannerUpload: (fileCount: string) => trackEvent("scanner_upload", { fileCount }),
