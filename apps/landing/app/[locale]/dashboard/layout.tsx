@@ -15,7 +15,7 @@ export default async function DashboardLayout({
   const auth = await getUserWithCompany();
 
   if (!auth) {
-    redirect("/login");
+    redirect("/login?from=dashboard");
   }
 
   const companyId = auth.companyId;

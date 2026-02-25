@@ -7,7 +7,7 @@ import { OnboardingScanPage } from "../../_components/onboarding-scan-page";
 export default async function Page() {
   const { isAuthenticated, onboardingStep, userId } = await getOnboardingState();
 
-  if (!isAuthenticated) redirect("/login");
+  if (!isAuthenticated) redirect("/login?from=onboarding");
   if (onboardingStep >= 3) redirect("/dashboard");
   if (onboardingStep < 2) redirect("/onboarding/name");
 

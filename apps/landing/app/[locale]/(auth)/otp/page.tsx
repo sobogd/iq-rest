@@ -16,7 +16,7 @@ export default async function Page({
   }
 
   if (!params.email) {
-    redirect("/login");
+    redirect("/login?from=otp");
   }
 
   return <OtpPage email={params.email} />;

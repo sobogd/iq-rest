@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,6 +29,7 @@ const GOOGLE_CLIENT_ID = "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.goo
 export function LoginPage() {
   const locale = useLocale();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const t = useTranslations("dashboard.auth");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -78,9 +80,10 @@ export function LoginPage() {
   );
 
   useEffect(() => {
-    track(DashboardEvent.SHOWED_LOGIN);
+    const from = searchParams.get("from");
+    track(DashboardEvent.SHOWED_LOGIN, from ? { from } : undefined);
     emailInputRef.current?.focus();
-  }, []);
+  }, [searchParams]);
 
   // Load Google Identity Services
   useEffect(() => {

@@ -27,11 +27,11 @@ export const CURRENCIES = [
   { code: "TRY", symbol: "₺", name: "Turkish Lira" },
 
   // Americas
-  { code: "MXN", symbol: "$", name: "Mexican Peso" },
+  { code: "MXN", symbol: "MX$", name: "Mexican Peso" },
   { code: "BRL", symbol: "R$", name: "Brazilian Real" },
-  { code: "ARS", symbol: "$", name: "Argentine Peso" },
-  { code: "CLP", symbol: "$", name: "Chilean Peso" },
-  { code: "COP", symbol: "$", name: "Colombian Peso" },
+  { code: "ARS", symbol: "AR$", name: "Argentine Peso" },
+  { code: "CLP", symbol: "CL$", name: "Chilean Peso" },
+  { code: "COP", symbol: "CO$", name: "Colombian Peso" },
   { code: "PEN", symbol: "S/", name: "Peruvian Sol" },
 
   // Asia & Middle East
