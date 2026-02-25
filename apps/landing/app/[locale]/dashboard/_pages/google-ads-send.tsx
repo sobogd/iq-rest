@@ -191,7 +191,7 @@ export function GoogleAdsSendPage() {
       <AlertDialog open={responseDialog.open} onOpenChange={(open) => setResponseDialog((prev) => ({ ...prev, open }))}>
         <AlertDialogContent className="max-w-md">
           <AlertDialogHeader>
-            <AlertDialogTitle className={responseDialog.success ? "text-green-500" : "text-destructive"}>
+            <AlertDialogTitle className={responseDialog.success ? "text-success" : "text-destructive"}>
               {responseDialog.title}
             </AlertDialogTitle>
             <AlertDialogDescription asChild>

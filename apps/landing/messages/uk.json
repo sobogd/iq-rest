@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Ціни на QR Меню — Безкоштовний, Basic та Pro плани | IQ Rest",
-      "description": "Порівняйте тарифні плани QR-меню. Почніть безкоштовно, оновіть до Basic або Pro для AI-перекладів, індивідуального дизайну, бронювань та іншого."
+      "title": "Ціни на QR Меню — Безкоштовний, Growth та Pro плани | IQ Rest",
+      "description": "Порівняйте тарифні плани QR-меню. Почніть безкоштовно, оновіть до Growth або Pro для AI-перекладів, індивідуального дизайну, бронювань та іншого."
     },
     "title": "Ціни на QR меню та вебсайт ресторану",
     "subtitle": "Без прихованих платежів, без сюрпризів. Запустіть вебсайт вашого ресторану безкоштовно сьогодні — оновлюйте лише коли будете готові до зростання.",
@@ -522,7 +522,8 @@
     "yearly": "Щорічно",
     "save": "(Зекономте 25%)",
     "perMonth": "/міс",
-    "billedYearly": "Оплата щорічно ({total})",
+    "billedYearly": "Оплата щорічно ({total}).",
+    "orMonthly": "Або платіть {price} щомісяця.",
     "forever": "Безкоштовно назавжди",
     "popular": "Найпопулярніше",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Ідеально для випробування IQ Rest",
         "cta": "Створити безкоштовно",
         "highlights": [
-          "Вебсайт ресторану",
-          "QR Меню",
-          "320 сканувань/місяць",
-          "10 замовлень через WhatsApp/місяць",
-          "2 мови",
           "З водяним знаком IQ Rest",
+          "320 сканувань/місяць",
+          "30 замовлень через WhatsApp/місяць",
+          "2 мови",
+          "QR Меню & Вебсайт",
+          "Кастомізована кольорова тема",
           "Аналітика"
         ]
       },
       "basic": {
-        "name": "Базовий",
-        "description": "Чудово підходить для маленьких ресторанів",
+        "name": "Growth",
+        "description": "Повний набір інструментів для цифрових замовлень",
         "cta": "Розпочати",
         "highlights": [
           "Все в Безкоштовному, плюс:",
-          "Необмежені сканування",
-          "Необмежені замовлення через WhatsApp",
           "6 мов",
           "AI переклади",
-          "Кастомізована кольорова тема",
-          "Резервування"
+          "Генерація зображень AI",
+          "Резервування",
+          "Необмежені сканування",
+          "Необмежені замовлення через WhatsApp"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Для зростаючих мереж ресторанів",
         "cta": "Розпочати",
         "highlights": [
-          "Все в Базовому, плюс:",
+          "Все в Growth, плюс:",
           "Необмежена кількість мов",
           "Кілька ресторанів",
           "Кастомізований домен",
+          "Індивідуальні налаштування для кожного ресторану",
           "Пріоритетна підтримка"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / місяць"
+        "orders": "30 / місяць"
       },
       "basic": {
         "scans": "Необмежено",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1447,10 +1449,10 @@
         "name": "Безкоштовний"
       },
       "BASIC_MONTHLY": {
-        "name": "Базовий щомісячний"
+        "name": "Growth щомісячний"
       },
       "BASIC_YEARLY": {
-        "name": "Базовий щорічний"
+        "name": "Growth щорічний"
       },
       "PRO_MONTHLY": {
         "name": "Професійний щомісячний"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Порівняти всі плани",
       "hideComparison": "Сховати порівняння",
-      "ctaBasic": "Почати з Basic",
+      "ctaBasic": "Почати з Growth",
       "ctaPro": "Почати з Pro",
       "billedMonthly": "Щомісячна оплата",
       "ctaSub": "Скасування в будь-який час · Без плати за налаштування",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "ШІ Переклад",
-      "description": "ШІ переклад доступний з підпискою Basic або Pro. Оновіть свій план для використання автоматичних перекладів.",
+      "description": "ШІ переклад доступний з підпискою Growth або Pro. Оновіть свій план для використання автоматичних перекладів.",
       "cancel": "Скасувати",
       "subscribe": "Підписатися",
       "translate": "Перекласти",
       "translating": "Переклад...",
       "limitReached": "Безкоштовні переклади вичерпано",
-      "limitReachedDescription": "Ви використали всі 5 безкоштовних AI-перекладів. Перейдіть на Basic або Pro для необмежених перекладів.",
+      "limitReachedDescription": "Ви використали всі 5 безкоштовних AI-перекладів. Перейдіть на Growth або Pro для необмежених перекладів.",
       "upgrade": "Покращити"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Змінити фон",
       "regenerateImage": "Згенерувати заново",
       "generateLimitReached": "Безкоштовні генерації вичерпано",
-      "generateLimitDescription": "Ви використали 2 безкоштовні генерації зображень ШІ. Перейдіть на Basic або Pro для безлімітних генерацій."
+      "generateLimitDescription": "Ви використали 2 безкоштовні генерації зображень ШІ. Перейдіть на Growth або Pro для безлімітних генерацій."
     },
     "languages": {
       "translationProgress": "Прогрес перекладу",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Плани підписки та платежі",
         "content": [
-          "IQ Rest пропонує безкоштовні, базові та професійні плани підписки. Безкоштовний план доступний безкоштовно з обмеженими функціями. Платні плани (базовий та професійний) оплачуються щомісячно або щорічно через нашого платіжного процесора, Stripe.",
+          "IQ Rest пропонує безкоштовні, Growth та професійні плани підписки. Безкоштовний план доступний безкоштовно з обмеженими функціями. Платні плани (Growth та професійний) оплачуються щомісячно або щорічно через нашого платіжного процесора, Stripe.",
           "Ціни вказані в євро (EUR). Підписуючись на платний план, ви уповноважуєте нас стягувати плату з вашого платіжного методу на регулярній основі, поки ви не скасуєте підписку.",
           "Ви можете оновити, знизити або скасувати свою підписку в будь-який час через вашу панель управління. Скасування набирає чинності в кінці поточного розрахункового періоду. Виплати не повертаються за часткові розрахункові періоди.",
           "Ми залишаємо за собою право змінювати наші ціни з попередженням за 30 днів. Зміни цін будуть застосовуватися до розрахункових періодів, що починаються після періоду попередження."

@@ -43,7 +43,7 @@
       },
       {
         "question": "Çok dil desteği ücretsiz planda mevcut mu?",
-        "answer": "Ücretsiz plan 2 dile kadar içerir. Basic ve Pro planlar, yapay zeka çevirisi dahil sınırsız dil sunar."
+        "answer": "Ücretsiz plan 2 dile kadar içerir. Growth ve Pro planlar, yapay zeka çevirisi dahil sınırsız dil sunar."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Diller Ekleyin",
-        "description": "Mevcut 35 dilden seçim yapın. Ücretsiz plan, en fazla 2 dili içerirken, Basic ve Pro planları menünüz için sınırsız dil sunar."
+        "description": "Mevcut 35 dilden seçim yapın. Ücretsiz plan, en fazla 2 dili içerirken, Growth ve Pro planları menünüz için sınırsız dil sunar."
       },
       {
         "title": "İçeriğinizi Çevirin",

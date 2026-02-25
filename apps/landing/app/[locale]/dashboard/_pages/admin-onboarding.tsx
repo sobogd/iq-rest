@@ -418,7 +418,7 @@ export function AdminOnboardingPage() {
               label="Templates"
               count={templatesCount}
               total={pathChoices}
-              color="bg-green-500"
+              color="bg-success"
             />
             <PathSplitBar
               label="Manual"
@@ -506,7 +506,7 @@ export function AdminOnboardingPage() {
                 label="Cafe"
                 count={templateCafe}
                 total={templateTotal}
-                color="bg-green-500"
+                color="bg-success"
               />
               <PathSplitBar
                 label="Bar"

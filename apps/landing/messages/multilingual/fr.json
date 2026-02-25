@@ -43,7 +43,7 @@
       },
       {
         "question": "Le support multilingue est-il disponible sur le plan gratuit ?",
-        "answer": "Le plan gratuit inclut jusqu'à 2 langues. Les plans Basic et Pro offrent des langues illimitées avec traduction IA incluse."
+        "answer": "Le plan gratuit inclut jusqu'à 2 langues. Les plans Growth et Pro offrent des langues illimitées avec traduction IA incluse."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Ajouter des langues",
-        "description": "Sélectionnez parmi 35 langues disponibles. Le plan gratuit inclut jusqu'à 2 langues, tandis que les plans Basic et Pro offrent des langues illimitées pour votre menu."
+        "description": "Sélectionnez parmi 35 langues disponibles. Le plan gratuit inclut jusqu'à 2 langues, tandis que les plans Growth et Pro offrent des langues illimitées pour votre menu."
       },
       {
         "title": "Traduisez votre contenu",

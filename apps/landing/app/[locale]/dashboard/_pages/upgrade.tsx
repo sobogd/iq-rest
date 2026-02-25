@@ -162,7 +162,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
             <h1 className="text-2xl font-bold tracking-tight mb-2">{t("title")}</h1>
             <p className="text-muted-foreground text-[15px]">{t("subtitle")}</p>
             <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-muted rounded-full text-xs text-muted-foreground">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+              <span className="w-1.5 h-1.5 bg-success rounded-full animate-pulse" />
               {tp("socialProof")}
             </div>
           </div>
@@ -295,7 +295,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
                                 {tp(`values.${planId}.${feature.key}`)}
                               </span>
                             ) : value === true ? (
-                              <Check className="h-4 w-4 text-green-500 mx-auto" />
+                              <Check className="h-4 w-4 text-success mx-auto" />
                             ) : (
                               <X className="h-4 w-4 text-muted-foreground/40 mx-auto" />
                             )}

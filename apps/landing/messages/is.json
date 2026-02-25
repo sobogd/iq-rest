@@ -65,7 +65,7 @@
     "intro": {
       "socialProof": "Treyst af 500+ veitingastöðum um allan heim",
       "title": "Allt sem Veitingastaðurinn Þinn Þarfnast á Netinu",
-      "description": "Skráðu þig með tölvupóstinum þínum og fáðu strax: faglega veitingastaðavefsíðu, QR matseðil í nútíma sniði, virk tengiliðasíðu með korti, fjöltyngdan stuðning með AI þýðingu, myndband eða ljósabakgrunn, og sérsniðna litaskemmu. Allt stjórnanlegt frá símanum þínum - engin tölva nauðsynleg."
+      "description": "Skráðu þig með tölvupóstinum þínum og fáðu strax: faglega veitingastaðavefsíðu, QR matseðil í nútíma sniði, virk tengiliðasíðu með korti, fjöltyngdan stuðning með AI þýðingu, myndband eða ljósabakGrowth, og sérsniðna litaskemmu. Allt stjórnanlegt frá símanum þínum - engin tölva nauðsynleg."
     },
     "featuresPreview": {
       "title": "Miklar Eiginleikar fyrir Veitingastaðinn Þinn",
@@ -440,19 +440,19 @@
       },
       {
         "id": "custom-design",
-        "title": "Vídeó & Mynd Bakgrunnir",
-        "shortDescription": "Búðu til stórkostleg fyrstu áhrif{br}með {link}mynd- eða vídeóbakgrunni{/link}.",
-        "description": "Búðu til eftirminnilegt fyrsta áhrif með sérsniðnum vídeó- eða myndabakgrunnum á heimasíðunni þinni. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns eða fallegri matarmynd til að fanga viðskiptavini strax.",
+        "title": "Vídeó & Mynd BakGrowthir",
+        "shortDescription": "Búðu til stórkostleg fyrstu áhrif{br}með {link}mynd- eða vídeóbakGrowthi{/link}.",
+        "description": "Búðu til eftirminnilegt fyrsta áhrif með sérsniðnum vídeó- eða myndabakGrowthum á heimasíðunni þinni. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns eða fallegri matarmynd til að fanga viðskiptavini strax.",
         "fullDescription": "Fyrstu áhrifin skipta máli. Þegar viðskiptavinir skanna QR kóðann þinn, ættu þeir að vera hrifnir strax. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns, tímaskot af eldhúsinu þínu, eða glæsilegri mynd af þínum sérstöku rétti. Heimasíðan þín verður sjónrænt upplifun sem endurspeglar persónuleika veitingastaðarins þíns.",
         "benefits": [
-          "Stuðningur fyrir vídeó og myndabakgrunna",
+          "Stuðningur fyrir vídeó og myndabakGrowtha",
           "Sjálfvirk hámarkun fyrir hraðari hleðslu",
           "Virkar fullkomlega á farsímum",
           "Skapar eftirminnilegt fyrsta áhrif",
           "Endurspeglar einstakt andrúmsloft veitingastaðarins þíns"
         ],
         "image": "/images/features/custom-design.jpg",
-        "imageAlt": "Vefsíða veitingastaðar með vídeó bakgrunni",
+        "imageAlt": "Vefsíða veitingastaðar með vídeó bakGrowthi",
         "cta": "video or photo backgrounds"
       },
       {
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR Matseðill Verð — Ókeypis, Basic & Pro Áætlanir | IQ Rest",
-      "description": "Berðu saman verðáætlanir QR matseðils. Byrjaðu ókeypis, uppfærðu í Basic eða Pro fyrir AI þýðingar, sérsniðna hönnun, bókanir og fleira."
+      "title": "QR Matseðill Verð — Ókeypis, Growth & Pro Áætlanir | IQ Rest",
+      "description": "Berðu saman verðáætlanir QR matseðils. Byrjaðu ókeypis, uppfærðu í Growth eða Pro fyrir AI þýðingar, sérsniðna hönnun, bókanir og fleira."
     },
     "title": "QR Matseðill & Verðlagning veitingahúss vefsíðu",
     "subtitle": "Engin falin gjöld, engar óvæntar upphæðir. Settu veitingahús vefsíðuna þína í gang ókeypis í dag — uppfærðu aðeins þegar þú ert tilbúin(n) að vaxa.",
@@ -522,7 +522,8 @@
     "yearly": "Árslega",
     "save": "(Sparaðu 25%)",
     "perMonth": "/mánuði",
-    "billedYearly": "Reiknað árlega ({total})",
+    "billedYearly": "Reiknað árlega ({total}).",
+    "orMonthly": "Eða borgaðu {price} mánaðarlega.",
     "forever": "Ókeypis að eilífu",
     "popular": "Vinsælast",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Fullkomið til að prófa IQ Rest",
         "cta": "Búa til ókeypis",
         "highlights": [
-          "Veitingastaður vefsíða",
-          "QR Matseðill",
-          "320 skönnun/mánuði",
-          "10 WhatsApp pöntun/mánuði",
-          "2 tungumál",
           "Með IQ Rest vatnamerki",
+          "320 skönnun/mánuði",
+          "30 WhatsApp pöntun/mánuði",
+          "2 tungumál",
+          "QR Matseðill & Vefsíða",
+          "Sérsniðin litapalletta",
           "Greiningar"
         ]
       },
       "basic": {
-        "name": "Grunn",
-        "description": "Frábært fyrir smá veitingahús",
+        "name": "Growth",
+        "description": "Fullkomin verkfærasett fyrir stafrænar pantanir",
         "cta": "Byrjaðu",
         "highlights": [
           "Allt í Frjálsu, auk:",
-          "Ótakmarkaðar skönnanir",
-          "Ótakmarkaðar WhatsApp pantanir",
           "6 tungumál",
           "AI þýðingar",
-          "Sérsniðin litapalletta",
-          "Bókanir"
+          "AI myndagerð",
+          "Bókanir",
+          "Ótakmarkaðar skönnanir",
+          "Ótakmarkaðar WhatsApp pantanir"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Fyrir vaxandi veitingakeðjur",
         "cta": "Byrjaðu",
         "highlights": [
-          "Allt í Grunn, auk:",
+          "Allt í Growth, auk:",
           "Ótakmarkað tungumál",
           "Fjölmargir veitingastaðir",
           "Sérsniðin lén",
+          "Sérsniðnar aðgerðir fyrir hvern veitingastað",
           "Forgangs stuðningur"
         ]
       }
@@ -581,7 +583,7 @@
       "allergens": "Ofnæmismerki",
       "analytics": "Greiningar",
       "customTheme": "Sérsniðin litapalletta",
-      "background": "Bakgrunnsmynd & myndband",
+      "background": "BakGrowthsmynd & myndband",
       "support": "Stuðningur",
       "reservations": "Bókanir",
       "multiRestaurant": "Multiple restaurants",
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mánuði"
+        "orders": "30 / mánuði"
       },
       "basic": {
         "scans": "Ótakmarkað",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Frítt"
       },
       "BASIC_MONTHLY": {
-        "name": "Grunn mánaðarlega"
+        "name": "Growth mánaðarlega"
       },
       "BASIC_YEARLY": {
-        "name": "Grunn árlega"
+        "name": "Growth árlega"
       },
       "PRO_MONTHLY": {
         "name": "Pro mánaðarlega"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Bera saman öll áskriftarform",
       "hideComparison": "Fela samanburð",
-      "ctaBasic": "Byrjaðu með Basic",
+      "ctaBasic": "Byrjaðu með Growth",
       "ctaPro": "Byrjaðu með Pro",
       "billedMonthly": "Rukkað mánaðarlega",
       "ctaSub": "Segðu upp hvenær sem er · Engin uppsetningargjöld",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Þýðing",
-      "description": "AI þýðing er í boði með Basic eða Pro áskrift. Uppfærðu áætlun þína til að nota sjálfvirkar þýðingar.",
+      "description": "AI þýðing er í boði með Growth eða Pro áskrift. Uppfærðu áætlun þína til að nota sjálfvirkar þýðingar.",
       "cancel": "Hætta við",
       "subscribe": "Gerast áskrifandi",
       "translate": "Þýða",
       "translating": "Þýði...",
       "limitReached": "Ókeypis þýðingar uppurðar",
-      "limitReachedDescription": "Þú hefur notað allar 5 ókeypis AI-þýðingarnar. Uppfærðu í Basic eða Pro fyrir ótakmarkaðar þýðingar.",
+      "limitReachedDescription": "Þú hefur notað allar 5 ókeypis AI-þýðingarnar. Uppfærðu í Growth eða Pro fyrir ótakmarkaðar þýðingar.",
       "upgrade": "Uppfæra"
     },
     "auth": {
@@ -1693,10 +1695,10 @@
       "generatingImage": "Býr til...",
       "generateImageError": "Ekki tókst að búa til mynd",
       "stylize": "Stílbrigða",
-      "changeBackground": "Breyta bakgrunni",
+      "changeBackground": "Breyta bakGrowthi",
       "regenerateImage": "Endurbúa til",
       "generateLimitReached": "Ókeypis AI-myndir uppurnar",
-      "generateLimitDescription": "Þú hefur notað allar 2 ókeypis AI-myndagerðir. Uppfærðu í Basic eða Pro fyrir ótakmarkaðar myndagerðir."
+      "generateLimitDescription": "Þú hefur notað allar 2 ókeypis AI-myndagerðir. Uppfærðu í Growth eða Pro fyrir ótakmarkaðar myndagerðir."
     },
     "languages": {
       "translationProgress": "Þýðingarframvinda",
@@ -1743,8 +1745,8 @@
       "saved": "Tengiliðaupplýsingar vistaðar"
     },
     "design": {
-      "background": "Bakgrunn",
-      "backgroundHint": "Hladdu upp vídeó eða mynd fyrir bakgrunn heimasíðu þinnar",
+      "background": "BakGrowth",
+      "backgroundHint": "Hladdu upp vídeó eða mynd fyrir bakGrowth heimasíðu þinnar",
       "uploadMedia": "Hladdu upp vídeó eða mynd",
       "removeMedia": "Fjarlægja",
       "accentColor": "Aðal litur",
@@ -1782,7 +1784,7 @@
       "copyUrl": "Afrita URL",
       "generateBackground": "Búa til",
       "generating": "Býr til...",
-      "generateError": "Ekki tókst að búa til bakgrunn",
+      "generateError": "Ekki tókst að búa til bakGrowth",
       "previewButton": "Book a Table",
       "preview": "Preview",
       "ordersSection": "pantanir",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Afgreiðslusamningar og greiðslur",
         "content": [
-          "IQ Rest býður upp á fríar, grunn- og próf afgreiðslusamninga. Fríi samningurinn er í boði án kostnaðar með takmörkuðum eiginleikum. Greiddir samningar (Grunn og Pró) eru reiknaðir mánaðarlega eða árlega í gegnum greiðsluvinnsluaðila okkar, Stripe.",
+          "IQ Rest býður upp á fríar, Growth- og próf afgreiðslusamninga. Fríi samningurinn er í boði án kostnaðar með takmörkuðum eiginleikum. Greiddir samningar (Growth og Pró) eru reiknaðir mánaðarlega eða árlega í gegnum greiðsluvinnsluaðila okkar, Stripe.",
           "Verð er sýnt í evrum (EUR). Með því að skrá þig í greiddan samning heimilar þú okkur að rukka greiðsluaðferð þína á reglulegu millibili þar til þú segir upp.",
           "Þú getur uppfært, lækkað eða sagt upp áskrift þinni hvenær sem er í gegnum stjórnborðið þitt. Uppsagnir taka gildi við lok núverandi greiðslutímabils. Engar endurgreiðslur eru veittar fyrir hlutbundin greiðslutímabil.",
           "Við áskiljum okkur rétt til að breyta verðinu okkar með 30 daga fyrirvara. Verðbreytingar munu gilda fyrir greiðslutímabil sem hefjast eftir fyrirvara."
@@ -2144,7 +2146,7 @@
       {
         "title": "6. Geymsla og öryggi gagna",
         "content": [
-          "Gögnin þín eru geymd á öruggum þjónustum sem Amazon Web Services (AWS) veitir. Gagnagrunnur okkar er hýstur í AWS Stokkhólmi (eu-north-1) svæðinu innan Evrópusambandsins, sem tryggir að við fylgjum kröfum um persónuvernd í ESB.",
+          "Gögnin þín eru geymd á öruggum þjónustum sem Amazon Web Services (AWS) veitir. GagnaGrowthur okkar er hýstur í AWS Stokkhólmi (eu-north-1) svæðinu innan Evrópusambandsins, sem tryggir að við fylgjum kröfum um persónuvernd í ESB.",
           "Myndir og fjölmiðlafailar sem þú hleður upp eru geymd á AWS S3 þjónustum sem staðsettar eru í ESB svæðinu. Gögnin eru dulkóðuð á ferðinni með TLS/SSL og í hvíld með AES-256 dulkóðun.",
           "Við innleiðum viðeigandi tæknilegar og skipulagslegar aðgerðir til að vernda gögnin þín gegn óheimilum aðgangi, breytingum, birtingu eða eyðingu. Þessar aðgerðir fela í sér örugga staðfestingu, aðgangsstýringar, reglulegar öryggisúttektir og þjálfun starfsmanna."
         ]
@@ -2154,7 +2156,7 @@
         "content": [
           "Við deilum gögnunum þínum með eftirfarandi flokkum þriðju aðila:",
           "Stripe (Greiðsluvinnsluaðili): Vinnur áskriftargreiðslur. Stripe er vottað samkvæmt persónuverndarramma ESB-Bandaríkjanna. Persónuverndarstefna þeirra: https://stripe.com/privacy",
-          "Amazon Web Services (Infrastrúktúr): Hýslar þjónusturnar okkar og gagnagrunnana í ESB svæðum. AWS fylgir GDPR og er vottað samkvæmt persónuverndarramma ESB-Bandaríkjanna.",
+          "Amazon Web Services (Infrastrúktúr): Hýslar þjónusturnar okkar og gagnaGrowthana í ESB svæðum. AWS fylgir GDPR og er vottað samkvæmt persónuverndarramma ESB-Bandaríkjanna.",
           "AI þjónustuveitendur: Við notum AI þjónustu fyrir matseðil þýðingar og myndabætur. Gögnin eru unnin í samræmi við persónuverndarstefnur þeirra og samninga um vinnslu gagna.",
           "Google Analytics: Fyrir nafnlausa vefsíðugreiningu (ef virkjuð). Þú getur valið að hætta við í gegnum kókuvalkosti.",
           "Við seljum ekki persónuupplýsingar þínar til þriðju aðila. Við gætum afhjúpað gögn ef lög krefjast þess eða til að vernda lögmæta réttindi okkar."

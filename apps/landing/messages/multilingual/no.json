@@ -43,7 +43,7 @@
       },
       {
         "question": "Er flerspraklig stoette tilgjengelig paa gratisplanen?",
-        "answer": "Gratisplanen inkluderer opptil 2 spraak. Basic- og Pro-planer tilbyr ubegrenset antall spraak med AI-oversettelse inkludert."
+        "answer": "Gratisplanen inkluderer opptil 2 spraak. Growth- og Pro-planer tilbyr ubegrenset antall spraak med AI-oversettelse inkludert."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Legg til Språk",
-        "description": "Velg fra 35 tilgjengelige språk. Den gratis planen inkluderer opptil 2 språk, mens Basic- og Pro-planene tilbyr ubegrensede språk for menyen din."
+        "description": "Velg fra 35 tilgjengelige språk. Den gratis planen inkluderer opptil 2 språk, mens Growth- og Pro-planene tilbyr ubegrensede språk for menyen din."
       },
       {
         "title": "Oversett Innholdet Ditt",

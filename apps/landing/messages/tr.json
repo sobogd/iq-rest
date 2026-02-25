@@ -157,7 +157,7 @@
         },
         {
           "q": "Ücretsiz bir plan var mı?",
-          "a": "Evet, tüm temel özellikler dahil olmak üzere ücretsiz başlayın."
+          "a": "Evet, tüm Growth özellikler dahil olmak üzere ücretsiz başlayın."
         }
       ],
       "mobile-management": [
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR Menü Fiyatları — Ücretsiz, Basic & Pro Planlar | IQ Rest",
-      "description": "QR menü fiyat planlarını karşılaştırın. Ücretsiz başlayın, AI çeviriler, özel tasarım, rezervasyonlar ve daha fazlası için Basic veya Pro'ya yükseltin."
+      "title": "QR Menü Fiyatları — Ücretsiz, Growth & Pro Planlar | IQ Rest",
+      "description": "QR menü fiyat planlarını karşılaştırın. Ücretsiz başlayın, AI çeviriler, özel tasarım, rezervasyonlar ve daha fazlası için Growth veya Pro'ya yükseltin."
     },
     "title": "QR Menü & Restoran Web Sitesi Fiyatlandırması",
     "subtitle": "Gizli ücret yok, sürpriz yok. Bugün restoran web sitenizi ücretsiz başlatın — büyümeye hazır olduğunuzda yükseltin.",
@@ -522,7 +522,8 @@
     "yearly": "Yıllık",
     "save": "(%25 Tasarruf)",
     "perMonth": "/ay",
-    "billedYearly": "Yıllık faturalandırma ({total})",
+    "billedYearly": "Yıllık faturalandırma ({total}).",
+    "orMonthly": "Veya aylık {price} ödeyin.",
     "forever": "Sonsuza dek ücretsiz",
     "popular": "En Popüler",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "IQ Rest'i denemek için mükemmel",
         "cta": "Ücretsiz oluştur",
         "highlights": [
-          "Restoran web sitesi",
-          "QR Menü",
-          "320 tarama/ay",
-          "10 siparişi/ay",
-          "2 dil",
           "IQ Rest filigranı ile",
+          "320 tarama/ay",
+          "30 siparişi/ay",
+          "2 dil",
+          "QR Menü & Web sitesi",
+          "Özel renk teması",
           "Analitik"
         ]
       },
       "basic": {
-        "name": "Temel",
-        "description": "Küçük restoranlar için harika",
+        "name": "Growth",
+        "description": "Dijital sipariş için eksiksiz araç seti",
         "cta": "Başlayın",
         "highlights": [
           "Ücretsizdeki her şey, artı:",
-          "Sınırsız tarama",
-          "Sınırsızsiparişleri",
           "6 dil",
           "Yapay zeka çevirileri",
-          "Özel renk teması",
-          "Rezervasyonlar"
+          "AI görsel oluşturma",
+          "Rezervasyonlar",
+          "Sınırsız tarama",
+          "Sınırsızsiparişleri"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Büyüyen restoran zincirleri için",
         "cta": "Başlayın",
         "highlights": [
-          "Temel'deki her şey, artı:",
+          "Growth'deki her şey, artı:",
           "Sınırsız diller",
           "Birden fazla restoran",
           "Özel alan adı",
+          "Restoran başına özel özellikler",
           "Öncelikli destek"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / ay"
+        "orders": "30 / ay"
       },
       "basic": {
         "scans": "Sınırsız",
@@ -960,7 +962,7 @@
           "image2Caption": "Mobil cihazlar için optimize edilmiş akıcı kayıt süreci",
           "section3Title": "Tüm Cihazlar İçin Optimize Edilmiş Üç Adımlı Süreç",
           "section3Text": "Ücretsiz restoran web sitesi oluşturmanın üç basit adımını gösteren görsel süreç göstergesi, farklı ekran boyutlarına mükemmel bir şekilde uyum sağlar. Mobil ve tabletlerde, adımlar net boşluklarla dikey olarak görüntülenir, bu da basit süreci anlamayı kolaylaştırır. Daha büyük ekranlarda ise yatay olarak oklarla gösterilir. Bu uyumlu tasarım, herkesin hangi cihazdan olursa olsun, profesyonel bir restoran web sitesi oluşturmanın ne kadar hızlı ve kolay olduğunu net bir şekilde görmesini sağlar.",
-          "benefitsTitle": "Ücretsiz Restoran Web Siteleri Oluşturma İçin Temel İyileştirmeler",
+          "benefitsTitle": "Ücretsiz Restoran Web Siteleri Oluşturma İçin Growth İyileştirmeler",
           "benefit1": "Akıllı telefonlarda kolay erişim için mobil uyumlu hamburger menü navigasyonu",
           "benefit2": "Mobil boşluk ve ortalanmış düzenlerle geliştirilmiş kayıt sayfası",
           "benefit3": "Mobilde güçlü sosyal kanıt sağlayan tam genişlikte restoran sayacı",
@@ -992,7 +994,7 @@
           "image2Caption": "E-postanıza doğrudan gönderilen güvenli 4 haneli kod doğrulaması",
           "section3Title": "Hız ve Güvenlik İçin Tasarlandı",
           "section3Text": "Bu kimlik doğrulama sistemini tasarlarken güvenlik önceliğimizdi. Her doğrulama kodu 10 dakika sonra sona erer ve yalnızca bir kez kullanılabilir, bu da restoran web sitenizi ve menü verilerinizi yetkisiz erişimden korur. Aynı zamanda, sürecin her adımını hız için optimize ettik. E-posta adresinizi girmekten kontrol panelinize erişmeye kadar, tüm kimlik doğrulama akışı bir dakikadan kısa sürede tamamlanır. Bu, hizmet sırasında QR menünüzde hızlı güncellemeler yapmanızı, günlük özel yemekler eklemenizi veya fiyatları ayarlamanızı sağlar - tüm bunları gecikme olmadan.",
-          "benefitsTitle": "Restoranınız İçin Temel Faydalar",
+          "benefitsTitle": "Restoranınız İçin Growth Faydalar",
           "benefit1": "Restoran web sitenizi QR menü ile dakikalar içinde oluşturun - teknik beceri gerektirmez",
           "benefit2": "Hatırlanacak şifre yok - güvenli e-posta tabanlı doğrulama hesabınızı güvende tutar",
           "benefit3": "Herhangi bir cihazdan dijital menü oluşturucunuza anında erişim",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "QR Menü ve Restoran Web Sitesi Oluşturma için Abonelik Planları",
-        "description": "Restoran web sitenizi ve QR menünüzü oluşturmak için esnek abonelik planlarını tanıtıyoruz. Ücretsiz, Temel ve Pro planları ile aylık veya yıllık faturalama seçenekleri arasından seçim yapın.",
+        "description": "Restoran web sitenizi ve QR menünüzü oluşturmak için esnek abonelik planlarını tanıtıyoruz. Ücretsiz, Growth ve Pro planları ile aylık veya yıllık faturalama seçenekleri arasından seçim yapın.",
         "meta": {
           "title": "QR Menü ve Restoran Web Sitesi için Abonelik Planları | IQ Rest",
-          "description": "Restoran web siteniz ve QR menü oluşturma için mükemmel abonelik planını seçin. Ücretsiz, Temel ve Pro planları ile esnek aylık ve yıllık faturalama. Bugün ücretsiz başlayın."
+          "description": "Restoran web siteniz ve QR menü oluşturma için mükemmel abonelik planını seçin. Ücretsiz, Growth ve Pro planları ile esnek aylık ve yıllık faturalama. Bugün ücretsiz başlayın."
         },
         "content": {
           "intro": "QR menü ve restoran web sitesi oluşturma için yeni abonelik sistemimizin lansmanını duyurmaktan heyecan duyuyoruz. IQ Rest, işletmenizle birlikte büyüyen esnek planlar sunuyor - küçük kafeler için tamamen ücretsiz bir katmandan, yerleşik restoranlar için profesyonel planlara kadar. İster yeni başlıyor olun, ister birden fazla lokasyon yönetiyor olun, abonelik planlarımız, profesyonel bir restoran web sitesi oluşturmak ve sürdürmek için ihtiyaç duyduğunuz özellikleri sağlar.",
           "image1Alt": "QR menü ve restoran web sitesi oluşturma için abonelik planları",
           "image1Caption": "Restoran web siteniz ve QR menü ihtiyaçlarınız için mükemmel planı seçin",
           "section1Title": "Her Restoran Büyüklüğü İçin Esnek Planlar",
-          "section1Text": "QR menü ve restoran web sitesi oluşturma için abonelik sistemimiz, ihtiyaçlarınıza göre tasarlanmış üç katman sunar. Ücretsiz plan, 15 menü öğesi ile başlamanıza olanak tanır - küçük kafeler veya platformu denemek için mükemmel. Temel plan, aylık 4 € (veya yıllık faturalama ile aylık 3 €) ile kapasitenizi 100 öğeye, 3 dile ve 2,000 aylık taramaya çıkarır. Büyüyen restoranlar için, Pro plan, aylık 7 € (veya yıllık 6 €) ile sınırsız öğe, dil ve tarama sunar - profesyonel restoran web sitesi ve QR menü yönetimi için ihtiyacınız olan her şey.",
+          "section1Text": "QR menü ve restoran web sitesi oluşturma için abonelik sistemimiz, ihtiyaçlarınıza göre tasarlanmış üç katman sunar. Ücretsiz plan, 15 menü öğesi ile başlamanıza olanak tanır - küçük kafeler veya platformu denemek için mükemmel. Growth plan, aylık 4 € (veya yıllık faturalama ile aylık 3 €) ile kapasitenizi 100 öğeye, 3 dile ve 2,000 aylık taramaya çıkarır. Büyüyen restoranlar için, Pro plan, aylık 7 € (veya yıllık 6 €) ile sınırsız öğe, dil ve tarama sunar - profesyonel restoran web sitesi ve QR menü yönetimi için ihtiyacınız olan her şey.",
           "section2Title": "Basit Faturalama Kontrol Paneli",
           "section2Text": "QR menü ve restoran web sitesi hizmetleri için aboneliğinizi yönetmek artık her zamankinden daha kolay. Yeni faturalama kontrol panelimiz, tüm mevcut planları temiz, basit bir arayüzde görüntüler. Mevcut planınızı bir bakışta görebilir, özellikleri karşılaştırabilir ve tek tıklama ile yükseltebilir veya düşürebilirsiniz. Akıcı tasarım, her planı aylık fiyatıyla gösterir, bu da restoran web siteniz ve QR menü ihtiyaçlarınız için doğru seçeneği seçmeyi kolaylaştırır. Güvenli ödemeler, çevrimiçi işlemler için endüstri standardı olan Stripe aracılığıyla işlenir.",
           "section3Title": "Yıllık Faturalama ile %25 Tasarruf",
-          "section3Text": "QR menü ve web sitesi aboneliğiniz için yıllık faturalamayı tercih eden restoran sahipleri, aylık ödemelere kıyasla %25 tasarruf eder. Temel plan, aylık 4 €'dan 3 €'ya düşerken, Pro plan yıllık faturalamada aylık 7 €'dan 6 €'ya düşer. Bu önemli tasarruf, restoranların ana işlerine daha fazla yatırım yapmalarına yardımcı olurken profesyonel bir dijital varlık sürdürmelerini sağlar. Kontrol panelinizden istediğiniz zaman aylık ve yıllık faturalama arasında geçiş yapabilirsiniz.",
+          "section3Text": "QR menü ve web sitesi aboneliğiniz için yıllık faturalamayı tercih eden restoran sahipleri, aylık ödemelere kıyasla %25 tasarruf eder. Growth plan, aylık 4 €'dan 3 €'ya düşerken, Pro plan yıllık faturalamada aylık 7 €'dan 6 €'ya düşer. Bu önemli tasarruf, restoranların ana işlerine daha fazla yatırım yapmalarına yardımcı olurken profesyonel bir dijital varlık sürdürmelerini sağlar. Kontrol panelinizden istediğiniz zaman aylık ve yıllık faturalama arasında geçiş yapabilirsiniz.",
           "benefitsTitle": "Abonelik Planlarımızın Faydaları",
           "benefit1": "Sonsuza dek mevcut ücretsiz plan - başlamak için kredi kartı gerekmez",
           "benefit2": "Esnek aylık veya yıllık faturalama ile yıllık planlarda %25 tasarruf",
@@ -1107,7 +1109,7 @@
           "section1Title": "Otomatik Ülke ve Para Birimi Algılama",
           "section1Text": "IQ Rest'i açtığınızda, Cloudflare'in küresel ağı ülkenizi anında tanımlar. Bu bilgi, bölgeniz için en uygun para birimini seçmek için kullanılır — Avrupa için EUR, Amerika için USD, İngiltere için GBP, Polonya için PLN ve çok daha fazlası. Sistem ayrıca tercih ettiğiniz dili algılar ve sizi sitenin yerelleştirilmiş sürümüne yönlendirir. Manuel para birimi değişikliğine gerek yok — dijital QR menünüzü oluşturmaya odaklanabilmeniz için her şey otomatik olarak uyum sağlar.",
           "section2Title": "Her Bölge İçin Yerel Fiyatlandırma",
-          "section2Text": "Planlar, bölgeye uygun fiyatlandırma ile her para biriminde rekabetçi olarak fiyatlandırılmıştır. Ücretsiz plan her yerde ücretsiz kalır — ayda 500 taramaya kadar ücretsiz dijital QR menü oluşturun. Temel ve Pro planlar, yerel para biriminizde temiz, yuvarlak fiyatlar gösterir. Yıllık planlar, güzel yuvarlak aylık eşdeğerleriyle önemli tasarruflar sunar. Tüm fiyatlar, para biriminden bağımsız olarak aynı özellikleri içerir — bölgesel özellik kısıtlaması yoktur.",
+          "section2Text": "Planlar, bölgeye uygun fiyatlandırma ile her para biriminde rekabetçi olarak fiyatlandırılmıştır. Ücretsiz plan her yerde ücretsiz kalır — ayda 500 taramaya kadar ücretsiz dijital QR menü oluşturun. Growth ve Pro planlar, yerel para biriminizde temiz, yuvarlak fiyatlar gösterir. Yıllık planlar, güzel yuvarlak aylık eşdeğerleriyle önemli tasarruflar sunar. Tüm fiyatlar, para biriminden bağımsız olarak aynı özellikleri içerir — bölgesel özellik kısıtlaması yoktur.",
           "section3Title": "Yerel Para Biriminde Sorunsuz Stripe Ödeme",
           "section3Text": "Tüm ödeme akışı yerel para biriminizde çalışır. Fiyatlandırma sayfasından Stripe ödemesine, faturalara ve müşteri portalına kadar — her şey tutarlı fiyatlandırma gösterir. Aylık ve yıllık faturalama arasında geçiş, akıcı bir karusel arayüzüyle fiyatları gerçek zamanlı olarak günceller. Dünya genelindeki restoranlar artık dijital QR menülerini oluşturabilir ve en rahat oldukları para biriminde ödeme yapabilir.",
           "benefitsTitle": "Çoklu Para Birimi Fiyatlandırmasının Faydaları",
@@ -1139,7 +1141,7 @@
           "section2Title": "Hoş Geldin E-postaları ve Karşılama Rehberliği",
           "section2Text": "IQ Rest'e kaydolan yeni restoranlar artık dijital QR menülerini kurmalarında rehberlik eden bir hoş geldin e-postası alıyor. E-posta, kategori ekleme, yemek fotoğrafları yükleme ve QR kodlarını paylaşma hakkında ipuçları içerir. Kurulumu tamamlamamış restoranlar için, karşılama ilerlemelerine göre kişiselleştirilmiş rehberlik içeren akıllı hatırlatma e-postaları gönderilir. Bu e-postalar, zaten menü öğeleriniz, kategorileriniz veya arka plan görselleriniz olup olmadığını tanır ve bir sonraki adımı önerir.",
           "section3Title": "Cihaz Analizleri ve Tarama Kullanım Takibi",
-          "section3Text": "Analiz kontrol paneli artık dijital QR menü ziyaretçileriniz tarafından kullanılan cihaz türleri, tarayıcılar ve işletim sistemlerinin detaylı dağılımlarını gösteriyor. Müşterilerin QR kodunuzu iPhone veya Android, Chrome veya Safari'de tarayıp taramadığını görün. Kontrol paneli ana sayfasındaki yeni tarama kullanım göstergesi, aylık taramalarınızı plan limitinizle net bir ilerleme çubuğuyla karşılaştırarak gösterir. Ücretsiz plan restoranları ayda 500 tarama alırken, Temel ve Pro planlar sınırsız taramanın keyfini çıkarır.",
+          "section3Text": "Analiz kontrol paneli artık dijital QR menü ziyaretçileriniz tarafından kullanılan cihaz türleri, tarayıcılar ve işletim sistemlerinin detaylı dağılımlarını gösteriyor. Müşterilerin QR kodunuzu iPhone veya Android, Chrome veya Safari'de tarayıp taramadığını görün. Kontrol paneli ana sayfasındaki yeni tarama kullanım göstergesi, aylık taramalarınızı plan limitinizle net bir ilerleme çubuğuyla karşılaştırarak gösterir. Ücretsiz plan restoranları ayda 500 tarama alırken, Growth ve Pro planlar sınırsız taramanın keyfini çıkarır.",
           "benefitsTitle": "Dijital QR Menünüz İçin Yeni Özellikler",
           "benefit1": "Rezervasyonlar için hem misafirlere hem de restoran sahiplerine e-posta onayları gönderilir",
           "benefit2": "Hoş geldin e-postaları yeni restoranları dijital QR menü kurulumunda yönlendirir",
@@ -1447,10 +1449,10 @@
         "name": "Ücretsiz"
       },
       "BASIC_MONTHLY": {
-        "name": "Temel Aylık"
+        "name": "Growth Aylık"
       },
       "BASIC_YEARLY": {
-        "name": "Temel Yıllık"
+        "name": "Growth Yıllık"
       },
       "PRO_MONTHLY": {
         "name": "Pro Aylık"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Tüm planları karşılaştır",
       "hideComparison": "Karşılaştırmayı gizle",
-      "ctaBasic": "Basic ile başla",
+      "ctaBasic": "Growth ile başla",
       "ctaPro": "Pro ile başla",
       "billedMonthly": "Aylık faturalandırılır",
       "ctaSub": "İstediğiniz zaman iptal edin · Kurulum ücreti yok",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "Yapay Zeka Çevirisi",
-      "description": "Yapay zeka çevirisi Basic veya Pro aboneliğiyle kullanılabilir. Otomatik çevirileri kullanmak için planınızı yükseltin.",
+      "description": "Yapay zeka çevirisi Growth veya Pro aboneliğiyle kullanılabilir. Otomatik çevirileri kullanmak için planınızı yükseltin.",
       "cancel": "İptal",
       "subscribe": "Abone Ol",
       "translate": "Çevir",
       "translating": "Çevriliyor...",
       "limitReached": "Ücretsiz çeviriler tükendi",
-      "limitReachedDescription": "5 ücretsiz AI çevirinizin tamamını kullandınız. Sınırsız çeviri için Basic veya Pro'ya yükseltin.",
+      "limitReachedDescription": "5 ücretsiz AI çevirinizin tamamını kullandınız. Sınırsız çeviri için Growth veya Pro'ya yükseltin.",
       "upgrade": "Yükselt"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Arka planı değiştir",
       "regenerateImage": "Yeniden oluştur",
       "generateLimitReached": "Ücretsiz AI oluşturmalar tükendi",
-      "generateLimitDescription": "2 ücretsiz AI görsel oluşturma hakkınızı kullandınız. Sınırsız oluşturmalar için Basic veya Pro'ya yükseltin."
+      "generateLimitDescription": "2 ücretsiz AI görsel oluşturma hakkınızı kullandınız. Sınırsız oluşturmalar için Growth veya Pro'ya yükseltin."
     },
     "languages": {
       "translationProgress": "Çeviri İlerlemesi",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Abonelik Planları ve Ödemeler",
         "content": [
-          "IQ Rest, Ücretsiz, Temel ve Pro abonelik planları sunar. Ücretsiz plan, sınırlı özelliklerle ücretsiz olarak mevcuttur. Ücretli planlar (Temel ve Pro), ödeme işlemcimiz Stripe aracılığıyla aylık veya yıllık olarak faturalandırılır.",
+          "IQ Rest, Ücretsiz, Growth ve Pro abonelik planları sunar. Ücretsiz plan, sınırlı özelliklerle ücretsiz olarak mevcuttur. Ücretli planlar (Growth ve Pro), ödeme işlemcimiz Stripe aracılığıyla aylık veya yıllık olarak faturalandırılır.",
           "Fiyatlar Euro (EUR) cinsinden gösterilmektedir. Ücretli bir plana abone olarak, iptal edene kadar ödeme yönteminizden düzenli olarak ücret alınmasını onaylarsınız.",
           "Aboneliğinizi istediğiniz zaman kontrol panelinizden yükseltebilir, düşürebilir veya iptal edebilirsiniz. İptaller, mevcut faturalandırma döneminin sonunda geçerli olur. Kısmi faturalandırma dönemleri için geri ödeme yapılmaz.",
           "Fiyatlarımızı 30 gün önceden bildirimde bulunarak değiştirme hakkını saklı tutarız. Fiyat değişiklikleri, bildirim süresinin ardından başlayan faturalandırma dönemlerine uygulanacaktır."

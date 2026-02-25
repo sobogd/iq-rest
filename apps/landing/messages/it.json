@@ -425,8 +425,8 @@
         "id": "reservations",
         "title": "Sistema di Prenotazione Tavoli",
         "shortDescription": "Accetta prenotazioni 24/7.{br}{link}Prenotazioni{/link} direttamente dal tuo sito.",
-        "description": "Il sistema di prenotazione integrato consente ai clienti di prenotare tavoli direttamente dal tuo sito web. Scegli la conferma automatica in base alla disponibilità, oppure rivedi ogni prenotazione manualmente. Gestisci tutte le prenotazioni dal tuo pannello di controllo.",
-        "fullDescription": "Le prenotazioni telefoniche richiedono tempo e sono facili da perdere. Il sistema di prenotazione di IQ Rest funziona 24/7. I clienti selezionano data, ora e numero di persone, quindi prenotano immediatamente. Puoi impostare la conferma automatica in base alla disponibilità dei tavoli, oppure rivedere ogni richiesta manualmente. Riduci le assenze con conferme via email.",
+        "description": "Il sistema di prenotazione integrato consente ai clienti di prenotare tavoli direttamente dal tuo sito web. Scegli la conferma automatica in Growth alla disponibilità, oppure rivedi ogni prenotazione manualmente. Gestisci tutte le prenotazioni dal tuo pannello di controllo.",
+        "fullDescription": "Le prenotazioni telefoniche richiedono tempo e sono facili da perdere. Il sistema di prenotazione di IQ Rest funziona 24/7. I clienti selezionano data, ora e numero di persone, quindi prenotano immediatamente. Puoi impostare la conferma automatica in Growth alla disponibilità dei tavoli, oppure rivedere ogni richiesta manualmente. Riduci le assenze con conferme via email.",
         "benefits": [
           "Capacità di prenotazione online 24/7",
           "Modalità di conferma automatica o manuale",
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Prezzi Menu QR — Piani Gratuito, Basic e Pro | IQ Rest",
-      "description": "Confronta i piani tariffari del menu QR. Inizia gratis, passa a Basic o Pro per traduzioni IA, design personalizzato, prenotazioni e altro."
+      "title": "Prezzi Menu QR — Piani Gratuito, Growth e Pro | IQ Rest",
+      "description": "Confronta i piani tariffari del menu QR. Inizia gratis, passa a Growth o Pro per traduzioni IA, design personalizzato, prenotazioni e altro."
     },
     "title": "Prezzi del Menu QR e del Sito Web del Ristorante",
     "subtitle": "Nessuna tassa nascosta, nessuna sorpresa. Lancia il sito web del tuo ristorante gratuitamente oggi — aggiorna solo quando sei pronto a crescere.",
@@ -522,7 +522,8 @@
     "yearly": "Annuale",
     "save": "(Risparmia 25%)",
     "perMonth": "/mese",
-    "billedYearly": "Fatturato annualmente ({total})",
+    "billedYearly": "Fatturato annualmente ({total}).",
+    "orMonthly": "O paga {price} mensilmente.",
     "forever": "Gratuito per sempre",
     "popular": "Più Popolare",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Perfetto per provare IQ Rest",
         "cta": "Crea Gratis",
         "highlights": [
-          "Sito web del ristorante",
-          "QR Menu",
-          "320 scans/mese",
-          "10 ordini WhatsApp/mese",
-          "2 lingue",
           "Con watermark IQ Rest",
+          "320 scans/mese",
+          "30 ordini WhatsApp/mese",
+          "2 lingue",
+          "QR Menu & Sito web",
+          "Tema colore personalizzato",
           "Analisi"
         ]
       },
       "basic": {
-        "name": "Base",
-        "description": "Ottimo per piccoli ristoranti",
+        "name": "Growth",
+        "description": "Set completo di strumenti per ordini digitali",
         "cta": "Inizia",
         "highlights": [
           "Tutto in Free, più:",
-          "Scansioni illimitate",
-          "Ordini WhatsApp illimitati",
           "6 lingue",
           "Traduzioni AI",
-          "Tema colore personalizzato",
-          "Prenotazioni"
+          "Generazione immagini AI",
+          "Prenotazioni",
+          "Scansioni illimitate",
+          "Ordini WhatsApp illimitati"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Per catene di ristoranti in crescita",
         "cta": "Inizia",
         "highlights": [
-          "Tutto in Basic, più:",
+          "Tutto in Growth, più:",
           "Lingue illimitate",
           "Ristoranti multipli",
           "Dominio personalizzato",
+          "Funzionalità personalizzate per ristorante",
           "Supporto prioritario"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mese"
+        "orders": "30 / mese"
       },
       "basic": {
         "scans": "Illimitato",
@@ -829,7 +831,7 @@
           "image1Alt": "Come aggiungere articoli al sito web del ristorante con menu QR - vista elenco articoli",
           "image1Caption": "Interfaccia di gestione degli articoli che mostra come aggiungere articoli al sito web del tuo menu QR del ristorante",
           "section1Title": "Perché Aggiungere Articoli Correttamente è Importante per il Tuo Sito Web del Menu QR del Ristorante",
-          "section1Text": "Quando aggiungi articoli al sito web del ristorante con menu QR, la presentazione è tutto. I clienti decidono cosa ordinare in base a come appaiono i tuoi piatti e a quanto bene sono descritti. Il nostro sistema di gestione degli articoli ti consente di aggiungere foto bellissime, descrizioni dettagliate, prezzi accurati e organizzare gli articoli in categorie. Questo è come aggiungere articoli al sito web del ristorante che converte i visitatori in clienti. Ricerche mostrano che i menu con immagini di alta qualità aumentano gli ordini fino al 30%.",
+          "section1Text": "Quando aggiungi articoli al sito web del ristorante con menu QR, la presentazione è tutto. I clienti decidono cosa ordinare in Growth a come appaiono i tuoi piatti e a quanto bene sono descritti. Il nostro sistema di gestione degli articoli ti consente di aggiungere foto bellissime, descrizioni dettagliate, prezzi accurati e organizzare gli articoli in categorie. Questo è come aggiungere articoli al sito web del ristorante che converte i visitatori in clienti. Ricerche mostrano che i menu con immagini di alta qualità aumentano gli ordini fino al 30%.",
           "section2Title": "Passo dopo Passo: Come Aggiungere Articoli al Sito Web del Ristorante con Menu QR",
           "section2Text": "Aggiungere articoli al tuo sito web del ristorante con menu QR è semplice con IQ Rest. Naviga alla sezione Articoli nel tuo dashboard e fai clic sul pulsante di aggiunta. Inserisci il nome dell'articolo, scrivi una descrizione appetitosa, imposta il prezzo e seleziona una categoria. Carica una foto del tuo piatto - il nostro sistema ottimizza automaticamente le immagini a 500x500 pixel per una visualizzazione perfetta. Attiva o disattiva lo stato attivo per mostrare o nascondere gli articoli istantaneamente. Questo processo semplificato rende facile aggiungere articoli al sito web del ristorante con menu QR in pochi minuti.",
           "image2Alt": "Modulo dell'articolo che mostra come aggiungere articoli al sito web del menu QR del ristorante",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Piani di Abbonamento per la Creazione di Menu QR e Sito Web per Ristoranti",
-        "description": "Presentiamo piani di abbonamento flessibili per la creazione del sito web del tuo ristorante e menu QR. Scegli tra piani Free, Basic e Pro con opzioni di fatturazione mensile o annuale.",
+        "description": "Presentiamo piani di abbonamento flessibili per la creazione del sito web del tuo ristorante e menu QR. Scegli tra piani Free, Growth e Pro con opzioni di fatturazione mensile o annuale.",
         "meta": {
           "title": "Piani di Abbonamento per Menu QR e Sito Web per Ristoranti | IQ Rest",
-          "description": "Scegli il piano di abbonamento perfetto per la creazione del tuo sito web e menu QR del ristorante. Piani Free, Basic e Pro con fatturazione mensile e annuale flessibile. Inizia gratis oggi."
+          "description": "Scegli il piano di abbonamento perfetto per la creazione del tuo sito web e menu QR del ristorante. Piani Free, Growth e Pro con fatturazione mensile e annuale flessibile. Inizia gratis oggi."
         },
         "content": {
           "intro": "Siamo entusiasti di annunciare il lancio del nostro nuovo sistema di abbonamento per la creazione di menu QR e siti web per ristoranti. IQ Rest ora offre piani flessibili che crescono con la tua attività - da un livello completamente gratuito per piccoli caffè a piani professionali per ristoranti affermati. Che tu stia appena iniziando o gestendo più sedi, i nostri piani di abbonamento forniscono le funzionalità di cui hai bisogno per creare e mantenere un sito web professionale per ristoranti con capacità di menu QR.",
           "image1Alt": "Piani di abbonamento per la creazione di menu QR e siti web per ristoranti",
           "image1Caption": "Scegli il piano perfetto per le esigenze del tuo sito web e menu QR del ristorante",
           "section1Title": "Piani Flessibili per Ogni Dimensione di Ristorante",
-          "section1Text": "Il nostro sistema di abbonamento per la creazione di menu QR e siti web per ristoranti offre tre livelli progettati per soddisfare le tue esigenze. Il piano Free ti consente di iniziare con fino a 15 articoli del menu - perfetto per piccoli caffè o per provare la piattaforma. Il piano Basic a €4/mese (o €3/mese fatturato annualmente) espande la tua capacità a 100 articoli con 3 lingue e 2.000 scansioni mensili. Per i ristoranti in crescita, il nostro piano Pro a €7/mese (o €6/mese annuale) offre articoli, lingue e scansioni illimitati - tutto ciò di cui hai bisogno per la gestione professionale del sito web e del menu QR del ristorante.",
+          "section1Text": "Il nostro sistema di abbonamento per la creazione di menu QR e siti web per ristoranti offre tre livelli progettati per soddisfare le tue esigenze. Il piano Free ti consente di iniziare con fino a 15 articoli del menu - perfetto per piccoli caffè o per provare la piattaforma. Il piano Growth a €4/mese (o €3/mese fatturato annualmente) espande la tua capacità a 100 articoli con 3 lingue e 2.000 scansioni mensili. Per i ristoranti in crescita, il nostro piano Pro a €7/mese (o €6/mese annuale) offre articoli, lingue e scansioni illimitati - tutto ciò di cui hai bisogno per la gestione professionale del sito web e del menu QR del ristorante.",
           "section2Title": "Dashboard di Fatturazione Semplice",
           "section2Text": "Gestire il tuo abbonamento per i servizi di menu QR e siti web per ristoranti è ora più facile che mai. Il nostro nuovo dashboard di fatturazione mostra tutti i piani disponibili in un'interfaccia pulita e semplice. Puoi vedere il tuo piano attuale a colpo d'occhio, confrontare le funzionalità e aggiornare o downgradare con un solo clic. Il design semplificato mostra ogni piano con il suo prezzo mensile, rendendo facile scegliere l'opzione giusta per le esigenze del tuo sito web e menu QR del ristorante. I pagamenti sicuri vengono elaborati tramite Stripe, lo standard del settore per le transazioni online.",
           "section3Title": "Risparmia il 25% con la Fatturazione Annuale",
-          "section3Text": "I proprietari di ristoranti che si impegnano nella fatturazione annuale per il loro abbonamento al menu QR e al sito web risparmiano il 25% rispetto ai pagamenti mensili. Il piano Basic passa da €4 a €3 al mese, mentre il piano Pro passa da €7 a €6 al mese quando fatturato annualmente. Questi risparmi significativi aiutano i ristoranti a investire di più nel loro core business mantenendo una presenza digitale professionale. Passa tra fatturazione mensile e annuale in qualsiasi momento tramite il tuo dashboard.",
+          "section3Text": "I proprietari di ristoranti che si impegnano nella fatturazione annuale per il loro abbonamento al menu QR e al sito web risparmiano il 25% rispetto ai pagamenti mensili. Il piano Growth passa da €4 a €3 al mese, mentre il piano Pro passa da €7 a €6 al mese quando fatturato annualmente. Questi risparmi significativi aiutano i ristoranti a investire di più nel loro core business mantenendo una presenza digitale professionale. Passa tra fatturazione mensile e annuale in qualsiasi momento tramite il tuo dashboard.",
           "benefitsTitle": "Vantaggi dei Nostri Piani di Abbonamento",
           "benefit1": "Piano gratuito disponibile per sempre - nessuna carta di credito richiesta per iniziare",
           "benefit2": "Fatturazione mensile o annuale flessibile con risparmi del 25% sui piani annuali",
@@ -1447,10 +1449,10 @@
         "name": "Gratuito"
       },
       "BASIC_MONTHLY": {
-        "name": "Base Mensile"
+        "name": "Growth Mensile"
       },
       "BASIC_YEARLY": {
-        "name": "Base Annuale"
+        "name": "Growth Annuale"
       },
       "PRO_MONTHLY": {
         "name": "Pro Mensile"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Confronta tutti i piani",
       "hideComparison": "Nascondi confronto",
-      "ctaBasic": "Inizia con Basic",
+      "ctaBasic": "Inizia con Growth",
       "ctaPro": "Inizia con Pro",
       "billedMonthly": "Fatturato mensilmente",
       "ctaSub": "Cancella in qualsiasi momento · Nessun costo di attivazione",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "Traduzione AI",
-      "description": "La traduzione AI è disponibile con un abbonamento Basic o Pro. Aggiorna il tuo piano per utilizzare le traduzioni automatiche.",
+      "description": "La traduzione AI è disponibile con un abbonamento Growth o Pro. Aggiorna il tuo piano per utilizzare le traduzioni automatiche.",
       "cancel": "Annulla",
       "subscribe": "Abbonati",
       "translate": "Traduci",
       "translating": "Traduzione...",
       "limitReached": "Traduzioni gratuite esaurite",
-      "limitReachedDescription": "Hai usato tutte le 5 traduzioni IA gratuite. Passa a Basic o Pro per traduzioni illimitate.",
+      "limitReachedDescription": "Hai usato tutte le 5 traduzioni IA gratuite. Passa a Growth o Pro per traduzioni illimitate.",
       "upgrade": "Aggiorna"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Cambia sfondo",
       "regenerateImage": "Rigenera",
       "generateLimitReached": "Generazioni AI gratuite esaurite",
-      "generateLimitDescription": "Hai usato tutte le 2 generazioni di immagini AI gratuite. Passa a Basic o Pro per generazioni illimitate."
+      "generateLimitDescription": "Hai usato tutte le 2 generazioni di immagini AI gratuite. Passa a Growth o Pro per generazioni illimitate."
     },
     "languages": {
       "translationProgress": "Progresso della traduzione",
@@ -1939,7 +1941,7 @@
     "reservationMode": "Modalità di Conferma",
     "modeAuto": "Automatico",
     "modeManual": "Manuale",
-    "modeAutoDescription": "Le prenotazioni saranno confermate automaticamente in base alla disponibilità dei tavoli",
+    "modeAutoDescription": "Le prenotazioni saranno confermate automaticamente in Growth alla disponibilità dei tavoli",
     "modeManualDescription": "Dovrai confermare manualmente ogni prenotazione",
     "slotDuration": "Durata della Prenotazione",
     "minutes": "minuti",
@@ -2002,8 +2004,8 @@
       {
         "title": "4. Piani di Abbonamento e Pagamenti",
         "content": [
-          "IQ Rest offre piani di abbonamento Free, Basic e Pro. Il piano Free è disponibile senza costi con funzionalità limitate. I piani a pagamento (Basic e Pro) vengono fatturati mensilmente o annualmente tramite il nostro processore di pagamenti, Stripe.",
-          "I prezzi sono visualizzati in Euro (EUR). Iscrivendoti a un piano a pagamento, ci autorizzi ad addebitare il tuo metodo di pagamento su base ricorrente fino a quando non annulli.",
+          "IQ Rest offre piani di abbonamento Free, Growth e Pro. Il piano Free è disponibile senza costi con funzionalità limitate. I piani a pagamento (Growth e Pro) vengono fatturati mensilmente o annualmente tramite il nostro processore di pagamenti, Stripe.",
+          "I prezzi sono visualizzati in Euro (EUR). Iscrivendoti a un piano a pagamento, ci autorizzi ad addebitare il tuo metodo di pagamento su Growth ricorrente fino a quando non annulli.",
           "Puoi aggiornare, ridurre o annullare il tuo abbonamento in qualsiasi momento tramite il tuo cruscotto. Le cancellazioni hanno effetto alla fine del periodo di fatturazione corrente. Non vengono forniti rimborsi per periodi di fatturazione parziali.",
           "Ci riserviamo il diritto di modificare i nostri prezzi con un preavviso di 30 giorni. Le modifiche ai prezzi si applicheranno ai periodi di fatturazione che iniziano dopo il periodo di preavviso."
         ]
@@ -2133,7 +2135,7 @@
         ]
       },
       {
-        "title": "5. Base legale per il trattamento",
+        "title": "5. Growth legale per il trattamento",
         "content": [
           "Esecuzione del contratto: Trattamento necessario per fornire il nostro servizio a te (Articolo 6(1)(b) GDPR).",
           "Interessi legittimi: Analisi e miglioramento del servizio, prevenzione delle frodi (Articolo 6(1)(f) GDPR).",
@@ -2144,7 +2146,7 @@
       {
         "title": "6. Conservazione e sicurezza dei dati",
         "content": [
-          "I tuoi dati sono memorizzati su server sicuri forniti da Amazon Web Services (AWS). Il nostro database è ospitato nella regione AWS di Stoccolma (eu-north-1) all'interno dell'Unione Europea, garantendo la conformità ai requisiti di protezione dei dati dell'UE.",
+          "I tuoi dati sono memorizzati su server sicuri forniti da Amazon Web Services (AWS). Il nostro dataGrowth è ospitato nella regione AWS di Stoccolma (eu-north-1) all'interno dell'Unione Europea, garantendo la conformità ai requisiti di protezione dei dati dell'UE.",
           "Le immagini e i file multimediali che carichi sono memorizzati su server AWS S3 situati nella regione UE. I dati sono crittografati in transito utilizzando TLS/SSL e a riposo utilizzando la crittografia AES-256.",
           "Implementiamo misure tecniche e organizzative appropriate per proteggere i tuoi dati da accessi non autorizzati, alterazioni, divulgazioni o distruzioni. Queste includono autenticazione sicura, controlli di accesso, audit di sicurezza regolari e formazione dei dipendenti."
         ]
@@ -2154,7 +2156,7 @@
         "content": [
           "Condividiamo i tuoi dati con le seguenti categorie di terze parti:",
           "Stripe (Processore di pagamenti): Elabora i pagamenti degli abbonamenti. Stripe è certificato secondo il Data Privacy Framework UE-USA. La loro informativa sulla privacy: https://stripe.com/privacy",
-          "Amazon Web Services (Infrastruttura): Ospita i nostri server e database nelle regioni UE. AWS è conforme al GDPR ed è certificato secondo il Data Privacy Framework UE-USA.",
+          "Amazon Web Services (Infrastruttura): Ospita i nostri server e dataGrowth nelle regioni UE. AWS è conforme al GDPR ed è certificato secondo il Data Privacy Framework UE-USA.",
           "Fornitori di servizi IA: Utilizziamo servizi IA per traduzioni del menu e ottimizzazione delle immagini. I dati sono elaborati in conformità con le loro informative sulla privacy e accordi di trattamento dei dati.",
           "Google Analytics: Per analisi del sito web anonimizzate (se attivato). Puoi disattivare tramite le preferenze sui cookie.",
           "Non vendiamo i tuoi dati personali a terze parti. Potremmo divulgare i dati se richiesto dalla legge o per proteggere i nostri diritti legali."

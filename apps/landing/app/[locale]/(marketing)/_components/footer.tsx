@@ -23,8 +23,7 @@ export async function Footer() {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80">
-            <Logo width={28} height={28} className="rounded" />
-            <span className="text-xl font-bold">IQ Rest</span>
+            <Logo height={24} />
           </Link>
 
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">

@@ -39,7 +39,7 @@
       },
       {
         "question": "Kuinka monta kuvaa voin generoida?",
-        "answer": "Kuvien generointirajat riippuvat paketistasi. Basic sisaltaa kuukausikiintionsn, ja Pro tarjoaa korkeamman rajan. Voit aina ladata omia kuvia ilman rajoituksia."
+        "answer": "Kuvien generointirajat riippuvat paketistasi. Growth sisaltaa kuukausikiintionsn, ja Pro tarjoaa korkeamman rajan. Voit aina ladata omia kuvia ilman rajoituksia."
       },
       {
         "question": "Ovatko generoidut kuvat ainutlaatuisia ravintolalleni?",

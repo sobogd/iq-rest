@@ -312,7 +312,7 @@
           "시작에 이메일만 필요 - 복잡한 등록 없음",
           "등록 후 즉시 레스토랑 웹사이트 준비",
           "QR 메뉴 자동 생성 및 연결",
-          "지도가 포함된 연락처 페이지 기본 포함",
+          "지도가 포함된 연락처 페이지 Growth 포함",
           "기술 지식이나 코딩 기술 필요 없음"
         ],
         "image": "/images/features/instant-setup.jpg",
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR 메뉴 가격 — 무료, Basic & Pro 플랜 | IQ Rest",
-      "description": "QR 메뉴 가격 플랜을 비교하세요. 무료로 시작하고, AI 번역, 맞춤 디자인, 예약 등을 위해 Basic 또는 Pro로 업그레이드하세요."
+      "title": "QR 메뉴 가격 — 무료, Growth & Pro 플랜 | IQ Rest",
+      "description": "QR 메뉴 가격 플랜을 비교하세요. 무료로 시작하고, AI 번역, 맞춤 디자인, 예약 등을 위해 Growth 또는 Pro로 업그레이드하세요."
     },
     "title": "QR 메뉴 및 레스토랑 웹사이트 가격",
     "subtitle": "숨겨진 비용 없음, 깜짝 요금 없음. 오늘 무료로 레스토랑 웹사이트를 시작하세요 — 성장할 준비가 되면 업그레이드하세요.",
@@ -522,7 +522,8 @@
     "yearly": "연간",
     "save": "(25% 절약)",
     "perMonth": "/월",
-    "billedYearly": "연간 청구 ({total})",
+    "billedYearly": "연간 청구 ({total}).",
+    "orMonthly": "또는 월 {price} 결제.",
     "forever": "영원히 무료",
     "popular": "가장 인기",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "IQ Rest 체험에 완벽",
         "cta": "무료로 만들기",
         "highlights": [
-          "레스토랑 웹사이트",
-          "QR 메뉴",
-          "320 스캔/월",
-          "10 WhatsApp 주문/월",
-          "2 언어",
           "IQ Rest 워터마크 포함",
+          "320 스캔/월",
+          "30 WhatsApp 주문/월",
+          "2 언어",
+          "QR 메뉴 & 웹사이트",
+          "맞춤 색상 테마",
           "분석"
         ]
       },
       "basic": {
-        "name": "베이직",
-        "description": "소규모 레스토랑에 적합",
+        "name": "Growth",
+        "description": "디지털 주문을 위한 완벽한 도구 세트",
         "cta": "시작하기",
         "highlights": [
           "무료의 모든 것, 추가:",
-          "무제한 스캔",
-          "무제한 WhatsApp 주문",
           "6 언어",
           "AI 번역",
-          "맞춤 색상 테마",
-          "예약"
+          "AI 이미지 생성",
+          "예약",
+          "무제한 스캔",
+          "무제한 WhatsApp 주문"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "성장하는 레스토랑 체인용",
         "cta": "시작하기",
         "highlights": [
-          "기본의 모든 것, 추가:",
+          "Growth의 모든 것, 추가:",
           "무제한 언어",
           "여러 레스토랑",
           "맞춤 도메인",
+          "레스토랑별 맞춤 기능",
           "우선 지원"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / 월"
+        "orders": "30 / 월"
       },
       "basic": {
         "scans": "무제한",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "무료"
       },
       "BASIC_MONTHLY": {
-        "name": "베이직 월간"
+        "name": "Growth 월간"
       },
       "BASIC_YEARLY": {
-        "name": "베이직 연간"
+        "name": "Growth 연간"
       },
       "PRO_MONTHLY": {
         "name": "프로 월간"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "모든 플랜 비교",
       "hideComparison": "비교 숨기기",
-      "ctaBasic": "Basic으로 시작",
+      "ctaBasic": "Growth으로 시작",
       "ctaPro": "Pro로 시작",
       "billedMonthly": "월별 청구",
       "ctaSub": "언제든 취소 가능 · 설정 비용 없음",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI 번역",
-      "description": "AI 번역은 Basic 또는 Pro 구독으로 이용 가능합니다. 자동 번역을 사용하려면 플랜을 업그레이드하세요.",
+      "description": "AI 번역은 Growth 또는 Pro 구독으로 이용 가능합니다. 자동 번역을 사용하려면 플랜을 업그레이드하세요.",
       "cancel": "취소",
       "subscribe": "구독하기",
       "translate": "번역",
       "translating": "번역 중...",
       "limitReached": "무료 번역 소진",
-      "limitReachedDescription": "5회 무료 AI 번역을 모두 사용했습니다. 무제한 번역을 위해 Basic 또는 Pro로 업그레이드하세요.",
+      "limitReachedDescription": "5회 무료 AI 번역을 모두 사용했습니다. 무제한 번역을 위해 Growth 또는 Pro로 업그레이드하세요.",
       "upgrade": "업그레이드"
     },
     "auth": {
@@ -1687,7 +1689,7 @@
       },
       "subscribeForAllergens": "알레르기 라벨을 추가하려면 구독하세요",
       "subscribe": "구독하기",
-      "sectionMain": "기본",
+      "sectionMain": "Growth",
       "moreDetails": "더 보기",
       "generateImage": "AI로 생성",
       "generatingImage": "생성 중...",
@@ -1696,23 +1698,23 @@
       "changeBackground": "배경 변경",
       "regenerateImage": "재생성",
       "generateLimitReached": "무료 AI 생성 횟수 소진",
-      "generateLimitDescription": "2회의 무료 AI 이미지 생성을 모두 사용했습니다. Basic 또는 Pro로 업그레이드하여 무제한으로 생성하세요."
+      "generateLimitDescription": "2회의 무료 AI 이미지 생성을 모두 사용했습니다. Growth 또는 Pro로 업그레이드하여 무제한으로 생성하세요."
     },
     "languages": {
       "translationProgress": "번역 진행률",
       "availableLanguages": "사용 가능한 언어",
       "europeanLanguages": "유럽 언어",
-      "starToSetDefault": "기본값으로 설정하려면 별을 클릭하세요",
-      "default": "기본값",
-      "hint": "고객이 여러 언어로 메뉴를 볼 수 있도록 언어를 활성화하세요. 기본 언어가 주요 콘텐츠에 사용됩니다.",
+      "starToSetDefault": "Growth값으로 설정하려면 별을 클릭하세요",
+      "default": "Growth값",
+      "hint": "고객이 여러 언어로 메뉴를 볼 수 있도록 언어를 활성화하세요. Growth 언어가 주요 콘텐츠에 사용됩니다.",
       "fetchError": "언어 로드에 실패했습니다",
       "enableError": "언어 활성화에 실패했습니다",
       "disableError": "언어 비활성화에 실패했습니다",
-      "defaultError": "기본 언어 설정에 실패했습니다",
+      "defaultError": "Growth 언어 설정에 실패했습니다",
       "languageEnabled": "{language}이(가) 활성화되었습니다",
       "languageDisabled": "{language}이(가) 비활성화되었습니다",
-      "defaultSet": "{language}이(가) 기본값으로 설정되었습니다",
-      "cannotDisableDefault": "기본 언어는 비활성화할 수 없습니다",
+      "defaultSet": "{language}이(가) Growth값으로 설정되었습니다",
+      "cannotDisableDefault": "Growth 언어는 비활성화할 수 없습니다",
       "atLeastOneRequired": "최소 하나의 언어가 필요합니다",
       "enableFirst": "먼저 언어를 활성화하세요",
       "deleteConfirm": "이 언어를 비활성화하면 해당 언어의 모든 번역이 삭제됩니다. 이 작업은 취소할 수 없습니다.",
@@ -1848,7 +1850,7 @@
       "aiImportButton": "메뉴 스캔",
       "scanUploadHint": "기존 메뉴의 사진 또는 PDF를 업로드하세요.",
       "templatesTitle": "업종 템플릿",
-      "templatesDescription": "카페, 피자, 바를 위한 전문적인 기본 메뉴로 시작하세요.",
+      "templatesDescription": "카페, 피자, 바를 위한 전문적인 Growth 메뉴로 시작하세요.",
       "templatesButton": "템플릿 사용",
       "manualTitle": "수동 작성",
       "manualDescription": "완전한 제어. 카테고리와 항목을 단계별로 수동 추가하세요.",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. 구독 계획 및 결제",
         "content": [
-          "IQ Rest는 무료, 기본 및 프로 구독 계획을 제공합니다. 무료 계획은 제한된 기능으로 비용 없이 제공됩니다. 유료 계획(기본 및 프로)은 결제 처리업체인 Stripe를 통해 월별 또는 연별로 청구됩니다.",
+          "IQ Rest는 무료, Growth 및 프로 구독 계획을 제공합니다. 무료 계획은 제한된 기능으로 비용 없이 제공됩니다. 유료 계획(Growth 및 프로)은 결제 처리업체인 Stripe를 통해 월별 또는 연별로 청구됩니다.",
           "가격은 유로(EUR)로 표시됩니다. 유료 계획에 가입함으로써 귀하는 취소할 때까지 정기적으로 결제 수단을 청구하는 것을 허용합니다.",
           "귀하는 대시보드를 통해 언제든지 구독을 업그레이드, 다운그레이드 또는 취소할 수 있습니다. 취소는 현재 청구 기간이 끝난 후에 적용됩니다. 부분 청구 기간에 대한 환불은 제공되지 않습니다.",
           "우리는 30일 전에 통지하고 가격을 변경할 권리를 보유합니다. 가격 변경은 통지 기간 이후 시작되는 청구 기간에 적용됩니다."

@@ -366,7 +366,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 </div>
                 <div className="h-2 rounded-full bg-muted overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-green-500 transition-all duration-500"
+                    className="h-full rounded-full bg-success transition-all duration-500"
                     style={{ width: `${(completedCount / checklistKeys.length) * 100}%` }}
                   />
                 </div>
@@ -383,19 +383,19 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       done
                         ? "opacity-60"
                         : isNext
-                          ? "bg-green-500/5"
+                          ? "bg-success/5"
                           : "hover:bg-muted/30"
                     }`}
                   >
                     {done ? (
-                      <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
+                      <CheckCircle2 className="h-4 w-4 text-success shrink-0" />
                     ) : (
-                      <Circle className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />
+                      <Circle className={`h-4 w-4 shrink-0 ${isNext ? "text-success" : "text-muted-foreground"}`} />
                     )}
                     <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-semibold" : "font-medium"}`}>
                       {tHome(item.translationKey)}
                     </span>
-                    {!done && <ArrowRight className={`h-4 w-4 shrink-0 ${isNext ? "text-green-500" : "text-muted-foreground"}`} />}
+                    {!done && <ArrowRight className={`h-4 w-4 shrink-0 ${isNext ? "text-success" : "text-muted-foreground"}`} />}
                   </button>
                 );
               })}
@@ -592,11 +592,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       ))}
                       {!sortMode && (
                         <div
-                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-green-500/5 hover:bg-green-500/10"
+                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-success/5 hover:bg-success/10"
                           onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${category.id}`); }}
                         >
-                          <Plus className="h-4 w-4 mr-2 text-green-500" />
-                          <span className="text-sm font-medium text-green-700 dark:text-green-400">{tMenu.addItem}</span>
+                          <Plus className="h-4 w-4 mr-2 text-success" />
+                          <span className="text-sm font-medium text-success">{tMenu.addItem}</span>
                         </div>
                       )}
                     </div>

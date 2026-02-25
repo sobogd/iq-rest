@@ -35,7 +35,7 @@
       },
       {
         "title": "Add Languages",
-        "description": "Select from 35 available languages. The free plan includes up to 2 languages, while Basic and Pro plans offer unlimited languages for your menu."
+        "description": "Select from 35 available languages. The free plan includes up to 2 languages, while Growth and Pro plans offer unlimited languages for your menu."
       },
       {
         "title": "Translate Your Content",
@@ -65,7 +65,7 @@
       },
       {
         "question": "Is multilingual support available on the free plan?",
-        "answer": "The free plan includes up to 2 languages. Basic and Pro plans offer unlimited languages with AI translation included."
+        "answer": "The free plan includes up to 2 languages. Growth and Pro plans offer unlimited languages with AI translation included."
       },
       {
         "question": "Which languages support right-to-left text?",

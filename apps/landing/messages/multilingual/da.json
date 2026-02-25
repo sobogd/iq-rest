@@ -43,7 +43,7 @@
       },
       {
         "question": "Er flersproget support tilgaengelig paa den gratis plan?",
-        "answer": "Den gratis plan inkluderer op til 2 sprog. Basic- og Pro-planer tilbyder ubegraeensede sprog med AI-oversaettelse inkluderet."
+        "answer": "Den gratis plan inkluderer op til 2 sprog. Growth- og Pro-planer tilbyder ubegraeensede sprog med AI-oversaettelse inkluderet."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Tilføj Sprog",
-        "description": "Vælg blandt 35 tilgængelige sprog. Den gratis plan inkluderer op til 2 sprog, mens Basic og Pro planer tilbyder ubegrænsede sprog til din menu."
+        "description": "Vælg blandt 35 tilgængelige sprog. Den gratis plan inkluderer op til 2 sprog, mens Growth og Pro planer tilbyder ubegrænsede sprog til din menu."
       },
       {
         "title": "Oversæt Dit Indhold",

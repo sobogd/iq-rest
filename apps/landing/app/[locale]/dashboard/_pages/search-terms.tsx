@@ -104,7 +104,7 @@ export function SearchTermsPage() {
                     <span className="text-xs text-muted-foreground">
                       {term.clicks} clicks · {term.impressions} impr · ${formatCost(term.costMicros)}
                       {term.conversions > 0 && (
-                        <> · <span className="text-green-500 font-medium">{term.conversions} conv</span></>
+                        <> · <span className="text-success font-medium">{term.conversions} conv</span></>
                       )}
                     </span>
                   </div>

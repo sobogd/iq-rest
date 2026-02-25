@@ -87,7 +87,6 @@ function formatPrice(amount: number, currency: SupportedCurrency): string {
 
 export function PricingCards({ hideComparison = false, hideButtons = false, currency }: PricingCardsProps) {
   const t = useTranslations("pricing");
-  const [isYearly, setIsYearly] = useState(true);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -110,10 +109,6 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
     });
   }, [api]);
 
-  const handleToggle = () => {
-    setIsYearly(!isYearly);
-  };
-
   const renderCellValue = (
     value: FeatureValue,
     planId: string,
@@ -127,56 +122,19 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
       );
     }
     if (value === true) {
-      return <Check className="h-5 w-5 text-green-500 mx-auto" />;
+      return <Check className="h-5 w-5 text-foreground/70 mx-auto" />;
     }
     return <X className="h-5 w-5 text-muted-foreground/40 mx-auto" />;
   };
 
   return (
     <div className="space-y-6">
-      {/* Billing Toggle */}
-      <div className="flex items-center justify-center gap-4">
-        <span
-          className={cn(
-            "text-sm transition-colors",
-            !isYearly ? "text-foreground" : "text-muted-foreground"
-          )}
-        >
-          {t("monthly")}
-        </span>
-        <button
-          onClick={handleToggle}
-          className={cn(
-            "relative inline-flex h-6 w-11 items-center rounded-full transition-colors",
-            isYearly ? "bg-primary" : "bg-muted"
-          )}
-        >
-          <span
-            className={cn(
-              "inline-block h-4 w-4 transform rounded-full bg-white transition-transform",
-              isYearly ? "translate-x-6" : "translate-x-1"
-            )}
-          />
-        </button>
-        <span
-          className={cn(
-            "text-sm transition-colors flex flex-col",
-            isYearly ? "text-foreground" : "text-muted-foreground"
-          )}
-        >
-          <span>{t("yearly")}</span>
-          <span className="text-xs text-green-600 dark:text-green-400">
-            {t("save")}
-          </span>
-        </span>
-      </div>
-
       {/* Pricing Cards Carousel */}
       <Carousel
         setApi={setApi}
         opts={{
           align: "center",
-          startIndex: 0,
+          startIndex: 1,
           loop: false,
         }}
         className="w-full"
@@ -184,7 +142,6 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
         <CarouselContent className="-ml-2 md:-ml-4 pt-6">
           {PLANS.map((plan, index) => {
             const currencyPricing = pricing[currency][plan.id];
-            const price = isYearly ? currencyPricing.yearly : currencyPricing.monthly;
             const isActive = current === index;
 
             return (
@@ -195,7 +152,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                 <Card
                   className={cn(
                     "relative flex flex-col h-full transition-all duration-300",
-                    plan.popular && "border-primary shadow-lg",
+                    plan.popular && "shadow-lg",
                     isActive ? "scale-100 opacity-100" : "md:scale-100 scale-95 opacity-70 md:opacity-100"
                   )}
                 >
@@ -217,17 +174,21 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                   <CardContent className="flex-1">
                     <div className="space-y-1 mb-6">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-4xl font-bold">{formatPrice(price, currency)}</span>
+                        <span className="text-4xl font-bold">{formatPrice(currencyPricing.yearly, currency)}</span>
                         <span className="text-muted-foreground">{t("perMonth")}</span>
                       </div>
-                      {isYearly && currencyPricing.yearlyTotal > 0 && (
-                        <div className="text-sm text-muted-foreground">
-                          {t("billedYearly", { total: formatPrice(currencyPricing.yearlyTotal, currency) })}
-                        </div>
-                      )}
-                      {plan.id === "free" && (
+                      {plan.id === "free" ? (
                         <div className="text-sm text-muted-foreground">
                           {t("forever")}
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-muted-foreground line-through">
+                            {formatPrice(currencyPricing.monthly, currency)}
+                          </span>
+                          <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                            -{Math.round((1 - currencyPricing.yearly / currencyPricing.monthly) * 100)}%
+                          </span>
                         </div>
                       )}
                     </div>
@@ -235,7 +196,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                       {(t.raw(`plans.${plan.id}.highlights`) as string[]).map(
                         (highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <Check className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
+                            <Check className="h-5 w-5 text-foreground/70 shrink-0 mt-0.5" />
                             <span className="text-sm">{highlight}</span>
                           </li>
                         )
@@ -243,7 +204,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                     </ul>
                   </CardContent>
                   {!hideButtons && (
-                    <CardFooter>
+                    <CardFooter className="flex-col gap-3">
                       <Button
                         asChild
                         className="w-full"
@@ -252,6 +213,12 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                       >
                         <Link href="/dashboard" onClick={() => analytics.marketing.pricingCtaClick(plan.id)}>{t(`plans.${plan.id}.cta`)}</Link>
                       </Button>
+                      {currencyPricing.yearlyTotal > 0 && (
+                        <p className="text-[11px] text-muted-foreground/60 text-center">
+                          {t("billedYearly", { total: formatPrice(currencyPricing.yearlyTotal, currency) })}
+                          {" "}{t("orMonthly", { price: formatPrice(currencyPricing.monthly, currency) })}
+                        </p>
+                      )}
                     </CardFooter>
                   )}
                 </Card>

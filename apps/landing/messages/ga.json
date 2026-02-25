@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Praghsáil Roghchlár QR — Pleananna Saor in Aisce, Basic & Pro | IQ Rest",
-      "description": "Déan comparáid idir pleananna praghsála roghchlár QR. Tosaigh saor in aisce, uasghrádaigh go Basic nó Pro le haghaidh aistriúcháin AI, dearadh saincheaptha, áirithintí agus tuilleadh."
+      "title": "Praghsáil Roghchlár QR — Pleananna Saor in Aisce, Growth & Pro | IQ Rest",
+      "description": "Déan comparáid idir pleananna praghsála roghchlár QR. Tosaigh saor in aisce, uasghrádaigh go Growth nó Pro le haghaidh aistriúcháin AI, dearadh saincheaptha, áirithintí agus tuilleadh."
     },
     "title": "Praghsáil QR Menu & Suíomh Gréasáin Bialann",
     "subtitle": "Níl aon táillí folaithe, níl aon iontas. Tosaigh do shuíomh gréasáin bialann saor in aisce inniu — uasghrádú amháin nuair a bheidh tú réidh le fás.",
@@ -522,7 +522,8 @@
     "yearly": "Bliantúil",
     "save": "(Sábháil 25%)",
     "perMonth": "/mí",
-    "billedYearly": "Áireamh bliantúil ({total})",
+    "billedYearly": "Áireamh bliantúil ({total}).",
+    "orMonthly": "Nó íoc {price} go míosúil.",
     "forever": "Saor go deo",
     "popular": "Is Coitianta",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Foirmiúil chun IQ Rest a thriail",
         "cta": "Cruthaigh saor in aisce",
         "highlights": [
-          "Láithreán gréasáin na bialainne",
-          "QR Menu",
-          "320 scans/month",
-          "10 ordú WhatsApp in aghaidh na míosa",
-          "2 teangacha",
           "Le marc uisce IQ Rest",
+          "320 scans/month",
+          "30 ordú WhatsApp in aghaidh na míosa",
+          "2 teangacha",
+          "QR Menu & Suíomh gréasáin",
+          "Téama dath saincheaptha",
           "Anailísíocht"
         ]
       },
       "basic": {
-        "name": "Básic",
-        "description": "Skvelé pre malé reštaurácie",
+        "name": "Growth",
+        "description": "Uirlisí iomlána le haghaidh orduithe digiteacha",
         "cta": "Tosaigh",
         "highlights": [
           "Gach rud atá sa Saor, chomh maith le:",
-          "Scans neamhtheoranta",
-          "Ordú WhatsApp neamhtheoranta",
           "6 teangacha",
           "Aistriúcháin AI",
-          "Téama dath saincheaptha",
-          "Conradh"
+          "Giniúint íomhánna AI",
+          "Conradh",
+          "Scans neamhtheoranta",
+          "Ordú WhatsApp neamhtheoranta"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Do shlabhra bialann atá ag fás",
         "cta": "Tosaigh",
         "highlights": [
-          "Gach rud atá sa Bunús, chomh maith le:",
+          "Gach rud atá sa Growth, chomh maith le:",
           "Teangacha neamhtheoranta",
           "Il-bialanna",
           "Dómhain shaincheaptha",
+          "Gnéithe saincheaptha in aghaidh na bialainne",
           "Tacaíocht tosaíochta"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mí"
+        "orders": "30 / mí"
       },
       "basic": {
         "scans": "Neamhtheoranta",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Saor"
       },
       "BASIC_MONTHLY": {
-        "name": "Básic Míosúil"
+        "name": "Growth Míosúil"
       },
       "BASIC_YEARLY": {
-        "name": "Básic Bliantúil"
+        "name": "Growth Bliantúil"
       },
       "PRO_MONTHLY": {
         "name": "Pro Míosúil"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Déan comparáid idir gach plean",
       "hideComparison": "Folaigh comparáid",
-      "ctaBasic": "Tosaigh le Basic",
+      "ctaBasic": "Tosaigh le Growth",
       "ctaPro": "Tosaigh le Pro",
       "billedMonthly": "Billeáilte go míosúil",
       "ctaSub": "Cealaigh am ar bith · Gan táillí socraithe",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "Aistriúchán AI",
-      "description": "Tá aistriúchán AI ar fáil le síntiús Basic nó Pro. Uasghrádaigh do phlean chun aistriúcháin uathoibríocha a úsáid.",
+      "description": "Tá aistriúchán AI ar fáil le síntiús Growth nó Pro. Uasghrádaigh do phlean chun aistriúcháin uathoibríocha a úsáid.",
       "cancel": "Cealaigh",
       "subscribe": "Liostáil",
       "translate": "Aistrigh",
       "translating": "Ag aistriú...",
       "limitReached": "Aistriúcháin saor in aisce ídithe",
-      "limitReachedDescription": "D'úsáid tú na 5 aistriúchán AI saor in aisce go léir. Uasghrádaigh go Basic nó Pro le haghaidh aistriúcháin gan teorainn.",
+      "limitReachedDescription": "D'úsáid tú na 5 aistriúchán AI saor in aisce go léir. Uasghrádaigh go Growth nó Pro le haghaidh aistriúcháin gan teorainn.",
       "upgrade": "Uasghrádaigh"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Athraigh cúlra",
       "regenerateImage": "Athghin",
       "generateLimitReached": "Giniúintí AI saor in aisce úsáidte",
-      "generateLimitDescription": "D'úsáid tú na 2 ghiniúint íomhá AI saor in aisce. Uasghrádaigh go Basic nó Pro le haghaidh giniúintí gan teorainn."
+      "generateLimitDescription": "D'úsáid tú na 2 ghiniúint íomhá AI saor in aisce. Uasghrádaigh go Growth nó Pro le haghaidh giniúintí gan teorainn."
     },
     "languages": {
       "translationProgress": "Dul chun cinn aistriúcháin",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Pleananna Suibscríobha agus Íocaíochtaí",
         "content": [
-          "Tugann IQ Rest pleananna suibscríobha Saor, Bunúsach, agus Pro. Tá an plean Saor ar fáil saor in aisce le gnéithe teoranta. Déantar pleananna íoctha (Bunúsach agus Pro) a íoc ar bhonn míosúil nó bliantúil trí ár bpróiseálaí íocaíochta, Stripe.",
+          "Tugann IQ Rest pleananna suibscríobha Saor, Growthach, agus Pro. Tá an plean Saor ar fáil saor in aisce le gnéithe teoranta. Déantar pleananna íoctha (Growthach agus Pro) a íoc ar bhonn míosúil nó bliantúil trí ár bpróiseálaí íocaíochta, Stripe.",
           "Taispeántar na praghsanna i nEoró. Trí shíniú ar phlean íoctha, ceadaíonn tú dúinn do mhodh íocaíochta a ghearradh ar bhonn athrá go dtí go gcuirfidh tú ar ceal é.",
           "Is féidir leat do shíniú a uasghrádú, a laghdú, nó a chur ar ceal ag am ar bith trí do dheasc. Tosaíonn cealuithe ag éifeacht ag deireadh na tréimhse billeála reatha. Ní sholáthraítear aon aisíocaíochtaí do thréimhsí billeála páirteach.",
           "Coimeádaimid an ceart chun ár bpraghsanna a athrú le fógra 30 lá. Beidh athruithe praghsanna i bhfeidhm ar thréimhsí billeála a thosaíonn tar éis an tréimhse fógra."
@@ -2133,7 +2135,7 @@
         ]
       },
       {
-        "title": "5. Bunús Dlíthiúil le haghaidh Próiseála",
+        "title": "5. Growth Dlíthiúil le haghaidh Próiseála",
         "content": [
           "Feidhmiú Conartha: Próiseáil atá riachtanach chun ár seirbhís a sholáthar duit (Airteagal 6(1)(b) GDPR).",
           "Suimeanna Dlíthiúla: Anailís agus feabhsú seirbhíse, cosc ar dhrochúsáid (Airteagal 6(1)(f) GDPR).",

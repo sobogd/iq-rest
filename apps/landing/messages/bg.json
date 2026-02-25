@@ -97,7 +97,7 @@
     "viewPricing": "Преглед на цените",
     "readyTitle": "Готови ли сте да започнете?",
     "readyDescription": "Създайте своето професионално QR меню и уебсайт на ресторанта за минути. Всички функции са включени.",
-    "keyBenefits": "Основни предимства",
+    "keyBenefits": "Growth предимства",
     "seo": {
       "instant-setup": {
         "title": "Instant QR Menu & Restaurant Website Setup | Create in 5 Minutes - IQ Rest",
@@ -157,7 +157,7 @@
         },
         {
           "q": "Има ли безплатен план?",
-          "a": "Да, започнете безплатно с всички основни функции включени."
+          "a": "Да, започнете безплатно с всички Growth функции включени."
         }
       ],
       "mobile-management": [
@@ -191,7 +191,7 @@
       "multilingual": [
         {
           "q": "Колко езика се поддържат?",
-          "a": "25+ езика, включително всички основни европейски езици, китайски, японски, корейски, арабски и иврит."
+          "a": "25+ езика, включително всички Growth европейски езици, китайски, японски, корейски, арабски и иврит."
         },
         {
           "q": "Как клиентите сменят езиците?",
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Цени за QR Меню — Безплатен, Basic и Pro планове | IQ Rest",
-      "description": "Сравнете ценовите планове за QR меню. Започнете безплатно, преминете към Basic или Pro за AI преводи, персонализиран дизайн, резервации и още."
+      "title": "Цени за QR Меню — Безплатен, Growth и Pro планове | IQ Rest",
+      "description": "Сравнете ценовите планове за QR меню. Започнете безплатно, преминете към Growth или Pro за AI преводи, персонализиран дизайн, резервации и още."
     },
     "title": "Цени на QR меню и уебсайт за ресторант",
     "subtitle": "Без скрити такси, без изненади. Стартирайте уебсайта на вашия ресторант безплатно днес — надстройте само когато сте готови да растете.",
@@ -522,7 +522,8 @@
     "yearly": "Годишно",
     "save": "(Спестете 25%)",
     "perMonth": "/мес.",
-    "billedYearly": "Фактурира се годишно ({total})",
+    "billedYearly": "Фактурира се годишно ({total}).",
+    "orMonthly": "Или плащайте {price} помесечно.",
     "forever": "Безплатно завинаги",
     "popular": "Най-популярно",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Перфектно за пробване на IQ Rest",
         "cta": "Създай безплатно",
         "highlights": [
-          "Уебсайт на ресторанта",
-          "QR Меню",
-          "320 сканирания/месец",
-          "10 поръчки по WhatsApp/месец",
-          "2 езика",
           "С воден знак на IQ Rest",
+          "320 сканирания/месец",
+          "30 поръчки по WhatsApp/месец",
+          "2 езика",
+          "QR Меню & Уебсайт",
+          "Персонализирана цветова тема",
           "Анализи"
         ]
       },
       "basic": {
-        "name": "Основен",
-        "description": "Страхотно за малки ресторанти",
+        "name": "Growth",
+        "description": "Пълен набор от инструменти за дигитални поръчки",
         "cta": "Започнете",
         "highlights": [
           "Всичко в Безплатно, плюс:",
-          "Неограничени сканирания",
-          "Неограничени поръчки по WhatsApp",
           "6 езика",
           "AI преводи",
-          "Персонализирана цветова тема",
-          "Резервации"
+          "AI генериране на изображения",
+          "Резервации",
+          "Неограничени сканирания",
+          "Неограничени поръчки по WhatsApp"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "За растящи вериги ресторанти",
         "cta": "Започнете",
         "highlights": [
-          "Всичко в Основно, плюс:",
+          "Всичко в Growth, плюс:",
           "Неограничени езици",
           "Множество ресторанти",
           "Персонализиран домейн",
+          "Персонализирани функции за всеки ресторант",
           "Приоритетна поддръжка"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / месец"
+        "orders": "30 / месец"
       },
       "basic": {
         "scans": "Неограничени",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Безплатен"
       },
       "BASIC_MONTHLY": {
-        "name": "Основен месечен"
+        "name": "Growth месечен"
       },
       "BASIC_YEARLY": {
-        "name": "Основен годишен"
+        "name": "Growth годишен"
       },
       "PRO_MONTHLY": {
         "name": "Професионален месечен"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Сравнете всички планове",
       "hideComparison": "Скриване на сравнението",
-      "ctaBasic": "Започнете с Basic",
+      "ctaBasic": "Започнете с Growth",
       "ctaPro": "Започнете с Pro",
       "billedMonthly": "Месечно таксуване",
       "ctaSub": "Откажете по всяко време · Без такси за настройка",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Превод",
-      "description": "AI преводът е наличен с абонамент Basic или Pro. Надградете плана си, за да използвате автоматични преводи.",
+      "description": "AI преводът е наличен с абонамент Growth или Pro. Надградете плана си, за да използвате автоматични преводи.",
       "cancel": "Отказ",
       "subscribe": "Абонирай се",
       "translate": "Преведи",
       "translating": "Превеждане...",
       "limitReached": "Безплатните преводи са изчерпани",
-      "limitReachedDescription": "Използвахте всичките 5 безплатни AI превода. Преминете към Basic или Pro за неограничени преводи.",
+      "limitReachedDescription": "Използвахте всичките 5 безплатни AI превода. Преминете към Growth или Pro за неограничени преводи.",
       "upgrade": "Надградете"
     },
     "auth": {
@@ -1687,7 +1689,7 @@
       },
       "subscribeForAllergens": "Абонирайте се, за да добавите етикети за алергени",
       "subscribe": "Абонирай се",
-      "sectionMain": "Основно",
+      "sectionMain": "Growth",
       "moreDetails": "Повече детайли",
       "generateImage": "Генериране с ИИ",
       "generatingImage": "Генериране...",
@@ -1696,7 +1698,7 @@
       "changeBackground": "Промяна на фона",
       "regenerateImage": "Регенериране",
       "generateLimitReached": "Безплатните AI генерации са изчерпани",
-      "generateLimitDescription": "Използвахте 2-те безплатни AI генерации на изображения. Преминете на Basic или Pro за неограничени генерации."
+      "generateLimitDescription": "Използвахте 2-те безплатни AI генерации на изображения. Преминете на Growth или Pro за неограничени генерации."
     },
     "languages": {
       "translationProgress": "Напредък на превода",
@@ -1704,7 +1706,7 @@
       "europeanLanguages": "Европейски езици",
       "starToSetDefault": "Кликнете на звездичката, за да зададете по подразбиране",
       "default": "по подразбиране",
-      "hint": "Активирайте езици, за да позволите на клиентите да виждат менюто ви на различни езици. Езикът по подразбиране се използва за основното съдържание.",
+      "hint": "Активирайте езици, за да позволите на клиентите да виждат менюто ви на различни езици. Езикът по подразбиране се използва за Growthто съдържание.",
       "fetchError": "Неуспешно зареждане на езици",
       "enableError": "Неуспешно активиране на езика",
       "disableError": "Неуспешно деактивиране на езика",
@@ -1748,7 +1750,7 @@
       "uploadMedia": "Качете видео или изображение",
       "removeMedia": "Премахнете",
       "accentColor": "Цвят на акцента",
-      "accentColorHint": "Основен цвят за бутони и акценти на вашия уебсайт",
+      "accentColorHint": "Growth цвят за бутони и акценти на вашия уебсайт",
       "save": "Запази",
       "fetchError": "Неуспешно зареждане на настройките за дизайн",
       "saveError": "Неуспешно запазване на настройките за дизайн",
@@ -1855,7 +1857,7 @@
       "manualButton": "Създай ръчно",
       "categorySubtitle": "Добавете първата си категория.",
       "categoryLabel": "Име на категорията",
-      "categoryPlaceholder": "напр. Основни ястия",
+      "categoryPlaceholder": "напр. Growth ястия",
       "itemSubtitle": "Добавете първото си ястие в",
       "itemNameLabel": "Име на ястието",
       "itemNamePlaceholder": "напр. Пица Маргарита",
@@ -1875,7 +1877,7 @@
       "doneFinishButton": "Към панела",
       "templatesSubtitle": "Изберете шаблон за вашето меню.",
       "templateRestaurantTitle": "Ресторант",
-      "templateRestaurantDescription": "Пълно меню със салати, основни ястия и гарнитури.",
+      "templateRestaurantDescription": "Пълно меню със салати, Growth ястия и гарнитури.",
       "templateCafeTitle": "Кафе",
       "templateCafeDescription": "Закуски, кафе и десерти.",
       "templateBarTitle": "Бар",
@@ -1884,7 +1886,7 @@
       "templateApplying": "Създаване на менюто...",
       "templateApplyingSubtitle": "Добавяне на категории и артикули.",
       "tplCatSalads": "Салати",
-      "tplCatMainDishes": "Основни ястия",
+      "tplCatMainDishes": "Growth ястия",
       "tplCatSideDishes": "Гарнитури",
       "tplCatBreakfasts": "Закуски",
       "tplCatCoffeeTea": "Кафе и чай",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Абонаментни планове и плащания",
         "content": [
-          "IQ Rest предлага безплатни, основни и професионални абонаментни планове. Безплатният план е наличен безплатно с ограничени функции. Платените планове (Основен и Професионален) се таксуват месечно или годишно чрез нашия платежен процесор, Stripe.",
+          "IQ Rest предлага безплатни, Growth и професионални абонаментни планове. Безплатният план е наличен безплатно с ограничени функции. Платените планове (Growth и Професионален) се таксуват месечно или годишно чрез нашия платежен процесор, Stripe.",
           "Цените са показани в евро (EUR). Като се абонирате за платен план, вие ни упълномощавате да таксуваме вашия метод на плащане на редовна основа, докато не отмените.",
           "Можете да надстроите, понижите или отмените абонамента си по всяко време чрез вашето табло. Отменянията влизат в сила в края на текущия фактурен период. Не се предоставят възстановявания за частични фактурни периоди.",
           "Запазваме правото си да променяме цените си с 30-дневно предизвестие. Промените в цените ще важат за фактурни периоди, започващи след периода на предизвестие."
@@ -2163,7 +2165,7 @@
       {
         "title": "8. Международни трансфери на данни",
         "content": [
-          "Вашите данни се съхраняват и обработват основно в Европейския съюз (AWS Стокхолм, регион eu-north-1). Когато данните се прехвърлят извън ЕС (например, към доставчици на услуги в САЩ), ние осигуряваме подходящи предпазни мерки, включително стандартни договорни клаузи (SCC) и сертификация по признати рамки за защита на данните."
+          "Вашите данни се съхраняват и обработват Growth в Европейския съюз (AWS Стокхолм, регион eu-north-1). Когато данните се прехвърлят извън ЕС (например, към доставчици на услуги в САЩ), ние осигуряваме подходящи предпазни мерки, включително стандартни договорни клаузи (SCC) и сертификация по признати рамки за защита на данните."
         ]
       },
       {
@@ -2242,7 +2244,7 @@
       {
         "title": "3. Видове бисквитки, които използваме",
         "content": [
-          "Основни бисквитки: Тези бисквитки са необходими за функционирането на уебсайта и не могат да бъдат изключени. Те обикновено се задават в отговор на действия, които предприемате, като влизане или настройка на вашите предпочитания за поверителност.",
+          "Growth бисквитки: Тези бисквитки са необходими за функционирането на уебсайта и не могат да бъдат изключени. Те обикновено се задават в отговор на действия, които предприемате, като влизане или настройка на вашите предпочитания за поверителност.",
           "Функционални бисквитки: Тези бисквитки позволяват подобрена функционалност и персонализация, като запомнят вашите предпочитания за език и настройки на темата.",
           "Аналитични бисквитки: Тези бисквитки ни помагат да разберем как посетителите взаимодействат с нашия уебсайт, като събират и отчитат информация анонимно. Използваме тези данни, за да подобрим нашата услуга.",
           "Бисквитки на трети страни: Някои бисквитки се поставят от услуги на трети страни, които се появяват на нашите страници, като процесори на плащания (Stripe) и доставчици на аналитика (Google Analytics)."
@@ -2251,8 +2253,8 @@
       {
         "title": "4. Вашите избори за бисквитки",
         "content": [
-          "Когато за първи път посетите нашия уебсайт, ще видите банер за съгласие с бисквитките, който ви позволява да приемете или отхвърлите неосновни бисквитки. Можете да промените вашите предпочитания по всяко време.",
-          "Можете също така да контролирате бисквитките чрез настройките на браузъра си. Повечето браузъри ви позволяват да откажете бисквитки, да изтриете съществуващи бисквитки или да получите известие, когато се изпращат бисквитки. Моля, имайте предвид, че блокирането на основни бисквитки може да повлияе на функционалността на нашия уебсайт.",
+          "Когато за първи път посетите нашия уебсайт, ще видите банер за съгласие с бисквитките, който ви позволява да приемете или отхвърлите неGrowth бисквитки. Можете да промените вашите предпочитания по всяко време.",
+          "Можете също така да контролирате бисквитките чрез настройките на браузъра си. Повечето браузъри ви позволяват да откажете бисквитки, да изтриете съществуващи бисквитки или да получите известие, когато се изпращат бисквитки. Моля, имайте предвид, че блокирането на Growth бисквитки може да повлияе на функционалността на нашия уебсайт.",
           "За да се откажете от проследяването на Google Analytics, можете да инсталирате добавката за браузър за отказ от Google Analytics."
         ]
       },

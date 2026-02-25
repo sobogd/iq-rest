@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR Ēdienkartes Cenas — Bezmaksas, Basic un Pro Plāni | IQ Rest",
-      "description": "Salīdziniet QR ēdienkartes cenu plānus. Sāciet bez maksas, pārejiet uz Basic vai Pro AI tulkojumiem, pielāgotam dizainam, rezervācijām un citam."
+      "title": "QR Ēdienkartes Cenas — Bezmaksas, Growth un Pro Plāni | IQ Rest",
+      "description": "Salīdziniet QR ēdienkartes cenu plānus. Sāciet bez maksas, pārejiet uz Growth vai Pro AI tulkojumiem, pielāgotam dizainam, rezervācijām un citam."
     },
     "title": "QR ēdienkarte un restorāna tīmekļa vietnes cenas",
     "subtitle": "Bez slēptām maksām, bez pārsteigumiem. Uzsāc savu restorāna tīmekļa vietni bez maksas jau šodien — uzlabojumi tikai tad, kad esi gatavs augt.",
@@ -522,7 +522,8 @@
     "yearly": "Gadā",
     "save": "(Ietaupīt 25%)",
     "perMonth": "/mēn.",
-    "billedYearly": "Norēķinās reizi gadā ({total})",
+    "billedYearly": "Norēķinās reizi gadā ({total}).",
+    "orMonthly": "Vai maksājiet {price} katru mēnesi.",
     "forever": "Bezmaksas uz mūžu",
     "popular": "Vispopulārākais",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Ideāli, lai izmēģinātu IQ Rest",
         "cta": "Izveidot bezmaksas",
         "highlights": [
-          "Restorāna mājaslapa",
-          "QR ēdienkarte",
-          "320 skenējumi/mēnesī",
-          "10 WhatsApp pasūtījumi/mēnesī",
-          "2 valodas",
           "Ar IQ Rest ūdenszīmi",
+          "320 skenējumi/mēnesī",
+          "30 WhatsApp pasūtījumi/mēnesī",
+          "2 valodas",
+          "QR ēdienkarte & Mājaslapa",
+          "Pielāgota krāsu tēma",
           "Analītika"
         ]
       },
       "basic": {
-        "name": "Pamatplāns",
-        "description": "Lieliski piemērots mazām restorāniem",
+        "name": "Growth",
+        "description": "Pilns rīku komplekts digitālajiem pasūtījumiem",
         "cta": "Sākt",
         "highlights": [
           "Viss, kas ir Bezmaksas, plus:",
-          "Neierobežoti skenējumi",
-          "Neierobežoti WhatsApp pasūtījumi",
           "6 valodas",
           "AI tulkojumi",
-          "Pielāgota krāsu tēma",
-          "Rezervācijas"
+          "AI attēlu ģenerēšana",
+          "Rezervācijas",
+          "Neierobežoti skenējumi",
+          "Neierobežoti WhatsApp pasūtījumi"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Augošām restorānu ķēdēm",
         "cta": "Sākt",
         "highlights": [
-          "Viss, kas ir Pamata, plus:",
+          "Viss, kas ir Growth, plus:",
           "Neierobežotas valodas",
           "Vairāki restorāni",
           "Pielāgots domēns",
+          "Pielāgotas funkcijas katram restorānam",
           "Prioritāte atbalstam"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mēnesī"
+        "orders": "30 / mēnesī"
       },
       "basic": {
         "scans": "Neierobežoti",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Salīdzināt visus plānus",
       "hideComparison": "Slēpt salīdzinājumu",
-      "ctaBasic": "Sākt ar Basic",
+      "ctaBasic": "Sākt ar Growth",
       "ctaPro": "Sākt ar Pro",
       "billedMonthly": "Rēķins katru mēnesi",
       "ctaSub": "Atceliet jebkurā laikā · Bez iestatīšanas maksām",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Tulkojums",
-      "description": "AI tulkojums ir pieejams ar Basic vai Pro abonementu. Uzlabojiet savu plānu, lai izmantotu automātiskos tulkojumus.",
+      "description": "AI tulkojums ir pieejams ar Growth vai Pro abonementu. Uzlabojiet savu plānu, lai izmantotu automātiskos tulkojumus.",
       "cancel": "Atcelt",
       "subscribe": "Abonēt",
       "translate": "Tulkot",
       "translating": "Tulkošana...",
       "limitReached": "Bezmaksas tulkojumi iztērēti",
-      "limitReachedDescription": "Jūs esat izmantojis visus 5 bezmaksas AI tulkojumus. Jauniniet uz Basic vai Pro neierobežotiem tulkojumiem.",
+      "limitReachedDescription": "Jūs esat izmantojis visus 5 bezmaksas AI tulkojumus. Jauniniet uz Growth vai Pro neierobežotiem tulkojumiem.",
       "upgrade": "Jaunināt"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Mainīt fonu",
       "regenerateImage": "Pārģenerēt",
       "generateLimitReached": "Bezmaksas AI ģenerēšanas iztērētas",
-      "generateLimitDescription": "Esat izmantojis 2 bezmaksas AI attēlu ģenerēšanas. Jauniniet uz Basic vai Pro neierobežotām ģenerēšanām."
+      "generateLimitDescription": "Esat izmantojis 2 bezmaksas AI attēlu ģenerēšanas. Jauniniet uz Growth vai Pro neierobežotām ģenerēšanām."
     },
     "languages": {
       "translationProgress": "Tulkošanas progress",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Abonēšanas plāni un maksājumi",
         "content": [
-          "IQ Rest piedāvā Bezmaksas, Pamata un Pro abonēšanas plānus. Bezmaksas plāns ir pieejams bez maksas ar ierobežotām funkcijām. Apmaksātie plāni (Pamata un Pro) tiek norakstīti ikmēneša vai ikgadējā maksājumā caur mūsu maksājumu apstrādātāju, Stripe.",
+          "IQ Rest piedāvā Bezmaksas, Growth un Pro abonēšanas plānus. Bezmaksas plāns ir pieejams bez maksas ar ierobežotām funkcijām. Apmaksātie plāni (Growth un Pro) tiek norakstīti ikmēneša vai ikgadējā maksājumā caur mūsu maksājumu apstrādātāju, Stripe.",
           "Cenas tiek norādītas eiro (EUR). Abonējot apmaksātu plānu, jūs piekrītat, ka mēs varam iekasēt maksājumu no jūsu maksājuma metodes atkārtoti, līdz jūs to atcelsiet.",
           "Jūs varat uzlabot, samazināt vai atcelt savu abonementu jebkurā laikā caur savu informācijas paneli. Atcelšanas stājas spēkā pašreizējā norēķinu perioda beigās. Nav pieejami atmaksas par daļējiem norēķinu periodiem.",
           "Mēs paturam tiesības mainīt mūsu cenas ar 30 dienu iepriekšēju brīdinājumu. Cenu izmaiņas attieksies uz norēķinu periodiem, kas sākas pēc brīdinājuma perioda."

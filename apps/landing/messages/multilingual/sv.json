@@ -43,7 +43,7 @@
       },
       {
         "question": "Ar flersprakigt stod tillgangligt pa gratisplanen?",
-        "answer": "Gratisplanen inkluderar upp till 2 sprak. Basic- och Pro-planer erbjuder obegransat antal sprak med AI-oversattning inkluderad."
+        "answer": "Gratisplanen inkluderar upp till 2 sprak. Growth- och Pro-planer erbjuder obegransat antal sprak med AI-oversattning inkluderad."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Lägg till Språk",
-        "description": "Välj bland 35 tillgängliga språk. Den kostnadsfria planen inkluderar upp till 2 språk, medan Basic- och Pro-planerna erbjuder obegränsade språk för din meny."
+        "description": "Välj bland 35 tillgängliga språk. Den kostnadsfria planen inkluderar upp till 2 språk, medan Growth- och Pro-planerna erbjuder obegränsade språk för din meny."
       },
       {
         "title": "Översätt Ditt Innehåll",

@@ -280,7 +280,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
 
               {photoPool.length > 0 && (
                 <Button
-                  className="w-full bg-[#E63946] hover:bg-[#E63946]/90 text-white"
+                  className="w-full bg-primary hover:bg-primary/90 text-white"
                   onClick={handleStartScan}
                 >
                   <Camera className="h-4 w-4" />

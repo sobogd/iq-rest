@@ -301,12 +301,12 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
                     key={option.id}
                     className={cn(
                       "flex items-center justify-between px-4 h-12 border-t border-foreground/5 transition-colors",
-                      isCurrent && "bg-green-500/5"
+                      isCurrent && "bg-success/5"
                     )}
                   >
                     <div className="flex items-center gap-2 flex-1 min-w-0">
-                      <span className={cn("text-sm font-medium", isCurrent && "text-green-700 dark:text-green-400")}>{t(`plans.${option.id}.name`)}</span>
-                      <span className={cn("text-sm", isCurrent ? "text-green-600/70 dark:text-green-500/70" : "text-muted-foreground")}>
+                      <span className={cn("text-sm font-medium", isCurrent && "text-success")}>{t(`plans.${option.id}.name`)}</span>
+                      <span className={cn("text-sm", isCurrent ? "text-success/70" : "text-muted-foreground")}>
                         {formatPrice(pricing[currency][option.planId][option.isYearly ? "yearly" : "monthly"], currency)}{t("perMonth")}
                       </span>
                     </div>
@@ -320,7 +320,7 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+                          className="border-success/50 text-success hover:bg-success/10"
                           onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
                           disabled={!!actionLoading}
                         >
@@ -371,7 +371,7 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
                           {value === "value" ? (
                             <span className="text-xs font-medium">{tp(`values.${planId}.${feature.key}`)}</span>
                           ) : value === true ? (
-                            <Check className="h-4 w-4 text-green-500 mx-auto" />
+                            <Check className="h-4 w-4 text-success mx-auto" />
                           ) : (
                             <X className="h-4 w-4 text-muted-foreground/40 mx-auto" />
                           )}

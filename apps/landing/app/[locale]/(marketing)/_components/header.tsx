@@ -17,8 +17,7 @@ export async function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80">
-            <Logo width={40} height={40} className="w-10 h-10 -my-1" />
-            <span className="text-xl font-bold">{t("logo")}</span>
+            <Logo height={22} />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

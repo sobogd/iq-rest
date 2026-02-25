@@ -157,7 +157,7 @@
         },
         {
           "q": "Da li postoji besplatan plan?",
-          "a": "Da, počnite besplatno sa svim osnovnim funkcijama uključenim."
+          "a": "Da, počnite besplatno sa svim Growthm funkcijama uključenim."
         }
       ],
       "mobile-management": [
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Цене QR Менија — Бесплатан, Basic и Pro Планови | IQ Rest",
-      "description": "Упоредите ценовне планове QR менија. Почните бесплатно, надоградите на Basic или Pro за AI преводе, прилагођени дизајн, резервације и још."
+      "title": "Цене QR Менија — Бесплатан, Growth и Pro Планови | IQ Rest",
+      "description": "Упоредите ценовне планове QR менија. Почните бесплатно, надоградите на Growth или Pro за AI преводе, прилагођени дизајн, резервације и још."
     },
     "title": "QR Meni & Cene za Vebsajt Restorana",
     "subtitle": "Bez skrivenih troškova, bez iznenađenja. Pokrenite vebsajt svog restorana besplatno danas — nadogradite kada budete spremni za rast.",
@@ -522,7 +522,8 @@
     "yearly": "Godišnje",
     "save": "(Uštedite 25%)",
     "perMonth": "/mj",
-    "billedYearly": "Naplaćuje se godišnje ({total})",
+    "billedYearly": "Naplaćuje se godišnje ({total}).",
+    "orMonthly": "Или плаћајте {price} месечно.",
     "forever": "Besplatno zauvek",
     "popular": "Najpopularnije",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Savršeno za isprobavanje IQ Rest-a",
         "cta": "Направи бесплатно",
         "highlights": [
-          "Web sajt restorana",
-          "QR meni",
-          "320 skeniranja/mesečno",
-          "10 narudžbina/mesečno",
-          "2 jezika",
           "Sa IQ Rest vodenim žigom",
+          "320 skeniranja/mesečno",
+          "30 narudžbina/mesečno",
+          "2 jezika",
+          "QR meni & Web sajt",
+          "Prilagođena boja teme",
           "Analitika"
         ]
       },
       "basic": {
-        "name": "Osnovno",
-        "description": "Odlično za male restorane",
+        "name": "Growth",
+        "description": "Комплетан сет алата за дигитално наручивање",
         "cta": "Započnite",
         "highlights": [
           "Sve u besplatnom, plus:",
-          "Neograničena skeniranja",
-          "Neograničenenarudžbine",
           "6 jezika",
           "AI prevodi",
-          "Prilagođena boja teme",
-          "Rezervacije"
+          "AI generisanje slika",
+          "Rezervacije",
+          "Neograničena skeniranja",
+          "Neograničenenarudžbine"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Za rastuće lance restorana",
         "cta": "Započnite",
         "highlights": [
-          "Sve u osnovnom, plus:",
+          "Sve u Growth, plus:",
           "Neograničeni jezici",
           "Više restorana",
           "Prilagođeni domen",
+          "Prilagođene funkcije po restoranu",
           "Prioritetna podrška"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mesec"
+        "orders": "30 / mesec"
       },
       "basic": {
         "scans": "Neograničeno",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Planovi pretplate za QR meni i kreiranje restoran veb stranice",
-        "description": "Predstavljamo fleksibilne planove pretplate za kreiranje vaše restoran veb stranice i QR menija. Izaberite između besplatnog, osnovnog i pro plana sa mesečnim ili godišnjim opcijama naplate.",
+        "description": "Predstavljamo fleksibilne planove pretplate za kreiranje vaše restoran veb stranice i QR menija. Izaberite između besplatnog, Growthg i pro plana sa mesečnim ili godišnjim opcijama naplate.",
         "meta": {
           "title": "Planovi pretplate za QR meni i restoran veb stranicu | IQ Rest",
-          "description": "Izaberite savršen plan pretplate za vašu restoran veb stranicu i kreiranje QR menija. Besplatni, osnovni i pro planovi sa fleksibilnom mesečnom i godišnjom naplatom. Započnite besplatno danas."
+          "description": "Izaberite savršen plan pretplate za vašu restoran veb stranicu i kreiranje QR menija. Besplatni, Growth i pro planovi sa fleksibilnom mesečnom i godišnjom naplatom. Započnite besplatno danas."
         },
         "content": {
           "intro": "Uzbuđeni smo da objavimo lansiranje našeg novog sistema pretplate za QR meni i kreiranje restoran veb stranice. IQ Rest sada nudi fleksibilne planove koji rastu sa vašim poslovanjem - od potpuno besplatnog nivoa za male kafiće do profesionalnih planova za etablirane restorane. Bilo da tek počinjete ili upravljate više lokacija, naši planovi pretplate pružaju karakteristike koje su vam potrebne da kreirate i održavate profesionalnu restoran veb stranicu sa QR meni mogućnostima.",
           "image1Alt": "Planovi pretplate za QR meni i kreiranje restoran veb stranice",
           "image1Caption": "Izaberite savršen plan za vašu restoran veb stranicu i QR meni potrebe",
           "section1Title": "Fleksibilni planovi za svaku veličinu restorana",
-          "section1Text": "Naš sistem pretplate za QR meni i kreiranje restoran veb stranice nudi tri nivoa dizajnirana da odgovaraju vašim potrebama. Besplatni plan vam omogućava da započnete sa do 15 stavki menija - savršeno za male kafiće ili isprobavanje platforme. Osnovni plan po ceni od 4 € mesečno (ili 3 € mesečno naplaćeno godišnje) proširuje vašu kapacitet na 100 stavki uz 3 jezika i 2.000 mesečnih skeniranja. Za rastuće restorane, naš pro plan po ceni od 7 € mesečno (ili 6 € mesečno godišnje) nudi neograničene stavke, jezike i skeniranja - sve što vam je potrebno za profesionalno upravljanje restoran veb stranicom i QR menijem.",
+          "section1Text": "Naš sistem pretplate za QR meni i kreiranje restoran veb stranice nudi tri nivoa dizajnirana da odgovaraju vašim potrebama. Besplatni plan vam omogućava da započnete sa do 15 stavki menija - savršeno za male kafiće ili isprobavanje platforme. Growth plan po ceni od 4 € mesečno (ili 3 € mesečno naplaćeno godišnje) proširuje vašu kapacitet na 100 stavki uz 3 jezika i 2.000 mesečnih skeniranja. Za rastuće restorane, naš pro plan po ceni od 7 € mesečno (ili 6 € mesečno godišnje) nudi neograničene stavke, jezike i skeniranja - sve što vam je potrebno za profesionalno upravljanje restoran veb stranicom i QR menijem.",
           "section2Title": "Jednostavan kontrolni panel za naplatu",
           "section2Text": "Upravljanje vašom pretplatom za QR meni i restoran veb stranice je sada lakše nego ikada. Naš novi kontrolni panel za naplatu prikazuje sve dostupne planove u čistom, jednostavnom interfejsu. Možete videti vaš trenutni plan na prvi pogled, uporediti karakteristike i nadograditi ili smanjiti sa jednim klikom. Pojednostavljeni dizajn prikazuje svaki plan sa njegovom mesečnom cenom, što olakšava izbor pravog opcije za vaše potrebe restoran veb stranice i QR menija. Sigurne uplate se obrađuju putem Stripe-a, industrijskog standarda za online transakcije.",
           "section3Title": "Uštedite 25% sa godišnjom naplatom",
-          "section3Text": "Vlasnici restorana koji se obavežu na godišnju naplatu za svoju QR meni i veb stranicu pretplatu štede 25% u poređenju sa mesečnim plaćanjem. Osnovni plan pada sa 4 € na 3 € mesečno, dok pro plan ide od 7 € na 6 € mesečno kada se naplaćuje godišnje. Ova značajna ušteda pomaže restoranima da više ulažu u svoje osnovno poslovanje dok održavaju profesionalnu digitalnu prisutnost. Prebacujte se između mesečne i godišnje naplate u bilo kojem trenutku putem vašeg kontrolnog panela.",
+          "section3Text": "Vlasnici restorana koji se obavežu na godišnju naplatu za svoju QR meni i veb stranicu pretplatu štede 25% u poređenju sa mesečnim plaćanjem. Growth plan pada sa 4 € na 3 € mesečno, dok pro plan ide od 7 € na 6 € mesečno kada se naplaćuje godišnje. Ova značajna ušteda pomaže restoranima da više ulažu u svoje Growth poslovanje dok održavaju profesionalnu digitalnu prisutnost. Prebacujte se između mesečne i godišnje naplate u bilo kojem trenutku putem vašeg kontrolnog panela.",
           "benefitsTitle": "Prednosti naših planova pretplate",
           "benefit1": "Besplatni plan dostupan zauvek - nema potrebe za kreditnom karticom da započnete",
           "benefit2": "Fleksibilna mesečna ili godišnja naplata sa 25% uštede na godišnjim planovima",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Besplatno"
       },
       "BASIC_MONTHLY": {
-        "name": "Osnovni mesečni"
+        "name": "Growth mesečni"
       },
       "BASIC_YEARLY": {
-        "name": "Osnovni godišnji"
+        "name": "Growth godišnji"
       },
       "PRO_MONTHLY": {
         "name": "Pro mesečni"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Упоредите све планове",
       "hideComparison": "Сакриј поређење",
-      "ctaBasic": "Почните са Basic",
+      "ctaBasic": "Почните са Growth",
       "ctaPro": "Почните са Pro",
       "billedMonthly": "Месечна наплата",
       "ctaSub": "Откажите у било ком тренутку · Без накнада за подешавање",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Prevod",
-      "description": "AI prevod je dostupan sa Basic ili Pro pretplatom. Nadogradite svoj plan da biste koristili automatske prevode.",
+      "description": "AI prevod je dostupan sa Growth ili Pro pretplatom. Nadogradite svoj plan da biste koristili automatske prevode.",
       "cancel": "Otkaži",
       "subscribe": "Pretplati se",
       "translate": "Преведи",
       "translating": "Превођење...",
       "limitReached": "Бесплатни преводи потрошени",
-      "limitReachedDescription": "Искористили сте свих 5 бесплатних AI превода. Надоградите на Basic или Pro за неограничене преводе.",
+      "limitReachedDescription": "Искористили сте свих 5 бесплатних AI превода. Надоградите на Growth или Pro за неограничене преводе.",
       "upgrade": "Надогради"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Промени позадину",
       "regenerateImage": "Регенериши",
       "generateLimitReached": "Бесплатна АИ генерисања потрошена",
-      "generateLimitDescription": "Искористили сте 2 бесплатна АИ генерисања слика. Надоградите на Basic или Pro за неограничена генерисања."
+      "generateLimitDescription": "Искористили сте 2 бесплатна АИ генерисања слика. Надоградите на Growth или Pro за неограничена генерисања."
     },
     "languages": {
       "translationProgress": "Napredak prevođenja",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Planovi pretplate i plaćanja",
         "content": [
-          "IQ Rest nudi besplatne, osnovne i pro planove pretplate. Besplatni plan je dostupan bez troškova sa ograničenim funkcijama. Plaćeni planovi (Osnovni i Pro) se naplaćuju mesečno ili godišnje putem našeg procesora plaćanja, Stripe.",
+          "IQ Rest nudi besplatne, Growth i pro planove pretplate. Besplatni plan je dostupan bez troškova sa ograničenim funkcijama. Plaćeni planovi (Growth i Pro) se naplaćuju mesečno ili godišnje putem našeg procesora plaćanja, Stripe.",
           "Cene su prikazane u evrima (EUR). Pretplatom na plaćeni plan, ovlašćujete nas da naplatimo vašu metodu plaćanja na ponovljenoj osnovi dok je ne otkažete.",
           "Možete unaprediti, smanjiti ili otkazati svoju pretplatu u bilo kojem trenutku putem vašeg kontrolnog panela. Otkazivanja stupaju na snagu na kraju trenutnog obračunskog perioda. Nema povraćaja novca za delimične obračunske periode.",
           "Zadržavamo pravo da promenimo naše cene uz 30 dana obaveštenja. Promene cena će se primenjivati na obračunske periode koji počinju nakon obaveštenja."

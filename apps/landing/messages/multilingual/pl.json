@@ -43,7 +43,7 @@
       },
       {
         "question": "Czy obsługa wielojęzyczna jest dostępna w darmowym planie?",
-        "answer": "Darmowy plan obejmuje do 2 języków. Plany Basic i Pro oferują nieograniczoną liczbę języków z tłumaczeniem AI w zestawie."
+        "answer": "Darmowy plan obejmuje do 2 języków. Plany Growth i Pro oferują nieograniczoną liczbę języków z tłumaczeniem AI w zestawie."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Dodaj języki",
-        "description": "Wybierz spośród 35 dostępnych języków. Plan darmowy obejmuje do 2 języków, podczas gdy plany Basic i Pro oferują nieograniczoną liczbę języków dla Twojego menu."
+        "description": "Wybierz spośród 35 dostępnych języków. Plan darmowy obejmuje do 2 języków, podczas gdy plany Growth i Pro oferują nieograniczoną liczbę języków dla Twojego menu."
       },
       {
         "title": "Przetłumacz swoją treść",

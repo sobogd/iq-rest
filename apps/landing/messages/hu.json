@@ -157,7 +157,7 @@
         },
         {
           "q": "Van ingyenes csomag?",
-          "a": "Igen, kezdj ingyenesen, minden alapvető funkcióval."
+          "a": "Igen, kezdj ingyenesen, minden Growthvető funkcióval."
         }
       ],
       "mobile-management": [
@@ -312,7 +312,7 @@
           "Csak email szükséges a kezdéshez - nincs bonyolult regisztráció",
           "Az étterem weboldala azonnal készen áll a regisztráció után",
           "QR menü automatikusan generálva és összekapcsolva",
-          "Kapcsolatfelvételi oldal térképpel alapértelmezés szerint",
+          "Kapcsolatfelvételi oldal térképpel Growthértelmezés szerint",
           "Nincs szükség technikai tudásra vagy kódolási ismeretekre"
         ],
         "image": "/images/features/instant-setup.jpg",
@@ -338,7 +338,7 @@
       },
       {
         "id": "ai-translation",
-        "title": "AI-Alapú Menüfordítás",
+        "title": "AI-Growthú Menüfordítás",
         "shortDescription": "Fordítsa le az egész menüt{br}{link}AI fordítással 1 kattintással{/link}.",
         "description": "Érd el a nemzetközi ügyfeleket intelligens AI fordítással, amely érti az étkezési kontextust. Az ételneveid és leírásaid pontosan le vannak fordítva, megőrizve a kulináris kifejezéseket és értelmesen bármely nyelven.",
         "fullDescription": "Az általános fordítók gyakran kudarcot vallanak az étlapokkal - szó szerint fordítanak, anélkül, hogy értenék a kontextust. AI-nk kifejezetten éttermi tartalomra van betanítva. Tudja, hogy a 'Beef Wellington'-t nem szabad szó szerint lefordítani, és hogy az 'al dente' bármely nyelven ugyanazt jelenti. Szolgáld a turistákat és a nemzetközi vendégeket olyan étlapokkal, amelyek természetesen olvashatók az ő nyelvükön.",
@@ -350,7 +350,7 @@
           "23%-kal növeli az eladásokat a nemzetközi ügyfelekkel"
         ],
         "image": "/images/features/ai-translation.jpg",
-        "imageAlt": "AI-alapú étterem menü fordító felület",
+        "imageAlt": "AI-Growthú étterem menü fordító felület",
         "cta": "one-click AI"
       },
       {
@@ -425,8 +425,8 @@
         "id": "reservations",
         "title": "Asztalfoglalási Rendszer",
         "shortDescription": "Fogadjon foglalásokat 24/7.{br}{link}Foglalások{/link} közvetlenül a weboldalról.",
-        "description": "A beépített foglalási rendszer lehetővé teszi az ügyfelek számára, hogy közvetlenül a weboldaladról foglaljanak asztalt. Válaszd az automatikus visszaigazolást a rendelkezésre állás alapján, vagy nézd át manuálisan minden foglalást. Kezeld az összes foglalást a vezérlőpultodon.",
-        "fullDescription": "A telefonos foglalások időigényesek és könnyen kihagyhatók. Az IQ Rest foglalási rendszere 24/7 működik. Az ügyfelek kiválasztják a dátumot, időpontot és a létszámot, majd azonnal foglalnak. Beállíthatod az automatikus visszaigazolást az asztalok rendelkezésre állása alapján, vagy manuálisan is átnézheted minden kérést. Csökkentsd a meg nem jelenéseket email visszaigazolásokkal.",
+        "description": "A beépített foglalási rendszer lehetővé teszi az ügyfelek számára, hogy közvetlenül a weboldaladról foglaljanak asztalt. Válaszd az automatikus visszaigazolást a rendelkezésre állás Growthján, vagy nézd át manuálisan minden foglalást. Kezeld az összes foglalást a vezérlőpultodon.",
+        "fullDescription": "A telefonos foglalások időigényesek és könnyen kihagyhatók. Az IQ Rest foglalási rendszere 24/7 működik. Az ügyfelek kiválasztják a dátumot, időpontot és a létszámot, majd azonnal foglalnak. Beállíthatod az automatikus visszaigazolást az asztalok rendelkezésre állása Growthján, vagy manuálisan is átnézheted minden kérést. Csökkentsd a meg nem jelenéseket email visszaigazolásokkal.",
         "benefits": [
           "24/7 online foglalási lehetőség",
           "Automatikus vagy manuális visszaigazolási módok",
@@ -509,20 +509,21 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR Menü Árak — Ingyenes, Basic és Pro Csomagok | IQ Rest",
-      "description": "Hasonlítsa össze a QR menü árcsomagokat. Kezdje ingyen, váltson Basic vagy Pro csomagra AI fordításokért, egyedi designért, foglalásokért és még többért."
+      "title": "QR Menü Árak — Ingyenes, Growth és Pro Csomagok | IQ Rest",
+      "description": "Hasonlítsa össze a QR menü árcsomagokat. Kezdje ingyen, váltson Growth vagy Pro csomagra AI fordításokért, egyedi designért, foglalásokért és még többért."
     },
     "title": "QR Menü & Étterem Weboldal Árak",
     "subtitle": "Nincsenek rejtett költségek, nincsenek meglepetések. Indítsa el étterem weboldalát ingyen ma — frissítse csak akkor, amikor készen áll a növekedésre.",
     "seo": {
       "title": "Miért válassza az IQ Rest-et az étterméhez vagy kávézójához?",
-      "text": "Hozzon létre professzionális QR menüt és weboldalt étterméhez vagy kávézójához percek alatt. Vendégei egyszerűen beolvassák a QR kódot, hogy megtekinthessék digitális menüjüket a telefonjukon — nincs szükség alkalmazásra. Az árakat azonnal frissítheti, új ételeket adhat hozzá, és megváltoztathatja a leírásokat. Az AI-alapú fordításokkal nemzetközi vendégeit az anyanyelvükön szolgálhatja ki. Kövesse nyomon, hogy mely ételek kapják a legtöbb megtekintést a beépített analitikával. Akár egy kis kávézót üzemeltet, akár egy növekvő étteremláncot, az IQ Rest segít modernizálni menüélményét, miközben csökkenti a nyomtatási költségeket."
+      "text": "Hozzon létre professzionális QR menüt és weboldalt étterméhez vagy kávézójához percek alatt. Vendégei egyszerűen beolvassák a QR kódot, hogy megtekinthessék digitális menüjüket a telefonjukon — nincs szükség alkalmazásra. Az árakat azonnal frissítheti, új ételeket adhat hozzá, és megváltoztathatja a leírásokat. Az AI-Growthú fordításokkal nemzetközi vendégeit az anyanyelvükön szolgálhatja ki. Kövesse nyomon, hogy mely ételek kapják a legtöbb megtekintést a beépített analitikával. Akár egy kis kávézót üzemeltet, akár egy növekvő étteremláncot, az IQ Rest segít modernizálni menüélményét, miközben csökkenti a nyomtatási költségeket."
     },
     "monthly": "Havi",
     "yearly": "Éves",
     "save": "(25% megtakarítás)",
     "perMonth": "/hó",
-    "billedYearly": "Évente számlázva ({total})",
+    "billedYearly": "Évente számlázva ({total}).",
+    "orMonthly": "Vagy fizessen {price} havonta.",
     "forever": "Ingyenesen örökre",
     "popular": "Legnépszerűbb",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Tökéletes az IQ Rest kipróbálásához",
         "cta": "Ingyenes létrehozás",
         "highlights": [
-          "Étterem weboldal",
-          "QR Menü",
-          "320 beolvasás/hónap",
-          "10 rendelés/hónap",
-          "2 nyelv",
           "IQ Rest vízjellel",
+          "320 beolvasás/hónap",
+          "30 rendelés/hónap",
+          "2 nyelv",
+          "QR Menü & Weboldal",
+          "Egyedi színséma",
           "Elemzések"
         ]
       },
       "basic": {
-        "name": "Alap",
-        "description": "Remek kis éttermek számára",
+        "name": "Growth",
+        "description": "Teljes eszközkészlet a digitális rendeléshez",
         "cta": "Kezdje el",
         "highlights": [
           "Minden a Free-ben, plusz:",
-          "Korlátlan beolvasás",
-          "Korlátlanrendelés",
           "6 nyelv",
           "AI fordítások",
-          "Egyedi színséma",
-          "Foglalások"
+          "AI képgenerálás",
+          "Foglalások",
+          "Korlátlan beolvasás",
+          "Korlátlanrendelés"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Növekvő étteremláncok számára",
         "cta": "Kezdje el",
         "highlights": [
-          "Minden a Basic-ben, plusz:",
+          "Minden a Growth-ben, plusz:",
           "Korlátlan nyelv",
           "Több étterem",
           "Egyedi domain",
+          "Testreszabott funkciók éttermenként",
           "Prioritásos támogatás"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / hónap"
+        "orders": "30 / hónap"
       },
       "basic": {
         "scans": "Korlátlan",
@@ -626,7 +628,7 @@
       "description": "Lépjen kapcsolatba az IQ Rest csapatával. Segítünk a digitális QR menüjével étterem vagy kávézó számára. Személyes támogatás valódi emberektől."
     },
     "title": "Szüksége van segítségre? Beszélgessünk",
-    "subtitle": "Szia, én Bogdan vagyok — az IQ Rest alapítója. Ezt a platformot a saját kávézóm számára építettem, és most már több száz étteremnek segít világszerte. Van kérdése vagy ötlete? Írjon nekem közvetlenül. Nincsenek botok, nincsen várakozás — csak egy igazi beszélgetés.",
+    "subtitle": "Szia, én Bogdan vagyok — az IQ Rest Growthítója. Ezt a platformot a saját kávézóm számára építettem, és most már több száz étteremnek segít világszerte. Van kérdése vagy ötlete? Írjon nekem közvetlenül. Nincsenek botok, nincsen várakozás — csak egy igazi beszélgetés.",
     "story": {
       "text": ""
     },
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Ingyenes"
       },
       "BASIC_MONTHLY": {
-        "name": "Alap havi"
+        "name": "Growth havi"
       },
       "BASIC_YEARLY": {
-        "name": "Alap éves"
+        "name": "Growth éves"
       },
       "PRO_MONTHLY": {
         "name": "Pro havi"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Összes csomag összehasonlítása",
       "hideComparison": "Összehasonlítás elrejtése",
-      "ctaBasic": "Kezdd a Basic csomaggal",
+      "ctaBasic": "Kezdd a Growth csomaggal",
       "ctaPro": "Kezdd a Pro csomaggal",
       "billedMonthly": "Havonta számlázva",
       "ctaSub": "Bármikor lemondható · Nincsenek beállítási díjak",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Fordítás",
-      "description": "Az AI fordítás Basic vagy Pro előfizetéssel érhető el. Frissítse csomagját az automatikus fordítások használatához.",
+      "description": "Az AI fordítás Growth vagy Pro előfizetéssel érhető el. Frissítse csomagját az automatikus fordítások használatához.",
       "cancel": "Mégse",
       "subscribe": "Feliratkozás",
       "translate": "Fordítás",
       "translating": "Fordítás...",
       "limitReached": "Ingyenes fordítások elfogytak",
-      "limitReachedDescription": "Felhasználta mind az 5 ingyenes AI-fordítást. Váltson Basic vagy Pro csomagra korlátlan fordításokért.",
+      "limitReachedDescription": "Felhasználta mind az 5 ingyenes AI-fordítást. Váltson Growth vagy Pro csomagra korlátlan fordításokért.",
       "upgrade": "Frissítés"
     },
     "auth": {
@@ -1696,23 +1698,23 @@
       "changeBackground": "Háttér módosítása",
       "regenerateImage": "Újragenerálás",
       "generateLimitReached": "Ingyenes AI generálások elfogytak",
-      "generateLimitDescription": "Felhasználta mind a 2 ingyenes AI képgenerálást. Frissítsen Basic vagy Pro csomagra korlátlan generálásokért."
+      "generateLimitDescription": "Felhasználta mind a 2 ingyenes AI képgenerálást. Frissítsen Growth vagy Pro csomagra korlátlan generálásokért."
     },
     "languages": {
       "translationProgress": "Fordítási előrehaladás",
       "availableLanguages": "Elérhető nyelvek",
       "europeanLanguages": "Európai nyelvek",
-      "starToSetDefault": "Kattintson a csillagra az alapértelmezett beállításához",
-      "default": "alapértelmezett",
-      "hint": "Engedélyezze a nyelveket, hogy az ügyfelek több nyelven is megtekinthessék az étlapját. Az alapértelmezett nyelv a fő tartalomhoz használatos.",
+      "starToSetDefault": "Kattintson a csillagra az Growthértelmezett beállításához",
+      "default": "Growthértelmezett",
+      "hint": "Engedélyezze a nyelveket, hogy az ügyfelek több nyelven is megtekinthessék az étlapját. Az Growthértelmezett nyelv a fő tartalomhoz használatos.",
       "fetchError": "A nyelvek betöltése nem sikerült",
       "enableError": "A nyelv engedélyezése nem sikerült",
       "disableError": "A nyelv letiltása nem sikerült",
-      "defaultError": "Az alapértelmezett nyelv beállítása nem sikerült",
+      "defaultError": "Az Growthértelmezett nyelv beállítása nem sikerült",
       "languageEnabled": "{language} engedélyezve",
       "languageDisabled": "{language} letiltva",
-      "defaultSet": "{language} beállítva alapértelmezettnek",
-      "cannotDisableDefault": "Az alapértelmezett nyelv nem tiltható le",
+      "defaultSet": "{language} beállítva Growthértelmezettnek",
+      "cannotDisableDefault": "Az Growthértelmezett nyelv nem tiltható le",
       "atLeastOneRequired": "Legalább egy nyelv megadása kötelező",
       "enableFirst": "Először engedélyezze a nyelvet",
       "deleteConfirm": "Ennek a nyelvnek a letiltása törli az összes fordítást. Ez a művelet nem vonható vissza.",
@@ -1939,7 +1941,7 @@
     "reservationMode": "Megerősítési mód",
     "modeAuto": "Automatikus",
     "modeManual": "Manuális",
-    "modeAutoDescription": "A foglalásokat automatikusan megerősítjük az asztal elérhetősége alapján",
+    "modeAutoDescription": "A foglalásokat automatikusan megerősítjük az asztal elérhetősége Growthján",
     "modeManualDescription": "Minden foglalást manuálisan kell megerősítened",
     "slotDuration": "Foglalás időtartama",
     "minutes": "perc",
@@ -1987,7 +1989,7 @@
       {
         "title": "2. A szolgáltatás leírása",
         "content": [
-          "Az IQ Rest digitális QR menü és weboldal létrehozó platformot kínál éttermek, kávézók és élelmiszeripari létesítmények számára. Szolgáltatásunk magában foglalja a menedzsmentet, QR kód generálást, többnyelvű támogatást AI-alapú fordításokkal, AI képkészítési optimalizálást, asztalfoglalási rendszereket és analitikát.",
+          "Az IQ Rest digitális QR menü és weboldal létrehozó platformot kínál éttermek, kávézók és élelmiszeripari létesítmények számára. Szolgáltatásunk magában foglalja a menedzsmentet, QR kód generálást, többnyelvű támogatást AI-Growthú fordításokkal, AI képkészítési optimalizálást, asztalfoglalási rendszereket és analitikát.",
           "Fenntartjuk a jogot, hogy bármikor, előzetes értesítés nélkül módosítsuk, felfüggesszük vagy megszüntessük a szolgáltatás bármely aspektusát."
         ]
       },
@@ -2002,18 +2004,18 @@
       {
         "title": "4. Előfizetési tervek és fizetések",
         "content": [
-          "Az IQ Rest ingyenes, alap és pro előfizetési terveket kínál. Az ingyenes terv költségmentes, de korlátozott funkciókkal rendelkezik. A fizetős tervek (Alap és Pro) havi vagy éves díjjal kerülnek kiszámlázásra a Stripe fizetési feldolgozón keresztül.",
+          "Az IQ Rest ingyenes, Growth és pro előfizetési terveket kínál. Az ingyenes terv költségmentes, de korlátozott funkciókkal rendelkezik. A fizetős tervek (Growth és Pro) havi vagy éves díjjal kerülnek kiszámlázásra a Stripe fizetési feldolgozón keresztül.",
           "Az árak euróban (EUR) vannak feltüntetve. A fizetős tervre való előfizetéssel felhatalmazza minket, hogy rendszeresen terheljük a fizetési módját, amíg le nem mondja.",
           "Bármikor frissítheti, csökkentheti vagy lemondhatja az előfizetését a műszerfalán keresztül. A lemondások a jelenlegi számlázási időszak végén lépnek életbe. Részleges számlázási időszakok esetén nem nyújtunk visszatérítést.",
           "Fenntartjuk a jogot, hogy 30 napos értesítéssel megváltoztassuk az árainkat. Az árak változásai a bejelentési időszakot követő számlázási időszakokra vonatkoznak."
         ]
       },
       {
-        "title": "5. AI-alapú funkciók",
+        "title": "5. AI-Growthú funkciók",
         "content": [
           "Az IQ Rest mesterséges intelligenciát használ a menüfordításokhoz és a képek optimalizálásához. Bár törekszünk a pontosságra, az AI által generált fordítások hibákat tartalmazhatnak. Ön felelős az összes AI által generált tartalom ellenőrzéséért és hitelesítéséért a közzététel előtt.",
           "Az AI képkészítési optimalizálás automatikusan feldolgozza a feltöltött képeket a betöltési teljesítmény javítása érdekében. Az eredeti képek nem kerülnek tárolásra a feldolgozás után.",
-          "Nem garantáljuk az AI által generált tartalom pontosságát, teljességét vagy megbízhatóságát. Tudomásul veszi, hogy az AI funkciók 'ahogy vannak' alapon állnak rendelkezésre, és saját belátása szerint használhatók."
+          "Nem garantáljuk az AI által generált tartalom pontosságát, teljességét vagy megbízhatóságát. Tudomásul veszi, hogy az AI funkciók 'ahogy vannak' Growthon állnak rendelkezésre, és saját belátása szerint használhatók."
         ]
       },
       {
@@ -2035,7 +2037,7 @@
         "title": "8. Szellemi tulajdon",
         "content": [
           "Az IQ Rest név, logó, weboldal dizájn és minden kapcsolódó szellemi tulajdon Bogdan Sokolov tulajdonát képezi, és a vonatkozó szellemi tulajdonjogok védelme alatt áll.",
-          "Nem másolhatja, módosíthatja, terjesztheti vagy hozhat létre származékos műveket a szellemi tulajdonunk alapján kifejezett írásbeli engedély nélkül."
+          "Nem másolhatja, módosíthatja, terjesztheti vagy hozhat létre származékos műveket a szellemi tulajdonunk Growthján kifejezett írásbeli engedély nélkül."
         ]
       },
       {
@@ -2048,7 +2050,7 @@
       {
         "title": "10. Felelősség korlátozása",
         "content": [
-          "Az IQ Rest 'ahogy van' és 'ahogy elérhető' alapon kerül biztosításra, bármilyen garancia nélkül, legyen az kifejezett vagy hallgatólagos, beleértve, de nem korlátozva a hallgatólagos kereskedelmi garanciákra és a konkrét célra való alkalmasságra.",
+          "Az IQ Rest 'ahogy van' és 'ahogy elérhető' Growthon kerül biztosításra, bármilyen garancia nélkül, legyen az kifejezett vagy hallgatólagos, beleértve, de nem korlátozva a hallgatólagos kereskedelmi garanciákra és a konkrét célra való alkalmasságra.",
           "A törvény által megengedett legnagyobb mértékben Bogdan Sokolov nem felelős semmilyen közvetett, véletlen, különleges, következményes vagy büntető jellegű kárért, beleértve a profit, adatok vagy üzleti lehetőségek elvesztését.",
           "Összes felelősségünk bármilyen, a szolgáltatásból eredő vagy ahhoz kapcsolódó követelésért nem haladhatja meg azt az összeget, amelyet az előző tizenkét (12) hónapban kifizetett nekünk."
         ]
@@ -2129,11 +2131,11 @@
       {
         "title": "4. Hogyan Használjuk Az Ön Adatait",
         "content": [
-          "Személyes adatait a következő célokra használjuk: QR menü szolgáltatásunk nyújtása és fenntartása, beleértve az étterem weboldalának létrehozását és QR kódok generálását. Az Ön fiókjának hitelesítése e-mail ellenőrző kódok segítségével. A Stripe-on keresztül történő fizetések feldolgozása és az előfizetés kezelése. Kommunikáció Önnel a fiókjával, szolgáltatásfrissítésekkel és támogatási kérésekkel kapcsolatban. AI-alapú funkciók biztosítása, mint például menüfordítások és képtömörítés. A szolgáltatás használatának elemzése és platformunk fejlesztése. Jogi kötelezettségek teljesítése és jogos érdekeink védelme."
+          "Személyes adatait a következő célokra használjuk: QR menü szolgáltatásunk nyújtása és fenntartása, beleértve az étterem weboldalának létrehozását és QR kódok generálását. Az Ön fiókjának hitelesítése e-mail ellenőrző kódok segítségével. A Stripe-on keresztül történő fizetések feldolgozása és az előfizetés kezelése. Kommunikáció Önnel a fiókjával, szolgáltatásfrissítésekkel és támogatási kérésekkel kapcsolatban. AI-Growthú funkciók biztosítása, mint például menüfordítások és képtömörítés. A szolgáltatás használatának elemzése és platformunk fejlesztése. Jogi kötelezettségek teljesítése és jogos érdekeink védelme."
         ]
       },
       {
-        "title": "5. A Feldolgozás Jogi Alapja",
+        "title": "5. A Feldolgozás Jogi Growthja",
         "content": [
           "Szerződés Teljesítése: A feldolgozás szükséges a szolgáltatásunk nyújtásához (GDPR 6. cikk (1) bekezdés (b)).",
           "Jogos Érdekek: Elemzések és szolgáltatásfejlesztés, csalásmegelőzés (GDPR 6. cikk (1) bekezdés (f)).",
@@ -2177,16 +2179,16 @@
         ]
       },
       {
-        "title": "10. Az Ön Jogi Jogai a GDPR Alapján",
+        "title": "10. Az Ön Jogi Jogai a GDPR Growthján",
         "content": [
-          "A GDPR alapján az alábbi jogok illetik meg az Ön személyes adatait:",
+          "A GDPR Growthján az alábbi jogok illetik meg az Ön személyes adatait:",
           "Hozzáférési Jog: Kérheti a birtokunkban lévő személyes adatai másolatát.",
           "Javítási Jog: Kérheti a pontatlan vagy hiányos adatok kijavítását.",
           "Törlési Jog: Kérheti a személyes adatai törlését ('elfeledéshez való jog').",
           "Korlátozási Jog: Kérheti a feldolgozás korlátozását bizonyos körülmények között.",
           "Adathordozhatósági Jog: Kérheti adatai megkapását strukturált, gépileg olvasható formátumban.",
-          "Tiltakozási Jog: Tiltakozhat a jogos érdekeken alapuló feldolgozás vagy közvetlen marketing ellen.",
-          "Hozzájárulás Visszavonásának Joga: Amennyiben a feldolgozás hozzájáruláson alapul, bármikor visszavonhatja.",
+          "Tiltakozási Jog: Tiltakozhat a jogos érdekeken Growthuló feldolgozás vagy közvetlen marketing ellen.",
+          "Hozzájárulás Visszavonásának Joga: Amennyiben a feldolgozás hozzájáruláson Growthul, bármikor visszavonhatja.",
           "E jogok gyakorlásához lépjen kapcsolatba velünk a support@iq-rest.com címen. 30 napon belül válaszolunk. Ha nem elégedett a válaszunkkal, joga van panaszt tenni a Spanyol Adatvédelmi Ügynökségnél (AEPD) a www.aepd.es címen."
         ]
       },
@@ -2242,7 +2244,7 @@
       {
         "title": "3. A Használt Sütik Típusai",
         "content": [
-          "Alapvető Sütik: Ezek a sütik szükségesek a weboldal működéséhez, és nem lehet őket kikapcsolni. Általában az Ön által végzett műveletekre válaszul állítják be őket, például bejelentkezéskor vagy a magánéleti preferenciák beállításakor.",
+          "Growthvető Sütik: Ezek a sütik szükségesek a weboldal működéséhez, és nem lehet őket kikapcsolni. Általában az Ön által végzett műveletekre válaszul állítják be őket, például bejelentkezéskor vagy a magánéleti preferenciák beállításakor.",
           "Funkcionális Sütik: Ezek a sütik lehetővé teszik a továbbfejlesztett funkcionalitást és személyre szabást, például megjegyzik a nyelvi preferenciáját és a téma beállításait.",
           "Elemző Sütik: Ezek a sütik segítenek megérteni, hogyan lépnek interakcióba a látogatók a weboldalunkkal, anonim információk gyűjtésével és jelentésével. Ezt az adatot a szolgáltatásunk javítására használjuk.",
           "Harmadik Fél Sütik: Néhány sütit harmadik fél szolgáltatások helyeznek el az oldalainkon, például a fizetési feldolgozók (Stripe) és az elemző szolgáltatók (Google Analytics)."
@@ -2252,7 +2254,7 @@
         "title": "4. A Sütikkel Kapcsolatos Választásai",
         "content": [
           "Amikor először látogat el a weboldalunkra, egy süti hozzájárulási banner jelenik meg, amely lehetővé teszi, hogy elfogadja vagy elutasítsa a nem kötelező sütiket. Bármikor módosíthatja a preferenciáit.",
-          "A sütiket a böngésző beállításaival is vezérelheti. A legtöbb böngésző lehetővé teszi a sütik elutasítását, a meglévő sütik törlését, vagy értesítést kap, amikor sütiket küldenek. Kérjük, vegye figyelembe, hogy az alapvető sütik blokkolása befolyásolhatja weboldalunk működését.",
+          "A sütiket a böngésző beállításaival is vezérelheti. A legtöbb böngésző lehetővé teszi a sütik elutasítását, a meglévő sütik törlését, vagy értesítést kap, amikor sütiket küldenek. Kérjük, vegye figyelembe, hogy az Growthvető sütik blokkolása befolyásolhatja weboldalunk működését.",
           "A Google Analytics nyomkövetésből való leiratkozáshoz telepítheti a Google Analytics Opt-out Böngésző Kiegészítőt."
         ]
       },

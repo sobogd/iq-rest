@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR-Menü Preise — Kostenlos, Basic & Pro Pläne | IQ Rest",
-      "description": "Vergleichen Sie die QR-Menü-Preispläne. Starten Sie kostenlos, upgraden Sie auf Basic oder Pro für KI-Übersetzungen, individuelles Design, Reservierungen und mehr."
+      "title": "QR-Menü Preise — Kostenlos, Growth & Pro Pläne | IQ Rest",
+      "description": "Vergleichen Sie die QR-Menü-Preispläne. Starten Sie kostenlos, upgraden Sie auf Growth oder Pro für KI-Übersetzungen, individuelles Design, Reservierungen und mehr."
     },
     "title": "QR Menü & Restaurant-Website Preise",
     "subtitle": "Keine versteckten Gebühren, keine Überraschungen. Starten Sie noch heute kostenlos Ihre Restaurant-Website – upgraden Sie nur, wenn Sie bereit sind zu wachsen.",
@@ -522,7 +522,8 @@
     "yearly": "Jährlich",
     "save": "(25% sparen)",
     "perMonth": "/Monat",
-    "billedYearly": "Jährlich abgerechnet ({total})",
+    "billedYearly": "Jährlich abgerechnet ({total}).",
+    "orMonthly": "Oder zahlen Sie {price} monatlich.",
     "forever": "Für immer kostenlos",
     "popular": "Am Beliebtesten",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Perfekt, um IQ Rest auszuprobieren",
         "cta": "Kostenlos erstellen",
         "highlights": [
-          "Restaurant-Website",
-          "QR-Menü",
-          "320 Scans/Monat",
-          "10 Bestellungen/Monat",
-          "2 Sprachen",
           "Mit IQ Rest Wasserzeichen",
+          "320 Scans/Monat",
+          "30 Bestellungen/Monat",
+          "2 Sprachen",
+          "QR-Menü & Website",
+          "Benutzerdefiniertes Farbschema",
           "Analytik"
         ]
       },
       "basic": {
-        "name": "Basis",
-        "description": "Ideal für kleine Restaurants",
+        "name": "Growth",
+        "description": "Komplettes Toolset für digitale Bestellungen",
         "cta": "Loslegen",
         "highlights": [
           "Alles in Free, plus:",
-          "Unbegrenzte Scans",
-          "UnbegrenzteBestellungen",
           "6 Sprachen",
           "KI-Übersetzungen",
-          "Benutzerdefiniertes Farbschema",
-          "Reservierungen"
+          "KI-Bildgenerierung",
+          "Reservierungen",
+          "Unbegrenzte Scans",
+          "UnbegrenzteBestellungen"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Für wachsende Restaurantketten",
         "cta": "Loslegen",
         "highlights": [
-          "Alles in Basic, plus:",
+          "Alles in Growth, plus:",
           "Unbegrenzte Sprachen",
           "Mehrere Restaurants",
           "Benutzerdefinierte Domain",
+          "Individuelle Funktionen pro Restaurant",
           "Prioritätsunterstützung"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / Monat"
+        "orders": "30 / Monat"
       },
       "basic": {
         "scans": "Unbegrenzt",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Abonnementpläne für QR-Menü und Restaurant-Website-Erstellung",
-        "description": "Einführung flexibler Abonnementpläne für die Erstellung Ihrer Restaurant-Website und QR-Menüs. Wählen Sie zwischen kostenlosen, Basis- und Pro-Plänen mit monatlichen oder jährlichen Abrechnungsoptionen.",
+        "description": "Einführung flexibler Abonnementpläne für die Erstellung Ihrer Restaurant-Website und QR-Menüs. Wählen Sie zwischen kostenlosen, Growth- und Pro-Plänen mit monatlichen oder jährlichen Abrechnungsoptionen.",
         "meta": {
           "title": "Abonnementpläne für QR-Menü und Restaurant-Website | IQ Rest",
-          "description": "Wählen Sie den perfekten Abonnementplan für Ihre Restaurant-Website und QR-Menü-Erstellung. Kostenlose, Basis- und Pro-Pläne mit flexibler monatlicher und jährlicher Abrechnung. Starten Sie kostenlos heute."
+          "description": "Wählen Sie den perfekten Abonnementplan für Ihre Restaurant-Website und QR-Menü-Erstellung. Kostenlose, Growth- und Pro-Pläne mit flexibler monatlicher und jährlicher Abrechnung. Starten Sie kostenlos heute."
         },
         "content": {
           "intro": "Wir freuen uns, die Einführung unseres neuen Abonnementsystems für die QR-Menü- und Restaurant-Website-Erstellung anzukündigen. IQ Rest bietet jetzt flexible Pläne, die mit Ihrem Unternehmen wachsen - von einem völlig kostenlosen Tarif für kleine Cafés bis hin zu professionellen Plänen für etablierte Restaurants. Egal, ob Sie gerade erst anfangen oder mehrere Standorte verwalten, unsere Abonnementpläne bieten die Funktionen, die Sie benötigen, um eine professionelle Restaurant-Website mit QR-Menü-Funktionen zu erstellen und zu pflegen.",
           "image1Alt": "Abonnementpläne für QR-Menü und Restaurant-Website-Erstellung",
           "image1Caption": "Wählen Sie den perfekten Plan für Ihre Restaurant-Website und QR-Menü-Bedürfnisse",
           "section1Title": "Flexible Pläne für jede Restaurantgröße",
-          "section1Text": "Unser Abonnementsystem für die QR-Menü- und Restaurant-Website-Erstellung bietet drei Stufen, die auf Ihre Bedürfnisse abgestimmt sind. Der kostenlose Plan ermöglicht es Ihnen, mit bis zu 15 Menüelementen zu starten - perfekt für kleine Cafés oder um die Plattform auszuprobieren. Der Basisplan für 4 €/Monat (oder 3 €/Monat bei jährlicher Abrechnung) erweitert Ihre Kapazität auf 100 Artikel mit 3 Sprachen und 2.000 monatlichen Scans. Für wachsende Restaurants bietet unser Pro-Plan für 7 €/Monat (oder 6 €/Monat bei jährlicher Abrechnung) unbegrenzte Artikel, Sprachen und Scans - alles, was Sie für die professionelle Verwaltung Ihrer Restaurant-Website und QR-Menüs benötigen.",
+          "section1Text": "Unser Abonnementsystem für die QR-Menü- und Restaurant-Website-Erstellung bietet drei Stufen, die auf Ihre Bedürfnisse abgestimmt sind. Der kostenlose Plan ermöglicht es Ihnen, mit bis zu 15 Menüelementen zu starten - perfekt für kleine Cafés oder um die Plattform auszuprobieren. Der Growthplan für 4 €/Monat (oder 3 €/Monat bei jährlicher Abrechnung) erweitert Ihre Kapazität auf 100 Artikel mit 3 Sprachen und 2.000 monatlichen Scans. Für wachsende Restaurants bietet unser Pro-Plan für 7 €/Monat (oder 6 €/Monat bei jährlicher Abrechnung) unbegrenzte Artikel, Sprachen und Scans - alles, was Sie für die professionelle Verwaltung Ihrer Restaurant-Website und QR-Menüs benötigen.",
           "section2Title": "Einfaches Abrechnungs-Dashboard",
           "section2Text": "Die Verwaltung Ihres Abonnements für QR-Menü- und Restaurant-Website-Dienste ist jetzt einfacher denn je. Unser neues Abrechnungs-Dashboard zeigt alle verfügbaren Pläne in einer klaren, einfachen Benutzeroberfläche. Sie können auf einen Blick Ihren aktuellen Plan sehen, Funktionen vergleichen und mit einem Klick upgraden oder downgraden. Das optimierte Design zeigt jeden Plan mit seinem monatlichen Preis, was es einfach macht, die richtige Option für Ihre Restaurant-Website und QR-Menü-Bedürfnisse auszuwählen. Sichere Zahlungen werden über Stripe, den Branchenstandard für Online-Transaktionen, verarbeitet.",
           "section3Title": "Sparen Sie 25 % mit jährlicher Abrechnung",
-          "section3Text": "Restaurantbesitzer, die sich für eine jährliche Abrechnung für ihr QR-Menü- und Website-Abonnement entscheiden, sparen 25 % im Vergleich zu monatlichen Zahlungen. Der Basisplan sinkt von 4 € auf 3 € pro Monat, während der Pro-Plan von 7 € auf 6 € pro Monat bei jährlicher Abrechnung sinkt. Diese erheblichen Einsparungen helfen Restaurants, mehr in ihr Kerngeschäft zu investieren und gleichzeitig eine professionelle digitale Präsenz aufrechtzuerhalten. Wechseln Sie jederzeit über Ihr Dashboard zwischen monatlicher und jährlicher Abrechnung.",
+          "section3Text": "Restaurantbesitzer, die sich für eine jährliche Abrechnung für ihr QR-Menü- und Website-Abonnement entscheiden, sparen 25 % im Vergleich zu monatlichen Zahlungen. Der Growthplan sinkt von 4 € auf 3 € pro Monat, während der Pro-Plan von 7 € auf 6 € pro Monat bei jährlicher Abrechnung sinkt. Diese erheblichen Einsparungen helfen Restaurants, mehr in ihr Kerngeschäft zu investieren und gleichzeitig eine professionelle digitale Präsenz aufrechtzuerhalten. Wechseln Sie jederzeit über Ihr Dashboard zwischen monatlicher und jährlicher Abrechnung.",
           "benefitsTitle": "Vorteile unserer Abonnementpläne",
           "benefit1": "Kostenloser Plan für immer verfügbar - keine Kreditkarte erforderlich, um zu starten",
           "benefit2": "Flexible monatliche oder jährliche Abrechnung mit 25 % Ersparnis bei jährlichen Plänen",
@@ -1447,10 +1449,10 @@
         "name": "Kostenlos"
       },
       "BASIC_MONTHLY": {
-        "name": "Basis Monatlich"
+        "name": "Growth Monatlich"
       },
       "BASIC_YEARLY": {
-        "name": "Basis Jährlich"
+        "name": "Growth Jährlich"
       },
       "PRO_MONTHLY": {
         "name": "Pro Monatlich"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Alle Pläne vergleichen",
       "hideComparison": "Vergleich ausblenden",
-      "ctaBasic": "Mit Basic starten",
+      "ctaBasic": "Mit Growth starten",
       "ctaPro": "Mit Pro starten",
       "billedMonthly": "Monatlich abgerechnet",
       "ctaSub": "Jederzeit kündbar · Keine Einrichtungsgebühren",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "KI-Übersetzung",
-      "description": "KI-Übersetzung ist mit einem Basic- oder Pro-Abonnement verfügbar. Aktualisieren Sie Ihren Plan, um automatische Übersetzungen zu nutzen.",
+      "description": "KI-Übersetzung ist mit einem Growth- oder Pro-Abonnement verfügbar. Aktualisieren Sie Ihren Plan, um automatische Übersetzungen zu nutzen.",
       "cancel": "Abbrechen",
       "subscribe": "Abonnieren",
       "translate": "Übersetzen",
       "translating": "Übersetze...",
       "limitReached": "Kostenlose Übersetzungen aufgebraucht",
-      "limitReachedDescription": "Sie haben alle 5 kostenlosen KI-Übersetzungen verbraucht. Upgraden Sie auf Basic oder Pro für unbegrenzte Übersetzungen.",
+      "limitReachedDescription": "Sie haben alle 5 kostenlosen KI-Übersetzungen verbraucht. Upgraden Sie auf Growth oder Pro für unbegrenzte Übersetzungen.",
       "upgrade": "Upgraden"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Hintergrund ändern",
       "regenerateImage": "Neu generieren",
       "generateLimitReached": "Kostenlose KI-Generierungen aufgebraucht",
-      "generateLimitDescription": "Sie haben alle 2 kostenlosen KI-Bildgenerierungen verbraucht. Upgraden Sie auf Basic oder Pro für unbegrenzte Generierungen."
+      "generateLimitDescription": "Sie haben alle 2 kostenlosen KI-Bildgenerierungen verbraucht. Upgraden Sie auf Growth oder Pro für unbegrenzte Generierungen."
     },
     "languages": {
       "translationProgress": "Übersetzungsfortschritt",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Abonnementpläne und Zahlungen",
         "content": [
-          "IQ Rest bietet kostenlose, Basis- und Pro-Abonnementpläne an. Der kostenlose Plan ist ohne Kosten mit eingeschränkten Funktionen verfügbar. Kostenpflichtige Pläne (Basis und Pro) werden monatlich oder jährlich über unseren Zahlungsdienstleister Stripe abgerechnet.",
+          "IQ Rest bietet kostenlose, Growth- und Pro-Abonnementpläne an. Der kostenlose Plan ist ohne Kosten mit eingeschränkten Funktionen verfügbar. Kostenpflichtige Pläne (Growth und Pro) werden monatlich oder jährlich über unseren Zahlungsdienstleister Stripe abgerechnet.",
           "Die Preise werden in Euro (EUR) angezeigt. Mit dem Abonnieren eines kostenpflichtigen Plans autorisieren Sie uns, Ihre Zahlungsmethode regelmäßig zu belasten, bis Sie kündigen.",
           "Sie können Ihr Abonnement jederzeit über Ihr Dashboard upgraden, downgraden oder kündigen. Kündigungen treten am Ende des aktuellen Abrechnungszeitraums in Kraft. Es werden keine Rückerstattungen für teilweise Abrechnungszeiträume gewährt.",
           "Wir behalten uns das Recht vor, unsere Preise mit einer Frist von 30 Tagen zu ändern. Preisänderungen gelten für Abrechnungszeiträume, die nach der Bekanntgabefrist beginnen."

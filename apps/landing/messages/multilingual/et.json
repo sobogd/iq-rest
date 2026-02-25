@@ -43,7 +43,7 @@
       },
       {
         "question": "Kas mitmekeelne tugi on saadaval tasuta plaanis?",
-        "answer": "Tasuta plaan sisaldab kuni 2 keelt. Basic ja Pro plaanid pakuvad piiramatut arvu keeli koos kaasatud tehisintellekti tõlkega."
+        "answer": "Tasuta plaan sisaldab kuni 2 keelt. Growth ja Pro plaanid pakuvad piiramatut arvu keeli koos kaasatud tehisintellekti tõlkega."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Lisa Keeled",
-        "description": "Valige 35 saadaval olevast keelest. Tasuta plaan sisaldab kuni 2 keelt, samas kui Basic ja Pro plaanid pakuvad teie menüü jaoks piiramatult keeli."
+        "description": "Valige 35 saadaval olevast keelest. Tasuta plaan sisaldab kuni 2 keelt, samas kui Growth ja Pro plaanid pakuvad teie menüü jaoks piiramatult keeli."
       },
       {
         "title": "Tõlgi Oma Sisu",

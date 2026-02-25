@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR-meny Priser — Gratis, Basic & Pro Planer | IQ Rest",
-      "description": "Sammenlign QR-meny prisplaner. Start gratis, oppgrader til Basic eller Pro for AI-oversettelser, tilpasset design, reservasjoner og mer."
+      "title": "QR-meny Priser — Gratis, Growth & Pro Planer | IQ Rest",
+      "description": "Sammenlign QR-meny prisplaner. Start gratis, oppgrader til Growth eller Pro for AI-oversettelser, tilpasset design, reservasjoner og mer."
     },
     "title": "QR Meny & Restaurant Nettsted Priser",
     "subtitle": "Ingen skjulte avgifter, ingen overraskelser. Start ditt restaurantnettsted gratis i dag — oppgrader kun når du er klar til å vokse.",
@@ -522,7 +522,8 @@
     "yearly": "Årlig",
     "save": "(Spar 25%)",
     "perMonth": "/mnd",
-    "billedYearly": "Faktureres årlig ({total})",
+    "billedYearly": "Faktureres årlig ({total}).",
+    "orMonthly": "Eller betal {price} månedlig.",
     "forever": "Gratis for alltid",
     "popular": "Mest Populær",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Perfekt for å prøve IQ Rest",
         "cta": "Opprett gratis",
         "highlights": [
-          "Restaurantnettsted",
-          "QR-meny",
-          "320 skanninger/måned",
-          "10 bestillinger/måned",
-          "2 språk",
           "Med IQ Rest vannmerke",
+          "320 skanninger/måned",
+          "30 bestillinger/måned",
+          "2 språk",
+          "QR-meny & Nettsted",
+          "Egendefinert fargevalg",
           "Analyse"
         ]
       },
       "basic": {
-        "name": "Grunnleggende",
-        "description": "Flott for små restauranter",
+        "name": "Growth",
+        "description": "Komplett verktøysett for digitale bestillinger",
         "cta": "Kom i Gang",
         "highlights": [
           "Alt i Gratis, pluss:",
-          "Ubegrensede skanninger",
-          "Ubegrensedebestillinger",
           "6 språk",
           "AI-oversettelser",
-          "Egendefinert fargevalg",
-          "Reservasjoner"
+          "AI bildegenerering",
+          "Reservasjoner",
+          "Ubegrensede skanninger",
+          "Ubegrensedebestillinger"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "For voksende restaurantkjeder",
         "cta": "Kom i Gang",
         "highlights": [
-          "Alt i Grunnleggende, pluss:",
+          "Alt i Growth, pluss:",
           "Ubegrensede språk",
           "Flere restauranter",
           "Egendefinert domene",
+          "Tilpassede funksjoner per restaurant",
           "Prioritert støtte"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / måned"
+        "orders": "30 / måned"
       },
       "basic": {
         "scans": "Ubegrenset",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Abonnementsplaner for QR-meny og restaurant nettsideopprettelse",
-        "description": "Vi introduserer fleksible abonnementsplaner for å lage din restaurant nettside og QR-meny. Velg mellom gratis, grunnleggende og pro-planer med månedlige eller årlige betalingsalternativer.",
+        "description": "Vi introduserer fleksible abonnementsplaner for å lage din restaurant nettside og QR-meny. Velg mellom gratis, Growth og pro-planer med månedlige eller årlige betalingsalternativer.",
         "meta": {
           "title": "Abonnementsplaner for QR-meny og restaurant nettside | IQ Rest",
-          "description": "Velg den perfekte abonnementsplanen for din restaurant nettside og QR-menyopprettelse. Gratis, grunnleggende og pro-planer med fleksible månedlige og årlige betalinger. Start gratis i dag."
+          "description": "Velg den perfekte abonnementsplanen for din restaurant nettside og QR-menyopprettelse. Gratis, Growth og pro-planer med fleksible månedlige og årlige betalinger. Start gratis i dag."
         },
         "content": {
           "intro": "Vi er glade for å kunngjøre lanseringen av vårt nye abonnementsystem for QR-meny og restaurant nettsideopprettelse. IQ Rest tilbyr nå fleksible planer som vokser med virksomheten din - fra en helt gratis nivå for små kafeer til profesjonelle planer for etablerte restauranter. Enten du akkurat har startet eller administrerer flere lokasjoner, gir våre abonnementsplaner de funksjonene du trenger for å lage og opprettholde en profesjonell restaurant nettside med QR-menyfunksjoner.",
           "image1Alt": "Abonnementsplaner for QR-meny og restaurant nettsideopprettelse",
           "image1Caption": "Velg den perfekte planen for dine restaurant nettside- og QR-menybehov",
           "section1Title": "Fleksible planer for enhver restaurantstørrelse",
-          "section1Text": "Vårt abonnementsystem for QR-meny og restaurant nettsideopprettelse tilbyr tre nivåer designet for å matche dine behov. Den gratis planen lar deg komme i gang med opptil 15 menyartikler - perfekt for små kafeer eller for å prøve plattformen. Den grunnleggende planen til €4/måned (eller €3/måned fakturert årlig) utvider kapasiteten din til 100 artikler med 3 språk og 2 000 månedlige skanninger. For voksende restauranter tilbyr vår pro-plan til €7/måned (eller €6/måned årlig) ubegrensede artikler, språk og skanninger - alt du trenger for profesjonell restaurant nettside- og QR-menyadministrasjon.",
+          "section1Text": "Vårt abonnementsystem for QR-meny og restaurant nettsideopprettelse tilbyr tre nivåer designet for å matche dine behov. Den gratis planen lar deg komme i gang med opptil 15 menyartikler - perfekt for små kafeer eller for å prøve plattformen. Den Growth planen til €4/måned (eller €3/måned fakturert årlig) utvider kapasiteten din til 100 artikler med 3 språk og 2 000 månedlige skanninger. For voksende restauranter tilbyr vår pro-plan til €7/måned (eller €6/måned årlig) ubegrensede artikler, språk og skanninger - alt du trenger for profesjonell restaurant nettside- og QR-menyadministrasjon.",
           "section2Title": "Enkel faktureringsdashbord",
           "section2Text": "Administrasjonen av abonnementet ditt for QR-meny og restaurant nettside-tjenester er nå enklere enn noen gang. Vårt nye faktureringsdashbord viser alle tilgjengelige planer i et rent, enkelt grensesnitt. Du kan se din nåværende plan på et blikk, sammenligne funksjoner, og oppgradere eller nedgradere med ett klikk. Det strømlinjeformede designet viser hver plan med sin månedlige pris, noe som gjør det enkelt å velge riktig alternativ for din restaurant nettside og QR-menybehov. Sikker betaling behandles gjennom Stripe, bransjestandarden for online transaksjoner.",
           "section3Title": "Spar 25% med årlig fakturering",
-          "section3Text": "Restauranteiere som forplikter seg til årlig fakturering for sitt QR-meny og nettsideabonnement sparer 25% sammenlignet med månedlige betalinger. Den grunnleggende planen går fra €4 til €3 per måned, mens pro-planen går fra €7 til €6 per måned når den faktureres årlig. Denne betydelige besparelsen hjelper restauranter med å investere mer i sin kjernevirksomhet samtidig som de opprettholder en profesjonell digital tilstedeværelse. Bytt mellom månedlig og årlig fakturering når som helst gjennom dashbordet ditt.",
+          "section3Text": "Restauranteiere som forplikter seg til årlig fakturering for sitt QR-meny og nettsideabonnement sparer 25% sammenlignet med månedlige betalinger. Den Growth planen går fra €4 til €3 per måned, mens pro-planen går fra €7 til €6 per måned når den faktureres årlig. Denne betydelige besparelsen hjelper restauranter med å investere mer i sin kjernevirksomhet samtidig som de opprettholder en profesjonell digital tilstedeværelse. Bytt mellom månedlig og årlig fakturering når som helst gjennom dashbordet ditt.",
           "benefitsTitle": "Fordeler med våre abonnementsplaner",
           "benefit1": "Gratis plan tilgjengelig for alltid - ingen kredittkort nødvendig for å starte",
           "benefit2": "Fleksibel månedlig eller årlig fakturering med 25% besparelser på årlige planer",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Gratis"
       },
       "BASIC_MONTHLY": {
-        "name": "Grunnleggende Månedlig"
+        "name": "Growth Månedlig"
       },
       "BASIC_YEARLY": {
-        "name": "Grunnleggende Årlig"
+        "name": "Growth Årlig"
       },
       "PRO_MONTHLY": {
         "name": "Pro Månedlig"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Sammenlign alle planer",
       "hideComparison": "Skjul sammenligning",
-      "ctaBasic": "Start med Basic",
+      "ctaBasic": "Start med Growth",
       "ctaPro": "Start med Pro",
       "billedMonthly": "Faktureres månedlig",
       "ctaSub": "Avbryt når som helst · Ingen oppstartsgebyrer",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Oversettelse",
-      "description": "AI-oversettelse er tilgjengelig med et Basic- eller Pro-abonnement. Oppgrader planen din for å bruke automatiske oversettelser.",
+      "description": "AI-oversettelse er tilgjengelig med et Growth- eller Pro-abonnement. Oppgrader planen din for å bruke automatiske oversettelser.",
       "cancel": "Avbryt",
       "subscribe": "Abonner",
       "translate": "Oversett",
       "translating": "Oversetter...",
       "limitReached": "Gratis oversettelser brukt opp",
-      "limitReachedDescription": "Du har brukt alle 5 gratis AI-oversettelser. Oppgrader til Basic eller Pro for ubegrensede oversettelser.",
+      "limitReachedDescription": "Du har brukt alle 5 gratis AI-oversettelser. Oppgrader til Growth eller Pro for ubegrensede oversettelser.",
       "upgrade": "Oppgrader"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Endre bakgrunn",
       "regenerateImage": "Generer på nytt",
       "generateLimitReached": "Gratis AI-genereringer brukt opp",
-      "generateLimitDescription": "Du har brukt alle 2 gratis AI-bildgenereringer. Oppgrader til Basic eller Pro for ubegrensede genereringer."
+      "generateLimitDescription": "Du har brukt alle 2 gratis AI-bildgenereringer. Oppgrader til Growth eller Pro for ubegrensede genereringer."
     },
     "languages": {
       "translationProgress": "Oversettelsesprosess",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Abonnementsplaner og betalinger",
         "content": [
-          "IQ Rest tilbyr gratis, grunnleggende og pro-abonnementsplaner. Den gratis planen er tilgjengelig uten kostnad med begrensede funksjoner. Betalte planer (Grunnleggende og Pro) faktureres månedlig eller årlig gjennom vår betalingsbehandler, Stripe.",
+          "IQ Rest tilbyr gratis, Growth og pro-abonnementsplaner. Den gratis planen er tilgjengelig uten kostnad med begrensede funksjoner. Betalte planer (Growth og Pro) faktureres månedlig eller årlig gjennom vår betalingsbehandler, Stripe.",
           "Priser vises i Euro (EUR). Ved å abonnere på en betalt plan gir du oss tillatelse til å belaste betalingsmetoden din på en gjentakende basis inntil du kansellerer.",
           "Du kan oppgradere, nedgradere eller kansellere abonnementet ditt når som helst gjennom dashbordet ditt. Kanselleringer trer i kraft ved slutten av den nåværende faktureringsperioden. Ingen refusjoner gis for delvise faktureringsperioder.",
           "Vi forbeholder oss retten til å endre prisene våre med 30 dagers varsel. Endringer i prisene vil gjelde for faktureringsperioder som begynner etter varslingsperioden."

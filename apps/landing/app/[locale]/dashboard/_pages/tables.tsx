@@ -241,11 +241,11 @@ export function TablesPage({ initialTables }: TablesPageProps) {
                 ))}
                 {!sortMode && (
                   <div
-                    className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-green-500/5 hover:bg-green-500/10"
+                    className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-success/5 hover:bg-success/10"
                     onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
                   >
-                    <Plus className="h-4 w-4 mr-2 text-green-500" />
-                    <span className="text-sm font-medium text-green-700 dark:text-green-400">{t("addTable")}</span>
+                    <Plus className="h-4 w-4 mr-2 text-success" />
+                    <span className="text-sm font-medium text-success">{t("addTable")}</span>
                   </div>
                 )}
               </div>

@@ -203,14 +203,14 @@ export function OrdersPage({ initialOrders }: OrdersPageProps) {
         {order.status === "new" && (
           <div
             onClick={() => !isUpdating && handleUpdateStatus(order.id, "in_progress")}
-            className={`flex items-center h-12 px-4 border-t border-foreground/5 transition-colors bg-green-500/5 hover:bg-green-500/10 ${isUpdating ? "opacity-50" : "cursor-pointer"}`}
+            className={`flex items-center h-12 px-4 border-t border-foreground/5 transition-colors bg-success/5 hover:bg-success/10 ${isUpdating ? "opacity-50" : "cursor-pointer"}`}
           >
             {isUpdating ? (
-              <Loader2 className="h-4 w-4 mr-2 text-green-500 animate-spin" />
+              <Loader2 className="h-4 w-4 mr-2 text-success animate-spin" />
             ) : (
-              <PlayCircle className="h-4 w-4 mr-2 text-green-500" />
+              <PlayCircle className="h-4 w-4 mr-2 text-success" />
             )}
-            <span className="text-sm font-medium text-green-700 dark:text-green-400">{t("startOrder")}</span>
+            <span className="text-sm font-medium text-success">{t("startOrder")}</span>
           </div>
         )}
 
@@ -218,14 +218,14 @@ export function OrdersPage({ initialOrders }: OrdersPageProps) {
         {order.status === "in_progress" && (
           <div
             onClick={() => !isUpdating && handleUpdateStatus(order.id, "completed")}
-            className={`flex items-center h-12 px-4 border-t border-foreground/5 transition-colors bg-green-500/5 hover:bg-green-500/10 ${isUpdating ? "opacity-50" : "cursor-pointer"}`}
+            className={`flex items-center h-12 px-4 border-t border-foreground/5 transition-colors bg-success/5 hover:bg-success/10 ${isUpdating ? "opacity-50" : "cursor-pointer"}`}
           >
             {isUpdating ? (
-              <Loader2 className="h-4 w-4 mr-2 text-green-500 animate-spin" />
+              <Loader2 className="h-4 w-4 mr-2 text-success animate-spin" />
             ) : (
-              <CheckCheck className="h-4 w-4 mr-2 text-green-500" />
+              <CheckCheck className="h-4 w-4 mr-2 text-success" />
             )}
-            <span className="text-sm font-medium text-green-700 dark:text-green-400">{t("complete")}</span>
+            <span className="text-sm font-medium text-success">{t("complete")}</span>
           </div>
         )}
       </div>

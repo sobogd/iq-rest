@@ -630,7 +630,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
                     <p className="text-sm font-medium">{opt.label}</p>
                     <p className="text-xs text-muted-foreground mt-0.5">{opt.description}</p>
                     {sentAt && (
-                      <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
+                      <p className="text-xs text-success mt-1 flex items-center gap-1">
                         <Check className="h-3 w-3" />
                         Sent {formatDate(sentAt, true)}
                       </p>

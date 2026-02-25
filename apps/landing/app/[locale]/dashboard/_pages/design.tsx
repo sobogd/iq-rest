@@ -75,7 +75,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
 
   // Design fields
   const initSource = initialRestaurant?.source || null;
-  const initAccent = initialRestaurant?.accentColor || "#E11D48";
+  const initAccent = initialRestaurant?.accentColor || "#ED3A3A";
   const initHideTitle = initialRestaurant?.hideTitle || false;
 
   const [source, setSource] = useState<string | null>(initSource);
@@ -352,7 +352,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 {canGenerate && (
                   <button
                     type="button"
-                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
                     onClick={() => { track(DashboardEvent.CLICKED_GENERATE_BACKGROUND); handleGenerateBackground(); }}
                     disabled={generating || uploading}
                   >
@@ -470,7 +470,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
                 {slug && (
                   <button
                     type="button"
-                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
                     onClick={() => {
                       track(DashboardEvent.CLICKED_COPY_URL);
                       navigator.clipboard.writeText(`https://iq-rest.com/m/${slug}`);

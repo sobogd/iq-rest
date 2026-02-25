@@ -426,7 +426,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
                     type="button"
                     onClick={() => handleTranslateSection(lang)}
                     disabled={isTranslating || !zone.trim()}
-                    className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
                   >
                     {isTranslating ? tAi("translating") : tAi("translate")}
                     {isTranslating ? (
@@ -453,7 +453,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
               type="button"
               onClick={() => { track(DashboardEvent.CLICKED_DELETE_TABLE); setShowDeleteDialog(true); }}
               disabled={saving || deleting}
-              className="flex items-center gap-2 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors pt-8"
+              className="flex items-center gap-2 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors pt-8"
             >
               <Trash2 className="h-4 w-4" />
               {t("delete")}

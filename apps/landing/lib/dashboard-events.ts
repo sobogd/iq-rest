@@ -443,7 +443,7 @@ export const EVENT_LABELS: Record<string, string> = {
 
   // Landing — Pricing
   [DashboardEvent.PRICING_SWIPE_FREE]: "Pricing Swipe: Free",
-  [DashboardEvent.PRICING_SWIPE_BASIC]: "Pricing Swipe: Basic",
+  [DashboardEvent.PRICING_SWIPE_BASIC]: "Pricing Swipe: Growth",
   [DashboardEvent.PRICING_SWIPE_PRO]: "Pricing Swipe: Pro",
 
   // Errors

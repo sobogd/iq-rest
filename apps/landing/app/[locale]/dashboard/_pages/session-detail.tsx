@@ -376,7 +376,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                     {activeFlags.map(([, label]) => (
                       <span
                         key={label}
-                        className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-green-500/10 text-green-600 dark:text-green-400"
+                        className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-success/10 text-success"
                       >
                         {label}
                       </span>

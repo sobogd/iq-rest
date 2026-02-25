@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Precios de Menú QR — Planes Gratis, Basic y Pro | IQ Rest",
-      "description": "Compara los planes de precios de menú QR. Empieza gratis, actualiza a Basic o Pro para traducciones IA, diseño personalizado, reservas y más."
+      "title": "Precios de Menú QR — Planes Gratis, Growth y Pro | IQ Rest",
+      "description": "Compara los planes de precios de menú QR. Empieza gratis, actualiza a Growth o Pro para traducciones IA, diseño personalizado, reservas y más."
     },
     "title": "Precios de Menú QR y Sitio Web para Restaurante",
     "subtitle": "Sin tarifas ocultas, sin sorpresas. Lanza tu sitio web de restaurante gratis hoy — actualiza solo cuando estés listo para crecer.",
@@ -522,7 +522,8 @@
     "yearly": "Anual",
     "save": "(Ahorra 25%)",
     "perMonth": "/mes",
-    "billedYearly": "Facturado anualmente ({total})",
+    "billedYearly": "Facturado anualmente ({total}).",
+    "orMonthly": "O paga {price} mensualmente.",
     "forever": "Gratis para siempre",
     "popular": "Más Popular",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Perfecto para probar IQ Rest",
         "cta": "Crear Gratis",
         "highlights": [
-          "Sitio web del restaurante",
-          "Menú QR",
-          "320 escaneos/mes",
-          "10 pedidos/mes",
-          "2 idiomas",
           "Con marca de agua de IQ Rest",
+          "320 escaneos/mes",
+          "30 pedidos/mes",
+          "2 idiomas",
+          "Menú QR & Sitio web",
+          "Tema de color personalizado",
           "Analíticas"
         ]
       },
       "basic": {
-        "name": "Básico",
-        "description": "Ideal para pequeños restaurantes",
+        "name": "Growth",
+        "description": "Conjunto completo de herramientas para pedidos digitales",
         "cta": "Comenzar",
         "highlights": [
           "Todo en Gratis, más:",
-          "Escaneos ilimitados",
-          "Pedidos ilimitados",
           "6 idiomas",
           "Traducciones de IA",
-          "Tema de color personalizado",
-          "Reservas"
+          "Generación de imágenes con IA",
+          "Reservas",
+          "Escaneos ilimitados",
+          "Pedidos ilimitados"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Para cadenas de restaurantes",
         "cta": "Comenzar",
         "highlights": [
-          "Todo en Básico, más:",
+          "Todo en Growth, más:",
           "Idiomas ilimitados",
           "Múltiples restaurantes",
           "Dominio personalizado",
+          "Funciones personalizadas por restaurante",
           "Soporte prioritario"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mes"
+        "orders": "30 / mes"
       },
       "basic": {
         "scans": "Ilimitado",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Planes de Suscripción para Menú QR y Creación de Sitio Web de Restaurante",
-        "description": "Presentamos planes de suscripción flexibles para crear tu sitio web de restaurante y menú QR. Elige entre planes Gratis, Básico y Pro con opciones de facturación mensual o anual.",
+        "description": "Presentamos planes de suscripción flexibles para crear tu sitio web de restaurante y menú QR. Elige entre planes Gratis, Growth y Pro con opciones de facturación mensual o anual.",
         "meta": {
           "title": "Planes de Suscripción para Menú QR y Sitio Web de Restaurante | IQ Rest",
-          "description": "Elige el plan de suscripción perfecto para la creación de tu sitio web de restaurante y menú QR. Planes Gratis, Básico y Pro con facturación mensual y anual flexible. Comienza gratis hoy."
+          "description": "Elige el plan de suscripción perfecto para la creación de tu sitio web de restaurante y menú QR. Planes Gratis, Growth y Pro con facturación mensual y anual flexible. Comienza gratis hoy."
         },
         "content": {
           "intro": "Nos complace anunciar el lanzamiento de nuestro nuevo sistema de suscripción para la creación de menú QR y sitio web de restaurante. IQ Rest ahora ofrece planes flexibles que crecen con tu negocio - desde un nivel completamente gratuito para pequeñas cafeterías hasta planes profesionales para restaurantes establecidos. Ya sea que estés comenzando o gestionando múltiples ubicaciones, nuestros planes de suscripción proporcionan las características que necesitas para crear y mantener un sitio web profesional de restaurante con capacidades de menú QR.",
           "image1Alt": "Planes de suscripción para creación de menú QR y sitio web de restaurante",
           "image1Caption": "Elige el plan perfecto para las necesidades de tu sitio web de restaurante y menú QR",
           "section1Title": "Planes Flexibles para Cada Tamaño de Restaurante",
-          "section1Text": "Nuestro sistema de suscripción para la creación de menú QR y sitio web de restaurante ofrece tres niveles diseñados para adaptarse a tus necesidades. El plan Gratis te permite comenzar con hasta 15 elementos de menú - perfecto para pequeñas cafeterías o probar la plataforma. El plan Básico a €4/mes (o €3/mes facturado anualmente) expande tu capacidad a 100 elementos con 3 idiomas y 2,000 escaneos mensuales. Para restaurantes en crecimiento, nuestro plan Pro a €7/mes (o €6/mes anual) ofrece elementos, idiomas y escaneos ilimitados - todo lo que necesitas para la gestión profesional de sitio web de restaurante y menú QR.",
+          "section1Text": "Nuestro sistema de suscripción para la creación de menú QR y sitio web de restaurante ofrece tres niveles diseñados para adaptarse a tus necesidades. El plan Gratis te permite comenzar con hasta 15 elementos de menú - perfecto para pequeñas cafeterías o probar la plataforma. El plan Growth a €4/mes (o €3/mes facturado anualmente) expande tu capacidad a 100 elementos con 3 idiomas y 2,000 escaneos mensuales. Para restaurantes en crecimiento, nuestro plan Pro a €7/mes (o €6/mes anual) ofrece elementos, idiomas y escaneos ilimitados - todo lo que necesitas para la gestión profesional de sitio web de restaurante y menú QR.",
           "section2Title": "Panel de Facturación Simple",
           "section2Text": "Gestionar tu suscripción para servicios de menú QR y sitio web de restaurante es ahora más fácil que nunca. Nuestro nuevo panel de facturación muestra todos los planes disponibles en una interfaz limpia y simple. Puedes ver tu plan actual de un vistazo, comparar características y actualizar o degradar con un solo clic. El diseño simplificado muestra cada plan con su precio mensual, facilitando elegir la opción correcta para las necesidades de tu sitio web de restaurante y menú QR. Los pagos seguros se procesan a través de Stripe, el estándar de la industria para transacciones en línea.",
           "section3Title": "Ahorra 25% con Facturación Anual",
-          "section3Text": "Los propietarios de restaurantes que se comprometen con la facturación anual para su suscripción de menú QR y sitio web ahorran un 25% en comparación con los pagos mensuales. El plan Básico baja de €4 a €3 por mes, mientras que el plan Pro pasa de €7 a €6 por mes cuando se factura anualmente. Este ahorro significativo ayuda a los restaurantes a invertir más en su negocio principal mientras mantienen una presencia digital profesional. Cambia entre facturación mensual y anual en cualquier momento a través de tu panel.",
+          "section3Text": "Los propietarios de restaurantes que se comprometen con la facturación anual para su suscripción de menú QR y sitio web ahorran un 25% en comparación con los pagos mensuales. El plan Growth baja de €4 a €3 por mes, mientras que el plan Pro pasa de €7 a €6 por mes cuando se factura anualmente. Este ahorro significativo ayuda a los restaurantes a invertir más en su negocio principal mientras mantienen una presencia digital profesional. Cambia entre facturación mensual y anual en cualquier momento a través de tu panel.",
           "benefitsTitle": "Beneficios de Nuestros Planes de Suscripción",
           "benefit1": "Plan gratuito disponible para siempre - no se requiere tarjeta de crédito para comenzar",
           "benefit2": "Facturación mensual o anual flexible con 25% de ahorro en planes anuales",
@@ -1447,10 +1449,10 @@
         "name": "Gratis"
       },
       "BASIC_MONTHLY": {
-        "name": "Básico Mensual"
+        "name": "Growth Mensual"
       },
       "BASIC_YEARLY": {
-        "name": "Básico Anual"
+        "name": "Growth Anual"
       },
       "PRO_MONTHLY": {
         "name": "Pro Mensual"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Comparar todos los planes",
       "hideComparison": "Ocultar comparación",
-      "ctaBasic": "Empezar con Basic",
+      "ctaBasic": "Empezar con Growth",
       "ctaPro": "Empezar con Pro",
       "billedMonthly": "Facturado mensualmente",
       "ctaSub": "Cancela en cualquier momento · Sin costes de configuración",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "Traducción IA",
-      "description": "La traducción IA está disponible con una suscripción Basic o Pro. Actualiza tu plan para usar traducciones automáticas.",
+      "description": "La traducción IA está disponible con una suscripción Growth o Pro. Actualiza tu plan para usar traducciones automáticas.",
       "cancel": "Cancelar",
       "subscribe": "Suscribirse",
       "translate": "Traducir",
       "translating": "Traduciendo...",
       "limitReached": "Traducciones gratuitas agotadas",
-      "limitReachedDescription": "Has usado las 5 traducciones gratuitas. Actualiza a Basic o Pro para traducciones ilimitadas.",
+      "limitReachedDescription": "Has usado las 5 traducciones gratuitas. Actualiza a Growth o Pro para traducciones ilimitadas.",
       "upgrade": "Actualizar"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Cambiar fondo",
       "regenerateImage": "Regenerar",
       "generateLimitReached": "Generaciones IA gratuitas agotadas",
-      "generateLimitDescription": "Has usado las 2 generaciones de imágenes IA gratuitas. Actualiza a Basic o Pro para generaciones ilimitadas."
+      "generateLimitDescription": "Has usado las 2 generaciones de imágenes IA gratuitas. Actualiza a Growth o Pro para generaciones ilimitadas."
     },
     "languages": {
       "translationProgress": "Progreso de traducción",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Planes de Suscripción y Pagos",
         "content": [
-          "IQ Rest ofrece planes de suscripción Gratuito, Básico y Pro. El plan Gratuito está disponible sin costo con funciones limitadas. Los planes de pago (Básico y Pro) se facturan mensual o anualmente a través de nuestro procesador de pagos, Stripe.",
+          "IQ Rest ofrece planes de suscripción Gratuito, Growth y Pro. El plan Gratuito está disponible sin costo con funciones limitadas. Los planes de pago (Growth y Pro) se facturan mensual o anualmente a través de nuestro procesador de pagos, Stripe.",
           "Los precios se muestran en Euros (EUR). Al suscribirte a un plan de pago, nos autorizas a cargar tu método de pago de forma recurrente hasta que canceles.",
           "Puedes actualizar, degradar o cancelar tu suscripción en cualquier momento a través de tu panel de control. Las cancelaciones entran en vigor al final del período de facturación actual. No se proporcionan reembolsos por períodos de facturación parciales.",
           "Nos reservamos el derecho de cambiar nuestros precios con 30 días de aviso. Los cambios de precio se aplicarán a los períodos de facturación que comiencen después del período de aviso."

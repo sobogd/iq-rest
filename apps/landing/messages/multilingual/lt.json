@@ -43,7 +43,7 @@
       },
       {
         "question": "Ar daugiakalbė palaikymas prieinamas nemokamame plane?",
-        "answer": "Nemokamas planas apima iki 2 kalbų. Basic ir Pro planai siūlo neribotą kalbų skaičių su įtrauktu DI vertimu."
+        "answer": "Nemokamas planas apima iki 2 kalbų. Growth ir Pro planai siūlo neribotą kalbų skaičių su įtrauktu DI vertimu."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Pridėti kalbas",
-        "description": "Pasirinkite iš 35 prieinamų kalbų. Nemokamas planas apima iki 2 kalbų, o Basic ir Pro planai siūlo neribotą kalbų skaičių jūsų meniu."
+        "description": "Pasirinkite iš 35 prieinamų kalbų. Nemokamas planas apima iki 2 kalbų, o Growth ir Pro planai siūlo neribotą kalbų skaičių jūsų meniu."
       },
       {
         "title": "Išverskite savo turinį",

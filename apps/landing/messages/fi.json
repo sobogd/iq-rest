@@ -343,7 +343,7 @@
         "description": "Saavuta kansainväliset asiakkaat älykkään AI-käännöksen avulla, joka ymmärtää ruoan kontekstin. Ruokalajien nimet ja kuvaukset käännetään tarkasti, säilyttäen kulinaariset termit ja tehdään ymmärrettäviksi kaikilla kielillä.",
         "fullDescription": "Geneeriset kääntäjät epäonnistuvat usein ruokalistoissa - ne kääntävät kirjaimellisesti ilman kontekstin ymmärtämistä. AI:mme on koulutettu erityisesti ravintolasisältöä varten. Se tietää, että 'Beef Wellington' ei pitäisi kääntää kirjaimellisesti, ja että 'al dente' tarkoittaa samaa kaikilla kielillä. Tarjoa turisteille ja kansainvälisille vieraille valikoita, jotka luetaan luonnollisesti heidän kielellään.",
         "benefits": [
-          "Kontekstiin perustuva käännös ruoka- ja kulinaaritermeille",
+          "Kontekstiin Growthtuva käännös ruoka- ja kulinaaritermeille",
           "Yli 10 kieltä, mukaan lukien espanja, ranska, saksa, kiina, japani",
           "Säilyttää kulinaarisen terminologian ja kulttuuriset vivahteet",
           "Välitön käännös - valikko saatavilla sekunneissa",
@@ -408,7 +408,7 @@
         "id": "analytics",
         "title": "Päivittäiset analytiikat ja näkemykset",
         "shortDescription": "Seuraa sivun katseluita, kieliä ja asiakaskäyttäytymistä yksityiskohtaisilla päivittäisillä raporteilla",
-        "description": "Ymmärrä asiakkaitasi kattavan analytiikan avulla. Näe päivittäiset sivun katselut, suosituimmat kielet, eniten katsotut sivut ja seuraa trendejä ajan myötä. Tee tietoon perustuvia päätöksiä optimoidaksesi valikkosi.",
+        "description": "Ymmärrä asiakkaitasi kattavan analytiikan avulla. Näe päivittäiset sivun katselut, suosituimmat kielet, eniten katsotut sivut ja seuraa trendejä ajan myötä. Tee tietoon Growthtuvia päätöksiä optimoidaksesi valikkosi.",
         "fullDescription": "Tieto on valtaa. Analytiikkahallintapaneelimme näyttää tarkalleen, kuinka asiakkaat vuorovaikuttavat ravintolasi verkkosivuston kanssa. Mitkä sivut saavat eniten katseluita? Mitä kieliä asiakkaasi suosivat? Kasvaako katselut viikosta toiseen? Käytä näitä näkemyksiä optimoidaksesi valikkosi, kohdentaa oikeat asiakkaat ja kasvattaa liiketoimintaasi.",
         "benefits": [
           "Päivittäiset, viikoittaiset ja kuukausittaiset katselutilastot",
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR-menu Hinnat — Ilmainen, Basic & Pro Paketit | IQ Rest",
-      "description": "Vertaa QR-menun hintapaketteja. Aloita ilmaiseksi, päivitä Basic- tai Pro-pakettiin AI-käännöksiä, mukautettua designia, varauksia ja muuta varten."
+      "title": "QR-menu Hinnat — Ilmainen, Growth & Pro Paketit | IQ Rest",
+      "description": "Vertaa QR-menun hintapaketteja. Aloita ilmaiseksi, päivitä Growth- tai Pro-pakettiin AI-käännöksiä, mukautettua designia, varauksia ja muuta varten."
     },
     "title": "QR-menu & Ravintolasivuston hinnoittelu",
     "subtitle": "Ei piilokuluja, ei yllätyksiä. Käynnistä ravintolasivustosi ilmaiseksi tänään — päivitä vain kun olet valmis kasvamaan.",
@@ -522,7 +522,8 @@
     "yearly": "Vuosittain",
     "save": "(Säästä 25%)",
     "perMonth": "/kk",
-    "billedYearly": "Laskutetaan vuosittain ({total})",
+    "billedYearly": "Laskutetaan vuosittain ({total}).",
+    "orMonthly": "Tai maksa {price} kuukausittain.",
     "forever": "Ilmainen ikuisesti",
     "popular": "Suosituin",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Täydellinen IQ Restin kokeilemiseen",
         "cta": "Luo ilmaiseksi",
         "highlights": [
-          "Ravintolan verkkosivusto",
-          "QR Menu",
-          "320 skannausta/kuukausi",
-          "10 WhatsApp-tilausta/kuukausi",
-          "2 kieltä",
           "IQ Rest -vesileimalla",
+          "320 skannausta/kuukausi",
+          "30 WhatsApp-tilausta/kuukausi",
+          "2 kieltä",
+          "QR Menu & Verkkosivusto",
+          "Mukautettu väriteema",
           "Analytiikka"
         ]
       },
       "basic": {
-        "name": "Perus",
-        "description": "Loistava pienille ravintoloille",
+        "name": "Growth",
+        "description": "Täydellinen työkalupakki digitaaliseen tilaamiseen",
         "cta": "Aloita",
         "highlights": [
           "Kaikki ilmaisessa, lisäksi:",
-          "Rajattomat skannaukset",
-          "Rajattomat WhatsApp-tilaukset",
           "6 kieltä",
           "AI-käännökset",
-          "Mukautettu väriteema",
-          "Varaus"
+          "AI-kuvien generointi",
+          "Varaus",
+          "Rajattomat skannaukset",
+          "Rajattomat WhatsApp-tilaukset"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Kasvaville ravintolaketjuille",
         "cta": "Aloita",
         "highlights": [
-          "Kaikki perusversiossa, lisäksi:",
+          "Kaikki Growth, lisäksi:",
           "Rajattomat kielet",
           "Useita ravintoloita",
           "Mukautettu verkkotunnus",
+          "Mukautetut ominaisuudet ravintolakohtaisesti",
           "Etusijatuettu tuki"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / kuukausi"
+        "orders": "30 / kuukausi"
       },
       "basic": {
         "scans": "Rajattomat",
@@ -626,7 +628,7 @@
       "description": "Ota yhteyttä IQ Rest-tiimiin. Autamme mielellämme digitaalisen QR-menun kanssa ravintolallesi tai kahvilallesi. Henkilökohtaista tukea oikeilta ihmisiltä."
     },
     "title": "Tarvitsetko apua? Keskustellaan",
-    "subtitle": "Hei, olen Bogdan — IQ Restin perustaja. Rakensin tämän alustan omaa kahvilaani varten, ja nyt se auttaa satoja ravintoloita ympäri maailmaa. Onko sinulla kysymys tai idea? Kirjoita minulle suoraan. Ei botteja, ei odottelua — vain aito keskustelu.",
+    "subtitle": "Hei, olen Bogdan — IQ Restin Growthtaja. Rakensin tämän alustan omaa kahvilaani varten, ja nyt se auttaa satoja ravintoloita ympäri maailmaa. Onko sinulla kysymys tai idea? Kirjoita minulle suoraan. Ei botteja, ei odottelua — vain aito keskustelu.",
     "story": {
       "text": ""
     },
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Subscription Plans for QR Menu and Restaurant Website Creation",
-        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Basic, and Pro plans with monthly or yearly billing options.",
+        "description": "Introducing flexible subscription plans for creating your restaurant website and QR menu. Choose from Free, Growth, and Pro plans with monthly or yearly billing options.",
         "meta": {
           "title": "Subscription Plans for QR Menu and Restaurant Website | IQ Rest",
-          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Basic, and Pro plans with flexible monthly and yearly billing. Start free today."
+          "description": "Choose the perfect subscription plan for your restaurant website and QR menu creation. Free, Growth, and Pro plans with flexible monthly and yearly billing. Start free today."
         },
         "content": {
           "intro": "We're excited to announce the launch of our new subscription system for QR menu and restaurant website creation. IQ Rest now offers flexible plans that grow with your business - from a completely free tier for small cafes to professional plans for established restaurants. Whether you're just starting out or managing multiple locations, our subscription plans provide the features you need to create and maintain a professional restaurant website with QR menu capabilities.",
           "image1Alt": "Subscription plans for QR menu and restaurant website creation",
           "image1Caption": "Choose the perfect plan for your restaurant website and QR menu needs",
           "section1Title": "Flexible Plans for Every Restaurant Size",
-          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Basic plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
+          "section1Text": "Our subscription system for QR menu and restaurant website creation offers three tiers designed to match your needs. The Free plan lets you get started with up to 15 menu items - perfect for small cafes or trying out the platform. The Growth plan at €4/month (or €3/month billed yearly) expands your capacity to 100 items with 3 languages and 2,000 monthly scans. For growing restaurants, our Pro plan at €7/month (or €6/month yearly) offers unlimited items, languages, and scans - everything you need for professional restaurant website and QR menu management.",
           "section2Title": "Simple Billing Dashboard",
           "section2Text": "Managing your subscription for QR menu and restaurant website services is now easier than ever. Our new billing dashboard displays all available plans in a clean, simple interface. You can see your current plan at a glance, compare features, and upgrade or downgrade with a single click. The streamlined design shows each plan with its monthly price, making it easy to choose the right option for your restaurant website and QR menu needs. Secure payments are processed through Stripe, the industry standard for online transactions.",
           "section3Title": "Save 25% with Yearly Billing",
-          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Basic plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
+          "section3Text": "Restaurant owners who commit to yearly billing for their QR menu and website subscription save 25% compared to monthly payments. The Growth plan drops from €4 to €3 per month, while the Pro plan goes from €7 to €6 per month when billed annually. This significant savings helps restaurants invest more in their core business while maintaining a professional digital presence. Switch between monthly and yearly billing anytime through your dashboard.",
           "benefitsTitle": "Benefits of Our Subscription Plans",
           "benefit1": "Free plan available forever - no credit card required to start",
           "benefit2": "Flexible monthly or yearly billing with 25% savings on annual plans",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Ilmainen"
       },
       "BASIC_MONTHLY": {
-        "name": "Perus kuukausi"
+        "name": "Growth kuukausi"
       },
       "BASIC_YEARLY": {
-        "name": "Perus vuosi"
+        "name": "Growth vuosi"
       },
       "PRO_MONTHLY": {
         "name": "Pro kuukausi"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Vertaa kaikkia paketteja",
       "hideComparison": "Piilota vertailu",
-      "ctaBasic": "Aloita Basic-paketilla",
+      "ctaBasic": "Aloita Growth-paketilla",
       "ctaPro": "Aloita Pro-paketilla",
       "billedMonthly": "Laskutetaan kuukausittain",
       "ctaSub": "Peruuta milloin tahansa · Ei asennusmaksuja",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "Tekoälykäännös",
-      "description": "Tekoälykäännös on saatavilla Basic- tai Pro-tilauksella. Päivitä tilaussi käyttääksesi automaattisia käännöksiä.",
+      "description": "Tekoälykäännös on saatavilla Growth- tai Pro-tilauksella. Päivitä tilaussi käyttääksesi automaattisia käännöksiä.",
       "cancel": "Peruuta",
       "subscribe": "Tilaa",
       "translate": "Käännä",
       "translating": "Käännetään...",
       "limitReached": "Ilmaiset käännökset käytetty",
-      "limitReachedDescription": "Olet käyttänyt kaikki 5 ilmaista AI-käännöstä. Päivitä Basic- tai Pro-tilaukseen rajattomia käännöksiä varten.",
+      "limitReachedDescription": "Olet käyttänyt kaikki 5 ilmaista AI-käännöstä. Päivitä Growth- tai Pro-tilaukseen rajattomia käännöksiä varten.",
       "upgrade": "Päivitä"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Vaihda tausta",
       "regenerateImage": "Luo uudelleen",
       "generateLimitReached": "Ilmaiset AI-generoinnit käytetty",
-      "generateLimitDescription": "Olet käyttänyt kaikki 2 ilmaista AI-kuvagenerointia. Päivitä Basic- tai Pro-tilaukseen rajattomia generointeja varten."
+      "generateLimitDescription": "Olet käyttänyt kaikki 2 ilmaista AI-kuvagenerointia. Päivitä Growth- tai Pro-tilaukseen rajattomia generointeja varten."
     },
     "languages": {
       "translationProgress": "Käännösprosessin edistyminen",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Tilausvaihtoehdot ja maksut",
         "content": [
-          "IQ Rest tarjoaa ilmaisia, perus- ja pro-tilausvaihtoehtoja. Ilmainen suunnitelma on saatavilla ilman kustannuksia rajoitetuilla ominaisuuksilla. Maksulliset suunnitelmat (Perus ja Pro) laskutetaan kuukausittain tai vuosittain maksupalveluntarjoajamme, Stripen, kautta.",
+          "IQ Rest tarjoaa ilmaisia, Growth- ja pro-tilausvaihtoehtoja. Ilmainen suunnitelma on saatavilla ilman kustannuksia rajoitetuilla ominaisuuksilla. Maksulliset suunnitelmat (Growth ja Pro) laskutetaan kuukausittain tai vuosittain maksupalveluntarjoajamme, Stripen, kautta.",
           "Hinnat ilmoitetaan euroissa (EUR). Tilatessasi maksullista suunnitelmaa valtuutat meidät veloittamaan maksutapasi toistuvasti, kunnes peruutat sen.",
           "Voit päivittää, alentaa tai peruuttaa tilauksesi milloin tahansa hallintapaneelisi kautta. Peruutukset tulevat voimaan nykyisen laskutuskauden lopussa. Osittaisista laskutuskausista ei palauteta rahaa.",
           "Pidätämme oikeuden muuttaa hintoja 30 päivän ilmoituksella. Hinnan muutokset koskevat laskutuskausia, jotka alkavat ilmoitusajan jälkeen."
@@ -2035,7 +2037,7 @@
         "title": "8. Immateriaalioikeudet",
         "content": [
           "IQ Rest -nimi, logo, verkkosivuston suunnittelu ja kaikki siihen liittyvät immateriaalioikeudet kuuluvat Bogdan Sokoloville ja ovat voimassa olevien immateriaalioikeuslakien suojaamia.",
-          "Et saa kopioida, muokata, jakaa tai luoda johdannaisteoksia perustuen immateriaalioikeuksiimme ilman erikseen annettua kirjallista lupaa."
+          "Et saa kopioida, muokata, jakaa tai luoda johdannaisteoksia Growthtuen immateriaalioikeuksiimme ilman erikseen annettua kirjallista lupaa."
         ]
       },
       {
@@ -2133,7 +2135,7 @@
         ]
       },
       {
-        "title": "5. Oikeudellinen peruste käsittelylle",
+        "title": "5. Oikeudellinen Growthte käsittelylle",
         "content": [
           "Sopimuksen täyttäminen: Käsittely, joka on tarpeen palvelumme tarjoamiseksi sinulle (artikla 6(1)(b) GDPR).",
           "Oikeutetut edut: Analytiikka ja palvelun parantaminen, petosten ehkäisy (artikla 6(1)(f) GDPR).",
@@ -2185,8 +2187,8 @@
           "Oikeus poistamiseen: Pyydä henkilötietojesi poistamista ('oikeus tulla unohdetuksi').",
           "Oikeus rajoittamiseen: Pyydä käsittelyn rajoittamista tietyissä olosuhteissa.",
           "Oikeus tietojen siirrettävyyteen: Saat tietosi jäsennellyssä, koneellisesti luettavassa muodossa.",
-          "Oikeus vastustaa: Vastustaa käsittelyä, joka perustuu oikeutettuihin etuihin tai suoramarkkinointiin.",
-          "Oikeus peruuttaa suostumus: Kun käsittely perustuu suostumukseen, voit peruuttaa sen milloin tahansa.",
+          "Oikeus vastustaa: Vastustaa käsittelyä, joka Growthtuu oikeutettuihin etuihin tai suoramarkkinointiin.",
+          "Oikeus peruuttaa suostumus: Kun käsittely Growthtuu suostumukseen, voit peruuttaa sen milloin tahansa.",
           "Käyttääksesi näitä oikeuksia, ota meihin yhteyttä osoitteessa support@iq-rest.com. Vastaamme 30 päivän kuluessa. Jos et ole tyytyväinen vastaukseemme, sinulla on oikeus tehdä valitus Espanjan tietosuojaviranomaiselle (AEPD) osoitteessa www.aepd.es."
         ]
       },

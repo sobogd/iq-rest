@@ -425,8 +425,8 @@
         "id": "reservations",
         "title": "Tafelreserveringssysteem",
         "shortDescription": "Accepteer reserveringen 24/7.{br}{link}Reserveringen{/link} direct vanaf je website.",
-        "description": "Het ingebouwde reserveringssysteem stelt klanten in staat om tafels rechtstreeks vanaf je website te boeken. Kies automatische bevestiging op basis van beschikbaarheid, of bekijk elke boeking handmatig. Beheer alle reserveringen vanuit je dashboard.",
-        "fullDescription": "Telefoonreserveringen zijn tijdrovend en gemakkelijk te missen. Het reserveringssysteem van IQ Rest werkt 24/7. Klanten selecteren datum, tijd en groepsgrootte, en boeken vervolgens onmiddellijk. Je kunt automatische bevestiging instellen op basis van tafelbeschikbaarheid, of elke aanvraag handmatig bekijken. Verminder no-shows met e-mailbevestigingen.",
+        "description": "Het ingebouwde reserveringssysteem stelt klanten in staat om tafels rechtstreeks vanaf je website te boeken. Kies automatische bevestiging op Growth van beschikbaarheid, of bekijk elke boeking handmatig. Beheer alle reserveringen vanuit je dashboard.",
+        "fullDescription": "Telefoonreserveringen zijn tijdrovend en gemakkelijk te missen. Het reserveringssysteem van IQ Rest werkt 24/7. Klanten selecteren datum, tijd en groepsgrootte, en boeken vervolgens onmiddellijk. Je kunt automatische bevestiging instellen op Growth van tafelbeschikbaarheid, of elke aanvraag handmatig bekijken. Verminder no-shows met e-mailbevestigingen.",
         "benefits": [
           "24/7 online boekingsmogelijkheid",
           "Automatische of handmatige bevestigingsmodi",
@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "QR Menu Prijzen — Gratis, Basic & Pro Plannen | IQ Rest",
-      "description": "Vergelijk de QR-menu prijsplannen. Begin gratis, upgrade naar Basic of Pro voor AI-vertalingen, aangepast ontwerp, reserveringen en meer."
+      "title": "QR Menu Prijzen — Gratis, Growth & Pro Plannen | IQ Rest",
+      "description": "Vergelijk de QR-menu prijsplannen. Begin gratis, upgrade naar Growth of Pro voor AI-vertalingen, aangepast ontwerp, reserveringen en meer."
     },
     "title": "QR Menu & Restaurant Website Prijzen",
     "subtitle": "Geen verborgen kosten, geen verrassingen. Lanceer vandaag nog uw restaurantwebsite gratis — upgrade alleen wanneer u klaar bent om te groeien.",
@@ -522,7 +522,8 @@
     "yearly": "Jaarlijks",
     "save": "(Bespaar 25%)",
     "perMonth": "/maand",
-    "billedYearly": "Jaarlijks gefactureerd ({total})",
+    "billedYearly": "Jaarlijks gefactureerd ({total}).",
+    "orMonthly": "Of betaal {price} maandelijks.",
     "forever": "Voor altijd gratis",
     "popular": "Meest populair",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Perfect om IQ Rest uit te proberen",
         "cta": "Gratis maken",
         "highlights": [
-          "Restaurantwebsite",
-          "QR Menu",
-          "320 scans/maand",
-          "10 bestellingen/maand",
-          "2 talen",
           "Met IQ Rest-watermerk",
+          "320 scans/maand",
+          "30 bestellingen/maand",
+          "2 talen",
+          "QR Menu & Website",
+          "Aangepast kleurthema",
           "Analytics"
         ]
       },
       "basic": {
-        "name": "Basis",
-        "description": "Geweldig voor kleine restaurants",
+        "name": "Growth",
+        "description": "Complete toolset voor digitaal bestellen",
         "cta": "Aan de slag",
         "highlights": [
           "Alles in Gratis, plus:",
-          "Onbeperkte scans",
-          "Onbeperktebestellingen",
           "6 talen",
           "AI-vertalingen",
-          "Aangepast kleurthema",
-          "Reserveringen"
+          "AI beeldgeneratie",
+          "Reserveringen",
+          "Onbeperkte scans",
+          "Onbeperktebestellingen"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Voor groeiende restaurantketens",
         "cta": "Aan de slag",
         "highlights": [
-          "Alles in Basis, plus:",
+          "Alles in Growth, plus:",
           "Onbeperkte talen",
           "Meerdere restaurants",
           "Aangepaste domeinnaam",
+          "Aangepaste functies per restaurant",
           "Prioriteitsondersteuning"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / maand"
+        "orders": "30 / maand"
       },
       "basic": {
         "scans": "Onbeperkt",
@@ -829,7 +831,7 @@
           "image1Alt": "Hoe items toe te voegen aan restaurantwebsite met QR menu - itemlijstweergave",
           "image1Caption": "Itembeheerinterface die toont hoe u items aan uw restaurant QR menu website kunt toevoegen",
           "section1Title": "Waarom Het Belangrijk Is Om Items Goed Toe Te Voegen Voor Uw Restaurant QR Menu Website",
-          "section1Text": "Wanneer u items aan restaurantwebsite met QR menu toevoegt, is presentatie alles. Klanten beslissen wat ze willen bestellen op basis van hoe uw gerechten eruitzien en hoe goed ze zijn beschreven. Ons itembeheersysteem stelt u in staat om mooie foto's, gedetailleerde beschrijvingen, nauwkeurige prijzen toe te voegen en items in categorieën te organiseren. Dit is hoe u items aan restaurantwebsite toevoegt die browsers in klanten omzet. Onderzoek toont aan dat menu's met hoogwaardige afbeeldingen bestellingen met tot 30% verhogen.",
+          "section1Text": "Wanneer u items aan restaurantwebsite met QR menu toevoegt, is presentatie alles. Klanten beslissen wat ze willen bestellen op Growth van hoe uw gerechten eruitzien en hoe goed ze zijn beschreven. Ons itembeheersysteem stelt u in staat om mooie foto's, gedetailleerde beschrijvingen, nauwkeurige prijzen toe te voegen en items in categorieën te organiseren. Dit is hoe u items aan restaurantwebsite toevoegt die browsers in klanten omzet. Onderzoek toont aan dat menu's met hoogwaardige afbeeldingen bestellingen met tot 30% verhogen.",
           "section2Title": "Stapsgewijs: Hoe Items Toe Te Voegen aan Restaurantwebsite met QR Menu",
           "section2Text": "Items aan uw restaurantwebsite met QR menu toevoegen is eenvoudig met IQ Rest. Navigeer naar de sectie Items in uw dashboard en klik op de knop toevoegen. Voer de itemnaam in, schrijf een smakelijke beschrijving, stel de prijs in en selecteer een categorie. Upload een foto van uw gerecht - ons systeem optimaliseert automatisch afbeeldingen tot 500x500 pixels voor perfecte weergave. Schakel de actieve status in om items onmiddellijk te tonen of te verbergen. Dit gestroomlijnde proces maakt het eenvoudig om items aan restaurantwebsite met QR menu in slechts enkele minuten toe te voegen.",
           "image2Alt": "Itemformulier dat toont hoe u items aan restaurant QR menu website kunt toevoegen",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Abonnementsplannen Voor QR Menu En Restaurantwebsite Creatie",
-        "description": "Introductie van flexibele abonnementsplannen voor het creëren van uw restaurantwebsite en QR menu. Kies uit Gratis, Basis en Pro plannen met maandelijkse of jaarlijkse factureringsopties.",
+        "description": "Introductie van flexibele abonnementsplannen voor het creëren van uw restaurantwebsite en QR menu. Kies uit Gratis, Growth en Pro plannen met maandelijkse of jaarlijkse factureringsopties.",
         "meta": {
           "title": "Abonnementsplannen Voor QR Menu En Restaurantwebsite | IQ Rest",
-          "description": "Kies het perfecte abonnementsplan voor uw restaurantwebsite en QR menu creatie. Gratis, Basis en Pro plannen met flexibele maandelijkse en jaarlijkse facturering. Begin gratis vandaag."
+          "description": "Kies het perfecte abonnementsplan voor uw restaurantwebsite en QR menu creatie. Gratis, Growth en Pro plannen met flexibele maandelijkse en jaarlijkse facturering. Begin gratis vandaag."
         },
         "content": {
           "intro": "We zijn verheugd om de lancering van ons nieuwe abonnementsysteem voor QR menu en restaurantwebsite creatie aan te kondigen. IQ Rest biedt nu flexibele plannen die met uw bedrijf meegroeien - van een volledig gratis niveau voor kleine cafés tot professionele plannen voor gevestigde restaurants. Of u nu net begint of meerdere locaties beheert, onze abonnementsplannen bieden de functies die u nodig heeft om een professionele restaurantwebsite met QR menu mogelijkheden te creëren en te onderhouden.",
           "image1Alt": "Abonnementsplannen voor QR menu en restaurantwebsite creatie",
           "image1Caption": "Kies het perfecte plan voor uw restaurantwebsite en QR menu behoeften",
           "section1Title": "Flexibele Plannen Voor Elke Restaurantgrootte",
-          "section1Text": "Ons abonnementsysteem voor QR menu en restaurantwebsite creatie biedt drie niveaus die zijn ontworpen om aan uw behoeften te voldoen. Het Gratis plan laat u beginnen met tot 15 menu-items - perfect voor kleine cafés of om het platform uit te proberen. Het Basis plan voor €4/maand (of €3/maand bij jaarlijkse facturering) vergroot uw capaciteit tot 100 items met 3 talen en 2.000 maandelijkse scans. Voor groeiende restaurants biedt ons Pro plan voor €7/maand (of €6/maand jaarlijks) onbeperkte items, talen en scans - alles wat u nodig heeft voor professioneel restaurantwebsite en QR menu beheer.",
+          "section1Text": "Ons abonnementsysteem voor QR menu en restaurantwebsite creatie biedt drie niveaus die zijn ontworpen om aan uw behoeften te voldoen. Het Gratis plan laat u beginnen met tot 15 menu-items - perfect voor kleine cafés of om het platform uit te proberen. Het Growth plan voor €4/maand (of €3/maand bij jaarlijkse facturering) vergroot uw capaciteit tot 100 items met 3 talen en 2.000 maandelijkse scans. Voor groeiende restaurants biedt ons Pro plan voor €7/maand (of €6/maand jaarlijks) onbeperkte items, talen en scans - alles wat u nodig heeft voor professioneel restaurantwebsite en QR menu beheer.",
           "section2Title": "Eenvoudig Factureringsdashboard",
           "section2Text": "Het beheren van uw abonnement voor QR menu en restaurantwebsite diensten is nu gemakkelijker dan ooit. Ons nieuwe factureringsdashboard toont alle beschikbare plannen in een schone, eenvoudige interface. U kunt uw huidige plan in één oogopslag zien, functies vergelijken en met één klik upgraden of downgraden. Het gestroomlijnde ontwerp toont elk plan met zijn maandelijkse prijs, waardoor het eenvoudig is om de juiste optie voor uw restaurantwebsite en QR menu behoeften te kiezen. Veilige betalingen worden verwerkt via Stripe, de industriestandaard voor online transacties.",
           "section3Title": "Bespaar 25% Met Jaarlijkse Facturering",
-          "section3Text": "Restaurant eigenaren die zich committeren aan jaarlijkse facturering voor hun QR menu en website abonnement besparen 25% vergeleken met maandelijkse betalingen. Het Basis plan daalt van €4 naar €3 per maand, terwijl het Pro plan van €7 naar €6 per maand gaat bij jaarlijkse facturering. Deze aanzienlijke besparingen helpen restaurants om meer in hun kernbedrijf te investeren terwijl ze een professionele digitale aanwezigheid behouden. Wissel op elk moment tussen maandelijkse en jaarlijkse facturering via uw dashboard.",
+          "section3Text": "Restaurant eigenaren die zich committeren aan jaarlijkse facturering voor hun QR menu en website abonnement besparen 25% vergeleken met maandelijkse betalingen. Het Growth plan daalt van €4 naar €3 per maand, terwijl het Pro plan van €7 naar €6 per maand gaat bij jaarlijkse facturering. Deze aanzienlijke besparingen helpen restaurants om meer in hun kernbedrijf te investeren terwijl ze een professionele digitale aanwezigheid behouden. Wissel op elk moment tussen maandelijkse en jaarlijkse facturering via uw dashboard.",
           "benefitsTitle": "Voordelen Van Onze Abonnementsplannen",
           "benefit1": "Gratis plan voor altijd beschikbaar - geen creditcard vereist om te beginnen",
           "benefit2": "Flexibele maandelijkse of jaarlijkse facturering met 25% besparing op jaarlijkse plannen",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Gratis"
       },
       "BASIC_MONTHLY": {
-        "name": "Basis Maandelijks"
+        "name": "Growth Maandelijks"
       },
       "BASIC_YEARLY": {
-        "name": "Basis Jaarlijks"
+        "name": "Growth Jaarlijks"
       },
       "PRO_MONTHLY": {
         "name": "Pro Maandelijks"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Alle plannen vergelijken",
       "hideComparison": "Vergelijking verbergen",
-      "ctaBasic": "Start met Basic",
+      "ctaBasic": "Start met Growth",
       "ctaPro": "Start met Pro",
       "billedMonthly": "Maandelijks gefactureerd",
       "ctaSub": "Op elk moment opzegbaar · Geen installatiekosten",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "AI Vertaling",
-      "description": "AI-vertaling is beschikbaar met een Basic- of Pro-abonnement. Upgrade je plan om automatische vertalingen te gebruiken.",
+      "description": "AI-vertaling is beschikbaar met een Growth- of Pro-abonnement. Upgrade je plan om automatische vertalingen te gebruiken.",
       "cancel": "Annuleren",
       "subscribe": "Abonneren",
       "translate": "Vertalen",
       "translating": "Vertalen...",
       "limitReached": "Gratis vertalingen opgebruikt",
-      "limitReachedDescription": "Je hebt alle 5 gratis AI-vertalingen gebruikt. Upgrade naar Basic of Pro voor onbeperkte vertalingen.",
+      "limitReachedDescription": "Je hebt alle 5 gratis AI-vertalingen gebruikt. Upgrade naar Growth of Pro voor onbeperkte vertalingen.",
       "upgrade": "Upgraden"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Achtergrond wijzigen",
       "regenerateImage": "Opnieuw genereren",
       "generateLimitReached": "Gratis AI-generaties opgebruikt",
-      "generateLimitDescription": "Je hebt alle 2 gratis AI-beeldgeneraties gebruikt. Upgrade naar Basic of Pro voor onbeperkte generaties."
+      "generateLimitDescription": "Je hebt alle 2 gratis AI-beeldgeneraties gebruikt. Upgrade naar Growth of Pro voor onbeperkte generaties."
     },
     "languages": {
       "translationProgress": "Vertaalvoortgang",
@@ -1939,7 +1941,7 @@
     "reservationMode": "Bevestigingsmodus",
     "modeAuto": "Automatisch",
     "modeManual": "Handmatig",
-    "modeAutoDescription": "Reserveringen worden automatisch bevestigd op basis van de beschikbaarheid van tafels",
+    "modeAutoDescription": "Reserveringen worden automatisch bevestigd op Growth van de beschikbaarheid van tafels",
     "modeManualDescription": "U moet elke reservering handmatig bevestigen",
     "slotDuration": "Duur van de reservering",
     "minutes": "minuten",
@@ -2002,8 +2004,8 @@
       {
         "title": "4. Abonnementsplannen en Betalingen",
         "content": [
-          "IQ Rest biedt gratis, basis- en pro-abonnementsplannen aan. Het gratis plan is beschikbaar zonder kosten met beperkte functies. Betaalde plannen (Basis en Pro) worden maandelijks of jaarlijks gefactureerd via onze betalingsverwerker, Stripe.",
-          "Prijzen worden weergegeven in Euro (EUR). Door u in te schrijven voor een betaald plan, machtigt u ons om uw betaalmethode op terugkerende basis te belasten totdat u annuleert.",
+          "IQ Rest biedt gratis, Growth- en pro-abonnementsplannen aan. Het gratis plan is beschikbaar zonder kosten met beperkte functies. Betaalde plannen (Growth en Pro) worden maandelijks of jaarlijks gefactureerd via onze betalingsverwerker, Stripe.",
+          "Prijzen worden weergegeven in Euro (EUR). Door u in te schrijven voor een betaald plan, machtigt u ons om uw betaalmethode op terugkerende Growth te belasten totdat u annuleert.",
           "U kunt uw abonnement op elk moment upgraden, downgraden of annuleren via uw dashboard. Annuleringen worden effectief aan het einde van de huidige factureringsperiode. Er worden geen terugbetalingen gegeven voor gedeeltelijke factureringsperioden.",
           "We behouden ons het recht voor om onze prijzen met 30 dagen kennisgeving te wijzigen. Prijswijzigingen zijn van toepassing op factureringsperioden die beginnen na de kennisgevingsperiode."
         ]
@@ -2133,7 +2135,7 @@
         ]
       },
       {
-        "title": "5. Juridische Basis voor Verwerking",
+        "title": "5. Juridische Growth voor Verwerking",
         "content": [
           "Contractuitvoering: Verwerking die nodig is om onze service aan u te bieden (Artikel 6(1)(b) AVG).",
           "Legitieme belangen: Analytics en serviceverbetering, fraudepreventie (Artikel 6(1)(f) AVG).",
@@ -2185,7 +2187,7 @@
           "Recht op Verwijdering: Vraag verwijdering aan van uw persoonlijke gegevens ('recht om vergeten te worden').",
           "Recht op Beperking: Vraag beperking van verwerking in bepaalde omstandigheden.",
           "Recht op Gegevensoverdraagbaarheid: Ontvang uw gegevens in een gestructureerd, machineleesbaar formaat.",
-          "Recht om Bezwaar te Maken: Maak bezwaar tegen verwerking op basis van legitieme belangen of voor directe marketing.",
+          "Recht om Bezwaar te Maken: Maak bezwaar tegen verwerking op Growth van legitieme belangen of voor directe marketing.",
           "Recht om Toestemming In te Trekking: Waar verwerking is gebaseerd op toestemming, kunt u deze op elk moment intrekken.",
           "Om deze rechten uit te oefenen, kunt u contact met ons opnemen via support@iq-rest.com. We zullen binnen 30 dagen reageren. Als u niet tevreden bent met onze reactie, heeft u het recht om een klacht in te dienen bij de Spaanse Gegevensbeschermingsautoriteit (AEPD) op www.aepd.es."
         ]

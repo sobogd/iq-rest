@@ -95,7 +95,7 @@ model Restaurant {
   slug            String?
   currency        String   @default("EUR")
   source          String?
-  accentColor     String   @default("#E11D48")
+  accentColor     String   @default("#ED3A3A")
   address         String?
   x               String?
   y               String?

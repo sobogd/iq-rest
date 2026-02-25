@@ -43,7 +43,7 @@
       },
       {
         "question": "Je viacjazyčná podpora dostupná na bezplatnom pláne?",
-        "answer": "Bezplatný plán zahŕňa až 2 jazyky. Plány Basic a Pro ponúkajú neobmedzený počet jazykov s AI prekladom v cene."
+        "answer": "Bezplatný plán zahŕňa až 2 jazyky. Plány Growth a Pro ponúkajú neobmedzený počet jazykov s AI prekladom v cene."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Pridajte jazyky",
-        "description": "Vyberte si z 35 dostupných jazykov. Bezplatný plán zahŕňa až 2 jazyky, zatiaľ čo plány Basic a Pro ponúkajú neobmedzené jazyky pre vaše menu."
+        "description": "Vyberte si z 35 dostupných jazykov. Bezplatný plán zahŕňa až 2 jazyky, zatiaľ čo plány Growth a Pro ponúkajú neobmedzené jazyky pre vaše menu."
       },
       {
         "title": "Preložte svoj obsah",

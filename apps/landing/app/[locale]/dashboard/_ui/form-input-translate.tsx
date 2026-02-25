@@ -95,7 +95,7 @@ export function FormInputTranslate({
             type="button"
             onClick={handleTranslate}
             disabled={translating || !sourceText.trim() || disabled}
-            className="flex items-center gap-1 text-sm text-red-500 hover:text-red-400 underline disabled:opacity-50 transition-colors"
+            className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
           >
             {translating ? t("translating") : t("translate")}
             {translating ? (

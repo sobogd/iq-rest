@@ -509,8 +509,8 @@
   },
   "pricing": {
     "meta": {
-      "title": "Preus del Menú QR — Plans Gratuït, Basic i Pro | IQ Rest",
-      "description": "Compara els plans de preus del menú QR. Comença gratis, actualitza a Basic o Pro per a traduccions IA, disseny personalitzat, reserves i més."
+      "title": "Preus del Menú QR — Plans Gratuït, Growth i Pro | IQ Rest",
+      "description": "Compara els plans de preus del menú QR. Comença gratis, actualitza a Growth o Pro per a traduccions IA, disseny personalitzat, reserves i més."
     },
     "title": "Preus del menú QR i del lloc web del restaurant",
     "subtitle": "Sense comissions ocultes, sense sorpreses. Llança el lloc web del teu restaurant de manera gratuïta avui mateix — actualitza només quan estiguis llest per créixer.",
@@ -522,7 +522,8 @@
     "yearly": "Anual",
     "save": "(Estalvia un 25%)",
     "perMonth": "/mes",
-    "billedYearly": "Facturat anualment ({total})",
+    "billedYearly": "Facturat anualment ({total}).",
+    "orMonthly": "O pagueu {price} mensualment.",
     "forever": "Gratuït per sempre",
     "popular": "Més popular",
     "plans": {
@@ -531,27 +532,27 @@
         "description": "Perfecte per provar IQ Rest",
         "cta": "Crea gratis",
         "highlights": [
-          "Lloc web del restaurant",
-          "Menú QR",
-          "320 escanejos/mes",
-          "10 comandes per WhatsApp/mes",
-          "2 idiomes",
           "Amb marca d'aigua IQ Rest",
+          "320 escanejos/mes",
+          "30 comandes per WhatsApp/mes",
+          "2 idiomes",
+          "Menú QR & Lloc web",
+          "Tema de color personalitzat",
           "Analítiques"
         ]
       },
       "basic": {
-        "name": "Bàsic",
-        "description": "Ideal per a petits restaurants",
+        "name": "Growth",
+        "description": "Conjunt complet d'eines per a comandes digitals",
         "cta": "Comença ara",
         "highlights": [
           "Tot en gratuït, més:",
-          "Escanejos il·limitats",
-          "Comandes il·limitades per WhatsApp",
           "6 idiomes",
           "Traduccions d'IA",
-          "Tema de color personalitzat",
-          "Reserves"
+          "Generació d'imatges amb IA",
+          "Reserves",
+          "Escanejos il·limitats",
+          "Comandes il·limitades per WhatsApp"
         ]
       },
       "pro": {
@@ -559,10 +560,11 @@
         "description": "Per a cadenes de restaurants en creixement",
         "cta": "Comença ara",
         "highlights": [
-          "Tot en bàsic, més:",
+          "Tot en Growth, més:",
           "Idiomes il·limitats",
           "Múltiples restaurants",
           "Dominis personalitzats",
+          "Funcions personalitzades per restaurant",
           "Suport prioritari"
         ]
       }
@@ -595,7 +597,7 @@
         "languages": "2",
         "aiTranslation": "—",
         "aiImages": "—",
-        "orders": "10 / mes"
+        "orders": "30 / mes"
       },
       "basic": {
         "scans": "Il·limitat",
@@ -1005,21 +1007,21 @@
       },
       "subscription-plans-qr-menu-restaurant-website": {
         "title": "Plans de Subscripció per a la Creació de Menú QR i Lloc Web del Restaurant",
-        "description": "Presentem plans de subscripció flexibles per a la creació del teu lloc web de restaurant i menú QR. Tria entre plans Gratuït, Bàsic i Pro amb opcions de facturació mensual o anual.",
+        "description": "Presentem plans de subscripció flexibles per a la creació del teu lloc web de restaurant i menú QR. Tria entre plans Gratuït, Growth i Pro amb opcions de facturació mensual o anual.",
         "meta": {
           "title": "Plans de Subscripció per a Menú QR i Lloc Web del Restaurant | IQ Rest",
-          "description": "Tria el pla de subscripció perfecte per a la creació del teu lloc web de restaurant i menú QR. Plans Gratuït, Bàsic i Pro amb facturació mensual i anual flexible. Comença gratuït avui."
+          "description": "Tria el pla de subscripció perfecte per a la creació del teu lloc web de restaurant i menú QR. Plans Gratuït, Growth i Pro amb facturació mensual i anual flexible. Comença gratuït avui."
         },
         "content": {
           "intro": "Estem emocionats d'anunciar el llançament del nostre nou sistema de subscripció per a la creació de menú QR i lloc web del restaurant. IQ Rest ara ofereix plans flexibles que creixen amb el teu negoci - des d'un nivell completament gratuït per a petits cafès fins a plans professionals per a restaurants establerts. Tant si acabes de començar com si gestiones diverses ubicacions, els nostres plans de subscripció proporcionen les funcions que necessites per crear i mantenir un lloc web professional de restaurant amb capacitats de menú QR.",
           "image1Alt": "Plans de subscripció per a la creació de menú QR i lloc web del restaurant",
           "image1Caption": "Tria el pla perfecte per a les necessitats del teu lloc web de restaurant i menú QR",
           "section1Title": "Plans Flexibles per a Cada Mida de Restaurant",
-          "section1Text": "El nostre sistema de subscripció per a la creació de menú QR i lloc web del restaurant ofereix tres nivells dissenyats per adaptar-se a les teves necessitats. El pla Gratuït et permet començar amb fins a 15 articles del menú - perfecte per a petits cafès o per provar la plataforma. El pla Bàsic a 4€/mes (o 3€/mes facturat anualment) expandeix la teva capacitat a 100 articles amb 3 idiomes i 2.000 escaneigs mensuals. Per a restaurants en creixement, el nostre pla Pro a 7€/mes (o 6€/mes anual) ofereix articles, idiomes i escaneigs il·limitats - tot el que necessites per a la gestió professional del lloc web del restaurant i menú QR.",
+          "section1Text": "El nostre sistema de subscripció per a la creació de menú QR i lloc web del restaurant ofereix tres nivells dissenyats per adaptar-se a les teves necessitats. El pla Gratuït et permet començar amb fins a 15 articles del menú - perfecte per a petits cafès o per provar la plataforma. El pla Growth a 4€/mes (o 3€/mes facturat anualment) expandeix la teva capacitat a 100 articles amb 3 idiomes i 2.000 escaneigs mensuals. Per a restaurants en creixement, el nostre pla Pro a 7€/mes (o 6€/mes anual) ofereix articles, idiomes i escaneigs il·limitats - tot el que necessites per a la gestió professional del lloc web del restaurant i menú QR.",
           "section2Title": "Tauler de Facturació Simple",
           "section2Text": "Gestionar la teva subscripció per als serveis de menú QR i lloc web del restaurant ara és més fàcil que mai. El nostre nou tauler de facturació mostra tots els plans disponibles en una interfície neta i senzilla. Pots veure el teu pla actual d'un cop d'ull, comparar funcions i actualitzar o rebaixar amb un sol clic. El disseny simplificat mostra cada pla amb el seu preu mensual, facilitant la tria de l'opció correcta per a les necessitats del teu lloc web de restaurant i menú QR. Els pagaments segurs es processen a través de Stripe, l'estàndard de la indústria per a transaccions en línia.",
           "section3Title": "Estalvia un 25% amb Facturació Anual",
-          "section3Text": "Els propietaris de restaurants que es comprometen a la facturació anual per a la seva subscripció de menú QR i lloc web estalvien un 25% en comparació amb els pagaments mensuals. El pla Bàsic passa de 4€ a 3€ per mes, mentre que el pla Pro passa de 7€ a 6€ per mes quan es factura anualment. Aquest estalvi significatiu ajuda els restaurants a invertir més en el seu negoci principal mentre mantenen una presència digital professional. Canvia entre la facturació mensual i anual en qualsevol moment a través del teu tauler de control.",
+          "section3Text": "Els propietaris de restaurants que es comprometen a la facturació anual per a la seva subscripció de menú QR i lloc web estalvien un 25% en comparació amb els pagaments mensuals. El pla Growth passa de 4€ a 3€ per mes, mentre que el pla Pro passa de 7€ a 6€ per mes quan es factura anualment. Aquest estalvi significatiu ajuda els restaurants a invertir més en el seu negoci principal mentre mantenen una presència digital professional. Canvia entre la facturació mensual i anual en qualsevol moment a través del teu tauler de control.",
           "benefitsTitle": "Beneficis dels Nostres Plans de Subscripció",
           "benefit1": "Pla gratuït disponible per sempre - no es requereix targeta de crèdit per començar",
           "benefit2": "Facturació mensual o anual flexible amb un 25% d'estalvi en plans anuals",
@@ -1107,7 +1109,7 @@
           "section1Title": "Automatic Country and Currency Detection",
           "section1Text": "When you open IQ Rest, Cloudflare's global network identifies your country instantly. This information is used to select the most appropriate currency for your region — EUR for Europe, USD for the Americas, GBP for the UK, PLN for Poland, and many more. The system also detects your preferred language and redirects you to the localized version of the site. No manual currency switching needed — everything adapts automatically so you can focus on creating your digital QR menu.",
           "section2Title": "Local Pricing for Every Region",
-          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Basic and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
+          "section2Text": "Plans are priced competitively in each currency with region-appropriate pricing. The Free plan remains free everywhere — create a digital QR menu with up to 500 scans per month at no cost. Growth and Pro plans show clean, rounded prices in your local currency. Yearly plans offer significant savings with nice round monthly equivalents. All prices include the same features regardless of currency — there are no regional feature restrictions.",
           "section3Title": "Seamless Stripe Checkout in Local Currency",
           "section3Text": "The entire payment flow works in your local currency. From the pricing page through Stripe checkout to invoices and the customer portal — everything displays consistent pricing. Switching between monthly and yearly billing updates prices in real-time with a smooth carousel interface. Restaurants worldwide can now create their digital QR menu and pay in the currency they're most comfortable with.",
           "benefitsTitle": "Benefits of Multi-Currency Pricing",
@@ -1139,7 +1141,7 @@
           "section2Title": "Welcome Emails and Onboarding Guidance",
           "section2Text": "New restaurants signing up for IQ Rest now receive a welcome email that guides them through setting up their digital QR menu. The email includes tips on adding categories, uploading dish photos, and sharing QR codes. For restaurants that haven't completed setup, smart reminder emails are sent with personalized guidance based on their onboarding progress. These emails recognize whether you already have menu items, categories, or background images, and suggest the next step.",
           "section3Title": "Device Analytics and Scan Usage Tracking",
-          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Basic and Pro plans enjoy unlimited scans.",
+          "section3Text": "The analytics dashboard now shows detailed breakdowns of device types, browsers, and operating systems used by your digital QR menu visitors. See whether customers scan your QR code on iPhone or Android, Chrome or Safari. A new scan usage indicator on the dashboard home page shows your monthly scans against your plan limit with a clear progress bar. Free plan restaurants get 500 scans per month, while Growth and Pro plans enjoy unlimited scans.",
           "benefitsTitle": "New Features for Your Digital QR Menu",
           "benefit1": "Email confirmations sent to both guests and restaurant owners for reservations",
           "benefit2": "Welcome emails guide new restaurants through digital QR menu setup",
@@ -1447,10 +1449,10 @@
         "name": "Gratuït"
       },
       "BASIC_MONTHLY": {
-        "name": "Bàsic Mensual"
+        "name": "Growth Mensual"
       },
       "BASIC_YEARLY": {
-        "name": "Bàsic Anual"
+        "name": "Growth Anual"
       },
       "PRO_MONTHLY": {
         "name": "Pro Mensual"
@@ -1516,7 +1518,7 @@
       },
       "comparePlans": "Compara tots els plans",
       "hideComparison": "Amaga la comparació",
-      "ctaBasic": "Comença amb Basic",
+      "ctaBasic": "Comença amb Growth",
       "ctaPro": "Comença amb Pro",
       "billedMonthly": "Facturat mensualment",
       "ctaSub": "Cancel·la en qualsevol moment · Sense costos d'instal·lació",
@@ -1526,13 +1528,13 @@
     },
     "aiTranslate": {
       "title": "Traducció IA",
-      "description": "La traducció IA està disponible amb una subscripció Basic o Pro. Actualitza el teu pla per utilitzar traduccions automàtiques.",
+      "description": "La traducció IA està disponible amb una subscripció Growth o Pro. Actualitza el teu pla per utilitzar traduccions automàtiques.",
       "cancel": "Cancel·lar",
       "subscribe": "Subscriure's",
       "translate": "Tradueix",
       "translating": "Traduint...",
       "limitReached": "Traduccions gratuïtes esgotades",
-      "limitReachedDescription": "Has utilitzat les 5 traduccions IA gratuïtes. Actualitza a Basic o Pro per traduccions il·limitades.",
+      "limitReachedDescription": "Has utilitzat les 5 traduccions IA gratuïtes. Actualitza a Growth o Pro per traduccions il·limitades.",
       "upgrade": "Actualitza"
     },
     "auth": {
@@ -1696,7 +1698,7 @@
       "changeBackground": "Canviar fons",
       "regenerateImage": "Regenerar",
       "generateLimitReached": "Generacions AI gratuïtes esgotades",
-      "generateLimitDescription": "Heu utilitzat les 2 generacions d'imatges AI gratuïtes. Actualitzeu a Basic o Pro per a generacions il·limitades."
+      "generateLimitDescription": "Heu utilitzat les 2 generacions d'imatges AI gratuïtes. Actualitzeu a Growth o Pro per a generacions il·limitades."
     },
     "languages": {
       "translationProgress": "Progrés de la traducció",
@@ -2002,7 +2004,7 @@
       {
         "title": "4. Plans de Subscripció i Pagaments",
         "content": [
-          "IQ Rest ofereix plans de subscripció Gratuït, Bàsic i Pro. El pla Gratuït està disponible sense cost amb funcions limitades. Els plans de pagament (Bàsic i Pro) es facturen mensualment o anualment a través del nostre processador de pagaments, Stripe.",
+          "IQ Rest ofereix plans de subscripció Gratuït, Growth i Pro. El pla Gratuït està disponible sense cost amb funcions limitades. Els plans de pagament (Growth i Pro) es facturen mensualment o anualment a través del nostre processador de pagaments, Stripe.",
           "Els preus es mostren en Euros (EUR). En subscriure't a un pla de pagament, autoritzes a cobrar el teu mètode de pagament de manera recurrent fins que cancel·lis.",
           "Pots actualitzar, rebaixar o cancel·lar la teva subscripció en qualsevol moment a través del teu tauler de control. Les cancel·lacions entren en vigor al final del període de facturació actual. No es proporcionen reemborsaments per períodes de facturació parcials.",
           "Ens reservem el dret de canviar els nostres preus amb un avís de 30 dies. Els canvis de preu s'aplicaran als períodes de facturació que comencin després del període d'avís."

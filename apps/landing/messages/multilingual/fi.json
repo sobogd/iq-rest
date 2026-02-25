@@ -43,7 +43,7 @@
       },
       {
         "question": "Onko monikielituki saatavilla ilmaisessa paketissa?",
-        "answer": "Ilmainen paketti sisaltaa enintaan 2 kielta. Basic- ja Pro-paketit tarjoavat rajoittamattomasti kielia AI-kaannos mukaan lukien."
+        "answer": "Ilmainen paketti sisaltaa enintaan 2 kielta. Growth- ja Pro-paketit tarjoavat rajoittamattomasti kielia AI-kaannos mukaan lukien."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Lisää kieliä",
-        "description": "Valitse 35 saatavilla olevasta kielestä. Ilmainen suunnitelma sisältää enintään 2 kieltä, kun taas Basic- ja Pro-suunnitelmat tarjoavat rajattomasti kieliä valikkoosi."
+        "description": "Valitse 35 saatavilla olevasta kielestä. Ilmainen suunnitelma sisältää enintään 2 kieltä, kun taas Growth- ja Pro-suunnitelmat tarjoavat rajattomasti kieliä valikkoosi."
       },
       {
         "title": "Käännä sisältösi",

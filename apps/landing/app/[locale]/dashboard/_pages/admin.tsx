@@ -137,7 +137,7 @@ export function AdminPage() {
               {companies.map((company, index) => {
                 const nameColor =
                   company.subscriptionStatus === "ACTIVE" && company.plan === "PRO"
-                    ? "text-green-500"
+                    ? "text-success"
                     : company.subscriptionStatus === "ACTIVE" && company.plan === "BASIC"
                       ? "text-blue-500"
                       : "";
@@ -177,7 +177,7 @@ export function AdminPage() {
                         </span>
                       )}
                       {company.emailsSent && Object.keys(company.emailsSent).length > 0 && (
-                        <span className="flex items-center gap-0.5 text-green-600">
+                        <span className="flex items-center gap-0.5 text-success">
                           <Mail className="h-3 w-3" />
                         </span>
                       )}

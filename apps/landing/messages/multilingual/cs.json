@@ -43,7 +43,7 @@
       },
       {
         "question": "Je vícejazyčná podpora dostupná v bezplatném tarifu?",
-        "answer": "Bezplatný tarif zahrnuje až 2 jazyky. Tarify Basic a Pro nabízejí neomezený počet jazyků s AI překladem v ceně."
+        "answer": "Bezplatný tarif zahrnuje až 2 jazyky. Tarify Growth a Pro nabízejí neomezený počet jazyků s AI překladem v ceně."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "title": "Přidat jazyky",
-        "description": "Vyberte z 35 dostupných jazyků. Bezplatný plán zahrnuje až 2 jazyky, zatímco plány Basic a Pro nabízejí neomezené jazyky pro vaše menu."
+        "description": "Vyberte z 35 dostupných jazyků. Bezplatný plán zahrnuje až 2 jazyky, zatímco plány Growth a Pro nabízejí neomezené jazyky pro vaše menu."
       },
       {
         "title": "Přeložte svůj obsah",
