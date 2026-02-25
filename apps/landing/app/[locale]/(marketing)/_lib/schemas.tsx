@@ -12,7 +12,7 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "IQ Rest",
   url: BASE_URL,
-  logo: `${BASE_URL}/logo.svg`,
+  logo: `${BASE_URL}/logo.png`,
   description: "Digital QR menu solution for restaurants and cafes worldwide",
   foundingDate: "2024",
   founder: {
@@ -47,7 +47,7 @@ export const productSchema = {
   name: "IQ Rest - QR Menu Solution for Restaurants",
   description:
     "Professional QR menu system for restaurants and cafes with instant updates, multilingual support, and analytics",
-  image: [`${BASE_URL}/logo.svg`, `${BASE_URL}/og-image.png`],
+  image: [`${BASE_URL}/logo.png`, `${BASE_URL}/og-image.png`],
   brand: {
     "@type": "Brand",
     name: "IQ Rest",
@@ -190,7 +190,7 @@ export const createWebPageSchema = (
     url: BASE_URL,
     logo: {
       "@type": "ImageObject",
-      url: `${BASE_URL}/logo.svg`,
+      url: `${BASE_URL}/logo.png`,
     },
   },
   inLanguage: ["en", "es", "de", "fr", "it", "pt", "ru", "ja", "ko", "zh", "ar"],

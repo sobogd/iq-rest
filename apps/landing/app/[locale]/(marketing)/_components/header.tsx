@@ -16,8 +16,8 @@ export async function Header() {
     <header className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-1 hover:opacity-80">
-            <Logo width={40} height={40} className="w-10 h-10" />
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80">
+            <Logo width={40} height={40} className="w-10 h-10 -my-1" />
             <span className="text-xl font-bold">{t("logo")}</span>
           </Link>
 

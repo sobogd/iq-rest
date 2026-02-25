@@ -174,7 +174,7 @@ export default async function ChangelogPage({
       name: "IQ Rest",
       logo: {
         "@type": "ImageObject",
-        url: "https://iq-rest.com/logo.svg",
+        url: "https://iq-rest.com/logo.png",
       },
     },
     blogPost: CHANGELOG_ENTRIES.map((entry) => ({

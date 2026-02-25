@@ -97,7 +97,7 @@ const pricingProductSchema = {
   name: "QR Menu & Website for Restaurant and Cafe - IQ Rest",
   description:
     "Create a QR menu and website for your restaurant or cafe. Digital menu with QR code access, AI translations, analytics, and instant updates. Free plan available.",
-  image: ["https://iq-rest.com/logo.svg", "https://iq-rest.com/product-image.svg"],
+  image: ["https://iq-rest.com/logo.png", "https://iq-rest.com/product-image.svg"],
   brand: {
     "@type": "Brand",
     name: "IQ Rest",

@@ -6,13 +6,13 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = join(__dirname, '..', 'public');
 
-const svgBuffer = readFileSync(join(publicDir, 'logo.svg'));
+const logoBuffer = readFileSync(join(publicDir, 'logo.png'));
 
 async function generateIcons() {
-  console.log('Generating icons from logo.svg...');
+  console.log('Generating icons from logo.png...');
 
   // Generate apple-icon.png (180x180)
-  await sharp(svgBuffer)
+  await sharp(logoBuffer)
     .resize(180, 180)
     .png()
     .toFile(join(publicDir, 'apple-icon.png'));
@@ -22,7 +22,7 @@ async function generateIcons() {
   const faviconSizes = [16, 32, 48];
   const faviconBuffers = await Promise.all(
     faviconSizes.map(size =>
-      sharp(svgBuffer)
+      sharp(logoBuffer)
         .resize(size, size)
         .png()
         .toBuffer()
@@ -31,20 +31,20 @@ async function generateIcons() {
 
   // For favicon.ico, we'll create a 32x32 PNG and rename it
   // (browsers accept PNG as favicon)
-  await sharp(svgBuffer)
+  await sharp(logoBuffer)
     .resize(32, 32)
     .png()
     .toFile(join(publicDir, 'favicon.png'));
   console.log('Created: favicon.png (32x32)');
 
   // Also create icon-192.png and icon-512.png for PWA
-  await sharp(svgBuffer)
+  await sharp(logoBuffer)
     .resize(192, 192)
     .png()
     .toFile(join(publicDir, 'icon-192.png'));
   console.log('Created: icon-192.png (192x192)');
 
-  await sharp(svgBuffer)
+  await sharp(logoBuffer)
     .resize(512, 512)
     .png()
     .toFile(join(publicDir, 'icon-512.png'));
