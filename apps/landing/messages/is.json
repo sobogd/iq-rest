@@ -695,6 +695,36 @@
       "description": "IQ Rest er stöðugt að bæta sig til að hjálpa veitingastöðum og kaffihúsum að búa til faglegar stafrænar QR matseðla. Fylgdu breytingaskránni okkar til að vera uppfærður með nýjustu eiginleikum fyrir vefsíðu veitingastaðarins þíns og QR matseðla lausn."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Endurnýjun Stjórnborðs: Samræmd Kort, Leiðsögn og Eyðublöð",
+        "description": "Fágað stjórnborð með samræmdum kortastíl, fastri hliðarstiku, áherslulit á virkum síðum og vista/eyða aðgerðum neðst á öllum eyðublöðum.",
+        "meta": {
+          "title": "Endurnýjun Stjórnborðs: Kort, Leiðsögn og Eyðublöð | IQ Rest",
+          "description": "Stjórnborð IQ Rest endurhannaður með samræmdum kortaþáttum, fastri hliðarstiku með áherslu á virka síðu og bættum eyðublaðsaðgerðum. Stjórnaðu QR matseðli veitingastaðarins þíns með hreinni og leiðandi viðmóti."
+        },
+        "content": {
+          "intro": "IQ Rest hefur fengið ítarlega endurnýjun á viðmóti stjórnborðsins. Sérhver síða notar nú samræmdan kortastíl með samræmdum ávölum hornum, fasta hliðarstiku með áherslulit á virkum síðum og bætt eyðublaðssíður með vista og eyða hnöppum neðst. Niðurstaðan er hreinni og fágaðri upplifun við stjórnun stafræns QR matseðils veitingastaðarins þíns.",
+          "image1Alt": "Endurhannaður stjórnborð með samræmdum kortastíl",
+          "image1Caption": "Samræmdir kortaþættir á öllum síðum stjórnborðsins",
+          "section1Title": "Samræmd Kortahönnun á Öllum Síðum",
+          "section1Text": "Sérhver síða stjórnborðsins notar nú samræmdan DashboardCard þátt með samræmdum ávölum hornum, nærgætum bakgrunnslit og valfrjálsum hlutafyrirsögnum. Greiningar, reikningur, stillingar, tengiliðir, bókunarstillingar og allar eyðublaðssíður deila sama sjónræna stílnum. Hjálpartextar með sprettiglugga ábendingum koma í stað lýsandi texta innan línu, sem heldur viðmótinu hreinu en veitir samt gagnlegt samhengi þegar þess er þörf.",
+          "section2Title": "Föst Hliðarstika með Virkum Stöðum",
+          "section2Text": "Á skjáborðsskjáum er föst hliðarstika nú sýnileg á sérhverri síðu. Virk síða er auðkennd með áherslulit í bakgrunni, sem gerir strax ljóst hvar þú ert. Undirsíður eins og flokkar, vörur og pantanir auðkenna réttilega yfirliðinn Matseðill. Hliðarstikan veitir skjótan aðgang að Matseðli, Prenta QR, Bókunum, Greiningum, Stillingum, Tengiliðum, Reikningi og Aðstoð — allt án þess að yfirgefa núverandi sýn.",
+          "section3Title": "Bætt Eyðublaðssíður með Aðgerðum Neðst",
+          "section3Text": "Allar eyðublaðssíður — flokkar, vörur, borð, hönnun, stillingar, tengiliðir og bókunarstillingar — eru nú með tvöfaldan vistahnapp neðst í áherslulit. Eyðahnappurinn birtist vinstra megin með nærgætum stíl. Þetta þýðir að þú þarft ekki lengur að fletta aftur upp til að vista breytingarnar þínar. Útskráningarhnappur hefur verið fluttur úr hliðarstikunni neðst á hönnunarsíðuna, sem heldur leiðsögunni einbeittri að nauðsynlegum aðgerðum.",
+          "benefitsTitle": "Kostir Endurnýjunar Viðmótsins",
+          "benefit1": "Samræmdur kortastíll með samræmdum ramma og bakgrunni á öllum síðum",
+          "benefit2": "Föst hliðarstika á skjáborði með áherslulit á virkum stöðum",
+          "benefit3": "Vistahnappurinn neðst á öllum eyðublöðum — engin þörf á að fletta upp til að vista",
+          "benefit4": "Eyða og vista aðgerðir skýrt aðskildar — eyða til vinstri, vista til hægri",
+          "benefit5": "Hlutafyrirsagnir á eyðublaðskortum fyrir betri sjónræna skipulagningu",
+          "benefit6": "Hreinni greiningarsíða með DashboardCard umbúðum og bættu útliti tækjatölfræði",
+          "conclusionTitle": "Fágaðari Upplifun á Stjórnborði",
+          "conclusionText": "Þessi endurnýjun viðmótsins færir sjónrænt samræmi og bætta notagildi í hvern krók stjórnborðs IQ Rest. Hvort sem þú ert að breyta matseðilsatriðum, skoða greiningar eða stjórna bókunum, þá finnst viðmótið samhangandi og leiðandi. Ásamt fastri hliðarstiku er stjórnun stafræns QR matseðils veitingastaðarins þíns hraðari og ánægjulegri en nokkru sinni fyrr.",
+          "ctaText": "Upplifðu endurnýjaða stjórnborðið",
+          "ctaButton": "Opna Stjórnborð"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Stuðningsteymi"
   },
   "reservations": {
+    "general": "Almennt",
     "title": "Bókanir",
     "tables": "Borð",
     "settings": "Stillingar",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Almennt",
       "noCategories": "Engir flokkar enn",
       "addCategory": "Bæta við flokki",
       "editCategory": "Breyta flokki",
@@ -1628,6 +1660,7 @@
       "sortError": "Mistókst að vista röðun"
     },
     "items": {
+      "general": "Almennt",
       "noItems": "Engir hlutir enn. Búðu til þinn fyrsta hlut til að byrja.",
       "noCategoriesHint": "Bættu við flokki fyrst til að búa til hluti.",
       "addItem": "Bæta við vöru",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Hladdu upp vídeó eða mynd",
       "removeMedia": "Fjarlægja",
       "accentColor": "Aðal litur",
-      "accentColorHint": "Aðal litur fyrir takka og áherslur á vefsíðunni þinni",
+      "accentColorHint": "Aðallitur fyrir hnappa og áherslur á vefsíðunni þinni. Notaðu regnbogahnappinn til að velja hvaða lit sem er.",
       "save": "Vista",
       "fetchError": "Mistókst að hlaða hönnunarskilyrðum",
       "saveError": "Mistókst að vista hönnunarskilyrði",
@@ -1790,25 +1823,28 @@
       "ordersSection": "pantanir",
       "ordersRequireWhatsApp": "Bættu við WhatsApp númeri á tengsíðunni til að virkja pantanir",
       "ordersEnabled": "Virkja pantanir",
-      "ordersOn": "Kúnnar geta pantað í gegnum",
-      "ordersOff": "Pantanir óvirkar",
+      "ordersOn": "Taka við pöntunum",
+      "ordersOff": "Taka við pöntunum",
       "orderMode": "Pöntunarstilling",
-      "orderModeWhatsapp": "Aðeins WhatsApp",
-      "orderModeInternal": "Aðeins innra",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Innra",
       "orderModeBoth": "WhatsApp + Innra",
       "orderModeWhatsappHint": "Pantanir eru sendar beint á WhatsApp",
       "orderModeInternalHint": "Pantanir eru vistaðar á stjórnborðinu",
       "orderModeBothHint": "Pantanir eru vistaðar og sendar í gegnum WhatsApp",
-      "ordersFieldsHint": "Virkir reitir eru nauðsynlegir fyrir kúnnann að fylla út",
+      "ordersFieldsHint": "Nauðsynlegir reitir:",
       "ordersName": "Nafn",
-      "ordersNameOn": "Kúnninn verður að slá inn sitt nafn",
-      "ordersNameOff": "Nafn reitur falinn",
+      "ordersNameOn": "Nafn",
+      "ordersNameOff": "Nafn",
       "ordersPhone": "Sími",
-      "ordersPhoneOn": "Kúnninn verður að slá inn símanúmer",
-      "ordersPhoneOff": "Síma reitur falinn",
+      "ordersPhoneOn": "Sími",
+      "ordersPhoneOff": "Sími",
       "ordersAddress": "Afhendingarheimilisfang",
-      "ordersAddressOn": "Kúnninn verður að slá inn afhendingarheimilisfang",
-      "ordersAddressOff": "Heimilisfang reitur falinn"
+      "ordersAddressOn": "Heimilisfang",
+      "ordersAddressOff": "Heimilisfang",
+      "orderModeHint": "Innri pantanir eru vistaðar á stjórnborðinu. WhatsApp pantanir eru sendar beint á WhatsApp þitt. Þú getur virkjað bæði samtímis.",
+      "ordersFieldsDescription": "Virkjaðir reitir verða áskildir fyrir viðskiptavininn við pöntun.",
+      "slugHint": "Þetta er einstakt URL-fang þitt þar sem viðskiptavinir geta skoðað matseðilinn þinn. Deildu þessum tengli eða notaðu hann í QR-kóðanum þínum. Hann birtist sem: iq-rest.com/m/þitt-slug"
     },
     "general": {
       "save": "Vista",

@@ -3,9 +3,10 @@
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
-import { Label } from "@/components/ui/label";
 import { Eye, Calendar, CalendarDays, Users, Monitor, Globe, Smartphone, RefreshCw } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
 
 interface DeviceStatsItem {
   name: string;
@@ -93,7 +94,7 @@ function DeviceStatsCard({
   const maxCount = Math.max(...items.map((i) => i.count), 1);
 
   return (
-    <div className="p-4 bg-muted/30 rounded-xl space-y-3">
+    <div className="p-4 bg-muted/30 rounded-md space-y-3">
       <div className="flex items-center gap-2 text-sm font-medium">
         <Icon className="h-4 w-4 text-primary" />
         {title}
@@ -199,14 +200,16 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
         </button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-      <div className="max-w-lg mx-auto space-y-8">
+      <DashboardContent innerClassName="space-y-4">
+
+      {/* Stats grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat) => {
           const value = getStatValue(stat.key);
           return (
             <div
               key={stat.key}
-              className="p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+              className="rounded-md border border-border bg-muted/50 p-4"
             >
               <stat.icon className="h-5 w-5 text-primary mb-3" />
               <AnimatedNumber
@@ -219,11 +222,11 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
         })}
       </div>
 
-      <div className="space-y-4">
-        <Label className="text-base">{t.dailyViews}</Label>
+      {/* Daily views chart */}
+      <DashboardCard title={t.dailyViews}>
         <div
-          className="bg-muted/30 rounded-xl flex items-end justify-around gap-2 sm:gap-4 overflow-hidden"
-          style={{ height: "180px", padding: "40px 12px 24px" }}
+          className="flex items-end justify-around gap-2 sm:gap-4 overflow-hidden -mx-4 -mb-4 px-3 bg-muted/30 rounded-b-md"
+          style={{ height: "180px", paddingTop: "40px", paddingBottom: "24px" }}
         >
           {(data.viewsByDay || []).map((item, index) => {
             const height = dayHeights[index];
@@ -251,10 +254,10 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
             );
           })}
         </div>
-      </div>
+      </DashboardCard>
 
-      <div className="space-y-4">
-        <Label className="text-base">{t.viewsByPage}</Label>
+      {/* Views by page */}
+      <DashboardCard title={t.viewsByPage}>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {PAGE_ORDER.map((pageKey) => {
             const pageData = data?.viewsByPage.find((v) => v.page === pageKey);
@@ -262,7 +265,7 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
             return (
               <div
                 key={pageKey}
-                className="p-3 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+                className="p-3 bg-muted/30 rounded-md"
               >
                 <AnimatedNumber
                   value={count}
@@ -273,17 +276,17 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
             );
           })}
         </div>
-      </div>
+      </DashboardCard>
 
-      <div className="space-y-4">
-        <Label className="text-base">{t.viewsByLanguage}</Label>
+      {/* Views by language */}
+      <DashboardCard title={t.viewsByLanguage}>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {(data?.viewsByLanguage || [])
             .sort((a, b) => b.count - a.count)
             .map((item) => (
               <div
                 key={item.language}
-                className="p-3 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors"
+                className="p-3 bg-muted/30 rounded-md"
               >
                 <AnimatedNumber
                   value={item.count}
@@ -293,11 +296,12 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
               </div>
             ))}
         </div>
-      </div>
+      </DashboardCard>
+
+      {/* Device stats */}
       {data.deviceStats && (data.deviceStats.devices.length > 0 || data.deviceStats.browsers.length > 0 || data.deviceStats.os.length > 0) && (
-        <div className="space-y-4">
-          <Label className="text-base">{t.deviceStats || "Devices & Browsers"}</Label>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <DashboardCard title={t.deviceStats || "Devices & Browsers"}>
+          <div className="space-y-4">
             {data.deviceStats.devices.length > 0 && (
               <DeviceStatsCard
                 title={t.devices || "Devices"}
@@ -320,9 +324,9 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
               />
             )}
           </div>
-        </div>
+        </DashboardCard>
       )}
-      </div>
+      </DashboardContent>
       </div>
     </div>
   );

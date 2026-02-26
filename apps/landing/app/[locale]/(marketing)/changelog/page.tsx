@@ -55,6 +55,12 @@ export async function generateMetadata({
 
 const CHANGELOG_ENTRIES = [
   {
+    id: "dashboard-ui-redesign-consistent-cards-navigation",
+    date: "2026-02-26",
+    titleKey: "entries.dashboard-ui-redesign-consistent-cards-navigation.title",
+    descriptionKey: "entries.dashboard-ui-redesign-consistent-cards-navigation.description",
+  },
+  {
     id: "ai-menu-scanner-create-digital-qr-menu",
     date: "2026-02-18",
     titleKey: "entries.ai-menu-scanner-create-digital-qr-menu.title",

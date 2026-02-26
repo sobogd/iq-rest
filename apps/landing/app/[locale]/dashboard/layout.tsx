@@ -136,6 +136,7 @@ export default async function DashboardLayout({
       emptySubtitle: t("menu.emptySubtitle"),
     },
     categories: {
+      general: t("categories.general"),
       noCategories: t("categories.noCategories"),
       addCategory: t("categories.addCategory"),
       editCategory: t("categories.editCategory"),
@@ -167,6 +168,7 @@ export default async function DashboardLayout({
       sortError: t("categories.sortError"),
     },
     items: {
+      general: t("items.general"),
       noItems: t("items.noItems"),
       noCategoriesHint: t("items.noCategoriesHint"),
       addItem: t("items.addItem"),

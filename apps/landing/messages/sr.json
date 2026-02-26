@@ -695,6 +695,36 @@
       "description": "IQ Rest se konstantno unapređuje kako bi pomogao restoranima i kafićima da kreiraju profesionalne digitalne QR menije. Pratite naš changelog kako biste bili u toku sa najnovijim funkcijama za vašu web stranicu restorana i rešenje za QR meni."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Редизајн контролне табле: Уједначене картице, навигација и акције на формама",
+        "description": "Дотерана контролна табла са уједначеним стилом картица, сталном бочном навигацијом, акцентном бојом за активна стања и акцијама за чување/брисање на дну сваке стране са формом.",
+        "meta": {
+          "title": "Редизајн контролне табле: Картице, навигација и форме | IQ Rest",
+          "description": "IQ Rest контролна табла редизајнирана са уједначеним компонентама картица, сталном бочном навигацијом са истакнутом активном страном и побољшаним акцијама на формама. Управљајте QR менијем вашег ресторана са чистијим и интуитивнијим интерфејсом."
+        },
+        "content": {
+          "intro": "IQ Rest је прошао свеобухватан редизајн корисничког интерфејса контролне табле. Свака страна сада користи уједначен стил картица са усклађеним заобљеним ивицама, сталну бочну навигацију са акцентном бојом за активна стања и побољшане стране са формама где се акције за чување и брисање налазе на дну. Резултат је чистије и дотераније искуство при управљању дигиталним QR менијем вашег ресторана.",
+          "image1Alt": "Редизајнирана контролна табла са уједначеним стилом картица",
+          "image1Caption": "Уједначене компоненте картица на свим странама контролне табле",
+          "section1Title": "Уједначен дизајн картица на свим странама",
+          "section1Text": "Свака страна контролне табле сада користи уједначену DashboardCard компоненту са усклађеним заобљеним ивицама, суптилним бојама позадине и опционим заглављима секција. Аналитика, наплата, подешавања, контакти, подешавања резервација и све стране са формама деле исти визуелни језик. Ознаке са искачућим савитима замењују описе у реду, одржавајући интерфејс чистим уз пружање корисног контекста по потреби.",
+          "section2Title": "Стална бочна навигација са активним стањима",
+          "section2Text": "На десктоп екранима стална бочна навигација је сада видљива на свакој страни. Активна страна је истакнута акцентном бојом позадине, одмах показујући где се налазите. Подстране као категорије, артикли и поруџбине правилно истичу родитељску ставку Мени. Бочна трака укључује брз приступ Менију, Штампању QR, Резервацијама, Аналитици, Подешавањима, Контактима, Наплати и Подршци — све без напуштања тренутног приказа.",
+          "section3Title": "Побољшане стране са формама и акцијама на дну",
+          "section3Text": "Све стране са формама — категорије, артикли, столови, дизајн, подешавања, контакти и подешавања резервација — сада имају дупликат дугмета за чување на дну у акцентној боји. Дугмад за брисање се појављују на левој страни у пригушеном стилу. То значи да више не морате да скролујете назад на врх да бисте сачували измене. Дугме за одјаву је премештено из бочне траке на дно стране за дизајн, одржавајући навигацију усмерену на суштинске акције.",
+          "benefitsTitle": "Предности редизајна интерфејса",
+          "benefit1": "Уједначен стил картица са усклађеним ивицама и позадинама на свим странама",
+          "benefit2": "Стална бочна навигација на десктопу са акцентном бојом за активна стања",
+          "benefit3": "Дугмад за чување на дну свих форми — нема потребе за скроловањем нагоре",
+          "benefit4": "Акције брисања и чувања јасно раздвојене — брисање лево, чување десно",
+          "benefit5": "Заглавља секција на картицама форми за бољу визуелну организацију",
+          "benefit6": "Чистија страна аналитике са DashboardCard омотачима и побољшаним распоредом статистике уређаја",
+          "conclusionTitle": "Дотераније искуство контролне табле",
+          "conclusionText": "Овај редизајн интерфејса доноси визуелну доследност и побољшану употребљивост у сваки кутак IQ Rest контролне табле. Било да уређујете ставке менија, проверавате аналитику или управљате резервацијама, интерфејс делује кохезивно и интуитивно. У комбинацији са сталном бочном навигацијом, управљање дигиталним QR менијем вашег ресторана је брже и пријатније него икада раније.",
+          "ctaText": "Испробајте редизајнирану контролну таблу",
+          "ctaButton": "Отвори контролну таблу"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Odgovarajuća podrška za vaš restoran QR meni",
         "description": "Dobijte odgovarajuću podršku za sva pitanja i promene na vašem QR meniju restorana ili kafića. Direktan chat sa našim timom za brzu pomoć.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Tim za podršku"
   },
   "reservations": {
+    "general": "Опште",
     "title": "Rezervacije",
     "tables": "Stolovi",
     "settings": "Podešavanja",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Опште",
       "noCategories": "Још нема категорија",
       "addCategory": "Додај категорију",
       "editCategory": "Izmeni kategoriju",
@@ -1628,6 +1660,7 @@
       "sortError": "Nije uspelo čuvanje redosleda"
     },
     "items": {
+      "general": "Опште",
       "noItems": "Još nema stavki. Kreirajte svoju prvu stavku da biste počeli.",
       "noCategoriesHint": "Prvo dodajte kategoriju da biste kreirali stavke.",
       "addItem": "Додај артикал",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Otpremite video ili sliku",
       "removeMedia": "Ukloni",
       "accentColor": "Akcentna boja",
-      "accentColorHint": "Glavna boja za dugmad i naglašavanja na vašem vebsajtu",
+      "accentColorHint": "Главна боја за дугмад и нагласке на вашем сајту. Притисните дугмe дуге да изаберете било коју боју.",
       "save": "Sačuvaj",
       "fetchError": "Nije uspelo učitavanje podešavanja dizajna",
       "saveError": "Nije uspelo čuvanje podešavanja dizajna",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Porudžbine",
       "ordersRequireWhatsApp": "Dodajte WhatsApp broj na stranici Kontakti da omogućite porudžbine",
       "ordersEnabled": "Omogući Porudžbine",
-      "ordersOn": "Kupci mogu da poručuju-a",
-      "ordersOff": "Poručivanje onemogućeno",
+      "ordersOn": "Примај поруџбине",
+      "ordersOff": "Примај поруџбине",
       "orderMode": "Режим поруџбина",
-      "orderModeWhatsapp": "Само WhatsApp",
-      "orderModeInternal": "Само интерно",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Интерне",
       "orderModeBoth": "WhatsApp + Интерно",
       "orderModeWhatsappHint": "Поруџбине се шаљу директно на WhatsApp",
       "orderModeInternalHint": "Поруџбине се чувају на контролној табли",
       "orderModeBothHint": "Поруџбине се чувају и шаљу преко WhatsApp-а",
-      "ordersFieldsHint": "Omogućena polja su obavezna za popunjavanje od strane kupca",
+      "ordersFieldsHint": "Обавезна поља:",
       "ordersName": "Ime",
-      "ordersNameOn": "Kupac mora uneti svoje ime",
-      "ordersNameOff": "Polje za ime skriveno",
+      "ordersNameOn": "Име",
+      "ordersNameOff": "Име",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Kupac mora uneti svoj telefon",
-      "ordersPhoneOff": "Polje za telefon skriveno",
+      "ordersPhoneOn": "Телефон",
+      "ordersPhoneOff": "Телефон",
       "ordersAddress": "Adresa za dostavu",
-      "ordersAddressOn": "Kupac mora uneti adresu za dostavu",
-      "ordersAddressOff": "Polje za adresu skriveno"
+      "ordersAddressOn": "Адреса",
+      "ordersAddressOff": "Адреса",
+      "orderModeHint": "Интерне поруџбине се чувају у панелу. WhatsApp поруџбине се шаљу директно на ваш WhatsApp. Можете активирати оба истовремено.",
+      "ordersFieldsDescription": "Активирана поља биће обавезна за купца приликом поруџбине.",
+      "slugHint": "Ово је ваша јединствена URL адреса где купци могу да виде ваш мени. Поделите овај линк или га користите у QR коду. Приказаће се као: iq-rest.com/m/ваш-slug"
     },
     "general": {
       "save": "Sačuvaj",

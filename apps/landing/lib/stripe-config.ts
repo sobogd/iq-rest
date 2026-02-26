@@ -33,12 +33,12 @@ export const PLANS = {
   BASIC: {
     name: "Growth",
     description: "For small restaurants",
-    price: { monthly: 9.9, yearly: 88.8 }, // €7.4/month when yearly
+    price: { monthly: 9.9, yearly: 82.8 }, // €6.9/month when yearly
   },
   PRO: {
     name: "Pro",
     description: "For growing businesses",
-    price: { monthly: 29.9, yearly: 249 }, // €20.75/month when yearly
+    price: { monthly: 29.9, yearly: 238.8 }, // €19.9/month when yearly
   },
 } as const;
 

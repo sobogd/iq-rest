@@ -11,6 +11,8 @@ import { PageLoader } from "../_ui/page-loader";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { Category } from "@/types";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardNavHeader } from "../_components/dashboard-nav";
 
 interface CategoryWithTranslations extends Category {
   translations?: Record<string, { name?: string }> | null;
@@ -155,7 +157,8 @@ export function CategoriesPage() {
     <div className="flex flex-col h-full">
       {/* Custom header */}
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-        <div className="flex items-center py-3 max-w-lg mx-auto">
+        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
+          <DashboardNavHeader />
           {sortMode ? (
             <>
               <button
@@ -165,7 +168,7 @@ export function CategoriesPage() {
               >
                 <X className="h-5 w-5" />
               </button>
-              <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
+              <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{pageTitle}</h1>
               <button
                 onClick={handleSaveSortOrder}
                 disabled={savingSort}
@@ -182,7 +185,7 @@ export function CategoriesPage() {
               >
                 <ArrowLeft className="h-5 w-5" />
               </button>
-              <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
+              <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{pageTitle}</h1>
               {categories.length > 1 && (
                 <button
                   onClick={handleStartSortMode}
@@ -198,7 +201,7 @@ export function CategoriesPage() {
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto">
+        <DashboardContent>
         {categories.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full gap-4">
             <p className="text-muted-foreground text-center">{t.noCategories}</p>
@@ -217,7 +220,7 @@ export function CategoriesPage() {
                 >
                   <div
                     onClick={() => !sortMode && router.push(`/dashboard/categories/${category.id}`)}
-                    className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-xl transition-colors ${
+                    className={`flex items-center flex-1 min-w-0 h-12 px-4 bg-muted/30 rounded-md transition-colors ${
                       sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
                     }`}
                   >
@@ -241,14 +244,14 @@ export function CategoriesPage() {
                       <button
                         onClick={() => handleMoveCategory(category.id, "up")}
                         disabled={index === 0}
-                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-md hover:bg-muted/50 transition-colors disabled:opacity-30"
                       >
                         <ArrowUp className="h-4 w-4" />
                       </button>
                       <button
                         onClick={() => handleMoveCategory(category.id, "down")}
                         disabled={index === categories.length - 1}
-                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors disabled:opacity-30"
+                        className="flex items-center justify-center h-12 w-12 bg-muted/30 rounded-md hover:bg-muted/50 transition-colors disabled:opacity-30"
                       >
                         <ArrowDown className="h-4 w-4" />
                       </button>
@@ -264,13 +267,13 @@ export function CategoriesPage() {
         {/* Fixed add button */}
         {categories.length > 0 && !sortMode && (
           <div className="sticky bottom-0 flex justify-end pt-4 pb-2 pointer-events-none">
-            <Button onClick={() => router.push("/dashboard/categories/add")} className="h-10 px-4 rounded-xl pointer-events-auto">
+            <Button onClick={() => router.push("/dashboard/categories/add")} className="h-10 px-4 rounded-md pointer-events-auto">
               <Plus className="h-6 w-6" />
               {t.addCategory}
             </Button>
           </div>
         )}
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

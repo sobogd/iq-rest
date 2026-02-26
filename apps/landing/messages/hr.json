@@ -695,6 +695,36 @@
       "description": "IQ Rest se neprestano poboljšava kako bi pomogao restoranima i kafićima da kreiraju profesionalne digitalne QR jelovnike. Pratite naš changelog kako biste bili u toku s najnovijim značajkama za vašu web stranicu restorana i rješenje za QR jelovnik."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Redizajn Sučelja Upravljačke Ploče: Ujednačene Kartice, Navigacija i Akcije Obrazaca",
+        "description": "Dotjerana upravljačka ploča s ujednačenim stilom kartica, trajnom bočnom navigacijom, aktivnim stanjima u boji naglaska i akcijama spremanja/brisanja na dnu svake stranice obrasca.",
+        "meta": {
+          "title": "Redizajn Sučelja Upravljačke Ploče: Kartice, Navigacija i Obrasci | IQ Rest",
+          "description": "Upravljačka ploča IQ Rest redizajnirana je s ujednačenim komponentama kartica, trajnom bočnom navigacijom s isticanjem aktivne stranice i poboljšanim akcijama obrazaca. Upravljajte QR menijem svog restorana s čišćim i intuitivnijim sučeljem."
+        },
+        "content": {
+          "intro": "IQ Rest je prošao sveobuhvatan redizajn sučelja upravljačke ploče. Svaka stranica sada koristi ujednačen stil kartica s unificiranim zaobljenim kutovima, trajnu bočnu navigaciju s aktivnim stanjima u boji naglaska i poboljšane stranice obrazaca s akcijama spremanja i brisanja na dnu. Rezultat je čišće i dotjeranije iskustvo upravljanja digitalnim QR menijem vašeg restorana.",
+          "image1Alt": "Redizajnirana upravljačka ploča s ujednačenim stilom kartica",
+          "image1Caption": "Unificirane komponente kartica na svim stranicama upravljačke ploče",
+          "section1Title": "Ujednačen Dizajn Kartica na Svim Stranicama",
+          "section1Text": "Svaka stranica upravljačke ploče sada koristi unificiranu komponentu DashboardCard s dosljednim zaobljenim rubovima, suptilnim bojama pozadine i opcionalnim zaglavljima sekcija. Analitika, naplata, postavke, kontakti, postavke rezervacija i sve stranice obrazaca dijele isti vizualni jezik. Oznake savjeta s iskočnim objašnjenjima zamjenjuju ugrađene opise, održavajući sučelje čistim dok pružaju koristan kontekst kada je potrebno.",
+          "section2Title": "Trajna Bočna Navigacija s Aktivnim Stanjima",
+          "section2Text": "Na desktop zaslonima, trajna bočna navigacija sada je vidljiva na svakoj stranici. Aktivna stranica istaknuta je pozadinom u boji naglaska, odmah jasno pokazujući gdje se nalazite. Podstranice poput kategorija, artikala i narudžbi ispravno ističu roditeljsku stavku Meni. Bočna traka uključuje brzi pristup Meniju, Ispisu QR, Rezervacijama, Analitici, Postavkama, Kontaktima, Naplati i Podršci — bez napuštanja trenutnog prikaza.",
+          "section3Title": "Poboljšane Stranice Obrazaca s Akcijama na Dnu",
+          "section3Text": "Sve stranice obrazaca — kategorije, artikli, stolovi, dizajn, postavke, kontakti i postavke rezervacija — sada imaju duplicirani gumb za spremanje na dnu u boji naglaska. Gumbi za brisanje pojavljuju se na lijevoj strani s prigušenim stilom. To znači da više ne morate pomicati stranicu natrag na vrh da biste spremili promjene. Gumb za odjavu premješten je iz bočne trake na dno stranice dizajna, održavajući navigaciju fokusiranom na bitne akcije.",
+          "benefitsTitle": "Prednosti Redizajna Sučelja",
+          "benefit1": "Ujednačen stil kartica s dosljednim rubovima i pozadinama na svim stranicama",
+          "benefit2": "Trajna bočna navigacija na desktopu s aktivnim stanjima u boji naglaska",
+          "benefit3": "Gumbi za spremanje na dnu svih obrazaca — nema potrebe za pomicanjem na vrh",
+          "benefit4": "Akcije brisanja i spremanja jasno odvojene — brisanje lijevo, spremanje desno",
+          "benefit5": "Zaglavlja sekcija na karticama obrazaca za bolju vizualnu organizaciju",
+          "benefit6": "Čišća stranica analitike s DashboardCard omotačima i poboljšanim rasporedom statistika uređaja",
+          "conclusionTitle": "Dotjeranije Iskustvo Upravljačke Ploče",
+          "conclusionText": "Ovaj redizajn sučelja donosi vizualnu dosljednost i poboljšanu upotrebljivost u svaki kutak upravljačke ploče IQ Rest. Bilo da uređujete stavke menija, pregledavate analitiku ili upravljate rezervacijama, sučelje se osjeća kohezivno i intuitivno. U kombinaciji s trajnom bočnom navigacijom, upravljanje digitalnim QR menijem vašeg restorana brže je i ugodnije nego ikad.",
+          "ctaText": "Iskusite redizajniranu upravljačku ploču",
+          "ctaButton": "Otvori Upravljačku Ploču"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Odgovarajuća podrška za vaš restoran QR meni",
         "description": "Dobijte odgovarajuću podršku za sva pitanja i promjene u vašem QR meniju restorana ili kafića. Izravni chat s našim timom za brzu pomoć.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Tim za podršku"
   },
   "reservations": {
+    "general": "Općenito",
     "title": "Rezervacije",
     "tables": "Stolovi",
     "settings": "Postavke",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Općenito",
       "noCategories": "Još nema kategorija",
       "addCategory": "Dodaj kategoriju",
       "editCategory": "Uredi kategoriju",
@@ -1628,6 +1660,7 @@
       "sortError": "Nije uspjelo spremiti redoslijed sortiranja"
     },
     "items": {
+      "general": "Općenito",
       "noItems": "Još nema stavki. Kreirajte svoju prvu stavku da biste započeli.",
       "noCategoriesHint": "Prvo dodajte kategoriju za kreiranje stavki.",
       "addItem": "Dodaj artikl",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Otpremite video ili sliku",
       "removeMedia": "Ukloni",
       "accentColor": "Naglašena boja",
-      "accentColorHint": "Glavna boja za gumbe i istaknute dijelove na vašoj web stranici",
+      "accentColorHint": "Glavna boja za gumbe i isticanja na vašoj web stranici. Koristite duginu tipku za odabir bilo koje boje.",
       "save": "Spremi",
       "fetchError": "Nije moguće učitati postavke dizajna",
       "saveError": "Nije moguće spremiti postavke dizajna",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Narudžbe",
       "ordersRequireWhatsApp": "Dodajte WhatsApp broj na stranici Kontakti da omogućite narudžbe",
       "ordersEnabled": "Omogući narudžbe",
-      "ordersOn": "Kupci mogu naručivati-a",
-      "ordersOff": "Naručivanje onemogućeno",
+      "ordersOn": "Prihvati narudžbe",
+      "ordersOff": "Prihvati narudžbe",
       "orderMode": "Način narudžbe",
-      "orderModeWhatsapp": "Samo WhatsApp",
-      "orderModeInternal": "Samo interno",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Interne",
       "orderModeBoth": "WhatsApp + Interno",
       "orderModeWhatsappHint": "Narudžbe se šalju izravno na WhatsApp",
       "orderModeInternalHint": "Narudžbe se spremaju na nadzornu ploču",
       "orderModeBothHint": "Narudžbe se spremaju i šalju putem WhatsAppa",
-      "ordersFieldsHint": "Omogućena polja su obavezna za ispuniti",
+      "ordersFieldsHint": "Obavezna polja:",
       "ordersName": "Ime",
-      "ordersNameOn": "Kupac mora unijeti svoje ime",
-      "ordersNameOff": "Polje za ime skriveno",
+      "ordersNameOn": "Ime",
+      "ordersNameOff": "Ime",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Kupac mora unijeti svoj telefon",
-      "ordersPhoneOff": "Polje za telefon skriveno",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Adresa za dostavu",
-      "ordersAddressOn": "Kupac mora unijeti adresu za dostavu",
-      "ordersAddressOff": "Polje za adresu skriveno"
+      "ordersAddressOn": "Adresa",
+      "ordersAddressOff": "Adresa",
+      "orderModeHint": "Interne narudžbe se spremaju u panel. WhatsApp narudžbe se šalju izravno na vaš WhatsApp. Možete aktivirati oboje istovremeno.",
+      "ordersFieldsDescription": "Aktivirana polja bit će obavezna za kupca prilikom narudžbe.",
+      "slugHint": "Ovo je vaša jedinstvena URL adresa na kojoj kupci mogu vidjeti vaš jelovnik. Podijelite ovu poveznicu ili je koristite u QR kodu. Prikazat će se kao: iq-rest.com/m/vaš-slug"
     },
     "general": {
       "save": "Spremi",

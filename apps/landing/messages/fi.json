@@ -695,6 +695,36 @@
       "description": "IQ Rest parantaa jatkuvasti auttaakseen ravintoloita ja kahviloita luomaan ammattimaisia digitaalisia QR-menuja. Seuraa muutospäiväkirjaamme pysyäksesi ajan tasalla ravintolasi verkkosivuston ja QR-menu-ratkaisun uusimmista ominaisuuksista."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Hallintapaneelin uudistus: yhtenäiset kortit, navigointi ja lomaketoiminnot",
+        "description": "Viimeistelty hallintapaneeli yhtenäisellä korttityylillä, pysyvällä sivupalkkinavigoinnilla, korostusvärillä merkityillä aktiivisilla tiloilla sekä tallenna/poista-painikkeilla jokaisen lomakesivun alareunassa.",
+        "meta": {
+          "title": "Hallintapaneelin uudistus: kortit, navigointi ja lomakkeet | IQ Rest",
+          "description": "IQ Restin hallintapaneeli on uudistettu yhtenäisillä korttikomponenteilla, pysyvällä sivupalkkinavigoinnilla aktiivisen sivun korostuksella ja parannetuilla lomaketoiminnoilla. Hallitse ravintolasi QR-menua selkeämmällä ja intuitiivisemmalla käyttöliittymällä."
+        },
+        "content": {
+          "intro": "IQ Restin hallintapaneeli on käynyt läpi kattavan uudistuksen. Jokaisella sivulla käytetään nyt yhtenäistä korttityyliä yhdenmukaisilla kulmien pyöristyksillä, pysyvää sivupalkkinavigointia korostusvärillä merkityillä aktiivisilla tiloilla sekä parannettuja lomakesivuja tallenna- ja poista-painikkeilla alareunassa. Tuloksena on selkeämpi ja viimeistellympi kokemus ravintolasi digitaalisen QR-menun hallintaan.",
+          "image1Alt": "Uudistettu hallintapaneeli yhtenäisellä korttityylillä",
+          "image1Caption": "Yhtenäiset korttikomponentit kaikilla hallintapaneelin sivuilla",
+          "section1Title": "Yhtenäinen korttisuunnittelu kaikilla sivuilla",
+          "section1Text": "Kaikki hallintapaneelin sivut käyttävät nyt yhtenäistä DashboardCard-komponenttia yhdenmukaisilla pyöristetyillä reunoilla, hienovaraisilla taustaväreillä ja valinnaisilla osio-otsikoilla. Analytiikka, laskutus, asetukset, yhteystiedot, varausasetukset ja kaikki lomakesivut jakavat saman visuaalisen kielen. Vihjemerkinnät popover-työkaluvinkeillä korvaavat inline-kuvailutekstin, mikä pitää käyttöliittymän siistinä ja tarjoaa samalla hyödyllistä kontekstia tarvittaessa.",
+          "section2Title": "Pysyvä sivupalkkinavigointi aktiivisilla tiloilla",
+          "section2Text": "Työpöytänäytöillä pysyvä sivupalkkinavigointi näkyy nyt jokaisella sivulla. Aktiivinen sivu on korostettu korostusvärillä, joten on heti selvää, missä olet. Alasivut, kuten kategoriat, tuotteet ja tilaukset, korostavat oikein ylätason Valikko-kohtaa. Sivupalkki tarjoaa nopean pääsyn kohtiin Valikko, Tulosta QR, Varaukset, Analytiikka, Asetukset, Yhteystiedot, Laskutus ja Tuki — kaikki poistumatta nykyisestä näkymästä.",
+          "section3Title": "Parannetut lomakesivut toiminnoilla alareunassa",
+          "section3Text": "Kaikissa lomakesivuissa — kategoriat, tuotteet, pöydät, muotoilu, asetukset, yhteystiedot ja varausasetukset — on nyt kaksoiskappale tallennuspainikkeesta alareunassa korostusvärillä. Poista-painikkeet näkyvät vasemmalla hillityllä tyylillä. Sinun ei enää tarvitse vierittää takaisin ylös tallentaaksesi muutokset. Uloskirjautumispainike on siirretty sivupalkista muotoilusivun alareunaan, jotta navigointi pysyy keskittyneenä olennaisiin toimintoihin.",
+          "benefitsTitle": "Uudistuksen hyödyt",
+          "benefit1": "Yhtenäinen korttityyli yhdenmukaisilla reunoilla ja taustoilla kaikilla sivuilla",
+          "benefit2": "Pysyvä sivupalkkinavigointi työpöydällä korostusvärillä merkityillä aktiivisilla tiloilla",
+          "benefit3": "Tallennuspainikkeet kaikkien lomakkeiden alareunassa — ei tarvitse vierittää ylös",
+          "benefit4": "Poista- ja tallenna-toiminnot selkeästi erotettu — poista vasemmalla, tallenna oikealla",
+          "benefit5": "Osio-otsikot lomakekorteissa parempaa visuaalista jäsentelyä varten",
+          "benefit6": "Selkeämpi analytiikkasivu DashboardCard-kääreillä ja parannetulla laitetilastojen asettelulla",
+          "conclusionTitle": "Viimeistellympi hallintapaneelikokemus",
+          "conclusionText": "Tämä uudistus tuo visuaalista yhtenäisyyttä ja parannettua käytettävyyttä IQ Restin hallintapaneelin jokaiseen osaan. Muokkaatpa menu-tuotteita, tarkistat analytiikkaa tai hallitset varauksia, käyttöliittymä tuntuu yhtenäiseltä ja intuitiiviselta. Yhdessä pysyvän sivupalkkinavigoinnin kanssa ravintolasi digitaalisen QR-menun hallinta on nopeampaa ja miellyttävämpää kuin koskaan.",
+          "ctaText": "Kokeile uudistettua hallintapaneelia",
+          "ctaButton": "Avaa hallintapaneeli"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Tukitiimi"
   },
   "reservations": {
+    "general": "Yleistä",
     "title": "Varaus",
     "tables": "Pöydät",
     "settings": "Asetukset",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Yleistä",
       "noCategories": "Ei vielä kategorioita",
       "addCategory": "Lisää kategoria",
       "editCategory": "Muokkaa kategoriaa",
@@ -1628,6 +1660,7 @@
       "sortError": "Lajittelujärjestyksen tallentaminen epäonnistui"
     },
     "items": {
+      "general": "Yleistä",
       "noItems": "Ei vielä tuotteita. Luo ensimmäinen tuote aloittaaksesi.",
       "noCategoriesHint": "Lisää ensin kategoria luodaksesi tuotteita.",
       "addItem": "Lisää tuote",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Lataa video tai kuva",
       "removeMedia": "Poista",
       "accentColor": "Korostusväri",
-      "accentColorHint": "Pääväri painikkeille ja korostuksille verkkosivustollasi",
+      "accentColorHint": "Pääväri painikkeille ja korostuksille verkkosivustollasi. Käytä sateenkaaripainiketta valitaksesi minkä tahansa värin.",
       "save": "Tallenna",
       "fetchError": "Suunnitteluasetusten lataaminen epäonnistui",
       "saveError": "Suunnitteluasetusten tallentaminen epäonnistui",
@@ -1790,25 +1823,28 @@
       "ordersSection": "tilaukset",
       "ordersRequireWhatsApp": "Lisää WhatsApp-numero Osoitteet-sivulle, jotta tilaukset voidaan aktivoida",
       "ordersEnabled": "Ota tilaukset käyttöön",
-      "ordersOn": "Asiakkaat voivat tilatain kautta",
-      "ordersOff": "Tilaaminen pois päältä",
+      "ordersOn": "Vastaanota tilauksia",
+      "ordersOff": "Vastaanota tilauksia",
       "orderMode": "Tilaustapa",
-      "orderModeWhatsapp": "Vain WhatsApp",
-      "orderModeInternal": "Vain sisäinen",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Sisäinen",
       "orderModeBoth": "WhatsApp + Sisäinen",
       "orderModeWhatsappHint": "Tilaukset lähetetään suoraan WhatsAppiin",
       "orderModeInternalHint": "Tilaukset tallennetaan hallintapaneeliin",
       "orderModeBothHint": "Tilaukset tallennetaan ja lähetetään myös WhatsAppiin",
-      "ordersFieldsHint": "Käytössä olevat kentät ovat pakollisia asiakkaalle täytettäväksi",
+      "ordersFieldsHint": "Pakolliset kentät:",
       "ordersName": "Nimi",
-      "ordersNameOn": "Asiakkaan on annettava nimensä",
-      "ordersNameOff": "Nimikenttä piilotettu",
+      "ordersNameOn": "Nimi",
+      "ordersNameOff": "Nimi",
       "ordersPhone": "Puhelin",
-      "ordersPhoneOn": "Asiakkaan on annettava puhelinnumeronsa",
-      "ordersPhoneOff": "Puhelinkenttä piilotettu",
+      "ordersPhoneOn": "Puhelin",
+      "ordersPhoneOff": "Puhelin",
       "ordersAddress": "Toimitusosoite",
-      "ordersAddressOn": "Asiakkaan on annettava toimitusosoite",
-      "ordersAddressOff": "Osoitekenttä piilotettu"
+      "ordersAddressOn": "Osoite",
+      "ordersAddressOff": "Osoite",
+      "orderModeHint": "Sisäiset tilaukset tallennetaan hallintapaneeliin. WhatsApp-tilaukset lähetetään suoraan WhatsAppiisi. Voit ottaa molemmat käyttöön samanaikaisesti.",
+      "ordersFieldsDescription": "Käytössä olevat kentät ovat pakollisia asiakkaalle tilauksen yhteydessä.",
+      "slugHint": "Tämä on ainutlaatuinen URL-osoitteesi, jossa asiakkaat voivat tarkastella menuasi. Jaa tämä linkki tai käytä sitä QR-koodissasi. Se näkyy muodossa: iq-rest.com/m/sinun-slug"
     },
     "general": {
       "save": "Tallenna",

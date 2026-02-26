@@ -10,6 +10,8 @@ import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardNavHeader } from "../_components/dashboard-nav";
 
 interface Table {
   id: string;
@@ -134,14 +136,15 @@ export function TablesPage({ initialTables }: TablesPageProps) {
     <div className="flex flex-col h-full">
       {/* Custom header */}
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-        <div className="flex items-center py-3 max-w-lg mx-auto">
+        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
+          <DashboardNavHeader />
           <button
             onClick={() => router.push("/dashboard")}
             className="flex items-center justify-center h-10 w-10 -ml-2"
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
-          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{pageTitle}</h1>
+          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{pageTitle}</h1>
           {tables.length > 1 && (
             sortMode ? (
               <button
@@ -164,11 +167,11 @@ export function TablesPage({ initialTables }: TablesPageProps) {
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto">
+        <DashboardContent>
         {tables.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 gap-4">
             <p className="text-muted-foreground text-center">{t("noTables")}</p>
-            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }} variant="destructive" className="h-12 w-full rounded-2xl shadow-md">
+            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }} className="h-12 w-full rounded-md shadow-md">
               <Plus className="h-4 w-4" />
               {t("addTable")}
             </Button>
@@ -176,7 +179,7 @@ export function TablesPage({ initialTables }: TablesPageProps) {
         ) : (
           <div className="flex flex-col min-h-full">
             <div className="flex-1 pb-4">
-              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
                 <div className="flex items-center px-4 h-12 bg-muted/30">
                   <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{pageTitle}</span>
                 </div>
@@ -241,18 +244,18 @@ export function TablesPage({ initialTables }: TablesPageProps) {
                 ))}
                 {!sortMode && (
                   <div
-                    className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-success/5 hover:bg-success/10"
+                    className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-primary/5 hover:bg-primary/10"
                     onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
                   >
-                    <Plus className="h-4 w-4 mr-2 text-success" />
-                    <span className="text-sm font-medium text-success">{t("addTable")}</span>
+                    <Plus className="h-4 w-4 mr-2 text-primary" />
+                    <span className="text-sm font-medium text-primary">{t("addTable")}</span>
                   </div>
                 )}
               </div>
             </div>
           </div>
         )}
-        </div>
+        </DashboardContent>
       </div>
 
     </div>

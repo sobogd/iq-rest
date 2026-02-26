@@ -15,6 +15,7 @@ import { toast } from "sonner";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { pricing, type PlanId } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface SubscriptionStatusResponse {
   plan: PlanType;
@@ -286,11 +287,11 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.billing} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
           {planGroups.map((group) => (
-            <div key={group.plan} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
-              <div className="flex items-center px-4 h-12 bg-muted/30">
-                <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{group.plan}</span>
+            <div key={group.plan} className="rounded-md border border-border bg-muted/50 overflow-hidden">
+              <div className="flex items-center px-4 py-3.5 bg-muted/30">
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{group.plan === "BASIC" ? "Growth" : group.plan}</span>
               </div>
               {group.options.map((option) => {
                 const isCurrent = isCurrentOption(option);
@@ -343,12 +344,12 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
               })}
             </div>
           ))}
-        </div>
+        </DashboardContent>
 
         {/* Feature Comparison */}
         <div className="max-w-2xl mx-auto pt-8">
           <h2 className="text-lg font-semibold text-center mb-4">{tp("comparison.title")}</h2>
-          <div className="overflow-x-auto rounded-2xl border border-border">
+          <div className="overflow-x-auto rounded-md border border-border">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-muted/30">

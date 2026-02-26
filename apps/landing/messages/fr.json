@@ -695,6 +695,36 @@
       "description": "IQ Rest s'améliore constamment pour aider les restaurants et les cafés à créer des menus QR numériques professionnels. Suivez notre journal des modifications pour rester informé des dernières fonctionnalités pour votre site web de restaurant et votre solution de menu QR."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Refonte du Tableau de Bord : Cartes Uniformes, Navigation et Actions de Formulaire",
+        "description": "Un tableau de bord affiné avec un style de carte unifié, une barre latérale de navigation persistante, des états actifs colorés et des actions de sauvegarde/suppression en bas de chaque formulaire.",
+        "meta": {
+          "title": "Refonte du Tableau de Bord : Cartes, Navigation et Formulaires | IQ Rest",
+          "description": "Tableau de bord IQ Rest redessiné avec des composants de carte cohérents, une navigation latérale persistante avec mise en évidence de la page active et des actions de formulaire améliorées. Gérez votre menu QR de restaurant avec une interface plus épurée et intuitive."
+        },
+        "content": {
+          "intro": "IQ Rest a fait l'objet d'une refonte complète de l'interface du tableau de bord. Chaque page utilise désormais un style de carte cohérent avec des bordures arrondies uniformes, une barre latérale de navigation persistante avec des états actifs colorés et des formulaires améliorés avec des actions de sauvegarde et de suppression en bas de page. Le résultat est une expérience plus épurée et soignée pour gérer le menu QR numérique de votre restaurant.",
+          "image1Alt": "Tableau de bord redessiné avec un style de carte cohérent",
+          "image1Caption": "Composants de carte unifiés sur toutes les pages du tableau de bord",
+          "section1Title": "Design de Carte Cohérent sur Toutes les Pages",
+          "section1Text": "Chaque page du tableau de bord utilise désormais un composant DashboardCard unifié avec des bordures arrondies cohérentes, des couleurs de fond subtiles et des en-têtes de section optionnels. Analytiques, facturation, paramètres, contacts, réglages de réservation et toutes les pages de formulaire partagent le même langage visuel. Des labels d'aide avec des infobulles contextuelles remplacent les textes descriptifs en ligne, gardant l'interface propre tout en fournissant un contexte utile quand nécessaire.",
+          "section2Title": "Barre Latérale de Navigation Persistante avec États Actifs",
+          "section2Text": "Sur les écrans de bureau, une barre latérale de navigation persistante est désormais visible sur chaque page. La page active est mise en évidence avec un fond coloré, rendant immédiatement clair votre emplacement. Les sous-pages comme les catégories, les articles et les commandes mettent correctement en évidence l'élément parent Menu. La barre latérale offre un accès rapide au Menu, Imprimer QR, Réservations, Analytiques, Paramètres, Contacts, Facturation et Support — le tout sans quitter la vue actuelle.",
+          "section3Title": "Pages de Formulaire Améliorées avec Actions en Bas de Page",
+          "section3Text": "Toutes les pages de formulaire — catégories, articles, tables, design, paramètres, contacts et réglages de réservation — disposent désormais d'un bouton de sauvegarde dupliqué en bas de page avec la couleur d'accentuation. Les boutons de suppression apparaissent sur le côté gauche avec un style discret. Cela signifie que vous n'avez plus besoin de remonter en haut pour sauvegarder vos modifications. Le bouton de déconnexion a été déplacé de la barre latérale vers le bas de la page de design, gardant la navigation centrée sur les actions essentielles.",
+          "benefitsTitle": "Avantages de la Refonte de l'Interface",
+          "benefit1": "Style de carte unifié avec bordures et fonds cohérents sur toutes les pages",
+          "benefit2": "Barre latérale de navigation persistante sur bureau avec états actifs colorés",
+          "benefit3": "Boutons de sauvegarde en bas de tous les formulaires — plus besoin de remonter",
+          "benefit4": "Actions de suppression et de sauvegarde clairement séparées — supprimer à gauche, sauvegarder à droite",
+          "benefit5": "En-têtes de section sur les cartes de formulaire pour une meilleure organisation visuelle",
+          "benefit6": "Page analytiques plus épurée avec des wrappers DashboardCard et un affichage amélioré des statistiques d'appareils",
+          "conclusionTitle": "Une Expérience de Tableau de Bord Plus Soignée",
+          "conclusionText": "Cette refonte de l'interface apporte une cohérence visuelle et une meilleure ergonomie dans chaque recoin du tableau de bord IQ Rest. Que vous modifiiez des articles du menu, consultiez les analytiques ou gériez des réservations, l'interface est cohérente et intuitive. Combinée à la barre latérale de navigation persistante, la gestion du menu QR numérique de votre restaurant est plus rapide et agréable que jamais.",
+          "ctaText": "Découvrez le tableau de bord redessiné",
+          "ctaButton": "Ouvrir le Tableau de Bord"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Support Réactif pour Votre Menu QR de Restaurant",
         "description": "Obtenez un support réactif pour toutes vos questions et modifications concernant le menu QR de votre restaurant ou café. Discussion directe avec notre équipe pour une assistance rapide.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Équipe de support"
   },
   "reservations": {
+    "general": "Général",
     "title": "Réservations",
     "tables": "Tables",
     "settings": "Paramètres",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Général",
       "noCategories": "Pas encore de catégories",
       "addCategory": "Ajouter une catégorie",
       "editCategory": "Modifier la Catégorie",
@@ -1628,6 +1660,7 @@
       "sortError": "Échec de l'enregistrement de l'ordre de tri"
     },
     "items": {
+      "general": "Général",
       "noItems": "Aucun élément pour le moment. Créez votre premier élément pour commencer.",
       "noCategoriesHint": "Ajoutez d'abord une catégorie pour créer des éléments.",
       "addItem": "Ajouter un article",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Télécharger une vidéo ou une image",
       "removeMedia": "Supprimer",
       "accentColor": "Couleur d'accent",
-      "accentColorHint": "Couleur principale pour les boutons et les mises en évidence sur votre site web",
+      "accentColorHint": "Couleur principale des boutons et des éléments mis en avant sur votre site. Utilisez le bouton arc-en-ciel pour choisir n'importe quelle couleur.",
       "save": "Enregistrer",
       "fetchError": "Échec du chargement des paramètres de conception",
       "saveError": "Échec de l'enregistrement des paramètres de conception",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Commandes",
       "ordersRequireWhatsApp": "Ajoutez un numéro WhatsApp sur la page Contacts pour activer les commandes",
       "ordersEnabled": "Activer les commandes",
-      "ordersOn": "Les clients peuvent commander",
-      "ordersOff": "Commande désactivée",
+      "ordersOn": "Accepter les commandes",
+      "ordersOff": "Accepter les commandes",
       "orderMode": "Mode de commande",
-      "orderModeWhatsapp": "WhatsApp uniquement",
-      "orderModeInternal": "Interne uniquement",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Interne",
       "orderModeBoth": "WhatsApp + Interne",
       "orderModeWhatsappHint": "Les commandes sont envoyées directement sur WhatsApp",
       "orderModeInternalHint": "Les commandes sont enregistrées dans le tableau de bord",
       "orderModeBothHint": "Les commandes sont enregistrées et envoyées via WhatsApp",
-      "ordersFieldsHint": "Les champs activés sont requis pour que le client les remplisse",
+      "ordersFieldsHint": "Champs obligatoires :",
       "ordersName": "Nom",
-      "ordersNameOn": "Le client doit entrer son nom",
-      "ordersNameOff": "Champ nom caché",
+      "ordersNameOn": "Nom",
+      "ordersNameOff": "Nom",
       "ordersPhone": "Téléphone",
-      "ordersPhoneOn": "Le client doit entrer son téléphone",
-      "ordersPhoneOff": "Champ téléphone caché",
+      "ordersPhoneOn": "Téléphone",
+      "ordersPhoneOff": "Téléphone",
       "ordersAddress": "Adresse de livraison",
-      "ordersAddressOn": "Le client doit entrer l'adresse de livraison",
-      "ordersAddressOff": "Champ adresse caché"
+      "ordersAddressOn": "Adresse",
+      "ordersAddressOff": "Adresse",
+      "orderModeHint": "Les commandes internes sont enregistrées dans le tableau de bord. Les commandes WhatsApp sont envoyées directement sur votre WhatsApp. Vous pouvez activer les deux en même temps.",
+      "ordersFieldsDescription": "Les champs activés seront obligatoires pour le client lors de la commande.",
+      "slugHint": "Ceci est votre adresse URL unique où les clients peuvent consulter votre menu. Partagez ce lien ou utilisez-le dans votre code QR. Il apparaîtra comme : iq-rest.com/m/votre-slug"
     },
     "general": {
       "save": "Enregistrer",

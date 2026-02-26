@@ -695,6 +695,36 @@
       "description": "IQ Rest förbättras ständigt för att hjälpa restauranger och kaféer att skapa professionella digitala QR-menyer. Följ vår ändringslogg för att hålla dig uppdaterad med de senaste funktionerna för din restaurangwebbplats och QR-menylösning."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Omdesign av instrumentpanelen: enhetliga kort, navigation och formuläråtgärder",
+        "description": "En polerad instrumentpanel med enhetlig kortstyling, beständig sidofältsnavigation, accentfärgade aktiva tillstånd och spara/radera-knappar längst ner på varje formulärsida.",
+        "meta": {
+          "title": "Omdesign av instrumentpanelen: kort, navigation och formulär | IQ Rest",
+          "description": "IQ Rests instrumentpanel har omdesignats med enhetliga kortkomponenter, beständig sidofältsnavigation med markering av aktiv sida och förbättrade formuläråtgärder. Hantera din restaurangs QR-meny med ett renare och mer intuitivt gränssnitt."
+        },
+        "content": {
+          "intro": "IQ Rests instrumentpanel har genomgått en omfattande omdesign. Varje sida använder nu enhetlig kortstyling med konsekventa hörnradier, en beständig sidofältsnavigation med accentfärgade aktiva tillstånd och förbättrade formulärsidor med spara- och raderaknappar längst ner. Resultatet är en renare och mer polerad upplevelse för att hantera din restaurangs digitala QR-meny.",
+          "image1Alt": "Omdesignad instrumentpanel med enhetlig kortstyling",
+          "image1Caption": "Enhetliga kortkomponenter på alla sidor i instrumentpanelen",
+          "section1Title": "Enhetlig kortdesign på alla sidor",
+          "section1Text": "Alla sidor i instrumentpanelen använder nu en enhetlig DashboardCard-komponent med konsekventa rundade hörn, subtila bakgrundsfärger och valfria sektionsrubriker. Analys, fakturering, inställningar, kontakter, bokningsinställningar och alla formulärsidor delar samma visuella språk. Ledtextsetiketter med popover-verktygstips ersätter inbäddad beskrivningstext, vilket håller gränssnittet rent och samtidigt ger användbar kontext vid behov.",
+          "section2Title": "Beständig sidofältsnavigation med aktiva tillstånd",
+          "section2Text": "På desktopskärmar visas nu en beständig sidofältsnavigation på varje sida. Den aktiva sidan markeras med en accentfärgad bakgrund, så det är omedelbart tydligt var du befinner dig. Undersidor som kategorier, artiklar och beställningar markerar korrekt det överordnade menyobjektet. Sidofältet ger snabb åtkomst till Meny, Skriv ut QR, Bokningar, Analys, Inställningar, Kontakter, Fakturering och Support — allt utan att lämna den aktuella vyn.",
+          "section3Title": "Förbättrade formulärsidor med åtgärder längst ner",
+          "section3Text": "Alla formulärsidor — kategorier, artiklar, bord, design, inställningar, kontakter och bokningsinställningar — har nu en duplicerad spara-knapp längst ner i accentfärg. Radera-knappar visas till vänster i en dämpad stil. Du behöver inte längre scrolla tillbaka till toppen för att spara dina ändringar. Utloggningsknappen har flyttats från sidofältet till botten av designsidan, vilket håller navigationen fokuserad på viktiga åtgärder.",
+          "benefitsTitle": "Fördelar med omdesignen",
+          "benefit1": "Enhetlig kortstyling med konsekventa ramar och bakgrunder på alla sidor",
+          "benefit2": "Beständig sidofältsnavigation på desktop med accentfärgade aktiva tillstånd",
+          "benefit3": "Spara-knappar längst ner på alla formulär — ingen scrollning uppåt behövs",
+          "benefit4": "Radera- och sparaåtgärder tydligt separerade — radera till vänster, spara till höger",
+          "benefit5": "Sektionsrubriker på formulärkort för bättre visuell organisation",
+          "benefit6": "Renare analyssida med DashboardCard-omslag och förbättrad layout för enhetsstatistik",
+          "conclusionTitle": "En mer polerad instrumentpanelupplevelse",
+          "conclusionText": "Denna omdesign ger visuell konsekvens och förbättrad användbarhet till varje del av IQ Rests instrumentpanel. Oavsett om du redigerar menyartiklar, kontrollerar analyser eller hanterar bokningar känns gränssnittet sammanhängande och intuitivt. Tillsammans med den beständiga sidofältsnavigationen är det snabbare och trevligare än någonsin att hantera din restaurangs digitala QR-meny.",
+          "ctaText": "Upplev den omdesignade instrumentpanelen",
+          "ctaButton": "Öppna instrumentpanelen"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsiv support för din restaurang QR-meny",
         "description": "Få responsiv support för eventuella frågor och ändringar av din QR-meny för restaurang eller café. Direkt chatt med vårt team för snabb hjälp.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Supportteam"
   },
   "reservations": {
+    "general": "Allmänt",
     "title": "Bokningar",
     "tables": "Bord",
     "settings": "Inställningar",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Allmänt",
       "noCategories": "Inga kategorier ännu",
       "addCategory": "Lägg till kategori",
       "editCategory": "Redigera kategori",
@@ -1628,6 +1660,7 @@
       "sortError": "Misslyckades med att spara sorteringsordning"
     },
     "items": {
+      "general": "Allmänt",
       "noItems": "Inga objekt ännu. Skapa ditt första objekt för att komma igång.",
       "noCategoriesHint": "Lägg till en kategori först för att skapa objekt.",
       "addItem": "Lägg till artikel",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Ladda upp video eller bild",
       "removeMedia": "Ta bort",
       "accentColor": "Accentfärg",
-      "accentColorHint": "Huvudfärg för knappar och markeringar på din webbplats",
+      "accentColorHint": "Huvudfärg för knappar och markeringar på din webbplats. Använd regnbågsknappen för att välja valfri färg.",
       "save": "Spara",
       "fetchError": "Misslyckades med att ladda designinställningar",
       "saveError": "Misslyckades med att spara designinställningar",
@@ -1790,25 +1823,28 @@
       "ordersSection": "beställningar",
       "ordersRequireWhatsApp": "Lägg till ett WhatsApp-nummer på kontaktsidan för att aktivera beställningar",
       "ordersEnabled": "Aktivera beställningar",
-      "ordersOn": "Kunder kan beställa",
-      "ordersOff": "Beställning inaktiverad",
+      "ordersOn": "Ta emot beställningar",
+      "ordersOff": "Ta emot beställningar",
       "orderMode": "Beställningsläge",
-      "orderModeWhatsapp": "Bara WhatsApp",
-      "orderModeInternal": "Bara internt",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Intern",
       "orderModeBoth": "WhatsApp + Internt",
       "orderModeWhatsappHint": "Beställningar skickas direkt till WhatsApp",
       "orderModeInternalHint": "Beställningar sparas i instrumentpanelen",
       "orderModeBothHint": "Beställningar sparas och skickas även via WhatsApp",
-      "ordersFieldsHint": "Aktiverade fält är obligatoriska för kunden att fylla i",
+      "ordersFieldsHint": "Obligatoriska fält:",
       "ordersName": "Namn",
-      "ordersNameOn": "Kunden måste ange sitt namn",
-      "ordersNameOff": "Namnfält dolt",
+      "ordersNameOn": "Namn",
+      "ordersNameOff": "Namn",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Kunden måste ange sin telefon",
-      "ordersPhoneOff": "Telefonfält dolt",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Leveransadress",
-      "ordersAddressOn": "Kunden måste ange leveransadress",
-      "ordersAddressOff": "Adressfält dolt"
+      "ordersAddressOn": "Adress",
+      "ordersAddressOff": "Adress",
+      "orderModeHint": "Interna beställningar sparas i panelen. WhatsApp-beställningar skickas direkt till din WhatsApp. Du kan aktivera båda samtidigt.",
+      "ordersFieldsDescription": "Aktiverade fält kommer att vara obligatoriska för kunden vid beställning.",
+      "slugHint": "Detta är din unika URL-adress där kunder kan se din meny. Dela denna länk eller använd den i din QR-kod. Den visas som: iq-rest.com/m/din-slug"
     },
     "general": {
       "save": "Spara",

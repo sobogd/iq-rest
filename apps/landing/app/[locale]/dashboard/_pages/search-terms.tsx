@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import { Loader2 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface SearchTerm {
   searchTerm: string;
@@ -63,7 +64,7 @@ export function SearchTermsPage() {
     <div className="flex flex-col h-full">
       <PageHeader title="Search Terms" backHref="/dashboard" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
           {/* Tabs */}
           <div className="flex gap-2">
             {TABS.map((tab) => (
@@ -83,13 +84,13 @@ export function SearchTermsPage() {
 
           {/* List */}
           {loading && terms.length > 0 ? (
-            <div className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: "200px" }}>
+            <div className="rounded-md border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: "200px" }}>
               <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
             </div>
           ) : terms.length === 0 && !loading ? (
             <p className="text-sm text-muted-foreground text-center py-8">No search terms found</p>
           ) : (
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
               {terms.map((term, index) => (
                 <div
                   key={`${term.searchTerm}-${term.adGroupName}-${index}`}
@@ -116,7 +117,7 @@ export function SearchTermsPage() {
               ))}
             </div>
           )}
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

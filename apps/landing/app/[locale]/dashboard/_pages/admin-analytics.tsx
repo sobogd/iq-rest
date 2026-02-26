@@ -10,6 +10,7 @@ import {
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface FunnelStep {
   event: string;
@@ -98,7 +99,7 @@ function FunnelCard({ title, steps }: { title: string; steps: FunnelStep[] }) {
   const firstCount = steps[0]?.count || 0;
 
   return (
-    <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+    <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
       <div className="px-4 py-3 border-b border-foreground/5">
         <span className="text-sm font-medium">{title}</span>
       </div>
@@ -150,7 +151,7 @@ function StatsListCard({
   const total = items.reduce((sum, i) => sum + i.count, 0);
 
   return (
-    <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+    <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
       <div className="px-4 py-3 border-b border-foreground/5 flex items-center gap-2">
         <Icon className="h-4 w-4 text-muted-foreground" />
         <span className="text-sm font-medium">{title}</span>
@@ -258,9 +259,9 @@ export function AdminAnalyticsPage() {
         </button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
           {/* Time Range */}
-          <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden flex">
+          <div className="rounded-md border border-border bg-muted/50 overflow-hidden flex">
             {TIME_RANGES.map((range) => (
               <button
                 key={range.value}
@@ -305,7 +306,7 @@ export function AdminAnalyticsPage() {
             icon={Globe}
             onItemClick={(name) => navigateToSessions({ browser: name })}
           />
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

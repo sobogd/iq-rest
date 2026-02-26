@@ -695,6 +695,36 @@
       "description": "Az IQ Rest folyamatosan fejlődik, hogy segítsen az éttermeknek és kávézóknak professzionális digitális QR menük létrehozásában. Kövesd a változásnaplónkat, hogy naprakész legyél a legújabb funkciókkal az étterem weboldalad és QR menü megoldásod számára."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Vezerlőpult UI Újratervezés: Egységes Kártyák, Navigáció és Űrlap Műveletek",
+        "description": "Csiszolt vezérlőpult egységes kártya stílussal, állandó oldalsáv navigációval, kiemelőszínű aktív állapotokkal és alsó mentés/törlés gombokkal minden űrlap oldalon.",
+        "meta": {
+          "title": "Vezérlőpult UI Újratervezés: Kártyák, Navigáció és Űrlapok | IQ Rest",
+          "description": "Az IQ Rest vezérlőpult egységes kártya komponensekkel, aktív oldal kiemeléssel rendelkező állandó oldalsáv navigációval és javított űrlap műveletekkel lett újratervezve. Kezelje étterme QR menüjét egy letisztultabb, intuitívabb felületen."
+        },
+        "content": {
+          "intro": "Az IQ Rest átfogó vezérlőpult UI újratervezésen esett át. Minden oldal egységes kártya stílust használ egységes lekerekített sarkokkal, állandó oldalsáv navigációt kiemelőszínű aktív állapotokkal, és javított űrlap oldalakat alsó mentés és törlés műveletekkel. Az eredmény egy letisztultabb, csiszoltabb élmény étterme digitális QR menüjének kezeléséhez.",
+          "image1Alt": "Újratervezett vezérlőpult egységes kártya stílussal",
+          "image1Caption": "Egységes kártya komponensek az összes vezérlőpult oldalon",
+          "section1Title": "Egységes Kártya Dizájn Minden Oldalon",
+          "section1Text": "Minden vezérlőpult oldal egységes DashboardCard komponenst használ konzisztens lekerekített szegélyekkel, finom háttérszínekkel és opcionális szekció fejlécekkel. Analitika, számlázás, beállítások, kapcsolatok, foglalási beállítások és minden űrlap oldal ugyanazt a vizuális nyelvet beszéli. Felugró tippekkel rendelkező útmutató címkék váltják fel a soron belüli leírásokat, tisztán tartva a felületet, miközben szükség esetén hasznos kontextust nyújtanak.",
+          "section2Title": "Állandó Oldalsáv Navigáció Aktív Állapotokkal",
+          "section2Text": "Asztali képernyőkön állandó oldalsáv navigáció látható minden oldalon. Az aktív oldal kiemelőszínű háttérrel van jelölve, így azonnal egyértelmű, hol tartózkodik. Az aloldalak, mint a kategóriák, termékek és rendelések, helyesen emelik ki a szülő Menü elemet. Az oldalsáv gyors hozzáférést biztosít a Menühöz, QR Nyomtatáshoz, Foglalásokhoz, Analitikához, Beállításokhoz, Kapcsolatokhoz, Számlázáshoz és Támogatáshoz — anélkül, hogy elhagyná az aktuális nézetet.",
+          "section3Title": "Javított Űrlap Oldalak Alsó Műveletekkel",
+          "section3Text": "Minden űrlap oldal — kategóriák, termékek, asztalok, dizájn, beállítások, kapcsolatok és foglalási beállítások — most duplikált mentés gombbal rendelkezik az alján kiemelő színben. A törlés gombok a bal oldalon jelennek meg visszafogott stílusban. Ez azt jelenti, hogy többé nem kell felgörgetnie a módosítások mentéséhez. A kijelentkezés gomb az oldalsávból a dizájn oldal aljára került, így a navigáció a lényeges műveletekre összpontosít.",
+          "benefitsTitle": "Az UI Újratervezés Előnyei",
+          "benefit1": "Egységes kártya stílus konzisztens szegélyekkel és hátterekkel minden oldalon",
+          "benefit2": "Állandó oldalsáv navigáció asztalon kiemelőszínű aktív állapotokkal",
+          "benefit3": "Alsó mentés gombok minden űrlapon — nem kell felgörgetni a mentéshez",
+          "benefit4": "Törlés és mentés műveletek egyértelműen elválasztva — törlés balra, mentés jobbra",
+          "benefit5": "Szekció fejlécek az űrlap kártyákon a jobb vizuális szervezésért",
+          "benefit6": "Letisztultabb analitika oldal DashboardCard csomagolókkal és javított eszközstatisztika elrendezéssel",
+          "conclusionTitle": "Csiszoltabb Vezérlőpult Élmény",
+          "conclusionText": "Ez az UI újratervezés vizuális konzisztenciát és javított használhatóságot hoz az IQ Rest vezérlőpult minden sarkába. Akár menüelemeket szerkeszt, akár analitikát néz, akár foglalásokat kezel, a felület összefüggőnek és intuitívnak érződik. Az állandó oldalsáv navigációval párosítva étterme digitális QR menüjének kezelése gyorsabb és élvezetesebb, mint valaha.",
+          "ctaText": "Tapasztalja meg az újratervezett vezérlőpultot",
+          "ctaButton": "Vezérlőpult Megnyitása"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Támogatói Csapat"
   },
   "reservations": {
+    "general": "Általános",
     "title": "Foglalások",
     "tables": "Asztalok",
     "settings": "Beállítások",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Általános",
       "noCategories": "Még nincsenek kategóriák",
       "addCategory": "Kategória hozzáadása",
       "editCategory": "Kategória szerkesztése",
@@ -1628,6 +1660,7 @@
       "sortError": "A rendezési sorrend mentése nem sikerült"
     },
     "items": {
+      "general": "Általános",
       "noItems": "Még nincsenek tételek. Hozza létre az első tételt a kezdéshez.",
       "noCategoriesHint": "Először adjon hozzá egy kategóriát a tételek létrehozásához.",
       "addItem": "Tétel hozzáadása",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Videó vagy kép feltöltése",
       "removeMedia": "Eltávolítás",
       "accentColor": "Kiemelő szín",
-      "accentColorHint": "Fő szín a gombokhoz és kiemelésekhez a weboldalán",
+      "accentColorHint": "A gombok és kiemelések fő színe a weboldalán. Használja a szivárvány gombot bármilyen szín kiválasztásához.",
       "save": "Mentés",
       "fetchError": "A dizájnbeállítások betöltése nem sikerült",
       "saveError": "A dizájnbeállítások mentése nem sikerült",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Rendelések",
       "ordersRequireWhatsApp": "Add meg a WhatsApp számot a Kapcsolatok oldalon a rendelések engedélyezéséhez",
       "ordersEnabled": "Rendelések engedélyezése",
-      "ordersOn": "Az ügyfelek rendelhetnekon",
-      "ordersOff": "Rendelés letiltva",
+      "ordersOn": "Rendelések fogadása",
+      "ordersOff": "Rendelések fogadása",
       "orderMode": "Rendelési mód",
-      "orderModeWhatsapp": "Csak WhatsApp",
-      "orderModeInternal": "Csak belső",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Belső",
       "orderModeBoth": "WhatsApp + Belső",
       "orderModeWhatsappHint": "A rendelések közvetlenül a WhatsApp-ra kerülnek",
       "orderModeInternalHint": "A rendelések az irányítópultra mentődnek",
       "orderModeBothHint": "A rendelések mentődnek és WhatsApp-on is elküldődnek",
-      "ordersFieldsHint": "Az engedélyezett mezők kitöltése kötelező az ügyfél számára",
+      "ordersFieldsHint": "Kötelező mezők:",
       "ordersName": "Név",
-      "ordersNameOn": "Az ügyfélnek meg kell adnia a nevét",
-      "ordersNameOff": "Név mező rejtve",
+      "ordersNameOn": "Név",
+      "ordersNameOff": "Név",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Az ügyfélnek meg kell adnia a telefonszámát",
-      "ordersPhoneOff": "Telefon mező rejtve",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Kiszállítási Cím",
-      "ordersAddressOn": "Az ügyfélnek meg kell adnia a kiszállítási címet",
-      "ordersAddressOff": "Cím mező rejtve"
+      "ordersAddressOn": "Cím",
+      "ordersAddressOff": "Cím",
+      "orderModeHint": "A belső rendelések a panelen kerülnek mentésre. A WhatsApp rendelések közvetlenül a WhatsApp-jára érkeznek. Mindkettőt egyszerre is engedélyezheti.",
+      "ordersFieldsDescription": "A bekapcsolt mezők kitöltése kötelező lesz a vásárló számára rendeléskor.",
+      "slugHint": "Ez az Ön egyedi URL-címe, ahol az ügyfelek megtekinthetik az étlapját. Ossza meg ezt a linket vagy használja a QR-kódjában. Így jelenik meg: iq-rest.com/m/az-ön-slug"
     },
     "general": {
       "save": "Mentés",

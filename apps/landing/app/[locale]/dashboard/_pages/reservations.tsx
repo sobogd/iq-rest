@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { format, isToday, isTomorrow, parseISO } from "date-fns";
-import { Check, X, Loader2, Settings, AlertCircle } from "lucide-react";
+import { Check, X, Loader2, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
@@ -10,8 +10,7 @@ import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { useDashboard } from "../_context/dashboard-context";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import type { SubscriptionStatus } from "@prisma/client";
-import type { PlanType } from "@/lib/stripe-config";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface Reservation {
   id: string;
@@ -41,16 +40,9 @@ const POLLING_INTERVAL = 30000;
 
 interface ReservationsPageProps {
   initialReservations: Reservation[];
-  initialSubscription: {
-    plan: PlanType;
-    subscriptionStatus: SubscriptionStatus;
-    billingCycle: string | null;
-    currentPeriodEnd: string | null;
-    paymentProcessing: boolean;
-  } | null;
 }
 
-export function ReservationsPage({ initialReservations, initialSubscription }: ReservationsPageProps) {
+export function ReservationsPage({ initialReservations }: ReservationsPageProps) {
   const t = useTranslations("reservations");
   const tSettings = useTranslations("reservationSettings");
   const { translations } = useDashboard();
@@ -58,10 +50,6 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
 
   const [reservations, setReservations] = useState<Reservation[]>(initialReservations);
   const [updating, setUpdating] = useState<string | null>(null);
-
-  const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
-  const currentPlan = initialSubscription?.plan ?? "FREE";
-  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   const fetchReservations = useCallback(async () => {
     try {
@@ -224,42 +212,11 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
   function renderGroup(title: string, items: Reservation[]) {
     if (items.length === 0) return null;
     return (
-      <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+      <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
         <div className="flex items-center px-4 h-12 bg-muted/30">
           <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{title}</span>
         </div>
         {items.map((r, i) => renderReservationRow(r, i === 0))}
-      </div>
-    );
-  }
-
-  // No active subscription — show only the amber banner
-  if (!hasActiveSubscription) {
-    return (
-      <div className="flex flex-col h-full">
-        <PageHeader title={translations.pages.reservations} />
-        <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-          <div className="max-w-lg mx-auto">
-          <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
-            <div className="flex gap-3 md:gap-4 md:items-center">
-              <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
-              <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
-                <p className="text-sm">
-                  {tSettings("subscriptionRequired")}
-                </p>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                  onClick={() => router.push("/dashboard/billing")}
-                >
-                  {tSettings("subscribe")}
-                </Button>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
       </div>
     );
   }
@@ -277,11 +234,18 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
         </button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
 
         {activeReservations.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-16">
+          <div className="flex flex-col items-center justify-center py-16 gap-4">
             <p className="text-muted-foreground">{t("noReservations")}</p>
+            <button
+              onClick={() => { track(DashboardEvent.CLICKED_RESERVATION_SETTINGS); router.push("/dashboard/reservation-settings"); }}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium"
+            >
+              <Settings className="h-4 w-4" />
+              {tSettings("title")}
+            </button>
           </div>
         ) : (
           <div className="space-y-4">
@@ -291,7 +255,7 @@ export function ReservationsPage({ initialReservations, initialSubscription }: R
             {renderGroup(t("otherReservations"), groupedReservations.other)}
           </div>
         )}
-        </div>
+        </DashboardContent>
       </div>
 
     </div>

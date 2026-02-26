@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import { RefreshCw, Loader2 } from "lucide-react";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface ScanFile {
   url: string;
@@ -166,7 +167,7 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+    <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
       <div className="px-4 py-3 border-b border-foreground/5">
         <span className="text-sm font-medium">{title}</span>
       </div>
@@ -186,7 +187,7 @@ function StatCard({
   detail?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-border bg-muted/50 px-4 py-3">
+    <div className="rounded-md border border-border bg-muted/50 px-4 py-3">
       <p className="text-xs text-muted-foreground">{label}</p>
       <p className="text-xl font-semibold">{value}</p>
       {detail && (
@@ -353,9 +354,9 @@ export function AdminOnboardingPage() {
         </button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
           {/* Time Range */}
-          <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden flex">
+          <div className="rounded-md border border-border bg-muted/50 overflow-hidden flex">
             {TIME_RANGES.map((range) => (
               <button
                 key={range.value}
@@ -614,7 +615,7 @@ export function AdminOnboardingPage() {
               </div>
             </Card>
           )}
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

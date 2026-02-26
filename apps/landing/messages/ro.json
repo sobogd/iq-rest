@@ -695,6 +695,36 @@
       "description": "IQ Rest se îmbunătățește constant pentru a ajuta restaurantele și cafenelele să creeze meniuri digitale QR profesionale. Urmărește changelog-ul nostru pentru a rămâne la curent cu cele mai recente funcții pentru site-ul tău de restaurant și soluția de meniu QR."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Redesign Panou de Control: Carduri Uniforme, Navigare și Acțiuni pentru Formulare",
+        "description": "Un panou de control rafinat cu stilizare uniformă a cardurilor, bară laterală de navigare permanentă, stări active colorate și acțiuni de salvare/ștergere în partea de jos a fiecărei pagini de formular.",
+        "meta": {
+          "title": "Redesign Panou de Control: Carduri, Navigare și Formulare | IQ Rest",
+          "description": "Panoul de control IQ Rest a fost redesignat cu componente de carduri uniforme, bară laterală de navigare permanentă cu evidențierea paginii active și acțiuni îmbunătățite pentru formulare. Gestionați meniul QR al restaurantului cu o interfață mai curată și mai intuitivă."
+        },
+        "content": {
+          "intro": "IQ Rest a trecut printr-un redesign complet al interfeței panoului de control. Fiecare pagină folosește acum stilizare uniformă a cardurilor cu raze de colț unificate, o bară laterală de navigare permanentă cu stări active colorate și pagini de formulare îmbunătățite cu acțiuni de salvare și ștergere în partea de jos. Rezultatul este o experiență mai curată și mai rafinată pentru gestionarea meniului QR digital al restaurantului dumneavoastră.",
+          "image1Alt": "Panou de control redesignat cu stilizare uniformă a cardurilor",
+          "image1Caption": "Componente de carduri unificate pe toate paginile panoului de control",
+          "section1Title": "Design Uniform al Cardurilor pe Toate Paginile",
+          "section1Text": "Fiecare pagină a panoului de control folosește acum o componentă DashboardCard unificată cu chenare rotunjite uniforme, culori subtile de fundal și anteturi opționale de secțiune. Analize, facturare, setări, contacte, setări rezervări și toate paginile de formulare împărtășesc același limbaj vizual. Etichetele de indiciu cu sfaturi în popover înlocuiesc textele descriptive inline, menținând interfața curată oferind în același timp context util când este necesar.",
+          "section2Title": "Bară Laterală de Navigare Permanentă cu Stări Active",
+          "section2Text": "Pe ecranele desktop, o bară laterală de navigare permanentă este acum vizibilă pe fiecare pagină. Pagina activă este evidențiată cu o culoare de fundal accentuată, făcând imediat clar unde vă aflați. Subpaginile precum categorii, produse și comenzi evidențiază corect elementul părinte Meniu. Bara laterală include acces rapid la Meniu, Tipărire QR, Rezervări, Analize, Setări, Contacte, Facturare și Suport — fără a părăsi vizualizarea curentă.",
+          "section3Title": "Pagini de Formulare Îmbunătățite cu Acțiuni în Partea de Jos",
+          "section3Text": "Toate paginile de formulare — categorii, produse, mese, design, setări, contacte și setări rezervări — au acum un buton duplicat de salvare în partea de jos în culoare accentuată. Butoanele de ștergere apar în partea stângă cu un stil discret. Aceasta înseamnă că nu mai trebuie să derulați înapoi sus pentru a salva modificările. Butonul de deconectare a fost mutat din bara laterală în partea de jos a paginii de design, menținând navigarea concentrată pe acțiunile esențiale.",
+          "benefitsTitle": "Beneficiile Redesign-ului Interfeței",
+          "benefit1": "Stilizare uniformă a cardurilor cu chenare și fundaluri consistente pe toate paginile",
+          "benefit2": "Bară laterală de navigare permanentă pe desktop cu stări active colorate",
+          "benefit3": "Butoane de salvare în partea de jos pe toate formularele — nu mai trebuie să derulați sus",
+          "benefit4": "Acțiuni de ștergere și salvare clar separate — ștergere stânga, salvare dreapta",
+          "benefit5": "Anteturi de secțiune pe cardurile formularelor pentru o organizare vizuală mai bună",
+          "benefit6": "Pagină de analize mai curată cu wrapper-e DashboardCard și aspect îmbunătățit al statisticilor pe dispozitive",
+          "conclusionTitle": "O Experiență Mai Rafinată a Panoului de Control",
+          "conclusionText": "Acest redesign al interfeței aduce consistență vizuală și utilizabilitate îmbunătățită în fiecare colț al panoului de control IQ Rest. Fie că editați articole din meniu, verificați analizele sau gestionați rezervările, interfața se simte coerentă și intuitivă. Combinat cu bara laterală de navigare permanentă, gestionarea meniului QR digital al restaurantului este mai rapidă și mai plăcută ca niciodată.",
+          "ctaText": "Experimentați panoul de control redesignat",
+          "ctaButton": "Deschide Panoul de Control"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Echipa de suport"
   },
   "reservations": {
+    "general": "General",
     "title": "Rezerve",
     "tables": "Mese",
     "settings": "Setări",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "General",
       "noCategories": "Încă nu sunt categorii",
       "addCategory": "Adaugă categorie",
       "editCategory": "Editează categoria",
@@ -1628,6 +1660,7 @@
       "sortError": "Nu s-a reușit salvarea ordinii de sortare"
     },
     "items": {
+      "general": "General",
       "noItems": "Nu există încă articole. Creați primul articol pentru a începe.",
       "noCategoriesHint": "Adăugați mai întâi o categorie pentru a crea articole.",
       "addItem": "Adaugă articol",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Încărcați videoclip sau imagine",
       "removeMedia": "Ștergeți",
       "accentColor": "Culoare accent",
-      "accentColorHint": "Culoarea principală pentru butoane și evidențieri pe site-ul dvs.",
+      "accentColorHint": "Culoarea principală pentru butoane și evidențieri pe site-ul dvs. Folosiți butonul curcubeu pentru a alege orice culoare.",
       "save": "Salvează",
       "fetchError": "Încărcarea setărilor de design a eșuat",
       "saveError": "Salvarea setărilor de design a eșuat",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Comenzi",
       "ordersRequireWhatsApp": "Adaugă un număr WhatsApp pe pagina de Contacte pentru a activa comenzile",
       "ordersEnabled": "Activează comenzile",
-      "ordersOn": "Clienții pot comanda prin",
-      "ordersOff": "Comenzile sunt dezactivate",
+      "ordersOn": "Acceptă comenzi",
+      "ordersOff": "Acceptă comenzi",
       "orderMode": "Mod comandă",
-      "orderModeWhatsapp": "Doar WhatsApp",
-      "orderModeInternal": "Doar intern",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Intern",
       "orderModeBoth": "WhatsApp + Intern",
       "orderModeWhatsappHint": "Comenzile sunt trimise direct pe WhatsApp",
       "orderModeInternalHint": "Comenzile sunt salvate în panou",
       "orderModeBothHint": "Comenzile sunt salvate și trimise și prin WhatsApp",
-      "ordersFieldsHint": "Câmpurile activate sunt necesare pentru a fi completate de client",
+      "ordersFieldsHint": "Câmpuri obligatorii:",
       "ordersName": "Nume",
-      "ordersNameOn": "Clientul trebuie să introducă numele său",
-      "ordersNameOff": "Câmpul pentru nume este ascuns",
+      "ordersNameOn": "Nume",
+      "ordersNameOff": "Nume",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Clientul trebuie să introducă telefonul",
-      "ordersPhoneOff": "Câmpul pentru telefon este ascuns",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Adresă de livrare",
-      "ordersAddressOn": "Clientul trebuie să introducă adresa de livrare",
-      "ordersAddressOff": "Câmpul pentru adresă este ascuns"
+      "ordersAddressOn": "Adresă",
+      "ordersAddressOff": "Adresă",
+      "orderModeHint": "Comenzile interne sunt salvate în panou. Comenzile WhatsApp sunt trimise direct pe WhatsApp-ul dvs. Puteți activa ambele simultan.",
+      "ordersFieldsDescription": "Câmpurile activate vor fi obligatorii pentru client la plasarea comenzii.",
+      "slugHint": "Aceasta este adresa URL unică unde clienții pot vizualiza meniul dvs. Distribuiți acest link sau folosiți-l în codul QR. Va apărea ca: iq-rest.com/m/slug-ul-dvs"
     },
     "general": {
       "save": "Salvează",

@@ -156,7 +156,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
         <div className="max-w-md mx-auto px-5 pb-10">
           {/* Hero */}
           <div className="text-center pt-12 pb-8">
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+            <div className="w-16 h-16 bg-primary/10 rounded-md flex items-center justify-center mx-auto mb-6 shadow-sm">
               <Rocket className="h-7 w-7 text-primary" />
             </div>
             <h1 className="text-2xl font-bold tracking-tight mb-2">{t("title")}</h1>
@@ -174,7 +174,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
                 key={option.id}
                 onClick={() => setSelectedPlan(option.id)}
                 className={cn(
-                  "relative rounded-2xl border-2 p-5 text-center transition-all",
+                  "relative rounded-md border-2 p-5 text-center transition-all",
                   selectedPlan === option.id
                     ? "border-primary bg-primary/5"
                     : "border-border bg-muted/50"
@@ -225,7 +225,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
                 key={key}
                 className="flex items-start gap-3.5 py-3.5 border-b border-border/50 last:border-0"
               >
-                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
                   <Icon className="h-4 w-4 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -257,7 +257,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
 
           {/* Comparison table */}
           {showComparison && (
-            <div className="mb-7 rounded-xl border border-border overflow-hidden">
+            <div className="mb-7 rounded-md border border-border overflow-hidden">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-muted/30">
@@ -313,7 +313,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
           <div className="pt-2">
             <Button
               size="lg"
-              className="w-full h-14 text-base font-semibold rounded-xl shadow-md"
+              className="w-full h-14 text-base font-semibold rounded-md shadow-md"
               onClick={handleUpgrade}
               disabled={loading}
             >

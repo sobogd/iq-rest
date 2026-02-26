@@ -5,12 +5,12 @@ import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
+import { DashboardNavHeader } from "../_components/dashboard-nav";
 import {
   QrCode,
   Palette,
   Phone,
   Home,
-  LogOut,
   UtensilsCrossed,
   Languages,
   BarChart3,
@@ -29,6 +29,7 @@ import {
   ClipboardList,
 } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ className?: string }> }[] = [
   { key: "menu", page: "menu", icon: UtensilsCrossed },
@@ -55,7 +56,7 @@ interface DashboardHomeProps {
 
 export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
   const tPages = useTranslations("dashboard.pages");
-  const tDashboard = useTranslations("dashboard");
+
   const tHome = useTranslations("dashboard.home");
   const { translations } = useDashboard();
   const router = useRouter();
@@ -82,11 +83,12 @@ export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
   return (
     <div className="flex flex-col h-full">
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-        <div className="flex items-center py-3 max-w-lg mx-auto">
-          <div className="flex items-center justify-center h-10 w-10 -ml-2">
+        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
+          <DashboardNavHeader />
+          <div className="flex items-center justify-center h-10 w-10 -ml-2 md:hidden">
             <Home className="h-5 w-5" />
           </div>
-          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{translations.pages.home}</h1>
+          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{translations.pages.home}</h1>
           <button
             onClick={() => { track(DashboardEvent.CLICKED_HELP); router.push(PAGE_PATHS.support); }}
             className="flex items-center justify-center h-10 w-10 -mr-2"
@@ -96,9 +98,9 @@ export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
         </div>
       </header>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="w-full max-w-lg mx-auto flex flex-col gap-4">
+        <DashboardContent innerClassName="flex flex-col gap-4">
             {/* Navigation card */}
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
               {allSections.map((item, index) => (
                 <button
                   key={item.key}
@@ -116,7 +118,7 @@ export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
 
             {/* Scan usage indicator */}
             {scanUsage && scanUsage.used >= 20 && (
-              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden px-4 py-3">
+              <div className="rounded-md border border-border bg-muted/50 overflow-hidden px-4 py-3">
                 <div className={`flex items-center justify-between${scanUsage.limit ? " mb-2" : ""}`}>
                   <span className="text-sm font-medium">{tHome("scansTitle")}</span>
                   <span className="text-sm text-muted-foreground">
@@ -138,20 +140,9 @@ export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
               </div>
             )}
 
-            {/* Logout */}
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
-              <button
-                onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
-                className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
-              >
-                <LogOut className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium">{tDashboard("logout")}</span>
-              </button>
-            </div>
-
             {/* Admin shortcuts */}
             {isAdmin && (
-              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
                 <button
                   onClick={() => router.push("/dashboard/admin")}
                   className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
@@ -210,7 +201,7 @@ export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
                 </button>
               </div>
             )}
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

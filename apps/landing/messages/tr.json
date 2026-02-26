@@ -695,6 +695,36 @@
       "description": "IQ Rest, restoranlar ve kafelerin profesyonel dijital QR menüler oluşturmasına yardımcı olmak için sürekli olarak gelişmektedir. Restoran web siteniz ve QR menü çözümünüz için en son özelliklerden haberdar olmak için değişiklik günlüğümüzü takip edin."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Kontrol Paneli Arayüz Yenilemesi: Tutarlı Kartlar, Gezinme ve Form İşlemleri",
+        "description": "Birleşik kart tasarımı, kalıcı kenar çubuğu gezinmesi, vurgu renkli aktif durumlar ve her form sayfasında alt kaydetme/silme işlemleriyle cilalı bir kontrol paneli.",
+        "meta": {
+          "title": "Kontrol Paneli Arayüz Yenilemesi: Kartlar, Gezinme ve Formlar | IQ Rest",
+          "description": "IQ Rest kontrol paneli tutarlı kart bileşenleri, aktif sayfa vurgulama ile kalıcı kenar çubuğu gezinmesi ve geliştirilmiş form işlemleriyle yeniden tasarlandı. Restoran QR menünüzü daha temiz ve sezgisel bir arayüzle yönetin."
+        },
+        "content": {
+          "intro": "IQ Rest kapsamlı bir kontrol paneli arayüz yenilemesinden geçti. Her sayfa artık birleşik köşe yuvarlatmaları ile tutarlı kart tasarımı, vurgu renkli aktif durumlarla kalıcı kenar çubuğu gezinmesi ve alt kaydetme ile silme işlemlerine sahip geliştirilmiş form sayfaları kullanıyor. Sonuç, restoranınızın dijital QR menüsünü yönetirken daha temiz ve cilalı bir deneyim.",
+          "image1Alt": "Tutarlı kart tasarımıyla yenilenen kontrol paneli",
+          "image1Caption": "Tüm kontrol paneli sayfalarında birleşik kart bileşenleri",
+          "section1Title": "Tüm Sayfalarda Tutarlı Kart Tasarımı",
+          "section1Text": "Her kontrol paneli sayfası artık tutarlı yuvarlatılmış kenarlıklar, hafif arka plan renkleri ve isteğe bağlı bölüm başlıklarına sahip birleşik bir DashboardCard bileşeni kullanıyor. Analizler, faturalandırma, ayarlar, iletişim, rezervasyon ayarları ve tüm form sayfaları aynı görsel dili paylaşıyor. Açılır ipuçlarına sahip işaret etiketleri, satır içi açıklama metinlerinin yerini alarak arayüzü temiz tutuyor ve gerektiğinde yardımcı bilgi sunuyor.",
+          "section2Title": "Aktif Durumlarla Kalıcı Kenar Çubuğu Gezinmesi",
+          "section2Text": "Masaüstü ekranlarda, her sayfada kalıcı bir kenar çubuğu gezinmesi artık görünür durumda. Aktif sayfa vurgu rengi arka planıyla öne çıkarılarak nerede olduğunuz hemen belli oluyor. Kategoriler, ürünler ve siparişler gibi alt sayfalar üst Menü öğesini doğru şekilde vurguluyor. Kenar çubuğu Menü, QR Yazdır, Rezervasyonlar, Analizler, Ayarlar, İletişim, Faturalandırma ve Destek'e hızlı erişim sağlıyor — mevcut görünümden ayrılmadan.",
+          "section3Title": "Alt İşlemlerle Geliştirilmiş Form Sayfaları",
+          "section3Text": "Tüm form sayfaları — kategoriler, ürünler, masalar, tasarım, ayarlar, iletişim ve rezervasyon ayarları — artık alt kısımda vurgu renginde yinelenen bir kaydetme düğmesine sahip. Silme düğmeleri sol tarafta soluk bir stilde görünüyor. Bu, değişikliklerinizi kaydetmek için artık yukarı kaydırmanız gerekmediği anlamına geliyor. Çıkış düğmesi kenar çubuğundan tasarım sayfasının alt kısmına taşınarak gezinmenin temel işlemlere odaklanması sağlandı.",
+          "benefitsTitle": "Arayüz Yenilemesinin Avantajları",
+          "benefit1": "Tüm sayfalarda tutarlı kenarlıklar ve arka planlarla birleşik kart tasarımı",
+          "benefit2": "Masaüstünde vurgu renkli aktif durumlarla kalıcı kenar çubuğu gezinmesi",
+          "benefit3": "Tüm formlarda alt kaydetme düğmeleri — kaydetmek için yukarı kaydırmaya gerek yok",
+          "benefit4": "Silme ve kaydetme işlemleri açıkça ayrılmış — silme solda, kaydetme sağda",
+          "benefit5": "Daha iyi görsel organizasyon için form kartlarında bölüm başlıkları",
+          "benefit6": "DashboardCard sarmalayıcıları ve geliştirilmiş cihaz istatistikleri düzeniyle daha temiz analiz sayfası",
+          "conclusionTitle": "Daha Cilalı Bir Kontrol Paneli Deneyimi",
+          "conclusionText": "Bu arayüz yenilemesi, IQ Rest kontrol panelinin her köşesine görsel tutarlılık ve geliştirilmiş kullanılabilirlik getiriyor. İster menü öğelerini düzenliyor, ister analizlere bakıyor, ister rezervasyonları yönetiyor olun, arayüz uyumlu ve sezgisel hissettiriyor. Kalıcı kenar çubuğu gezinmesiyle birleşince, restoranınızın dijital QR menüsünü yönetmek her zamankinden daha hızlı ve keyifli.",
+          "ctaText": "Yenilenen kontrol panelini deneyimleyin",
+          "ctaButton": "Kontrol Panelini Aç"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Restoran QR Menünüz İçin Duyarlı Destek",
         "description": "QR menünüzle ilgili her türlü soru ve değişiklik için duyarlı destek alın. Hızlı yardım için ekibimizle doğrudan sohbet edin.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Destek Ekibi"
   },
   "reservations": {
+    "general": "Genel",
     "title": "Rezervasyonlar",
     "tables": "Masalar",
     "settings": "Ayarlar",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Genel",
       "noCategories": "Henüz kategori yok",
       "addCategory": "Kategori ekle",
       "editCategory": "Kategoriyi Düzenle",
@@ -1628,6 +1660,7 @@
       "sortError": "Sıralama kaydetmede başarısız olundu"
     },
     "items": {
+      "general": "Genel",
       "noItems": "Henüz hiç ürün yok. Başlamak için ilk ürününüzü oluşturun.",
       "noCategoriesHint": "Ürün oluşturmak için önce bir kategori ekleyin.",
       "addItem": "Ürün ekle",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Video veya resim yükle",
       "removeMedia": "Kaldır",
       "accentColor": "Vurgu Rengi",
-      "accentColorHint": "Web sitenizdeki butonlar ve vurgular için ana renk",
+      "accentColorHint": "Web sitenizdeki düğmeler ve vurgular için ana renk. Herhangi bir renk seçmek için gökkuşağı düğmesini kullanın.",
       "save": "Kaydet",
       "fetchError": "Tasarım ayarlarını yükleme başarısız oldu",
       "saveError": "Tasarım ayarlarını kaydetme başarısız oldu",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Siparişleri",
       "ordersRequireWhatsApp": "Siparişleri etkinleştirmek için İletişimlar sayfasına bir WhatsApp numarası ekleyin",
       "ordersEnabled": "Siparişleri Etkinleştir",
-      "ordersOn": "Müşterilerüzerinden sipariş verebilir",
-      "ordersOff": "Sipariş verme devre dışı",
+      "ordersOn": "Sipariş kabul et",
+      "ordersOff": "Sipariş kabul et",
       "orderMode": "Sipariş modu",
-      "orderModeWhatsapp": "Sadece WhatsApp",
-      "orderModeInternal": "Sadece dahili",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Dahili",
       "orderModeBoth": "WhatsApp + Dahili",
       "orderModeWhatsappHint": "Siparişler doğrudan WhatsApp'a gönderilir",
       "orderModeInternalHint": "Siparişler panelde kaydedilir",
       "orderModeBothHint": "Siparişler kaydedilir ve WhatsApp üzerinden de gönderilir",
-      "ordersFieldsHint": "Etkin alanlar müşterinin doldurması için gereklidir",
+      "ordersFieldsHint": "Zorunlu alanlar:",
       "ordersName": "Ad",
-      "ordersNameOn": "Müşteri adını girmelidir",
-      "ordersNameOff": "Ad alanı gizli",
+      "ordersNameOn": "İsim",
+      "ordersNameOff": "İsim",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Müşteri telefonunu girmelidir",
-      "ordersPhoneOff": "Telefon alanı gizli",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Teslimat Adresi",
-      "ordersAddressOn": "Müşteri teslimat adresini girmelidir",
-      "ordersAddressOff": "Adres alanı gizli"
+      "ordersAddressOn": "Adres",
+      "ordersAddressOff": "Adres",
+      "orderModeHint": "Dahili siparişler panelde kaydedilir. WhatsApp siparişleri doğrudan WhatsApp'ınıza gönderilir. İkisini aynı anda etkinleştirebilirsiniz.",
+      "ordersFieldsDescription": "Etkinleştirilen alanlar müşteri sipariş verirken zorunlu olacaktır.",
+      "slugHint": "Bu, müşterilerin menünüzü görüntüleyebileceği benzersiz URL adresinizdir. Bu bağlantıyı paylaşın veya QR kodunuzda kullanın. Şu şekilde görünecektir: iq-rest.com/m/slug-unuz"
     },
     "general": {
       "save": "Kaydet",

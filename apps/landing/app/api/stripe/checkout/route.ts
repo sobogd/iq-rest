@@ -3,29 +3,11 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { stripe, PRICE_LOOKUP_KEYS, getLookupKeyWithCurrency } from "@/lib/stripe";
 import { SupportedCurrency } from "@/lib/country-currency-map";
-
-async function getUserCompany() {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email");
-
-  if (!userEmail?.value) return null;
-
-  const user = await prisma.user.findUnique({
-    where: { email: userEmail.value },
-    include: {
-      companies: {
-        include: { company: true },
-        take: 1,
-      },
-    },
-  });
-
-  return user?.companies[0]?.company ?? null;
-}
+import { getAuthCompany } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
   try {
-    const company = await getUserCompany();
+    const company = await getAuthCompany();
 
     if (!company) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -38,6 +20,14 @@ export async function POST(request: NextRequest) {
     if (!validKeys.includes(priceLookupKey)) {
       return NextResponse.json(
         { error: "Invalid price lookup key" },
+        { status: 400 }
+      );
+    }
+
+    // Prevent duplicate subscriptions
+    if (company.subscriptionStatus === "ACTIVE" && company.stripeSubscriptionId) {
+      return NextResponse.json(
+        { error: "Active subscription already exists. Use the billing portal to manage it." },
         { status: 400 }
       );
     }

@@ -695,6 +695,36 @@
       "description": "IQ Rest verbessert sich ständig, um Restaurants und Cafés zu helfen, professionelle digitale QR-Menüs zu erstellen. Folgen Sie unserem Änderungsprotokoll, um über die neuesten Funktionen für Ihre Restaurant-Website und QR-Menü-Lösung informiert zu bleiben."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Dashboard-Redesign: Einheitliche Karten, Navigation & Formularaktionen",
+        "description": "Ein aufgefrischtes Dashboard mit einheitlichem Kartenstil, dauerhafter Seitenleisten-Navigation, akzentfarbigen aktiven Zuständen und Speichern-/Löschen-Aktionen am Seitenende jeder Formularseite.",
+        "meta": {
+          "title": "Dashboard-Redesign: Karten, Navigation & Formulare | IQ Rest",
+          "description": "Das IQ Rest Dashboard wurde mit einheitlichen Kartenkomponenten, dauerhafter Seitenleisten-Navigation mit Hervorhebung der aktiven Seite und verbesserten Formularaktionen neu gestaltet. Verwalten Sie Ihr Restaurant-QR-Menü mit einer übersichtlicheren, intuitiveren Oberfläche."
+        },
+        "content": {
+          "intro": "IQ Rest hat ein umfassendes Dashboard-Redesign erhalten. Jede Seite verwendet jetzt ein einheitliches Kartendesign mit gleichmäßigen Eckenradien, eine dauerhafte Seitenleisten-Navigation mit akzentfarbigen aktiven Zuständen und verbesserte Formularseiten mit Speichern- und Löschen-Aktionen am unteren Rand. Das Ergebnis ist ein aufgeräumteres, professionelleres Erlebnis bei der Verwaltung Ihres digitalen QR-Menüs.",
+          "image1Alt": "Neu gestaltetes Dashboard mit einheitlichem Kartenstil",
+          "image1Caption": "Einheitliche Kartenkomponenten auf allen Dashboard-Seiten",
+          "section1Title": "Einheitliches Kartendesign auf Allen Seiten",
+          "section1Text": "Jede Dashboard-Seite verwendet jetzt eine einheitliche DashboardCard-Komponente mit konsistenten abgerundeten Rändern, dezenten Hintergrundfarben und optionalen Abschnittsüberschriften. Analysen, Abrechnung, Einstellungen, Kontakte, Reservierungseinstellungen und alle Formularseiten teilen dieselbe visuelle Sprache. Hinweislabels mit Popover-Tooltips ersetzen Inline-Beschreibungstexte und halten die Oberfläche übersichtlich, während sie bei Bedarf hilfreichen Kontext bieten.",
+          "section2Title": "Dauerhafte Seitenleisten-Navigation mit Aktiven Zuständen",
+          "section2Text": "Auf Desktop-Bildschirmen ist eine dauerhafte Seitenleisten-Navigation auf jeder Seite sichtbar. Die aktive Seite wird mit einem Akzentfarben-Hintergrund hervorgehoben, sodass sofort klar ist, wo Sie sich befinden. Unterseiten wie Kategorien, Artikel und Bestellungen heben das übergeordnete Menü-Element korrekt hervor. Die Seitenleiste bietet schnellen Zugriff auf Menü, QR drucken, Reservierungen, Analysen, Einstellungen, Kontakte, Abrechnung und Support — alles ohne die aktuelle Ansicht zu verlassen.",
+          "section3Title": "Verbesserte Formularseiten mit Aktionen am Seitenende",
+          "section3Text": "Alle Formularseiten — Kategorien, Artikel, Tische, Design, Einstellungen, Kontakte und Reservierungseinstellungen — verfügen jetzt über einen zusätzlichen Speichern-Button am unteren Rand in Akzentfarbe. Löschen-Buttons erscheinen auf der linken Seite in dezentem Stil. Das bedeutet, dass Sie nicht mehr nach oben scrollen müssen, um Ihre Änderungen zu speichern. Der Abmelden-Button wurde von der Seitenleiste an das Ende der Design-Seite verschoben, damit die Navigation auf wesentliche Aktionen fokussiert bleibt.",
+          "benefitsTitle": "Vorteile des UI-Redesigns",
+          "benefit1": "Einheitlicher Kartenstil mit konsistenten Rändern und Hintergründen auf allen Seiten",
+          "benefit2": "Dauerhafte Seitenleisten-Navigation auf dem Desktop mit akzentfarbigen aktiven Zuständen",
+          "benefit3": "Speichern-Buttons am unteren Rand aller Formulare — kein Hochscrollen mehr nötig",
+          "benefit4": "Löschen- und Speichern-Aktionen klar getrennt — Löschen links, Speichern rechts",
+          "benefit5": "Abschnittsüberschriften auf Formularkarten für bessere visuelle Organisation",
+          "benefit6": "Aufgeräumtere Analyseseite mit DashboardCard-Wrappern und verbessertem Gerätestatistik-Layout",
+          "conclusionTitle": "Ein Professionelleres Dashboard-Erlebnis",
+          "conclusionText": "Dieses UI-Redesign bringt visuelle Konsistenz und verbesserte Benutzerfreundlichkeit in jeden Bereich des IQ Rest Dashboards. Ob Sie Menüartikel bearbeiten, Analysen prüfen oder Reservierungen verwalten — die Oberfläche wirkt zusammenhängend und intuitiv. Zusammen mit der dauerhaften Seitenleisten-Navigation ist die Verwaltung Ihres digitalen QR-Menüs schneller und angenehmer als je zuvor.",
+          "ctaText": "Entdecken Sie das neue Dashboard",
+          "ctaButton": "Dashboard öffnen"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Reaktionsschneller Support für Ihr Restaurant QR-Menü",
         "description": "Erhalten Sie reaktionsschnellen Support für Fragen und Änderungen zu Ihrem QR-Menü im Restaurant oder Café. Direkter Chat mit unserem Team für schnelle Unterstützung.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Support-Team"
   },
   "reservations": {
+    "general": "Allgemein",
     "title": "Reservierungen",
     "tables": "Tische",
     "settings": "Einstellungen",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Allgemein",
       "noCategories": "Noch keine Kategorien",
       "addCategory": "Kategorie hinzufügen",
       "editCategory": "Kategorie bearbeiten",
@@ -1628,6 +1660,7 @@
       "sortError": "Fehler beim Speichern der Sortierreihenfolge"
     },
     "items": {
+      "general": "Allgemein",
       "noItems": "Noch keine Artikel. Erstellen Sie Ihren ersten Artikel, um zu beginnen.",
       "noCategoriesHint": "Fügen Sie zuerst eine Kategorie hinzu, um Artikel zu erstellen.",
       "addItem": "Artikel hinzufügen",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Video oder Bild hochladen",
       "removeMedia": "Entfernen",
       "accentColor": "Akzentfarbe",
-      "accentColorHint": "Hauptfarbe für Schaltflächen und Hervorhebungen auf Ihrer Website",
+      "accentColorHint": "Hauptfarbe für Schaltflächen und Hervorhebungen auf Ihrer Website. Verwenden Sie die Regenbogen-Taste, um eine beliebige Farbe zu wählen.",
       "save": "Speichern",
       "fetchError": "Fehler beim Laden der Designeinstellungen",
       "saveError": "Fehler beim Speichern der Designeinstellungen",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Bestellungen",
       "ordersRequireWhatsApp": "Fügen Sie eine WhatsApp-Nummer auf der Kontaktseite hinzu, um Bestellungen zu aktivieren",
       "ordersEnabled": "Bestellungen aktivieren",
-      "ordersOn": "Kunden können bestellen",
-      "ordersOff": "Bestellungen deaktiviert",
+      "ordersOn": "Bestellungen annehmen",
+      "ordersOff": "Bestellungen annehmen",
       "orderMode": "Bestellmodus",
-      "orderModeWhatsapp": "Nur WhatsApp",
-      "orderModeInternal": "Nur intern",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Intern",
       "orderModeBoth": "WhatsApp + Intern",
       "orderModeWhatsappHint": "Bestellungen werden direkt an WhatsApp gesendet",
       "orderModeInternalHint": "Bestellungen werden im Dashboard gespeichert",
       "orderModeBothHint": "Bestellungen werden gespeichert und über WhatsApp gesendet",
-      "ordersFieldsHint": "Aktivierte Felder sind erforderlich, damit der Kunde sie ausfüllen kann",
+      "ordersFieldsHint": "Pflichtfelder:",
       "ordersName": "Name",
-      "ordersNameOn": "Kunde muss seinen Namen eingeben",
-      "ordersNameOff": "Namensfeld verborgen",
+      "ordersNameOn": "Name",
+      "ordersNameOff": "Name",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Kunde muss sein Telefon eingeben",
-      "ordersPhoneOff": "Telefonfeld verborgen",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Lieferadresse",
-      "ordersAddressOn": "Kunde muss die Lieferadresse eingeben",
-      "ordersAddressOff": "Adressfeld verborgen"
+      "ordersAddressOn": "Adresse",
+      "ordersAddressOff": "Adresse",
+      "orderModeHint": "Interne Bestellungen werden im Dashboard gespeichert. WhatsApp-Bestellungen werden direkt an Ihr WhatsApp gesendet. Sie können beide gleichzeitig aktivieren.",
+      "ordersFieldsDescription": "Aktivierte Felder müssen vom Kunden bei der Bestellung ausgefüllt werden.",
+      "slugHint": "Dies ist Ihre einzigartige URL-Adresse, unter der Kunden Ihre Speisekarte ansehen können. Teilen Sie diesen Link oder verwenden Sie ihn in Ihrem QR-Code. Er erscheint als: iq-rest.com/m/ihr-slug"
     },
     "general": {
       "save": "Speichern",

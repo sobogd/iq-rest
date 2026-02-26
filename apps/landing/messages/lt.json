@@ -695,6 +695,36 @@
       "description": "IQ Rest nuolat tobulėja, kad padėtų restoranams ir kavinėms kurti profesionalius skaitmeninius QR meniu. Sekite mūsų pakeitimų žurnalą, kad būtumėte informuoti apie naujausias funkcijas jūsų restorano svetainei ir QR meniu sprendimui."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Valdymo skydelio pertvarkymas: Vienodos kortelės, navigacija ir formų veiksmai",
+        "description": "Nušlifuotas valdymo skydelis su vienodu kortelių stiliumi, nuolatine šonine navigacija, akcentine spalva paryškintomis aktyvomis būsenomis ir išsaugojimo/trynimo veiksmais kiekvieno formos puslapio apačioje.",
+        "meta": {
+          "title": "Valdymo skydelio pertvarkymas: Kortelės, navigacija ir formos | IQ Rest",
+          "description": "IQ Rest valdymo skydelis pertvarkytas su vienodais kortelių komponentais, nuolatine šonine navigacija su aktyvaus puslapio paryškinimu ir patobulintais formų veiksmais. Valdykite savo restorano QR meniu švaresne ir intuityvesne sąsaja."
+        },
+        "content": {
+          "intro": "IQ Rest patyrė išsamų valdymo skydelio vartotojo sąsajos pertvarkymą. Kiekvienas puslapis dabar naudoja vienodą kortelių stilių su suderintais kampų užapvalinimu, nuolatinę šoninę navigaciją su akcentine spalva paryškintomis aktyvomis būsenomis ir patobulintus formų puslapius su išsaugojimo ir trynimo veiksmais apačioje. Rezultatas — švaresnė ir labiau nušlifuota patirtis valdant jūsų restorano skaitmeninį QR meniu.",
+          "image1Alt": "Pertvarkytas valdymo skydelis su vienodu kortelių stiliumi",
+          "image1Caption": "Vienodi kortelių komponentai visuose valdymo skydelio puslapiuose",
+          "section1Title": "Vienodas kortelių dizainas visuose puslapiuose",
+          "section1Text": "Kiekvienas valdymo skydelio puslapis dabar naudoja vienodą DashboardCard komponentą su suderintais užapvalintais kraštais, subtilomis fono spalvomis ir pasirenkamomis skilčių antraštėmis. Analitika, atsiskaitymas, nustatymai, kontaktai, rezervacijų nustatymai ir visi formų puslapiai dalinasi ta pačia vizualine kalba. Užuominos su iššokančiais patarimais pakeitė eilučių aprašymus, išlaikant sąsają švarią, tačiau teikiant naudingą kontekstą prireikus.",
+          "section2Title": "Nuolatinė šoninė navigacija su aktyviomis būsenomis",
+          "section2Text": "Staliniuose ekranuose kiekviename puslapyje dabar matoma nuolatinė šoninė navigacija. Aktyvus puslapis paryškintas akcentine spalva fone, iš karto parodant, kur esate. Antriniai puslapiai, tokie kaip kategorijos, prekės ir užsakymai, teisingai paryškina tėvinį elementą Meniu. Šoninė juosta apima greitą prieigą prie Meniu, QR spausdinimo, Rezervacijų, Analitikos, Nustatymų, Kontaktų, Atsiskaitymo ir Palaikymo — visa tai nepaliekant dabartinio rodinio.",
+          "section3Title": "Patobulinti formų puslapiai su veiksmais apačioje",
+          "section3Text": "Visi formų puslapiai — kategorijos, prekės, stalai, dizainas, nustatymai, kontaktai ir rezervacijų nustatymai — dabar turi pakartotą išsaugojimo mygtuką apačioje akcentine spalva. Trynimo mygtukai rodomi kairėje pusėje prislopintu stiliumi. Tai reiškia, kad jums nebereikia slinkti atgal į viršų, kad išsaugotumėte pakeitimus. Atsijungimo mygtukas perkeltas iš šoninės juostos į dizaino puslapio apačią, paliekant navigaciją sutelktą ties esminiais veiksmais.",
+          "benefitsTitle": "Sąsajos pertvarkymo privalumai",
+          "benefit1": "Vienodas kortelių stilius su suderintais kraštais ir fonais visuose puslapiuose",
+          "benefit2": "Nuolatinė šoninė navigacija staliniame kompiuteryje su akcentine spalva paryškintomis būsenomis",
+          "benefit3": "Išsaugojimo mygtukai visų formų apačioje — nereikia slinkti aukštyn",
+          "benefit4": "Trynimo ir išsaugojimo veiksmai aiškiai atskirti — trynimas kairėje, išsaugojimas dešinėje",
+          "benefit5": "Skilčių antraštės formų kortelėse geresnei vizualinei organizacijai",
+          "benefit6": "Švaresnė analitikos puslapis su DashboardCard apvalkalais ir patobulinta įrenginių statistikos išdėstymu",
+          "conclusionTitle": "Labiau nušlifuota valdymo skydelio patirtis",
+          "conclusionText": "Šis sąsajos pertvarkymas atneša vizualinį nuoseklumą ir patobulintą naudojamumą į kiekvieną IQ Rest valdymo skydelio kampelį. Nesvarbu, ar redaguojate meniu elementus, tikrinate analitiką ar valdote rezervacijas, sąsaja atrodo darni ir intuityvi. Kartu su nuolatine šonine navigacija jūsų restorano skaitmeninio QR meniu valdymas yra greitesnis ir malonesnis nei bet kada anksčiau.",
+          "ctaText": "Išbandykite pertvarkytą valdymo skydelį",
+          "ctaButton": "Atidaryti valdymo skydelį"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Pagalbos komanda"
   },
   "reservations": {
+    "general": "Bendra",
     "title": "Rezervacijos",
     "tables": "Stalai",
     "settings": "Nustatymai",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Bendra",
       "noCategories": "Dar nėra kategorijų",
       "addCategory": "Pridėti kategoriją",
       "editCategory": "Redaguoti kategoriją",
@@ -1628,6 +1660,7 @@
       "sortError": "Nepavyko išsaugoti rūšiavimo tvarkos"
     },
     "items": {
+      "general": "Bendra",
       "noItems": "Dar nėra prekių. Sukurkite savo pirmąją prekę, kad pradėtumėte.",
       "noCategoriesHint": "Pirmiausia pridėkite kategoriją, kad galėtumėte kurti prekes.",
       "addItem": "Pridėti prekę",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Įkelti vaizdo įrašą arba nuotrauką",
       "removeMedia": "Pašalinti",
       "accentColor": "Akcento spalva",
-      "accentColorHint": "Pagrindinė spalva mygtukams ir akcentams jūsų svetainėje",
+      "accentColorHint": "Pagrindinė mygtukų ir paryškinimų spalva jūsų svetainėje. Naudokite vaivorykštės mygtuką bet kokiai spalvai pasirinkti.",
       "save": "Išsaugoti",
       "fetchError": "Nepavyko įkelti dizaino nustatymų",
       "saveError": "Nepavyko išsaugoti dizaino nustatymų",
@@ -1790,25 +1823,28 @@
       "ordersSection": "užsakymai",
       "ordersRequireWhatsApp": "Pridėkite WhatsApp numerį Kontaktų puslapyje, kad įgalintumėte užsakymus",
       "ordersEnabled": "Įgalinti užsakymus",
-      "ordersOn": "Klientai gali užsisakyti",
-      "ordersOff": "Užsakymas išjungtas",
+      "ordersOn": "Priimti užsakymus",
+      "ordersOff": "Priimti užsakymus",
       "orderMode": "Užsakymo režimas",
-      "orderModeWhatsapp": "Tik WhatsApp",
-      "orderModeInternal": "Tik vidiniai",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Vidiniai",
       "orderModeBoth": "WhatsApp + Vidiniai",
       "orderModeWhatsappHint": "Užsakymai siunčiami tiesiai į WhatsApp",
       "orderModeInternalHint": "Užsakymai saugomi valdymo skydelyje",
       "orderModeBothHint": "Užsakymai saugomi ir siunčiami per WhatsApp",
-      "ordersFieldsHint": "Įgalinti laukai yra privalomi klientui užpildyti",
+      "ordersFieldsHint": "Privalomi laukai:",
       "ordersName": "Vardas",
-      "ordersNameOn": "Klientas privalo įvesti savo vardą",
-      "ordersNameOff": "Vardo laukas paslėptas",
+      "ordersNameOn": "Vardas",
+      "ordersNameOff": "Vardas",
       "ordersPhone": "Telefonas",
-      "ordersPhoneOn": "Klientas privalo įvesti savo telefoną",
-      "ordersPhoneOff": "Telefono laukas paslėptas",
+      "ordersPhoneOn": "Telefonas",
+      "ordersPhoneOff": "Telefonas",
       "ordersAddress": "Pristatymo adresas",
-      "ordersAddressOn": "Klientas privalo įvesti pristatymo adresą",
-      "ordersAddressOff": "Adreso laukas paslėptas"
+      "ordersAddressOn": "Adresas",
+      "ordersAddressOff": "Adresas",
+      "orderModeHint": "Vidiniai užsakymai saugomi skydelyje. WhatsApp užsakymai siunčiami tiesiai į jūsų WhatsApp. Galite aktyvuoti abu vienu metu.",
+      "ordersFieldsDescription": "Aktyvuoti laukai bus privalomi klientui pateikiant užsakymą.",
+      "slugHint": "Tai yra jūsų unikalus URL adresas, kuriuo klientai gali peržiūrėti jūsų meniu. Dalinkitės šia nuoroda arba naudokite ją savo QR kode. Ji bus rodoma kaip: iq-rest.com/m/jūsų-slug"
     },
     "general": {
       "save": "Išsaugoti",

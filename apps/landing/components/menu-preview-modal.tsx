@@ -7,6 +7,7 @@ import { X, Loader2 } from "lucide-react";
 interface MenuPreviewModalProps {
   menuUrl: string;
   children?: React.ReactNode;
+  className?: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
@@ -16,7 +17,7 @@ function addPreviewParam(url: string): string {
   return `${url}${separator}preview=1`;
 }
 
-export function MenuPreviewModal({ menuUrl, children, open: controlledOpen, onOpenChange }: MenuPreviewModalProps) {
+export function MenuPreviewModal({ menuUrl, children, className, open: controlledOpen, onOpenChange }: MenuPreviewModalProps) {
   const [internalOpen, setInternalOpen] = useState(false);
   const open = controlledOpen ?? internalOpen;
   const setOpen = (v: boolean) => {
@@ -130,7 +131,7 @@ export function MenuPreviewModal({ menuUrl, children, open: controlledOpen, onOp
 
   return (
     <>
-      <div onClick={() => setOpen(true)}>{children}</div>
+      <div className={className} onClick={() => setOpen(true)}>{children}</div>
       {modal}
     </>
   );

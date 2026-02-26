@@ -11,6 +11,9 @@ import { useRouter } from "@/i18n/routing";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
+import { HintLabel } from "../_ui/hint-label";
 
 interface ContactsPageProps {
   initialRestaurant: {
@@ -123,65 +126,68 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
       </div>
 
       <form id="contacts-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-6">
-          <div className="space-y-4">
+        <DashboardContent innerClassName="space-y-4">
+          <DashboardCard title={translations.pages.contacts}>
             <div className="space-y-2">
+              <HintLabel htmlFor="phone" label={`${t("phone")}:`} hint={t("phoneHint")} />
               <FormInput
                 id="phone"
-                label={`${t("phone")}:`}
+                label=""
                 value={phone}
                 onChange={setPhone}
                 onFocus={() => track(DashboardEvent.FOCUSED_PHONE)}
                 placeholder={t("phonePlaceholder")}
               />
-              <p className="text-xs text-muted-foreground">
-                {t("phoneHint")}
-              </p>
             </div>
 
             <div className="space-y-2">
+              <HintLabel htmlFor="instagram" label={`${t("instagram")}:`} hint={t("instagramHint")} />
               <FormInput
                 id="instagram"
-                label={`${t("instagram")}:`}
+                label=""
                 value={instagram}
                 onChange={setInstagram}
                 onFocus={() => track(DashboardEvent.FOCUSED_INSTAGRAM)}
                 placeholder={t("instagramPlaceholder")}
               />
-              <p className="text-xs text-muted-foreground">
-                {t("instagramHint")}
-              </p>
             </div>
 
             <div className="space-y-2">
+              <HintLabel htmlFor="whatsapp" label={`${t("whatsapp")}:`} hint={t("whatsappHint")} />
               <FormInput
                 id="whatsapp"
-                label={`${t("whatsapp")}:`}
+                label=""
                 value={whatsapp}
                 onChange={setWhatsapp}
                 onFocus={() => track(DashboardEvent.FOCUSED_WHATSAPP)}
                 placeholder={t("whatsappPlaceholder")}
               />
-              <p className="text-xs text-muted-foreground">
-                {t("whatsappHint")}
-              </p>
             </div>
+          </DashboardCard>
 
-            <div className="space-y-2">
-              <label className="text-sm font-medium">{t("location")}:</label>
-              <div className="rounded-lg overflow-hidden border">
+          <DashboardCard title={t("location")}>
+            <div>
+              <div className="rounded-md overflow-hidden border">
                 <MapPicker
                   lat={lat}
                   lng={lng}
                   onLocationSelect={handleLocationSelect}
                 />
               </div>
-              <p className="text-xs text-muted-foreground">
-                {t("locationHint")}
-              </p>
             </div>
+          </DashboardCard>
+
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              form="contacts-form"
+              disabled={saving || !hasChanges}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
+            >
+              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
+            </button>
           </div>
-        </div>
+        </DashboardContent>
       </form>
     </div>
   );

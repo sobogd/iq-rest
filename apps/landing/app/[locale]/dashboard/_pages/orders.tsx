@@ -9,6 +9,7 @@ import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { formatPrice } from "@/lib/currencies";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface OrderItem {
   id: string;
@@ -121,7 +122,7 @@ export function OrdersPage({ initialOrders }: OrdersPageProps) {
     const items = (Array.isArray(order.items) ? order.items : []) as OrderItem[];
 
     return (
-      <div key={order.id} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+      <div key={order.id} className="rounded-md border border-border bg-muted/50 overflow-hidden">
         {/* Header: table/name + time + cancel */}
         <div className="flex items-center h-12 bg-muted/30">
           <div className="flex items-center px-4 flex-1 min-w-0">
@@ -242,7 +243,7 @@ export function OrdersPage({ initialOrders }: OrdersPageProps) {
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.orders} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4 flex flex-col min-h-full">
+        <DashboardContent innerClassName="space-y-4 flex flex-col min-h-full">
 
           {/* Tabs */}
           <div className="flex gap-2">
@@ -250,7 +251,7 @@ export function OrdersPage({ initialOrders }: OrdersPageProps) {
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`flex items-center gap-1.5 px-4 h-10 rounded-2xl border text-sm font-medium transition-colors ${
+                className={`flex items-center gap-1.5 px-4 h-10 rounded-md border text-sm font-medium transition-colors ${
                   activeTab === tab.key
                     ? "border-destructive bg-destructive text-destructive-foreground"
                     : "border-border bg-muted/50 text-muted-foreground hover:bg-muted/80"
@@ -276,7 +277,7 @@ export function OrdersPage({ initialOrders }: OrdersPageProps) {
               {filteredOrders.map((order) => renderOrder(order))}
             </div>
           )}
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

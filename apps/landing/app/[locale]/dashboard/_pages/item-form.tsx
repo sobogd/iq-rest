@@ -38,6 +38,8 @@ import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
 
 interface TranslationData {
   name?: string;
@@ -477,9 +479,9 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       </div>
 
       <form id="item-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-6">
+        <DashboardContent innerClassName="space-y-4">
 
-          <div className="space-y-4">
+          <DashboardCard title={t.general}>
             {(!initialCategoryId || isEdit) && (
               <FormSelect
                 id="category"
@@ -626,17 +628,16 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                 />
               )}
             </div>
-          </div>
+          </DashboardCard>
 
           {/* Translation sections — one per language */}
           {otherLanguages.map((lang) => {
             const isTranslating = translatingLangs.has(lang);
             return (
-              <div key={lang} className="space-y-4">
-                <div className="flex items-center justify-between pt-6">
-                  <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                    {LANGUAGE_NAMES[lang] || lang}:
-                  </h2>
+              <DashboardCard
+                key={lang}
+                title={LANGUAGE_NAMES[lang] || lang}
+                headerRight={
                   <button
                     type="button"
                     onClick={() => handleTranslateSection(lang)}
@@ -650,8 +651,8 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                       <Sparkles className="h-3.5 w-3.5" />
                     )}
                   </button>
-                </div>
-
+                }
+              >
                 <FormInput
                   id={`name-${lang}`}
                   label={`${t.name}:`}
@@ -668,23 +669,35 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
                   placeholder={t.descriptionPlaceholder}
                   rows={2}
                 />
-              </div>
+              </DashboardCard>
             );
           })}
 
-          {isEdit && (
+          <div className="flex justify-between items-center mt-4">
+            <div>
+              {isEdit && (
+                <button
+                  type="button"
+                  onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
+                  disabled={saving || deleting}
+                  className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium disabled:opacity-50"
+                >
+                  <Trash2 className="h-4 w-4" />
+                  {t.delete}
+                </button>
+              )}
+            </div>
             <button
-              type="button"
-              onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
-              disabled={saving || deleting}
-              className="flex items-center gap-2 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors pt-8"
+              type="submit"
+              form="item-form"
+              disabled={saving || deleting || !hasChanges}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
             >
-              <Trash2 className="h-4 w-4" />
-              {t.delete}
+              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t.save}
             </button>
-          )}
+          </div>
 
-        </div>
+        </DashboardContent>
       </form>
 
       <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>

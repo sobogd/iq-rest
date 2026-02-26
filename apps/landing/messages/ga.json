@@ -695,6 +695,36 @@
       "description": "Tá IQ Rest ag feabhsú go leanúnach chun cabhrú le bialanna agus caiféanna na miontuairiscí QR digiteacha proifisiúnta a chruthú. Lean ár gclár athruithe chun fanacht suas chun dáta le na gnéithe is déanaí do do shuíomh gréasáin bialainne agus do réiteach miontuairiscí QR."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Athdhearadh an Deais: Cártaí Comhsheasmhacha, Nascleanúint agus Gníomhartha Foirmeacha",
+        "description": "Deais snasta le stíl aontaithe cártaí, nascleanúint thaobhbharra bhuan, staideanna gníomhacha le dath aicime, agus gníomhartha sábhála/scriosta ag bun gach leathanach foirme.",
+        "meta": {
+          "title": "Athdhearadh an Deais: Cártaí, Nascleanúint agus Foirmeacha | IQ Rest",
+          "description": "Deais IQ Rest athdheartha le comhpháirteanna cártaí comhsheasmhacha, nascleanúint thaobhbharra bhuan le hailiú an leathanaigh ghníomhaigh, agus gníomhartha foirme feabhsaithe. Bainistigh roghchlár QR do bhialainne le comhéadan níos glaine agus níos iomasaí."
+        },
+        "content": {
+          "intro": "Rinneadh athdhearadh cuimsitheach ar chomhéadan úsáideora deais IQ Rest. Úsáideann gach leathanach anois stíl comhsheasmhach cártaí le raidheasanna cúinne aontaithe, nascleanúint thaobhbharra bhuan le staideanna gníomhacha i ndath aicime, agus leathanaigh fhoirme feabhsaithe le gníomhartha sábhála agus scriosta ag an mbun. Is é an toradh ná eispéireas níos glaine agus níos snasta chun roghchlár digiteach QR do bhialainne a bhainistiú.",
+          "image1Alt": "Deais athdheartha le stíl aontaithe cártaí",
+          "image1Caption": "Comhpháirteanna cártaí aontaithe ar fud leathanaigh uile an deais",
+          "section1Title": "Dearadh Cártaí Comhsheasmhach ar Gach Leathanach",
+          "section1Text": "Úsáideann gach leathanach deais anois comhpháirt DashboardCard aontaithe le ciumhaiseanna cruinne comhsheasmhacha, dathanna cúlra caolchúiseacha, agus ceannteidil rannóige roghnacha. Roinneann anailísíocht, billeáil, socruithe, teagmhálachtaí, socruithe áirithintí agus gach leathanach foirme an teanga amhairc chéanna. Cuireann lipéid leide le leideanna aníos in ionad téacs cur síos inlíne, ag coinneáil an chomhéadain glan fad is a chuirtear comhthéacs cabhrach ar fáil nuair is gá.",
+          "section2Title": "Nascleanúint Thaobhbharra Bhuan le Staideanna Gníomhacha",
+          "section2Text": "Ar scáileáin deisce, tá nascleanúint thaobhbharra bhuan le feiceáil anois ar gach leathanach. Aibhsítear an leathanach gníomhach le cúlra dath aicime, ag léiriú go soiléir cá bhfuil tú. Aibhsíonn foleathanaigh cosúil le catagóirí, earraí agus orduithe an mhír thuismitheora Roghchlár i gceart. Áiríonn an taobhbharra rochtain thapa ar an Roghchlár, Priontáil QR, Áirithintí, Anailísíocht, Socruithe, Teagmhálachtaí, Billeáil, agus Tacaíocht — gan an t-amharc reatha a fhágáil.",
+          "section3Title": "Leathanaigh Fhoirme Feabhsaithe le Gníomhartha ag an mBun",
+          "section3Text": "Tá cnaipe sábhála dúblach ag an mbun i ndath aicime ar gach leathanach foirme anois — catagóirí, earraí, boird, dearadh, socruithe, teagmhálachtaí, agus socruithe áirithintí. Taispeántar cnaipí scriosta ar an taobh clé le stíl ciúin. Ciallaíonn sé seo nach gá duit scrolláil ar ais go barr chun d'athruithe a shábháil. Aistríodh an cnaipe logála amach ón taobhbharra go bun an leathanaigh dearaidh, ag coinneáil na nascleanúna dírithe ar ghníomhartha riachtanacha.",
+          "benefitsTitle": "Buntáistí an Athdhearaidh Comhéadain",
+          "benefit1": "Stíl cártaí aontaithe le ciumhaiseanna agus cúlraí comhsheasmhacha ar gach leathanach",
+          "benefit2": "Nascleanúint thaobhbharra bhuan ar dheisce le staideanna gníomhacha i ndath aicime",
+          "benefit3": "Cnaipí sábhála ag bun gach foirme — ní gá scrolláil suas",
+          "benefit4": "Gníomhartha scriosta agus sábhála scartha go soiléir — scriosta ar chlé, sábháil ar dheis",
+          "benefit5": "Ceannteidil rannóige ar chártaí foirme le haghaidh eagrú amhairc níos fearr",
+          "benefit6": "Leathanach anailísíochta níos glaine le clúdaigh DashboardCard agus leagan amach staitisticí gléasanna feabhsaithe",
+          "conclusionTitle": "Eispéireas Deais Níos Snasta",
+          "conclusionText": "Tugann an t-athdhearadh comhéadain seo comhsheasmhacht amhairc agus inúsáidteacht fheabhsaithe chuig gach cúinne de dheais IQ Rest. Cibé an bhfuil tú ag eagarthóireacht earraí roghchláir, ag seiceáil anailísíochta nó ag bainistiú áirithintí, mothaíonn an comhéadan comhtháite agus iomasach. In éineacht leis an nascleanúint thaobhbharra bhuan, tá bainistiú roghchlár digiteach QR do bhialainne níos tapúla agus níos taitneamhaí ná riamh.",
+          "ctaText": "Bain triail as an deais athdheartha",
+          "ctaButton": "Oscail an Deais"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Foireann Tacaíochta"
   },
   "reservations": {
+    "general": "Ginearálta",
     "title": "Conradh",
     "tables": "Táblaí",
     "settings": "Socruithe",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Ginearálta",
       "noCategories": "Níl aon chatagóirí ann fós",
       "addCategory": "Cuir catagóir leis",
       "editCategory": "Cuir in eagar Catagóir",
@@ -1628,6 +1660,7 @@
       "sortError": "Theip ar ord sórtála a shábháil"
     },
     "items": {
+      "general": "Ginearálta",
       "noItems": "Níl aon earraí ann fós. Cruthaigh do chéad earra chun tús a chur.",
       "noCategoriesHint": "Cuir catagóir leis ar dtús chun earraí a chruthú.",
       "addItem": "Cuir mír leis",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Uaslódáil físeán nó íomhá",
       "removeMedia": "Bain",
       "accentColor": "Dath Breise",
-      "accentColorHint": "Príomh-dath do bhratacha agus gileanna ar do shuíomh gréasáin",
+      "accentColorHint": "Príomhdhath na gcnaipí agus na mbuaicphointí ar do shuíomh gréasáin. Úsáid an cnaipe bogha báistí chun aon dath a roghnú.",
       "save": "Sábháil",
       "fetchError": "Theip ar shocruithe dearaidh a luchtú",
       "saveError": "Theip ar shocruithe dearaidh a shábháil",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Orduithe",
       "ordersRequireWhatsApp": "Cuir uimhir WhatsApp ar leathanach na gContae chun orduithe a chumasú",
       "ordersEnabled": "Cumasú Orduithe",
-      "ordersOn": "Is féidir le custaiméirí ordú a dhéanamh trí",
-      "ordersOff": "Níl orduithe ar fáil",
+      "ordersOn": "Glac le horduithe",
+      "ordersOff": "Glac le horduithe",
       "orderMode": "Mód ordaithe",
-      "orderModeWhatsapp": "WhatsApp amháin",
-      "orderModeInternal": "Inmheánach amháin",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Inmheánach",
       "orderModeBoth": "WhatsApp + Inmheánach",
       "orderModeWhatsappHint": "Seoltar orduithe go díreach chuig WhatsApp",
       "orderModeInternalHint": "Sábháiltear orduithe sa deais",
       "orderModeBothHint": "Sábháiltear orduithe agus seoltar trí WhatsApp freisin",
-      "ordersFieldsHint": "Teastaíonn na réimsí atá cumasaithe ó na custaiméirí a líonadh",
+      "ordersFieldsHint": "Réimsí riachtanacha:",
       "ordersName": "Ainm",
-      "ordersNameOn": "Caithfidh an custaiméir a ainm a chur isteach",
-      "ordersNameOff": "Réimse ainm folaithe",
+      "ordersNameOn": "Ainm",
+      "ordersNameOff": "Ainm",
       "ordersPhone": "Guthán",
-      "ordersPhoneOn": "Caithfidh an custaiméir a guthán a chur isteach",
-      "ordersPhoneOff": "Réimse gutháin folaithe",
+      "ordersPhoneOn": "Fón",
+      "ordersPhoneOff": "Fón",
       "ordersAddress": "Seoladh Seachadta",
-      "ordersAddressOn": "Caithfidh an custaiméir seoladh seachadta a chur isteach",
-      "ordersAddressOff": "Réimse seolta folaithe"
+      "ordersAddressOn": "Seoladh",
+      "ordersAddressOff": "Seoladh",
+      "orderModeHint": "Sábháiltear orduithe inmheánacha sa phainéal. Seoltar orduithe WhatsApp go díreach chuig do WhatsApp. Is féidir leat an dá cheann a chur ar siúl ag an am céanna.",
+      "ordersFieldsDescription": "Beidh réimsí cumasaithe riachtanach don chustaiméir agus ordú á dhéanamh.",
+      "slugHint": "Seo do sheoladh URL uathúil inar féidir le custaiméirí do bhiachlár a fheiceáil. Roinn an nasc seo nó úsáid é i do chód QR. Taispeánfar é mar: iq-rest.com/m/do-slug"
     },
     "general": {
       "save": "Sábháil",

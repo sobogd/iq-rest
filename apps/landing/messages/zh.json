@@ -695,6 +695,36 @@
       "description": "IQ Rest不断改进，帮助餐厅和咖啡厅创建专业的数字QR菜单。关注我们的更新日志，了解您餐厅网站和QR菜单解决方案的最新功能。"
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "仪表盘界面重新设计：统一卡片、导航与表单操作",
+        "description": "焕然一新的仪表盘，采用统一卡片样式、固定侧边栏导航、强调色活跃状态，以及每个表单页面底部的保存/删除操作按钮。",
+        "meta": {
+          "title": "仪表盘界面重新设计：卡片、导航与表单 | IQ Rest",
+          "description": "IQ Rest仪表盘全新改版，采用统一卡片组件、带活跃页面高亮的固定侧边栏导航和改进的表单操作。以更简洁直观的界面管理您的餐厅QR菜单。"
+        },
+        "content": {
+          "intro": "IQ Rest仪表盘完成了全面的界面重新设计。每个页面现在都使用统一的卡片样式，具有一致的圆角边框；固定侧边栏导航带有强调色的活跃状态；表单页面改进了底部保存和删除按钮。为您管理餐厅数字QR菜单带来更加简洁精致的体验。",
+          "image1Alt": "采用统一卡片样式重新设计的仪表盘",
+          "image1Caption": "所有仪表盘页面统一的卡片组件",
+          "section1Title": "所有页面统一的卡片设计",
+          "section1Text": "仪表盘的每个页面现在都使用统一的DashboardCard组件，具有一致的圆角、柔和的背景色和可选的分区标题。分析、账单、设置、联系方式、预订设置以及所有表单页面共享相同的视觉语言。带弹出提示的标签替代了行内描述文字，在保持界面简洁的同时，在需要时提供有用的上下文信息。",
+          "section2Title": "带活跃状态的固定侧边栏导航",
+          "section2Text": "在桌面端，固定侧边栏导航现在在每个页面都可见。当前活跃页面以强调色背景高亮显示，让您一目了然地知道自己在哪里。分类、菜品、订单等子页面会正确高亮父级菜单项。侧边栏提供了快速访问菜单、打印QR码、预订、分析、设置、联系方式、账单和客服的入口——无需离开当前页面。",
+          "section3Title": "带底部操作的改进表单页面",
+          "section3Text": "所有表单页面——分类、菜品、餐桌、设计、设置、联系方式和预订设置——现在底部都增加了强调色的保存按钮。删除按钮以低调样式显示在左侧。这意味着您不再需要滚动到顶部来保存更改。退出登录按钮已从侧边栏移至设计页面底部，使导航专注于核心操作。",
+          "benefitsTitle": "界面重新设计的优势",
+          "benefit1": "所有页面采用统一的边框和背景的卡片样式",
+          "benefit2": "桌面端固定侧边栏导航，带强调色活跃状态",
+          "benefit3": "所有表单底部保存按钮——无需向上滚动即可保存",
+          "benefit4": "删除和保存操作清晰分离——左侧删除，右侧保存",
+          "benefit5": "表单卡片增加分区标题，视觉组织更清晰",
+          "benefit6": "更简洁的分析页面，采用DashboardCard包裹和改进的设备统计布局",
+          "conclusionTitle": "更精致的仪表盘体验",
+          "conclusionText": "此次界面重新设计为IQ Rest仪表盘的每个角落带来了视觉一致性和更好的可用性。无论您是编辑菜单项、查看分析还是管理预订，界面都感觉统一而直观。结合固定侧边栏导航，管理餐厅的数字QR菜单比以往更快速、更愉悦。",
+          "ctaText": "体验全新设计的仪表盘",
+          "ctaButton": "打开仪表盘"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "支持团队"
   },
   "reservations": {
+    "general": "一般",
     "title": "预订",
     "tables": "餐桌",
     "settings": "设置",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "一般",
       "noCategories": "还没有分类",
       "addCategory": "添加分类",
       "editCategory": "编辑类别",
@@ -1628,6 +1660,7 @@
       "sortError": "保存排序顺序失败"
     },
     "items": {
+      "general": "一般",
       "noItems": "还没有项目。创建您的第一个项目开始。",
       "noCategoriesHint": "请先添加一个类别以创建项目。",
       "addItem": "添加商品",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "上传视频或图像",
       "removeMedia": "移除",
       "accentColor": "强调色",
-      "accentColorHint": "网站按钮和高亮的主要颜色",
+      "accentColorHint": "网站按钮和高亮的主色调。点击彩虹按钮可选择任意自定义颜色。",
       "save": "保存",
       "fetchError": "加载设计设置失败",
       "saveError": "保存设计设置失败",
@@ -1790,25 +1823,28 @@
       "ordersSection": "订单",
       "ordersRequireWhatsApp": "在联系人页面添加WhatsApp号码以启用订单",
       "ordersEnabled": "启用订单",
-      "ordersOn": "顾客可以下单",
-      "ordersOff": "下单已禁用",
+      "ordersOn": "接受订单",
+      "ordersOff": "接受订单",
       "orderMode": "订单模式",
-      "orderModeWhatsapp": "仅WhatsApp",
-      "orderModeInternal": "仅内部",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "内部",
       "orderModeBoth": "WhatsApp + 内部",
       "orderModeWhatsappHint": "订单直接发送到WhatsApp",
       "orderModeInternalHint": "订单保存在控制面板中",
       "orderModeBothHint": "订单保存并通过WhatsApp发送",
-      "ordersFieldsHint": "启用的字段是顾客必须填写的",
+      "ordersFieldsHint": "必填项:",
       "ordersName": "姓名",
-      "ordersNameOn": "顾客必须输入他们的姓名",
-      "ordersNameOff": "姓名字段隐藏",
+      "ordersNameOn": "姓名",
+      "ordersNameOff": "姓名",
       "ordersPhone": "电话",
-      "ordersPhoneOn": "顾客必须输入他们的电话",
-      "ordersPhoneOff": "电话字段隐藏",
+      "ordersPhoneOn": "电话",
+      "ordersPhoneOff": "电话",
       "ordersAddress": "送货地址",
-      "ordersAddressOn": "顾客必须输入送货地址",
-      "ordersAddressOff": "地址字段隐藏"
+      "ordersAddressOn": "地址",
+      "ordersAddressOff": "地址",
+      "orderModeHint": "内部订单保存在控制面板中。WhatsApp订单直接发送到您的WhatsApp。您可以同时启用两者。",
+      "ordersFieldsDescription": "启用的字段将在客户下单时为必填项。",
+      "slugHint": "这是您的唯一URL地址，客户可以在此查看您的菜单。分享此链接或在QR码中使用。显示为：iq-rest.com/m/您的slug"
     },
     "general": {
       "save": "保存",

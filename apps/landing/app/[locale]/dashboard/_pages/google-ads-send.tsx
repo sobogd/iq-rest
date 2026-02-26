@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Send, Loader2 } from "lucide-react";
 import { PageHeader } from "../_ui/page-header";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 const EVENT_TYPES = [
   { value: "type_selected", label: "Type Selected" },
@@ -129,9 +130,9 @@ export function GoogleAdsSendPage() {
     <div className="flex flex-col h-full">
       <PageHeader title="Google Ads Conversion" backHref="/dashboard" />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="w-full max-w-lg mx-auto">
+        <DashboardContent>
           <form onSubmit={handleSubmit}>
-            <div className="rounded-2xl border border-border bg-muted/50 p-4 flex flex-col gap-4">
+            <div className="rounded-md border border-border bg-muted/50 p-4 flex flex-col gap-4">
               <div className="flex flex-col gap-1.5">
                 <Label>Event Type</Label>
                 <div className="flex gap-2">
@@ -185,7 +186,7 @@ export function GoogleAdsSendPage() {
               </Button>
             </div>
           </form>
-        </div>
+        </DashboardContent>
       </div>
 
       <AlertDialog open={responseDialog.open} onOpenChange={(open) => setResponseDialog((prev) => ({ ...prev, open }))}>

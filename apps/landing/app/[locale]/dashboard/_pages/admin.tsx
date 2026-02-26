@@ -7,6 +7,7 @@ import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface Company {
   id: string;
@@ -107,7 +108,7 @@ export function AdminPage() {
         </Button>
       </PageHeader>
       <div ref={scrollRef} className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
           {/* Filter tabs */}
           <div className="flex gap-2">
             {TABS.map((tab) => (
@@ -127,13 +128,13 @@ export function AdminPage() {
 
           {/* List */}
           {loading && companies.length > 0 ? (
-            <div className="rounded-2xl border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: "200px" }}>
+            <div className="rounded-md border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: "200px" }}>
               <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
             </div>
           ) : companies.length === 0 && !loading ? (
             <p className="text-sm text-muted-foreground text-center py-8">No companies</p>
           ) : (
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
               {companies.map((company, index) => {
                 const nameColor =
                   company.subscriptionStatus === "ACTIVE" && company.plan === "PRO"
@@ -212,7 +213,7 @@ export function AdminPage() {
               </Button>
             </div>
           )}
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

@@ -695,6 +695,36 @@
       "description": "IQ Rest se nenehno izboljšuje, da pomaga restavracijam in kavarnam ustvariti profesionalne digitalne QR menije. Sledite naši zgodovini sprememb, da boste obveščeni o najnovejših funkcijah za vašo spletno stran restavracije in rešitev QR menija."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Preoblikovanje nadzorne plošče: Enotne kartice, navigacija in obrazci",
+        "description": "Dodelana nadzorna plošča z enotnim slogom kartic, trajno stransko navigacijo, poudarjenimi aktivnimi stanji in akcijami shranjevanja/brisanja na dnu vsake strani z obrazci.",
+        "meta": {
+          "title": "Preoblikovanje nadzorne plošče: Kartice, navigacija in obrazci | IQ Rest",
+          "description": "Nadzorna plošča IQ Rest je bila prenovljena z enotnimi komponentami kartic, trajno stransko navigacijo s poudarjeno aktivno stranjo in izboljšanimi akcijami obrazcev. Upravljajte QR meni vaše restavracije s čistejšim in bolj intuitivnim vmesnikom."
+        },
+        "content": {
+          "intro": "IQ Rest je doživel celovito preoblikovanje uporabniškega vmesnika nadzorne plošče. Vsaka stran zdaj uporablja enoten slog kartic z usklajeno zaobljenostjo robov, trajno stransko navigacijo s poudarjenimi aktivnimi stanji in izboljšanimi stranmi z obrazci, kjer so akcije shranjevanja in brisanja na dnu. Rezultat je čistejša in bolj dodelana izkušnja pri upravljanju digitalnega QR menija vaše restavracije.",
+          "image1Alt": "Prenovljena nadzorna plošča z enotnim slogom kartic",
+          "image1Caption": "Enotne komponente kartic na vseh straneh nadzorne plošče",
+          "section1Title": "Enoten dizajn kartic na vseh straneh",
+          "section1Text": "Vsaka stran nadzorne plošče zdaj uporablja enotno komponento DashboardCard z usklajenimi zaobljenimi robovi, nežnimi barvami ozadja in neobveznimi naslovi odsekov. Analitika, obračunavanje, nastavitve, kontakti, nastavitve rezervacij in vse strani z obrazci imajo enak vizualni jezik. Namigni z opisnimi oblački nadomeščajo besedila v vrsticah, kar ohranja vmesnik čist in hkrati nudi koristne informacije po potrebi.",
+          "section2Title": "Trajna stranska navigacija z aktivnimi stanji",
+          "section2Text": "Na namiznih zaslonih je zdaj na vsaki strani vidna trajna stranska navigacija. Aktivna stran je poudarjena z barvnim ozadjem, kar takoj jasno pokaže, kje se nahajate. Podstrani, kot so kategorije, artikli in naročila, pravilno poudarijo nadrejeno postavko Meni. Stranska vrstica vključuje hiter dostop do Menija, Tiskanja QR, Rezervacij, Analitike, Nastavitev, Kontaktov, Obračunavanja in Podpore — vse brez zapuščanja trenutnega pogleda.",
+          "section3Title": "Izboljšane strani z obrazci in akcijami na dnu",
+          "section3Text": "Vse strani z obrazci — kategorije, artikli, mize, dizajn, nastavitve, kontakti in nastavitve rezervacij — zdaj vsebujejo podvojen gumb za shranjevanje na dnu v poudarjeni barvi. Gumbi za brisanje se pojavljajo na levi strani z umirjenim slogom. To pomeni, da vam ni več treba drseti navzgor, da shranite spremembe. Gumb za odjavo je bil premaknjen iz stranske vrstice na dno strani z dizajnom, kar ohranja navigacijo osredotočeno na bistvene akcije.",
+          "benefitsTitle": "Prednosti preoblikovanja vmesnika",
+          "benefit1": "Enoten slog kartic z usklajenimi robovi in ozadji na vseh straneh",
+          "benefit2": "Trajna stranska navigacija na namizju s poudarjenimi aktivnimi stanji",
+          "benefit3": "Gumbi za shranjevanje na dnu vseh obrazcev — ni treba drseti navzgor",
+          "benefit4": "Akcije brisanja in shranjevanja jasno ločene — brisanje levo, shranjevanje desno",
+          "benefit5": "Naslovi odsekov na karticah z obrazci za boljšo vizualno organizacijo",
+          "benefit6": "Čistejša stran analitike z ovojnicami DashboardCard in izboljšano razporeditvijo statistik naprav",
+          "conclusionTitle": "Bolj dodelana izkušnja nadzorne plošče",
+          "conclusionText": "To preoblikovanje vmesnika prinaša vizualno doslednost in izboljšano uporabnost v vsak kotiček nadzorne plošče IQ Rest. Ne glede na to, ali urejate postavke menija, preverjate analitiko ali upravljate rezervacije, vmesnik deluje skladno in intuitivno. V kombinaciji s trajno stransko navigacijo je upravljanje digitalnega QR menija vaše restavracije hitrejše in prijetnejše kot kdaj koli prej.",
+          "ctaText": "Izkusite prenovljeno nadzorno ploščo",
+          "ctaButton": "Odpri nadzorno ploščo"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Ekipa za podporo"
   },
   "reservations": {
+    "general": "Splošno",
     "title": "Rezervacije",
     "tables": "Mize",
     "settings": "Nastavitve",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Splošno",
       "noCategories": "Še ni kategorij",
       "addCategory": "Dodaj kategorijo",
       "editCategory": "Uredi kategorijo",
@@ -1628,6 +1660,7 @@
       "sortError": "Shranjevanje zaporedja ni uspelo"
     },
     "items": {
+      "general": "Splošno",
       "noItems": "Še ni predmetov. Ustvarite svoj prvi predmet, da začnete.",
       "noCategoriesHint": "Najprej dodajte kategorijo za ustvarjanje predmetov.",
       "addItem": "Dodaj artikel",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Naložite video ali sliko",
       "removeMedia": "Odstrani",
       "accentColor": "Poudarna barva",
-      "accentColorHint": "Glavna barva za gumbe in poudarke na vaši spletni strani",
+      "accentColorHint": "Glavna barva gumbov in poudarkov na vašem spletnem mestu. Uporabite mavrični gumb za izbiro poljubne barve.",
       "save": "Shrani",
       "fetchError": "Nalaganje nastavitev oblikovanja ni uspelo",
       "saveError": "Shranjevanje nastavitev oblikovanja ni uspelo",
@@ -1790,25 +1823,28 @@
       "ordersSection": "naročila",
       "ordersRequireWhatsApp": "Dodajte WhatsApp številko na strani Kontakti, da omogočite naročila",
       "ordersEnabled": "Omogoči naročila",
-      "ordersOn": "Stranke lahko naročajo preko",
-      "ordersOff": "Naročanje onemogočeno",
+      "ordersOn": "Sprejemaj naročila",
+      "ordersOff": "Sprejemaj naročila",
       "orderMode": "Način naročila",
-      "orderModeWhatsapp": "Samo WhatsApp",
-      "orderModeInternal": "Samo interno",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Interno",
       "orderModeBoth": "WhatsApp + Interno",
       "orderModeWhatsappHint": "Naročila se pošljejo neposredno na WhatsApp",
       "orderModeInternalHint": "Naročila se shranijo na nadzorni plošči",
       "orderModeBothHint": "Naročila se shranijo in pošljejo tudi prek WhatsAppa",
-      "ordersFieldsHint": "Omogočena polja so obvezna za izpolnitev s strani stranke",
+      "ordersFieldsHint": "Obvezna polja:",
       "ordersName": "Ime",
-      "ordersNameOn": "Stranka mora vnesti svoje ime",
-      "ordersNameOff": "Polje za ime skrito",
+      "ordersNameOn": "Ime",
+      "ordersNameOff": "Ime",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Stranka mora vnesti svoj telefon",
-      "ordersPhoneOff": "Polje za telefon skrito",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Naslov za dostavo",
-      "ordersAddressOn": "Stranka mora vnesti naslov za dostavo",
-      "ordersAddressOff": "Polje za naslov skrito"
+      "ordersAddressOn": "Naslov",
+      "ordersAddressOff": "Naslov",
+      "orderModeHint": "Interna naročila se shranjujejo v nadzorni plošči. WhatsApp naročila se pošiljajo neposredno na vaš WhatsApp. Lahko aktivirate oboje hkrati.",
+      "ordersFieldsDescription": "Aktivirana polja bodo za stranko obvezna pri oddaji naročila.",
+      "slugHint": "To je vaš edinstven URL naslov, kjer si lahko stranke ogledajo vaš meni. Delite to povezavo ali jo uporabite v QR kodi. Prikazal se bo kot: iq-rest.com/m/vaš-slug"
     },
     "general": {
       "save": "Shrani",

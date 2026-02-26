@@ -695,6 +695,36 @@
       "description": "IQ Rest se neustále zlepšuje, aby pomohl restauracím a kavárnám vytvářet profesionální digitální QR menu. Sledujte náš changelog, abyste byli informováni o nejnovějších funkcích pro vaše webové stránky restaurace a řešení QR menu."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Redesign panelu: jednotný styl karet, navigace a akce ve formulářích",
+        "description": "Vyladěný panel s jednotným stylem karet, trvalou postranní navigací, akcentově zbarvenými aktivními stavy a tlačítky uložit/smazat na konci každého formuláře.",
+        "meta": {
+          "title": "Redesign panelu: karty, navigace a formuláře | IQ Rest",
+          "description": "Panel IQ Rest byl redesignován s jednotnými komponentami karet, trvalou postranní navigací se zvýrazněním aktivní stránky a vylepšenými akcemi formulářů. Spravujte QR menu vaší restaurace s přehlednějším a intuitivnějším rozhraním."
+        },
+        "content": {
+          "intro": "Panel IQ Rest prošel komplexním redesignem. Každá stránka nyní používá jednotný styl karet s konzistentními zaoblenými rohy, trvalou postranní navigaci s akcentově zbarvenými aktivními stavy a vylepšené formuláře s tlačítky uložení a smazání na konci. Výsledkem je čistší a ucelenější prostředí pro správu digitálního QR menu vaší restaurace.",
+          "image1Alt": "Redesignovaný panel s jednotným stylem karet",
+          "image1Caption": "Jednotné komponenty karet na všech stránkách panelu",
+          "section1Title": "Jednotný design karet na všech stránkách",
+          "section1Text": "Všechny stránky panelu nyní používají jednotnou komponentu DashboardCard s konzistentními zaoblenými rohy, jemnými barvami pozadí a volitelnými nadpisy sekcí. Analytika, fakturace, nastavení, kontakty, nastavení rezervací i všechny formuláře sdílejí stejný vizuální jazyk. Nápovědy s popover tooltips nahradily inline popisné texty, čímž udržují rozhraní čisté a zároveň poskytují užitečný kontext, když je potřeba.",
+          "section2Title": "Trvalá postranní navigace s aktivními stavy",
+          "section2Text": "Na stolních obrazovkách je nyní na každé stránce viditelná trvalá postranní navigace. Aktivní stránka je zvýrazněna akcentovou barvou pozadí, takže je okamžitě jasné, kde se nacházíte. Podstránky jako kategorie, položky a objednávky správně zvýrazňují nadřazenou položku Menu. Postranní panel poskytuje rychlý přístup k sekcím Menu, Tisk QR, Rezervace, Analytika, Nastavení, Kontakty, Fakturace a Podpora — vše bez opuštění aktuálního zobrazení.",
+          "section3Title": "Vylepšené formuláře s akcemi na konci stránky",
+          "section3Text": "Všechny formuláře — kategorie, položky, stoly, design, nastavení, kontakty a nastavení rezervací — nyní mají duplicitní tlačítko uložení na konci v akcentové barvě. Tlačítka smazání se zobrazují vlevo v tlumeném stylu. Už nemusíte scrollovat zpět nahoru pro uložení změn. Tlačítko odhlášení bylo přesunuto z postranního panelu na konec stránky designu, aby navigace zůstala zaměřená na podstatné akce.",
+          "benefitsTitle": "Přínosy redesignu",
+          "benefit1": "Jednotný styl karet s konzistentními rámečky a pozadími na všech stránkách",
+          "benefit2": "Trvalá postranní navigace na desktopu s akcentově zbarvenými aktivními stavy",
+          "benefit3": "Tlačítka uložení na konci všech formulářů — není třeba scrollovat nahoru",
+          "benefit4": "Akce smazání a uložení jasně odděleny — smazání vlevo, uložení vpravo",
+          "benefit5": "Nadpisy sekcí na kartách formulářů pro lepší vizuální organizaci",
+          "benefit6": "Přehlednější stránka analytiky s DashboardCard wrappery a vylepšeným rozložením statistik zařízení",
+          "conclusionTitle": "Ucelenější prostředí panelu",
+          "conclusionText": "Tento redesign přináší vizuální konzistenci a lepší použitelnost do každého koutu panelu IQ Rest. Ať už upravujete položky menu, kontrolujete analytiku nebo spravujete rezervace, rozhraní působí uceleně a intuitivně. V kombinaci s trvalou postranní navigací je správa digitálního QR menu vaší restaurace rychlejší a příjemnější než kdy dříve.",
+          "ctaText": "Vyzkoušejte redesignovaný panel",
+          "ctaButton": "Otevřít panel"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Tým podpory"
   },
   "reservations": {
+    "general": "Obecné",
     "title": "Rezervace",
     "tables": "Stoly",
     "settings": "Nastavení",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Obecné",
       "noCategories": "Zatím žádné kategorie",
       "addCategory": "Přidat kategorii",
       "editCategory": "Upravit kategorii",
@@ -1628,6 +1660,7 @@
       "sortError": "Nepodařilo se uložit pořadí"
     },
     "items": {
+      "general": "Obecné",
       "noItems": "Zatím žádné položky. Vytvořte svou první položku, abyste mohli začít.",
       "noCategoriesHint": "Nejprve přidejte kategorii pro vytvoření položek.",
       "addItem": "Přidat položku",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Nahrajte video nebo obrázek",
       "removeMedia": "Odstranit",
       "accentColor": "Akcentová barva",
-      "accentColorHint": "Hlavní barva pro tlačítka a zvýraznění na vaší webové stránce",
+      "accentColorHint": "Hlavní barva tlačítek a zvýraznění na vašem webu. Pomocí duhového tlačítka si vyberte libovolnou barvu.",
       "save": "Uložit",
       "fetchError": "Nepodařilo se načíst nastavení designu",
       "saveError": "Nepodařilo se uložit nastavení designu",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Objednávky",
       "ordersRequireWhatsApp": "Přidejte číslo WhatsApp na stránce Kontakty, abyste povolili objednávky",
       "ordersEnabled": "Povolit objednávky",
-      "ordersOn": "Zákazníci mohou objednávat",
-      "ordersOff": "Objednávání zakázáno",
+      "ordersOn": "Přijímat objednávky",
+      "ordersOff": "Přijímat objednávky",
       "orderMode": "Režim objednávek",
-      "orderModeWhatsapp": "Pouze WhatsApp",
-      "orderModeInternal": "Pouze interní",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Interní",
       "orderModeBoth": "WhatsApp + Interní",
       "orderModeWhatsappHint": "Objednávky jsou odesílány přímo na WhatsApp",
       "orderModeInternalHint": "Objednávky se ukládají na nástěnku",
       "orderModeBothHint": "Objednávky se ukládají a odesílají přes WhatsApp",
-      "ordersFieldsHint": "Povolená pole jsou povinná pro zákazníka k vyplnění",
+      "ordersFieldsHint": "Povinná pole:",
       "ordersName": "Jméno",
-      "ordersNameOn": "Zákazník musí zadat své jméno",
-      "ordersNameOff": "Pole pro jméno skryto",
+      "ordersNameOn": "Jméno",
+      "ordersNameOff": "Jméno",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Zákazník musí zadat svůj telefon",
-      "ordersPhoneOff": "Pole pro telefon skryto",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Doručovací adresa",
-      "ordersAddressOn": "Zákazník musí zadat doručovací adresu",
-      "ordersAddressOff": "Pole pro adresu skryto"
+      "ordersAddressOn": "Adresa",
+      "ordersAddressOff": "Adresa",
+      "orderModeHint": "Interní objednávky se ukládají v panelu. WhatsApp objednávky se odesílají přímo na váš WhatsApp. Můžete aktivovat obě současně.",
+      "ordersFieldsDescription": "Aktivovaná pole budou pro zákazníka povinná při zadávání objednávky.",
+      "slugHint": "Toto je vaše jedinečná URL adresa, kde si zákazníci mohou prohlédnout vaše menu. Sdílejte tento odkaz nebo ho použijte ve svém QR kódu. Zobrazí se jako: iq-rest.com/m/váš-slug"
     },
     "general": {
       "save": "Uložit",

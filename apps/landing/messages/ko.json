@@ -695,6 +695,36 @@
       "description": "IQ Rest는 레스토랑과 카페가 전문적인 디지털 QR 메뉴를 만들 수 있도록 지속적으로 개선하고 있습니다. 변경 로그를 팔로우하여 레스토랑 웹사이트와 QR 메뉴 솔루션의 최신 기능을 확인하세요."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "대시보드 UI 리디자인: 통일된 카드, 내비게이션 및 폼 액션",
+        "description": "통일된 카드 스타일, 고정 사이드바 내비게이션, 강조색 활성 상태, 모든 폼 페이지 하단 저장/삭제 버튼을 갖춘 세련된 대시보드.",
+        "meta": {
+          "title": "대시보드 UI 리디자인: 카드, 내비게이션 및 폼 | IQ Rest",
+          "description": "IQ Rest 대시보드가 통일된 카드 컴포넌트, 활성 페이지 하이라이트가 있는 고정 사이드바, 개선된 폼 액션으로 새롭게 디자인되었습니다. 더 깔끔하고 직관적인 인터페이스로 레스토랑 QR 메뉴를 관리하세요."
+        },
+        "content": {
+          "intro": "IQ Rest 대시보드가 전면적인 UI 리디자인을 거쳤습니다. 모든 페이지가 통일된 모서리 곡률의 카드 스타일, 강조색 활성 상태가 있는 고정 사이드바 내비게이션, 하단 저장 및 삭제 버튼이 있는 개선된 폼 페이지를 사용합니다. 레스토랑의 디지털 QR 메뉴 관리가 더욱 깔끔하고 세련된 경험이 됩니다.",
+          "image1Alt": "통일된 카드 스타일로 리디자인된 대시보드",
+          "image1Caption": "모든 대시보드 페이지에 걸친 통일된 카드 컴포넌트",
+          "section1Title": "모든 페이지에 걸친 통일된 카드 디자인",
+          "section1Text": "모든 대시보드 페이지가 일관된 모서리 곡률, 은은한 배경색, 선택적 섹션 헤더를 갖춘 통일된 DashboardCard 컴포넌트를 사용합니다. 분석, 결제, 설정, 연락처, 예약 설정 및 모든 폼 페이지가 동일한 시각적 언어를 공유합니다. 팝오버 툴팁이 있는 힌트 라벨이 인라인 설명 텍스트를 대체하여 인터페이스를 깔끔하게 유지하면서도 필요할 때 유용한 정보를 제공합니다.",
+          "section2Title": "활성 상태가 있는 고정 사이드바 내비게이션",
+          "section2Text": "데스크톱 화면에서 고정 사이드바 내비게이션이 모든 페이지에 표시됩니다. 활성 페이지가 강조색 배경으로 하이라이트되어 현재 위치를 즉시 알 수 있습니다. 카테고리, 아이템, 주문 등의 하위 페이지는 상위 메뉴 항목을 올바르게 하이라이트합니다. 사이드바에서 메뉴, QR 인쇄, 예약, 분석, 설정, 연락처, 결제, 지원에 빠르게 접근할 수 있으며, 현재 화면을 떠나지 않아도 됩니다.",
+          "section3Title": "하단 액션이 있는 개선된 폼 페이지",
+          "section3Text": "모든 폼 페이지(카테고리, 아이템, 테이블, 디자인, 설정, 연락처, 예약 설정)에 강조색의 저장 버튼이 하단에 추가되었습니다. 삭제 버튼은 왼쪽에 차분한 스타일로 표시됩니다. 더 이상 변경사항을 저장하기 위해 위로 스크롤할 필요가 없습니다. 로그아웃 버튼은 사이드바에서 디자인 페이지 하단으로 이동하여 내비게이션이 핵심 액션에 집중하도록 했습니다.",
+          "benefitsTitle": "UI 리디자인의 장점",
+          "benefit1": "모든 페이지에 걸쳐 일관된 테두리와 배경을 가진 통일된 카드 스타일",
+          "benefit2": "데스크톱에서 강조색 활성 상태가 있는 고정 사이드바 내비게이션",
+          "benefit3": "모든 폼에 하단 저장 버튼 — 위로 스크롤할 필요 없음",
+          "benefit4": "삭제와 저장 액션이 명확히 분리 — 왼쪽에 삭제, 오른쪽에 저장",
+          "benefit5": "폼 카드에 섹션 헤더로 더 나은 시각적 구성",
+          "benefit6": "DashboardCard 래퍼와 개선된 디바이스 통계 레이아웃으로 더 깔끔한 분석 페이지",
+          "conclusionTitle": "더 세련된 대시보드 경험",
+          "conclusionText": "이 UI 리디자인은 IQ Rest 대시보드 구석구석에 시각적 일관성과 향상된 사용성을 가져옵니다. 메뉴 아이템 편집, 분석 확인, 예약 관리 등 어떤 작업을 하든 인터페이스가 통일감 있고 직관적입니다. 고정 사이드바 내비게이션과 함께 레스토랑의 디지털 QR 메뉴 관리가 그 어느 때보다 빠르고 즐거워졌습니다.",
+          "ctaText": "리디자인된 대시보드를 경험하세요",
+          "ctaButton": "대시보드 열기"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "지원팀"
   },
   "reservations": {
+    "general": "일반",
     "title": "예약",
     "tables": "테이블",
     "settings": "설정",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "일반",
       "noCategories": "아직 카테고리가 없습니다",
       "addCategory": "카테고리 추가",
       "editCategory": "카테고리 편집",
@@ -1628,6 +1660,7 @@
       "sortError": "정렬 순서 저장에 실패했습니다"
     },
     "items": {
+      "general": "일반",
       "noItems": "아직 항목이 없습니다. 첫 번째 항목을 만들어 시작하세요.",
       "noCategoriesHint": "항목을 만들려면 먼저 카테고리를 추가하세요.",
       "addItem": "상품 추가",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "비디오 또는 이미지 업로드",
       "removeMedia": "제거",
       "accentColor": "강조 색상",
-      "accentColorHint": "웹사이트 버튼과 하이라이트의 주요 색상",
+      "accentColorHint": "웹사이트 버튼과 강조 표시의 기본 색상입니다. 무지개 버튼을 눌러 원하는 색상을 선택하세요.",
       "save": "저장",
       "fetchError": "디자인 설정 로드에 실패했습니다",
       "saveError": "디자인 설정 저장에 실패했습니다",
@@ -1790,25 +1823,28 @@
       "ordersSection": "주문",
       "ordersRequireWhatsApp": "주문을 활성화하려면 연락처 페이지에 WhatsApp 번호를 추가하세요",
       "ordersEnabled": "주문 활성화",
-      "ordersOn": "고객이을 통해 주문할 수 있습니다",
-      "ordersOff": "주문 비활성화",
+      "ordersOn": "주문 받기",
+      "ordersOff": "주문 받기",
       "orderMode": "주문 모드",
-      "orderModeWhatsapp": "WhatsApp만",
-      "orderModeInternal": "내부만",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "내부",
       "orderModeBoth": "WhatsApp + 내부",
       "orderModeWhatsappHint": "주문이 WhatsApp으로 직접 전송됩니다",
       "orderModeInternalHint": "주문이 대시보드에 저장됩니다",
       "orderModeBothHint": "주문이 저장되고 WhatsApp으로도 전송됩니다",
-      "ordersFieldsHint": "활성화된 필드는 고객이 입력해야 하는 필수 항목입니다",
+      "ordersFieldsHint": "필수 항목:",
       "ordersName": "이름",
-      "ordersNameOn": "고객은 이름을 입력해야 합니다",
-      "ordersNameOff": "이름 필드 숨김",
+      "ordersNameOn": "이름",
+      "ordersNameOff": "이름",
       "ordersPhone": "전화번호",
-      "ordersPhoneOn": "고객은 전화번호를 입력해야 합니다",
-      "ordersPhoneOff": "전화번호 필드 숨김",
+      "ordersPhoneOn": "전화",
+      "ordersPhoneOff": "전화",
       "ordersAddress": "배달 주소",
-      "ordersAddressOn": "고객은 배달 주소를 입력해야 합니다",
-      "ordersAddressOff": "주소 필드 숨김"
+      "ordersAddressOn": "주소",
+      "ordersAddressOff": "주소",
+      "orderModeHint": "내부 주문은 대시보드에 저장됩니다. WhatsApp 주문은 WhatsApp으로 직접 전송됩니다. 두 가지를 동시에 활성화할 수 있습니다.",
+      "ordersFieldsDescription": "활성화된 항목은 고객이 주문 시 필수로 입력해야 합니다.",
+      "slugHint": "고객이 메뉴를 볼 수 있는 고유 URL 주소입니다. 이 링크를 공유하거나 QR 코드에 사용하세요. 다음과 같이 표시됩니다: iq-rest.com/m/귀하의-slug"
     },
     "general": {
       "save": "저장",

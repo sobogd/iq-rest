@@ -20,6 +20,8 @@ import { AlertCircle, Loader2 } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
 
 interface ReservationSettingsPageProps {
   initialRestaurant: {
@@ -128,10 +130,10 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
       </div>
 
       <div className="px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-6">
+        <DashboardContent innerClassName="space-y-6">
 
           {!hasActiveSubscription && (
-            <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
+            <div className="rounded-md border border-amber-500/50 bg-amber-500/10 p-4">
               <div className="flex gap-3 md:gap-4 md:items-center">
                 <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
                 <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
@@ -151,7 +153,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
             </div>
           )}
 
-          <div className={!hasActiveSubscription ? "opacity-50" : ""}>
+          <DashboardCard title={translations.pages.reservations}>
             <FormSwitch
               id="reservationsEnabled"
               label={`${t("reservationsEnabled")}:`}
@@ -161,83 +163,93 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
               inactiveText={t("disabled")}
               disabled={!hasActiveSubscription}
             />
-          </div>
 
-          {reservationsEnabled && (
-            <>
-              <div className="space-y-2">
-                <Label>{t("reservationMode")}:</Label>
-                <Select value={reservationMode} onValueChange={(v) => { track(DashboardEvent.CHANGED_RESERVATION_MODE); setReservationMode(v); }}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="auto">{t("modeAuto")}</SelectItem>
-                    <SelectItem value="manual">{t("modeManual")}</SelectItem>
-                  </SelectContent>
-                </Select>
-                <p className="text-sm text-muted-foreground">
-                  {reservationMode === "auto" ? t("modeAutoDescription") : t("modeManualDescription")}
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <Label>{t("slotDuration")}:</Label>
-                <Select
-                  value={reservationSlotMinutes.toString()}
-                  onValueChange={(v) => { track(DashboardEvent.CHANGED_SLOT_DURATION); setReservationSlotMinutes(parseInt(v)); }}
-                >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="60">60 {t("minutes")}</SelectItem>
-                    <SelectItem value="90">90 {t("minutes")}</SelectItem>
-                    <SelectItem value="120">120 {t("minutes")}</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label>{t("workingHours")}:</Label>
-                <div className="flex items-center gap-2">
-                  <Select value={workingHoursStart} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_START); setWorkingHoursStart(v); }}>
-                    <SelectTrigger className="w-28">
+            <div className={`space-y-4 ${!reservationsEnabled || !hasActiveSubscription ? "opacity-50" : ""}`}>
+                <div className="space-y-2">
+                  <Label>{t("reservationMode")}:</Label>
+                  <Select value={reservationMode} onValueChange={(v) => { track(DashboardEvent.CHANGED_RESERVATION_MODE); setReservationMode(v); }} disabled={!reservationsEnabled || !hasActiveSubscription}>
+                    <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      {Array.from({ length: 24 }, (_, i) => {
-                        const hour = i.toString().padStart(2, "0");
-                        return (
-                          <SelectItem key={`start-${hour}:00`} value={`${hour}:00`}>
-                            {hour}:00
-                          </SelectItem>
-                        );
-                      })}
+                      <SelectItem value="auto">{t("modeAuto")}</SelectItem>
+                      <SelectItem value="manual">{t("modeManual")}</SelectItem>
                     </SelectContent>
                   </Select>
-                  <span className="text-muted-foreground">—</span>
-                  <Select value={workingHoursEnd} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_END); setWorkingHoursEnd(v); }}>
-                    <SelectTrigger className="w-28">
+                  <p className="text-sm text-muted-foreground">
+                    {reservationMode === "auto" ? t("modeAutoDescription") : t("modeManualDescription")}
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <Label>{t("slotDuration")}:</Label>
+                  <Select
+                    value={reservationSlotMinutes.toString()}
+                    onValueChange={(v) => { track(DashboardEvent.CHANGED_SLOT_DURATION); setReservationSlotMinutes(parseInt(v)); }}
+                    disabled={!reservationsEnabled || !hasActiveSubscription}
+                  >
+                    <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      {Array.from({ length: 24 }, (_, i) => {
-                        const hour = i.toString().padStart(2, "0");
-                        return (
-                          <SelectItem key={`end-${hour}:00`} value={`${hour}:00`}>
-                            {hour}:00
-                          </SelectItem>
-                        );
-                      })}
+                      <SelectItem value="60">60 {t("minutes")}</SelectItem>
+                      <SelectItem value="90">90 {t("minutes")}</SelectItem>
+                      <SelectItem value="120">120 {t("minutes")}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-              </div>
-            </>
-          )}
 
-        </div>
+                <div className="space-y-2">
+                  <Label>{t("workingHours")}:</Label>
+                  <div className="flex items-center gap-2">
+                    <Select value={workingHoursStart} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_START); setWorkingHoursStart(v); }} disabled={!reservationsEnabled || !hasActiveSubscription}>
+                      <SelectTrigger className="w-28">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {Array.from({ length: 24 }, (_, i) => {
+                          const hour = i.toString().padStart(2, "0");
+                          return (
+                            <SelectItem key={`start-${hour}:00`} value={`${hour}:00`}>
+                              {hour}:00
+                            </SelectItem>
+                          );
+                        })}
+                      </SelectContent>
+                    </Select>
+                    <span className="text-muted-foreground">—</span>
+                    <Select value={workingHoursEnd} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_END); setWorkingHoursEnd(v); }} disabled={!reservationsEnabled || !hasActiveSubscription}>
+                      <SelectTrigger className="w-28">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {Array.from({ length: 24 }, (_, i) => {
+                          const hour = i.toString().padStart(2, "0");
+                          return (
+                            <SelectItem key={`end-${hour}:00`} value={`${hour}:00`}>
+                              {hour}:00
+                            </SelectItem>
+                          );
+                        })}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+            </div>
+          </DashboardCard>
+
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }}
+              disabled={saving || !hasChanges}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
+            >
+              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
+            </button>
+          </div>
+
+        </DashboardContent>
       </div>
     </div>
   );

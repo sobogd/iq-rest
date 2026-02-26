@@ -71,7 +71,10 @@ export function getPageKeyFromPathname(pathname: string): PageKey {
     return "menu";
   }
   const subPath = pathname.slice(idx + dashboardPrefix.length);
-  return PATH_TO_PAGE_MAP[subPath] || "menu";
+  if (PATH_TO_PAGE_MAP[subPath]) return PATH_TO_PAGE_MAP[subPath];
+  // Match by first segment (e.g. "categories/123" → "categories")
+  const firstSegment = subPath.split("/")[0];
+  return PATH_TO_PAGE_MAP[firstSegment] || "menu";
 }
 
 export interface AnalyticsTranslations {
@@ -95,6 +98,7 @@ export interface AnalyticsTranslations {
 }
 
 export interface CategoriesTranslations {
+  general: string;
   noCategories: string;
   addCategory: string;
   editCategory: string;
@@ -127,6 +131,7 @@ export interface CategoriesTranslations {
 }
 
 export interface ItemsTranslations {
+  general: string;
   noItems: string;
   noCategoriesHint: string;
   addItem: string;

@@ -49,3 +49,9 @@ export async function getUserWithCompany(): Promise<{ userId: string; companyId:
   if (!auth) return null;
   return { userId: auth.userId, companyId: auth.company.id };
 }
+
+/** Returns full company object (needed for Stripe routes that access stripeCustomerId, etc.) */
+export async function getAuthCompany() {
+  const auth = await getAuthUser();
+  return auth?.company ?? null;
+}

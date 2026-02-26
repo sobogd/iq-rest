@@ -695,6 +695,36 @@
       "description": "IQ Restは、レストランやカフェがプロフェッショナルなデジタルQRメニューを作成できるよう常に改善しています。"
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "ダッシュボードUIリデザイン：統一カード、ナビゲーション、フォーム操作",
+        "description": "統一されたカードスタイル、固定サイドバーナビゲーション、アクセントカラーのアクティブ状態、すべてのフォームページに下部保存・削除ボタンを備えた洗練されたダッシュボード。",
+        "meta": {
+          "title": "ダッシュボードUIリデザイン：カード、ナビゲーション、フォーム | IQ Rest",
+          "description": "IQ Restのダッシュボードが統一カードコンポーネント、アクティブページハイライト付き固定サイドバー、改善されたフォーム操作で一新。よりクリーンで直感的なインターフェースでレストランのQRメニューを管理できます。"
+        },
+        "content": {
+          "intro": "IQ Restのダッシュボードが包括的なUIリデザインを受けました。すべてのページが統一された角丸のカードスタイル、アクセントカラーのアクティブ状態付き固定サイドバーナビゲーション、下部に保存・削除ボタンを備えた改善されたフォームページを使用するようになりました。レストランのデジタルQRメニュー管理がより洗練された体験になります。",
+          "image1Alt": "統一カードスタイルでリデザインされたダッシュボード",
+          "image1Caption": "すべてのダッシュボードページで統一されたカードコンポーネント",
+          "section1Title": "全ページで統一されたカードデザイン",
+          "section1Text": "すべてのダッシュボードページが統一されたDashboardCardコンポーネントを使用し、一貫した角丸、控えめな背景色、オプションのセクションヘッダーを備えています。分析、請求、設定、連絡先、予約設定、すべてのフォームページが同じビジュアル言語を共有します。ポップオーバーツールチップ付きのヒントラベルがインライン説明テキストに代わり、インターフェースをクリーンに保ちながら必要に応じて役立つ情報を提供します。",
+          "section2Title": "アクティブ状態付き固定サイドバーナビゲーション",
+          "section2Text": "デスクトップ画面では、固定サイドバーナビゲーションがすべてのページで表示されるようになりました。アクティブページはアクセントカラーの背景でハイライトされ、現在の位置が一目で分かります。カテゴリー、アイテム、注文などのサブページは親のメニュー項目を正しくハイライトします。サイドバーからメニュー、QR印刷、予約、分析、設定、連絡先、請求、サポートに素早くアクセスできます。すべて現在の画面を離れることなく利用可能です。",
+          "section3Title": "下部アクション付きの改善されたフォームページ",
+          "section3Text": "すべてのフォームページ（カテゴリー、アイテム、テーブル、デザイン、設定、連絡先、予約設定）にアクセントカラーの保存ボタンが下部に追加されました。削除ボタンは左側に控えめなスタイルで表示されます。変更を保存するために上までスクロールする必要がなくなりました。ログアウトボタンはサイドバーからデザインページ下部に移動し、ナビゲーションを本質的な操作に集中させています。",
+          "benefitsTitle": "UIリデザインのメリット",
+          "benefit1": "すべてのページで一貫したボーダーと背景を持つ統一カードスタイル",
+          "benefit2": "デスクトップでアクセントカラーのアクティブ状態付き固定サイドバー",
+          "benefit3": "すべてのフォームに下部保存ボタン — 上にスクロールする必要なし",
+          "benefit4": "削除と保存の操作が明確に分離 — 左に削除、右に保存",
+          "benefit5": "フォームカードにセクションヘッダーでより良い視覚的整理",
+          "benefit6": "DashboardCardラッパーと改善されたデバイス統計レイアウトでよりクリーンな分析ページ",
+          "conclusionTitle": "より洗練されたダッシュボード体験",
+          "conclusionText": "このUIリデザインにより、IQ Restダッシュボードの隅々まで視覚的な一貫性と使いやすさが向上しました。メニューアイテムの編集、分析の確認、予約管理のいずれにおいても、インターフェースは統一感があり直感的です。固定サイドバーナビゲーションと相まって、レストランのデジタルQRメニュー管理がこれまで以上に素早く快適になりました。",
+          "ctaText": "リデザインされたダッシュボードを体験",
+          "ctaButton": "ダッシュボードを開く"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "サポートチーム"
   },
   "reservations": {
+    "general": "一般",
     "title": "予約",
     "tables": "テーブル",
     "settings": "設定",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "一般",
       "noCategories": "カテゴリーはまだありません",
       "addCategory": "カテゴリーを追加",
       "editCategory": "カテゴリを編集",
@@ -1628,6 +1660,7 @@
       "sortError": "並び順の保存に失敗しました"
     },
     "items": {
+      "general": "一般",
       "noItems": "まだアイテムがありません。最初のアイテムを作成してください。",
       "noCategoriesHint": "アイテムを作成するには、まずカテゴリを追加してください。",
       "addItem": "商品を追加",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "動画または画像をアップロード",
       "removeMedia": "削除",
       "accentColor": "アクセントカラー",
-      "accentColorHint": "ウェブサイトのボタンとハイライトのメインカラー",
+      "accentColorHint": "ウェブサイトのボタンやハイライトのメインカラーです。虹のボタンを押すと好きな色を選べます。",
       "save": "保存",
       "fetchError": "デザイン設定の読み込みに失敗しました",
       "saveError": "デザイン設定の保存に失敗しました",
@@ -1790,25 +1823,28 @@
       "ordersSection": "注文",
       "ordersRequireWhatsApp": "注文を有効にするには、連絡先ページにWhatsApp番号を追加してください",
       "ordersEnabled": "注文を有効にする",
-      "ordersOn": "顧客はで注文できます",
-      "ordersOff": "注文は無効です",
+      "ordersOn": "注文を受け付ける",
+      "ordersOff": "注文を受け付ける",
       "orderMode": "注文モード",
-      "orderModeWhatsapp": "WhatsAppのみ",
-      "orderModeInternal": "内部のみ",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "内部",
       "orderModeBoth": "WhatsApp + 内部",
       "orderModeWhatsappHint": "注文はWhatsAppに直接送信されます",
       "orderModeInternalHint": "注文はダッシュボードに保存されます",
       "orderModeBothHint": "注文は保存され、WhatsAppでも送信されます",
-      "ordersFieldsHint": "有効なフィールドは顧客が入力する必要があります",
+      "ordersFieldsHint": "必須項目:",
       "ordersName": "名前",
-      "ordersNameOn": "顧客は名前を入力する必要があります",
-      "ordersNameOff": "名前フィールドは非表示",
+      "ordersNameOn": "名前",
+      "ordersNameOff": "名前",
       "ordersPhone": "電話",
-      "ordersPhoneOn": "顧客は電話番号を入力する必要があります",
-      "ordersPhoneOff": "電話フィールドは非表示",
+      "ordersPhoneOn": "電話",
+      "ordersPhoneOff": "電話",
       "ordersAddress": "配達先住所",
-      "ordersAddressOn": "顧客は配達先住所を入力する必要があります",
-      "ordersAddressOff": "住所フィールドは非表示"
+      "ordersAddressOn": "住所",
+      "ordersAddressOff": "住所",
+      "orderModeHint": "内部注文はダッシュボードに保存されます。WhatsApp注文はWhatsAppに直接送信されます。両方同時に有効にできます。",
+      "ordersFieldsDescription": "有効なフィールドは注文時にお客様の入力が必須になります。",
+      "slugHint": "これはお客様がメニューを閲覧できる固有のURLアドレスです。このリンクを共有するか、QRコードで使用してください。次のように表示されます：iq-rest.com/m/あなたのslug"
     },
     "general": {
       "save": "保存",

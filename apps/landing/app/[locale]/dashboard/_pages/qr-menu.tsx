@@ -6,12 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Printer, Download } from "lucide-react";
+import { Printer, Download, Link } from "lucide-react";
+import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
 
 const PAPER_FORMATS = {
   a4: { width: 210, height: 297, name: "A4" },
@@ -241,11 +244,25 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
     );
   }
 
+  const handleCopyLink = () => {
+    const fullUrl = `https://${menuUrl}`;
+    navigator.clipboard.writeText(fullUrl);
+    toast.success(t("copyUrl"));
+  };
+
   return (
     <div className="flex flex-col h-full">
-      <PageHeader title={translations.pages.qrMenu} />
+      <PageHeader title={translations.pages.qrMenu}>
+        <Button
+          size="sm"
+          onClick={() => { track(DashboardEvent.CLICKED_PRINT_QR); handlePrint(); }}
+        >
+          <Printer className="h-4 w-4 mr-1" />
+          {t("print")}
+        </Button>
+      </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-6">
+        <DashboardContent innerClassName="space-y-4">
         <div ref={printRef} className="hidden" hidden>
           <QRCodeSVG
             value={menuUrl}
@@ -254,7 +271,7 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
           />
         </div>
 
-        <div className="space-y-4">
+        <DashboardCard title={translations.pages.qrMenu}>
           <div className="space-y-2">
             <Label>{t("paperFormat")}</Label>
             <Select value={paperFormat} onValueChange={(v) => { track(DashboardEvent.CHANGED_PAPER_FORMAT); setPaperFormat(v as keyof typeof PAPER_FORMATS); }}>
@@ -332,19 +349,19 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
               </Select>
             </div>
           )}
-        </div>
+        </DashboardCard>
 
-        <div className="flex justify-end gap-2 pt-4 pb-2">
-          <Button onClick={() => { track(DashboardEvent.CLICKED_DOWNLOAD_QR); handleDownload(); }} variant="outline" className="h-10 rounded-xl shadow-md">
-            <Download className="mr-2 h-4 w-4" />
+        <div className="flex justify-end gap-4">
+          <button onClick={() => { track(DashboardEvent.CLICKED_DOWNLOAD_QR); handleDownload(); }} className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium">
+            <Download className="h-4 w-4 text-muted-foreground" />
             {t("download")}
-          </Button>
-          <Button onClick={() => { track(DashboardEvent.CLICKED_PRINT_QR); handlePrint(); }} variant="destructive" className="h-10 rounded-xl shadow-md">
-            <Printer className="mr-2 h-4 w-4" />
-            {t("print")}
-          </Button>
+          </button>
+          <button onClick={handleCopyLink} className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium">
+            <Link className="h-4 w-4 text-muted-foreground" />
+            {t("copyUrl")}
+          </button>
         </div>
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

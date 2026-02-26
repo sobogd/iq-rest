@@ -13,6 +13,11 @@ const changelogEntries: Record<string, {
   image2?: string;
   image3?: string;
 }> = {
+  "dashboard-ui-redesign-consistent-cards-navigation": {
+    date: "2026-02-26",
+    translationKey: "dashboard-ui-redesign-consistent-cards-navigation",
+    image: "/og-image.png",
+  },
   "ai-menu-scanner-create-digital-qr-menu": {
     date: "2026-02-18",
     translationKey: "ai-menu-scanner-create-digital-qr-menu",
@@ -158,7 +163,7 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
   }
 
   const key = entry.translationKey;
-  const hasSixBenefits = key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator" || key === "detailed-analytics-restaurant-qr-menu-website" || key === "support-qr-menu-restaurant-cafe" || key === "ai-menu-scanner-create-digital-qr-menu" || key === "redesigned-dashboard-qr-menu-management" || key === "multi-currency-geo-pricing-qr-menu" || key === "reservation-emails-analytics-digital-qr-menu";
+  const hasSixBenefits = key === "free-restaurant-website-improvements" || key === "faq-page-organization" || key === "easy-qr-menu-cafe-control-panel" || key === "qr-menu-restaurant-categories" || key === "add-items-restaurant-qr-menu-website" || key === "public-restaurant-qr-menu-website" || key === "subscription-plans-qr-menu-restaurant-website" || key === "instant-qr-menu-restaurant-website-generator" || key === "detailed-analytics-restaurant-qr-menu-website" || key === "support-qr-menu-restaurant-cafe" || key === "ai-menu-scanner-create-digital-qr-menu" || key === "redesigned-dashboard-qr-menu-management" || key === "multi-currency-geo-pricing-qr-menu" || key === "reservation-emails-analytics-digital-qr-menu" || key === "dashboard-ui-redesign-consistent-cards-navigation";
 
   return (
     <>

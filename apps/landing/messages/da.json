@@ -695,6 +695,36 @@
       "description": "IQ Rest forbedres konstant for at hjælpe restauranter og caféer med at skabe professionelle digitale QR-menuer. Følg vores ændringslog for at holde dig opdateret med de nyeste funktioner til din restaurant hjemmeside og QR-menu løsning."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Redesign af dashboard: ensartet kortstil, navigation og formularhandlinger",
+        "description": "Et poleret dashboard med ensartet kortstil, permanent sidebjælkenavigation, accentfarvede aktive tilstande og gem/slet-knapper nederst på hver formularside.",
+        "meta": {
+          "title": "Redesign af dashboard: kort, navigation og formularer | IQ Rest",
+          "description": "IQ Rests dashboard er redesignet med ensartede kortkomponenter, permanent sidebjælkenavigation med markering af aktiv side og forbedrede formularhandlinger. Administrer din restaurants QR-menu med en renere og mere intuitiv brugerflade."
+        },
+        "content": {
+          "intro": "IQ Rests dashboard har gennemgået et omfattende redesign. Alle sider bruger nu ensartet kortstil med konsistente afrundede hjørner, permanent sidebjælkenavigation med accentfarvede aktive tilstande og forbedrede formularsider med gem- og slet-knapper nederst. Resultatet er en renere og mere poleret oplevelse til at administrere din restaurants digitale QR-menu.",
+          "image1Alt": "Redesignet dashboard med ensartet kortstil",
+          "image1Caption": "Ensartede kortkomponenter på alle dashboardsider",
+          "section1Title": "Ensartet kortdesign på alle sider",
+          "section1Text": "Alle dashboardsider bruger nu en ensartet DashboardCard-komponent med konsistente afrundede hjørner, subtile baggrundsfarver og valgfrie sektionsoverskrifter. Analyse, fakturering, indstillinger, kontakter, reservationsindstillinger og alle formularsider deler det samme visuelle sprog. Hjælpetekster med popover-tooltips erstatter inline beskrivelsestekst, hvilket holder brugerfladen ren og stadig giver nyttig kontekst, når det er nødvendigt.",
+          "section2Title": "Permanent sidebjælkenavigation med aktive tilstande",
+          "section2Text": "På desktopskærme vises nu en permanent sidebjælkenavigation på hver side. Den aktive side er fremhævet med en accentfarvet baggrund, så det er straks tydeligt, hvor du er. Undersider som kategorier, varer og ordrer fremhæver korrekt det overordnede menupunkt. Sidebjælken giver hurtig adgang til Menu, Print QR, Reservationer, Analyse, Indstillinger, Kontakter, Fakturering og Support — alt uden at forlade den aktuelle visning.",
+          "section3Title": "Forbedrede formularsider med handlinger nederst",
+          "section3Text": "Alle formularsider — kategorier, varer, borde, design, indstillinger, kontakter og reservationsindstillinger — har nu en duplikeret gem-knap nederst i accentfarve. Slet-knapper vises til venstre i en dæmpet stil. Du behøver ikke længere at rulle op til toppen for at gemme dine ændringer. Log ud-knappen er flyttet fra sidebjælken til bunden af designsiden, så navigationen forbliver fokuseret på væsentlige handlinger.",
+          "benefitsTitle": "Fordele ved redesignet",
+          "benefit1": "Ensartet kortstil med konsistente rammer og baggrunde på alle sider",
+          "benefit2": "Permanent sidebjælkenavigation på desktop med accentfarvede aktive tilstande",
+          "benefit3": "Gem-knapper nederst på alle formularer — ingen rulning opad nødvendig",
+          "benefit4": "Slet- og gem-handlinger tydeligt adskilt — slet til venstre, gem til højre",
+          "benefit5": "Sektionsoverskrifter på formularkort for bedre visuel organisering",
+          "benefit6": "Renere analyseside med DashboardCard-wrappers og forbedret layout af enhedsstatistik",
+          "conclusionTitle": "En mere poleret dashboardoplevelse",
+          "conclusionText": "Dette redesign bringer visuel konsistens og forbedret brugervenlighed til alle hjørner af IQ Rests dashboard. Uanset om du redigerer menuvarer, tjekker analyse eller administrerer reservationer, føles brugerfladen sammenhængende og intuitiv. Kombineret med den permanente sidebjælkenavigation er det hurtigere og mere behageligt end nogensinde at administrere din restaurants digitale QR-menu.",
+          "ctaText": "Oplev det redesignede dashboard",
+          "ctaButton": "Åbn dashboard"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsiv support til din restaurant QR-menu",
         "description": "Få responsiv support til eventuelle spørgsmål og ændringer til din QR-menu restaurant eller café. Direkte chat med vores team for hurtig assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Supportteam"
   },
   "reservations": {
+    "general": "Generelt",
     "title": "Reservationer",
     "tables": "Borde",
     "settings": "Indstillinger",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Generelt",
       "noCategories": "Ingen kategorier endnu",
       "addCategory": "Tilføj kategori",
       "editCategory": "Rediger kategori",
@@ -1628,6 +1660,7 @@
       "sortError": "Kunne ikke gemme sorteringsrækkefølge"
     },
     "items": {
+      "general": "Generelt",
       "noItems": "Ingen varer endnu. Opret din første vare for at komme i gang.",
       "noCategoriesHint": "Tilføj en kategori først for at oprette varer.",
       "addItem": "Tilføj vare",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Upload video eller billede",
       "removeMedia": "Fjern",
       "accentColor": "Accentfarve",
-      "accentColorHint": "Hovedfarve til knapper og fremhævelser på din hjemmeside",
+      "accentColorHint": "Hovedfarve til knapper og fremhævninger på dit websted. Brug regnbueknappen til at vælge en vilkårlig farve.",
       "save": "Gem",
       "fetchError": "Kunne ikke indlæse designindstillinger",
       "saveError": "Kunne ikke gemme designindstillinger",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Bestillinger",
       "ordersRequireWhatsApp": "Tilføj et WhatsApp-nummer på Kontaktsiden for at aktivere bestillinger",
       "ordersEnabled": "Aktiver Bestillinger",
-      "ordersOn": "Kunder kan bestille",
-      "ordersOff": "Bestilling deaktiveret",
+      "ordersOn": "Modtag bestillinger",
+      "ordersOff": "Modtag bestillinger",
       "orderMode": "Bestillingstilstand",
-      "orderModeWhatsapp": "Kun WhatsApp",
-      "orderModeInternal": "Kun intern",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Intern",
       "orderModeBoth": "WhatsApp + Intern",
       "orderModeWhatsappHint": "Ordrer sendes direkte til WhatsApp",
       "orderModeInternalHint": "Ordrer gemmes i kontrolpanelet",
       "orderModeBothHint": "Ordrer gemmes og sendes også via WhatsApp",
-      "ordersFieldsHint": "Aktiverede felter er nødvendige for kunden at udfylde",
+      "ordersFieldsHint": "Påkrævede felter:",
       "ordersName": "Navn",
-      "ordersNameOn": "Kunden skal indtaste deres navn",
-      "ordersNameOff": "Navn felt skjult",
+      "ordersNameOn": "Navn",
+      "ordersNameOff": "Navn",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Kunden skal indtaste deres telefon",
-      "ordersPhoneOff": "Telefon felt skjult",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Leveringsadresse",
-      "ordersAddressOn": "Kunden skal indtaste leveringsadresse",
-      "ordersAddressOff": "Adresse felt skjult"
+      "ordersAddressOn": "Adresse",
+      "ordersAddressOff": "Adresse",
+      "orderModeHint": "Interne bestillinger gemmes i panelet. WhatsApp-bestillinger sendes direkte til din WhatsApp. Du kan aktivere begge samtidigt.",
+      "ordersFieldsDescription": "Aktiverede felter vil være påkrævede for kunden ved bestilling.",
+      "slugHint": "Dette er din unikke URL-adresse, hvor kunder kan se din menu. Del dette link eller brug det i din QR-kode. Det vises som: iq-rest.com/m/din-slug"
     },
     "general": {
       "save": "Gem",

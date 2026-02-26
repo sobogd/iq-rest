@@ -695,6 +695,36 @@
       "description": "IQ Rest paraneb pidevalt, et aidata restoranidel ja kohvikutel luua professionaalseid digitaalseid QR menüüsid. Jälgige meie muudatuste logi, et olla kursis oma restorani veebisaidi ja QR menüü lahenduse uusimate funktsioonidega."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Juhtpaneeli ümberkujundus: Ühtlased kaardid, navigeerimine ja vormitoimingud",
+        "description": "Viimistletud juhtpaneel ühtse kaardikujunduse, püsiva külgnavigatsiooni, aktsentvärvi aktiivsete olekute ning salvestamis- ja kustutamistoimingutega iga vormi lehe allosas.",
+        "meta": {
+          "title": "Juhtpaneeli ümberkujundus: Kaardid, navigeerimine ja vormid | IQ Rest",
+          "description": "IQ Rest juhtpaneel on ümberkujundatud ühtlaste kaardikomponentide, püsiva külgnavigatsiooni aktiivse lehe esiletõstmisega ja täiustatud vormitoimingutega. Haldake oma restorani QR menüüd puhtama ja intuitiivsema liidesega."
+        },
+        "content": {
+          "intro": "IQ Rest on läbinud põhjaliku juhtpaneeli kasutajaliidese ümberkujunduse. Iga leht kasutab nüüd ühtset kaardikujundust ühtlaste ääreraadide, püsivat külgnavigatsiooni aktsentvärvi aktiivsete olekutega ning täiustatud vormilehti salvestamis- ja kustutamistoimingutega allosas. Tulemuseks on puhtam ja viimistletum kogemus teie restorani digitaalse QR menüü haldamisel.",
+          "image1Alt": "Ümberkujundatud juhtpaneel ühtse kaardikujundusega",
+          "image1Caption": "Ühtlased kaardikomponendid kõigil juhtpaneeli lehtedel",
+          "section1Title": "Ühtne kaardikujundus kõigil lehtedel",
+          "section1Text": "Iga juhtpaneeli leht kasutab nüüd ühtset DashboardCard komponenti ühtlaste ümardatud äärtega, peente taustavärvidega ja valikuliste jaotise päistega. Analüütika, arveldamine, seaded, kontaktid, broneerimisseaded ja kõik vormilehed jagavad sama visuaalset keelt. Vihjelauad hüpikakna vihjetega asendavad sisemisi kirjeldusi, hoides liidese puhtana, pakkudes samas vajadusel kasulikku konteksti.",
+          "section2Title": "Püsiv külgnavigatsioon aktiivsete olekutega",
+          "section2Text": "Lauaarvuti ekraanidel on nüüd igal lehel nähtav püsiv külgnavigatsioon. Aktiivne leht on esile tõstetud aktsentvärvi taustaga, muutes kohe selgeks, kus te asute. Alamlehed nagu kategooriad, tooted ja tellimused tõstavad õigesti esile emaüksuse Menüü. Külgriba sisaldab kiiret juurdepääsu Menüüle, QR printimisele, Broneeringutele, Analüütikale, Seadetele, Kontaktidele, Arveldamisele ja Toele — kõik ilma praegusest vaatest lahkumata.",
+          "section3Title": "Täiustatud vormilehed toimingutega allosas",
+          "section3Text": "Kõik vormilehed — kategooriad, tooted, lauad, kujundus, seaded, kontaktid ja broneerimisseaded — sisaldavad nüüd dubleeritud salvestamisnuppu allosas aktsendivärvis. Kustutamisnupud ilmuvad vasakul küljel summutatud stiiliga. See tähendab, et te ei pea enam muudatuste salvestamiseks üles kerima. Väljalogimisnupp on viidud külgribalt kujunduslehe allossa, hoides navigatsiooni keskendununa olulistele toimingutele.",
+          "benefitsTitle": "Kasutajaliidese ümberkujunduse eelised",
+          "benefit1": "Ühtne kaardikujundus ühtlaste äärtega ja taustadega kõigil lehtedel",
+          "benefit2": "Püsiv külgnavigatsioon lauaarvutil aktsentvärvi aktiivsete olekutega",
+          "benefit3": "Salvestamisnupud kõigi vormide allosas — pole vaja üles kerida",
+          "benefit4": "Kustutamis- ja salvestamistoimingud selgelt eraldatud — kustutamine vasakul, salvestamine paremal",
+          "benefit5": "Jaotise päised vormikaartidel paremaks visuaalseks korralduseks",
+          "benefit6": "Puhtam analüütikaleht DashboardCard ümbristega ja täiustatud seadmestatistika paigutusega",
+          "conclusionTitle": "Viimistletum juhtpaneeli kogemus",
+          "conclusionText": "See kasutajaliidese ümberkujundus toob visuaalse ühtluse ja parema kasutatavuse IQ Rest juhtpaneeli igasse nurka. Olenemata sellest, kas redigeerite menüüelemente, kontrollite analüütikat või haldate broneeringuid, liides tundub sidus ja intuitiivne. Koos püsiva külgnavigatsiooniga on teie restorani digitaalse QR menüü haldamine kiirem ja meeldivam kui kunagi varem.",
+          "ctaText": "Avastage ümberkujundatud juhtpaneel",
+          "ctaButton": "Ava juhtpaneel"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Kohandatav tugi teie restorani QR menüü jaoks",
         "description": "Saage kohandatud tugi kõigi küsimuste ja muudatuste jaoks teie restorani või kohviku QR menüüs. Otsene vestlus meie meeskonnaga kiireks abiks.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Tugimeeskond"
   },
   "reservations": {
+    "general": "Üldine",
     "title": "Broneeringud",
     "tables": "Lauad",
     "settings": "Seaded",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Üldine",
       "noCategories": "Kategooriaid pole veel",
       "addCategory": "Lisa kategooria",
       "editCategory": "Muuda kategooriat",
@@ -1628,6 +1660,7 @@
       "sortError": "Sorteerimise järjekorra salvestamine ebaõnnestus"
     },
     "items": {
+      "general": "Üldine",
       "noItems": "Ei ole veel tooteid. Looge oma esimene toode, et alustada.",
       "noCategoriesHint": "Lisage esmalt kategooria, et luua tooteid.",
       "addItem": "Lisa toode",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Laadige üles video või pilt",
       "removeMedia": "Eemalda",
       "accentColor": "Aktsentvärv",
-      "accentColorHint": "Peamine värv nuppude ja esiletõstetud elementide jaoks teie veebisaidil",
+      "accentColorHint": "Nuppude ja esiletõstude põhivärv teie veebisaidil. Kasutage vikerkaarenuppu mis tahes värvi valimiseks.",
       "save": "Salvesta",
       "fetchError": "Disaini seadeid ei õnnestunud laadida",
       "saveError": "Disaini seadeid ei õnnestunud salvestada",
@@ -1790,25 +1823,28 @@
       "ordersSection": "tellimused",
       "ordersRequireWhatsApp": "Lisage kontaktide lehele WhatsAppi number, et tellimused lubada",
       "ordersEnabled": "Luba tellimused",
-      "ordersOn": "Kliendid saavad tellidai kaudu",
-      "ordersOff": "Tellimine keelatud",
+      "ordersOn": "Võta tellimusi vastu",
+      "ordersOff": "Võta tellimusi vastu",
       "orderMode": "Tellimisrežiim",
-      "orderModeWhatsapp": "Ainult WhatsApp",
-      "orderModeInternal": "Ainult sisemine",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Sisemised",
       "orderModeBoth": "WhatsApp + Sisemine",
       "orderModeWhatsappHint": "Tellimused saadetakse otse WhatsAppi",
       "orderModeInternalHint": "Tellimused salvestatakse juhtpaneelile",
       "orderModeBothHint": "Tellimused salvestatakse ja saadetakse ka WhatsAppi",
-      "ordersFieldsHint": "Lubatud väljad on kliendi täitmiseks kohustuslikud",
+      "ordersFieldsHint": "Kohustuslikud väljad:",
       "ordersName": "Nimi",
-      "ordersNameOn": "Klient peab sisestama oma nime",
-      "ordersNameOff": "Nime väli peidetud",
+      "ordersNameOn": "Nimi",
+      "ordersNameOff": "Nimi",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Klient peab sisestama oma telefoni",
-      "ordersPhoneOff": "Telefoni väli peidetud",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Kohaletoimetamise aadress",
-      "ordersAddressOn": "Klient peab sisestama kohaletoimetamise aadressi",
-      "ordersAddressOff": "Aadressi väli peidetud"
+      "ordersAddressOn": "Aadress",
+      "ordersAddressOff": "Aadress",
+      "orderModeHint": "Sisemised tellimused salvestatakse paneelil. WhatsAppi tellimused saadetakse otse teie WhatsAppi. Saate mõlemad korraga aktiveerida.",
+      "ordersFieldsDescription": "Aktiveeritud väljad on kliendile tellimuse esitamisel kohustuslikud.",
+      "slugHint": "See on teie unikaalne URL-aadress, kust kliendid saavad teie menüüd vaadata. Jagage seda linki või kasutage seda oma QR-koodis. See kuvatakse kujul: iq-rest.com/m/teie-slug"
     },
     "general": {
       "save": "Salvesta",

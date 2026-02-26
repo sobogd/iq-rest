@@ -695,6 +695,36 @@
       "description": "IQ Rest està constantment millorant per ajudar restaurants i cafeteries a crear menús digitals professionals en QR. Seguiu el nostre registre de canvis per estar al dia amb les últimes funcions per al vostre lloc web de restaurant i solució de menú QR."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Redisseny del tauler: Targetes uniformes, navegació i accions de formularis",
+        "description": "Un tauler polit amb un estil de targetes unificat, navegació lateral persistent, estats actius amb color d'accent i accions de desar/eliminar a la part inferior de cada pàgina de formulari.",
+        "meta": {
+          "title": "Redisseny del tauler: Targetes, navegació i formularis | IQ Rest",
+          "description": "El tauler d'IQ Rest redissenyat amb components de targetes uniformes, navegació lateral persistent amb ressaltat de la pàgina activa i accions de formulari millorades. Gestiona el menú QR del teu restaurant amb una interfície més neta i intuïtiva."
+        },
+        "content": {
+          "intro": "IQ Rest ha experimentat un redisseny complet de la interfície del tauler. Cada pàgina ara utilitza un estil de targetes uniforme amb radis de vora consistents, una navegació lateral persistent amb estats actius en color d'accent i pàgines de formulari millorades amb accions de desar i eliminar a la part inferior. El resultat és una experiència més neta i polida per gestionar el menú QR digital del teu restaurant.",
+          "image1Alt": "Tauler redissenyat amb estil de targetes uniforme",
+          "image1Caption": "Components de targetes unificats a totes les pàgines del tauler",
+          "section1Title": "Disseny de targetes uniforme a totes les pàgines",
+          "section1Text": "Cada pàgina del tauler ara utilitza un component DashboardCard unificat amb vores arrodonides consistents, colors de fons subtils i capçaleres de secció opcionals. Analítiques, facturació, configuració, contactes, configuració de reserves i totes les pàgines de formulari comparteixen el mateix llenguatge visual. Les etiquetes d'ajuda amb globus emergents substitueixen el text descriptiu en línia, mantenint la interfície neta tot proporcionant context útil quan cal.",
+          "section2Title": "Navegació lateral persistent amb estats actius",
+          "section2Text": "A les pantalles d'escriptori, una navegació lateral persistent és ara visible a cada pàgina. La pàgina activa es ressalta amb un fons de color d'accent, deixant clar immediatament on ets. Les subpàgines com categories, articles i comandes ressalten correctament l'element pare Menú. La barra lateral inclou accés ràpid al Menú, Impressió QR, Reserves, Analítiques, Configuració, Contactes, Facturació i Suport — tot sense sortir de la vista actual.",
+          "section3Title": "Pàgines de formulari millorades amb accions a la part inferior",
+          "section3Text": "Totes les pàgines de formulari — categories, articles, taules, disseny, configuració, contactes i configuració de reserves — ara inclouen un botó de desar duplicat a la part inferior en color d'accent. Els botons d'eliminar apareixen al costat esquerre amb un estil atenuat. Això significa que ja no cal desplaçar-se cap amunt per desar els canvis. El botó de tancar sessió s'ha mogut de la barra lateral a la part inferior de la pàgina de disseny, mantenint la navegació centrada en les accions essencials.",
+          "benefitsTitle": "Avantatges del redisseny de la interfície",
+          "benefit1": "Estil de targetes unificat amb vores i fons consistents a totes les pàgines",
+          "benefit2": "Navegació lateral persistent a l'escriptori amb estats actius en color d'accent",
+          "benefit3": "Botons de desar a la part inferior de tots els formularis — no cal desplaçar-se amunt",
+          "benefit4": "Accions d'eliminar i desar clarament separades — eliminar a l'esquerra, desar a la dreta",
+          "benefit5": "Capçaleres de secció a les targetes de formulari per a una millor organització visual",
+          "benefit6": "Pàgina d'analítiques més neta amb embolcalls DashboardCard i disposició millorada de les estadístiques de dispositius",
+          "conclusionTitle": "Una experiència de tauler més polida",
+          "conclusionText": "Aquest redisseny de la interfície aporta consistència visual i una usabilitat millorada a cada racó del tauler d'IQ Rest. Tant si estàs editant articles del menú, consultant analítiques o gestionant reserves, la interfície es percep cohesiva i intuïtiva. Combinat amb la navegació lateral persistent, gestionar el menú QR digital del teu restaurant és més ràpid i agradable que mai.",
+          "ctaText": "Descobreix el tauler redissenyat",
+          "ctaButton": "Obrir el tauler"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Suport Responsiu per al Menú QR del Teu Restaurant",
         "description": "Obté suport responsiu per a qualsevol pregunta i canvi al teu menú QR del restaurant o cafè. Xat directe amb el nostre equip per a una assistència ràpida.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Equip de suport"
   },
   "reservations": {
+    "general": "General",
     "title": "Reserves",
     "tables": "Taules",
     "settings": "Configuració",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "General",
       "noCategories": "Encara no hi ha categories",
       "addCategory": "Afegir categoria",
       "editCategory": "Editar categoria",
@@ -1628,6 +1660,7 @@
       "sortError": "No s'ha pogut desar l'ordre d'ordenació"
     },
     "items": {
+      "general": "General",
       "noItems": "Encara no hi ha articles. Crea el teu primer article per començar.",
       "noCategoriesHint": "Afegeix una categoria primer per crear articles.",
       "addItem": "Afegir article",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Puja vídeo o imatge",
       "removeMedia": "Eliminar",
       "accentColor": "Color d'accent",
-      "accentColorHint": "Color principal per a botons i ressaltats al teu lloc web",
+      "accentColorHint": "Color principal per a botons i ressaltats al vostre web. Useu el botó arc de Sant Martí per triar qualsevol color.",
       "save": "Desa",
       "fetchError": "No s'ha pogut carregar la configuració del disseny",
       "saveError": "No s'ha pogut desar la configuració del disseny",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Comandes",
       "ordersRequireWhatsApp": "Afegeix un número de WhatsApp a la pàgina de Contactes per habilitar les comandes",
       "ordersEnabled": "Habilitar comandes",
-      "ordersOn": "Els clients poden demanar",
-      "ordersOff": "Comandes deshabilitades",
+      "ordersOn": "Acceptar comandes",
+      "ordersOff": "Acceptar comandes",
       "orderMode": "Mode de comanda",
-      "orderModeWhatsapp": "Només WhatsApp",
-      "orderModeInternal": "Només intern",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Intern",
       "orderModeBoth": "WhatsApp + Intern",
       "orderModeWhatsappHint": "Les comandes s'envien directament a WhatsApp",
       "orderModeInternalHint": "Les comandes es guarden al tauler",
       "orderModeBothHint": "Les comandes es guarden i també s'envien per WhatsApp",
-      "ordersFieldsHint": "Els camps habilitats són necessaris perquè el client els ompli",
+      "ordersFieldsHint": "Camps obligatoris:",
       "ordersName": "Nom",
-      "ordersNameOn": "El client ha d'introduir el seu nom",
-      "ordersNameOff": "Camp de nom amagat",
+      "ordersNameOn": "Nom",
+      "ordersNameOff": "Nom",
       "ordersPhone": "Telèfon",
-      "ordersPhoneOn": "El client ha d'introduir el seu telèfon",
-      "ordersPhoneOff": "Camp de telèfon amagat",
+      "ordersPhoneOn": "Telèfon",
+      "ordersPhoneOff": "Telèfon",
       "ordersAddress": "Adreça de lliurament",
-      "ordersAddressOn": "El client ha d'introduir l'adreça de lliurament",
-      "ordersAddressOff": "Camp d'adreça amagat"
+      "ordersAddressOn": "Adreça",
+      "ordersAddressOff": "Adreça",
+      "orderModeHint": "Les comandes internes es guarden al panell. Les comandes de WhatsApp s'envien directament al vostre WhatsApp. Podeu activar ambdós alhora.",
+      "ordersFieldsDescription": "Els camps activats seran obligatoris per al client en fer una comanda.",
+      "slugHint": "Aquesta és la vostra adreça URL única on els clients poden veure el vostre menú. Compartiu aquest enllaç o utilitzeu-lo al vostre codi QR. Apareixerà com: iq-rest.com/m/el-vostre-slug"
     },
     "general": {
       "save": "Desa",

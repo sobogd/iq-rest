@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "@/i18n/routing";
+import { DashboardNavHeader } from "../_components/dashboard-nav";
 
 interface PageHeaderProps {
   title: string;
@@ -39,14 +40,15 @@ export function PageHeader({ title, children, onBack, backHref = "/dashboard" }:
 
   return (
     <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-      <div className="flex items-center py-3 max-w-lg mx-auto">
+      <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
+        <DashboardNavHeader />
         <button
           onClick={handleBack}
           className="flex items-center justify-center h-10 w-10 -ml-2"
         >
           <ArrowLeft className="h-5 w-5" />
         </button>
-        <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{title}</h1>
+        <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{title}</h1>
         {children}
       </div>
     </header>

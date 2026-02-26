@@ -30,6 +30,8 @@ import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRouter } from "@/i18n/routing";
 import type { SubscriptionStatus } from "@prisma/client";
 import type { PlanType } from "@/lib/stripe-config";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
 
 const ALL_LANGUAGES = [
   "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
@@ -196,13 +198,10 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
         </PageHeader>
       </div>
       <form id="settings-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto">
-          <div className="space-y-4">
+        <DashboardContent innerClassName="space-y-4">
 
-        {/* Languages section */}
-        <div className="space-y-4">
           {isAtLimit && languageLimit !== Infinity && (
-            <div className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4">
+            <div className="rounded-md border border-amber-500/50 bg-amber-500/10 p-4">
               <div className="flex gap-3 md:gap-4 md:items-center">
                 <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
                 <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
@@ -223,57 +222,60 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
             </div>
           )}
 
-          <div className="space-y-2">
-            {(() => {
+          <DashboardCard title={translations.pages.settings}>
+            {ALL_LANGUAGES.map((lang) => {
+              const isEnabled = languages.includes(lang.code);
+              const isDefault = defaultLanguage === lang.code;
+              const isDisabledByLimit = !isEnabled && isAtLimit;
+
               return (
-                <>
-                  {ALL_LANGUAGES.map((lang) => {
-                    const isEnabled = languages.includes(lang.code);
-                    const isDefault = defaultLanguage === lang.code;
-                    const isDisabledByLimit = !isEnabled && isAtLimit;
+                <div
+                  key={lang.code}
+                  className={`flex items-center justify-between h-14 px-4 rounded-md bg-muted/30 ${isDisabledByLimit ? "opacity-50" : ""}`}
+                >
+                  <div className="flex items-center gap-3 flex-1 min-w-0">
+                    <Switch
+                      checked={isEnabled}
+                      onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
+                      disabled={(isDefault && isEnabled) || isDisabledByLimit}
+                    />
+                    <span className="text-sm font-medium truncate">{lang.name}</span>
+                  </div>
 
-                    return (
-                      <div
-                        key={lang.code}
-                        className={`flex items-center justify-between h-14 px-4 bg-muted/30 rounded-xl ${isDisabledByLimit ? "opacity-50" : ""}`}
-                      >
-                        <div className="flex items-center gap-3 flex-1 min-w-0">
-                          <Switch
-                            checked={isEnabled}
-                            onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
-                            disabled={(isDefault && isEnabled) || isDisabledByLimit}
-                          />
-                          <span className="text-sm font-medium truncate">{lang.name}</span>
-                        </div>
-
-                        <button
-                          type="button"
-                          onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
-                          disabled={!isEnabled}
-                          className={`p-1.5 rounded-md transition-colors ${
-                            isDefault
-                              ? "text-yellow-500"
-                              : isEnabled
-                                ? "text-muted-foreground hover:text-yellow-500"
-                                : "text-muted-foreground/30 cursor-not-allowed"
-                          }`}
-                        >
-                          <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
-                        </button>
-                      </div>
-                    );
-                  })}
-                </>
+                  <button
+                    type="button"
+                    onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
+                    disabled={!isEnabled}
+                    className={`p-1.5 rounded-md transition-colors ${
+                      isDefault
+                        ? "text-yellow-500"
+                        : isEnabled
+                          ? "text-muted-foreground hover:text-yellow-500"
+                          : "text-muted-foreground/30 cursor-not-allowed"
+                    }`}
+                  >
+                    <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
+                  </button>
+                </div>
               );
-            })()}
+            })}
+            <p className="text-xs text-muted-foreground">
+              {tLang("hint")}
+            </p>
+          </DashboardCard>
+
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              form="settings-form"
+              disabled={saving || !hasChanges}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
+            >
+              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
+            </button>
           </div>
 
-          <p className="text-xs text-muted-foreground">
-            {tLang("hint")}
-          </p>
-        </div>
-          </div>
-        </div>
+        </DashboardContent>
       </form>
 
       <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>

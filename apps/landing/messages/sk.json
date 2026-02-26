@@ -695,6 +695,36 @@
       "description": "IQ Rest sa neustále zlepšuje, aby pomohol reštauráciám a kaviarňam vytvárať profesionálne digitálne QR menu. Sledujte náš zoznam zmien, aby ste boli informovaní o najnovších funkciách pre vašu webovú stránku reštaurácie a riešenie QR menu."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Redizajn UI Ovládacieho Panela: Jednotné Karty, Navigácia a Akcie Formulárov",
+        "description": "Vyladený ovládací panel s jednotným štýlom kariet, trvalou bočnou navigáciou, aktívnymi stavmi vo farbe zvýraznenia a akciami uloženia/vymazania v spodnej časti každej stránky formulára.",
+        "meta": {
+          "title": "Redizajn UI Ovládacieho Panela: Karty, Navigácia a Formuláre | IQ Rest",
+          "description": "Ovládací panel IQ Rest bol prepracovaný s jednotnými komponentmi kariet, trvalou bočnou navigáciou so zvýraznením aktívnej stránky a vylepšenými akciami formulárov. Spravujte QR menu vašej reštaurácie s čistejším a intuitívnejším rozhraním."
+        },
+        "content": {
+          "intro": "IQ Rest prešiel komplexným redizajnom používateľského rozhrania ovládacieho panela. Každá stránka teraz používa jednotný štýl kariet s unifikovanými zaoblenými rohmi, trvalú bočnú navigáciu s aktívnymi stavmi vo farbe zvýraznenia a vylepšené stránky formulárov s akciami uloženia a vymazania v spodnej časti. Výsledkom je čistejší a vyladenejší zážitok pri správe digitálneho QR menu vašej reštaurácie.",
+          "image1Alt": "Prepracovaný ovládací panel s jednotným štýlom kariet",
+          "image1Caption": "Unifikované komponenty kariet na všetkých stránkach ovládacieho panela",
+          "section1Title": "Jednotný Dizajn Kariet na Všetkých Stránkach",
+          "section1Text": "Každá stránka ovládacieho panela teraz používa unifikovaný komponent DashboardCard s konzistentnými zaoblenými okrajmi, jemnými farbami pozadia a voliteľnými hlavičkami sekcií. Analytika, fakturácia, nastavenia, kontakty, nastavenia rezervácií a všetky stránky formulárov zdieľajú rovnaký vizuálny jazyk. Štítky s nápoveďou s vyskakovacími tipmi nahrádzajú vložené popisné texty, udržiavajúc rozhranie čisté a zároveň poskytujúc užitočný kontext, keď je to potrebné.",
+          "section2Title": "Trvalá Bočná Navigácia s Aktívnymi Stavmi",
+          "section2Text": "Na desktopových obrazovkách je teraz na každej stránke viditeľná trvalá bočná navigácia. Aktívna stránka je zvýraznená pozadím vo farbe zvýraznenia, čo okamžite objasňuje, kde sa nachádzate. Podstránky ako kategórie, produkty a objednávky správne zvýrazňujú rodičovskú položku Menu. Bočný panel zahŕňa rýchly prístup k Menu, Tlač QR, Rezerváciám, Analytike, Nastaveniam, Kontaktom, Fakturácii a Podpore — bez opustenia aktuálneho zobrazenia.",
+          "section3Title": "Vylepšené Stránky Formulárov s Akciami v Spodnej Časti",
+          "section3Text": "Všetky stránky formulárov — kategórie, produkty, stoly, dizajn, nastavenia, kontakty a nastavenia rezervácií — teraz obsahujú duplicitné tlačidlo uloženia v spodnej časti vo farbe zvýraznenia. Tlačidlá vymazania sa zobrazujú na ľavej strane s tlmeným štýlom. To znamená, že už nemusíte rolovať späť hore, aby ste uložili zmeny. Tlačidlo odhlásenia bolo presunuté z bočného panela do spodnej časti stránky dizajnu, čím sa navigácia sústreďuje na základné akcie.",
+          "benefitsTitle": "Výhody Redizajnu UI",
+          "benefit1": "Jednotný štýl kariet s konzistentnými okrajmi a pozadiami na všetkých stránkach",
+          "benefit2": "Trvalá bočná navigácia na desktope s aktívnymi stavmi vo farbe zvýraznenia",
+          "benefit3": "Tlačidlá uloženia v spodnej časti všetkých formulárov — nie je potrebné rolovať hore",
+          "benefit4": "Akcie vymazania a uloženia jasne oddelené — vymazanie vľavo, uloženie vpravo",
+          "benefit5": "Hlavičky sekcií na kartách formulárov pre lepšiu vizuálnu organizáciu",
+          "benefit6": "Čistejšia stránka analytiky s obalmi DashboardCard a vylepšeným rozložením štatistík zariadení",
+          "conclusionTitle": "Vyladenejší Zážitok z Ovládacieho Panela",
+          "conclusionText": "Tento redizajn UI prináša vizuálnu konzistenciu a vylepšenú použiteľnosť do každého kúta ovládacieho panela IQ Rest. Či už upravujete položky menu, kontrolujete analytiku alebo spravujete rezervácie, rozhranie pôsobí súdržne a intuitívne. V kombinácii s trvalou bočnou navigáciou je správa digitálneho QR menu vašej reštaurácie rýchlejšia a príjemnejšia ako kedykoľvek predtým.",
+          "ctaText": "Vyskúšajte prepracovaný ovládací panel",
+          "ctaButton": "Otvoriť Ovládací Panel"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Tím podpory"
   },
   "reservations": {
+    "general": "Všeobecné",
     "title": "Rezervácie",
     "tables": "Stoly",
     "settings": "Nastavenia",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Všeobecné",
       "noCategories": "Zatiaľ žiadne kategórie",
       "addCategory": "Pridať kategóriu",
       "editCategory": "Upraviť kategóriu",
@@ -1628,6 +1660,7 @@
       "sortError": "Nepodarilo sa uložiť poradie triedenia"
     },
     "items": {
+      "general": "Všeobecné",
       "noItems": "Zatiaľ žiadne položky. Vytvorte svoju prvú položku a začnite.",
       "noCategoriesHint": "Najprv pridajte kategóriu pre vytvorenie položiek.",
       "addItem": "Pridať položku",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Nahrať video alebo obrázok",
       "removeMedia": "Odstrániť",
       "accentColor": "Akcentová farba",
-      "accentColorHint": "Hlavná farba pre tlačidlá a zvýraznenia na vašej webovej stránke",
+      "accentColorHint": "Hlavná farba tlačidiel a zvýraznení na vašom webe. Pomocou dúhového tlačidla si vyberte ľubovoľnú farbu.",
       "save": "Uložiť",
       "fetchError": "Nepodarilo sa načítať nastavenia dizajnu",
       "saveError": "Nepodarilo sa uložiť nastavenia dizajnu",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Objednávky",
       "ordersRequireWhatsApp": "Pridajte číslo WhatsApp na stránke Kontakty, aby ste povolili objednávky",
       "ordersEnabled": "Povoliť objednávky",
-      "ordersOn": "Zákazníci môžu objednávať",
-      "ordersOff": "Objednávanie zakázané",
+      "ordersOn": "Prijímať objednávky",
+      "ordersOff": "Prijímať objednávky",
       "orderMode": "Režim objednávok",
-      "orderModeWhatsapp": "Iba WhatsApp",
-      "orderModeInternal": "Iba interné",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Interné",
       "orderModeBoth": "WhatsApp + Interné",
       "orderModeWhatsappHint": "Objednávky sa odosielajú priamo na WhatsApp",
       "orderModeInternalHint": "Objednávky sa ukladajú na panel",
       "orderModeBothHint": "Objednávky sa ukladajú a odosielajú aj cez WhatsApp",
-      "ordersFieldsHint": "Povolené polia sú povinné na vyplnenie zákazníkom",
+      "ordersFieldsHint": "Povinné polia:",
       "ordersName": "Meno",
-      "ordersNameOn": "Zákazník musí zadať svoje meno",
-      "ordersNameOff": "Pole mena skryté",
+      "ordersNameOn": "Meno",
+      "ordersNameOff": "Meno",
       "ordersPhone": "Telefón",
-      "ordersPhoneOn": "Zákazník musí zadať svoj telefón",
-      "ordersPhoneOff": "Pole telefónu skryté",
+      "ordersPhoneOn": "Telefón",
+      "ordersPhoneOff": "Telefón",
       "ordersAddress": "Adresa doručenia",
-      "ordersAddressOn": "Zákazník musí zadať adresu doručenia",
-      "ordersAddressOff": "Pole adresy skryté"
+      "ordersAddressOn": "Adresa",
+      "ordersAddressOff": "Adresa",
+      "orderModeHint": "Interné objednávky sa ukladajú v paneli. WhatsApp objednávky sa odosielajú priamo na váš WhatsApp. Môžete aktivovať obe súčasne.",
+      "ordersFieldsDescription": "Aktivované polia budú pre zákazníka povinné pri zadávaní objednávky.",
+      "slugHint": "Toto je vaša jedinečná URL adresa, kde si zákazníci môžu prezrieť vaše menu. Zdieľajte tento odkaz alebo ho použite vo svojom QR kóde. Zobrazí sa ako: iq-rest.com/m/váš-slug"
     },
     "general": {
       "save": "Uložiť",

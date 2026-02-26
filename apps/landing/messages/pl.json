@@ -695,6 +695,36 @@
       "description": "IQ Rest nieustannie się rozwija, aby pomóc restauracjom i kawiarniom w tworzeniu profesjonalnych cyfrowych menu QR. Śledź nasz dziennik zmian, aby być na bieżąco z najnowszymi funkcjami dla Twojej strony internetowej restauracji i rozwiązania menu QR."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Nowy wygląd panelu: Spójne karty, nawigacja i akcje formularzy",
+        "description": "Odświeżony panel z ujednoliconym stylem kart, stałą nawigacją boczną, kolorowymi stanami aktywnymi oraz przyciskami zapisu i usuwania na dole każdego formularza.",
+        "meta": {
+          "title": "Nowy wygląd panelu: Karty, nawigacja i formularze | IQ Rest",
+          "description": "Panel IQ Rest przeprojektowany ze spójnymi komponentami kart, stałą nawigacją boczną z podświetleniem aktywnej strony i ulepszonymi akcjami formularzy. Zarządzaj menu QR swojej restauracji z bardziej przejrzystym i intuicyjnym interfejsem."
+        },
+        "content": {
+          "intro": "IQ Rest przeszedł kompleksowe przeprojektowanie interfejsu panelu. Każda strona korzysta teraz ze spójnego stylu kart z jednolitymi zaokrągleniami, stałej nawigacji bocznej z kolorowymi stanami aktywnymi oraz ulepszonych stron formularzy z przyciskami zapisu i usuwania na dole. Rezultatem jest bardziej przejrzyste i dopracowane zarządzanie cyfrowym menu QR Twojej restauracji.",
+          "image1Alt": "Przeprojektowany panel ze spójnym stylem kart",
+          "image1Caption": "Ujednolicone komponenty kart na wszystkich stronach panelu",
+          "section1Title": "Spójny design kart na wszystkich stronach",
+          "section1Text": "Każda strona panelu korzysta teraz z ujednoliconego komponentu DashboardCard ze spójnymi zaokrąglonymi krawędziami, subtelnymi kolorami tła i opcjonalnymi nagłówkami sekcji. Analityka, płatności, ustawienia, kontakty, ustawienia rezerwacji i wszystkie strony formularzy dzielą ten sam język wizualny. Etykiety podpowiedzi z dymkami zastępują tekst opisowy inline, utrzymując interfejs w czystości i zapewniając pomocny kontekst, gdy jest potrzebny.",
+          "section2Title": "Stała nawigacja boczna ze stanami aktywnymi",
+          "section2Text": "Na ekranach desktopowych stała nawigacja boczna jest teraz widoczna na każdej stronie. Aktywna strona jest podświetlona kolorem akcentu, dzięki czemu od razu wiadomo, gdzie się znajdujesz. Podstrony jak kategorie, produkty i zamówienia prawidłowo podświetlają nadrzędny element Menu. Pasek boczny zapewnia szybki dostęp do Menu, Drukowania QR, Rezerwacji, Analityki, Ustawień, Kontaktów, Płatności i Wsparcia — wszystko bez opuszczania bieżącego widoku.",
+          "section3Title": "Ulepszone strony formularzy z akcjami na dole",
+          "section3Text": "Wszystkie strony formularzy — kategorie, produkty, stoliki, design, ustawienia, kontakty i ustawienia rezerwacji — mają teraz zduplikowany przycisk zapisu na dole w kolorze akcentu. Przyciski usuwania pojawiają się po lewej stronie w stonowanym stylu. Oznacza to, że nie musisz już przewijać do góry, aby zapisać zmiany. Przycisk wylogowania został przeniesiony z paska bocznego na dół strony designu, utrzymując nawigację skoncentrowaną na istotnych akcjach.",
+          "benefitsTitle": "Korzyści z przeprojektowania interfejsu",
+          "benefit1": "Ujednolicony styl kart ze spójnymi krawędziami i tłami na wszystkich stronach",
+          "benefit2": "Stała nawigacja boczna na desktopie z kolorowymi stanami aktywnymi",
+          "benefit3": "Przyciski zapisu na dole wszystkich formularzy — bez przewijania do góry",
+          "benefit4": "Akcje usuwania i zapisu wyraźnie rozdzielone — usuwanie po lewej, zapis po prawej",
+          "benefit5": "Nagłówki sekcji na kartach formularzy dla lepszej organizacji wizualnej",
+          "benefit6": "Bardziej przejrzysta strona analityki z wrapperami DashboardCard i ulepszonym układem statystyk urządzeń",
+          "conclusionTitle": "Bardziej dopracowany panel",
+          "conclusionText": "To przeprojektowanie interfejsu wprowadza spójność wizualną i lepszą użyteczność w każdym zakątku panelu IQ Rest. Niezależnie od tego, czy edytujesz pozycje menu, sprawdzasz analitykę czy zarządzasz rezerwacjami, interfejs jest spójny i intuicyjny. W połączeniu ze stałą nawigacją boczną, zarządzanie cyfrowym menu QR Twojej restauracji jest szybsze i przyjemniejsze niż kiedykolwiek.",
+          "ctaText": "Wypróbuj przeprojektowany panel",
+          "ctaButton": "Otwórz Panel"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Zespół wsparcia"
   },
   "reservations": {
+    "general": "Ogólne",
     "title": "Rezerwacje",
     "tables": "Stoły",
     "settings": "Ustawienia",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Ogólne",
       "noCategories": "Brak kategorii",
       "addCategory": "Dodaj kategorię",
       "editCategory": "Edytuj kategorię",
@@ -1628,6 +1660,7 @@
       "sortError": "Nie udało się zapisać kolejności sortowania"
     },
     "items": {
+      "general": "Ogólne",
       "noItems": "Brak pozycji. Utwórz swoją pierwszą pozycję, aby rozpocząć.",
       "noCategoriesHint": "Najpierw dodaj kategorię, aby tworzyć pozycje.",
       "addItem": "Dodaj pozycję",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Prześlij wideo lub obrazek",
       "removeMedia": "Usuń",
       "accentColor": "Kolor akcentu",
-      "accentColorHint": "Główny kolor dla przycisków i wyróżnień na Twojej stronie",
+      "accentColorHint": "Główny kolor przycisków i wyróżnień na stronie. Użyj przycisku tęczy, aby wybrać dowolny kolor.",
       "save": "Zapisz",
       "fetchError": "Nie udało się załadować ustawień projektu",
       "saveError": "Nie udało się zapisać ustawień projektu",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Zamówienia przez",
       "ordersRequireWhatsApp": "Dodaj numer WhatsApp na stronie Kontakt, aby włączyć zamówienia",
       "ordersEnabled": "Włącz zamówienia",
-      "ordersOn": "Klienci mogą zamawiać przez",
-      "ordersOff": "Zamawianie wyłączone",
+      "ordersOn": "Przyjmuj zamówienia",
+      "ordersOff": "Przyjmuj zamówienia",
       "orderMode": "Tryb zamówień",
-      "orderModeWhatsapp": "Tylko WhatsApp",
-      "orderModeInternal": "Tylko wewnętrzne",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Wewnętrzne",
       "orderModeBoth": "WhatsApp + Wewnętrzne",
       "orderModeWhatsappHint": "Zamówienia wysyłane bezpośrednio na WhatsApp",
       "orderModeInternalHint": "Zamówienia zapisywane w panelu",
       "orderModeBothHint": "Zamówienia zapisywane i wysyłane przez WhatsApp",
-      "ordersFieldsHint": "Włączone pola są wymagane do wypełnienia przez klienta",
+      "ordersFieldsHint": "Wymagane pola:",
       "ordersName": "Imię",
-      "ordersNameOn": "Klient musi podać swoje imię",
-      "ordersNameOff": "Pole imienia ukryte",
+      "ordersNameOn": "Imię",
+      "ordersNameOff": "Imię",
       "ordersPhone": "Telefon",
-      "ordersPhoneOn": "Klient musi podać swój telefon",
-      "ordersPhoneOff": "Pole telefonu ukryte",
+      "ordersPhoneOn": "Telefon",
+      "ordersPhoneOff": "Telefon",
       "ordersAddress": "Adres dostawy",
-      "ordersAddressOn": "Klient musi podać adres dostawy",
-      "ordersAddressOff": "Pole adresu ukryte"
+      "ordersAddressOn": "Adres",
+      "ordersAddressOff": "Adres",
+      "orderModeHint": "Zamówienia wewnętrzne są zapisywane w panelu. Zamówienia WhatsApp są wysyłane bezpośrednio na Twój WhatsApp. Możesz włączyć oba jednocześnie.",
+      "ordersFieldsDescription": "Włączone pola będą wymagane od klienta przy składaniu zamówienia.",
+      "slugHint": "To jest Twój unikalny adres URL, pod którym klienci mogą zobaczyć Twoje menu. Udostępnij ten link lub użyj go w kodzie QR. Pojawi się jako: iq-rest.com/m/twój-slug"
     },
     "general": {
       "save": "Zapisz",

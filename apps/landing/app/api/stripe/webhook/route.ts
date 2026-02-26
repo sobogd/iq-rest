@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
               data: { subscriptionStatus: "ACTIVE", paymentProcessing: false },
             });
             // Mark conversion flag on Session
-            prisma.session.updateMany({
+            await prisma.session.updateMany({
               where: { companyId, paidSubscription: false },
               data: { paidSubscription: true },
             }).catch(() => {});
@@ -217,16 +217,16 @@ async function updateCompanySubscription(
   let billingCycle: BillingCycle | null = null;
 
   if (lookupKey) {
-    if (lookupKey === PRICE_LOOKUP_KEYS.BASIC_MONTHLY) {
+    if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.BASIC_MONTHLY)) {
       plan = "BASIC";
       billingCycle = "MONTHLY";
-    } else if (lookupKey === PRICE_LOOKUP_KEYS.BASIC_YEARLY) {
+    } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.BASIC_YEARLY)) {
       plan = "BASIC";
       billingCycle = "YEARLY";
-    } else if (lookupKey === PRICE_LOOKUP_KEYS.PRO_MONTHLY) {
+    } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.PRO_MONTHLY)) {
       plan = "PRO";
       billingCycle = "MONTHLY";
-    } else if (lookupKey === PRICE_LOOKUP_KEYS.PRO_YEARLY) {
+    } else if (lookupKey.startsWith(PRICE_LOOKUP_KEYS.PRO_YEARLY)) {
       plan = "PRO";
       billingCycle = "YEARLY";
     }

@@ -42,6 +42,7 @@ import { useSearchParams } from "next/navigation";
 import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface User {
   id: string;
@@ -370,7 +371,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
       </PageHeader>
 
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto">
+        <DashboardContent>
           <Tabs
             defaultValue="info"
             onValueChange={(v) => {
@@ -396,7 +397,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
             {/* Info Tab */}
             <TabsContent value="info" className="space-y-4 mt-4">
               {/* Company info card */}
-              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
                 {companyRows.map((row, i) => (
                   <div
                     key={row.label}
@@ -413,7 +414,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
               </div>
 
               {/* Users card */}
-              <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+              <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
                 {company.users.map((user, i) => (
                   <div
                     key={user.id}
@@ -431,7 +432,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
 
               {/* Restaurant card */}
               {restaurantRows.length > 0 && (
-                <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+                <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
                   {restaurantRows.map((row, i) => (
                     <div
                       key={row.label}
@@ -541,7 +542,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
                         className={`flex ${msg.isAdmin ? "justify-end" : "justify-start"}`}
                       >
                         <div
-                          className={`max-w-[80%] rounded-xl px-4 py-3 ${
+                          className={`max-w-[80%] rounded-md px-4 py-3 ${
                             msg.isAdmin
                               ? "bg-primary text-primary-foreground"
                               : "bg-muted/50 text-foreground"
@@ -599,7 +600,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
               </div>
             </TabsContent>
           </Tabs>
-        </div>
+        </DashboardContent>
       </div>
 
       {restaurant?.slug && (
@@ -624,7 +625,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
                   key={opt.type}
                   onClick={() => handleSendEmail(opt.type)}
                   disabled={!!sendingEmailType}
-                  className="flex items-start gap-3 rounded-xl border border-border p-3 text-left hover:bg-muted/50 transition-colors disabled:opacity-50"
+                  className="flex items-start gap-3 rounded-md border border-border p-3 text-left hover:bg-muted/50 transition-colors disabled:opacity-50"
                 >
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium">{opt.label}</p>

@@ -1,30 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
-import { prisma } from "@/lib/prisma";
 import { stripe } from "@/lib/stripe";
-
-async function getUserCompany() {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email");
-
-  if (!userEmail?.value) return null;
-
-  const user = await prisma.user.findUnique({
-    where: { email: userEmail.value },
-    include: {
-      companies: {
-        include: { company: true },
-        take: 1,
-      },
-    },
-  });
-
-  return user?.companies[0]?.company ?? null;
-}
+import { getAuthCompany } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
   try {
-    const company = await getUserCompany();
+    const company = await getAuthCompany();
 
     if (!company) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -41,7 +21,7 @@ export async function POST(request: NextRequest) {
 
     const session = await stripe.billingPortal.sessions.create({
       customer: company.stripeCustomerId,
-      return_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard?page=billing`,
+      return_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard/billing`,
     });
 
     return NextResponse.json({ url: session.url });

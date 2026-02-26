@@ -695,6 +695,36 @@
       "description": "IQ Rest verbetert voortdurend om restaurants en cafés te helpen professionele digitale QR-menu's te creëren. Volg onze changelog om op de hoogte te blijven van de nieuwste functies voor uw restaurantwebsite en QR-menuoplossing."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Dashboard-herontwerp: Uniforme Kaarten, Navigatie & Formulieracties",
+        "description": "Een verfijnd dashboard met uniforme kaartstijl, vaste zijbalknavigatie, accentkleur voor actieve states en opslaan-/verwijderacties onderaan elk formulier.",
+        "meta": {
+          "title": "Dashboard-herontwerp: Kaarten, Navigatie & Formulieren | IQ Rest",
+          "description": "IQ Rest dashboard herontworpen met consistente kaartcomponenten, vaste zijbalknavigatie met markering van de actieve pagina en verbeterde formulieracties. Beheer uw restaurant QR menu met een overzichtelijkere, intuïtievere interface."
+        },
+        "content": {
+          "intro": "IQ Rest heeft een uitgebreid dashboard-herontwerp ondergaan. Elke pagina gebruikt nu een consistente kaartstijl met uniforme afgeronde randen, een vaste zijbalknavigatie met accentkleur voor actieve states en verbeterde formulierpagina's met opslaan- en verwijderacties onderaan. Het resultaat is een overzichtelijkere, professionelere ervaring voor het beheren van uw digitale QR menu.",
+          "image1Alt": "Herontworpen dashboard met consistente kaartstijl",
+          "image1Caption": "Uniforme kaartcomponenten op alle dashboardpagina's",
+          "section1Title": "Consistent Kaartontwerp op Alle Pagina's",
+          "section1Text": "Elke dashboardpagina gebruikt nu een uniform DashboardCard-component met consistente afgeronde randen, subtiele achtergrondkleuren en optionele sectiekoppen. Analyses, facturering, instellingen, contacten, reserveringsinstellingen en alle formulierpagina's delen dezelfde visuele taal. Hintlabels met popover-tooltips vervangen inline beschrijvingstekst, waardoor de interface overzichtelijk blijft terwijl er nuttige context beschikbaar is wanneer nodig.",
+          "section2Title": "Vaste Zijbalknavigatie met Actieve States",
+          "section2Text": "Op desktopschermen is een vaste zijbalknavigatie nu zichtbaar op elke pagina. De actieve pagina wordt gemarkeerd met een accentkleur-achtergrond, waardoor direct duidelijk is waar u zich bevindt. Subpagina's zoals categorieën, items en bestellingen markeren het bovenliggende Menu-item correct. De zijbalk biedt snelle toegang tot Menu, QR Afdrukken, Reserveringen, Analyses, Instellingen, Contacten, Facturering en Support — allemaal zonder de huidige weergave te verlaten.",
+          "section3Title": "Verbeterde Formulierpagina's met Acties Onderaan",
+          "section3Text": "Alle formulierpagina's — categorieën, items, tafels, ontwerp, instellingen, contacten en reserveringsinstellingen — hebben nu een extra opslaanknop onderaan in de accentkleur. Verwijderknoppen verschijnen aan de linkerkant met een ingetogen stijl. Dit betekent dat u niet meer naar boven hoeft te scrollen om uw wijzigingen op te slaan. De uitlogknop is verplaatst van de zijbalk naar de onderkant van de ontwerppagina, zodat de navigatie gericht blijft op essentiële acties.",
+          "benefitsTitle": "Voordelen van het UI-herontwerp",
+          "benefit1": "Uniforme kaartstijl met consistente randen en achtergronden op alle pagina's",
+          "benefit2": "Vaste zijbalknavigatie op desktop met accentkleur actieve states",
+          "benefit3": "Opslaanknoppen onderaan alle formulieren — niet meer naar boven scrollen",
+          "benefit4": "Verwijder- en opslaanacties duidelijk gescheiden — verwijderen links, opslaan rechts",
+          "benefit5": "Sectiekoppen op formulierkaarten voor betere visuele organisatie",
+          "benefit6": "Overzichtelijkere analysepagina met DashboardCard-wrappers en verbeterde apparaatstatistieken",
+          "conclusionTitle": "Een Professionelere Dashboard-ervaring",
+          "conclusionText": "Dit UI-herontwerp brengt visuele consistentie en verbeterde bruikbaarheid naar elk onderdeel van het IQ Rest dashboard. Of u nu menu-items bewerkt, analyses bekijkt of reserveringen beheert, de interface voelt samenhangend en intuïtief. Gecombineerd met de vaste zijbalknavigatie is het beheren van uw digitale QR menu sneller en prettiger dan ooit.",
+          "ctaText": "Ontdek het herontworpen dashboard",
+          "ctaButton": "Dashboard Openen"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsieve Ondersteuning voor Uw Restaurant QR Menu",
         "description": "Krijg responsieve ondersteuning voor al uw vragen en wijzigingen aan uw QR menu restaurant of café. Directe chat met ons team voor snelle hulp.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Ondersteuningsteam"
   },
   "reservations": {
+    "general": "Algemeen",
     "title": "Reserveringen",
     "tables": "Tafels",
     "settings": "Instellingen",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Algemeen",
       "noCategories": "Nog geen categorieën",
       "addCategory": "Categorie toevoegen",
       "editCategory": "Categorie Bewerken",
@@ -1628,6 +1660,7 @@
       "sortError": "Opslaan van sorteervolgorde is mislukt"
     },
     "items": {
+      "general": "Algemeen",
       "noItems": "Nog geen items. Maak uw eerste item om te beginnen.",
       "noCategoriesHint": "Voeg eerst een categorie toe om items te maken.",
       "addItem": "Artikel toevoegen",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Upload video of afbeelding",
       "removeMedia": "Verwijderen",
       "accentColor": "Accentkleur",
-      "accentColorHint": "Hoofdkleur voor knoppen en highlights op je website",
+      "accentColorHint": "Hoofdkleur voor knoppen en markeringen op uw website. Gebruik de regenboogknop om elke gewenste kleur te kiezen.",
       "save": "Opslaan",
       "fetchError": "Kon de ontwerpsinstellingen niet laden",
       "saveError": "Kon de ontwerpsinstellingen niet opslaan",
@@ -1790,25 +1823,28 @@
       "ordersSection": "Bestellingen",
       "ordersRequireWhatsApp": "Voeg een WhatsApp-nummer toe op de Contactenpagina om bestellingen mogelijk te maken",
       "ordersEnabled": "Bestellingen Inschakelen",
-      "ordersOn": "Klanten kunnen bestellen",
-      "ordersOff": "Bestellen uitgeschakeld",
+      "ordersOn": "Bestellingen accepteren",
+      "ordersOff": "Bestellingen accepteren",
       "orderMode": "Bestelmodus",
-      "orderModeWhatsapp": "Alleen WhatsApp",
-      "orderModeInternal": "Alleen intern",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Intern",
       "orderModeBoth": "WhatsApp + Intern",
       "orderModeWhatsappHint": "Bestellingen worden direct naar WhatsApp gestuurd",
       "orderModeInternalHint": "Bestellingen worden opgeslagen in het dashboard",
       "orderModeBothHint": "Bestellingen worden opgeslagen en ook via WhatsApp verzonden",
-      "ordersFieldsHint": "Ingeschakelde velden zijn verplicht voor de klant om in te vullen",
+      "ordersFieldsHint": "Verplichte velden:",
       "ordersName": "Naam",
-      "ordersNameOn": "Klant moet hun naam invoeren",
-      "ordersNameOff": "Naamveld verborgen",
+      "ordersNameOn": "Naam",
+      "ordersNameOff": "Naam",
       "ordersPhone": "Telefoon",
-      "ordersPhoneOn": "Klant moet hun telefoon invoeren",
-      "ordersPhoneOff": "Telefoonveld verborgen",
+      "ordersPhoneOn": "Telefoon",
+      "ordersPhoneOff": "Telefoon",
       "ordersAddress": "Leveringsadres",
-      "ordersAddressOn": "Klant moet het leveringsadres invoeren",
-      "ordersAddressOff": "Adresveld verborgen"
+      "ordersAddressOn": "Adres",
+      "ordersAddressOff": "Adres",
+      "orderModeHint": "Interne bestellingen worden opgeslagen in het dashboard. WhatsApp-bestellingen worden direct naar uw WhatsApp gestuurd. U kunt beide tegelijk inschakelen.",
+      "ordersFieldsDescription": "Ingeschakelde velden zijn verplicht voor de klant bij het plaatsen van een bestelling.",
+      "slugHint": "Dit is uw unieke URL-adres waar klanten uw menu kunnen bekijken. Deel deze link of gebruik hem in uw QR-code. Het verschijnt als: iq-rest.com/m/uw-slug"
     },
     "general": {
       "save": "Opslaan",

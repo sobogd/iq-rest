@@ -9,6 +9,7 @@ import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
 import { EVENT_LABELS } from "@/lib/dashboard-events";
 import { toast } from "sonner";
+import { DashboardContent } from "../_ui/dashboard-content";
 
 interface SessionData {
   id: string;
@@ -340,10 +341,10 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
         </Button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-4">
+        <DashboardContent innerClassName="space-y-4">
           {/* Session info card */}
           {session && (
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
               {infoRows.map((row, i) => (
                 <button
                   key={row.label}
@@ -439,7 +440,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
           ) : (
             <div className="space-y-3">
               {groupEventsByGap(events).map((group, gi) => (
-                <div key={gi} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+                <div key={gi} className="rounded-md border border-border bg-muted/50 overflow-hidden">
                   {group.map((event, index) => {
                     const nextEvent = index < group.length - 1 ? group[index + 1] : null;
                     const timeDiff = nextEvent ? formatTimeDiff(nextEvent.createdAt, event.createdAt) : null;
@@ -484,7 +485,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
           >
             {deleting ? "Deleting..." : "Delete session"}
           </Button>
-        </div>
+        </DashboardContent>
       </div>
     </div>
   );

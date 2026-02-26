@@ -695,6 +695,36 @@
       "description": "IQ Rest pastāvīgi uzlabo pakalpojumu, lai palīdzētu restorāniem un kafejnīcām izveidot profesionālus digitālos QR ēdienkartes. Sekojiet mūsu izmaiņu žurnālam, lai būtu informēti par jaunākajām funkcijām jūsu restorāna tīmekļa vietnei un QR ēdienkartes risinājumam."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Vadības paneļa pārveidojums: Vienotas kartītes, navigācija un formu darbības",
+        "description": "Noslīpēts vadības panelis ar vienotu kartīšu noformējumu, pastāvīgu sānu navigāciju, akcentkrāsas aktīvajiem stāvokļiem un saglabāšanas/dzēšanas darbībām katras formas lapas apakšā.",
+        "meta": {
+          "title": "Vadības paneļa pārveidojums: Kartītes, navigācija un formas | IQ Rest",
+          "description": "IQ Rest vadības panelis pārveidots ar vienotiem kartīšu komponentiem, pastāvīgu sānu navigāciju ar aktīvās lapas izcelšanu un uzlabotām formu darbībām. Pārvaldiet sava restorāna QR ēdienkarti ar tīrāku un intuitīvāku saskarni."
+        },
+        "content": {
+          "intro": "IQ Rest ir piedzīvojis visaptverošu vadības paneļa lietotāja saskarnes pārveidojumu. Katra lapa tagad izmanto vienotu kartīšu noformējumu ar saskaņotiem stūru noapaļojumiem, pastāvīgu sānu navigāciju ar akcentkrāsas aktīvajiem stāvokļiem un uzlabotām formu lapām ar saglabāšanas un dzēšanas darbībām apakšā. Rezultāts ir tīrāka un noslīpētāka pieredze, pārvaldot jūsu restorāna digitālo QR ēdienkarti.",
+          "image1Alt": "Pārveidots vadības panelis ar vienotu kartīšu noformējumu",
+          "image1Caption": "Vienoti kartīšu komponenti visās vadības paneļa lapās",
+          "section1Title": "Vienots kartīšu dizains visās lapās",
+          "section1Text": "Katra vadības paneļa lapa tagad izmanto vienotu DashboardCard komponentu ar saskaņotiem noapaļotiem stūriem, smalkiem fona krāsām un neobligātiem sadaļu virsrakstiem. Analītika, norēķini, iestatījumi, kontakti, rezervāciju iestatījumi un visas formu lapas izmanto vienādu vizuālo valodu. Norādes ar uznirstošiem padomiem aizstāj apraksta tekstu rindā, saglabājot saskarni tīru, vienlaikus piedāvājot noderīgu kontekstu, kad nepieciešams.",
+          "section2Title": "Pastāvīga sānu navigācija ar aktīvajiem stāvokļiem",
+          "section2Text": "Darbvirsmas ekrānos katrā lapā tagad ir redzama pastāvīga sānu navigācija. Aktīvā lapa ir izcelta ar akcentkrāsas fonu, uzreiz parādot, kur jūs atrodaties. Apakšlapas, piemēram, kategorijas, vienumi un pasūtījumi, pareizi izceļ vecākelementu Ēdienkarte. Sānu josla ietver ātru piekļuvi Ēdienkartei, QR drukāšanai, Rezervācijām, Analītikai, Iestatījumiem, Kontaktiem, Norēķiniem un Atbalstam — visu bez pašreizējā skata atstāšanas.",
+          "section3Title": "Uzlabotas formu lapas ar darbībām apakšā",
+          "section3Text": "Visas formu lapas — kategorijas, vienumi, galdi, dizains, iestatījumi, kontakti un rezervāciju iestatījumi — tagad ietver dublētu saglabāšanas pogu apakšā akcentkrāsā. Dzēšanas pogas parādās kreisajā pusē ar klusinātu stilu. Tas nozīmē, ka jums vairs nav jāritina atpakaļ uz augšu, lai saglabātu izmaiņas. Atteikšanās poga ir pārvietota no sānu joslas uz dizaina lapas apakšu, saglabājot navigāciju fokusētu uz būtiskām darbībām.",
+          "benefitsTitle": "Saskarnes pārveidojuma priekšrocības",
+          "benefit1": "Vienots kartīšu noformējums ar saskaņotiem stūriem un foniem visās lapās",
+          "benefit2": "Pastāvīga sānu navigācija darbvirsmā ar akcentkrāsas aktīvajiem stāvokļiem",
+          "benefit3": "Saglabāšanas pogas visu formu apakšā — nav jāritina uz augšu",
+          "benefit4": "Dzēšanas un saglabāšanas darbības skaidri nodalītas — dzēšana pa kreisi, saglabāšana pa labi",
+          "benefit5": "Sadaļu virsraksti formu kartītēs labākai vizuālajai organizācijai",
+          "benefit6": "Tīrāka analītikas lapa ar DashboardCard apvalkiem un uzlabotu ierīču statistikas izkārtojumu",
+          "conclusionTitle": "Noslīpētāka vadības paneļa pieredze",
+          "conclusionText": "Šis saskarnes pārveidojums ienes vizuālu konsekvenci un uzlabotu lietojamību katrā IQ Rest vadības paneļa stūrī. Neatkarīgi no tā, vai rediģējat ēdienkartes vienumus, pārbaudāt analītiku vai pārvaldāt rezervācijas, saskarne ir vienota un intuitīva. Kopā ar pastāvīgo sānu navigāciju jūsu restorāna digitālās QR ēdienkartes pārvaldīšana ir ātrāka un patīkamāka nekā jebkad iepriekš.",
+          "ctaText": "Iepazīstiet pārveidoto vadības paneli",
+          "ctaButton": "Atvērt vadības paneli"
+        }
+      },
       "support-qr-menu-restaurant-cafe": {
         "title": "Responsive Support for Your Restaurant QR Menu",
         "description": "Get responsive support for any questions and changes to your QR menu restaurant or cafe. Direct chat with our team for quick assistance.",
@@ -1215,6 +1245,7 @@
     "supportTeam": "Atbalsta komanda"
   },
   "reservations": {
+    "general": "Vispārīgi",
     "title": "Rezervācijas",
     "tables": "Galdi",
     "settings": "Iestatījumi",
@@ -1597,6 +1628,7 @@
       }
     },
     "categories": {
+      "general": "Vispārīgi",
       "noCategories": "Vēl nav kategoriju",
       "addCategory": "Pievienot kategoriju",
       "editCategory": "Rediģēt kategoriju",
@@ -1628,6 +1660,7 @@
       "sortError": "Kārtības secības saglabāšana neizdevās"
     },
     "items": {
+      "general": "Vispārīgi",
       "noItems": "Vēl nav neviena ēdiena. Izveidojiet savu pirmo ēdienu, lai sāktu.",
       "noCategoriesHint": "Vispirms pievienojiet kategoriju, lai izveidotu ēdienus.",
       "addItem": "Pievienot preci",
@@ -1750,7 +1783,7 @@
       "uploadMedia": "Augšupielādēt video vai attēlu",
       "removeMedia": "Noņemt",
       "accentColor": "Akcenta krāsa",
-      "accentColorHint": "Galvenā krāsa pogām un izcelšanai jūsu vietnē",
+      "accentColorHint": "Galvenā krāsa pogām un izcēlumiem jūsu vietnē. Izmantojiet varavīksnes pogu, lai izvēlētos jebkuru krāsu.",
       "save": "Saglabāt",
       "fetchError": "Neizdevās ielādēt dizaina iestatījumus",
       "saveError": "Neizdevās saglabāt dizaina iestatījumus",
@@ -1790,25 +1823,28 @@
       "ordersSection": "pasūtījumi",
       "ordersRequireWhatsApp": "Pievienojiet WhatsApp numuru kontaktu lapā, lai aktivizētu pasūtījumus",
       "ordersEnabled": "Aktivizēt pasūtījumus",
-      "ordersOn": "Klienti var pasūtīt",
-      "ordersOff": "Pasūtīšana atslēgta",
+      "ordersOn": "Pieņemt pasūtījumus",
+      "ordersOff": "Pieņemt pasūtījumus",
       "orderMode": "Pasūtījumu režīms",
-      "orderModeWhatsapp": "Tikai WhatsApp",
-      "orderModeInternal": "Tikai iekšējie",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Iekšējie",
       "orderModeBoth": "WhatsApp + Iekšējie",
       "orderModeWhatsappHint": "Pasūtījumi tiek sūtīti tieši uz WhatsApp",
       "orderModeInternalHint": "Pasūtījumi tiek saglabāti pārvaldības panelī",
       "orderModeBothHint": "Pasūtījumi tiek saglabāti un nosūtīti arī caur WhatsApp",
-      "ordersFieldsHint": "Aktivizētie lauki ir obligāti klientam jāaizpilda",
+      "ordersFieldsHint": "Obligātie lauki:",
       "ordersName": "Vārds",
-      "ordersNameOn": "Klientam jāievada savs vārds",
-      "ordersNameOff": "Vārda lauks slēpts",
+      "ordersNameOn": "Vārds",
+      "ordersNameOff": "Vārds",
       "ordersPhone": "Tālrunis",
-      "ordersPhoneOn": "Klientam jāievada savs tālrunis",
-      "ordersPhoneOff": "Tālruņa lauks slēpts",
+      "ordersPhoneOn": "Tālrunis",
+      "ordersPhoneOff": "Tālrunis",
       "ordersAddress": "Piegādes adrese",
-      "ordersAddressOn": "Klientam jāievada piegādes adrese",
-      "ordersAddressOff": "Adreses lauks slēpts"
+      "ordersAddressOn": "Adrese",
+      "ordersAddressOff": "Adrese",
+      "orderModeHint": "Iekšējie pasūtījumi tiek saglabāti panelī. WhatsApp pasūtījumi tiek nosūtīti tieši uz jūsu WhatsApp. Varat aktivizēt abus vienlaicīgi.",
+      "ordersFieldsDescription": "Aktivizētie lauki būs obligāti klientam, veicot pasūtījumu.",
+      "slugHint": "Šī ir jūsu unikālā URL adrese, kur klienti var apskatīt jūsu ēdienkarti. Dalieties ar šo saiti vai izmantojiet to savā QR kodā. Tā parādīsies kā: iq-rest.com/m/jūsu-slug"
     },
     "general": {
       "save": "Saglabāt",

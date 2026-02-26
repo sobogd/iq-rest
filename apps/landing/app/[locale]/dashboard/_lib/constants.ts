@@ -66,9 +66,7 @@ export const ACCENT_COLORS = [
   "#7B3F00",  // chocolate
   "#B8860B",  // dark goldenrod
   "#C9A96E",  // warm gold
-  "#D4A574",  // camel
   "#6B7B3A",  // olive
-  "#556B2F",  // dark olive
   "#3B6B4F",  // forest green
   "#2F4F4F",  // dark slate
   "#1B3A4B",  // deep navy
@@ -79,6 +77,5 @@ export const ACCENT_COLORS = [
   "#8B7355",  // tan
   "#C45B28",  // rust
   "#333333",  // dark gray
-  "#1A1A1A",  // near black
   "#000000",  // black
 ];

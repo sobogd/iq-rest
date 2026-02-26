@@ -3,13 +3,14 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Home, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, ClipboardList } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
 import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
+import { DashboardNavHeader, DashboardNavSidebar } from "../_components/dashboard-nav";
 import { useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
@@ -256,17 +257,19 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
     <div className="flex flex-col h-full">
       {/* Custom header */}
       <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-        <div className="flex items-center py-3 max-w-lg mx-auto">
+        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
+          <DashboardNavHeader />
+          {/* Mobile: burger menu */}
           <Popover modal>
             <PopoverTrigger asChild>
               <button
                 onClick={() => track(DashboardEvent.CLICKED_HAMBURGER_MENU)}
-                className="flex items-center justify-center h-10 w-10 -ml-2"
+                className="flex items-center justify-center h-10 w-10 -ml-2 md:hidden"
               >
                 <MenuIcon className="h-5 w-5" />
               </button>
             </PopoverTrigger>
-            <PopoverContent align="start" className="p-0 w-56 rounded-2xl border border-border bg-background overflow-hidden">
+            <PopoverContent align="start" className="p-0 w-56 rounded-md border border-border bg-background overflow-hidden">
               {([
                 { page: "design" as PageKey, icon: Palette },
                 { page: "contacts" as PageKey, icon: Phone },
@@ -308,7 +311,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
               </div>
             </PopoverContent>
           </Popover>
-          <h1 className="text-xl font-semibold flex-1 ml-3 truncate">{restaurantName || pageTitle}</h1>
+          {/* Right part: title + sort */}
+          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{restaurantName || pageTitle}</h1>
           {showSortButton && (
             sortMode ? (
               <button
@@ -331,32 +335,36 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto flex flex-col gap-4 min-h-full">
-          {/* View menu button */}
-          {!sortMode && slug && categories.length > 0 && (
-            <MenuPreviewModal menuUrl={`/m/${slug}`}>
-              <Button variant="destructive" className="w-full h-12 rounded-2xl shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
-                <Eye className="h-4 w-4" />
-                {tHome("viewMenu")}
-              </Button>
-            </MenuPreviewModal>
-          )}
-
-          {/* Orders button */}
-          {!sortMode && showOrders && (
-            <Button
-              variant="outline"
-              className="w-full h-12 rounded-2xl border-border bg-muted/50 text-muted-foreground hover:bg-muted/80"
-              onClick={() => { track(DashboardEvent.CLICKED_NAV_ORDERS); router.push(PAGE_PATHS.orders); }}
-            >
-              <ClipboardList className="h-4 w-4" />
-              {tHome("myOrders")}
-            </Button>
+        <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4 min-h-full">
+          <DashboardNavSidebar scanUsage={scanUsage} />
+          <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
+          {/* Orders + View row */}
+          {!sortMode && (
+            <div className="flex flex-col md:flex-row gap-4">
+              {showOrders && (
+                <Button
+                  variant="outline"
+                  className="w-full h-12 rounded-md border-border bg-muted/50 text-muted-foreground hover:bg-muted/80"
+                  onClick={() => { track(DashboardEvent.CLICKED_NAV_ORDERS); router.push(PAGE_PATHS.orders); }}
+                >
+                  <ClipboardList className="h-4 w-4" />
+                  {tHome("myOrders")}
+                </Button>
+              )}
+              {slug && categories.length > 0 && (
+                <MenuPreviewModal menuUrl={`/m/${slug}`} className="md:flex-1">
+                  <Button className="w-full h-12 rounded-md shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
+                    <Eye className="h-4 w-4" />
+                    {tHome("viewMenu")}
+                  </Button>
+                </MenuPreviewModal>
+              )}
+            </div>
           )}
 
           {/* Setup checklist */}
           {!sortMode && !allDone && (
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
               <div className="px-4 py-3 bg-muted/30">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
@@ -404,7 +412,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
           {/* Admin shortcuts */}
           {!sortMode && isAdmin && (
-            <div className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
               <button
                 onClick={() => router.push("/dashboard/admin")}
                 className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
@@ -466,7 +474,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
         {categories.length === 0 ? (
           <div className="flex items-center justify-center flex-1">
-            <div className="flex flex-col items-center text-center rounded-2xl border border-border bg-muted/50 px-6 py-6 max-w-sm w-full">
+            <div className="flex flex-col items-center text-center rounded-md border border-border bg-muted/50 px-6 py-6 max-w-sm w-full">
               <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
               <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
               <Button
@@ -487,7 +495,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   .sort((a, b) => a.sortOrder - b.sortOrder);
 
                 return (
-                  <div key={category.id} className="rounded-2xl border border-border bg-muted/50 overflow-hidden">
+                  <div key={category.id} className="rounded-md border border-border bg-muted/50 overflow-hidden">
                     {/* Category header */}
                     <div
                       onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); router.push(`/dashboard/categories/${category.id}`); } }}
@@ -592,11 +600,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       ))}
                       {!sortMode && (
                         <div
-                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-success/5 hover:bg-success/10"
+                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-primary/5 hover:bg-primary/10"
                           onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${category.id}`); }}
                         >
-                          <Plus className="h-4 w-4 mr-2 text-success" />
-                          <span className="text-sm font-medium text-success">{tMenu.addItem}</span>
+                          <Plus className="h-4 w-4 mr-2 text-primary" />
+                          <span className="text-sm font-medium text-primary">{tMenu.addItem}</span>
                         </div>
                       )}
                     </div>
@@ -608,9 +616,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             {/* Add category button */}
             {!sortMode && (
               <Button
-                variant="destructive"
                 onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-                className="w-full h-12 rounded-2xl shadow-md"
+                className="w-full h-12 rounded-md shadow-md"
               >
                 <Plus className="h-4 w-4" />
                 {tMenu.addCategory}
@@ -618,7 +625,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             )}
           </div>
         )}
-        </div>
+        </div>{/* end Main content column */}
+        </div>{/* end flex container */}
       </div>
     </div>
   );

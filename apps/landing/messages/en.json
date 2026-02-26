@@ -647,8 +647,12 @@
     }
   },
   "languages": {
-    "en": "English",
-    "es": "Spanish"
+    "meta": {
+      "title": "Choose Language - IQ Rest QR Menu",
+      "description": "Browse IQ Rest in your preferred language. Available in 35 languages including English, Spanish, French, German, and more."
+    },
+    "title": "Choose Language",
+    "subtitle": "Browse IQ Rest in your preferred language"
   },
   "cookieConsent": {
     "title": "We use cookies",
@@ -691,6 +695,36 @@
       "description": "IQ Rest is constantly improving to help restaurants and cafes create professional digital QR menus. Follow our changelog to stay updated with the latest features for your restaurant website and QR menu solution."
     },
     "entries": {
+      "dashboard-ui-redesign-consistent-cards-navigation": {
+        "title": "Dashboard UI Redesign: Consistent Cards, Navigation & Form Actions",
+        "description": "A polished dashboard with unified card styling, persistent sidebar navigation, accent-colored active states, and bottom save/delete actions on every form page.",
+        "meta": {
+          "title": "Dashboard UI Redesign: Cards, Navigation & Forms | IQ Rest",
+          "description": "IQ Rest dashboard redesigned with consistent card components, persistent sidebar navigation with active page highlighting, and improved form actions. Manage your restaurant QR menu with a cleaner, more intuitive interface."
+        },
+        "content": {
+          "intro": "IQ Rest has undergone a comprehensive dashboard UI redesign. Every page now uses consistent card styling with unified border radii, a persistent sidebar navigation with accent-colored active states, and improved form pages with bottom save and delete actions. The result is a cleaner, more polished experience for managing your restaurant's digital QR menu.",
+          "image1Alt": "Redesigned dashboard with consistent card styling",
+          "image1Caption": "Unified card components across all dashboard pages",
+          "section1Title": "Consistent Card Design Across All Pages",
+          "section1Text": "Every dashboard page now uses a unified DashboardCard component with consistent rounded borders, subtle background colors, and optional section headers. Analytics, billing, settings, contacts, reservation settings, and all form pages share the same visual language. Hint labels with popover tooltips replace inline description text, keeping the interface clean while still providing helpful context when needed.",
+          "section2Title": "Persistent Sidebar Navigation with Active States",
+          "section2Text": "On desktop screens, a persistent sidebar navigation is now visible on every page. The active page is highlighted with an accent color background, making it immediately clear where you are. Sub-pages like categories, items, and orders correctly highlight the parent Menu item. The sidebar includes quick access to Menu, Print QR, Reservations, Analytics, Settings, Contacts, Billing, and Support — all without leaving the current view.",
+          "section3Title": "Improved Form Pages with Bottom Actions",
+          "section3Text": "All form pages — categories, items, tables, design, settings, contacts, and reservation settings — now feature a duplicate save button at the bottom in accent color. Delete buttons appear on the left side with a muted style. This means you no longer need to scroll back to the top to save your changes. The logout button has been moved from the sidebar to the bottom of the design page, keeping the navigation focused on essential actions.",
+          "benefitsTitle": "Benefits of the UI Redesign",
+          "benefit1": "Unified card styling with consistent borders and backgrounds across all pages",
+          "benefit2": "Persistent sidebar navigation on desktop with accent-colored active states",
+          "benefit3": "Bottom save buttons on all forms — no need to scroll up to save",
+          "benefit4": "Delete and save actions clearly separated — delete left, save right",
+          "benefit5": "Section headers on form cards for better visual organization",
+          "benefit6": "Cleaner analytics page with DashboardCard wrappers and improved device stats layout",
+          "conclusionTitle": "A More Polished Dashboard Experience",
+          "conclusionText": "This UI redesign brings visual consistency and improved usability to every corner of the IQ Rest dashboard. Whether you're editing menu items, checking analytics, or managing reservations, the interface feels cohesive and intuitive. Combined with the persistent sidebar navigation, managing your restaurant's digital QR menu is faster and more enjoyable than ever.",
+          "ctaText": "Experience the redesigned dashboard",
+          "ctaButton": "Open Dashboard"
+        }
+      },
       "ai-menu-scanner-create-digital-qr-menu": {
         "title": "AI Menu Scanner: Create Digital QR Menu from a Photo",
         "description": "Upload a photo of your paper menu and AI creates a complete digital QR menu for your restaurant instantly. Extract dishes, generate backgrounds, and go live in minutes.",
@@ -1211,6 +1245,7 @@
     "supportTeam": "Support Team"
   },
   "reservations": {
+    "general": "General",
     "title": "Reservations",
     "tables": "Tables",
     "settings": "Settings",
@@ -1684,6 +1719,7 @@
       }
     },
     "categories": {
+      "general": "General",
       "noCategories": "No categories yet",
       "addCategory": "Add Category",
       "editCategory": "Edit Category",
@@ -1715,6 +1751,7 @@
       "sortError": "Failed to save sort order"
     },
     "items": {
+      "general": "General",
       "noItems": "No items yet. Create your first item to get started.",
       "noCategoriesHint": "Add a category first to create items.",
       "addItem": "Add Item",
@@ -1872,7 +1909,7 @@
       "uploadMedia": "Upload video or image",
       "removeMedia": "Remove",
       "accentColor": "Accent Color",
-      "accentColorHint": "Main color for buttons and highlights on your website",
+      "accentColorHint": "Main color for buttons and highlights on your website. Use the rainbow button to pick any custom color.",
       "preview": "Preview",
       "previewButton": "Book a Table",
       "slug": "Website Address",
@@ -1899,25 +1936,28 @@
       "ordersSection": "Orders",
       "ordersRequireWhatsApp": "Add a WhatsApp number on the Contacts page to enable WhatsApp orders",
       "orderMode": "Order Mode",
-      "orderModeWhatsapp": "WhatsApp only",
-      "orderModeInternal": "Internal only",
+      "orderModeWhatsapp": "WhatsApp",
+      "orderModeInternal": "Internal",
       "orderModeBoth": "WhatsApp + Internal",
       "orderModeWhatsappHint": "Orders are sent directly to WhatsApp",
       "orderModeInternalHint": "Orders are saved in the dashboard",
       "orderModeBothHint": "Orders are saved and also sent via WhatsApp",
       "ordersEnabled": "Enable Orders",
-      "ordersOn": "Customers can place orders",
-      "ordersOff": "Orders disabled",
-      "ordersFieldsHint": "Enabled fields are required for the customer to fill in",
+      "ordersOn": "Accept orders",
+      "ordersOff": "Accept orders",
+      "ordersFieldsHint": "Required fields:",
       "ordersName": "Name",
-      "ordersNameOn": "Customer must enter their name",
-      "ordersNameOff": "Name field hidden",
+      "ordersNameOn": "Name",
+      "ordersNameOff": "Name",
       "ordersPhone": "Phone",
-      "ordersPhoneOn": "Customer must enter their phone",
-      "ordersPhoneOff": "Phone field hidden",
+      "ordersPhoneOn": "Phone",
+      "ordersPhoneOff": "Phone",
       "ordersAddress": "Delivery Address",
-      "ordersAddressOn": "Customer must enter delivery address",
-      "ordersAddressOff": "Address field hidden"
+      "ordersAddressOn": "Address",
+      "ordersAddressOff": "Address",
+      "orderModeHint": "Internal orders are saved in the dashboard. WhatsApp orders are sent directly to your WhatsApp. You can enable both at the same time.",
+      "ordersFieldsDescription": "Enabled fields will be required for the customer to fill in when placing an order.",
+      "slugHint": "This is your unique URL address where customers can view your menu. Share this link or use it in your QR code. It will appear as: iq-rest.com/m/your-slug"
     },
     "general": {
       "save": "Save",
@@ -2401,13 +2441,5 @@
     "ownerBody": "A new reservation has been made at your restaurant.",
     "ownerCta": "View Reservations",
     "ownerSignature": "Best regards,<br>IQ Rest Team"
-  },
-  "languages": {
-    "meta": {
-      "title": "Choose Language - IQ Rest QR Menu",
-      "description": "Browse IQ Rest in your preferred language. Available in 35 languages including English, Spanish, French, German, and more."
-    },
-    "title": "Choose Language",
-    "subtitle": "Browse IQ Rest in your preferred language"
   }
 }

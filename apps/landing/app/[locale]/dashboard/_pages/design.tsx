@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Loader2, Upload, X, Copy, Check, Sparkles } from "lucide-react";
+import { Loader2, Upload, X, Copy, Check, Sparkles, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -24,6 +24,9 @@ import { FormSelect } from "../_ui/form-select";
 import { FormSwitch } from "../_ui/form-switch";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { CURRENCIES } from "@/lib/currencies";
+import { DashboardContent } from "../_ui/dashboard-content";
+import { DashboardCard } from "../_ui/dashboard-card";
+import { HintLabel } from "../_ui/hint-label";
 
 interface DesignPageProps {
   initialRestaurant: {
@@ -51,6 +54,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
   const router = useRouter();
   const { translations } = useDashboard();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const colorInputRef = useRef<HTMLInputElement>(null);
 
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -293,324 +297,311 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
         </PageHeader>
       </div>
       <form id="design-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
-        <div className="max-w-lg mx-auto space-y-6">
+        <DashboardContent innerClassName="space-y-4">
 
           {/* Content */}
-          <div className="space-y-4">
-            <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">{t("sectionContent")}:</h2>
+          <DashboardCard title={t("sectionContent")}>
+                <div className="space-y-2">
+                  <HintLabel htmlFor="name" label={`${t("name")}:`} hint={t("nameHint")} />
+                  <FormInput
+                    id="name"
+                    label=""
+                    value={name}
+                    onChange={setName}
+                    onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_NAME)}
+                    placeholder={t("namePlaceholder")}
+                  />
+                </div>
 
-            <div className="space-y-2">
-              <FormInput
-                id="name"
-                label={`${t("name")}:`}
-                value={name}
-                onChange={setName}
-                onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_NAME)}
-                placeholder={t("namePlaceholder")}
-              />
-              <p className="text-xs text-muted-foreground">
-                {t("nameHint")}
-              </p>
-            </div>
+                <div className="space-y-2">
+                  <HintLabel htmlFor="description" label={`${t("description")}:`} hint={t("descriptionHint")} />
+                  <FormInput
+                    id="description"
+                    label=""
+                    value={description}
+                    onChange={setDescription}
+                    onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_DESCRIPTION)}
+                    placeholder={t("descriptionPlaceholder")}
+                  />
+                </div>
 
-            <div className="space-y-2">
-              <FormInput
-                id="description"
-                label={`${t("description")}:`}
-                value={description}
-                onChange={setDescription}
-                onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_DESCRIPTION)}
-                placeholder={t("descriptionPlaceholder")}
-              />
-              <p className="text-xs text-muted-foreground">
-                {t("descriptionHint")}
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <FormSwitch
-                id="hideTitle"
-                label={`${t("hideTitleLabel")}:`}
-                checked={!hideTitle}
-                onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_HIDE_TITLE); setHideTitle(!checked); }}
-                activeText={t("hideTitleOn")}
-                inactiveText={t("hideTitleOff")}
-              />
-              <p className="text-xs text-muted-foreground">
-                {t("hideTitleHint")}
-              </p>
-            </div>
-          </div>
+                <div className="space-y-2">
+                  <HintLabel htmlFor="hideTitle" label={`${t("hideTitleLabel")}:`} hint={t("hideTitleHint")} />
+                  <FormSwitch
+                    id="hideTitle"
+                    label=""
+                    checked={!hideTitle}
+                    onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_HIDE_TITLE); setHideTitle(!checked); }}
+                    activeText={t("hideTitleOn")}
+                    inactiveText={t("hideTitleOff")}
+                  />
+                </div>
+          </DashboardCard>
 
           {/* Design */}
-          <div className="space-y-4">
-            <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider pt-6">{t("sectionDesign")}:</h2>
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium">{t("background")}:</label>
-                {canGenerate && (
-                  <button
-                    type="button"
-                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
-                    onClick={() => { track(DashboardEvent.CLICKED_GENERATE_BACKGROUND); handleGenerateBackground(); }}
-                    disabled={generating || uploading}
-                  >
-                    {generating ? t("generating") : t("generateBackground")}
-                    {generating ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
-                  </button>
-                )}
-              </div>
-              {source ? (
-                <div className="relative">
-                  <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
-                    {isVideo(source) ? (
-                      <video
-                        src={source}
-                        className="h-full w-full object-cover"
-                        muted
-                        loop
-                        autoPlay
-                        playsInline
-                      />
-                    ) : (
-                      <Image
-                        src={source}
-                        alt="Background"
-                        fill
-                        className="object-cover"
-                        sizes="160px"
-                      />
+          <DashboardCard title={t("sectionDesign")}>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <HintLabel label={`${t("background")}:`} hint={t("backgroundHint")} />
+                    {canGenerate && (
+                      <button
+                        type="button"
+                        className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
+                        onClick={() => { track(DashboardEvent.CLICKED_GENERATE_BACKGROUND); handleGenerateBackground(); }}
+                        disabled={generating || uploading}
+                      >
+                        {generating ? t("generating") : t("generateBackground")}
+                        {generating ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
+                      </button>
                     )}
                   </div>
-                  <Button
-                    type="button"
-                    variant="destructive"
-                    size="icon"
-                    className="absolute -top-2 left-36 h-6 w-6"
-                    onClick={() => { track(DashboardEvent.CLICKED_REMOVE_BACKGROUND); handleRemoveMedia(); }}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
-                </div>
-              ) : (
-                <div
-                  className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
-                  onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_BACKGROUND); fileInputRef.current?.click(); }}
-                >
-                  {uploading ? (
-                    <div className="flex flex-col items-center gap-2">
-                      <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">Uploading...</span>
+                  {source ? (
+                    <div className="relative">
+                      <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
+                        {isVideo(source) ? (
+                          <video
+                            src={source}
+                            className="h-full w-full object-cover"
+                            muted
+                            loop
+                            autoPlay
+                            playsInline
+                          />
+                        ) : (
+                          <Image
+                            src={source}
+                            alt="Background"
+                            fill
+                            className="object-cover"
+                            sizes="160px"
+                          />
+                        )}
+                      </div>
+                      <Button
+                        type="button"
+                        variant="destructive"
+                        size="icon"
+                        className="absolute -top-2 left-36 h-6 w-6"
+                        onClick={() => { track(DashboardEvent.CLICKED_REMOVE_BACKGROUND); handleRemoveMedia(); }}
+                      >
+                        <X className="h-4 w-4" />
+                      </Button>
                     </div>
                   ) : (
-                    <div className="flex flex-col items-center gap-2">
-                      <Upload className="h-8 w-8 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">{t("uploadMedia")}</span>
+                    <div
+                      className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
+                      onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_BACKGROUND); fileInputRef.current?.click(); }}
+                    >
+                      {uploading ? (
+                        <div className="flex flex-col items-center gap-2">
+                          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">Uploading...</span>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col items-center gap-2">
+                          <Upload className="h-8 w-8 text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">{t("uploadMedia")}</span>
+                        </div>
+                      )}
                     </div>
                   )}
-                </div>
-              )}
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
-                className="hidden"
-                onChange={handleMediaUpload}
-                disabled={uploading}
-              />
-              <p className="text-xs text-muted-foreground">
-                {t("backgroundHint")}
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <label className="text-sm font-medium">
-                {t("accentColor")}:
-              </label>
-
-              <div className="flex flex-wrap gap-2.5">
-                {ACCENT_COLORS.map((color) => (
-                  <button
-                    key={color}
-                    type="button"
-                    className={`w-9 h-9 rounded-full border-2 transition-all ${
-                      accentColor === color ? "border-foreground scale-110" : "border-transparent hover:scale-105"
-                    }`}
-                    style={{ backgroundColor: color }}
-                    onClick={() => { track(DashboardEvent.CLICKED_PRESET_COLOR); setAccentColor(color); }}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
+                    className="hidden"
+                    onChange={handleMediaUpload}
+                    disabled={uploading}
                   />
-                ))}
-              </div>
+                </div>
 
-              {/* Preview */}
-              <div className="flex items-center gap-3 pt-1">
-                <span className="text-xs text-muted-foreground">{t("preview")}:</span>
-                <span
-                  className="px-5 py-2.5 rounded-2xl text-sm font-medium text-white pointer-events-none shadow-sm"
-                  style={{ backgroundColor: accentColor }}
-                >
-                  {t("previewButton")}
-                </span>
-              </div>
+                <div className="space-y-3">
+                  <HintLabel label={`${t("accentColor")}:`} hint={t("accentColorHint")} />
 
-              <p className="text-xs text-muted-foreground">
-                {t("accentColorHint")}
-              </p>
-            </div>
-          </div>
+                  <div className="grid grid-cols-8 md:grid-cols-10 gap-2.5">
+                    {ACCENT_COLORS.map((color) => (
+                      <button
+                        key={color}
+                        type="button"
+                        className={`aspect-square rounded-full border-2 transition-all ${
+                          accentColor === color ? "border-foreground scale-110" : "border-transparent hover:scale-105"
+                        }`}
+                        style={{ backgroundColor: color }}
+                        onClick={() => { track(DashboardEvent.CLICKED_PRESET_COLOR); setAccentColor(color); }}
+                      />
+                    ))}
+                    <div className="relative aspect-square">
+                      <button
+                        type="button"
+                        className={`w-full h-full rounded-full transition-all overflow-hidden ${
+                          !ACCENT_COLORS.includes(accentColor) ? "ring-2 ring-foreground ring-offset-2 ring-offset-background scale-110" : "hover:scale-105"
+                        }`}
+                        style={{ background: "conic-gradient(from 0deg, #ff0000, #ff8800, #ffff00, #00ff00, #00ffff, #0000ff, #8800ff, #ff00ff, #ff0000)" }}
+                        onClick={() => colorInputRef.current?.click()}
+                      />
+                      <input
+                        ref={colorInputRef}
+                        type="color"
+                        value={accentColor}
+                        onChange={(e) => { setAccentColor(e.target.value); track(DashboardEvent.CLICKED_PRESET_COLOR); }}
+                        className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
+                      />
+                    </div>
+                  </div>
+                </div>
+          </DashboardCard>
 
           {/* Settings */}
-          <div className="space-y-4">
-            <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider pt-6">{t("sectionSettings")}:</h2>
+          <DashboardCard title={t("sectionSettings")}>
+                <div className="space-y-2">
+                  <HintLabel htmlFor="slug" label={`${t("slug")}:`} hint={t("slugHint")} />
+                  <div className="flex h-12 w-full rounded-md border border-border bg-muted/50 overflow-hidden">
+                    <span className="flex items-center px-3 text-sm text-muted-foreground border-r border-border shrink-0">
+                      {t("slugPrefix")}
+                    </span>
+                    <input
+                      id="slug"
+                      type="text"
+                      value={slug}
+                      onChange={(e) => handleSlugChange(e.target.value)}
+                      onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_SLUG)}
+                      placeholder={t("slugPlaceholder")}
+                      className="flex-1 h-full px-4 bg-transparent text-base md:text-sm placeholder:text-muted-foreground/50 focus:outline-none"
+                    />
+                    {slug && (
+                      <button
+                        type="button"
+                        className="flex items-center justify-center w-12 shrink-0 text-primary hover:text-primary/80 transition-colors border-l border-border"
+                        onClick={() => {
+                          track(DashboardEvent.CLICKED_COPY_URL);
+                          navigator.clipboard.writeText(`https://iq-rest.com/m/${slug}`);
+                          setCopied(true);
+                          setTimeout(() => setCopied(false), 2000);
+                        }}
+                      >
+                        {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                      </button>
+                    )}
+                  </div>
+                </div>
 
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <label htmlFor="slug" className="text-sm font-medium">{t("slug")}:</label>
-                {slug && (
-                  <button
-                    type="button"
-                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
-                    onClick={() => {
-                      track(DashboardEvent.CLICKED_COPY_URL);
-                      navigator.clipboard.writeText(`https://iq-rest.com/m/${slug}`);
-                      setCopied(true);
-                      setTimeout(() => setCopied(false), 2000);
-                    }}
-                  >
-                    {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-                    {t("copyUrl")}
-                  </button>
-                )}
-              </div>
-              <div className="flex h-12 w-full rounded-xl border border-border bg-muted/30 overflow-hidden">
-                <span className="flex items-center px-3 text-sm text-muted-foreground bg-muted/50 border-r border-border shrink-0">
-                  {t("slugPrefix")}
-                </span>
-                <input
-                  id="slug"
-                  type="text"
-                  value={slug}
-                  onChange={(e) => handleSlugChange(e.target.value)}
-                  onFocus={() => track(DashboardEvent.FOCUSED_RESTAURANT_SLUG)}
-                  placeholder={t("slugPlaceholder")}
-                  className="flex-1 h-full px-4 bg-transparent text-base md:text-sm placeholder:text-muted-foreground/50 focus:outline-none"
+                <FormSelect
+                  id="currency"
+                  label={`${t("currency")}:`}
+                  value={currency}
+                  onChange={(v) => { track(DashboardEvent.CHANGED_CURRENCY); setCurrency(v); }}
+                  placeholder={t("currencyPlaceholder")}
+                  options={CURRENCIES.map((c) => ({
+                    value: c.code,
+                    label: `${c.code} (${c.symbol}) - ${c.name}`,
+                  }))}
                 />
-              </div>
-            </div>
-
-            <FormSelect
-              id="currency"
-              label={`${t("currency")}:`}
-              value={currency}
-              onChange={(v) => { track(DashboardEvent.CHANGED_CURRENCY); setCurrency(v); }}
-              placeholder={t("currencyPlaceholder")}
-              options={CURRENCIES.map((c) => ({
-                value: c.code,
-                label: `${c.code} (${c.symbol}) - ${c.name}`,
-              }))}
-            />
-          </div>
+          </DashboardCard>
 
           {/* Orders */}
-          <div className="space-y-4">
-            <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider pt-6">{t("ordersSection")}:</h2>
+          <DashboardCard title={t("ordersSection")}>
+                <FormSwitch
+                  id="orders-enabled"
+                  label=""
+                  checked={ordersEnabled}
+                  onCheckedChange={(v) => {
+                    setOrdersEnabled(v);
+                    track(DashboardEvent.TOGGLED_ORDERS_ENABLED);
+                  }}
+                  activeText={t("ordersOn")}
+                  inactiveText={t("ordersOff")}
+                />
 
-            <FormSwitch
-              id="orders-enabled"
-              label=""
-              checked={ordersEnabled}
-              onCheckedChange={(v) => {
-                setOrdersEnabled(v);
-                track(DashboardEvent.TOGGLED_ORDERS_ENABLED);
-              }}
-              activeText={t("ordersOn")}
-              inactiveText={t("ordersOff")}
-            />
+                <div className={`space-y-4 ${!ordersEnabled ? "opacity-50" : ""}`}>
+                  <HintLabel label={`${t("orderMode")}:`} hint={t("orderModeHint")} />
 
-            <div className={`space-y-4 ${!ordersEnabled ? "opacity-50" : ""}`}>
-              {/* Order mode selector */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium">{t("orderMode")}:</label>
-                <div className="space-y-2">
-                  {(["internal", "whatsapp", "both"] as const).map((mode) => {
-                    const needsWhatsApp = mode === "whatsapp" || mode === "both";
-                    const isDisabled = !ordersEnabled || (needsWhatsApp && !hasWhatsApp);
-                    return (
-                      <label
-                        key={mode}
-                        className={`flex items-start gap-3 p-3 rounded-xl border cursor-pointer transition-colors ${
-                          orderMode === mode ? "border-primary bg-primary/5" : "border-border"
-                        } ${isDisabled ? "opacity-50 cursor-not-allowed" : ""}`}
-                      >
-                        <input
-                          type="radio"
-                          name="orderMode"
-                          value={mode}
-                          checked={orderMode === mode}
-                          onChange={() => {
-                            if (!isDisabled) {
-                              setOrderMode(mode);
-                              track(DashboardEvent.CHANGED_ORDER_MODE);
-                            }
-                          }}
-                          disabled={isDisabled}
-                          className="mt-0.5"
-                        />
-                        <div>
-                          <div className="text-sm font-medium">
-                            {t(`orderMode${mode.charAt(0).toUpperCase() + mode.slice(1)}` as "orderModeWhatsapp" | "orderModeInternal" | "orderModeBoth")}
-                          </div>
-                          <div className="text-xs text-muted-foreground">
-                            {t(`orderMode${mode.charAt(0).toUpperCase() + mode.slice(1)}Hint` as "orderModeWhatsappHint" | "orderModeInternalHint" | "orderModeBothHint")}
-                          </div>
-                          {needsWhatsApp && !hasWhatsApp && (
-                            <div className="text-xs text-amber-600 mt-1">{t("ordersRequireWhatsApp")}</div>
-                          )}
-                        </div>
-                      </label>
-                    );
-                  })}
+                  <FormSwitch
+                    id="order-mode-internal"
+                    label=""
+                    checked={orderMode === "internal" || orderMode === "both"}
+                    onCheckedChange={(v) => {
+                      const hasWa = orderMode === "whatsapp" || orderMode === "both";
+                      const newMode = v ? (hasWa ? "both" : "internal") : (hasWa ? "whatsapp" : "internal");
+                      setOrderMode(newMode);
+                      track(DashboardEvent.CHANGED_ORDER_MODE);
+                    }}
+                    activeText={t("orderModeInternal")}
+                    inactiveText={t("orderModeInternal")}
+                    disabled={!ordersEnabled}
+                  />
+
+                  <FormSwitch
+                    id="order-mode-whatsapp"
+                    label=""
+                    checked={orderMode === "whatsapp" || orderMode === "both"}
+                    onCheckedChange={(v) => {
+                      if (!hasWhatsApp && v) return;
+                      const hasInt = orderMode === "internal" || orderMode === "both";
+                      const newMode = v ? (hasInt ? "both" : "whatsapp") : (hasInt ? "internal" : "internal");
+                      setOrderMode(newMode);
+                      track(DashboardEvent.CHANGED_ORDER_MODE);
+                    }}
+                    activeText={t("orderModeWhatsapp")}
+                    inactiveText={t("orderModeWhatsapp")}
+                    disabled={!ordersEnabled || !hasWhatsApp}
+                  />
+
+                  <div className="pt-2">
+                    <HintLabel label={t("ordersFieldsHint")} hint={t("ordersFieldsDescription")} />
+                  </div>
+
+                  <FormSwitch
+                    id="order-name"
+                    label=""
+                    checked={orderName}
+                    onCheckedChange={(v) => { setOrderName(v); track(DashboardEvent.TOGGLED_ORDER_NAME); }}
+                    activeText={t("ordersNameOn")}
+                    inactiveText={t("ordersNameOff")}
+                    disabled={!ordersEnabled}
+                  />
+
+                  <FormSwitch
+                    id="order-phone"
+                    label=""
+                    checked={orderPhone}
+                    onCheckedChange={(v) => { setOrderPhone(v); track(DashboardEvent.TOGGLED_ORDER_PHONE); }}
+                    activeText={t("ordersPhoneOn")}
+                    inactiveText={t("ordersPhoneOff")}
+                    disabled={!ordersEnabled}
+                  />
+
+                  <FormSwitch
+                    id="order-address"
+                    label=""
+                    checked={orderAddress}
+                    onCheckedChange={(v) => { setOrderAddress(v); track(DashboardEvent.TOGGLED_ORDER_ADDRESS); }}
+                    activeText={t("ordersAddressOn")}
+                    inactiveText={t("ordersAddressOff")}
+                    disabled={!ordersEnabled}
+                  />
                 </div>
-              </div>
+          </DashboardCard>
 
-              <div className="space-y-1">
-                <p className="text-xs text-muted-foreground">{t("ordersFieldsHint")}</p>
-              </div>
-
-              <FormSwitch
-                id="order-name"
-                label=""
-                checked={orderName}
-                onCheckedChange={(v) => { setOrderName(v); track(DashboardEvent.TOGGLED_ORDER_NAME); }}
-                activeText={t("ordersNameOn")}
-                inactiveText={t("ordersNameOff")}
-                disabled={!ordersEnabled}
-              />
-
-              <FormSwitch
-                id="order-phone"
-                label=""
-                checked={orderPhone}
-                onCheckedChange={(v) => { setOrderPhone(v); track(DashboardEvent.TOGGLED_ORDER_PHONE); }}
-                activeText={t("ordersPhoneOn")}
-                inactiveText={t("ordersPhoneOff")}
-                disabled={!ordersEnabled}
-              />
-
-              <FormSwitch
-                id="order-address"
-                label=""
-                checked={orderAddress}
-                onCheckedChange={(v) => { setOrderAddress(v); track(DashboardEvent.TOGGLED_ORDER_ADDRESS); }}
-                activeText={t("ordersAddressOn")}
-                inactiveText={t("ordersAddressOff")}
-                disabled={!ordersEnabled}
-              />
-            </div>
+          <div className="flex justify-between items-center">
+            <button
+              type="button"
+              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium"
+            >
+              <LogOut className="h-4 w-4 text-muted-foreground" />
+              {translations.logout}
+            </button>
+            <button
+              type="submit"
+              form="design-form"
+              disabled={saving || uploading || !hasChanges}
+              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
+            >
+              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
+            </button>
           </div>
 
-        </div>
+        </DashboardContent>
       </form>
 
       <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
