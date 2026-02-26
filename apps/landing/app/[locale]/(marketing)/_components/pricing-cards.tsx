@@ -204,7 +204,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                     </ul>
                   </CardContent>
                   {!hideButtons && (
-                    <CardFooter className="flex-col gap-3">
+                    <CardFooter className="flex-col gap-3 mt-auto">
                       <Button
                         asChild
                         className="w-full"
