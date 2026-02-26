@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Define all routes with individual settings
   const routes: RouteConfig[] = [
-    { path: '/pricing', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/pricing', lastModified: '2026-02-26', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/instant-setup', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/mobile-management', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-translation', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ai-images', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/easy-menu', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/analytics', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/reservations', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/reservations', lastModified: '2026-02-26', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/custom-design', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/color-scheme', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/personal-support', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
@@ -64,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   locales.forEach(locale => {
     sitemapEntries.push({
       url: `${baseUrl}/${locale}`,
-      lastModified: new Date('2026-02-24'),
+      lastModified: new Date('2026-02-26'),
       changeFrequency: 'weekly',
       priority: 1.0,
       alternates: buildAlternates()
