@@ -70,6 +70,7 @@ jobs:
             GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS=${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS }}
             GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION=${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION }}
             GOOGLE_ADS_LOGIN_CUSTOMER_ID=${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+            TURNSTILE_SECRET_KEY=${{ secrets.TURNSTILE_SECRET_KEY }}
             EOF
             cd /home/deploy/apps/iq-rest
             npm ci --production
