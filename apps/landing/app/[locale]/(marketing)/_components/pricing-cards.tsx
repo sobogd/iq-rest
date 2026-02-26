@@ -213,12 +213,12 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                       >
                         <Link href="/dashboard" onClick={() => analytics.marketing.pricingCtaClick(plan.id)}>{t(`plans.${plan.id}.cta`)}</Link>
                       </Button>
-                      {currencyPricing.yearlyTotal > 0 && (
-                        <p className="text-[11px] text-muted-foreground/60 text-center">
-                          {t("billedYearly", { total: formatPrice(currencyPricing.yearlyTotal, currency) })}
-                          {" "}{t("orMonthly", { price: formatPrice(currencyPricing.monthly, currency) })}
-                        </p>
-                      )}
+                      <p className={cn("text-[11px] text-center", currencyPricing.yearlyTotal > 0 ? "text-muted-foreground/60" : "invisible")}>
+                        {currencyPricing.yearlyTotal > 0
+                          ? <>{t("billedYearly", { total: formatPrice(currencyPricing.yearlyTotal, currency) })}{" "}{t("orMonthly", { price: formatPrice(currencyPricing.monthly, currency) })}</>
+                          : "\u00A0"
+                        }
+                      </p>
                     </CardFooter>
                   )}
                 </Card>

@@ -33,7 +33,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className="notranslate" translate="no">
-      <body>
+      <body className="min-h-svh flex flex-col">
         <ThemeProvider
           attribute="class"
           forcedTheme="dark"
