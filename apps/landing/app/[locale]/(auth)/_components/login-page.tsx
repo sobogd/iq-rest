@@ -249,7 +249,7 @@ export function LoginPage() {
                   onSuccess={setTurnstileToken}
                   onError={() => setTurnstileToken(null)}
                   onExpire={() => setTurnstileToken(null)}
-                  options={{ size: "flexible" }}
+                  options={{ size: "flexible", appearance: "interaction-only" }}
                 />
               )}
 
