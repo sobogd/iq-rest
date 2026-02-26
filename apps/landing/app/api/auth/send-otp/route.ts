@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import nodemailer from "nodemailer";
 import { prisma } from "@/lib/prisma";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 // Simple session token generator
 function generateSessionToken(): string {
@@ -121,7 +122,25 @@ async function sendWelcomeEmail(email: string, locale: string) {
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, locale = "en" } = await request.json();
+    const { email, locale = "en", turnstileToken } = await request.json();
+
+    // Verify Turnstile token
+    if (process.env.TURNSTILE_SECRET_KEY) {
+      if (!turnstileToken) {
+        return NextResponse.json(
+          { error: "Verification required" },
+          { status: 403 }
+        );
+      }
+
+      const isValid = await verifyTurnstileToken(turnstileToken);
+      if (!isValid) {
+        return NextResponse.json(
+          { error: "Verification failed" },
+          { status: 403 }
+        );
+      }
+    }
 
     // Validate email
     if (!email) {

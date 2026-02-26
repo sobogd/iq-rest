@@ -1,9 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, subject, message } = await request.json();
+    const { email, subject, message, turnstileToken } = await request.json();
+
+    // Verify Turnstile token
+    if (process.env.TURNSTILE_SECRET_KEY) {
+      if (!turnstileToken) {
+        return NextResponse.json(
+          { error: "Verification required" },
+          { status: 403 }
+        );
+      }
+
+      const isValid = await verifyTurnstileToken(turnstileToken);
+      if (!isValid) {
+        return NextResponse.json(
+          { error: "Verification failed" },
+          { status: 403 }
+        );
+      }
+    }
 
     // Validate required fields
     if (!email || !subject || !message) {

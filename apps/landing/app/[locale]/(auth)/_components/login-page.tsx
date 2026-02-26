@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
@@ -25,6 +26,7 @@ declare global {
 }
 
 const GOOGLE_CLIENT_ID = "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
+const TURNSTILE_SITE_KEY = "0x4AAAAAACi6p7FVybIQ_YZg";
 
 export function LoginPage() {
   const locale = useLocale();
@@ -36,6 +38,8 @@ export function LoginPage() {
   const [errorMessage, setErrorMessage] = useState("");
   const emailInputRef = useRef<HTMLInputElement>(null);
   const googleButtonRef = useRef<HTMLDivElement>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const handleGoogleResponse = useCallback(
     async (response: { credential: string }) => {
@@ -148,6 +152,12 @@ export function LoginPage() {
       return;
     }
 
+    if (!turnstileToken) {
+      setErrorMessage(t("errors.sendFailed"));
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 
@@ -155,7 +165,7 @@ export function LoginPage() {
       const response = await fetch("/api/auth/send-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed, locale }),
+        body: JSON.stringify({ email: trimmed, locale, turnstileToken }),
       });
 
       const data = await response.json();
@@ -190,11 +200,15 @@ export function LoginPage() {
         track(DashboardEvent.ERROR_OTP_SEND);
         setErrorMessage(data.error || t("errors.sendFailed"));
         setStatus("error");
+        turnstileRef.current?.reset();
+        setTurnstileToken(null);
       }
     } catch {
       track(DashboardEvent.ERROR_OTP_SEND);
       setErrorMessage(t("errors.sendFailed"));
       setStatus("error");
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
     }
   };
 
@@ -228,9 +242,20 @@ export function LoginPage() {
                 disabled={status === "loading"}
               />
 
+              {TURNSTILE_SITE_KEY && (
+                <Turnstile
+                  ref={turnstileRef}
+                  siteKey={TURNSTILE_SITE_KEY}
+                  onSuccess={setTurnstileToken}
+                  onError={() => setTurnstileToken(null)}
+                  onExpire={() => setTurnstileToken(null)}
+                  options={{ size: "flexible" }}
+                />
+              )}
+
               <Button
                 type="submit"
-                disabled={status === "loading"}
+                disabled={status === "loading" || (!turnstileToken && !!TURNSTILE_SITE_KEY)}
               >
                 {status === "loading" && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

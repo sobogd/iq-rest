@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAACi6p7FVybIQ_YZg";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -20,6 +23,8 @@ export function ContactForm() {
     message: "",
   });
   const [status, setStatus] = useState<FormStatus>("idle");
+  const turnstileRef = useRef<TurnstileInstance>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,7 +34,7 @@ export function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstileToken }),
       });
 
       if (response.ok) {
@@ -37,11 +42,15 @@ export function ContactForm() {
         setFormData({ email: "", subject: "", message: "" });
       } else {
         setStatus("error");
+        turnstileRef.current?.reset();
+        setTurnstileToken(null);
         setTimeout(() => setStatus("idle"), ERROR_RESET_DELAY_MS);
       }
     } catch (error) {
       console.error("Contact form error:", error);
       setStatus("error");
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
       setTimeout(() => setStatus("idle"), ERROR_RESET_DELAY_MS);
     }
   };
@@ -120,8 +129,19 @@ export function ContactForm() {
                     />
                   </div>
 
+                  {TURNSTILE_SITE_KEY && (
+                    <Turnstile
+                      ref={turnstileRef}
+                      siteKey={TURNSTILE_SITE_KEY}
+                      onSuccess={setTurnstileToken}
+                      onError={() => setTurnstileToken(null)}
+                      onExpire={() => setTurnstileToken(null)}
+                      options={{ size: "flexible" }}
+                    />
+                  )}
+
                   <div className="flex justify-end">
-                    <Button type="submit" disabled={isLoading} size="lg" className="text-base px-8">
+                    <Button type="submit" disabled={isLoading || (!turnstileToken && !!TURNSTILE_SITE_KEY)} size="lg" className="text-base px-8">
                       {isLoading ? t("sending") : t("submit")}
                     </Button>
                   </div>
