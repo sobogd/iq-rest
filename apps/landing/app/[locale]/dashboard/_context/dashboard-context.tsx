@@ -49,17 +49,23 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
   "items": "items",
   "tables": "tables",
   "reservations": "reservations",
+  "reservation-settings": "reservations",
   "orders": "orders",
   "design": "design",
   "contacts": "contacts",
   "qr-menu": "qrMenu",
   "analytics": "analytics",
   "billing": "billing",
+  "upgrade": "billing",
   "settings": "settings",
   "support": "support",
   "admin": "admin",
   "admin/analytics": "adminAnalytics",
   "admin/onboarding": "adminOnboarding",
+  "sessions": "admin",
+  "keywords": "admin",
+  "search-terms": "admin",
+  "google-ads": "admin",
 };
 
 export function getPageKeyFromPathname(pathname: string): PageKey {
