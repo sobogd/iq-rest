@@ -171,7 +171,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                       {t(`plans.${plan.id}.description`)}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="flex-1">
+                  <CardContent className="flex-1 flex flex-col">
                     <div className="space-y-1 mb-6">
                       <div className="flex items-baseline gap-1">
                         <span className="text-4xl font-bold">{formatPrice(currencyPricing.yearly, currency)}</span>
@@ -192,7 +192,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                         </div>
                       )}
                     </div>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 flex-1">
                       {(t.raw(`plans.${plan.id}.highlights`) as string[]).map(
                         (highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2">
