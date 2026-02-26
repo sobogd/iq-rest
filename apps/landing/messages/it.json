@@ -128,8 +128,8 @@
         "description": "Monitora le prestazioni del menu del tuo ristorante con analisi dettagliate. Visite giornaliere, preferenze linguistiche, pagine popolari — prendi decisioni basate sui dati."
       },
       "reservations": {
-        "title": "Prenotazioni Tavoli Online per Ristoranti | Sistema di Prenotazione - IQ Rest",
-        "description": "Accetta prenotazioni tavoli online direttamente dal sito web del tuo ristorante. Conferma automatica o manuale, notifiche email, gestione tavoli."
+        "title": "Sistema di Prenotazione Tavoli per Ristoranti | Gestionale Prenotazioni - IQ Rest",
+        "description": "Software gestione ristorante con sistema di prenotazione tavoli integrato. Gestionale prenotazioni ristoranti con conferma automatica, notifiche email e programma per prenotazioni tavoli digitale."
       },
       "custom-design": {
         "title": "Sfondi Video & Foto per Sito Web Ristorante - IQ Rest",
@@ -423,20 +423,20 @@
       },
       {
         "id": "reservations",
-        "title": "Sistema di Prenotazione Tavoli",
-        "shortDescription": "Accetta prenotazioni 24/7.{br}{link}Prenotazioni{/link} direttamente dal tuo sito.",
-        "description": "Il sistema di prenotazione integrato consente ai clienti di prenotare tavoli direttamente dal tuo sito web. Scegli la conferma automatica in Growth alla disponibilità, oppure rivedi ogni prenotazione manualmente. Gestisci tutte le prenotazioni dal tuo pannello di controllo.",
-        "fullDescription": "Le prenotazioni telefoniche richiedono tempo e sono facili da perdere. Il sistema di prenotazione di IQ Rest funziona 24/7. I clienti selezionano data, ora e numero di persone, quindi prenotano immediatamente. Puoi impostare la conferma automatica in Growth alla disponibilità dei tavoli, oppure rivedere ogni richiesta manualmente. Riduci le assenze con conferme via email.",
+        "title": "Sistema di Prenotazione Tavoli per Ristoranti",
+        "shortDescription": "Digitalizza il tuo ristorante con le prenotazioni 24/7.{br}{link}Gestionale prenotazioni{/link} direttamente dal tuo sito.",
+        "description": "Il software gestione ristorante di IQ Rest include un sistema di prenotazione tavoli integrato. Il gestionale prenotazioni ristoranti consente ai clienti di prenotare direttamente dal tuo sito web, con conferma automatica o manuale dal pannello di controllo.",
+        "fullDescription": "Le prenotazioni telefoniche richiedono tempo e sono facili da perdere. Il programma per prenotazioni tavoli di IQ Rest funziona 24/7. I clienti selezionano data, ora e numero di persone, quindi prenotano immediatamente. Il software gestione tavoli consente conferma automatica in base alla disponibilità o revisione manuale di ogni richiesta. Digitalizzare il ristorante significa anche ridurre le assenze con conferme via email automatiche.",
         "benefits": [
-          "Capacità di prenotazione online 24/7",
-          "Modalità di conferma automatica o manuale",
-          "Gestione di tavoli e capacità",
-          "Notifiche via email per le prenotazioni",
-          "Vista calendario per una programmazione facile"
+          "Sistema di prenotazione tavoli attivo 24/7",
+          "Software gestione tavoli con conferma automatica o manuale",
+          "Gestionale prenotazioni ristoranti con gestione capacità",
+          "Notifiche email automatiche per digitalizzare il ristorante",
+          "Vista calendario integrata nel programma per prenotazioni tavoli"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "Sistema di prenotazione tavoli online per ristoranti",
-        "cta": "Esplora le Prenotazioni di Tavoli"
+        "imageAlt": "Software gestione ristorante con sistema di prenotazione tavoli",
+        "cta": "Esplora il Gestionale Prenotazioni"
       },
       {
         "id": "custom-design",

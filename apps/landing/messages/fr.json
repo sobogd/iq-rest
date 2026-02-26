@@ -128,8 +128,8 @@
         "description": "Suivez les performances du menu de votre restaurant avec des analyses détaillées. Vues quotidiennes, préférences linguistiques, pages populaires — prenez des décisions basées sur les données."
       },
       "reservations": {
-        "title": "Réservations de Tables en Ligne pour Restaurants | Système de Réservation - IQ Rest",
-        "description": "Acceptez les réservations de tables en ligne directement depuis votre site web de restaurant. Confirmation automatique ou manuelle, notifications par email, gestion des tables."
+        "title": "Système de Réservation Restaurant | Logiciel de Réservation en Ligne - IQ Rest",
+        "description": "Logiciel de réservation restaurant avec gestion de table intégrée. Cahier de réservation numérique, solution de réservation en ligne restaurant avec confirmation automatique et notifications."
       },
       "custom-design": {
         "title": "Arrière-plans Vidéo & Photo pour Site Web Restaurant - IQ Rest",
@@ -423,20 +423,20 @@
       },
       {
         "id": "reservations",
-        "title": "Système de Réservations de Tables",
-        "shortDescription": "Acceptez les réservations 24/7.{br}{link}Réservations{/link} directement depuis votre site.",
-        "description": "Le système de réservation intégré permet aux clients de réserver des tables directement depuis votre site web. Choisissez la confirmation automatique en fonction de la disponibilité, ou examinez chaque réservation manuellement. Gérez toutes les réservations depuis votre tableau de bord.",
-        "fullDescription": "Les réservations par téléphone prennent du temps et sont faciles à manquer. Le système de réservation d'IQ Rest fonctionne 24/7. Les clients sélectionnent la date, l'heure et la taille du groupe, puis réservent instantanément. Vous pouvez configurer une confirmation automatique en fonction de la disponibilité des tables, ou examiner chaque demande manuellement. Réduisez les absences avec des confirmations par e-mail.",
+        "title": "Système de Réservation Restaurant - Cahier Numérique",
+        "shortDescription": "Solution de réservation en ligne restaurant 24/7.{br}{link}Logiciel de réservation{/link} directement depuis votre site.",
+        "description": "Le logiciel de réservation restaurant d'IQ Rest offre un cahier de réservation numérique intégré. La gestion de table restaurant logiciel permet la confirmation automatique selon la disponibilité ou l'examen manuel de chaque réservation depuis votre tableau de bord.",
+        "fullDescription": "Les réservations téléphoniques prennent du temps et sont faciles à manquer. La solution de réservation en ligne restaurant d'IQ Rest fonctionne 24/7. Les clients sélectionnent date, heure et taille du groupe, puis réservent instantanément. Le logiciel restauration B2B offre la confirmation automatique selon la disponibilité des tables, ou l'examen manuel de chaque demande. Le système de réservation restaurant réduit les absences grâce aux confirmations automatiques par e-mail.",
         "benefits": [
-          "Capacité de réservation en ligne 24/7",
-          "Modes de confirmation automatiques ou manuels",
-          "Gestion des tables et de la capacité",
-          "Notifications par e-mail pour les réservations",
-          "Vue calendrier pour une planification facile"
+          "Système de réservation restaurant actif 24/7",
+          "Cahier de réservation numérique avec confirmation automatique",
+          "Gestion de table restaurant logiciel avec suivi de capacité",
+          "Logiciel de réservation restaurant avec notifications e-mail",
+          "Solution de réservation en ligne restaurant avec vue calendrier"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "Système de réservation de table en ligne pour restaurants",
-        "cta": "Explorer les réservations de tables"
+        "imageAlt": "Logiciel de réservation restaurant avec cahier de réservation numérique",
+        "cta": "Découvrir le Système de Réservation"
       },
       {
         "id": "custom-design",

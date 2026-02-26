@@ -128,8 +128,8 @@
         "description": "Track your restaurant menu performance with detailed analytics. Daily views, language preferences, popular pages - make data-driven decisions."
       },
       "reservations": {
-        "title": "Online Table Reservations for Restaurants | Booking System - IQ Rest",
-        "description": "Accept online table bookings directly from your restaurant website. Automatic or manual confirmation, email notifications, table management."
+        "title": "System Rezerwacji dla Restauracji | Rezerwacje Stolików Online - IQ Rest",
+        "description": "Oprogramowanie dla gastronomii z elektroniczną książką rezerwacji. System zarządzania stolikami z rezerwacjami stolików online, automatycznym potwierdzeniem i powiadomieniami e-mail."
       },
       "custom-design": {
         "title": "Video & Photo Backgrounds for Restaurant Website - IQ Rest",
@@ -423,20 +423,20 @@
       },
       {
         "id": "reservations",
-        "title": "System rezerwacji stolików",
-        "shortDescription": "Przyjmuj rezerwacje 24/7.{br}{link}Rezerwacje{/link} bezpośrednio ze strony.",
-        "description": "Wbudowany system rezerwacji pozwala klientom rezerwować stoliki bezpośrednio z Twojej strony internetowej. Wybierz automatyczne potwierdzenie w zależności od dostępności lub ręcznie przeglądaj każdą rezerwację. Zarządzaj wszystkimi rezerwacjami z pulpitu nawigacyjnego.",
-        "fullDescription": "Rezerwacje telefoniczne są czasochłonne i łatwe do przeoczenia. System rezerwacji IQ Rest działa 24/7. Klienci wybierają datę, godzinę i liczbę osób, a następnie rezerwują natychmiast. Możesz ustawić automatyczne potwierdzenie w zależności od dostępności stolików lub ręcznie przeglądać każdą prośbę. Zmniejsz liczbę nieobecności dzięki potwierdzeniom e-mailowym.",
+        "title": "System Rezerwacji dla Restauracji - Elektroniczna Książka",
+        "shortDescription": "Rezerwacje stolików online 24/7.{br}{link}System zarządzania stolikami{/link} bezpośrednio ze strony.",
+        "description": "Oprogramowanie dla gastronomii IQ Rest zawiera elektroniczną książkę rezerwacji zintegrowaną z Twoją stroną. System zarządzania stolikami umożliwia automatyczne potwierdzenie w zależności od dostępności lub ręczne przeglądanie każdej rezerwacji z pulpitu nawigacyjnego.",
+        "fullDescription": "Rezerwacje telefoniczne są czasochłonne i łatwe do przeoczenia. System rezerwacji dla restauracji IQ Rest działa 24/7. Klienci wybierają datę, godzinę i liczbę osób, a następnie rezerwują natychmiast. Oprogramowanie dla gastronomii oferuje automatyczne potwierdzenie w zależności od dostępności stolików lub ręczne przeglądanie każdej prośby. Elektroniczna książka rezerwacji z rezerwacjami stolików online zmniejsza liczbę nieobecności dzięki automatycznym potwierdzeniom e-mailowym.",
         "benefits": [
-          "Możliwość rezerwacji online 24/7",
-          "Automatyczne lub ręczne tryby potwierdzenia",
-          "Zarządzanie stolikami i pojemnością",
-          "Powiadomienia e-mail o rezerwacjach",
-          "Widok kalendarza dla łatwego planowania"
+          "System rezerwacji dla restauracji aktywny 24/7",
+          "Elektroniczna książka rezerwacji z automatycznym potwierdzeniem",
+          "System zarządzania stolikami z kontrolą pojemności",
+          "Oprogramowanie dla gastronomii z powiadomieniami e-mail",
+          "Rezerwacje stolików online z widokiem kalendarza"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "System rezerwacji stolików online dla restauracji",
-        "cta": "Zbadaj rezerwacje stolików"
+        "imageAlt": "Oprogramowanie dla gastronomii z systemem rezerwacji dla restauracji",
+        "cta": "Poznaj System Rezerwacji"
       },
       {
         "id": "custom-design",

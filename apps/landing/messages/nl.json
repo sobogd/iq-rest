@@ -128,8 +128,8 @@
         "description": "Track your restaurant menu performance with detailed analytics. Daily views, language preferences, popular pages - make data-driven decisions."
       },
       "reservations": {
-        "title": "Online Table Reservations for Restaurants | Booking System - IQ Rest",
-        "description": "Accept online table bookings directly from your restaurant website. Automatic or manual confirmation, email notifications, table management."
+        "title": "Reserveringssysteem Restaurant | Tafelreservering Software - IQ Rest",
+        "description": "Restaurant management systeem met tafelreservering software. Online reserveren voor horeca met automatische bevestiging, reserveringssysteem restaurant en e-mailmeldingen."
       },
       "custom-design": {
         "title": "Video & Photo Backgrounds for Restaurant Website - IQ Rest",
@@ -423,20 +423,20 @@
       },
       {
         "id": "reservations",
-        "title": "Tafelreserveringssysteem",
-        "shortDescription": "Accepteer reserveringen 24/7.{br}{link}Reserveringen{/link} direct vanaf je website.",
-        "description": "Het ingebouwde reserveringssysteem stelt klanten in staat om tafels rechtstreeks vanaf je website te boeken. Kies automatische bevestiging op Growth van beschikbaarheid, of bekijk elke boeking handmatig. Beheer alle reserveringen vanuit je dashboard.",
-        "fullDescription": "Telefoonreserveringen zijn tijdrovend en gemakkelijk te missen. Het reserveringssysteem van IQ Rest werkt 24/7. Klanten selecteren datum, tijd en groepsgrootte, en boeken vervolgens onmiddellijk. Je kunt automatische bevestiging instellen op Growth van tafelbeschikbaarheid, of elke aanvraag handmatig bekijken. Verminder no-shows met e-mailbevestigingen.",
+        "title": "Reserveringssysteem Restaurant - Tafelreservering Software",
+        "shortDescription": "Online reserveren voor horeca 24/7.{br}{link}Tafelreservering software{/link} direct vanaf je website.",
+        "description": "Het restaurant management systeem van IQ Rest biedt tafelreservering software geïntegreerd in je website. Het reserveringssysteem restaurant maakt automatische bevestiging op basis van beschikbaarheid mogelijk, of handmatige beoordeling van elke boeking vanuit je dashboard.",
+        "fullDescription": "Telefoonreserveringen zijn tijdrovend en gemakkelijk te missen. Online reserveren voor horeca met IQ Rest werkt 24/7. Klanten selecteren datum, tijd en groepsgrootte, en boeken onmiddellijk. De tafelreservering software biedt automatische bevestiging op basis van tafelbeschikbaarheid, of handmatige beoordeling van elke aanvraag. Het restaurant management systeem vermindert no-shows met automatische e-mailbevestigingen.",
         "benefits": [
-          "24/7 online boekingsmogelijkheid",
-          "Automatische of handmatige bevestigingsmodi",
-          "Tafel- en capaciteitsbeheer",
-          "E-mailmeldingen voor boekingen",
-          "Kalenderweergave voor eenvoudige planning"
+          "Reserveringssysteem restaurant actief 24/7",
+          "Tafelreservering software met automatische bevestiging",
+          "Restaurant management systeem met capaciteitsbeheer",
+          "Online reserveren voor horeca met e-mailmeldingen",
+          "Reserveringssysteem met kalenderweergave voor planning"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "Online tafelreserveringssysteem voor restaurants",
-        "cta": "Verken Tafelreserveringen"
+        "imageAlt": "Tafelreservering software en reserveringssysteem restaurant",
+        "cta": "Ontdek het Reserveringssysteem"
       },
       {
         "id": "custom-design",

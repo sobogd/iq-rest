@@ -128,8 +128,8 @@
         "description": "Acompanhe o desempenho do menu do seu restaurante com análises detalhadas. Visualizações diárias, preferências de idioma, páginas populares — tome decisões baseadas em dados."
       },
       "reservations": {
-        "title": "Reservas de Mesa Online para Restaurantes | Sistema de Reservas - IQ Rest",
-        "description": "Aceite reservas de mesa online diretamente do site do seu restaurante. Confirmação automática ou manual, notificações por email, gestão de mesas."
+        "title": "Sistema de Reserva de Mesas para Restaurantes | Software para Restaurantes - IQ Rest",
+        "description": "Software para restaurantes com sistema de reserva de mesas integrado. Gestão de reservas de restaurantes com confirmação automática, notificações por email e painel de controle completo."
       },
       "custom-design": {
         "title": "Fundos de Vídeo & Foto para Site de Restaurante - IQ Rest",
@@ -423,20 +423,20 @@
       },
       {
         "id": "reservations",
-        "title": "Sistema de Reservas de Mesas",
-        "shortDescription": "Aceite reservas 24/7.{br}{link}Reservas{/link} diretamente do seu site.",
-        "description": "O sistema de reservas embutido permite que os clientes reservem mesas diretamente do seu site. Escolha confirmação automática com base na disponibilidade ou revise cada reserva manualmente. Gerencie todas as reservas a partir do seu painel.",
-        "fullDescription": "Reservas por telefone consomem tempo e são fáceis de perder. O sistema de reservas do IQ Rest funciona 24/7. Os clientes selecionam data, hora e tamanho da mesa, e reservam instantaneamente. Você pode configurar a confirmação automática com base na disponibilidade das mesas ou revisar cada solicitação manualmente. Reduza faltas com confirmações por e-mail.",
+        "title": "Sistema de Reserva de Mesas - Software para Restaurantes",
+        "shortDescription": "Gestão de reservas de restaurantes 24/7.{br}{link}Sistema de reservas{/link} diretamente do seu site.",
+        "description": "O software para restaurantes IQ Rest inclui um sistema de reserva de mesas integrado. A gestão de reservas de restaurantes permite confirmação automática com base na disponibilidade ou revisão manual de cada reserva a partir do seu painel de controle.",
+        "fullDescription": "Reservas por telefone consomem tempo e são fáceis de perder. O sistema de reserva de mesas do IQ Rest funciona 24/7. Os clientes selecionam data, hora e tamanho da mesa, e reservam instantaneamente. O software para restaurantes oferece confirmação automática com base na disponibilidade das mesas ou revisão manual de cada solicitação. A gestão de reservas de restaurantes reduz faltas com confirmações automáticas por e-mail.",
         "benefits": [
-          "Capacidade de reserva online 24/7",
-          "Modos de confirmação automática ou manual",
-          "Gerenciamento de mesas e capacidade",
-          "Notificações por e-mail para reservas",
-          "Visualização de calendário para agendamento fácil"
+          "Sistema de reserva de mesas ativo 24/7",
+          "Software para restaurantes com confirmação automática",
+          "Gestão de reservas de restaurantes com controle de capacidade",
+          "Sistema integrado com notificações por e-mail",
+          "Software para restaurantes com visualização de calendário"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "Sistema de reserva de mesa online para restaurantes",
-        "cta": "Explore Reservas de Mesas"
+        "imageAlt": "Software para restaurantes com sistema de reserva de mesas",
+        "cta": "Explore o Sistema de Reservas"
       },
       {
         "id": "custom-design",

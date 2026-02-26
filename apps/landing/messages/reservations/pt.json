@@ -1,55 +1,33 @@
 {
   "seo": {
-    "title": "Sistema de reserva de mesas para restaurantes — Reservas online | IQ Rest",
-    "description": "Permita que os clientes reservem mesas diretamente do seu site. Confirmação automática ou manual, notificações por e-mail e gestão completa do calendário — tudo incluído."
+    "title": "Sistema de Reserva de Mesas para Restaurantes — Software de Gestão de Reservas Online | IQ Rest",
+    "description": "Software para restaurantes com gestão de reservas, confirmação automática ou manual, notificações por e-mail e sistema de reserva de mesas online. Plano gratuito disponível."
   },
   "hero": {
-    "badge": "Reservas de mesas",
-    "title": "Aceite reservas de mesas 24/7 a partir do seu site",
-    "subtitle": "Os clientes escolhem data, hora e número de pessoas — e reservam instantaneamente. Você gerencia tudo pelo painel de controle, sem ligações telefônicas.",
+    "badge": "Reservas de Mesas",
+    "title": "Software para Restaurantes — Sistema de Reserva de Mesas Online 24/7",
+    "subtitle": "Um sistema de gestão de reservas de restaurantes que permite aos clientes reservar mesas diretamente do seu site. Sem telefonemas, sem apps de terceiros — um software para restaurantes integrado ao seu menu QR digital.",
     "cta": "Criar seu menu",
     "ctaDemo": "Ver demo",
     "noCreditCard": "Não é necessário cartão de crédito. Plano gratuito disponível."
   },
   "features": {
-    "title": "Como funcionam as reservas de mesas",
-    "subtitle": "Dois passos do pedido do cliente até a reserva confirmada.",
+    "title": "Como Funciona o Sistema de Reserva de Mesas",
+    "subtitle": "Dois passos do pedido do cliente até a reserva confirmada — com a gestão de reservas de restaurantes.",
     "items": [
       {
-        "title": "Os clientes reservam pelo seu site",
-        "description": "Os clientes visitam a página do seu restaurante, tocam em «Reservar mesa», escolhem data e hora, inserem seus dados e enviam o pedido. Não é necessário aplicativo — funciona em qualquer navegador em qualquer dispositivo."
+        "title": "Os Clientes Reservam pelo Seu Site",
+        "description": "Os clientes visitam a página do seu restaurante, tocam em «Reservar mesa», escolhem data e hora, inserem seus dados e enviam o pedido. Não é necessário aplicativo — o software para restaurantes funciona em qualquer navegador em qualquer dispositivo."
       },
       {
-        "title": "Você gerencia as reservas no seu painel",
-        "description": "Cada reserva aparece no seu painel com nome do cliente, telefone, número de pessoas, data e observações. Confirme ou recuse com um toque. Configure confirmação automática ou revise cada reserva manualmente."
-      }
-    ]
-  },
-  "faq": {
-    "title": "Perguntas frequentes",
-    "subtitle": "Tudo o que você precisa saber sobre reservas de mesas.",
-    "items": [
-      {
-        "question": "Os clientes precisam criar uma conta para reservar?",
-        "answer": "Não. Os clientes simplesmente preenchem o nome, número de telefone, número de pessoas e horário preferido. Não é necessário criar conta ou baixar aplicativo."
-      },
-      {
-        "question": "Posso definir os horários disponíveis e a capacidade?",
-        "answer": "Sim. Defina seu horário de funcionamento, a duração dos intervalos de reserva e a capacidade das mesas. O sistema mostra aos clientes apenas os horários disponíveis."
-      },
-      {
-        "question": "Serei notificado quando alguém reservar?",
-        "answer": "Sim. Você recebe um e-mail para cada nova reserva. Os clientes também recebem um e-mail de confirmação quando você aprova a reserva."
-      },
-      {
-        "question": "Posso usar confirmação automática e manual?",
-        "answer": "Sim. Escolha o modo automático para confirmar reservas instantaneamente com base na disponibilidade, ou o modo manual para revisar e aprovar cada pedido pessoalmente."
+        "title": "Você Gerencia as Reservas no Seu Painel",
+        "description": "Cada reserva aparece no seu painel com nome do cliente, telefone, número de pessoas, data e observações. Confirme ou recuse com um toque. Configure confirmação automática ou revise cada reserva manualmente — gestão de reservas de restaurantes completa."
       }
     ]
   },
   "howItWorks": {
     "title": "Como Funciona",
-    "subtitle": "Configure reservas online e comece a aceitar reservas em cinco etapas.",
+    "subtitle": "Configure o sistema de reserva de mesas e comece a aceitar reservas online em cinco etapas.",
     "steps": [
       {
         "title": "Ativar Reservas",
@@ -57,19 +35,57 @@
       },
       {
         "title": "Adicione Suas Mesas",
-        "description": "Crie mesas com informações de capacidade e zona — por exemplo, 'Mesa 5, 4 convidados, Terraço'. Cada mesa se torna reservável, e o sistema evita automaticamente reservas duplicadas."
+        "description": "Crie mesas com informações de capacidade e zona — por exemplo, 'Mesa 5, 4 convidados, Terraço'. Cada mesa se torna reservável no software para restaurantes, e o sistema evita automaticamente reservas duplicadas."
       },
       {
         "title": "Defina o Horário de Funcionamento",
-        "description": "Defina suas horas disponíveis para reservas e escolha a duração do intervalo — de 15 minutos a 8 horas. Apenas os horários dentro do seu horário de funcionamento são mostrados aos convidados."
+        "description": "Defina suas horas disponíveis para reservas e escolha a duração do intervalo — de 15 minutos a 8 horas. Apenas os horários dentro do seu horário de funcionamento são mostrados aos clientes no sistema de reserva de mesas."
       },
       {
-        "title": "Convidados Reservam Online",
-        "description": "Os clientes visitam a página do seu restaurante, escolhem a data, hora e tamanho do grupo, inserem seu nome e telefone, e enviam. Nenhuma conta ou download de aplicativo é necessário — funciona em qualquer navegador."
+        "title": "Clientes Reservam Online",
+        "description": "Os clientes visitam a página do seu restaurante, escolhem a data, hora e tamanho do grupo, inserem seu nome e telefone, e enviam. Nenhuma conta ou download é necessário — a gestão de reservas de restaurantes funciona em qualquer navegador."
       },
       {
         "title": "Gerencie Reservas no Seu Painel",
-        "description": "Veja todas as reservas no seu painel. Confirme, cancele ou marque reservas como concluídas. Tanto você quanto o convidado recebem notificações por e-mail para cada atualização de reserva."
+        "description": "Veja todas as reservas no seu painel. Confirme, cancele ou marque reservas como concluídas. Tanto você quanto o cliente recebem notificações por e-mail para cada atualização."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre o sistema de reserva de mesas para restaurantes.",
+    "items": [
+      {
+        "question": "Os clientes precisam criar uma conta para reservar?",
+        "answer": "Não. Os clientes simplesmente preenchem o nome, número de telefone, número de pessoas e horário preferido. Não é necessário criar conta ou baixar aplicativo."
+      },
+      {
+        "question": "Posso definir os horários disponíveis e a capacidade das mesas?",
+        "answer": "Sim. Defina seu horário de funcionamento, a duração dos intervalos de reserva e a capacidade das mesas. O sistema de reserva de mesas mostra aos clientes apenas os horários disponíveis."
+      },
+      {
+        "question": "Serei notificado quando alguém reservar?",
+        "answer": "Sim. Você recebe um e-mail para cada nova reserva. Os clientes também recebem um e-mail de confirmação quando você aprova a reserva através do software para restaurantes."
+      },
+      {
+        "question": "Posso usar confirmação automática e manual?",
+        "answer": "Sim. Escolha o modo automático para confirmar reservas instantaneamente com base na disponibilidade, ou o modo manual para revisar e aprovar cada pedido pessoalmente."
+      },
+      {
+        "question": "Como o sistema previne reservas duplicadas?",
+        "answer": "Cada mesa tem uma capacidade definida e intervalos de tempo. Uma vez que uma mesa está reservada para um horário específico, não é mais mostrada como disponível. A gestão de reservas de restaurantes detecta automaticamente os conflitos."
+      },
+      {
+        "question": "Os clientes podem adicionar pedidos especiais ou notas?",
+        "answer": "Sim. O formulário de reserva inclui um campo de notas onde os clientes podem mencionar necessidades alimentares, celebrações, preferências de lugar ou qualquer outro pedido."
+      },
+      {
+        "question": "O software para restaurantes está disponível no plano gratuito?",
+        "answer": "As reservas de mesas estão disponíveis nos planos Growth e Pro. O plano gratuito inclui seu menu QR completo, página de contato e análises — faça upgrade a qualquer momento para ativar o sistema de reserva de mesas online."
+      },
+      {
+        "question": "Posso ver o histórico de reservas?",
+        "answer": "Sim. Todas as reservas — passadas e futuras — estão armazenadas no seu painel. Você pode filtrar por data, status e mesa para consultar o histórico de reservas a qualquer momento."
       }
     ]
   }

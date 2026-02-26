@@ -128,8 +128,8 @@
         "description": "Verfolgen Sie die Leistung Ihres Restaurant-Menüs mit detaillierter Analytik. Tägliche Aufrufe, Sprachpräferenzen, beliebte Seiten — treffen Sie datenbasierte Entscheidungen."
       },
       "reservations": {
-        "title": "Online-Tischreservierung für Restaurants | Buchungssystem - IQ Rest",
-        "description": "Nehmen Sie Online-Tischbuchungen direkt von Ihrer Restaurant-Website entgegen. Automatische oder manuelle Bestätigung, E-Mail-Benachrichtigungen, Tischverwaltung."
+        "title": "Tischreservierungssystem für Gastronomie | Online Reservierungssystem - IQ Rest",
+        "description": "Digitales Reservierungsbuch und Tischmanagement Software für die Gastronomie. Restaurant Reservierung Software mit automatischer Bestätigung, Belegungsplan und Online Reservierungssystem."
       },
       "custom-design": {
         "title": "Video- & Foto-Hintergründe für Restaurant-Website - IQ Rest",
@@ -423,20 +423,20 @@
       },
       {
         "id": "reservations",
-        "title": "Tischreservierungssystem",
-        "shortDescription": "Akzeptieren Sie Reservierungen 24/7.{br}{link}Reservierungen{/link} direkt von Ihrer Website.",
-        "description": "Das integrierte Reservierungssystem ermöglicht es Kunden, Tische direkt von Ihrer Website aus zu buchen. Wählen Sie automatische Bestätigung basierend auf Verfügbarkeit oder überprüfen Sie jede Buchung manuell. Verwalten Sie alle Reservierungen von Ihrem Dashboard aus.",
-        "fullDescription": "Telefonreservierungen sind zeitaufwendig und leicht zu übersehen. Das Reservierungssystem von IQ Rest funktioniert 24/7. Kunden wählen Datum, Uhrzeit und Gruppengröße aus und buchen dann sofort. Sie können eine automatische Bestätigung basierend auf der Verfügbarkeit von Tischen einrichten oder jede Anfrage manuell überprüfen. Reduzieren Sie No-Shows mit E-Mail-Bestätigungen.",
+        "title": "Tischreservierungssystem - Digitales Reservierungsbuch",
+        "shortDescription": "Online Reservierungssystem Gastronomie 24/7.{br}{link}Tischreservierung{/link} direkt von Ihrer Website.",
+        "description": "Die Tischmanagement Software von IQ Rest bietet ein digitales Reservierungsbuch direkt auf Ihrer Website. Die Restaurant Reservierung Software ermöglicht automatische Bestätigung basierend auf dem Belegungsplan oder manuelle Überprüfung jeder Buchung.",
+        "fullDescription": "Telefonreservierungen sind zeitaufwendig und leicht zu übersehen. Das Online Reservierungssystem Gastronomie von IQ Rest funktioniert 24/7. Kunden wählen Datum, Uhrzeit und Gruppengröße und buchen sofort. Die Tischmanagement Software bietet automatische Bestätigung basierend auf dem Belegungsplan Restaurant Software oder manuelle Überprüfung. Die Software für Gastronomie reduziert No-Shows mit automatischen E-Mail-Bestätigungen.",
         "benefits": [
-          "24/7 Online-Buchungsmöglichkeit",
-          "Automatische oder manuelle Bestätigungsmodi",
-          "Tisch- und Kapazitätsverwaltung",
-          "E-Mail-Benachrichtigungen für Buchungen",
-          "Kalenderansicht für einfache Planung"
+          "Tischreservierungssystem aktiv 24/7 online",
+          "Digitales Reservierungsbuch mit automatischer Bestätigung",
+          "Tischmanagement Software mit Kapazitätsverwaltung",
+          "Belegungsplan Restaurant Software mit E-Mail-Benachrichtigungen",
+          "Online Reservierungssystem Gastronomie mit Kalenderansicht"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "Online-Tischreservierungssystem für Restaurants",
-        "cta": "Tischreservierungen erkunden"
+        "imageAlt": "Tischreservierungssystem und digitales Reservierungsbuch für Gastronomie",
+        "cta": "Tischreservierungssystem entdecken"
       },
       {
         "id": "custom-design",

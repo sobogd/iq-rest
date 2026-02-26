@@ -128,8 +128,8 @@
         "description": "Track daily page views, language preferences, and customer behavior. Make data-driven decisions."
       },
       "reservations": {
-        "title": "Online Table Reservations — IQ Rest",
-        "description": "Accept table bookings 24/7 directly from your restaurant website. Automatic or manual confirmation."
+        "title": "Restaurant Reservation SaaS — Table Management System | IQ Rest",
+        "description": "Cloud-based restaurant reservation software. Accept table bookings 24/7 with a white-label booking widget for your website."
       },
       "custom-design": {
         "title": "Video & Photo Backgrounds — IQ Rest",
@@ -423,19 +423,19 @@
       },
       {
         "id": "reservations",
-        "title": "Table Reservations System",
-        "shortDescription": "Accept table bookings 24/7.{br}{link}Reservations{/link} directly from your website.",
-        "description": "Built-in reservation system lets customers book tables directly from your website. Choose automatic confirmation based on availability, or review each booking manually. Manage all reservations from your dashboard.",
-        "fullDescription": "Phone reservations are time-consuming and easy to miss. IQ Rest's reservation system works 24/7. Customers select date, time, and party size, then book instantly. You can set up automatic confirmation based on table availability, or review each request manually. Reduce no-shows with email confirmations.",
+        "title": "Table Management System",
+        "shortDescription": "Accept table bookings 24/7.{br}{link}Restaurant booking widget{/link} for your website.",
+        "description": "Cloud-based restaurant reservation software lets customers book tables directly from your website. Choose automatic confirmation based on availability, or review each booking manually. A complete table management system in your dashboard.",
+        "fullDescription": "Phone reservations are time-consuming and easy to miss. IQ Rest's restaurant reservation SaaS works 24/7. Customers select date, time, and party size, then book instantly via the white-label booking widget. Set up automatic confirmation based on table availability, or review each request manually. Reduce no-shows with email confirmations.",
         "benefits": [
-          "24/7 online booking capability",
+          "Cloud-based restaurant reservation software",
+          "White-label restaurant booking widget",
           "Automatic or manual confirmation modes",
-          "Table and capacity management",
-          "Email notifications for bookings",
-          "Calendar view for easy scheduling"
+          "Table management and capacity control",
+          "Email notifications for every booking"
         ],
         "image": "/images/features/reservations.jpg",
-        "imageAlt": "Online table reservation system for restaurants",
+        "imageAlt": "Restaurant reservation SaaS — table management system",
         "cta": "Explore Table Reservations"
       },
       {
