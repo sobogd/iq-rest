@@ -139,7 +139,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
         }}
         className="w-full"
       >
-        <CarouselContent className="-ml-2 md:-ml-4 pt-6">
+        <CarouselContent className="-ml-2 md:-ml-4 pt-6 !items-stretch">
           {PLANS.map((plan, index) => {
             const currencyPricing = pricing[currency][plan.id];
             const isActive = current === index;
@@ -204,7 +204,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                     </ul>
                   </CardContent>
                   {!hideButtons && (
-                    <CardFooter className="flex-col gap-3 mt-auto">
+                    <CardFooter className="flex-col gap-3">
                       <Button
                         asChild
                         className="w-full"
