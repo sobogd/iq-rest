@@ -257,7 +257,7 @@ export async function POST(request: NextRequest) {
           orderNameEnabled: data.orderNameEnabled ?? true,
           orderPhoneEnabled: data.orderPhoneEnabled ?? false,
           orderAddressEnabled: data.orderAddressEnabled ?? false,
-          orderMode: data.orderMode ?? "whatsapp",
+          orderMode: data.orderMode ?? "internal",
           companyId,
           startedFromScratch: true,
         },
