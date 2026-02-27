@@ -67,7 +67,7 @@ function DashboardLayout({
         <ImpersonationBanner currentEmail={impersonation.currentEmail} />
       )}
       <SiteHeader />
-      <div className="flex-1 overflow-clip">{children}</div>
+      <div className="flex-1 min-h-0 overflow-clip">{children}</div>
     </div>
   );
 }
