@@ -25,7 +25,7 @@ export default async function OrderSuccessPage({ params, searchParams }: Success
   const showWhatsApp = restaurant.orderMode === "whatsapp" || restaurant.orderMode === "both";
 
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
       <MenuHeader
         slug={slug}
         title={t("order.yourOrder")}

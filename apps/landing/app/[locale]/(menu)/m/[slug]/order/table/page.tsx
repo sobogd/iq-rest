@@ -82,7 +82,7 @@ export default async function TablePage({ params, searchParams }: TablePageProps
   }));
 
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
       <MenuHeader
         slug={slug}
         title={translations.selectTable}

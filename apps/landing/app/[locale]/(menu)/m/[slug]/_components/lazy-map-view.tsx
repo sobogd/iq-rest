@@ -1,5 +1,6 @@
 "use client";
 
+import { Component, type ReactNode } from "react";
 import dynamic from "next/dynamic";
 
 const MapView = dynamic(() => import("@/components/map-view").then((m) => m.MapView), {
@@ -16,6 +17,31 @@ interface LazyMapViewProps {
   showMarker?: boolean;
 }
 
+class MapErrorBoundary extends Component<
+  { children: ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div className="w-full h-full bg-gray-100" />;
+    }
+    return this.props.children;
+  }
+}
+
 export function LazyMapView(props: LazyMapViewProps) {
-  return <MapView {...props} />;
+  return (
+    <MapErrorBoundary>
+      <MapView {...props} />
+    </MapErrorBoundary>
+  );
 }

@@ -1,22 +1,13 @@
 import { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
+import { getRestaurantBySlug } from "./_lib/get-restaurant";
+
+export const revalidate = 300; // 5 minutes
 
 async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accentColor: string }> {
   try {
-    const restaurant = await prisma.restaurant.findFirst({
-      where: { slug },
-      select: {
-        accentColor: true,
-        company: {
-          select: {
-            id: true,
-            plan: true,
-            scanLimit: true,
-          },
-        },
-      },
-    });
+    const restaurant = await getRestaurantBySlug(slug);
 
     if (!restaurant) return { showAd: false, accentColor: "#000000" };
 
@@ -30,15 +21,15 @@ async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accen
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-    const currentMonthScans = await prisma.pageView.groupBy({
-      by: ["sessionId"],
-      where: {
-        companyId: company.id,
-        createdAt: { gte: startOfMonth },
-      },
-    });
+    const result = await prisma.$queryRaw<[{ count: bigint }]>`
+      SELECT COUNT(DISTINCT "sessionId") as count
+      FROM "page_views"
+      WHERE "companyId" = ${company.id}
+        AND "createdAt" >= ${startOfMonth}
+    `;
+    const scanCount = Number(result[0]?.count ?? 0);
 
-    return { showAd: currentMonthScans.length >= limit, accentColor };
+    return { showAd: scanCount >= limit, accentColor };
   } catch {
     return { showAd: false, accentColor: "#000000" };
   }
@@ -50,10 +41,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { slug },
-    select: { title: true, description: true, source: true },
-  });
+  const restaurant = await getRestaurantBySlug(slug);
 
   if (!restaurant) return {};
 
@@ -78,12 +66,16 @@ interface MenuLayoutProps {
 export default async function MenuLayout({ children, params }: MenuLayoutProps) {
   const { slug } = await params;
   const { showAd, accentColor } = await getMenuLayoutData(slug);
+  const s3Host = process.env.S3_HOST;
 
   return (
     <div
       className="min-h-dvh bg-background"
       style={{ "--menu-accent": accentColor } as React.CSSProperties}
     >
+      {s3Host && (
+        <link rel="preconnect" href={s3Host} crossOrigin="anonymous" />
+      )}
       <MenuLayoutClient showAd={showAd}>
         {children}
       </MenuLayoutClient>

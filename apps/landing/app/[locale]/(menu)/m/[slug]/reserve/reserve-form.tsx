@@ -42,8 +42,6 @@ interface ReserveFormProps {
     namePlaceholder: string;
     email: string;
     emailPlaceholder: string;
-    phone: string;
-    phonePlaceholder: string;
     notes: string;
     notesPlaceholder: string;
     submit: string;
@@ -56,7 +54,6 @@ interface ReserveFormProps {
     table: string;
     capacity: string;
     noAvailableTables: string;
-    back: string;
     noTimeSlotsAvailable: string;
     loadingAvailability: string;
   };

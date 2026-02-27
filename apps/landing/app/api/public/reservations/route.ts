@@ -299,7 +299,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Parse date
+    // Parse date and validate it's not in the past
     const reservationDate = new Date(date);
     if (isNaN(reservationDate.getTime())) {
       return NextResponse.json(
@@ -308,9 +308,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (reservationDate < today) {
+      return NextResponse.json(
+        { error: "Cannot create reservation in the past" },
+        { status: 400 }
+      );
+    }
+
     const slotDuration = duration || restaurant.reservationSlotMinutes;
 
-    // Get all active tables that can accommodate the guests
+    // Get suitable tables (outside transaction — read-only, stable)
     const suitableTables = await prisma.table.findMany({
       where: {
         restaurantId,
@@ -318,7 +327,7 @@ export async function POST(request: NextRequest) {
         capacity: { gte: guestsCount },
       },
       orderBy: [
-        { capacity: "asc" }, // Prefer smaller tables first
+        { capacity: "asc" },
         { sortOrder: "asc" },
       ],
     });
@@ -330,71 +339,73 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get existing reservations for this date
-    const existingReservations = await prisma.reservation.findMany({
-      where: {
-        restaurantId,
-        date: reservationDate,
-        status: { in: ["pending", "confirmed"] },
-      },
-      select: {
-        tableId: true,
-        startTime: true,
-        duration: true,
-      },
+    // Use Serializable transaction to prevent race conditions
+    const status = restaurant.reservationMode === "auto" ? "confirmed" : "pending";
+
+    const txResult = await prisma.$transaction(async (tx) => {
+      // Check existing reservations within the transaction
+      const existingReservations = await tx.reservation.findMany({
+        where: {
+          restaurantId,
+          date: reservationDate,
+          status: { in: ["pending", "confirmed"] },
+        },
+        select: {
+          tableId: true,
+          startTime: true,
+          duration: true,
+        },
+      });
+
+      let selectedTable;
+
+      if (tableId) {
+        selectedTable = suitableTables.find((t) => t.id === tableId);
+        if (!selectedTable) {
+          return { error: "Requested table not found or not suitable for this number of guests" };
+        }
+        if (isTableBooked(tableId, startTime, slotDuration, existingReservations)) {
+          return { error: "Requested table is not available at this time" };
+        }
+      } else {
+        selectedTable = suitableTables.find((table) => {
+          return !isTableBooked(table.id, startTime, slotDuration, existingReservations);
+        });
+      }
+
+      if (!selectedTable) {
+        return { error: "No tables available at this time" };
+      }
+
+      const reservation = await tx.reservation.create({
+        data: {
+          restaurantId,
+          tableId: selectedTable.id,
+          date: reservationDate,
+          startTime,
+          duration: slotDuration,
+          guestName,
+          guestEmail,
+          guestPhone: null,
+          guestsCount,
+          notes: notes || null,
+          status,
+        },
+      });
+
+      return { reservation, selectedTable };
+    }, {
+      isolationLevel: "Serializable",
     });
 
-    // If tableId is provided, verify it's available; otherwise find the first available table
-    let selectedTable;
-
-    if (tableId) {
-      // Verify the requested table exists and is suitable
-      selectedTable = suitableTables.find((t) => t.id === tableId);
-      if (!selectedTable) {
-        return NextResponse.json(
-          { error: "Requested table not found or not suitable for this number of guests" },
-          { status: 400 }
-        );
-      }
-      // Check if the table is available at this time
-      if (isTableBooked(tableId, startTime, slotDuration, existingReservations)) {
-        return NextResponse.json(
-          { error: "Requested table is not available at this time" },
-          { status: 400 }
-        );
-      }
-    } else {
-      // Find the first available table
-      selectedTable = suitableTables.find((table) => {
-        return !isTableBooked(table.id, startTime, slotDuration, existingReservations);
-      });
-    }
-
-    if (!selectedTable) {
+    if ("error" in txResult) {
       return NextResponse.json(
-        { error: "No tables available at this time" },
+        { error: txResult.error },
         { status: 400 }
       );
     }
 
-    // Create reservation
-    const status = restaurant.reservationMode === "auto" ? "confirmed" : "pending";
-
-    const reservation = await prisma.reservation.create({
-      data: {
-        restaurantId,
-        tableId: selectedTable.id,
-        date: reservationDate,
-        startTime,
-        duration: slotDuration,
-        guestName,
-        guestEmail,
-        guestPhone: null,
-        guestsCount,
-        notes: notes || null,
-        status,
-      },
-    });
+    const { reservation, selectedTable } = txResult;
 
     // Send notification emails (fire-and-forget)
     const emailParams = {

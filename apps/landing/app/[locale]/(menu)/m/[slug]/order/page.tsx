@@ -159,7 +159,7 @@ export default async function OrderPage({ params, searchParams }: OrderPageProps
   };
 
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
       <MenuHeader slug={slug} title={translations.yourOrder} sticky accentColor={restaurant.accentColor} isPreview={isPreview} backHref={`/m/${slug}/menu${isPreview ? "?preview=1" : ""}`} />
 
       <main className="flex-1 flex justify-center px-5 py-6 bg-white overflow-auto">

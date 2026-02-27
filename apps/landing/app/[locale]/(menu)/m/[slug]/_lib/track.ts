@@ -1,5 +1,6 @@
 import { cookies, headers } from "next/headers";
 import { prisma } from "@/lib/prisma";
+import { getRestaurantBySlug } from "./get-restaurant";
 
 export async function trackPageView(slug: string, page: string, language: string) {
   try {
@@ -11,10 +12,7 @@ export async function trackPageView(slug: string, page: string, language: string
     const referer = headerStore.get("referer") || null;
     const ip = cookieStore.get("geo_ip")?.value || null;
 
-    const restaurant = await prisma.restaurant.findFirst({
-      where: { slug },
-      select: { companyId: true },
-    });
+    const restaurant = await getRestaurantBySlug(slug);
 
     if (!restaurant) return;
 

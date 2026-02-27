@@ -8,9 +8,10 @@ interface MenuImageProps {
   alt: string;
   canLoad: boolean;
   onLoaded: () => void;
+  priority?: boolean;
 }
 
-export function MenuImage({ src, alt, canLoad, onLoaded }: MenuImageProps) {
+export function MenuImage({ src, alt, canLoad, onLoaded, priority }: MenuImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [hasStartedLoading, setHasStartedLoading] = useState(false);
@@ -76,6 +77,7 @@ export function MenuImage({ src, alt, canLoad, onLoaded }: MenuImageProps) {
           }`}
           style={{ objectFit: "cover" }}
           sizes="(max-width: 440px) 100vw, 440px"
+          priority={priority}
           onLoad={handleLoad}
           onError={handleError}
         />

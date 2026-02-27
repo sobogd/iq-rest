@@ -1,10 +1,14 @@
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MenuFeed } from "@/components/menu-feed";
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { trackPageView } from "../_lib/track";
+import { getRestaurantBySlug } from "../_lib/get-restaurant";
 import { getCartFromCookies } from "@/lib/cart-server";
+
+export const revalidate = 300;
 
 interface MenuListPageProps {
   params: Promise<{
@@ -21,27 +25,48 @@ type TranslationData = {
 
 type Translations = Record<string, TranslationData>;
 
-async function getRestaurantWithMenu(slug: string) {
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { slug },
-    select: {
-      id: true,
-      title: true,
-      companyId: true,
-      defaultLanguage: true,
-      accentColor: true,
-      currency: true,
-      whatsapp: true,
-      ordersEnabled: true,
-      orderMode: true,
-      company: {
-        select: { plan: true, orderLimit: true },
-      },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const restaurant = await getRestaurantBySlug(slug);
+
+  if (!restaurant) return {};
+
+  const title = `${restaurant.title} — Menu`;
+  return {
+    title,
+    description: restaurant.description || title,
+    openGraph: {
+      title,
+      description: restaurant.description || title,
+      ...(restaurant.source && !restaurant.source.match(/\.(mp4|webm|mov)$/i)
+        ? { images: [{ url: restaurant.source }] }
+        : {}),
     },
-  });
+  };
+}
 
-  if (!restaurant) return null;
+export default async function MenuListPage({ params, searchParams }: MenuListPageProps) {
+  const { slug, locale } = await params;
+  const { preview, table } = await searchParams;
+  const isPreview = preview === "1";
+  if (!isPreview) trackPageView(slug, "menu", locale).catch(() => {});
+  const [restaurant, t, cartMap] = await Promise.all([
+    getRestaurantBySlug(slug),
+    getTranslations("publicMenu"),
+    getCartFromCookies(),
+  ]);
 
+  if (!restaurant) {
+    notFound();
+  }
+
+  const defaultLanguage = restaurant.defaultLanguage || "en";
+
+  // Fetch categories separately
   const categories = await prisma.category.findMany({
     where: {
       companyId: restaurant.companyId,
@@ -67,27 +92,6 @@ async function getRestaurantWithMenu(slug: string) {
       },
     },
   });
-
-  return { restaurant, categories };
-}
-
-export default async function MenuListPage({ params, searchParams }: MenuListPageProps) {
-  const { slug, locale } = await params;
-  const { preview, table } = await searchParams;
-  const isPreview = preview === "1";
-  if (!isPreview) trackPageView(slug, "menu", locale).catch(() => {});
-  const [data, t, cartMap] = await Promise.all([
-    getRestaurantWithMenu(slug),
-    getTranslations("publicMenu"),
-    getCartFromCookies(),
-  ]);
-
-  if (!data) {
-    notFound();
-  }
-
-  const { restaurant, categories } = data;
-  const defaultLanguage = restaurant.defaultLanguage || "en";
 
   // Check order limit for internal/both on FREE plan
   let ordersAvailable = restaurant.ordersEnabled;
@@ -130,8 +134,34 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
       })),
     }));
 
+  // JSON-LD for menu
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    name: `${restaurant.title} — Menu`,
+    hasMenuSection: categoriesWithItems.map((cat) => ({
+      "@type": "MenuSection",
+      name: cat.name,
+      hasMenuItem: cat.items.map((item) => ({
+        "@type": "MenuItem",
+        name: item.name,
+        ...(item.description && { description: item.description }),
+        offers: {
+          "@type": "Offer",
+          price: item.price,
+          priceCurrency: restaurant.currency,
+        },
+        ...(item.imageUrl && { image: item.imageUrl }),
+      })),
+    })),
+  };
+
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header */}
       <MenuHeader slug={slug} title={t("onlineMenu")} accentColor={restaurant.accentColor} isPreview={isPreview} />
 
@@ -148,11 +178,7 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
           categories={categoriesWithItems}
           accentColor={restaurant.accentColor}
           currency={restaurant.currency}
-          allergenTranslations={{
-            title: t("allergens"),
-            info: t("allergensInfo"),
-            names: t.raw("allergenNames") as Record<string, string>,
-          }}
+          allergenNames={t.raw("allergenNames") as Record<string, string>}
           slug={slug}
           ordersEnabled={ordersAvailable}
           addLabel={t("order.add")}

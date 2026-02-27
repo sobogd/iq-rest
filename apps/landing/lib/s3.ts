@@ -53,6 +53,8 @@ export async function moveFromTemp(
         CopySource: `${process.env.S3_NAME}/${key}`,
         Key: permanentKey,
         ACL: "public-read",
+        CacheControl: "public, max-age=31536000, immutable",
+        MetadataDirective: "REPLACE",
       })
     );
 

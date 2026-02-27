@@ -1,16 +1,17 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { MenuHeader, MenuPageWrapper, LazyMapView } from "../_components";
 import { getCountryCenter } from "@/lib/country-centers";
 import { trackPageView } from "../_lib/track";
+import { getRestaurantBySlug } from "../_lib/get-restaurant";
+
+export const revalidate = 300;
 
 function getInstagramUrl(instagram: string): string {
-  // If already a full URL, use as is
   if (instagram.startsWith("http://") || instagram.startsWith("https://")) {
     return instagram;
   }
-  // Otherwise, build URL from username (remove @ if present)
   return `https://instagram.com/${instagram.replace("@", "")}`;
 }
 
@@ -22,23 +23,25 @@ interface ContactsPageProps {
   searchParams: Promise<{ preview?: string }>;
 }
 
-async function getRestaurant(slug: string) {
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { slug },
-    select: {
-      id: true,
-      title: true,
-      address: true,
-      phone: true,
-      whatsapp: true,
-      instagram: true,
-      x: true,
-      y: true,
-      accentColor: true,
-    },
-  });
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const restaurant = await getRestaurantBySlug(slug);
 
-  return restaurant;
+  if (!restaurant) return {};
+
+  const title = `${restaurant.title} — Contacts`;
+  return {
+    title,
+    description: restaurant.address || title,
+    openGraph: {
+      title,
+      description: restaurant.address || title,
+    },
+  };
 }
 
 export default async function ContactsPage({ params, searchParams }: ContactsPageProps) {
@@ -47,7 +50,7 @@ export default async function ContactsPage({ params, searchParams }: ContactsPag
   const isPreview = preview === "1";
   if (!isPreview) trackPageView(slug, "contacts", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
-    getRestaurant(slug),
+    getRestaurantBySlug(slug),
     getTranslations("publicMenu"),
   ]);
 
@@ -66,7 +69,7 @@ export default async function ContactsPage({ params, searchParams }: ContactsPag
   const fallback = getCountryCenter(locale);
 
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
       <div className="flex-1 relative">
         {/* Full screen map */}
         {lat && lng ? (

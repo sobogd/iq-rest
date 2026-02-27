@@ -1,11 +1,12 @@
 "use client";
 
 import { useRef, useEffect, useState, useMemo, useCallback } from "react";
-import { X, Plus, Minus, ShoppingCart } from "lucide-react";
-import { getAllergenIcon, ALLERGENS } from "@/lib/allergens";
+import { Plus, Minus, ShoppingCart } from "lucide-react";
+import { getAllergenIcon } from "@/lib/allergens";
 import { formatPrice } from "@/lib/currencies";
 import { MenuImage } from "./menu-image";
 import { Link } from "@/i18n/routing";
+import { loadCartClient, saveCartClient } from "@/lib/cart";
 
 interface Item {
   id: string;
@@ -22,17 +23,11 @@ interface Category {
   items: Item[];
 }
 
-interface AllergenTranslations {
-  title: string;
-  info: string;
-  names: Record<string, string>;
-}
-
 interface MenuFeedProps {
   categories: Category[];
   accentColor?: string;
   currency?: string;
-  allergenTranslations: AllergenTranslations;
+  allergenNames: Record<string, string>;
   slug?: string;
   ordersEnabled?: boolean;
   addLabel?: string;
@@ -41,11 +36,8 @@ interface MenuFeedProps {
   initialCart?: Record<string, number>;
 }
 
-import { loadCartClient, saveCartClient } from "@/lib/cart";
-
-export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTranslations, slug, ordersEnabled, addLabel, isPreview, tableNumber, initialCart }: MenuFeedProps) {
+export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNames, slug, ordersEnabled, addLabel, isPreview, tableNumber, initialCart }: MenuFeedProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
-  const [selectedAllergens, setSelectedAllergens] = useState<string[] | null>(null);
   const [loadedImageIndex, setLoadedImageIndex] = useState(0);
   const categoryRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const tabsRef = useRef<HTMLDivElement>(null);
@@ -91,7 +83,8 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
     });
   }, []);
 
-  // Build ordered list of item IDs with images for sequential loading
+  // Build ordered list of item IDs with images for concurrent loading
+  const MAX_CONCURRENT = 4;
   const imageOrder = useMemo(() => {
     const order: string[] = [];
     for (const category of categories) {
@@ -107,7 +100,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
   // Get index of an item in the loading queue
   const getImageIndex = (itemId: string) => imageOrder.indexOf(itemId);
 
-  // Handle image loaded - allow next image to load
+  // Handle image loaded - advance the window for concurrent loading
   const handleImageLoaded = () => {
     setLoadedImageIndex((prev) => prev + 1);
   };
@@ -153,32 +146,30 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
     }
   };
 
-  // Update active category on scroll
+  // Update active category via IntersectionObserver
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const handleScroll = () => {
-      if (isScrollingToCategory.current) return;
-
-      const containerTop = container.getBoundingClientRect().top;
-
-      for (const category of categories) {
-        const element = categoryRefs.current[category.id];
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const relativeTop = rect.top - containerTop;
-
-          if (relativeTop <= 100 && relativeTop + rect.height > 100) {
-            setActiveCategory(category.id);
-            break;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isScrollingToCategory.current) return;
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("data-category-section");
+            if (id) setActiveCategory(id);
           }
         }
-      }
-    };
+      },
+      { root: container, rootMargin: "-10% 0px -80% 0px", threshold: 0 }
+    );
 
-    container.addEventListener("scroll", handleScroll);
-    return () => container.removeEventListener("scroll", handleScroll);
+    for (const category of categories) {
+      const el = categoryRefs.current[category.id];
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
   }, [categories]);
 
   // Scroll active tab into view
@@ -210,14 +201,19 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
           />
           <div
             ref={tabsRef}
+            role="tablist"
+            aria-label="Menu categories"
             className="flex gap-2 px-5 overflow-x-auto hide-scrollbar max-w-[440px] w-full"
           >
             {categories.map((category) => (
               <button
                 key={category.id}
+                role="tab"
+                aria-selected={activeCategory === category.id}
+                aria-controls={`category-${category.id}`}
                 data-category={category.id}
                 onClick={() => scrollToCategory(category.id)}
-                className="relative px-4 py-3 text-sm font-semibold whitespace-nowrap transition-colors shrink-0"
+                className="relative px-4 py-3 text-sm font-semibold whitespace-nowrap transition-colors shrink-0 min-h-[44px]"
                 style={{
                   backgroundColor: "transparent",
                   color: activeCategory === category.id ? "#000" : "#9ca3af",
@@ -243,7 +239,10 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
             {categories.map((category) => (
               <div
                 key={category.id}
+                id={`category-${category.id}`}
+                role="tabpanel"
                 ref={(el) => { categoryRefs.current[category.id] = el; }}
+                data-category-section={category.id}
                 className="space-y-5"
               >
                 {categories.length > 1 && (
@@ -255,14 +254,16 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                 )}
                 {category.items.map((item) => {
                   const qty = cart.get(item.id) || 0;
+                  const imgIdx = item.imageUrl ? getImageIndex(item.id) : -1;
                   return (
                     <article key={item.id}>
                       {item.imageUrl && (
                         <MenuImage
                           src={item.imageUrl}
                           alt={item.name}
-                          canLoad={getImageIndex(item.id) <= loadedImageIndex}
+                          canLoad={imgIdx < loadedImageIndex + MAX_CONCURRENT}
                           onLoaded={handleImageLoaded}
+                          priority={imgIdx === 0}
                         />
                       )}
                       <div className={item.imageUrl ? "p-5" : "px-5 pb-5"}>
@@ -281,7 +282,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                           <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
                             {item.allergens.map((code) => (
                               <span key={code} className="text-sm text-gray-500 inline-flex items-center gap-1">
-                                <span className="text-xs" role="img" aria-label={allergenTranslations.names[code] || code}>{getAllergenIcon(code)}</span> {allergenTranslations.names[code] || code}
+                                <span className="text-xs" role="img" aria-label={allergenNames[code] || code}>{getAllergenIcon(code)}</span> {allergenNames[code] || code}
                               </span>
                             ))}
                           </div>
@@ -295,7 +296,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                             {qty === 0 ? (
                               <button
                                 onClick={() => addToCart(item.id)}
-                                className="h-9 px-4 flex items-center justify-center gap-1.5 rounded-lg text-white text-sm font-semibold active:opacity-80"
+                                className="h-11 px-4 flex items-center justify-center gap-1.5 rounded-lg text-white text-sm font-semibold active:opacity-80"
                                 style={{ backgroundColor: accentColor || "#000" }}
                               >
                                 <Plus className="w-4 h-4" />
@@ -305,15 +306,17 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
                               <div className="flex items-center gap-1.5">
                                 <button
                                   onClick={() => removeFromCart(item.id)}
-                                  className="w-9 h-9 flex items-center justify-center rounded-lg border-2 border-gray-200 text-gray-600 active:bg-gray-100"
+                                  className="w-11 h-11 flex items-center justify-center rounded-lg border-2 border-gray-200 text-gray-600 active:bg-gray-100"
+                                  aria-label={`Remove ${item.name}`}
                                 >
                                   <Minus className="w-4 h-4" />
                                 </button>
                                 <span className="text-sm font-bold w-7 text-center text-black">{qty}</span>
                                 <button
                                   onClick={() => addToCart(item.id)}
-                                  className="w-9 h-9 flex items-center justify-center rounded-lg text-white active:opacity-80"
+                                  className="w-11 h-11 flex items-center justify-center rounded-lg text-white active:opacity-80"
                                   style={{ backgroundColor: accentColor || "#000" }}
+                                  aria-label={`Add ${item.name}`}
                                 >
                                   <Plus className="w-4 h-4" />
                                 </button>
@@ -345,50 +348,6 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenTr
         </Link>
       )}
 
-      {/* Allergens Modal */}
-      {selectedAllergens && (
-        <div
-          className="fixed inset-0 z-50 flex items-end justify-center"
-          onClick={() => setSelectedAllergens(null)}
-        >
-          <div className="absolute inset-0 bg-black/50" />
-          <div
-            className="relative bg-white w-full max-w-[440px] rounded-t-2xl p-6 animate-in slide-in-from-bottom duration-300"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between mb-1">
-              <h3 className="text-lg font-semibold text-black">
-                {allergenTranslations.title}
-              </h3>
-              <button
-                onClick={() => setSelectedAllergens(null)}
-                className="p-1 rounded-full hover:bg-gray-100 transition-colors"
-              >
-                <X className="h-5 w-5 text-gray-500" />
-              </button>
-            </div>
-            <p className="text-sm text-gray-500 mb-4">
-              {allergenTranslations.info}
-            </p>
-            <div className="flex flex-col gap-2">
-              {selectedAllergens.map((code) => {
-                const allergen = ALLERGENS.find((a) => a.code === code);
-                return (
-                  <div
-                    key={code}
-                    className="flex items-center gap-3"
-                  >
-                    <span className="text-xl" role="img" aria-label={allergenTranslations.names[code] || code}>{allergen?.icon || "⚠️"}</span>
-                    <span className="text-sm text-black">
-                      {allergenTranslations.names[code] || code}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

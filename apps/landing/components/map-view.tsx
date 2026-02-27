@@ -1,6 +1,5 @@
 "use client";
 
-import { useCallback, useState } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { Loader2 } from "lucide-react";
 
@@ -22,13 +21,7 @@ export function MapView({ lat, lng, zoom = 15, showMarker = true }: MapViewProps
     googleMapsApiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY || "",
   });
 
-  const [map, setMap] = useState<google.maps.Map | null>(null);
-
   const center = { lat, lng };
-
-  const onLoad = useCallback((mapInstance: google.maps.Map) => {
-    setMap(mapInstance);
-  }, []);
 
   if (!isLoaded) {
     return (
@@ -43,7 +36,6 @@ export function MapView({ lat, lng, zoom = 15, showMarker = true }: MapViewProps
       mapContainerStyle={containerStyle}
       center={center}
       zoom={zoom}
-      onLoad={onLoad}
       options={{
         disableDefaultUI: true,
         gestureHandling: "greedy",

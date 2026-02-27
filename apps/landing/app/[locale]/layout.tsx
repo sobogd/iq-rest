@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, rtlLocales } from "@/i18n/routing";
 import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import type { Metadata } from "next";
@@ -32,7 +32,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning className="notranslate" translate="no">
+    <html lang={locale} dir={(rtlLocales as readonly string[]).includes(locale) ? "rtl" : "ltr"} suppressHydrationWarning className="notranslate" translate="no">
       <body className="min-h-dvh flex flex-col">
         <ThemeProvider
           attribute="class"

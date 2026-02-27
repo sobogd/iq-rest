@@ -210,6 +210,7 @@ model Category {
 
   @@index([companyId])
   @@index([companyId, sortOrder])
+  @@index([companyId, isActive, sortOrder])
   @@map("categories")
 }
 

@@ -64,14 +64,13 @@ export async function POST(request: NextRequest) {
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-    const currentMonthScans = await prisma.pageView.groupBy({
-      by: ["sessionId"],
-      where: {
-        companyId: company.id,
-        createdAt: { gte: startOfMonth },
-      },
-    });
-    const scanCount = currentMonthScans.length;
+    const scanResult = await prisma.$queryRaw<[{ count: bigint }]>`
+      SELECT COUNT(DISTINCT "sessionId") as count
+      FROM "page_views"
+      WHERE "companyId" = ${company.id}
+        AND "createdAt" >= ${startOfMonth}
+    `;
+    const scanCount = Number(scanResult[0]?.count ?? 0);
 
     const showAd = scanCount >= limit;
     const remaining = Math.max(0, limit - scanCount);

@@ -93,7 +93,7 @@ export default async function LanguagePage({ params, searchParams }: LanguagePag
   const previewParam = isPreview ? "?preview=1" : "";
 
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
       {/* Header */}
       <MenuHeader slug={slug} title={t("language")} accentColor={restaurant.accentColor} isPreview={isPreview} />
 

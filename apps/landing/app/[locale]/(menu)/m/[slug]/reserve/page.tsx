@@ -1,9 +1,12 @@
 import { notFound, redirect } from "next/navigation";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { prisma } from "@/lib/prisma";
 import { ReserveForm } from "./reserve-form";
 import { MenuHeader, MenuPageWrapper } from "../_components";
 import { trackPageView } from "../_lib/track";
+import { getRestaurantBySlug } from "../_lib/get-restaurant";
+
+export const revalidate = 300;
 
 interface ReservePageProps {
   params: Promise<{
@@ -13,27 +16,22 @@ interface ReservePageProps {
   searchParams: Promise<{ preview?: string }>;
 }
 
-async function getRestaurant(slug: string) {
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { slug },
-    select: {
-      id: true,
-      title: true,
-      reservationsEnabled: true,
-      reservationMode: true,
-      reservationSlotMinutes: true,
-      accentColor: true,
-      _count: {
-        select: {
-          tables: {
-            where: { isActive: true },
-          },
-        },
-      },
-    },
-  });
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const restaurant = await getRestaurantBySlug(slug);
 
-  return restaurant;
+  if (!restaurant) return {};
+
+  const title = `${restaurant.title} — Reserve`;
+  return {
+    title,
+    description: title,
+    openGraph: { title, description: title },
+  };
 }
 
 export default async function ReservePage({ params, searchParams }: ReservePageProps) {
@@ -42,7 +40,7 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
   const isPreview = preview === "1";
   if (!isPreview) trackPageView(slug, "reserve", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
-    getRestaurant(slug),
+    getRestaurantBySlug(slug),
     getTranslations("publicReserve"),
   ]);
 
@@ -69,8 +67,6 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
     namePlaceholder: t("namePlaceholder"),
     email: t("email"),
     emailPlaceholder: t("emailPlaceholder"),
-    phone: t("phone"),
-    phonePlaceholder: t("phonePlaceholder"),
     notes: t("notes"),
     notesPlaceholder: t("notesPlaceholder"),
     submit: t("submit"),
@@ -83,13 +79,12 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
     table: t("table"),
     capacity: t("capacity"),
     noAvailableTables: t("noAvailableTables"),
-    back: t("back"),
     noTimeSlotsAvailable: t("noTimeSlotsAvailable"),
     loadingAvailability: t("loadingAvailability"),
   };
 
   return (
-    <MenuPageWrapper slug={slug}>
+    <MenuPageWrapper>
       {/* Header */}
       <MenuHeader slug={slug} title={translations.title} sticky accentColor={restaurant.accentColor} isPreview={isPreview} />
 
