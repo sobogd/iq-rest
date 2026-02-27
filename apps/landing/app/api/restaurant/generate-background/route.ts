@@ -7,7 +7,7 @@ import { cookies } from "next/headers";
 import { isAdminEmail } from "@/lib/admin";
 import sharp from "sharp";
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 export async function POST() {
   try {
@@ -52,8 +52,8 @@ export async function POST() {
       }
     }
 
-    if (!OPENAI_API_KEY) {
-      return NextResponse.json({ error: "OpenAI API key not configured" }, { status: 500 });
+    if (!GEMINI_API_KEY) {
+      return NextResponse.json({ error: "Gemini API key not configured" }, { status: 500 });
     }
 
     // Get menu items for the prompt
@@ -85,31 +85,37 @@ export async function POST() {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 50_000);
 
-    const openaiRes = await fetch("https://api.openai.com/v1/images/generations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-image-1",
-        prompt,
-        n: 1,
-        size: "1024x1536",
-        quality: "low",
-      }),
-      signal: controller.signal,
-    });
+    const geminiRes = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": GEMINI_API_KEY!,
+        },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: {
+            responseModalities: ["IMAGE"],
+            imageConfig: { aspectRatio: "9:16", imageSize: "1K" },
+          },
+        }),
+        signal: controller.signal,
+      }
+    );
 
     clearTimeout(timeout);
 
-    if (!openaiRes.ok) {
-      console.error("OpenAI background error:", await openaiRes.text());
+    if (!geminiRes.ok) {
+      console.error("Gemini background error:", await geminiRes.text());
       return NextResponse.json({ error: "Failed to generate background" }, { status: 500 });
     }
 
-    const openaiData = await openaiRes.json();
-    const b64 = openaiData.data?.[0]?.b64_json;
+    const geminiData = await geminiRes.json();
+    const imgPart = geminiData.candidates?.[0]?.content?.parts?.find(
+      (p: { inlineData?: { data: string } }) => p.inlineData
+    );
+    const b64 = imgPart?.inlineData?.data;
     if (!b64) {
       return NextResponse.json({ error: "No image data returned" }, { status: 500 });
     }

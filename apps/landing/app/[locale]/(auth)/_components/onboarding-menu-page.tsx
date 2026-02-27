@@ -67,9 +67,10 @@ export function OnboardingMenuPage({ restaurantName, userId }: { restaurantName:
           {/* Manual Builder */}
           <button
             type="button"
-            onClick={() => {
+            onClick={async () => {
               track(DashboardEvent.CLICKED_ONBOARDING_MANUAL);
-              window.location.href = `/${locale}/onboarding/category`;
+              await fetch("/api/onboarding/complete", { method: "POST" }).catch(() => {});
+              window.location.href = `/${locale}/dashboard`;
             }}
             className="grid gap-1.5 text-left rounded-xl border border-border bg-muted/30 px-4 py-4 cursor-pointer transition-colors active:bg-muted/60 hover:bg-muted/50"
           >

@@ -206,6 +206,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
 
       track(DashboardEvent.SCAN_MENU_SUCCESS);
       toast.success(tMenu("scanSuccess"));
+      await fetch("/api/onboarding/complete", { method: "POST" }).catch(() => {});
       window.location.href = `/${locale}/dashboard`;
     } catch (err) {
       const detail = err instanceof Error ? `${err.name}: ${err.message}` : String(err);

@@ -5,7 +5,7 @@ import { config } from "dotenv";
 // Load .env file
 config({ path: path.join(process.cwd(), ".env") });
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 const LANGUAGES: Record<string, { name: string; native: string }> = {
   de: { name: "German", native: "Deutsch" },
@@ -60,46 +60,34 @@ IMPORTANT RULES:
 JSON to translate:
 ${JSON.stringify(chunk, null, 2)}`;
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.3,
-      max_tokens: 16000,
-    }),
-  });
+  const response = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-goog-api-key": GEMINI_API_KEY!,
+      },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.3,
+          maxOutputTokens: 16000,
+          responseMimeType: "application/json",
+        },
+      }),
+    }
+  );
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`OpenAI API error: ${error}`);
+    throw new Error(`Gemini API error: ${error}`);
   }
 
   const data = await response.json();
-  const content = data.choices[0]?.message?.content || "{}";
+  const content = data.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
 
-  // Extract JSON from response (remove markdown if present)
-  let jsonStr = content.trim();
-  if (jsonStr.startsWith("```json")) {
-    jsonStr = jsonStr.slice(7);
-  }
-  if (jsonStr.startsWith("```")) {
-    jsonStr = jsonStr.slice(3);
-  }
-  if (jsonStr.endsWith("```")) {
-    jsonStr = jsonStr.slice(0, -3);
-  }
-
-  const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) {
-    throw new Error("No valid JSON in response");
-  }
-
-  return JSON.parse(jsonMatch[0]);
+  return JSON.parse(content);
 }
 
 function splitObject(
@@ -221,8 +209,8 @@ async function translateFile(sourcePath: string, targetLang: string): Promise<vo
 }
 
 async function main() {
-  if (!OPENAI_API_KEY) {
-    console.error("OPENAI_API_KEY environment variable is not set");
+  if (!GEMINI_API_KEY) {
+    console.error("GEMINI_API_KEY environment variable is not set");
     process.exit(1);
   }
 

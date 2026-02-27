@@ -12,6 +12,7 @@ export default async function Page({
 
   if (isAuthenticated) {
     if (onboardingStep < 2) redirect("/onboarding/name");
+    if (onboardingStep < 3) redirect("/onboarding/menu");
     redirect("/dashboard");
   }
 

@@ -4,7 +4,7 @@ import { config } from "dotenv";
 
 config({ path: path.join(process.cwd(), ".env") });
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 const LANGUAGES: Record<string, string> = {
   ar: "Arabic", bg: "Bulgarian", ca: "Catalan", cs: "Czech", da: "Danish",
@@ -31,33 +31,33 @@ RULES:
 JSON:
 ${JSON.stringify(text, null, 2)}`;
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.3,
-      max_tokens: 4000,
-    }),
-  });
+  const response = await fetch(
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-goog-api-key": GEMINI_API_KEY!,
+      },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.3,
+          maxOutputTokens: 4000,
+          responseMimeType: "application/json",
+        },
+      }),
+    }
+  );
 
-  if (!response.ok) throw new Error(`API error: ${await response.text()}`);
+  if (!response.ok) throw new Error(`Gemini API error: ${await response.text()}`);
   const data = await response.json();
-  let jsonStr = data.choices[0]?.message?.content?.trim() || "{}";
-  if (jsonStr.startsWith("```json")) jsonStr = jsonStr.slice(7);
-  if (jsonStr.startsWith("```")) jsonStr = jsonStr.slice(3);
-  if (jsonStr.endsWith("```")) jsonStr = jsonStr.slice(0, -3);
-  const match = jsonStr.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error("No JSON found");
-  return JSON.parse(match[0]);
+  const content = data.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
+  return JSON.parse(content);
 }
 
 async function main() {
-  if (!OPENAI_API_KEY) { console.error("No API key"); process.exit(1); }
+  if (!GEMINI_API_KEY) { console.error("No GEMINI_API_KEY"); process.exit(1); }
 
   const messagesDir = path.join(process.cwd(), "messages");
   const en = JSON.parse(fs.readFileSync(path.join(messagesDir, "en.json"), "utf-8"));

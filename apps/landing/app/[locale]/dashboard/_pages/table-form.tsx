@@ -317,8 +317,8 @@ export function TableFormPage({ id }: TableFormPageProps) {
   }
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
-      <div className="sticky top-0 z-10 bg-background">
+    <div className="flex flex-col h-full">
+      <div className="shrink-0">
         <PageHeader title={isEdit ? t("editTable") : t("newTable")} backHref="/dashboard/tables">
           <Button
             type="submit"
@@ -333,7 +333,7 @@ export function TableFormPage({ id }: TableFormPageProps) {
         </PageHeader>
       </div>
 
-      <form id="table-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
+      <form id="table-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-4">
 
           <DashboardCard title={t("general")}>

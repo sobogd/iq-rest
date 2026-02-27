@@ -182,8 +182,8 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   }
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
-      <div className="sticky top-0 z-10 bg-background">
+    <div className="flex flex-col h-full">
+      <div className="shrink-0">
         <PageHeader title={translations.pages.settings}>
           <Button
             type="submit"
@@ -197,7 +197,7 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
           </Button>
         </PageHeader>
       </div>
-      <form id="settings-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
+      <form id="settings-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-4">
 
           {isAtLimit && languageLimit !== Infinity && (

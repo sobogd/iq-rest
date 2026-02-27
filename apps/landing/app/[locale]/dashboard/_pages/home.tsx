@@ -44,21 +44,15 @@ const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ cla
   { key: "billing", page: "billing", icon: CreditCard },
 ];
 
-interface ScanUsage {
-  used: number;
-  limit: number | null;
-}
-
 interface DashboardHomeProps {
   isAdmin: boolean;
-  scanUsage: ScanUsage | null;
 }
 
-export function DashboardHome({ isAdmin, scanUsage }: DashboardHomeProps) {
+export function DashboardHome({ isAdmin }: DashboardHomeProps) {
   const tPages = useTranslations("dashboard.pages");
 
   const tHome = useTranslations("dashboard.home");
-  const { translations } = useDashboard();
+  const { translations, scanUsage } = useDashboard();
   const router = useRouter();
 
   const navEventMap: Record<string, DashboardEvent> = {

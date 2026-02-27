@@ -113,8 +113,8 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
   const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
-      <div className="sticky top-0 z-10 bg-background">
+    <div className="flex flex-col h-full">
+      <div className="shrink-0">
         <PageHeader title={translations.pages.reservations} backHref="/dashboard/reservations">
           <Button
             type="button"
@@ -129,7 +129,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
         </PageHeader>
       </div>
 
-      <div className="px-6 pt-4 pb-6">
+      <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-6">
 
           {!hasActiveSubscription && (

@@ -37,11 +37,6 @@ interface ChecklistStatus {
   fromScanner: boolean;
 }
 
-interface ScanUsage {
-  used: number;
-  limit: number | null;
-}
-
 interface MenuPageProps {
   initialItems: ItemWithTranslations[];
   initialCategories: Category[];
@@ -49,14 +44,13 @@ interface MenuPageProps {
   restaurantName: string;
   slug: string | null;
   checklist: ChecklistStatus;
-  scanUsage: ScanUsage | null;
   isAdmin?: boolean;
   showOrders?: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, scanUsage, isAdmin, showOrders }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, isAdmin, showOrders }: MenuPageProps) {
   useBlockBack();
-  const { translations } = useDashboard();
+  const { translations, scanUsage } = useDashboard();
   const tHome = useTranslations("dashboard.home");
   const router = useRouter();
   const tItems = translations.items;
@@ -302,13 +296,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   </span>
                 </div>
               )}
-              <div
-                onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
-                className="flex items-center gap-3 h-12 px-6 cursor-pointer transition-colors hover:bg-muted/30 border-t border-foreground/5"
-              >
-                <LogOut className="h-4 w-4 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium">{translations.logout}</span>
-              </div>
             </PopoverContent>
           </Popover>
           {/* Right part: title + sort */}
@@ -336,10 +323,10 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
       {/* Content */}
       <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
         <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4 min-h-full">
-          <DashboardNavSidebar scanUsage={scanUsage} />
+          <DashboardNavSidebar />
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
           {/* Orders + View row */}
-          {!sortMode && (
+          {!sortMode && (showOrders || (slug && categories.length > 0)) && (
             <div className="flex flex-col md:flex-row gap-4">
               {showOrders && (
                 <Button
@@ -473,18 +460,16 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           )}
 
         {categories.length === 0 ? (
-          <div className="flex items-center justify-center flex-1">
-            <div className="flex flex-col items-center text-center rounded-md border border-border bg-muted/50 px-6 py-6 max-w-sm w-full">
-              <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
-              <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
-              <Button
-                className="w-full"
-                onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-              >
-                <Plus className="h-4 w-4" />
-                {tMenu.addCategory}
-              </Button>
-            </div>
+          <div className="flex flex-col items-center text-center rounded-md border border-border bg-muted/50 px-6 py-6">
+            <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
+            <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
+            <Button
+              className="w-full max-w-xs"
+              onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
+            >
+              <Plus className="h-4 w-4" />
+              {tMenu.addCategory}
+            </Button>
           </div>
         ) : (
           <div className="flex flex-col">

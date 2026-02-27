@@ -43,11 +43,6 @@ const navEventMap: Record<string, DashboardEvent> = {
   support: DashboardEvent.CLICKED_NAV_SUPPORT,
 };
 
-interface ScanUsage {
-  used: number;
-  limit: number | null;
-}
-
 export function DashboardNavHeader() {
   return (
     <div className="hidden md:flex md:items-center md:w-56 md:shrink-0">
@@ -56,8 +51,8 @@ export function DashboardNavHeader() {
   );
 }
 
-export function DashboardNavSidebar({ scanUsage }: { scanUsage?: ScanUsage | null }) {
-  const { translations } = useDashboard();
+export function DashboardNavSidebar() {
+  const { translations, scanUsage } = useDashboard();
   const pathname = usePathname();
   const tHome = useTranslations("dashboard.home");
   const activePage = getPageKeyFromPathname(pathname);
@@ -84,7 +79,7 @@ export function DashboardNavSidebar({ scanUsage }: { scanUsage?: ScanUsage | nul
           );
         })}
         {scanUsage && (
-          <Link href={PAGE_PATHS.billing} onClick={() => track(DashboardEvent.CLICKED_NAV_SCANS)} className="flex items-center justify-between w-full h-12 px-4 transition-colors hover:bg-muted/30">
+          <Link href={PAGE_PATHS.billing} onClick={() => track(DashboardEvent.CLICKED_NAV_SCANS)} className="flex items-center justify-between w-full h-12 px-4 border-t border-border transition-colors hover:bg-muted/30">
             <span className="text-sm font-medium">{tHome("scansTitle")}:</span>
             <span className="text-sm text-muted-foreground">
               {scanUsage.limit

@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
 import { DashboardShell } from "./_components/shell";
+import { getScanUsage } from "./_lib/queries";
 import type { DashboardTranslations } from "./_context/dashboard-context";
 
 export default async function DashboardLayout({
@@ -36,12 +37,9 @@ export default async function DashboardLayout({
 
   if (!hasRestaurant) redirect("/onboarding/name");
 
-  // Mark onboarding as complete on first dashboard visit
+  // Redirect to onboarding if not completed
   if (company && company.onboardingStep < 3) {
-    await prisma.company.update({
-      where: { id: companyId },
-      data: { onboardingStep: 3 },
-    });
+    redirect("/onboarding/menu");
   }
 
   // Check if admin is impersonating
@@ -75,7 +73,10 @@ export default async function DashboardLayout({
     }
   }
 
-  const t = await getTranslations("dashboard");
+  const [t, scanUsage] = await Promise.all([
+    getTranslations("dashboard"),
+    getScanUsage(companyId),
+  ]);
 
   const translations: DashboardTranslations = {
     pages: {
@@ -251,7 +252,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId}>
+    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId} scanUsage={scanUsage}>
       {children}
     </DashboardShell>
   );

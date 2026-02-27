@@ -6,6 +6,7 @@ import { SiteHeader } from "./header";
 import {
   DashboardProvider,
   type DashboardTranslations,
+  type ScanUsage,
 } from "../_context/dashboard-context";
 import { analytics } from "@/lib/analytics";
 import { setDashboardUserId } from "@/lib/dashboard-events";
@@ -66,7 +67,7 @@ function DashboardLayout({
         <ImpersonationBanner currentEmail={impersonation.currentEmail} />
       )}
       <SiteHeader />
-      <div className="flex-1 overflow-hidden">{children}</div>
+      <div className="flex-1 overflow-clip">{children}</div>
     </div>
   );
 }
@@ -75,11 +76,13 @@ export function DashboardShell({
   translations,
   impersonation,
   userId,
+  scanUsage,
   children,
 }: {
   translations: DashboardTranslations;
   impersonation?: { originalEmail: string; currentEmail: string };
   userId: string;
+  scanUsage: ScanUsage | null;
   children?: React.ReactNode;
 }) {
   useEffect(() => {
@@ -90,7 +93,7 @@ export function DashboardShell({
   }, [userId]);
 
   return (
-    <DashboardProvider translations={translations}>
+    <DashboardProvider translations={translations} scanUsage={scanUsage}>
       <DashboardLayout impersonation={impersonation}>
         {children}
       </DashboardLayout>

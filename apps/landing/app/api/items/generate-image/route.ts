@@ -82,11 +82,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: "Failed to fetch source image" }, { status: 400 });
       }
       const imgBuffer = Buffer.from(await imgRes.arrayBuffer());
-      // Convert to PNG for OpenAI edits endpoint
-      const pngBuffer = await sharp(imgBuffer)
-        .resize(1024, 1024, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 0 } })
-        .png()
-        .toBuffer();
+      const sourceB64 = imgBuffer.toString("base64");
 
       const bgColorLine = accentColor
         ? `Use accent color ${accentColor} subtly in the surface or surroundings (napkin, surface tint, decorative element).`
@@ -105,34 +101,47 @@ export async function POST(request: NextRequest) {
         .filter(Boolean)
         .join("\n");
 
-      const formData = new FormData();
-      formData.append("model", "gpt-image-1");
-      formData.append("image[]", new Blob([new Uint8Array(pngBuffer)], { type: "image/png" }), "image.png");
-      formData.append("prompt", prompt);
-      formData.append("size", "1024x1024");
-      formData.append("quality", "high");
-
-      const openaiRes = await fetch("https://api.openai.com/v1/images/edits", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        },
-        body: formData,
-        signal: controller.signal,
-      });
+      const geminiRes = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-goog-api-key": process.env.GEMINI_API_KEY!,
+          },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [
+                  { text: prompt },
+                  { inline_data: { mime_type: "image/webp", data: sourceB64 } },
+                ],
+              },
+            ],
+            generationConfig: {
+              responseModalities: ["IMAGE"],
+              imageConfig: { aspectRatio: "1:1", imageSize: "1K" },
+            },
+          }),
+          signal: controller.signal,
+        }
+      );
 
       clearTimeout(timeout);
 
-      if (!openaiRes.ok) {
-        const err = await openaiRes.json().catch(() => ({}));
-        console.error("OpenAI edits error:", err);
+      if (!geminiRes.ok) {
+        const err = await geminiRes.json().catch(() => ({}));
+        console.error("Gemini edits error:", err);
         return NextResponse.json({ error: "Image generation failed" }, { status: 502 });
       }
 
-      const openaiData = await openaiRes.json();
-      b64 = openaiData.data?.[0]?.b64_json;
+      const geminiData = await geminiRes.json();
+      const imgPart = geminiData.candidates?.[0]?.content?.parts?.find(
+        (p: { inlineData?: { data: string } }) => p.inlineData
+      );
+      b64 = imgPart?.inlineData?.data;
     } else {
-      // Generate from scratch via /v1/images/generations
+      // Generate from scratch
       const colorLine = accentColor ? `Accent color ${accentColor} subtly in plate rim or garnish.` : "";
 
       const prompt = [
@@ -148,32 +157,38 @@ export async function POST(request: NextRequest) {
         .filter(Boolean)
         .join("\n");
 
-      const openaiRes = await fetch("https://api.openai.com/v1/images/generations", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-image-1",
-          prompt,
-          n: 1,
-          size: "1024x1024",
-          quality: "medium",
-        }),
-        signal: controller.signal,
-      });
+      const geminiRes = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-goog-api-key": process.env.GEMINI_API_KEY!,
+          },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: {
+              responseModalities: ["IMAGE"],
+              imageConfig: { aspectRatio: "1:1", imageSize: "1K" },
+            },
+          }),
+          signal: controller.signal,
+        }
+      );
 
       clearTimeout(timeout);
 
-      if (!openaiRes.ok) {
-        const err = await openaiRes.json().catch(() => ({}));
-        console.error("OpenAI error:", err);
+      if (!geminiRes.ok) {
+        const err = await geminiRes.json().catch(() => ({}));
+        console.error("Gemini error:", err);
         return NextResponse.json({ error: "Image generation failed" }, { status: 502 });
       }
 
-      const openaiData = await openaiRes.json();
-      b64 = openaiData.data?.[0]?.b64_json;
+      const geminiData = await geminiRes.json();
+      const imgPart = geminiData.candidates?.[0]?.content?.parts?.find(
+        (p: { inlineData?: { data: string } }) => p.inlineData
+      );
+      b64 = imgPart?.inlineData?.data;
     }
 
     if (!b64) {

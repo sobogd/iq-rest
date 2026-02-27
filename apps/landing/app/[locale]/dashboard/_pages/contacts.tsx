@@ -109,8 +109,8 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
   }
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
-      <div className="sticky top-0 z-10 bg-background">
+    <div className="flex flex-col h-full">
+      <div className="shrink-0">
         <PageHeader title={translations.pages.contacts}>
           <Button
             type="submit"
@@ -125,7 +125,7 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
         </PageHeader>
       </div>
 
-      <form id="contacts-form" onSubmit={handleSubmit} className="px-6 pt-4 pb-6">
+      <form id="contacts-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-4">
           <DashboardCard title={translations.pages.contacts}>
             <div className="space-y-2">

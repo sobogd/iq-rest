@@ -245,8 +245,14 @@ export function isValidPageKey(value: string): value is PageKey {
   return validPages.includes(value as PageKey);
 }
 
+export interface ScanUsage {
+  used: number;
+  limit: number | null;
+}
+
 interface DashboardContextType {
   translations: DashboardTranslations;
+  scanUsage: ScanUsage | null;
 }
 
 const DashboardContext = createContext<DashboardContextType | null>(null);
@@ -254,12 +260,14 @@ const DashboardContext = createContext<DashboardContextType | null>(null);
 export function DashboardProvider({
   children,
   translations,
+  scanUsage,
 }: {
   children: ReactNode;
   translations: DashboardTranslations;
+  scanUsage: ScanUsage | null;
 }) {
   return (
-    <DashboardContext.Provider value={{ translations }}>
+    <DashboardContext.Provider value={{ translations, scanUsage }}>
       {children}
     </DashboardContext.Provider>
   );

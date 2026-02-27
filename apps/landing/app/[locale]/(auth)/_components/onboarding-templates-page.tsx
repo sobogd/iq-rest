@@ -118,6 +118,7 @@ export function OnboardingTemplatesPage({ restaurantName, userId }: { restaurant
 
       progressRef.current.done = true;
       track(DashboardEvent.TEMPLATE_APPLY_SUCCESS, { template: templateId });
+      await fetch("/api/onboarding/complete", { method: "POST" }).catch(() => {});
       window.location.href = `/${locale}/dashboard`;
     } catch {
       progressRef.current.done = true;

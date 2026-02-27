@@ -26,7 +26,9 @@ declare global {
 }
 
 const GOOGLE_CLIENT_ID = "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
-const TURNSTILE_SITE_KEY = "0x4AAAAAACi6p7FVybIQ_YZg";
+const TURNSTILE_SITE_KEY = process.env.NODE_ENV === "production"
+  ? "0x4AAAAAACi6p7FVybIQ_YZg"
+  : "1x00000000000000000000AA"; // Cloudflare test key — always passes
 
 export function LoginPage() {
   const locale = useLocale();

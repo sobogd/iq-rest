@@ -4,7 +4,7 @@ import { getUserCompanyId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,9 +22,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!OPENAI_API_KEY) {
+    if (!GEMINI_API_KEY) {
       return NextResponse.json(
-        { error: "OpenAI API key not configured" },
+        { error: "Gemini API key not configured" },
         { status: 500 }
       );
     }
@@ -112,32 +112,32 @@ export async function POST(request: NextRequest) {
     const targetLangName = languageNames[targetLanguage] || targetLanguage;
     const sourceLangName = sourceLanguage ? (languageNames[sourceLanguage] || sourceLanguage) : "the source language";
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: `You are a professional translator. Translate the given text from ${sourceLangName} to ${targetLangName}. Only return the translated text, nothing else. Keep the same tone and style. If it's a menu item name or description, make it sound natural and appetizing in the target language.`,
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": GEMINI_API_KEY!,
+        },
+        body: JSON.stringify({
+          systemInstruction: {
+            parts: [{
+              text: `You are a professional translator. Translate the given text from ${sourceLangName} to ${targetLangName}. Only return the translated text, nothing else. Keep the same tone and style. If it's a menu item name or description, make it sound natural and appetizing in the target language.`,
+            }],
           },
-          {
-            role: "user",
-            content: text,
+          contents: [{ role: "user", parts: [{ text }] }],
+          generationConfig: {
+            temperature: 0.3,
+            maxOutputTokens: 500,
           },
-        ],
-        temperature: 0.3,
-        max_tokens: 500,
-      }),
-    });
+        }),
+      }
+    );
 
     if (!response.ok) {
-      const error = await response.json();
-      console.error("OpenAI API error:", error);
+      const error = await response.text();
+      console.error("Gemini API error:", error);
       return NextResponse.json(
         { error: "Translation failed" },
         { status: 500 }
@@ -145,7 +145,7 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await response.json();
-    const translatedText = data.choices[0]?.message?.content?.trim();
+    const translatedText = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
 
     if (!translatedText) {
       return NextResponse.json(

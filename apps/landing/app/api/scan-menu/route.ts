@@ -7,28 +7,28 @@ import sharp from "sharp";
 
 export const maxDuration = 300;
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-async function compressForVision(base64Data: string): Promise<string> {
+async function compressForVision(base64Data: string): Promise<{ mimeType: string; base64: string }> {
   const inputBuffer = Buffer.from(base64Data, "base64");
   const compressed = await sharp(inputBuffer)
     .resize(1500, 1500, { fit: "inside", withoutEnlargement: true })
     .jpeg({ quality: 80 })
     .toBuffer();
-  return `data:image/jpeg;base64,${compressed.toString("base64")}`;
+  return { mimeType: "image/jpeg", base64: compressed.toString("base64") };
 }
 
-async function pdfToImages(base64Data: string): Promise<string[]> {
+async function pdfToImages(base64Data: string): Promise<{ mimeType: string; base64: string }[]> {
   const { pdf } = await import("pdf-to-img");
   const buffer = Buffer.from(base64Data, "base64");
-  const images: string[] = [];
+  const images: { mimeType: string; base64: string }[] = [];
   const document = await pdf(buffer, { scale: 2 });
   for await (const page of document) {
     const compressed = await sharp(page)
       .resize(1500, 1500, { fit: "inside", withoutEnlargement: true })
       .jpeg({ quality: 80 })
       .toBuffer();
-    images.push(`data:image/jpeg;base64,${compressed.toString("base64")}`);
+    images.push({ mimeType: "image/jpeg", base64: compressed.toString("base64") });
   }
   return images;
 }
@@ -56,9 +56,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    if (!OPENAI_API_KEY) {
+    if (!GEMINI_API_KEY) {
       return NextResponse.json(
-        { error: "OpenAI API key not configured" },
+        { error: "Gemini API key not configured" },
         { status: 500 }
       );
     }
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
     ).catch(() => {});
 
     // Process all files: images get compressed, PDFs get converted to images
-    const optimizedImages: string[] = [];
+    const optimizedImages: { mimeType: string; base64: string }[] = [];
 
     for (const file of rawFiles) {
       if (typeof file !== "string") {
@@ -154,30 +154,29 @@ export async function POST(request: NextRequest) {
     // Cap total images sent to Vision (PDF pages can expand count)
     const imagesToSend = optimizedImages.slice(0, 10);
 
-    // Build Vision API content
-    const imageContent = imagesToSend.map((url) => ({
-      type: "image_url" as const,
-      image_url: { url, detail: "high" as const },
+    // Build Gemini content parts
+    const imageParts = imagesToSend.map((img) => ({
+      inline_data: { mime_type: img.mimeType, data: img.base64 },
     }));
 
     const multiImageNote = imagesToSend.length > 1
       ? `\nYou are receiving ${imagesToSend.length} images — these are different pages of the SAME menu. Combine all items from all pages into a single unified result. Do not duplicate categories — merge items into the same category if they belong together.`
       : "";
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: `You are a menu scanner. Analyze the image(s) of a restaurant menu and extract all items with their prices.${multiImageNote}
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": GEMINI_API_KEY!,
+        },
+        body: JSON.stringify({
+          systemInstruction: {
+            parts: [{
+              text: `You are a menu scanner. Analyze the image(s) of a restaurant menu and extract all items with their prices.${multiImageNote}
 
-Return ONLY valid JSON in this exact format:
+Return valid JSON in this exact format:
 {
   "categories": [
     {
@@ -192,21 +191,24 @@ Return ONLY valid JSON in this exact format:
 Rules:
 - Group items into logical categories (e.g. "Starters", "Main Course", "Desserts", "Drinks")
 - Extract prices as numbers (no currency symbols). If no price is visible, use 0
-- If the image is NOT a restaurant menu, return: { "error": "not_a_menu" }
-- Always return valid JSON, nothing else`,
+- If the image is NOT a restaurant menu, return: { "error": "not_a_menu" }`,
+            }],
           },
-          {
+          contents: [{
             role: "user",
-            content: imageContent,
+            parts: [{ text: "Scan this menu" }, ...imageParts],
+          }],
+          generationConfig: {
+            temperature: 0.1,
+            maxOutputTokens: 4000,
+            responseMimeType: "application/json",
           },
-        ],
-        temperature: 0.1,
-        max_tokens: 4000,
-      }),
-    });
+        }),
+      }
+    );
 
     if (!response.ok) {
-      console.error("OpenAI API error:", await response.text());
+      console.error("Gemini API error:", await response.text());
       return NextResponse.json(
         { error: "Failed to analyze menu" },
         { status: 500 }
@@ -214,7 +216,7 @@ Rules:
     }
 
     const data = await response.json();
-    const content = data.choices[0]?.message?.content?.trim();
+    const content = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
 
     if (!content) {
       return NextResponse.json(
@@ -225,8 +227,7 @@ Rules:
 
     let scanResult: ScanResult;
     try {
-      const jsonStr = content.replace(/^```json?\n?|\n?```$/g, "").trim();
-      scanResult = JSON.parse(jsonStr);
+      scanResult = JSON.parse(content);
     } catch {
       console.error("Failed to parse AI response:", content);
       return NextResponse.json(
