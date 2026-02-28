@@ -2383,7 +2383,13 @@
     "ordersStep3": "注文を確認して準備するだけ — それだけです！",
     "ordersSetup": "注文機能を有効にするには、ダッシュボード → デザイン設定に移動して注文機能をオンにしてください。WhatsApp、内蔵注文、またはその両方を選択できます。",
     "ordersHelp": "設定にお困りですか？このメールに返信するだけで、すぐにサポートいたします。",
-    "ordersCtA": "注文機能を有効にする"
+    "ordersCtA": "注文機能を有効にする",
+    "subjectWelcomePersonal": "IQ Restへようこそ、{name}さん！",
+    "greetingWelcomePersonal": "{name}さん、こんにちは。",
+    "bodyWelcomePersonal": "IQ Restでお客様のアカウントを担当するBogdanです。",
+    "helpWelcomePersonal": "QRメニュー、ウェブサイト、予約など、設定についてご質問がございましたら、このメールにご返信ください。お手伝いいたします。",
+    "closingWelcomePersonal": "お客様と一緒にお仕事できることを楽しみにしています！",
+    "signatureWelcomePersonal": "よろしくお願いいたします。<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "IQ Restの無料スキャン上限に近づいています",

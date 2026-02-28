@@ -2383,7 +2383,13 @@
     "ordersStep3": "您确认并准备订单——就这么简单！",
     "ordersSetup": "要启用点餐功能，请前往管理面板 → 设计设置并开启点餐功能。您可以选择 WhatsApp、内置订单或两者兼用。",
     "ordersHelp": "需要帮助设置吗？只需回复此邮件——我们将立即帮您开始。",
-    "ordersCtA": "立即启用点餐"
+    "ordersCtA": "立即启用点餐",
+    "subjectWelcomePersonal": "欢迎来到IQ Rest，{name}！",
+    "greetingWelcomePersonal": "{name}，你好！",
+    "bodyWelcomePersonal": "我是Bogdan，将负责您在IQ Rest的账户。",
+    "helpWelcomePersonal": "如果您对QR菜单、网站、预订或其他任何设置有疑问，请直接回复此邮件。我随时为您提供帮助。",
+    "closingWelcomePersonal": "期待与您合作！",
+    "signatureWelcomePersonal": "此致敬礼，<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "您即将达到IQ Rest的免费扫描限制",

@@ -2383,7 +2383,13 @@
     "ordersStep3": "Jūs patvirtinate ir paruošiate užsakymą — štai ir viskas!",
     "ordersSetup": "Norėdami įjungti užsakymus, eikite į savo valdymo skydelį → Dizaino nustatymai ir įjunkite užsakymų funkciją. Galite pasirinkti WhatsApp, integruotus užsakymus arba abu.",
     "ordersHelp": "Reikia pagalbos nustatant? Tiesiog atsakykite į šį el. laišką — padėsime jums pradėti akimirksniu.",
-    "ordersCtA": "Įjungti užsakymus dabar"
+    "ordersCtA": "Įjungti užsakymus dabar",
+    "subjectWelcomePersonal": "Sveiki atvykę į IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Sveiki {name},",
+    "bodyWelcomePersonal": "Esu Bogdan ir rūpinsiuosi jūsų paskyra IQ Rest.",
+    "helpWelcomePersonal": "Jei turite klausimų apie QR meniu, svetainės, rezervacijų ar bet ko kito nustatymą — tiesiog atsakykite į šį el. laišką. Esu čia, kad padėčiau.",
+    "closingWelcomePersonal": "Laukiu bendradarbiavimo!",
+    "signatureWelcomePersonal": "Pagarbiai,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Artėjate prie nemokamo nuskaitymo limito IQ Rest",

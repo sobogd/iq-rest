@@ -2383,7 +2383,13 @@
     "ordersStep3": "Siz onaylayıp siparişi hazırlarsınız — hepsi bu kadar!",
     "ordersSetup": "Siparişleri etkinleştirmek için kontrol panelinize gidin → Tasarım ayarları ve sipariş özelliğini açın. WhatsApp, yerleşik siparişler veya her ikisini birden seçebilirsiniz.",
     "ordersHelp": "Kurulumda yardıma mı ihtiyacınız var? Bu e-postaya yanıt verin — sizi hemen başlatırız.",
-    "ordersCtA": "Siparişleri şimdi etkinleştir"
+    "ordersCtA": "Siparişleri şimdi etkinleştir",
+    "subjectWelcomePersonal": "IQ Rest'e hoş geldiniz, {name}!",
+    "greetingWelcomePersonal": "Merhaba {name},",
+    "bodyWelcomePersonal": "Ben Bogdan, IQ Rest'teki hesabınızla ilgileneceğim.",
+    "helpWelcomePersonal": "QR menünüzü, web sitenizi, rezervasyonlarınızı veya başka bir konuda sorularınız varsa — bu e-postaya yanıt vermeniz yeterli. Size yardımcı olmak için buradayım.",
+    "closingWelcomePersonal": "Sizinle çalışmayı dört gözle bekliyorum!",
+    "signatureWelcomePersonal": "Saygılarımla,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "IQ Rest'te ücretsiz tarama limitinize yaklaşıyorsunuz",

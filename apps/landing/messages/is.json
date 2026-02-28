@@ -2383,7 +2383,13 @@
     "ordersStep3": "Þú staðfestir og undirbýrð pöntunina — það er allt!",
     "ordersSetup": "Til að virkja pantanir, farðu á stjórnborðið þitt → Hönnunarstillingar og kveiktu á pöntunareiginleikanum. Þú getur valið WhatsApp, innbyggðar pantanir eða hvort tveggja.",
     "ordersHelp": "Þarftu aðstoð við uppsetningu? Svaraðu bara þessum tölvupósti — við hjálpum þér að byrja á skömmum tíma.",
-    "ordersCtA": "Virkja pantanir núna"
+    "ordersCtA": "Virkja pantanir núna",
+    "subjectWelcomePersonal": "Velkomin í IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Hæ {name},",
+    "bodyWelcomePersonal": "Ég heiti Bogdan og mun sjá um reikninginn þinn hjá IQ Rest.",
+    "helpWelcomePersonal": "Ef þú hefur einhverjar spurningar um uppsetningu QR matseðils, vefsíðu, bókanir eða eitthvað annað — svaraðu bara þessum tölvupósti. Ég er hér til að hjálpa.",
+    "closingWelcomePersonal": "Hlakka til að vinna með þér!",
+    "signatureWelcomePersonal": "Kveðja,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Þú ert að nálgast ókeypis skönnunarmörk þín á IQ Rest",

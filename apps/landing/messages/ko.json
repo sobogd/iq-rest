@@ -2383,7 +2383,13 @@
     "ordersStep3": "주문을 확인하고 준비하면 됩니다 — 그게 전부입니다!",
     "ordersSetup": "주문 기능을 활성화하려면 대시보드 → 디자인 설정으로 이동하여 주문 기능을 켜세요. WhatsApp, 내장 주문 또는 둘 다 선택할 수 있습니다.",
     "ordersHelp": "설정에 도움이 필요하신가요? 이 이메일에 회신해 주세요 — 신속하게 시작할 수 있도록 도와드리겠습니다.",
-    "ordersCtA": "지금 주문 기능 활성화"
+    "ordersCtA": "지금 주문 기능 활성화",
+    "subjectWelcomePersonal": "IQ Rest에 오신 것을 환영합니다, {name}님!",
+    "greetingWelcomePersonal": "{name}님, 안녕하세요.",
+    "bodyWelcomePersonal": "저는 Bogdan이며, IQ Rest에서 귀하의 계정을 관리하게 되었습니다.",
+    "helpWelcomePersonal": "QR 메뉴, 웹사이트, 예약 등 설정에 관한 질문이 있으시면 이 이메일에 답장해 주세요. 도와드리겠습니다.",
+    "closingWelcomePersonal": "함께 일하게 되어 기대됩니다!",
+    "signatureWelcomePersonal": "감사합니다,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "IQ Rest의 무료 스캔 한도에 가까워지고 있습니다",

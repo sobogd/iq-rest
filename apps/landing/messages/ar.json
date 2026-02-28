@@ -2383,7 +2383,13 @@
     "ordersStep3": "تؤكد وتحضر الطلب — هذا كل شيء!",
     "ordersSetup": "لتفعيل الطلبات، انتقل إلى لوحة التحكم → إعدادات التصميم وقم بتشغيل ميزة الطلبات. يمكنك اختيار WhatsApp أو الطلبات المدمجة أو كليهما.",
     "ordersHelp": "تحتاج مساعدة في الإعداد؟ فقط قم بالرد على هذا البريد الإلكتروني — سنساعدك على البدء في أسرع وقت.",
-    "ordersCtA": "تفعيل الطلبات الآن"
+    "ordersCtA": "تفعيل الطلبات الآن",
+    "subjectWelcomePersonal": "مرحبًا بك في IQ Rest، {name}!",
+    "greetingWelcomePersonal": "مرحبًا {name}،",
+    "bodyWelcomePersonal": "أنا Bogdan، وسأتولى إدارة حسابك في IQ Rest.",
+    "helpWelcomePersonal": "إذا كانت لديك أي أسئلة حول إعداد قائمة QR أو الموقع أو الحجوزات أو أي شيء آخر — فقط قم بالرد على هذا البريد الإلكتروني. أنا هنا للمساعدة.",
+    "closingWelcomePersonal": "أتطلع للعمل معك!",
+    "signatureWelcomePersonal": "مع أطيب التحيات،<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "أنت تقترب من حد المسح المجاني على IQ Rest",

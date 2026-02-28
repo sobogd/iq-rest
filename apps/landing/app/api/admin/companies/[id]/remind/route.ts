@@ -11,8 +11,8 @@ interface RouteParams {
 const EMAIL_TYPES = {
   reminder_onboarded: {
 
-    getSubject: (t: Record<string, string>) => t.subject,
-    getHtml: (t: Record<string, string>, locale: string) => `
+    getSubject: (t: Record<string, string>, _name: string) => t.subject,
+    getHtml: (t: Record<string, string>, locale: string, _name: string) => `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">${t.body}</p>
@@ -31,13 +31,13 @@ const EMAIL_TYPES = {
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
-    getText: (t: Record<string, string>, locale: string) =>
+    getText: (t: Record<string, string>, locale: string, _name: string) =>
       `${t.greeting}\n\n${t.body}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.timeNote}\n\n${t.helpOffer}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
   },
   reminder_not_onboarded: {
 
-    getSubject: (t: Record<string, string>) => t.subjectNotOnboarded,
-    getHtml: (t: Record<string, string>, locale: string) => `
+    getSubject: (t: Record<string, string>, _name: string) => t.subjectNotOnboarded,
+    getHtml: (t: Record<string, string>, locale: string, _name: string) => `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyNotOnboarded}</p>
@@ -49,12 +49,12 @@ const EMAIL_TYPES = {
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
-    getText: (t: Record<string, string>, locale: string) =>
+    getText: (t: Record<string, string>, locale: string, _name: string) =>
       `${t.greeting}\n\n${t.bodyNotOnboarded}\n\n${t.helpOfferNotOnboarded}\n${t.helpAction}\n\n${t.cta}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
   },
   reminder_scanner: {
-    getSubject: (t: Record<string, string>) => t.subjectScanner,
-    getHtml: (t: Record<string, string>, locale: string) => `
+    getSubject: (t: Record<string, string>, _name: string) => t.subjectScanner,
+    getHtml: (t: Record<string, string>, locale: string, _name: string) => `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyScanner}</p>
@@ -66,12 +66,12 @@ const EMAIL_TYPES = {
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
-    getText: (t: Record<string, string>, locale: string) =>
+    getText: (t: Record<string, string>, locale: string, _name: string) =>
       `${t.greeting}\n\n${t.bodyScanner}\n\n${t.helpOfferScanner}\n\n${t.selfServiceScanner}\n\n${t.ctaScanner}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
   },
   reminder_orders: {
-    getSubject: (t: Record<string, string>) => t.subjectOrders,
-    getHtml: (t: Record<string, string>, locale: string) => `
+    getSubject: (t: Record<string, string>, _name: string) => t.subjectOrders,
+    getHtml: (t: Record<string, string>, locale: string, _name: string) => `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greeting}</p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyOrders}</p>
@@ -89,8 +89,22 @@ const EMAIL_TYPES = {
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signature}</p>
       </div>
     `,
-    getText: (t: Record<string, string>, locale: string) =>
+    getText: (t: Record<string, string>, locale: string, _name: string) =>
       `${t.greeting}\n\n${t.bodyOrders}\n\n${t.ordersHowItWorks}\n1. ${t.ordersStep1}\n2. ${t.ordersStep2}\n3. ${t.ordersStep3}\n\n${t.ordersSetup}\n\n${t.ordersHelp}\n\n${t.ordersCtA}: https://iq-rest.com/${locale}/dashboard?from=email\n\n${t.signature}`,
+  },
+  welcome_personal: {
+    getSubject: (t: Record<string, string>, name: string) => t.subjectWelcomePersonal.replace("{name}", name),
+    getHtml: (t: Record<string, string>, _locale: string, name: string) => `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.greetingWelcomePersonal.replace("{name}", name)}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.bodyWelcomePersonal}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.helpWelcomePersonal}</p>
+        <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">${t.closingWelcomePersonal}</p>
+        <p style="font-size: 15px; margin: 0; color: #1a1a1a;">${t.signatureWelcomePersonal}</p>
+      </div>
+    `,
+    getText: (t: Record<string, string>, _locale: string, name: string) =>
+      `${t.greetingWelcomePersonal.replace("{name}", name)}\n\n${t.bodyWelcomePersonal}\n\n${t.helpWelcomePersonal}\n\n${t.closingWelcomePersonal}\n\n${t.signatureWelcomePersonal.replace(/<br>/g, "\n")}`,
   },
 } as const;
 
@@ -154,6 +168,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
     const restaurant = company.restaurants[0];
     const locale = restaurant?.defaultLanguage || "en";
+    const name = restaurant?.title || ownerEmail.split("@")[0];
 
     const t = await getTranslations(locale);
 
@@ -170,9 +185,9 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
       to: ownerEmail,
-      subject: config.getSubject(t),
-      html: config.getHtml(t, locale),
-      text: config.getText(t, locale).replace(/<br>/g, "\n"),
+      subject: config.getSubject(t, name),
+      html: config.getHtml(t, locale, name),
+      text: config.getText(t, locale, name).replace(/<br>/g, "\n"),
     });
 
     // Save to emailsSent JSON

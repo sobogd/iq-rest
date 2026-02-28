@@ -2383,7 +2383,13 @@
     "ordersStep3": "Jūs apstiprināt un sagatavojat pasūtījumu — tas ir viss!",
     "ordersSetup": "Lai iespējotu pasūtīšanu, dodieties uz savu vadības paneli → Dizaina iestatījumi un ieslēdziet pasūtīšanas funkciju. Varat izvēlēties WhatsApp, iebūvētos pasūtījumus vai abus.",
     "ordersHelp": "Nepieciešama palīdzība iestatīšanā? Vienkārši atbildiet uz šo e-pastu — mēs palīdzēsim jums sākt darbu īsā laikā.",
-    "ordersCtA": "Iespējot pasūtījumus tagad"
+    "ordersCtA": "Iespējot pasūtījumus tagad",
+    "subjectWelcomePersonal": "Laipni lūdzam IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Sveiki {name},",
+    "bodyWelcomePersonal": "Es esmu Bogdans, un es rūpēšos par jūsu kontu IQ Rest.",
+    "helpWelcomePersonal": "Ja jums ir jautājumi par QR ēdienkartes, tīmekļa vietnes, rezervāciju vai citu iestatīšanu — vienkārši atbildiet uz šo e-pastu. Es esmu šeit, lai palīdzētu.",
+    "closingWelcomePersonal": "Ar nepacietību gaidu sadarbību!",
+    "signatureWelcomePersonal": "Ar cieņu,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Jūs tuvojaties bezmaksas skenēšanas limitam IQ Rest",

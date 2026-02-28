@@ -2383,7 +2383,13 @@
     "ordersStep3": "Tu confirmi și pregătești comanda — atât!",
     "ordersSetup": "Pentru a activa comenzile, accesează panoul de control → Setări de design și activează funcția de comenzi. Poți alege WhatsApp, comenzi integrate sau ambele.",
     "ordersHelp": "Ai nevoie de ajutor la configurare? Răspunde pur și simplu la acest email — te ajutăm să începi într-o clipă.",
-    "ordersCtA": "Activează comenzile acum"
+    "ordersCtA": "Activează comenzile acum",
+    "subjectWelcomePersonal": "Bine ai venit la IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Salut {name},",
+    "bodyWelcomePersonal": "Sunt Bogdan și voi avea grijă de contul tău la IQ Rest.",
+    "helpWelcomePersonal": "Dacă ai întrebări despre configurarea meniului QR, site-ului, rezervărilor sau orice altceva — răspunde la acest email. Sunt aici să te ajut.",
+    "closingWelcomePersonal": "Abia aștept să lucrăm împreună!",
+    "signatureWelcomePersonal": "Cu stimă,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Te apropii de limita gratuită de scanări pe IQ Rest",

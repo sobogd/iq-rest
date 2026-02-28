@@ -2383,7 +2383,13 @@
     "ordersStep3": "Du bekrefter og forbereder bestillingen — det er alt!",
     "ordersSetup": "For å aktivere bestilling, gå til dashboardet ditt → Designinnstillinger og slå på bestillingsfunksjonen. Du kan velge WhatsApp, innebygde bestillinger eller begge deler.",
     "ordersHelp": "Trenger du hjelp med å sette det opp? Bare svar på denne e-posten — vi hjelper deg i gang på et øyeblikk.",
-    "ordersCtA": "Aktiver bestillinger nå"
+    "ordersCtA": "Aktiver bestillinger nå",
+    "subjectWelcomePersonal": "Velkommen til IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Hei {name},",
+    "bodyWelcomePersonal": "Jeg heter Bogdan, og jeg vil ta hånd om kontoen din hos IQ Rest.",
+    "helpWelcomePersonal": "Hvis du har spørsmål om oppsett av QR-menyen, nettsiden, reservasjoner eller noe annet — bare svar på denne e-posten. Jeg er her for å hjelpe.",
+    "closingWelcomePersonal": "Gleder meg til å jobbe med deg!",
+    "signatureWelcomePersonal": "Med vennlig hilsen,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Du nærmer deg din gratis skannegrense på IQ Rest",

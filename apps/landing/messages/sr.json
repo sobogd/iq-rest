@@ -2383,7 +2383,13 @@
     "ordersStep3": "Ви потврдите и припремите наруџбину — то је све!",
     "ordersSetup": "Да бисте укључили наручивање, идите на контролну таблу → Подешавања дизајна и укључите функцију наручивања. Можете изабрати WhatsApp, уграђене наруџбине или обоје.",
     "ordersHelp": "Потребна вам је помоћ при подешавању? Једноставно одговорите на овај имејл — помоћи ћемо вам да почнете у трен ока.",
-    "ordersCtA": "Укључи наруџбине сада"
+    "ordersCtA": "Укључи наруџбине сада",
+    "subjectWelcomePersonal": "Dobrodošli u IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Zdravo {name},",
+    "bodyWelcomePersonal": "Ja sam Bogdan i brinuću o vašem nalogu na IQ Rest.",
+    "helpWelcomePersonal": "Ako imate pitanja o podešavanju QR menija, sajta, rezervacija ili bilo čega drugog — jednostavno odgovorite na ovaj email. Tu sam da pomognem.",
+    "closingWelcomePersonal": "Radujem se saradnji!",
+    "signatureWelcomePersonal": "Srdačan pozdrav,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Приближавате се бесплатном лимиту скенирања на IQ Rest",

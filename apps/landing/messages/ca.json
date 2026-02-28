@@ -2383,7 +2383,13 @@
     "ordersStep3": "Tu confirmes i prepares la comanda — ja està!",
     "ordersSetup": "Per activar les comandes, vés al teu tauler de control → Configuració de disseny i activa la funció de comandes. Pots triar WhatsApp, comandes integrades o ambdós.",
     "ordersHelp": "Necessites ajuda per configurar-ho? Simplement respon a aquest correu — t'ajudarem a començar en un instant.",
-    "ordersCtA": "Activa les comandes ara"
+    "ordersCtA": "Activa les comandes ara",
+    "subjectWelcomePersonal": "Benvingut a IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Hola {name},",
+    "bodyWelcomePersonal": "Sóc en Bogdan i m'encarregaré del teu compte a IQ Rest.",
+    "helpWelcomePersonal": "Si tens preguntes sobre la configuració del menú QR, lloc web, reserves o qualsevol altra cosa — simplement respon a aquest correu. Sóc aquí per ajudar-te.",
+    "closingWelcomePersonal": "Espero treballar amb tu!",
+    "signatureWelcomePersonal": "Salutacions,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "T'estàs acostant al límit gratuït d'escanejos a IQ Rest",

@@ -197,6 +197,7 @@ export function AdminCompanyPage({ companyId }: AdminCompanyPageProps) {
     { type: "reminder_not_onboarded", label: "Menu waiting for you", description: "For users who haven't started onboarding yet" },
     { type: "reminder_scanner", label: "Need help with menu?", description: "For scanner users — offer to set up menu from photo/PDF" },
     { type: "reminder_orders", label: "Online orders available", description: "Announce new ordering feature — WhatsApp or built-in orders from the menu" },
+    { type: "welcome_personal", label: "Personal welcome", description: "Personal intro from Bogdan — offer help with setup, translated to client's language" },
   ];
 
   async function handleDelete() {

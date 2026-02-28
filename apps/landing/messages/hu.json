@@ -2383,7 +2383,13 @@
     "ordersStep3": "Ön jóváhagyja és elkészíti a rendelést — ennyi az egész!",
     "ordersSetup": "A rendelések bekapcsolásához lépjen az irányítópultjába → Design beállítások és kapcsolja be a rendelési funkciót. Választhat WhatsApp-ot, beépített rendeléseket vagy mindkettőt.",
     "ordersHelp": "Segítségre van szüksége a beállításhoz? Egyszerűen válaszoljon erre az e-mailre — pillanatok alatt segítünk az indulásban.",
-    "ordersCtA": "Rendelések bekapcsolása most"
+    "ordersCtA": "Rendelések bekapcsolása most",
+    "subjectWelcomePersonal": "Üdvözöljük az IQ Restnél, {name}!",
+    "greetingWelcomePersonal": "Szia {name}!",
+    "bodyWelcomePersonal": "Bogdan vagyok, és én fogom kezelni a fiókodat az IQ Restnél.",
+    "helpWelcomePersonal": "Ha kérdésed van a QR menü, weboldal, foglalások beállításáról vagy bármi másról — egyszerűen válaszolj erre az e-mailre. Itt vagyok, hogy segítsek.",
+    "closingWelcomePersonal": "Alig várom a közös munkát!",
+    "signatureWelcomePersonal": "Üdvözlettel,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Közeledik az ingyenes szkennelési korlátjához az IQ Rest-en",

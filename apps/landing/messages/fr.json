@@ -2383,7 +2383,13 @@
     "ordersStep3": "Vous confirmez et préparez la commande — c'est tout !",
     "ordersSetup": "Pour activer les commandes, rendez-vous dans votre tableau de bord → Paramètres de design et activez la fonctionnalité de commande. Vous pouvez choisir WhatsApp, les commandes intégrées ou les deux.",
     "ordersHelp": "Besoin d'aide pour la configuration ? Répondez simplement à cet e-mail — nous vous aiderons à démarrer en un rien de temps.",
-    "ordersCtA": "Activer les commandes maintenant"
+    "ordersCtA": "Activer les commandes maintenant",
+    "subjectWelcomePersonal": "Bienvenue sur IQ Rest, {name} !",
+    "greetingWelcomePersonal": "Bonjour {name},",
+    "bodyWelcomePersonal": "Je suis Bogdan et je m'occuperai de votre compte chez IQ Rest.",
+    "helpWelcomePersonal": "Si vous avez des questions sur la configuration de votre menu QR, site web, réservations ou autre — répondez simplement à cet e-mail. Je suis là pour vous aider.",
+    "closingWelcomePersonal": "Au plaisir de travailler avec vous !",
+    "signatureWelcomePersonal": "Cordialement,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Vous approchez de votre limite gratuite de scans sur IQ Rest",

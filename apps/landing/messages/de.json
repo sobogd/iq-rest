@@ -2383,7 +2383,13 @@
     "ordersStep3": "Sie bestätigen und bereiten die Bestellung vor — das war's!",
     "ordersSetup": "Um Bestellungen zu aktivieren, gehen Sie zu Ihrem Dashboard → Design-Einstellungen und schalten Sie die Bestellfunktion ein. Sie können WhatsApp, integrierte Bestellungen oder beides wählen.",
     "ordersHelp": "Brauchen Sie Hilfe bei der Einrichtung? Antworten Sie einfach auf diese E-Mail — wir helfen Ihnen im Handumdrehen.",
-    "ordersCtA": "Bestellungen jetzt aktivieren"
+    "ordersCtA": "Bestellungen jetzt aktivieren",
+    "subjectWelcomePersonal": "Willkommen bei IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Hallo {name},",
+    "bodyWelcomePersonal": "Ich bin Bogdan und werde mich um Ihr Konto bei IQ Rest kümmern.",
+    "helpWelcomePersonal": "Wenn Sie Fragen zur Einrichtung Ihres QR-Menüs, Ihrer Website, Reservierungen oder anderem haben — antworten Sie einfach auf diese E-Mail. Ich bin hier, um zu helfen.",
+    "closingWelcomePersonal": "Ich freue mich auf die Zusammenarbeit!",
+    "signatureWelcomePersonal": "Beste Grüße,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Sie nähern sich dem kostenlosen Scan-Limit bei IQ Rest",

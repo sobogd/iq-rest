@@ -2383,7 +2383,13 @@
     "ordersStep3": "Deimhníonn tú agus ullmhaíonn tú an t-ordú — sin é!",
     "ordersSetup": "Chun orduithe a chumasú, téigh chuig do dheais → Socruithe dearaidh agus cuir an ghné ordaithe ar siúl. Is féidir leat WhatsApp, orduithe ionsuite nó an dá cheann a roghnú.",
     "ordersHelp": "An bhfuil cabhair uait chun é a shocrú? Freagair an ríomhphost seo — cuirfimid tús leat gan mhoill.",
-    "ordersCtA": "Cumasaigh orduithe anois"
+    "ordersCtA": "Cumasaigh orduithe anois",
+    "subjectWelcomePersonal": "Fáilte go IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Dia duit {name},",
+    "bodyWelcomePersonal": "Is mise Bogdan, agus beidh mé ag tabhairt aire do do chuntas ag IQ Rest.",
+    "helpWelcomePersonal": "Má tá aon cheist agat faoi do roghchlár QR, suíomh gréasáin, áirithintí nó aon rud eile a shocrú — freagair an ríomhphost seo. Tá mé anseo chun cabhrú.",
+    "closingWelcomePersonal": "Ag tnúth le bheith ag obair leat!",
+    "signatureWelcomePersonal": "Le meas,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Tá tú ag druidim le do theorainn saor in aisce scananna ar IQ Rest",

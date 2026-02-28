@@ -2383,7 +2383,13 @@
     "ordersStep3": "Vi potvrdite i pripremite narudžbu — to je sve!",
     "ordersSetup": "Za aktivaciju naručivanja, idite na svoju upravljačku ploču → Postavke dizajna i uključite značajku naručivanja. Možete odabrati WhatsApp, ugrađene narudžbe ili oboje.",
     "ordersHelp": "Trebate pomoć pri postavljanju? Jednostavno odgovorite na ovaj email — pomoći ćemo vam da počnete u tren oka.",
-    "ordersCtA": "Aktiviraj narudžbe sada"
+    "ordersCtA": "Aktiviraj narudžbe sada",
+    "subjectWelcomePersonal": "Dobrodošli u IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Bok {name},",
+    "bodyWelcomePersonal": "Ja sam Bogdan i brinut ću o vašem računu na IQ Rest.",
+    "helpWelcomePersonal": "Ako imate pitanja o postavljanju QR izbornika, web stranice, rezervacija ili bilo čega drugog — jednostavno odgovorite na ovaj email. Tu sam da pomognem.",
+    "closingWelcomePersonal": "Veselim se suradnji!",
+    "signatureWelcomePersonal": "Srdačan pozdrav,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Približavate se besplatnom ograničenju skeniranja na IQ Rest",

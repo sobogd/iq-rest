@@ -2383,7 +2383,13 @@
     "ordersStep3": "Tu confermi e prepari l'ordine — tutto qui!",
     "ordersSetup": "Per attivare gli ordini, vai nella tua dashboard → Impostazioni di design e attiva la funzione ordini. Puoi scegliere WhatsApp, ordini integrati o entrambi.",
     "ordersHelp": "Hai bisogno di aiuto per la configurazione? Rispondi semplicemente a questa email — ti aiuteremo a iniziare in pochissimo tempo.",
-    "ordersCtA": "Attiva ordini ora"
+    "ordersCtA": "Attiva ordini ora",
+    "subjectWelcomePersonal": "Benvenuto su IQ Rest, {name}!",
+    "greetingWelcomePersonal": "Ciao {name},",
+    "bodyWelcomePersonal": "Sono Bogdan e mi occuperò del tuo account su IQ Rest.",
+    "helpWelcomePersonal": "Se hai domande sulla configurazione del tuo menu QR, sito web, prenotazioni o altro — rispondi semplicemente a questa email. Sono qui per aiutarti.",
+    "closingWelcomePersonal": "Non vedo l'ora di lavorare con te!",
+    "signatureWelcomePersonal": "Cordiali saluti,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Ti stai avvicinando al limite gratuito di scansioni su IQ Rest",

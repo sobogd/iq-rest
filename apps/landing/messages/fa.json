@@ -2383,7 +2383,13 @@
     "ordersStep3": "شما سفارش را تأیید و آماده می‌کنید — همین!",
     "ordersSetup": "برای فعال‌سازی سفارش‌ها، به پنل مدیریت خود بروید → تنظیمات طراحی و قابلیت سفارش را فعال کنید. می‌توانید WhatsApp، سفارش‌های داخلی یا هر دو را انتخاب کنید.",
     "ordersHelp": "برای راه‌اندازی کمک نیاز دارید؟ فقط به این ایمیل پاسخ دهید — در کوتاه‌ترین زمان شما را راه‌اندازی می‌کنیم.",
-    "ordersCtA": "فعال‌سازی سفارش‌ها"
+    "ordersCtA": "فعال‌سازی سفارش‌ها",
+    "subjectWelcomePersonal": "به IQ Rest خوش آمدید، {name}!",
+    "greetingWelcomePersonal": "سلام {name}،",
+    "bodyWelcomePersonal": "من Bogdan هستم و حساب شما را در IQ Rest مدیریت خواهم کرد.",
+    "helpWelcomePersonal": "اگر سؤالی درباره تنظیم منوی QR، وب‌سایت، رزرو یا هر چیز دیگری دارید — فقط به این ایمیل پاسخ دهید. من اینجا هستم تا کمک کنم.",
+    "closingWelcomePersonal": "مشتاق همکاری با شما هستم!",
+    "signatureWelcomePersonal": "با احترام،<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "شما به محدودیت رایگان اسکن در IQ Rest نزدیک می‌شوید",

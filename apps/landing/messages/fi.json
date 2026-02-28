@@ -2383,7 +2383,13 @@
     "ordersStep3": "Vahvistat ja valmistat tilauksen — siinä kaikki!",
     "ordersSetup": "Tilausten käyttöönottamiseksi siirry hallintapaneeliin → Ulkoasuasetukset ja ota tilaustoiminto käyttöön. Voit valita WhatsAppin, sisäänrakennetut tilaukset tai molemmat.",
     "ordersHelp": "Tarvitsetko apua käyttöönotossa? Vastaa vain tähän sähköpostiin — autamme sinut alkuun hetkessä.",
-    "ordersCtA": "Ota tilaukset käyttöön nyt"
+    "ordersCtA": "Ota tilaukset käyttöön nyt",
+    "subjectWelcomePersonal": "Tervetuloa IQ Restiin, {name}!",
+    "greetingWelcomePersonal": "Hei {name},",
+    "bodyWelcomePersonal": "Olen Bogdan ja hoidan tiliäsi IQ Restissä.",
+    "helpWelcomePersonal": "Jos sinulla on kysyttävää QR-menun, verkkosivuston, varausten tai minkä tahansa muun asetuksen suhteen — vastaa tähän sähköpostiin. Olen täällä auttamassa.",
+    "closingWelcomePersonal": "Odotan innolla yhteistyötä!",
+    "signatureWelcomePersonal": "Ystävällisin terveisin,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Lähestyt ilmaista skannausrajaasi IQ Restissä",

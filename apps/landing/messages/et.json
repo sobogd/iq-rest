@@ -2383,7 +2383,13 @@
     "ordersStep3": "Teie kinnitate ja valmistate tellimuse — ongi kõik!",
     "ordersSetup": "Tellimuste lubamiseks minge oma juhtpaneelile → Kujunduse seaded ja lülitage tellimise funktsioon sisse. Saate valida WhatsAppi, sisseehitatud tellimused või mõlemad.",
     "ordersHelp": "Vajate abi seadistamisel? Vastake lihtsalt sellele e-kirjale — aitame teil kiiresti alustada.",
-    "ordersCtA": "Luba tellimused kohe"
+    "ordersCtA": "Luba tellimused kohe",
+    "subjectWelcomePersonal": "Tere tulemast IQ Resti, {name}!",
+    "greetingWelcomePersonal": "Tere {name},",
+    "bodyWelcomePersonal": "Olen Bogdan ja hoolitsen teie konto eest IQ Restis.",
+    "helpWelcomePersonal": "Kui teil on küsimusi QR-menüü, veebisaidi, broneeringute või millegi muu seadistamise kohta — vastake lihtsalt sellele e-kirjale. Olen siin, et aidata.",
+    "closingWelcomePersonal": "Ootan koostööd!",
+    "signatureWelcomePersonal": "Parimate soovidega,<br>Bogdan<br>IQ Rest | iq-rest.com"
   },
   "limitWarningEmail": {
     "subject": "Lähenete oma tasuta skaneerimise piirmäärale IQ Restis",
