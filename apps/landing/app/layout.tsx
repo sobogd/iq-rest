@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     siteName: 'IQ Rest',
     images: [
       {
-        url: '/changelog/public-menu-qr-scan-1.webp',
+        url: '/og-image.png',
         width: 1200,
-        height: 666,
+        height: 630,
         alt: 'IQ Rest - QR Menu for Restaurant & Cafe',
       },
     ],
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'IQ Rest - QR Menu for Restaurant & Cafe',
     description: 'Create professional QR menu for restaurant and cafe in minutes.',
-    images: ['/changelog/public-menu-qr-scan-1.webp'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [

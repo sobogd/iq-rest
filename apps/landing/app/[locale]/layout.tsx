@@ -31,9 +31,21 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "IQ Rest",
+    alternateName: "IQ Rest — QR Menu for Restaurants",
+    url: "https://iq-rest.com",
+  };
+
   return (
     <html lang={locale} dir={(rtlLocales as readonly string[]).includes(locale) ? "rtl" : "ltr"} suppressHydrationWarning className="notranslate" translate="no">
       <body className="min-h-dvh flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           forcedTheme="dark"
