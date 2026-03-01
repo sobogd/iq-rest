@@ -1876,7 +1876,9 @@
       "demoDescription": "Ei ole veel valmis? Proovige näidismenüüd, et näha, kuidas see töötab.",
       "hintTitle": "Mis on kategooria?",
       "hintBody": "Kategooria on menüü jaotis. Näiteks: Eelroad, Praad, Magustoidud, Joogid, Lõunamenüü.",
-      "hintNoCategories": "Pole kategooriaid? Pole probleemi — looge üks nimega \"Menüü\" või \"Meie road\" ja lisage kõik sinna."
+      "hintNoCategories": "Pole kategooriaid? Pole probleemi — looge üks nimega \"Menüü\" või \"Meie road\" ja lisage kõik sinna.",
+      "itemHintTitle": "Mis on menüükirje?",
+      "itemHintBody": "Menüükirje on konkreetne roog või jook. Näiteks: Caesari salat, Pizza Margherita, Espresso, Šokolaadikook. Lisage nimi, hind ja soovi korral kirjeldus ja foto."
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",

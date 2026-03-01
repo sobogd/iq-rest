@@ -1876,7 +1876,9 @@
       "demoDescription": "Jeszcze nie gotowe? Wypróbuj przykładowe menu, aby zobaczyć, jak to działa.",
       "hintTitle": "Czym jest kategoria?",
       "hintBody": "Kategoria to sekcja w Twoim menu. Na przykład: Przystawki, Dania główne, Desery, Napoje, Lunch.",
-      "hintNoCategories": "Nie masz kategorii? Nie ma problemu — utwórz jedną o nazwie \"Menu\" lub \"Nasze dania\" i dodaj tam wszystko."
+      "hintNoCategories": "Nie masz kategorii? Nie ma problemu — utwórz jedną o nazwie \"Menu\" lub \"Nasze dania\" i dodaj tam wszystko.",
+      "itemHintTitle": "Czym jest pozycja menu?",
+      "itemHintBody": "Pozycja to konkretne danie lub napój. Na przykład: Sałatka Cezar, Pizza Margherita, Espresso, Tort czekoladowy. Dodaj nazwę, cenę i opcjonalnie opis oraz zdjęcie."
     },
     "onboarding": {
       "nameTitle": "Jak nazywa się Twoje miejsce?",

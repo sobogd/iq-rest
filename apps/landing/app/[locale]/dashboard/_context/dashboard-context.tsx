@@ -201,6 +201,11 @@ export interface MenuTranslations {
   addCategory: string;
   emptyTitle: string;
   emptySubtitle: string;
+  hintTitle: string;
+  hintBody: string;
+  hintNoCategories: string;
+  itemHintTitle: string;
+  itemHintBody: string;
 }
 
 export interface SettingsTranslations {

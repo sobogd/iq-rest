@@ -1876,7 +1876,9 @@
       "demoDescription": "Noch nicht bereit? Probieren Sie es mit einer Musterkarte aus, um zu sehen, wie es funktioniert.",
       "hintTitle": "Was ist eine Kategorie?",
       "hintBody": "Eine Kategorie ist ein Abschnitt Ihrer Speisekarte. Zum Beispiel: Vorspeisen, Hauptgerichte, Desserts, Getränke, Mittagsangebote.",
-      "hintNoCategories": "Keine Kategorien? Kein Problem — erstellen Sie eine mit dem Namen \"Speisekarte\" oder \"Unsere Gerichte\" und fügen Sie alles dort hinzu."
+      "hintNoCategories": "Keine Kategorien? Kein Problem — erstellen Sie eine mit dem Namen \"Speisekarte\" oder \"Unsere Gerichte\" und fügen Sie alles dort hinzu.",
+      "itemHintTitle": "Was ist ein Gericht?",
+      "itemHintBody": "Ein Gericht ist ein konkretes Produkt Ihrer Speisekarte. Zum Beispiel: Caesar-Salat, Pizza Margherita, Espresso, Schokoladenkuchen. Geben Sie Name, Preis und optional Beschreibung und Foto ein."
     },
     "onboarding": {
       "nameTitle": "Wie heißt Ihr Lokal?",

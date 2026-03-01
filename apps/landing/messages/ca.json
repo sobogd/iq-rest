@@ -1876,7 +1876,9 @@
       "demoDescription": "Encara no està llest? Prova amb un menú de mostra per veure com funciona.",
       "hintTitle": "Què és una categoria?",
       "hintBody": "Una categoria és una secció del teu menú. Per exemple: Entrants, Plats principals, Postres, Begudes, Menú del dia.",
-      "hintNoCategories": "No tens categories? Cap problema — crea'n una anomenada \"Menú\" o \"Els nostres plats\" i afegeix-ho tot allà."
+      "hintNoCategories": "No tens categories? Cap problema — crea'n una anomenada \"Menú\" o \"Els nostres plats\" i afegeix-ho tot allà.",
+      "itemHintTitle": "Què és un plat?",
+      "itemHintBody": "Un plat és un producte concret del teu menú. Per exemple: Amanida Cèsar, Pizza Margherita, Espresso, Pastís de xocolata. Afegeix nom, preu i opcionalment descripció i foto."
     },
     "onboarding": {
       "nameTitle": "Com es diu el teu local?",

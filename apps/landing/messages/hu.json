@@ -1876,7 +1876,9 @@
       "demoDescription": "Még nem készült el? Próbáld ki egy minta menüvel, hogy lásd, hogyan működik.",
       "hintTitle": "Mi az a kategória?",
       "hintBody": "A kategória az étlap egy szakasza. Például: Előételek, Főételek, Desszertek, Italok, Ebédmenü.",
-      "hintNoCategories": "Nincsenek kategóriák? Nem gond — hozz létre egyet \"Menü\" vagy \"Ételeink\" néven, és adj hozzá mindent oda."
+      "hintNoCategories": "Nincsenek kategóriák? Nem gond — hozz létre egyet \"Menü\" vagy \"Ételeink\" néven, és adj hozzá mindent oda.",
+      "itemHintTitle": "Mi az az étel?",
+      "itemHintBody": "Az étel egy konkrét termék az étlapon. Például: Caesar-saláta, Pizza Margherita, Espresso, Csokoládétorta. Add meg a nevet, az árat, és opcionálisan a leírást és a fotót."
     },
     "onboarding": {
       "nameTitle": "Mi a helye neve?",

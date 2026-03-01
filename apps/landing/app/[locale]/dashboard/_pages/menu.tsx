@@ -481,8 +481,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           )}
           </>
         ) : (
-          <div className="flex flex-col">
-            <div className="pb-4 flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4">
               {sortedCategories.map((category, catIndex) => {
                 const categoryItems = items
                   .filter((i) => i.categoryId === category.id)
@@ -606,6 +606,14 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 );
               })}
             </div>
+
+            {/* Item hint during onboarding */}
+            {!allDone && items.length === 0 && (
+              <div className="rounded-md border border-border bg-muted/50 px-4 py-4">
+                <p className="text-sm font-semibold mb-2">{tMenu.itemHintTitle}</p>
+                <p className="text-sm text-muted-foreground">{tMenu.itemHintBody}</p>
+              </div>
+            )}
 
             {/* Add category button */}
             {!sortMode && (

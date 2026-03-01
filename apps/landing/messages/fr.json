@@ -1876,7 +1876,9 @@
       "demoDescription": "Pas encore prêt ? Essayez avec un menu d'exemple pour voir comment cela fonctionne.",
       "hintTitle": "Qu'est-ce qu'une catégorie ?",
       "hintBody": "Une catégorie est une section de votre menu. Par exemple : Entrées, Plats principaux, Desserts, Boissons, Menu du jour.",
-      "hintNoCategories": "Pas de catégories ? Pas de problème — créez-en une appelée \"Menu\" ou \"Nos plats\" et ajoutez tout là-dedans."
+      "hintNoCategories": "Pas de catégories ? Pas de problème — créez-en une appelée \"Menu\" ou \"Nos plats\" et ajoutez tout là-dedans.",
+      "itemHintTitle": "Qu'est-ce qu'un plat ?",
+      "itemHintBody": "Un plat est un produit spécifique de votre menu. Par exemple : Salade César, Pizza Margherita, Espresso, Gâteau au chocolat. Ajoutez un nom, un prix et éventuellement une description et une photo."
     },
     "onboarding": {
       "nameTitle": "Comment s'appelle votre établissement ?",

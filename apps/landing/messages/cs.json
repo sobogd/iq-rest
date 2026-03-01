@@ -1876,7 +1876,9 @@
       "demoDescription": "Ještě není připraveno? Vyzkoušejte ukázkové menu, abyste viděli, jak to funguje.",
       "hintTitle": "Co je kategorie?",
       "hintBody": "Kategorie je sekce vašeho menu. Například: Předkrmy, Hlavní jídla, Dezerty, Nápoje, Polední menu.",
-      "hintNoCategories": "Nemáte kategorie? Žádný problém — vytvořte jednu s názvem \"Menu\" nebo \"Naše jídla\" a přidejte tam vše."
+      "hintNoCategories": "Nemáte kategorie? Žádný problém — vytvořte jednu s názvem \"Menu\" nebo \"Naše jídla\" a přidejte tam vše.",
+      "itemHintTitle": "Co je položka menu?",
+      "itemHintBody": "Položka je konkrétní jídlo nebo nápoj. Například: Salát Caesar, Pizza Margherita, Espresso, Čokoládový dort. Přidejte název, cenu a volitelně popis a fotografii."
     },
     "onboarding": {
       "nameTitle": "Jak se jmenuje vaše místo?",

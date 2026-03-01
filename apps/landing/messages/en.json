@@ -1847,7 +1847,9 @@
       "demoDescription": "Not ready yet? Try with a sample menu to see how it works.",
       "hintTitle": "What is a category?",
       "hintBody": "A category is a section of your menu. For example: Starters, Main Dishes, Desserts, Drinks, Lunch Specials.",
-      "hintNoCategories": "Don't have categories? No problem — create one called \"Menu\" or \"Our Dishes\" and add everything there."
+      "hintNoCategories": "Don't have categories? No problem — create one called \"Menu\" or \"Our Dishes\" and add everything there.",
+      "itemHintTitle": "What is a menu item?",
+      "itemHintBody": "An item is a specific dish or drink. For example: Caesar Salad, Margherita Pizza, Espresso, Chocolate Cake. Add a name, price, and optionally a description and photo."
     },
     "languages": {
       "translationProgress": "Translation Progress",

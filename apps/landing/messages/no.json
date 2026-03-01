@@ -1876,7 +1876,9 @@
       "demoDescription": "Ikke klar ennå? Prøv med en eksempelmeny for å se hvordan det fungerer.",
       "hintTitle": "Hva er en kategori?",
       "hintBody": "En kategori er en del av menyen din. For eksempel: Forretter, Hovedretter, Desserter, Drikke, Lunsjmeny.",
-      "hintNoCategories": "Ingen kategorier? Ikke noe problem — lag en som heter \"Meny\" eller \"Våre retter\" og legg til alt der."
+      "hintNoCategories": "Ingen kategorier? Ikke noe problem — lag en som heter \"Meny\" eller \"Våre retter\" og legg til alt der.",
+      "itemHintTitle": "Hva er en rett?",
+      "itemHintBody": "En rett er et spesifikt produkt på menyen din. For eksempel: Cæsarsalat, Pizza Margherita, Espresso, Sjokoladekake. Legg til navn, pris og eventuelt beskrivelse og bilde."
     },
     "onboarding": {
       "nameTitle": "Hva heter stedet ditt?",

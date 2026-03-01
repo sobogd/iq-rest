@@ -1876,7 +1876,9 @@
       "demoDescription": "Non sei ancora pronto? Prova con un menu di esempio per vedere come funziona.",
       "hintTitle": "Cos'è una categoria?",
       "hintBody": "Una categoria è una sezione del tuo menu. Ad esempio: Antipasti, Primi piatti, Dolci, Bevande, Menu del giorno.",
-      "hintNoCategories": "Non hai categorie? Nessun problema — creane una chiamata \"Menu\" o \"I nostri piatti\" e aggiungi tutto lì."
+      "hintNoCategories": "Non hai categorie? Nessun problema — creane una chiamata \"Menu\" o \"I nostri piatti\" e aggiungi tutto lì.",
+      "itemHintTitle": "Cos'è un piatto?",
+      "itemHintBody": "Un piatto è un prodotto specifico del tuo menu. Ad esempio: Insalata Caesar, Pizza Margherita, Espresso, Torta al cioccolato. Aggiungi nome, prezzo e facoltativamente descrizione e foto."
     },
     "onboarding": {
       "nameTitle": "Come si chiama il tuo locale?",
