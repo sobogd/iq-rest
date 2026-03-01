@@ -71,11 +71,7 @@ export async function PUT(
       },
     });
 
-    // Mark checklist step done (fire-and-forget, no-op if already set)
-    prisma.restaurant.updateMany({
-      where: { companyId, checklistMenuEdited: false },
-      data: { checklistMenuEdited: true },
-    }).catch(() => {});
+    // Mark session analytics (fire-and-forget)
     prisma.session.updateMany({
       where: { companyId, modifiedMenu: false },
       data: { modifiedMenu: true },
@@ -133,11 +129,7 @@ export async function PATCH(
       data: updateData,
     });
 
-    // Mark checklist step done (fire-and-forget, no-op if already set)
-    prisma.restaurant.updateMany({
-      where: { companyId, checklistMenuEdited: false },
-      data: { checklistMenuEdited: true },
-    }).catch(() => {});
+    // Mark session analytics (fire-and-forget)
     prisma.session.updateMany({
       where: { companyId, modifiedMenu: false },
       data: { modifiedMenu: true },
