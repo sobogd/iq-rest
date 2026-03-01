@@ -147,8 +147,8 @@ export function LoginPage() {
       return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(trimmed)) {
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    if (!emailRegex.test(trimmed.toLowerCase())) {
       setErrorMessage(t("errors.emailInvalid"));
       setStatus("error");
       return;

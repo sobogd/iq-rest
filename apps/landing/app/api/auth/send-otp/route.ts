@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import nodemailer from "nodemailer";
 import { prisma } from "@/lib/prisma";
 import { verifyTurnstileToken } from "@/lib/turnstile";
+import { validateEmail } from "@/lib/validate-email";
 
 // Simple session token generator
 function generateSessionToken(): string {
@@ -142,23 +143,14 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Validate email
-    if (!email) {
-      return NextResponse.json(
-        { error: "Email is required" },
-        { status: 400 }
-      );
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    // Strict email validation
+    const normalizedEmail = validateEmail(email);
+    if (!normalizedEmail) {
       return NextResponse.json(
         { error: "Invalid email format" },
         { status: 400 }
       );
     }
-
-    const normalizedEmail = email.trim().toLowerCase();
 
     // Generate 4-digit OTP code
     const otpCode = Math.floor(1000 + Math.random() * 9000).toString();
@@ -339,7 +331,7 @@ export async function POST(request: NextRequest) {
     // Email content
     const mailOptions = {
       from: process.env.FROM_EMAIL,
-      to: email,
+      to: normalizedEmail,
       subject,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">

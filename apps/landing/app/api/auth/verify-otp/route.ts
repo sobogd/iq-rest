@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
+import { validateEmail } from "@/lib/validate-email";
 
 // Simple session token generator
 function generateSessionToken(): string {
@@ -13,15 +14,14 @@ export async function POST(request: NextRequest) {
   try {
     const { email, code } = await request.json();
 
-    // Validate input
-    if (!email || !code) {
+    // Strict email validation
+    const normalizedEmail = validateEmail(email);
+    if (!normalizedEmail || !code) {
       return NextResponse.json(
         { error: "Email and code are required" },
         { status: 400 }
       );
     }
-
-    const normalizedEmail = email.trim().toLowerCase();
 
     // Find user with OTP
     const user = await prisma.user.findUnique({
