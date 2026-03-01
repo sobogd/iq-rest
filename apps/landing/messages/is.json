@@ -1572,8 +1572,8 @@
       "upgrade": "Uppfæra"
     },
     "auth": {
-      "title": "Velkomin í IQ Rest",
-      "subtitle": "Sláðu inn netfangið þitt til að byrja",
+      "title": "Búa til Matseðil",
+      "subtitle": "Sláðu inn netfangið þitt til að búa til nýjan matseðil",
       "consent": {
         "text": "Með því að halda áfram samþykkir þú okkar",
         "terms": "Skilmála",

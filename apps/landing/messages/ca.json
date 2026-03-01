@@ -1572,8 +1572,8 @@
       "upgrade": "Actualitza"
     },
     "auth": {
-      "title": "Benvingut a IQ Rest",
-      "subtitle": "Introdueix el teu correu per començar",
+      "title": "Crear Menú",
+      "subtitle": "Introdueix el teu email per crear un nou menú",
       "consent": {
         "text": "En continuar, acceptes els nostres",
         "terms": "Termes",

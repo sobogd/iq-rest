@@ -1572,8 +1572,8 @@
       "upgrade": "Upgraden"
     },
     "auth": {
-      "title": "Welkom bij IQ Rest",
-      "subtitle": "Voer je e-mail in om te beginnen",
+      "title": "Menu maken",
+      "subtitle": "Voer je e-mail in om een nieuw menu te maken",
       "consent": {
         "text": "Door verder te gaan ga je akkoord met onze",
         "terms": "Voorwaarden",

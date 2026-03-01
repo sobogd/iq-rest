@@ -1572,8 +1572,8 @@
       "upgrade": "Jaunināt"
     },
     "auth": {
-      "title": "Laipni lūdzam IQ Rest",
-      "subtitle": "Ievadiet savu e-pastu, lai sāktu",
+      "title": "Izveidot Ēdienkarti",
+      "subtitle": "Ievadiet e-pastu, lai izveidotu jaunu ēdienkarti",
       "consent": {
         "text": "Turpinot jūs piekrītat mūsu",
         "terms": "Noteikumiem",

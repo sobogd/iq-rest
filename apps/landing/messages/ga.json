@@ -1572,8 +1572,8 @@
       "upgrade": "Uasghrádaigh"
     },
     "auth": {
-      "title": "Fáilte go IQ Rest",
-      "subtitle": "Cuir isteach do ríomhphost chun tosú",
+      "title": "Cruthaigh Biachlár",
+      "subtitle": "Cuir isteach do ríomhphost chun biachlár nua a chruthú",
       "consent": {
         "text": "Trí leanúint ar aghaidh, aontaíonn tú lenár",
         "terms": "Téarmaí",

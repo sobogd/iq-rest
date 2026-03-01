@@ -1572,8 +1572,8 @@
       "upgrade": "Nadgradi"
     },
     "auth": {
-      "title": "Dobrodošli v IQ Rest",
-      "subtitle": "Vnesite svoj e-mail za začetek",
+      "title": "Ustvari Meni",
+      "subtitle": "Vnesite email za ustvarjanje novega menija",
       "consent": {
         "text": "Z nadaljevanjem se strinjate z našimi",
         "terms": "Pogoji",

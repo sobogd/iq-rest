@@ -1572,8 +1572,8 @@
       "upgrade": "Atnaujinti"
     },
     "auth": {
-      "title": "Sveiki atvykę į IQ Rest",
-      "subtitle": "Įveskite savo el. paštą, kad pradėtumėte",
+      "title": "Sukurti Meniu",
+      "subtitle": "Įveskite el. paštą, kad sukurtumėte naują meniu",
       "consent": {
         "text": "Tęsdami sutinkate su mūsų",
         "terms": "Sąlygomis",

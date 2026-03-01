@@ -1572,8 +1572,8 @@
       "upgrade": "Uppgradera"
     },
     "auth": {
-      "title": "Välkommen till IQ Rest",
-      "subtitle": "Ange din e-post för att börja",
+      "title": "Skapa Meny",
+      "subtitle": "Ange din e-post för att skapa en ny meny",
       "consent": {
         "text": "Genom att fortsätta godkänner du våra",
         "terms": "Villkor",

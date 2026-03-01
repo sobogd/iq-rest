@@ -1572,8 +1572,8 @@
       "upgrade": "Actualizare"
     },
     "auth": {
-      "title": "Bine ați venit la IQ Rest",
-      "subtitle": "Introduceți e-mailul pentru a începe",
+      "title": "Creează Meniu",
+      "subtitle": "Introduceți emailul pentru a crea un meniu nou",
       "consent": {
         "text": "Continuând, acceptați",
         "terms": "Termenii",

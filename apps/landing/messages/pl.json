@@ -1572,8 +1572,8 @@
       "upgrade": "Ulepsz"
     },
     "auth": {
-      "title": "Witamy w IQ Rest",
-      "subtitle": "Wpisz swój e-mail, aby rozpocząć",
+      "title": "Utwórz Menu",
+      "subtitle": "Podaj swój email, aby utworzyć nowe menu",
       "consent": {
         "text": "Kontynuując, akceptujesz nasze",
         "terms": "Regulamin",

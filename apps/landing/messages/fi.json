@@ -1572,8 +1572,8 @@
       "upgrade": "Päivitä"
     },
     "auth": {
-      "title": "Tervetuloa IQ Restiin",
-      "subtitle": "Syötä sähköpostiosoitteesi aloittaaksesi",
+      "title": "Luo Menu",
+      "subtitle": "Syötä sähköpostisi luodaksesi uuden menun",
       "consent": {
         "text": "Jatkamalla hyväksyt meidän",
         "terms": "Ehdot",

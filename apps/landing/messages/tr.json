@@ -1572,8 +1572,8 @@
       "upgrade": "Yükselt"
     },
     "auth": {
-      "title": "IQ Rest'e hoş geldiniz",
-      "subtitle": "Başlamak için e-postanızı girin",
+      "title": "Menü Oluştur",
+      "subtitle": "Yeni bir menü oluşturmak için e-postanızı girin",
       "consent": {
         "text": "Devam ederek kabul etmiş olursunuz",
         "terms": "Şartlar",

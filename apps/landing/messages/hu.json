@@ -1572,8 +1572,8 @@
       "upgrade": "Frissítés"
     },
     "auth": {
-      "title": "Üdvözöljük az IQ Rest-ben",
-      "subtitle": "Adja meg e-mail címét a kezdéshez",
+      "title": "Menü Létrehozása",
+      "subtitle": "Add meg az email címed egy új menü létrehozásához",
       "consent": {
         "text": "A folytatással elfogadja a",
         "terms": "Feltételeket",

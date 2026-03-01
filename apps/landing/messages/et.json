@@ -1572,8 +1572,8 @@
       "upgrade": "Uuenda"
     },
     "auth": {
-      "title": "Tere tulemast IQ Rest'i",
-      "subtitle": "Sisestage oma e-posti aadress alustamiseks",
+      "title": "Loo Menüü",
+      "subtitle": "Sisestage oma email uue menüü loomiseks",
       "consent": {
         "text": "Jätkates nõustute meie",
         "terms": "Tingimustega",
