@@ -30,7 +30,7 @@ export async function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
     <section className="py-12 lg:py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
+          <div className="text-center mb-12 lg:mb-16">
             <h3 className="text-lg font-semibold mb-2">{tPricing("questionsTitle")}</h3>
             <p className="text-sm text-muted-foreground mb-4 max-w-md mx-auto">{tPricing("questionsBody")}</p>
             <a
