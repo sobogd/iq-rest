@@ -38,7 +38,6 @@ export function LoginPage() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const emailInputRef = useRef<HTMLInputElement>(null);
   const googleButtonRef = useRef<HTMLDivElement>(null);
   const turnstileRef = useRef<TurnstileInstance>(null);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
@@ -88,7 +87,6 @@ export function LoginPage() {
   useEffect(() => {
     const from = searchParams.get("from");
     track(DashboardEvent.SHOWED_LOGIN, from ? { from } : undefined);
-    emailInputRef.current?.focus();
   }, [searchParams]);
 
   // Load Google Identity Services
@@ -234,7 +232,6 @@ export function LoginPage() {
               )}
 
               <Input
-                ref={emailInputRef}
                 id="email"
                 type="email"
                 placeholder={t("emailPlaceholder")}
