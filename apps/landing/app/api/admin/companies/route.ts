@@ -3,8 +3,6 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 
-const PAGE_SIZE = 10;
-
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = await cookies();
@@ -15,37 +13,37 @@ export async function GET(request: NextRequest) {
     }
 
     const { searchParams } = request.nextUrl;
-    const filter = searchParams.get("filter") || "all"; // all | active | inactive
+    const filter = searchParams.get("filter") || "all"; // all | today_active
 
-    // For active/inactive we need to find companies with 3+ unique sessions this month
-    const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
-    let activeCompanyIds: Set<string> | null = null;
-    if (filter === "active" || filter === "inactive") {
-      const companiesWithViews = await prisma.$queryRaw<{ companyId: string }[]>`
-        SELECT "companyId"
+    const tz = searchParams.get("tz") || "UTC";
+    const nowTz = new Date().toLocaleString("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" });
+    const [y, m, d] = nowTz.split("-").map(Number);
+    const todayLocal = new Date(Date.UTC(y, m - 1, d));
+    const utcStr = todayLocal.toLocaleString("en-US", { timeZone: "UTC" });
+    const tzStr = todayLocal.toLocaleString("en-US", { timeZone: tz });
+    const offsetMs = new Date(utcStr).getTime() - new Date(tzStr).getTime();
+    const todayStart = new Date(todayLocal.getTime() + offsetMs);
+
+    // For today_active filter: companies with 1+ page view today
+    let todayActiveIds: Set<string> | null = null;
+    if (filter === "today_active") {
+      const companiesWithTodayViews = await prisma.$queryRaw<{ companyId: string }[]>`
+        SELECT DISTINCT "companyId"
         FROM page_views
-        WHERE "createdAt" >= ${startOfMonth}
-        GROUP BY "companyId"
-        HAVING COUNT(DISTINCT "sessionId") >= 3
+        WHERE "createdAt" >= ${todayStart}
       `;
-      activeCompanyIds = new Set(companiesWithViews.map((r) => r.companyId));
+      todayActiveIds = new Set(companiesWithTodayViews.map((r) => r.companyId));
     }
 
     const where: Record<string, unknown> = {};
-    if (filter === "active" && activeCompanyIds) {
-      where.id = { in: [...activeCompanyIds] };
-    } else if (filter === "inactive" && activeCompanyIds) {
-      where.id = activeCompanyIds.size > 0 ? { notIn: [...activeCompanyIds] } : undefined;
+    if (filter === "today_active" && todayActiveIds) {
+      if (todayActiveIds.size === 0) {
+        return NextResponse.json({ companies: [], total: 0 });
+      }
+      where.id = { in: [...todayActiveIds] };
     }
 
-    const total = await prisma.company.count({ where });
-    const totalPages = Math.ceil(total / PAGE_SIZE);
-
-    // Default to first page if no page param
-    const pageParam = searchParams.get("page");
-    const page = pageParam !== null
-      ? Math.max(0, Math.min(Number(pageParam), totalPages - 1))
-      : 0;
+    const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
 
     const companies = await prisma.company.findMany({
       where,
@@ -68,21 +66,10 @@ export async function GET(request: NextRequest) {
         },
       },
       orderBy: { createdAt: "desc" },
-      skip: page * PAGE_SIZE,
-      take: PAGE_SIZE,
     });
 
-    // Get monthly + today page views for this page of companies
+    // Get monthly + today page views for all companies
     const companyIds = companies.map((c) => c.id);
-
-    const tz = searchParams.get("tz") || "UTC";
-    const nowTz = new Date().toLocaleString("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" });
-    const [y, m, d] = nowTz.split("-").map(Number);
-    const todayLocal = new Date(Date.UTC(y, m - 1, d));
-    const utcStr = todayLocal.toLocaleString("en-US", { timeZone: "UTC" });
-    const tzStr = todayLocal.toLocaleString("en-US", { timeZone: tz });
-    const offsetMs = new Date(utcStr).getTime() - new Date(tzStr).getTime();
-    const todayStart = new Date(todayLocal.getTime() + offsetMs);
 
     const [monthlyViewCounts, todayViewCounts] = companyIds.length > 0
       ? await Promise.all([
@@ -121,9 +108,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       companies: items,
-      total,
-      page,
-      totalPages,
+      total: items.length,
     });
   } catch (error) {
     console.error("Error fetching companies:", error);

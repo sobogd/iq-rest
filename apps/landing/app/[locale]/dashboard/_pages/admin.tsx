@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Loader2, RefreshCw, FolderOpen, Package, Eye, MessageSquare, Mail } from "lucide-react";
+import { Loader2, RefreshCw, FolderOpen, Package, Eye, MessageSquare, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
@@ -23,20 +23,18 @@ interface Company {
   emailsSent: Record<string, string> | null;
 }
 
-type Filter = "all" | "active" | "inactive";
+type Filter = "all" | "today_active";
 
-const FILTERS: Filter[] = ["all", "active", "inactive"];
+const FILTERS: Filter[] = ["all", "today_active"];
 
 const TABS: { value: Filter; label: string }[] = [
   { value: "all", label: "All" },
-  { value: "active", label: "Active" },
-  { value: "inactive", label: "Inactive" },
+  { value: "today_active", label: "Today Active" },
 ];
 
-function buildUrl(filter: Filter, page?: number): string {
+function buildUrl(filter: Filter): string {
   const params = new URLSearchParams();
   if (filter !== "all") params.set("filter", filter);
-  if (page) params.set("page", String(page));
   const qs = params.toString();
   return `/dashboard/admin${qs ? `?${qs}` : ""}`;
 }
@@ -47,29 +45,24 @@ export function AdminPage() {
 
   const filterParam = searchParams.get("filter") as Filter | null;
   const filter: Filter = filterParam && FILTERS.includes(filterParam) ? filterParam : "all";
-  const currentPage = Math.max(0, Number(searchParams.get("page") || 0));
   const scrollParam = searchParams.get("scroll");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const [companies, setCompanies] = useState<Company[]>([]);
   const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
 
-  const fetchCompanies = useCallback(async (f: Filter, pg: number) => {
+  const fetchCompanies = useCallback(async (f: Filter) => {
     setLoading(true);
     try {
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      const params = new URLSearchParams({ filter: f, page: String(pg), tz });
+      const params = new URLSearchParams({ filter: f, tz });
       const res = await fetch(`/api/admin/companies?${params}`);
       if (!res.ok) return;
       const data = await res.json();
       setCompanies(data.companies);
       setTotal(data.total);
-      setPage(data.page);
-      setTotalPages(data.totalPages);
     } catch {
       console.error("Failed to fetch companies");
     } finally {
@@ -78,8 +71,8 @@ export function AdminPage() {
   }, []);
 
   useEffect(() => {
-    fetchCompanies(filter, currentPage);
-  }, [filter, currentPage, refreshKey, fetchCompanies]);
+    fetchCompanies(filter);
+  }, [filter, refreshKey, fetchCompanies]);
 
   useEffect(() => {
     if (!loading && scrollParam && scrollRef.current) {
@@ -98,7 +91,6 @@ export function AdminPage() {
           const scroll = Math.round(scrollRef.current?.scrollTop || 0);
           const params = new URLSearchParams();
           if (filter !== "all") params.set("filter", filter);
-          if (currentPage > 0) params.set("page", String(currentPage));
           if (scroll > 0) params.set("scroll", String(scroll));
           const url = "/dashboard/admin" + (params.toString() ? `?${params}` : "");
           router.replace(url);
@@ -126,6 +118,11 @@ export function AdminPage() {
             ))}
           </div>
 
+          {/* Total count */}
+          {!loading && (
+            <p className="text-xs text-muted-foreground text-center">{total} companies</p>
+          )}
+
           {/* List */}
           {loading && companies.length > 0 ? (
             <div className="rounded-md border border-border bg-muted/50 flex items-center justify-center" style={{ minHeight: "200px" }}>
@@ -150,7 +147,6 @@ export function AdminPage() {
                       const scroll = scrollRef.current?.scrollTop || 0;
                       const params = new URLSearchParams();
                       if (filter !== "all") params.set("filter", filter);
-                      if (currentPage > 0) params.set("page", String(currentPage));
                       if (scroll > 0) params.set("scroll", String(Math.round(scroll)));
                       const backUrl = "/dashboard/admin" + (params.toString() ? `?${params}` : "");
                       router.push(`/dashboard/admin/companies/${company.id}?back=${encodeURIComponent(backUrl)}`);
@@ -186,31 +182,6 @@ export function AdminPage() {
                   </button>
                 );
               })}
-            </div>
-          )}
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-between">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => router.push(buildUrl(filter, page - 1))}
-                disabled={page === 0 || loading}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <span className="text-xs text-muted-foreground">
-                {page + 1} / {totalPages} · {total} total
-              </span>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => router.push(buildUrl(filter, page + 1))}
-                disabled={page >= totalPages - 1 || loading}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
             </div>
           )}
         </DashboardContent>
