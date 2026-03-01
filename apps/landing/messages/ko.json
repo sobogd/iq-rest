@@ -1633,7 +1633,7 @@
       "addCategory": "카테고리 추가",
       "editCategory": "카테고리 편집",
       "name": "이름",
-      "namePlaceholder": "카테고리 이름 입력",
+      "namePlaceholder": "예: 에피타이저, 메인 요리, 디저트",
       "status": "상태",
       "active": "활성",
       "inactive": "비활성",

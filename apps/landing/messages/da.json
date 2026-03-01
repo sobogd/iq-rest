@@ -1633,7 +1633,7 @@
       "addCategory": "Tilføj kategori",
       "editCategory": "Rediger kategori",
       "name": "Navn",
-      "namePlaceholder": "Indtast kategorinavn",
+      "namePlaceholder": "f.eks. Forretter, Hovedretter, Desserter",
       "status": "Status",
       "active": "Aktiv",
       "inactive": "Inaktiv",

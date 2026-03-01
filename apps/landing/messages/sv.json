@@ -1633,7 +1633,7 @@
       "addCategory": "Lägg till kategori",
       "editCategory": "Redigera kategori",
       "name": "Namn",
-      "namePlaceholder": "Ange kategori namn",
+      "namePlaceholder": "t.ex. Förrätter, Huvudrätter, Efterrätter",
       "status": "Status",
       "active": "Aktiv",
       "inactive": "Inaktiv",

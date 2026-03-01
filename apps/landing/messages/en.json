@@ -1724,7 +1724,7 @@
       "addCategory": "Add Category",
       "editCategory": "Edit Category",
       "name": "Name",
-      "namePlaceholder": "Enter category name",
+      "namePlaceholder": "e.g. Appetizers, Main Dishes, Desserts",
       "status": "Status",
       "active": "Active",
       "inactive": "Inactive",

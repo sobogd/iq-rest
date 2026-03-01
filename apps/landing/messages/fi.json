@@ -1633,7 +1633,7 @@
       "addCategory": "Lisää kategoria",
       "editCategory": "Muokkaa kategoriaa",
       "name": "Nimi",
-      "namePlaceholder": "Syötä kategorian nimi",
+      "namePlaceholder": "esim. Alkupalat, Pääruoat, Jälkiruoat",
       "status": "Tila",
       "active": "Aktiivinen",
       "inactive": "Ei aktiivinen",

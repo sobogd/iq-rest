@@ -1633,7 +1633,7 @@
       "addCategory": "Bæta við flokki",
       "editCategory": "Breyta flokki",
       "name": "Nafn",
-      "namePlaceholder": "Sláðu inn nafn flokks",
+      "namePlaceholder": "t.d. Forréttur, Aðalréttir, Eftiréttir",
       "status": "Staða",
       "active": "Virkt",
       "inactive": "Óvirkt",

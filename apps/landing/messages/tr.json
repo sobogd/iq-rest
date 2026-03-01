@@ -1633,7 +1633,7 @@
       "addCategory": "Kategori ekle",
       "editCategory": "Kategoriyi Düzenle",
       "name": "İsim",
-      "namePlaceholder": "Kategori adını girin",
+      "namePlaceholder": "örn. Başlangıçlar, Ana Yemekler, Tatlılar",
       "status": "Durum",
       "active": "Aktif",
       "inactive": "Pasif",

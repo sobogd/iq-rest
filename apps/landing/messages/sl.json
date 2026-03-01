@@ -1633,7 +1633,7 @@
       "addCategory": "Dodaj kategorijo",
       "editCategory": "Uredi kategorijo",
       "name": "Ime",
-      "namePlaceholder": "Vnesite ime kategorije",
+      "namePlaceholder": "npr. Predjedi, Glavne jedi, Sladice",
       "status": "Status",
       "active": "Aktivno",
       "inactive": "Neaktivno",

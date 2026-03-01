@@ -1633,7 +1633,7 @@
       "addCategory": "Pridėti kategoriją",
       "editCategory": "Redaguoti kategoriją",
       "name": "Pavadinimas",
-      "namePlaceholder": "Įveskite kategorijos pavadinimą",
+      "namePlaceholder": "pvz. Užkandžiai, Pagrindiniai patiekalai, Desertai",
       "status": "Būsena",
       "active": "Aktyvi",
       "inactive": "Neaktyvi",

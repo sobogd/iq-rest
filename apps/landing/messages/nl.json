@@ -1633,7 +1633,7 @@
       "addCategory": "Categorie toevoegen",
       "editCategory": "Categorie Bewerken",
       "name": "Naam",
-      "namePlaceholder": "Voer de categorienaam in",
+      "namePlaceholder": "bijv. Voorgerechten, Hoofdgerechten, Desserts",
       "status": "Status",
       "active": "Actief",
       "inactive": "Inactief",

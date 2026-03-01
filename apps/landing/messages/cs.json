@@ -1633,7 +1633,7 @@
       "addCategory": "Přidat kategorii",
       "editCategory": "Upravit kategorii",
       "name": "Název",
-      "namePlaceholder": "Zadejte název kategorie",
+      "namePlaceholder": "např. Předkrmy, Hlavní jídla, Dezerty",
       "status": "Stav",
       "active": "Aktivní",
       "inactive": "Neaktivní",

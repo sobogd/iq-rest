@@ -1633,7 +1633,7 @@
       "addCategory": "Afegir categoria",
       "editCategory": "Editar categoria",
       "name": "Nom",
-      "namePlaceholder": "Introduïu el nom de la categoria",
+      "namePlaceholder": "ex. Entrants, Plats principals, Postres",
       "status": "Estat",
       "active": "Actiu",
       "inactive": "Inactiu",

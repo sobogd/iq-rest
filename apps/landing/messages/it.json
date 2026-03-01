@@ -1633,7 +1633,7 @@
       "addCategory": "Aggiungi categoria",
       "editCategory": "Modifica Categoria",
       "name": "Nome",
-      "namePlaceholder": "Inserisci il nome della categoria",
+      "namePlaceholder": "es. Antipasti, Primi piatti, Dolci",
       "status": "Stato",
       "active": "Attivo",
       "inactive": "Inattivo",

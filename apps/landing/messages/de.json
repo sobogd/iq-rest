@@ -1633,7 +1633,7 @@
       "addCategory": "Kategorie hinzufügen",
       "editCategory": "Kategorie bearbeiten",
       "name": "Name",
-      "namePlaceholder": "Geben Sie den Kategorienamen ein",
+      "namePlaceholder": "z.B. Vorspeisen, Hauptgerichte, Desserts",
       "status": "Status",
       "active": "Aktiv",
       "inactive": "Inaktiv",

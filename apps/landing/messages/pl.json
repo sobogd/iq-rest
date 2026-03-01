@@ -1633,7 +1633,7 @@
       "addCategory": "Dodaj kategorię",
       "editCategory": "Edytuj kategorię",
       "name": "Nazwa",
-      "namePlaceholder": "Wprowadź nazwę kategorii",
+      "namePlaceholder": "np. Przystawki, Dania główne, Desery",
       "status": "Status",
       "active": "Aktywna",
       "inactive": "Nieaktywna",

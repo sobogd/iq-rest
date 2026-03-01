@@ -1633,7 +1633,7 @@
       "addCategory": "カテゴリーを追加",
       "editCategory": "カテゴリを編集",
       "name": "名前",
-      "namePlaceholder": "カテゴリ名を入力",
+      "namePlaceholder": "例: 前菜、メイン料理、デザート",
       "status": "ステータス",
       "active": "有効",
       "inactive": "無効",

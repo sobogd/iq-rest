@@ -1633,7 +1633,7 @@
       "addCategory": "Ajouter une catégorie",
       "editCategory": "Modifier la Catégorie",
       "name": "Nom",
-      "namePlaceholder": "Entrez le nom de la catégorie",
+      "namePlaceholder": "ex. Entrées, Plats principaux, Desserts",
       "status": "Statut",
       "active": "Actif",
       "inactive": "Inactif",

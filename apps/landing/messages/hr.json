@@ -1633,7 +1633,7 @@
       "addCategory": "Dodaj kategoriju",
       "editCategory": "Uredi kategoriju",
       "name": "Ime",
-      "namePlaceholder": "Unesite ime kategorije",
+      "namePlaceholder": "npr. Predjela, Glavna jela, Deserti",
       "status": "Status",
       "active": "Aktivno",
       "inactive": "Neaktivno",

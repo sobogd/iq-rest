@@ -1633,7 +1633,7 @@
       "addCategory": "Pridať kategóriu",
       "editCategory": "Upraviť kategóriu",
       "name": "Názov",
-      "namePlaceholder": "Zadajte názov kategórie",
+      "namePlaceholder": "napr. Predjedlá, Hlavné jedlá, Dezerty",
       "status": "Stav",
       "active": "Aktívne",
       "inactive": "Neaktívne",

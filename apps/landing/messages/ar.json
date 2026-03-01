@@ -1633,7 +1633,7 @@
       "addCategory": "إضافة فئة",
       "editCategory": "تعديل الفئة",
       "name": "الاسم",
-      "namePlaceholder": "أدخل اسم الفئة",
+      "namePlaceholder": "مثال: مقبلات، أطباق رئيسية، حلويات",
       "status": "الحالة",
       "active": "نشط",
       "inactive": "غير نشط",

@@ -1633,7 +1633,7 @@
       "addCategory": "添加分类",
       "editCategory": "编辑类别",
       "name": "名称",
-      "namePlaceholder": "输入类别名称",
+      "namePlaceholder": "例如：开胃菜、主菜、甜点",
       "status": "状态",
       "active": "激活",
       "inactive": "未激活",

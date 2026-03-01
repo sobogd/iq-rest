@@ -1633,7 +1633,7 @@
       "addCategory": "Adaugă categorie",
       "editCategory": "Editează categoria",
       "name": "Nume",
-      "namePlaceholder": "Introdu numele categoriei",
+      "namePlaceholder": "ex. Aperitive, Feluri principale, Deserturi",
       "status": "Stare",
       "active": "Activ",
       "inactive": "Inactiv",

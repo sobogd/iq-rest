@@ -1633,7 +1633,7 @@
       "addCategory": "Kategória hozzáadása",
       "editCategory": "Kategória szerkesztése",
       "name": "Név",
-      "namePlaceholder": "Add meg a kategória nevét",
+      "namePlaceholder": "pl. Előételek, Főételek, Desszertek",
       "status": "Állapot",
       "active": "Aktív",
       "inactive": "Inaktív",
