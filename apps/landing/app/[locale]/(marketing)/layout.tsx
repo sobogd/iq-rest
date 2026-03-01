@@ -1,4 +1,5 @@
 import { Header, Footer } from "./_components";
+import { WhatsAppBlock } from "./_components/whatsapp-block";
 
 export default function MarketingLayout({
   children,
@@ -9,6 +10,7 @@ export default function MarketingLayout({
     <>
       <Header />
       <main className="flex-1">{children}</main>
+      <WhatsAppBlock />
       <Footer />
     </>
   );
