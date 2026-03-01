@@ -620,7 +620,10 @@
       "Nemokama pradžia",
       "Be kreditinės kortelės",
       "5 min sąranka"
-    ]
+    ],
+    "questionsTitle": "Turite klausimų?",
+    "questionsBody": "Parašykite mums — atsakysime per kelias minutes ir padėsime pasirinkti tinkamą planą.",
+    "questionsButton": "Rašyti WhatsApp"
   },
   "contacts": {
     "meta": {

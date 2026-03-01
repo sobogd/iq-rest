@@ -620,7 +620,10 @@
       "Ilmainen aloitus",
       "Ei luottokorttia",
       "5 min asennus"
-    ]
+    ],
+    "questionsTitle": "Onko kysyttävää?",
+    "questionsBody": "Kirjoita meille — vastaamme muutamassa minuutissa ja autamme valitsemaan oikean suunnitelman.",
+    "questionsButton": "Kirjoita WhatsAppissa"
   },
   "contacts": {
     "meta": {

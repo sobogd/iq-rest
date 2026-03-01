@@ -620,7 +620,10 @@
       "Zdarma na začátek",
       "Bez kreditní karty",
       "Nastavení za 5 min"
-    ]
+    ],
+    "questionsTitle": "Máte otázky?",
+    "questionsBody": "Napište nám — odpovíme během několika minut a pomůžeme vám vybrat správný plán.",
+    "questionsButton": "Napsat na WhatsApp"
   },
   "contacts": {
     "meta": {

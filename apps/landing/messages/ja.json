@@ -620,7 +620,10 @@
       "無料で開始",
       "クレジットカード不要",
       "5分で設定"
-    ]
+    ],
+    "questionsTitle": "ご質問がありますか？",
+    "questionsBody": "お気軽にお問い合わせください。数分以内にお返事し、最適なプランの選択をお手伝いします。",
+    "questionsButton": "WhatsAppで書く"
   },
   "contacts": {
     "meta": {

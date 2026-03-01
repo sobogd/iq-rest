@@ -620,7 +620,10 @@
       "Tosú saor in aisce",
       "Gan cárta creidmheasa",
       "5 nóim socrú"
-    ]
+    ],
+    "questionsTitle": "Ceisteanna agat?",
+    "questionsBody": "Scríobh chugainn — freagróimid laistigh de chúpla nóiméad agus cabhróimid leat an plean ceart a roghnú.",
+    "questionsButton": "Scríobh ar WhatsApp"
   },
   "contacts": {
     "meta": {

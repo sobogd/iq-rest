@@ -620,7 +620,10 @@
       "Tasuta algus",
       "Krediitkaarti pole vaja",
       "5 min seadistus"
-    ]
+    ],
+    "questionsTitle": "On küsimusi?",
+    "questionsBody": "Kirjutage meile — vastame mõne minuti jooksul ja aitame valida õige plaani.",
+    "questionsButton": "Kirjuta WhatsAppis"
   },
   "contacts": {
     "meta": {

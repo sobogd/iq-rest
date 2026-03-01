@@ -620,7 +620,10 @@
       "Inici gratuït",
       "Sense targeta de crèdit",
       "5 min configuració"
-    ]
+    ],
+    "questionsTitle": "Tens preguntes?",
+    "questionsBody": "Escriu-nos — et respondrem en pocs minuts i t'ajudarem a triar el pla adequat.",
+    "questionsButton": "Escriu a WhatsApp"
   },
   "contacts": {
     "meta": {

@@ -620,7 +620,10 @@
       "Gratuit pour commencer",
       "Sans carte de crédit",
       "Configuration en 5 min"
-    ]
+    ],
+    "questionsTitle": "Des questions ?",
+    "questionsBody": "Écrivez-nous — nous répondrons en quelques minutes et vous aiderons à choisir le bon plan.",
+    "questionsButton": "Écrire sur WhatsApp"
   },
   "contacts": {
     "meta": {

@@ -620,7 +620,10 @@
       "Ücretsiz başlangıç",
       "Kredi kartı yok",
       "5 dk kurulum"
-    ]
+    ],
+    "questionsTitle": "Sorularınız mı var?",
+    "questionsBody": "Bize yazın — birkaç dakika içinde yanıtlayacağız ve doğru planı seçmenize yardımcı olacağız.",
+    "questionsButton": "WhatsApp'ta yazın"
   },
   "contacts": {
     "meta": {

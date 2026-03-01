@@ -620,7 +620,10 @@
       "Start gratuit",
       "Fără card de credit",
       "Configurare în 5 min"
-    ]
+    ],
+    "questionsTitle": "Ai întrebări?",
+    "questionsBody": "Scrie-ne — vom răspunde în câteva minute și te vom ajuta să alegi planul potrivit.",
+    "questionsButton": "Scrie pe WhatsApp"
   },
   "contacts": {
     "meta": {

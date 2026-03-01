@@ -620,7 +620,10 @@
       "Ókeypis byrjun",
       "Ekkert kreditkort",
       "5 mín uppsetning"
-    ]
+    ],
+    "questionsTitle": "Ertu með spurningar?",
+    "questionsBody": "Skrifaðu okkur — við svörum innan nokkurra mínútna og hjálpum þér að velja rétta áætlun.",
+    "questionsButton": "Skrifa á WhatsApp"
   },
   "contacts": {
     "meta": {

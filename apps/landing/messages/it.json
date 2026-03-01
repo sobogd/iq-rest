@@ -620,7 +620,10 @@
       "Gratis per iniziare",
       "Nessuna carta di credito",
       "Setup in 5 min"
-    ]
+    ],
+    "questionsTitle": "Hai domande?",
+    "questionsBody": "Scrivici — ti risponderemo in pochi minuti e ti aiuteremo a scegliere il piano giusto.",
+    "questionsButton": "Scrivi su WhatsApp"
   },
   "contacts": {
     "meta": {

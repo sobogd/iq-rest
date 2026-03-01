@@ -620,7 +620,10 @@
       "Gratis start",
       "Ingen kredittkort",
       "5 min oppsett"
-    ]
+    ],
+    "questionsTitle": "Har du spørsmål?",
+    "questionsBody": "Skriv til oss — vi svarer innen få minutter og hjelper deg med å velge riktig plan.",
+    "questionsButton": "Skriv på WhatsApp"
   },
   "contacts": {
     "meta": {

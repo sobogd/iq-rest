@@ -620,7 +620,10 @@
       "Besplatan početak",
       "Bez kreditne kartice",
       "5 min postavljanje"
-    ]
+    ],
+    "questionsTitle": "Imate pitanja?",
+    "questionsBody": "Pišite nam — odgovorit ćemo za nekoliko minuta i pomoći vam odabrati pravi plan.",
+    "questionsButton": "Pišite na WhatsApp"
   },
   "contacts": {
     "meta": {

@@ -620,7 +620,10 @@
         "aiTranslation": "Unlimited",
         "aiImages": "Unlimited"
       }
-    }
+    },
+    "questionsTitle": "Still have questions?",
+    "questionsBody": "Write to us — we'll reply within a few minutes and help you choose the right plan.",
+    "questionsButton": "Write on WhatsApp"
   },
   "contacts": {
     "meta": {

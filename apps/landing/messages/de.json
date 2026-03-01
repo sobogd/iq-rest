@@ -620,7 +620,10 @@
       "Kostenloser Start",
       "Keine Kreditkarte",
       "5 Min. Einrichtung"
-    ]
+    ],
+    "questionsTitle": "Noch Fragen?",
+    "questionsBody": "Schreiben Sie uns — wir antworten innerhalb weniger Minuten und helfen Ihnen, den richtigen Plan zu wählen.",
+    "questionsButton": "Auf WhatsApp schreiben"
   },
   "contacts": {
     "meta": {

@@ -620,7 +620,10 @@
       "Ingyenes kezdés",
       "Bankkártya nélkül",
       "5 perces beállítás"
-    ]
+    ],
+    "questionsTitle": "Kérdésed van?",
+    "questionsBody": "Írj nekünk — perceken belül válaszolunk és segítünk kiválasztani a megfelelő csomagot.",
+    "questionsButton": "Írj WhatsAppon"
   },
   "contacts": {
     "meta": {

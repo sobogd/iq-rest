@@ -620,7 +620,10 @@
       "Gratis start",
       "Inget kreditkort",
       "5 min setup"
-    ]
+    ],
+    "questionsTitle": "Har du frågor?",
+    "questionsBody": "Skriv till oss — vi svarar inom några minuter och hjälper dig välja rätt plan.",
+    "questionsButton": "Skriv på WhatsApp"
   },
   "contacts": {
     "meta": {

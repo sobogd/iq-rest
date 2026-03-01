@@ -620,7 +620,10 @@
       "Bezmaksas sākums",
       "Nav nepieciešama kredītkarte",
       "5 min iestatīšana"
-    ]
+    ],
+    "questionsTitle": "Ir jautājumi?",
+    "questionsBody": "Rakstiet mums — atbildēsim dažu minūšu laikā un palīdzēsim izvēlēties pareizo plānu.",
+    "questionsButton": "Rakstiet WhatsApp"
   },
   "contacts": {
     "meta": {

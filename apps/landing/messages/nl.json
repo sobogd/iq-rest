@@ -620,7 +620,10 @@
       "Gratis starten",
       "Geen creditcard nodig",
       "5 min setup"
-    ]
+    ],
+    "questionsTitle": "Nog vragen?",
+    "questionsBody": "Schrijf ons — we antwoorden binnen enkele minuten en helpen u het juiste plan te kiezen.",
+    "questionsButton": "Schrijf op WhatsApp"
   },
   "contacts": {
     "meta": {
