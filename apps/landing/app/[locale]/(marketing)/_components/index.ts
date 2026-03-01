@@ -5,7 +5,7 @@ export { PricingSection } from "./pricing-section";
 export { HeroCreateButton } from "./hero-create-button";
 export { HeaderCreateButton } from "./header-create-button";
 export { ScrollToFeatures } from "./scroll-to-features";
-export { ContactForm } from "./contact-form";
+
 export { HowToSteps } from "./how-to-steps";
 export { MenuPreviewModal } from "./menu-preview-modal";
 export { HeroImages } from "./hero-images";

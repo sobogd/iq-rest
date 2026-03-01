@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ContactForm, CtaSection } from "../_components";
+import { CtaSection } from "../_components";
 import { JsonLd, createContactPageSchema, createBreadcrumbSchema, buildAlternates } from "../_lib";
 import { PageView } from "@/components/PageView";
 import Image from "next/image";
@@ -72,12 +72,6 @@ export default async function ContactsPage({
               className="object-cover"
             />
           </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <ContactForm />
         </div>
       </div>
 
