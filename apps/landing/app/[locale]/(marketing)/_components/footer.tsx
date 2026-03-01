@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { Logo } from "@/components/Logo";
-import { MessageCircle } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/pricing", key: "navigation.pricing" },
@@ -17,29 +16,12 @@ const LEGAL_LINKS = [
 ] as const;
 
 export async function Footer() {
-  const [t, tPricing] = await Promise.all([
-    getTranslations("footer"),
-    getTranslations("pricing"),
-  ]);
+  const t = await getTranslations("footer");
 
   return (
     <footer className="border-t bg-muted/30">
-      <div className="container mx-auto px-4 pt-8 pb-6">
-        <div className="text-center mb-8">
-          <h3 className="text-lg font-semibold mb-2">{tPricing("questionsTitle")}</h3>
-          <p className="text-sm text-muted-foreground mb-4 max-w-md mx-auto">{tPricing("questionsBody")}</p>
-          <a
-            href="https://wa.me/34637621754"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-          >
-            <MessageCircle className="h-4 w-4" />
-            {tPricing("questionsButton")}
-          </a>
-        </div>
-
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4 pt-6 border-t border-border/50">
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80">
             <Logo height={24} />
           </Link>
