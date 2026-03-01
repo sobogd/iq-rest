@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Странице менија",
       "scanPoolSubtitle": "Додајте фотографије или PDF фајлове вашег папирног менија. До 5 фајлова.",
       "demoButton": "Popunite uzorkom menija",
-      "demoDescription": "Niste spremni još? Pokušajte sa uzorkom menija da vidite kako funkcioniše."
+      "demoDescription": "Niste spremni još? Pokušajte sa uzorkom menija da vidite kako funkcioniše.",
+      "hintTitle": "Šta je kategorija?",
+      "hintBody": "Kategorija je deo vašeg menija. Na primer: Predjela, Glavna jela, Deserti, Pića, Dnevni meni.",
+      "hintNoCategories": "Nemate kategorije? Nema problema — napravite jednu pod nazivom \"Meni\" ili \"Naša jela\" i dodajte sve tamo."
     },
     "onboarding": {
       "nameTitle": "Како се зове ваш локал?",

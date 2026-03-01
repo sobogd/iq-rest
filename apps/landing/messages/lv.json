@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Ēdienkartes lapas",
       "scanPoolSubtitle": "Pievienojiet savas papīra ēdienkartes fotoattēlus vai PDF failus. Līdz 5 failiem.",
       "demoButton": "Aizpildīt ar paraugu ēdienkarti",
-      "demoDescription": "Vēl nav gatavs? Mēģiniet ar paraugu ēdienkarti, lai redzētu, kā tas darbojas."
+      "demoDescription": "Vēl nav gatavs? Mēģiniet ar paraugu ēdienkarti, lai redzētu, kā tas darbojas.",
+      "hintTitle": "Kas ir kategorija?",
+      "hintBody": "Kategorija ir jūsu ēdienkartes sadaļa. Piemēram: Uzkodas, Pamatēdieni, Deserti, Dzērieni, Pusdienu piedāvājums.",
+      "hintNoCategories": "Nav kategoriju? Nav problēmu — izveidojiet vienu ar nosaukumu \"Ēdienkarte\" vai \"Mūsu ēdieni\" un pievienojiet visu tur."
     },
     "onboarding": {
       "nameTitle": "Kāds ir jūsu vietas nosaukums?",

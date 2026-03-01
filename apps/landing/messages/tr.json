@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Menü sayfaları",
       "scanPoolSubtitle": "Kağıt menünüzün fotoğraflarını veya PDF dosyalarını ekleyin. En fazla 5 dosya.",
       "demoButton": "Örnek menü ile doldur",
-      "demoDescription": "Henüz hazır değil misiniz? Nasıl çalıştığını görmek için örnek bir menü ile deneyin."
+      "demoDescription": "Henüz hazır değil misiniz? Nasıl çalıştığını görmek için örnek bir menü ile deneyin.",
+      "hintTitle": "Kategori nedir?",
+      "hintBody": "Kategori, menünüzün bir bölümüdür. Örneğin: Başlangıçlar, Ana Yemekler, Tatlılar, İçecekler, Günün Menüsü.",
+      "hintNoCategories": "Kategoriniz yok mu? Sorun değil — \"Menü\" veya \"Yemeklerimiz\" adında bir tane oluşturun ve her şeyi oraya ekleyin."
     },
     "onboarding": {
       "nameTitle": "Mekanınızın adı nedir?",

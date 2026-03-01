@@ -460,6 +460,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           )}
 
         {categories.length === 0 ? (
+          <>
           <div className="flex flex-col items-center text-center rounded-md border border-border bg-muted/50 px-6 py-6">
             <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
             <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
@@ -471,6 +472,14 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
               {tMenu.addCategory}
             </Button>
           </div>
+          {!allDone && (
+            <div className="rounded-md border border-border bg-muted/50 px-4 py-4">
+              <p className="text-sm font-semibold mb-2">{tMenu.hintTitle}</p>
+              <p className="text-sm text-muted-foreground mb-3">{tMenu.hintBody}</p>
+              <p className="text-sm text-muted-foreground">{tMenu.hintNoCategories}</p>
+            </div>
+          )}
+          </>
         ) : (
           <div className="flex flex-col">
             <div className="pb-4 flex flex-col gap-4">

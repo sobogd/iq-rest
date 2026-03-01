@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Menusider",
       "scanPoolSubtitle": "Tilføj fotos eller PDF-filer af din papirmenu. Op til 5 filer.",
       "demoButton": "Udfyld med eksempelmenu",
-      "demoDescription": "Ikke klar endnu? Prøv med en eksempelmenu for at se, hvordan det fungerer."
+      "demoDescription": "Ikke klar endnu? Prøv med en eksempelmenu for at se, hvordan det fungerer.",
+      "hintTitle": "Hvad er en kategori?",
+      "hintBody": "En kategori er en sektion af din menu. For eksempel: Forretter, Hovedretter, Desserter, Drikkevarer, Frokosttilbud.",
+      "hintNoCategories": "Ingen kategorier? Intet problem — opret en kaldet \"Menu\" eller \"Vores retter\" og tilføj alt der."
     },
     "onboarding": {
       "nameTitle": "Hvad hedder dit sted?",

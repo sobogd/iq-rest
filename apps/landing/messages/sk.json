@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Stránky menu",
       "scanPoolSubtitle": "Pridajte fotky alebo PDF súbory vášho papierového menu. Až 5 súborov.",
       "demoButton": "Naplnit vzorovým menu",
-      "demoDescription": "Ešte nie ste pripravení? Vyskúšajte vzorové menu, aby ste videli, ako to funguje."
+      "demoDescription": "Ešte nie ste pripravení? Vyskúšajte vzorové menu, aby ste videli, ako to funguje.",
+      "hintTitle": "Čo je kategória?",
+      "hintBody": "Kategória je sekcia vášho menu. Napríklad: Predjedlá, Hlavné jedlá, Dezerty, Nápoje, Obedné menu.",
+      "hintNoCategories": "Nemáte kategórie? Žiadny problém — vytvorte jednu s názvom \"Menu\" alebo \"Naše jedlá\" a pridajte tam všetko."
     },
     "onboarding": {
       "nameTitle": "Ako sa volá vaše miesto?",

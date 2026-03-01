@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "菜单页面",
       "scanPoolSubtitle": "添加纸质菜单的照片或PDF文件。最多5个文件。",
       "demoButton": "填充示例菜单",
-      "demoDescription": "还没准备好？试试示例菜单，看看它是如何工作的。"
+      "demoDescription": "还没准备好？试试示例菜单，看看它是如何工作的。",
+      "hintTitle": "什么是分类？",
+      "hintBody": "分类是菜单的一个板块。例如：开胃菜、主菜、甜点、饮品、午餐特惠。",
+      "hintNoCategories": "没有分类？没问题——创建一个叫菜单或我们的菜品的分类，把所有菜品都添加进去。"
     },
     "onboarding": {
       "nameTitle": "您的店铺叫什么名字？",

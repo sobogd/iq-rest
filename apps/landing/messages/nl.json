@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Menupagina's",
       "scanPoolSubtitle": "Voeg foto's of PDF-bestanden van je papieren menu toe. Maximaal 5 bestanden.",
       "demoButton": "Vul met voorbeeldmenu",
-      "demoDescription": "Nog niet klaar? Probeer een voorbeeldmenu om te zien hoe het werkt."
+      "demoDescription": "Nog niet klaar? Probeer een voorbeeldmenu om te zien hoe het werkt.",
+      "hintTitle": "Wat is een categorie?",
+      "hintBody": "Een categorie is een sectie van je menu. Bijvoorbeeld: Voorgerechten, Hoofdgerechten, Desserts, Dranken, Dagmenu.",
+      "hintNoCategories": "Geen categorieën? Geen probleem — maak er een aan met de naam \"Menu\" of \"Onze gerechten\" en voeg alles daar toe."
     },
     "onboarding": {
       "nameTitle": "Hoe heet je zaak?",

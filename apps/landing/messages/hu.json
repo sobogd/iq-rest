@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Menüoldalak",
       "scanPoolSubtitle": "Adjon hozzá fényképeket vagy PDF fájlokat a papír menüjéből. Legfeljebb 5 fájl.",
       "demoButton": "Töltsd ki minta menüvel",
-      "demoDescription": "Még nem készült el? Próbáld ki egy minta menüvel, hogy lásd, hogyan működik."
+      "demoDescription": "Még nem készült el? Próbáld ki egy minta menüvel, hogy lásd, hogyan működik.",
+      "hintTitle": "Mi az a kategória?",
+      "hintBody": "A kategória az étlap egy szakasza. Például: Előételek, Főételek, Desszertek, Italok, Ebédmenü.",
+      "hintNoCategories": "Nincsenek kategóriák? Nem gond — hozz létre egyet \"Menü\" vagy \"Ételeink\" néven, és adj hozzá mindent oda."
     },
     "onboarding": {
       "nameTitle": "Mi a helye neve?",

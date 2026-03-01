@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Matseðilssíður",
       "scanPoolSubtitle": "Bættu við myndum eða PDF skrám af pappírsmatseðlinum þínum. Allt að 5 skrár.",
       "demoButton": "Fylltu með sýnimenú",
-      "demoDescription": "Ekki tilbúið enn? Prófaðu með sýnimenú til að sjá hvernig það virkar."
+      "demoDescription": "Ekki tilbúið enn? Prófaðu með sýnimenú til að sjá hvernig það virkar.",
+      "hintTitle": "Hvað er flokkur?",
+      "hintBody": "Flokkur er hluti af matseðlinum þínum. Til dæmis: Forréttur, Aðalréttir, Eftiréttir, Drykkir, Hádegismatseðill.",
+      "hintNoCategories": "Engir flokkar? Ekkert mál — búðu til einn sem heitir \"Matseðill\" eða \"Réttir okkar\" og bættu öllu þar við."
     },
     "onboarding": {
       "nameTitle": "Hvað heitir staðurinn þinn?",

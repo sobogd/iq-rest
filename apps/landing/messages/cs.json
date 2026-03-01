@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Stránky menu",
       "scanPoolSubtitle": "Přidejte fotky nebo PDF soubory vašeho papírového menu. Až 5 souborů.",
       "demoButton": "Vyplnit ukázkovým menu",
-      "demoDescription": "Ještě není připraveno? Vyzkoušejte ukázkové menu, abyste viděli, jak to funguje."
+      "demoDescription": "Ještě není připraveno? Vyzkoušejte ukázkové menu, abyste viděli, jak to funguje.",
+      "hintTitle": "Co je kategorie?",
+      "hintBody": "Kategorie je sekce vašeho menu. Například: Předkrmy, Hlavní jídla, Dezerty, Nápoje, Polední menu.",
+      "hintNoCategories": "Nemáte kategorie? Žádný problém — vytvořte jednu s názvem \"Menu\" nebo \"Naše jídla\" a přidejte tam vše."
     },
     "onboarding": {
       "nameTitle": "Jak se jmenuje vaše místo?",

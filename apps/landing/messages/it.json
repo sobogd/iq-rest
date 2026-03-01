@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Pagine del menu",
       "scanPoolSubtitle": "Aggiungi foto o file PDF del tuo menu cartaceo. Fino a 5 file.",
       "demoButton": "Compila con un menu di esempio",
-      "demoDescription": "Non sei ancora pronto? Prova con un menu di esempio per vedere come funziona."
+      "demoDescription": "Non sei ancora pronto? Prova con un menu di esempio per vedere come funziona.",
+      "hintTitle": "Cos'è una categoria?",
+      "hintBody": "Una categoria è una sezione del tuo menu. Ad esempio: Antipasti, Primi piatti, Dolci, Bevande, Menu del giorno.",
+      "hintNoCategories": "Non hai categorie? Nessun problema — creane una chiamata \"Menu\" o \"I nostri piatti\" e aggiungi tutto lì."
     },
     "onboarding": {
       "nameTitle": "Come si chiama il tuo locale?",

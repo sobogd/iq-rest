@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Pagini meniu",
       "scanPoolSubtitle": "Adăugați fotografii sau fișiere PDF ale meniului dvs. pe hârtie. Până la 5 fișiere.",
       "demoButton": "Umple cu un meniu de probă",
-      "demoDescription": "Nu ești pregătit încă? Încearcă cu un meniu de probă pentru a vedea cum funcționează."
+      "demoDescription": "Nu ești pregătit încă? Încearcă cu un meniu de probă pentru a vedea cum funcționează.",
+      "hintTitle": "Ce este o categorie?",
+      "hintBody": "O categorie este o secțiune a meniului tău. De exemplu: Aperitive, Feluri principale, Deserturi, Băuturi, Meniul zilei.",
+      "hintNoCategories": "Nu ai categorii? Nicio problemă — creează una numită \"Meniu\" sau \"Preparatele noastre\" și adaugă totul acolo."
     },
     "onboarding": {
       "nameTitle": "Cum se numește localul tău?",

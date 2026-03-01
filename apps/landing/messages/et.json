@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Menüü lehed",
       "scanPoolSubtitle": "Lisage oma pabermenüü fotod või PDF-failid. Kuni 5 faili.",
       "demoButton": "Täida näidismenüüga",
-      "demoDescription": "Ei ole veel valmis? Proovige näidismenüüd, et näha, kuidas see töötab."
+      "demoDescription": "Ei ole veel valmis? Proovige näidismenüüd, et näha, kuidas see töötab.",
+      "hintTitle": "Mis on kategooria?",
+      "hintBody": "Kategooria on menüü jaotis. Näiteks: Eelroad, Praad, Magustoidud, Joogid, Lõunamenüü.",
+      "hintNoCategories": "Pole kategooriaid? Pole probleemi — looge üks nimega \"Menüü\" või \"Meie road\" ja lisage kõik sinna."
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",

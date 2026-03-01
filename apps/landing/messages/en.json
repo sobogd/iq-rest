@@ -1844,7 +1844,10 @@
       "scanPoolTitle": "Menu pages",
       "scanPoolSubtitle": "Add photos or PDF files of your paper menu. Up to 5 files.",
       "demoButton": "Fill with sample menu",
-      "demoDescription": "Not ready yet? Try with a sample menu to see how it works."
+      "demoDescription": "Not ready yet? Try with a sample menu to see how it works.",
+      "hintTitle": "What is a category?",
+      "hintBody": "A category is a section of your menu. For example: Starters, Main Dishes, Desserts, Drinks, Lunch Specials.",
+      "hintNoCategories": "Don't have categories? No problem — create one called \"Menu\" or \"Our Dishes\" and add everything there."
     },
     "languages": {
       "translationProgress": "Translation Progress",

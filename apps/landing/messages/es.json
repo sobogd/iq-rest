@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Páginas del menú",
       "scanPoolSubtitle": "Añade fotos o archivos PDF de tu menú en papel. Hasta 5 archivos.",
       "demoButton": "Rellenar con menú de ejemplo",
-      "demoDescription": "¿Aún no estás listo? Prueba con un menú de ejemplo para ver cómo funciona."
+      "demoDescription": "¿Aún no estás listo? Prueba con un menú de ejemplo para ver cómo funciona.",
+      "hintTitle": "¿Qué es una categoría?",
+      "hintBody": "Una categoría es una sección de tu carta. Por ejemplo: Entrantes, Platos principales, Postres, Bebidas, Menú del día.",
+      "hintNoCategories": "¿No tienes categorías? No hay problema — crea una llamada \"Carta\" o \"Nuestros platos\" y añade todo allí."
     },
     "onboarding": {
       "nameTitle": "¿Cómo se llama tu local?",

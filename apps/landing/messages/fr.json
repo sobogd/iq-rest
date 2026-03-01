@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Pages du menu",
       "scanPoolSubtitle": "Ajoutez des photos ou fichiers PDF de votre menu papier. Jusqu'à 5 fichiers.",
       "demoButton": "Remplir avec un menu d'exemple",
-      "demoDescription": "Pas encore prêt ? Essayez avec un menu d'exemple pour voir comment cela fonctionne."
+      "demoDescription": "Pas encore prêt ? Essayez avec un menu d'exemple pour voir comment cela fonctionne.",
+      "hintTitle": "Qu'est-ce qu'une catégorie ?",
+      "hintBody": "Une catégorie est une section de votre menu. Par exemple : Entrées, Plats principaux, Desserts, Boissons, Menu du jour.",
+      "hintNoCategories": "Pas de catégories ? Pas de problème — créez-en une appelée \"Menu\" ou \"Nos plats\" et ajoutez tout là-dedans."
     },
     "onboarding": {
       "nameTitle": "Comment s'appelle votre établissement ?",

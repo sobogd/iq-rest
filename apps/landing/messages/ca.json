@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Pàgines del menú",
       "scanPoolSubtitle": "Afegiu fotos o fitxers PDF del vostre menú en paper. Fins a 5 fitxers.",
       "demoButton": "Omple amb un menú de mostra",
-      "demoDescription": "Encara no està llest? Prova amb un menú de mostra per veure com funciona."
+      "demoDescription": "Encara no està llest? Prova amb un menú de mostra per veure com funciona.",
+      "hintTitle": "Què és una categoria?",
+      "hintBody": "Una categoria és una secció del teu menú. Per exemple: Entrants, Plats principals, Postres, Begudes, Menú del dia.",
+      "hintNoCategories": "No tens categories? Cap problema — crea'n una anomenada \"Menú\" o \"Els nostres plats\" i afegeix-ho tot allà."
     },
     "onboarding": {
       "nameTitle": "Com es diu el teu local?",

@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Stranice jelovnika",
       "scanPoolSubtitle": "Dodajte fotografije ili PDF datoteke vašeg papirnatog jelovnika. Do 5 datoteka.",
       "demoButton": "Ispuni uzorak jelovnika",
-      "demoDescription": "Još nije spremno? Isprobajte uzorak jelovnika da vidite kako funkcionira."
+      "demoDescription": "Još nije spremno? Isprobajte uzorak jelovnika da vidite kako funkcionira.",
+      "hintTitle": "Što je kategorija?",
+      "hintBody": "Kategorija je odjeljak vašeg jelovnika. Na primjer: Predjela, Glavna jela, Deserti, Pića, Dnevni menu.",
+      "hintNoCategories": "Nemate kategorije? Nema problema — napravite jednu pod nazivom \"Jelovnik\" ili \"Naša jela\" i dodajte sve tamo."
     },
     "onboarding": {
       "nameTitle": "Kako se zove vaš lokal?",

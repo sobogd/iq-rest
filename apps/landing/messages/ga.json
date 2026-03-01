@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Leathanaigh bhiachlár",
       "scanPoolSubtitle": "Cuir grianghraif nó comhaid PDF de do bhiachlár páipéir leis. Suas le 5 chomhad.",
       "demoButton": "Líon le múnla miasa",
-      "demoDescription": "Níl sé réidh fós? Bain triail as le múnla miasa chun a fheiceáil conas a oibríonn sé."
+      "demoDescription": "Níl sé réidh fós? Bain triail as le múnla miasa chun a fheiceáil conas a oibríonn sé.",
+      "hintTitle": "Cad is catagóir ann?",
+      "hintBody": "Is roinn de do bhiachlár í catagóir. Mar shampla: Tosaithe, Príomhchúrsaí, Milseoga, Deochanna, Roghchlár lóin.",
+      "hintNoCategories": "Níl catagóirí agat? Fadhb ar bith — cruthaigh ceann darb ainm \"Biachlár\" nó \"Ár miasa\" agus cuir gach rud ann."
     },
     "onboarding": {
       "nameTitle": "Cad is ainm do d'áit?",

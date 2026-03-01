@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Strani menija",
       "scanPoolSubtitle": "Dodajte fotografije ali PDF datoteke vašega papirnatega menija. Do 5 datotek.",
       "demoButton": "Napolni z vzorčnim menijem",
-      "demoDescription": "Še niste pripravljeni? Poskusite z vzorčnim menijem, da vidite, kako deluje."
+      "demoDescription": "Še niste pripravljeni? Poskusite z vzorčnim menijem, da vidite, kako deluje.",
+      "hintTitle": "Kaj je kategorija?",
+      "hintBody": "Kategorija je razdelek vašega menija. Na primer: Predjedi, Glavne jedi, Sladice, Pijače, Dnevni meni.",
+      "hintNoCategories": "Nimate kategorij? Ni problema — ustvarite eno z imenom \"Meni\" ali \"Naše jedi\" in dodajte vse tja."
     },
     "onboarding": {
       "nameTitle": "Kako se imenuje vaš lokal?",

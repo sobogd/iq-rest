@@ -1873,7 +1873,10 @@
       "scanPoolTitle": "Menysidor",
       "scanPoolSubtitle": "Lägg till foton eller PDF-filer av din pappersmeny. Upp till 5 filer.",
       "demoButton": "Fyll med exempelmeny",
-      "demoDescription": "Inte redo än? Prova med en exempelmeny för att se hur det fungerar."
+      "demoDescription": "Inte redo än? Prova med en exempelmeny för att se hur det fungerar.",
+      "hintTitle": "Vad är en kategori?",
+      "hintBody": "En kategori är en del av din meny. Till exempel: Förrätter, Huvudrätter, Efterrätter, Drycker, Lunchmeny.",
+      "hintNoCategories": "Inga kategorier? Inga problem — skapa en med namnet \"Meny\" eller \"Våra rätter\" och lägg till allt där."
     },
     "onboarding": {
       "nameTitle": "Vad heter ditt ställe?",
