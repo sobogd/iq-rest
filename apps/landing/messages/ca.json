@@ -1666,7 +1666,7 @@
       "addItem": "Afegir article",
       "editItem": "Editar article",
       "name": "Nom",
-      "namePlaceholder": "Introdueix el nom de l'article",
+      "namePlaceholder": "ex. Amanida César, Pizza Margherita, Tiramisú",
       "description": "Descripció",
       "descriptionPlaceholder": "Introdueix la descripció de l'article",
       "price": "Preu",

@@ -1666,7 +1666,7 @@
       "addItem": "Додај артикал",
       "editItem": "Izmeni stavku",
       "name": "Ime",
-      "namePlaceholder": "Unesite ime stavke",
+      "namePlaceholder": "npr. Cezar salata, Pica Margarita, Tiramisu",
       "description": "Opis",
       "descriptionPlaceholder": "Unesite opis stavke",
       "price": "Cena",

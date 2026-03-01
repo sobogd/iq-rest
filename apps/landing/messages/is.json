@@ -1666,7 +1666,7 @@
       "addItem": "Bæta við vöru",
       "editItem": "Breyta hlut",
       "name": "Nafn",
-      "namePlaceholder": "Sláðu inn nafn hlut",
+      "namePlaceholder": "t.d. Sesar salat, Pizza Margherita, Tiramisu",
       "description": "Lýsing",
       "descriptionPlaceholder": "Sláðu inn lýsingu á hlut",
       "price": "Verð",

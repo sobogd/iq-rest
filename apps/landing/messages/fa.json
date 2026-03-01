@@ -1666,7 +1666,7 @@
       "addItem": "افزودن آیتم",
       "editItem": "ویرایش آیتم",
       "name": "نام",
-      "namePlaceholder": "نام آیتم را وارد کنید",
+      "namePlaceholder": "مثلا سالاد سزار، پیتزا مارگاریتا، تیرامیسو",
       "description": "توضیحات",
       "descriptionPlaceholder": "توضیحات آیتم را وارد کنید",
       "price": "قیمت",

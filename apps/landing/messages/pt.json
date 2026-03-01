@@ -1666,7 +1666,7 @@
       "addItem": "Adicionar item",
       "editItem": "Editar Item",
       "name": "Nome",
-      "namePlaceholder": "Digite o nome do item",
+      "namePlaceholder": "ex. Salada Caesar, Pizza Margherita, Tiramisu",
       "description": "Descrição",
       "descriptionPlaceholder": "Digite a descrição do item",
       "price": "Preço",

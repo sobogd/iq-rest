@@ -1666,7 +1666,7 @@
       "addItem": "Legg til vare",
       "editItem": "Rediger vare",
       "name": "Navn",
-      "namePlaceholder": "Skriv inn varenavn",
+      "namePlaceholder": "f.eks. Cæsarsalat, Pizza Margherita, Tiramisu",
       "description": "Beskrivelse",
       "descriptionPlaceholder": "Skriv inn varebeskrivelse",
       "price": "Pris",

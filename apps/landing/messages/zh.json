@@ -1666,7 +1666,7 @@
       "addItem": "添加商品",
       "editItem": "编辑项目",
       "name": "名称",
-      "namePlaceholder": "输入项目名称",
+      "namePlaceholder": "例如：凯撒沙拉、玛格丽特披萨、提拉米苏",
       "description": "描述",
       "descriptionPlaceholder": "输入项目描述",
       "price": "价格",

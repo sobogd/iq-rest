@@ -1666,7 +1666,7 @@
       "addItem": "Artikel hinzufügen",
       "editItem": "Artikel bearbeiten",
       "name": "Name",
-      "namePlaceholder": "Artikelname eingeben",
+      "namePlaceholder": "z.B. Caesar Salat, Pizza Margherita, Tiramisu",
       "description": "Beschreibung",
       "descriptionPlaceholder": "Artikelbeschreibung eingeben",
       "price": "Preis",

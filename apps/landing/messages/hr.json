@@ -1666,7 +1666,7 @@
       "addItem": "Dodaj artikl",
       "editItem": "Uredi stavku",
       "name": "Ime",
-      "namePlaceholder": "Unesite ime stavke",
+      "namePlaceholder": "npr. Caesar salata, Pizza Margherita, Tiramisu",
       "description": "Opis",
       "descriptionPlaceholder": "Unesite opis stavke",
       "price": "Cijena",

@@ -1666,7 +1666,7 @@
       "addItem": "Adaugă articol",
       "editItem": "Editează articolul",
       "name": "Nume",
-      "namePlaceholder": "Introduceți numele articolului",
+      "namePlaceholder": "ex. Salată Caesar, Pizza Margherita, Tiramisu",
       "description": "Descriere",
       "descriptionPlaceholder": "Introduceți descrierea articolului",
       "price": "Preț",

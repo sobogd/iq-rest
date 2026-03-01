@@ -1666,7 +1666,7 @@
       "addItem": "Lisää tuote",
       "editItem": "Muokkaa tuotetta",
       "name": "Nimi",
-      "namePlaceholder": "Syötä tuotteen nimi",
+      "namePlaceholder": "esim. Caesar-salaatti, Pizza Margherita, Tiramisu",
       "description": "Kuvaus",
       "descriptionPlaceholder": "Syötä tuotteen kuvaus",
       "price": "Hinta",

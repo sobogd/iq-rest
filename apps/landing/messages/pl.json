@@ -1666,7 +1666,7 @@
       "addItem": "Dodaj pozycję",
       "editItem": "Edytuj pozycję",
       "name": "Nazwa",
-      "namePlaceholder": "Wprowadź nazwę pozycji",
+      "namePlaceholder": "np. Sałatka Cezar, Pizza Margherita, Tiramisu",
       "description": "Opis",
       "descriptionPlaceholder": "Wprowadź opis pozycji",
       "price": "Cena",

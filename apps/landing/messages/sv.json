@@ -1666,7 +1666,7 @@
       "addItem": "Lägg till artikel",
       "editItem": "Redigera objekt",
       "name": "Namn",
-      "namePlaceholder": "Ange objektnamn",
+      "namePlaceholder": "t.ex. Caesarsallad, Pizza Margherita, Tiramisu",
       "description": "Beskrivning",
       "descriptionPlaceholder": "Ange objektsbeskrivning",
       "price": "Pris",

@@ -1757,7 +1757,7 @@
       "addItem": "Add Item",
       "editItem": "Edit Item",
       "name": "Name",
-      "namePlaceholder": "Enter item name",
+      "namePlaceholder": "e.g. Caesar Salad, Margherita Pizza, Tiramisu",
       "description": "Description",
       "descriptionPlaceholder": "Enter item description",
       "price": "Price",

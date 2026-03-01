@@ -1666,7 +1666,7 @@
       "addItem": "إضافة عنصر",
       "editItem": "تعديل العنصر",
       "name": "الاسم",
-      "namePlaceholder": "أدخل اسم العنصر",
+      "namePlaceholder": "مثال: سلطة سيزر، بيتزا مارغريتا، تيراميسو",
       "description": "الوصف",
       "descriptionPlaceholder": "أدخل وصف العنصر",
       "price": "السعر",

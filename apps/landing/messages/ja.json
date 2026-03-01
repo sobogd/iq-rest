@@ -1666,7 +1666,7 @@
       "addItem": "商品を追加",
       "editItem": "アイテムを編集",
       "name": "名前",
-      "namePlaceholder": "アイテム名を入力",
+      "namePlaceholder": "例: シーザーサラダ、マルゲリータピザ、ティラミス",
       "description": "説明",
       "descriptionPlaceholder": "アイテムの説明を入力",
       "price": "価格",

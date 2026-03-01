@@ -1666,7 +1666,7 @@
       "addItem": "Pridať položku",
       "editItem": "Upraviť položku",
       "name": "Názov",
-      "namePlaceholder": "Zadajte názov položky",
+      "namePlaceholder": "napr. Caesar šalát, Pizza Margherita, Tiramisu",
       "description": "Popis",
       "descriptionPlaceholder": "Zadajte popis položky",
       "price": "Cena",

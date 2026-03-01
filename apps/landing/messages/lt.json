@@ -1666,7 +1666,7 @@
       "addItem": "Pridėti prekę",
       "editItem": "Redaguoti prekę",
       "name": "Pavadinimas",
-      "namePlaceholder": "Įveskite prekės pavadinimą",
+      "namePlaceholder": "pvz. Cezario salotos, Pica Margherita, Tiramisu",
       "description": "Aprašymas",
       "descriptionPlaceholder": "Įveskite prekės aprašymą",
       "price": "Kaina",

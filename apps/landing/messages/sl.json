@@ -1666,7 +1666,7 @@
       "addItem": "Dodaj artikel",
       "editItem": "Uredi predmet",
       "name": "Ime",
-      "namePlaceholder": "Vnesite ime predmeta",
+      "namePlaceholder": "npr. Cezarjeva solata, Pizza Margherita, Tiramisu",
       "description": "Opis",
       "descriptionPlaceholder": "Vnesite opis predmeta",
       "price": "Cena",

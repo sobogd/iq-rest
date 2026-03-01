@@ -1666,7 +1666,7 @@
       "addItem": "Добавить товар",
       "editItem": "Редактировать товар",
       "name": "Название",
-      "namePlaceholder": "Введите название товара",
+      "namePlaceholder": "напр. Салат Цезарь, Пицца Маргарита, Тирамису",
       "description": "Описание",
       "descriptionPlaceholder": "Введите описание товара",
       "price": "Цена",

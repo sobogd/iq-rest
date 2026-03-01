@@ -1666,7 +1666,7 @@
       "addItem": "Додати товар",
       "editItem": "Редагувати позицію",
       "name": "Назва",
-      "namePlaceholder": "Введіть назву позиції",
+      "namePlaceholder": "напр. Салат Цезар, Піца Маргарита, Тірамісу",
       "description": "Опис",
       "descriptionPlaceholder": "Введіть опис позиції",
       "price": "Ціна",

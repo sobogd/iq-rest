@@ -1666,7 +1666,7 @@
       "addItem": "Tétel hozzáadása",
       "editItem": "Tétel szerkesztése",
       "name": "Név",
-      "namePlaceholder": "Írja be a tétel nevét",
+      "namePlaceholder": "pl. Caesar saláta, Pizza Margherita, Tiramisu",
       "description": "Leírás",
       "descriptionPlaceholder": "Írja be a tétel leírását",
       "price": "Ár",

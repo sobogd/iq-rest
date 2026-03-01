@@ -1666,7 +1666,7 @@
       "addItem": "Ürün ekle",
       "editItem": "Ürünü Düzenle",
       "name": "İsim",
-      "namePlaceholder": "Ürün adını girin",
+      "namePlaceholder": "örn. Sezar Salata, Margherita Pizza, Tiramisu",
       "description": "Açıklama",
       "descriptionPlaceholder": "Ürün açıklamasını girin",
       "price": "Fiyat",

@@ -1666,7 +1666,7 @@
       "addItem": "Artikel toevoegen",
       "editItem": "Item Bewerken",
       "name": "Naam",
-      "namePlaceholder": "Voer de naam van het item in",
+      "namePlaceholder": "bijv. Caesar Salade, Pizza Margherita, Tiramisu",
       "description": "Beschrijving",
       "descriptionPlaceholder": "Voer de beschrijving van het item in",
       "price": "Prijs",
