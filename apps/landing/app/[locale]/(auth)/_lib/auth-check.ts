@@ -26,10 +26,6 @@ export async function getOnboardingState() {
   // Validate session token against DB
   const tokenHash = hashSessionToken(session.value);
   if (!user || !user.sessionToken || user.sessionToken !== tokenHash) {
-    // Clear stale cookies so login page shows form cleanly
-    cookieStore.delete("session");
-    cookieStore.delete("user_email");
-    cookieStore.delete("user_id");
     return { isAuthenticated: false, onboardingStep: 0, userId: null };
   }
 

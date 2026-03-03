@@ -29,16 +29,12 @@ const getAuthUser = cache(async () => {
   });
 
   if (!user || !user.companies[0]) {
-    // User not found or has no company — clear stale cookies
-    clearAuthCookies(cookieStore);
     return null;
   }
 
   // Validate session token against stored hash
   const tokenHash = hashSessionToken(session.value);
   if (!user.sessionToken || user.sessionToken !== tokenHash) {
-    // Invalid/expired session — clear stale cookies
-    clearAuthCookies(cookieStore);
     return null;
   }
 
@@ -48,12 +44,6 @@ const getAuthUser = cache(async () => {
     company: user.companies[0].company,
   };
 });
-
-function clearAuthCookies(cookieStore: Awaited<ReturnType<typeof cookies>>) {
-  cookieStore.delete("session");
-  cookieStore.delete("user_email");
-  cookieStore.delete("user_id");
-}
 
 export async function getUserCompanyId(): Promise<string | null> {
   const auth = await getAuthUser();
