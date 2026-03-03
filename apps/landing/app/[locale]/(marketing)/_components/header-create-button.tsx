@@ -12,7 +12,7 @@ interface HeaderCreateButtonProps {
 export function HeaderCreateButton({ children }: HeaderCreateButtonProps) {
   return (
     <Button asChild className="opacity-95 hover:opacity-100 transition-opacity">
-      <Link href="/dashboard" onClick={() => analytics.marketing.headerCtaClick()}>{children}</Link>
+      <Link href="/login" onClick={() => analytics.marketing.headerCtaClick()}>{children}</Link>
     </Button>
   );
 }

@@ -58,7 +58,7 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
             ))}
           </div>
           <Button asChild className="w-full mt-6">
-            <Link href="/dashboard" onClick={() => setOpen(false)}>
+            <Link href="/login" onClick={() => setOpen(false)}>
               {getStartedLabel}
             </Link>
           </Button>

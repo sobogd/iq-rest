@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
-import { hashSessionToken } from "@/lib/session-utils";
+import { hashSessionToken, safeCompare } from "@/lib/session-utils";
 
 export async function getOnboardingState() {
   const cookieStore = await cookies();
@@ -25,7 +25,7 @@ export async function getOnboardingState() {
 
   // Validate session token against DB
   const tokenHash = hashSessionToken(session.value);
-  if (!user || !user.sessionToken || user.sessionToken !== tokenHash) {
+  if (!user || !user.sessionToken || !safeCompare(user.sessionToken, tokenHash)) {
     return { isAuthenticated: false, onboardingStep: 0, userId: null };
   }
 

@@ -1,4 +1,4 @@
-name: Deploy Application
+name: Deploy Test
 
 on:
   workflow_dispatch:
@@ -30,9 +30,8 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          # Копируем только то, что нужно для запуска
           source: ".next/,package.json,package-lock.json,public/,prisma/"
-          target: "/home/deploy/apps/iq-rest"
+          target: "/home/deploy/apps/iq-rest-test"
           overwrite: true
 
       - name: Setup and restart on VPS
@@ -43,13 +42,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           command_timeout: 10m
           script: |
-            # 1. Исправляем PATH для неинтерактивной сессии
             export PATH=$PATH:/usr/bin:/usr/local/bin:/home/deployer/.npm-global/bin
-            
-            # 2. Переходим в папку проекта
-            cd /home/deploy/apps/iq-rest
 
-            # 3. Генерируем свежий .env файл
+            cd /home/deploy/apps/iq-rest-test
+
             cat > .env <<EOF
             DATABASE_URL="${{ secrets.DATABASE_URL }}"
             SMTP_HOST="${{ secrets.SMTP_HOST }}"
@@ -78,17 +74,13 @@ jobs:
             GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION="${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION }}"
             GOOGLE_ADS_LOGIN_CUSTOMER_ID="${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}"
             TURNSTILE_SECRET_KEY="${{ secrets.TURNSTILE_SECRET_KEY }}"
+            PORT=9000
             EOF
 
-            # 4. Установка продакшн зависимостей
             npm ci --production
 
-            # 5. Генерация Prisma (если используется)
             npx prisma generate
 
-            # 6. Перезапуск через PM2
-            # Сначала пытаемся перезапустить, если процесса нет — запускаем новый
-            pm2 restart iq-rest --update-env || pm2 start npm --name "iq-rest" -- start
-            
-            # Сохраняем список процессов, чтобы они поднялись после ребута VPS
+            pm2 restart iq-rest-test --update-env || pm2 start npm --name "iq-rest-test" -- start -- -p 9000
+
             pm2 save

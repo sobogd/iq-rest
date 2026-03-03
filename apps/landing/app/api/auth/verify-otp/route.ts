@@ -6,6 +6,7 @@ import {
   generateSessionToken,
   hashSessionToken,
   hashOTP,
+  safeCompare,
   MAX_OTP_ATTEMPTS,
   AUTH_COOKIE_OPTIONS,
 } from "@/lib/session-utils";
@@ -54,18 +55,10 @@ export async function POST(request: NextRequest) {
       where: { email: normalizedEmail },
     });
 
-    // Check if user exists
-    if (!user) {
+    // Check if user exists and has a pending OTP
+    if (!user || !user.otp || !user.otpExpiresAt) {
       return NextResponse.json(
-        { error: "User not found" },
-        { status: 400 }
-      );
-    }
-
-    // Check if OTP exists
-    if (!user.otp || !user.otpExpiresAt) {
-      return NextResponse.json(
-        { error: "NO_CODE" },
+        { error: "INVALID_CODE" },
         { status: 400 }
       );
     }
@@ -92,14 +85,14 @@ export async function POST(request: NextRequest) {
       });
 
       return NextResponse.json(
-        { error: "CODE_EXPIRED" },
+        { error: "INVALID_CODE" },
         { status: 400 }
       );
     }
 
-    // Verify OTP (compare hashes)
+    // Verify OTP (constant-time comparison of hashes)
     const codeHash = hashOTP(code);
-    if (user.otp !== codeHash) {
+    if (!safeCompare(user.otp, codeHash)) {
       // Increment failed attempts
       await prisma.user.update({
         where: { email: normalizedEmail },

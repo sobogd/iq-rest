@@ -99,14 +99,14 @@ async function sendWelcomeEmail(email: string, locale: string) {
           ${t.outro}
         </p>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
+          <a href="https://iq-rest.com/login?from=email" style="color: #0066cc;">${t.cta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
           ${t.signature}
         </p>
       </div>
     `,
-    text: `${t.greeting}\n\n${t.intro}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.outro}\n\n${t.cta}: https://iq-rest.com/dashboard?from=email\n\n${t.signature}`,
+    text: `${t.greeting}\n\n${t.intro}\n\n${t.stepsIntro}\n1. ${t.step1}\n2. ${t.step2}\n3. ${t.step3}\n\n${t.outro}\n\n${t.cta}: https://iq-rest.com/login?from=email\n\n${t.signature}`,
   });
 }
 
@@ -206,7 +206,7 @@ export async function POST(request: NextRequest) {
 
         if (pendingCompany) {
           company = pendingCompany;
-          cookieStore.delete("pending_company_id");
+          cookieStore.set("pending_company_id", "", { maxAge: 0, path: "/" });
         }
       }
 
@@ -219,23 +219,49 @@ export async function POST(request: NextRequest) {
       }
 
       // Create user WITH OTP — always require verification
-      user = await prisma.user.create({
-        data: {
-          email: normalizedEmail,
-          otp: otpHash,
-          otpExpiresAt,
-          otpAttempts: 0,
-        },
-      });
+      // Use try/catch to handle race condition (concurrent requests for same email)
+      try {
+        user = await prisma.user.create({
+          data: {
+            email: normalizedEmail,
+            otp: otpHash,
+            otpExpiresAt,
+            otpAttempts: 0,
+          },
+        });
+      } catch (err: unknown) {
+        // Unique constraint violation — user was created by a concurrent request
+        if (err && typeof err === "object" && "code" in err && err.code === "P2002") {
+          const existingUser = await prisma.user.findUnique({
+            where: { email: normalizedEmail },
+          });
+          if (!existingUser) {
+            return NextResponse.json(
+              { error: "Failed to send OTP" },
+              { status: 500 }
+            );
+          }
+          user = await prisma.user.update({
+            where: { email: normalizedEmail },
+            data: { otp: otpHash, otpExpiresAt, otpAttempts: 0 },
+          });
+          // Skip company creation — the concurrent request already created it
+          isNewUser = false;
+        } else {
+          throw err;
+        }
+      }
 
-      // Link user to company
-      await prisma.userCompany.create({
-        data: {
-          userId: user.id,
-          companyId: company.id,
-          role: "owner",
-        },
-      });
+      // Link user to company (only for truly new users)
+      if (isNewUser) {
+        await prisma.userCompany.create({
+          data: {
+            userId: user.id,
+            companyId: company.id,
+            role: "owner",
+          },
+        });
+      }
 
       // Send welcome email (fire-and-forget)
       sendWelcomeEmail(normalizedEmail, locale).catch((err) =>
@@ -248,46 +274,54 @@ export async function POST(request: NextRequest) {
     const t = await getTranslations(locale);
     const subject = t.subject.replace("{code}", otpCode);
 
-    await transporter.sendMail({
-      from: process.env.FROM_EMAIL,
-      to: normalizedEmail,
-      subject,
-      html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.greeting}
-          </p>
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">
-            ${t.welcome}
-          </p>
-          <div style="margin: 24px 0; padding: 24px; background-color: #f5f5f5; border-radius: 12px; text-align: center;">
-            <span style="font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #1a1a1a;">
-              ${otpCode}
-            </span>
+    try {
+      await transporter.sendMail({
+        from: process.env.FROM_EMAIL,
+        to: normalizedEmail,
+        subject,
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 520px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a;">
+            <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+              ${t.greeting}
+            </p>
+            <p style="font-size: 17px; line-height: 1.7; margin: 0 0 16px;">
+              ${t.welcome}
+            </p>
+            <div style="margin: 24px 0; padding: 24px; background-color: #f5f5f5; border-radius: 12px; text-align: center;">
+              <span style="font-size: 36px; font-weight: bold; letter-spacing: 8px; color: #1a1a1a;">
+                ${otpCode}
+              </span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin: 0 0 24px; text-align: center;">
+              ${t.expiry}
+            </p>
+            <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+              ${t.instructions}
+            </p>
+            <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
+              ${t.helpOffer}
+            </p>
+            <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
+              <a href="https://iq-rest.com/login?from=email" style="color: #0066cc;">${t.cta}</a>
+            </p>
+            <p style="font-size: 15px; margin: 0 0 20px; color: #1a1a1a;">
+              ${t.signature}
+            </p>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 24px 0;">
+            <p style="color: #999; font-size: 13px; margin: 0;">
+              ${t.ignore}
+            </p>
           </div>
-          <p style="font-size: 14px; color: #666; margin: 0 0 24px; text-align: center;">
-            ${t.expiry}
-          </p>
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.instructions}
-          </p>
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 20px;">
-            ${t.helpOffer}
-          </p>
-          <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-            <a href="https://iq-rest.com/dashboard?from=email" style="color: #0066cc;">${t.cta}</a>
-          </p>
-          <p style="font-size: 15px; margin: 0 0 20px; color: #1a1a1a;">
-            ${t.signature}
-          </p>
-          <hr style="border: none; border-top: 1px solid #ddd; margin: 24px 0;">
-          <p style="color: #999; font-size: 13px; margin: 0;">
-            ${t.ignore}
-          </p>
-        </div>
-      `,
-      text: `${t.greeting}\n\n${t.welcome}\n\n${otpCode}\n\n${t.expiry}\n\n${t.instructions}\n\n${t.helpOffer}\n\n${t.cta}: https://iq-rest.com/dashboard?from=email\n\n${t.signature.replace("<br>", "\n")}\n\n---\n${t.ignore}`,
-    });
+        `,
+        text: `${t.greeting}\n\n${t.welcome}\n\n${otpCode}\n\n${t.expiry}\n\n${t.instructions}\n\n${t.helpOffer}\n\n${t.cta}: https://iq-rest.com/login?from=email\n\n${t.signature.replace("<br>", "\n")}\n\n---\n${t.ignore}`,
+      });
+    } catch (emailErr) {
+      console.error("Failed to send OTP email:", emailErr);
+      return NextResponse.json(
+        { error: "Failed to send OTP email" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { message: "OTP sent successfully", isNewUser },

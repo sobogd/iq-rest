@@ -62,7 +62,7 @@ export async function PUT(
     }
 
     const category = await prisma.category.update({
-      where: { id },
+      where: { id, companyId },
       data: {
         name: name.trim(),
         sortOrder: sortOrder ?? existingCategory.sortOrder,
@@ -125,7 +125,7 @@ export async function PATCH(
     }
 
     const category = await prisma.category.update({
-      where: { id },
+      where: { id, companyId },
       data: updateData,
     });
 
@@ -166,7 +166,7 @@ export async function DELETE(
     }
 
     await prisma.category.delete({
-      where: { id },
+      where: { id, companyId },
     });
 
     return NextResponse.json({ message: "Category deleted" });

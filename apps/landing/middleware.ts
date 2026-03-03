@@ -239,6 +239,7 @@ export default function middleware(request: NextRequest) {
       response.cookies.set("sqr_session_id", sessionId, {
         path: "/",
         httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
       });
     }

@@ -211,7 +211,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                         variant="default"
                         size="lg"
                       >
-                        <Link href="/dashboard" onClick={() => analytics.marketing.pricingCtaClick(plan.id)}>{t(`plans.${plan.id}.cta`)}</Link>
+                        <Link href="/login" onClick={() => analytics.marketing.pricingCtaClick(plan.id)}>{t(`plans.${plan.id}.cta`)}</Link>
                       </Button>
                       <p className={cn("text-[11px] text-center min-h-[2lh]", currencyPricing.yearlyTotal > 0 ? "text-muted-foreground/60" : "invisible")}>
                         {currencyPricing.yearlyTotal > 0

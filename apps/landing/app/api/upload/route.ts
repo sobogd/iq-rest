@@ -1,28 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
-import { prisma } from "@/lib/prisma";
+import { getUserCompanyId } from "@/lib/auth";
 import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
 import sharp from "sharp";
-
-async function getUserCompanyId(): Promise<string | null> {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email");
-
-  if (!userEmail?.value) return null;
-
-  const user = await prisma.user.findUnique({
-    where: { email: userEmail.value },
-    include: {
-      companies: {
-        include: { company: true },
-        take: 1,
-      },
-    },
-  });
-
-  return user?.companies[0]?.company.id ?? null;
-}
 
 export async function POST(request: NextRequest) {
   try {

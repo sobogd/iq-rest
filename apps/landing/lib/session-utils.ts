@@ -1,4 +1,4 @@
-import { createHash } from "crypto";
+import { createHash, timingSafeEqual } from "crypto";
 
 /**
  * Generate a cryptographically secure session token (64 hex chars).
@@ -35,6 +35,15 @@ export function generateOTP(): string {
  */
 export function hashOTP(otp: string): string {
   return createHash("sha256").update(otp).digest("hex");
+}
+
+/**
+ * Constant-time comparison of two hex strings.
+ * Prevents timing attacks when comparing session tokens or OTP hashes.
+ */
+export function safeCompare(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(Buffer.from(a, "hex"), Buffer.from(b, "hex"));
 }
 
 /** Max OTP verification attempts before lockout */

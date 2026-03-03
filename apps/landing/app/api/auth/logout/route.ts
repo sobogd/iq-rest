@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { locales } from "@/i18n/routing";
 
-async function handleLogout(request: NextRequest) {
+export async function POST(request: NextRequest) {
   const cookieStore = await cookies();
   const userEmail = cookieStore.get("user_email")?.value;
 
@@ -14,7 +14,7 @@ async function handleLogout(request: NextRequest) {
         where: { email: userEmail },
         data: { sessionToken: null },
       })
-      .catch(() => {});
+      .catch((err) => console.error("Logout DB error:", err));
   }
 
   // Clear all auth cookies
@@ -36,12 +36,4 @@ async function handleLogout(request: NextRequest) {
 
   // Redirect to login page with locale
   return NextResponse.redirect(new URL(`/${locale}/login`, origin));
-}
-
-export async function GET(request: NextRequest) {
-  return handleLogout(request);
-}
-
-export async function POST(request: NextRequest) {
-  return handleLogout(request);
 }

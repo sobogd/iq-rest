@@ -1,7 +1,7 @@
 import { cache } from "react";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
-import { hashSessionToken } from "@/lib/session-utils";
+import { hashSessionToken, safeCompare } from "@/lib/session-utils";
 
 /**
  * Cached user+company lookup — deduplicates DB query within a single request.
@@ -34,7 +34,7 @@ const getAuthUser = cache(async () => {
 
   // Validate session token against stored hash
   const tokenHash = hashSessionToken(session.value);
-  if (!user.sessionToken || user.sessionToken !== tokenHash) {
+  if (!user.sessionToken || !safeCompare(user.sessionToken, tokenHash)) {
     return null;
   }
 

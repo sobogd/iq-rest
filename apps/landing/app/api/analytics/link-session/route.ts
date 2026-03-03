@@ -1,24 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { getUserWithCompany } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
-    const { sessionId, userId } = body;
+    const auth = await getUserWithCompany();
+    if (!auth) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
 
-    if (!sessionId || !userId) {
+    const body = await request.json();
+    const { sessionId } = body;
+
+    if (!sessionId) {
       return NextResponse.json(
-        { error: "Missing required fields: sessionId, userId" },
+        { error: "Missing required field: sessionId" },
         { status: 400 }
       );
     }
 
-    // Find companyId via UserCompany
-    const userCompany = await prisma.userCompany.findFirst({
-      where: { userId },
-      select: { companyId: true },
-    });
-    const companyId = userCompany?.companyId || null;
+    const userId = auth.userId;
+    const companyId = auth.companyId;
 
     // Find the anonymous session
     const anonSession = await prisma.session.findUnique({

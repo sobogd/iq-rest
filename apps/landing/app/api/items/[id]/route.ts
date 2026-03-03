@@ -1,26 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
+import { getUserCompanyId } from "@/lib/auth";
 import { moveFromTemp } from "@/lib/s3";
-
-async function getUserCompanyId(): Promise<string | null> {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email");
-
-  if (!userEmail?.value) return null;
-
-  const user = await prisma.user.findUnique({
-    where: { email: userEmail.value },
-    include: {
-      companies: {
-        include: { company: true },
-        take: 1,
-      },
-    },
-  });
-
-  return user?.companies[0]?.company.id ?? null;
-}
 
 export async function GET(
   request: NextRequest,
@@ -112,7 +93,7 @@ export async function PUT(
     const finalImageUrl = imageUrl ? await moveFromTemp(imageUrl, companyId) : null;
 
     const item = await prisma.item.update({
-      where: { id },
+      where: { id, companyId },
       data: {
         name: name.trim(),
         description: description?.trim() || null,
@@ -193,7 +174,7 @@ export async function PATCH(
     }
 
     const item = await prisma.item.update({
-      where: { id },
+      where: { id, companyId },
       data: updateData,
     });
 
@@ -238,7 +219,7 @@ export async function DELETE(
     }
 
     await prisma.item.delete({
-      where: { id },
+      where: { id, companyId },
     });
 
     return NextResponse.json({ message: "Item deleted" });

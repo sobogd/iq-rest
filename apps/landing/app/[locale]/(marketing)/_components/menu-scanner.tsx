@@ -272,7 +272,7 @@ export function MenuScanner() {
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg shrink-0"
           onClick={() => analytics.marketing.scannerCtaClick()}
         >
-          <Link href="/dashboard">
+          <Link href="/login">
             {t("ctaButton")}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
