@@ -43,7 +43,14 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           command_timeout: 5m
           script: |
-            cat > /home/deploy/apps/iq-rest/.env <<EOF
+            # ПРИНУДИТЕЛЬНО УКАЗЫВАЕМ ПУТИ ДЛЯ SSH СЕССИИ
+            export PATH=$PATH:/usr/bin:/usr/local/bin:/home/deployer/.npm-global/bin
+            
+            # Переходим в папку проекта
+            cd /home/deploy/apps/iq-rest
+
+            # Генерируем .env
+            cat > .env <<EOF
             DATABASE_URL=${{ secrets.DATABASE_URL }}
             SMTP_HOST=${{ secrets.SMTP_HOST }}
             SMTP_PORT=${{ secrets.SMTP_PORT }}
@@ -72,9 +79,12 @@ jobs:
             GOOGLE_ADS_LOGIN_CUSTOMER_ID=${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
             TURNSTILE_SECRET_KEY=${{ secrets.TURNSTILE_SECRET_KEY }}
             EOF
-            cd /home/deploy/apps/iq-rest
+            
+            # Установка и запуск (используем npm/npx/pm2 напрямую через PATH)
             npm ci --production
             npx prisma generate
+            
+            # Проверка PM2 и перезапуск
             pm2 delete iq-rest 2>/dev/null || true
             pm2 start npm --name "iq-rest" -- start
             pm2 save
