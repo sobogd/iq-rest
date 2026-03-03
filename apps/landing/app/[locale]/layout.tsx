@@ -44,7 +44,7 @@ export default async function LocaleLayout({
       <body className="min-h-dvh flex flex-col">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }}
         />
         <ThemeProvider
           attribute="class"

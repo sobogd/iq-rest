@@ -56,7 +56,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
     <div className="h-dvh flex flex-col">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       {/* Hero section with background - takes remaining space */}
       <div className="flex-1 relative overflow-hidden min-h-[50vh]">

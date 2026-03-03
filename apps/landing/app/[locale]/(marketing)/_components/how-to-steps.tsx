@@ -37,7 +37,7 @@ export async function HowToSteps({ noIndex = false }: HowToStepsProps) {
       {!noIndex && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema).replace(/</g, "\\u003c") }}
         />
       )}
       <div className="w-full py-16 bg-muted/50">
