@@ -9,6 +9,7 @@ import { hashSessionToken } from "@/lib/session-utils";
  * from both layout.tsx and page.tsx.
  *
  * Session token is hashed and compared against the stored hash in DB.
+ * If cookies exist but session is invalid, cookies are cleared automatically.
  */
 const getAuthUser = cache(async () => {
   const cookieStore = await cookies();
@@ -27,11 +28,17 @@ const getAuthUser = cache(async () => {
     },
   });
 
-  if (!user || !user.companies[0]) return null;
+  if (!user || !user.companies[0]) {
+    // User not found or has no company — clear stale cookies
+    clearAuthCookies(cookieStore);
+    return null;
+  }
 
   // Validate session token against stored hash
   const tokenHash = hashSessionToken(session.value);
   if (!user.sessionToken || user.sessionToken !== tokenHash) {
+    // Invalid/expired session — clear stale cookies
+    clearAuthCookies(cookieStore);
     return null;
   }
 
@@ -41,6 +48,12 @@ const getAuthUser = cache(async () => {
     company: user.companies[0].company,
   };
 });
+
+function clearAuthCookies(cookieStore: Awaited<ReturnType<typeof cookies>>) {
+  cookieStore.delete("session");
+  cookieStore.delete("user_email");
+  cookieStore.delete("user_id");
+}
 
 export async function getUserCompanyId(): Promise<string | null> {
   const auth = await getAuthUser();
