@@ -10,9 +10,16 @@ export const revalidate = 300;
 
 function getInstagramUrl(instagram: string): string {
   if (instagram.startsWith("http://") || instagram.startsWith("https://")) {
-    return instagram;
+    try {
+      const url = new URL(instagram);
+      if (url.hostname.endsWith("instagram.com") || url.hostname.endsWith("instagr.am")) {
+        return instagram;
+      }
+    } catch {}
+    return "https://instagram.com";
   }
-  return `https://instagram.com/${instagram.replace("@", "")}`;
+  const username = instagram.replace(/[^a-zA-Z0-9._]/g, "");
+  return `https://instagram.com/${username}`;
 }
 
 interface ContactsPageProps {
