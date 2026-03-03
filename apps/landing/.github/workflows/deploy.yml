@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy Application
 
 on:
   push:
@@ -9,17 +9,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install local dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build Application
         run: npm run build
         env:
           NEXT_PUBLIC_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
@@ -31,60 +32,65 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
+          # Копируем только то, что нужно для запуска
           source: ".next/,package.json,package-lock.json,public/,prisma/"
           target: "/home/deploy/apps/iq-rest"
           overwrite: true
 
-      - name: Setup and restart
+      - name: Setup and restart on VPS
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SERVER_IP }}
           username: deployer
           key: ${{ secrets.SSH_KEY }}
-          command_timeout: 5m
+          command_timeout: 10m
           script: |
-            # ПРИНУДИТЕЛЬНО УКАЗЫВАЕМ ПУТИ ДЛЯ SSH СЕССИИ
+            # 1. Исправляем PATH для неинтерактивной сессии
             export PATH=$PATH:/usr/bin:/usr/local/bin:/home/deployer/.npm-global/bin
             
-            # Переходим в папку проекта
+            # 2. Переходим в папку проекта
             cd /home/deploy/apps/iq-rest
 
-            # Генерируем .env
+            # 3. Генерируем свежий .env файл
             cat > .env <<EOF
-            DATABASE_URL=${{ secrets.DATABASE_URL }}
-            SMTP_HOST=${{ secrets.SMTP_HOST }}
-            SMTP_PORT=${{ secrets.SMTP_PORT }}
-            SMTP_USER=${{ secrets.SMTP_USER }}
-            SMTP_PASS=${{ secrets.SMTP_PASS }}
-            FROM_EMAIL=${{ secrets.FROM_EMAIL }}
-            TO_EMAIL=${{ secrets.TO_EMAIL }}
-            S3_HOST=${{ secrets.S3_HOST }}
-            S3_KEY=${{ secrets.S3_KEY }}
-            S3_NAME=${{ secrets.S3_NAME }}
-            S3_REGION=${{ secrets.S3_REGION }}
-            S3_TOKEN=${{ secrets.S3_TOKEN }}
-            NEXT_PUBLIC_MAPS_API_KEY=${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}
-            STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}
-            STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}
-            NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
-            GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
-            GOOGLE_ADS_CLIENT_ID=${{ secrets.GOOGLE_ADS_CLIENT_ID }}
-            GOOGLE_ADS_CLIENT_SECRET=${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
-            GOOGLE_ADS_REFRESH_TOKEN=${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
-            GOOGLE_ADS_CUSTOMER_ID=${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}
-            GOOGLE_ADS_DEVELOPER_TOKEN=${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
-            GOOGLE_ADS_CONVERSION_ACTION_ID=${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID }}
-            GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS=${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS }}
-            GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION=${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION }}
-            GOOGLE_ADS_LOGIN_CUSTOMER_ID=${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
-            TURNSTILE_SECRET_KEY=${{ secrets.TURNSTILE_SECRET_KEY }}
+            DATABASE_URL="${{ secrets.DATABASE_URL }}"
+            SMTP_HOST="${{ secrets.SMTP_HOST }}"
+            SMTP_PORT="${{ secrets.SMTP_PORT }}"
+            SMTP_USER="${{ secrets.SMTP_USER }}"
+            SMTP_PASS="${{ secrets.SMTP_PASS }}"
+            FROM_EMAIL="${{ secrets.FROM_EMAIL }}"
+            TO_EMAIL="${{ secrets.TO_EMAIL }}"
+            S3_HOST="${{ secrets.S3_HOST }}"
+            S3_KEY="${{ secrets.S3_KEY }}"
+            S3_NAME="${{ secrets.S3_NAME }}"
+            S3_REGION="${{ secrets.S3_REGION }}"
+            S3_TOKEN="${{ secrets.S3_TOKEN }}"
+            NEXT_PUBLIC_MAPS_API_KEY="${{ secrets.NEXT_PUBLIC_MAPS_API_KEY }}"
+            STRIPE_SECRET_KEY="${{ secrets.STRIPE_SECRET_KEY }}"
+            STRIPE_WEBHOOK_SECRET="${{ secrets.STRIPE_WEBHOOK_SECRET }}"
+            NEXT_PUBLIC_APP_URL="${{ secrets.NEXT_PUBLIC_APP_URL }}"
+            GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}"
+            GOOGLE_ADS_CLIENT_ID="${{ secrets.GOOGLE_ADS_CLIENT_ID }}"
+            GOOGLE_ADS_CLIENT_SECRET="${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}"
+            GOOGLE_ADS_REFRESH_TOKEN="${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}"
+            GOOGLE_ADS_CUSTOMER_ID="${{ secrets.GOOGLE_ADS_CUSTOMER_ID }}"
+            GOOGLE_ADS_DEVELOPER_TOKEN="${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}"
+            GOOGLE_ADS_CONVERSION_ACTION_ID="${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID }}"
+            GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS="${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_VIEWS }}"
+            GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION="${{ secrets.GOOGLE_ADS_CONVERSION_ACTION_ID_SUBSCRIPTION }}"
+            GOOGLE_ADS_LOGIN_CUSTOMER_ID="${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}"
+            TURNSTILE_SECRET_KEY="${{ secrets.TURNSTILE_SECRET_KEY }}"
             EOF
-            
-            # Установка и запуск (используем npm/npx/pm2 напрямую через PATH)
+
+            # 4. Установка продакшн зависимостей
             npm ci --production
+
+            # 5. Генерация Prisma (если используется)
             npx prisma generate
+
+            # 6. Перезапуск через PM2
+            # Сначала пытаемся перезапустить, если процесса нет — запускаем новый
+            pm2 restart iq-rest --update-env || pm2 start npm --name "iq-rest" -- start
             
-            # Проверка PM2 и перезапуск
-            pm2 delete iq-rest 2>/dev/null || true
-            pm2 start npm --name "iq-rest" -- start
+            # Сохраняем список процессов, чтобы они поднялись после ребута VPS
             pm2 save
