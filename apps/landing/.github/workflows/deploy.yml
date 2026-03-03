@@ -39,7 +39,7 @@ jobs:
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: deploy
+          username: root
           key: ${{ secrets.SSH_KEY }}
           command_timeout: 5m
           script: |
