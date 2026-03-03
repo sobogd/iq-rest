@@ -2,22 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
-
-const COOKIE_OPTIONS = {
-  httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
-  sameSite: "lax" as const,
-  maxAge: 60 * 60 * 24 * 7, // 7 days
-  path: "/",
-};
-
-function generateSessionToken(): string {
-  const array = new Uint8Array(32);
-  crypto.getRandomValues(array);
-  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
-    ""
-  );
-}
+import {
+  generateSessionToken,
+  hashSessionToken,
+  AUTH_COOKIE_OPTIONS,
+} from "@/lib/session-utils";
 
 export async function POST(request: NextRequest) {
   try {
@@ -27,6 +16,15 @@ export async function POST(request: NextRequest) {
     const currentUserId = cookieStore.get("user_id")?.value;
 
     if (!isAdminEmail(currentEmail) || !currentSession || !currentUserId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
+    }
+
+    // Validate admin session against DB
+    const adminUser = await prisma.user.findUnique({
+      where: { email: currentEmail! },
+    });
+    const adminTokenHash = hashSessionToken(currentSession);
+    if (!adminUser || adminUser.sessionToken !== adminTokenHash) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
     }
 
@@ -51,15 +49,30 @@ export async function POST(request: NextRequest) {
     }
 
     // Save current admin cookies
-    cookieStore.set("admin_original_session", currentSession, COOKIE_OPTIONS);
-    cookieStore.set("admin_original_email", currentEmail!, COOKIE_OPTIONS);
-    cookieStore.set("admin_original_id", currentUserId, COOKIE_OPTIONS);
+    cookieStore.set(
+      "admin_original_session",
+      currentSession,
+      AUTH_COOKIE_OPTIONS
+    );
+    cookieStore.set(
+      "admin_original_email",
+      currentEmail!,
+      AUTH_COOKIE_OPTIONS
+    );
+    cookieStore.set("admin_original_id", currentUserId, AUTH_COOKIE_OPTIONS);
 
-    // Overwrite auth cookies with target user
+    // Generate new session for target user and save hash
     const newSession = generateSessionToken();
-    cookieStore.set("session", newSession, COOKIE_OPTIONS);
-    cookieStore.set("user_email", targetUser.email, COOKIE_OPTIONS);
-    cookieStore.set("user_id", targetUser.id, COOKIE_OPTIONS);
+    const newTokenHash = hashSessionToken(newSession);
+
+    await prisma.user.update({
+      where: { id: targetUser.id },
+      data: { sessionToken: newTokenHash },
+    });
+
+    cookieStore.set("session", newSession, AUTH_COOKIE_OPTIONS);
+    cookieStore.set("user_email", targetUser.email, AUTH_COOKIE_OPTIONS);
+    cookieStore.set("user_id", targetUser.id, AUTH_COOKIE_OPTIONS);
 
     return NextResponse.json({ ok: true });
   } catch (error) {

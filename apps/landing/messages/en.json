@@ -1608,6 +1608,7 @@
         "codeExpired": "Code has expired. Please request a new one.",
         "noCode": "No verification code found. Please request a new one.",
         "invalidCode": "Invalid code. Please try again.",
+        "tooManyAttempts": "Too many attempts. Please request a new code.",
         "emailRequired": "Please enter your email.",
         "emailInvalid": "Please enter a valid email."
       }

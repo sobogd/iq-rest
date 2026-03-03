@@ -2,17 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { OAuth2Client } from "google-auth-library";
+import {
+  generateSessionToken,
+  hashSessionToken,
+  AUTH_COOKIE_OPTIONS,
+} from "@/lib/session-utils";
 
-const GOOGLE_CLIENT_ID = "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID =
+  "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
-
-function generateSessionToken(): string {
-  const array = new Uint8Array(32);
-  crypto.getRandomValues(array);
-  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
-    ""
-  );
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -76,22 +74,20 @@ export async function POST(request: NextRequest) {
       user = result;
     }
 
-    // Generate session token
+    // Generate session token and save hash to DB
     const sessionToken = generateSessionToken();
+    const tokenHash = hashSessionToken(sessionToken);
+
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { sessionToken: tokenHash },
+    });
 
     // Set session cookies
     const cookieStore = await cookies();
-    const cookieOptions = {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax" as const,
-      maxAge: 60 * 60 * 24 * 7,
-      path: "/",
-    };
-
-    cookieStore.set("session", sessionToken, cookieOptions);
-    cookieStore.set("user_email", normalizedEmail, cookieOptions);
-    cookieStore.set("user_id", user.id, cookieOptions);
+    cookieStore.set("session", sessionToken, AUTH_COOKIE_OPTIONS);
+    cookieStore.set("user_email", normalizedEmail, AUTH_COOKIE_OPTIONS);
+    cookieStore.set("user_id", user.id, AUTH_COOKIE_OPTIONS);
 
     // Get onboarding step
     const userCompany = await prisma.userCompany.findFirst({

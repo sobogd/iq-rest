@@ -2,12 +2,30 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { validateEmail } from "@/lib/validate-email";
+import {
+  generateSessionToken,
+  hashSessionToken,
+  hashOTP,
+  MAX_OTP_ATTEMPTS,
+  AUTH_COOKIE_OPTIONS,
+} from "@/lib/session-utils";
 
-// Simple session token generator
-function generateSessionToken(): string {
-  const array = new Uint8Array(32);
-  crypto.getRandomValues(array);
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+// In-memory rate limiter for OTP verification (per email)
+const verifyAttempts = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const RATE_LIMIT_MAX = 10; // max 10 requests per window
+
+function isRateLimited(email: string): boolean {
+  const now = Date.now();
+  const entry = verifyAttempts.get(email);
+
+  if (!entry || now > entry.resetAt) {
+    verifyAttempts.set(email, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
 }
 
 export async function POST(request: NextRequest) {
@@ -20,6 +38,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "Email and code are required" },
         { status: 400 }
+      );
+    }
+
+    // Rate limiting per email
+    if (isRateLimited(normalizedEmail)) {
+      return NextResponse.json(
+        { error: "TOO_MANY_ATTEMPTS" },
+        { status: 429 }
       );
     }
 
@@ -44,15 +70,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if OTP is expired
-    if (user.otpExpiresAt < new Date()) {
-      // Clear expired OTP
+    // Check if too many failed attempts (DB-level protection)
+    if (user.otpAttempts >= MAX_OTP_ATTEMPTS) {
+      // Clear OTP — user must request a new one
       await prisma.user.update({
         where: { email: normalizedEmail },
-        data: {
-          otp: null,
-          otpExpiresAt: null,
-        },
+        data: { otp: null, otpExpiresAt: null, otpAttempts: 0 },
+      });
+
+      return NextResponse.json(
+        { error: "TOO_MANY_ATTEMPTS" },
+        { status: 429 }
+      );
+    }
+
+    // Check if OTP is expired
+    if (user.otpExpiresAt < new Date()) {
+      await prisma.user.update({
+        where: { email: normalizedEmail },
+        data: { otp: null, otpExpiresAt: null, otpAttempts: 0 },
       });
 
       return NextResponse.json(
@@ -61,53 +97,40 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify OTP
-    if (user.otp !== code) {
+    // Verify OTP (compare hashes)
+    const codeHash = hashOTP(code);
+    if (user.otp !== codeHash) {
+      // Increment failed attempts
+      await prisma.user.update({
+        where: { email: normalizedEmail },
+        data: { otpAttempts: { increment: 1 } },
+      });
+
       return NextResponse.json(
         { error: "INVALID_CODE" },
         { status: 400 }
       );
     }
 
-    // OTP is valid - clear it
+    // OTP is valid — generate session token and save hash to DB
+    const sessionToken = generateSessionToken();
+    const tokenHash = hashSessionToken(sessionToken);
+
     await prisma.user.update({
       where: { email: normalizedEmail },
       data: {
         otp: null,
         otpExpiresAt: null,
+        otpAttempts: 0,
+        sessionToken: tokenHash,
       },
     });
 
-    // Generate session token
-    const sessionToken = generateSessionToken();
-
-    // Set session cookie
+    // Set session cookies
     const cookieStore = await cookies();
-    cookieStore.set("session", sessionToken, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-      path: "/",
-    });
-
-    // Store user email in a separate cookie for display purposes
-    cookieStore.set("user_email", normalizedEmail, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-      path: "/",
-    });
-
-    // Store user ID in cookie
-    cookieStore.set("user_id", user.id, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-      path: "/",
-    });
+    cookieStore.set("session", sessionToken, AUTH_COOKIE_OPTIONS);
+    cookieStore.set("user_email", normalizedEmail, AUTH_COOKIE_OPTIONS);
+    cookieStore.set("user_id", user.id, AUTH_COOKIE_OPTIONS);
 
     // Get onboarding step for redirect hint
     const userCompany = await prisma.userCompany.findFirst({

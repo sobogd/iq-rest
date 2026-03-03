@@ -12,12 +12,14 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  otp       String?
+  id           String    @id @default(cuid())
+  email        String    @unique
+  otp          String?
   otpExpiresAt DateTime?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  otpAttempts  Int       @default(0) // failed OTP verification attempts
+  sessionToken String?   // hashed session token for validation
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 
   companies       UserCompany[]
   supportMessages SupportMessage[]

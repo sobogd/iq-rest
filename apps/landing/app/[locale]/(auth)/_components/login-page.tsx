@@ -172,29 +172,11 @@ export function LoginPage() {
 
       if (response.ok) {
         track(DashboardEvent.CLICKED_LOGIN_CONTINUE);
-
-        if (data.autoLogin) {
-          if (isAdminEmail(email)) {
-            analytics.disableTracking();
-          }
-          if (data.isNewUser) {
-            track(DashboardEvent.AUTH_SIGNUP);
-          }
-          if (data.fromScanner) {
-            analytics.marketing.scannerConversion();
-          }
-          await analytics.linkSession(data.userId);
-
-          // Redirect based on onboarding step
-          const step = data.onboardingStep ?? 0;
-          if (step < 2) {
-            router.replace("/onboarding/name");
-          } else {
-            router.replace("/dashboard");
-          }
-          return;
+        if (data.isNewUser) {
+          track(DashboardEvent.AUTH_SIGNUP);
         }
 
+        // Always require OTP verification
         window.location.href = `/${locale}/otp?email=${encodeURIComponent(trimmed)}`;
       } else {
         track(DashboardEvent.ERROR_OTP_SEND);

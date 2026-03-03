@@ -14,6 +14,7 @@ const ERROR_MAP: Record<string, string> = {
   CODE_EXPIRED: "errors.codeExpired",
   NO_CODE: "errors.noCode",
   INVALID_CODE: "errors.invalidCode",
+  TOO_MANY_ATTEMPTS: "errors.tooManyAttempts",
 };
 
 const RESEND_COOLDOWN = 60;
@@ -78,7 +79,7 @@ export function OtpPage({ email }: OtpPageProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (otp.length !== 4) return;
+    if (otp.length !== 6) return;
 
     setStatus("loading");
     setErrorMessage("");
@@ -147,12 +148,12 @@ export function OtpPage({ email }: OtpPageProps) {
                 id="otp"
                 type="text"
                 inputMode="numeric"
-                maxLength={4}
-                placeholder="0000"
+                maxLength={6}
+                placeholder="000000"
                 required
                 value={otp}
                 onChange={(e) => {
-                  const value = e.target.value.replace(/\D/g, "").slice(0, 4);
+                  const value = e.target.value.replace(/\D/g, "").slice(0, 6);
                   setOtp(value);
                 }}
                 onFocus={() => track(DashboardEvent.FOCUSED_OTP_INPUT)}
@@ -162,7 +163,7 @@ export function OtpPage({ email }: OtpPageProps) {
 
               <Button
                 type="submit"
-                disabled={status === "loading" || otp.length !== 4}
+                disabled={status === "loading" || otp.length !== 6}
               >
                 {status === "loading" && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

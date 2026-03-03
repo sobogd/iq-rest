@@ -1,9 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
+import { prisma } from "@/lib/prisma";
 import { locales } from "@/i18n/routing";
 
 async function handleLogout(request: NextRequest) {
   const cookieStore = await cookies();
+  const userEmail = cookieStore.get("user_email")?.value;
+
+  // Invalidate session token in DB
+  if (userEmail) {
+    await prisma.user
+      .update({
+        where: { email: userEmail },
+        data: { sessionToken: null },
+      })
+      .catch(() => {});
+  }
 
   // Clear all auth cookies
   cookieStore.delete("session");
