@@ -1,20 +1,21 @@
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
+import { hashSessionToken } from "@/lib/session-utils";
 
 export async function getOnboardingState() {
   const cookieStore = await cookies();
   const session = cookieStore.get("session");
   const userEmail = cookieStore.get("user_email");
 
-  const isAuthenticated = !!(session?.value && userEmail?.value);
-  if (!isAuthenticated) {
+  if (!session?.value || !userEmail?.value) {
     return { isAuthenticated: false, onboardingStep: 0, userId: null };
   }
 
   const user = await prisma.user.findUnique({
-    where: { email: userEmail!.value },
+    where: { email: userEmail.value },
     select: {
       id: true,
+      sessionToken: true,
       companies: {
         include: { company: { select: { onboardingStep: true } } },
         take: 1,
@@ -22,7 +23,13 @@ export async function getOnboardingState() {
     },
   });
 
-  const onboardingStep = user?.companies[0]?.company.onboardingStep ?? 0;
+  // Validate session token against DB
+  const tokenHash = hashSessionToken(session.value);
+  if (!user || !user.sessionToken || user.sessionToken !== tokenHash) {
+    return { isAuthenticated: false, onboardingStep: 0, userId: null };
+  }
 
-  return { isAuthenticated: true, onboardingStep, userId: user?.id ?? null };
+  const onboardingStep = user.companies[0]?.company.onboardingStep ?? 0;
+
+  return { isAuthenticated: true, onboardingStep, userId: user.id };
 }
