@@ -34,8 +34,8 @@ async function handleLogout(request: NextRequest) {
   const match = referer.match(localePattern);
   const locale = match?.[1] || "en";
 
-  // Redirect to home page with locale
-  return NextResponse.redirect(new URL(`/${locale}`, origin));
+  // Redirect to login page with locale
+  return NextResponse.redirect(new URL(`/${locale}/login`, origin));
 }
 
 export async function GET(request: NextRequest) {
