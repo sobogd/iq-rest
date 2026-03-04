@@ -27,6 +27,18 @@ const DESC_KEYS: Record<TemplateId, string> = {
   bar: "templateBarDescription",
 };
 
+// Translation keys used in templates — client sends translated names to API
+const TRANSLATION_KEYS = [
+  "tplCatSalads", "tplCatMainDishes", "tplCatSideDishes",
+  "tplCatBreakfasts", "tplCatCoffeeTea", "tplCatDesserts",
+  "tplCatCocktails", "tplCatBeer", "tplCatBarSnacks",
+  "tplItemCaesarSalad", "tplItemGreekSalad", "tplItemRibeyeSteak", "tplItemSalmonFillet",
+  "tplItemFrenchFries", "tplItemGrilledVegetables", "tplItemSalmonToast", "tplItemPancakes",
+  "tplItemCappuccino", "tplItemLatte", "tplItemEarlGrey", "tplItemCheesecake", "tplItemTiramisu",
+  "tplItemMargarita", "tplItemMojito", "tplItemOldFashioned", "tplItemLager", "tplItemIPA",
+  "tplItemStout", "tplItemNachos", "tplItemCroutons", "tplItemMixedNuts",
+] as const;
+
 export function OnboardingTemplatesPage({ restaurantName, userId }: { restaurantName: string; userId: string }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
@@ -38,16 +50,38 @@ export function OnboardingTemplatesPage({ restaurantName, userId }: { restaurant
     track(DashboardEvent.SHOWED_ONBOARDING_TEMPLATES);
   }, [userId]);
 
-  function handleSelect(templateId: TemplateId) {
+  async function handleSelect(templateId: TemplateId) {
     if (selected) return;
     setSelected(templateId);
+
     const eventMap: Record<TemplateId, DashboardEvent> = {
       restaurant: DashboardEvent.CLICKED_TEMPLATE_RESTAURANT,
       cafe: DashboardEvent.CLICKED_TEMPLATE_CAFE,
       bar: DashboardEvent.CLICKED_TEMPLATE_BAR,
     };
     track(eventMap[templateId]);
-    window.location.href = `/${locale}/onboarding/templates/${templateId}`;
+
+    // Build translations map so API creates items with localized names
+    const translations: Record<string, string> = {};
+    for (const key of TRANSLATION_KEYS) {
+      translations[key] = t(key as Parameters<typeof t>[0]);
+    }
+
+    try {
+      const res = await fetch("/api/onboarding/template", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ templateId, translations }),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
+      track(DashboardEvent.TEMPLATE_APPLY_SUCCESS, { template: templateId });
+      window.location.href = `/${locale}/dashboard`;
+    } catch {
+      track(DashboardEvent.TEMPLATE_APPLY_ERROR, { template: templateId });
+      setSelected(null);
+    }
   }
 
   function renderCard(id: TemplateId) {
