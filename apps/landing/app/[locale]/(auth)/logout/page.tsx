@@ -1,24 +1,21 @@
-import { cookies } from "next/headers";
-import { redirect } from "@/i18n/routing";
-import { prisma } from "@/lib/prisma";
+"use client";
 
-export default async function LogoutPage() {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email")?.value;
+import { useEffect } from "react";
+import { Loader2 } from "lucide-react";
+import { useRouter } from "@/i18n/routing";
 
-  if (userEmail) {
-    await prisma.user
-      .update({
-        where: { email: userEmail },
-        data: { sessionToken: null },
-      })
-      .catch((err) => console.error("Logout DB error:", err));
-  }
+export default function LogoutPage() {
+  const router = useRouter();
 
-  cookieStore.delete("session");
-  cookieStore.delete("user_email");
-  cookieStore.delete("user_id");
-  cookieStore.delete("dashboard-active-page");
+  useEffect(() => {
+    fetch("/api/auth/logout", { method: "POST" }).then(() => {
+      router.replace("/login");
+    });
+  }, [router]);
 
-  redirect("/login");
+  return (
+    <div className="flex min-h-dvh items-center justify-center">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  );
 }

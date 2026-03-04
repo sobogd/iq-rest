@@ -1,13 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
-import { locales } from "@/i18n/routing";
 
-export async function POST(request: NextRequest) {
+export async function POST() {
   const cookieStore = await cookies();
   const userEmail = cookieStore.get("user_email")?.value;
 
-  // Invalidate session token in DB
   if (userEmail) {
     await prisma.user
       .update({
@@ -17,23 +15,10 @@ export async function POST(request: NextRequest) {
       .catch((err) => console.error("Logout DB error:", err));
   }
 
-  // Clear all auth cookies
   cookieStore.delete("session");
   cookieStore.delete("user_email");
   cookieStore.delete("user_id");
   cookieStore.delete("dashboard-active-page");
 
-  // Get the origin from host header (works correctly behind reverse proxy)
-  const host = request.headers.get("host") || "localhost:3000";
-  const protocol = request.headers.get("x-forwarded-proto") || "https";
-  const origin = `${protocol}://${host}`;
-
-  // Extract locale from referer URL path (e.g., /fr/dashboard -> fr)
-  const referer = request.headers.get("referer") || "";
-  const localePattern = new RegExp(`/(${locales.join("|")})/`);
-  const match = referer.match(localePattern);
-  const locale = match?.[1] || "en";
-
-  // Redirect to login page with locale
-  return NextResponse.redirect(new URL(`/${locale}/login`, origin));
+  return NextResponse.json({ ok: true });
 }
