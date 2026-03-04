@@ -200,7 +200,7 @@ Rules:
           }],
           generationConfig: {
             temperature: 0.1,
-            maxOutputTokens: 4000,
+            maxOutputTokens: 16000,
             responseMimeType: "application/json",
           },
         }),
