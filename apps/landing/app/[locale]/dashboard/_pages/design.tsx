@@ -585,7 +585,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
           <div className="flex justify-between items-center">
             <button
               type="button"
-              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); window.location.href = "/api/auth/logout"; }}
+              onClick={() => { track(DashboardEvent.CLICKED_LOGOUT); router.push("/logout"); }}
               className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium"
             >
               <LogOut className="h-4 w-4 text-muted-foreground" />
