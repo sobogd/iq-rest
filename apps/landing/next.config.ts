@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
+  // Don't bundle sharp — install native binary on target server
+  serverExternalPackages: ["sharp"],
+
   // Disable nginx response buffering (fixes 502 on SSR pages)
   async headers() {
     return [
