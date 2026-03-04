@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Camera, Plus, Loader2, AlertCircle, X, FileText, ArrowLeft } from "lucide-react";
+import { Camera, Plus, Loader2, X, FileText, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
@@ -37,7 +37,7 @@ function fileToJpegBase64(file: File): Promise<string> {
   return isHeic(file) ? convertHeicToBase64(file) : fileToBase64(file);
 }
 
-type PageState = "idle" | "loading" | "error";
+type PageState = "idle" | "loading";
 
 interface PoolPhoto {
   id: string;
@@ -54,7 +54,6 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
   const [scanError, setScanError] = useState("");
   const [photoPool, setPhotoPool] = useState<PoolPhoto[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const errorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setDashboardUserId(userId);
@@ -68,21 +67,13 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Auto-reset error after 5s
-  useEffect(() => {
-    if (pageState === "error") {
-      errorTimerRef.current = setTimeout(() => setPageState("idle"), 5000);
-      return () => { if (errorTimerRef.current) clearTimeout(errorTimerRef.current); };
-    }
-  }, [pageState]);
-
   function addFilesToPool(files: FileList | null) {
     if (!files || files.length === 0) return;
 
     const remaining = MAX_FILES - photoPool.length;
     if (remaining <= 0) {
       setScanError(tMenu("scanErrorTooMany"));
-      setPageState("error");
+      setPageState("idle");
       return;
     }
 
@@ -91,7 +82,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
     for (const file of accepted) {
       if (file.size > MAX_SIZE) {
         setScanError(tMenu("scanErrorTooLarge"));
-        setPageState("error");
+        setPageState("idle");
         track(DashboardEvent.SCAN_MENU_ERROR, { reason: "too_large" });
         return;
       }
@@ -140,6 +131,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
     if (photoPool.length === 0) return;
 
     track(DashboardEvent.SCAN_MENU_UPLOAD, { count: String(photoPool.length) });
+    setScanError("");
     setPageState("loading");
 
     try {
@@ -168,7 +160,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
         } else {
           setScanError(tMenu("scanError"));
         }
-        setPageState("error");
+        setPageState("idle");
         track(DashboardEvent.SCAN_MENU_ERROR, { reason: data.error || "unknown", detail });
         return;
       }
@@ -180,7 +172,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
     } catch (err) {
       const detail = err instanceof Error ? `${err.name}: ${err.message}` : String(err);
       setScanError(tMenu("scanError"));
-      setPageState("error");
+      setPageState("idle");
       track(DashboardEvent.SCAN_MENU_ERROR, { reason: "exception", detail });
     }
   }, [photoPool, tMenu, locale]);
@@ -247,6 +239,10 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
                 )}
               </div>
 
+              {scanError && (
+                <p className="text-sm text-destructive font-medium text-center">{scanError}</p>
+              )}
+
               {photoPool.length > 0 && (
                 <Button
                   className="w-full bg-primary hover:bg-primary/90 text-white"
@@ -276,21 +272,6 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
           </div>
         )}
 
-        {pageState === "error" && (
-          <div className="grid gap-6">
-            <div>
-              <h1 className="text-[28px] leading-tight font-bold">{restaurantName}</h1>
-              <p className="text-lg text-muted-foreground mt-1">{t("aiImportDescription")}</p>
-            </div>
-
-            <div className="rounded-xl border border-destructive/20 bg-destructive/10 px-5 py-6">
-              <div className="flex flex-col items-center text-center">
-                <AlertCircle className="h-10 w-10 text-destructive mb-3" />
-                <p className="text-sm text-destructive font-medium">{scanError || t("error")}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
