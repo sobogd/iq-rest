@@ -45,7 +45,7 @@ model Company {
   paymentProcessing  Boolean            @default(false)
 
   // Onboarding
-  onboardingStep Int @default(0) // 0 = not started, 2 = name done (complete)
+  onboardingStep Int @default(0) // 0 = not started, 2 = restaurant created, 3 = onboarding complete
 
   // Email campaigns
   emailsSent       Json?    // e.g. { "welcome": "2026-02-16T...", "inactive_7d": "2026-02-20T..." }

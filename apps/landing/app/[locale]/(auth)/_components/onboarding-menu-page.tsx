@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Camera, Wand2, LayoutTemplate, Pencil } from "lucide-react";
+import { Camera, Wand2, LayoutTemplate, Pencil, Loader2 } from "lucide-react";
 import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
 import { analytics } from "@/lib/analytics";
 
 export function OnboardingMenuPage({ restaurantName, userId }: { restaurantName: string; userId: string }) {
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
+  const [isCompleting, setIsCompleting] = useState(false);
 
   useEffect(() => {
     setDashboardUserId(userId);
@@ -67,12 +68,19 @@ export function OnboardingMenuPage({ restaurantName, userId }: { restaurantName:
           {/* Manual Builder */}
           <button
             type="button"
+            disabled={isCompleting}
             onClick={async () => {
+              if (isCompleting) return;
+              setIsCompleting(true);
               track(DashboardEvent.CLICKED_ONBOARDING_MANUAL);
-              await fetch("/api/onboarding/complete", { method: "POST" }).catch(() => {});
+              const res = await fetch("/api/onboarding/complete", { method: "POST" }).catch(() => null);
+              if (!res?.ok) {
+                setIsCompleting(false);
+                return;
+              }
               window.location.href = `/${locale}/dashboard`;
             }}
-            className="grid gap-1.5 text-left rounded-xl border border-border bg-muted/30 px-4 py-4 cursor-pointer transition-colors active:bg-muted/60 hover:bg-muted/50"
+            className="grid gap-1.5 text-left rounded-xl border border-border bg-muted/30 px-4 py-4 cursor-pointer transition-colors active:bg-muted/60 hover:bg-muted/50 disabled:opacity-50 disabled:pointer-events-none"
           >
             <h2 className="text-base font-semibold flex items-center gap-2">
               <Pencil className="h-4 w-4 text-muted-foreground shrink-0" />
@@ -80,7 +88,7 @@ export function OnboardingMenuPage({ restaurantName, userId }: { restaurantName:
             </h2>
             <p className="text-sm text-muted-foreground">{t("manualDescription")}</p>
             <div className="mt-1 inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 py-2 border border-input bg-background w-full pointer-events-none">
-              {t("manualButton")}
+              {isCompleting ? <Loader2 className="h-4 w-4 animate-spin" /> : t("manualButton")}
             </div>
           </button>
         </div>

@@ -52,10 +52,7 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
 
   const [pageState, setPageState] = useState<PageState>("idle");
   const [scanError, setScanError] = useState("");
-  const [scanProgress, setScanProgress] = useState(0);
   const [photoPool, setPhotoPool] = useState<PoolPhoto[]>([]);
-  const progressRef = useRef({ startTime: 0, done: false });
-  const rafRef = useRef<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const errorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -70,32 +67,6 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
     return () => { photoPool.forEach((p) => { if (p.preview.startsWith("blob:")) URL.revokeObjectURL(p.preview); }); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Animated progress bar
-  useEffect(() => {
-    if (pageState !== "loading") {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      return;
-    }
-    progressRef.current = { startTime: Date.now(), done: false };
-    setScanProgress(0);
-    const phase1 = 120_000;
-    const phase2 = 120_000;
-    function tick() {
-      if (progressRef.current.done) return;
-      const elapsed = Date.now() - progressRef.current.startTime;
-      let pct: number;
-      if (elapsed < phase1) {
-        pct = (elapsed / phase1) * 90;
-      } else {
-        pct = 90 + ((elapsed - phase1) / phase2) * 10;
-      }
-      setScanProgress(Math.min(pct, 99.5));
-      rafRef.current = requestAnimationFrame(tick);
-    }
-    rafRef.current = requestAnimationFrame(tick);
-    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
-  }, [pageState]);
 
   // Auto-reset error after 5s
   useEffect(() => {
@@ -185,8 +156,6 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
         body: JSON.stringify({ images }),
       });
 
-      progressRef.current.done = true;
-
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         const detail = `${res.status} ${JSON.stringify(data)}`;
@@ -210,7 +179,6 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
       window.location.href = `/${locale}/dashboard`;
     } catch (err) {
       const detail = err instanceof Error ? `${err.name}: ${err.message}` : String(err);
-      progressRef.current.done = true;
       setScanError(tMenu("scanError"));
       setPageState("error");
       track(DashboardEvent.SCAN_MENU_ERROR, { reason: "exception", detail });
@@ -302,24 +270,9 @@ export function OnboardingScanPage({ restaurantName, userId }: { restaurantName:
         )}
 
         {pageState === "loading" && (
-          <div className="grid gap-6">
-            <div>
-              <h1 className="text-[28px] leading-tight font-bold">{restaurantName}</h1>
-              <p className="text-lg text-muted-foreground mt-1">{t("aiImportDescription")}</p>
-            </div>
-
-            <div className="rounded-xl border border-border bg-muted/30 px-5 py-6">
-              <div className="flex flex-col items-center text-center">
-                <h2 className="text-base font-semibold mb-1">{tMenu("scanLoading")}</h2>
-                <p className="text-sm text-muted-foreground mb-4">{tMenu("scanLoadingSubtitle")}</p>
-                <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-primary rounded-full transition-all duration-300"
-                    style={{ width: `${scanProgress}%` }}
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-col items-center justify-center text-center">
+            <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
+            <p className="text-base text-muted-foreground">{tMenu("scanLoading")}</p>
           </div>
         )}
 

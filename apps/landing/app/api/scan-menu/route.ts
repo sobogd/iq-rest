@@ -12,8 +12,8 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 async function compressForVision(base64Data: string): Promise<{ mimeType: string; base64: string }> {
   const inputBuffer = Buffer.from(base64Data, "base64");
   const compressed = await sharp(inputBuffer)
-    .resize(1500, 1500, { fit: "inside", withoutEnlargement: true })
-    .jpeg({ quality: 80 })
+    .resize(4096, 4096, { fit: "inside", withoutEnlargement: true })
+    .jpeg({ quality: 95 })
     .toBuffer();
   return { mimeType: "image/jpeg", base64: compressed.toString("base64") };
 }
@@ -25,8 +25,8 @@ async function pdfToImages(base64Data: string): Promise<{ mimeType: string; base
   const document = await pdf(buffer, { scale: 2 });
   for await (const page of document) {
     const compressed = await sharp(page)
-      .resize(1500, 1500, { fit: "inside", withoutEnlargement: true })
-      .jpeg({ quality: 80 })
+      .resize(4096, 4096, { fit: "inside", withoutEnlargement: true })
+      .jpeg({ quality: 95 })
       .toBuffer();
     images.push({ mimeType: "image/jpeg", base64: compressed.toString("base64") });
   }
