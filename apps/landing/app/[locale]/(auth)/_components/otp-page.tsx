@@ -133,9 +133,6 @@ export function OtpPage({ email }: OtpPageProps) {
             <p className="text-muted-foreground">
               {t("verifySubtitle", { email })}
             </p>
-            <p className="text-sm text-muted-foreground/70">
-              {t("checkSpam")}
-            </p>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -146,23 +143,28 @@ export function OtpPage({ email }: OtpPageProps) {
                 </div>
               )}
 
-              <Input
-                ref={otpInputRef}
-                id="otp"
-                type="text"
-                inputMode="numeric"
-                maxLength={6}
-                placeholder="000000"
-                required
-                value={otp}
-                onChange={(e) => {
-                  const value = e.target.value.replace(/\D/g, "").slice(0, 6);
-                  setOtp(value);
-                }}
-                onFocus={() => track(DashboardEvent.FOCUSED_OTP_INPUT)}
-                disabled={status === "loading"}
-                className="text-center tracking-widest"
-              />
+              <div className="grid gap-1.5">
+                <Input
+                  ref={otpInputRef}
+                  id="otp"
+                  type="text"
+                  inputMode="numeric"
+                  maxLength={6}
+                  placeholder="000000"
+                  required
+                  value={otp}
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/\D/g, "").slice(0, 6);
+                    setOtp(value);
+                  }}
+                  onFocus={() => track(DashboardEvent.FOCUSED_OTP_INPUT)}
+                  disabled={status === "loading"}
+                  className="text-center tracking-widest"
+                />
+                <p className="text-xs text-muted-foreground/70 text-center">
+                  {t("checkSpam")}
+                </p>
+              </div>
 
               <Button
                 type="submit"
