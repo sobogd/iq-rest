@@ -1584,6 +1584,7 @@
       "continue": "Continuar",
       "verifyTitle": "Comprova el teu correu",
       "verifySubtitle": "Hem enviat un codi a {email}",
+      "checkSpam": "No el trobes? Comprova la carpeta de correu brossa",
       "verify": "Verificar",
       "changeEmail": "Utilitza un altre correu",
       "resendCode": "Reenviar codi",

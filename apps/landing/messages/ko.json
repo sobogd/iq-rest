@@ -1584,6 +1584,7 @@
       "continue": "계속",
       "verifyTitle": "이메일을 확인하세요",
       "verifySubtitle": "{email}로 코드를 보냈습니다",
+      "checkSpam": "찾을 수 없나요? 스팸 폴더를 확인하세요",
       "verify": "확인",
       "changeEmail": "다른 이메일 사용",
       "resendCode": "코드 재전송",

@@ -1584,6 +1584,7 @@
       "continue": "Lean ar aghaidh",
       "verifyTitle": "Seiceáil do ríomhphost",
       "verifySubtitle": "Sheol muid cód chuig {email}",
+      "checkSpam": "Ní féidir é a aimsiú? Seiceáil do fhillteán turscair",
       "verify": "Deimhnigh",
       "changeEmail": "Úsáid ríomhphost eile",
       "resendCode": "Seol arís",

@@ -1584,6 +1584,7 @@
       "continue": "Jätka",
       "verifyTitle": "Kontrollige oma e-posti",
       "verifySubtitle": "Saatsime koodi aadressile {email}",
+      "checkSpam": "Ei leia? Kontrolli rämpsposti kausta",
       "verify": "Kinnita",
       "changeEmail": "Kasuta teist e-posti",
       "resendCode": "Saada uuesti",

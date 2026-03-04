@@ -1584,6 +1584,7 @@
       "continue": "Fortsätt",
       "verifyTitle": "Kolla din e-post",
       "verifySubtitle": "Vi skickade en kod till {email}",
+      "checkSpam": "Hittar du det inte? Kolla skräppostmappen",
       "verify": "Verifiera",
       "changeEmail": "Använd en annan e-post",
       "resendCode": "Skicka igen",

@@ -1584,6 +1584,7 @@
       "continue": "Jatka",
       "verifyTitle": "Tarkista sähköpostisi",
       "verifySubtitle": "Lähetimme koodin osoitteeseen {email}",
+      "checkSpam": "Etkö löydä sitä? Tarkista roskapostikansio",
       "verify": "Vahvista",
       "changeEmail": "Käytä toista sähköpostia",
       "resendCode": "Lähetä uudelleen",

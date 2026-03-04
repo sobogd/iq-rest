@@ -1584,6 +1584,7 @@
       "continue": "Devam",
       "verifyTitle": "E-postanızı kontrol edin",
       "verifySubtitle": "{email} adresine bir kod gönderdik",
+      "checkSpam": "Bulamıyor musunuz? Spam klasörünüzü kontrol edin",
       "verify": "Doğrula",
       "changeEmail": "Başka e-posta kullan",
       "resendCode": "Tekrar gönder",

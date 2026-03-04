@@ -1584,6 +1584,7 @@
       "continue": "继续",
       "verifyTitle": "请查看您的邮箱",
       "verifySubtitle": "我们已向 {email} 发送了验证码",
+      "checkSpam": "找不到？请检查垃圾邮件文件夹",
       "verify": "验证",
       "changeEmail": "使用其他邮箱",
       "resendCode": "重新发送",

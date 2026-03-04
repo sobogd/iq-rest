@@ -133,6 +133,9 @@ export function OtpPage({ email }: OtpPageProps) {
             <p className="text-muted-foreground">
               {t("verifySubtitle", { email })}
             </p>
+            <p className="text-sm text-muted-foreground/70">
+              {t("checkSpam")}
+            </p>
           </div>
 
           <form onSubmit={handleSubmit}>

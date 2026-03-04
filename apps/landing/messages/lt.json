@@ -1584,6 +1584,7 @@
       "continue": "Tęsti",
       "verifyTitle": "Patikrinkite savo el. paštą",
       "verifySubtitle": "Išsiuntėme kodą adresu {email}",
+      "checkSpam": "Nerandate? Patikrinkite šlamšto aplanką",
       "verify": "Patvirtinti",
       "changeEmail": "Naudoti kitą el. paštą",
       "resendCode": "Siųsti iš naujo",

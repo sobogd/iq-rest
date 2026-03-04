@@ -1584,6 +1584,7 @@
       "continue": "Continuer",
       "verifyTitle": "Vérifiez votre e-mail",
       "verifySubtitle": "Nous avons envoyé un code à {email}",
+      "checkSpam": "Introuvable ? Vérifiez votre dossier spam",
       "verify": "Vérifier",
       "changeEmail": "Utiliser un autre e-mail",
       "resendCode": "Renvoyer le code",

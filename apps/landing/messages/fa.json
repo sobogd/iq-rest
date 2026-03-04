@@ -1584,6 +1584,7 @@
       "continue": "ادامه",
       "verifyTitle": "ایمیل خود را بررسی کنید",
       "verifySubtitle": "کدی به {email} ارسال کردیم",
+      "checkSpam": "پیدا نمی‌کنید؟ پوشه هرزنامه را بررسی کنید",
       "verify": "تأیید",
       "changeEmail": "استفاده از ایمیل دیگر",
       "resendCode": "ارسال مجدد کد",

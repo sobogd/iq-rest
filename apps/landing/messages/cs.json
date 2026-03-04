@@ -1584,6 +1584,7 @@
       "continue": "Pokračovat",
       "verifyTitle": "Zkontrolujte svůj e-mail",
       "verifySubtitle": "Poslali jsme kód na {email}",
+      "checkSpam": "Nenašli jste ho? Zkontrolujte složku se spamem",
       "verify": "Ověřit",
       "changeEmail": "Použít jiný e-mail",
       "resendCode": "Odeslat znovu",

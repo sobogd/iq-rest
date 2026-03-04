@@ -1584,6 +1584,7 @@
       "continue": "Doorgaan",
       "verifyTitle": "Controleer je e-mail",
       "verifySubtitle": "We hebben een code gestuurd naar {email}",
+      "checkSpam": "Niet gevonden? Controleer je spammap",
       "verify": "Verifiëren",
       "changeEmail": "Ander e-mailadres gebruiken",
       "resendCode": "Opnieuw verzenden",

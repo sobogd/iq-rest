@@ -1584,6 +1584,7 @@
       "continue": "Turpināt",
       "verifyTitle": "Pārbaudiet savu e-pastu",
       "verifySubtitle": "Mēs nosūtījām kodu uz {email}",
+      "checkSpam": "Nevarat atrast? Pārbaudiet surogātpasta mapi",
       "verify": "Apstiprināt",
       "changeEmail": "Izmantot citu e-pastu",
       "resendCode": "Sūtīt vēlreiz",

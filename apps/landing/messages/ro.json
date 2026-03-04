@@ -1584,6 +1584,7 @@
       "continue": "Continuă",
       "verifyTitle": "Verificați e-mailul",
       "verifySubtitle": "Am trimis un cod la {email}",
+      "checkSpam": "Nu-l găsești? Verifică folderul de spam",
       "verify": "Verifică",
       "changeEmail": "Folosește alt e-mail",
       "resendCode": "Retrimite codul",

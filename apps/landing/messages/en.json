@@ -1598,6 +1598,7 @@
       "or": "or",
       "verifyTitle": "Check your email",
       "verifySubtitle": "We sent a code to {email}",
+      "checkSpam": "Can't find it? Check your spam folder",
       "verify": "Verify",
       "changeEmail": "Use a different email",
       "resendCode": "Resend code",

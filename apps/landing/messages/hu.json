@@ -1584,6 +1584,7 @@
       "continue": "Tovább",
       "verifyTitle": "Ellenőrizze e-mailjét",
       "verifySubtitle": "Kódot küldtünk a {email} címre",
+      "checkSpam": "Nem találja? Ellenőrizze a spam mappát",
       "verify": "Megerősítés",
       "changeEmail": "Másik e-mail használata",
       "resendCode": "Újraküldés",

@@ -1584,6 +1584,7 @@
       "continue": "Fortsæt",
       "verifyTitle": "Tjek din e-mail",
       "verifySubtitle": "Vi har sendt en kode til {email}",
+      "checkSpam": "Kan du ikke finde den? Tjek din spam-mappe",
       "verify": "Bekræft",
       "changeEmail": "Brug en anden e-mail",
       "resendCode": "Send igen",

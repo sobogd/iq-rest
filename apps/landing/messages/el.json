@@ -1584,6 +1584,7 @@
       "continue": "Συνέχεια",
       "verifyTitle": "Ελέγξτε το email σας",
       "verifySubtitle": "Στείλαμε κωδικό στο {email}",
+      "checkSpam": "Δεν το βρίσκετε; Ελέγξτε τον φάκελο ανεπιθύμητης αλληλογραφίας",
       "verify": "Επαλήθευση",
       "changeEmail": "Χρήση διαφορετικού email",
       "resendCode": "Αποστολή ξανά",

@@ -1584,6 +1584,7 @@
       "continue": "Nadaljuj",
       "verifyTitle": "Preverite svojo e-pošto",
       "verifySubtitle": "Kodo smo poslali na {email}",
+      "checkSpam": "Ga ne najdete? Preverite mapo z neželeno pošto",
       "verify": "Potrdi",
       "changeEmail": "Uporabi drug e-mail",
       "resendCode": "Pošlji znova",
