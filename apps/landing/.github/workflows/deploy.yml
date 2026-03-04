@@ -1,6 +1,8 @@
 name: Deploy Application
 
 on:
+  push:
+    branches: [release]
   workflow_dispatch:
 
 jobs:
