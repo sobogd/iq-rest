@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation";
-import { getUserCompanyId } from "@/lib/auth";
+import { requireAuth } from "../_lib/require-auth";
 import { getReservations } from "../_lib/queries";
 import { ReservationsPage } from "../_pages/reservations";
 
 export default async function Page() {
-  const companyId = await getUserCompanyId();
-  if (!companyId) redirect("/");
+  const companyId = await requireAuth();
 
   const reservations = await getReservations(companyId);
 

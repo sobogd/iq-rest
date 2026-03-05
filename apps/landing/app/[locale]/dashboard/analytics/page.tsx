@@ -1,13 +1,11 @@
-import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import { getUserCompanyId } from "@/lib/auth";
+import { requireAuth } from "../_lib/require-auth";
 import { getDashboardAnalytics } from "../_lib/queries";
 import { AnalyticsPage } from "../_pages/analytics";
 import { getTimezoneForCountry } from "@/lib/country-timezone-map";
 
 export default async function Page() {
-  const companyId = await getUserCompanyId();
-  if (!companyId) redirect("/");
+  const companyId = await requireAuth();
 
   const cookieStore = await cookies();
   const country = cookieStore.get("geo_country")?.value || "";

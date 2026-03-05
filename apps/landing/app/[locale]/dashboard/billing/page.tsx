@@ -1,13 +1,11 @@
-import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import { getUserCompanyId } from "@/lib/auth";
+import { requireAuth } from "../_lib/require-auth";
 import { getSubscriptionStatus } from "../_lib/queries";
 import { BillingPage } from "../_pages/billing";
 import type { SupportedCurrency } from "@/lib/country-currency-map";
 
 export default async function Page() {
-  const companyId = await getUserCompanyId();
-  if (!companyId) redirect("/");
+  const companyId = await requireAuth();
 
   const [subscription, cookieStore] = await Promise.all([
     getSubscriptionStatus(companyId),

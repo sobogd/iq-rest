@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation";
-import { getUserCompanyId } from "@/lib/auth";
+import { requireAuth } from "./_lib/require-auth";
 import { getItems, getCategories, getRestaurant, getChecklistStatus, checkIsAdmin } from "./_lib/queries";
 import { MenuPage } from "./_pages/menu";
 
 export default async function Page() {
-  const companyId = await getUserCompanyId();
-  if (!companyId) redirect("/");
+  const companyId = await requireAuth();
 
   const [items, categories, restaurant, checklist, isAdmin] = await Promise.all([
     getItems(companyId),
