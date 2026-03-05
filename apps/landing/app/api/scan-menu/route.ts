@@ -18,21 +18,6 @@ async function compressForVision(base64Data: string): Promise<{ mimeType: string
   return { mimeType: "image/jpeg", base64: compressed.toString("base64") };
 }
 
-async function pdfToImages(base64Data: string): Promise<{ mimeType: string; base64: string }[]> {
-  const { pdf } = await import("pdf-to-img");
-  const buffer = Buffer.from(base64Data, "base64");
-  const images: { mimeType: string; base64: string }[] = [];
-  const document = await pdf(buffer, { scale: 2 });
-  for await (const page of document) {
-    const compressed = await sharp(page)
-      .resize(4096, 4096, { fit: "inside", withoutEnlargement: true })
-      .jpeg({ quality: 95 })
-      .toBuffer();
-    images.push({ mimeType: "image/jpeg", base64: compressed.toString("base64") });
-  }
-  return images;
-}
-
 interface ScannedItem {
   name: string;
   price: number;
@@ -111,8 +96,8 @@ export async function POST(request: NextRequest) {
       })
     ).catch(() => {});
 
-    // Process all files: images get compressed, PDFs get converted to images
-    const optimizedImages: { mimeType: string; base64: string }[] = [];
+    // Process all files: images get compressed, PDFs sent directly to Gemini
+    const contentParts: { inline_data: { mime_type: string; data: string } }[] = [];
 
     for (const file of rawFiles) {
       if (typeof file !== "string") {
@@ -130,8 +115,8 @@ export async function POST(request: NextRequest) {
         if (sizeInBytes > 20 * 1024 * 1024) {
           return NextResponse.json({ error: "too_large" }, { status: 400 });
         }
-        const pages = await pdfToImages(base64Data);
-        optimizedImages.push(...pages);
+        // Gemini natively supports PDF — send directly
+        contentParts.push({ inline_data: { mime_type: "application/pdf", data: base64Data } });
       } else {
         const mimeMatch = file.match(/^data:image\/[a-z+]+;base64,/);
         if (!mimeMatch) {
@@ -147,20 +132,13 @@ export async function POST(request: NextRequest) {
           return NextResponse.json({ error: "too_large" }, { status: 400 });
         }
 
-        optimizedImages.push(await compressForVision(base64Data));
+        const compressed = await compressForVision(base64Data);
+        contentParts.push({ inline_data: { mime_type: compressed.mimeType, data: compressed.base64 } });
       }
     }
 
-    // Cap total images sent to Vision (PDF pages can expand count)
-    const imagesToSend = optimizedImages.slice(0, 10);
-
-    // Build Gemini content parts
-    const imageParts = imagesToSend.map((img) => ({
-      inline_data: { mime_type: img.mimeType, data: img.base64 },
-    }));
-
-    const multiImageNote = imagesToSend.length > 1
-      ? `\nYou are receiving ${imagesToSend.length} images — these are different pages of the SAME menu. Combine all items from all pages into a single unified result. Do not duplicate categories — merge items into the same category if they belong together.`
+    const multiImageNote = contentParts.length > 1
+      ? `\nYou are receiving ${contentParts.length} files — these are different pages of the SAME menu. Combine all items from all pages into a single unified result. Do not duplicate categories — merge items into the same category if they belong together.`
       : "";
 
     const response = await fetch(
@@ -196,7 +174,7 @@ Rules:
           },
           contents: [{
             role: "user",
-            parts: [{ text: "Scan this menu" }, ...imageParts],
+            parts: [{ text: "Scan this menu" }, ...contentParts],
           }],
           generationConfig: {
             temperature: 0.1,
