@@ -3,7 +3,6 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { isAdminEmail } from "@/lib/admin";
 import {
-  generateSessionToken,
   hashSessionToken,
   AUTH_COOKIE_OPTIONS,
 } from "@/lib/session-utils";
@@ -48,7 +47,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    // Save current admin cookies
+    // Save admin session so we can validate impersonation in getAuthUser()
     cookieStore.set(
       "admin_original_session",
       currentSession,
@@ -61,16 +60,7 @@ export async function POST(request: NextRequest) {
     );
     cookieStore.set("admin_original_id", currentUserId, AUTH_COOKIE_OPTIONS);
 
-    // Generate new session for target user and save hash
-    const newSession = generateSessionToken();
-    const newTokenHash = hashSessionToken(newSession);
-
-    await prisma.user.update({
-      where: { id: targetUser.id },
-      data: { sessionToken: newTokenHash },
-    });
-
-    cookieStore.set("session", newSession, AUTH_COOKIE_OPTIONS);
+    // Switch to target user WITHOUT touching their sessionToken
     cookieStore.set("user_email", targetUser.email, AUTH_COOKIE_OPTIONS);
     cookieStore.set("user_id", targetUser.id, AUTH_COOKIE_OPTIONS);
 

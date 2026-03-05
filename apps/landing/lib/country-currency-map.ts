@@ -75,13 +75,13 @@ export const currencyInfo: Record<SupportedCurrency, {
   EUR: { symbol: "€", name: "Euro", symbolPosition: "before", zeroDecimal: false },
   USD: { symbol: "$", name: "US Dollar", symbolPosition: "before", zeroDecimal: false },
   PLN: { symbol: "zł", name: "Polish Zloty", symbolPosition: "after", zeroDecimal: false },
-  MXN: { symbol: "$", name: "Mexican Peso", symbolPosition: "before", zeroDecimal: false },
+  MXN: { symbol: "MX$", name: "Mexican Peso", symbolPosition: "before", zeroDecimal: false },
   BRL: { symbol: "R$", name: "Brazilian Real", symbolPosition: "before", zeroDecimal: false },
-  ARS: { symbol: "$", name: "Argentine Peso", symbolPosition: "before", zeroDecimal: false },
-  COP: { symbol: "$", name: "Colombian Peso", symbolPosition: "before", zeroDecimal: false },
-  CLP: { symbol: "$", name: "Chilean Peso", symbolPosition: "before", zeroDecimal: true },
+  ARS: { symbol: "AR$", name: "Argentine Peso", symbolPosition: "before", zeroDecimal: false },
+  COP: { symbol: "CO$", name: "Colombian Peso", symbolPosition: "before", zeroDecimal: false },
+  CLP: { symbol: "CL$", name: "Chilean Peso", symbolPosition: "before", zeroDecimal: true },
   PEN: { symbol: "S/", name: "Peruvian Sol", symbolPosition: "before", zeroDecimal: false },
-  UYU: { symbol: "$", name: "Uruguayan Peso", symbolPosition: "before", zeroDecimal: false },
+  UYU: { symbol: "UY$", name: "Uruguayan Peso", symbolPosition: "before", zeroDecimal: false },
   TRY: { symbol: "₺", name: "Turkish Lira", symbolPosition: "after", zeroDecimal: false },
 };
 

@@ -90,6 +90,7 @@ export function DashboardShell({
     setDashboardUserId(userId);
     // Initial link on mount
     analytics.linkSession(userId);
+    analytics.startHeartbeat();
   }, [userId]);
 
   return (
