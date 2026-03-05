@@ -110,6 +110,7 @@ export async function GET(request: NextRequest) {
           conversionSent: session.conversionSent,
           conversionViewsSent: session.conversionViewsSent,
           conversionSubscriptionSent: session.conversionSubscriptionSent,
+          lastSeenAt: session.lastSeenAt,
           createdAt: session.createdAt,
           updatedAt: session.updatedAt,
         } : null,

@@ -156,12 +156,50 @@ export const section = {
   view: (name: string) => trackEvent(`section_view_${name.replace(/-/g, "_")}`),
 };
 
+// Heartbeat — updates lastSeenAt on Session every 15s while tab is visible
+let heartbeatTimer: ReturnType<typeof setInterval> | null = null;
+
+function sendHeartbeat() {
+  const sessionId = getSessionId();
+  if (!sessionId) return;
+  fetch("/api/analytics/heartbeat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ sessionId }),
+    keepalive: true,
+  }).catch(() => {});
+}
+
+function startHeartbeat() {
+  if (typeof window === "undefined" || isTrackingDisabled()) return;
+  if (heartbeatTimer) return; // already running
+
+  sendHeartbeat(); // immediate first ping
+
+  heartbeatTimer = setInterval(sendHeartbeat, 15_000);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (heartbeatTimer) {
+        clearInterval(heartbeatTimer);
+        heartbeatTimer = null;
+      }
+    } else {
+      if (!heartbeatTimer && !isTrackingDisabled()) {
+        sendHeartbeat();
+        heartbeatTimer = setInterval(sendHeartbeat, 15_000);
+      }
+    }
+  });
+}
+
 // Export all as analytics object for convenience
 export const analytics = {
   trackEvent,
   disableTracking,
   enableTracking,
   linkSession,
+  startHeartbeat,
   page,
   marketing,
   section,

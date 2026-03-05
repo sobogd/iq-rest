@@ -65,6 +65,7 @@ export async function GET(request: NextRequest) {
         country: true,
         gclid: true,
         userId: true,
+        lastSeenAt: true,
         createdAt: true,
         _count: { select: { events: true } },
         events: {
@@ -99,6 +100,7 @@ export async function GET(request: NextRequest) {
         country: s.country,
         source: s.gclid ? "Ads" : "Direct",
         hasUser: !!s.userId,
+        lastSeenAt: s.lastSeenAt?.toISOString() ?? null,
       };
     });
 

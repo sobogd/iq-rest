@@ -17,6 +17,7 @@ interface Session {
   country: string | null;
   source: string;
   hasUser: boolean;
+  lastSeenAt: string | null;
 }
 
 type Period = "today" | "yesterday" | "7days";
@@ -176,9 +177,11 @@ export function SessionsPage() {
                   <span className="text-xs text-muted-foreground shrink-0">
                     {formatDuration(session.duration)} · {session.eventCount} ev.
                   </span>
-                  {session.hasUser && (
+                  {session.lastSeenAt && (Date.now() - new Date(session.lastSeenAt).getTime()) < 30_000 ? (
+                    <span className="h-1.5 w-1.5 rounded-full bg-green-500 shrink-0" />
+                  ) : session.hasUser ? (
                     <span className="h-1.5 w-1.5 rounded-full bg-red-500 shrink-0" />
-                  )}
+                  ) : null}
                 </button>
               ))}
             </div>

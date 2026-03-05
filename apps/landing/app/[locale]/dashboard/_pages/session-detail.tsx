@@ -35,6 +35,7 @@ interface SessionData {
   conversionSent: boolean;
   conversionViewsSent: boolean;
   conversionSubscriptionSent: boolean;
+  lastSeenAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -288,8 +289,15 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
 
   // Session info rows
   const countryTz = session?.country ? COUNTRY_TZ[session.country] : undefined;
-  const infoRows: { label: string; value: string; subValue?: string; copyable?: boolean; onClick?: () => void }[] = [];
+  const infoRows: { label: string; value: string; subValue?: string; copyable?: boolean; onClick?: () => void; valueClassName?: string }[] = [];
   if (session) {
+    // Online status
+    const isOnline = session.lastSeenAt && (Date.now() - new Date(session.lastSeenAt).getTime()) < 30_000;
+    if (isOnline) {
+      infoRows.push({ label: "Status", value: "Online", valueClassName: "text-green-500 font-medium" });
+    } else if (session.lastSeenAt) {
+      infoRows.push({ label: "Status", value: `Last seen: ${formatTimeDiff(new Date().toISOString(), session.lastSeenAt)} ago` });
+    }
     if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}${session.city ? `, ${session.city}` : ""}` });
     if (session.landingPage) infoRows.push({ label: "Landing", value: session.landingPage });
     if (session.ip) infoRows.push({ label: "IP", value: session.ip, copyable: true });
@@ -360,7 +368,7 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
                 >
                   <span className="text-xs text-muted-foreground">{row.label}</span>
                   <span className={`text-xs font-mono text-right break-all max-w-[60%] ${
-                    row.onClick ? "text-blue-500" : ""
+                    row.valueClassName ? row.valueClassName : row.onClick ? "text-blue-500" : ""
                   }`}>
                     {row.value}
                     {row.subValue && (
