@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
@@ -33,7 +32,6 @@ const TURNSTILE_SITE_KEY = process.env.NODE_ENV === "production"
 export function LoginPage() {
   const locale = useLocale();
   const router = useRouter();
-  const searchParams = useSearchParams();
   const t = useTranslations("dashboard.auth");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
@@ -85,9 +83,8 @@ export function LoginPage() {
   );
 
   useEffect(() => {
-    const from = searchParams.get("from");
-    track(DashboardEvent.SHOWED_LOGIN, from ? { from } : undefined);
-  }, [searchParams]);
+    track(DashboardEvent.SHOWED_LOGIN);
+  }, []);
 
   // Load Google Identity Services
   useEffect(() => {

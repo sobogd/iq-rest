@@ -490,20 +490,32 @@ function getSessionId(): string {
 }
 
 // Thin wrapper — fire-and-forget, optional meta
+function getCookie(name: string): string | null {
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function deleteCookie(name: string) {
+  document.cookie = `${name}=; path=/; max-age=0`;
+}
+
 function trackReferral() {
   if (typeof window === "undefined") return;
   if (sessionStorage.getItem("referral_sent")) return;
 
-  const params = new URLSearchParams(window.location.search);
-  const from = params.get("from");
+  const from = getCookie("ref_from");
   if (!from) return;
 
   sessionStorage.setItem("referral_sent", "1");
 
   const sessionId = getSessionId();
   const refMeta: Record<string, string> = { from };
-  const slug = params.get("slug");
-  if (slug) refMeta.slug = slug;
+  const slug = getCookie("ref_slug");
+  if (slug) {
+    refMeta.slug = slug;
+    deleteCookie("ref_slug");
+  }
+  deleteCookie("ref_from");
 
   fetch("/api/analytics/event", {
     method: "POST",

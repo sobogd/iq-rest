@@ -70,19 +70,31 @@ function trackEvent(event: string, meta?: Record<string, string>) {
   });
 }
 
+function getCookie(name: string): string | null {
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function deleteCookie(name: string) {
+  document.cookie = `${name}=; path=/; max-age=0`;
+}
+
 function trackReferral() {
   if (typeof window === "undefined" || isTrackingDisabled()) return;
   if (sessionStorage.getItem("referral_sent")) return;
 
-  const params = new URLSearchParams(window.location.search);
-  const from = params.get("from");
+  const from = getCookie("ref_from");
   if (!from) return;
 
   sessionStorage.setItem("referral_sent", "1");
 
   const meta: Record<string, string> = { from };
-  const slug = params.get("slug");
-  if (slug) meta.slug = slug;
+  const slug = getCookie("ref_slug");
+  if (slug) {
+    meta.slug = slug;
+    deleteCookie("ref_slug");
+  }
+  deleteCookie("ref_from");
 
   trackEvent(`referral_${from}`, meta);
 }

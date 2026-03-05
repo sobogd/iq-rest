@@ -1,10 +1,14 @@
 import { redirect } from "next/navigation";
+import { getLocale } from "next-intl/server";
 import { getOnboardingData } from "./onboarding-data";
 
 /** For name step: requires auth, redirects to dashboard if step >= 2 */
 export async function guardNameStep() {
   const data = await getOnboardingData();
-  if (!data.isAuthenticated) redirect("/login?from=onboarding");
+  if (!data.isAuthenticated) {
+    const locale = await getLocale();
+    redirect(`/${locale}/login`);
+  }
   if (data.onboardingStep >= 2) redirect("/dashboard");
   return data;
 }
@@ -12,7 +16,10 @@ export async function guardNameStep() {
 /** For menu/templates/scan/category/item/done: requires auth + step 2 */
 export async function guardMenuStep() {
   const data = await getOnboardingData();
-  if (!data.isAuthenticated) redirect("/login?from=onboarding");
+  if (!data.isAuthenticated) {
+    const locale = await getLocale();
+    redirect(`/${locale}/login`);
+  }
   if (data.onboardingStep >= 3) redirect("/dashboard");
   if (data.onboardingStep < 2) redirect("/onboarding/name");
   return data;

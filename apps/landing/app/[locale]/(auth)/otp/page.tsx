@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { getLocale } from "next-intl/server";
 import { guardAuthPage } from "../_lib/onboarding-guard";
 import { OtpPage } from "../_components/otp-page";
 
@@ -11,7 +12,8 @@ export default async function Page({
   const params = await searchParams;
 
   if (!params.email) {
-    redirect("/login?from=otp");
+    const locale = await getLocale();
+    redirect(`/${locale}/login`);
   }
 
   return <OtpPage email={params.email} />;

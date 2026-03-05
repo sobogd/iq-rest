@@ -295,8 +295,6 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
     const isOnline = session.lastSeenAt && (Date.now() - new Date(session.lastSeenAt).getTime()) < 30_000;
     if (isOnline) {
       infoRows.push({ label: "Status", value: "Online", valueClassName: "text-green-500 font-medium" });
-    } else if (session.lastSeenAt) {
-      infoRows.push({ label: "Status", value: `Last seen: ${formatTimeDiff(new Date().toISOString(), session.lastSeenAt)} ago` });
     }
     if (session.country) infoRows.push({ label: "Country", value: `${countryToFlag(session.country)} ${session.country}${session.city ? `, ${session.city}` : ""}` });
     if (session.landingPage) infoRows.push({ label: "Landing", value: session.landingPage });
@@ -334,6 +332,13 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
       value: formatDateFull(session.updatedAt),
       subValue: countryTz ? formatTime(session.updatedAt, countryTz) : undefined,
     });
+    if (session.lastSeenAt && !isOnline) {
+      infoRows.push({
+        label: "Last seen",
+        value: formatDateFull(session.lastSeenAt),
+        subValue: countryTz ? formatTime(session.lastSeenAt, countryTz) : undefined,
+      });
+    }
   }
 
   // Active flags

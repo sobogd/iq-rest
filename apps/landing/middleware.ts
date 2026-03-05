@@ -129,6 +129,29 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Strip ?from= param → save to cookie for client-side referral tracking
+  const fromParam = request.nextUrl.searchParams.get("from");
+  if (fromParam) {
+    const slugParam = request.nextUrl.searchParams.get("slug");
+    const cleanUrl = new URL(request.url);
+    cleanUrl.searchParams.delete("from");
+    if (slugParam) cleanUrl.searchParams.delete("slug");
+    const response = NextResponse.redirect(cleanUrl, 302);
+    response.cookies.set("ref_from", fromParam, {
+      path: "/",
+      maxAge: 60 * 5, // 5 minutes
+      sameSite: "lax",
+    });
+    if (slugParam) {
+      response.cookies.set("ref_slug", slugParam, {
+        path: "/",
+        maxAge: 60 * 5,
+        sameSite: "lax",
+      });
+    }
+    return response;
+  }
+
   // Проверяем есть ли тестовый параметр ?country=
   const testCountry = request.nextUrl.searchParams.get("country")?.toUpperCase();
   const hasTestCountry = testCountry && testCountry.length === 2;

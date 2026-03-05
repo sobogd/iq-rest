@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { cookies, headers } from "next/headers";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
 import { DashboardShell } from "./_components/shell";
@@ -16,7 +16,8 @@ export default async function DashboardLayout({
   const auth = await getUserWithCompany();
 
   if (!auth) {
-    redirect("/login?from=dashboard");
+    const locale = await getLocale();
+    redirect(`/${locale}/login`);
   }
 
   const companyId = auth.companyId;
