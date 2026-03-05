@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,8 +17,8 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { Check, X } from "lucide-react";
-import { Link } from "@/i18n/routing";
+import { Check, X, Loader2 } from "lucide-react";
+import { useRouter } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { analytics } from "@/lib/analytics";
@@ -87,8 +87,53 @@ function formatPrice(amount: number, currency: SupportedCurrency): string {
 
 export function PricingCards({ hideComparison = false, hideButtons = false, currency }: PricingCardsProps) {
   const t = useTranslations("pricing");
+  const locale = useLocale();
+  const router = useRouter();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [loadingPlan, setLoadingPlan] = useState<PlanId | null>(null);
+
+  const handleCtaClick = async (planId: PlanId) => {
+    analytics.marketing.pricingCtaClick(planId);
+
+    if (loadingPlan) return;
+    setLoadingPlan(planId);
+
+    try {
+      const authRes = await fetch("/api/auth/check");
+      const { authenticated } = await authRes.json();
+
+      if (!authenticated) {
+        router.push("/login");
+        return;
+      }
+
+      if (planId === "free") {
+        router.push("/dashboard");
+        return;
+      }
+
+      const lookupKey = `${planId}_yearly`;
+      const checkoutRes = await fetch("/api/stripe/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceLookupKey: lookupKey, locale }),
+      });
+
+      const data = await checkoutRes.json();
+
+      if (!checkoutRes.ok || !data.url) {
+        router.push("/dashboard/billing");
+        return;
+      }
+
+      window.location.href = data.url;
+    } catch {
+      router.push("/login");
+    } finally {
+      setLoadingPlan(null);
+    }
+  };
 
   useEffect(() => {
     if (!api) return;
@@ -206,12 +251,17 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                   {!hideButtons && (
                     <CardFooter className="flex-col gap-3">
                       <Button
-                        asChild
                         className="w-full"
                         variant="default"
                         size="lg"
+                        disabled={loadingPlan !== null}
+                        onClick={() => handleCtaClick(plan.id)}
                       >
-                        <Link href="/login" onClick={() => analytics.marketing.pricingCtaClick(plan.id)}>{t(`plans.${plan.id}.cta`)}</Link>
+                        {loadingPlan === plan.id ? (
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                        ) : (
+                          t(`plans.${plan.id}.cta`)
+                        )}
                       </Button>
                       <p className={cn("text-[11px] text-center min-h-[2lh]", currencyPricing.yearlyTotal > 0 ? "text-muted-foreground/60" : "invisible")}>
                         {currencyPricing.yearlyTotal > 0
