@@ -1,5 +1,5 @@
+import { redirect } from "next/navigation";
 import { cookies, headers } from "next/headers";
-import { redirect } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
