@@ -11,3 +11,4 @@ export async function requireAuth(): Promise<string> {
   }
   return companyId;
 }
+// deploy trigger
