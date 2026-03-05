@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { redirect } from "@/i18n/routing";
 import { getOnboardingData } from "./onboarding-data";
 
 /** For name step: requires auth, redirects to dashboard if step >= 2 */
