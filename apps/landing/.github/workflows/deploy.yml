@@ -85,7 +85,8 @@ jobs:
             # 4. Установка продакшн зависимостей
             npm ci --production
 
-            # 5. Генерация Prisma (если используется)
+            # 5. Применяем миграции и генерируем Prisma Client
+            npx prisma migrate deploy
             npx prisma generate
 
             # 6. Перезапуск через PM2

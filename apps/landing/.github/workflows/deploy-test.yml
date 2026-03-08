@@ -81,6 +81,7 @@ jobs:
 
             npm ci --production
 
+            npx prisma migrate deploy
             npx prisma generate
 
             pm2 restart iq-rest-test --update-env || pm2 start npm --name "iq-rest-test" -- start -- -p 9000
