@@ -286,7 +286,7 @@ export function MenuScanner() {
       <div className="w-full max-w-xl">
         <div className="rounded-2xl border bg-card p-6 sm:p-8 lg:p-10 text-center shadow-sm">
             {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-base font-medium text-primary mb-4">
+            <div className="inline-flex items-center gap-1.5 rounded-xl bg-primary/10 px-3 py-1 text-base font-medium text-primary mb-4">
               <Sparkles className="w-3.5 h-3.5" />
               {t("badge")}
             </div>

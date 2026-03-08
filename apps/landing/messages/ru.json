@@ -1310,6 +1310,9 @@
     "error": "Ошибка",
     "close": "Закрыть",
     "noReservations": "Пока нет бронирований",
+    "noTablesHint": "Добавьте хотя бы один столик, чтобы клиенты могли бронировать",
+    "reservationsDisabled": "Бронирования сейчас отключены",
+    "configureReservations": "Настроить бронирования",
     "pending": "В ожидании",
     "confirmed": "Подтверждено",
     "cancelled": "Отменено",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Заказов пока нет",
+    "ordersDisabled": "Заказы сейчас отключены",
+    "configureOrders": "Настроить заказы",
     "new": "Новые",
     "inProgress": "В работе",
     "completed": "Выполненные",

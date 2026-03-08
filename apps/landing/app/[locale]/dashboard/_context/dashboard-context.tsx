@@ -51,6 +51,7 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
   "reservations": "reservations",
   "reservation-settings": "reservations",
   "orders": "orders",
+  "order-settings": "orders",
   "design": "design",
   "contacts": "contacts",
   "qr-menu": "qrMenu",

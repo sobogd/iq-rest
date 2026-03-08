@@ -38,7 +38,7 @@ export function FormAllergens({
               type="button"
               onClick={() => handleToggle(allergen.code)}
               disabled={disabled}
-              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm border transition-colors ${
+              className={`inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-sm border transition-colors ${
                 isSelected
                   ? "bg-primary text-primary-foreground border-primary"
                   : "bg-muted/30 text-muted-foreground border-border hover:bg-muted/50"

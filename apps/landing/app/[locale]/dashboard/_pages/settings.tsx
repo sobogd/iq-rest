@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Loader2, Star, AlertCircle } from "lucide-react";
+import { Loader2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import {
@@ -13,25 +13,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRouter } from "@/i18n/routing";
-import type { SubscriptionStatus } from "@prisma/client";
-import type { PlanType } from "@/lib/stripe-config";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 const ALL_LANGUAGES = [
   "en", "es", "de", "fr", "it", "pt", "nl", "pl", "ru", "uk",
@@ -50,16 +38,11 @@ interface SettingsPageProps {
     languages: string[];
     defaultLanguage: string;
   } | null;
-  initialSubscription: {
-    plan: PlanType;
-    subscriptionStatus: SubscriptionStatus;
-  } | null;
 }
 
-export function SettingsPage({ initialRestaurant, initialSubscription }: SettingsPageProps) {
+export function SettingsPage({ initialRestaurant }: SettingsPageProps) {
   const t = useTranslations("dashboard.general");
   const tLang = useTranslations("dashboard.languages");
-  const locale = useLocale();
   const { translations } = useDashboard();
   const router = useRouter();
 
@@ -68,27 +51,12 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
   const initLangs = initialRestaurant?.languages || ["en"];
   const initDefLang = initialRestaurant?.defaultLanguage || "en";
 
-  const [validationError, setValidationError] = useState<string | null>(null);
-
-  // Languages state
   const [languages, setLanguages] = useState<string[]>(initLangs);
   const [defaultLanguage, setDefaultLanguage] = useState(initDefLang);
   const [originalLanguages, setOriginalLanguages] = useState<string[]>(initLangs);
   const [originalDefaultLanguage, setOriginalDefaultLanguage] = useState(initDefLang);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [pendingDisable, setPendingDisable] = useState<string | null>(null);
-  const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
-  const currentPlan = initialSubscription?.plan ?? "FREE";
-
-  const getLanguageLimit = () => {
-    if (subscriptionStatus !== "ACTIVE") return 2;
-    if (currentPlan === "PRO") return Infinity;
-    if (currentPlan === "BASIC") return 6;
-    return 2;
-  };
-
-  const languageLimit = getLanguageLimit();
-  const isAtLimit = languages.length >= languageLimit;
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_SETTINGS);
@@ -103,7 +71,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
     );
   }, [languages, defaultLanguage, originalLanguages, originalDefaultLanguage]);
 
-  // Languages handlers (local state only, saved on form submit)
   function handleToggleLanguage(langCode: string, enabled: boolean) {
     if (enabled) {
       setLanguages((prev) => [...prev, langCode]);
@@ -156,7 +123,6 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
       });
 
       if (res.ok) {
-        // Delete translations for removed languages
         const removedLangs = originalLanguages.filter((l) => !languages.includes(l));
         await Promise.all(
           removedLangs.map((lang) =>
@@ -198,97 +164,51 @@ export function SettingsPage({ initialRestaurant, initialSubscription }: Setting
         </PageHeader>
       </div>
       <form id="settings-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
+        <DashboardContent innerClassName="space-y-6">
 
-          {isAtLimit && languageLimit !== Infinity && (
-            <div className="rounded-md border border-amber-500/50 bg-amber-500/10 p-4">
-              <div className="flex gap-3 md:gap-4 md:items-center">
-                <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
-                <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
-                  <p className="text-sm">
-                    {tLang("limitReached", { limit: languageLimit })}
-                  </p>
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="outline"
-                    className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                    onClick={() => router.push("/dashboard/billing")}
-                  >
-                    {tLang("upgrade")}
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{translations.pages.settings}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {ALL_LANGUAGES.map((lang, index) => {
+                const isEnabled = languages.includes(lang.code);
+                const isDefault = defaultLanguage === lang.code;
 
-          <DashboardCard title={translations.pages.settings}>
-            {ALL_LANGUAGES.map((lang) => {
-              const isEnabled = languages.includes(lang.code);
-              const isDefault = defaultLanguage === lang.code;
-              const isDisabledByLimit = !isEnabled && isAtLimit;
-
-              return (
-                <div
-                  key={lang.code}
-                  className={`flex items-center justify-between h-14 px-4 rounded-md bg-muted/30 ${isDisabledByLimit ? "opacity-50" : ""}`}
-                >
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <Switch
-                      checked={isEnabled}
-                      onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
-                      disabled={(isDefault && isEnabled) || isDisabledByLimit}
-                    />
-                    <span className="text-sm font-medium truncate">{lang.name}</span>
+                return (
+                  <div key={lang.code}>
+                    {index > 0 && <div className="border-t border-border mx-4" />}
+                    <div className="flex items-center h-11 px-4">
+                      <div className="mr-3" onClick={(e) => e.stopPropagation()}>
+                        <Switch
+                          checked={isEnabled}
+                          onCheckedChange={(checked) => { track(DashboardEvent.TOGGLED_LANGUAGE); handleToggleLanguage(lang.code, checked); }}
+                          disabled={isDefault && isEnabled}
+                        />
+                      </div>
+                      <span className="text-sm font-medium flex-1 min-w-0 truncate">{lang.name}</span>
+                      <button
+                        type="button"
+                        onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
+                        disabled={!isEnabled}
+                        className={`flex items-center justify-center h-8 w-8 -mr-1 rounded-lg transition-colors ${
+                          isDefault
+                            ? "text-yellow-500"
+                            : isEnabled
+                              ? "text-muted-foreground hover:text-yellow-500"
+                              : "text-muted-foreground/30 cursor-not-allowed"
+                        }`}
+                      >
+                        <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
+                      </button>
+                    </div>
                   </div>
-
-                  <button
-                    type="button"
-                    onClick={() => { track(DashboardEvent.CLICKED_SET_DEFAULT_LANGUAGE); handleSetDefault(lang.code); }}
-                    disabled={!isEnabled}
-                    className={`p-1.5 rounded-md transition-colors ${
-                      isDefault
-                        ? "text-yellow-500"
-                        : isEnabled
-                          ? "text-muted-foreground hover:text-yellow-500"
-                          : "text-muted-foreground/30 cursor-not-allowed"
-                    }`}
-                  >
-                    <Star className={`h-4 w-4 ${isDefault ? "fill-current" : ""}`} />
-                  </button>
-                </div>
-              );
-            })}
-            <p className="text-xs text-muted-foreground">
-              {tLang("hint")}
-            </p>
-          </DashboardCard>
-
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              form="settings-form"
-              disabled={saving || !hasChanges}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
-            </button>
+                );
+              })}
+            </div>
+            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">{tLang("hint")}</p>
           </div>
 
         </DashboardContent>
       </form>
-
-      <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("validationErrorTitle")}</AlertDialogTitle>
-            <AlertDialogDescription>{validationError}</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
 
       <Dialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <DialogContent>

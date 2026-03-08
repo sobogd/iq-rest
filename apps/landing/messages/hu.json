@@ -1310,6 +1310,9 @@
     "error": "Hiba",
     "close": "Bezárás",
     "noReservations": "Még nincsenek foglalások",
+    "noTablesHint": "Adjon hozzá legalább egy asztalt, hogy a vendégek foglalhassanak",
+    "reservationsDisabled": "A foglalások jelenleg ki vannak kapcsolva",
+    "configureReservations": "Foglalások beállítása",
     "pending": "Függőben",
     "confirmed": "Megerősítve",
     "cancelled": "Törölve",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Még nincsenek rendelések",
+    "ordersDisabled": "A rendelések jelenleg ki vannak kapcsolva",
+    "configureOrders": "Rendelések beállítása",
     "new": "Új",
     "inProgress": "Folyamatban",
     "completed": "Teljesített",

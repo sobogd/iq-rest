@@ -3,14 +3,13 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Palette, Phone, Languages, QrCode, BarChart3, Armchair, CalendarDays, CreditCard, HelpCircle, LogOut, Eye, ArrowRight, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, ClipboardList } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
-import { useDashboard, PAGE_PATHS, type PageKey } from "../_context/dashboard-context";
-import { DashboardNavHeader, DashboardNavSidebar } from "../_components/dashboard-nav";
+import { useDashboard, PAGE_PATHS } from "../_context/dashboard-context";
+import { DashboardNavHeader, DashboardNavSidebar, DashboardNavItems } from "../_components/dashboard-nav";
 import { useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
@@ -45,10 +44,9 @@ interface MenuPageProps {
   slug: string | null;
   checklist: ChecklistStatus;
   isAdmin?: boolean;
-  showOrders?: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, isAdmin, showOrders }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, isAdmin }: MenuPageProps) {
   useBlockBack();
   const { translations, scanUsage } = useDashboard();
   const tHome = useTranslations("dashboard.home");
@@ -71,18 +69,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
   const completedCount = checklistKeys.filter((item) => checklist[item.key]).length;
   const allDone = completedCount === checklistKeys.length;
-
-  const navEventMap: Record<string, DashboardEvent> = {
-    design: DashboardEvent.CLICKED_NAV_DESIGN,
-    contacts: DashboardEvent.CLICKED_NAV_CONTACTS,
-    settings: DashboardEvent.CLICKED_NAV_SETTINGS,
-    qrMenu: DashboardEvent.CLICKED_NAV_QR,
-    analytics: DashboardEvent.CLICKED_NAV_ANALYTICS,
-    tables: DashboardEvent.CLICKED_NAV_TABLES,
-    reservations: DashboardEvent.CLICKED_NAV_RESERVATIONS,
-    billing: DashboardEvent.CLICKED_NAV_BILLING,
-    support: DashboardEvent.CLICKED_NAV_SUPPORT,
-  };
 
   const checklistEventMap: Record<string, DashboardEvent> = {
     nameSet: DashboardEvent.CLICKED_CHECKLIST_NAME,
@@ -250,7 +236,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
   return (
     <div className="flex flex-col h-full">
       {/* Custom header */}
-      <header className="shrink-0 shadow-sm px-6 bg-muted/50">
+      <header className="shrink-0 border-b border-border px-6 bg-background/80 backdrop-blur-lg">
         <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
           <DashboardNavHeader />
           {/* Mobile: burger menu */}
@@ -263,39 +249,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 <MenuIcon className="h-5 w-5" />
               </button>
             </PopoverTrigger>
-            <PopoverContent align="start" className="p-0 w-56 rounded-md border border-border bg-background overflow-hidden">
-              {([
-                { page: "design" as PageKey, icon: Palette },
-                { page: "contacts" as PageKey, icon: Phone },
-                { page: "settings" as PageKey, icon: Languages },
-                { page: "qrMenu" as PageKey, icon: QrCode },
-                { page: "analytics" as PageKey, icon: BarChart3 },
-                { page: "tables" as PageKey, icon: Armchair },
-                { page: "reservations" as PageKey, icon: CalendarDays },
-                { page: "billing" as PageKey, icon: CreditCard },
-                { page: "support" as PageKey, icon: HelpCircle },
-              ]).map(({ page, icon: Icon }, index) => (
-                <div
-                  key={page}
-                  onClick={() => { if (navEventMap[page]) track(navEventMap[page]); router.push(PAGE_PATHS[page]); }}
-                  className={`flex items-center gap-3 h-12 px-6 cursor-pointer transition-colors hover:bg-muted/30 ${
-                    index > 0 ? "border-t border-foreground/5" : ""
-                  }`}
-                >
-                  <Icon className="h-4 w-4 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium">{translations.pages[page]}</span>
-                </div>
-              ))}
-              {scanUsage && (
-                <div onClick={() => { track(DashboardEvent.CLICKED_NAV_SCANS); router.push(PAGE_PATHS.billing); }} className="flex items-center justify-between h-12 px-6 border-t border-foreground/5 cursor-pointer transition-colors hover:bg-muted/30">
-                  <span className="text-sm font-medium">{tHome("scansTitle")}:</span>
-                  <span className="text-sm text-muted-foreground">
-                    {scanUsage.limit
-                      ? `${scanUsage.used.toLocaleString()} / ${scanUsage.limit.toLocaleString()}`
-                      : scanUsage.used.toLocaleString()}
-                  </span>
-                </div>
-              )}
+            <PopoverContent align="start" className="p-0 w-56 rounded-xl bg-popover overflow-hidden">
+              <DashboardNavItems excludePages={["menu"]} />
             </PopoverContent>
           </Popover>
           {/* Right part: title + sort */}
@@ -325,158 +280,114 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
         <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4 min-h-full">
           <DashboardNavSidebar />
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
-          {/* Orders + View row */}
-          {!sortMode && (showOrders || (slug && categories.length > 0)) && (
-            <div className="flex flex-col md:flex-row gap-4">
-              {showOrders && (
-                <Button
-                  variant="outline"
-                  className="w-full h-12 rounded-md border-border bg-muted/50 text-muted-foreground hover:bg-muted/80"
-                  onClick={() => { track(DashboardEvent.CLICKED_NAV_ORDERS); router.push(PAGE_PATHS.orders); }}
-                >
-                  <ClipboardList className="h-4 w-4" />
-                  {tHome("myOrders")}
-                </Button>
-              )}
-              {slug && categories.length > 0 && (
-                <MenuPreviewModal menuUrl={`/m/${slug}`} className="md:flex-1">
-                  <Button className="w-full h-12 rounded-md shadow-md" onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}>
-                    <Eye className="h-4 w-4" />
-                    {tHome("viewMenu")}
-                  </Button>
-                </MenuPreviewModal>
-              )}
-            </div>
+          {/* View menu */}
+          {!sortMode && slug && categories.length > 0 && (
+            <MenuPreviewModal menuUrl={`/m/${slug}`} className="md:flex-1">
+              <button
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
+              >
+                <Eye className="h-4 w-4" />
+                {tHome("viewMenu")}
+              </button>
+            </MenuPreviewModal>
           )}
 
           {/* Setup checklist */}
           {!sortMode && !allDone && (
-            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
-              <div className="px-4 py-3 bg-muted/30">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+            <div>
+              <div className="px-4 mb-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground">
                     {tHome("getReady")}
                   </span>
-                  <span className="text-sm text-muted-foreground">{completedCount}/{checklistKeys.length}</span>
-                </div>
-                <div className="h-2 rounded-full bg-muted overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-success transition-all duration-500"
-                    style={{ width: `${(completedCount / checklistKeys.length) * 100}%` }}
-                  />
+                  <span className="text-xs text-muted-foreground">{completedCount}/{checklistKeys.length}</span>
                 </div>
               </div>
-              {checklistKeys.map((item) => {
-                const done = checklist[item.key];
-                const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
-                return (
-                  <button
-                    key={item.key}
-                    onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
-                    disabled={done}
-                    className={`flex items-center gap-3 w-full h-12 px-4 text-left transition-colors ${
-                      done
-                        ? "opacity-60"
-                        : isNext
-                          ? "bg-success/5"
-                          : "hover:bg-muted/30"
-                    }`}
-                  >
-                    {done ? (
-                      <CheckCircle2 className="h-4 w-4 text-success shrink-0" />
-                    ) : (
-                      <Circle className={`h-4 w-4 shrink-0 ${isNext ? "text-success" : "text-muted-foreground"}`} />
-                    )}
-                    <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-semibold" : "font-medium"}`}>
-                      {tHome(item.translationKey)}
-                    </span>
-                    {!done && <ArrowRight className={`h-4 w-4 shrink-0 ${isNext ? "text-success" : "text-muted-foreground"}`} />}
-                  </button>
-                );
-              })}
+              <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                <div className="px-4 pt-3 pb-3">
+                  <div className="h-2 rounded-full bg-muted overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all duration-500"
+                      style={{ width: `${(completedCount / checklistKeys.length) * 100}%`, background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                    />
+                  </div>
+                </div>
+                {checklistKeys.map((item, index) => {
+                  const done = checklist[item.key];
+                  const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
+                  return (
+                    <button
+                      key={item.key}
+                      onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
+                      disabled={done}
+                      className={`flex items-center gap-3 w-full h-11 px-4 text-left transition-colors ${
+                        index > 0 || true ? "border-t border-border/50" : ""
+                      } ${done ? "opacity-50" : "hover:bg-muted/50"}`}
+                    >
+                      {done ? (
+                        <CheckCircle2 className="h-5 w-5 text-success shrink-0" />
+                      ) : (
+                        <Circle className={`h-5 w-5 shrink-0 ${isNext ? "text-primary" : "text-muted-foreground/40"}`} />
+                      )}
+                      <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-medium" : ""}`}>
+                        {tHome(item.translationKey)}
+                      </span>
+                      {!done && <ChevronRight className={`h-4 w-4 shrink-0 ${isNext ? "text-primary" : "text-muted-foreground/30"}`} />}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
 
           {/* Admin shortcuts */}
           {!sortMode && isAdmin && (
-            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
-              <button
-                onClick={() => router.push("/dashboard/admin")}
-                className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
-              >
-                <Shield className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Companies</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
-              <button
-                onClick={() => router.push("/dashboard/admin/analytics")}
-                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-              >
-                <Activity className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Analytics</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
-              <button
-                onClick={() => router.push("/dashboard/admin/onboarding")}
-                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-              >
-                <UserPlus className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Onboarding</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
-              <button
-                onClick={() => router.push("/dashboard/sessions")}
-                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-              >
-                <MousePointerClick className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Sessions</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
-              <button
-                onClick={() => router.push("/dashboard/keywords")}
-                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-              >
-                <KeyRound className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Keywords</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
-              <button
-                onClick={() => router.push("/dashboard/search-terms")}
-                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-              >
-                <Search className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Search Terms</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
-              <button
-                onClick={() => router.push("/dashboard/google-ads")}
-                className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-              >
-                <Send className="h-5 w-5 text-muted-foreground shrink-0" />
-                <span className="text-sm font-medium flex-1 text-left">Google Ads</span>
-                <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-              </button>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {([
+                { path: "/dashboard/admin", icon: Shield, label: "Companies" },
+                { path: "/dashboard/admin/analytics", icon: Activity, label: "Analytics" },
+                { path: "/dashboard/admin/onboarding", icon: UserPlus, label: "Onboarding" },
+                { path: "/dashboard/sessions", icon: MousePointerClick, label: "Sessions" },
+                { path: "/dashboard/keywords", icon: KeyRound, label: "Keywords" },
+                { path: "/dashboard/search-terms", icon: Search, label: "Search Terms" },
+                { path: "/dashboard/google-ads", icon: Send, label: "Google Ads" },
+              ]).map(({ path, icon: Icon, label }, index) => (
+                <button
+                  key={path}
+                  onClick={() => router.push(path)}
+                  className={`flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors ${
+                    index > 0 ? "border-t border-border/50" : ""
+                  }`}
+                >
+                  <Icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <span className="text-sm font-medium flex-1 text-left">{label}</span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
+                </button>
+              ))}
             </div>
           )}
 
         {categories.length === 0 ? (
           <>
-          <div className="flex flex-col items-center text-center rounded-md border border-border bg-muted/50 px-6 py-6">
+          <div className="flex flex-col items-center text-center rounded-xl border border-border bg-muted/30 px-6 py-8">
             <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
-            <p className="text-sm text-muted-foreground mb-4">{tMenu.emptySubtitle}</p>
-            <Button
-              className="w-full max-w-xs"
+            <p className="text-sm text-muted-foreground/60 mb-5">{tMenu.emptySubtitle}</p>
+            <button
+              className="flex items-center justify-center gap-2 w-full max-w-xs h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+              style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
               onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
             >
               <Plus className="h-4 w-4" />
               {tMenu.addCategory}
-            </Button>
+            </button>
           </div>
           {!allDone && (
-            <div className="rounded-md border border-border bg-muted/50 px-4 py-4">
-              <p className="text-sm font-semibold mb-2">{tMenu.hintTitle}</p>
-              <p className="text-sm text-muted-foreground mb-3">{tMenu.hintBody}</p>
-              <p className="text-sm text-muted-foreground">{tMenu.hintNoCategories}</p>
+            <div className="rounded-xl border border-border bg-muted/30 px-4 py-4">
+              <p className="text-sm font-medium mb-2">{tMenu.hintTitle}</p>
+              <p className="text-xs text-muted-foreground/60 mb-3">{tMenu.hintBody}</p>
+              <p className="text-xs text-muted-foreground/60">{tMenu.hintNoCategories}</p>
             </div>
           )}
           </>
@@ -489,11 +400,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   .sort((a, b) => a.sortOrder - b.sortOrder);
 
                 return (
-                  <div key={category.id} className="rounded-md border border-border bg-muted/50 overflow-hidden">
+                  <div key={category.id} className="rounded-xl border border-border bg-muted/30 overflow-hidden">
                     {/* Category header */}
                     <div
                       onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_CATEGORY_ROW); router.push(`/dashboard/categories/${category.id}`); } }}
-                      className={`flex items-center gap-2 px-4 h-12 bg-muted/30 transition-colors ${
+                      className={`flex items-center gap-2 px-4 h-11 transition-colors ${
                         sortMode ? "" : "cursor-pointer hover:bg-muted/50"
                       }`}
                     >
@@ -524,8 +435,8 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                         </div>
                       )}
                       <div className={`flex items-center flex-1 min-w-0 ${sortMode ? "ml-2" : ""}`}>
-                        <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground truncate">{category.name}</span>
-                        {!sortMode && <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0 ml-1" />}
+                        <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground truncate">{category.name}</span>
+                        {!sortMode && <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 ml-1" />}
                       </div>
                     </div>
 
@@ -534,12 +445,12 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       {categoryItems.map((item, index) => (
                         <div
                           key={item.id}
-                          className="flex items-center gap-2 border-t border-foreground/5"
+                          className="flex items-center gap-2 border-t border-border/50"
                         >
                           <div
                             onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_ITEM_ROW); router.push(`/dashboard/items/${item.id}`); } }}
-                            className={`flex items-center flex-1 min-w-0 h-12 px-4 transition-colors ${
-                              sortMode ? "" : "hover:bg-muted/30 cursor-pointer"
+                            className={`flex items-center flex-1 min-w-0 h-11 px-4 transition-colors ${
+                              sortMode ? "" : "hover:bg-muted/50 cursor-pointer"
                             }`}
                           >
                             <div className="flex items-center gap-3 flex-1 min-w-0">
@@ -569,7 +480,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                               <button
                                 onClick={() => handleMoveItem(item.id, "up")}
                                 disabled={index === 0 || !!moving}
-                                className="flex items-center justify-center h-9 w-9 rounded-lg hover:bg-muted/30 transition-colors disabled:opacity-30"
+                                className="flex items-center justify-center h-9 w-9 rounded-lg hover:bg-muted/50 transition-colors disabled:opacity-30"
                               >
                                 {moving && moving.id === item.id && moving.direction === "up" ? (
                                   <Loader2 className="h-4 w-4 animate-spin" />
@@ -580,7 +491,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                               <button
                                 onClick={() => handleMoveItem(item.id, "down")}
                                 disabled={index === categoryItems.length - 1 || !!moving}
-                                className="flex items-center justify-center h-9 w-9 rounded-lg hover:bg-muted/30 transition-colors disabled:opacity-30"
+                                className="flex items-center justify-center h-9 w-9 rounded-lg hover:bg-muted/50 transition-colors disabled:opacity-30"
                               >
                                 {moving && moving.id === item.id && moving.direction === "down" ? (
                                   <Loader2 className="h-4 w-4 animate-spin" />
@@ -594,7 +505,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       ))}
                       {!sortMode && (
                         <div
-                          className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-primary/5 hover:bg-primary/10"
+                          className="flex items-center h-11 px-4 border-t border-border/50 cursor-pointer transition-colors hover:bg-muted/50"
                           onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${category.id}`); }}
                         >
                           <Plus className="h-4 w-4 mr-2 text-primary" />
@@ -609,21 +520,22 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
             {/* Item hint during onboarding */}
             {!allDone && items.length === 0 && (
-              <div className="rounded-md border border-border bg-muted/50 px-4 py-4">
-                <p className="text-sm font-semibold mb-2">{tMenu.itemHintTitle}</p>
-                <p className="text-sm text-muted-foreground">{tMenu.itemHintBody}</p>
+              <div className="rounded-xl border border-border bg-muted/30 px-4 py-4">
+                <p className="text-sm font-medium mb-2">{tMenu.itemHintTitle}</p>
+                <p className="text-xs text-muted-foreground/60">{tMenu.itemHintBody}</p>
               </div>
             )}
 
             {/* Add category button */}
             {!sortMode && (
-              <Button
+              <button
                 onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-                className="w-full h-12 rounded-md shadow-md"
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
               >
                 <Plus className="h-4 w-4" />
                 {tMenu.addCategory}
-              </Button>
+              </button>
             )}
           </div>
         )}

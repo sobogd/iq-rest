@@ -338,7 +338,7 @@ export function MenuFeed({ categories, accentColor, currency = "EUR", allergenNa
       {ordersEnabled && totalItems > 0 && slug && (
         <Link
           href={`/m/${slug}/order${previewParam}`}
-          className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-white active:opacity-80"
+          className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-xl shadow-lg flex items-center justify-center text-white active:opacity-80"
           style={{ backgroundColor: accentColor || "#000" }}
         >
           <ShoppingCart className="w-6 h-6" />

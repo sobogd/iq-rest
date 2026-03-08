@@ -1310,6 +1310,9 @@
     "error": "Erreur",
     "close": "Fermer",
     "noReservations": "Aucune réservation pour le moment",
+    "noTablesHint": "Ajoutez au moins une table pour que les clients puissent faire des réservations",
+    "reservationsDisabled": "Les réservations sont actuellement désactivées",
+    "configureReservations": "Configurer les réservations",
     "pending": "En attente",
     "confirmed": "Confirmé",
     "cancelled": "Annulé",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Pas encore de commandes",
+    "ordersDisabled": "Les commandes sont actuellement désactivées",
+    "configureOrders": "Configurer les commandes",
     "new": "Nouvelles",
     "inProgress": "En cours",
     "completed": "Terminées",

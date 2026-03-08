@@ -27,7 +27,7 @@ export function Footer() {
             <Logo height={24} />
           </Link>
 
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-base">
+          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -41,7 +41,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pt-4 border-t border-border/50 text-base text-muted-foreground">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pt-4 border-t border-border/50 text-sm text-muted-foreground">
           <p>{t("copyright")}</p>
           <nav className="flex flex-wrap items-center gap-x-4 gap-y-1">
             {LEGAL_LINKS.map((link) => (

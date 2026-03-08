@@ -1310,6 +1310,9 @@
     "error": "خطا",
     "close": "بستن",
     "noReservations": "هنوز رزروی نیست",
+    "noTablesHint": "حداقل یک میز اضافه کنید تا مشتریان بتوانند رزرو کنند",
+    "reservationsDisabled": "رزروها در حال حاضر غیرفعال هستند",
+    "configureReservations": "پیکربندی رزروها",
     "pending": "در انتظار",
     "confirmed": "تأیید شده",
     "cancelled": "لغو شده",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "هنوز سفارشی نیست",
+    "ordersDisabled": "سفارشات در حال حاضر غیرفعال هستند",
+    "configureOrders": "پیکربندی سفارشات",
     "new": "جدید",
     "inProgress": "در حال انجام",
     "completed": "تکمیل شده",

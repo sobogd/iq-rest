@@ -1310,6 +1310,9 @@
     "error": "Viga",
     "close": "Sulge",
     "noReservations": "Broneeringuid pole veel",
+    "noTablesHint": "Lisage vähemalt üks laud, et kliendid saaksid broneerida",
+    "reservationsDisabled": "Broneeringud on hetkel keelatud",
+    "configureReservations": "Seadista broneeringud",
     "pending": "Ootel",
     "confirmed": "Kinnitatud",
     "cancelled": "Tühistatud",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Tellimusi pole veel",
+    "ordersDisabled": "Tellimused on hetkel keelatud",
+    "configureOrders": "Seadista tellimused",
     "new": "Uued",
     "inProgress": "Pooleli",
     "completed": "Täidetud",

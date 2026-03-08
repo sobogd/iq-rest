@@ -1310,6 +1310,9 @@
     "error": "Earráid",
     "close": "Dún",
     "noReservations": "Níl conarthaí ann go fóill",
+    "noTablesHint": "Cuir bord amháin ar a laghad leis go mbeidh custaiméirí in ann áirithintí a dhéanamh",
+    "reservationsDisabled": "Tá áirithintí díchumasaithe faoi láthair",
+    "configureReservations": "Cumraigh áirithintí",
     "pending": "Ag Fanacht",
     "confirmed": "Deimhnithe",
     "cancelled": "Cealaíodh",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Níl aon orduithe fós",
+    "ordersDisabled": "Tá orduithe díchumasaithe faoi láthair",
+    "configureOrders": "Cumraigh orduithe",
     "new": "Nua",
     "inProgress": "Ar siúl",
     "completed": "Críochnaithe",

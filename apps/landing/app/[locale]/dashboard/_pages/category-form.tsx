@@ -27,12 +27,10 @@ import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import { FormInput } from "../_ui/form-input";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 interface CategoryWithTranslations extends Category {
   translations?: Record<string, { name?: string }> | null;
@@ -254,76 +252,78 @@ export function CategoryFormPage({ id }: CategoryFormPageProps) {
       </div>
 
       <form id="category-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
+        <DashboardContent innerClassName="space-y-6">
 
-          <DashboardCard title={t.general}>
-            <FormInput
-              id="name"
-              label={`${t.name}:`}
-              value={name}
-              onChange={setName}
-              onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
-              placeholder={t.namePlaceholder}
-            />
-          </DashboardCard>
+          {/* General */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.general}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="name" className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
+                <input
+                  id="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_CATEGORY_NAME)}
+                  placeholder={t.namePlaceholder}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+            </div>
+          </div>
 
-          {/* Translation sections — one per language */}
+          {/* Translation sections */}
           {otherLanguages.map((lang) => {
             const isTranslating = translatingLangs.has(lang);
             return (
-              <DashboardCard
-                key={lang}
-                title={LANGUAGE_NAMES[lang] || lang}
-                headerRight={
+              <div key={lang}>
+                <div className="flex items-center justify-between px-4 mb-1.5">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{LANGUAGE_NAMES[lang] || lang}</p>
                   <button
                     type="button"
                     onClick={() => handleTranslateSection(lang)}
                     disabled={isTranslating || !name.trim()}
-                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
+                    className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
                   >
                     {isTranslating ? tAi("translating") : tAi("translate")}
                     {isTranslating ? (
-                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      <Loader2 className="h-3 w-3 animate-spin" />
                     ) : (
-                      <Sparkles className="h-3.5 w-3.5" />
+                      <Sparkles className="h-3 w-3" />
                     )}
                   </button>
-                }
-              >
-                <FormInput
-                  id={`name-${lang}`}
-                  label={`${t.name}:`}
-                  value={categoryTranslations[lang]?.name || ""}
-                  onChange={(value) => handleTranslationChange(lang, value)}
-                  placeholder={t.namePlaceholder}
-                />
-              </DashboardCard>
+                </div>
+                <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                  <div className="flex items-center h-11 px-4">
+                    <label className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
+                    <input
+                      type="text"
+                      value={categoryTranslations[lang]?.name || ""}
+                      onChange={(e) => handleTranslationChange(lang, e.target.value)}
+                      placeholder={t.namePlaceholder}
+                      className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                    />
+                  </div>
+                </div>
+              </div>
             );
           })}
 
-          <div className="flex justify-between items-center mt-4">
-            <div>
-              {isEdit && (
-                <button
-                  type="button"
-                  onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
-                  disabled={saving || deleting}
-                  className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium disabled:opacity-50"
-                >
-                  <Trash2 className="h-4 w-4" />
-                  {t.delete}
-                </button>
-              )}
+          {/* Delete */}
+          {isEdit && (
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_DELETE_CATEGORY); setShowDeleteDialog(true); }}
+                disabled={saving || deleting}
+                className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+              >
+                <Trash2 className="h-4 w-4 text-red-400" />
+                <span className="text-sm font-medium text-red-400">{t.delete}</span>
+              </button>
             </div>
-            <button
-              type="submit"
-              form="category-form"
-              disabled={saving || deleting || !hasChanges}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t.save}
-            </button>
-          </div>
+          )}
 
         </DashboardContent>
       </form>

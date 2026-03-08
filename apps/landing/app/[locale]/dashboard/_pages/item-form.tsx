@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useMemo } from "react";
 import Image from "next/image";
-import { Loader2, X, Trash2, Upload, Sparkles } from "lucide-react";
+import { Loader2, X, Trash2, Upload, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import {
@@ -28,18 +28,11 @@ import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import { FormInput } from "../_ui/form-input";
-import { FormTextarea } from "../_ui/form-textarea";
-import { FormSelect } from "../_ui/form-select";
-import { FormAllergens } from "../_ui/form-allergens";
 import { LANGUAGE_NAMES } from "../_lib/constants";
-import type { AllergenCode } from "@/lib/allergens";
+import { ALLERGENS, type AllergenCode } from "@/lib/allergens";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import type { Category } from "@/types";
-import type { SubscriptionStatus } from "@prisma/client";
-import type { PlanType } from "@/lib/stripe-config";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 interface TranslationData {
   name?: string;
@@ -90,8 +83,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [showGenerateLimitDialog, setShowGenerateLimitDialog] = useState(false);
   const [itemTranslations, setItemTranslations] = useState<Record<string, TranslationData>>({});
   const [validationError, setValidationError] = useState<string | null>(null);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>("INACTIVE");
-  const [currentPlan, setCurrentPlan] = useState<PlanType>("FREE");
   const [translatingLangs, setTranslatingLangs] = useState<Set<string>>(new Set());
   const [showTranslateLimitDialog, setShowTranslateLimitDialog] = useState(false);
   const tAi = useTranslations("dashboard.aiTranslate");
@@ -106,7 +97,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [originalTranslations, setOriginalTranslations] = useState<Record<string, TranslationData>>({});
 
   const isEdit = !!id;
-  const hasActiveSubscription = true;
 
   const hasChanges = useMemo(() => {
     if (!isEdit) {
@@ -132,24 +122,17 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
     try {
       const promises: Promise<Response>[] = [
         fetch("/api/categories"),
-        fetch("/api/subscription/status"),
       ];
       if (id) {
         promises.push(fetch(`/api/items/${id}`));
       }
 
       const results = await Promise.all(promises);
-      const [categoriesRes, subscriptionRes, itemRes] = results;
+      const [categoriesRes, itemRes] = results;
 
       if (categoriesRes.ok) {
         const categoriesData = await categoriesRes.json();
         setCategories(categoriesData);
-      }
-
-      if (subscriptionRes.ok) {
-        const subData = await subscriptionRes.json();
-        setSubscriptionStatus(subData.subscriptionStatus);
-        setCurrentPlan(subData.plan);
       }
 
       if (id && itemRes) {
@@ -309,10 +292,6 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
     }
   }
 
-  function handleRemoveImage() {
-    setImageUrl("");
-  }
-
   function isAiImage(url: string) {
     const filename = url.split("/").pop() || "";
     return filename.startsWith("ai-");
@@ -452,10 +431,13 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
     }
   }
 
-  const categoryOptions = categories.map((cat) => ({
-    value: cat.id,
-    label: cat.name,
-  }));
+  function handleToggleAllergen(code: string) {
+    if (allergens.includes(code)) {
+      setAllergens(allergens.filter((c) => c !== code));
+    } else {
+      setAllergens([...allergens, code]);
+    }
+  }
 
   if (loading || loadingRestaurant) {
     return <PageLoader />;
@@ -479,223 +461,246 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       </div>
 
       <form id="item-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
+        <DashboardContent innerClassName="space-y-6">
 
-          <DashboardCard title={t.general}>
-            {(!initialCategoryId || isEdit) && (
-              <FormSelect
-                id="category"
-                label={`${t.category}:`}
-                value={categoryId}
-                onChange={(v) => { track(DashboardEvent.CHANGED_ITEM_CATEGORY); setCategoryId(v); }}
-                placeholder={t.categoryPlaceholder}
-                options={categoryOptions}
-              />
-            )}
-
-            <FormInput
-              id="name"
-              label={`${t.name}:`}
-              value={name}
-              onChange={setName}
-              onFocus={() => track(DashboardEvent.FOCUSED_ITEM_NAME)}
-              placeholder={t.namePlaceholder}
-            />
-
-            <FormTextarea
-              id="description"
-              label={`${t.description}:`}
-              value={description}
-              onChange={setDescription}
-              onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
-              placeholder={t.descriptionPlaceholder}
-              rows={2}
-            />
-
-            <FormInput
-              id="price"
-              label={`${t.price}:`}
-              value={price}
-              onFocus={() => track(DashboardEvent.FOCUSED_ITEM_PRICE)}
-              onChange={(value) => {
-                const cleanValue = value
-                  .replace(",", ".")
-                  .replace(/[^0-9.]/g, "")
-                  .replace(/(\..*)\./g, "$1");
-                setPrice(cleanValue);
-              }}
-              placeholder={t.pricePlaceholder}
-            />
-
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium">{t.image}:</label>
-                {(!imageUrl || (imageUrl && !isAiImage(imageUrl))) && (
-                  <button
-                    type="button"
-                    onClick={() => imageUrl ? handleGenerateImage(imageUrl) : handleGenerateImage()}
-                    disabled={generating || !name.trim()}
-                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
-                  >
-                    {generating ? t.generatingImage : imageUrl ? t.stylize : t.generateImage}
-                    {generating ? (
-                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                    ) : (
-                      <Sparkles className="h-3.5 w-3.5" />
-                    )}
-                  </button>
-                )}
-              </div>
-              {imageUrl ? (
-                <div className="relative">
-                  <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
-                    <Image
-                      src={imageUrl}
-                      alt="Item image"
-                      fill
-                      className="object-cover"
-                      sizes="160px"
-                    />
+          {/* General */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.general}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {/* Category */}
+              {(!initialCategoryId || isEdit) && (
+                <>
+                  <div className="flex items-center h-11 px-4">
+                    <label htmlFor="category" className="text-sm text-muted-foreground shrink-0 mr-3">{t.category}</label>
+                    <div className="relative flex-1 flex justify-end">
+                      <select
+                        id="category"
+                        value={categoryId}
+                        onChange={(e) => { track(DashboardEvent.CHANGED_ITEM_CATEGORY); setCategoryId(e.target.value); }}
+                        className="appearance-none bg-transparent text-sm text-right pr-5 cursor-pointer focus:outline-none min-w-0"
+                      >
+                        <option value="">{t.categoryPlaceholder}</option>
+                        {categories.map((cat) => (
+                          <option key={cat.id} value={cat.id}>{cat.name}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
+                    </div>
                   </div>
-                  <Button
-                    type="button"
-                    variant="destructive"
-                    size="icon"
-                    className="absolute -top-2 left-36 h-6 w-6"
-                    onClick={handleRemoveImage}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
+                  <div className="border-t border-border mx-4" />
+                </>
+              )}
+              {/* Name */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="name" className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
+                <input
+                  id="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_ITEM_NAME)}
+                  placeholder={t.namePlaceholder}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* Price */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="price" className="text-sm text-muted-foreground shrink-0 mr-3">{t.price}</label>
+                <input
+                  id="price"
+                  type="text"
+                  inputMode="decimal"
+                  value={price}
+                  onFocus={() => track(DashboardEvent.FOCUSED_ITEM_PRICE)}
+                  onChange={(e) => {
+                    const cleanValue = e.target.value
+                      .replace(",", ".")
+                      .replace(/[^0-9.]/g, "")
+                      .replace(/(\..*)\./g, "$1");
+                    setPrice(cleanValue);
+                  }}
+                  placeholder={t.pricePlaceholder}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.description}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                onFocus={() => track(DashboardEvent.FOCUSED_ITEM_DESCRIPTION)}
+                placeholder={t.descriptionPlaceholder}
+                rows={3}
+                className="w-full px-4 py-3 text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30 resize-none"
+              />
+            </div>
+          </div>
+
+          {/* Image */}
+          <div>
+            <div className="flex items-center justify-between px-4 mb-1.5">
+              <p className="text-xs uppercase tracking-wider text-muted-foreground">{t.image}</p>
+              {(!imageUrl || (imageUrl && !isAiImage(imageUrl))) && (
+                <button
+                  type="button"
+                  onClick={() => imageUrl ? handleGenerateImage(imageUrl) : handleGenerateImage()}
+                  disabled={generating || !name.trim()}
+                  className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
+                >
+                  {generating ? t.generatingImage : imageUrl ? t.stylize : t.generateImage}
+                  {generating ? (
+                    <Loader2 className="h-3 w-3 animate-spin" />
+                  ) : (
+                    <Sparkles className="h-3 w-3" />
+                  )}
+                </button>
+              )}
+            </div>
+            <div className="rounded-xl border border-border bg-muted/30">
+              {imageUrl ? (
+                <div className="p-4">
+                  <div className="relative inline-block">
+                    <div className="relative h-32 w-32 rounded-lg overflow-hidden border border-border">
+                      <Image
+                        src={imageUrl}
+                        alt="Item"
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      className="absolute -top-2 -right-2 h-6 w-6 rounded-lg bg-destructive text-destructive-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
+                      onClick={() => setImageUrl("")}
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <div
-                  className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
+                  className="flex items-center justify-center h-28 cursor-pointer hover:bg-muted/50 transition-colors rounded-xl"
                   onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_ITEM_IMAGE); fileInputRef.current?.click(); }}
                 >
                   {uploading ? (
-                    <div className="flex flex-col items-center gap-2">
-                      <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">
-                        Uploading...
-                      </span>
+                    <div className="flex items-center gap-2">
+                      <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">Uploading...</span>
                     </div>
                   ) : (
-                    <div className="flex flex-col items-center gap-2">
-                      <Upload className="h-8 w-8 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">
-                        {t.uploadImage}
-                      </span>
+                    <div className="flex items-center gap-2">
+                      <Upload className="h-5 w-5 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">{t.uploadImage}</span>
                     </div>
                   )}
                 </div>
               )}
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/jpeg,image/png,image/webp,image/gif"
-                className="hidden"
-                onChange={handleImageUpload}
-                disabled={uploading}
-              />
             </div>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
+              className="hidden"
+              onChange={handleImageUpload}
+              disabled={uploading}
+            />
+          </div>
 
-            {/* Allergens */}
-            <div className="space-y-2">
-              <label className={`text-sm font-medium ${!hasActiveSubscription ? "text-muted-foreground" : ""}`}>
-                {t.allergens}:
-              </label>
-              {!hasActiveSubscription ? (
-                <div className="space-y-2">
-                  <p className="text-sm text-amber-500">
-                    {t.subscribeForAllergens}
-                  </p>
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="outline"
-                    className="border-amber-500/50 hover:bg-amber-500/10"
-                    onClick={() => router.push("/dashboard/billing")}
-                  >
-                    {t.subscribe}
-                  </Button>
-                </div>
-              ) : (
-                <FormAllergens
-                  label=""
-                  value={allergens}
-                  onChange={setAllergens}
-                  allergenNames={t.allergenNames as Record<AllergenCode, string>}
-                />
-              )}
+          {/* Allergens */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.allergens}</p>
+            <div className="rounded-xl border border-border bg-muted/30 p-3">
+              <div className="flex flex-wrap gap-2">
+                {ALLERGENS.map((allergen) => {
+                  const isSelected = allergens.includes(allergen.code);
+                  return (
+                    <button
+                      key={allergen.code}
+                      type="button"
+                      onClick={() => handleToggleAllergen(allergen.code)}
+                      className={`inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-sm border transition-colors ${
+                        isSelected
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-muted/30 text-muted-foreground border-border hover:bg-muted/50"
+                      }`}
+                    >
+                      <span className="text-base leading-none">{allergen.icon}</span>
+                      <span>{(t.allergenNames as Record<AllergenCode, string>)[allergen.code] || allergen.code}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </DashboardCard>
+          </div>
 
-          {/* Translation sections — one per language */}
+          {/* Translation sections */}
           {otherLanguages.map((lang) => {
             const isTranslating = translatingLangs.has(lang);
             return (
-              <DashboardCard
-                key={lang}
-                title={LANGUAGE_NAMES[lang] || lang}
-                headerRight={
+              <div key={lang}>
+                <div className="flex items-center justify-between px-4 mb-1.5">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{LANGUAGE_NAMES[lang] || lang}</p>
                   <button
                     type="button"
                     onClick={() => handleTranslateSection(lang)}
                     disabled={isTranslating || (!name.trim() && !description.trim())}
-                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
+                    className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
                   >
                     {isTranslating ? tAi("translating") : tAi("translate")}
                     {isTranslating ? (
-                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      <Loader2 className="h-3 w-3 animate-spin" />
                     ) : (
-                      <Sparkles className="h-3.5 w-3.5" />
+                      <Sparkles className="h-3 w-3" />
                     )}
                   </button>
-                }
-              >
-                <FormInput
-                  id={`name-${lang}`}
-                  label={`${t.name}:`}
-                  value={itemTranslations[lang]?.name || ""}
-                  onChange={(value) => handleTranslationChange(lang, "name", value)}
-                  placeholder={t.namePlaceholder}
-                />
-
-                <FormTextarea
-                  id={`desc-${lang}`}
-                  label={`${t.description}:`}
-                  value={itemTranslations[lang]?.description || ""}
-                  onChange={(value) => handleTranslationChange(lang, "description", value)}
-                  placeholder={t.descriptionPlaceholder}
-                  rows={2}
-                />
-              </DashboardCard>
+                </div>
+                <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                  {/* Name */}
+                  <div className="flex items-center h-11 px-4">
+                    <label className="text-sm text-muted-foreground shrink-0 mr-3">{t.name}</label>
+                    <input
+                      type="text"
+                      value={itemTranslations[lang]?.name || ""}
+                      onChange={(e) => handleTranslationChange(lang, "name", e.target.value)}
+                      placeholder={t.namePlaceholder}
+                      className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                    />
+                  </div>
+                  <div className="border-t border-border mx-4" />
+                  {/* Description */}
+                  <textarea
+                    value={itemTranslations[lang]?.description || ""}
+                    onChange={(e) => handleTranslationChange(lang, "description", e.target.value)}
+                    placeholder={t.descriptionPlaceholder}
+                    rows={2}
+                    className="w-full px-4 py-3 text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30 resize-none"
+                  />
+                </div>
+              </div>
             );
           })}
 
-          <div className="flex justify-between items-center mt-4">
-            <div>
-              {isEdit && (
-                <button
-                  type="button"
-                  onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
-                  disabled={saving || deleting}
-                  className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium disabled:opacity-50"
-                >
-                  <Trash2 className="h-4 w-4" />
-                  {t.delete}
-                </button>
-              )}
+          {/* Delete */}
+          {isEdit && (
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_DELETE_ITEM); setShowDeleteDialog(true); }}
+                disabled={saving || deleting}
+                className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+              >
+                <Trash2 className="h-4 w-4 text-red-400" />
+                <span className="text-sm font-medium text-red-400">{t.delete}</span>
+              </button>
             </div>
-            <button
-              type="submit"
-              form="item-form"
-              disabled={saving || deleting || !hasChanges}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t.save}
-            </button>
-          </div>
+          )}
 
         </DashboardContent>
       </form>

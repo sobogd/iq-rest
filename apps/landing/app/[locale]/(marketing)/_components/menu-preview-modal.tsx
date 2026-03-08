@@ -34,6 +34,16 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
     };
   }, [open]);
 
+  useEffect(() => {
+    const handler = () => {
+      setOpen(true);
+      setLoading(true);
+      analytics.marketing.demoOpen();
+    };
+    window.addEventListener("open-demo-modal", handler);
+    return () => window.removeEventListener("open-demo-modal", handler);
+  }, []);
+
   const handleClose = () => {
     setOpen(false);
     analytics.marketing.demoClose();

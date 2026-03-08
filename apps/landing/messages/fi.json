@@ -1310,6 +1310,9 @@
     "error": "Virhe",
     "close": "Sulje",
     "noReservations": "Ei vielä varauksia",
+    "noTablesHint": "Lisää vähintään yksi pöytä, jotta asiakkaat voivat tehdä varauksia",
+    "reservationsDisabled": "Varaukset ovat tällä hetkellä pois käytöstä",
+    "configureReservations": "Määritä varaukset",
     "pending": "Odottaa",
     "confirmed": "Vahvistettu",
     "cancelled": "Peruutettu",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Ei vielä tilauksia",
+    "ordersDisabled": "Tilaukset ovat tällä hetkellä pois käytöstä",
+    "configureOrders": "Määritä tilaukset",
     "new": "Uudet",
     "inProgress": "Käsittelyssä",
     "completed": "Valmiit",

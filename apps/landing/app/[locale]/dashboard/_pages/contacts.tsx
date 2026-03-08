@@ -3,17 +3,14 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
-import { FormInput } from "../_ui/form-input";
 import { MapPicker } from "@/components/map-picker";
+import { toast } from "sonner";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
-import { HintLabel } from "../_ui/hint-label";
 
 interface ContactsPageProps {
   initialRestaurant: {
@@ -126,67 +123,70 @@ export function ContactsPage({ initialRestaurant }: ContactsPageProps) {
       </div>
 
       <form id="contacts-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
-          <DashboardCard title={translations.pages.contacts}>
-            <div className="space-y-2">
-              <HintLabel htmlFor="phone" label={`${t("phone")}:`} hint={t("phoneHint")} />
-              <FormInput
-                id="phone"
-                label=""
-                value={phone}
-                onChange={setPhone}
-                onFocus={() => track(DashboardEvent.FOCUSED_PHONE)}
-                placeholder={t("phonePlaceholder")}
-              />
-            </div>
+        <DashboardContent innerClassName="space-y-6">
 
-            <div className="space-y-2">
-              <HintLabel htmlFor="instagram" label={`${t("instagram")}:`} hint={t("instagramHint")} />
-              <FormInput
-                id="instagram"
-                label=""
-                value={instagram}
-                onChange={setInstagram}
-                onFocus={() => track(DashboardEvent.FOCUSED_INSTAGRAM)}
-                placeholder={t("instagramPlaceholder")}
-              />
-            </div>
-
-            <div className="space-y-2">
-              <HintLabel htmlFor="whatsapp" label={`${t("whatsapp")}:`} hint={t("whatsappHint")} />
-              <FormInput
-                id="whatsapp"
-                label=""
-                value={whatsapp}
-                onChange={setWhatsapp}
-                onFocus={() => track(DashboardEvent.FOCUSED_WHATSAPP)}
-                placeholder={t("whatsappPlaceholder")}
-              />
-            </div>
-          </DashboardCard>
-
-          <DashboardCard title={t("location")}>
-            <div>
-              <div className="rounded-md overflow-hidden border">
-                <MapPicker
-                  lat={lat}
-                  lng={lng}
-                  onLocationSelect={handleLocationSelect}
+          {/* Contacts */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{translations.pages.contacts}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {/* Phone */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="phone" className="text-sm text-muted-foreground shrink-0 mr-3">{t("phone")}</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_PHONE)}
+                  placeholder={t("phonePlaceholder")}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* Instagram */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="instagram" className="text-sm text-muted-foreground shrink-0 mr-3">{t("instagram")}</label>
+                <input
+                  id="instagram"
+                  type="text"
+                  value={instagram}
+                  onChange={(e) => setInstagram(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_INSTAGRAM)}
+                  placeholder={t("instagramPlaceholder")}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* WhatsApp */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="whatsapp" className="text-sm text-muted-foreground shrink-0 mr-3">{t("whatsapp")}</label>
+                <input
+                  id="whatsapp"
+                  type="tel"
+                  value={whatsapp}
+                  onChange={(e) => setWhatsapp(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_WHATSAPP)}
+                  placeholder={t("whatsappPlaceholder")}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
                 />
               </div>
             </div>
-          </DashboardCard>
-
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              form="contacts-form"
-              disabled={saving || !hasChanges}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
-            </button>
+            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">{t("phoneHint")}</p>
           </div>
+
+          {/* Location */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("location")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <MapPicker
+                lat={lat}
+                lng={lng}
+                onLocationSelect={handleLocationSelect}
+              />
+            </div>
+            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">{t("locationHint")}</p>
+          </div>
+
         </DashboardContent>
       </form>
     </div>

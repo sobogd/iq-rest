@@ -203,7 +203,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-0 right-0 flex justify-center">
-                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-base font-medium">
+                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-xl text-base font-medium">
                         {t("popular")}
                       </span>
                     </div>

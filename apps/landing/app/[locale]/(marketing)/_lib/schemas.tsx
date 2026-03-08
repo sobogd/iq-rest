@@ -71,7 +71,6 @@ export const productSchema = {
     url: `${BASE_URL}/`,
     hasMerchantReturnPolicy: {
       "@type": "MerchantReturnPolicy",
-      applicableCountry: "WorldWide",
       returnPolicyCategory:
         "https://schema.org/MerchantReturnFiniteReturnWindow",
       merchantReturnDays: 30,
@@ -84,10 +83,6 @@ export const productSchema = {
         "@type": "MonetaryAmount",
         value: "0",
         currency: "USD",
-      },
-      shippingDestination: {
-        "@type": "DefinedRegion",
-        addressCountry: "WorldWide",
       },
       deliveryTime: {
         "@type": "ShippingDeliveryTime",

@@ -1310,6 +1310,9 @@
     "error": "Fout",
     "close": "Sluiten",
     "noReservations": "Nog geen reserveringen",
+    "noTablesHint": "Voeg minstens één tafel toe zodat klanten reserveringen kunnen maken",
+    "reservationsDisabled": "Reserveringen zijn momenteel uitgeschakeld",
+    "configureReservations": "Reserveringen configureren",
     "pending": "In afwachting",
     "confirmed": "Bevestigd",
     "cancelled": "Geannuleerd",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Nog geen bestellingen",
+    "ordersDisabled": "Bestellingen zijn momenteel uitgeschakeld",
+    "configureOrders": "Bestellingen configureren",
     "new": "Nieuw",
     "inProgress": "In behandeling",
     "completed": "Voltooid",

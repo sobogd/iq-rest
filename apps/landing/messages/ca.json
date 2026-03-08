@@ -1310,6 +1310,9 @@
     "error": "Error",
     "close": "Tancar",
     "noReservations": "Encara no hi ha reserves",
+    "noTablesHint": "Afegeix almenys una taula perquè els clients puguin fer reserves",
+    "reservationsDisabled": "Les reserves estan desactivades",
+    "configureReservations": "Configurar reserves",
     "pending": "Pendent",
     "confirmed": "Confirmat",
     "cancelled": "Cancel·lat",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Encara no hi ha comandes",
+    "ordersDisabled": "Les comandes estan desactivades",
+    "configureOrders": "Configurar comandes",
     "new": "Nous",
     "inProgress": "En curs",
     "completed": "Completades",

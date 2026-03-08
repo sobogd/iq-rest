@@ -1310,6 +1310,9 @@
     "error": "Error",
     "close": "Close",
     "noReservations": "No reservations yet",
+    "noTablesHint": "Add at least one table so that customers can make reservations",
+    "reservationsDisabled": "Reservations are currently disabled",
+    "configureReservations": "Configure Reservations",
     "pending": "Pending",
     "confirmed": "Confirmed",
     "cancelled": "Cancelled",
@@ -2026,6 +2029,8 @@
   },
   "orders": {
     "noOrders": "No orders yet",
+    "ordersDisabled": "Orders are currently disabled",
+    "configureOrders": "Configure Orders",
     "new": "New",
     "inProgress": "In Progress",
     "completed": "Completed",

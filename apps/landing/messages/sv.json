@@ -1310,6 +1310,9 @@
     "error": "Fel",
     "close": "Stäng",
     "noReservations": "Inga bokningar ännu",
+    "noTablesHint": "Lägg till minst ett bord så att kunderna kan göra reservationer",
+    "reservationsDisabled": "Bokningar är för närvarande inaktiverade",
+    "configureReservations": "Konfigurera bokningar",
     "pending": "Väntande",
     "confirmed": "Bekräftad",
     "cancelled": "Avbokad",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Inga beställningar ännu",
+    "ordersDisabled": "Beställningar är för närvarande inaktiverade",
+    "configureOrders": "Konfigurera beställningar",
     "new": "Nya",
     "inProgress": "Pågående",
     "completed": "Slutförda",

@@ -1310,6 +1310,9 @@
     "error": "错误",
     "close": "关闭",
     "noReservations": "还没有预订",
+    "noTablesHint": "请至少添加一张桌子，以便客户可以进行预订",
+    "reservationsDisabled": "预约目前已禁用",
+    "configureReservations": "配置预约",
     "pending": "待处理",
     "confirmed": "已确认",
     "cancelled": "已取消",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "暂无订单",
+    "ordersDisabled": "订单目前已禁用",
+    "configureOrders": "配置订单",
     "new": "新订单",
     "inProgress": "进行中",
     "completed": "已完成",

@@ -1310,6 +1310,9 @@
     "error": "Hata",
     "close": "Kapat",
     "noReservations": "Henüz rezervasyon yok",
+    "noTablesHint": "Müşterilerin rezervasyon yapabilmesi için en az bir masa ekleyin",
+    "reservationsDisabled": "Rezervasyonlar şu anda devre dışı",
+    "configureReservations": "Rezervasyonları yapılandır",
     "pending": "Beklemede",
     "confirmed": "Onaylandı",
     "cancelled": "İptal Edildi",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Henüz sipariş yok",
+    "ordersDisabled": "Siparişler şu anda devre dışı",
+    "configureOrders": "Siparişleri yapılandır",
     "new": "Yeni",
     "inProgress": "İşlemde",
     "completed": "Tamamlandı",

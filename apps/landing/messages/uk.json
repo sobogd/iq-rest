@@ -1310,6 +1310,9 @@
     "error": "Помилка",
     "close": "Закрити",
     "noReservations": "Ще немає резервувань",
+    "noTablesHint": "Додайте хоча б один столик, щоб клієнти могли бронювати",
+    "reservationsDisabled": "Бронювання наразі вимкнені",
+    "configureReservations": "Налаштувати бронювання",
     "pending": "В очікуванні",
     "confirmed": "Підтверджено",
     "cancelled": "Скасовано",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Замовлень ще немає",
+    "ordersDisabled": "Замовлення наразі вимкнені",
+    "configureOrders": "Налаштувати замовлення",
     "new": "Нові",
     "inProgress": "В роботі",
     "completed": "Виконані",

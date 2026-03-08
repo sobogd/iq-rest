@@ -1310,6 +1310,9 @@
     "error": "Eroare",
     "close": "Închide",
     "noReservations": "Încă nu sunt rezerve",
+    "noTablesHint": "Adăugați cel puțin o masă pentru ca clienții să poată face rezervări",
+    "reservationsDisabled": "Rezervările sunt dezactivate momentan",
+    "configureReservations": "Configurează rezervările",
     "pending": "În așteptare",
     "confirmed": "Confirmat",
     "cancelled": "Anulat",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Nicio comandă încă",
+    "ordersDisabled": "Comenzile sunt dezactivate momentan",
+    "configureOrders": "Configurează comenzile",
     "new": "Noi",
     "inProgress": "În curs",
     "completed": "Finalizate",

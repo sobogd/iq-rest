@@ -6,7 +6,6 @@ import { PageHeader } from "../_ui/page-header";
 import { Eye, Calendar, CalendarDays, Users, Monitor, Globe, Smartphone, RefreshCw } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 interface DeviceStatsItem {
   name: string;
@@ -80,48 +79,6 @@ const statIcons = {
 
 const PAGE_ORDER = ["home", "menu", "contacts", "reserve", "language"];
 
-const SKELETON_HEIGHTS = [60, 40, 75, 25, 50, 35, 65];
-
-function DeviceStatsCard({
-  title,
-  icon: Icon,
-  items,
-}: {
-  title: string;
-  icon: React.ElementType;
-  items: DeviceStatsItem[];
-}) {
-  const maxCount = Math.max(...items.map((i) => i.count), 1);
-
-  return (
-    <div className="p-4 bg-muted/30 rounded-md space-y-3">
-      <div className="flex items-center gap-2 text-sm font-medium">
-        <Icon className="h-4 w-4 text-primary" />
-        {title}
-      </div>
-      <div className="space-y-2">
-        {items.map((item) => {
-          const percentage = (item.count / maxCount) * 100;
-          return (
-            <div key={item.name} className="space-y-1">
-              <div className="flex justify-between text-sm">
-                <span className="capitalize">{item.name}</span>
-                <span className="text-muted-foreground">{item.count}</span>
-              </div>
-              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-primary/70 rounded-full"
-                  style={{ width: `${percentage}%` }}
-                />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 interface AnalyticsPageProps {
   initialData: AnalyticsData | null;
 }
@@ -154,7 +111,7 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
   const maxDayViews = data ? Math.max(...data.viewsByDay.map((v) => v.count), 1) : 1;
 
   const dayHeights = useMemo(() => {
-    if (!data) return SKELETON_HEIGHTS;
+    if (!data) return [];
     return data.viewsByDay.map((item) => {
       const percent = item.count / maxDayViews;
       return Math.max(12, Math.round(percent * 88));
@@ -163,8 +120,11 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
 
   if (!data) {
     return (
-      <div className="p-6">
-        <div className="text-destructive">Failed to load analytics</div>
+      <div className="flex flex-col h-full">
+        <PageHeader title={translations.pages.analytics} />
+        <div className="flex-1 flex items-center justify-center px-6">
+          <p className="text-sm text-destructive">Failed to load analytics</p>
+        </div>
       </div>
     );
   }
@@ -177,7 +137,6 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
   ];
 
   const getStatValue = (key: string) => {
-    if (!data) return 0;
     switch (key) {
       case "today": return data.todayViews;
       case "week": return data.weeklyViews;
@@ -194,140 +153,193 @@ export function AnalyticsPage({ initialData }: AnalyticsPageProps) {
           type="button"
           onClick={handleRefresh}
           disabled={refreshing}
-          className="p-2 rounded-lg hover:bg-muted/50 transition-colors disabled:opacity-50"
+          className="flex items-center justify-center h-10 w-10 -mr-2"
         >
-          <RefreshCw className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`} />
+          <RefreshCw className={`h-5 w-5 ${refreshing ? "animate-spin" : ""}`} />
         </button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-      <DashboardContent innerClassName="space-y-4">
+        <DashboardContent innerClassName="space-y-6">
 
-      {/* Stats grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {stats.map((stat) => {
-          const value = getStatValue(stat.key);
-          return (
-            <div
-              key={stat.key}
-              className="rounded-md border border-border bg-muted/50 p-4"
-            >
-              <stat.icon className="h-5 w-5 text-primary mb-3" />
-              <AnimatedNumber
-                value={value}
-                className="text-3xl font-bold tracking-tight tabular-nums block"
-              />
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+          {/* Stats */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{"Overview"}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {stats.map((stat, index) => {
+                const value = getStatValue(stat.key);
+                return (
+                  <div key={stat.key}>
+                    {index > 0 && <div className="border-t border-border mx-4" />}
+                    <div className="flex items-center h-11 px-4">
+                      <stat.icon className="h-4 w-4 text-primary mr-3 shrink-0" />
+                      <span className="text-sm text-muted-foreground flex-1">{stat.label}</span>
+                      <AnimatedNumber
+                        value={value}
+                        className="text-sm font-bold tabular-nums"
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
-
-      {/* Daily views chart */}
-      <DashboardCard title={t.dailyViews}>
-        <div
-          className="flex items-end justify-around gap-2 sm:gap-4 overflow-hidden -mx-4 -mb-4 px-3 bg-muted/30 rounded-b-md"
-          style={{ height: "180px", paddingTop: "40px", paddingBottom: "24px" }}
-        >
-          {(data.viewsByDay || []).map((item, index) => {
-            const height = dayHeights[index];
-            const dayLabel = new Date(item.date + "T12:00:00").toLocaleDateString(undefined, { weekday: "short" });
-
-            return (
-              <div
-                key={index}
-                className="group"
-                style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-              >
-                <div style={{ height: "16px", marginBottom: "8px" }}>
-                  <span className="text-xs text-muted-foreground">
-                    {item.count}
-                  </span>
-                </div>
-                <div
-                  className="transition-all duration-700 ease-out bg-primary/80 hover:bg-primary"
-                  style={{ width: "32px", minWidth: "24px", height: `${height}px`, borderRadius: "4px" }}
-                />
-                <span className="text-xs text-muted-foreground" style={{ marginTop: "8px" }}>
-                  {dayLabel}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </DashboardCard>
-
-      {/* Views by page */}
-      <DashboardCard title={t.viewsByPage}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {PAGE_ORDER.map((pageKey) => {
-            const pageData = data?.viewsByPage.find((v) => v.page === pageKey);
-            const count = pageData?.count || 0;
-            return (
-              <div
-                key={pageKey}
-                className="p-3 bg-muted/30 rounded-md"
-              >
-                <AnimatedNumber
-                  value={count}
-                  className="text-xl font-bold tracking-tight tabular-nums block"
-                />
-                <div className="text-sm text-muted-foreground">{t.pageNames[pageKey] || pageKey}</div>
-              </div>
-            );
-          })}
-        </div>
-      </DashboardCard>
-
-      {/* Views by language */}
-      <DashboardCard title={t.viewsByLanguage}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {(data?.viewsByLanguage || [])
-            .sort((a, b) => b.count - a.count)
-            .map((item) => (
-              <div
-                key={item.language}
-                className="p-3 bg-muted/30 rounded-md"
-              >
-                <AnimatedNumber
-                  value={item.count}
-                  className="text-xl font-bold tracking-tight tabular-nums block"
-                />
-                <div className="text-sm text-muted-foreground">{t.languageNames[item.language] || item.language}</div>
-              </div>
-            ))}
-        </div>
-      </DashboardCard>
-
-      {/* Device stats */}
-      {data.deviceStats && (data.deviceStats.devices.length > 0 || data.deviceStats.browsers.length > 0 || data.deviceStats.os.length > 0) && (
-        <DashboardCard title={t.deviceStats || "Devices & Browsers"}>
-          <div className="space-y-4">
-            {data.deviceStats.devices.length > 0 && (
-              <DeviceStatsCard
-                title={t.devices || "Devices"}
-                icon={Smartphone}
-                items={data.deviceStats.devices}
-              />
-            )}
-            {data.deviceStats.browsers.length > 0 && (
-              <DeviceStatsCard
-                title={t.browsers || "Browsers"}
-                icon={Globe}
-                items={data.deviceStats.browsers}
-              />
-            )}
-            {data.deviceStats.os.length > 0 && (
-              <DeviceStatsCard
-                title={t.os || "OS"}
-                icon={Monitor}
-                items={data.deviceStats.os}
-              />
-            )}
           </div>
-        </DashboardCard>
-      )}
-      </DashboardContent>
+
+          {/* Daily views chart */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.dailyViews}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <div
+                className="flex items-end justify-around gap-2 sm:gap-4 px-3"
+                style={{ height: "180px", paddingTop: "40px", paddingBottom: "24px" }}
+              >
+                {(data.viewsByDay || []).map((item, index) => {
+                  const height = dayHeights[index];
+                  const dayLabel = new Date(item.date + "T12:00:00").toLocaleDateString(undefined, { weekday: "short" });
+
+                  return (
+                    <div
+                      key={index}
+                      className="group"
+                      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+                    >
+                      <div style={{ height: "16px", marginBottom: "8px" }}>
+                        <span className="text-xs text-muted-foreground">
+                          {item.count}
+                        </span>
+                      </div>
+                      <div
+                        className="transition-all duration-700 ease-out bg-primary/80 hover:bg-primary"
+                        style={{ width: "32px", minWidth: "24px", height: `${height}px`, borderRadius: "4px" }}
+                      />
+                      <span className="text-xs text-muted-foreground" style={{ marginTop: "8px" }}>
+                        {dayLabel}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Views by page */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.viewsByPage}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {PAGE_ORDER.map((pageKey, index) => {
+                const pageData = data.viewsByPage.find((v) => v.page === pageKey);
+                const count = pageData?.count || 0;
+                return (
+                  <div key={pageKey}>
+                    {index > 0 && <div className="border-t border-border mx-4" />}
+                    <div className="flex items-center h-11 px-4">
+                      <span className="text-sm flex-1">{t.pageNames[pageKey] || pageKey}</span>
+                      <AnimatedNumber
+                        value={count}
+                        className="text-sm font-bold tabular-nums"
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Views by language */}
+          {data.viewsByLanguage.length > 0 && (
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.viewsByLanguage}</p>
+              <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                {[...data.viewsByLanguage]
+                  .sort((a, b) => b.count - a.count)
+                  .map((item, index) => (
+                    <div key={item.language}>
+                      {index > 0 && <div className="border-t border-border mx-4" />}
+                      <div className="flex items-center h-11 px-4">
+                        <span className="text-sm flex-1">{t.languageNames[item.language] || item.language}</span>
+                        <AnimatedNumber
+                          value={item.count}
+                          className="text-sm font-bold tabular-nums"
+                        />
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
+
+          {/* Device stats */}
+          {data.deviceStats && (data.deviceStats.devices.length > 0 || data.deviceStats.browsers.length > 0 || data.deviceStats.os.length > 0) && (
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.deviceStats || "Devices & Browsers"}</p>
+              <div className="space-y-4">
+                {data.deviceStats.devices.length > 0 && (
+                  <DeviceStatsSection
+                    title={t.devices || "Devices"}
+                    icon={Smartphone}
+                    items={data.deviceStats.devices}
+                  />
+                )}
+                {data.deviceStats.browsers.length > 0 && (
+                  <DeviceStatsSection
+                    title={t.browsers || "Browsers"}
+                    icon={Globe}
+                    items={data.deviceStats.browsers}
+                  />
+                )}
+                {data.deviceStats.os.length > 0 && (
+                  <DeviceStatsSection
+                    title={t.os || "OS"}
+                    icon={Monitor}
+                    items={data.deviceStats.os}
+                  />
+                )}
+              </div>
+            </div>
+          )}
+
+        </DashboardContent>
       </div>
+    </div>
+  );
+}
+
+function DeviceStatsSection({
+  title,
+  icon: Icon,
+  items,
+}: {
+  title: string;
+  icon: React.ElementType;
+  items: DeviceStatsItem[];
+}) {
+  const maxCount = Math.max(...items.map((i) => i.count), 1);
+
+  return (
+    <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+      <div className="flex items-center h-11 px-4">
+        <Icon className="h-4 w-4 text-primary mr-3 shrink-0" />
+        <span className="text-sm font-medium">{title}</span>
+      </div>
+      {items.map((item) => {
+        const percentage = (item.count / maxCount) * 100;
+        return (
+          <div key={item.name}>
+            <div className="border-t border-border mx-4" />
+            <div className="px-4 py-2.5">
+              <div className="flex justify-between text-sm mb-1.5">
+                <span className="capitalize">{item.name}</span>
+                <span className="text-muted-foreground tabular-nums">{item.count}</span>
+              </div>
+              <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary/70 rounded-full transition-all duration-500"
+                  style={{ width: `${percentage}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

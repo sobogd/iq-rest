@@ -140,7 +140,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
                 )}
               >
                 {option.id === "yearly" && (
-                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wide whitespace-nowrap">
+                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-semibold px-2.5 py-0.5 rounded-xl uppercase tracking-wide whitespace-nowrap">
                     {tp("save")}
                   </span>
                 )}

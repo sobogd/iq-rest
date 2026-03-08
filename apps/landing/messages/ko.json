@@ -1310,6 +1310,9 @@
     "error": "오류",
     "close": "닫기",
     "noReservations": "아직 예약이 없습니다",
+    "noTablesHint": "고객이 예약할 수 있도록 최소 하나의 테이블을 추가하세요",
+    "reservationsDisabled": "예약이 현재 비활성화되어 있습니다",
+    "configureReservations": "예약 설정",
     "pending": "대기 중",
     "confirmed": "확정됨",
     "cancelled": "취소됨",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "아직 주문이 없습니다",
+    "ordersDisabled": "주문이 현재 비활성화되어 있습니다",
+    "configureOrders": "주문 설정",
     "new": "신규",
     "inProgress": "진행 중",
     "completed": "완료됨",

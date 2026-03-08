@@ -26,12 +26,10 @@ import { PageLoader } from "../_ui/page-loader";
 import { PageHeader } from "../_ui/page-header";
 import { useRouter } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
-import { FormInput } from "../_ui/form-input";
 import { LANGUAGE_NAMES } from "../_lib/constants";
 import { useRestaurantLanguages } from "../_hooks/use-restaurant-languages";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 interface Table {
   id: string;
@@ -334,144 +332,166 @@ export function TableFormPage({ id }: TableFormPageProps) {
       </div>
 
       <form id="table-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
+        <DashboardContent innerClassName="space-y-6">
 
-          <DashboardCard title={t("general")}>
-            <FormInput
-              id="number"
-              label={`${t("tableNumber")}:`}
-              value={number}
-              onChange={(value) => setNumber(value.replace(/[^0-9]/g, ""))}
-              onFocus={() => track(DashboardEvent.FOCUSED_TABLE_NUMBER)}
-              placeholder={t("tableNumberPlaceholder")}
-            />
+          {/* General */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("general")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {/* Number */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="number" className="text-sm text-muted-foreground shrink-0 mr-3">{t("tableNumber")}</label>
+                <input
+                  id="number"
+                  type="text"
+                  inputMode="numeric"
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value.replace(/[^0-9]/g, ""))}
+                  onFocus={() => track(DashboardEvent.FOCUSED_TABLE_NUMBER)}
+                  placeholder={t("tableNumberPlaceholder")}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* Capacity */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="capacity" className="text-sm text-muted-foreground shrink-0 mr-3">{t("capacity")}</label>
+                <input
+                  id="capacity"
+                  type="text"
+                  inputMode="numeric"
+                  value={capacity}
+                  onChange={(e) => setCapacity(e.target.value.replace(/[^0-9]/g, ""))}
+                  onFocus={() => track(DashboardEvent.FOCUSED_TABLE_CAPACITY)}
+                  placeholder={t("capacityPlaceholder")}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* Zone */}
+              <div className="flex items-center h-11 px-4">
+                <label htmlFor="zone" className="text-sm text-muted-foreground shrink-0 mr-3">
+                  {t("zone")}
+                  {otherLanguages.length > 0 && ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})`}
+                </label>
+                <input
+                  id="zone"
+                  type="text"
+                  value={zone}
+                  onChange={(e) => setZone(e.target.value)}
+                  onFocus={() => track(DashboardEvent.FOCUSED_TABLE_ZONE)}
+                  placeholder={t("zonePlaceholder")}
+                  className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                />
+              </div>
+            </div>
+          </div>
 
-            <FormInput
-              id="capacity"
-              label={`${t("capacity")}:`}
-              value={capacity}
-              onChange={(value) => setCapacity(value.replace(/[^0-9]/g, ""))}
-              onFocus={() => track(DashboardEvent.FOCUSED_TABLE_CAPACITY)}
-              placeholder={t("capacityPlaceholder")}
-            />
-
-            <FormInput
-              id="zone"
-              label={`${t("zone")}${otherLanguages.length > 0 ? ` (${LANGUAGE_NAMES[restaurant?.defaultLanguage || "en"] || restaurant?.defaultLanguage})` : ""}:`}
-              value={zone}
-              onChange={setZone}
-              onFocus={() => track(DashboardEvent.FOCUSED_TABLE_ZONE)}
-              placeholder={t("zonePlaceholder")}
-            />
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium">{t("image")}:</label>
+          {/* Image */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("image")}</p>
+            <div className="rounded-xl border border-border bg-muted/30">
               {imageUrl ? (
-                <div className="relative">
-                  <div className="relative h-40 w-40 rounded-lg overflow-hidden border">
-                    <Image
-                      src={imageUrl}
-                      alt="Table"
-                      fill
-                      className="object-cover"
-                      sizes="160px"
-                    />
+                <div className="p-4">
+                  <div className="relative inline-block">
+                    <div className="relative h-32 w-32 rounded-lg overflow-hidden border border-border">
+                      <Image
+                        src={imageUrl}
+                        alt="Table"
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      className="absolute -top-2 -right-2 h-6 w-6 rounded-lg bg-destructive text-destructive-foreground flex items-center justify-center hover:opacity-90 transition-opacity"
+                      onClick={() => setImageUrl("")}
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
                   </div>
-                  <Button
-                    type="button"
-                    variant="destructive"
-                    size="icon"
-                    className="absolute -top-2 left-36 h-6 w-6"
-                    onClick={() => setImageUrl("")}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
                 </div>
               ) : (
                 <div
-                  className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary transition-colors bg-muted/30"
+                  className="flex items-center justify-center h-28 cursor-pointer hover:bg-muted/50 transition-colors rounded-xl"
                   onClick={() => { track(DashboardEvent.CLICKED_UPLOAD_TABLE_IMAGE); fileInputRef.current?.click(); }}
                 >
                   {uploading ? (
-                    <div className="flex flex-col items-center gap-2">
-                      <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+                    <div className="flex items-center gap-2">
+                      <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">Uploading...</span>
                     </div>
                   ) : (
-                    <div className="flex flex-col items-center gap-2">
-                      <Upload className="h-8 w-8 text-muted-foreground" />
+                    <div className="flex items-center gap-2">
+                      <Upload className="h-5 w-5 text-muted-foreground" />
                       <span className="text-sm text-muted-foreground">{t("uploadImage")}</span>
                     </div>
                   )}
                 </div>
               )}
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/jpeg,image/png,image/webp"
-                className="hidden"
-                onChange={handleImageUpload}
-                disabled={uploading}
-              />
             </div>
-          </DashboardCard>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              className="hidden"
+              onChange={handleImageUpload}
+              disabled={uploading}
+            />
+          </div>
 
-          {/* Translation sections — one per language */}
+          {/* Translation sections */}
           {otherLanguages.map((lang) => {
             const isTranslating = translatingLangs.has(lang);
             return (
-              <DashboardCard
-                key={lang}
-                title={LANGUAGE_NAMES[lang] || lang}
-                headerRight={
+              <div key={lang}>
+                <div className="flex items-center justify-between px-4 mb-1.5">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{LANGUAGE_NAMES[lang] || lang}</p>
                   <button
                     type="button"
                     onClick={() => handleTranslateSection(lang)}
                     disabled={isTranslating || !zone.trim()}
-                    className="flex items-center gap-1 text-sm text-destructive hover:text-destructive/80 underline disabled:opacity-50 transition-colors"
+                    className="flex items-center gap-1 text-xs text-primary hover:text-primary/80 transition-colors disabled:opacity-50"
                   >
                     {isTranslating ? tAi("translating") : tAi("translate")}
                     {isTranslating ? (
-                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      <Loader2 className="h-3 w-3 animate-spin" />
                     ) : (
-                      <Sparkles className="h-3.5 w-3.5" />
+                      <Sparkles className="h-3 w-3" />
                     )}
                   </button>
-                }
-              >
-                <FormInput
-                  id={`zone-${lang}`}
-                  label={`${t("zone")}:`}
-                  value={tableTranslations[lang]?.zone || ""}
-                  onChange={(value) => handleTranslationChange(lang, value)}
-                  placeholder={t("zonePlaceholder")}
-                />
-              </DashboardCard>
+                </div>
+                <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                  <div className="flex items-center h-11 px-4">
+                    <label className="text-sm text-muted-foreground shrink-0 mr-3">{t("zone")}</label>
+                    <input
+                      type="text"
+                      value={tableTranslations[lang]?.zone || ""}
+                      onChange={(e) => handleTranslationChange(lang, e.target.value)}
+                      placeholder={t("zonePlaceholder")}
+                      className="flex-1 text-sm text-right bg-transparent focus:outline-none placeholder:text-muted-foreground/30 min-w-0"
+                    />
+                  </div>
+                </div>
+              </div>
             );
           })}
 
-          <div className="flex justify-between items-center mt-4">
-            <div>
-              {isEdit && (
-                <button
-                  type="button"
-                  onClick={() => { track(DashboardEvent.CLICKED_DELETE_TABLE); setShowDeleteDialog(true); }}
-                  disabled={saving || deleting}
-                  className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium disabled:opacity-50"
-                >
-                  <Trash2 className="h-4 w-4" />
-                  {t("delete")}
-                </button>
-              )}
+          {/* Delete */}
+          {isEdit && (
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_DELETE_TABLE); setShowDeleteDialog(true); }}
+                disabled={saving || deleting}
+                className="flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+              >
+                <Trash2 className="h-4 w-4 text-red-400" />
+                <span className="text-sm font-medium text-red-400">{t("delete")}</span>
+              </button>
             </div>
-            <button
-              type="submit"
-              form="table-form"
-              disabled={saving || deleting || uploading || !hasChanges}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
-            </button>
-          </div>
+          )}
 
         </DashboardContent>
       </form>

@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { useBackIntercept } from "../_hooks/use-back-intercept";
-import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, ArrowLeft, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowUp, ArrowDown, Plus, Loader2, ArrowUpDown, Check } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
@@ -11,7 +10,7 @@ import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardNavHeader } from "../_components/dashboard-nav";
+import { PageHeader } from "../_ui/page-header";
 
 interface Table {
   id: string;
@@ -134,17 +133,8 @@ export function TablesPage({ initialTables }: TablesPageProps) {
 
   return (
     <div className="flex flex-col h-full">
-      {/* Custom header */}
-      <header className="shrink-0 shadow-sm px-6 bg-muted/50">
-        <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
-          <DashboardNavHeader />
-          <button
-            onClick={() => router.push("/dashboard")}
-            className="flex items-center justify-center h-10 w-10 -ml-2"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </button>
-          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{pageTitle}</h1>
+      <div className="shrink-0">
+        <PageHeader title={pageTitle} backHref="/dashboard">
           {tables.length > 1 && (
             sortMode ? (
               <button
@@ -162,41 +152,34 @@ export function TablesPage({ initialTables }: TablesPageProps) {
               </button>
             )
           )}
-        </div>
-      </header>
+        </PageHeader>
+      </div>
 
-      {/* Content */}
-      <div className="relative flex-1 overflow-auto px-6 pt-4 pb-6">
-        <DashboardContent>
-        {tables.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20 gap-4">
-            <p className="text-muted-foreground text-center">{t("noTables")}</p>
-            <Button onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }} className="h-12 w-full rounded-md shadow-md">
-              <Plus className="h-4 w-4" />
-              {t("addTable")}
-            </Button>
-          </div>
-        ) : (
-          <div className="flex flex-col min-h-full">
-            <div className="flex-1 pb-4">
-              <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
-                <div className="flex items-center px-4 h-12 bg-muted/30">
-                  <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{pageTitle}</span>
-                </div>
-                {sortedTables.map((table, index) => (
-                  <div
-                    key={table.id}
-                    className="flex items-center border-t border-foreground/5"
-                  >
-                    <div
-                      onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_TABLE_ROW); router.push(`/dashboard/tables/${table.id}`); } }}
-                      className={`flex items-center flex-1 min-w-0 h-12 px-4 transition-colors ${
-                        sortMode ? "" : "cursor-pointer hover:bg-muted/30"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3 flex-1 min-w-0">
+      <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
+        <DashboardContent innerClassName="space-y-6">
+          {tables.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-16 gap-4">
+              <p className="text-muted-foreground/60 text-center">{t("noTables")}</p>
+              <button
+                onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
+                className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+              >
+                <Plus className="h-4 w-4" />
+                {t("addTable")}
+              </button>
+            </div>
+          ) : (
+            <>
+              <div>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{pageTitle}</p>
+                <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                  {sortedTables.map((table, index) => (
+                    <div key={table.id}>
+                      {index > 0 && <div className="border-t border-border mx-4" />}
+                      <div className="flex items-center h-11 px-4">
                         {!sortMode && (
-                          <div onClick={(e) => e.stopPropagation()} className="flex items-center">
+                          <div className="mr-3" onClick={(e) => e.stopPropagation()}>
                             <Switch
                               checked={table.isActive}
                               onCheckedChange={() => {
@@ -206,58 +189,65 @@ export function TablesPage({ initialTables }: TablesPageProps) {
                             />
                           </div>
                         )}
-                        <span className="text-sm font-medium truncate">{t("table")} {table.number}</span>
+                        <div
+                          className={`flex items-center flex-1 min-w-0 ${!sortMode ? "cursor-pointer" : ""}`}
+                          onClick={() => { if (!sortMode) { track(DashboardEvent.CLICKED_TABLE_ROW); router.push(`/dashboard/tables/${table.id}`); } }}
+                        >
+                          <span className="text-sm font-medium truncate">{t("table")} {table.number}</span>
+                          {!sortMode && (
+                            <span className="text-sm text-muted-foreground ml-auto shrink-0">
+                              {table.capacity} {t("guests").slice(0, 3)}.
+                            </span>
+                          )}
+                        </div>
+                        {sortMode && (
+                          <div className="flex items-center gap-0.5 ml-auto -mr-1">
+                            <button
+                              onClick={() => handleMoveTable(table.id, "up")}
+                              disabled={index === 0 || !!moving}
+                              className="flex items-center justify-center h-8 w-8 rounded-lg hover:bg-muted/50 transition-colors disabled:opacity-30"
+                            >
+                              {moving?.id === table.id && moving.direction === "up" ? (
+                                <Loader2 className="h-4 w-4 animate-spin" />
+                              ) : (
+                                <ArrowUp className="h-4 w-4" />
+                              )}
+                            </button>
+                            <button
+                              onClick={() => handleMoveTable(table.id, "down")}
+                              disabled={index === sortedTables.length - 1 || !!moving}
+                              className="flex items-center justify-center h-8 w-8 rounded-lg hover:bg-muted/50 transition-colors disabled:opacity-30"
+                            >
+                              {moving?.id === table.id && moving.direction === "down" ? (
+                                <Loader2 className="h-4 w-4 animate-spin" />
+                              ) : (
+                                <ArrowDown className="h-4 w-4" />
+                              )}
+                            </button>
+                          </div>
+                        )}
                       </div>
-                      {!sortMode && (
-                        <span className="text-sm text-muted-foreground ml-2">
-                          {table.capacity} {t("guests").slice(0, 3)}.
-                        </span>
-                      )}
                     </div>
-                    {sortMode && (
-                      <div className="flex items-center gap-0.5 pr-2">
-                        <button
-                          onClick={() => handleMoveTable(table.id, "up")}
-                          disabled={index === 0 || !!moving}
-                          className="flex items-center justify-center h-9 w-9 rounded-lg hover:bg-muted/30 transition-colors disabled:opacity-30"
-                        >
-                          {moving && moving.id === table.id && moving.direction === "up" ? (
-                            <Loader2 className="h-4 w-4 animate-spin" />
-                          ) : (
-                            <ArrowUp className="h-4 w-4" />
-                          )}
-                        </button>
-                        <button
-                          onClick={() => handleMoveTable(table.id, "down")}
-                          disabled={index === sortedTables.length - 1 || !!moving}
-                          className="flex items-center justify-center h-9 w-9 rounded-lg hover:bg-muted/30 transition-colors disabled:opacity-30"
-                        >
-                          {moving && moving.id === table.id && moving.direction === "down" ? (
-                            <Loader2 className="h-4 w-4 animate-spin" />
-                          ) : (
-                            <ArrowDown className="h-4 w-4" />
-                          )}
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                ))}
-                {!sortMode && (
-                  <div
-                    className="flex items-center h-12 px-4 border-t border-foreground/5 cursor-pointer transition-colors bg-primary/5 hover:bg-primary/10"
-                    onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
-                  >
-                    <Plus className="h-4 w-4 mr-2 text-primary" />
-                    <span className="text-sm font-medium text-primary">{t("addTable")}</span>
-                  </div>
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+
+              {!sortMode && (
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => { track(DashboardEvent.CLICKED_ADD_TABLE); router.push("/dashboard/tables/add"); }}
+                    className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                    style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                  >
+                    <Plus className="h-4 w-4" />
+                    {t("addTable")}
+                  </button>
+                </div>
+              )}
+            </>
+          )}
         </DashboardContent>
       </div>
-
     </div>
   );
 }

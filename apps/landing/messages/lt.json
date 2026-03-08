@@ -1310,6 +1310,9 @@
     "error": "Klaida",
     "close": "Uždaryti",
     "noReservations": "Dar nėra rezervacijų",
+    "noTablesHint": "Pridėkite bent vieną stalą, kad klientai galėtų rezervuoti",
+    "reservationsDisabled": "Rezervacijos šiuo metu išjungtos",
+    "configureReservations": "Konfigūruoti rezervacijas",
     "pending": "Laukiama",
     "confirmed": "Patvirtinta",
     "cancelled": "Atšaukta",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Užsakymų dar nėra",
+    "ordersDisabled": "Užsakymai šiuo metu išjungti",
+    "configureOrders": "Konfigūruoti užsakymus",
     "new": "Nauji",
     "inProgress": "Vykdoma",
     "completed": "Įvykdyti",

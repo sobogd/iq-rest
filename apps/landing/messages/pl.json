@@ -1310,6 +1310,9 @@
     "error": "Błąd",
     "close": "Zamknij",
     "noReservations": "Brak rezerwacji",
+    "noTablesHint": "Dodaj przynajmniej jeden stolik, aby klienci mogli dokonywać rezerwacji",
+    "reservationsDisabled": "Rezerwacje są obecnie wyłączone",
+    "configureReservations": "Skonfiguruj rezerwacje",
     "pending": "Oczekujące",
     "confirmed": "Potwierdzone",
     "cancelled": "Anulowane",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Brak zamówień",
+    "ordersDisabled": "Zamówienia są obecnie wyłączone",
+    "configureOrders": "Skonfiguruj zamówienia",
     "new": "Nowe",
     "inProgress": "W trakcie",
     "completed": "Zrealizowane",

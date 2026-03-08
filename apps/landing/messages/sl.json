@@ -1310,6 +1310,9 @@
     "error": "Napaka",
     "close": "Zapri",
     "noReservations": "Še ni rezervacij",
+    "noTablesHint": "Dodajte vsaj eno mizo, da bodo gostje lahko rezervirali",
+    "reservationsDisabled": "Rezervacije so trenutno onemogočene",
+    "configureReservations": "Nastavi rezervacije",
     "pending": "V obdelavi",
     "confirmed": "Potrjeno",
     "cancelled": "Preklicano",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Še ni naročil",
+    "ordersDisabled": "Naročila so trenutno onemogočena",
+    "configureOrders": "Nastavi naročila",
     "new": "Novi",
     "inProgress": "V obdelavi",
     "completed": "Zaključeni",

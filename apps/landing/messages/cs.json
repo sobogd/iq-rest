@@ -1310,6 +1310,9 @@
     "error": "Chyba",
     "close": "Zavřít",
     "noReservations": "Zatím žádné rezervace",
+    "noTablesHint": "Přidejte alespoň jeden stůl, aby zákazníci mohli provádět rezervace",
+    "reservationsDisabled": "Rezervace jsou momentálně vypnuté",
+    "configureReservations": "Nastavit rezervace",
     "pending": "Čekající",
     "confirmed": "Potvrzeno",
     "cancelled": "Zrušeno",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Zatím žádné objednávky",
+    "ordersDisabled": "Objednávky jsou momentálně vypnuté",
+    "configureOrders": "Nastavit objednávky",
     "new": "Nové",
     "inProgress": "Probíhá",
     "completed": "Dokončené",

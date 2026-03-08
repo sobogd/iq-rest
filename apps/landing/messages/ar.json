@@ -1310,6 +1310,9 @@
     "error": "خطأ",
     "close": "إغلاق",
     "noReservations": "لا حجوزات بعد",
+    "noTablesHint": "أضف طاولة واحدة على الأقل حتى يتمكن العملاء من إجراء الحجوزات",
+    "reservationsDisabled": "الحجوزات معطلة حالياً",
+    "configureReservations": "تهيئة الحجوزات",
     "pending": "قيد الانتظار",
     "confirmed": "مؤكد",
     "cancelled": "ملغى",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "لا توجد طلبات بعد",
+    "ordersDisabled": "الطلبات معطلة حالياً",
+    "configureOrders": "تهيئة الطلبات",
     "new": "جديد",
     "inProgress": "قيد التنفيذ",
     "completed": "مكتمل",

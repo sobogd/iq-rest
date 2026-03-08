@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import {
   Wand2, LayoutTemplate, Pencil, Camera, Plus, Loader2, X, FileText,
@@ -91,7 +91,6 @@ interface OnboardingFlowProps {
 }
 
 export function OnboardingFlow({ userId, restaurantName: initialName, initialStep }: OnboardingFlowProps) {
-  const locale = useLocale();
   const router = useRouter();
   const t = useTranslations("dashboard.onboarding");
   const tAuth = useTranslations("dashboard.auth");
@@ -229,6 +228,7 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
     });
 
     setPhotoPool((prev) => [...prev, ...newPhotos]);
+    track(DashboardEvent.ONBOARDING_FILE_ADDED, { count: String(newPhotos.length) });
 
     const heicPhotos = newPhotos.filter((p) => p.preview === "heic");
     if (heicPhotos.length > 0) {
@@ -250,6 +250,7 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
   }
 
   function removeFromPool(id: string) {
+    track(DashboardEvent.ONBOARDING_FILE_REMOVED);
     setPhotoPool((prev) => {
       const removed = prev.find((p) => p.id === id);
       if (removed && removed.preview.startsWith("blob:")) URL.revokeObjectURL(removed.preview);
@@ -347,12 +348,9 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
   const handleBack = () => {
     track(DashboardEvent.CLICKED_ONBOARDING_BACK);
     setIsLoading(false);
+    setErrorMessage("");
     setScanError("");
-    if (step === "method") {
-      setStep("name");
-    } else {
-      setStep("method");
-    }
+    setStep("method");
   };
 
   // --- Render ---
@@ -406,7 +404,7 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
         {step === "method" && (
           <>
             <div className="grid gap-2 text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
                 {restaurantName}
               </h1>
               <p className="text-base md:text-lg text-muted-foreground">{t("menuSubtitle")}</p>
@@ -421,19 +419,19 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
                     key={opt.id}
                     type="button"
                     disabled={isLoading}
-                    onClick={() => setSelectedMethod(opt.id)}
+                    onClick={() => { setSelectedMethod(opt.id); track(DashboardEvent.SELECTED_ONBOARDING_METHOD, { method: opt.id }); }}
                     className={cn(
-                      "flex items-center gap-3 w-full rounded-2xl border-2 p-4 text-left transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none",
+                      "flex flex-col items-center gap-1.5 w-full rounded-2xl border-2 p-4 text-center transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none",
                       isSelected
                         ? "border-primary/60 bg-gradient-to-br from-primary/5 to-amber-400/5"
                         : "border-border bg-card hover:border-muted-foreground/30"
                     )}
                   >
-                    <Icon className="h-5 w-5 shrink-0" />
-                    <div className="min-w-0">
-                      <p className="text-base font-semibold">{t(opt.titleKey as Parameters<typeof t>[0])}</p>
-                      <p className="text-base text-muted-foreground mt-0.5">{t(opt.descKey as Parameters<typeof t>[0])}</p>
+                    <div className="flex items-center gap-2">
+                      <Icon className="h-5 w-5 shrink-0 text-primary" />
+                      <p className="text-base font-semibold bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{t(opt.titleKey as Parameters<typeof t>[0])}</p>
                     </div>
+                    <p className="text-[16px] text-muted-foreground w-full">{t(opt.descKey as Parameters<typeof t>[0])}</p>
                   </button>
                 );
               })}
@@ -447,15 +445,6 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               {tAuth("continue")}
             </Button>
-
-            <button
-              type="button"
-              className="mx-auto mt-4 flex items-center gap-1.5 text-base text-muted-foreground/50 border border-border/50 rounded-[15px] px-3 py-1.5 hover:text-muted-foreground hover:border-border transition-colors cursor-pointer"
-              onClick={handleBack}
-            >
-              <ArrowLeft className="h-3 w-3" />
-              {t("back")}
-            </button>
           </>
         )}
 
@@ -474,31 +463,29 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
             {!scanLoading && (
               <>
                 <div className="grid gap-2 text-center">
-                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words">{restaurantName}</h1>
+                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{restaurantName}</h1>
                   <p className="text-base md:text-lg text-muted-foreground">{tMenu("scanPoolSubtitle")}</p>
                 </div>
 
-                <div className="flex flex-col gap-2 mt-8">
+                <div className="flex flex-col gap-3 mt-8">
                   {photoPool.map((photo) => (
-                    <div key={photo.id} className="flex items-center gap-2 h-10 rounded-[15px] border border-border bg-muted/30 px-4 overflow-hidden min-w-0">
+                    <div key={photo.id} className="flex items-center gap-3 w-full rounded-2xl border-2 border-primary/60 bg-gradient-to-br from-primary/5 to-amber-400/5 p-4">
                       {photo.preview === "pdf" || photo.preview === "heic" ? (
-                        <div className="w-8 h-8 shrink-0 rounded-lg bg-muted flex items-center justify-center">
-                          {photo.preview === "pdf" ? (
-                            <FileText className="h-4 w-4 text-muted-foreground/60" />
-                          ) : (
-                            <Loader2 className="h-4 w-4 text-muted-foreground/60 animate-spin" />
-                          )}
-                        </div>
+                        photo.preview === "pdf" ? (
+                          <FileText className="h-5 w-5 shrink-0 text-primary" />
+                        ) : (
+                          <Loader2 className="h-5 w-5 shrink-0 text-primary animate-spin" />
+                        )
                       ) : (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={photo.preview} alt="" className="w-8 h-8 shrink-0 rounded-lg object-cover" />
                       )}
-                      <span className="text-base truncate min-w-0 flex-1 text-center">{photo.file.name}</span>
+                      <p className="text-base font-semibold truncate min-w-0 flex-1">{photo.file.name}</p>
                       <button
                         onClick={() => removeFromPool(photo.id)}
-                        className="h-6 w-6 shrink-0 rounded-full hover:bg-muted flex items-center justify-center transition-colors"
+                        className="h-8 w-8 shrink-0 rounded-xl hover:bg-muted/50 flex items-center justify-center transition-colors"
                       >
-                        <X className="h-3.5 w-3.5 text-muted-foreground" />
+                        <X className="h-4 w-4 text-muted-foreground" />
                       </button>
                     </div>
                   ))}
@@ -506,10 +493,12 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
                   {photoPool.length < MAX_FILES && (
                     <button
                       onClick={() => fileInputRef.current?.click()}
-                      className="flex items-center justify-center gap-2 h-10 rounded-[15px] border border-dashed border-border bg-muted/30 cursor-pointer"
+                      className="flex flex-col items-center justify-center gap-1.5 w-full rounded-2xl border-2 border-dashed border-border p-4 cursor-pointer hover:border-muted-foreground/30 transition-all"
                     >
-                      <Plus className="h-4 w-4 text-muted-foreground/50" />
-                      <span className="text-base text-muted-foreground/50">{tMenu("scanAddMore")}</span>
+                      <div className="flex items-center gap-2">
+                        <Plus className="h-5 w-5 text-muted-foreground/50" />
+                        <p className="text-[16px] font-semibold text-muted-foreground/50">{tMenu("scanAddMore")}</p>
+                      </div>
                     </button>
                   )}
                 </div>
@@ -518,16 +507,18 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
                   <p className="text-base text-destructive font-medium text-center mt-4">{scanError}</p>
                 )}
 
-                {photoPool.length > 0 && (
-                  <Button className="w-full mt-4 h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg" onClick={handleStartScan}>
-                    <Camera className="h-4 w-4" />
-                    {tMenu("scanStart")}
-                  </Button>
-                )}
+                <Button
+                  className="w-full mt-4 h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
+                  disabled={photoPool.length === 0}
+                  onClick={handleStartScan}
+                >
+                  <Camera className="h-4 w-4" />
+                  {tMenu("scanStart")}
+                </Button>
 
                 <button
                   type="button"
-                  className="mx-auto mt-4 flex items-center gap-1.5 text-base text-muted-foreground/50 border border-border/50 rounded-[15px] px-3 py-1.5 hover:text-muted-foreground hover:border-border transition-colors cursor-pointer"
+                  className="mx-auto mt-4 flex items-center gap-1.5 text-base text-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer"
                   onClick={handleBack}
                 >
                   <ArrowLeft className="h-3 w-3" />
@@ -537,10 +528,15 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
             )}
 
             {scanLoading && (
-              <div className="flex flex-col items-center justify-center text-center">
-                <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
-                <p className="text-base text-muted-foreground">{tMenu("scanLoading")}</p>
-              </div>
+              <>
+                <div className="grid gap-2 text-center">
+                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{restaurantName}</h1>
+                  <p className="text-base md:text-lg text-muted-foreground">{tMenu("scanLoading")}</p>
+                </div>
+                <div className="flex justify-center mt-8">
+                  <Loader2 className="h-12 w-12 animate-spin text-primary" />
+                </div>
+              </>
             )}
           </>
         )}
@@ -549,7 +545,7 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
         {step === "templates" && (
           <>
             <div className="grid gap-2 text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
                 {restaurantName}
               </h1>
               <p className="text-base md:text-lg text-muted-foreground">{t("templatesSubtitle")}</p>
@@ -564,19 +560,19 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
                     key={tpl.id}
                     type="button"
                     disabled={isLoading}
-                    onClick={() => setSelectedTemplate(tpl.id)}
+                    onClick={() => { setSelectedTemplate(tpl.id); track(DashboardEvent.SELECTED_ONBOARDING_TEMPLATE, { template: tpl.id }); }}
                     className={cn(
-                      "flex items-center gap-3 w-full rounded-2xl border-2 p-4 text-left transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none",
+                      "flex flex-col items-center gap-1.5 w-full rounded-2xl border-2 p-4 text-center transition-all cursor-pointer disabled:opacity-50 disabled:pointer-events-none",
                       isSelected
                         ? "border-primary/60 bg-gradient-to-br from-primary/5 to-amber-400/5"
                         : "border-border bg-card hover:border-muted-foreground/30"
                     )}
                   >
-                    <Icon className="h-5 w-5 shrink-0" />
-                    <div className="min-w-0">
-                      <p className="text-base font-semibold">{t(tpl.titleKey as Parameters<typeof t>[0])}</p>
-                      <p className="text-base text-muted-foreground mt-0.5">{t(tpl.descKey as Parameters<typeof t>[0])}</p>
+                    <div className="flex items-center gap-2">
+                      <Icon className="h-5 w-5 shrink-0 text-primary" />
+                      <p className="text-base font-semibold bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{t(tpl.titleKey as Parameters<typeof t>[0])}</p>
                     </div>
+                    <p className="text-[16px] text-muted-foreground w-full">{t(tpl.descKey as Parameters<typeof t>[0])}</p>
                   </button>
                 );
               })}
@@ -593,7 +589,7 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
 
             <button
               type="button"
-              className="mx-auto mt-3 flex items-center gap-1.5 text-base text-muted-foreground/50 border border-border/50 rounded-[15px] px-3 py-1.5 hover:text-muted-foreground hover:border-border transition-colors cursor-pointer"
+              className="mx-auto mt-4 flex items-center gap-1.5 text-base text-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-pointer"
               onClick={handleBack}
             >
               <ArrowLeft className="h-3 w-3" />

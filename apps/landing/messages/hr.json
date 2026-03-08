@@ -1310,6 +1310,9 @@
     "error": "Greška",
     "close": "Zatvori",
     "noReservations": "Još nema rezervacija",
+    "noTablesHint": "Dodajte barem jedan stol kako bi gosti mogli napraviti rezervaciju",
+    "reservationsDisabled": "Rezervacije su trenutno onemogućene",
+    "configureReservations": "Konfiguriraj rezervacije",
     "pending": "Na čekanju",
     "confirmed": "Potvrđeno",
     "cancelled": "Otkaženo",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Još nema narudžbi",
+    "ordersDisabled": "Narudžbe su trenutno onemogućene",
+    "configureOrders": "Konfiguriraj narudžbe",
     "new": "Nove",
     "inProgress": "U tijeku",
     "completed": "Dovršene",

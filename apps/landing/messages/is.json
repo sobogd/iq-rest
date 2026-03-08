@@ -1310,6 +1310,9 @@
     "error": "Villa",
     "close": "Loka",
     "noReservations": "Engar bókanir enn",
+    "noTablesHint": "Bættu við að minnsta kosti einu borði svo að viðskiptavinir geti pantað borð",
+    "reservationsDisabled": "Bókanir eru óvirkar",
+    "configureReservations": "Stilla bókanir",
     "pending": "Í bið",
     "confirmed": "Staðfest",
     "cancelled": "Hætt við",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Engar pantanir enn",
+    "ordersDisabled": "Pantanir eru óvirkar",
+    "configureOrders": "Stilla pantanir",
     "new": "Nýjar",
     "inProgress": "Í vinnslu",
     "completed": "Kláraðar",

@@ -8,7 +8,7 @@ export default function MenuError({ reset }: { reset: () => void }) {
         <p className="text-gray-500 text-sm mb-6">Something went wrong</p>
         <button
           onClick={reset}
-          className="px-6 py-2 rounded-full bg-black text-white text-sm font-medium"
+          className="px-6 py-2 rounded-xl bg-black text-white text-sm font-medium"
         >
           Try again
         </button>

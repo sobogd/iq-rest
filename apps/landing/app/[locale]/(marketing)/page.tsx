@@ -105,7 +105,7 @@ export default async function HomePage() {
               {/* Title */}
               <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 lg:mb-6">
                 {tHero("title")}{" "}
-                <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
                   {tHero("titleAccent")}
                 </span>
               </h1>
@@ -208,11 +208,11 @@ export default async function HomePage() {
                 <div className="max-w-5xl mx-auto">
                   {/* Desktop: 2 columns, alternating sides */}
                   <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
-                    <div className={`flex flex-col ${isEven ? "lg:order-1 items-end text-right" : "lg:order-2 items-start text-left"}`}>
+                    <div className={`flex flex-col items-center text-center ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                       <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
                         {feature.title}{" "}
                         {feature.titleAccent && (
-                          <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+                          <span className="bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
                             {feature.titleAccent}
                           </span>
                         )}
@@ -251,12 +251,12 @@ export default async function HomePage() {
                     <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
                       {feature.title}{" "}
                       {feature.titleAccent && (
-                        <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
                           {feature.titleAccent}
                         </span>
                       )}
                     </h2>
-                    <p className={`text-base mb-4 ${isDark ? "text-white/60" : "text-muted-foreground"}`}>
+                    <p className={`text-sm mb-4 ${isDark ? "text-white/60" : "text-muted-foreground"}`}>
                       {feature.shortDescription.split(/(\{link\}.*?\{\/link\}|\{br\})/).map((part, i) => {
                         if (part === '{br}') return ' ';
                         const linkMatch = part.match(/\{link\}(.*?)\{\/link\}/);
@@ -291,7 +291,7 @@ export default async function HomePage() {
       })()}
 
       <SectionTracker id="pricing" section="pricing" className="scroll-mt-20">
-        <PricingSection noIndex hideComparison currency={currency} />
+        <PricingSection currency={currency} />
       </SectionTracker>
 
       <FeatureLinks />

@@ -22,7 +22,6 @@ export default async function Page() {
       slug={restaurant?.slug ?? null}
       checklist={checklist}
       isAdmin={isAdmin}
-      showOrders={!!restaurant?.ordersEnabled && (restaurant.orderMode === "internal" || restaurant.orderMode === "both")}
     />
   );
 }

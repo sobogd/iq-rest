@@ -238,7 +238,7 @@ export function ItemsPage() {
   return (
     <div className="flex flex-col h-full">
       {/* Custom header */}
-      <header className="shrink-0 shadow-sm px-6 bg-muted/50">
+      <header className="shrink-0 border-b border-border px-6 bg-background/80 backdrop-blur-lg">
         <div className="flex items-center py-3 max-w-lg md:max-w-none md:w-[45rem] mx-auto md:gap-4">
           <DashboardNavHeader />
           {sortMode ? (

@@ -9,19 +9,7 @@ import sampleContacts from "@/public/samples/sample-contacts.webp";
 export function HeroImages() {
   const handleClick = () => {
     analytics.marketing.heroImagesClick();
-    const isMobile = window.innerWidth < 1024;
-    if (isMobile) {
-      const phone = document.getElementById("demo-phone");
-      if (!phone) return;
-      const phoneBottom = phone.getBoundingClientRect().bottom + window.scrollY;
-      const top = phoneBottom - window.innerHeight + 40;
-      window.scrollTo({ top, behavior: "smooth" });
-    } else {
-      const section = document.getElementById("demo");
-      if (!section) return;
-      const top = section.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
+    window.dispatchEvent(new Event("open-demo-modal"));
   };
 
   return (

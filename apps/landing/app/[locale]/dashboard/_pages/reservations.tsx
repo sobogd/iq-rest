@@ -2,8 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { format, isToday, isTomorrow, parseISO } from "date-fns";
-import { Check, X, Loader2, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Check, X, Loader2, Settings, PowerOff, Armchair } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 import { PageHeader } from "../_ui/page-header";
@@ -40,11 +39,12 @@ const POLLING_INTERVAL = 30000;
 
 interface ReservationsPageProps {
   initialReservations: Reservation[];
+  reservationsEnabled: boolean;
+  hasTables: boolean;
 }
 
-export function ReservationsPage({ initialReservations }: ReservationsPageProps) {
+export function ReservationsPage({ initialReservations, reservationsEnabled, hasTables }: ReservationsPageProps) {
   const t = useTranslations("reservations");
-  const tSettings = useTranslations("reservationSettings");
   const { translations } = useDashboard();
   const router = useRouter();
 
@@ -70,9 +70,10 @@ export function ReservationsPage({ initialReservations }: ReservationsPageProps)
   }, []);
 
   useEffect(() => {
+    if (!reservationsEnabled) return;
     const interval = setInterval(fetchReservations, POLLING_INTERVAL);
     return () => clearInterval(interval);
-  }, [fetchReservations]);
+  }, [fetchReservations, reservationsEnabled]);
 
   const groupedReservations = useMemo(() => {
     const pending: Reservation[] = [];
@@ -144,65 +145,67 @@ export function ReservationsPage({ initialReservations }: ReservationsPageProps)
     }
   }
 
-  function renderReservationRow(reservation: Reservation, isFirst: boolean) {
+  function renderReservation(reservation: Reservation) {
     const date = getDateFromReservation(reservation.date);
     const isUpdating = updating === reservation.id;
 
     return (
-      <div
-        key={reservation.id}
-        className={`px-4 py-3 space-y-2 ${isFirst ? "" : "border-t border-foreground/5"}`}
-      >
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <div className="text-sm font-medium truncate">{reservation.guestName}</div>
-            <div className="text-sm text-muted-foreground/60 truncate">
-              {reservation.guestEmail}
-              {reservation.guestPhone && ` • ${reservation.guestPhone}`}
-            </div>
-          </div>
-          <div className="text-right shrink-0">
-            <div className="text-sm font-medium">{reservation.startTime}</div>
-            <div className="text-sm text-muted-foreground">
-              {format(date, "dd.MM.yyyy")}
-            </div>
-          </div>
+      <div key={reservation.id} className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+        {/* Header: name + time */}
+        <div className="flex items-center h-11 px-4">
+          <span className="text-sm font-medium flex-1 min-w-0 truncate">{reservation.guestName}</span>
+          <span className="text-sm font-medium shrink-0 ml-2">{reservation.startTime}</span>
         </div>
 
-        <div className="text-sm text-muted-foreground">
-          {t("table")} {reservation.table.number}
-          {reservation.table.zone && ` (${reservation.table.zone})`} • {reservation.guestsCount} {t("guests")}
+        {/* Date */}
+        <div className="flex items-center h-11 px-4 border-t border-border/50">
+          <span className="text-sm text-muted-foreground flex-1">{format(date, "dd.MM.yyyy")}</span>
+          <span className="text-sm text-muted-foreground">
+            {t("table")} {reservation.table.number}
+            {reservation.table.zone && ` (${reservation.table.zone})`}
+          </span>
         </div>
 
+        {/* Guests */}
+        <div className="flex items-center h-11 px-4 border-t border-border/50">
+          <span className="text-sm text-muted-foreground">{reservation.guestsCount} {t("guests")}</span>
+        </div>
+
+        {/* Contact */}
+        <div className="flex items-center h-11 px-4 border-t border-border/50">
+          <span className="text-sm text-muted-foreground/60 flex-1 min-w-0 truncate">
+            {reservation.guestEmail}
+            {reservation.guestPhone && ` · ${reservation.guestPhone}`}
+          </span>
+        </div>
+
+        {/* Notes */}
         {reservation.notes && (
-          <div className="text-sm text-muted-foreground italic">
-            {reservation.notes}
+          <div className="flex items-center h-11 px-4 border-t border-border/50">
+            <span className="text-sm text-muted-foreground/60 italic truncate">{reservation.notes}</span>
           </div>
         )}
 
+        {/* Actions for pending */}
         {reservation.status === "pending" && (
-          <div className="flex items-center gap-2 pt-1">
-            <Button
-              size="sm"
+          <div className="flex items-center gap-2 h-11 px-4 border-t border-border/50">
+            <button
               onClick={() => { track(DashboardEvent.CLICKED_CONFIRM_RESERVATION); handleUpdateStatus(reservation.id, "confirmed"); }}
               disabled={isUpdating}
+              className="flex items-center text-sm font-medium text-success hover:opacity-80 transition-opacity disabled:opacity-50"
             >
-              {isUpdating ? (
-                <Loader2 className="h-4 w-4 mr-1 animate-spin" />
-              ) : (
-                <Check className="h-4 w-4 mr-1" />
-              )}
+              {isUpdating ? <Loader2 className="h-4 w-4 mr-1.5 animate-spin" /> : <Check className="h-4 w-4 mr-1.5" />}
               {t("confirm")}
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
+            </button>
+            <span className="text-border">·</span>
+            <button
               onClick={() => { track(DashboardEvent.CLICKED_REJECT_RESERVATION); handleUpdateStatus(reservation.id, "cancelled"); }}
               disabled={isUpdating}
+              className="flex items-center text-sm font-medium text-red-400 hover:opacity-80 transition-opacity disabled:opacity-50"
             >
-              <X className="h-4 w-4 mr-1" />
+              <X className="h-4 w-4 mr-1.5" />
               {t("reject")}
-            </Button>
+            </button>
           </div>
         )}
       </div>
@@ -212,11 +215,11 @@ export function ReservationsPage({ initialReservations }: ReservationsPageProps)
   function renderGroup(title: string, items: Reservation[]) {
     if (items.length === 0) return null;
     return (
-      <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
-        <div className="flex items-center px-4 h-12 bg-muted/30">
-          <span className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{title}</span>
+      <div>
+        <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{title}</p>
+        <div className="space-y-3">
+          {items.map((r) => renderReservation(r))}
         </div>
-        {items.map((r, i) => renderReservationRow(r, i === 0))}
       </div>
     );
   }
@@ -236,19 +239,38 @@ export function ReservationsPage({ initialReservations }: ReservationsPageProps)
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-4">
 
-        {activeReservations.length === 0 ? (
+        {!reservationsEnabled ? (
           <div className="flex flex-col items-center justify-center py-16 gap-4">
-            <p className="text-muted-foreground">{t("noReservations")}</p>
+            <PowerOff className="h-10 w-10 text-primary" />
+            <p className="text-muted-foreground/60">{t("reservationsDisabled")}</p>
             <button
               onClick={() => { track(DashboardEvent.CLICKED_RESERVATION_SETTINGS); router.push("/dashboard/reservation-settings"); }}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium"
+              className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+              style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
             >
               <Settings className="h-4 w-4" />
-              {tSettings("title")}
+              {t("configureReservations")}
             </button>
           </div>
+        ) : activeReservations.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-16 gap-4">
+            <p className="text-muted-foreground">{t("noReservations")}</p>
+            {!hasTables && (
+              <>
+                <p className="text-xs text-muted-foreground/60 text-center max-w-xs">{t("noTablesHint")}</p>
+                <button
+                  onClick={() => router.push("/dashboard/tables/add")}
+                  className="flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                  style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                >
+                  <Armchair className="h-4 w-4" />
+                  {t("addTable")}
+                </button>
+              </>
+            )}
+          </div>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-6">
             {renderGroup(t("awaitingResponse"), groupedReservations.pending)}
             {renderGroup(t("today"), groupedReservations.today)}
             {renderGroup(t("tomorrow"), groupedReservations.tomorrow)}

@@ -1310,6 +1310,9 @@
     "error": "エラー",
     "close": "閉じる",
     "noReservations": "まだ予約がありません",
+    "noTablesHint": "お客様が予約できるように、少なくとも1つのテーブルを追加してください",
+    "reservationsDisabled": "予約は現在無効です",
+    "configureReservations": "予約を設定",
     "pending": "保留中",
     "confirmed": "確認済み",
     "cancelled": "キャンセル",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "注文はまだありません",
+    "ordersDisabled": "注文は現在無効です",
+    "configureOrders": "注文を設定",
     "new": "新規",
     "inProgress": "進行中",
     "completed": "完了",

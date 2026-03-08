@@ -3,10 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Printer, Download, Link } from "lucide-react";
+import { Printer, Download, Link, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 import { useTranslations } from "next-intl";
@@ -14,7 +11,6 @@ import { useDashboard } from "../_context/dashboard-context";
 import { useRouter } from "@/i18n/routing";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 const PAPER_FORMATS = {
   a4: { width: 210, height: 297, name: "A4" },
@@ -231,13 +227,17 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
     return (
       <div className="flex flex-col h-full">
         <PageHeader title={translations.pages.qrMenu} />
-      <div className="flex-1 flex items-center justify-center px-6 pb-6">
+        <div className="flex-1 flex items-center justify-center px-6 pb-6">
           <div className="text-center">
-            <p className="font-medium">{t("noSlug")}</p>
-            <p className="text-sm text-muted-foreground max-w-[270px] mt-2">{t("noSlugDescription")}</p>
-            <Button size="sm" className="mt-5" onClick={() => router.push("/dashboard/settings")}>
+            <p className="text-sm font-medium">{t("noSlug")}</p>
+            <p className="text-xs text-muted-foreground/60 max-w-[270px] mt-2">{t("noSlugDescription")}</p>
+            <button
+              onClick={() => router.push("/dashboard/settings")}
+              className="mt-5 flex items-center gap-2 h-10 px-5 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity mx-auto"
+              style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+            >
               {t("goToSettings")}
-            </Button>
+            </button>
           </div>
         </div>
       </div>
@@ -262,105 +262,140 @@ export function QrMenuPage({ initialSlug, tableNumbers }: QrMenuPageProps) {
         </Button>
       </PageHeader>
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
-        <div ref={printRef} className="hidden" hidden>
-          <QRCodeSVG
-            value={menuUrl}
-            size={200}
-            level="L"
-          />
-        </div>
-
-        <DashboardCard title={translations.pages.qrMenu}>
-          <div className="space-y-2">
-            <Label>{t("paperFormat")}</Label>
-            <Select value={paperFormat} onValueChange={(v) => { track(DashboardEvent.CHANGED_PAPER_FORMAT); setPaperFormat(v as keyof typeof PAPER_FORMATS); }}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="a4">{t("formats.a4")}</SelectItem>
-                <SelectItem value="a5">{t("formats.a5")}</SelectItem>
-                <SelectItem value="a6">{t("formats.a6")}</SelectItem>
-                <SelectItem value="letter">{t("formats.letter")}</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Label>{t("qrPerPage")}</Label>
-            <Select value={qrPerPage} onValueChange={(v) => { track(DashboardEvent.CHANGED_QR_PER_PAGE); setQrPerPage(v as keyof typeof QR_PER_PAGE); }}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="one">{t("perPage.one")}</SelectItem>
-                <SelectItem value="two">{t("perPage.two")}</SelectItem>
-                <SelectItem value="four">{t("perPage.four")}</SelectItem>
-                {!isSmallPaper && (
-                  <>
-                    <SelectItem value="six">{t("perPage.six")}</SelectItem>
-                    <SelectItem value="nine">{t("perPage.nine")}</SelectItem>
-                    <SelectItem value="sixteen">{t("perPage.sixteen")}</SelectItem>
-                  </>
-                )}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Label>{t("customText")}</Label>
-            <Textarea
-              value={customText}
-              onChange={(e) => setCustomText(e.target.value)}
-              onFocus={() => track(DashboardEvent.FOCUSED_CUSTOM_TEXT)}
-              placeholder={t("customTextPlaceholder")}
-              rows={2}
+        <DashboardContent innerClassName="space-y-6">
+          <div ref={printRef} className="hidden" hidden>
+            <QRCodeSVG
+              value={menuUrl}
+              size={200}
+              level="L"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label>{t("textSize")}</Label>
-            <Select value={textSize} onValueChange={(v) => { track(DashboardEvent.CHANGED_TEXT_SIZE); setTextSize(v); }}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="small">{t("textSizes.small")}</SelectItem>
-                <SelectItem value="medium">{t("textSizes.medium")}</SelectItem>
-                <SelectItem value="large">{t("textSizes.large")}</SelectItem>
-              </SelectContent>
-            </Select>
+          {/* Print settings */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("printSection")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              {/* Paper format */}
+              <div className="flex items-center h-11 px-4">
+                <span className="text-sm text-muted-foreground shrink-0 mr-3">{t("paperFormat")}</span>
+                <div className="relative flex-1 flex justify-end">
+                  <select
+                    value={paperFormat}
+                    onChange={(e) => { track(DashboardEvent.CHANGED_PAPER_FORMAT); setPaperFormat(e.target.value as keyof typeof PAPER_FORMATS); }}
+                    className="appearance-none bg-transparent text-sm text-right pr-5 cursor-pointer focus:outline-none"
+                  >
+                    <option value="a4">{t("formats.a4")}</option>
+                    <option value="a5">{t("formats.a5")}</option>
+                    <option value="a6">{t("formats.a6")}</option>
+                    <option value="letter">{t("formats.letter")}</option>
+                  </select>
+                  <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
+                </div>
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* QR per page */}
+              <div className="flex items-center h-11 px-4">
+                <span className="text-sm text-muted-foreground shrink-0 mr-3">{t("qrPerPage")}</span>
+                <div className="relative flex-1 flex justify-end">
+                  <select
+                    value={qrPerPage}
+                    onChange={(e) => { track(DashboardEvent.CHANGED_QR_PER_PAGE); setQrPerPage(e.target.value as keyof typeof QR_PER_PAGE); }}
+                    className="appearance-none bg-transparent text-sm text-right pr-5 cursor-pointer focus:outline-none"
+                  >
+                    <option value="one">{t("perPage.one")}</option>
+                    <option value="two">{t("perPage.two")}</option>
+                    <option value="four">{t("perPage.four")}</option>
+                    {!isSmallPaper && (
+                      <>
+                        <option value="six">{t("perPage.six")}</option>
+                        <option value="nine">{t("perPage.nine")}</option>
+                        <option value="sixteen">{t("perPage.sixteen")}</option>
+                      </>
+                    )}
+                  </select>
+                  <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
+                </div>
+              </div>
+              <div className="border-t border-border mx-4" />
+              {/* Text size */}
+              <div className="flex items-center h-11 px-4">
+                <span className="text-sm text-muted-foreground shrink-0 mr-3">{t("textSize")}</span>
+                <div className="relative flex-1 flex justify-end">
+                  <select
+                    value={textSize}
+                    onChange={(e) => { track(DashboardEvent.CHANGED_TEXT_SIZE); setTextSize(e.target.value); }}
+                    className="appearance-none bg-transparent text-sm text-right pr-5 cursor-pointer focus:outline-none"
+                  >
+                    <option value="small">{t("textSizes.small")}</option>
+                    <option value="medium">{t("textSizes.medium")}</option>
+                    <option value="large">{t("textSizes.large")}</option>
+                  </select>
+                  <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
+                </div>
+              </div>
+              {/* Table */}
+              {tableNumbers.length > 0 && (
+                <>
+                  <div className="border-t border-border mx-4" />
+                  <div className="flex items-center h-11 px-4">
+                    <span className="text-sm text-muted-foreground shrink-0 mr-3">{t("tableQr")}</span>
+                    <div className="relative flex-1 flex justify-end">
+                      <select
+                        value={selectedTable}
+                        onChange={(e) => { track(DashboardEvent.CLICKED_TABLE_QR); setSelectedTable(e.target.value); }}
+                        className="appearance-none bg-transparent text-sm text-right pr-5 cursor-pointer focus:outline-none"
+                      >
+                        <option value="none">—</option>
+                        {tableNumbers.map((num) => (
+                          <option key={num} value={String(num)}>{t("tableNumber", { number: num })}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
 
-          {tableNumbers.length > 0 && (
-            <div className="space-y-2">
-              <Label>{t("tableQr")}</Label>
-              <Select value={selectedTable} onValueChange={(v) => { track(DashboardEvent.CLICKED_TABLE_QR); setSelectedTable(v); }}>
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="none">—</SelectItem>
-                  {tableNumbers.map((num) => (
-                    <SelectItem key={num} value={String(num)}>{t("tableNumber", { number: num })}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+          {/* Custom text */}
+          <div>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("customText")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <textarea
+                value={customText}
+                onChange={(e) => setCustomText(e.target.value)}
+                onFocus={() => track(DashboardEvent.FOCUSED_CUSTOM_TEXT)}
+                placeholder={t("customTextPlaceholder")}
+                rows={2}
+                className="w-full px-4 py-3 text-sm bg-transparent focus:outline-none placeholder:text-muted-foreground/30 resize-none"
+              />
             </div>
-          )}
-        </DashboardCard>
+          </div>
 
-        <div className="flex justify-end gap-4">
-          <button onClick={() => { track(DashboardEvent.CLICKED_DOWNLOAD_QR); handleDownload(); }} className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium">
-            <Download className="h-4 w-4 text-muted-foreground" />
-            {t("download")}
-          </button>
-          <button onClick={handleCopyLink} className="flex items-center gap-2 h-10 px-4 rounded-md bg-muted/50 hover:bg-muted/80 transition-colors text-sm font-medium">
-            <Link className="h-4 w-4 text-muted-foreground" />
-            {t("copyUrl")}
-          </button>
-        </div>
+          {/* Actions */}
+          <div>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <button
+                type="button"
+                onClick={() => { track(DashboardEvent.CLICKED_DOWNLOAD_QR); handleDownload(); }}
+                className="flex items-center w-full h-11 px-4 hover:bg-muted/50 transition-colors"
+              >
+                <Download className="h-4 w-4 mr-3 text-primary" />
+                <span className="text-sm font-medium text-primary">{t("download")}</span>
+              </button>
+              <div className="border-t border-border mx-4" />
+              <button
+                type="button"
+                onClick={handleCopyLink}
+                className="flex items-center w-full h-11 px-4 hover:bg-muted/50 transition-colors"
+              >
+                <Link className="h-4 w-4 mr-3 text-primary" />
+                <span className="text-sm font-medium text-primary">{t("copyUrl")}</span>
+              </button>
+            </div>
+          </div>
+
         </DashboardContent>
       </div>
     </div>

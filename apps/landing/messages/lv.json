@@ -1310,6 +1310,9 @@
     "error": "Kļūda",
     "close": "Aizvērt",
     "noReservations": "Vēl nav rezervāciju",
+    "noTablesHint": "Pievienojiet vismaz vienu galdu, lai klienti varētu veikt rezervācijas",
+    "reservationsDisabled": "Rezervācijas pašlaik ir atspējotas",
+    "configureReservations": "Konfigurēt rezervācijas",
     "pending": "Gaida",
     "confirmed": "Apstiprināts",
     "cancelled": "Atcelts",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Pasūtījumu vēl nav",
+    "ordersDisabled": "Pasūtījumi pašlaik ir atspējoti",
+    "configureOrders": "Konfigurēt pasūtījumus",
     "new": "Jauni",
     "inProgress": "Procesā",
     "completed": "Izpildīti",

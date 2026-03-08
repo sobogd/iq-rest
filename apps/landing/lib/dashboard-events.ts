@@ -42,6 +42,10 @@ export enum DashboardEvent {
   SHOWED_ONBOARDING_SCAN = "showed_onboarding_scan",
   CLICKED_ONBOARDING_SCAN = "clicked_onboarding_scan",
   CLICKED_ONBOARDING_BACK = "clicked_onboarding_back",
+  SELECTED_ONBOARDING_METHOD = "selected_onboarding_method",
+  SELECTED_ONBOARDING_TEMPLATE = "selected_onboarding_template",
+  ONBOARDING_FILE_ADDED = "onboarding_file_added",
+  ONBOARDING_FILE_REMOVED = "onboarding_file_removed",
 
   // Home
   SHOWED_HOME = "showed_home",
@@ -142,6 +146,9 @@ export enum DashboardEvent {
   CLICKED_CANCEL_ORDER = "clicked_cancel_order",
   CHANGED_ORDER_MODE = "changed_order_mode",
   CLICKED_TABLE_QR = "clicked_table_qr",
+  SHOWED_ORDER_SETTINGS = "showed_order_settings",
+  CLICKED_SAVE_ORDER_SETTINGS = "clicked_save_order_settings",
+  CLICKED_ORDER_SETTINGS = "clicked_order_settings",
 
   // Settings
   SHOWED_SETTINGS = "showed_settings",
@@ -272,6 +279,10 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.SHOWED_ONBOARDING_SCAN]: "Showed Onboarding Scan",
   [DashboardEvent.CLICKED_ONBOARDING_SCAN]: "Clicked Onboarding Scan",
   [DashboardEvent.CLICKED_ONBOARDING_BACK]: "Clicked Onboarding Back",
+  [DashboardEvent.SELECTED_ONBOARDING_METHOD]: "Selected Onboarding Method",
+  [DashboardEvent.SELECTED_ONBOARDING_TEMPLATE]: "Selected Onboarding Template",
+  [DashboardEvent.ONBOARDING_FILE_ADDED]: "Onboarding File Added",
+  [DashboardEvent.ONBOARDING_FILE_REMOVED]: "Onboarding File Removed",
 
   // Home
   [DashboardEvent.SHOWED_HOME]: "Showed Dashboard",
@@ -372,6 +383,9 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_CANCEL_ORDER]: "Clicked Cancel Order",
   [DashboardEvent.CHANGED_ORDER_MODE]: "Changed Order Mode",
   [DashboardEvent.CLICKED_TABLE_QR]: "Clicked Table QR",
+  [DashboardEvent.SHOWED_ORDER_SETTINGS]: "Showed Order Settings",
+  [DashboardEvent.CLICKED_SAVE_ORDER_SETTINGS]: "Clicked Save Order Settings",
+  [DashboardEvent.CLICKED_ORDER_SETTINGS]: "Clicked Order Settings",
 
   // Settings
   [DashboardEvent.SHOWED_SETTINGS]: "Showed Settings",

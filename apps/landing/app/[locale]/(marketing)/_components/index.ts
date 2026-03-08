@@ -13,6 +13,4 @@ export { HeroImages } from "./hero-images";
 export { ImageComposition } from "./image-composition";
 export { CtaSection } from "./cta-section";
 export { MenuScanner } from "./menu-scanner";
-export { DemoPhone } from "./demo-phone";
-export { ScrollToDemo } from "./scroll-to-demo";
 export { FeatureLinks } from "./feature-links";

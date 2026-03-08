@@ -203,7 +203,7 @@ export function LoginPage() {
           <div className="grid gap-2 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
               {t("title")}<br />
-              <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
                 {t("titleAccent")}
               </span>
             </h1>

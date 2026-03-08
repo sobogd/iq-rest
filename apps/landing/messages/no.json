@@ -1310,6 +1310,9 @@
     "error": "Feil",
     "close": "Lukk",
     "noReservations": "Ingen reservasjoner ennå",
+    "noTablesHint": "Legg til minst ett bord slik at kundene kan reservere",
+    "reservationsDisabled": "Reservasjoner er for øyeblikket deaktivert",
+    "configureReservations": "Konfigurer reservasjoner",
     "pending": "Venter",
     "confirmed": "Bekreftet",
     "cancelled": "Avbestilt",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Ingen bestillinger ennå",
+    "ordersDisabled": "Bestillinger er for øyeblikket deaktivert",
+    "configureOrders": "Konfigurer bestillinger",
     "new": "Nye",
     "inProgress": "Pågår",
     "completed": "Fullført",

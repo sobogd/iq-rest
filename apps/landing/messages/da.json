@@ -1310,6 +1310,9 @@
     "error": "Fejl",
     "close": "Luk",
     "noReservations": "Ingen reservationer endnu",
+    "noTablesHint": "Tilføj mindst ét bord, så kunderne kan foretage reservationer",
+    "reservationsDisabled": "Reservationer er i øjeblikket deaktiveret",
+    "configureReservations": "Konfigurer reservationer",
     "pending": "Afventer",
     "confirmed": "Bekræftet",
     "cancelled": "Annulleret",
@@ -2035,6 +2038,8 @@
   },
   "orders": {
     "noOrders": "Ingen ordrer endnu",
+    "ordersDisabled": "Bestillinger er i øjeblikket deaktiveret",
+    "configureOrders": "Konfigurer bestillinger",
     "new": "Nye",
     "inProgress": "I gang",
     "completed": "Fuldførte",

@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { MessageCircle } from "lucide-react";
 import { VALID_FEATURE_IDS } from "../_lib/feature-data";
 import { analytics } from "@/lib/analytics";
+import { SectionTracker } from "@/components/SectionTracker";
 
 interface FeatureLinksProps {
   excludeFeatureId?: string;
@@ -29,13 +30,13 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
   return (
     <>
       {/* WhatsApp CTA — dark section */}
-      <section className="pt-16 pb-24 md:py-20 bg-black text-white">
+      <SectionTracker section="whatsapp_cta" className="pt-16 pb-24 md:py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
               {tPricing("questionsTitle")}
             </h2>
-            <p className="text-base md:text-lg text-white/60 max-w-xl mx-auto">
+            <p className="text-sm md:text-base text-white/60 max-w-xl mx-auto">
               {tPricing("questionsBody")}
             </p>
             <div className="pt-2">
@@ -52,7 +53,7 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
             </div>
           </div>
         </div>
-      </section>
+      </SectionTracker>
 
       {/* Feature links */}
       {features.length > 0 && (
@@ -64,7 +65,7 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
                   <Link
                     key={feature.id}
                     href={`/${feature.id}`}
-                    className="px-4 py-2 rounded-full border bg-muted/50 hover:bg-muted text-base text-muted-foreground hover:text-foreground transition-colors"
+                    className="px-4 py-2 rounded-xl border bg-muted/50 hover:bg-muted text-sm text-muted-foreground hover:text-foreground transition-colors"
                     onClick={() => analytics.marketing.featureLinkClick(feature.id)}
                   >
                     {feature.titleAccent ? `${feature.title} ${feature.titleAccent}` : feature.title}

@@ -204,7 +204,7 @@ export default async function FeaturePage({
       <section className="pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-base font-medium">
+            <span className="inline-block px-4 py-1.5 rounded-xl bg-primary/10 text-primary text-base font-medium">
               {t("hero.badge")}
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -304,7 +304,7 @@ export default async function FeaturePage({
               </h2>
               <div className="flex flex-col gap-3 md:flex-row md:flex-wrap md:justify-center">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start md:items-center gap-2 px-0 py-1 md:px-4 md:py-2.5 md:bg-background md:rounded-full md:border w-full md:w-auto">
+                  <div key={index} className="flex items-start md:items-center gap-2 px-0 py-1 md:px-4 md:py-2.5 md:bg-background md:rounded-xl md:border w-full md:w-auto">
                     <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5 md:mt-0" />
                     <span className="text-base text-left">{benefit}</span>
                   </div>
@@ -376,7 +376,7 @@ export default async function FeaturePage({
 
       {/* Pricing Section */}
       <section id="pricing" className="scroll-mt-20">
-        <PricingSection currency={currency} hideComparison />
+        <PricingSection currency={currency} />
       </section>
 
       {/* Feature Links */}

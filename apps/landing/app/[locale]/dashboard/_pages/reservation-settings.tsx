@@ -2,26 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { FormSwitch } from "../_ui/form-switch";
+import { Switch } from "@/components/ui/switch";
 import { useDashboard } from "../_context/dashboard-context";
 import { PageHeader } from "../_ui/page-header";
-import { useRouter } from "@/i18n/routing";
 import { toast } from "sonner";
-import { AlertCircle, Loader2 } from "lucide-react";
+import { Loader2, ChevronDown } from "lucide-react";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import type { SubscriptionStatus } from "@prisma/client";
-import type { PlanType } from "@/lib/stripe-config";
 import { DashboardContent } from "../_ui/dashboard-content";
-import { DashboardCard } from "../_ui/dashboard-card";
 
 interface ReservationSettingsPageProps {
   initialRestaurant: {
@@ -31,16 +19,11 @@ interface ReservationSettingsPageProps {
     workingHoursStart: string;
     workingHoursEnd: string;
   } | null;
-  initialSubscription: {
-    subscriptionStatus: SubscriptionStatus;
-    plan: PlanType;
-  } | null;
 }
 
-export function ReservationSettingsPage({ initialRestaurant, initialSubscription }: ReservationSettingsPageProps) {
+export function ReservationSettingsPage({ initialRestaurant }: ReservationSettingsPageProps) {
   const t = useTranslations("reservationSettings");
   const { translations } = useDashboard();
-  const router = useRouter();
 
   const [saving, setSaving] = useState(false);
 
@@ -57,9 +40,6 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
     workingHoursStart: initialRestaurant?.workingHoursStart ?? "10:00",
     workingHoursEnd: initialRestaurant?.workingHoursEnd ?? "22:00",
   });
-
-  const subscriptionStatus = initialSubscription?.subscriptionStatus ?? "INACTIVE";
-  const currentPlan = initialSubscription?.plan ?? "FREE";
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_RESERVATION_SETTINGS);
@@ -88,8 +68,8 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
       });
 
       if (res.ok) {
+        track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS);
         toast.success(t("saved"));
-
         setInitialValues({
           reservationsEnabled,
           reservationMode,
@@ -110,7 +90,10 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
     }
   }
 
-  const hasActiveSubscription = true;
+  const hours = Array.from({ length: 24 }, (_, i) => {
+    const h = i.toString().padStart(2, "0");
+    return `${h}:00`;
+  });
 
   return (
     <div className="flex flex-col h-full">
@@ -118,7 +101,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
         <PageHeader title={translations.pages.reservations} backHref="/dashboard/reservations">
           <Button
             type="button"
-            onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }}
+            onClick={handleSave}
             disabled={saving || !hasChanges}
             variant="default"
             size="sm"
@@ -132,121 +115,103 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
       <div className="flex-1 overflow-y-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-6">
 
-          {!hasActiveSubscription && (
-            <div className="rounded-md border border-amber-500/50 bg-amber-500/10 p-4">
-              <div className="flex gap-3 md:gap-4 md:items-center">
-                <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5 md:mt-0" />
-                <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6">
-                  <p className="text-sm">
-                    {t("subscriptionRequired")}
-                  </p>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-amber-500/50 hover:bg-amber-500/10 self-end md:self-auto shrink-0"
-                    onClick={() => router.push("/dashboard/billing")}
+          {/* Enable reservations */}
+          <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+            <label htmlFor="reservations-enabled" className="flex items-center justify-between h-11 px-4 cursor-pointer">
+              <span className="text-sm font-medium">{t("reservationsEnabled")}</span>
+              <Switch
+                id="reservations-enabled"
+                checked={reservationsEnabled}
+                onCheckedChange={(v) => { setReservationsEnabled(v); track(DashboardEvent.TOGGLED_RESERVATIONS_ENABLED); }}
+              />
+            </label>
+          </div>
+
+          {/* Confirmation mode */}
+          <div className={!reservationsEnabled ? "opacity-50 pointer-events-none" : ""}>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("reservationMode")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <label htmlFor="mode-auto" className="flex items-center justify-between h-11 px-4 cursor-pointer">
+                <span className="text-sm">{t("modeAuto")}</span>
+                <Switch
+                  id="mode-auto"
+                  checked={reservationMode === "auto"}
+                  onCheckedChange={(v) => { if (v) { setReservationMode("auto"); track(DashboardEvent.CHANGED_RESERVATION_MODE); } }}
+                  disabled={!reservationsEnabled}
+                />
+              </label>
+              <div className="border-t border-border mx-4" />
+              <label htmlFor="mode-manual" className="flex items-center justify-between h-11 px-4 cursor-pointer">
+                <span className="text-sm">{t("modeManual")}</span>
+                <Switch
+                  id="mode-manual"
+                  checked={reservationMode === "manual"}
+                  onCheckedChange={(v) => { if (v) { setReservationMode("manual"); track(DashboardEvent.CHANGED_RESERVATION_MODE); } }}
+                  disabled={!reservationsEnabled}
+                />
+              </label>
+            </div>
+            <p className="text-xs text-muted-foreground/60 px-4 mt-1.5">
+              {reservationMode === "auto" ? t("modeAutoDescription") : t("modeManualDescription")}
+            </p>
+          </div>
+
+          {/* Duration */}
+          <div className={!reservationsEnabled ? "opacity-50 pointer-events-none" : ""}>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("slotDuration")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <div className="flex items-center justify-between h-11 px-4">
+                <span className="text-sm">{t("slotDuration")}</span>
+                <div className="relative">
+                  <select
+                    value={reservationSlotMinutes.toString()}
+                    onChange={(e) => { setReservationSlotMinutes(parseInt(e.target.value)); track(DashboardEvent.CHANGED_SLOT_DURATION); }}
+                    disabled={!reservationsEnabled}
+                    className="appearance-none bg-transparent text-sm text-muted-foreground pr-5 cursor-pointer focus:outline-none"
                   >
-                    {t("subscribe")}
-                  </Button>
+                    <option value="60">60 {t("minutes")}</option>
+                    <option value="90">90 {t("minutes")}</option>
+                    <option value="120">120 {t("minutes")}</option>
+                  </select>
+                  <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          <DashboardCard title={translations.pages.reservations}>
-            <FormSwitch
-              id="reservationsEnabled"
-              label={`${t("reservationsEnabled")}:`}
-              checked={reservationsEnabled}
-              onCheckedChange={hasActiveSubscription ? (v) => { track(DashboardEvent.TOGGLED_RESERVATIONS_ENABLED); setReservationsEnabled(v); } : () => {}}
-              activeText={t("enabled")}
-              inactiveText={t("disabled")}
-              disabled={!hasActiveSubscription}
-            />
-
-            <div className={`space-y-4 ${!reservationsEnabled || !hasActiveSubscription ? "opacity-50" : ""}`}>
-                <div className="space-y-2">
-                  <Label>{t("reservationMode")}:</Label>
-                  <Select value={reservationMode} onValueChange={(v) => { track(DashboardEvent.CHANGED_RESERVATION_MODE); setReservationMode(v); }} disabled={!reservationsEnabled || !hasActiveSubscription}>
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="auto">{t("modeAuto")}</SelectItem>
-                      <SelectItem value="manual">{t("modeManual")}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <p className="text-sm text-muted-foreground">
-                    {reservationMode === "auto" ? t("modeAutoDescription") : t("modeManualDescription")}
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <Label>{t("slotDuration")}:</Label>
-                  <Select
-                    value={reservationSlotMinutes.toString()}
-                    onValueChange={(v) => { track(DashboardEvent.CHANGED_SLOT_DURATION); setReservationSlotMinutes(parseInt(v)); }}
-                    disabled={!reservationsEnabled || !hasActiveSubscription}
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="60">60 {t("minutes")}</SelectItem>
-                      <SelectItem value="90">90 {t("minutes")}</SelectItem>
-                      <SelectItem value="120">120 {t("minutes")}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label>{t("workingHours")}:</Label>
-                  <div className="flex items-center gap-2">
-                    <Select value={workingHoursStart} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_START); setWorkingHoursStart(v); }} disabled={!reservationsEnabled || !hasActiveSubscription}>
-                      <SelectTrigger className="w-28">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {Array.from({ length: 24 }, (_, i) => {
-                          const hour = i.toString().padStart(2, "0");
-                          return (
-                            <SelectItem key={`start-${hour}:00`} value={`${hour}:00`}>
-                              {hour}:00
-                            </SelectItem>
-                          );
-                        })}
-                      </SelectContent>
-                    </Select>
-                    <span className="text-muted-foreground">—</span>
-                    <Select value={workingHoursEnd} onValueChange={(v) => { track(DashboardEvent.CHANGED_WORKING_HOURS_END); setWorkingHoursEnd(v); }} disabled={!reservationsEnabled || !hasActiveSubscription}>
-                      <SelectTrigger className="w-28">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {Array.from({ length: 24 }, (_, i) => {
-                          const hour = i.toString().padStart(2, "0");
-                          return (
-                            <SelectItem key={`end-${hour}:00`} value={`${hour}:00`}>
-                              {hour}:00
-                            </SelectItem>
-                          );
-                        })}
-                      </SelectContent>
-                    </Select>
+          {/* Working hours */}
+          <div className={!reservationsEnabled ? "opacity-50 pointer-events-none" : ""}>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("workingHours")}</p>
+            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+              <div className="flex items-center justify-between h-11 px-4">
+                <span className="text-sm">{t("workingHours")}</span>
+                <div className="flex items-center gap-1.5">
+                  <div className="relative">
+                    <select
+                      value={workingHoursStart}
+                      onChange={(e) => { setWorkingHoursStart(e.target.value); track(DashboardEvent.CHANGED_WORKING_HOURS_START); }}
+                      disabled={!reservationsEnabled}
+                      className="appearance-none bg-transparent text-sm text-muted-foreground pr-5 cursor-pointer focus:outline-none"
+                    >
+                      {hours.map((h) => <option key={`s-${h}`} value={h}>{h}</option>)}
+                    </select>
+                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
+                  </div>
+                  <span className="text-muted-foreground">—</span>
+                  <div className="relative">
+                    <select
+                      value={workingHoursEnd}
+                      onChange={(e) => { setWorkingHoursEnd(e.target.value); track(DashboardEvent.CHANGED_WORKING_HOURS_END); }}
+                      disabled={!reservationsEnabled}
+                      className="appearance-none bg-transparent text-sm text-muted-foreground pr-5 cursor-pointer focus:outline-none"
+                    >
+                      {hours.map((h) => <option key={`e-${h}`} value={h}>{h}</option>)}
+                    </select>
+                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground/50 pointer-events-none" />
                   </div>
                 </div>
+              </div>
             </div>
-          </DashboardCard>
-
-          <div className="flex justify-end">
-            <button
-              type="button"
-              onClick={() => { track(DashboardEvent.CLICKED_SAVE_RESERVATION_SETTINGS); handleSave(); }}
-              disabled={saving || !hasChanges}
-              className="flex items-center gap-2 h-10 px-4 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : t("save")}
-            </button>
           </div>
 
         </DashboardContent>

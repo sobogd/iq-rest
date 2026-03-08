@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Loader2, Clock, AlertTriangle } from "lucide-react";
+import { Loader2, Clock, AlertTriangle, CreditCard, ExternalLink } from "lucide-react";
 import { PRICE_LOOKUP_KEYS, type PlanType } from "@/lib/stripe-config";
 import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
 import { PageHeader } from "../_ui/page-header";
@@ -218,8 +217,8 @@ export function BillingPage({ initialSubscription, currency, trialEndsAt }: Bill
           <div className="flex flex-col items-center gap-4">
             <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
             <div className="text-center">
-              <p className="font-medium">{t("processingPayment")}</p>
-              <p className="text-sm text-muted-foreground mt-1">
+              <p className="text-sm font-medium">{t("processingPayment")}</p>
+              <p className="text-xs text-muted-foreground/60 mt-1">
                 {t("processingPaymentDescription")}
               </p>
             </div>
@@ -235,97 +234,105 @@ export function BillingPage({ initialSubscription, currency, trialEndsAt }: Bill
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.billing} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
-        <DashboardContent innerClassName="space-y-4">
-          {/* Status banner */}
+        <DashboardContent innerClassName="space-y-6">
+
+          {/* Active subscription status */}
           {isActive && (
-            <div className="rounded-md border border-success/30 bg-success/5 px-4 py-3 flex items-center gap-3">
-              <div className="w-2 h-2 bg-success rounded-full" />
-              <div className="flex-1">
-                <span className="text-sm font-medium text-success">
-                  {t("activeSubscription")}
-                </span>
-                {billingCycle && (
-                  <span className="text-xs text-muted-foreground ml-2">
-                    ({billingCycle === "YEARLY" ? t("billedYearly") : t("billedMonthly")})
-                  </span>
-                )}
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("activeSubscription")}</p>
+              <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                <div className="flex items-center h-11 px-4">
+                  <div className="w-2 h-2 bg-success rounded-full mr-3 shrink-0" />
+                  <span className="text-sm font-medium flex-1">{t("activeSubscription")}</span>
+                  {billingCycle && (
+                    <span className="text-xs text-muted-foreground">
+                      {billingCycle === "YEARLY" ? t("billedYearly") : t("billedMonthly")}
+                    </span>
+                  )}
+                </div>
+                <div className="border-t border-border mx-4" />
+                <button
+                  type="button"
+                  onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
+                  disabled={!!actionLoading}
+                  className="flex items-center w-full h-11 px-4 hover:bg-muted/50 transition-colors disabled:opacity-50"
+                >
+                  {actionLoading === "manage" ? (
+                    <Loader2 className="h-4 w-4 mr-3 text-primary animate-spin" />
+                  ) : (
+                    <ExternalLink className="h-4 w-4 mr-3 text-primary" />
+                  )}
+                  <span className="text-sm font-medium text-primary">{t("manage")}</span>
+                </button>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-success/50 text-success hover:bg-success/10"
-                onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
-                disabled={!!actionLoading}
-              >
-                {actionLoading === "manage" && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                {t("manage")}
-              </Button>
             </div>
           )}
 
+          {/* Trial banner */}
           {isTrialing && (
-            <div className="rounded-md border border-primary/30 bg-primary/5 px-4 py-3 flex items-center gap-3">
-              <Clock className="h-4 w-4 text-primary shrink-0" />
-              <span className="text-sm">
-                {t("trialDaysLeft", { days: trialDaysLeft })}
-              </span>
+            <div className="rounded-xl border border-primary/30 bg-primary/5 overflow-hidden">
+              <div className="flex items-center h-11 px-4">
+                <Clock className="h-4 w-4 text-primary mr-3 shrink-0" />
+                <span className="text-sm">{t("trialDaysLeft", { days: trialDaysLeft })}</span>
+              </div>
             </div>
           )}
 
+          {/* Trial expired */}
           {trialExpired && !isActive && (
-            <div className="rounded-md border border-destructive/30 bg-destructive/5 px-4 py-3 flex items-center gap-3">
-              <AlertTriangle className="h-4 w-4 text-destructive shrink-0" />
-              <span className="text-sm">{t("trialExpired")}</span>
+            <div className="rounded-xl border border-destructive/30 bg-destructive/5 overflow-hidden">
+              <div className="flex items-center h-11 px-4">
+                <AlertTriangle className="h-4 w-4 text-destructive mr-3 shrink-0" />
+                <span className="text-sm">{t("trialExpired")}</span>
+              </div>
             </div>
           )}
 
-          {/* Plan options — only show if not active subscriber */}
+          {/* Plan options */}
           {!isActive && (
-            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
-              <div className="flex items-center px-4 py-3.5 bg-muted/30">
-                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  {t("choosePlan")}
-                </span>
-              </div>
-
-              {/* Yearly */}
-              <div className="flex items-center justify-between px-4 h-12 border-t border-foreground/5">
-                <div className="flex items-center gap-2 flex-1 min-w-0">
-                  <span className="text-sm font-medium">{t("yearly")}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {formatPrice(plan.yearly, currency)}{t("perMonth")}
-                  </span>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t("choosePlan")}</p>
+              <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+                {/* Yearly */}
+                <div className="flex items-center h-12 px-4">
+                  <div className="flex-1 min-w-0">
+                    <span className="text-sm font-medium">{t("yearly")}</span>
+                    <span className="text-xs text-muted-foreground ml-2">
+                      {formatPrice(plan.yearly, currency)}{t("perMonth")}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: "BASIC_YEARLY" }); handleSubscribe(PRICE_LOOKUP_KEYS.BASIC_YEARLY); }}
+                    disabled={!!actionLoading}
+                    className="flex items-center gap-1.5 h-8 px-4 rounded-lg text-white text-xs font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+                    style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                  >
+                    {actionLoading === PRICE_LOOKUP_KEYS.BASIC_YEARLY && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
+                    {t("subscribe")}
+                  </button>
                 </div>
-                <Button
-                  size="sm"
-                  onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: "BASIC_YEARLY" }); handleSubscribe(PRICE_LOOKUP_KEYS.BASIC_YEARLY); }}
-                  disabled={!!actionLoading}
-                >
-                  {actionLoading === PRICE_LOOKUP_KEYS.BASIC_YEARLY && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {t("subscribe")}
-                </Button>
-              </div>
-
-              {/* Monthly */}
-              <div className="flex items-center justify-between px-4 h-12 border-t border-foreground/5">
-                <div className="flex items-center gap-2 flex-1 min-w-0">
-                  <span className="text-sm font-medium">{t("monthly")}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {formatPrice(plan.monthly, currency)}{t("perMonth")}
-                  </span>
+                <div className="border-t border-border mx-4" />
+                {/* Monthly */}
+                <div className="flex items-center h-12 px-4">
+                  <div className="flex-1 min-w-0">
+                    <span className="text-sm font-medium">{t("monthly")}</span>
+                    <span className="text-xs text-muted-foreground ml-2">
+                      {formatPrice(plan.monthly, currency)}{t("perMonth")}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: "BASIC_MONTHLY" }); handleSubscribe(PRICE_LOOKUP_KEYS.BASIC_MONTHLY); }}
+                    disabled={!!actionLoading}
+                    className="flex items-center gap-1.5 h-8 px-4 rounded-lg border border-border text-xs font-medium hover:bg-muted/50 transition-colors disabled:opacity-50"
+                  >
+                    {actionLoading === PRICE_LOOKUP_KEYS.BASIC_MONTHLY && <Loader2 className="h-3.5 w-3.5 animate-spin" />}
+                    {t("subscribe")}
+                  </button>
                 </div>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: "BASIC_MONTHLY" }); handleSubscribe(PRICE_LOOKUP_KEYS.BASIC_MONTHLY); }}
-                  disabled={!!actionLoading}
-                >
-                  {actionLoading === PRICE_LOOKUP_KEYS.BASIC_MONTHLY && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {t("subscribe")}
-                </Button>
               </div>
             </div>
           )}
+
         </DashboardContent>
       </div>
     </div>

@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { Send, Loader2, MessageCircle } from "lucide-react";
 import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
@@ -69,7 +67,6 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
       });
 
       if (response.ok) {
-
         const sentMessage = await response.json();
         setMessages((prev) => [...prev, sentMessage]);
         setNewMessage("");
@@ -106,11 +103,11 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
         <DashboardContent innerClassName="space-y-3">
           {messages.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 gap-3">
-              <div className="flex items-center justify-center h-14 w-14 bg-muted/30 rounded-md">
+              <div className="flex items-center justify-center h-14 w-14 bg-muted/30 rounded-xl">
                 <MessageCircle className="h-7 w-7 text-muted-foreground" />
               </div>
-              <p className="font-medium">{t("emptyTitle")}</p>
-              <p className="text-sm text-muted-foreground text-center max-w-[270px]">
+              <p className="text-sm font-medium">{t("emptyTitle")}</p>
+              <p className="text-xs text-muted-foreground/60 text-center max-w-[270px]">
                 {t("emptyDescription")}
               </p>
             </div>
@@ -121,10 +118,10 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
                 className={`flex ${msg.isAdmin ? "justify-start" : "justify-end"}`}
               >
                 <div
-                  className={`max-w-[80%] rounded-md px-4 py-3 ${
+                  className={`max-w-[80%] rounded-xl px-4 py-3 ${
                     msg.isAdmin
-                      ? "bg-muted/30 text-foreground rounded-tl-md"
-                      : "bg-primary text-primary-foreground rounded-tr-md"
+                      ? "bg-muted/30 text-foreground"
+                      : "bg-primary text-primary-foreground"
                   }`}
                 >
                   {msg.isAdmin && (
@@ -154,30 +151,29 @@ export function SupportPage({ initialMessages }: SupportPageProps) {
         <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4">
           <div className="hidden md:block md:w-56 shrink-0" />
           <div className="flex-1 min-w-0">
-            <div className="flex items-end gap-2 rounded-md border bg-muted/20 p-2">
-              <Textarea
+            <div className="flex items-end gap-2 rounded-xl border border-border bg-muted/30 p-2">
+              <textarea
                 ref={textareaRef}
                 value={newMessage}
                 onChange={(e) => setNewMessage(e.target.value)}
                 onKeyDown={handleKeyDown}
                 onFocus={() => track(DashboardEvent.FOCUSED_SUPPORT_MESSAGE)}
                 placeholder={t("placeholder")}
-                className="min-h-[44px] max-h-[120px] resize-none flex-1 border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
+                className="min-h-[44px] max-h-[120px] resize-none flex-1 bg-transparent focus:outline-none text-sm px-2 py-2"
                 rows={1}
               />
-              <Button
+              <button
                 onClick={() => { track(DashboardEvent.CLICKED_SEND_MESSAGE); handleSend(); }}
                 disabled={!newMessage.trim() || isSending}
-                variant="destructive"
-                size="icon"
-                className="h-10 w-10 rounded-md shadow-md shrink-0"
+                className="flex items-center justify-center h-10 w-10 rounded-xl text-white shrink-0 hover:opacity-90 transition-opacity disabled:opacity-50"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
               >
                 {isSending ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
                 ) : (
                   <Send className="h-4 w-4" />
                 )}
-              </Button>
+              </button>
             </div>
           </div>
         </div>
