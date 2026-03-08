@@ -150,7 +150,10 @@ export async function POST(request: NextRequest) {
         const companyName =
           defaultCompanyNames[locale] || defaultCompanyNames.en;
         company = await prisma.company.create({
-          data: { name: companyName },
+          data: {
+            name: companyName,
+            trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
+          },
         });
       }
 

@@ -16,7 +16,7 @@ export async function POST() {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Check plan: must be BASIC/PRO or admin
+    // Check plan and access
     const cookieStore = await cookies();
     const userEmail = cookieStore.get("user_email")?.value;
     const admin = isAdminEmail(userEmail);
@@ -24,7 +24,7 @@ export async function POST() {
     const [company, restaurant] = await Promise.all([
       prisma.company.findUnique({
         where: { id: companyId },
-        select: { plan: true, subscriptionStatus: true },
+        select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
       }),
       prisma.restaurant.findFirst({
         where: { companyId },
@@ -36,20 +36,11 @@ export async function POST() {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
-    const isActive = company.subscriptionStatus === "ACTIVE";
-    const isPro = admin || (isActive && company.plan === "PRO");
-    const isBasic = isActive && company.plan === "BASIC";
+    const { getCompanyAccess } = await import("@/lib/access");
+    const access = getCompanyAccess(company);
 
-    if (!isPro && !isBasic) {
-      return NextResponse.json({ error: "Subscription required" }, { status: 403 });
-    }
-
-    const BASIC_MONTHLY_LIMIT = 35;
-    if (isBasic) {
-      const totalUsed = restaurant.imageGenerationsUsed + restaurant.imageStylizationsUsed;
-      if (totalUsed >= BASIC_MONTHLY_LIMIT) {
-        return NextResponse.json({ error: "limit_reached" }, { status: 403 });
-      }
+    if (!admin && !access.hasFullAccess) {
+      return NextResponse.json({ error: "trial_expired" }, { status: 403 });
     }
 
     if (!GEMINI_API_KEY) {
@@ -144,13 +135,11 @@ export async function POST() {
 
     const url = getPublicUrl(key);
 
-    // Track usage for BASIC subscribers
-    if (isBasic) {
-      await prisma.restaurant.update({
-        where: { id: restaurant.id },
-        data: { imageGenerationsUsed: { increment: 1 } },
-      });
-    }
+    // Track usage
+    await prisma.restaurant.update({
+      where: { id: restaurant.id },
+      data: { imageGenerationsUsed: { increment: 1 } },
+    });
 
     return NextResponse.json({ url });
   } catch (error) {

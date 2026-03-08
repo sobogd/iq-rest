@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Define all routes with individual settings
   const routes: RouteConfig[] = [
-    { path: '/pricing', lastModified: '2026-02-26', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/instant-setup', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/mobile-management', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/ai-translation', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },

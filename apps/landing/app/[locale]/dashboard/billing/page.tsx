@@ -14,5 +14,5 @@ export default async function Page() {
 
   const currency = (cookieStore.get("currency")?.value as SupportedCurrency) || "EUR";
 
-  return <BillingPage initialSubscription={subscription} currency={currency} />;
+  return <BillingPage initialSubscription={subscription} currency={currency} trialEndsAt={subscription?.trialEndsAt ?? null} />;
 }

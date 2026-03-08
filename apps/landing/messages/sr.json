@@ -9,7 +9,7 @@
       "changelog": "Izmene",
       "contacts": "Kontakti"
     },
-    "getStarted": "Направи бесплатно",
+    "getStarted": "Počnite",
     "selectLanguage": "Izaberite jezik",
     "selectLanguageDescription": "Izaberite svoj omiljeni jezik za veb sajt.",
     "searchLanguage": "Pretraži jezik...",
@@ -21,15 +21,16 @@
       "description": "Креирајте QR мени и веб сајт ресторана само са вашим имејлом. Тренутно подешавање, мобилно управљање, AI преводи, дневне анализе. Савршено за ресторане и кафиће. Почните бесплатно данас."
     },
     "hero": {
-      "title": "Направите Професионални QR Menu и Сајт за Неколико Минута",
-      "subtitle": "Samo unesite svoju email adresu i dobijate kompletnu veb stranicu restorana sa QR menijem, stranicom za kontakt, višelingvalnom podrškom i modernim dizajnom. Sve postavite sa svog telefona.",
+      "title": "Veb-sajt i QR Meni, Porudžbine i Rezervacije.",
+      "subtitle": "Samo unesite svoj email da započnete.",
       "cta": {
         "create": "Направи мени",
         "view": "Погледај цене",
-        "noCreditCard": "Бесплатно до 320 скенирања/мес. Кредитна картица није потребна.",
+        "noCreditCard": "14-dnevna besplatna proba. Kreditna kartica nije potrebna.",
         "trusted": "Poverenje više od 500 restorana širom sveta",
         "title": "Spremni za digitalizaciju?",
-        "subtitle": "Kreirajte svoj profesionalni QR meni i veb sajt restorana za nekoliko minuta. Besplatno zauvek, bez potrebe za kreditnom karticom."
+        "subtitle": "Kreirajte svoj profesionalni QR meni i veb sajt restorana za nekoliko minuta. Besplatno zauvek, bez potrebe za kreditnom karticom.",
+        "demo": "Pogledaj Demo"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "Кафићи",
         "bars": "Барови",
         "hotels": "Хотели"
-      }
+      },
+      "titleAccent": "Spremno za nekoliko minuta."
     },
     "demo": {
       "title": "Доживите то као што ваши гости виде",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100% Mobilno Prijateljsko Upravljanje",
-        "shortDescription": "Уредите мени са телефона.{br}{link}Погледајте како функционише{/link}.",
+        "title": "Upravljanje 100%",
+        "shortDescription": "Dodajte jela, otpremajte fotografije, menjajte cene i upravljajte svime direktno sa svog telefona. Cela kontrolna tabla je optimizovana za mobilne uređaje – računar vam nikada neće biti potreban. {link}Saznajte više{/link}.",
         "description": "Dodajte kategorije, jela, fotografije i upravljajte celokupnom veb stranicom restorana direktno sa svog telefona. Naša kontrolna tabla je potpuno optimizovana za mobilne uređaje, tako da možete ažurirati svoj meni tokom pauze za kafu ili dodati dnevne specijalitete u pokretu.",
         "fullDescription": "Vlasnici restorana su zauzeti ljudi koji nisu uvek za računarom. Zato smo izgradili IQ Rest da savršeno funkcioniše na mobilnim uređajima. Svaka funkcija, od dodavanja novih jela do ažuriranja cena, je dizajnirana za dodirne ekrane. Napravite fotografiju novog jela i odmah je otpremite. Promenite današnji specijal dok stojite u kuhinji.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Upravljanje menijem restorana na pametnom telefonu",
-        "cta": "See how"
+        "cta": "See how",
+        "titleAccent": "prilagođeno mobilnim uređajima"
       },
       {
         "id": "ai-translation",
-        "title": "AI-Podržano Prevođenje Menija",
-        "shortDescription": "Преведите цео мени{br}са {link}АИ преводом у 1 клик{/link}.",
+        "title": "Prevođenje menija",
+        "shortDescription": "Prevedite ceo meni na 35 jezika jednim klikom. Naša veštačka inteligencija razume kulinarski kontekst – nazivi jela i opisi zvuče prirodno na bilo kom jeziku. {link}Saznajte više{/link}.",
         "description": "Dosegnite međunarodne kupce sa inteligentnim AI prevođenjem koje razume kontekst hrane. Nazivi vaših jela i opisi se tačno prevode, čuvajući kulinarske termine i dajući smisao na bilo kojem jeziku.",
         "fullDescription": "Generički prevodioci često ne uspevaju sa menijima hrane - prevode doslovno bez razumevanja konteksta. Naš AI je posebno obučen za sadržaj restorana. Zna da 'Beef Wellington' ne treba doslovno prevesti, i da 'al dente' znači isto na bilo kojem jeziku. Poslužite turiste i međunarodne goste sa menijima koji zvuče prirodno na njihovom jeziku.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-podržan interfejs za prevođenje menija restorana",
-        "cta": "one-click AI"
+        "cta": "one-click AI",
+        "titleAccent": "uz pomoć veštačke inteligencije"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Једноставан уређивач менија",
-        "shortDescription": "Превуци, пусти, готово.{br}{link}Управљајте менијем{/link} за секунде.",
+        "title": "Jednostavan",
+        "shortDescription": "Dodajte kategorije, kreirajte jela sa fotografijama i cenama, preuređujte prevlačenjem i ispuštanjem. Promene se odmah pojavljuju na vašem meniju uživo – nisu potrebne tehničke veštine. {link}Saznajte više{/link}.",
         "description": "Upravljanje vašim menijem nikada nije bilo lakše. Dodajte kategorije, kreirajte jela sa fotografijama i opisima, postavite cene i organizujte sve jednostavnim prevlačenjem i ispuštanjem. Promene se odmah pojavljuju na vašoj veb stranici.",
         "fullDescription": "Zaboravite na složene sisteme za upravljanje sadržajem. IQ Rest-ov uređivač menija je dizajniran za vlasnike restorana, a ne za veb programere. Kreirajte novu kategoriju za nekoliko sekundi, dodajte jela sa nekoliko dodira, otpremite fotografije direktno sa svog telefona. Prevucite stavke da promenite redosled, isključite vidljivost za rasprodane stavke i odmah vidite promene uživo.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Jednostavna kontrolna tabla za upravljanje menijem restorana",
-        "cta": "Manage your menu"
+        "cta": "Manage your menu",
+        "titleAccent": "uređivač menija"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "Sistem za Rezervaciju Stolova",
-        "shortDescription": "Примајте резервације 24/7.{br}{link}Резервације{/link} директно са сајта.",
+        "title": "Sistem za",
+        "shortDescription": "Gosti rezervišu stolove direktno sa vašeg sajta – 24/7, bez potrebe za telefonskim pozivima. Automatska ili ručna potvrda, obaveštenja putem e-pošte i potpuni pregled svih rezervacija na vašoj kontrolnoj tabli. {link}Saznajte više{/link}.",
         "description": "Ugrađeni sistem rezervacija omogućava kupcima da rezervišu stolove direktno sa vaše veb stranice. Izaberite automatsku potvrdu na osnovu dostupnosti, ili pregledajte svaku rezervaciju ručno. Upravljajte svim rezervacijama sa vaše kontrolne table.",
         "fullDescription": "Rezervacije putem telefona oduzimaju vreme i lako ih je propustiti. IQ Rest-ov sistem rezervacija radi 24/7. Kupci biraju datum, vreme i broj gostiju, a zatim rezervišu odmah. Možete postaviti automatsku potvrdu na osnovu dostupnosti stolova, ili pregledati svaku zahtev ručno. Smanjite nepojavljivanja sa potvrdom putem e-pošte.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Online sistem rezervacije stolova za restorane",
-        "cta": "Istražite Rezervacije Stolova"
+        "cta": "Istražite Rezervacije Stolova",
+        "titleAccent": "upravljanje stolovima"
       },
       {
         "id": "custom-design",
-        "title": "Video & Foto Pozadine",
-        "shortDescription": "Створите задивљујуће прве утиске{br}са {link}видео или фото позадинама{/link}.",
+        "title": "Video i foto",
+        "shortDescription": "Otpremite video ambijenta vašeg restorana ili prelepu fotografiju hrane kao pozadinu za vaš meni. Oduševite goste od prve sekunde kada skeniraju vaš QR kod. {link}Saznajte više{/link}.",
         "description": "Kreirajte nezaboravan prvi utisak sa prilagođenim video ili foto pozadinama na vašoj početnoj stranici. Otpremite video ambijenta vašeg restorana ili prelepu fotografiju hrane da biste odmah oduševili kupce.",
         "fullDescription": "Prvi utisci su važni. Kada kupci skeniraju vaš QR kod, odmah treba da budu impresionirani. Otpremite video ambijenta vašeg restorana, vremensku sekvencu vaše kuhinje ili zapanjujuću fotografiju vašeg specijaliteta. Vaša početna stranica postaje vizuelno iskustvo koje odražava ličnost vašeg restorana.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Veb stranica restorana sa video pozadinom",
-        "cta": "video or photo backgrounds"
+        "cta": "video or photo backgrounds",
+        "titleAccent": "pozadine"
       },
       {
         "id": "color-scheme",
-        "title": "Prilagođena Shema Boja",
-        "shortDescription": "Ускладите боје са брендом{br}са {link}прилагођеним акцентима{/link}.",
+        "title": "Prilagođena",
+        "shortDescription": "Odaberite boju vašeg brenda i ona će se primeniti svuda – na dugmadima, istaknutim elementima, linkovima. Automatska podrška za svetlu i tamnu temu osigurava da vaš meni uvek izgleda profesionalno. {link}Saznajte više{/link}.",
         "description": "Vaša veb stranica restorana treba da odgovara vašem brendu. Izaberite između unapred definisanih shema boja ili izaberite tačnu boju vašeg brenda. U kombinaciji sa automatskom podrškom za svetle/tamne teme, vaš meni uvek izgleda profesionalno.",
         "fullDescription": "Doslednost brenda je važna. IQ Rest vam omogućava da prilagodite akcentnu boju koja se koristi širom vaše veb stranice - dugmad, naglasci i interaktivni elementi se svi usklađuju sa vašim brendom. Izaberite između pažljivo odabranih unapred definisanih boja ili unesite tačnu boju vašeg brenda. Sistem automatski osigurava čitljivost u svetlim i tamnim režimima.",
         "benefits": [
@@ -469,7 +476,8 @@
           "Boje optimizovane za pristupačnost"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Prilagođena shema boja i opcije brendiranja"
+        "imageAlt": "Prilagođena shema boja i opcije brendiranja",
+        "titleAccent": "šema boja"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "Online naručivanje putem QR menija",
-        "shortDescription": "Gosti skeniraju, biraju i naručuju — direktno iz vašeg menija.{br}{link}Saznajte više o online narudžbinama{/link}.",
+        "title": "Online naručivanje",
+        "shortDescription": "Gosti skeniraju QR kod, pregledaju vaš meni i naručuju direktno – bez aplikacija i provizija. Porudžbine se odmah pojavljuju na vašoj kontrolnoj tabli sa brojem stola i detaljima. {link}Saznajte više{/link}.",
         "description": "Omogućite gostima da naručuju direktno iz QR menija. Bez aplikacija, bez provizija. Narudžbine se odmah pojavljuju na vašoj kontrolnoj tabli sa brojem stola i detaljima jela.",
         "fullDescription": "Pretvorite QR meni u direktan kanal naručivanja. Gosti skeniraju kod za svojim stolom, pregledaju meni i naruče za nekoliko sekundi — bez preuzimanja aplikacija, bez registracije. Primate narudžbine u realnom vremenu na kontrolnoj tabli sa brojem stola, jelima i napomenama gostiju. Bez provizija, bez naknade po narudžbini.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "Online naručivanje iz restoranskog QR menija",
-        "cta": "Saznajte više o online narudžbinama"
+        "cta": "Saznajte više o online narudžbinama",
+        "titleAccent": "sa QR menija"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "Godišnje",
     "save": "(Uštedite 25%)",
     "perMonth": "/mj",
-    "billedYearly": "Naplaćuje se godišnje ({total}).",
+    "billedYearly": "Naplaćuje se godišnje {total}",
     "orMonthly": "Или плаћајте {price} месечно.",
     "forever": "Besplatno zauvek",
     "popular": "Najpopularnije",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "Imate pitanja?",
     "questionsBody": "Pišite nam — odgovorićemo na sva vaša pitanja i pomoći vam da kreirate meni.",
-    "questionsButton": "Pišite na WhatsApp"
+    "questionsButton": "Pišite na WhatsApp",
+    "badge": "Bez provizija · Bez ugovora",
+    "heroTitle": "Jedan plan.",
+    "heroTitleAccent": "Sve uključeno.",
+    "heroSub": "QR meni, sistem naručivanja, AI prevod, veb-sajt restorana i rezervacije.",
+    "heroSub2": "Jedna jednostavna cena.",
+    "planName": "Kompletan plan",
+    "monthsFree": "2 meseca besplatno",
+    "allFeatures": [
+      "Neograničen digitalni QR meni",
+      "AI prevod (35 jezika)",
+      "Uključen veb-sajt restorana",
+      "Sistem online rezervacija",
+      "Analitika i statistika",
+      "Bez IQ Rest brendiranja",
+      "Prioritetna podrška"
+    ],
+    "trialCta": "Probajte besplatno 14 dana",
+    "trialSub": "Nije potrebna kreditna kartica · Otkažite bilo kada",
+    "youSave": "Štedite {amount}",
+    "trustSecure": "Sigurno plaćanje putem Stripe-a",
+    "trustNoLock": "Bez obaveza",
+    "trustQuick": "Aktivno za 10 minuta",
+    "trustRestaurants": "500+ restorana",
+    "perMonthFull": "mesečno"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "Надогради"
     },
     "auth": {
-      "title": "Креирај Мени",
-      "subtitle": "Унесите имејл да креирате нови мени",
+      "title": "Добродошли у",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Унесите свој имејл за наставак",
       "consent": {
         "text": "Настављајући, прихватате наше",
         "terms": "Услове",
@@ -1598,7 +1632,8 @@
         "emailRequired": "Унесите ваш имејл.",
         "emailInvalid": "Унесите исправан имејл."
       },
-      "or": "ili"
+      "or": "ili",
+      "continueGoogle": "Nastavi sa Google-om"
     },
     "analytics": {
       "monthlyUsage": "Mesečna upotreba",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "Слика је превелика. Максимална величина је 20MB.",
       "scanErrorTooMany": "Превише слика. Максимално 5 фотографија.",
       "scanSuccess": "Мени успешно скениран!",
-      "scanAddMore": "Додај још",
+      "scanAddMore": "Додај фајлове",
       "scanStart": "Скенирај",
       "scanPoolTitle": "Странице менија",
       "scanPoolSubtitle": "Додајте фотографије или PDF фајлове вашег папирног менија. До 5 фајлова.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "Можете то променити касније",
       "namePlaceholder": "нпр. Пицерија Марио",
       "error": "Нешто није у реду",
-      "menuSubtitle": "Направимо ваш мени.",
+      "back": "Назад",
+      "menuSubtitle": "Изаберите како желите да креирате свој мени",
       "aiImportTitle": "AI тренутни увоз",
       "aiImportDescription": "Уштедите сате! Отпремите фотографију или PDF и AI ће урадити остало.",
       "aiImportButton": "Скенирај мени",

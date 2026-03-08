@@ -11,7 +11,7 @@ export function DashboardCard({ title, headerRight, children, className }: Dashb
   return (
     <div
       className={cn(
-        "rounded-md border border-border bg-muted/50 overflow-hidden [&_input]:bg-muted/50 [&_input]:rounded-md [&_button[role=switch]]:rounded-md [&_button[role=switch]_span]:rounded-md [&_label.flex]:rounded-md [&_label.flex]:bg-muted/50 [&_button[role=combobox]]:!bg-muted/50 [&_button[role=combobox]]:!rounded-md",
+        "rounded-[15px] border border-border bg-muted/50 overflow-hidden [&_input]:bg-muted/50 [&_input]:rounded-[15px] [&_button[role=switch]]:rounded-[15px] [&_button[role=switch]_span]:rounded-[15px] [&_label.flex]:rounded-[15px] [&_label.flex]:bg-muted/50 [&_button[role=combobox]]:!bg-muted/50 [&_button[role=combobox]]:!rounded-[15px]",
         className
       )}
     >

@@ -6,8 +6,6 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import {
-  Check,
-  X,
   Languages,
   ScanLine,
   CalendarCheck,
@@ -15,8 +13,6 @@ import {
   ImageOff,
   Rocket,
   Shield,
-  ChevronDown,
-  ChevronUp,
   Loader2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -27,36 +23,6 @@ import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { toast } from "sonner";
 import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
-
-type FeatureValue = boolean | "value";
-
-interface FeatureRow {
-  key: string;
-  free: FeatureValue;
-  basic: FeatureValue;
-  pro: FeatureValue;
-}
-
-const COMPARISON_FEATURES: FeatureRow[] = [
-  { key: "website", free: true, basic: true, pro: true },
-  { key: "qrMenu", free: true, basic: true, pro: true },
-  { key: "scans", free: "value", basic: "value", pro: "value" },
-  { key: "orders", free: "value", basic: "value", pro: "value" },
-  { key: "languages", free: "value", basic: "value", pro: "value" },
-  { key: "aiTranslation", free: false, basic: "value", pro: "value" },
-  { key: "aiImages", free: false, basic: "value", pro: "value" },
-  { key: "allergens", free: false, basic: true, pro: true },
-  { key: "analytics", free: true, basic: true, pro: true },
-  { key: "customTheme", free: true, basic: true, pro: true },
-  { key: "background", free: true, basic: true, pro: true },
-  { key: "support", free: true, basic: true, pro: true },
-  { key: "reservations", free: false, basic: true, pro: true },
-  { key: "noBranding", free: false, basic: true, pro: true },
-  { key: "multiRestaurant", free: false, basic: false, pro: true },
-  { key: "customDomain", free: false, basic: false, pro: true },
-];
-
-const PLAN_IDS = ["free", "basic", "pro"] as const;
 
 const FEATURES = [
   { key: "aiTranslations", icon: Languages },
@@ -71,12 +37,11 @@ type SelectedPlan = "yearly" | "monthly";
 interface PlanOption {
   id: SelectedPlan;
   lookupKey: string;
-  subtextKey: string;
 }
 
 const PLAN_OPTIONS: PlanOption[] = [
-  { id: "yearly", lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY, subtextKey: "billedYearly" },
-  { id: "monthly", lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY, subtextKey: "billedMonthly" },
+  { id: "yearly", lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY },
+  { id: "monthly", lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
 ];
 
 function formatPrice(amount: number, cur: SupportedCurrency): string {
@@ -109,12 +74,10 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
   useBlockBack();
 
   const [selectedPlan, setSelectedPlan] = useState<SelectedPlan>("yearly");
-  const [showComparison, setShowComparison] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     track(DashboardEvent.SHOWED_UPSELL_PAGE);
-    fetch("/api/onboarding/upsell-shown", { method: "POST" }).catch(() => {});
   }, []);
 
   // If user is not on FREE and not admin, skip this page
@@ -159,12 +122,8 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
             <div className="w-16 h-16 bg-primary/10 rounded-md flex items-center justify-center mx-auto mb-6 shadow-sm">
               <Rocket className="h-7 w-7 text-primary" />
             </div>
-            <h1 className="text-2xl font-bold tracking-tight mb-2">{t("title")}</h1>
-            <p className="text-muted-foreground text-[15px]">{t("subtitle")}</p>
-            <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-muted rounded-full text-xs text-muted-foreground">
-              <span className="w-1.5 h-1.5 bg-success rounded-full animate-pulse" />
-              {tp("socialProof")}
-            </div>
+            <h1 className="text-2xl font-bold tracking-tight mb-2">{t("trialEndedTitle")}</h1>
+            <p className="text-muted-foreground text-[15px]">{t("trialEndedSubtitle")}</p>
           </div>
 
           {/* Plan selector */}
@@ -240,75 +199,6 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
             ))}
           </div>
 
-          {/* Comparison toggle */}
-          <div className="text-center mb-6">
-            <button
-              onClick={() => setShowComparison(!showComparison)}
-              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground border border-border rounded-full px-5 py-2.5 hover:border-muted-foreground/50 transition-colors"
-            >
-              {showComparison ? t("hideComparison") : t("comparePlans")}
-              {showComparison ? (
-                <ChevronUp className="h-3.5 w-3.5" />
-              ) : (
-                <ChevronDown className="h-3.5 w-3.5" />
-              )}
-            </button>
-          </div>
-
-          {/* Comparison table */}
-          {showComparison && (
-            <div className="mb-7 rounded-md border border-border overflow-hidden">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-muted/30">
-                    <th className="text-left py-3 px-3 text-xs font-medium text-muted-foreground w-2/5">
-                      &nbsp;
-                    </th>
-                    {PLAN_IDS.map((planId) => (
-                      <th
-                        key={planId}
-                        className="py-3 px-2 text-center text-xs font-semibold uppercase tracking-wide"
-                      >
-                        {tp(`plans.${planId}.name`)}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARISON_FEATURES.map((feature, index) => (
-                    <tr
-                      key={feature.key}
-                      className={cn(
-                        "border-t border-foreground/5",
-                        index % 2 === 0 && "bg-muted/20"
-                      )}
-                    >
-                      <td className="py-2.5 px-3 text-xs font-medium">
-                        {tp(`features.${feature.key}`)}
-                      </td>
-                      {PLAN_IDS.map((planId) => {
-                        const value = feature[planId];
-                        return (
-                          <td key={planId} className="py-2.5 px-2 text-center">
-                            {value === "value" ? (
-                              <span className="text-xs font-medium">
-                                {tp(`values.${planId}.${feature.key}`)}
-                              </span>
-                            ) : value === true ? (
-                              <Check className="h-4 w-4 text-success mx-auto" />
-                            ) : (
-                              <X className="h-4 w-4 text-muted-foreground/40 mx-auto" />
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-
           {/* CTA */}
           <div className="pt-2">
             <Button
@@ -326,18 +216,6 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
             <p className="text-center text-xs text-muted-foreground mt-2">
               {t("ctaSub")}
             </p>
-
-            <div className="text-center mt-5">
-              <button
-                onClick={() => {
-                  track(DashboardEvent.CLICKED_UPSELL_SKIP);
-                  router.push("/dashboard");
-                }}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t("skip")}
-              </button>
-            </div>
 
             <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-muted-foreground/60">
               <Shield className="h-3.5 w-3.5" />

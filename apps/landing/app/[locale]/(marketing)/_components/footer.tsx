@@ -1,11 +1,12 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Logo } from "@/components/Logo";
+import { analytics } from "@/lib/analytics";
 
 const NAV_LINKS = [
-  { href: "/pricing", key: "navigation.pricing" },
   { href: "/faq", key: "navigation.faq" },
-
   { href: "/changelog", key: "navigation.changelog" },
   { href: "/languages", key: "navigation.languages" },
 ] as const;
@@ -15,8 +16,8 @@ const LEGAL_LINKS = [
   { href: "/privacy", key: "legal.privacy" },
 ] as const;
 
-export async function Footer() {
-  const t = await getTranslations("footer");
+export function Footer() {
+  const t = useTranslations("footer");
 
   return (
     <footer className="border-t bg-muted/30">
@@ -26,12 +27,13 @@ export async function Footer() {
             <Logo height={24} />
           </Link>
 
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-base">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => analytics.marketing.footerLinkClick(link.href)}
               >
                 {t(link.key)}
               </Link>
@@ -39,7 +41,7 @@ export async function Footer() {
           </nav>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pt-4 border-t border-border/50 text-xs text-muted-foreground">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pt-4 border-t border-border/50 text-base text-muted-foreground">
           <p>{t("copyright")}</p>
           <nav className="flex flex-wrap items-center gap-x-4 gap-y-1">
             {LEGAL_LINKS.map((link) => (
@@ -47,6 +49,7 @@ export async function Footer() {
                 key={link.href}
                 href={link.href}
                 className="hover:text-foreground transition-colors"
+                onClick={() => analytics.marketing.footerLinkClick(link.href)}
               >
                 {t(link.key)}
               </Link>
@@ -56,6 +59,7 @@ export async function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
+              onClick={() => analytics.marketing.footerLinkClick("sitemap")}
             >
               {t("legal.sitemap")}
             </a>

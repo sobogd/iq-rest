@@ -105,17 +105,6 @@ export default async function OrderPage({ params, searchParams }: OrderPageProps
     redirect(`/${locale}/m/${slug}`);
   }
 
-  // Block order page if limit reached (internal/both, FREE plan)
-  if ((mode === "internal" || mode === "both") && restaurant.company.plan === "FREE") {
-    const now = new Date();
-    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const monthlyOrders = await prisma.order.count({
-      where: { companyId: restaurant.companyId, createdAt: { gte: startOfMonth } },
-    });
-    if (monthlyOrders >= restaurant.company.orderLimit) {
-      redirect(`/${locale}/m/${slug}/menu`);
-    }
-  }
 
   const defaultLanguage = restaurant.defaultLanguage || "en";
 

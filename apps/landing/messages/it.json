@@ -9,7 +9,7 @@
       "changelog": "Registro delle modifiche",
       "contacts": "Contatti"
     },
-    "getStarted": "Crea Gratis",
+    "getStarted": "Inizia",
     "selectLanguage": "Seleziona Lingua",
     "selectLanguageDescription": "Scegli la tua lingua preferita per il sito web.",
     "searchLanguage": "Cerca lingua...",
@@ -21,15 +21,16 @@
       "description": "Crea un menu QR e un sito web per ristorante solo con la tua email. Configurazione istantanea, gestione mobile, traduzioni IA, analisi giornaliere. Perfetto per ristoranti e caffè. Inizia gratis oggi."
     },
     "hero": {
-      "title": "Crea un QR Menu Professionale e un Sito Web in Pochi Minuti",
-      "subtitle": "Basta inserire la tua email e ottenere un sito web completo per ristoranti con menu QR, pagina di contatto, supporto multilingue e design moderno. Configura tutto dal tuo telefono.",
+      "title": "Sito web & Menu QR, Ordini & Prenotazioni.",
+      "subtitle": "Basta inserire la tua email per iniziare.",
       "cta": {
         "create": "Crea Menu",
         "view": "Vedi Prezzi",
-        "noCreditCard": "Gratis fino a 320 scansioni/mese. Nessuna carta di credito richiesta.",
+        "noCreditCard": "Prova gratuita di 14 giorni. Nessuna carta di credito richiesta.",
         "trusted": "Fidato da oltre 500 ristoranti in tutto il mondo",
         "title": "Pronto per il Digitale?",
-        "subtitle": "Crea il tuo menu QR professionale e il sito web del ristorante in pochi minuti. Gratis per sempre, senza carta di credito richiesta."
+        "subtitle": "Crea il tuo menu QR professionale e il sito web del ristorante in pochi minuti. Gratis per sempre, senza carta di credito richiesta.",
+        "demo": "Visualizza Demo"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "Caffè",
         "bars": "Bar",
         "hotels": "Hotel"
-      }
+      },
+      "titleAccent": "Pronto in Pochi Minuti."
     },
     "demo": {
       "title": "Provalo Come i Tuoi Ospiti",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "Gestione 100% Mobile-Friendly",
-        "shortDescription": "Modifica il menu dal telefono.{br}{link}Scopri come funziona{/link}.",
+        "title": "Gestione",
+        "shortDescription": "Aggiungi piatti, carica foto, modifica prezzi e gestisci tutto direttamente dal tuo telefono. L'intera dashboard è ottimizzata per dispositivi mobili: nessun computer necessario, mai. {link}Scopri di più{/link}.",
         "description": "Aggiungi categorie, piatti, foto e gestisci l'intero sito web del tuo ristorante direttamente dal tuo telefono. Il nostro pannello di controllo è completamente ottimizzato per dispositivi mobili, quindi puoi aggiornare il tuo menu durante una pausa caffè o aggiungere specialità del giorno in movimento.",
         "fullDescription": "I proprietari di ristoranti sono persone impegnate che non sono sempre al computer. Ecco perché abbiamo costruito IQ Rest per funzionare perfettamente su dispositivi mobili. Ogni funzionalità, dall'aggiunta di nuovi piatti all'aggiornamento dei prezzi, è progettata per schermi touch. Scatta una foto di un nuovo piatto e caricalo immediatamente. Cambia il piatto del giorno mentre sei in cucina.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Gestione del menu del ristorante su smartphone",
-        "cta": "Vedi come"
+        "cta": "Vedi come",
+        "titleAccent": "100% Mobile-Friendly"
       },
       {
         "id": "ai-translation",
-        "title": "Traduzione del Menu con AI",
-        "shortDescription": "Traduci tutto il menu{br}con {link}traduzione AI in 1 clic{/link}.",
+        "title": "Traduzione Menu",
+        "shortDescription": "Traduci l'intero menu in 35 lingue con un solo clic. La nostra AI comprende il contesto culinario: nomi dei piatti e descrizioni suonano naturali in qualsiasi lingua. {link}Scopri di più{/link}.",
         "description": "Raggiungi clienti internazionali con una traduzione intelligente dell'AI che comprende il contesto alimentare. I nomi dei tuoi piatti e le descrizioni vengono tradotti con precisione, preservando i termini culinari e dando senso in qualsiasi lingua.",
         "fullDescription": "I traduttori generici spesso falliscono con i menu alimentari - traducono letteralmente senza comprendere il contesto. La nostra AI è addestrata specificamente per contenuti di ristoranti. Sa che 'Beef Wellington' non dovrebbe essere tradotto letteralmente e che 'al dente' significa la stessa cosa in qualsiasi lingua. Servi turisti e ospiti internazionali con menu che suonano naturalmente nella loro lingua.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Interfaccia di traduzione del menu del ristorante con AI",
-        "cta": "traduzione AI con 1 clic"
+        "cta": "traduzione AI con 1 clic",
+        "titleAccent": "con AI"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Editor Menu Semplice",
-        "shortDescription": "Trascina, rilascia, fatto.{br}{link}Gestisci il tuo menu{/link} in pochi secondi.",
+        "title": "Editor Menu",
+        "shortDescription": "Aggiungi categorie, crea piatti con foto e prezzi, riordina con il drag-and-drop. Le modifiche appaiono sul tuo menu online istantaneamente, senza bisogno di competenze tecniche. {link}Scopri di più{/link}.",
         "description": "Gestire il tuo menu non è mai stato così facile. Aggiungi categorie, crea piatti con foto e descrizioni, imposta i prezzi e organizza tutto con un semplice drag-and-drop. Le modifiche appaiono immediatamente sul tuo sito web live.",
         "fullDescription": "Dimentica i complicati sistemi di gestione dei contenuti. L'editor del menu di IQ Rest è progettato per i proprietari di ristoranti, non per gli sviluppatori web. Crea una nuova categoria in pochi secondi, aggiungi piatti con pochi tocchi, carica foto direttamente dal tuo telefono. Trascina gli articoli per riordinarli, attiva/disattiva la visibilità per gli articoli esauriti e vedi le modifiche live immediatamente.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Pannello di gestione del menu del ristorante facile",
-        "cta": "Gestisci il menu"
+        "cta": "Gestisci il menu",
+        "titleAccent": "Semplice"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "Sistema di Prenotazione Tavoli per Ristoranti",
-        "shortDescription": "Digitalizza il tuo ristorante con le prenotazioni 24/7.{br}{link}Gestionale prenotazioni{/link} direttamente dal tuo sito.",
+        "title": "Sistema di Gestione",
+        "shortDescription": "I clienti prenotano i tavoli direttamente dal tuo sito web, 24 ore su 24, 7 giorni su 7, senza bisogno di telefonate. Conferma automatica o manuale, notifiche via email e una panoramica completa di tutte le prenotazioni nella tua dashboard. {link}Scopri di più{/link}.",
         "description": "Il software gestione ristorante di IQ Rest include un sistema di prenotazione tavoli integrato. Il gestionale prenotazioni ristoranti consente ai clienti di prenotare direttamente dal tuo sito web, con conferma automatica o manuale dal pannello di controllo.",
         "fullDescription": "Le prenotazioni telefoniche richiedono tempo e sono facili da perdere. Il programma per prenotazioni tavoli di IQ Rest funziona 24/7. I clienti selezionano data, ora e numero di persone, quindi prenotano immediatamente. Il software gestione tavoli consente conferma automatica in base alla disponibilità o revisione manuale di ogni richiesta. Digitalizzare il ristorante significa anche ridurre le assenze con conferme via email automatiche.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Software gestione ristorante con sistema di prenotazione tavoli",
-        "cta": "Esplora il Gestionale Prenotazioni"
+        "cta": "Esplora il Gestionale Prenotazioni",
+        "titleAccent": "Tavoli"
       },
       {
         "id": "custom-design",
-        "title": "Video e Foto di Sfondo",
-        "shortDescription": "Crea prime impressioni straordinarie{br}con {link}sfondi video o foto{/link}.",
+        "title": "Sfondi",
+        "shortDescription": "Carica un video dell'atmosfera del tuo ristorante o una splendida foto di cibo come sfondo per il tuo menu. Cattura l'attenzione dei clienti dal primo secondo in cui scansionano il tuo codice QR. {link}Scopri di più{/link}.",
         "description": "Crea una prima impressione memorabile con video o foto di sfondo personalizzati sulla tua homepage. Carica il video dell'atmosfera del tuo ristorante o una bella foto di cibo per catturare immediatamente l'attenzione dei clienti.",
         "fullDescription": "Le prime impressioni contano. Quando i clienti scansionano il tuo codice QR, dovrebbero essere impressionati immediatamente. Carica un video dell'atmosfera del tuo ristorante, un time-lapse della tua cucina o una foto mozzafiato del tuo piatto di punta. La tua homepage diventa un'esperienza visiva che riflette la personalità del tuo ristorante.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Sito web del ristorante con sfondo video",
-        "cta": "sfondi video e foto"
+        "cta": "sfondi video e foto",
+        "titleAccent": "Video & Foto"
       },
       {
         "id": "color-scheme",
-        "title": "Schema di Colore Personalizzato",
-        "shortDescription": "Abbina i colori al tuo brand{br}con {link}accenti personalizzati{/link}.",
+        "title": "Schema Colori",
+        "shortDescription": "Scegli il colore del tuo brand e verrà applicato ovunque: pulsanti, evidenziazioni, link. Il supporto automatico per temi chiari e scuri garantisce che il tuo menu appaia sempre professionale. {link}Scopri di più{/link}.",
         "description": "Il tuo sito web per ristorante dovrebbe abbinarsi al tuo marchio. Scegli tra schemi di colori preimpostati o scegli il tuo colore esatto. Combinato con il supporto automatico per i temi chiari/scuri, il tuo menu appare sempre professionale.",
         "fullDescription": "La coerenza del marchio è importante. IQ Rest ti consente di personalizzare il colore di accento utilizzato in tutto il tuo sito web - pulsanti, evidenziazioni ed elementi interattivi si abbinano tutti al tuo marchio. Scegli tra preset accuratamente curati o inserisci il tuo colore esatto. Il sistema garantisce automaticamente la leggibilità sia in modalità chiara che scura.",
         "benefits": [
@@ -469,7 +476,8 @@
           "Contrasto di colore ottimizzato per l'accessibilità"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Schema di colore personalizzato e opzioni di branding"
+        "imageAlt": "Schema di colore personalizzato e opzioni di branding",
+        "titleAccent": "Personalizzato"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "Ordini Online dal Menu QR",
-        "shortDescription": "I clienti scansionano, scelgono e ordinano — direttamente dal tuo menu.{br}{link}Scopri di più sugli ordini online{/link}.",
+        "title": "Ordini Online",
+        "shortDescription": "I tuoi clienti scansionano il codice QR, sfogliano il menu e ordinano direttamente, senza app né commissioni. Gli ordini appaiono istantaneamente nella tua dashboard con numero di tavolo e dettagli. {link}Scopri di più{/link}.",
         "description": "Permetti agli ospiti di ordinare direttamente dal tuo menu QR. Nessuna app, nessuna commissione. Gli ordini appaiono istantaneamente nella tua dashboard con numero del tavolo e dettagli dei piatti.",
         "fullDescription": "Trasforma il tuo menu QR in un canale di ordinazione diretto. Gli ospiti scansionano il codice al tavolo, esplorano il menu e ordinano in pochi secondi — senza scaricare app, senza registrazione. Ricevi gli ordini in tempo reale nella tua dashboard con numero del tavolo, piatti e note del cliente. Nessuna commissione, nessun costo per ordine.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "Ordini online dal menu QR del ristorante",
-        "cta": "Scopri di più sugli ordini online"
+        "cta": "Scopri di più sugli ordini online",
+        "titleAccent": "dal Menu QR"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "Annuale",
     "save": "(Risparmia 25%)",
     "perMonth": "/mese",
-    "billedYearly": "Fatturato annualmente ({total}).",
+    "billedYearly": "Fatturato annualmente {total}",
     "orMonthly": "O paga {price} mensilmente.",
     "forever": "Gratuito per sempre",
     "popular": "Più Popolare",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "Hai domande?",
     "questionsBody": "Scrivici — risponderemo a tutte le tue domande e ti aiuteremo a creare il tuo menu.",
-    "questionsButton": "Scrivi su WhatsApp"
+    "questionsButton": "Scrivi su WhatsApp",
+    "badge": "Nessuna commissione · Nessun contratto",
+    "heroTitle": "Un piano.",
+    "heroTitleAccent": "Tutto incluso.",
+    "heroSub": "menu QR, sistema di ordinazione, traduzione AI, sito web del ristorante & prenotazioni.",
+    "heroSub2": "Un prezzo semplice.",
+    "planName": "Piano Completo",
+    "monthsFree": "2 mesi gratuiti",
+    "allFeatures": [
+      "Menu QR digitale illimitato",
+      "Traduzione AI (35 lingue)",
+      "Sito web del ristorante incluso",
+      "Sistema di prenotazione online",
+      "Analisi & statistiche",
+      "Nessun branding IQ Rest",
+      "Supporto prioritario"
+    ],
+    "trialCta": "Prova gratis per 14 giorni",
+    "trialSub": "Nessuna carta di credito · Annulla in qualsiasi momento",
+    "youSave": "Risparmi {amount}",
+    "trustSecure": "Pagamento sicuro con Stripe",
+    "trustNoLock": "Nessun impegno",
+    "trustQuick": "Attivo in 10 minuti",
+    "trustRestaurants": "Oltre 500 ristoranti",
+    "perMonthFull": "al mese"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "Aggiorna"
     },
     "auth": {
-      "title": "Crea Menu",
-      "subtitle": "Inserisci la tua email per creare un nuovo menu",
+      "title": "Benvenuto su",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Inserisci la tua email per continuare",
       "consent": {
         "text": "Continuando, accetti i nostri",
         "terms": "Termini",
@@ -1598,7 +1632,8 @@
         "emailRequired": "Inserisci la tua email.",
         "emailInvalid": "Inserisci un'email valida."
       },
-      "or": "o"
+      "or": "o",
+      "continueGoogle": "Continua con Google"
     },
     "analytics": {
       "monthlyUsage": "Utilizzo Mensile",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "L'immagine è troppo grande. Dimensione massima 20MB.",
       "scanErrorTooMany": "Troppe immagini. Massimo 5 foto.",
       "scanSuccess": "Menù scansionato con successo!",
-      "scanAddMore": "Aggiungi altro",
+      "scanAddMore": "Aggiungi file",
       "scanStart": "Scansiona",
       "scanPoolTitle": "Pagine del menu",
       "scanPoolSubtitle": "Aggiungi foto o file PDF del tuo menu cartaceo. Fino a 5 file.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "Puoi cambiarlo in seguito",
       "namePlaceholder": "es. Pizzeria Mario",
       "error": "Qualcosa è andato storto",
-      "menuSubtitle": "Costruiamo il tuo menu.",
+      "back": "Indietro",
+      "menuSubtitle": "Scegli come vuoi creare il tuo menu",
       "aiImportTitle": "Importazione istantanea con IA",
       "aiImportDescription": "Risparmia ore di lavoro! Carica una foto o PDF e l''IA farà il resto.",
       "aiImportButton": "Scansiona menu",

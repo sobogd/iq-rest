@@ -110,7 +110,7 @@ export function ReservationSettingsPage({ initialRestaurant, initialSubscription
     }
   }
 
-  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
+  const hasActiveSubscription = true;
 
   return (
     <div className="flex flex-col h-full">

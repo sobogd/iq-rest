@@ -9,7 +9,7 @@
       "changelog": "Breytingaskrá",
       "contacts": "Samskipti"
     },
-    "getStarted": "Búa til ókeypis",
+    "getStarted": "Byrja",
     "selectLanguage": "Veldu tungumál",
     "selectLanguageDescription": "Veldu þitt uppáhalds tungumál fyrir vefsíðuna.",
     "searchLanguage": "Leita að tungumáli...",
@@ -21,15 +21,16 @@
       "description": "Búðu til QR matseðil og veitingastaðavef með bara netfanginu þínu. Samstundis uppsetning, farsímavæn stjórnun, AI þýðingar, dagleg greining. Fullkomið fyrir veitingastaði og kaffihús. Byrjaðu ókeypis í dag."
     },
     "hero": {
-      "title": "Búðu til Faglegt QR Menu og Vefsíðu á Nokkrum Mínútum",
-      "subtitle": "Sláðu inn tölvupóstinn þinn og fáðu fullkomna veitingastaðavefsíðu með QR matseðli, tengiliðasíðu, fjöltyngda stuðning og nútímalegt útlit. Stilltu allt frá símanum þínum.",
+      "title": "Vefsíða & QR Matseðill, Pantanir & Bókanir.",
+      "subtitle": "Sláðu inn tölvupóstinn þinn til að byrja.",
       "cta": {
         "create": "Búa til matseðil",
         "view": "Sjá verð",
-        "noCreditCard": "Ókeypis allt að 320 skannanir/mán. Ekki þarf kreditkort.",
+        "noCreditCard": "14 daga ókeypis prufa. Engin kreditkort nauðsynleg.",
         "trusted": "Treyst á 500+ veitingastöðum um allan heim",
         "title": "Ertu tilbúinn að fara í stafræna heim?",
-        "subtitle": "Búðu til þinn faglega QR matseðil og veitingastaðavef á nokkrum mínútum. Ókeypis að eilífu, engin kreditkort krafist."
+        "subtitle": "Búðu til þinn faglega QR matseðil og veitingastaðavef á nokkrum mínútum. Ókeypis að eilífu, engin kreditkort krafist.",
+        "demo": "Skoða demo"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "Kaffihús",
         "bars": "Barir",
         "hotels": "Hótel"
-      }
+      },
+      "titleAccent": "Tilbúið á nokkrum mínútum."
     },
     "demo": {
       "title": "Upplifðu það eins og gestir þínir",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100% Farsíma-væn Stjórn",
-        "shortDescription": "Breyttu matseðlinum úr símanum.{br}{link}Sjáðu hvernig það virkar{/link}.",
+        "title": "100% farsímavænt",
+        "shortDescription": "Bættu við réttum, hlaðið upp myndum, breyttu verði og stjórnaðu öllu beint úr símanum þínum. Allt stjórnborðið er fínstillt fyrir farsíma — engin tölva nauðsynleg, nokkurn tíma. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Bættu við flokkum, réttum, myndum, og stjórnaðu allri vefsíðu veitingastaðarins beint úr símanum þínum. Stjórnborðið okkar er fullkomlega hámarkað fyrir farsíma, svo þú getur uppfært matseðilinn meðan á kaffihlé stendur eða bætt við daglegum sértilboðum á ferðinni.",
         "fullDescription": "Veitingastaðareigendur eru uppteknir einstaklingar sem eru ekki alltaf við tölvu. Þess vegna byggðum við IQ Rest til að virka fullkomlega á farsímum. Allir eiginleikar, frá því að bæta við nýjum réttum til að uppfæra verð, eru hannaðir fyrir snertiskjái. Taktu mynd af nýjum rétti og hlaðið henni upp strax. Breyttu sértilboði dagsins meðan þú stendur í eldhúsinu.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Stjórn matseðils veitingastaðarins á snjallsíma",
-        "cta": "See how"
+        "cta": "See how",
+        "titleAccent": "stjórnun"
       },
       {
         "id": "ai-translation",
-        "title": "AI-Styrkt Matseðils Þýðing",
-        "shortDescription": "Þýddu allan matseðilinn{br}með {link}gervigreind þýðingu með 1 smelli{/link}.",
+        "title": "Gervigreindardrifin",
+        "shortDescription": "Þýddu allan matseðilinn þinn á 35 tungumál með einum smelli. Gervigreindin okkar skilur matreiðslusamhengi — réttanöfn og lýsingar lesast eðlilega á hvaða tungumáli sem er. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Náðu alþjóðlegum viðskiptavinum með greindri AI þýðingu sem skilur matarsamhengi. Nafnréttindi þín og lýsingar eru þýddar nákvæmlega, varðveita matreiðsluskilmála og gera sens á hvaða tungumáli sem er.",
         "fullDescription": "Almennir þýðendur mistakast oft með matseðlum - þeir þýða bókstaflega án þess að skilja samhengi. AI okkar er þjálfað sérstaklega fyrir efni veitingastaða. Það veit að 'Beef Wellington' á ekki að þýða bókstaflega, og að 'al dente' þýðir það sama á hvaða tungumáli sem er. Þjóna ferðamönnum og alþjóðlegum gestum með matseðlum sem lesa náttúrulega á þeirra tungumáli.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-styrkt þýðingarviðmót fyrir matseðil veitingastaða",
-        "cta": "one-click AI"
+        "cta": "one-click AI",
+        "titleAccent": "matseðilsþýðing"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Einfaldur valmyndaritill",
-        "shortDescription": "Dragðu, slepptu, búið.{br}{link}Stjórnaðu matseðlinum{/link} á sekúndum.",
+        "title": "Einfaldur",
+        "shortDescription": "Bættu við flokkum, búðu til rétti með myndum og verði, raðaðu upp á nýtt með drag-and-drop. Breytingar birtast samstundis á lifandi matseðlinum þínum — engin tæknikunnátta nauðsynleg. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Að stjórna matseðlinum þínum hefur aldrei verið auðveldara. Bættu við flokkum, búðu til rétti með myndum og lýsingum, settu verð, og skipuleggðu allt með einfaldri draga-og-slepptu aðferð. Breytingar birtast strax á vefsíðunni þinni.",
         "fullDescription": "Gleyma flóknum efnisstjórnunarkerfum. Matseðilsritari IQ Rest er hannaður fyrir veitingastaðareigendur, ekki vefþróunara. Búðu til nýjan flokk á sekúndum, bættu við réttum með nokkrum snertingum, hlaðið upp myndum beint úr símanum þínum. Dragðu atriði til að endurraða, slökktu á sýnileika fyrir uppseld atriði, og sjáðu breytingar í beinni útsendingu strax.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Auðvelt stjórnborð fyrir matseðil veitingastaðar",
-        "cta": "Manage your menu"
+        "cta": "Manage your menu",
+        "titleAccent": "matseðilsritill"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "Bókunarkerfi Borða",
-        "shortDescription": "Taktu við bókunum 24/7.{br}{link}Bókanir{/link} beint af vefsíðunni.",
+        "title": "Borð",
+        "shortDescription": "Viðskiptavinir bóka borð beint af vefsíðunni þinni — allan sólarhringinn, engin símtöl nauðsynleg. Sjálfvirk eða handvirk staðfesting, tölvupósttilkynningar og full yfirsýn yfir allar bókanir á stjórnborðinu þínu. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Innbyggt bókunarkerfi leyfir viðskiptavinum að bóka borð beint frá vefsíðunni þinni. Veldu sjálfvirka staðfestingu byggða á framboði, eða skoðaðu hverja bókun handvirkt. Stjórnaðu öllum bókunum frá stjórnborðinu þínu.",
         "fullDescription": "Símtalsbókanir eru tímafrekar og auðvelt að missa af. Bókunarkerfi IQ Rest virkar 24/7. Viðskiptavinir velja dagsetningu, tíma, og fjölda, og bóka strax. Þú getur stillt sjálfvirka staðfestingu byggða á framboði borða, eða skoðað hverja beiðni handvirkt. Minnkaðu ekki-sýningar með tölvupóststaðfestingum.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Nett bókunarkerfi fyrir veitingastaði",
-        "cta": "Kynntu þér Borðbókanir"
+        "cta": "Kynntu þér Borðbókanir",
+        "titleAccent": "stjórnunarkerfi"
       },
       {
         "id": "custom-design",
-        "title": "Vídeó & Mynd BakGrowthir",
-        "shortDescription": "Búðu til stórkostleg fyrstu áhrif{br}með {link}mynd- eða vídeóbakGrowthi{/link}.",
+        "title": "Myndbands- og ljósmynda",
+        "shortDescription": "Hlaðið upp myndbandi af andrúmslofti veitingastaðarins þíns eða fallegri matarmynd sem bakgrunn fyrir matseðilinn þinn. Heillaðu gesti frá fyrstu sekúndu sem þeir skanna QR kóðann þinn. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Búðu til eftirminnilegt fyrsta áhrif með sérsniðnum vídeó- eða myndabakGrowthum á heimasíðunni þinni. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns eða fallegri matarmynd til að fanga viðskiptavini strax.",
         "fullDescription": "Fyrstu áhrifin skipta máli. Þegar viðskiptavinir skanna QR kóðann þinn, ættu þeir að vera hrifnir strax. Hlaðið upp vídeói af andrúmslofti veitingastaðarins þíns, tímaskot af eldhúsinu þínu, eða glæsilegri mynd af þínum sérstöku rétti. Heimasíðan þín verður sjónrænt upplifun sem endurspeglar persónuleika veitingastaðarins þíns.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Vefsíða veitingastaðar með vídeó bakGrowthi",
-        "cta": "video or photo backgrounds"
+        "cta": "video or photo backgrounds",
+        "titleAccent": "bakgrunnar"
       },
       {
         "id": "color-scheme",
-        "title": "Sérsniðið Litaskema",
-        "shortDescription": "Samræmdu liti við vörumerkið þitt{br}með {link}sérsniðnum áherslum{/link}.",
+        "title": "Sérsniðið",
+        "shortDescription": "Veldu lit vörumerkisins þíns og hann birtist alls staðar — á hnöppum, áherslum og tenglum. Sjálfvirkur stuðningur við ljóst og dökkt þema tryggir að matseðillinn þinn líti alltaf faglega út. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Vefsíða veitingastaðarins þíns ætti að passa við merkið þitt. Veldu úr fyrirfram ákveðnum litaskemum eða veldu nákvæman lit fyrirtækisins þíns. Sameinað við sjálfvirkan stuðning við ljós/dökk þemu, lítur matseðillinn alltaf fagmannlega út.",
         "fullDescription": "Samræmi í merki skiptir máli. IQ Rest leyfir þér að sérsníða áherslulitinn sem notaður er um alla vefsíðu þína - hnappana, áherslur, og gagnvirka þætti passa allir við merkið þitt. Veldu úr vandlega valin fyrirfram ákveðnum litum eða sláðu inn nákvæman lit fyrirtækisins þíns. Kerfið tryggir sjálfkrafa læsileika í bæði ljósum og dökkum stillingum.",
         "benefits": [
@@ -469,7 +476,8 @@
           "Aðgengis hámarkaður litamunur"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Sérsniðin litaskema og auðkenningarmöguleikar"
+        "imageAlt": "Sérsniðin litaskema og auðkenningarmöguleikar",
+        "titleAccent": "litaval"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "Netpantanir úr QR matseðli",
-        "shortDescription": "Viðskiptavinir skanna, velja og panta — beint úr matseðlinum þínum.{br}{link}Frekari upplýsingar um netpantanir{/link}.",
+        "title": "Pantanir á netinu",
+        "shortDescription": "Gestir skanna QR kóðann, skoða matseðilinn þinn og panta beint — engin forrit, engin þóknun. Pantanir birtast samstundis á stjórnborðinu þínu með borðnúmeri og upplýsingum. {link}Fáðu frekari upplýsingar{/link}.",
         "description": "Leyfðu gestum að leggja inn pantanir beint úr QR matseðlinum. Engin forrit, engin þóknun. Pantanir birtast strax á stjórnborðinu þínu með borðnúmeri og upplýsingum um rétti.",
         "fullDescription": "Breyttu QR matseðlinum þínum í beina pantanaleið. Gestir skanna kóðann við borðið sitt, skoða matseðilinn og leggja inn pöntun á nokkrum sekúndum — engra forrita þörf, engin nýskráning. Þú færð pantanir í rauntíma á stjórnborðinu þínu með borðnúmeri, réttum og athugasemdum viðskiptavina. Engin þóknun, engin gjöld á hverja pöntun.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "Netpantanir úr QR matseðli veitingastaðar",
-        "cta": "Frekari upplýsingar um netpantanir"
+        "cta": "Frekari upplýsingar um netpantanir",
+        "titleAccent": "frá QR matseðli"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "Árslega",
     "save": "(Sparaðu 25%)",
     "perMonth": "/mánuði",
-    "billedYearly": "Reiknað árlega ({total}).",
+    "billedYearly": "Innheimt árlega {total}",
     "orMonthly": "Eða borgaðu {price} mánaðarlega.",
     "forever": "Ókeypis að eilífu",
     "popular": "Vinsælast",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "Ertu með spurningar?",
     "questionsBody": "Skrifaðu okkur — við svörum öllum spurningum þínum og hjálpum þér að búa til matseðilinn þinn.",
-    "questionsButton": "Skrifa á WhatsApp"
+    "questionsButton": "Skrifa á WhatsApp",
+    "badge": "Engin þóknun · Engir samningar",
+    "heroTitle": "Ein áætlun.",
+    "heroTitleAccent": "Allt innifalið.",
+    "heroSub": "QR matseðill, pöntunarkerfi, gervigreindarþýðing, vefsíða veitingastaðar & bókanir.",
+    "heroSub2": "Eitt einfalt verð.",
+    "planName": "Heildaráskrift",
+    "monthsFree": "2 mánuðir ókeypis",
+    "allFeatures": [
+      "Ótakmarkaður stafrænn QR matseðill",
+      "Gervigreindarþýðing (35 tungumál)",
+      "Vefsíða veitingastaðar innifalin",
+      "Bókunarkerfi á netinu",
+      "Greiningar & tölfræði",
+      "Engin IQ Rest vörumerki",
+      "Forgangsþjónusta"
+    ],
+    "trialCta": "Prófaðu frítt í 14 daga",
+    "trialSub": "Engin kreditkort · Hætta hvenær sem er",
+    "youSave": "Þú sparar {amount}",
+    "trustSecure": "Örugg greiðsla með Stripe",
+    "trustNoLock": "Engin binding",
+    "trustQuick": "Virkt á 10 mínútum",
+    "trustRestaurants": "500+ veitingastaðir",
+    "perMonthFull": "á mánuði"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "Uppfæra"
     },
     "auth": {
-      "title": "Búa til Matseðil",
-      "subtitle": "Sláðu inn netfangið þitt til að búa til nýjan matseðil",
+      "title": "Velkomin í",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Sláðu inn netfangið þitt til að halda áfram",
       "consent": {
         "text": "Með því að halda áfram samþykkir þú okkar",
         "terms": "Skilmála",
@@ -1598,7 +1632,8 @@
         "emailRequired": "Sláðu inn netfangið þitt.",
         "emailInvalid": "Sláðu inn gilt netfang."
       },
-      "or": "eða"
+      "or": "eða",
+      "continueGoogle": "Halda áfram með Google"
     },
     "analytics": {
       "monthlyUsage": "Mánaðarleg notkun",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "Myndin er of stór. Hámarksstærð er 20MB.",
       "scanErrorTooMany": "Of margar myndir. Hámark 5 myndir.",
       "scanSuccess": "Matseðill skannaður!",
-      "scanAddMore": "Bæta við fleiru",
+      "scanAddMore": "Bæta við skrám",
       "scanStart": "Skanna",
       "scanPoolTitle": "Matseðilssíður",
       "scanPoolSubtitle": "Bættu við myndum eða PDF skrám af pappírsmatseðlinum þínum. Allt að 5 skrár.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "Þú getur breytt því seinna",
       "namePlaceholder": "t.d. Pizzeria Mario",
       "error": "Eitthvað fór úrskeiðis",
-      "menuSubtitle": "Búum til matseðilinn þinn.",
+      "back": "Til baka",
+      "menuSubtitle": "Veldu hvernig þú vilt búa til matseðilinn þinn",
       "aiImportTitle": "AI skyndiinnflutningur",
       "aiImportDescription": "Sparaðu klukkutíma! Hladdu upp mynd eða PDF og gervigreindin sér um restina.",
       "aiImportButton": "Skanna matseðil",

@@ -153,6 +153,12 @@ export const marketing = {
   headerCtaClick: () => trackEvent("header_cta_click"),
   heroCtaClick: () => trackEvent("hero_cta_click"),
   pricingCtaClick: (plan: string) => trackEvent("pricing_cta_click", { plan }),
+  // Navigation
+  scrollToSection: (section: string) => trackEvent("scroll_to_section", { section }),
+  featureLinkClick: (featureId: string) => trackEvent("feature_link_click", { featureId }),
+  footerLinkClick: (link: string) => trackEvent("footer_link_click", { link }),
+  whatsappClick: () => trackEvent("whatsapp_click"),
+  pricingToggle: (cycle: string) => trackEvent("pricing_toggle", { cycle }),
   // AI Menu Scanner
   scannerUpload: (fileCount: string) => trackEvent("scanner_upload", { fileCount }),
   scannerSuccess: (duration: string) => trackEvent("scanner_success", { duration }),

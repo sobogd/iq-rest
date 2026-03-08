@@ -9,7 +9,7 @@
       "changelog": "Ändringslogg",
       "contacts": "Kontakter"
     },
-    "getStarted": "Skapa gratis",
+    "getStarted": "Kom igång",
     "selectLanguage": "Välj språk",
     "selectLanguageDescription": "Välj ditt föredragna språk för webbplatsen.",
     "searchLanguage": "Sök språk...",
@@ -21,15 +21,16 @@
       "description": "Skapa QR-meny och restaurangwebbplats med bara din e-post. Omedelbar setup, mobilanpassad hantering, AI-översättningar, daglig analys. Perfekt för restauranger och kaféer. Börja gratis idag."
     },
     "hero": {
-      "title": "Skapa en Professionell QR Menu & Webbplats på Några Minuter",
-      "subtitle": "Ange bara din e-post och få en komplett restaurangwebbplats med QR-meny, kontaktsida, flerspråkigt stöd och modern design. Ställ in allt från din telefon.",
+      "title": "Webbplats & QR-meny, Beställningar & Bokningar.",
+      "subtitle": "Ange bara din e-post för att komma igång.",
       "cta": {
         "create": "Skapa meny",
         "view": "Se priser",
-        "noCreditCard": "Gratis upp till 320 skanningar/mån. Inget kreditkort krävs.",
+        "noCreditCard": "14 dagars gratis provperiod. Inget kreditkort krävs.",
         "trusted": "Betrodd av över 500 restauranger världen över",
         "title": "Redo att gå digitalt?",
-        "subtitle": "Skapa din professionella QR-meny och restaurangwebbplats på några minuter. Gratis för alltid, ingen kreditkort krävs."
+        "subtitle": "Skapa din professionella QR-meny och restaurangwebbplats på några minuter. Gratis för alltid, ingen kreditkort krävs.",
+        "demo": "Se demo"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "Kaféer",
         "bars": "Barer",
         "hotels": "Hotell"
-      }
+      },
+      "titleAccent": "Redo på minuter."
     },
     "demo": {
       "title": "Upplev Det Som Dina Gäster",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100% Mobilvänlig Hantering",
-        "shortDescription": "Redigera menyn från telefonen.{br}{link}Se hur det fungerar{/link}.",
+        "title": "100% mobilvänlig",
+        "shortDescription": "Lägg till rätter, ladda upp foton, ändra priser och hantera allt direkt från din telefon. Hela kontrollpanelen är optimerad för mobil – ingen dator behövs, någonsin. {link}Läs mer{/link}.",
         "description": "Lägg till kategorier, rätter, bilder och hantera hela din restaurangwebbplats direkt från din telefon. Vår instrumentpanel är helt optimerad för mobila enheter, så du kan uppdatera din meny under en kaffepaus eller lägga till dagens specialer på språng.",
         "fullDescription": "Restaurangägare är upptagna människor som inte alltid är vid en dator. Det är därför vi byggde IQ Rest för att fungera perfekt på mobila enheter. Varje funktion, från att lägga till nya rätter till att uppdatera priser, är designad för pekskärmar. Ta en bild av en ny rätt och ladda upp den omedelbart. Ändra dagens special medan du står i köket.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restaurangmenyhantering på smartphone",
-        "cta": "See how"
+        "cta": "See how",
+        "titleAccent": "hantering"
       },
       {
         "id": "ai-translation",
-        "title": "AI-Driven Menyöversättning",
-        "shortDescription": "Översätt hela menyn{br}med {link}AI-översättning med 1 klick{/link}.",
+        "title": "AI-driven",
+        "shortDescription": "Översätt hela din meny till 35 språk med ett klick. Vår AI förstår kulinarisk kontext – rätter och beskrivningar låter naturliga på alla språk. {link}Läs mer{/link}.",
         "description": "Nå internationella kunder med intelligent AI-översättning som förstår matkontext. Ditt rätter namn och beskrivningar översätts noggrant, vilket bevarar kulinariska termer och gör mening på vilket språk som helst.",
         "fullDescription": "Generiska översättare misslyckas ofta med matmenyer - de översätter bokstavligt utan att förstå kontext. Vår AI är specifikt tränad för restauranginnehåll. Den vet att 'Beef Wellington' inte ska översättas bokstavligt, och att 'al dente' betyder samma sak på vilket språk som helst. Servera turister och internationella gäster med menyer som läses naturligt på deras språk.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-driven restaurangmenyöversättningsgränssnitt",
-        "cta": "one-click AI"
+        "cta": "one-click AI",
+        "titleAccent": "menyöversättning"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Enkel menyeditor",
-        "shortDescription": "Dra, släpp, klart.{br}{link}Hantera din meny{/link} på sekunder.",
+        "title": "Enkel",
+        "shortDescription": "Lägg till kategorier, skapa rätter med foton och priser, ändra ordning med dra-och-släpp. Ändringar visas på din live-meny omedelbart – inga tekniska kunskaper krävs. {link}Läs mer{/link}.",
         "description": "Att hantera din meny har aldrig varit enklare. Lägg till kategorier, skapa rätter med bilder och beskrivningar, ställ in priser och organisera allt med enkel drag-and-drop. Ändringar visas omedelbart på din live-webbplats.",
         "fullDescription": "Glöm komplicerade innehållshanteringssystem. IQ Rest's menyredigerare är designad för restaurangägare, inte webb utvecklare. Skapa en ny kategori på sekunder, lägg till rätter med några tryck, ladda upp bilder direkt från din telefon. Dra objekt för att omordna, stäng av synlighet för slutsålda objekt och se ändringar live omedelbart.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Enkel restaurangmenyhanteringsinstrumentpanel",
-        "cta": "Manage your menu"
+        "cta": "Manage your menu",
+        "titleAccent": "menyredigerare"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "Bordsreservationssystem",
-        "shortDescription": "Ta emot bokningar 24/7.{br}{link}Bokningar{/link} direkt från din webbplats.",
+        "title": "Bords-",
+        "shortDescription": "Kunder bokar bord direkt från din webbplats – dygnet runt, inga telefonsamtal behövs. Automatisk eller manuell bekräftelse, e-postaviseringar och en fullständig översikt över alla bokningar i din kontrollpanel. {link}Läs mer{/link}.",
         "description": "Det inbyggda reservationssystemet låter kunder boka bord direkt från din webbplats. Välj automatisk bekräftelse baserat på tillgänglighet, eller granska varje bokning manuellt. Hantera alla reservationer från din instrumentpanel.",
         "fullDescription": "Telefonreservationer tar tid och är lätta att missa. IQ Rest's reservationssystem fungerar 24/7. Kunder väljer datum, tid och antal personer, och bokar sedan omedelbart. Du kan ställa in automatisk bekräftelse baserat på bordstillgänglighet, eller granska varje begäran manuellt. Minska no-shows med e-postbekräftelser.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Online bordsreservationssystem för restauranger",
-        "cta": "Utforska Bordsreservationer"
+        "cta": "Utforska Bordsreservationer",
+        "titleAccent": "hanteringssystem"
       },
       {
         "id": "custom-design",
-        "title": "Video & Foto Bakgrunder",
-        "shortDescription": "Skapa fantastiska första intryck{br}med {link}video- eller fotobakgrunder{/link}.",
+        "title": "Video- & foto-",
+        "shortDescription": "Ladda upp en video av din restaurangatmosfär eller ett vackert matfoto som bakgrund för din meny. Fånga gästernas uppmärksamhet från första sekunden de skannar din QR-kod. {link}Läs mer{/link}.",
         "description": "Skapa ett minnesvärt första intryck med anpassade video- eller fotobakgrunder på din hemsida. Ladda upp din restaurangmiljövideo eller en vacker matbild för att omedelbart fängsla kunder.",
         "fullDescription": "Första intryck spelar roll. När kunder skannar din QR-kod ska de bli imponerade omedelbart. Ladda upp en video av din restaurangmiljö, en timelapse av ditt kök eller en fantastisk bild av din signaturrätt. Din hemsida blir en visuell upplevelse som återspeglar din restaurangs personlighet.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Restaurangwebbplats med videobakgrund",
-        "cta": "video or photo backgrounds"
+        "cta": "video or photo backgrounds",
+        "titleAccent": "bakgrunder"
       },
       {
         "id": "color-scheme",
-        "title": "Anpassad Färgschema",
-        "shortDescription": "Matcha färger med ditt varumärke{br}med {link}anpassade accenter{/link}.",
+        "title": "Anpassat",
+        "shortDescription": "Välj din varumärkesfärg så tillämpas den överallt – knappar, markeringar, länkar. Automatiskt stöd för ljust och mörkt tema säkerställer att din meny alltid ser professionell ut. {link}Läs mer{/link}.",
         "description": "Din restaurangwebbplats bör matcha ditt varumärke. Välj mellan förinställda färgscheman eller välj din exakta varumärkesfärg. Tillsammans med automatisk stöd för ljusa/mörka teman ser din meny alltid professionell ut.",
         "fullDescription": "Varumärkeskonsekvens spelar roll. IQ Rest låter dig anpassa accentfärgen som används genom hela din webbplats - knappar, markeringar och interaktiva element matchar alla ditt varumärke. Välj mellan noggrant utvalda förinställningar eller ange din exakta varumärkesfärg. Systemet säkerställer automatiskt läsbarhet i både ljusa och mörka lägen.",
         "benefits": [
@@ -469,7 +476,8 @@
           "Tillgänglighetsoptimerad färgkontrast"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Alternativ för anpassat färgschema och varumärkning"
+        "imageAlt": "Alternativ för anpassat färgschema och varumärkning",
+        "titleAccent": "färgschema"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "Onlinebeställning från QR-meny",
-        "shortDescription": "Kunder skannar, väljer och beställer — direkt från din meny.{br}{link}Läs mer om onlinebeställningar{/link}.",
+        "title": "Onlinebeställning",
+        "shortDescription": "Gäster skannar QR-koden, bläddrar i din meny och beställer direkt – inga appar, inga provisioner. Beställningar visas omedelbart i din kontrollpanel med bordsnummer och detaljer. {link}Läs mer{/link}.",
         "description": "Låt gäster beställa direkt från din QR-meny. Inga appar, inga provisioner. Beställningar visas omedelbart i din instrumentpanel med bordsnummer och artikeldetaljer.",
         "fullDescription": "Förvandla din QR-meny till en direkt beställningskanal. Gäster skannar koden vid sitt bord, bläddrar i menyn och lägger sin beställning på sekunder — inga appnedladdningar, inga registreringar. Du tar emot beställningar i realtid i din instrumentpanel med bordsnummer, artiklar och kundanteckningar. Inga provisioner, inga avgifter per beställning.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "Onlinebeställning från restaurangens QR-meny",
-        "cta": "Läs mer om onlinebeställningar"
+        "cta": "Läs mer om onlinebeställningar",
+        "titleAccent": "från QR-meny"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "Årlig",
     "save": "(Spara 25%)",
     "perMonth": "/månad",
-    "billedYearly": "Faktureras årligen ({total}).",
+    "billedYearly": "Faktureras årligen {total}",
     "orMonthly": "Eller betala {price} månadsvis.",
     "forever": "Gratis för alltid",
     "popular": "Mest Populär",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "Har du frågor?",
     "questionsBody": "Skriv till oss — vi svarar på alla dina frågor och hjälper dig skapa din meny.",
-    "questionsButton": "Skriv på WhatsApp"
+    "questionsButton": "Skriv på WhatsApp",
+    "badge": "Inga provisioner · Inga kontrakt",
+    "heroTitle": "En plan.",
+    "heroTitleAccent": "Allt inkluderat.",
+    "heroSub": "QR-meny, beställningssystem, AI-översättning, restaurangwebbplats & bokningar.",
+    "heroSub2": "Ett enkelt pris.",
+    "planName": "Komplett plan",
+    "monthsFree": "2 månader gratis",
+    "allFeatures": [
+      "Obegränsad digital QR-meny",
+      "AI-översättning (35 språk)",
+      "Restaurangwebbplats ingår",
+      "Online bokningssystem",
+      "Analys & statistik",
+      "Ingen IQ Rest-branding",
+      "Prioriterad support"
+    ],
+    "trialCta": "Prova gratis i 14 dagar",
+    "trialSub": "Inget kreditkort · Avbryt när som helst",
+    "youSave": "Du sparar {amount}",
+    "trustSecure": "Säker betalning med Stripe",
+    "trustNoLock": "Ingen bindningstid",
+    "trustQuick": "Aktiv på 10 minuter",
+    "trustRestaurants": "500+ restauranger",
+    "perMonthFull": "per månad"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "Uppgradera"
     },
     "auth": {
-      "title": "Skapa Meny",
-      "subtitle": "Ange din e-post för att skapa en ny meny",
+      "title": "Välkommen till",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Ange din e-post för att fortsätta",
       "consent": {
         "text": "Genom att fortsätta godkänner du våra",
         "terms": "Villkor",
@@ -1598,7 +1632,8 @@
         "emailRequired": "Ange din e-post.",
         "emailInvalid": "Ange en giltig e-post."
       },
-      "or": "eller"
+      "or": "eller",
+      "continueGoogle": "Fortsätt med Google"
     },
     "analytics": {
       "monthlyUsage": "Månatlig användning",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "Bilden är för stor. Maximal storlek är 20MB.",
       "scanErrorTooMany": "För många bilder. Max 5 foton.",
       "scanSuccess": "Meny skannad!",
-      "scanAddMore": "Lägg till fler",
+      "scanAddMore": "Lägg till filer",
       "scanStart": "Skanna",
       "scanPoolTitle": "Menysidor",
       "scanPoolSubtitle": "Lägg till foton eller PDF-filer av din pappersmeny. Upp till 5 filer.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "Du kan ändra det senare",
       "namePlaceholder": "t.ex. Marios Pizzeria",
       "error": "Något gick fel",
-      "menuSubtitle": "Låt oss bygga din meny.",
+      "back": "Tillbaka",
+      "menuSubtitle": "Välj hur du vill skapa din meny",
       "aiImportTitle": "AI-snabbimport",
       "aiImportDescription": "Spara timmar! Ladda upp ett foto eller PDF så gör AI resten.",
       "aiImportButton": "Skanna meny",

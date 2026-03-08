@@ -4,16 +4,14 @@ import { useState, useEffect, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Loader2, Check, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Loader2, Clock, AlertTriangle } from "lucide-react";
 import { PRICE_LOOKUP_KEYS, type PlanType } from "@/lib/stripe-config";
 import type { BillingCycle, SubscriptionStatus } from "@prisma/client";
-import { Link } from "@/i18n/routing";
 import { PageHeader } from "../_ui/page-header";
 import { useDashboard } from "../_context/dashboard-context";
 import { toast } from "sonner";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
-import { pricing, type PlanId } from "@/lib/pricing";
+import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 import { DashboardContent } from "../_ui/dashboard-content";
 
@@ -23,23 +21,6 @@ interface SubscriptionStatusResponse {
   subscriptionStatus: SubscriptionStatus;
   paymentProcessing: boolean;
 }
-
-interface SubscriptionOption {
-  id: string;
-  plan: PlanType;
-  cycle: BillingCycle | null;
-  planId: PlanId;
-  isYearly: boolean;
-  lookupKey: string | null;
-}
-
-const SUBSCRIPTION_OPTIONS: SubscriptionOption[] = [
-  { id: "FREE", plan: "FREE", cycle: null, planId: "free", isYearly: false, lookupKey: null },
-  { id: "BASIC_MONTHLY", plan: "BASIC", cycle: "MONTHLY", planId: "basic", isYearly: false, lookupKey: PRICE_LOOKUP_KEYS.BASIC_MONTHLY },
-  { id: "BASIC_YEARLY", plan: "BASIC", cycle: "YEARLY", planId: "basic", isYearly: true, lookupKey: PRICE_LOOKUP_KEYS.BASIC_YEARLY },
-  { id: "PRO_MONTHLY", plan: "PRO", cycle: "MONTHLY", planId: "pro", isYearly: false, lookupKey: PRICE_LOOKUP_KEYS.PRO_MONTHLY },
-  { id: "PRO_YEARLY", plan: "PRO", cycle: "YEARLY", planId: "pro", isYearly: true, lookupKey: PRICE_LOOKUP_KEYS.PRO_YEARLY },
-];
 
 function formatPrice(amount: number, currency: SupportedCurrency): string {
   const info = currencyInfo[currency];
@@ -54,36 +35,6 @@ function formatPrice(amount: number, currency: SupportedCurrency): string {
   return `${formatted} ${info.symbol}`;
 }
 
-type FeatureValue = boolean | "value";
-
-interface FeatureRow {
-  key: string;
-  free: FeatureValue;
-  basic: FeatureValue;
-  pro: FeatureValue;
-}
-
-const COMPARISON_FEATURES: FeatureRow[] = [
-  { key: "website", free: true, basic: true, pro: true },
-  { key: "qrMenu", free: true, basic: true, pro: true },
-  { key: "scans", free: "value", basic: "value", pro: "value" },
-  { key: "orders", free: "value", basic: "value", pro: "value" },
-  { key: "languages", free: "value", basic: "value", pro: "value" },
-  { key: "aiTranslation", free: false, basic: "value", pro: "value" },
-  { key: "aiImages", free: false, basic: "value", pro: "value" },
-  { key: "allergens", free: false, basic: true, pro: true },
-  { key: "analytics", free: true, basic: true, pro: true },
-  { key: "customTheme", free: true, basic: true, pro: true },
-  { key: "background", free: true, basic: true, pro: true },
-  { key: "support", free: true, basic: true, pro: true },
-  { key: "reservations", free: false, basic: true, pro: true },
-  { key: "noBranding", free: false, basic: true, pro: true },
-  { key: "multiRestaurant", free: false, basic: false, pro: true },
-  { key: "customDomain", free: false, basic: false, pro: true },
-];
-
-const PLAN_IDS = ["free", "basic", "pro"] as const;
-
 interface BillingPageProps {
   initialSubscription: {
     plan: PlanType;
@@ -93,11 +44,11 @@ interface BillingPageProps {
     paymentProcessing: boolean;
   } | null;
   currency: SupportedCurrency;
+  trialEndsAt: string | null;
 }
 
-export function BillingPage({ initialSubscription, currency }: BillingPageProps) {
+export function BillingPage({ initialSubscription, currency, trialEndsAt }: BillingPageProps) {
   const t = useTranslations("billing");
-  const tp = useTranslations("pricing");
   const { translations } = useDashboard();
   const locale = useLocale();
   const router = useRouter();
@@ -249,14 +200,15 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
     }
   };
 
-  const isActive = subscriptionStatus === "ACTIVE";
+  const isActive = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
 
-  const isCurrentOption = (option: SubscriptionOption) => {
-    if (option.plan === "FREE") {
-      return currentPlan === "FREE" || !isActive;
-    }
-    return currentPlan === option.plan && billingCycle === option.cycle && isActive;
-  };
+  // Trial status
+  const trialDate = trialEndsAt ? new Date(trialEndsAt) : null;
+  const isTrialing = trialDate !== null && trialDate > new Date();
+  const trialExpired = trialDate !== null && trialDate <= new Date();
+  const trialDaysLeft = isTrialing && trialDate
+    ? Math.ceil((trialDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+    : 0;
 
   if (isPolling) {
     return (
@@ -277,121 +229,104 @@ export function BillingPage({ initialSubscription, currency }: BillingPageProps)
     );
   }
 
-  const planGroups = [
-    { plan: "FREE" as PlanType, options: SUBSCRIPTION_OPTIONS.filter((o) => o.plan === "FREE") },
-    { plan: "BASIC" as PlanType, options: SUBSCRIPTION_OPTIONS.filter((o) => o.plan === "BASIC") },
-    { plan: "PRO" as PlanType, options: SUBSCRIPTION_OPTIONS.filter((o) => o.plan === "PRO") },
-  ];
+  const plan = pricing[currency].basic;
 
   return (
     <div className="flex flex-col h-full">
       <PageHeader title={translations.pages.billing} />
       <div className="flex-1 overflow-auto px-6 pt-4 pb-6">
         <DashboardContent innerClassName="space-y-4">
-          {planGroups.map((group) => (
-            <div key={group.plan} className="rounded-md border border-border bg-muted/50 overflow-hidden">
-              <div className="flex items-center px-4 py-3.5 bg-muted/30">
-                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{group.plan === "BASIC" ? "Growth" : group.plan}</span>
+          {/* Status banner */}
+          {isActive && (
+            <div className="rounded-md border border-success/30 bg-success/5 px-4 py-3 flex items-center gap-3">
+              <div className="w-2 h-2 bg-success rounded-full" />
+              <div className="flex-1">
+                <span className="text-sm font-medium text-success">
+                  {t("activeSubscription")}
+                </span>
+                {billingCycle && (
+                  <span className="text-xs text-muted-foreground ml-2">
+                    ({billingCycle === "YEARLY" ? t("billedYearly") : t("billedMonthly")})
+                  </span>
+                )}
               </div>
-              {group.options.map((option) => {
-                const isCurrent = isCurrentOption(option);
-                const isLoading = actionLoading === option.lookupKey || (isCurrent && actionLoading === "manage");
-
-                return (
-                  <div
-                    key={option.id}
-                    className={cn(
-                      "flex items-center justify-between px-4 h-12 border-t border-foreground/5 transition-colors",
-                      isCurrent && "bg-success/5"
-                    )}
-                  >
-                    <div className="flex items-center gap-2 flex-1 min-w-0">
-                      <span className={cn("text-sm font-medium", isCurrent && "text-success")}>{t(`plans.${option.id}.name`)}</span>
-                      <span className={cn("text-sm", isCurrent ? "text-success/70" : "text-muted-foreground")}>
-                        {formatPrice(pricing[currency][option.planId][option.isYearly ? "yearly" : "monthly"], currency)}{t("perMonth")}
-                      </span>
-                    </div>
-
-                    <div>
-                      {option.plan === "FREE" ? (
-                        isCurrent ? (
-                          <span className="text-xs text-muted-foreground">{t("currentPlan")}</span>
-                        ) : null
-                      ) : isCurrent ? (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="border-success/50 text-success hover:bg-success/10"
-                          onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
-                          disabled={!!actionLoading}
-                        >
-                          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                          {t("manage")}
-                        </Button>
-                      ) : (
-                        <Button
-                          size="sm"
-                          onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: option.plan }); option.lookupKey && handleSubscribe(option.lookupKey); }}
-                          disabled={!!actionLoading}
-                        >
-                          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                          {t("upgrade")}
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-success/50 text-success hover:bg-success/10"
+                onClick={() => { track(DashboardEvent.CLICKED_MANAGE_SUBSCRIPTION); handleManageSubscription(); }}
+                disabled={!!actionLoading}
+              >
+                {actionLoading === "manage" && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                {t("manage")}
+              </Button>
             </div>
-          ))}
+          )}
+
+          {isTrialing && (
+            <div className="rounded-md border border-primary/30 bg-primary/5 px-4 py-3 flex items-center gap-3">
+              <Clock className="h-4 w-4 text-primary shrink-0" />
+              <span className="text-sm">
+                {t("trialDaysLeft", { days: trialDaysLeft })}
+              </span>
+            </div>
+          )}
+
+          {trialExpired && !isActive && (
+            <div className="rounded-md border border-destructive/30 bg-destructive/5 px-4 py-3 flex items-center gap-3">
+              <AlertTriangle className="h-4 w-4 text-destructive shrink-0" />
+              <span className="text-sm">{t("trialExpired")}</span>
+            </div>
+          )}
+
+          {/* Plan options — only show if not active subscriber */}
+          {!isActive && (
+            <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
+              <div className="flex items-center px-4 py-3.5 bg-muted/30">
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  {t("choosePlan")}
+                </span>
+              </div>
+
+              {/* Yearly */}
+              <div className="flex items-center justify-between px-4 h-12 border-t border-foreground/5">
+                <div className="flex items-center gap-2 flex-1 min-w-0">
+                  <span className="text-sm font-medium">{t("yearly")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {formatPrice(plan.yearly, currency)}{t("perMonth")}
+                  </span>
+                </div>
+                <Button
+                  size="sm"
+                  onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: "BASIC_YEARLY" }); handleSubscribe(PRICE_LOOKUP_KEYS.BASIC_YEARLY); }}
+                  disabled={!!actionLoading}
+                >
+                  {actionLoading === PRICE_LOOKUP_KEYS.BASIC_YEARLY && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {t("subscribe")}
+                </Button>
+              </div>
+
+              {/* Monthly */}
+              <div className="flex items-center justify-between px-4 h-12 border-t border-foreground/5">
+                <div className="flex items-center gap-2 flex-1 min-w-0">
+                  <span className="text-sm font-medium">{t("monthly")}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {formatPrice(plan.monthly, currency)}{t("perMonth")}
+                  </span>
+                </div>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => { track(DashboardEvent.CLICKED_PLAN_UPGRADE, { plan: "BASIC_MONTHLY" }); handleSubscribe(PRICE_LOOKUP_KEYS.BASIC_MONTHLY); }}
+                  disabled={!!actionLoading}
+                >
+                  {actionLoading === PRICE_LOOKUP_KEYS.BASIC_MONTHLY && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {t("subscribe")}
+                </Button>
+              </div>
+            </div>
+          )}
         </DashboardContent>
-
-        {/* Feature Comparison */}
-        <div className="max-w-2xl mx-auto pt-8">
-          <h2 className="text-lg font-semibold text-center mb-4">{tp("comparison.title")}</h2>
-          <div className="overflow-x-auto rounded-md border border-border">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-muted/30">
-                  <th className="text-left py-3 px-3 text-xs font-medium text-muted-foreground w-2/5">&nbsp;</th>
-                  {PLAN_IDS.map((planId) => (
-                    <th key={planId} className="py-3 px-2 text-center text-xs font-semibold uppercase tracking-wide">
-                      {tp(`plans.${planId}.name`)}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON_FEATURES.map((feature, index) => (
-                  <tr key={feature.key} className={cn("border-t border-foreground/5", index % 2 === 0 && "bg-muted/20")}>
-                    <td className="py-2.5 px-3 text-xs font-medium">{tp(`features.${feature.key}`)}</td>
-                    {PLAN_IDS.map((planId) => {
-                      const value = feature[planId];
-                      return (
-                        <td key={planId} className="py-2.5 px-2 text-center">
-                          {value === "value" ? (
-                            <span className="text-xs font-medium">{tp(`values.${planId}.${feature.key}`)}</span>
-                          ) : value === true ? (
-                            <Check className="h-4 w-4 text-success mx-auto" />
-                          ) : (
-                            <X className="h-4 w-4 text-muted-foreground/40 mx-auto" />
-                          )}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <p className="text-sm text-muted-foreground text-center pt-6">
-          {t("detailsNote")}{" "}
-          <Link href="/pricing" className="underline">
-            {t("pricingPage")}
-          </Link>
-        </p>
       </div>
     </div>
   );

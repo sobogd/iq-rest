@@ -22,6 +22,8 @@ export async function GET(request: NextRequest) {
           select: {
             id: true,
             plan: true,
+            subscriptionStatus: true,
+            trialEndsAt: true,
             scanLimit: true,
           },
         },
@@ -36,7 +38,9 @@ export async function GET(request: NextRequest) {
     }
 
     const { company } = restaurant;
-    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
+    const { getCompanyAccess } = await import("@/lib/access");
+    const access = getCompanyAccess(company);
+    const limit = access.hasScanLimit ? access.scanLimit : Infinity;
 
     // Get current month's unique session count (scans)
     const startOfMonth = new Date();

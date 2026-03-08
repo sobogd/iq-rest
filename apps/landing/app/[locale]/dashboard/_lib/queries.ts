@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { cookies } from "next/headers";
 import { isAdminEmail } from "@/lib/admin";
 import { UAParser } from "ua-parser-js";
+import { getCompanyAccess } from "@/lib/access";
 
 // ---- Restaurant ----
 export async function getRestaurant(companyId: string) {
@@ -28,6 +29,7 @@ export async function getSubscriptionStatus(companyId: string) {
     subscriptionStatus: company.subscriptionStatus,
     currentPeriodEnd: company.currentPeriodEnd?.toISOString() ?? null,
     paymentProcessing: company.paymentProcessing,
+    trialEndsAt: company.trialEndsAt?.toISOString() ?? null,
   };
 }
 
@@ -144,7 +146,7 @@ export async function getOrders(companyId: string) {
 export async function getScanUsage(companyId: string) {
   const company = await prisma.company.findUnique({
     where: { id: companyId },
-    select: { plan: true, scanLimit: true },
+    select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
   });
   if (!company) return null;
 
@@ -156,7 +158,8 @@ export async function getScanUsage(companyId: string) {
     where: { companyId, createdAt: { gte: startOfMonth } },
   });
 
-  const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
+  const access = getCompanyAccess(company);
+  const limit = access.hasScanLimit ? access.scanLimit : Infinity;
 
   return {
     used: monthlyScans.length,
@@ -213,7 +216,7 @@ function getLast7Days(viewsByDay: { date: string; count: bigint }[], tz: string)
 export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   const company = await prisma.company.findUnique({
     where: { id: companyId },
-    select: { plan: true, scanLimit: true },
+    select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
   });
   if (!company) return null;
 
@@ -292,7 +295,8 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
       .sort((a, b) => b.count - a.count)
       .slice(0, 10);
 
-  const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
+  const access = getCompanyAccess(company);
+  const limit = access.hasScanLimit ? access.scanLimit : Infinity;
 
   return {
     plan: company.plan,

@@ -68,7 +68,7 @@ export const productSchema = {
     offerCount: "3",
     availability: "https://schema.org/InStock",
     priceValidUntil: getPriceValidUntil(),
-    url: `${BASE_URL}/pricing`,
+    url: `${BASE_URL}/`,
     hasMerchantReturnPolicy: {
       "@type": "MerchantReturnPolicy",
       applicableCountry: "WorldWide",

@@ -16,15 +16,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Check plan and free generations (same pattern as /api/translate)
+    // Check plan and access
     const [company, restaurant] = await Promise.all([
       prisma.company.findUnique({
         where: { id: companyId },
-        select: { plan: true, subscriptionStatus: true },
+        select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true },
       }),
       prisma.restaurant.findFirst({
         where: { companyId },
-        select: { id: true, freeImageGenerationsLeft: true, imageGenerationsUsed: true, imageStylizationsUsed: true },
+        select: { id: true, imageGenerationsUsed: true, imageStylizationsUsed: true },
       }),
     ]);
 
@@ -36,21 +36,11 @@ export async function POST(request: NextRequest) {
     const userEmail = cookieStore.get("user_email")?.value;
     const isUnlimited = isAdminEmail(userEmail);
 
-    const isActive = company.subscriptionStatus === "ACTIVE";
-    const isPro = isUnlimited || (isActive && company.plan === "PRO");
-    const isBasic = isActive && company.plan === "BASIC";
-    const isPaidSubscriber = isPro || isBasic;
+    const { getCompanyAccess } = await import("@/lib/access");
+    const access = getCompanyAccess(company);
 
-    // BASIC: 35 generations/month, PRO: unlimited, FREE: use free trials
-    if (!isPaidSubscriber && restaurant.freeImageGenerationsLeft <= 0) {
-      return NextResponse.json({ error: "limit_reached" }, { status: 403 });
-    }
-    const BASIC_MONTHLY_LIMIT = 35;
-    if (isBasic) {
-      const totalUsed = restaurant.imageGenerationsUsed + restaurant.imageStylizationsUsed;
-      if (totalUsed >= BASIC_MONTHLY_LIMIT) {
-        return NextResponse.json({ error: "limit_reached" }, { status: 403 });
-      }
+    if (!isUnlimited && !access.hasFullAccess) {
+      return NextResponse.json({ error: "trial_expired" }, { status: 403 });
     }
 
     const body = await request.json();
@@ -218,21 +208,12 @@ export async function POST(request: NextRequest) {
       })
     );
 
-    // Track usage
-    if (!isPaidSubscriber) {
-      // Free user: decrement trial counter
-      await prisma.restaurant.update({
-        where: { id: restaurant.id },
-        data: { freeImageGenerationsLeft: { decrement: 1 } },
-      });
-    } else if (!isPro) {
-      // BASIC subscriber: increment monthly counter
-      const usageField = sourceImageUrl ? "imageStylizationsUsed" : "imageGenerationsUsed";
-      await prisma.restaurant.update({
-        where: { id: restaurant.id },
-        data: { [usageField]: { increment: 1 } },
-      });
-    }
+    // Track usage (increment monthly counter)
+    const usageField = sourceImageUrl ? "imageStylizationsUsed" : "imageGenerationsUsed";
+    await prisma.restaurant.update({
+      where: { id: restaurant.id },
+      data: { [usageField]: { increment: 1 } },
+    });
 
     const url = getPublicUrl(key);
     return NextResponse.json({ url });

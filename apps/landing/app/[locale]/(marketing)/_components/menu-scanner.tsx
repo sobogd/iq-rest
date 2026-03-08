@@ -207,7 +207,7 @@ export function MenuScanner() {
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-1 shrink-0">
           {t("readyTitle")}
         </h2>
-        <p className="text-sm text-muted-foreground text-center mb-6 max-w-md shrink-0">
+        <p className="text-base text-muted-foreground text-center mb-6 max-w-md shrink-0">
           {t("readySubtitle")}
         </p>
 
@@ -286,7 +286,7 @@ export function MenuScanner() {
       <div className="w-full max-w-xl">
         <div className="rounded-2xl border bg-card p-6 sm:p-8 lg:p-10 text-center shadow-sm">
             {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4">
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-base font-medium text-primary mb-4">
               <Sparkles className="w-3.5 h-3.5" />
               {t("badge")}
             </div>
@@ -294,7 +294,7 @@ export function MenuScanner() {
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">
               {state === "loading" ? t("loadingTitle") : t("title")}
             </h2>
-            <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-md mx-auto">
+            <p className="text-base text-muted-foreground mb-6 max-w-md mx-auto">
               {state === "loading" ? t("loadingSubtitle") : t("subtitle")}
             </p>
 
@@ -316,7 +316,7 @@ export function MenuScanner() {
                     style={{ width: `${progress}%` }}
                   />
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center">
+                <p className="text-base text-muted-foreground mt-2 text-center">
                   {Math.round(progress)}%
                 </p>
               </div>

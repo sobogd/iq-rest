@@ -44,6 +44,9 @@ model Company {
   currentPeriodEnd   DateTime?
   paymentProcessing  Boolean            @default(false)
 
+  // Trial
+  trialEndsAt DateTime? // null = old user (pre-trial), set = new user with 14-day trial
+
   // Onboarding
   onboardingStep Int @default(0) // 0 = not started, 2 = restaurant created, 3 = onboarding complete
 

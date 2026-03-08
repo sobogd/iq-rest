@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { MenuLayoutClient } from "./menu-layout-client";
 import { getRestaurantBySlug } from "./_lib/get-restaurant";
+import { getCompanyAccess } from "@/lib/access";
 
 export const revalidate = 300; // 5 minutes
 
@@ -12,7 +13,8 @@ async function getMenuLayoutData(slug: string): Promise<{ showAd: boolean; accen
     if (!restaurant) return { showAd: false, accentColor: "#000000" };
 
     const { company } = restaurant;
-    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
+    const access = getCompanyAccess(company);
+    const limit = access.hasScanLimit ? access.scanLimit : Infinity;
     const accentColor = restaurant.accentColor || "#000000";
 
     if (limit === Infinity) return { showAd: false, accentColor };

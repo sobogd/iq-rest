@@ -9,7 +9,7 @@
       "changelog": "更新日志",
       "contacts": "联系我们"
     },
-    "getStarted": "免费创建",
+    "getStarted": "开始使用",
     "selectLanguage": "选择语言",
     "selectLanguageDescription": "选择您偏好的网站语言。",
     "searchLanguage": "搜索语言...",
@@ -21,15 +21,16 @@
       "description": "仅需邮箱即可创建QR菜单和餐厅网站。即时设置、移动端管理、AI翻译、每日分析。适合餐厅和咖啡馆。今天免费开始。"
     },
     "hero": {
-      "title": "几分钟内创建专业的QR Menu和网站",
-      "subtitle": "只需输入您的电子邮件，即可获得完整的餐厅网站，包括QR菜单、联系页面、多语言支持和现代设计。在手机上完成所有设置。",
+      "title": "网站 & QR 菜单，订单 & 预订。",
+      "subtitle": "只需输入您的电子邮件即可开始。",
       "cta": {
         "create": "创建菜单",
         "view": "查看价格",
-        "noCreditCard": "每月320次扫描以内免费。无需信用卡。",
+        "noCreditCard": "14 天免费试用。无需信用卡。",
         "trusted": "全球500多家餐厅信赖",
         "title": "准备好数字化了吗？",
-        "subtitle": "在几分钟内创建您的专业QR菜单和餐厅网站。永久免费，无需信用卡。"
+        "subtitle": "在几分钟内创建您的专业QR菜单和餐厅网站。永久免费，无需信用卡。",
+        "demo": "查看演示"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "咖啡馆",
         "bars": "酒吧",
         "hotels": "酒店"
-      }
+      },
+      "titleAccent": "几分钟内即可准备就绪。"
     },
     "demo": {
       "title": "像您的客人一样体验它",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100%移动友好管理",
-        "shortDescription": "手机编辑菜单。{br}{link}查看如何使用{/link}。",
+        "title": "100% 移动端友好",
+        "shortDescription": "直接通过手机添加菜品、上传照片、更改价格和管理一切。整个管理后台都针对移动设备进行了优化——无需电脑，随时随地轻松操作。{link}了解更多{/link}。",
         "description": "直接从手机添加类别、菜品、照片，并管理整个餐厅网站。我们的仪表板完全针对移动设备优化，因此您可以在咖啡休息时间更新菜单或在移动中添加每日特色。",
         "fullDescription": "餐厅老板是忙碌的人，并不总是在电脑前。这就是为什么我们构建IQ Rest在移动设备上完美运行。从添加新菜品到更新价格，每个功能都是为触摸屏设计的。拍摄新菜品的照片并立即上传。站在厨房里更改今天的特色。",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "在智能手机上管理餐厅菜单",
-        "cta": "查看如何使用"
+        "cta": "查看如何使用",
+        "titleAccent": "管理"
       },
       {
         "id": "ai-translation",
-        "title": "AI驱动的菜单翻译",
-        "shortDescription": "翻译整个菜单{br}使用{link}一键AI翻译{/link}。",
+        "title": "AI驱动的",
+        "shortDescription": "一键将您的整个菜单翻译成35种语言。我们的AI理解烹饪语境——菜品名称和描述在任何语言中都能自然流畅地呈现。{link}了解更多{/link}。",
         "description": "通过理解食物上下文的智能AI翻译接触国际顾客。您的菜名和描述被准确翻译，保留烹饪术语并在任何语言中都有意义。",
         "fullDescription": "普通翻译器通常在食品菜单上失败 - 它们不理解上下文就进行字面翻译。我们的AI专门针对餐厅内容进行训练。它知道'惠灵顿牛排'不应该被字面翻译，'al dente'在任何语言中都意味着相同的东西。为游客和国际客人提供用他们的语言自然阅读的菜单。",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI驱动的餐厅菜单翻译界面",
-        "cta": "一键AI翻译"
+        "cta": "一键AI翻译",
+        "titleAccent": "菜单翻译"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "简单菜单编辑器",
-        "shortDescription": "拖放即完成。{br}{link}菜单管理{/link}只需几秒。",
+        "title": "简洁",
+        "shortDescription": "添加分类，创建带照片和价格的菜品，通过拖放轻松调整顺序。所有更改会立即在您的实时菜单上显示——无需任何技术技能。{link}了解更多{/link}。",
         "description": "管理菜单从未如此简单。添加类别，创建带照片和描述的菜品，设置价格，用简单的拖放组织一切。更改会立即出现在您的实时网站上。",
         "fullDescription": "忘记复杂的内容管理系统。IQ Rest的菜单编辑器是为餐厅老板设计的，不是网页开发人员。几秒钟内创建新类别，几次点击即可添加菜品，直接从手机上传照片。拖动项目重新排序，切换售罄项目的可见性，立即看到更改生效。",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "轻松餐厅菜单管理仪表板",
-        "cta": "管理菜单"
+        "cta": "管理菜单",
+        "titleAccent": "菜单编辑器"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "餐桌预订系统",
-        "shortDescription": "24/7接受预订。{br}{link}预订{/link}直接从网站完成。",
+        "title": "餐桌",
+        "shortDescription": "顾客可以直接从您的网站预订餐桌——24/7全天候可用，无需电话沟通。支持自动或手动确认、邮件通知，并在您的管理后台提供所有预订的完整概览。{link}了解更多{/link}。",
         "description": "内置的预订系统让顾客可以直接从您的网站预订餐桌。选择基于可用性的自动确认，或手动审核每个预订。从仪表板管理所有预订。",
         "fullDescription": "电话预订既耗时又容易遗漏。IQ Rest的预订系统24/7工作。顾客选择日期、时间和人数，然后立即预订。您可以设置基于餐桌可用性的自动确认，或手动审核每个请求。通过电子邮件确认减少爽约。",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "餐厅在线餐桌预订系统",
-        "cta": "探索餐桌预订"
+        "cta": "探索餐桌预订",
+        "titleAccent": "管理系统"
       },
       {
         "id": "custom-design",
-        "title": "视频和照片背景",
-        "shortDescription": "创建惊艳的第一印象{br}使用{link}视频或照片背景{/link}。",
+        "title": "视频与图片",
+        "shortDescription": "上传餐厅氛围视频或精美菜品照片作为菜单背景。在顾客扫描QR码的第一秒就吸引他们的目光。{link}了解更多{/link}。",
         "description": "用主页上的自定义视频或照片背景创造难忘的第一印象。上传您餐厅氛围的视频或美丽的食物照片，立即吸引顾客。",
         "fullDescription": "第一印象很重要。当顾客扫描您的QR码时，他们应该立即被打动。上传您餐厅氛围的视频、厨房的延时摄影或招牌菜的精彩照片。您的主页成为反映餐厅个性的视觉体验。",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "带视频背景的餐厅网站",
-        "cta": "视频和照片背景"
+        "cta": "视频和照片背景",
+        "titleAccent": "背景"
       },
       {
         "id": "color-scheme",
-        "title": "自定义配色方案",
-        "shortDescription": "匹配品牌色彩{br}使用{link}自定义强调色{/link}。",
+        "title": "自定义",
+        "shortDescription": "选择您的品牌颜色，它将应用于所有地方——按钮、高亮和链接。自动支持浅色和深色主题，确保您的菜单始终专业美观。{link}了解更多{/link}。",
         "description": "您的餐厅网站应该与您的品牌相匹配。从预设配色方案中选择或选择您确切的品牌颜色。结合自动明/暗主题支持，您的菜单始终看起来专业。",
         "fullDescription": "品牌一致性很重要。IQ Rest让您自定义整个网站使用的强调色 - 按钮、高亮和交互元素都与您的品牌相匹配。从精心策划的预设中选择或输入您确切的品牌颜色。系统自动确保在明暗模式下的可读性。",
         "benefits": [
@@ -469,7 +476,8 @@
           "针对可访问性优化的颜色对比度"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "自定义配色方案和品牌选项"
+        "imageAlt": "自定义配色方案和品牌选项",
+        "titleAccent": "配色方案"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "QR菜单在线点餐",
-        "shortDescription": "顾客扫码、选择、下单——直接从您的菜单完成。{br}{link}了解更多关于在线点餐{/link}。",
+        "title": "在线点餐",
+        "shortDescription": "顾客扫描QR码，浏览您的菜单，直接下单——无需下载App，不收取任何佣金。订单会立即显示在您的管理后台，并附带桌号和详细信息。{link}了解更多{/link}。",
         "description": "让顾客直接从您的QR菜单下单。无需应用、无佣金。订单会立即出现在您的仪表板中，包含桌号和菜品详情。",
         "fullDescription": "将您的QR菜单变成直接点餐渠道。顾客扫描桌上的二维码，浏览菜单，几秒内完成下单——无需下载应用、无需注册。您可以在仪表板中实时收到包含桌号、菜品和顾客备注的订单。零佣金，无按单收费。",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "餐厅QR菜单在线点餐",
-        "cta": "了解更多关于在线点餐"
+        "cta": "了解更多关于在线点餐",
+        "titleAccent": "通过QR菜单"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "年付",
     "save": "（节省25%）",
     "perMonth": "/月",
-    "billedYearly": "按年计费（{total}）.",
+    "billedYearly": "按年计费 {total}",
     "orMonthly": "或每月支付 {price}。",
     "forever": "永久免费",
     "popular": "最受欢迎",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "还有疑问？",
     "questionsBody": "联系我们——我们会解答您的所有问题，帮助您创建菜单。",
-    "questionsButton": "在WhatsApp上联系"
+    "questionsButton": "在WhatsApp上联系",
+    "badge": "无佣金 · 无合同",
+    "heroTitle": "一个方案。",
+    "heroTitleAccent": "一切尽在其中。",
+    "heroSub": "二维码菜单、点餐系统、AI翻译、餐厅网站和预订。",
+    "heroSub2": "一个简单的价格。",
+    "planName": "完整方案",
+    "monthsFree": "免费2个月",
+    "allFeatures": [
+      "无限数字二维码菜单",
+      "AI翻译 (35种语言)",
+      "包含餐厅网站",
+      "在线预订系统",
+      "分析与统计",
+      "无IQ Rest品牌标识",
+      "优先支持"
+    ],
+    "trialCta": "免费试用14天",
+    "trialSub": "无需信用卡 · 随时取消",
+    "youSave": "您节省了 {amount}",
+    "trustSecure": "使用Stripe安全支付",
+    "trustNoLock": "无需承诺",
+    "trustQuick": "10分钟内激活",
+    "trustRestaurants": "500多家餐厅",
+    "perMonthFull": "每月"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "升级"
     },
     "auth": {
-      "title": "创建菜单",
-      "subtitle": "输入邮箱以创建新菜单",
+      "title": "欢迎来到",
+      "titleAccent": "IQ Rest",
+      "subtitle": "输入您的电子邮件以继续",
       "consent": {
         "text": "继续即表示您同意我们的",
         "terms": "条款",
@@ -1598,7 +1632,8 @@
         "emailRequired": "请输入您的邮箱。",
         "emailInvalid": "请输入有效的邮箱。"
       },
-      "or": "或者"
+      "or": "或者",
+      "continueGoogle": "通过Google继续"
     },
     "analytics": {
       "monthlyUsage": "每月使用量",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "图片太大，最大支持20MB。",
       "scanErrorTooMany": "图片太多，最多5张照片。",
       "scanSuccess": "菜单扫描成功！",
-      "scanAddMore": "添加更多",
+      "scanAddMore": "添加文件",
       "scanStart": "扫描",
       "scanPoolTitle": "菜单页面",
       "scanPoolSubtitle": "添加纸质菜单的照片或PDF文件。最多5个文件。",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "您可以稍后更改",
       "namePlaceholder": "例如：马里奥披萨店",
       "error": "出了点问题",
-      "menuSubtitle": "让我们创建您的菜单。",
+      "back": "返回",
+      "menuSubtitle": "选择您想如何创建菜单",
       "aiImportTitle": "AI即时导入",
       "aiImportDescription": "节省数小时工作！上传照片或PDF，AI会完成剩下的工作。",
       "aiImportButton": "扫描菜单",

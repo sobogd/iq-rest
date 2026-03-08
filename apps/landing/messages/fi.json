@@ -9,7 +9,7 @@
       "changelog": "Muutospäiväkirja",
       "contacts": "Yhteystiedot"
     },
-    "getStarted": "Luo ilmaiseksi",
+    "getStarted": "Aloita",
     "selectLanguage": "Valitse kieli",
     "selectLanguageDescription": "Valitse haluamasi kieli verkkosivustolle.",
     "searchLanguage": "Etsi kieltä...",
@@ -21,15 +21,16 @@
       "description": "Luo QR-menu ja ravintolan verkkosivut pelkällä sähköpostillasi. Välitön asennus, mobiilihallinta, AI-käännökset, päivittäiset analyysit. Täydellinen ravintoloille ja kahviloille. Aloita ilmaiseksi tänään."
     },
     "hero": {
-      "title": "Luo Ammattimainen QR Menu & Verkkosivusto Muutamassa Minuutissa",
-      "subtitle": "Syötä vain sähköpostiosoitteesi ja saat täydellisen ravintolaverkkosivuston QR-menuineen, yhteyssivun, monikielisen tuen ja modernin muotoilun. Aseta kaikki puhelimestasi.",
+      "title": "Verkkosivusto & QR-menu, Tilaukset & Varaukset.",
+      "subtitle": "Aloita syöttämällä sähköpostiosoitteesi.",
       "cta": {
         "create": "Luo menu",
         "view": "Katso hinnat",
-        "noCreditCard": "Ilmainen 320 skannaukseen/kk asti. Luottokorttia ei tarvita.",
+        "noCreditCard": "14 päivän ilmainen kokeilu. Luottokorttia ei tarvita.",
         "trusted": "Luotettu yli 500 ravintolan toimesta ympäri maailmaa",
         "title": "Valmiina siirtymään digitaaliseen maailmaan?",
-        "subtitle": "Luo ammattimainen QR-menu ja ravintolan verkkosivusto minuuteissa. Ilmainen ikuisesti, ei vaadita luottokorttia."
+        "subtitle": "Luo ammattimainen QR-menu ja ravintolan verkkosivusto minuuteissa. Ilmainen ikuisesti, ei vaadita luottokorttia.",
+        "demo": "Katso demo"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "Kahvilat",
         "bars": "Baarit",
         "hotels": "Hotellit"
-      }
+      },
+      "titleAccent": "Valmiina minuuteissa."
     },
     "demo": {
       "title": "Koe se kuten vieraasi",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100% mobiiliystävällinen hallinta",
-        "shortDescription": "Muokkaa menua puhelimesta.{br}{link}Katso miten se toimii{/link}.",
+        "title": "100% mobiiliystävällinen",
+        "shortDescription": "Lisää annoksia, lataa kuvia, muuta hintoja ja hallinnoi kaikkea suoraan puhelimestasi. Koko hallintapaneeli on optimoitu mobiililaitteille – et tarvitse tietokonetta koskaan. {link}Lue lisää{/link}.",
         "description": "Lisää kategorioita, ruokalajeja, kuvia ja hallitse koko ravintolaverkkosivustoasi suoraan puhelimestasi. Hallintapaneelimme on täysin optimoitu mobiililaitteille, joten voit päivittää valikkoasi kahvitauolla tai lisätä päivittäisiä erikoistarjouksia liikkeellä ollessasi.",
         "fullDescription": "Ravintoloitsijat ovat kiireisiä ihmisiä, jotka eivät aina ole tietokoneen ääressä. Siksi rakensimme IQ Restin toimimaan täydellisesti mobiililaitteilla. Jokainen ominaisuus, ruokalajien lisäämisestä hintoja päivittämiseen, on suunniteltu kosketusnäytöille. Ota kuva uudesta ruokalajista ja lataa se heti. Muuta päivän erikoistarjous seisoessasi keittiössä.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Ravintolavalikon hallinta älypuhelimella",
-        "cta": "See how"
+        "cta": "See how",
+        "titleAccent": "hallinta"
       },
       {
         "id": "ai-translation",
-        "title": "AI-pohjainen valikkokäännös",
-        "shortDescription": "Käännä koko menu{br}{link}AI-käännöksellä yhdellä klikkauksella{/link}.",
+        "title": "Tekoälypohjainen",
+        "shortDescription": "Käännä koko ruokalistasi 35 kielelle yhdellä napsautuksella. Tekoälymme ymmärtää kulinaarisen kontekstin – annosten nimet ja kuvaukset kuulostavat luonnollisilta millä tahansa kielellä. {link}Lue lisää{/link}.",
         "description": "Saavuta kansainväliset asiakkaat älykkään AI-käännöksen avulla, joka ymmärtää ruoan kontekstin. Ruokalajien nimet ja kuvaukset käännetään tarkasti, säilyttäen kulinaariset termit ja tehdään ymmärrettäviksi kaikilla kielillä.",
         "fullDescription": "Geneeriset kääntäjät epäonnistuvat usein ruokalistoissa - ne kääntävät kirjaimellisesti ilman kontekstin ymmärtämistä. AI:mme on koulutettu erityisesti ravintolasisältöä varten. Se tietää, että 'Beef Wellington' ei pitäisi kääntää kirjaimellisesti, ja että 'al dente' tarkoittaa samaa kaikilla kielillä. Tarjoa turisteille ja kansainvälisille vieraille valikoita, jotka luetaan luonnollisesti heidän kielellään.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI-pohjainen ravintolavalikon käännösohjelmisto",
-        "cta": "one-click AI"
+        "cta": "one-click AI",
+        "titleAccent": "ruokalistan käännös"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Yksinkertainen menueditori",
-        "shortDescription": "Vedä, pudota, valmis.{br}{link}Hallitse menuasi{/link} sekunneissa.",
+        "title": "Yksinkertainen",
+        "shortDescription": "Lisää kategorioita, luo annoksia kuvineen ja hintoineen, järjestele uudelleen vedä ja pudota -toiminnolla. Muutokset näkyvät live-ruokalistallasi välittömästi – teknisiä taitoja ei tarvita. {link}Lue lisää{/link}.",
         "description": "Valikon hallinta ei ole koskaan ollut helpompaa. Lisää kategorioita, luo ruokalajeja kuvien ja kuvauksien kanssa, aseta hinnat ja järjestä kaikki yksinkertaisella vedä ja pudota -menetelmällä. Muutokset näkyvät heti live-verkkosivustollasi.",
         "fullDescription": "Unohda monimutkaiset sisällönhallintajärjestelmät. IQ Restin valikkotoimittaja on suunniteltu ravintoloitsijoille, ei verkkokehittäjille. Luo uusi kategoria sekunneissa, lisää ruokalajeja muutamalla napautuksella, lataa kuvia suoraan puhelimestasi. Vedä tuotteita järjestääksesi, vaihda näkyvyyttä loppuneille tuotteille ja näe muutokset live-tilassa heti.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Helppo ravintolavalikon hallintapaneeli",
-        "cta": "Manage your menu"
+        "cta": "Manage your menu",
+        "titleAccent": "ruokalistan muokkain"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "Pöytävarausjärjestelmä",
-        "shortDescription": "Vastaanota varauksia 24/7.{br}{link}Varaukset{/link} suoraan sivustoltasi.",
+        "title": "Pöydänhallinta",
+        "shortDescription": "Asiakkaat varaavat pöytiä suoraan verkkosivustoltasi – 24/7, ilman puhelinsoittoja. Automaattinen tai manuaalinen vahvistus, sähköposti-ilmoitukset ja täydellinen yleiskatsaus kaikista varauksista hallintapaneelissasi. {link}Lue lisää{/link}.",
         "description": "Sisäänrakennettu varausjärjestelmä antaa asiakkaiden varata pöytiä suoraan verkkosivustoltasi. Valitse automaattinen vahvistus saatavuuden mukaan tai tarkista jokainen varaus manuaalisesti. Hallitse kaikkia varauksia hallintapaneelisi kautta.",
         "fullDescription": "Puhelinvaraukset vievät aikaa ja ovat helppo unohtaa. IQ Restin varausjärjestelmä toimii 24/7. Asiakkaat valitsevat päivämäärän, kellonajan ja seurueen koon, ja varaus tapahtuu heti. Voit asettaa automaattisen vahvistuksen pöytien saatavuuden mukaan tai tarkistaa jokaisen pyynnön manuaalisesti. Vähennä ei-tuloja sähköpostivahvistusten avulla.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Verkossa toimiva pöytävarausjärjestelmä ravintoloille",
-        "cta": "Tutustu pöytävarauksiin"
+        "cta": "Tutustu pöytävarauksiin",
+        "titleAccent": "järjestelmä"
       },
       {
         "id": "custom-design",
-        "title": "Video- ja valokuvataustat",
-        "shortDescription": "Luo upeita ensivaikutelmia{br}{link}video- tai kuvataustoilla{/link}.",
+        "title": "Video- ja valokuva",
+        "shortDescription": "Lataa video ravintolasi tunnelmasta tai kaunis ruokakuva ruokalistasi taustaksi. Vangitse asiakkaiden huomio heti ensimmäisestä sekunnista, kun he skannaavat QR-koodisi. {link}Lue lisää{/link}.",
         "description": "Luo unohtumaton ensivaikutelma räätälöidyillä video- tai valokuvataustoilla kotisivullasi. Lataa ravintolasi tunnelmavideo tai kaunis ruoka kuva vangitaksesi asiakkaat heti.",
         "fullDescription": "Ensivaikutelmat ovat tärkeitä. Kun asiakkaat skannaavat QR-koodisi, heidän tulisi vaikuttua heti. Lataa video ravintolasi tunnelmasta, aikakatkaisu keittiöstäsi tai upea kuva allekirjoitusruokalajistasi. Kotisivustasi muuttuu visuaaliseksi kokemukseksi, joka heijastaa ravintolasi persoonallisuutta.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Ravintolaverkkosivusto videotaustalla",
-        "cta": "video or photo backgrounds"
+        "cta": "video or photo backgrounds",
+        "titleAccent": "taustat"
       },
       {
         "id": "color-scheme",
-        "title": "Räätälöity värimaailma",
-        "shortDescription": "Sovita värit brändiisi{br}{link}mukautetuilla aksenteilla{/link}.",
+        "title": "Mukautettu",
+        "shortDescription": "Valitse brändisi väri, ja se näkyy kaikkialla – painikkeissa, korostuksissa, linkeissä. Automaattinen vaalean ja tumman teeman tuki varmistaa, että ruokalistasi näyttää aina ammattimaiselta. {link}Lue lisää{/link}.",
         "description": "Ravintolasi verkkosivuston tulisi vastata brändiäsi. Valitse esiasetetuista värimaailmoista tai valitse tarkka brändivärisi. Yhdistettynä automaattiseen vaalean/tumman teeman tukeen, valikkosi näyttää aina ammattimaiselta.",
         "fullDescription": "Brändin johdonmukaisuus on tärkeää. IQ Rest antaa sinun mukauttaa korostusvärin, jota käytetään koko verkkosivustollasi - painikkeet, korostukset ja interaktiiviset elementit kaikki vastaavat brändiäsi. Valitse huolellisesti valikoiduista esiasetuksista tai syötä tarkka brändivärisi. Järjestelmä varmistaa automaattisesti luettavuuden sekä vaaleissa että tummissa tiloissa.",
         "benefits": [
@@ -469,7 +476,8 @@
           "Esteettömyyteen optimoitu värikontrasti"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Räätälöity värimaailma ja brändäysvaihtoehdot"
+        "imageAlt": "Räätälöity värimaailma ja brändäysvaihtoehdot",
+        "titleAccent": "värimaailma"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "Nettitilaukset QR-menusta",
-        "shortDescription": "Asiakkaat skannaavat, valitsevat ja tilaavat — suoraan menustasi.{br}{link}Lue lisää nettitilauksista{/link}.",
+        "title": "Verkkotilaaminen",
+        "shortDescription": "Asiakkaat skannaavat QR-koodin, selaavat ruokalistaasi ja tekevät tilauksia suoraan – ei sovelluksia, ei provisioita. Tilaukset ilmestyvät välittömästi hallintapaneeliisi pöytänumeron ja tietojen kera. {link}Lue lisää{/link}.",
         "description": "Anna vieraiden tilata suoraan QR-menustasi. Ei sovelluksia, ei provisioita. Tilaukset ilmestyvät välittömästi hallintapaneeliin pöytänumerolla ja tuotetiedoilla.",
         "fullDescription": "Muuta QR-menusi suoraksi tilauskanavaksi. Vieraat skannaavat koodin pöydässään, selaavat menua ja tekevät tilauksensa sekunneissa — ei sovelluslatauksia, ei rekisteröitymistä. Saat tilaukset reaaliajassa hallintapaneeliisi pöytänumerolla, tuotteilla ja asiakkaiden huomautuksilla. Ei provisioita, ei tilauskohtaisia maksuja.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "Nettitilaaminen ravintolan QR-menusta",
-        "cta": "Lue lisää nettitilauksista"
+        "cta": "Lue lisää nettitilauksista",
+        "titleAccent": "QR-menusta"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "Vuosittain",
     "save": "(Säästä 25%)",
     "perMonth": "/kk",
-    "billedYearly": "Laskutetaan vuosittain ({total}).",
+    "billedYearly": "Laskutetaan vuosittain {total}",
     "orMonthly": "Tai maksa {price} kuukausittain.",
     "forever": "Ilmainen ikuisesti",
     "popular": "Suosituin",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "Onko kysyttävää?",
     "questionsBody": "Kirjoita meille — vastaamme kaikkiin kysymyksiisi ja autamme luomaan menusi.",
-    "questionsButton": "Kirjoita WhatsAppissa"
+    "questionsButton": "Kirjoita WhatsAppissa",
+    "badge": "Ei provisioita · Ei sopimuksia",
+    "heroTitle": "Yksi suunnitelma.",
+    "heroTitleAccent": "Kaikki sisältyy.",
+    "heroSub": "QR-menu, tilausjärjestelmä, tekoälykäännös, ravintolan verkkosivut & varaukset.",
+    "heroSub2": "Yksi yksinkertainen hinta.",
+    "planName": "Täydellinen suunnitelma",
+    "monthsFree": "2 kuukautta ilmaiseksi",
+    "allFeatures": [
+      "Rajoittamaton digitaalinen QR-menu",
+      "Tekoälykäännös (35 kieltä)",
+      "Ravintolan verkkosivut sisältyvät",
+      "Online-varausjärjestelmä",
+      "Analytiikka & tilastot",
+      "Ei IQ Rest -brändäystä",
+      "Prioriteettituki"
+    ],
+    "trialCta": "Kokeile ilmaiseksi 14 päivää",
+    "trialSub": "Ei luottokorttia · Peruuta milloin tahansa",
+    "youSave": "Säästät {amount}",
+    "trustSecure": "Turvallinen maksu Stripellä",
+    "trustNoLock": "Ei sitoutumista",
+    "trustQuick": "Aktiivinen 10 minuutissa",
+    "trustRestaurants": "500+ ravintolaa",
+    "perMonthFull": "kuukaudessa"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "Päivitä"
     },
     "auth": {
-      "title": "Luo Menu",
-      "subtitle": "Syötä sähköpostisi luodaksesi uuden menun",
+      "title": "Tervetuloa",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Syötä sähköpostisi jatkaaksesi",
       "consent": {
         "text": "Jatkamalla hyväksyt meidän",
         "terms": "Ehdot",
@@ -1598,7 +1632,8 @@
         "emailRequired": "Syötä sähköpostiosoitteesi.",
         "emailInvalid": "Syötä kelvollinen sähköpostiosoite."
       },
-      "or": "tai"
+      "or": "tai",
+      "continueGoogle": "Jatka Googlella"
     },
     "analytics": {
       "monthlyUsage": "Kuukausittainen käyttö",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "Kuva on liian suuri. Enimmäiskoko on 20 Mt.",
       "scanErrorTooMany": "Liian monta kuvaa. Enintään 5 kuvaa.",
       "scanSuccess": "Menu skannattu onnistuneesti!",
-      "scanAddMore": "Lisää lisää",
+      "scanAddMore": "Lisää tiedostoja",
       "scanStart": "Skannaa",
       "scanPoolTitle": "Menusivut",
       "scanPoolSubtitle": "Lisää kuvia tai PDF-tiedostoja paperimenustasi. Enintään 5 tiedostoa.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "Voit muuttaa sen myöhemmin",
       "namePlaceholder": "esim. Marion Pizzeria",
       "error": "Jokin meni pieleen",
-      "menuSubtitle": "Rakennetaan menusi.",
+      "back": "Takaisin",
+      "menuSubtitle": "Valitse miten haluat luoda ruokalistasi",
       "aiImportTitle": "AI-pikatuonti",
       "aiImportDescription": "Säästä tunteja! Lataa kuva tai PDF, niin tekoäly hoitaa loput.",
       "aiImportButton": "Skannaa menu",

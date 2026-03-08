@@ -127,7 +127,7 @@ export function LanguageSelector() {
                 className="w-full justify-between h-auto py-3"
               >
                 <span className="flex items-center gap-3">
-                  <span className="text-xs text-muted-foreground uppercase w-6">
+                  <span className="text-base text-muted-foreground uppercase w-6">
                     {code}
                   </span>
                   <span>{LANGUAGE_NAMES[code] || code}</span>

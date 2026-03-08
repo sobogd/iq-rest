@@ -161,7 +161,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
   ) => {
     if (value === "value") {
       return (
-        <span className="text-sm font-medium">
+        <span className="text-base font-medium">
           {t(`values.${planId}.${featureKey}`)}
         </span>
       );
@@ -203,7 +203,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-0 right-0 flex justify-center">
-                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-base font-medium">
                         {t("popular")}
                       </span>
                     </div>
@@ -223,15 +223,15 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                         <span className="text-muted-foreground">{t("perMonth")}</span>
                       </div>
                       {plan.id === "free" ? (
-                        <div className="text-sm text-muted-foreground">
+                        <div className="text-base text-muted-foreground">
                           {t("forever")}
                         </div>
                       ) : (
                         <div className="flex items-center gap-2">
-                          <span className="text-sm text-muted-foreground line-through">
+                          <span className="text-base text-muted-foreground line-through">
                             {formatPrice(currencyPricing.monthly, currency)}
                           </span>
-                          <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                          <span className="text-base font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
                             -{Math.round((1 - currencyPricing.yearly / currencyPricing.monthly) * 100)}%
                           </span>
                         </div>
@@ -242,7 +242,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                         (highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <Check className="h-5 w-5 text-foreground/70 shrink-0 mt-0.5" />
-                            <span className="text-sm">{highlight}</span>
+                            <span className="text-base">{highlight}</span>
                           </li>
                         )
                       )}
@@ -331,7 +331,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
                       index % 2 === 0 ? "bg-muted/30" : ""
                     )}
                   >
-                    <td className="py-4 px-4 text-sm font-medium">
+                    <td className="py-4 px-4 text-base font-medium">
                       {t(`features.${feature.key}`)}
                     </td>
                     <td className="py-4 px-4 text-center">

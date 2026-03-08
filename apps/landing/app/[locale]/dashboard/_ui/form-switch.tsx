@@ -29,9 +29,9 @@ export function FormSwitch({
       {label && <Label htmlFor={switchId}>{label}</Label>}
       <label
         htmlFor={switchId}
-        className="flex items-center justify-between min-h-12 py-2 px-4 rounded-xl border border-border bg-muted/30 cursor-pointer gap-3"
+        className="flex items-center justify-between min-h-10 py-2 px-4 rounded-[15px] border border-border bg-muted/30 cursor-pointer gap-3"
       >
-        <span className="text-base md:text-sm leading-tight">{checked ? activeText : inactiveText}</span>
+        <span className="text-base leading-tight">{checked ? activeText : inactiveText}</span>
         <Switch
           id={switchId}
           checked={checked}

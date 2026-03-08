@@ -296,6 +296,7 @@ Rules:
       data: {
         name: scanResult.restaurantName || `${scanResult.cuisineType} Restaurant`,
         onboardingStep: 2,
+        trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
       },
     });
 

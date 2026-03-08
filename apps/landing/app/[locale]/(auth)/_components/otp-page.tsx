@@ -101,9 +101,9 @@ export function OtpPage({ email }: OtpPageProps) {
         await analytics.linkSession(data.userId);
 
         // Redirect based on onboarding step
-        const step = data.onboardingStep ?? 2;
-        if (step < 2) {
-          router.replace("/onboarding/name");
+        const step = data.onboardingStep ?? 0;
+        if (step < 3) {
+          router.replace("/onboarding");
         } else {
           router.replace("/dashboard");
         }
@@ -126,49 +126,45 @@ export function OtpPage({ email }: OtpPageProps) {
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center p-6 md:p-10">
-      <div className="w-full max-w-[280px]">
+      <div className="w-full max-w-[280px] lg:max-w-[360px]">
         <div className="grid gap-6">
-          <div className="grid gap-2">
-            <h1 className="text-2xl font-bold">{t("verifyTitle")}</h1>
-            <p className="text-muted-foreground">
+          <div className="grid gap-2 text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">{t("verifyTitle")}</h1>
+            <p className="text-base md:text-lg text-muted-foreground">
               {t("verifySubtitle", { email })}
             </p>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form className="mt-4" onSubmit={handleSubmit}>
             <div className="grid gap-4">
               {status === "error" && errorMessage && (
-                <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm">
+                <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-base">
                   {errorMessage}
                 </div>
               )}
 
-              <div className="grid gap-1.5">
-                <Input
-                  ref={otpInputRef}
-                  id="otp"
-                  type="text"
-                  inputMode="numeric"
-                  maxLength={6}
-                  placeholder="000000"
-                  required
-                  value={otp}
-                  onChange={(e) => {
-                    const value = e.target.value.replace(/\D/g, "").slice(0, 6);
-                    setOtp(value);
-                  }}
-                  onFocus={() => track(DashboardEvent.FOCUSED_OTP_INPUT)}
-                  disabled={status === "loading"}
-                  className="text-center tracking-widest"
-                />
-                <p className="text-xs text-muted-foreground/70 text-center">
-                  {t("checkSpam")}
-                </p>
-              </div>
+              <Input
+                ref={otpInputRef}
+                id="otp"
+                type="text"
+                inputMode="numeric"
+                maxLength={6}
+                placeholder="000000"
+                required
+                value={otp}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/\D/g, "").slice(0, 6);
+                  setOtp(value);
+                }}
+                onFocus={() => track(DashboardEvent.FOCUSED_OTP_INPUT)}
+                disabled={status === "loading"}
+                className="text-center tracking-widest lg:h-auto lg:py-2.5 lg:text-lg"
+              />
 
               <Button
                 type="submit"
                 disabled={status === "loading" || otp.length !== 6}
+                className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
               >
                 {status === "loading" && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -178,7 +174,7 @@ export function OtpPage({ email }: OtpPageProps) {
 
               <div className="flex items-center justify-between">
                 <p
-                  className="text-xs text-muted-foreground/70 cursor-pointer underline"
+                  className="text-base text-muted-foreground/70 cursor-pointer underline"
                   onClick={() => {
                     track(DashboardEvent.CLICKED_CHANGE_EMAIL);
                     window.location.href = `/${locale}/login`;
@@ -191,7 +187,7 @@ export function OtpPage({ email }: OtpPageProps) {
                   type="button"
                   onClick={handleResend}
                   disabled={cooldown > 0 || resendStatus === "loading"}
-                  className="text-xs text-muted-foreground/70 underline disabled:opacity-50 disabled:no-underline disabled:cursor-default cursor-pointer"
+                  className="text-base text-muted-foreground/70 underline disabled:opacity-50 disabled:no-underline disabled:cursor-default cursor-pointer"
                 >
                   {resendStatus === "loading" ? (
                     <Loader2 className="h-3 w-3 animate-spin" />
@@ -206,7 +202,12 @@ export function OtpPage({ email }: OtpPageProps) {
               </div>
             </div>
           </form>
+
         </div>
+
+        <p className="text-base text-muted-foreground/40 text-center mt-12">
+          {t("checkSpam")}
+        </p>
       </div>
     </div>
   );

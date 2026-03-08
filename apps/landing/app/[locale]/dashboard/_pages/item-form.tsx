@@ -106,7 +106,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
   const [originalTranslations, setOriginalTranslations] = useState<Record<string, TranslationData>>({});
 
   const isEdit = !!id;
-  const hasActiveSubscription = subscriptionStatus === "ACTIVE" && currentPlan !== "FREE";
+  const hasActiveSubscription = true;
 
   const hasChanges = useMemo(() => {
     if (!isEdit) {

@@ -148,7 +148,9 @@ export async function GET() {
         .sort((a, b) => b.count - a.count)
         .slice(0, 10);
 
-    const limit = company.plan === "FREE" ? company.scanLimit : Infinity;
+    const { getCompanyAccess } = await import("@/lib/access");
+    const access = getCompanyAccess(company);
+    const limit = access.hasScanLimit ? access.scanLimit : Infinity;
 
     return NextResponse.json({
       plan: company.plan,

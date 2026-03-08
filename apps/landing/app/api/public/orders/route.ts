@@ -98,31 +98,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "not_found" }, { status: 404 });
     }
 
-    const { plan, orderLimit } = restaurant.company;
     const mode = restaurant.orderMode;
 
     // Save to DB only for internal/both modes
     if (mode === "internal" || mode === "both") {
-      // Free plan: check monthly limit
-      if (plan === "FREE") {
-        const now = new Date();
-        const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-
-        const monthlyOrders = await prisma.order.count({
-          where: {
-            companyId: restaurant.companyId,
-            createdAt: { gte: startOfMonth },
-          },
-        });
-
-        if (monthlyOrders >= orderLimit) {
-          return NextResponse.json(
-            { error: "limit_reached", limit: orderLimit },
-            { status: 429 }
-          );
-        }
-      }
-
       if (items && Array.isArray(items) && items.length > 0) {
         const orderItems = items.map((item: OrderItemPayload) => ({
           id: item.id,

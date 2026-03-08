@@ -204,7 +204,7 @@ export default async function FeaturePage({
       <section className="pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-base font-medium">
               {t("hero.badge")}
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -217,7 +217,7 @@ export default async function FeaturePage({
               <HeroCreateButton>{t("hero.cta")}</HeroCreateButton>
               <MenuPreviewModal buttonText={t("hero.ctaDemo")} menuUrl="/m/love-eatery" />
             </div>
-            <p className="text-xs md:text-sm text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               {t("hero.noCreditCard")}
             </p>
           </div>
@@ -306,7 +306,7 @@ export default async function FeaturePage({
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start md:items-center gap-2 px-0 py-1 md:px-4 md:py-2.5 md:bg-background md:rounded-full md:border w-full md:w-auto">
                     <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5 md:mt-0" />
-                    <span className="text-sm md:text-base text-left">{benefit}</span>
+                    <span className="text-base text-left">{benefit}</span>
                   </div>
                 ))}
               </div>

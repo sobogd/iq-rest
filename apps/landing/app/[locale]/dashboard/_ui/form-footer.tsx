@@ -11,7 +11,7 @@ interface FormFooterProps {
 
 export function FormFooter({ saving, hasChanges, saveText }: FormFooterProps) {
   return (
-    <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-xl">
+    <div className="flex items-center justify-end gap-3 px-6 py-4 border-t bg-background shrink-0 rounded-b-[15px]">
       <Button type="submit" disabled={saving || !hasChanges}>
         {saving ? (
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />

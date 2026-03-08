@@ -70,8 +70,8 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
         ) : (
           <div className="absolute inset-0 bg-black" />
         )}
-        {/* Powered by IQ Rest - only for free plan */}
-        {restaurant.company.plan === "FREE" && (
+        {/* Powered by IQ Rest - only when trial expired */}
+        {restaurant.company.plan === "FREE" && restaurant.company.trialEndsAt !== null && restaurant.company.trialEndsAt <= new Date() && (
           <a
             href={`https://iq-rest.com?from=qrmenu&slug=${slug}`}
             target="_blank"

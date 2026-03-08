@@ -3,6 +3,7 @@ import { cookies, headers } from "next/headers";
 import { getTranslations, getLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
+import { getCompanyAccess } from "@/lib/access";
 import { DashboardShell } from "./_components/shell";
 import { getScanUsage } from "./_lib/queries";
 import type { DashboardTranslations } from "./_context/dashboard-context";
@@ -30,17 +31,14 @@ export default async function DashboardLayout({
     }),
     prisma.company.findUnique({
       where: { id: companyId },
-      select: { plan: true, createdAt: true, upsellShownAt: true, onboardingStep: true },
+      select: { plan: true, subscriptionStatus: true, trialEndsAt: true, scanLimit: true, onboardingStep: true },
     }),
   ]);
 
   const hasRestaurant = Boolean(restaurant?.title && restaurant.title.trim().length > 0);
 
-  if (!hasRestaurant) redirect("/onboarding/name");
-
-  // Redirect to onboarding if not completed
-  if (company && company.onboardingStep < 3) {
-    redirect("/onboarding/menu");
+  if (!hasRestaurant || (company && company.onboardingStep < 3)) {
+    redirect("/onboarding");
   }
 
   // Check if admin is impersonating
@@ -51,25 +49,16 @@ export default async function DashboardLayout({
     ? { originalEmail: adminOriginalEmail, currentEmail: currentEmail ?? "" }
     : undefined;
 
-  // Upsell redirect for FREE users
-  if (company && company.plan === "FREE" && !impersonation) {
-    const headerStore = await headers();
-    const pathname = headerStore.get("x-pathname") || "";
-    const isUpgradePage = pathname.includes("/dashboard/upgrade");
+  // Redirect to upgrade page if trial has expired
+  if (company && !impersonation) {
+    const access = getCompanyAccess(company);
+    if (access.trialExpired) {
+      const headerStore = await headers();
+      const pathname = headerStore.get("x-pathname") || "";
+      const isUpgradePage = pathname.includes("/dashboard/upgrade");
 
-    if (!isUpgradePage) {
-      const now = Date.now();
-      const fiveDaysMs = 5 * 24 * 60 * 60 * 1000;
-      const twoDaysMs = 2 * 24 * 60 * 60 * 1000;
-      const accountAge = now - company.createdAt.getTime();
-
-      if (accountAge > fiveDaysMs) {
-        const shouldShowUpsell = !company.upsellShownAt
-          || (now - company.upsellShownAt.getTime() > twoDaysMs);
-
-        if (shouldShowUpsell) {
-          redirect("/dashboard/upgrade");
-        }
+      if (!isUpgradePage) {
+        redirect("/dashboard/upgrade");
       }
     }
   }

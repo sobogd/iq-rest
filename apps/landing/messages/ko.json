@@ -9,7 +9,7 @@
       "changelog": "변경 로그",
       "contacts": "연락처"
     },
-    "getStarted": "무료로 만들기",
+    "getStarted": "시작하기",
     "selectLanguage": "언어 선택",
     "selectLanguageDescription": "웹사이트의 선호 언어를 선택하세요.",
     "searchLanguage": "언어 검색...",
@@ -21,15 +21,16 @@
       "description": "이메일만으로 QR 메뉴와 레스토랑 웹사이트를 만드세요. 즉시 설정, 모바일 관리, AI 번역, 일일 분석. 레스토랑과 카페에 완벽합니다. 오늘 무료로 시작하세요."
     },
     "hero": {
-      "title": "전문적인 QR Menu & 웹사이트를 몇 분 만에 만드세요",
-      "subtitle": "이메일만 입력하면 QR 메뉴, 연락처 페이지, 다국어 지원, 모던한 디자인을 갖춘 완벽한 레스토랑 웹사이트를 얻을 수 있습니다. 휴대폰에서 모든 것을 설정하세요.",
+      "title": "웹사이트 & QR 메뉴, 주문 & 예약.",
+      "subtitle": "시작하려면 이메일을 입력하세요.",
       "cta": {
         "create": "메뉴 만들기",
         "view": "요금 보기",
-        "noCreditCard": "월 320회 스캔까지 무료. 신용카드 필요 없음.",
+        "noCreditCard": "14일 무료 체험. 신용카드 불필요.",
         "trusted": "전 세계 500개 이상의 레스토랑이 신뢰합니다",
         "title": "디지털로 전환할 준비가 되셨나요?",
-        "subtitle": "몇 분 안에 전문적인 QR 메뉴와 레스토랑 웹사이트를 만드세요. 영구 무료 제공, 신용카드 필요 없음."
+        "subtitle": "몇 분 안에 전문적인 QR 메뉴와 레스토랑 웹사이트를 만드세요. 영구 무료 제공, 신용카드 필요 없음.",
+        "demo": "데모 보기"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "카페",
         "bars": "바",
         "hotels": "호텔"
-      }
+      },
+      "titleAccent": "몇 분 안에 준비됩니다."
     },
     "demo": {
       "title": "고객이 보는 그대로 체험해 보세요",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100% 모바일 친화적 관리",
-        "shortDescription": "휴대폰에서 메뉴 편집.{br}{link}사용법 보기{/link}.",
+        "title": "100% 모바일 친화적",
+        "shortDescription": "요리를 추가하고, 사진을 업로드하고, 가격을 변경하고, 모든 것을 휴대폰에서 직접 관리하세요. 전체 대시보드가 모바일에 최적화되어 있어 컴퓨터가 전혀 필요 없습니다. {link}자세히 알아보기{/link}.",
         "description": "휴대폰에서 직접 카테고리, 요리, 사진을 추가하고 전체 레스토랑 웹사이트를 관리하세요. 대시보드가 모바일 기기에 완전히 최적화되어 있어 커피 휴식 시간에 메뉴를 업데이트하거나 이동 중에 일일 스페셜을 추가할 수 있습니다.",
         "fullDescription": "레스토랑 오너는 항상 컴퓨터 앞에 있지 않은 바쁜 사람들입니다. 그래서 IQ Rest를 모바일 기기에서 완벽하게 작동하도록 만들었습니다. 새 요리 추가부터 가격 업데이트까지 모든 기능이 터치 스크린에 맞게 설계되었습니다. 새 요리 사진을 찍어 즉시 업로드하세요. 주방에 서서 오늘의 스페셜을 변경하세요.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "스마트폰에서 레스토랑 메뉴 관리",
-        "cta": "사용법 보기"
+        "cta": "사용법 보기",
+        "titleAccent": "관리"
       },
       {
         "id": "ai-translation",
-        "title": "AI 기반 메뉴 번역",
-        "shortDescription": "전체 메뉴 번역{br}{link}원클릭 AI 번역{/link}으로.",
+        "title": "AI 기반",
+        "shortDescription": "클릭 한 번으로 전체 메뉴를 35개 언어로 번역하세요. 저희 AI는 요리 맥락을 이해하여 요리 이름과 설명이 어떤 언어로든 자연스럽게 읽히도록 합니다. {link}자세히 알아보기{/link}.",
         "description": "음식 맥락을 이해하는 지능형 AI 번역으로 국제 고객에게 도달하세요. 요리 이름과 설명이 정확하게 번역되어 요리 용어를 보존하고 모든 언어에서 의미가 통합니다.",
         "fullDescription": "일반 번역기는 종종 음식 메뉴에서 실패합니다 - 맥락을 이해하지 못하고 문자 그대로 번역합니다. 저희 AI는 레스토랑 콘텐츠에 특별히 훈련되었습니다. '비프 웰링턴'을 문자 그대로 번역하면 안 된다는 것을 알고, '알 덴테'가 모든 언어에서 동일한 의미라는 것을 알고 있습니다. 관광객과 국제 손님에게 그들의 언어로 자연스럽게 읽히는 메뉴를 제공하세요.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AI 기반 레스토랑 메뉴 번역 인터페이스",
-        "cta": "원클릭 AI 번역"
+        "cta": "원클릭 AI 번역",
+        "titleAccent": "메뉴 번역"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "간단한 메뉴 편집기",
-        "shortDescription": "드래그, 드롭, 완료.{br}{link}메뉴 관리{/link}를 몇 초 만에.",
+        "title": "간편한",
+        "shortDescription": "카테고리를 추가하고, 사진과 가격으로 요리를 만들고, 드래그 앤 드롭으로 순서를 변경하세요. 변경 사항은 라이브 메뉴에 즉시 반영되며, 기술적인 지식이 필요 없습니다. {link}자세히 알아보기{/link}.",
         "description": "메뉴 관리가 이보다 쉬웠던 적이 없습니다. 카테고리를 추가하고, 사진과 설명이 포함된 요리를 만들고, 가격을 설정하고, 간단한 드래그 앤 드롭으로 모든 것을 정리하세요. 변경 사항이 라이브 웹사이트에 즉시 나타납니다.",
         "fullDescription": "복잡한 콘텐츠 관리 시스템은 잊으세요. IQ Rest의 메뉴 편집기는 웹 개발자가 아닌 레스토랑 오너를 위해 설계되었습니다. 몇 초 만에 새 카테고리를 만들고, 몇 번의 탭으로 요리를 추가하고, 휴대폰에서 직접 사진을 업로드하세요. 항목을 드래그하여 재정렬하고, 품절 항목의 가시성을 전환하고, 변경 사항이 즉시 반영되는 것을 확인하세요.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "쉬운 레스토랑 메뉴 관리 대시보드",
-        "cta": "메뉴 관리"
+        "cta": "메뉴 관리",
+        "titleAccent": "메뉴 편집기"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "테이블 예약 시스템",
-        "shortDescription": "24시간 예약 접수.{br}{link}예약{/link}을 웹사이트에서 직접.",
+        "title": "테이블",
+        "shortDescription": "고객이 웹사이트에서 24시간 언제든지 직접 테이블을 예약할 수 있으며, 전화 통화가 필요 없습니다. 자동 또는 수동 확인, 이메일 알림, 대시보드에서 모든 예약 내역을 한눈에 확인할 수 있습니다. {link}자세히 알아보기{/link}.",
         "description": "내장된 예약 시스템으로 고객이 웹사이트에서 직접 테이블을 예약할 수 있습니다. 가용성에 따른 자동 확인을 선택하거나 각 예약을 수동으로 검토하세요. 대시보드에서 모든 예약을 관리하세요.",
         "fullDescription": "전화 예약은 시간이 많이 걸리고 놓치기 쉽습니다. IQ Rest의 예약 시스템은 24시간 작동합니다. 고객이 날짜, 시간, 인원을 선택하고 즉시 예약합니다. 테이블 가용성에 따른 자동 확인을 설정하거나 각 요청을 수동으로 검토할 수 있습니다. 이메일 확인으로 노쇼를 줄이세요.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "레스토랑 온라인 테이블 예약 시스템",
-        "cta": "테이블 예약 알아보기"
+        "cta": "테이블 예약 알아보기",
+        "titleAccent": "관리 시스템"
       },
       {
         "id": "custom-design",
-        "title": "비디오 및 사진 배경",
-        "shortDescription": "인상적인 첫인상을{br}{link}비디오 또는 사진 배경{/link}으로 만들기.",
+        "title": "동영상 및 사진",
+        "shortDescription": "레스토랑 분위기를 담은 동영상이나 아름다운 음식 사진을 메뉴 배경으로 업로드하세요. 고객이 QR 코드를 스캔하는 순간부터 시선을 사로잡을 수 있습니다. {link}자세히 알아보기{/link}.",
         "description": "홈페이지의 맞춤 비디오 또는 사진 배경으로 기억에 남는 첫인상을 만드세요. 레스토랑 분위기 비디오나 아름다운 음식 사진을 업로드하여 고객을 즉시 매료시키세요.",
         "fullDescription": "첫인상이 중요합니다. 고객이 QR 코드를 스캔할 때 즉시 감동을 받아야 합니다. 레스토랑 분위기 비디오, 주방 타임랩스, 시그니처 요리의 멋진 사진을 업로드하세요. 홈페이지가 레스토랑의 개성을 반영하는 시각적 경험이 됩니다.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "비디오 배경이 있는 레스토랑 웹사이트",
-        "cta": "비디오 및 사진 배경"
+        "cta": "비디오 및 사진 배경",
+        "titleAccent": "배경"
       },
       {
         "id": "color-scheme",
-        "title": "맞춤 색상 구성표",
-        "shortDescription": "브랜드에 맞는 색상으로{br}{link}맞춤 액센트{/link} 설정.",
+        "title": "맞춤형",
+        "shortDescription": "브랜드 색상을 선택하면 버튼, 강조 표시, 링크 등 모든 곳에 적용됩니다. 자동 라이트/다크 테마 지원으로 메뉴가 항상 전문적으로 보입니다. {link}자세히 알아보기{/link}.",
         "description": "레스토랑 웹사이트는 브랜드와 일치해야 합니다. 프리셋 색상 구성표 중에서 선택하거나 정확한 브랜드 색상을 선택하세요. 자동 라이트/다크 테마 지원과 결합하여 메뉴가 항상 전문적으로 보입니다.",
         "fullDescription": "브랜드 일관성이 중요합니다. IQ Rest를 사용하면 웹사이트 전체에서 사용되는 강조 색상을 사용자 정의할 수 있습니다 - 버튼, 하이라이트, 인터랙티브 요소가 모두 브랜드와 일치합니다. 신중하게 선별된 프리셋 중에서 선택하거나 정확한 브랜드 색상을 입력하세요. 시스템이 라이트 및 다크 모드 모두에서 가독성을 자동으로 보장합니다.",
         "benefits": [
@@ -469,7 +476,8 @@
           "접근성을 위해 최적화된 색상 대비"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "맞춤 색상 구성표 및 브랜딩 옵션"
+        "imageAlt": "맞춤 색상 구성표 및 브랜딩 옵션",
+        "titleAccent": "색상 테마"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "QR 메뉴에서 온라인 주문",
-        "shortDescription": "고객이 스캔하고, 선택하고, 주문합니다 — 메뉴에서 바로.{br}{link}온라인 주문에 대해 자세히 알아보기{/link}.",
+        "title": "온라인 주문",
+        "shortDescription": "고객이 QR 코드를 스캔하여 메뉴를 보고 바로 주문할 수 있습니다. 앱 설치나 수수료는 전혀 없습니다. 주문은 테이블 번호와 상세 정보와 함께 대시보드에 즉시 표시됩니다. {link}자세히 알아보기{/link}.",
         "description": "손님이 QR 메뉴에서 직접 주문할 수 있습니다. 앱도 수수료도 없습니다. 주문은 테이블 번호와 항목 상세와 함께 대시보드에 즉시 표시됩니다.",
         "fullDescription": "QR 메뉴를 직접 주문 채널로 전환하세요. 손님이 테이블의 코드를 스캔하고, 메뉴를 둘러보고, 몇 초 만에 주문을 완료합니다 — 앱 다운로드도 회원가입도 필요 없습니다. 테이블 번호, 항목, 고객 메모와 함께 실시간으로 대시보드에 주문이 들어옵니다. 수수료 없음, 주문당 비용 없음.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "레스토랑 QR 메뉴에서 온라인 주문",
-        "cta": "온라인 주문에 대해 자세히 알아보기"
+        "cta": "온라인 주문에 대해 자세히 알아보기",
+        "titleAccent": "QR 메뉴를 통해"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "연간",
     "save": "(25% 절약)",
     "perMonth": "/월",
-    "billedYearly": "연간 청구 ({total}).",
+    "billedYearly": "연간 청구 {total}",
     "orMonthly": "또는 월 {price} 결제.",
     "forever": "영원히 무료",
     "popular": "가장 인기",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "궁금한 점이 있으신가요?",
     "questionsBody": "문의해 주세요 — 모든 질문에 답변드리고 메뉴 만들기를 도와드리겠습니다.",
-    "questionsButton": "WhatsApp으로 문의"
+    "questionsButton": "WhatsApp으로 문의",
+    "badge": "수수료 없음 · 계약 없음",
+    "heroTitle": "하나의 플랜.",
+    "heroTitleAccent": "모든 것이 포함됩니다.",
+    "heroSub": "QR 메뉴, 주문 시스템, AI 번역, 레스토랑 웹사이트 및 예약.",
+    "heroSub2": "하나의 간단한 가격.",
+    "planName": "컴플리트 플랜",
+    "monthsFree": "2개월 무료",
+    "allFeatures": [
+      "무제한 디지털 QR 메뉴",
+      "AI 번역 (35개 언어)",
+      "레스토랑 웹사이트 포함",
+      "온라인 예약 시스템",
+      "분석 및 통계",
+      "IQ Rest 브랜딩 없음",
+      "우선 지원"
+    ],
+    "trialCta": "14일 무료 체험",
+    "trialSub": "신용카드 필요 없음 · 언제든지 취소 가능",
+    "youSave": "{amount} 절약",
+    "trustSecure": "Stripe로 안전한 결제",
+    "trustNoLock": "약정 없음",
+    "trustQuick": "10분 안에 활성화",
+    "trustRestaurants": "500개 이상의 레스토랑",
+    "perMonthFull": "월별"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "업그레이드"
     },
     "auth": {
-      "title": "메뉴 만들기",
-      "subtitle": "이메일을 입력하여 새 메뉴를 만드세요",
+      "title": "환영합니다",
+      "titleAccent": "IQ Rest",
+      "subtitle": "계속하려면 이메일을 입력하세요",
       "consent": {
         "text": "계속하면 다음에 동의하게 됩니다",
         "terms": "이용약관",
@@ -1598,7 +1632,8 @@
         "emailRequired": "이메일을 입력해 주세요.",
         "emailInvalid": "유효한 이메일을 입력해 주세요."
       },
-      "or": "또는"
+      "or": "또는",
+      "continueGoogle": "Google로 계속하기"
     },
     "analytics": {
       "monthlyUsage": "월간 사용량",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "이미지가 너무 큽니다. 최대 크기는 20MB입니다.",
       "scanErrorTooMany": "이미지가 너무 많습니다. 최대 5장입니다.",
       "scanSuccess": "메뉴가 성공적으로 스캔되었습니다!",
-      "scanAddMore": "더 추가",
+      "scanAddMore": "파일 추가",
       "scanStart": "스캔",
       "scanPoolTitle": "메뉴 페이지",
       "scanPoolSubtitle": "종이 메뉴의 사진 또는 PDF 파일을 추가하세요. 최대 5개 파일.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "나중에 변경할 수 있습니다",
       "namePlaceholder": "예: 마리오 피자",
       "error": "문제가 발생했습니다",
-      "menuSubtitle": "메뉴를 만들어 봅시다.",
+      "back": "뒤로",
+      "menuSubtitle": "메뉴를 만드는 방법을 선택하세요",
       "aiImportTitle": "AI 즉시 가져오기",
       "aiImportDescription": "몇 시간의 작업을 절약하세요! 사진이나 PDF를 업로드하면 AI가 나머지를 처리합니다.",
       "aiImportButton": "메뉴 스캔",

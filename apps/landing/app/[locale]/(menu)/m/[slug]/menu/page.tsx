@@ -93,19 +93,8 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
     },
   });
 
-  // Check order limit for internal/both on FREE plan
-  let ordersAvailable = restaurant.ordersEnabled;
+  const ordersAvailable = restaurant.ordersEnabled;
   const mode = restaurant.orderMode || "whatsapp";
-  if (ordersAvailable && (mode === "internal" || mode === "both") && restaurant.company.plan === "FREE") {
-    const now = new Date();
-    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const monthlyOrders = await prisma.order.count({
-      where: { companyId: restaurant.companyId, createdAt: { gte: startOfMonth } },
-    });
-    if (monthlyOrders >= restaurant.company.orderLimit) {
-      ordersAvailable = false;
-    }
-  }
 
   // Helper to get translated value
   const getTranslatedValue = (

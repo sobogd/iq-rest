@@ -15,8 +15,8 @@ export async function POST(request: NextRequest) {
 
     const { priceLookupKey, locale = "en" } = await request.json();
 
-    // Validate base price lookup key
-    const validKeys = Object.values(PRICE_LOOKUP_KEYS);
+    // Only allow BASIC lookup keys (single plan model)
+    const validKeys = [PRICE_LOOKUP_KEYS.BASIC_MONTHLY, PRICE_LOOKUP_KEYS.BASIC_YEARLY];
     if (!validKeys.includes(priceLookupKey)) {
       return NextResponse.json(
         { error: "Invalid price lookup key" },

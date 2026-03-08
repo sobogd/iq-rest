@@ -59,7 +59,7 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [generating, setGenerating] = useState(false);
-  const canGenerate = isAdmin || plan !== "FREE";
+  const canGenerate = true;
 
   // General fields
   const initName = initialRestaurant?.title || "";

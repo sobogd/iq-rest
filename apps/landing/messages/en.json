@@ -9,7 +9,7 @@
       "changelog": "Changelog",
       "contacts": "Contacts"
     },
-    "getStarted": "Create Free",
+    "getStarted": "Get Started",
     "selectLanguage": "Select Language",
     "selectLanguageDescription": "Choose your preferred language for the website.",
     "searchLanguage": "Search language...",
@@ -21,12 +21,14 @@
       "description": "Create QR menu and restaurant website with just your email. Instant setup, mobile-friendly management, AI translations, daily analytics. Perfect for restaurants and cafes. Start free today."
     },
     "hero": {
-      "title": "Create a Professional QR Menu & Website in Minutes",
-      "subtitle": "Just enter your email and get a complete restaurant website with QR menu, contact page, multilingual support, and modern design. Setup everything from your phone.",
+      "title": "Website & QR Menu, Orders & Reservations.",
+      "titleAccent": "Ready in Minutes.",
+      "subtitle": "Just enter your email to get started.",
       "cta": {
         "create": "Create Menu",
         "view": "See Pricing",
-        "noCreditCard": "Free up to 320 scans/mo. No credit card required.",
+        "demo": "View Demo",
+        "noCreditCard": "14-day free trial. No credit card required.",
         "trusted": "Trusted by 500+ restaurants worldwide",
         "title": "Ready to Go Digital?",
         "subtitle": "Create your professional QR menu and restaurant website in minutes. Free forever, no credit card required."
@@ -321,8 +323,9 @@
       },
       {
         "id": "mobile-management",
-        "title": "100% Mobile-Friendly Management",
-        "shortDescription": "Edit your menu anywhere from your phone.{br}{link}See how it works{/link}.",
+        "title": "100% Mobile-Friendly",
+        "titleAccent": "Management",
+        "shortDescription": "Add dishes, upload photos, change prices, and manage everything directly from your phone. The entire dashboard is optimized for mobile — no computer needed, ever. {link}Learn more{/link}.",
         "description": "Add categories, dishes, photos, and manage your entire restaurant website directly from your phone. Our dashboard is fully optimized for mobile devices, so you can update your menu during a coffee break or add daily specials on the go.",
         "fullDescription": "Restaurant owners are busy people who aren't always at a computer. That's why we built IQ Rest to work perfectly on mobile devices. Every feature, from adding new dishes to updating prices, is designed for touch screens. Take a photo of a new dish and upload it instantly. Change today's special while standing in the kitchen.",
         "benefits": [
@@ -338,8 +341,9 @@
       },
       {
         "id": "ai-translation",
-        "title": "AI-Powered Menu Translation",
-        "shortDescription": "Translate your entire menu{br}with {link}one-click AI translation{/link}.",
+        "title": "AI-Powered",
+        "titleAccent": "Menu Translation",
+        "shortDescription": "Translate your entire menu into 35 languages with one click. Our AI understands culinary context — dish names and descriptions read naturally in any language. {link}Learn more{/link}.",
         "description": "Reach international customers with intelligent AI translation that understands food context. Your dish names and descriptions are translated accurately, preserving culinary terms and making sense in any language.",
         "fullDescription": "Generic translators often fail with food menus - they translate literally without understanding context. Our AI is trained specifically for restaurant content. It knows that 'Beef Wellington' shouldn't be translated literally, and that 'al dente' means the same in any language. Serve tourists and international guests with menus that read naturally in their language.",
         "benefits": [
@@ -389,8 +393,9 @@
       },
       {
         "id": "easy-menu",
-        "title": "Simple Menu Editor",
-        "shortDescription": "Drag, drop, done.{br}{link}Manage your menu{/link} in seconds.",
+        "title": "Simple",
+        "titleAccent": "Menu Editor",
+        "shortDescription": "Add categories, create dishes with photos and prices, reorder with drag-and-drop. Changes appear on your live menu instantly — no technical skills required. {link}Learn more{/link}.",
         "description": "Managing your menu has never been easier. Add categories, create dishes with photos and descriptions, set prices, and organize everything with simple drag-and-drop. Changes appear instantly on your live website.",
         "fullDescription": "Forget complicated content management systems. IQ Rest's menu editor is designed for restaurant owners, not web developers. Create a new category in seconds, add dishes with a few taps, upload photos directly from your phone. Drag items to reorder, toggle visibility for sold-out items, and see changes live immediately.",
         "benefits": [
@@ -423,8 +428,9 @@
       },
       {
         "id": "reservations",
-        "title": "Table Management System",
-        "shortDescription": "Accept table bookings 24/7.{br}{link}Restaurant booking widget{/link} for your website.",
+        "title": "Table",
+        "titleAccent": "Management System",
+        "shortDescription": "Customers book tables directly from your website — 24/7, no phone calls needed. Automatic or manual confirmation, email notifications, and a full overview of all reservations in your dashboard. {link}Learn more{/link}.",
         "description": "Cloud-based restaurant reservation software lets customers book tables directly from your website. Choose automatic confirmation based on availability, or review each booking manually. A complete table management system in your dashboard.",
         "fullDescription": "Phone reservations are time-consuming and easy to miss. IQ Rest's restaurant reservation SaaS works 24/7. Customers select date, time, and party size, then book instantly via the white-label booking widget. Set up automatic confirmation based on table availability, or review each request manually. Reduce no-shows with email confirmations.",
         "benefits": [
@@ -440,8 +446,9 @@
       },
       {
         "id": "custom-design",
-        "title": "Video & Photo Backgrounds",
-        "shortDescription": "Create stunning first impressions{br}with {link}video or photo backgrounds{/link}.",
+        "title": "Video & Photo",
+        "titleAccent": "Backgrounds",
+        "shortDescription": "Upload a video of your restaurant ambiance or a beautiful food photo as the background for your menu. Captivate guests from the first second they scan your QR code. {link}Learn more{/link}.",
         "description": "Create a memorable first impression with custom video or photo backgrounds on your homepage. Upload your restaurant ambiance video or a beautiful food photo to captivate customers instantly.",
         "fullDescription": "First impressions matter. When customers scan your QR code, they should be impressed immediately. Upload a video of your restaurant ambiance, a time-lapse of your kitchen, or a stunning photo of your signature dish. Your homepage becomes a visual experience that reflects your restaurant's personality.",
         "benefits": [
@@ -457,8 +464,9 @@
       },
       {
         "id": "color-scheme",
-        "title": "Custom Color Scheme",
-        "shortDescription": "Match your restaurant's brand{br}with {link}custom accent colors{/link}.",
+        "title": "Custom",
+        "titleAccent": "Color Scheme",
+        "shortDescription": "Choose your brand color and it applies everywhere — buttons, highlights, links. Automatic light and dark theme support ensures your menu always looks professional. {link}Learn more{/link}.",
         "description": "Your restaurant website should match your brand. Choose from preset color schemes or pick your exact brand color. Combined with automatic light/dark theme support, your menu always looks professional.",
         "fullDescription": "Brand consistency matters. IQ Rest lets you customize the accent color used throughout your website - buttons, highlights, and interactive elements all match your brand. Choose from carefully curated presets or enter your exact brand color. The system automatically ensures readability in both light and dark modes.",
         "benefits": [
@@ -490,8 +498,9 @@
       },
       {
         "id": "online-orders",
-        "title": "Online Ordering from QR Menu",
-        "shortDescription": "Customers scan, choose, and order — right from your menu.{br}{link}Learn more about online orders{/link}.",
+        "title": "Online Ordering",
+        "titleAccent": "from QR Menu",
+        "shortDescription": "Guests scan the QR code, browse your menu, and place orders directly — no apps, no commissions. Orders appear instantly in your dashboard with table number and details. {link}Learn more{/link}.",
         "description": "Let guests place orders directly from your QR menu. No apps, no commissions. Orders appear instantly in your dashboard with table number and item details.",
         "fullDescription": "Turn your QR menu into a direct ordering channel. Guests scan the code at their table, browse the menu, and place their order in seconds — no app downloads, no sign-ups. You receive orders in real time in your dashboard with table number, items, and customer notes. No commissions, no per-order fees.",
         "benefits": [
@@ -521,6 +530,30 @@
       "No credit card required",
       "5 minute setup"
     ],
+    "badge": "No commissions · No contracts",
+    "heroTitle": "One plan.",
+    "heroTitleAccent": "Everything included.",
+    "heroSub": "QR menu, ordering system, AI translation, restaurant website & reservations.",
+    "heroSub2": "One simple price.",
+    "planName": "Complete Plan",
+    "monthsFree": "2 months free",
+    "allFeatures": [
+      "Unlimited digital QR menu",
+      "AI translation (35 languages)",
+      "Restaurant website included",
+      "Online reservation system",
+      "Analytics & statistics",
+      "No IQ Rest branding",
+      "Priority support"
+    ],
+    "trialCta": "Try free 14 days",
+    "trialSub": "No credit card · Cancel anytime",
+    "youSave": "You save {amount}",
+    "trustSecure": "Secure payment with Stripe",
+    "trustNoLock": "No commitment",
+    "trustQuick": "Active in 10 minutes",
+    "trustRestaurants": "500+ restaurants",
+    "perMonthFull": "per month",
     "seo": {
       "title": "Why Choose IQ Rest for Your Restaurant or Cafe?",
       "text": "Create a professional QR menu and website for your restaurant or cafe in minutes. Your guests simply scan a QR code to view your digital menu on their phone — no app needed. Update prices, add new dishes, and change descriptions instantly. With AI-powered translations, serve international customers in their native language. Track which dishes get the most views with built-in analytics. Whether you run a small cafe or a growing restaurant chain, IQ Rest helps you modernize your menu experience while reducing printing costs."
@@ -529,7 +562,7 @@
     "yearly": "Yearly",
     "save": "(Save 25%)",
     "perMonth": "/mo",
-    "billedYearly": "Billed annually ({total}).",
+    "billedYearly": "Billed annually {total}",
     "orMonthly": "Or pay {price} month-to-month.",
     "forever": "Free forever",
     "popular": "Most Popular",
@@ -1466,35 +1499,23 @@
     "description": "Manage your subscription and billing",
     "unauthorized": "Please log in to manage your subscription",
     "perMonth": "/mo",
-    "currentPlan": "Current Plan",
-    "upgrade": "Upgrade",
+    "subscribe": "Subscribe",
     "manage": "Manage",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "billedMonthly": "Billed monthly",
+    "billedYearly": "Billed yearly",
+    "choosePlan": "Choose your plan",
+    "activeSubscription": "Active subscription",
+    "trialDaysLeft": "{days} days left in your trial",
+    "trialExpired": "Your trial has ended. Subscribe to continue using all features.",
     "subscriptionSuccess": "Your subscription has been activated successfully!",
     "subscriptionCanceled": "Subscription process was canceled.",
     "subscriptionProcessing": "Your payment is being processed. It may take a few moments to activate.",
     "processingPayment": "Processing your payment...",
     "processingPaymentDescription": "Please wait while we confirm your subscription. This usually takes a few seconds.",
     "checkoutError": "Failed to start checkout. Please try again.",
-    "portalError": "Failed to open billing portal. Please try again.",
-    "detailsNote": "For more details, visit our",
-    "pricingPage": "Pricing page",
-    "plans": {
-      "FREE": {
-        "name": "Free"
-      },
-      "BASIC_MONTHLY": {
-        "name": "Growth Monthly"
-      },
-      "BASIC_YEARLY": {
-        "name": "Growth Yearly"
-      },
-      "PRO_MONTHLY": {
-        "name": "Pro Monthly"
-      },
-      "PRO_YEARLY": {
-        "name": "Pro Yearly"
-      }
-    }
+    "portalError": "Failed to open billing portal. Please try again."
   },
   "dashboard": {
     "pages": {
@@ -1540,6 +1561,8 @@
     "upsell": {
       "title": "Grow Your Restaurant Online",
       "subtitle": "AI translations, unlimited scans, reservations, and more",
+      "trialEndedTitle": "Your Free Trial Has Ended",
+      "trialEndedSubtitle": "Subscribe to keep all features — AI translations, reservations, and more",
       "featuresTitle": "Everything you get",
       "features": {
         "aiTranslations": {
@@ -1585,8 +1608,9 @@
       "upgrade": "Upgrade"
     },
     "auth": {
-      "title": "Create Menu",
-      "subtitle": "Enter your email to create a new menu",
+      "title": "Welcome to",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Enter your email to continue",
       "consent": {
         "text": "By continuing, you agree to our",
         "terms": "Terms",
@@ -1596,6 +1620,7 @@
       "emailPlaceholder": "your@email.com",
       "continue": "Continue",
       "or": "or",
+      "continueGoogle": "Continue with Google",
       "verifyTitle": "Check your email",
       "verifySubtitle": "We sent a code to {email}",
       "checkSpam": "Can't find it? Check your spam folder",
@@ -1619,7 +1644,8 @@
       "nameSubtitle": "You can always change it later",
       "namePlaceholder": "e.g. Mario's Pizzeria",
       "error": "Something went wrong",
-      "menuSubtitle": "Let''s build your menu.",
+      "back": "Back",
+      "menuSubtitle": "Choose how you''d like to create your menu",
       "aiImportTitle": "AI Instant Import",
       "aiImportDescription": "Save hours of work! Upload a photo or PDF and AI will do the rest.",
       "aiImportButton": "Scan Menu",
@@ -1844,7 +1870,7 @@
       "scanErrorTooLarge": "Image is too large. Maximum size is 20MB.",
       "scanErrorTooMany": "Too many images. Maximum is 5 photos.",
       "scanSuccess": "Menu scanned successfully!",
-      "scanAddMore": "Add more",
+      "scanAddMore": "Add files",
       "scanStart": "Scan",
       "scanPoolTitle": "Menu pages",
       "scanPoolSubtitle": "Add photos or PDF files of your paper menu. Up to 5 files.",

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Prevent mobile browsers from auto-adjusting font sizes */
 html {
   -webkit-text-size-adjust: 100%;

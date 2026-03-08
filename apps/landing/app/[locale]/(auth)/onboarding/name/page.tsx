@@ -1,7 +1,5 @@
-import { guardNameStep } from "../../_lib/onboarding-guard";
-import { OnboardingNamePage } from "../../_components/onboarding-name-page";
+import { redirect } from "next/navigation";
 
-export default async function Page() {
-  const { userId } = await guardNameStep();
-  return <OnboardingNamePage userId={userId!} />;
+export default function Page() {
+  redirect("/onboarding");
 }

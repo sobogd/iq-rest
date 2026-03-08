@@ -1,7 +1,5 @@
-import { guardMenuStep } from "../../_lib/onboarding-guard";
-import { OnboardingMenuPage } from "../../_components/onboarding-menu-page";
+import { redirect } from "next/navigation";
 
-export default async function Page() {
-  const { userId, restaurantName } = await guardMenuStep();
-  return <OnboardingMenuPage restaurantName={restaurantName} userId={userId!} />;
+export default function Page() {
+  redirect("/onboarding");
 }

@@ -9,7 +9,7 @@
       "changelog": "Değişiklik Günlüğü",
       "contacts": "İletişim"
     },
-    "getStarted": "Ücretsiz oluştur",
+    "getStarted": "Başlayın",
     "selectLanguage": "Dil Seçin",
     "selectLanguageDescription": "Web sitesi için tercih ettiğiniz dili seçin.",
     "searchLanguage": "Dil ara...",
@@ -21,15 +21,16 @@
       "description": "Sadece e-postanızla QR menü ve restoran web sitesi oluşturun. Anında kurulum, mobil yönetim, AI çeviriler, günlük analizler. Restoranlar ve kafeler için mükemmel. Bugün ücretsiz başlayın."
     },
     "hero": {
-      "title": "Profesyonel Bir QR Menü & Web Sitesi Dakikalar İçinde Oluşturun",
-      "subtitle": "Sadece e-posta adresinizi girin ve QR menü, iletişim sayfası, çok dilli destek ve modern tasarıma sahip tam bir restoran web sitesi edinin. Her şeyi telefonunuzdan ayarlayın.",
+      "title": "Web Sitesi & QR Menü, Siparişler & Rezervasyonlar.",
+      "subtitle": "Başlamak için e-postanızı girmeniz yeterli.",
       "cta": {
         "create": "Menü Oluştur",
         "view": "Fiyatları Gör",
-        "noCreditCard": "320 taramaya/ay kadar ücretsiz. Kredi kartı gerekmez.",
+        "noCreditCard": "14 günlük ücretsiz deneme. Kredi kartı gerekmez.",
         "trusted": "Dünyada 500'den fazla restoran tarafından güvenilir",
         "title": "Dijitale Geçmeye Hazır Mısınız?",
-        "subtitle": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. Sonsuza dek ücretsiz, kredi kartı gerektirmez."
+        "subtitle": "Profesyonel QR menünüzü ve restoran web sitenizi dakikalar içinde oluşturun. Sonsuza dek ücretsiz, kredi kartı gerektirmez.",
+        "demo": "Demoyu Görüntüle"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "Kafeler",
         "bars": "Barlar",
         "hotels": "Oteller"
-      }
+      },
+      "titleAccent": "Dakikalar İçinde Hazır."
     },
     "demo": {
       "title": "Misafirleriniz gibi deneyimleyin",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "%100 Mobil Uyumlu Yönetim",
-        "shortDescription": "Menüyü telefondan düzenleyin.{br}{link}Nasıl çalıştığını görün{/link}.",
+        "title": "100% Mobil Uyumlu",
+        "shortDescription": "Yemek ekleyin, fotoğraf yükleyin, fiyatları değiştirin ve her şeyi doğrudan telefonunuzdan yönetin. Tüm kontrol paneli mobil için optimize edilmiştir — asla bilgisayara ihtiyacınız olmaz. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Kategorileri, yemekleri, fotoğrafları ekleyin ve tüm restoran web sitenizi doğrudan telefonunuzdan yönetin. Kontrol panelimiz tamamen mobil cihazlar için optimize edilmiştir, böylece bir kahve molasında menünüzü güncelleyebilir veya hareket halindeyken günlük özel yemekleri ekleyebilirsiniz.",
         "fullDescription": "Restoran sahipleri, her zaman bilgisayar başında olmayan meşgul insanlardır. Bu yüzden IQ Rest'i mobil cihazlarda mükemmel çalışacak şekilde tasarladık. Yeni yemek eklemekten fiyat güncellemeye kadar her özellik dokunmatik ekranlar için tasarlanmıştır. Yeni bir yemeğin fotoğrafını çekin ve anında yükleyin. Mutfakta dururken bugünün özelini değiştirin.",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "Restoran menüsü yönetimi akıllı telefonda",
-        "cta": "Nasıl çalışır"
+        "cta": "Nasıl çalışır",
+        "titleAccent": "Yönetim"
       },
       {
         "id": "ai-translation",
-        "title": "Yapay Zeka Destekli Menü Çevirisi",
-        "shortDescription": "Tüm menüyü çevirin{br}{link}1 tıkla AI çevirisiyle{/link}.",
+        "title": "Yapay Zeka Destekli",
+        "shortDescription": "Tüm menünüzü tek tıklamayla 35 dile çevirin. Yapay zekamız mutfak bağlamını anlar — yemek adları ve açıklamaları her dilde doğal okunur. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Yemek bağlamını anlayan akıllı yapay zeka çevirisi ile uluslararası müşterilere ulaşın. Yemek isimleriniz ve açıklamalarınız doğru bir şekilde çevrilir, mutfak terimlerini korur ve her dilde anlamlı hale getirir.",
         "fullDescription": "Genel çevirmenler genellikle yemek menülerinde başarısız olur - bağlamı anlamadan kelime kelime çevirirler. Yapay zekamız, restoran içeriği için özel olarak eğitilmiştir. 'Beef Wellington'ın kelime kelime çevrilmemesi gerektiğini ve 'al dente'nin her dilde aynı anlama geldiğini bilir. Turistleri ve uluslararası misafirleri, dillerinde doğal bir şekilde okunan menülerle karşılayın.",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "Yapay zeka destekli restoran menüsü çeviri arayüzü",
-        "cta": "Tek tıkla yapay zeka"
+        "cta": "Tek tıkla yapay zeka",
+        "titleAccent": "Menü Çevirisi"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "Basit Menü Editörü",
-        "shortDescription": "Sürükle, bırak, bitti.{br}{link}Menünüzü yönetin{/link} saniyeler içinde.",
+        "title": "Basit",
+        "shortDescription": "Kategoriler ekleyin, fotoğraflı ve fiyatlı yemekler oluşturun, sürükle-bırak ile yeniden sıralayın. Değişiklikler canlı menünüzde anında görünür — teknik beceri gerekmez. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Menünüzü yönetmek hiç bu kadar kolay olmamıştı. Kategoriler ekleyin, fotoğraflar ve açıklamalarla yemekler oluşturun, fiyatları belirleyin ve her şeyi basit sürükle-bırak ile düzenleyin. Değişiklikler anında canlı web sitenizde görünür.",
         "fullDescription": "Karmaşık içerik yönetim sistemlerini unutun. IQ Rest'in menü editörü, restoran sahipleri için tasarlanmıştır, web geliştiricileri için değil. Saniyeler içinde yeni bir kategori oluşturun, birkaç dokunuşla yemekler ekleyin, fotoğrafları doğrudan telefonunuzdan yükleyin. Öğeleri yeniden sıralamak için sürükleyin, tükendi öğelerin görünürlüğünü kapatın ve değişiklikleri hemen canlı görün.",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "Kolay restoran menüsü yönetim paneli",
-        "cta": "Menünüzü yönetin"
+        "cta": "Menünüzü yönetin",
+        "titleAccent": "Menü Düzenleyici"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "Masa Rezervasyon Sistemi",
-        "shortDescription": "7/24 rezervasyon kabul edin.{br}{link}Rezervasyonlar{/link} doğrudan web sitenizden.",
+        "title": "Masa",
+        "shortDescription": "Müşteriler masaları doğrudan web sitenizden rezerve eder — 7/24, telefon görüşmesine gerek yok. Otomatik veya manuel onay, e-posta bildirimleri ve kontrol panelinizde tüm rezervasyonlara eksiksiz genel bakış. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Yerleşik rezervasyon sistemi, müşterilerin doğrudan web sitenizden masa ayırtmalarını sağlar. Müsaitliğe göre otomatik onay seçin veya her rezervasyonu manuel olarak gözden geçirin. Tüm rezervasyonları kontrol panelinizden yönetin.",
         "fullDescription": "Telefonla rezervasyon almak zaman alıcıdır ve kolayca gözden kaçabilir. IQ Rest'in rezervasyon sistemi 7/24 çalışır. Müşteriler tarih, saat ve grup büyüklüğünü seçer ve anında rezervasyon yaparlar. Masa mevcutlığına göre otomatik onay ayarlayabilir veya her talebi manuel olarak gözden geçirebilirsiniz. E-posta onayları ile no-show'ları azaltın.",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "Restoranlar için çevrimiçi masa rezervasyon sistemi",
-        "cta": "Masa Rezervasyonlarını Keşfedin"
+        "cta": "Masa Rezervasyonlarını Keşfedin",
+        "titleAccent": "Yönetim Sistemi"
       },
       {
         "id": "custom-design",
-        "title": "Video ve Fotoğraf Arka Planları",
-        "shortDescription": "Etkileyici ilk izlenimler yaratın{br}{link}video veya fotoğraf arka planlarıyla{/link}.",
+        "title": "Video ve Fotoğraf",
+        "shortDescription": "Restoranınızın ambiyansını yansıtan bir video veya güzel bir yemek fotoğrafını menünüzün arka planı olarak yükleyin. Misafirlerinizi QR kodunuzu taradıkları ilk saniyeden itibaren büyüleyin. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Ana sayfanızda özel video veya fotoğraf arka planları ile unutulmaz bir ilk izlenim oluşturun. Restoran atmosferinizi yansıtan bir video veya güzel bir yemek fotoğrafı yükleyin ve müşterilerinizi anında etkileyin.",
         "fullDescription": "İlk izlenimler önemlidir. Müşteriler QR kodunuzu taradıklarında hemen etkilenmelidirler. Restoran atmosferinizin bir videosunu, mutfak zaman atlamalı görüntüsünü veya imza yemeğinizin etkileyici bir fotoğrafını yükleyin. Ana sayfanız, restoranınızın kişiliğini yansıtan görsel bir deneyim haline gelir.",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "Video arka planına sahip restoran web sitesi",
-        "cta": "Video veya fotoğraf arka planları"
+        "cta": "Video veya fotoğraf arka planları",
+        "titleAccent": "Arka Planları"
       },
       {
         "id": "color-scheme",
-        "title": "Özel Renk Şeması",
-        "shortDescription": "Renkleri markanızla eşleştirin{br}{link}özel vurgularla{/link}.",
+        "title": "Özel",
+        "shortDescription": "Marka renginizi seçin, düğmelerden vurgulara, bağlantılara kadar her yere uygulansın. Otomatik açık ve koyu tema desteği, menünüzün her zaman profesyonel görünmesini sağlar. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Restoran web siteniz markanızla uyumlu olmalıdır. Önceden ayarlanmış renk şemalarından birini seçin veya tam marka renginizi seçin. Otomatik açık/koyu tema desteği ile menünüz her zaman profesyonel görünür.",
         "fullDescription": "Marka tutarlılığı önemlidir. IQ Rest, web siteniz boyunca kullanılan vurgulayıcı rengi özelleştirmenizi sağlar - düğmeler, vurgulayıcılar ve etkileşimli öğeler markanızla uyumlu hale gelir. Özenle hazırlanmış önceden ayarlardan birini seçin veya tam marka renginizi girin. Sistem, hem açık hem de koyu modlarda okunabilirliği otomatik olarak sağlar.",
         "benefits": [
@@ -469,7 +476,8 @@
           "Erişilebilirlik için optimize edilmiş renk kontrastı"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "Özel renk şeması ve marka seçenekleri"
+        "imageAlt": "Özel renk şeması ve marka seçenekleri",
+        "titleAccent": "Renk Şeması"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "QR Menüden Online Sipariş",
-        "shortDescription": "Müşteriler tarar, seçer ve sipariş verir — doğrudan menünüzden.{br}{link}Online siparişler hakkında daha fazla bilgi edinin{/link}.",
+        "title": "QR Menüden",
+        "shortDescription": "Misafirler QR kodu tarar, menünüzü inceler ve doğrudan sipariş verir — uygulama yok, komisyon yok. Siparişler, masa numarası ve detaylarıyla anında kontrol panelinizde görünür. {link}Daha fazla bilgi edinin{/link}.",
         "description": "Misafirleriniz QR menünüzden doğrudan sipariş versin. Uygulama yok, komisyon yok. Siparişler anında masa numarası ve ürün detaylarıyla panelinizde görünür.",
         "fullDescription": "QR menünüzü doğrudan bir sipariş kanalına dönüştürün. Misafirler masadaki kodu tarar, menüye göz atar ve saniyeler içinde sipariş verir — uygulama indirme yok, kayıt yok. Siparişleri masa numarası, ürünler ve müşteri notlarıyla birlikte panelinizde anlık olarak alırsınız. Komisyon yok, sipariş başı ücret yok.",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "Restoran QR menüsünden online sipariş",
-        "cta": "Online siparişler hakkında bilgi edinin"
+        "cta": "Online siparişler hakkında bilgi edinin",
+        "titleAccent": "Online Sipariş"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "Yıllık",
     "save": "(%25 Tasarruf)",
     "perMonth": "/ay",
-    "billedYearly": "Yıllık faturalandırma ({total}).",
+    "billedYearly": "Yıllık faturalandırılır {total}",
     "orMonthly": "Veya aylık {price} ödeyin.",
     "forever": "Sonsuza dek ücretsiz",
     "popular": "En Popüler",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "Sorularınız mı var?",
     "questionsBody": "Bize yazın — tüm sorularınızı yanıtlayacağız ve menünüzü oluşturmanıza yardımcı olacağız.",
-    "questionsButton": "WhatsApp'ta yazın"
+    "questionsButton": "WhatsApp'ta yazın",
+    "badge": "Komisyonsuz · Sözleşmesiz",
+    "heroTitle": "Tek plan.",
+    "heroTitleAccent": "Her şey dahil.",
+    "heroSub": "QR menü, sipariş sistemi, yapay zeka çevirisi, restoran web sitesi ve rezervasyonlar.",
+    "heroSub2": "Tek basit fiyat.",
+    "planName": "Komple Plan",
+    "monthsFree": "2 ay ücretsiz",
+    "allFeatures": [
+      "Sınırsız dijital QR menü",
+      "Yapay zeka çevirisi (35 dil)",
+      "Restoran web sitesi dahil",
+      "Online rezervasyon sistemi",
+      "Analizler ve istatistikler",
+      "IQ Rest markalaması yok",
+      "Öncelikli destek"
+    ],
+    "trialCta": "14 gün ücretsiz dene",
+    "trialSub": "Kredi kartı gerekmez · İstediğin zaman iptal et",
+    "youSave": "{amount} tasarruf edersiniz",
+    "trustSecure": "Stripe ile güvenli ödeme",
+    "trustNoLock": "Taahhüt yok",
+    "trustQuick": "10 dakikada aktif",
+    "trustRestaurants": "500+ restoran",
+    "perMonthFull": "aylık"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "Yükselt"
     },
     "auth": {
-      "title": "Menü Oluştur",
-      "subtitle": "Yeni bir menü oluşturmak için e-postanızı girin",
+      "title": "Hoş geldiniz",
+      "titleAccent": "IQ Rest",
+      "subtitle": "Devam etmek için e-postanızı girin",
       "consent": {
         "text": "Devam ederek kabul etmiş olursunuz",
         "terms": "Şartlar",
@@ -1598,7 +1632,8 @@
         "emailRequired": "E-postanızı girin.",
         "emailInvalid": "Geçerli bir e-posta girin."
       },
-      "or": "veya"
+      "or": "veya",
+      "continueGoogle": "Google ile devam et"
     },
     "analytics": {
       "monthlyUsage": "Aylık Kullanım",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "Görsel çok büyük. Maksimum boyut 20MB.",
       "scanErrorTooMany": "Çok fazla görsel. Maksimum 5 fotoğraf.",
       "scanSuccess": "Menü başarıyla tarandı!",
-      "scanAddMore": "Daha fazla ekle",
+      "scanAddMore": "Dosya ekle",
       "scanStart": "Tara",
       "scanPoolTitle": "Menü sayfaları",
       "scanPoolSubtitle": "Kağıt menünüzün fotoğraflarını veya PDF dosyalarını ekleyin. En fazla 5 dosya.",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "Daha sonra değiştirebilirsiniz",
       "namePlaceholder": "örn. Mario'nun Pizzacısı",
       "error": "Bir şeyler ters gitti",
-      "menuSubtitle": "Menünüzü oluşturalım.",
+      "back": "Geri",
+      "menuSubtitle": "Menünüzü nasıl oluşturmak istediğinizi seçin",
       "aiImportTitle": "AI Anında İçe Aktarma",
       "aiImportDescription": "Saatlerce tasarruf edin! Bir fotoğraf veya PDF yükleyin, AI gerisini halletsin.",
       "aiImportButton": "Menü tara",

@@ -35,6 +35,8 @@ export const getRestaurantBySlug = cache(async (slug: string) => {
         select: {
           id: true,
           plan: true,
+          subscriptionStatus: true,
+          trialEndsAt: true,
           scanLimit: true,
           orderLimit: true,
         },

@@ -9,7 +9,7 @@
       "changelog": "更新履歴",
       "contacts": "お問い合わせ"
     },
-    "getStarted": "無料で作成",
+    "getStarted": "始める",
     "selectLanguage": "言語を選択",
     "selectLanguageDescription": "ウェブサイトの言語を選択してください。",
     "searchLanguage": "言語を検索...",
@@ -21,15 +21,16 @@
       "description": "メールアドレスだけでQRメニューとレストランウェブサイトを作成。即時セットアップ、モバイル管理、AI翻訳、毎日の分析。レストランやカフェに最適。今すぐ無料で始めましょう。"
     },
     "hero": {
-      "title": "プロフェッショナルなQR Menuとウェブサイトを数分で作成",
-      "subtitle": "メールアドレスを入力するだけで、QRメニュー、連絡先ページ、多言語サポート、モダンなデザインを備えた完全なレストランウェブサイトが手に入ります。すべてスマートフォンから設定できます。",
+      "title": "ウェブサイト & QRメニュー、注文 & 予約。",
+      "subtitle": "メールアドレスを入力するだけで始められます。",
       "cta": {
         "create": "メニュー作成",
         "view": "料金を見る",
-        "noCreditCard": "月320スキャンまで無料。クレジットカード不要。",
+        "noCreditCard": "14日間無料トライアル。クレジットカード不要。",
         "trusted": "世界中の500以上のレストランに信頼されています",
         "title": "デジタル化の準備はできていますか？",
-        "subtitle": "プロフェッショナルなQRメニューとレストランウェブサイトを数分で作成できます。永遠に無料、クレジットカードは不要です。"
+        "subtitle": "プロフェッショナルなQRメニューとレストランウェブサイトを数分で作成できます。永遠に無料、クレジットカードは不要です。",
+        "demo": "デモを見る"
       },
       "benefits": [
         {
@@ -56,7 +57,8 @@
         "cafes": "カフェ",
         "bars": "バー",
         "hotels": "ホテル"
-      }
+      },
+      "titleAccent": "数分で準備完了。"
     },
     "demo": {
       "title": "お客様と同じ体験をしてみてください",
@@ -321,8 +323,8 @@
       },
       {
         "id": "mobile-management",
-        "title": "100%モバイルフレンドリーな管理",
-        "shortDescription": "スマホからメニューを編集。{br}{link}使い方を見る{/link}。",
+        "title": "100%モバイル対応",
+        "shortDescription": "料理の追加、写真のアップロード、価格変更など、すべてスマートフォンから直接管理できます。ダッシュボード全体がモバイル向けに最適化されており、PCは一切不要です。{link}詳細はこちら{/link}。",
         "description": "カテゴリ、料理、写真を追加し、レストランウェブサイト全体をスマートフォンから直接管理。ダッシュボードはモバイルデバイスに完全最適化。",
         "fullDescription": "レストランオーナーは忙しく、常にコンピュータの前にいるわけではありません。そのため、IQ Restはモバイルデバイスで完璧に動作するように構築しました。",
         "benefits": [
@@ -334,12 +336,13 @@
         ],
         "image": "/images/features/mobile-management.jpg",
         "imageAlt": "スマートフォンでのレストランメニュー管理",
-        "cta": "使い方を見る"
+        "cta": "使い方を見る",
+        "titleAccent": "管理"
       },
       {
         "id": "ai-translation",
-        "title": "AIによるメニュー翻訳",
-        "shortDescription": "メニュー全体を翻訳{br}{link}ワンクリックAI翻訳{/link}で。",
+        "title": "AI搭載",
+        "shortDescription": "メニュー全体をワンクリックで35言語に翻訳。当社のAIは料理の文脈を理解し、料理名や説明をどの言語でも自然に読みやすくします。{link}詳細はこちら{/link}。",
         "description": "食べ物の文脈を理解するインテリジェントなAI翻訳で国際的なお客様にリーチ。",
         "fullDescription": "一般的な翻訳ツールは食品メニューでよく失敗します。当社のAIはレストランコンテンツ専用に訓練されています。",
         "benefits": [
@@ -351,7 +354,8 @@
         ],
         "image": "/images/features/ai-translation.jpg",
         "imageAlt": "AIによるレストランメニュー翻訳インターフェース",
-        "cta": "ワンクリックAI翻訳"
+        "cta": "ワンクリックAI翻訳",
+        "titleAccent": "メニュー翻訳"
       },
       {
         "id": "multilingual",
@@ -389,8 +393,8 @@
       },
       {
         "id": "easy-menu",
-        "title": "シンプルなメニューエディター",
-        "shortDescription": "ドラッグ＆ドロップで完了。{br}{link}メニュー管理{/link}は数秒で。",
+        "title": "シンプルな",
+        "shortDescription": "カテゴリの追加、写真と価格付きの料理作成、ドラッグ＆ドロップでの並べ替えが可能です。変更はライブメニューに即座に反映され、専門知識は不要です。{link}詳細はこちら{/link}。",
         "description": "メニュー管理がこれまでになく簡単に。カテゴリを追加し、写真と説明付きで料理を作成。",
         "fullDescription": "複雑なコンテンツ管理システムは忘れてください。IQ Restのメニューエディターはウェブ開発者ではなくレストランオーナー向けに設計されています。",
         "benefits": [
@@ -402,7 +406,8 @@
         ],
         "image": "/images/features/easy-menu.jpg",
         "imageAlt": "簡単なレストランメニュー管理ダッシュボード",
-        "cta": "メニューを管理"
+        "cta": "メニューを管理",
+        "titleAccent": "メニューエディター"
       },
       {
         "id": "analytics",
@@ -423,8 +428,8 @@
       },
       {
         "id": "reservations",
-        "title": "テーブル予約システム",
-        "shortDescription": "24時間予約受付。{br}{link}予約{/link}をウェブサイトから直接。",
+        "title": "テーブル",
+        "shortDescription": "お客様はウェブサイトから直接テーブルを予約できます — 24時間年中無休、電話不要です。自動または手動での確認、メール通知、ダッシュボードでのすべての予約の完全な概要を提供します。{link}詳細はこちら{/link}。",
         "description": "内蔵の予約システムで、お客様はウェブサイトから直接テーブルを予約可能。",
         "fullDescription": "電話予約は時間がかかり、見逃しやすいです。IQ Restの予約システムは24時間稼働。",
         "benefits": [
@@ -436,12 +441,13 @@
         ],
         "image": "/images/features/reservations.jpg",
         "imageAlt": "レストラン向けオンラインテーブル予約システム",
-        "cta": "テーブル予約を探索"
+        "cta": "テーブル予約を探索",
+        "titleAccent": "管理システム"
       },
       {
         "id": "custom-design",
-        "title": "動画＆写真背景",
-        "shortDescription": "印象的なファーストインプレッションを{br}{link}動画・写真背景{/link}で作成。",
+        "title": "動画＆写真",
+        "shortDescription": "レストランの雰囲気を示す動画や美しい料理写真をメニューの背景としてアップロードできます。お客様がQRコードをスキャンした最初の瞬間から魅了しましょう。{link}詳細はこちら{/link}。",
         "description": "ホームページにカスタム動画または写真の背景で記憶に残る第一印象を作成。",
         "fullDescription": "第一印象は重要です。お客様がQRコードをスキャンしたとき、すぐに感動させるべきです。",
         "benefits": [
@@ -453,12 +459,13 @@
         ],
         "image": "/images/features/custom-design.jpg",
         "imageAlt": "動画背景付きレストランウェブサイト",
-        "cta": "動画・写真背景"
+        "cta": "動画・写真背景",
+        "titleAccent": "背景"
       },
       {
         "id": "color-scheme",
-        "title": "カスタムカラースキーム",
-        "shortDescription": "ブランドに合わせた色で{br}{link}カスタムアクセント{/link}を設定。",
+        "title": "カスタム",
+        "shortDescription": "ブランドカラーを選択すると、ボタン、ハイライト、リンクなど、あらゆる場所に適用されます。自動ライト＆ダークテーマ対応により、メニューは常にプロフェッショナルな印象を与えます。{link}詳細はこちら{/link}。",
         "description": "レストランウェブサイトはブランドと一致するべきです。",
         "fullDescription": "ブランドの一貫性は重要です。IQ Restでは、ウェブサイト全体で使用されるアクセントカラーをカスタマイズできます。",
         "benefits": [
@@ -469,7 +476,8 @@
           "アクセシビリティ最適化されたカラーコントラスト"
         ],
         "image": "/images/features/color-scheme.jpg",
-        "imageAlt": "カスタムカラースキームとブランディングオプション"
+        "imageAlt": "カスタムカラースキームとブランディングオプション",
+        "titleAccent": "配色"
       },
       {
         "id": "personal-support",
@@ -490,8 +498,8 @@
       },
       {
         "id": "online-orders",
-        "title": "QRメニューからのオンライン注文",
-        "shortDescription": "お客様がスキャンして選んで注文 — メニューから直接。{br}{link}オンライン注文の詳細はこちら{/link}。",
+        "title": "オンライン注文",
+        "shortDescription": "お客様はQRコードをスキャンし、メニューを閲覧し、アプリ不要、手数料なしで直接注文できます。注文はテーブル番号と詳細とともにダッシュボードに即座に表示されます。{link}詳細はこちら{/link}。",
         "description": "お客様がQRメニューから直接注文できます。アプリ不要、手数料なし。注文はテーブル番号とアイテム詳細とともにダッシュボードに即座に表示されます。",
         "fullDescription": "QRメニューを直接注文チャネルに変えましょう。お客様はテーブルのコードをスキャンし、メニューを閲覧し、数秒で注文を完了します — アプリのダウンロードもサインアップも不要。テーブル番号、アイテム、お客様のメモとともにリアルタイムでダッシュボードに注文が届きます。手数料なし、注文ごとの費用なし。",
         "benefits": [
@@ -503,7 +511,8 @@
         ],
         "image": "/images/features/online-orders.jpg",
         "imageAlt": "レストランのQRメニューからのオンライン注文",
-        "cta": "オンライン注文の詳細はこちら"
+        "cta": "オンライン注文の詳細はこちら",
+        "titleAccent": "QRメニューから"
       }
     ]
   },
@@ -522,7 +531,7 @@
     "yearly": "年額",
     "save": "（25%お得）",
     "perMonth": "/月",
-    "billedYearly": "年間一括払い（{total}）.",
+    "billedYearly": "年間請求 {total}",
     "orMonthly": "または月額 {price} でお支払い。",
     "forever": "永久無料",
     "popular": "最も人気",
@@ -623,7 +632,31 @@
     ],
     "questionsTitle": "ご質問がありますか？",
     "questionsBody": "お気軽にお問い合わせください。すべてのご質問にお答えし、メニュー作成をお手伝いします。",
-    "questionsButton": "WhatsAppで書く"
+    "questionsButton": "WhatsAppで書く",
+    "badge": "手数料なし · 契約なし",
+    "heroTitle": "1つのプラン。",
+    "heroTitleAccent": "すべて込み。",
+    "heroSub": "QRメニュー、注文システム、AI翻訳、レストランウェブサイト、予約システム。",
+    "heroSub2": "シンプルで分かりやすい料金。",
+    "planName": "コンプリートプラン",
+    "monthsFree": "2ヶ月無料",
+    "allFeatures": [
+      "無制限デジタルQRメニュー",
+      "AI翻訳（35言語）",
+      "レストランウェブサイト込み",
+      "オンライン予約システム",
+      "分析と統計",
+      "IQ Restのブランド表示なし",
+      "優先サポート"
+    ],
+    "trialCta": "14日間無料トライアル",
+    "trialSub": "クレジットカード不要 · いつでもキャンセル可能",
+    "youSave": "{amount}お得",
+    "trustSecure": "Stripeによる安全な支払い",
+    "trustNoLock": "契約期間の縛りなし",
+    "trustQuick": "10分で利用開始",
+    "trustRestaurants": "500以上のレストランで導入",
+    "perMonthFull": "月額"
   },
   "contacts": {
     "meta": {
@@ -1572,8 +1605,9 @@
       "upgrade": "アップグレード"
     },
     "auth": {
-      "title": "メニュー作成",
-      "subtitle": "メールアドレスを入力して新しいメニューを作成",
+      "title": "ようこそ",
+      "titleAccent": "IQ Rest",
+      "subtitle": "メールアドレスを入力して続行",
       "consent": {
         "text": "続行することで、",
         "terms": "利用規約",
@@ -1598,7 +1632,8 @@
         "emailRequired": "メールアドレスを入力してください。",
         "emailInvalid": "有効なメールアドレスを入力してください。"
       },
-      "or": "または"
+      "or": "または",
+      "continueGoogle": "Googleで続ける"
     },
     "analytics": {
       "monthlyUsage": "月間使用量",
@@ -1872,7 +1907,7 @@
       "scanErrorTooLarge": "画像が大きすぎます。最大サイズは20MBです。",
       "scanErrorTooMany": "画像が多すぎます。最大5枚です。",
       "scanSuccess": "メニューのスキャンが完了しました！",
-      "scanAddMore": "追加する",
+      "scanAddMore": "ファイルを追加",
       "scanStart": "スキャン",
       "scanPoolTitle": "メニューページ",
       "scanPoolSubtitle": "紙のメニューの写真またはPDFファイルを追加してください。最大5ファイル。",
@@ -1889,7 +1924,8 @@
       "nameSubtitle": "後から変更できます",
       "namePlaceholder": "例：マリオのピッツェリア",
       "error": "エラーが発生しました",
-      "menuSubtitle": "メニューを作りましょう。",
+      "back": "戻る",
+      "menuSubtitle": "メニューの作成方法を選択してください",
       "aiImportTitle": "AI即時インポート",
       "aiImportDescription": "何時間もの作業を節約！写真やPDFをアップロードすればAIが残りをやります。",
       "aiImportButton": "メニューをスキャン",
