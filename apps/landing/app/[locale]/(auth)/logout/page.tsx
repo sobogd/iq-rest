@@ -2,16 +2,16 @@
 
 import { useEffect } from "react";
 import { Loader2 } from "lucide-react";
-import { useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 
 export default function LogoutPage() {
-  const router = useRouter();
+  const locale = useLocale();
 
   useEffect(() => {
     fetch("/api/auth/logout", { method: "POST" }).then(() => {
-      router.replace("/login");
+      window.location.href = `/${locale}/login`;
     });
-  }, [router]);
+  }, [locale]);
 
   return (
     <div className="flex min-h-dvh items-center justify-center">
