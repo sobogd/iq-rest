@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Croutons",
-      "tplItemMixedNuts": "Mix de Nozes"
+      "tplItemMixedNuts": "Mix de Nozes",
+      "alreadyHaveAccount": "Já tem uma conta?",
+      "logIn": "Entrar"
     },
     "home": {
       "viewMenu": "Veja como fica",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} leituras",
-      "myOrders": "Meus pedidos"
+      "myOrders": "Meus pedidos",
+      "saveMenu": "Salvar menu"
+    },
+    "claim": {
+      "title": "Salve seu menu",
+      "subtitle": "Insira seu email para manter o acesso ao seu menu",
+      "emailPlaceholder": "seu@email.com",
+      "sendCode": "Enviar código",
+      "verifyCode": "Verificar",
+      "emailTaken": "Este email já está em uso. Entre ou use outro email.",
+      "success": "Email verificado! Seu menu está salvo.",
+      "backToMenu": "Voltar ao menu"
     }
   },
   "reservationSettings": {

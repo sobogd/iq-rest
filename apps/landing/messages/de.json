@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Croutons",
-      "tplItemMixedNuts": "Nussmischung"
+      "tplItemMixedNuts": "Nussmischung",
+      "alreadyHaveAccount": "Bereits ein Konto?",
+      "logIn": "Anmelden"
     },
     "home": {
       "viewMenu": "So sieht es aus",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} Scans",
-      "myOrders": "Meine Bestellungen"
+      "myOrders": "Meine Bestellungen",
+      "saveMenu": "Menü speichern"
+    },
+    "claim": {
+      "title": "Speichere dein Menü",
+      "subtitle": "Gib deine E-Mail ein, um den Zugang zu deinem Menü zu behalten",
+      "emailPlaceholder": "deine@email.com",
+      "sendCode": "Code senden",
+      "verifyCode": "Bestätigen",
+      "emailTaken": "Diese E-Mail wird bereits verwendet. Melde dich an oder verwende eine andere.",
+      "success": "E-Mail bestätigt! Dein Menü ist gespeichert.",
+      "backToMenu": "Zurück zum Menü"
     }
   },
   "reservationSettings": {

@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Croutons",
-      "tplItemMixedNuts": "Gemengde Noten"
+      "tplItemMixedNuts": "Gemengde Noten",
+      "alreadyHaveAccount": "Heb je al een account?",
+      "logIn": "Inloggen"
     },
     "home": {
       "viewMenu": "Bekijk het resultaat",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scans",
-      "myOrders": "Mijn bestellingen"
+      "myOrders": "Mijn bestellingen",
+      "saveMenu": "Menu opslaan"
+    },
+    "claim": {
+      "title": "Sla je menu op",
+      "subtitle": "Voer je e-mail in om toegang tot je menu te behouden",
+      "emailPlaceholder": "jouw@email.com",
+      "sendCode": "Code versturen",
+      "verifyCode": "Verifiëren",
+      "emailTaken": "Dit e-mailadres is al in gebruik. Log in of gebruik een ander e-mailadres.",
+      "success": "E-mail geverifieerd! Je menu is opgeslagen.",
+      "backToMenu": "Terug naar menu"
     }
   },
   "reservationSettings": {

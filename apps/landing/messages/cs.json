@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutony",
-      "tplItemMixedNuts": "Směs ořechů"
+      "tplItemMixedNuts": "Směs ořechů",
+      "alreadyHaveAccount": "Již máte účet?",
+      "logIn": "Přihlásit se"
     },
     "home": {
       "viewMenu": "Podívejte se, jak to vypadá",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skenů",
-      "myOrders": "Moje objednávky"
+      "myOrders": "Moje objednávky",
+      "saveMenu": "Uložit menu"
+    },
+    "claim": {
+      "title": "Uložte své menu",
+      "subtitle": "Zadejte email pro zachování přístupu k vašemu menu",
+      "emailPlaceholder": "vas@email.com",
+      "sendCode": "Odeslat kód",
+      "verifyCode": "Ověřit",
+      "emailTaken": "Tento email je již používán. Přihlaste se nebo použijte jiný.",
+      "success": "Email ověřen! Vaše menu je uloženo.",
+      "backToMenu": "Zpět do menu"
     }
   },
   "reservationSettings": {

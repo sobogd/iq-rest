@@ -1999,7 +1999,9 @@
       "tplItemStout": "Staut",
       "tplItemNachos": "Načos",
       "tplItemCroutons": "Krutoni",
-      "tplItemMixedNuts": "Mešani orasi"
+      "tplItemMixedNuts": "Mešani orasi",
+      "alreadyHaveAccount": "Већ имате налог?",
+      "logIn": "Пријава"
     },
     "home": {
       "viewMenu": "Погледајте како изгледа",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Скенирања",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} скенирања",
-      "myOrders": "Моје наруџбе"
+      "myOrders": "Моје наруџбе",
+      "saveMenu": "Сачувај мени"
+    },
+    "claim": {
+      "title": "Сачувајте свој мени",
+      "subtitle": "Унесите имејл да бисте сачували приступ менију",
+      "emailPlaceholder": "ваш@email.com",
+      "sendCode": "Пошаљи код",
+      "verifyCode": "Потврди",
+      "emailTaken": "Овај имејл се већ користи. Пријавите се или користите други.",
+      "success": "Имејл потврђен! Ваш мени је сачуван.",
+      "backToMenu": "Назад на мени"
     }
   },
   "reservationSettings": {

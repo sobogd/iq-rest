@@ -1999,7 +1999,9 @@
       "tplItemStout": "Стаут",
       "tplItemNachos": "Начос",
       "tplItemCroutons": "Гренки",
-      "tplItemMixedNuts": "Ореховый микс"
+      "tplItemMixedNuts": "Ореховый микс",
+      "alreadyHaveAccount": "Уже есть аккаунт?",
+      "logIn": "Войти"
     },
     "home": {
       "viewMenu": "Посмотреть, как выглядит",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Сканы",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} сканирований",
-      "myOrders": "Мои заказы"
+      "myOrders": "Мои заказы",
+      "saveMenu": "Сохранить меню"
+    },
+    "claim": {
+      "title": "Сохраните ваше меню",
+      "subtitle": "Введите email, чтобы сохранить доступ к вашему меню",
+      "emailPlaceholder": "ваш@email.com",
+      "sendCode": "Отправить код",
+      "verifyCode": "Подтвердить",
+      "emailTaken": "Этот email уже используется. Войдите или используйте другой.",
+      "success": "Email подтверждён! Ваше меню сохранено.",
+      "backToMenu": "Назад к меню"
     }
   },
   "reservationSettings": {

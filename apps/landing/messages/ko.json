@@ -1999,7 +1999,9 @@
       "tplItemStout": "스타우트",
       "tplItemNachos": "나초",
       "tplItemCroutons": "크루통",
-      "tplItemMixedNuts": "모둠 견과류"
+      "tplItemMixedNuts": "모둠 견과류",
+      "alreadyHaveAccount": "이미 계정이 있으신가요?",
+      "logIn": "로그인"
     },
     "home": {
       "viewMenu": "어떻게 보이는지 확인",
@@ -2012,7 +2014,18 @@
       "scansTitle": "스캔",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} 스캔",
-      "myOrders": "내 주문"
+      "myOrders": "내 주문",
+      "saveMenu": "메뉴 저장"
+    },
+    "claim": {
+      "title": "메뉴 저장하기",
+      "subtitle": "메뉴 접근을 유지하려면 이메일을 입력하세요",
+      "emailPlaceholder": "your@email.com",
+      "sendCode": "코드 보내기",
+      "verifyCode": "인증",
+      "emailTaken": "이 이메일은 이미 사용 중입니다. 로그인하거나 다른 이메일을 사용하세요.",
+      "success": "이메일 인증 완료! 메뉴가 저장되었습니다.",
+      "backToMenu": "메뉴로 돌아가기"
     }
   },
   "reservationSettings": {

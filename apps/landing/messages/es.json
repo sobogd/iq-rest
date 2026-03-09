@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Crutones",
-      "tplItemMixedNuts": "Frutos Secos Mixtos"
+      "tplItemMixedNuts": "Frutos Secos Mixtos",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "logIn": "Iniciar sesión"
     },
     "home": {
       "viewMenu": "Mira cómo se ve",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Escaneos",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} escaneos",
-      "myOrders": "Mis pedidos"
+      "myOrders": "Mis pedidos",
+      "saveMenu": "Guardar menú"
+    },
+    "claim": {
+      "title": "Guarda tu menú",
+      "subtitle": "Introduce tu email para mantener el acceso a tu menú",
+      "emailPlaceholder": "tu@email.com",
+      "sendCode": "Enviar código",
+      "verifyCode": "Verificar",
+      "emailTaken": "Este email ya está en uso. Inicia sesión o usa otro email.",
+      "success": "¡Email verificado! Tu menú está guardado.",
+      "backToMenu": "Volver al menú"
     }
   },
   "reservationSettings": {

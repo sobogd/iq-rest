@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutoonid",
-      "tplItemMixedNuts": "Pähklisegu"
+      "tplItemMixedNuts": "Pähklisegu",
+      "alreadyHaveAccount": "Sul on juba konto?",
+      "logIn": "Logi sisse"
     },
     "home": {
       "viewMenu": "Vaata, kuidas see välja näeb",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skaneeringud",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skannimist",
-      "myOrders": "Minu tellimused"
+      "myOrders": "Minu tellimused",
+      "saveMenu": "Salvesta menüü"
+    },
+    "claim": {
+      "title": "Salvesta oma menüü",
+      "subtitle": "Sisesta oma e-post, et säilitada juurdepääs menüüle",
+      "emailPlaceholder": "sinu@email.com",
+      "sendCode": "Saada kood",
+      "verifyCode": "Kinnita",
+      "emailTaken": "See e-post on juba kasutusel. Logi sisse või kasuta teist.",
+      "success": "E-post kinnitatud! Sinu menüü on salvestatud.",
+      "backToMenu": "Tagasi menüüsse"
     }
   },
   "reservationSettings": {

@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutoni",
-      "tplItemMixedNuts": "Mješavina orašastih"
+      "tplItemMixedNuts": "Mješavina orašastih",
+      "alreadyHaveAccount": "Već imate račun?",
+      "logIn": "Prijava"
     },
     "home": {
       "viewMenu": "Pogledaj kako izgleda",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skenovi",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skeniranja",
-      "myOrders": "Moje narudžbe"
+      "myOrders": "Moje narudžbe",
+      "saveMenu": "Spremi jelovnik"
+    },
+    "claim": {
+      "title": "Spremite svoj jelovnik",
+      "subtitle": "Unesite email za očuvanje pristupa vašem jelovniku",
+      "emailPlaceholder": "vas@email.com",
+      "sendCode": "Pošalji kod",
+      "verifyCode": "Potvrdi",
+      "emailTaken": "Ovaj email je već u upotrebi. Prijavite se ili koristite drugi.",
+      "success": "Email potvrđen! Vaš jelovnik je spremljen.",
+      "backToMenu": "Natrag na jelovnik"
     }
   },
   "reservationSettings": {

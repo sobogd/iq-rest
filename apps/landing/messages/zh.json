@@ -1999,7 +1999,9 @@
       "tplItemStout": "世涛啤酒",
       "tplItemNachos": "玉米片",
       "tplItemCroutons": "面包丁",
-      "tplItemMixedNuts": "什锦坚果"
+      "tplItemMixedNuts": "什锦坚果",
+      "alreadyHaveAccount": "已有账户？",
+      "logIn": "登录"
     },
     "home": {
       "viewMenu": "看看效果如何",
@@ -2012,7 +2014,18 @@
       "scansTitle": "扫描",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} 次扫描",
-      "myOrders": "我的订单"
+      "myOrders": "我的订单",
+      "saveMenu": "保存菜单"
+    },
+    "claim": {
+      "title": "保存您的菜单",
+      "subtitle": "输入您的邮箱以保留对菜单的访问权限",
+      "emailPlaceholder": "your@email.com",
+      "sendCode": "发送验证码",
+      "verifyCode": "验证",
+      "emailTaken": "此邮箱已被使用。请登录或使用其他邮箱。",
+      "success": "邮箱已验证！您的菜单已保存。",
+      "backToMenu": "返回菜单"
     }
   },
   "reservationSettings": {

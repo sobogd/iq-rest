@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Crutoane",
-      "tplItemMixedNuts": "Mix de Nuci"
+      "tplItemMixedNuts": "Mix de Nuci",
+      "alreadyHaveAccount": "Ai deja un cont?",
+      "logIn": "Conectare"
     },
     "home": {
       "viewMenu": "Vezi cum arată",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scanări",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scanări",
-      "myOrders": "Comenzile mele"
+      "myOrders": "Comenzile mele",
+      "saveMenu": "Salvează meniu"
+    },
+    "claim": {
+      "title": "Salvează-ți meniul",
+      "subtitle": "Introdu emailul pentru a păstra accesul la meniul tău",
+      "emailPlaceholder": "al-tau@email.com",
+      "sendCode": "Trimite cod",
+      "verifyCode": "Verifică",
+      "emailTaken": "Acest email este deja utilizat. Conectează-te sau folosește altul.",
+      "success": "Email verificat! Meniul tău este salvat.",
+      "backToMenu": "Înapoi la meniu"
     }
   },
   "reservationSettings": {

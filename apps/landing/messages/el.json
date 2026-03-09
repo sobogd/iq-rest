@@ -1999,7 +1999,9 @@
       "tplItemStout": "Στάουτ",
       "tplItemNachos": "Νάτσος",
       "tplItemCroutons": "Κρουτόν",
-      "tplItemMixedNuts": "Ανάμεικτοι Ξηροί Καρποί"
+      "tplItemMixedNuts": "Ανάμεικτοι Ξηροί Καρποί",
+      "alreadyHaveAccount": "Έχετε ήδη λογαριασμό;",
+      "logIn": "Σύνδεση"
     },
     "home": {
       "viewMenu": "Δείτε πώς φαίνεται",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Σαρώσεις",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} σαρώσεις",
-      "myOrders": "Οι παραγγελίες μου"
+      "myOrders": "Οι παραγγελίες μου",
+      "saveMenu": "Αποθήκευση μενού"
+    },
+    "claim": {
+      "title": "Αποθηκεύστε το μενού σας",
+      "subtitle": "Εισάγετε το email σας για να διατηρήσετε πρόσβαση στο μενού σας",
+      "emailPlaceholder": "to@email.com",
+      "sendCode": "Αποστολή κωδικού",
+      "verifyCode": "Επαλήθευση",
+      "emailTaken": "Αυτό το email χρησιμοποιείται ήδη. Συνδεθείτε ή χρησιμοποιήστε άλλο.",
+      "success": "Email επαληθεύτηκε! Το μενού σας αποθηκεύτηκε.",
+      "backToMenu": "Πίσω στο μενού"
     }
   },
   "reservationSettings": {

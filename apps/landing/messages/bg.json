@@ -1999,7 +1999,9 @@
       "tplItemStout": "Стаут",
       "tplItemNachos": "Начос",
       "tplItemCroutons": "Крутони",
-      "tplItemMixedNuts": "Смесени ядки"
+      "tplItemMixedNuts": "Смесени ядки",
+      "alreadyHaveAccount": "Вече имате акаунт?",
+      "logIn": "Вход"
     },
     "home": {
       "viewMenu": "Вижте как изглежда",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Сканирания",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} сканирания",
-      "myOrders": "Моите поръчки"
+      "myOrders": "Моите поръчки",
+      "saveMenu": "Запази менюто"
+    },
+    "claim": {
+      "title": "Запазете вашето меню",
+      "subtitle": "Въведете имейл, за да запазите достъпа до менюто си",
+      "emailPlaceholder": "вашият@email.com",
+      "sendCode": "Изпрати код",
+      "verifyCode": "Потвърди",
+      "emailTaken": "Този имейл вече се използва. Влезте или използвайте друг.",
+      "success": "Имейлът е потвърден! Менюто ви е запазено.",
+      "backToMenu": "Назад към менюто"
     }
   },
   "reservationSettings": {

@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Brauðteningar",
-      "tplItemMixedNuts": "Blandaðar Hnetur"
+      "tplItemMixedNuts": "Blandaðar Hnetur",
+      "alreadyHaveAccount": "Ertu nú þegar með reikning?",
+      "logIn": "Skrá inn"
     },
     "home": {
       "viewMenu": "Sjáðu hvernig það lítur út",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skannanir",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skannanir",
-      "myOrders": "Pantanir mínar"
+      "myOrders": "Pantanir mínar",
+      "saveMenu": "Vista matseðil"
+    },
+    "claim": {
+      "title": "Vistaðu matseðilinn þinn",
+      "subtitle": "Sláðu inn netfangið þitt til að halda aðgangi að matseðlinum",
+      "emailPlaceholder": "thitt@email.com",
+      "sendCode": "Senda kóða",
+      "verifyCode": "Staðfesta",
+      "emailTaken": "Þetta netfang er þegar í notkun. Skráðu þig inn eða notaðu annað.",
+      "success": "Netfang staðfest! Matseðillinn þinn er vistaður.",
+      "backToMenu": "Til baka í matseðil"
     }
   },
   "reservationSettings": {

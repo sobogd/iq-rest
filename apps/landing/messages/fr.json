@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Croûtons",
-      "tplItemMixedNuts": "Noix Mélangées"
+      "tplItemMixedNuts": "Noix Mélangées",
+      "alreadyHaveAccount": "Vous avez déjà un compte ?",
+      "logIn": "Se connecter"
     },
     "home": {
       "viewMenu": "Voir le résultat",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scans",
-      "myOrders": "Mes commandes"
+      "myOrders": "Mes commandes",
+      "saveMenu": "Enregistrer le menu"
+    },
+    "claim": {
+      "title": "Enregistrez votre menu",
+      "subtitle": "Entrez votre email pour conserver l'accès à votre menu",
+      "emailPlaceholder": "votre@email.com",
+      "sendCode": "Envoyer le code",
+      "verifyCode": "Vérifier",
+      "emailTaken": "Cet email est déjà utilisé. Connectez-vous ou utilisez un autre email.",
+      "success": "Email vérifié ! Votre menu est enregistré.",
+      "backToMenu": "Retour au menu"
     }
   },
   "reservationSettings": {

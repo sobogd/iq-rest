@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Načos",
       "tplItemCroutons": "Skrebučiai",
-      "tplItemMixedNuts": "Riešutų mišinys"
+      "tplItemMixedNuts": "Riešutų mišinys",
+      "alreadyHaveAccount": "Jau turite paskyrą?",
+      "logIn": "Prisijungti"
     },
     "home": {
       "viewMenu": "Pažiūrėkite, kaip tai atrodo",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Nuskaitymai",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} nuskaitymų",
-      "myOrders": "Mano užsakymai"
+      "myOrders": "Mano užsakymai",
+      "saveMenu": "Išsaugoti meniu"
+    },
+    "claim": {
+      "title": "Išsaugokite savo meniu",
+      "subtitle": "Įveskite el. paštą, kad išsaugotumėte prieigą prie meniu",
+      "emailPlaceholder": "jusu@email.com",
+      "sendCode": "Siųsti kodą",
+      "verifyCode": "Patvirtinti",
+      "emailTaken": "Šis el. paštas jau naudojamas. Prisijunkite arba naudokite kitą.",
+      "success": "El. paštas patvirtintas! Jūsų meniu išsaugotas.",
+      "backToMenu": "Grįžti į meniu"
     }
   },
   "reservationSettings": {

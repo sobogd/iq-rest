@@ -1999,7 +1999,9 @@
       "tplItemStout": "Стаут",
       "tplItemNachos": "Начос",
       "tplItemCroutons": "Грінки",
-      "tplItemMixedNuts": "Горіховий мікс"
+      "tplItemMixedNuts": "Горіховий мікс",
+      "alreadyHaveAccount": "Вже є акаунт?",
+      "logIn": "Увійти"
     },
     "home": {
       "viewMenu": "Подивитися, як виглядає",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Скани",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} сканувань",
-      "myOrders": "Мої замовлення"
+      "myOrders": "Мої замовлення",
+      "saveMenu": "Зберегти меню"
+    },
+    "claim": {
+      "title": "Збережіть ваше меню",
+      "subtitle": "Введіть email, щоб зберегти доступ до вашого меню",
+      "emailPlaceholder": "ваш@email.com",
+      "sendCode": "Надіслати код",
+      "verifyCode": "Підтвердити",
+      "emailTaken": "Ця email-адреса вже використовується. Увійдіть або використайте іншу.",
+      "success": "Email підтверджено! Ваше меню збережено.",
+      "backToMenu": "Назад до меню"
     }
   },
   "reservationSettings": {

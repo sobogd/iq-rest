@@ -1999,7 +1999,9 @@
       "tplItemStout": "スタウト",
       "tplItemNachos": "ナチョス",
       "tplItemCroutons": "クルトン",
-      "tplItemMixedNuts": "ミックスナッツ"
+      "tplItemMixedNuts": "ミックスナッツ",
+      "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+      "logIn": "ログイン"
     },
     "home": {
       "viewMenu": "見た目を確認する",
@@ -2012,7 +2014,18 @@
       "scansTitle": "スキャン",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} スキャン",
-      "myOrders": "マイオーダー"
+      "myOrders": "マイオーダー",
+      "saveMenu": "メニューを保存"
+    },
+    "claim": {
+      "title": "メニューを保存",
+      "subtitle": "メニューへのアクセスを保持するためにメールアドレスを入力してください",
+      "emailPlaceholder": "your@email.com",
+      "sendCode": "コードを送信",
+      "verifyCode": "確認",
+      "emailTaken": "このメールアドレスは既に使用されています。ログインするか別のアドレスをお使いください。",
+      "success": "メール認証完了！メニューが保存されました。",
+      "backToMenu": "メニューに戻る"
     }
   },
   "reservationSettings": {

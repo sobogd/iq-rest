@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutoni",
-      "tplItemMixedNuts": "Mešani oreščki"
+      "tplItemMixedNuts": "Mešani oreščki",
+      "alreadyHaveAccount": "Že imate račun?",
+      "logIn": "Prijava"
     },
     "home": {
       "viewMenu": "Poglej, kako izgleda",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skeniranja",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skeniranj",
-      "myOrders": "Moja naročila"
+      "myOrders": "Moja naročila",
+      "saveMenu": "Shrani meni"
+    },
+    "claim": {
+      "title": "Shranite svoj meni",
+      "subtitle": "Vnesite email za ohranitev dostopa do menija",
+      "emailPlaceholder": "vas@email.com",
+      "sendCode": "Pošlji kodo",
+      "verifyCode": "Preveri",
+      "emailTaken": "Ta email je že v uporabi. Prijavite se ali uporabite drugega.",
+      "success": "Email potrjen! Vaš meni je shranjen.",
+      "backToMenu": "Nazaj na meni"
     }
   },
   "reservationSettings": {

@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Crostons",
-      "tplItemMixedNuts": "Fruits Secs Variats"
+      "tplItemMixedNuts": "Fruits Secs Variats",
+      "alreadyHaveAccount": "Ja tens un compte?",
+      "logIn": "Inicia sessió"
     },
     "home": {
       "viewMenu": "Mira com es veu",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Escanejos",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} escanejos",
-      "myOrders": "Les meves comandes"
+      "myOrders": "Les meves comandes",
+      "saveMenu": "Desa el menú"
+    },
+    "claim": {
+      "title": "Desa el teu menú",
+      "subtitle": "Introdueix el teu email per conservar l'accés al teu menú",
+      "emailPlaceholder": "teu@email.com",
+      "sendCode": "Envia el codi",
+      "verifyCode": "Verifica",
+      "emailTaken": "Aquest email ja està en ús. Inicia sessió o utilitza'n un altre.",
+      "success": "Email verificat! El teu menú està desat.",
+      "backToMenu": "Torna al menú"
     }
   },
   "reservationSettings": {

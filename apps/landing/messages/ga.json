@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Crúitíní",
-      "tplItemMixedNuts": "Cnónna Measctha"
+      "tplItemMixedNuts": "Cnónna Measctha",
+      "alreadyHaveAccount": "An bhfuil cuntas agat cheana?",
+      "logIn": "Logáil isteach"
     },
     "home": {
       "viewMenu": "Féach conas a fhéachann sé",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scanadh",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scanadh",
-      "myOrders": "Mo chuid orduithe"
+      "myOrders": "Mo chuid orduithe",
+      "saveMenu": "Sábháil biachlár"
+    },
+    "claim": {
+      "title": "Sábháil do bhiachlár",
+      "subtitle": "Cuir isteach do ríomhphost chun rochtain ar do bhiachlár a choinneáil",
+      "emailPlaceholder": "do@email.com",
+      "sendCode": "Seol cód",
+      "verifyCode": "Deimhnigh",
+      "emailTaken": "Tá an ríomhphost seo in úsáid cheana. Logáil isteach nó úsáid ceann eile.",
+      "success": "Ríomhphost deimhnithe! Tá do bhiachlár sábháilte.",
+      "backToMenu": "Ar ais go dtí an biachlár"
     }
   },
   "reservationSettings": {

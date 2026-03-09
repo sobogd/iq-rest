@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutonkeja",
-      "tplItemMixedNuts": "Pähkinäsekoitus"
+      "tplItemMixedNuts": "Pähkinäsekoitus",
+      "alreadyHaveAccount": "Onko sinulla jo tili?",
+      "logIn": "Kirjaudu"
     },
     "home": {
       "viewMenu": "Katso miltä se näyttää",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skannaukset",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skannausta",
-      "myOrders": "Omat tilaukset"
+      "myOrders": "Omat tilaukset",
+      "saveMenu": "Tallenna menu"
+    },
+    "claim": {
+      "title": "Tallenna menusi",
+      "subtitle": "Syötä sähköpostisi säilyttääksesi pääsyn menuusi",
+      "emailPlaceholder": "sinun@email.com",
+      "sendCode": "Lähetä koodi",
+      "verifyCode": "Vahvista",
+      "emailTaken": "Tämä sähköposti on jo käytössä. Kirjaudu tai käytä toista.",
+      "success": "Sähköposti vahvistettu! Menusi on tallennettu.",
+      "backToMenu": "Takaisin menuun"
     }
   },
   "reservationSettings": {

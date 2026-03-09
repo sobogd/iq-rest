@@ -1999,7 +1999,9 @@
       "tplItemStout": "استاوت",
       "tplItemNachos": "ناچوز",
       "tplItemCroutons": "کروتون",
-      "tplItemMixedNuts": "آجیل مخلوط"
+      "tplItemMixedNuts": "آجیل مخلوط",
+      "alreadyHaveAccount": "قبلاً حساب دارید؟",
+      "logIn": "ورود"
     },
     "home": {
       "viewMenu": "ببینید چطور به نظر می‌رسد",
@@ -2012,7 +2014,18 @@
       "scansTitle": "اسکن‌ها",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} اسکن",
-      "myOrders": "سفارش‌های من"
+      "myOrders": "سفارش‌های من",
+      "saveMenu": "ذخیره منو"
+    },
+    "claim": {
+      "title": "منوی خود را ذخیره کنید",
+      "subtitle": "ایمیل خود را وارد کنید تا دسترسی به منوی خود را حفظ کنید",
+      "emailPlaceholder": "your@email.com",
+      "sendCode": "ارسال کد",
+      "verifyCode": "تأیید",
+      "emailTaken": "این ایمیل قبلاً استفاده شده است. وارد شوید یا ایمیل دیگری استفاده کنید.",
+      "success": "ایمیل تأیید شد! منوی شما ذخیره شد.",
+      "backToMenu": "بازگشت به منو"
     }
   },
   "reservationSettings": {

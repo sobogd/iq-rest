@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Grzanki",
-      "tplItemMixedNuts": "Mieszanka Orzechów"
+      "tplItemMixedNuts": "Mieszanka Orzechów",
+      "alreadyHaveAccount": "Masz już konto?",
+      "logIn": "Zaloguj się"
     },
     "home": {
       "viewMenu": "Zobacz, jak to wygląda",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skany",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skanów",
-      "myOrders": "Moje zamówienia"
+      "myOrders": "Moje zamówienia",
+      "saveMenu": "Zapisz menu"
+    },
+    "claim": {
+      "title": "Zapisz swoje menu",
+      "subtitle": "Podaj email, aby zachować dostęp do swojego menu",
+      "emailPlaceholder": "twoj@email.com",
+      "sendCode": "Wyślij kod",
+      "verifyCode": "Zweryfikuj",
+      "emailTaken": "Ten email jest już zajęty. Zaloguj się lub użyj innego.",
+      "success": "Email zweryfikowany! Twoje menu jest zapisane.",
+      "backToMenu": "Wróć do menu"
     }
   },
   "reservationSettings": {

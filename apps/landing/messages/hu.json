@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Kruton",
-      "tplItemMixedNuts": "Vegyes Dió"
+      "tplItemMixedNuts": "Vegyes Dió",
+      "alreadyHaveAccount": "Már van fiókod?",
+      "logIn": "Bejelentkezés"
     },
     "home": {
       "viewMenu": "Nézd meg, hogy néz ki",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Szkennek",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} szkennelés",
-      "myOrders": "Rendeléseim"
+      "myOrders": "Rendeléseim",
+      "saveMenu": "Menü mentése"
+    },
+    "claim": {
+      "title": "Mentsd el a menüdet",
+      "subtitle": "Add meg az e-mail címed, hogy megőrizd a hozzáférést a menüdhöz",
+      "emailPlaceholder": "te@email.com",
+      "sendCode": "Kód küldése",
+      "verifyCode": "Ellenőrzés",
+      "emailTaken": "Ez az e-mail már használatban van. Jelentkezz be vagy használj másikat.",
+      "success": "E-mail megerősítve! A menüd mentve van.",
+      "backToMenu": "Vissza a menühöz"
     }
   },
   "reservationSettings": {

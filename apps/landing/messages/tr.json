@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Kruton",
-      "tplItemMixedNuts": "Karışık Kuruyemiş"
+      "tplItemMixedNuts": "Karışık Kuruyemiş",
+      "alreadyHaveAccount": "Zaten hesabınız var mı?",
+      "logIn": "Giriş yap"
     },
     "home": {
       "viewMenu": "Nasıl göründüğünü görün",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Taramalar",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} tarama",
-      "myOrders": "Siparişlerim"
+      "myOrders": "Siparişlerim",
+      "saveMenu": "Menüyü kaydet"
+    },
+    "claim": {
+      "title": "Menünüzü kaydedin",
+      "subtitle": "Menünüze erişimi korumak için e-postanızı girin",
+      "emailPlaceholder": "sizin@email.com",
+      "sendCode": "Kod gönder",
+      "verifyCode": "Doğrula",
+      "emailTaken": "Bu e-posta zaten kullanılıyor. Giriş yapın veya başka bir e-posta kullanın.",
+      "success": "E-posta doğrulandı! Menünüz kaydedildi.",
+      "backToMenu": "Menüye dön"
     }
   },
   "reservationSettings": {

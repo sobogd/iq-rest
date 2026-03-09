@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Načos",
       "tplItemCroutons": "Krustiņi",
-      "tplItemMixedNuts": "Riekstu maisījums"
+      "tplItemMixedNuts": "Riekstu maisījums",
+      "alreadyHaveAccount": "Jau ir konts?",
+      "logIn": "Pieteikties"
     },
     "home": {
       "viewMenu": "Skatīt, kā tas izskatās",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skenējumi",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skenējumi",
-      "myOrders": "Mani pasūtījumi"
+      "myOrders": "Mani pasūtījumi",
+      "saveMenu": "Saglabāt ēdienkarti"
+    },
+    "claim": {
+      "title": "Saglabājiet savu ēdienkarti",
+      "subtitle": "Ievadiet e-pastu, lai saglabātu piekļuvi savai ēdienkartei",
+      "emailPlaceholder": "tavs@email.com",
+      "sendCode": "Sūtīt kodu",
+      "verifyCode": "Apstiprināt",
+      "emailTaken": "Šis e-pasts jau tiek izmantots. Piesakieties vai izmantojiet citu.",
+      "success": "E-pasts apstiprināts! Jūsu ēdienkarte ir saglabāta.",
+      "backToMenu": "Atpakaļ uz ēdienkarti"
     }
   },
   "reservationSettings": {

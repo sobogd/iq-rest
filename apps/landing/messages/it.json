@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Crostini",
-      "tplItemMixedNuts": "Frutta Secca Mista"
+      "tplItemMixedNuts": "Frutta Secca Mista",
+      "alreadyHaveAccount": "Hai già un account?",
+      "logIn": "Accedi"
     },
     "home": {
       "viewMenu": "Guarda come appare",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scansioni",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scansioni",
-      "myOrders": "I miei ordini"
+      "myOrders": "I miei ordini",
+      "saveMenu": "Salva menu"
+    },
+    "claim": {
+      "title": "Salva il tuo menu",
+      "subtitle": "Inserisci la tua email per mantenere l'accesso al tuo menu",
+      "emailPlaceholder": "tua@email.com",
+      "sendCode": "Invia codice",
+      "verifyCode": "Verifica",
+      "emailTaken": "Questa email è già in uso. Accedi o usa un'altra email.",
+      "success": "Email verificata! Il tuo menu è salvato.",
+      "backToMenu": "Torna al menu"
     }
   },
   "reservationSettings": {

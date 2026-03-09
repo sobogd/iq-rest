@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Croutoner",
-      "tplItemMixedNuts": "Blandede Nødder"
+      "tplItemMixedNuts": "Blandede Nødder",
+      "alreadyHaveAccount": "Har du allerede en konto?",
+      "logIn": "Log ind"
     },
     "home": {
       "viewMenu": "Se hvordan det ser ud",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Scanninger",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scanninger",
-      "myOrders": "Mine ordrer"
+      "myOrders": "Mine ordrer",
+      "saveMenu": "Gem menu"
+    },
+    "claim": {
+      "title": "Gem din menu",
+      "subtitle": "Indtast din e-mail for at beholde adgang til din menu",
+      "emailPlaceholder": "din@email.com",
+      "sendCode": "Send kode",
+      "verifyCode": "Bekræft",
+      "emailTaken": "Denne e-mail er allerede i brug. Log ind eller brug en anden.",
+      "success": "E-mail bekræftet! Din menu er gemt.",
+      "backToMenu": "Tilbage til menuen"
     }
   },
   "reservationSettings": {

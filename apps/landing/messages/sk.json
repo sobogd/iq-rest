@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutóny",
-      "tplItemMixedNuts": "Zmes orechov"
+      "tplItemMixedNuts": "Zmes orechov",
+      "alreadyHaveAccount": "Už máte účet?",
+      "logIn": "Prihlásiť sa"
     },
     "home": {
       "viewMenu": "Pozrite sa, ako to vyzerá",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skenov",
-      "myOrders": "Moje objednávky"
+      "myOrders": "Moje objednávky",
+      "saveMenu": "Uložiť menu"
+    },
+    "claim": {
+      "title": "Uložte si menu",
+      "subtitle": "Zadajte email pre zachovanie prístupu k vášmu menu",
+      "emailPlaceholder": "vas@email.com",
+      "sendCode": "Odoslať kód",
+      "verifyCode": "Overiť",
+      "emailTaken": "Tento email sa už používa. Prihláste sa alebo použite iný.",
+      "success": "Email overený! Vaše menu je uložené.",
+      "backToMenu": "Späť do menu"
     }
   },
   "reservationSettings": {

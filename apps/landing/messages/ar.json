@@ -1999,7 +1999,9 @@
       "tplItemStout": "ستاوت",
       "tplItemNachos": "ناتشوز",
       "tplItemCroutons": "كروتون",
-      "tplItemMixedNuts": "مكسرات مشكلة"
+      "tplItemMixedNuts": "مكسرات مشكلة",
+      "alreadyHaveAccount": "لديك حساب بالفعل؟",
+      "logIn": "تسجيل الدخول"
     },
     "home": {
       "viewMenu": "شاهد كيف يبدو",
@@ -2012,7 +2014,18 @@
       "scansTitle": "المسح",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} مسح",
-      "myOrders": "طلباتي"
+      "myOrders": "طلباتي",
+      "saveMenu": "حفظ القائمة"
+    },
+    "claim": {
+      "title": "احفظ قائمتك",
+      "subtitle": "أدخل بريدك الإلكتروني للحفاظ على الوصول إلى قائمتك",
+      "emailPlaceholder": "your@email.com",
+      "sendCode": "إرسال الرمز",
+      "verifyCode": "تحقق",
+      "emailTaken": "هذا البريد مستخدم بالفعل. سجّل الدخول أو استخدم بريداً آخر.",
+      "success": "تم التحقق من البريد! قائمتك محفوظة.",
+      "backToMenu": "العودة إلى القائمة"
     }
   },
   "reservationSettings": {

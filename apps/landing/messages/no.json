@@ -1999,7 +1999,9 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Krutonger",
-      "tplItemMixedNuts": "Blandet Nøtter"
+      "tplItemMixedNuts": "Blandet Nøtter",
+      "alreadyHaveAccount": "Har du allerede en konto?",
+      "logIn": "Logg inn"
     },
     "home": {
       "viewMenu": "Se hvordan det ser ut",
@@ -2012,7 +2014,18 @@
       "scansTitle": "Skanninger",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} skanninger",
-      "myOrders": "Mine bestillinger"
+      "myOrders": "Mine bestillinger",
+      "saveMenu": "Lagre meny"
+    },
+    "claim": {
+      "title": "Lagre menyen din",
+      "subtitle": "Skriv inn e-posten din for å beholde tilgang til menyen",
+      "emailPlaceholder": "din@email.com",
+      "sendCode": "Send kode",
+      "verifyCode": "Bekreft",
+      "emailTaken": "Denne e-posten er allerede i bruk. Logg inn eller bruk en annen.",
+      "success": "E-post bekreftet! Menyen din er lagret.",
+      "backToMenu": "Tilbake til menyen"
     }
   },
   "reservationSettings": {
