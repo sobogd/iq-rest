@@ -223,6 +223,18 @@ export enum DashboardEvent {
   PRICING_SWIPE_BASIC = "pricing_swipe_basic",
   PRICING_SWIPE_PRO = "pricing_swipe_pro",
 
+  // Save Menu (claim)
+  CLICKED_SAVE_MENU = "clicked_save_menu",
+  SHOWED_SAVE_MENU = "showed_save_menu",
+  FOCUSED_CLAIM_EMAIL = "focused_claim_email",
+  CLICKED_CLAIM_SEND_CODE = "clicked_claim_send_code",
+  CLAIM_CODE_SENT = "claim_code_sent",
+  CLICKED_CLAIM_CHANGE_EMAIL = "clicked_claim_change_email",
+  CLAIM_VERIFY_SUCCESS = "claim_verify_success",
+  ERROR_CLAIM_EMAIL_TAKEN = "error_claim_email_taken",
+  ERROR_CLAIM_SEND = "error_claim_send",
+  ERROR_CLAIM_VERIFY = "error_claim_verify",
+
   // Errors
   ERROR_VALIDATION = "error_validation",
   ERROR_SAVE = "error_save",
@@ -459,6 +471,18 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.PRICING_SWIPE_FREE]: "Pricing Swipe: Free",
   [DashboardEvent.PRICING_SWIPE_BASIC]: "Pricing Swipe: Growth",
   [DashboardEvent.PRICING_SWIPE_PRO]: "Pricing Swipe: Pro",
+
+  // Save Menu (claim)
+  [DashboardEvent.CLICKED_SAVE_MENU]: "Clicked Save Menu",
+  [DashboardEvent.SHOWED_SAVE_MENU]: "Showed Save Menu",
+  [DashboardEvent.FOCUSED_CLAIM_EMAIL]: "Focused Claim Email",
+  [DashboardEvent.CLICKED_CLAIM_SEND_CODE]: "Clicked Claim Send Code",
+  [DashboardEvent.CLAIM_CODE_SENT]: "Claim Code Sent",
+  [DashboardEvent.CLICKED_CLAIM_CHANGE_EMAIL]: "Clicked Claim Change Email",
+  [DashboardEvent.CLAIM_VERIFY_SUCCESS]: "Claim Verify Success",
+  [DashboardEvent.ERROR_CLAIM_EMAIL_TAKEN]: "Error: Claim Email Taken",
+  [DashboardEvent.ERROR_CLAIM_SEND]: "Error: Claim Send",
+  [DashboardEvent.ERROR_CLAIM_VERIFY]: "Error: Claim Verify",
 
   // Errors
   [DashboardEvent.ERROR_VALIDATION]: "Error: Validation",

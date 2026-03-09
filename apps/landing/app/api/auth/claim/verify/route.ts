@@ -13,11 +13,32 @@ import {
   AUTH_COOKIE_OPTIONS,
 } from "@/lib/session-utils";
 
+// In-memory rate limiter for OTP verification (per userId)
+const verifyAttempts = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const RATE_LIMIT_MAX = 10; // max 10 requests per window
+
+function isRateLimited(key: string): boolean {
+  const now = Date.now();
+  const entry = verifyAttempts.get(key);
+  if (!entry || now > entry.resetAt) {
+    verifyAttempts.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const auth = await getUserWithCompany();
     if (!auth) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    // Rate limit by userId
+    if (isRateLimited(auth.userId)) {
+      return NextResponse.json({ error: "TOO_MANY_ATTEMPTS" }, { status: 429 });
     }
 
     const { email, code } = await request.json();

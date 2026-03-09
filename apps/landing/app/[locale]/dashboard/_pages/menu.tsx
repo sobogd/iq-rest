@@ -282,7 +282,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
           {/* Save (anonymous) */}
           {!sortMode && isAnonymous && (
-            <Link href="/dashboard/save">
+            <Link href="/dashboard/save" onClick={() => track(DashboardEvent.CLICKED_SAVE_MENU)}>
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
                 style={{ background: "linear-gradient(135deg, #22c55e, #16a34a)" }}

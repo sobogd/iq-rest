@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
@@ -8,6 +8,7 @@ import { Loader2, Mail, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import { PageHeader } from "../_ui/page-header";
 import { DashboardContent } from "../_ui/dashboard-content";
+import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 const TURNSTILE_SITE_KEY = process.env.NODE_ENV === "production"
   ? "0x4AAAAAACi6p7FVybIQ_YZg"
@@ -26,6 +27,10 @@ export function SaveMenuPage() {
 
   const turnstileRef = useRef<TurnstileInstance>(null);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    track(DashboardEvent.SHOWED_SAVE_MENU);
+  }, []);
 
   const handleSendCode = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,6 +51,7 @@ export function SaveMenuPage() {
       return;
     }
 
+    track(DashboardEvent.CLICKED_CLAIM_SEND_CODE);
     setStatus("loading");
     setErrorMessage("");
 
@@ -59,20 +65,24 @@ export function SaveMenuPage() {
       const data = await res.json();
 
       if (res.ok) {
+        track(DashboardEvent.CLAIM_CODE_SENT);
         setStep("otp");
         setStatus("idle");
       } else if (data.error === "email_taken") {
+        track(DashboardEvent.ERROR_CLAIM_EMAIL_TAKEN);
         setErrorMessage(t("emailTaken"));
         setStatus("error");
         turnstileRef.current?.reset();
         setTurnstileToken(null);
       } else {
+        track(DashboardEvent.ERROR_CLAIM_SEND);
         setErrorMessage(data.error || tAuth("errors.sendFailed"));
         setStatus("error");
         turnstileRef.current?.reset();
         setTurnstileToken(null);
       }
     } catch {
+      track(DashboardEvent.ERROR_CLAIM_SEND);
       setErrorMessage(tAuth("errors.sendFailed"));
       setStatus("error");
       turnstileRef.current?.reset();
@@ -94,22 +104,27 @@ export function SaveMenuPage() {
       const data = await res.json();
 
       if (res.ok) {
+        track(DashboardEvent.CLAIM_VERIFY_SUCCESS);
         toast.success(t("success"));
         window.location.href = `/${locale}/dashboard`;
       } else if (data.error === "email_taken") {
+        track(DashboardEvent.ERROR_CLAIM_EMAIL_TAKEN);
         setErrorMessage(t("emailTaken"));
         setStatus("error");
       } else if (data.error === "TOO_MANY_ATTEMPTS") {
+        track(DashboardEvent.ERROR_CLAIM_VERIFY);
         setErrorMessage(tAuth("errors.tooManyAttempts"));
         setStatus("error");
         setStep("email");
         setOtp("");
       } else {
+        track(DashboardEvent.ERROR_CLAIM_VERIFY);
         setErrorMessage(tAuth("errors.invalidCode"));
         setStatus("error");
         setOtp("");
       }
     } catch {
+      track(DashboardEvent.ERROR_CLAIM_VERIFY);
       setErrorMessage(tAuth("errors.verifyFailed"));
       setStatus("error");
       setOtp("");
@@ -146,6 +161,7 @@ export function SaveMenuPage() {
                       placeholder={t("emailPlaceholder")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      onFocus={() => track(DashboardEvent.FOCUSED_CLAIM_EMAIL)}
                       disabled={status === "loading"}
                       className="flex-1 min-w-0 bg-transparent text-sm outline-none placeholder:text-muted-foreground/40"
                     />
@@ -221,7 +237,7 @@ export function SaveMenuPage() {
                   <button
                     type="button"
                     className="flex items-center gap-3 w-full h-11 px-4 border-t border-border/50 hover:bg-muted/50 transition-colors"
-                    onClick={() => { setStep("email"); setOtp(""); setErrorMessage(""); setStatus("idle"); }}
+                    onClick={() => { track(DashboardEvent.CLICKED_CLAIM_CHANGE_EMAIL); setStep("email"); setOtp(""); setErrorMessage(""); setStatus("idle"); }}
                   >
                     <span className="h-4 w-4 shrink-0" />
                     <span className="text-sm text-muted-foreground/60 flex-1 text-left">{tAuth("changeEmail")}</span>
