@@ -280,6 +280,20 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
         <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4 min-h-full">
           <DashboardNavSidebar />
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
+          {/* View menu */}
+          {!sortMode && slug && categories.length > 0 && (
+            <MenuPreviewModal menuUrl={`/m/${slug}`}>
+              <button
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
+              >
+                <Eye className="h-4 w-4" />
+                {tHome("viewMenu")}
+              </button>
+            </MenuPreviewModal>
+          )}
+
           {/* Save (anonymous) */}
           {!sortMode && isAnonymous && (
             <Link href="/dashboard/save" onClick={() => track(DashboardEvent.CLICKED_SAVE_MENU)}>
@@ -339,20 +353,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 })}
               </div>
             </div>
-          )}
-
-          {/* View menu */}
-          {!sortMode && slug && categories.length > 0 && (
-            <MenuPreviewModal menuUrl={`/m/${slug}`}>
-              <button
-                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-                onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
-              >
-                <Eye className="h-4 w-4" />
-                {tHome("viewMenu")}
-              </button>
-            </MenuPreviewModal>
           )}
 
           {/* Admin shortcuts */}
