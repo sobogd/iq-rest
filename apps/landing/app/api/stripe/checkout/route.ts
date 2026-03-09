@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { stripe, PRICE_LOOKUP_KEYS, getLookupKeyWithCurrency } from "@/lib/stripe";
 import { SupportedCurrency } from "@/lib/country-currency-map";
 import { getAuthCompany } from "@/lib/auth";
+import { isAnonymousEmail } from "@/lib/anonymous";
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,6 +12,13 @@ export async function POST(request: NextRequest) {
 
     if (!company) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    // Block anonymous users from checkout
+    const cookieStore = await cookies();
+    const currentEmail = cookieStore.get("user_email")?.value;
+    if (currentEmail && isAnonymousEmail(currentEmail)) {
+      return NextResponse.json({ error: "Save your menu first to subscribe" }, { status: 403 });
     }
 
     const { priceLookupKey, locale = "en" } = await request.json();
@@ -33,7 +41,6 @@ export async function POST(request: NextRequest) {
     }
 
     // Get currency from cookie (set by middleware based on geo)
-    const cookieStore = await cookies();
     const currency = (cookieStore.get("currency")?.value || "EUR") as SupportedCurrency;
 
     // Build full lookup key with currency (e.g., basic_monthly_eur)

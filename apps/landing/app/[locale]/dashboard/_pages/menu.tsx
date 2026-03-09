@@ -3,14 +3,14 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, Save } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
 import { useDashboard, PAGE_PATHS } from "../_context/dashboard-context";
 import { DashboardNavHeader, DashboardNavSidebar, DashboardNavItems } from "../_components/dashboard-nav";
-import { useRouter } from "@/i18n/routing";
+import { Link, useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
 import { formatPrice } from "@/lib/currencies";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
@@ -48,7 +48,7 @@ interface MenuPageProps {
 
 export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, isAdmin }: MenuPageProps) {
   useBlockBack();
-  const { translations, scanUsage } = useDashboard();
+  const { translations, scanUsage, isAnonymous } = useDashboard();
   const tHome = useTranslations("dashboard.home");
   const router = useRouter();
   const tItems = translations.items;
@@ -280,18 +280,17 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
         <div className="max-w-lg md:max-w-none md:w-[45rem] mx-auto md:flex md:gap-4 min-h-full">
           <DashboardNavSidebar />
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
-          {/* View menu */}
-          {!sortMode && slug && categories.length > 0 && (
-            <MenuPreviewModal menuUrl={`/m/${slug}`}>
+          {/* Save (anonymous) */}
+          {!sortMode && isAnonymous && (
+            <Link href="/dashboard/save">
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-                onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
+                style={{ background: "linear-gradient(135deg, #22c55e, #16a34a)" }}
               >
-                <Eye className="h-4 w-4" />
-                {tHome("viewMenu")}
+                <Save className="h-4 w-4" />
+                {tHome("saveMenu")}
               </button>
-            </MenuPreviewModal>
+            </Link>
           )}
 
           {/* Setup checklist */}
@@ -310,7 +309,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   <div className="h-2 rounded-full bg-muted overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all duration-500"
-                      style={{ width: `${(completedCount / checklistKeys.length) * 100}%`, background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                      style={{ width: `${(completedCount / checklistKeys.length) * 100}%`, background: "linear-gradient(to right, #22c55e, #16a34a)" }}
                     />
                   </div>
                 </div>
@@ -327,19 +326,33 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                       } ${done ? "opacity-50" : "hover:bg-muted/50"}`}
                     >
                       {done ? (
-                        <CheckCircle2 className="h-5 w-5 text-success shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
                       ) : (
-                        <Circle className={`h-5 w-5 shrink-0 ${isNext ? "text-primary" : "text-muted-foreground/40"}`} />
+                        <Circle className={`h-5 w-5 shrink-0 ${isNext ? "text-emerald-500" : "text-muted-foreground/40"}`} />
                       )}
                       <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-medium" : ""}`}>
                         {tHome(item.translationKey)}
                       </span>
-                      {!done && <ChevronRight className={`h-4 w-4 shrink-0 ${isNext ? "text-primary" : "text-muted-foreground/30"}`} />}
+                      {!done && <ChevronRight className={`h-4 w-4 shrink-0 ${isNext ? "text-emerald-500" : "text-muted-foreground/30"}`} />}
                     </button>
                   );
                 })}
               </div>
             </div>
+          )}
+
+          {/* View menu */}
+          {!sortMode && slug && categories.length > 0 && (
+            <MenuPreviewModal menuUrl={`/m/${slug}`}>
+              <button
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
+              >
+                <Eye className="h-4 w-4" />
+                {tHome("viewMenu")}
+              </button>
+            </MenuPreviewModal>
           )}
 
           {/* Admin shortcuts */}

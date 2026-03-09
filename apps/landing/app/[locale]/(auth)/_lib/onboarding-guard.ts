@@ -1,22 +1,17 @@
 import { redirect } from "next/navigation";
-import { getLocale } from "next-intl/server";
 import { getOnboardingData } from "./onboarding-data";
 
-/** For the unified onboarding page: requires auth, redirects to dashboard if done */
+/** For the unified onboarding page: allow unauthenticated, redirect to dashboard if done */
 export async function guardOnboarding() {
   const data = await getOnboardingData();
-  if (!data.isAuthenticated) {
-    const locale = await getLocale();
-    redirect(`/${locale}/login`);
-  }
-  if (data.onboardingStep >= 3) redirect("/dashboard");
+  if (data.isAuthenticated && data.onboardingStep >= 3) redirect("/dashboard");
   return data;
 }
 
-/** For login/otp: if authenticated, redirect to appropriate step */
+/** For login/otp: if authenticated (non-anonymous), redirect to appropriate step */
 export async function guardAuthPage() {
   const data = await getOnboardingData();
-  if (data.isAuthenticated) {
+  if (data.isAuthenticated && !data.isAnonymous) {
     if (data.onboardingStep < 3) redirect("/onboarding");
     redirect("/dashboard");
   }

@@ -259,6 +259,7 @@ export interface ScanUsage {
 interface DashboardContextType {
   translations: DashboardTranslations;
   scanUsage: ScanUsage | null;
+  isAnonymous: boolean;
 }
 
 const DashboardContext = createContext<DashboardContextType | null>(null);
@@ -267,13 +268,15 @@ export function DashboardProvider({
   children,
   translations,
   scanUsage,
+  isAnonymous,
 }: {
   children: ReactNode;
   translations: DashboardTranslations;
   scanUsage: ScanUsage | null;
+  isAnonymous: boolean;
 }) {
   return (
-    <DashboardContext.Provider value={{ translations, scanUsage }}>
+    <DashboardContext.Provider value={{ translations, scanUsage, isAnonymous }}>
       {children}
     </DashboardContext.Provider>
   );

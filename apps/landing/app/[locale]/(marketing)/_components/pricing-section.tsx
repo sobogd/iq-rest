@@ -165,7 +165,7 @@ export function PricingSection({ currency }: PricingSectionProps) {
           asChild
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg mx-auto"
         >
-          <Link href="/login" onClick={handleCtaClick}>
+          <Link href="/onboarding" onClick={handleCtaClick}>
             {t("trialCta")}
           </Link>
         </Button>

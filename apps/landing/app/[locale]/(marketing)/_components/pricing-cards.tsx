@@ -104,7 +104,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
       const { authenticated } = await authRes.json();
 
       if (!authenticated) {
-        router.push("/login");
+        router.push("/onboarding");
         return;
       }
 
@@ -129,7 +129,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
 
       window.location.href = data.url;
     } catch {
-      router.push("/login");
+      router.push("/onboarding");
     } finally {
       setLoadingPlan(null);
     }

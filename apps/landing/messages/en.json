@@ -1558,7 +1558,8 @@
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} scans",
-      "myOrders": "My Orders"
+      "myOrders": "My Orders",
+      "saveMenu": "Save Menu"
     },
     "logout": "Logout",
     "upsell": {
@@ -1719,7 +1720,19 @@
       "tplItemStout": "Stout",
       "tplItemNachos": "Nachos",
       "tplItemCroutons": "Croutons",
-      "tplItemMixedNuts": "Mixed Nuts"
+      "tplItemMixedNuts": "Mixed Nuts",
+      "alreadyHaveAccount": "Already have an account?",
+      "logIn": "Log in"
+    },
+    "claim": {
+      "title": "Save your menu",
+      "subtitle": "Enter your email to keep access to your menu",
+      "emailPlaceholder": "your@email.com",
+      "sendCode": "Send code",
+      "verifyCode": "Verify",
+      "emailTaken": "This email is already in use. Log in or use a different email.",
+      "success": "Email verified! Your menu is saved.",
+      "backToMenu": "Back to menu"
     },
     "analytics": {
       "monthlyUsage": "Monthly Usage",

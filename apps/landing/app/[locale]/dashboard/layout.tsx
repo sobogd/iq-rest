@@ -4,6 +4,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
 import { getCompanyAccess } from "@/lib/access";
+import { isAnonymousEmail } from "@/lib/anonymous";
 import { DashboardShell } from "./_components/shell";
 import { getScanUsage } from "./_lib/queries";
 import type { DashboardTranslations } from "./_context/dashboard-context";
@@ -45,12 +46,13 @@ export default async function DashboardLayout({
   const cookieStore = await cookies();
   const adminOriginalEmail = cookieStore.get("admin_original_email")?.value;
   const currentEmail = cookieStore.get("user_email")?.value;
+  const isAnon = currentEmail ? isAnonymousEmail(currentEmail) : false;
   const impersonation = adminOriginalEmail
     ? { originalEmail: adminOriginalEmail, currentEmail: currentEmail ?? "" }
     : undefined;
 
-  // Redirect to upgrade page if trial has expired
-  if (company && !impersonation) {
+  // Redirect to upgrade page if trial has expired (skip for anonymous users)
+  if (company && !impersonation && !isAnon) {
     const access = getCompanyAccess(company);
     if (access.trialExpired) {
       const headerStore = await headers();
@@ -247,7 +249,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId} scanUsage={scanUsage}>
+    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId} scanUsage={scanUsage} isAnonymous={isAnon}>
       {children}
     </DashboardShell>
   );

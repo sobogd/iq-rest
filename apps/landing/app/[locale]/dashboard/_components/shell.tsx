@@ -77,12 +77,14 @@ export function DashboardShell({
   impersonation,
   userId,
   scanUsage,
+  isAnonymous,
   children,
 }: {
   translations: DashboardTranslations;
   impersonation?: { originalEmail: string; currentEmail: string };
   userId: string;
   scanUsage: ScanUsage | null;
+  isAnonymous: boolean;
   children?: React.ReactNode;
 }) {
   useEffect(() => {
@@ -94,7 +96,7 @@ export function DashboardShell({
   }, [userId]);
 
   return (
-    <DashboardProvider translations={translations} scanUsage={scanUsage}>
+    <DashboardProvider translations={translations} scanUsage={scanUsage} isAnonymous={isAnonymous}>
       <DashboardLayout impersonation={impersonation}>
         {children}
       </DashboardLayout>

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, useRouter } from "@/i18n/routing";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import {
   Wand2, LayoutTemplate, Pencil, Camera, Plus, Loader2, X, FileText,
   ArrowLeft, UtensilsCrossed, Coffee, Beer,
@@ -13,6 +14,10 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
 import { analytics } from "@/lib/analytics";
+
+const TURNSTILE_SITE_KEY = process.env.NODE_ENV === "production"
+  ? "0x4AAAAAACi6p7FVybIQ_YZg"
+  : "1x00000000000000000000AA";
 
 // --- Types ---
 
@@ -85,13 +90,15 @@ function fileToJpegBase64(file: File): Promise<string> {
 // --- Component ---
 
 interface OnboardingFlowProps {
-  userId: string;
+  userId: string | null;
+  isAuthenticated: boolean;
   restaurantName: string | null;
   initialStep: Step;
 }
 
-export function OnboardingFlow({ userId, restaurantName: initialName, initialStep }: OnboardingFlowProps) {
+export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initialName, initialStep }: OnboardingFlowProps) {
   const router = useRouter();
+  const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
   const tAuth = useTranslations("dashboard.auth");
   const tMenu = useTranslations("dashboard.menu");
@@ -103,6 +110,12 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
   const [selectedTemplate, setSelectedTemplate] = useState<TemplateId>("restaurant");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [currentUserId, setCurrentUserId] = useState(userId);
+  const [authed, setAuthed] = useState(isAuthenticated);
+
+  // Turnstile (for anonymous creation)
+  const turnstileRef = useRef<TurnstileInstance>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   // Scan state
   const [photoPool, setPhotoPool] = useState<PoolPhoto[]>([]);
@@ -112,9 +125,11 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
   const nameInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    setDashboardUserId(userId);
-    analytics.linkSession(userId);
-  }, [userId]);
+    if (currentUserId) {
+      setDashboardUserId(currentUserId);
+      analytics.linkSession(currentUserId);
+    }
+  }, [currentUserId]);
 
   useEffect(() => {
     if (step === "name") {
@@ -151,20 +166,51 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
 
     try {
       const currency = getCurrencyFromCookie();
-      const response = await fetch("/api/restaurant", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title: nameInput.trim(), currency }),
-      });
 
-      if (response.ok) {
-        setRestaurantName(nameInput.trim());
-        setIsLoading(false);
-        setStep("method");
+      if (!authed) {
+        // Anonymous flow — create user + restaurant in one call
+        const response = await fetch("/api/auth/anonymous", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: nameInput.trim(),
+            currency,
+            locale,
+            turnstileToken,
+          }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setCurrentUserId(data.userId);
+          setAuthed(true);
+          setRestaurantName(nameInput.trim());
+          setIsLoading(false);
+          setStep("method");
+        } else {
+          const data = await response.json();
+          setErrorMessage(data.error || t("error"));
+          setIsLoading(false);
+          turnstileRef.current?.reset();
+          setTurnstileToken(null);
+        }
       } else {
-        const data = await response.json();
-        setErrorMessage(data.error || t("error"));
-        setIsLoading(false);
+        // Authenticated flow — create restaurant
+        const response = await fetch("/api/restaurant", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title: nameInput.trim(), currency }),
+        });
+
+        if (response.ok) {
+          setRestaurantName(nameInput.trim());
+          setIsLoading(false);
+          setStep("method");
+        } else {
+          const data = await response.json();
+          setErrorMessage(data.error || t("error"));
+          setIsLoading(false);
+        }
       }
     } catch {
       setErrorMessage(t("error"));
@@ -387,9 +433,22 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
                   className="text-center lg:h-auto lg:py-2.5 lg:text-lg"
                 />
 
+                {!authed && TURNSTILE_SITE_KEY && (
+                  <div className="absolute overflow-hidden w-0 h-0">
+                    <Turnstile
+                      ref={turnstileRef}
+                      siteKey={TURNSTILE_SITE_KEY}
+                      onSuccess={setTurnstileToken}
+                      onError={() => setTurnstileToken(null)}
+                      onExpire={() => setTurnstileToken(null)}
+                      options={{ size: "flexible", appearance: "interaction-only" }}
+                    />
+                  </div>
+                )}
+
                 <Button
                   type="submit"
-                  disabled={isLoading || !nameInput.trim()}
+                  disabled={isLoading || !nameInput.trim() || (!authed && !turnstileToken && !!TURNSTILE_SITE_KEY)}
                   className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
                 >
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -397,6 +456,15 @@ export function OnboardingFlow({ userId, restaurantName: initialName, initialSte
                 </Button>
               </div>
             </form>
+
+            {!authed && (
+              <p className="text-base text-muted-foreground/50 text-center mt-6">
+                {t("alreadyHaveAccount")}{" "}
+                <Link href="/login" className="underline hover:text-foreground/50">
+                  {t("logIn")}
+                </Link>
+              </p>
+            )}
           </div>
         )}
 
