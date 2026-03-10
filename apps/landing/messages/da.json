@@ -1920,7 +1920,8 @@
       "hintBody": "En kategori er en sektion af din menu. For eksempel: Forretter, Hovedretter, Desserter, Drikkevarer, Frokosttilbud.",
       "hintNoCategories": "Ingen kategorier? Intet problem — opret en kaldet \"Menu\" eller \"Vores retter\" og tilføj alt der.",
       "itemHintTitle": "Hvad er en ret?",
-      "itemHintBody": "En ret er et specifikt produkt på din menu. For eksempel: Cæsarsalat, Pizza Margherita, Espresso, Chokoladekage. Tilføj navn, pris og eventuelt beskrivelse og foto."
+      "itemHintBody": "En ret er et specifikt produkt på din menu. For eksempel: Cæsarsalat, Pizza Margherita, Espresso, Chokoladekage. Tilføj navn, pris og eventuelt beskrivelse og foto.",
+      "noItems": "Ingen varer endnu"
     },
     "onboarding": {
       "nameTitle": "Hvad hedder dit sted?",

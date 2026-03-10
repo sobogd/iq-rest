@@ -1920,7 +1920,8 @@
       "hintBody": "Een categorie is een sectie van je menu. Bijvoorbeeld: Voorgerechten, Hoofdgerechten, Desserts, Dranken, Dagmenu.",
       "hintNoCategories": "Geen categorieën? Geen probleem — maak er een aan met de naam \"Menu\" of \"Onze gerechten\" en voeg alles daar toe.",
       "itemHintTitle": "Wat is een gerecht?",
-      "itemHintBody": "Een gerecht is een specifiek product op uw menu. Bijvoorbeeld: Caesar-salade, Pizza Margherita, Espresso, Chocoladetaart. Voeg naam, prijs en optioneel beschrijving en foto toe."
+      "itemHintBody": "Een gerecht is een specifiek product op uw menu. Bijvoorbeeld: Caesar-salade, Pizza Margherita, Espresso, Chocoladetaart. Voeg naam, prijs en optioneel beschrijving en foto toe.",
+      "noItems": "Nog geen items"
     },
     "onboarding": {
       "nameTitle": "Hoe heet je zaak?",

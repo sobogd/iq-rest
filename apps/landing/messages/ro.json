@@ -1920,7 +1920,8 @@
       "hintBody": "O categorie este o secțiune a meniului tău. De exemplu: Aperitive, Feluri principale, Deserturi, Băuturi, Meniul zilei.",
       "hintNoCategories": "Nu ai categorii? Nicio problemă — creează una numită \"Meniu\" sau \"Preparatele noastre\" și adaugă totul acolo.",
       "itemHintTitle": "Ce este un preparat?",
-      "itemHintBody": "Un preparat este un produs specific din meniul tău. De exemplu: Salată Caesar, Pizza Margherita, Espresso, Tort de ciocolată. Adaugă nume, preț și opțional descriere și fotografie."
+      "itemHintBody": "Un preparat este un produs specific din meniul tău. De exemplu: Salată Caesar, Pizza Margherita, Espresso, Tort de ciocolată. Adaugă nume, preț și opțional descriere și fotografie.",
+      "noItems": "Niciun articol"
     },
     "onboarding": {
       "nameTitle": "Cum se numește localul tău?",

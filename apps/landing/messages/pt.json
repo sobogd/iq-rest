@@ -1920,7 +1920,8 @@
       "hintBody": "Uma categoria é uma secção do seu menu. Por exemplo: Entradas, Pratos principais, Sobremesas, Bebidas, Menu do dia.",
       "hintNoCategories": "Não tem categorias? Sem problema — crie uma chamada \"Menu\" ou \"Nossos pratos\" e adicione tudo lá.",
       "itemHintTitle": "O que é um prato?",
-      "itemHintBody": "Um prato é um produto específico do seu menu. Por exemplo: Salada Caesar, Pizza Margherita, Espresso, Bolo de chocolate. Adicione nome, preço e opcionalmente descrição e foto."
+      "itemHintBody": "Um prato é um produto específico do seu menu. Por exemplo: Salada Caesar, Pizza Margherita, Espresso, Bolo de chocolate. Adicione nome, preço e opcionalmente descrição e foto.",
+      "noItems": "Sem itens"
     },
     "onboarding": {
       "nameTitle": "Qual o nome do seu estabelecimento?",

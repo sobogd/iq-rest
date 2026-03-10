@@ -1920,7 +1920,8 @@
       "hintBody": "Kategoria on ruokalistan osio. Esimerkiksi: Alkupalat, Pääruoat, Jälkiruoat, Juomat, Lounasmenu.",
       "hintNoCategories": "Ei kategorioita? Ei hätää — luo yksi nimeltä \"Menu\" tai \"Ruokamme\" ja lisää kaikki sinne.",
       "itemHintTitle": "Mikä on ruokalistan tuote?",
-      "itemHintBody": "Tuote on tietty ruoka tai juoma. Esimerkiksi: Caesar-salaatti, Pizza Margherita, Espresso, Suklaakakku. Lisää nimi, hinta ja halutessasi kuvaus ja kuva."
+      "itemHintBody": "Tuote on tietty ruoka tai juoma. Esimerkiksi: Caesar-salaatti, Pizza Margherita, Espresso, Suklaakakku. Lisää nimi, hinta ja halutessasi kuvaus ja kuva.",
+      "noItems": "Ei tuotteita vielä"
     },
     "onboarding": {
       "nameTitle": "Mikä on paikkasi nimi?",

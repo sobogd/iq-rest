@@ -1920,7 +1920,8 @@
       "hintBody": "Kategorija je odjeljak vašeg jelovnika. Na primjer: Predjela, Glavna jela, Deserti, Pića, Dnevni menu.",
       "hintNoCategories": "Nemate kategorije? Nema problema — napravite jednu pod nazivom \"Jelovnik\" ili \"Naša jela\" i dodajte sve tamo.",
       "itemHintTitle": "Što je stavka jelovnika?",
-      "itemHintBody": "Stavka je određeno jelo ili piće. Na primjer: Caesar salata, Pizza Margherita, Espresso, Čokoladna torta. Dodajte naziv, cijenu i opcionalno opis i fotografiju."
+      "itemHintBody": "Stavka je određeno jelo ili piće. Na primjer: Caesar salata, Pizza Margherita, Espresso, Čokoladna torta. Dodajte naziv, cijenu i opcionalno opis i fotografiju.",
+      "noItems": "Nema stavki"
     },
     "onboarding": {
       "nameTitle": "Kako se zove vaš lokal?",

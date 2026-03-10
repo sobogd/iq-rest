@@ -1920,7 +1920,8 @@
       "hintBody": "A kategória az étlap egy szakasza. Például: Előételek, Főételek, Desszertek, Italok, Ebédmenü.",
       "hintNoCategories": "Nincsenek kategóriák? Nem gond — hozz létre egyet \"Menü\" vagy \"Ételeink\" néven, és adj hozzá mindent oda.",
       "itemHintTitle": "Mi az az étel?",
-      "itemHintBody": "Az étel egy konkrét termék az étlapon. Például: Caesar-saláta, Pizza Margherita, Espresso, Csokoládétorta. Add meg a nevet, az árat, és opcionálisan a leírást és a fotót."
+      "itemHintBody": "Az étel egy konkrét termék az étlapon. Például: Caesar-saláta, Pizza Margherita, Espresso, Csokoládétorta. Add meg a nevet, az árat, és opcionálisan a leírást és a fotót.",
+      "noItems": "Nincsenek tételek"
     },
     "onboarding": {
       "nameTitle": "Mi a helye neve?",

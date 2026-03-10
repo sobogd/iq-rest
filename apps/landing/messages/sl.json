@@ -1920,7 +1920,8 @@
       "hintBody": "Kategorija je razdelek vašega menija. Na primer: Predjedi, Glavne jedi, Sladice, Pijače, Dnevni meni.",
       "hintNoCategories": "Nimate kategorij? Ni problema — ustvarite eno z imenom \"Meni\" ali \"Naše jedi\" in dodajte vse tja.",
       "itemHintTitle": "Kaj je postavka menija?",
-      "itemHintBody": "Postavka je določena jed ali pijača. Na primer: Cezarjeva solata, Pizza Margherita, Espresso, Čokoladna torta. Dodajte ime, ceno in po želji opis in fotografijo."
+      "itemHintBody": "Postavka je določena jed ali pijača. Na primer: Cezarjeva solata, Pizza Margherita, Espresso, Čokoladna torta. Dodajte ime, ceno in po želji opis in fotografijo.",
+      "noItems": "Ni postavk"
     },
     "onboarding": {
       "nameTitle": "Kako se imenuje vaš lokal?",

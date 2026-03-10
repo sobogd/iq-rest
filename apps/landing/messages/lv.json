@@ -1920,7 +1920,8 @@
       "hintBody": "Kategorija ir jūsu ēdienkartes sadaļa. Piemēram: Uzkodas, Pamatēdieni, Deserti, Dzērieni, Pusdienu piedāvājums.",
       "hintNoCategories": "Nav kategoriju? Nav problēmu — izveidojiet vienu ar nosaukumu \"Ēdienkarte\" vai \"Mūsu ēdieni\" un pievienojiet visu tur.",
       "itemHintTitle": "Kas ir ēdienkartes pozīcija?",
-      "itemHintBody": "Pozīcija ir konkrēts ēdiens vai dzēriens. Piemēram: Cēzara salāti, Pizza Margherita, Espresso, Šokolādes kūka. Pievienojiet nosaukumu, cenu un pēc izvēles aprakstu un foto."
+      "itemHintBody": "Pozīcija ir konkrēts ēdiens vai dzēriens. Piemēram: Cēzara salāti, Pizza Margherita, Espresso, Šokolādes kūka. Pievienojiet nosaukumu, cenu un pēc izvēles aprakstu un foto.",
+      "noItems": "Nav vienumu"
     },
     "onboarding": {
       "nameTitle": "Kāds ir jūsu vietas nosaukums?",

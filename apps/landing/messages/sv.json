@@ -1920,7 +1920,8 @@
       "hintBody": "En kategori är en del av din meny. Till exempel: Förrätter, Huvudrätter, Efterrätter, Drycker, Lunchmeny.",
       "hintNoCategories": "Inga kategorier? Inga problem — skapa en med namnet \"Meny\" eller \"Våra rätter\" och lägg till allt där.",
       "itemHintTitle": "Vad är en rätt?",
-      "itemHintBody": "En rätt är en specifik produkt på din meny. Till exempel: Caesarsallad, Pizza Margherita, Espresso, Chokladtårta. Lägg till namn, pris och valfritt beskrivning och foto."
+      "itemHintBody": "En rätt är en specifik produkt på din meny. Till exempel: Caesarsallad, Pizza Margherita, Espresso, Chokladtårta. Lägg till namn, pris och valfritt beskrivning och foto.",
+      "noItems": "Inga artiklar ännu"
     },
     "onboarding": {
       "nameTitle": "Vad heter ditt ställe?",

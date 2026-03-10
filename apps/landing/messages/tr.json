@@ -1920,7 +1920,8 @@
       "hintBody": "Kategori, menünüzün bir bölümüdür. Örneğin: Başlangıçlar, Ana Yemekler, Tatlılar, İçecekler, Günün Menüsü.",
       "hintNoCategories": "Kategoriniz yok mu? Sorun değil — \"Menü\" veya \"Yemeklerimiz\" adında bir tane oluşturun ve her şeyi oraya ekleyin.",
       "itemHintTitle": "Menü öğesi nedir?",
-      "itemHintBody": "Bir öğe, menünüzdeki belirli bir yemek veya içecektir. Örneğin: Sezar Salatası, Margherita Pizza, Espresso, Çikolatalı Pasta. Ad, fiyat ve isteğe bağlı açıklama ve fotoğraf ekleyin."
+      "itemHintBody": "Bir öğe, menünüzdeki belirli bir yemek veya içecektir. Örneğin: Sezar Salatası, Margherita Pizza, Espresso, Çikolatalı Pasta. Ad, fiyat ve isteğe bağlı açıklama ve fotoğraf ekleyin.",
+      "noItems": "Henüz öğe yok"
     },
     "onboarding": {
       "nameTitle": "Mekanınızın adı nedir?",

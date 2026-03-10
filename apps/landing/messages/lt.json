@@ -1920,7 +1920,8 @@
       "hintBody": "Kategorija yra jūsų meniu skyrius. Pavyzdžiui: Užkandžiai, Pagrindiniai patiekalai, Desertai, Gėrimai, Pietų meniu.",
       "hintNoCategories": "Neturite kategorijų? Jokių problemų — sukurkite vieną pavadinimu \"Meniu\" arba \"Mūsų patiekalai\" ir pridėkite viską ten.",
       "itemHintTitle": "Kas yra meniu pozicija?",
-      "itemHintBody": "Pozicija yra konkretus patiekalas arba gėrimas. Pavyzdžiui: Cezario salotos, Pica Margherita, Espreso, Šokoladinis tortas. Pridėkite pavadinimą, kainą ir pasirinktinai aprašymą bei nuotrauką."
+      "itemHintBody": "Pozicija yra konkretus patiekalas arba gėrimas. Pavyzdžiui: Cezario salotos, Pica Margherita, Espreso, Šokoladinis tortas. Pridėkite pavadinimą, kainą ir pasirinktinai aprašymą bei nuotrauką.",
+      "noItems": "Nėra prekių"
     },
     "onboarding": {
       "nameTitle": "Koks jūsų vietos pavadinimas?",

@@ -1920,7 +1920,8 @@
       "hintBody": "Kategorie je sekce vašeho menu. Například: Předkrmy, Hlavní jídla, Dezerty, Nápoje, Polední menu.",
       "hintNoCategories": "Nemáte kategorie? Žádný problém — vytvořte jednu s názvem \"Menu\" nebo \"Naše jídla\" a přidejte tam vše.",
       "itemHintTitle": "Co je položka menu?",
-      "itemHintBody": "Položka je konkrétní jídlo nebo nápoj. Například: Salát Caesar, Pizza Margherita, Espresso, Čokoládový dort. Přidejte název, cenu a volitelně popis a fotografii."
+      "itemHintBody": "Položka je konkrétní jídlo nebo nápoj. Například: Salát Caesar, Pizza Margherita, Espresso, Čokoládový dort. Přidejte název, cenu a volitelně popis a fotografii.",
+      "noItems": "Žádné položky"
     },
     "onboarding": {
       "nameTitle": "Jak se jmenuje vaše místo?",

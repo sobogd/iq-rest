@@ -431,6 +431,11 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                           )}
                         </div>
                       ))}
+                      {!sortMode && categoryItems.length === 0 && (
+                        <div className="h-11 px-4 flex items-center border-t border-border/50">
+                          <span className="text-sm text-muted-foreground/40">{tMenu.noItems}</span>
+                        </div>
+                      )}
                       {!sortMode && (
                         <div
                           className="flex items-center h-11 px-4 border-t border-border/50 cursor-pointer transition-colors hover:bg-muted/50"

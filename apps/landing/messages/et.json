@@ -1920,7 +1920,8 @@
       "hintBody": "Kategooria on menüü jaotis. Näiteks: Eelroad, Praad, Magustoidud, Joogid, Lõunamenüü.",
       "hintNoCategories": "Pole kategooriaid? Pole probleemi — looge üks nimega \"Menüü\" või \"Meie road\" ja lisage kõik sinna.",
       "itemHintTitle": "Mis on menüükirje?",
-      "itemHintBody": "Menüükirje on konkreetne roog või jook. Näiteks: Caesari salat, Pizza Margherita, Espresso, Šokolaadikook. Lisage nimi, hind ja soovi korral kirjeldus ja foto."
+      "itemHintBody": "Menüükirje on konkreetne roog või jook. Näiteks: Caesari salat, Pizza Margherita, Espresso, Šokolaadikook. Lisage nimi, hind ja soovi korral kirjeldus ja foto.",
+      "noItems": "Ühtegi toodet"
     },
     "onboarding": {
       "nameTitle": "Mis on teie koha nimi?",

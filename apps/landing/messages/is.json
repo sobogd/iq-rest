@@ -1920,7 +1920,8 @@
       "hintBody": "Flokkur er hluti af matseðlinum þínum. Til dæmis: Forréttur, Aðalréttir, Eftiréttir, Drykkir, Hádegismatseðill.",
       "hintNoCategories": "Engir flokkar? Ekkert mál — búðu til einn sem heitir \"Matseðill\" eða \"Réttir okkar\" og bættu öllu þar við.",
       "itemHintTitle": "Hvað er matseðilsatriði?",
-      "itemHintBody": "Atriði er ákveðinn réttur eða drykkur. Til dæmis: Sesar-salat, Pizza Margherita, Espresso, Súkkulaðikaka. Bættu við nafni, verði og valfrjálst lýsingu og mynd."
+      "itemHintBody": "Atriði er ákveðinn réttur eða drykkur. Til dæmis: Sesar-salat, Pizza Margherita, Espresso, Súkkulaðikaka. Bættu við nafni, verði og valfrjálst lýsingu og mynd.",
+      "noItems": "Engin atriði ennþá"
     },
     "onboarding": {
       "nameTitle": "Hvað heitir staðurinn þinn?",

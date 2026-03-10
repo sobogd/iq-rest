@@ -1869,6 +1869,7 @@
     "menu": {
       "addItem": "Add Item",
       "addCategory": "Add Category",
+      "noItems": "No items yet",
       "emptyTitle": "Your menu is empty",
       "emptySubtitle": "Add your first category to get started",
       "orDivider": "or",

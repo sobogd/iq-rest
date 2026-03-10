@@ -1920,7 +1920,8 @@
       "hintBody": "Una categoría es una sección de tu carta. Por ejemplo: Entrantes, Platos principales, Postres, Bebidas, Menú del día.",
       "hintNoCategories": "¿No tienes categorías? No hay problema — crea una llamada \"Carta\" o \"Nuestros platos\" y añade todo allí.",
       "itemHintTitle": "¿Qué es un plato?",
-      "itemHintBody": "Un plato es un producto concreto de tu carta. Por ejemplo: Ensalada César, Pizza Margherita, Espresso, Tarta de chocolate. Añade nombre, precio y opcionalmente descripción y foto."
+      "itemHintBody": "Un plato es un producto concreto de tu carta. Por ejemplo: Ensalada César, Pizza Margherita, Espresso, Tarta de chocolate. Añade nombre, precio y opcionalmente descripción y foto.",
+      "noItems": "Sin artículos"
     },
     "onboarding": {
       "nameTitle": "¿Cómo se llama tu local?",

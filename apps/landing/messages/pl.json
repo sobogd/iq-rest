@@ -1920,7 +1920,8 @@
       "hintBody": "Kategoria to sekcja w Twoim menu. Na przykład: Przystawki, Dania główne, Desery, Napoje, Lunch.",
       "hintNoCategories": "Nie masz kategorii? Nie ma problemu — utwórz jedną o nazwie \"Menu\" lub \"Nasze dania\" i dodaj tam wszystko.",
       "itemHintTitle": "Czym jest pozycja menu?",
-      "itemHintBody": "Pozycja to konkretne danie lub napój. Na przykład: Sałatka Cezar, Pizza Margherita, Espresso, Tort czekoladowy. Dodaj nazwę, cenę i opcjonalnie opis oraz zdjęcie."
+      "itemHintBody": "Pozycja to konkretne danie lub napój. Na przykład: Sałatka Cezar, Pizza Margherita, Espresso, Tort czekoladowy. Dodaj nazwę, cenę i opcjonalnie opis oraz zdjęcie.",
+      "noItems": "Brak pozycji"
     },
     "onboarding": {
       "nameTitle": "Jak nazywa się Twoje miejsce?",
