@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Kruton",
       "tplItemMixedNuts": "Vegyes Dió",
       "alreadyHaveAccount": "Már van fiókod?",
-      "logIn": "Bejelentkezés"
+      "logIn": "Bejelentkezés",
+      "defaultRestaurantName": "Az Én Helyem",
+      "methodTitle": "Készítsd el a menüd"
     },
     "home": {
       "viewMenu": "Nézd meg, hogy néz ki",

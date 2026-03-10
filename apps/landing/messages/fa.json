@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "کروتون",
       "tplItemMixedNuts": "آجیل مخلوط",
       "alreadyHaveAccount": "قبلاً حساب دارید؟",
-      "logIn": "ورود"
+      "logIn": "ورود",
+      "defaultRestaurantName": "مکان من",
+      "methodTitle": "منوی خود را بسازید"
     },
     "home": {
       "viewMenu": "ببینید چطور به نظر می‌رسد",

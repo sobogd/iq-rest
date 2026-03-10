@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Crutoane",
       "tplItemMixedNuts": "Mix de Nuci",
       "alreadyHaveAccount": "Ai deja un cont?",
-      "logIn": "Conectare"
+      "logIn": "Conectare",
+      "defaultRestaurantName": "Localul Meu",
+      "methodTitle": "Creează-ți meniul"
     },
     "home": {
       "viewMenu": "Vezi cum arată",

@@ -9,7 +9,6 @@ import {
   ArrowLeft, UtensilsCrossed, Coffee, Beer,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { track, DashboardEvent, setDashboardUserId } from "@/lib/dashboard-events";
@@ -21,7 +20,7 @@ const TURNSTILE_SITE_KEY = process.env.NODE_ENV === "production"
 
 // --- Types ---
 
-type Step = "name" | "method" | "scan" | "templates";
+type Step = "method" | "scan" | "templates";
 type MenuOption = "scan" | "templates" | "manual";
 type TemplateId = "restaurant" | "cafe" | "bar";
 
@@ -92,11 +91,10 @@ function fileToJpegBase64(file: File): Promise<string> {
 interface OnboardingFlowProps {
   userId: string | null;
   isAuthenticated: boolean;
-  restaurantName: string | null;
   initialStep: Step;
 }
 
-export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initialName, initialStep }: OnboardingFlowProps) {
+export function OnboardingFlow({ userId, isAuthenticated, initialStep }: OnboardingFlowProps) {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
@@ -104,14 +102,13 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
   const tMenu = useTranslations("dashboard.menu");
 
   const [step, setStep] = useState<Step>(initialStep);
-  const [restaurantName, setRestaurantName] = useState(initialName || "");
-  const [nameInput, setNameInput] = useState("");
   const [selectedMethod, setSelectedMethod] = useState<MenuOption>("scan");
   const [selectedTemplate, setSelectedTemplate] = useState<TemplateId>("restaurant");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [currentUserId, setCurrentUserId] = useState(userId);
   const [authed, setAuthed] = useState(isAuthenticated);
+  const [restaurantCreated, setRestaurantCreated] = useState(isAuthenticated);
 
   // Turnstile (for anonymous creation)
   const turnstileRef = useRef<TurnstileInstance>(null);
@@ -122,7 +119,6 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
   const [scanError, setScanError] = useState("");
   const [scanLoading, setScanLoading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const nameInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (currentUserId) {
@@ -132,9 +128,7 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
   }, [currentUserId]);
 
   useEffect(() => {
-    if (step === "name") {
-      track(DashboardEvent.SHOWED_ONBOARDING_NAME);
-    } else if (step === "method") {
+    if (step === "method") {
       track(DashboardEvent.SHOWED_ONBOARDING_MENU);
     } else if (step === "scan") {
       track(DashboardEvent.SHOWED_ONBOARDING_SCAN);
@@ -153,26 +147,22 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
     return match ? decodeURIComponent(match[1]) : "EUR";
   }
 
-  // --- Name step ---
+  // --- Ensure restaurant is created (lazy, on first method action) ---
 
-  const handleNameSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!nameInput.trim()) return;
+  const ensureRestaurantCreated = async (): Promise<boolean> => {
+    if (restaurantCreated) return true;
 
-    setIsLoading(true);
-    setErrorMessage("");
-    track(DashboardEvent.CLICKED_ONBOARDING_CONTINUE);
+    const defaultName = t("defaultRestaurantName");
+    const currency = getCurrencyFromCookie();
 
     try {
-      const currency = getCurrencyFromCookie();
-
       if (!authed) {
         // Anonymous flow — create user + restaurant in one call
         const response = await fetch("/api/auth/anonymous", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            title: nameInput.trim(),
+            title: defaultName,
             currency,
             locale,
             turnstileToken,
@@ -183,37 +173,35 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
           const data = await response.json();
           setCurrentUserId(data.userId);
           setAuthed(true);
-          setRestaurantName(nameInput.trim());
-          setIsLoading(false);
-          setStep("method");
+          setRestaurantCreated(true);
+          return true;
         } else {
           const data = await response.json();
           setErrorMessage(data.error || t("error"));
-          setIsLoading(false);
           turnstileRef.current?.reset();
           setTurnstileToken(null);
+          return false;
         }
       } else {
         // Authenticated flow — create restaurant
         const response = await fetch("/api/restaurant", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ title: nameInput.trim(), currency }),
+          body: JSON.stringify({ title: defaultName, currency }),
         });
 
         if (response.ok) {
-          setRestaurantName(nameInput.trim());
-          setIsLoading(false);
-          setStep("method");
+          setRestaurantCreated(true);
+          return true;
         } else {
           const data = await response.json();
           setErrorMessage(data.error || t("error"));
-          setIsLoading(false);
+          return false;
         }
       }
     } catch {
       setErrorMessage(t("error"));
-      setIsLoading(false);
+      return false;
     }
   };
 
@@ -222,6 +210,13 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
   const handleMethodContinue = async () => {
     if (isLoading) return;
     setIsLoading(true);
+    setErrorMessage("");
+
+    const created = await ensureRestaurantCreated();
+    if (!created) {
+      setIsLoading(false);
+      return;
+    }
 
     if (selectedMethod === "scan") {
       track(DashboardEvent.CLICKED_ONBOARDING_SCAN);
@@ -400,79 +395,18 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
 
   // --- Render ---
 
+  const title = t("methodTitle");
+
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center px-4 py-6 md:p-10">
       <div className="w-full max-w-[280px] lg:max-w-[360px]">
 
-        {/* Step 1: Name */}
-        {step === "name" && (
-          <div className="grid gap-6">
-            <div className="grid gap-2 text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">{t("nameTitle")}</h1>
-              <p className="text-base md:text-lg text-muted-foreground">{t("nameSubtitle")}</p>
-            </div>
-
-            <form className="mt-4" onSubmit={handleNameSubmit}>
-              <div className="grid gap-4">
-                {errorMessage && (
-                  <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-base">
-                    {errorMessage}
-                  </div>
-                )}
-
-                <Input
-                  ref={nameInputRef}
-                  id="name"
-                  type="text"
-                  placeholder={t("namePlaceholder")}
-                  value={nameInput}
-                  onChange={(e) => setNameInput(e.target.value)}
-                  onFocus={() => track(DashboardEvent.FOCUSED_ONBOARDING_NAME)}
-                  disabled={isLoading}
-                  className="text-center lg:h-auto lg:py-2.5 lg:text-lg"
-                />
-
-                {!authed && TURNSTILE_SITE_KEY && (
-                  <div className="absolute overflow-hidden w-0 h-0">
-                    <Turnstile
-                      ref={turnstileRef}
-                      siteKey={TURNSTILE_SITE_KEY}
-                      onSuccess={setTurnstileToken}
-                      onError={() => setTurnstileToken(null)}
-                      onExpire={() => setTurnstileToken(null)}
-                      options={{ size: "flexible", appearance: "interaction-only" }}
-                    />
-                  </div>
-                )}
-
-                <Button
-                  type="submit"
-                  disabled={isLoading || !nameInput.trim() || (!authed && !turnstileToken && !!TURNSTILE_SITE_KEY)}
-                  className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
-                >
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {tAuth("continue")}
-                </Button>
-              </div>
-            </form>
-
-            {!authed && (
-              <p className="text-base text-muted-foreground/50 text-center mt-6">
-                {t("alreadyHaveAccount")}{" "}
-                <Link href="/login" className="underline hover:text-foreground/50">
-                  {t("logIn")}
-                </Link>
-              </p>
-            )}
-          </div>
-        )}
-
-        {/* Step 2: Method */}
+        {/* Step 1: Method */}
         {step === "method" && (
           <>
             <div className="grid gap-2 text-center">
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
-                {restaurantName}
+                {title}
               </h1>
               <p className="text-base md:text-lg text-muted-foreground">{t("menuSubtitle")}</p>
             </div>
@@ -504,18 +438,46 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
               })}
             </div>
 
+            {errorMessage && (
+              <div className="p-3 mt-4 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-base">
+                {errorMessage}
+              </div>
+            )}
+
+            {!authed && TURNSTILE_SITE_KEY && (
+              <div className="absolute overflow-hidden w-0 h-0">
+                <Turnstile
+                  ref={turnstileRef}
+                  siteKey={TURNSTILE_SITE_KEY}
+                  onSuccess={setTurnstileToken}
+                  onError={() => setTurnstileToken(null)}
+                  onExpire={() => setTurnstileToken(null)}
+                  options={{ size: "flexible", appearance: "interaction-only" }}
+                />
+              </div>
+            )}
+
             <Button
               className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg w-full mt-6"
-              disabled={isLoading}
+              disabled={isLoading || (!authed && !turnstileToken && !!TURNSTILE_SITE_KEY)}
               onClick={handleMethodContinue}
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               {tAuth("continue")}
             </Button>
+
+            {!authed && (
+              <p className="text-base text-muted-foreground/50 text-center mt-6">
+                {t("alreadyHaveAccount")}{" "}
+                <Link href="/login" className="underline hover:text-foreground/50">
+                  {t("logIn")}
+                </Link>
+              </p>
+            )}
           </>
         )}
 
-        {/* Step 3a: Scan */}
+        {/* Step 2a: Scan */}
         {step === "scan" && (
           <>
             <input
@@ -530,7 +492,7 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
             {!scanLoading && (
               <>
                 <div className="grid gap-2 text-center">
-                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{restaurantName}</h1>
+                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{title}</h1>
                   <p className="text-base md:text-lg text-muted-foreground">{tMenu("scanPoolSubtitle")}</p>
                 </div>
 
@@ -597,7 +559,7 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
             {scanLoading && (
               <>
                 <div className="grid gap-2 text-center">
-                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{restaurantName}</h1>
+                  <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">{title}</h1>
                   <p className="text-base md:text-lg text-muted-foreground">{tMenu("scanLoading")}</p>
                 </div>
                 <div className="flex justify-center mt-8">
@@ -608,12 +570,12 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
           </>
         )}
 
-        {/* Step 3b: Templates */}
+        {/* Step 2b: Templates */}
         {step === "templates" && (
           <>
             <div className="grid gap-2 text-center">
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight break-words bg-gradient-to-br from-[hsl(9,100%,58%)] to-amber-400 bg-clip-text text-transparent">
-                {restaurantName}
+                {title}
               </h1>
               <p className="text-base md:text-lg text-muted-foreground">{t("templatesSubtitle")}</p>
             </div>

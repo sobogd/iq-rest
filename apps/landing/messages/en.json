@@ -1717,7 +1717,9 @@
       "tplItemCroutons": "Croutons",
       "tplItemMixedNuts": "Mixed Nuts",
       "alreadyHaveAccount": "Already have an account?",
-      "logIn": "Log in"
+      "logIn": "Log in",
+      "defaultRestaurantName": "My Place",
+      "methodTitle": "Create your menu"
     },
     "claim": {
       "title": "Save your menu",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "面包丁",
       "tplItemMixedNuts": "什锦坚果",
       "alreadyHaveAccount": "已有账户？",
-      "logIn": "登录"
+      "logIn": "登录",
+      "defaultRestaurantName": "我的餐厅",
+      "methodTitle": "创建菜单"
     },
     "home": {
       "viewMenu": "看看效果如何",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutonger",
       "tplItemMixedNuts": "Blandet Nøtter",
       "alreadyHaveAccount": "Har du allerede en konto?",
-      "logIn": "Logg inn"
+      "logIn": "Logg inn",
+      "defaultRestaurantName": "Mitt Sted",
+      "methodTitle": "Lag din meny"
     },
     "home": {
       "viewMenu": "Se hvordan det ser ut",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutoni",
       "tplItemMixedNuts": "Mešani oreščki",
       "alreadyHaveAccount": "Že imate račun?",
-      "logIn": "Prijava"
+      "logIn": "Prijava",
+      "defaultRestaurantName": "Moj Lokal",
+      "methodTitle": "Ustvarite meni"
     },
     "home": {
       "viewMenu": "Poglej, kako izgleda",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Крутони",
       "tplItemMixedNuts": "Смесени ядки",
       "alreadyHaveAccount": "Вече имате акаунт?",
-      "logIn": "Вход"
+      "logIn": "Вход",
+      "defaultRestaurantName": "Моето Заведение",
+      "methodTitle": "Създайте менюто"
     },
     "home": {
       "viewMenu": "Вижте как изглежда",

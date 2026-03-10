@@ -152,12 +152,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(restaurant);
     } else {
       // Create new
-      if (!data.title) {
-        return NextResponse.json(
-          { error: "Title is required" },
-          { status: 400 }
-        );
-      }
+      const finalTitle = (data.title && typeof data.title === "string" && data.title.trim()) ? data.title.trim() : "My Place";
 
       // Get locale from Referer URL (e.g., /pt/dashboard/onboarding -> pt)
       const referer = request.headers.get("referer");
@@ -165,7 +160,7 @@ export async function POST(request: NextRequest) {
       const userLocale: Locale = localeMatch?.[1] as Locale || "en";
 
       // Generate unique slug from title
-      const slug = await generateUniqueSlug(data.title);
+      const slug = await generateUniqueSlug(finalTitle);
 
       // Set initial background image for new restaurants
       const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
@@ -178,7 +173,7 @@ export async function POST(request: NextRequest) {
 
       const restaurant = await prisma.restaurant.create({
         data: {
-          title: data.title,
+          title: finalTitle,
           description: data.description || null,
           slug,
           currency: data.currency || "EUR",

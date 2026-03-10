@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Grzanki",
       "tplItemMixedNuts": "Mieszanka Orzechów",
       "alreadyHaveAccount": "Masz już konto?",
-      "logIn": "Zaloguj się"
+      "logIn": "Zaloguj się",
+      "defaultRestaurantName": "Mój Lokal",
+      "methodTitle": "Stwórz swoje menu"
     },
     "home": {
       "viewMenu": "Zobacz, jak to wygląda",

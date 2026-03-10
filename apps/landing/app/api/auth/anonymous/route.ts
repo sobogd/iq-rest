@@ -31,9 +31,7 @@ export async function POST(request: NextRequest) {
   try {
     const { title, currency, locale, turnstileToken } = await request.json();
 
-    if (!title || typeof title !== "string" || !title.trim()) {
-      return NextResponse.json({ error: "Title is required" }, { status: 400 });
-    }
+    const trimmedTitle = (typeof title === "string" && title.trim()) ? title.trim() : "My Place";
 
     // Rate limit by IP
     const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for") || "unknown";
@@ -52,7 +50,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const trimmedTitle = title.trim();
     const userLocale: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : "en";
     const finalCurrency = currency || "EUR";
 

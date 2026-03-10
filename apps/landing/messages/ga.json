@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Crúitíní",
       "tplItemMixedNuts": "Cnónna Measctha",
       "alreadyHaveAccount": "An bhfuil cuntas agat cheana?",
-      "logIn": "Logáil isteach"
+      "logIn": "Logáil isteach",
+      "defaultRestaurantName": "Mo Bhialann",
+      "methodTitle": "Cruthaigh do bhiachlár"
     },
     "home": {
       "viewMenu": "Féach conas a fhéachann sé",

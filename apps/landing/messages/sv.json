@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutonger",
       "tplItemMixedNuts": "Blandade Nötter",
       "alreadyHaveAccount": "Har du redan ett konto?",
-      "logIn": "Logga in"
+      "logIn": "Logga in",
+      "defaultRestaurantName": "Min Restaurang",
+      "methodTitle": "Skapa din meny"
     },
     "home": {
       "viewMenu": "Se hur det ser ut",

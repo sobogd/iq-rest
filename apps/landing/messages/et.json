@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutoonid",
       "tplItemMixedNuts": "Pähklisegu",
       "alreadyHaveAccount": "Sul on juba konto?",
-      "logIn": "Logi sisse"
+      "logIn": "Logi sisse",
+      "defaultRestaurantName": "Minu Koht",
+      "methodTitle": "Loo oma menüü"
     },
     "home": {
       "viewMenu": "Vaata, kuidas see välja näeb",

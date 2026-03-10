@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Грінки",
       "tplItemMixedNuts": "Горіховий мікс",
       "alreadyHaveAccount": "Вже є акаунт?",
-      "logIn": "Увійти"
+      "logIn": "Увійти",
+      "defaultRestaurantName": "Мій заклад",
+      "methodTitle": "Створіть меню"
     },
     "home": {
       "viewMenu": "Подивитися, як виглядає",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "クルトン",
       "tplItemMixedNuts": "ミックスナッツ",
       "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
-      "logIn": "ログイン"
+      "logIn": "ログイン",
+      "defaultRestaurantName": "マイプレイス",
+      "methodTitle": "メニューを作成"
     },
     "home": {
       "viewMenu": "見た目を確認する",

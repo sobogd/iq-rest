@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Croutons",
       "tplItemMixedNuts": "Gemengde Noten",
       "alreadyHaveAccount": "Heb je al een account?",
-      "logIn": "Inloggen"
+      "logIn": "Inloggen",
+      "defaultRestaurantName": "Mijn Zaak",
+      "methodTitle": "Maak je menu"
     },
     "home": {
       "viewMenu": "Bekijk het resultaat",

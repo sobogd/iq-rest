@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Croûtons",
       "tplItemMixedNuts": "Noix Mélangées",
       "alreadyHaveAccount": "Vous avez déjà un compte ?",
-      "logIn": "Se connecter"
+      "logIn": "Se connecter",
+      "defaultRestaurantName": "Mon Établissement",
+      "methodTitle": "Créez votre menu"
     },
     "home": {
       "viewMenu": "Voir le résultat",

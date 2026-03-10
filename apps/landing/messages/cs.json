@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutony",
       "tplItemMixedNuts": "Směs ořechů",
       "alreadyHaveAccount": "Již máte účet?",
-      "logIn": "Přihlásit se"
+      "logIn": "Přihlásit se",
+      "defaultRestaurantName": "Moje Podnik",
+      "methodTitle": "Vytvořte menu"
     },
     "home": {
       "viewMenu": "Podívejte se, jak to vypadá",

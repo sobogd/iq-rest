@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Crostini",
       "tplItemMixedNuts": "Frutta Secca Mista",
       "alreadyHaveAccount": "Hai già un account?",
-      "logIn": "Accedi"
+      "logIn": "Accedi",
+      "defaultRestaurantName": "Il Mio Locale",
+      "methodTitle": "Crea il tuo menù"
     },
     "home": {
       "viewMenu": "Guarda come appare",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Crostons",
       "tplItemMixedNuts": "Fruits Secs Variats",
       "alreadyHaveAccount": "Ja tens un compte?",
-      "logIn": "Inicia sessió"
+      "logIn": "Inicia sessió",
+      "defaultRestaurantName": "El Meu Local",
+      "methodTitle": "Crea el teu menú"
     },
     "home": {
       "viewMenu": "Mira com es veu",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Skrebučiai",
       "tplItemMixedNuts": "Riešutų mišinys",
       "alreadyHaveAccount": "Jau turite paskyrą?",
-      "logIn": "Prisijungti"
+      "logIn": "Prisijungti",
+      "defaultRestaurantName": "Mano Vieta",
+      "methodTitle": "Sukurkite meniu"
     },
     "home": {
       "viewMenu": "Pažiūrėkite, kaip tai atrodo",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Κρουτόν",
       "tplItemMixedNuts": "Ανάμεικτοι Ξηροί Καρποί",
       "alreadyHaveAccount": "Έχετε ήδη λογαριασμό;",
-      "logIn": "Σύνδεση"
+      "logIn": "Σύνδεση",
+      "defaultRestaurantName": "Το Μαγαζί μου",
+      "methodTitle": "Δημιουργήστε το μενού"
     },
     "home": {
       "viewMenu": "Δείτε πώς φαίνεται",

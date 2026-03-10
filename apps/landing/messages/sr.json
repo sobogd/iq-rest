@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutoni",
       "tplItemMixedNuts": "Mešani orasi",
       "alreadyHaveAccount": "Већ имате налог?",
-      "logIn": "Пријава"
+      "logIn": "Пријава",
+      "defaultRestaurantName": "Мој Локал",
+      "methodTitle": "Направите мени"
     },
     "home": {
       "viewMenu": "Погледајте како изгледа",

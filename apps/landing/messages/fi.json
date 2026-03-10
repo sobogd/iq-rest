@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutonkeja",
       "tplItemMixedNuts": "Pähkinäsekoitus",
       "alreadyHaveAccount": "Onko sinulla jo tili?",
-      "logIn": "Kirjaudu"
+      "logIn": "Kirjaudu",
+      "defaultRestaurantName": "Oma Paikka",
+      "methodTitle": "Luo ruokalista"
     },
     "home": {
       "viewMenu": "Katso miltä se näyttää",

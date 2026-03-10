@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Croutons",
       "tplItemMixedNuts": "Nussmischung",
       "alreadyHaveAccount": "Bereits ein Konto?",
-      "logIn": "Anmelden"
+      "logIn": "Anmelden",
+      "defaultRestaurantName": "Mein Lokal",
+      "methodTitle": "Erstelle dein Menü"
     },
     "home": {
       "viewMenu": "So sieht es aus",

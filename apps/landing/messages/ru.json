@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Гренки",
       "tplItemMixedNuts": "Ореховый микс",
       "alreadyHaveAccount": "Уже есть аккаунт?",
-      "logIn": "Войти"
+      "logIn": "Войти",
+      "defaultRestaurantName": "Моё заведение",
+      "methodTitle": "Создайте меню"
     },
     "home": {
       "viewMenu": "Посмотреть, как выглядит",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutoni",
       "tplItemMixedNuts": "Mješavina orašastih",
       "alreadyHaveAccount": "Već imate račun?",
-      "logIn": "Prijava"
+      "logIn": "Prijava",
+      "defaultRestaurantName": "Moj Lokal",
+      "methodTitle": "Izradite jelovnik"
     },
     "home": {
       "viewMenu": "Pogledaj kako izgleda",

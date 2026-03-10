@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krustiņi",
       "tplItemMixedNuts": "Riekstu maisījums",
       "alreadyHaveAccount": "Jau ir konts?",
-      "logIn": "Pieteikties"
+      "logIn": "Pieteikties",
+      "defaultRestaurantName": "Mana Vieta",
+      "methodTitle": "Izveidojiet ēdienkarti"
     },
     "home": {
       "viewMenu": "Skatīt, kā tas izskatās",

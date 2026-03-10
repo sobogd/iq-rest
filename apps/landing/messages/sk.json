@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Krutóny",
       "tplItemMixedNuts": "Zmes orechov",
       "alreadyHaveAccount": "Už máte účet?",
-      "logIn": "Prihlásiť sa"
+      "logIn": "Prihlásiť sa",
+      "defaultRestaurantName": "Môj Podnik",
+      "methodTitle": "Vytvorte menu"
     },
     "home": {
       "viewMenu": "Pozrite sa, ako to vyzerá",

@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Crutones",
       "tplItemMixedNuts": "Frutos Secos Mixtos",
       "alreadyHaveAccount": "¿Ya tienes una cuenta?",
-      "logIn": "Iniciar sesión"
+      "logIn": "Iniciar sesión",
+      "defaultRestaurantName": "Mi Local",
+      "methodTitle": "Crea tu menú"
     },
     "home": {
       "viewMenu": "Mira cómo se ve",

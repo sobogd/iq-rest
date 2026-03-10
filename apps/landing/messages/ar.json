@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "كروتون",
       "tplItemMixedNuts": "مكسرات مشكلة",
       "alreadyHaveAccount": "لديك حساب بالفعل؟",
-      "logIn": "تسجيل الدخول"
+      "logIn": "تسجيل الدخول",
+      "defaultRestaurantName": "مكاني",
+      "methodTitle": "أنشئ قائمتك"
     },
     "home": {
       "viewMenu": "شاهد كيف يبدو",

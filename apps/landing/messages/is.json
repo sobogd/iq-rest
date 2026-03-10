@@ -2002,7 +2002,9 @@
       "tplItemCroutons": "Brauðteningar",
       "tplItemMixedNuts": "Blandaðar Hnetur",
       "alreadyHaveAccount": "Ertu nú þegar með reikning?",
-      "logIn": "Skrá inn"
+      "logIn": "Skrá inn",
+      "defaultRestaurantName": "Minn Staður",
+      "methodTitle": "Búðu til matseðil"
     },
     "home": {
       "viewMenu": "Sjáðu hvernig það lítur út",
