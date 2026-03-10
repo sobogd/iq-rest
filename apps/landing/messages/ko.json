@@ -2011,7 +2011,7 @@
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} 스캔",
       "myOrders": "내 주문",
-      "saveMenu": "메뉴 저장"
+      "saveMenu": "진행 상황 저장"
     },
     "claim": {
       "title": "메뉴 저장하기",

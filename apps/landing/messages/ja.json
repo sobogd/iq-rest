@@ -2011,7 +2011,7 @@
       "scansUsed": "{used} / {limit}",
       "scansUnlimited": "{used} スキャン",
       "myOrders": "マイオーダー",
-      "saveMenu": "メニューを保存"
+      "saveMenu": "進捗を保存"
     },
     "claim": {
       "title": "メニューを保存",
