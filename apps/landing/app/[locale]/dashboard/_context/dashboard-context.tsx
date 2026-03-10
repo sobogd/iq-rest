@@ -198,6 +198,7 @@ export interface ItemsTranslations {
 }
 
 export interface MenuTranslations {
+  yourMenu: string;
   addItem: string;
   addCategory: string;
   emptyTitle: string;

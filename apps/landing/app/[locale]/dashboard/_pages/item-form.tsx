@@ -133,6 +133,10 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       if (categoriesRes.ok) {
         const categoriesData = await categoriesRes.json();
         setCategories(categoriesData);
+        // Auto-select category when only one exists (new item without preset category)
+        if (!id && !initialCategoryId && categoriesData.length >= 1 && !categoryId) {
+          setCategoryId(categoriesData[0].id);
+        }
       }
 
       if (id && itemRes) {
@@ -374,7 +378,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
       return;
     }
 
-    if (!price || isNaN(Number(price)) || Number(price) < 0) {
+    if (price && (isNaN(Number(price)) || Number(price) < 0)) {
       track(DashboardEvent.ERROR_VALIDATION, { page: "item", field: "price" });
       setValidationError(t.priceRequired);
       return;
@@ -405,7 +409,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
         body: JSON.stringify({
           name: name.trim(),
           description: description.trim() || null,
-          price: Number(price),
+          price: price ? Number(price) : 0,
           imageUrl: imageUrl || null,
           allergens,
           categoryId,
@@ -468,7 +472,7 @@ export function ItemFormPage({ id, initialCategoryId }: ItemFormPageProps) {
             <p className="text-xs uppercase tracking-wider text-muted-foreground px-4 mb-1.5">{t.general}</p>
             <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
               {/* Category */}
-              {(!initialCategoryId || isEdit) && (
+              {categories.length > 1 && (!initialCategoryId || isEdit) && (
                 <>
                   <div className="flex items-center h-11 px-4">
                     <label htmlFor="category" className="text-sm text-muted-foreground shrink-0 mr-3">{t.category}</label>

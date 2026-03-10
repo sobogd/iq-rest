@@ -153,7 +153,6 @@ export function OnboardingFlow({ userId, isAuthenticated, hasRestaurant: initial
   const ensureRestaurantCreated = async (): Promise<boolean> => {
     if (restaurantCreated) return true;
 
-    const defaultName = t("defaultRestaurantName");
     const currency = getCurrencyFromCookie();
 
     try {
@@ -163,7 +162,6 @@ export function OnboardingFlow({ userId, isAuthenticated, hasRestaurant: initial
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            title: defaultName,
             currency,
             locale,
             turnstileToken,
@@ -188,7 +186,7 @@ export function OnboardingFlow({ userId, isAuthenticated, hasRestaurant: initial
         const response = await fetch("/api/restaurant", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ title: defaultName, currency }),
+          body: JSON.stringify({ currency }),
         });
 
         if (response.ok) {
@@ -229,7 +227,11 @@ export function OnboardingFlow({ userId, isAuthenticated, hasRestaurant: initial
       setStep("templates");
     } else {
       track(DashboardEvent.CLICKED_ONBOARDING_MANUAL);
-      const res = await fetch("/api/onboarding/complete", { method: "POST" }).catch(() => null);
+      const res = await fetch("/api/onboarding/complete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ categoryName: t("defaultCategoryName") }),
+      }).catch(() => null);
       if (!res?.ok) {
         setIsLoading(false);
         return;

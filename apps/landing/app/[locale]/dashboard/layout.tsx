@@ -123,6 +123,7 @@ export default async function DashboardLayout({
       },
     },
     menu: {
+      yourMenu: t("menu.yourMenu"),
       addItem: t("menu.addItem"),
       addCategory: t("menu.addCategory"),
       emptyTitle: t("menu.emptyTitle"),

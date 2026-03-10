@@ -224,7 +224,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             </PopoverContent>
           </Popover>
           {/* Right part: title + sort */}
-          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{restaurantName || pageTitle}</h1>
+          <h1 className="text-xl font-semibold flex-1 ml-3 md:ml-0 truncate">{tMenu.yourMenu}</h1>
           {showSortButton && (
             sortMode ? (
               <button
@@ -320,6 +320,24 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           >
             <Plus className="h-4 w-4" />
             {tMenu.addCategory}
+          </button>
+          </>
+        ) : categories.length === 1 && items.length === 0 ? (
+          <>
+          <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+            <div className="flex flex-col items-center text-center px-4 py-6">
+              <UtensilsCrossed className="h-6 w-6 mb-2" style={{ color: "hsl(9,100%,58%)" }} />
+              <p className="text-sm font-medium mb-0.5">{tMenu.noItems}</p>
+              <p className="text-xs text-muted-foreground/60">{tMenu.emptySubtitle}</p>
+            </div>
+          </div>
+          <button
+            className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+            style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${categories[0].id}`); }}
+          >
+            <Plus className="h-4 w-4" />
+            {tMenu.addItem}
           </button>
           </>
         ) : (
@@ -434,31 +452,38 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                           )}
                         </div>
                       ))}
-                      {!sortMode && (
-                        <div
-                          className="flex items-center h-11 px-4 border-t border-border/50 cursor-pointer transition-colors hover:bg-muted/50"
-                          onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${category.id}`); }}
-                        >
-                          <Plus className="h-4 w-4 mr-2 text-primary" />
-                          <span className="text-sm font-medium text-primary">{tMenu.addItem}</span>
-                        </div>
-                      )}
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            {/* Add category button */}
+            {/* Add dish + add category */}
             {!sortMode && (
-              <button
-                onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-              >
-                <Plus className="h-4 w-4" />
-                {tMenu.addCategory}
-              </button>
+              <>
+                <button
+                  onClick={() => {
+                    track(DashboardEvent.CLICKED_ADD_ITEM);
+                    if (categories.length === 1) {
+                      router.push(`/dashboard/items/add?categoryId=${categories[0].id}`);
+                    } else {
+                      router.push("/dashboard/items/add");
+                    }
+                  }}
+                  className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+                  style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                >
+                  <Plus className="h-4 w-4" />
+                  {tMenu.addItem}
+                </button>
+                <button
+                  onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
+                  className="flex items-center gap-1 text-sm text-primary font-medium mx-auto"
+                >
+                  <Plus className="h-3.5 w-3.5" />
+                  {tMenu.addCategory}
+                </button>
+              </>
             )}
           </div>
         )}

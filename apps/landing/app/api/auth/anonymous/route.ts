@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
   try {
     const { title, currency, locale, turnstileToken } = await request.json();
 
-    const trimmedTitle = (typeof title === "string" && title.trim()) ? title.trim() : "My Place";
+    const trimmedTitle = (typeof title === "string" && title.trim()) ? title.trim() : "";
 
     // Rate limit by IP
     const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for") || "unknown";
@@ -53,8 +53,8 @@ export async function POST(request: NextRequest) {
     const userLocale: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : "en";
     const finalCurrency = currency || "EUR";
 
-    // Generate unique slug
-    const slug = await generateUniqueSlug(trimmedTitle);
+    // Generate unique slug (random if no title)
+    const slug = await generateUniqueSlug(trimmedTitle || Math.random().toString(36).substring(2, 10));
 
     // Generate session
     const sessionToken = generateSessionToken();
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
 
       const company = await tx.company.create({
         data: {
-          name: trimmedTitle,
+          name: trimmedTitle || "",
           onboardingStep: 2,
           trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
         },

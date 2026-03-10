@@ -152,15 +152,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(restaurant);
     } else {
       // Create new
-      const finalTitle = (data.title && typeof data.title === "string" && data.title.trim()) ? data.title.trim() : "My Place";
+      const finalTitle = (data.title && typeof data.title === "string" && data.title.trim()) ? data.title.trim() : "";
 
       // Get locale from Referer URL (e.g., /pt/dashboard/onboarding -> pt)
       const referer = request.headers.get("referer");
       const localeMatch = referer?.match(new RegExp(`/(${locales.join("|")})/`));
       const userLocale: Locale = localeMatch?.[1] as Locale || "en";
 
-      // Generate unique slug from title
-      const slug = await generateUniqueSlug(finalTitle);
+      // Generate unique slug from title (random if no title)
+      const slug = await generateUniqueSlug(finalTitle || Math.random().toString(36).substring(2, 10));
 
       // Set initial background image for new restaurants
       const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
