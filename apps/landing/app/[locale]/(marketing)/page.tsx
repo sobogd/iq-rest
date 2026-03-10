@@ -110,10 +110,10 @@ export default async function HomePage() {
                 </span>
               </h1>
 
-              {/* Subtitle — temporarily hidden */}
-              {/* <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-6">
+              {/* Subtitle */}
+              <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-6">
                 {tHero("subtitle")}
-              </p> */}
+              </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-row flex-wrap justify-center gap-3">
