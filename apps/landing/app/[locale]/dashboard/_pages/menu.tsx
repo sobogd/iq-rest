@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, Save } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
@@ -306,18 +306,21 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
 
         {categories.length === 0 ? (
           <>
-          <div className="flex flex-col items-center text-center rounded-xl border border-border bg-muted/30 px-6 py-8">
-            <h2 className="text-lg font-semibold mb-1">{tMenu.emptyTitle}</h2>
-            <p className="text-sm text-muted-foreground/60 mb-5">{tMenu.emptySubtitle}</p>
-            <button
-              className="flex items-center justify-center gap-2 w-full max-w-xs h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-              style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-              onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-            >
-              <Plus className="h-4 w-4" />
-              {tMenu.addCategory}
-            </button>
+          <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
+            <div className="flex flex-col items-center text-center px-4 py-6">
+              <UtensilsCrossed className="h-6 w-6 mb-2" style={{ color: "hsl(9,100%,58%)" }} />
+              <p className="text-sm font-medium mb-0.5">{tMenu.emptyTitle}</p>
+              <p className="text-xs text-muted-foreground/60">{tMenu.emptySubtitle}</p>
+            </div>
           </div>
+          <button
+            className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
+            style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+            onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
+          >
+            <Plus className="h-4 w-4" />
+            {tMenu.addCategory}
+          </button>
           </>
         ) : (
           <div className="flex flex-col gap-4">
@@ -431,11 +434,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                           )}
                         </div>
                       ))}
-                      {!sortMode && categoryItems.length === 0 && (
-                        <div className="h-11 px-4 flex items-center border-t border-border/50">
-                          <span className="text-sm text-muted-foreground/40">{tMenu.noItems}</span>
-                        </div>
-                      )}
                       {!sortMode && (
                         <div
                           className="flex items-center h-11 px-4 border-t border-border/50 cursor-pointer transition-colors hover:bg-muted/50"
