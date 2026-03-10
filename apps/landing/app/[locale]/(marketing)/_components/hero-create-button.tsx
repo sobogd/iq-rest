@@ -14,7 +14,7 @@ export function HeroCreateButton({ children }: HeroCreateButtonProps) {
       asChild
       className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
     >
-      <Link href="/onboarding" onClick={() => analytics.marketing.heroCtaClick()}>{children}</Link>
+      <Link href="/login" onClick={() => analytics.marketing.heroCtaClick()}>{children}</Link>
     </Button>
   );
 }

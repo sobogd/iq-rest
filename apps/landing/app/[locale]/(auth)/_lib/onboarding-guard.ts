@@ -1,10 +1,11 @@
 import { redirect } from "next/navigation";
 import { getOnboardingData } from "./onboarding-data";
 
-/** For the unified onboarding page: allow unauthenticated, redirect to dashboard if done */
+/** For onboarding page: require auth, redirect to dashboard if done */
 export async function guardOnboarding() {
   const data = await getOnboardingData();
-  if (data.isAuthenticated && data.onboardingStep >= 3) redirect("/dashboard");
+  if (!data.isAuthenticated) redirect("/login");
+  if (data.onboardingStep >= 3) redirect("/dashboard");
   return data;
 }
 
