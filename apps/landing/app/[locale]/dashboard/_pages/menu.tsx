@@ -265,7 +265,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           )}
 
           {/* Save (anonymous) */}
-          {isAnonymous && (
+          {!sortMode && isAnonymous && (
             <Link href="/dashboard/save" onClick={() => track(DashboardEvent.CLICKED_SAVE_MENU)}>
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
