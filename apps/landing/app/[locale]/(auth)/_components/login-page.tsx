@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
@@ -26,9 +25,6 @@ declare global {
 }
 
 const GOOGLE_CLIENT_ID = "576149678945-vjqlc4sce6bsne3p0n63bqdvf33k43s0.apps.googleusercontent.com";
-const TURNSTILE_SITE_KEY = process.env.NODE_ENV === "production"
-  ? "0x4AAAAAACi6p7FVybIQ_YZg"
-  : "1x00000000000000000000AA"; // Cloudflare test key — always passes
 
 export function LoginPage() {
   const locale = useLocale();
@@ -38,8 +34,6 @@ export function LoginPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const googleHiddenRef = useRef<HTMLDivElement>(null);
-  const turnstileRef = useRef<TurnstileInstance>(null);
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [googleReady, setGoogleReady] = useState(false);
 
   const handleGoogleResponse = useCallback(
@@ -153,12 +147,6 @@ export function LoginPage() {
       return;
     }
 
-    if (!turnstileToken) {
-      setErrorMessage(t("errors.sendFailed"));
-      setStatus("error");
-      return;
-    }
-
     setStatus("loading");
     setErrorMessage("");
 
@@ -166,7 +154,7 @@ export function LoginPage() {
       const response = await fetch("/api/auth/send-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed, locale, turnstileToken }),
+        body: JSON.stringify({ email: trimmed, locale }),
       });
 
       const data = await response.json();
@@ -183,15 +171,11 @@ export function LoginPage() {
         track(DashboardEvent.ERROR_OTP_SEND);
         setErrorMessage(data.error || t("errors.sendFailed"));
         setStatus("error");
-        turnstileRef.current?.reset();
-        setTurnstileToken(null);
       }
     } catch {
       track(DashboardEvent.ERROR_OTP_SEND);
       setErrorMessage(t("errors.sendFailed"));
       setStatus("error");
-      turnstileRef.current?.reset();
-      setTurnstileToken(null);
     }
   };
 
@@ -230,22 +214,9 @@ export function LoginPage() {
                 className="text-center lg:h-auto lg:py-2.5 lg:text-lg"
               />
 
-              {TURNSTILE_SITE_KEY && (
-                <div className="absolute overflow-hidden w-0 h-0">
-                  <Turnstile
-                    ref={turnstileRef}
-                    siteKey={TURNSTILE_SITE_KEY}
-                    onSuccess={setTurnstileToken}
-                    onError={() => setTurnstileToken(null)}
-                    onExpire={() => setTurnstileToken(null)}
-                    options={{ size: "flexible", appearance: "interaction-only" }}
-                  />
-                </div>
-              )}
-
               <Button
                 type="submit"
-                disabled={status === "loading" || (!turnstileToken && !!TURNSTILE_SITE_KEY)}
+                disabled={status === "loading"}
                 className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
               >
                 {status === "loading" && (

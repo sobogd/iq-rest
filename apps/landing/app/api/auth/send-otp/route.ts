@@ -68,15 +68,8 @@ export async function POST(request: NextRequest) {
   try {
     const { email, locale = "en", turnstileToken } = await request.json();
 
-    // Verify Turnstile token
-    if (process.env.TURNSTILE_SECRET_KEY) {
-      if (!turnstileToken) {
-        return NextResponse.json(
-          { error: "Verification required" },
-          { status: 403 }
-        );
-      }
-
+    // Verify Turnstile token (optional — only checked if provided)
+    if (process.env.TURNSTILE_SECRET_KEY && turnstileToken) {
       const isValid = await verifyTurnstileToken(turnstileToken);
       if (!isValid) {
         return NextResponse.json(
