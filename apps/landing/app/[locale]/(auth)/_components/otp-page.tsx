@@ -99,14 +99,7 @@ export function OtpPage({ email }: OtpPageProps) {
         }
         track(DashboardEvent.CLICKED_VERIFY_OTP);
         await analytics.linkSession(data.userId);
-
-        // Redirect based on onboarding step
-        const step = data.onboardingStep ?? 0;
-        if (step < 3) {
-          router.replace("/onboarding");
-        } else {
-          router.replace("/dashboard");
-        }
+        router.replace("/dashboard");
       } else {
         track(DashboardEvent.ERROR_OTP_VERIFY);
         const translationKey = ERROR_MAP[data.error];

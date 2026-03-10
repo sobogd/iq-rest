@@ -93,19 +93,10 @@ export async function POST(request: NextRequest) {
     cookieStore.set("user_email", normalizedEmail, AUTH_COOKIE_OPTIONS);
     cookieStore.set("user_id", user.id, AUTH_COOKIE_OPTIONS);
 
-    // Get onboarding step
-    const userCompany = await prisma.userCompany.findFirst({
-      where: { userId: user.id },
-      include: { company: { select: { onboardingStep: true } } },
-    });
-
-    const onboardingStep = userCompany?.company.onboardingStep ?? 0;
-
     return NextResponse.json({
       email: normalizedEmail,
       userId: user.id,
       isNewUser,
-      onboardingStep,
     });
   } catch (error) {
     console.error("Google auth error:", error);

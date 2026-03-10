@@ -1,19 +1,17 @@
 import { redirect } from "next/navigation";
 import { getOnboardingData } from "./onboarding-data";
 
-/** For onboarding page: require auth, redirect to dashboard if done */
+/** For onboarding page: redirect to dashboard (onboarding no longer exists) */
 export async function guardOnboarding() {
   const data = await getOnboardingData();
   if (!data.isAuthenticated) redirect("/login");
-  if (data.onboardingStep >= 3) redirect("/dashboard");
-  return data;
+  redirect("/dashboard");
 }
 
-/** For login/otp: if authenticated (non-anonymous), redirect to appropriate step */
+/** For login/otp: if authenticated (non-anonymous), redirect to dashboard */
 export async function guardAuthPage() {
   const data = await getOnboardingData();
   if (data.isAuthenticated && !data.isAnonymous) {
-    if (data.onboardingStep < 3) redirect("/onboarding");
     redirect("/dashboard");
   }
   return data;

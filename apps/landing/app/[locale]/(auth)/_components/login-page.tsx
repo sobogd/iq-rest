@@ -59,13 +59,7 @@ export function LoginPage() {
             track(DashboardEvent.AUTH_SIGNUP);
           }
           await analytics.linkSession(data.userId);
-
-          const step = data.onboardingStep ?? 0;
-          if (step < 3) {
-            router.replace("/onboarding");
-          } else {
-            router.replace("/dashboard");
-          }
+          router.replace("/dashboard");
         } else {
           setErrorMessage(data.error || t("errors.sendFailed"));
           setStatus("error");

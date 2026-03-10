@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed, Wand2 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
@@ -283,7 +283,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
               {([
                 { path: "/dashboard/admin", icon: Shield, label: "Companies" },
                 { path: "/dashboard/admin/analytics", icon: Activity, label: "Analytics" },
-                { path: "/dashboard/admin/onboarding", icon: UserPlus, label: "Onboarding" },
                 { path: "/dashboard/sessions", icon: MousePointerClick, label: "Sessions" },
                 { path: "/dashboard/keywords", icon: KeyRound, label: "Keywords" },
                 { path: "/dashboard/search-terms", icon: Search, label: "Search Terms" },
@@ -304,11 +303,13 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             </div>
           )}
 
-        {categories.length === 0 ? (
+        {(categories.length === 0 || (categories.length === 1 && items.length === 0)) ? (
           <>
           <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
             <div className="flex flex-col items-center text-center px-4 py-6">
-              <UtensilsCrossed className="h-6 w-6 mb-2" style={{ color: "hsl(9,100%,58%)" }} />
+              <div className="flex items-center justify-center h-10 w-10 rounded-xl mb-2" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
+                <UtensilsCrossed className="h-5 w-5 text-white" />
+              </div>
               <p className="text-sm font-medium mb-0.5">{tMenu.emptyTitle}</p>
               <p className="text-xs text-muted-foreground/60">{tMenu.emptySubtitle}</p>
             </div>
@@ -316,28 +317,27 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           <button
             className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
             style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-            onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-          >
-            <Plus className="h-4 w-4" />
-            {tMenu.addCategory}
-          </button>
-          </>
-        ) : categories.length === 1 && items.length === 0 ? (
-          <>
-          <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-            <div className="flex flex-col items-center text-center px-4 py-6">
-              <UtensilsCrossed className="h-6 w-6 mb-2" style={{ color: "hsl(9,100%,58%)" }} />
-              <p className="text-sm font-medium mb-0.5">{tMenu.noItems}</p>
-              <p className="text-xs text-muted-foreground/60">{tMenu.emptySubtitle}</p>
-            </div>
-          </div>
-          <button
-            className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
-            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(`/dashboard/items/add?categoryId=${categories[0].id}`); }}
+            onClick={() => { track(DashboardEvent.CLICKED_ADD_ITEM); router.push(categories.length > 0 ? `/dashboard/items/add?categoryId=${categories[0].id}` : "/dashboard/items/add"); }}
           >
             <Plus className="h-4 w-4" />
             {tMenu.addItem}
+          </button>
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-border" /></div>
+            <span className="relative bg-background px-3 text-sm text-muted-foreground">{tMenu.orDivider}</span>
+          </div>
+          <button
+            onClick={() => { track(DashboardEvent.CLICKED_SCAN_MENU); router.push("/dashboard/scan"); }}
+            className="flex items-center gap-3 w-full rounded-xl border border-border bg-muted/30 p-4 hover:bg-muted/50 transition-colors cursor-pointer text-left"
+          >
+            <div className="flex items-center justify-center h-10 w-10 rounded-xl shrink-0" style={{ background: "linear-gradient(to bottom right, hsl(9,100%,58%), #f59e0b)" }}>
+              <Wand2 className="h-5 w-5 text-white" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium">{tMenu.scanButton}</p>
+              <p className="text-xs text-muted-foreground/60 mt-0.5">{tMenu.scanDescription}</p>
+            </div>
+            <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
           </button>
           </>
         ) : (

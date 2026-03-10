@@ -154,7 +154,7 @@ export async function POST(request: NextRequest) {
       // Create new
       const finalTitle = (data.title && typeof data.title === "string" && data.title.trim()) ? data.title.trim() : "";
 
-      // Get locale from Referer URL (e.g., /pt/dashboard/onboarding -> pt)
+      // Get locale from Referer URL (e.g., /pt/dashboard -> pt)
       const referer = request.headers.get("referer");
       const localeMatch = referer?.match(new RegExp(`/(${locales.join("|")})/`));
       const userLocale: Locale = localeMatch?.[1] as Locale || "en";
@@ -205,10 +205,10 @@ export async function POST(request: NextRequest) {
         },
       });
 
-      // Mark onboarding step 2 complete (name done, skip type)
+      // Mark onboarding complete
       await prisma.company.update({
         where: { id: companyId },
-        data: { onboardingStep: 2 },
+        data: { onboardingStep: 3 },
       });
 
       return NextResponse.json(restaurant, { status: 201 });

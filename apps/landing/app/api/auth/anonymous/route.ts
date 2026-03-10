@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
       const company = await tx.company.create({
         data: {
           name: trimmedTitle || "",
-          onboardingStep: 2,
+          onboardingStep: 3,
           trialEndsAt: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
         },
       });

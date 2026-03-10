@@ -5,9 +5,13 @@ import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
 import { getCompanyAccess } from "@/lib/access";
 import { isAnonymousEmail } from "@/lib/anonymous";
+import { generateUniqueSlug } from "@/lib/slug";
+import { getPublicUrl, s3Key } from "@/lib/s3";
+import { getCoordinatesByCountry, COUNTRY_CENTERS } from "@/lib/country-centers";
 import { DashboardShell } from "./_components/shell";
 import { getScanUsage } from "./_lib/queries";
 import type { DashboardTranslations } from "./_context/dashboard-context";
+import type { Locale } from "@/i18n/routing";
 
 export default async function DashboardLayout({
   children,
@@ -24,7 +28,7 @@ export default async function DashboardLayout({
 
   const companyId = auth.companyId;
 
-  // Check onboarding state + upsell data
+  // Check if restaurant exists, auto-create if not
   const [restaurant, company] = await Promise.all([
     prisma.restaurant.findFirst({
       where: { companyId },
@@ -36,10 +40,46 @@ export default async function DashboardLayout({
     }),
   ]);
 
-  const hasRestaurant = Boolean(restaurant);
+  if (!restaurant) {
+    const cookieStore2 = await cookies();
+    const userLocale = (await getLocale()) as Locale;
+    const currency = cookieStore2.get("currency")?.value || "EUR";
+    const geoCountry = cookieStore2.get("geo_country")?.value || null;
+    const countryCoords = getCoordinatesByCountry(geoCountry);
+    const center = countryCoords || COUNTRY_CENTERS[userLocale];
+    const slug = await generateUniqueSlug(Math.random().toString(36).substring(2, 10));
+    const initialBackground = getPublicUrl(s3Key("background_initial.webp"));
+    const tMenu = await getTranslations("dashboard.menu");
+    const defaultCategoryName = tMenu("defaultCategoryName");
 
-  if (!hasRestaurant || (company && company.onboardingStep < 3)) {
-    redirect("/onboarding");
+    await prisma.$transaction(async (tx) => {
+      await tx.restaurant.create({
+        data: {
+          title: "",
+          slug,
+          currency,
+          source: initialBackground,
+          accentColor: "#000000",
+          languages: [userLocale],
+          defaultLanguage: userLocale,
+          x: center?.lng?.toString() || null,
+          y: center?.lat?.toString() || null,
+          companyId,
+          startedFromScratch: true,
+        },
+      });
+      await tx.category.create({
+        data: {
+          name: defaultCategoryName,
+          sortOrder: 0,
+          companyId,
+        },
+      });
+      await tx.company.update({
+        where: { id: companyId },
+        data: { onboardingStep: 3 },
+      });
+    });
   }
 
   // Check if admin is impersonating
@@ -88,7 +128,6 @@ export default async function DashboardLayout({
       support: t("pages.support"),
       admin: "Admin",
       adminAnalytics: "Analytics",
-      adminOnboarding: "Onboarding",
     },
     logout: t("logout"),
     analytics: {
@@ -129,6 +168,10 @@ export default async function DashboardLayout({
       emptyTitle: t("menu.emptyTitle"),
       emptySubtitle: t("menu.emptySubtitle"),
       noItems: t("menu.noItems"),
+      orDivider: t("menu.orDivider"),
+      scanButton: t("menu.scanButton"),
+      scanDescription: t("menu.scanDescription"),
+      defaultCategoryName: t("menu.defaultCategoryName"),
     },
     categories: {
       general: t("categories.general"),

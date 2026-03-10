@@ -48,7 +48,7 @@ model Company {
   trialEndsAt DateTime? // null = old user (pre-trial), set = new user with 14-day trial
 
   // Onboarding
-  onboardingStep Int @default(0) // 0 = not started, 2 = restaurant created, 3 = onboarding complete
+  onboardingStep Int @default(3) // 3 = onboarding complete (legacy field)
 
   // Email campaigns
   emailsSent       Json?    // e.g. { "welcome": "2026-02-16T...", "inactive_7d": "2026-02-20T..." }
