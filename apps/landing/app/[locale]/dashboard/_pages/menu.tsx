@@ -254,8 +254,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           {!sortMode && slug && items.length > 0 && (
             <MenuPreviewModal menuUrl={`/m/${slug}`}>
               <button
-                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-                style={{ background: "linear-gradient(to right, hsl(9,100%,58%), #f59e0b)" }}
+                className="flex items-center justify-center gap-2 w-full h-11 rounded-xl border border-green-500/30 bg-green-500/10 text-green-600 dark:text-green-400 text-sm font-medium hover:bg-green-500/15 transition-colors"
                 onClick={() => track(DashboardEvent.CLICKED_VIEW_MENU)}
               >
                 <Eye className="h-4 w-4" />
