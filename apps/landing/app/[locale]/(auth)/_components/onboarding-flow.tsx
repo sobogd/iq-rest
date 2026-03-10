@@ -91,10 +91,11 @@ function fileToJpegBase64(file: File): Promise<string> {
 interface OnboardingFlowProps {
   userId: string | null;
   isAuthenticated: boolean;
+  hasRestaurant?: boolean;
   initialStep: Step;
 }
 
-export function OnboardingFlow({ userId, isAuthenticated, initialStep }: OnboardingFlowProps) {
+export function OnboardingFlow({ userId, isAuthenticated, hasRestaurant: initialHasRestaurant, initialStep }: OnboardingFlowProps) {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("dashboard.onboarding");
@@ -108,7 +109,7 @@ export function OnboardingFlow({ userId, isAuthenticated, initialStep }: Onboard
   const [errorMessage, setErrorMessage] = useState("");
   const [currentUserId, setCurrentUserId] = useState(userId);
   const [authed, setAuthed] = useState(isAuthenticated);
-  const [restaurantCreated, setRestaurantCreated] = useState(isAuthenticated);
+  const [restaurantCreated, setRestaurantCreated] = useState(initialHasRestaurant ?? false);
 
   // Turnstile (for anonymous creation)
   const turnstileRef = useRef<TurnstileInstance>(null);
