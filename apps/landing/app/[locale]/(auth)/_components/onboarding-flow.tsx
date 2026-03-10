@@ -134,7 +134,6 @@ export function OnboardingFlow({ userId, isAuthenticated, restaurantName: initia
   useEffect(() => {
     if (step === "name") {
       track(DashboardEvent.SHOWED_ONBOARDING_NAME);
-      nameInputRef.current?.focus();
     } else if (step === "method") {
       track(DashboardEvent.SHOWED_ONBOARDING_MENU);
     } else if (step === "scan") {
