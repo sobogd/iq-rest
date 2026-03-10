@@ -36,7 +36,7 @@ export default async function DashboardLayout({
     }),
   ]);
 
-  const hasRestaurant = Boolean(restaurant?.title && restaurant.title.trim().length > 0);
+  const hasRestaurant = Boolean(restaurant);
 
   if (!hasRestaurant || (company && company.onboardingStep < 3)) {
     redirect("/onboarding");
