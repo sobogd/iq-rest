@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "So sieht es aus",
-      "getReady": "Menü vorbereiten",
-      "checklistName": "Benenne dein Lokal",
-      "checklistMenuFill": "Füllen Sie Ihr Menü aus",
-      "checklistContacts": "Kontakte hinzufügen",
-      "checklistBrand": "Marke anpassen",
       "menuReady": "Dein Menü ist fertig! Teile deinen QR-Code mit Gästen.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",

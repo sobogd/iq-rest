@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Nézd meg, hogy néz ki",
-      "getReady": "Készítse el a menüt",
-      "checklistName": "Adjon nevet a helyének",
-      "checklistMenuFill": "Töltsd ki az étlapod",
-      "checklistContacts": "Adja meg az elérhetőségeket",
-      "checklistBrand": "Szabja testre a márkát",
       "menuReady": "A menüd elkészült! Oszd meg a QR-kódot a vendégekkel.",
       "scansTitle": "Szkennek",
       "scansUsed": "{used} / {limit}",

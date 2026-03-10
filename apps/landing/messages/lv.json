@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Skatīt, kā tas izskatās",
-      "getReady": "Sagatavojiet ēdienkarti",
-      "checklistName": "Nosauciet savu vietu",
-      "checklistMenuFill": "Aizpildiet savu ēdienkarti",
-      "checklistContacts": "Pievienojiet kontaktus",
-      "checklistBrand": "Pielāgojiet zīmolu",
       "menuReady": "Jūsu ēdienkarte ir gatava! Dalieties ar QR kodu ar klientiem.",
       "scansTitle": "Skenējumi",
       "scansUsed": "{used} / {limit}",

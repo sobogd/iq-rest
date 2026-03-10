@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Féach conas a fhéachann sé",
-      "getReady": "Ullmhaigh do bhiachlár",
-      "checklistName": "Ainmnigh d'áit",
-      "checklistMenuFill": "Líon isteach do bhiachlár",
-      "checklistContacts": "Cuir teagmhálacha leis",
-      "checklistBrand": "Saincheap do bhranda",
       "menuReady": "Tá do bhiachlár réidh! Roinn do chód QR le custaiméirí.",
       "scansTitle": "Scanadh",
       "scansUsed": "{used} / {limit}",

@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Vaata, kuidas see välja näeb",
-      "getReady": "Valmista menüü ette",
-      "checklistName": "Pange kohale nimi",
-      "checklistMenuFill": "Täitke oma menüü",
-      "checklistContacts": "Lisage kontaktid",
-      "checklistBrand": "Kohandage brändi",
       "menuReady": "Sinu menüü on valmis! Jaga QR-koodi klientidega.",
       "scansTitle": "Skaneeringud",
       "scansUsed": "{used} / {limit}",

@@ -3,12 +3,12 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, CheckCircle2, Circle, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, Save } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, UserPlus, MousePointerClick, Send, Search, KeyRound, Save } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
 import { toast } from "sonner";
-import { useDashboard, PAGE_PATHS } from "../_context/dashboard-context";
+import { useDashboard } from "../_context/dashboard-context";
 import { DashboardNavHeader, DashboardNavSidebar, DashboardNavItems } from "../_components/dashboard-nav";
 import { Link, useRouter } from "@/i18n/routing";
 import type { Category } from "@/types";
@@ -28,25 +28,16 @@ interface ItemWithTranslations {
   category: Pick<Category, "id" | "name" | "sortOrder">;
 }
 
-interface ChecklistStatus {
-  nameSet: boolean;
-  menuEdited: boolean;
-  contactsAdded: boolean;
-  brandCustomized: boolean;
-  fromScanner: boolean;
-}
-
 interface MenuPageProps {
   initialItems: ItemWithTranslations[];
   initialCategories: Category[];
   initialCurrency: string;
   restaurantName: string;
   slug: string | null;
-  checklist: ChecklistStatus;
   isAdmin?: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, checklist, isAdmin }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, isAdmin }: MenuPageProps) {
   useBlockBack();
   const { translations, scanUsage, isAnonymous } = useDashboard();
   const tHome = useTranslations("dashboard.home");
@@ -55,27 +46,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
   const tCategories = translations.categories;
   const tMenu = translations.menu;
   const pageTitle = translations.pages.menu;
-
-  const allChecklistKeys: { key: keyof ChecklistStatus; translationKey: string; path: string }[] = [
-    { key: "nameSet", translationKey: "checklistName", path: PAGE_PATHS.settings },
-    { key: "menuEdited", translationKey: "checklistMenuFill", path: PAGE_PATHS.menu },
-    { key: "brandCustomized", translationKey: "checklistBrand", path: PAGE_PATHS.design },
-    { key: "contactsAdded", translationKey: "checklistContacts", path: PAGE_PATHS.contacts },
-  ];
-
-  const checklistKeys = checklist.fromScanner
-    ? allChecklistKeys.filter((item) => item.key === "contactsAdded" || item.key === "brandCustomized")
-    : allChecklistKeys;
-
-  const completedCount = checklistKeys.filter((item) => checklist[item.key]).length;
-  const allDone = completedCount === checklistKeys.length;
-
-  const checklistEventMap: Record<string, DashboardEvent> = {
-    nameSet: DashboardEvent.CLICKED_CHECKLIST_NAME,
-    menuEdited: DashboardEvent.CLICKED_CHECKLIST_MENU,
-    contactsAdded: DashboardEvent.CLICKED_CHECKLIST_CONTACTS,
-    brandCustomized: DashboardEvent.CLICKED_CHECKLIST_BRAND,
-  };
 
   const [items, setItems] = useState<ItemWithTranslations[]>(initialItems);
   const [categories, setCategories] = useState<Category[]>(initialCategories);
@@ -307,54 +277,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
             </Link>
           )}
 
-          {/* Setup checklist */}
-          {!sortMode && !allDone && (
-            <div>
-              <div className="px-4 mb-1.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground">
-                    {tHome("getReady")}
-                  </span>
-                  <span className="text-xs text-muted-foreground">{completedCount}/{checklistKeys.length}</span>
-                </div>
-              </div>
-              <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-                <div className="px-4 pt-3 pb-3">
-                  <div className="h-2 rounded-full bg-muted overflow-hidden">
-                    <div
-                      className="h-full rounded-full transition-all duration-500"
-                      style={{ width: `${(completedCount / checklistKeys.length) * 100}%`, background: "linear-gradient(to right, #22c55e, #16a34a)" }}
-                    />
-                  </div>
-                </div>
-                {checklistKeys.map((item, index) => {
-                  const done = checklist[item.key];
-                  const isNext = !done && !checklistKeys.some((prev) => prev.key !== item.key && !checklist[prev.key] && checklistKeys.indexOf(prev) < checklistKeys.indexOf(item));
-                  return (
-                    <button
-                      key={item.key}
-                      onClick={() => { if (!done) { track(checklistEventMap[item.key]); router.push(item.path); } }}
-                      disabled={done}
-                      className={`flex items-center gap-3 w-full h-11 px-4 text-left transition-colors ${
-                        index > 0 || true ? "border-t border-border/50" : ""
-                      } ${done ? "opacity-50" : "hover:bg-muted/50"}`}
-                    >
-                      {done ? (
-                        <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
-                      ) : (
-                        <Circle className={`h-5 w-5 shrink-0 ${isNext ? "text-emerald-500" : "text-muted-foreground/40"}`} />
-                      )}
-                      <span className={`text-sm flex-1 ${done ? "text-muted-foreground line-through" : isNext ? "font-medium" : ""}`}>
-                        {tHome(item.translationKey)}
-                      </span>
-                      {!done && <ChevronRight className={`h-4 w-4 shrink-0 ${isNext ? "text-emerald-500" : "text-muted-foreground/30"}`} />}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
           {/* Admin shortcuts */}
           {!sortMode && isAdmin && (
             <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
@@ -396,13 +318,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
               {tMenu.addCategory}
             </button>
           </div>
-          {!allDone && (
-            <div className="rounded-xl border border-border bg-muted/30 px-4 py-4">
-              <p className="text-sm font-medium mb-2">{tMenu.hintTitle}</p>
-              <p className="text-xs text-muted-foreground/60 mb-3">{tMenu.hintBody}</p>
-              <p className="text-xs text-muted-foreground/60">{tMenu.hintNoCategories}</p>
-            </div>
-          )}
           </>
         ) : (
           <div className="flex flex-col gap-4">
@@ -530,14 +445,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 );
               })}
             </div>
-
-            {/* Item hint during onboarding */}
-            {!allDone && items.length === 0 && (
-              <div className="rounded-xl border border-border bg-muted/30 px-4 py-4">
-                <p className="text-sm font-medium mb-2">{tMenu.itemHintTitle}</p>
-                <p className="text-xs text-muted-foreground/60">{tMenu.itemHintBody}</p>
-              </div>
-            )}
 
             {/* Add category button */}
             {!sortMode && (

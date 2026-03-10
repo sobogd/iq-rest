@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "شاهد كيف يبدو",
-      "getReady": "جهّز قائمتك",
-      "checklistName": "سمِّ مكانك",
-      "checklistMenuFill": "املأ قائمتك",
-      "checklistContacts": "أضف جهات الاتصال",
-      "checklistBrand": "خصّص علامتك التجارية",
       "menuReady": "قائمتك جاهزة! شارك رمز QR مع العملاء.",
       "scansTitle": "المسح",
       "scansUsed": "{used} / {limit}",

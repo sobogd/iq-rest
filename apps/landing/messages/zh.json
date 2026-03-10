@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "看看效果如何",
-      "getReady": "准备您的菜单",
-      "checklistName": "为您的店铺命名",
-      "checklistMenuFill": "填写你的菜单",
-      "checklistContacts": "添加联系方式",
-      "checklistBrand": "自定义品牌",
       "menuReady": "您的菜单已准备就绪！将二维码分享给顾客吧。",
       "scansTitle": "扫描",
       "scansUsed": "{used} / {limit}",

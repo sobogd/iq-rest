@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Voir le résultat",
-      "getReady": "Préparez votre menu",
-      "checklistName": "Nommez votre établissement",
-      "checklistMenuFill": "Remplissez votre menu",
-      "checklistContacts": "Ajoutez vos contacts",
-      "checklistBrand": "Personnalisez votre marque",
       "menuReady": "Votre menu est prêt ! Partagez votre QR code avec vos clients.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",

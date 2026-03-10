@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Подивитися, як виглядає",
-      "getReady": "Підготуйте меню",
-      "checklistName": "Назвіть заклад",
-      "checklistMenuFill": "Заповніть меню",
-      "checklistContacts": "Додайте контакти",
-      "checklistBrand": "Налаштуйте бренд",
       "menuReady": "Ваше меню готове! Поділіться QR-кодом з клієнтами.",
       "scansTitle": "Скани",
       "scansUsed": "{used} / {limit}",

@@ -323,27 +323,6 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
 }
 
 // ---- Checklist Status ----
-export async function getChecklistStatus(companyId: string) {
-  const restaurant = await prisma.restaurant.findFirst({
-    where: { companyId },
-    select: {
-      title: true,
-      checklistMenuEdited: true,
-      checklistContactsSaved: true,
-      checklistBrandCustomized: true,
-      fromScanner: true,
-    },
-  });
-
-  return {
-    nameSet: Boolean(restaurant?.title),
-    menuEdited: restaurant?.checklistMenuEdited ?? false,
-    contactsAdded: restaurant?.checklistContactsSaved ?? false,
-    brandCustomized: restaurant?.checklistBrandCustomized ?? false,
-    fromScanner: restaurant?.fromScanner ?? false,
-  };
-}
-
 // ---- Admin Helpers ----
 export async function checkIsAdmin() {
   const cookieStore = await cookies();

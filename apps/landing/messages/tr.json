@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Nasıl göründüğünü görün",
-      "getReady": "Menünüzü hazırlayın",
-      "checklistName": "Mekanınızı adlandırın",
-      "checklistMenuFill": "Menünüzü doldurun",
-      "checklistContacts": "İletişim ekleyin",
-      "checklistBrand": "Markayı özelleştirin",
       "menuReady": "Menünüz hazır! QR kodunuzu müşterilerinizle paylaşın.",
       "scansTitle": "Taramalar",
       "scansUsed": "{used} / {limit}",

@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Pogledaj kako izgleda",
-      "getReady": "Pripremi svoj meni",
-      "checklistName": "Imenuj svoj lokal",
-      "checklistMenuFill": "Ispunite svoj jelovnik",
-      "checklistContacts": "Dodaj kontakte",
-      "checklistBrand": "Prilagodi brend",
       "menuReady": "Tvoj meni je spreman! Podijeli QR kod s gostima.",
       "scansTitle": "Skenovi",
       "scansUsed": "{used} / {limit}",

@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Посмотреть, как выглядит",
-      "getReady": "Подготовьте меню",
-      "checklistName": "Назовите заведение",
-      "checklistMenuFill": "Заполните меню",
-      "checklistContacts": "Добавьте контакты",
-      "checklistBrand": "Настройте бренд",
       "menuReady": "Ваше меню готово! Поделитесь QR-кодом с клиентами.",
       "scansTitle": "Сканы",
       "scansUsed": "{used} / {limit}",

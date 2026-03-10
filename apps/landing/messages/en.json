@@ -1549,11 +1549,6 @@
     },
     "home": {
       "viewMenu": "See How It Looks",
-      "getReady": "Get your menu ready",
-      "checklistName": "Name your place",
-      "checklistMenuFill": "Fill in your menu",
-      "checklistContacts": "Add your contacts",
-      "checklistBrand": "Customize your brand",
       "menuReady": "Your menu is ready! Share your QR code with customers.",
       "scansTitle": "Scans",
       "scansUsed": "{used} / {limit}",

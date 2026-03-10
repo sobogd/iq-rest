@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Вижте как изглежда",
-      "getReady": "Подгответе менюто",
-      "checklistName": "Наименувайте заведението",
-      "checklistMenuFill": "Попълнете менюто си",
-      "checklistContacts": "Добавете контакти",
-      "checklistBrand": "Персонализирайте марката",
       "menuReady": "Менюто ви е готово! Споделете QR кода с клиентите.",
       "scansTitle": "Сканирания",
       "scansUsed": "{used} / {limit}",

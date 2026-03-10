@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Δείτε πώς φαίνεται",
-      "getReady": "Ετοιμάστε το μενού",
-      "checklistName": "Ονομάστε το μαγαζί",
-      "checklistMenuFill": "Συμπληρώστε το μενού σας",
-      "checklistContacts": "Προσθέστε επαφές",
-      "checklistBrand": "Προσαρμόστε το brand",
       "menuReady": "Το μενού σας είναι έτοιμο! Μοιραστείτε τον QR κωδικό με τους πελάτες.",
       "scansTitle": "Σαρώσεις",
       "scansUsed": "{used} / {limit}",

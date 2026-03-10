@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "見た目を確認する",
-      "getReady": "メニューを準備する",
-      "checklistName": "お店の名前を入力",
-      "checklistMenuFill": "メニューを入力",
-      "checklistContacts": "連絡先を追加",
-      "checklistBrand": "ブランドをカスタマイズ",
       "menuReady": "メニューの準備ができました！QRコードをお客様に共有しましょう。",
       "scansTitle": "スキャン",
       "scansUsed": "{used} / {limit}",

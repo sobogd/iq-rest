@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Pažiūrėkite, kaip tai atrodo",
-      "getReady": "Paruoškite meniu",
-      "checklistName": "Pavadinkite savo vietą",
-      "checklistMenuFill": "Užpildykite savo meniu",
-      "checklistContacts": "Pridėkite kontaktus",
-      "checklistBrand": "Pritaikykite prekės ženklą",
       "menuReady": "Jūsų meniu paruoštas! Pasidalykite QR kodu su klientais.",
       "scansTitle": "Nuskaitymai",
       "scansUsed": "{used} / {limit}",

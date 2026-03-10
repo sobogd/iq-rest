@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Vezi cum arată",
-      "getReady": "Pregătește-ți meniul",
-      "checklistName": "Denumește localul",
-      "checklistMenuFill": "Completează-ți meniul",
-      "checklistContacts": "Adaugă contacte",
-      "checklistBrand": "Personalizează brandul",
       "menuReady": "Meniul tău este gata! Distribuie codul QR clienților.",
       "scansTitle": "Scanări",
       "scansUsed": "{used} / {limit}",

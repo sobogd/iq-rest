@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Se hur det ser ut",
-      "getReady": "Förbered din meny",
-      "checklistName": "Namnge din restaurang",
-      "checklistMenuFill": "Fyll i din meny",
-      "checklistContacts": "Lägg till kontakter",
-      "checklistBrand": "Anpassa varumärket",
       "menuReady": "Din meny är klar! Dela din QR-kod med gästerna.",
       "scansTitle": "Skanningar",
       "scansUsed": "{used} / {limit}",

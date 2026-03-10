@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Se hvordan det ser ud",
-      "getReady": "Forbered din menu",
-      "checklistName": "Navngiv dit sted",
-      "checklistMenuFill": "Udfyld din menu",
-      "checklistContacts": "Tilføj kontakter",
-      "checklistBrand": "Tilpas dit brand",
       "menuReady": "Din menu er klar! Del din QR-kode med kunderne.",
       "scansTitle": "Scanninger",
       "scansUsed": "{used} / {limit}",

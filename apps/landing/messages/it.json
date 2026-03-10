@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Guarda come appare",
-      "getReady": "Prepara il tuo menu",
-      "checklistName": "Dai un nome al locale",
-      "checklistMenuFill": "Compila il tuo menu",
-      "checklistContacts": "Aggiungi i contatti",
-      "checklistBrand": "Personalizza il brand",
       "menuReady": "Il tuo menu è pronto! Condividi il QR code con i clienti.",
       "scansTitle": "Scansioni",
       "scansUsed": "{used} / {limit}",

@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Mira com es veu",
-      "getReady": "Prepara el teu menú",
-      "checklistName": "Posa nom al local",
-      "checklistMenuFill": "Omple el teu menú",
-      "checklistContacts": "Afegeix contactes",
-      "checklistBrand": "Personalitza la marca",
       "menuReady": "El teu menú està llest! Comparteix el codi QR amb els clients.",
       "scansTitle": "Escanejos",
       "scansUsed": "{used} / {limit}",

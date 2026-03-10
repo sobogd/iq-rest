@@ -2005,11 +2005,6 @@
     },
     "home": {
       "viewMenu": "Pozrite sa, ako to vyzerá",
-      "getReady": "Pripravte si menu",
-      "checklistName": "Pomenujte podnik",
-      "checklistMenuFill": "Vyplňte svoje menu",
-      "checklistContacts": "Pridajte kontakty",
-      "checklistBrand": "Prispôsobte značku",
       "menuReady": "Vaše menu je pripravené! Zdieľajte QR kód so zákazníkmi.",
       "scansTitle": "Skeny",
       "scansUsed": "{used} / {limit}",
