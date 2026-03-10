@@ -251,7 +251,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           <DashboardNavSidebar />
           <div className="flex-1 min-w-0 flex flex-col gap-4 min-h-full">
           {/* View menu */}
-          {!sortMode && slug && (
+          {!sortMode && slug && items.length > 0 && (
             <MenuPreviewModal menuUrl={`/m/${slug}`}>
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
@@ -265,7 +265,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
           )}
 
           {/* Save (anonymous) */}
-          {!sortMode && isAnonymous && (
+          {!sortMode && isAnonymous && items.length > 0 && (
             <Link href="/dashboard/save" onClick={() => track(DashboardEvent.CLICKED_SAVE_MENU)}>
               <button
                 className="flex items-center justify-center gap-2 w-full h-11 rounded-xl text-white text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
