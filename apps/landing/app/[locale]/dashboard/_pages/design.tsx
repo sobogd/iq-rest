@@ -496,8 +496,8 @@ export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps
       <AlertDialog open={!!validationError} onOpenChange={() => setValidationError(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("validationErrorTitle")}</AlertDialogTitle>
-            <AlertDialogDescription>{validationError}</AlertDialogDescription>
+            <AlertDialogTitle>{validationError}</AlertDialogTitle>
+            <AlertDialogDescription className="sr-only">{validationError}</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogAction onClick={() => setValidationError(null)}>OK</AlertDialogAction>
