@@ -477,7 +477,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 </button>
                 <button
                   onClick={() => { track(DashboardEvent.CLICKED_ADD_CATEGORY); router.push("/dashboard/categories/add"); }}
-                  className="flex items-center gap-1 text-sm text-primary font-medium mx-auto mb-24"
+                  className="flex items-center justify-center gap-1 w-full h-11 rounded-xl border border-border bg-muted/30 text-sm font-medium hover:bg-muted/50 transition-colors mb-24"
                 >
                   <Plus className="h-3.5 w-3.5" />
                   {tMenu.addCategory}
