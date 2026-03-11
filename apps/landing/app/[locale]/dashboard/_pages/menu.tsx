@@ -482,6 +482,7 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                   <Plus className="h-3.5 w-3.5" />
                   {tMenu.addCategory}
                 </button>
+                <div className="h-24" />
               </>
             )}
           </div>
