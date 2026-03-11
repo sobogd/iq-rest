@@ -264,10 +264,21 @@ Rules:
       }
     }
 
+    // Delete empty categories (e.g. the default "Menu" category created on signup)
+    const emptyCategories = await prisma.category.findMany({
+      where: { companyId, items: { none: {} } },
+      select: { id: true },
+    });
+    if (emptyCategories.length > 0) {
+      await prisma.category.deleteMany({
+        where: { id: { in: emptyCategories.map((c) => c.id) } },
+      });
+    }
+
     // Mark checklist as done
     await prisma.restaurant.updateMany({
       where: { companyId },
-      data: { checklistMenuEdited: true },
+      data: { checklistMenuEdited: true, fromScanner: true },
     });
 
     return NextResponse.json({ categoriesCount, itemsCount });
