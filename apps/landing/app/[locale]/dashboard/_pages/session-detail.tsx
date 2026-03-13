@@ -304,9 +304,9 @@ export function SessionDetailPage({ sessionId }: { sessionId: string }) {
     infoRows.push({ label: "Source", value: session.gclid ? "Google Ads" : "Direct" });
     if (session.gclid) infoRows.push({ label: "GCLID", value: session.gclid, copyable: true });
     if (session.keyword) infoRows.push({ label: "Keyword", value: session.keyword, copyable: true });
-    if (session.restaurantName) infoRows.push({
+    if (session.companyId) infoRows.push({
       label: "Restaurant",
-      value: session.restaurantName,
+      value: session.restaurantName || "No name",
       onClick: () => {
         const isFromCompany = backHref.startsWith("/dashboard/admin/companies/");
         if (isFromCompany) {
