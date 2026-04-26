@@ -1412,7 +1412,9 @@
       "continue": "Tovább",
       "clearCart": "Kosár ürítése",
       "orderLimitReached": "A havi rendelési limit elérve. Kérjük, próbálja meg a következő hónapban."
-    }
+    },
+    "menuUnavailableTitle": "A Menü Átmenetileg Nem Elérhető",
+    "menuUnavailableText": "Ennek az étteremnek az étlapja jelenleg nem elérhető. Kérjük, lépjen kapcsolatba az étteremmel közvetlenül."
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések a QR Menüvel Kapcsolatban Éttermek és Kávézók Számára",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Bármikor lemondható · Nincsenek beállítási díjak",
       "skip": "Folytatás az ingyenes csomaggal",
       "guarantee": "Biztonságos fizetés · 7 napos pénzvisszafizetési garancia",
-      "checkoutError": "Nem sikerült elindítani a fizetést. Kérjük, próbáld újra."
+      "checkoutError": "Nem sikerült elindítani a fizetést. Kérjük, próbáld újra.",
+      "menuUnavailableText": "A menüd nem elérhető QR-beolvasáshoz, amíg nem fizetsz elő.",
+      "trialEndedTitle": "Az Ingyenes Próbaidőszakod Lejárt",
+      "trialEndedSubtitle": "Fizess elő, hogy megtartsd az összes funkciót — AI-fordítások, foglalások és még több"
     },
     "aiTranslate": {
       "title": "AI Fordítás",

@@ -1412,7 +1412,9 @@
       "continue": "Continuă",
       "clearCart": "Șterge coșul",
       "orderLimitReached": "Limita lunară de comenzi a fost atinsă. Vă rugăm să încercați din nou luna viitoare."
-    }
+    },
+    "menuUnavailableTitle": "Meniul Este Temporar Indisponibil",
+    "menuUnavailableText": "Meniul acestui restaurant nu este disponibil momentan. Vă rugăm contactați restaurantul direct."
   },
   "faq": {
     "title": "Întrebări frecvente despre meniul QR pentru restaurant și cafenea",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Anulează oricând · Fără taxe de configurare",
       "skip": "Continuă cu planul Gratuit",
       "guarantee": "Plată securizată · Garanție de rambursare de 7 zile",
-      "checkoutError": "Nu s-a putut iniția plata. Te rugăm să încerci din nou."
+      "checkoutError": "Nu s-a putut iniția plata. Te rugăm să încerci din nou.",
+      "menuUnavailableText": "Meniul tău nu este disponibil pentru scanare QR până când nu te abonezi.",
+      "trialEndedTitle": "Perioada Ta de Probă Gratuită S-a Încheiat",
+      "trialEndedSubtitle": "Abonează-te pentru a păstra toate funcțiile — traduceri AI, rezervări și mai mult"
     },
     "aiTranslate": {
       "title": "Traducere AI",

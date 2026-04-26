@@ -1412,7 +1412,9 @@
       "continue": "Tęsti",
       "clearCart": "Išvalyti krepšelį",
       "orderLimitReached": "Mėnesio užsakymų limitas pasiektas. Prašome bandyti vėl kitą mėnesį."
-    }
+    },
+    "menuUnavailableTitle": "Meniu Laikinai Nepasiekiamas",
+    "menuUnavailableText": "Šio restorano meniu šiuo metu nepasiekiamas. Susisiekite su restoranu tiesiogiai."
   },
   "faq": {
     "title": "Dažniausiai užduodami klausimai apie QR meniu restoranams ir kavinėms",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Atšaukite bet kada · Be nustatymo mokesčių",
       "skip": "Tęsti su nemokamu planu",
       "guarantee": "Saugus mokėjimas · 7 dienų pinigų grąžinimo garantija",
-      "checkoutError": "Nepavyko pradėti mokėjimo. Bandykite dar kartą."
+      "checkoutError": "Nepavyko pradėti mokėjimo. Bandykite dar kartą.",
+      "menuUnavailableText": "Jūsų meniu nepasiekiamas QR nuskaitymui, kol neprenumeruojate.",
+      "trialEndedTitle": "Jūsų Nemokamas Bandomasis Laikotarpis Baigėsi",
+      "trialEndedSubtitle": "Prenumeruokite, kad išlaikytumėte visas funkcijas — AI vertimai, rezervacijos ir daugiau"
     },
     "aiTranslate": {
       "title": "AI Vertimas",

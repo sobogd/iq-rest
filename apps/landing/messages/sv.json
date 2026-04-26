@@ -1412,7 +1412,9 @@
       "continue": "Fortsätt",
       "clearCart": "Rensa kundvagn",
       "orderLimitReached": "Månatlig beställningsgräns nådd. Vänligen försök igen nästa månad."
-    }
+    },
+    "menuUnavailableTitle": "Menyn Är Tillfälligt Otillgänglig",
+    "menuUnavailableText": "Den här restaurangens meny är för tillfället inte tillgänglig. Kontakta restaurangen direkt."
   },
   "faq": {
     "title": "Vanliga Frågor Om QR Meny för Restaurang & Café",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Avbryt när som helst · Inga installationsavgifter",
       "skip": "Fortsätt med gratisplanen",
       "guarantee": "Säker betalning · 7 dagars pengarna-tillbaka-garanti",
-      "checkoutError": "Kunde inte starta betalningen. Försök igen."
+      "checkoutError": "Kunde inte starta betalningen. Försök igen.",
+      "menuUnavailableText": "Din meny är inte tillgänglig för QR-skanning tills du prenumererar.",
+      "trialEndedTitle": "Din Kostnadsfria Provperiod Har Slutat",
+      "trialEndedSubtitle": "Prenumerera för att behålla alla funktioner — AI-översättningar, bokningar och mer"
     },
     "aiTranslate": {
       "title": "AI Översättning",

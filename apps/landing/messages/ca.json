@@ -1412,7 +1412,9 @@
       "continue": "Continuar",
       "clearCart": "Netejar el carret",
       "orderLimitReached": "S'ha assolit el límit de comandes mensual. Si us plau, torneu-ho a provar el proper mes."
-    }
+    },
+    "menuUnavailableTitle": "El Menú No Està Disponible Temporalment",
+    "menuUnavailableText": "El menú d'aquest restaurant no està disponible en aquest moment. Contacteu directament amb el restaurant."
   },
   "faq": {
     "title": "Preguntes Freqüents Sobre el Menú QR per a Restaurants i Cafès",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Cancel·la en qualsevol moment · Sense costos d'instal·lació",
       "skip": "Continua amb el pla Gratuït",
       "guarantee": "Pagament segur · Garantia de devolució de 7 dies",
-      "checkoutError": "Error en iniciar el pagament. Si us plau, torna-ho a provar."
+      "checkoutError": "Error en iniciar el pagament. Si us plau, torna-ho a provar.",
+      "menuUnavailableText": "El teu menú no està disponible per a l'escaneig QR fins que et subscriguis.",
+      "trialEndedTitle": "El Teu Període de Prova Gratuït Ha Acabat",
+      "trialEndedSubtitle": "Subscriu-vos per mantenir totes les funcions — traduccions d'AI, reserves i més"
     },
     "aiTranslate": {
       "title": "Traducció IA",

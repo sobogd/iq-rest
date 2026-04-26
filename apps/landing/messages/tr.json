@@ -1412,7 +1412,9 @@
       "continue": "Devam et",
       "clearCart": "Sepeti temizle",
       "orderLimitReached": "Aylık sipariş limiti aşıldı. Lütfen gelecek ay tekrar deneyin."
-    }
+    },
+    "menuUnavailableTitle": "Menü Geçici Olarak Kullanılamıyor",
+    "menuUnavailableText": "Bu restoranın menüsü şu anda mevcut değil. Lütfen restoranla doğrudan iletişime geçin."
   },
   "faq": {
     "title": "Restoran ve Kafe için QR Menü Hakkında Sıkça Sorulan Sorular",
@@ -1594,7 +1596,10 @@
       "ctaSub": "İstediğiniz zaman iptal edin · Kurulum ücreti yok",
       "skip": "Ücretsiz plan ile devam et",
       "guarantee": "Güvenli ödeme · 7 gün para iade garantisi",
-      "checkoutError": "Ödeme başlatılamadı. Lütfen tekrar deneyin."
+      "checkoutError": "Ödeme başlatılamadı. Lütfen tekrar deneyin.",
+      "menuUnavailableText": "Abone olana kadar menünüz QR taraması için mevcut değil.",
+      "trialEndedTitle": "Ücretsiz Deneme Süreniz Sona Erdi",
+      "trialEndedSubtitle": "Tüm özellikleri korumak için abone olun — AI çeviriler, rezervasyonlar ve daha fazlası"
     },
     "aiTranslate": {
       "title": "Yapay Zeka Çevirisi",

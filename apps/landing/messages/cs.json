@@ -1412,7 +1412,9 @@
       "continue": "Pokračovat",
       "clearCart": "Vymazat košík",
       "orderLimitReached": "Měsíční limit objednávek byl dosažen. Zkuste to prosím znovu příští měsíc."
-    }
+    },
+    "menuUnavailableTitle": "Nabídka Je Dočasně Nedostupná",
+    "menuUnavailableText": "Nabídka tohoto restaurantu není momentálně dostupná. Kontaktujte prosím restauraci přímo."
   },
   "faq": {
     "title": "Často kladené otázky o QR menu pro restaurace a kavárny",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Zrušení kdykoli · Bez poplatků za nastavení",
       "skip": "Pokračovat s bezplatným plánem",
       "guarantee": "Bezpečná platba · 7denní záruka vrácení peněz",
-      "checkoutError": "Nepodařilo se spustit platbu. Zkuste to prosím znovu."
+      "checkoutError": "Nepodařilo se spustit platbu. Zkuste to prosím znovu.",
+      "menuUnavailableText": "Vaše menu není k dispozici ke skenování QR, dokud se nepřihlásíte k odběru.",
+      "trialEndedTitle": "Váš Bezplatný Zkušební Přístup Skončil",
+      "trialEndedSubtitle": "Přihlaste se k odběru a zachovejte všechny funkce — překlady AI, rezervace a více"
     },
     "aiTranslate": {
       "title": "AI Překlad",

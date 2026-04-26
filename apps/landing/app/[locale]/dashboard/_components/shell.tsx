@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Loader2, LogOut } from "lucide-react";
 import { SiteHeader } from "./header";
+import { TrialExpiredModal } from "./trial-expired-modal";
 import {
   DashboardProvider,
   type DashboardTranslations,
@@ -54,9 +55,11 @@ function ImpersonationBanner({ currentEmail }: ImpersonationBannerProps) {
 function DashboardLayout({
   children,
   impersonation,
+  trialExpired,
 }: {
   children: React.ReactNode;
   impersonation?: { originalEmail: string; currentEmail: string };
+  trialExpired?: boolean;
 }) {
   return (
     <div
@@ -68,6 +71,7 @@ function DashboardLayout({
       )}
       <SiteHeader />
       <div className="flex-1 min-h-0 overflow-clip">{children}</div>
+      <TrialExpiredModal open={!!trialExpired} />
     </div>
   );
 }
@@ -78,6 +82,7 @@ export function DashboardShell({
   userId,
   scanUsage,
   isAnonymous,
+  trialExpired,
   children,
 }: {
   translations: DashboardTranslations;
@@ -85,6 +90,7 @@ export function DashboardShell({
   userId: string;
   scanUsage: ScanUsage | null;
   isAnonymous: boolean;
+  trialExpired?: boolean;
   children?: React.ReactNode;
 }) {
   useEffect(() => {
@@ -97,7 +103,7 @@ export function DashboardShell({
 
   return (
     <DashboardProvider translations={translations} scanUsage={scanUsage} isAnonymous={isAnonymous}>
-      <DashboardLayout impersonation={impersonation}>
+      <DashboardLayout impersonation={impersonation} trialExpired={trialExpired}>
         {children}
       </DashboardLayout>
     </DashboardProvider>

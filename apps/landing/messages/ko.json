@@ -1412,7 +1412,9 @@
       "continue": "계속",
       "clearCart": "장바구니 비우기",
       "orderLimitReached": "월 주문 한도에 도달했습니다. 다음 달에 다시 시도해 주세요."
-    }
+    },
+    "menuUnavailableTitle": "메뉴를 일시적으로 이용할 수 없습니다",
+    "menuUnavailableText": "이 레스토랑의 메뉴는 현재 이용할 수 없습니다. 레스토랑에 직접 문의하세요."
   },
   "faq": {
     "title": "레스토랑 및 카페 QR 메뉴에 대한 자주 묻는 질문",
@@ -1594,7 +1596,10 @@
       "ctaSub": "언제든 취소 가능 · 설정 비용 없음",
       "skip": "무료 플랜으로 계속",
       "guarantee": "안전한 결제 · 7일 환불 보장",
-      "checkoutError": "결제를 시작할 수 없습니다. 다시 시도해 주세요."
+      "checkoutError": "결제를 시작할 수 없습니다. 다시 시도해 주세요.",
+      "menuUnavailableText": "구독할 때까지 메뉴를 QR 스캔으로 이용할 수 없습니다.",
+      "trialEndedTitle": "무료 체험 기간이 종료되었습니다",
+      "trialEndedSubtitle": "모든 기능을 유지하려면 구독하세요 — AI 번역, 예약 등"
     },
     "aiTranslate": {
       "title": "AI 번역",

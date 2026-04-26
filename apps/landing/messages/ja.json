@@ -1412,7 +1412,9 @@
       "continue": "続ける",
       "clearCart": "カートをクリア",
       "orderLimitReached": "月間注文上限に達しました。来月再度お試しください。"
-    }
+    },
+    "menuUnavailableTitle": "メニューは一時的に利用できません",
+    "menuUnavailableText": "このレストランのメニューは現在ご利用いただけません。レストランに直接お問い合わせください。"
   },
   "faq": {
     "title": "レストラン＆カフェのQRメニューに関するよくある質問",
@@ -1594,7 +1596,10 @@
       "ctaSub": "いつでもキャンセル可能 · 設定費用なし",
       "skip": "無料プランで続ける",
       "guarantee": "安全な決済 · 7日間返金保証",
-      "checkoutError": "決済の開始に失敗しました。もう一度お試しください。"
+      "checkoutError": "決済の開始に失敗しました。もう一度お試しください。",
+      "menuUnavailableText": "サブスクライブするまで、メニューはQRスキャンに利用できません。",
+      "trialEndedTitle": "無料トライアルが終了しました",
+      "trialEndedSubtitle": "すべての機能を維持するにはサブスクライブ — AI翻訳、予約など"
     },
     "aiTranslate": {
       "title": "AI翻訳",

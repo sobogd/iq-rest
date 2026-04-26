@@ -1412,7 +1412,9 @@
       "continue": "Nadaljuj",
       "clearCart": "Počisti košarico",
       "orderLimitReached": "Dosežen mesečni limit naročil. Poskusite znova naslednji mesec."
-    }
+    },
+    "menuUnavailableTitle": "Meni Je Začasno Nedostopen",
+    "menuUnavailableText": "Meni te restavracije trenutno ni na voljo. Prosimo, kontaktirajte restavracijo neposredno."
   },
   "faq": {
     "title": "Pogosto zastavljena vprašanja o QR meniju za restavracije in kavarne",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Prekliči kadarkoli · Brez stroškov nastavitve",
       "skip": "Nadaljuj z brezplačnim načrtom",
       "guarantee": "Varno plačilo · 7-dnevna garancija vračila denarja",
-      "checkoutError": "Plačila ni bilo mogoče začeti. Poskusite znova."
+      "checkoutError": "Plačila ni bilo mogoče začeti. Poskusite znova.",
+      "menuUnavailableText": "Vaš meni ni na voljo za skeniranje QR, dokler se ne naročite.",
+      "trialEndedTitle": "Vaše Brezplačno Preskusno Obdobje Je Poteklo",
+      "trialEndedSubtitle": "Naročite se, da ohranite vse funkcije — prevodi AI, rezervacije in več"
     },
     "aiTranslate": {
       "title": "AI Prevod",

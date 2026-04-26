@@ -1412,7 +1412,9 @@
       "continue": "Halda áfram",
       "clearCart": "Tæma verslun",
       "orderLimitReached": "Mánaðarlegri pöntunarmörkum er náð. Vinsamlegast reyndu aftur næsta mánuð."
-    }
+    },
+    "menuUnavailableTitle": "Matseðillinn Er Tímabundið Ekki Tiltækur",
+    "menuUnavailableText": "Matseðill þessa veitingastaðar er ekki tiltækur eins og er. Vinsamlegast hafðu samband við veitingastaðinn beint."
   },
   "faq": {
     "title": "Algengar spurningar um QR matseðil fyrir veitingastaði og kaffihús",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Segðu upp hvenær sem er · Engin uppsetningargjöld",
       "skip": "Halda áfram með ókeypis áskrift",
       "guarantee": "Örugg greiðsla · 7 daga peningaábyrgð",
-      "checkoutError": "Ekki tókst að hefja greiðslu. Reyndu aftur."
+      "checkoutError": "Ekki tókst að hefja greiðslu. Reyndu aftur.",
+      "menuUnavailableText": "Matseðillinn þinn er ekki tiltækur til QR-skannunar fyrr en þú skráir þig.",
+      "trialEndedTitle": "Ókeypis Prufutímabilið Þitt Er Lokið",
+      "trialEndedSubtitle": "Gerast áskrifandi til að halda öllum eiginleikum — AI þýðingar, bókanir og fleira"
     },
     "aiTranslate": {
       "title": "AI Þýðing",

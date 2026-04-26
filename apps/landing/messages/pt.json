@@ -1412,7 +1412,9 @@
       "continue": "Continuar",
       "clearCart": "Limpar carrinho",
       "orderLimitReached": "Limite mensal de pedidos alcançado. Por favor, tente novamente no próximo mês."
-    }
+    },
+    "menuUnavailableTitle": "Menu Temporariamente Indisponível",
+    "menuUnavailableText": "O menu deste restaurante está atualmente indisponível. Por favor contacte o restaurante diretamente."
   },
   "faq": {
     "title": "Perguntas Frequentes Sobre o Menu QR para Restaurantes e Cafés",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Cancele a qualquer momento · Sem taxas de configuração",
       "skip": "Continuar com o plano Grátis",
       "guarantee": "Pagamento seguro · Garantia de reembolso de 7 dias",
-      "checkoutError": "Falha ao iniciar o pagamento. Tente novamente."
+      "checkoutError": "Falha ao iniciar o pagamento. Tente novamente.",
+      "menuUnavailableText": "O seu menu não está disponível para digitalização QR até se subscrever.",
+      "trialEndedTitle": "O Seu Período de Teste Gratuito Terminou",
+      "trialEndedSubtitle": "Subscreva para manter todas as funcionalidades — traduções AI, reservas e mais"
     },
     "aiTranslate": {
       "title": "Tradução IA",

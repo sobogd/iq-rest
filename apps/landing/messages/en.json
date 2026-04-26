@@ -1366,6 +1366,8 @@
     "reserve": "Book a Table",
     "onlineMenu": "Online Menu",
     "noCategories": "No categories available",
+    "menuUnavailableTitle": "Menu Temporarily Unavailable",
+    "menuUnavailableText": "This restaurant's menu is currently unavailable. Please contact the restaurant directly.",
     "openInstagram": "Open Instagram",
     "makeCall": "Make a call",
     "writeWhatsApp": "Write on WhatsApp",
@@ -1593,7 +1595,8 @@
       "ctaSub": "Cancel anytime · No setup fees",
       "skip": "Continue with Free plan",
       "guarantee": "Secure payment · 7-day money back guarantee",
-      "checkoutError": "Failed to start checkout. Please try again."
+      "checkoutError": "Failed to start checkout. Please try again.",
+      "menuUnavailableText": "Your menu is unavailable for QR scanning until you subscribe."
     },
     "aiTranslate": {
       "title": "AI Translation",

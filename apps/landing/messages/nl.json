@@ -1412,7 +1412,9 @@
       "continue": "Doorgaan",
       "clearCart": "Winkelwagentje leegmaken",
       "orderLimitReached": "Maandelijkse bestelgrens bereikt. Probeer het volgende maand opnieuw."
-    }
+    },
+    "menuUnavailableTitle": "Menu Tijdelijk Niet Beschikbaar",
+    "menuUnavailableText": "Het menu van dit restaurant is momenteel niet beschikbaar. Neem rechtstreeks contact op met het restaurant."
   },
   "faq": {
     "title": "Veelgestelde Vragen Over QR Menu voor Restaurant & Café",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Op elk moment opzegbaar · Geen installatiekosten",
       "skip": "Doorgaan met het gratis plan",
       "guarantee": "Veilige betaling · 7 dagen geld-terug-garantie",
-      "checkoutError": "Kan het afrekenen niet starten. Probeer het opnieuw."
+      "checkoutError": "Kan het afrekenen niet starten. Probeer het opnieuw.",
+      "menuUnavailableText": "Uw menu is niet beschikbaar voor QR-scan totdat u zich abonneert.",
+      "trialEndedTitle": "Uw Gratis Proefperiode Is Afgelopen",
+      "trialEndedSubtitle": "Abonneer om alle functies te behouden — AI-vertalingen, reserveringen en meer"
     },
     "aiTranslate": {
       "title": "AI Vertaling",

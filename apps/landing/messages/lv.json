@@ -1412,7 +1412,9 @@
       "continue": "Turpināt",
       "clearCart": "Notīrīt grozu",
       "orderLimitReached": "Mēneša pasūtījumu limits ir sasniegts. Lūdzu, mēģiniet vēlreiz nākamajā mēnesī."
-    }
+    },
+    "menuUnavailableTitle": "Ēdienkarte Īslaicīgi Nav Pieejama",
+    "menuUnavailableText": "Šī restorāna ēdienkarte pašlaik nav pieejama. Lūdzu, sazinieties ar restorānu tieši."
   },
   "faq": {
     "title": "Biežāk uzdotie jautājumi par QR ēdienkarti restorāniem un kafejnīcām",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Atceliet jebkurā laikā · Bez iestatīšanas maksām",
       "skip": "Turpināt ar bezmaksas plānu",
       "guarantee": "Drošs maksājums · 7 dienu naudas atgriešanas garantija",
-      "checkoutError": "Neizdevās sākt maksājumu. Lūdzu, mēģiniet vēlreiz."
+      "checkoutError": "Neizdevās sākt maksājumu. Lūdzu, mēģiniet vēlreiz.",
+      "menuUnavailableText": "Jūsu ēdienkarte nav pieejama QR skenēšanai, līdz abonējat.",
+      "trialEndedTitle": "Jūsu Bezmaksas Izmēģinājuma Periods Ir Beidzies",
+      "trialEndedSubtitle": "Abonējiet, lai saglabātu visas funkcijas — AI tulkojumi, rezervācijas un vairāk"
     },
     "aiTranslate": {
       "title": "AI Tulkojums",

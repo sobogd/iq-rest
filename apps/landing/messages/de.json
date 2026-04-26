@@ -1412,7 +1412,9 @@
       "continue": "Weiter",
       "clearCart": "Warenkorb leeren",
       "orderLimitReached": "Monatliches Bestelllimit erreicht. Bitte versuchen Sie es nächsten Monat erneut."
-    }
+    },
+    "menuUnavailableTitle": "Speisekarte Vorübergehend Nicht Verfügbar",
+    "menuUnavailableText": "Die Speisekarte dieses Restaurants ist derzeit nicht verfügbar. Bitte kontaktieren Sie das Restaurant direkt."
   },
   "faq": {
     "title": "Häufig gestellte Fragen zum QR-Menü für Restaurant & Café",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Jederzeit kündbar · Keine Einrichtungsgebühren",
       "skip": "Mit dem kostenlosen Plan fortfahren",
       "guarantee": "Sichere Zahlung · 7 Tage Geld-zurück-Garantie",
-      "checkoutError": "Fehler beim Starten des Checkouts. Bitte versuche es erneut."
+      "checkoutError": "Fehler beim Starten des Checkouts. Bitte versuche es erneut.",
+      "menuUnavailableText": "Dein Menü ist nicht per QR-Code verfügbar, bis du ein Abonnement abschließt.",
+      "trialEndedTitle": "Dein Kostenloser Testzeitraum Ist Abgelaufen",
+      "trialEndedSubtitle": "Abonniere, um alle Funktionen zu behalten — KI-Übersetzungen, Reservierungen und mehr"
     },
     "aiTranslate": {
       "title": "KI-Übersetzung",

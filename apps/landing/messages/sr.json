@@ -1412,7 +1412,9 @@
       "continue": "Настави",
       "clearCart": "Očistite korpu",
       "orderLimitReached": "Mesečni limit narudžbina je dostignut. Molimo pokušajte ponovo sledećeg meseca."
-    }
+    },
+    "menuUnavailableTitle": "Jelovnik Je Privremeno Nedostupan",
+    "menuUnavailableText": "Jelovnik ovog restorana trenutno nije dostupan. Kontaktirajte restoran direktno."
   },
   "faq": {
     "title": "Često postavljana pitanja o QR meniju za restorane i kafiće",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Откажите у било ком тренутку · Без накнада за подешавање",
       "skip": "Наставите са бесплатним планом",
       "guarantee": "Безбедно плаћање · 7 дана гаранција поврата новца",
-      "checkoutError": "Није успело покретање плаћања. Покушајте поново."
+      "checkoutError": "Није успело покретање плаћања. Покушајте поново.",
+      "menuUnavailableText": "Vaš jelovnik nije dostupan za QR skeniranje dok se ne pretplatite.",
+      "trialEndedTitle": "Vaš Besplatni Probni Period Je Istekao",
+      "trialEndedSubtitle": "Pretplatite se da biste zadržali sve funkcije — AI prevodi, rezervacije i više"
     },
     "aiTranslate": {
       "title": "AI Prevod",

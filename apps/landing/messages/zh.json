@@ -1412,7 +1412,9 @@
       "continue": "继续",
       "clearCart": "清空购物车",
       "orderLimitReached": "每月订单限制已达到。请下个月再试。"
-    }
+    },
+    "menuUnavailableTitle": "菜单暂时不可用",
+    "menuUnavailableText": "此餐厅的菜单目前不可用。请直接联系餐厅。"
   },
   "faq": {
     "title": "餐厅和咖啡厅QR菜单常见问题",
@@ -1594,7 +1596,10 @@
       "ctaSub": "随时取消 · 无设置费用",
       "skip": "继续使用免费方案",
       "guarantee": "安全支付 · 7天退款保证",
-      "checkoutError": "无法开始结账。请重试。"
+      "checkoutError": "无法开始结账。请重试。",
+      "menuUnavailableText": "在您订阅之前，您的菜单无法通过QR扫描访问。",
+      "trialEndedTitle": "您的免费试用已结束",
+      "trialEndedSubtitle": "订阅以保留所有功能 — AI翻译、预约等"
     },
     "aiTranslate": {
       "title": "AI翻译",

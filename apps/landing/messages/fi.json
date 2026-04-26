@@ -1412,7 +1412,9 @@
       "continue": "Jatka",
       "clearCart": "Tyhjennä ostoskori",
       "orderLimitReached": "Kuukausittainen tilausten raja on saavutettu. Yritä uudelleen ensi kuussa."
-    }
+    },
+    "menuUnavailableTitle": "Valikko On Tilapäisesti Poissa Käytöstä",
+    "menuUnavailableText": "Tämän ravintolan valikko ei ole tällä hetkellä saatavilla. Ota yhteyttä ravintolaan suoraan."
   },
   "faq": {
     "title": "Usein Kysytyt Kysymykset QR Menuista Ravintoloille & Kahviloille",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Peruuta milloin tahansa · Ei asennusmaksuja",
       "skip": "Jatka ilmaisella paketilla",
       "guarantee": "Turvallinen maksu · 7 päivän rahat takaisin -takuu",
-      "checkoutError": "Maksun aloittaminen epäonnistui. Yritä uudelleen."
+      "checkoutError": "Maksun aloittaminen epäonnistui. Yritä uudelleen.",
+      "menuUnavailableText": "Valikkosi ei ole saatavilla QR-skannaukseen ennen kuin tilaat.",
+      "trialEndedTitle": "Ilmainen Kokeilujakso On Päättynyt",
+      "trialEndedSubtitle": "Tilaa säilyttääksesi kaikki ominaisuudet — AI-käännökset, varaukset ja paljon muuta"
     },
     "aiTranslate": {
       "title": "Tekoälykäännös",

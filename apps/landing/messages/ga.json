@@ -1412,7 +1412,9 @@
       "continue": "Lean ar aghaidh",
       "clearCart": "Glan an chiseal",
       "orderLimitReached": "Teorainn ordaithe míosúil bainte amach. Bain triail as arís an mhí seo chugainn."
-    }
+    },
+    "menuUnavailableTitle": "Tá An Roghchlár As Feidhm Go Sealadach",
+    "menuUnavailableText": "Níl roghchlár an bhialainne seo ar fáil faoi láthair. Déan teagmháil leis an mbialann go díreach."
   },
   "faq": {
     "title": "Ceisteanna Coitianta Faoi Mheán QR do Bialann & Caifé",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Cealaigh am ar bith · Gan táillí socraithe",
       "skip": "Lean ar aghaidh leis an bplean Saor in Aisce",
       "guarantee": "Íocaíocht shlán · Ráthaíocht airgid ar ais 7 lá",
-      "checkoutError": "Theip ar thosú na híocaíochta. Bain triail as arís."
+      "checkoutError": "Theip ar thosú na híocaíochta. Bain triail as arís.",
+      "menuUnavailableText": "Níl do roghchlár ar fáil le haghaidh scanadh QR go dtí go sínfidh tú síos.",
+      "trialEndedTitle": "Tá Do Thréimhse Triail Saor in Aisce Caite",
+      "trialEndedSubtitle": "Liostáil le gach gné a choinneáil — aistriúcháin AI, áirithintí agus níos mó"
     },
     "aiTranslate": {
       "title": "Aistriúchán AI",

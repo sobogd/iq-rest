@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { getTranslations, getLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { getUserWithCompany } from "@/lib/auth";
@@ -91,19 +91,9 @@ export default async function DashboardLayout({
     ? { originalEmail: adminOriginalEmail, currentEmail: currentEmail ?? "" }
     : undefined;
 
-  // Redirect to upgrade page if trial has expired (skip for anonymous users)
-  if (company && !impersonation && !isAnon) {
-    const access = getCompanyAccess(company);
-    if (access.trialExpired) {
-      const headerStore = await headers();
-      const pathname = headerStore.get("x-pathname") || "";
-      const isUpgradePage = pathname.includes("/dashboard/upgrade");
-
-      if (!isUpgradePage) {
-        redirect("/dashboard/upgrade");
-      }
-    }
-  }
+  const trialExpired = company && !impersonation && !isAnon
+    ? getCompanyAccess(company).trialExpired
+    : false;
 
   const [t, scanUsage] = await Promise.all([
     getTranslations("dashboard"),
@@ -289,7 +279,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId} scanUsage={scanUsage} isAnonymous={isAnon}>
+    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId} scanUsage={scanUsage} isAnonymous={isAnon} trialExpired={trialExpired}>
       {children}
     </DashboardShell>
   );

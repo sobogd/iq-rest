@@ -1412,7 +1412,9 @@
       "continue": "Jätka",
       "clearCart": "Tühjenda ostukorv",
       "orderLimitReached": "Kuu tellimuste piir on saavutatud. Palun proovige uuesti järgmisel kuul."
-    }
+    },
+    "menuUnavailableTitle": "Menüü On Ajutiselt Kättesaamatu",
+    "menuUnavailableText": "Selle restorani menüü ei ole praegu kättesaadav. Palun võtke ühendust restoraniga otse."
   },
   "faq": {
     "title": "Korduma Kippuvad Küsimused QR Menüü Kohta Restoranide ja Kohvikute jaoks",
@@ -1594,7 +1596,10 @@
       "ctaSub": "Tühista igal ajal · Ilma seadistustasudeta",
       "skip": "Jätka tasuta paketiga",
       "guarantee": "Turvaline makse · 7-päevane raha tagasi garantii",
-      "checkoutError": "Makset ei õnnestunud alustada. Palun proovi uuesti."
+      "checkoutError": "Makset ei õnnestunud alustada. Palun proovi uuesti.",
+      "menuUnavailableText": "Teie menüü ei ole QR-skannimiseks saadaval enne tellimuse esitamist.",
+      "trialEndedTitle": "Teie Tasuta Prooviperiood On Lõppenud",
+      "trialEndedSubtitle": "Tellige, et säilitada kõik funktsioonid — AI tõlked, broneeringud ja palju muud"
     },
     "aiTranslate": {
       "title": "AI Tõlge",
