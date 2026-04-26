@@ -41,7 +41,7 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
     notFound();
   }
 
-  if (slug !== DEMO_SLUG && getCompanyAccess(restaurant.company).trialExpired) {
+  if (slug !== DEMO_SLUG && !isPreview && getCompanyAccess(restaurant.company).trialExpired) {
     return (
       <div className="h-dvh flex flex-col items-center justify-center gap-4 bg-black px-8 text-center">
         <h1 className="text-2xl font-bold text-white">{t("menuUnavailableTitle")}</h1>
