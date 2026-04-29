@@ -32,6 +32,7 @@ export enum DashboardEvent {
   CLICKED_NAV_BILLING = "clicked_nav_billing",
   CLICKED_NAV_SUPPORT = "clicked_nav_support",
   CLICKED_NAV_SCANS = "clicked_nav_scans",
+  CLICKED_SWITCH_TO_NEW_DASHBOARD = "clicked_switch_to_new_dashboard",
   CLICKED_LOGOUT = "clicked_logout",
 
   // Menu
@@ -247,6 +248,7 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.CLICKED_NAV_BILLING]: "Nav: Billing",
   [DashboardEvent.CLICKED_NAV_SUPPORT]: "Nav: Support",
   [DashboardEvent.CLICKED_NAV_SCANS]: "Nav: Scans",
+  [DashboardEvent.CLICKED_SWITCH_TO_NEW_DASHBOARD]: "Nav: Switch to New Dashboard",
   [DashboardEvent.CLICKED_LOGOUT]: "Clicked Logout",
 
   // Menu

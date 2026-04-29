@@ -83,7 +83,10 @@ export function DashboardNavItems({ activePage, excludePages, onNavigate }: {
     <>
       <a
         href={`https://dashboard.iq-rest.com/${locale}`}
-        onClick={() => onNavigate?.()}
+        onClick={() => {
+          track(DashboardEvent.CLICKED_SWITCH_TO_NEW_DASHBOARD);
+          onNavigate?.();
+        }}
         className="flex items-center gap-3 w-full h-11 px-4 transition-colors bg-emerald-500/10 hover:bg-emerald-500/20 border-b border-emerald-500/20"
       >
         <div className="flex items-center justify-center h-7 w-7 rounded-lg bg-emerald-500">
