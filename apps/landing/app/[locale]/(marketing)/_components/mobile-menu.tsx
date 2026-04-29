@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
+import { loginUrl } from "@/lib/dashboard-url";
 import {
   Dialog,
   DialogContent,
@@ -25,6 +27,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -58,9 +61,9 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
             ))}
           </div>
           <Button asChild className="w-full mt-6">
-            <Link href="/login" onClick={() => setOpen(false)}>
+            <a href={loginUrl(locale)} onClick={() => setOpen(false)}>
               {getStartedLabel}
-            </Link>
+            </a>
           </Button>
         </nav>
       </DialogContent>

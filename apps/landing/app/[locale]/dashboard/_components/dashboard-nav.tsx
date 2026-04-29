@@ -12,7 +12,9 @@ import {
   CreditCard,
   HelpCircle,
   ShoppingBag,
+  Sparkles,
 } from "lucide-react";
+import { useLocale } from "next-intl";
 import { Logo } from "@/components/Logo";
 import { useDashboard, PAGE_PATHS, getPageKeyFromPathname, type PageKey } from "../_context/dashboard-context";
 import { Link, usePathname } from "@/i18n/routing";
@@ -31,6 +33,17 @@ const navItems: { page: PageKey; icon: React.ComponentType<{ className?: string 
   { page: "billing", icon: CreditCard },
   { page: "support", icon: HelpCircle },
 ];
+
+const SWITCH_LABELS: Record<string, string> = {
+  en: "Try new dashboard",
+  es: "Probar nuevo panel",
+  ru: "Новый дашборд",
+  de: "Neues Dashboard",
+  fr: "Nouveau tableau de bord",
+  it: "Nuova dashboard",
+  pt: "Novo painel",
+  pl: "Nowy panel",
+};
 
 const navEventMap: Record<string, DashboardEvent> = {
   orders: DashboardEvent.CLICKED_NAV_ORDERS,
@@ -59,6 +72,8 @@ export function DashboardNavItems({ activePage, excludePages, onNavigate }: {
   onNavigate?: () => void;
 }) {
   const { translations } = useDashboard();
+  const locale = useLocale();
+  const switchLabel = SWITCH_LABELS[locale] || SWITCH_LABELS.en;
 
   const filtered = excludePages
     ? navItems.filter(item => !excludePages.includes(item.page))
@@ -66,6 +81,18 @@ export function DashboardNavItems({ activePage, excludePages, onNavigate }: {
 
   return (
     <>
+      <a
+        href={`https://dashboard.iq-rest.com/${locale}`}
+        onClick={() => onNavigate?.()}
+        className="flex items-center gap-3 w-full h-11 px-4 transition-colors bg-emerald-500/10 hover:bg-emerald-500/20 border-b border-emerald-500/20"
+      >
+        <div className="flex items-center justify-center h-7 w-7 rounded-lg bg-emerald-500">
+          <Sparkles className="h-4 w-4 shrink-0 text-white" />
+        </div>
+        <span className="text-sm font-medium text-emerald-700 dark:text-emerald-400">
+          {switchLabel}
+        </span>
+      </a>
       {filtered.map(({ page, icon: Icon }, index) => {
         const isActive = activePage === page;
         return (

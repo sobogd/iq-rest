@@ -18,10 +18,10 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Check, X, Loader2 } from "lucide-react";
-import { useRouter } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { analytics } from "@/lib/analytics";
+import { navigateToDashboard, navigateToLogin } from "@/lib/dashboard-url";
 import { pricing, PlanId } from "@/lib/pricing";
 import { currencyInfo, SupportedCurrency } from "@/lib/country-currency-map";
 
@@ -88,7 +88,6 @@ function formatPrice(amount: number, currency: SupportedCurrency): string {
 export function PricingCards({ hideComparison = false, hideButtons = false, currency }: PricingCardsProps) {
   const t = useTranslations("pricing");
   const locale = useLocale();
-  const router = useRouter();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [loadingPlan, setLoadingPlan] = useState<PlanId | null>(null);
@@ -104,12 +103,12 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
       const { authenticated } = await authRes.json();
 
       if (!authenticated) {
-        router.push("/login");
+        navigateToLogin(locale);
         return;
       }
 
       if (planId === "free") {
-        router.push("/dashboard");
+        navigateToDashboard();
         return;
       }
 
@@ -123,13 +122,13 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
       const data = await checkoutRes.json();
 
       if (!checkoutRes.ok || !data.url) {
-        router.push("/dashboard/billing");
+        navigateToDashboard("/settings/billing");
         return;
       }
 
       window.location.href = data.url;
     } catch {
-      router.push("/login");
+      navigateToLogin(locale);
     } finally {
       setLoadingPlan(null);
     }

@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { JsonLd, buildAlternates } from "../../_lib";
+import { loginUrl } from "@/lib/dashboard-url";
 import { PageView } from "@/components/PageView";
 
 // Define changelog entries data
@@ -311,12 +312,12 @@ export default async function ChangelogEntryPage({ params }: { params: Promise<{
           {/* CTA */}
           <div className="mt-8 p-6 bg-muted rounded-lg text-center">
             <p className="font-medium mb-4">{t(`entries.${key}.content.ctaText`)}</p>
-            <Link
-              href="/login"
+            <a
+              href={loginUrl(locale)}
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               {t(`entries.${key}.content.ctaButton`)}
-            </Link>
+            </a>
           </div>
         </article>
 

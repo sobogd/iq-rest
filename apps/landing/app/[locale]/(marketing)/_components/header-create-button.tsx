@@ -1,18 +1,20 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 import { ReactNode } from "react";
 import { analytics } from "@/lib/analytics";
+import { loginUrl } from "@/lib/dashboard-url";
 
 interface HeaderCreateButtonProps {
   children: ReactNode;
 }
 
 export function HeaderCreateButton({ children }: HeaderCreateButtonProps) {
+  const locale = useLocale();
   return (
     <Button asChild className="opacity-95 hover:opacity-100 transition-opacity">
-      <Link href="/login" onClick={() => analytics.marketing.headerCtaClick()}>{children}</Link>
+      <a href={loginUrl(locale)} onClick={() => analytics.marketing.headerCtaClick()}>{children}</a>
     </Button>
   );
 }

@@ -4,8 +4,8 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, Loader2, ArrowRight, AlertCircle, Sparkles } from "lucide-react";
 import { analytics } from "@/lib/analytics";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { loginUrl } from "@/lib/dashboard-url";
 
 type State = "idle" | "loading" | "preview" | "error";
 
@@ -42,6 +42,7 @@ const STORAGE_KEY = "scanner_slug";
 
 export function MenuScanner() {
   const t = useTranslations("menuScanner");
+  const locale = useLocale();
   const [state, setState] = useState<State>("idle");
   const [slug, setSlug] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
@@ -272,10 +273,10 @@ export function MenuScanner() {
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg shrink-0"
           onClick={() => analytics.marketing.scannerCtaClick()}
         >
-          <Link href="/login">
+          <a href={loginUrl(locale)}>
             {t("ctaButton")}
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          </a>
         </Button>
       </section>
     );

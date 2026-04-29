@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Lock, Ban, Zap, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 import { analytics } from "@/lib/analytics";
+import { loginUrl } from "@/lib/dashboard-url";
 
 interface PricingSectionProps {
   currency: SupportedCurrency;
@@ -165,9 +165,9 @@ export function PricingSection({ currency }: PricingSectionProps) {
           asChild
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg mx-auto"
         >
-          <Link href="/login" onClick={handleCtaClick}>
+          <a href={loginUrl(locale)} onClick={handleCtaClick}>
             {t("trialCta")}
-          </Link>
+          </a>
         </Button>
 
         <p className="text-sm text-muted-foreground text-center">
