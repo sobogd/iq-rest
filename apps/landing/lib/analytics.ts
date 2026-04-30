@@ -2,10 +2,9 @@
 // Every event funnels through one endpoint with a client-side UTC
 // timestamp and a single apex-domain cookie shared with the dashboard.
 
-const API_BASE = process.env.NEXT_PUBLIC_ANALYTICS_API_BASE ?? "";
+const API_BASE = "https://dashboard-api.iq-rest.com";
 
 function endpoint(path: string): string {
-  if (!API_BASE) return path;
   return `${API_BASE}${path}`;
 }
 
