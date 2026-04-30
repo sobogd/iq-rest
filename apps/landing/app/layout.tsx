@@ -90,7 +90,8 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  // /en is served by app/en/page.tsx (custom landing) — exclude here
+  return routing.locales.filter((l) => l !== "en").map((locale) => ({ locale }));
 }
 
 export default function RootLayout({

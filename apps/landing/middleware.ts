@@ -129,6 +129,12 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // English landing replaces /en main page — no i18n, no locale routing.
+  // Match exact /en (so sub-routes like /en/contacts still go through next-intl).
+  if (pathname === "/en") {
+    return NextResponse.next();
+  }
+
   // Strip ?from= param → save to cookie for client-side referral tracking
   const fromParam = request.nextUrl.searchParams.get("from");
   if (fromParam) {
