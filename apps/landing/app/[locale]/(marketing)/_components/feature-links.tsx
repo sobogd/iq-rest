@@ -44,7 +44,7 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-[15px] bg-[#25D366] px-6 py-2.5 text-base font-medium text-white transition-opacity hover:opacity-90 lg:px-8 lg:py-3 lg:text-lg"
-                onClick={() => analytics.marketing.whatsappClick()}
+                onClick={() => analytics.track("land_whatsapp_click")}
               >
                 <MessageCircle className="h-5 w-5" />
                 {tPricing("questionsButton")}
@@ -65,7 +65,7 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
                     key={feature.id}
                     href={`/${feature.id}`}
                     className="px-4 py-2 rounded-xl border bg-muted/50 hover:bg-muted text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => analytics.marketing.featureLinkClick(feature.id)}
+                    onClick={() => analytics.track("land_feature_link_click")}
                   >
                     {feature.titleAccent ? `${feature.title} ${feature.titleAccent}` : feature.title}
                   </Link>

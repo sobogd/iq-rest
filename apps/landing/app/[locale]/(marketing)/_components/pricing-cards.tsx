@@ -93,7 +93,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
   const [loadingPlan, setLoadingPlan] = useState<PlanId | null>(null);
 
   const handleCtaClick = async (planId: PlanId) => {
-    analytics.marketing.pricingCtaClick(planId);
+    analytics.track("land_pricing_cta_click");
 
     if (loadingPlan) return;
     setLoadingPlan(planId);

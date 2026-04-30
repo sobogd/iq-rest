@@ -14,7 +14,7 @@ export function FeatureLearnMoreLink({ featureId, className, children }: Feature
     <Link
       href={`/${featureId}`}
       className={className}
-      onClick={() => analytics.marketing.featureLinkClick(featureId)}
+      onClick={() => analytics.track("land_feature_link_click")}
     >
       {children}
     </Link>

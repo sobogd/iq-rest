@@ -38,7 +38,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
     const handler = () => {
       setOpen(true);
       setLoading(true);
-      analytics.marketing.demoOpen();
+      analytics.track("land_demo_open");
     };
     window.addEventListener("open-demo-modal", handler);
     return () => window.removeEventListener("open-demo-modal", handler);
@@ -46,7 +46,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
 
   const handleClose = () => {
     setOpen(false);
-    analytics.marketing.demoClose();
+    analytics.track("land_demo_close");
   };
 
   if (!open) {
@@ -57,7 +57,7 @@ export function MenuPreviewModal({ buttonText, menuUrl }: MenuPreviewModalProps)
         onClick={() => {
           setOpen(true);
           setLoading(true);
-          analytics.marketing.demoOpen();
+          analytics.track("land_demo_open");
         }}
       >
         {buttonText}

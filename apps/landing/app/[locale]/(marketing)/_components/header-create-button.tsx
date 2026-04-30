@@ -14,7 +14,7 @@ export function HeaderCreateButton({ children }: HeaderCreateButtonProps) {
   const locale = useLocale();
   return (
     <Button asChild className="opacity-95 hover:opacity-100 transition-opacity">
-      <a href={loginUrl(locale)} onClick={() => analytics.marketing.headerCtaClick()}>{children}</a>
+      <a href={loginUrl(locale)} onClick={() => analytics.track("land_header_cta_click")}>{children}</a>
     </Button>
   );
 }

@@ -33,7 +33,7 @@ export function Footer() {
                 key={link.href}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => analytics.marketing.footerLinkClick(link.href)}
+                onClick={() => analytics.track("land_footer_link_click")}
               >
                 {t(link.key)}
               </Link>
@@ -49,7 +49,7 @@ export function Footer() {
                 key={link.href}
                 href={link.href}
                 className="hover:text-foreground transition-colors"
-                onClick={() => analytics.marketing.footerLinkClick(link.href)}
+                onClick={() => analytics.track("land_footer_link_click")}
               >
                 {t(link.key)}
               </Link>
@@ -59,7 +59,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
-              onClick={() => analytics.marketing.footerLinkClick("sitemap")}
+              onClick={() => analytics.track("land_footer_link_click")}
             >
               {t("legal.sitemap")}
             </a>

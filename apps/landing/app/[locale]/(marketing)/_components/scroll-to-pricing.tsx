@@ -10,7 +10,7 @@ interface ScrollToPricingProps {
 export function ScrollToPricing({ label }: ScrollToPricingProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    analytics.marketing.scrollToSection("pricing");
+    analytics.track("land_scroll_to_section");
     const section = document.getElementById("pricing");
     if (!section) return;
     const top = section.getBoundingClientRect().top + window.scrollY;

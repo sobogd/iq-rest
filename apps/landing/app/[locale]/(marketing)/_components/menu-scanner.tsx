@@ -96,7 +96,7 @@ export function MenuScanner() {
         if (res.ok) {
           setSlug(saved);
           setState("preview");
-          analytics.marketing.scannerPreviewReturning();
+          analytics.track("land_scanner_preview_returning");
         } else {
           localStorage.removeItem(STORAGE_KEY);
         }
@@ -109,7 +109,7 @@ export function MenuScanner() {
   const handleError = useCallback((message: string, reason: string) => {
     setErrorMessage(message);
     setState("error");
-    analytics.marketing.scannerError(reason);
+    analytics.track("land_scanner_error");
     setTimeout(() => {
       setState("idle");
       setErrorMessage("");
@@ -133,7 +133,7 @@ export function MenuScanner() {
 
       const uploadStartTime = Date.now();
       setState("loading");
-      analytics.marketing.scannerUpload(String(files.length));
+      analytics.track("land_scanner_upload");
 
       try {
         // Convert all files to base64 in parallel
@@ -171,7 +171,7 @@ export function MenuScanner() {
         setIframeLoading(true);
         setState("preview");
         const duration = ((Date.now() - uploadStartTime) / 1000).toFixed(1);
-        analytics.marketing.scannerSuccess(duration);
+        analytics.track("land_scanner_success");
       } catch (err) {
         console.error("Scan menu network error:", err);
         handleError(t("errorGeneric"), "network_error");
@@ -271,7 +271,7 @@ export function MenuScanner() {
         <Button
           asChild
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg shrink-0"
-          onClick={() => analytics.marketing.scannerCtaClick()}
+          onClick={() => analytics.track("land_scanner_cta_click")}
         >
           <a href={loginUrl(locale)}>
             {t("ctaButton")}

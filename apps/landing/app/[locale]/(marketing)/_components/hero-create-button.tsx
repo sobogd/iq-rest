@@ -16,7 +16,7 @@ export function HeroCreateButton({ children }: HeroCreateButtonProps) {
       asChild
       className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
     >
-      <a href={loginUrl(locale)} onClick={() => analytics.marketing.heroCtaClick()}>{children}</a>
+      <a href={loginUrl(locale)} onClick={() => analytics.track("land_hero_cta_click")}>{children}</a>
     </Button>
   );
 }

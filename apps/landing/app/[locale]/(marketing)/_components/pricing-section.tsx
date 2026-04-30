@@ -76,7 +76,7 @@ export function PricingSection({ currency }: PricingSectionProps) {
   const savings = formatPrice(plan.monthly * 12 - plan.yearlyTotal, currency);
 
   const handleCtaClick = () => {
-    analytics.marketing.pricingCtaClick("basic");
+    analytics.track("land_pricing_cta_click");
   };
 
   const trustItems = [
@@ -116,7 +116,7 @@ export function PricingSection({ currency }: PricingSectionProps) {
           {/* Monthly */}
           <button
             type="button"
-            onClick={() => { setSelected("monthly"); analytics.marketing.pricingToggle("monthly"); }}
+            onClick={() => { setSelected("monthly"); analytics.track("land_pricing_toggle"); }}
             className={cn(
               "relative flex flex-col lg:flex-row lg:items-center lg:gap-8 rounded-2xl border-2 p-5 lg:px-8 lg:py-5 text-left transition-all",
               selected === "monthly"
@@ -135,7 +135,7 @@ export function PricingSection({ currency }: PricingSectionProps) {
           {/* Yearly */}
           <button
             type="button"
-            onClick={() => { setSelected("yearly"); analytics.marketing.pricingToggle("yearly"); }}
+            onClick={() => { setSelected("yearly"); analytics.track("land_pricing_toggle"); }}
             className={cn(
               "relative flex flex-col lg:flex-row lg:items-center lg:gap-8 rounded-2xl border-2 p-5 lg:px-8 lg:py-5 text-left transition-all",
               selected === "yearly"

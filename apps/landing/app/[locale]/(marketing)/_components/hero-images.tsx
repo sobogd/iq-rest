@@ -8,7 +8,7 @@ import sampleContacts from "@/public/samples/sample-contacts.webp";
 
 export function HeroImages() {
   const handleClick = () => {
-    analytics.marketing.heroImagesClick();
+    analytics.track("land_hero_images_click");
     window.dispatchEvent(new Event("open-demo-modal"));
   };
 
