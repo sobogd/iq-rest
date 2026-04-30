@@ -13,12 +13,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  // Per-locale custom landings (app/<locale>/page.tsx) replace [locale]/page.tsx for bare locale URL.
-  // Every locale now has a custom landing under app/<locale>/
-  const CUSTOM_LANDING_LOCALES = routing.locales;
-  return routing.locales
-    .filter((l) => !CUSTOM_LANDING_LOCALES.includes(l))
-    .map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
