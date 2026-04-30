@@ -1,10 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { getUserCompanyId } from "@/lib/auth";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { prisma } from "@/lib/prisma";
 import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
-import { isAdminEmail } from "@/lib/admin";
 import sharp from "sharp";
 
 export const maxDuration = 60;
@@ -32,14 +30,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
-    const cookieStore = await cookies();
-    const userEmail = cookieStore.get("user_email")?.value;
-    const isUnlimited = isAdminEmail(userEmail);
-
     const { getCompanyAccess } = await import("@/lib/access");
     const access = getCompanyAccess(company);
 
-    if (!isUnlimited && !access.hasFullAccess) {
+    if (!access.hasFullAccess) {
       return NextResponse.json({ error: "trial_expired" }, { status: 403 });
     }
 

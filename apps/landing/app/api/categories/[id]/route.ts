@@ -72,10 +72,6 @@ export async function PUT(
     });
 
     // Mark session analytics (fire-and-forget)
-    prisma.session.updateMany({
-      where: { companyId, modifiedMenu: false },
-      data: { modifiedMenu: true },
-    }).catch(() => {});
 
     return NextResponse.json(category);
   } catch (error) {
@@ -130,10 +126,6 @@ export async function PATCH(
     });
 
     // Mark session analytics (fire-and-forget)
-    prisma.session.updateMany({
-      where: { companyId, modifiedMenu: false },
-      data: { modifiedMenu: true },
-    }).catch(() => {});
 
     return NextResponse.json({ success: true, ...category });
   } catch (error) {

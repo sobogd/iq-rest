@@ -82,16 +82,11 @@ export default async function DashboardLayout({
     });
   }
 
-  // Check if admin is impersonating
   const cookieStore = await cookies();
-  const adminOriginalEmail = cookieStore.get("admin_original_email")?.value;
   const currentEmail = cookieStore.get("user_email")?.value;
   const isAnon = currentEmail ? isAnonymousEmail(currentEmail) : false;
-  const impersonation = adminOriginalEmail
-    ? { originalEmail: adminOriginalEmail, currentEmail: currentEmail ?? "" }
-    : undefined;
 
-  const trialExpired = company && !impersonation && !isAnon
+  const trialExpired = company && !isAnon
     ? getCompanyAccess(company).trialExpired
     : false;
 
@@ -104,7 +99,6 @@ export default async function DashboardLayout({
     pages: {
       home: t("pages.home"),
       qrMenu: t("pages.qrMenu"),
-      analytics: t("pages.analytics"),
       menu: t("pages.menu"),
       categories: t("pages.categories"),
       items: t("pages.items"),
@@ -116,41 +110,8 @@ export default async function DashboardLayout({
       orders: t("pages.orders"),
       billing: t("pages.billing"),
       support: t("pages.support"),
-      admin: "Admin",
-      adminAnalytics: "Analytics",
     },
     logout: t("logout"),
-    analytics: {
-      monthlyUsage: t("analytics.monthlyUsage"),
-      scansThisMonth: t("analytics.scansThisMonth"),
-      limitReached: t("analytics.limitReached"),
-      todayViews: t("analytics.todayViews"),
-      weeklyViews: t("analytics.weeklyViews"),
-      monthlyViews: t("analytics.monthlyViews"),
-      uniqueVisitors: t("analytics.uniqueVisitors"),
-      viewsByPage: t("analytics.viewsByPage"),
-      viewsByLanguage: t("analytics.viewsByLanguage"),
-      dailyViews: t("analytics.dailyViews"),
-      noData: t("analytics.noData"),
-      deviceStats: t("analytics.deviceStats"),
-      devices: t("analytics.devices"),
-      browsers: t("analytics.browsers"),
-      os: t("analytics.os"),
-      pageNames: {
-        home: t("analytics.pageNames.home"),
-        menu: t("analytics.pageNames.menu"),
-        contacts: t("analytics.pageNames.contacts"),
-        language: t("analytics.pageNames.language"),
-        reserve: t("analytics.pageNames.reserve"),
-      },
-      languageNames: {
-        en: t("analytics.languageNames.en"),
-        es: t("analytics.languageNames.es"),
-        de: t("analytics.languageNames.de"),
-        fr: t("analytics.languageNames.fr"),
-        ru: t("analytics.languageNames.ru"),
-      },
-    },
     menu: {
       yourMenu: t("menu.yourMenu"),
       addItem: t("menu.addItem"),
@@ -279,7 +240,7 @@ export default async function DashboardLayout({
   };
 
   return (
-    <DashboardShell translations={translations} impersonation={impersonation} userId={auth.userId} scanUsage={scanUsage} isAnonymous={isAnon} trialExpired={trialExpired}>
+    <DashboardShell translations={translations} userId={auth.userId} scanUsage={scanUsage} isAnonymous={isAnon} trialExpired={trialExpired}>
       {children}
     </DashboardShell>
   );

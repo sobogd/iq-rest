@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
-import { isAdminEmail } from "@/lib/admin";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 const ERROR_MAP: Record<string, string> = {
@@ -94,9 +93,6 @@ export function OtpPage({ email }: OtpPageProps) {
       const data = await response.json();
 
       if (response.ok) {
-        if (isAdminEmail(email)) {
-          analytics.disableTracking();
-        }
         track(DashboardEvent.CLICKED_VERIFY_OTP);
         await analytics.linkSession(data.userId);
         router.replace("/dashboard");

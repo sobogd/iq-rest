@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { OrderForm } from "./order-form";
 import { MenuHeader, MenuPageWrapper } from "../_components";
-import { trackPageView } from "../_lib/track";
 import { getCartFromCookies } from "@/lib/cart-server";
 
 interface OrderPageProps {
@@ -82,7 +81,6 @@ export default async function OrderPage({ params, searchParams }: OrderPageProps
   const { slug, locale } = await params;
   const { preview, table } = await searchParams;
   const isPreview = preview === "1";
-  if (!isPreview) trackPageView(slug, "order", locale).catch(() => {});
   const [data, t, cartMap] = await Promise.all([
     getRestaurantWithMenu(slug),
     getTranslations("publicMenu"),

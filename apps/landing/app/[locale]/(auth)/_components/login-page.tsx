@@ -8,7 +8,6 @@ import { Loader2 } from "lucide-react";
 import { Link, useRouter } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { analytics } from "@/lib/analytics";
-import { isAdminEmail } from "@/lib/admin";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 
 declare global {
@@ -52,9 +51,6 @@ export function LoginPage() {
 
         if (res.ok) {
           track(DashboardEvent.AUTH_GOOGLE_LOGIN);
-          if (isAdminEmail(data.email)) {
-            analytics.disableTracking();
-          }
           if (data.isNewUser) {
             track(DashboardEvent.AUTH_SIGNUP);
           }

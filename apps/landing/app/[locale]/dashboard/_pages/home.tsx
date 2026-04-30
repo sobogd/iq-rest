@@ -13,18 +13,10 @@ import {
   Home,
   UtensilsCrossed,
   Languages,
-  BarChart3,
   CalendarDays,
   Armchair,
   CreditCard,
   HelpCircle,
-  Shield,
-  Activity,
-  UserPlus,
-  MousePointerClick,
-  Send,
-  Search,
-  KeyRound,
   ChevronRight,
   ClipboardList,
 } from "lucide-react";
@@ -37,18 +29,13 @@ const allSections: { key: string; page: PageKey; icon: React.ComponentType<{ cla
   { key: "contacts", page: "contacts", icon: Phone },
   { key: "settings", page: "settings", icon: Languages },
   { key: "qrMenu", page: "qrMenu", icon: QrCode },
-  { key: "analytics", page: "analytics", icon: BarChart3 },
   { key: "tables", page: "tables", icon: Armchair },
   { key: "reservations", page: "reservations", icon: CalendarDays },
   { key: "orders", page: "orders", icon: ClipboardList },
   { key: "billing", page: "billing", icon: CreditCard },
 ];
 
-interface DashboardHomeProps {
-  isAdmin: boolean;
-}
-
-export function DashboardHome({ isAdmin }: DashboardHomeProps) {
+export function DashboardHome() {
   const tPages = useTranslations("dashboard.pages");
 
   const tHome = useTranslations("dashboard.home");
@@ -61,7 +48,6 @@ export function DashboardHome({ isAdmin }: DashboardHomeProps) {
     settings: DashboardEvent.CLICKED_NAV_SETTINGS,
     design: DashboardEvent.CLICKED_NAV_DESIGN,
     qrMenu: DashboardEvent.CLICKED_NAV_QR,
-    analytics: DashboardEvent.CLICKED_NAV_ANALYTICS,
     tables: DashboardEvent.CLICKED_NAV_TABLES,
     reservations: DashboardEvent.CLICKED_NAV_RESERVATIONS,
     orders: DashboardEvent.CLICKED_NAV_ORDERS,
@@ -134,67 +120,6 @@ export function DashboardHome({ isAdmin }: DashboardHomeProps) {
               </div>
             )}
 
-            {/* Admin shortcuts */}
-            {isAdmin && (
-              <div className="rounded-md border border-border bg-muted/50 overflow-hidden">
-                <button
-                  onClick={() => router.push("/dashboard/admin")}
-                  className="flex items-center gap-3 w-full h-12 px-4 hover:bg-muted/30 transition-colors"
-                >
-                  <Shield className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Companies</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-                <button
-                  onClick={() => router.push("/dashboard/admin/analytics")}
-                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-                >
-                  <Activity className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Analytics</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-                <button
-                  onClick={() => router.push("/dashboard/admin/onboarding")}
-                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-                >
-                  <UserPlus className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Onboarding</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-                <button
-                  onClick={() => router.push("/dashboard/sessions")}
-                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-                >
-                  <MousePointerClick className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Sessions</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-                <button
-                  onClick={() => router.push("/dashboard/keywords")}
-                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-                >
-                  <KeyRound className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Keywords</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-                <button
-                  onClick={() => router.push("/dashboard/search-terms")}
-                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-                >
-                  <Search className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Search Terms</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-                <button
-                  onClick={() => router.push("/dashboard/google-ads")}
-                  className="flex items-center gap-3 w-full h-12 px-4 border-t border-foreground/5 hover:bg-muted/30 transition-colors"
-                >
-                  <Send className="h-5 w-5 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">Google Ads</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/50 shrink-0" />
-                </button>
-              </div>
-            )}
         </DashboardContent>
       </div>
     </div>

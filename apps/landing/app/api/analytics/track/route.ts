@@ -89,14 +89,6 @@ export async function POST(request: NextRequest) {
     });
 
 
-    // Mark sessions when company reaches 20 scans
-    if (scanCount >= 20) {
-      await prisma.session.updateMany({
-        where: { companyId: company.id, reached50Views: false },
-        data: { reached50Views: true },
-      });
-    }
-
     const response = NextResponse.json({
       success: true,
       showAd,

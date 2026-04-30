@@ -4,7 +4,6 @@ import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MenuFeed } from "@/components/menu-feed";
 import { MenuHeader, MenuPageWrapper } from "../_components";
-import { trackPageView } from "../_lib/track";
 import { getRestaurantBySlug } from "../_lib/get-restaurant";
 import { getCartFromCookies } from "@/lib/cart-server";
 
@@ -53,7 +52,6 @@ export default async function MenuListPage({ params, searchParams }: MenuListPag
   const { slug, locale } = await params;
   const { preview, table } = await searchParams;
   const isPreview = preview === "1";
-  if (!isPreview) trackPageView(slug, "menu", locale).catch(() => {});
   const [restaurant, t, cartMap] = await Promise.all([
     getRestaurantBySlug(slug),
     getTranslations("publicMenu"),

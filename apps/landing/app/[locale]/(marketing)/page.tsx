@@ -4,7 +4,6 @@ import type { SupportedCurrency } from "@/lib/country-currency-map";
 import { HeroImages, ImageComposition, HeroCreateButton, PricingSection, MenuPreviewModal, ScrollToPricing, FeatureLinks } from "./_components";
 import { FeatureLearnMoreLink } from "./_components/feature-learn-more-link";
 import { PageView } from "@/components/PageView";
-import { SectionTracker } from "@/components/SectionTracker";
 import {
   JsonLd,
   productSchema,
@@ -198,10 +197,9 @@ export default async function HomePage() {
           const isEven = index % 2 === 0;
 
           return (
-            <SectionTracker
+            <div
               key={feature.id}
               id={index === 0 ? "features" : undefined}
-              section={`feature_${feature.id}`}
               className={`pt-16 pb-24 md:py-32 ${index === 0 ? "scroll-mt-20" : ""} ${isDark ? "bg-black text-white" : "bg-muted/50"}`}
             >
               <div className="container mx-auto px-4">
@@ -285,14 +283,14 @@ export default async function HomePage() {
                   </div>
                 </div>
               </div>
-            </SectionTracker>
+            </div>
           );
         });
       })()}
 
-      <SectionTracker id="pricing" section="pricing" className="scroll-mt-20">
+      <div id="pricing" className="scroll-mt-20">
         <PricingSection currency={currency} />
-      </SectionTracker>
+      </div>
 
       <FeatureLinks />
     </>

@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { getUserCompanyId } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { isAdminEmail } from "@/lib/admin";
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
@@ -29,11 +27,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check plan and access
-    const cookieStore = await cookies();
-    const userEmail = cookieStore.get("user_email")?.value;
-    const isUnlimited = isAdminEmail(userEmail);
-
     const [company, restaurant] = await Promise.all([
       prisma.company.findUnique({
         where: { id: companyId },
@@ -52,7 +45,7 @@ export async function POST(request: NextRequest) {
     const { getCompanyAccess } = await import("@/lib/access");
     const access = getCompanyAccess(company);
 
-    if (!isUnlimited && !access.hasFullAccess) {
+    if (!access.hasFullAccess) {
       return NextResponse.json(
         { error: "trial_expired" },
         { status: 403 }

@@ -1,6 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import { cookies } from "next/headers";
-import { isAdminEmail } from "@/lib/admin";
 import { UAParser } from "ua-parser-js";
 import { getCompanyAccess } from "@/lib/access";
 
@@ -322,10 +320,3 @@ export async function getDashboardAnalytics(companyId: string, tz = "UTC") {
   };
 }
 
-// ---- Checklist Status ----
-// ---- Admin Helpers ----
-export async function checkIsAdmin() {
-  const cookieStore = await cookies();
-  const userEmail = cookieStore.get("user_email")?.value;
-  return isAdminEmail(userEmail);
-}

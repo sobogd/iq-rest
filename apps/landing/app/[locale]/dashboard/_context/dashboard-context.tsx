@@ -5,7 +5,6 @@ import { createContext, useContext, ReactNode } from "react";
 export type PageKey =
   | "qrMenu"
   | "home"
-  | "analytics"
   | "menu"
   | "categories"
   | "items"
@@ -16,9 +15,7 @@ export type PageKey =
   | "tables"
   | "orders"
   | "billing"
-  | "support"
-  | "admin"
-  | "adminAnalytics";
+  | "support";
 
 export const PAGE_PATHS: Record<PageKey, string> = {
   home: "/dashboard",
@@ -31,12 +28,9 @@ export const PAGE_PATHS: Record<PageKey, string> = {
   design: "/dashboard/design",
   contacts: "/dashboard/contacts",
   qrMenu: "/dashboard/qr-menu",
-  analytics: "/dashboard/analytics",
   billing: "/dashboard/billing",
   settings: "/dashboard/settings",
   support: "/dashboard/support",
-  admin: "/dashboard/admin",
-  adminAnalytics: "/dashboard/admin/analytics",
 };
 
 const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
@@ -53,17 +47,10 @@ const PATH_TO_PAGE_MAP: Record<string, PageKey> = {
   "design": "design",
   "contacts": "contacts",
   "qr-menu": "qrMenu",
-  "analytics": "analytics",
   "billing": "billing",
   "upgrade": "billing",
   "settings": "settings",
   "support": "support",
-  "admin": "admin",
-  "admin/analytics": "adminAnalytics",
-  "sessions": "admin",
-  "keywords": "admin",
-  "search-terms": "admin",
-  "google-ads": "admin",
 };
 
 export function getPageKeyFromPathname(pathname: string): PageKey {
@@ -79,26 +66,6 @@ export function getPageKeyFromPathname(pathname: string): PageKey {
   // Match by first segment (e.g. "categories/123" → "categories")
   const firstSegment = subPath.split("/")[0];
   return PATH_TO_PAGE_MAP[firstSegment] || "menu";
-}
-
-export interface AnalyticsTranslations {
-  monthlyUsage: string;
-  scansThisMonth: string;
-  limitReached: string;
-  todayViews: string;
-  weeklyViews: string;
-  monthlyViews: string;
-  uniqueVisitors: string;
-  viewsByPage: string;
-  viewsByLanguage: string;
-  dailyViews: string;
-  noData: string;
-  deviceStats: string;
-  devices: string;
-  browsers: string;
-  os: string;
-  pageNames: Record<string, string>;
-  languageNames: Record<string, string>;
 }
 
 export interface CategoriesTranslations {
@@ -233,7 +200,6 @@ export interface SettingsTranslations {
 export interface DashboardTranslations {
   pages: Record<PageKey, string>;
   logout: string;
-  analytics: AnalyticsTranslations;
   menu: MenuTranslations;
   categories: CategoriesTranslations;
   items: ItemsTranslations;
@@ -241,8 +207,8 @@ export interface DashboardTranslations {
 }
 
 const validPages: PageKey[] = [
-  "qrMenu", "home", "analytics", "menu", "categories", "items", "settings", "design",
-  "contacts", "reservations", "tables", "orders", "billing", "support", "admin", "adminAnalytics"
+  "qrMenu", "home", "menu", "categories", "items", "settings", "design",
+  "contacts", "reservations", "tables", "orders", "billing", "support"
 ];
 
 export function isValidPageKey(value: string): value is PageKey {

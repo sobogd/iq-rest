@@ -60,10 +60,6 @@ export async function POST(request: NextRequest) {
     });
 
     // Mark session analytics (fire-and-forget)
-    prisma.session.updateMany({
-      where: { companyId, modifiedMenu: false },
-      data: { modifiedMenu: true },
-    }).catch(() => {});
 
     return NextResponse.json(category, { status: 201 });
   } catch (error) {

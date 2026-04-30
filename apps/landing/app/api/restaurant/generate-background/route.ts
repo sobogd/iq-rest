@@ -3,8 +3,6 @@ import { prisma } from "@/lib/prisma";
 import { getUserCompanyId } from "@/lib/auth";
 import { s3Client, s3Key, getPublicUrl } from "@/lib/s3";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
-import { cookies } from "next/headers";
-import { isAdminEmail } from "@/lib/admin";
 import sharp from "sharp";
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -15,11 +13,6 @@ export async function POST() {
     if (!companyId) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-
-    // Check plan and access
-    const cookieStore = await cookies();
-    const userEmail = cookieStore.get("user_email")?.value;
-    const admin = isAdminEmail(userEmail);
 
     const [company, restaurant] = await Promise.all([
       prisma.company.findUnique({
@@ -39,7 +32,7 @@ export async function POST() {
     const { getCompanyAccess } = await import("@/lib/access");
     const access = getCompanyAccess(company);
 
-    if (!admin && !access.hasFullAccess) {
+    if (!access.hasFullAccess) {
       return NextResponse.json({ error: "trial_expired" }, { status: 403 });
     }
 

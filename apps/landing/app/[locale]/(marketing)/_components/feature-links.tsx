@@ -5,7 +5,6 @@ import { Link } from "@/i18n/routing";
 import { MessageCircle } from "lucide-react";
 import { VALID_FEATURE_IDS } from "../_lib/feature-data";
 import { analytics } from "@/lib/analytics";
-import { SectionTracker } from "@/components/SectionTracker";
 
 interface FeatureLinksProps {
   excludeFeatureId?: string;
@@ -30,7 +29,7 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
   return (
     <>
       {/* WhatsApp CTA — dark section */}
-      <SectionTracker section="whatsapp_cta" className="pt-16 pb-24 md:py-20 bg-black text-white">
+      <section className="pt-16 pb-24 md:py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
@@ -53,7 +52,7 @@ export function FeatureLinks({ excludeFeatureId }: FeatureLinksProps) {
             </div>
           </div>
         </div>
-      </SectionTracker>
+      </section>
 
       {/* Feature links */}
       {features.length > 0 && (

@@ -3,7 +3,6 @@ import { Check } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
 import { MenuHeader, MenuPageWrapper, LanguageLink } from "../_components";
-import { trackPageView } from "../_lib/track";
 
 interface LanguagePageProps {
   params: Promise<{
@@ -30,7 +29,6 @@ export default async function LanguagePage({ params, searchParams }: LanguagePag
   const { slug, locale } = await params;
   const { preview } = await searchParams;
   const isPreview = preview === "1";
-  if (!isPreview) trackPageView(slug, "language", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurant(slug),
     getTranslations("publicMenu"),

@@ -124,11 +124,6 @@ export async function POST(request: NextRequest) {
               where: { id: companyId },
               data: { subscriptionStatus: "ACTIVE", paymentProcessing: false },
             });
-            // Mark conversion flag on Session
-            await prisma.session.updateMany({
-              where: { companyId, paidSubscription: false },
-              data: { paidSubscription: true },
-            }).catch(() => {});
           }
         }
         break;

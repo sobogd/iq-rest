@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useBlockBack } from "../_hooks/use-back-intercept";
 import { useTranslations } from "next-intl";
-import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Shield, Activity, MousePointerClick, Send, Search, KeyRound, Save, UtensilsCrossed, Wand2 } from "lucide-react";
+import { ArrowUp, ArrowDown, Plus, ArrowUpDown, Loader2, Check, ChevronRight, Menu as MenuIcon, Eye, Save, UtensilsCrossed, Wand2 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuPreviewModal } from "@/components/menu-preview-modal";
@@ -34,10 +34,9 @@ interface MenuPageProps {
   initialCurrency: string;
   restaurantName: string;
   slug: string | null;
-  isAdmin?: boolean;
 }
 
-export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug, isAdmin }: MenuPageProps) {
+export function MenuPage({ initialItems, initialCategories, initialCurrency, restaurantName, slug }: MenuPageProps) {
   useBlockBack();
   const { translations, scanUsage, isAnonymous } = useDashboard();
   const tHome = useTranslations("dashboard.home");
@@ -274,32 +273,6 @@ export function MenuPage({ initialItems, initialCategories, initialCurrency, res
                 {tHome("saveMenu")}
               </button>
             </Link>
-          )}
-
-          {/* Admin shortcuts */}
-          {!sortMode && isAdmin && (
-            <div className="rounded-xl border border-border bg-muted/30 overflow-hidden">
-              {([
-                { path: "/dashboard/admin", icon: Shield, label: "Companies" },
-                { path: "/dashboard/admin/analytics", icon: Activity, label: "Analytics" },
-                { path: "/dashboard/sessions", icon: MousePointerClick, label: "Sessions" },
-                { path: "/dashboard/keywords", icon: KeyRound, label: "Keywords" },
-                { path: "/dashboard/search-terms", icon: Search, label: "Search Terms" },
-                { path: "/dashboard/google-ads", icon: Send, label: "Google Ads" },
-              ]).map(({ path, icon: Icon, label }, index) => (
-                <button
-                  key={path}
-                  onClick={() => router.push(path)}
-                  className={`flex items-center gap-3 w-full h-11 px-4 hover:bg-muted/50 transition-colors ${
-                    index > 0 ? "border-t border-border/50" : ""
-                  }`}
-                >
-                  <Icon className="h-4 w-4 text-muted-foreground shrink-0" />
-                  <span className="text-sm font-medium flex-1 text-left">{label}</span>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0" />
-                </button>
-              ))}
-            </div>
           )}
 
         {(categories.length === 0 || (categories.length === 1 && items.length === 0)) ? (

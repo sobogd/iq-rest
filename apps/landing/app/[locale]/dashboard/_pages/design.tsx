@@ -35,10 +35,9 @@ interface DesignPageProps {
     hideTitle: boolean;
   } | null;
   plan: string;
-  isAdmin: boolean;
 }
 
-export function DesignPage({ initialRestaurant, plan, isAdmin }: DesignPageProps) {
+export function DesignPage({ initialRestaurant, plan }: DesignPageProps) {
   const t = useTranslations("dashboard.design");
   const locale = useLocale();
   const router = useRouter();

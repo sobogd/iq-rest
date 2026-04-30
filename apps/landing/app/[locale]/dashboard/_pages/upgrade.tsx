@@ -61,11 +61,10 @@ interface UpgradePageProps {
     currentPeriodEnd: string | null;
     paymentProcessing: boolean;
   } | null;
-  isAdmin?: boolean;
   currency: SupportedCurrency;
 }
 
-export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradePageProps) {
+export function UpgradePage({ initialSubscription, currency }: UpgradePageProps) {
   const t = useTranslations("dashboard.upsell");
   const tp = useTranslations("pricing");
   const locale = useLocale();
@@ -80,8 +79,7 @@ export function UpgradePage({ initialSubscription, isAdmin, currency }: UpgradeP
     track(DashboardEvent.SHOWED_UPSELL_PAGE);
   }, []);
 
-  // If user is not on FREE and not admin, skip this page
-  if (!isAdmin && initialSubscription && initialSubscription.plan !== "FREE") {
+  if (initialSubscription && initialSubscription.plan !== "FREE") {
     router.push("/dashboard");
     return null;
   }

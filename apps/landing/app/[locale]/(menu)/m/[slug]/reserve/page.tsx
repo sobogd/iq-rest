@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ReserveForm } from "./reserve-form";
 import { MenuHeader, MenuPageWrapper } from "../_components";
-import { trackPageView } from "../_lib/track";
 import { getRestaurantBySlug } from "../_lib/get-restaurant";
 
 export const revalidate = 300;
@@ -38,7 +37,6 @@ export default async function ReservePage({ params, searchParams }: ReservePageP
   const { slug, locale } = await params;
   const { preview } = await searchParams;
   const isPreview = preview === "1";
-  if (!isPreview) trackPageView(slug, "reserve", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurantBySlug(slug),
     getTranslations("publicReserve"),

@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Phone, Globe, CalendarDays } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { MenuNavLink, HeroMedia } from "./_components";
-import { trackPageView } from "./_lib/track";
 import { getRestaurantBySlug } from "./_lib/get-restaurant";
 import { getCompanyAccess } from "@/lib/access";
 
@@ -31,7 +30,6 @@ export default async function MenuPage({ params, searchParams }: MenuPageProps) 
   if (table) queryParams.set("table", table);
   const queryString = queryParams.toString();
   const previewParam = queryString ? `?${queryString}` : "";
-  if (!isPreview) trackPageView(slug, "home", locale).catch(() => {});
   const [restaurant, t] = await Promise.all([
     getRestaurantBySlug(slug),
     getTranslations("publicMenu"),
