@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
 import { getAuthCompany } from "@/lib/auth";
+import { dashboardUrl } from "@/lib/dashboard-url";
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,9 +20,12 @@ export async function POST(request: NextRequest) {
 
     const { locale = "en" } = await request.json().catch(() => ({}));
 
+    // Always send the user back to the new SPA dashboard's billing settings,
+    // even when they opened the portal from the legacy monolith — the old
+    // billing page is being retired.
     const session = await stripe.billingPortal.sessions.create({
       customer: company.stripeCustomerId,
-      return_url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/dashboard/billing`,
+      return_url: dashboardUrl(`/${locale}/dashboard/settings/billing`),
     });
 
     return NextResponse.json({ url: session.url });
