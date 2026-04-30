@@ -42,6 +42,7 @@ export type LandingTexts = {
   };
 
   ctaText: string;
+  demoText: string;
   microcopy: string;
 
   header: {

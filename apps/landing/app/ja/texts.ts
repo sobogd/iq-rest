@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "レストラン向けQRメニュー — 直接注文、手数料ゼロ",
     ogDescription: "QRメニュー、直接注文、予約、AI翻訳。2分で稼働。14日間無料 — カード不要。",
   },
-  ctaText: "無料で始める →", microcopy: "14日間無料 · カード不要 · いつでも解約",
+  ctaText: "無料で始める →",
+  demoText: "ライブデモを見る", microcopy: "14日間無料 · カード不要 · いつでも解約",
   header: { navFeatures: "機能", navHow: "使い方", navPricing: "料金", navFaq: "FAQ", signIn: "ログイン", cta: "無料で始める →" },
   hero: {
     verticals: ["レストラン", "カフェ", "バー", "ホテル", "ピザ店"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "料金" }, { href: "#faq", label: "質問" },
-      { href: "/ja/contacts", label: "お問い合わせ" }, { href: "/ja/changelog", label: "更新情報" },
       { href: "/ja/languages", label: "言語を変更" },
     ],
     legalLinks: [

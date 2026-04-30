@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Étlap Éttermeknek — Közvetlen Rendelések, Nulla Jutalék",
     ogDescription: "QR étlap, közvetlen rendelések, foglalások és AI fordítás. 2 perc alatt kész. 14 nap ingyen — kártya nélkül.",
   },
-  ctaText: "Kezdd el ingyen →", microcopy: "14 nap ingyen · Kártya nélkül · Bármikor lemondod",
+  ctaText: "Kezdd el ingyen →",
+  demoText: "Élő demó", microcopy: "14 nap ingyen · Kártya nélkül · Bármikor lemondod",
   header: { navFeatures: "Funkciók", navHow: "Hogy működik", navPricing: "Árak", navFaq: "GYIK", signIn: "Belépés", cta: "Kezdd el ingyen →" },
   hero: {
     verticals: ["Éttermek", "Kávézók", "Bárok", "Hotelek", "Pizzériák"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Árak" }, { href: "#faq", label: "Kérdések" },
-      { href: "/hu/contacts", label: "Kapcsolat" }, { href: "/hu/changelog", label: "Újdonságok" },
       { href: "/hu/languages", label: "Nyelvváltás" },
     ],
     legalLinks: [

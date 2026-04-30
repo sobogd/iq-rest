@@ -17,6 +17,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Empieza gratis →",
+  demoText: "Ver demo en vivo",
   microcopy: "14 días gratis · Sin tarjeta · Cancela cuando quieras",
 
   header: {
@@ -73,10 +74,10 @@ export const TEXTS: LandingTexts = {
       },
     ],
     painBullets: [
-      "Sin imprimir cartas — cambia precios al instante",
-      "Sin comisiones — los pedidos llegan directos a ti",
-      "Sin llamadas perdidas — reservas 24/7",
-      "35 idiomas — no pierdas ni un turista",
+      "Sin imprimir — precios al instante",
+      "Sin comisiones — pedidos directos",
+      "Sin llamadas — reservas 24/7",
+      "35 idiomas — no pierdas turistas",
     ],
     rating: "4,9 · más de 500 restaurantes en 30 países",
   },
@@ -217,7 +218,6 @@ export const TEXTS: LandingTexts = {
     navLinks: [
       { href: "#pricing", label: "Precios" },
       { href: "#faq", label: "Preguntas" },
-      { href: "/es/contacts", label: "Contacto" },
       { href: "/es/changelog", label: "Novedades" },
       { href: "/es/languages", label: "Cambiar idioma" },
     ],

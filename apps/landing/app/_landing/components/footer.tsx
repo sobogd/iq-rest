@@ -1,7 +1,19 @@
+"use client";
+
+import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
 
 interface FooterProps {
   texts: LandingTexts["footer"];
+}
+
+function slugify(href: string): string {
+  return href
+    .replace(/^#/, "anchor_")
+    .replace(/^\//, "")
+    .replace(/[^a-z0-9]+/gi, "_")
+    .replace(/^_+|_+$/g, "")
+    .toLowerCase();
 }
 
 export function LandingFooter({ texts }: FooterProps) {
@@ -9,7 +21,7 @@ export function LandingFooter({ texts }: FooterProps) {
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
 
   return (
-    <footer className="border-t border-border bg-muted/20">
+    <footer className="border-t border-border bg-muted/20" data-section="footer">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 text-xs md:max-w-[50%]">
@@ -17,6 +29,7 @@ export function LandingFooter({ texts }: FooterProps) {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={() => analytics.track(`land_footer_feature_${slugify(link.href)}_click`)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -24,12 +37,13 @@ export function LandingFooter({ texts }: FooterProps) {
             ))}
           </nav>
 
-          <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-right">
+          <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-end">
             <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs">
               {texts.navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={() => analytics.track(`land_footer_nav_${slugify(link.href)}_click`)}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
@@ -43,6 +57,7 @@ export function LandingFooter({ texts }: FooterProps) {
                   href={link.href}
                   target={link.href.endsWith(".xml") ? "_blank" : undefined}
                   rel={link.href.endsWith(".xml") ? "noopener noreferrer" : undefined}
+                  onClick={() => analytics.track(`land_footer_legal_${slugify(link.href)}_click`)}
                   className="hover:text-foreground transition-colors"
                 >
                   {link.label}

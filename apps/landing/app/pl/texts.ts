@@ -16,6 +16,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Zacznij za darmo →",
+  demoText: "Zobacz demo",
   microcopy: "14 dni za darmo · Bez karty · Anuluj kiedy chcesz",
 
   header: {
@@ -168,7 +169,6 @@ export const TEXTS: LandingTexts = {
     navLinks: [
       { href: "#pricing", label: "Cennik" },
       { href: "#faq", label: "Pytania" },
-      { href: "/pl/contacts", label: "Kontakt" },
       { href: "/pl/changelog", label: "Co nowego" },
       { href: "/pl/languages", label: "Zmień język" },
     ],

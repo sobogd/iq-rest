@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "منوی QR برای رستوران‌ها — سفارش مستقیم، صفر کمیسیون",
     ogDescription: "منوی QR، سفارش مستقیم، رزرو و ترجمهٔ هوش مصنوعی. در ۲ دقیقه آماده. ۱۴ روز رایگان — بدون کارت.",
   },
-  ctaText: "رایگان شروع کن →", microcopy: "۱۴ روز رایگان · بدون کارت · هر زمان لغو کن",
+  ctaText: "رایگان شروع کن →",
+  demoText: "دیدن دموی زنده", microcopy: "۱۴ روز رایگان · بدون کارت · هر زمان لغو کن",
   header: { navFeatures: "امکانات", navHow: "چطور کار می‌کند", navPricing: "قیمت", navFaq: "سوالات", signIn: "ورود", cta: "رایگان شروع کن →" },
   hero: {
     verticals: ["رستوران‌ها", "کافه‌ها", "بارها", "هتل‌ها", "پیتزافروشی‌ها"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "قیمت" }, { href: "#faq", label: "سوالات" },
-      { href: "/fa/contacts", label: "تماس" }, { href: "/fa/changelog", label: "تازه‌ها" },
       { href: "/fa/languages", label: "تغییر زبان" },
     ],
     legalLinks: [

@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "Biachlár QR do Bhialanna — Orduithe Díreacha, Gan Coimisiún",
     ogDescription: "Biachlár QR, orduithe díreacha, áirithintí agus aistriúchán AI. Réidh i 2 nóiméad. 14 lá saor in aisce — gan chárta.",
   },
-  ctaText: "Tosaigh saor in aisce →", microcopy: "14 lá saor in aisce · Gan chárta · Cealaigh am ar bith",
+  ctaText: "Tosaigh saor in aisce →",
+  demoText: "Féach ar an taispeántas", microcopy: "14 lá saor in aisce · Gan chárta · Cealaigh am ar bith",
   header: { navFeatures: "Gnéithe", navHow: "Conas a oibríonn sé", navPricing: "Praghsanna", navFaq: "FAQ", signIn: "Logáil isteach", cta: "Tosaigh saor in aisce →" },
   hero: {
     verticals: ["Bialanna", "Caiféanna", "Beáir", "Óstáin", "Pizzerias"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Praghsanna" }, { href: "#faq", label: "Ceisteanna" },
-      { href: "/ga/contacts", label: "Teagmháil" }, { href: "/ga/changelog", label: "Nuacht" },
       { href: "/ga/languages", label: "Athraigh teanga" },
     ],
     legalLinks: [

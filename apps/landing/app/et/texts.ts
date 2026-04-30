@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR-menüü Restoranidele — Otsetellimused, Null Vahendustasu",
     ogDescription: "QR-menüü, otsetellimused, broneeringud ja AI tõlge. Valmis 2 minutiga. 14 päeva tasuta — kaardita.",
   },
-  ctaText: "Alusta tasuta →", microcopy: "14 päeva tasuta · Ilma kaardita · Tühista millal soovid",
+  ctaText: "Alusta tasuta →",
+  demoText: "Vaata demo", microcopy: "14 päeva tasuta · Ilma kaardita · Tühista millal soovid",
   header: { navFeatures: "Funktsioonid", navHow: "Kuidas töötab", navPricing: "Hinnad", navFaq: "FAQ", signIn: "Logi sisse", cta: "Alusta tasuta →" },
   hero: {
     verticals: ["Restoranid", "Kohvikud", "Baarid", "Hotellid", "Pitsabaarid"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Hinnad" }, { href: "#faq", label: "Küsimused" },
-      { href: "/et/contacts", label: "Kontakt" }, { href: "/et/changelog", label: "Uudised" },
       { href: "/et/languages", label: "Vaheta keelt" },
     ],
     legalLinks: [

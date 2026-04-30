@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "Carta QR per a Restaurants — Comandes Directes, Zero Comissions",
     ogDescription: "Carta QR, comandes directes, reserves i traducció IA. Llesta en 2 minuts. 14 dies gratis — sense targeta.",
   },
-  ctaText: "Comença gratis →", microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
+  ctaText: "Comença gratis →",
+  demoText: "Veure demo en directe", microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
   header: { navFeatures: "Funcions", navHow: "Com funciona", navPricing: "Preus", navFaq: "FAQ", signIn: "Entrar", cta: "Comença gratis →" },
   hero: {
     verticals: ["Restaurants", "Cafeteries", "Bars", "Hotels", "Pizzeries"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Preus" }, { href: "#faq", label: "Preguntes" },
-      { href: "/ca/contacts", label: "Contacte" }, { href: "/ca/changelog", label: "Novetats" },
       { href: "/ca/languages", label: "Canvia d'idioma" },
     ],
     legalLinks: [

@@ -1,7 +1,10 @@
+"use client";
+
 import { Lock, Ban, Zap, Globe } from "lucide-react";
 import { dashboardUrl } from "@/lib/dashboard-url";
 import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
+import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
 
 interface LandingPricingProps {
@@ -72,7 +75,7 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
   return (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-start">
           <div className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-muted-foreground mb-4">
             {texts.badge}
           </div>
@@ -89,6 +92,7 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
           <div className="flex flex-col items-center lg:items-start">
             <a
               href={trialHref}
+              onClick={() => analytics.track("land_pricing_cta_click")}
               className="inline-flex w-full max-w-[14rem] items-center justify-center h-11 px-6 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all"
             >
               {ctaText}
@@ -106,15 +110,15 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full auto-rows-fr">
-          <div className="flex flex-col justify-center text-left rounded-2xl border border-border bg-card p-5">
+        <div className="grid grid-cols-2 gap-3 w-full auto-rows-fr">
+          <div className="flex flex-col justify-center text-start rounded-2xl border border-border bg-card p-5">
             <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground mb-3">
               {texts.monthlyLabel}
             </p>
             <PriceDisplay parts={monthlyParts} perMonth={texts.perMonth} />
           </div>
 
-          <div className="relative flex flex-col justify-center text-left rounded-2xl border border-primary/60 bg-primary/5 p-5">
+          <div className="relative flex flex-col justify-center text-start rounded-2xl border border-primary/60 bg-primary/5 p-5">
             <span className="absolute -top-2 right-3 px-1.5 py-0.5 rounded-md bg-primary text-primary-foreground text-[9px] font-medium uppercase tracking-wider">
               {texts.saveBadge}
             </span>

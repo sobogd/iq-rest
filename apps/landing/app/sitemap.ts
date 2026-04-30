@@ -29,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/privacy', lastModified: '2026-02-20', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/cookies', lastModified: '2026-02-20', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/faq', lastModified: '2026-02-20', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/contacts', lastModified: '2026-02-20', changeFrequency: 'yearly', priority: 0.5 },
     { path: '/languages', lastModified: '2026-02-23', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/changelog', lastModified: '2026-02-26', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/changelog/dashboard-ui-redesign-consistent-cards-navigation', lastModified: '2026-02-26', changeFrequency: 'monthly', priority: 0.6 },
@@ -66,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   locales.forEach(locale => {
     sitemapEntries.push({
       url: `${baseUrl}/${locale}`,
-      lastModified: new Date('2026-02-26'),
+      lastModified: new Date('2026-04-30'),
       changeFrequency: 'weekly',
       priority: 1.0,
       alternates: buildAlternates()

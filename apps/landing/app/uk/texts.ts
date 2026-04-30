@@ -15,6 +15,7 @@ export const TEXTS: LandingTexts = {
   },
 
   ctaText: "Почати безкоштовно →",
+  demoText: "Подивитися демо",
   microcopy: "14 днів безкоштовно · Без картки · Скасування в один клік",
 
   header: { navFeatures: "Функції", navHow: "Як це працює", navPricing: "Ціни", navFaq: "FAQ", signIn: "Увійти", cta: "Почати безкоштовно →" },
@@ -128,7 +129,6 @@ export const TEXTS: LandingTexts = {
     navLinks: [
       { href: "#pricing", label: "Ціни" },
       { href: "#faq", label: "Питання" },
-      { href: "/uk/contacts", label: "Контакти" },
       { href: "/uk/changelog", label: "Що нового" },
       { href: "/uk/languages", label: "Змінити мову" },
     ],

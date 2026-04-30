@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR-menu til Restauranter — Direkte Bestillinger, Nul Provision",
     ogDescription: "QR-menu, direkte bestillinger, reservationer og AI-oversættelse. Klar på 2 minutter. 14 dage gratis — uden kort.",
   },
-  ctaText: "Start gratis →", microcopy: "14 dage gratis · Intet kort · Stop når du vil",
+  ctaText: "Start gratis →",
+  demoText: "Se live-demo", microcopy: "14 dage gratis · Intet kort · Stop når du vil",
   header: { navFeatures: "Funktioner", navHow: "Sådan virker det", navPricing: "Priser", navFaq: "FAQ", signIn: "Log ind", cta: "Start gratis →" },
   hero: {
     verticals: ["Restauranter", "Caféer", "Barer", "Hoteller", "Pizzeriaer"],
@@ -95,7 +96,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Priser" }, { href: "#faq", label: "Spørgsmål" },
-      { href: "/da/contacts", label: "Kontakt" }, { href: "/da/changelog", label: "Nyheder" },
       { href: "/da/languages", label: "Skift sprog" },
     ],
     legalLinks: [

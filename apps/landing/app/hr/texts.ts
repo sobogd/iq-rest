@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Jelovnik za Restorane — Direktne Narudžbe, Nula Provizije",
     ogDescription: "QR jelovnik, direktne narudžbe, rezervacije i AI prijevod. Spremno u 2 minute. 14 dana besplatno — bez kartice.",
   },
-  ctaText: "Počni besplatno →", microcopy: "14 dana besplatno · Bez kartice · Otkaži kada želiš",
+  ctaText: "Počni besplatno →",
+  demoText: "Pogledaj live demo", microcopy: "14 dana besplatno · Bez kartice · Otkaži kada želiš",
   header: { navFeatures: "Značajke", navHow: "Kako radi", navPricing: "Cijene", navFaq: "FAQ", signIn: "Prijava", cta: "Počni besplatno →" },
   hero: {
     verticals: ["Restorani", "Kafići", "Barovi", "Hoteli", "Pizzerije"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Cijene" }, { href: "#faq", label: "Pitanja" },
-      { href: "/hr/contacts", label: "Kontakt" }, { href: "/hr/changelog", label: "Novosti" },
       { href: "/hr/languages", label: "Promijeni jezik" },
     ],
     legalLinks: [

@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Meniu Restoranams — Tiesioginiai Užsakymai, Nulis Komisinių",
     ogDescription: "QR meniu, tiesioginiai užsakymai, rezervacijos ir AI vertimas. Paruošta per 2 minutes. 14 dienų nemokamai — be kortelės.",
   },
-  ctaText: "Pradėk nemokamai →", microcopy: "14 dienų nemokamai · Be kortelės · Atšauk bet kada",
+  ctaText: "Pradėk nemokamai →",
+  demoText: "Žiūrėti demo", microcopy: "14 dienų nemokamai · Be kortelės · Atšauk bet kada",
   header: { navFeatures: "Funkcijos", navHow: "Kaip tai veikia", navPricing: "Kainos", navFaq: "FAQ", signIn: "Prisijungti", cta: "Pradėk nemokamai →" },
   hero: {
     verticals: ["Restoranai", "Kavinės", "Barai", "Viešbučiai", "Picerijos"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Kainos" }, { href: "#faq", label: "Klausimai" },
-      { href: "/lt/contacts", label: "Kontaktai" }, { href: "/lt/changelog", label: "Naujienos" },
       { href: "/lt/languages", label: "Pakeisti kalbą" },
     ],
     legalLinks: [

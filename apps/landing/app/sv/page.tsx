@@ -10,6 +10,7 @@ import { Hero } from "@/app/_landing/components/hero";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { pickRandomVariant } from "@/app/_landing/lib/pick-variant";
+import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./texts";
 
 const LOCALE = "sv";
@@ -40,23 +41,25 @@ export const metadata: Metadata = {
 };
 
 export default async function LandingPage() {
-  const variant = pickRandomVariant(TEXTS.hero.variants);
+  const { variant, index: variantIndex } = pickRandomVariant(TEXTS.hero.variants);
   const currency = await getCurrency();
 
   return (
     <main className="relative">
+      <PageTracker variantIndex={variantIndex} />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
       <Hero
         texts={TEXTS.hero}
         variant={variant}
         ctaText={TEXTS.ctaText}
+        demoText={TEXTS.demoText}
         microcopy={TEXTS.microcopy}
         locale={LOCALE}
       />
       <Features texts={TEXTS.features} />
       <Founder texts={TEXTS.founder} />
       <How texts={TEXTS.how} />
-      <section id="pricing" className="scroll-mt-16 border-t border-border py-16">
+      <section id="pricing" data-section="pricing" className="scroll-mt-16 border-t border-border py-16">
         <LandingPricing
           texts={TEXTS.pricing}
           ctaText={TEXTS.ctaText}
@@ -65,12 +68,13 @@ export default async function LandingPage() {
           currency={currency}
         />
       </section>
-      <section id="faq" className="scroll-mt-16 border-t border-border py-16">
+      <section id="faq" data-section="faq" className="scroll-mt-16 border-t border-border py-16">
         <Faq texts={TEXTS.faq} />
       </section>
       <FinalCta
         texts={TEXTS.finalCta}
         ctaText={TEXTS.ctaText}
+        demoText={TEXTS.demoText}
         microcopy={TEXTS.microcopy}
         locale={LOCALE}
       />

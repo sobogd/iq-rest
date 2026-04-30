@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR-ruokalista Ravintoloille — Suorat Tilaukset, Nolla Provisio",
     ogDescription: "QR-ruokalista, suorat tilaukset, varaukset ja AI-käännös. Valmis 2 minuutissa. 14 päivää ilmaiseksi — ilman korttia.",
   },
-  ctaText: "Aloita ilmaiseksi →", microcopy: "14 päivää ilmaiseksi · Ei korttia · Peruuta milloin haluat",
+  ctaText: "Aloita ilmaiseksi →",
+  demoText: "Katso demo", microcopy: "14 päivää ilmaiseksi · Ei korttia · Peruuta milloin haluat",
   header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Aloita ilmaiseksi →" },
   hero: {
     verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
@@ -95,7 +96,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Hinnat" }, { href: "#faq", label: "Kysymykset" },
-      { href: "/fi/contacts", label: "Yhteystiedot" }, { href: "/fi/changelog", label: "Uutiset" },
       { href: "/fi/languages", label: "Vaihda kieli" },
     ],
     legalLinks: [

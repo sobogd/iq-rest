@@ -1,4 +1,7 @@
+"use client";
+
 import { ChevronDown, MessageCircle } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
 
 const WHATSAPP_NUMBER = "34637621754";
@@ -13,7 +16,7 @@ export function Faq({ texts }: FaqProps) {
   return (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-        <div className="lg:sticky lg:top-24 text-center lg:text-left">
+        <div className="lg:sticky lg:top-24 text-center lg:text-start">
           <div className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-muted-foreground mb-4">
             {texts.eyebrow}
           </div>
@@ -30,6 +33,7 @@ export function Faq({ texts }: FaqProps) {
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => analytics.track("land_faq_whatsapp_click")}
             className="inline-flex items-center gap-2 h-10 px-5 rounded-lg bg-[#25D366] text-white text-sm font-medium hover:opacity-90 active:scale-[0.99] transition-all"
           >
             <MessageCircle className="h-4 w-4" />
@@ -38,9 +42,14 @@ export function Faq({ texts }: FaqProps) {
         </div>
 
         <div className="flex flex-col gap-2">
-          {texts.items.map(({ q, a }) => (
+          {texts.items.map(({ q, a }, idx) => (
             <details
               key={q}
+              onToggle={(e) => {
+                if ((e.currentTarget as HTMLDetailsElement).open) {
+                  analytics.track(`land_faq_item_${idx + 1}_open`);
+                }
+              }}
               className="group bg-card border border-border rounded-2xl px-5 py-4 open:bg-card/80 transition-colors"
             >
               <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-sm font-medium tracking-tight">

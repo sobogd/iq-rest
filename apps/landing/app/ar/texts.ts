@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "قائمة QR للمطاعم — طلبات مباشرة، صفر عمولة",
     ogDescription: "قائمة QR، طلبات مباشرة، حجوزات وترجمة بالذكاء الاصطناعي. جاهزة في دقيقتين. ١٤ يوم مجانًا — بدون بطاقة.",
   },
-  ctaText: "ابدأ مجانًا →", microcopy: "١٤ يوم مجانًا · بدون بطاقة · ألغِ متى شئت",
+  ctaText: "ابدأ مجانًا →",
+  demoText: "شاهد العرض المباشر", microcopy: "١٤ يوم مجانًا · بدون بطاقة · ألغِ متى شئت",
   header: { navFeatures: "الميزات", navHow: "كيف تعمل", navPricing: "الأسعار", navFaq: "الأسئلة", signIn: "تسجيل الدخول", cta: "ابدأ مجانًا →" },
   hero: {
     verticals: ["مطاعم", "مقاهي", "بارات", "فنادق", "بيتزا"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "الأسعار" }, { href: "#faq", label: "أسئلة" },
-      { href: "/ar/contacts", label: "تواصل" }, { href: "/ar/changelog", label: "الجديد" },
       { href: "/ar/languages", label: "تغيير اللغة" },
     ],
     legalLinks: [

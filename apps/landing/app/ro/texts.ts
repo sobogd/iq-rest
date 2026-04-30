@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "Meniu QR pentru Restaurante — Comenzi Directe, Zero Comision",
     ogDescription: "Meniu QR, comenzi directe, rezervări și traducere AI. Gata în 2 minute. 14 zile gratis — fără card.",
   },
-  ctaText: "Începe gratis →", microcopy: "14 zile gratis · Fără card · Anulezi când vrei",
+  ctaText: "Începe gratis →",
+  demoText: "Vezi demo live", microcopy: "14 zile gratis · Fără card · Anulezi când vrei",
   header: { navFeatures: "Funcții", navHow: "Cum funcționează", navPricing: "Prețuri", navFaq: "Întrebări", signIn: "Conectare", cta: "Începe gratis →" },
   hero: {
     verticals: ["Restaurante", "Cafenele", "Baruri", "Hoteluri", "Pizzerii"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Prețuri" }, { href: "#faq", label: "Întrebări" },
-      { href: "/ro/contacts", label: "Contact" }, { href: "/ro/changelog", label: "Noutăți" },
       { href: "/ro/languages", label: "Schimbă limba" },
     ],
     legalLinks: [

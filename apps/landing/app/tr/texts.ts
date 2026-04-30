@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "Restoranlar için QR Menü — Direkt Siparişler, Sıfır Komisyon",
     ogDescription: "QR menü, direkt siparişler, rezervasyonlar ve AI çeviri. 2 dakikada hazır. 14 gün ücretsiz — kart gerekmez.",
   },
-  ctaText: "Ücretsiz başla →", microcopy: "14 gün ücretsiz · Kart gerekmez · İstediğin zaman iptal",
+  ctaText: "Ücretsiz başla →",
+  demoText: "Canlı demoyu gör", microcopy: "14 gün ücretsiz · Kart gerekmez · İstediğin zaman iptal",
   header: { navFeatures: "Özellikler", navHow: "Nasıl çalışır", navPricing: "Fiyatlar", navFaq: "SSS", signIn: "Giriş", cta: "Ücretsiz başla →" },
   hero: {
     verticals: ["Restoranlar", "Kafeler", "Barlar", "Oteller", "Pizzacılar"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Fiyatlar" }, { href: "#faq", label: "Sorular" },
-      { href: "/tr/contacts", label: "İletişim" }, { href: "/tr/changelog", label: "Yenilikler" },
       { href: "/tr/languages", label: "Dil değiştir" },
     ],
     legalLinks: [

@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Ēdienkarte Restorāniem — Tiešie Pasūtījumi, Nulle Komisijas",
     ogDescription: "QR ēdienkarte, tiešie pasūtījumi, rezervācijas un AI tulkojums. Gatavs 2 minūtēs. 14 dienas bez maksas — bez kartes.",
   },
-  ctaText: "Sāc bez maksas →", microcopy: "14 dienas bez maksas · Bez kartes · Atcelties jebkurā brīdī",
+  ctaText: "Sāc bez maksas →",
+  demoText: "Skatīt demo", microcopy: "14 dienas bez maksas · Bez kartes · Atcelties jebkurā brīdī",
   header: { navFeatures: "Funkcijas", navHow: "Kā tas darbojas", navPricing: "Cenas", navFaq: "FAQ", signIn: "Pieslēgties", cta: "Sāc bez maksas →" },
   hero: {
     verticals: ["Restorāni", "Kafejnīcas", "Bāri", "Viesnīcas", "Picērijas"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Cenas" }, { href: "#faq", label: "Jautājumi" },
-      { href: "/lv/contacts", label: "Kontakti" }, { href: "/lv/changelog", label: "Jaunumi" },
       { href: "/lv/languages", label: "Mainīt valodu" },
     ],
     legalLinks: [

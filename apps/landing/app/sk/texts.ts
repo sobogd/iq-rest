@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Jedálny Lístok pre Reštaurácie — Priame Objednávky, Nulová Provízia",
     ogDescription: "QR jedálny lístok, priame objednávky, rezervácie a AI preklad. Hotové za 2 minúty. 14 dní zadarmo — bez karty.",
   },
-  ctaText: "Začni zadarmo →", microcopy: "14 dní zadarmo · Bez karty · Zruš kedykoľvek",
+  ctaText: "Začni zadarmo →",
+  demoText: "Pozri si live demo", microcopy: "14 dní zadarmo · Bez karty · Zruš kedykoľvek",
   header: { navFeatures: "Funkcie", navHow: "Ako to funguje", navPricing: "Ceny", navFaq: "FAQ", signIn: "Prihlásiť", cta: "Začni zadarmo →" },
   hero: {
     verticals: ["Reštaurácie", "Kaviarne", "Bary", "Hotely", "Pizzerie"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Ceny" }, { href: "#faq", label: "Otázky" },
-      { href: "/sk/contacts", label: "Kontakt" }, { href: "/sk/changelog", label: "Novinky" },
       { href: "/sk/languages", label: "Zmeniť jazyk" },
     ],
     legalLinks: [

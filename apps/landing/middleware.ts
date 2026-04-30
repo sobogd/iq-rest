@@ -8,7 +8,7 @@ const intlMiddleware = createMiddleware(routing);
 
 // Last-Modified dates for marketing pages (shared source of truth with sitemap.ts)
 const PAGE_LAST_MODIFIED: Record<string, string> = {
-  "/": "2026-02-24",
+  "/": "2026-04-30",
   "/pricing": "2026-02-24",
   "/instant-setup": "2026-02-24",
   "/mobile-management": "2026-02-24",
@@ -23,7 +23,6 @@ const PAGE_LAST_MODIFIED: Record<string, string> = {
   "/personal-support": "2026-02-24",
   "/online-orders": "2026-02-24",
   "/faq": "2026-02-20",
-  "/contacts": "2026-02-20",
   "/changelog": "2026-02-20",
 };
 
@@ -129,10 +128,14 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // English landing replaces /en main page — no i18n, no locale routing.
-  // Match exact /en (so sub-routes like /en/contacts still go through next-intl).
-  if (pathname === "/en") {
-    return NextResponse.next();
+  // Per-locale custom landings replace the locale-routed main page (e.g. /en, /es).
+  // Match ONLY the bare locale path so sub-routes like /en/contacts keep going through next-intl.
+  const onlyLocaleMatch = pathname.match(/^\/([a-z]{2})$/);
+  if (onlyLocaleMatch && (locales as readonly string[]).includes(onlyLocaleMatch[1])) {
+    const response = NextResponse.next();
+    response.headers.set("Last-Modified", new Date(PAGE_LAST_MODIFIED["/"]).toUTCString());
+    response.headers.set("Content-Language", onlyLocaleMatch[1]);
+    return response;
   }
 
   // Strip ?from= param → save to cookie for client-side referral tracking

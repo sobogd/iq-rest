@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "餐厅QR菜单 — 直接下单,零佣金",
     ogDescription: "QR菜单、直接下单、预订和AI翻译。2分钟上线。14天免费 — 无需信用卡。",
   },
-  ctaText: "免费开始 →", microcopy: "14天免费 · 无需信用卡 · 随时取消",
+  ctaText: "免费开始 →",
+  demoText: "查看实时演示", microcopy: "14天免费 · 无需信用卡 · 随时取消",
   header: { navFeatures: "功能", navHow: "如何使用", navPricing: "价格", navFaq: "常见问题", signIn: "登录", cta: "免费开始 →" },
   hero: {
     verticals: ["餐厅", "咖啡馆", "酒吧", "酒店", "披萨店"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "价格" }, { href: "#faq", label: "问题" },
-      { href: "/zh/contacts", label: "联系" }, { href: "/zh/changelog", label: "更新" },
       { href: "/zh/languages", label: "切换语言" },
     ],
     legalLinks: [

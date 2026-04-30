@@ -6,12 +6,12 @@ interface HowProps {
 
 export function How({ texts }: HowProps) {
   return (
-    <section id="how" className="scroll-mt-16 border-t border-border py-16">
+    <section id="how" data-section="how" className="scroll-mt-16 border-t border-border py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-2 text-center lg:text-left">
+        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-2 text-center lg:text-start">
           {texts.heading}
         </h2>
-        <p className="text-xs text-muted-foreground mb-10 text-center lg:text-left">{texts.sub}</p>
+        <p className="text-xs text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl">
           {texts.steps.map((s) => (
             <div

@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Μενού για Εστιατόρια — Άμεσες Παραγγελίες, Μηδέν Προμήθεια",
     ogDescription: "QR μενού, άμεσες παραγγελίες, κρατήσεις και AI μετάφραση. Έτοιμο σε 2 λεπτά. 14 ημέρες δωρεάν — χωρίς κάρτα.",
   },
-  ctaText: "Ξεκίνα δωρεάν →", microcopy: "14 ημέρες δωρεάν · Χωρίς κάρτα · Ακύρωση όποτε θέλεις",
+  ctaText: "Ξεκίνα δωρεάν →",
+  demoText: "Δες live demo", microcopy: "14 ημέρες δωρεάν · Χωρίς κάρτα · Ακύρωση όποτε θέλεις",
   header: { navFeatures: "Λειτουργίες", navHow: "Πώς λειτουργεί", navPricing: "Τιμές", navFaq: "FAQ", signIn: "Σύνδεση", cta: "Ξεκίνα δωρεάν →" },
   hero: {
     verticals: ["Εστιατόρια", "Καφέ", "Μπαρ", "Ξενοδοχεία", "Πιτσαρίες"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Τιμές" }, { href: "#faq", label: "Ερωτήσεις" },
-      { href: "/el/contacts", label: "Επικοινωνία" }, { href: "/el/changelog", label: "Νέα" },
       { href: "/el/languages", label: "Αλλαγή γλώσσας" },
     ],
     legalLinks: [

@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Matseðill fyrir Veitingastaði — Beinar Pantanir, Núll Þóknun",
     ogDescription: "QR matseðill, beinar pantanir, bókanir og AI þýðing. Tilbúið á 2 mínútum. 14 dagar ókeypis — án korts.",
   },
-  ctaText: "Byrjaðu ókeypis →", microcopy: "14 dagar ókeypis · Ekkert kort · Hættu hvenær sem er",
+  ctaText: "Byrjaðu ókeypis →",
+  demoText: "Sjá kynningu", microcopy: "14 dagar ókeypis · Ekkert kort · Hættu hvenær sem er",
   header: { navFeatures: "Eiginleikar", navHow: "Hvernig það virkar", navPricing: "Verð", navFaq: "FAQ", signIn: "Innskráning", cta: "Byrjaðu ókeypis →" },
   hero: {
     verticals: ["Veitingastaðir", "Kaffihús", "Barir", "Hótel", "Pizzustaðir"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Verð" }, { href: "#faq", label: "Spurningar" },
-      { href: "/is/contacts", label: "Tengiliður" }, { href: "/is/changelog", label: "Fréttir" },
       { href: "/is/languages", label: "Skipta um tungumál" },
     ],
     legalLinks: [

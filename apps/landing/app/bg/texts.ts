@@ -10,7 +10,8 @@ export const TEXTS: LandingTexts = {
     ogTitle: "QR Меню за Ресторанти — Директни Поръчки, Нула Комисиона",
     ogDescription: "QR меню, директни поръчки, резервации и AI превод. Готово за 2 минути. 14 дни безплатно — без карта.",
   },
-  ctaText: "Започни безплатно →", microcopy: "14 дни безплатно · Без карта · Откажи когато искаш",
+  ctaText: "Започни безплатно →",
+  demoText: "Виж демо на живо", microcopy: "14 дни безплатно · Без карта · Откажи когато искаш",
   header: { navFeatures: "Функции", navHow: "Как работи", navPricing: "Цени", navFaq: "ЧЗВ", signIn: "Вход", cta: "Започни безплатно →" },
   hero: {
     verticals: ["Ресторанти", "Кафенета", "Барове", "Хотели", "Пицарии"],
@@ -89,7 +90,6 @@ export const TEXTS: LandingTexts = {
     ],
     navLinks: [
       { href: "#pricing", label: "Цени" }, { href: "#faq", label: "Въпроси" },
-      { href: "/bg/contacts", label: "Контакт" }, { href: "/bg/changelog", label: "Новости" },
       { href: "/bg/languages", label: "Смени езика" },
     ],
     legalLinks: [

@@ -11,6 +11,7 @@ export const TEXTS: LandingTexts = {
     ogDescription: "QR-meny, direkta beställningar, bokningar och AI-översättning. Klar på 2 minuter. 14 dagar gratis — utan kort.",
   },
   ctaText: "Börja gratis →",
+  demoText: "Se live-demo",
   microcopy: "14 dagar gratis · Inget kort · Avsluta när du vill",
   header: { navFeatures: "Funktioner", navHow: "Så funkar det", navPricing: "Priser", navFaq: "FAQ", signIn: "Logga in", cta: "Börja gratis →" },
   hero: {
@@ -97,7 +98,6 @@ export const TEXTS: LandingTexts = {
     navLinks: [
       { href: "#pricing", label: "Priser" },
       { href: "#faq", label: "Frågor" },
-      { href: "/sv/contacts", label: "Kontakt" },
       { href: "/sv/changelog", label: "Nyheter" },
       { href: "/sv/languages", label: "Byt språk" },
     ],
