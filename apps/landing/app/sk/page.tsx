@@ -12,7 +12,7 @@ import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { pickRandomVariant } from "@/app/_landing/lib/pick-variant";
 import { TEXTS } from "./texts";
 
-const LOCALE = "en";
+const LOCALE = "sk";
 
 export const dynamic = "force-dynamic";
 

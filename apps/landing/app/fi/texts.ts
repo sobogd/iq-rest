@@ -1,0 +1,107 @@
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import type { LandingTexts } from "@/app/_landing/types";
+
+export const TEXTS: LandingTexts = {
+  htmlLang: "fi", htmlDir: "ltr",
+  meta: {
+    title: "QR-ruokalista Ravintoloille — Suorat Tilaukset, Nolla Provisio | IQ Rest",
+    description: "Ei enää paperisia ruokalistoja eikä toimitussovellusten provisioita. QR-ruokalista, suorat tilaukset, varaukset ja monikielinen sivusto. 14 päivää ilmaiseksi, ilman korttia.",
+    canonical: "https://iq-rest.com/fi", ogLocale: "fi_FI",
+    ogTitle: "QR-ruokalista Ravintoloille — Suorat Tilaukset, Nolla Provisio",
+    ogDescription: "QR-ruokalista, suorat tilaukset, varaukset ja AI-käännös. Valmis 2 minuutissa. 14 päivää ilmaiseksi — ilman korttia.",
+  },
+  ctaText: "Aloita ilmaiseksi →", microcopy: "14 päivää ilmaiseksi · Ei korttia · Peruuta milloin haluat",
+  header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Aloita ilmaiseksi →" },
+  hero: {
+    verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
+    variants: [
+      { headline: "Lopeta ruokalistojen tulostaminen.", headlineAccent: "Lopeta 30%:n maksaminen toimitussovelluksille.", sub: "QR-ruokalista, suorat tilaukset, varaukset ja monikielinen sivusto. Valmis 2 minuutissa — ilman korttia." },
+      { headline: "Ravintolasi ansaitsee enemmän kuin", headlineAccent: "paperilistoja ja menetettyjä puheluita.", sub: "Suorat tilaukset, välittömät listamuutokset ja varaukset 24/7. Asennettu 2 minuutissa." },
+      { headline: "Yksi QR-koodi.", headlineAccent: "Nolla provisiota. Hyvästi paperi.", sub: "QR-ruokalista, online-tilaukset ja varaukset — kaikki yhdessä paikassa. 14 päivää ilmaiseksi, ilman korttia." },
+      { headline: "Saa suoria tilauksia.", headlineAccent: "Ohita provisio.", sub: "Asiakkaat skannaavat, tilaavat ja maksavat — suoraan sinulle, ilman Wolt-osuutta. Valmis 2 minuutissa." },
+      { headline: "Lisää tilauksia. Lisää varauksia.", headlineAccent: "Ei paperia, ei sovelluksia.", sub: "QR-ruokalista + varaukset + monikielinen sivusto autopilotilla. 14 päivän ilmaiskokeilu." },
+      { headline: "Turistit eivät ymmärrä listaa?", headlineAccent: "Korjaa 2 minuutissa.", sub: "AI kääntää koko listan 35 kielelle. Plus QR-tilaukset ja varaukset mukana." },
+      { headline: "Paperilistasta QR-koodiksi,", headlineAccent: "ennen kuin espresso jäähtyy.", sub: "QR-ruokalista, suorat tilaukset ja varaukset 24/7. Valmis 2 minuutissa — ilman korttia." },
+      { headline: "Virkistävän yksinkertainen QR-lista.", headlineAccent: "Hiljaisesti voimakas sisällä.", sub: "Suorat tilaukset, AI-käännös, varaukset ja sivusto — kaikki yhdellä napsautuksella puhelimessa." },
+    ],
+    painBullets: ["Ei tulostusta — muuta hintoja heti", "Nolla provisiota — tilaukset suoraan sinulle", "Ei menetettyjä puheluita — varaukset 24/7", "35 kieltä — älä menetä turistia"],
+    rating: "4,9 · yli 500 ravintolaa 30+ maassa",
+  },
+  features: {
+    heading: "Kaikki mitä tarvitset.", headingAccent: "Ei mitään turhaa.",
+    sub: "Tehty ravintoloille. Käytetty pöydässä.",
+    items: [
+      { Icon: ScanLine, title: "Pidä 100% jokaisesta tilauksesta", desc: "Asiakkaat skannaavat, tilaavat ja maksavat — suoraan sinulle. Ei sovelluksia ladattavaksi, ei 30%:n toimitusosuutta. Jokainen tilaus laskeutuu reaaliajassa pöytänumerolla paneeliin." },
+      { Icon: Languages, title: "Myy turisteille heidän kielellään", desc: "Yksi napsautus kääntää koko listan 35 kielelle. AI ymmärtää kulinaarisen kontekstin — asiakkaat tilaavat enemmän, kun ymmärtävät ruokalajin oikeasti." },
+      { Icon: CalendarCheck, title: "Älä menetä varauksia keittiössä", desc: "Asiakkaat varaavat 24/7, ei puheluita. Auto- tai manuaalivahvistus, sähköpostimuistutukset mukana — vähemmän peruutuksia, nolla stressiä." },
+      { Icon: Palette, title: "Unohtumaton 1 sekunnissa", desc: "Aseta keittiövideo tai sankarikuva listan taustaksi. Asiakkaat lopettavat selaamisen. Brändisi jää mieleen." },
+      { Icon: Smartphone, title: "Päivitä sekunneissa, ei päivissä", desc: "Muuta hintoja, vaihda kuvia, lisää päivän erikoinen — puhelimesta, pöytien välissä. Suorana asiakkaille heti. Ei enää tulosteita." },
+      { Icon: ListPlus, title: "Jos osaat tekstata, osaat tämän", desc: "Napauta lisätäksesi annoksen. Vedä järjestääksesi. Sammuta loppunut. Ei manuaaleja, ei tutoriaaleja, ei oppimiskäyrää." },
+    ],
+  },
+  founder: {
+    eyebrow: "Rakentaa ravintoloitsija",
+    quoteStart: "Vaimoni ja minä avasimme kahvilan ja vietimme viikkoja etsien järjestelmää, joka hoitaa online-tilaukset, varaukset ja näyttää modernilta. Kaikki mitä kokeilimme oli kömpelöä, rumaa tai siitä puuttui puolet ominaisuuksista —",
+    quoteAccent: "joten rakensimme sen, jonka olisimme itse halunneet.",
+    sign: "Bogdan Sokolov · perustaja, ent. kahvilanomistaja",
+    photoAlt: "Bogdan, IQ Rest perustaja",
+  },
+  how: {
+    heading: "Live alle 2 minuutissa",
+    sub: "Neljä lyhyttä askelta. Ei asennusta, ei teknistä konfigurointia.",
+    steps: [
+      { n: "1", t: "Rekisteröidy", d: "Sähköposti tai Google. Ei korttia. Valmis 10 sekunnissa." },
+      { n: "2", t: "Ravintolan nimi", d: "Kirjoita nimi. Ilmestyy listan yläosaan." },
+      { n: "3", t: "Lisää ensimmäinen annos", d: "Kategoria, nimi, hinta, kuva. Siinä se." },
+      { n: "4", t: "Valitse kansi ja tulosta QR", d: "Valitse tausta. Hae QR. Liimaa pöytiin." },
+    ],
+  },
+  pricing: {
+    badge: "Nolla provisiota · Ei sopimuksia",
+    heading: "Yksi suunnitelma.", headingAccent: "Kaikki sisältyy.",
+    sub: "QR-ruokalista, tilaukset, AI-käännös, ravintolan sivusto ja varaukset. Yksi yksinkertainen hinta.",
+    monthlyLabel: "Kuukausittain", yearlyLabel: "Vuosittain", saveBadge: "Säästä 25%", perMonth: "kuukaudessa",
+    billedAnnually: "Veloitetaan vuosittain {total}", youSave: "Säästät {amount}",
+    trust: { secure: "Turvallinen Stripe-maksu", noCommitment: "Ei sitoutumista", quick: "Aktiivinen minuuteissa", restaurants: "500+ ravintolaa" },
+  },
+  faq: {
+    eyebrow: "Kysymyksiä?", heading: "Usein kysytyt", headingAccent: "kysymykset.",
+    sub: "Mitä ravintoloitsijat kysyvät ennen rekisteröitymistä. Etkö näe omaasi? Kirjoita WhatsAppiin — oikeat ihmiset vastaavat.",
+    whatsappCta: "Kysy WhatsAppissa", whatsappPrefill: "Hei, minulla on kysymys IQ Restistä",
+    items: [
+      { q: "Mitä ilmaiskokeilu sisältää ja mitä sen jälkeen?", a: "14 päivää täysi pääsy, ei korttia. 14 päivän jälkeen tili pysähtyy, jos et lisää maksutapaa — emme veloita koskaan automaattisesti. Lisää maksutiedot myöhemmin aktivoidaksesi. Peruuta yhdellä napsautuksella." },
+      { q: "Otatteko provisiota tilauksista?", a: "Nolla. Jokainen tilaus QR-listastasi tulee suoraan sinulle — ei osuutta meille, ei Wolt / Foodora-maksuja. Yksi kiinteä kuukausihinta, siinä se." },
+      { q: "Tarvitsevatko asiakkaat sovelluksen? Tarvitsenko tekniset taidot?", a: "Ei sovelluksia asiakkaille — he skannaavat QR:n kameralla, lista avautuu selaimessa. Ei teknisiä taitoja sinulle — koko paneeli toimii puhelimessa, napauta lisätäksesi, vedä järjestääksesi, siinä koko oppimiskäyrä." },
+      { q: "Voinko hallita useita ravintoloita yhdestä tilistä?", a: "Kyllä. Pro-paketti antaa hallita useita ravintoloita samassa tilissä — erilliset listat, erilliset QR:t, erilliset analytiikat, yksi kirjautuminen. Vaihda kahdella napsautuksella." },
+      { q: "Kuinka nopeasti muutan hintoja ja lisään annoksia?", a: "Heti. Vaihda hinta puhelimessa, asiakkaat näkevät sekunneissa. Uusi annos? Napauta, kirjoita, kuva, valmis — ei tulosteita, ei suunnittelijan odotusta." },
+      { q: "Kuinka monta kieltä tuetaan?", a: "35 kieltä sisäänrakennetulla AI-käännöksellä. Yksi napsautus kääntää koko listan, AI ymmärtää kulinaarisen kontekstin — nimet ja kuvaukset kuulostavat luonnollisilta jokaisella kielellä. Turistit tilaavat enemmän kun ymmärtävät." },
+    ],
+  },
+  finalCta: { heading: "Valmis 2 minuutissa.", headingAccent: "Ilmaiseksi 14 päivää.", sub: "Ei korttia. Peruuta milloin haluat. Liity 500+ ravintolaan jo IQ Restissä." },
+  footer: {
+    featureLinks: [
+      { href: "/fi/online-orders", label: "Online-tilaukset" },
+      { href: "/fi/ai-translation", label: "AI-käännös" },
+      { href: "/fi/reservations", label: "Varaukset" },
+      { href: "/fi/mobile-management", label: "Mobiilihallinta" },
+      { href: "/fi/easy-menu", label: "Listan editori" },
+      { href: "/fi/custom-design", label: "Video- ja kuvataustat" },
+      { href: "/fi/color-scheme", label: "Brändivärit" },
+      { href: "/fi/multilingual", label: "Monikielinen sivusto" },
+      { href: "/fi/ai-images", label: "AI-kuvaoptimointi" },
+      { href: "/fi/analytics", label: "Analytiikka" },
+      { href: "/fi/instant-setup", label: "Välitön asennus" },
+      { href: "/fi/personal-support", label: "Henkilökohtainen tuki" },
+    ],
+    navLinks: [
+      { href: "#pricing", label: "Hinnat" }, { href: "#faq", label: "Kysymykset" },
+      { href: "/fi/contacts", label: "Yhteystiedot" }, { href: "/fi/changelog", label: "Uutiset" },
+      { href: "/fi/languages", label: "Vaihda kieli" },
+    ],
+    legalLinks: [
+      { href: "/fi/terms", label: "Ehdot" }, { href: "/fi/privacy", label: "Tietosuoja" },
+      { href: "/fi/cookies", label: "Evästeet" }, { href: "/sitemap.xml", label: "Sivustokartta" },
+    ],
+    copyrightTemplate: "© {year} IQ Rest. Kaikki oikeudet pidätetään.",
+  },
+};

@@ -12,7 +12,7 @@ import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { pickRandomVariant } from "@/app/_landing/lib/pick-variant";
 import { TEXTS } from "./texts";
 
-const LOCALE = "en";
+const LOCALE = "es";
 
 export const dynamic = "force-dynamic";
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "IQ Rest",
     locale: TEXTS.meta.ogLocale,
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest QR menu" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "IQ Rest carta QR" }],
   },
   twitter: {
     card: "summary_large_image",

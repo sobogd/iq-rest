@@ -1,0 +1,101 @@
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import type { LandingTexts } from "@/app/_landing/types";
+
+export const TEXTS: LandingTexts = {
+  htmlLang: "sr", htmlDir: "ltr",
+  meta: {
+    title: "QR Meni za Restorane — Direktne Porudžbine, Nula Provizija | IQ Rest",
+    description: "Kraj papirnim menijima i provizijama dostavnih aplikacija. QR meni, direktne porudžbine, rezervacije i višejezični sajt. 14 dana besplatno, bez kartice.",
+    canonical: "https://iq-rest.com/sr", ogLocale: "sr_RS",
+    ogTitle: "QR Meni za Restorane — Direktne Porudžbine, Nula Provizija",
+    ogDescription: "QR meni, direktne porudžbine, rezervacije i AI prevod. Spremno za 2 minuta. 14 dana besplatno — bez kartice.",
+  },
+  ctaText: "Počni besplatno →", microcopy: "14 dana besplatno · Bez kartice · Otkaži kad god želiš",
+  header: { navFeatures: "Funkcije", navHow: "Kako radi", navPricing: "Cene", navFaq: "FAQ", signIn: "Prijava", cta: "Počni besplatno →" },
+  hero: {
+    verticals: ["Restorani", "Kafići", "Barovi", "Hoteli", "Picerije"],
+    variants: [
+      { headline: "Prestani da štampaš menije.", headlineAccent: "Prestani da plaćaš 30% dostavnim aplikacijama.", sub: "QR meni, direktne porudžbine, rezervacije i višejezični sajt. Spremno za 2 minuta — bez kartice." },
+      { headline: "Tvoj restoran zaslužuje više od", headlineAccent: "papirnih menija i propuštenih poziva.", sub: "Direktne porudžbine, trenutna ažuriranja menija i rezervacije 24/7. Postavljeno za 2 minuta." },
+      { headline: "Jedan QR kod.", headlineAccent: "Nula provizija. Zbogom papiru.", sub: "QR meni, online porudžbine i rezervacije — sve na jednom mestu. 14 dana besplatno, bez kartice." },
+      { headline: "Primaj direktne porudžbine.", headlineAccent: "Preskoči proviziju.", sub: "Gosti skeniraju, naručuju i plaćaju — direktno tebi, bez Wolt udela. Spremno za 2 minuta." },
+      { headline: "Više porudžbina. Više rezervacija.", headlineAccent: "Bez papira, bez aplikacija.", sub: "QR meni + rezervacije + višejezični sajt na autopilotu. 14 dana besplatne probe." },
+      { headline: "Turisti ne razumeju meni?", headlineAccent: "Rešeno za 2 minuta.", sub: "AI prevodi ceo meni na 35 jezika. Plus QR porudžbine i rezervacije uključene." },
+      { headline: "Od papirnog menija do QR koda,", headlineAccent: "pre nego što se ohladi espreso.", sub: "QR meni, direktne porudžbine i rezervacije 24/7. Spremno za 2 minuta — bez kartice." },
+      { headline: "Osvežavajuće jednostavan QR meni.", headlineAccent: "Tiho moćan iznutra.", sub: "Direktne porudžbine, AI prevod, rezervacije i sajt — sve jednim dodirom na telefonu." },
+    ],
+    painBullets: ["Bez štampe — menjaj cene odmah", "Nula provizije — porudžbine direktno tebi", "Bez propuštenih poziva — rezervacije 24/7", "35 jezika — nikad ne izgubi turistu"],
+    rating: "4,9 · preko 500 restorana u 30+ zemalja",
+  },
+  features: {
+    heading: "Sve što ti treba.", headingAccent: "Ništa što ne treba.",
+    sub: "Napravljeno za restorane. Korišćeno za stolom.",
+    items: [
+      { Icon: ScanLine, title: "Zadrži 100% svake porudžbine", desc: "Gosti skeniraju, naručuju i plaćaju — direktno tebi. Bez aplikacija za skidanje, bez 30% za dostavu. Svaka porudžbina dolazi u realnom vremenu sa brojem stola u panel." },
+      { Icon: Languages, title: "Prodaj turistima na njihovom jeziku", desc: "Jedan dodir prevodi ceo meni na 35 jezika. AI razume kulinarni kontekst — gosti naručuju više kad zaista razumeju jelo." },
+      { Icon: CalendarCheck, title: "Ne gubi rezervacije dok kuvaš", desc: "Gosti rezervišu 24/7, bez poziva. Auto ili ručna potvrda, email podsetnici — manje nedolazaka, nula stresa." },
+      { Icon: Palette, title: "Nezaboravno za 1 sekundu", desc: "Stavi video kuhinje ili fotografiju jela kao pozadinu menija. Gosti prestaju da skroluju. Tvoj brend ostaje." },
+      { Icon: Smartphone, title: "Menjaj u sekundama, ne u danima", desc: "Cene, slike, dnevni meni — sa telefona, između stolova. Uživo gostima odmah. Nikad više štampanja." },
+      { Icon: ListPlus, title: "Ako šalješ WhatsApp, znaš da koristiš ovo", desc: "Dodirni za dodavanje jela. Prevuci za preuređivanje. Isključi rasprodato. Bez priručnika, bez tutorijala, bez krive učenja." },
+    ],
+  },
+  founder: {
+    eyebrow: "Napravio ugostitelj",
+    quoteStart: "Žena i ja smo otvorili kafić i nedeljama tražili sistem koji prima online porudžbine, rezervacije i izgleda moderno. Sve što smo probali bilo je nezgrapno, ružno ili je nedostajala polovina funkcija —",
+    quoteAccent: "pa smo napravili onaj koji bismo sami želeli.",
+    sign: "Bogdan Sokolov · osnivač, bivši vlasnik kafića",
+    photoAlt: "Bogdan, osnivač IQ Rest",
+  },
+  how: {
+    heading: "Uživo za manje od 2 minuta",
+    sub: "Četiri kratka koraka. Bez instalacija, bez tehničkih podešavanja.",
+    steps: [
+      { n: "1", t: "Registruj se", d: "Email ili Google. Bez kartice. Gotovo za 10 sekundi." },
+      { n: "2", t: "Ime restorana", d: "Samo upiši ime. Pojavljuje se na vrhu menija." },
+      { n: "3", t: "Dodaj prvo jelo", d: "Kategorija, ime, cena, slika. To je to." },
+      { n: "4", t: "Izaberi pozadinu i odštampaj QR", d: "Izaberi pozadinu. Uzmi QR. Zalepi na stolove." },
+    ],
+  },
+  pricing: {
+    badge: "Nula provizija · Bez ugovora",
+    heading: "Jedan plan.", headingAccent: "Sve uključeno.",
+    sub: "QR meni, porudžbine, AI prevod, sajt restorana i rezervacije. Jedna jednostavna cena.",
+    monthlyLabel: "Mesečno", yearlyLabel: "Godišnje", saveBadge: "Uštedi 25%", perMonth: "mesečno",
+    billedAnnually: "Godišnja naplata {total}", youSave: "Štediš {amount}",
+    trust: { secure: "Sigurno plaćanje sa Stripe", noCommitment: "Bez obaveze", quick: "Aktivno za minute", restaurants: "500+ restorana" },
+  },
+  faq: {
+    eyebrow: "Pitanja?", heading: "Često postavljana", headingAccent: "pitanja.",
+    sub: "Šta ugostitelji pitaju pre registracije. Ne vidiš svoje? Piši na WhatsApp — odgovaraju pravi ljudi.",
+    whatsappCta: "Pitaj na WhatsApp", whatsappPrefill: "Zdravo, imam pitanje o IQ Rest",
+    items: [
+      { q: "Šta uključuje besplatni probni period i šta posle?", a: "14 dana pun pristup, bez kartice. Posle 14 dana nalog se pauzira ako ne dodaš način plaćanja — nikad ne naplaćujemo automatski. Dodaj plaćanje kasnije za reaktivaciju. Otkaži jednim klikom." },
+      { q: "Da li uzimate proviziju od porudžbina?", a: "Nulu. Svaka porudžbina sa tvog QR menija ide direktno tebi — bez našeg udela, bez Wolt / Glovo naknada. Jedna fiksna mesečna cena, to je sve." },
+      { q: "Da li gostima treba aplikacija? Da li meni trebaju tehničke veštine?", a: "Bez aplikacija za goste — skeniraju QR kamerom, meni se otvara u pretraživaču. Bez tehničkih veština za tebe — ceo panel radi na mobilnom, dodirneš za dodavanje, prevučeš za preuređivanje, to je cela kriva." },
+      { q: "Da li mogu da upravljam sa više restorana iz jednog naloga?", a: "Da. Pro plan dozvoljava više restorana u istom nalogu — odvojeni meniji, odvojeni QR, odvojena statistika, jedna prijava. Prebacuj se sa dva dodira." },
+      { q: "Koliko brzo menjam cene i dodajem jela?", a: "Trenutno. Promeni cenu na telefonu, gosti vide u sekundama. Novo jelo? Dodirneš, napišeš, slika, gotovo — bez ponovnog štampanja, bez čekanja na dizajnera." },
+      { q: "Koliko jezika podržavate?", a: "35 jezika sa ugrađenim AI prevodom. Jedan dodir prevodi ceo meni, AI razume kulinarni kontekst — imena i opisi zvuče prirodno na svakom jeziku. Turisti naručuju više kad zaista razumeju." },
+    ],
+  },
+  finalCta: { heading: "Spremno za 2 minuta.", headingAccent: "Besplatno 14 dana.", sub: "Bez kartice. Otkaži kad god želiš. Pridruži se 500+ restorana već na IQ Rest." },
+  footer: {
+    featureLinks: [
+      { href: "/sr/online-orders", label: "Online porudžbine" }, { href: "/sr/ai-translation", label: "AI prevod" },
+      { href: "/sr/reservations", label: "Rezervacije" }, { href: "/sr/mobile-management", label: "Mobilno upravljanje" },
+      { href: "/sr/easy-menu", label: "Editor menija" }, { href: "/sr/custom-design", label: "Video i foto pozadine" },
+      { href: "/sr/color-scheme", label: "Boje brenda" }, { href: "/sr/multilingual", label: "Višejezični sajt" },
+      { href: "/sr/ai-images", label: "AI optimizacija slika" }, { href: "/sr/analytics", label: "Analitika" },
+      { href: "/sr/instant-setup", label: "Trenutna postavka" }, { href: "/sr/personal-support", label: "Lična podrška" },
+    ],
+    navLinks: [
+      { href: "#pricing", label: "Cene" }, { href: "#faq", label: "Pitanja" },
+      { href: "/sr/contacts", label: "Kontakt" }, { href: "/sr/changelog", label: "Novosti" },
+      { href: "/sr/languages", label: "Promeni jezik" },
+    ],
+    legalLinks: [
+      { href: "/sr/terms", label: "Uslovi" }, { href: "/sr/privacy", label: "Privatnost" },
+      { href: "/sr/cookies", label: "Kolačići" }, { href: "/sitemap.xml", label: "Mapa sajta" },
+    ],
+    copyrightTemplate: "© {year} IQ Rest. Sva prava zadržana.",
+  },
+};

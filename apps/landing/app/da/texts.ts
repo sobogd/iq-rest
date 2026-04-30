@@ -1,0 +1,107 @@
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import type { LandingTexts } from "@/app/_landing/types";
+
+export const TEXTS: LandingTexts = {
+  htmlLang: "da", htmlDir: "ltr",
+  meta: {
+    title: "QR-menu til Restauranter — Direkte Bestillinger, Nul Provision | IQ Rest",
+    description: "Slut med papirmenuer og leverings-app-provisioner. QR-menu, direkte bestillinger, reservationer og flersproget hjemmeside. 14 dage gratis, uden kort.",
+    canonical: "https://iq-rest.com/da", ogLocale: "da_DK",
+    ogTitle: "QR-menu til Restauranter — Direkte Bestillinger, Nul Provision",
+    ogDescription: "QR-menu, direkte bestillinger, reservationer og AI-oversættelse. Klar på 2 minutter. 14 dage gratis — uden kort.",
+  },
+  ctaText: "Start gratis →", microcopy: "14 dage gratis · Intet kort · Stop når du vil",
+  header: { navFeatures: "Funktioner", navHow: "Sådan virker det", navPricing: "Priser", navFaq: "FAQ", signIn: "Log ind", cta: "Start gratis →" },
+  hero: {
+    verticals: ["Restauranter", "Caféer", "Barer", "Hoteller", "Pizzeriaer"],
+    variants: [
+      { headline: "Stop med at trykke menuer.", headlineAccent: "Stop med at give 30% til leveringsapps.", sub: "QR-menu, direkte bestillinger, reservationer og flersproget side. Klar på 2 minutter — uden kort." },
+      { headline: "Din restaurant fortjener mere end", headlineAccent: "papirmenuer og mistede opkald.", sub: "Direkte bestillinger, øjeblikkelige menuopdateringer og reservationer 24/7. Sat op på 2 minutter." },
+      { headline: "Én QR-kode.", headlineAccent: "Nul provision. Farvel papir.", sub: "QR-menu, online-bestillinger og reservationer — alt ét sted. 14 dage gratis, uden kort." },
+      { headline: "Få direkte bestillinger.", headlineAccent: "Skip provisionen.", sub: "Gæster scanner, bestiller og betaler — direkte til dig, uden Just Eat-snit. Klar på 2 minutter." },
+      { headline: "Flere bestillinger. Flere reservationer.", headlineAccent: "Intet papir, ingen apps.", sub: "QR-menu + reservationer + flersproget side på autopilot. 14 dages prøve gratis." },
+      { headline: "Turister forstår ikke menuen?", headlineAccent: "Løst på 2 minutter.", sub: "AI oversætter hele menuen til 35 sprog. Plus QR-bestillinger og reservationer inkluderet." },
+      { headline: "Fra papirmenu til QR-kode,", headlineAccent: "før espressoen bliver kold.", sub: "QR-menu, direkte bestillinger og reservationer 24/7. Klar på 2 minutter — uden kort." },
+      { headline: "Forfriskende simpel QR-menu.", headlineAccent: "Stille kraftfuld indeni.", sub: "Direkte bestillinger, AI-oversættelse, reservationer og hjemmeside — alt med ét tryk på telefonen." },
+    ],
+    painBullets: ["Ingen tryk — skift priser med det samme", "Nul provision — bestillinger direkte til dig", "Ingen mistede opkald — reservationer 24/7", "35 sprog — mist aldrig en turist"],
+    rating: "4,9 · over 500 restauranter i 30+ lande",
+  },
+  features: {
+    heading: "Alt du har brug for.", headingAccent: "Intet du ikke har.",
+    sub: "Lavet til restauranter. Brugt ved bordet.",
+    items: [
+      { Icon: ScanLine, title: "Behold 100% af hver bestilling", desc: "Gæster scanner, bestiller og betaler — direkte til dig. Ingen apps at downloade, ingen 30% til levering. Hver bestilling lander i realtid med bordnummer i dit dashboard." },
+      { Icon: Languages, title: "Sælg til turister på deres sprog", desc: "Ét tryk oversætter hele menuen til 35 sprog. AI fanger kulinarisk kontekst — gæster bestiller mere, når de virkelig forstår retten." },
+      { Icon: CalendarCheck, title: "Mist ingen reservationer i køkkenet", desc: "Gæster reserverer 24/7, ingen opkald. Auto- eller manuel bekræftelse, e-mail-påmindelser inkluderet — færre no-shows, nul stress." },
+      { Icon: Palette, title: "Uforglemmelig på 1 sekund", desc: "Læg en køkkenvideo eller et helbillede ind som menubaggrund. Gæster stopper med at scrolle. Dit brand sidder fast." },
+      { Icon: Smartphone, title: "Opdater på sekunder, ikke dage", desc: "Skift priser, byt fotos, tilføj dagens ret — fra telefonen, mellem borde. Live for gæsterne med det samme. Aldrig mere tryk." },
+      { Icon: ListPlus, title: "Kan du sms'e, kan du dette", desc: "Tryk for at tilføje en ret. Træk for at omsortere. Sluk det udsolgte. Ingen manualer, ingen tutorials, ingen indlæringskurve." },
+    ],
+  },
+  founder: {
+    eyebrow: "Bygget af en restauratør",
+    quoteStart: "Min kone og jeg åbnede en café og brugte uger på at lede efter et system, der kunne håndtere onlinebestillinger, reservationer og samtidig se moderne ud. Alt vi prøvede var klodset, grimt eller manglede halvdelen af funktionerne —",
+    quoteAccent: "så vi byggede det vi selv ville have.",
+    sign: "Bogdan Sokolov · grundlægger, eks-caféejer",
+    photoAlt: "Bogdan, grundlægger af IQ Rest",
+  },
+  how: {
+    heading: "Live på under 2 minutter",
+    sub: "Fire korte trin. Ingen installation, ingen teknisk opsætning.",
+    steps: [
+      { n: "1", t: "Tilmeld dig", d: "E-mail eller Google. Intet kort. Klart på 10 sekunder." },
+      { n: "2", t: "Restaurantens navn", d: "Skriv navnet. Vises øverst på menuen." },
+      { n: "3", t: "Tilføj din første ret", d: "Kategori, navn, pris, foto. Det var det." },
+      { n: "4", t: "Vælg cover og print QR", d: "Vælg baggrund. Hent din QR. Sæt på bordene." },
+    ],
+  },
+  pricing: {
+    badge: "Nul provision · Ingen kontrakter",
+    heading: "Én plan.", headingAccent: "Alt inkluderet.",
+    sub: "QR-menu, bestillinger, AI-oversættelse, restaurant-hjemmeside og reservationer. Én simpel pris.",
+    monthlyLabel: "Månedligt", yearlyLabel: "Årligt", saveBadge: "Spar 25%", perMonth: "om måneden",
+    billedAnnually: "Faktureres årligt {total}", youSave: "Du sparer {amount}",
+    trust: { secure: "Sikker betaling med Stripe", noCommitment: "Ingen binding", quick: "Aktiv på minutter", restaurants: "500+ restauranter" },
+  },
+  faq: {
+    eyebrow: "Spørgsmål?", heading: "Ofte stillede", headingAccent: "spørgsmål.",
+    sub: "Det restauratører spørger om før tilmelding. Mangler dit? Skriv på WhatsApp — rigtige mennesker svarer.",
+    whatsappCta: "Spørg på WhatsApp", whatsappPrefill: "Hej, jeg har et spørgsmål om IQ Rest",
+    items: [
+      { q: "Hvad inkluderer prøveperioden, og hvad sker bagefter?", a: "14 dage fuld adgang, intet kort. Efter 14 dage pauser din konto, hvis du ikke tilføjer en betalingsmetode — vi trækker aldrig automatisk. Tilføj betalingsoplysninger senere for at genaktivere. Stop med ét klik." },
+      { q: "Tager I provision af bestillinger?", a: "Nul. Hver bestilling fra din QR-menu går direkte til dig — ingen andel til os, ingen Just Eat / Wolt-gebyrer. Én fast månedlig pris, det er det." },
+      { q: "Skal gæsterne bruge en app? Skal jeg være teknisk?", a: "Ingen apps for gæsterne — de scanner QR med kameraet, menuen åbner i browseren. Ingen tekniske evner for dig — hele dashboardet virker i mobilen, tryk for at tilføje, træk for at omsortere, det er hele kurven." },
+      { q: "Kan jeg styre flere restauranter fra én konto?", a: "Ja. Pro-planen tillader flere restauranter i samme konto — adskilte menuer, adskilte QR-koder, adskilt statistik, ét login. Skift mellem dem på to tryk." },
+      { q: "Hvor hurtigt ændrer jeg priser og tilføjer retter?", a: "Med det samme. Ændr en pris på telefonen, gæsterne ser det på sekunder. Ny ret? Tryk, skriv, foto, færdig — ingen genoptryk, ingen designer at vente på." },
+      { q: "Hvor mange sprog understøttes?", a: "35 sprog med indbygget AI-oversættelse. Ét tryk oversætter hele menuen, AI forstår kulinarisk kontekst — navne og beskrivelser lyder naturligt på hvert sprog. Turister bestiller mere, når de virkelig forstår." },
+    ],
+  },
+  finalCta: { heading: "Klar på 2 minutter.", headingAccent: "Gratis i 14 dage.", sub: "Intet kort. Stop når du vil. Bliv en del af 500+ restauranter allerede på IQ Rest." },
+  footer: {
+    featureLinks: [
+      { href: "/da/online-orders", label: "Onlinebestillinger" },
+      { href: "/da/ai-translation", label: "AI-oversættelse" },
+      { href: "/da/reservations", label: "Reservationer" },
+      { href: "/da/mobile-management", label: "Mobilstyring" },
+      { href: "/da/easy-menu", label: "Menu-editor" },
+      { href: "/da/custom-design", label: "Video- og fotobaggrunde" },
+      { href: "/da/color-scheme", label: "Brandfarver" },
+      { href: "/da/multilingual", label: "Flersproget side" },
+      { href: "/da/ai-images", label: "AI-billedoptimering" },
+      { href: "/da/analytics", label: "Statistik" },
+      { href: "/da/instant-setup", label: "Øjeblikkelig opsætning" },
+      { href: "/da/personal-support", label: "Personlig support" },
+    ],
+    navLinks: [
+      { href: "#pricing", label: "Priser" }, { href: "#faq", label: "Spørgsmål" },
+      { href: "/da/contacts", label: "Kontakt" }, { href: "/da/changelog", label: "Nyheder" },
+      { href: "/da/languages", label: "Skift sprog" },
+    ],
+    legalLinks: [
+      { href: "/da/terms", label: "Vilkår" }, { href: "/da/privacy", label: "Privatliv" },
+      { href: "/da/cookies", label: "Cookies" }, { href: "/sitemap.xml", label: "Sitemap" },
+    ],
+    copyrightTemplate: "© {year} IQ Rest. Alle rettigheder forbeholdes.",
+  },
+};
