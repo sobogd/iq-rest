@@ -2,6 +2,8 @@
 
 import { createUrl, loginUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
+import { CookieBanner } from "@/components/cookie-consent/banner";
+import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
 import type { LandingTexts } from "../types";
 
 interface HeaderProps {
@@ -16,6 +18,7 @@ export function LandingHeader({ texts, locale }: HeaderProps) {
   const createHref = `${createUrl(locale)}&from=landing`;
 
   return (
+    <>
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-3 relative">
         <a
@@ -49,5 +52,7 @@ export function LandingHeader({ texts, locale }: HeaderProps) {
         </div>
       </div>
     </header>
+    <CookieBanner texts={getCookieTexts(locale)} />
+    </>
   );
 }

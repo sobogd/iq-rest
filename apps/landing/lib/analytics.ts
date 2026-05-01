@@ -1,6 +1,10 @@
 // Thin wrapper around the central analytics API in dashboard-api.
 // Every event funnels through one endpoint with a client-side UTC
 // timestamp and a single apex-domain cookie shared with the dashboard.
+// All write paths short-circuit when the visitor hasn't accepted the cookie banner —
+// no analytics_sid cookie is set and no events are sent in that case.
+
+import { hasAnalyticsConsent } from "./cookie-consent";
 
 const API_BASE = "https://dashboard-api.iq-rest.com";
 const GCLID_KEY = "analytics_gclid";
@@ -62,6 +66,7 @@ function getGclid(): string | null {
 
 function track(event: string): void {
   if (typeof window === "undefined") return;
+  if (!hasAnalyticsConsent()) return;
   ensureSid();
   const gclid = getGclid();
   fetch(`${API_BASE}/api/analytics/event`, {
@@ -75,6 +80,7 @@ function track(event: string): void {
 
 function linkSession(_userId?: string): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
+  if (!hasAnalyticsConsent()) return Promise.resolve();
   ensureSid();
   return fetch(`${API_BASE}/api/analytics/identify`, {
     method: "POST",
