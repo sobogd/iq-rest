@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { analytics } from "@/lib/analytics";
 import { getConsent, setConsent } from "@/lib/cookie-consent";
 import {
   COOKIE_POLICY_TITLE,
@@ -36,19 +37,32 @@ export function CookieBanner({ texts }: CookieBannerProps) {
   const [legal, setLegal] = useState<LegalView>(null);
 
   useEffect(() => {
-    setShow(getConsent() === null);
+    const undecided = getConsent() === null;
+    setShow(undecided);
+    if (undecided) analytics.track("land_consent_banner_shown");
     const onChange = () => setShow(getConsent() === null);
     window.addEventListener("cookie-consent-change", onChange);
     return () => window.removeEventListener("cookie-consent-change", onChange);
   }, []);
 
   function handleAccept() {
+    analytics.track("land_consent_accept_click");
     setConsent("accepted");
     setShow(false);
   }
   function handleReject() {
+    // Fire BEFORE flipping consent — once "rejected" is set the analytics module no-ops.
+    analytics.track("land_consent_reject_click");
     setConsent("rejected");
     setShow(false);
+  }
+  function openLegal(view: "policy" | "privacy" | "terms") {
+    analytics.track(
+      view === "policy" ? "land_consent_open_cookie_policy" :
+      view === "privacy" ? "land_consent_open_privacy_policy" :
+      "land_consent_open_terms",
+    );
+    setLegal(view);
   }
 
   if (show !== true) {
@@ -68,7 +82,7 @@ export function CookieBanner({ texts }: CookieBannerProps) {
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
             <button
               type="button"
-              onClick={() => setLegal("policy")}
+              onClick={() => openLegal("policy")}
               className="underline underline-offset-2 hover:text-foreground transition-colors"
             >
               {texts.cookiePolicyLink}
@@ -76,7 +90,7 @@ export function CookieBanner({ texts }: CookieBannerProps) {
             <span>·</span>
             <button
               type="button"
-              onClick={() => setLegal("privacy")}
+              onClick={() => openLegal("privacy")}
               className="underline underline-offset-2 hover:text-foreground transition-colors"
             >
               {texts.privacyPolicyLink}
@@ -84,7 +98,7 @@ export function CookieBanner({ texts }: CookieBannerProps) {
             <span>·</span>
             <button
               type="button"
-              onClick={() => setLegal("terms")}
+              onClick={() => openLegal("terms")}
               className="underline underline-offset-2 hover:text-foreground transition-colors"
             >
               {texts.termsLink}
