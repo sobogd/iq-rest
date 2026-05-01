@@ -682,14 +682,6 @@
       "error": "No s'ha pogut enviar el missatge. Si us plau, torna-ho a intentar més tard."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Trieu l'idioma - IQ Rest QR Menú",
-      "description": "Navegueu per IQ Rest en el vostre idioma preferit. Disponible en 35 idiomes."
-    },
-    "title": "Trieu l'idioma",
-    "subtitle": "Navegueu per IQ Rest en el vostre idioma preferit"
-  },
   "cookieConsent": {
     "title": "Fem servir galetes",
     "description": "Fem servir galetes per millorar la teva experiència de navegació, oferir contingut personalitzat i analitzar el nostre trànsit. En fer clic a \"Acceptar Totes\", consenteixes l'ús de galetes.",

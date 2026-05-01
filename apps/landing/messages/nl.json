@@ -682,14 +682,6 @@
       "error": "Verzenden van bericht mislukt. Probeer het later opnieuw."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Taal kiezen - IQ Rest QR Menu",
-      "description": "Bekijk IQ Rest in uw voorkeurstaal. Beschikbaar in 35 talen."
-    },
-    "title": "Taal kiezen",
-    "subtitle": "Bekijk IQ Rest in uw voorkeurstaal"
-  },
   "cookieConsent": {
     "title": "Wij gebruiken cookies",
     "description": "Wij gebruiken cookies om uw browse-ervaring te verbeteren, gepersonaliseerde inhoud te bieden en ons verkeer te analyseren. Door op \"Alles Accepteren\" te klikken, stemt u in met ons gebruik van cookies.",

@@ -682,14 +682,6 @@
       "error": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Dil seçin - IQ Rest QR Menü",
-      "description": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin. 35 dilde mevcuttur."
-    },
-    "title": "Dil seçin",
-    "subtitle": "IQ Rest'i tercih ettiğiniz dilde görüntüleyin"
-  },
   "cookieConsent": {
     "title": "Çerezleri Kullanıyoruz",
     "description": "Tarayıcı deneyiminizi geliştirmek, kişiselleştirilmiş içerik sunmak ve trafiğimizi analiz etmek için çerezler kullanıyoruz. \"Tümünü Kabul Et\" butonuna tıklayarak çerez kullanımımızı kabul etmiş olursunuz.",

@@ -682,14 +682,6 @@
       "error": "Trimiterea mesajului a eșuat. Te rog să încerci din nou mai târziu."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Alegeți limba - IQ Rest QR Meniu",
-      "description": "Răsfoiți IQ Rest în limba dvs. preferată. Disponibil în 35 de limbi."
-    },
-    "title": "Alegeți limba",
-    "subtitle": "Răsfoiți IQ Rest în limba dvs. preferată"
-  },
   "cookieConsent": {
     "title": "Folosim cookie-uri",
     "description": "Folosim cookie-uri pentru a îmbunătăți experiența ta de navigare, a oferi conținut personalizat și a analiza traficul nostru. Prin clic pe \"Acceptă Tot\", consimți la utilizarea cookie-urilor.",

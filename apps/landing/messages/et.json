@@ -682,14 +682,6 @@
       "error": "Sõnumi saatmine ebaõnnestus. Palun proovige hiljem uuesti."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Valige keel - IQ Rest QR-menüü",
-      "description": "Sirvige IQ Resti oma eelistatud keeles. Saadaval 35 keeles."
-    },
-    "title": "Valige keel",
-    "subtitle": "Sirvige IQ Resti oma eelistatud keeles"
-  },
   "cookieConsent": {
     "title": "Kasutame küpsiseid",
     "description": "Kasutame küpsiseid, et parandada teie sirvimiskogemust, pakkuda isikupärastatud sisu ja analüüsida meie liiklust. Klõpsates \"Aktsepteeri kõik\", nõustute meie küpsiste kasutamisega.",

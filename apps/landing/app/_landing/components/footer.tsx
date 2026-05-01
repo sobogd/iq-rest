@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { analytics } from "@/lib/analytics";
 import { clearConsent } from "@/lib/cookie-consent";
 import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
+import { LanguageSwitcherModal } from "@/components/language-switcher/modal";
 import type { LandingTexts } from "../types";
 
 interface FooterProps {
@@ -23,8 +25,12 @@ export function LandingFooter({ texts, locale }: FooterProps) {
   const year = new Date().getFullYear();
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
   const cookieTexts = getCookieTexts(locale);
+  const [langOpen, setLangOpen] = useState(false);
+  // Filter out the standalone languages link — replaced by the modal trigger below.
+  const navLinksFiltered = texts.navLinks.filter((l) => !l.href.endsWith("/languages"));
 
   return (
+    <>
     <footer className="border-t border-border bg-muted/20" data-section="footer">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
@@ -43,7 +49,7 @@ export function LandingFooter({ texts, locale }: FooterProps) {
 
           <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-end">
             <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs">
-              {texts.navLinks.map((link) => (
+              {navLinksFiltered.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -53,6 +59,16 @@ export function LandingFooter({ texts, locale }: FooterProps) {
                   {link.label}
                 </a>
               ))}
+              <button
+                type="button"
+                onClick={() => {
+                  analytics.track("land_footer_language_click");
+                  setLangOpen(true);
+                }}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {cookieTexts.languageSwitcher}
+              </button>
             </nav>
             <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs text-muted-foreground">
               <a
@@ -82,5 +98,12 @@ export function LandingFooter({ texts, locale }: FooterProps) {
         </div>
       </div>
     </footer>
+    <LanguageSwitcherModal
+      open={langOpen}
+      onClose={() => setLangOpen(false)}
+      currentLocale={locale}
+      title={cookieTexts.languageSwitcher}
+    />
+    </>
   );
 }

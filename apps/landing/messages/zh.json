@@ -682,14 +682,6 @@
       "error": "发送消息失败。请稍后再试。"
     }
   },
-  "languages": {
-    "meta": {
-      "title": "选择语言 - IQ Rest QR 菜单",
-      "description": "用您偏好的语言浏览 IQ Rest。支持35种语言。"
-    },
-    "title": "选择语言",
-    "subtitle": "用您偏好的语言浏览 IQ Rest"
-  },
   "cookieConsent": {
     "title": "我们使用Cookie",
     "description": "我们使用Cookie来增强您的浏览体验、提供个性化内容并分析我们的流量。点击「全部接受」，即表示您同意我们使用Cookie。",

@@ -682,14 +682,6 @@
       "error": "Viestin lähettäminen epäonnistui. Yritä myöhemmin uudelleen."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Valitse kieli - IQ Rest QR-menu",
-      "description": "Selaa IQ Restiä haluamallasi kielellä. Saatavilla 35 kielellä."
-    },
-    "title": "Valitse kieli",
-    "subtitle": "Selaa IQ Restiä haluamallasi kielellä"
-  },
   "cookieConsent": {
     "title": "Käytämme evästeitä",
     "description": "Käytämme evästeitä parantaaksemme selauskokemustasi, tarjotaksemme henkilökohtaista sisältöä ja analysoidaksemme liikennettämme. Napsauttamalla \"Hyväksy kaikki\" hyväksyt evästeiden käytön.",

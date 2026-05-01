@@ -682,14 +682,6 @@
       "error": "Kunne ikke sende meldingen. Vennligst prøv igjen senere."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Velg språk - IQ Rest QR-meny",
-      "description": "Se IQ Rest på ditt foretrukne språk. Tilgjengelig på 35 språk."
-    },
-    "title": "Velg språk",
-    "subtitle": "Se IQ Rest på ditt foretrukne språk"
-  },
   "cookieConsent": {
     "title": "Vi bruker informasjonskapsler",
     "description": "Vi bruker informasjonskapsler for å forbedre din nettleseropplevelse, tilby personlig innhold og analysere vår trafikk. Ved å klikke på \"Godta alt\", samtykker du til vår bruk av informasjonskapsler.",

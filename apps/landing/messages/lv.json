@@ -682,14 +682,6 @@
       "error": "Ziņojuma nosūtīšana neizdevās. Lūdzu, mēģiniet vēlreiz vēlāk."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Izvēlēties valodu - IQ Rest QR ēdienkarte",
-      "description": "Pārlūkojiet IQ Rest savā vēlamajā valodā. Pieejams 35 valodās."
-    },
-    "title": "Izvēlēties valodu",
-    "subtitle": "Pārlūkojiet IQ Rest savā vēlamajā valodā"
-  },
   "cookieConsent": {
     "title": "Mēs izmantojam sīkdatnes",
     "description": "Mēs izmantojam sīkdatnes, lai uzlabotu jūsu pārlūkošanas pieredzi, sniegtu personalizētu saturu un analizētu mūsu trafiku. Noklikšķinot uz \"Pieņemt visu\", jūs piekrītat mūsu sīkdatņu izmantošanai.",

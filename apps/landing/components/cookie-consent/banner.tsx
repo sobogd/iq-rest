@@ -23,6 +23,7 @@ export type CookieBannerTexts = {
   privacyPolicyLink: string;
   termsLink: string;
   cookieSettings: string;
+  languageSwitcher: string;
 };
 
 interface CookieBannerProps {

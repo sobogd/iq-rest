@@ -682,14 +682,6 @@
       "error": "Slanje poruke nije uspelo. Molimo pokušajte ponovo kasnije."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Изаберите језик - IQ Rest QR Мени",
-      "description": "Прегледајте IQ Rest на жељеном језику. Доступно на 35 језика."
-    },
-    "title": "Изаберите језик",
-    "subtitle": "Прегледајте IQ Rest на жељеном језику"
-  },
   "cookieConsent": {
     "title": "Koristimo kolačiće",
     "description": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo pretraživanja, pružili personalizovan sadržaj i analizirali naš saobraćaj. Klikom na \"Prihvati sve\" pristajete na našu upotrebu kolačića.",

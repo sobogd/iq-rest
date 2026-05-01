@@ -682,14 +682,6 @@
       "error": "Pošiljanje sporočila ni uspelo. Poskusite znova kasneje."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Izberite jezik - IQ Rest QR Meni",
-      "description": "Brskajte po IQ Rest v želenem jeziku. Na voljo v 35 jezikih."
-    },
-    "title": "Izberite jezik",
-    "subtitle": "Brskajte po IQ Rest v želenem jeziku"
-  },
   "cookieConsent": {
     "title": "Uporabljamo piškotke",
     "description": "Uporabljamo piškotke za izboljšanje vaše izkušnje brskanja, zagotavljanje prilagojenih vsebin in analizo našega prometa. S klikom na \"Sprejmi vse\" se strinjate z našo uporabo piškotkov.",

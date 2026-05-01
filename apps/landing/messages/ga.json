@@ -682,14 +682,6 @@
       "error": "Theip ar an teachtaireacht a sheoladh. Bain triail as arís níos déanaí."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Roghnaigh teanga - IQ Rest QR Biachlár",
-      "description": "Brabhsáil IQ Rest i do theanga roghnaithe. Ar fáil i 35 teanga."
-    },
-    "title": "Roghnaigh teanga",
-    "subtitle": "Brabhsáil IQ Rest i do theanga roghnaithe"
-  },
   "cookieConsent": {
     "title": "Úsáidimid fianáin",
     "description": "Úsáidimid fianáin chun do thaithí brabhsála a fheabhsú, ábhar pearsanta a sholáthar, agus ár dtrácht a anailísiú. Trí chliceáil ar \"Glac Leis An Gach Rud\", tugann tú do thoiliú d'úsáid fianán.",

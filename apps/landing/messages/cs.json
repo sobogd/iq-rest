@@ -682,14 +682,6 @@
       "error": "Odeslání zprávy se nezdařilo. Zkuste to prosím znovu později."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Vybrat jazyk - IQ Rest QR menu",
-      "description": "Prohlížejte IQ Rest ve vašem preferovaném jazyce. K dispozici ve 35 jazycích."
-    },
-    "title": "Vybrat jazyk",
-    "subtitle": "Prohlížejte IQ Rest ve vašem preferovaném jazyce"
-  },
   "cookieConsent": {
     "title": "Používáme cookies",
     "description": "Používáme cookies, abychom zlepšili váš zážitek z prohlížení, poskytli personalizovaný obsah a analyzovali náš provoz. Kliknutím na \"Přijmout vše\" souhlasíte s naším používáním cookies.",

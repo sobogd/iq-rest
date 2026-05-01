@@ -682,14 +682,6 @@
       "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Sprache wählen - IQ Rest QR-Menü",
-      "description": "IQ Rest in Ihrer bevorzugten Sprache. Verfügbar in 35 Sprachen."
-    },
-    "title": "Sprache wählen",
-    "subtitle": "IQ Rest in Ihrer bevorzugten Sprache"
-  },
   "cookieConsent": {
     "title": "Wir verwenden Cookies",
     "description": "Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern, personalisierte Inhalte bereitzustellen und unseren Verkehr zu analysieren. Durch Klicken auf \"Alle akzeptieren\" stimmen Sie der Verwendung von Cookies zu.",

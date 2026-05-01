@@ -682,14 +682,6 @@
       "error": "Nie udało się wysłać wiadomości. Proszę spróbować ponownie później."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Wybierz język - IQ Rest QR Menu",
-      "description": "Przeglądaj IQ Rest w preferowanym języku. Dostępne w 35 językach."
-    },
-    "title": "Wybierz język",
-    "subtitle": "Przeglądaj IQ Rest w preferowanym języku"
-  },
   "cookieConsent": {
     "title": "Używamy plików cookie",
     "description": "Używamy plików cookie, aby poprawić Twoje doświadczenia podczas przeglądania, dostarczać spersonalizowane treści i analizować nasz ruch. Klikając \"Akceptuj wszystkie\", wyrażasz zgodę na nasze użycie plików cookie.",

@@ -682,14 +682,6 @@
       "error": "Misslyckades med att skicka meddelande. Vänligen försök igen senare."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Välj språk - IQ Rest QR-meny",
-      "description": "Bläddra i IQ Rest på ditt föredragna språk. Tillgängligt på 35 språk."
-    },
-    "title": "Välj språk",
-    "subtitle": "Bläddra i IQ Rest på ditt föredragna språk"
-  },
   "cookieConsent": {
     "title": "Vi använder cookies",
     "description": "Vi använder cookies för att förbättra din surfupplevelse, servera personligt innehåll och analysera vår trafik. Genom att klicka på \"Acceptera alla\" samtycker du till vår användning av cookies.",

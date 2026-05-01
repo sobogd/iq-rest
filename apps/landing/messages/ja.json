@@ -682,14 +682,6 @@
       "error": "メッセージの送信に失敗しました。後でもう一度お試しください。"
     }
   },
-  "languages": {
-    "meta": {
-      "title": "言語を選択 - IQ Rest QRメニュー",
-      "description": "お好みの言語でIQ Restをご覧ください。35言語に対応。"
-    },
-    "title": "言語を選択",
-    "subtitle": "お好みの言語でIQ Restをご覧ください"
-  },
   "cookieConsent": {
     "title": "Cookieを使用しています",
     "description": "ブラウジング体験の向上、パーソナライズされたコンテンツの提供、トラフィックの分析のためにCookieを使用しています。",

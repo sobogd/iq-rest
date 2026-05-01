@@ -682,14 +682,6 @@
       "error": "Žinutės siuntimas nepavyko. Prašome bandyti vėliau."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Pasirinkite kalbą - IQ Rest QR meniu",
-      "description": "Naršykite IQ Rest pageidaujama kalba. Prieinama 35 kalbomis."
-    },
-    "title": "Pasirinkite kalbą",
-    "subtitle": "Naršykite IQ Rest pageidaujama kalba"
-  },
   "cookieConsent": {
     "title": "Mes naudojame slapukus",
     "description": "Mes naudojame slapukus, kad pagerintume jūsų naršymo patirtį, pateiktume suasmenintą turinį ir analizuotume mūsų srautą. Paspaudę \"Priimti viską\", jūs sutinkate su mūsų slapukų naudojimu.",

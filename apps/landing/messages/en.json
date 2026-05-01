@@ -682,14 +682,6 @@
       "error": "Failed to send message. Please try again later."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Choose Language - IQ Rest QR Menu",
-      "description": "Browse IQ Rest in your preferred language. Available in 35 languages including English, Spanish, French, German, and more."
-    },
-    "title": "Choose Language",
-    "subtitle": "Browse IQ Rest in your preferred language"
-  },
   "cookieConsent": {
     "title": "We use cookies",
     "description": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",

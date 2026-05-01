@@ -682,14 +682,6 @@
       "error": "Invio del messaggio non riuscito. Per favore riprova più tardi."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Scegli la lingua - IQ Rest QR Menu",
-      "description": "Naviga IQ Rest nella tua lingua preferita. Disponibile in 35 lingue."
-    },
-    "title": "Scegli la lingua",
-    "subtitle": "Naviga IQ Rest nella tua lingua preferita"
-  },
   "cookieConsent": {
     "title": "Utilizziamo i cookie",
     "description": "Utilizziamo i cookie per migliorare la tua esperienza di navigazione, offrire contenuti personalizzati e analizzare il nostro traffico. Cliccando su \"Accetta tutto\", acconsenti al nostro utilizzo dei cookie.",

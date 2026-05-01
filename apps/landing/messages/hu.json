@@ -682,14 +682,6 @@
       "error": "Az üzenet küldése nem sikerült. Kérjük, próbálja meg később."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Nyelv kiválasztása - IQ Rest QR Menü",
-      "description": "Böngéssze az IQ Rest-et az Ön által preferált nyelven. 35 nyelven elérhető."
-    },
-    "title": "Nyelv kiválasztása",
-    "subtitle": "Böngéssze az IQ Rest-et az Ön által preferált nyelven"
-  },
   "cookieConsent": {
     "title": "Sütiket használunk",
     "description": "Sütiket használunk a böngészési élmény fokozására, személyre szabott tartalom szolgáltatására és a forgalmunk elemzésére. Az \"Összes elfogadása\" gombra kattintva hozzájárul a sütik használatához.",

@@ -682,14 +682,6 @@
       "error": "Slanje poruke nije uspjelo. Pokušajte ponovo kasnije."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Odaberite jezik - IQ Rest QR Izbornik",
-      "description": "Pregledajte IQ Rest na željenom jeziku. Dostupno na 35 jezika."
-    },
-    "title": "Odaberite jezik",
-    "subtitle": "Pregledajte IQ Rest na željenom jeziku"
-  },
   "cookieConsent": {
     "title": "Koristimo kolačiće",
     "description": "Koristimo kolačiće za poboljšanje vašeg iskustva pregledavanja, pružanje personaliziranog sadržaja i analizu našeg prometa. Klikom na \"Prihvati sve\" pristajete na našu upotrebu kolačića.",

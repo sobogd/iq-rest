@@ -682,14 +682,6 @@
       "error": "Mistókst að senda skilaboð. Vinsamlegast reyndu aftur síðar."
     }
   },
-  "languages": {
-    "meta": {
-      "title": "Velja tungumál - IQ Rest QR Matseðill",
-      "description": "Skoðaðu IQ Rest á þínu tungumáli. Fáanlegt á 35 tungumálum."
-    },
-    "title": "Velja tungumál",
-    "subtitle": "Skoðaðu IQ Rest á þínu tungumáli"
-  },
   "cookieConsent": {
     "title": "Við notum vefkökurnar",
     "description": "Við notum vefkökurnar til að bæta vefskoðun þína, veita persónulega efni og greina umferð okkar. Með því að smella á \"Samþykkja allt\" samþykkir þú notkun okkar á vefkökum.",
