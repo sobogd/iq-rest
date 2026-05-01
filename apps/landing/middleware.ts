@@ -31,6 +31,7 @@ const localePattern = locales.join("|");
 const localeRegex = new RegExp(`^/(${localePattern})(/|$)`);
 
 const GEO_COUNTRY_COOKIE = "geo_country";
+const GEO_REGION_COOKIE = "geo_region";
 const GEO_CITY_COOKIE = "geo_city";
 const GEO_IP_COOKIE = "geo_ip";
 const GEO_UA_COOKIE = "geo_ua";
@@ -72,6 +73,7 @@ function detectLocaleByCountry(request: NextRequest): Locale {
  */
 function setGeoCookies(request: NextRequest, response: NextResponse): void {
   const cfCountry = request.headers.get("cf-ipcountry");
+  const region = request.headers.get("cf-region");
   const city = request.headers.get("cf-ipcity");
 
   // Проверяем есть ли уже кука geo_country (могла быть установлена через ?country=)
@@ -98,6 +100,20 @@ function setGeoCookies(request: NextRequest, response: NextResponse): void {
     });
   } else {
     response.cookies.set(CURRENCY_COOKIE, "EUR", {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7, // 1 week
+      sameSite: "lax",
+    });
+  }
+
+  if (region) {
+    let decodedRegion = region;
+    try {
+      decodedRegion = decodeURIComponent(region);
+    } catch {
+      // ignore
+    }
+    response.cookies.set(GEO_REGION_COOKIE, decodedRegion, {
       path: "/",
       maxAge: 60 * 60 * 24 * 7, // 1 week
       sameSite: "lax",
