@@ -50,16 +50,11 @@ export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
 
           <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-end">
             <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs">
-              {[
-                { href: "#features", label: headerTexts.navFeatures },
-                { href: "#how", label: headerTexts.navHow },
-                { href: "#pricing", label: headerTexts.navPricing },
-                { href: "#faq", label: headerTexts.navFaq },
-              ].map((link) => (
+              {navLinksFiltered.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => analytics.track(`land_footer_anchor_${link.href.slice(1)}_click`)}
+                  onClick={() => analytics.track(`land_footer_nav_${slugify(link.href)}_click`)}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
