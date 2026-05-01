@@ -8,7 +8,6 @@ import { analytics } from "@/lib/analytics";
 const NAV_LINKS = [
   { href: "/faq", key: "navigation.faq" },
   { href: "/changelog", key: "navigation.changelog" },
-  { href: "/languages", key: "navigation.languages" },
 ] as const;
 
 

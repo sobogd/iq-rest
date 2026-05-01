@@ -38,6 +38,23 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  // 301-redirect old standalone legal pages to the locale home — content moved into modals
+  // accessible from the cookie banner / footer / signup microcopy. Search engines drop the
+  // old URLs after one crawl cycle.
+  async redirects() {
+    return [
+      { source: "/:locale/cookies", destination: "/:locale", permanent: true },
+      { source: "/:locale/privacy", destination: "/:locale", permanent: true },
+      { source: "/:locale/terms", destination: "/:locale", permanent: true },
+      { source: "/:locale/languages", destination: "/:locale", permanent: true },
+      // Locale-less variants too in case anyone bookmarked.
+      { source: "/cookies", destination: "/", permanent: true },
+      { source: "/privacy", destination: "/", permanent: true },
+      { source: "/terms", destination: "/", permanent: true },
+      { source: "/languages", destination: "/", permanent: true },
+    ];
+  },
+
 };
 
 export default withNextIntl(nextConfig);
