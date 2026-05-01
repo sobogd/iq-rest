@@ -1,7 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing, locales, Locale } from "./i18n/routing";
-import { getLocaleByCountry } from "./lib/country-locale-map";
+import { getLocaleByCountry, getLocaleByCountryAndRegion } from "./lib/country-locale-map";
 import { getCurrencyByCountry } from "./lib/country-currency-map";
 
 const intlMiddleware = createMiddleware(routing);
@@ -53,9 +53,11 @@ function getCountry(request: NextRequest): string | null {
  */
 function detectLocaleByCountry(request: NextRequest): Locale {
   const country = getCountry(request);
+  const region = request.headers.get("cf-region");
+  const city = request.headers.get("cf-ipcity");
 
   if (country) {
-    const locale = getLocaleByCountry(country);
+    const locale = getLocaleByCountryAndRegion(country, region, city);
     if (locale) {
       return locale;
     }

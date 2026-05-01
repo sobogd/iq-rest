@@ -217,3 +217,39 @@ export function getLocaleByCountry(countryCode: string | null): Locale | null {
   if (!countryCode) return null;
   return countryToLocale[countryCode.toUpperCase()] || null;
 }
+
+// Каталонские провинции / регионы как Cloudflare их отдаёт в `cf-region`.
+// Cloudflare обычно даёт английское название региона; для ES это название провинции:
+// "Barcelona", "Tarragona", "Lleida", "Girona". Также может быть "Catalonia"/"Cataluña".
+const CATALAN_REGION_TOKENS = [
+  "barcelona",
+  "tarragona",
+  "lleida",
+  "lerida",
+  "girona",
+  "gerona",
+  "catalonia",
+  "cataluna",
+  "cataluña",
+  "catalunya",
+];
+
+/** Distinguish Catalonia from the rest of Spain so visitors there get Catalan instead of
+ *  Castilian Spanish. Looks at the Cloudflare-provided region (preferred) and city as fallback. */
+export function isCatalanRegion(region: string | null, city: string | null): boolean {
+  const tokens = [region, city].filter(Boolean).map((s) => (s as string).toLowerCase().trim());
+  if (tokens.length === 0) return false;
+  return tokens.some((t) => CATALAN_REGION_TOKENS.some((c) => t.includes(c)));
+}
+
+/** Same as getLocaleByCountry but bumps ES → ca when the visitor sits in Catalonia. */
+export function getLocaleByCountryAndRegion(
+  countryCode: string | null,
+  region: string | null,
+  city: string | null,
+): Locale | null {
+  if (countryCode?.toUpperCase() === "ES" && isCatalanRegion(region, city)) {
+    return "ca" as Locale;
+  }
+  return getLocaleByCountry(countryCode);
+}
