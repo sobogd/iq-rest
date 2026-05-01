@@ -1,12 +1,11 @@
 // Thin wrapper around the central analytics API in dashboard-api.
-// Every event funnels through one endpoint with a client-side UTC
-// timestamp and a single apex-domain cookie shared with the dashboard.
 //
-// Consent handling:
-//   - undecided (banner still showing): events are sent normally so we don't lose the
-//     initial page-view and first clicks
-//   - "accepted": events keep flowing
-//   - "rejected": events are dropped silently from the moment of the click onward
+// Two parallel sinks per track() call:
+//   1. /pulse — cookieless aggregate counter (no sid/IP/UA persisted). Fires on
+//      every track() regardless of consent — lawful without a banner because the
+//      server stores only event×hour×country×region.
+//   2. /event — sid-attributed event stream. Fires only after consent === "accepted".
+//      Until then, no analytics_sid cookie is set on the device.
 
 import { getConsent } from "./cookie-consent";
 
@@ -70,7 +69,17 @@ function getGclid(): string | null {
 
 function track(event: string): void {
   if (typeof window === "undefined") return;
-  if (getConsent() === "rejected") return;
+
+  // Cookieless pulse — always.
+  fetch(`${API_BASE}/api/analytics/pulse`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ event }),
+    keepalive: true,
+  }).catch(() => {});
+
+  // Sid-attributed event — only after explicit accept.
+  if (getConsent() !== "accepted") return;
   ensureSid();
   const gclid = getGclid();
   fetch(`${API_BASE}/api/analytics/event`, {
@@ -84,7 +93,7 @@ function track(event: string): void {
 
 function linkSession(_userId?: string): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
-  if (getConsent() === "rejected") return Promise.resolve();
+  if (getConsent() !== "accepted") return Promise.resolve();
   ensureSid();
   return fetch(`${API_BASE}/api/analytics/identify`, {
     method: "POST",

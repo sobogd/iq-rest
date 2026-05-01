@@ -27,6 +27,12 @@ export function getConsent(): ConsentState {
 
 export function setConsent(state: "accepted" | "rejected"): void {
   setCookie(COOKIE_NAME, state, ONE_YEAR_DAYS);
+  // On reject, wipe analytics_sid so no first-party identifier remains in the browser.
+  if (state === "rejected" && typeof document !== "undefined") {
+    const host = location.hostname;
+    const apex = host === "iq-rest.com" || host.endsWith(".iq-rest.com") ? ".iq-rest.com" : host;
+    document.cookie = `analytics_sid=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${apex}; SameSite=Lax`;
+  }
   // Notify same-tab listeners so the banner can hide and analytics can re-evaluate without a reload.
   if (typeof window !== "undefined") {
     window.dispatchEvent(new CustomEvent("cookie-consent-change", { detail: state }));
