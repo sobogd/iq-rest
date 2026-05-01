@@ -78,7 +78,7 @@ export default async function LandingPage() {
         microcopy={TEXTS.microcopy}
         locale={LOCALE}
       />
-      <LandingFooter texts={TEXTS.footer} locale="sv" />
+      <LandingFooter texts={TEXTS.footer} headerTexts={TEXTS.header} locale="sv" />
     </main>
   );
 }

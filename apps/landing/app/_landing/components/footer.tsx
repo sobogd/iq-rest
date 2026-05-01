@@ -9,6 +9,7 @@ import type { LandingTexts } from "../types";
 
 interface FooterProps {
   texts: LandingTexts["footer"];
+  headerTexts: LandingTexts["header"];
   locale: string;
 }
 
@@ -21,7 +22,7 @@ function slugify(href: string): string {
     .toLowerCase();
 }
 
-export function LandingFooter({ texts, locale }: FooterProps) {
+export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
   const year = new Date().getFullYear();
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
   const cookieTexts = getCookieTexts(locale);
@@ -35,11 +36,16 @@ export function LandingFooter({ texts, locale }: FooterProps) {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 text-xs md:max-w-[50%]">
-            {texts.featureLinks.map((link) => (
+            {[
+              { href: "#features", label: headerTexts.navFeatures },
+              { href: "#how", label: headerTexts.navHow },
+              { href: "#pricing", label: headerTexts.navPricing },
+              { href: "#faq", label: headerTexts.navFaq },
+            ].map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => analytics.track(`land_footer_feature_${slugify(link.href)}_click`)}
+                onClick={() => analytics.track(`land_footer_anchor_${link.href.slice(1)}_click`)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -71,15 +77,6 @@ export function LandingFooter({ texts, locale }: FooterProps) {
               >
                 {cookieTexts.languageSwitcher}
               </button>
-              <a
-                href="/sitemap.xml"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => analytics.track("land_footer_sitemap_click")}
-                className="hover:text-foreground transition-colors"
-              >
-                Sitemap
-              </a>
               <button
                 type="button"
                 onClick={() => {
