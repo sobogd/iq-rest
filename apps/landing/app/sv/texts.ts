@@ -101,12 +101,6 @@ export const TEXTS: LandingTexts = {
       { href: "/sv/changelog", label: "Nyheter" },
       { href: "/sv/languages", label: "Byt språk" },
     ],
-    legalLinks: [
-      { href: "/sv/terms", label: "Villkor" },
-      { href: "/sv/privacy", label: "Integritet" },
-      { href: "/sv/cookies", label: "Cookies" },
-      { href: "/sitemap.xml", label: "Webbkarta" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Med ensamrätt.",
   },
 };

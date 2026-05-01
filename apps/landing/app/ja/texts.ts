@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "料金" }, { href: "#faq", label: "質問" },
       { href: "/ja/languages", label: "言語を変更" },
     ],
-    legalLinks: [
-      { href: "/ja/terms", label: "利用規約" }, { href: "/ja/privacy", label: "プライバシー" },
-      { href: "/ja/cookies", label: "Cookie" }, { href: "/sitemap.xml", label: "サイトマップ" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. 全著作権所有。",
   },
 };

@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Praghsanna" }, { href: "#faq", label: "Ceisteanna" },
       { href: "/ga/languages", label: "Athraigh teanga" },
     ],
-    legalLinks: [
-      { href: "/ga/terms", label: "Téarmaí" }, { href: "/ga/privacy", label: "Príobháideacht" },
-      { href: "/ga/cookies", label: "Fianáin" }, { href: "/sitemap.xml", label: "Léarscáil suímh" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Gach ceart ar cosaint.",
   },
 };

@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Цени" }, { href: "#faq", label: "Въпроси" },
       { href: "/bg/languages", label: "Смени езика" },
     ],
-    legalLinks: [
-      { href: "/bg/terms", label: "Условия" }, { href: "/bg/privacy", label: "Поверителност" },
-      { href: "/bg/cookies", label: "Бисквитки" }, { href: "/sitemap.xml", label: "Карта на сайта" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Всички права запазени.",
   },
 };

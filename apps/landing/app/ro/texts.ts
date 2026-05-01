@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Prețuri" }, { href: "#faq", label: "Întrebări" },
       { href: "/ro/languages", label: "Schimbă limba" },
     ],
-    legalLinks: [
-      { href: "/ro/terms", label: "Termeni" }, { href: "/ro/privacy", label: "Confidențialitate" },
-      { href: "/ro/cookies", label: "Cookies" }, { href: "/sitemap.xml", label: "Sitemap" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Toate drepturile rezervate.",
   },
 };

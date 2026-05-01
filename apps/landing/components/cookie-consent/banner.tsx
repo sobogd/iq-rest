@@ -8,9 +8,11 @@ import {
   COOKIE_POLICY_SECTIONS,
   TERMS_TITLE,
   TERMS_SECTIONS,
+  PRIVACY_POLICY_TITLE,
+  PRIVACY_POLICY_SECTIONS,
 } from "./legal-text";
 
-type LegalView = "policy" | "terms" | null;
+type LegalView = "policy" | "terms" | "privacy" | null;
 
 export type CookieBannerTexts = {
   title: string;
@@ -18,7 +20,9 @@ export type CookieBannerTexts = {
   accept: string;
   reject: string;
   cookiePolicyLink: string;
+  privacyPolicyLink: string;
   termsLink: string;
+  cookieSettings: string;
 };
 
 interface CookieBannerProps {
@@ -60,13 +64,21 @@ export function CookieBanner({ texts }: CookieBannerProps) {
             <DialogTitle className="text-lg">{texts.title}</DialogTitle>
           </DialogHeader>
           <p className="text-sm text-muted-foreground leading-relaxed">{texts.message}</p>
-          <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
             <button
               type="button"
               onClick={() => setLegal("policy")}
               className="underline underline-offset-2 hover:text-foreground transition-colors"
             >
               {texts.cookiePolicyLink}
+            </button>
+            <span>·</span>
+            <button
+              type="button"
+              onClick={() => setLegal("privacy")}
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
+              {texts.privacyPolicyLink}
             </button>
             <span>·</span>
             <button
@@ -104,8 +116,14 @@ export function CookieBanner({ texts }: CookieBannerProps) {
  *  Scrollable, dismissible by close button, ESC, or backdrop click. */
 function LegalModal({ view, onClose }: { view: LegalView; onClose: () => void }) {
   const open = view !== null;
-  const sections = view === "policy" ? COOKIE_POLICY_SECTIONS : TERMS_SECTIONS;
-  const title = view === "policy" ? COOKIE_POLICY_TITLE : TERMS_TITLE;
+  const sections =
+    view === "policy" ? COOKIE_POLICY_SECTIONS :
+    view === "privacy" ? PRIVACY_POLICY_SECTIONS :
+    TERMS_SECTIONS;
+  const title =
+    view === "policy" ? COOKIE_POLICY_TITLE :
+    view === "privacy" ? PRIVACY_POLICY_TITLE :
+    TERMS_TITLE;
 
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onClose(); }}>

@@ -1,10 +1,13 @@
 "use client";
 
 import { analytics } from "@/lib/analytics";
+import { clearConsent } from "@/lib/cookie-consent";
+import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
 import type { LandingTexts } from "../types";
 
 interface FooterProps {
   texts: LandingTexts["footer"];
+  locale: string;
 }
 
 function slugify(href: string): string {
@@ -16,9 +19,10 @@ function slugify(href: string): string {
     .toLowerCase();
 }
 
-export function LandingFooter({ texts }: FooterProps) {
+export function LandingFooter({ texts, locale }: FooterProps) {
   const year = new Date().getFullYear();
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
+  const cookieTexts = getCookieTexts(locale);
 
   return (
     <footer className="border-t border-border bg-muted/20" data-section="footer">
@@ -50,19 +54,26 @@ export function LandingFooter({ texts }: FooterProps) {
                 </a>
               ))}
             </nav>
-            <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-4 gap-y-1 text-[11px] text-muted-foreground">
-              {texts.legalLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target={link.href.endsWith(".xml") ? "_blank" : undefined}
-                  rel={link.href.endsWith(".xml") ? "noopener noreferrer" : undefined}
-                  onClick={() => analytics.track(`land_footer_legal_${slugify(link.href)}_click`)}
-                  className="hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+            <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs text-muted-foreground">
+              <a
+                href="/sitemap.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => analytics.track("land_footer_sitemap_click")}
+                className="hover:text-foreground transition-colors"
+              >
+                Sitemap
+              </a>
+              <button
+                type="button"
+                onClick={() => {
+                  analytics.track("land_footer_cookie_settings_click");
+                  clearConsent();
+                }}
+                className="hover:text-foreground transition-colors"
+              >
+                {cookieTexts.cookieSettings}
+              </button>
             </nav>
             <p className="text-[11px] text-muted-foreground pt-2 md:mt-1 border-t border-border/60">
               {copyright}

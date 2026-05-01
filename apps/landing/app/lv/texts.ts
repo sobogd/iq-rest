@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Cenas" }, { href: "#faq", label: "Jautājumi" },
       { href: "/lv/languages", label: "Mainīt valodu" },
     ],
-    legalLinks: [
-      { href: "/lv/terms", label: "Noteikumi" }, { href: "/lv/privacy", label: "Privātums" },
-      { href: "/lv/cookies", label: "Sīkfaili" }, { href: "/sitemap.xml", label: "Vietnes karte" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Visas tiesības rezervētas.",
   },
 };

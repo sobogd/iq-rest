@@ -98,10 +98,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Priser" }, { href: "#faq", label: "Spørsmål" },
       { href: "/no/languages", label: "Bytt språk" },
     ],
-    legalLinks: [
-      { href: "/no/terms", label: "Vilkår" }, { href: "/no/privacy", label: "Personvern" },
-      { href: "/no/cookies", label: "Cookies" }, { href: "/sitemap.xml", label: "Sitemap" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Alle rettigheter forbeholdt.",
   },
 };

@@ -132,12 +132,6 @@ export const TEXTS: LandingTexts = {
       { href: "/uk/changelog", label: "Що нового" },
       { href: "/uk/languages", label: "Змінити мову" },
     ],
-    legalLinks: [
-      { href: "/uk/terms", label: "Умови" },
-      { href: "/uk/privacy", label: "Конфіденційність" },
-      { href: "/uk/cookies", label: "Cookies" },
-      { href: "/sitemap.xml", label: "Карта сайту" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Всі права захищено.",
   },
 };

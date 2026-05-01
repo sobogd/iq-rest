@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "الأسعار" }, { href: "#faq", label: "أسئلة" },
       { href: "/ar/languages", label: "تغيير اللغة" },
     ],
-    legalLinks: [
-      { href: "/ar/terms", label: "الشروط" }, { href: "/ar/privacy", label: "الخصوصية" },
-      { href: "/ar/cookies", label: "الكوكيز" }, { href: "/sitemap.xml", label: "خريطة الموقع" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. جميع الحقوق محفوظة.",
   },
 };

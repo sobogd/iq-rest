@@ -33,6 +33,16 @@ export function setConsent(state: "accepted" | "rejected"): void {
   }
 }
 
+/** Clear the consent cookie so the banner re-shows. Used by the "Cookie settings" footer link. */
+export function clearConsent(): void {
+  if (typeof document !== "undefined") {
+    document.cookie = `${COOKIE_NAME}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; SameSite=Lax`;
+  }
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent("cookie-consent-change", { detail: null }));
+  }
+}
+
 export function hasAnalyticsConsent(): boolean {
   return getConsent() === "accepted";
 }

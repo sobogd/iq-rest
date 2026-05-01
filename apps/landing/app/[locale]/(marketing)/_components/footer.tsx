@@ -11,10 +11,6 @@ const NAV_LINKS = [
   { href: "/languages", key: "navigation.languages" },
 ] as const;
 
-const LEGAL_LINKS = [
-  { href: "/terms", key: "legal.terms" },
-  { href: "/privacy", key: "legal.privacy" },
-] as const;
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -44,16 +40,6 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pt-4 border-t border-border/50 text-sm text-muted-foreground">
           <p>{t("copyright")}</p>
           <nav className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            {LEGAL_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:text-foreground transition-colors"
-                onClick={() => analytics.track("land_footer_link_click")}
-              >
-                {t(link.key)}
-              </Link>
-            ))}
             <a
               href="/sitemap.xml"
               target="_blank"

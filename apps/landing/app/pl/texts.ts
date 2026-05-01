@@ -172,12 +172,6 @@ export const TEXTS: LandingTexts = {
       { href: "/pl/changelog", label: "Co nowego" },
       { href: "/pl/languages", label: "Zmień język" },
     ],
-    legalLinks: [
-      { href: "/pl/terms", label: "Regulamin" },
-      { href: "/pl/privacy", label: "Polityka prywatności" },
-      { href: "/pl/cookies", label: "Cookies" },
-      { href: "/sitemap.xml", label: "Mapa strony" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Wszelkie prawa zastrzeżone.",
   },
 };

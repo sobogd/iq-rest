@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Τιμές" }, { href: "#faq", label: "Ερωτήσεις" },
       { href: "/el/languages", label: "Αλλαγή γλώσσας" },
     ],
-    legalLinks: [
-      { href: "/el/terms", label: "Όροι" }, { href: "/el/privacy", label: "Απόρρητο" },
-      { href: "/el/cookies", label: "Cookies" }, { href: "/sitemap.xml", label: "Χάρτης" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Με επιφύλαξη παντός δικαιώματος.",
   },
 };

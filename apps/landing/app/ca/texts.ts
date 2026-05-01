@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Preus" }, { href: "#faq", label: "Preguntes" },
       { href: "/ca/languages", label: "Canvia d'idioma" },
     ],
-    legalLinks: [
-      { href: "/ca/terms", label: "Termes" }, { href: "/ca/privacy", label: "Privadesa" },
-      { href: "/ca/cookies", label: "Galetes" }, { href: "/sitemap.xml", label: "Mapa del lloc" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Tots els drets reservats.",
   },
 };

@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "价格" }, { href: "#faq", label: "问题" },
       { href: "/zh/languages", label: "切换语言" },
     ],
-    legalLinks: [
-      { href: "/zh/terms", label: "条款" }, { href: "/zh/privacy", label: "隐私" },
-      { href: "/zh/cookies", label: "Cookie" }, { href: "/sitemap.xml", label: "网站地图" },
-    ],
     copyrightTemplate: "© {year} IQ Rest。版权所有。",
   },
 };

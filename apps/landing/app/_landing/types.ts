@@ -120,7 +120,6 @@ export type LandingTexts = {
   footer: {
     featureLinks: FooterLink[];
     navLinks: FooterLink[];
-    legalLinks: FooterLink[];
     copyrightTemplate: string;
   };
 };

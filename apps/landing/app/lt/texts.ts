@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Kainos" }, { href: "#faq", label: "Klausimai" },
       { href: "/lt/languages", label: "Pakeisti kalbą" },
     ],
-    legalLinks: [
-      { href: "/lt/terms", label: "Sąlygos" }, { href: "/lt/privacy", label: "Privatumas" },
-      { href: "/lt/cookies", label: "Slapukai" }, { href: "/sitemap.xml", label: "Svetainės žemėlapis" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Visos teisės saugomos.",
   },
 };

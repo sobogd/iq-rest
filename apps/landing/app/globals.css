@@ -142,6 +142,16 @@ html {
     @apply bg-background text-foreground;
   }
 
+  /* Suppress the default browser focus ring on mouse / touch / programmatic focus.
+   * `:focus-visible` (keyboard navigation) keeps a subtle outline for accessibility. */
+  *:focus { outline: none; }
+  *:focus-visible { outline: 2px solid hsl(var(--ring) / 0.4); outline-offset: 2px; }
+  /* Buttons/links should never show the ring on click — most browsers default to `:focus`
+   * after a click, only `:focus-visible` correctly differentiates keyboard from pointer. */
+  button:focus,
+  a:focus,
+  [role="button"]:focus { outline: none; box-shadow: none; }
+
   /* Override browser autofill styles */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,

@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Verð" }, { href: "#faq", label: "Spurningar" },
       { href: "/is/languages", label: "Skipta um tungumál" },
     ],
-    legalLinks: [
-      { href: "/is/terms", label: "Skilmálar" }, { href: "/is/privacy", label: "Friðhelgi" },
-      { href: "/is/cookies", label: "Vafrakökur" }, { href: "/sitemap.xml", label: "Vefsíðukort" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Allur réttur áskilinn.",
   },
 };

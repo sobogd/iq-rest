@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Árak" }, { href: "#faq", label: "Kérdések" },
       { href: "/hu/languages", label: "Nyelvváltás" },
     ],
-    legalLinks: [
-      { href: "/hu/terms", label: "Feltételek" }, { href: "/hu/privacy", label: "Adatvédelem" },
-      { href: "/hu/cookies", label: "Cookies" }, { href: "/sitemap.xml", label: "Oldaltérkép" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Minden jog fenntartva.",
   },
 };

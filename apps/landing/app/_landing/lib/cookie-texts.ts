@@ -11,7 +11,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accept",
     reject: "Reject",
     cookiePolicyLink: "Cookie policy",
+    privacyPolicyLink: "Privacy policy",
     termsLink: "Terms of service",
+    cookieSettings: "Cookie settings",
   },
   es: {
     title: "Cookies",
@@ -19,7 +21,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Aceptar",
     reject: "Rechazar",
     cookiePolicyLink: "Política de cookies",
+    privacyPolicyLink: "Política de privacidad",
     termsLink: "Términos del servicio",
+    cookieSettings: "Configuración de cookies",
   },
   de: {
     title: "Cookies",
@@ -27,7 +31,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Akzeptieren",
     reject: "Ablehnen",
     cookiePolicyLink: "Cookie-Richtlinie",
+    privacyPolicyLink: "Datenschutzerklärung",
     termsLink: "Nutzungsbedingungen",
+    cookieSettings: "Cookie-Einstellungen",
   },
   fr: {
     title: "Cookies",
@@ -35,7 +41,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accepter",
     reject: "Refuser",
     cookiePolicyLink: "Politique de cookies",
+    privacyPolicyLink: "Politique de confidentialité",
     termsLink: "Conditions d'utilisation",
+    cookieSettings: "Paramètres de cookies",
   },
   it: {
     title: "Cookie",
@@ -43,7 +51,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accetta",
     reject: "Rifiuta",
     cookiePolicyLink: "Politica sui cookie",
+    privacyPolicyLink: "Politica sulla privacy",
     termsLink: "Termini di servizio",
+    cookieSettings: "Impostazioni cookie",
   },
   pt: {
     title: "Cookies",
@@ -51,7 +61,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Aceitar",
     reject: "Rejeitar",
     cookiePolicyLink: "Política de cookies",
+    privacyPolicyLink: "Política de privacidade",
     termsLink: "Termos de serviço",
+    cookieSettings: "Definições de cookies",
   },
   nl: {
     title: "Cookies",
@@ -59,7 +71,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accepteren",
     reject: "Weigeren",
     cookiePolicyLink: "Cookiebeleid",
+    privacyPolicyLink: "Privacybeleid",
     termsLink: "Servicevoorwaarden",
+    cookieSettings: "Cookie-instellingen",
   },
   pl: {
     title: "Pliki cookie",
@@ -67,7 +81,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Akceptuj",
     reject: "Odrzuć",
     cookiePolicyLink: "Polityka cookies",
+    privacyPolicyLink: "Polityka prywatności",
     termsLink: "Warunki świadczenia usług",
+    cookieSettings: "Ustawienia cookies",
   },
   ru: {
     title: "Куки",
@@ -75,7 +91,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Принять",
     reject: "Отклонить",
     cookiePolicyLink: "Политика cookies",
+    privacyPolicyLink: "Политика конфиденциальности",
     termsLink: "Условия использования",
+    cookieSettings: "Настройки cookies",
   },
   uk: {
     title: "Куки",
@@ -83,7 +101,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Прийняти",
     reject: "Відхилити",
     cookiePolicyLink: "Політика cookies",
+    privacyPolicyLink: "Політика конфіденційності",
     termsLink: "Умови використання",
+    cookieSettings: "Налаштування cookies",
   },
   sv: {
     title: "Cookies",
@@ -91,7 +111,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Acceptera",
     reject: "Avvisa",
     cookiePolicyLink: "Cookiepolicy",
+    privacyPolicyLink: "Integritetspolicy",
     termsLink: "Användarvillkor",
+    cookieSettings: "Cookie-inställningar",
   },
   da: {
     title: "Cookies",
@@ -99,7 +121,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accepter",
     reject: "Afvis",
     cookiePolicyLink: "Cookiepolitik",
+    privacyPolicyLink: "Privatlivspolitik",
     termsLink: "Servicevilkår",
+    cookieSettings: "Cookie-indstillinger",
   },
   no: {
     title: "Informasjonskapsler",
@@ -107,7 +131,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Godta",
     reject: "Avvis",
     cookiePolicyLink: "Cookies-policy",
+    privacyPolicyLink: "Personvernerklæring",
     termsLink: "Tjenestevilkår",
+    cookieSettings: "Cookie-innstillinger",
   },
   fi: {
     title: "Evästeet",
@@ -115,7 +141,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Hyväksy",
     reject: "Hylkää",
     cookiePolicyLink: "Evästekäytäntö",
+    privacyPolicyLink: "Tietosuojakäytäntö",
     termsLink: "Käyttöehdot",
+    cookieSettings: "Eväste-asetukset",
   },
   cs: {
     title: "Soubory cookie",
@@ -123,7 +151,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Přijmout",
     reject: "Odmítnout",
     cookiePolicyLink: "Zásady cookies",
+    privacyPolicyLink: "Zásady ochrany osobních údajů",
     termsLink: "Podmínky služby",
+    cookieSettings: "Nastavení cookies",
   },
   el: {
     title: "Cookies",
@@ -131,7 +161,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Αποδοχή",
     reject: "Απόρριψη",
     cookiePolicyLink: "Πολιτική cookies",
+    privacyPolicyLink: "Πολιτική απορρήτου",
     termsLink: "Όροι υπηρεσίας",
+    cookieSettings: "Ρυθμίσεις cookies",
   },
   tr: {
     title: "Çerezler",
@@ -139,7 +171,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Kabul et",
     reject: "Reddet",
     cookiePolicyLink: "Çerez politikası",
+    privacyPolicyLink: "Gizlilik politikası",
     termsLink: "Hizmet şartları",
+    cookieSettings: "Çerez ayarları",
   },
   ro: {
     title: "Cookie-uri",
@@ -147,7 +181,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accept",
     reject: "Refuz",
     cookiePolicyLink: "Politica de cookie-uri",
+    privacyPolicyLink: "Politica de confidențialitate",
     termsLink: "Termeni de utilizare",
+    cookieSettings: "Setări cookies",
   },
   hu: {
     title: "Sütik",
@@ -155,7 +191,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Elfogadom",
     reject: "Elutasítom",
     cookiePolicyLink: "Süti szabályzat",
+    privacyPolicyLink: "Adatvédelmi szabályzat",
     termsLink: "Szolgáltatási feltételek",
+    cookieSettings: "Süti beállítások",
   },
   bg: {
     title: "Бисквитки",
@@ -163,7 +201,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Приемам",
     reject: "Отказвам",
     cookiePolicyLink: "Политика за бисквитки",
+    privacyPolicyLink: "Политика за поверителност",
     termsLink: "Условия за ползване",
+    cookieSettings: "Настройки за бисквитки",
   },
   hr: {
     title: "Kolačići",
@@ -171,7 +211,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Prihvati",
     reject: "Odbij",
     cookiePolicyLink: "Politika kolačića",
+    privacyPolicyLink: "Pravila privatnosti",
     termsLink: "Uvjeti korištenja",
+    cookieSettings: "Postavke kolačića",
   },
   sk: {
     title: "Súbory cookie",
@@ -179,7 +221,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Prijať",
     reject: "Odmietnuť",
     cookiePolicyLink: "Zásady cookies",
+    privacyPolicyLink: "Zásady ochrany osobných údajov",
     termsLink: "Podmienky služby",
+    cookieSettings: "Nastavenia cookies",
   },
   sl: {
     title: "Piškotki",
@@ -187,7 +231,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Sprejmi",
     reject: "Zavrni",
     cookiePolicyLink: "Pravilnik o piškotkih",
+    privacyPolicyLink: "Pravilnik o zasebnosti",
     termsLink: "Pogoji uporabe",
+    cookieSettings: "Nastavitve piškotkov",
   },
   et: {
     title: "Küpsised",
@@ -195,7 +241,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Nõustun",
     reject: "Keeldun",
     cookiePolicyLink: "Küpsiste poliitika",
+    privacyPolicyLink: "Privaatsuspoliitika",
     termsLink: "Teenusetingimused",
+    cookieSettings: "Küpsiste seaded",
   },
   lv: {
     title: "Sīkdatnes",
@@ -203,7 +251,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Pieņemt",
     reject: "Noraidīt",
     cookiePolicyLink: "Sīkdatņu politika",
+    privacyPolicyLink: "Privātuma politika",
     termsLink: "Pakalpojuma noteikumi",
+    cookieSettings: "Sīkdatņu iestatījumi",
   },
   lt: {
     title: "Slapukai",
@@ -211,7 +261,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Sutinku",
     reject: "Atmesti",
     cookiePolicyLink: "Slapukų politika",
+    privacyPolicyLink: "Privatumo politika",
     termsLink: "Paslaugos sąlygos",
+    cookieSettings: "Slapukų nustatymai",
   },
   sr: {
     title: "Kolačići",
@@ -219,7 +271,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Prihvati",
     reject: "Odbaci",
     cookiePolicyLink: "Politika kolačića",
+    privacyPolicyLink: "Politika privatnosti",
     termsLink: "Uslovi korišćenja",
+    cookieSettings: "Podešavanja kolačića",
   },
   ca: {
     title: "Cookies",
@@ -227,7 +281,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Accepta",
     reject: "Rebutja",
     cookiePolicyLink: "Política de cookies",
+    privacyPolicyLink: "Política de privacitat",
     termsLink: "Termes del servei",
+    cookieSettings: "Configuració de cookies",
   },
   ga: {
     title: "Fianáin",
@@ -235,7 +291,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Glac leis",
     reject: "Diúltaigh",
     cookiePolicyLink: "Polasaí fianán",
+    privacyPolicyLink: "Polasaí príobháideachta",
     termsLink: "Téarmaí seirbhíse",
+    cookieSettings: "Socruithe fianán",
   },
   is: {
     title: "Vafrakökur",
@@ -243,7 +301,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "Samþykkja",
     reject: "Hafna",
     cookiePolicyLink: "Vafrakökustefna",
+    privacyPolicyLink: "Persónuverndarstefna",
     termsLink: "Þjónustuskilmálar",
+    cookieSettings: "Vafrakökustillingar",
   },
   fa: {
     title: "کوکی‌ها",
@@ -251,7 +311,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "پذیرفتن",
     reject: "رد کردن",
     cookiePolicyLink: "سیاست کوکی",
+    privacyPolicyLink: "سیاست حفظ حریم خصوصی",
     termsLink: "شرایط خدمات",
+    cookieSettings: "تنظیمات کوکی",
   },
   ar: {
     title: "ملفات تعريف الارتباط",
@@ -259,7 +321,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "قبول",
     reject: "رفض",
     cookiePolicyLink: "سياسة ملفات تعريف الارتباط",
+    privacyPolicyLink: "سياسة الخصوصية",
     termsLink: "شروط الخدمة",
+    cookieSettings: "إعدادات ملفات تعريف الارتباط",
   },
   ja: {
     title: "Cookie",
@@ -267,7 +331,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "同意する",
     reject: "拒否する",
     cookiePolicyLink: "Cookie ポリシー",
+    privacyPolicyLink: "プライバシーポリシー",
     termsLink: "利用規約",
+    cookieSettings: "Cookie 設定",
   },
   ko: {
     title: "쿠키",
@@ -275,7 +341,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "동의",
     reject: "거부",
     cookiePolicyLink: "쿠키 정책",
+    privacyPolicyLink: "개인정보 보호정책",
     termsLink: "서비스 약관",
+    cookieSettings: "쿠키 설정",
   },
   zh: {
     title: "Cookie",
@@ -283,7 +351,9 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
     accept: "接受",
     reject: "拒绝",
     cookiePolicyLink: "Cookie 政策",
+    privacyPolicyLink: "隐私政策",
     termsLink: "服务条款",
+    cookieSettings: "Cookie 设置",
   },
 };
 

@@ -92,10 +92,6 @@ export const TEXTS: LandingTexts = {
       { href: "#pricing", label: "Hinnad" }, { href: "#faq", label: "Küsimused" },
       { href: "/et/languages", label: "Vaheta keelt" },
     ],
-    legalLinks: [
-      { href: "/et/terms", label: "Tingimused" }, { href: "/et/privacy", label: "Privaatsus" },
-      { href: "/et/cookies", label: "Küpsised" }, { href: "/sitemap.xml", label: "Saidikaart" },
-    ],
     copyrightTemplate: "© {year} IQ Rest. Kõik õigused kaitstud.",
   },
 };

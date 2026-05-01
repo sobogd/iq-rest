@@ -95,6 +95,140 @@ export const COOKIE_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[
   },
 ];
 
+/** Privacy Policy modal body. Enumerates every personal-data field the platform stores,
+ *  per GDPR Article 13/14 transparency requirements. */
+export const PRIVACY_POLICY_TITLE = "Privacy Policy";
+
+export const PRIVACY_POLICY_SECTIONS: { heading?: string; paragraphs: string[] }[] = [
+  {
+    paragraphs: [
+      `Last updated: ${OPERATOR.lastUpdated}`,
+      `This Privacy Policy explains how ${OPERATOR.legalName}, ${OPERATOR.status}, with fiscal address at ${OPERATOR.fiscalAddress} (Tax ID: ${OPERATOR.taxId}) ("${OPERATOR.brand}", "we", "us"), collects, uses, stores and protects your personal data when you use the ${OPERATOR.brand} platform at ${OPERATOR.domain}.`,
+      `We comply with the General Data Protection Regulation (GDPR), the Spanish Organic Law on Data Protection and Guarantee of Digital Rights (LOPDGDD), and the ePrivacy Directive.`,
+    ],
+  },
+  {
+    heading: "1. Data Controller",
+    paragraphs: [
+      `The data controller responsible for your personal data is ${OPERATOR.legalName} (Tax ID: ${OPERATOR.taxId}, fiscal address ${OPERATOR.fiscalAddress}).`,
+      `For any privacy inquiries, including the exercise of your data subject rights, contact ${OPERATOR.contactEmail}.`,
+    ],
+  },
+  {
+    heading: "2. Data we collect",
+    paragraphs: [
+      `We collect only the data needed to operate the Service. Categories below cover everything stored in our database.`,
+      `Account data — when you register: email address (used for OTP authentication and operational notices); preferred dashboard locale; the cuisine type and restaurant name you provide during the signup wizard.`,
+      `Authentication data — short-lived one-time codes (OTPs), hashed session tokens, count of failed verification attempts. We use passwordless email + Google OAuth; no passwords are stored.`,
+      `Business profile — your company name, subscription plan, and Stripe customer/subscription identifiers (used to bill you).`,
+      `Restaurant profile — restaurant name, subtitle, description, slug, currency, brand color, cover image, postal address, geo coordinates, phone number, Instagram handle, WhatsApp number, languages and default language, working hours, table count.`,
+      `Menu content — categories, dishes (name, description, price, photo, allergens, options, translations), tables (number, capacity, zone, position).`,
+      `Reservations — for each booking: guest name, guest email, guest phone (optional), party size, date, time, duration, table assignment, status, internal notes.`,
+      `Orders — for each public order: customer name (optional), customer phone (optional), delivery address (optional), comment, table number, items ordered, total amount, currency, status.`,
+      `Support messages — content of messages you exchange with our support team.`,
+      `Analytics & technical data (only with cookie consent) — anonymous session identifier; pages visited; events triggered (clicks, conversions); country and city derived from your IP via Cloudflare; browser User-Agent; gclid (Google Ads click identifier) for ad attribution.`,
+      `Public-menu page views — when guests scan a QR code: anonymous session id, page slug, language, referrer, IP, User-Agent. Used for scan-count limits and the analytics dashboard you see.`,
+      `Payment data — handled by Stripe; we never see or store full card details. We hold only the Stripe customer/subscription IDs and high-level subscription state.`,
+    ],
+  },
+  {
+    heading: "3. Legal basis for processing",
+    paragraphs: [
+      `Each category is processed under one of the legal bases in GDPR Article 6:`,
+      `Contract performance (Art. 6(1)(b)) — account data, authentication data, business profile, restaurant profile, menu content, reservations, orders, support messages, payment data. Required to provide the Service you signed up for.`,
+      `Legitimate interest (Art. 6(1)(f)) — short-term operational logs, fraud and abuse prevention, basic aggregate metrics. Balanced against your rights; you can object at any time.`,
+      `Consent (Art. 6(1)(a)) — analytics cookies and technical data described in section 2 marked "only with cookie consent". You can withdraw consent at any time via the Cookie Settings link in the footer.`,
+      `Legal obligation (Art. 6(1)(c)) — invoicing data we are required to retain by Spanish tax law.`,
+    ],
+  },
+  {
+    heading: "4. How we use your data",
+    paragraphs: [
+      `Provide and maintain the Service: create your dashboard account and restaurant pages, generate QR codes, run the public menu, process orders and reservations.`,
+      `Authenticate you: send OTP codes by email, validate Google OAuth tokens, manage sessions.`,
+      `Bill you: process subscription payments through Stripe, send invoices.`,
+      `Communicate with you: account and service notices, support replies, important changes to the Service. We do not send marketing emails without your separate consent.`,
+      `Improve the platform: aggregate usage analytics (only with cookie consent), debugging, performance monitoring.`,
+      `Comply with legal obligations: tax records, regulatory reporting when required.`,
+    ],
+  },
+  {
+    heading: "5. Where data is stored",
+    paragraphs: [
+      `All customer data — your account, restaurant content, orders, reservations, analytics — is stored on a single dedicated server operated by ${OPERATOR.hostingProvider}. Data does not leave the European Union.`,
+      `Backups are encrypted and stored in the same EU region.`,
+      `Data is encrypted in transit using TLS and at rest using disk-level encryption.`,
+    ],
+  },
+  {
+    heading: "6. Third parties we share data with",
+    paragraphs: [
+      `We share data with the minimum number of third parties necessary to operate the Service:`,
+      `Stripe, Inc. — payment processing. Receives your billing email, billing address (if provided), and the amount and product of each transaction. Stripe is a separate data controller for payment data. Privacy: https://stripe.com/privacy`,
+      `Hetzner Online GmbH — server hosting (Nuremberg, Germany). Acts as a data processor under a Data Processing Agreement; cannot access database contents in normal operation.`,
+      `Google LLC (only if you sign in with Google) — receives only the standard OAuth scope (email, name, picture). Same data Google already has on you. We do not send analytics or events to Google.`,
+      `Cloudflare, Inc. — CDN and DDoS protection. Sees inbound HTTP requests including your IP address and User-Agent. Acts as a data processor.`,
+      `We do not sell or rent your personal data to anyone. We do not use Google Analytics, PostHog, Facebook Pixel, Mixpanel, Amplitude, or any other third-party analytics or advertising tracker.`,
+    ],
+  },
+  {
+    heading: "7. International data transfers",
+    paragraphs: [
+      `All primary processing happens within the European Union. The third-party processors above (Stripe, Cloudflare, Google) may transfer data to the United States; in those cases the transfers are covered by the EU-US Data Privacy Framework or by Standard Contractual Clauses.`,
+    ],
+  },
+  {
+    heading: "8. How long we keep your data",
+    paragraphs: [
+      `Account data — for as long as your account is active. Within 30 days of account deletion, all personal data is permanently removed from our database. Backups are overwritten within 90 days.`,
+      `OTPs — deleted immediately on successful verification or after 15 minutes (whichever comes first).`,
+      `Reservations and orders — retained for as long as you keep your restaurant active in the Service, then removed with the account.`,
+      `Analytics events — retained for up to 24 months in aggregated form; raw per-session events are pruned after 90 days.`,
+      `Invoicing data — retained for 6 years as required by Spanish tax law (Ley General Tributaria).`,
+      `Support messages — retained for 24 months after the last reply.`,
+    ],
+  },
+  {
+    heading: "9. Your rights",
+    paragraphs: [
+      `Under the GDPR you have the right to:`,
+      `Access — request a copy of the personal data we hold about you.`,
+      `Rectification — correct inaccurate or incomplete data.`,
+      `Erasure ("right to be forgotten") — request deletion of your data; we will comply unless retention is required by law.`,
+      `Restriction — pause processing while a complaint is investigated.`,
+      `Portability — receive your data in a structured, machine-readable format and transfer it to another provider.`,
+      `Object — object to processing based on legitimate interest, including opting out of analytics.`,
+      `Withdraw consent — withdraw cookie consent at any time via the Cookie Settings link in the footer.`,
+      `Lodge a complaint — file a complaint with the Spanish data protection authority, the Agencia Española de Protección de Datos (AEPD), at www.aepd.es.`,
+      `To exercise any of these rights, email ${OPERATOR.contactEmail}. We respond within 30 days.`,
+    ],
+  },
+  {
+    heading: "10. Children",
+    paragraphs: [
+      `The Service is not intended for individuals under 18. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact us and we will remove it.`,
+    ],
+  },
+  {
+    heading: "11. Security",
+    paragraphs: [
+      `We apply technical and organizational measures appropriate to the risk: TLS for all traffic, encryption at rest, hashed session tokens, rate-limiting, automated backups, restricted server access, and regular dependency updates. No system is 100% secure; if we become aware of a personal-data breach affecting you, we will notify you and the AEPD within 72 hours as required by GDPR Article 33.`,
+    ],
+  },
+  {
+    heading: "12. Changes to this policy",
+    paragraphs: [
+      `We may update this Privacy Policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of the Service after a change constitutes acceptance.`,
+    ],
+  },
+  {
+    heading: "13. Contact",
+    paragraphs: [
+      `Questions, complaints, or requests regarding this Privacy Policy can be sent to ${OPERATOR.contactEmail}. We respond within 30 days.`,
+    ],
+  },
+];
+
 /** Terms of Service modal body. Adapted from a standard SaaS template. */
 export const TERMS_TITLE = "Terms of Service";
 
