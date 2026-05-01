@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 
 export default function LandingLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fa" dir="rtl" className="dark">
+    <html lang="fa" dir="rtl" translate="no" className="dark">
       <body className="min-h-dvh bg-background text-foreground antialiased tracking-tight">
         {children}
       </body>
