@@ -1,20 +1,8 @@
 import { redirect } from "next/navigation";
-import { getLocale } from "next-intl/server";
-import { guardAuthPage } from "../_lib/onboarding-guard";
-import { OtpPage } from "../_components/otp-page";
+import { dashboardUrl } from "@/lib/dashboard-url";
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<{ email?: string }>;
-}) {
-  await guardAuthPage();
-  const params = await searchParams;
-
-  if (!params.email) {
-    const locale = await getLocale();
-    redirect(`/${locale}/login`);
-  }
-
-  return <OtpPage email={params.email} />;
+// OTP entry happens inside the SPA login flow now — bounce to /login on the dashboard host.
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  redirect(dashboardUrl(`/${locale}/login`));
 }

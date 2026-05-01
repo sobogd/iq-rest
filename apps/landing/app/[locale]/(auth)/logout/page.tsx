@@ -1,21 +1,9 @@
-"use client";
+import { redirect } from "next/navigation";
+import { dashboardUrl } from "@/lib/dashboard-url";
 
-import { useEffect } from "react";
-import { Loader2 } from "lucide-react";
-import { useLocale } from "next-intl";
-
-export default function LogoutPage() {
-  const locale = useLocale();
-
-  useEffect(() => {
-    fetch("/api/auth/logout", { method: "POST" }).then(() => {
-      window.location.href = `/${locale}/login`;
-    });
-  }, [locale]);
-
-  return (
-    <div className="flex min-h-dvh items-center justify-center">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-  );
+// The SPA dashboard owns the logout flow; cookies are scoped to the apex domain so its
+// logout endpoint clears them across both hosts.
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  redirect(dashboardUrl(`/${locale}/logout`));
 }
