@@ -307,6 +307,7 @@ model Session {
   ip        String?
   userAgent String?
   country   String?
+  region    String?
   city      String?
   gclid     String?
   createdAt DateTime @default(now())
