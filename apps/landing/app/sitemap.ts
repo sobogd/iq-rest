@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/routing'
+import { CHANGELOG_ENTRIES } from '@/app/_landing/changelog/entries-meta'
 
 type RouteConfig = {
   path: string
@@ -26,23 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/personal-support', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/online-orders', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/faq', lastModified: '2026-02-20', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/changelog', lastModified: '2026-02-26', changeFrequency: 'weekly', priority: 0.7 },
-    { path: '/changelog/dashboard-ui-redesign-consistent-cards-navigation', lastModified: '2026-02-26', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/ai-menu-scanner-create-digital-qr-menu', lastModified: '2026-02-18', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/redesigned-dashboard-qr-menu-management', lastModified: '2026-02-14', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/reservation-emails-analytics-digital-qr-menu', lastModified: '2026-02-12', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/multi-currency-geo-pricing-qr-menu', lastModified: '2026-02-10', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/support-qr-menu-restaurant-cafe', lastModified: '2025-12-02', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/detailed-analytics-restaurant-qr-menu-website', lastModified: '2025-12-02', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/instant-qr-menu-restaurant-website-generator', lastModified: '2025-12-01', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/public-restaurant-qr-menu-website', lastModified: '2025-11-30', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/add-items-restaurant-qr-menu-website', lastModified: '2025-11-29', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/qr-menu-restaurant-categories', lastModified: '2025-11-29', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/easy-qr-menu-cafe-control-panel', lastModified: '2025-11-29', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/faq-page-organization', lastModified: '2025-11-20', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/free-restaurant-website-improvements', lastModified: '2025-11-20', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/user-authentication-interface', lastModified: '2024-11-19', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/changelog/subscription-plans-qr-menu-restaurant-website', lastModified: '2025-11-30', changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/changelog', lastModified: CHANGELOG_ENTRIES[0]?.date ?? '2026-05-01', changeFrequency: 'weekly', priority: 0.7 },
+    ...CHANGELOG_ENTRIES.map((entry) => ({
+      path: `/changelog/${entry.id}`,
+      lastModified: entry.date,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
   ]
 
   // Generate sitemap entries for all locales
