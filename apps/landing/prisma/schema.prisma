@@ -334,17 +334,16 @@ model AnalyticsEvent {
   @@map("analytics_events")
 }
 
-model PulseHourly {
-  hour    DateTime
+model PulseEvent {
+  id      String   @id @default(cuid())
+  at      DateTime @default(now())
   event   String
   country String   @default("XX")
   region  String   @default("")
-  hits    Int      @default(0)
 
-  @@id([hour, event, country, region])
-  @@index([event, hour])
-  @@index([hour])
-  @@map("pulse_hourly")
+  @@index([at])
+  @@index([event, at])
+  @@map("pulse_events")
 }
 
 model Order {
