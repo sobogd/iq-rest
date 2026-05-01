@@ -12,6 +12,7 @@ import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { pickRandomVariant } from "@/app/_landing/lib/pick-variant";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./texts";
+import { trackGclidArrival } from "@/app/_landing/lib/track-gclid-arrival";
 
 const LOCALE = "ro";
 
@@ -40,7 +41,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function LandingPage() {
+export default async function LandingPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const sp = await searchParams;
+  await trackGclidArrival(sp, LOCALE);
   const { variant, index: variantIndex } = pickRandomVariant(TEXTS.hero.variants);
   const currency = await getCurrency();
 

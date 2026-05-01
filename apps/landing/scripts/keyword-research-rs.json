@@ -1,0 +1,8002 @@
+[
+  {
+    "keyword": "golden wok",
+    "searches": 1900,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": 0.108341,
+    "highCpc": 0.348047
+  },
+  {
+    "keyword": "grilled",
+    "searches": 1900,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": 0.059438,
+    "highCpc": 0.492263
+  },
+  {
+    "keyword": "sakura restaurant",
+    "searches": 1900,
+    "competition": "LOW",
+    "competitionIdx": 2,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu",
+    "searches": 1300,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "the menu",
+    "searches": 1000,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "super wok",
+    "searches": 260,
+    "competition": "LOW",
+    "competitionIdx": 10,
+    "lowCpc": 0.079107,
+    "highCpc": 0.318777
+  },
+  {
+    "keyword": "the menu imdb",
+    "searches": 40,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "panda chinese food",
+    "searches": 40,
+    "competition": "LOW",
+    "competitionIdx": 13,
+    "lowCpc": 0.309537,
+    "highCpc": 3.461948
+  },
+  {
+    "keyword": "the menu 2022",
+    "searches": 40,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "the menu netflix",
+    "searches": 30,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pandas restaurant",
+    "searches": 30,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mc d online",
+    "searches": 30,
+    "competition": "LOW",
+    "competitionIdx": 26,
+    "lowCpc": 0.15636,
+    "highCpc": 0.644274
+  },
+  {
+    "keyword": "qr menu",
+    "searches": 20,
+    "competition": "MEDIUM",
+    "competitionIdx": 35,
+    "lowCpc": 0.255795,
+    "highCpc": 0.418478
+  },
+  {
+    "keyword": "digital menu",
+    "searches": 20,
+    "competition": "LOW",
+    "competitionIdx": 18,
+    "lowCpc": 0.255795,
+    "highCpc": 0.390265
+  },
+  {
+    "keyword": "asian wok",
+    "searches": 20,
+    "competition": "LOW",
+    "competitionIdx": 4,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "asian cuisine",
+    "searches": 20,
+    "competition": "LOW",
+    "competitionIdx": 14,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital meny",
+    "searches": 20,
+    "competition": "LOW",
+    "competitionIdx": 18,
+    "lowCpc": 0.255795,
+    "highCpc": 0.390265
+  },
+  {
+    "keyword": "qr code menu",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": 0.175262,
+    "highCpc": 1.125498
+  },
+  {
+    "keyword": "qr menu restaurant",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 27,
+    "lowCpc": 0.255795,
+    "highCpc": 0.697928
+  },
+  {
+    "keyword": "restaurant menu app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu generator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu qr code",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 64,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 18,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code restaurant",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 7,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "contactless menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "smart menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 34,
+    "lowCpc": 0.01,
+    "highCpc": 0.277244
+  },
+  {
+    "keyword": "doordash app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu boards",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 9,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 64,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meal planning app",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "doordash menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online ordering for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu boards for restaurants",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 23,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cava order online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 18,
+    "lowCpc": 0.127897,
+    "highCpc": 0.255795
+  },
+  {
+    "keyword": "online pizza order",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "menu design templates",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hot wok",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "clover online ordering",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "panda express order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": 0.217562,
+    "highCpc": 0.878229
+  },
+  {
+    "keyword": "order chinese food online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "moo goo",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 5,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "thai delivery",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online ordering system for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best meal planning app",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 73,
+    "lowCpc": 0.179288,
+    "highCpc": 0.758085
+  },
+  {
+    "keyword": "electronic menu board",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 9,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu for restaurants",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 73,
+    "lowCpc": 0.255795,
+    "highCpc": 0.880381
+  },
+  {
+    "keyword": "chick fil a online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china palace",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order sushi",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "square online ordering",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 14,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu creator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 73,
+    "lowCpc": 0.179288,
+    "highCpc": 0.758085
+  },
+  {
+    "keyword": "new china",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 5,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food cost software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu ordering",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free meal planning app",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 50,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu app",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor digital menu boards",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital drive thru menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "in n out burger delivery",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator online free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "menu boards for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa john's order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu generator",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 14,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu boards price",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu software for tv",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menus online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu ordering system",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china gourmet",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker online free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sushi order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best digital menu boards for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "in n out order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sushi takeaway",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu display board",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 29,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for restaurant menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash prices",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order breakfast online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu creator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital signage for restaurants",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "al baik online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr ordering system",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu creator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china cafe",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sushi online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "catering online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 32,
+    "lowCpc": 0.099167,
+    "highCpc": 0.479155
+  },
+  {
+    "keyword": "food menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code ordering",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu tv",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "canva menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create your own menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make a menu template free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu translator app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu ordering",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "yummy chinese",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu on tv screen free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code restaurant menu",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese take out",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 10,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "firehouse order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meal planning app with grocery list",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pos system for restaurant cost",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best digital menu for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu card design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free menu design templates",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 19,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu creator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": 0.217562,
+    "highCpc": 0.878229
+  },
+  {
+    "keyword": "restaurant menu design templates",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pos system for restaurant price",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "noodles order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu making software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tim horton's app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "delivery chinese",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design and printing",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best meal planning app for weight loss",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meal planning app for weight loss",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu creator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "panda order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese kitchen",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu app for restaurants",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 23,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "salata order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "square order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design templates free download",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hong kong chinese restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu planning app",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pei wei order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "weekly meal planner app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "talabat restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "5guys order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese express",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "video menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza website",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design website",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu for restaurants",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online restaurant menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": 0.217562,
+    "highCpc": 0.878229
+  },
+  {
+    "keyword": "order burger",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 18,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best free meal planning app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker template",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopsticks restaurant",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "professional menu design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "thai kitchen delivery",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr ordering",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza doner",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 4,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital food menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bdubs online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design programs",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu qr code generator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mandarin delivery",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu card design online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "led menu boards for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "smashburger order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free qr code menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu signage",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free restaurant menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "make a food menu online for free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant tv menu display",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "slice app pizza",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger online",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu generator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 73,
+    "lowCpc": 0.179288,
+    "highCpc": 0.758085
+  },
+  {
+    "keyword": "menu express",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cafe menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "adobe menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best qr code for restaurant menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free menu design online",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa john's pizza order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kfconline",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 22,
+    "lowCpc": 0.066951,
+    "highCpc": 0.312623
+  },
+  {
+    "keyword": "digital menu qr code",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu design template",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu program",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza on line",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 51,
+    "lowCpc": 0.069345,
+    "highCpc": 1.483362
+  },
+  {
+    "keyword": "menu card maker",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 34,
+    "lowCpc": 0.01,
+    "highCpc": 0.277244
+  },
+  {
+    "keyword": "food menu app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fast food with delivery",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 35,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bawarchi restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tv screen menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu designers near me",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu barcode",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu qr code restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator template",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "custom menu design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sandwich order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant qr menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu solutions",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr restaurant menu",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a menu template free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu template online free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cafe menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor digital menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free digital menu board software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wing stop order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan menu qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bk online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker app free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "home delivery pizza",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order shawarma online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online food menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": 0.217562,
+    "highCpc": 0.878229
+  },
+  {
+    "keyword": "virtual menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 14,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "healthy meal planning app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wasabi order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fortune chinese",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "gourmet china",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pasta order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu app design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cook out order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital signage for restaurant menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free templates for menus",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu generator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jet's pizza order online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "apps restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "led menu boards",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "debonair online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu qrcode",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 64,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker website",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": 0.217562,
+    "highCpc": 0.878229
+  },
+  {
+    "keyword": "meal planning and grocery list app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator for free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "sakura japanese restaurant",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese restaurants delivery",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menus for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "panda order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcdo order online",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 48,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese food restaurants",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "new china wok",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sandwich order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "app menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu book design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "breakfast online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ramen order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bar menu design",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu flyer design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create qr code menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu with qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create qr code for restaurant menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "canva menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 10,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "diabetic meal plan app",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "in n out burger order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code generator menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mondly price",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 21,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu with qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fast food digital menu boards",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr table ordering",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese food takeaway",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order in and out",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order sides",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "roma delivery",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 29,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "skyline order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hot wok chinese",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital reminder board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free menu maker app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bar menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pos qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a qr code menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu generator free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "new chinese food",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "catering menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 14,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bamboo chinese restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu designers near me",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "denny order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "roma pizza delivery",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "imdb the menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu template creator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kong kitchen",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design website",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu app download",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu designers",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu layout design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create restaurant menu online free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best meal planning app for families free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu templates free download",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 71,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "weekly menu planner app",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free food menu maker",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "barcode for restaurant menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bar menu creator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lisi menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create online restaurant menu free",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu with qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jade chinese restaurant",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese food take out",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "glovo food menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "life alive order online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu engineering software",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu displays restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cocktail menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu digital board",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 9,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "e menu app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "the golden wok",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopsticks chinese restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cocktail menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu application",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 18,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mocha cookie crumble frappuccino price",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create qr menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "app for menu design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order imos online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mac donald online order",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 48,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "new china chinese restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu ordering system",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best healthy meal planning app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ny chinese",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free online menu maker for restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kitchen order",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wok online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best menu planning app",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "in and out burger order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu card maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best qr menu for restaurants",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcdonald's digital menu board",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "website menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "epos systems for takeaways",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free qr menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "samsung digital menu boards",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order for pizza",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 34,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "japanese express",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu card creator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "google play menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sandwich online",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "google play store menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best free menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese cafe",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free restaurant menu creator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 69,
+    "lowCpc": 0.061176,
+    "highCpc": 0.682398
+  },
+  {
+    "keyword": "apps for meal planning free",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 50,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "coffee shop menu design",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "coffee shop digital menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "no1 chinese",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "diet food app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "yummy chinese food",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "simple menu design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant led menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bamboo chinese food",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hot wok chinese restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu sample design",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu generator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lucky chinese restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive through digital menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "table qr code menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make qr code menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "shop menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code digital menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza plus order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "exterior menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cafe menu creator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive thru digital menu",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 29,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cocktail menu creator",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make online menu free",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "woks chinese",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu qr code",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "koi order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sals order online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr digital menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "asia chinese restaurant",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "top meal planning apps",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu price",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fast food menu board",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cocktail menu templates",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 43,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app for creating menus",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free qr menu for restaurants",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic food menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free qr menu creator",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 86,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bamboo online order",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fast food menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "weekly menu app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "simple menu maker",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make menu card online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online qr menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese bistro",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code table restaurant",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza online menu",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 64,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mrbeast burger app",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr scanner menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "clover restaurant pos",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cheddars delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tv menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger king doordash",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board software free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china wok delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meals to order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive thru menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tv menu board software free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcalister's delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu screens",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa murphy's delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "al baik delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu display",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza express takeaway",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcdelivery menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu costing software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu screens for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chilis order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "postmates restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu ordering system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive thru menu boards for sale",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food ordering software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "red lobster order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu display screen",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant costing software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order chinese food delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash delivery food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash for business cost",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcalister's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cookout order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jamba juice order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tv menu board software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "veggie grill delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board companies",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "golden corral delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu boards for sale",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cpk order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu signage",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "touch screen menu ordering system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu display screens",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ichiban delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "delivery chinese food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant food cost software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chuy's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "condado delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa ginos delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bolay delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "longhorns delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant table ordering system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "aloha pos system cost",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cheddar's delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "www outbacksteakhouse com order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "perkins order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chilis to go order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu board for food truck",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code restaurant ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chick fil a order online delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant qr code ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu boards near me",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design software free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tazikis delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu on tv screen",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza order online delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wagamama order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu digital display",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker free printable",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopsticks delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "marcos online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order salads online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kuya j delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chilis order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "golden wok delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food truck digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital signage player for restaurant digital menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu management software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lupe tortilla delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "willys online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu qr code free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "galitos online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese takeaway delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mc donalds order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "plaza azteca delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order cookout online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chicago pizza online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best digital menu board software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "luna grill order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "noodles order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free digital menu board app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code table ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "marco's pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lil ceaser order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order pizza express",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hot wok delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bento order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cicis pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order chinese delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu building software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ginos delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bolay order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "rosati's delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza express order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "osmow's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu display board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu flyer maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu ordering system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "condado order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital tv menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "beyond the wok",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu boards for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "custom menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor digital menu display",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order sushi delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa murphy's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best food cost calculator app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash pricing for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger king mobile order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant qr code menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "business menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wendy online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant pos with online ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu screens prices",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "roman's pizza online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash burger king menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "o charley's menu order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chaiiwala delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order dq online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu display board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "creative menu design templates",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cooper's hawk delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sushi home delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chick fil a catering order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger king delivery app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best menu design software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu costing app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best digital menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board software free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "waba grill order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "habit burger order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free digital menu board software download",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu for food truck",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "grill d order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "rubios online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor menu boards for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcdo menu delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu app free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cicis order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu app free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "popeyes doordash menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital signage menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "download the burger king app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital display board for restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pepes order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create qr code for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "screen menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "spur online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make your own menu free printable",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order tacos",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu pricing software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lcd menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "freddy's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cheddar's scratch kitchen delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor led menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu app free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "new china delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order wings online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "large menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code generator for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "gusto order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "takeaway menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcalister deli delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menufy delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu monitors",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best qr code menu for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cheddars order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code order restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive thru menu boards price",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu online qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "a and w order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "habit order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for restaurant menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu display software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "talabat menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "easy menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital price board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza places with wings",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "us pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu costing software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa john's online menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order makanan online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tijuana flats order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "la granja order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "roosters order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food i can order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu board software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "led menu display board price",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free qr code ordering system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa gino's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "phil's bbq delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "slice online ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "professional menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital screen menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "commercial menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "togos order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu ordering app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "littlecaesars com order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china palace delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "round table order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order in and out online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu creation software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital drive thru menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant software price",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu layout maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design software free download",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu signs",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "software to create menus for restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cheap digital menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app to make restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app to make menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cookout online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "little cesar online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "greenwich online delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board creator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "rosati's pizza delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lcd screen for restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "thai express order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china kitchen delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design and printing near me",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger king free food app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "google play store app menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creator free printable",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "homegrown order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "roman's pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "salon menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "app to make a menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board screens",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free food costing software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "al baik home delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "apps to make menus",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "display restaurant menu on tv",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best drive thru menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "electronic menu display",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan qr code for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital bar menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design near me",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kura sushi waitlist",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "family meal planner app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food truck menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board software for tv",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "round table pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese home delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "romans online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code food ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "golden chopsticks delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu qr code free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa john's online delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "virtual menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free digital menu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tiramisu order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "indoor menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bbq online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu poster maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "golden bowl delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sushi online delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "rosas cafe order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sakura order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital food truck menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu builder app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "diabetes menu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code system for restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create your own menu online free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "crust order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu qr code generator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order pepes online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jade palace delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu pricing app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "al baik online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "boost order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "delivery order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu design software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wing daddy's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu signage",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bill miller order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "luigi's pizza delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "whole foods pizza price",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wok and go delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order sushi platter",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "screen menu for restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "new china cuisine",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu editing software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu flyer",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital board for restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bento order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "animated menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for ordering food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "momos order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker app for pc",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "carrot express order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wagamama home delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker near me",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza ranch order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food truck digital menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "steak express order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code to order food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopstix order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "square online ordering app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "easy menu creator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurants with qr code menus",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu boards for sale",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "square digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online food menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sakura sushi delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "screen menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "postmates menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mission bbq order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "programmable menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a qr code for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "new york pizza app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "steak out delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "dickeys order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "red lobster online menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu creating app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "old chicago order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mancinos delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "taziki's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free menu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sonny's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant digital menu software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "debonair order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu ordering free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "asian wok delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app for menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wimpy online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free menu maker software download",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "burger king ubereats",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor drive thru menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make your own menu for free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food pricing app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for pdf menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "printed menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "the alley online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "dinner online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "dim sum order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "shogun order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cafe digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "casey's pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu software programs",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "egg order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order habit online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza max online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "veggie grill order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker software free download",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "take away thai",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design near me",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a menu qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "table ordering qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tims order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "program to make menus for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "maman delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "the habit online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "heartland restaurant pos pricing",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "nando order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pickcel digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant video menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu creator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best menu maker app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital chalkboard menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "catering menu creator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu display software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design app free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant tv menu software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "diet meal plan app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free qr code for restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scanner menu restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app to make a menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make my own menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best menu creator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu on line",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for menu restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board cost",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code generator for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu player",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "service menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant digital menu display",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan qr code to order food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash delivery charge",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outdoor menu boards with lights",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan code for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "flat screen menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu price",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ichiban order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "roman's pizza app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create qr code menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "easy menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu design templates free download",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mod pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash domino's menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qmenu app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "vapiano order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tv screen restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu signage software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "account menu apple tv",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "apache order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "urbane cafe order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hong kong chinese takeaway",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code to menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "domino's ordering app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code generator for restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tazikis online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fortune chinese restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital food menu template",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code food menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fishbowl order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash 99 restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "capri pizza delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best digital menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bakery menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu design and printing",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create free restaurant menu online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopstix chinese",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "led tv menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan menu barcode",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan menu qr code online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code for food menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make your own menu online free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jacks online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash restaurant pricing",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopsticks takeaway",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free diet meal plan app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu in qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "happy's pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meal planning calendar app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu for restaurants free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu design template",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board hardware",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "greco order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lasagna order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu design online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a food menu online for free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fish and chips online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu card design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cost to use doordash",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tees takeaway",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hacienda order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant billing software price",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "commercial digital menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chinese menu online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu ordering software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu template maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan qr code to order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best software for restaurant menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital takeaway menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurants for doordash",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jade chinese food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a qr code for a menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code scanner for restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sonnys online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "outside menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu designer app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "catering menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "china wok order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "food menu maker online free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu scan code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create qr code for menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scan qr code for restaurant menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "apps to make food menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu company",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizzaman order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu card design online free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wings etc order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ghost restaurant doordash",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chopsticks order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sabor order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create a menu flyer free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "opa order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hong kong lite menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "wok delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital qr menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "spa menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital concession menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "recipe and meal planning app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "professional restaurant menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr food ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "order food using qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "eat n park order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu development software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "crab food delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa murphy's online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "macd order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free online food menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "vertical digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "family wok",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fiveguys order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "amigos order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "indoor digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu creator free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qt order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cloud based digital menu boards",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menustar food online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu display board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hook and reel order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tv as menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "apple bees online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "harvest order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mandarin order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "square qr code menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "video menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best weekly meal planner app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "unagi app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizza point online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu builder free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board for coffee shop",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive thru menu boards for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code restaurant menu free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free diabetic meal planner app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "led display menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu boards drive thru",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "tocaya order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu generator",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make menu online free printable",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fire wings order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make qr code for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "cosmos pizza delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu doordash",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meal planning apps with grocery list",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board system",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hot wok restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu gratuit",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu software for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app to create a menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "clover digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "touch screen menu for restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "spur online order and delivery",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "delicious chinese restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker with pictures",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "fancy menu maker",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker free no sign up",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr for menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bj restaurant app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant wall menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital cafe menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best app to create menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash food menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "free menu making app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "dinner calendar app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "lee's chinese food",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu for restaurant qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "aladdin's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu maker printable free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "beyond wok",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash costs for restaurants",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pdf menu qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "drive thru menu board cost",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu qr code free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "led digital menu board",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu maker app download",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "hungerrush online ordering",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "el nopal order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "salt order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "best program for menu design",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restaurant menu maker software",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "papa's pizza order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sakura online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu qr code scanner",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "pizzeria online order",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chick fil a online menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "al baik app",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu board player",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "create menu with qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "paisanos order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "make a menu flyer free",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "yamato order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "little greek order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital restaurant menu qr code",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bill gray's order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "beyond juice order online",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "chilis online menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "doordash $12 lunch",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  }
+]

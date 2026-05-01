@@ -1,0 +1,674 @@
+[
+  {
+    "keyword": "restoran lucija tjedni meni",
+    "searches": 170,
+    "competition": "LOW",
+    "competitionIdx": 1,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "rio pizzeria meni",
+    "searches": 140,
+    "competition": "LOW",
+    "competitionIdx": 4,
+    "lowCpc": 0.183814,
+    "highCpc": 0.652981
+  },
+  {
+    "keyword": "konoba argola meni",
+    "searches": 70,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran kvatrić meni",
+    "searches": 70,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran lucija meni",
+    "searches": 70,
+    "competition": "LOW",
+    "competitionIdx": 1,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kantina meni",
+    "searches": 50,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sofra borovje meni",
+    "searches": 50,
+    "competition": "LOW",
+    "competitionIdx": 8,
+    "lowCpc": 0.048202,
+    "highCpc": 0.411369
+  },
+  {
+    "keyword": "time restoran meni",
+    "searches": 40,
+    "competition": "LOW",
+    "competitionIdx": 4,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu",
+    "searches": 30,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": 0.309144,
+    "highCpc": 1.419854
+  },
+  {
+    "keyword": "meni restoran",
+    "searches": 30,
+    "competition": "LOW",
+    "competitionIdx": 7,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran el meni",
+    "searches": 30,
+    "competition": "LOW",
+    "competitionIdx": 1,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digitalni jelovnik",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 8,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr jelovnik",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digitalni meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr kod meni",
+    "searches": 10,
+    "competition": "HIGH",
+    "competitionIdx": 81,
+    "lowCpc": 0.36645,
+    "highCpc": 1.948684
+  },
+  {
+    "keyword": "meni za restoran",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "digital menu",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 48,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr menu restaurant",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online menu",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code restaurant",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu board digital",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 36,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "bijelo plavi restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ježeva kućica restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kako napraviti meni za restoran",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "kfc besplatna dostava",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "konoba meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "koćuša restoran meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "loft restoran meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "mcdonalds vegetarijanski meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meni restorana domace kuhinje",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 14,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "meni za proslave",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 19,
+    "lowCpc": 0.167185,
+    "highCpc": 0.283483
+  },
+  {
+    "keyword": "meni za restorane",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 23,
+    "lowCpc": 0.181262,
+    "highCpc": 0.842364
+  },
+  {
+    "keyword": "menu online mcdonalds",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 57,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "orkan restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 3,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran amerikanac meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran august meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 7,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran braća palić meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 5,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran dnevni meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran el mjesečni meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 2,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran etna meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran fontana meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran gradina meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran gurman meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 10,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran gusar meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran kastel meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran kula meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 5,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran kvatric dostava meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran maslina meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran oaza meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran pri zvoncu meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran san meni",
+    "searches": 10,
+    "competition": "MEDIUM",
+    "competitionIdx": 33,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran staklo meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran sunce meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran terasa meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran đir meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran šarm dnevni meni",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran šug meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "ribič restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sakura restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 21,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "terasa restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "the menu 2022 online",
+    "searches": 10,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "umami restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 10,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "vapiano meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 5,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "waldinger restoran meni",
+    "searches": 10,
+    "competition": "LOW",
+    "competitionIdx": 0,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr code menu gratuit",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "menu digital tv",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "scanner qr code menu restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "code menu restaurant",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "etna restoran meni",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "maksimilijan restoran meni",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "patat menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran korjeni meni",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "restoran zmajevac meni",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "shoarma sphinx menu",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "sofa restoran meni",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr kod jelovnik",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "jelovnik qr kod",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "elektronski jelovnik",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "online jelovnik restoran",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr meni restoran",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "napraviti qr meni",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "napraviti digitalni jelovnik",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "qr jelovnik pizzeria",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  },
+  {
+    "keyword": "vinska karta digitalna",
+    "searches": 0,
+    "competition": "UNSPECIFIED",
+    "competitionIdx": null,
+    "lowCpc": null,
+    "highCpc": null
+  }
+]

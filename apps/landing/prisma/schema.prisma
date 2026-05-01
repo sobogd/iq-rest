@@ -340,9 +340,11 @@ model PulseEvent {
   event   String
   country String   @default("XX")
   region  String   @default("")
+  gclid   String?
 
   @@index([at])
   @@index([event, at])
+  @@index([gclid])
   @@map("pulse_events")
 }
 
