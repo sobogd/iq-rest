@@ -36,16 +36,11 @@ export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 text-xs md:max-w-[50%]">
-            {[
-              { href: "#features", label: headerTexts.navFeatures },
-              { href: "#how", label: headerTexts.navHow },
-              { href: "#pricing", label: headerTexts.navPricing },
-              { href: "#faq", label: headerTexts.navFaq },
-            ].map((link) => (
+            {texts.featureLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => analytics.track(`land_footer_anchor_${link.href.slice(1)}_click`)}
+                onClick={() => analytics.track(`land_footer_feature_${slugify(link.href)}_click`)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -55,11 +50,16 @@ export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
 
           <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-end">
             <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs">
-              {navLinksFiltered.map((link) => (
+              {[
+                { href: "#features", label: headerTexts.navFeatures },
+                { href: "#how", label: headerTexts.navHow },
+                { href: "#pricing", label: headerTexts.navPricing },
+                { href: "#faq", label: headerTexts.navFaq },
+              ].map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => analytics.track(`land_footer_nav_${slugify(link.href)}_click`)}
+                  onClick={() => analytics.track(`land_footer_anchor_${link.href.slice(1)}_click`)}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
