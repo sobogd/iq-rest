@@ -1,6 +1,6 @@
 "use client";
 
-import { dashboardUrl } from "@/lib/dashboard-url";
+import { createUrl, loginUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 import type { LandingTexts } from "../types";
 
@@ -10,7 +10,10 @@ interface HeaderProps {
 }
 
 export function LandingHeader({ texts, locale }: HeaderProps) {
-  const signup = `${dashboardUrl(`/${locale}/login`)}?from=landing`;
+  // Two distinct intents: "Sign in" (returning user → plain login)
+  // vs "Create" CTA (new user → create-flow wizard with cuisine + name preload).
+  const signinHref = `${loginUrl(locale)}?from=landing`;
+  const createHref = `${createUrl(locale)}&from=landing`;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
@@ -30,14 +33,14 @@ export function LandingHeader({ texts, locale }: HeaderProps) {
         </nav>
         <div className="flex items-center gap-5 shrink-0">
           <a
-            href={signup}
+            href={signinHref}
             onClick={() => analytics.track("land_header_signin_click")}
             className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             {texts.signIn}
           </a>
           <a
-            href={signup}
+            href={createHref}
             onClick={() => analytics.track("land_header_cta_click")}
             className="inline-flex items-center justify-center h-9 px-4 text-xs font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all"
           >

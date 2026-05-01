@@ -1,6 +1,6 @@
 "use client";
 
-import { dashboardUrl } from "@/lib/dashboard-url";
+import { createUrl } from "@/lib/dashboard-url";
 import { analytics } from "@/lib/analytics";
 
 const baseClass =
@@ -26,7 +26,7 @@ export function CtaButton({
   extra,
 }: CtaButtonProps) {
   const isSticky = layout === "sticky";
-  const target = `${dashboardUrl(`/${locale}/login`)}?from=landing`;
+  const target = `${createUrl(locale)}&from=landing`;
 
   const alignClass =
     align === "end"

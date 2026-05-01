@@ -58,3 +58,17 @@ export function navigateToLogin(locale: string) {
   if (typeof window === "undefined") return;
   window.location.assign(loginUrl(locale));
 }
+
+/**
+ * Same as loginUrl but with `?create=true` so the dashboard renders the create-flow wizard
+ * (cuisine → name → email/Google) instead of the plain login form. Use for marketing CTAs
+ * whose intent is "start a new menu", not "sign in".
+ */
+export function createUrl(locale: string): string {
+  return loginUrl(locale) + "?create=true";
+}
+
+export function navigateToCreate(locale: string) {
+  if (typeof window === "undefined") return;
+  window.location.assign(createUrl(locale));
+}

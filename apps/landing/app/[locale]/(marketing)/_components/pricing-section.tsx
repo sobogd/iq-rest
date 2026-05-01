@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 import { analytics } from "@/lib/analytics";
-import { loginUrl } from "@/lib/dashboard-url";
+import { createUrl } from "@/lib/dashboard-url";
 
 interface PricingSectionProps {
   currency: SupportedCurrency;
@@ -165,7 +165,7 @@ export function PricingSection({ currency }: PricingSectionProps) {
           asChild
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg mx-auto"
         >
-          <a href={loginUrl(locale)} onClick={handleCtaClick}>
+          <a href={createUrl(locale)} onClick={handleCtaClick}>
             {t("trialCta")}
           </a>
         </Button>

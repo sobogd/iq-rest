@@ -1,7 +1,7 @@
 "use client";
 
 import { Lock, Ban, Zap, Globe } from "lucide-react";
-import { dashboardUrl } from "@/lib/dashboard-url";
+import { createUrl } from "@/lib/dashboard-url";
 import { pricing } from "@/lib/pricing";
 import { currencyInfo, type SupportedCurrency } from "@/lib/country-currency-map";
 import { analytics } from "@/lib/analytics";
@@ -63,7 +63,7 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
   const monthlyParts = formatPriceParts(plan.monthly, currency);
   const yearlyParts = formatPriceParts(plan.yearly, currency);
   const savings = formatPrice(plan.monthly * 12 - plan.yearlyTotal, currency);
-  const trialHref = `${dashboardUrl(`/${locale}/login`)}?from=landing`;
+  const trialHref = `${createUrl(locale)}&from=landing`;
 
   const trustItems = [
     { Icon: Lock, label: texts.trust.secure },

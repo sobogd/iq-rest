@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { useLocale } from "next-intl";
 import { analytics } from "@/lib/analytics";
-import { loginUrl } from "@/lib/dashboard-url";
+import { createUrl } from "@/lib/dashboard-url";
 
 interface HeroCreateButtonProps {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export function HeroCreateButton({ children }: HeroCreateButtonProps) {
       asChild
       className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg"
     >
-      <a href={loginUrl(locale)} onClick={() => analytics.track("land_hero_cta_click")}>{children}</a>
+      <a href={createUrl(locale)} onClick={() => analytics.track("land_hero_cta_click")}>{children}</a>
     </Button>
   );
 }

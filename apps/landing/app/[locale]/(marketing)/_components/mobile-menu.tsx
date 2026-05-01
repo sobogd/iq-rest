@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
-import { loginUrl } from "@/lib/dashboard-url";
+import { createUrl } from "@/lib/dashboard-url";
 import {
   Dialog,
   DialogContent,
@@ -61,7 +61,7 @@ export function MobileMenu({ links, menuTitle, getStartedLabel }: MobileMenuProp
             ))}
           </div>
           <Button asChild className="w-full mt-6">
-            <a href={loginUrl(locale)} onClick={() => setOpen(false)}>
+            <a href={createUrl(locale)} onClick={() => setOpen(false)}>
               {getStartedLabel}
             </a>
           </Button>

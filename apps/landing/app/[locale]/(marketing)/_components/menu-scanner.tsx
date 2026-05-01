@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, Loader2, ArrowRight, AlertCircle, Sparkles } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { useTranslations, useLocale } from "next-intl";
-import { loginUrl } from "@/lib/dashboard-url";
+import { createUrl } from "@/lib/dashboard-url";
 
 type State = "idle" | "loading" | "preview" | "error";
 
@@ -273,7 +273,7 @@ export function MenuScanner() {
           className="h-auto px-6 py-2 text-base lg:px-8 lg:py-2.5 lg:text-lg shrink-0"
           onClick={() => analytics.track("land_scanner_cta_click")}
         >
-          <a href={loginUrl(locale)}>
+          <a href={createUrl(locale)}>
             {t("ctaButton")}
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>

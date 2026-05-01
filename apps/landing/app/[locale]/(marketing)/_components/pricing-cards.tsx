@@ -21,7 +21,7 @@ import { Check, X, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { track, DashboardEvent } from "@/lib/dashboard-events";
 import { analytics } from "@/lib/analytics";
-import { navigateToDashboard, navigateToLogin } from "@/lib/dashboard-url";
+import { navigateToCreate, navigateToDashboard } from "@/lib/dashboard-url";
 import { pricing, PlanId } from "@/lib/pricing";
 import { currencyInfo, SupportedCurrency } from "@/lib/country-currency-map";
 
@@ -103,7 +103,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
       const { authenticated } = await authRes.json();
 
       if (!authenticated) {
-        navigateToLogin(locale);
+        navigateToCreate(locale);
         return;
       }
 
@@ -128,7 +128,7 @@ export function PricingCards({ hideComparison = false, hideButtons = false, curr
 
       window.location.href = data.url;
     } catch {
-      navigateToLogin(locale);
+      navigateToCreate(locale);
     } finally {
       setLoadingPlan(null);
     }

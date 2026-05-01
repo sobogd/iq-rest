@@ -18,6 +18,10 @@ model User {
   otpExpiresAt DateTime?
   otpAttempts  Int       @default(0) // failed OTP verification attempts
   sessionToken String?   // hashed session token for validation
+  // Pre-signup context captured before OTP verify (cleared on first verify).
+  pendingCuisine        String?
+  pendingRestaurantName String?
+  pendingCurrency       String?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 
@@ -164,6 +168,7 @@ model Table {
   imageUrl     String?
   isActive     Boolean  @default(true)
   sortOrder    Int      @default(0)
+  isExample    Boolean  @default(false)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -188,6 +193,7 @@ model Reservation {
   guestsCount  Int
   status       String   @default("pending") // pending, confirmed, cancelled, completed
   notes        String?
+  isExample    Boolean  @default(false)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -229,6 +235,7 @@ model Item {
   allergens    String[] @default([]) // Array of allergen codes: gluten, dairy, eggs, etc.
   sortOrder    Int      @default(0)
   isActive     Boolean  @default(true)
+  isExample    Boolean  @default(false)
   categoryId   String
   companyId    String
   createdAt    DateTime @default(now())
@@ -241,6 +248,7 @@ model Item {
   @@index([categoryId])
   @@index([companyId, categoryId])
   @@index([categoryId, sortOrder])
+  @@index([companyId, isExample])
   @@map("items")
 }
 
@@ -338,6 +346,7 @@ model Order {
   comment         String?
   tableNumber     Int?
   status          String   @default("new") // new | in_progress | completed | cancelled
+  isExample       Boolean  @default(false)
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
