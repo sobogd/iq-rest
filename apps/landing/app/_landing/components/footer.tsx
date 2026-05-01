@@ -59,18 +59,18 @@ export function LandingFooter({ texts, locale }: FooterProps) {
                   {link.label}
                 </a>
               ))}
+            </nav>
+            <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs text-muted-foreground">
               <button
                 type="button"
                 onClick={() => {
                   analytics.track("land_footer_language_click");
                   setLangOpen(true);
                 }}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 {cookieTexts.languageSwitcher}
               </button>
-            </nav>
-            <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs text-muted-foreground">
               <a
                 href="/sitemap.xml"
                 target="_blank"
