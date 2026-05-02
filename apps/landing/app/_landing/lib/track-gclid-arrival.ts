@@ -41,12 +41,18 @@ export async function trackGclidArrival(
     // ignore — running outside request scope
   }
 
+  // Event name includes locale so admin Pulse timeline can distinguish which
+  // landing the click came from (e.g. land_fr_gclid_arrival vs land_de_gclid_arrival).
+  // Locale must match /^[a-z]{2}$/ to keep event name in EVENT_REGEX.
+  const safeLocale = /^[a-z]{2}$/.test(locale) ? locale : "xx";
+  const eventName = `land_${safeLocale}_gclid_arrival`;
+
   // Fire-and-forget. Do NOT await — must not delay TTFB.
   void fetch(`${API_BASE}/api/analytics/pulse`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      event: "land_gclid_arrival",
+      event: eventName,
       gclid,
       ...(country && /^[A-Z]{2}$/.test(country) ? { country } : {}),
       ...(region ? { region } : {}),

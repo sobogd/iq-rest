@@ -127,6 +127,33 @@ npx tsx scripts/set-all-budgets.ts 25       # €25/day
 
 Skips campaigns already at the requested amount.
 
+### `report-search-terms.ts`
+Search-terms report — actual queries that triggered ad impressions across
+all 4 campaigns over the last N days. Sorted by clicks descending. Highlights
+top wasted-spend candidates (≥2 clicks, 0 conversions) at the bottom.
+
+```bash
+npx tsx scripts/report-search-terms.ts             # last 7 days
+npx tsx scripts/report-search-terms.ts 30          # last 30 days
+npx tsx scripts/report-search-terms.ts 7 --no-conv # only zero-conv queries
+```
+
+**Run weekly.** Review wasted-spend candidates → feed irrelevant terms into
+`add-shared-negatives.ts`.
+
+### `add-shared-negatives.ts`
+Adds a hardcoded list of negative keywords (PHRASE match) to all 4 campaigns at
+once. Idempotent — checks existing negatives first, only adds missing ones.
+
+Edit `NEW_NEGATIVES` array in the script before running. Workflow:
+
+1. `npx tsx scripts/report-search-terms.ts 7` → spot bad queries
+2. Edit `NEW_NEGATIVES` in `add-shared-negatives.ts`
+3. `npx tsx scripts/add-shared-negatives.ts` → applied to all 4 campaigns
+
+Note: PHRASE-match negatives are token-based — `gratuit` won't catch
+`gratuitement`. Add every morphological form explicitly.
+
 ### `update-italy-bids-low.ts`
 Lowers all ad-group default bids in IT campaign to "low top-of-page" range.
 Was used to switch from top-1 placement bidding to page-1-bottom. Effectively
