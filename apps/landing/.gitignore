@@ -49,6 +49,7 @@ vercel.json
 # documentation
 *.md
 !README.md
+!scripts/GOOGLE_ADS.md
 
 # scripts and configs
 *.sh
