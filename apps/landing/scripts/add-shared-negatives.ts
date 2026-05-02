@@ -17,7 +17,18 @@ const CAMPAIGN_NAMES = [
 ];
 
 // Negatives observed wasting clicks across campaigns. Phrase match unless noted.
+// Add new bad terms here, re-run script — idempotent (skips already-present).
 const NEW_NEGATIVES = [
+  // Scanner intent — people looking to SCAN QR codes, not build menus
+  "scanner", "scanner qr", "qr scanner", "qr code scanner",
+  "scanneur", "scanneur qr",
+  "scanner codice qr",
+  "escaner", "escáner", "escaner qr", "escáner qr",
+  "leggi qr", "leggere qr",
+  "lire qr", "lire un qr",
+  "leer qr", "leer codigo qr",
+  "qr code lesen", "qr lesen",
+
   // Free seekers — PHRASE match doesn't morph; add every form
   "gratuitement",     // FR adverb form (escaped past "gratuit")
   "gratuitemente",    // IT adverb form
