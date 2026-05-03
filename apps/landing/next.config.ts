@@ -52,6 +52,11 @@ const nextConfig: NextConfig = {
       { source: "/privacy", destination: "/", permanent: true },
       { source: "/terms", destination: "/", permanent: true },
       { source: "/languages", destination: "/", permanent: true },
+      // Changelog removed — redirect listing and any entry to the locale home.
+      { source: "/:locale/changelog", destination: "/:locale", permanent: true },
+      { source: "/:locale/changelog/:entry*", destination: "/:locale", permanent: true },
+      { source: "/changelog", destination: "/", permanent: true },
+      { source: "/changelog/:entry*", destination: "/", permanent: true },
     ];
   },
 

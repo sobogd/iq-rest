@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/routing'
-import { CHANGELOG_ENTRIES } from '@/app/_landing/changelog/entries-meta'
 
 type RouteConfig = {
   path: string
@@ -27,13 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/personal-support', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/online-orders', lastModified: '2026-02-24', changeFrequency: 'monthly', priority: 0.9 },
     { path: '/faq', lastModified: '2026-02-20', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/changelog', lastModified: CHANGELOG_ENTRIES[0]?.date ?? '2026-05-01', changeFrequency: 'weekly', priority: 0.7 },
-    ...CHANGELOG_ENTRIES.map((entry) => ({
-      path: `/changelog/${entry.id}`,
-      lastModified: entry.date,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    })),
   ]
 
   // Generate sitemap entries for all locales
