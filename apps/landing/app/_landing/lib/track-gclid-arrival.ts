@@ -33,13 +33,18 @@ export async function trackGclidArrival(
 
   let country = "";
   let region = "";
+  let isAdmin = false;
   try {
     const c = await cookies();
     country = (c.get("geo_country")?.value || "").toUpperCase().slice(0, 2);
     region = (c.get("geo_region")?.value || "").slice(0, 100);
+    isAdmin = c.get("iq_admin")?.value === "1";
   } catch {
     // ignore — running outside request scope
   }
+  // Skip pulse capture entirely for admin browsers (apex-domain cookie set by
+  // dashboard-web after admin login).
+  if (isAdmin) return;
 
   // Event name includes locale so admin Pulse timeline can distinguish which
   // landing the click came from (e.g. land_fr_gclid_arrival vs land_de_gclid_arrival).

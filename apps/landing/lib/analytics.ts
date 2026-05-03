@@ -67,8 +67,18 @@ function getGclid(): string | null {
   }
 }
 
+function isAdminBrowser(): boolean {
+  // Apex-domain cookie set by dashboard-web after admin login. Mirrors the
+  // localStorage flag for cross-origin reach so admin sessions don't pollute
+  // pulse / session analytics from the marketing site either.
+  if (typeof document === "undefined") return false;
+  const m = document.cookie.match(/(?:^|; )iq_admin=([^;]*)/);
+  return !!m && m[1] === "1";
+}
+
 function track(event: string): void {
   if (typeof window === "undefined") return;
+  if (isAdminBrowser()) return;
 
   // Cookieless pulse — always.
   fetch(`${API_BASE}/api/analytics/pulse`, {
@@ -93,6 +103,7 @@ function track(event: string): void {
 
 function linkSession(_userId?: string): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
+  if (isAdminBrowser()) return Promise.resolve();
   if (getConsent() !== "accepted") return Promise.resolve();
   ensureSid();
   return fetch(`${API_BASE}/api/analytics/identify`, {
