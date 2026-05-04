@@ -1,30 +1,61 @@
 // Server-side gclid capture on landing arrival.
-// Called from app/<locale>/page.tsx as a fire-and-forget. Forwards user's
-// geo cookie + UA so the API can classify accurately (intermediate nginx
-// clobbers cf-* headers and the API would otherwise see this server's UA).
+// Called from app/<locale>/page.tsx as an awaited step. Reads the user's CF
+// headers directly (these are the visitor's geo, not the API server's), writes
+// the event to the shared `usage_events` table via Prisma, then issues a 307
+// redirect to a clean URL so the visitor never sees ?gclid in their address bar.
+//
+// The DB write happens in-process, so geo/UA cannot be misclassified as the
+// API server's own request — we feed the API the same fields it would resolve
+// itself, only sourced from the visitor's actual request.
 
 import "server-only";
-import { cookies, headers } from "next/headers";
-import { dashboardApi } from "@/lib/dashboard-url";
+import { headers as nextHeaders } from "next/headers";
+import { redirect } from "next/navigation";
+import { randomUUID } from "node:crypto";
+import { UAParser } from "ua-parser-js";
+import { prisma } from "@/lib/prisma";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
 function pickGclid(searchParams: SearchParams): string | null {
-  const raw = searchParams.gclid;
-  const v = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] : null;
-  if (!v || !GCLID_REGEX.test(v)) return null;
-  return v;
+  const candidates = [searchParams.gclid, searchParams.gbraid, searchParams.wbraid];
+  for (const raw of candidates) {
+    const v = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] : null;
+    if (v && GCLID_REGEX.test(v)) return v;
+  }
+  return null;
 }
 
-/**
- * Logs a `land_<locale>_gclid_arrival` usage event when ?gclid=… is present in the
- * landing URL. Geo data taken from cookies set by middleware (geo_country,
- * geo_region) since intermediate nginx would otherwise overwrite cf-* headers.
- *
- * Fire-and-forget — does not block landing render. Failures swallowed silently.
- */
+/** Same classifier as iq-rest-dashboard-api/src/usage/usage.controller.ts so
+ *  the two write paths produce identical (device, platform) pairs. */
+function classifyDevice(uaString: string | null): { device: string | null; platform: string | null } {
+  if (!uaString) return { device: null, platform: null };
+  try {
+    const parser = new UAParser(uaString);
+    const dev = parser.getDevice().type; // "mobile" | "tablet" | …
+    const os = (parser.getOS().name || "").toLowerCase();
+    const device = dev === "mobile" || dev === "tablet" ? dev : "desktop";
+    let platform: string = "other";
+    if (os.includes("ios")) platform = "ios";
+    else if (os.includes("android")) platform = "android";
+    else if (os.includes("windows")) platform = "windows";
+    else if (os.includes("mac") || os.includes("os x")) platform = "macos";
+    else if (os.includes("linux") || os.includes("ubuntu") || os.includes("fedora") || os.includes("debian")) platform = "linux";
+    return { device, platform };
+  } catch {
+    return { device: null, platform: null };
+  }
+}
+
+function decodeCfHeader(raw: string | null): string | null {
+  if (!raw) return null;
+  try { return decodeURIComponent(raw); } catch { return raw; }
+}
+
+/** When ?gclid=... arrives, write the event to usage_events using the
+ *  visitor's CF headers (not the SSR's own geo) and redirect to a clean URL. */
 export async function trackGclidArrival(
   searchParams: SearchParams,
   locale: string,
@@ -32,41 +63,36 @@ export async function trackGclidArrival(
   const gclid = pickGclid(searchParams);
   if (!gclid) return;
 
-  let country = "";
-  let region = "";
-  try {
-    const c = await cookies();
-    country = (c.get("geo_country")?.value || "").toUpperCase().slice(0, 2);
-    region = (c.get("geo_region")?.value || "").slice(0, 100);
-  } catch {
-    // ignore — running outside request scope
-  }
-
-  let userAgent = "";
-  try {
-    const h = await headers();
-    userAgent = h.get("user-agent") || "";
-  } catch {
-    // ignore
-  }
+  const h = await nextHeaders();
+  const country = (h.get("cf-ipcountry") || "").toUpperCase().slice(0, 2) || "XX";
+  const region = (decodeCfHeader(h.get("cf-region")) || "").slice(0, 100);
+  const userAgent = h.get("user-agent");
 
   const safeLocale = /^[a-z]{2}$/.test(locale) ? locale : "xx";
   const eventName = `land_${safeLocale}_gclid_arrival`;
+  const { device, platform } = classifyDevice(userAgent);
+  const id = randomUUID();
+  const at = new Date();
 
-  // Fire-and-forget. Do NOT await — must not delay TTFB.
-  void fetch(dashboardApi("/api/usage/event"), {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      event: eventName,
-      occurredAt: Date.now(),
-      gclid,
-      ...(country ? { country } : {}),
-      ...(region ? { region } : {}),
-      ...(userAgent ? { userAgent } : {}),
-    }),
-    keepalive: true,
-  }).catch(() => {
-    // swallow — gclid capture is best-effort
-  });
+  // Insert directly — same DB as dashboard-api's UsageEvent model.
+  // Fire-and-forget on errors; gclid capture is best-effort and must not block
+  // the landing render.
+  try {
+    await prisma.$executeRaw`
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, "companyId")
+      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL)
+    `;
+  } catch {
+    // ignore — event capture is best-effort
+  }
+
+  // Strip the ad-click params and reload on the clean URL. Browser sees 307.
+  const url = new URL(`/${locale}`, "http://x");
+  // Preserve any non-tracking searchParams the visitor had.
+  for (const [key, raw] of Object.entries(searchParams)) {
+    if (key === "gclid" || key === "gbraid" || key === "wbraid") continue;
+    const v = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] : null;
+    if (v) url.searchParams.set(key, v);
+  }
+  redirect(`${url.pathname}${url.search}`);
 }
