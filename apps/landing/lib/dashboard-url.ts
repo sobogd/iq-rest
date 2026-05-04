@@ -1,11 +1,13 @@
-// New SPA dashboard origin. Hardcoded so the landing build does not need a
-// separate env var; flip this constant if the dashboard moves.
-const DASHBOARD_BASE = "https://dashboard.iq-rest.com";
+// New SPA dashboard origin. Configurable via env so the test build points at
+// dashboard.test.iq-rest.com while prod builds default to dashboard.iq-rest.com.
+const DASHBOARD_BASE =
+  process.env.NEXT_PUBLIC_DASHBOARD_BASE || "https://dashboard.iq-rest.com";
 // Backend API origin. The landing posts analytics events here so that
 // events from the marketing site share the same Session/AnalyticsEvent
 // rows as the new SPA dashboard (joined by sessionId via the apex
-// .iq-rest.com analytics_sid cookie).
-const DASHBOARD_API_BASE = "https://dashboard-api.iq-rest.com";
+// analytics_sid cookie).
+const DASHBOARD_API_BASE =
+  process.env.NEXT_PUBLIC_DASHBOARD_API_BASE || "https://dashboard-api.iq-rest.com";
 
 export function isExternalDashboard(): boolean {
   return true;

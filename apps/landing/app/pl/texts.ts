@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -86,12 +86,12 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nic zbędnego.",
     sub: "Stworzone dla restauracji. Używane przy stoliku.",
     items: [
-      { Icon: ScanLine, title: "Zatrzymaj 100% każdego zamówienia", desc: "Goście skanują, zamawiają i płacą — prosto do ciebie. Bez pobierania aplikacji, bez 30% dla dostawy. Każde zamówienie trafia w czasie rzeczywistym do panelu z numerem stolika." },
-      { Icon: Languages, title: "Sprzedawaj turystom w ich języku", desc: "Jednym kliknięciem przetłumaczysz całą kartę na 35 języków. AI rozumie kontekst kulinarny — goście zamawiają więcej, gdy faktycznie rozumieją danie." },
-      { Icon: CalendarCheck, title: "Nie traać rezerwacji w trakcie gotowania", desc: "Goście rezerwują 24/7, bez telefonów. Auto- lub ręczne potwierdzenie, przypomnienia mailem — mniej no-show, zero stresu." },
-      { Icon: Palette, title: "Niezapomniane w 1 sekundę", desc: "Wrzuć film z kuchni albo zdjęcie dania jako tło karty. Goście przestają scrollować. Twoja marka zostaje." },
-      { Icon: Smartphone, title: "Aktualizuj w sekundach, nie w dniach", desc: "Zmień ceny, zamień zdjęcia, dodaj danie dnia — z telefonu, między stolikami. Na żywo dla gości natychmiast. Koniec z drukowaniem." },
-      { Icon: ListPlus, title: "Jak umiesz pisać SMS, umiesz to obsłużyć", desc: "Stuknij, by dodać danie. Przeciągnij, by zmienić kolejność. Wyłącz to, co się skończyło. Bez instrukcji, bez tutoriali, bez krzywej uczenia." },
+      { Icon: ScanLine, title: "Zatrzymaj 100% każdego zamówienia", desc: "Goście skanują, zamawiają i płacą — prosto do ciebie. Bez pobierania aplikacji, bez 30% dla dostawy. Każde zamówienie trafia w czasie rzeczywistym do panelu z numerem stolika.", tag: "Bezpośrednie zamówienia" },
+      { Icon: Languages, title: "Sprzedawaj turystom w ich języku", desc: "Jednym kliknięciem przetłumaczysz całą kartę na 35 języków. AI rozumie kontekst kulinarny — goście zamawiają więcej, gdy faktycznie rozumieją danie.", tag: "Tłumaczenie AI" },
+      { Icon: CalendarCheck, title: "Nie traać rezerwacji w trakcie gotowania", desc: "Goście rezerwują 24/7, bez telefonów. Auto- lub ręczne potwierdzenie, przypomnienia mailem — mniej no-show, zero stresu.", tag: "Rezerwacje" },
+      { Icon: Palette, title: "Niezapomniane w 1 sekundę", desc: "Wrzuć film z kuchni albo zdjęcie dania jako tło karty. Goście przestają scrollować. Twoja marka zostaje.", tag: "Własny design" },
+      { Icon: Smartphone, title: "Aktualizuj w sekundach, nie w dniach", desc: "Zmień ceny, zamień zdjęcia, dodaj danie dnia — z telefonu, między stolikami. Na żywo dla gości natychmiast. Koniec z drukowaniem.", tag: "Edytor menu" },
+      { Icon: ChefHat, title: "Szybsza obsługa każdej zmiany", desc: "Zamówienia trafiają na ekran kuchni, gdy tylko gość potwierdzi. Zero papieru, zero krzyków, zero zgubionych bonów — mniej błędów, szybsza obsługa, więcej kuwertów na wieczór.", tag: "Wkrótce" },
     ],
   },
 
@@ -139,7 +139,6 @@ export const TEXTS: LandingTexts = {
       { q: "Co zawiera okres próbny i co dzieje się potem?", a: "14 dni, pełny dostęp, bez karty. Po 14 dniach konto pauzuje, jeśli nie dodasz metody płatności — nigdy nie pobieramy automatycznie. Dodaj dane płatnicze później, by reaktywować. Anulujesz jednym kliknięciem." },
       { q: "Bierzecie prowizję od zamówień?", a: "Zero. Każde zamówienie z karty QR idzie prosto do ciebie — bez naszego udziału, bez opłat Pyszne.pl / Uber Eats. Jedna stała cena miesięczna, tyle." },
       { q: "Czy goście potrzebują aplikacji? Czy ja muszę znać się na technologii?", a: "Zero aplikacji dla gości — skanują QR aparatem, karta otwiera się w przeglądarce. Zero techniki dla ciebie — cały panel działa na telefonie, stuknij by dodać danie, przeciągnij by zmienić kolejność, tyle." },
-      { q: "Czy mogę zarządzać kilkoma restauracjami z jednego konta?", a: "Tak. Plan Pro pozwala na kilka restauracji w jednym koncie — osobne karty, osobne kody QR, osobne statystyki, jeden login. Przełączasz między nimi w dwa stuknięcia." },
       { q: "Jak szybko mogę zmieniać ceny i dodawać dania?", a: "Natychmiast. Zmieniasz cenę na telefonie, goście widzą w sekundach. Nowe danie? Stuknij, wpisz, zdjęcie, gotowe — bez druku, bez czekania na grafika." },
       { q: "Ile języków obsługujecie?", a: "35 języków z wbudowanym tłumaczeniem AI. Jedno kliknięcie tłumaczy całą kartę, a AI rozumie kontekst kulinarny — nazwy i opisy brzmią naturalnie w każdym języku. Turyści zamawiają więcej, gdy faktycznie rozumieją." },
     ],

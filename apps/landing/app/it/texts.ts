@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -91,31 +91,37 @@ export const TEXTS: LandingTexts = {
         Icon: ScanLine,
         title: "Tieni il 100% di ogni ordine",
         desc: "I clienti scansionano, ordinano e pagano — direttamente a te. Niente app da scaricare, niente 30% per il delivery. Ogni ordine arriva nella dashboard con numero di tavolo in tempo reale.",
+        tag: "Ordini diretti",
       },
       {
         Icon: Languages,
         title: "Vendi ai turisti nella loro lingua",
         desc: "Un tocco traduce tutto il menu in 35 lingue. L'AI capisce il contesto culinario — i clienti ordinano di più quando capiscono davvero il piatto.",
+        tag: "Traduzione IA",
       },
       {
         Icon: CalendarCheck,
         title: "Niente prenotazioni perse mentre cucini",
         desc: "I clienti prenotano 24/7, senza chiamate. Conferma automatica o manuale, promemoria via email — meno no-show, zero stress.",
+        tag: "Prenotazioni",
       },
       {
         Icon: Palette,
         title: "Indimenticabile in 1 secondo",
         desc: "Metti un video della cucina o una foto da copertina come sfondo del menu. I clienti smettono di scrollare. Il tuo brand resta.",
+        tag: "Design personalizzato",
       },
       {
         Icon: Smartphone,
         title: "Modifichi in secondi, non in giorni",
         desc: "Cambi i prezzi, cambi le foto, aggiungi il piatto del giorno — dal telefono, tra un tavolo e l'altro. In diretta per i clienti all'istante. Mai più ristampe.",
+        tag: "Editor menù",
       },
       {
-        Icon: ListPlus,
-        title: "Se sai mandare un WhatsApp, sai usarlo",
-        desc: "Tocca per aggiungere un piatto. Trascina per riordinare. Spegni quello esaurito. Niente manuali, niente tutorial, niente curva di apprendimento.",
+        Icon: ChefHat,
+        title: "Servi più veloce ogni turno",
+        desc: "Gli ordini arrivano allo schermo della cucina nel momento in cui il cliente conferma. Zero carta, zero urla, zero ordini persi — meno errori, più rotazione, più coperti a sera.",
+        tag: "In arrivo",
       },
     ],
   },
@@ -178,10 +184,6 @@ export const TEXTS: LandingTexts = {
       {
         q: "I miei clienti hanno bisogno di un'app? Io devo essere bravo col PC?",
         a: "Zero app per i clienti — scansionano il QR con la fotocamera, il menu si apre nel browser. Zero competenze tecniche per te — tutta la dashboard funziona dal telefono, tocca per aggiungere, trascina per riordinare, fine.",
-      },
-      {
-        q: "Posso gestire più ristoranti da un solo account?",
-        a: "Sì. Il piano Pro permette più ristoranti in un singolo account — menu separati, QR separati, statistiche separate, un login. Cambi tra uno e l'altro in due tocchi.",
       },
       {
         q: "Quanto velocemente posso cambiare prezzi e aggiungere piatti?",

@@ -53,7 +53,7 @@ function PriceDisplay({ parts, perMonth }: { parts: ReturnType<typeof formatPric
           <span className="text-base font-medium text-muted-foreground">{parts.symbol}</span>
         )}
       </div>
-      <span className="text-[11px] text-muted-foreground mt-1.5 inline-block">{perMonth}</span>
+      <span className="text-sm text-muted-foreground mt-1.5 inline-block">{perMonth}</span>
     </div>
   );
 }
@@ -76,16 +76,16 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div className="text-center lg:text-start">
-          <div className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium text-muted-foreground mb-4">
+          <div className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground mb-4">
             {texts.badge}
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight mb-3 leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 leading-[1.15]">
             {texts.heading}{" "}
             <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
               {texts.headingAccent}
             </span>
           </h2>
-          <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto lg:mx-0 leading-snug">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md mx-auto lg:mx-0 leading-snug">
             {texts.sub}
           </p>
 
@@ -97,13 +97,13 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
             >
               {ctaText}
             </a>
-            <p className="text-[11px] text-muted-foreground mt-2.5">{microcopy}</p>
+            <p className="text-sm text-muted-foreground mt-3">{microcopy}</p>
           </div>
 
           <div className="hidden lg:flex flex-wrap gap-x-6 gap-y-2 mt-10">
             {trustItems.map(({ Icon, label }) => (
-              <div key={label} className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-                <Icon className="h-3.5 w-3.5" />
+              <div key={label} className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Icon className="h-4 w-4" />
                 <span>{label}</span>
               </div>
             ))}
@@ -126,10 +126,10 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
               {texts.yearlyLabel}
             </p>
             <PriceDisplay parts={yearlyParts} perMonth={texts.perMonth} />
-            <p className="text-[11px] text-muted-foreground mt-3">
+            <p className="text-xs text-muted-foreground mt-3">
               {texts.billedAnnually.replace("{total}", formatPrice(plan.yearlyTotal, currency))}
             </p>
-            <p className="text-[11px] text-emerald-500 font-medium mt-0.5">
+            <p className="text-xs text-emerald-500 font-medium mt-0.5">
               {texts.youSave.replace("{amount}", savings)}
             </p>
           </div>

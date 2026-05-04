@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Minden, ami kell.", headingAccent: "Semmi, ami nem.",
     sub: "Éttermeknek építve. Asztalnál használva.",
     items: [
-      { Icon: ScanLine, title: "Tartsd meg minden rendelés 100%-át", desc: "A vendégek beolvasnak, rendelnek és fizetnek — egyenesen neked. Nincs app letöltés, nincs 30%-os szállítási szelet. Minden rendelés valós időben asztalszámmal érkezik a panelba." },
-      { Icon: Languages, title: "Adj el a turistáknak az ő nyelvükön", desc: "Egy érintés 35 nyelvre fordítja le az egész étlapot. Az AI érti a kulináris kontextust — a vendégek többet rendelnek, ha tényleg értik az ételt." },
-      { Icon: CalendarCheck, title: "Ne veszíts foglalást főzés közben", desc: "A vendégek 24/7 foglalnak, hívás nélkül. Auto vagy kézi megerősítés, email emlékeztetők — kevesebb no-show, nulla stressz." },
-      { Icon: Palette, title: "Felejthetetlen 1 másodperc alatt", desc: "Tegyél be egy konyhás videót vagy ételfotót háttérnek. A vendégek leállnak görgetni. A márkád megmarad." },
-      { Icon: Smartphone, title: "Másodpercek alatt módosíts, nem napok alatt", desc: "Árak, fotók, napi ajánlat — telefonról, asztalok között. Élőben a vendégeknek azonnal. Soha többé nyomtatás." },
-      { Icon: ListPlus, title: "Ha tudsz WhatsApp-ot küldeni, ezt is tudod", desc: "Érintsd meg, hogy hozzáadj egy fogást. Húzd, hogy átrendezd. Kapcsold ki, ami elfogyott. Nincs útmutató, nincs tutorial, nincs tanulási görbe." },
+      { Icon: ScanLine, title: "Tartsd meg minden rendelés 100%-át", desc: "A vendégek beolvasnak, rendelnek és fizetnek — egyenesen neked. Nincs app letöltés, nincs 30%-os szállítási szelet. Minden rendelés valós időben asztalszámmal érkezik a panelba.", tag: "Közvetlen rendelések" },
+      { Icon: Languages, title: "Adj el a turistáknak az ő nyelvükön", desc: "Egy érintés 35 nyelvre fordítja le az egész étlapot. Az AI érti a kulináris kontextust — a vendégek többet rendelnek, ha tényleg értik az ételt.", tag: "AI fordítás" },
+      { Icon: CalendarCheck, title: "Ne veszíts foglalást főzés közben", desc: "A vendégek 24/7 foglalnak, hívás nélkül. Auto vagy kézi megerősítés, email emlékeztetők — kevesebb no-show, nulla stressz.", tag: "Foglalások" },
+      { Icon: Palette, title: "Felejthetetlen 1 másodperc alatt", desc: "Tegyél be egy konyhás videót vagy ételfotót háttérnek. A vendégek leállnak görgetni. A márkád megmarad.", tag: "Egyedi design" },
+      { Icon: Smartphone, title: "Másodpercek alatt módosíts, nem napok alatt", desc: "Árak, fotók, napi ajánlat — telefonról, asztalok között. Élőben a vendégeknek azonnal. Soha többé nyomtatás.", tag: "Menüszerkesztő" },
+      { Icon: ChefHat, title: "Szolgálj ki gyorsabban minden műszakban", desc: "A rendelések abban a pillanatban kerülnek a konyhai képernyőre, ahogy a vendég megerősíti. Nulla papír, nulla kiabálás, nulla elveszett rendelés — kevesebb hiba, gyorsabb kiszolgálás, több vendég esténként.", tag: "Hamarosan" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Mit tartalmaz a próbaidő és mi van utána?", a: "14 nap teljes hozzáférés, kártya nélkül. 14 nap után a fiók szünetel, ha nem adsz meg fizetési módot — soha nem terhelünk automatikusan. Add meg később a fizetési adatokat újraaktiváláshoz. Egy kattintással lemondod." },
       { q: "Veszitek jutalékot a rendelésekből?", a: "Nullát. Minden rendelés a QR étlapodról egyenesen hozzád megy — nincs részünk, nincs Wolt / Foodpanda díj. Egy fix havi ár, ennyi." },
       { q: "Kell app a vendégeknek? Kell technikai tudás?", a: "Nincs app a vendégeknek — kamerával beolvassák a QR-t, az étlap megnyílik a böngészőben. Nincs technikai tudás neked — az egész panel a telefonon megy, érintsd meg hozzáadáshoz, húzd átrendezéshez, ennyi a görbe." },
-      { q: "Kezelhetek több éttermet egy fiókból?", a: "Igen. A Pro csomag több éttermet enged egy fiókban — külön étlapok, külön QR-ok, külön statisztikák, egy belépés. Két érintéssel váltasz." },
       { q: "Milyen gyorsan változtatok árakat és adok hozzá fogásokat?", a: "Azonnal. Változtass árat a telefonon, a vendégek másodpercek alatt látják. Új fogás? Érintsd meg, írd be, fotó, kész — nincs újranyomtatás, nincs tervező-várakozás." },
       { q: "Hány nyelvet támogattok?", a: "35 nyelvet beépített AI fordítással. Egy érintés lefordítja az egész étlapot, az AI érti a kulináris kontextust — a nevek és leírások természetesen hangoznak minden nyelven. A turisták többet rendelnek, ha tényleg értik." },
     ],

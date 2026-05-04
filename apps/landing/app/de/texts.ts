@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -91,31 +91,37 @@ export const TEXTS: LandingTexts = {
         Icon: ScanLine,
         title: "100% jeder Bestellung behalten",
         desc: "Gäste scannen, bestellen und zahlen — direkt an dich. Keine App-Downloads, keine 30% an Lieferdienste. Jede Bestellung landet in Echtzeit mit Tischnummer im Dashboard.",
+        tag: "Direktbestellung",
       },
       {
         Icon: Languages,
         title: "An Touristen in ihrer Sprache verkaufen",
         desc: "Ein Tipp übersetzt die ganze Karte in 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gäste bestellen mehr, wenn sie das Gericht wirklich verstehen.",
+        tag: "KI-Übersetzung",
       },
       {
         Icon: CalendarCheck,
         title: "Keine Reservierung mehr verpassen",
         desc: "Gäste reservieren rund um die Uhr, keine Anrufe. Auto- oder manuelle Bestätigung, E-Mail-Erinnerungen inklusive — weniger No-Shows, null Stress.",
+        tag: "Reservierungen",
       },
       {
         Icon: Palette,
         title: "In 1 Sekunde unvergesslich",
         desc: "Lege ein Video aus deiner Küche oder ein Hero-Foto als Karten-Hintergrund ein. Gäste scrollen weniger. Deine Marke bleibt hängen.",
+        tag: "Eigenes Design",
       },
       {
         Icon: Smartphone,
         title: "In Sekunden ändern, nicht in Tagen",
         desc: "Preise ändern, Fotos tauschen, Tagesgericht ergänzen — vom Handy, zwischen den Tischen. Sofort live für Gäste. Nie wieder nachdrucken.",
+        tag: "Menü-Editor",
       },
       {
-        Icon: ListPlus,
-        title: "Wer WhatsApp kann, kann das hier",
-        desc: "Tippe, um ein Gericht zu erstellen. Ziehe, um umzusortieren. Schalte aus, was ausverkauft ist. Keine Anleitung, keine Tutorials, keine Lernkurve.",
+        Icon: ChefHat,
+        title: "Jede Schicht schneller servieren",
+        desc: "Bestellungen landen sofort auf dem Küchenbildschirm, sobald der Gast absendet. Null Papier, null Geschrei, null verlorene Bons — weniger Fehler, schnellerer Service, mehr Gedecke pro Abend.",
+        tag: "Demnächst",
       },
     ],
   },
@@ -178,10 +184,6 @@ export const TEXTS: LandingTexts = {
       {
         q: "Brauchen Gäste eine App? Brauche ich Tech-Kenntnisse?",
         a: "Null Apps für Gäste — sie scannen den QR mit der Kamera, die Karte öffnet sich im Browser. Null Tech-Kenntnisse für dich — das ganze Dashboard läuft am Handy, tippen, ziehen, fertig — das ist die ganze Lernkurve.",
-      },
-      {
-        q: "Kann ich mehrere Restaurants über ein Konto verwalten?",
-        a: "Ja. Der Pro-Plan erlaubt mehrere Restaurants in einem Konto — getrennte Karten, getrennte QRs, getrennte Statistiken, ein Login. In zwei Tipps gewechselt.",
       },
       {
         q: "Wie schnell kann ich Preise und neue Gerichte ändern?",

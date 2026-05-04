@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Tot ce ai nevoie.", headingAccent: "Nimic în plus.",
     sub: "Făcut pentru restaurante. Folosit la masă.",
     items: [
-      { Icon: ScanLine, title: "Păstrezi 100% din fiecare comandă", desc: "Clienții scanează, comandă și plătesc — direct la tine. Fără aplicații de descărcat, fără 30% comision livrare. Fiecare comandă ajunge în timp real cu numărul mesei în panou." },
-      { Icon: Languages, title: "Vinde turiștilor în limba lor", desc: "Un tap traduce tot meniul în 35 de limbi. AI prinde contextul culinar — clienții comandă mai mult când chiar înțeleg preparatul." },
-      { Icon: CalendarCheck, title: "Nu mai pierzi rezervări la cuptor", desc: "Clienții rezervă 24/7, fără apeluri. Confirmare auto sau manuală, mementouri pe email — mai puține absențe, zero stres." },
-      { Icon: Palette, title: "De neuitat în 1 secundă", desc: "Pune un video din bucătărie sau o foto cu un fel ca fundal. Clienții se opresc din scroll. Brandul rămâne." },
-      { Icon: Smartphone, title: "Modifică în secunde, nu în zile", desc: "Schimbă prețuri, schimbă fotografii, adaugă felul zilei — de pe telefon, între mese. Live pentru clienți instant. Niciodată reimprimări." },
-      { Icon: ListPlus, title: "Dacă știi WhatsApp, știi și asta", desc: "Tap să adaugi un fel. Glisează să reordonezi. Oprește ce s-a terminat. Fără manuale, fără tutoriale, fără curbă de învățare." },
+      { Icon: ScanLine, title: "Păstrezi 100% din fiecare comandă", desc: "Clienții scanează, comandă și plătesc — direct la tine. Fără aplicații de descărcat, fără 30% comision livrare. Fiecare comandă ajunge în timp real cu numărul mesei în panou.", tag: "Comenzi directe" },
+      { Icon: Languages, title: "Vinde turiștilor în limba lor", desc: "Un tap traduce tot meniul în 35 de limbi. AI prinde contextul culinar — clienții comandă mai mult când chiar înțeleg preparatul.", tag: "Traducere AI" },
+      { Icon: CalendarCheck, title: "Nu mai pierzi rezervări la cuptor", desc: "Clienții rezervă 24/7, fără apeluri. Confirmare auto sau manuală, mementouri pe email — mai puține absențe, zero stres.", tag: "Rezervări" },
+      { Icon: Palette, title: "De neuitat în 1 secundă", desc: "Pune un video din bucătărie sau o foto cu un fel ca fundal. Clienții se opresc din scroll. Brandul rămâne.", tag: "Design personalizat" },
+      { Icon: Smartphone, title: "Modifică în secunde, nu în zile", desc: "Schimbă prețuri, schimbă fotografii, adaugă felul zilei — de pe telefon, între mese. Live pentru clienți instant. Niciodată reimprimări.", tag: "Editor meniu" },
+      { Icon: ChefHat, title: "Servește mai rapid la fiecare tură", desc: "Comenzile zboară pe ecranul din bucătărie în momentul în care clientul confirmă. Zero hârtie, zero strigăte, zero comenzi pierdute — mai puține greșeli, servire mai rapidă, mai mulți clienți pe seară.", tag: "În curând" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Ce include perioada de probă și ce se întâmplă după?", a: "14 zile acces complet, fără card. După 14 zile contul se pune pe pauză dacă nu adaugi metoda de plată — nu retragem niciodată automat. Adaugi mai târziu pentru reactivare. Anulezi cu un click." },
       { q: "Luați comision la comenzi?", a: "Zero. Fiecare comandă din meniul QR ajunge direct la tine — fără partea noastră, fără taxe Glovo / Tazz. Un singur preț lunar fix, atât." },
       { q: "Clienții au nevoie de aplicație? Eu am nevoie de cunoștințe tehnice?", a: "Zero aplicații pentru clienți — scanează QR cu camera, meniul se deschide în browser. Zero tehnică pentru tine — tot panoul merge pe telefon, tap pentru a adăuga, glisează pentru a reordona, atât." },
-      { q: "Pot gestiona mai multe restaurante dintr-un cont?", a: "Da. Planul Pro permite mai multe restaurante în același cont — meniuri separate, QR-uri separate, statistici separate, un login. Comuți cu două tap-uri." },
       { q: "Cât de repede schimb prețurile și adaug preparate?", a: "Instant. Schimbi prețul pe telefon, clienții văd în secunde. Preparat nou? Tap, scrii, foto, gata — fără reimprimări, fără să aștepți designerul." },
       { q: "Câte limbi suportați?", a: "35 de limbi cu traducere AI încorporată. Un tap traduce tot meniul, AI înțelege contextul culinar — numele și descrierile sună natural în fiecare limbă. Turiștii comandă mai mult când chiar înțeleg." },
     ],

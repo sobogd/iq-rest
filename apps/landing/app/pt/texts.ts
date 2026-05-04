@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -91,31 +91,37 @@ export const TEXTS: LandingTexts = {
         Icon: ScanLine,
         title: "Fica com 100% de cada pedido",
         desc: "Os clientes escaneiam, pedem e pagam — direto para si. Sem apps para descarregar, sem 30% para a entrega. Cada pedido entra no painel com número da mesa em tempo real.",
+        tag: "Pedidos diretos",
       },
       {
         Icon: Languages,
         title: "Venda a turistas no idioma deles",
         desc: "Um toque traduz todo o cardápio em 35 idiomas. A IA pega o contexto culinário — clientes pedem mais quando entendem o prato.",
+        tag: "Tradução IA",
       },
       {
         Icon: CalendarCheck,
         title: "Pare de perder reservas enquanto cozinha",
         desc: "Clientes reservam 24/7, sem ligações. Confirmação automática ou manual, lembretes por email — menos no-shows, zero stress.",
+        tag: "Reservas",
       },
       {
         Icon: Palette,
         title: "Inesquecível em 1 segundo",
         desc: "Coloque um vídeo da cozinha ou uma foto do prato como fundo do cardápio. Clientes param de scrollar. A sua marca fica.",
+        tag: "Design personalizado",
       },
       {
         Icon: Smartphone,
         title: "Edita em segundos, não em dias",
         desc: "Mude preços, troque fotos, adicione o prato do dia — pelo telemóvel, entre mesas. Ao vivo para os clientes ao instante. Nunca mais reimprimir.",
+        tag: "Editor de menu",
       },
       {
-        Icon: ListPlus,
-        title: "Se sabe enviar WhatsApp, sabe usar",
-        desc: "Toque para adicionar um prato. Arraste para reordenar. Desligue o que acabou. Sem manuais, sem tutoriais, sem curva de aprendizagem.",
+        Icon: ChefHat,
+        title: "Sirva mais rápido em cada turno",
+        desc: "Os pedidos chegam ao ecrã da cozinha no momento em que o cliente confirma. Zero papel, zero gritos, zero pedidos perdidos — menos erros, mais rotação, mais couverts por noite.",
+        tag: "Em breve",
       },
     ],
   },
@@ -178,10 +184,6 @@ export const TEXTS: LandingTexts = {
       {
         q: "Os meus clientes precisam de uma app? Preciso de saber de tecnologia?",
         a: "Zero apps para os clientes — escaneiam o QR com a câmara, o cardápio abre no navegador. Zero técnica para si — todo o painel funciona no telemóvel, toca para adicionar, arrasta para reordenar, é isso.",
-      },
-      {
-        q: "Posso gerir vários restaurantes numa só conta?",
-        a: "Sim. O plano Pro permite vários restaurantes na mesma conta — cardápios separados, QRs separados, estatísticas separadas, um login. Muda entre eles em dois toques.",
       },
       {
         q: "Quão rápido mudo preços e adiciono pratos?",

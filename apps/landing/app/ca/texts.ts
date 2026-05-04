@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Tot el que cal.", headingAccent: "Res que no.",
     sub: "Fet per a restaurants. Usat a taula.",
     items: [
-      { Icon: ScanLine, title: "Queda't el 100% de cada comanda", desc: "Els clients escanegen, demanen i paguen — directe a tu. Sense apps a descarregar, sense el 30% per delivery. Cada comanda arriba en temps real amb el número de taula al panell." },
-      { Icon: Languages, title: "Ven als turistes en la seva llengua", desc: "Un toc tradueix tota la carta a 35 idiomes. L'IA pesca el context culinari — els clients demanen més quan entenen el plat." },
-      { Icon: CalendarCheck, title: "No perdis reserves mentre cuines", desc: "Els clients reserven 24/7, sense trucades. Confirmació automàtica o manual, recordatoris per email — menys no-shows, zero estrès." },
-      { Icon: Palette, title: "Inoblidable en 1 segon", desc: "Posa un vídeo de la cuina o una foto bonica de fons de la carta. Els clients deixen de fer scroll. La teva marca queda." },
-      { Icon: Smartphone, title: "Canvia en segons, no en dies", desc: "Canvia preus, fotos, afegeix el plat del dia — des del mòbil, entre taules. En directe per als clients a l'instant. Mai més imprimir." },
-      { Icon: ListPlus, title: "Si saps enviar un WhatsApp, saps usar-ho", desc: "Toca per afegir un plat. Arrossega per reordenar. Apaga el que s'ha acabat. Sense manuals, sense tutorials, sense corba d'aprenentatge." },
+      { Icon: ScanLine, title: "Queda't el 100% de cada comanda", desc: "Els clients escanegen, demanen i paguen — directe a tu. Sense apps a descarregar, sense el 30% per delivery. Cada comanda arriba en temps real amb el número de taula al panell.", tag: "Comandes directes" },
+      { Icon: Languages, title: "Ven als turistes en la seva llengua", desc: "Un toc tradueix tota la carta a 35 idiomes. L'IA pesca el context culinari — els clients demanen més quan entenen el plat.", tag: "Traducció IA" },
+      { Icon: CalendarCheck, title: "No perdis reserves mentre cuines", desc: "Els clients reserven 24/7, sense trucades. Confirmació automàtica o manual, recordatoris per email — menys no-shows, zero estrès.", tag: "Reserves" },
+      { Icon: Palette, title: "Inoblidable en 1 segon", desc: "Posa un vídeo de la cuina o una foto bonica de fons de la carta. Els clients deixen de fer scroll. La teva marca queda.", tag: "Disseny personalitzat" },
+      { Icon: Smartphone, title: "Canvia en segons, no en dies", desc: "Canvia preus, fotos, afegeix el plat del dia — des del mòbil, entre taules. En directe per als clients a l'instant. Mai més imprimir.", tag: "Editor de carta" },
+      { Icon: ChefHat, title: "Serveix més ràpid cada torn", desc: "Les comandes arriben a la pantalla de la cuina en el moment que el client confirma. Zero paper, zero crits, zero comandes perdudes — menys errors, servei més ràpid, més coberts per nit.", tag: "Aviat" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Què inclou la prova gratis i què passa després?", a: "14 dies, accés complet, sense targeta. Passats els 14 dies, si no afegeixes mètode de pagament, el compte es pausa — mai cobrem automàticament. Afegeix les dades quan vulguis per reactivar. La cancel·les amb un clic." },
       { q: "Us emporteu comissió per les comandes?", a: "Zero. Cada comanda de la teva carta QR arriba directe a tu — sense la nostra part, sense taxes tipus Glovo o Uber Eats. Un sol preu mensual, ja està." },
       { q: "Els meus clients necessiten una app? Jo necessito coneixements tècnics?", a: "Zero apps per als clients — escanegen el QR amb la càmera del mòbil i la carta s'obre al navegador. Zero coneixements tècnics per a tu — tot el panell funciona al mòbil, toques per afegir un plat, arrossegues per reordenar, això és tot." },
-      { q: "Puc gestionar diversos restaurants des d'un compte?", a: "Sí. El pla Pro deixa gestionar diversos restaurants en una mateixa compte — cartes separades, QRs separats, analítiques separades, un sol login. Canvies entre un i l'altre en dos tocs." },
       { q: "Com de ràpid canvio preus o afegeixo plats?", a: "A l'instant. Canvies un preu al mòbil i els clients ho veuen en segons. Plat nou? Toques, escrius, puges foto, fet — sense reimpressions, sense esperar al dissenyador." },
       { q: "Quants idiomes traduïu?", a: "35 idiomes amb traducció IA integrada. Un toc tradueix tota la carta i l'IA entén el context culinari — els noms i descripcions sonen naturals en cada idioma. Els turistes demanen més quan entenen de veritat." },
     ],

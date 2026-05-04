@@ -10,6 +10,7 @@ export type FeatureItem = {
   Icon: LucideIcon;
   title: string;
   desc: string;
+  tag?: string;
 };
 
 export type StepItem = {

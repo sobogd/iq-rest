@@ -62,7 +62,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
       <Features texts={TEXTS.features} />
       <Founder texts={TEXTS.founder} />
       <How texts={TEXTS.how} />
-      <section id="pricing" data-section="pricing" className="scroll-mt-16 border-t border-border py-16">
+      <section id="pricing" data-section="pricing" className="scroll-mt-16 py-8 sm:border-t sm:border-border sm:py-16">
         <LandingPricing
           texts={TEXTS.pricing}
           ctaText={TEXTS.ctaText}
@@ -71,7 +71,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
           currency={currency}
         />
       </section>
-      <section id="faq" data-section="faq" className="scroll-mt-16 border-t border-border py-16">
+      <section id="faq" data-section="faq" className="scroll-mt-16 py-8 sm:border-t sm:border-border sm:py-16">
         <Faq texts={TEXTS.faq} />
       </section>
       <FinalCta

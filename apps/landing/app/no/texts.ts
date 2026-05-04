@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Alt du trenger.", headingAccent: "Ingenting du ikke trenger.",
     sub: "Bygget for restauranter. Brukt ved bordet.",
     items: [
-      { Icon: ScanLine, title: "Behold 100% av hver bestilling", desc: "Gjester skanner, bestiller og betaler — rett til deg. Ingen apper å laste ned, ingen 30%-leveringssnitt. Hver bestilling lander i sanntid med bordnummer i panelet." },
-      { Icon: Languages, title: "Selg til turister på deres språk", desc: "Ett trykk oversetter hele menyen til 35 språk. AI fanger kulinarisk kontekst — gjester bestiller mer når de virkelig forstår retten." },
-      { Icon: CalendarCheck, title: "Mist ingen reservasjoner mens du lager mat", desc: "Gjester reserverer 24/7, ingen anrop. Auto- eller manuell bekreftelse, e-postpåminnelser inkludert — færre no-shows, null stress." },
-      { Icon: Palette, title: "Uforglemmelig på 1 sekund", desc: "Legg inn en kjøkkenvideo eller et heltebilde som menybakgrunn. Gjester slutter å scrolle. Merket ditt fester seg." },
-      { Icon: Smartphone, title: "Oppdater på sekunder, ikke dager", desc: "Endre priser, bytt bilder, legg til dagens — fra telefonen, mellom bord. Live for gjester med en gang. Aldri mer trykk." },
-      { Icon: ListPlus, title: "Kan du sende SMS, kan du dette", desc: "Trykk for å legge til en rett. Dra for å omsortere. Slå av det utsolgte. Ingen manualer, ingen tutorials, ingen læringskurve." },
+      { Icon: ScanLine, title: "Behold 100% av hver bestilling", desc: "Gjester skanner, bestiller og betaler — rett til deg. Ingen apper å laste ned, ingen 30%-leveringssnitt. Hver bestilling lander i sanntid med bordnummer i panelet.", tag: "Direkte bestillinger" },
+      { Icon: Languages, title: "Selg til turister på deres språk", desc: "Ett trykk oversetter hele menyen til 35 språk. AI fanger kulinarisk kontekst — gjester bestiller mer når de virkelig forstår retten.", tag: "AI-oversettelse" },
+      { Icon: CalendarCheck, title: "Mist ingen reservasjoner mens du lager mat", desc: "Gjester reserverer 24/7, ingen anrop. Auto- eller manuell bekreftelse, e-postpåminnelser inkludert — færre no-shows, null stress.", tag: "Reservasjoner" },
+      { Icon: Palette, title: "Uforglemmelig på 1 sekund", desc: "Legg inn en kjøkkenvideo eller et heltebilde som menybakgrunn. Gjester slutter å scrolle. Merket ditt fester seg.", tag: "Eget design" },
+      { Icon: Smartphone, title: "Oppdater på sekunder, ikke dager", desc: "Endre priser, bytt bilder, legg til dagens — fra telefonen, mellom bord. Live for gjester med en gang. Aldri mer trykk.", tag: "Menyredigerer" },
+      { Icon: ChefHat, title: "Server raskere hvert skift", desc: "Bestillingene lander på kjøkkenskjermen i øyeblikket gjesten bekrefter. Null papir, null roping, null tapte bonger — færre feil, raskere service, flere kuverter per kveld.", tag: "Kommer snart" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Hva inkluderer prøveperioden og hva skjer etterpå?", a: "14 dager full tilgang, ingen kort. Etter 14 dager pauses kontoen hvis du ikke legger til betalingsmetode — vi trekker aldri automatisk. Legg til betaling senere for å reaktivere. Avslutt med ett klikk." },
       { q: "Tar dere provisjon på bestillinger?", a: "Null. Hver bestilling fra QR-menyen din går rett til deg — ingen del til oss, ingen Foodora / Wolt-gebyrer. Én fast månedspris, det er det." },
       { q: "Trenger gjestene en app? Trenger jeg tekniske kunnskaper?", a: "Ingen apper for gjester — de skanner QR med kameraet, menyen åpnes i nettleseren. Ingen tekniske kunnskaper for deg — hele panelet virker i mobilen, trykk for å legge til, dra for å omsortere, det er hele kurven." },
-      { q: "Kan jeg drive flere restauranter fra én konto?", a: "Ja. Pro-planen lar deg drive flere restauranter i samme konto — separate menyer, separate QR-er, separat statistikk, én innlogging. Bytt mellom dem på to trykk." },
       { q: "Hvor raskt endrer jeg priser og legger til retter?", a: "Med en gang. Endre pris på telefonen, gjestene ser det på sekunder. Ny rett? Trykk, skriv, bilde, ferdig — ingen utskrifter, ingen designer å vente på." },
       { q: "Hvor mange språk støttes?", a: "35 språk med innebygd AI-oversettelse. Ett trykk oversetter hele menyen, AI forstår kulinarisk kontekst — navn og beskrivelser høres naturlig ut på hvert språk. Turister bestiller mer når de virkelig forstår." },
     ],

@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Vse kar potrebuješ.", headingAccent: "Nič odvečnega.",
     sub: "Narejeno za restavracije. Uporabljeno za mizo.",
     items: [
-      { Icon: ScanLine, title: "Obdrži 100% vsakega naročila", desc: "Gostje skenirajo, naročijo in plačajo — direktno tebi. Brez aplikacij za prenos, brez 30% dostavnega deleža. Vsako naročilo prispe v realnem času s številko mize v panelu." },
-      { Icon: Languages, title: "Prodajaj turistom v njihovem jeziku", desc: "En dotik prevede ves jedilnik v 35 jezikov. AI razume kulinarski kontekst — gostje naročijo več, ko jed res razumejo." },
-      { Icon: CalendarCheck, title: "Ne izgubi rezervacij med kuhanjem", desc: "Gostje rezervirajo 24/7, brez klicev. Avto- ali ročna potrditev, e-poštni opomniki — manj odpovedi, brez stresa." },
-      { Icon: Palette, title: "Nepozabno v 1 sekundi", desc: "Postavi video kuhinje ali fotografijo jedi za ozadje jedilnika. Gostje nehajo drsati. Tvoja blagovna znamka ostane." },
-      { Icon: Smartphone, title: "Spreminjaj v sekundah, ne v dneh", desc: "Cene, fotografije, dnevna ponudba — s telefona, med mizami. Naživo gostom takoj. Nikoli več tiskanja." },
-      { Icon: ListPlus, title: "Če pošlješ WhatsApp, znaš to uporabljati", desc: "Dotakni se, da dodaš jed. Povleci, da preuredi. Izklopi, kar je razprodano. Brez priročnikov, brez vodičev, brez krivulje učenja." },
+      { Icon: ScanLine, title: "Obdrži 100% vsakega naročila", desc: "Gostje skenirajo, naročijo in plačajo — direktno tebi. Brez aplikacij za prenos, brez 30% dostavnega deleža. Vsako naročilo prispe v realnem času s številko mize v panelu.", tag: "Neposredna naročila" },
+      { Icon: Languages, title: "Prodajaj turistom v njihovem jeziku", desc: "En dotik prevede ves jedilnik v 35 jezikov. AI razume kulinarski kontekst — gostje naročijo več, ko jed res razumejo.", tag: "Prevod AI" },
+      { Icon: CalendarCheck, title: "Ne izgubi rezervacij med kuhanjem", desc: "Gostje rezervirajo 24/7, brez klicev. Avto- ali ročna potrditev, e-poštni opomniki — manj odpovedi, brez stresa.", tag: "Rezervacije" },
+      { Icon: Palette, title: "Nepozabno v 1 sekundi", desc: "Postavi video kuhinje ali fotografijo jedi za ozadje jedilnika. Gostje nehajo drsati. Tvoja blagovna znamka ostane.", tag: "Lasten dizajn" },
+      { Icon: Smartphone, title: "Spreminjaj v sekundah, ne v dneh", desc: "Cene, fotografije, dnevna ponudba — s telefona, med mizami. Naživo gostom takoj. Nikoli več tiskanja.", tag: "Urejevalnik menija" },
+      { Icon: ChefHat, title: "Strezite hitreje vsako izmeno", desc: "Naročila prispejo na zaslon v kuhinji v trenutku, ko jih gost potrdi. Nič papirja, nič kričanja, nič izgubljenih naročilnic — manj napak, hitrejša postrežba, več gostov na večer.", tag: "Kmalu" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Kaj vključuje preizkusno obdobje in kaj potem?", a: "14 dni polnega dostopa, brez kartice. Po 14 dneh se račun pavzira, če ne dodaš plačilne metode — nikoli ne zaračunamo samodejno. Dodaj plačilo kasneje za reaktivacijo. Prekliči z enim klikom." },
       { q: "Ali jemljete provizijo na naročila?", a: "Nič. Vsako naročilo iz tvojega QR jedilnika gre direktno tebi — brez našega deleža, brez Wolt / Glovo provizij. Ena fiksna mesečna cena, to je to." },
       { q: "Ali gostje potrebujejo aplikacijo? Potrebujem tehnično znanje?", a: "Brez aplikacij za goste — skenirajo QR s kamero, jedilnik se odpre v brskalniku. Brez tehničnih veščin za tebe — ves panel deluje na mobilcu, dotakni se za dodajanje, povleci za preurejanje, to je vsa krivulja." },
-      { q: "Lahko upravljam več restavracij iz enega računa?", a: "Da. Pro načrt omogoča več restavracij v istem računu — ločeni jedilniki, ločeni QR-ji, ločena statistika, ena prijava. Preklopi z dvema dotikoma." },
       { q: "Kako hitro spreminjam cene in dodajam jedi?", a: "Takoj. Spremeni ceno na telefonu, gostje vidijo v sekundah. Nova jed? Dotakni se, napiši, fotografija, končano — brez ponovnega tiskanja, brez čakanja na oblikovalca." },
       { q: "Koliko jezikov podpirate?", a: "35 jezikov z vgrajenim AI prevodom. En dotik prevede ves jedilnik in AI razume kulinarski kontekst — imena in opisi zvenijo naravno v vsakem jeziku. Turisti naročijo več, ko res razumejo." },
     ],

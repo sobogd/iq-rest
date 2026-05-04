@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Kõik mida vajad.", headingAccent: "Mitte midagi muud.",
     sub: "Restoranidele tehtud. Lauas kasutatud.",
     items: [
-      { Icon: ScanLine, title: "Hoia 100% igast tellimusest", desc: "Külalised skannivad, tellivad ja maksavad — otse sulle. Ilma rakendusteta, ilma 30% kullerivahendita. Iga tellimus saabub reaalajas lauanumbriga paneeli." },
-      { Icon: Languages, title: "Müü turistidele nende keeles", desc: "Üks puudutus tõlgib kogu menüü 35 keelde. AI mõistab kulinaarset konteksti — külalised tellivad rohkem, kui nad tegelikult mõistavad rooga." },
-      { Icon: CalendarCheck, title: "Ära kaota broneeringuid kööki kütes", desc: "Külalised broneerivad 24/7, ilma kõnedeta. Auto- või käsitsi kinnitamine, e-posti meeldetuletused — vähem mitteilmumisi, null stressi." },
-      { Icon: Palette, title: "Unustamatu 1 sekundiga", desc: "Pane köögivideo või toidufoto menüü taustaks. Külalised lõpetavad kerimise. Sinu bränd jääb meelde." },
-      { Icon: Smartphone, title: "Muuda sekunditega, mitte päevadega", desc: "Hinnad, fotod, päeva eripakkumine — telefonist, laudade vahel. Otse külalistele kohe. Kunagi enam printimist." },
-      { Icon: ListPlus, title: "Kui oskad WhatsAppi saata, oskad seda kasutada", desc: "Puuduta toidu lisamiseks. Lohista ümberkorraldamiseks. Lülita välja see, mis otsa sai. Ilma juhenditeta, ilma õpetusteta, ilma õppimiskõverata." },
+      { Icon: ScanLine, title: "Hoia 100% igast tellimusest", desc: "Külalised skannivad, tellivad ja maksavad — otse sulle. Ilma rakendusteta, ilma 30% kullerivahendita. Iga tellimus saabub reaalajas lauanumbriga paneeli.", tag: "Otsetellimused" },
+      { Icon: Languages, title: "Müü turistidele nende keeles", desc: "Üks puudutus tõlgib kogu menüü 35 keelde. AI mõistab kulinaarset konteksti — külalised tellivad rohkem, kui nad tegelikult mõistavad rooga.", tag: "AI-tõlge" },
+      { Icon: CalendarCheck, title: "Ära kaota broneeringuid kööki kütes", desc: "Külalised broneerivad 24/7, ilma kõnedeta. Auto- või käsitsi kinnitamine, e-posti meeldetuletused — vähem mitteilmumisi, null stressi.", tag: "Broneeringud" },
+      { Icon: Palette, title: "Unustamatu 1 sekundiga", desc: "Pane köögivideo või toidufoto menüü taustaks. Külalised lõpetavad kerimise. Sinu bränd jääb meelde.", tag: "Oma kujundus" },
+      { Icon: Smartphone, title: "Muuda sekunditega, mitte päevadega", desc: "Hinnad, fotod, päeva eripakkumine — telefonist, laudade vahel. Otse külalistele kohe. Kunagi enam printimist.", tag: "Menüü-redaktor" },
+      { Icon: ChefHat, title: "Teeninda kiiremini igal vahetusel", desc: "Tellimused lendavad köögi ekraanile hetkel, kui külaline kinnitab. Null paberit, null karjumist, null kadunud tellimust — vähem vigu, kiirem teenindus, rohkem külalisi õhtus.", tag: "Tulekul" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Mida sisaldab tasuta prooviperiood ja mis juhtub pärast?", a: "14 päeva täielik juurdepääs, kaardita. Pärast 14 päeva konto peatub, kui ei lisa makseviisi — me ei võta kunagi automaatselt. Lisa hiljem makseandmed, et taasaktiveerida. Tühista ühe klõpsuga." },
       { q: "Kas võtate tellimuste pealt vahendustasu?", a: "Null. Iga tellimus sinu QR-menüüst läheb otse sulle — meie osa pole, Wolt / Bolt Food tasud puuduvad. Üks fikseeritud kuumakse, ongi kõik." },
       { q: "Kas külalistel on rakendust vaja? Kas mul on tehnilisi oskusi vaja?", a: "Külalistele rakendust pole — skannivad QR-i kaameraga, menüü avaneb brauseris. Sulle tehnilisi oskusi pole — kogu paneel töötab telefonis, puuduta lisamiseks, lohista ümberkorraldamiseks, ongi kogu kõver." },
-      { q: "Kas saan ühest kontost mitut restorani hallata?", a: "Jah. Pro pakett võimaldab mitut restorani samas kontos — eraldi menüüd, eraldi QR-id, eraldi statistika, üks sisselogimine. Vaheta kahe puudutusega." },
       { q: "Kui kiiresti muudan hindu ja lisan roogasid?", a: "Kohe. Muuda hinda telefonis, külalised näevad sekunditega. Uus roog? Puuduta, kirjuta, foto, valmis — ilma uuesti printimata, ilma disainerit ootamata." },
       { q: "Mitut keelt toetate?", a: "35 keelt sisseehitatud AI tõlkega. Üks puudutus tõlgib kogu menüü ja AI mõistab kulinaarset konteksti — nimed ja kirjeldused kõlavad iga keeles loomulikult. Turistid tellivad rohkem, kui nad tegelikult mõistavad." },
     ],

@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Všetko čo potrebuješ.", headingAccent: "Nič navyše.",
     sub: "Postavené pre reštaurácie. Používa sa pri stole.",
     items: [
-      { Icon: ScanLine, title: "Nechaj si 100% z každej objednávky", desc: "Hostia skenujú, objednávajú a platia — priamo tebe. Žiadne aplikácie na stiahnutie, žiadny 30% podiel rozvozu. Každá objednávka príde v reálnom čase s číslom stola do panela." },
-      { Icon: Languages, title: "Predávaj turistom v ich jazyku", desc: "Jedno klepnutie preloží celý lístok do 35 jazykov. AI rozumie kulinárskemu kontextu — hostia objednávajú viac, keď naozaj rozumejú jedlu." },
-      { Icon: CalendarCheck, title: "Nestrať rezerváciu, kým varíš", desc: "Hostia rezervujú 24/7, bez hovorov. Auto- alebo manuálne potvrdenie, e-mailové pripomienky — menej neúčastí, nula stresu." },
-      { Icon: Palette, title: "Nezabudnuteľné za 1 sekundu", desc: "Daj video kuchyne alebo fotku jedla na pozadie lístka. Hostia prestanú scrollovať. Tvoja značka utkvie." },
-      { Icon: Smartphone, title: "Meň v sekundách, nie v dňoch", desc: "Meň ceny, fotky, pridaj denné menu — z mobilu, medzi stolmi. Naživo pre hostí hneď. Žiadne dotlače." },
-      { Icon: ListPlus, title: "Ak vieš poslať WhatsApp, zvládneš to", desc: "Klepni na pridanie jedla. Potiahni na preusporiadanie. Vypni vypredané. Bez manuálov, bez tutoriálov, bez krivky učenia." },
+      { Icon: ScanLine, title: "Nechaj si 100% z každej objednávky", desc: "Hostia skenujú, objednávajú a platia — priamo tebe. Žiadne aplikácie na stiahnutie, žiadny 30% podiel rozvozu. Každá objednávka príde v reálnom čase s číslom stola do panela.", tag: "Priame objednávky" },
+      { Icon: Languages, title: "Predávaj turistom v ich jazyku", desc: "Jedno klepnutie preloží celý lístok do 35 jazykov. AI rozumie kulinárskemu kontextu — hostia objednávajú viac, keď naozaj rozumejú jedlu.", tag: "AI preklad" },
+      { Icon: CalendarCheck, title: "Nestrať rezerváciu, kým varíš", desc: "Hostia rezervujú 24/7, bez hovorov. Auto- alebo manuálne potvrdenie, e-mailové pripomienky — menej neúčastí, nula stresu.", tag: "Rezervácie" },
+      { Icon: Palette, title: "Nezabudnuteľné za 1 sekundu", desc: "Daj video kuchyne alebo fotku jedla na pozadie lístka. Hostia prestanú scrollovať. Tvoja značka utkvie.", tag: "Vlastný dizajn" },
+      { Icon: Smartphone, title: "Meň v sekundách, nie v dňoch", desc: "Meň ceny, fotky, pridaj denné menu — z mobilu, medzi stolmi. Naživo pre hostí hneď. Žiadne dotlače.", tag: "Editor menu" },
+      { Icon: ChefHat, title: "Obslúžte rýchlejšie každú zmenu", desc: "Objednávky priletia na obrazovku v kuchyni vo chvíli, keď ich hosť potvrdí. Nula papiera, nula kriku, nula stratených bonov — menej chýb, rýchlejšia obsluha, viac hostí za večer.", tag: "Čoskoro" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Čo zahŕňa skúšobná doba a čo potom?", a: "14 dní plný prístup, bez karty. Po 14 dňoch sa účet pozastaví, ak nepridáš platobnú metódu — nikdy nestrhávame automaticky. Pridaj platbu neskôr na reaktiváciu. Zruš jedným klikom." },
       { q: "Beriete províziu z objednávok?", a: "Nulu. Každá objednávka z tvojho QR lístka ide rovno tebe — žiadny náš podiel, žiadne poplatky Wolt / Bolt Food. Jedna pevná mesačná cena, to je všetko." },
       { q: "Potrebujú hostia aplikáciu? Potrebujem technické zručnosti?", a: "Žiadne aplikácie pre hostí — skenujú QR fotoaparátom, lístok sa otvorí v prehliadači. Žiadne technické zručnosti pre teba — celý panel funguje na mobile, klepneš na pridanie, potiahneš na preusporiadanie, to je celá krivka." },
-      { q: "Môžem spravovať viac reštaurácií z jedného účtu?", a: "Áno. Plán Pro umožňuje viac reštaurácií v jednom účte — oddelené lístky, oddelené QR, oddelená štatistika, jedno prihlásenie. Prepneš na dve klepnutia." },
       { q: "Ako rýchlo zmením ceny a pridám jedlá?", a: "Okamžite. Zmeň cenu na mobile, hostia vidia v sekundách. Nové jedlo? Klepni, napíš, fotka, hotovo — bez dotlačí, bez čakania na grafika." },
       { q: "Koľko jazykov podporujete?", a: "35 jazykov s vstavaným AI prekladom. Jedno klepnutie preloží celý lístok a AI rozumie kulinárskemu kontextu — názvy a popisy znejú prirodzene v každom jazyku. Turisti objednávajú viac, keď naozaj rozumejú." },
     ],

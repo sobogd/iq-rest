@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Viskas, ko reikia.", headingAccent: "Nieko nereikalingo.",
     sub: "Sukurta restoranams. Naudojama prie stalo.",
     items: [
-      { Icon: ScanLine, title: "Pasilik 100% kiekvieno užsakymo", desc: "Svečiai nuskaito, užsako ir sumoka — tiesiai tau. Be programėlių atsiuntimo, be 30% pristatymo dalies. Kiekvienas užsakymas atkeliauja realiu laiku su staliuko numeriu į panelį." },
-      { Icon: Languages, title: "Parduok turistams jų kalba", desc: "Vienas palietimas išverčia visą meniu į 35 kalbas. AI supranta kulinarinį kontekstą — svečiai užsako daugiau, kai tikrai supranta patiekalą." },
-      { Icon: CalendarCheck, title: "Neprarask rezervacijų gamindamas", desc: "Svečiai rezervuoja 24/7, be skambučių. Auto arba rankinis patvirtinimas, el. paštas priminimai — mažiau neatvykimų, nulis streso." },
-      { Icon: Palette, title: "Nepamirštama per 1 sekundę", desc: "Įdėk virtuvės video ar patiekalo nuotrauką kaip meniu foną. Svečiai nustoja slinkti. Tavo prekės ženklas išlieka." },
-      { Icon: Smartphone, title: "Keisk per sekundes, ne per dienas", desc: "Kainos, nuotraukos, dienos pasiūlymas — iš telefono, tarp staliukų. Tiesiogiai svečiams iškart. Niekada daugiau spaudos." },
-      { Icon: ListPlus, title: "Jei moki rašyti WhatsApp, mokėsi naudoti", desc: "Palietk patiekalui pridėti. Tempk pertvarkyti. Išjunk, kas pasibaigė. Be vadovų, be mokomųjų vaizdo įrašų, be mokymosi kreivės." },
+      { Icon: ScanLine, title: "Pasilik 100% kiekvieno užsakymo", desc: "Svečiai nuskaito, užsako ir sumoka — tiesiai tau. Be programėlių atsiuntimo, be 30% pristatymo dalies. Kiekvienas užsakymas atkeliauja realiu laiku su staliuko numeriu į panelį.", tag: "Tiesioginiai užsakymai" },
+      { Icon: Languages, title: "Parduok turistams jų kalba", desc: "Vienas palietimas išverčia visą meniu į 35 kalbas. AI supranta kulinarinį kontekstą — svečiai užsako daugiau, kai tikrai supranta patiekalą.", tag: "DI vertimas" },
+      { Icon: CalendarCheck, title: "Neprarask rezervacijų gamindamas", desc: "Svečiai rezervuoja 24/7, be skambučių. Auto arba rankinis patvirtinimas, el. paštas priminimai — mažiau neatvykimų, nulis streso.", tag: "Rezervacijos" },
+      { Icon: Palette, title: "Nepamirštama per 1 sekundę", desc: "Įdėk virtuvės video ar patiekalo nuotrauką kaip meniu foną. Svečiai nustoja slinkti. Tavo prekės ženklas išlieka.", tag: "Pritaikytas dizainas" },
+      { Icon: Smartphone, title: "Keisk per sekundes, ne per dienas", desc: "Kainos, nuotraukos, dienos pasiūlymas — iš telefono, tarp staliukų. Tiesiogiai svečiams iškart. Niekada daugiau spaudos.", tag: "Meniu redaktorius" },
+      { Icon: ChefHat, title: "Aptarnaukite greičiau kiekvieną pamainą", desc: "Užsakymai patenka į virtuvės ekraną tą akimirką, kai svečias patvirtina. Nulis popieriaus, nulis šūkavimo, nulis pamestų užsakymų — mažiau klaidų, greitesnis aptarnavimas, daugiau svečių per vakarą.", tag: "Netrukus" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Ką apima nemokamas bandymas ir kas po to?", a: "14 dienų pilna prieiga, be kortelės. Po 14 dienų paskyra sustabdoma, jei nepridėsi mokėjimo būdo — niekada nesinuskaitome automatiškai. Vėliau pridėk mokėjimą, kad atnaujintum. Atšauk vienu paspaudimu." },
       { q: "Ar imate komisinį nuo užsakymų?", a: "Nulį. Kiekvienas užsakymas iš tavo QR meniu eina tiesiai tau — be mūsų dalies, be Wolt / Bolt Food mokesčių. Viena fiksuota mėnesio kaina, ir viskas." },
       { q: "Ar svečiams reikia programėlės? Ar man reikia techninių įgūdžių?", a: "Be programėlių svečiams — nuskaito QR kamera, meniu atsidaro naršyklėje. Be techninių įgūdžių tau — visas panelis veikia telefone, palietk pridėti, tempk pertvarkyti, tokia visa kreivė." },
-      { q: "Ar galiu valdyti kelis restoranus iš vienos paskyros?", a: "Taip. Pro planas leidžia kelis restoranus toje pačioje paskyroje — atskiri meniu, atskiri QR, atskira statistika, vienas prisijungimas. Persijungi dviem palietimais." },
       { q: "Kaip greitai keičiu kainas ir pridedu patiekalų?", a: "Akimirksniu. Pakeisk kainą telefone, svečiai mato per sekundes. Naujas patiekalas? Palietk, įrašyk, nuotrauka, paruošta — be perspausdinimo, be dizainerio laukimo." },
       { q: "Kiek kalbų palaikote?", a: "35 kalbas su įdiegtu AI vertimu. Vienas palietimas išverčia visą meniu, AI supranta kulinarinį kontekstą — pavadinimai ir aprašymai skamba natūraliai kiekviena kalba. Turistai užsako daugiau, kai tikrai supranta." },
     ],

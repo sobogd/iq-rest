@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Gach rud a theastaíonn uait.", headingAccent: "Aon rud nach dteastaíonn.",
     sub: "Tógtha do bhialanna. Úsáidte ag an mbord.",
     items: [
-      { Icon: ScanLine, title: "Coinnigh 100% de gach ordú", desc: "Scanann aíonna, ordaíonn agus íocann — díreach chugat. Gan aipeanna le híoslódáil, gan 30% don seachadadh. Tagann gach ordú i bhfíor-am le huimhir an bhoird ar an bpainéal." },
-      { Icon: Languages, title: "Díol le turasóirí ina dteanga féin", desc: "Aistríonn tap amháin an biachlár iomlán go 35 teanga. Tuigeann an AI comhthéacs cócaireachta — ordaíonn aíonna níos mó nuair a thuigeann siad an mhias i gceart." },
-      { Icon: CalendarCheck, title: "Ná cailltear áirithintí agus tú ag cócaireacht", desc: "Déanann aíonna áirithintí 24/7, gan ghlaonna. Deimhniú uathoibríoch nó láimhe, meabhrúcháin ríomhphoist — níos lú do shows-do shows, gan strus." },
-      { Icon: Palette, title: "Dochuimhnithe i 1 soicind", desc: "Cuir físeán cistine nó grianghraf bia mar chúlra biachláir. Stopann aíonna ag scrolladh. Fanann do bhranda." },
-      { Icon: Smartphone, title: "Athraigh i soicindí, ní laethanta", desc: "Praghsanna, grianghraif, mias an lae — ón bhfón, idir bhoird. Beo do na haíonna láithreach. Gan athchló go deo." },
-      { Icon: ListPlus, title: "Más féidir leat WhatsApp a sheoladh, is féidir leat é seo", desc: "Tap chun mias a chur leis. Tarraing chun athordú. Múch an méid atá imithe. Gan lámhleabhair, gan teagaisc, gan cuar foghlama." },
+      { Icon: ScanLine, title: "Coinnigh 100% de gach ordú", desc: "Scanann aíonna, ordaíonn agus íocann — díreach chugat. Gan aipeanna le híoslódáil, gan 30% don seachadadh. Tagann gach ordú i bhfíor-am le huimhir an bhoird ar an bpainéal.", tag: "Orduithe díreach" },
+      { Icon: Languages, title: "Díol le turasóirí ina dteanga féin", desc: "Aistríonn tap amháin an biachlár iomlán go 35 teanga. Tuigeann an AI comhthéacs cócaireachta — ordaíonn aíonna níos mó nuair a thuigeann siad an mhias i gceart.", tag: "Aistriúchán AI" },
+      { Icon: CalendarCheck, title: "Ná cailltear áirithintí agus tú ag cócaireacht", desc: "Déanann aíonna áirithintí 24/7, gan ghlaonna. Deimhniú uathoibríoch nó láimhe, meabhrúcháin ríomhphoist — níos lú do shows-do shows, gan strus.", tag: "Áirithintí" },
+      { Icon: Palette, title: "Dochuimhnithe i 1 soicind", desc: "Cuir físeán cistine nó grianghraf bia mar chúlra biachláir. Stopann aíonna ag scrolladh. Fanann do bhranda.", tag: "Dearadh saincheaptha" },
+      { Icon: Smartphone, title: "Athraigh i soicindí, ní laethanta", desc: "Praghsanna, grianghraif, mias an lae — ón bhfón, idir bhoird. Beo do na haíonna láithreach. Gan athchló go deo.", tag: "Eagarthóir biachláir" },
+      { Icon: ChefHat, title: "Freastail níos tapa gach seal", desc: "Sroicheann orduithe scáileán na cistine an bomaite a dheimhníonn an custaiméir. Náid pháipéir, náid screadaíl, náid orduithe caillte — níos lú botún, seirbhís níos tapa, níos mó cuirí in aghaidh na hoíche.", tag: "Ag teacht go luath" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Cad atá san áireamh sa thriail saor in aisce agus cad a tharlaíonn ina dhiaidh?", a: "14 lá rochtain iomlán, gan chárta. Tar éis 14 lá, sosann do chuntas mura gcuireann tú modh íocaíochta isteach — ní ghearrann muid go huathoibríoch riamh. Cuir sonraí íocaíochta isteach níos déanaí chun é a athghníomhachtú. Cealaigh le cliceáil amháin." },
       { q: "An nglacann sibh coimisiún ar orduithe?", a: "Gan ceann ar bith. Téann gach ordú ó do bhiachlár QR díreach chugat — gan sciar ar bith dúinn, gan táillí Deliveroo / Just Eat. Praghas míosúil socair amháin, sin é." },
       { q: "An gá d'aíonna app? An gá scileanna teicniúla domsa?", a: "Gan apps d'aíonna — scanann siad an QR leis an gceamara, osclaíonn an biachlár sa bhrabhsálaí. Gan scileanna teicniúla duitse — oibríonn an painéal go léir ar an bhfón, tap chun cur leis, tarraing chun athordú, sin é an cuar ar fad." },
-      { q: "An féidir liom roinnt bialanna a bhainistiú ó chuntas amháin?", a: "Sea. Ligeann an plean Pro do roinnt bialanna sa chuntas céanna — biachláir scartha, QRanna scartha, anailíseanna scartha, logáil isteach amháin. Athraigh idir iad le dhá thap." },
       { q: "Cé chomh tapa is féidir liom praghsanna a athrú agus miasa nua a chur leis?", a: "Láithreach. Athraigh praghas ar an bhfón, feiceann aíonna i soicindí. Mias nua? Tap, scríobh, grianghraf, déanta — gan athchló, gan fanacht ar an dearthóir." },
       { q: "Cé mhéad teanga a thacaíonn sibh leis?", a: "35 teanga le haistriúchán AI ionsuite. Aistríonn tap amháin an biachlár iomlán, agus tuigeann an AI comhthéacs cócaireachta — fuaimníonn ainmneacha agus cur síos go nádúrtha i ngach teanga. Ordaíonn turasóirí níos mó nuair a thuigeann siad i ndáiríre." },
     ],

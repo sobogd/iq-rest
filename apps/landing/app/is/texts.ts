@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Allt sem þú þarft.", headingAccent: "Ekkert sem þú þarft ekki.",
     sub: "Smíðað fyrir veitingastaði. Notað við borðið.",
     items: [
-      { Icon: ScanLine, title: "Haltu 100% af hverri pöntun", desc: "Gestir skanna, panta og borga — beint til þín. Engar forritahleðslur, engin 30% afhendingarskerðing. Hver pöntun lendir í rauntíma með borðnúmeri í mælaborðinu." },
-      { Icon: Languages, title: "Seldu ferðamönnum á þeirra tungumáli", desc: "Einn smellur þýðir allan matseðilinn á 35 tungumál. AI nær matargerðarsamhenginu — gestir panta meira þegar þeir skilja réttinn raunverulega." },
-      { Icon: CalendarCheck, title: "Missiðu ekki bókanir í eldhúsinu", desc: "Gestir bóka 24/7, engar hringingar. Sjálfvirk eða handvirk staðfesting, tölvupóstáminningar — færri ekkimætingar, núll streita." },
-      { Icon: Palette, title: "Ógleymanlegt á 1 sekúndu", desc: "Settu eldhúsmyndband eða matarmynd sem matseðilbakgrunn. Gestir hætta að skrolla. Vörumerkið þitt situr eftir." },
-      { Icon: Smartphone, title: "Breyttu á sekúndum, ekki dögum", desc: "Verð, myndir, dagsréttur — úr símanum, milli borða. Beint til gesta strax. Aldrei aftur prentun." },
-      { Icon: ListPlus, title: "Ef þú getur sent WhatsApp, getur þú þetta", desc: "Smelltu til að bæta við rétti. Drag til að endurraða. Slökktu á því sem er búið. Engar handbækur, engin kennsluefni, engin lærdómskúrfa." },
+      { Icon: ScanLine, title: "Haltu 100% af hverri pöntun", desc: "Gestir skanna, panta og borga — beint til þín. Engar forritahleðslur, engin 30% afhendingarskerðing. Hver pöntun lendir í rauntíma með borðnúmeri í mælaborðinu.", tag: "Beinar pantanir" },
+      { Icon: Languages, title: "Seldu ferðamönnum á þeirra tungumáli", desc: "Einn smellur þýðir allan matseðilinn á 35 tungumál. AI nær matargerðarsamhenginu — gestir panta meira þegar þeir skilja réttinn raunverulega.", tag: "AI þýðing" },
+      { Icon: CalendarCheck, title: "Missiðu ekki bókanir í eldhúsinu", desc: "Gestir bóka 24/7, engar hringingar. Sjálfvirk eða handvirk staðfesting, tölvupóstáminningar — færri ekkimætingar, núll streita.", tag: "Borðapantanir" },
+      { Icon: Palette, title: "Ógleymanlegt á 1 sekúndu", desc: "Settu eldhúsmyndband eða matarmynd sem matseðilbakgrunn. Gestir hætta að skrolla. Vörumerkið þitt situr eftir.", tag: "Eigin hönnun" },
+      { Icon: Smartphone, title: "Breyttu á sekúndum, ekki dögum", desc: "Verð, myndir, dagsréttur — úr símanum, milli borða. Beint til gesta strax. Aldrei aftur prentun.", tag: "Matseðilsritill" },
+      { Icon: ChefHat, title: "Þjónaðu hraðar á hverri vakt", desc: "Pantanir lenda á eldhússkjánum um leið og gesturinn staðfestir. Núll pappír, núll öskur, núll týndar pantanir — færri mistök, hraðari þjónusta, fleiri gestir á kvöldi.", tag: "Kemur bráðum" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Hvað er innifalið í ókeypis prufu og hvað gerist eftir?", a: "14 dagar fullur aðgangur, ekkert kort. Eftir 14 daga gerir reikningurinn hlé ef þú bætir ekki við greiðslumáta — við rukkum aldrei sjálfvirkt. Bættu við greiðslu seinna til að virkja aftur. Hættu með einum smelli." },
       { q: "Takið þið þóknun af pöntunum?", a: "Núll. Hver pöntun frá QR matseðlinum þínum fer beint til þín — engin sneið til okkar, engin Wolt / Deliveroo gjöld. Eitt fast mánaðarverð, það er allt." },
       { q: "Þurfa gestir forrit? Þarf ég tæknilega kunnáttu?", a: "Engin forrit fyrir gesti — þeir skanna QR með myndavélinni, matseðillinn opnast í vafranum. Engin tæknileg kunnátta fyrir þig — allt mælaborðið virkar í símanum, smelltu til að bæta við, dragðu til að endurraða, það er öll lærdómskúrfan." },
-      { q: "Get ég stjórnað fleiri en einum veitingastað úr einum reikningi?", a: "Já. Pro áskriftin leyfir marga veitingastaði í sama reikningi — aðskildir matseðlar, aðskildir QR kóðar, aðskild tölfræði, ein innskráning. Skiptu á milli með tveimur smellum." },
       { q: "Hversu hratt breyti ég verðum og bæti við réttum?", a: "Strax. Breyttu verði í símanum, gestir sjá á sekúndum. Nýr réttur? Smelltu, skrifaðu, mynd, búið — engin endurprentun, engin biðun eftir hönnuði." },
       { q: "Hversu mörg tungumál eru studd?", a: "35 tungumál með innbyggðri AI þýðingu. Einn smellur þýðir allan matseðilinn, og AI skilur matargerðarsamhengi — nöfn og lýsingar hljóma náttúrulega á hverju tungumáli. Ferðamenn panta meira þegar þeir skilja virkilega." },
     ],

@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Viss, kas tev vajadzīgs.", headingAccent: "Nekā lieka.",
     sub: "Veidots restorāniem. Lietots pie galda.",
     items: [
-      { Icon: ScanLine, title: "Paturi 100% no katra pasūtījuma", desc: "Viesi skenē, pasūta un maksā — tieši tev. Bez lietotņu lejupielādes, bez 30% piegādes. Katrs pasūtījums nonāk reālajā laikā ar galda numuru panelī." },
-      { Icon: Languages, title: "Pārdod tūristiem viņu valodā", desc: "Viens pieskāriens iztulko visu ēdienkarti 35 valodās. AI saprot kulināro kontekstu — viesi pasūta vairāk, kad patiešām saprot ēdienu." },
-      { Icon: CalendarCheck, title: "Nezaudē rezervācijas, kamēr gatavo", desc: "Viesi rezervē 24/7, bez zvaniem. Auto vai manuāla apstiprināšana, e-pasta atgādinājumi — mazāk neierašanos, nulle stresa." },
-      { Icon: Palette, title: "Neaizmirstams 1 sekundē", desc: "Ievieto virtuves video vai ēdiena foto kā ēdienkartes fonu. Viesi pārstāj ritināt. Tavs zīmols paliek." },
-      { Icon: Smartphone, title: "Maini sekundēs, ne dienās", desc: "Cenas, fotogrāfijas, dienas piedāvājums — no telefona, starp galdiem. Tiešsaistē viesiem uzreiz. Nekad vairs druka." },
-      { Icon: ListPlus, title: "Ja proti sūtīt WhatsApp, proti to lietot", desc: "Pieskaries, lai pievienotu ēdienu. Velc, lai pārkārtotu. Izslēdz to, kas beidzies. Bez rokasgrāmatām, bez pamācībām, bez mācīšanās līknes." },
+      { Icon: ScanLine, title: "Paturi 100% no katra pasūtījuma", desc: "Viesi skenē, pasūta un maksā — tieši tev. Bez lietotņu lejupielādes, bez 30% piegādes. Katrs pasūtījums nonāk reālajā laikā ar galda numuru panelī.", tag: "Tiešie pasūtījumi" },
+      { Icon: Languages, title: "Pārdod tūristiem viņu valodā", desc: "Viens pieskāriens iztulko visu ēdienkarti 35 valodās. AI saprot kulināro kontekstu — viesi pasūta vairāk, kad patiešām saprot ēdienu.", tag: "AI tulkojums" },
+      { Icon: CalendarCheck, title: "Nezaudē rezervācijas, kamēr gatavo", desc: "Viesi rezervē 24/7, bez zvaniem. Auto vai manuāla apstiprināšana, e-pasta atgādinājumi — mazāk neierašanos, nulle stresa.", tag: "Rezervācijas" },
+      { Icon: Palette, title: "Neaizmirstams 1 sekundē", desc: "Ievieto virtuves video vai ēdiena foto kā ēdienkartes fonu. Viesi pārstāj ritināt. Tavs zīmols paliek.", tag: "Pielāgots dizains" },
+      { Icon: Smartphone, title: "Maini sekundēs, ne dienās", desc: "Cenas, fotogrāfijas, dienas piedāvājums — no telefona, starp galdiem. Tiešsaistē viesiem uzreiz. Nekad vairs druka.", tag: "Ēdienkartes redaktors" },
+      { Icon: ChefHat, title: "Apkalpo ātrāk katrā maiņā", desc: "Pasūtījumi nonāk virtuves ekrānā brīdī, kad viesis apstiprina. Nulle papīra, nulle kliegšanas, nulle pazaudētu pasūtījumu — mazāk kļūdu, ātrāka apkalpošana, vairāk apmeklētāju vakarā.", tag: "Drīzumā" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Ko ietver bezmaksas izmēģinājuma periods un kas notiek pēc?", a: "14 dienas pilna piekļuve, bez kartes. Pēc 14 dienām konts pauzē, ja nepievieno maksājuma metodi — mēs nekad neapmaksājam automātiski. Pievieno maksājumu vēlāk, lai atjauninātu. Atceltu ar vienu klikšķi." },
       { q: "Vai ņemat komisiju no pasūtījumiem?", a: "Nulli. Katrs pasūtījums no tavas QR ēdienkartes iet tieši tev — bez mūsu daļas, bez Wolt / Bolt Food maksām. Viena fiksēta mēneša cena, tas arī viss." },
       { q: "Vai viesiem vajag aplikāciju? Vai man vajag tehniskas prasmes?", a: "Bez aplikācijas viesiem — skenē QR ar kameru, ēdienkarte atveras pārlūkā. Bez tehniskām prasmēm tev — viss panelis darbojas telefonā, pieskaries, lai pievienotu, velc, lai pārkārtotu, tāda ir visa līkne." },
-      { q: "Vai varu pārvaldīt vairākus restorānus no viena konta?", a: "Jā. Pro plāns ļauj vairākus restorānus vienā kontā — atsevišķas ēdienkartes, atsevišķi QR, atsevišķa statistika, viena pieteikšanās. Pārslēdzies ar diviem pieskārieniem." },
       { q: "Cik ātri varu mainīt cenas un pievienot ēdienus?", a: "Uzreiz. Maini cenu telefonā, viesi redz sekundēs. Jauns ēdiens? Pieskaries, raksti, foto, gatavs — bez atkārtotas drukas, bez gaidīšanas uz dizaineri." },
       { q: "Cik valodu atbalstāt?", a: "35 valodas ar iebūvētu AI tulkojumu. Viens pieskāriens iztulko visu ēdienkarti, AI saprot kulināro kontekstu — nosaukumi un apraksti skan dabiski katrā valodā. Tūristi pasūta vairāk, kad patiešām saprot." },
     ],

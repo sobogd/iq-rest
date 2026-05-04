@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -33,12 +33,12 @@ export const TEXTS: LandingTexts = {
     heading: "Allt du behöver.", headingAccent: "Inget mer.",
     sub: "Byggd för restauranger. Använd vid bordet.",
     items: [
-      { Icon: ScanLine, title: "Behåll 100% av varje beställning", desc: "Gäster skannar, beställer och betalar — rakt till dig. Inga appar att ladda ner, ingen 30%-leveranssnitt. Varje beställning landar i realtid med bordsnummer i din panel." },
-      { Icon: Languages, title: "Sälj till turister på deras språk", desc: "Ett klick översätter hela menyn till 35 språk. AI fattar kulinarisk kontext — gäster beställer mer när de verkligen förstår rätten." },
-      { Icon: CalendarCheck, title: "Missa inga bokningar i köket", desc: "Gäster bokar 24/7, inga samtal. Auto- eller manuell bekräftelse, e-postpåminnelser inkluderade — färre no-shows, noll stress." },
-      { Icon: Palette, title: "Oförglömlig på 1 sekund", desc: "Lägg in en köksvideo eller en hjältebild som menybakgrund. Gäster slutar scrolla. Ditt varumärke fastnar." },
-      { Icon: Smartphone, title: "Ändra på sekunder, inte dagar", desc: "Ändra priser, byt foton, lägg till dagens — från telefonen, mellan bord. Live för gäster direkt. Aldrig mer tryck." },
-      { Icon: ListPlus, title: "Kan du sms:a, kan du detta", desc: "Klicka för att lägga till en rätt. Dra för att sortera om. Stäng av det som tagit slut. Inga manualer, inga tutorials, ingen inlärningskurva." },
+      { Icon: ScanLine, title: "Behåll 100% av varje beställning", desc: "Gäster skannar, beställer och betalar — rakt till dig. Inga appar att ladda ner, ingen 30%-leveranssnitt. Varje beställning landar i realtid med bordsnummer i din panel.", tag: "Direkta beställningar" },
+      { Icon: Languages, title: "Sälj till turister på deras språk", desc: "Ett klick översätter hela menyn till 35 språk. AI fattar kulinarisk kontext — gäster beställer mer när de verkligen förstår rätten.", tag: "AI-översättning" },
+      { Icon: CalendarCheck, title: "Missa inga bokningar i köket", desc: "Gäster bokar 24/7, inga samtal. Auto- eller manuell bekräftelse, e-postpåminnelser inkluderade — färre no-shows, noll stress.", tag: "Bokningar" },
+      { Icon: Palette, title: "Oförglömlig på 1 sekund", desc: "Lägg in en köksvideo eller en hjältebild som menybakgrund. Gäster slutar scrolla. Ditt varumärke fastnar.", tag: "Egen design" },
+      { Icon: Smartphone, title: "Ändra på sekunder, inte dagar", desc: "Ändra priser, byt foton, lägg till dagens — från telefonen, mellan bord. Live för gäster direkt. Aldrig mer tryck.", tag: "Meny-editor" },
+      { Icon: ChefHat, title: "Servera snabbare varje pass", desc: "Beställningarna landar på kökets skärm i samma stund gästen bekräftar. Noll papper, noll skrik, noll förlorade ordrar — färre misstag, snabbare service, fler kuvert per kväll.", tag: "Kommer snart" },
     ],
   },
   founder: {
@@ -74,7 +74,6 @@ export const TEXTS: LandingTexts = {
       { q: "Vad ingår i den fria provperioden och vad händer sedan?", a: "14 dagar full åtkomst, utan kort. Efter 14 dagar pausas kontot om du inte lägger till en betalmetod — vi drar aldrig automatiskt. Lägg till senare för att aktivera. Avsluta med ett klick." },
       { q: "Tar ni provision på beställningar?", a: "Noll. Varje beställning från din QR-meny går rakt till dig — ingen del till oss, inga Foodora / Wolt-avgifter. Ett fast månadspris, det är allt." },
       { q: "Behöver gästerna en app? Behöver jag tekniska kunskaper?", a: "Inga appar för gästerna — de skannar QR med kameran, menyn öppnas i webbläsaren. Inga tekniska kunskaper för dig — hela panelen funkar i mobilen, klicka för att lägga till, dra för att sortera om, det är hela inlärningen." },
-      { q: "Kan jag hantera flera restauranger från ett konto?", a: "Ja. Pro-planen tillåter flera restauranger i samma konto — separata menyer, separata QR-koder, separat statistik, en inloggning. Byt mellan dem på två klick." },
       { q: "Hur snabbt ändrar jag priser och lägger till rätter?", a: "Direkt. Ändra ett pris i mobilen, gästerna ser det på sekunder. Ny rätt? Klicka, skriv, foto, klart — inga utskrifter, ingen designer att vänta på." },
       { q: "Hur många språk stöds?", a: "35 språk med inbyggd AI-översättning. Ett klick översätter hela menyn, AI fattar kulinarisk kontext — namn och beskrivningar låter naturligt på varje språk. Turister beställer mer när de verkligen förstår." },
     ],

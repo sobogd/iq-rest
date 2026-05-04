@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -91,31 +91,37 @@ export const TEXTS: LandingTexts = {
         Icon: ScanLine,
         title: "Keep 100% of every order",
         desc: "Guests scan, order and pay — straight to you. No app downloads, no 30% delivery cut. Every order hits your dashboard with the table number in real time.",
+        tag: "Direct ordering",
       },
       {
         Icon: Languages,
         title: "Sell to tourists in their language",
         desc: "One tap translates your full menu into 35 languages. AI nails culinary context — guests order more when they actually understand the dish.",
+        tag: "AI translation",
       },
       {
         Icon: CalendarCheck,
         title: "Stop missing bookings while you cook",
         desc: "Guests book tables 24/7, no phone calls. Auto or manual confirmation, email reminders included — fewer no-shows, zero hassle.",
+        tag: "Reservations",
       },
       {
         Icon: Palette,
         title: "Look unforgettable in 1 second",
         desc: "Drop in a video of your kitchen or a hero food shot as your menu background. Guests stop scrolling. Your brand sticks.",
+        tag: "Custom design",
       },
       {
         Icon: Smartphone,
         title: "Update in seconds, not days",
         desc: "Change prices, swap photos, add today's specials — from your phone, between tables. Live for guests instantly. Never reprint a menu again.",
+        tag: "Menu editor",
       },
       {
-        Icon: ListPlus,
-        title: "If you can text, you can use it",
-        desc: "Tap to add a dish. Drag to reorder. Toggle off when sold out. No manuals, no tutorials, no learning curve.",
+        Icon: ChefHat,
+        title: "Serve faster every shift",
+        desc: "Orders fly to the kitchen screen the moment guests hit submit. No paper, no shouting, no lost tickets — fewer mistakes, faster turns, more covers per night.",
+        tag: "Coming soon",
       },
     ],
   },
@@ -178,10 +184,6 @@ export const TEXTS: LandingTexts = {
       {
         q: "Do my guests need an app? Do I need any tech skills?",
         a: "Zero apps for guests — they scan the QR with their phone camera and the menu opens in the browser. Zero tech skills for you — the whole dashboard works on your phone, tap to add a dish, drag to reorder, that's the entire learning curve.",
-      },
-      {
-        q: "Can I manage multiple restaurants from one account?",
-        a: "Yes. The Pro plan lets you run multiple restaurants under a single account — separate menus, separate QR codes, separate analytics, one login. Switch between them in two taps.",
       },
       {
         q: "How fast can I update prices and add new dishes?",

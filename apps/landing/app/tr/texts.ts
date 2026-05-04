@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "İhtiyacın olan her şey.", headingAccent: "Olmayan hiçbir şey.",
     sub: "Restoranlar için yapıldı. Masada kullanılır.",
     items: [
-      { Icon: ScanLine, title: "Her siparişin %100'ü senin", desc: "Misafirler tarıyor, sipariş veriyor ve ödüyor — direkt sana. Uygulama indirme yok, %30 teslimat payı yok. Her sipariş gerçek zamanlı masa numarasıyla panele düşer." },
-      { Icon: Languages, title: "Turistlere kendi dillerinde sat", desc: "Tek dokunuş tüm menüyü 35 dile çeviriyor. AI mutfak bağlamını yakalıyor — misafirler yemeği gerçekten anladığında daha çok sipariş veriyor." },
-      { Icon: CalendarCheck, title: "Mutfaktayken rezervasyon kaçırma", desc: "Misafirler 24/7 rezervasyon yapıyor, çağrı yok. Otomatik veya manuel onay, e-posta hatırlatmaları dahil — daha az gelmeyen müşteri, sıfır stres." },
-      { Icon: Palette, title: "1 saniyede unutulmaz", desc: "Mutfak videosu veya yemek fotoğrafını menü arka planına koy. Misafirler scroll'ı bırakıyor. Markan akılda kalıyor." },
-      { Icon: Smartphone, title: "Saniyelerde değiştir, günlerde değil", desc: "Fiyatları değiştir, fotoğrafları değiştir, günün özelini ekle — telefondan, masalar arasında. Misafirler için anında canlı. Bir daha asla baskı yok." },
-      { Icon: ListPlus, title: "WhatsApp gönderebiliyorsan kullanabilirsin", desc: "Yemek eklemek için dokun. Sıralamak için sürükle. Tükenenleri kapat. Kılavuz yok, tutorial yok, öğrenme eğrisi yok." },
+      { Icon: ScanLine, title: "Her siparişin %100'ü senin", desc: "Misafirler tarıyor, sipariş veriyor ve ödüyor — direkt sana. Uygulama indirme yok, %30 teslimat payı yok. Her sipariş gerçek zamanlı masa numarasıyla panele düşer.", tag: "Doğrudan sipariş" },
+      { Icon: Languages, title: "Turistlere kendi dillerinde sat", desc: "Tek dokunuş tüm menüyü 35 dile çeviriyor. AI mutfak bağlamını yakalıyor — misafirler yemeği gerçekten anladığında daha çok sipariş veriyor.", tag: "AI çevirisi" },
+      { Icon: CalendarCheck, title: "Mutfaktayken rezervasyon kaçırma", desc: "Misafirler 24/7 rezervasyon yapıyor, çağrı yok. Otomatik veya manuel onay, e-posta hatırlatmaları dahil — daha az gelmeyen müşteri, sıfır stres.", tag: "Rezervasyonlar" },
+      { Icon: Palette, title: "1 saniyede unutulmaz", desc: "Mutfak videosu veya yemek fotoğrafını menü arka planına koy. Misafirler scroll'ı bırakıyor. Markan akılda kalıyor.", tag: "Özel tasarım" },
+      { Icon: Smartphone, title: "Saniyelerde değiştir, günlerde değil", desc: "Fiyatları değiştir, fotoğrafları değiştir, günün özelini ekle — telefondan, masalar arasında. Misafirler için anında canlı. Bir daha asla baskı yok.", tag: "Menü editörü" },
+      { Icon: ChefHat, title: "Her vardiya daha hızlı servis", desc: "Siparişler, müşteri onayladığı anda mutfak ekranına düşer. Sıfır kağıt, sıfır bağırma, sıfır kayıp sipariş — daha az hata, daha hızlı servis, akşam başına daha fazla kuver.", tag: "Yakında" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Ücretsiz deneme neyi içeriyor ve sonrası ne olur?", a: "14 gün tam erişim, kart yok. 14 gün sonunda ödeme yöntemi eklemezsen hesabın duraklar — asla otomatik tahsil etmiyoruz. Sonra ödeme bilgisi ekleyip tekrar aktive edebilirsin. Tek tıkla iptal et." },
       { q: "Siparişlerden komisyon alıyor musunuz?", a: "Sıfır. QR menünden gelen her sipariş direkt sana gelir — bizden pay yok, Yemeksepeti / Trendyol Yemek ücretleri yok. Tek sabit aylık fiyat, hepsi bu." },
       { q: "Misafirler için uygulama gerekli mi? Teknik bilgi gerekli mi?", a: "Misafirler için sıfır uygulama — kamerayla QR'ı tarıyor, menü tarayıcıda açılıyor. Senin için sıfır teknik beceri — tüm panel telefonda çalışıyor, eklemek için dokun, sıralamak için sürükle, öğrenme eğrisi bu kadar." },
-      { q: "Birden fazla restoranı tek hesaptan yönetebilir miyim?", a: "Evet. Pro plan tek hesapta birden fazla restoran sağlıyor — ayrı menüler, ayrı QR'lar, ayrı analitikler, tek giriş. İki dokunuşla geçiş." },
       { q: "Fiyatları ve yemekleri ne kadar hızlı değiştirebilirim?", a: "Anında. Telefonda fiyatı değiştir, misafirler saniyeler içinde görür. Yeni yemek? Dokun, yaz, fotoğraf, hazır — yeniden basım yok, tasarımcı beklemek yok." },
       { q: "Kaç dil destekleniyor?", a: "Yerleşik AI çeviriyle 35 dil. Tek dokunuş tüm menüyü çeviriyor, AI mutfak bağlamını anlıyor — adlar ve tarifler her dilde doğal görünür. Turistler gerçekten anladıklarında daha çok sipariş verir." },
     ],

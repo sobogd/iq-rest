@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -91,31 +91,37 @@ export const TEXTS: LandingTexts = {
         Icon: ScanLine,
         title: "Houd 100% van elke bestelling",
         desc: "Gasten scannen, bestellen en betalen — direct naar jou. Geen apps downloaden, geen 30% bezorgkosten. Elke bestelling komt in real-time met tafelnummer in je dashboard.",
+        tag: "Directe bestellingen",
       },
       {
         Icon: Languages,
         title: "Verkoop aan toeristen in hun taal",
         desc: "Eén tik vertaalt je hele menu in 35 talen. AI snapt de culinaire context — gasten bestellen meer als ze het gerecht echt begrijpen.",
+        tag: "AI-vertaling",
       },
       {
         Icon: CalendarCheck,
         title: "Mis geen reservering meer terwijl je kookt",
         desc: "Gasten reserveren 24/7, geen telefoongesprekken. Auto- of handmatige bevestiging, e-mailherinneringen inbegrepen — minder no-shows, nul stress.",
+        tag: "Reserveringen",
       },
       {
         Icon: Palette,
         title: "Onvergetelijk in 1 seconde",
         desc: "Plaats een keukenvideo of een mooie foto als achtergrond van je menu. Gasten stoppen met scrollen. Je merk blijft hangen.",
+        tag: "Eigen ontwerp",
       },
       {
         Icon: Smartphone,
         title: "Update in seconden, niet in dagen",
         desc: "Wijzig prijzen, vervang foto's, voeg de daghap toe — vanaf je telefoon, tussen tafels door. Direct live voor gasten. Nooit meer printen.",
+        tag: "Menu-editor",
       },
       {
-        Icon: ListPlus,
-        title: "Kun je een appje sturen, kun je dit",
-        desc: "Tik om een gerecht toe te voegen. Sleep om te ordenen. Zet uit wat op is. Geen handleidingen, geen tutorials, geen leercurve.",
+        Icon: ChefHat,
+        title: "Sneller serveren, elke shift",
+        desc: "Bestellingen verschijnen op het keukenscherm zodra de gast bevestigt. Nul papier, nul geschreeuw, nul verloren bonnen — minder fouten, snellere service, meer couverts per avond.",
+        tag: "Binnenkort",
       },
     ],
   },
@@ -178,10 +184,6 @@ export const TEXTS: LandingTexts = {
       {
         q: "Hebben gasten een app nodig? Heb ik tech-skills nodig?",
         a: "Nul apps voor gasten — ze scannen de QR met de camera, het menu opent in de browser. Nul technische skills voor jou — het hele dashboard werkt op je telefoon, tikken om toe te voegen, slepen om te ordenen, dat is alles.",
-      },
-      {
-        q: "Kan ik meerdere restaurants vanuit één account beheren?",
-        a: "Ja. Het Pro-plan laat je meerdere restaurants in één account beheren — aparte menu's, aparte QR's, aparte statistieken, één login. Wissel ertussen in twee tikken.",
       },
       {
         q: "Hoe snel verander ik prijzen of voeg ik gerechten toe?",

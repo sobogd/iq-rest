@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "你需要的一切。", headingAccent: "不需要的都没有。",
     sub: "为餐厅打造。在桌边使用。",
     items: [
-      { Icon: ScanLine, title: "保留每笔订单的100%", desc: "客人扫码、下单、付款 — 直接给你。无需下载APP,没有30%外卖抽成。每笔订单实时带桌号进入仪表板。" },
-      { Icon: Languages, title: "用游客的语言销售", desc: "一点将整个菜单翻译成35种语言。AI懂得烹饪上下文 — 游客真正理解菜品时下单更多。" },
-      { Icon: CalendarCheck, title: "做菜时也不丢预订", desc: "客人24/7预订,无需电话。自动或手动确认,邮件提醒包含 — 减少爽约,零压力。" },
-      { Icon: Palette, title: "1秒难忘", desc: "把厨房视频或菜品大片做菜单背景。客人停止滚动,你的品牌留下。" },
-      { Icon: Smartphone, title: "几秒内更新,而不是几天", desc: "改价、换图、加今日特色 — 从手机上,在桌间完成。立即对客人可见。再也不用印刷。" },
-      { Icon: ListPlus, title: "会发微信就会用", desc: "点一下加菜。拖一下排序。售罄就关闭。无手册、无教程、无学习曲线。" },
+      { Icon: ScanLine, title: "保留每笔订单的100%", desc: "客人扫码、下单、付款 — 直接给你。无需下载APP,没有30%外卖抽成。每笔订单实时带桌号进入仪表板。", tag: "直接下单" },
+      { Icon: Languages, title: "用游客的语言销售", desc: "一点将整个菜单翻译成35种语言。AI懂得烹饪上下文 — 游客真正理解菜品时下单更多。", tag: "AI 翻译" },
+      { Icon: CalendarCheck, title: "做菜时也不丢预订", desc: "客人24/7预订,无需电话。自动或手动确认,邮件提醒包含 — 减少爽约,零压力。", tag: "预订" },
+      { Icon: Palette, title: "1秒难忘", desc: "把厨房视频或菜品大片做菜单背景。客人停止滚动,你的品牌留下。", tag: "自定义设计" },
+      { Icon: Smartphone, title: "几秒内更新,而不是几天", desc: "改价、换图、加今日特色 — 从手机上,在桌间完成。立即对客人可见。再也不用印刷。", tag: "菜单编辑器" },
+      { Icon: ChefHat, title: "每个班次,服务更快", desc: "客人确认的瞬间,订单飞到厨房屏幕。零纸张、零吼叫、零漏单 — 失误更少、服务更快、每晚翻台更多。", tag: "即将上线" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "免费试用包含什么,之后呢?", a: "14天完整访问,无需信用卡。14天后如果你不添加付款方式,账户暂停 — 我们绝不自动扣款。稍后添加付款信息即可重新激活。一键取消。" },
       { q: "你们对订单收佣金吗?", a: "零。你QR菜单的每笔订单都直接给你 — 我们没有抽成,没有美团/饿了么费用。一个固定月费,就这些。" },
       { q: "客人需要APP吗?我需要技术技能吗?", a: "客人无需APP — 摄像头扫描QR,菜单在浏览器中打开。你无需技术技能 — 整个仪表板在手机上运行,点击添加,拖拽排序,这就是全部学习曲线。" },
-      { q: "我能用一个账户管理多家餐厅吗?", a: "是的。Pro套餐允许在同一账户中拥有多家餐厅 — 单独菜单、单独QR、单独分析,一次登录。两下切换。" },
       { q: "改价和加菜有多快?", a: "即时。在手机上改价,客人几秒内看到。新菜?点击、输入、照片,完成 — 无需重印,无需等设计师。" },
       { q: "支持多少种语言?", a: "35种语言,内置AI翻译。一点翻译整个菜单,AI懂烹饪上下文 — 名称和描述在每种语言中都自然。游客真正理解时下单更多。" },
     ],

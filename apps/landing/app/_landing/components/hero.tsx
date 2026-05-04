@@ -19,7 +19,7 @@ interface HeroProps {
 export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: HeroProps) {
   return (
     <section data-section="hero" className="container mx-auto px-4 pt-8 pb-16 lg:pt-12">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images''bullets_images']">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images''bullets_images']">
         {/* Header — verticals + headline + sub + CTA */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:header]">
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:justify-center lg:justify-start gap-1 sm:gap-1.5 mb-5 w-full">
@@ -52,7 +52,7 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base text-muted-foreground max-w-xl mb-7 leading-snug">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mb-7 leading-snug">
             {variant.sub}
           </p>
 
@@ -69,7 +69,7 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
         </div>
 
         {/* Images */}
-        <div className="w-full max-w-[480px] lg:max-w-none mx-auto px-8 sm:px-6 lg:px-0 lg:[grid-area:images]">
+        <div className="w-full max-w-[480px] lg:max-w-[500px] mx-auto px-8 sm:px-6 lg:px-0 lg:[grid-area:images]">
           <div className="relative w-full aspect-[5/4]">
             <Image
               src={sampleMain}
@@ -100,16 +100,16 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
 
         {/* Bullets + rating */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:bullets]">
-          <ul className="grid grid-cols-1 sm:inline-grid sm:grid-cols-2 gap-x-6 gap-y-2 text-xs text-foreground/90 max-w-xl w-full sm:w-auto sm:text-start sm:mx-auto lg:mx-0">
+          <ul className="grid grid-cols-1 sm:inline-grid sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm sm:text-base text-foreground/90 max-w-xl w-full sm:w-auto sm:text-start sm:mx-auto lg:mx-0">
             {texts.painBullets.map((b) => (
               <li key={b} className="flex items-center justify-center gap-2 sm:items-start sm:justify-start">
-                <Check className="h-3.5 w-3.5 flex-shrink-0 text-primary sm:mt-0.5" />
+                <Check className="h-4 w-4 flex-shrink-0 text-primary sm:mt-0.5" />
                 <span>{b}</span>
               </li>
             ))}
           </ul>
 
-          <div className="mt-8 flex items-center gap-2 text-[11px] text-muted-foreground">
+          <div className="mt-8 flex flex-col items-center gap-1 lg:flex-row lg:items-center lg:gap-2 text-sm font-medium text-muted-foreground">
             <span className="text-amber-400">★★★★★</span>
             <span>{texts.rating}</span>
           </div>

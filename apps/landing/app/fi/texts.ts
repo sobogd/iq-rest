@@ -1,4 +1,4 @@
-import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ListPlus } from "lucide-react";
+import { ScanLine, Languages, CalendarCheck, Palette, Smartphone, ChefHat } from "lucide-react";
 import type { LandingTexts } from "@/app/_landing/types";
 
 export const TEXTS: LandingTexts = {
@@ -32,12 +32,12 @@ export const TEXTS: LandingTexts = {
     heading: "Kaikki mitä tarvitset.", headingAccent: "Ei mitään turhaa.",
     sub: "Tehty ravintoloille. Käytetty pöydässä.",
     items: [
-      { Icon: ScanLine, title: "Pidä 100% jokaisesta tilauksesta", desc: "Asiakkaat skannaavat, tilaavat ja maksavat — suoraan sinulle. Ei sovelluksia ladattavaksi, ei 30%:n toimitusosuutta. Jokainen tilaus laskeutuu reaaliajassa pöytänumerolla paneeliin." },
-      { Icon: Languages, title: "Myy turisteille heidän kielellään", desc: "Yksi napsautus kääntää koko listan 35 kielelle. AI ymmärtää kulinaarisen kontekstin — asiakkaat tilaavat enemmän, kun ymmärtävät ruokalajin oikeasti." },
-      { Icon: CalendarCheck, title: "Älä menetä varauksia keittiössä", desc: "Asiakkaat varaavat 24/7, ei puheluita. Auto- tai manuaalivahvistus, sähköpostimuistutukset mukana — vähemmän peruutuksia, nolla stressiä." },
-      { Icon: Palette, title: "Unohtumaton 1 sekunnissa", desc: "Aseta keittiövideo tai sankarikuva listan taustaksi. Asiakkaat lopettavat selaamisen. Brändisi jää mieleen." },
-      { Icon: Smartphone, title: "Päivitä sekunneissa, ei päivissä", desc: "Muuta hintoja, vaihda kuvia, lisää päivän erikoinen — puhelimesta, pöytien välissä. Suorana asiakkaille heti. Ei enää tulosteita." },
-      { Icon: ListPlus, title: "Jos osaat tekstata, osaat tämän", desc: "Napauta lisätäksesi annoksen. Vedä järjestääksesi. Sammuta loppunut. Ei manuaaleja, ei tutoriaaleja, ei oppimiskäyrää." },
+      { Icon: ScanLine, title: "Pidä 100% jokaisesta tilauksesta", desc: "Asiakkaat skannaavat, tilaavat ja maksavat — suoraan sinulle. Ei sovelluksia ladattavaksi, ei 30%:n toimitusosuutta. Jokainen tilaus laskeutuu reaaliajassa pöytänumerolla paneeliin.", tag: "Suorat tilaukset" },
+      { Icon: Languages, title: "Myy turisteille heidän kielellään", desc: "Yksi napsautus kääntää koko listan 35 kielelle. AI ymmärtää kulinaarisen kontekstin — asiakkaat tilaavat enemmän, kun ymmärtävät ruokalajin oikeasti.", tag: "Tekoälykäännös" },
+      { Icon: CalendarCheck, title: "Älä menetä varauksia keittiössä", desc: "Asiakkaat varaavat 24/7, ei puheluita. Auto- tai manuaalivahvistus, sähköpostimuistutukset mukana — vähemmän peruutuksia, nolla stressiä.", tag: "Varaukset" },
+      { Icon: Palette, title: "Unohtumaton 1 sekunnissa", desc: "Aseta keittiövideo tai sankarikuva listan taustaksi. Asiakkaat lopettavat selaamisen. Brändisi jää mieleen.", tag: "Oma ulkoasu" },
+      { Icon: Smartphone, title: "Päivitä sekunneissa, ei päivissä", desc: "Muuta hintoja, vaihda kuvia, lisää päivän erikoinen — puhelimesta, pöytien välissä. Suorana asiakkaille heti. Ei enää tulosteita.", tag: "Ruokalistaeditori" },
+      { Icon: ChefHat, title: "Palvele nopeammin joka vuoro", desc: "Tilaukset päätyvät keittiön näytölle sillä hetkellä kun asiakas vahvistaa. Nolla paperia, nolla huutoa, nolla kadonnutta tilausta — vähemmän virheitä, nopeampi palvelu, enemmän asiakkaita illassa.", tag: "Tulossa pian" },
     ],
   },
   founder: {
@@ -73,7 +73,6 @@ export const TEXTS: LandingTexts = {
       { q: "Mitä ilmaiskokeilu sisältää ja mitä sen jälkeen?", a: "14 päivää täysi pääsy, ei korttia. 14 päivän jälkeen tili pysähtyy, jos et lisää maksutapaa — emme veloita koskaan automaattisesti. Lisää maksutiedot myöhemmin aktivoidaksesi. Peruuta yhdellä napsautuksella." },
       { q: "Otatteko provisiota tilauksista?", a: "Nolla. Jokainen tilaus QR-listastasi tulee suoraan sinulle — ei osuutta meille, ei Wolt / Foodora-maksuja. Yksi kiinteä kuukausihinta, siinä se." },
       { q: "Tarvitsevatko asiakkaat sovelluksen? Tarvitsenko tekniset taidot?", a: "Ei sovelluksia asiakkaille — he skannaavat QR:n kameralla, lista avautuu selaimessa. Ei teknisiä taitoja sinulle — koko paneeli toimii puhelimessa, napauta lisätäksesi, vedä järjestääksesi, siinä koko oppimiskäyrä." },
-      { q: "Voinko hallita useita ravintoloita yhdestä tilistä?", a: "Kyllä. Pro-paketti antaa hallita useita ravintoloita samassa tilissä — erilliset listat, erilliset QR:t, erilliset analytiikat, yksi kirjautuminen. Vaihda kahdella napsautuksella." },
       { q: "Kuinka nopeasti muutan hintoja ja lisään annoksia?", a: "Heti. Vaihda hinta puhelimessa, asiakkaat näkevät sekunneissa. Uusi annos? Napauta, kirjoita, kuva, valmis — ei tulosteita, ei suunnittelijan odotusta." },
       { q: "Kuinka monta kieltä tuetaan?", a: "35 kieltä sisäänrakennetulla AI-käännöksellä. Yksi napsautus kääntää koko listan, AI ymmärtää kulinaarisen kontekstin — nimet ja kuvaukset kuulostavat luonnollisilta jokaisella kielellä. Turistit tilaavat enemmän kun ymmärtävät." },
     ],
