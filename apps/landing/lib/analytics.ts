@@ -80,11 +80,12 @@ function track(event: string): void {
   if (typeof window === "undefined") return;
   if (isAdminBrowser()) return;
 
-  // Cookieless pulse — always.
+  // Cookieless pulse — always. occurredAt (UTC ms) preserves cross-event order
+  // even when 4+ events fire within the same second from racing fetch() calls.
   fetch(`${API_BASE}/api/analytics/pulse`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event }),
+    body: JSON.stringify({ event, occurredAt: Date.now() }),
     keepalive: true,
   }).catch(() => {});
 

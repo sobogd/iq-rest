@@ -58,6 +58,7 @@ export async function trackGclidArrival(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       event: eventName,
+      occurredAt: Date.now(),
       gclid,
       ...(country && /^[A-Z]{2}$/.test(country) ? { country } : {}),
       ...(region ? { region } : {}),
