@@ -29,6 +29,53 @@ export type FooterLink = {
   label: string;
 };
 
+/**
+ * Per-feature content. All shared chrome (header, footer, pricing trust,
+ * faq eyebrow, ctaText, etc.) is read from the per-locale homepage TEXTS
+ * (LandingTexts), so a feature texts file only carries copy unique to
+ * that feature page.
+ */
+export type FeatureTexts = {
+  meta: {
+    title: string;
+    description: string;
+    canonical: string;
+    ogLocale: string;
+    ogTitle: string;
+    ogDescription: string;
+  };
+
+  hero: {
+    title: string;
+    subtitle: string;
+    trustLine?: string;
+  };
+
+  seo: {
+    description: string;
+    fullDescription: string;
+    benefitsHeading?: string;
+    benefits: string[];
+  };
+
+  pricing: {
+    heading: string;
+    headingAccent: string;
+    sub: string;
+  };
+
+  faq: {
+    sub: string;
+    items: FaqItem[];
+  };
+
+  finalCta: {
+    heading: string;
+    headingAccent: string;
+    sub: string;
+  };
+};
+
 export type LandingTexts = {
   htmlLang: string;
   htmlDir: "ltr" | "rtl";

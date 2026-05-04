@@ -11,6 +11,7 @@ interface FooterProps {
   texts: LandingTexts["footer"];
   headerTexts: LandingTexts["header"];
   locale: string;
+  excludeFeatureHref?: string;
 }
 
 function slugify(href: string): string {
@@ -22,12 +23,15 @@ function slugify(href: string): string {
     .toLowerCase();
 }
 
-export function LandingFooter({ texts, headerTexts: _headerTexts, locale }: FooterProps) {
+export function LandingFooter({ texts, headerTexts: _headerTexts, locale, excludeFeatureHref }: FooterProps) {
   const year = new Date().getFullYear();
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
   const cookieTexts = getCookieTexts(locale);
   const [langOpen, setLangOpen] = useState(false);
   const [legalView, setLegalView] = useState<LegalView>(null);
+  const featureLinks = excludeFeatureHref
+    ? texts.featureLinks.filter((link) => link.href !== excludeFeatureHref)
+    : texts.featureLinks;
 
   return (
     <>
@@ -35,7 +39,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale }: Foot
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 text-xs md:max-w-[50%]">
-            {texts.featureLinks.map((link) => (
+            {featureLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}

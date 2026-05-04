@@ -22,7 +22,6 @@ const PAGE_LAST_MODIFIED: Record<string, string> = {
   "/color-scheme": "2026-02-24",
   "/personal-support": "2026-02-24",
   "/online-orders": "2026-02-24",
-  "/faq": "2026-02-20",
   "/changelog": "2026-02-20",
 };
 
