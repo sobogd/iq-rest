@@ -432,110 +432,34 @@ export const EVENT_LABELS: Record<string, string> = {
   [DashboardEvent.ERROR_OTP_VERIFY]: "Error: OTP Verify",
 };
 
-// Deduplicate: skip if the same event+meta fired less than 1s ago
+
+// ────────── Tracking — single sink: POST /api/usage/event ──────────
+//
+// Server attaches companyId from the iqr_session cookie (credentials:include).
+// No analytics-specific cookie or storage is set on the client.
+
 const lastFired = new Map<string, number>();
+const API_BASE =
+  process.env.NEXT_PUBLIC_DASHBOARD_API_BASE || "https://dashboard-api.iq-rest.com";
 
-// Module-level userId — set once from DashboardShell
-let _userId: string | null = null;
-
-export function setDashboardUserId(userId: string) {
-  _userId = userId;
-}
-
-const SESSION_ID_KEY = "analytics_session_id";
-
-function getSessionId(): string {
-  // Match analytics.ts: check localStorage first (registered), then sessionStorage (anonymous)
-  let sessionId = localStorage.getItem(SESSION_ID_KEY)
-    || sessionStorage.getItem(SESSION_ID_KEY);
-  if (!sessionId) {
-    sessionId =
-      typeof crypto.randomUUID === "function"
-        ? crypto.randomUUID()
-        : Array.from(crypto.getRandomValues(new Uint8Array(16)))
-            .map((b) => b.toString(16).padStart(2, "0"))
-            .join("")
-            .replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
-    sessionStorage.setItem(SESSION_ID_KEY, sessionId);
-  }
-  return sessionId;
-}
-
-// Thin wrapper — fire-and-forget, optional meta
-function getCookie(name: string): string | null {
-  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
-  return match ? decodeURIComponent(match[1]) : null;
-}
-
-function deleteCookie(name: string) {
-  document.cookie = `${name}=; path=/; max-age=0`;
-}
-
-function trackReferral() {
+export function track(event: DashboardEvent, _meta?: Record<string, string>) {
   if (typeof window === "undefined") return;
-  if (sessionStorage.getItem("referral_sent")) return;
 
-  const from = getCookie("ref_from");
-  if (!from) return;
-
-  sessionStorage.setItem("referral_sent", "1");
-
-  const sessionId = getSessionId();
-  const refMeta: Record<string, string> = { from };
-  const slug = getCookie("ref_slug");
-  if (slug) {
-    refMeta.slug = slug;
-    deleteCookie("ref_slug");
-  }
-  deleteCookie("ref_from");
-
-  fetch("/api/analytics/event", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event: `referral_${from}`, sessionId, meta: refMeta }),
-    keepalive: true,
-  }).catch(() => {});
-}
-
-export function track(event: DashboardEvent, meta?: Record<string, string>) {
-  if (typeof window === "undefined") return;
-  if (typeof localStorage !== "undefined" && localStorage.getItem("analytics_disabled") === "true") return;
-
+  // Drop duplicate fires within 1 sec (e.g. double-clicks).
   const now = Date.now();
-  const dedupKey = meta ? event + JSON.stringify(meta) : event;
-  const last = lastFired.get(dedupKey);
+  const last = lastFired.get(event);
   if (last && now - last < 1000) return;
-  lastFired.set(dedupKey, now);
+  lastFired.set(event, now);
 
-  const sessionId = getSessionId();
-
-  fetch("/api/analytics/event", {
+  fetch(`${API_BASE}/api/usage/event`, {
     method: "POST",
+    credentials: "include",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event, sessionId, ...(meta ? { meta } : {}) }),
+    body: JSON.stringify({ event, occurredAt: now }),
     keepalive: true,
   }).catch(() => {});
-
-  // Check referral params on first page view
-  if (event.startsWith("showed_")) {
-    trackReferral();
-  }
-
-  // On page views (showed_*), also link session to ensure it stays connected
-  if (_userId && event.startsWith("showed_")) {
-    fetch("/api/analytics/link-session", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sessionId, userId: _userId }),
-      keepalive: true,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const finalId = data.sessionId || sessionId;
-        // Promote to localStorage (match analytics.ts behavior)
-        localStorage.setItem(SESSION_ID_KEY, finalId);
-        sessionStorage.removeItem(SESSION_ID_KEY);
-      })
-      .catch(() => {});
-  }
 }
+
+// Kept around for back-compat with shell.tsx that still calls it.
+// companyId now flows from the auth cookie server-side, so this is a no-op.
+export function setDashboardUserId(_userId: string) {}
