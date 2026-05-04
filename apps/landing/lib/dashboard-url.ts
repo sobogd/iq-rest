@@ -2,10 +2,8 @@
 // dashboard.test.iq-rest.com while prod builds default to dashboard.iq-rest.com.
 const DASHBOARD_BASE =
   process.env.NEXT_PUBLIC_DASHBOARD_BASE || "https://dashboard.iq-rest.com";
-// Backend API origin. The landing posts analytics events here so that
-// events from the marketing site share the same Session/AnalyticsEvent
-// rows as the new SPA dashboard (joined by sessionId via the apex
-// analytics_sid cookie).
+// Backend API origin. The landing posts cookieless pulse events here so the
+// admin Pulse view aggregates landing + auth + onboarding + dashboard events.
 const DASHBOARD_API_BASE =
   process.env.NEXT_PUBLIC_DASHBOARD_API_BASE || "https://dashboard-api.iq-rest.com";
 

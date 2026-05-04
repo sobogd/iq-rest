@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { analytics } from "@/lib/analytics";
-import { clearConsent } from "@/lib/cookie-consent";
 import { getCookieTexts } from "@/app/_landing/lib/cookie-texts";
 import { LanguageSwitcherModal } from "@/components/language-switcher/modal";
+import { LegalModal, type LegalView } from "@/components/legal-modal";
 import type { LandingTexts } from "../types";
 
 interface FooterProps {
@@ -22,11 +22,12 @@ function slugify(href: string): string {
     .toLowerCase();
 }
 
-export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
+export function LandingFooter({ texts, headerTexts: _headerTexts, locale }: FooterProps) {
   const year = new Date().getFullYear();
   const copyright = texts.copyrightTemplate.replace("{year}", String(year));
   const cookieTexts = getCookieTexts(locale);
   const [langOpen, setLangOpen] = useState(false);
+  const [legalView, setLegalView] = useState<LegalView>(null);
 
   return (
     <>
@@ -61,12 +62,32 @@ export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
               <button
                 type="button"
                 onClick={() => {
-                  analytics.track("land_footer_cookie_settings_click");
-                  clearConsent();
+                  analytics.track("land_footer_privacy_policy_click");
+                  setLegalView("privacy");
                 }}
                 className="hover:text-foreground transition-colors"
               >
-                {cookieTexts.cookieSettings}
+                {cookieTexts.privacyPolicyLink}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  analytics.track("land_footer_cookie_policy_click");
+                  setLegalView("policy");
+                }}
+                className="hover:text-foreground transition-colors"
+              >
+                {cookieTexts.cookiePolicyLink}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  analytics.track("land_footer_terms_click");
+                  setLegalView("terms");
+                }}
+                className="hover:text-foreground transition-colors"
+              >
+                {cookieTexts.termsLink}
               </button>
             </nav>
             <p className="text-[11px] text-muted-foreground pt-2 md:mt-1 border-t border-border/60">
@@ -82,6 +103,7 @@ export function LandingFooter({ texts, headerTexts, locale }: FooterProps) {
       currentLocale={locale}
       title={cookieTexts.languageSwitcher}
     />
+    <LegalModal view={legalView} onClose={() => setLegalView(null)} />
     </>
   );
 }

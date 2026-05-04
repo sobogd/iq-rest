@@ -1,10 +1,24 @@
-import type { CookieBannerTexts } from "@/components/cookie-consent/banner";
+// Footer link labels — translated. The legal documents themselves (Privacy Policy /
+// Cookie Policy / Terms inside LegalModal) are English-only on purpose (binding
+// version, no per-locale lawyer review needed). Locales not listed fall back to
+// English via the helper below.
 
-// Banner UI strings only — the legal documents (Cookie Policy + Terms) inside the secondary
-// modals are English-only on purpose (binding version, no per-locale lawyer review needed).
-// Locales not listed fall back to English via the helper below.
+export type CookieTexts = {
+  // Legacy banner-only fields kept to avoid breaking translations during rollout.
+  // After cookie banner removal only languageSwitcher / privacyPolicyLink /
+  // cookiePolicyLink / termsLink are actually used (footer links).
+  title: string;
+  message: string;
+  accept: string;
+  reject: string;
+  cookiePolicyLink: string;
+  privacyPolicyLink: string;
+  termsLink: string;
+  cookieSettings: string;
+  languageSwitcher: string;
+};
 
-export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
+export const COOKIE_TEXTS: Record<string, CookieTexts> = {
   en: {
     title: "Cookies",
     message: "We use cookies to keep the site working and to measure how it's used. Choose what's OK with you.",
@@ -392,6 +406,6 @@ export const COOKIE_TEXTS: Record<string, CookieBannerTexts> = {
   },
 };
 
-export function getCookieTexts(locale: string): CookieBannerTexts {
+export function getCookieTexts(locale: string): CookieTexts {
   return COOKIE_TEXTS[locale] ?? COOKIE_TEXTS.en;
 }

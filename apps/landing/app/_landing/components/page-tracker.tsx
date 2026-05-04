@@ -19,7 +19,11 @@ export function PageTracker({ variantIndex }: PageTrackerProps) {
           const name = (entry.target as HTMLElement).dataset.section;
           if (!name || seen.has(name)) continue;
           seen.add(name);
-          analytics.track(`land_home_section_show_${name}`);
+          // Hero is always visible on first paint — its impression duplicates
+          // the page_show event, so skip the dedicated section event.
+          if (name !== "hero") {
+            analytics.track(`land_home_section_show_${name}`);
+          }
           observer.unobserve(entry.target);
         }
       },

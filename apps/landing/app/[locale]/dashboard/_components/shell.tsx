@@ -8,7 +8,6 @@ import {
   type DashboardTranslations,
   type ScanUsage,
 } from "../_context/dashboard-context";
-import { analytics } from "@/lib/analytics";
 import { setDashboardUserId } from "@/lib/dashboard-events";
 
 function DashboardLayout({
@@ -47,7 +46,9 @@ export function DashboardShell({
 }) {
   useEffect(() => {
     setDashboardUserId(userId);
-    analytics.linkSession(userId);
+    // No client-side identify — pulse events sent from the dashboard
+    // include credentials, so the API attaches userId server-side from
+    // the auth cookie.
   }, [userId]);
 
   return (

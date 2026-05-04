@@ -1,12 +1,13 @@
 // Server-side gclid capture on landing arrival.
-// Called from app/<locale>/page.tsx as a fire-and-forget. Lawful without consent —
-// no cookies set on user device, gclid stored as anonymous aggregate counter.
+// Called from app/<locale>/page.tsx as a fire-and-forget. Forwards user's
+// geo cookie + UA so the API can classify accurately (intermediate nginx
+// clobbers cf-* headers and the API would otherwise see this server's UA).
 
 import "server-only";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
+import { dashboardApi } from "@/lib/dashboard-url";
 
 const GCLID_REGEX = /^[A-Za-z0-9_-]{1,256}$/;
-const API_BASE = "https://dashboard-api.iq-rest.com";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -18,7 +19,7 @@ function pickGclid(searchParams: SearchParams): string | null {
 }
 
 /**
- * Logs a `land_<locale>_gclid_arrival` pulse event when ?gclid=… is present in the
+ * Logs a `land_<locale>_gclid_arrival` usage event when ?gclid=… is present in the
  * landing URL. Geo data taken from cookies set by middleware (geo_country,
  * geo_region) since intermediate nginx would otherwise overwrite cf-* headers.
  *
@@ -33,35 +34,36 @@ export async function trackGclidArrival(
 
   let country = "";
   let region = "";
-  let isAdmin = false;
   try {
     const c = await cookies();
     country = (c.get("geo_country")?.value || "").toUpperCase().slice(0, 2);
     region = (c.get("geo_region")?.value || "").slice(0, 100);
-    isAdmin = c.get("iq_admin")?.value === "1";
   } catch {
     // ignore — running outside request scope
   }
-  // Skip pulse capture entirely for admin browsers (apex-domain cookie set by
-  // dashboard-web after admin login).
-  if (isAdmin) return;
 
-  // Event name includes locale so admin Pulse timeline can distinguish which
-  // landing the click came from (e.g. land_fr_gclid_arrival vs land_de_gclid_arrival).
-  // Locale must match /^[a-z]{2}$/ to keep event name in EVENT_REGEX.
+  let userAgent = "";
+  try {
+    const h = await headers();
+    userAgent = h.get("user-agent") || "";
+  } catch {
+    // ignore
+  }
+
   const safeLocale = /^[a-z]{2}$/.test(locale) ? locale : "xx";
   const eventName = `land_${safeLocale}_gclid_arrival`;
 
   // Fire-and-forget. Do NOT await — must not delay TTFB.
-  void fetch(`${API_BASE}/api/analytics/pulse`, {
+  void fetch(dashboardApi("/api/usage/event"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       event: eventName,
       occurredAt: Date.now(),
       gclid,
-      ...(country && /^[A-Z]{2}$/.test(country) ? { country } : {}),
+      ...(country ? { country } : {}),
       ...(region ? { region } : {}),
+      ...(userAgent ? { userAgent } : {}),
     }),
     keepalive: true,
   }).catch(() => {
