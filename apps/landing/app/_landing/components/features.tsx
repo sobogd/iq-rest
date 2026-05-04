@@ -44,7 +44,7 @@ export function Features({ texts }: FeaturesProps) {
             const variant = FEATURE_TAG_VARIANT[i] ?? "default";
             const tagEl = tag && (
               <span
-                className={`w-fit inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full border ${TAG_STYLES[variant]}`}
+                className={`w-fit inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-lg border ${TAG_STYLES[variant]}`}
               >
                 {tag}
               </span>
@@ -54,7 +54,7 @@ export function Features({ texts }: FeaturesProps) {
               return (
                 <div
                   key={title}
-                  className="relative bg-card border border-border rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-3 sm:grid sm:grid-cols-[30%_1fr] sm:items-center sm:text-start sm:gap-x-5 sm:gap-y-1 sm:[grid-template-areas:'image_title''image_desc']"
+                  className="bg-card border border-border rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-3 sm:grid sm:grid-cols-[30%_1fr] sm:items-center sm:text-start sm:gap-x-5 sm:gap-y-1 sm:[grid-template-areas:'image_tag''image_title''image_desc']"
                 >
                   <div className="w-full max-w-[200px] mb-3 sm:mb-0 sm:max-w-none sm:[grid-area:image] relative aspect-square rounded-3xl overflow-hidden border-[6px] border-[hsl(0_0%_8%)] bg-background">
                     <Image
@@ -66,8 +66,8 @@ export function Features({ texts }: FeaturesProps) {
                       priority={i === 0}
                     />
                   </div>
-                  <div className="sm:absolute sm:top-5 sm:right-5">{tagEl}</div>
-                  <h3 className="sm:[grid-area:title] sm:self-end text-base sm:text-lg font-semibold tracking-tight">
+                  <div className="sm:[grid-area:tag] sm:self-end">{tagEl}</div>
+                  <h3 className="sm:[grid-area:title] text-base sm:text-lg font-semibold tracking-tight">
                     {title}
                   </h3>
                   <p className="sm:[grid-area:desc] sm:self-start text-sm sm:text-base text-muted-foreground leading-relaxed">
