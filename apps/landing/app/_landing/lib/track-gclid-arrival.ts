@@ -28,6 +28,14 @@ function pickGclid(searchParams: SearchParams): string | null {
   return null;
 }
 
+function pickStr(searchParams: SearchParams, key: string, maxLen = 200): string | null {
+  const raw = searchParams[key];
+  const v = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] : null;
+  if (!v) return null;
+  const trimmed = v.trim().slice(0, maxLen);
+  return trimmed || null;
+}
+
 /** Same classifier as iq-rest-dashboard-api/src/usage/usage.controller.ts so
  *  the two write paths produce identical (device, platform) pairs. */
 function classifyDevice(uaString: string | null): { device: string | null; platform: string | null } {
@@ -68,29 +76,28 @@ export async function trackGclidArrival(
   const region = (decodeCfHeader(h.get("cf-region")) || "").slice(0, 100);
   const userAgent = h.get("user-agent");
 
+  const keyword = pickStr(searchParams, "kw");
+  const campaign = pickStr(searchParams, "campaign");
+
   const safeLocale = /^[a-z]{2}$/.test(locale) ? locale : "xx";
   const eventName = `land_${safeLocale}_gclid_arrival`;
   const { device, platform } = classifyDevice(userAgent);
   const id = randomUUID();
   const at = new Date();
 
-  // Insert directly — same DB as dashboard-api's UsageEvent model.
-  // Fire-and-forget on errors; gclid capture is best-effort and must not block
-  // the landing render.
   try {
     await prisma.$executeRaw`
-      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, "companyId")
-      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, NULL)
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, keyword, campaign, "companyId")
+      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, ${keyword}, ${campaign}, NULL)
     `;
   } catch {
     // ignore — event capture is best-effort
   }
 
-  // Strip the ad-click params and reload on the clean URL. Browser sees 307.
+  // Strip ad-click params, preserve any other searchParams.
   const url = new URL(`/${locale}`, "http://x");
-  // Preserve any non-tracking searchParams the visitor had.
   for (const [key, raw] of Object.entries(searchParams)) {
-    if (key === "gclid" || key === "gbraid" || key === "wbraid") continue;
+    if (key === "gclid" || key === "gbraid" || key === "wbraid" || key === "kw" || key === "campaign") continue;
     const v = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] : null;
     if (v) url.searchParams.set(key, v);
   }
