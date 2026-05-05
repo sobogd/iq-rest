@@ -76,8 +76,14 @@ export async function trackGclidArrival(
   const region = (decodeCfHeader(h.get("cf-region")) || "").slice(0, 100);
   const userAgent = h.get("user-agent");
 
-  const keyword = pickStr(searchParams, "kw");
+  const kw = pickStr(searchParams, "kw");
+  const term = pickStr(searchParams, "term");
   const campaign = pickStr(searchParams, "campaign");
+  const adParamsObj: Record<string, string> = {};
+  if (kw) adParamsObj.kw = kw;
+  if (term) adParamsObj.term = term;
+  if (campaign) adParamsObj.campaign = campaign;
+  const adParams = Object.keys(adParamsObj).length ? JSON.stringify(adParamsObj) : null;
 
   const safeLocale = /^[a-z]{2}$/.test(locale) ? locale : "xx";
   const eventName = `land_${safeLocale}_gclid_arrival`;
@@ -87,8 +93,8 @@ export async function trackGclidArrival(
 
   try {
     await prisma.$executeRaw`
-      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, keyword, campaign, "companyId")
-      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, ${keyword}, ${campaign}, NULL)
+      INSERT INTO usage_events (id, at, event, country, region, device, platform, gclid, ad_params, "companyId")
+      VALUES (${id}, ${at}, ${eventName}, ${country}, ${region}, ${device}, ${platform}, ${gclid}, ${adParams}, NULL)
     `;
   } catch {
     // ignore — event capture is best-effort
@@ -97,7 +103,7 @@ export async function trackGclidArrival(
   // Strip ad-click params, preserve any other searchParams.
   const url = new URL(`/${locale}`, "http://x");
   for (const [key, raw] of Object.entries(searchParams)) {
-    if (key === "gclid" || key === "gbraid" || key === "wbraid" || key === "kw" || key === "campaign") continue;
+    if (key === "gclid" || key === "gbraid" || key === "wbraid" || key === "kw" || key === "term" || key === "campaign") continue;
     const v = typeof raw === "string" ? raw : Array.isArray(raw) ? raw[0] : null;
     if (v) url.searchParams.set(key, v);
   }
