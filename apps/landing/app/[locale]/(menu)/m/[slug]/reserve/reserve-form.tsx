@@ -351,7 +351,7 @@ export function ReserveForm({
               className={cn(
                 "p-2 rounded-lg border-2 transition-colors",
                 canGoPrev && !loadingSlots
-                  ? "border-gray-200 hover:border-black hover:bg-black hover:text-white"
+                  ? "border-gray-200 text-black hover:border-black hover:bg-black hover:text-white"
                   : "border-gray-100 text-gray-300 cursor-not-allowed"
               )}
             >
@@ -367,7 +367,7 @@ export function ReserveForm({
               className={cn(
                 "p-2 rounded-lg border-2 transition-colors",
                 canGoNext && !loadingSlots
-                  ? "border-gray-200 hover:border-black hover:bg-black hover:text-white"
+                  ? "border-gray-200 text-black hover:border-black hover:bg-black hover:text-white"
                   : "border-gray-100 text-gray-300 cursor-not-allowed"
               )}
             >
