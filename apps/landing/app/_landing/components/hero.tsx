@@ -19,7 +19,7 @@ interface HeroProps {
 export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: HeroProps) {
   const active = variant === "WEB" ? texts.web : texts.qr;
   return (
-    <section data-section="hero" className="container mx-auto px-4 pt-8 pb-16 lg:pt-24">
+    <section data-section="hero" className="container mx-auto px-4 pt-8 pb-4 lg:pt-24 lg:pb-16">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images']">
         {/* Header — verticals + headline + sub + CTA + rating */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:header]">
@@ -101,7 +101,7 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[44%] h-auto rounded-[2rem] overflow-hidden z-10"
             />
           </div>
-          <div className="mt-4 flex lg:hidden flex-col items-center gap-1 text-sm font-medium text-muted-foreground">
+          <div className="mt-10 flex lg:hidden flex-col items-center gap-1 text-sm font-medium text-muted-foreground">
             <span className="text-amber-400">★★★★★</span>
             <span>{texts.rating}</span>
           </div>
