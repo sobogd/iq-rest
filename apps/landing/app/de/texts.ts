@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "QR-Speisekarte, Direktbestellungen, Reservierungen & KI-Übersetzung. In 2 Minuten startklar. 14 Tage gratis — ohne Kreditkarte.",
   },
 
-  ctaText: "Kostenlos starten →",
+  ctaText: "Kostenlos testen", ctaSite: "Website erstellen",
   demoText: "Live-Demo ansehen",
   microcopy: "14 Tage gratis · Keine Kreditkarte · Jederzeit kündbar",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Preise",
     navFaq: "FAQ",
     signIn: "Anmelden",
-    cta: "Kostenlos starten →",
+    cta: "Kostenlos testen",
   },
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerien"],
-    variants: [
-      {
-        headline: "Schluss mit dem Nachdrucken.",
-        headlineAccent: "Schluss mit 30% an Lieferdienste.",
-        sub: "QR-Speisekarte, Direktbestellungen, Reservierungen & mehrsprachige Webseite. In 2 Minuten startklar — ohne Kreditkarte.",
-      },
-      {
-        headline: "Dein Restaurant verdient mehr als",
-        headlineAccent: "Papier und verpasste Anrufe.",
-        sub: "Direktbestellungen, sofortige Karten-Updates und Reservierungen rund um die Uhr. In 2 Minuten eingerichtet.",
-      },
-      {
-        headline: "Ein QR-Code.",
-        headlineAccent: "Null Provision. Schluss mit Papierkarten.",
-        sub: "QR-Speisekarte, Online-Bestellungen und Reservierungen — alles an einem Ort. 14 Tage gratis, keine Kreditkarte.",
-      },
-      {
-        headline: "Direktbestellungen kassieren.",
-        headlineAccent: "Provisionen sparen.",
-        sub: "Gäste scannen, bestellen und zahlen — direkt zu dir, ohne Wolt-Schnitt. In 2 Minuten startklar.",
-      },
-      {
-        headline: "Mehr Bestellungen. Mehr Reservierungen.",
-        headlineAccent: "Kein Papier, keine Apps.",
-        sub: "QR-Speisekarte + Reservierungen + mehrsprachige Webseite auf Autopilot. 14 Tage gratis testen.",
-      },
-      {
-        headline: "Touristen verstehen die Karte nicht?",
-        headlineAccent: "In 2 Minuten gelöst.",
-        sub: "Die KI übersetzt deine ganze Karte in 35 Sprachen. Plus QR-Bestellungen und Reservierungen inklusive.",
-      },
-      {
-        headline: "Von Papierkarte zum QR-Code,",
-        headlineAccent: "bevor der Espresso kalt ist.",
-        sub: "QR-Speisekarte, Direktbestellungen und Reservierungen rund um die Uhr. In 2 Minuten — ohne Kreditkarte.",
-      },
-      {
-        headline: "Erfrischend einfache QR-Karte.",
-        headlineAccent: "Innen leise mächtig.",
-        sub: "Direktbestellungen, KI-Übersetzung, Reservierungen und Webseite — alles mit einem Tipp am Handy.",
-      },
-    ],
-    painBullets: [
-      "Keine Druckkosten — Preise sofort ändern",
-      "Keine Provisionen — Bestellungen direkt zu dir",
-      "Keine verpassten Anrufe — Reservierungen 24/7",
-      "35 Sprachen — kein Tourist geht verloren",
-    ],
+    qr: { headline: "QR-Speisekarte für Ihr Restaurant in 5 Minuten.", sub: "Direktbestellungen, Reservierungen und 35 Sprachen. Ohne Provision oder Programmierer." },
+    web: { headline: "Profi-Restaurant-Website in 5 Minuten.", sub: "Direktbestellungen, Reservierungen und 35 Sprachen. Ohne Provision oder Programmierer." },
+    painBullets: ["0% Provision: Alle Bestellungen gehen direkt an Sie.", "KI-Übersetzung: 35 Sprachen für mehr Umsatz durch Touristen.", "Reservierung 24/7: Volle Auslastung ohne Telefonstress.", "Flexible Preise: Menü in Sekundenschnelle aktualisieren."],
     rating: "4,9 · über 500 Restaurants in 30+ Ländern",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nichts, was du nicht brauchst.",
     sub: "Für Restaurants gemacht. Am Tisch eingesetzt.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "100% jeder Bestellung behalten",
-        desc: "Gäste scannen, bestellen und zahlen — direkt an dich. Keine App-Downloads, keine 30% an Lieferdienste. Jede Bestellung landet in Echtzeit mit Tischnummer im Dashboard.",
+        title: "Bestellung am Tisch",
+        desc: "Bestellungen landen sofort in WhatsApp oder im Dashboard mit Tischnummer. Schnellerer Service.",
         tag: "Direktbestellung",
       },
       {
         Icon: Languages,
-        title: "An Touristen in ihrer Sprache verkaufen",
-        desc: "Ein Tipp übersetzt die ganze Karte in 35 Sprachen. Die KI versteht den kulinarischen Kontext — Gäste bestellen mehr, wenn sie das Gericht wirklich verstehen.",
+        title: "KI-Übersetzer (35 Sprachen)",
+        desc: "Unsere KI versteht Gastronomie. Touristen bestellen 20% mehr, wenn sie die Gerichte verstehen.",
         tag: "KI-Übersetzung",
       },
       {
         Icon: CalendarCheck,
-        title: "Keine Reservierung mehr verpassen",
-        desc: "Gäste reservieren rund um die Uhr, keine Anrufe. Auto- oder manuelle Bestätigung, E-Mail-Erinnerungen inklusive — weniger No-Shows, null Stress.",
+        title: "Tischreservierung",
+        desc: "Das System nimmt Reservierungen an, während Sie in der Küche stehen. Kein Gast geht verloren.",
         tag: "Reservierungen",
       },
       {
         Icon: Palette,
-        title: "In 1 Sekunde unvergesslich",
-        desc: "Lege ein Video aus deiner Küche oder ein Hero-Foto als Karten-Hintergrund ein. Gäste scrollen weniger. Deine Marke bleibt hängen.",
+        title: "Modernes Design",
+        desc: "Video-Hintergründe und appetitliche Fotos. Ihre Karte wirkt hochwertig und einladend.",
         tag: "Eigenes Design",
       },
       {
         Icon: Smartphone,
-        title: "In Sekunden ändern, nicht in Tagen",
-        desc: "Preise ändern, Fotos tauschen, Tagesgericht ergänzen — vom Handy, zwischen den Tischen. Sofort live für Gäste. Nie wieder nachdrucken.",
+        title: "Schnell-Editor",
+        desc: "Verwalten Sie Stop-Listen und Preise direkt vom Smartphone. Änderungen sind sofort live.",
         tag: "Menü-Editor",
       },
       {
         Icon: ChefHat,
-        title: "Jede Schicht schneller servieren",
-        desc: "Bestellungen landen sofort auf dem Küchenbildschirm, sobald der Gast absendet. Null Papier, null Geschrei, null verlorene Bons — weniger Fehler, schnellerer Service, mehr Gedecke pro Abend.",
+        title: "Demnächst: Küchendisplay",
+        desc: "Schluss mit Zettelwirtschaft. Bestellungen gehen direkt auf den Bildschirm des Kochs.",
         tag: "Demnächst",
       },
+    
     ],
   },
 

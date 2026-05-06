@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Menu QR, ordini diretti, prenotazioni e traduzione AI. Pronto in 2 minuti. 14 giorni gratis — senza carta.",
   },
 
-  ctaText: "Inizia gratis →",
+  ctaText: "Prova gratis", ctaSite: "Crea sito",
   demoText: "Vedi la demo",
   microcopy: "14 giorni gratis · Senza carta · Cancelli quando vuoi",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Prezzi",
     navFaq: "FAQ",
     signIn: "Accedi",
-    cta: "Inizia gratis →",
+    cta: "Prova gratis",
   },
 
   hero: {
     verticals: ["Ristoranti", "Caffè", "Bar", "Hotel", "Pizzerie"],
-    variants: [
-      {
-        headline: "Basta ristampare i menu.",
-        headlineAccent: "Basta pagare il 30% alle app di delivery.",
-        sub: "Menu QR, ordini diretti, prenotazioni e sito multilingue. Pronto in 2 minuti — senza carta.",
-      },
-      {
-        headline: "Il tuo ristorante merita più di",
-        headlineAccent: "menu di carta e chiamate perse.",
-        sub: "Ordini diretti, aggiornamenti istantanei e prenotazioni 24/7. Pronto in 2 minuti.",
-      },
-      {
-        headline: "Un codice QR.",
-        headlineAccent: "Zero commissioni. Mai più carta.",
-        sub: "Menu QR, ordini online e prenotazioni — tutto in un posto. 14 giorni gratis, senza carta.",
-      },
-      {
-        headline: "Ricevi ordini diretti.",
-        headlineAccent: "Salta la commissione.",
-        sub: "I clienti scansionano, ordinano e pagano — direttamente a te, senza la fetta di Glovo. Pronto in 2 minuti.",
-      },
-      {
-        headline: "Più ordini. Più prenotazioni.",
-        headlineAccent: "Zero carta, zero app.",
-        sub: "Menu QR + prenotazioni + sito multilingue in automatico. 14 giorni di prova gratis.",
-      },
-      {
-        headline: "I turisti non leggono il menu?",
-        headlineAccent: "Risolto in 2 minuti.",
-        sub: "L'AI traduce tutto il menu in 35 lingue. E include ordini QR e prenotazioni.",
-      },
-      {
-        headline: "Da menu di carta a QR code,",
-        headlineAccent: "prima che si freddi il caffè.",
-        sub: "Menu QR, ordini diretti e prenotazioni 24/7. Pronto in 2 minuti — senza carta.",
-      },
-      {
-        headline: "Menu QR sorprendentemente semplice.",
-        headlineAccent: "Tranquillamente potente.",
-        sub: "Ordini diretti, traduzione AI, prenotazioni e sito web — tutto con un tocco sul telefono.",
-      },
-    ],
-    painBullets: [
-      "Niente stampe — cambi i prezzi all'istante",
-      "Zero commissioni — ordini diretti a te",
-      "Niente chiamate perse — prenotazioni 24/7",
-      "35 lingue — non perdi più nemmeno un turista",
-    ],
+    qr: { headline: "Menu QR per il tuo ristorante in 5 minuti.", sub: "Ordini diretti, prenotazioni e 35 lingue. Senza commissioni o programmatori." },
+    web: { headline: "Sito web professionale per ristoranti in 5 minuti.", sub: "Ordini diretti, prenotazioni e 35 lingue. Senza commissioni o programmatori." },
+    painBullets: ["0% Commissioni: Tutti gli ordini arrivano direttamente a te.", "Traduzione IA: 35 lingue per aumentare lo scontrino dei turisti.", "Prenotazioni 24/7: Sala piena senza chiamate inutili.", "Prezzi flessibili: Aggiorna il menu in pochi secondi."],
     rating: "4,9 · oltre 500 ristoranti in 30+ paesi",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Niente di superfluo.",
     sub: "Pensato per i ristoranti. Usato a tavola.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "Tieni il 100% di ogni ordine",
-        desc: "I clienti scansionano, ordinano e pagano — direttamente a te. Niente app da scaricare, niente 30% per il delivery. Ogni ordine arriva nella dashboard con numero di tavolo in tempo reale.",
+        title: "Ordini dal tavolo",
+        desc: "Gli ordini arrivano istantaneamente su WhatsApp o nel pannello con il numero del tavolo. Servizio più rapido.",
         tag: "Ordini diretti",
       },
       {
         Icon: Languages,
-        title: "Vendi ai turisti nella loro lingua",
-        desc: "Un tocco traduce tutto il menu in 35 lingue. L'AI capisce il contesto culinario — i clienti ordinano di più quando capiscono davvero il piatto.",
+        title: "Traduttore IA (35 lingue)",
+        desc: "La nostra IA capisce la gastronomia. I turisti ordinano il 20% in più quando comprendono i piatti.",
         tag: "Traduzione IA",
       },
       {
         Icon: CalendarCheck,
-        title: "Niente prenotazioni perse mentre cucini",
-        desc: "I clienti prenotano 24/7, senza chiamate. Conferma automatica o manuale, promemoria via email — meno no-show, zero stress.",
+        title: "Prenotazione tavoli",
+        desc: "Il sistema accetta prenotazioni mentre sei in cucina. Nessun cliente perso.",
         tag: "Prenotazioni",
       },
       {
         Icon: Palette,
-        title: "Indimenticabile in 1 secondo",
-        desc: "Metti un video della cucina o una foto da copertina come sfondo del menu. I clienti smettono di scrollare. Il tuo brand resta.",
+        title: "Design moderno",
+        desc: "Sfondi video e foto invitanti. Il tuo menu appare premium e stuzzica l'appetito al primo sguardo.",
         tag: "Design personalizzato",
       },
       {
         Icon: Smartphone,
-        title: "Modifichi in secondi, non in giorni",
-        desc: "Cambi i prezzi, cambi le foto, aggiungi il piatto del giorno — dal telefono, tra un tavolo e l'altro. In diretta per i clienti all'istante. Mai più ristampe.",
+        title: "Editor rapido",
+        desc: "Gestisci stop-list e prezzi direttamente dallo smartphone. Modifiche subito visibili agli ospiti.",
         tag: "Editor menù",
       },
       {
         Icon: ChefHat,
-        title: "Servi più veloce ogni turno",
-        desc: "Gli ordini arrivano allo schermo della cucina nel momento in cui il cliente conferma. Zero carta, zero urla, zero ordini persi — meno errori, più rotazione, più coperti a sera.",
+        title: "Prossimamente: Display cucina",
+        desc: "Dimentica le comande cartacee. Gli ordini dalla sala vanno direttamente sullo schermo dello chef.",
         tag: "In arrivo",
       },
+    
     ],
   },
 

@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "QR menu, direct orders, reservations & AI translation. Live in 2 minutes. 14-day free trial — no credit card.",
   },
 
-  ctaText: "Start my free trial →",
+  ctaText: "Try for free", ctaSite: "Create website",
   demoText: "See live demo",
   microcopy: "14-day free trial · No credit card · Cancel anytime",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Pricing",
     navFaq: "FAQ",
     signIn: "Sign in",
-    cta: "Start free trial →",
+    cta: "Try for free",
   },
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzerias"],
-    variants: [
-      {
-        headline: "Stop reprinting menus.",
-        headlineAccent: "Stop paying 30% to delivery apps.",
-        sub: "QR menu, direct orders, reservations & multilingual website. Live in 2 minutes — no credit card.",
-      },
-      {
-        headline: "Your restaurant deserves more than",
-        headlineAccent: "paper menus and missed calls.",
-        sub: "Direct orders, instant menu updates and 24/7 reservations. Set it up in 2 minutes.",
-      },
-      {
-        headline: "One QR code.",
-        headlineAccent: "Zero commissions. No more printed menus.",
-        sub: "QR menu, online orders and reservations — all in one place. 14-day free trial, no card required.",
-      },
-      {
-        headline: "Get direct orders.",
-        headlineAccent: "Skip the commission.",
-        sub: "Guests scan, order and pay — straight to you, no Uber Eats cut. Live in 2 minutes.",
-      },
-      {
-        headline: "More orders. More bookings.",
-        headlineAccent: "No paper, no apps.",
-        sub: "QR menu + reservations + multilingual website on autopilot. Free 14-day trial.",
-      },
-      {
-        headline: "Tourists can't read your menu?",
-        headlineAccent: "Fix it in 2 minutes.",
-        sub: "AI translates your entire menu into 35 languages. Plus QR ordering and reservations included.",
-      },
-      {
-        headline: "From paper menu to QR code,",
-        headlineAccent: "before your espresso gets cold.",
-        sub: "QR menu, direct orders and 24/7 reservations. Live in 2 minutes — no credit card.",
-      },
-      {
-        headline: "Refreshingly simple QR menu.",
-        headlineAccent: "Quietly powerful underneath.",
-        sub: "Direct orders, AI translation, reservations and a website — all from one tap on your phone.",
-      },
-    ],
-    painBullets: [
-      "No printed menus — update prices instantly",
-      "No commissions — orders go straight to you",
-      "No missed calls — bookings 24/7",
-      "35 languages — never lose a tourist again",
-    ],
+    qr: { headline: "QR Menu for your restaurant in 5 minutes.", sub: "Direct orders, bookings, and 35 languages. No commissions or developers." },
+    web: { headline: "Professional restaurant website in 5 minutes.", sub: "Direct orders, bookings, and 35 languages. No commissions or developers." },
+    painBullets: ["0% Commission: All orders go directly to you.", "AI Translation: 35 languages to boost tourist checks.", "24/7 Bookings: Full house without extra calls.", "Flexible Prices: Update your menu in seconds."],
     rating: "4.9 · 500+ restaurants in 30+ countries",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nothing you don't.",
     sub: "Built for restaurants. Used at the table.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "Keep 100% of every order",
-        desc: "Guests scan, order and pay — straight to you. No app downloads, no 30% delivery cut. Every order hits your dashboard with the table number in real time.",
+        title: "Table Ordering",
+        desc: "Orders fly instantly to WhatsApp or your dashboard with table numbers. Faster service, higher spend.",
         tag: "Direct ordering",
       },
       {
         Icon: Languages,
-        title: "Sell to tourists in their language",
-        desc: "One tap translates your full menu into 35 languages. AI nails culinary context — guests order more when they actually understand the dish.",
+        title: "AI Translator (35 Languages)",
+        desc: "Our AI knows gastronomy. Tourists order 20% more when they actually understand the menu.",
         tag: "AI translation",
       },
       {
         Icon: CalendarCheck,
-        title: "Stop missing bookings while you cook",
-        desc: "Guests book tables 24/7, no phone calls. Auto or manual confirmation, email reminders included — fewer no-shows, zero hassle.",
+        title: "Table Reservations",
+        desc: "The system takes bookings while you're busy in the kitchen. Never miss a customer again.",
         tag: "Reservations",
       },
       {
         Icon: Palette,
-        title: "Look unforgettable in 1 second",
-        desc: "Drop in a video of your kitchen or a hero food shot as your menu background. Guests stop scrolling. Your brand sticks.",
+        title: "Modern Design",
+        desc: "Video backgrounds and juicy photos. Your menu looks premium and triggers appetite instantly.",
         tag: "Custom design",
       },
       {
         Icon: Smartphone,
-        title: "Update in seconds, not days",
-        desc: "Change prices, swap photos, add today's specials — from your phone, between tables. Live for guests instantly. Never reprint a menu again.",
+        title: "Instant Editor",
+        desc: "Manage stop-lists and prices right from your smartphone. Changes are live for guests instantly.",
         tag: "Menu editor",
       },
       {
         Icon: ChefHat,
-        title: "Serve faster every shift",
-        desc: "Orders fly to the kitchen screen the moment guests hit submit. No paper, no shouting, no lost tickets — fewer mistakes, faster turns, more covers per night.",
+        title: "Coming Soon: Kitchen Display",
+        desc: "Forget paper tickets. Orders from the floor go straight to the chef's screen. Pure efficiency.",
         tag: "Coming soon",
       },
+    
     ],
   },
 

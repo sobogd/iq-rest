@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "QR menukaart, directe bestellingen, reserveringen en AI-vertaling. Klaar in 2 minuten. 14 dagen gratis — geen creditcard.",
   },
 
-  ctaText: "Gratis starten →",
+  ctaText: "Gratis proberen", ctaSite: "Website maken",
   demoText: "Live demo bekijken",
   microcopy: "14 dagen gratis · Geen creditcard · Stop wanneer je wilt",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Prijzen",
     navFaq: "FAQ",
     signIn: "Inloggen",
-    cta: "Gratis starten →",
+    cta: "Gratis proberen",
   },
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzeria's"],
-    variants: [
-      {
-        headline: "Geen menukaarten meer printen.",
-        headlineAccent: "Geen 30% meer aan bezorgapps.",
-        sub: "QR menukaart, directe bestellingen, reserveringen en meertalige website. Klaar in 2 minuten — geen creditcard.",
-      },
-      {
-        headline: "Je restaurant verdient meer dan",
-        headlineAccent: "papier en gemiste oproepen.",
-        sub: "Directe bestellingen, directe menu-updates en reserveringen 24/7. Opgezet in 2 minuten.",
-      },
-      {
-        headline: "Eén QR-code.",
-        headlineAccent: "Nul commissie. Adieu papier.",
-        sub: "QR menukaart, online bestellingen en reserveringen — alles op één plek. 14 dagen gratis, geen creditcard.",
-      },
-      {
-        headline: "Krijg directe bestellingen.",
-        headlineAccent: "Sla de commissie over.",
-        sub: "Gasten scannen, bestellen en betalen — direct naar jou, zonder Thuisbezorgd-aandeel. Klaar in 2 minuten.",
-      },
-      {
-        headline: "Meer bestellingen. Meer reserveringen.",
-        headlineAccent: "Geen papier, geen apps.",
-        sub: "QR menu + reserveringen + meertalige site op autopilot. 14 dagen gratis proberen.",
-      },
-      {
-        headline: "Toeristen begrijpen je menu niet?",
-        headlineAccent: "In 2 minuten geregeld.",
-        sub: "AI vertaalt je hele menu in 35 talen. Plus QR-bestellingen en reserveringen inbegrepen.",
-      },
-      {
-        headline: "Van papier naar QR-code,",
-        headlineAccent: "voor je espresso koud is.",
-        sub: "QR menu, directe bestellingen en reserveringen 24/7. Klaar in 2 minuten — geen creditcard.",
-      },
-      {
-        headline: "Verfrissend simpele QR menukaart.",
-        headlineAccent: "Stilletjes krachtig vanbinnen.",
-        sub: "Directe bestellingen, AI-vertaling, reserveringen en website — alles met één tik op je telefoon.",
-      },
-    ],
-    painBullets: [
-      "Geen prints meer — wijzig prijzen direct",
-      "Nul commissie — bestellingen direct naar jou",
-      "Geen gemiste oproepen — reserveringen 24/7",
-      "35 talen — verlies nooit meer een toerist",
-    ],
+    qr: { headline: "QR-menu voor je restaurant in 5 minuten.", sub: "Directe bestellingen, reserveringen en 35 talen. Geen commissie of programmeurs." },
+    web: { headline: "Professionele restaurant-website in 5 minuten.", sub: "Directe bestellingen, reserveringen en 35 talen. Geen commissie of programmeurs." },
+    painBullets: ["0% commissie: Alle bestellingen gaan direct naar jou.", "AI-vertaling: 35 talen om de omzet van toeristen te verhogen.", "Reserveren 24/7: Volle bak zonder extra telefoontjes.", "Flexibele prijzen: Update je menu in een paar seconden."],
     rating: "4,9 · meer dan 500 restaurants in 30+ landen",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Niets dat je niet nodig hebt.",
     sub: "Gemaakt voor restaurants. Gebruikt aan tafel.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "Houd 100% van elke bestelling",
-        desc: "Gasten scannen, bestellen en betalen — direct naar jou. Geen apps downloaden, geen 30% bezorgkosten. Elke bestelling komt in real-time met tafelnummer in je dashboard.",
+        title: "Bestellen aan tafel",
+        desc: "Bestellingen komen direct binnen via WhatsApp of het dashboard met tafelnummer. Snellere service.",
         tag: "Directe bestellingen",
       },
       {
         Icon: Languages,
-        title: "Verkoop aan toeristen in hun taal",
-        desc: "Eén tik vertaalt je hele menu in 35 talen. AI snapt de culinaire context — gasten bestellen meer als ze het gerecht echt begrijpen.",
+        title: "AI-vertaler (35 talen)",
+        desc: "Onze AI begrijpt gastronomie. Toeristen bestellen 20% meer als ze de kaart echt begrijpen.",
         tag: "AI-vertaling",
       },
       {
         Icon: CalendarCheck,
-        title: "Mis geen reservering meer terwijl je kookt",
-        desc: "Gasten reserveren 24/7, geen telefoongesprekken. Auto- of handmatige bevestiging, e-mailherinneringen inbegrepen — minder no-shows, nul stress.",
+        title: "Tafelreserveringen",
+        desc: "Het systeem neemt boekingen aan terwijl jij in de keuken staat. Geen klant meer missen.",
         tag: "Reserveringen",
       },
       {
         Icon: Palette,
-        title: "Onvergetelijk in 1 seconde",
-        desc: "Plaats een keukenvideo of een mooie foto als achtergrond van je menu. Gasten stoppen met scrollen. Je merk blijft hangen.",
+        title: "Modern design",
+        desc: "Video-achtergronden en smakelijke foto's. Je menu ziet er premium uit en wekt direct de eetlust.",
         tag: "Eigen ontwerp",
       },
       {
         Icon: Smartphone,
-        title: "Update in seconden, niet in dagen",
-        desc: "Wijzig prijzen, vervang foto's, voeg de daghap toe — vanaf je telefoon, tussen tafels door. Direct live voor gasten. Nooit meer printen.",
+        title: "Snel-editor",
+        desc: "Beheer stop-lijsten en prijzen direct vanaf je telefoon. Wijzigingen zijn meteen live voor gasten.",
         tag: "Menu-editor",
       },
       {
         Icon: ChefHat,
-        title: "Sneller serveren, elke shift",
-        desc: "Bestellingen verschijnen op het keukenscherm zodra de gast bevestigt. Nul papier, nul geschreeuw, nul verloren bonnen — minder fouten, snellere service, meer couverts per avond.",
+        title: "Binnenkort: Keukendisplay",
+        desc: "Vergeet papieren bonnetjes. Bestellingen van de vloer gaan direct naar het scherm van de chef.",
         tag: "Binnenkort",
       },
+    
     ],
   },
 

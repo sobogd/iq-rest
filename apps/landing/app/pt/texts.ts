@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Cardápio QR, pedidos diretos, reservas e tradução IA. Pronto em 2 minutos. 14 dias grátis — sem cartão.",
   },
 
-  ctaText: "Começar grátis →",
+  ctaText: "Testar grátis", ctaSite: "Criar site",
   demoText: "Ver demo ao vivo",
   microcopy: "14 dias grátis · Sem cartão · Cancela quando quiser",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Preços",
     navFaq: "FAQ",
     signIn: "Entrar",
-    cta: "Começar grátis →",
+    cta: "Testar grátis",
   },
 
   hero: {
     verticals: ["Restaurantes", "Cafés", "Bares", "Hotéis", "Pizzarias"],
-    variants: [
-      {
-        headline: "Pare de imprimir cardápios.",
-        headlineAccent: "Pare de pagar 30% para apps de entrega.",
-        sub: "Cardápio QR, pedidos diretos, reservas e site multilíngue. Pronto em 2 minutos — sem cartão.",
-      },
-      {
-        headline: "Seu restaurante merece mais do que",
-        headlineAccent: "cardápios de papel e ligações perdidas.",
-        sub: "Pedidos diretos, atualizações instantâneas e reservas 24/7. Configurado em 2 minutos.",
-      },
-      {
-        headline: "Um QR code.",
-        headlineAccent: "Zero comissão. Adeus papel.",
-        sub: "Cardápio QR, pedidos online e reservas — tudo no mesmo lugar. 14 dias grátis, sem cartão.",
-      },
-      {
-        headline: "Receba pedidos diretos.",
-        headlineAccent: "Pule a comissão.",
-        sub: "Os clientes escaneiam, pedem e pagam — direto para você, sem o corte do iFood. Pronto em 2 minutos.",
-      },
-      {
-        headline: "Mais pedidos. Mais reservas.",
-        headlineAccent: "Sem papel, sem apps.",
-        sub: "Cardápio QR + reservas + site multilíngue no piloto automático. 14 dias de teste grátis.",
-      },
-      {
-        headline: "Turistas não entendem o cardápio?",
-        headlineAccent: "Resolvido em 2 minutos.",
-        sub: "A IA traduz todo o cardápio em 35 idiomas. Mais pedidos QR e reservas incluídos.",
-      },
-      {
-        headline: "Do papel ao QR code,",
-        headlineAccent: "antes do café esfriar.",
-        sub: "Cardápio QR, pedidos diretos e reservas 24/7. Pronto em 2 minutos — sem cartão.",
-      },
-      {
-        headline: "Cardápio QR refrescantemente simples.",
-        headlineAccent: "Silenciosamente poderoso.",
-        sub: "Pedidos diretos, tradução IA, reservas e site — tudo num toque no telemóvel.",
-      },
-    ],
-    painBullets: [
-      "Sem impressões — mude preços ao instante",
-      "Zero comissão — pedidos chegam direto",
-      "Sem ligações perdidas — reservas 24/7",
-      "35 idiomas — nunca perca um turista",
-    ],
+    qr: { headline: "Menu QR para o seu restaurante em 5 minutos.", sub: "Pedidos diretos, reservas e 35 idiomas. Sem comissões ou programadores." },
+    web: { headline: "Site profissional para restaurante em 5 minutos.", sub: "Pedidos diretos, reservas e 35 idiomas. Sem comissões ou programadores." },
+    painBullets: ["0% Comissão: Todos os pedidos vão diretamente para si.", "Tradução IA: 35 idiomas para aumentar o gasto de turistas.", "Reservas 24/7: Casa cheia sem chamadas extras.", "Preços flexíveis: Atualize o menu em segundos."],
     rating: "4,9 · mais de 500 restaurantes em 30+ países",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nada do que não precisa.",
     sub: "Feito para restaurantes. Usado à mesa.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "Fica com 100% de cada pedido",
-        desc: "Os clientes escaneiam, pedem e pagam — direto para si. Sem apps para descarregar, sem 30% para a entrega. Cada pedido entra no painel com número da mesa em tempo real.",
+        title: "Pedidos da mesa",
+        desc: "Os pedidos chegam instantaneamente ao WhatsApp ou painel com o número da mesa. Serviço mais rápido.",
         tag: "Pedidos diretos",
       },
       {
         Icon: Languages,
-        title: "Venda a turistas no idioma deles",
-        desc: "Um toque traduz todo o cardápio em 35 idiomas. A IA pega o contexto culinário — clientes pedem mais quando entendem o prato.",
+        title: "Tradutor IA (35 idiomas)",
+        desc: "A nossa IA entende de gastronomia. Os turistas pedem 20% mais quando entendem a ementa.",
         tag: "Tradução IA",
       },
       {
         Icon: CalendarCheck,
-        title: "Pare de perder reservas enquanto cozinha",
-        desc: "Clientes reservam 24/7, sem ligações. Confirmação automática ou manual, lembretes por email — menos no-shows, zero stress.",
+        title: "Reserva de mesas",
+        desc: "O sistema aceita reservas enquanto está na cozinha. Nunca mais perca um cliente.",
         tag: "Reservas",
       },
       {
         Icon: Palette,
-        title: "Inesquecível em 1 segundo",
-        desc: "Coloque um vídeo da cozinha ou uma foto do prato como fundo do cardápio. Clientes param de scrollar. A sua marca fica.",
+        title: "Design moderno",
+        desc: "Fundos de vídeo e fotos apelativas. O seu menu parece premium e desperta o apetite.",
         tag: "Design personalizado",
       },
       {
         Icon: Smartphone,
-        title: "Edita em segundos, não em dias",
-        desc: "Mude preços, troque fotos, adicione o prato do dia — pelo telemóvel, entre mesas. Ao vivo para os clientes ao instante. Nunca mais reimprimir.",
+        title: "Editor rápido",
+        desc: "Gira a lista de esgotados e preços pelo telemóvel. Mudanças em tempo real para os clientes.",
         tag: "Editor de menu",
       },
       {
         Icon: ChefHat,
-        title: "Sirva mais rápido em cada turno",
-        desc: "Os pedidos chegam ao ecrã da cozinha no momento em que o cliente confirma. Zero papel, zero gritos, zero pedidos perdidos — menos erros, mais rotação, mais couverts por noite.",
+        title: "Brevemente: Ecrã de cozinha",
+        desc: "Esqueça os talões de papel. Os pedidos da sala vão direto para o ecrã do chef.",
         tag: "Em breve",
       },
+    
     ],
   },
 

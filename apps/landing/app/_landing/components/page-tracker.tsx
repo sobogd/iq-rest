@@ -2,14 +2,15 @@
 
 import { useEffect } from "react";
 import { analytics } from "@/lib/analytics";
+import type { HeroFlavor } from "../types";
 
 interface PageTrackerProps {
-  variantIndex: number;
+  variant: HeroFlavor;
 }
 
-export function PageTracker({ variantIndex }: PageTrackerProps) {
+export function PageTracker({ variant }: PageTrackerProps) {
   useEffect(() => {
-    analytics.track(`land_home_page_show_${variantIndex + 1}`);
+    analytics.track(`land_home_page_show_${variant.toLowerCase()}`);
 
     const seen = new Set<string>();
     const observer = new IntersectionObserver(
@@ -33,7 +34,7 @@ export function PageTracker({ variantIndex }: PageTrackerProps) {
     document.querySelectorAll("[data-section]").forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [variantIndex]);
+  }, [variant]);
 
   return null;
 }

@@ -15,7 +15,7 @@ export const TEXTS: LandingTexts = {
     ogDescription: "Karta QR, bezpośrednie zamówienia, rezerwacje i tłumaczenie AI. Gotowe w 2 minuty. 14 dni za darmo — bez karty.",
   },
 
-  ctaText: "Zacznij za darmo →",
+  ctaText: "Wypróbuj za darmo", ctaSite: "Stwórz stronę",
   demoText: "Zobacz demo",
   microcopy: "14 dni za darmo · Bez karty · Anuluj kiedy chcesz",
 
@@ -25,59 +25,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Cennik",
     navFaq: "FAQ",
     signIn: "Zaloguj",
-    cta: "Zacznij za darmo →",
+    cta: "Wypróbuj za darmo",
   },
 
   hero: {
     verticals: ["Restauracje", "Kawiarnie", "Bary", "Hotele", "Pizzerie"],
-    variants: [
-      {
-        headline: "Przestań drukować karty.",
-        headlineAccent: "Przestań oddawać 30% aplikacjom dostawy.",
-        sub: "Karta QR, bezpośrednie zamówienia, rezerwacje i wielojęzyczna strona. Gotowe w 2 minuty — bez karty kredytowej.",
-      },
-      {
-        headline: "Twoja restauracja zasługuje na więcej niż",
-        headlineAccent: "papierową kartę i nieodebrane telefony.",
-        sub: "Bezpośrednie zamówienia, błyskawiczne aktualizacje karty i rezerwacje 24/7. Konfiguracja w 2 minuty.",
-      },
-      {
-        headline: "Jeden kod QR.",
-        headlineAccent: "Zero prowizji. Koniec papieru.",
-        sub: "Karta QR, zamówienia online i rezerwacje — wszystko w jednym. 14 dni za darmo, bez karty.",
-      },
-      {
-        headline: "Odbieraj zamówienia bezpośrednio.",
-        headlineAccent: "Pomiń prowizję.",
-        sub: "Goście skanują, zamawiają i płacą — prosto do ciebie, bez działki Pyszne.pl. Gotowe w 2 minuty.",
-      },
-      {
-        headline: "Więcej zamówień. Więcej rezerwacji.",
-        headlineAccent: "Bez papieru, bez aplikacji.",
-        sub: "Karta QR + rezerwacje + strona wielojęzyczna na autopilocie. 14 dni testów za darmo.",
-      },
-      {
-        headline: "Turyści nie czytają karty?",
-        headlineAccent: "Załatwione w 2 minuty.",
-        sub: "AI tłumaczy całą kartę na 35 języków. Plus zamówienia QR i rezerwacje w cenie.",
-      },
-      {
-        headline: "Z papierowej karty na kod QR,",
-        headlineAccent: "zanim wystygnie kawa.",
-        sub: "Karta QR, bezpośrednie zamówienia i rezerwacje 24/7. Gotowe w 2 minuty — bez karty.",
-      },
-      {
-        headline: "Odświeżająco prosta karta QR.",
-        headlineAccent: "Cicho potężna w środku.",
-        sub: "Bezpośrednie zamówienia, tłumaczenie AI, rezerwacje i strona — jednym kliknięciem na telefonie.",
-      },
-    ],
-    painBullets: [
-      "Bez druku — zmieniaj ceny natychmiast",
-      "Zero prowizji — zamówienia prosto do ciebie",
-      "Bez nieodebranych telefonów — rezerwacje 24/7",
-      "35 języków — nigdy nie tracisz turysty",
-    ],
+    qr: { headline: "Menu QR dla Twojej restauracji w 5 minut.", sub: "Zamówienia stolikowe, rezerwacje i 35 języków. Bez prowizji i programistów." },
+    web: { headline: "Profesjonalna strona restauracji w 5 minut.", sub: "Zamówienia stolikowe, rezerwacje i 35 języków. Bez prowizji i programistów." },
+    painBullets: ["0% prowizji: Wszystkie zamówienia trafiają bezpośrednio do Ciebie.", "Tłumaczenie AI: 35 języków dla wyższych rachunków od turystów.", "Rezerwacje 24/7: Pełna sala bez zbędnych telefonów.", "Elastyczne ceny: Aktualizuj menu w kilka sekund."],
     rating: "4,9 · ponad 500 restauracji w 30+ krajach",
   },
 
@@ -86,12 +41,14 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nic zbędnego.",
     sub: "Stworzone dla restauracji. Używane przy stoliku.",
     items: [
-      { Icon: ScanLine, title: "Zatrzymaj 100% każdego zamówienia", desc: "Goście skanują, zamawiają i płacą — prosto do ciebie. Bez pobierania aplikacji, bez 30% dla dostawy. Każde zamówienie trafia w czasie rzeczywistym do panelu z numerem stolika.", tag: "Bezpośrednie zamówienia" },
-      { Icon: Languages, title: "Sprzedawaj turystom w ich języku", desc: "Jednym kliknięciem przetłumaczysz całą kartę na 35 języków. AI rozumie kontekst kulinarny — goście zamawiają więcej, gdy faktycznie rozumieją danie.", tag: "Tłumaczenie AI" },
-      { Icon: CalendarCheck, title: "Nie traać rezerwacji w trakcie gotowania", desc: "Goście rezerwują 24/7, bez telefonów. Auto- lub ręczne potwierdzenie, przypomnienia mailem — mniej no-show, zero stresu.", tag: "Rezerwacje" },
-      { Icon: Palette, title: "Niezapomniane w 1 sekundę", desc: "Wrzuć film z kuchni albo zdjęcie dania jako tło karty. Goście przestają scrollować. Twoja marka zostaje.", tag: "Własny design" },
-      { Icon: Smartphone, title: "Aktualizuj w sekundach, nie w dniach", desc: "Zmień ceny, zamień zdjęcia, dodaj danie dnia — z telefonu, między stolikami. Na żywo dla gości natychmiast. Koniec z drukowaniem.", tag: "Edytor menu" },
-      { Icon: ChefHat, title: "Szybsza obsługa każdej zmiany", desc: "Zamówienia trafiają na ekran kuchni, gdy tylko gość potwierdzi. Zero papieru, zero krzyków, zero zgubionych bonów — mniej błędów, szybsza obsługa, więcej kuwertów na wieczór.", tag: "Wkrótce" },
+      
+      { Icon: ScanLine, title: "Zamówienia ze stolika", desc: "Zamówienia błyskawicznie trafiają na WhatsApp lub do panelu z numerem stolika. Szybsza obsługa.", tag: "Bezpośrednie zamówienia" },
+      { Icon: Languages, title: "Tłumacz AI (35 języków)", desc: "Nasze AI zna się na gastronomii. Turyści zamawiają o 20% więcej, gdy rozumieją skład dań.", tag: "Tłumaczenie AI" },
+      { Icon: CalendarCheck, title: "Rezerwacja stolików", desc: "System sam przyjmuje rezerwacje, gdy Ty pracujesz w kuchni. Żaden klient Ci nie ucieknie.", tag: "Rezerwacje" },
+      { Icon: Palette, title: "Nowoczesny design", desc: "Tła wideo i soczyste zdjęcia. Twoje menu wygląda prestiżowo i budzi apetyt od razu.", tag: "Własny design" },
+      { Icon: Smartphone, title: "Szybki edytor", desc: "Zarządzaj stop-listą i cenami prosto ze smartfona. Zmiany są widoczne dla gości natychmiast.", tag: "Edytor menu" },
+      { Icon: ChefHat, title: "Wkrótce: Wyświetlacz kuchenny", desc: "Zapomnij o papierowych bonach. Zamówienia z sali trafiają prosto na ekran kucharza.", tag: "Wkrótce" },
+    
     ],
   },
 

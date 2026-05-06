@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Carta QR, pedidos directos, reservas y traducción con IA. Lista en 2 minutos. 14 días gratis — sin tarjeta.",
   },
 
-  ctaText: "Empieza gratis →",
+  ctaText: "Prueba gratis", ctaSite: "Crear web",
   demoText: "Ver demo en vivo",
   microcopy: "14 días gratis · Sin tarjeta · Cancela cuando quieras",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Precios",
     navFaq: "FAQ",
     signIn: "Entrar",
-    cta: "Empieza gratis →",
+    cta: "Prueba gratis",
   },
 
   hero: {
     verticals: ["Restaurantes", "Cafeterías", "Bares", "Hoteles", "Pizzerías"],
-    variants: [
-      {
-        headline: "Deja de imprimir cartas.",
-        headlineAccent: "Deja de pagar 30% a las apps de delivery.",
-        sub: "Carta QR, pedidos directos, reservas y web multilingüe. Lista en 2 minutos — sin tarjeta de crédito.",
-      },
-      {
-        headline: "Tu restaurante merece más que",
-        headlineAccent: "una carta de papel y llamadas perdidas.",
-        sub: "Pedidos directos, cambios de carta al instante y reservas 24/7. Configúralo en 2 minutos.",
-      },
-      {
-        headline: "Un código QR.",
-        headlineAccent: "Cero comisiones. Adiós a la carta de papel.",
-        sub: "Carta QR, pedidos online y reservas — todo en un sitio. 14 días gratis, sin tarjeta.",
-      },
-      {
-        headline: "Recibe pedidos directos.",
-        headlineAccent: "Sáltate la comisión.",
-        sub: "Tus clientes escanean, piden y pagan — directo a ti, sin que Glovo se lleve el 30%. Lista en 2 minutos.",
-      },
-      {
-        headline: "Más pedidos. Más reservas.",
-        headlineAccent: "Sin papel, sin apps.",
-        sub: "Carta QR + reservas + web multilingüe en automático. Prueba gratis de 14 días.",
-      },
-      {
-        headline: "¿Los turistas no entienden tu carta?",
-        headlineAccent: "Arréglalo en 2 minutos.",
-        sub: "La IA traduce toda tu carta a 35 idiomas. Y además incluye pedidos QR y reservas.",
-      },
-      {
-        headline: "De carta de papel a código QR,",
-        headlineAccent: "antes de que se enfríe el café.",
-        sub: "Carta QR, pedidos directos y reservas 24/7. Lista en 2 minutos — sin tarjeta.",
-      },
-      {
-        headline: "Carta QR sorprendentemente simple.",
-        headlineAccent: "Y muy potente por dentro.",
-        sub: "Pedidos directos, traducción IA, reservas y web — todo desde un toque en el móvil.",
-      },
-    ],
-    painBullets: [
-      "Sin imprimir — precios al instante",
-      "Sin comisiones — pedidos directos",
-      "Sin llamadas — reservas 24/7",
-      "35 idiomas — no pierdas turistas",
-    ],
+    qr: { headline: "Carta QR para tu restaurante en 5 minutos.", sub: "Pedidos directos, reservas y 35 idiomas. Sin comisiones ni programadores." },
+    web: { headline: "Web profesional para tu restaurante en 5 minutos.", sub: "Pedidos directos, reservas y 35 idiomas. Sin comisiones ni programadores." },
+    painBullets: ["0% Comisiones: Todos los pedidos van directo a ti.", "Traducción IA: 35 idiomas para aumentar el ticket de turistas.", "Reservas 24/7: Sala llena sin llamadas innecesarias.", "Precios flexibles: Actualiza tu carta en segundos."],
     rating: "4,9 · más de 500 restaurantes en 30 países",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Nada de lo que no.",
     sub: "Hecho para restaurantes. Pensado para usar en mesa.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "Quédate con el 100% de cada pedido",
-        desc: "Tus clientes escanean, piden y pagan — directo a ti. Sin descargar apps, sin que delivery se lleve el 30%. Cada pedido entra al panel con número de mesa y al instante.",
+        title: "Pedidos desde la mesa",
+        desc: "Los pedidos llegan al instante por WhatsApp o a tu panel con número de mesa. Servicio más rápido.",
         tag: "Pedidos directos",
       },
       {
         Icon: Languages,
-        title: "Vende a turistas en su idioma",
-        desc: "Un toque traduce toda tu carta a 35 idiomas. La IA pilla el contexto culinario — los clientes piden más cuando entienden el plato.",
+        title: "Traductor IA (35 idiomas)",
+        desc: "Nuestra IA entiende de gastronomía. Los turistas piden un 20% más cuando entienden el plato.",
         tag: "Traducción IA",
       },
       {
         Icon: CalendarCheck,
-        title: "No pierdas reservas mientras cocinas",
-        desc: "Tus clientes reservan mesa 24/7, sin llamadas. Confirmación automática o manual, recordatorios por email — menos no-shows, cero estrés.",
+        title: "Reserva de mesas",
+        desc: "El sistema acepta reservas mientras estás en la cocina. Ni un cliente perdido.",
         tag: "Reservas",
       },
       {
         Icon: Palette,
-        title: "Inolvidable en 1 segundo",
-        desc: "Pon un vídeo de tu cocina o una foto bonita como fondo de la carta. Los clientes paran de scrollear. Tu marca se queda.",
+        title: "Diseño moderno",
+        desc: "Fondos de vídeo y fotos increíbles. Tu carta parece premium y despierta el apetito al momento.",
         tag: "Diseño a medida",
       },
       {
         Icon: Smartphone,
-        title: "Cambia la carta en segundos, no en días",
-        desc: "Cambia precios, cambia fotos, añade el plato del día — desde el móvil, entre mesas. En vivo al instante. Olvídate de reimprimir cartas.",
+        title: "Editor rápido",
+        desc: "Gestiona la lista de agotados y precios desde el móvil. Cambios en vivo para los clientes.",
         tag: "Editor de carta",
       },
       {
         Icon: ChefHat,
-        title: "Sirve más rápido cada turno",
-        desc: "Los pedidos llegan a la pantalla de cocina en cuanto el cliente confirma. Cero papel, cero gritos, cero comandas perdidas — menos errores, más rotación de mesas, más cubiertos por noche.",
+        title: "Próximamente: Pantalla de cocina",
+        desc: "Olvida los tiquets de papel. Los pedidos de la sala van directo a la pantalla del chef.",
         tag: "Próximamente",
       },
+    
     ],
   },
 

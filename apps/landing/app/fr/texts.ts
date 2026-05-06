@@ -16,7 +16,7 @@ export const TEXTS: LandingTexts = {
       "Carte QR, commandes directes, réservations et traduction IA. Prêt en 2 minutes. 14 jours gratuits — sans carte.",
   },
 
-  ctaText: "Commencer gratuitement →",
+  ctaText: "Essai gratuit", ctaSite: "Créer mon site",
   demoText: "Voir la démo",
   microcopy: "14 jours gratuits · Sans carte · Annulez quand vous voulez",
 
@@ -26,59 +26,14 @@ export const TEXTS: LandingTexts = {
     navPricing: "Tarifs",
     navFaq: "FAQ",
     signIn: "Connexion",
-    cta: "Commencer gratuitement →",
+    cta: "Essai gratuit",
   },
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hôtels", "Pizzerias"],
-    variants: [
-      {
-        headline: "Arrêtez de réimprimer des cartes.",
-        headlineAccent: "Arrêtez de payer 30% aux apps de livraison.",
-        sub: "Carte QR, commandes directes, réservations et site multilingue. Prêt en 2 minutes — sans carte bancaire.",
-      },
-      {
-        headline: "Votre restaurant mérite mieux que",
-        headlineAccent: "des cartes papier et des appels manqués.",
-        sub: "Commandes directes, mises à jour instantanées et réservations 24/7. Configuré en 2 minutes.",
-      },
-      {
-        headline: "Un code QR.",
-        headlineAccent: "Zéro commission. Plus de cartes papier.",
-        sub: "Carte QR, commandes en ligne et réservations — tout au même endroit. 14 jours gratuits, sans carte.",
-      },
-      {
-        headline: "Recevez des commandes directes.",
-        headlineAccent: "Sautez la commission.",
-        sub: "Vos clients scannent, commandent et paient — directement chez vous, sans la part d'Uber Eats. Prêt en 2 minutes.",
-      },
-      {
-        headline: "Plus de commandes. Plus de réservations.",
-        headlineAccent: "Sans papier, sans applis.",
-        sub: "Carte QR + réservations + site multilingue en pilote auto. 14 jours d'essai gratuit.",
-      },
-      {
-        headline: "Les touristes ne lisent pas votre carte ?",
-        headlineAccent: "Réglé en 2 minutes.",
-        sub: "L'IA traduit toute votre carte en 35 langues. Plus les commandes QR et les réservations incluses.",
-      },
-      {
-        headline: "De la carte papier au QR code,",
-        headlineAccent: "avant que le café refroidisse.",
-        sub: "Carte QR, commandes directes et réservations 24/7. Prêt en 2 minutes — sans carte.",
-      },
-      {
-        headline: "Carte QR rafraîchissante de simplicité.",
-        headlineAccent: "Discrètement puissante.",
-        sub: "Commandes directes, traduction IA, réservations et site web — tout d'un toucher sur votre téléphone.",
-      },
-    ],
-    painBullets: [
-      "Plus d'impressions — changez les prix instantanément",
-      "Zéro commission — les commandes vont directement à vous",
-      "Plus d'appels manqués — réservations 24/7",
-      "35 langues — ne perdez plus aucun touriste",
-    ],
+    qr: { headline: "Un menu QR pour votre restaurant en 5 minutes.", sub: "Commandes directes, réservations et 35 langues. Sans commission ni développeur." },
+    web: { headline: "Site web pro pour votre restaurant en 5 minutes.", sub: "Commandes directes, réservations et 35 langues. Sans commission ni développeur." },
+    painBullets: ["0% commission : Toutes les commandes vous parviennent directement.", "Traduction IA : 35 langues pour booster le ticket moyen des touristes.", "Réservations 24/7 : Salle comble sans appels incessants.", "Prix flexibles : Mettez à jour votre carte en quelques secondes."],
     rating: "4,9 · plus de 500 restaurants dans 30+ pays",
   },
 
@@ -87,42 +42,44 @@ export const TEXTS: LandingTexts = {
     headingAccent: "Rien d'inutile.",
     sub: "Conçu pour la restauration. Pensé pour la table.",
     items: [
+      
       {
         Icon: ScanLine,
-        title: "Gardez 100% de chaque commande",
-        desc: "Les clients scannent, commandent et paient — directement chez vous. Pas d'apps à télécharger, pas de 30% pour la livraison. Chaque commande arrive en temps réel dans le tableau de bord avec le numéro de table.",
+        title: "Commande à table",
+        desc: "Les commandes arrivent instantanément sur WhatsApp ou votre panel avec le numéro de table. Service plus fluide.",
         tag: "Commandes directes",
       },
       {
         Icon: Languages,
-        title: "Vendez aux touristes dans leur langue",
-        desc: "Un toucher traduit toute votre carte en 35 langues. L'IA maîtrise le contexte culinaire — les clients commandent plus quand ils comprennent vraiment le plat.",
+        title: "Traducteur IA (35 langues)",
+        desc: "Notre IA comprend la gastronomie. Les touristes commandent 20% de plus quand ils comprennent la carte.",
         tag: "Traduction IA",
       },
       {
         Icon: CalendarCheck,
-        title: "Plus de réservations manquées en cuisine",
-        desc: "Vos clients réservent 24/7, sans appels. Confirmation auto ou manuelle, rappels par e-mail inclus — moins de no-shows, zéro stress.",
+        title: "Réservation de tables",
+        desc: "Le système prend les réservations pendant que vous êtes en cuisine. Plus aucun client perdu.",
         tag: "Réservations",
       },
       {
         Icon: Palette,
-        title: "Inoubliable en 1 seconde",
-        desc: "Mettez une vidéo de votre cuisine ou un cliché d'un plat star en fond de carte. Les clients arrêtent de scroller. Votre marque marque.",
+        title: "Design moderne",
+        desc: "Arrière-plans vidéo et photos gourmandes. Votre menu est premium et donne faim dès le premier clic.",
         tag: "Design sur mesure",
       },
       {
         Icon: Smartphone,
-        title: "Modifiez en secondes, pas en jours",
-        desc: "Changez les prix, échangez les photos, ajoutez le plat du jour — depuis le téléphone, entre deux tables. En direct pour les clients à l'instant. Plus jamais de réimpression.",
+        title: "Éditeur rapide",
+        desc: "Gérez vos prix et vos ruptures de stock depuis votre mobile. Changements immédiats pour les clients.",
         tag: "Éditeur de carte",
       },
       {
         Icon: ChefHat,
-        title: "Servez plus vite, chaque service",
-        desc: "Les commandes arrivent à l'écran de cuisine au moment où le client valide. Zéro papier, zéro cri, zéro ticket perdu — moins d'erreurs, plus de rotations, plus de couverts par soir.",
+        title: "Bientôt : Écran de cuisine",
+        desc: "Oubliez les bons papier. Les commandes de la salle vont direct sur l'écran du chef.",
         tag: "Bientôt disponible",
       },
+    
     ],
   },
 

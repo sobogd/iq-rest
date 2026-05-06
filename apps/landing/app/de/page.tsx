@@ -10,7 +10,6 @@ import { Hero } from "@/app/_landing/components/hero";
 import { ScanSection } from "@/app/_landing/components/scan-section";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
-import { pickRandomVariant } from "@/app/_landing/lib/pick-variant";
 import { PageTracker } from "@/app/_landing/components/page-tracker";
 import { TEXTS } from "./texts";
 import { trackGclidArrival } from "@/app/_landing/lib/track-gclid-arrival";
@@ -45,18 +44,18 @@ export const metadata: Metadata = {
 export default async function LandingPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const sp = await searchParams;
   await trackGclidArrival(sp, LOCALE);
-  const { variant, index: variantIndex } = pickRandomVariant(TEXTS.hero.variants);
+  const heroVariant = (typeof sp.type === "string" && sp.type.toUpperCase() === "WEB") ? "WEB" : "QR";
   const currency = await getCurrency();
 
   return (
     <main className="relative">
-      <PageTracker variantIndex={variantIndex} />
+      <PageTracker variant={heroVariant} />
       <LandingHeader texts={TEXTS.header} locale={LOCALE} />
       <div className="space-y-10 sm:space-y-0">
       <Hero
         texts={TEXTS.hero}
-        variant={variant}
-        ctaText={TEXTS.ctaText}
+        variant={heroVariant}
+        ctaText={heroVariant === "WEB" ? TEXTS.ctaSite : TEXTS.ctaText}
         demoText={TEXTS.demoText}
         microcopy={TEXTS.microcopy}
         locale={LOCALE}

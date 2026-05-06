@@ -1,8 +1,9 @@
 import type { LucideIcon } from "lucide-react";
 
-export type HeroVariant = {
+export type HeroFlavor = "QR" | "WEB";
+
+export type HeroFlavorTexts = {
   headline: string;
-  headlineAccent: string;
   sub: string;
 };
 
@@ -90,6 +91,7 @@ export type LandingTexts = {
   };
 
   ctaText: string;
+  ctaSite: string;
   demoText: string;
   microcopy: string;
 
@@ -104,7 +106,8 @@ export type LandingTexts = {
 
   hero: {
     verticals: string[];
-    variants: HeroVariant[];
+    qr: HeroFlavorTexts;
+    web: HeroFlavorTexts;
     painBullets: string[];
     rating: string;
   };

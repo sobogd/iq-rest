@@ -2,14 +2,14 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { CtaButton } from "./cta-button";
 import { DemoButton } from "./demo-button";
-import type { HeroVariant, LandingTexts } from "../types";
+import type { HeroFlavor, LandingTexts } from "../types";
 import sampleMain from "@/public/samples/sample-main.webp";
 import sampleMainPage from "@/public/samples/sample-main-page.webp";
 import sampleContacts from "@/public/samples/sample-contacts.webp";
 
 interface HeroProps {
   texts: LandingTexts["hero"];
-  variant: HeroVariant;
+  variant: HeroFlavor;
   ctaText: string;
   demoText: string;
   microcopy: string;
@@ -17,6 +17,7 @@ interface HeroProps {
 }
 
 export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: HeroProps) {
+  const active = variant === "WEB" ? texts.web : texts.qr;
   return (
     <section data-section="hero" className="container mx-auto px-4 pt-8 pb-16 lg:pt-12">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images''bullets_images']">
@@ -46,14 +47,13 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
-            {variant.headline}{" "}
             <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
-              {variant.headlineAccent}
+              {active.headline}
             </span>
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mb-7 leading-snug">
-            {variant.sub}
+            {active.sub}
           </p>
 
           <div className="w-full">
