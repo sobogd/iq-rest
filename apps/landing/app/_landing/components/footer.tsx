@@ -35,10 +35,10 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
 
   return (
     <>
-    <footer className="border-t border-border bg-muted/20" data-section="footer">
-      <div className="container mx-auto px-4 py-6">
+    <footer className="bg-muted/20" data-section="footer">
+      <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-6">
-          <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 text-xs md:max-w-[50%]">
+          <nav className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm md:max-w-[50%]">
             {featureLinks.map((link) => (
               <a
                 key={link.href}
@@ -52,7 +52,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
           </nav>
 
           <div className="flex flex-col items-center md:items-end gap-6 md:gap-2 text-center md:text-end">
-            <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs text-muted-foreground">
+            <nav className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-sm text-muted-foreground">
               <button
                 type="button"
                 onClick={() => {
@@ -94,7 +94,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
                 {cookieTexts.termsLink}
               </button>
             </nav>
-            <p className="text-[11px] text-muted-foreground pt-2 md:mt-1 border-t border-border/60">
+            <p className="text-xs text-muted-foreground pt-2 md:mt-1">
               {copyright}
             </p>
           </div>
