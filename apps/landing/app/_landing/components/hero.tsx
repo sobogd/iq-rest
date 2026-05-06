@@ -19,7 +19,7 @@ interface HeroProps {
 export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: HeroProps) {
   const active = variant === "WEB" ? texts.web : texts.qr;
   return (
-    <section data-section="hero" className="container mx-auto px-4 pt-8 pb-4 lg:pt-24 lg:pb-16">
+    <section data-section="hero" className="container mx-auto px-4 pt-8 pb-4 lg:pt-16 lg:pb-16">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.85fr] lg:gap-x-16 lg:gap-y-8 lg:items-center lg:[grid-template-areas:'header_images']">
         {/* Header — verticals + headline + sub + CTA + rating */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:[grid-area:header]">
@@ -47,7 +47,7 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
-            <span className="block">{active.headline}</span>
+            <span className="block whitespace-pre-line sm:whitespace-normal">{active.headline}</span>
             <RotatingAccent items={texts.dynamicHeadlines} className="block" />
           </h1>
 

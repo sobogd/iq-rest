@@ -12,16 +12,16 @@ export function How({ texts }: HowProps) {
           {texts.heading}
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
           {texts.steps.map((s) => (
             <div
               key={s.n}
-              className="relative bg-muted/20 border border-border rounded-2xl p-5 sm:p-6 pt-7 sm:pt-8 flex flex-col gap-2"
+              className="bg-muted/20 border border-border rounded-2xl p-5 sm:p-6 flex flex-col gap-1.5"
             >
-              <div className="absolute -top-3 -left-3 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base font-semibold shadow-md">
-                {s.n}
+              <div className="text-base sm:text-lg font-semibold tracking-tight">
+                <span className="text-primary mr-2">{s.n}.</span>
+                {s.t}
               </div>
-              <div className="text-base sm:text-lg font-semibold tracking-tight">{s.t}</div>
               <div className="text-sm sm:text-base text-muted-foreground leading-relaxed">{s.d}</div>
             </div>
           ))}

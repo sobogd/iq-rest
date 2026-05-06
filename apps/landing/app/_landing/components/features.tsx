@@ -14,19 +14,6 @@ const FEATURE_IMAGES: Record<number, string> = {
   5: "/samples/kitchen-display.webp",
 };
 
-const FEATURE_TAG_VARIANT: Record<number, "default" | "green"> = {
-  0: "default",
-  1: "default",
-  2: "default",
-  3: "default",
-  4: "default",
-  5: "green",
-};
-
-const TAG_STYLES = {
-  default: "bg-primary/10 text-primary border-primary/30",
-  green: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
-} as const;
 
 export function Features({ texts }: FeaturesProps) {
   return (
@@ -38,39 +25,40 @@ export function Features({ texts }: FeaturesProps) {
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 items-start">
-          {texts.items.map(({ Icon, title, desc, tag }, i) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 items-start">
+          {texts.items.map(({ Icon, title, desc }, i) => {
             const image = FEATURE_IMAGES[i];
-            const variant = FEATURE_TAG_VARIANT[i] ?? "default";
-            const tagEl = tag && (
-              <span
-                className={`w-fit inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-lg border ${TAG_STYLES[variant]}`}
-              >
-                {tag}
-              </span>
-            );
 
             if (image) {
+              const mirror = i % 2 === 1;
+              const gridCols = mirror
+                ? "grid-cols-[1fr_45%] sm:grid-cols-[25%_1fr]"
+                : "grid-cols-[45%_1fr] sm:grid-cols-[25%_1fr]";
+              const areas = mirror
+                ? "[grid-template-areas:'title_image''desc_image'] sm:[grid-template-areas:'image_title''image_desc']"
+                : "[grid-template-areas:'image_title''image_desc']";
+              const imageEdge = mirror
+                ? "-mr-4 sm:mr-0 rounded-r-none rounded-l-3xl sm:rounded-3xl border-y-[6px] border-l-[6px] sm:border-r-[6px] border-[hsl(0_0%_8%)]"
+                : "-ml-4 sm:ml-0 rounded-l-none rounded-r-3xl sm:rounded-3xl border-y-[6px] border-r-[6px] sm:border-l-[6px] border-[hsl(0_0%_8%)]";
               return (
                 <div
                   key={title}
-                  className="flex flex-col items-center text-center gap-3 sm:grid sm:grid-cols-[30%_1fr] sm:items-center sm:text-start sm:gap-x-5 sm:gap-y-1 sm:[grid-template-areas:'image_tag''image_title''image_desc']"
+                  className={`grid ${gridCols} ${areas} items-center text-start gap-x-4 gap-y-2 sm:gap-x-5`}
                 >
-                  <div className="w-full max-w-[200px] mb-3 sm:mb-0 sm:max-w-none sm:[grid-area:image] relative aspect-square rounded-3xl overflow-hidden border-[6px] border-[hsl(0_0%_8%)] bg-background">
+                  <div className={`[grid-area:image] relative aspect-square overflow-hidden bg-background ${imageEdge}`}>
                     <Image
                       src={image}
                       alt={title}
                       fill
-                      sizes="(max-width: 640px) 60vw, 15vw"
+                      sizes="(max-width: 640px) 30vw, 15vw"
                       className="object-cover"
                       priority={i === 0}
                     />
                   </div>
-                  <div className="sm:[grid-area:tag] sm:self-end">{tagEl}</div>
-                  <h3 className="sm:[grid-area:title] text-base sm:text-lg font-semibold tracking-tight">
+                  <h3 className={`[grid-area:title] self-end text-lg sm:text-xl font-semibold tracking-tight ${mirror ? "sm:text-start" : ""}`}>
                     {title}
                   </h3>
-                  <p className="sm:[grid-area:desc] sm:self-start text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className={`[grid-area:desc] self-start text-sm sm:text-base text-muted-foreground leading-relaxed ${mirror ? "sm:text-start" : ""}`}>
                     {desc}
                   </p>
                 </div>
@@ -82,8 +70,7 @@ export function Features({ texts }: FeaturesProps) {
                   <Icon className="h-5 w-5" strokeWidth={2} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  {tagEl && <div className="mb-2 sm:mb-4">{tagEl}</div>}
-                  <div className="text-base sm:text-lg font-semibold tracking-tight mb-2">{title}</div>
+                  <div className="text-lg sm:text-xl font-semibold tracking-tight mb-2">{title}</div>
                   <div className="text-sm sm:text-base text-muted-foreground leading-relaxed">{desc}</div>
                 </div>
               </div>
