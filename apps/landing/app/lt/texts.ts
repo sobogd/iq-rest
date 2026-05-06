@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funkcijos", navHow: "Kaip tai veikia", navPricing: "Kainos", navFaq: "FAQ", signIn: "Prisijungti", cta: "Išbandyti nemokamai" },
   hero: {
     verticals: ["Restoranai", "Kavinės", "Barai", "Viešbučiai", "Picerijos"],
-    qr: { headline: "QR meniu jūsų restoranui per 5 minutes.", sub: "Tiesioginiai užsakymai, rezervacijos ir 35 kalbos. Be komisinių ir programuotojų." },
-    web: { headline: "Profesionali restorano svetainė per 5 minutes.", sub: "Tiesioginiai užsakymai, rezervacijos ir 35 kalbos. Be komisinių ir programuotojų." },
+    qr: { headline: "QR meniu per 5 minutes.", sub: "Tiesioginiai užsakymai, rezervacijos ir 35 kalbos. Be komisinių ir programuotojų." },
+    web: { headline: "Restorano svetainė per 5 min.", sub: "Tiesioginiai užsakymai, rezervacijos ir 35 kalbos. Be komisinių ir programuotojų." },
+    dynamicHeadlines: ["0% komisinių.", "35 kalbos (AI).", "Užsakymai internetu.", "Rezervacijos 24/7.", "Premium dizainas."],
     painBullets: ["0% komisinių: Visi užsakymai keliauja tiesiai jums.", "AI vertimas: 35 kalbos didesnėms turistų sąskaitoms.", "Rezervacijos 24/7: Pilna salė be papildomų skambučių.", "Lanksčios kainos: Atnaujinkite meniu per kelias sekundes."],
     rating: "4,9 · daugiau nei 500 restoranų 30+ šalių",
   },

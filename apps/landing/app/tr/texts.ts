@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Özellikler", navHow: "Nasıl çalışır", navPricing: "Fiyatlar", navFaq: "SSS", signIn: "Giriş", cta: "Ücretsiz dene" },
   hero: {
     verticals: ["Restoranlar", "Kafeler", "Barlar", "Oteller", "Pizzacılar"],
-    qr: { headline: "Restoranınız için 5 dakikada QR Menü.", sub: "Doğrudan sipariş, rezervasyon ve 35 dil. Komisyon veya yazılımcı gerekmez." },
-    web: { headline: "5 dakikada profesyonel restoran web sitesi.", sub: "Doğrudan sipariş, rezervasyon ve 35 dil. Komisyon veya yazılımcı gerekmez." },
+    qr: { headline: "5 dakikada QR Menü.", sub: "Doğrudan sipariş, rezervasyon ve 35 dil. Komisyon veya yazılımcı gerekmez." },
+    web: { headline: "5 dakikada Restoran Sitesi.", sub: "Doğrudan sipariş, rezervasyon ve 35 dil. Komisyon veya yazılımcı gerekmez." },
+    dynamicHeadlines: ["%0 Komisyon.", "35 Dil (AI).", "Online sipariş.", "24/7 Rezervasyon.", "Premium Tasarım."],
     painBullets: ["0% Komisyon: Tüm siparişler doğrudan size gelir.", "AI Çeviri: Turist satışlarını artıracak 35 dil desteği.", "24/7 Rezervasyon: Telefon trafiği olmadan tam doluluk.", "Esnek Fiyatlar: Menünüzü saniyeler içinde güncelleyin."],
     rating: "4,9 · 30+ ülkede 500'den fazla restoran",
   },

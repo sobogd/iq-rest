@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Gnéithe", navHow: "Conas a oibríonn sé", navPricing: "Praghsanna", navFaq: "FAQ", signIn: "Logáil isteach", cta: "Bain triail as" },
   hero: {
     verticals: ["Bialanna", "Caiféanna", "Beáir", "Óstáin", "Pizzerias"],
-    qr: { headline: "Ríomh-rochlár QR do do bhialann i 5 nóiméad.", sub: "Orduithe díreacha, áitithe agus 35 teanga. Gan coimisiún nó ríomhchláraitheoirí." },
-    web: { headline: "Suíomh gréasáin gairmiúil bialainne i 5 nóiméad.", sub: "Orduithe díreacha, áitithe agus 35 teanga. Gan coimisiún nó ríomhchláraitheoirí." },
+    qr: { headline: "Rochlár QR i 5 nóiméad.", sub: "Orduithe díreacha, áitithe agus 35 teanga. Gan coimisiún nó ríomhchláraitheoirí." },
+    web: { headline: "Suíomh bialainne i 5 nóim.", sub: "Orduithe díreacha, áitithe agus 35 teanga. Gan coimisiún nó ríomhchláraitheoirí." },
+    dynamicHeadlines: ["0% coimisiún.", "35 teanga (AI).", "Orduithe ar líne.", "Áitithe 24/7.", "Dearadh iontach."],
     painBullets: ["0% Coimisiún: Téann gach ordú go díreach chugat.", "Aistriúchán AI: 35 teanga chun caiteachas turasóirí a mhéadú.", "Áitithe 24/7: Bialann lán gan glaonna feles.", "Praghsanna solúbtha: Nuashonraigh an rochlár i soicindí."],
     rating: "4,9 · níos mó ná 500 bialann i 30+ tír",
   },

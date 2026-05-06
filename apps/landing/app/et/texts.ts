@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funktsioonid", navHow: "Kuidas töötab", navPricing: "Hinnad", navFaq: "FAQ", signIn: "Logi sisse", cta: "Proovi tasuta" },
   hero: {
     verticals: ["Restoranid", "Kohvikud", "Baarid", "Hotellid", "Pitsabaarid"],
-    qr: { headline: "QR-menüü teie restoranile 5 minutiga.", sub: "Osetellimused, broneeringud ja 35 keelt. Ilma vahendustasuta ja programmeerijateta." },
-    web: { headline: "Professionaalne restorani veebileht 5 minutiga.", sub: "Osetellimused, broneeringud ja 35 keelt. Ilma vahendustasuta ja programmeerijateta." },
+    qr: { headline: "QR-menüü 5 minutiga.", sub: "Osetellimused, broneeringud ja 35 keelt. Ilma vahendustasuta ja programmeerijateta." },
+    web: { headline: "Restorani veebileht 5 min.", sub: "Osetellimused, broneeringud ja 35 keelt. Ilma vahendustasuta ja programmeerijateta." },
+    dynamicHeadlines: ["0% vahendustasu.", "35 keelt (AI).", "Online tellimused.", "Broneeringud 24/7.", "Premium disain."],
     painBullets: ["0% vahendustasu: Kõik tellimused lähevad otse teile.", "AI-tõlge: 35 keelt turistide keskmise arve suurendamiseks.", "Broneeringud 24/7: Täis saal ilma liigsete kõnedeta.", "Paindlikud hinnad: Uuendage menüüd sekunditega."],
     rating: "4,9 · üle 500 restorani 30+ riigis",
   },

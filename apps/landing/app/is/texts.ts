@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Eiginleikar", navHow: "Hvernig það virkar", navPricing: "Verð", navFaq: "FAQ", signIn: "Innskráning", cta: "Prófa frítt" },
   hero: {
     verticals: ["Veitingastaðir", "Kaffihús", "Barir", "Hótel", "Pizzustaðir"],
-    qr: { headline: "QR matseðill fyrir veitingastaðinn þinn á 5 mínútum.", sub: "Beinar pantanir, bókanir og 35 tungumál. Engin þóknun eða forritarar." },
-    web: { headline: "Fagleg vefsíða fyrir veitingastað á 5 mínútum.", sub: "Beinar pantanir, bókanir og 35 tungumál. Engin þóknun eða forritarar." },
+    qr: { headline: "QR matseðill á 5 mínútum.", sub: "Beinar pantanir, bókanir og 35 tungumál. Engin þóknun eða forritarar." },
+    web: { headline: "Vefsíða staðarins á 5 mín.", sub: "Beinar pantanir, bókanir og 35 tungumál. Engin þóknun eða forritarar." },
+    dynamicHeadlines: ["0% þóknun.", "35 tungumál (AI).", "Netpantanir.", "Bókanir 24/7.", "Flott hönnun."],
     painBullets: ["0% þóknun: Allar pantanir fara beint til þín.", "AI þýðing: 35 tungumál til að auka sölu til ferðamanna.", "Bókanir 24/7: Fullt hús án auka símtala.", "Sveigjanlegt verð: Uppfærðu matseðilinn á nokkrum sekúndum."],
     rating: "4,9 · meira en 500 veitingastaðir í 30+ löndum",
   },

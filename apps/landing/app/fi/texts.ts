@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Ominaisuudet", navHow: "Näin se toimii", navPricing: "Hinnat", navFaq: "FAQ", signIn: "Kirjaudu", cta: "Kokeile ilmaiseksi" },
   hero: {
     verticals: ["Ravintolat", "Kahvilat", "Baarit", "Hotellit", "Pizzeriat"],
-    qr: { headline: "QR-menu ravintolallesi 5 minuutissa.", sub: "Suorat tilaukset, varaukset ja 35 kieltä. Ei välityspalkkioita tai koodausta." },
-    web: { headline: "Ammattimaiset ravintolasivut 5 minuutissa.", sub: "Suorat tilaukset, varaukset ja 35 kieltä. Ei välityspalkkioita tai koodausta." },
+    qr: { headline: "QR-menu 5 minuutissa.", sub: "Suorat tilaukset, varaukset ja 35 kieltä. Ei välityspalkkioita tai koodausta." },
+    web: { headline: "Ravintolasivut 5 minuutissa.", sub: "Suorat tilaukset, varaukset ja 35 kieltä. Ei välityspalkkioita tai koodausta." },
+    dynamicHeadlines: ["0% provisio.", "35 kieltä (AI).", "Online-tilaukset.", "Varaukset 24/7.", "Premium-muotoilu."],
     painBullets: ["0 % provisio: Kaikki tilaukset tulevat suoraan sinulle.", "AI-käännös: 35 kieltä kasvattamaan turistien tilauksia.", "Varaukset 24/7: Täysi tupa ilman puhelurumbaa.", "Joustavat hinnat: Päivitä menu sekunneissa."],
     rating: "4,9 · yli 500 ravintolaa 30+ maassa",
   },

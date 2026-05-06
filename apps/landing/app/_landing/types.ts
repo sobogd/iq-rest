@@ -108,6 +108,7 @@ export type LandingTexts = {
     verticals: string[];
     qr: HeroFlavorTexts;
     web: HeroFlavorTexts;
+    dynamicHeadlines: string[];
     painBullets: string[];
     rating: string;
   };

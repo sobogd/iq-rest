@@ -15,8 +15,9 @@ export const TEXTS: LandingTexts = {
   header: { navFeatures: "Funcions", navHow: "Com funciona", navPricing: "Preus", navFaq: "FAQ", signIn: "Entrar", cta: "Prova-ho gratis" },
   hero: {
     verticals: ["Restaurants", "Cafeteries", "Bars", "Hotels", "Pizzeries"],
-    qr: { headline: "Carta QR per al teu restaurant en 5 minuts.", sub: "Comandes directes, reserves i 35 idiomes. Sense comissions ni programadors." },
-    web: { headline: "Web professional per al teu restaurant en 5 minuts.", sub: "Comandes directes, reserves i 35 idiomes. Sense comissions ni programadors." },
+    qr: { headline: "Carta QR en 5 minuts.", sub: "Comandes directes, reserves i 35 idiomes. Sense comissions ni programadors." },
+    web: { headline: "Web de restaurant en 5 min.", sub: "Comandes directes, reserves i 35 idiomes. Sense comissions ni programadors." },
+    dynamicHeadlines: ["0% comissions.", "35 idiomes (IA).", "Comandes online.", "Reserves 24/7.", "Disseny premium."],
     painBullets: ["0% comissions: Totes les comandes van directament a tu.", "Traducció IA: 35 idiomes per augmentar el tiquet dels turistes.", "Reserves 24/7: Sala plena sense trucades innecessàries.", "Preus flexibles: Actualitza la carta en segons."],
     rating: "4,9 · més de 500 restaurants en 30+ països",
   },

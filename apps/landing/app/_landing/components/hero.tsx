@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { CtaButton } from "./cta-button";
 import { DemoButton } from "./demo-button";
+import { RotatingAccent } from "./rotating-accent";
 import type { HeroFlavor, LandingTexts } from "../types";
 import sampleMain from "@/public/samples/sample-main.webp";
 import sampleMainPage from "@/public/samples/sample-main-page.webp";
@@ -47,9 +48,8 @@ export function Hero({ texts, variant, ctaText, demoText, microcopy, locale }: H
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] mb-4">
-            <span className="bg-gradient-to-br from-primary to-amber-400 bg-clip-text text-transparent">
-              {active.headline}
-            </span>
+            {active.headline}{" "}
+            <RotatingAccent items={texts.dynamicHeadlines} />
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mb-7 leading-snug">

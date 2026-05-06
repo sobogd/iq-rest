@@ -31,8 +31,9 @@ export const TEXTS: LandingTexts = {
 
   hero: {
     verticals: ["Restaurants", "Cafés", "Bars", "Hotels", "Pizzeria's"],
-    qr: { headline: "QR-menu voor je restaurant in 5 minuten.", sub: "Directe bestellingen, reserveringen en 35 talen. Geen commissie of programmeurs." },
-    web: { headline: "Professionele restaurant-website in 5 minuten.", sub: "Directe bestellingen, reserveringen en 35 talen. Geen commissie of programmeurs." },
+    qr: { headline: "QR-menu in 5 minuten.", sub: "Directe bestellingen, reserveringen en 35 talen. Geen commissie of programmeurs." },
+    web: { headline: "Restaurant-site in 5 min.", sub: "Directe bestellingen, reserveringen en 35 talen. Geen commissie of programmeurs." },
+    dynamicHeadlines: ["0% commissie.", "35 talen (AI).", "Online bestellen.", "Reserveren 24/7.", "Premium design."],
     painBullets: ["0% commissie: Alle bestellingen gaan direct naar jou.", "AI-vertaling: 35 talen om de omzet van toeristen te verhogen.", "Reserveren 24/7: Volle bak zonder extra telefoontjes.", "Flexibele prijzen: Update je menu in een paar seconden."],
     rating: "4,9 · meer dan 500 restaurants in 30+ landen",
   },
