@@ -122,7 +122,10 @@ export async function GET(request: NextRequest) {
       const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
       for (const window of day.openWindows) {
-        for (let minutes = window.start; minutes < window.end; minutes += 30) {
+        // A slot starting at `minutes` lasts slotDuration. It must fit inside
+        // the window — otherwise the booking would run into a lunch break or
+        // past closing time.
+        for (let minutes = window.start; minutes + slotDuration <= window.end; minutes += 30) {
           const hour = Math.floor(minutes / 60);
           const min = minutes % 60;
           const timeStr = `${hour.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}`;
