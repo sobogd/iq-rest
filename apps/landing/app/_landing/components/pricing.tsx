@@ -97,10 +97,10 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
             >
               {ctaText}
             </a>
-            <p className="text-sm text-muted-foreground mt-3">{microcopy}</p>
+            <p className="text-sm text-muted-foreground/60 mt-3">{microcopy}</p>
           </div>
 
-          <div className="hidden lg:flex flex-wrap gap-x-6 gap-y-2 mt-10">
+          <div className="hidden lg:flex flex-wrap gap-x-6 gap-y-2 mt-10 max-w-md">
             {trustItems.map(({ Icon, label }) => (
               <div key={label} className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <Icon className="h-4 w-4" />
@@ -135,10 +135,10 @@ export function LandingPricing({ texts, ctaText, microcopy, locale, currency }: 
           </div>
         </div>
 
-        <div className="flex lg:hidden flex-wrap gap-x-6 gap-y-2 justify-center">
+        <div className="flex lg:hidden flex-wrap justify-center gap-x-6 gap-y-2 max-w-xs mx-auto">
           {trustItems.map(({ Icon, label }) => (
-            <div key={label} className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-              <Icon className="h-3.5 w-3.5" />
+            <div key={label} className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <Icon className="h-4 w-4" />
               <span>{label}</span>
             </div>
           ))}

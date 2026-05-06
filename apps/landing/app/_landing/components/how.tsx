@@ -6,25 +6,23 @@ interface HowProps {
 
 export function How({ texts }: HowProps) {
   return (
-    <section id="how" data-section="how" className="scroll-mt-16 py-8 sm:py-16">
-      <div className="container mx-auto px-4">
+    <section id="how" data-section="how" className="scroll-mt-16 py-16 bg-muted/20">
+      <div className="container mx-auto px-6 sm:px-4">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
           {texts.heading}
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground mb-10 text-center lg:text-start">{texts.sub}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {texts.steps.map((s) => (
             <div
               key={s.n}
-              className="bg-card border border-border rounded-2xl p-5 sm:p-6 flex flex-row sm:flex-col gap-3 sm:gap-0"
+              className="relative bg-muted/20 border border-border rounded-2xl p-5 sm:p-6 pt-7 sm:pt-8 flex flex-col gap-2"
             >
-              <div className="shrink-0 sm:mb-3 h-8 w-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold">
+              <div className="absolute -top-3 -left-3 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm sm:text-base font-semibold shadow-md">
                 {s.n}
               </div>
-              <div className="min-w-0">
-                <div className="text-base sm:text-lg font-semibold mb-2 tracking-tight">{s.t}</div>
-                <div className="text-sm sm:text-base text-muted-foreground leading-relaxed">{s.d}</div>
-              </div>
+              <div className="text-base sm:text-lg font-semibold tracking-tight">{s.t}</div>
+              <div className="text-sm sm:text-base text-muted-foreground leading-relaxed">{s.d}</div>
             </div>
           ))}
         </div>

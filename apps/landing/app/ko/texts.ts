@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "종이 메뉴와 배달앱 수수료 끝. QR 메뉴, 직접 주문, 예약, 다국어 사이트. 14일 무료, 카드 불필요.",
     canonical: "https://iq-rest.com/ko", ogLocale: "ko_KR",
     ogTitle: "레스토랑용 QR 메뉴 — 직접 주문, 수수료 0%",
-    ogDescription: "QR 메뉴, 직접 주문, 예약, AI 번역. 2분이면 시작. 14일 무료 — 카드 불필요.",
+    ogDescription: "QR 메뉴, 직접 주문, 예약, AI 번역. 5분이면 시작. 14일 무료 — 카드 불필요.",
   },
   ctaText: "무료 체험하기", ctaSite: "웹사이트 만들기",
   demoText: "라이브 데모 보기", microcopy: "14일 무료 · 카드 불필요 · 언제든 취소",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "보그단, IQ Rest 창립자",
   },
   how: {
-    heading: "2분 안에 시작",
+    heading: "5분 안에 시작",
     sub: "짧은 4단계. 설치 없음, 기술 설정 없음.",
     steps: [
-      { n: "1", t: "가입", d: "이메일 또는 Google. 카드 불필요. 10초면 완료." },
-      { n: "2", t: "레스토랑 이름", d: "이름을 입력하세요. 메뉴 상단에 표시됩니다." },
-      { n: "3", t: "첫 메뉴 추가", d: "카테고리, 이름, 가격, 사진. 그게 다입니다." },
-      { n: "4", t: "배경 선택 후 QR 인쇄", d: "배경 선택. QR 가져가기. 테이블에 붙이기." },
+      { n: "1", t: "유형과 이름", d: "유형 선택 후 이름 입력." },
+      { n: "2", t: "저장", d: "이메일 또는 Google 로그인." },
+      { n: "3", t: "메뉴", d: "직접 만들거나 종이 메뉴 스캔." },
+      { n: "4", t: "완료", d: "보고, 공유하고, 주문 받기." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "몇 개 언어를 지원하나요?", a: "내장 AI 번역으로 35개 언어. 한 번 터치로 메뉴 전체 번역, AI가 음식 맥락을 이해 — 이름과 설명이 모든 언어에서 자연스럽게 들립니다. 관광객은 진짜 이해할 때 더 많이 주문합니다." },
     ],
   },
-  finalCta: { heading: "2분이면 시작.", headingAccent: "14일 무료.", sub: "카드 불필요. 언제든 취소. 이미 IQ Rest를 사용하는 500개 이상의 레스토랑에 합류하세요." },
+  finalCta: { heading: "5분이면 시작.", headingAccent: "14일 무료.", sub: "카드 불필요. 언제든 취소. 이미 IQ Rest를 사용하는 500개 이상의 레스토랑에 합류하세요." },
   scan: {
     heading: "종이 메뉴나 PDF가 있나요?",
     headingAccent: "AI가 60초 만에 디지털화합니다.",

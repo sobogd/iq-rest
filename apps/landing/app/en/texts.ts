@@ -13,7 +13,7 @@ export const TEXTS: LandingTexts = {
     ogLocale: "en_US",
     ogTitle: "QR Menu for Restaurants — Direct Orders, Zero Commission",
     ogDescription:
-      "QR menu, direct orders, reservations & AI translation. Live in 2 minutes. 14-day free trial — no credit card.",
+      "QR menu, direct orders, reservations & AI translation. Live in 5 minutes. 14-day free trial — no credit card.",
   },
 
   ctaText: "Try for free", ctaSite: "Create website",
@@ -94,13 +94,13 @@ export const TEXTS: LandingTexts = {
   },
 
   how: {
-    heading: "Live in under 2 minutes",
+    heading: "Live in under 5 minutes",
     sub: "Four short steps. No tech setup, no installs.",
     steps: [
-      { n: "1", t: "Sign up", d: "Email or Google. No credit card. Done in 10 seconds." },
-      { n: "2", t: "Name your restaurant", d: "Just type the name. It shows on top of your menu." },
-      { n: "3", t: "Add your first dish", d: "Category, dish name, price, photo. That's it." },
-      { n: "4", t: "Pick a cover & print your QR", d: "Choose a background. Get your QR. Stick it on tables." },
+      { n: "1", t: "Type and name", d: "Pick your place type and enter the name." },
+      { n: "2", t: "Save", d: "Enter email or sign in with Google." },
+      { n: "3", t: "Menu", d: "Build it yourself or scan a paper menu." },
+      { n: "4", t: "Done", d: "View, share and start taking orders." },
     ],
   },
 
@@ -155,7 +155,7 @@ export const TEXTS: LandingTexts = {
   },
 
   finalCta: {
-    heading: "Ready in 2 minutes.",
+    heading: "Ready in 5 minutes.",
     headingAccent: "Free for 14 days.",
     sub: "No credit card required. Cancel anytime. Join 500+ restaurants already running on IQ Rest.",
   },

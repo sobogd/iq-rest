@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Vége a papír étlapoknak és a kiszállító appok jutalékainak. QR étlap, közvetlen rendelések, foglalások és többnyelvű weboldal. 14 nap ingyen, kártya nélkül.",
     canonical: "https://iq-rest.com/hu", ogLocale: "hu_HU",
     ogTitle: "QR Étlap Éttermeknek — Közvetlen Rendelések, Nulla Jutalék",
-    ogDescription: "QR étlap, közvetlen rendelések, foglalások és AI fordítás. 2 perc alatt kész. 14 nap ingyen — kártya nélkül.",
+    ogDescription: "QR étlap, közvetlen rendelések, foglalások és AI fordítás. 5 perc alatt kész. 14 nap ingyen — kártya nélkül.",
   },
   ctaText: "Próbálja ki ingyen", ctaSite: "Weboldal készítése",
   demoText: "Élő demó", microcopy: "14 nap ingyen · Kártya nélkül · Bármikor lemondod",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, az IQ Rest alapítója",
   },
   how: {
-    heading: "Élőben kevesebb mint 2 perc alatt",
+    heading: "Élőben kevesebb mint 5 perc alatt",
     sub: "Négy rövid lépés. Nincs telepítés, nincs technikai beállítás.",
     steps: [
-      { n: "1", t: "Regisztrálj", d: "Email vagy Google. Kártya nélkül. 10 másodperc." },
-      { n: "2", t: "Étterem neve", d: "Írd be a nevet. Az étlap tetején jelenik meg." },
-      { n: "3", t: "Add hozzá az első fogást", d: "Kategória, név, ár, fotó. Ennyi." },
-      { n: "4", t: "Válassz hátteret és nyomtasd a QR-t", d: "Válassz hátteret. Vedd a QR-t. Ragaszd az asztalokra." },
+      { n: "1", t: "Típus és név", d: "Válaszd ki a típust és add meg a nevet." },
+      { n: "2", t: "Mentés", d: "E-mail vagy belépés Google-fiókkal." },
+      { n: "3", t: "Étlap", d: "Készítsd el vagy szkennelj papírosat." },
+      { n: "4", t: "Kész", d: "Nézd, oszd meg és fogadj rendeléseket." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Hány nyelvet támogattok?", a: "35 nyelvet beépített AI fordítással. Egy érintés lefordítja az egész étlapot, az AI érti a kulináris kontextust — a nevek és leírások természetesen hangoznak minden nyelven. A turisták többet rendelnek, ha tényleg értik." },
     ],
   },
-  finalCta: { heading: "2 perc alatt kész.", headingAccent: "14 napig ingyen.", sub: "Kártya nélkül. Bármikor lemondod. Csatlakozz az 500+ étteremhez, ami már IQ Rest-en van." },
+  finalCta: { heading: "5 perc alatt kész.", headingAccent: "14 napig ingyen.", sub: "Kártya nélkül. Bármikor lemondod. Csatlakozz az 500+ étteremhez, ami már IQ Rest-en van." },
   scan: {
     heading: "Papír étlap vagy PDF?",
     headingAccent: "Az AI 60 másodperc alatt digitalizálja.",

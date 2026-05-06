@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Pabaiga popieriniams meniu ir maisto pristatymo programėlių komisiniams. QR meniu, tiesioginiai užsakymai, rezervacijos ir daugiakalbis tinklalapis. 14 dienų nemokamai, be kortelės.",
     canonical: "https://iq-rest.com/lt", ogLocale: "lt_LT",
     ogTitle: "QR Meniu Restoranams — Tiesioginiai Užsakymai, Nulis Komisinių",
-    ogDescription: "QR meniu, tiesioginiai užsakymai, rezervacijos ir AI vertimas. Paruošta per 2 minutes. 14 dienų nemokamai — be kortelės.",
+    ogDescription: "QR meniu, tiesioginiai užsakymai, rezervacijos ir AI vertimas. Paruošta per 5 minučių. 14 dienų nemokamai — be kortelės.",
   },
   ctaText: "Išbandyti nemokamai", ctaSite: "Sukurti svetainę",
   demoText: "Žiūrėti demo", microcopy: "14 dienų nemokamai · Be kortelės · Atšauk bet kada",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, IQ Rest įkūrėjas",
   },
   how: {
-    heading: "Tiesiogiai per mažiau nei 2 minutes",
+    heading: "Tiesiogiai per mažiau nei 5 minučių",
     sub: "Keturi trumpi žingsniai. Be diegimo, be techninės konfigūracijos.",
     steps: [
-      { n: "1", t: "Užsiregistruok", d: "El. paštas arba Google. Be kortelės. Atlikta per 10 sekundžių." },
-      { n: "2", t: "Restorano pavadinimas", d: "Tiesiog įvesk pavadinimą. Pasirodo meniu viršuje." },
-      { n: "3", t: "Pridėk pirmą patiekalą", d: "Kategorija, pavadinimas, kaina, nuotrauka. Tai ir viskas." },
-      { n: "4", t: "Pasirink foną ir spausdink QR", d: "Pasirink foną. Paimk QR. Priklijuok ant staliukų." },
+      { n: "1", t: "Tipas ir pavadinimas", d: "Pasirink tipą ir įvesk pavadinimą." },
+      { n: "2", t: "Išsaugoti", d: "El. paštas arba prisijungimas per Google." },
+      { n: "3", t: "Meniu", d: "Sukurk pats arba nuskaityk popierinį." },
+      { n: "4", t: "Paruošta", d: "Žiūrėk, dalykis ir priimk užsakymus." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Kiek kalbų palaikote?", a: "35 kalbas su įdiegtu AI vertimu. Vienas palietimas išverčia visą meniu, AI supranta kulinarinį kontekstą — pavadinimai ir aprašymai skamba natūraliai kiekviena kalba. Turistai užsako daugiau, kai tikrai supranta." },
     ],
   },
-  finalCta: { heading: "Paruošta per 2 minutes.", headingAccent: "Nemokamai 14 dienų.", sub: "Be kortelės. Atšauk bet kada. Prisijunk prie 500+ restoranų jau IQ Rest." },
+  finalCta: { heading: "Paruošta per 5 minučių.", headingAccent: "Nemokamai 14 dienų.", sub: "Be kortelės. Atšauk bet kada. Prisijunk prie 500+ restoranų jau IQ Rest." },
   scan: {
     heading: "Popierinis meniu ar PDF?",
     headingAccent: "DI suskaitmenina jį per 60 sekundžių.",

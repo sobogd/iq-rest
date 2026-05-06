@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "S'acabaren les cartes de paper i les comissions de les apps de delivery. Carta QR, comandes directes, reserves i web multilingüe. 14 dies gratis, sense targeta.",
     canonical: "https://iq-rest.com/ca", ogLocale: "ca_ES",
     ogTitle: "Carta QR per a Restaurants — Comandes Directes, Zero Comissions",
-    ogDescription: "Carta QR, comandes directes, reserves i traducció IA. Llesta en 2 minuts. 14 dies gratis — sense targeta.",
+    ogDescription: "Carta QR, comandes directes, reserves i traducció IA. Llesta en 5 minuts. 14 dies gratis — sense targeta.",
   },
   ctaText: "Prova-ho gratis", ctaSite: "Crea la web",
   demoText: "Veure demo en directe", microcopy: "14 dies gratis · Sense targeta · Cancel·la quan vulguis",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, fundador d'IQ Rest",
   },
   how: {
-    heading: "En menys de 2 minuts",
+    heading: "En menys de 5 minuts",
     sub: "Quatre passos curts. Sense instal·lacions, sense configuració tècnica.",
     steps: [
-      { n: "1", t: "Registra't", d: "Email o Google. Sense targeta. Fet en 10 segons." },
-      { n: "2", t: "Posa el nom del restaurant", d: "Només escriu el nom. Apareix a dalt de la carta." },
-      { n: "3", t: "Afegeix el teu primer plat", d: "Categoria, nom, preu, foto. Ja està." },
-      { n: "4", t: "Tria una portada i imprimeix el QR", d: "Tria fons. Agafa el QR. Enganxa'l a les taules." },
+      { n: "1", t: "Tipus i nom", d: "Tria el tipus i escriu el nom." },
+      { n: "2", t: "Desar", d: "Email o accés amb Google." },
+      { n: "3", t: "Carta", d: "Crea-la o escaneja una en paper." },
+      { n: "4", t: "Llest", d: "Mira, comparteix i rep comandes." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Quants idiomes traduïu?", a: "35 idiomes amb traducció IA integrada. Un toc tradueix tota la carta i l'IA entén el context culinari — els noms i descripcions sonen naturals en cada idioma. Els turistes demanen més quan entenen de veritat." },
     ],
   },
-  finalCta: { heading: "Llesta en 2 minuts.", headingAccent: "Gratis 14 dies.", sub: "Sense targeta. Cancel·la quan vulguis. Uneix-te a 500+ restaurants ja a IQ Rest." },
+  finalCta: { heading: "Llesta en 5 minuts.", headingAccent: "Gratis 14 dies.", sub: "Sense targeta. Cancel·la quan vulguis. Uneix-te a 500+ restaurants ja a IQ Rest." },
   scan: {
     heading: "Tens una carta en paper o PDF?",
     headingAccent: "La IA la digitalitza en 60 segons.",

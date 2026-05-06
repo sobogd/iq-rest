@@ -13,7 +13,7 @@ export const TEXTS: LandingTexts = {
     ogLocale: "de_DE",
     ogTitle: "QR-Speisekarte für Restaurants — Direktbestellungen, 0% Provision",
     ogDescription:
-      "QR-Speisekarte, Direktbestellungen, Reservierungen & KI-Übersetzung. In 2 Minuten startklar. 14 Tage gratis — ohne Kreditkarte.",
+      "QR-Speisekarte, Direktbestellungen, Reservierungen & KI-Übersetzung. In 5 Minuten startklar. 14 Tage gratis — ohne Kreditkarte.",
   },
 
   ctaText: "Kostenlos testen", ctaSite: "Website erstellen",
@@ -94,13 +94,13 @@ export const TEXTS: LandingTexts = {
   },
 
   how: {
-    heading: "In unter 2 Minuten online",
+    heading: "In unter 5 Minuten online",
     sub: "Vier kurze Schritte. Kein Setup, keine Installation.",
     steps: [
-      { n: "1", t: "Registrieren", d: "E-Mail oder Google. Keine Kreditkarte. In 10 Sekunden fertig." },
-      { n: "2", t: "Restaurantname eingeben", d: "Einfach den Namen tippen. Erscheint oben auf deiner Karte." },
-      { n: "3", t: "Erstes Gericht hinzufügen", d: "Kategorie, Name, Preis, Foto. Das war's." },
-      { n: "4", t: "Hintergrund wählen & QR drucken", d: "Hintergrund auswählen. QR holen. Auf die Tische kleben." },
+      { n: "1", t: "Art und Name", d: "Wähle den Typ und gib den Namen ein." },
+      { n: "2", t: "Speichern", d: "E-Mail eingeben oder mit Google anmelden." },
+      { n: "3", t: "Menü", d: "Selbst erstellen oder die Speisekarte scannen." },
+      { n: "4", t: "Fertig", d: "Anschauen, teilen und Bestellungen annehmen." },
     ],
   },
 
@@ -155,7 +155,7 @@ export const TEXTS: LandingTexts = {
   },
 
   finalCta: {
-    heading: "In 2 Minuten startklar.",
+    heading: "In 5 Minuten startklar.",
     headingAccent: "14 Tage gratis.",
     sub: "Keine Kreditkarte. Jederzeit kündbar. Mach mit bei 500+ Restaurants, die schon IQ Rest nutzen.",
   },

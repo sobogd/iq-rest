@@ -30,7 +30,7 @@ const TAG_STYLES = {
 
 export function Features({ texts }: FeaturesProps) {
   return (
-    <section id="features" data-section="features" className="scroll-mt-16 py-8 sm:py-16">
+    <section id="features" data-section="features" className="scroll-mt-16 py-16 bg-muted/20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-3 text-center lg:text-start">
           {texts.heading}{" "}

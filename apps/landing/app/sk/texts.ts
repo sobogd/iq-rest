@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Koniec papierovým lístkom a províziám rozvozových aplikácií. QR jedálny lístok, priame objednávky, rezervácie a viacjazyčný web. 14 dní zadarmo, bez karty.",
     canonical: "https://iq-rest.com/sk", ogLocale: "sk_SK",
     ogTitle: "QR Jedálny Lístok pre Reštaurácie — Priame Objednávky, Nulová Provízia",
-    ogDescription: "QR jedálny lístok, priame objednávky, rezervácie a AI preklad. Hotové za 2 minúty. 14 dní zadarmo — bez karty.",
+    ogDescription: "QR jedálny lístok, priame objednávky, rezervácie a AI preklad. Hotové za 5 minút. 14 dní zadarmo — bez karty.",
   },
   ctaText: "Skúsiť zadarmo", ctaSite: "Vytvoriť web",
   demoText: "Pozri si live demo", microcopy: "14 dní zadarmo · Bez karty · Zruš kedykoľvek",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, zakladateľ IQ Rest",
   },
   how: {
-    heading: "Spustené za menej ako 2 minúty",
+    heading: "Spustené za menej ako 5 minút",
     sub: "Štyri krátke kroky. Žiadne inštalácie, žiadna technická konfigurácia.",
     steps: [
-      { n: "1", t: "Registruj sa", d: "E-mail alebo Google. Bez karty. Hotové za 10 sekúnd." },
-      { n: "2", t: "Názov reštaurácie", d: "Napíš názov. Objaví sa hore na lístku." },
-      { n: "3", t: "Pridaj prvé jedlo", d: "Kategória, názov, cena, fotka. To je všetko." },
-      { n: "4", t: "Vyber pozadie a vytlač QR", d: "Vyber pozadie. Vezmi QR. Nalep na stoly." },
+      { n: "1", t: "Typ a názov", d: "Vyber typ a zadaj názov." },
+      { n: "2", t: "Uloženie", d: "E-mail alebo prihlásenie cez Google." },
+      { n: "3", t: "Menu", d: "Vytvor ručne alebo naskenuj papierové." },
+      { n: "4", t: "Hotovo", d: "Prezeraj, zdieľaj a prijímaj objednávky." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Koľko jazykov podporujete?", a: "35 jazykov s vstavaným AI prekladom. Jedno klepnutie preloží celý lístok a AI rozumie kulinárskemu kontextu — názvy a popisy znejú prirodzene v každom jazyku. Turisti objednávajú viac, keď naozaj rozumejú." },
     ],
   },
-  finalCta: { heading: "Hotové za 2 minúty.", headingAccent: "Zadarmo 14 dní.", sub: "Bez karty. Zruš kedykoľvek. Pridaj sa k 500+ reštauráciám už na IQ Rest." },
+  finalCta: { heading: "Hotové za 5 minút.", headingAccent: "Zadarmo 14 dní.", sub: "Bez karty. Zruš kedykoľvek. Pridaj sa k 500+ reštauráciám už na IQ Rest." },
   scan: {
     heading: "Papierové menu alebo PDF?",
     headingAccent: "AI ho digitalizuje za 60 sekúnd.",

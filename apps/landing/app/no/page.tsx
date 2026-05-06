@@ -73,7 +73,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
           currency={currency}
         />
       </section>
-      <section id="faq" data-section="faq" className="scroll-mt-16 py-8 sm:py-16">
+      <section id="faq" data-section="faq" className="scroll-mt-16 py-16 bg-muted/20">
         <Faq texts={TEXTS.faq} />
       </section>
       <FinalCta

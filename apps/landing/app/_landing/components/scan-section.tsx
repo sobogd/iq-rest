@@ -13,7 +13,7 @@ interface ScanSectionProps {
 export function ScanSection({ texts, locale }: ScanSectionProps) {
   const target = `${createUrl(locale)}&from=landing`;
   return (
-    <section className="py-3 sm:py-4 -mt-6 sm:mt-0">
+    <section className="pt-3 pb-16 sm:pt-4 sm:pb-16 -mt-6 sm:mt-0">
       <div className="container mx-auto px-4">
         <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-card to-card p-4 sm:p-5 flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
           <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-primary/15 text-primary shrink-0">

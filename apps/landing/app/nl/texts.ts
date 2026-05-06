@@ -13,7 +13,7 @@ export const TEXTS: LandingTexts = {
     ogLocale: "nl_NL",
     ogTitle: "QR Menukaart voor Restaurants — Directe Bestellingen, Nul Commissie",
     ogDescription:
-      "QR menukaart, directe bestellingen, reserveringen en AI-vertaling. Klaar in 2 minuten. 14 dagen gratis — geen creditcard.",
+      "QR menukaart, directe bestellingen, reserveringen en AI-vertaling. Klaar in 5 minuten. 14 dagen gratis — geen creditcard.",
   },
 
   ctaText: "Gratis proberen", ctaSite: "Website maken",
@@ -94,13 +94,13 @@ export const TEXTS: LandingTexts = {
   },
 
   how: {
-    heading: "Live in minder dan 2 minuten",
+    heading: "Live in minder dan 5 minuten",
     sub: "Vier korte stappen. Geen installatie, geen technische setup.",
     steps: [
-      { n: "1", t: "Meld je aan", d: "E-mail of Google. Geen creditcard. Klaar in 10 seconden." },
-      { n: "2", t: "Naam van je restaurant", d: "Typ de naam. Verschijnt bovenaan je menu." },
-      { n: "3", t: "Voeg je eerste gerecht toe", d: "Categorie, naam, prijs, foto. Dat is alles." },
-      { n: "4", t: "Kies een achtergrond en print je QR", d: "Kies een achtergrond. Pak je QR. Plak op tafels." },
+      { n: "1", t: "Type en naam", d: "Kies type en voer de naam in." },
+      { n: "2", t: "Opslaan", d: "E-mail of inloggen met Google." },
+      { n: "3", t: "Menu", d: "Maak het zelf of scan een papieren menu." },
+      { n: "4", t: "Klaar", d: "Bekijk, deel en ontvang bestellingen." },
     ],
   },
 
@@ -155,7 +155,7 @@ export const TEXTS: LandingTexts = {
   },
 
   finalCta: {
-    heading: "Klaar in 2 minuten.",
+    heading: "Klaar in 5 minuten.",
     headingAccent: "Gratis voor 14 dagen.",
     sub: "Geen creditcard. Stop wanneer je wilt. Sluit je aan bij 500+ restaurants op IQ Rest.",
   },

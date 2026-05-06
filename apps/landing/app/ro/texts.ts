@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Gata cu meniurile pe hârtie și comisioanele aplicațiilor de livrare. Meniu QR, comenzi directe, rezervări și site multilingv. 14 zile gratis, fără card.",
     canonical: "https://iq-rest.com/ro", ogLocale: "ro_RO",
     ogTitle: "Meniu QR pentru Restaurante — Comenzi Directe, Zero Comision",
-    ogDescription: "Meniu QR, comenzi directe, rezervări și traducere AI. Gata în 2 minute. 14 zile gratis — fără card.",
+    ogDescription: "Meniu QR, comenzi directe, rezervări și traducere AI. Gata în 5 minute. 14 zile gratis — fără card.",
   },
   ctaText: "Încearcă gratuit", ctaSite: "Creează site",
   demoText: "Vezi demo live", microcopy: "14 zile gratis · Fără card · Anulezi când vrei",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, fondatorul IQ Rest",
   },
   how: {
-    heading: "Live în mai puțin de 2 minute",
+    heading: "Live în mai puțin de 5 minute",
     sub: "Patru pași scurți. Fără instalări, fără configurări tehnice.",
     steps: [
-      { n: "1", t: "Înregistrează-te", d: "Email sau Google. Fără card. Gata în 10 secunde." },
-      { n: "2", t: "Numele restaurantului", d: "Scrie numele. Apare sus pe meniu." },
-      { n: "3", t: "Adaugă primul preparat", d: "Categorie, nume, preț, foto. Atât." },
-      { n: "4", t: "Alege fundalul și printează QR", d: "Alege fundalul. Ia QR-ul. Lipește pe mese." },
+      { n: "1", t: "Tip și nume", d: "Alege tipul și introdu numele." },
+      { n: "2", t: "Salvare", d: "Email sau autentificare cu Google." },
+      { n: "3", t: "Meniu", d: "Creează singur sau scanează unul pe hârtie." },
+      { n: "4", t: "Gata", d: "Vizualizează, distribuie și primește comenzi." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Câte limbi suportați?", a: "35 de limbi cu traducere AI încorporată. Un tap traduce tot meniul, AI înțelege contextul culinar — numele și descrierile sună natural în fiecare limbă. Turiștii comandă mai mult când chiar înțeleg." },
     ],
   },
-  finalCta: { heading: "Gata în 2 minute.", headingAccent: "Gratis 14 zile.", sub: "Fără card. Anulezi când vrei. Alătură-te celor 500+ restaurante deja pe IQ Rest." },
+  finalCta: { heading: "Gata în 5 minute.", headingAccent: "Gratis 14 zile.", sub: "Fără card. Anulezi când vrei. Alătură-te celor 500+ restaurante deja pe IQ Rest." },
   scan: {
     heading: "Meniu pe hârtie sau PDF?",
     headingAccent: "AI îl digitizează în 60 de secunde.",

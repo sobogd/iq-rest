@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "告别纸质菜单和外卖平台佣金。QR菜单、直接下单、预订、多语言网站。14天免费,无需信用卡。",
     canonical: "https://iq-rest.com/zh", ogLocale: "zh_CN",
     ogTitle: "餐厅QR菜单 — 直接下单,零佣金",
-    ogDescription: "QR菜单、直接下单、预订和AI翻译。2分钟上线。14天免费 — 无需信用卡。",
+    ogDescription: "QR菜单、直接下单、预订和AI翻译。5分钟上线。14天免费 — 无需信用卡。",
   },
   ctaText: "免费试用", ctaSite: "创建网站",
   demoText: "查看实时演示", microcopy: "14天免费 · 无需信用卡 · 随时取消",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan,IQ Rest 创始人",
   },
   how: {
-    heading: "不到2分钟上线",
+    heading: "不到5分钟上线",
     sub: "四个简短步骤。无需安装,无需技术配置。",
     steps: [
-      { n: "1", t: "注册", d: "邮箱或Google。无需信用卡。10秒完成。" },
-      { n: "2", t: "餐厅名称", d: "输入名称。显示在菜单顶部。" },
-      { n: "3", t: "添加首道菜", d: "分类、名称、价格、照片。就这些。" },
-      { n: "4", t: "选择封面并打印QR", d: "选背景。拿QR码。贴到桌上。" },
+      { n: "1", t: "类型和名称", d: "选择类型并输入名称。" },
+      { n: "2", t: "保存", d: "邮箱或使用 Google 登录。" },
+      { n: "3", t: "菜单", d: "手动创建或扫描纸质菜单。" },
+      { n: "4", t: "完成", d: "查看、分享、开始接单。" },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "支持多少种语言?", a: "35种语言,内置AI翻译。一点翻译整个菜单,AI懂烹饪上下文 — 名称和描述在每种语言中都自然。游客真正理解时下单更多。" },
     ],
   },
-  finalCta: { heading: "2分钟上线。", headingAccent: "14天免费。", sub: "无需信用卡。随时取消。加入已在IQ Rest上的500多家餐厅。" },
+  finalCta: { heading: "5分钟上线。", headingAccent: "14天免费。", sub: "无需信用卡。随时取消。加入已在IQ Rest上的500多家餐厅。" },
   scan: {
     heading: "有纸质菜单或 PDF？",
     headingAccent: "AI 60 秒数字化。",

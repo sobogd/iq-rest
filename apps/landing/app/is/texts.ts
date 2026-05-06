@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Lokið fyrir pappírsmatseðla og þóknanir afhendingarforrita. QR matseðill, beinar pantanir, bókanir og fjöltyngd vefsíða. 14 dagar ókeypis, án korts.",
     canonical: "https://iq-rest.com/is", ogLocale: "is_IS",
     ogTitle: "QR Matseðill fyrir Veitingastaði — Beinar Pantanir, Núll Þóknun",
-    ogDescription: "QR matseðill, beinar pantanir, bókanir og AI þýðing. Tilbúið á 2 mínútum. 14 dagar ókeypis — án korts.",
+    ogDescription: "QR matseðill, beinar pantanir, bókanir og AI þýðing. Tilbúið á 5 mínútum. 14 dagar ókeypis — án korts.",
   },
   ctaText: "Prófa frítt", ctaSite: "Búa til vefsíðu",
   demoText: "Sjá kynningu", microcopy: "14 dagar ókeypis · Ekkert kort · Hættu hvenær sem er",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, stofnandi IQ Rest",
   },
   how: {
-    heading: "Beint á minna en 2 mínútum",
+    heading: "Beint á minna en 5 mínútum",
     sub: "Fjögur stutt skref. Engin uppsetning, engin tæknileg uppsetning.",
     steps: [
-      { n: "1", t: "Skráðu þig", d: "Tölvupóstur eða Google. Ekkert kort. Tilbúið á 10 sekúndum." },
-      { n: "2", t: "Nafn veitingastaðar", d: "Skrifaðu nafnið. Birtist efst á matseðlinum." },
-      { n: "3", t: "Bættu við fyrsta réttinum", d: "Flokkur, nafn, verð, mynd. Það er allt og sumt." },
-      { n: "4", t: "Veldu bakgrunn og prentaðu QR", d: "Veldu bakgrunn. Sæktu þér QR. Límdu á borðin." },
+      { n: "1", t: "Tegund og nafn", d: "Veldu tegund og sláðu inn nafnið." },
+      { n: "2", t: "Vista", d: "Tölvupóstur eða innskráning með Google." },
+      { n: "3", t: "Matseðill", d: "Búðu til sjálf eða skannaðu pappírs." },
+      { n: "4", t: "Tilbúið", d: "Skoðaðu, deildu og taktu við pöntunum." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Hversu mörg tungumál eru studd?", a: "35 tungumál með innbyggðri AI þýðingu. Einn smellur þýðir allan matseðilinn, og AI skilur matargerðarsamhengi — nöfn og lýsingar hljóma náttúrulega á hverju tungumáli. Ferðamenn panta meira þegar þeir skilja virkilega." },
     ],
   },
-  finalCta: { heading: "Tilbúið á 2 mínútum.", headingAccent: "Ókeypis í 14 daga.", sub: "Ekkert kort. Hættu hvenær sem er. Skráðu þig með 500+ veitingastöðum þegar á IQ Rest." },
+  finalCta: { heading: "Tilbúið á 5 mínútum.", headingAccent: "Ókeypis í 14 daga.", sub: "Ekkert kort. Hættu hvenær sem er. Skráðu þig með 500+ veitingastöðum þegar á IQ Rest." },
   scan: {
     heading: "Pappírsmatseðill eða PDF?",
     headingAccent: "Gervigreind stafrænirann á 60 sekúndum.",

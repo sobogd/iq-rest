@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Deireadh le biachláir pháipéir agus coimisiúin aipeanna seachadta. Biachlár QR, orduithe díreacha, áirithintí agus suíomh ilteangach. 14 lá saor in aisce, gan chárta.",
     canonical: "https://iq-rest.com/ga", ogLocale: "ga_IE",
     ogTitle: "Biachlár QR do Bhialanna — Orduithe Díreacha, Gan Coimisiún",
-    ogDescription: "Biachlár QR, orduithe díreacha, áirithintí agus aistriúchán AI. Réidh i 2 nóiméad. 14 lá saor in aisce — gan chárta.",
+    ogDescription: "Biachlár QR, orduithe díreacha, áirithintí agus aistriúchán AI. Réidh i 5 nóiméad. 14 lá saor in aisce — gan chárta.",
   },
   ctaText: "Bain triail as", ctaSite: "Cruthaigh suíomh",
   demoText: "Féach ar an taispeántas", microcopy: "14 lá saor in aisce · Gan chárta · Cealaigh am ar bith",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, bunaitheoir IQ Rest",
   },
   how: {
-    heading: "Beo i níos lú ná 2 nóiméad",
+    heading: "Beo i níos lú ná 5 nóiméad",
     sub: "Ceithre chéim ghairide. Gan suiteáil, gan socrú teicniúil.",
     steps: [
-      { n: "1", t: "Cláraigh", d: "Ríomhphost nó Google. Gan chárta. Déanta i 10 soicind." },
-      { n: "2", t: "Ainm na bialainne", d: "Cuir an t-ainm isteach. Taispeánann sé in airde an bhiachláir." },
-      { n: "3", t: "Cuir do chéad mhias leis", d: "Catagóir, ainm, praghas, grianghraf. Sin é." },
-      { n: "4", t: "Roghnaigh cúlra agus priontáil QR", d: "Roghnaigh cúlra. Tóg do QR. Greamaigh do na boird." },
+      { n: "1", t: "Cineál agus ainm", d: "Roghnaigh cineál agus cuir an t-ainm isteach." },
+      { n: "2", t: "Sábháil", d: "Ríomhphost nó logáil isteach le Google." },
+      { n: "3", t: "Roghchlár", d: "Cruthaigh é féin nó scan ceann páipéir." },
+      { n: "4", t: "Réidh", d: "Féach, comhroinn agus glac orduithe." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Cé mhéad teanga a thacaíonn sibh leis?", a: "35 teanga le haistriúchán AI ionsuite. Aistríonn tap amháin an biachlár iomlán, agus tuigeann an AI comhthéacs cócaireachta — fuaimníonn ainmneacha agus cur síos go nádúrtha i ngach teanga. Ordaíonn turasóirí níos mó nuair a thuigeann siad i ndáiríre." },
     ],
   },
-  finalCta: { heading: "Réidh i 2 nóiméad.", headingAccent: "Saor ar feadh 14 lá.", sub: "Gan chárta. Cealaigh am ar bith. Bí leis na 500+ bialann atá ar IQ Rest cheana." },
+  finalCta: { heading: "Réidh i 5 nóiméad.", headingAccent: "Saor ar feadh 14 lá.", sub: "Gan chárta. Cealaigh am ar bith. Bí leis na 500+ bialann atá ar IQ Rest cheana." },
   scan: {
     heading: "Biachlár páipéir nó PDF?",
     headingAccent: "Déanann an IS digitiú air i 60 soicind.",

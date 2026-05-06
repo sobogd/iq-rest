@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Nē papīra ēdienkartēm un piegādes lietotņu komisijām. QR ēdienkarte, tiešie pasūtījumi, rezervācijas un daudzvalodu vietne. 14 dienas bez maksas, bez kartes.",
     canonical: "https://iq-rest.com/lv", ogLocale: "lv_LV",
     ogTitle: "QR Ēdienkarte Restorāniem — Tiešie Pasūtījumi, Nulle Komisijas",
-    ogDescription: "QR ēdienkarte, tiešie pasūtījumi, rezervācijas un AI tulkojums. Gatavs 2 minūtēs. 14 dienas bez maksas — bez kartes.",
+    ogDescription: "QR ēdienkarte, tiešie pasūtījumi, rezervācijas un AI tulkojums. Gatavs 5 minūtēs. 14 dienas bez maksas — bez kartes.",
   },
   ctaText: "Izmēģināt bez maksas", ctaSite: "Izveidot mājaslapu",
   demoText: "Skatīt demo", microcopy: "14 dienas bez maksas · Bez kartes · Atcelties jebkurā brīdī",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdans, IQ Rest dibinātājs",
   },
   how: {
-    heading: "Tiešraidē mazāk kā 2 minūtēs",
+    heading: "Tiešraidē mazāk kā 5 minūtēs",
     sub: "Četri īsi soļi. Bez instalēšanas, bez tehniskas konfigurācijas.",
     steps: [
-      { n: "1", t: "Reģistrējies", d: "E-pasts vai Google. Bez kartes. Gatavs 10 sekundēs." },
-      { n: "2", t: "Restorāna nosaukums", d: "Vienkārši ievadi nosaukumu. Parādās ēdienkartes augšpusē." },
-      { n: "3", t: "Pievieno pirmo ēdienu", d: "Kategorija, nosaukums, cena, foto. Tas arī viss." },
-      { n: "4", t: "Izvēlies fonu un izdrukā QR", d: "Izvēlies fonu. Paņem QR. Pielīmē uz galdiem." },
+      { n: "1", t: "Tips un nosaukums", d: "Izvēlies tipu un ievadi nosaukumu." },
+      { n: "2", t: "Saglabāšana", d: "E-pasts vai pieteikšanās ar Google." },
+      { n: "3", t: "Ēdienkarte", d: "Izveido pats vai skenē papīra." },
+      { n: "4", t: "Gatavs", d: "Skaties, dalies un saņem pasūtījumus." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Cik valodu atbalstāt?", a: "35 valodas ar iebūvētu AI tulkojumu. Viens pieskāriens iztulko visu ēdienkarti, AI saprot kulināro kontekstu — nosaukumi un apraksti skan dabiski katrā valodā. Tūristi pasūta vairāk, kad patiešām saprot." },
     ],
   },
-  finalCta: { heading: "Gatavs 2 minūtēs.", headingAccent: "Bez maksas 14 dienas.", sub: "Bez kartes. Atceltu jebkurā brīdī. Pievienojies 500+ restorāniem jau IQ Rest." },
+  finalCta: { heading: "Gatavs 5 minūtēs.", headingAccent: "Bez maksas 14 dienas.", sub: "Bez kartes. Atceltu jebkurā brīdī. Pievienojies 500+ restorāniem jau IQ Rest." },
   scan: {
     heading: "Papīra ēdienkarte vai PDF?",
     headingAccent: "MI to digitalizē 60 sekundēs.",

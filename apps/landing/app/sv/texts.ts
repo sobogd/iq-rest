@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Slut med pappersmenyer och leverans-app-provisioner. QR-meny, direkta beställningar, bokningar och flerspråkig webbplats. 14 dagar gratis, utan kort.",
     canonical: "https://iq-rest.com/sv", ogLocale: "sv_SE",
     ogTitle: "QR-meny för Restauranger — Direkta Beställningar, Noll Provision",
-    ogDescription: "QR-meny, direkta beställningar, bokningar och AI-översättning. Klar på 2 minuter. 14 dagar gratis — utan kort.",
+    ogDescription: "QR-meny, direkta beställningar, bokningar och AI-översättning. Klar på 5 minuter. 14 dagar gratis — utan kort.",
   },
   ctaText: "Prova gratis", ctaSite: "Skapa hemsida",
   demoText: "Se live-demo",
@@ -44,13 +44,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, grundare av IQ Rest",
   },
   how: {
-    heading: "Live på under 2 minuter",
+    heading: "Live på under 5 minuter",
     sub: "Fyra korta steg. Ingen installation, ingen teknisk konfig.",
     steps: [
-      { n: "1", t: "Registrera dig", d: "Mejl eller Google. Inget kort. Klart på 10 sekunder." },
-      { n: "2", t: "Restaurangens namn", d: "Skriv namnet. Visas högst upp på menyn." },
-      { n: "3", t: "Lägg till första rätten", d: "Kategori, namn, pris, foto. Det var det." },
-      { n: "4", t: "Välj omslag och skriv ut QR", d: "Välj bakgrund. Hämta din QR. Klistra på borden." },
+      { n: "1", t: "Typ och namn", d: "Välj typ och skriv namnet." },
+      { n: "2", t: "Spara", d: "E-post eller logga in med Google." },
+      { n: "3", t: "Meny", d: "Skapa själv eller skanna en pappersmeny." },
+      { n: "4", t: "Klar", d: "Visa, dela och ta emot beställningar." },
     ],
   },
   pricing: {
@@ -73,7 +73,7 @@ export const TEXTS: LandingTexts = {
       { q: "Hur många språk stöds?", a: "35 språk med inbyggd AI-översättning. Ett klick översätter hela menyn, AI fattar kulinarisk kontext — namn och beskrivningar låter naturligt på varje språk. Turister beställer mer när de verkligen förstår." },
     ],
   },
-  finalCta: { heading: "Klar på 2 minuter.", headingAccent: "Gratis i 14 dagar.", sub: "Inget kort. Avsluta när du vill. Anslut dig till 500+ restauranger redan på IQ Rest." },
+  finalCta: { heading: "Klar på 5 minuter.", headingAccent: "Gratis i 14 dagar.", sub: "Inget kort. Avsluta när du vill. Anslut dig till 500+ restauranger redan på IQ Rest." },
   scan: {
     heading: "Pappersmeny eller PDF?",
     headingAccent: "AI digitaliserar den på 60 sekunder.",

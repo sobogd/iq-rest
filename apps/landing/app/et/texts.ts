@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Lõpp paberist menüüdele ja kullerirakenduste vahendustasudele. QR-menüü, otsetellimused, broneeringud ja mitmekeelne veebileht. 14 päeva tasuta, kaardita.",
     canonical: "https://iq-rest.com/et", ogLocale: "et_EE",
     ogTitle: "QR-menüü Restoranidele — Otsetellimused, Null Vahendustasu",
-    ogDescription: "QR-menüü, otsetellimused, broneeringud ja AI tõlge. Valmis 2 minutiga. 14 päeva tasuta — kaardita.",
+    ogDescription: "QR-menüü, otsetellimused, broneeringud ja AI tõlge. Valmis 5 minutiga. 14 päeva tasuta — kaardita.",
   },
   ctaText: "Proovi tasuta", ctaSite: "Loo veebileht",
   demoText: "Vaata demo", microcopy: "14 päeva tasuta · Ilma kaardita · Tühista millal soovid",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, IQ Resti asutaja",
   },
   how: {
-    heading: "Live alla 2 minutiga",
+    heading: "Live alla 5 minutiga",
     sub: "Neli lühikest sammu. Ilma paigalduseta, ilma tehnilise seadistuseta.",
     steps: [
-      { n: "1", t: "Registreeru", d: "E-post või Google. Kaardita. 10 sekundiga valmis." },
-      { n: "2", t: "Restorani nimi", d: "Kirjuta nimi. Ilmub menüü ülaossa." },
-      { n: "3", t: "Lisa esimene roog", d: "Kategooria, nimi, hind, foto. Ongi kõik." },
-      { n: "4", t: "Vali taust ja prindi QR", d: "Vali taust. Võta QR. Kleebi laudadele." },
+      { n: "1", t: "Tüüp ja nimi", d: "Vali tüüp ja sisesta nimi." },
+      { n: "2", t: "Salvestamine", d: "E-post või sisselogimine Google'iga." },
+      { n: "3", t: "Menüü", d: "Loo ise või skanni paberkandjal." },
+      { n: "4", t: "Valmis", d: "Vaata, jaga ja võta tellimusi vastu." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Mitut keelt toetate?", a: "35 keelt sisseehitatud AI tõlkega. Üks puudutus tõlgib kogu menüü ja AI mõistab kulinaarset konteksti — nimed ja kirjeldused kõlavad iga keeles loomulikult. Turistid tellivad rohkem, kui nad tegelikult mõistavad." },
     ],
   },
-  finalCta: { heading: "Valmis 2 minutiga.", headingAccent: "Tasuta 14 päeva.", sub: "Kaardita. Tühista millal soovid. Liitu 500+ restoraniga juba IQ Restis." },
+  finalCta: { heading: "Valmis 5 minutiga.", headingAccent: "Tasuta 14 päeva.", sub: "Kaardita. Tühista millal soovid. Liitu 500+ restoraniga juba IQ Restis." },
   scan: {
     heading: "Paber-menüü või PDF?",
     headingAccent: "Tehisintellekt digiteerib 60 sekundiga.",

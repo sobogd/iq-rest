@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Kraj papirnim menijima i provizijama dostavnih aplikacija. QR meni, direktne porudžbine, rezervacije i višejezični sajt. 14 dana besplatno, bez kartice.",
     canonical: "https://iq-rest.com/sr", ogLocale: "sr_RS",
     ogTitle: "QR Meni za Restorane — Direktne Porudžbine, Nula Provizija",
-    ogDescription: "QR meni, direktne porudžbine, rezervacije i AI prevod. Spremno za 2 minuta. 14 dana besplatno — bez kartice.",
+    ogDescription: "QR meni, direktne porudžbine, rezervacije i AI prevod. Spremno za 5 minuta. 14 dana besplatno — bez kartice.",
   },
   ctaText: "Probaj besplatno", ctaSite: "Napravi sajt",
   demoText: "Pogledaj demo", microcopy: "14 dana besplatno · Bez kartice · Otkaži kad god želiš",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, osnivač IQ Rest",
   },
   how: {
-    heading: "Uživo za manje od 2 minuta",
+    heading: "Uživo za manje od 5 minuta",
     sub: "Četiri kratka koraka. Bez instalacija, bez tehničkih podešavanja.",
     steps: [
-      { n: "1", t: "Registruj se", d: "Email ili Google. Bez kartice. Gotovo za 10 sekundi." },
-      { n: "2", t: "Ime restorana", d: "Samo upiši ime. Pojavljuje se na vrhu menija." },
-      { n: "3", t: "Dodaj prvo jelo", d: "Kategorija, ime, cena, slika. To je to." },
-      { n: "4", t: "Izaberi pozadinu i odštampaj QR", d: "Izaberi pozadinu. Uzmi QR. Zalepi na stolove." },
+      { n: "1", t: "Тип и име", d: "Изаберите тип и унесите име." },
+      { n: "2", t: "Чување", d: "Email или пријава преко Google." },
+      { n: "3", t: "Мени", d: "Направите сами или скенирајте папирни." },
+      { n: "4", t: "Готово", d: "Прегледајте, делите и примајте поруџбине." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Koliko jezika podržavate?", a: "35 jezika sa ugrađenim AI prevodom. Jedan dodir prevodi ceo meni, AI razume kulinarni kontekst — imena i opisi zvuče prirodno na svakom jeziku. Turisti naručuju više kad zaista razumeju." },
     ],
   },
-  finalCta: { heading: "Spremno za 2 minuta.", headingAccent: "Besplatno 14 dana.", sub: "Bez kartice. Otkaži kad god želiš. Pridruži se 500+ restorana već na IQ Rest." },
+  finalCta: { heading: "Spremno za 5 minuta.", headingAccent: "Besplatno 14 dana.", sub: "Bez kartice. Otkaži kad god želiš. Pridruži se 500+ restorana već na IQ Rest." },
   scan: {
     heading: "Papirni meni ili PDF?",
     headingAccent: "VI ga digitalizuje za 60 sekundi.",

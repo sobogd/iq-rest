@@ -47,7 +47,7 @@ export function CtaButton({
         </a>
         {extra}
       </div>
-      {!isSticky && <p className="mt-3 text-sm text-muted-foreground">{microcopy}</p>}
+      {!isSticky && <p className="mt-3 text-sm text-muted-foreground/60">{microcopy}</p>}
     </div>
   );
 }

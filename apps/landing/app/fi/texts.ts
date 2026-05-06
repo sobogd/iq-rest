@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Ei enää paperisia ruokalistoja eikä toimitussovellusten provisioita. QR-ruokalista, suorat tilaukset, varaukset ja monikielinen sivusto. 14 päivää ilmaiseksi, ilman korttia.",
     canonical: "https://iq-rest.com/fi", ogLocale: "fi_FI",
     ogTitle: "QR-ruokalista Ravintoloille — Suorat Tilaukset, Nolla Provisio",
-    ogDescription: "QR-ruokalista, suorat tilaukset, varaukset ja AI-käännös. Valmis 2 minuutissa. 14 päivää ilmaiseksi — ilman korttia.",
+    ogDescription: "QR-ruokalista, suorat tilaukset, varaukset ja AI-käännös. Valmis 5 minuutissa. 14 päivää ilmaiseksi — ilman korttia.",
   },
   ctaText: "Kokeile ilmaiseksi", ctaSite: "Luo sivusto",
   demoText: "Katso demo", microcopy: "14 päivää ilmaiseksi · Ei korttia · Peruuta milloin haluat",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, IQ Rest perustaja",
   },
   how: {
-    heading: "Live alle 2 minuutissa",
+    heading: "Live alle 5 minuutissa",
     sub: "Neljä lyhyttä askelta. Ei asennusta, ei teknistä konfigurointia.",
     steps: [
-      { n: "1", t: "Rekisteröidy", d: "Sähköposti tai Google. Ei korttia. Valmis 10 sekunnissa." },
-      { n: "2", t: "Ravintolan nimi", d: "Kirjoita nimi. Ilmestyy listan yläosaan." },
-      { n: "3", t: "Lisää ensimmäinen annos", d: "Kategoria, nimi, hinta, kuva. Siinä se." },
-      { n: "4", t: "Valitse kansi ja tulosta QR", d: "Valitse tausta. Hae QR. Liimaa pöytiin." },
+      { n: "1", t: "Tyyppi ja nimi", d: "Valitse tyyppi ja anna nimi." },
+      { n: "2", t: "Tallenna", d: "Sähköposti tai kirjautuminen Googlella." },
+      { n: "3", t: "Menu", d: "Luo itse tai skannaa paperinen." },
+      { n: "4", t: "Valmis", d: "Katso, jaa ja ota tilauksia vastaan." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Kuinka monta kieltä tuetaan?", a: "35 kieltä sisäänrakennetulla AI-käännöksellä. Yksi napsautus kääntää koko listan, AI ymmärtää kulinaarisen kontekstin — nimet ja kuvaukset kuulostavat luonnollisilta jokaisella kielellä. Turistit tilaavat enemmän kun ymmärtävät." },
     ],
   },
-  finalCta: { heading: "Valmis 2 minuutissa.", headingAccent: "Ilmaiseksi 14 päivää.", sub: "Ei korttia. Peruuta milloin haluat. Liity 500+ ravintolaan jo IQ Restissä." },
+  finalCta: { heading: "Valmis 5 minuutissa.", headingAccent: "Ilmaiseksi 14 päivää.", sub: "Ei korttia. Peruuta milloin haluat. Liity 500+ ravintolaan jo IQ Restissä." },
   scan: {
     heading: "Paperinen ruokalista tai PDF?",
     headingAccent: "Tekoäly digitoi sen 60 sekunnissa.",

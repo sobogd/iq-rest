@@ -8,7 +8,7 @@ export const TEXTS: LandingTexts = {
     description: "Basılı menülere ve teslimat uygulaması komisyonlarına son. QR menü, direkt siparişler, rezervasyonlar ve çok dilli web sitesi. 14 gün ücretsiz, kart gerekmez.",
     canonical: "https://iq-rest.com/tr", ogLocale: "tr_TR",
     ogTitle: "Restoranlar için QR Menü — Direkt Siparişler, Sıfır Komisyon",
-    ogDescription: "QR menü, direkt siparişler, rezervasyonlar ve AI çeviri. 2 dakikada hazır. 14 gün ücretsiz — kart gerekmez.",
+    ogDescription: "QR menü, direkt siparişler, rezervasyonlar ve AI çeviri. 5 dakikada hazır. 14 gün ücretsiz — kart gerekmez.",
   },
   ctaText: "Ücretsiz dene", ctaSite: "Site oluştur",
   demoText: "Canlı demoyu gör", microcopy: "14 gün ücretsiz · Kart gerekmez · İstediğin zaman iptal",
@@ -43,13 +43,13 @@ export const TEXTS: LandingTexts = {
     photoAlt: "Bogdan, IQ Rest kurucusu",
   },
   how: {
-    heading: "2 dakikadan kısa sürede yayında",
+    heading: "5 dakikadan kısa sürede yayında",
     sub: "Dört kısa adım. Kurulum yok, teknik ayar yok.",
     steps: [
-      { n: "1", t: "Kayıt ol", d: "E-posta veya Google. Kart yok. 10 saniyede tamam." },
-      { n: "2", t: "Restoran adı", d: "Adı yaz. Menünün üstünde görünür." },
-      { n: "3", t: "İlk yemeği ekle", d: "Kategori, ad, fiyat, fotoğraf. Bu kadar." },
-      { n: "4", t: "Kapak seç ve QR yazdır", d: "Arka plan seç. QR'ı al. Masalara yapıştır." },
+      { n: "1", t: "Tür ve ad", d: "Türü seçin ve ad girin." },
+      { n: "2", t: "Kayıt", d: "E-posta veya Google ile giriş." },
+      { n: "3", t: "Menü", d: "Kendin oluştur veya kağıt menüyü tara." },
+      { n: "4", t: "Hazır", d: "Görüntüle, paylaş ve sipariş al." },
     ],
   },
   pricing: {
@@ -72,7 +72,7 @@ export const TEXTS: LandingTexts = {
       { q: "Kaç dil destekleniyor?", a: "Yerleşik AI çeviriyle 35 dil. Tek dokunuş tüm menüyü çeviriyor, AI mutfak bağlamını anlıyor — adlar ve tarifler her dilde doğal görünür. Turistler gerçekten anladıklarında daha çok sipariş verir." },
     ],
   },
-  finalCta: { heading: "2 dakikada hazır.", headingAccent: "14 gün ücretsiz.", sub: "Kart yok. İstediğin zaman iptal. IQ Rest'te zaten 500+ restorana katıl." },
+  finalCta: { heading: "5 dakikada hazır.", headingAccent: "14 gün ücretsiz.", sub: "Kart yok. İstediğin zaman iptal. IQ Rest'te zaten 500+ restorana katıl." },
   scan: {
     heading: "Kâğıt menü veya PDF?",
     headingAccent: "Yapay zekâ 60 saniyede dijitalleştirir.",
