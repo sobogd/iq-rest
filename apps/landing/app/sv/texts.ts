@@ -79,6 +79,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Klar på 2 minuter.", headingAccent: "Gratis i 14 dagar.", sub: "Inget kort. Avsluta när du vill. Anslut dig till 500+ restauranger redan på IQ Rest." },
+  scan: {
+    heading: "Pappersmeny eller PDF?",
+    headingAccent: "AI digitaliserar den på 60 sekunder.",
+    sub: "Ladda upp — AI hittar kategorier, rätter och priser.",
+    cta: "Skanna menyn →",
+  },
   footer: {
     featureLinks: [
       { href: "/sv/online-orders", label: "Onlinebeställningar" },

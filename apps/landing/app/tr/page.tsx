@@ -7,6 +7,7 @@ import { LandingFooter } from "@/app/_landing/components/footer";
 import { LandingHeader } from "@/app/_landing/components/header";
 import { LandingPricing } from "@/app/_landing/components/pricing";
 import { Hero } from "@/app/_landing/components/hero";
+import { ScanSection } from "@/app/_landing/components/scan-section";
 import { How } from "@/app/_landing/components/how";
 import { getCurrency } from "@/app/_landing/lib/get-currency";
 import { pickRandomVariant } from "@/app/_landing/lib/pick-variant";
@@ -59,6 +60,7 @@ export default async function LandingPage({ searchParams }: { searchParams: Prom
         microcopy={TEXTS.microcopy}
         locale={LOCALE}
       />
+      <ScanSection texts={TEXTS.scan} locale={LOCALE} />
       <Features texts={TEXTS.features} />
       <Founder texts={TEXTS.founder} />
       <How texts={TEXTS.how} />

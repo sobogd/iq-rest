@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Tilbúið á 2 mínútum.", headingAccent: "Ókeypis í 14 daga.", sub: "Ekkert kort. Hættu hvenær sem er. Skráðu þig með 500+ veitingastöðum þegar á IQ Rest." },
+  scan: {
+    heading: "Pappírsmatseðill eða PDF?",
+    headingAccent: "Gervigreind stafrænirann á 60 sekúndum.",
+    sub: "Hladdu upp — gervigreindin þekkir flokka, rétti og verð.",
+    cta: "Skanna matseðilinn →",
+  },
   footer: {
     featureLinks: [
       { href: "/is/online-orders", label: "Netpantanir" }, { href: "/is/ai-translation", label: "AI þýðing" },

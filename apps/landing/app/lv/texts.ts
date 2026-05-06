@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Gatavs 2 minūtēs.", headingAccent: "Bez maksas 14 dienas.", sub: "Bez kartes. Atceltu jebkurā brīdī. Pievienojies 500+ restorāniem jau IQ Rest." },
+  scan: {
+    heading: "Papīra ēdienkarte vai PDF?",
+    headingAccent: "MI to digitalizē 60 sekundēs.",
+    sub: "Augšupielādē — MI atpazīst kategorijas, ēdienus un cenas.",
+    cta: "Skenēt ēdienkarti →",
+  },
   footer: {
     featureLinks: [
       { href: "/lv/online-orders", label: "Tiešsaistes pasūtījumi" }, { href: "/lv/ai-translation", label: "AI tulkojums" },

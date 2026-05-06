@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Готово за 2 минути.", headingAccent: "Безплатно 14 дни.", sub: "Без карта. Откажи когато искаш. Присъедини се към 500+ ресторанта вече в IQ Rest." },
+  scan: {
+    heading: "Хартиено меню или PDF?",
+    headingAccent: "AI го цифровизира за 60 секунди.",
+    sub: "Качи — AI разпознава категории, продукти и цени.",
+    cta: "Сканирай менюто →",
+  },
   footer: {
     featureLinks: [
       { href: "/bg/online-orders", label: "Онлайн поръчки" }, { href: "/bg/ai-translation", label: "AI превод" },

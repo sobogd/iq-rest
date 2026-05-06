@@ -202,6 +202,12 @@ export const TEXTS: LandingTexts = {
     sub: "Senza carta. Cancelli quando vuoi. Unisciti a 500+ ristoranti già su IQ Rest.",
   },
 
+  scan: {
+    heading: "Menù cartaceo o PDF?",
+    headingAccent: "L'IA lo digitalizza in 60 secondi.",
+    sub: "Carica — l'IA estrae categorie, piatti e prezzi.",
+    cta: "Scansiona il menù →",
+  },
   footer: {
     featureLinks: [
       { href: "/it/online-orders", label: "Ordini online" },

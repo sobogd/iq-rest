@@ -202,6 +202,12 @@ export const TEXTS: LandingTexts = {
     sub: "Keine Kreditkarte. Jederzeit kündbar. Mach mit bei 500+ Restaurants, die schon IQ Rest nutzen.",
   },
 
+  scan: {
+    heading: "Papierkarte oder PDF?",
+    headingAccent: "KI digitalisiert sie in 60 Sekunden.",
+    sub: "Hochladen — KI erkennt Kategorien, Gerichte und Preise.",
+    cta: "Karte scannen →",
+  },
   footer: {
     featureLinks: [
       { href: "/de/online-orders", label: "Online-Bestellungen" },

@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Valmis 2 minutiga.", headingAccent: "Tasuta 14 päeva.", sub: "Kaardita. Tühista millal soovid. Liitu 500+ restoraniga juba IQ Restis." },
+  scan: {
+    heading: "Paber-menüü või PDF?",
+    headingAccent: "Tehisintellekt digiteerib 60 sekundiga.",
+    sub: "Lae üles — AI tunneb ära kategooriad, road ja hinnad.",
+    cta: "Skanni menüü →",
+  },
   footer: {
     featureLinks: [
       { href: "/et/online-orders", label: "Online tellimused" }, { href: "/et/ai-translation", label: "AI tõlge" },

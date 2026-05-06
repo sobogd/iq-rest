@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "2 dakikada hazır.", headingAccent: "14 gün ücretsiz.", sub: "Kart yok. İstediğin zaman iptal. IQ Rest'te zaten 500+ restorana katıl." },
+  scan: {
+    heading: "Kâğıt menü veya PDF?",
+    headingAccent: "Yapay zekâ 60 saniyede dijitalleştirir.",
+    sub: "Yükle — AI kategorileri, ürünleri ve fiyatları çıkarır.",
+    cta: "Menüyü tara →",
+  },
   footer: {
     featureLinks: [
       { href: "/tr/online-orders", label: "Online siparişler" }, { href: "/tr/ai-translation", label: "AI çeviri" },

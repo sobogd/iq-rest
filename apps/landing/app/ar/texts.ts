@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "جاهز في دقيقتين.", headingAccent: "مجاني ١٤ يوم.", sub: "بدون بطاقة. ألغِ متى شئت. انضم لـ ٥٠٠+ مطعم على IQ Rest." },
+  scan: {
+    heading: "قائمة ورقية أو PDF؟",
+    headingAccent: "الذكاء الاصطناعي يرقمنها في 60 ثانية.",
+    sub: "حمّل — الذكاء الاصطناعي يستخرج الفئات والأصناف والأسعار.",
+    cta: "مسح القائمة →",
+  },
   footer: {
     featureLinks: [
       { href: "/ar/online-orders", label: "طلبات أونلاين" }, { href: "/ar/ai-translation", label: "ترجمة AI" },

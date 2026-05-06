@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "2 perc alatt kész.", headingAccent: "14 napig ingyen.", sub: "Kártya nélkül. Bármikor lemondod. Csatlakozz az 500+ étteremhez, ami már IQ Rest-en van." },
+  scan: {
+    heading: "Papír étlap vagy PDF?",
+    headingAccent: "Az AI 60 másodperc alatt digitalizálja.",
+    sub: "Töltsd fel — az AI felismeri a kategóriákat, ételeket és árakat.",
+    cta: "Étlap beolvasása →",
+  },
   footer: {
     featureLinks: [
       { href: "/hu/online-orders", label: "Online rendelések" }, { href: "/hu/ai-translation", label: "AI fordítás" },

@@ -110,6 +110,12 @@ export const TEXTS: LandingTexts = {
     sub: "Без картки. Скасування в один клік. Приєднуйтеся до 500+ ресторанів, які вже на IQ Rest.",
   },
 
+  scan: {
+    heading: "Паперове меню або PDF?",
+    headingAccent: "ШІ оцифрує його за 60 секунд.",
+    sub: "Завантажте — ШІ розпізнає категорії, страви та ціни.",
+    cta: "Сканувати меню →",
+  },
   footer: {
     featureLinks: [
       { href: "/uk/online-orders", label: "Онлайн-замовлення" },

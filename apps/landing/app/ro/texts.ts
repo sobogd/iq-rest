@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Gata în 2 minute.", headingAccent: "Gratis 14 zile.", sub: "Fără card. Anulezi când vrei. Alătură-te celor 500+ restaurante deja pe IQ Rest." },
+  scan: {
+    heading: "Meniu pe hârtie sau PDF?",
+    headingAccent: "AI îl digitizează în 60 de secunde.",
+    sub: "Încarcă — AI extrage categorii, produse și prețuri.",
+    cta: "Scanează meniul →",
+  },
   footer: {
     featureLinks: [
       { href: "/ro/online-orders", label: "Comenzi online" }, { href: "/ro/ai-translation", label: "Traducere AI" },

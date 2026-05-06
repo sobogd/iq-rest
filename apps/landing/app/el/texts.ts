@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Έτοιμο σε 2 λεπτά.", headingAccent: "Δωρεάν για 14 ημέρες.", sub: "Χωρίς κάρτα. Ακύρωση όποτε θέλεις. Έλα μαζί με 500+ εστιατόρια ήδη στο IQ Rest." },
+  scan: {
+    heading: "Έντυπο μενού ή PDF;",
+    headingAccent: "Η AI το ψηφιοποιεί σε 60 δευτερόλεπτα.",
+    sub: "Ανέβασε — η AI εντοπίζει κατηγορίες, πιάτα και τιμές.",
+    cta: "Σάρωση μενού →",
+  },
   footer: {
     featureLinks: [
       { href: "/el/online-orders", label: "Online παραγγελίες" }, { href: "/el/ai-translation", label: "AI μετάφραση" },

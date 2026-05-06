@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Pripravljeno v 2 minutah.", headingAccent: "Brezplačno 14 dni.", sub: "Brez kartice. Prekliči kadar koli. Pridruži se 500+ restavracijam že na IQ Rest." },
+  scan: {
+    heading: "Papirnati meni ali PDF?",
+    headingAccent: "UI ga digitalizira v 60 sekundah.",
+    sub: "Naloži — UI prepozna kategorije, jedi in cene.",
+    cta: "Skeniraj meni →",
+  },
   footer: {
     featureLinks: [
       { href: "/sl/online-orders", label: "Spletna naročila" }, { href: "/sl/ai-translation", label: "AI prevod" },

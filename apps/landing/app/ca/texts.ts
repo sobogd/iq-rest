@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Llesta en 2 minuts.", headingAccent: "Gratis 14 dies.", sub: "Sense targeta. Cancel·la quan vulguis. Uneix-te a 500+ restaurants ja a IQ Rest." },
+  scan: {
+    heading: "Tens una carta en paper o PDF?",
+    headingAccent: "La IA la digitalitza en 60 segons.",
+    sub: "Puja-la — la IA n'extreu categories, plats i preus.",
+    cta: "Escanejar la carta →",
+  },
   footer: {
     featureLinks: [
       { href: "/ca/online-orders", label: "Comandes online" }, { href: "/ca/ai-translation", label: "Traducció IA" },

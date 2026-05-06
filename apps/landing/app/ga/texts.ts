@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Réidh i 2 nóiméad.", headingAccent: "Saor ar feadh 14 lá.", sub: "Gan chárta. Cealaigh am ar bith. Bí leis na 500+ bialann atá ar IQ Rest cheana." },
+  scan: {
+    heading: "Biachlár páipéir nó PDF?",
+    headingAccent: "Déanann an IS digitiú air i 60 soicind.",
+    sub: "Uaslódáil — aithníonn an IS catagóirí, miasa agus praghsanna.",
+    cta: "Scan an biachlár →",
+  },
   footer: {
     featureLinks: [
       { href: "/ga/online-orders", label: "Orduithe ar líne" }, { href: "/ga/ai-translation", label: "Aistriúchán AI" },

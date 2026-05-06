@@ -165,6 +165,13 @@ export type LandingTexts = {
     sub: string;
   };
 
+  scan: {
+    heading: string;
+    headingAccent: string;
+    sub: string;
+    cta: string;
+  };
+
   footer: {
     featureLinks: FooterLink[];
     navLinks: FooterLink[];

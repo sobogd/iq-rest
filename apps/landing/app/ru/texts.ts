@@ -118,6 +118,12 @@ export const TEXTS: LandingTexts = {
     sub: "Без карты. Отмена в один клик. Присоединяйтесь к 500+ ресторанам, уже работающим в IQ Rest.",
   },
 
+  scan: {
+    heading: "Бумажное меню или PDF?",
+    headingAccent: "ИИ оцифрует его за 60 секунд.",
+    sub: "Загрузите — ИИ распознает категории, блюда и цены.",
+    cta: "Сканировать меню →",
+  },
   footer: {
     featureLinks: [
       { href: "/ru/online-orders", label: "Онлайн-заказы" },

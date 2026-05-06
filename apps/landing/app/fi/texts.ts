@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Valmis 2 minuutissa.", headingAccent: "Ilmaiseksi 14 päivää.", sub: "Ei korttia. Peruuta milloin haluat. Liity 500+ ravintolaan jo IQ Restissä." },
+  scan: {
+    heading: "Paperinen ruokalista tai PDF?",
+    headingAccent: "Tekoäly digitoi sen 60 sekunnissa.",
+    sub: "Lataa — tekoäly löytää luokat, annokset ja hinnat.",
+    cta: "Skannaa ruokalista →",
+  },
   footer: {
     featureLinks: [
       { href: "/fi/online-orders", label: "Online-tilaukset" },

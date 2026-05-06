@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "Paruošta per 2 minutes.", headingAccent: "Nemokamai 14 dienų.", sub: "Be kortelės. Atšauk bet kada. Prisijunk prie 500+ restoranų jau IQ Rest." },
+  scan: {
+    heading: "Popierinis meniu ar PDF?",
+    headingAccent: "DI suskaitmenina jį per 60 sekundžių.",
+    sub: "Įkelk — DI atpažįsta kategorijas, patiekalus ir kainas.",
+    cta: "Skenuoti meniu →",
+  },
   footer: {
     featureLinks: [
       { href: "/lt/online-orders", label: "Internetiniai užsakymai" }, { href: "/lt/ai-translation", label: "AI vertimas" },

@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "2分钟上线。", headingAccent: "14天免费。", sub: "无需信用卡。随时取消。加入已在IQ Rest上的500多家餐厅。" },
+  scan: {
+    heading: "有纸质菜单或 PDF？",
+    headingAccent: "AI 60 秒数字化。",
+    sub: "上传即可 — AI 自动识别分类、菜品和价格。",
+    cta: "扫描我的菜单 →",
+  },
   footer: {
     featureLinks: [
       { href: "/zh/online-orders", label: "在线下单" }, { href: "/zh/ai-translation", label: "AI翻译" },

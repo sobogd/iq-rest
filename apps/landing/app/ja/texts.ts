@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "2分で稼働。", headingAccent: "14日間無料。", sub: "カード不要。いつでもキャンセル。すでにIQ Restを使う500軒超のレストランに参加しよう。" },
+  scan: {
+    heading: "紙のメニューや PDF をお持ちですか？",
+    headingAccent: "AI が 60 秒でデジタル化します。",
+    sub: "アップロードするだけ — AI がカテゴリー、料理、価格を抽出します。",
+    cta: "メニューをスキャン →",
+  },
   footer: {
     featureLinks: [
       { href: "/ja/online-orders", label: "オンライン注文" }, { href: "/ja/ai-translation", label: "AI翻訳" },

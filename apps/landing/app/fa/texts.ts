@@ -78,6 +78,12 @@ export const TEXTS: LandingTexts = {
     ],
   },
   finalCta: { heading: "در ۲ دقیقه آماده.", headingAccent: "۱۴ روز رایگان.", sub: "بدون کارت. هر زمان لغو کن. به ۵۰۰+ رستورانی که در IQ Rest هستند بپیوند." },
+  scan: {
+    heading: "منوی کاغذی یا PDF؟",
+    headingAccent: "هوش مصنوعی در ۶۰ ثانیه دیجیتال می‌کند.",
+    sub: "بارگذاری کن — هوش مصنوعی دسته‌ها، آیتم‌ها و قیمت‌ها را تشخیص می‌دهد.",
+    cta: "اسکن منو →",
+  },
   footer: {
     featureLinks: [
       { href: "/fa/online-orders", label: "سفارش آنلاین" }, { href: "/fa/ai-translation", label: "ترجمهٔ هوش مصنوعی" },

@@ -202,6 +202,12 @@ export const TEXTS: LandingTexts = {
     sub: "Geen creditcard. Stop wanneer je wilt. Sluit je aan bij 500+ restaurants op IQ Rest.",
   },
 
+  scan: {
+    heading: "Papieren menu of PDF?",
+    headingAccent: "AI digitaliseert het in 60 seconden.",
+    sub: "Upload — AI haalt categorieën, gerechten en prijzen eruit.",
+    cta: "Scan mijn menu →",
+  },
   footer: {
     featureLinks: [
       { href: "/nl/online-orders", label: "Online bestellingen" },

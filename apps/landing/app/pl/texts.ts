@@ -150,6 +150,12 @@ export const TEXTS: LandingTexts = {
     sub: "Bez karty. Anuluj kiedy chcesz. Dołącz do 500+ restauracji już na IQ Rest.",
   },
 
+  scan: {
+    heading: "Masz papierowe menu lub PDF?",
+    headingAccent: "AI cyfryzuje je w 60 sekund.",
+    sub: "Wgraj — AI wyodrębni kategorie, dania i ceny.",
+    cta: "Zeskanuj menu →",
+  },
   footer: {
     featureLinks: [
       { href: "/pl/online-orders", label: "Zamówienia online" },
