@@ -94,7 +94,7 @@ export function LandingFooter({ texts, headerTexts: _headerTexts, locale, exclud
                 {cookieTexts.termsLink}
               </button>
             </nav>
-            <p className="text-xs text-muted-foreground pt-2 md:mt-1">
+            <p className="text-sm text-muted-foreground/60 pt-2 md:mt-1">
               {copyright}
             </p>
           </div>
