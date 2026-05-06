@@ -208,6 +208,20 @@ export function ReservationsPage({ initialReservations, reservationsEnabled, has
             </button>
           </div>
         )}
+
+        {/* Actions for confirmed */}
+        {reservation.status === "confirmed" && (
+          <div className="flex items-center gap-2 h-11 px-4 border-t border-border/50">
+            <button
+              onClick={() => handleUpdateStatus(reservation.id, "completed")}
+              disabled={isUpdating}
+              className="flex items-center text-sm font-medium text-muted-foreground hover:opacity-80 transition-opacity disabled:opacity-50"
+            >
+              {isUpdating ? <Loader2 className="h-4 w-4 mr-1.5 animate-spin" /> : <Check className="h-4 w-4 mr-1.5" />}
+              {t("markComplete")}
+            </button>
+          </div>
+        )}
       </div>
     );
   }

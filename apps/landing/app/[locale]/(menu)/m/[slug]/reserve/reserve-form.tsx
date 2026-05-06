@@ -42,6 +42,9 @@ interface ReserveFormProps {
     namePlaceholder: string;
     email: string;
     emailPlaceholder: string;
+    phone: string;
+    phonePlaceholder: string;
+    phoneOptional: string;
     notes: string;
     notesPlaceholder: string;
     submit: string;
@@ -84,6 +87,7 @@ export function ReserveForm({
   const [selectedTableId, setSelectedTableId] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -266,6 +270,7 @@ export function ReserveForm({
           duration: slotMinutes,
           guestName: name.trim(),
           guestEmail: email.trim(),
+          guestPhone: phone.trim() || null,
           guestsCount,
           notes: notes.trim() || null,
           locale,
@@ -532,6 +537,22 @@ export function ReserveForm({
               autoComplete="off"
               className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
               style={{ borderColor: email ? accentColor : undefined }}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="phone" className="text-base font-semibold text-black">
+              {t.phone}: <span className="text-sm font-normal text-gray-500">({t.phoneOptional})</span>
+            </label>
+            <Input
+              id="phone"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder={t.phonePlaceholder}
+              autoComplete="off"
+              className="h-12 border-2 border-gray-200 text-base focus-visible:ring-0 focus-visible:ring-offset-0 bg-white text-black"
+              style={{ borderColor: phone ? accentColor : undefined }}
             />
           </div>
 

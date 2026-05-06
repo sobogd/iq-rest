@@ -26,6 +26,7 @@ const reservationSchema = z.object({
   startTime: z.string().regex(/^\d{2}:\d{2}$/, "Invalid time format"),
   guestName: z.string().trim().min(1).max(100),
   guestEmail: z.string().trim().email().max(200),
+  guestPhone: z.string().trim().max(40).nullable().optional(),
   guestsCount: z.number().int().min(1).max(50),
   notes: z.string().max(500).nullable().optional(),
   locale: z.string().min(2).max(5).optional(),
@@ -94,16 +95,28 @@ async function getReservationTranslations(locale: string): Promise<ReservationEm
   }
 }
 
-function createTransporter() {
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    secure: false,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+// Singleton — created once per server process. nodemailer pools connections
+// internally, so reusing the same transport avoids the SMTP handshake and
+// auth round-trip on every booking.
+let cachedTransporter: nodemailer.Transporter | null = null;
+function getTransporter() {
+  if (!cachedTransporter) {
+    cachedTransporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+  }
+  return cachedTransporter;
+}
+
+function dashboardUrl(path: string) {
+  const base = (process.env.DASHBOARD_URL || "https://iq-rest.com").replace(/\/$/, "");
+  return base + path;
 }
 
 function detailRow(label: string, value: string): string {
@@ -123,7 +136,7 @@ async function sendGuestEmail(params: {
   locale: string;
 }) {
   const t = await getReservationTranslations(params.locale);
-  const transporter = createTransporter();
+  const transporter = getTransporter();
 
   const subject = t.guestSubject.replace("{restaurant}", params.restaurantTitle);
   const greeting = t.guestGreeting.replace("{name}", params.guestName);
@@ -179,11 +192,12 @@ async function sendOwnerEmail(params: {
   tableNumber: number;
   notes: string | null;
   guestEmail: string;
+  guestPhone: string | null;
   status: string;
   locale: string;
 }) {
   const t = await getReservationTranslations(params.locale);
-  const transporter = createTransporter();
+  const transporter = getTransporter();
 
   const subject = t.ownerSubject.replace("{name}", params.guestName);
 
@@ -193,6 +207,9 @@ async function sendOwnerEmail(params: {
   rows += detailRow(t.guests, String(params.guestsCount));
   rows += detailRow(t.table, String(params.tableNumber));
   rows += detailRow("Email", params.guestEmail);
+  if (params.guestPhone) {
+    rows += detailRow("Phone", params.guestPhone);
+  }
   if (params.notes) {
     rows += detailRow(t.notes, params.notes);
   }
@@ -216,14 +233,14 @@ async function sendOwnerEmail(params: {
           ${rows}
         </table>
         <p style="font-size: 17px; line-height: 1.7; margin: 0 0 24px;">
-          <a href="https://iq-rest.com/dashboard/reservations?from=email" style="color: #0066cc;">${t.ownerCta}</a>
+          <a href="${dashboardUrl("/dashboard/reservations?from=email")}" style="color: #0066cc;">${t.ownerCta}</a>
         </p>
         <p style="font-size: 15px; margin: 0; color: #1a1a1a;">
           ${t.ownerSignature}
         </p>
       </div>
     `,
-    text: `${t.ownerGreeting}\n\n${t.ownerBody}\n\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}\n${t.table}: ${params.tableNumber}\nEmail: ${params.guestEmail}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.ownerCta}: https://iq-rest.com/dashboard/reservations?from=email\n\n${t.ownerSignature.replace("<br>", "\n")}`,
+    text: `${t.ownerGreeting}\n\n${t.ownerBody}\n\n${t.date}: ${params.date}\n${t.time}: ${params.startTime}\n${t.guests}: ${params.guestsCount}\n${t.table}: ${params.tableNumber}\nEmail: ${params.guestEmail}${params.notes ? `\n${t.notes}: ${params.notes}` : ""}\n\n${t.ownerCta}: ${dashboardUrl("/dashboard/reservations?from=email")}\n\n${t.ownerSignature.replace("<br>", "\n")}`,
   });
 }
 
@@ -257,6 +274,7 @@ export async function POST(request: NextRequest) {
       startTime,
       guestName,
       guestEmail,
+      guestPhone,
       guestsCount,
       notes,
       locale,
@@ -394,7 +412,7 @@ export async function POST(request: NextRequest) {
               duration: slotDuration,
               guestName,
               guestEmail,
-              guestPhone: null,
+              guestPhone: guestPhone || null,
               guestsCount,
               notes: notes || null,
               status,
@@ -457,6 +475,7 @@ export async function POST(request: NextRequest) {
         ...emailParams,
         ownerEmails,
         guestEmail,
+        guestPhone: guestPhone || null,
         locale: restaurant.defaultLanguage,
       }).catch((err) => console.error("Failed to send owner reservation email:", err));
     }
